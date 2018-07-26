@@ -7,11 +7,11 @@ helpviewer_keywords:
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
 ms.openlocfilehash: e67e568b67400807ba7a1668acb6b3a36b4c7f22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213210"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220790"
 ---
 # <a name="c-compiler-errors"></a>C# コンパイラ エラー
 一部の C# コンパイラ エラーには、エラーが生成された理由について説明するトピックがあり、エラーの解決方法が示されていることがあります。 次のいずれかの手順に従って、特定のエラー メッセージのヘルプが存在するかどうかを確認してください。  

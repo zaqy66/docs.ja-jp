@@ -3,11 +3,11 @@ title: '方法: 2 つのコレクション (LINQ to XML) を結合 (Visual Basic
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 3ceb9cf7dfdd1d18a07e93d15624fd8fac045d07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643693"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245701"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>方法: 2 つのコレクション (LINQ to XML) を結合 (Visual Basic)
 XML ドキュメント内の要素または属性は、別の要素または属性を参照することがあります。 たとえば、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)」の XML ドキュメントには、顧客の一覧と注文の一覧が含まれています。 各 `Customer` 要素には、`CustomerID` 属性が含まれています。 各 `Order` 要素には、`CustomerID` 要素が含まれています。 各注文の `CustomerID` 要素は、顧客の `CustomerID` 属性を参照します。  
@@ -18,7 +18,7 @@ XML ドキュメント内の要素または属性は、別の要素または属�
   
  使用できるインデックスがないため、このような結合では実行時のパフォーマンスが低下することに注意してください。  
   
- 詳細については`Join`を参照してください[参加操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)です。  
+ 詳細については`Join`を参照してください[の結合操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、`Customer` 要素を `Order` 要素に結合し、注文に `CompanyName` 要素が含まれている新しい XML ドキュメントを生成します。  

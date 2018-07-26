@@ -1,5 +1,5 @@
 ---
-title: '\= 演算子'
+title: '\= 演算子 (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - '\='
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: 4ebbf2eca7fb3cd208d979d7f3c77aa106569119
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcfc59efda0627f83713fe9ada24cedc20d823e3
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603562"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198209"
 ---
 # <a name="-operator"></a>\\= 演算子
 変数またはプロパティの値式の値で除算し、結果の整数値を変数またはプロパティに代入します。  
@@ -34,18 +34,18 @@ variableorproperty \= expression
  `expression`  
  必須。 任意の数式。  
   
-## <a name="remarks"></a>コメント  
- 左側にある要素、`\=`演算子は、単純なスカラー変数、プロパティ、または配列の要素を指定できます。 変数またはプロパティにできません。 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)です。  
+## <a name="remarks"></a>Remarks  
+ 左側にある要素、`\=`演算子は、単純なスカラー変数、プロパティ、または配列の要素。 変数またはプロパティにすることはできません[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。  
   
- `\=`演算子は、変数またはの左側のプロパティの値の右側にある値で除算し、変数またはプロパティの左側に結果の整数値を割り当てます  
+ `\=`演算子は、変数または、左側のプロパティの値の右側にある値で除算し、変数またはプロパティの左側に結果の整数値を割り当てます  
   
- 整数の除算の詳細については、次を参照してください。 [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)です。  
+ 整数の除算について詳しくは、次を参照してください。 [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)します。  
   
 ## <a name="overloading"></a>オーバーロード  
- `\`演算子を指定できます*オーバー ロードされた*、つまり、あるクラスまたは構造体を再定義できますその動作オペランドは、そのクラスまたは構造体の型を持つときにします。 オーバー ロード、`\`演算子の動作に影響、`\=`演算子。 コードで使用する場合`\=`クラスまたはオーバー ロードする構造体で`\`、再定義された動作を確認してください。 詳細については、次を参照してください。[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)です。  
+ `\`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 オーバー ロード、`\`演算子の動作に影響、`\=`演算子。 コードで使用する場合`\=`クラスまたは構造体をオーバー ロードで`\`、再定義された動作を確認してください。 詳細については、次を参照してください。[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)します。  
   
 ## <a name="example"></a>例  
- 次の例では、`\=`演算子を 1 つの分割`Integer`変数の 2 番目と整数の結果、最初の変数に代入します。  
+ 次の例では、`\=`演算子を 1 つの分割`Integer`秒と、整数の結果が最初の変数に割り当てるのでは、変数。  
   
  [!code-vb[VbVbalrOperators#19](codesnippet/VisualBasic/integer-division-assignment-operator_1.vb)]  
   

@@ -12,10 +12,11 @@ helpviewer_keywords:
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
 ms.openlocfilehash: 15f3a774255923aba83f15700540369040c02dcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961535"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 ## <a name="types-variables-and-values"></a>型、変数、および値  
@@ -98,7 +99,7 @@ int i = 5;
 char c = 'Z';  
 ```  
   
- 値型は、"*シール*" されています。たとえば <xref:System.Int32?displayProperty=nameWithType> から値型を派生させることはできません。構造体は <xref:System.ValueType?displayProperty=nameWithType> からしか継承できないため、任意のユーザー定義型または構造体を継承する構造体を定義することはできません。 ただし、構造体は 1 つ以上のインターフェイスを実装できます。 構造体型は、インターフェイス型にキャストできます。これを行うと、"*ボックス化*" 操作によって、構造体がマネージ ヒープ上の参照型オブジェクト内にラップされます。 ボックス化操作が発生するのは、入力パラメーターとして <xref:System.Object?displayProperty=nameWithType> を受け取るメソッドに値型を渡した場合です。 詳細については、「[ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)」を参照してください。  
+ 値型は、"*シール*" されています。たとえば <xref:System.Int32?displayProperty=nameWithType> から値型を派生させることはできません。構造体は <xref:System.ValueType?displayProperty=nameWithType> からしか継承できないため、任意のユーザー定義型または構造体を継承する構造体を定義することはできません。 ただし、構造体は 1 つ以上のインターフェイスを実装できます。 構造体型は、インターフェイス型にキャストできます。これを行うと、"*ボックス化操作*" によって、構造体がマネージド ヒープ上の参照型オブジェクト内にラップされます。 ボックス化操作が発生するのは、入力パラメーターとして <xref:System.Object?displayProperty=nameWithType> を受け取るメソッドに値型を渡した場合です。 詳細については、「[ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)」を参照してください。  
   
  独自のカスタム値型を作成するには、[struct](../../../csharp/language-reference/keywords/struct.md) キーワードを使用します。 通常、構造体は、次の例に示すように、少数の関連する変数のコンテナーとして使用します。  
   
@@ -127,7 +128,7 @@ MyClass mc2 = mc;
 IMyInterface iface = new MyClass();  
 ```  
   
- オブジェクトが作成されると、マネージ ヒープ上でメモリが割り当てられ、変数にはそのオブジェクトの場所への参照のみが格納されます。 マネージ ヒープを使用する型では、メモリの割り当て時と、CLR の自動メモリ管理機能 ("*ガベージ コレクション*") による再要求時の両方についてオーバーヘッドが発生します。 しかし、ガベージ コレクションも高度に最適化されるため、ほとんどのシナリオでは、パフォーマンス上の問題が発生することはありません。 ガベージ コレクションの詳細については、「[自動メモリ管理](../../../standard/automatic-memory-management.md)」を参照してください。  
+ オブジェクトが作成されると、マネージド ヒープ上でメモリが割り当てられ、変数にはそのオブジェクトの場所への参照のみが格納されます。 マネージド ヒープを使用する型では、メモリの割り当て時と、CLR の自動メモリ管理機能 ("*ガベージ コレクション*") による再要求時の両方についてオーバーヘッドが発生します。 しかし、ガベージ コレクションも高度に最適化されるため、ほとんどのシナリオでは、パフォーマンス上の問題が発生することはありません。 ガベージ コレクションの詳細については、「[自動メモリ管理](../../../standard/automatic-memory-management.md)」を参照してください。  
   
  配列は、その要素が値型の場合でも、すべて参照型です。 配列は、<xref:System.Array?displayProperty=nameWithType> クラスから暗黙的に派生しますが、C# に用意されている次の例のような簡単な構文で宣言および使用します。  
   

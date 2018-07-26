@@ -3,12 +3,12 @@ title: メソッドからクエリを返す
 description: クエリを返す方法。
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 6a1d581c46c7b0b2062859fd60701dd25ea54eea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13f0839f712cb76b34c98157a30315787d300109
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274951"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404159"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>方法 : メソッドからクエリを返す (C# プログラミング ガイド)
 この例では、メソッドから、クエリを戻り値として返す方法と `out` パラメーターとして返す方法を示します。  
@@ -18,7 +18,7 @@ ms.locfileid: "33274951"
 ## <a name="example"></a>例  
  次の例は、最初のメソッドはクエリを戻り値として返し、2 番目のメソッドはクエリを `out` パラメーターとして返しています。 どちらの場合も返されるのはクエリであり、クエリ結果ではないことに注意してください。  
   
- [!code-csharp[csProgGuideLINQ#80](../../../samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
 ## <a name="see-also"></a>参照  
- [LINQ クエリ式](index.md)
+ [統合言語クエリ (LINQ)](index.md)

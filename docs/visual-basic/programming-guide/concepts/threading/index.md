@@ -2,12 +2,12 @@
 title: スレッド処理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
-ms.openlocfilehash: 6f7290b611d8314391d66397bd5f0f43928b8338
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd1530a2b03c01b0a1cba0ce3ed4e18f2bf29046
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651866"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874834"
 ---
 # <a name="threading-visual-basic"></a>スレッド処理 (Visual Basic)
 スレッド処理により、Visual Basic プログラムが同時処理を実行できるようになり、一度に複数の操作を行うことが可能になります。 たとえば、スレッド処理を使用してユーザーの入力を監視したり、バックグラウンド タスクを実行したり、入力の同時ストリームを処理したりできます。  
@@ -41,7 +41,6 @@ ms.locfileid: "33651866"
 |[マルチスレッド プロシージャのパラメーターと戻り値 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|マルチ スレッド アプリケーションでパラメーターを受け渡す方法について説明します。|  
 |[チュートリアル: BackgroundWorker コンポーネントでのマルチスレッド (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|簡単なマルチスレッド アプリケーションを作成する方法を示します。|  
 |[スレッドの同期 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)|スレッドの相互作用を制御する方法について説明します。|  
-|[スレッド タイマー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)|一定の間隔で個別のスレッド上でプロシージャを実行する方法について説明します。|  
 |[スレッド プール (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|システムで管理されるワーカー スレッドのプールを使用する方法について説明します。|  
 |[方法: スレッド プールを使用する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|スレッド プール内の複数スレッドの同期された使用方法を示します。|  
 |[スレッド化](../../../../standard/threading/index.md)|.NET Framework でのスレッドの実装方法について説明します。|

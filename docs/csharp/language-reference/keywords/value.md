@@ -7,10 +7,11 @@ helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
 ms.openlocfilehash: c8f808540385552f6222566f23251f6cbd6e86df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959396"
 ---
 # <a name="value-c-reference"></a>value (C# リファレンス)
 コンテキスト キーワード `value` は、set アクセサーの通常のプロパティ宣言で使用します。 これは、メソッドの入力パラメーターに似ています。 `value` というキーワードは、クライアント コードでプロパティに割り当てる値を表します。 次の例の `MyDerivedClass` には、`Name` というプロパティがあります。このプロパティは `value` パラメーターを使用して、バッキング フィールド `name` に新しい文字列を割り当てます。 クライアント コードから見ると、演算は簡単な代入演算として記述されます。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: a868c52cf753b1e4285586ec41c1993f519299d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289400"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243723"
 ---
 # <a name="join-clause-c-reference"></a>join 句 (C# リファレンス)
 `join` 句は、オブジェクト モデル内での直接リレーションシップがない、さまざまなソース シーケンスの要素を関連付ける際に役立ちます。 唯一の要件は、等価性を比較できるいくつかの値が各ソース内の要素間で共有されていることです。 たとえば、食品販売会社には特定の商品についての供給元のリストと購入者のリストがあります。 `join` 句は、たとえば指定された地域のすべての供給元および購入者のリストを作成するために使用できます。  

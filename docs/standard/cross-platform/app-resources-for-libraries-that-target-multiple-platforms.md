@@ -1,6 +1,6 @@
 ---
 title: 複数のプラットフォームを対象とするライブラリのアプリケーション リソース
-ms.date: 03/30/2017
+ms.date: 07/18/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,19 +14,21 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4682b9ffcb0edb4e54c427968c3d40c0de134d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11b9bde41e2209a88a042eb6c61de37def9da787
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578223"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245499"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>複数のプラットフォームを対象とするライブラリのアプリケーション リソース
-.NET Framework を使用して[ポータブル クラス ライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)プロジェクトの種類を複数のプラットフォームからクラス ライブラリ内のリソースにアクセスできることを確認してください。 このプロジェクトの種類は [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] で利用でき、.NET Framework クラス ライブラリの移植性の高いサブセットを対象としています。 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] を使用すると、デスクトップ アプリケーション、Silverlight アプリケーション、Windows Phone アプリケーション、および [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからライブラリにアクセスできます。  
+.NET Framework を使用して[ポータブル クラス ライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)プロジェクトの種類が、クラス ライブラリのリソースを複数のプラットフォームからアクセスできることを確認します。 このプロジェクトの種類は [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] で利用でき、.NET Framework クラス ライブラリの移植性の高いサブセットを対象としています。 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] を使用すると、デスクトップ アプリケーション、Silverlight アプリケーション、Windows Phone アプリケーション、および [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからライブラリにアクセスできます。  
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
   
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] プロジェクトでは、アプリケーションで使用できるのは <xref:System.Resources> 名前空間内の非常に限られた型のサブセットのみですが、<xref:System.Resources.ResourceManager> クラスを使用してリソースを取得することはできます。 ただし、Visual Studio を使用してアプリケーションを作成する場合は、<xref:System.Resources.ResourceManager> クラス ライブラリを使用するのではなく、Visual Studio によって作成された厳密に型指定されたラッパーを使用する必要があります。  
   
- Visual Studio で厳密に型指定されたラッパーを作成、設定、メイン リソース ファイルの**アクセス修飾子**に Visual Studio リソース デザイナーで**パブリック**です。 これにより、厳密に型指定された ResourceManager ラッパーを含む [resourceFileName].designer.cs または [resourceFileName].designer.vb ファイルが作成されます。 厳密に型指定されたリソース ラッパーの使用に関する詳細についてを参照してください「を生成する、厳密に型指定されたリソース クラス」、 [Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)トピックです。  
+ Visual Studio では、厳密に型指定されたラッパーを作成、設定、メイン リソース ファイルの**アクセス修飾子**を Visual Studio リソース デザイナーで**パブリック**します。 これにより、厳密に型指定された ResourceManager ラッパーを含む [resourceFileName].designer.cs または [resourceFileName].designer.vb ファイルが作成されます。 厳密に型指定されたリソース ラッパーの使用方法の詳細については、"厳密に型指定されたリソース クラスの生成」セクションを参照してください、 [Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)トピック。  
   
 ## <a name="resource-manager-in-the-includenetportableincludesnet-portable-mdmd"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] のリソース マネージャー  
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] プロジェクトでは、リソースへのすべてのアクセスは <xref:System.Resources.ResourceManager> クラスによって処理されます。 <xref:System.Resources> や <xref:System.Resources.ResourceReader> などの <xref:System.Resources.ResourceSet> 名前空間の型には [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] プロジェクトからアクセスできないため、これらはリソースへのアクセスには使用できません。  
@@ -65,7 +67,7 @@ ms.locfileid: "33578223"
 |NameLength|25|  
 |タイトル|従業員データベース|  
   
- 次のコード定義、`UILibrary`を名前付きリソース マネージャーのラッパーを使用してクラス`resources`Visual Studio によって生成されたときに、**アクセス修飾子**にファイルが変更されたり**パブリック**. UILibrary クラスは必要に応じて文字列データを解析します。 . このクラスは `MyCompany.Employees` 名前空間にあることに注意してください。  
+ 次のコード定義を`UILibrary`という名前のリソース マネージャーのラッパーを使用するクラス`resources`Visual Studio によって生成されたときに、**アクセス修飾子**にファイルが変更**パブリック**. UILibrary クラスは必要に応じて文字列データを解析します。 . このクラスは `MyCompany.Employees` 名前空間にあることに注意してください。  
   
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]  
@@ -80,7 +82,7 @@ ms.locfileid: "33578223"
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]  
   
 ## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>例: ローカライズされている [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
- 以下のローカライズされている [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] の例には、フランス語 (フランス) と英語 (米国) のカルチャのリソースが含まれています。 英語 (米国) カルチャは、アプリの既定のカルチャです。テーブルで、そのリソースが示すように、[前のセクション](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)です。 フランス語 (フランス) のカルチャのリソース ファイルは LibResources.fr-FR.resx という名前で、以下の表に示す文字列リソースで構成されています。 `UILibrary` クラスのソース コードは前のセクションに示すものと同じです。  
+ 以下のローカライズされている [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] の例には、フランス語 (フランス) と英語 (米国) のカルチャのリソースが含まれています。 英語 (米国) カルチャは、アプリの既定のカルチャです。テーブルにそのリソースが示すように、[前のセクション](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)します。 フランス語 (フランス) のカルチャのリソース ファイルは LibResources.fr-FR.resx という名前で、以下の表に示す文字列リソースで構成されています。 `UILibrary` クラスのソース コードは前のセクションに示すものと同じです。  
   
 |リソース名|リソースの値|  
 |-------------------|--------------------|  

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 78e852e2f1894f92e5b43228faedfad0d78981fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79749f5e593fbf4ea282cc5c8000be88098b702f
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364478"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874596"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
 通常、データベース サーバーへの接続は、時間のかかるいくつかの手順で構成されています。 ソケットまたは名前付きパイプなどの物理チャネルの確立、サーバーとの最初のハンドシェイクの実行、接続文字列の情報の解析、サーバーによる接続の認証、現在のトランザクションへ参加するための検証などの手順を行う必要があります。  
   
- 実際には、ほとんどのアプリケーションで、1 つまたはいくつかの違いがあるだけの構成を接続に使用しています。 つまり、アプリケーションの実行時に、多数の同一の接続が繰り返し開かれ、閉じられているのです。 接続を開くコストを最小限に抑える[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]と呼ばれる最適化の手法を使用して*接続プーリング*です。  
+ 実際には、ほとんどのアプリケーションで、1 つまたはいくつかの違いがあるだけの構成を接続に使用しています。 つまり、アプリケーションの実行時に、多数の同一の接続が繰り返し開かれ、閉じられているのです。 接続を開くコストを最小限に抑える[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]と呼ばれる最適化手法を使用して*接続プール*します。  
   
- 接続プールは、新しく開く必要のある接続の数を減らします。 *プーラー*の物理的な接続の所有権を保持します。 プーラーは、任意の接続構成それぞれのアクティブな接続のセットをそのまま保持して、接続を管理します。 この接続の `Open` を呼び出すと、プーラーは、プールに使用可能な接続があるかどうかを確認します。 プールされた接続が使用できる場合は、新しい接続を開く代わりに、プールされた接続を呼び出し元に返します。 アプリケーションが接続で `Close` を呼び出すと、プーラーは接続を閉じる代わりに、プールされたアクティブな接続のセットに接続を返します。 接続がプールに返されると、その接続は、次の `Open` 呼び出しで再度使用できる状態になります。  
+ 接続プールは、新しく開く必要のある接続の数を減らします。 *プーラー*物理的な接続の所有権を保持します。 プーラーは、任意の接続構成それぞれのアクティブな接続のセットをそのまま保持して、接続を管理します。 この接続の `Open` を呼び出すと、プーラーは、プールに使用可能な接続があるかどうかを確認します。 プールされた接続が使用できる場合は、新しい接続を開く代わりに、プールされた接続を呼び出し元に返します。 アプリケーションが接続で `Close` を呼び出すと、プーラーは接続を閉じる代わりに、プールされたアクティブな接続のセットに接続を返します。 接続がプールに返されると、その接続は、次の `Open` 呼び出しで再度使用できる状態になります。  
   
  同じ構成を持つ接続のみをプールすることができます。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] は同時に複数のプールを保持し、各プールでの構成は 1 つです。 接続は接続文字列によってプール内で区別されます。また、統合セキュリティを使用している場合は、Windows ID によっても区別されます。 接続がプールされるかどうかは、その接続がトランザクションに参加しているかどうかにも依存します。 <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> を使用すると、<xref:System.Data.SqlClient.SqlCredential> インスタンスは接続プールに影響します。 ユーザー ID とパスワードが同じでも、<xref:System.Data.SqlClient.SqlCredential> のインスタンスごとに異なる接続プールが使用されます。  
   
@@ -67,13 +67,12 @@ using (SqlConnection connection = new SqlConnection(
  接続プーラーは、接続がプールに解放されたときに接続の再割り当てを行って、接続に対する要求に応えます。 最大プール サイズに達すると、使用可能な接続を取得できなくなり、要求はキューに置かれます。 プーラーは、タイムアウト (既定は 15 秒) に達するまで接続の再利用を試みます。 接続がタイムアウトになる前に、プーラーが要求を満たすことができない場合は、例外がスローされます。  
   
 > [!CAUTION]
->  接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することを強くお勧めします。 これを行うかを使用して、`Close`または`Dispose`のメソッド、`Connection`オブジェクト、または内のすべての接続を開くことによって、 `using` 、C# の場合は、ステートメントまたは`Using`Visual Basic でのステートメント。 明示的に終了されていない接続は、プールに追加したり返したりすることができないことがあります。 詳細については、次を参照してください。[ステートメントを使用して](~/docs/csharp/language-reference/keywords/using-statement.md)または[する方法: システム リソースを破棄](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)Visual basic の場合。  
+>  接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することを強くお勧めします。 これを行うかを使用して、`Close`または`Dispose`のメソッド、`Connection`オブジェクト、または内のすべての接続を開くことによって、 `using` 、c# のステートメントまたは`Using`Visual Basic でのステートメント。 明示的に終了されていない接続は、プールに追加したり返したりすることができないことがあります。 詳細については、次を参照してください。[ステートメントを使用して](~/docs/csharp/language-reference/keywords/using-statement.md)または[方法: システム リソースを破棄](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)Visual basic の場合。  
   
 > [!NOTE]
->  クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージ オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳細については、次を参照してください。[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)です。  
+>  クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳細については、次を参照してください。[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)します。  
   
-> [!NOTE]
->  接続が接続プールからフェッチされたり接続プールに返される場合、ログイン イベントとログアウト イベントはサーバーで発生しません。 これは、接続プールに返されるときに接続が実際には終了していないためです。 詳細については、次を参照してください。 [Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx)と[Audit Logout イベント クラス](http://msdn2.microsoft.com/library/ms175827.aspx)SQL Server オンライン ブック。  
+接続の開閉に関連付けられているイベントに関する詳細については、次を参照してください。 [Audit Login イベント クラス](/sql/relational-databases/event-classes/audit-login-event-class)と[Audit Logout イベント クラス](/sql/relational-databases/event-classes/audit-logout-event-class)、SQL Server のドキュメントにします。  
   
 ## <a name="removing-connections"></a>接続の削除  
  接続プール機能は、アイドル状態の時間が約 4-8 分になったか、サーバーとの接続が切断されたことをプール機能が検出した場合に、プールからの接続を削除します。 サーバーとの通信を試みた後にのみ、切断されたサーバー接続が検出可能になることに注意してください。 接続がサーバーに接続していないことがわかると、その接続は無効としてマークされます。 無効な接続は、閉じられるか、または再利用された場合のみ、接続プールから削除されます。  
@@ -125,7 +124,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>アプリケーション ロールおよび接続プール  
- `sp_setapprole` システム ストアド プロシージャの呼び出しにより SQL Server のアプリケーション ロールが起動された後は、その接続のセキュリティ コンテキストをリセットすることはできません。 ただし、プールを有効した場合は、プールに接続が返され、プール接続が再利用されると、エラーが発生します。 詳細については、サポート技術情報の記事を参照してください"[では、OLE DB リソース プールの SQL アプリケーション ロール エラー](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。"。  
+ `sp_setapprole` システム ストアド プロシージャの呼び出しにより SQL Server のアプリケーション ロールが起動された後は、その接続のセキュリティ コンテキストをリセットすることはできません。 ただし、プールを有効した場合は、プールに接続が返され、プール接続が再利用されると、エラーが発生します。 詳細については、サポート技術情報の記事を参照してください"[OLE DB リソース プールでは、SQL アプリケーション ロール エラー](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。"。  
   
 ### <a name="application-role-alternatives"></a>アプリケーション ロールに代わる方法  
  アプリケーション ロールに代わるセキュリティ メカニズムの使用をお勧めします。 詳細については、次を参照してください。 [SQL Server でのアプリケーション ロールの作成](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)です。  
@@ -134,4 +133,5 @@ using (SqlConnection connection = new SqlConnection(
  [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [SQL Server と ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ 
+  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)

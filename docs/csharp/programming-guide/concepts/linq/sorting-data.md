@@ -2,12 +2,12 @@
 title: データの並べ替え (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 6e223ecbfc68e904762bff998b3bd37f88607f7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90ff7d52e6832935fe16e081e904acae3a24669a
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332560"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245435"
 ---
 # <a name="sorting-data-c"></a>データの並べ替え (C#)
 並べ替え操作では、1 つ以上の属性に基づいてシーケンスの要素を並べ替えます。 並べ替えの第 1 条件で、要素に対して一回目の並べ替えが実行されます。 第 2 条件を指定すると、第 1 条件で並べ替えられた各グループ内の要素を並べ替えることができます。  
@@ -56,7 +56,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="primary-descending-sort"></a>1 番目の並べ替え (降順)  
- 次の例は、LINQ クエリで `orderby``descending` 句を使用して、文字列を最初の文字に従って降順に並べ替える方法を示しています。  
+ 次の例は、LINQ クエリで `orderby descending` 句を使用して、文字列を最初の文字に従って降順に並べ替える方法を示しています。  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -104,7 +104,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="secondary-descending-sort"></a>2 番目の並べ替え (降順)  
- 次の例は、LINQ クエリで `orderby``descending` 句を使用して、1 番目の並べ替えを昇順で実行し、2 番目の並べ替えを降順で実行する方法を示しています。 各文字列は、最初に文字列長を基準として、次に文字列の最初の文字を基準として並べ替えられます。  
+ 次の例は、LINQ クエリで `orderby descending` 句を使用して、1 番目の並べ替えを昇順で実行し、2 番目の並べ替えを降順で実行する方法を示しています。 各文字列は、最初に文字列長を基準として、次に文字列の最初の文字を基準として並べ替えられます。  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  

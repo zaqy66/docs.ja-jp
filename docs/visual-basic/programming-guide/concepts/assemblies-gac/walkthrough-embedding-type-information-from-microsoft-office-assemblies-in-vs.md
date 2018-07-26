@@ -1,20 +1,20 @@
 ---
-title: 'チュートリアル: Visual Studio (Visual Basic) での Microsoft Office アセンブリから型情報の埋め込み'
+title: 'チュートリアル: Visual Studio (Visual Basic) で Microsoft Office アセンブリから型情報の埋め込み'
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
 ms.openlocfilehash: 6a28e95f9c3cfcc2481c8f4f9f83303648df43cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643823"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244053"
 ---
-# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio (Visual Basic) での Microsoft Office アセンブリから型情報の埋め込み
+# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio (Visual Basic) で Microsoft Office アセンブリから型情報の埋め込み
 COM オブジェクトを参照するアプリケーションに型情報を埋め込むと、プライマリ相互運用機能アセンブリ (PIA: Primary Interop Assembly) を使用する必要がなくなります。 また、埋め込み型情報を使用することで、バージョンに依存しないアプリケーションを作成できます。 つまり、複数のバージョンの COM ライブラリの型を使用するようにプログラムを記述でき、バージョンごとに固有の PIA が不要になります。 この方法は、Microsoft Office ライブラリのオブジェクトを使用するアプリケーション向けの一般的なシナリオです。 型情報を埋め込むと、プログラムの同じビルドで、異なるコンピューター上にある異なるバージョンの Microsoft Office と連携できます。Microsoft Office のバージョンごとにプログラムや PIA を再配置する必要はありません。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このチュートリアルの前提条件は次のとおりです。  
   
 -   Visual Studio および Microsoft Excel がインストールされたコンピューター。  
@@ -29,7 +29,7 @@ COM オブジェクトを参照するアプリケーションに型情報を埋�
   
 3.  **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ペインで、**[Windows]** が選択されていることを確認します。 **[テンプレート]** ペインの **[コンソール アプリケーション]** を選択します。 **[名前]** ボックスに「`CreateExcelWorkbook`」と入力して、 **[OK]** を選択します。 新しいプロジェクトが作成されます。  
   
-4.  CreateExcelWorkbook プロジェクトのショートカット メニューを開き、選択**プロパティ**です。 選択、**参照**タブです。**[追加]** ボタンをクリックします。  
+4.  CreateExcelWorkbook プロジェクトのショートカット メニューを開き、選択し、**プロパティ**します。 選択、**参照**タブ。**[追加]** ボタンをクリックします。  
   
 5.  **[.NET]** タブで、最新バージョンの `Microsoft.Office.Interop.Excel` を選択します。 たとえば、**[Microsoft.Office.Interop.Excel 14.0.0.0]** をクリックします。 **[OK]** を選択します。  
   

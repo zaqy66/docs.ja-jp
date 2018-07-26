@@ -1,5 +1,5 @@
 ---
-title: -/subsystemversion (Visual Basic)
+title: -subsystemversion (Visual Basic)
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /subsystemversion compiler option [Visual Basic]
@@ -9,13 +9,13 @@ ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 22eb8aa1cd86dba4a1a65edf31a3b18df7085a33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654451"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245480"
 ---
-# <a name="-subsystemversion-visual-basic"></a>-/subsystemversion (Visual Basic)
+# <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 生成された実行可能ファイルが動作できるサブシステムの最小バージョンを指定します。これにより、実行可能ファイルが動作できる Windows のバージョンが決まります。 通常、このオプションを指定することで、実行可能ファイルが、Windows の以前のバージョンでは使用できない特定のセキュリティ機能を利用できるようになります。  
   
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "33654451"
   
  `minor` バージョンでは、前に配置されるゼロによってバージョンが変更されることはありませんが、後ろにゼロが付くとバージョンが変わります。 たとえば、6.1 と 6.01 は同じバージョンを示しますが、6.10 は異なるバージョンを示します。 混乱を避けるため、マイナー バージョンには 2 桁の数値を使用することをお勧めします。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  次の表は、Windows の一般的なサブシステムのバージョンを示しています。  
   
 |Windows のバージョン|サブシステムのバージョン|  
@@ -62,7 +62,7 @@ ms.locfileid: "33654451"
 -   上記の条件がどれも当てはまらない場合、既定値は 4.00 です。  
   
 ## <a name="setting-this-option"></a>このオプションを設定する  
- 設定する、 **-subsystemversion**コンパイラ オプション Visual Studio で、.vbproj ファイルを開くし、値を指定する必要があります、 `SubsystemVersion` MSBuild XML 内のプロパティです。 Visual Studio IDE でこのオプションを設定することはできません。 詳細については、このトピックの「既定値」または「[MSBuild プロジェクトの共通プロパティ](/visualstudio/msbuild/common-msbuild-project-properties)」を参照してください。  
+ 設定する、 **-subsystemversion**コンパイラ オプション Visual Studio で、.vbproj ファイルを開くし、の値を指定する必要があります、 `SubsystemVersion` MSBuild XML でのプロパティ。 Visual Studio IDE でこのオプションを設定することはできません。 詳細については、このトピックの「既定値」または「[MSBuild プロジェクトの共通プロパティ](/visualstudio/msbuild/common-msbuild-project-properties)」を参照してください。  
   
 
   

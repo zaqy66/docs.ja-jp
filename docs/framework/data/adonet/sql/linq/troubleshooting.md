@@ -2,23 +2,23 @@
 title: トラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 24c7ddd42a4e66785921d9c63a6a757d9806503d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364825"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198817"
 ---
 # <a name="troubleshooting"></a>トラブルシューティング
 ここでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションで発生する可能性のある問題をいくつか示し、そうした問題を回避または影響を軽減するための提案を示します。  
   
- その他の問題はで対処する[に関してよく寄せられる質問](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)です。  
+ その他の問題が記載[よく寄せられる質問](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)します。  
   
 ## <a name="unsupported-standard-query-operators"></a>サポートされない標準クエリ演算子  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、すべての標準クエリ演算子メソッド (たとえば <xref:System.Linq.Enumerable.ElementAt%2A>) をサポートするわけではありません。 このため、コンパイルできたプロジェクトでも、ランタイム エラーが発生する可能性があります。 詳細については、次を参照してください。[標準クエリ演算子変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)です。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、すべての標準クエリ演算子メソッド (たとえば <xref:System.Linq.Enumerable.ElementAt%2A>) をサポートするわけではありません。 このため、コンパイルできたプロジェクトでも、ランタイム エラーが発生する可能性があります。 詳細については、次を参照してください。[標準クエリ演算子の変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)します。  
   
 ## <a name="memory-issues"></a>メモリの問題  
- クエリには、メモリ内コレクションが含まれている場合と[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>、2 つのコレクションが指定された順序に応じて、メモリ内のクエリを実行する可能性があります。 クエリをメモリ内で実行する必要がある場合、データベース テーブルのデータを取得する必要があります。  
+ クエリがメモリ内コレクションが含まれる場合と[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>、2 つのコレクションを指定する順序によって、メモリ内でクエリを実行する場合があります。 クエリをメモリ内で実行する必要がある場合、データベース テーブルのデータを取得する必要があります。  
   
  この手法は非効率的で、メモリとプロセッサの消費量が非常に大きくなる可能性があります。 このような複数ドメインのクエリはできる限り使用しないでください。  
   
@@ -37,30 +37,30 @@ ms.locfileid: "33364825"
   
  このような操作を行わない場合、<xref:System.Data.SqlClient.SqlException> 例外がスローされます。  
   
- 詳細については、次を参照してください。[する方法: 行をデータベースから削除](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)です。  
+ 詳細については、次を参照してください。[方法: 行をデータベースから削除](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)します。  
   
 ## <a name="expression-not-queryable"></a>クエリ可能でない式  
- 場合、"式 [式] はクエリ不可能です。参照が存在するアセンブリですか?" エラー、次のことを確認します。  
+ なら、"式 [式] はクエリ不可能です。アセンブリ参照が存在しますか?" エラーは、次のことを確認します。  
   
 -   アプリケーションが [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)] を対象としている。  
   
 -   `System.Core.dll` および `System.Data.Linq.dll` への参照が存在する。  
   
--   ある、 `Imports` (Visual Basic) または`using`(c#) ディレクティブの<xref:System.Linq>と<xref:System.Data.Linq>です。  
+-   ある、 `Imports` (Visual Basic) または`using`(c#) ディレクティブを<xref:System.Linq>と<xref:System.Data.Linq>します。  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
- デバッグ中、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクト、エンティティのリレーションシップを走査する可能性があります。 キャッシュ内にこれらの項目は、これにより、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プレゼンスの対応になります。 その後、同じキーの複数の行を生成する <xref:System.Data.Linq.Table%601.Attach%2A> や <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> などのメソッドを実行しようとした場合、<xref:System.Data.Linq.DuplicateKeyException> がスローされます。  
+ デバッグ時、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクト、エンティティのリレーションシップを走査する可能性があります。 これらの項目をキャッシュにはそうと[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]存在している対応になります。 その後、同じキーの複数の行を生成する <xref:System.Data.Linq.Table%601.Attach%2A> や <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> などのメソッドを実行しようとした場合、<xref:System.Data.Linq.DuplicateKeyException> がスローされます。  
   
 ## <a name="string-concatenation-exceptions"></a>文字列連結の例外  
- `[n]text` と他の `[n][var]char` にマップされる複数のオペランドを連結する操作はサポートされません。 異なる 2 つの型のセットにマップされる文字列を連結しようとすると、例外がスローされます。 詳細については、次を参照してください。 [System.String メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)です。  
+ `[n]text` と他の `[n][var]char` にマップされる複数のオペランドを連結する操作はサポートされません。 異なる 2 つの型のセットにマップされる文字列を連結しようとすると、例外がスローされます。 詳細については、次を参照してください。 [System.String メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)します。  
   
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>SQL Server 2000 の Skip 例外と Take 例外  
- SQL Server 2000 データベースに対して <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> または <xref:System.Linq.Queryable.Take%2A> を使用する際には、ID メンバー (<xref:System.Linq.Queryable.Skip%2A>) を使用する必要があります。 クエリは、(結合ではなく) 1 つのテーブルに対して実行されるか、<xref:System.Linq.Queryable.Distinct%2A>、<xref:System.Linq.Queryable.Except%2A>、<xref:System.Linq.Queryable.Intersect%2A>、または <xref:System.Linq.Queryable.Union%2A> 操作である必要があります。さらに、クエリに <xref:System.Linq.Queryable.Concat%2A> 操作を含めることはできません。 詳細については、「SQL Server 2000 のサポート」セクションを参照してください。[標準クエリ演算子変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)です。  
+ SQL Server 2000 データベースに対して <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> または <xref:System.Linq.Queryable.Take%2A> を使用する際には、ID メンバー (<xref:System.Linq.Queryable.Skip%2A>) を使用する必要があります。 クエリは、(結合ではなく) 1 つのテーブルに対して実行されるか、<xref:System.Linq.Queryable.Distinct%2A>、<xref:System.Linq.Queryable.Except%2A>、<xref:System.Linq.Queryable.Intersect%2A>、または <xref:System.Linq.Queryable.Union%2A> 操作である必要があります。さらに、クエリに <xref:System.Linq.Queryable.Concat%2A> 操作を含めることはできません。 詳細については、「SQL Server 2000 のサポート」セクションを参照してください。[標準クエリ演算子の変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)します。  
   
  この要件は [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)] には適用されません。  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
- この例外は、たとえば <xref:System.Linq.Enumerable.GroupBy%2A> のように、`boolean` 式でグループ分けする `group x by (Phone==@phone)` クエリ内の列値が null である場合にスローされます。 式があるため、 `boolean`、キーがある推論`boolean`ではなく、`nullable``boolean`です。 変換された比較では、null 値が生成される、しようとしましたが割り当てる、`nullable``boolean`を`boolean`例外がスローされます。  
+ この例外は、たとえば <xref:System.Linq.Enumerable.GroupBy%2A> のように、`boolean` 式でグループ分けする `group x by (Phone==@phone)` クエリ内の列値が null である場合にスローされます。 式が `boolean` であるため、キーは `boolean` `nullable` ではなく、`boolean` と推論されます。 変換された比較で null が生成される場合、`nullable` `boolean` を `boolean` に割り当てようとして、例外がスローされます。  
   
  この状態を回避する (null を false と扱う) には、次のような手法を使用してください。  
   

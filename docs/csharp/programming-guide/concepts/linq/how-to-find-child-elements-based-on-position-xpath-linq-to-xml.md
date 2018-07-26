@@ -3,11 +3,11 @@ title: '方法: 位置に基づいて子要素を検索する (XPath-LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
 ms.openlocfilehash: ffe10bd5b263e56b6f2ee1708688523a2b0dd018
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317503"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245055"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>方法: 位置に基づいて子要素を検索する (XPath-LINQ to XML) (C#)
 要素をその位置に基づいて検索しなければならない場合があります。 2 番目の要素を検索したり、3 番目から 5 番目の要素を検索したりすることがあります。  

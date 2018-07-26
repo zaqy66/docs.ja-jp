@@ -11,15 +11,15 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b6e01906c31316cfa8f148ed96944f309517f95
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741894"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874924"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;要素 (ネットワーク設定)
-配信形式、配信方法を構成し、電子メールを送信するためのアドレスからです。  
+構成の配信形式、配信方法、および送信者の電子メールを送信するためのアドレス。  
   
  \<configuration>  
 \<system.net>  
@@ -45,9 +45,9 @@ ms.locfileid: "32741894"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`deliveryFormat`|発信メールの配信形式を指定します。 指定できる値は SevenBit および International です。|  
-|`deliveryMethod`|電子メールの配信方法を指定します。 指定できる値は、network、pickupDirectoryFromIis、および specifiedPickupDirectory です。|  
-|`from`|指定、出力方向の電子メールの差出人アドレスです。|  
+|`deliveryFormat`|送信電子メールの配信形式を指定します。 指定できる値は SevenBit および International です。|  
+|`deliveryMethod`|電子メールの配信方法を指定します。 使用可能な値は、Network、PickupDirectoryFromIis、および specifiedpickupdirectory です。|  
+|`from`|指定します、送信電子メールの差出人アドレス。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -69,7 +69,7 @@ ms.locfileid: "32741894"
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
+      <smtp deliveryMethod="Network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
         <network  
           host="localhost"  
           port="25"  

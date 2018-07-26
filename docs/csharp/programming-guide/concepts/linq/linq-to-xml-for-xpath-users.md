@@ -3,11 +3,11 @@ title: XPath ユーザー向けの LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
 ms.openlocfilehash: e55e763db2169b704b0b1fcc72e21d9e339b01f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337897"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199122"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>XPath ユーザー向けの LINQ to XML (C#)
 次に示す一連のトピックでは、さまざまな XPath 式、およびそれらに関連する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の式について説明します。  

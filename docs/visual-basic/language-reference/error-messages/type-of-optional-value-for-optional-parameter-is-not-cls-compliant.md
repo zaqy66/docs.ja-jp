@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
 ms.openlocfilehash: dd77cd8cbd36f7681e2597d908dd8e55bf249392
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594348"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960350"
 ---
 # <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>省略可能なパラメーターの省略可能な値の型&lt;parametername&gt; CLS 準拠ではありません
 プロシージャは `<CLSCompliant(True)>` に設定されていますが、非準拠の型が既定値である [Optional](../../../visual-basic/language-reference/modifiers/optional.md) パラメーターが宣言されています。  
@@ -39,8 +39,8 @@ ms.locfileid: "33594348"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   省略可能なパラメーターは、この特定の型の既定値である必要があります、削除<xref:System.CLSCompliantAttribute>です。 プロシージャは CLS 準拠になりません。  
+-   省略可能なパラメーターは、この特定の型の既定値である必要があります、削除<xref:System.CLSCompliantAttribute>します。 プロシージャは CLS 準拠になりません。  
   
 -   プロシージャを CLS 準拠にする必要がある場合は、この既定値の型を、最も近い CLS 準拠型に変更します。 たとえば、2,147,483,647 を超える値の範囲が不要な場合は、 `UInteger` の代わりに `Integer` を使用できます。 拡張範囲が必要な場合は、 `UInteger` の代わりに `Long`を使用できます。  
   
--   オートメーション オブジェクトや COM オブジェクトとやり取りする場合は、一部の型のデータ幅が [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] とは異なることに注意してください。 たとえば、他の多くの環境では `int` は 16 ビットです。 このようなコンポーネントから 16 ビット整数を受け取る場合として宣言`Short`の代わりに`Integer`マネージ コードを Visual Basic でします。
+-   オートメーション オブジェクトや COM オブジェクトとやり取りする場合は、一部の型のデータ幅が [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] とは異なることに注意してください。 たとえば、他の多くの環境では `int` は 16 ビットです。 このようなコンポーネントから 16 ビット整数を受け取る場合宣言として`Short`の代わりに`Integer`管理対象の Visual Basic コードです。

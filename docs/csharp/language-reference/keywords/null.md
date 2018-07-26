@@ -8,11 +8,11 @@ helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
 ms.openlocfilehash: cd99ce43ad359c58c855748dff9a01abb6dbd453
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268121"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961171"
 ---
 # <a name="null-c-reference"></a>null (C# リファレンス)
 `null` キーワードは、いかなるオブジェクトも参照していない null 参照を表すリテラルです。 `null` は参照型変数の既定値です。 通常の値の型を null にすることはできません。 ただし、C# 2.0 では null 許容値型が導入されました。 「[Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)」をご覧ください。  

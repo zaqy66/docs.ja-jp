@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 51a3c2e8399fdaae19ebe33f0d9ecc4bfd598799
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e368105c090f95435a4529470bdf1b41346d039c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321848"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936751"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名関数 (C# プログラミング ガイド)
 匿名関数は、デリゲート型が必要とされる任意の場所で使用できる "インライン" のステートメントまたは式です。 名前付きデリゲートを初期化するときや、メソッドのパラメーターとして名前付きデリゲート型の代わりに渡したりするときに使用できます。  
@@ -35,8 +35,9 @@ ms.locfileid: "33321848"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [ステートメント、式、および演算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
- [ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [デリゲート](../../../csharp/programming-guide/delegates/index.md)  
- [式ツリー](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+## <a name="see-also"></a>関連項目
+
+[ステートメント、式、および演算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
+[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+[デリゲート](../../../csharp/programming-guide/delegates/index.md)  
+[式ツリー (C#)](../concepts/expression-trees/index.md)  

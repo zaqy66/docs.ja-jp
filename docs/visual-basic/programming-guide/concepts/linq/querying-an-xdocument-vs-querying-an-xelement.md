@@ -1,15 +1,15 @@
 ---
-title: XDocument のクエリと XElement (Visual Basic) のクエリ
+title: XDocument のクエリと (Visual Basic) を XElement のクエリ
 ms.date: 07/20/2015
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
 ms.openlocfilehash: 6bc7af08544f00a87246b748d0419f11b57ed2da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646004"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220936"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>XDocument のクエリと XElement (Visual Basic) のクエリ
+# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>XDocument のクエリと (Visual Basic) を XElement のクエリ
 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> によってドキュメントを読み込む場合、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> によって読み込む場合とは少し異なるクエリを記述する必要があることがわかります。  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>XDocument.Load と XElement.Load の比較  

@@ -1,5 +1,5 @@
 ---
-title: Event ステートメント
+title: Event ステートメント (Visual Basic)
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: d59dc8e7b01612af0e4c8f6c1018269580284c46
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 5ae25cbca73f7c8e767cad0ac332d77c306724a1
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34233939"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245436"
 ---
 # <a name="event-statement"></a>Event ステートメント
 ユーザー定義イベントを宣言します。  
@@ -58,8 +58,8 @@ End Event
   
 |パーツ|説明|  
 |---|---|  
-|`attrlist`|任意。 このイベントに適用される属性の一覧です。 複数の属性を指定するときは、コンマで区切ります。 囲む必要があります、[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ ("`<`「と」`>`") です。|  
-|`accessmodifier`|任意。 どのようなコードからイベントにアクセスできるのかを指定します。 次のいずれかの値を指定します。<br /><br /> -   [パブリック](../../../visual-basic/language-reference/modifiers/public.md): 宣言された要素にアクセスできる任意のコードがアクセスできます。<br />-   [保護されている](../../../visual-basic/language-reference/modifiers/protected.md)— のみがそのクラスまたは派生クラス内でコードがアクセスできます。<br />-   [フレンド](../../../visual-basic/language-reference/modifiers/friend.md)— のみ同じアセンブリ内のコードがアクセスできます。<br />-   [プライベート](../../../visual-basic/language-reference/modifiers/private.md): 宣言された要素のコードからのみアクセスできます。<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-のみ、イベントのクラス、派生クラスでは、または同じアセンブリ内のコードがアクセスできます。 <br />- [プライベート Protected](../../language-reference/modifiers/private-protected.md)-のみ、イベントのクラスまたは派生クラスで、同じアセンブリ内のコードがアクセスできます。|  
+|`attrlist`|任意。 このイベントに適用される属性の一覧です。 複数の属性を指定するときは、コンマで区切ります。 囲む必要があります、[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ ("`<`「と」`>`")。|  
+|`accessmodifier`|任意。 どのようなコードからイベントにアクセスできるのかを指定します。 次のいずれかの値を指定します。<br /><br /> -   [パブリック](../../../visual-basic/language-reference/modifiers/public.md): 宣言された要素にアクセスできる任意のコードでアクセスできます。<br />-   [保護されている](../../../visual-basic/language-reference/modifiers/protected.md)— のみそのクラスまたは派生クラス内のコードでアクセスできます。<br />-   [フレンド](../../../visual-basic/language-reference/modifiers/friend.md)— のみ同じアセンブリ内のコードでアクセスできます。<br />-   [プライベート](../../../visual-basic/language-reference/modifiers/private.md): 宣言された要素のコードからのみアクセスできます。<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-のみ、イベントのクラス、派生クラスでは、または同じアセンブリ内のコードでアクセスできます。 <br />- [Private Protected](../../language-reference/modifiers/private-protected.md)にのみ、イベントのクラスまたは派生クラスで同じアセンブリ内のコードでアクセスできます。|  
 |`Shared`|任意。 このイベントがクラスまたは構造体の特定のインスタンスに関連付けられないことを指定します。|  
 |`Shadows`|任意。 このイベントが、基本クラスにある、同じ名前を持つプログラミング要素、またはオーバーロードされる要素のセットを宣言し直して隠ぺいすることを示します。 宣言された要素は、他の任意の種類の要素でシャドウできます。<br /><br /> シャドウされた要素は、その要素をシャドウする派生クラスからは使用できません。ただし、シャドウする要素がアクセスできない要素の場合は例外です。 たとえば、`Private` 要素が基本クラスの要素をシャドウすると、`Private` 要素へのアクセス許可を持たないコードは、代わりに基本クラスにアクセスします。|  
 |`eventname`|必須。 イベントの名前です。変数の標準的な名前付け規則に従って名前を付けます。|  
@@ -79,7 +79,7 @@ End Event
 |`statements`|任意。 `AddHandler`、`RemoveHandler`、および `RaiseEvent` の各メソッドの本体が含まれるステートメントです。|  
 |`End Event`|必須。 `Event` ブロックを終了します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  宣言したイベントは、`RaiseEvent` ステートメントを使って発生させます。 通常、イベントの宣言と発生は、次のように行われます。  
   
  [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
@@ -89,9 +89,9 @@ End Event
   
  イベントを処理するためには、`Handles` ステートメントまたは `AddHandler` ステートメントを使用して、イベントをイベント ハンドラー サブルーチンに関連付ける必要があります。 サブルーチンとイベントの署名が一致する必要があります。 共有イベントを処理するには、`AddHandler` ステートメントを使う必要があります。  
   
- `Event` は、モジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*イベント クラス、構造体、モジュール、またはインターフェイスである必要があり、ソース ファイル、名前空間、プロシージャ、またはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
+ `Event` は、モジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*イベントは、クラス、構造体、モジュール、またはインターフェイスである必要があり、ソース ファイル、名前空間、プロシージャ、またはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- ほとんどの状況で、このトピックの「構文」のセクションにある最初の構文を使ってイベントを宣言できますが、 一部のシナリオでは、イベントの動作をより詳細に制御することが必要になります。 このトピックの「構文」セクションの最後には、`Custom` キーワードを使用した構文があります。これを使用すると、カスタム イベントを定義してイベントを詳細に制御できます。 カスタム イベントでは、コードでイベント ハンドラーを追加または削除するときに、つまりコードでイベントを生成するときに、何が起こるかを正確に指定します。 例については、次を参照してください。[する方法: 節約メモリにカスタム イベントを宣言](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)と[する方法: 宣言カスタム イベントにしてブロックを回避](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)です。  
+ ほとんどの状況で、このトピックの「構文」のセクションにある最初の構文を使ってイベントを宣言できますが、 一部のシナリオでは、イベントの動作をより詳細に制御することが必要になります。 このトピックの「構文」セクションの最後には、`Custom` キーワードを使用した構文があります。これを使用すると、カスタム イベントを定義してイベントを詳細に制御できます。 カスタム イベントでは、コードでイベント ハンドラーを追加または削除するときに、つまりコードでイベントを生成するときに、何が起こるかを正確に指定します。 例については、次を参照してください。[方法: 節約メモリにカスタム イベントを宣言](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)と[方法: 宣言カスタム イベントにしてブロックを回避](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、イベントを使用して 10 秒から 0 秒までカウント ダウンします。 このコードは、イベント関連のいくつかのメソッド、プロパティ、およびステートメントの例を示しています。 `RaiseEvent` ステートメントの使用例も含まれています。  
@@ -102,7 +102,7 @@ End Event
   
  `Form1` のコードでは、フォームの初期状態と終了状態を指定しています。 イベント発生時に実行されるコードも含まれています。  
   
- この例を使用するには、新しい Windows フォーム プロジェクトを開きます。 次に、`Button1` という名前のボタンと `TextBox1` という名前のテキスト ボックスを、`Form1` という名前のメイン フォームに追加します。 フォームを右クリックし、をクリックし、**コードの表示**コード エディターを開きます。  
+ この例を使用するには、新しい Windows フォーム プロジェクトを開きます。 次に、`Button1` という名前のボタンと `TextBox1` という名前のテキスト ボックスを、`Form1` という名前のメイン フォームに追加します。 次にフォームを右クリックし、をクリックして**コードの表示**コード エディターを開きます。  
   
  `Form1` クラスの宣言セクションに、`WithEvents` 変数を追加します。  
   
@@ -112,10 +112,10 @@ End Event
   
  [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
   
- 前の例を実行し、ボタンをクリックして f5 キーを押して**開始**です。 最初のテキスト ボックスで、秒のカウント ダウンが開始されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
+ 前の例を実行し、ボタンをクリックします。 f5 キーを押して**開始**します。 最初のテキスト ボックスで、秒のカウント ダウンが開始されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
   
 > [!NOTE]
->  `My.Application.DoEvents` メソッドがイベントを処理する方法は、フォームと同じではありません。 フォームでイベントを直接処理するには、マルチスレッドを使用します。 詳細については、次を参照してください。[スレッド](../../programming-guide/concepts/threading/index.md)です。  
+>  `My.Application.DoEvents` メソッドがイベントを処理する方法は、フォームと同じではありません。 フォームでイベントを直接処理するには、マルチスレッドを使用します。 詳細については、次を参照してください。[スレッド処理](../../programming-guide/concepts/threading/index.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  

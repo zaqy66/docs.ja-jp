@@ -1,5 +1,5 @@
 ---
-title: Module ステートメント
+title: Module ステートメント (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - Module
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: f4a0c7b772417085718b63569e8368178e348567
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605018"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244102"
 ---
 # <a name="module-statement"></a>Module ステートメント
 モジュールの名前を宣言し、変数、プロパティ、イベント、およびモジュールを構成するプロシージャの定義を紹介します。  
@@ -33,7 +33,7 @@ End Module
   
 ## <a name="parts"></a>指定項目  
  `attributelist`  
- 任意。 参照してください[属性一覧](../../../visual-basic/language-reference/statements/attribute-list.md)です。  
+ 任意。 参照してください[属性一覧](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
   
  `accessmodifier`  
  任意。 次のいずれかの値を指定します。  
@@ -42,56 +42,56 @@ End Module
   
 -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
- 参照してください[Visual Basic でのレベルのアクセス](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)です。  
+ 参照してください[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
   
  `name`  
- 必須。 このモジュールの名前です。 参照してください[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)です。  
+ 必須。 このモジュールの名前。 参照してください[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
   
  `statements`  
- 任意。 変数、プロパティ、イベント、プロシージャ、およびこのモジュールの入れ子にされた型を定義するステートメント。  
+ 任意。 変数、プロパティ、イベント、プロシージャ、およびこのモジュールの入れ子にされた型を定義するステートメントです。  
   
  `End Module`  
  `Module` の定義を終了します。  
   
-## <a name="remarks"></a>コメント  
- A`Module`ステートメントは、その名前空間全体で使用できる参照型を定義します。 A*モジュール*(とも呼ばれる、*標準的なモジュール*) のようないくつかの重要な違いですが、クラスにします。 すべてのモジュールは、1 つのインスタンスを持ち、作成または変数に代入する必要はありません。 モジュールは継承をサポートしていないまたはインターフェイスを実装します。 モジュールは通知、*型*クラスまたは構造体は、という意味で、モジュールのデータ型を持つプログラミング要素を宣言することはできません。  
+## <a name="remarks"></a>Remarks  
+ A`Module`ステートメントは、その名前空間全体で使用できる参照型を定義します。 A*モジュール*(とも呼ばれる、*標準モジュール*) のようなクラスがいくつか重要な違いがあります。 すべてのモジュールは、1 つのインスタンスを備え、作成または変数に代入する必要はありません。 モジュールは継承をサポートしていないまたはインターフェイスを実装します。 モジュールが通知を*型*クラスまたは構造体は、という意味で-モジュールのデータ型を持つプログラミング要素を宣言することはできません。  
   
  使用することができます`Module`名前空間レベルでのみです。 つまり、*宣言コンテキスト*モジュールのソース ファイルまたは名前空間にある必要があります、クラス、構造体、モジュール、インターフェイス、プロシージャ、またはブロックすることはできません。 文字列または任意の種類別のモジュール内のモジュールを入れ子にすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- モジュールが、有効期間は、プログラムと同じです。 そのメンバーはすべてため`Shared`、また以下にするプログラムの有効期間があります。  
+ モジュールが、有効期間は、プログラムと同じです。 そのメンバーはすべてため`Shared`のプログラムの有効期間もあります。  
   
- 既定で、モジュール[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、次を参照してください。 [Visual Basic でのレベルのアクセス](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)です。  
+ 既定で、モジュール[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
   
- モジュールのすべてのメンバーは、暗黙的に`Shared`です。  
+ モジュールのすべてのメンバーは、暗黙的に`Shared`します。  
   
 ## <a name="classes-and-modules"></a>クラスとモジュール  
  これらの要素がある多くの類似点がいくつかの重要な違いがあります。  
   
--   **用語集。** 以前のバージョンの Visual Basic モジュールの 2 つの種類を認識する:*クラス モジュール*(.cls ファイル) と*標準モジュール*(.bas ファイル)。 現在のバージョンを呼び出す*クラス*と*モジュール*、それぞれします。  
+-   **用語集。** Visual Basic の以前のバージョンは 2 種類のモジュールを認識:*クラス モジュール*(.cls ファイル) と*標準モジュール*(.bas ファイル)。 現在のバージョンを呼び出す*クラス*と*モジュール*、それぞれします。  
   
 -   **共有メンバー。** クラスのメンバーは、共有するかどうか、またはインスタンス メンバーを制御できます。  
   
--   **オブジェクトの方向。** クラスは、オブジェクト指向しますが、モジュールがないです。 したがって、クラスだけをオブジェクトとしてインスタンス化できます。 詳細については、次を参照してください。[クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)です。  
+-   **オブジェクト指向です。** クラスは、オブジェクト指向ですが、モジュールがないです。 したがって、クラスだけは、オブジェクトとしてインスタンス化できます。 詳細については、次を参照してください。[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)します。  
   
 ## <a name="rules"></a>ルール  
   
--   **修飾子です。** すべてのモジュールのメンバーは、暗黙的に[Shared](../../../visual-basic/language-reference/modifiers/shared.md)です。 使用することはできません、`Shared`キーワードと、任意のメンバーの共有の状態を変更して、メンバーを宣言することはできません。  
+-   **修飾子。** すべてのモジュールのメンバーは、暗黙的に[Shared](../../../visual-basic/language-reference/modifiers/shared.md)します。 使用することはできません、`Shared`キーワードと、任意のメンバーの共有状態を変更して、メンバーを宣言することはできません。  
   
 -   **継承。** モジュールが以外の任意の型から継承できません<xref:System.Object>、どのすべてのモジュールから継承します。 具体的には、1 つのモジュールは、別の継承できません。  
   
-     使用することはできません、 [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)モジュールの定義を指定するも<xref:System.Object>します。  
+     使用することはできません、 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)モジュールの定義を指定するも<xref:System.Object>します。  
   
--   **既定のプロパティ。** モジュールには、既定のプロパティを定義できません。 詳細については、次を参照してください。[既定](../../../visual-basic/language-reference/modifiers/default.md)です。  
+-   **既定のプロパティ。** モジュールには、既定のプロパティを定義できません。 詳細については、次を参照してください。[既定](../../../visual-basic/language-reference/modifiers/default.md)します。  
   
 ## <a name="behavior"></a>動作  
   
--   **アクセス レベル。** モジュール内では、各メンバーを独自のアクセス レベルを宣言できます。 モジュール メンバー[パブリック](../../../visual-basic/language-reference/modifiers/public.md)へのアクセス、変数および定数を除く既定[プライベート](../../../visual-basic/language-reference/modifiers/private.md)アクセスします。 モジュールがアクセスより制限のメンバーのいずれか、ときに、指定されたモジュールのアクセス レベルが優先されます。  
+-   **アクセス レベルです。** モジュール内には、アクセス レベルでは、各メンバーを宣言できます。 モジュール メンバー[パブリック](../../../visual-basic/language-reference/modifiers/public.md)変数および定数を除く、既定のアクセス[プライベート](../../../visual-basic/language-reference/modifiers/private.md)アクセスします。 モジュールがそのメンバーの 1 つ以上のアクセスが制限されてよりときに、指定されたモジュールへのアクセス レベルが優先されます。  
   
--   **スコープです。** モジュールのスコープは全体の名前空間です。  
+-   **スコープ。** モジュールとは、名前空間全体のスコープ内で。  
   
-     すべてのモジュール メンバーのスコープは、モジュール全体です。 すべてのメンバーに注意してください*プロモーションを入力*、それが原因で、モジュールを含む名前空間に昇格するには、そのスコープ。 詳細については、次を参照してください。[型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)です。  
+     すべてのモジュール メンバーのスコープは、モジュール全体です。 すべてのメンバーに注意してください*の上位変換*、これにより、モジュールを含む名前空間に昇格するには、そのスコープ。 詳細については、次を参照してください。[型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)します。  
   
--   **パス名です。** プロジェクトでは、複数のモジュールがあることができ、2 つ以上のモジュール内の同じ名前を持つメンバーを宣言できます。 ただし、参照がそのモジュールの外部から場合は、このような名前のメンバーが、適切なモジュールへの参照を修飾する必要があります。 詳細については、次を参照してください。[宣言された要素への参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)です。  
+-   **パス名です。** プロジェクトでは、複数のモジュールがあることができ、2 つまたは複数のモジュールで同じ名前を持つメンバーを宣言することができます。 ただし、モジュールの外部から参照がある場合は、このような適切なモジュール名を持つメンバーへの参照を修飾する必要があります。 詳細については、次を参照してください。 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)します。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  

@@ -3,13 +3,13 @@ title: マイクロサービスで DDD と CQRS パターンを使ってビジ�
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスで DDD と CQRS パターンを使ってビジネスの複雑さに取り組む
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: af67f94b2c56f6a1ec794abbf7d3dad0d78033ec
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/06/2018
+ms.openlocfilehash: bc8ff6262436af6eb49a4ef8635d502e80b74b5a
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105759"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874388"
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>マイクロサービスで DDD と CQRS パターンを使ってビジネスの複雑さに取り組む
 
@@ -70,5 +70,5 @@ DDD に関するトレーニング
 
 
 >[!div class="step-by-step"]
-[前へ](../multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
+[前へ](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
 [次へ](apply-simplified-microservice-cqrs-ddd-patterns.md)

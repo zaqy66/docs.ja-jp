@@ -8,11 +8,11 @@ helpviewer_keywords:
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
 ms.openlocfilehash: bc040e17f5c612b9fc43a9ef24fb6f15f0942b8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284304"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243995"
 ---
 # <a name="where-clause-c-reference"></a>where 句 (C# リファレンス)
 `where` 句をクエリ式で使用して、クエリ式で返されるデータ ソースの要素を指定します。 ブール条件 (*述語*) を (範囲変数で参照される) 各ソース要素に適用し、指定した条件に該当するものを返します。 単一のクエリ式に複数の `where` 句を含めることができ、単一の句に複数の述語部分式を含めることができます。  

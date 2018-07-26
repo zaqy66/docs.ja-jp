@@ -3,11 +3,11 @@ title: private protected (C# リファレンス)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 0d511f55f44511590fbe92a98cef118e0cb482e2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457252"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961133"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# リファレンス)
 キーワード組み合わせ `private protected` はメンバー アクセス修飾子です。 private protected メンバーには、包含クラスから誘導された型でアクセスできますが、その包含アセンブリ内に限られます。 `private protected` と他のアクセス修飾子の比較については、「[アクセシビリティ レベル](../../../csharp/language-reference/keywords/accessibility-levels.md)」を参照してください。 

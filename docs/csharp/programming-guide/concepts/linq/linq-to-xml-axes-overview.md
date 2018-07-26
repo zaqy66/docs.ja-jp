@@ -3,11 +3,11 @@ title: LINQ to XML 軸の概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 ms.openlocfilehash: 0fe8766e3bcde17b59d78f0659043b8d4f017066
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340282"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961288"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 軸の概要 (C#)
 XML ツリーを作成した後、または XML ドキュメントを XML ツリーに読み込んだ後は、クエリを実行して要素や属性を調べたり、その値を取得したりできます。 コレクションの取得には、*軸メソッド* (*軸*とも呼ぶ) を使用します。 一部の軸は、<xref:System.Xml.Linq.XElement> コレクションを返す、<xref:System.Xml.Linq.XDocument> クラスおよび <xref:System.Collections.Generic.IEnumerable%601> クラスのメソッドです。 一部の軸は、<xref:System.Xml.Linq.Extensions> クラスの拡張メソッドです。 拡張メソッドとして実装されている軸は、コレクションに対して機能し、コレクションを返します。  

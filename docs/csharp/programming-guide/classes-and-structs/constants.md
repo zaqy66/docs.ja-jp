@@ -6,11 +6,11 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
 ms.openlocfilehash: 90423c868ca303f8e94c16f44bc5e0b23615fc17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314058"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199379"
 ---
 # <a name="constants-c-programming-guide"></a>定数 (C# プログラミング ガイド)
 定数とは、コンパイル時に既知であり、プログラムの実行期間を通じて変更されない値です。 定数を宣言するには、[const](../../../csharp/language-reference/keywords/const.md) 修飾子を使用します。 `const` として宣言できるのは、C# 組み込み型 (<xref:System.Object?displayProperty=nameWithType> を除く) のみです。 組み込み型の一覧については、「[組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)」を参照してください。 クラス、構造体、配列などのユーザー定義型を `const` にすることはできません。 実行時に (コンストラクターなどで) 一度だけ初期化され、その後は変更できないクラス、構造体、または配列を作成するには、[readonly](../../../csharp/language-reference/keywords/readonly.md) 修飾子を使用します。  

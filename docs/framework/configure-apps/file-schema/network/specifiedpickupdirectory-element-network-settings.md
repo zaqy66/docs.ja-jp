@@ -11,11 +11,12 @@ ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3a982bdbe4953691d4e8e7663f14059ff4771934
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50ab7387fc5e2cac65cac1a6dba0e563225beec9
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874703"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt;要素 (ネットワーク設定)
 SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレクトリを設定します。  
@@ -41,7 +42,7 @@ SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレ�
   
 |属性|説明|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|アプリケーションが後で、SMTP サーバーで処理用の電子メールを保存するディレクトリ。|  
+|`pickupDirectoryLocation`|アプリケーションが後で、SMTP サーバーで処理するための電子メールを保存するディレクトリ。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -52,8 +53,8 @@ SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレ�
 |-------------|-----------------|  
 |[\<smtp > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。|  
   
-## <a name="remarks"></a>コメント  
- `specifiedPickupDirectory`属性はアプリケーションが SMTP サーバーで処理する電子メール メッセージを保存するディレクトリを設定します。  
+## <a name="remarks"></a>Remarks  
+ `specifiedPickupDirectory`属性はアプリケーションが SMTP サーバーによって処理されるメッセージを保存するディレクトリを設定します。  
   
 ## <a name="example"></a>例  
  次の例では、メール ピックアップ ディレクトリとして c:\maildrop を指定します。  
@@ -62,7 +63,7 @@ SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレ�
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="specifiedPickupDirectory">  
+      <smtp deliveryMethod="SpecifiedPickupDirectory">  
         <specifiedPickupDirectory  
           pickupDirectoryLocation="c:\maildrop"  
         />  

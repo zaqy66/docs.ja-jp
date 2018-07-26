@@ -11,12 +11,12 @@ ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 5bc7cc649b18a5330d056bbddfe96db4ecca2ec8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9afd992a12392ae0ad1c27eea305cb7e367686d
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746424"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874417"
 ---
 # <a name="ltmailsettingsgt-element-network-settings"></a>&lt;mailSettings&gt;要素 (ネットワーク設定)
 電子メールの送信オプションを設定します。  
@@ -58,7 +58,7 @@ ms.locfileid: "32746424"
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network">  
+      <smtp deliveryMethod="Network">  
         <network  
           host="localhost"  
           port="25"  

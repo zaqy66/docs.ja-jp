@@ -3,11 +3,11 @@ title: XDocument クラスの概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
 ms.openlocfilehash: 98ab095d67add2375eaf912ade71114c022b2ebb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651185"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220949"
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>XDocument クラスの概要 (Visual Basic)
 このトピックでは、<xref:System.Xml.Linq.XDocument> クラスについて説明します。  

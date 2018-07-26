@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
 ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312093"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245721"
 ---
 # <a name="classes-c-programming-guide"></a>クラス (C# プログラミング ガイド)
 *クラス*とは、他の型、メソッド、およびイベントの変数をまとめてグループ化することで独自のカスタム型を作成できる構成要素です。 クラスは設計図に似ています。 型の動作とデータを定義します。 クラスが static と宣言されていない場合、クライアント コードはそのクラスの "*インスタンス*" を作成できます。 これらのインスタンスは、変数に割り当てられる "*オブジェクト*" です。 クラスのインスタンスは、その変数への参照がすべてスコープ外になるまで、メモリ内に保持されます。 すべてスコープ外になったとき、CLR により、ガベージ コレクションの対象となるようにマークされます。 クラスが [static](../../../csharp/language-reference/keywords/static.md) として宣言されている場合は、インスタンスを作成できず、クライアント コードはクラス自体を介してのみクラスにアクセスできます。 詳細については、「[静的クラスと静的クラス メンバー](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)」を参照してください。  
@@ -24,7 +24,7 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-オブジェクトが作成されると、マネージ ヒープ上でメモリが割り当てられ、変数にはそのオブジェクトの場所への参照のみが格納されます。 マネージ ヒープを使用する型では、メモリの割り当て時と、CLR の自動メモリ管理機能 (*ガベージ コレクション*) による再要求時の両方についてオーバーヘッドが発生します。 しかし、ガベージ コレクションも高度に最適化されるため、ほとんどのシナリオでは、パフォーマンス上の問題が発生することはありません。 ガベージ コレクションの詳細については、「[自動メモリ管理とガベージ コレクション](../../../standard/garbage-collection/gc.md)」を参照してください。  
+オブジェクトが作成されると、マネージド ヒープ上でメモリが割り当てられ、変数にはそのオブジェクトの場所への参照のみが格納されます。 マネージド ヒープを使用する型では、メモリの割り当て時と、CLR の自動メモリ管理機能 ("*ガベージ コレクション*") による再要求時の両方についてオーバーヘッドが発生します。 しかし、ガベージ コレクションも高度に最適化されるため、ほとんどのシナリオでは、パフォーマンス上の問題が発生することはありません。 ガベージ コレクションの詳細については、「[自動メモリ管理とガベージ コレクション](../../../standard/garbage-collection/gc.md)」を参照してください。  
   
 ## <a name="declaring-classes"></a>クラスの宣言  
  クラスは、次の例に示すように、[class](../../../csharp/language-reference/keywords/class.md) キーワードを使用して宣言します。

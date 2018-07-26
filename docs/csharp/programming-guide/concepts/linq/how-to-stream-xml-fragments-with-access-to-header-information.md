@@ -3,11 +3,11 @@ title: '方法: ヘッダー情報にアクセスして XML フラグメント�
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
 ms.openlocfilehash: af8f83ba746292289bb97f591103cc91d6febbad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325033"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199304"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>方法: ヘッダー情報にアクセスして XML フラグメントをストリーム出力する (C#)
 大きな XML ファイルを任意に読み取り、アプリケーションのメモリ使用量を予想できるようにアプリケーションを作成しなければならない場合があります。 大きな XML ファイルを XML ツリーに設定しようとすると、ファイルのサイズに比例してメモリが過剰に使用されます。 したがって、代わりにストリーミングの手法を使用する必要があります。  

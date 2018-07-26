@@ -2,12 +2,12 @@
 title: 反復子 (C#)
 ms.date: 07/20/2015
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 08fe529f46ccaae7b2e17367a47346265aa0e8b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52450c4e80f5d9a149fd95c31f9c1189066659c5
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338872"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245271"
 ---
 # <a name="iterators-c"></a>反復子 (C#)
 *反復子*を使用して、リストや配列などのコレクションをステップ実行することができます。  
@@ -218,7 +218,7 @@ public class Zoo : IEnumerable
 ```  
   
 ##  <a name="BKMK_GenericList"></a> ジェネリック リストと共に反復子を使用する  
- 次の例の `Stack(Of T)` ジェネリック クラスは、<xref:System.Collections.Generic.IEnumerable%601> ジェネリック インターフェイスを実装しています。 `Push` メソッドでは、`T` 型の配列に値を割り当てます。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> メソッドは、`yield return` ステートメントを使って配列値を返します。  
+ 次の例の <xref:System.Collections.Generic.Stack%601> ジェネリック クラスは、<xref:System.Collections.Generic.IEnumerable%601> ジェネリック インターフェイスを実装しています。 <xref:System.Collections.Generic.Stack%601.Push%2A> メソッドでは、`T` 型の配列に値を割り当てます。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> メソッドは、`yield return` ステートメントを使って配列値を返します。  
   
  ジェネリック メソッド <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> だけでなく、非ジェネリック メソッド <xref:System.Collections.IEnumerable.GetEnumerator%2A> も実装する必要があります。 これは、<xref:System.Collections.Generic.IEnumerable%601> が <xref:System.Collections.IEnumerable> から継承するためです。 非ジェネリック実装は、ジェネリック実装に従います。  
   

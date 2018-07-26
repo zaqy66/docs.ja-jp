@@ -8,17 +8,18 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: f20ba6845a6a84a57fa7636355d08b2f4e5cea2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e043903647075587d1e7eec21c9a7b04f596dbf6
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340646"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937050"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>ラムダ式 (C# プログラミング ガイド)
-ラムダ式は、 [デリゲート](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) 型または [式ツリー](../../../csharp/programming-guide/delegates/using-delegates.md) 型を作成するために使用できる [匿名関数](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) です。 ラムダ式を使用すると、引数として渡したり関数呼び出しの結果値として返すことができるローカル関数を記述できます。 ラムダ式は、LINQ クエリ式を記述する場合に特に便利です。  
+
+ラムダ式は、 [デリゲート](anonymous-methods.md) 型または [式ツリー](../delegates/using-delegates.md) 型を作成するために使用できる [匿名関数](../concepts/expression-trees/index.md) です。 ラムダ式を使用すると、引数として渡したり関数呼び出しの結果値として返すことができるローカル関数を記述できます。 ラムダ式は、LINQ クエリ式を記述する場合に特に便利です。
   
- ラムダ式を作成するには、ラムダ演算子 ( [=>](../../../csharp/language-reference/operators/lambda-operator.md)) の左側に入力パラメーター (ある場合) を指定し、反対側に式またはステートメント ブロックを置きます。 たとえば、ラムダ式 `x => x * x` は、 `x` という名前のパラメーターを指定し、 `x` を 2 乗した値を返します。 次の例に示すように、この式をデリゲート型に割り当てることもできます。  
+ラムダ式を作成するには、ラムダ演算子 ( [=>](../../../csharp/language-reference/operators/lambda-operator.md)) の左側に入力パラメーター (ある場合) を指定し、反対側に式またはステートメント ブロックを置きます。 たとえば、ラムダ式 `x => x * x` は、 `x` という名前のパラメーターを指定し、 `x` を 2 乗した値を返します。 次の例に示すように、この式をデリゲート型に割り当てることもできます。  
   
 ```csharp  
 delegate int del(int i);  
@@ -58,8 +59,9 @@ namespace ConsoleApplication1
   
  匿名メソッドに適用される制限は、すべてラムダ式にも適用されます。 詳細については、「[匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)」を参照してください。  
   
-## <a name="expression-lambdas"></a>式形式のラムダ  
- => 演算子の右辺に式があるラムダ式を "*式形式のラムダ*" と呼びます。 式形式のラムダは、[式ツリー](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)の構築に幅広く使用されます。 式形式のラムダは式の結果を返します。基本的な形式は次のとおりです。  
+## <a name="expression-lambdas"></a>式形式のラムダ
+
+ => 演算子の右辺に式があるラムダ式を "*式形式のラムダ*" と呼びます。 式形式のラムダは、[式ツリー](../concepts/expression-trees/index.md)の構築に幅広く使用されます。 式形式のラムダは式の結果を返します。基本的な形式は次のとおりです。
   
 ```csharp
 (input-parameters) => expression

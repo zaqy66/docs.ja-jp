@@ -1,15 +1,15 @@
 ---
-title: XmlReader (呼び出し元の XSLT) にシリアル化する (Visual Basic)
+title: XmlReader (XSLT の呼び出し) にシリアル化する (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
 ms.openlocfilehash: 05754593f4f30683ffabecaa8e16c35bf836a3f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645591"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198841"
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>XmlReader (呼び出し元の XSLT) にシリアル化する (Visual Basic)
+# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>XmlReader (XSLT の呼び出し) にシリアル化する (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の <xref:System.Xml?displayProperty=nameWithType> 相互運用機能を使用する場合、<xref:System.Xml.Linq.XNode.CreateReader%2A> を使用して <xref:System.Xml.XmlReader> を作成できます。 この <xref:System.Xml.XmlReader> から読み取りを行うモジュールは、XML ツリーからノードを読み取って適宜処理します。  
   
 ## <a name="invoking-an-xslt-transformation"></a>XSLT 変換の呼び出し  
@@ -61,4 +61,4 @@ Console.WriteLine(newTree)
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [(Visual Basic) の XML ツリーをシリアル化します。](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+ [シリアル化する XML ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - object keyword [C#]
 ms.assetid: 93f60c0b-e17a-40a9-9362-cca5fb77b0e7
 ms.openlocfilehash: 67eaf7f1fd2f01e433395ed21701c3b7fad7c7b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267923"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199252"
 ---
 # <a name="object-c-reference"></a>object (C# リファレンス)
 `object` 型は、.NET Framework の <xref:System.Object> のエイリアスです。 C# の統一型システムでは、すべての型 (定義済み、ユーザー定義、参照型、および値型) が、直接または間接的に <xref:System.Object> を継承します。 `object` 型の変数には、任意の型の値を割り当てることができます。 値型の変数が object に変換されることを、*ボックス化*されると言います。 object 型の変数が値型に変換されることを、*ボックス化解除*されると言います。 詳細については、「[ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)」を参照してください。  

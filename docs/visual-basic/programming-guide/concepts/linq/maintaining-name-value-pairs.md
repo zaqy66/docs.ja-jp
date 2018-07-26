@@ -1,15 +1,15 @@
 ---
-title: 名前と値のペア (Visual Basic) を維持します。
+title: 名前と値のペア (Visual Basic) の保持
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
 ms.openlocfilehash: 6d842adb1e21a7744f03f4a7e7fb0785ffb6a119
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646878"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243798"
 ---
-# <a name="maintaining-namevalue-pairs-visual-basic"></a>名前/値ペア (Visual Basic) を維持します。
+# <a name="maintaining-namevalue-pairs-visual-basic"></a>(Visual Basic) の名前/値ペアの保持
 多くのアプリケーションでは、情報を名前と値のペアとして保持するのが最適な場合があります。 このような情報には、構成情報やグローバル設定などがあります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、名前と値のペアのセットを簡単に保持できるようにするメソッドがあります。 情報を属性として保持することも、子要素のセットとして保持することもできます。  
   
  情報を属性として保持する場合と子要素として保持する場合の違いの 1 つは、要素の特定の名前を持つ属性は 1 つしか存在できないという制約が属性にはあることです。 この制限は子要素には適用されません。  

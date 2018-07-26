@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 2074f44aedf59f1570e73c898a9bf64e57034923
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 259fcc6f1c59df09e768a08204df81aa8105de53
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603393"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936790"
 ---
 # <a name="call-statement-visual-basic"></a>Call ステートメント (Visual Basic)
-転送コントロールを`Function`、 `Sub`、またはダイナミック リンク ライブラリ (DLL) プロシージャです。  
+転送コントロールを`Function`、 `Sub`、またはダイナミック リンク ライブラリ (DLL) プロシージャ。  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,21 +25,21 @@ ms.locfileid: "33603393"
 ```  
   
 ## <a name="parts"></a>指定項目  
- `procedureName`  
- 必須。 呼び出すプロシージャの名前。  
+|||
+|---|---|
+|`procedureName`|必須。 呼び出すプロシージャの名前。|
+|`argumentList`|任意。 変数または呼び出された場合、プロシージャに渡される引数を表す式の一覧です。 複数の引数は、コンマで区切られます。 含める場合`argumentList`かっこで囲む必要があります。|
+|||
   
- `argumentList`  
- 任意。 変数または呼び出された場合、プロシージャに渡される引数を表す式の一覧です。 複数の引数は、コンマで区切られます。 含める場合`argumentList`かっこで囲む必要があります。  
+## <a name="remarks"></a>Remarks  
+ 使用することができます、`Call`プロシージャを呼び出すときに、キーワード。 ほとんどのプロシージャ呼び出しについては、このキーワードを使用する必要はありません。  
   
-## <a name="remarks"></a>コメント  
- 使用することができます、`Call`キーワード、プロシージャを呼び出すときにします。 ほとんどのプロシージャ呼び出しのためには、このキーワードを使用する必要はありません。  
+ 通常、使用、`Call`キーワード、識別子で呼び出された式が開始しない場合。 使用、`Call`キーワードの他の使用はお勧めしません。  
   
- 通常使用する、`Call`キーワードと呼ばれる式は、識別子で開始しない場合。 使用、`Call`キーワードの他の使用はお勧めしません。  
-  
- プロシージャは、値を返す場合、`Call`ステートメントにそれを廃棄します。  
+ プロシージャは、値を返す場合、`Call`ステートメントでは、それを破棄します。  
   
 ## <a name="example"></a>例  
- 次のコードは、2 つの例を示しています。 ここで、`Call`キーワードは、プロシージャを呼び出す必要です。 どちらの例では、呼び出された式は識別子で開始しません。  
+ 次のコードは 2 つの例で、`Call`キーワードは、プロシージャを呼び出すために必要な。 どちらの例では、呼び出された式が識別子で開始しません。  
   
  [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   

@@ -3,11 +3,11 @@ title: 名前空間の概要 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: b8eb31fa-4b26-4acf-8050-6e705687f458
 ms.openlocfilehash: 0e8a3313a41338f28a225a6d94fe5a4eb5210b8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645890"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199096"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>名前空間の概要 (LINQ to XML)
 このトピックでは、名前空間、<xref:System.Xml.Linq.XName> クラス、および <xref:System.Xml.Linq.XNamespace> クラスについて説明します。  
@@ -17,7 +17,7 @@ ms.locfileid: "33645890"
   
  XML 名には、XML *名前空間プレフィックス*という側面もあります。 XML プレフィックスは、XML 名の複雑さの主要な原因です。 このプレフィックスを使用すると、XML 名前空間に対するショートカットを作成できるため、XML ドキュメントがより簡潔でわかりやすくなります。 ただし XML プレフィックスはコンテキストによって意味が異なり、これが複雑さの原因となります。 たとえば、XML プレフィックス `aw` に関連付けられている XML 名前空間が、同じ XML ツリー内でも部分によって異なる可能性があります。  
   
- 使用する場合[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]と Visual Basic および XML リテラル、名前空間内のドキュメントを操作するときに、名前空間プレフィックスを使用する必要があります。  
+ 使用する場合[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Visual Basic および XML リテラルでは、名前空間内のドキュメントを使用する場合、名前空間プレフィックスを使用する必要があります。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] で XML 名を表すクラスは <xref:System.Xml.Linq.XName> です。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API では XML 名がよく使用されており、XML 名が必要な場合には必ず <xref:System.Xml.Linq.XName> パラメーターが存在します。 しかし、<xref:System.Xml.Linq.XName> を直接操作することはほとんどありません。 <xref:System.Xml.Linq.XName> には、文字列からの暗黙の変換が含まれています。  
   
