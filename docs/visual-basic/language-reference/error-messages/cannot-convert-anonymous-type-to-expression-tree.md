@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-ms.openlocfilehash: d43f6ef19591af326d06a4ce21194d8f9fa58c2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f97a0de74428ce42a088644580a78bf8fd99945
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585477"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936803"
 ---
-# <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a><span data-ttu-id="3e2fe-102">型のプロパティは別のプロパティを初期化するために使用されるため、匿名型を式のツリーに変換することはできません。</span><span class="sxs-lookup"><span data-stu-id="3e2fe-102">Cannot convert anonymous type to expression tree because it contains a field that is used in the initialization of another field</span></span>
-<span data-ttu-id="3e2fe-103">コンパイラでは、匿名型の別のプロパティを初期化するために、匿名型の 1 つのプロパティを使用する場合、匿名の式ツリーへの変換は受け入れられません。</span><span class="sxs-lookup"><span data-stu-id="3e2fe-103">The compiler does not accept conversion of an anonymous to an expression tree when one property of the anonymous type is used to initialize another property of the anonymous type.</span></span> <span data-ttu-id="3e2fe-104">たとえば、次のコードで`Prop1`が初期化リストで宣言されの初期値として使用し、`Prop2`です。</span><span class="sxs-lookup"><span data-stu-id="3e2fe-104">For example, in the following code, `Prop1` is declared in the initialization list and then used as the initial value for `Prop2`.</span></span>  
+# <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a><span data-ttu-id="2c8f7-102">型のプロパティは別のプロパティを初期化するために使用されるため、匿名型を式のツリーに変換することはできません。</span><span class="sxs-lookup"><span data-stu-id="2c8f7-102">Cannot convert anonymous type to expression tree because it contains a field that is used in the initialization of another field</span></span>
+<span data-ttu-id="2c8f7-103">コンパイラでは、匿名型の別のプロパティを初期化するために、匿名型の 1 つのプロパティを使用する場合、匿名の式ツリーへの変換は受け入れられません。</span><span class="sxs-lookup"><span data-stu-id="2c8f7-103">The compiler does not accept conversion of an anonymous to an expression tree when one property of the anonymous type is used to initialize another property of the anonymous type.</span></span> <span data-ttu-id="2c8f7-104">たとえば、次のコードで`Prop1`が初期化リストで宣言されの初期値として使用し、`Prop2`します。</span><span class="sxs-lookup"><span data-stu-id="2c8f7-104">For example, in the following code, `Prop1` is declared in the initialization list and then used as the initial value for `Prop2`.</span></span>  
   
 ```vb  
 Module M2  
@@ -31,11 +31,11 @@ Module M2
 End Module  
 ```  
   
- <span data-ttu-id="3e2fe-105">**エラー ID:** BC36548</span><span class="sxs-lookup"><span data-stu-id="3e2fe-105">**Error ID:** BC36548</span></span>  
+ <span data-ttu-id="2c8f7-105">**エラー ID:** BC36548</span><span class="sxs-lookup"><span data-stu-id="2c8f7-105">**Error ID:** BC36548</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3e2fe-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="3e2fe-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2c8f7-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="2c8f7-106">To correct this error</span></span>  
   
--   <span data-ttu-id="3e2fe-107">初期値を割り当てる`Prop1`ローカル変数にします。</span><span class="sxs-lookup"><span data-stu-id="3e2fe-107">Assign the initial value for `Prop1` to a local variable.</span></span> <span data-ttu-id="3e2fe-108">両方にその変数を割り当てる`Prop1`と`Prop2`、次のコードに示すようにします。</span><span class="sxs-lookup"><span data-stu-id="3e2fe-108">Assign that variable to both `Prop1` and `Prop2`, as shown in the following code.</span></span>  
+-   <span data-ttu-id="2c8f7-107">初期値を割り当てる`Prop1`ローカル変数にします。</span><span class="sxs-lookup"><span data-stu-id="2c8f7-107">Assign the initial value for `Prop1` to a local variable.</span></span> <span data-ttu-id="2c8f7-108">両方にその変数を割り当てる`Prop1`と`Prop2`、次のコードに示すようにします。</span><span class="sxs-lookup"><span data-stu-id="2c8f7-108">Assign that variable to both `Prop1` and `Prop2`, as shown in the following code.</span></span>  
   
     ```  
     Sub Main()  
@@ -46,7 +46,8 @@ End Module
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="3e2fe-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="3e2fe-109">See Also</span></span>  
- [<span data-ttu-id="3e2fe-110">匿名型</span><span class="sxs-lookup"><span data-stu-id="3e2fe-110">Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [<span data-ttu-id="3e2fe-111">式ツリー</span><span class="sxs-lookup"><span data-stu-id="3e2fe-111">Expression Trees</span></span>](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
- [<span data-ttu-id="3e2fe-112">方法 : 式ツリーを使用して動的クエリをビルドする</span><span class="sxs-lookup"><span data-stu-id="3e2fe-112">How to: Use Expression Trees to Build Dynamic Queries</span></span>](http://msdn.microsoft.com/library/1e37e0cc-eef3-48bb-8b69-3adabf322735)
+## <a name="see-also"></a><span data-ttu-id="2c8f7-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="2c8f7-109">See also</span></span>
+
+[<span data-ttu-id="2c8f7-110">匿名型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c8f7-110">Anonymous Types (Visual Basic)</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+[<span data-ttu-id="2c8f7-111">式ツリー (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c8f7-111">Expression Trees (Visual Basic)</span></span>](../../programming-guide/concepts/expression-trees/index.md)  
+[<span data-ttu-id="2c8f7-112">方法: 式ツリーを使用して動的クエリ (Visual Basic) を作成するには</span><span class="sxs-lookup"><span data-stu-id="2c8f7-112">How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)</span></span>](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)  

@@ -3,25 +3,25 @@ title: '方法: 位置に基づいて子要素を検索する (XPath-LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
 ms.openlocfilehash: ffe10bd5b263e56b6f2ee1708688523a2b0dd018
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317503"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245055"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a><span data-ttu-id="c3f1a-102">方法: 位置に基づいて子要素を検索する (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="c3f1a-102">How to: Find Child Elements Based on Position (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="c3f1a-103">要素をその位置に基づいて検索しなければならない場合があります。</span><span class="sxs-lookup"><span data-stu-id="c3f1a-103">Sometimes you want to find elements based on their position.</span></span> <span data-ttu-id="c3f1a-104">2 番目の要素を検索したり、3 番目から 5 番目の要素を検索したりすることがあります。</span><span class="sxs-lookup"><span data-stu-id="c3f1a-104">You might want to find the second element, or you might want to find the third through the fifth element.</span></span>  
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a><span data-ttu-id="68a9c-102">方法: 位置に基づいて子要素を検索する (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="68a9c-102">How to: Find Child Elements Based on Position (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="68a9c-103">要素をその位置に基づいて検索しなければならない場合があります。</span><span class="sxs-lookup"><span data-stu-id="68a9c-103">Sometimes you want to find elements based on their position.</span></span> <span data-ttu-id="68a9c-104">2 番目の要素を検索したり、3 番目から 5 番目の要素を検索したりすることがあります。</span><span class="sxs-lookup"><span data-stu-id="68a9c-104">You might want to find the second element, or you might want to find the third through the fifth element.</span></span>  
   
- <span data-ttu-id="c3f1a-105">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="c3f1a-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="68a9c-105">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="68a9c-105">The XPath expression is:</span></span>  
   
  `Test[position() >= 2 and position() <= 4]`  
   
- <span data-ttu-id="c3f1a-106">レイジー方式でこの [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリを記述する方法は 2 つあります。</span><span class="sxs-lookup"><span data-stu-id="c3f1a-106">There are two approaches to writing this [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query in a lazy way.</span></span> <span data-ttu-id="c3f1a-107">1 つは <xref:System.Linq.Enumerable.Skip%2A> 演算子と <xref:System.Linq.Enumerable.Take%2A> 演算子を使用する方法で、もう 1 つはインデックスを受け取る <xref:System.Linq.Enumerable.Where%2A> オーバーロードを使用する方法です。</span><span class="sxs-lookup"><span data-stu-id="c3f1a-107">You can use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> operators, or you can use the <xref:System.Linq.Enumerable.Where%2A> overload that takes an index.</span></span> <span data-ttu-id="c3f1a-108"><xref:System.Linq.Enumerable.Where%2A> オーバーロードを使用する場合は、2 つの引数を受け取るラムダ式を使用します。</span><span class="sxs-lookup"><span data-stu-id="c3f1a-108">When you use the <xref:System.Linq.Enumerable.Where%2A> overload, you use a lambda expression that takes two arguments.</span></span> <span data-ttu-id="c3f1a-109">次の例では、位置に基づいて選択する両方のメソッドを示します。</span><span class="sxs-lookup"><span data-stu-id="c3f1a-109">The following example shows both methods of selecting based on position.</span></span>  
+ <span data-ttu-id="68a9c-106">レイジー方式でこの [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリを記述する方法は 2 つあります。</span><span class="sxs-lookup"><span data-stu-id="68a9c-106">There are two approaches to writing this [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query in a lazy way.</span></span> <span data-ttu-id="68a9c-107">1 つは <xref:System.Linq.Enumerable.Skip%2A> 演算子と <xref:System.Linq.Enumerable.Take%2A> 演算子を使用する方法で、もう 1 つはインデックスを受け取る <xref:System.Linq.Enumerable.Where%2A> オーバーロードを使用する方法です。</span><span class="sxs-lookup"><span data-stu-id="68a9c-107">You can use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> operators, or you can use the <xref:System.Linq.Enumerable.Where%2A> overload that takes an index.</span></span> <span data-ttu-id="68a9c-108"><xref:System.Linq.Enumerable.Where%2A> オーバーロードを使用する場合は、2 つの引数を受け取るラムダ式を使用します。</span><span class="sxs-lookup"><span data-stu-id="68a9c-108">When you use the <xref:System.Linq.Enumerable.Where%2A> overload, you use a lambda expression that takes two arguments.</span></span> <span data-ttu-id="68a9c-109">次の例では、位置に基づいて選択する両方のメソッドを示します。</span><span class="sxs-lookup"><span data-stu-id="68a9c-109">The following example shows both methods of selecting based on position.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c3f1a-110">例</span><span class="sxs-lookup"><span data-stu-id="c3f1a-110">Example</span></span>  
- <span data-ttu-id="c3f1a-111">この例では、2 番目から 4 番目の `Test` 要素を検索します。</span><span class="sxs-lookup"><span data-stu-id="c3f1a-111">This example finds the second through the fourth `Test` element.</span></span> <span data-ttu-id="c3f1a-112">結果は要素のコレクションです。</span><span class="sxs-lookup"><span data-stu-id="c3f1a-112">The result is a collection of elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="68a9c-110">例</span><span class="sxs-lookup"><span data-stu-id="68a9c-110">Example</span></span>  
+ <span data-ttu-id="68a9c-111">この例では、2 番目から 4 番目の `Test` 要素を検索します。</span><span class="sxs-lookup"><span data-stu-id="68a9c-111">This example finds the second through the fourth `Test` element.</span></span> <span data-ttu-id="68a9c-112">結果は要素のコレクションです。</span><span class="sxs-lookup"><span data-stu-id="68a9c-112">The result is a collection of elements.</span></span>  
   
- <span data-ttu-id="c3f1a-113">この例では、「[サンプル XML ファイル: テスト構成 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)」の XML ドキュメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="c3f1a-113">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="68a9c-113">この例では、「[サンプル XML ファイル: テスト構成 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)」の XML ドキュメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="68a9c-113">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement testCfg = XElement.Load("TestConfig.xml");  
@@ -54,7 +54,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="c3f1a-114">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="c3f1a-114">This example produces the following output:</span></span>  
+ <span data-ttu-id="68a9c-114">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="68a9c-114">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -78,5 +78,5 @@ Results are identical
 </Test>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c3f1a-115">参照</span><span class="sxs-lookup"><span data-stu-id="c3f1a-115">See Also</span></span>  
- [<span data-ttu-id="c3f1a-116">XPath ユーザー向けの LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="c3f1a-116">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="68a9c-115">参照</span><span class="sxs-lookup"><span data-stu-id="68a9c-115">See Also</span></span>  
+ [<span data-ttu-id="68a9c-116">XPath ユーザー向けの LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="68a9c-116">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
