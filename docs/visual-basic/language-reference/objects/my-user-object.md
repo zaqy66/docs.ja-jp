@@ -1,27 +1,27 @@
 ---
-title: My.User オブジェクト
+title: My.User オブジェクト (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.User property
 - My.User object
 ms.assetid: caa7462e-2149-4bdb-8850-802b80b93cbf
-ms.openlocfilehash: b317d8afe145342f2971dbd883f9ee97aab78b8b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb54ec40ca83ac03bb94df25f0433df2103dd0b4
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594521"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296261"
 ---
 # <a name="myuser-object"></a>My.User オブジェクト
 現在のユーザーに関する情報へのアクセスを提供します。  
   
-## <a name="remarks"></a>コメント  
- メソッドとプロパティについては、`My.User`オブジェクトを参照してください<xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>です。  
+## <a name="remarks"></a>Remarks  
+ メソッドとプロパティについては、`My.User`オブジェクトを参照してください<xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>します。  
   
- 詳細については、次を参照してください。[ユーザー データにアクセスする](../../../visual-basic/developing-apps/programming/accessing-user-data.md)です。  
+ 詳細については、次を参照してください。[にアクセスするユーザー データ](../../../visual-basic/developing-apps/programming/accessing-user-data.md)します。  
   
-## <a name="requirements"></a>要件  
- **アセンブリ:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)  
+## <a name="requirements"></a>必要条件  
+ **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Security.Principal.IPrincipal>  
