@@ -4,12 +4,12 @@ description: .NET Core でのバージョン管理のしくみについて説明
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.openlocfilehash: 33c545fdea254133fe6e65f4d6dd725f5184faec
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: aa4f05a1a95c1bfbd16f41ca695ea23d48606772
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298241"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792323"
 ---
 # <a name="net-core-versioning"></a>.NET Core バージョン管理
 
@@ -32,6 +32,15 @@ ms.locfileid: "36298241"
 * `Microsoft.NETCore.App` メタパッケージ。
 
 1 つのバージョン番号を使用すると、ユーザーが自分のデバイス マシンにインストールする SDK のバージョン、および運用環境にプロビジョニングするときの共有フレームワークの対応するバージョンを簡単に知ることができるようになります。 SDK またはランタイムをダウンロードするときに、表示されるバージョン番号は同じです。
+
+### <a name="version-selection"></a>バージョンの選択
+
+.NET core はさまざまなシナリオでどのバージョンの .NET Core ランタイムと SDK が使用されるかを決定する一連のポリシーを適用します。 これらのシナリオとポリシーについては、すべて[バージョン選択](selection.md)の記事で説明しています。
+
+これらのポリシーは、次のロールを実行しているものと考えることができます。
+
+* セキュリティと信頼性の更新プログラムを含む、.NET Core の簡単で効率的な展開を可能にする。
+* 開発者がターゲット ランタイムとは関係なく最新のツールとコマンドを使用できるようにする。
 
 ### <a name="installers"></a>インストーラー
 

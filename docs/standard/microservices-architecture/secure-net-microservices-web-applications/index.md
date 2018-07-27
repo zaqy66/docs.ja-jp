@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 0e55a68432dfd44c7a73ae51512f50d481ae100c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106698"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937034"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 
@@ -43,7 +43,7 @@ services.AddDbContext<ApplicationDbContext>(options =>
 
 ASP.NET Core Identity が構成されると、サービスの Startup.Configure メソッドで app.UseIdentity を呼び出して有効にします。
 
-ASP.NET Code Identity を使用すると、次の複数のシナリオが実現できます。
+ASP.NET Core Identity を使用すると、次の複数のシナリオが実現できます。
 
 -   UserManager 型 (userManager.CreateAsync) を使用して、新しいユーザー情報を作成する。
 

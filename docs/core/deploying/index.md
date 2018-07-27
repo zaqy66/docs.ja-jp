@@ -4,12 +4,12 @@ description: .NET Core アプリケーションの展開。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 27f9260166f7e7899501e1798333b982fb728152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212676"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792427"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core アプリケーションの展開
 
@@ -41,7 +41,7 @@ FDD の展開には、次のいくつかの利点があります。
 
 ## <a name="self-contained-deployments-scd"></a>自己完結型の展開 (SCD)
 
-自己完結型の展開では、アプリおよびすべての必要なサードパーティの依存関係と共に、アプリのビルドに使った .NET Core のバージョンも展開します。 SCD の作成には、さまざまなプラットフォーム上の [.NET Core のネイティブの依存関係](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)は含まれないので、アプリが実行する前にこれらが存在している必要があります。
+自己完結型の展開では、アプリおよびすべての必要なサードパーティの依存関係と共に、アプリのビルドに使った .NET Core のバージョンも展開します。 SCD の作成には、さまざまなプラットフォーム上の [.NET Core のネイティブの依存関係](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)は含まれないので、アプリが実行する前にこれらが存在している必要があります。 ランタイムのバージョン バインディングの詳細については、[.NET Core のバージョン バインディング](../versions/selection.md)に関する記事を参照してください
 
 FDD および SCD の展開では別個のホスト実行可能ファイルを使用するため、発行元のシグネチャで SCD のホスト実行可能ファイルに署名できます。
 

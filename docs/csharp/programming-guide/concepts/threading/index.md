@@ -2,12 +2,12 @@
 title: スレッド処理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: 8325132a359c8b65572943bb79c9f02a485eb290
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f9ba0793876f38b3ada2f65c4594562ea1a66983
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874667"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296183"
 ---
 # <a name="threading-c"></a>スレッド処理 (C#)
 スレッド処理により、C# プログラムが同時処理を実行できるようになり、一度に複数の操作を行うことが可能になります。 たとえば、スレッド処理を使用してユーザーの入力を監視したり、バックグラウンド タスクを実行したり、入力の同時ストリームを処理したりできます。  
@@ -38,8 +38,6 @@ ms.locfileid: "37874667"
 |Title|説明|  
 |-----------|-----------------|  
 |[マルチスレッド アプリケーション (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)|スレッドの作成方法および使用方法について説明します。|  
-|[マルチスレッド プロシージャのパラメーターと戻り値 (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|マルチ スレッド アプリケーションでパラメーターを受け渡す方法について説明します。|  
-|[チュートリアル: BackgroundWorker コンポーネントでのマルチスレッド (C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|簡単なマルチスレッド アプリケーションを作成する方法を示します。|  
 |[スレッドの同期 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|スレッドの相互作用を制御する方法について説明します。|  
 |[スレッド プール (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|システムで管理されるワーカー スレッドのプールを使用する方法について説明します。|  
 |[方法: スレッド プールを使用する (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|スレッド プール内の複数スレッドの同期された使用方法を示します。|  
