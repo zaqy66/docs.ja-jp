@@ -27,7 +27,7 @@ ms.locfileid: "33575350"
 ## <a name="names-of-methods"></a><span data-ttu-id="9ce8b-105">メソッドの名前</span><span class="sxs-lookup"><span data-stu-id="9ce8b-105">Names of Methods</span></span>  
  <span data-ttu-id="9ce8b-106">メソッドは操作を実行する手段であるため、デザインのガイドラインは、動詞または動詞句メソッド名にすることが必要です。</span><span class="sxs-lookup"><span data-stu-id="9ce8b-106">Because methods are the means of taking action, the design guidelines require that method names be verbs or verb phrases.</span></span> <span data-ttu-id="9ce8b-107">このガイドラインにも従うプロパティと型名を名詞または形容詞句からメソッド名を区別するために機能します。</span><span class="sxs-lookup"><span data-stu-id="9ce8b-107">Following this guideline also serves to distinguish method names from property and type names, which are noun or adjective phrases.</span></span>  
   
- <span data-ttu-id="9ce8b-108">**✓ しないで**動詞または動詞句は、メソッドの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="9ce8b-108">**✓ DO** give methods names that are verbs or verb phrases.</span></span>  
+ <span data-ttu-id="9ce8b-108">**✓ DO**動詞または動詞句は、メソッドの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="9ce8b-108">**✓ DO** give methods names that are verbs or verb phrases.</span></span>  
   
 ```  
 public class String {  
