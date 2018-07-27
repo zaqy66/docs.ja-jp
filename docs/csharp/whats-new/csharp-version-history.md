@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207535"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404594"
 ---
 # <a name="the-history-of-c"></a>C# の歴史 #
 
@@ -73,7 +73,7 @@ C# バージョン 3.0 は、Visual Studio 2008 と共に 2007 年後半に登�
 - [拡張メソッド](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [暗黙的に型指定されるローカル変数](../language-reference/keywords/var.md)
 - [部分メソッド](../language-reference/keywords/partial-method.md)
-- オブジェクト初期化子とコレクション初期化子
+- [オブジェクト初期化子とコレクション初期化子](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 今になって考えると、これらの機能の多くは必然で切り離せないものに思えます。 これらすべてが戦略的に組み合わさっています。 一般的には、C# のこのバージョンでの目玉機能はクエリ式 (統合言語クエリ (LINQ) とも呼ばれる) だったと考えられています。
 
