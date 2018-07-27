@@ -53,7 +53,7 @@ public class String {
   
  <span data-ttu-id="9ce8b-117">**✓ DO**肯定の語句でブール型プロパティの名前 (`CanSeek`の代わりに`CantSeek`)。</span><span class="sxs-lookup"><span data-stu-id="9ce8b-117">**✓ DO** name Boolean properties with an affirmative phrase (`CanSeek` instead of `CantSeek`).</span></span> <span data-ttu-id="9ce8b-118">ブール型プロパティもプレフィックスを必要に応じて、"Is"と"、"したり"は、"値を追加する場合に限定します。</span><span class="sxs-lookup"><span data-stu-id="9ce8b-118">Optionally, you can also prefix Boolean properties with "Is," "Can," or "Has," but only where it adds value.</span></span>  
   
- <span data-ttu-id="9ce8b-119">**✓ 要検討**プロパティの型と同じ名前を提供します。</span><span class="sxs-lookup"><span data-stu-id="9ce8b-119">**✓ CONSIDER** giving a property the same name as its type.</span></span>  
+ <span data-ttu-id="9ce8b-119">**✓ CONSIDER**プロパティの型と同じ名前を提供します。</span><span class="sxs-lookup"><span data-stu-id="9ce8b-119">**✓ CONSIDER** giving a property the same name as its type.</span></span>  
   
  <span data-ttu-id="9ce8b-120">たとえば、次のプロパティ正しく取得および設定という名前列挙値`Color`ので、プロパティの名前が`Color`:</span><span class="sxs-lookup"><span data-stu-id="9ce8b-120">For example, the following property correctly gets and sets an enum value named `Color`, so the property is named `Color`:</span></span>  
   
