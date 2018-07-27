@@ -25,6 +25,9 @@
             - name: .NET マイクロサービス - DevOps の電子ブック
               tocHref: /dotnet/standard/containerized-lifecycle-architecture/
               topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
+            - name: サーバーレス アプリの電子書籍
+              tocHref: /dotnet/standard/serverless-architecture/
+              topicHref: /dotnet/standard/serverless-architecture/index
             - name: 非同期プログラミングのパターン
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
@@ -80,7 +83,7 @@
             - name: .NET でのシリアル化
               tocHref: /dotnet/standard/serialization/
               topicHref: /dotnet/standard/serialization/index
-            - name: マネージ スレッド処理
+            - name: マネージド スレッド処理
               tocHref: /dotnet/standard/threading/
               topicHref: /dotnet/standard/threading/index
         - name: .NET Core のガイド
