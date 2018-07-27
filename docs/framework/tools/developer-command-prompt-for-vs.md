@@ -64,7 +64,7 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 ## <a name="manually-locating-the-files-on-your-machine"></a>コンピューター上のファイルを手動で探す
 
-インストール済みのコマンド プロンプトのショートカットは、通常 Visual Studio の **[スタート] メニュー**用のフォルダー (C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools 内など) にあります。 ただし、コマンド プロンプトを探しても、何らかの理由によって期待した結果を得られない場合は、コンピューター上でそのショートカットを手動で探すことができます。 *VsDevCmd.bat* などのコマンド プロンプトのファイル名を検索するか、または Tools フォルダー (C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools など) に移動します (パスは、Visual Studio のバージョンとインストール先に応じて変わります)。
+インストール済みのコマンド プロンプトのショートカットは、通常 Visual Studio の **[スタート] メニュー**用のフォルダー (C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools 内など) にあります。 ただし、コマンド プロンプトを探しても、何らかの理由によって期待した結果を得られない場合は、コンピューター上でそのショートカットを手動で探すことができます。 *VsDevCmd.bat* などのコマンド プロンプトのファイル名を検索するか、または Tools フォルダー (C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools など) に移動します (パスは、Visual Studio のバージョン、エディション、およびインストール先に応じて変わります)。
 
 ## <a name="running-command-prompt-from-inside-visual-studio"></a>Visual Studio 内からコマンド プロンプトを実行する
 
@@ -80,7 +80,7 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 5. **[コマンド]** フィールドに、起動するファイル (`%comspec%` や `C:\Windows\System32\cmd.exe` など) を指定します。
 
-6. **[引数]** フィールドに、使用する特定のコマンド プロンプトのある場所を指定します (`/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` など (このコマンドにより、Visual Studio 2017 Enterprise でインストールされた開発者コマンド プロンプトが起動されます))。 この値は、Visual Studio のバージョン、エディション、インストール先に応じて変更します。
+6. **[引数]** フィールドに、使用する特定のコマンド プロンプトのある場所を指定します (`/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` など。このコマンドでは、Visual Studio 2017 Enterprise でインストールされた開発者コマンド プロンプトが起動されます)。 この値は、Visual Studio のバージョン、エディション、インストール先に応じて変更します。
 
 7. **[初期ディレクトリ]** フィールドの値 (**[プロジェクト ディレクトリ]** など) を選択します。
 
