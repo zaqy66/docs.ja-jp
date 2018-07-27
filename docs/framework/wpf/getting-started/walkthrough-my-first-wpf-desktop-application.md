@@ -79,11 +79,11 @@ Visual Studio の最新バージョンのインストールに関する詳細に
 
     [!code-xaml[ExpenseIt#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. 開いている*MainWindow.xaml*です。
+3. *MainWindow.xaml*を開きます。
 
     この XAML ファイルは、アプリケーションのメイン ウィンドウで、ページに作成されたコンテンツを表示します。 <xref:System.Windows.Window>クラスなど、そのタイトル、サイズ、または、アイコン、ウィンドウのプロパティを定義し、閉じるか、非表示にするなどのイベントを処理します。
 
-4. 変更、<xref:System.Windows.Window>要素を<xref:System.Windows.Navigation.NavigationWindow>xaml を次に示すように、します。
+4. <xref:System.Windows.Navigation.NavigationWindow>.xaml の<xref:System.Windows.Window>要素を、次に示すように変更します。
 
    ```xaml
    <NavigationWindow x:Class="ExpenseIt.MainWindow"
@@ -93,7 +93,7 @@ Visual Studio の最新バージョンのインストールに関する詳細に
    </NavigationWindow>
    ```
 
-   このアプリは、ユーザーの入力に応じてさまざまなコンテンツに移動します。 その理由は、メイン<xref:System.Windows.Window>に変更する必要があります、<xref:System.Windows.Navigation.NavigationWindow>です。 <xref:System.Windows.Navigation.NavigationWindow> すべてのプロパティを継承<xref:System.Windows.Window>です。 <xref:System.Windows.Navigation.NavigationWindow> XAML ファイル内の要素のインスタンスを作成する、<xref:System.Windows.Navigation.NavigationWindow>クラスです。 詳細については、次を参照してください。[ナビゲーション概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)です。
+   このアプリは、ユーザーの入力に応じてさまざまなコンテンツに移動します。 そのため、メイン ウィンドウを<xref:System.Windows.Window>から<xref:System.Windows.Navigation.NavigationWindow>に変更する必要があります。 <xref:System.Windows.Navigation.NavigationWindow> は、<xref:System.Windows.Window>のすべてのプロパティを継承しています。 <xref:System.Windows.Navigation.NavigationWindow> XAML ファイル内の要素のインスタンスを作成する、<xref:System.Windows.Navigation.NavigationWindow>クラスです。 詳細については、次を参照してください。[ナビゲーション概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)です。
 
 5. 次のプロパティを変更、<xref:System.Windows.Navigation.NavigationWindow>要素。
 
