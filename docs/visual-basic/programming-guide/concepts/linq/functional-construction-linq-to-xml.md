@@ -3,11 +3,11 @@ title: 関数型構築 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
 ms.openlocfilehash: 360c321f993c8adb17767987060a0edcccad082a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644291"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39333014"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>関数型構築 (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、"*関数型構築*" と呼ばれる強力な XML 要素作成機能があります。 関数型構築は、単一のステートメントで XML ツリーを作成するための機能です。  
@@ -22,7 +22,7 @@ ms.locfileid: "33644291"
   
  次に例を示します。  
   
- これらの機能を有効にすると、XML リテラルを使用して、XML ツリーを作成しの結果を使用するコードを記述するコードを記述[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]XML ツリーを作成するときにクエリを実行します。  
+ これらの機能では、XML リテラルを使用して XML ツリーを作成しの結果を使用するコードを記述するコードを記述できる[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]XML ツリーを作成するときにクエリを実行します。  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -57,4 +57,4 @@ Console.WriteLine(xmlTree)
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [XML ツリー (Visual Basic) を作成します。](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+ [XML ツリー (Visual Basic) の作成](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

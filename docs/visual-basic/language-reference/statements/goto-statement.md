@@ -1,5 +1,5 @@
 ---
-title: GoTo ステートメント
+title: GoTo ステートメント (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GoTo
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adb7668b6a818b2042a38f9458685a6f93085dc8
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604745"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332988"
 ---
 # <a name="goto-statement"></a>GoTo ステートメント
 プロシージャ内の指定した行に無条件に分岐します。  
@@ -31,28 +31,28 @@ GoTo line
   
 ## <a name="part"></a>パーツ  
  `line`  
- 必須。 任意の行ラベル。  
+ 必須。 任意の行のラベル。  
   
-## <a name="remarks"></a>コメント  
- `GoTo`ステートメントの分岐が表示されるプロシージャ内の行にのみです。 行がある行をいる必要があります`GoTo`を参照できます。 詳細については、次を参照してください。[する方法: ラベル ステートメント](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)です。  
+## <a name="remarks"></a>Remarks  
+ `GoTo`のみが表示されるプロシージャ内の行にステートメントを分岐できます。 ラベルを 1 行が必要`GoTo`を参照できます。 詳細については、次を参照してください。[方法: ラベル ステートメント](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)します。  
   
 > [!NOTE]
->  `GoTo` ステートメントを使用するコードの管理を読み取ったりするが困難です。 可能な限り、制御構造を使用します。 詳細については、次を参照してください。[制御フロー](../../../visual-basic/programming-guide/language-features/control-flow/index.md)です。  
+>  `GoTo` ステートメントすると、コードが読み取りおよびメンテナンスを困難になります。 可能であれば、制御構造を使用します。 詳細については、次を参照してください。[制御フロー](../../../visual-basic/programming-guide/language-features/control-flow/index.md)します。  
   
- 使用することはできません、`GoTo`ステートメントの外部からの分岐を`For`しています.`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`、または`Using`しています.`End Using`内のラベルに構築します。  
+ 使用することはできません、`GoTo`外からの分岐にステートメントを`For`.`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`、または`Using`.`End Using`内のラベルに構築します。  
   
-## <a name="branching-and-try-constructions"></a>分岐と構造を再試行してください  
- 内で、`Try`しています.`Catch`...`Finally`を使用して分岐をコンストラクションは、次の規則の適用、`GoTo`ステートメントです。  
+## <a name="branching-and-try-constructions"></a>分岐と構築をお試しください  
+ 内で、 `Try`.`Catch`...`Finally`で分岐に、構築、次の規則の適用、`GoTo`ステートメント。  
   
 |ブロックまたは地域|外部からへの分岐|外部への分岐からの内部|  
 |---------------------|-------------------------------|-------------------------------|  
 |`Try` ブロック|のみ、`Catch`同じ構築ブロック<sup>1</sup>|のみ、全体の構造の外部|  
-|`Catch` ブロック|許可されることはありません。|のみ、全体の構造の外部にまたは、`Try`同じ構築ブロック<sup>1</sup>|  
-|`Finally` ブロック|許可されることはありません。|許可されることはありません。|  
+|`Catch` ブロック|許可しません。|のみ、全体の構造の外部にまたは、`Try`同じ構築ブロック<sup>1</sup>|  
+|`Finally` ブロック|許可しません。|許可しません。|  
   
- <sup>1</sup>場合`Try`しています.`Catch`...`Finally`コンストラクションは、別の入れ子になった、`Catch`ブロックに分岐、`Try`独自入れ子のレベルにあるではなく、他のブロック`Try`ブロックします。 入れ子になった`Try`しています.`Catch`...`Finally`構築は完全に含まれる必要があります、`Try`または`Catch`は構造の内部で入れ子にされているブロックです。  
+ <sup>1</sup>場合`Try`.`Catch`...`Finally`構築が、別の入れ子になった、`Catch`ブロックに分岐、`Try`ブロックの他にコピーせずに、独自の入れ子のレベルにある`Try`ブロックします。 入れ子になった`Try`.`Catch`...`Finally`構築を完全に含める必要があります、`Try`または`Catch`ブロックを入れ子になってを作成します。  
   
- 次の図に 1 つ`Try`別内で入れ子になった構築します。 有効または無効では、2 つの構築のブロック間でさまざまな分岐が示されます。  
+ 次の図では 1 つ`Try`別内で入れ子になった構築します。 2 つの構築ブロック間でさまざまな分岐は、有効または無効と表示されています。  
   
  ![Try 構造内の分岐のグラフィック ダイアグラム](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
 Try 構造内の有効および無効な分岐  

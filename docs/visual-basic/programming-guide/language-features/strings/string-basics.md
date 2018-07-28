@@ -7,11 +7,11 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
 ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654061"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332675"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic における文字列の基本
 `String` データ型は、一連の文字を表します (各文字は `Char` データ型のインスタンスを表しています)。 このトピックでは、Visual Basic における文字列の基本的な概念について説明します。  
@@ -61,7 +61,7 @@ World]]></xml>.Value
  これで、変数 `myArray` の内容は、`Char` 値の配列になりました。各値は `myString` の文字を表しています。  
   
 ## <a name="the-immutability-of-strings"></a>文字列の不変性  
- 文字列は*不変*つまり、その値を 1 回変更することはできませんが作成されました。 ただし、文字列変数に複数の値を代入できないわけではありません。 次に例を示します。  
+ 文字列が*不変*つまり、その値を 1 回変更ことはできませんが作成されました。 ただし、文字列変数に複数の値を代入できないわけではありません。 次に例を示します。  
   
  [!code-vb[VbVbalrStrings#69](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_7.vb)]  
   
