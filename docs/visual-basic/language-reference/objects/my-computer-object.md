@@ -1,28 +1,28 @@
 ---
-title: My.Computer オブジェクト
+title: My.Computer オブジェクト (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: c3af674bf56694d1ccf589033f97421faafd8c46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0518a380ee8b1e33a9b1ceeac7db6c0251c48edf
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597348"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39323041"
 ---
 # <a name="mycomputer-object"></a>My.Computer オブジェクト
 オーディオ、時計、キーボード、ファイル システムなどのコンピューター コンポーネントを操作するためのプロパティを提供します。  
   
-## <a name="remarks"></a>コメント  
- メソッドとプロパティについては、`My.Computer`オブジェクトを参照してください<xref:Microsoft.VisualBasic.Devices.Computer>です。 基本クラス<xref:Microsoft.VisualBasic.Devices.ServerComputer>のすべてのプロジェクトで使用できるメンバーを提供します。  
+## <a name="remarks"></a>Remarks  
+ メソッドとプロパティについては、`My.Computer`オブジェクトを参照してください<xref:Microsoft.VisualBasic.Devices.Computer>します。 基本クラス<xref:Microsoft.VisualBasic.Devices.ServerComputer>はすべてのプロジェクトで使用できるメンバーを提供します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **クラス:** <xref:Microsoft.VisualBasic.Devices.Computer> (基本クラス<xref:Microsoft.VisualBasic.Devices.ServerComputer>のすべてのプロジェクトで使用できるメンバーを提供)。  
+ **クラス:** <xref:Microsoft.VisualBasic.Devices.Computer> (基本クラス<xref:Microsoft.VisualBasic.Devices.ServerComputer>はすべてのプロジェクトで使用できるメンバーを提供します)。  
   
- **アセンブリ:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目  
  [My.Computer.Audio オブジェクト](../../../visual-basic/language-reference/objects/my-computer-audio-object.md)  

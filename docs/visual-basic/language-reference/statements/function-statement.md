@@ -28,15 +28,15 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 908aa594ecbdd8ae2ec5a06de8181a1b16bb7e40
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b370e92aaab88a7f0d49f1de60b50fa6bbf1e161
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234125"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39323015"
 ---
 # <a name="function-statement-visual-basic"></a>Function ステートメント (Visual Basic)
-宣言名、パラメーター、およびコードを定義する、`Function`プロシージャです。  
+宣言名、パラメーター、および定義するコードを`Function`プロシージャ。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,7 +53,7 @@ End Function
   
 -   `attributelist`  
   
-     任意。 参照してください[属性一覧](attribute-list.md)です。  
+     任意。 参照してください[属性一覧](attribute-list.md)します。  
   
 -   `accessmodifier`  
   
@@ -69,9 +69,9 @@ End Function
   
     -   [保護されたフレンド](../../language-reference/modifiers/protected-friend.md)
 
-    - [保護されたプライベート](../../language-reference/modifiers/private-protected.md)  
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)  
   
-     参照してください[Visual Basic でのレベルのアクセス](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)です。  
+     参照してください[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
   
 -   `proceduremodifiers`  
   
@@ -93,39 +93,39 @@ End Function
   
 -   `Shared`  
   
-     任意。 参照してください[共有](../../../visual-basic/language-reference/modifiers/shared.md)です。  
+     任意。 参照してください[共有](../../../visual-basic/language-reference/modifiers/shared.md)します。  
   
 -   `Shadows`  
   
-     任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)です。  
+     任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
   
 -   `Async`  
   
-     任意。 参照してください[Async](../../../visual-basic/language-reference/modifiers/async.md)です。  
+     任意。 参照してください[Async](../../../visual-basic/language-reference/modifiers/async.md)します。  
   
 -   `Iterator`  
   
-     任意。 参照してください[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)です。  
+     任意。 参照してください[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)します。  
   
 -   `name`  
   
-     必須。 プロシージャの名前。 参照してください[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)です。  
+     必須。 プロシージャの名前。 参照してください[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
   
 -   `typeparamlist`  
   
-     任意。 ジェネリック プロシージャの型パラメーターの一覧です。 参照してください[のリストを入力](type-list.md)です。  
+     任意。 ジェネリック プロシージャの型パラメーターの一覧。 参照してください[一覧を入力する](type-list.md)します。  
   
 -   `parameterlist`  
   
-     任意。 このプロシージャのパラメーターを表すローカル変数名の一覧です。 参照してください[パラメーター リスト](parameter-list.md)です。  
+     任意。 このプロシージャのパラメーターを表すローカル変数名の一覧。 参照してください[パラメーター リスト](parameter-list.md)します。  
   
 -   `returntype`  
   
-     場合は必須`Option Strict`は`On`します。 このプロシージャによって返される値のデータ型。  
+     場合に、必ず`Option Strict`は`On`します。 このプロシージャによって返される値のデータ型。  
   
 -   `Implements`  
   
-     任意。 この手順には、1 つまたは複数が実装されていることを示します`Function`プロシージャ、このプロシージャの包含クラスまたは構造体によって実装されるインターフェイスで定義されている 1 つずつです。 参照してください[ステートメントを実装します](implements-statement.md)です。  
+     任意。 この手順が 1 つまたは複数を実装することを示します`Function`手順、この手順の包含クラスまたは構造体によって実装されるインターフェイスで定義されている 1 つずつです。 参照してください[ステートメントを実装](implements-statement.md)します。  
   
 -   `implementslist`  
   
@@ -139,12 +139,12 @@ End Function
   
     |パーツ|説明|  
     |---|---|  
-    |`interface`|必須。 このプロシージャによって実装されるインターフェイスの名前には、クラスまたは構造体を含むのです。|  
+    |`interface`|必須。 このプロシージャによって実装されるインターフェイスの名前を含むクラスまたは構造体。|  
     |`definedname`|必須。 `interface` の中でプロシージャを定義するために使用する名前。|  
   
 -   `Handles`  
   
-     任意。 この手順が 1 つまたは複数の特定のイベントを処理できることを示します。 参照してください[処理](handles-clause.md)です。  
+     任意。 この手順が 1 つまたは複数の特定のイベントを処理できることを示します。 参照してください[処理](handles-clause.md)します。  
   
 -   `eventlist`  
   
@@ -158,87 +158,87 @@ End Function
   
     |パーツ|説明|  
     |---|---|  
-    |`eventvariable`|必須。 クラスまたはイベントを発生させる構造体のデータ型で宣言されたオブジェクト変数です。|  
+    |`eventvariable`|必須。 オブジェクト変数がクラスまたはイベントを発生させる構造体のデータ型で宣言されています。|  
     |`event`|必須。 このプロシージャを処理するイベントの名前。|  
   
 -   `statements`  
   
-     任意。 このプロシージャ内で実行されるステートメントのブロックです。  
+     任意。 この手順内で実行されるステートメントのブロックです。  
   
 -   `End Function`  
   
      このプロシージャの定義を終了します。  
   
-## <a name="remarks"></a>コメント  
- すべての実行可能コードは、プロシージャ内でなければなりません。 さらに、各プロシージャはクラス、構造体、または親のクラス、構造体、またはモジュールとして参照されるモジュール内で宣言されます。  
+## <a name="remarks"></a>Remarks  
+ プロシージャ内にあるすべての実行可能コードがある必要があります。 さらに、各手順では、クラス、構造体またはクラス、構造体、またはモジュールとして参照されるモジュール内で宣言されます。  
   
- 呼び出し元のコードに値を返すを使用して、`Function`プロシージャです。 それ以外の場合、を使用して、`Sub`プロシージャです。  
+ 呼び出し元のコードに値を返すには使用、`Function`プロシージャです。 それ以外の場合、使用、`Sub`プロシージャ。  
   
 ## <a name="defining-a-function"></a>関数を定義します。  
- 定義することができます、`Function`手順モジュール レベルでのみです。 そのため、関数の宣言コンテキストは、クラス、構造体、モジュールの場合、またはインターフェイスにする必要があり、ソース ファイル、名前空間、プロシージャ、またはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。  
+ 定義することができます、`Function`モジュール レベルでのみプロシージャ。 そのため、関数の宣言のコンテキストでは、クラス、構造体、モジュールの場合、またはインターフェイスである必要があり、ソース ファイル、名前空間、プロシージャ、またはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- `Function` パブリック アクセスにプロシージャの既定値です。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。  
+ `Function` パブリック アクセスに既定のプロシージャ。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。  
   
- A`Function`プロシージャがプロシージャが返す値のデータ型を宣言できます。 任意のデータ型または列挙型、構造体、クラスまたはインターフェイスの名前を指定することができます。 指定しない場合は、`returntype`プロシージャは、パラメーターを返します`Object`です。  
+ A`Function`プロシージャがプロシージャが返す値のデータ型を宣言できます。 任意のデータ型または列挙型、構造体、クラスまたはインターフェイスの名前を指定することができます。 指定しない場合、`returntype`パラメーター、プロシージャを返します`Object`します。  
   
- この手順で使用する場合、`Implements`キーワードを含むクラスまたは構造体も必要、`Implements`直後に続くステートメント、`Class`または`Structure`ステートメントです。 `Implements`ステートメントで指定されている各インターフェイスを含める必要があります`implementslist`です。 ただし、インターフェイスを定義する名前、 `Function` (で`definedname`) このプロシージャの名前と一致する必要はありません (で`name`)。  
+ この手順で使用する場合、`Implements`キーワードを含むクラスまたは構造体があります、`Implements`直後に続くステートメント、`Class`または`Structure`ステートメント。 `Implements`ステートメントで指定されている各インターフェイスを含める必要があります`implementslist`します。 ただし、インターフェイスを定義する名前、 `Function` (で`definedname`) この手順の名前と一致する必要はありません (で`name`)。  
   
 > [!NOTE]
->  関数の式をインラインで定義するのに、ラムダ式を使用することができます。 詳細については、次を参照してください。[関数式](../../../visual-basic/language-reference/operators/function-expression.md)と[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)です。  
+>  関数をインライン式を定義するのにラムダ式を使用することができます。 詳細については、次を参照してください。[関数式](../../../visual-basic/language-reference/operators/function-expression.md)と[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)します。  
   
 ## <a name="returning-from-a-function"></a>関数から戻る  
- ときに、`Function`プロシージャを呼び出したステートメントに続くステートメントを使用して、プロシージャは、呼び出し元のコードを返します、実行が継続します。  
+ ときに、`Function`プロシージャを呼び出したステートメントに続くステートメントを使用して、プロシージャは、呼び出し元のコードに返す、実行が続行します。  
   
- 関数から値を返す、関数名に値を割り当てるか、含めることで、`Return`ステートメントです。  
+ 関数から値を返す、関数名に値を割り当てるか、含めることで、`Return`ステートメント。  
   
- `Return`ステートメントは、同時に戻り値を割り当てるし、次の例のように、関数を終了します。  
+ `Return`ステートメントは、同時に戻り値を割り当てるし、として次の例は、関数を終了します。  
   
  [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_1.vb)]  
   
- 次の例では、戻り値を割り当てて、関数名に`myFunction`しを使用して、`Exit Function`を返すステートメントです。  
+ 次の例では、関数名に、戻り値を割り当てて`myFunction`しを使用して、`Exit Function`ステートメントに戻ります。  
   
  [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_2.vb)]  
   
- `Exit Function`と`Return`ステートメントからすぐに終了が発生する、`Function`プロシージャです。 任意の数の`Exit Function`と`Return`ステートメントがどこにでも表示、プロシージャとを混在させること`Exit Function`と`Return`ステートメントです。  
+ `Exit Function`と`Return`ステートメントからすぐに終了が発生する、`Function`プロシージャ。 任意の数の`Exit Function`と`Return`ステートメントは、手順では、どこでも表示でき、組み合わせることができます`Exit Function`と`Return`ステートメント。  
   
- 使用する場合`Exit Function`、値を割り当てることがなく`name`、プロシージャがで指定されているデータ型の既定値を返します`returntype`です。 場合`returntype`が指定されていない、プロシージャが返されます`Nothing`の既定値は`Object`します。  
+ 使用する場合`Exit Function`値を割り当てることがなく`name`、プロシージャがで指定されているデータ型の既定値を返します`returntype`します。 場合`returntype`が指定されていない、プロシージャが返す`Nothing`の既定値は`Object`します。  
   
 ## <a name="calling-a-function"></a>関数の呼び出し  
- 呼び出す、`Function`プロシージャ名、式内のかっこ内の引数リストを使用してプロシージャです。 任意の引数を指定していない場合にのみ、かっこを省略することができます。 ただし、コードは、常にかっこを含める場合より読みやすいです。  
+ 呼び出す、`Function`プロシージャ名、式の中で、かっこで囲まれた引数のリストを使用してプロシージャ。 任意の引数を指定していない場合にのみかっこを省略することができます。 ただし、コードが常にかっこが含まれる場合より読みやすいです。  
   
- 呼び出す、`Function`任意のライブラリを呼び出すことと同様の機能などの手順`Sqrt`、 `Cos`、または`ChrW`です。  
+ 呼び出す、`Function`プロシージャなどの任意のライブラリを呼び出すことと同じ方法関数`Sqrt`、 `Cos`、または`ChrW`します。  
   
- 使用して関数を呼び出すことができますも、`Call`キーワード。 その場合は、戻り値は無視されます。 使用、`Call`キーワードはほとんどの場合にお勧めしません。 詳細については、次を参照してください。 [Call ステートメント](call-statement.md)です。  
+ 使用して関数を呼び出すことも、`Call`キーワード。 その場合は、戻り値は無視されます。 使用、`Call`キーワードはほとんどの場合にお勧めしません。 詳細については、次を参照してください。 [Call ステートメント](call-statement.md)します。  
   
- Visual Basic では、算術式内部の効率を向上させることがあります再配置します。 そのため、使用しないでください、`Function`算術式、関数には、同じ式の変数の値が変更されたときの手順です。  
+ Visual Basic では、算術式内部の効率を向上させることがあります再配置します。 そのため、使用しないでください、`Function`算術式、関数には、同じ式内の変数の値が変更されたときの手順。  
   
 ## <a name="async-functions"></a>非同期関数  
- *Async*機能は、明示的なコールバックの使用や複数の関数やラムダ式で、コードを手動で分割せずに非同期関数を呼び出すことができます。  
+ *Async*機能は、明示的なコールバックの使用や複数の関数またはラムダ式、コードを手動で分割せず、非同期関数を呼び出すことができます。  
   
- 持つ関数をマークする場合、 [Async](../../../visual-basic/language-reference/modifiers/async.md)修飾子、行うこともできます、 [Await](../../../visual-basic/language-reference/operators/await-operator.md)関数内の演算子。 達するとを制御すると、`Await`内の式、`Async`関数が、呼び出し元に制御が戻るし、待機中のタスクが完了するまで、関数の進行状況は中断されます。 タスクが完了したら、関数で実行を再開できます。  
+ 持つ関数をマークする場合、 [Async](../../../visual-basic/language-reference/modifiers/async.md)修飾子を使用できます、 [Await](../../../visual-basic/language-reference/operators/await-operator.md)関数に演算子。 コントロールに達すると、`Await`内の式、`Async`関数は、呼び出し元に制御が戻ります、関数の進行状況が待機中のタスクが完了するまで中断されます。 タスクが完了したら、関数の実行を再開できます。  
   
 > [!NOTE]
->  `Async`がまだ完了していない最初の待機中のオブジェクトを検出すると、プロシージャが呼び出し元に返しますまたはの末尾に達して、`Async`プロシージャ、先に生じた方です。  
+>  `Async`がまだ完了していない最初の待機中のオブジェクトを検出するかとに、プロシージャが、呼び出し元に返すまたはの末尾に達して、`Async`プロシージャか早い方です。  
   
- `Async`関数の戻り値の型を持つことができます<xref:System.Threading.Tasks.Task%601>または<xref:System.Threading.Tasks.Task>です。 例、`Async`関数の戻り値の型を持つ<xref:System.Threading.Tasks.Task%601>以下に示します。  
+ `Async`関数の戻り値の型を持つことができます<xref:System.Threading.Tasks.Task%601>または<xref:System.Threading.Tasks.Task>します。 例、`Async`関数の戻り値の型を持つ<xref:System.Threading.Tasks.Task%601>以下に示します。  
   
- `Async`関数は、いずれかを宣言できません[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)パラメーター。  
+ `Async`関数を宣言できません[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)パラメーター。  
   
- A [Sub ステートメント](sub-statement.md)でマークできるも、`Async`修飾子です。 これは主に使用するイベント ハンドラーの値が返されることはできません。 `Async``Sub`プロシージャを待機することはできませんとの呼び出し元、`Async``Sub`プロシージャによってスローされる例外をキャッチできません、`Sub`プロシージャです。  
+ A [Sub ステートメント](sub-statement.md)でもマークされることができます、`Async`修飾子。 これは主に使用、イベント ハンドラーの値を返すことができません。 `Async` `Sub`プロシージャを待機することはできませんし、呼び出し元の`Async``Sub`プロシージャによってスローされる例外をキャッチできません、`Sub`プロシージャ。  
   
  詳細については`Async`関数を参照してください[Async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)、[非同期プログラムにおける制御フロー](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)、および[Async 戻り値の型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="iterator-functions"></a>反復子関数  
- *反復子*関数は、リストや配列など、コレクションに対するカスタム イテレーションを実行します。 Iterator 関数を使用して、 [Yield](yield-statement.md)を一度に 1 つの各要素を返すステートメントです。 ときに、 [Yield](yield-statement.md)ステートメントに達すると、コードの現在の場所が記憶されます。 次回、iterator 関数が呼び出されると、この位置から実行が再開されます。  
+ *反復子*関数は、リストや配列など、コレクションに対するカスタム イテレーションを実行します。 反復子関数を使用して、 [Yield](yield-statement.md)ステートメントを一度に 1 つの各要素を返します。 ときに、 [Yield](yield-statement.md)ステートメントに達すると、コード内の現在の場所が記憶されます。 次回、iterator 関数が呼び出されると、この位置から実行が再開されます。  
   
- 使用して、クライアント コードから反復子を呼び出す、[ごとにしています.[次へ]](for-each-next-statement.md)ステートメントです。  
+ 使用して、クライアント コードから反復子を呼び出す、[ごとにしています.[次へ]](for-each-next-statement.md)ステートメント。  
   
- 反復子関数の戻り値の型を指定できます<xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>、または<xref:System.Collections.Generic.IEnumerator%601>です。  
+ 反復子関数の戻り値の型は、 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>、または<xref:System.Collections.Generic.IEnumerator%601>します。  
   
  詳細については、「 [反復子](../../programming-guide/concepts/iterators.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`Function`名、パラメーター、およびの本体を構成するコードを宣言するステートメント、`Function`プロシージャです。 `ParamArray`修飾子により、可変個の引数を受け入れるように機能します。  
+ 次の例では、`Function`宣言名、パラメーター、およびコードの本体を形成するステートメントを`Function`プロシージャ。 `ParamArray`修飾子により、可変個の引数を受け入れるように機能します。  
   
  [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
   
@@ -248,9 +248,9 @@ End Function
  [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
   
 ## <a name="example"></a>例  
- 次の例では、`DelayAsync`は、`Async``Function`の戻り値の型を持つ<xref:System.Threading.Tasks.Task%601>します。 `DelayAsync` には、整数を返す `Return` ステートメントがあります。 そのため、関数宣言の`DelayAsync`の戻り値の型を持つ必要がある`Task(Of Integer)`です。 戻り値の型があるため`Task(Of Integer)`の評価、`Await`式`DoSomethingAsync`整数が生成されます。 これはこのステートメントではデモンストレーション:`Dim result As Integer = Await delayTask`です。  
+ 次の例では、`DelayAsync`は、 `Async` `Function`の戻り値の型を持つ<xref:System.Threading.Tasks.Task%601>します。 `DelayAsync` には、整数を返す `Return` ステートメントがあります。 そのため、関数の宣言の`DelayAsync`の戻り値の型を指定する必要があります`Task(Of Integer)`します。 戻り値の型である`Task(Of Integer)`の評価、`Await`式`DoSomethingAsync`整数が生成されます。 これはこのステートメントで示されています:`Dim result As Integer = Await delayTask`します。  
   
- `startButton_Click`プロシージャは、の例、`Async Sub`プロシージャです。 `DoSomethingAsync`は、`Async`関数では、タスクへの呼び出しを`DoSomethingAsync`、次のステートメントで示すように待機する必要があります:`Await DoSomethingAsync()`です。 `startButton_Click``Sub`でプロシージャを定義する必要があります、`Async`修飾子があるため、`Await`式。  
+ `startButton_Click`プロシージャの例に示します、`Async Sub`プロシージャ。 `DoSomethingAsync`は、`Async`関数では、タスクへの呼び出しを`DoSomethingAsync`、次のステートメントに示す待機する必要があります:`Await DoSomethingAsync()`します。 `startButton_Click` `Sub`でプロシージャを定義する必要があります、`Async`修飾子があるため、`Await`式。  
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
