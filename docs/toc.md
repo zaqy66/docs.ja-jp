@@ -210,8 +210,7 @@
 ### [配置](framework/deployment/)
 ### [パフォーマンス](framework/performance/)
 ### [動的プログラミング](framework/reflection-and-codedom/)
-### 
-  [MEF (Managed Extensibility Framework)](framework/mef/)
+### [MEF (Managed Extensibility Framework)](framework/mef/)
 ### [アドインおよび拡張機能](framework/add-ins/)
 ### [アンマネージ コードとの相互運用](framework/interop/)
 ### [アンマネージ API リファレンス](framework/unmanaged-api/)
@@ -641,10 +640,8 @@
 #### [Optional](visual-basic/language-reference/modifiers/optional.md)
 #### [Out (ジェネリック修飾子)](visual-basic/language-reference/modifiers/out-generic-modifier.md)
 #### [オーバーロード](visual-basic/language-reference/modifiers/overloads.md)
-#### 
-  [Overridable](visual-basic/language-reference/modifiers/overridable.md)
-#### 
-  [Overrides](visual-basic/language-reference/modifiers/overrides.md)
+#### [Overridable](visual-basic/language-reference/modifiers/overridable.md)
+#### [Overrides](visual-basic/language-reference/modifiers/overrides.md)
 #### [ParamArray](visual-basic/language-reference/modifiers/paramarray.md)
 #### [Partial](visual-basic/language-reference/modifiers/partial.md)
 #### [Private](visual-basic/language-reference/modifiers/private.md)
