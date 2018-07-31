@@ -19,15 +19,15 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0ed92cbf5a859b9d5b7b8eddefda3ad34a98f27
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33404051"
 ---
-# <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a><span data-ttu-id="e8661-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion メソッド</span><span class="sxs-lookup"><span data-stu-id="e8661-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion Method</span></span>
-<span data-ttu-id="e8661-103">によって呼び出されます[iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)デバッガーにメモリの指定した領域の列挙の試行の結果を報告します。</span><span class="sxs-lookup"><span data-stu-id="e8661-103">Called by [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) to report to the debugger the result of an attempt to enumerate a specified region of memory.</span></span>  
+# <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a><span data-ttu-id="32b6b-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion メソッド</span><span class="sxs-lookup"><span data-stu-id="32b6b-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion Method</span></span>
+<span data-ttu-id="32b6b-103">によって呼び出されます[iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)デバッガーにメモリの指定した領域の列挙の試行の結果を報告します。</span><span class="sxs-lookup"><span data-stu-id="32b6b-103">Called by [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) to report to the debugger the result of an attempt to enumerate a specified region of memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e8661-104">構文</span><span class="sxs-lookup"><span data-stu-id="e8661-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="32b6b-104">構文</span><span class="sxs-lookup"><span data-stu-id="32b6b-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumMemoryRegion (  
@@ -36,26 +36,26 @@ HRESULT EnumMemoryRegion (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e8661-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e8661-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="32b6b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="32b6b-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="e8661-106">[in]列挙するがメモリ領域の開始アドレス。</span><span class="sxs-lookup"><span data-stu-id="e8661-106">[in] The starting address of the memory region that was to be enumerated.</span></span>  
+ <span data-ttu-id="32b6b-106">[in]列挙するがメモリ領域の開始アドレス。</span><span class="sxs-lookup"><span data-stu-id="32b6b-106">[in] The starting address of the memory region that was to be enumerated.</span></span>  
   
  `size`  
- <span data-ttu-id="e8661-107">[in] (バイト単位) のメモリ領域のサイズ。</span><span class="sxs-lookup"><span data-stu-id="e8661-107">[in] The size, in bytes, of the memory region.</span></span>  
+ <span data-ttu-id="32b6b-107">[in] \(バイト単位\) のメモリ領域のサイズ。</span><span class="sxs-lookup"><span data-stu-id="32b6b-107">[in] The size, in bytes, of the memory region.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e8661-108">コメント</span><span class="sxs-lookup"><span data-stu-id="e8661-108">Remarks</span></span>  
- <span data-ttu-id="e8661-109">`ICLRDataEnumMemoryRegions::EnumMemoryRegions`メソッドは、メモリ領域の列挙を試行するたびにこのコールバック メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e8661-109">The `ICLRDataEnumMemoryRegions::EnumMemoryRegions` method will call this callback method after each attempt to enumerate a memory region.</span></span> <span data-ttu-id="e8661-110">列挙体は、このメソッドがエラーを示す HRESULT を返す場合でも続行されます。</span><span class="sxs-lookup"><span data-stu-id="e8661-110">The enumeration will continue even if this method returns an HRESULT indicating failure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="32b6b-108">コメント</span><span class="sxs-lookup"><span data-stu-id="32b6b-108">Remarks</span></span>  
+ <span data-ttu-id="32b6b-109">`ICLRDataEnumMemoryRegions::EnumMemoryRegions`メソッドは、メモリ領域の列挙を試行するたびにこのコールバック メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="32b6b-109">The `ICLRDataEnumMemoryRegions::EnumMemoryRegions` method will call this callback method after each attempt to enumerate a memory region.</span></span> <span data-ttu-id="32b6b-110">列挙体は、このメソッドがエラーを示す HRESULT を返す場合でも続行されます。</span><span class="sxs-lookup"><span data-stu-id="32b6b-110">The enumeration will continue even if this method returns an HRESULT indicating failure.</span></span>  
   
- <span data-ttu-id="e8661-111">このコールバックによって報告された領域には、重複またはオーバー ラップがあります。</span><span class="sxs-lookup"><span data-stu-id="e8661-111">Regions reported by this callback may be duplicates or overlapping regions.</span></span>  
+ <span data-ttu-id="32b6b-111">このコールバックによって報告された領域には、重複またはオーバー ラップがあります。</span><span class="sxs-lookup"><span data-stu-id="32b6b-111">Regions reported by this callback may be duplicates or overlapping regions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e8661-112">要件</span><span class="sxs-lookup"><span data-stu-id="e8661-112">Requirements</span></span>  
- <span data-ttu-id="e8661-113">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="e8661-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="32b6b-112">要件</span><span class="sxs-lookup"><span data-stu-id="32b6b-112">Requirements</span></span>  
+ <span data-ttu-id="32b6b-113">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="32b6b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e8661-114">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="e8661-114">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="32b6b-114">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="32b6b-114">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="e8661-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e8661-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="32b6b-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="32b6b-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e8661-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8661-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="32b6b-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32b6b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e8661-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="e8661-117">See Also</span></span>  
- [<span data-ttu-id="e8661-118">ICLRDataEnumMemoryRegionsCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e8661-118">ICLRDataEnumMemoryRegionsCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="32b6b-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="32b6b-117">See Also</span></span>  
+ [<span data-ttu-id="32b6b-118">ICLRDataEnumMemoryRegionsCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="32b6b-118">ICLRDataEnumMemoryRegionsCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)
