@@ -51,7 +51,7 @@ ms.locfileid: "33502935"
   
             -   [メッセージ キュー サーバー]  
   
-            -   [MSMQ Active Directory Domain Services Integration] (ドメインに参加するコンピューターの場合)  
+            -   [MSMQ Active Directory Domain Services Integration] \(ドメインに参加するコンピューターの場合\)  
   
             -   [MSMQ HTTP サポート]  
   

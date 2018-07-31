@@ -19,7 +19,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0ed92cbf5a859b9d5b7b8eddefda3ad34a98f27
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33404051"
@@ -41,7 +41,7 @@ HRESULT EnumMemoryRegion (
  [in]列挙するがメモリ領域の開始アドレス。  
   
  `size`  
- [in] (バイト単位) のメモリ領域のサイズ。  
+ [in] \(バイト単位\) のメモリ領域のサイズ。  
   
 ## <a name="remarks"></a>コメント  
  `ICLRDataEnumMemoryRegions::EnumMemoryRegions`メソッドは、メモリ領域の列挙を試行するたびにこのコールバック メソッドを呼び出します。 列挙体は、このメソッドがエラーを示す HRESULT を返す場合でも続行されます。  

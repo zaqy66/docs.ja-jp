@@ -19,7 +19,7 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ddaddbbd050dc079fcf20551e90c895d2f4ef59
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33446344"
@@ -47,7 +47,7 @@ HRESULT TranslateSigWithScope (
   
 #### <a name="parameters"></a>パラメーター  
  `pAssemImport`  
- [in] (署名が定義されている) インポート アセンブリのインターフェイスです。  
+ [in] \(署名が定義されている\) インポート アセンブリのインターフェイスです。  
   
  `pbHashValue`  
  [in]アセンブリのハッシュ blob です。  
@@ -74,7 +74,7 @@ HRESULT TranslateSigWithScope (
  [out]翻訳されたシグネチャ blob を保持するバッファー。  
   
  `cbTranslatedSigMax`  
- [in] (バイト単位) の容量の`pvTranslatedSig`します。  
+ [in] \(バイト単位\) の容量の`pvTranslatedSig`します。  
   
  `pcbTranslatedSig`  
  [out]翻訳済みの署名の実際のバイト数。  

@@ -19,7 +19,7 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a11f689f1fa93e1122ffcc78187c4287db7ea534
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33427025"
@@ -36,7 +36,7 @@ HRESULT CloseScope(
   
 #### <a name="parameters"></a>パラメーター  
  `endOffset`  
- [in] (バイト単位) の構文のスコープ内の最後の命令の最後のポイントのメソッドの先頭からのオフセット。  
+ [in] \(バイト単位\) の構文のスコープ内の最後の命令の最後のポイントのメソッドの先頭からのオフセット。  
   
 ## <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
