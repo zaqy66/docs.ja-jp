@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: eaf410fa198fdb38a39a0474e9e147542919df8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 519c22e3c2647e2ae3423688b468e133a3e5eb84
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578422"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937115"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンを実装するための推奨される手順
 イベントベースの非同期パターンは、使い慣れたイベントおよびデリゲートのセマンティクスと共に、クラス内の非同期動作を公開する効果的な方法を提供します。 イベント ベースの非同期パターンを実装するには、いくつかの固有の動作要件に従う必要があります。 以降のセクションでは、イベントベースの非同期パターンに従うクラスを実装する際に検討すべき要件とガイドラインについて説明します。  
@@ -28,14 +28,14 @@ ms.locfileid: "33578422"
  イベントベースの非同期パターンを実装する場合は、クラスが適切に動作し、クラスのクライアントがそのような動作に依存できるようにするため、多数の保証を提供する必要があります。  
   
 ### <a name="completion"></a>完了  
- 正常完了、エラー、またはキャンセルの場合に常に *MethodName***Completed** イベント ハンドラーを呼び出します。 アプリケーションがアイドルになり完了しない状態が発生してはなりません。 この規則の唯一の例外として、非同期操作自体は完了することがないように設計されている場合があります。  
+ 正常完了、エラー、またはキャンセルの場合に常に <em>MethodName</em>**Completed** イベント ハンドラーを呼び出します。 アプリケーションがアイドルになり完了しない状態が発生してはなりません。 この規則の唯一の例外として、非同期操作自体は完了することがないように設計されている場合があります。  
   
 ### <a name="completed-event-and-eventargs"></a>完了イベントおよび EventArg  
- 個別の *MethodName***Async** メソッドごとに、次の設計要件を適用します。  
+ 個別の <em>MethodName</em>**Async** メソッドごとに、次の設計要件を適用します。  
   
--   メソッドと同じクラスで *MethodName***Completed** イベントを定義します。  
+-   メソッドと同じクラスで <em>MethodName</em>**Completed** イベントを定義します。  
   
--   <xref:System.ComponentModel.AsyncCompletedEventArgs> クラスから派生した *MethodName***Completed** イベントの <xref:System.EventArgs> クラスと、これに付随するデリゲートを定義します。 既定のクラス名の形式は、*MethodName***CompletedEventArgs** です。  
+-   <xref:System.ComponentModel.AsyncCompletedEventArgs> クラスから派生した <em>MethodName</em>**Completed** イベントの <xref:System.EventArgs> クラスと、これに付随するデリゲートを定義します。 既定のクラス名の形式は、*MethodName***CompletedEventArgs** です。  
   
 -   <xref:System.EventArgs> クラスは、*MethodName* メソッドの戻り値に固有のクラスにしてください。 <xref:System.EventArgs> クラスを使用する場合は、開発者に対して結果をキャストすることを義務付けないでください。  
   
@@ -141,7 +141,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   <xref:System.ComponentModel.Component> から派生したクラスを編集する場合、独自の <xref:System.Threading.SynchronizationContext> クラスを実装およびインストールしないでください。 使用される <xref:System.Threading.SynchronizationContext> を制御するのは、コンポーネントではなくアプリケーション モデルです。  
   
--   どのようなマルチスレッドを使用する場合でも、深刻かつ複雑なバグが発生する可能性があります。 マルチスレッドを使用するソリューションを実装する前に、「[マネージ スレッド処理の実施](../../../docs/standard/threading/managed-threading-best-practices.md)」を参照してください。  
+-   どのようなマルチスレッドを使用する場合でも、深刻かつ複雑なバグが発生する可能性があります。 マルチスレッドを使用するソリューションを実装する前に、「[マネージド スレッド処理の実施](../../../docs/standard/threading/managed-threading-best-practices.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  <xref:System.ComponentModel.AsyncOperation>  
