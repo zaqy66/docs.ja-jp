@@ -1,6 +1,7 @@
 ---
 title: タイマー
-ms.date: 03/30/2017
+description: マルチスレッド環境で使用する .NET タイマーについて説明します。
+ms.date: 07/03/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,29 +11,53 @@ helpviewer_keywords:
 - threading [.NET Framework], timers
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
-author: rpetrusha
+author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 478484651bf839f842148f0b4164c9387db3b98a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae41c535d8bc1c0a05174b9051ba34f1a0a34638
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584958"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875067"
 ---
-# <a name="timers"></a><span data-ttu-id="e85ae-102">タイマー</span><span class="sxs-lookup"><span data-stu-id="e85ae-102">Timers</span></span>
-<span data-ttu-id="e85ae-103">タイマーとは、指定時刻に指定のデリゲートを呼び出す軽量オブジェクトのことです。</span><span class="sxs-lookup"><span data-stu-id="e85ae-103">Timers are lightweight objects that enable you to specify a delegate to be called at a specified time.</span></span> <span data-ttu-id="e85ae-104">スレッド プール内の 1 つのスレッドが、待機操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="e85ae-104">A thread in the thread pool performs the wait operation.</span></span>  
-  
- <span data-ttu-id="e85ae-105"><xref:System.Threading.Timer?displayProperty=nameWithType> クラスの使用法は単純です。</span><span class="sxs-lookup"><span data-stu-id="e85ae-105">Using the <xref:System.Threading.Timer?displayProperty=nameWithType> class is straightforward.</span></span> <span data-ttu-id="e85ae-106">**Timer** を作成するには、コールバック メソッドへの <xref:System.Threading.TimerCallback> デリゲート、コールバックに渡される状態を表すオブジェクト、最初に発生する時間、コールバック呼び出しの間隔を表す時間を渡します。</span><span class="sxs-lookup"><span data-stu-id="e85ae-106">You create a **Timer**, passing a <xref:System.Threading.TimerCallback> delegate to the callback method, an object representing state that will be passed to the callback, an initial raise time, and a time representing the period between callback invocations.</span></span> <span data-ttu-id="e85ae-107">保留中のタイマーを取り消すには、**Timer.Dispose** 関数を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e85ae-107">To cancel a pending timer, call the **Timer.Dispose** function.</span></span>  
-  
+# <a name="timers"></a><span data-ttu-id="84bc4-103">タイマー</span><span class="sxs-lookup"><span data-stu-id="84bc4-103">Timers</span></span>
+
+<span data-ttu-id="84bc4-104">.NET には、マルチスレッド環境で使用するタイマーが 2 つあります。</span><span class="sxs-lookup"><span data-stu-id="84bc4-104">.NET provides two timers to use in a multithreaded environment:</span></span>
+
+- <span data-ttu-id="84bc4-105"><xref:System.Threading.Timer?displayProperty=nameWithType> は <xref:System.Threading.ThreadPool> スレッドで決まった間隔を空けながら呼び出しメソッドを 1 つ実行します。</span><span class="sxs-lookup"><span data-stu-id="84bc4-105"><xref:System.Threading.Timer?displayProperty=nameWithType>, which executes a single callback method on a <xref:System.Threading.ThreadPool> thread at regular intervals.</span></span>
+- <span data-ttu-id="84bc4-106"><xref:System.Timers.Timer?displayProperty=nameWithType> は既定では、<xref:System.Threading.ThreadPool> スレッドで決まった間隔を空けながらイベントを発生させます。</span><span class="sxs-lookup"><span data-stu-id="84bc4-106"><xref:System.Timers.Timer?displayProperty=nameWithType>, which by default raises an event on a <xref:System.Threading.ThreadPool> thread at regular intervals.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="e85ae-108">他にも 2 つのタイマー クラスがあります。</span><span class="sxs-lookup"><span data-stu-id="e85ae-108">There are two other timer classes.</span></span> <span data-ttu-id="e85ae-109"><xref:System.Windows.Forms.Timer?displayProperty=nameWithType> クラスは、ビジュアルなデザイナーを操作するコントロールで、ユーザー インターフェイスのコンテキストで使用するように設計されています。このクラスは、ユーザー インターフェイス スレッドでイベントを発生させます。</span><span class="sxs-lookup"><span data-stu-id="e85ae-109">The <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> class is a control that works with visual designers and is meant to be used in user interface contexts; it raises events on the user interface thread.</span></span> <span data-ttu-id="e85ae-110"><xref:System.Timers.Timer?displayProperty=nameWithType> クラスは <xref:System.ComponentModel.Component> から派生するため、ビジュアルなデザイナーで使用できます。このクラスもイベントを発生させますが、イベントは <xref:System.Threading.ThreadPool> スレッドで発生します。</span><span class="sxs-lookup"><span data-stu-id="e85ae-110">The <xref:System.Timers.Timer?displayProperty=nameWithType> class derives from <xref:System.ComponentModel.Component>, so it can be used with visual designers; it also raises events, but it raises them on a <xref:System.Threading.ThreadPool> thread.</span></span> <span data-ttu-id="e85ae-111"><xref:System.Threading.Timer?displayProperty=nameWithType> クラスは <xref:System.Threading.ThreadPool> スレッドでコールバックを行い、イベント モデルは使用しません。</span><span class="sxs-lookup"><span data-stu-id="e85ae-111">The <xref:System.Threading.Timer?displayProperty=nameWithType> class makes callbacks on a <xref:System.Threading.ThreadPool> thread and does not use the event model at all.</span></span> <span data-ttu-id="e85ae-112">またこのクラスは、状態オブジェクトをコールバック メソッドに提供します。他のタイマーは状態オブジェクトを提供しません。</span><span class="sxs-lookup"><span data-stu-id="e85ae-112">It also provides a state object to the callback method, which the other timers do not.</span></span> <span data-ttu-id="e85ae-113">このクラスは、非常に軽量です。</span><span class="sxs-lookup"><span data-stu-id="e85ae-113">It is extremely lightweight.</span></span>  
+> <span data-ttu-id="84bc4-107">一部の .NET 実装には追加タイマーが含まれています。</span><span class="sxs-lookup"><span data-stu-id="84bc4-107">Some .NET implementations may include additional timers:</span></span>
+>
+> - <span data-ttu-id="84bc4-108"><xref:System.Windows.Forms.Timer?displayProperty=nameWithType>: 一定の間隔でイベントを発生させる Windows フォーム コンポーネント。</span><span class="sxs-lookup"><span data-stu-id="84bc4-108"><xref:System.Windows.Forms.Timer?displayProperty=nameWithType>: a Windows Forms component that fires an event at regular intervals.</span></span> <span data-ttu-id="84bc4-109">このコンポーネントにはユーザー インターフェイスがなく、シングルスレッド環境で使用するように設計されています。</span><span class="sxs-lookup"><span data-stu-id="84bc4-109">The component has no user interface and is designed for use in a single-threaded environment.</span></span>  
+> - <span data-ttu-id="84bc4-110"><xref:System.Web.UI.Timer?displayProperty=nameWithType>: 非同期または同期の Web ページのポストバックを一定の間隔で実行する ASP.NET コンポーネント。</span><span class="sxs-lookup"><span data-stu-id="84bc4-110"><xref:System.Web.UI.Timer?displayProperty=nameWithType>: an ASP.NET component that performs asynchronous or synchronous web page postbacks at a regular interval.</span></span>
+> - <span data-ttu-id="84bc4-111"><xref:System.Windows.Threading.DispatcherTimer?displayProperty=nameWithType>: 指定の間隔と指定の優先順位で処理される <xref:System.Windows.Threading.Dispatcher> キューに統合されるタイマー。</span><span class="sxs-lookup"><span data-stu-id="84bc4-111"><xref:System.Windows.Threading.DispatcherTimer?displayProperty=nameWithType>: a timer that is integrated into the <xref:System.Windows.Threading.Dispatcher> queue which is processed at a specified interval of time and at a specified priority.</span></span>
+
+## <a name="the-systemthreadingtimer-class"></a><span data-ttu-id="84bc4-112">System.Threading.Timer クラス</span><span class="sxs-lookup"><span data-stu-id="84bc4-112">The System.Threading.Timer class</span></span>
+
+<span data-ttu-id="84bc4-113"><xref:System.Threading.Timer?displayProperty=nameWithType> クラスによって、指定の間隔でデリゲートを連続的に呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="84bc4-113">The <xref:System.Threading.Timer?displayProperty=nameWithType> class enables you to continuously call a delegate at specified time intervals.</span></span> <span data-ttu-id="84bc4-114">このクラスを使用し、指定の間隔でデリゲートの呼び出しを 1 つスケジュールすることもできます。</span><span class="sxs-lookup"><span data-stu-id="84bc4-114">You also can use this class to schedule a single call to a delegate in a specified time interval.</span></span> <span data-ttu-id="84bc4-115">デリゲートは <xref:System.Threading.ThreadPool> スレッドで実行されます。</span><span class="sxs-lookup"><span data-stu-id="84bc4-115">The delegate is executed on a <xref:System.Threading.ThreadPool> thread.</span></span>
+
+<span data-ttu-id="84bc4-116"><xref:System.Threading.Timer?displayProperty=nameWithType> オブジェクトを作成するとき、呼び出しメソッドを定義する <xref:System.Threading.TimerCallback> デリゲート、呼び出しに渡される任意の状態オブジェクト、最初の呼び出しまで遅らせる時間、呼び出し間隔を指定します。</span><span class="sxs-lookup"><span data-stu-id="84bc4-116">When you create a <xref:System.Threading.Timer?displayProperty=nameWithType> object, you specify a <xref:System.Threading.TimerCallback> delegate that defines the callback method, an optional state object that is passed to the callback, the amount of time to delay before the first invocation of the callback, and the time interval between callback invocations.</span></span> <span data-ttu-id="84bc4-117">保留中のタイマーを取り消すには、<xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="84bc4-117">To cancel a pending timer, call the <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType> method.</span></span>
+
+<span data-ttu-id="84bc4-118">次の例では、1 秒 (1000 ミリ秒) 後に最初の指定デリゲートを呼び出し、その後、2 秒おきに呼び出すタイマーが作成されます。</span><span class="sxs-lookup"><span data-stu-id="84bc4-118">The following example creates a timer that calls the provided delegate for the first time after one second (1000 milliseconds) and then calls it every two seconds.</span></span> <span data-ttu-id="84bc4-119">この例の状態オブジェクトは、デリゲートを呼び出す回数を数えるために使用されます。</span><span class="sxs-lookup"><span data-stu-id="84bc4-119">The state object in the example is used to count how many times the delegate is called.</span></span> <span data-ttu-id="84bc4-120">デリゲートが少なくとも 10 回呼び出されると、タイマーが停止します。</span><span class="sxs-lookup"><span data-stu-id="84bc4-120">The timer is stopped when the delegate has been called at least 10 times.</span></span>
+
+[!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
+[!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
+[!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]
+
+<span data-ttu-id="84bc4-121">使用例を含む詳細については、「<xref:System.Threading.Timer?displayProperty=nameWithType>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="84bc4-121">For more information and examples, see <xref:System.Threading.Timer?displayProperty=nameWithType>.</span></span>
+
+## <a name="the-systemtimerstimer-class"></a><span data-ttu-id="84bc4-122">System.Timers.Timer クラス</span><span class="sxs-lookup"><span data-stu-id="84bc4-122">The System.Timers.Timer class</span></span>
+
+<span data-ttu-id="84bc4-123">マルチスレッド環境で使用できる別のタイマーが <xref:System.Timers.Timer?displayProperty=nameWithType> です。このタイマーは既定で、<xref:System.Threading.ThreadPool> スレッドでイベントを発生させます。</span><span class="sxs-lookup"><span data-stu-id="84bc4-123">Another timer that can be used in a multithreaded environment is <xref:System.Timers.Timer?displayProperty=nameWithType> that by default raises an event on a <xref:System.Threading.ThreadPool> thread.</span></span>
+
+<span data-ttu-id="84bc4-124"><xref:System.Timers.Timer?displayProperty=nameWithType> オブジェクトを作成するとき、<xref:System.Timers.Timer.Elapsed> イベントを発生させる間隔を指定できます。</span><span class="sxs-lookup"><span data-stu-id="84bc4-124">When you create a <xref:System.Timers.Timer?displayProperty=nameWithType> object, you may specify the time interval in which to raise an <xref:System.Timers.Timer.Elapsed> event.</span></span> <span data-ttu-id="84bc4-125"><xref:System.Timers.Timer.Enabled%2A> プロパティを使用し、タイマーが <xref:System.Timers.Timer.Elapsed> イベントを発生させるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="84bc4-125">Use the <xref:System.Timers.Timer.Enabled%2A> property to indicate if a timer should raise an <xref:System.Timers.Timer.Elapsed> event.</span></span> <span data-ttu-id="84bc4-126">指定間隔の経過後、1 回だけ <xref:System.Timers.Timer.Elapsed> イベントを発生させる必要がある場合、<xref:System.Timers.Timer.AutoReset%2A> を `false` に設定します。</span><span class="sxs-lookup"><span data-stu-id="84bc4-126">If you need an <xref:System.Timers.Timer.Elapsed> event to be raised only once after the specified interval has elapsed, set the <xref:System.Timers.Timer.AutoReset%2A> to `false`.</span></span> <span data-ttu-id="84bc4-127"><xref:System.Timers.Timer.AutoReset%2A> プロパティの既定値は `true` です。<xref:System.Timers.Timer.Interval%2A> プロパティで定義される間隔で <xref:System.Timers.Timer.Elapsed> イベントが発生します。</span><span class="sxs-lookup"><span data-stu-id="84bc4-127">The default value of the <xref:System.Timers.Timer.AutoReset%2A> property is `true`, which means that an <xref:System.Timers.Timer.Elapsed> event is raised regularly at the interval defined by the <xref:System.Timers.Timer.Interval%2A> property.</span></span>
+
+<span data-ttu-id="84bc4-128">使用例を含む詳細については、「<xref:System.Timers.Timer?displayProperty=nameWithType>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="84bc4-128">For more information and examples, see <xref:System.Timers.Timer?displayProperty=nameWithType>.</span></span>
   
- <span data-ttu-id="e85ae-114">次のコード例は、1 秒 (1000 ミリ秒) 後に起動し、**Enter** キーを押すまで 1 秒ごとに時を刻むタイマーを開始します。</span><span class="sxs-lookup"><span data-stu-id="e85ae-114">The following code example starts a timer that starts after one second (1000 milliseconds) and ticks every second until you press the **Enter** key.</span></span> <span data-ttu-id="e85ae-115">実行中にタイマーがガベージ コレクションの対象とならないように、このタイマーへの参照を含む変数はクラス レベルのフィールドとします。</span><span class="sxs-lookup"><span data-stu-id="e85ae-115">The variable containing the reference to the timer is a class-level field, to ensure that the timer is not subject to garbage collection while it is still running.</span></span> <span data-ttu-id="e85ae-116">積極的なガベージ コレクションの詳細については、「<xref:System.GC.KeepAlive%2A>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e85ae-116">For more information on aggressive garbage collection, see <xref:System.GC.KeepAlive%2A>.</span></span>  
-  
- [!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
- [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
- [!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]  
-  
-## <a name="see-also"></a><span data-ttu-id="e85ae-117">参照</span><span class="sxs-lookup"><span data-stu-id="e85ae-117">See Also</span></span>  
- <xref:System.Threading.Timer>  
- [<span data-ttu-id="e85ae-118">スレッド処理オブジェクトと機能</span><span class="sxs-lookup"><span data-stu-id="e85ae-118">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a><span data-ttu-id="84bc4-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="84bc4-129">See also</span></span>
+
+ <xref:System.Threading.Timer?displayProperty=nameWithType>  
+ <xref:System.Timers.Timer?displayProperty=nameWithType>  
+ [<span data-ttu-id="84bc4-130">スレッド処理オブジェクトと機能</span><span class="sxs-lookup"><span data-stu-id="84bc4-130">Threading Objects and Features</span></span>](threading-objects-and-features.md)

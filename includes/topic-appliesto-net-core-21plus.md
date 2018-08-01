@@ -1,0 +1,1 @@
+<span data-ttu-id="6dc32-101">**このトピックの対象: ✓** .NET Core SDK 2.1.300 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="6dc32-101">**This topic applies to: ✓** .NET Core SDK 2.1.300 and later versions</span></span>
