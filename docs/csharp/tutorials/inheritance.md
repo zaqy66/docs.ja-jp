@@ -3,14 +3,14 @@ title: C# での継承
 description: C# ライブラリやアプリケーションでの継承の使用について学習します。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/16/2017
+ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 1476425594e55531fdb56de531ee61808dccd7db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 646602c4bab311e6d6078378fe423741a1dd38e1
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365762"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875225"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# と .NET での継承
 
@@ -32,7 +32,6 @@ ms.locfileid: "33365762"
   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. [dotnet run](../../core/tools/dotnet-run.md) コマンドを入力して、例をコンパイルし実行します。
-
 
 ## <a name="background-what-is-inheritance"></a>基礎知識: 継承とは何か
 
@@ -99,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-継承は、クラスとインターフェイスにのみ適用されます。 その他の種類のカテゴリ (構造体、デリゲート、および列挙型) は、継承をサポートしていません。 このため、次のようなコードをコンパイルしようとすると、コンパイラ エラー CS0527 "Type 'ValueType' in interface list is not an interface." ("インターフェイス リストの型 'ValueType' はインターフェイスではありません") が生成されます。 このエラー メッセージは、構造体が実装するインターフェイスを定義することはできても、継承はサポートされないことを示します。
+継承は、クラスとインターフェイスにのみ適用されます。 その他の種類のカテゴリ (構造体、デリゲート、および列挙型) は、継承をサポートしていません。 これらのルールのため、次の例のようなコードをコンパイルしようとすると、コンパイラ エラー CS0527 "インターフェイス リストの型 'ValueType' はインターフェイスではありません。" が生成されます。 このエラー メッセージは、構造体が実装するインターフェイスを定義することはできても、継承はサポートされないことを示します。
 
 ```csharp
 using System;
@@ -111,13 +110,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="implicit-inheritance"></a>暗黙的な継承
 
-.NET 型システムの型はすべて、単一継承によって継承する型のほかに、<xref:System.Object> またはその派生型から暗黙的に継承します。 これにより、あらゆる型において共通の機能が使用可能となります。
+.NET 型システムの型はすべて、単一継承によって継承する型のほかに、<xref:System.Object> またはその派生型から暗黙的に継承します。 <xref:System.Object> の共通の機能はあらゆる型で使用できます。
 
 暗黙的な継承とはどのようなものか、新しいクラス `SimpleClass` を定義してみましょう。単純な空のクラス定義です。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-次に、リフレクション (型のメタデータを検査してその型の情報を取得できるもの) を使用して、`SimpleClass` 型に属するメンバーの一覧を取得します。 `SimpleClass` クラスにはメンバーをまだ定義していないにもかかわらず、この例の出力は、9 つのメンバーが存在することを示しています。 そのうち 1 つは、パラメーターなしの (既定の) コンストラクターで、C# コンパイラによって `SimpleClass` 型に自動的に提供されるものです。 あとの 8 つは <xref:System.Object> のメンバーで、この型から、.NET 型システムのすべてのクラスとインターフェイスが最終的に暗黙的に継承します。
+次に、リフレクション (型のメタデータを検査して、その型の情報を取得できるもの) を使用して、`SimpleClass` 型に属するメンバーの一覧を取得します。 `SimpleClass` クラスにはメンバーをまだ定義していないにもかかわらず、この例の出力は、9 つのメンバーが存在することを示しています。 これらのメンバーのうちの 1 つは、パラメーターなし (既定) のコンストラクターで、C# コンパイラによって `SimpleClass` 型に自動的に提供されるものです。 あとの 8 つは <xref:System.Object> のメンバーで、この型から、.NET 型システムのすべてのクラスとインターフェイスが最終的に暗黙的に継承します。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
@@ -171,27 +170,29 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ### <a name="the-base-publication-class"></a>基底 Publication クラス
 
-`Publication` クラスを設計するにあたり、設計について決まりをいくつか作る必要があります。
+`Publication` クラスを設計するにあたり、次のように、設計についていくつか決定する必要があります。
 
 - どのメンバーを基底クラス `Publication` に含めるか、`Publication` メンバーがメソッドの実装を提供するかどうか、`Publication` をその派生クラスのテンプレートとなる抽象基底クラスとするかどうか。
 
-  ここで、`Publication` クラスはメソッドの実装を提供します。 「[抽象基底クラスとその派生クラスの設計](#abstract)」セクションには、抽象基底クラスを使用して、派生クラスが上書きする必要があるメソッドを定義する例が含まれています。 派生クラスは、その派生型に適した任意の実装を提供することができます。
+  ここで、`Publication` クラスはメソッドの実装を提供します。 「[抽象基底クラスとその派生クラスの設計](#abstract)」セクションには、抽象基底クラスを使用して、派生クラスがオーバーライドする必要があるメソッドを定義する例が含まれています。 派生クラスは、その派生型に適した任意の実装を提供することができます。
 
-  コードを再利用する機能 (つまり、複数の派生クラスが基底クラスのメソッドの宣言と実装を共有し、それらをオーバーライドする必要がないこと) は、非抽象基底クラスの利点です。 そこで、コードが `Publication` 型の複数または非常に特殊化されたものによって共有される可能性が高い場合は、メンバーを `Publication` に追加します。 これが効率的にできていないと、基底クラスでの単一の実装で済むところを、派生クラスでほぼ同一のメンバーの実装を行わなければいけないことなります。 複数の箇所で重複するコードを保守する必要が生じ、バグを引き起こす元となりえます。
+  コードを再利用する機能 (つまり、複数の派生クラスが基底クラスのメソッドの宣言と実装を共有し、それらをオーバーライドする必要がないこと) は、非抽象基底クラスの利点です。 そこで、コードが `Publication` 型の複数または非常に特殊化されたものによって共有される可能性が高い場合は、メンバーを `Publication` に追加します。 基底クラスの実装を効率的に提供できていないと、基底クラスでの単一の実装で済むところを、派生クラスでほぼ同一のメンバーの実装を行わなければいけないことになります。 複数の箇所で重複するコードを保守する必要が生じ、バグを引き起こす元となりえます。
 
   コードの再利用を最大化し、同時に論理的で直感的な継承階層を作成するために、`Publication` クラスには必ず、すべてもしくはほとんどの出版物に共通したデータと機能のみを含めるようにします。 そして派生クラスは、それ自身が表す特定の種類の出版物に固有のメンバーを実装します。
 
 - クラス階層をどの程度まで拡張すべきか。 1 つの基底クラスと 1 つまたは複数の派生クラスではなく、3 つ以上のクラス階層を作るかどうか。 たとえば、`Publication` は `Periodical` の基底クラスになり得ますが、この Periodical は `Magazine`、`Journal`、および `Newspaper` の基底クラスです。
 
-  この例では、`Publication` クラスと 1 つの派生クラス `Book` という単純な階層構造を使用します。 この例を拡張すると、`Magazine` や `Article` など、`Publication` から派生するクラスを簡単に追加で多く作成できます。
+  この例では、`Publication` クラスと 1 つの派生クラス `Book` という小さな階層を使用します。 この例を拡張すると、`Magazine` や `Article` など、`Publication` から派生するクラスを簡単に追加で多く作成できます。
 
-- 基底クラスのインスタンス化に意味があるのか。 意味がなければ、そのクラスには [abstract](../language-reference/keywords/abstract.md) キーワードを適用します。 `abstract` キーワードでマークされたクラスを、そのクラス コンストラクターへの直接呼び出しによってインスタンス化しようとすると、C# コンパイラはエラー CS0144 "Cannot create an instance of the abstract class or interface." ("抽象クラスまたはインターフェイスのインスタンスを作成できません") を生成します。 リフレクションを使用してクラスをインスタンス化しようとすると、そのリフレクション メソッドは <xref:System.MemberAccessException> をスローします。 それ以外の場合、`Publication` クラスはそのクラス コンストラクターを呼び出すことによってインスタンス化することができます。
+- 基底クラスのインスタンス化に意味があるのか。 意味がなければ、そのクラスには [abstract](../language-reference/keywords/abstract.md) キーワードを適用します。 それ以外の場合、`Publication` クラスはそのクラス コンストラクターを呼び出すことによってインスタンス化することができます。 `abstract` キーワードでマークされたクラスを、そのクラス コンストラクターへの直接呼び出しによってインスタンス化しようとすると、C# コンパイラはエラー CS0144 "Cannot create an instance of the abstract class or interface." ("抽象クラスまたはインターフェイスのインスタンスを作成できません") を生成します。 リフレクションを使用してクラスをインスタンス化しようとすると、そのリフレクション メソッドは <xref:System.MemberAccessException> をスローします。
 
-  既定では、基底クラスはそのクラス コンストラクターを呼び出すことによってインスタンス化することができます。 なお、クラス コンストラクターを明示的に定義する必要はありません。 基底クラスのソース コード内に存在しない場合、C# コンパイラは自動的に既定の (パラメーターなしの) コンストラクターを提供します。
+  既定では、基底クラスはそのクラス コンストラクターを呼び出すことによってインスタンス化することができます。 クラス コンストラクターを明示的に定義する必要はありません。 基底クラスのソース コード内に存在しない場合、C# コンパイラは自動的に既定の (パラメーターなしの) コンストラクターを提供します。
 
-  この例では、`Publication` クラスを [abstract](../language-reference/keywords/abstract.md) としてマークして、インスタンス化できないようにします。
+  この例では、`Publication` クラスを [abstract](../language-reference/keywords/abstract.md) としてマークして、インスタンス化できないようにします。  `abstract` メソッドなしの `abstract` クラスは、このクラスが、いくつかの具象クラス (`Book`、`Journal` など) で共有される抽象概念を表すことを示します。
 
-- 派生クラスで、特定のメンバーの基底クラス実装を継承する必要があるかどうか、または基底クラス実装をオーバーライドするオプションがあるかどうか。 [virtual](../language-reference/keywords/virtual.md) キーワードを使用して、派生クラスによる基底クラス メソッドのオーバーライドを許可する必要があります。 既定では、基底クラスで定義されているメソッドはオーバーライド*できません*。
+- 派生クラスで、特定のメンバーの基底クラス実装を継承する必要があるかどうか、基底クラス実装をオーバーライドするオプションがあるかどうか、または実装を提供する必要があるかどうか。 [abstract](../language-reference/keywords/abstract.md) キーワードを使用して、派生クラスで実装を提供するように強制します。 [virtual](../language-reference/keywords/virtual.md) キーワードを使用して、派生クラスによる基底クラス メソッドのオーバーライドを許可します。 既定では、基底クラスで定義されているメソッドはオーバーライド*できません*。
+
+ `Publication` クラスには `abstract` メソッドはありませんが、クラス自体が `abstract` になります。
 
 - 派生クラスが継承階層内の最後のクラスを表していて、それ自体が追加の派生クラスの基底クラスとして使用できないかどうか。 既定では、どのクラスも基底クラスとして使用できます。 [sealed](../language-reference/keywords/sealed.md) キーワードを適用すると、クラスが追加クラスの基底クラスとして使用できないことを示すことができます。 sealed クラスからの派生を試みると、コンパイラ エラー CS0509 "cannot derive from sealed type <typeName>" ("シール型 typeName から派生することができません") が生成されます。
 
@@ -203,7 +204,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - コンストラクター
 
-  `Publication` クラスは `abstract` なので、次のようなコードから直接インスタンス化することはできません。
+  `Publication` クラスは `abstract` なので、次の例のようなコードから直接インスタンス化することはできません。
 
   ```csharp
   var publication = new Publication("Tiddlywinks for Experts", "Fun and Games",
@@ -250,7 +251,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
   2 つの `Book` コンストラクターは、共通パラメーターを 3 つ共有しています。 *タイトル*および*出版社*の 2 つは、`Publication` コンストラクターのパラメーターに対応します。 3 つ目は*著者*で、プライベートの `authorName` フィールドに格納されています。 1 つのコンストラクターには *isbn* パラメーターが 1 つ含まれていて、`ISBN` 自動プロパティに格納されています。
 
-  最初のコンストラクターは[この](../language-reference/keywords/this.md)キーワードを使用して、他のコンストラクターを呼び出します。 これがコンストラクターを定義する上で一般的なパターンです。 パラメーターが最も多いコンストラクターを呼び出すときに、パラメーターのより少ないコンストラクターが既定値を提供するものです。
+  最初のコンストラクターは[この](../language-reference/keywords/this.md)キーワードを使用して、他のコンストラクターを呼び出します。 コンストラクター チェーンは、コンストラクターを定義する上で一般的なパターンです。 パラメーターが最も多いコンストラクターを呼び出すときに、パラメーターのより少ないコンストラクターが既定値を提供するものです。
 
   2 番目のコンストラクターは [base](../language-reference/keywords/base.md) キーワードを使用して、基底クラスのコンストラクターにタイトルと出版社名を渡します。 ソース コードで基底クラスのコンストラクターを明示的に呼び出さない場合、C# コンパイラは、基底クラスの既定またはパラメーターなしのコンストラクターへの呼び出しを自動的に提供します。
 
@@ -260,11 +261,11 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 価格に関する、2 つの読み取り専用の `Price` と `Currency` のプロパティ。 これらの値は、`SetPrice` メソッド呼び出しで引数として提供されます。 価格は `bookPrice` というプライベート フィールドに格納されます。 `Currency` プロパティは 3 桁の ISO 通貨記号 (たとえば米ドルの場合は USD) で、プライベートの `ISOCurrencySymbol` フィールドに格納されています。 ISO 通貨記号は <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> プロパティから取得できます。
 
-- `SetPrice` メソッド。`bookPrice` フィールドおよび `ISOCurrencySymbol` フィールドの値を設定します。 これらは、`Price` プロパティおよび `Currency` プロパティによって返される値です。
+- `SetPrice` メソッド。`bookPrice` フィールドおよび `ISOCurrencySymbol` フィールドの値を設定します。 これらの値は、`Price` プロパティおよび `Currency` プロパティによって返されます。
 
 - `ToString` メソッド (`Publication` から継承) へのオーバーライドと、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドおよび <xref:System.Object.GetHashCode%2A> メソッド (<xref:System.Object> から継承) へのオーバーライド。
 
-  オーバーライドされない限り、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドは参照の等価性を調べます。 つまり、2 つのオブジェクト変数は同じオブジェクトを参照している場合に等価であると見なされます。 一方、`Book` クラスの場合、2 つの `Book` オブジェクトは同じ ISBN を持つ場合に等価であるはずです。
+  オーバーライドされない限り、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドは参照の等価性を調べます。 つまり、2 つのオブジェクト変数は同じオブジェクトを参照している場合に等価であると見なされます。 一方、`Book` クラスでは、2 つの `Book` オブジェクトは同じ ISBN を持つ場合に等価であるはずです。
 
   <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドをオーバーライドする場合、<xref:System.Object.GetHashCode%2A> メソッドもオーバーライドする必要があります。このメソッドは、ランタイムで項目をハッシュされたコレクションに格納し効率的に取得するために使用する値を返すものです。 ハッシュ コードは、等価性のテストと一致する値を返します。 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> をオーバーライドして、2 つの `Book` オブジェクトの ISBN プロパティが等しい場合に `true` を返すようにしたので、`ISBN` プロパティによって返される文字列の <xref:System.String.GetHashCode%2A> メソッドを呼び出すことにより計算されるハッシュ コードを返します。
 
@@ -279,11 +280,11 @@ public struct ValueStructure : ValueType // Generates CS0527.
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>抽象基底クラスとその派生クラスの設計
 <a name="abstract"></a>
 
-前述の例では、多くのメソッドの実装を提供する基底クラスを定義し、派生クラスがコードを共有できるようにしました。 しかし多くの場合、基底クラスが実装を提供する必要はありません。 むしろ基底クラスは*抽象クラス*であり、各派生クラスで実装する必要があるメンバーを定義するテンプレートとして機能します。 通常、抽象基底クラスの場合、派生型の実装はそれぞれその型に固有のものです。
+前述の例では、多くのメソッドの実装を提供する基底クラスを定義し、派生クラスがコードを共有できるようにしました。 しかし多くの場合、基底クラスが実装を提供する必要はありません。 むしろ基底クラスは、*抽象メソッド* を宣言する*抽象クラス* であり、各派生クラスで実装する必要があるメンバーを定義するテンプレートとして機能します。 通常、抽象基底クラスでは、派生型の実装はそれぞれその型に固有のものです。 クラスでは出版物に共通の機能の実装が提供されましたが、`Publication` オブジェクトをインスタンス化しても意味はないので、クラスは abstract キーワードでマークしました。
 
-たとえば、2 次元の閉じた幾何学図形には、2 つのプロパティが含まれます。図形の内部の大きさである面積と、図形の辺に沿った長さである周です。 一方で、これらのプロパティの計算方法は、それぞれの図形によって違います。 たとえば円周の計算式は、三角形の周の計算式とは全く異なります。
+たとえば、2 次元の閉じた幾何学図形には、2 つのプロパティが含まれます。図形の内部の大きさである面積と、図形の辺に沿った長さである周です。 一方で、これらのプロパティの計算方法は、それぞれの図形によって違います。 たとえば、円周の計算式は、三角形の周の計算式とは異なります。 `Shape` クラスは、`abstract` メソッドがある `abstract` クラスです。 これは、派生クラスで同じ機能が共有されるものの、それらの派生クラスではその機能が異なる方法で実装されることを示します。
 
-次の例では、`Area` と `Perimeter` という 2 つのプロパティを定義する、`Shape` という名前の抽象基底クラスを定義します。 クラスを [abstract](../language-reference/keywords/abstract.md) キーワードでマークするだけでなく、インスタンス メンバーもそれぞれ [abstract](../language-reference/keywords/abstract.md) キーワードでマークしていることに注意してください。 ここで `Shape` は <xref:System.Object.ToString%2A?displayProperty=nameWithType> メソッドもオーバーライドして、完全修飾名ではなく、その型の名前を返します。 そして `GetArea` と `GetPerimeter` の 2 つの静的メンバーを定義し、呼び出し元で任意の派生クラスのインスタンスの面積と周を簡単に取得できるようにします。 これらのメソッドのいずれかに派生クラスのインスタンスを渡すとき、ランタイムは派生クラスのメソッド オーバーライドを呼び出します。
+次の例では、`Area` と `Perimeter` という 2 つのプロパティを定義する、`Shape` という名前の抽象基底クラスを定義します。 クラスを [abstract](../language-reference/keywords/abstract.md) キーワードでマークするだけでなく、インスタンス メンバーもそれぞれ [abstract](../language-reference/keywords/abstract.md) キーワードでマークされます。 ここで `Shape` は <xref:System.Object.ToString%2A?displayProperty=nameWithType> メソッドもオーバーライドして、完全修飾名ではなく、その型の名前を返します。 そして `GetArea` と `GetPerimeter` の 2 つの静的メンバーを定義し、呼び出し元で任意の派生クラスのインスタンスの面積と周を簡単に取得できるようにします。 これらのメソッドのいずれかに派生クラスのインスタンスを渡すとき、ランタイムは派生クラスのメソッド オーバーライドを呼び出します。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
@@ -291,7 +292,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-次の例では、`Shape` から派生したオブジェクトを使用しています。 ここでは `Shape` から派生したオブジェクトの配列をインスタンス化して、`Shape` クラスの静的メソッドを呼び出します。これにより、返された `Shape` のプロパティ値がラップされます。 ここで、ランタイムが派生型のオーバーライドされたプロパティから値を取得していることに注意してください。 この例ではまた、配列内の `Shape` オブジェクトをそれぞれの派生型にキャストし、キャストが成功すると、その特定の `Shape` サブクラスのプロパティを取得します。 
+次の例では、`Shape` から派生したオブジェクトを使用しています。 ここでは `Shape` から派生したオブジェクトの配列をインスタンス化して、`Shape` クラスの静的メソッドを呼び出します。これにより、返された `Shape` のプロパティ値がラップされます。 ランタイムは、派生型のオーバーライドされたプロパティから値を取得します。 この例ではまた、配列内の `Shape` オブジェクトをそれぞれの派生型にキャストし、キャストが成功すると、その特定の `Shape` サブクラスのプロパティを取得します。 
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 

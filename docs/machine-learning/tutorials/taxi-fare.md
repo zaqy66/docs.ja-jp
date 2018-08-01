@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: e3ff2124a43cf42ce26cf94cfd5384387eef0ed9
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948632"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937073"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>チュートリアル: ML.NET を使用してニューヨークのタクシー運賃を予測する (回帰)
 
@@ -296,6 +296,6 @@ private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> m
 > * モデルを評価する
 > * モデルを使用して予測を行う
 
-学習を続けてその他のサンプルを確認するには、GitHub リポジトリをご覧ください。
+さらに詳しく学習するには、次のチュートリアルに進んでください。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning GitHub リポジトリ](https://github.com/dotnet/machinelearning/)
+> [アヤメのクラスタリング](iris-clustering.md)

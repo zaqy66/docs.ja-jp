@@ -3,28 +3,26 @@ title: ASP.NET Core MVC アプリの開発
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | ASP.NET Core MVC アプリの開発
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: a90f88e117965aec1550a45f114cabfda5204468
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106594"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404646"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリを開発する
 
 > "最初から正しく理解する必要はありません。 しかし、最後に正しく理解していることは極めて重要です。"  
 > _- Andrew Hunt、David Thomas_
 
-## <a name="summary"></a>まとめ
-
 ASP.NET Core は、最新のクラウド向けに最適化された Web アプリケーションを構築するための、クロス プラットフォームのオープン ソース フレームワークです。 ASP.NET Core アプリは、軽量なモジュール形式であり、依存関係の挿入の組み込みサポートを備え、テストと保守の容易性を大幅に向上させることができます。 ビュー ベースのアプリだけでなく最新の Web API の構築をサポートする MVC と組み合わせて、ASP.NET Core は、エンタープライズ Web アプリケーション構築のための強力なフレームワークになります。
 
 ## <a name="mapping-requests-to-responses"></a>応答と要求のマッピング
 
-ASP.NET Core アプリの中心となる機能は、受信した要求を送信する応答にマップすることです。 下位のレベルではこれはミドルウェアによって行われ、カスタム ミドルウェアのみで簡単な ASP.NET Core アプリとマイクロサービスを構成することができます。 ASP.NET Core MVC を使うと、"*ルート*"、"*コントローラー*"、"*アクション*" など、さらに上位のレベルで操作することができます。 着信した各要求はアプリケーションのルーティング テーブルと比較され、一致するルートが見つかった場合、関連付けられている (コントローラーに属する) アクション メソッドが呼び出されて要求を処理します。 一致するルートが見つからない場合は、エラー ハンドラーが呼び出されます (この場合、NotFound の結果を返します)。
+ASP.NET Core アプリの中心となる機能は、受信した要求を送信する応答にマップすることです。 下位のレベルではこれはミドルウェアによって行われ、カスタム ミドルウェアのみで簡単な ASP.NET Core アプリとマイクロサービスを構成することができます。 ASP.NET Core MVC を使うと、"_ルート_"、"_コントローラー_"、"_アクション_" など、さらに上位のレベルで操作することができます。 着信した各要求はアプリケーションのルーティング テーブルと比較され、一致するルートが見つかった場合、関連付けられている (コントローラーに属する) アクション メソッドが呼び出されて要求を処理します。 一致するルートが見つからない場合は、エラー ハンドラーが呼び出されます (この場合、NotFound の結果を返します)。
 
-ASP.NET Core MVC アプリは、規則ルートと属性ルートのどちらか一方または両方を使用できます。 規則ルートはコードで定義されており、次の例のような構文を使ってルーティングの "*規則*" を指定します。
+ASP.NET Core MVC アプリは、規則ルートと属性ルートのどちらか一方または両方を使用できます。 規則ルートはコードで定義されており、次の例のような構文を使ってルーティングの "_規則_" を指定します。
 
 ```csharp
 app.UseMvc(routes =>;
@@ -33,7 +31,7 @@ app.UseMvc(routes =>;
 });
 ```
 
-この例では、"default" という名前のルートがルーティング テーブルに追加されます。 *controller*、*action*、*id* のプレースホルダーでルート テンプレートを定義します。controller と action プレースホルダーには既定値が指定されており (それぞれ、"Home" と "Index")、id プレースホルダーは ("?" が適用されているので) 省略可能です。 ここで定義されている規則は、要求の最初の部分はコントローラーの名前に対応する必要があり、2 番目の部分はアクションに対応する必要があり、3 番目の部分は必要に応じて id パラメーターを表す、というものです。 規則ルートは通常、Startup クラスの Configure メソッドなど、アプリケーションに対して 1 か所で定義されます。
+この例では、"default" という名前のルートがルーティング テーブルに追加されます。 _controller_、_action_、_id_ のプレースホルダーでルート テンプレートを定義します。controller と action プレースホルダーには既定値が指定されており (それぞれ、"Home" と "Index")、id プレースホルダーは ("?" が適用されているので) 省略可能です。 ここで定義されている規則は、要求の最初の部分はコントローラーの名前に対応する必要があり、2 番目の部分はアクションに対応する必要があり、3 番目の部分は必要に応じて id パラメーターを表す、というものです。 規則ルートは通常、Startup クラスの Configure メソッドなど、アプリケーションに対して 1 か所で定義されます。
 
 属性ルートは、グローバルに指定されるのではなく、コントローラーとアクションに直接適用されます。 この方法の場合、特定のメソッドを探しているときに検出しやすいという利点がありますが、ルーティング情報がアプリケーション内の 1 か所に保持されないことを意味します。 属性ルートでは、特定のアクションに対する複数ルートや、コントローラーとアクションの組み合わせルートを、簡単に指定できます。 例:
 
@@ -45,9 +43,10 @@ public class HomeController : Controller
     [Route("Index")] // Combines to define route template "Home/Index"
     [Route("/")] // Does not combine, defines the route template ""
     public IActionResult Index() {}
+}
 ```
 
-ルートは [HttpGet] や同様の属性で指定することができ、[Route\] 属性を別途追加する必要はありません。 次に示すように、属性ルートではトークンを使って、コントローラーやアクションの名前を繰り返し指定する必要性を軽減することもできます。
+ルートは [HttpGet] や同様の属性で指定することができ、[Route] 属性を別途追加する必要はありません。 次に示すように、属性ルートではトークンを使って、コントローラーやアクションの名前を繰り返し指定する必要性を軽減することもできます。
 
 ```csharp
 [Route("[controller\]")]
@@ -55,29 +54,32 @@ public class ProductsController : Controller
 {
     [Route("")] // Matches 'Products'
     [Route("Index")] // Matches 'Products/Index'
-    public IActionResult Index()
+    public IActionResult Index() {}
 }
 ```
 
-特定の要求がルートと一致した後、アクション メソッドが呼び出される前に、ASP.NET Core MVC は要求に対して[モデル バインド](https://docs.microsoft.com/aspnet/core/mvc/models/model-binding)と[モデル検証](https://docs.microsoft.com/aspnet/core/mvc/models/validation)を実行します。 モデル バインドでは、着信した HTTP データが、呼び出されるアクション メソッドのパラメーターとして指定されている .NET 型に変換されます。 たとえば、アクション メソッドが int 型の ID パラメーターを必要としている場合、モデル バインドは要求の一部として指定された値からこのパラメーターを提供しようとします。 そのために、モデル バインドは、ポストされたフォーム内、ルート自体、クエリ文字列で値を検索します。 ID 値が見つかった場合は、整数に変換されてからアクション メソッドに渡されます。
+特定の要求がルートと一致した後、アクション メソッドが呼び出される前に、ASP.NET Core MVC は要求に対して[モデル バインド](/aspnet/core/mvc/models/model-binding)と[モデル検証](/aspnet/core/mvc/models/validation)を実行します。 モデル バインドでは、着信した HTTP データが、呼び出されるアクション メソッドのパラメーターとして指定されている .NET 型に変換されます。 たとえば、アクション メソッドが int 型の ID パラメーターを必要としている場合、モデル バインドは要求の一部として指定された値からこのパラメーターを提供しようとします。 そのために、モデル バインドは、ポストされたフォーム内、ルート自体、クエリ文字列で値を検索します。 ID 値が見つかった場合は、整数に変換されてからアクション メソッドに渡されます。
 
 モデルをバインドした後、アクション メソッドを呼び出す前に、モデルの検証が行われます。 モデルの検証では、モデルの種類に対するオプション属性が使われ、指定されたモデル オブジェクトが特定のデータ要件に準拠していることを確認できます。 特定の値を必須として指定したり、特定の長さや数値範囲に制限したりすることができます。検証属性が指定されていて、モデルがその要件に準拠していない場合は、ModelState.IsValid プロパティが false に設定され、準拠していない検証規則のセットを要求元のクライアントに送信できます。
 
-モデルの検証を使う場合は常に、状態変更コマンドを実行する前にモデルが有効であることを確認し、無効なデータによってアプリが破損しないようにする必要があります。 [フィルター](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters)を使って、すべてのアクションにそのためのコードを追加しなくて済むようにできます。 ASP.NET Core MVC フィルターを使うと、要求のグループをインターセプトして、共通のポリシーや横断的な事柄を特定の対象にだけ適用できます。 フィルターは、個々のアクション、コントローラー全体、またはアプリケーション全体に適用できます。
+モデルの検証を使う場合は常に、状態変更コマンドを実行する前にモデルが有効であることを確認し、無効なデータによってアプリが破損しないようにする必要があります。 [フィルター](/aspnet/core/mvc/controllers/filters)を使って、すべてのアクションにそのためのコードを追加しなくて済むようにできます。 ASP.NET Core MVC フィルターを使うと、要求のグループをインターセプトして、共通のポリシーや横断的な事柄を特定の対象にだけ適用できます。 フィルターは、個々のアクション、コントローラー全体、またはアプリケーション全体に適用できます。
 
-Web API に対しては、ASP.NET Core MVC は[*コンテンツ ネゴシエーション*](https://docs.microsoft.com/aspnet/core/mvc/models/formatting)をサポートしており、応答の書式設定方法を要求で指定することができます。 要求で指定されたヘッダーに基づき、データを返すアクションは、XML、JSON、または他のサポートされている形式で応答を書式設定します。 この機能を使うと、同じ API を、データ形式要件が異なる複数のクライアントで使用できます。
+Web API に対しては、ASP.NET Core MVC は[_コンテンツ ネゴシエーション_](/aspnet/core/mvc/models/formatting)をサポートしており、応答の書式設定方法を要求で指定することができます。 要求で指定されたヘッダーに基づき、データを返すアクションは、XML、JSON、または他のサポートされている形式で応答を書式設定します。 この機能を使うと、同じ API を、データ形式要件が異なる複数のクライアントで使用できます。
 
 > ### <a name="references--mapping-requests-to-responses"></a>参照 – 応答と要求のマッピング
+>
 > - **コントローラー アクションへのルーティング**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **モデル バインド** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
+> - **モデル バインド**
+> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **モデルの検証**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **フィルター** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **フィルター**
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>依存関係の使用
 
-ASP.NET Core は、[依存関係の挿入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)と呼ばれる手法の組み込みサポートを備えており、内部的に使用します。 依存関係の挿入は、アプリケーションの異なる部分間を疎結合できる手法です。 結合を緩くすることを、アプリケーションの各部分の分離が容易になり、部分ごとにテストや置換が可能になるため、望ましいことです。 また、アプリケーションの 1 つの部分に対する変更が、アプリケーションの別の場所に予期しない影響を与える可能性も低くなります。 依存関係の挿入は、依存関係逆転 (Dependency Inversion) の原則に基づいており、多くの場合、開放/閉鎖 (Open/closed) の原則の実現に不可欠です。 アプリケーションによる依存関係の処理方法を評価するときは、[静的な結び付き](http://deviq.com/static-cling/)を持つコードのにおいに注意し、"[new は接着剤である](https://ardalis.com/new-is-glue)" という格言を思い出してください。
+ASP.NET Core は、[依存関係の挿入](/aspnet/core/fundamentals/dependency-injection)と呼ばれる手法の組み込みサポートを備えており、内部的に使用します。 依存関係の挿入は、アプリケーションの異なる部分間を疎結合できる手法です。 結合を緩くすることを、アプリケーションの各部分の分離が容易になり、部分ごとにテストや置換が可能になるため、望ましいことです。 また、アプリケーションの 1 つの部分に対する変更が、アプリケーションの別の場所に予期しない影響を与える可能性も低くなります。 依存関係の挿入は、依存関係逆転 (Dependency Inversion) の原則に基づいており、多くの場合、開放/閉鎖 (Open/closed) の原則の実現に不可欠です。 アプリケーションによる依存関係の処理方法を評価するときは、[静的な結び付き](https://deviq.com/static-cling/)を持つコードのにおいに注意し、"[new は接着剤である](https://ardalis.com/new-is-glue)" という格言を思い出してください。
 
 静的な結び付きは、クラスが静的メソッドを呼び出したとき、または静的プロパティにアクセスしたときに発生し、インフラストラクチャに対する副作用または依存関係があります。 たとえば、あるメソッドが静的メソッドを呼び出し、その静的メソッドがデータベースに書き込む場合、元のメソッドはデータベースに密に結合されます。 何かによってデータベース呼び出しが中断されると、メソッドも中断されます。 このようなメソッドのテストは、静的な呼び出しを模倣するために市販のモック ライブラリが必要になるか、またはテスト データベースを使ってしかテストできないため、非常に困難です。 インフラストラクチャに対する依存関係のない静的呼び出しは (特に、完全にステートレスのもの)、問題なく呼び出すことができて、結合や (コードの結合だけでなく静的な呼び出し自体の) テスト可能性に影響を与えません。
 
@@ -118,7 +120,7 @@ public void Configure(IApplicationBuilder app,
 > [!NOTE]
 > 特定のサービスを Startup クラスで確実に利用できるようにする必要がある場合は、WebHostBuilder とその ConfigureServices メソッドを使ってサービスを構成できます。
 
-Startup クラスは、独自のサービスに対するコントローラーからミドルウェアやフィルターまで、ASP.NET Core アプリケーションの他の部分で必要な構成方法のモデルになります。 いずれの場合も、[明示的な依存関係の原則](http://deviq.com/explicit-dependencies-principle/)に従い、依存関係を直接作成するのではなく要求し、アプリケーション全体で依存関係の挿入を利用する必要があります。 実装を直接インスタンス化する場所と方法に注意する必要があります (特に、インフラストラクチャを使用する、または副作用があるサービスとオブジェクトの場合)。 特定の実装の種類に対する参照をハードコーディングするのではなく、抽象化をアプリケーション コアで定義し、引数として渡すようにします。
+Startup クラスは、独自のサービスに対するコントローラーからミドルウェアやフィルターまで、ASP.NET Core アプリケーションの他の部分で必要な構成方法のモデルになります。 いずれの場合も、[明示的な依存関係の原則](https://deviq.com/explicit-dependencies-principle/)に従い、依存関係を直接作成するのではなく要求し、アプリケーション全体で依存関係の挿入を利用する必要があります。 実装を直接インスタンス化する場所と方法に注意する必要があります (特に、インフラストラクチャを使用する、または副作用があるサービスとオブジェクトの場合)。 特定の実装の種類に対する参照をハードコーディングするのではなく、抽象化をアプリケーション コアで定義し、引数として渡すようにします。
 
 ## <a name="structuring-the-application"></a>アプリケーションの構成
 
@@ -136,7 +138,7 @@ ASP.NET Core UI プロジェクトは、UI レベルの処理を行いますが�
 
 ### <a name="feature-organization"></a>機能の編成
 
-既定では、ASP.NET Core アプリケーションは、コントローラーとビューさらに多くの場合は ViewModels を含むように、フォルダー構造を編成します。 通常、これらのサーバー側構造をサポートするためのクライアント側のコードは、wwwroot フォルダーに個別に格納されます。 ただし、大規模なアプリケーションでは、特定の機能を使用するためにこれらのフォルダー間を移動する必要があるため、このような編成では問題が発生する可能性があります。 各フォルダー内のファイルとサブフォルダーの数が増えるとますます困難になり、ソリューション エクスプローラーのスクロール量が膨大になります。 この問題の 1 つの解決策は、アプリケーションのコードをファイルの種類別ではなく "*機能*" 別に整理することです。 この編成スタイルは、通常、機能フォルダーまたは機能スライスと呼ばれます ([垂直スライス](http://deviq.com/vertical-slices/)も参照してください)。
+既定では、ASP.NET Core アプリケーションは、コントローラーとビューさらに多くの場合は ViewModels を含むように、フォルダー構造を編成します。 通常、これらのサーバー側構造をサポートするためのクライアント側のコードは、wwwroot フォルダーに個別に格納されます。 ただし、大規模なアプリケーションでは、特定の機能を使用するためにこれらのフォルダー間を移動する必要があるため、このような編成では問題が発生する可能性があります。 各フォルダー内のファイルとサブフォルダーの数が増えるとますます困難になり、ソリューション エクスプローラーのスクロール量が膨大になります。 この問題の 1 つの解決策は、アプリケーションのコードをファイルの種類別ではなく "_機能_" 別に整理することです。 この編成スタイルは、通常、機能フォルダーまたは機能スライスと呼ばれます ([垂直スライス](https://deviq.com/vertical-slices/)も参照してください)。
 
 ASP.NET Core MVC では、この目的のために区分 (Area) がサポートされています。 区分を使うと、各区分フォルダー内にコントローラー フォルダーとビュー フォルダー (および関連するすべてのモデル) のセットを個別に作成できます。 図 7-1 は、区分を使用したフォルダー構造の例です。
 
@@ -205,7 +207,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ### <a name="cross-cutting-concerns"></a>横断的な問題
 
-アプリケーションが大きくなるほど、横断的な事柄を抽出して、重複を排除し、整合性を維持することの重要性が増します。 ASP.NET Core アプリケーションでの横断的な事柄の例としては、認証、モデル検証規則、出力キャッシュ、エラー処理などがありますが、その他にも多くのことがあります。 ASP.NET Core MVC で[フィルター](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters)を使うと、要求処理パイプラインの特定のステップの前または後にコードを実行できます。 たとえば、フィルターは、モデル バインドの前後、アクションの前後、またはアクションの結果の前後に実行できます。 また、承認フィルターを使って、パイプラインの残りの部分へのアクセスを制御することができます。 図 7-2 では、フィルターを構成した場合に要求の実行がそれをどのように通過するかを示します。
+アプリケーションが大きくなるほど、横断的な事柄を抽出して、重複を排除し、整合性を維持することの重要性が増します。 ASP.NET Core アプリケーションでの横断的な事柄の例としては、認証、モデル検証規則、出力キャッシュ、エラー処理などがありますが、その他にも多くのことがあります。 ASP.NET Core MVC で[フィルター](/aspnet/core/mvc/controllers/filters)を使うと、要求処理パイプラインの特定のステップの前または後にコードを実行できます。 たとえば、フィルターは、モデル バインドの前後、アクションの前後、またはアクションの結果の前後に実行できます。 また、承認フィルターを使って、パイプラインの残りの部分へのアクセスを制御することができます。 図 7-2 では、フィルターを構成した場合に要求の実行がそれをどのように通過するかを示します。
 
 ![要求は、承認フィルター、リソース フィルター、モデル バインド、アクション フィルター、アクションの実行とアクション結果の変換、例外フィルター、結果フィルター、結果の実行を介して処理されます。 終了間際に、要求は結果フィルターとリソース フィルターのみで処理されてから、クライアントに送信される応答になります。](./media/image7-2.png)
 
@@ -264,7 +266,6 @@ public class ValidateModelAttribute : ActionFilterAttribute
 同様に、フィルターを使ってレコードが存在するかどうかをチェックし、アクションが実行される前に 404 を返して、アクションでこれらのチェックを実行する必要がないようにできます。 共通の規則を抽出し、インフラストラクチャ コードとビジネス ロジックを UI から分離するようにソリューションを構成すると、MVC アクション メソッドは非常にスリムになるはずです。
 
 ```csharp
-// PUT api/authors/2/5
 [HttpPut("{id}")]
 [ValidateAuthorExists]
 public async Task<IActionResult> Put(int id, [FromBody]Author author)
@@ -276,19 +277,20 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 
 フィルターの実装について詳しくは、MSDN の記事「[実際の ASP.NET Core MVC フィルター](https://msdn.microsoft.com/magazine/mt767699.aspx)」をご覧ください。動作するサンプルをダウンロードすることもできます。
 
-> ### <a name="references--structuring-applications"></a>参照: アプリケーションの構成
+> ### <a name="references--structuring-applications"></a>参照 – アプリケーションの構成
+>
 > - **領域**  
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN - ASP.NET Core MVC 向け機能スライス**
->  <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
+> - **MSDN マガジン - ASP.NET Core MVC 向け機能スライス**  
+ > <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **フィルター**  
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+>   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – 実際の ASP.NET Core MVC フィルター**  
-> <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>セキュリティ
 
-Web アプリケーションのセキュリティ保護は大きなトピックであり、さまざまな考慮事項があります。 最も基本的なレベルのセキュリティには、特定の要求を行ったユーザーを認識し、その要求が必要なリソースだけにアクセスできるようにすることが含まれます。 認証は、要求で提供された資格情報を、信頼できるデータ ストア内の資格情報と比較して、要求を既知のエンティティから送信されたものとして扱う必要があるかどうかを確認するプロセスです。 承認は、ユーザーの ID に基づいて特定のリソースへのアクセスを制限するプロセスです。 セキュリティに関する 3 番目の考慮事項は、第三者による傍受から要求を保護することであり、少なくとも[アプリケーションが SSL を使っていることを確認する](https://docs.microsoft.com/aspnet/core/security/enforcing-ssl)必要があります。
+Web アプリケーションのセキュリティ保護は大きなトピックであり、さまざまな考慮事項があります。 最も基本的なレベルのセキュリティには、特定の要求を行ったユーザーを認識し、その要求が必要なリソースだけにアクセスできるようにすることが含まれます。 認証は、要求で提供された資格情報を、信頼できるデータ ストア内の資格情報と比較して、要求を既知のエンティティから送信されたものとして扱う必要があるかどうかを確認するプロセスです。 承認は、ユーザーの ID に基づいて特定のリソースへのアクセスを制限するプロセスです。 セキュリティに関する 3 番目の考慮事項は、第三者による傍受から要求を保護することであり、少なくとも[アプリケーションが SSL を使っていることを確認する](/aspnet/core/security/enforcing-ssl)必要があります。
 
 ### <a name="authentication"></a>認証
 
@@ -329,7 +331,7 @@ public void Configure(IApplicationBuilder app)
 
 Configure メソッドで UseMvc の前に UseIdentity を指定することが重要です。 ConfigureServices で Identity を構成すると、AddDefaultTokenProviders の呼び出しがあることがわかります。 これは、Web 通信をセキュリティ保護するために使われる場合があるトークンとは関係なく、ユーザーによる ID 確認のために SMS またはメールでユーザーに送信できるプロンプトを作成するプロバイダーを参照しています。
 
-詳しくは、ASP.NET Core の公式ドキュメントで [2 要素認証の構成](https://docs.microsoft.com/aspnet/core/security/authentication/2fa)および[外部ログイン プロバイダーの有効化](https://docs.microsoft.com/aspnet/core/security/authentication/social/)に関する記事をご覧ください。
+詳しくは、ASP.NET Core の公式ドキュメントで [2 要素認証の構成](/aspnet/core/security/authentication/2fa)および[外部ログイン プロバイダーの有効化](/aspnet/core/security/authentication/social/)に関する記事をご覧ください。
 
 ### <a name="authorization"></a>承認
 
@@ -383,40 +385,41 @@ public void ConfigureServices(IServiceCollection services)
 **図 7-4.** Web API に対するトークン ベースの認証。
 
 > ### <a name="references--security"></a>参照 – セキュリティ
+>
 > - **セキュリティ ドキュメントの概要**  
-> https://docs.microsoft.com/aspnet/core/security/
+>   https://docs.microsoft.com/aspnet/core/security/
 > - **ASP.NET Core アプリで SSL を適用する**  
-> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
+>   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Identity の概要**  
-> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
+>   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **承認の概要**  
-> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
+>   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Azure App Service での API Apps に対する認証および承認**  
-> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
+>   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>クライアントの通信
 
 Web API によりページを提供してデータの要求に応答するだけでなく、ASP.NET Core アプリは接続されているクライアントと直接通信できます。 この送信通信では、さまざまなトランスポート テクノロジを使うことができ、最も一般的なものは WebSocket です。 ASP.NET Core SignalR は、サーバーとクライアントの間のリアルタイム通信機能をアプリケーションに容易に追加できるようにするライブラリです。 SignalR は、WebSocket などのさまざまなトランスポート テクノロジをサポートしており、多くの実装の詳細を開発者から抽象化します。
 
-ASP.NET Core SignalR は現在開発中であり、ASP.NET Core の次のリリースで提供されます。 ただし、他の[オープン ソースの WebSocket ライブラリ](https://github.com/radu-matei/websocket-manager)は現在でも使用できます。
+ASP.NET Core SignalR は ASP.NET Core 2.1 で使用できます。
 
 WebSocket を直接使うか、他の技法を使うかに関係なく、リアルタイムのクライアント通信は、さまざまなアプリケーション シナリオで役に立ちます。 次に、それらの例の一部を示します。
 
--   ライブ チャット ルーム アプリケーション
+- ライブ チャット ルーム アプリケーション
 
--   アプリケーションの監視
+- アプリケーションの監視
 
--   ジョブの進行状況の更新
+- ジョブの進行状況の更新
 
--   通知
+- 通知
 
--   対話型のフォーム アプリケーション
+- 対話型のフォーム アプリケーション
 
 クライアント通信をアプリケーションに組み込むときは、通常、2 つのコンポーネントがあります。
 
--   サーバー側の接続マネージャー (SignalR Hub、WebSocketManager WebSocketHandler)
+- サーバー側の接続マネージャー (SignalR Hub、WebSocketManager WebSocketHandler)
 
--   クライアント側のライブラリ
+- クライアント側のライブラリ
 
 クライアントはブラウザーに限定されず、モバイル アプリ、コンソール アプリ、他のネイティブ アプリも SignalR/WebSocket を使って通信できます。 次の簡単なプログラムは、WebSocketManager サンプル アプリケーションの一部として、チャット アプリケーションに送信されたすべての内容をコンソールにエコーします。
 
@@ -434,58 +437,60 @@ public class Program
         Console.ReadLine();
         StopConnectionAsync();
     }
-    
+
     public static async Task StartConnectionAsync()
     {
         _connection = new Connection();
         await _connection.StartConnectionAsync("ws://localhost:65110/chat");
     }
-    
+
     public static async Task StopConnectionAsync()
     {
         await _connection.StopConnectionAsync();
     }
+}
 ```
 
 アプリケーションがクライアント アプリケーションと直接通信する方法を検討し、リアルタイム通信によってアプリのユーザー エクスペリエンスが向上するかどうかを検討します。
 
 > ### <a name="references--client-communication"></a>参照 – クライアントの通信
+>
 > - **ASP.NET Core SignalR**  
-> <https://github.com/aspnet/SignalR>
+>   <https://github.com/aspnet/SignalR>
 > - **WebSocket マネージャー**  
-> https://github.com/radu-matei/websocket-manager
+>   https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>ドメイン駆動設計 – 適用する必要があるか?
 
-ドメイン駆動設計 (DDD) は、"*ビジネス ドメイン*" に注目するソフトウェア構築のためのアジャイルな方法です。 実際のシステムのしくみについて開発者に関わることができるビジネス ドメインの専門家とのコミュニケーションと対話に重点が置かれます。 たとえば、株取引を処理するシステムを構築する場合のドメインの専門家は、経験豊富な株式ブローカーなどです。 DDD は、大規模で複雑なビジネスの問題に対処するように設計されており、多くの場合、ドメインの理解とモデリングに対する投資に見合わないため、小さくて単純なアプリケーションには適しません。
+ドメイン駆動設計 (DDD) は、"_ビジネス ドメイン_" に注目するソフトウェア構築のためのアジャイルな方法です。 実際のシステムのしくみについて開発者に関わることができるビジネス ドメインの専門家とのコミュニケーションと対話に重点が置かれます。 たとえば、株取引を処理するシステムを構築する場合のドメインの専門家は、経験豊富な株式ブローカーなどです。 DDD は、大規模で複雑なビジネスの問題に対処するように設計されており、多くの場合、ドメインの理解とモデリングに対する投資に見合わないため、小さくて単純なアプリケーションには適しません。
 
-DDD 手法でソフトウェアを作成する場合、チーム (非技術的な利害関係者や貢献者を含む) は問題領域のための "*ユビキタス言語*" を開発する必要があります。 つまり、モデル化される実際の概念、それに相当するソフトウェア、概念を保持するために存在する構造 (データベース テーブルなど) に、同じ用語を使う必要があります。 したがって、ユビキタス言語で説明される概念は、"*ドメイン モデル*" の基礎を形成する必要があります。
+DDD 手法でソフトウェアを作成する場合、チーム (非技術的な利害関係者や貢献者を含む) は問題領域のための "_ユビキタス言語_" を開発する必要があります。 つまり、モデル化される実際の概念、それに相当するソフトウェア、概念を保持するために存在する構造 (データベース テーブルなど) に、同じ用語を使う必要があります。 したがって、ユビキタス言語で説明される概念は、"_ドメイン モデル_" の基礎を形成する必要があります。
 
 ドメイン モデルは、相互に対話してシステムの動作を表すオブジェクトで構成されます。 これらのオブジェクトは以下のカテゴリに分けられます。
 
--   [エンティティ](http://deviq.com/entity/)は、ID のスレッドでオブジェクトを表します。 エンティティは、通常、後で取得できるキーを使って永続的に格納されます。
+- [エンティティ](https://deviq.com/entity/)は、ID のスレッドでオブジェクトを表します。 エンティティは、通常、後で取得できるキーを使って永続的に格納されます。
 
--   [集計](http://deviq.com/aggregate-pattern/)は、単位として永続化する必要のあるオブジェクトのグループを表します。
+- [集計](https://deviq.com/aggregate-pattern/)は、単位として永続化する必要のあるオブジェクトのグループを表します。
 
--   [値オブジェクト](http://deviq.com/value-object/)は、プロパティ値の合計に基づいて比較できる概念を表します。 たとえば、開始日と終了日で構成される DateRange などです。
+- [値オブジェクト](https://deviq.com/value-object/)は、プロパティ値の合計に基づいて比較できる概念を表します。 たとえば、開始日と終了日で構成される DateRange などです。
 
--   [ドメイン イベント](https://martinfowler.com/eaaDev/DomainEvent.html)は、システムの他の部分にとって重要な、システム内で発生している出来事を表します。
+- [ドメイン イベント](https://martinfowler.com/eaaDev/DomainEvent.html)は、システムの他の部分にとって重要な、システム内で発生している出来事を表します。
 
-DDD ドメイン モデルでは、モデル内に複雑な動作をカプセル化する必要があることに注意してください。 特にエンティティは、プロパティの単なるコレクションであってはなりません。 ドメイン モデルに動作が欠如していて、システムの状態を表しているだけの場合は、[貧血症のモデル](http://deviq.com/anemic-model/)と呼ばれ、DDD では望ましくないことです。
+DDD ドメイン モデルでは、モデル内に複雑な動作をカプセル化する必要があることに注意してください。 特にエンティティは、プロパティの単なるコレクションであってはなりません。 ドメイン モデルに動作が欠如していて、システムの状態を表しているだけの場合は、[貧血症のモデル](https://deviq.com/anemic-model/)と呼ばれ、DDD では望ましくないことです。
 
 これらのモデルの種類に加えて、通常、DDD ではさまざまなパターンが使用されます。
 
--   [リポジトリ](http://deviq.com/repository-pattern/)は、永続化の詳細を抽象化します。
+- [リポジトリ](https://deviq.com/repository-pattern/)は、永続化の詳細を抽象化します。
 
--   [ファクトリ](https://en.wikipedia.org/wiki/Factory_method_pattern)は、複雑なオブジェクトの作成をカプセル化します。
+- [ファクトリ](https://en.wikipedia.org/wiki/Factory_method_pattern)は、複雑なオブジェクトの作成をカプセル化します。
 
--   ドメイン イベントは、トリガーの動作から依存する動作を分離します。
+- ドメイン イベントは、トリガーの動作から依存する動作を分離します。
 
--   [サービス](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/)は、複雑な動作やインフラストラクチャの実装の詳細をカプセル化します。
+- [サービス](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/)は、複雑な動作やインフラストラクチャの実装の詳細をカプセル化します。
 
--   [コマンド](https://en.wikipedia.org/wiki/Command_pattern)は、コマンドの発行とコマンド自体の実行を切り離します。
+- [コマンド](https://en.wikipedia.org/wiki/Command_pattern)は、コマンドの発行とコマンド自体の実行を切り離します。
 
--   [仕様](http://deviq.com/specification-pattern/)は、クエリの詳細をカプセル化します。
+- [仕様](https://deviq.com/specification-pattern/)は、クエリの詳細をカプセル化します。
 
 また、DDD では、疎結合、カプセル化、単体テストを使って簡単に検証できるコードに対応するため、前に説明したクリーン アーキテクチャを使うことも推奨されます。
 
@@ -500,8 +505,9 @@ DDD では、モデリング、アーキテクチャ、コミュニケーショ�
 ハイブリッド アプローチでは、アプリケーションのトランザクション部分やさらに複雑な部分にだけ DDD を使い、アプリケーションの簡単な CRUD 部分や読み取り専用の部分には使わないようにします。 たとえば、レポートを表示したり、ダッシュボードにデータを視覚化したりするためにデータをクエリする場合、集計の制約を使用する必要はありません。 このような要件に対しては、独立したシンプルな読み取りモデルでまったく問題ありません。
 
 > ### <a name="references--domain-driven-design"></a>参照 – ドメイン駆動設計
+>
 > - **わかりやすい英語での DDD (StackOverflow の回答)**  
-> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
+>   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>配置
 
@@ -525,31 +531,32 @@ Kestrel Web サーバーでホストされる ASP.NET Core アプリケーショ
 
 Azure でアプリケーションをホストしている場合は、専用の仮想アプライアンスとして Microsoft Azure Application Gateway を使って、複数のサービスを提供できます。 個々のアプリケーションに対するリバース プロキシとして動作するだけでなく、Application Gateway は次の機能を提供することもできます。
 
--   HTTP の負荷分散
+- HTTP の負荷分散
 
--   SSL のオフロード (インターネットに対する SSL のみ)
+- SSL のオフロード (インターネットに対する SSL のみ)
 
--   エンド ツー エンドの SSL
+- エンド ツー エンドの SSL
 
--   複数サイトのルーティング (最大 20 個のサイトを 1 つの Application Gateway に統合)
+- 複数サイトのルーティング (最大 20 個のサイトを 1 つの Application Gateway に統合)
 
--   Web アプリケーション ファイアウォール
+- Web アプリケーション ファイアウォール
 
--   WebSocket のサポート
+- WebSocket のサポート
 
--   高度な診断
+- 高度な診断
 
-*Azure の展開オプションについては 10 章で説明します。*
+_Azure のデプロイ オプションについては、[10 章](development-process-for-azure.md)で説明します。_
 
 > ### <a name="references--deployment"></a>参照 – 展開
+>
 > - **ホスティングと展開の概要**  
-> <https://docs.microsoft.com/aspnet/core/publishing/>
+>   <https://docs.microsoft.com/aspnet/core/publishing/>
 > - **Kestrel とリバース プロキシを使用するタイミング**  
-> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
+>   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Docker で ASP.NET Core アプリをホストする**  
-> <https://docs.microsoft.com/aspnet/core/publishing/docker>
+>   <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **Azure Application Gateway の概要**  
-> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
+>   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
 [前へ](common-client-side-web-technologies.md)

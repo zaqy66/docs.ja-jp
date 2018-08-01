@@ -2,12 +2,12 @@
 title: 非同期の戻り値の型 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 07aefcf3149b2210e3dc97713647fa3a0133a535
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02e3cdd433d5d6d4d58667d56592b9fc2bf374c4
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143558"
 ---
 # <a name="async-return-types-c"></a>非同期の戻り値の型 (C#)
 非同期メソッドには、次の戻り値の型があります。
@@ -24,7 +24,7 @@ ms.locfileid: "33334185"
   
 それぞれの戻り値の型は、次のセクションの 1 つで確認でき、トピックの最後で 3 種類のすべてを使用する例を参照できます。  
   
-##  <a name="BKMK_TaskTReturnType"></a>Task(T) 型  
+##  <a name="BKMK_TaskTReturnType"></a> Task\<TResult\> の戻り値の型  
 `TResult` 型のオペランドを持つ [return](../../../../csharp/language-reference/keywords/return.md) (C#) ステートメントを含む非同期メソッドには、<xref:System.Threading.Tasks.Task%601> 戻り値の型が使用されます。  
   
 次の例では、`GetLeisureHours` 非同期メソッドには整数を返す `return` ステートメントが含まれます。 そのため、メソッド宣言では、戻り値の型を `Task<int>` と指定する必要があります。  <xref:System.Threading.Tasks.Task.FromResult%2A> 非同期メソッドは、文字列を返す操作を表すプレースホルダーです。
@@ -60,13 +60,13 @@ ms.locfileid: "33334185"
   
 void を返す非同期メソッドの呼び出し元は、メソッドがスローする例外をキャッチすることはできません。そのようなハンドルされない例外によって、アプリケーションが失敗する可能性が高くなります。 <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> を返す非同期メソッドで例外が発生すると、例外は返されたタスクに格納され、タスクが待機するときに再スローされます。 したがって、例外を生成する場合がある非同期メソッドは <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> の戻り値の型を持つこと、またメソッドの呼び出しが待機することを確認します。  
   
-非同期のメソッドで例外をキャッチする方法の詳細については、「[try-catch](../../../../csharp/language-reference/keywords/try-catch.md)」を参照してください。  
+非同期メソッドで例外をキャッチする方法の詳細については、「[try-catch](../../../language-reference/keywords/try-catch.md)」トピックの「[非同期メソッドの例外](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods)」を参照してください。  
   
 次の例では、非同期のイベント ハンドラーを定義します。  
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  
-## <a name="generalized-async-return-types-and-valuetaskt"></a>一般化された async の戻り値の型と ValueTask<T>
+## <a name="generalized-async-return-types-and-valuetasktresult"></a>一般化された非同期の戻り値の型と ValueTask\<TResult\>
 
 C# 7.0 以降、非同期メソッドで、アクセス可能な `GetAwaiter` メソッドを持つ任意の型を返すことができます。
  

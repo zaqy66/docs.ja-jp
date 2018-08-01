@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 67eb39fd6f2077d2adf1d38d001e801b815d687d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 296b9c80b4ea8b09e8efce71e3b388f7e453850b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336639"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404377"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>dynamic 型の使用 (C# プログラミング ガイド)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] では、`dynamic` という新しい型が導入されています。 この型は静的な型ですが、`dynamic` 型のオブジェクトは静的な型チェックをバイパスします。 ほとんどの場合、`object` 型を使用する場合と同様に機能します。 コンパイル時には、`dynamic` として型指定された要素はあらゆる操作をサポートすると見なされます。 したがって、オブジェクトが COM API、IronPython などの動的言語、HTML ドキュメント オブジェクト モデル (DOM)、リフレクション、プログラムの他の場所のいずれから値を取得するのかを考慮する必要はありません。 ただし、コードが無効な場合には、実行時にエラーが検出されます。  
@@ -27,7 +27,12 @@ ms.locfileid: "33336639"
   
  [!code-csharp[CsProgGuideTypes#51](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_3.cs)]  
   
- 結果が `dynamic` でない操作として、`dynamic` から他の型への変換や、`dynamic` 型の引数を含むコンストラクター呼び出しがあります。 たとえば、次の宣言の `testInstance` の型は、`dynamic` ではなく、`ExampleClass` です。  
+ 結果が `dynamic` ではない操作を次に示します。
+ 
+* `dynamic` から別の型への変換。 
+* `dynamic` 型の引数を含むコンストラクターの呼び出し。 
+
+たとえば、次の宣言の `testInstance` の型は、`dynamic` ではなく、`ExampleClass` です。
   
  [!code-csharp[CsProgGuideTypes#52](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_4.cs)]  
   

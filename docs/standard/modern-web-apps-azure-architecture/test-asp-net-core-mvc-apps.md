@@ -3,20 +3,18 @@ title: ASP.NET Core MVC アプリのテスト
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | ASP.NET Core MVC アプリのテスト
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/08/2017
-ms.openlocfilehash: b22e0e109144b4abd04cd4199cfdec244d8fa7af
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: b6c881a445f5848829ab5ccc6ce8547a390d89f3
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106503"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404620"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリのテスト
 
-> _"あなたが製品の単体テストを好まないと、あなたの顧客もテストを望まないでしょう。"_
->  _- 作者不明 -_
-
-## <a name="summary"></a>まとめ
+> *"あなたが製品の単体テストを好まないと、あなたの顧客もテストを望まないでしょう。"*
+ > \_- 匿名 -
 
 変更に対応するとき、複雑なソフトウェアには予想外のエラーが発生することがあります。 そのため、ほとんどの些細な (少なくとも重要性が最も低い) アプリケーションを除くすべてのアプリケーションで変更後のテストが必須となります。 手動テストはソフトウェアのテスト方法として最も遅く、信頼性がなく、高額です。 残念ながら、アプリケーションにテスト機能が付いていない場合、手動テストが唯一の手段になることがあります。 第 X 章に記載されているアーキテクチャ原則に基づいてアプリケーションが記述されている場合、単体テスト可能になるはずです。ASP.NET Core アプリケーションは、自動化統合と機能テストにも対応しています。
 
@@ -68,7 +66,7 @@ public class LocalFileImageService : IImageService
 
 > "多くの場合、システムの開発は家の建築に例えられます。 この類推はまったく正しいというわけではありませんが、単体テストと機能テストの違いを理解する目的で拡大解釈できます。 単体テストは、建築調査官が家の建築現場を訪問する行為に似ています。 調査官は家のさまざまな内部システム、土台、骨組み、電気、配管を重点的に調べ、 家の各部分が正しく安全に機能すること、つまり、建築法規に準拠していることを確認 (テスト) します。 このシナリオにおける機能テストは、家主がこの同じ建築現場を訪問する行為に似ています。 家主は、内部システムが適切に動作し、建築調査官がその仕事を遂行しているものと想定し、 その家で生活することはどのような感じになるのかを重点的に確認します。 家はどのように見えるか、各部屋の大きさはちょうど良いか、家は家族の希望に合っているか、朝日を取り入れる場所に窓が取り付けられているかが重要となります。 家主は家に機能テストを実行します。 家主の視点はユーザーの視点です。 建築調査官は家に単体テストを実行します。 調査官の視点は開発者の視点です。"
 
-出典: [Unit Testing versus Functional Tests](http://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (単体テストと機能テストの比較)
+出典: [Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (単体テストと機能テストの比較)
 
 "開発者は 2 通りの失敗をします。間違った方法で開発することと間違ったものを開発することです。" というのは私の好きな表現です。 単体テストでは、正しい方法で開発していることを確認します。機能テストでは、正しいものを開発していることを確認します。
 
@@ -84,7 +82,7 @@ Martin Fowler がテストをピラミッド図にしました。図 9-1 がそ�
 
 ピラミッドの各層はテストの種類を表し、その相対的な大きさはアプリケーションのために記述すべきテストの数を表します。 ご覧のように、単体テストの土台を大きくし、それより小さい統合テスト層が続き、さらに小さい機能テスト層が続くという構成が推奨されています。 各層には、理想的には、それより下の層では適切に実行できないテストのみを含めます。 特定のシナリオで必要とするテストの種類を決定するとき、このピラミッドを念頭に置いてください。
 
-### <a name="what-to-test"></a>テストの内容。
+### <a name="what-to-test"></a>テストの内容
 
 自動化テストの記述経験がない開発者にとっては、何をテストするのかが共通の問題です。 理想的な出発点は条件ロジックをテストすることです。 条件文 (if-else、switch など) に基づいて変化する動作を持つメソッドが含まれる箇所で少なくとも 2、3 のテストが思い付くはずです。特定の条件に対して正しい動作を確認するテストです。 コードの条件に間違いがある場合、(エラーのない) コード経由で "Happy Path" のテストを少なくとも 1 つ記述し、(エラーがあるか、結果が不規則な) "Sad Path" のテストを少なくとも 1 つ記述し、エラーに直面したときにアプリケーションが予想どおりに動作することを確認することをお勧めします。 最後に、コード カバレッジなどの指標ではなく、エラーが起こりうるものに対するテストに集中的に取り組みます。 一般的に、カバレッジは少ないよりも多い方が良いとされます。 しかしながら、非常に複雑でビジネスクリティカルなメソッドのテストを 2、3 多く記述することは、テストのコード カバレッジ指標を改善するためだけに自動プロパティのテストを記述することより、通常、時間の使い方として優れています。
 
@@ -108,19 +106,19 @@ Martin Fowler がテストをピラミッド図にしました。図 9-1 がそ�
 
 テストには一貫性のある名前を付けてください。それぞれのテストの内容を示す名前にします。 テストするクラスやメソッドに基づいてテスト クラスに名前を付けるという方法でうまく行ったことがあります。 結果的に小さなテスト クラスがたくさん作られますが、それぞれのテストが担当する内容は極めて明白になります。 テストするクラスやメソッドを識別するためにテスト クラスの名前を設定したら、テスト メソッド名を利用し、テストする動作を指定できます。 それにより、求められる動作と、その動作を生むための入力や前提が含まれます。 テスト名の例:
 
-- CatalogControllerGetImage.CallsImageServiceWithId
+- `CatalogControllerGetImage.CallsImageServiceWithId`
 
-- CatalogControllerGetImage.LogsWarningGivenImageMissingException
+- `CatalogControllerGetImage.LogsWarningGivenImageMissingException`
 
-- CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
+- `CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess`
 
-- CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
+- `CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException`
 
 この方法のバリエーションとしては、それぞれのテスト クラスの名前の末尾を "Should" にして時制を少し変えます。
 
-- CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
+- `CatalogControllerGetImage`**Should**`.`**Call**`ImageServiceWithId`
 
-- CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
+- `CatalogControllerGetImage`**Should**`.`**Log**`WarningGivenImageMissingException`
 
 少しばかり冗長ですが、2 つ目の命名規則の方がわかりやすいと感じるチームもあるでしょう。 いずれにせよ、テストの動作がわかる命名規則を利用してください。テストが失敗したとき、何が失敗したのか名前から判断できます。 ControllerTests.Test1 のような曖昧な名前をテストに付けないでください。テスト結果に表示されたとき、何の有用性もありません。
 
@@ -175,9 +173,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>ASP.NET Core Apps を統合テストする
 
-このサービスでは、別個のサービスに改良される前の CatalogController コードと同様に、IHostingEnvironment が使用されます。 これがコントローラーで IHostingEnvironment を使用した唯一のコードであったため、その依存関係は CatalogController のコンストラクターから削除されました。
-
-このサービスが正しく機能することをテストするには、既知のテスト画像ファイルを作成し、特定の入力後、サービスがそのファイルを正しく返すことを検証する必要があります。 実際にテストする動作 (この場合、ファイル システムから読み込むこと) にはモック オブジェクトを使用しないでください。 ただし、統合テストの設定でもモック オブジェクトは役に立ちます。 この事例では、その ContentRootPath がテスト画像に使用するフォルダーを指すように IHostingEnvironment をモックできます。 完璧に動作する統合テスト クラスは次のようになります。
+統合テストを使用して LocalFileImageService が正しく機能することをテストするには、既知のテスト画像ファイルを作成し、特定の入力後、サービスがそのファイルを正しく返すことを検証する必要があります。 実際にテストする動作 (この場合、ファイル システムから読み込むこと) にはモック オブジェクトを使用しないでください。 ただし、統合テストの設定でもモック オブジェクトは役に立ちます。 この事例では、その ContentRootPath がテスト画像に使用するフォルダーを指すように IHostingEnvironment をモックできます。 完璧に動作する統合テスト クラスは次のようになります。
 
 ```csharp
 public class LocalFileImageServiceGetImageBytesById
@@ -186,6 +182,7 @@ public class LocalFileImageServiceGetImageBytesById
     private readonly Mock<IHostingEnvironment> _mockEnvironment = new Mock<IHostingEnvironment>();
     private int _testImageId = 123;
     private string _testFileName = "123.png";
+
     public LocalFileImageServiceGetImageBytesById()
     {
         // create folder if necessary
@@ -194,24 +191,25 @@ public class LocalFileImageServiceGetImageBytesById
         System.IO.File.WriteAllBytes(filePath, _testBytes);
         _mockEnvironment.SetupGet<string>(m => m.ContentRootPath).Returns(GetFileDirectory());
     }
+
     private string GetFilePath(string fileName)
     {
         return Path.Combine(GetFileDirectory(), "Pics", fileName);
         }
             private string GetFileDirectory()
         {
-            var location = System.Reflection.Assembly.GetEntryAssembly().Location;
-            return Path.GetDirectoryName(location);
-        }
-
-        [Fact]
-        public void ReturnsFileContentResultGivenValidId()
-        {
-            var fileService = new LocalFileImageService(_mockEnvironment.Object);
-            var result = fileService.GetImageBytesById(_testImageId);
-            Assert.Equal(_testBytes, result);
-        }
+        var location = System.Reflection.Assembly.GetEntryAssembly().Location;
+        return Path.GetDirectoryName(location);
     }
+
+    [Fact]
+    public void ReturnsFileContentResultGivenValidId()
+    {
+        var fileService = new LocalFileImageService(_mockEnvironment.Object);
+        var result = fileService.GetImageBytesById(_testImageId);
+        Assert.Equal(_testBytes, result);
+    }
+}
 ```
 
 > [!NOTE]
@@ -219,58 +217,134 @@ public class LocalFileImageServiceGetImageBytesById
 
 ## <a name="functional-testing-aspnet-core-apps"></a>ASP.NET Core アプリを機能テストする
 
-ASP.NET Core アプリケーションの場合、TestServer クラスを利用すると、機能テストをとても簡単に記述できます。 アプリケーションに普通に行うように、WebHostBuilder を利用して TestServer を構成します。 この WebHostBuilder はアプリケーションの実際のホストと同じように構成すべきですが、テストが楽にするあらゆる側面を改良できます。 ほとんどの場合、さまざまなテスト ケースで同じ TestServer を再利用します。再利用可能メソッドでカプセル化できます (おそらく基底クラスで)。
+ASP.NET Core アプリケーションの場合、TestServer クラスを利用すると、機能テストをとても簡単に記述できます。 (通常、自分のアプリケーションで使用するように) WebHostBuilder を直接使用するか、WebApplicationFactory 型 (2.1 で利用可能) で、TestServer を構成します。 テスト ホストと運用ホストをできる限り一致させるようにする必要があるため、テストではアプリが運用環境で実行する内容と同様の動作が実行されます。 WebApplicationFactory クラスは、ビューなどの静的リソースを検索するために ASP.NET Core によって使用される、TestServer の ContentRoot を構成するときに便利です。
 
-```csharp
-public abstract class BaseWebTest
+TEntry が Web アプリケーションの Startup クラスである、IClassFixture<WebApplicationFactory<TEntry>> を実装するテスト クラスを作成することによって、単純な機能テストを作成できます。 これを配置すると、ファクトリの CreateClient メソッドを使用して、テスト フィクスチャでクライアントを作成できます。
+
+```cs
+public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 {
     protected readonly HttpClient _client;
-    protected string _contentRoot;
 
-    public BaseWebTest()
+    public BaseWebTest(WebApplicationFactory<Startup> factory)
     {
-        _client = GetClient();
+        _client = factory.CreateClient();
     }
 
-    protected HttpClient GetClient()
-    {
-        var startupAssembly = typeof(Startup).GetTypeInfo().Assembly;
-        _contentRoot = GetProjectPath("src", startupAssembly);
-        var builder = new WebHostBuilder()
-        .UseContentRoot(_contentRoot)
-        .UseStartup<Startup>();
-        var server = new TestServer(builder);
-        var client = server.CreateClient();
-        return client;
-    }
+    // write tests that use _client
 }
 ```
 
-GetProjectPath メソッドは、Web プロジェクトの物理パスを返します (サンプル ソリューションをダウンロードする)。 この場合の WebHostBuilder は Web アプリケーションのコンテンツ ルートがある場所を指定し、実際の Web アプリケーションが使用する同じ Startup クラスを参照します。 TestServer と連動させるには、標準の System.Net.HttpClient 型を利用し、TestServer に要求します。 TestServer は便利な CreateClient メソッドを公開します。このメソッドが提供する事前構成済みのクライアントは、TestServer で実行されているアプリケーションにいつでも要求を出せます。 ASP.NET Core アプリケーションのために機能テストを記述するとき、このクライアントを使用します (上記の基本テストで保護 \_client メンバーに設定されています)。
+アプリケーションをメモリ データ ストアで使用するように構成し、テスト データを使ってアプリケーションをシードするなど、各テストを実行する前に、ご利用のサイトの追加の構成を実行する必要があることがよくあります。 これを行うには、独自の WebApplicationFactory<TEntry> のサブクラスを作成して、その ConfigureWebHost メソッドをオーバーライドする必要があります。 以下の例は、eShopOnWeb FunctionalTests プロジェクトからのもので、メインの Web アプリケーション上でのテストの一部として使用されます。
 
-```csharp
-public class CatalogControllerGetImage : BaseWebTest
+```cs
+using Infrastructure.Data;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.eShopWeb;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
+using Microsoft.EntityFrameworkCore;
+using Infrastructure.Identity;
+
+namespace FunctionalTests.WebRazorPages
 {
-    [Fact]
-    public async Task ReturnsFileContentResultGivenValidId()
+    public class CustomWebRazorPagesApplicationFactory<TStartup>
+    : WebApplicationFactory<Startup>
     {
-        var testFilePath = Path.Combine(_contentRoot, "pics//1.png");
-        var expectedFileBytes = File.ReadAllBytes(testFilePath);
-        var response = await _client.GetAsync("/catalog/pic/1");
-        response.EnsureSuccessStatusCode();
-        var streamResponse = await response.Content.ReadAsStreamAsync();
-        byte[] byteResult;
-        using (var ms = new MemoryStream())
+        protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
-            streamResponse.CopyTo(ms);
-            byteResult = ms.ToArray();
+            builder.ConfigureServices(services =>
+            {
+                // Create a new service provider.
+                var serviceProvider = new ServiceCollection()
+                    .AddEntityFrameworkInMemoryDatabase()
+                    .BuildServiceProvider();
+
+                // Add a database context (ApplicationDbContext) using an in-memory
+                // database for testing.
+                services.AddDbContext<CatalogContext>(options =>
+                {
+                    options.UseInMemoryDatabase("InMemoryDbForTesting");
+                    options.UseInternalServiceProvider(serviceProvider);
+                });
+
+                services.AddDbContext<AppIdentityDbContext>(options =>
+                {
+                    options.UseInMemoryDatabase("Identity");
+                    options.UseInternalServiceProvider(serviceProvider);
+                });
+
+                // Build the service provider.
+                var sp = services.BuildServiceProvider();
+
+                // Create a scope to obtain a reference to the database
+                // context (ApplicationDbContext).
+                using (var scope = sp.CreateScope())
+                {
+                    var scopedServices = scope.ServiceProvider;
+                    var db = scopedServices.GetRequiredService<CatalogContext>();
+                    var loggerFactory = scopedServices.GetRequiredService<ILoggerFactory>();
+
+                    var logger = scopedServices
+                        .GetRequiredService<ILogger<CustomWebRazorPagesApplicationFactory<TStartup>>>();
+
+                    // Ensure the database is created.
+                    db.Database.EnsureCreated();
+
+                    try
+                    {
+                        // Seed the database with test data.
+                        CatalogContextSeed.SeedAsync(db, loggerFactory).Wait();
+                    }
+                    catch (Exception ex)
+                    {
+                        logger.LogError(ex, $"An error occurred seeding the " +
+                            "database with test messages. Error: {ex.Message}");
+                    }
+                }
+            });
         }
-        Assert.Equal(expectedFileBytes, byteResult);
     }
 }
 ```
 
-この機能テストは、配置されているあらゆるミドルウェア、フィルター、バインダーなど、完全な ASP.NET Core MVC アプリケーション スタックを行使します。 既知の場所にあるファイルに対して予想されるバイト配列を所与のルート ("/catalog/pic/1") が返すことを検証します。 これは実際の Web サーバーを設定せずに行い、実際の Web サーバーを利用して不安定になることを回避します (ファイアウォール設定の問題など)。 TestServer に対して実行される機能テストは通常、統合テストや単体テストより遅くなりますが、テスト Web サーバーのネットワークで実行されるテストよりはるかに速くなります。
+テストでは、クライアントを作成するために使用し、このクライアント インスタンスを使用してアプリケーションに要求を出すことによって、このカスタム WebApplicationFactory を活用できます。 アプリケーションには、テストのアサーションの一部として使用できる、シードされたデータがあります。 このテストは、eShopOnWeb Razor Pages アプリケーションのホーム ページが正しく読み込まれることを検証し、シード データの一部としてアプリケーションに追加された製品の一覧が含まれます。
+
+```cs
+using Microsoft.eShopWeb.RazorPages;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Xunit;
+
+namespace FunctionalTests.WebRazorPages
+{
+    public class HomePageOnGet : IClassFixture<CustomWebRazorPagesApplicationFactory<Startup>>
+    {
+        public HomePageOnGet(CustomWebRazorPagesApplicationFactory<Startup> factory)
+        {
+            Client = factory.CreateClient();
+        }
+
+        public HttpClient Client { get; }
+
+        [Fact]
+        public async Task ReturnsHomePageWithProductListing()
+        {
+            // Arrange & Act
+            var response = await Client.GetAsync("/");
+            response.EnsureSuccessStatusCode();
+            var stringResponse = await response.Content.ReadAsStringAsync();
+
+            // Assert
+            Assert.Contains(".NET Bot Black Sweatshirt", stringResponse); // from seed data
+        }
+    }
+}
+```
+
+この機能テストは、配置されているあらゆるミドルウェア、フィルター、バインダーなど、完全な ASP.NET Core MVC / Razor Pages アプリケーション スタックを行使します。 特定のルート ("/") が想定される正常な状態コードと HTML 出力を返すことを検証します。 これは実際の Web サーバーを設定せずに行い、実際の Web サーバーを利用して不安定になることを回避します (ファイアウォール設定の問題など)。 TestServer に対して実行される機能テストは通常、統合テストや単体テストより遅くなりますが、テスト Web サーバーのネットワークで実行されるテストよりはるかに速くなります。 機能テストを使用して、アプリケーションのフロント エンドのスタックが想定どおりに動作していることを確認する必要があります。 これらのテストは、コントローラーやページに重複があり、フィルターを追加して重複に対処するときに特に便利です。 このリファクタリングではアプリケーションの動作を変更せずに、機能テストのスイートによってこの状況を検証することをお勧めします。
 
 >[!div class="step-by-step"]
 [前へ](work-with-data-in-asp-net-core-apps.md)

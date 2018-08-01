@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 830c68e6857e72fe19099753ba57a7e22491af2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339658"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936955"
 ---
 # <a name="expressions-c-programming-guide"></a>式 (C# プログラミング ガイド)
 *式*とは、1 つの値、オブジェクト、メソッド、または名前空間に評価できる、1 つ以上のオペランドと 0 個以上の演算子のシーケンスです。 式には、リテラル値、メソッドの呼び出し、演算子とそのオペランド、または*簡易名*を含めることができます。 単純な名前には、変数、型メンバー、メソッド パラメーター、名前空間、または型の名前を指定できます。  
@@ -61,8 +61,9 @@ DoWork();
 ## <a name="lambda-expressions"></a>ラムダ式  
  ラムダ式は、名前がないが入力パラメーターおよび複数のステートメントを持つことができる "インライン メソッド" を表します。 LINQ では、メソッドに引数を渡すために広く使用されています。 ラムダ式は、使用されるコンテキストに応じて、デリゲートまたは式ツリーにコンパイルされます。 詳しくは、「[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)」をご覧ください。  
   
-## <a name="expression-trees"></a>式ツリー  
- 式ツリーを使用すると、式をデータ構造体として表すことができます。 クエリ式を、SQL データベースなどの他のコンテキストで意味を持つコードに変換するために、LINQ プロバイダーにより広く使用されています。 詳細については、「[式ツリー](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)」を参照してください。  
+## <a name="expression-trees"></a>式ツリー
+
+式ツリーを使用すると、式をデータ構造体として表すことができます。 クエリ式を、SQL データベースなどの他のコンテキストで意味を持つコードに変換するために、LINQ プロバイダーにより広く使用されています。 詳しくは、「[式ツリー (C#)](../concepts/expression-trees/index.md)」をご覧ください。
   
 ## <a name="expression-body-definitions"></a>式本体の定義
 

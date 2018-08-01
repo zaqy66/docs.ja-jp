@@ -1,23 +1,21 @@
 ---
 title: ASP.NET Core アプリでのデータの操作
-description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | asp でのデータの操作
+description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | ASP.NET Core アプリでのデータの操作
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: c9f1350f57ed649b9bf53968c19ab652b3c74384
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106176"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404659"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core アプリでのデータの操作
 
 > "データは貴重なものであり、システム自体よりも長く存在します。"
-
-Tim Berners-lee
-
-## <a name="summary"></a>まとめ
+>
+> Tim Berners-lee
 
 データ アクセスは、ほぼすべてのソフトウェア アプリケーションの重要な部分です。 ASP.NET Core は、Entity Framework Core (および Entity Framework 6 も) を含む、さまざまなデータ アクセス オプションをサポートし、どの .NET データ アクセス フレームワークでも使用できます。 使用するデータ アクセス フレームワークの選択は、アプリケーションのニーズによって異なります。 ApplicationCore および UI プロジェクトからのこれらの選択を抽象化し、インフラストラクチャに実装の詳細をカプセル化することは、疎結合のテスト可能なソフトウェアの生成に役立ちます。
 
@@ -35,7 +33,7 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 
 ### <a name="the-dbcontext"></a>DbContext
 
-EF Core を操作するには、DbContext のサブクラスが必要です。 このクラスでは、ご利用のアプリケーションで操作するエンティティのコレクションを表すプロパティを保持します。 eShopOnWeb サンプルには、アイテム、ブランド、型のコレクションと共に CatalogContext が含まれます。
+EF Core を操作するには、<xref:Microsoft.EntityFrameworkCore.DbContext> のサブクラスが必要です。 このクラスでは、ご利用のアプリケーションで操作するエンティティのコレクションを表すプロパティを保持します。 eShopOnWeb サンプルには、アイテム、ブランド、型のコレクションと共に CatalogContext が含まれます。
 
 ```csharp
 public class CatalogContext : DbContext
@@ -116,7 +114,7 @@ EF Core では、フェッチおよび保存のための同期と非同期の両
 
 ### <a name="fetching-related-data"></a>関連データのフェッチ
 
-EF Core は、エンティティの取得時に、データベースのそのエンティティを直接格納されているすべてのプロパティに設定します。 関連エンティティのリストなどの、ナビゲーション プロパティは設定されず、その値が null に設定される場合があります。 これにより、EF Core は必要以上のデータをフェッチしなくなります。これは、効率的な方法ですばやく要求を処理し、応答を返す必要がある、Web アプリケーションの場合に特に重要です。 *一括読み込み*を使用して、エンティティとのリレーションシップを含めるには、次のように、クエリで Include 拡張メソッドを使用してプロパティを指定します。
+EF Core は、エンティティの取得時に、データベースのそのエンティティを直接格納されているすべてのプロパティに設定します。 関連エンティティのリストなどの、ナビゲーション プロパティは設定されず、その値が null に設定される場合があります。 これにより、EF Core は必要以上のデータをフェッチしなくなります。これは、効率的な方法ですばやく要求を処理し、応答を返す必要がある、Web アプリケーションの場合に特に重要です。 _一括読み込み_を使用して、エンティティとのリレーションシップを含めるには、次のように、クエリで Include 拡張メソッドを使用してプロパティを指定します。
 
 ```csharp
 // .Include requires using Microsoft.EntityFrameworkCore
@@ -127,13 +125,15 @@ var brandsWithItems = await _context.CatalogBrands
 
 複数のリレーションシップを含めることができます。また、ThenInclude を使用して、サブリレーションシップを含めることもできます。 EF Core は単一のクエリを実行して、エンティティの結果セットを取得します。
 
-関連データを読み込むために、*明示的読み込み*を使用することもできます。 明示的読み込みを使用すれば、既に取得されているエンティティに追加データを読み込むことができます。 これにはデータベースへの個別の要求が必要になるため、要求ごとに行われるデータベース ラウンド トリップの数を最小限に抑える必要がある、Web アプリケーションではお勧めできません。
+関連データを読み込むために、_明示的読み込み_を使用することもできます。 明示的読み込みを使用すれば、既に取得されているエンティティに追加データを読み込むことができます。 これにはデータベースへの個別の要求が必要になるため、要求ごとに行われるデータベース ラウンド トリップの数を最小限に抑える必要がある、Web アプリケーションではお勧めできません。
 
-*遅延読み込み*は、アプリケーションでの参照時に関連データを自動的に読み込む機能です。 現在、これは EF Core ではサポートされていませんが、明示的読み込みの場合と同様に、Web アプリケーションでは通常、無効にする必要があります。
+_遅延読み込み_は、アプリケーションでの参照時に関連データを自動的に読み込む機能です。 EF Core では、バージョン 2.1 で遅延読み込みのサポートが追加されました。 遅延読み込みは既定では有効になりません。`Microsoft.EntityFrameworkCore.Proxies` をインストールする必要があります。 明示的読み込みと同様、遅延読み込みは通常、Web アプリケーションでは無効にする必要があります。遅延読み込みを使用すると、各 Web 要求内で追加のデータベース クエリが行われるためです。 待機時間が短く、テストに使用されるデータ セットが小さい場合、残念ながら、遅延読み込みによって発生するオーバーヘッドについては開発時にあまり気付きません。 しかし、ユーザーやデータがより多く、待機時間がより長い運用環境では、追加のデータベース要求により、遅延読み込みを多用する Web アプリケーションのパフォーマンスが低下する可能性があります。
+
+[Web アプリケーションでのエンティティの遅延読み込みを回避する](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
 
 ### <a name="resilient-connections"></a>回復力のある接続
 
-SQL データベースなどの外部リソースが使用できなくなる場合があります。 一時的に使用できなくなった場合、アプリケーションは再試行ロジックを使用して、例外の発生を防ぐことができます。 この手法は一般的に*接続の復元性*と呼ばれます。 [指数バックオフを含む独自の再試行](https://docs.microsoft.com/azure/architecture/patterns/retry)手法は、最大再試行回数に達するまで、指数関数的に増加する待機時間で再試行することで実装できます。 この手法を使用すると、クラウド リソースが短時間、断続的に使用できなくなる可能性があり、その結果、一部の要求が失敗します。
+SQL データベースなどの外部リソースが使用できなくなる場合があります。 一時的に使用できなくなった場合、アプリケーションは再試行ロジックを使用して、例外の発生を防ぐことができます。 この手法は一般的に_接続の復元性_と呼ばれます。 [指数バックオフを含む独自の再試行](https://docs.microsoft.com/azure/architecture/patterns/retry)手法は、最大再試行回数に達するまで、指数関数的に増加する待機時間で再試行することで実装できます。 この手法を使用すると、クラウド リソースが短時間、断続的に使用できなくなる可能性があり、その結果、一部の要求が失敗します。
 
 Azure SQL DB の場合、Entity Framework Core に内部データベース接続の復元機能と再試行ロジックが既に用意されています。 ただし、回復力のある EF Core 接続を使用する場合は、各 DbContext 接続に対して Entity Framework 実行戦略を有効にする必要があります。
 
@@ -153,19 +153,19 @@ public class Startup
         {
             sqlOptions.EnableRetryOnFailure(
             maxRetryCount: 5,
-            maxRetryDelay: TimeSpan.FromSeconds(30), 
-            errorNumbersToAdd: null); 
+            maxRetryDelay: TimeSpan.FromSeconds(30),
+            errorNumbersToAdd: null);
         });
     });
 }
 //...
 ```
 
-  #### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>BeginTransaction と複数の DbContext を使用した実行戦略と明示的なトランザクション 
-  
-  EF Core 接続で再試行を有効にすると、EF Core を使用して実行する各操作は、独自の再試行可能な操作になります。 一時的なエラーが発生した場合、SaveChanges への各クエリと各呼び出しは 1 つのユニットとして再試行されます。
-  
-  一方、BeginTransaction を使用してトランザクションを開始するコードの場合、1 ユニットとして扱う必要のある独自の操作グループを定義しています。エラーが発生した場合、トランザクション内のすべてがロールバックされます。 EF 実行戦略 (再試行ポリシー) を使用し、複数の DbContext からの SaveChanges をいくつかトランザクションに含める場合、そのトランザクションを実行しようとすると、次のような例外が表示されます。
+#### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>BeginTransaction と複数の DbContext を使用した実行戦略と明示的なトランザクション
+
+EF Core 接続で再試行を有効にすると、EF Core を使用して実行する各操作は、独自の再試行可能な操作になります。 一時的なエラーが発生した場合、SaveChanges への各クエリと各呼び出しは 1 つのユニットとして再試行されます。
+
+一方、BeginTransaction を使用してトランザクションを開始するコードの場合、1 ユニットとして扱う必要のある独自の操作グループを定義しています。エラーが発生した場合、トランザクション内のすべてがロールバックされます。 EF 実行戦略 (再試行ポリシー) を使用し、複数の DbContext からの SaveChanges をいくつかトランザクションに含める場合、そのトランザクションを実行しようとすると、次のような例外が表示されます。
 
 System.InvalidOperationException: 構成された実行戦略 'SqlServerRetryingExecutionStrategy' は、ユーザーが開始したトランザクションをサポートしていません。 'DbContext.Database.CreateExecutionStrategy()' から返された実行戦略を使用して、再試行可能なユニットとしてトランザクション内のすべての操作を実行します。
 
@@ -176,7 +176,7 @@ System.InvalidOperationException: 構成された実行戦略 'SqlServerRetrying
 // within an explicit transaction
 // See:
 // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
-var strategy = _catalogContext.Database.CreateExecutionStrategy(); 
+var strategy = _catalogContext.Database.CreateExecutionStrategy();
 await strategy.ExecuteAsync(async () =>
 {
     // Achieving atomicity between original Catalog database operation and the
@@ -185,7 +185,7 @@ await strategy.ExecuteAsync(async () =>
     {
         _catalogContext.CatalogItems.Update(catalogItem);
         await _catalogContext.SaveChangesAsync();
-        
+
         // Save to EventLog only if product price changed
         if (raiseProductPriceChangedEvent)
         await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
@@ -197,12 +197,13 @@ await strategy.ExecuteAsync(async () =>
 最初の DbContext は \_catalogContext で、2 つ目の DbContext は \_integrationEventLogService オブジェクト内にあります。 最後に、Commit アクションが、複数の DbContext で EF 実行戦略を使用して実行されます。
 
 > ### <a name="references--entity-framework-core"></a>参照 – Entity Framework Core
+>
 > - **EF Core ドキュメント**  
-> <https://docs.microsoft.com/ef/>
+>   <https://docs.microsoft.com/ef/>
 > - **EF Core: 関連データ**  
-> <https://docs.microsoft.com/ef/core/querying/related-data>
+>   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **ASPNET アプリケーションでのエンティティの遅延読み込みを回避する**  
-> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+>   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core または micro-ORM の選択
 
@@ -271,8 +272,7 @@ NoSQL データベースには、リレーショナル データベースでは�
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 
-Azure DocumentDB はフル マネージドの NoSQL データベース サービスであり、クラウドベースのスキーマレスなデータ ストレージを提供します。 DocumentDB は、高速で予測可能なパフォーマンス、高可用性、エラスティック スケーリング、およびグローバル配布用に作成されています。 NoSQL データベースであるにもかかわらず、開発者は JSON データで豊富で使い慣れた SQL クエリ機能を使用できます。 DocumentDB のすべてのリソースは、JSON ドキュメントとして格納されます。 リソースは、*アイテム* (メタデータを含むドキュメント) および*フィード* (アイテムのコレクション) として管理されます。 図 8-2 は、さまざまな DocumentDB リソース間の関係を示しています。
-
+Azure DocumentDB はフル マネージドの NoSQL データベース サービスであり、クラウドベースのスキーマレスなデータ ストレージを提供します。 DocumentDB は、高速で予測可能なパフォーマンス、高可用性、エラスティック スケーリング、およびグローバル配布用に作成されています。 NoSQL データベースであるにもかかわらず、開発者は JSON データで豊富で使い慣れた SQL クエリ機能を使用できます。 DocumentDB のすべてのリソースは、JSON ドキュメントとして格納されます。 リソースは、_アイテム_ (メタデータを含むドキュメント) および_フィード_ (アイテムのコレクション) として管理されます。 図 8-2 は、さまざまな DocumentDB リソース間の関係を示しています。
 
 ![DocumentDB (NoSQL JSON データベース) のリソース間の階層関係](./media/image8-2.png)
 
@@ -282,25 +282,25 @@ DocumentDB クエリ言語は、JSON ドキュメントを照会するための�
 
 **参照 – DocumentDB**
 
--   DocumentDB の概要\
-    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- DocumentDB の概要\
+  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>その他の永続性オプション
 
 リレーショナルおよび NoSQL ストレージ オプションに加え、ASP.NET Core アプリケーションでは Azure Storage を使用して、クラウドベースのスケーラブルな方法でさまざまなデータ形式とファイルを格納できます。 Azure Storage は非常にスケーラブルであるため、最初に少量のデータを格納し、アプリケーションで必要になった場合に数百または数テラバイトのデータを格納するようにスケール アップできます。 Azure Storage では次の 4 つの種類のデータがサポートされます。
 
--   非構造化テキストまたはバイナリ ストレージ用の Blob Storage。これは、オブジェクト ストレージとも呼ばれます。
+- 非構造化テキストまたはバイナリ ストレージ用の Blob Storage。これは、オブジェクト ストレージとも呼ばれます。
 
--   行キーを使用してアクセス可能な、構造化データセット用の Table Storage。
+- 行キーを使用してアクセス可能な、構造化データセット用の Table Storage。
 
--   信頼性の高いキューベースのメッセージング用の Queue Storage。
+- 信頼性の高いキューベースのメッセージング用の Queue Storage。
 
--   Azure 仮想マシンとオンプレミス アプリケーション間での共有ファイル アクセス用の File Storage。
+- Azure 仮想マシンとオンプレミス アプリケーション間での共有ファイル アクセス用の File Storage。
 
 **参照 – Azure Storage**
 
--   Azure Storage の概要\
-    <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Azure Storage の概要\
+  <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>キャッシュ
 
@@ -316,16 +316,17 @@ ASP.NET Core では、2 つのレベルの応答キャッシュがサポート�
     [ResponseCache(Duration = 60)]
     public IActionResult Contact()
     { }
-    
+
     ViewData["Message"] = "Your contact page.";
     return View();
 }
+```
 
-The above example will result in the following header being added to the response, instructing clients to cache the result for up to 60 seconds.
+前の例では、応答に次のヘッダーが追加され、最大で 60 秒間、結果をキャッシュするようクライアントに指示します。
 
 Cache-Control: public,max-age=60
 
-In order to add server-side in-memory caching to the application, you must reference the Microsoft.AspNetCore.ResponseCaching NuGet package, and then add the Response Caching middleware. This middleware is configured in both ConfigureServices and Configure in Startup:
+サーバー側のメモリ内キャッシュをアプリケーションに追加するには、Microsoft.AspNetCore.ResponseCaching NuGet パッケージを参照し、応答キャッシュ ミドルウェアを追加する必要があります。 このミドルウェは、Startup の ConfigureServices と Configure の両方で構成されます。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -339,11 +340,11 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-応答キャッシュ ミドルウェアは、カスタマイズ可能な一連の条件に基づいて、自動的に応答をキャッシュします。 既定では、GET または HEAD メソッドを使用して要求された 200 (OK) の応答のみがキャッシュされます。 さらに、要求には、Cache-Control: public ヘッダーを含む応答が必要であり、Authorization や Set-Cookie のヘッダーを含めることはできません。 [応答キャッシュ ミドルウェアで使用されるキャッシュ条件の完全なリスト](https://docs.microsoft.com/aspnet/core/performance/caching/middleware#conditions-for-caching)を参照してください。
+応答キャッシュ ミドルウェアは、カスタマイズ可能な一連の条件に基づいて、自動的に応答をキャッシュします。 既定では、GET または HEAD メソッドを使用して要求された 200 (OK) の応答のみがキャッシュされます。 さらに、要求には、Cache-Control: public ヘッダーを含む応答が必要であり、Authorization や Set-Cookie のヘッダーを含めることはできません。 [応答キャッシュ ミドルウェアで使用されるキャッシュ条件の完全なリスト](/aspnet/core/performance/caching/middleware#conditions-for-caching)を参照してください。
 
 ### <a name="data-caching"></a>データ キャッシュ
 
-完全な Web 応答のキャッシュではなく (または、このようなキャッシュに加えて)、個々のデータ クエリの結果をキャッシュすることができます。 その場合、Web サーバーでメモリ内キャッシュを使用するか、[分散キャッシュ](https://docs.microsoft.com/aspnet/core/performance/caching/distributed)を使用できます。 このセクションでは、メモリ内キャッシュの実装方法を示します。
+完全な Web 応答のキャッシュではなく (または、このようなキャッシュに加えて)、個々のデータ クエリの結果をキャッシュすることができます。 その場合、Web サーバーでメモリ内キャッシュを使用するか、[分散キャッシュ](/aspnet/core/performance/caching/distributed)を使用できます。 このセクションでは、メモリ内キャッシュの実装方法を示します。
 
 次のように、ConfigureServices でメモリ (または分散) キャッシュのサポートを追加します。
 
@@ -374,7 +375,7 @@ public class CachedCatalogService : ICatalogService
         _cache = cache;
         _catalogService = catalogService;
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetBrands()
     {
         return await _cache.GetOrCreateAsync(_brandsKey, async entry =>
@@ -383,7 +384,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetBrands();
         });
     }
-    
+
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
         string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
@@ -393,7 +394,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetCatalogItems(pageIndex, itemsPage, brandID, typeId);
         });
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetTypes()
     {
         return await _cache.GetOrCreateAsync(_typesKey, async entry =>
@@ -415,7 +416,7 @@ services.AddScoped<CatalogService>();
 
 こうすることで、カタログ データをフェッチするデータセット呼び出しは、要求ごとではなく、1 分ごとに 1 回だけ行われるようになります。 サイトへのトラフィックによっては、データベースに対して行われるクエリの数と、このサービスによって公開される 3 つのすべてのクエリに現在依存しているホーム ページの平均ページ読み込み時間に非常に大きく影響する場合があります。
 
-キャッシュの実装時に問題になるのは、*古いデータ*です。つまり、データがソースで変更されても、その古いバージョンのデータがキャッシュに保持されます。 この問題を緩和する簡単な方法は、短いキャッシュ期間を使用することです。ビジー状態のアプリケーションの場合、データのキャッシュ期間を延長することで得られる限られた追加の利点があるためです。 たとえば、単一のデータベース クエリを実行し、1 秒ごとに 10 回要求されるページがあるとします。 このページが 1 分間キャッシュされると、1 分ごとに実行されるデータベース クエリの数は 600 から 1 に減り、99.8% の減少率となります。 代わりにキャッシュ期間を 1 時間にした場合、全体的な減少率は 99.997% となりますが、古いデータの確率的および潜在的な経過期間はどちらも大幅に増えます。
+キャッシュの実装時に問題になるのは、_古いデータ_です。つまり、データがソースで変更されても、その古いバージョンのデータがキャッシュに保持されます。 この問題を緩和する簡単な方法は、短いキャッシュ期間を使用することです。ビジー状態のアプリケーションの場合、データのキャッシュ期間を延長することで得られる限られた追加の利点があるためです。 たとえば、単一のデータベース クエリを実行し、1 秒ごとに 10 回要求されるページがあるとします。 このページが 1 分間キャッシュされると、1 分ごとに実行されるデータベース クエリの数は 600 から 1 に減り、99.8% の減少率となります。 代わりにキャッシュ期間を 1 時間にした場合、全体的な減少率は 99.997% となりますが、古いデータの確率的および潜在的な経過期間はどちらも大幅に増えます。
 
 含まれているデータを更新する場合、事前にキャッシュ エントリを削除することもできます。 キーがわかっている場合は、個々のエントリを削除できます。
 
@@ -436,6 +437,8 @@ new CancellationChangeToken(cts.Token));
 // elsewhere, expire the cache by cancelling the token\
 _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
+
+キャッシュでは、データベースから同じ値を繰り返し要求する Web ページのパフォーマンスを大幅に向上させることができます。 キャッシュを適用する前に、必ずデータ アクセスとページのパフォーマンスを測定し、改善の必要性があると判断した場合にのみ、キャッシュを適用するようにしてください。 キャッシュでは Web サーバーのメモリ リソースが消費され、アプリケーションの複雑さが増すため、この手法を使用して不完全な最適化を行わないことが重要です。
 
 >[!div class="step-by-step"]
 [前へ](develop-asp-net-core-mvc-apps.md)

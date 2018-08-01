@@ -12,16 +12,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: 3f9b18b3362155e256c922a84f3f1cdb6d255a4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b00b01cb82f7fa2f1d9af42438c37592bb1e8181
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198878"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンをいつ実装するかの決定
 イベント ベースの非同期パターンは、クラスの非同期動作を公開します。 このパターンを導入すると、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、非同期動作を公開する 2 つのパターンが定義されます。<xref:System.IAsyncResult?displayProperty=nameWithType> インターフェイスに基づく非同期パターンとイベント ベースのパターンです。 このトピックでは、両方のパターンをどのような状況で実装するべきか説明します。  
   
- <xref:System.IAsyncResult> インターフェイスによる非同期プログラミングの詳細については、「[イベント ベースの非同期パターン (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)」を参照してください。  
+ <xref:System.IAsyncResult> インターフェイスによる非同期プログラミングについて詳しくは、「[非同期プログラミング モデル (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)」をご覧ください。  
   
 ## <a name="general-principles"></a>一般原則  
  一般的に、可能であれば、イベント ベースの非同期パターンを利用して非同期機能を公開してください。 ただし、イベント ベースのパターンでは満たせない要件もあります。 そのようなとき、場合によっては、イベント ベースのパターンに加え、<xref:System.IAsyncResult> パターンも実装する必要があります。  

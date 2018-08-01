@@ -8,24 +8,25 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02f88faab6ddbaa026e73ad61bc63fbe8e5e00ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591328"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874788"
 ---
 # <a name="threading-objects-and-features"></a>スレッド処理オブジェクトと機能
-.NET Framework には、マルチスレッド アプリケーションの作成と管理に役立つ多くのオブジェクトが用意されています。 マネージ スレッドは、<xref:System.Threading.Thread> クラスによって表されます。 <xref:System.Threading.ThreadPool> クラスを使用すると、マルチスレッドのバックグラウンド タスクを簡単に作成し、管理できます。 <xref:System.ComponentModel.BackgroundWorker> クラスは、ユーザー インターフェイスと対話するタスクについてそれと同じことを実現します。 <xref:System.Threading.Timer> クラスは、指定された間隔でバックグラウンド タスクを実行します。  
+.NET Framework には、マルチスレッド アプリケーションの作成と管理に役立つ多くのオブジェクトが用意されています。 マネージド スレッドは、<xref:System.Threading.Thread> クラスによって表されます。 <xref:System.Threading.ThreadPool> クラスを使用すると、マルチスレッドのバックグラウンド タスクを簡単に作成し、管理できます。 <xref:System.ComponentModel.BackgroundWorker> クラスは、ユーザー インターフェイスと対話するタスクについてそれと同じことを実現します。 <xref:System.Threading.Timer> クラスは、指定された間隔でバックグラウンド タスクを実行します。  
   
  さらに、.NET Framework Version 2.0 で導入された <xref:System.Threading.Semaphore> クラスや <xref:System.Threading.EventWaitHandle> クラスなど、スレッドの活動を同期するクラスも数多くあります。 これらのクラスの機能の比較については、「[同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [マネージ スレッド プール](../../../docs/standard/threading/the-managed-thread-pool.md)  
+ 
+  [マネージド スレッド プール](../../../docs/standard/threading/the-managed-thread-pool.md)  
  **ThreadPool** クラスについて説明します。このクラスを利用すると、開発者はスレッド管理を意識する必要なく、スレッドにタスクの実行を要求できます。  
   
  [タイマー](../../../docs/standard/threading/timers.md)  
- **Timer** を使用して、指定された時間に呼び出されるデリゲートを指定する方法を説明します。  
+ マルチスレッド環境で使用できるタイマーについて説明します。  
   
  [モニター](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  **Monitor** クラスを使用してメンバーへのアクセスを同期したり、独自の種類のスレッド管理を構築したりする方法を説明します。  
@@ -34,7 +35,7 @@ ms.locfileid: "33591328"
  <xref:System.Threading.WaitHandle> クラスについて説明します。このクラスは、イベント待機ハンドル、ミューテックス、およびセマフォ用の抽象基底クラスで、複数の同期イベントを待機できるようにします。  
   
  [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- 通知を行ったり通知を待機したりすることによりスレッドの活動を同期するために使用するマネージ イベント待機ハンドルについて説明します。  
+ 通知を行ったり通知を待機したりすることによりスレッドの活動を同期するために使用するマネージド イベント待機ハンドルについて説明します。  
   
  [ミューテックス](../../../docs/standard/threading/mutexes.md)  
  オブジェクトへのアクセスの同期、または独自の同期機構の構築を <xref:System.Threading.Mutex> を使用して行う方法を説明します。  
@@ -49,7 +50,7 @@ ms.locfileid: "33591328"
  <xref:System.Threading.Semaphore> オブジェクトについて説明し、このオブジェクトを使用して、制限されたリソースへのアクセスを制御する方法を示します。  
   
  [同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- マネージ スレッドをロックおよび同期するために用意されている .NET Framework のクラスの機能を比較します。  
+ マネージド スレッドをロックおよび同期するために用意されている .NET Framework のクラスの機能を比較します。  
   
  [バリア](../../../docs/standard/threading/barrier.md)  
  段階的な操作におけるスレッドの調整のためのバリア パターンを実装する <xref:System.Threading.Barrier> オブジェクトについて説明します。  
@@ -62,7 +63,8 @@ ms.locfileid: "33591328"
   
 ## <a name="reference"></a>参照  
  <xref:System.Threading.Thread>  
- **Thread** クラスのリファレンス ドキュメントです。このクラスは、アンマネージ コードから作成されたか、マネージ アプリケーションで作成されたかにかかわらず、マネージ スレッドを表します。  
+ 
+  **Thread** クラスのリファレンス ドキュメントです。このクラスは、アンマネージド コードから作成されたか、マネージド アプリケーションで作成されたかにかかわらず、マネージド スレッドを表します。  
   
  <xref:System.ComponentModel.BackgroundWorker>  
  ユーザー インターフェイスと対話し、ユーザー インターフェイス スレッドで生成されるイベントを介して通信するバックグラウンド タスクを有効にします。  

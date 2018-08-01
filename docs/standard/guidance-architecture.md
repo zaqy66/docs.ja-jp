@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.technology: dotnet
-ms.openlocfilehash: 7d636e842c7ec91949f2557f74ae724def858053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e63f7043b2dfdbe367ed2cbfba13bc6985c1ead6
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570500"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404175"
 ---
 # <a name="net-architecture-guidance"></a>.NET アーキテクチャ ガイダンス
 
@@ -28,4 +28,8 @@ ms.locfileid: "33570500"
 
 ## <a name="architecting-container-and-microservice-based-applicationsmicroservices-architectureindexmd"></a>[コンテナーとマイクロサービス ベースのアプリケーションの設計](microservices-architecture/index.md)
 
-このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET Core と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。 
+このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET Core と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。
+
+## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[サーバーレス アプリ: アーキテクチャ、パターン、および Azure の実装](serverless-architecture/index.md)
+
+これは、Azure を使用した例を使って、サーバーレス アプリケーションを構築するためのガイドです。 さまざまなアーキテクチャと設計アプローチ、サーバーレスに含まれる利点と課題について説明し、サーバーレス アプリのシナリオとユース ケースを提供します。

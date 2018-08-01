@@ -3,20 +3,18 @@ title: アーキテクチャの原則
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | アーキテクチャの原則
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 4ee14b128d3b83fd446352bb6f78afc08fb38c52
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105860"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404439"
 ---
 # <a name="architectural-principles"></a>アーキテクチャの原則
 
 > "プログラマーがプログラムを記述するやり方で建設業者がビルを建てたなら、最初にやって来たキツツキによって文明は破壊されてしまうでしょう。"  
 > _\- Gerald Weinberg_
-
-## <a name="summary"></a>まとめ
 
 ソフトウェア ソリューションを設計する場合は、保守容易性を念頭に置く必要があります。 このセクションで概説する原則は、クリーンで保守性の高いアプリケーションをもたらすアーキテクチャを決定する上で役に立ちます。 一般に、これらの原則に従うことで、明示的なインターフェイスまたはメッセージング システムを介してやり取りするコンポーネントでなく、アプリケーションの他の部分と密結合されていないそれぞれ独立したコンポーネントからアプリケーションを構築できるようになります。
 
@@ -64,7 +62,7 @@ ms.locfileid: "37105860"
 
 この原則がアプリケーション アーキテクチャに適用され、その論理エンドポイントに到達すると、マイクロサービスが得られます。 指定されたマイクロサービスは、単一責任を持つ必要があります。 システムのビヘイビアーを拡張する必要がある場合は、既存の責任にさらに責任を追加するのでなく、別のマイクロサービスを追加することによって目的を達成することをお勧めします。
 
-[マイクロサービス アーキテクチャの詳細](http://aka.ms/MicroservicesEbook)
+[マイクロサービス アーキテクチャの詳細](https://aka.ms/MicroservicesEbook)
 
 ### <a name="dont-repeat-yourself-dry"></a>DRY 原則
 
@@ -81,17 +79,17 @@ ms.locfileid: "37105860"
 
 この原則に対する違反の例を次に示します。
 
--   必要な基本クラス
+- 必要な基本クラス
 
--   必要なインターフェイスの実装
+- 必要なインターフェイスの実装
 
--   自身を保存する責任のあるクラス ("アクティブ レコード" パターンなど)
+- 自身を保存する責任のあるクラス ("アクティブ レコード" パターンなど)
 
--   必要な既定のコンストラクター
+- 必要な既定のコンストラクター
 
--   仮想キーワードを必要とするプロパティ
+- 仮想キーワードを必要とするプロパティ
 
--   必要とされる永続化に固有の属性
+- 必要とされる永続化に固有の属性
 
 上記のいずれかの機能またはビヘイビアーがクラスに含まれる必要があるという要件では、永続化する型と永続化技術の選択肢との間に結合が追加されるため、後で新しいデータ アクセス方法を採用することが難しくなります。
 
@@ -103,19 +101,20 @@ ms.locfileid: "37105860"
 
 > ### <a name="references--modern-web-applications"></a>参照 – 最新の Web アプリケーション
 > - **懸念事項の分離**  
-> <http://deviq.com/separation-of-concerns/>
-> - **カプセル化** <http://deviq.com/encapsulation/>
+> <https://deviq.com/separation-of-concerns/>
+> - **カプセル化**  
+> <https://deviq.com/encapsulation/>
 > - **依存関係逆転の原則**  
-> <http://deviq.com/dependency-inversion-principle/>
+> <https://deviq.com/dependency-inversion-principle/>
 > - **明示的な依存関係の原則**  
-> <http://deviq.com/explicit-dependencies-principle/>
+> <https://deviq.com/explicit-dependencies-principle/>
 > - **DRY 原則**  
-> <http://deviq.com/don-t-repeat-yourself/>
+> <https://deviq.com/don-t-repeat-yourself/>
 > - **永続性の無視**  
-> <http://deviq.com/persistence-ignorance/>
+> <https://deviq.com/persistence-ignorance/>
 > - **境界付けられたコンテキスト**  
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
-> [!div class="step-by-step"]
+>[!div class="step-by-step"]
 [前へ](choose-between-traditional-web-and-single-page-apps.md)
 [次へ](common-web-application-architectures.md)

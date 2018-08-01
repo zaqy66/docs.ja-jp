@@ -3,13 +3,13 @@ title: Windows 8、Windows 8.1、および Windows 10 への .NET Framework 3.5 
 description: Windows 10、Windows 8.1、および Windows 8 に .NET Framework 3.5 をインストールする方法について説明します
 author: rlander
 ms.author: mairaw
-ms.date: 03/30/2018
-ms.openlocfilehash: 226449b8ee7c9360e6bfdc5bfa5dfeb59f19bd2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 07/16/2018
+ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387417"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245540"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 8、Windows 8.1、および Windows 10 への .NET Framework 3.5 のインストール
 
@@ -42,3 +42,6 @@ Windows のコントロール パネルを使用して .NET Framework 3.5 を有
 インストール中にエラー 0x800f0906、0x800f0907、0x800f081f、0x800F0922 が発生することがあります。その場合は、「[.NET Framework 3.5 インストール エラー: 0x800f0906、0x800f0907、または 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)」を参照し、問題の解決方法をご確認ください。
 
 インストールの問題をまだ解決できない場合、またはインターネット接続がない場合は、Windows のインストール メディアを使ってインストールしてみることができます。 詳細については、「[Deploy .NET Framework 3.5 by using Deployment Image Servicing and Management (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism)」 (展開イメージのサービスと管理 (DISM) を利用して .NET Framework 3.5 を展開する) を参照してください。 インストール メディアがない場合は、「[Windows 用のインストール メディアを作成する](https://support.microsoft.com/help/15088/windows-create-installation-media)」を参照してください。
+
+> [!WARNING]
+> .NET Framework 3.5 のインストールのソースとして Windows Update に依存していない場合は、同じ対応する Windows オペレーティング システムのバージョンからのソースを厳密に使用していることを確認する必要があります。 同じバージョンの Windows に対応しないソース パスを使用しても、一致しないバージョンの .NET Framework 3.5 のインストールは中止されません。 ただし、これによりシステムはサポートされていない使用不能の状態になります。

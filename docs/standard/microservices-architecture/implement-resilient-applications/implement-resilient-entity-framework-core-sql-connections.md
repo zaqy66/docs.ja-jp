@@ -1,17 +1,17 @@
 ---
-title: 回復力の高い Entity Framework Core SQL 接続の実装
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 回復力の高い Entity Framework Core SQL 接続の実装
+title: 回復力の高い Entity Framework Core SQL 接続を実装する
+description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 回復力の高い Entity Framework Core SQL 接続を実装する。 この手法は、クラウドで Azure SQL Database を使用する場合に特に重要です。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 79f115a2d897463c213eda6f4d6951ff0cbeb3ca
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: c1324eafc9dc0286128e8e942f95ad7c4c0a5d98
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105476"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874937"
 ---
-# <a name="implementing-resilient-entity-framework-core-sql-connections"></a>回復力の高い Entity Framework Core SQL 接続の実装
+# <a name="implement-resilient-entity-framework-core-sql-connections"></a>回復力の高い Entity Framework Core SQL 接続を実装する
 
 Azure SQL DB の場合、Entity Framework Core に内部データベース接続の復元機能と再試行ロジックが既に用意されています。 ただし、[回復力のある EF Core 接続](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)を使用する場合は、各 DbContext 接続に対して Entity Framework 実行戦略を有効にする必要があります。
 
@@ -25,13 +25,13 @@ public class Startup
     public IServiceProvider ConfigureServices(IServiceCollection services)
     {
         // ...
-        services.AddDbContext<OrderingContext>(options =>
+        services.AddDbContext<CatalogContext>(options =>
         {
             options.UseSqlServer(Configuration["ConnectionString"],
             sqlServerOptionsAction: sqlOptions =>
             {
                 sqlOptions.EnableRetryOnFailure(
-                maxRetryCount: 5,
+                maxRetryCount: 10,
                 maxRetryDelay: TimeSpan.FromSeconds(30),
                 errorNumbersToAdd: null);
             });
@@ -85,13 +85,13 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
 
 ## <a name="additional-resources"></a>その他の技術情報
 
+-   **EF 接続の回復性** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+
 -   **Entity Framework での接続回復性とコマンド傍受**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
 -   **Cesar de la Torre。回復力の高い Entity Framework Core SQL 接続とトランザクションの使用**
     <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
-
 >[!div class="step-by-step"]
-[前へ](implement-retries-exponential-backoff.md)
-[次へ](implement-custom-http-call-retries-exponential-backoff.md)
+[前](implement-retries-exponential-backoff.md) [次]explore-custom-http-call-retries-exponential-backoff.md)

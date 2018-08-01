@@ -1,175 +1,92 @@
 ---
-title: Polly で指数のバックオフを含む HTTP 呼び出しの再試行を実装する
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Polly で指数のバックオフを含む HTTP 呼び出しの再試行を実装する
+title: Polly で指数バックオフを含む HTTP 呼び出しの再試行を実装する
+description: HTTP エラーを Polly と HttpClientFactory で処理する方法について説明します
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: cce1392bb381859e7cad89c9f2518113241ae724
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/10/2018
+ms.openlocfilehash: c16f4c0f2ef09f346c8b46ff8089883cedcf0c7e
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106932"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874898"
 ---
-# <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a>Polly で指数のバックオフを含む HTTP 呼び出しの再試行を実装する
+# <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ポリシーと Polly ポリシーで指数バックオフを含む HTTP 呼び出しの再試行を実装する
 
-指数のバックオフでの再試行のためのアプローチとしては、オープン ソースである [Polly](https://github.com/App-vNext/Polly) ライブラリのような高度な .NET ライブラリを利用することをお勧めします。
+指数のバックオフでの再試行のためのアプローチとしては、オープン ソースである [Polly ライブラリ](https://github.com/App-vNext/Polly)のような高度な .NET ライブラリを利用することをお勧めします。
 
-Polly とは、回復機能と一時的な障害処理の機能を提供する .NET ライブラリです。 このような機能は、再試行、遮断器、バルクヘッド分離、タイムアウト、フォールバックなどの Polly ポリシーを適用することで簡単に実装できます。 Polly は .NET 4.x および .NET Standard バージョン 1.0 (.NET Core をサポート) を対象にしています。
+Polly とは、回復機能と一時的な障害処理の機能を提供する .NET ライブラリです。 このような機能は、再試行、遮断器、バルクヘッド分離、タイムアウト、フォールバックなどの Polly ポリシーを適用することで実装できます。 Polly は .NET 4.x および .NET Standard ライブラリ 1.0 (.NET Core をサポート) を対象にしています。
 
-Polly の再試行ポリシーは、HTTP の再試行を実装する場合に eShopOnContainers で使用されるアプローチです。 使用する再試行ポリシーの構成に応じて、標準的な HttpClient 機能か、または Polly を使用した HttpClient の回復バージョンを挿入できるように、インターフェイスを実装することができます。
+ただし、HttpClient を含む独自のコードで Polly のライブラリを使用することは非常に複雑になる可能性があります。 eShopOnContainers の最初のバージョンでは、[ResilientHttpClient ビルディングブロック](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/Resilience/Resilience.Http/ResilientHttpClient.cs)が Polly を基盤としていました。 しかしながら、HttpClientFactory が公開され、回復力のある HTTP 通信が簡単に実装できるようになり、eShopOnContainers ではビルディングブロックが非推奨になりました。 
 
-次の例では、eShopOnContainers で実装されたインターフェイスを示します。
+次の手順では、前のセクションで説明した、HttpClientFactory に統合された Polly で HTTP 再試行を使用する方法を示します。
+
+**ASP.NET Core 2.1 パッケージを参照する**
+
+プロジェクトで NuGet からの ASP.NET Core 2.1 を使用する必要がある場合、 通常、`AspNetCore` メタパッケージと拡張パッケージ `Microsoft.Extensions.Http.Polly` が必要になります。
+
+**Startup で、Polly の再試行ポリシーでクライアントを構成する**
+
+前のセクションで示したように、標準の Startup.ConfigureServices(...) メソッドで、名前または型が指定された HttpClient 構成を定義する必要がありますが、今後は以下のように、指数バックオフを含む HTTP 再試行のポリシーを指定し、増分コードを追加します。
 
 ```csharp
-public interface IHttpClient
+//ConfigureServices()  - Startup.cs
+services.AddHttpClient<IBasketService, BasketService>()
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to five minutes
+        .AddPolicyHandler(GetRetryPolicy());
+```
+
+**AddPolicyHandler()** メソッドは、使用する `HttpClient` オブジェクトにポリシーを追加します。 この場合、指数バックオフを含む HTTP 再試行に対して Polly のポリシーが追加されます。
+
+手法のモジュール性を高める目的で、次のコードのように、ConfigureServices() メソッド内の個別メソッドに HTTP 再試行ポリシーを定義できます。
+
+```csharp
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 {
-    Task<string> GetStringAsync(string uri, string authorizationToken = null,
-        string authorizationMethod = "Bearer");
-        Task<HttpResponseMessage> PostAsync<T>(string uri, T item,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer");
-
-    Task<HttpResponseMessage> DeleteAsync(string uri,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer");
-
-    // Other methods ...
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+        .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2,
+                                                                    retryAttempt)));
 }
 ```
 
-簡単なアプローチを開発またはテストするときのように、回復メカニズムを使用したくない場合は、標準の実装を使用することができます。 次のコードは、省略可能なケースとして認証トークンを使用した要求を許可する標準的な HttpClient 実装を示しています。
+Polly では、再試行回数を指定した再試行ポリシー、指数バックオフの構成、HTTP 例外が発生した場合に実行するアクション (エラーの記録など) を定義できます。 上記のコードでは、指数関数的再試行で (最初は 2 秒) 6 回試すようにポリシーが構成されています。 
+
+つまり、6 回試すとき、再試行間の秒数が指数関数的に後退します (最初は 2 秒)。
+
+### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>再試行ポリシーにジッタ方式を追加する
+
+通常の再試行ポリシーは、同時実行性やスケーラビリティが高い場合や、高競合状態下でシステムに影響を及ぼすことがあります。 部分的な停止の場合に多くのクライアントから来る同様の再試行のピークを乗り越えるための賢い回避策は、ジッタ方式を再試行アルゴリズムまたはポリシーに追加することです。 これにより、急増するバックオフにランダム性を加えることで、エンドツーエンド システム全体のパフォーマンスを向上できます。 こうすれば、問題が発生した際のスパイクを分散できます。 平易な Polly ポリシーを使用する場合、ジッタを実装するコードは次の例のようになります。
 
 ```csharp
-public class StandardHttpClient : IHttpClient
-{
-    private HttpClient _client;
-    private ILogger<StandardHttpClient> _logger;
-
-    public StandardHttpClient(ILogger<StandardHttpClient> logger)
-    {
-        _client = new HttpClient();
-        _logger = logger;
-    }
-
-    public async Task<string> GetStringAsync(string uri,
-        string authorizationToken = null,
-        string authorizationMethod = "Bearer")
-    {
-        var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
-        if (authorizationToken != null)
-        {
-            requestMessage.Headers.Authorization =
-                new AuthenticationHeaderValue(authorizationMethod, authorizationToken);
-        }
-        var response = await _client.SendAsync(requestMessage);
-        return await response.Content.ReadAsStringAsync();
-    }
-
-    public async Task<HttpResponseMessage> PostAsync<T>(string uri, T item,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer")
-    {
-        // Rest of the code and other Http methods ...
+Random jitterer = new Random(); 
+Policy
+  .Handle<HttpResponseException>() // etc
+  .WaitAndRetry(5,    // exponential back-off plus some jitter
+      retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
+                    + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+  );
 ```
 
-興味深い実装は類似した別のクラスをコード化することですが、使用する回復メカニズム (次の例では、指数のバックオフでの再試行) を実装するには Polly を使用します。
+## <a name="additional-resources"></a>その他の技術情報
 
-```csharp
-public class ResilientHttpClient : IHttpClient
-{
-    private HttpClient _client;
-    private PolicyWrap _policyWrapper;
-    private ILogger<ResilientHttpClient> _logger;
+-   **再試行パターン**
+    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
-    public ResilientHttpClient(Policy[] policies,
-        ILogger<ResilientHttpClient> logger)
-    {
-        _client = new HttpClient();
-        _logger = logger;
-        // Add Policies to be applied
-        _policyWrapper = Policy.WrapAsync(policies);
-    }
+-   **Polly と HttpClientFactory**
+    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
-    private Task<T> HttpInvoker<T>(Func<Task<T>> action)
-    {
-        // Executes the action applying all
-        // the policies defined in the wrapper
-        return _policyWrapper.ExecuteAsync(() => action());
-    }
+-   **Polly (.NET の復元および一時的な障害処理ライブラリ)**
 
-    public Task<string> GetStringAsync(string uri,
-        string authorizationToken = null,
-        string authorizationMethod = "Bearer")
-    {
-        return HttpInvoker(async () =>
-        {
-            var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
-            // The Token's related code eliminated for clarity in code snippet
-            var response = await _client.SendAsync(requestMessage);
-            return await response.Content.ReadAsStringAsync();
-        });
-    }
-    // Other Http methods executed through HttpInvoker so it applies Polly policies
-    // ...
-}
-```
+    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-Polly では、再試行回数を指定した再試行ポリシー、指数のバックオフの構成、および HTTP 例外が発生した場合に実行するアクション (エラーの記録など) を定義します。 この場合は、IoC コンテナーでの種類の登録時に指定した回数が試行されるように、ポリシーを構成します。 指数のバックオフ構成であるために、コードは HttpRequest 例外を検出するたびに、ポリシーが構成されている方法に応じて指数関数的に増加する時間を待機してから Http 要求を再試行します。
+-   **Marc Brooker.ジッタ: ランダム性を使って状況を改善する**
 
-重要なメソッドは HttpInvoker です。これは、このユーティリティ クラス全体にわたって HTTP 要求を行うメソッドです。 そのメソッドは、\_policyWrapper.ExecuteAsync が指定された HTTP 要求を内部で実行します。これにより再試行ポリシーが考慮されます。
+    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
-eShopOnContainers では、次に示した [MVC Web アプリの startup.cs クラス](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs)のコードのように、IoC コンテナーで種類を登録するときに Polly ポリシーを指定します。
-
-```csharp
-// Startup.cs class
-if (Configuration.GetValue<string>("UseResilientHttp") == bool.TrueString)
-{
-    services.AddTransient<IResilientHttpClientFactory,
-        ResilientHttpClientFactory>();
-    services.AddSingleton<IHttpClient,
-        ResilientHttpClient>(sp =>
-            sp.GetService<IResilientHttpClientFactory>().
-            CreateResilientHttpClient());
-}
-else
-{
-    services.AddSingleton<IHttpClient, StandardHttpClient>();
-}
-```
-
-TCP 接続がサービスによって効率的に使用され、[ソケットでの問題](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)が発生しなくなるように、IHttpClient オブジェクトは一時的なものとしてではなく、シングルトンとしてインスタンス化されることに注意してください。
-
-ただし、回復性に関して重要な点は、次のコードに示すように、CreateResilientHttpClient メソッドの ResilientHttpClientFactory 内で Polly の WaitAndRetryAsync ポリシーを適用することです。
-
-```csharp
-public ResilientHttpClient CreateResilientHttpClient()
-    => new ResilientHttpClient(CreatePolicies(), _logger);
-
-// Other code
-private Policy[] CreatePolicies()
-    => new Policy[]
-    {
-        Policy.Handle<HttpRequestException>()
-            .WaitAndRetryAsync(
-        // number of retries
-        6,
-        // exponential backoff
-        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)),
-        // on retry
-        (exception, timeSpan, retryCount, context) =>
-        {
-            var msg = $"Retry {retryCount} implemented with Pollys RetryPolicy " +
-            $"of {context.PolicyKey} " +
-            $"at {context.ExecutionKey}, " +
-            $"due to: {exception}.";
-            _logger.LogWarning(msg);
-            _logger.LogDebug(msg);
-        }),
-    }
-```
 
 
 >[!div class="step-by-step"]
-[前へ](implement-custom-http-call-retries-exponential-backoff.md)
+[前へ](explore-custom-http-call-retries-exponential-backoff.md)
 [次へ](implement-circuit-breaker-pattern.md)

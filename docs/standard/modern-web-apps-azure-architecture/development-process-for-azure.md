@@ -3,13 +3,13 @@ title: Azure の開発プロセス
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | Azure の開発プロセス
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/08/2017
-ms.openlocfilehash: ea7b173369cea3b785297a136546d65965c3d789
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106854"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404390"
 ---
 # <a name="development-process-for-azure"></a>Azure の開発プロセス
 
@@ -40,8 +40,6 @@ ms.locfileid: "37106854"
 
 [Visual Studio Code をダウンロードする](https://code.visualstudio.com/download)
 
-
-
 ## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Azure でホストされる ASP.NET Core アプリの開発ワークフロー
 
 アプリケーション開発のライフサイクルは、各開発者のコンピューターで開始されます。その場合、アプリは開発者の好みの言語でコーディングされ、ローカルでテストされます。 開発者は好みのソース管理システムを選択できます。また、ビルド サーバーを使用するか、組み込みの Azure 機能に基づいて、継続的インテグレーション (CI) および/または継続的デリバリー/デプロイ (CD) を構成できます。
@@ -52,9 +50,9 @@ CI/CD を使用して ASP.NET Core アプリケーションの開発を開始す
 
 アプリのリリース パイプラインを作成するには、ソース管理でアプリケーション コードを使用する必要があります。 ローカル リポジトリをセットアップし、それをチーム プロジェクトのリモート リポジトリに接続します。 次の手順に従ってください。
 
--   [Git と Visual Studio でコードを共有する](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)、または
+- [Git と Visual Studio でコードを共有する](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)、または
 
--   [TFVC と Visual Studio でコードを共有する](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [TFVC と Visual Studio でコードを共有する](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 アプリケーションをデプロイする Azure App Service を作成します。 Azure Portal の App Services ブレードに移動して、Web アプリを作成します。 [+追加] をクリックして Web アプリ テンプレートを選択し、[作成] をクリックして名前とその他の詳細を入力します。 Web アプリは {name}.azurewebsites.net からアクセス可能になります。
 
@@ -98,7 +96,7 @@ Azure にデプロイする場合の ASP.NET Core アプリケーションの開
 
 ビルドが成功すると、CD プロセスは生成されたビルド成果物を選択します。 これには、Web デプロイ パッケージが含まれます。 ビルド サーバーは Azure App Service にこのパッケージをデプロイして、既存のサービスを新しく作成されたものに置き換えます。 通常、この手順の対象はステージング環境ですが、一部のアプリケーションは CD プロセスを通じて運用環境に直接デプロイします。
 
-#### <a name="step-5-azure-app-service-web-app"></a>手順 5. Azure App Service。 Web アプリ。
+#### <a name="step-5-azure-app-service-web-app"></a>手順 5. Azure App Service Web アプリ
 
 デプロイ後、ASP.NET Core アプリケーションは Azure App Service Web アプリのコンテキスト内で実行されます。 この Web アプリは、Azure Portal を使用して監視でき、さらに構成することができます。
 
@@ -110,7 +108,6 @@ Web アプリの実行中に、アプリケーションの正常性を監視し�
 
 **ASP.NET Core アプリを構築して Azure にデプロイする**  
 <https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
-
 
 >[!div class="step-by-step"]
 [前へ](test-asp-net-core-mvc-apps.md)
