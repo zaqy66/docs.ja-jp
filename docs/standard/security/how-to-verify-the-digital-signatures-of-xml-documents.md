@@ -24,7 +24,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33590651"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>方法 : XML ドキュメントのデジタル署名を検証する
-<xref:System.Security.Cryptography.Xml> 名前空間にあるクラスを使用すると、デジタル署名で署名された XML データを検証できます。  XML デジタル署名 (XMLDSIG) を使用すると、データが署名後に変更されなかったことを確認できます。  XMLDSIG 標準の詳細についてにある World Wide Web Consortium (W3C) 仕様を参照してhttp://www.w3.org/TR/xmldsig-core/です。  
+<xref:System.Security.Cryptography.Xml> 名前空間にあるクラスを使用すると、デジタル署名で署名された XML データを検証できます。  XML デジタル署名 (XMLDSIG) を使用すると、データが署名後に変更されなかったことを確認できます。  XMLDSIG 標準の詳細についてにある World Wide Web Consortium (W3C) 仕様を参照して http://www.w3.org/TR/xmldsig-core/ です。  
   
  この手順のコード例では、<`Signature`> 要素に格納されている XML デジタル署名の検証方法を示します。  この例では、キー コンテナーから RSA 公開キーを取得してから、キーを使用して署名を確認します。  
   
