@@ -16,10 +16,10 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: c080ff7ebef680712581d1f77fd4eb1ec99c6a86
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "32742615"
 ---
 # <a name="network-settings-schema"></a>ネットワーク設定スキーマ
@@ -31,8 +31,7 @@ ms.locfileid: "32742615"
 |[\<connectionManagement> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|インターネット ホストへの接続の最大数を指定します。|  
 |[\<defaultProxy> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|インターネットへの HTTP 要求のために使用するプロキシ サーバーを指定します。|  
 |[\<mailSettings> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|電子メールの送信オプションの設定が含まれています。|  
-|[\<requestCaching> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|インターネット ホストから情報を要求するために使用するモジュールを指定します。|  
-|[\<requestCaching> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<xref:System.Net?displayProperty=nameWithType> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[\<requestCaching> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュ メカニズムを制御します。|  
 |[\<webRequestModules> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|インターネット ホストから情報を要求するために使用するモジュールを指定します。|  
   
  Uri の設定は、.NET Framework での Uniform Resource Identifier (URI) を使用して表現された Web アドレスの処理方法を指定します。 次の表では、[\<Uri> 要素 (Uri 設定)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md) の下にある各子構成要素の関数について説明します。  

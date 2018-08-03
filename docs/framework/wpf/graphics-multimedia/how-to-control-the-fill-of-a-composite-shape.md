@@ -8,18 +8,18 @@ helpviewer_keywords:
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
 ms.openlocfilehash: a9a17434f11f432f6446e09bd853ed0d2f23fbe8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33563044"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>方法 : 複合図形の塗りつぶしを制御する
-<xref:System.Windows.Media.GeometryGroup.FillRule%2A>のプロパティ、<xref:System.Windows.Media.GeometryGroup>または<xref:System.Windows.Media.PathGeometry>、複合図形を使用して特定の時点のジオメトリの一部であるかどうかを決定する「ルール」を指定します。 2 つの値がある<xref:System.Windows.Media.FillRule>:<xref:System.Windows.Media.FillRule.EvenOdd>と<xref:System.Windows.Media.FillRule.Nonzero>です。 以下のセクションでは、これら 2 つの規則の使用方法を説明します。  
+<xref:System.Windows.Media.GeometryGroup.FillRule%2A>のプロパティを<xref:System.Windows.Media.GeometryGroup>または<xref:System.Windows.Media.PathGeometry>、複合図形を使用して、指定された点がジオメトリの一部であるかどうかを確認する「規則」を指定します。 2 つの値がある<xref:System.Windows.Media.FillRule>:<xref:System.Windows.Media.FillRule.EvenOdd>と<xref:System.Windows.Media.FillRule.Nonzero>します。 以下のセクションでは、これら 2 つの規則の使用方法を説明します。  
   
  **EvenOdd:** この規則では、ある点から任意の方向に無限に伸びる射線を描画し、その射線が横断する指定した図形のパス セグメントの数をカウントすることにより、その点が塗りつぶし領域の内側にあるかどうかを判断します。 この数値が偶数の場合は、ポイントは内側にあります。偶数の場合は、ポイントは外側にあります。  
   
- 次の XAML が同心円リング (ターゲット) の一連の構成複合図形を作成するなど、 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> 'éý'<xref:System.Windows.Media.FillRule.EvenOdd>です。  
+ たとえば、次の XAML での一連の同心リング (ターゲット) から成る複合図形を作成します.、<xref:System.Windows.Media.GeometryGroup.FillRule%2A>設定<xref:System.Windows.Media.FillRule.EvenOdd>します。  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleEvenOddValue](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillruleevenoddvalue)]  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33563044"
   
  ![ダイアグラム: 0 以外と等しい FillRule プロパティ値](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero2.png "FillRuleNonZero2")  
   
- 動作を詳しく説明するために<xref:System.Windows.Media.FillRule.Nonzero>規則異なる方向で実行されているセグメントを含む複雑な図形が必要です。 次の XAML コードで作成する点を除いて前の例と類似した図形を作成、<xref:System.Windows.Media.PathGeometry>ではなく、<xref:System.Windows.Media.EllipseGeometry>同心円を完全にクローズ 4 つの同心円円弧を作成するではなく、します。  
+ 動作をわかりやすく示すために<xref:System.Windows.Media.FillRule.Nonzero>規則セグメントがさまざまな方向で実行されているより複雑な図形が必要です。 次の XAML コードで作成する点を除いて前の例と類似した図形を作成、<xref:System.Windows.Media.PathGeometry>ではなく、<xref:System.Windows.Media.EllipseGeometry>同心円を完全に終了ではなく 4 つの同心の円弧を作成します。  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValuePathGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovaluepathgeometry)]  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33563044"
   
  ![ダイアグラム: 0 以外の FillRule プロパティ値](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
   
- **注:** の目的で<xref:System.Windows.Media.FillRule>、すべての図形が終了と見なされます。 セグメントにすき間がある場合は、架空の線を描画して、そのすき間を閉じます。 上の例では、リングに小さなすき間があります。 この場合、このすき間を通る射線は、別の方向に伸びる射線とは異なる結果を生じると思えるかもしれません。 このようなギャップと「虚数セグメント」のいずれかの拡大の図を次に示します (セグメントを適用する目的で描画される、 <xref:System.Windows.Media.FillRule>) を終了します。  
+ **注:** の目的で<xref:System.Windows.Media.FillRule>、すべての図形が終了と見なされます。 セグメントにすき間がある場合は、架空の線を描画して、そのすき間を閉じます。 上の例では、リングに小さなすき間があります。 この場合、このすき間を通る射線は、別の方向に伸びる射線とは異なる結果を生じると思えるかもしれません。 このようなギャップと「架空のセグメント」のいずれかを拡大した図を次に示します (適用するために描画されるセグメント、 <xref:System.Windows.Media.FillRule>) そのすき間を閉じる。  
   
  ![ダイアグラム: FillRule の場合、セグメントは常に閉じられる](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
   

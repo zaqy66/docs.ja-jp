@@ -15,10 +15,10 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579653"
 ---
 # <a name="regular-expression-options"></a>正規表現のオプション
@@ -275,7 +275,7 @@ ms.locfileid: "33579653"
   
 -   文字クラス内の空白は常に、空白として解釈されます。 たとえば、正規表現パターン `[ .,;:]` は、空白文字、ピリオド、コンマ、セミコロン、またはコロンの任意の 1 文字と一致します。  
   
--   かっこで囲まれた量指定子 (`{`*n*`}`、`{`*n*`,}`、`{`*n*`,`*m*`}` など) には空白を使用できません。 たとえば、正規表現パターン `\d{1. 3}` は、空白文字が含まれているため、1 ～ 3 桁の数値のどのシーケンスにも一致しません。  
+-   かっこで囲まれた量指定子 (`{`*n*`}`、`{`*n*`,}`、`{`*n*`,`*m*`}` など) には空白を使用できません。 たとえば、正規表現パターン `\d{1, 3}` は、空白文字が含まれているため、1 ～ 3 桁の数値のどのシーケンスにも一致しません。  
   
 -   言語要素を導入する文字シーケンス内では空白を使用できません。 例:  
   
