@@ -25,7 +25,7 @@ Copyright © 2018 by Microsoft Corporation
 
 All rights reserved. 本書のいかなる部分も、書面による発行者の許可なしに、いかなる形式または方法によっても、複製することを禁じます。
 
-このブックはなど、電子書籍の (電子書籍) マイクロソフトの複数のチャネルを通じて使用可能な形式で無料で利用できるhttp://dot.net/architectureです。
+このブックはなど、電子書籍の (電子書籍) マイクロソフトの複数のチャネルを通じて使用可能な形式で無料で利用できる http://dot.net/architecture です。
 
 この書籍で電子メールに関連する質問がある場合は、[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book) に電子メールをお送りください。
 
