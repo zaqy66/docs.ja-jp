@@ -1,5 +1,5 @@
 ---
-title: '&lt;例外&gt; (C# プログラミング ガイド)'
+title: '&lt;exception&gt; (C# プログラミング ガイド)'
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33332661"
 ---
-# <a name="ltexceptiongt-c-programming-guide"></a>&lt;例外&gt; (C# プログラミング ガイド)
+# <a name="ltexceptiongt-c-programming-guide"></a>&lt;exception&gt; (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
   
 ```xml  
