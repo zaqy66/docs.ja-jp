@@ -103,12 +103,12 @@ ms.locfileid: "33558175"
   
  ![UpdateSourceTrigger ダイアグラム](../../../../docs/framework/wpf/data/media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
   
- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>の値が<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>の場合、指す値の右矢印<xref:System.Windows.Data.BindingMode.TwoWay>または<xref:System.Windows.Data.BindingMode.OneWayToSource>バインドはターゲット プロパティの変更と、すぐに更新を取得します。 ただし場合、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>値は<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>、その値のみを取得更新され、新しい値を持つターゲット プロパティがフォーカスを失ったときにします。  
+ 場合、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>値は<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>、指す値の右矢印<xref:System.Windows.Data.BindingMode.TwoWay>または<xref:System.Windows.Data.BindingMode.OneWayToSource>バインドはターゲット プロパティの変更と、すぐに更新を取得します。 ただし場合、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>値は<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>、その値のみを取得更新され、新しい値を持つターゲット プロパティがフォーカスを失ったときにします。  
   
- <xref:System.Windows.Data.Binding.Mode%2A>プロパティと同様に、別の依存関係プロパティが別の既定値を持つ<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>値。 ほとんどの依存関係プロパティの既定値は <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> です。ただし、<xref:System.Windows.Controls.TextBox.Text%2A> プロパティの既定値は <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> です。 つまり、ソースの更新通常行われるたびに、ターゲット プロパティが変更された、十分機能である<xref:System.Windows.Controls.CheckBox>es およびその他の単純なコントロールです。 しかし、テキスト フィールドについては、キーストロークのたびに更新すると、パフォーマンスが低下する可能性があり、また、ユーザーが新しい値をコミットする前にいつものようにバックスペースでタイプ ミスを消す機会がなくなります。 だからこそ、<xref:System.Windows.Controls.TextBox.Text%2A>プロパティの既定値を持つ<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>の代わりに<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>です。  
+ ような<xref:System.Windows.Data.Binding.Mode%2A>プロパティ、別の依存関係プロパティが別の既定値を持つ<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>値。 ほとんどの依存関係プロパティの既定値は <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> です。ただし、<xref:System.Windows.Controls.TextBox.Text%2A> プロパティの既定値は <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> です。 つまり、ソースの更新通常行われるたびに、ターゲット プロパティが変更された、十分機能である<xref:System.Windows.Controls.CheckBox>es およびその他の単純なコントロールです。 しかし、テキスト フィールドについては、キーストロークのたびに更新すると、パフォーマンスが低下する可能性があり、また、ユーザーが新しい値をコミットする前にいつものようにバックスペースでタイプ ミスを消す機会がなくなります。 だからこそ、<xref:System.Windows.Controls.TextBox.Text%2A>プロパティの既定値を持つ<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>の代わりに<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>です。  
   
- 依存関係プロパティの既定の<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>値を検索する方法に関する情報は、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>プロパティ ページを参照してください。
- 
+ 参照してください、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>プロパティ ページを既定値を検索する方法に関する情報を<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>依存関係プロパティの値。  
+  
  次の表は、それぞれのシナリオ例を示します<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>値を使用して、<xref:System.Windows.Controls.TextBox>例として。  
   
 |UpdateSourceTrigger の値|ソース値が更新されるとき|TextBox のサンプル シナリオ|  
