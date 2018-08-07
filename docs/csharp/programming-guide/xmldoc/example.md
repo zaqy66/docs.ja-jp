@@ -1,5 +1,5 @@
 ---
-title: '&lt;例&gt; (C# プログラミング ガイド)'
+title: '&lt;example&gt; (C# プログラミング ガイド)'
 ms.date: 07/20/2015
 f1_keywords:
 - <example>
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33338254"
 ---
-# <a name="ltexamplegt-c-programming-guide"></a>&lt;例&gt; (C# プログラミング ガイド)
+# <a name="ltexamplegt-c-programming-guide"></a>&lt;example&gt; (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
   
 ```xml  
