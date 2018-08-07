@@ -12,10 +12,11 @@ ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "33578084"
 ---
 # <a name="best-practices-for-exceptions"></a>例外の推奨事項
 
@@ -103,17 +104,19 @@ ms.lasthandoff: 05/04/2018
 
 - ドメインが共通アプリケーション ベースを共有していない場合には、例外情報が格納されているアセンブリに厳密な名前で署名し、グローバル アセンブリ キャッシュにこのアセンブリを配置する。
 
-## <a name="include-a-localized-description-string-in-every-exception"></a>すべての例外に、ローカライズした説明文字列を含める
-
-ユーザーに対して表示されるエラー メッセージは、例外クラスの名前ではなく、スローされた例外の説明文字列から派生されます。
-
 ## <a name="use-grammatically-correct-error-messages"></a>文法的に正しいエラー メッセージを使用する
 
-明確な文を記述し、末尾に句点を含めます。 例外の説明文字列の文の末尾には、必ず句点を使用します。 たとえば、"ログ テーブルがオーバーフローしました。" は、 適切な説明文字列です。
+明確な文を記述し、末尾に句点を含めます。 <xref:System.Exception.Message?displayProperty=nameWithType>プロパティに割り当てられた文字列のそれぞれの文がピリオドで終わる必要があります。 たとえば、"ログ テーブルがオーバーフローしました。" は、 適切なメッセージ文字列です。
+
+## <a name="include-a-localized-string-message-in-every-exception"></a>すべての例外に、ローカライズした文字列メッセージを含める
+
+ユーザーに対して表示されるエラー メッセージは、例外クラスの名前ではなく、スローされた例外の <xref:System.Exception.Message?displayProperty=nameWithType> プロパティから派生されます。 通常は、メッセージ文字列を[例外コンストラクター](xref:System.Exception.%23ctor%2A)の `message` 引数に渡すことで、<xref:System.Exception.Message?displayProperty=nameWithType> プロパティに値を割り当てます。 
+
+ローカライズされたアプリケーションの場合は、アプリケーションがスローできるすべての例外に、ローカライズされたメッセージ文字列を指定する必要があります。 ローカライズされたエラー メッセージを指定するには、リソース ファイルを使用します。 アプリケーションのローカライズと、ローカライズされた文字列の取得の詳細については、[デスクトップ アプリケーションのリソース](../../framework/resources/index.md)と <xref:System.Resources.ResourceManager?displayProperty=nameWithType>に関するページを参照してください。
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>カスタム例外で、必要に応じて追加のプロパティを提供する
 
-プログラミングの点で追加情報が役立つ場合にだけ、(説明文字列以外の) 例外の追加プロパティを含めてください。 たとえば、<xref:System.IO.FileNotFoundException> には <xref:System.IO.FileNotFoundException.FileName> プロパティがあります。
+プログラミングの点で追加情報が役立つ場合にだけ、(カスタム メッセージ文字列以外の) 例外の追加プロパティを含めてください。 たとえば、<xref:System.IO.FileNotFoundException> には <xref:System.IO.FileNotFoundException.FileName> プロパティがあります。
 
 ## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>スタック トレースが役に立つように throw ステートメントを配置する
 

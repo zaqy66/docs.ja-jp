@@ -5,17 +5,17 @@ author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
 ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36314699"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築
 
 Visual Studio for Mac では、.NET Core アプリケーション開発用の機能をすべて備えた統合開発環境 (IDE) が提供されます。 このトピックでは、再利用可能なライブラリと単体テストを含む .NET Core ソリューションの構築方法を示します。
 
-このチュートリアルでは、ユーザーが入力した検索語とテキスト文字列を受け入れ、クラス ライブラリでメソッドを使用した場合に文字列に検索語が表示される回数をカウントし、ユーザーに結果を返すアプリケーションの作成方法を示します。 ソリューションには、テスト駆動開発 (TDD) の概念の概要としてクラス ライブラリの単体テストも含まれています。 完全なサンプルでチュートリアルを続行する場合は、[サンプル ソリューション](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter)をダウンロードしてください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
+このチュートリアルでは、ユーザーが入力した検索語とテキスト文字列を受け入れ、クラス ライブラリでメソッドを使用した場合に文字列に検索語が表示される回数をカウントし、ユーザーに結果を返すアプリケーションの作成方法を示します。 ソリューションには、単体テストの概念を紹介するため、クラス ライブラリの単体テストも含まれています。 完全なサンプルでチュートリアルを続行する場合は、[サンプル ソリューション](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter)をダウンロードしてください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
 > [!NOTE]
 > お客様のフィードバックは非常に貴重です。 次の 2 つの方法で Visual Studio for Mac の開発チームにフィードバックを送信できます。
@@ -106,15 +106,15 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
 
    ![IDE のメイン ウィンドウで GetWordCount を確認する最初の単体テスト](./media/using-on-mac-vs-full-solution/vsmacfull08.png)
 
-   TDD を使用して、新しいテストを一度失敗させてテスト ロジックが正しいことを確認することが重要です。 メソッドは "Jack" (先頭が大文字) という名前と、"Jack" および "jack" (先頭が大文字のものと小文字のもの) を含む文字列を渡します。 `GetWordCount` メソッドが正しく機能している場合は、検索語の 2 つのインスタンスのカウントが返されます。 このテストを意図的に失敗させるには、まず、検索語 "Jack" の 2 つのインスタンスが `GetWordCount` メソッドで返されないことをアサートするテストを実装します。 次の手順に進んで意図的にテストを失敗させます。
+   新しいテストを一度失敗させてテスト ロジックが正しいことを確認することが重要です。 メソッドは "Jack" (先頭が大文字) という名前と、"Jack" および "jack" (先頭が大文字のものと小文字のもの) を含む文字列を渡します。 `GetWordCount` メソッドが正しく機能している場合は、検索語の 2 つのインスタンスのカウントが返されます。 このテストを意図的に失敗させるには、まず、検索語 "Jack" の 2 つのインスタンスが `GetWordCount` メソッドで返されないことをアサートするテストを実装します。 次の手順に進んで意図的にテストを失敗させます。
 
 1. 画面の右側の **[単体テスト]** パネルを開きます。
 
-![[単体テスト] パネル](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
+   ![[単体テスト] パネル](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
 
 1. **[ドッキング]** アイコンをクリックして、パネルを開いたままにします。
 
-![[単体テスト] パネルの [ドッキング] アイコン](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
+   ![[単体テスト] パネルの [ドッキング] アイコン](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. **[すべて実行]** ボタンをクリックします。
    

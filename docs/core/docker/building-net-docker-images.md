@@ -7,10 +7,10 @@ ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "34827340"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>.NET Core アプリケーションの Docker イメージのビルド
@@ -83,6 +83,17 @@ ms.locfileid: "34827340"
 * [この ASP.NET Core の Docker サンプル](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp)は、運用向けの ASP.NET Core アプリの Docker イメージを構築するためのベスト プラクティス パターンを示します。 このサンプルは Linux コンテナーと Windows コンテナーのどちらでも動作します。
 
 * この .NET Core の Docker サンプルでは、[運用環境用の .NET Core アプリの Docker イメージをビルドする](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp)方法に関するベスト プラクティス パターンを示します。
+
+## <a name="forward-the-request-scheme-and-original-ip-address"></a>要求スキームと元の IP アドレスを転送する
+
+プロキシ サーバー、ロード バランサー、および他のネットワーク アプライアンスにより、要求に関する情報が、コンテナー化されたアプリに到達する前にわからなくなることがよくあります。
+
+* HTTPS 要求が HTTP によってプロキシされると、元のスキーム (HTTPS) は失われ、ヘッダーで転送される必要があります。
+* アプリは、インターネット上または社内ネットワーク上の本来の送信元ではなく、プロキシから要求を受信するため、元のクライアントの IP アドレスもヘッダーで転送される必要があります。
+
+この情報は、リダイレクト、認証、リンクの生成、ポリシーの評価、クライアントの位置情報など、要求の処理で重要になる可能性があります。
+
+スキームと元の IP アドレスをコンテナー化された ASP.NET Core アプリに転送するには、Forwarded Headers Middleware を使用します。 詳細については、「[プロキシ サーバーとロード バランサーを使用するために ASP.NET Core を構成する](/aspnet/core/host-and-deploy/proxy-load-balancer)」を参照してください。
 
 ## <a name="your-first-aspnet-core-docker-app"></a>初めての ASP.NET Core Docker アプリ
 
@@ -258,7 +269,6 @@ dotnet published/aspnetapp.dll
 > * ASP.NET サンプル アプリをローカルで実行しました
 > * サンプルをビルドし、Docker for Linux コンテナーで実行しました
 > * サンプルをビルドし、Docker for Windows コンテナーで実行しました
-
 
 **次の手順**
 

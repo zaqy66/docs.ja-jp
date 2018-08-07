@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36208210"
 ---
 # <a name="standard-numeric-format-strings"></a>標準の数値書式指定文字列
@@ -67,7 +67,7 @@ ms.locfileid: "36208210"
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>標準の数値書式指定文字列の使用  
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 標準の数値書式指定文字列を使用すると、次のいずれかの方法で数値の書式を定義できます。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36208210"
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>固定小数点 ("F") 書式指定子  
- 固定小数点 ("F") 書式指定子は、"-ddd.ddd…" という形式の文字列に数値を変換します。 この "d" は 0 ～ 9 の 1 桁の数字を示します。 負の数値の場合、変換後の文字列の先頭にマイナス記号が挿入されます。  
+ 固定小数点 ("F) 書式指定子は、"-ddd.ddd…" という形式の文字列に数値を変換します。この "d" は 0 から 9 の 1 桁の数字を示します。 負の数値の場合、変換後の文字列の先頭にマイナス記号が挿入されます。  
   
  精度指定子は、小数部の桁数を示します。 精度指定子を省略すると、現在の <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> プロパティによって桁数が指定されます。  
   
@@ -350,7 +350,7 @@ ms.locfileid: "36208210"
   
 ## <a name="example"></a>例  
  
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
  
  次の例では、en-US カルチャおよびすべての標準数値書式指定子を使用して、整数値と浮動小数点数値を書式設定します。 この例では 2 つの特定の数値型 (<xref:System.Double> および <xref:System.Int32>) を使用していますが、他の数値基本型 (<xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64><xref:System.Numerics.BigInteger>、<xref:System.Decimal>、および <xref:System.Single>) でも類似した結果が得られます。  
   
