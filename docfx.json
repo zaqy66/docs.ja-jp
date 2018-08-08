@@ -168,10 +168,15 @@
       }
     },
     "dest": "_site",
-    "template": [
-      "docs.html"
-    ],
-    "xref": ["_zip/missingapi.yml", "_zip/office15.zip" ],
-    "lruSize": 0
+    "template": [ "docs.html" ],
+    "xref": [
+      "dotnet-xref/_zip/dotnet.zip",
+      "dotnet-xref/_zip/vs.110.zip",
+      "dotnet-xref/_zip/vs.140.zip",
+      "dotnet-xref/_zip/office15.zip",
+      "dotnet-xref/_zip/missingapi.yml",
+      "dotnet-xref/_zip/msdnsmallset.yml",
+      "dotnet-xref/_zip/roslyn.yml"
+    ]
   }
 }
