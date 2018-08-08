@@ -337,7 +337,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 -   **Philip Brown。境界コンテキストを統合するための戦略**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson。集計、イベント ソース、および CQRS を使用したトランザクション マイクロサービスの開発 - パート 2**
+-   **Chris Richardson。集約、イベント ソース、および CQRS を使用したトランザクション マイクロサービスの開発 - パート 2**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
 -   **Chris Richardson。イベント ソーシング パターン**
