@@ -1,69 +1,237 @@
 ---
 title: コンピュテーション式 (F#)
-description: F# でシーケンス処理することができ、制御フローの構成要素とバインディングを使用して結合する計算を作成するための便利な構文を作成する方法を説明します。
-ms.date: 05/16/2016
+description: F# でシーケンス処理できるし、制御フローの作成とバインドを使用して結合で計算を作成するための便利な構文を作成する方法について説明します。
+ms.date: 07/27/2018
 ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "36207434"
 ---
-# <a name="computation-expressions"></a><span data-ttu-id="11137-103">コンピュテーション式</span><span class="sxs-lookup"><span data-stu-id="11137-103">Computation Expressions</span></span>
+# <a name="computation-expressions"></a><span data-ttu-id="75786-103">コンピュテーション式</span><span class="sxs-lookup"><span data-stu-id="75786-103">Computation Expressions</span></span>
 
-<span data-ttu-id="11137-104">F# コンピュテーション式は、シーケンス処理することができ、制御フローの構成要素とバインディングを使用して結合する計算を作成するための便利な構文を提供します。</span><span class="sxs-lookup"><span data-stu-id="11137-104">Computation expressions in F# provide a convenient syntax for writing computations that can be sequenced and combined using control flow constructs and bindings.</span></span> <span data-ttu-id="11137-105">便利な構文を提供する使えます*モナド*、高度なプログラミング機能データ、制御、および機能のプログラムでの副作用を管理するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="11137-105">They can be used to provide a convenient syntax for *monads*, a functional programming feature that can be used to manage data, control, and side effects in functional programs.</span></span>
+<span data-ttu-id="75786-104">F# のコンピュテーション式は、シーケンス処理できるし、制御フローの作成とバインドを使用して結合する計算を作成するための便利な構文を提供します。</span><span class="sxs-lookup"><span data-stu-id="75786-104">Computation expressions in F# provide a convenient syntax for writing computations that can be sequenced and combined using control flow constructs and bindings.</span></span> <span data-ttu-id="75786-105">コンピュテーション式の種類、に応じてには、モナド、monoids、monad トランスフォーマー、および適用したファンクターを表現する手段として、考えるができます。</span><span class="sxs-lookup"><span data-stu-id="75786-105">Depending on the kind of computation expression, they can be thought of as a way to express monads, monoids, monad transformers, and applicative functors.</span></span> <span data-ttu-id="75786-106">その他の言語とは異なり、(など*do 表記*Haskell で)、単一の抽象化に関連付けられていない、マクロやその他の形式に依存しないメタプログラミングを便利で状況依存の構文を実現します。</span><span class="sxs-lookup"><span data-stu-id="75786-106">However, unlike other languages (such as *do-notation* in Haskell), they are not tied to a single abstraction, and do not rely on macros or other forms of metaprogramming to accomplish a convenient and context-sensitive syntax.</span></span>
 
+## <a name="overview"></a><span data-ttu-id="75786-107">概要</span><span class="sxs-lookup"><span data-stu-id="75786-107">Overview</span></span>
 
-## <a name="built-in-workflows"></a><span data-ttu-id="11137-106">組み込みのワークフロー</span><span class="sxs-lookup"><span data-stu-id="11137-106">Built-in Workflows</span></span>
+<span data-ttu-id="75786-108">計算には、多くの形式を取ります。</span><span class="sxs-lookup"><span data-stu-id="75786-108">Computations can take many forms.</span></span> <span data-ttu-id="75786-109">計算の最も一般的な形式は、シングル スレッド実行は簡単に理解して変更できます。</span><span class="sxs-lookup"><span data-stu-id="75786-109">The most common form of computation is single-threaded execution, which is easy to understand and modify.</span></span> <span data-ttu-id="75786-110">ただし、すべての形態の計算はシングル スレッド実行するように単純です。</span><span class="sxs-lookup"><span data-stu-id="75786-110">However, not all forms of computation are as straightforward as single-threaded execution.</span></span> <span data-ttu-id="75786-111">次に、それらの例の一部を示します。</span><span class="sxs-lookup"><span data-stu-id="75786-111">Some examples include:</span></span>
 
-<span data-ttu-id="11137-107">シーケンス式では、非同期ワークフローおよびクエリ式とコンピュテーション式の例があります。</span><span class="sxs-lookup"><span data-stu-id="11137-107">Sequence expressions are an example of a computation expression, as are asynchronous workflows and query expressions.</span></span> <span data-ttu-id="11137-108">詳細については、次を参照してください。[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[クエリ式](query-expressions.md)です。</span><span class="sxs-lookup"><span data-stu-id="11137-108">For more information, see [Sequences](sequences.md), [Asynchronous Workflows](asynchronous-workflows.md), and [Query Expressions](query-expressions.md).</span></span>
+* <span data-ttu-id="75786-112">非決定論的な計算</span><span class="sxs-lookup"><span data-stu-id="75786-112">Non-deterministic computations</span></span>
+* <span data-ttu-id="75786-113">非同期計算</span><span class="sxs-lookup"><span data-stu-id="75786-113">Asynchronous computations</span></span>
+* <span data-ttu-id="75786-114">Effectful 計算</span><span class="sxs-lookup"><span data-stu-id="75786-114">Effectful computations</span></span>
+* <span data-ttu-id="75786-115">当初の計算</span><span class="sxs-lookup"><span data-stu-id="75786-115">Generative computations</span></span>
 
-<span data-ttu-id="11137-109">特定の機能は、シーケンス式と非同期のワークフローの両方に共通して、コンピュテーション式の基本構文を示しています。</span><span class="sxs-lookup"><span data-stu-id="11137-109">Certain features are common to both sequence expressions and asynchronous workflows and illustrate the basic syntax for a computation expression:</span></span>
+<span data-ttu-id="75786-116">一般的には、ある*状況に応じた*計算アプリケーションの特定の部分で実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="75786-116">More generally, there are *context-sensitive* computations that you must perform in certain parts of an application.</span></span> <span data-ttu-id="75786-117">状況依存のコードの記述はそうことを防止するための抽象化せず、特定のコンテキストの外部で「リーク」計算を簡単に難しいことができます。</span><span class="sxs-lookup"><span data-stu-id="75786-117">Writing context-sensitive code can be challenging, as it is easy to "leak" computations outside of a given context without abstractions to prevent you from doing so.</span></span> <span data-ttu-id="75786-118">これらの抽象化は、自分が f# には、実行する一般的な方法と呼ばれるものを記述する多くの場合、時間がかかります**コンピュテーション式**します。</span><span class="sxs-lookup"><span data-stu-id="75786-118">These abstractions are often challenging to write by yourself, which is why F# has a generalized way to do so called **computation expressions**.</span></span>
 
-```fsharp
-builder-name { expression }
+<span data-ttu-id="75786-119">コンピュテーション式では、状況依存の計算をエンコードするための統一された構文と抽象化モデルを提供します。</span><span class="sxs-lookup"><span data-stu-id="75786-119">Computation expressions offer a uniform syntax and abstraction model for encoding context-sensitive computations.</span></span>
+
+<span data-ttu-id="75786-120">すべての計算式を支え、*ビルダー*型。</span><span class="sxs-lookup"><span data-stu-id="75786-120">Every computation expression is backed by a *builder* type.</span></span> <span data-ttu-id="75786-121">ビルダーの型は、そのコンピュテーション式で利用可能な操作を定義します。</span><span class="sxs-lookup"><span data-stu-id="75786-121">The builder type defines the operations that are available for the computation expression.</span></span> <span data-ttu-id="75786-122">参照してください[コンピュテーション式の新しい型を作成する](computation-expressions.md#creating-a-new-type-of-computation-expression)、カスタム計算式を作成する方法します。</span><span class="sxs-lookup"><span data-stu-id="75786-122">See [Creating a New Type of Computation Expression](computation-expressions.md#creating-a-new-type-of-computation-expression), which shows how to create a custom computation expression.</span></span>
+
+### <a name="syntax-overview"></a><span data-ttu-id="75786-123">構文の概要</span><span class="sxs-lookup"><span data-stu-id="75786-123">Syntax overview</span></span>
+
+<span data-ttu-id="75786-124">すべての計算式では、次の形式があります。</span><span class="sxs-lookup"><span data-stu-id="75786-124">All computation expressions have the following form:</span></span>
+
+```
+builder-expr { cexper }
 ```
 
-<span data-ttu-id="11137-110">前の構文では、指定された式がで指定された型の計算式であるを指定します*ビルダー名前*です。</span><span class="sxs-lookup"><span data-stu-id="11137-110">The previous syntax specifies that the given expression is a computation expression of a type specified by *builder-name*.</span></span> <span data-ttu-id="11137-111">コンピュテーション式では、組み込みのワークフローをなどで`seq`または`async`、かを定義するものであることができます。</span><span class="sxs-lookup"><span data-stu-id="11137-111">The computation expression can be a built-in workflow, such as `seq` or `async`, or it can be something you define.</span></span> <span data-ttu-id="11137-112">*ビルダー名前*と呼ばれる特殊な種類のインスタンスの識別子を指定、*ビルダー型*です。</span><span class="sxs-lookup"><span data-stu-id="11137-112">The *builder-name* is the identifier for an instance of a special type known as the *builder type*.</span></span> <span data-ttu-id="11137-113">ビルダーの型は、式の実行方法を制御するコンピュテーション式のフラグメントを結合する方法、つまり、コードを制御する特殊なメソッドを定義するクラス型です。</span><span class="sxs-lookup"><span data-stu-id="11137-113">The builder type is a class type that defines special methods that govern the way the fragments of the computation expression are combined, that is, code that controls how the expression executes.</span></span> <span data-ttu-id="11137-114">ビルダー クラスを説明する別の方法では、多く f# の構成要素、ループのバインドなどの操作をカスタマイズできる言うです。</span><span class="sxs-lookup"><span data-stu-id="11137-114">Another way to describe a builder class is to say that it enables you to customize the operation of many F# constructs, such as loops and bindings.</span></span>
+<span data-ttu-id="75786-125">場所`builder-expr`そのコンピュテーション式を定義するビルダー型の名前を指定および`cexper`コンピュテーション式の式の本文です。</span><span class="sxs-lookup"><span data-stu-id="75786-125">where `builder-expr` is the name of a builder type that defines the computation expression, and `cexper` is the expression body of the computation expression.</span></span> <span data-ttu-id="75786-126">たとえば、`async`式のコードを計算できるようになります。</span><span class="sxs-lookup"><span data-stu-id="75786-126">For example, `async` computation expression code can look like this:</span></span>
 
-<span data-ttu-id="11137-115">コンピュテーション式、2 つの形式がいくつかの一般的な言語構成要素を使用できます。</span><span class="sxs-lookup"><span data-stu-id="11137-115">In computation expressions, two forms are available for some common language constructs.</span></span> <span data-ttu-id="11137-116">使用して、バリアント型のコンス トラクターを呼び出すことができます、!</span><span class="sxs-lookup"><span data-stu-id="11137-116">You can invoke the variant constructs by using a !</span></span> <span data-ttu-id="11137-117">(感嘆符) など、特定のキーワードでサフィックス`let!`、`do!`のようにします。</span><span class="sxs-lookup"><span data-stu-id="11137-117">(bang) suffix on certain keywords, such as `let!`, `do!`, and so on.</span></span> <span data-ttu-id="11137-118">これらの特殊な形式は、これらの操作の通常の組み込みのビヘイビアーを置換するビルダー クラスで定義されている特定の機能をによりします。</span><span class="sxs-lookup"><span data-stu-id="11137-118">These special forms cause certain functions defined in the builder class to replace the ordinary built-in behavior of these operations.</span></span> <span data-ttu-id="11137-119">これらのフォームのように、`yield!`形式の`yield`シーケンス式で使用されるキーワード。</span><span class="sxs-lookup"><span data-stu-id="11137-119">These forms resemble the `yield!` form of the `yield` keyword that is used in sequence expressions.</span></span> <span data-ttu-id="11137-120">詳細については、次を参照してください。[シーケンス](sequences.md)です。</span><span class="sxs-lookup"><span data-stu-id="11137-120">For more information, see [Sequences](sequences.md).</span></span>
+```fsharp
+let fetchAndDownload url =
+    async {
+        let! data = downloadData url
 
+        let processedData = processData data
 
-## <a name="creating-a-new-type-of-computation-expression"></a><span data-ttu-id="11137-121">コンピュテーション式の新しい型を作成します。</span><span class="sxs-lookup"><span data-stu-id="11137-121">Creating a New Type of Computation Expression</span></span>
-<span data-ttu-id="11137-122">ビルダー クラスを作成し、クラスの特定の特殊なメソッドを定義することは、独自の計算式の特性を定義できます。</span><span class="sxs-lookup"><span data-stu-id="11137-122">You can define the characteristics of your own computation expressions by creating a builder class and defining certain special methods on the class.</span></span> <span data-ttu-id="11137-123">ビルダー クラスは、次の表に記載されているメソッドをオプションで定義できます。</span><span class="sxs-lookup"><span data-stu-id="11137-123">The builder class can optionally define the methods as listed in the following table.</span></span>
+        return processedData
+    }
+```
 
-<span data-ttu-id="11137-124">次の表では、ワークフロー ビルダー クラスで使用できるメソッドについて説明します。</span><span class="sxs-lookup"><span data-stu-id="11137-124">The following table describes methods that can be used in a workflow builder class.</span></span>
+<span data-ttu-id="75786-127">その他の特別な構文、コンピュテーション式内で使用可能な前の例で示すように。</span><span class="sxs-lookup"><span data-stu-id="75786-127">There is a special, additional syntax available within a computation expression, as shown in the previous example.</span></span> <span data-ttu-id="75786-128">次の式のフォームがコンピュテーション式と考えられます。</span><span class="sxs-lookup"><span data-stu-id="75786-128">The following expression forms are possible with computation expressions:</span></span>
 
+```fsharp
+expr { let! ... }
+expr { do! ... }
+expr { yield ... }
+expr { yield! ... }
+expr { return ... }
+expr { return! ... }
+expr { match! ... }
+```
 
-|<span data-ttu-id="11137-125">**メソッド**</span><span class="sxs-lookup"><span data-stu-id="11137-125">**Method**</span></span>|<span data-ttu-id="11137-126">**通常のシグネチャ**</span><span class="sxs-lookup"><span data-stu-id="11137-126">**Typical signature(s)**</span></span>|<span data-ttu-id="11137-127">**説明**</span><span class="sxs-lookup"><span data-stu-id="11137-127">**Description**</span></span>|
+<span data-ttu-id="75786-129">これらのキーワードおよびその他の標準の f# キーワードの各はバッキング ビルダー型で定義されている場合のみコンピュテーション式で使用できます。</span><span class="sxs-lookup"><span data-stu-id="75786-129">Each of these keywords, and other standard F# keywords are only available in a computation expression if they have been defined in the backing builder type.</span></span> <span data-ttu-id="75786-130">唯一の例外は`match!`、糖衣構文の使用は`let!`結果で、パターン一致の後にします。</span><span class="sxs-lookup"><span data-stu-id="75786-130">The only exception to this is `match!`, which is itself syntactic sugar for the use of `let!` followed by a pattern match on the result.</span></span>
+
+<span data-ttu-id="75786-131">ビルダーの型はコンピュテーション式のフラグメントを結合する方法を制御する特殊なメソッドを定義するオブジェクトです。つまり、そのメソッドは、コンピュテーション式の動作方法を制御します。</span><span class="sxs-lookup"><span data-stu-id="75786-131">The builder type is an object that defines special methods that govern the way the fragments of the computation expression are combined; that is, its methods control how the computation expression behaves.</span></span> <span data-ttu-id="75786-132">ビルダー クラスを記述する別の方法は、多く f# の構成要素、ループやバインドなどの操作をカスタマイズできるには。</span><span class="sxs-lookup"><span data-stu-id="75786-132">Another way to describe a builder class is to say that it enables you to customize the operation of many F# constructs, such as loops and bindings.</span></span>
+
+### `let!`
+
+<span data-ttu-id="75786-133">`let!`キーワード名に別のコンピュテーション式の呼び出しの結果をバインドします。</span><span class="sxs-lookup"><span data-stu-id="75786-133">The `let!` keyword binds the result of a call to another computation expression to a name:</span></span>
+
+```fsharp
+let doThingsAsync url =
+    async {
+        let! data = getDataAsync url
+        ...
+    }
+```
+
+<span data-ttu-id="75786-134">コンピュテーション式での呼び出しをバインドするかどうかは`let`コンピュテーション式の結果は表示されません。</span><span class="sxs-lookup"><span data-stu-id="75786-134">If you bind the call to a computation expression with `let`, you will not get the result of the computation expression.</span></span> <span data-ttu-id="75786-135">代わりにバインドしてからの値、*実現されていない*そのコンピュテーション式を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="75786-135">Instead, you will have bound the value of the *unrealized* call to that computation expression.</span></span> <span data-ttu-id="75786-136">使用`let!`結果にバインドします。</span><span class="sxs-lookup"><span data-stu-id="75786-136">Use `let!` to bind to the result.</span></span>
+
+<span data-ttu-id="75786-137">`let!` `Bind(x, f)`ビルダー型のメンバー。</span><span class="sxs-lookup"><span data-stu-id="75786-137">`let!` is defined by the `Bind(x, f)` member on the builder type.</span></span>
+
+### `do!`
+
+<span data-ttu-id="75786-138">`do!`キーワードはコンピュテーション式の呼び出しを返します、 `unit`-などの型 (によって定義された、`Zero`ビルダーでのメンバー)。</span><span class="sxs-lookup"><span data-stu-id="75786-138">The `do!` keyword is for calling a computation expression that returns a `unit`-like type (defined by the `Zero` member on the builder):</span></span>
+
+```fsharp
+let doThingsAsync data url =
+    async {
+        do! sumbitData data url
+        ...
+    }
+```
+
+<span data-ttu-id="75786-139">[非同期ワークフロー](asynchronous-workflows.md)、この型は`Async<unit>`します。</span><span class="sxs-lookup"><span data-stu-id="75786-139">For the [async workflow](asynchronous-workflows.md), this type is `Async<unit>`.</span></span> <span data-ttu-id="75786-140">その他のコンピュテーション式の型がある可能性があります`CExpType<unit>`します。</span><span class="sxs-lookup"><span data-stu-id="75786-140">For other computation expressions, the type is likely to be `CExpType<unit>`.</span></span>
+
+<span data-ttu-id="75786-141">`do!` によって定義されます、`Bind(x, f)`ビルダーの型のメンバー、`f`生成、`unit`します。</span><span class="sxs-lookup"><span data-stu-id="75786-141">`do!` is defined by the `Bind(x, f)` member on the builder type, where `f` produces a `unit`.</span></span>
+
+### `yield`
+
+<span data-ttu-id="75786-142">`yield`として利用できるように、コンピュテーション式から値を返すためのキーワードは、 <xref:System.Collections.Generic.IEnumerable%601>:</span><span class="sxs-lookup"><span data-stu-id="75786-142">The `yield` keyword is for returning a value from the computation expression so that it can be consumed as an <xref:System.Collections.Generic.IEnumerable%601>:</span></span>
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 do
+            yield i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+<span data-ttu-id="75786-143">同様、 [yield キーワード (C#)](../../csharp/language-reference/keywords/yield.md)、それが反復処理にそのコンピュテーション式内の各要素が返されます。</span><span class="sxs-lookup"><span data-stu-id="75786-143">As with the [yield keyword in C#](../../csharp/language-reference/keywords/yield.md), each element in the computation expression is yielded back as it is iterated.</span></span>
+
+<span data-ttu-id="75786-144">`yield` によって定義されます、`Yield(x)`ビルダーの型のメンバー、`x`はバックアップを生成する項目です。</span><span class="sxs-lookup"><span data-stu-id="75786-144">`yield` is defined by the `Yield(x)` member on the builder type, where `x` is the item to yield back.</span></span>
+
+### `yield!`
+
+<span data-ttu-id="75786-145">`yield!`キーワードがコンピュテーション式から値のコレクションをフラット化するためには。</span><span class="sxs-lookup"><span data-stu-id="75786-145">The `yield!` keyword is for flattening a collection of values from a computation expression:</span></span>
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..3 -> i * i
+    }
+
+let cubes =
+    seq {
+        for i in 1..3 -> i * i * i
+    }
+
+let squaresAndCubes =
+    seq {
+        yield! squares
+        yield! cubes
+    }
+
+printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
+```
+
+<span data-ttu-id="75786-146">そのコンピュテーション式と呼ばれる評価されると、`yield!`がその項目になり、戻る 1 つずつ、結果をフラット化します。</span><span class="sxs-lookup"><span data-stu-id="75786-146">When evaluated, the computation expression called by `yield!` will have its items yielded back one-by-one, flattening the result.</span></span>
+
+<span data-ttu-id="75786-147">`yield!` によって定義されます、`YieldFrom(x)`ビルダーの型のメンバー、`x`値のコレクションです。</span><span class="sxs-lookup"><span data-stu-id="75786-147">`yield!` is defined by the `YieldFrom(x)` member on the builder type, where `x` is a collection of values.</span></span>
+
+### `return`
+
+<span data-ttu-id="75786-148">`return`キーワード コンピュテーション式に対応する型の値をラップします。</span><span class="sxs-lookup"><span data-stu-id="75786-148">The `return` keyword wraps a value in the type corresponding to the computation expression.</span></span> <span data-ttu-id="75786-149">使用して計算式とは別に`yield`コンピュテーション式を「完了」に使用されます。</span><span class="sxs-lookup"><span data-stu-id="75786-149">Aside from computation expressions using `yield`, it is used to "complete" a computation expression:</span></span>
+
+```fsharp
+let req = // 'req' is of type is 'Async<data>'
+    async {
+        let! data = fetch url
+        return data
+    }
+
+// 'result' is of type 'data'
+let result = Async.RunSynchronously req
+```
+
+<span data-ttu-id="75786-150">`return` によって定義されます、`Return(x)`ビルダーの型のメンバー、`x`をラップする項目。</span><span class="sxs-lookup"><span data-stu-id="75786-150">`return` is defined by the `Return(x)` member on the builder type, where `x` is the item to wrap.</span></span>
+
+### `return!`
+
+<span data-ttu-id="75786-151">`return!`キーワード コンピュテーション式の値を認識およびコンピュテーション式に対応する型でその結果をラップします。</span><span class="sxs-lookup"><span data-stu-id="75786-151">The `return!` keyword realizes the value of a computation expression and wraps that result in the type corresponding to the computation expression:</span></span>
+
+```fsharp
+let req = // 'req' is of type is 'Async<data>'
+    async {
+        return! fetch url
+    }
+
+// 'result' is of type 'data'
+let result = Async.RunSynchronously req
+```
+
+<span data-ttu-id="75786-152">`return!` によって定義されます、`ReturnFrom(x)`ビルダーの型のメンバー、`x`別の計算式です。</span><span class="sxs-lookup"><span data-stu-id="75786-152">`return!` is defined by the `ReturnFrom(x)` member on the builder type, where `x` is another computation expression.</span></span>
+
+### `match!`
+
+<span data-ttu-id="75786-153">F# 4.5、以降では、`match!`キーワードを使用するインラインを別の計算式とパターン一致の結果への呼び出し。</span><span class="sxs-lookup"><span data-stu-id="75786-153">Starting with F# 4.5, the `match!` keyword allows you to inline a call to another computation expression and pattern match on its result:</span></span>
+
+```fsharp
+let doThingsAsync url =
+    async {
+        match! callService url with
+        | Some data -> ...
+        | None -> ...
+    }
+```
+
+<span data-ttu-id="75786-154">計算式を呼び出すときに`match!`のような呼び出しの結果を実現は`let!`します。</span><span class="sxs-lookup"><span data-stu-id="75786-154">When calling a computation expression with `match!`, it will realize the result of the call like `let!`.</span></span> <span data-ttu-id="75786-155">これは、多くの場合、使用結果がコンピュテーション式を呼び出すときに、[省略可能な](options.md)します。</span><span class="sxs-lookup"><span data-stu-id="75786-155">This is often used when calling a computation expression where the result is an [optional](options.md).</span></span>
+
+## <a name="built-in-computation-expressions"></a><span data-ttu-id="75786-156">組み込みのコンピュテーション式</span><span class="sxs-lookup"><span data-stu-id="75786-156">Built-in computation expressions</span></span>
+
+<span data-ttu-id="75786-157">F# コア ライブラリが 3 つの組み込みのコンピュテーション式を定義します。[シーケンス式](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[クエリ式](query-expressions.md)します。</span><span class="sxs-lookup"><span data-stu-id="75786-157">The F# core library defines three built-in computation expressions: [Sequence Expressions](sequences.md), [Asynchronous Workflows](asynchronous-workflows.md), and [Query Expressions](query-expressions.md).</span></span>
+
+## <a name="creating-a-new-type-of-computation-expression"></a><span data-ttu-id="75786-158">コンピュテーション式の新しい型を作成します。</span><span class="sxs-lookup"><span data-stu-id="75786-158">Creating a New Type of Computation Expression</span></span>
+
+<span data-ttu-id="75786-159">ビルダー クラスを作成し、クラスの特定の特殊なメソッドを定義することは、独自のコンピュテーション式の特性を定義できます。</span><span class="sxs-lookup"><span data-stu-id="75786-159">You can define the characteristics of your own computation expressions by creating a builder class and defining certain special methods on the class.</span></span> <span data-ttu-id="75786-160">必要に応じて、ビルダー クラスは、次の表に記載されている、メソッドを定義します。</span><span class="sxs-lookup"><span data-stu-id="75786-160">The builder class can optionally define the methods as listed in the following table.</span></span>
+
+<span data-ttu-id="75786-161">次の表では、ワークフロー ビルダー クラスで使用できるメソッドについて説明します。</span><span class="sxs-lookup"><span data-stu-id="75786-161">The following table describes methods that can be used in a workflow builder class.</span></span>
+
+|<span data-ttu-id="75786-162">**メソッド**</span><span class="sxs-lookup"><span data-stu-id="75786-162">**Method**</span></span>|<span data-ttu-id="75786-163">**通常のシグネチャ**</span><span class="sxs-lookup"><span data-stu-id="75786-163">**Typical signature(s)**</span></span>|<span data-ttu-id="75786-164">**説明**</span><span class="sxs-lookup"><span data-stu-id="75786-164">**Description**</span></span>|
 |----|----|----|
-|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|<span data-ttu-id="11137-128">に対して呼び出さ`let!`と`do!`コンピュテーション式でします。</span><span class="sxs-lookup"><span data-stu-id="11137-128">Called for `let!` and `do!` in computation expressions.</span></span>|
-|`Delay`|`(unit -> M<'T>) -> M<'T>`|<span data-ttu-id="11137-129">関数として計算式をラップします。</span><span class="sxs-lookup"><span data-stu-id="11137-129">Wraps a computation expression as a function.</span></span>|
-|`Return`|`'T -> M<'T>`|<span data-ttu-id="11137-130">に対して呼び出さ`return`コンピュテーション式でします。</span><span class="sxs-lookup"><span data-stu-id="11137-130">Called for `return` in computation expressions.</span></span>|
-|`ReturnFrom`|`M<'T> -> M<'T>`|<span data-ttu-id="11137-131">に対して呼び出さ`return!`コンピュテーション式でします。</span><span class="sxs-lookup"><span data-stu-id="11137-131">Called for `return!` in computation expressions.</span></span>|
-|`Run`|<span data-ttu-id="11137-132">`M<'T> -> M<'T>` または</span><span class="sxs-lookup"><span data-stu-id="11137-132">`M<'T> -> M<'T>` or</span></span><br /><br />`M<'T> -> 'T`|<span data-ttu-id="11137-133">コンピュテーション式を実行します。</span><span class="sxs-lookup"><span data-stu-id="11137-133">Executes a computation expression.</span></span>|
-|`Combine`|<span data-ttu-id="11137-134">`M<'T> * M<'T> -> M<'T>` または</span><span class="sxs-lookup"><span data-stu-id="11137-134">`M<'T> * M<'T> -> M<'T>` or</span></span><br /><br />`M<unit> * M<'T> -> M<'T>`|<span data-ttu-id="11137-135">コンピュテーション式のシーケンスに対して呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="11137-135">Called for sequencing in computation expressions.</span></span>|
-|`For`|<span data-ttu-id="11137-136">`seq<'T> * ('T -> M<'U>) -> M<'U>` または</span><span class="sxs-lookup"><span data-stu-id="11137-136">`seq<'T> * ('T -> M<'U>) -> M<'U>` or</span></span><br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|<span data-ttu-id="11137-137">に対して呼び出さ`for...do`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="11137-137">Called for `for...do` expressions in computation expressions.</span></span>|
-|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|<span data-ttu-id="11137-138">に対して呼び出さ`try...finally`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="11137-138">Called for `try...finally` expressions in computation expressions.</span></span>|
-|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|<span data-ttu-id="11137-139">に対して呼び出さ`try...with`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="11137-139">Called for `try...with` expressions in computation expressions.</span></span>|
-|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|<span data-ttu-id="11137-140">に対して呼び出さ`use`コンピュテーション式内のバインディングです。</span><span class="sxs-lookup"><span data-stu-id="11137-140">Called for `use` bindings in computation expressions.</span></span>|
-|`While`|`(unit -> bool) * M<'T> -> M<'T>`|<span data-ttu-id="11137-141">に対して呼び出さ`while...do`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="11137-141">Called for `while...do` expressions in computation expressions.</span></span>|
-|`Yield`|`'T -> M<'T>`|<span data-ttu-id="11137-142">に対して呼び出さ`yield`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="11137-142">Called for `yield` expressions in computation expressions.</span></span>|
-|`YieldFrom`|`M<'T> -> M<'T>`|<span data-ttu-id="11137-143">に対して呼び出さ`yield!`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="11137-143">Called for `yield!` expressions in computation expressions.</span></span>|
-|`Zero`|`unit -> M<'T>`|<span data-ttu-id="11137-144">空のと呼ばれる`else`の分岐`if...then`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="11137-144">Called for empty `else` branches of `if...then` expressions in computation expressions.</span></span>|
-<span data-ttu-id="11137-145">使用し、返しますビルダー クラスでメソッドの多くは、`M<'T>`コンス トラクターは、結合された計算の種類を表すとは別に定義された型は、通常、`Async<'T>`ための非同期ワークフローおよび`Seq<'T>`ワークフローのシーケンス。</span><span class="sxs-lookup"><span data-stu-id="11137-145">Many of the methods in a builder class use and return an `M<'T>` construct, which is typically a separately defined type that characterizes the kind of computations being combined, for example, `Async<'T>` for asynchronous workflows and `Seq<'T>` for sequence workflows.</span></span> <span data-ttu-id="11137-146">これらのメソッドのシグネチャは、1 つの構築から返されるワークフロー オブジェクトは、次に渡すことができるようにそれらを結合し、互いに入れ子になった有効にします。</span><span class="sxs-lookup"><span data-stu-id="11137-146">The signatures of these methods enable them to be combined and nested with each other, so that the workflow object returned from one construct can be passed to the next.</span></span> <span data-ttu-id="11137-147">コンピュテーション式を解析する場合、コンパイラは、前の表に、メソッドとそのコンピュテーション式内のコードを使用して、一連の入れ子になった関数呼び出しに式を変換します。</span><span class="sxs-lookup"><span data-stu-id="11137-147">The compiler, when it parses a computation expression, converts the expression into a series of nested function calls by using the methods in the preceding table and the code in the computation expression.</span></span>
+|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|<span data-ttu-id="75786-165">に対して呼び出されて`let!`と`do!`コンピュテーション式で。</span><span class="sxs-lookup"><span data-stu-id="75786-165">Called for `let!` and `do!` in computation expressions.</span></span>|
+|`Delay`|`(unit -> M<'T>) -> M<'T>`|<span data-ttu-id="75786-166">コンピュテーション式として関数をラップします。</span><span class="sxs-lookup"><span data-stu-id="75786-166">Wraps a computation expression as a function.</span></span>|
+|`Return`|`'T -> M<'T>`|<span data-ttu-id="75786-167">に対して呼び出されて`return`コンピュテーション式で。</span><span class="sxs-lookup"><span data-stu-id="75786-167">Called for `return` in computation expressions.</span></span>|
+|`ReturnFrom`|`M<'T> -> M<'T>`|<span data-ttu-id="75786-168">に対して呼び出されて`return!`コンピュテーション式で。</span><span class="sxs-lookup"><span data-stu-id="75786-168">Called for `return!` in computation expressions.</span></span>|
+|`Run`|<span data-ttu-id="75786-169">`M<'T> -> M<'T>` または</span><span class="sxs-lookup"><span data-stu-id="75786-169">`M<'T> -> M<'T>` or</span></span><br /><br />`M<'T> -> 'T`|<span data-ttu-id="75786-170">コンピュテーション式を実行します。</span><span class="sxs-lookup"><span data-stu-id="75786-170">Executes a computation expression.</span></span>|
+|`Combine`|<span data-ttu-id="75786-171">`M<'T> * M<'T> -> M<'T>` または</span><span class="sxs-lookup"><span data-stu-id="75786-171">`M<'T> * M<'T> -> M<'T>` or</span></span><br /><br />`M<unit> * M<'T> -> M<'T>`|<span data-ttu-id="75786-172">コンピュテーション式でシーケンス処理と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="75786-172">Called for sequencing in computation expressions.</span></span>|
+|`For`|<span data-ttu-id="75786-173">`seq<'T> * ('T -> M<'U>) -> M<'U>` または</span><span class="sxs-lookup"><span data-stu-id="75786-173">`seq<'T> * ('T -> M<'U>) -> M<'U>` or</span></span><br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|<span data-ttu-id="75786-174">に対して呼び出されて`for...do`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="75786-174">Called for `for...do` expressions in computation expressions.</span></span>|
+|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|<span data-ttu-id="75786-175">に対して呼び出されて`try...finally`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="75786-175">Called for `try...finally` expressions in computation expressions.</span></span>|
+|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|<span data-ttu-id="75786-176">に対して呼び出されて`try...with`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="75786-176">Called for `try...with` expressions in computation expressions.</span></span>|
+|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|<span data-ttu-id="75786-177">に対して呼び出されて`use`コンピュテーション式でバインドします。</span><span class="sxs-lookup"><span data-stu-id="75786-177">Called for `use` bindings in computation expressions.</span></span>|
+|`While`|`(unit -> bool) * M<'T> -> M<'T>`|<span data-ttu-id="75786-178">に対して呼び出されて`while...do`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="75786-178">Called for `while...do` expressions in computation expressions.</span></span>|
+|`Yield`|`'T -> M<'T>`|<span data-ttu-id="75786-179">に対して呼び出されて`yield`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="75786-179">Called for `yield` expressions in computation expressions.</span></span>|
+|`YieldFrom`|`M<'T> -> M<'T>`|<span data-ttu-id="75786-180">に対して呼び出されて`yield!`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="75786-180">Called for `yield!` expressions in computation expressions.</span></span>|
+|`Zero`|`unit -> M<'T>`|<span data-ttu-id="75786-181">空のという`else`の分岐`if...then`コンピュテーション式内の式。</span><span class="sxs-lookup"><span data-stu-id="75786-181">Called for empty `else` branches of `if...then` expressions in computation expressions.</span></span>|
 
-<span data-ttu-id="11137-148">入れ子になった式は、次の形式です。</span><span class="sxs-lookup"><span data-stu-id="11137-148">The nested expression is of the following form:</span></span>
+<span data-ttu-id="75786-182">ビルダー クラスのメソッドの多くを使用し、返す、`M<'T>`コンス トラクターは、たとえば、結合している計算の種類の特性を設定するとは別に定義されている型は通常、`Async<'T>`ための非同期ワークフローと`Seq<'T>`ワークフローのシーケンス。</span><span class="sxs-lookup"><span data-stu-id="75786-182">Many of the methods in a builder class use and return an `M<'T>` construct, which is typically a separately defined type that characterizes the kind of computations being combined, for example, `Async<'T>` for asynchronous workflows and `Seq<'T>` for sequence workflows.</span></span> <span data-ttu-id="75786-183">これらのメソッドのシグネチャは、1 つの構築から返されるワークフロー オブジェクトは、次に渡すことができるようにそれらを結合し、相互に入れ子に有効にします。</span><span class="sxs-lookup"><span data-stu-id="75786-183">The signatures of these methods enable them to be combined and nested with each other, so that the workflow object returned from one construct can be passed to the next.</span></span> <span data-ttu-id="75786-184">計算式を解析するとき、コンパイラは、上記の表に、メソッドとそのコンピュテーション式のコードを使用して、一連の入れ子になった関数呼び出しに式を変換します。</span><span class="sxs-lookup"><span data-stu-id="75786-184">The compiler, when it parses a computation expression, converts the expression into a series of nested function calls by using the methods in the preceding table and the code in the computation expression.</span></span>
+
+<span data-ttu-id="75786-185">入れ子になった式は、次の形式では。</span><span class="sxs-lookup"><span data-stu-id="75786-185">The nested expression is of the following form:</span></span>
 
 ```fsharp
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-<span data-ttu-id="11137-149">上記のコードへの呼び出しで`Run`と`Delay`コンピュテーション式ビルダー クラスで定義されていない場合は省略します。</span><span class="sxs-lookup"><span data-stu-id="11137-149">In the above code, the calls to `Run` and `Delay` are omitted if they are not defined in the computation expression builder class.</span></span> <span data-ttu-id="11137-150">としてここに示される、コンピュテーション式の本体`{| cexpr |}`は、次の表で説明の翻訳でビルダー クラスのメソッドに関連する呼び出しに変換します。</span><span class="sxs-lookup"><span data-stu-id="11137-150">The body of the computation expression, here denoted as `{| cexpr |}`, is translated into calls involving the methods of the builder class by the translations described in the following table.</span></span> <span data-ttu-id="11137-151">コンピュテーション式`{| cexpr |}`に従ってこれらの変換を再帰的に定義されているは、 `expr` f# の式と`cexpr`コンピュテーション式です。</span><span class="sxs-lookup"><span data-stu-id="11137-151">The computation expression `{| cexpr |}` is defined recursively according to these translations where `expr` is an F# expression and `cexpr` is a computation expression.</span></span>
+<span data-ttu-id="75786-186">上記のコードへの呼び出しで`Run`と`Delay`計算式ビルダー クラスで定義されていない場合は省略します。</span><span class="sxs-lookup"><span data-stu-id="75786-186">In the above code, the calls to `Run` and `Delay` are omitted if they are not defined in the computation expression builder class.</span></span> <span data-ttu-id="75786-187">としてここで示される、計算式の本体`{| cexpr |}`は、次の表で説明されている翻訳によってビルダー クラスのメソッドに関連する呼び出しに変換されます。</span><span class="sxs-lookup"><span data-stu-id="75786-187">The body of the computation expression, here denoted as `{| cexpr |}`, is translated into calls involving the methods of the builder class by the translations described in the following table.</span></span> <span data-ttu-id="75786-188">コンピュテーション式`{| cexpr |}`に従ってこれらの変換を再帰的に定義されているは、 `expr` f# の式と`cexpr`計算式です。</span><span class="sxs-lookup"><span data-stu-id="75786-188">The computation expression `{| cexpr |}` is defined recursively according to these translations where `expr` is an F# expression and `cexpr` is a computation expression.</span></span>
 
 
 
-|<span data-ttu-id="11137-152">正規表現</span><span class="sxs-lookup"><span data-stu-id="11137-152">Expression</span></span>|<span data-ttu-id="11137-153">変換</span><span class="sxs-lookup"><span data-stu-id="11137-153">Translation</span></span>|
+|<span data-ttu-id="75786-189">正規表現</span><span class="sxs-lookup"><span data-stu-id="75786-189">Expression</span></span>|<span data-ttu-id="75786-190">変換</span><span class="sxs-lookup"><span data-stu-id="75786-190">Translation</span></span>|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{&#124; let! pattern = expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
@@ -85,9 +253,9 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 |<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
 |<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
 |<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
-<span data-ttu-id="11137-154">前の表に`other-expr`それ以外の場合、表に一覧表示されていない式を記述します。</span><span class="sxs-lookup"><span data-stu-id="11137-154">In the previous table, `other-expr` describes an expression that is not otherwise listed in the table.</span></span> <span data-ttu-id="11137-155">ビルダー クラスは、前の表に、翻訳をすべてサポートしているすべてのメソッドを実装する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="11137-155">A builder class does not need to implement all of the methods and support all of the translations listed in the previous table.</span></span> <span data-ttu-id="11137-156">実装されていないこれらのコンストラクトでは、その型の計算式で使用できません。</span><span class="sxs-lookup"><span data-stu-id="11137-156">Those constructs that are not implemented are not available in computation expressions of that type.</span></span> <span data-ttu-id="11137-157">たとえば、サポートしない場合、 `use` 、コンピュテーション式のキーワードの定義を省略することができます`Use`ビルダー クラスにします。</span><span class="sxs-lookup"><span data-stu-id="11137-157">For example, if you do not want to support the `use` keyword in your computation expressions, you can omit the definition of `Use` in your builder class.</span></span>
+<span data-ttu-id="75786-191">前の表に`other-expr`それ以外の場合、表に一覧表示されない式について説明します。</span><span class="sxs-lookup"><span data-stu-id="75786-191">In the previous table, `other-expr` describes an expression that is not otherwise listed in the table.</span></span> <span data-ttu-id="75786-192">ビルダー クラスは、すべてのメソッドを実装し、前の表に、翻訳のすべてをサポートする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="75786-192">A builder class does not need to implement all of the methods and support all of the translations listed in the previous table.</span></span> <span data-ttu-id="75786-193">実装されていないこれらのコンストラクトでは、その型のコンピュテーション式で使用できません。</span><span class="sxs-lookup"><span data-stu-id="75786-193">Those constructs that are not implemented are not available in computation expressions of that type.</span></span> <span data-ttu-id="75786-194">例では、サポートしない場合、 `use` 、コンピュテーション式、キーワードの定義を省略できます`Use`ビルダー クラスにします。</span><span class="sxs-lookup"><span data-stu-id="75786-194">For example, if you do not want to support the `use` keyword in your computation expressions, you can omit the definition of `Use` in your builder class.</span></span>
 
-<span data-ttu-id="11137-158">次のコード例では、一連の手順を実行することができる、一度に 1 つのステップを評価する計算をカプセル化する計算式を示します。</span><span class="sxs-lookup"><span data-stu-id="11137-158">The following code example shows a computation expression that encapsulates a computation as a series of steps that can be evaluated one step at a time.</span></span> <span data-ttu-id="11137-159">A 判別共用体型、 `OkOrException`、これまでに評価された式のエラー状態をエンコードします。</span><span class="sxs-lookup"><span data-stu-id="11137-159">A discriminated union type, `OkOrException`, encodes the error state of the expression as evaluated so far.</span></span> <span data-ttu-id="11137-160">このコードでは、ビルダー メソッドのいくつかの定型実装など、コンピュテーション式で使用できるいくつかの一般的なパターンを示します。</span><span class="sxs-lookup"><span data-stu-id="11137-160">This code demonstrates several typical patterns that you can use in your computation expressions, such as boilerplate implementations of some of the builder methods.</span></span>
+<span data-ttu-id="75786-195">次のコード例では、一連のことができる手順を一度に 1 つのステップを評価すると、計算をカプセル化する計算式を示します。</span><span class="sxs-lookup"><span data-stu-id="75786-195">The following code example shows a computation expression that encapsulates a computation as a series of steps that can be evaluated one step at a time.</span></span> <span data-ttu-id="75786-196">A 判別共用体型、 `OkOrException`、これまでに評価された式のエラー状態をエンコードします。</span><span class="sxs-lookup"><span data-stu-id="75786-196">A discriminated union type, `OkOrException`, encodes the error state of the expression as evaluated so far.</span></span> <span data-ttu-id="75786-197">このコードは、ビルダー メソッドのいくつかの定型実装など、コンピュテーション式で使用できるいくつかの一般的なパターンを示しています。</span><span class="sxs-lookup"><span data-stu-id="75786-197">This code demonstrates several typical patterns that you can use in your computation expressions, such as boilerplate implementations of some of the builder methods.</span></span>
 
 ```fsharp
 // Computations that can be run step by step
@@ -215,16 +383,29 @@ comp |> step |> step |> step |> step |> step |> step
 comp |> step |> step |> step |> step |> step |> step |> step |> step
 ```
 
-<span data-ttu-id="11137-161">コンピュテーション式が、式から返される、基になる型です。</span><span class="sxs-lookup"><span data-stu-id="11137-161">A computation expression has an underlying type, which the expression returns.</span></span> <span data-ttu-id="11137-162">計算の結果または遅延の計算を実行できる、基になる型を表すことがありますか、それに何らかの種類のコレクションを反復処理手段を提供することがあります。</span><span class="sxs-lookup"><span data-stu-id="11137-162">The underlying type may represent a computed result or a delayed computation that can be performed, or it may provide a way to iterate through some type of collection.</span></span> <span data-ttu-id="11137-163">前の例では、基になる型は**最終的に**です。</span><span class="sxs-lookup"><span data-stu-id="11137-163">In the previous example, the underlying type was **Eventually**.</span></span> <span data-ttu-id="11137-164">シーケンス式では、基になる型は<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>します。</span><span class="sxs-lookup"><span data-stu-id="11137-164">For a sequence expression, the underlying type is <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.</span></span> <span data-ttu-id="11137-165">クエリ式では、基になる型は<xref:System.Linq.IQueryable?displayProperty=nameWithType>します。</span><span class="sxs-lookup"><span data-stu-id="11137-165">For a query expression, the underlying type is <xref:System.Linq.IQueryable?displayProperty=nameWithType>.</span></span> <span data-ttu-id="11137-166">非同期ワークフローでは、基になる型は[ `Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)です。</span><span class="sxs-lookup"><span data-stu-id="11137-166">For an asychronous workflow, the underlying type is [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7).</span></span> <span data-ttu-id="11137-167">`Async`オブジェクトは結果を計算するために実行する作業を表します。</span><span class="sxs-lookup"><span data-stu-id="11137-167">The `Async` object represents the work to be performed to compute the result.</span></span> <span data-ttu-id="11137-168">たとえば、呼び出す[ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)計算を実行し、結果を返すにします。</span><span class="sxs-lookup"><span data-stu-id="11137-168">For example, you call [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) to execute a computation and return the result.</span></span>
+<span data-ttu-id="75786-198">コンピュテーション式には、式から返される、基になる型があります。</span><span class="sxs-lookup"><span data-stu-id="75786-198">A computation expression has an underlying type, which the expression returns.</span></span> <span data-ttu-id="75786-199">計算の結果または遅延の計算を実行できる、基になる型を表すことがあります。 または何らかの種類のコレクションを反復処理する方法を提供できます。</span><span class="sxs-lookup"><span data-stu-id="75786-199">The underlying type may represent a computed result or a delayed computation that can be performed, or it may provide a way to iterate through some type of collection.</span></span> <span data-ttu-id="75786-200">前の例では、基になる型が**最終的に**します。</span><span class="sxs-lookup"><span data-stu-id="75786-200">In the previous example, the underlying type was **Eventually**.</span></span> <span data-ttu-id="75786-201">シーケンス式では、基になる型は<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>します。</span><span class="sxs-lookup"><span data-stu-id="75786-201">For a sequence expression, the underlying type is <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.</span></span> <span data-ttu-id="75786-202">クエリ式では、基になる型は<xref:System.Linq.IQueryable?displayProperty=nameWithType>します。</span><span class="sxs-lookup"><span data-stu-id="75786-202">For a query expression, the underlying type is <xref:System.Linq.IQueryable?displayProperty=nameWithType>.</span></span> <span data-ttu-id="75786-203">非同期ワークフローでは、基になる型は[ `Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)します。</span><span class="sxs-lookup"><span data-stu-id="75786-203">For an asynchronous workflow, the underlying type is [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7).</span></span> <span data-ttu-id="75786-204">`Async`オブジェクトは、結果を計算するために実行する作業を表します。</span><span class="sxs-lookup"><span data-stu-id="75786-204">The `Async` object represents the work to be performed to compute the result.</span></span> <span data-ttu-id="75786-205">たとえば、呼び出す[ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)計算を実行し、結果が返されます。</span><span class="sxs-lookup"><span data-stu-id="75786-205">For example, you call [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) to execute a computation and return the result.</span></span>
 
-## <a name="custom-operations"></a><span data-ttu-id="11137-169">カスタム操作</span><span class="sxs-lookup"><span data-stu-id="11137-169">Custom Operations</span></span>
-<span data-ttu-id="11137-170">コンピュテーション式のカスタム処理を定義し、コンピュテーション式では演算子として、カスタム操作を使用できます。</span><span class="sxs-lookup"><span data-stu-id="11137-170">You can define a custom operation on a computation expression and use a custom operation as an operator in a computation expression.</span></span> <span data-ttu-id="11137-171">たとえば、クエリ式ではクエリ演算子を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="11137-171">For example, you can include a query operator in a query expression.</span></span> <span data-ttu-id="11137-172">カスタムの操作を定義するときは、結果を定義する必要がありますとコンピュテーション式内のメソッドです。</span><span class="sxs-lookup"><span data-stu-id="11137-172">When you define a custom operation, you must define the Yield and For methods in the computation expression.</span></span> <span data-ttu-id="11137-173">カスタム操作を定義するのには、コンピュテーション式のビルダー クラスに配置し、適用、 [ `CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)です。</span><span class="sxs-lookup"><span data-stu-id="11137-173">To define a custom operation, put it in a builder class for the computation expression, and then apply the [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19).</span></span> <span data-ttu-id="11137-174">この属性は、これは、カスタム操作で使用する名前、引数として文字列を使用します。</span><span class="sxs-lookup"><span data-stu-id="11137-174">This attribute takes a string as an argument, which is the name to be used in a custom operation.</span></span> <span data-ttu-id="11137-175">この名前は、スコープ コンピュテーション式の始め中かっこの開始時に渡されます。</span><span class="sxs-lookup"><span data-stu-id="11137-175">This name comes into scope at the start of the opening curly brace of the computation expression.</span></span> <span data-ttu-id="11137-176">そのため、このブロックで、カスタム操作と同じ名前のある識別子を使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="11137-176">Therefore, you shouldn’t use identifiers that have the same name as a custom operation in this block.</span></span> <span data-ttu-id="11137-177">たとえばなどの識別子の使用を回避`all`または`last`クエリ式でします。</span><span class="sxs-lookup"><span data-stu-id="11137-177">For example, avoid the use of identifiers such as `all` or `last` in query expressions.</span></span>
+## <a name="custom-operations"></a><span data-ttu-id="75786-206">カスタム操作</span><span class="sxs-lookup"><span data-stu-id="75786-206">Custom Operations</span></span>
+<span data-ttu-id="75786-207">コンピュテーション式のカスタム処理を定義し、オペレーターはコンピュテーション式でカスタム操作を使用できます。</span><span class="sxs-lookup"><span data-stu-id="75786-207">You can define a custom operation on a computation expression and use a custom operation as an operator in a computation expression.</span></span> <span data-ttu-id="75786-208">たとえば、クエリ式でクエリ演算子を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="75786-208">For example, you can include a query operator in a query expression.</span></span> <span data-ttu-id="75786-209">カスタム操作を定義するときに、Yield を定義する必要がありますとコンピュテーション式内のメソッド。</span><span class="sxs-lookup"><span data-stu-id="75786-209">When you define a custom operation, you must define the Yield and For methods in the computation expression.</span></span> <span data-ttu-id="75786-210">カスタム操作を定義するには、そのコンピュテーション式のビルダー クラスに配置し、適用、 [ `CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)します。</span><span class="sxs-lookup"><span data-stu-id="75786-210">To define a custom operation, put it in a builder class for the computation expression, and then apply the [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19).</span></span> <span data-ttu-id="75786-211">この属性は、カスタム操作で使用する名前を引数として文字列を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="75786-211">This attribute takes a string as an argument, which is the name to be used in a custom operation.</span></span> <span data-ttu-id="75786-212">この名前は、そのコンピュテーション式の中かっこの開始時のスコープに渡されます。</span><span class="sxs-lookup"><span data-stu-id="75786-212">This name comes into scope at the start of the opening curly brace of the computation expression.</span></span> <span data-ttu-id="75786-213">そのため、このブロックでカスタム操作と同じ名前を指定する識別子を使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="75786-213">Therefore, you shouldn’t use identifiers that have the same name as a custom operation in this block.</span></span> <span data-ttu-id="75786-214">たとえばなどの識別子の使用を避ける`all`または`last`クエリ式で。</span><span class="sxs-lookup"><span data-stu-id="75786-214">For example, avoid the use of identifiers such as `all` or `last` in query expressions.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="11137-178">関連項目</span><span class="sxs-lookup"><span data-stu-id="11137-178">See Also</span></span>
-[<span data-ttu-id="11137-179">F# 言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="11137-179">F# Language Reference</span></span>](index.md)
+### <a name="extending-existing-builders-with-new-custom-operations"></a><span data-ttu-id="75786-215">新しいカスタム操作で既存のビルダーを拡張します。</span><span class="sxs-lookup"><span data-stu-id="75786-215">Extending existing Builders with new Custom Operations</span></span>
+<span data-ttu-id="75786-216">ビルダー クラスは、既にある場合は、このビルダー クラスの外部からのカスタム操作が拡張できます。</span><span class="sxs-lookup"><span data-stu-id="75786-216">If you already have a builder class, its custom operations can be extended from outside of this builder class.</span></span> <span data-ttu-id="75786-217">拡張機能は、モジュール内で宣言する必要があります。</span><span class="sxs-lookup"><span data-stu-id="75786-217">Extensions must be declared in modules.</span></span> <span data-ttu-id="75786-218">名前空間には、同じファイルで、型が定義されている同じ名前空間宣言のグループを除く拡張メンバーを含めることはできません。</span><span class="sxs-lookup"><span data-stu-id="75786-218">Namespaces cannot contain extension members except in the same file and the same namespace declaration group where the type is defined.</span></span>
 
-[<span data-ttu-id="11137-180">非同期ワークフロー</span><span class="sxs-lookup"><span data-stu-id="11137-180">Asynchronous Workflows</span></span>](asynchronous-workflows.md)
+<span data-ttu-id="75786-219">次の例は、既存の拡張機能`Microsoft.FSharp.Linq.QueryBuilder`クラス。</span><span class="sxs-lookup"><span data-stu-id="75786-219">The following example shows the extension of the existing `Microsoft.FSharp.Linq.QueryBuilder` class.</span></span>
 
-[<span data-ttu-id="11137-181">シーケンス</span><span class="sxs-lookup"><span data-stu-id="11137-181">Sequences</span></span>](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+```fsharp
+type Microsoft.FSharp.Linq.QueryBuilder with
 
-[<span data-ttu-id="11137-182">クエリ式</span><span class="sxs-lookup"><span data-stu-id="11137-182">Query Expressions</span></span>](query-expressions.md)
+    [<CustomOperation("existsNot")>]
+    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+        Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
+```
+
+## <a name="see-also"></a><span data-ttu-id="75786-220">関連項目</span><span class="sxs-lookup"><span data-stu-id="75786-220">See Also</span></span>
+[<span data-ttu-id="75786-221">F# 言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="75786-221">F# Language Reference</span></span>](index.md)
+
+[<span data-ttu-id="75786-222">非同期ワークフロー</span><span class="sxs-lookup"><span data-stu-id="75786-222">Asynchronous Workflows</span></span>](asynchronous-workflows.md)
+
+[<span data-ttu-id="75786-223">シーケンス</span><span class="sxs-lookup"><span data-stu-id="75786-223">Sequences</span></span>](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+
+[<span data-ttu-id="75786-224">クエリ式</span><span class="sxs-lookup"><span data-stu-id="75786-224">Query Expressions</span></span>](query-expressions.md)
