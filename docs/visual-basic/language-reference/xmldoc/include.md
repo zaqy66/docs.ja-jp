@@ -6,14 +6,14 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: 65bc0439696612cd8331a9c0718efcfee83af574
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33602737"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;含める&gt;(Visual Basic)
-型と、ソース コード内のメンバーを表す別のファイルを参照します。  
+型と、ソース コード内のメンバーを記述する別のファイルを参照します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -23,24 +23,24 @@ ms.locfileid: "33602737"
   
 #### <a name="parameters"></a>パラメーター  
  `filename`  
- 必須。 ドキュメントを含むファイルの名前。 ファイル名をパスで修飾することができます。 囲む`filename`を二重引用符 ("") です。  
+ 必須。 文書を含むファイルの名前。 ファイル名をパスで修飾することができます。 囲む`filename`で二重引用符 ("")。  
   
  `tagpath`  
- 必須。 タグ `name` につながる `filename` 内のタグのパス。 パスを二重引用符で囲みます ("") です。  
+ 必須。 タグ `name` につながる `filename` 内のタグのパス。 パスを二重引用符で囲みます ("")。  
   
  `name`  
- 必須。 コメントの前に、タグの名前指定子。 `Name` `id`です。  
+ 必須。 コメントの前にあるタグの名前指定子。 `Name` 必要があります、`id`します。  
   
  `id`  
  必須。 コメントの前に配置するタグの ID。 ID を単一引用符で囲みます (' ')。  
   
-## <a name="remarks"></a>コメント  
- 使用して、`<include>`タイプを記述する別のファイル内のコメントおよびソース コード内のメンバーを参照するタグです。 これは文書化のコメントをソース コード ファイル内に直接配置する方法の代替です。  
+## <a name="remarks"></a>Remarks  
+ 使用して、`<include>`タグをソース コード内のメンバーと型を記述する別のファイル内のコメントを参照してください。 これは文書化のコメントをソース コード ファイル内に直接配置する方法の代替です。  
   
- `<include>`タグは、W3C XML Path Language (XPath) Version 1.0 の推奨設定を使用します。 カスタマイズする方法の詳細については、`<include>`使用については、「http://www.w3.org/TR/xpathです。  
+ `<include>`タグは、W3C XML Path Language (XPath) Version 1.0 』 を使用します。 カスタマイズする方法の詳細については、`<include>`使用については、「http://www.w3.org/TR/xpathします。  
   
 ## <a name="example"></a>例  
- この例では、`<include>`メンバー ドキュメント コメントをという名前のファイルからインポートするタグ`commentFile.xml`です。  
+ この例では、`<include>`メンバー ドキュメントのコメントをという名前のファイルからインポートするタグ`commentFile.xml`します。  
   
  [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
