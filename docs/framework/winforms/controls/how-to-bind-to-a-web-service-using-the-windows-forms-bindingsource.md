@@ -32,7 +32,7 @@ XML Web サービスを呼び出して取得した結果に対して Windows フ
   
 4.  WSDL ツールを使用して、`wsdl`、および Web サービスの .asmx ファイルまたは WSDL ファイルの URL を入力し、次にアプリケーションの名前空間を入力し、使用している言語 (これはオプション) を入力します。  
   
-     次のコード例にある Web サービスを使用してhttp://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmxです。 たとえば、C# の型の場合は `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`、Visual Basic の型の場合は `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB` です。 パスを引数として WSDL ツールに渡すことで、指定した言語で、アプリケーションと同じディレクトリおよび名前空間にクライアント側プロキシが生成されます。 Visual Studio を使用している場合、ファイルをプロジェクトに追加します。  
+     次のコード例にある Web サービスを使用して http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmxです。 たとえば、C# の型の場合は `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`、Visual Basic の型の場合は `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB` です。 パスを引数として WSDL ツールに渡すことで、指定した言語で、アプリケーションと同じディレクトリおよび名前空間にクライアント側プロキシが生成されます。 Visual Studio を使用している場合、ファイルをプロジェクトに追加します。  
   
 5.  バインド先のクライアント側プロキシの型を選択します。  
   
