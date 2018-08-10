@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33339619"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 戻り値と ref ローカル変数
@@ -35,16 +35,19 @@ C# 7.0 以降の C# は参照戻り値 (ref 戻り値) に対応しています�
  
 ## <a name="defining-a-ref-return-value"></a>ref 戻り値の定義
 
-戻り値を定義するには、メソッド シグネチャの戻り値の型に [ref](../../language-reference/keywords/ref.md) キーワードを追加します。 たとえば、次のシグネチャは、`GetContactInformation` プロパティが `Person` オブジェクトへの参照を呼び出し元に返すことを示しています。
+"*参照戻り値*" を返すメソッドは、次の 2 つの条件を満たす必要があります。
+
+- メソッドのシグネチャで、戻り値の型の前にキーワード [ref](../../language-reference/keywords/ref.md) が含まれること。
+- メソッド本体の各 [return](../../language-reference/keywords/return.md) ステートメントで、返されるインスタンスの名前の前に [ref](../../language-reference/keywords/ref.md) キーワードが含まれること。
+
+これらの条件を満たし、`p` という名前の `Person` オブジェクトへの参照を返すメソッドを、次の例に示します。
 
 ```csharp
-public ref Person GetContactInformation(string fname, string lname);
-```
-
-さらに、メソッド本文の各 [return](../../language-reference/keywords/return.md) ステートメントによって返されるオブジェクトの名前の前に、[ref](../../language-reference/keywords/ref.md) キーワードが必要です。 たとえば、次の `return` ステートメントは、`p` という名前の `Person` オブジェクトに参照を返します。
-
-```csharp
-return ref p;
+public ref Person GetContactInformation(string fname, string lname)
+{
+    // ...method implementation...
+    return ref p;
+}
 ```
 
 ## <a name="consuming-a-ref-return-value"></a>ref 戻り値の使用
