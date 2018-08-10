@@ -148,7 +148,7 @@ ms.locfileid: "33558175"
   
 <a name="specifying_the_path_to_the_value"></a>   
 ### <a name="specifying-the-path-to-the-value"></a>値にパスを指定する  
- バインディング ソースがオブジェクトの場合を使用する、<xref:System.Windows.Data.Binding.Path%2A>プロパティに、バインディングに使用する値を指定します。 バインドする場合[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]、データを使用する、<xref:System.Windows.Data.Binding.XPath%2A>プロパティの値を指定します。 場合によっては、使用に適用可能な場合があります、<xref:System.Windows.Data.Binding.Path%2A>場合でも、データ プロパティ[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]です。 たとえば、(XPath クエリ) の結果として返される XmlNode の Name プロパティにアクセスする場合は、する必要がありますを使用して、<xref:System.Windows.Data.Binding.Path%2A>プロパティのほか、<xref:System.Windows.Data.Binding.XPath%2A>プロパティです。  
+ バインディング ソースがオブジェクトの場合を使用する、<xref:System.Windows.Data.Binding.Path%2A>プロパティに、バインディングに使用する値を指定します。 バインドする場合[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]、データを使用する、<xref:System.Windows.Data.Binding.XPath%2A>プロパティの値を指定します。 場合によっては、使用に適用可能な場合があります、<xref:System.Windows.Data.Binding.Path%2A>場合でも、データ プロパティ[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]です。 たとえば、(XPath クエリ) の結果として返される XmlNode の Name プロパティにアクセスする場合は、<xref:System.Windows.Data.Binding.XPath%2A>プロパティのほか<xref:System.Windows.Data.Binding.Path%2A>プロパティを使用する必要があります。  
   
  構文と例については、次を参照してください。、<xref:System.Windows.Data.Binding.Path%2A>と<xref:System.Windows.Data.Binding.XPath%2A>プロパティ ページ。  
   
