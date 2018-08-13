@@ -21,7 +21,7 @@ URI http://www.w3.org/XML/1998/namespace XML 名前空間の宣言に使用さ�
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   XML 名前空間の宣言を削除するか、URI を置き換えてhttp://www.w3.org/XML/1998/namespaceで有効な名前空間 URI。  
+-   XML 名前空間の宣言を削除するか、URI を置き換えて http://www.w3.org/XML/1998/namespace で有効な名前空間 URI。  
   
 ## <a name="see-also"></a>関連項目  
  [Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  

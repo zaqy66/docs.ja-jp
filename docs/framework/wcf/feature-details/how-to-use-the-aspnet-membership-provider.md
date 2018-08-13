@@ -85,20 +85,20 @@ ms.locfileid: "33495295"
   
 ### <a name="to-configure-a-service-to-use-the-membership-provider"></a>メンバーシップ プロバイダーを使用するようにサービスを構成するには  
   
-1.  `<system.serviceModel>`要素の子として [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 要素を追加
-
-2.  `<behaviors>` 要素に [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) を追加
-
-3.  [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) を追加し、`name` 属性に適切な値を設定
-
-4.  `<behavior>` 要素に [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) を追加
-
-5.  `<serviceCredentials>` 要素に [\<userNameAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) を追加
-
-6.  `userNamePasswordValidationMode` 属性に `MembershipProvider` を設定
+1.  子として、`<system.serviceModel>`要素を追加、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)要素  
+  
+2.  追加、 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)に、<`behaviors`> 要素。  
+  
+3.  追加、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)設定と、`name`属性を適切な値にします。  
+  
+4.  追加、 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)に、<`behavior`> 要素。  
+  
+5.  追加、 [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)を`<serviceCredentials>`要素。  
+  
+6.  `userNamePasswordValidationMode` 属性に `MembershipProvider` を設定  
   
     > [!IMPORTANT]
-    >  `userNamePasswordValidationMode` に値が設定されていない場合、WCF は [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] メンバーシップ プロバイダー の代わりに Windows 認証を使用します。
+    >  場合、`userNamePasswordValidationMode`値が設定されていない、WCF の代わりに Windows 認証を使用して、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]メンバーシップ プロバイダー。  
   
 7.  `membershipProviderName` 属性をプロバイダーの名前 (このトピックの最初の手順でプロバイダーを追加したときに指定したもの) に設定します。 次の例に、この時点での `<serviceCredentials>` のフラグメントを示します。  
   
