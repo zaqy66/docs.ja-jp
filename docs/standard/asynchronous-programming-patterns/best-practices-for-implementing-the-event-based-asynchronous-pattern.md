@@ -13,10 +13,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: 519c22e3c2647e2ae3423688b468e133a3e5eb84
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.sourcegitcommit: 7d13f17bf901751d0169f921a02a6b34541a9eca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
+ms.lasthandoff: 08/16/2018
 ms.locfileid: "37937115"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンを実装するための推奨される手順
@@ -35,9 +35,9 @@ ms.locfileid: "37937115"
   
 -   メソッドと同じクラスで <em>MethodName</em>**Completed** イベントを定義します。  
   
--   <xref:System.ComponentModel.AsyncCompletedEventArgs> クラスから派生した <em>MethodName</em>**Completed** イベントの <xref:System.EventArgs> クラスと、これに付随するデリゲートを定義します。 既定のクラス名の形式は、*MethodName***CompletedEventArgs** です。  
+-   <xref:System.ComponentModel.AsyncCompletedEventArgs> クラスから派生した <em>MethodName</em>**Completed** イベントの <xref:System.EventArgs> クラスと、これに付随するデリゲートを定義します。 既定のクラス名の形式は、<em>MethodName</em>**CompletedEventArgs** です。  
   
--   <xref:System.EventArgs> クラスは、*MethodName* メソッドの戻り値に固有のクラスにしてください。 <xref:System.EventArgs> クラスを使用する場合は、開発者に対して結果をキャストすることを義務付けないでください。  
+-   <xref:System.EventArgs> クラスは、<em>MethodName</em> メソッドの戻り値に固有のクラスにしてください。 <xref:System.EventArgs> クラスを使用する場合は、開発者に対して結果をキャストすることを義務付けないでください。  
   
      設計要件の適切な実装と不適切な実装を次のコード例に示します。  
   
@@ -57,27 +57,27 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   <xref:System.EventArgs> を返すメソッドのために `void` クラスを定義しないでください。 代わりに <xref:System.ComponentModel.AsyncCompletedEventArgs> クラスのインスタンスを使用してください。  
   
--   常に *MethodName***Completed** イベントを発生させてください。 このイベントは、正常完了、エラー、またはキャンセル時に発生する必要があります。 アプリケーションがアイドルになり完了しない状態が発生してはなりません。  
+-   必ず常に <em>MethodName</em>**Completed** イベントを発生させます。 このイベントは、正常完了、エラー、またはキャンセル時に発生する必要があります。 アプリケーションがアイドルになり完了しない状態が発生してはなりません。  
   
 -   非同期操作で発生した例外をすべてキャッチし、キャッチした例外を <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> プロパティに割り当ててください。  
   
 -   タスクの実行中にエラーが発生した場合は、結果にアクセスできないようにしてください。 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> プロパティが `null` ではない場合は、<xref:System.EventArgs> 構造体のプロパティにアクセスすると例外が発生するようにしてください。 この検証を行うには、<xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A> メソッドを使用します。  
   
--   タイムアウトをエラーとしてモデル化します。 タイムアウトが発生したら、*MethodName***Completed** イベントを発生させ、<xref:System.TimeoutException> を <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> プロパティに割り当てます。  
+-   タイムアウトをエラーとしてモデル化します。 タイムアウトが発生したら、<em>MethodName</em>**Completed** イベントを発生させ、<xref:System.TimeoutException> を <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> プロパティに割り当てます。  
   
--   クラスで複数の同時呼び出しがサポートされている場合は、*MethodName***Completed** イベントに適切な `userSuppliedState` オブジェクトが含まれるようにしてください。  
+-   クラスで複数の同時呼び出しがサポートされている場合は、必ず <em>MethodName</em>**Completed** イベントに適切な `userSuppliedState` オブジェクトが含まれるようにします。  
   
--   *MethodName***Completed** イベントが、適切なスレッドでアプリケーション サイクルの適切な時点で発生するようにしてください。 詳細については、「スレッド処理およびコンテキスト」を参照してください。  
+-   <em>MethodName</em>**Completed** イベントが、適切なスレッドでアプリケーション サイクルの適切な時点で発生するようにしてください。 詳細については、「スレッド処理およびコンテキスト」を参照してください。  
   
 ### <a name="simultaneously-executing-operations"></a>操作の同時実行  
   
--   クラスで複数の同時呼び出しがサポートされている場合は、開発者が各呼び出しを個別に追跡できるようにするため、オブジェクト値状態パラメーターまたはタスク ID `userSuppliedState` を受け取る *MethodName***Async** オーバーライドを定義します。 このパラメーターは、常に *MethodName***Async** メソッドのシグネチャの最終パラメーターにする必要があります。  
+-   クラスで複数の同時呼び出しがサポートされている場合は、開発者が各呼び出しを個別に追跡できるようにするため、`userSuppliedState` というオブジェクト値状態パラメーター、またはタスク ID を受け取る <em>MethodName</em>**Async** オーバーライドを定義します。 このパラメーターは、常に <em>MethodName</em>**Async** メソッドのシグネチャの最終パラメーターにする必要があります。  
   
--   オブジェクト値状態パラメーターまたはタスク ID を受け取る *MethodName***Async** オーバーロードがクラスによって定義される場合は、そのタスク ID の操作の有効期間を追跡し、完了ハンドラーに戻す必要があります。 役に立つヘルパー クラスがあります。 同時実行管理の詳細については、「[チュートリアル: イベント ベースの非同期パターンをサポートするコンポーネントを実装する](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)」を参照してください。  
+-   オブジェクト値状態パラメーターまたはタスク ID を受け取る <em>MethodName</em>**Async** オーバーロードがクラスによって定義される場合は、そのタスク ID の操作の有効期間を追跡し、完了ハンドラーに戻す必要があります。 役に立つヘルパー クラスがあります。 同時実行管理について詳しくは、「[方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)」をご覧ください。  
   
--   クラスによって、状態パラメーターなしで *MethodName***Async** メソッドが定義され、このクラスで複数の同時呼び出しがサポートされていない場合、直前の *MethodName***Async** 呼び出しが完了する前に *MethodName***Async** を呼び出そうとすると、<xref:System.InvalidOperationException> が発生するようにします。  
+-   クラスによって、状態パラメーターなしで <em>MethodName</em>**Async** メソッドが定義され、このクラスで複数の同時呼び出しがサポートされていない場合、直前の <em>MethodName</em>**Async** 呼び出しが完了する前に <em>MethodName</em>**Async** を呼び出そうとすると、<xref:System.InvalidOperationException> が発生するようにします。  
   
--   一般に、`userSuppliedState` パラメーターのない *MethodName***Async** メソッドを複数回呼び出すときには、複数の未完了操作が存在するようにするため、例外を発生させないでください。 例外を発生させることができるのは、クラスがその状況に対処できないことが明らかであるものの、開発者がこのような区別できない複数のコールバックを処理できる場合です。  
+-   一般に、`userSuppliedState` パラメーターのない <em>MethodName</em>**Async** メソッドを複数回呼び出すときには、複数の未完了操作が存在するようにするため、例外を発生させないでください。 例外を発生させることができるのは、クラスがその状況に対処できないことが明らかであるものの、開発者がこのような区別できない複数のコールバックを処理できる場合です。  
   
 ### <a name="accessing-results"></a>結果へのアクセス  
   
@@ -89,7 +89,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   可能であれば、進行状況レポートをサポートします。 これにより、開発者はクラスを使用する際に、より優れたアプリケーション ユーザー エクスペリエンスを提供できます。  
   
--   **ProgressChanged** または *MethodName***ProgressChanged** イベントを実装する場合は、操作の *MethodName***Completed** イベントが発生した後で、特定の非同期操作についてそのようなイベントが発生していないようにしてください。  
+-   **ProgressChanged** または <em>MethodName</em>**ProgressChanged** イベントを実装する場合は、操作の <em>MethodName</em>**Completed** イベントが発生した後で、特定の非同期操作についてそのようなイベントが発生していないようにしてください。  
   
 -   標準 <xref:System.ComponentModel.ProgressChangedEventArgs> の値が設定される場合は、<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> が常にパーセンテージとして解釈できるようにしてください。 パーセンテージは正確である必要はありませんが、パーセンテージを表している必要があります。 進行状況レポート メトリックがパーセンテージ以外でなければならない場合は、<xref:System.ComponentModel.ProgressChangedEventArgs> クラスからクラスを派生し、<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> は 0 のままにしておきます。 パーセンテージ以外のレポート メトリックは使用しないでください。  
   
@@ -99,7 +99,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   クラスが複数の同時呼び出しをサポートしている場合は、`IsBusy` プロパティを公開しないでください。 たとえば XML Web サービス プロキシは、非同期メソッドの複数同時呼び出しをサポートしているため、`IsBusy` プロパティを公開しません。  
   
--   `IsBusy` プロパティは、*MethodName***Async** メソッドが呼び出されてから、*MethodName***Completed** イベントが発生するまでの間は、`true` を返します。 それ以外の場合は、`false` を返す必要があります。 <xref:System.ComponentModel.BackgroundWorker> プロパティを公開するクラスの例として、<xref:System.Net.WebClient> および `IsBusy` コンポーネントがあります。  
+-   `IsBusy` プロパティは、<em>MethodName</em>**Async** メソッドが呼び出されてから、<em>MethodName</em>**Completed** イベントが発生するまでの間は、`true` を返す必要があります。 それ以外の場合は、`false` を返す必要があります。 <xref:System.ComponentModel.BackgroundWorker> プロパティを公開するクラスの例として、<xref:System.Net.WebClient> および `IsBusy` コンポーネントがあります。  
   
 ### <a name="cancellation"></a>キャンセル  
   
@@ -111,7 +111,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   キャンセル メソッドの呼び出しは常に正常に戻り、例外を発生させないようにしてください。 一般に、特定の時点で操作が実際にキャンセル可能かどうかと、前に発行したキャンセルが正常に実行されたかどうかはクライアントに通知されません。 ただし、キャンセルが正常に完了すると常にアプリケーションに通知が送られます。これは、アプリケーションが完了ステータスに関与しているためです。  
   
--   操作がキャンセルされた場合は、*MethodName***Completed** イベントを発生させます。  
+-   操作がキャンセルされた場合は、<em>MethodName</em>**Completed** イベントを発生させます。  
   
 ### <a name="errors-and-exceptions"></a>エラーおよび例外  
   
@@ -120,14 +120,14 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 ### <a name="threading-and-contexts"></a>スレッド処理およびコンテキスト  
  クラスを正しく操作するには、特定のアプリケーション モデル ([!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] および Windows Forms アプリケーションを含む) の適切なスレッドまたはコンテキストで、クライアントのイベント ハンドラーが呼び出されることが重要です。 非同期クラスがどのアプリケーション モデルでも正しく動作するように、<xref:System.ComponentModel.AsyncOperation> と <xref:System.ComponentModel.AsyncOperationManager> という 2 つの重要なヘルパー クラスが用意されています。  
   
- <xref:System.ComponentModel.AsyncOperationManager> にはメソッド <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> が含まれています。このメソッドは <xref:System.ComponentModel.AsyncOperation> を返します。 *MethodName***Async** メソッドは <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> を呼び出し、クラスは返される <xref:System.ComponentModel.AsyncOperation> を使用して非同期タスクの有効期間を追跡します。  
+ <xref:System.ComponentModel.AsyncOperationManager> にはメソッド <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> が含まれています。このメソッドは <xref:System.ComponentModel.AsyncOperation> を返します。 <em>MethodName</em>**Async** メソッドは <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> を呼び出し、クラスは返される <xref:System.ComponentModel.AsyncOperation> を使用して非同期タスクの有効期間を追跡します。  
   
  進行状況、インクリメンタル結果、および完了をクライアントに報告するため、<xref:System.ComponentModel.AsyncOperation.Post%2A> で <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> メソッドと <xref:System.ComponentModel.AsyncOperation> メソッドを呼び出します。 <xref:System.ComponentModel.AsyncOperation> は、クライアントのイベント ハンドラーに対する呼び出しを適切なスレッドまたはコンテキストにマーシャリングします。  
   
 > [!NOTE]
 >  アプリケーション モデルのポリシーに対し明示的に準拠しないものの、イベント ベースの非同期パターンを使用する他のメリットを利用したい場合は、これらの規則を回避できます。 たとえば、Windows Forms でのクラス操作をフリー スレッド化するとします。 開発者がフリー スレッド化クラスの暗黙的な制限を理解している場合は、フリースレッド化クラスを作成できます。 コンソール アプリケーションは <xref:System.ComponentModel.AsyncOperation.Post%2A> 呼び出しの実行を同期しません。 これが原因で、`ProgressChanged` イベントが正しくない順序で発生することがあります。 <xref:System.ComponentModel.AsyncOperation.Post%2A> 呼び出しを順次実行するには、<xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> クラスを実装およびインストールします。  
   
- <xref:System.ComponentModel.AsyncOperation> と <xref:System.ComponentModel.AsyncOperationManager> を使用した非同期操作の詳細については、「[チュートリアル: イベントベースの非同期パターンをサポートするコンポーネントの実装](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)」を参照してください。  
+ <xref:System.ComponentModel.AsyncOperation> と <xref:System.ComponentModel.AsyncOperationManager> を使用した非同期操作について詳しくは、「[方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)」をご覧ください。  
   
 ## <a name="guidelines"></a>ガイドライン  
   
@@ -150,8 +150,8 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
  <xref:System.ComponentModel.ProgressChangedEventArgs>  
  <xref:System.ComponentModel.BackgroundWorker>  
  [イベントベースの非同期パターンの実装](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
- [イベント ベースの非同期パターンを使用したマルチスレッド プログラミング](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [イベント ベースの非同期パターン (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  [イベントベースの非同期パターンをいつ実装するかの決定](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
  [イベントベースの非同期パターンを実装するための推奨される手順](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
  [方法: イベントベースの非同期パターンをサポートするコンポーネントを使用する](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
- [チュートリアル: イベントベースの非同期パターンをサポートするコンポーネントの実装](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+ [方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
