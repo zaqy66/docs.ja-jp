@@ -2,37 +2,196 @@
 title: 集計正規関数
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: 04b7d9c20373a465c073d55a090f1c2fd7fc6e07
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e4772176130fc72a22645462921c90dd5b7967b2
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761936"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754529"
 ---
 # <a name="aggregate-canonical-functions"></a>集計正規関数
 
 集計とは、一連の入力値をまとまった値 (単一の値など) に変換する式を指します。 集計は SELECT 式の GROUP BY 句と組み合わせて使用されるのが一般的であり、どこで使用できるかについては制約があります。
 
-次の表に、集計 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 正規関数を示します。
+## <a name="aggegate-entity-sql-canonical-functions"></a>Aggegate Entity SQL 正規関数
 
-| 関数 | 説明 |
-| -------- | ----------- |
-| `Avg(expression)` | NULL 以外の値の平均を返します。<br><br>**引数**<br><br>`Int32`、 `Int64`、 `Double`、および`Decimal`です。<br><br>**戻り値**<br><br>`expression` の型。 すべての入力値が `Null` の場合は `null` です。<br><br>**使用例**[!code-csharp[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] [!code-sql[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)] |
-| `BigCount(expression)` | NULL 値および重複値を含む集計のサイズを返します。<br><br>**引数**<br><br>任意の型。<br><br>**戻り値**<br><br>`Int64`。<br><br>**使用例**[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)] |
-| `Count(expression)` | NULL 値および重複値を含む集計のサイズを返します。<br><br>**引数**<br><br>任意の型。<br><br>**戻り値**<br><br>`Int32`。<br><br>**使用例**[!code-csharp[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)] [!code-sql[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)] |
-| `Max(expression)` | NULL 以外の値の最大値を返します。<br><br>**引数**<br><br>`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。<br><br>**戻り値**<br><br>`expression` の型。 すべての入力値が `Null` の場合は `null` です。<br><br>**使用例**[!code-csharp[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_max)] [!code-sql[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_max)] |
-| `Min(expression)` | NULL 以外の値の最小値を返します。<br><br>**引数**<br><br>`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。<br><br>**戻り値**<br><br>`expression` の型。 すべての入力値が `Null` の場合は `null` です。<br><br>**使用例**[!code-csharp[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_min)] [!code-sql[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_min)] |
-| `StDev(expression)` | NULL 以外の値の標準偏差を返します。<br><br>**引数**<br><br>`Int32`、`Int64`、`Double`、`Decimal`。<br><br>**戻り値**<br><br>`Double`。 すべての入力値が `Null` の場合は `null` です。<br><br>**使用例**[!code-csharp[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdev)] [!code-sql[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdev)] |
-| `StDevP(expression)` | すべての値の母集団の標準偏差を返します。<br><br>**引数**<br><br>`Int32`、`Int64`、`Double`、`Decimal`。<br><br>**戻り値**<br><br>`Double`。 すべての入力値が `Null` の場合は `null` です。<br><br>**使用例**[!code-csharp[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdevp)] [!code-sql[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdevp)] |
-| `Sum(expression)` | NULL 以外の値の合計を返します。<br><br>**引数**<br><br>`Int32`、`Int64`、`Double`、`Decimal`。<br><br>**戻り値**<br><br>`Double`。 すべての入力値が `Null` の場合は `null` です。<br><br>**使用例**[!code-csharp[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_sum)] [!code-sql[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_sum)] |
-| `Var(expression)` | すべての null 以外の値の分散を返します。<br><br>**引数**<br><br>`Int32`、`Int64`、`Double`、`Decimal`。<br><br>**戻り値**<br><br>`Double`。 すべての入力値が `Null` の場合は `null` です。<br><br>**使用例**[!code-csharp[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_var)] [!code-sql[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_var)] |
-| `VarP(expression)` | すべての null 以外の値の母集団の分散を返します。<br><br>**引数**<br><br>`Int32`、`Int64`、`Double`、`Decimal`。<br><br>**戻り値**<br><br>`Double`。 すべての入力値が `Null` の場合は `null` です。<br><br>**使用例**[!code-csharp[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)] [!code-sql[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] |
+集計の Entity SQL 正規関数を次に示します。
 
-同等の機能は、Microsoft SQL クライアント マネージ プロバイダーでも利用できます。 詳細については、次を参照してください。 [Framework 用 SqlClient エンティティ関数](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)です。
+### <a name="avgexpression"></a>Avg(expression)
+
+NULL 以外の値の平均を返します。
+
+**引数**
+
+`Int32`、 `Int64`、 `Double`、および`Decimal`します。
+
+**戻り値**
+
+型`expression`、または`null`場合はすべての入力値`null`値。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
+
+### <a name="bigcountexpression"></a>BigCount(expression)
+
+NULL 値および重複値を含む集計のサイズを返します。
+
+**引数**
+
+任意の型。
+
+**戻り値**
+
+`Int64`。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
+
+### <a name="countexpression"></a>Count(expression) 
+
+NULL 値および重複値を含む集計のサイズを返します。
+
+**引数**
+
+任意の型。
+
+**戻り値**
+
+`Int32`。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_COUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)]
+[!code-sql[DP EntityServices Concepts#EDM_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)]
+
+### <a name="maxexpression"></a>Max(expression)
+
+NULL 以外の値の最大値を返します。
+
+**引数**
+
+`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
+
+**戻り値**
+
+型`expression`、または`null`場合はすべての入力値`null`値。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_MAX](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_max)]
+[!code-sql[DP EntityServices Concepts#EDM_MAX](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_max)]
+
+### <a name="minexpression"></a>Min(expression)
+
+NULL 以外の値の最小値を返します。
+
+**引数**
+
+`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
+
+**戻り値**
+
+型`expression`、または`null`場合はすべての入力値`null`値。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_MIN](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_min)]
+[!code-sql[DP EntityServices Concepts#EDM_MIN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_min)]
+
+### <a name="stdevexpression"></a>StDev(expression)
+
+NULL 以外の値の標準偏差を返します。
+
+**引数**
+
+`Int32`、`Int64`、`Double`、`Decimal`。
+
+**戻り値**
+
+`Double`。 すべての入力値が `Null` の場合は `null` です。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_STDEV](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdev)]
+[!code-sql[DP EntityServices Concepts#EDM_STDEV](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdev)]
+
+### <a name="stdevpexpression"></a>StDevP(expression)
+
+すべての値の母集団の標準偏差を返します。
+
+**引数**
+
+`Int32`、`Int64`、`Double`、`Decimal`。
+
+**戻り値**
+
+A `Double`、または`null`場合はすべての入力値`null`値。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_STDEVP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdevp)]
+[!code-sql[DP EntityServices Concepts#EDM_STDEVP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdevp)]
+
+### <a name="sumexpression"></a>Sum(expression)
+
+NULL 以外の値の合計を返します。
+
+**引数**
+
+`Int32`、`Int64`、`Double`、`Decimal`。
+
+**戻り値**
+
+A `Double`、または`null`場合はすべての入力値`null`値。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_SUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_sum)]
+[!code-sql[DP EntityServices Concepts#EDM_SUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_sum)]
+
+### <a name="varexpression"></a>Var(expression)
+
+すべての null 以外の値の分散を返します。
+
+**引数**
+
+`Int32`、`Int64`、`Double`、`Decimal`。
+
+**戻り値**
+
+A `Double`、または`null`場合はすべての入力値`null`値。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_VAR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_var)]
+[!code-sql[DP EntityServices Concepts#EDM_VAR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_var)]
+
+### <a name="varpexpression"></a>VarP(expression)
+
+すべての null 以外の値の母集団の分散を返します。
+
+**引数**
+
+`Int32`、`Int64`、`Double`、`Decimal`。
+
+**戻り値**
+
+A `Double`、または`null`場合はすべての入力値`null`値。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+
+同等の機能は、Microsoft SQL クライアント マネージド プロバイダーでも利用できます。 詳細については、次を参照してください。 [Entity Framework の関数の SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)します。
 
 ## <a name="collection-based-aggregates"></a>コレクション ベースの集計
 
-コレクションベースの集計 (コレクション関数) は、コレクションに対して演算を実行して、値を返します。 たとえば ORDERS がすべての注文のコレクションの場合は、次の式で最も早い出荷日を求めることができます。
+コレクションベースの集計 (コレクション関数) は、コレクションに対して演算を実行して、値を返します。 たとえば注文がすべての注文のコレクションの場合は、次の式での最も早い出荷日を求めることができます。
 
 ```sql
 min(select value o.ShipDate from LOB.Orders as o)
@@ -51,7 +210,7 @@ select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
-SELECT 式に明示的な group by 句のないグループ ベースの集計を設定することができます。 この場合、すべての要素が 1 つのグループとして扱われます。 これは、定数に基づくグループ化を指定するのと同じです。 たとえば、次のような式があったとします。
+SELECT 式に明示的な group by 句のないグループ ベースの集計を含めることは可能になります。 この場合、すべての要素が 1 つのグループとして扱われます。 これは、定数に基づくグループ化を指定するのと同じです。 たとえば、次のような式があったとします。
 
 ```sql
 select avg(ol.Quantity) from LOB.OrderLines as ol
@@ -65,7 +224,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 グループベースの集計内の式は、WHERE 句式から可視である名前解決スコープ内で評価されます。
 
-として[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]、グループ ベースの集計がすべてを指定できますも修飾子または DISTINCT 修飾子です。 DISTINCT 修飾子が指定された場合、集計を計算する前に、集計の入力コレクションから重複が除外されます。 ALL 修飾子が指定された場合 (または修飾子が指定されなかった場合)、重複は除外されません。  
+うに[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]、グループ ベースの集計は、ALL を指定できますもまたは DISTINCT 修飾子。 DISTINCT 修飾子が指定された場合、集計を計算する前に、集計の入力コレクションから重複が除外されます。 ALL 修飾子が指定された場合 (または修飾子が指定されなかった場合)、重複は除外されません。  
 
 ## <a name="see-also"></a>関連項目
 

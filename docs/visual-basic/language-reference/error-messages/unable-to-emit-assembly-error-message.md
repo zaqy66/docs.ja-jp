@@ -1,63 +1,67 @@
 ---
-title: アセンブリを作成できません:&lt;エラー メッセージ&gt;
-ms.date: 07/20/2015
+title: 'アセンブリを作成できません : <error message>'
+ms.date: 08/14/2018
 f1_keywords:
 - vbc30145
 - bc30145
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 8f497069088ad30a3be58d02caa0a32f7f1b21b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 404a8255adcdc414a40b40395ada1c90c1078325
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595174"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754062"
 ---
-# <a name="unable-to-emit-assembly-lterror-messagegt"></a>アセンブリを作成できません:&lt;エラー メッセージ&gt;
-Visual Basic コンパイラでは、リンカー、アセンブリを作成する出力段階でエラーが報告アセンブリ リンカー (Al.exe、Alink とも呼ばれます)、マニフェストを伴うアセンブリを生成するを呼び出します。  
-  
- **エラー ID:** BC30145  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-1.  引用符で囲まれたエラー メッセージを確認し、トピックを参照して[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)です。 さらに詳しい説明とアドバイスを参照します。  
-  
-2.  アセンブリに手動で署名するかを使用して再試行してください、 [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)または[Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)です。  
-  
-3.  エラーが続く場合は、状況に関する情報を収集し、マイクロソフト プロダクト サポート サービスに通知してください。  
-  
-### <a name="to-sign-the-assembly-manually"></a>アセンブリを手動で署名するには  
-  
-1.  [Sn.exe (厳密名ツール)] を使用して[Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)) 公開/秘密キー ペア ファイルを作成します。  
-  
-     このファイルは .snk の拡張子を持ちます。  
-  
-2.  エラーが発生している COM 参照をプロジェクトから削除します。  
-  
-3.  Windows から**開始** メニューのをポイント**プログラム**、 をポイント**Microsoft Visual Studio 2008**、 をポイント**Visual Studio Tools**、およびをクリックして**Visual Studio 2008 コマンド プロンプト**です。  
-  
-4.  アセンブリ ラッパーを格納するディレクトリに移動します。  
-  
-5.  次のコードを入力します。  
-  
-    ```  
-    tlbimp <path to COM reference file> /out:<output assembly name> /keyfile:<path to .snk file>  
-    ```  
-  
-     コードの一例として、次のように入力することができます。  
-  
-    ```  
-    tlbimp c:\windows\system32\msi.dll /out:Interop.WindowsInstaller.dll /keyfile:"c:\documents and settings\mykey.snk"  
-    ```  
-  
-     パスやファイルに空白が含まれている場合には、二重引用符 (") を使用します。  
-  
-6.  Visual Studio で作成したファイルへの参照を .NET アセンブリを追加します。  
-  
-## <a name="see-also"></a>関連項目  
- 
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)です。  
- [Sn.exe (厳密名ツール)][Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md))  
- [方法: 公開キーと秘密キーのキー ペアを作成する](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [ご意見](/visualstudio/ide/talk-to-us)
+# <a name="unable-to-emit-assembly-error-message"></a>アセンブリを作成できません:\<エラー メッセージ >
+
+Visual Basic コンパイラはアセンブリ リンカーを呼び出す (*Al.exe*Alink とも呼ばれます)、マニフェストと、リンカーでアセンブリを生成する出力段階で、エラーを報告します。
+
+**エラー ID:** BC30145
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+1. 引用符で囲まれたエラー メッセージを確認し、トピックを参照してください。 [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)のより詳細な説明とアドバイスを参照します。
+
+2. アセンブリを手動で署名を使用して再試行してください、 [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)または[Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)します。
+
+3. エラーが続く場合は、状況に関する情報を収集し、マイクロソフト プロダクト サポート サービスに通知してください。
+
+### <a name="to-sign-the-assembly-manually"></a>アセンブリを手動で署名するには
+
+1. 使用して、 [Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)) 公開/秘密キー ペア ファイルを作成します。
+
+   このファイルは、 *.snk*拡張機能。
+
+2. エラーが発生している COM 参照をプロジェクトから削除します。
+
+3. 開く、 [Visual Studio 用開発者コマンド プロンプト](../../../framework/tools/developer-command-prompt-for-vs.md)します。
+
+   Windows 10 では、次のように入力します。**開発者コマンド プロンプト**の検索ボックスに、タスク バーにします。 次に、選択**開発者コマンド プロンプト for VS 2017**結果リストから。
+
+4. アセンブリ ラッパーを格納するディレクトリにディレクトリを変更します。
+
+5. 次のコマンドを入力します。
+
+    ```cmd
+    tlbimp <path to COM reference file> /out:<output assembly name> /keyfile:<path to .snk file>
+    ```
+
+   実際のコマンドを入力する可能性がありますの例を示します。
+
+    ```cmd
+    tlbimp c:\windows\system32\msi.dll /out:Interop.WindowsInstaller.dll /keyfile:"c:\documents and settings\mykey.snk"
+    ```
+
+   > [!TIP]
+   > パスまたはファイルにスペースが含まれている場合は、二重引用符を使用します。
+
+6. Visual Studio で作成したファイルへの参照を .NET アセンブリを追加します。
+
+## <a name="see-also"></a>関連項目
+
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)します。
+- [Sn.exe (厳密名ツール)][Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md))
+- [方法: 公開キーと秘密キーのキー ペアを作成する](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [ご意見](/visualstudio/ide/talk-to-us)

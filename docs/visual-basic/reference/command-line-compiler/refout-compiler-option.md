@@ -1,5 +1,5 @@
 ---
-title: refout (Visual Basic)
+title: /refout (Visual Basic)
 ms.date: 03/16/2018
 f1_keywords:
 - /refout
@@ -10,13 +10,13 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21cea76f31bdf2ac5fcf434ee759f874f917617b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653534"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754105"
 ---
-# <a name="-refout-visual-basic"></a>refout (Visual Basic)
+# <a name="-refout-visual-basic"></a>/refout (Visual Basic)
 
 **-refout** オプションは、参照アセンブリを出力するファイル パスを指定します。
 
@@ -30,15 +30,15 @@ ms.locfileid: "33653534"
 
 ## <a name="arguments"></a>引数
 
- `filepath` パスと、参照アセンブリのファイル名。 プライマリのアセンブリのサブ フォルダーで一般的になります。 (MSBuild で使用される) 推奨規則は、プライマリ アセンブリに相対する "ref/" サブ フォルダー内に参照アセンブリを配置することです。 すべてのフォルダー`filepath`が存在する必要があります。 コンパイラは作成されません。 
+ `filepath` パスと、参照アセンブリのファイル名。 一般にプライマリ アセンブリのサブ フォルダーでなければなりません。 (MSBuild で使用される) 推奨規則は、プライマリ アセンブリに相対する "ref/" サブ フォルダー内に参照アセンブリを配置することです。 すべてのフォルダーで`filepath`; が存在する必要がありますに、コンパイラは作成されません。 
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-Visual Basic のサポート、`-refout`バージョン 15.3 と開始を切り替えます。
+Visual Basic は、`-refout`バージョン 15.3 以降を切り替えます。
 
-参照アセンブリはメタデータ コードではなく実装が含まれているメタデータのみのアセンブリです。 匿名型を除くすべての型およびメンバーの情報が含まれます。 メソッドの本体は、1 つに置き換えられます`throw null`ステートメントです。 使用する理由`throw null`(本文のない) ではなく、メソッド本体が PEVerify を実行して (したがって、メタデータの完全性を検証する) を通過できるようにします。
+参照アセンブリは、実装コードではなくメタデータが含まれているメタデータのみアセンブリです。 匿名型を除くすべての型およびメンバーの情報が含まれます。 1 つに、メソッドの本体が置き換えられます`throw null`ステートメント。 使用する理由`throw null`(本体なし) ではなく、メソッド本体が PEVerify を実行して (したがって、メタデータの完全性を検証する) を渡すようにします。
 
-参照アセンブリは、アセンブリ レベル[ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute)属性。 この属性は、ソースで指定できます (指定すると、コンパイラではこれを合成する必要がなくなります)。 この属性のためのランタイムを実行するための参照アセンブリを読み込む拒否する (ただしリフレクション専用コンテキストに読み込まれていることができます)。 アセンブリに反映するためのツールは、リフレクション専用として参照アセンブリが読み込まれることを確認する必要があります。それ以外の場合、ランタイム、<xref:System.BadImageFormatException>です。
+参照アセンブリは、アセンブリ レベル[ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute)属性。 この属性は、ソースで指定できます (指定すると、コンパイラではこれを合成する必要がなくなります)。 この属性により、ランタイムの実行の参照アセンブリの読み込みが拒否 (ただしリフレクション専用コンテキストに読み込まれていることがあります)。 アセンブリにリフレクションするツールは、リフレクション専用として参照アセンブリが読み込まれることを確認する必要があります。それ以外の場合、ランタイム、<xref:System.BadImageFormatException>します。
 
 `-refout` オプションと [`-refonly`](refonly-compiler-option.md) オプションは同時に指定できません。
 

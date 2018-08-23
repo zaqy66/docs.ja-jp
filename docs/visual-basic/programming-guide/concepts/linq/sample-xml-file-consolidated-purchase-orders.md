@@ -3,10 +3,11 @@ title: 'サンプル XML ファイル: 統合購買 Orders3'
 ms.date: 07/20/2015
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
 ms.openlocfilehash: 4de74aab208b3ee09a49210dd1f97c13af273789
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754171"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>サンプル XML ファイル : 統合購買発注書
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルは、形式の異なる複数企業の購買発注書をまとめたものです。 各企業の購買発注書は、別々の名前空間に含まれています。  

@@ -2,27 +2,139 @@
 title: 数値演算正規関数
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: c61db6d977614b95ea507b38c3890f2da8228158
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 0fc9f4942c3f76f139ab7e4400005f0bfe80204e
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199301"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754488"
 ---
 # <a name="math-canonical-functions"></a>数値演算正規関数
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] には数学正規関数が含まれます。  
+
+Entity SQL では、次の数値演算正規関数が含まれます。
   
- 次の表に、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 数学正規関数を示します。  
-  
-|関数|説明|  
-|--------------|-----------------|  
-|`Abs(value)`|`value` の絶対値を返します。<br /><br /> **引数**<br /><br /> `Int16`、 `Int32`、 `Int64`、 `Byte`、 `Single`、 `Double`、および`Decimal`します。<br /><br /> **戻り値**<br /><br /> `value` の型。<br /><br /> **例**<br /><br /> `Abs(-2)`|  
-|`Ceiling(value)`|`value` 以上で最小の整数値を返します。<br /><br /> **引数**<br /><br /> A `Single`、 `Double`、および`Decimal`します。<br /><br /> **戻り値**<br /><br /> `value` の型。<br /><br /> **例**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]|  
-|`Floor(value)`|`value` 以下で最大の整数値を返します。<br /><br /> **引数**<br /><br /> A `Single`、 `Double`、および`Decimal`します。<br /><br /> **戻り値**<br /><br /> `value` の型。<br /><br /> **例**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]|  
-|`Power(value, exponent)`|指定された `value` を指定された `exponent` でべき乗した結果を返します。<br /><br /> **引数**<br /><br /> `value``Int32, Int64, Double`、または`Decimal`します。<br /><br /> `exponent``Int64`、 `Double`、または`Decimal`します。<br /><br /> **戻り値**<br /><br /> `value` の型。<br /><br /> **例**<br /><br /> `Power(748.58,2)`|  
-|`Round(value)`|最も近い整数に丸められた `value` の整数部分を返します。<br /><br /> **引数**<br /><br /> A `Single`、 `Double`、および`Decimal`します。<br /><br /> **戻り値**<br /><br /> `value` の型。<br /><br /> **例**<br /><br /> `Round(748.58)`|  
-|`Round(value, digits)`|`value` を指定された最も近い `digits` に丸めて返します。<br /><br /> **引数**<br /><br /> `value`: `Double` または `Decimal`。<br /><br /> `digits`: `Int16` または `Int32`。<br /><br /> **戻り値**<br /><br /> `value` の型。<br /><br /> **例**<br /><br /> `Round(748.58,1)`|  
-|`Truncate(value, digits)`|`value` を指定された最も近い `digits` に切り詰めて返します。<br /><br /> **引数**<br /><br /> `value`: `Double` または `Decimal`。<br /><br /> `digits`: `Int16` または `Int32`。<br /><br /> **戻り値**<br /><br /> `value` の型。<br /><br /> **例**<br /><br /> `Truncate(748.58,1)`|  
+## <a name="absvalue"></a>Abs(value)
+
+`value` の絶対値を返します。
+
+**引数**
+
+`Int16`、 `Int32`、 `Int64`、 `Byte`、 `Single`、 `Double`、および`Decimal`します。
+
+**戻り値**
+
+`value` の型。
+
+**例**
+
+`Abs(-2)`
+
+## <a name="ceilingvalue"></a>Ceiling(value)
+
+`value` 以上で最小の整数値を返します。
+
+**引数**
+
+A `Single`、 `Double`、および`Decimal`します。
+
+**戻り値**
+
+`value` の型。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
+[!code-sql[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]
+
+## <a name="floorvalue"></a>Floor(value)
+
+`value` 以下で最大の整数値を返します。
+
+**引数**
+
+A `Single`、 `Double`、および`Decimal`します。
+
+**戻り値**
+
+`value` の型。
+
+**例**
+
+[!code-csharp[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
+[!code-sql[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]
+
+## <a name="powervalue-exponent"></a>Power(value, exponent)
+
+指定された `value` を指定された `exponent` でべき乗した結果を返します。
+
+**引数**
+
+|  |  |
+|--|--|
+|`value` | `Int32, Int64, Double`、または`Decimal`します。 |
+|`exponent` | `Int64`、 `Double`、または`Decimal`します。 |
+
+**戻り値**
+
+`value` の型。
+
+**例**
+
+`Power(748.58,2)`
+
+## <a name="roundvalue"></a>Round(value)
+
+最も近い整数に丸められた `value` の整数部分を返します。
+
+**引数**
+
+A `Single`、 `Double`、および`Decimal`します。
+
+**戻り値**
+
+`value` の型。
+
+**例**
+
+`Round(748.58)`
+
+## <a name="roundvalue-digits"></a>Round(value, digits)
+
+`value` を指定された最も近い `digits` に丸めて返します。
+
+**引数**
+
+|  |  |
+|--|--|
+|`value`|`Double` または `Decimal`。|
+|`digits`|`Int16` または `Int32`。|
+
+**戻り値**
+
+`value` の型。
+
+**例**
+
+`Round(748.58,1)`
+
+## <a name="truncatevalue-digits"></a>Truncate(value, digits)
+
+`value` を指定された最も近い `digits` に切り詰めて返します。
+
+**引数**
+
+|  |  |
+|--|--|
+|`value`|`Double` または `Decimal`。|
+|`digits`|`Int16` または `Int32`。|
+
+**戻り値**
+
+`value` の型。
+
+**例**
+
+`Truncate(748.58,1)`  
   
  `null` が入力された場合、これらの関数は `null` を返します。  
   

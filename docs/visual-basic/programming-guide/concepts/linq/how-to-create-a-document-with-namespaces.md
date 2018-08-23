@@ -3,11 +3,11 @@ title: '方法 : 名前空間を持つドキュメントを作成する (LINQ to
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643079"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754142"
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>方法 : 名前空間を持つドキュメントを作成する (LINQ to XML) (Visual Basic)
 このトピックでは、Visual Basic で名前空間を持つドキュメントを作成する方法について説明します。  
@@ -18,7 +18,7 @@ ms.locfileid: "33643079"
   
  既定の名前空間およびプレフィックスを持つ名前空間の両方を定義する場合は、`Imports` キーワードを使用します。  
   
- 詳細については、次を参照してください。 [Visual Basic で XML リテラルの概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)です。  
+ 詳細については、次を参照してください。 [Visual Basic で XML リテラルの概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)します。  
   
  既定の XML 名前空間は要素だけに適用され、属性には適用されないことに注意してください。 属性は、既定では常に名前空間に含まれません。 ただし、名前空間プレフィックスを使用して属性を名前空間に含めることができます。  
   

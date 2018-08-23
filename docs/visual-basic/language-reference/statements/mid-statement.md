@@ -1,5 +1,5 @@
 ---
-title: Mid ステートメント
+title: Mid ステートメント (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.MidB
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: 90b805df902dcdfebe85421583dd54e9af04bec9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754104"
 ---
 # <a name="mid-statement"></a>Mid ステートメント
-指定した数の文字を置換、`String`別の文字列から文字を含む変数。  
+指定した文字数を置き換える、`String`別の文字列から文字を含む変数。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,30 +35,30 @@ Mid( _
  必須。 名前、`String`変数を変更します。  
   
  `Start`  
- 必須。 `Integer` 式。 文字の位置`Target`テキストの置換を開始します。 `Start` 1 から始まるインデックスを使用します。  
+ 必須。 `Integer` 式。 内の位置の文字`Target`テキストの置換を開始します。 `Start` 1 から始まるインデックスを使用します。  
   
  `Length`  
- 任意。 `Integer` 式。 置換する文字の数。 省略した場合、すべての`String`を使用します。  
+ 任意。 `Integer` 式。 置換する文字の数。 省略した場合、すべての`String`使用されます。  
   
  `StringExpression`  
- 必須。 `String` 式の一部を置換する`Target`です。  
+ 必須。 `String` 式の一部を置換する`Target`します。  
   
 ## <a name="exceptions"></a>例外  
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` < = 0 または`Length`< 0 です。|  
+|<xref:System.ArgumentException>|`Start` < = 0 または`Length`< 0。|  
   
-## <a name="remarks"></a>コメント  
- 置換される文字数は、の文字数以下では常に`Target`です。  
+## <a name="remarks"></a>Remarks  
+ 置き換えられた文字の数は、文字数以下では常に`Target`します。  
   
- Visual Basic には、<xref:Microsoft.VisualBasic.Strings.Mid%2A>関数と`Mid`ステートメントです。 この要素はどちらも、文字列の文字の指定された数が、`Mid`関数の中に文字を返します、`Mid`文字をステートメントに置き換えます。 詳細については、「<xref:Microsoft.VisualBasic.Strings.Mid%2A>」を参照してください。  
+ Visual Basic には、<xref:Microsoft.VisualBasic.Strings.Mid%2A>関数と`Mid`ステートメント。 これらの要素で指定された数、文字列内の文字の両方の動作が、`Mid`関数の中に文字を返します、`Mid`ステートメントには、文字が置き換えられます。 詳細については、「<xref:Microsoft.VisualBasic.Strings.Mid%2A>」を参照してください。  
   
 > [!NOTE]
->  `MidB`以前のバージョンの Visual Basic のステートメントには文字ではなく、(バイト単位) 内の部分文字列が置き換えられます。 2 バイト文字セット (DBCS) のアプリケーションで文字列を変換するため、主に使用されます。 Unicode では、すべての Visual Basic の文字列と`MidB`は現在サポートされていません。  
+>  `MidB`以前のバージョンの Visual Basic のステートメントには、文字ではなく、(バイト単位) で部分文字列が置き換えられます。 2 バイト文字セット (DBCS) のアプリケーションで文字列に変換するためには、主に使用されます。 Visual Basic のすべての文字列が Unicode では、`MidB`現在サポートされていません。  
   
 ## <a name="example"></a>例  
- この例では、`Mid`ステートメントに指定した文字列変数の文字数を別の文字列から文字に置き換えます。  
+ この例では、`Mid`ステートメントを指定した文字列変数内の文字数を別の文字列から文字に置き換えます。  
   
  [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   

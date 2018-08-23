@@ -17,12 +17,12 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: fdf984cd52441fd2bbe38499f981542386bd56ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 781c78fde1a8bd9c5c09f64d66f730c28e670aef
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591396"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753528"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web サービスを使用した XML シリアル化
 XML シリアル化は、XML Web サービス アーキテクチャで使用される基礎的なトランスポート機構であり、<xref:System.Xml.Serialization.XmlSerializer> クラスによって実行されます。 XML Web サービスによって生成される XML を制御するには、「[XML シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)」および「[エンコード済み SOAP シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)」の一覧に示されている属性を、XML Web サービスの作成に使用するファイル (.asmx) のクラス、戻り値、パラメーター、およびフィールドに適用します。 XML Web サービスの作成の詳細については、「[ASP.NET を使用した XML Web サービスの構築](https://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c)」を参照してください。  
@@ -69,14 +69,14 @@ using System;
 using System.Web.Services;  
 using System.Web.Services.Protocols;  
 using System.Xml.Serialization;  
-public class Order{  
+public class Order {  
     // Both types of attributes can be applied. Depending on which type  
     // the method used, either one will affect the call.  
     [SoapElement(ElementName = "EncodedOrderID")]  
     [XmlElement(ElementName = "LiteralOrderID")]  
     public String OrderID;  
 }  
-public class MyService{  
+public class MyService {  
     [WebMethod][SoapDocumentMethod]  
     public Order MyLiteralMethod(){  
         Order myOrder = new Order();  
@@ -221,7 +221,7 @@ End Class
 [XmlType("BigBooksService", Namespace = "http://www.cpandl.com")]  
 [SoapType("SoapBookService")]  
 [XmlRoot("BookOrderForm")]  
-public class Order{  
+public class Order {  
     // Both types of attributes can be applied. Depending on which  
     // the method used, either one will affect the call.  
     [SoapElement(ElementName = "EncodedOrderID")]  
