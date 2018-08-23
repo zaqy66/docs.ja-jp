@@ -11,22 +11,22 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8d2e224f710a1f344623440f29c2c6e0e9bd661e
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 5fba4bfa14642092dbb7c0153bcd92160a62b12b
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072515"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754580"
 ---
-# <a name="ltproxygt-element-network-settings"></a><span data-ttu-id="7f577-102">&lt;プロキシ&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="7f577-102">&lt;proxy&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="7f577-103">プロキシ サーバーを定義します。</span><span class="sxs-lookup"><span data-stu-id="7f577-103">Defines a proxy server.</span></span>  
+# <a name="ltproxygt-element-network-settings"></a><span data-ttu-id="ac006-102">&lt;プロキシ&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="ac006-102">&lt;proxy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="ac006-103">プロキシ サーバーを定義します。</span><span class="sxs-lookup"><span data-stu-id="ac006-103">Defines a proxy server.</span></span>  
   
- <span data-ttu-id="7f577-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7f577-104">\<configuration></span></span>  
-<span data-ttu-id="7f577-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="7f577-105">\<system.net></span></span>  
-<span data-ttu-id="7f577-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="7f577-106">\<defaultProxy></span></span>  
-<span data-ttu-id="7f577-107">\<プロキシ ></span><span class="sxs-lookup"><span data-stu-id="7f577-107">\<proxy></span></span>  
+ <span data-ttu-id="ac006-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ac006-104">\<configuration></span></span>  
+<span data-ttu-id="ac006-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="ac006-105">\<system.net></span></span>  
+<span data-ttu-id="ac006-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="ac006-106">\<defaultProxy></span></span>  
+<span data-ttu-id="ac006-107">\<プロキシ ></span><span class="sxs-lookup"><span data-stu-id="ac006-107">\<proxy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f577-108">構文</span><span class="sxs-lookup"><span data-stu-id="7f577-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac006-108">構文</span><span class="sxs-lookup"><span data-stu-id="ac006-108">Syntax</span></span>  
   
 ```xml  
 <proxy
@@ -38,46 +38,46 @@ ms.locfileid: "37072515"
 />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7f577-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="7f577-109">Attributes and Elements</span></span>  
- <span data-ttu-id="7f577-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="7f577-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ac006-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="ac006-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="ac006-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="ac006-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7f577-111">属性</span><span class="sxs-lookup"><span data-stu-id="7f577-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ac006-111">属性</span><span class="sxs-lookup"><span data-stu-id="ac006-111">Attributes</span></span>  
   
-|<span data-ttu-id="7f577-112">**属性**</span><span class="sxs-lookup"><span data-stu-id="7f577-112">**Attribute**</span></span>|<span data-ttu-id="7f577-113">**説明**</span><span class="sxs-lookup"><span data-stu-id="7f577-113">**Description**</span></span>|  
+|<span data-ttu-id="ac006-112">**属性**</span><span class="sxs-lookup"><span data-stu-id="ac006-112">**Attribute**</span></span>|<span data-ttu-id="ac006-113">**説明**</span><span class="sxs-lookup"><span data-stu-id="ac006-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`autoDetect`|<span data-ttu-id="7f577-114">プロキシが自動的に検出されたかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="7f577-114">Specifies whether the proxy is automatically detected.</span></span> <span data-ttu-id="7f577-115">既定値は `unspecified` です。</span><span class="sxs-lookup"><span data-stu-id="7f577-115">The default value is `unspecified`.</span></span>|  
-|`bypassonlocal`|<span data-ttu-id="7f577-116">ローカル リソースに対してプロキシをバイパスするかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="7f577-116">Specifies whether the proxy is bypassed for local resources.</span></span> <span data-ttu-id="7f577-117">ローカル リソースには、ローカル サーバーが含まれます (`http://localhost`、 `http://loopback`、または`http://127.0.0.1`) とピリオドを付けない URI (`http://webserver`)。</span><span class="sxs-lookup"><span data-stu-id="7f577-117">Local resources include the local server (`http://localhost`, `http://loopback`, or `http://127.0.0.1`) and a URI without a period (`http://webserver`).</span></span> <span data-ttu-id="7f577-118">既定値は `unspecified` です。</span><span class="sxs-lookup"><span data-stu-id="7f577-118">The default value is `unspecified`.</span></span>|  
-|`proxyaddress`|<span data-ttu-id="7f577-119">プロキシに使用する URI を指定します。</span><span class="sxs-lookup"><span data-stu-id="7f577-119">Specifies the proxy URI to use.</span></span>|  
-|`scriptLocation`|<span data-ttu-id="7f577-120">構成スクリプトの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="7f577-120">Specifies the location of the configuration script.</span></span>|  
-|`usesystemdefault`|<span data-ttu-id="7f577-121">Internet Explorer のプロキシ設定を使用するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="7f577-121">Specifies whether to use Internet Explorer proxy settings.</span></span> <span data-ttu-id="7f577-122">場合設定`true`、後続する属性には、Internet Explorer のプロキシ設定がよりも優先されます。</span><span class="sxs-lookup"><span data-stu-id="7f577-122">If set to `true`, subsequent attributes will override Internet Explorer proxy settings.</span></span> <span data-ttu-id="7f577-123">既定値は `unspecified` です。</span><span class="sxs-lookup"><span data-stu-id="7f577-123">The default value is `unspecified`.</span></span>|  
+|`autoDetect`|<span data-ttu-id="ac006-114">プロキシが自動的に検出されたかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="ac006-114">Specifies whether the proxy is automatically detected.</span></span> <span data-ttu-id="ac006-115">既定値は `unspecified` です。</span><span class="sxs-lookup"><span data-stu-id="ac006-115">The default value is `unspecified`.</span></span>|  
+|`bypassonlocal`|<span data-ttu-id="ac006-116">ローカル リソースに対してプロキシをバイパスするかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="ac006-116">Specifies whether the proxy is bypassed for local resources.</span></span> <span data-ttu-id="ac006-117">ローカル リソースには、ローカル サーバーが含まれます (`http://localhost`、 `http://loopback`、または`http://127.0.0.1`) とピリオドが付かないの URI (`http://webserver`)。</span><span class="sxs-lookup"><span data-stu-id="ac006-117">Local resources include the local server (`http://localhost`, `http://loopback`, or `http://127.0.0.1`) and a URI without a period (`http://webserver`).</span></span> <span data-ttu-id="ac006-118">既定値は `unspecified` です。</span><span class="sxs-lookup"><span data-stu-id="ac006-118">The default value is `unspecified`.</span></span>|  
+|`proxyaddress`|<span data-ttu-id="ac006-119">プロキシに使用する URI を指定します。</span><span class="sxs-lookup"><span data-stu-id="ac006-119">Specifies the proxy URI to use.</span></span>|  
+|`scriptLocation`|<span data-ttu-id="ac006-120">構成スクリプトの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="ac006-120">Specifies the location of the configuration script.</span></span> <span data-ttu-id="ac006-121">使用しないでください、`bypassonlocal`この属性を持つ属性です。</span><span class="sxs-lookup"><span data-stu-id="ac006-121">Do not use the `bypassonlocal` attribute with this attribute.</span></span> |  
+|`usesystemdefault`|<span data-ttu-id="ac006-122">Internet Explorer のプロキシ設定を使用するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="ac006-122">Specifies whether to use Internet Explorer proxy settings.</span></span> <span data-ttu-id="ac006-123">場合設定`true`、後続する属性は、Internet Explorer のプロキシ設定を上書きします。</span><span class="sxs-lookup"><span data-stu-id="ac006-123">If set to `true`, subsequent attributes will override Internet Explorer proxy settings.</span></span> <span data-ttu-id="ac006-124">既定値は `unspecified` です。</span><span class="sxs-lookup"><span data-stu-id="ac006-124">The default value is `unspecified`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="7f577-124">子要素</span><span class="sxs-lookup"><span data-stu-id="7f577-124">Child Elements</span></span>  
- <span data-ttu-id="7f577-125">なし。</span><span class="sxs-lookup"><span data-stu-id="7f577-125">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ac006-125">子要素</span><span class="sxs-lookup"><span data-stu-id="ac006-125">Child Elements</span></span>  
+ <span data-ttu-id="ac006-126">なし。</span><span class="sxs-lookup"><span data-stu-id="ac006-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="7f577-126">親要素</span><span class="sxs-lookup"><span data-stu-id="7f577-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ac006-127">親要素</span><span class="sxs-lookup"><span data-stu-id="ac006-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="7f577-127">**要素**</span><span class="sxs-lookup"><span data-stu-id="7f577-127">**Element**</span></span>|<span data-ttu-id="7f577-128">**説明**</span><span class="sxs-lookup"><span data-stu-id="7f577-128">**Description**</span></span>|  
+|<span data-ttu-id="ac006-128">**要素**</span><span class="sxs-lookup"><span data-stu-id="ac006-128">**Element**</span></span>|<span data-ttu-id="ac006-129">**説明**</span><span class="sxs-lookup"><span data-stu-id="ac006-129">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="7f577-129">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="7f577-129">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="7f577-130">ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。</span><span class="sxs-lookup"><span data-stu-id="7f577-130">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
+|[<span data-ttu-id="ac006-130">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="ac006-130">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="ac006-131">ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。</span><span class="sxs-lookup"><span data-stu-id="ac006-131">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
   
-## <a name="text-value"></a><span data-ttu-id="7f577-131">テキスト値</span><span class="sxs-lookup"><span data-stu-id="7f577-131">Text Value</span></span>  
+## <a name="text-value"></a><span data-ttu-id="ac006-132">テキスト値</span><span class="sxs-lookup"><span data-stu-id="ac006-132">Text Value</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7f577-132">Remarks</span><span class="sxs-lookup"><span data-stu-id="7f577-132">Remarks</span></span>  
- <span data-ttu-id="7f577-133">`proxy`要素は、アプリケーションのプロキシ サーバーを定義します。</span><span class="sxs-lookup"><span data-stu-id="7f577-133">The `proxy` element defines a proxy server for an application.</span></span> <span data-ttu-id="7f577-134">この要素が見つからない場合、構成ファイルから、し、.NET Framework は Internet Explorer でプロキシ設定が使用されます。</span><span class="sxs-lookup"><span data-stu-id="7f577-134">If this element is missing from the configuration file, then the .NET Framework will use the proxy settings in Internet Explorer.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ac006-133">Remarks</span><span class="sxs-lookup"><span data-stu-id="ac006-133">Remarks</span></span>  
+ <span data-ttu-id="ac006-134">`proxy`要素は、アプリケーションのプロキシ サーバーを定義します。</span><span class="sxs-lookup"><span data-stu-id="ac006-134">The `proxy` element defines a proxy server for an application.</span></span> <span data-ttu-id="ac006-135">構成ファイルからこの要素が不足している場合は、.NET Framework は Internet Explorer でプロキシ設定が使用されます。</span><span class="sxs-lookup"><span data-stu-id="ac006-135">If this element is missing from the configuration file, then the .NET Framework will use the proxy settings in Internet Explorer.</span></span>  
   
- <span data-ttu-id="7f577-135">値、`proxyaddress`属性が整形式 Uniform Resource Indicator (URI) にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7f577-135">The value for the `proxyaddress` attribute should be a well-formed Uniform Resource Indicator (URI).</span></span>  
+ <span data-ttu-id="ac006-136">値、`proxyaddress`属性が整形式 Uniform Resource Indicator (URI) にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="ac006-136">The value for the `proxyaddress` attribute should be a well-formed Uniform Resource Indicator (URI).</span></span>  
   
- <span data-ttu-id="7f577-136">`scriptLocation`属性はプロキシ構成スクリプトの自動検出を参照します。</span><span class="sxs-lookup"><span data-stu-id="7f577-136">The `scriptLocation` attribute refers to the automatic detection of proxy configuration scripts.</span></span> <span data-ttu-id="7f577-137"><xref:System.Net.WebProxy>クラスは、構成スクリプト (通常の名前付き Wpad.dat) と検索を試みます、**自動構成スクリプトを使用して**Internet Explorer のオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="7f577-137">The <xref:System.Net.WebProxy> class will attempt to locate a configuration script (usually named Wpad.dat) when the **Use automatic configuration script** option is selected in Internet Explorer.</span></span>  
+ <span data-ttu-id="ac006-137">`scriptLocation`属性はプロキシ構成スクリプトの自動検出を参照します。</span><span class="sxs-lookup"><span data-stu-id="ac006-137">The `scriptLocation` attribute refers to the automatic detection of proxy configuration scripts.</span></span> <span data-ttu-id="ac006-138"><xref:System.Net.WebProxy>クラスはときに、構成スクリプト (通常は名前付き Wpad.dat) を検出しようとしています、**自動構成スクリプトを使用して、** Internet Explorer でオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="ac006-138">The <xref:System.Net.WebProxy> class will attempt to locate a configuration script (usually named Wpad.dat) when the **Use automatic configuration script** option is selected in Internet Explorer.</span></span> <span data-ttu-id="ac006-139">場合`bypassonlocal`任意の値に設定されている`scriptLocation`は無視されます。</span><span class="sxs-lookup"><span data-stu-id="ac006-139">If `bypassonlocal` is set to any value, `scriptLocation` is ignored.</span></span>
   
- <span data-ttu-id="7f577-138">使用して、 `usesystemdefault` version 2.0 に移行する .NET Framework version 1.1 のアプリケーション用の属性です。</span><span class="sxs-lookup"><span data-stu-id="7f577-138">Use the `usesystemdefault` attribute for .NET Framework version 1.1 applications that are migrating to version 2.0.</span></span>  
+ <span data-ttu-id="ac006-140">使用して、`usesystemdefault`バージョン 2.0 に移行しようとする .NET Framework version 1.1 アプリケーション用の属性。</span><span class="sxs-lookup"><span data-stu-id="ac006-140">Use the `usesystemdefault` attribute for .NET Framework version 1.1 applications that are migrating to version 2.0.</span></span>  
   
- <span data-ttu-id="7f577-139">場合、例外がスローされます、`proxyaddress`属性は無効な既定のプロキシを指定します。</span><span class="sxs-lookup"><span data-stu-id="7f577-139">An exception is thrown if the `proxyaddress` attribute specifies an invalid default proxy.</span></span> <span data-ttu-id="7f577-140">例外の <xref:System.Exception.InnerException%2A> プロパティに、このエラーの根本的な原因に関する詳細情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="7f577-140">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
+ <span data-ttu-id="ac006-141">場合、例外がスローされます、`proxyaddress`属性が、無効な既定のプロキシを指定します。</span><span class="sxs-lookup"><span data-stu-id="ac006-141">An exception is thrown if the `proxyaddress` attribute specifies an invalid default proxy.</span></span> <span data-ttu-id="ac006-142">例外の <xref:System.Exception.InnerException%2A> プロパティに、このエラーの根本的な原因に関する詳細情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="ac006-142">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="7f577-141">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="7f577-141">Configuration Files</span></span>  
- <span data-ttu-id="7f577-142">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="7f577-142">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="ac006-143">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="ac006-143">Configuration Files</span></span>  
+ <span data-ttu-id="ac006-144">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="ac006-144">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7f577-143">例</span><span class="sxs-lookup"><span data-stu-id="7f577-143">Example</span></span>  
- <span data-ttu-id="7f577-144">次の例は、Internet Explorer のプロキシで既定値を使用して、プロキシ アドレスを指定し、ローカル アクセスでプロキシをバイパスします。</span><span class="sxs-lookup"><span data-stu-id="7f577-144">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access.</span></span>  
+## <a name="example"></a><span data-ttu-id="ac006-145">例</span><span class="sxs-lookup"><span data-stu-id="ac006-145">Example</span></span>  
+ <span data-ttu-id="ac006-146">次の例は、既定値を Internet Explorer のプロキシを使用して、プロキシ アドレスを指定し、ローカル アクセスでプロキシをバイパスします。</span><span class="sxs-lookup"><span data-stu-id="ac006-146">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access.</span></span>  
   
 ```xml  
 <configuration>  
@@ -93,6 +93,6 @@ ms.locfileid: "37072515"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7f577-145">関連項目</span><span class="sxs-lookup"><span data-stu-id="7f577-145">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ac006-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="ac006-147">See Also</span></span>  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [<span data-ttu-id="7f577-146">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="7f577-146">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="ac006-148">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="ac006-148">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
