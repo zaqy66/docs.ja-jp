@@ -2,17 +2,17 @@
 title: 接続文字列
 ms.date: 03/30/2017
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: ac2c618272044ac9aaaba697f6583c9a814aa79f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ac9c3b3b0fce4d6b7e0eb74e23c07c82faf9f722
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766986"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792420"
 ---
 # <a name="connection-strings"></a>接続文字列
 接続文字列には、データ プロバイダーからデータ ソースにパラメーターとして渡す初期化情報が含まれています。 接続文字列は接続を開くときに解析され、その構文はデータ プロバイダーによって異なります。 Entity Framework で使用される接続文字列には、Entity Framework のサポート基盤である ADO.NET データ プロバイダーへの接続に使用される情報が含まれています。 また、必要なモデル ファイルおよびマッピング ファイルに関する情報も含まれています。  
   
- 接続文字列は、モデル メタデータおよびマッピング メタデータにアクセスしてデータ ソースに接続する際に EntityClient プロバイダーによって使用されます。 接続文字列へのアクセスや接続文字列の設定は、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> の <xref:System.Data.EntityClient.EntityConnection> プロパティを使用して行います。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用すると、接続文字列内のパラメーターの構築やこれらへのアクセスをプログラムで行えます。 詳細については、次を参照してください。[する方法: EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)です。  
+ 接続文字列は、モデル メタデータおよびマッピング メタデータにアクセスしてデータ ソースに接続する際に EntityClient プロバイダーによって使用されます。 接続文字列へのアクセスや接続文字列の設定は、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> の <xref:System.Data.EntityClient.EntityConnection> プロパティを使用して行います。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用すると、接続文字列内のパラメーターの構築やこれらへのアクセスをプログラムで行えます。 詳細については、次を参照してください。[方法: EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。  
   
  [Entity Data Model ツール](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)アプリケーションの構成ファイルに格納されている接続文字列を生成します。 <xref:System.Data.Objects.ObjectContext> は、オブジェクト クエリの作成時に自動的にこの接続情報を取得します。 <xref:System.Data.EntityClient.EntityConnection> インスタンスで使用される <xref:System.Data.Objects.ObjectContext> には、<xref:System.Data.Objects.ObjectContext.Connection%2A> プロパティからアクセスできます。 詳細については、次を参照してください。[接続の管理とトランザクション](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)です。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "32766986"
 |`Metadata`|`Name` キーワードが指定されていない場合に必要です。 メタデータとマッピング情報の検索対象となるディレクトリ、ファイル、およびリソースの場所をパイプで区切って指定したリストです。 次に例を示します。<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> パイプ区切り記号の両側の空白は無視されます。<br /><br /> このキーワードは `Name` キーワードと同時に指定できません。|  
 |`Name`|アプリケーションは、オプションで、必要なキーワード/値接続文字列値を提供する接続名をアプリケーション構成ファイル内で指定できます。 その場合は、接続文字列内に値を直接記述することはできません。 `Name` キーワードは、構成ファイル内で使用できません。<br /><br /> `Name` キーワードが接続文字列に含まれていない場合、Provider キーワードの空でない値が必要になります。<br /><br /> このキーワードは他のすべての接続文字列キーワードと同時に指定できません。|  
   
- 接続文字列の例を次に示します、 [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)アプリケーション構成ファイルに保存します。  
+ 接続文字列の例を次に、 [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)アプリケーション構成ファイルに格納されています。  
   
   
   
@@ -47,7 +47,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |オプション|説明|  
 |-|-|  
-|`assemblyFullName`|リソースが組み込まれたアセンブリの完全な名前。 この名前には、次のように単純な名前、バージョン名、サポートされるカルチャ、および公開キーが含まれます。<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> リソースは、アプリケーションからアクセスできる任意のアセンブリに組み込むことができます。<br /><br /> ワイルドカードを指定する場合 (\*) の`assemblyFullName`、Entity Framework ランタイムでは、この順序で、次の場所のリソース検索されます。<br /><br /> 1.呼び出し側のアセンブリ<br />2.参照アセンブリ<br />3.アプリケーションの bin ディレクトリ内のアセンブリ<br /><br /> ファイルが上記のどの場所にもない場合は、例外がスローされます。 **注:** Entity Framework では、正しい名前とリソースのすべてのアセンブリを調べるワイルドカード (*) を使用する場合。 パフォーマンスを向上させるには、ワイルドカードではなくアセンブリ名を指定してください。|  
+|`assemblyFullName`|リソースが組み込まれたアセンブリの完全な名前。 この名前には、次のように単純な名前、バージョン名、サポートされるカルチャ、および公開キーが含まれます。<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> リソースは、アプリケーションからアクセスできる任意のアセンブリに組み込むことができます。<br /><br /> ワイルドカードを指定する場合 (\*) の`assemblyFullName`、Entity Framework ランタイムがこの順序で、次の場所でリソースを検索します。<br /><br /> 1.呼び出し側のアセンブリ<br />2.参照アセンブリ<br />3.アプリケーションの bin ディレクトリ内のアセンブリ<br /><br /> ファイルが上記のどの場所にもない場合は、例外がスローされます。 **注:** Entity Framework では、正しい名前のリソースのすべてのアセンブリを検索するワイルドカード (*) を使用するとします。 パフォーマンスを向上させるには、ワイルドカードではなくアセンブリ名を指定してください。|  
 |`resourceName`|AdvendtureWorksModel.csdl などの含まれるリソースの名前。 メタデータ サービスでは、拡張子が .csdl、.ssdl、または .msl のいずれかであるファイルまたはリソースのみが検索されます。 `resourceName` を指定しない場合は、すべてのメタデータ リソースが読み込まれます。 リソースには、アセンブリ内で一意の名前を付ける必要があります。 同じ名前が付けられた複数のファイルがアセンブリ内の異なるディレクトリで定義されている場合、`resourceName` には、リソースの名前の前にフォルダー構造を含める必要があります (FolderName.FileName.csdl など)。<br /><br /> `resourceName` にワイルドカード (*) を指定した場合、`assemblyFullName` は不要です。|  
   
 > [!NOTE]
@@ -92,11 +92,11 @@ Metadata=.\
 ```  
   
 ## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>サポート、 &#124;DataDirectory&#124;置換文字列と Web アプリケーション ルート演算子 (~)  
- `DataDirectory` ~ 演算子で使用、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>の一部として、`Metadata`と`Provider Connection String`キーワード。 <xref:System.Data.EntityClient.EntityConnection> によって、`DataDirectory` と ~ 演算子がそれぞれ <xref:System.Data.Metadata.Edm.MetadataWorkspace> とストア プロバイダーに転送されます。  
+ `DataDirectory` ~ 演算子で使用されて、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>の一部として、`Metadata`と`Provider Connection String`キーワード。 <xref:System.Data.EntityClient.EntityConnection> によって、`DataDirectory` と ~ 演算子がそれぞれ <xref:System.Data.Metadata.Edm.MetadataWorkspace> とストア プロバイダーに転送されます。  
   
 |用語|説明|  
 |----------|-----------------|  
-|`&#124;DataDirectory&#124;`|マッピング ファイルとメタデータ ファイルの相対パスに解決されます。 この値は、`AppDomain.SetData("DataDirectory", objValue)` メソッドで設定される値です。 `DataDirectory` 置換文字列はパイプ文字で囲む必要があり、その名前とパイプ文字の間に空白を含めることはできません。 `DataDirectory` の名前では大文字と小文字は区別されません。<br /><br /> "DataDirectory" という名前の物理ディレクトリをメタデータ パスのリストのメンバーとして渡す必要がある場合は、名前の片側または両側に空白を追加します (`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"` など)。 ASP.NET アプリケーションを解決&#124;DataDirectory&#124;に、"\<アプリケーションのルート >/app_data"フォルダーです。|  
+|`&#124;DataDirectory&#124;`|マッピング ファイルとメタデータ ファイルの相対パスに解決されます。 この値は、`AppDomain.SetData("DataDirectory", objValue)` メソッドで設定される値です。 `DataDirectory`置換文字列はパイプ文字で囲む必要があり、あります、その名前とパイプ文字の間の空白文字にすることはできません。 `DataDirectory` の名前では大文字と小文字は区別されません。<br /><br /> "DataDirectory"という名前の物理ディレクトリをメタデータ パスの一覧のメンバーとして渡すことがある場合は、名前のいずれかまたは両方の側に空白を追加します。 たとえば、`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"` のように指定します。 ASP.NET アプリケーションが解決される&#124;DataDirectory&#124;に、"\<アプリケーション ルート >/app_data"フォルダーです。|  
 |~|Web アプリケーション ルートに解決されます。 先頭の ~ 文字は、有効なローカル サブディレクトリを表すこともありますが、常に Web アプリケーション ルート演算子 (~) として解釈されます。 このようなローカル サブディレクトリを参照するには、ユーザーが明示的に `./~` を渡す必要があります。|  
   
  `DataDirectory` と ~ 演算子は、パスの先頭にのみ指定する必要があります。その他の位置では解決されません。 Entity Framework では、`~/data` の解決は試行されますが、`/data/~` は物理パスとして処理されます。  
@@ -110,5 +110,5 @@ Metadata=.\
 ## <a name="see-also"></a>関連項目  
  [データ プロバイダーの操作](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [配置に関する注意事項](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [接続とトランザクションを管理します。](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [接続とトランザクションの管理](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [接続文字列](../../../../../docs/framework/data/adonet/connection-strings.md)
