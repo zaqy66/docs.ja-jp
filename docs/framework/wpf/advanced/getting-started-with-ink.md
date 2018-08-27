@@ -1,84 +1,116 @@
 ---
-title: インクの概要
-ms.date: 03/30/2017
+title: Visual Studio で WPF アプリに InkCanvas を作成します。
+ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - procedural code in lieu of XAML [WPF]
-- gradient brush [WPF], animating colors of
 - XAML [WPF], procedural code in lieu of
-- animation [WPF], gradient brush colors
-- brushes [WPF], animating colors of
+- InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 9a1b53d0513eeef377fe8e012a8d5d7ea3f8a984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546238"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925045"
 ---
-# <a name="getting-started-with-ink"></a><span data-ttu-id="44414-102">インクの概要</span><span class="sxs-lookup"><span data-stu-id="44414-102">Getting Started with Ink</span></span>
-<span data-ttu-id="44414-103">デジタル インクを組み込むことをアプリケーションには、これまでよりも簡単です。</span><span class="sxs-lookup"><span data-stu-id="44414-103">Incorporating digital ink into your applications is easier than ever.</span></span> <span data-ttu-id="44414-104">インクのプログラミングに完全な統合を実現するための COM および Windows フォームのメソッドへの推論の進化に伴い、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]です。</span><span class="sxs-lookup"><span data-stu-id="44414-104">Ink has evolved from being a corollary to the COM and Windows Forms method of programming to achieving full integration into the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="44414-105">個別の Sdk またはランタイム ライブラリをインストールする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="44414-105">You do not need to install separate SDKs or runtime libraries.</span></span>  
-  
-## <a name="prerequisites"></a><span data-ttu-id="44414-106">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="44414-106">Prerequisites</span></span>  
- <span data-ttu-id="44414-107">次の例を使用する、Microsoft Visual Studio 2005 をインストールする必要があります最初、[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]です。</span><span class="sxs-lookup"><span data-stu-id="44414-107">To use the following examples, you must first install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].</span></span> <span data-ttu-id="44414-108">また、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に対応するアプリケーションの作成方法も理解しておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="44414-108">You should also understand how to write applications for the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="44414-109">概要の詳細については、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を参照してください[チュートリアル: 最初の WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)です。</span><span class="sxs-lookup"><span data-stu-id="44414-109">For more information about getting started with the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>  
-  
-## <a name="quick-start"></a><span data-ttu-id="44414-110">クイック スタート</span><span class="sxs-lookup"><span data-stu-id="44414-110">Quick Start</span></span>  
- <span data-ttu-id="44414-111">このセクションでは、単純なを作成できます。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]インクを収集するアプリケーション。</span><span class="sxs-lookup"><span data-stu-id="44414-111">This section helps you write a simple [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that collects ink.</span></span>  
-  
- <span data-ttu-id="44414-112">完了していない場合は、Microsoft Visual Studio 2005 をインストールし、[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]です。</span><span class="sxs-lookup"><span data-stu-id="44414-112">If you haven't already done so, install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)].</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="44414-113"> アプリケーション通常コンパイルする必要が、それらを表示する前にのみで構成されている場合でも[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]です。</span><span class="sxs-lookup"><span data-stu-id="44414-113"> applications usually must be compiled before you can view them, even if they consist entirely of [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="44414-114">ただし、[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]を実装するプロセスを高速化するように設計 XamlPad のアプリケーションが含まれています、 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-ベースの UI。</span><span class="sxs-lookup"><span data-stu-id="44414-114">However, the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] includes an application, XamlPad, designed to speed up the process of implementing a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-based UI.</span></span> <span data-ttu-id="44414-115">そのアプリケーションを使用して、表示およびこのドキュメントで最初のいくつかのサンプルを修正することができます。</span><span class="sxs-lookup"><span data-stu-id="44414-115">You can use that application to view and tinker with the first few samples in this document.</span></span> <span data-ttu-id="44414-116">作成プロセスからコンパイルされたアプリケーション[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]は、このドキュメントの後半で説明します。</span><span class="sxs-lookup"><span data-stu-id="44414-116">The process of creating compiled applications from [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is covered later in this document.</span></span>  
-  
- <span data-ttu-id="44414-117">XAMLPad を起動する をクリックして、**開始** メニューのをポイント**すべてのプログラム**、指す**Microsoft Windows SDK**、 をポイント**ツール**、 をクリック**XAMLPad**です。</span><span class="sxs-lookup"><span data-stu-id="44414-117">To launch XAMLPad, click the **Start** menu, point to **All Programs**, point to **Microsoft Windows SDK**, point to **Tools**, and click **XAMLPad**.</span></span> <span data-ttu-id="44414-118">表示ウィンドウでは、XAMLPad は、コード ペインで記述された XAML コードを表示します。</span><span class="sxs-lookup"><span data-stu-id="44414-118">In the rendering pane, XAMLPad renders the XAML code written in the code pane.</span></span> <span data-ttu-id="44414-119">XAML コードを編集することができ、変更はすぐに表示ウィンドウで表示します。</span><span class="sxs-lookup"><span data-stu-id="44414-119">You can edit the XAML code, and the changes immediately appear in the rendering pane.</span></span>  
-  
-#### <a name="got-ink"></a><span data-ttu-id="44414-120">インクを取得します。</span><span class="sxs-lookup"><span data-stu-id="44414-120">Got Ink?</span></span>  
- <span data-ttu-id="44414-121">初めて開始する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]インクをサポートするアプリケーション。</span><span class="sxs-lookup"><span data-stu-id="44414-121">To start your first [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that supports ink:</span></span>  
-  
-1.  <span data-ttu-id="44414-122">Microsoft Visual Studio 2005 を開きます。</span><span class="sxs-lookup"><span data-stu-id="44414-122">Open Microsoft Visual Studio 2005</span></span>  
-  
-2.  <span data-ttu-id="44414-123">新しい**Windows アプリケーション (WPF)**</span><span class="sxs-lookup"><span data-stu-id="44414-123">Create a new **Windows Application (WPF)**</span></span>  
-  
-3.  <span data-ttu-id="44414-124">型`<InkCanvas/>`間、`<Grid>`タグ</span><span class="sxs-lookup"><span data-stu-id="44414-124">Type `<InkCanvas/>` between the `<Grid>` tags</span></span>  
-  
-4.  <span data-ttu-id="44414-125">キーを押して**f5 キーを押して**デバッガーでアプリケーションを起動するには</span><span class="sxs-lookup"><span data-stu-id="44414-125">Press **F5** to launch your application in the debugger</span></span>  
-  
-5.  <span data-ttu-id="44414-126">スタイラスおよびマウスを使用して、記述**hello world**  ウィンドウで</span><span class="sxs-lookup"><span data-stu-id="44414-126">Using a stylus or mouse, write **hello world** in the window</span></span>  
-  
- <span data-ttu-id="44414-127">相当するインクのみ 12 回のキーストロークで"hello world"アプリケーションを作成した!</span><span class="sxs-lookup"><span data-stu-id="44414-127">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>  
-  
-#### <a name="spice-up-your-application"></a><span data-ttu-id="44414-128">アプリケーションを楽しくする. します。</span><span class="sxs-lookup"><span data-stu-id="44414-128">Spice Up Your Application</span></span>  
- <span data-ttu-id="44414-129">一部の機能のライセンス認証の利用、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]です。</span><span class="sxs-lookup"><span data-stu-id="44414-129">Let’s take advantage of some features of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  <span data-ttu-id="44414-130">開く間にあるすべてを置換\<ウィンドウ > タグと終了\</Window > タグで、次マークアップでします。</span><span class="sxs-lookup"><span data-stu-id="44414-130">Replace everything between the opening \<Window> and closing \</Window> tags with the following markup to get a gradient brush background on your inking surface.</span></span>  
-  
- [!code-xaml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
-[!code-xaml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
-  
-#### <a name="using-animation"></a><span data-ttu-id="44414-131">アニメーションを使用します。</span><span class="sxs-lookup"><span data-stu-id="44414-131">Using Animation</span></span>  
- <span data-ttu-id="44414-132">楽しい、グラデーション ブラシの色をアニメーション化してみましょう。</span><span class="sxs-lookup"><span data-stu-id="44414-132">For fun, let's animate the colors of the gradient brush.</span></span> <span data-ttu-id="44414-133">次の追加[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、終了後に`</InkCanvas>`タグが終了する前に`</Page>`タグ。</span><span class="sxs-lookup"><span data-stu-id="44414-133">Add the following [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] after the closing `</InkCanvas>` tag but before the closing `</Page>` tag.</span></span>  
-  
- [!code-xaml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
-  
-#### <a name="adding-some-code-behind-the-xaml"></a><span data-ttu-id="44414-134">XAML の背後にある一部のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="44414-134">Adding Some Code Behind the XAML</span></span>  
- <span data-ttu-id="44414-135">XAML では、非常に簡単にユーザー インターフェイスをデザイン、イベントを処理するコードを追加する任意の実際のアプリケーションが必要です。</span><span class="sxs-lookup"><span data-stu-id="44414-135">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="44414-136">右クリック マウスからの応答でインクを拡大する簡単な例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="44414-136">Here is a simple example that zooms in on the ink in response to a right-click from a mouse:</span></span>  
-  
- <span data-ttu-id="44414-137">設定、`MouseRightButtonUp`ハンドラー、 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="44414-137">Set the `MouseRightButtonUp` handler in your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span></span>  
-  
- [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
-  
- <span data-ttu-id="44414-138">Visual Studio のソリューション エクスプ ローラーで、Windows1.xaml を展開し、window1.xaml.cs の名前または Window1.xaml.vb Visual Basic を使用している場合、分離コード ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="44414-138">In Visual Studio’s Solution Explorer, expand Windows1.xaml and open the code-behind file, Window1.xaml.cs or Window1.xaml.vb if you are using Visual Basic.</span></span> <span data-ttu-id="44414-139">次のイベント ハンドラーのコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="44414-139">Add the following event handler code:</span></span>  
-  
- [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
- [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]  
-  
- <span data-ttu-id="44414-140">ここで、アプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="44414-140">Now, run your application.</span></span> <span data-ttu-id="44414-141">インクを追加およびマウスで右クリックするか、スタイラスを使用して、等価なプレス アンド ホールドを実行します。</span><span class="sxs-lookup"><span data-stu-id="44414-141">Add some ink and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>  
-  
-#### <a name="using-procedural-code-instead-of-xaml"></a><span data-ttu-id="44414-142">XAML ではなく、手続き型コードを使用します。</span><span class="sxs-lookup"><span data-stu-id="44414-142">Using Procedural Code Instead of XAML</span></span>  
- <span data-ttu-id="44414-143">すべてにアクセスできる[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]手続き型コードから機能します。</span><span class="sxs-lookup"><span data-stu-id="44414-143">You can access all [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] features from procedural code.</span></span> <span data-ttu-id="44414-144">ここでは、"こんにちはインク World"アプリケーションの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を使用しない[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]まったくです。</span><span class="sxs-lookup"><span data-stu-id="44414-144">Here is a "Hello Ink World" application for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] that doesn’t use any [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] at all.</span></span> <span data-ttu-id="44414-145">Visual Studio での空のコンソール アプリケーションには、次のコードを貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="44414-145">Paste the code below into an empty Console Application in Visual Studio.</span></span> <span data-ttu-id="44414-146">PresentationCore、PresentationFramework、および WindowsBase アセンブリへの参照を追加し、キーを押してアプリケーションをビルド**f5 キーを押して**:</span><span class="sxs-lookup"><span data-stu-id="44414-146">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies, and build the application by pressing **F5**:</span></span>  
-  
- [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
- [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
-  
-## <a name="see-also"></a><span data-ttu-id="44414-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="44414-147">See Also</span></span>  
- [<span data-ttu-id="44414-148">デジタル インク</span><span class="sxs-lookup"><span data-stu-id="44414-148">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
- [<span data-ttu-id="44414-149">インクの収集</span><span class="sxs-lookup"><span data-stu-id="44414-149">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
- [<span data-ttu-id="44414-150">手書き認識</span><span class="sxs-lookup"><span data-stu-id="44414-150">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
- [<span data-ttu-id="44414-151">インクの格納</span><span class="sxs-lookup"><span data-stu-id="44414-151">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)
+# <a name="get-started-with-ink-in-wpf"></a><span data-ttu-id="ffbf3-102">WPF のインクを概要します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-102">Get Started with Ink in WPF</span></span>
+
+<span data-ttu-id="ffbf3-103">Windows Presentation Foundation (WPF) が、インク機能を使用するデジタル インクをアプリに組み込むことで簡単です。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-103">Windows Presentation Foundation (WPF) has an ink feature that makes it easy to incorporate digital ink into your app.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="ffbf3-104">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="ffbf3-104">Prerequisites</span></span>
+
+<span data-ttu-id="ffbf3-105">次の例については、最初に使用する[Microsoft Visual Studio インストール](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-105">To use the following examples, first [install Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).</span></span> <span data-ttu-id="ffbf3-106">基本的な WPF アプリを記述する方法を理解することもできます。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-106">It also helps to know how to write basic WPF apps.</span></span> <span data-ttu-id="ffbf3-107">WPF の概要については、次を参照してください。[チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-107">For help getting started with WPF, see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>
+
+## <a name="quick-start"></a><span data-ttu-id="ffbf3-108">クイック スタート</span><span class="sxs-lookup"><span data-stu-id="ffbf3-108">Quick Start</span></span>
+
+<span data-ttu-id="ffbf3-109">このセクションでは、インクを収集する簡単な WPF アプリケーションを作成できます。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-109">This section helps you write a simple WPF application that collects ink.</span></span>
+
+### <a name="got-ink"></a><span data-ttu-id="ffbf3-110">インクを入手されましたか。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-110">Got Ink?</span></span>
+
+<span data-ttu-id="ffbf3-111">WPF アプリを作成するには、インクをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-111">To create a WPF app that supports ink:</span></span>
+
+1. <span data-ttu-id="ffbf3-112">Visual Studio を開きます。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-112">Open Visual Studio.</span></span>
+
+2. <span data-ttu-id="ffbf3-113">新規作成**WPF アプリ**します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-113">Create a new **WPF App**.</span></span>
+
+   <span data-ttu-id="ffbf3-114">**新しいプロジェクト**ダイアログ ボックスで、展開、**インストール済み** > **Visual c#** または**Visual Basic**  >  **Windows デスクトップ**カテゴリ。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-114">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="ffbf3-115">次に、選択、 **WPF アプリ (.NET Framework)** アプリ テンプレート。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-115">Then, select the **WPF App (.NET Framework)** app template.</span></span> <span data-ttu-id="ffbf3-116">名前を入力し、 **OK**します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-116">Enter a name, and then select **OK**.</span></span>
+
+   <span data-ttu-id="ffbf3-117">Visual Studio は、プロジェクトを作成し、 *MainWindow.xaml*デザイナーが開きます。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-117">Visual Studio creates the project, and *MainWindow.xaml* opens in the designer.</span></span>
+
+3. <span data-ttu-id="ffbf3-118">型`<InkCanvas/>`間、`<Grid>`タグ。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-118">Type `<InkCanvas/>` between the `<Grid>` tags.</span></span>
+
+   ![InkCanvas タグを持つ XAML デザイナー](media/getting-started-with-ink/inkcanvas-xaml.png)
+
+4. <span data-ttu-id="ffbf3-120">キーを押して**F5**デバッガーでアプリケーションを起動します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-120">Press **F5** to launch your application in the debugger.</span></span>
+
+5. <span data-ttu-id="ffbf3-121">スタイラス ペンやマウスを使用して、記述**hello world**ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-121">Using a stylus or mouse, write **hello world** in the window.</span></span>
+
+<span data-ttu-id="ffbf3-122">インクと同等の 12 のキー操作で"hello world"アプリケーションを記述しました。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-122">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>
+
+### <a name="spice-up-your-app"></a><span data-ttu-id="ffbf3-123">アプリを改良します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-123">Spice Up Your App</span></span>
+
+<span data-ttu-id="ffbf3-124">WPF の機能がいくつかの利点を見てみましょう。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-124">Let’s take advantage of some features of the WPF.</span></span> <span data-ttu-id="ffbf3-125">開始タグと終了の間ですべてのものを置き換える\<ウィンドウ > 次のマークアップ タグ。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-125">Replace everything between the opening and closing \<Window> tags with the following markup:</span></span>
+
+```xaml
+<Page>
+  <InkCanvas Name="myInkCanvas" MouseRightButtonUp="RightMouseUpHandler">
+    <InkCanvas.Background>
+      <LinearGradientBrush>
+        <GradientStop Color="Yellow" Offset="0.0" />
+          <GradientStop Color="Blue" Offset="0.5" />
+            <GradientStop Color="HotPink" Offset="1.0" />
+              </LinearGradientBrush>
+    </InkCanvas.Background>
+  </InkCanvas>
+</Page>
+```
+
+<span data-ttu-id="ffbf3-126">この XAML は、手描き入力サーフェイス グラデーション ブラシのバック グラウンドを作成します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-126">This XAML creates a gradient brush background on your inking surface.</span></span>
+
+![WPF アプリで画面を手描き入力のグラデーションの色](media/getting-started-with-ink/gradient-colors.png)
+
+### <a name="add-some-code-behind-the-xaml"></a><span data-ttu-id="ffbf3-128">一部の XAML コードを追加します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-128">Add Some Code Behind the XAML</span></span>
+
+<span data-ttu-id="ffbf3-129">XAML を使用する非常に簡単にユーザー インターフェイスをデザイン、現実世界の任意のアプリケーションはイベントを処理するコードを追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-129">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="ffbf3-130">マウスから応答を右クリックして、インクにズーム インする簡単な例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-130">Here is a simple example that zooms in on the ink in response to a right-click from a mouse.</span></span>
+
+1. <span data-ttu-id="ffbf3-131">設定、 `MouseRightButtonUp` XAML 内のハンドラー。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-131">Set the `MouseRightButtonUp` handler in your XAML:</span></span>
+
+   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+
+1. <span data-ttu-id="ffbf3-132">**ソリューション エクスプ ローラー**MainWindow.xaml を展開し、分離コード ファイル (MainWindow.xaml.cs または MainWindow.xaml.vb) を開きます。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-132">In **Solution Explorer**, expand MainWindow.xaml and open the code-behind file (MainWindow.xaml.cs or MainWindow.xaml.vb).</span></span> <span data-ttu-id="ffbf3-133">次のイベント ハンドラーのコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-133">Add the following event handler code:</span></span>
+
+   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+
+1. <span data-ttu-id="ffbf3-134">アプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-134">Run the application.</span></span> <span data-ttu-id="ffbf3-135">、手描き入力を追加し、マウスで右クリックまたはプレス アンド ホールドに相当するスタイラスを使用して実行します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-135">Add some ink, and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>
+
+   <span data-ttu-id="ffbf3-136">マウスの右ボタンをクリックするたびに拡大表示されます。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-136">The display zooms in each time you click with the right mouse button.</span></span>
+
+### <a name="use-procedural-code-instead-of-xaml"></a><span data-ttu-id="ffbf3-137">手続き型コードを使用して、XAML ではなく</span><span class="sxs-lookup"><span data-stu-id="ffbf3-137">Use Procedural Code Instead of XAML</span></span>
+
+<span data-ttu-id="ffbf3-138">手続き型コードからすべての WPF 機能にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-138">You can access all WPF features from procedural code.</span></span> <span data-ttu-id="ffbf3-139">Wpf の XAML をまったく使用しない"こんにちはインク World"アプリケーションを作成する次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-139">Follow these steps to create a "Hello Ink World" application for WPF that doesn’t use any XAML at all.</span></span>
+
+1. <span data-ttu-id="ffbf3-140">Visual Studio で新しいコンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-140">Create a new console application project in Visual Studio.</span></span>
+
+   <span data-ttu-id="ffbf3-141">**新しいプロジェクト**ダイアログ ボックスで、展開、**インストール済み** > **Visual c#** または**Visual Basic**  >  **Windows デスクトップ**カテゴリ。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-141">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="ffbf3-142">次に、選択、**コンソール アプリ (.NET Framework)** アプリ テンプレート。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-142">Then, select the **Console App (.NET Framework)** app template.</span></span> <span data-ttu-id="ffbf3-143">名前を入力し、 **OK**します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-143">Enter a name, and then select **OK**.</span></span>
+
+1. <span data-ttu-id="ffbf3-144">次のコードを Program.cs または Program.vb ファイルに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-144">Paste the following code into the Program.cs or Program.vb file:</span></span>
+
+   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+
+1. <span data-ttu-id="ffbf3-145">右クリックし、PresentationCore、PresentationFramework、WindowsBase アセンブリへの参照を追加**参照**で**ソリューション エクスプ ローラー**を選択して**参照の追加**.</span><span class="sxs-lookup"><span data-stu-id="ffbf3-145">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies by right-clicking on **References** in **Solution Explorer** and choosing **Add Reference**.</span></span>
+
+   ![PresentationCore と PresentationFramework を示す参照マネージャー](media/getting-started-with-ink/references.png)
+
+1. <span data-ttu-id="ffbf3-147">キーを押してアプリケーションをビルド**F5**します。</span><span class="sxs-lookup"><span data-stu-id="ffbf3-147">Build the application by pressing **F5**.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ffbf3-148">関連項目</span><span class="sxs-lookup"><span data-stu-id="ffbf3-148">See Also</span></span>
+
+- [<span data-ttu-id="ffbf3-149">デジタル インク</span><span class="sxs-lookup"><span data-stu-id="ffbf3-149">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)
+- [<span data-ttu-id="ffbf3-150">インクの収集</span><span class="sxs-lookup"><span data-stu-id="ffbf3-150">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)
+- [<span data-ttu-id="ffbf3-151">手書き認識</span><span class="sxs-lookup"><span data-stu-id="ffbf3-151">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
+- [<span data-ttu-id="ffbf3-152">インクの格納</span><span class="sxs-lookup"><span data-stu-id="ffbf3-152">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)
