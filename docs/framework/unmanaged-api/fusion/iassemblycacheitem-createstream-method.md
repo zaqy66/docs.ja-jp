@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754439"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934086"
 ---
-# <a name="iassemblycacheitemcreatestream-method"></a><span data-ttu-id="9cff7-102">IAssemblyCacheItem::CreateStream メソッド</span><span class="sxs-lookup"><span data-stu-id="9cff7-102">IAssemblyCacheItem::CreateStream Method</span></span>
-<span data-ttu-id="9cff7-103">指定した名前と形式を使用するストリームを作成します。</span><span class="sxs-lookup"><span data-stu-id="9cff7-103">Creates a stream with the specified name and format.</span></span>  
+# <a name="iassemblycacheitemcreatestream-method"></a><span data-ttu-id="5a4b8-102">IAssemblyCacheItem::CreateStream メソッド</span><span class="sxs-lookup"><span data-stu-id="5a4b8-102">IAssemblyCacheItem::CreateStream Method</span></span>
+<span data-ttu-id="5a4b8-103">指定した名前と形式を使用するストリームを作成します。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-103">Creates a stream with the specified name and format.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9cff7-104">構文</span><span class="sxs-lookup"><span data-stu-id="9cff7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a4b8-104">構文</span><span class="sxs-lookup"><span data-stu-id="5a4b8-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateStream (  
@@ -40,31 +40,31 @@ HRESULT CreateStream (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9cff7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9cff7-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5a4b8-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5a4b8-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="9cff7-106">[in]ものがありますで定義されているフラグ。</span><span class="sxs-lookup"><span data-stu-id="9cff7-106">[in] Flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="5a4b8-106">[in]ものがありますで定義されているフラグ。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-106">[in] Flags defined in Fusion.idl.</span></span>  
   
  `pszStreamName`  
- <span data-ttu-id="9cff7-107">[in]作成されるストリームの名前。</span><span class="sxs-lookup"><span data-stu-id="9cff7-107">[in] The name of the stream to be created.</span></span>  
+ <span data-ttu-id="5a4b8-107">[in]作成されるストリームの名前。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-107">[in] The name of the stream to be created.</span></span>  
   
  `dwFormat`  
- <span data-ttu-id="9cff7-108">[in]ストリーミングされるように、ファイルの形式です。</span><span class="sxs-lookup"><span data-stu-id="9cff7-108">[in] The format of the file to be streamed.</span></span>  
+ <span data-ttu-id="5a4b8-108">[in]ストリーミングされるように、ファイルの形式です。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-108">[in] The format of the file to be streamed.</span></span>  
   
  `dwFormatFlags`  
- <span data-ttu-id="9cff7-109">[in]形式固有のものがありますで定義されているフラグ。</span><span class="sxs-lookup"><span data-stu-id="9cff7-109">[in] Format-specific flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="5a4b8-109">[in]形式固有のものがありますで定義されているフラグ。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-109">[in] Format-specific flags defined in Fusion.idl.</span></span>  
   
  `ppIStream`  
- <span data-ttu-id="9cff7-110">[out]返されるのアドレスへのポインター [IStream](/windows/desktop/api/objidl/nn-objidl-istream)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="9cff7-110">[out] A pointer to the address of the returned [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instance.</span></span>  
+ <span data-ttu-id="5a4b8-110">[out]返されるのアドレスへのポインター [IStream](/windows/desktop/api/objidl/nn-objidl-istream)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-110">[out] A pointer to the address of the returned [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instance.</span></span>  
   
  `puliMaxSize`  
- <span data-ttu-id="9cff7-111">[in、省略可能]によって参照されるストリームの最大サイズ`ppIStream`します。</span><span class="sxs-lookup"><span data-stu-id="9cff7-111">[in, optional] The maximum size of the stream referenced by `ppIStream`.</span></span>  
+ <span data-ttu-id="5a4b8-111">[in、省略可能]によって参照されるストリームの最大サイズ`ppIStream`します。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-111">[in, optional] The maximum size of the stream referenced by `ppIStream`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9cff7-112">要件</span><span class="sxs-lookup"><span data-stu-id="9cff7-112">Requirements</span></span>  
- <span data-ttu-id="9cff7-113">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9cff7-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a4b8-112">要件</span><span class="sxs-lookup"><span data-stu-id="5a4b8-112">Requirements</span></span>  
+ <span data-ttu-id="5a4b8-113">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9cff7-114">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="9cff7-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="5a4b8-114">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="5a4b8-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="9cff7-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9cff7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5a4b8-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a4b8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9cff7-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="9cff7-116">See Also</span></span>  
- [<span data-ttu-id="9cff7-117">IAssemblyCacheItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9cff7-117">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5a4b8-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="5a4b8-116">See Also</span></span>  
+ [<span data-ttu-id="5a4b8-117">IAssemblyCacheItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5a4b8-117">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

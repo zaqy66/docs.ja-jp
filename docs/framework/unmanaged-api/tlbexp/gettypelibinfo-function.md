@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56a9b97f37240e385dbd1788bafea62578d687a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ec28c581b8e6e0aff3a2765720b6e9795be931b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457869"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931705"
 ---
-# <a name="gettypelibinfo-function"></a><span data-ttu-id="7829f-102">GetTypeLibInfo 関数</span><span class="sxs-lookup"><span data-stu-id="7829f-102">GetTypeLibInfo Function</span></span>
-<span data-ttu-id="7829f-103">確認するには、指定したタイプ ライブラリに関する情報を返します、 [TLIBATTR](https://msdn.microsoft.com/library/ms221376\(v=vs.85\).aspx)構造体。</span><span class="sxs-lookup"><span data-stu-id="7829f-103">Returns information about the specified type library by examining its [TLIBATTR](https://msdn.microsoft.com/library/ms221376\(v=vs.85\).aspx) structure.</span></span>  
+# <a name="gettypelibinfo-function"></a><span data-ttu-id="52658-102">GetTypeLibInfo 関数</span><span class="sxs-lookup"><span data-stu-id="52658-102">GetTypeLibInfo Function</span></span>
+<span data-ttu-id="52658-103">調べることで指定したタイプ ライブラリに関する情報を返します、 [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr)構造体。</span><span class="sxs-lookup"><span data-stu-id="52658-103">Returns information about the specified type library by examining its [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7829f-104">構文</span><span class="sxs-lookup"><span data-stu-id="7829f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52658-104">構文</span><span class="sxs-lookup"><span data-stu-id="52658-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeLibInfo(  
@@ -39,39 +39,39 @@ HRESULT GetTypeLibInfo(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7829f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7829f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="52658-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="52658-105">Parameters</span></span>  
  `szFile`  
- <span data-ttu-id="7829f-106">[in]タイプ ライブラリのファイル名。</span><span class="sxs-lookup"><span data-stu-id="7829f-106">[in] The file name of the type library.</span></span>  
+ <span data-ttu-id="52658-106">[in]タイプ ライブラリのファイル名。</span><span class="sxs-lookup"><span data-stu-id="52658-106">[in] The file name of the type library.</span></span>  
   
  `pTypeLibID`  
- <span data-ttu-id="7829f-107">[out]タイプ ライブラリの GUID です。</span><span class="sxs-lookup"><span data-stu-id="7829f-107">[out] The GUID of the type library.</span></span>  
+ <span data-ttu-id="52658-107">[out]タイプ ライブラリの GUID です。</span><span class="sxs-lookup"><span data-stu-id="52658-107">[out] The GUID of the type library.</span></span>  
   
  `pTypeLibLCID`  
- <span data-ttu-id="7829f-108">[out]タイプ ライブラリのローカリゼーション ID です。</span><span class="sxs-lookup"><span data-stu-id="7829f-108">[out] The localization ID of the type library.</span></span>  
+ <span data-ttu-id="52658-108">[out]タイプ ライブラリのローカリゼーション ID。</span><span class="sxs-lookup"><span data-stu-id="52658-108">[out] The localization ID of the type library.</span></span>  
   
  `pTypeLibPlatform`  
- <span data-ttu-id="7829f-109">[out]A [SYSKIND](https://msdn.microsoft.com/library/ms221272\(v=vs.85\).aspx)をタイプ ライブラリのターゲットのオペレーティング システムを識別するフラグ。</span><span class="sxs-lookup"><span data-stu-id="7829f-109">[out] A [SYSKIND](https://msdn.microsoft.com/library/ms221272\(v=vs.85\).aspx) flag that identifies the target operating system for the type library.</span></span> <span data-ttu-id="7829f-110">一般的な値は、SYS_WIN32 SYS_WIN64 です。</span><span class="sxs-lookup"><span data-stu-id="7829f-110">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
+ <span data-ttu-id="52658-109">[out]A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind)タイプ ライブラリの対象のオペレーティング システムを識別するフラグ。</span><span class="sxs-lookup"><span data-stu-id="52658-109">[out] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) flag that identifies the target operating system for the type library.</span></span> <span data-ttu-id="52658-110">一般的な値は SYS_WIN32 および SYS_WIN64 です。</span><span class="sxs-lookup"><span data-stu-id="52658-110">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
   
  `pTypeLibMajorVer`  
- <span data-ttu-id="7829f-111">[out]タイプ ライブラリのメジャー バージョン番号。</span><span class="sxs-lookup"><span data-stu-id="7829f-111">[out] The major version number of the type library.</span></span> <span data-ttu-id="7829f-112">たとえば、バージョン*x.y*、メジャー バージョン番号は*x*です。</span><span class="sxs-lookup"><span data-stu-id="7829f-112">For example, for version *x.y*, the major version number is *x*.</span></span>  
+ <span data-ttu-id="52658-111">[out]タイプ ライブラリのメジャー バージョン番号。</span><span class="sxs-lookup"><span data-stu-id="52658-111">[out] The major version number of the type library.</span></span> <span data-ttu-id="52658-112">たとえば、バージョン*x.y*、メジャー バージョン番号は*x*します。</span><span class="sxs-lookup"><span data-stu-id="52658-112">For example, for version *x.y*, the major version number is *x*.</span></span>  
   
  `pTypeLibMinorVer`  
- <span data-ttu-id="7829f-113">[out]タイプ ライブラリのマイナー バージョン番号。</span><span class="sxs-lookup"><span data-stu-id="7829f-113">[out] The minor version number of the type library.</span></span> <span data-ttu-id="7829f-114">たとえば、バージョン*x.y*、マイナー バージョン番号は*y*です。</span><span class="sxs-lookup"><span data-stu-id="7829f-114">For example, for version *x.y*, the minor version number is *y*.</span></span>  
+ <span data-ttu-id="52658-113">[out]タイプ ライブラリのマイナー バージョン番号。</span><span class="sxs-lookup"><span data-stu-id="52658-113">[out] The minor version number of the type library.</span></span> <span data-ttu-id="52658-114">たとえば、バージョン*x.y*、マイナー バージョン番号は*y*します。</span><span class="sxs-lookup"><span data-stu-id="52658-114">For example, for version *x.y*, the minor version number is *y*.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7829f-115">コメント</span><span class="sxs-lookup"><span data-stu-id="7829f-115">Remarks</span></span>  
- <span data-ttu-id="7829f-116">`GetTypeLibInfo`関数は、 [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)です。</span><span class="sxs-lookup"><span data-stu-id="7829f-116">The `GetTypeLibInfo` function is called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span> <span data-ttu-id="7829f-117">このツールは、共通言語ランタイム (CLR) アセンブリ内の型を記述するタイプ ライブラリを生成します。</span><span class="sxs-lookup"><span data-stu-id="7829f-117">This tool generates a type library that describes the types in a common language runtime (CLR) assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52658-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="52658-115">Remarks</span></span>  
+ <span data-ttu-id="52658-116">`GetTypeLibInfo`関数を呼び出して、 [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)します。</span><span class="sxs-lookup"><span data-stu-id="52658-116">The `GetTypeLibInfo` function is called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span> <span data-ttu-id="52658-117">このツールは、共通言語ランタイム (CLR) アセンブリで型を記述するタイプ ライブラリを生成します。</span><span class="sxs-lookup"><span data-stu-id="52658-117">This tool generates a type library that describes the types in a common language runtime (CLR) assembly.</span></span>  
   
- <span data-ttu-id="7829f-118">任意のパラメーターが null を返します、`HRESULT`の`E_POINTER`します。</span><span class="sxs-lookup"><span data-stu-id="7829f-118">If any parameter is null, the function returns an `HRESULT` of `E_POINTER`.</span></span> <span data-ttu-id="7829f-119">返しますそれ以外の場合、`S_OK`です。</span><span class="sxs-lookup"><span data-stu-id="7829f-119">Otherwise, it returns `S_OK`.</span></span>  
+ <span data-ttu-id="52658-118">任意のパラメーターが null 関数を返します、`HRESULT`の`E_POINTER`します。</span><span class="sxs-lookup"><span data-stu-id="52658-118">If any parameter is null, the function returns an `HRESULT` of `E_POINTER`.</span></span> <span data-ttu-id="52658-119">返しますそれ以外の場合、`S_OK`します。</span><span class="sxs-lookup"><span data-stu-id="52658-119">Otherwise, it returns `S_OK`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7829f-120">要件</span><span class="sxs-lookup"><span data-stu-id="7829f-120">Requirements</span></span>  
- <span data-ttu-id="7829f-121">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="7829f-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52658-120">要件</span><span class="sxs-lookup"><span data-stu-id="52658-120">Requirements</span></span>  
+ <span data-ttu-id="52658-121">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="52658-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7829f-122">**ヘッダー:** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="7829f-122">**Header:** TlbRef.h</span></span>  
+ <span data-ttu-id="52658-122">**ヘッダー:** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="52658-122">**Header:** TlbRef.h</span></span>  
   
- <span data-ttu-id="7829f-123">**ライブラリ:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="7829f-123">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="52658-123">**ライブラリ:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="52658-123">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="7829f-124">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7829f-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="52658-124">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52658-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7829f-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="7829f-125">See Also</span></span>  
- [<span data-ttu-id="7829f-126">Tlbexp ヘルパー関数</span><span class="sxs-lookup"><span data-stu-id="7829f-126">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- <span data-ttu-id="7829f-127">[LoadTypeLibEx 関数](https://msdn.microsoft.com/library/ms221249\(v=vs.85\).aspx)</span><span class="sxs-lookup"><span data-stu-id="7829f-127">[LoadTypeLibEx Function](https://msdn.microsoft.com/library/ms221249\(v=vs.85\).aspx)</span></span>
+## <a name="see-also"></a><span data-ttu-id="52658-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="52658-125">See Also</span></span>  
+ [<span data-ttu-id="52658-126">Tlbexp ヘルパー関数</span><span class="sxs-lookup"><span data-stu-id="52658-126">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [<span data-ttu-id="52658-127">LoadTypeLibEx 関数</span><span class="sxs-lookup"><span data-stu-id="52658-127">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
