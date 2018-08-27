@@ -1,5 +1,5 @@
 ---
-title: 使用方法のガイドライン
+title: 利用ガイドライン
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,31 +7,35 @@ helpviewer_keywords:
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02905c193387f78430ce1885449055060d07bf82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7bd54a2325c9721ad17943ba663e7ec0c300632e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571034"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925077"
 ---
-# <a name="usage-guidelines"></a>使用方法のガイドライン
-このセクションには、パブリックにアクセスできる Api の一般的な種類の使用に関するガイドラインが含まれています。 組み込みフレームワーク型 (シリアル化属性など) および一般的な演算子をオーバー ロードの直接の使用状況を処理します。  
+# <a name="usage-guidelines"></a>利用ガイドライン
+
+このセクションには、パブリックにアクセスできる Api で一般的な種類の使用に関するガイドラインが含まれています。 組み込みフレームワーク型 (シリアル化属性など) および一般的な演算子のオーバー ロードの直接の使用状況を処理します。
   
- <xref:System.IDisposable?displayProperty=nameWithType>インターフェイスは、このセクションでは説明しませんが、については、 [Dispose パターン](../../../docs/standard/design-guidelines/dispose-pattern.md)セクションです。  
-  
+<xref:System.IDisposable?displayProperty=nameWithType>インターフェイスは、このセクションでは説明しませんが、については、 [Dispose パターン](../../../docs/standard/design-guidelines/dispose-pattern.md)セクション。
+
 > [!NOTE]
->  ガイドラインとその他の一般的なに関する追加情報、組み込みの .NET Framework 型を参照してください、次の参照トピック: <xref:System.DateTime?displayProperty=nameWithType>、 <xref:System.DateTimeOffset?displayProperty=nameWithType>、 <xref:System.ICloneable?displayProperty=nameWithType>、 <xref:System.IComparable%601?displayProperty=nameWithType>、 <xref:System.IEquatable%601?displayProperty=nameWithType>、 <xref:System.Nullable%601?displayProperty=nameWithType>、 <xref:System.Object?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>.  
+> 組み込みの .NET Framework 型のガイドラインと他の一般的なに関する詳細についてには、次の参照トピックを参照してください: <xref:System.DateTime?displayProperty=nameWithType>、 <xref:System.DateTimeOffset?displayProperty=nameWithType>、 <xref:System.ICloneable?displayProperty=nameWithType>、 <xref:System.IComparable%601?displayProperty=nameWithType>、 <xref:System.IEquatable%601?displayProperty=nameWithType>、 <xref:System.Nullable%601?displayProperty=nameWithType>、 <xref:System.Object?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>.
+
+## <a name="in-this-section"></a>このセクションの内容
+
+[配列](arrays.md)  
+[属性](attributes.md)  
+[コレクション](guidelines-for-collections.md)  
+[シリアル化](serialization.md)  
+[System.Xml の使用法](system-xml-usage.md)  
+[等値演算子](equality-operators.md)  
+
+*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*
+
+*2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
   
-## <a name="in-this-section"></a>このセクションの内容  
- [配列](../../../docs/standard/design-guidelines/arrays.md)  
- [属性](../../../docs/standard/design-guidelines/attributes.md)  
- [コレクション](/cpp/mfc/collections)  
- [シリアル化](../../../docs/standard/design-guidelines/serialization.md)  
- [System.Xml の使用法](../../../docs/standard/design-guidelines/system-xml-usage.md)  
- [等値演算子](../../../docs/standard/design-guidelines/equality-operators.md)  
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
-  
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
-  
-## <a name="see-also"></a>関連項目  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>関連項目
+
+[フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

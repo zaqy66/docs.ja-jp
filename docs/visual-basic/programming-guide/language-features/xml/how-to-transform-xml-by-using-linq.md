@@ -6,16 +6,16 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
 ms.openlocfilehash: 94ad5180c7921a5ace09f9161de5f275475e46d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652962"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924910"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>方法 : LINQ を使用して XML を変換する (Visual Basic)
-[XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)簡単に 1 つのソースから XML を読み取るし、新しい XML 形式に変換します。 変換するには、コンテンツを取得する LINQ クエリを利用したり、既存のドキュメントにコンテンツを新しい XML 形式に変更することができます。  
+[XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)簡単に 1 つのソースから XML を読み取るし、新しい XML 形式に変換します。 変換、コンテンツを取得する LINQ クエリを利用したり、既存のドキュメントの内容を新しい XML 形式に変更できます。  
   
- このトピックの例では、XML ソース ドキュメントからブラウザーで表示される HTML へのコンテンツを変換します。  
+ このトピックの例では、XML ソース ドキュメントからブラウザーで表示する HTML へのコンテンツを変換します。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -23,7 +23,7 @@ ms.locfileid: "33652962"
   
 1.  Visual Studio で、新しい Visual Basic プロジェクトを作成、**コンソール アプリケーション**プロジェクト テンプレート。  
   
-2.  Visual Basic コードを変更するプロジェクトで作成した Module1.vb ファイルをダブルクリックします。 次のコードを追加、`Sub Main`の`Module1`モジュール。 このコードでは、ソース XML ドキュメントとして、<xref:System.Xml.Linq.XDocument>オブジェクト。  
+2.  Visual Basic コードを変更するプロジェクトで作成した Module1.vb ファイルをダブルクリックします。 次のコードを追加、`Sub Main`の`Module1`モジュール。 このコードではソース XML ドキュメントとして、<xref:System.Xml.Linq.XDocument>オブジェクト。  
   
     ```vb  
     Dim catalog =   
@@ -57,11 +57,11 @@ ms.locfileid: "33652962"
         </Catalog>  
     ```  
   
-     [方法: ファイル、文字列、またはストリームから XML を読み込む](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)します。  
+     [方法: ファイル、文字列、または Stream から XML を読み込む](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)します。  
   
-3.  XML ソース ドキュメントを作成するコードを後にすべてを取得する次のコードを追加、 \<Book > オブジェクトの要素を HTML ドキュメントに変換するとします。 一覧\<Book > 要素のコレクションを返す LINQ クエリを使用して作成<xref:System.Xml.Linq.XElement>変換後の HTML を格納するオブジェクト。 埋め込み式を使用すると、新しい XML 形式でソース ドキュメントからの値を入力します。  
+3.  、元の XML ドキュメントを作成するコードの後に、すべてを取得する次のコードを追加、\<書籍 > オブジェクトの要素を HTML ドキュメントに変換します。 一覧\<Book > 要素のコレクションを返す LINQ クエリを使用して作成<xref:System.Xml.Linq.XElement>変換後の HTML が含まれているオブジェクト。 埋め込み式を使用すると、新しい XML 形式でソース ドキュメントからの値を入力します。  
   
-     使用して、結果の HTML ドキュメントがファイルに書き込まれます、<xref:System.Xml.Linq.XElement.Save%2A>メソッドです。  
+     使用して、結果の HTML ドキュメントがファイルに書き込まれます、<xref:System.Xml.Linq.XElement.Save%2A>メソッド。  
   
     ```vb  
     Dim htmlOutput =   
@@ -82,11 +82,11 @@ ms.locfileid: "33652962"
     htmlOutput.Save("BookDescription.html")  
     ```  
   
-4.  後に`Sub Main`の`Module1`、新しいメソッドを追加 (`Sub`) に変換する、\<説明 > ノードを指定した HTML 形式にします。 このメソッドは、前の手順のコードによって呼び出されますの形式を保持するために使用される、\<説明 > 要素。  
+4.  後`Sub Main`の`Module1`、新しいメソッドを追加 (`Sub`) に変換する、\<説明 > ノードが指定された HTML 形式にします。 このメソッドは、前の手順のコードによって呼び出されの形式を保持するために使用、 \<Description > 要素。  
   
-     このメソッドは、のサブ要素を置き換えます、\<説明 > を HTML 要素です。 `ReplaceWith`サブ要素の位置を保持するためにメソッドを使用します。 変換後の内容、\<説明 > HTML 段落で要素が含まれています (\<p >) 要素です。 <xref:System.Xml.Linq.XContainer.Nodes%2A>の変換後の内容を取得するプロパティが使用される、\<説明 > 要素。 これにより、変換済みのコンテンツにサブ要素が含まれています。  
+     このメソッドのサブ要素が置き換えられます、\<説明 > を持つ HTML 要素。 `ReplaceWith`メソッドは、サブ要素の位置を保持するために使用します。 変換後のコンテンツ、\<説明 > 要素は、HTML の段落に含まれます (\<p >) 要素。 <xref:System.Xml.Linq.XContainer.Nodes%2A>の変換後のコンテンツを取得するプロパティが使用される、 \<Description > 要素。 これにより、変換後のコンテンツにサブ要素が含まれること。  
   
-     次のコードの後に追加`Sub Main`の`Module1`します。  
+     後は、次のコードを追加`Sub Main`の`Module1`します。  
   
     ```vb  
     Public Function TransformDescription(ByVal desc As XElement) As XElement  
@@ -116,7 +116,7 @@ ms.locfileid: "33652962"
   
 5.  変更内容を保存します。  
   
-6.  F5 キーを押してコードを実行します。 保存されたドキュメントは次のようにします。  
+6.  F5 キーを押して、コードを実行します。 保存されたドキュメントは次のようにします。  
   
     ```  
     <?xml version="1.0"?>  

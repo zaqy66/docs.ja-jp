@@ -36,24 +36,24 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: f86819f9bd3cbcceb4be696852655018868f4a56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a33e058b41629a2f01f2162dadd7a5f965a82548
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655598"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925554"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic におけるジェネリック型 (Visual Basic)
 *ジェネリック型* はさまざまなデータ型に対して同じ機能を実行するために必要な処理を行う、1 つのプログラミング要素です。 ジェネリック クラスまたはジェネリック プロシージャを定義すると、同じ機能を実行させる各データ型に対して、その機能を別々に定義する必要がありません。  
   
  これは、ヘッドの部分が交換可能な、ねじ回しのセットにたとえることができます。 回すねじを調べて、そのねじに合った正しいヘッド (マイナス、プラス、星型) を選択します。 ねじ回しのハンドルに正しいヘッドを挿入したら、ねじ回しを使ってまったく同じ作業 (ねじを回すこと) を行います。  
   
- ![汎用ツールとして設定されたスクリュー ドライバーのダイアグラム](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")  
+ ![汎用的なツールとして設定されたスクリュー ドライバーのダイアグラム](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")  
 汎用的な道具であるねじ回しのセット  
   
  ジェネリック型を定義する場合は、1 つ以上のデータ型でジェネリック型をパラメーター化します。 これにより、ジェネリック型を使用するコードで、データ型をコードの要件に合わせて変更できるようになります。 コードでは、1 つのジェネリックな要素から複数のプログラミング要素を宣言し、それぞれを異なるデータ型のセットに使用できます。 ただし、使用するデータ型が異なっていても、宣言した要素はどれも同じロジックを実行します。  
   
- たとえば、 `String`などの特定のデータ型を操作するキュー クラスを作成し、使用する必要があるとします。 クラスを宣言する<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>次の例を示します。  
+ たとえば、 `String`などの特定のデータ型を操作するキュー クラスを作成し、使用する必要があるとします。 クラスを宣言する<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>、次の例に示すようにします。  
   
  [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
   
@@ -74,10 +74,10 @@ ms.locfileid: "33655598"
   
  [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
- 完全な例では、次を参照してください。[する方法: 機能を定義する、クラス、ことができます提供と同じ別のデータ型に](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)です。  
+ 詳細な例では、次を参照してください。[方法: 機能を定義、クラスことできます提供と同じ別のデータ型の](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)します。  
   
 ## <a name="eligible-programming-elements"></a>使用できるプログラミング要素  
- ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] では、よく使われるジェネリックな要素を表すジェネリックのクラス、構造体、インターフェイスが定義されています。 <xref:System.Collections.Generic?displayProperty=nameWithType>名前空間は、ディクショナリ、リスト、キュー、およびスタックを提供します。 独自のジェネリックな要素を定義するには、前に参照で使用可能なかどうかには既に<xref:System.Collections.Generic?displayProperty=nameWithType>です。  
+ ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] では、よく使われるジェネリックな要素を表すジェネリックのクラス、構造体、インターフェイスが定義されています。 <xref:System.Collections.Generic?displayProperty=nameWithType>名前空間ディクショナリ、リスト、キュー、およびスタックを提供します。 独自のジェネリックな要素を定義する前に参照で使用可能なかどうかには既に<xref:System.Collections.Generic?displayProperty=nameWithType>します。  
   
  プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "33655598"
   
 -   型引数は、 *参照型*である、または *値型*である必要があります  
   
- 複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 アクセス可能なコンス トラクターを必要とする追加の[New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)リスト内のキーワードです。 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
+ 複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 含めるをアクセス可能のコンス トラクターを必要とする、 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードをリストにします。 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
   
  制約の詳細については、「 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
   
@@ -151,9 +151,9 @@ ms.locfileid: "33655598"
  [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
  [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
  [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)  

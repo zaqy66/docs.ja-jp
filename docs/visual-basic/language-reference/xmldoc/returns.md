@@ -5,12 +5,12 @@ helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: effc55bd65ae6c54575b7931529499505a9523cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47debcef2c6ce56fda4c4a0818c8e813b41ebad1
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598366"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925019"
 ---
 # <a name="ltreturnsgt-visual-basic"></a>&lt;返します&gt;(Visual Basic)
 プロパティまたは関数の戻り値を指定します。  
@@ -25,8 +25,8 @@ ms.locfileid: "33598366"
  `description`  
  戻り値の説明。  
   
-## <a name="remarks"></a>コメント  
- 使用して、`<returns>`タグを戻り値を記述するメソッドの宣言をコメントにします。  
+## <a name="remarks"></a>Remarks  
+ 使用して、`<returns>`戻り値を記述するメソッド宣言のコメント内のタグ。  
   
  コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
@@ -36,4 +36,4 @@ ms.locfileid: "33598366"
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/returns_1.vb)]  
   
 ## <a name="see-also"></a>関連項目  
- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

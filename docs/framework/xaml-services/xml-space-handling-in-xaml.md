@@ -3,19 +3,19 @@ title: XAML における xml:space の処理
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], xml:space attribute
-- XAML [XAML Services], whitespace processing
+- XAML [XAML Services], white-space processing
 - xml:space attribute [XAML Services]
-- whitespace processing [XAML Services]
+- white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: af971ad9ea74e123b939ff8d8488e4e45c5d4aed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 051cb6b3a314509e9593ee570fd659098670e88b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563468"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925858"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML における xml:space の処理
-`xml:space`属性はオブジェクト要素内で重要な空白の処理の動作を宣言する XML 定義の属性です。 この動作は、要素内に含まれるすべてのコンテンツ (内部テキ スト) に関連する場所`xml:space`が宣言されているし、もスコープの子要素にします。  
+`xml:space`属性は、オブジェクト要素内で大量の空白処理動作を宣言する XML で定義された属性。 この動作は、要素内に含まれるすべてのコンテンツ (内部テキ スト) に関連する場所`xml:space`が宣言され、スコープも子要素にします。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
   
@@ -29,17 +29,17 @@ ms.locfileid: "33563468"
 <object xml:space="default" />  
 ```  
   
-## <a name="remarks"></a>コメント  
- 定義、`xml:space`からその 2 つの値を含む XAML の属性が派生した`xml:space`for XML の W3C 仕様で「特別な属性」として定義されています。  
+## <a name="remarks"></a>Remarks  
+ 定義、`xml:space`はその 2 つの値を含む XAML 内の属性に由来`xml:space`W3C XML 仕様で「特別な属性」として定義されています。  
   
- 既定値、`xml:space`属性は、リテラル値`"default"`です。 値の`"default"`、または`xml:space`が反映されていません、すべてのトピックで定義されているの重要なホワイト スペースの解析中の動作は、既定の処理[XAML での空白の処理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)です。  
+ 既定値、`xml:space`属性は、リテラル値`"default"`します。 値の`"default"`、または`xml:space`が反映されていません、すべてのトピックで定義されているの重要な空白文字の解析動作が既定の処理、[空白 XAML 処理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
   
- オブジェクトの要素コンテンツ内の空白を保持するために指定`xml:space="preserve"`に、そのオブジェクト。  
+ オブジェクト要素のコンテンツ内の空白を保持するために次のように指定します。`xml:space="preserve"`に、そのオブジェクト。  
   
- ほとんどの解釈、`xml:space`のスコープの子要素には属性の効果と属性の値。  
+ ほとんどの解釈、`xml:space`属性の効果と属性の値が子要素にスコープ設定されます。  
   
- 空白の XAML の処理の詳細については、次を参照してください。 [XAML での空白の処理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)です。  
+ 空白文字で XAML 処理の詳細については、次を参照してください。[空白 XAML 処理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [XAML での空白の処理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
+ [空白 XAML での処理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
  [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

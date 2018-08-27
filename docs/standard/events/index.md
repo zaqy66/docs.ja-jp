@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbb7793c1c510c9b1b303e6b568f105a958c27cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578585"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42907761"
 ---
 # <a name="handling-and-raising-events"></a>イベントの処理と発生
 .NET Framework でのイベントは、デリゲート モデルに基づいています。 デリゲート モデルはオブザーバー デザイン パターンに従って、サブスクライバーがプロバイダーに登録して通知を受信できるようにします。 イベントの送信元がイベント発生の通知をプッシュしたら、イベント レシーバーはその通知を受信して、通知に対する応答を定義します。 ここでは、デリゲート モデルの主要コンポーネント、アプリケーションでイベントを利用する方法、およびコードでイベントを実装する方法について説明します。  
   
- Windows 8.x ストア アプリでのイベントの処理については、「[Events and routed events overview](/previous-versions/windows/apps/hh758286(v=win.10))」(イベントとルーティング イベントの概要) を参照してください。  
+ Windows 8.x ストア アプリでのイベントの処理については、「[Events and routed events overview](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10))」(イベントとルーティング イベントの概要) を参照してください。  
   
 ## <a name="events"></a>イベント  
  イベントは、アクションの発生を知らせるために、オブジェクトによって送信されるメッセージです。 アクションは、ユーザーがボタンのクリックなどの対話的操作を行った場合や、プロパティの値の変更など、なんらかのプログラム ロジックによって発生します。 イベントを発生させるオブジェクトを "*イベントの送信元*" と呼びます。 イベントの送信元は、発生させたイベントをどのオブジェクトまたはメソッドが受信する (処理する) かについての情報を持っていません。 このイベントはイベントの送信元のメンバーです。たとえば、<xref:System.Web.UI.WebControls.Button.Click> イベントは <xref:System.Web.UI.WebControls.Button> クラスのメンバーであり、<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> イベントは <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装するクラスのメンバーです。  

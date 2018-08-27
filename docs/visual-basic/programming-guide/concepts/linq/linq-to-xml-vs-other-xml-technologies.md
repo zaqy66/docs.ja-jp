@@ -3,16 +3,16 @@ title: LINQ to XML およびその他の XML Technologies2
 ms.date: 07/20/2015
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
 ms.openlocfilehash: 926f1a1ab49a627331a614ef68790ea289b3dcff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648425"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42908077"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML およびその他の XML テクノロジ
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を他の XML テクノロジ (<xref:System.Xml.XmlReader>、XSLT、MSXML、および XmlLite) と比較します。 使用するテクノロジを決定するときに、ここで説明する情報を参照してください。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] とドキュメント オブジェクト モデル (DOM) の比較については、「[LINQ to XML およびDOM (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)です。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] とドキュメント オブジェクト モデル (DOM) の比較については、「[LINQ to XML および(Visual Basic) の DOM](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)します。  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML およびXmlReader  
  <xref:System.Xml.XmlReader> は、高速、前方参照専用、非キャッシュのパーサーです。  
@@ -26,7 +26,7 @@ ms.locfileid: "33648425"
 ## <a name="linq-to-xml-vs-xslt"></a>LINQ to XML およびXSLT  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] と XSLT は、どちらも広範な XML ドキュメント変換機能を備えています。 XSLT は、ルール ベースの宣言型の方法です。 高度な XSLT プログラミングでは、ステートレスな方法が重視される関数型のプログラミング スタイルで XSLT を記述します。 変換は、副作用なしで実装される純粋関数を使用して記述できます。 このルール ベース (関数型) の方法に精通している開発者は多くありません。また、修得するのは難しく、相当の学習時間を要する場合があります。  
   
- XSLT は、パフォーマンスの高いアプリケーションを生成する、生産性の高いシステムとして利用できます。 たとえば、Web 関連の大企業の中には、さまざまなデータ ソースを基に取得した XML から HTML を生成するための手段として XSLT を使用している企業もあります。 XSLT を CLR コードにコンパイルするマネージ XSLT エンジンは、一部のシナリオではネイティブ XSLT エンジンより高いパフォーマンスを発揮します。  
+ XSLT は、パフォーマンスの高いアプリケーションを生成する、生産性の高いシステムとして利用できます。 たとえば、Web 関連の大企業の中には、さまざまなデータ ソースを基に取得した XML から HTML を生成するための手段として XSLT を使用している企業もあります。 XSLT を CLR コードにコンパイルするマネージド XSLT エンジンは、一部のシナリオではネイティブ XSLT エンジンより高いパフォーマンスを発揮します。  
   
  ただし、XSLT では、多くの開発者が持っている C# や Visual Basic の知識は活かされません。 開発者は、別の複雑なプログラミング言語でコードを記述する必要があります。 C# (または Visual Basic) と XSLT など、統合されていない 2 つの開発システムを使用すると、ソフトウェア システムの開発や保守が困難になります。  
   
@@ -43,10 +43,10 @@ ms.locfileid: "33648425"
   
  MSXML はパフォーマンスが高く、セキュリティもほとんどのシナリオで既定で確保されます。また、Internet Explorer でアクセスできるため、AJAX スタイルのアプリケーションでクライアント側での XML の処理を実行できます。 MSXML は、C++、JavaScript、Visual Basic 6.0 など、COM をサポートするすべてのプログラミング言語から使用できます。  
   
- ただし共通言語ランタイム (CLR) に基づくマネージ コードで使用することは推奨されません。  
+ ただし共通言語ランタイム (CLR) に基づくマネージド コードで使用することは推奨されません。  
   
 ## <a name="linq-to-xml-vs-xmllite"></a>LINQ to XML およびXmlLite  
- XmlLite は、非キャッシュ、前方参照専用のプル パーサーで、 主に C++ で使用されます。 マネージ コードで使用することは推奨されません。  
+ XmlLite は、非キャッシュ、前方参照専用のプル パーサーで、 主に C++ で使用されます。 マネージド コードで使用することは推奨されません。  
   
  XmlLite の最大の利点は、ほとんどのシナリオで、軽量かつ高速で安全な XML パーサーとして利用できることです。 XmlLite は脅威の対象となる要素がほとんどないため、 信頼されていないドキュメントを解析し、サービス拒否攻撃やデータ漏洩攻撃などからの保護が必要な場合は、優れた方法となります。  
   

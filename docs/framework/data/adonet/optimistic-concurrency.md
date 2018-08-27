@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: b1395c3bd81f7f9d2f12d5b1ea2ec4b784f7aab9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0b4cdfa7bab1f41f80926b20da3e63a72a2d165d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766229"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912001"
 ---
 # <a name="optimistic-concurrency"></a>オプティミスティック同時実行制御
 マルチユーザー環境には、データベースのデータを更新するための 2 つのモデルがあります。オプティミスティック同時実行制御とペシミスティック同時実行制御です。 <xref:System.Data.DataSet> オブジェクトは、データをリモート処理するときや、データと対話するときのように長時間にわたる利用状況では、オプティミスティック同時実行制御の使用を奨励するように設計されています。  
@@ -42,7 +42,7 @@ ms.locfileid: "32766229"
   
  午後 1 時 1 分に、User2 が同じ行を読み取ります。  
   
- User2 が変更午後 1時 03分**FirstName** "Robert"に"Bob"から、データベースを更新します。  
+ User2 の変更、午後 1時 03分**FirstName** "Robert"には、"Bob"から、データベースを更新します。  
   
 |列名|元の値|現在の値|データベース内の値|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  オプティミスティック同時実行制御モデルを使用するときは、より制限の少ない抽出条件を適用するように選択することもできます。 たとえば、WHERE 句で主キー列だけを使用すると、前回のクエリ実行後に主キー以外の列が更新されたかどうかに関係なく、データが上書きされます。 WHERE 句を特定の列だけに適用することもできます。特定の列だけに WHERE 句を適用した場合は、特定のフィールドが前回のクエリ実行後に更新されていない限りデータが上書きされます。  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated イベント  
- **RowUpdated**のイベント、<xref:System.Data.Common.DataAdapter>オブジェクトは、オプティミスティック同時実行制御違反のアプリケーションに通知を提供する前に説明した手法と組み合わせて使用できます。 **RowUpdated**を更新するには、各再試行の後に発生する**Modified**から行、**データセット**です。 これにより、例外発生時の処理、カスタム エラー情報の追加、再試行ロジックの追加などの特別の処理コードを追加できます。 <xref:System.Data.Common.RowUpdatedEventArgs>オブジェクトを返します、 **RecordsAffected**テーブルで変更された各行の特定の更新コマンドによって影響を受ける行の数を表すプロパティ。 オプティミスティック同時実行性をテストする update コマンドを設定して、 **RecordsAffected**プロパティは、その結果の値を返す 0、オプティミスティック同時実行制御違反が発生したときにレコードが更新されないためです。 この場合、例外がスローされます。 **RowUpdated**イベントを使用すると、このアイテムのみを処理し、適切な設定では、例外を回避**RowUpdatedEventArgs.Status**などの値**UpdateStatus.SkipCurrentRow**です。 詳細については、 **RowUpdated**イベントを参照してください[DataAdapter イベントの処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)です。  
+ **RowUpdated**のイベント、<xref:System.Data.Common.DataAdapter>オブジェクトは、オプティミスティック同時実行制御違反のアプリケーションに通知を提供する前に説明した手法と組み合わせて使用できます。 **RowUpdated**を更新するには、各再試行の後に発生、 **Modified**から行を**データセット**します。 これにより、例外発生時の処理、カスタム エラー情報の追加、再試行ロジックの追加などの特別の処理コードを追加できます。 <xref:System.Data.Common.RowUpdatedEventArgs>オブジェクトを返します、 **RecordsAffected**プロパティ テーブルで変更された行の特定の更新コマンドによって影響を受ける行の数を格納します。 オプティミスティック同時実行性をテストする更新コマンドを設定して、 **RecordsAffected**プロパティは、その結果の値を返す 0、オプティミスティック同時実行制御違反が発生したときにレコードが更新されないためです。 この場合、例外がスローされます。 **RowUpdated**イベントを使用すると、この状況の発生を処理し、適切な設定によって、例外を回避**RowUpdatedEventArgs.Status**などの値**UpdateStatus.SkipCurrentRow**します。 詳細については、 **RowUpdated**イベントを参照してください[DataAdapter イベントの処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)します。  
   
- 必要に応じて、設定することができます**DataAdapter.ContinueUpdateOnError**に**true**、呼び出す前に**更新**、および、に格納されているエラー情報への応答**RowError**行の場合に、特定のプロパティ、**更新**が完了します。 詳細については、次を参照してください。[行エラー情報](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)です。  
+ 必要に応じて、設定することができます**DataAdapter.ContinueUpdateOnError**に**true**を呼び出す前に**Update**、に格納されているエラー情報および応答する**RowError**行の場合に、特定のプロパティ、 **Update**が完了します。 詳細については、次を参照してください。[行エラー情報](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)します。  
   
 ## <a name="optimistic-concurrency-example"></a>オプティミスティック同時実行制御の例  
- 設定する単純な例を次に示します、 **UpdateCommand**の**DataAdapter**オプティミスティック同時実行性をテストするしを使用して、 **RowUpdated**テストするためのイベントオプティミスティック同時実行制御違反。 アプリケーションは、設定、オプティミスティック同時実行制御違反が発生したときに、 **RowError**オプティミスティック同時実行制御違反を反映するように、更新が実行される行のです。  
+ 設定する単純な例を次に、 **UpdateCommand**の**DataAdapter**をオプティミスティック同時実行性、テストし、使用して、 **RowUpdated**をテストするためのイベントオプティミスティック同時実行制御違反。 アプリケーションは、オプティミスティック同時実行制御違反が発生した場合に、設定、 **RowError**オプティミスティック同時実行制御違反を反映するように、更新が実行されている行のできます。  
   
- 更新コマンドの WHERE 句に渡されるパラメーター値にマップされる注、**元**それぞれの列の値。  
+ UPDATE コマンドの WHERE 句に渡されるパラメーターの値にマップされますが、**元**それぞれの列の値。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -166,7 +166,7 @@ SqlDataAdapter adapter = new SqlDataAdapter(
 // The Update command checks for optimistic concurrency violations  
 // in the WHERE clause.  
 adapter.UpdateCommand = new SqlCommand("UPDATE Customers Set CustomerID = @CustomerID, CompanyName = @CompanyName " +  
-   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName, connection);  
+   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName", connection);  
 adapter.UpdateCommand.Parameters.Add(  
   "@CustomerID", SqlDbType.NChar, 5, "CustomerID");  
 adapter.UpdateCommand.Parameters.Add(  
@@ -211,4 +211,5 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
  [DataAdapter によるデータ ソースの更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [行エラー情報](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
  [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ 
+  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)

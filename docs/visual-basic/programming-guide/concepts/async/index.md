@@ -3,11 +3,11 @@ title: Async および Await を使用した非同期プログラミング (Visu
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
 ms.openlocfilehash: 5a0d2d40b815037e6eb3ed47c500c135ad116aaf
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753527"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925243"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async および Await を使用した非同期プログラミング (Visual Basic)
 パフォーマンスのボトルネックを回避しアプリケーション全体の応答性を向上させるために、非同期プログラミングを使用できます。 ただ、非同期アプリケーションを作成する従来の方法は複雑で、プログラムの作成、デバッグ、保守が困難な場合があります。  
@@ -140,14 +140,14 @@ Dim urlContents As String = Await client.GetStringAsync()
 ##  <a name="BKMK_APIAsyncMethods"></a>API の非同期メソッド  
  非同期のプログラミングをサポートする `GetStringAsync` などのメソッドがどこにあるのかということです。 .NET Framework 4.5 以降には、`Async` および `Await` で使用する多くのメンバーが含まれています。 メンバー名と <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> の戻り値の型に付けられている「Async」というサフィックスでこれらのメンバーを識別できます。 たとえば、`System.IO.Stream` のクラスには、同期メソッドの <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A>、および <xref:System.IO.Stream.Write%2A> と共に、<xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> および <xref:System.IO.Stream.WriteAsync%2A> という同期メソッドが含まれています。  
   
- Windows ランタイムにも、Windows アプリの `Async` と `Await` で使用できる多くのメソッドが含まれています。 詳細と方法の例は、次を参照してください[c# または Visual Basic の非同期 Api を呼び出す](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)、[非同期プログラミング (Windows ランタイム アプリ)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))、および[WhenAny: .NET 間のブリッジ。Framework と Windows ランタイム](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))です。  
+ Windows ランタイムにも、Windows アプリの `Async` と `Await` で使用できる多くのメソッドが含まれています。 詳細およびサンプル メソッドは、次を参照してください[c# または Visual Basic での非同期 Api を呼び出す](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)、[非同期プログラミング (Windows ランタイム アプリ)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))、および[WhenAny: .NET 間のブリッジ。Framework と Windows ランタイム](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))します。  
   
 ##  <a name="BKMK_Threads"></a>スレッド  
  非同期のメソッドは非ブロッキング操作を意図しています。 非同期のメソッドの `Await` 式は、待機中のタスクの実行中に現在のスレッドをブロックしません。 代わりに、式はメソッドの残りの部分の継続を登録し、非同期のメソッドの呼び出し元にコントロールを戻します。  
   
  `Async` および `Await` キーワードは、追加のスレッドを作成する要因にはなりません。 非同期のメソッドは自分自身のスレッドで実行しないため、マルチスレッドは必要ありません。 メソッドは、現在の同期コンテキストで実行し、メソッドがアクティブな場合に限りスレッドの時間を使用します。 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> を使用して、CPU バインディングの作業をバックグラウンド スレッドに移動できますが、バックグラウンド スレッドは、結果を待つだけのプロセスを援助しません。  
   
- 非同期プログラミングへの非同期ベースのアプローチは、ほぼすべてのケースの既存のアプローチに推奨されます。 このアプローチがより具体的には、 <xref:System.ComponentModel.BackgroundWorker> I/O バインド操作コードがシンプルおよび保護する必要はありませんのでに対して競合状態にします。 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> と組み合わせると、非同期のプログラミングは CPU バインディングの操作に関して <xref:System.ComponentModel.BackgroundWorker> よりも優れています。非同期のプログラミングは、`Task.Run` がスレッド プールから移動する作業から、実行するコードの調整の詳細を分離するためです。  
+ 非同期プログラミングへの非同期ベースのアプローチは、ほぼすべてのケースの既存のアプローチに推奨されます。 この方法はより具体的には、 <xref:System.ComponentModel.BackgroundWorker> I/O 関連の操作、コードがシンプル保護がないため、競合状態からの。 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> と組み合わせると、非同期のプログラミングは CPU バインディングの操作に関して <xref:System.ComponentModel.BackgroundWorker> よりも優れています。非同期のプログラミングは、`Task.Run` がスレッド プールから移動する作業から、実行するコードの調整の詳細を分離するためです。  
   
 ##  <a name="BKMK_AsyncandAwait"></a>Async と Await  
  [Async](../../../../visual-basic/language-reference/modifiers/async.md) 修飾子を使用して、メソッドが非同期メソッドであることを指定すると、次の 2 つの機能が有効になります。  
@@ -225,7 +225,7 @@ Await Task_MethodAsync()
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
   
- 例および詳細については、次を参照してください。 [c# または Visual Basic の非同期 Api を呼び出す](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)です。  
+ 詳細と例では、次を参照してください。 [c# または Visual Basic での非同期 Api を呼び出す](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)します。  
   
 ##  <a name="BKMK_NamingConvention"></a>名前付け規約  
  慣例により、`Async` 修飾子を持つメソッドの名前には、"Async" を追加します。  

@@ -2,12 +2,12 @@
 title: フィルターを使用する方法
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 2c8c5519d31d1d57c1c568599964b97043f806a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b1e02563fcc32a0095e2bdb5e25d0853fc05e84
+ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496352"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "42754652"
 ---
 # <a name="how-to-use-filters"></a>フィルターを使用する方法
 ここでは、複数のフィルターを使用したルーティング構成を作成するために必要な基本手順について説明します。 この例では、メッセージが、電卓サービスの 2 つの実装である regularCalc および roundingCalc にルーティングされます。 これらの実装は両方とも同じ操作をサポートしますが、片方のサービスでは、値を返す前にすべての計算を最も近い整数値に丸めます。 クライアント アプリケーションが、丸め処理を行うバージョンのサービスを使用するかどうかを表示可能である必要がありますが、優先するサービスが示されていない場合は、メッセージが 2 つのサービス間で負荷分散されます。 次の操作が両方のサービスによって公開されます。  
@@ -71,7 +71,7 @@ ms.locfileid: "33496352"
     </services>  
     ```  
   
-     この構成では、ルーティング サービスは 3 つの別個のエンドポイントを公開します。 実行時の選択に応じて、クライアント アプリケーションは、これらのアドレスの 1 つにメッセージを送ります。 1 つの「仮想」サービス エンドポイント (「丸め/calculator」または「regular/calculator」) に到着したメッセージは、対応する電卓実装に転送されます。 クライアント アプリケーションが特定のエンドポイントに要求を送信しない場合、メッセージの送信先は標準のエンドポイントになります。 選択されたエンドポイントにかかわらず、クライアント アプリケーションでは、メッセージにカスタム ヘッダーを含めるように選択することで、丸め処理を行う電卓の実装にメッセージを転送するように指定することもできます。  
+     この構成では、ルーティング サービスは 3 つの別個のエンドポイントを公開します。 実行時の選択に応じて、クライアント アプリケーションは、これらのアドレスの 1 つにメッセージを送ります。 「仮想」サービスのエンドポイント ("丸め/calculator"または"標準/calculator") のいずれかに到着するメッセージは、対応する電卓の実装に転送されます。 クライアント アプリケーションが特定のエンドポイントに要求を送信しない場合、メッセージの送信先は標準のエンドポイントになります。 選択されたエンドポイントにかかわらず、クライアント アプリケーションでは、メッセージにカスタム ヘッダーを含めるように選択することで、丸め処理を行う電卓の実装にメッセージを転送するように指定することもできます。  
   
 2.  次の例では、ルーティング サービスによるメッセージのルーティング先であるクライアント (送信先) エンドポイントを定義します。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "33496352"
   
 ### <a name="define-filters"></a>フィルターを定義する  
   
-1.  クライアント アプリケーションがメッセージに追加"した RoundingCalculator"カスタム ヘッダーに基づいてメッセージをルーティングするには、このヘッダーの有無を確認する XPath クエリを使用したフィルターを定義します。 このヘッダーが、カスタム名前空間を使用して定義されているため、XPath クエリで"custom"を使用するカスタムの名前空間プレフィックスを定義する名前空間のエントリも追加します。 次の例では、必要なルーティング セクション、名前空間のテーブル、および XPath フィルターを定義します。  
+1.  クライアント アプリケーションがメッセージに追加"した RoundingCalculator"カスタム ヘッダーに基づいてメッセージをルーティングするには、XPath クエリを使用してこのヘッダーの存在を確認するフィルターを定義します。 このヘッダーは、カスタム名前空間を使用して定義されている、ため、また XPath クエリで使用される"custom"のカスタムの名前空間プレフィックスを定義する名前空間エントリを追加します。 次の例では、必要なルーティング セクション、名前空間のテーブル、および XPath フィルターを定義します。  
   
     ```xml  
     <routing>  
@@ -110,21 +110,21 @@ ms.locfileid: "33496352"
     </routing>  
     ```  
   
-     これは、 **MessageFilter** "rounding"の値を含むメッセージに RoundingCalculator ヘッダーを検索します。 このヘッダーは、メッセージを roundingCalc サービスにルーティングする必要があることを示すために、クライアント側で設定されたものです。  
+     これは、 **MessageFilter**は"rounding"という値を含むメッセージに RoundingCalculator ヘッダーを探します。 このヘッダーは、メッセージを roundingCalc サービスにルーティングする必要があることを示すために、クライアント側で設定されたものです。  
   
     > [!NOTE]
-    >  S12 の名前空間プレフィックスが既定で名前空間のテーブルによって定義され、名前空間を表す"http://www.w3.org/2003/05/soap-envelope"です。  
+    >  S12 の名前空間プレフィックスは既定では、名前空間テーブルに定義されているし、名前空間を表す"http://www.w3.org/2003/05/soap-envelope"。  
   
-2.  また、2 つの仮想エンドポイントで受信したメッセージがあるかどうかを検索するフィルターも定義する必要があります。 最初の仮想エンドポイントは、「通常/電卓」エンドポイントです。 クライアントは、メッセージを regularCalc サービスにルーティングする必要があることを示すために、このエンドポイントに要求を送信できます。 次の構成では、<xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> を使用するフィルターを定義して、filterData で指定された名前のエンドポイントでメッセージが受信されたかどうかを確認します。  
+2.  また、2 つの仮想エンドポイントで受信したメッセージがあるかどうかを検索するフィルターも定義する必要があります。 最初の仮想エンドポイントは、"通常/calculator"エンドポイントです。 クライアントは、メッセージを regularCalc サービスにルーティングする必要があることを示すために、このエンドポイントに要求を送信できます。 次の構成では、<xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> を使用するフィルターを定義して、filterData で指定された名前のエンドポイントでメッセージが受信されたかどうかを確認します。  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
     <filter name="EndpointNameFilter" filterType="EndpointName" filterData="calculatorEndpoint"/>  
     ```  
   
-     "CalculatorEndpoint"という名前のサービス エンドポイントでメッセージを受信する場合に、このフィルターが指す`true`です。  
+     このフィルターの評価が"calculatorEndpoint"という名前のサービス エンドポイントで、メッセージが受信した場合`true`します。  
   
-3.  次に、roundingEndpoint のアドレスに送信されたメッセージがあるかどうかを検索するフィルターを定義します。 クライアントは、メッセージを roundingCalc サービスにルーティングする必要があることを示すために、このエンドポイントに要求を送信できます。 次の構成を使用したフィルターを定義する、 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 「丸め/電卓」のエンドポイントにメッセージが到着したかどうかを決定します。  
+3.  次に、roundingEndpoint のアドレスに送信されたメッセージがあるかどうかを検索するフィルターを定義します。 クライアントは、メッセージを roundingCalc サービスにルーティングする必要があることを示すために、このエンドポイントに要求を送信できます。 次の構成を使用するフィルターを定義する、 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> "丸め/calculator"エンドポイントでメッセージが到着したかどうかを判断します。  
   
     ```xml  
     <!--define a filter looking for messages that show up with the address prefix.  The corresponds to the rounding calc virtual endpoint-->  
@@ -132,17 +132,17 @@ ms.locfileid: "33496352"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     始まるアドレスにメッセージが受信したかどうかは"http://localhost/routingservice/router/rounding/"にこのフィルターが評価**true**です。 この構成で使用されるベース アドレスがあるため"http://localhost/routingservice/router「と指定されている、roundingEndpoint が「丸め/電卓」アドレスをこのエンドポイントと通信するために使用される完全なアドレスでは」http://localhost/routingservice/router/rounding/calculator"、このフィルターに一致します。  
+     始まるアドレスでメッセージを受信するかどうかは"http://localhost/routingservice/router/rounding/"に、このフィルターが評価されます**true**します。 この構成で使用されるベース アドレスである"http://localhost/routingservice/router「と"丸め/calculator"は、roundingEndpoint に指定したアドレス、このエンドポイントと通信するために使用する完全なアドレスは」http://localhost/routingservice/router/rounding/calculator"、このフィルターに一致します。  
   
     > [!NOTE]
     >  PrefixEndpointAddress フィルターは、一致するメッセージの確認を行う際にホスト名を評価しません。これは、1 つのホストへの参照を表す際に使用できるホスト名にはさまざまな種類があり、そのすべてが、クライアント アプリケーションからホストを参照するための正しい方法であるためです。 たとえば、次の例はすべて、同じホストを参照します。  
     >   
-    >  -   localhost  
+    > -   localhost  
     > -   127.0.0.1  
-    > -   www.contoso.com  
+    > -   `www.contoso.com`  
     > -   ContosoWeb01  
   
-4.  最後のフィルターでは、標準のエンドポイントで受信する、カスタム ヘッダーのないメッセージのルーティングがサポートされている必要があります。 このシナリオでは、regularCalc サービスと roundingCalc サービスで交互にメッセージが処理されます。 "ラウンド ロビン"方式のメッセージのルーティングをサポートするには、処理される各メッセージに対応する 1 つのフィルター インスタンスを許可するカスタム フィルターを使用します。  次のコードでは、RoundRobinMessageFilter のインスタンスを 2 つ定義します。これらは、交互に使用されることを示すために、グループ化されています。  
+4.  最後のフィルターでは、標準のエンドポイントで受信する、カスタム ヘッダーのないメッセージのルーティングがサポートされている必要があります。 このシナリオでは、regularCalc サービスと roundingCalc サービスで交互にメッセージが処理されます。 「ラウンド ロビン方式」のメッセージのルーティングをサポートするには、1 つのフィルター インスタンスを処理する各メッセージに一致するように、カスタム フィルターを使用します。  次のコードでは、RoundRobinMessageFilter のインスタンスを 2 つ定義します。これらは、交互に使用されることを示すために、グループ化されています。  
   
     ```xml  
     <!-- Set up the custom message filters.  In this example,   
@@ -165,7 +165,7 @@ ms.locfileid: "33496352"
     > [!NOTE]
     >  フィルターの優先順位を指定すると、フィルターが処理される順序を制御できますが、ルーティング サービスのパフォーマンスに影響を与える場合があります。 可能な場合は、フィルターの優先順位設定が不要になるようにフィルター ロジックを構築します。  
   
-     次は、フィルター テーブルを定義し、以前優先順位が 2 のテーブルに定義された"XPathFilter"を追加します。 またこのエントリでは、"XPathFilter"が、メッセージに一致する場合、メッセージは"roundingCalcEndpoint"にルーティングすることを指定します  
+     次は、フィルター テーブルを定義し、2 の優先順位を持つテーブルに以前に定義された"XPathFilter"を追加します。 またこのエントリでは、"XPathFilter"が、メッセージに一致する場合、メッセージは"roundingCalcEndpoint"にルーティングすることを指定します  
   
     ```xml  
     <routing>  

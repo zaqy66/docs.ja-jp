@@ -10,30 +10,30 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: e672402535215ca30d19cc480e39b42b0364f137
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09b0162068bc068bd77612816626897ec4a151d9
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590816"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911968"
 ---
 # <a name="char-data-type-visual-basic"></a>文字型 (Char) (Visual Basic)
-0 から 65535 まで符号なし 16 ビット (2 バイト) コード ポイントを保持します。 各*コード ポイントが*、または文字コードを 1 つの Unicode 文字を表します。  
+0 から 65535 まで符号なし 16 ビット (2 バイト) コード ポイントを保持します。 各*コード ポイント*、または文字コードを 1 つの Unicode 文字を表します。  
   
-## <a name="remarks"></a>コメント  
- 使用して、`Char`データ型の 1 つのみを保持するために必要なときのオーバーヘッドが不要および文字`String`です。 使用することができる場合によっては`Char()`、配列の`Char`要素、複数の文字を保持するためにします。  
+## <a name="remarks"></a>Remarks  
+ 使用して、`Char`データ型は、1 つのみを保持する必要があるときのオーバーヘッドは必要ありません、文字`String`します。 使用することができる場合によっては`Char()`、配列の`Char`要素、複数の文字を保持するためにします。  
   
- 既定値の`Char`が 0 のコード ポイントを使用して文字です。  
+ 既定値`Char`コード ポイント 0 の文字します。  
   
 ## <a name="unicode-characters"></a>Unicode 文字  
- Unicode の最初の 128 個のコード ポイント (0 ~ 127) は、文字および記号の標準的な US キーボード上に対応します。 これらの最初の 128 個のコード ポイントと同じ、ASCII 文字セットを定義します。 2 番目の 128 個のコード ポイント (128 ~ 255) では、ラテン語系のアルファベット文字、アクセント記号、通貨記号、および分数などの特殊文字を表します。 Unicode は、さまざまな記号、世界中のテキスト文字、分音文字、数学と技術的な記号などの他のコード ポイント (256 ~ 65535) を使用します。  
+ Unicode の最初の 128 個のコード ポイント (0 ~ 127) は、文字および記号の標準的な US キーボード上に対応します。 これら最初の 128 個のコード ポイントは、ASCII 文字セットの定義と同じです。 2 番目の 128 個のコード ポイント (128 ~ 255) では、ラテン語系のアルファベット文字、アクセント記号、通貨記号、および分数などの特殊文字を表します。 Unicode では、記号、世界中のテキスト文字、分音記号、数学的、技術的な記号などのさまざまな他のコード ポイント (256 ~ 65535) を使用します。  
   
- などのメソッドを使用する<xref:System.Char.IsDigit%2A>と<xref:System.Char.IsPunctuation%2A>上、`Char`の Unicode の分類を決定する変数。  
+ などのメソッドを使用する<xref:System.Char.IsDigit%2A>と<xref:System.Char.IsPunctuation%2A>上、 `Char` Unicode 分類を決定する変数。  
   
 ## <a name="type-conversions"></a>型変換  
- Visual Basic では間で直接変換されません`Char`と数値の型。 使用することができます、<xref:Microsoft.VisualBasic.Strings.Asc%2A>または<xref:Microsoft.VisualBasic.Strings.AscW%2A>に変換する関数、`Char`値を`Integer`コード ポイントを表すです。 使用することができます、<xref:Microsoft.VisualBasic.Strings.Chr%2A>または<xref:Microsoft.VisualBasic.Strings.ChrW%2A>に変換する関数、`Integer`値を`Char`そのコード ポイントを保持します。  
+ Visual Basic では直接間変換されません`Char`と数値の型。 使用することができます、<xref:Microsoft.VisualBasic.Strings.Asc%2A>または<xref:Microsoft.VisualBasic.Strings.AscW%2A>に変換する関数を`Char`値を`Integer`コード ポイントを表します。 使用することができます、<xref:Microsoft.VisualBasic.Strings.Chr%2A>または<xref:Microsoft.VisualBasic.Strings.ChrW%2A>関数に変換する、`Integer`値を`Char`を持つ、そのコード ポイント。  
   
- 型チェック スイッチの場合 ([Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)) は、リテラルとして識別するために 1 文字の文字列にリテラルの型文字を追加する必要があります、`Char`データ型。 次に例を示します。  
+ 型チェック スイッチの場合 ([Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)) は、1 文字の文字列としてそれを識別するリテラルにリテラルの型文字を追加する必要があります、`Char`データ型。 次に例を示します。  
   
 ```  
 Option Strict On  
@@ -47,15 +47,15 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **負の数。** `Char` 符号なしの型は、負の値を表すことはできません。 いずれの場合は、使用しないで`Char`数値の値を保持します。  
+-   **負の数。** `Char` 符号なしの型は、負の値を表すことはできません。 いずれの場合も、行わないで`Char`数値の値を保持します。  
   
--   **相互運用の考慮事項。** オートメーション オブジェクトや COM オブジェクトなど、.NET Framework 用に作成されていないコンポーネントを使用する場合、他の環境では文字型の別のデータ幅 (8 ビット) ことに注意してください。 このようなコンポーネントを 8 ビットの引数を渡す場合として宣言`Byte`の代わりに`Char`新しい Visual Basic コードでします。  
+-   **相互運用の考慮事項。** 例のオートメーションまたは COM オブジェクト、.NET framework では、作成されていないコンポーネントを使用する場合、他の環境では文字型の別のデータ幅 (8 ビット) ことに注意してください。 このようなコンポーネントに 8 ビットの引数を渡すと場合、宣言として`Byte`の代わりに`Char`で新しい Visual Basic コードです。  
   
--   **拡大します。** `Char`拡大変換後のデータ型`String`です。 つまり、変換することができます`Char`に`String`は発生しないと、<xref:System.OverflowException?displayProperty=nameWithType>エラーです。  
+-   **拡大します。** `Char`拡大変換後のデータ型`String`します。 つまり、変換できる`Char`に`String`は発生しませんし、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
   
 -   **型宣言文字。** リテラルの型文字を付加する`C`1 文字の文字列にリテラルを強制的に、`Char`データ型。 `Char` 識別子の型文字がありません。  
   
--   **Framework の型。** .NET Framework において対応する型は、<xref:System.Char?displayProperty=nameWithType> 構造体です。  
+-   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Char?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Char?displayProperty=nameWithType>  
@@ -63,7 +63,7 @@ charVar = "Z"C
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
  <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
  <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [データの種類](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
  [String データ型](../../../visual-basic/language-reference/data-types/string-data-type.md)  
  [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  

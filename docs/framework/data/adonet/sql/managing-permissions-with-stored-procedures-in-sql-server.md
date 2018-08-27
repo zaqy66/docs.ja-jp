@@ -2,12 +2,12 @@
 title: SQL Server でのストアド プロシージャを使用した権限の管理
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 2472481156f44b55726243e9d939522e46796070
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d16a6609603cfb83fc6523606cc7ec9e7bfd8dba
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361285"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912066"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server でのストアド プロシージャを使用した権限の管理
 データベースを多層的に防御する 1 つの方法として、あらゆるデータ アクセスをストアド プロシージャまたはユーザー定義関数を使って実装することが考えられます。 テーブルなど、基になるオブジェクトに対する権限をすべて取り消すか拒否し、ストアド プロシージャに対して EXECUTE 権限を付与するようにします。 こうすることで、データやデータベース オブジェクトの周囲にセキュリティの境界を設けることができます。  
@@ -54,7 +54,7 @@ ms.locfileid: "33361285"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[ストアド プロシージャ](http://msdn.microsoft.com/library/ms190782.aspx)と[SQL インジェクション](http://go.microsoft.com/fwlink/?LinkId=98234)SQL Server オンライン ブック|ストアド プロシージャの作成方法と SQL インジェクションのしくみについて説明します。|  
+|「[ストアド プロシージャ](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)」と「[SQL インジェクション](http://go.microsoft.com/fwlink/?LinkId=98234)」 (SQL Server オンライン ブック)|ストアド プロシージャの作成方法と SQL インジェクションのしくみについて説明します。|  
   
 ## <a name="see-also"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -64,4 +64,5 @@ ms.locfileid: "33361285"
  [SQL Server でのストアド プロシージャの署名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [SQL Server での借用を使用したアクセス許可のカスタマイズ](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [ストアド プロシージャでのデータの変更](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ 
+  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)

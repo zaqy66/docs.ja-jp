@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
 ms.openlocfilehash: e854c51bd80809b92bb538475a407422b2eba7c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332882"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925637"
 ---
 # <a name="interoperability-c-programming-guide"></a>相互運用性 (C# プログラミング ガイド)
-相互運用性は、アンマネージ コードへの既存の投資を保持して活用できるようにします。 共通言語ランタイム (CLR) の制御下で実行されるコードは*マネージ コード*と呼ばれ、CLR の外部で実行されるコードは*アンマネージ コード*と呼ばれます。 アンマネージ コードの例は、COM、COM +、C++ コンポーネント、ActiveX コンポーネント、および Microsoft Win32 API です。  
+相互運用性は、アンマネージ コードへの既存の投資を保持して活用できるようにします。 共通言語ランタイム (CLR) の制御下で実行されるコードは*マネージド コード*と呼ばれ、CLR の外部で実行されるコードは*アンマネージド コード*と呼ばれます。 アンマネージ コードの例は、COM、COM +、C++ コンポーネント、ActiveX コンポーネント、および Microsoft Win32 API です。  
   
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] では、プラットフォーム呼び出しサービス、<xref:System.Runtime.InteropServices> 名前空間、C++ 相互運用性、および COM 相互運用性 (COM 相互運用機能) を通して、アンマネージ コードの相互運用を可能にしています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [相互運用性の概要](../../../csharp/programming-guide/interop/interoperability-overview.md)  
- C# のマネージ コードとアンマネージ コードの間で相互運用する方法について説明します。  
+ C# のマネージド コードとアンマネージド コードの間で相互運用する方法について説明します。  
   
  [方法: Visual C# の機能を使用して Office 相互運用オブジェクトにアクセスする](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)  
  Office のプログラミングを容易にするために Visual C# に導入されている機能について説明します。  
