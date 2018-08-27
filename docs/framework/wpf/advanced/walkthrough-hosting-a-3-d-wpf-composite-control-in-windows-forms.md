@@ -1,6 +1,6 @@
 ---
 title: 'チュートリアル: Windows フォームでの 3D WPF 複合コントロールのホスト'
-ms.date: 03/30/2017
+ms.date: 08/18/2018
 dev_langs:
 - csharp
 - vb
@@ -8,93 +8,88 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: a9aca5d1aff1057d85509be517bb352b4b27bf9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9642cec30c5e929102616577d9f2b1b2544c6d0
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548208"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932267"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの 3D WPF 複合コントロールのホスト
-このチュートリアルでは、作成する方法、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合を制御し、ホストすることで[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールおよびフォームを使用して、<xref:System.Windows.Forms.Integration.ElementHost>コントロール。  
-  
- このチュートリアルでは、実装、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 2 つの子コントロールを格納しています。 <xref:System.Windows.Controls.UserControl> 3 次元 (3 D) 円錐型が表示されます。 3-D オブジェクトを表示することが非常に簡単、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]よりと[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]です。 そのため、これがわかりやすいホスト、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>で 3-D グラフィックスを作成するクラス[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]です。  
-  
- このチュートリアルでは、以下のタスクを行います。  
-  
--   作成する、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>です。  
-  
--   Windows フォーム ホスト プロジェクトを作成します。  
-  
--   ホストしている、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>です。  
-  
- このチュートリアルでタスクの完全なコードについては、次を参照してください。 [Windows フォームのサンプルの 3-D WPF 複合コントロールをホストしている](http://go.microsoft.com/fwlink/?LinkID=160001)です。  
-  
-## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
-  
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]。  
-  
-<a name="To_Create_the_UserControl"></a>   
-## <a name="creating-the-usercontrol"></a>ユーザー コントロールを作成します。  
-  
-#### <a name="to-create-the-usercontrol"></a>ユーザー コントロールを作成するには  
-  
-1.  という名前の WPF ユーザー コントロール ライブラリ プロジェクトを作成する`HostingWpfUserControlInWf`です。  
-  
-2.  UserControl1.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]です。  
-  
-3.  生成されたコードを次のコードに置き換えます。  
-  
-     このコードを定義、 <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> 2 つの子コントロールを格納しています。 最初の子コントロールは、<xref:System.Windows.Controls.Label?displayProperty=nameWithType>コントロール以外の 2 つ目は、 <xref:System.Windows.Controls.Viewport3D> 3-D 円錐型を表示するコントロール。  
-  
-     [!code-xaml[HostingWpfUserControlInWf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
-  
-<a name="To_Create_the_Windows_Forms_Host_Project"></a>   
-## <a name="creating-the-windows-forms-host-project"></a>Windows フォーム ホスト プロジェクトを作成します。  
-  
-#### <a name="to-create-the-host-project"></a>ホスト プロジェクトを作成するには  
-  
-1.  という名前の Windows アプリケーション プロジェクトを追加`WpfUserControlHost`をソリューションにします。 詳細については、次を参照してください。[する方法: 新しい WPF アプリケーション プロジェクトを作成する](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)です。  
-  
-2.  ソリューション エクスプ ローラーで、WindowsFormsIntegration.dll と呼ばれる WindowsFormsIntegration アセンブリへの参照を追加します。  
-  
-3.  次の参照を追加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アセンブリ。  
-  
-    -   PresentationCore  
-  
-    -   PresentationFramework  
-  
-    -   WindowsBase  
-  
-4.  `HostingWpfUserControlInWf` への参照をプロジェクトに追加します。  
-  
-5.  ソリューション エクスプ ローラーで、設定、`WpfUserControlHost`プロジェクトをスタートアップ プロジェクト。  
-  
-<a name="To_Host_the_Windows_Presentation_Foundation"></a>   
-## <a name="hosting-the-windows-presentation-foundation-usercontrol"></a>Windows Presentation Foundation ユーザー コントロールをホストしています。  
-  
-#### <a name="to-host-the-usercontrol"></a>ユーザー コントロールをホストするには  
-  
-1.  Windows フォーム デザイナーで、Form1 を開きます。  
-  
-2.  [プロパティ] ウィンドウでをクリックして**イベント**、順にダブルクリックし、<xref:System.Windows.Forms.Form.Load>イベント ハンドラーを作成するイベントです。  
-  
-     コード エディターが新たに生成されたに`Form1_Load`イベント ハンドラー。  
-  
-3.  Form1.cs のコードを次のコードに置き換えます。  
-  
-     `Form1_Load`イベント ハンドラーのインスタンスを作成する`UserControl1`し、追加の接続を受け付ける、<xref:System.Windows.Forms.Integration.ElementHost>子コントロールのコントロールのコレクション。 <xref:System.Windows.Forms.Integration.ElementHost>コントロールが子コントロールのフォームのコレクションに追加します。  
-  
+
+このチュートリアルでは、作成する方法、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合を制御し、ホストすることで[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールとフォームを使用して、<xref:System.Windows.Forms.Integration.ElementHost>コントロール。
+
+このチュートリアルでは、実装、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 2 つの子コントロールを格納しています。 <xref:System.Windows.Controls.UserControl> 3 次元 (3 D) の円錐形が表示されます。 3-D オブジェクトのレンダリングが容易、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]よりで[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]します。 そのため、にとってホスト、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>の 3-D グラフィックスを作成するクラス[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]します。
+
+このチュートリアルでは、以下のタスクを行います。
+
+-   作成、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>します。
+
+-   Windows フォーム ホスト プロジェクトを作成します。
+
+-   ホストしている、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>します。
+
+## <a name="prerequisites"></a>必須コンポーネント
+
+このチュートリアルを実行するには、次のコンポーネントが必要です。
+
+-   Visual Studio 2017
+
+<a name="To_Create_the_UserControl"></a>
+## <a name="create-the-usercontrol"></a>UserControl を作成します。
+
+1.  作成、 **WPF ユーザー コントロール ライブラリ**という名前のプロジェクト`HostingWpfUserControlInWf`します。
+
+2.  UserControl1.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。
+
+3.  生成されたコードを次のコードに置き換えます。
+
+     [!code-xaml[HostingWpfUserControlInWf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]
+
+     このコードを定義、 <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> 2 つの子コントロールを格納しています。 最初の子コントロールは、<xref:System.Windows.Controls.Label?displayProperty=nameWithType>コントロールは、2 つ目は、 <xref:System.Windows.Controls.Viewport3D> 3-D 円錐を表示するコントロール。
+
+<a name="To_Create_the_Windows_Forms_Host_Project"></a>
+## <a name="create-the-host-project"></a>ホスト プロジェクトを作成します。
+
+1.  追加、 **WPF アプリ (.NET Framework)** という名前のプロジェクト`WpfUserControlHost`をソリューションにします。 詳細については、次を参照してください。[方法: 新しい WPF アプリケーション プロジェクトを作成する](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)します。
+
+2.  **ソリューション エクスプ ローラー**、WindowsFormsIntegration.dll という WindowsFormsIntegration アセンブリへの参照を追加します。
+
+3.  次に参照を追加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アセンブリ。
+
+    -   PresentationCore
+
+    -   PresentationFramework
+
+    -   WindowsBase
+
+4.  `HostingWpfUserControlInWf` への参照をプロジェクトに追加します。
+
+5.  ソリューション エクスプローラで、設定、`WpfUserControlHost`プロジェクトをスタートアップ プロジェクトです。
+
+<a name="To_Host_the_Windows_Presentation_Foundation"></a>
+## <a name="host-the-usercontrol"></a>ユーザー コントロールをホストします。
+
+1.  Windows フォーム デザイナーで、Form1 を開きます。
+
+2.  [プロパティ] ウィンドウで次のようにクリックします。**イベント**、し、ダブルクリック、<xref:System.Windows.Forms.Form.Load>イベント ハンドラーを作成するイベント。
+
+     コード エディターが新しく生成されたに`Form1_Load`イベント ハンドラー。
+
+3.  Form1.cs のコードを次のコードに置き換えます。
+
+     `Form1_Load`イベント ハンドラーのインスタンスを作成する`UserControl1`し、追加の接続を受け付ける、<xref:System.Windows.Forms.Integration.ElementHost>子コントロールのコントロールのコレクション。 <xref:System.Windows.Forms.Integration.ElementHost>コントロールの子コントロールのフォームのコレクションに追加されます。
+
      [!code-csharp[HostingWpfUserControlInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/WpfUserControlHost/Form1.cs#10)]
-     [!code-vb[HostingWpfUserControlInWf#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#10)]  
-  
-4.  F5 キーを押してアプリケーションをビルドし、実行します。  
-  
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [WPF デザイナー](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
- [チュートリアル: WPF での Windows フォーム複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [Windows フォームのサンプルでの WPF 複合コントロールをホストしています。](http://go.microsoft.com/fwlink/?LinkID=160001)
+     [!code-vb[HostingWpfUserControlInWf#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#10)]
+
+4.  **F5** キーを押してアプリケーションをビルドし、実行します。
+
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [WPF デザイナー](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [チュートリアル: WPF での Windows フォーム複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Windows フォームのサンプルで WPF 複合コントロールのホスト](http://go.microsoft.com/fwlink/?LinkID=160001)

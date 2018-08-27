@@ -2,11 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: f815c08b9be11efc71b04678d9780cabcdd69ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93eea5d539e943c57ed7c6236caa854486ac238e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933854"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 クエリで返される要素を指定します。  
@@ -31,7 +32,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  1 つの項目のみを指定でき、row ラッパーを追加しません。  
   
  `topSubclause`  
- `top (``expr``)`の形式で、クエリから返す最初の結果数を指定する有効な式。  
+ 有効な式の形式で、クエリから返される最初の結果の数を示す`top(expr)`します。  
   
  LIMIT パラメーター、 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)演算子では、結果セット内の最初の n 個のアイテムを選択することもできます。  
   
@@ -43,8 +44,8 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `expr`  
  リテラルまたは式。  
   
-## <a name="remarks"></a>コメント  
- SELECT 句が評価されます、 [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)、 [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)、および[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)句が評価されました。 SELECT 句は、FROM 句または外側のスコープから現在スコープ内にある項目のみを参照できます。 GROUP BY 句を指定した場合、SELECT 句は GROUP BY キーの別名のみを参照できます。 FROM 句の項目への参照は、集計関数でのみ実行できます。  
+## <a name="remarks"></a>Remarks  
+ SELECT 句が評価される、 [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)、 [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)、および[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)句が評価されました。 SELECT 句は、FROM 句または外側のスコープから現在スコープ内にある項目のみを参照できます。 GROUP BY 句を指定した場合、SELECT 句は GROUP BY キーの別名のみを参照できます。 FROM 句の項目への参照は、集計関数でのみ実行できます。  
   
  SELECT キーワードの後に続く 1 つまたは複数のクエリ式の一覧は、選択リスト (旧称、投影) と呼びます。 投影のより一般的な形式は、単一クエリ式です。 次の例に示すように、コレクション `member1` からメンバー `collection1`を選択すると、 `member1` の各オブジェクトに対応するすべての `collection1`値の新しいコレクションが生成されます。  
   
@@ -93,7 +94,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>例  
  次の Entity SQL クエリは、SELECT 演算子を使用して、クエリによって返される要素を指定します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  「 [StructuralType 結果を返すクエリの実行方法](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
+1.  「 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
 2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   

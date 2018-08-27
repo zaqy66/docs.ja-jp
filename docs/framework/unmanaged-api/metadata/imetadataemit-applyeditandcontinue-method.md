@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c15c554e0ec135b33d671a83b5e27d0a2a89b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444257"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930938"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue メソッド
-指定されたメタデータに加えられた変更と、現在のアセンブリのスコープを更新します。  
+指定したメタデータで行われた変更では、現在のアセンブリのスコープを更新します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,18 +37,18 @@ HRESULT ApplyEditAndContinue (
   
 #### <a name="parameters"></a>パラメーター  
  `pImport`  
- [in]ポインターを <<!--zzxref:IUnknown --> `IUnknown`>、ポータブル実行可能 (PE) ファイルからのデルタ メタデータを表すオブジェクト。  
+ \[\]へのポインター、 [IUnknown](/cpp/atl/iunknown)ポータブル実行可能 (PE) ファイルからデルタ メタデータを表すオブジェクト。
   
- デルタのメタデータは、モジュールの実際のメタデータのコピーに対して行われた変更を含むメタデータのブロックです。  
+ デルタのメタデータは、モジュールの実際のメタデータのコピーに加えられた変更を含むメタデータのブロックです。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MSCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

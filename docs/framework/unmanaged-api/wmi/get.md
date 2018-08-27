@@ -1,6 +1,6 @@
 ---
 title: Get 関数 (アンマネージ API リファレンス)
-description: Get 関数は、指定されたプロパティ値を取得します。
+description: Get 関数には、指定されたプロパティ値を取得します。
 ms.date: 11/06/2017
 api_name:
 - Get
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cb7475623961fe2ee5fc821c5f237f0a2acfae1a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460149"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933334"
 ---
 # <a name="get-function"></a>Get 関数
 存在する場合は、指定されたプロパティ値を取得します。
@@ -48,51 +48,51 @@ HRESULT Get (
 [in]このパラメーターは使用されません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)インスタンス。
+[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `wszName`  
-[in]プロパティの名前です。
+[in]プロパティの名前。
 
 `lFlags` [in]予約されています。 このパラメーターは、0 を指定する必要があります。
 
-`pVal` [out]関数が正常に返された場合の値が含まれています、`wszName`プロパティです。 `pval`引数には、正しい型および修飾子の値が割り当てられています。
+`pVal` [out]関数が正常に返された場合の値が含まれています、`wszName`プロパティ。 `pval`引数には、正しい型および修飾子の値が割り当てられています。
 
-`pvtType` [out]関数が正常に返された場合は、 [CIM 型の定数](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)プロパティの型を示すです。 その値にはあります`null`です。 
+`pvtType` [out]関数が正常に返された場合は、 [CIM 型の定数](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)プロパティの型を示します。 その値が指定できますも`null`します。 
 
-`plFlavor` [out]関数が正常に返された場合は、プロパティの原点に関する情報を受け取ります。 その値を指定できます`null`、またはいずれかで定義されている次の WBEM_FLAVOR_TYPE 定数の*WbemCli.h*ヘッダー ファイル。 
+`plFlavor` [out]関数が正常に返された場合は、プロパティのパブリッシュ元に関する情報を受け取ります。 その値を指定できます`null`、またはいずれかで定義されている次の WBEM_FLAVOR_TYPE 定数、 *WbemCli.h*ヘッダー ファイル。 
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | プロパティは、標準のシステム プロパティです。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | クラスの: このプロパティは、親クラスから継承します。 </br> インスタンス: プロパティは、親クラスから継承されたときに変更されていないインスタンスがします。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | クラスの: プロパティが、派生クラスに所属します。 </br> インスタンス:; のインスタンスによって、プロパティが変更されました。値が指定された、または修飾子が追加または変更します。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | クラス: プロパティは、親クラスから継承されます。 </br> インスタンス: プロパティを親クラスから継承中に変更されていないインスタンスによって。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | クラス: 派生クラスにプロパティが属しています。 </br> インスタンスのインスタンスでプロパティを変更。つまり、値が指定されましたまたは修飾子が追加または変更します。 |
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。
+この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 1 つまたは複数のパラメーターが有効ではありません。 |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定したプロパティは見つかりませんでした。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 1 つまたは複数のパラメーターが無効です。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定したプロパティが見つかりませんでした。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数への呼び出しをラップする、 [IWbemClassObject::Get](https://msdn.microsoft.com/library/aa391442(v=vs.85).aspx)メソッドです。
+この関数の呼び出しをラップする、 [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get)メソッド。
 
 `Get`関数では、システムのプロパティを返すこともできます。
 
-`pVal`引数には、正しい型および修飾子と COM の値が割り当てられている[VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx)関数
+`pVal`引数には、正しい型および修飾子と COM の値が割り当てられている[VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)関数
 
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目  
 [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 407ca9e4744ea9be45867a08e87c502821226472
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058837"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000977"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 文字列補間 (C# リファレンス)
 
@@ -88,12 +88,13 @@ verbatim 挿入文字列は、`@` 文字が続く `$` 文字で始まります�
 
 文字列補間を初めてお使いの場合は、[C# の文字列補完](../../quick-starts/interpolated-strings.yml)に関するクイックスタートを参照してください。 その他の例については、「[C# における文字列補間](../../tutorials/string-interpolation.md)」チュートリアルを参照してください。
 
-## <a name="see-also"></a>関連項目  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- <xref:System.FormattableString?displayProperty=nameWithType>  
- <xref:System.IFormattable?displayProperty=nameWithType>  
- [複合書式指定](../../../standard/base-types/composite-formatting.md)  
- [文字列](../../programming-guide/strings/index.md)  
- [C# プログラミング ガイド](../../programming-guide/index.md)  
- [C# 特殊文字](index.md)  
- [C# リファレンス](../index.md)  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [複合書式指定](../../../standard/base-types/composite-formatting.md)
+- [文字列](../../programming-guide/strings/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# 特殊文字](index.md)
+- [C# リファレンス](../index.md)

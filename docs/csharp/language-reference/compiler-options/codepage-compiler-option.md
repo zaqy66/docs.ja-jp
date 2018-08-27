@@ -8,12 +8,12 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: 04a0d3a62ebd2b3a938445995725994d72d5bd4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 615160088ee3a884919628152f153bd34c81b8a9
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216926"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755068"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage (C# コンパイラ オプション)
 このオプションでは、必要とするページが、システムで使用されている現在の既定のコードページでない場合に、コンパイル時に使用するコード ページを指定します。  
@@ -33,7 +33,7 @@ ms.locfileid: "33216926"
   
  ソース コード ファイルが、コンピューターで有効なコード ページと同じものを使って作成された場合、または UNICODE か UTF-8 で作成された場合、**-codepage** を使う必要はありません。  
   
- 使用しているシステムでサポートされているコード ページを確認する方法については、[GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx) に関するページをご覧ください。  
+ 使用しているシステムでサポートされているコード ページを確認する方法については、[GetCPInfo](/windows/desktop/api/winnls/nf-winnls-getcpinfo) に関するページをご覧ください。  
   
  このコンパイラ オプションは Visual Studio では使用できず、プログラムで変更することはできません。  
   

@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a5fccf5ea86469f14963fad8e7d2af0f7c68d2df
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107034"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933606"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 
@@ -181,7 +181,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 
 ## <a name="skipping-normalization"></a>正規化の省略
 
-通常、Windows API に渡されるパスはすべて、[GetFullPathName 関数](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)に (効果的に) 渡され、正規化されます。 重要な例外が 1 つあります。ピリオドではなく疑問符から始まるデバイス パスです。 厳密に `\\?\` で始まらない限り (正規のバックスラッシュが使われていることに注目してください)、パスは正規化されます。
+通常、Windows API に渡されるパスはすべて、[GetFullPathName 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)に (効果的に) 渡され、正規化されます。 重要な例外が 1 つあります。ピリオドではなく疑問符から始まるデバイス パスです。 厳密に `\\?\` で始まらない限り (正規のバックスラッシュが使われていることに注目してください)、パスは正規化されます。
 
 正規化の省略が必要となる理由について考えてみます。 大きな理由が 3 つあります。
 
@@ -196,9 +196,9 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 
 正規化と MAX_PATH チェックの省略は、2 つのデバイス パス構文の間の唯一の違いです。それ以外、この 2 つは同じです。 正規化の省略には注意してください。"普通の" アプリケーションでは処理できないパスが簡単に作られてしまいます。
 
-`\\?\` で始まるパスは、[GetFullPathName 関数](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)に明示的に渡す場合、正規化されます。
+`\\?\` で始まるパスは、[GetFullPathName 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)に明示的に渡す場合、正規化されます。
 
-`MAX_PATH` 文字を超えるパスは `\\?\` なしで [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) に渡せることにご注意ください。 Windows で処理できる最大文字列サイズまで、任意の長さのパスがサポートされます。
+`MAX_PATH` 文字を超えるパスは `\\?\` なしで [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) に渡せることにご注意ください。 Windows で処理できる最大文字列サイズまで、任意の長さのパスがサポートされます。
 
 ## <a name="case-and-the-windows-file-system"></a>大文字/小文字の区別と Windows ファイル システム
 

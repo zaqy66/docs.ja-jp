@@ -1,6 +1,6 @@
 ---
 title: GetPropertyQualifierSet 関数 (アンマネージ API リファレンス)
-description: GetPropertyQualifierSet 関数では、プロパティの設定、修飾子を取得します。
+description: GetPropertyQualifierSet 関数は、プロパティの設定、修飾子を取得します。
 ms.date: 11/06/2017
 api_name:
 - GetPropertyQualifierSet
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461478"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935701"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet 関数
-特定のプロパティの設定、修飾子を取得します。
+特定のプロパティを設定する修飾子を取得します。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -45,43 +45,43 @@ HRESULT GetPropertyQualifierSet (
 [in]このパラメーターは使用されません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)インスタンス。
+[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `wszMethod`  
-[in]プロパティ名。 `wszProperty` 有効なをポイントする必要があります`LPCWSTR`です。 
+[in]プロパティ名。 `wszProperty` 有効なをポイントする必要があります`LPCWSTR`します。 
 
 `ppQualSet`  
-[out]プロパティの修飾子にアクセスできるようにするインターフェイス ポインターを受け取ります。 `ppQualSet` として `null` を使用することはできません。 かどうかは、エラーが発生し、新しいオブジェクトが返されない、ポインターが指すように設定`null`です。 
+[out]プロパティの修飾子にアクセスできるインターフェイス ポインターを受け取ります。 `ppQualSet` として `null` を使用することはできません。 かどうかは、エラーが発生し、新しいオブジェクトは返されませんを指すポインターを設定`null`します。 
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。
+この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | 指定されたメソッドが存在しません。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが`null`です。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが`null`します。 |
 | `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | 関数は、システム プロパティの修飾子を取得しようとします。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数への呼び出しをラップする、 [IWbemClassObject::GetPropertyQualifierSet](https://msdn.microsoft.com/library/aa391450(v=vs.85).aspx)メソッドです。 
+この関数の呼び出しをラップする、 [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset)メソッド。 
 
-この関数に対する呼び出しがサポートされるは、現在のオブジェクトが、CIM クラスの定義である場合にのみです。 メソッドの操作では使用できません[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) CIM インスタンスを指す ponters です。
+この関数の呼び出しがサポートされるは、現在のオブジェクトが CIM クラスの定義である場合にのみです。 メソッドの操作は利用できません[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters CIM インスタンスをポイントしています。
 
-各メソッドには、独自の修飾子があるため、 [IWbemQualifierSet ポインター](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)により、呼び出し元を追加、編集、またはこれらの修飾子を削除します。
+各メソッドには、独自の修飾子が可能性があるため、 [IWbemQualifierSet ポインター](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)により、呼び出し元を追加、編集、またはこれらの修飾子を削除します。
 
-システムのプロパティに修飾子があるないため、関数を返します`WBEM_E_SYSTEM_PROPERTY`を取得しようとすると、 [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)システム プロパティへのポインター。
+システムのプロパティは修飾子を持たないため、関数を返します`WBEM_E_SYSTEM_PROPERTY`を取得しようとした場合、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)システム プロパティへのポインター。
 
 ## <a name="requirements"></a>要件  
-**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目  
 [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

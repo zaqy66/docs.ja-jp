@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f231c4f9782518e30cbaa89c6b085c72aafcc92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445446"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933223"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 列挙型
 マニフェスト ファイルを開くときにメタデータの動作を制御するフラグ値を含めます。  
@@ -58,20 +58,20 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|ファイルがメモリ内に読み込まれることを示します。 メタデータは自身のコピーを保持する必要があります。|  
 |`ofCacheImage`|互換性のために残されています。 このフラグは無視されます。|  
 |`ofManifestMetadata`|互換性のために残されています。 このフラグは無視されます。|  
-|`ofReadOnly`|読み取り用にファイルが開かれることを示すへの呼び出し`QueryInterface`の[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)にすることはできません。|  
-|`ofTakeOwnership`|呼び出しを使用してメモリが割り当てられたことを示す[CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c)メタデータによって解放されるとします。|  
+|`ofReadOnly`|読み取り用にファイルが開かれることを示しますへの呼び出し`QueryInterface`の[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)にことはできません。|  
+|`ofTakeOwnership`|呼び出しを使用してメモリが割り当てられたことを示します[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)メタデータによって解放されるとします。|  
 |`ofNoTypeLib`|互換性のために残されています。 このフラグは無視されます。|  
-|`ofNoTransform`|.winmd ファイルの自動変換を無効にする必要があることを示します。 つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。 詳細については、次を参照してください。[内部での .NET and Windows Runtime](http://msdn.microsoft.com/magazine/jj651569.aspx)です。|  
+|`ofNoTransform`|.winmd ファイルの自動変換を無効にする必要があることを示します。 つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。 詳細については、次を参照してください。[内部での .NET and Windows Runtime](http://msdn.microsoft.com/magazine/jj651569.aspx)します。|  
 |`ofReserved1`|内部使用のために予約されています。|  
 |`ofReserved2`|内部使用のために予約されています。|  
 |`ofReserved`|内部使用のために予約されています。|  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

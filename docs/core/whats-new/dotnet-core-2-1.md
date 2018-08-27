@@ -4,12 +4,12 @@ description: .NET Core 2.1 の新機能について。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 52fe2d47dbca9bc43c2f1274b0d9e535ba9f9abc
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874573"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935580"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 
@@ -123,7 +123,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="windows-compatibility-pack"></a>Windows 互換機能パック
 
-既存のコードを .NET Framework から .NET Core に移植する場合は、[Windows 互換機能パック](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)を使用できます。 この Windows 互換機能パックでは、.NET Core よりも 20,000 個も多い API にアクセスできます。 これらの API には、<xref:System.Drawing?displayProperty="nameWithType"> 名前空間の型、<xref:System.Diagnostics.EventLog> クラス、WMI、パフォーマンス カウンター、Windows サービス、および Windows レジストリの型とメンバーが含まれています。
+既存のコードを .NET Framework から .NET Core に移植する場合は、[Windows 互換機能パック](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)を使用できます。 この Windows 互換機能パックでは、.NET Core よりも 20,000 個も多い API にアクセスできます。 これらの API には、<xref:System.Drawing?displayProperty=nameWithType> 名前空間の型、<xref:System.Diagnostics.EventLog> クラス、WMI、パフォーマンス カウンター、Windows サービス、および Windows レジストリの型とメンバーが含まれています。
 
 ## <a name="jit-compiler-improvements"></a>JIT コンパイラの機能強化
 
@@ -195,7 +195,7 @@ JIT コンパイラで実行される重要なタスクの 1 つはコード実�
 
   - <xref:System.Security.Cryptography.CryptographicOperations.ZeroMemory%2A> はメモリ クリアのルーチンであり、最適化はできません。
 
-- 静的メソッドである <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=fullName> は <xref:System.Span%601> にランダムな値を入力します。
+- 静的メソッドである <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> は <xref:System.Span%601> にランダムな値を入力します。
 
 - <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> が Linux と maxOS でサポートされるようになりました。
 
@@ -215,7 +215,7 @@ JIT コンパイラで実行される重要なタスクの 1 つはコード実�
 
 - すべての .NET Core プラットフォームで動作が一貫しています。
 
-<xref:System.Net.Http.SocketsHttpHandler> は .NET Core 2.1 における既定の実装です。 ただし、<xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> メソッドを呼び出すことで、古い <xref:System.Net.Http.HttpClientHandler> クラスを使用するようにアプリケーションを構成できます。
+<xref:System.Net.Http.SocketsHttpHandler> は .NET Core 2.1 における既定の実装です。 ただし、<xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> メソッドを呼び出すことで、古い <xref:System.Net.Http.HttpClientHandler> クラスを使用するようにアプリケーションを構成できます。
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);

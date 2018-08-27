@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iteration statements [C#]
 - loop structures [C#]
 ms.assetid: 7d494566-bf75-4ee8-979f-0f964209437e
-ms.openlocfilehash: 12452f5e3fcc78835a7aed9f6e4044463fb0b755
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c5b061b41591ecca0364c2ec940fbf09e223f5cb
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207988"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935999"
 ---
 # <a name="iteration-statements-c-reference"></a>繰り返しステートメント (C# リファレンス)
 
@@ -28,7 +28,7 @@ ms.locfileid: "36207988"
 
 ## <a name="see-also"></a>関連項目
 
- [C# リファレンス](../index.md)  
- [C# プログラミング ガイド](../../programming-guide/index.md)  
- [C# のキーワード](index.md)  
- [ステートメントのキーワード](statement-keywords.md)
+- [C# リファレンス](../index.md)  
+- [C# プログラミング ガイド](../../programming-guide/index.md)  
+- [C# のキーワード](index.md)  
+- [ステートメントのキーワード](statement-keywords.md)

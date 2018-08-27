@@ -3,11 +3,11 @@ title: XML ツリーのクエリ (C#)
 ms.date: 07/20/2015
 ms.assetid: 0913d81b-541a-4fd4-9cbf-7ec89fd817ea
 ms.openlocfilehash: 5d2e40da26f30a0ece570acf2fd25684d1cba40f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331088"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925586"
 ---
 # <a name="querying-xml-trees-c"></a>XML ツリーのクエリ (C#)
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリの例について説明します。  

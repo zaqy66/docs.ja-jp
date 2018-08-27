@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdba02feb8cacc6ab1886c12f88716184aa2a81a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 049268c29946e95ca7bb194f6cae38baf8f060f6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752430"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933531"
 ---
 # <a name="additional-class-libraries-and-apis"></a>追加のクラス ライブラリと API
 
-.NET Framework は、絶えず進化を続けています。クロスプラットフォーム開発を強化するために、またはお客様にいち早く新しい機能を紹介するために、マイクロソフトは新機能のアウトオブバウンド (OOB) をリリースします。 ここでは、ドキュメントが用意されている OOB プロジェクトの一覧を示します。  
+.NET Framework は絶えず進化しています。 クロス プラットフォーム開発を向上させ、新しい機能を早期導入、新機能はアウトオブ バンド (OOB) リリースします。 ここでは、ドキュメントが用意されている OOB プロジェクトの一覧を示します。  
   
-さらに、いくつかのライブラリは、特定のプラットフォームまたは .NET Framework の実装を対象にしています。 たとえば、<xref:System.Text.CodePagesEncodingProvider>クラスは、コード ページ エンコーディングを .NET Framework を使用して開発された UWP アプリで利用できます。 ここでは、これらのライブラリの一覧も示します。  
+さらに、いくつかのライブラリは、特定のプラットフォームまたは .NET Framework の実装を対象にしています。 たとえば、<xref:System.Text.CodePagesEncodingProvider>クラスが .NET Framework を使用して開発された UWP アプリで使用できるコード ページ エンコーディングを使用します。 ここでは、これらのライブラリの一覧も示します。  
   
 ## <a name="oob-projects"></a>OOB プロジェクト
   
@@ -35,7 +35,7 @@ ms.locfileid: "32752430"
   
 | プロジェクト | 説明 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | 拡張、<xref:System.Text.EncodingProvider>コード ページ エンコーディングをユニバーサル Windows プラットフォームを対象とするアプリを利用できるようにするクラス。 |  
+| <xref:System.Text.CodePagesEncodingProvider> | 拡張、<xref:System.Text.EncodingProvider>クラスのコード ページ エンコーディングをユニバーサル Windows プラットフォームを対象とするアプリを使用できるようにします。 |  
   
 ## <a name="private-apis"></a>プライベート API  
 
@@ -50,9 +50,9 @@ ms.locfileid: "32752430"
 | [System.Net.CoreResponseData クラス](../../../docs/framework/additional-apis/coreresponsedata.md) |
 | [System.Net.CoreResponseData.m\_ResponseHeaders Field](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
 | [System.Net.CoreResponseData.m\_StatusCode フィールド](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
-| [System.Net.HttpWebRequest です。\_AutoRedirects フィールド](../../../docs/framework/additional-apis/_autoredirects.md) |
-| [System.Net.HttpWebRequest です。\_CoreResponse フィールド](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
-| [System.Net.HttpWebRequest です。\_HttpResponse フィールド](../../../docs/framework/additional-apis/_httpresponse.md) |
+| [System.Net.HttpWebRequest します。\_AutoRedirects フィールド](../../../docs/framework/additional-apis/_autoredirects.md) |
+| [System.Net.HttpWebRequest します。\_CoreResponse フィールド](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
+| [System.Net.HttpWebRequest します。\_HttpResponse フィールド](../../../docs/framework/additional-apis/_httpresponse.md) |
 | [System.Net.ServicePoint.m\_ConnectionGroupList Field](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
 | [System.Net.ServicePointManager.s\_ServicePointTable Field](../../../docs/framework/additional-apis/s_servicepointtable.md) |
 | [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |

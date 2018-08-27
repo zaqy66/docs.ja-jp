@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: ee91513ef94e2abbe01d3ac09796b7fdf8e129ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abe9fe0f6216f81fa223fe83a122b580577e1c32
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597384"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930029"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>XML コメントの例外があります、 &#39;cref&#39;属性
-\<例外 > タグは、メソッドによってスローされる可能性がありますのある例外を文書化する方法を提供します。 必要な`cref`属性は、ドキュメント ジェネレーターによってチェックされているメンバーの名前を指定します。 メンバーが存在する場合は、ドキュメント ファイル内の標準要素名に変換されます。  
+\<例外 > タグは、メソッドによってスローされる可能性が例外を文書化する方法を提供します。 必要な`cref`属性は、ドキュメントのジェネレーターがチェックされているメンバーの名前を指定します。 メンバーが存在する場合は、ドキュメント ファイルで正規要素名に変換されます。  
   
  **エラー ID:** BC42319  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   追加、`cref`属性は、例外を次のようにします。  
+-   追加、`cref`属性、例外を次のようにします。  
   
     ```  
     '''<exception cref="member">description</exception>  
@@ -30,4 +30,4 @@ ms.locfileid: "33597384"
 ## <a name="see-also"></a>関連項目  
  [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)  
  [方法: XML ドキュメントを作成する](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

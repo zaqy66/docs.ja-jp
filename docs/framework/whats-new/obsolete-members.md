@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94401a97a1be9453caa36259dfc5901f438eee40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b39962d2d716d88d139ccaba5f4c445dad9ef6c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508775"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999482"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework で互換性のために残されているメンバー
 この記事の表には、.NET Framework 4.5 以降のバージョンで互換性のために残されている型メンバーがアセンブリ別にまとめられています。 各アセンブリで互換性のために残されているメンバーと推奨される代替メンバーの一覧を表示するには、以下のリンクを使用してください。 このトピックでは、廃止された型のメンバーの一覧は表示されていません。 廃止された型の一覧については、[互換性のために残されている型](../../../docs/framework/whats-new/obsolete-types.md)に関するページをご覧ください。  
@@ -123,7 +123,7 @@ ms.locfileid: "33508775"
 |<xref:System.AppDomain?displayProperty=nameWithType>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.Reflection.AssemblyName%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|証拠に基づいてサンドボックス化するメソッドは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。 <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=nameWithType> パラメーターを受け取らない <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> のオーバーロードを使用してください。|  
 |<xref:System.AppDomain?displayProperty=nameWithType>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.String%2CSystem.Security.Policy.Evidence%29>|証拠に基づいてサンドボックス化するメソッドは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。 <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=nameWithType> パラメーターを受け取らない <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> のオーバーロードを使用してください。|  
 |<xref:System.AppDomain?displayProperty=nameWithType>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|証拠に基づいてサンドボックス化するメソッドは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。 <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=nameWithType> パラメーターを受け取らない <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> のオーバーロードを使用してください。|  
-|<xref:System.AppDomain?displayProperty=nameWithType>|<xref:System.AppDomain.GetCurrentThreadId%2A>|マネージ スレッドがファイバー (簡易スレッド) で実行されているときに固定の ID を提供しないので、<xref:System.AppDomain.GetCurrentThreadId%2A> の使用は非推奨とされました。 マネージ スレッドの固定の ID を取得するには、<xref:System.Threading.Thread.ManagedThreadId%2A?displayProperty=nameWithType> プロパティを使用してください。|  
+|<xref:System.AppDomain?displayProperty=nameWithType>|<xref:System.AppDomain.GetCurrentThreadId%2A>|マネージド スレッドがファイバー (簡易スレッド) で実行されているときに固定の ID を提供しないので、<xref:System.AppDomain.GetCurrentThreadId%2A> の使用は非推奨とされました。 マネージド スレッドの固定の ID を取得するには、<xref:System.Threading.Thread.ManagedThreadId%2A?displayProperty=nameWithType> プロパティを使用してください。|  
 |<xref:System.AppDomain?displayProperty=nameWithType>|<xref:System.AppDomain.Load%28System.Reflection.AssemblyName%2CSystem.Security.Policy.Evidence%29>|証拠に基づいてサンドボックス化するメソッドは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> パラメーターを受け取らない <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> のオーバーロードを使用してください。|  
 |<xref:System.AppDomain?displayProperty=nameWithType>|<xref:System.AppDomain.Load%28System.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Security.Policy.Evidence%29>|証拠に基づいてサンドボックス化するメソッドは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> パラメーターを受け取らない <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> のオーバーロードを使用してください。|  
 |<xref:System.AppDomain?displayProperty=nameWithType>|<xref:System.AppDomain.Load%28System.String%2CSystem.Security.Policy.Evidence%29>|証拠に基づいてサンドボックス化するメソッドは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> パラメーターを受け取らない <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> のオーバーロードを使用してください。|  
@@ -622,7 +622,7 @@ ms.locfileid: "33508775"
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
-|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このプロパティは今後使用しません。 Http <xref:System.Net.CookieContainer> を有効にするには、代わりに <!----zz <xref:System.ServiceModel.BasicHttpBinding.AllowCookies%2A?displayProperty=nameWithType> --> `System.ServiceModel.BasicHttpBinding.AllowCookies` プロパティを使用してください。|  
+|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このプロパティは今後使用しません。 Http <xref:System.Net.CookieContainer> を有効にするには、代わりに <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType> プロパティを使用してください。|  
 |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> ピア チャネルの機能は互換性のために残されていますが、今後削除される予定です。|  
 |<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase.ParameterInspectors%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> この型を使用すると、コンパイラ エラーが発生します。<br /><br /> この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|  
 |<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase.MessageInspectors%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> この型を使用すると、コンパイラ エラーが発生します。<br /><br /> この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|  
@@ -808,7 +808,7 @@ ms.locfileid: "33508775"
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
-|<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=nameWithType> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> バージョン 3.5 の下位互換性のためだけに使用されます。|  
+|`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> バージョン 3.5 の下位互換性のためだけに使用されます。|  
   
 <a name="visualbasic"></a>   
 ### <a name="assembly-microsoftvisualbasicdll"></a>アセンブリ: Microsoft.VisualBasic.dll  

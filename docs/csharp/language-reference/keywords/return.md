@@ -8,12 +8,12 @@ helpviewer_keywords:
 - return statement [C#]
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
-ms.openlocfilehash: 29d2b8e28ae6240b9d06b82695efe1736404c5cb
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1b6a1ce2a8587c8630fece3d5c9a2186fbbc9c22
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244778"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001477"
 ---
 # <a name="return-c-reference"></a>return (C# リファレンス)
 `return` ステートメントは、メソッドの実行を終了し、呼び出し側のメソッドに制御を戻します。 省略可能な値を返すこともできます。 メソッドが `void` 型の場合、`return` ステートメントは省略できます。  
@@ -28,9 +28,10 @@ ms.locfileid: "39244778"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
- [return ステートメント](/cpp/cpp/return-statement-cpp)  
- [ジャンプ ステートメント](../../../csharp/language-reference/keywords/jump-statements.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
+- [return ステートメント](/cpp/cpp/return-statement-cpp)  
+- [ジャンプ ステートメント](../../../csharp/language-reference/keywords/jump-statements.md)

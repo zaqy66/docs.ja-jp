@@ -7,15 +7,15 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 599a08e5e1723fc760a8211df4634064911ded37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548124"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933743"
 ---
 # <a name="xaml-in-wpf"></a>WPF の XAML
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 宣言型のアプリケーション用のマークアップ言語をプログラミングします。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aXAML プロセッサの実装を実装し、XAML 言語サポートを提供します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 表現のバックアップが必要な型を実現できるように型が実装されています。 一般の大部分を作成、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML マークアップでアプリケーションの UI。  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 宣言型のアプリケーション用のマークアップ言語のプログラミングです。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aXAML プロセッサの実装を実装し、XAML 言語のサポートを提供します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]バッキング XAML 表現を必要な型を提供する型が実装されます。 一般の大部分を作成することができます、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML マークアップでアプリケーションの UI。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
@@ -26,7 +26,7 @@ ms.locfileid: "33548124"
  [XAML 名前空間および WPF XAML の名前空間の割り当て](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
  [WPF XAML 名前スコープ](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
  [インライン スタイルおよびテンプレート](../../../../docs/framework/wpf/advanced/inline-styles-and-templates.md)  
- [XAML での空白の処理](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
+ [空白 XAML での処理](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
  [TypeConverters および XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
  [XML 文字エンティティと XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
  [XAML 名前空間 (x:) 言語機能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  

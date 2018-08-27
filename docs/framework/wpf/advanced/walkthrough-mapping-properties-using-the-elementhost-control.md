@@ -1,6 +1,6 @@
 ---
 title: 'チュートリアル : ElementHost コントロールを使用したプロパティの割り当て'
-ms.date: 03/30/2017
+ms.date: 08/18/2018
 dev_langs:
 - csharp
 - vb
@@ -8,139 +8,143 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: b5af1f45a0d01761358e83c890544ec1a11836e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89d2c6476334080fb162eadd4b2bf5984970f3fd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549192"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934682"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>チュートリアル : ElementHost コントロールを使用したプロパティの割り当て
-このチュートリアルで使用する方法、<xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>プロパティにマップする[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]、ホスト型に対応するプロパティをプロパティ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素。  
-  
- このチュートリアルでは、以下のタスクを行います。  
-  
--   プロジェクトの作成。  
-  
--   新しいプロパティ マッピングを定義します。  
-  
--   プロパティの既定のマッピングを削除しています。  
-  
--   プロパティの既定のマッピングを拡張します。  
-  
- このチュートリアルでタスクの完全なコードについては、次を参照してください。 [ElementHost コントロールのサンプルを使用してプロパティをマッピング](http://go.microsoft.com/fwlink/?LinkID=160018)です。  
-  
- 完了したらにマップできる、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]を対応するプロパティ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ホストされている要素のプロパティです。  
-  
-## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
-  
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]。  
-  
-## <a name="creating-the-project"></a>プロジェクトの作成  
-  
-#### <a name="to-create-the-project"></a>プロジェクトを作成するには  
-  
-1.  作成、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]という名前のアプリケーション プロジェクト`PropertyMappingWithElementHost`です。 詳細については、「[方法 : Windows アプリケーション プロジェクトを作成する](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)」を参照してください。  
-  
-2.  ソリューション エクスプ ローラーで、次の参照を追加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アセンブリ。  
-  
-    -   PresentationCore  
-  
-    -   PresentationFramework  
-  
-    -   WindowsBase  
-  
-    -   WindowsFormsIntegration  
-  
-3.  先頭に次のコードをコピー、`Form1`コード ファイル。  
-  
+
+このチュートリアルは、使用する方法を示します、<xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>プロパティにマップする[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]、ホスト型に対応するプロパティをプロパティ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素。
+
+このチュートリアルでは、以下のタスクを行います。
+
+-   プロジェクトの作成。
+
+-   新しいプロパティ マッピングを定義します。
+
+-   既定のプロパティ マッピングを削除しています。
+
+-   既定のプロパティ マッピングを拡張します。
+
+このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [ElementHost コントロールのサンプルを使用してプロパティをマッピング](http://go.microsoft.com/fwlink/?LinkID=160018)します。
+
+マップが完了したらができます[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]を対応するプロパティ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ホストされている要素のプロパティ。
+
+## <a name="prerequisites"></a>必須コンポーネント
+
+このチュートリアルを実行するには、次のコンポーネントが必要です。
+
+-   Visual Studio 2017
+
+## <a name="creating-the-project"></a>プロジェクトの作成
+
+### <a name="to-create-the-project"></a>プロジェクトを作成するには
+
+1.  作成、 **Windows フォーム アプリ**という名前のプロジェクト`PropertyMappingWithElementHost`します。
+
+2.  **ソリューション エクスプ ローラー**、次の参照を追加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アセンブリ。
+
+    -   PresentationCore
+
+    -   PresentationFramework
+
+    -   WindowsBase
+
+    -   WindowsFormsIntegration
+
+3.  先頭に次のコードをコピー、`Form1`コード ファイル。
+
      [!code-csharp[PropertyMappingWithElementHost#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
-     [!code-vb[PropertyMappingWithElementHost#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]  
-  
-4.  Windows フォーム デザイナーで `Form1` を開きます。 イベント ハンドラーの追加フォームをダブルクリックして、<xref:System.Windows.Forms.Form.Load>イベント。  
-  
-5.  Windows フォーム デザイナーに戻るし、フォームのイベント ハンドラーを追加<xref:System.Windows.Forms.Control.Resize>イベント。 詳細については、次を参照してください。[する方法: イベント ハンドラーを使用して作成デザイナー](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)です。  
-  
-6.  宣言、<xref:System.Windows.Forms.Integration.ElementHost>フィールドで、`Form1`クラスです。  
-  
+     [!code-vb[PropertyMappingWithElementHost#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]
+
+4.  Windows フォーム デザイナーで `Form1` を開きます。 イベント ハンドラーを追加するためのフォームをダブルクリックして、<xref:System.Windows.Forms.Form.Load>イベント。
+
+5.  Windows フォーム デザイナーに戻るし、フォームのイベント ハンドラーを追加<xref:System.Windows.Forms.Control.Resize>イベント。 詳細については、次を参照してください。[方法: イベント ハンドラーを使用して作成デザイナー](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)します。
+
+6.  宣言、<xref:System.Windows.Forms.Integration.ElementHost>フィールドに、`Form1`クラス。
+
      [!code-csharp[PropertyMappingWithElementHost#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
-     [!code-vb[PropertyMappingWithElementHost#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]  
-  
-## <a name="defining-new-property-mappings"></a>新しいプロパティのマッピングを定義します。  
- <xref:System.Windows.Forms.Integration.ElementHost>コントロールにより、いくつかの既定値がプロパティのマッピングを提供します。 呼び出して新しいプロパティ マッピングを追加する、<xref:System.Windows.Forms.Integration.PropertyMap.Add%2A>メソッドを<xref:System.Windows.Forms.Integration.ElementHost>コントロールの<xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>します。  
-  
-#### <a name="to-define-new-property-mappings"></a>新しいプロパティのマッピングを定義するには  
-  
-1.  定義に次のコードをコピー、`Form1`クラスです。  
-  
+     [!code-vb[PropertyMappingWithElementHost#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]
+
+## <a name="defining-new-property-mappings"></a>新しいプロパティのマッピングを定義します。
+
+<xref:System.Windows.Forms.Integration.ElementHost>コントロールはいくつかの既定のプロパティのマッピングを提供します。 新しいプロパティの割り当てを追加するには呼び出すことによって、<xref:System.Windows.Forms.Integration.PropertyMap.Add%2A>メソッドを<xref:System.Windows.Forms.Integration.ElementHost>コントロールの<xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>します。
+
+### <a name="to-define-new-property-mappings"></a>新しいプロパティのマッピングを定義するには
+
+1.  定義に次のコードをコピー、`Form1`クラス。
+
      [!code-csharp[PropertyMappingWithElementHost#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
-     [!code-vb[PropertyMappingWithElementHost#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]  
-  
-     `AddMarginMapping`メソッドは、新しいマッピングを追加、<xref:System.Windows.Forms.Control.Margin%2A>プロパティです。  
-  
-     `OnMarginChange`メソッドは、変換、<xref:System.Windows.Forms.Control.Margin%2A>プロパティを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.FrameworkElement.Margin%2A>プロパティです。  
-  
-2.  定義に次のコードをコピー、`Form1`クラスです。  
-  
+     [!code-vb[PropertyMappingWithElementHost#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]
+
+     `AddMarginMapping`メソッドは、新しいマッピングを追加、<xref:System.Windows.Forms.Control.Margin%2A>プロパティ。
+
+     `OnMarginChange`メソッドは、変換、<xref:System.Windows.Forms.Control.Margin%2A>プロパティを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.FrameworkElement.Margin%2A>プロパティ。
+
+2.  定義に次のコードをコピー、`Form1`クラス。
+
      [!code-csharp[PropertyMappingWithElementHost#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
-     [!code-vb[PropertyMappingWithElementHost#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]  
-  
-     `AddRegionMapping`メソッドは、新しいマッピングを追加、<xref:System.Windows.Forms.Control.Region%2A>プロパティです。  
-  
-     `OnRegionChange`メソッドは、変換、<xref:System.Windows.Forms.Control.Region%2A>プロパティを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.UIElement.Clip%2A>プロパティです。  
-  
-     `Form1_Resize`メソッドは、処理、フォームの<xref:System.Windows.Forms.Control.Resize>イベントし、ホストされている要素に合わせてクリッピング領域のサイズを設定します。  
-  
-## <a name="removing-a-default-property-mapping"></a>プロパティの既定のマッピングを削除します。  
- プロパティの既定のマッピングを削除する、<xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A>メソッドを<xref:System.Windows.Forms.Integration.ElementHost>コントロールの<xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>します。  
-  
-#### <a name="to-remove-a-default-property-mapping"></a>プロパティの既定のマッピングを削除するには  
-  
--   定義に次のコードをコピー、`Form1`クラスです。  
-  
+     [!code-vb[PropertyMappingWithElementHost#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]
+
+     `AddRegionMapping`メソッドは、新しいマッピングを追加、<xref:System.Windows.Forms.Control.Region%2A>プロパティ。
+
+     `OnRegionChange`メソッドは、変換、<xref:System.Windows.Forms.Control.Region%2A>プロパティを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.UIElement.Clip%2A>プロパティ。
+
+     `Form1_Resize`メソッドの処理、フォームの<xref:System.Windows.Forms.Control.Resize>イベントと、ホストされている要素に合わせてクリッピング領域のサイズします。
+
+## <a name="removing-a-default-property-mapping"></a>既定のプロパティ マッピングを削除します。
+
+既定のプロパティ マッピングを削除する、<xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A>メソッドを<xref:System.Windows.Forms.Integration.ElementHost>コントロールの<xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>します。
+
+### <a name="to-remove-a-default-property-mapping"></a>既定のプロパティ マッピングを削除するには
+
+-   定義に次のコードをコピー、`Form1`クラス。
+
      [!code-csharp[PropertyMappingWithElementHost#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
-     [!code-vb[PropertyMappingWithElementHost#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]  
-  
-     `RemoveCursorMapping`メソッドの既定のマッピングを削除する、<xref:System.Windows.Forms.Control.Cursor%2A>プロパティです。  
-  
-## <a name="extending-a-default-property-mapping"></a>プロパティの既定のマッピングを拡張します。  
- プロパティの既定のマッピングを使用しても、独自のマッピングに付加して拡張できます。  
-  
-#### <a name="to-extend-a-default-property-mapping"></a>プロパティの既定のマッピングを拡張するには  
-  
--   定義に次のコードをコピー、`Form1`クラスです。  
-  
+     [!code-vb[PropertyMappingWithElementHost#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
+
+     `RemoveCursorMapping`メソッドの既定のマッピングを削除する、<xref:System.Windows.Forms.Control.Cursor%2A>プロパティ。
+
+## <a name="extending-a-default-property-mapping"></a>既定のプロパティ マッピングの拡張
+
+既定のプロパティ マッピングを使用しても、独自のマッピングでは拡張できます。
+
+### <a name="to-extend-a-default-property-mapping"></a>既定のプロパティ マッピングを拡張するには
+
+-   定義に次のコードをコピー、`Form1`クラス。
+
      [!code-csharp[PropertyMappingWithElementHost#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
-     [!code-vb[PropertyMappingWithElementHost#15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]  
-  
-     `ExtendBackColorMapping`メソッドでは、カスタム プロパティ トランスレーターを追加すると、既存<xref:System.Windows.Forms.Control.BackColor%2A>プロパティ マッピングします。  
-  
-     `OnBackColorChange`メソッドは、ホストされるコントロールの特定のイメージを割り当てます<xref:System.Windows.Controls.Control.Background%2A>プロパティです。 `OnBackColorChange`既定のプロパティ マッピングが適用された後にメソッドが呼び出されます。  
-  
-## <a name="initializing-your-property-mappings"></a>プロパティ マッピングの初期化  
-  
-#### <a name="to-initialize-your-property-mappings"></a>プロパティ マッピングを初期化するには  
-  
-1.  定義に次のコードをコピー、`Form1`クラスです。  
-  
+     [!code-vb[PropertyMappingWithElementHost#15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
+
+     `ExtendBackColorMapping`メソッドでは、カスタム プロパティ トランスレーターを追加、既存<xref:System.Windows.Forms.Control.BackColor%2A>プロパティ マッピングします。
+
+     `OnBackColorChange`メソッドは、ホストされるコントロールに、特定のイメージを割り当てます<xref:System.Windows.Controls.Control.Background%2A>プロパティ。 `OnBackColorChange`既定のプロパティ マッピングが適用された後、メソッドが呼び出されます。
+
+## <a name="initialize-your-property-mappings"></a>プロパティ マッピングを初期化します。
+
+1.  定義に次のコードをコピー、`Form1`クラス。
+
      [!code-csharp[PropertyMappingWithElementHost#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
-     [!code-vb[PropertyMappingWithElementHost#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]  
-  
-     `Form1_Load`メソッド ハンドル、<xref:System.Windows.Forms.Form.Load>イベントと、次の初期化を実行します。  
-  
-    -   作成、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button>要素。  
-  
-    -   プロパティ マッピングをセットアップするチュートリアルの前半で定義されているメソッドを呼び出します。  
-  
-    -   マップされているプロパティに初期値を割り当てます。  
-  
-2.  F5 キーを押してアプリケーションをビルドし、実行します。  
-  
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Windows フォームと WPF プロパティの割り当て](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [WPF デザイナー](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+     [!code-vb[PropertyMappingWithElementHost#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]
+
+     `Form1_Load`メソッド ハンドル、<xref:System.Windows.Forms.Form.Load>イベントと、次の初期化を実行します。
+
+    -   作成、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button>要素。
+
+    -   プロパティ マッピングを設定するチュートリアルの前半で定義されているメソッドを呼び出します。
+
+    -   マップされたプロパティに初期値を割り当てます。
+
+2.  F5 キーを押してアプリケーションをビルドし、実行します。
+
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Windows フォームと WPF プロパティの割り当て](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [WPF デザイナー](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

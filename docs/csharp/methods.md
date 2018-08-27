@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457957"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925845"
 ---
 # <a name="methods"></a>メソッド #
 
@@ -83,7 +83,7 @@ ms.locfileid: "34457957"
  <a name="inherited"></a>
  ## <a name="inherited-and-overridden-methods"></a>継承されたメソッドとオーバーライドされたメソッド ##
 
-型に明示的に定義されるメンバーに加え、型は、その基底クラスに定義されているメンバーを継承します。 マネージ型という系統のすべての型は <xref:System.Object> クラスから直接的または間接的に継承するため、すべての型が、<xref:System.Object.Equals(System.Object)>、<xref:System.Object.GetType>、<xref:System.Object.ToString> など、そのメンバーを継承します。 次の例では、`Person` クラスを定義し、2 つの `Person` オブジェクトをインスタンス化し、`Person.Equals` メソッドを呼び出して 2 つのオブジェクトが等しいかどうかを判断します。 ただし、`Equals` メソッドは `Person` クラスに定義されていません。<xref:System.Object> から継承されたものです。
+型に明示的に定義されるメンバーに加え、型は、その基底クラスに定義されているメンバーを継承します。 マネージド型という系統のすべての型は <xref:System.Object> クラスから直接的または間接的に継承するため、すべての型が、<xref:System.Object.Equals(System.Object)>、<xref:System.Object.GetType>、<xref:System.Object.ToString> など、そのメンバーを継承します。 次の例では、`Person` クラスを定義し、2 つの `Person` オブジェクトをインスタンス化し、`Person.Equals` メソッドを呼び出して 2 つのオブジェクトが等しいかどうかを判断します。 ただし、`Equals` メソッドは `Person` クラスに定義されていません。<xref:System.Object> から継承されたものです。
 
 [!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
 
@@ -296,12 +296,12 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 ## <a name="see-also"></a>関連項目 ##
 
-[アクセス修飾子](language-reference/keywords/access-modifiers.md)   
-[静的クラスと静的クラス メンバー](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
-[継承](programming-guide/classes-and-structs/inheritance.md)   
-[抽象クラスとシール クラス、およびクラス メンバー](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
-[params](language-reference/keywords/params.md)   
-[out](language-reference/keywords/out-parameter-modifier.md)   
-[ref](language-reference/keywords/ref.md)   
-[in](language-reference/keywords/in-parameter-modifier.md)   
-[パラメーターの引き渡し](programming-guide/classes-and-structs/passing-parameters.md)
+- [アクセス修飾子](language-reference/keywords/access-modifiers.md)   
+- [静的クラスと静的クラス メンバー](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
+- [継承](programming-guide/classes-and-structs/inheritance.md)   
+- [抽象クラスとシール クラス、およびクラス メンバー](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
+- [params](language-reference/keywords/params.md)   
+- [out](language-reference/keywords/out-parameter-modifier.md)   
+- [ref](language-reference/keywords/ref.md)   
+- [in](language-reference/keywords/in-parameter-modifier.md)   
+- [パラメーターの引き渡し](programming-guide/classes-and-structs/passing-parameters.md)

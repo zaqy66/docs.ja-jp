@@ -8,11 +8,11 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 ms.openlocfilehash: 7248f352f95f2883fda9c92386f6ed769f9f2bf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654753"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792374"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 言語のチュートリアル
 チュートリアルでは、製品や特定の機能領域について学習を開始するのに適した一般的なシナリオについて詳細な手順を示します。  
@@ -62,7 +62,8 @@ ms.locfileid: "33654753"
  [カスタム ログ リスナーの作成](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  カスタム ログ リスナーを作成する方法と、`My.Application.Log` オブジェクトの出力を待機するように構成する方法について説明します。  
   
- [マネージ アセンブリからの型の埋め込み](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ 
+  [マネージド アセンブリからの型の埋め込み](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
  アセンブリの作成方法と、アセンブリから型を埋め込むクライアント プログラムを作成する方法を示します。  
   
  [パスワードの複雑さの検証 (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: d4a269c07e0d6dc2ac6a6a101f200653c6ea7a29
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244872"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930713"
 ---
 # <a name="-operator-c-reference"></a>+ 演算子 (C# リファレンス)
 `+` 演算子には、単項演算子としての働きと 2 項演算子としての働きとがあります。  
@@ -33,8 +33,9 @@ ms.locfileid: "39244872"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# 演算子](../../../csharp/language-reference/operators/index.md)  
- [演算子 (C# リファレンス)](../../../csharp/language-reference/keywords/operator.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# 演算子](../../../csharp/language-reference/operators/index.md)  
+- [演算子 (C# リファレンス)](../../../csharp/language-reference/keywords/operator.md)

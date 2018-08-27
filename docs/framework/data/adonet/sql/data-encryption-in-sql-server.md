@@ -2,12 +2,12 @@
 title: SQL Server でのデータの暗号化
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 9e2924dc9f2f2954f6690ad5009c4143d1b9a44f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d662f04cb54e12abfc481487cb5172f63edf0316
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358369"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932745"
 ---
 # <a name="data-encryption-in-sql-server"></a>SQL Server でのデータの暗号化
 SQL Server には、証明書、非対称キー、対称キーのいずれかを使ってデータを暗号化したり、復号化したりできる関数が用意されています。 これらはすべて内部の証明書ストアで管理されます。 証明書ストアは、1 つ上の層がその下の層を保護する暗号化階層を使用することによって、証明書およびキーを保護します。 SQL Server では、この機能領域をシークレット ストレージと呼びます。  
@@ -19,15 +19,15 @@ SQL Server には、証明書、非対称キー、対称キーのいずれかを
   
  SQL Server は、オープンする対称キーをデータベース接続のスコープ内で複数管理できます。 オープンするキーは証明書ストアから取得でき、データを復号化する際に使用できます。 データの一部が復号化されていれば、使用する対称キーを指定する必要はありません。 暗号化された各値は、どのキーを使って暗号化されたかを示すキー識別子 (キー GUID) を保持します。 正しいキーが復号化されてオープンされた場合、暗号化されたバイト ストリームとオープンする対称キーとがエンジンによって照合されます。 次に、このキーを使って復号化が実行されて、データが返されます。 正しいキーがオープンされなかった場合は NULL が返されます。  
   
- 例については、データベースの暗号化されたデータを操作する方法を示す、次を参照してください。[する方法: 列のデータを暗号化](http://go.microsoft.com/fwlink/?LinkID=128559)SQL Server オンライン ブック。  
+ データベースの暗号化されたデータを操作する方法を示す例を参照してください[列のデータを暗号化](/sql/relational-databases/security/encryption/encrypt-a-column-of-data)します。
   
 ## <a name="external-resources"></a>外部リソース  
  データの暗号化の詳細については、次のリソースを参照してください。  
   
-|||  
+|リソース|説明|  
 |-|-|  
-|[SQL Server の暗号化](http://msdn.microsoft.com/library/bb510663.aspx)SQL Server オンライン ブック|SQL Server における暗号化の概要を説明します。 このトピックには、他のトピックや具体的な方法を示したページへのリンクが用意されています。|  
-|[暗号化階層](http://msdn.microsoft.com/library/ms189586.aspx)と[暗号化方法に関するトピック](http://msdn.microsoft.com/library/aa337557.aspx)SQL Server オンライン ブック|SQL Server における暗号化の概要を説明します。 このトピックには、他のトピックや具体的な方法を示したページへのリンクが用意されています。|  
+|[SQL Server の暗号化](/sql/relational-databases/security/encryption/sql-server-encryption)|SQL Server における暗号化の概要を説明します。 このトピックでには、その他の記事へのリンクが含まれています。|  
+|[暗号化階層](/sql/relational-databases/security/encryption/encryption-hierarchy)|SQL Server における暗号化の概要を説明します。 このトピックでは、その他の記事へのリンクを提供します。|  
   
 ## <a name="see-also"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -36,4 +36,5 @@ SQL Server には、証明書、非対称キー、対称キーのいずれかを
  [SQL Server のサーバー ロールとデータベース ロール](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [SQL Server における所有権とユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [SQL Server の承認とアクセス許可](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ 
+  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)

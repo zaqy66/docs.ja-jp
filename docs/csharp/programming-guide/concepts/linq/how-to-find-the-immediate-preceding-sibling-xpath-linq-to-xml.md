@@ -3,11 +3,11 @@ title: '方法: 直前の兄弟を検索する (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
 ms.openlocfilehash: 82c0ee6e7340ada18fb2077c0b8b04fb6a41671a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318556"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935194"
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>方法: 直前の兄弟を検索する (XPath-LINQ to XML) (C#)
 ノードの直前の兄弟を検索することが必要になる場合があります。 

@@ -1,89 +1,67 @@
 ---
 title: F# のガイド
-description: このガイドでは、f#、.NET で実行される関数型プログラミング言語のさまざまな学習教材の概要を説明します。
-author: jackfoxy
-ms.date: 03/19/2018
-ms.openlocfilehash: cb829e904c006467e1470752b4fe8757ca694b05
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+description: このガイドでは、f# では、.NET 上で実行される関数型プログラミング言語のさまざまな学習教材の情報の概要を示します。
+author: cartermp
+ms.date: 08/03/2018
+ms.openlocfilehash: d3e10b6eb99f35b8eddeaa1f0ae257dd17d5cc41
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312002"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933923"
 ---
 # <a name="f-guide"></a>F# のガイド
 
-F# では .NET で実行されている機能のプログラミング言語です。 Blend の機能とオブジェクトのプログラミングに関する問題をすべての実用的な解決策をすること、オブジェクトの完全なサポートもあります。
+F# のガイドでは、f# 言語を習得する多くのリソースを提供します。
 
-```fsharp
-open System // Get access to functionality in System namespace.
+## <a name="learning-f"></a>F# を学ぶ #
 
-// Function: takes a name and produces a greeting.
-let getGreeting name =
-    sprintf "Hello, %s! Isn't F# great?" name
+[F# は](what-is-fsharp.md)f# 言語とがどのようなプログラミングが含まれるショート コード サンプルを使ってなどがについて説明します。 これは、f# に慣れていない場合に推奨されます。
 
-// Use the EntryPoint attribute to run the program.
-[<EntryPoint>]
-let main args =
-    // Define a list of names
-    let names = [| "Don"; "Julia"; "Xi" |]
-    
-    // Print a fun greeting for each name!
-    names
-    |> Array.map getGreeting
-    |> Array.iter (fun greeting -> printfn "%s" greeting)
+[F# のツアー](tour.md)多くのコード サンプルの主要な言語機能の概要を説明します。 これは、f# のコア機能を実際に関心がある場合に推奨されます。
 
-    0
-```
+[Visual Studio での f# の概要](get-started/get-started-visual-studio.md)Windows にいるし、Visual Studio IDE (統合開発環境) の完全なエクスペリエンスをするかどうか。
 
-F# は、その中心に生産性が向上します。 F# 用ツール サポートは、広く普及し、高度な機能の完全です。
+[Mac 用 Visual Studio での f# の概要](get-started/get-started-with-visual-studio-for-mac.md)macOS と Visual Studio IDE を使用します。
 
-## <a name="learning-f"></a>F# の学習 #
+[Visual Studio Code での f# の概要](get-started/get-started-vscode.md)軽量であり、複数のプラットフォームにする、機能満載の IDE が発生します。
 
-[F# のツアー](tour.md)多くのコード サンプルの主要な言語機能の概要を示します。 これは推奨している f# に新しい言語のしくみを理解する場合。
+[.NET Core CLI を使用した f# の概要](get-started/get-started-command-line.md)コマンド ライン ツールを使用する場合。
 
-[F# では、Visual Studio での概要](get-started/get-started-visual-studio.md)Windows にいるし、Visual Studio IDE (Integraded 開発環境) の完全なエクスペリエンスをするかどうか。
+[F# と Xamarin の概要](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)f# モバイル プログラミングします。
 
-[Mac 用の Visual Studio で f# 概要](get-started/get-started-with-visual-studio-for-mac.md)macos Visual Studio IDE を使用する場合。
-
-[Visual Studio のコードで f# で作業を開始](get-started/get-started-vscode.md)軽量なクロスプラット フォームをするかどうか、および IDE の機能パックが発生します。
-
-[F# では、.NET Core CLI を使用して使ってみる](get-started/get-started-command-line.md)コマンド ライン ツールを使用する場合。
-
-[F# および Xamarin の概要](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)f# とモバイルのプログラミングに関するします。
-
-[Azure のノートブックの f#](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)無料でホストされている Jupyter ノートブックで f# を学習するためのチュートリアルです。
+[Azure Notebooks の f#](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)は無料でホストされている Jupyter Notebook での f# 学習するためのチュートリアルです。
 
 ## <a name="references"></a>参照
 
-[F# 言語リファレンス](language-reference/index.md)の f# 言語のすべての機能の公式、包括的な参照です。 各記事は、構文について説明し、コード サンプルを示します。 目次のフィルター バーを使用するには特定の記事を検索します。
+[F# 言語リファレンス](language-reference/index.md)f# 言語のすべての機能の公式、包括的なリファレンスです。 各記事では、構文について説明し、コード サンプルを示します。 目次の内容でフィルター バーを使用すると、特定の記事を検索します。
 
-[F# コア ライブラリ リファレンス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)f# コア ライブラリの API リファレンスがします。
-
+[F# コア ライブラリ リファレンス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)API リファレンスの f# コア ライブラリです。
 
 ## <a name="additional-guides"></a>その他のガイド
 
-[F# では、楽しくて利益の](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/)F# で学習するための包括的な非常に詳細なブックします。 その内容と作成者は、f# コミュニティ大好きです。 対象者は、オブジェクト指向プログラミングの経験によって、開発者は、主にです。
+[『 F# for 趣味と実益](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/)は f# 学習するための包括的で非常に詳細な関連書籍です。 その内容と作成者は、f# コミュニティ大好きです。 オブジェクト指向プログラミングの経験で主に開発者を対象ユーザーとします。
 
-[F# のプログラミング Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming) f# に関する wikibook がします。 F# community の製品です。 対象者は、f#、若干のオブジェクト指向プログラミングの経験に慣れていないユーザーです。
+[F# プログラミング Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming)は f# の学習についての wikibook します。 F# コミュニティの製品もです。 対象者は、新しい f# では、少しオブジェクト指向プログラミングの経験をしている人たちです。
 
-## <a name="learn-f-through-videos"></a>ビデオを F# で学習します
+## <a name="learn-f-through-videos"></a>ビデオを f# について学ぶ
 
-[YouTube の f# チュートリアル](https://www.youtube.com/watch?v=c7eNDJN758U)は、優れた入門 f# Visual Studio を使用して、1.5 時間の間に多数の優れた例を示しています。 対象者は、f# を初めて Visual Studio の開発者です。
+[YouTube の f# チュートリアル](https://www.youtube.com/watch?v=c7eNDJN758U)は f# Visual Studio を使用して、1.5 時間のコースで多数の優れた例を示す導入として優れています。 対象者は、初心者に f# は Visual Studio 開発者です。
 
-[F# によるプログラミングの概要](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)はメインのエディターとして Visual Studio のコードを使用する優れたビデオ シリーズです。 ビデオ シリーズでは、何もから開始され、テキスト ベースの RPG ビデオ ゲームの構築を終了します。 対象者は、Visual Studio Code (または軽量 IDE) を優先し、f# に慣れていない開発者です。
+[F# を使用したプログラミングの概要](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)はメインのエディターとして Visual Studio Code を使用する優れたビデオ シリーズです。 ビデオ シリーズでは、ゼロから開始し、テキスト ベースの RPG ビデオ ゲームの構築を終了します。 Visual Studio Code (や軽量 IDE) を選択し、f# を初めて使用する開発者を対象ユーザーとします。
 
-[F# の開発者向けの Visual Studio 2017 の新](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers)の F# では、Visual Studio 2017 で、新しい機能の一部を表示するビデオのコースがします。 対象者は、f# を初めて Visual Studio の開発者です。
+[F# の開発者向けの Visual Studio 2017 の新](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers)ビデオ コースを F# では、Visual Studio 2017 での新しい機能の一部を示しています。 対象者は、初心者に f# は Visual Studio 開発者です。
 
 ## <a name="other-useful-resources"></a>その他の便利なリソース
 
-[F# スニペット web サイト](http://www.fssnip.net)f#、初級から非常に高度なスニペットまでの範囲にあるあらゆるものを行う方法を示すコード スニペットの大規模なセットが含まれています。
+[F# スニペットの web サイト](http://www.fssnip.net)で f# では、初級から極めて高度なスニペットに至るまであらゆるものを実行する方法を示すコード スニペットの大規模なセットが含まれています。
 
-[F# ソフトウェア Foundation Slack](http://fsharp.org/guides/slack/)最適な場所が初心者と似ていますの専門家は、頻度の高いおり、世界中の最適な f# のプログラマのチャットに使用できるいくつか。 参加を強くお勧めします。
+[F# ソフトウェア Foundation Slack](http://fsharp.org/guides/slack/)最適な場所は、初心者にとっても、専門家が非常にアクティブであり世界の最適な f# プログラマのチャットの利用可能な一部です。 参加を強くお勧めします。
 
 ## <a name="the-f-software-foundation"></a>F# ソフトウェアの基礎
 
-マイクロソフトでは、f# 言語やそのツールと Visual Studio での主な開発者は、f# も支えられた独立の foundation、f# ソフトウェア Foundation (FSSF)。
+マイクロソフトでは、f# 言語と Visual Studio では、そのツールの主な開発者は、f# による支援も、独立系の foundation、f# ソフトウェア Foundation (FSSF)。
 
 F# Software Foundation の使命は、F# プログラミング言語の促進、保護、進歩であり、F# プログラマーの多様なインターナショナル コミュニティをサポートし、成長を促進しています。
 
-詳細およびコミュニティへの参加については、[fsharp.org](http://fsharp.org) を参照してください。参加するには無料で、f# foundation の開発者のネットワークを使用して、見逃したくない点です。
+詳細およびコミュニティへの参加については、[fsharp.org](http://fsharp.org) を参照してください。参加するには無料ですし、f# 開発者、foundation でのネットワークを使用して、見逃したくなります。

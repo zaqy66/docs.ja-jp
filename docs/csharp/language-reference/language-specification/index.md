@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 5ed035d5e1e524de9f86254d03e3276966293bf6
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 976282ab51ec3e9990161abf2dd089798bd949dd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472790"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931277"
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 のドラフト言語仕様
 
@@ -26,8 +26,9 @@ C# 言語仕様は、C# の構文と使用法に関する信頼性のある情�
 ドラフト仕様の問題は [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) リポジトリで作成する必要があります。 見つけたエラーを修正したい場合は、同じレポジトリに[プル要求](https://github.com/dotnet/csharplang/pulls)を送信できます。
 
 ## <a name="see-also"></a>関連項目
- [C# リファレンス](../index.md)  
- [C# プログラミング ガイド](../../programming-guide/index.md)
+
+- [C# リファレンス](../index.md)  
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [次へ](../../../../_csharplang/spec/introduction.md)

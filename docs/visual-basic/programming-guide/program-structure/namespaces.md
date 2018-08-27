@@ -17,11 +17,11 @@ helpviewer_keywords:
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 ms.openlocfilehash: c1302bf4b424c7c03fb6c2d8132b086c4d30fd87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655559"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934454"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic における名前空間
 アセンブリ内で定義されているオブジェクトは、名前空間によって編成されています。 アセンブリには複数の名前空間を含めることができます。さらに、名前空間の中に他の名前空間を含めることもできます。 名前空間を使用するとあいまいさがなくなるため、クラス ライブラリを使用する場合など、多数のオブジェクトを使用する場合に参照が簡単になります。  
@@ -33,7 +33,7 @@ ms.locfileid: "33655559"
 ## <a name="avoiding-name-collisions"></a>名前の競合の回避  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] の名前空間は、他のライブラリで似た名前が使用されている場合にクラス ライブラリの開発者が遭遇する、 *名前空間の汚染*と呼ばれる問題に対処しています。 このような既存コンポーネントとの競合は、 *名前の競合*とも呼ばれます。  
   
- たとえば、 `ListBox`という名前の新しいクラスを作成した場合、プロジェクト内ではこのクラスを修飾子を付けずに使用できます。 ただし、使用する場合、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox>クラス、同じプロジェクト内の参照を一意にするための完全修飾参照を使用する必要があります。 参照が一意でない場合、Visual Basic には、名前があいまいであることを示すエラーが生成されます。 次のコード例では、これらのオブジェクトを宣言する方法を示しています。  
+ たとえば、 `ListBox`という名前の新しいクラスを作成した場合、プロジェクト内ではこのクラスを修飾子を付けずに使用できます。 ただし、使用する場合、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox>クラスと同じプロジェクトで参照を一意にする完全修飾参照を使用する必要があります。 参照が一意でない場合、Visual Basic には、名前があいまいであることを示すエラーが生成されます。 次のコード例では、これらのオブジェクトを宣言する方法を示しています。  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
@@ -41,9 +41,9 @@ ms.locfileid: "33655559"
   
  ![Namespace 階層](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
   
- 既定では、Visual Basic を使用して作成するすべての実行可能ファイルには、プロジェクトと同じ名前を持つ名前空間が含まれています。 たとえば、 `ListBoxProject`という名前のプロジェクト内でオブジェクトを定義した場合、実行可能ファイル ListBoxProject.exe には `ListBoxProject`という名前空間が含まれます。  
+ 既定では、Visual Basic で作成するすべての実行可能ファイルには、プロジェクトと同じ名前を持つ名前空間が含まれています。 たとえば、 `ListBoxProject`という名前のプロジェクト内でオブジェクトを定義した場合、実行可能ファイル ListBoxProject.exe には `ListBoxProject`という名前空間が含まれます。  
   
- 複数のアセンブリで同じ名前空間を使用することができます。 Visual Basic の名前の単一のセットとして扱います。 たとえば、 `SomeNameSpace` というアセンブリの `Assemb1`という名前空間のクラスを定義した後に、 `Assemb2`というアセンブリの同じ名前空間のクラスを定義できます。  
+ 複数のアセンブリで同じ名前空間を使用することができます。 Visual Basic の名前の 1 つのセットとして扱います。 たとえば、 `SomeNameSpace` というアセンブリの `Assemb1`という名前空間のクラスを定義した後に、 `Assemb2`というアセンブリの同じ名前空間のクラスを定義できます。  
   
 ## <a name="fully-qualified-names"></a>完全修飾名  
  完全修飾名は、オブジェクトが定義されている名前空間の名前で始まるオブジェクト参照です。 他のプロジェクトで定義されているオブジェクトを使用するには、 **[プロジェクト]** メニューの **[参照の追加]** をクリックしてそのクラスへの参照を作成し、コード内でそのオブジェクトの完全修飾名を使用します。 次のコードは、別のプロジェクトの名前空間のオブジェクトを使用して完全修飾名を使用する方法を示しています。  
@@ -60,7 +60,7 @@ ms.locfileid: "33655559"
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- 使用しようとする場合`Class1`完全修飾、Visual Basic でエラーが発生することを示す名前`Class1`があいまいです。  
+ 使用すると場合`Class1`完全修飾、Visual Basic エラーが発生することを示す名前`Class1`があいまいです。  
   
 ## <a name="namespace-level-statements"></a>名前空間レベルのステートメント  
  名前空間内では、モジュール、インターフェイス、クラス、デリゲート、列挙体、構造体、他の名前空間などの項目を定義できます。 プロパティ、プロシージャ、変数、イベントなどの項目を名前空間のレベルで定義することはできません。 これらの項目は、モジュール、構造体、クラスなどのコンテナー内で宣言する必要があります。  
@@ -99,7 +99,7 @@ End Namespace
  `Global` を使用して、<xref:Microsoft.VisualBasic?displayProperty=nameWithType> などの他のルート レベルの名前空間、およびプロジェクトに関連する任意の名前空間にアクセスできます。  
   
 ## <a name="global-keyword-in-namespace-statements"></a>名前空間のステートメントでの Global キーワード  
- 使用することも、`Global`キーワード、 [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)です。 これにより、プロジェクトのルート名前空間から名前空間を定義できます。  
+ 使用することも、`Global`キーワード、 [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)します。 これにより、プロジェクトのルート名前空間から名前空間を定義できます。  
   
  プロジェクト内のすべての名前空間は、プロジェクトのルート名前空間に基づいています。  Visual Studio では、プロジェクト内のすべてのコードで、既定のルート名前空間としてプロジェクト名が割り当てられます。 たとえば、プロジェクト名が `ConsoleApplication1`である場合、そのプログラミング要素は `ConsoleApplication1`名前空間に属します。 `Namespace Magnetosphere`を宣言すると、プロジェクトの `Magnetosphere` への参照は `ConsoleApplication1.Magnetosphere`にアクセスします。  
   
@@ -109,7 +109,7 @@ End Namespace
   
  名前空間宣言では、 `Global` を別の名前空間に入れ子にすることはできません。  
   
- 使用することができます、[アプリケーション ページで、プロジェクト デザイナー) (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)を表示および変更、**ルート Namespace**プロジェクトのです。  新しいプロジェクトの場合、 **ルート名前空間** の既定値は、プロジェクト名です。 `Global` を最上位レベルの名前空間にするには、 **ルート名前空間** のエントリを消去して、ボックスを空にします。 **ルート名前空間** を消去すると、名前空間の宣言で `Global` キーワードの必要がなくなります。  
+ 使用することができます、[アプリケーション ページで、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)表示および変更する、**ルート Namespace**のプロジェクト。  新しいプロジェクトの場合、 **ルート名前空間** の既定値は、プロジェクト名です。 `Global` を最上位レベルの名前空間にするには、 **ルート名前空間** のエントリを消去して、ボックスを空にします。 **ルート名前空間** を消去すると、名前空間の宣言で `Global` キーワードの必要がなくなります。  
   
  `Namespace` ステートメントで .NET framework の名前空間にもなっている名前を宣言する場合、 `Global` キーワードが完全修飾名で使用されていない場合、.NET Framework 名前空間は使用できなくなります。 `Global` キーワードを使用せずに、.NET Framework 名前空間へのアクセスを有効にするには、 `Global` キーワードを `Namespace` ステートメントに含めます。  
   

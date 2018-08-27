@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b4c2d4205e87d8be21f82eaf74b17e316d9057e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a909b7c940f22e6435fc72a370b8a4ed17d5f937
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394333"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925058"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 配置ガイド (管理者向け)
 この記事では、システム管理者が Microsoft System Center Configuration Manager を使用して [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] とそのシステムの依存関係をネットワーク経由で配置する方法を手順に沿って説明します。 ここでは、すべての対象のクライアント コンピューターが .NET Framework の最小要件を満たしていることを前提としています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] のインストールに必要なソフトウェア要件とハードウェア要件の一覧については、「[システム要件](../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
@@ -252,7 +252,7 @@ ms.locfileid: "33394333"
   
 -   [URL モニカーのエラー コード](http://msdn.microsoft.com/library/ms775145.aspx)  
   
--   [WinHttp エラー コード](http://msdn.microsoft.com/library/aa383770.aspx)  
+-   [WinHttp エラー コード](/windows/desktop/WinHttp/error-messages)  
   
  その他のエラー コード:   
   

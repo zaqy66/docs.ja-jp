@@ -1,5 +1,5 @@
 ---
-title: Inherits Statement
+title: Inherits ステートメント (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Inherits
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 43a8aa4e9e04ee035cb52e9f829de13e5c022217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a98ada39a04730b46f40fe139e72d1855d9b067
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604342"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931236"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
-現在のクラスまたはインターフェイスの属性、変数、プロパティ、プロシージャ、およびイベントを別のクラスまたはインターフェイスのセットから継承が発生します。  
+現在のクラスまたは属性、変数、プロパティ、プロシージャ、およびイベントを別のクラスまたはインターフェイスのセットから継承するインターフェイスとします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,31 +28,31 @@ Inherits basetypenames
   
 |用語|定義|  
 |---|---|  
-|`basetypenames`|必須。 このクラスの派生元となるクラスの名前。<br /><br /> - または -<br /><br /> このインターフェイスの派生元のインターフェイスの名前。 コンマを使用して、複数の名前を区切ります。|  
+|`basetypenames`|必須。 このクラスの派生元クラスの名前。<br /><br /> - または -<br /><br /> このインターフェイスの派生元のインターフェイスの名前。 コンマを使用して、複数の名前を区切ります。|  
   
-## <a name="remarks"></a>コメント  
- 使用する場合、`Inherits`ステートメントはクラスまたはインターフェイスの定義では、最初の空白またはコメント以外の次の行である必要があります。 必要があります直後、`Class`または`Interface`ステートメントです。  
+## <a name="remarks"></a>Remarks  
+ 使用する場合、`Inherits`ステートメントはクラスまたはインターフェイスの定義では、最初の空白、コメント以外の次の行である必要があります。 すぐに従ってください、`Class`または`Interface`ステートメント。  
   
- 使用することができます`Inherits`クラスまたはインターフェイスでのみです。 つまり、継承の宣言コンテキストはソース ファイル、名前空間、構造体、モジュール、プロシージャ、またはブロックすることはできません。  
+ 使用することができます`Inherits`クラスまたはインターフェイスでのみです。 つまり、継承の宣言のコンテキストがソース ファイル、名前空間、構造体、モジュール、プロシージャ、またはブロックすることはできません。  
   
 ## <a name="rules"></a>ルール  
   
--   **クラスの継承します。** クラスを使用している場合、`Inherits`ステートメントでは、1 つだけの基本クラスを指定することができます。  
+-   **クラスの継承します。** クラスで使用する場合、`Inherits`ステートメントでは、1 つだけの基本クラスを指定することができます。  
   
-     クラスは、内部に入れ子になったクラスから継承できません。  
+     クラスは、その中に入れ子になったクラスから継承できません。  
   
--   **インターフェイスの継承します。** インターフェイスで使用する場合、`Inherits`ステートメントでは、1 つまたは複数の基底インターフェイスを指定することができます。 同じ名前のメンバーが定義されている場合でも、2 つのインターフェイスから継承することができます。 これを行う場合、実装コードは、実装するメンバーを指定する名前の修飾を使用する必要があります。  
+-   **インターフェイスの継承します。** インターフェイスで使用する場合、`Inherits`ステートメントでは、1 つまたは複数の基底インターフェイスを指定することができます。 同じ名前のメンバーが定義されている場合でも、2 つのインターフェイスから継承できます。 これを行う場合、実装コードは、実装しています。 どのメンバーを指定する名前の修飾を使用する必要があります。  
   
-     インターフェイスより制限の厳しいアクセス レベルを持つ別のインターフェイスから継承できません。 たとえば、`Public`インターフェイスを継承できません、`Friend`インターフェイスです。  
+     インターフェイスより制限の厳しいアクセス レベルを持つ別のインターフェイスから継承できません。 たとえば、`Public`インターフェイスから継承することはできません、`Friend`インターフェイス。  
   
      インターフェイスは、内部に入れ子になったインターフェイスから継承できません。  
   
- .NET Framework におけるクラス継承の例は、<xref:System.ArgumentException>から継承されるクラスが、<xref:System.SystemException>クラスです。 これにより、<xref:System.ArgumentException>すべての定義済みプロパティとなどのシステム例外によって必要な手順、<xref:System.Exception.Message%2A>プロパティおよび<xref:System.Exception.ToString%2A>メソッドです。  
+ .NET Framework におけるクラス継承の例は、<xref:System.ArgumentException>から継承されるクラス、<xref:System.SystemException>クラス。 これにより、<xref:System.ArgumentException>すべての定義済みプロパティとなどのシステム例外によって必要な手順、<xref:System.Exception.Message%2A>プロパティおよび<xref:System.Exception.ToString%2A>メソッド。  
   
- .NET Framework のインターフェイスの継承の例は、<xref:System.Collections.ICollection>から継承されるインターフェイス、<xref:System.Collections.IEnumerable>インターフェイスです。 これにより、<xref:System.Collections.ICollection>コレクションを走査するために必要な列挙子の定義を継承します。  
+ .NET Framework のインターフェイスの継承の例は、<xref:System.Collections.ICollection>から継承するインターフェイスを<xref:System.Collections.IEnumerable>インターフェイス。 これにより、<xref:System.Collections.ICollection>コレクションを走査するために必要な列挙子の定義を継承します。  
   
 ## <a name="example"></a>例  
- 次の例では、`Inherits`クラスの名前付け方法を表示するステートメント`thisClass`という名前の基本クラスのすべてのメンバーを継承できます`anotherClass`です。  
+ 次の例では、`Inherits`クラスの名前付け方法を表示するステートメント`thisClass`という名前の基本クラスのすべてのメンバーを継承できる`anotherClass`します。  
   
  [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
   
@@ -61,7 +61,7 @@ Inherits basetypenames
   
  [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
   
- という名前のインターフェイス`thisInterface`内のすべての定義が含まれています、 <xref:System.IComparable>、 <xref:System.IDisposable>、および<xref:System.IFormattable>インターフェイスの継承されたメンバーでは、それぞれ 2 つのオブジェクトの種類に固有の比較を解放するには、リソースが割り当てられます、としてオブジェクトの値を表現して、`String`です。 実装するクラス`thisInterface`すべての基底インターフェイスのすべてのメンバーを実装する必要があります。  
+ という名前のインターフェイス`thisInterface`内のすべての定義が含まれています、 <xref:System.IComparable>、 <xref:System.IDisposable>、および<xref:System.IFormattable>継承されたメンバーでは、それぞれ 2 つのオブジェクトの種類に固有の比較を解放するインターフェイスには、リソースが割り当てられますをオブジェクトとしての値を表現して、`String`します。 実装するクラス`thisInterface`すべて基底インターフェイスのすべてのメンバーを実装する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
