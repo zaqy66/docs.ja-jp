@@ -7,14 +7,14 @@ ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13aeab52cfd43aa8dfd7fda69e2eb9be798473e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655825"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932168"
 ---
-# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic コンパイラ オプションのカテゴリ別一覧
-Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合開発環境 (IDE) 内からプログラムをコンパイルする代わりとして提供されます。 機能カテゴリ順に並べ替えて Visual Basic のコマンド ライン コンパイラ オプションの一覧を次に示します。  
+# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic コンパイラ オプションがカテゴリ別一覧
+Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合開発環境 (IDE) 内からプログラムをコンパイルする代替手段として提供されます。 次は、機能カテゴリ別に並べ替えて Visual Basic のコマンド ライン コンパイラ オプションの一覧です。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -43,7 +43,7 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|入力が同一である場合、バイナリ コンテンツがコンパイル全体で同一のアセンブリをコンパイラに出力させます。|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|[!INCLUDE[Compact](~/includes/compact-md.md)] が対象になるようにコンパイラを設定します。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|出力ファイルを指定します。|  
-|[/refonly](refonly-compiler-option.md)|参照アセンブリのみを出力します。|
+|[/refonly](refonly-compiler-option.md)|参照アセンブリだけを出力します。|
 |[/refout](refout-compiler-option.md)|参照アセンブリの出力パスを指定します。|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|出力の形式を指定します。|  
   
@@ -85,7 +85,7 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
   
 |オプション|目的|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|言語バージョンを指定します: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|言語バージョンを指定します。 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|変数の明示的な宣言を強制的に適用します。|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|厳密な型のセマンティクスを強制的に適用します。|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|文字列比較をバイナリにするか、ロケール固有のテキストのセマンティクスを使用するかどうかを指定します。|  
@@ -101,8 +101,8 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
   
 |オプション|目的|  
 |---|---|  
-|[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|マネージ リソースへのリンクを作成します。|  
-|[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|マネージ リソースをアセンブリに埋め込みます。|  
+|[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|マネージド リソースへのリンクを作成します。|  
+|[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|マネージド リソースをアセンブリに埋め込みます。|  
 |[-win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|.ico ファイルを出力ファイルに挿入します。|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Win32 リソースを出力ファイルに挿入します。|  
   
@@ -113,7 +113,7 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
 |[@ (応答ファイルの指定)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|応答ファイルを指定します。|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|DLL のベース アドレスを指定します。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|コンパイルですべてのソース コード ファイルに使用するコード ページを指定します。|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic コンパイラで内部コンパイラ エラーを報告する方法を指定します。|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic コンパイラが内部コンパイラ エラーを報告する方法を指定します。|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|特定の実行可能ファイルで高エントロピ ASLR (Address Space Layout Randomization) をサポートするかどうかを Windows カーネルに示します。|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|含むクラスを指定します、`Sub Main`起動時に使用するプロシージャ。|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|コンパイルに Vbc.rsp が使用されないようにします。|  

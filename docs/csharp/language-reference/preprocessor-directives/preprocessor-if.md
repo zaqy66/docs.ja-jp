@@ -1,17 +1,17 @@
 ---
 title: '#if プリプロセッサ ディレクティブ (C# リファレンス)'
-ms.date: 02/13/2017
+ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287684"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000938"
 ---
 # <a name="if-c-reference"></a>#if (C# リファレンス)
 
@@ -33,9 +33,9 @@ C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](prep
 
 `#define` を使用するとシンボルを定義できます。 定義したシンボルを `#if` ディレクティブに渡す式として使用すると、この式は `true` と評価されます。
 
-シンボルは、[/define](../compiler-options/define-compiler-option.md) コンパイラ オプションでも定義できます。 [#undef](preprocessor-undef.md) を使うと、シンボルを未定義状態にできます。
+シンボルは、[-define](../compiler-options/define-compiler-option.md) コンパイラ オプションでも定義できます。 [#undef](preprocessor-undef.md) を使うと、シンボルを未定義状態にできます。
 
-`/define` または `#define` で定義されたシンボルは、同じ名前の変数とは競合しません。 変数名をプリプロセッサ ディレクティブに渡すことはできません。シンボルはプリプロセッサ ディレクティブだけで評価されます。
+`-define` または `#define` で定義されたシンボルは、同じ名前の変数とは競合しません。 変数名をプリプロセッサ ディレクティブに渡すことはできません。シンボルはプリプロセッサ ディレクティブだけで評価されます。
 
 `#define` を使用して作成したシンボルのスコープは、そのシンボルが定義されているファイルです。
 
@@ -43,7 +43,7 @@ C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](prep
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
-他の定義済みシンボルとしては、DEBUG 定数と TRACE 定数があります。 `#define` を使用して、プロジェクトに設定された値を上書きできます。 たとえば、DEBUG シンボルは、ビルド構成プロパティ ("デバッグ" モードまたは "リリース" モード) に応じて自動的に設定されます。
+他の定義済みシンボルとしては、DEBUG 定数と TRACE 定数があります。 `#define` を使用して、プロジェクトに設定された値をオーバーライドできます。 たとえば、DEBUG シンボルは、ビルド構成プロパティ ("デバッグ" モードまたは "リリース" モード) に応じて自動的に設定されます。
 
 ## <a name="examples"></a>使用例
 
@@ -88,7 +88,7 @@ public class MyClass
 
 ## <a name="see-also"></a>関連項目
 
-[C# リファレンス](../../../csharp/language-reference/index.md)  
-[C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-[C# プリプロセッサ ディレクティブ](index.md)  
-[方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プリプロセッサ ディレクティブ](index.md)  
+- [方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。

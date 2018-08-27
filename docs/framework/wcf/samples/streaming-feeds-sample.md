@@ -2,12 +2,12 @@
 title: ストリーミング フィードのサンプル
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 2c420bad9ad96107f56b5435efa6fffd6941cdaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50fa7ccfde544ac9e0ab762434ccc5c3b94958ea
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505538"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929248"
 ---
 # <a name="streaming-feeds-sample"></a>ストリーミング フィードのサンプル
 このサンプルでは、多数の項目が含まれた配信フィードを管理する方法を示します。 サーバー側のサンプルは、フィード内での個々の <xref:System.ServiceModel.Syndication.SyndicationItem> オブジェクトの作成を、項目がネットワーク ストリームに書き込まれる直前まで遅らせる方法を示しています。  
@@ -16,7 +16,7 @@ ms.locfileid: "33505538"
   
  配信 API のストリーミング機能を十分に示すため、このサンプルでは、無数の項目を含むフィードがサーバーによって公開されるという多少通常とは異なるシナリオを使用しています。 この場合、サーバーは、クライアントがフィードから特定の数 (既定では 10) の項目を読み取ったと判断するまで、新しい項目をフィードに対して生成し続けます。 処理を簡単にするために、クライアントとサーバーは両方とも同じプロセスで実装され、共有 `ItemCounter` オブジェクトを使用して、クライアントによって生成された項目の数を追跡します。 `ItemCounter` 型は、サンプル シナリオを正常に終了するためにのみ存在し、示されるパターンの重要な要素ではありません。  
   
- デモでは、Visual c# の使用により、反復子 (を使用して、`yield``return`キーワード コンストラクト)。 反復子の詳細については、MSDN の反復子の使用」のトピックを参照してください。  
+ デモでは、Visual c# の使用により、反復子 (を使用して、`yield return`キーワード コンストラクト)。 反復子の詳細については、MSDN の「反復子の使用」のトピックを参照してください。  
   
 ## <a name="service"></a>サービス  
  次のコードに示すように、サービスは、1 つの操作で構成される基本的な <xref:System.ServiceModel.Web.WebGetAttribute> コントラクトを実装します。  
@@ -65,7 +65,7 @@ public Atom10FeedFormatter StreamedFeed()
 }  
 ```  
   
- その結果、項目のストリームはメモリに完全にはバッファされません。 ブレークポイントを設定してこの動作を確認することができます、`yield``return`内のステートメント、`ItemGenerator.GenerateItems()`メソッドと、サービスの結果が返された後に初めてこのブレークポイントが発生したことに注意してください、`StreamedFeed()`メソッドです。  
+ その結果、項目のストリームはメモリに完全にはバッファされません。 ブレークポイントを設定してこの動作を確認、`yield return`内のステートメント、`ItemGenerator.GenerateItems()`メソッドと、サービスの結果が返された後に初めてこのブレークポイントが発生したことに注意してください。、`StreamedFeed()`メソッド。  
   
 ## <a name="client"></a>クライアント  
  このサンプルのクライアントでは、フィードの項目をメモリにバッファする代わりに、個々の項目の実体化を遅延させるカスタム <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 実装を使用します。 カスタム `StreamedAtom10FeedFormatter` インスタンスの使用方法は次のとおりです。  
@@ -97,24 +97,24 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 }  
 ```  
   
- その結果、各項目は、`ReadItems()` の結果を走査するクライアント アプリケーションで使用可能な状態になるまで、ネットワークから読み取られません。 ブレークポイントを設定してこの動作を確認することができます、`yield``return`ステートメントの内側`StreamedAtom10FeedFormatter.DelayReadItems()`への呼び出し後に最初にこのブレークポイントが検出されることに注意`ReadFrom()`が完了します。  
+ その結果、各項目は、`ReadItems()` の結果を走査するクライアント アプリケーションで使用可能な状態になるまで、ネットワークから読み取られません。 ブレークポイントを設定してこの動作を確認、`yield return`内のステートメント`StreamedAtom10FeedFormatter.DelayReadItems()`への呼び出し後に最初にこのブレークポイントが検出されることに注意して`ReadFrom()`が完了するとします。  
   
  次の手順は、サンプルをビルドして実行する方法を示しています。 クライアントが 10 個の項目を読み取った後にサーバーによる項目の生成が停止されると、クライアントが読み取った項目数は 10 個より非常に多く出力されます。 これは、サンプルで使用されたネットワーキング バインディングによってデータが 4 キロバイト (KB) セグメントで転送されることが原因です。 このような場合、クライアントは、項目を 1 つでも読み取る前に 4 KB の項目データを受信します。 これは通常の動作です (適切にサイズが調整されたセグメントでストリーミングされた HTTP データを送信すると、パフォーマンスが向上します)。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

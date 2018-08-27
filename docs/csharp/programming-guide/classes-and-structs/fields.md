@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 31073772fd42244167b5e68959ebb373ec759025
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65e815411cc9f4af063cb955ae63d18e87f43f38
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314328"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998698"
 ---
 # <a name="fields-c-programming-guide"></a>フィールド (C# プログラミング ガイド)
 *フィールド*とは、[クラス](../../../csharp/language-reference/keywords/class.md)または[構造体](../../../csharp/language-reference/keywords/struct.md)で直接宣言される任意の型の変数です。 フィールドは、それを含んでいる型の*メンバー*です。  
@@ -41,7 +41,7 @@ ms.locfileid: "33314328"
   
  必要に応じて、フィールドを[静的](../../../csharp/language-reference/keywords/static.md)に宣言することもできます。 その場合、クラスのインスタンスが存在しなくても、呼び出し元がいつでもフィールドを使用できるようになります。 詳細については、「[静的クラスと静的クラス メンバー](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)」を参照してください。  
   
- フィールドを [readonly](../../../csharp/language-reference/keywords/readonly.md) として宣言することもできます。 読み取り専用フィールドには、初期化時またはコンストラクターによる以外は、値を代入できません。 `static``readonly` フィールドは基本的に定数と同じですが、C# コンパイラが静的な読み取り専用フィールドの値にアクセスできるのは実行時のみで、コンパイル時はアクセスできない点が異なります。 詳細については、「[定数](../../../csharp/programming-guide/classes-and-structs/constants.md)」を参照してください。  
+ フィールドを [readonly](../../../csharp/language-reference/keywords/readonly.md) として宣言することもできます。 読み取り専用フィールドには、初期化時またはコンストラクターによる以外は、値を代入できません。 `static readonly` フィールドは基本的に定数と同じですが、C# コンパイラが静的な読み取り専用フィールドの値にアクセスできるのは実行時のみで、コンパイル時はアクセスできない点が異なります。 詳細については、「[定数](../../../csharp/programming-guide/classes-and-structs/constants.md)」を参照してください。  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

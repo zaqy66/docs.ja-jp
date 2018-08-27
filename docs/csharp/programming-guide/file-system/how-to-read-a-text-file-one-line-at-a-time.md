@@ -6,19 +6,19 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 2ed0069f9313955edc2cc46ecfd395a5f1ac2852
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b31e3f0164b2a2094e84263702c52c2817219d20
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339736"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752070"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>方法: テキスト ファイルを一度に 1 行読み込む (Visual C#)
 次の例では、`StreamReader` クラスの `ReadLine` メソッドを使用して、テキスト ファイルの内容を一度に 1 行ずつ文字列に読み込みます。 各テキスト行は文字列 `line` に格納され、画面に表示されます。  
   
 ## <a name="example"></a>例  
   
-```  
+```csharp
 int counter = 0;  
 string line;  
   
@@ -27,7 +27,7 @@ System.IO.StreamReader file =
     new System.IO.StreamReader(@"c:\test.txt");  
 while((line = file.ReadLine()) != null)  
 {  
-    System.Console.WriteLine (line);  
+    System.Console.WriteLine(line);  
     counter++;  
 }  
   

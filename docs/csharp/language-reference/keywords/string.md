@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: f92a44283e59bd80421758a63b40bc5289c3628b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 8b70f1c1dcb39dcdde6ba24a1bdcdfc3084cfc97
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172163"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929274"
 ---
 # <a name="string-c-reference"></a>string (C# リファレンス)
 `string` 型は、0 個以上の Unicode 文字のシーケンスを表します。 `string` は .NET の <xref:System.String> の別名です。  
@@ -99,14 +99,15 @@ Console.WriteLine(a);
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [文字列を使用するためのベスト プラクティス](../../../standard/base-types/best-practices-strings.md)  
- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [参照型](../../../csharp/language-reference/keywords/reference-types.md)  
- [値型](../../../csharp/language-reference/keywords/value-types.md)  
- [基本的な文字列操作](../../../standard/base-types/basic-string-operations.md)  
- [新しい文字列の作成](../../../standard/base-types/creating-new.md)  
- [数値結果テーブルの書式設定](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [文字列を使用するためのベスト プラクティス](../../../standard/base-types/best-practices-strings.md)  
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [参照型](../../../csharp/language-reference/keywords/reference-types.md)  
+- [値型](../../../csharp/language-reference/keywords/value-types.md)  
+- [基本的な文字列操作](../../../standard/base-types/basic-string-operations.md)  
+- [新しい文字列の作成](../../../standard/base-types/creating-new.md)  
+- [数値結果テーブルの書式設定](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
