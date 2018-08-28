@@ -1,15 +1,15 @@
 ---
-title: '方法: ツリー (Visual Basic) ですべてのノードを一覧表示'
+title: '方法: ツリー (Visual Basic) のすべてのノードを一覧表示'
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
 ms.openlocfilehash: b7bd2f3cebbf660209c47f5a4797f343b2b1e4e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643752"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929886"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>方法: ツリー (Visual Basic) ですべてのノードを一覧表示
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>方法: ツリー (Visual Basic) のすべてのノードを一覧表示
 ツリー内のすべてのノードを一覧表示すると便利な場合があります。 これは、メソッドやプロパティがツリーに及ぼす影響を確認するときに役立ちます。 すべてのノードをテキスト形式で一覧表示する方法の 1 つは、ツリー内の任意のノードを正確かつ明確に識別する XPath 式を生成することです。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して XPath 式を実行する方法は特に有効ではありません。 XPath 式は [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリよりパフォーマンスが低く、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリの方がはるかに強力です。 ただし、XPath 式は、XML ツリー内のノードを識別する手段としては有効です。  
