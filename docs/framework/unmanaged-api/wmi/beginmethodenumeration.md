@@ -1,6 +1,6 @@
 ---
 title: BeginMethodEnumeration 関数 (アンマネージ API リファレンス)
-description: オブジェクトのメソッドの列挙を開始する BeginMethodEnumeration 関数
+description: BeginMethodEnumeration 関数、オブジェクトのメソッドの列挙を開始します。
 ms.date: 11/06/2017
 api_name:
 - BeginMethodEnumeration
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459877"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000344"
 ---
-# <a name="beginenumeration-function"></a><span data-ttu-id="4ec9a-103">BeginEnumeration 関数</span><span class="sxs-lookup"><span data-stu-id="4ec9a-103">BeginEnumeration function</span></span>
-<span data-ttu-id="4ec9a-104">オブジェクトの使用可能なメソッドの列挙を開始します。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-104">Begins an enumeration of the methods available for the object.</span></span>  
+# <a name="beginenumeration-function"></a><span data-ttu-id="842de-103">BeginEnumeration 関数</span><span class="sxs-lookup"><span data-stu-id="842de-103">BeginEnumeration function</span></span>
+<span data-ttu-id="842de-104">オブジェクトの使用可能なメソッドの列挙を開始します。</span><span class="sxs-lookup"><span data-stu-id="842de-104">Begins an enumeration of the methods available for the object.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="4ec9a-105">構文</span><span class="sxs-lookup"><span data-stu-id="4ec9a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="842de-105">構文</span><span class="sxs-lookup"><span data-stu-id="842de-105">Syntax</span></span>  
   
 ``` 
 HRESULT BeginMethodEnumeration (
@@ -38,43 +38,43 @@ HRESULT BeginMethodEnumeration (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="4ec9a-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4ec9a-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="842de-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="842de-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="4ec9a-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="842de-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="842de-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="4ec9a-108">[in]ポインター、 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
+<span data-ttu-id="842de-108">[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="842de-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `lEnumFlags`  
-<span data-ttu-id="4ec9a-109">[in]ゼロ (0) のすべてのメソッド、または列挙体のスコープを指定するフラグ。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-109">[in] Zero (0) for all methods, or a flag that specifies the scope of the enumeration.</span></span> <span data-ttu-id="4ec9a-110">次のフラグが定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-110">The following flags are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="842de-109">[in]ゼロ (0) のすべてのメソッド、または列挙体のスコープを指定するフラグ。</span><span class="sxs-lookup"><span data-stu-id="842de-109">[in] Zero (0) for all methods, or a flag that specifies the scope of the enumeration.</span></span> <span data-ttu-id="842de-110">次のフラグが定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="842de-110">The following flags are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-<span data-ttu-id="4ec9a-111">定数</span><span class="sxs-lookup"><span data-stu-id="4ec9a-111">Constant</span></span>  |<span data-ttu-id="4ec9a-112">[値]</span><span class="sxs-lookup"><span data-stu-id="4ec9a-112">Value</span></span>  |<span data-ttu-id="4ec9a-113">説明</span><span class="sxs-lookup"><span data-stu-id="4ec9a-113">Description</span></span>  |
+<span data-ttu-id="842de-111">定数</span><span class="sxs-lookup"><span data-stu-id="842de-111">Constant</span></span>  |<span data-ttu-id="842de-112">値</span><span class="sxs-lookup"><span data-stu-id="842de-112">Value</span></span>  |<span data-ttu-id="842de-113">説明</span><span class="sxs-lookup"><span data-stu-id="842de-113">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="4ec9a-114">0x10</span><span class="sxs-lookup"><span data-stu-id="4ec9a-114">0x10</span></span> | <span data-ttu-id="4ec9a-115">列挙型クラス自体で定義されているメソッドを制限します。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-115">Limit the enumeration to methods that are defined in the class itself.</span></span> |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="4ec9a-116">0x20</span><span class="sxs-lookup"><span data-stu-id="4ec9a-116">0x20</span></span> | <span data-ttu-id="4ec9a-117">基本クラスから継承されたプロパティ、列挙型を制限します。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-117">Limit the enumeration to properties that are inherited from base classes.</span></span> |
+| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="842de-114">0x10</span><span class="sxs-lookup"><span data-stu-id="842de-114">0x10</span></span> | <span data-ttu-id="842de-115">クラス自体で定義されているメソッドを列挙型を制限します。</span><span class="sxs-lookup"><span data-stu-id="842de-115">Limit the enumeration to methods that are defined in the class itself.</span></span> |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="842de-116">0x20</span><span class="sxs-lookup"><span data-stu-id="842de-116">0x20</span></span> | <span data-ttu-id="842de-117">基底クラスから継承されるプロパティを列挙型を制限します。</span><span class="sxs-lookup"><span data-stu-id="842de-117">Limit the enumeration to properties that are inherited from base classes.</span></span> |
 
-## <a name="return-value"></a><span data-ttu-id="4ec9a-118">戻り値</span><span class="sxs-lookup"><span data-stu-id="4ec9a-118">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="842de-118">戻り値</span><span class="sxs-lookup"><span data-stu-id="842de-118">Return value</span></span>
 
-<span data-ttu-id="4ec9a-119">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-119">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="842de-119">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="842de-119">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="4ec9a-120">定数</span><span class="sxs-lookup"><span data-stu-id="4ec9a-120">Constant</span></span>  |<span data-ttu-id="4ec9a-121">[値]</span><span class="sxs-lookup"><span data-stu-id="4ec9a-121">Value</span></span>  |<span data-ttu-id="4ec9a-122">説明</span><span class="sxs-lookup"><span data-stu-id="4ec9a-122">Description</span></span>  |
+|<span data-ttu-id="842de-120">定数</span><span class="sxs-lookup"><span data-stu-id="842de-120">Constant</span></span>  |<span data-ttu-id="842de-121">値</span><span class="sxs-lookup"><span data-stu-id="842de-121">Value</span></span>  |<span data-ttu-id="842de-122">説明</span><span class="sxs-lookup"><span data-stu-id="842de-122">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="4ec9a-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="4ec9a-123">0x80041008</span></span> | <span data-ttu-id="4ec9a-124">`lEnnumFlags` ゼロ以外は、指定したフラグのいずれか。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-124">`lEnnumFlags` is non-zero and is not one of the specified flags.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="4ec9a-125">0</span><span class="sxs-lookup"><span data-stu-id="4ec9a-125">0</span></span> | <span data-ttu-id="4ec9a-126">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-126">The function call was successful.</span></span>  |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="842de-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="842de-123">0x80041008</span></span> | <span data-ttu-id="842de-124">`lEnnumFlags` 0 以外の場合し、指定したフラグではありません。</span><span class="sxs-lookup"><span data-stu-id="842de-124">`lEnnumFlags` is non-zero and is not one of the specified flags.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="842de-125">0</span><span class="sxs-lookup"><span data-stu-id="842de-125">0</span></span> | <span data-ttu-id="842de-126">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="842de-126">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="4ec9a-127">コメント</span><span class="sxs-lookup"><span data-stu-id="4ec9a-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="842de-127">Remarks</span><span class="sxs-lookup"><span data-stu-id="842de-127">Remarks</span></span>
 
-<span data-ttu-id="4ec9a-128">この関数への呼び出しをラップする、 [IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx)メソッドです。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-128">This function wraps a call to the [IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="842de-128">この関数の呼び出しをラップする、 [IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration)メソッド。</span><span class="sxs-lookup"><span data-stu-id="842de-128">This function wraps a call to the [IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) method.</span></span>
 
-<span data-ttu-id="4ec9a-129">このメソッドの呼び出しは、現在のオブジェクトがクラス定義である場合にのみサポートされます。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-129">This method call is only supported if the current object is a class definition.</span></span> <span data-ttu-id="4ec9a-130">メソッドの操作からは使用できない[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)インスタンスを指すポインターです。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-130">Method manipulation is not available from [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) pointers that point to instances.</span></span> <span data-ttu-id="4ec9a-131">メソッドが列挙される順序は、特定のインスタンスのバリアントすることは保証[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)です。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-131">The order in which methods are enumerated is guaranteed to be invariant for a given instance of [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx).</span></span>
+<span data-ttu-id="842de-129">このメソッドの呼び出しは、現在のオブジェクトがクラス定義である場合にのみサポートされます。</span><span class="sxs-lookup"><span data-stu-id="842de-129">This method call is only supported if the current object is a class definition.</span></span> <span data-ttu-id="842de-130">メソッドの操作をからご利用いただけません[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンスを指すポインター。</span><span class="sxs-lookup"><span data-stu-id="842de-130">Method manipulation is not available from [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to instances.</span></span> <span data-ttu-id="842de-131">特定のインスタンスのバリアントにメソッドが列挙される順序は保証[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)します。</span><span class="sxs-lookup"><span data-stu-id="842de-131">The order in which methods are enumerated is guaranteed to be invariant for a given instance of [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="4ec9a-132">要件</span><span class="sxs-lookup"><span data-stu-id="4ec9a-132">Requirements</span></span>  
- <span data-ttu-id="4ec9a-133">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="4ec9a-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="842de-132">要件</span><span class="sxs-lookup"><span data-stu-id="842de-132">Requirements</span></span>  
+ <span data-ttu-id="842de-133">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="842de-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4ec9a-134">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="4ec9a-134">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="842de-134">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="842de-134">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="4ec9a-135">**.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="4ec9a-135">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="842de-135">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="842de-135">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ec9a-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="4ec9a-136">See also</span></span>  
-[<span data-ttu-id="4ec9a-137">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="4ec9a-137">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="842de-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="842de-136">See also</span></span>  
+[<span data-ttu-id="842de-137">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="842de-137">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
