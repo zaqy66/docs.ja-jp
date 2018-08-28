@@ -7,14 +7,14 @@ ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc25ff282772cc82b8ebe5d59e729a6a48afa8f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656033"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999588"
 ---
-# <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic コンパイラ オプションがアルファベット順に表示
-Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合開発環境 (IDE) からプログラムをコンパイルする代替手段として提供されます。 アルファベット順に並べ替え、Visual Basic のコマンド ライン コンパイラ オプションの一覧を次に示します。  
+# <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic コンパイラ オプションのアルファベット順の一覧
+Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合開発環境 (IDE) からプログラムをコンパイルする代替手段として提供されます。 次にアルファベット順に並べ替える Visual Basic のコマンド ライン コンパイラ オプションの一覧を示します。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -34,16 +34,16 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|アセンブリに完全に署名するか、部分的に署名するかを指定します。|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|入力が同一である場合、バイナリ コンテンツがコンパイル全体で同一のアセンブリをコンパイラに出力させます。|
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|ドキュメント コメントを XML ファイルに出力します。|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic コンパイラで内部コンパイラ エラーを報告する方法を指定します。|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic コンパイラが内部コンパイラ エラーを報告する方法を指定します。|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|出力ファイルでセクションをアラインするサイズを指定します。|  
 |[-help](../../../visual-basic/reference/command-line-compiler/help.md)|コンパイラ オプションを出力します。 このコマンドは、`-?` オプションの指定と同じです。 コンパイルは発生しません。|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|特定の実行可能ファイルで高エントロピ ASLR (Address Space Layout Randomization) をサポートするかどうかを示します。|  
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|指定したアセンブリから名前空間をインポートします。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|アセンブリに厳密な名前を付けるキー ペアのキー コンテナー名を指定します。|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|言語バージョンを指定します: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|言語バージョンを指定します。 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
 |[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|によって参照されるアセンブリの場所を指定します、 [-参照](../../../visual-basic/reference/command-line-compiler/reference.md)オプション。|  
-|[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|マネージ リソースへのリンクを作成します。|  
+|[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|マネージド リソースへのリンクを作成します。|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|含むクラスを指定します、`Sub Main`起動時に使用するプロシージャ。|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|モジュールが一部となるアセンブリの名前を指定します。|  
 |`-modulename:<string>`|ソース モジュールの名前を指定します。|  
@@ -65,10 +65,10 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|コンパイラで構文関連のエラーと警告のコードが表示されないようにします。|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|コンパイルするソース ファイルをサブディレクトリで検索します。|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|アセンブリからメタデータをインポートします。|  
-|[/refonly](refonly-compiler-option.md)|参照アセンブリのみを出力します。|
+|[/refonly](refonly-compiler-option.md)|参照アセンブリだけを出力します。|
 |[/refout](refout-compiler-option.md)|参照アセンブリの出力パスを指定します。|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|整数オーバーフローのチェックを無効にします。|  
-|[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|マネージ リソースをアセンブリに埋め込みます。|  
+|[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|マネージド リソースをアセンブリに埋め込みます。|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|すべての型宣言に対して名前空間を指定します。|  
 |`-ruleset:<file>`|特定の診断を無効にするルールセット ファイルを指定します。|  
 |[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|Mscorlib.dll および Microsoft.VisualBasic.dll の位置を指定します。|  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 7bf9138721ecee63c65c2e39922aee96b1dfaa41
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ec4849dda0f28ad1f0e0ebb2c493a33005107db4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960953"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003113"
 ---
 # <a name="using-statement-c-reference"></a>using ステートメント (C# リファレンス)
 <xref:System.IDisposable> オブジェクトの正しい使用を保証する簡易構文を提供します。  
@@ -44,11 +44,12 @@ ms.locfileid: "37960953"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
- [using ディレクティブ](../../../csharp/language-reference/keywords/using-directive.md)  
- [ガベージ コレクション](../../../standard/garbage-collection/index.md)  
- [IDisposable を実装するオブジェクトの使用](../../../standard/garbage-collection/using-objects.md)  
- [IDisposable インターフェイス](xref:System.IDisposable)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
+- [using ディレクティブ](../../../csharp/language-reference/keywords/using-directive.md)  
+- [ガベージ コレクション](../../../standard/garbage-collection/index.md)  
+- [IDisposable を実装するオブジェクトの使用](../../../standard/garbage-collection/using-objects.md)  
+- [IDisposable インターフェイス](xref:System.IDisposable)

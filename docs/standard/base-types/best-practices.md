@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bb1d9bdbd0874875939010ea5503fe791a2cd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579835"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925725"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET の正規表現に関するベスト プラクティス
 <a name="top"></a> .NET の正規表現エンジンは、リテラル テキストの比較と照合ではなくパターン一致に基づいてテキストを処理する、完全な機能を備えた強力なツールです。 ほとんどの場合は、すばやく効率的にパターン一致が実行されますが、 処理が非常に遅く見えることもあります。 極端なケースでは、比較的小さな入力の処理に何時間も何日もかかり、応答しなくなったように見えることさえあります。  
@@ -190,7 +190,7 @@ ms.locfileid: "33579835"
   
  ワード境界は単語文字と同じではなく、単語文字のサブセットでもないため、正規表現エンジンが単語文字の照合中にワード境界を越える可能性はありません。 したがって、この正規表現では、バックトラッキングが照合の全体的な成功に寄与することはありません。バックトラッキングを使用すると、正規表現エンジンが単語文字の照合に成功するたびに状態を保存しなければならなくなるため、パフォーマンスを低下させるだけです。  
   
- バックトラッキングが不要であることがわかった場合は、`(?>``subexpression``)` 言語要素を使用して無効にすることができます。 次の例では、2 つの正規表現を使用して入力文字列を解析しています。 1 つはバックトラッキングに依存する `\b\p{Lu}\w*\b`、 もう 1 つはバックトラッキングを無効にする `\b\p{Lu}(?>\w*)\b` です。 出力を見るとわかるように、どちらも結果は同じになります。  
+ バックトラッキングが不要であることがわかった場合は、`(?>subexpression)` 言語要素を使用して無効にすることができます。 次の例では、2 つの正規表現を使用して入力文字列を解析しています。 1 つはバックトラッキングに依存する `\b\p{Lu}\w*\b`、 もう 1 つはバックトラッキングを無効にする `\b\p{Lu}(?>\w*)\b` です。 出力を見るとわかるように、どちらも結果は同じになります。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]  
@@ -272,20 +272,20 @@ ms.locfileid: "33579835"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group1.cs#8)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group1.vb#8)]  
   
- 量指定子を適用するためだけに部分式を使用していて、キャプチャされたテキストは特に必要ないという場合は、グループ キャプチャを無効にする必要があります。 たとえば、`(?:``subexpression``)` 言語要素をグループに適用すると、そのグループでは、一致した部分文字列がキャプチャされなくなります。 次の例では、前の例の正規表現パターンが `\b(?:\w+[;,]?\s?)+[.?!]` に変更されています。 出力を見るとわかるように、これにより、<xref:System.Text.RegularExpressions.GroupCollection> コレクションと <xref:System.Text.RegularExpressions.CaptureCollection> コレクションが設定されなくなります。  
+ 量指定子を適用するためだけに部分式を使用していて、キャプチャされたテキストは特に必要ないという場合は、グループ キャプチャを無効にする必要があります。 たとえば、`(?:subexpression)` 言語要素をグループに適用すると、そのグループでは、一致した部分文字列がキャプチャされなくなります。 次の例では、前の例の正規表現パターンが `\b(?:\w+[;,]?\s?)+[.?!]` に変更されています。 出力を見るとわかるように、これにより、<xref:System.Text.RegularExpressions.GroupCollection> コレクションと <xref:System.Text.RegularExpressions.CaptureCollection> コレクションが設定されなくなります。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group2.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group2.vb#9)]  
   
  キャプチャを無効にするには次のような方法があります。  
   
--   `(?:``subexpression``)` 言語要素を使用します。 この要素をグループに適用すると、そのグループでは、一致した部分文字列がキャプチャされなくなります。 入れ子になったグループによる部分文字列のキャプチャは無効になりません。  
+-   `(?:subexpression)` 言語要素を使用します。 この要素をグループに適用すると、そのグループでは、一致した部分文字列がキャプチャされなくなります。 入れ子になったグループによる部分文字列のキャプチャは無効になりません。  
   
--   <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> オプションを使用します。 これにより、正規表現パターン内の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 このオプションを使用した場合は、`(?<``name``>``subexpression``)` 言語要素を使用して定義した名前付きグループに一致する部分文字列のみがキャプチャされます。 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> フラグは、`options` クラス コンストラクターの <xref:System.Text.RegularExpressions.Regex> パラメーターか、`options` の静的な一致メソッドの <xref:System.Text.RegularExpressions.Regex> パラメーターに渡すことができます。  
+-   <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> オプションを使用します。 これにより、正規表現パターン内の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 このオプションを使用した場合は、`(?<name>subexpression)` 言語要素を使用して定義した名前付きグループに一致する部分文字列のみがキャプチャされます。 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> フラグは、`options` クラス コンストラクターの <xref:System.Text.RegularExpressions.Regex> パラメーターか、`options` の静的な一致メソッドの <xref:System.Text.RegularExpressions.Regex> パラメーターに渡すことができます。  
   
 -   `n` 言語要素の `(?imnsx)` オプションを使用します。 これにより、正規表現パターンでこの要素が出現する位置以降の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 パターンの末尾に到達するか、`(-n)` オプションによって名前のないキャプチャ (暗黙的なキャプチャ) が有効になるまで、キャプチャは無効のままです。 詳しくは、「[その他の構成体](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)」を参照してください。  
   
--   `n` 言語要素の `(?imnsx:``subexpression``)` オプションを使用します。 これにより、`subexpression` 内の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 入れ子になった名前のない (暗黙的な) キャプチャ グループによるキャプチャも無効になります。  
+-   `n` 言語要素の `(?imnsx:subexpression)` オプションを使用します。 これにより、`subexpression` 内の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 入れ子になった名前のない (暗黙的な) キャプチャ グループによるキャプチャも無効になります。  
   
  [ページのトップへ](#top)  
   

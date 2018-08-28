@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc1d3ffc34cd74d68bf10cb677b68f0a75bb7c67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444231"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998904"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 列挙型
 共通言語ランタイム (CLR: Common Language Runtime) の起動動作を示す値を含みます。 既定では、ガベージ コレクションは非同時実行で、基底クラス ライブラリだけがドメイン中立領域に読み込まれます。  
@@ -57,7 +57,7 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|同時実行ガベージ コレクションを使用することを指定します。 呼び出し元がサーバー ビルドと同時実行ガベージ コレクションをシングル プロセッサ コンピューター上で要求した場合は、代わりにワークステーション ビルドと非同時実行ガベージ コレクションが実行されます。 **注:** WOW64 で実行されているアプリケーションでは、同時実行ガベージ コレクションはサポートされていない x86、Intel Itanium アーキテクチャ (以前の ia-64) を実装する 64 ビット システム上のエミュレーターです。 64 ビットの Windows システムで WOW64 の使用に関する詳細については、次を参照してください。[を実行している 32 ビット アプリケーション](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx)です。|  
+|`STARTUP_CONCURRENT_GC`|同時実行ガベージ コレクションを使用することを指定します。 呼び出し元がサーバー ビルドと同時実行ガベージ コレクションをシングル プロセッサ コンピューター上で要求した場合は、代わりにワークステーション ビルドと非同時実行ガベージ コレクションが実行されます。 **注:** WOW64 で実行されているアプリケーションでは、同時実行ガベージ コレクションはサポートされていない x86 (以前の ia-64)、Intel Itanium アーキテクチャを実装する 64 ビット システム上のエミュレーター。 64 ビット Windows システム上で WOW64 の使用に関する詳細については、次を参照してください。[を実行している 32 ビット アプリケーション](/windows/desktop/WinProg64/running-32-bit-applications)します。|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|ローダーの最適化を行う必要があることを指定します。|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|どのアセンブリもドメイン中立として読み込まないことを指定します。|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|すべてのアセンブリをドメイン中立として読み込むことを指定します。|  
@@ -69,19 +69,19 @@ typedef enum {
 |`STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`|ホスト インターフェイスの混合を許可しないことを指定します。|  
 |`STARTUP_LEGACY_IMPERSONATION`|既定として偽装が非同期ポイント間をフローしないように指定します。|  
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|スレッドが実行を開始するときにスレッド スタック全体をコミットしないことを指定します。|  
-|`STARTUP_ALWAYSFLOW_IMPERSONATION`|マネージ偽装およびプラットフォーム呼び出しによって実行された偽装が非同期ポイント間をフローするように指定します。 既定では、マネージ偽装だけが非同期ポイント間をフローします。|  
-|`STARTUP_TRIM_GC_COMMIT`|システム メモリが少ないときに、ガベージ コレクションによるコミットされた領域の使用量を抑えることを指定します。 参照してください`gcTrimCommitOnLowMemory`で[共有 Web ホストの最適化](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)です。|  
-|`STARTUP_ETW`|共通言語ランタイム イベントで Windows イベント トレーシング (ETW) が有効になっていることを指定します。 Windows Vista 以降では、イベントのトレースは常に有効、ため、このフラグが影響を与えません。 参照してください[.NET Framework のログ記録を制御する](../../../../docs/framework/performance/controlling-logging.md)です。|  
-|`STARTUP_ARM`|アプリケーション ドメインのリソース監視が有効になっていることを指定します。 参照してください、<xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>プロパティおよび[ \<appDomainResourceMonitoring > 要素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)です。|  
+|`STARTUP_ALWAYSFLOW_IMPERSONATION`|マネージド偽装およびプラットフォーム呼び出しによって実行された偽装が非同期ポイント間をフローするように指定します。 既定では、マネージド偽装だけが非同期ポイント間をフローします。|  
+|`STARTUP_TRIM_GC_COMMIT`|システム メモリが少ないときに、ガベージ コレクションによるコミットされた領域の使用量を抑えることを指定します。 参照してください`gcTrimCommitOnLowMemory`で[共有 Web ホストの最適化](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)します。|  
+|`STARTUP_ETW`|共通言語ランタイム イベントで Windows イベント トレーシング (ETW) が有効になっていることを指定します。 Windows Vista 以降、イベントのトレースは常に有効、ため、このフラグは影響を与えません。 参照してください[.NET Framework のログ記録を制御する](../../../../docs/framework/performance/controlling-logging.md)します。|  
+|`STARTUP_ARM`|アプリケーション ドメインのリソース監視が有効になっていることを指定します。 参照してください、<xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>プロパティと[ \<appDomainResourceMonitoring > 要素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)します。|  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

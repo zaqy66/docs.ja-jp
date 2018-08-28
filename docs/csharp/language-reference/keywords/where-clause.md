@@ -7,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: bc040e17f5c612b9fc43a9ef24fb6f15f0942b8e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 8607c79a8b1e9a9fd999e4f5b77ecfac786161b3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243995"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003152"
 ---
 # <a name="where-clause-c-reference"></a>where 句 (C# リファレンス)
 `where` 句をクエリ式で使用して、クエリ式で返されるデータ ソースの要素を指定します。 ブール条件 (*述語*) を (範囲変数で参照される) 各ソース要素に適用し、指定した条件に該当するものを返します。 単一のクエリ式に複数の `where` 句を含めることができ、単一の句に複数の述語部分式を含めることができます。  
@@ -39,10 +39,11 @@ ms.locfileid: "39243995"
   
  コンパイル時に、`where` キーワードは <xref:System.Linq.Enumerable.Where%2A> 標準クエリ演算子メソッドの呼び出しに変換されます。  
   
-## <a name="see-also"></a>参照  
- [クエリ キーワード (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [from 句](../../../csharp/language-reference/keywords/from-clause.md)  
- [select 句](../../../csharp/language-reference/keywords/select-clause.md)  
- [データのフィルター処理](../../programming-guide/concepts/linq/filtering-data.md)  
- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>参照
+
+- [クエリ キーワード (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [from 句](../../../csharp/language-reference/keywords/from-clause.md)  
+- [select 句](../../../csharp/language-reference/keywords/select-clause.md)  
+- [データのフィルター処理](../../programming-guide/concepts/linq/filtering-data.md)  
+- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

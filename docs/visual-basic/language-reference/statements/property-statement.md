@@ -1,5 +1,5 @@
 ---
-title: Property Statement
+title: Property ステートメント (Visual Basic)
 ms.date: 05/12/2018
 f1_keywords:
 - vb.PropertySet
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 3f3ced3f0c441518594820f75243c71fb0c3babd
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 21ca15d6a6939d884c7e6abedc1f7919be079edd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235991"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999526"
 ---
 # <a name="property-statement"></a>Property Statement
-プロパティ、および格納およびプロパティの値を取得するためのプロパティ プロシージャの名前を宣言します。  
+プロパティ、および格納し、プロパティの値を取得するために使用するプロパティ プロシージャの名前を宣言します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +44,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `attributelist`  
   
-     任意。 このプロパティに適用される属性の一覧または`Get`または`Set`プロシージャです。 参照してください[属性一覧](../../../visual-basic/language-reference/statements/attribute-list.md)です。  
+     任意。 このプロパティに適用される属性の一覧または`Get`または`Set`プロシージャ。 参照してください[属性一覧](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
   
 -   `Default`  
   
-     任意。 このプロパティは、既定のプロパティをクラスまたは構造体が定義されていることを指定します。 既定のプロパティのパラメーターを受け入れる必要がありますとに設定してプロパティ名を指定しなくても取得します。 としてプロパティを宣言する場合`Default`、使用することはできません`Private`プロパティまたはプロパティ プロシージャのいずれか。  
+     任意。 このプロパティは、クラスまたは構造体が定義されている既定のプロパティを指定します。 既定のプロパティのパラメーターを受け入れる必要がありますと設定し、取得できるプロパティの名前を指定せず。 としてプロパティを宣言する場合`Default`、使用することはできません`Private`プロパティまたはプロパティ プロシージャのいずれか。  
   
 -   `accessmodifier`  
   
-     省略可能な`Property`ステートメントおよび最大で 1 つの`Get`と`Set`ステートメントです。 次のいずれかの値を指定します。  
+     省略可能な`Property`ステートメントの 1 つだけで、`Get`と`Set`ステートメント。 次のいずれかの値を指定します。  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -64,9 +64,9 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     - [保護されたフレンド](../../language-reference/modifiers/protected-friend.md) 
 
-    - [保護されたプライベート](../../language-reference/modifiers/private-protected.md)
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     参照してください[Visual Basic でのレベルのアクセス](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)です。  
+     参照してください[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
   
 -   `propertymodifiers`  
   
@@ -88,39 +88,39 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Shared`  
   
-     任意。 参照してください[共有](../../../visual-basic/language-reference/modifiers/shared.md)です。  
+     任意。 参照してください[共有](../../../visual-basic/language-reference/modifiers/shared.md)します。  
   
 -   `Shadows`  
   
-     任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)です。  
+     任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
   
 -   `ReadOnly`  
   
-     任意。 参照してください[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)です。  
+     任意。 参照してください[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。  
   
 -   `WriteOnly`  
   
-     任意。 参照してください[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)です。  
+     任意。 参照してください[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)します。  
   
 -   `Iterator`  
   
-     任意。 参照してください[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)です。  
+     任意。 参照してください[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)します。  
   
 -   `name`  
   
-     必須。 プロパティ名。 参照してください[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)です。  
+     必須。 プロパティ名。 参照してください[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
   
 -   `parameterlist`  
   
-     任意。 このプロパティのパラメーターとの考えられる追加のパラメーターを表すローカル変数名の一覧、`Set`プロシージャです。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)です。  
+     任意。 このプロパティのパラメーターとの可能な追加パラメーターを表すローカル変数名の一覧、`Set`プロシージャ。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。  
   
 -   `returntype`  
   
-     場合は必須`Option``Strict`は`On`します。 このプロパティによって返される値のデータ型。  
+     場合に、必ず`Option Strict`は`On`します。 このプロパティによって返される値のデータ型。  
   
 -   `Implements`  
   
-     任意。 このプロパティには、このプロパティの包含クラスまたは構造体によって実装されるインターフェイスで定義されている 1 つずつ、1 つまたは複数のプロパティが実装されていることを示します。 参照してください[ステートメントを実装します](../../../visual-basic/language-reference/statements/implements-statement.md)です。  
+     任意。 このプロパティには、このプロパティの包含クラスまたは構造体によって実装されるインターフェイスで定義されているそれぞれの 1 つまたは複数のプロパティが実装していることを示します。 参照してください[ステートメントを実装](../../../visual-basic/language-reference/statements/implements-statement.md)します。  
   
 -   `implementslist`  
   
@@ -134,8 +134,8 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     |パーツ|説明|  
     |---|---|  
-    |`interface`|必須。 このプロパティによって実装されるインターフェイスの名前には、クラスまたは構造体を含むのです。|  
-    |`definedname`|必須。 名前のプロパティを定義する`interface`です。|  
+    |`interface`|必須。 このプロパティによって実装されるインターフェイスの名前を含むクラスまたは構造体。|  
+    |`definedname`|必須。 使用されるプロパティが定義されている名前`interface`します。|  
   
 -   `Get`  
   
@@ -143,11 +143,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `statements`  
   
-     任意。 内で実行するステートメントのブロック、`Get`または`Set`プロシージャです。  
+     任意。 内で実行するステートメントのブロック、`Get`または`Set`プロシージャ。  
   
 -   `End Get`  
   
-     終了、`Get`プロパティ プロシージャです。  
+     終了、`Get`プロパティ プロシージャ。  
   
 -   `Set`  
   
@@ -155,48 +155,48 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `End Set`  
   
-     終了、`Set`プロパティ プロシージャです。  
+     終了、`Set`プロパティ プロシージャ。  
   
 -   `End Property`  
   
      このプロパティの定義を終了します。  
   
-## <a name="remarks"></a>コメント  
- `Property`ステートメントには、プロパティの宣言が導入されています。 プロパティを持つことができます、 `Get` (読み取り専用)、プロシージャ、`Set`プロシージャ (書き込み専用)、または両方 (読み取り/書き込み)。 省略することができます、`Get`と`Set`自動実装プロパティを使用する場合、そのプロシージャです。 詳細については、「[自動実装プロパティ](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)」を参照してください。  
+## <a name="remarks"></a>Remarks  
+ `Property`ステートメントには、プロパティの宣言が導入されています。 プロパティを持つことができます、 `Get` (読み取り専用) の手順を`Set`プロシージャ (書き込み専用)、または両方 (読み取り/書き込み)。 省略することができます、`Get`と`Set`プロシージャの自動実装プロパティを使用する場合。 詳細については、「[自動実装プロパティ](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)」を参照してください。  
   
  使用することができます`Property`クラス レベルでのみです。 つまり、*宣言コンテキスト*プロパティは、クラス、構造体、モジュール、またはインターフェイスである必要があり、ソース ファイル、名前空間、プロシージャ、またはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- 既定では、プロパティは、パブリック アクセスを使用します。 アクセス修飾子を使って、このプロパティのアクセス レベルを調整することができます、`Property`ステートメント、および、必要に応じて調整できますより制限の厳しいアクセス レベルは、プロパティ プロシージャのいずれか。  
+ 既定では、プロパティは、パブリック アクセスを使用します。 アクセス修飾子を使ってプロパティのアクセス レベルを調整することができます、`Property`とステートメントでは、必要に応じて調整できますより制限の厳しいアクセス レベルは、プロパティ プロシージャのいずれか。  
   
- Visual Basic のパラメーターを渡す、`Set`プロパティの割り当て時にプロシージャです。 パラメーターを指定しない場合`Set`、統合開発環境 (IDE) という名前の暗黙のパラメーターを使用して`value`です。 このパラメーターは、プロパティに割り当てられる値を保持します。 通常プライベート ローカル変数にこの値を格納して返すたびに、`Get`プロシージャが呼び出されます。  
+ Visual Basic のパラメーターを渡す、`Set`プロパティ割り当て中にプロシージャ。 パラメーターを指定しない場合`Set`、統合開発環境 (IDE) という名前の暗黙のパラメーターを使用して`value`します。 このパラメーターは、プロパティに割り当てられる値を保持します。 通常プライベート ローカル変数にこの値を格納して返すたびに、`Get`プロシージャが呼び出されます。  
   
 ## <a name="rules"></a>ルール  
   
--   **混合アクセス レベル。** 必要に応じていずれかの異なるアクセス レベルを指定することができます、読み取り/書き込みプロパティを定義する場合、`Get`または`Set`プロシージャが、両方は使用できません。 これを行うと、プロシージャのアクセス レベルがプロパティのアクセス レベルよりも制限する必要があります。 プロパティが宣言されている場合など、 `Friend`、宣言することができます、`Set`プロシージャ`Private`、ではなく`Public`です。  
+-   **混合アクセス レベル。** 必要に応じていずれかの異なるアクセス レベルを指定することができます、読み取り/書き込みプロパティを定義する場合、`Get`または`Set`両方ではなく、プロシージャ。 これを行うと、プロシージャのアクセス レベル、プロパティのアクセス レベルよりもより制限の厳しい場合があります。 例では、プロパティが宣言されている場合、 `Friend`、宣言することができます、`Set`プロシージャ`Private`、なく`Public`します。  
   
      定義する場合、`ReadOnly`または`WriteOnly`プロパティ、1 つのプロパティ プロシージャ (`Get`または`Set`、それぞれ) すべてのプロパティを表します。 プロパティの 2 つのアクセス レベルを設定することがあるために、このような手順は、異なるアクセス レベルを宣言できません。  
   
--   **型を返します。** `Property`ステートメントが返す値のデータ型を宣言できます。 任意のデータ型または列挙型、構造体、クラス、またはインターフェイスの名前を指定することができます。  
+-   **型を返します。** `Property`ステートメントが返す値のデータ型を宣言できます。 任意のデータ型または列挙型、構造体、クラス、インターフェイスの名前を指定することができます。  
   
-     指定しない場合`returntype`、プロパティから返される`Object`です。  
+     指定しない場合`returntype`、プロパティを返します。`Object`します。  
   
--   **実装です。** このプロパティで使用する場合、`Implements`キーワードを含むクラスまたは構造体があります、`Implements`直後のステートメントの`Class`または`Structure`ステートメントです。 `Implements`ステートメントで指定された各インターフェイスを含める必要があります`implementslist`です。 ただし、インターフェイスを定義する名前、 `Property` (で`definedname`) すると、このプロパティの名前と同じである必要はありません (で`name`)。  
+-   **実装です。** このプロパティで使用する場合、`Implements`キーワードを含むクラスまたは構造体があります、`Implements`ステートメントの直後の`Class`または`Structure`ステートメント。 `Implements`ステートメントで指定された各インターフェイスを含める必要があります`implementslist`します。 ただし、インターフェイスを定義する名前、 `Property` (で`definedname`) すると、このプロパティの名前と同じである必要はありません (で`name`)。  
   
 ## <a name="behavior"></a>動作  
   
--   **プロパティ プロシージャから取得します。** ときに、`Get`または`Set`起動したステートメントに続くステートメントと、プロシージャ呼び出し元のコードに戻ると、実行が継続します。  
+-   **プロパティ プロシージャから取得します。** ときに、`Get`または`Set`を呼び出したステートメントに続くステートメントを使用して、プロシージャは、呼び出し元のコードに返す、実行が続行します。  
   
-     `Exit Property`と`Return`ステートメントでは、プロパティ プロシージャからすぐに終了します。 任意の数の`Exit Property`と`Return`ステートメントがどこにでも表示、プロシージャとを混在させること`Exit Property`と`Return`ステートメントです。  
+     `Exit Property`と`Return`ステートメントでは、プロパティ プロシージャからすぐに終了します。 任意の数の`Exit Property`と`Return`ステートメントは、手順では、どこでも表示でき、組み合わせることができます`Exit Property`と`Return`ステートメント。  
   
--   **値を返します。** 値を返す、`Get`プロシージャ、プロパティ名に値を割り当てるか、含めることで、`Return`ステートメントです。 次の例では、戻り値を割り当てて、プロパティ名に`quoteForTheDay`しを使用して、`Exit Property`を返すステートメントです。  
+-   **値を返します。** 値を返す、`Get`プロシージャ、プロパティ名に値を割り当てるか、含めることで、`Return`ステートメント。 次の例では、プロパティ名に戻り値を割り当てて`quoteForTheDay`しを使用して、`Exit Property`ステートメントに戻ります。  
   
      [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
   
      [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_2.vb)]  
   
-     使用する場合`Exit Property`、値を割り当てることがなく`name`、`Get`プロシージャは、プロパティのデータ型の既定値を返します。  
+     使用する場合`Exit Property`値を割り当てることがなく`name`、`Get`プロパティのデータ型の既定値を返します。  
   
-     `Return`同時ステートメントは、代入、`Get`プロシージャを返す値し、手順を終了します。 この例を次に示します。  
+     `Return`ステートメントと同時に割り当てます、`Get`プロシージャを返す値し、手順を終了します。 次の例に示します。  
   
      [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
   

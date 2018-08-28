@@ -1,5 +1,5 @@
 ---
-title: ユーザー定義型
+title: ユーザー定義データ型 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - UserDefined
@@ -23,42 +23,42 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 07f04fb111863ca18d4966a7f0f967f11719aeec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1dac93145b6e11a0d149f03b43e1e0b28b770925
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590676"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003173"
 ---
 # <a name="user-defined-data-type"></a>ユーザー定義型
-定義する形式でデータを保持します。 `Structure`ステートメント形式を定義します。  
+定義する形式でデータを保持します。 `Structure`ステートメントの形式を定義します。  
   
- 以前のバージョンの Visual Basic では、ユーザー定義型 (UDT) をサポートします。 現在のバージョンを展開する UDT、*構造*です。 構造体は、1 つ以上の連結*メンバー*さまざまなデータ型。 Visual Basic は、そのメンバーを個別にもアクセスできますが、1 つの単位として構造体を扱います。  
+ 以前のバージョンの Visual Basic では、ユーザー定義型 (UDT) をサポートします。 現在のバージョンの展開に UDT を*構造*します。 構造体は 1 つまたは複数の連結*メンバー*さまざまなデータ型。 Visual Basic では、個別にそのメンバーをアクセスすることもできます。 ただし、1 つの単位として構造体が扱われます。  
   
-## <a name="remarks"></a>コメント  
- 定義して、さまざまなデータ型を 1 つの単位に結合する必要がある場合、またはニーズに対応基本データ型のいずれも、構造体のデータ型を使用します。  
+## <a name="remarks"></a>Remarks  
+ 定義し、構造体のデータ型を使用して、1 つの単位にさまざまなデータ型を結合する必要がある場合、または基本データ型のいずれもニーズに対応します。  
   
  構造体のデータ型の既定値は、各メンバーの既定値の組み合わせで構成されます。  
   
 ## <a name="declaration-format"></a>宣言の形式  
- 構造体の宣言が始まり、 [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)で終わると、`End``Structure`ステートメントです。 `Structure`ステートメントは、構造体を定義するデータ型の識別子でもある構造体の名前を提供します。 コードの他の部分では、この識別子を使用して、変数、パラメーター、および関数の戻り値をこの構造体のデータ型の値を宣言します。  
+ 構造体の宣言が始まり、 [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)で終わると、`End Structure`ステートメント。 `Structure`ステートメントは、これは、構造体を定義するデータ型の識別子でも構造体の名前を提供します。 コードの他の部分では、変数、パラメーター、および関数は、この構造体のデータ型の値を返すを宣言するのに、この識別子を使用できます。  
   
- 宣言の間、`Structure`と`End``Structure`ステートメントは、構造体のメンバーを定義します。  
+ 宣言、`Structure`と`End Structure`ステートメントでは、構造体のメンバーを定義します。  
   
 ## <a name="member-access-levels"></a>メンバーのアクセス レベル  
- 使用してすべてのメンバーを宣言する必要があります、 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)またはアクセス レベルをなどを指定するステートメント[パブリック](../../../visual-basic/language-reference/modifiers/public.md)、[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)、または[プライベート](../../../visual-basic/language-reference/modifiers/private.md). 使用する場合、`Dim`ステートメントでは、パブリックにアクセス レベルの既定値です。  
+ 使用してすべてのメンバーを宣言する必要があります、 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)またはなど、アクセス レベルを指定するステートメント[パブリック](../../../visual-basic/language-reference/modifiers/public.md)、[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)、または[プライベート](../../../visual-basic/language-reference/modifiers/private.md). 使用する場合、`Dim`ステートメントでは、パブリックにアクセス レベルの既定値。  
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
 -   **メモリ使用量。**  他のすべての複合データ型と同様に、構造体の総メモリ使用量を計算する場合、各メンバーのストレージ割り当ての公称サイズを単に合計しただけでは安全ではありません。 さらに、メモリ内に格納される順序が宣言の順序と同じであると仮定するのも安全ではありません。 構造体のストレージ レイアウトを制御する必要がある場合は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を `Structure` ステートメントに適用します。  
   
--   **相互運用の考慮事項。** .NET Framework 用に作成されていないコンポーネントとやり取りする場合は、たとえばオートメーションまたは COM オブジェクト、他の環境でのユーザー定義の型が Visual Basic と互換性がないことに注意してくださいには、型が構造化します。  
+-   **相互運用の考慮事項。** .NET Framework 用に作成されていないコンポーネントをやり取りする場合などのオートメーションまたは COM オブジェクト、他の環境でのユーザー定義型の Visual Basic と互換性がないことに注意してくださいには、型が構造体します。  
   
--   **拡大します。** どの構造データ型に/からの自動変換はありません。 構造体を使用して、変換演算子を定義することができます、 [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)、するには、各変換演算子を宣言して`Widening`または`Narrowing`です。  
+-   **拡大します。** 任意の構造のデータ型との間の自動変換はありません。 変換演算子を定義するには構造体を使用して、 [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)、するには、各変換演算子を宣言して`Widening`または`Narrowing`します。  
   
--   **型宣言文字。** 構造体のデータ型があるないリテラルの型文字または識別子の型文字です。  
+-   **型宣言文字。** リテラルの型文字または識別子の型文字は、構造体のデータ型はあるありません。  
   
--   **Framework の型。** .NET Framework では、対応する型はありません。 すべての構造は、.NET Framework クラスから継承<xref:System.ValueType?displayProperty=nameWithType>に対応する個々 の構造がありませんが、<xref:System.ValueType?displayProperty=nameWithType>です。  
+-   **フレームワークの型。** .NET Framework では、対応する型はありません。 すべての構造は、.NET Framework クラスから継承<xref:System.ValueType?displayProperty=nameWithType>に対応する個別の構造体がありませんが、<xref:System.ValueType?displayProperty=nameWithType>します。  
   
 ## <a name="example"></a>例  
  構造体の宣言の概要を次に示します。  
@@ -74,7 +74,7 @@ End Structure
 ## <a name="see-also"></a>関連項目  
  <xref:System.ValueType>  
  <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- [データの種類](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
  [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)  

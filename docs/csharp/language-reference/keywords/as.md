@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: cc5bb62d94e6999bf9174bd2221fb68e7c711588
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207971"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003074"
 ---
 # <a name="as-c-reference"></a>as (C# リファレンス)
 `as` 演算子を使用して、互換性のある参照型または [null 許容型](../../../csharp/programming-guide/nullable-types/index.md)間で特定の型変換を実行できます。 次のコードは一例を示しています。  
@@ -43,9 +43,9 @@ expression is type ? (type)expression : (type)null
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
- [is](../../../csharp/language-reference/keywords/is.md)  
- [?: 演算子](../../../csharp/language-reference/operators/conditional-operator.md)  
- [演算子のキーワード](../../../csharp/language-reference/keywords/operator-keywords.md)
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)  
+- [?: 演算子](../../../csharp/language-reference/operators/conditional-operator.md)  
+- [演算子のキーワード](../../../csharp/language-reference/keywords/operator-keywords.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569909"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931860"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正規表現での文字のエスケープ
 正規表現の円記号 (\\) は、次のいずれかを示します。  
@@ -38,7 +38,7 @@ ms.locfileid: "33569909"
   
 |文字または文字シーケンス|説明|  
 |---------------------------|-----------------|  
-|次の文字を除くすべての文字:<br /><br /> である必要があります。 $ ^ { [ ( &#124; ) * + ? \|。**文字またはシーケンス**の列にリストされているもの以外の文字は、正規表現で特別な意味を持ちません。それらは、その文字自体と一致します。<br /><br /> **文字またはシーケンス**の列に含まれる文字は、特殊な正規表現言語要素です。 正規表現でそれらの文字と一致するためには、エスケープするか、[正の文字グループ](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)に含める必要があります。 たとえば、正規表現の `\$\d+` または `[$]\d+`は「$1200」と一致します。|  
+|次の文字を除くすべての文字:<br /><br /> である必要があります。 $ ^ { [ ( &#124; ) * + ? \ |**文字またはシーケンス**の列にリストされているもの以外の文字は、正規表現で特別な意味を持ちません。それらは、その文字自体と一致します。<br /><br /> **文字またはシーケンス**の列に含まれる文字は、特殊な正規表現言語要素です。 正規表現でそれらの文字と一致するためには、エスケープするか、[正の文字グループ](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)に含める必要があります。 たとえば、正規表現の `\$\d+` または `[$]\d+`は「$1200」と一致します。|  
 |`\a`|ビープ音 (アラーム) 文字の `\u0007`。|  
 |`\b`|`[`*character_group*`]` 文字クラスでバックスペースの `\u0008` と一致します   (「[文字クラス](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)」を参照してください)。文字クラスの外部では、`\b` はワード境界と一致するアンカーです (「[アンカー](../../../docs/standard/base-types/anchors-in-regular-expressions.md)」を参照してください)。|  
 |`\t`|タブの `\u0009`。|  

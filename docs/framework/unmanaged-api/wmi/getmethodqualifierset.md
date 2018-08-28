@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459112"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001410"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 関数
 特定のメソッドの設定、修飾子を取得します。
@@ -45,38 +45,38 @@ HRESULT GetMethodQualifierSet (
 [in]このパラメーターは使用されません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)インスタンス。
+[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `wszMethod`  
-[in]メソッドの名前。 `wszMethod` 有効なをポイントする必要があります`LPCWSTR`です。 
+[in]メソッドの名前。 `wszMethod` 有効なをポイントする必要があります`LPCWSTR`します。 
 
 `ppQualSet`  
-[out]メソッドの修飾子にアクセスできるようにするインターフェイス ポインターを受け取ります。 `ppQualSet` として `null` を使用することはできません。 かどうかは、エラーが発生し、新しいオブジェクトが返されない、ポインターが指すように設定`null`です。 
+[out]メソッドの修飾子にアクセスできるインターフェイス ポインターを受け取ります。 `ppQualSet` として `null` を使用することはできません。 かどうかは、エラーが発生し、新しいオブジェクトは返されませんを指すポインターを設定`null`します。 
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。
+この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定されたメソッドが存在しません。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが`null`です。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが`null`します。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数への呼び出しをラップする、 [IWbemClassObject::GetMethodQualifierSet](https://msdn.microsoft.com/library/aa391446(v=vs.85).aspx)メソッドです。 
+この関数の呼び出しをラップする、 [IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset)メソッド。 
 
-この関数に対する呼び出しがサポートされるは、現在のオブジェクトが、CIM クラスの定義である場合にのみです。 メソッドの操作では使用できません[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) CIM インスタンスを指す ponters です。
+この関数の呼び出しがサポートされるは、現在のオブジェクトが CIM クラスの定義である場合にのみです。 メソッドの操作は利用できません[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters CIM インスタンスをポイントしています。
 
-各メソッドには、独自の修飾子があるため、 [IWbemQualifierSet ポインター](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)により、呼び出し元を追加、編集、またはこれらの修飾子を削除します。
+各メソッドには、独自の修飾子が可能性があるため、 [IWbemQualifierSet ポインター](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)により、呼び出し元を追加、編集、またはこれらの修飾子を削除します。
 
 ## <a name="requirements"></a>要件  
-**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目  
 [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

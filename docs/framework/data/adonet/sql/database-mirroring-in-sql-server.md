@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: cbb4b729475c8f77c204c3a9250d48d4b0cd3bc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 349cc10062cd73def0b8b3966a17ae9cbd0deab5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362271"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003087"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server のデータベース ミラーリング
 SQL Server のデータベース ミラーリング機能を使用すると、スタンバイ サーバー上に SQL Server データベースのコピー (ミラー) を保持できます。 ミラーリングは、常にデータのコピーが 2 つ別々に存在することを保証し、高可用性とデータの完全な冗長性をもたらします。 .NET Data Provider for SQL Server では、データベース ミラーリングが暗黙的にサポートされているため、SQL Server データベース用に構成されている場合は、開発者が操作を行ったり、コードを作成したりする必要はありません。 さらに、<xref:System.Data.SqlClient.SqlConnection> オブジェクトは、<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 内のフェールオーバー パートナー サーバーの名前を指定できる明示的な接続モードをサポートします。  
@@ -40,7 +40,7 @@ SQL Server のデータベース ミラーリング機能を使用すると、�
 ## <a name="retrieving-the-current-server-name"></a>現在のサーバー名の取得  
  フェールオーバーの場合には、<xref:System.Data.SqlClient.SqlConnection.DataSource%2A> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> プロパティを使って、現在の接続が実際に接続されているサーバーの名前を取得できます。 次のコード フラグメントでは、アクティブなサーバーの名前を取得します。この場合、接続変数は開いている <xref:System.Data.SqlClient.SqlConnection> を参照することを前提としています。  
   
- フェールオーバー イベントが発生し、接続は、ミラー サーバーに切り替えられます、**データソース**ミラー名を反映するようにプロパティを更新します。  
+ フェールオーバー イベントが発生して、接続が、ミラー サーバーに切り替えられたときに、 **DataSource**ミラー名を反映するようにプロパティを更新します。  
   
 ```vb  
 Dim activeServer As String = connection.DataSource  
@@ -51,17 +51,18 @@ string activeServer = connection.DataSource;
 ```  
   
 ## <a name="sqlclient-mirroring-behavior"></a>SqlClient ミラーリングの動作  
- クライアントは、常に現在のプリンシパル サーバーに接続しようとします。 接続に失敗した場合は、フェールオーバー パートナーに接続しようとします。 ミラー データベースが既にパートナー サーバー上でプリンシパル ロールに切り替わっている場合、接続は正常に行われ、新しいプリンシパルとミラー間のマッピングがクライアントに送信されて <xref:System.AppDomain> の呼び出しの有効期間の間キャッシュされます。 永続的ストレージに格納されていないとは別の以降の接続では使用できません、 **AppDomain**またはプロセス。 ただし、同じ内の後続の接続に使用できるは**AppDomain**です。 注別**AppDomain**またはプロセスが常に同じまたは別のコンピューターで実行されている接続のプールがあり、それらの接続はリセットされません。 その場合は、プライマリ データベースで障害が発生した場合は、各プロセスまたは**AppDomain**に 1 回は失敗し、プールは自動的に消去されます。  
+ クライアントは、常に現在のプリンシパル サーバーに接続しようとします。 接続に失敗した場合は、フェールオーバー パートナーに接続しようとします。 ミラー データベースが既にパートナー サーバー上でプリンシパル ロールに切り替わっている場合、接続は正常に行われ、新しいプリンシパルとミラー間のマッピングがクライアントに送信されて <xref:System.AppDomain> の呼び出しの有効期間の間キャッシュされます。 永続的ストレージに格納されていない、別の後続の接続をご利用いただけません**AppDomain**またはプロセス。 ただし、同じ内の後続の接続に使用できるは**AppDomain**します。 注別**AppDomain**または常に同じまたは別のコンピューターで実行されているプロセスが、接続のプールと、それらの接続はリセットされません。 その場合は、プライマリ データベースがダウンした場合は、各プロセスまたは**AppDomain**が失敗し、プールは自動的に消去します。  
   
 > [!NOTE]
 >  サーバーのミラーリング サポートは、データベースごとに構成されます。 複数部分から成る名前を使用するか、現在のデータベースを変更することにより、プリンシパル/ミラー セットに含まれない他のデータベースに対してデータの操作が実行された場合、これらの他のデータベースへの変更は障害の発生時には反映されません。 ミラー化されていないデータベース内でデータが変更された場合、エラーは発生しません。 開発者は、このような操作の考えられる影響を評価する必要があります。  
   
 ## <a name="database-mirroring-resources"></a>データベース ミラーリングに関するリソース  
- ミラーリングの構成、配置、および管理の概念に関するドキュメントや情報については、SQL Server オンライン ブックの次のリソースを参照してください。  
+ 概念説明のドキュメントと構成に関する情報を展開して、ミラーリングの管理には、SQL Server のドキュメントでは、次の情報が参照してください。  
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[データベース ミラーリング](http://msdn.microsoft.com/library/bb934127.aspx)SQL Server オンライン ブック|SQL Server でのミラーリングの設定と構成方法について説明します。|  
+|[データベース ミラーリング](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|SQL Server でのミラーリングの設定と構成方法について説明します。|  
   
 ## <a name="see-also"></a>関連項目  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ 
+  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)

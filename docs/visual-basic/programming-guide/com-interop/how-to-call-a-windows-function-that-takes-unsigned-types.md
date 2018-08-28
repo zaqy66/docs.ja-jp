@@ -14,25 +14,25 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: afec9965c4ff728094e901eb4924ac94c432b300
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44c67470def430a9ba924483899f0db6a9c798a2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643027"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999910"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>方法: 符号なしの型を使用する Windows の機能を呼び出す (Visual Basic)
-クラス、モジュール、または符号なし整数型のメンバーを含む構造体を使用している場合は、Visual Basic を使用してこれらのメンバーを表示できます。  
+クラス、モジュール、または符号なし整数型のメンバーを含む構造体を使用する場合は、Visual Basic でのこれらのメンバーを表示できます。  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>符号なしの型を受け取る Windows 関数を呼び出す  
   
-1.  使用して、 [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)ライブラリ関数を保持する、名前がそのライブラリでは、および呼び出しシーケンスは、それを呼び出すときに、文字列を変換する方法は、Visual Basic を指定します。  
+1.  使用して、 [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)関数を保持するためのライブラリ、その名前がそのライブラリでは、その呼び出し元のシーケンスがおよび呼び出し時に文字列を変換する方法は、Visual Basic を通知します。  
   
-2.  `Declare`ステートメントでは、使用`UInteger`、 `ULong`、 `UShort`、または`Byte`必要に応じて、各型のパラメーターを符号なしにします。  
+2.  `Declare`ステートメントを使用して`UInteger`、 `ULong`、 `UShort`、または`Byte`必要に応じて、各パラメーターでは、符号なしの型にします。  
   
-3.  Windows 関数の呼び出しの名前と使用されている定数の値を検索するには、ドキュメントを参照してください。 これらの多くは、WinUser.h ファイルで定義されます。  
+3.  Windows 関数の名前と使用されている定数の値を見つけるには、ドキュメントを参照してください。 これらの多くは、WinUser.h ファイルで定義されます。  
   
-4.  コードで必要な定数を宣言します。 多くの Windows 定数は、32 ビット符号なしの値、およびこれらを宣言する必要があります`As``UInteger`です。  
+4.  コードで必要な定数を宣言します。 多くの Windows 定数は、32 ビット符号なしの値、およびこれらを宣言する必要があります`As``UInteger`します。  
   
 5.  通常の方法で関数を呼び出します。 次の例は、Windows の関数を呼び出して`MessageBox`、符号なし整数の引数を受け取ります。  
   
@@ -69,16 +69,16 @@ ms.locfileid: "33643027"
     ```  
   
     > [!CAUTION]
-    >  `UInteger`、 `ULong`、 `UShort`、および`SByte`データ型がないの一部、[言語非依存および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md)(CLS)、CLS 準拠コードのコンポーネントを利用できないようにします。それらを使用します。  
+    >  `UInteger`、 `ULong`、 `UShort`、および`SByte`データ型はの一部、 [Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS) に CLS 準拠コードのコンポーネントを使用できないようにします。それらを使用します。  
   
     > [!IMPORTANT]
-    >  Windows アプリケーション プログラミング インターフェイス (API) など、アンマネージ コードへの呼び出しを行うには、潜在的なセキュリティ リスクに対するコードを公開します。  
+    >  Windows アプリケーション プログラミング インターフェイス (API) など、アンマネージ コードに呼び出しを行う、潜在的なセキュリティ リスクにコードを公開します。  
   
     > [!IMPORTANT]
-    >  Windows API を呼び出すと、アンマネージ コード アクセス許可が必要です。 詳細については、次を参照してください。<xref:System.Security.Permissions.SecurityPermission>と[コード アクセス許可](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)です。  
+    >  Windows API を呼び出すと、アンマネージ コード アクセス許可が必要です。 詳細については、次を参照してください。<xref:System.Security.Permissions.SecurityPermission>と[コード アクセス許可](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)します。  
   
 ## <a name="see-also"></a>関連項目  
- [データの種類](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
  [整数データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
  [UInteger データ型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
  [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  

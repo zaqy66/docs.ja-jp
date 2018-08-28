@@ -1,6 +1,6 @@
 ---
 title: '方法 : 文字列が有効な電子メール形式であるかどうかを検証する'
-ms.date: 03/30/2017
+ms.date: 08/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -20,19 +20,16 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 18426e655f6702844daa822921888194ed7ecb64
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172342"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753620"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>方法 : 文字列が有効な電子メール形式であるかどうかを検証する
 正規表現を使用して文字列の形式が有効な電子メール形式であるかどうかを検証する例を次に示します。  
 
-> [!NOTE]
->  文字列が有効なメール アドレス形式かどうかを確認するには、<xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> クラスを使うことをお勧めします。 そのためには、メール アドレスの文字列を <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> クラスのコンストラクターに渡します。文字列が認識されない形式の場合、<xref:System.FormatException> がスローされます。  
-  
 ## <a name="example"></a>例  
  次の例では、 `IsValidEmail` メソッドを定義します。このメソッドは、文字列に有効な電子メール アドレスが含まれている場合に `true` を返し、含まれていない場合に `false` を返します。それ以外の動作は行いません。  
   

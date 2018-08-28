@@ -12,14 +12,14 @@ ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb5d3b4c50a9c22880bdcc8406835cf51481e3cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654370"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003126"
 ---
 # <a name="-reference-visual-basic"></a>-参照 (Visual Basic)
-コンパイラで指定されたアセンブリ内の型情報をプロジェクトのコンパイル中にできるようにします。  
+コンパイラで型情報をコンパイルする現在のプロジェクトで使用できる、指定されたアセンブリでようにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,25 +35,25 @@ ms.locfileid: "33654370"
 |---|---|  
 |`fileList`|必須。 アセンブリ ファイル名のコンマ区切りリスト。 ファイル名に空白が含まれている場合は、名前を二重引用符で囲みます。|  
   
-## <a name="remarks"></a>コメント  
- インポートするファイルは、アセンブリ メタデータを含める必要があります。 パブリック型だけでは、アセンブリの外側に表示されます。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)オプションは、モジュールからメタデータをインポートします。  
+## <a name="remarks"></a>Remarks  
+ ファイルをインポートするには、アセンブリ メタデータを含める必要があります。 パブリック型だけでは、アセンブリの外側に表示されます。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)オプションは、モジュールからメタデータをインポートします。  
   
- アセンブリ (アセンブリ A) を参照する場合は、別のアセンブリ (アセンブリ B) を参照する、必要な参照アセンブリ B 場合。  
+ アセンブリ (アセンブリ A) を参照する場合は、別のアセンブリ (アセンブリ B) を参照する、場合、アセンブリ B を参照する必要があります。  
   
 -   アセンブリ A の型がアセンブリ B の型から継承されているか、アセンブリ B のインターフェイスを実装する。  
   
 -   アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドが呼び出される。  
   
- 使用して[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)を 1 つ以上のアセンブリ参照があるディレクトリを指定します。  
+ 使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)を 1 つ以上のアセンブリ参照があるディレクトリを指定します。  
   
- アセンブリ モジュールではなく) 内の型を認識するようにコンパイラで型の解決を強制する必要があります。 この操作方法の 1 つの例では、型のインスタンスを定義します。 その他の方法は、コンパイラがアセンブリ内の型名を解決するには利用できます。 たとえば、アセンブリ内の型から継承する場合、型名し既知となるコンパイラにします。  
+ コンパイラがアセンブリ (モジュールではなく) 内の型を認識するには、型の解決を強制する必要があります。 これを実行する方法の 1 つの例では、型のインスタンスを定義します。 その他の方法、コンパイラのアセンブリ内の型名を解決するのには利用できます。 たとえば、アセンブリ内の型から継承する場合、型名し既知となるコンパイラに。  
   
- 参照がよく使用される、Vbc.rsp 応答ファイル[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アセンブリは既定で使用します。 使用して`-noconfig`コンパイラが Vbc.rsp を使用したくない場合。  
+ 参照がよく使用される、Vbc.rsp 応答ファイル[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アセンブリでは、既定で使用されます。 使用して、`-noconfig`コンパイラが Vbc.rsp を使用したくない場合。  
   
  `-reference` の省略形は `/r` です。  
   
 ## <a name="example"></a>例  
- 次のコマンドは、ソース ファイルをコンパイル`Input.vb`からアセンブリを参照および`Metad1.dll`と`Metad2.dll`を生成する`Out.exe`です。  
+ 次のコマンドは、ソース ファイルをコンパイル`Input.vb`からの参照アセンブリと`Metad1.dll`と`Metad2.dll`を生成する`Out.exe`します。  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  

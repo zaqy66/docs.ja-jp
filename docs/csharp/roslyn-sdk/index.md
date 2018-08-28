@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK (Roslyn API)
 description: .NET Compiler Platform SDK (Roslyn API とも呼ばれます) を使用して、.NET コードを理解し、エラーを見つけて、そのエラーを修正する方法について説明します。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e524cb8f2fcb5c59550932243b6586019ea7139b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fb67b1d7ff963a01696ce163fdcef0b7944dcee
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358982"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925032"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
@@ -21,7 +21,7 @@ ms.locfileid: "33358982"
 
 .NET Compiler Platform SDK では、コードの誤りを見つける***アナライザー***と、修正する***コード修正***をビルドできます。 ***アナライザー***では、構文とコードの構造を理解し、修正する必要がある使用方法を検出します。 ***コード修正***では、アナライザーによって検出されたコードの誤りに対処するために、1 つまたは複数の修正方法が提案されます。 通常、アナライザーと関連付けられているコード修正は、1 つのプロジェクトにまとめてパッケージ化されます。 
 
-アナライザーとコード修正では、スタティック分析を使用してコードを理解します。 コードを実行したり、その他のテストのメリットを提供したりすることはありません。 ただし、バグ、保持できないコード、または標準ガイドラインの検証につながることが多い使用方法を指摘することができます。
+アナライザーとコード修正では、スタティック分析を使用してコードを理解します。 コードを実行したり、その他のテストのメリットを提供したりすることはありません。 ただし、バグ、メンテナンスできないコード、または標準ガイドラインの検証につながることが多い使用方法を指摘することができます。
 
 .NET Compiler Platform SDK では、C# または Visual Basic のコードベースを調査および理解できる API のセットが 1 つ提供されます。 この単一のコードベースを使用できるため、.NET Compiler Platform SDK によって提供される構文と意味の分析 API を利用して、簡単にアナライザーとコード修正を記述できます。 コンパイラによって行われた分析を複製する大規模なタスクから解放されると、プロジェクトやライブラリの一般的なコーディング エラーの検出や修正によりフォーカスしたタスクに集中することができます。
 
