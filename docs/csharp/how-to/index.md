@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549393"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999564"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -33,7 +33,8 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [自動的に実装されたプロパティを宣言する](../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)。
 - [読み取り/書き込みのプロパティを宣言して使用する](../programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md)。
 - [定数を定義する](../programming-guide/classes-and-structs/how-to-define-constants.md)。
-- [文字列出力を提供するために `ToString` メソッドを上書きする](../programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)。
+- 
+  [文字列出力を提供するために `ToString` メソッドをオーバーライドする](../programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)。
 - [抽象プロパティを定義する](../programming-guide/classes-and-structs/how-to-define-abstract-properties.md)。
 - [XML ドキュメント機能を使用してコードを文書化する](../programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)。
 - [インターフェイス メンバーを明示的に実装して](../programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)パブリック インターフェイスを簡潔に保つ。
@@ -68,7 +69,7 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [`as` と `is` を使用して異なる型に安全にキャストする](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)。
 - [`struct` 型の変換演算子を定義する](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)。
 - [型が null 許容値型であるかを判断する](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)。
-- [null 許容値型と null 非許容値型の間で変換する](../programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md)。
+- [null 許容値型と null 非許容値型の間で変換する](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type)。
 
 ## <a name="equality-and-ordering-comparisons"></a>等価比較と順序付け比較
 
@@ -126,7 +127,7 @@ LINQ では、LINQ クエリ式パターンをサポートするすべてのデ�
 
 - [`System.Threading.Tasks.Task.WhenAll` を使用して非同期のパフォーマンスを向上させる](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
 - [`async` および `await` を使用して複数の Web 要求を並行して作成する](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)。
-- [スレッド プールを使用する](../programming-guide/concepts/threading/how-to-use-a-thread-pool.md)。
+- [スレッド プールを使用する](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool)。
 
 ## <a name="command-line-args-to-your-program"></a>プログラムのコマンド ライン引数
 
