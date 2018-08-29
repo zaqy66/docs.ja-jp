@@ -1,46 +1,46 @@
 ---
-title: F# でコンポーネントのデザイン ガイドライン
-description: F# で他の呼び出し元で消費するためのコンポーネントを記述するためのガイドラインを説明します。
+title: F# コンポーネント デザインのガイドライン
+description: 他の呼び出し元で消費するための f# コンポーネントを記述するためのガイドラインについて説明します。
 ms.date: 05/14/2018
-ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 446cba0f810af9517b655ef5741ddf7a919676d5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458087"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935598"
 ---
-# <a name="f-component-design-guidelines"></a>F# でコンポーネントのデザイン ガイドライン
+# <a name="f-component-design-guidelines"></a>F# コンポーネント デザインのガイドライン
 
-このドキュメントは、一連の f# プログラミング、f# コンポーネントのデザインのガイドラインに基づいて、v14、Microsoft Research のコンポーネントのデザイン ガイドラインおよび[別のバージョン](https://fsharp.org/specs/component-design-guidelines/)最初 curated および f# Software Foundation によって維持されます。
+このドキュメントは、一連の f# プログラミング、f# コンポーネント デザインのガイドラインに基づいて、v14、Microsoft Research のコンポーネントのデザイン ガイドラインと[別バージョン](https://fsharp.org/specs/component-design-guidelines/)curated を最初におよび、f# Software Foundation によって管理されます。
 
-このドキュメントでは、f# プログラミングに慣れていると仮定します。 多く f# コミュニティ投稿と、このガイドのさまざまなバージョンに役立つフィードバックのご協力に感謝します。
+このドキュメントでは、f# プログラミングに慣れてを前提としています。 多くの貢献と、このガイドのさまざまなバージョンに役立つフィードバック f# コミュニティに協力してくれたします。
 
 ## <a name="overview"></a>概要
 
-このドキュメントは、f# コンポーネントの設計とコーディングに関連する問題の一部を検索します。 コンポーネントは、次のいずれかで意味があります。
+このドキュメントは、f# コンポーネント デザインおよびコーディングに関連する問題の一部を検索します。 コンポーネントは、次のいずれかに意味があります。
 
-* プロジェクト内の外部のコンシューマーのある f# プロジェクト内のレイヤー。
-* アセンブリ境界を越えて、f# コードによる消費を意図してライブラリです。
-* アセンブリ境界を越えて、任意の .NET 言語による消費を意図してライブラリです。
-* ライブラリのパッケージ リポジトリを使用して配布など[NuGet](https://nuget.org)です。
+* そのプロジェクト内の外部のコンシューマーを持つ f# プロジェクトのレイヤー。
+* ライブラリ アセンブリ境界を越えて f# コードで使用量のためのものです。
+* ライブラリ アセンブリ境界を越えて任意の .NET 言語で使用量のためのものです。
+* など、パッケージ リポジトリを使用して配布するためのもので、ライブラリ[NuGet](https://nuget.org)します。
 
-この記事で説明した方法に従って、[優れた f# コードの 5 つの原則](index.md#five-principles-of-good-f-code)とため両方の機能を利用し、適切なプログラミング オブジェクトします。
+この記事で説明した手法に従う、[優れた f# コードの 5 つの原則](index.md#five-principles-of-good-f-code)、およびため両方の機能を利用し、適切なプログラミング オブジェクトします。
 
-方法には、タイミングに関係なくコンポーネントおよびライブラリのデザイナー接している実用的で prosaic の問題の数、開発者が最も簡単に使用できる API を作成しようとしています。 Conscientious アプリケーション、 [.NET ライブラリ デザイン ガイドライン](../../standard/design-guidelines/index.md)一貫性のある一連の消費を快適になり、Api の作成における導いたりするされます。
+方法論に関係なくコンポーネントとライブラリのデザイナーのさまざまな実用的で prosaic 問題に直面して、開発者が最も簡単に使用できる API を作成しようとしています。 Conscientious アプリケーションの[.NET ライブラリのデザイン ガイドライン](../../standard/design-guidelines/index.md)を使用する快適な api の一貫性のあるセットを作成するを進めるためされます。
 
 ## <a name="general-guidelines"></a>一般的なガイドライン
 
-F# ライブラリ、ライブラリの対象読者に関係なく適用されるいくつかのユニバーサル ガイドラインがあります。
+F# ライブラリ、ライブラリの対象となるユーザーに関係なくに適用されるいくつかのユニバーサル ガイドラインがあります。
 
-### <a name="learn-the-net-library-design-guidelines"></a>.NET ライブラリのデザイン ガイドラインを説明します。
+### <a name="learn-the-net-library-design-guidelines"></a>.NET ライブラリのデザイン ガイドラインについて説明します
 
-F# でコーディングを行うように関係なくすることが重要知識のある、 [.NET ライブラリ デザイン ガイドライン](../../standard/design-guidelines/index.md)です。 ほとんどの他の f# および .NET プログラマはや理解しており次のガイドラインに準拠するように .NET コードを期待します。
+F# でコーディングを行うの種類に関係なくすることが重要の実務知識を持ち、 [.NET ライブラリのデザイン ガイドライン](../../standard/design-guidelines/index.md)します。 ほとんどの他の f# および .NET プログラマは、次のガイドラインに習熟しに準拠するように .NET コードを期待します。
 
-.NET ライブラリのデザイン ガイドラインでは、名前付け、クラス、インターフェイス、メンバーのデザイン (プロパティ、メソッド、イベントなど) およびの詳細は、設計に関する一般的なガイダンスを提供し、さまざまなデザイン ガイドの参照の最初のポイントを便利が。
+.NET ライブラリのデザイン ガイドラインは、名前付け、クラス、インターフェイス、メンバーのデザイン (プロパティ、メソッド、イベントなど) およびの詳細は、設計に関する一般的なガイダンスを提供し、さまざまな設計ガイダンスの参照の最初のポイントを便利なはします。
 
-### <a name="add-xml-documentation-comments-to-your-code"></a>XML ドキュメント コメントをコードに追加します。
+### <a name="add-xml-documentation-comments-to-your-code"></a>XML ドキュメントのコメントをコードに追加します。
 
-パブリック Api の XML ドキュメントでは、ライブラリのファイルをこれらの型とメンバー、および有効にする構成ドキュメントを使用するときに、優れたの Intellisense とクイック ヒントを取得できることを確認します。 参照してください、 [XML ドキュメント](../language-reference/xml-documentation.md)に関するその他のマークアップ内で、xmldoc コメントの使用できるさまざまな xml タグ。
+パブリック Api での XML ドキュメントでは、ライブラリのファイルをこれらの型とメンバー、および有効にするドキュメントの構築に使用するときに、優れたの Intellisense とクイック ヒントを取得できることを確認します。 参照してください、 [XML ドキュメント](../language-reference/xml-documentation.md)内で、xmldoc コメントの追加のマークアップを使用できるさまざまな xml タグの概要。
 
 ```fsharp
 /// A class for representing (x,y) coordinates
@@ -50,67 +50,67 @@ type Point =
     member DistanceTo : otherPoint:Point -> float
 ```
 
-短い形式として XML のコメントを使用することができます (`/// comment`)、または標準の XML コメント (`///<summary>comment</summary>`)。
+短い形式のいずれかの XML コメントを使用することができます (`/// comment`)、または標準の XML コメント (`///<summary>comment</summary>`)。
 
-### <a name="consider-using-explicit-signature-files-fsi-for-stable-library-and-component-apis"></a>安定したライブラリとコンポーネントの Api の明示的なシグネチャ ファイル (.fsi) を使用してください。
+### <a name="consider-using-explicit-signature-files-fsi-for-stable-library-and-component-apis"></a>安定したライブラリと Api のコンポーネントの明示的な署名ファイル (.fsi) の使用を検討してください。
 
-パブリック API を両方こと、ライブラリの完全パブリック サーフェスを把握できるだけでなくする内部し、パブリックのドキュメント間を明確に分離を提供することができますの簡潔な概要を説明する f# ライブラリで明示的なシグネチャ ファイルの使用実装の詳細。 シグネチャ ファイルが実装と署名の両方のファイルに対する変更を要求することによって、パブリック API の変化に摩擦を追加することに注意してください。 その結果、署名ファイルは通常のみ際に挿入される API 確立しましたになるし、大幅に変更が不要になった想定します。
+F# ライブラリに明示的な署名ファイルを使用して、パブリック API が両方ことをライブラリの完全なパブリック サーフェスを知るだけでなくのパブリック ドキュメント間および内部の明確な分離を提供することができますの簡潔な概要を示します実装の詳細。 シグネチャ ファイルが実装と署名の両方のファイルに対する変更を要求することによって、パブリック API を変更する際の問題を追加することに注意してください。 その結果、署名ファイルを通常のみ際に挿入される API 確固たるものになりますが、大幅に変更される予定ですされなくします。
 
-### <a name="always-follow-best-practices-for-using-strings-in-net"></a>常に文字列を .NET で使用するためのベスト プラクティスに従う
+### <a name="always-follow-best-practices-for-using-strings-in-net"></a>常に .NET で文字列を使用するためのベスト プラクティスに従ってください。
 
-次の[.NET での文字列を使用するためのベスト プラクティス](../../standard/base-types/best-practices-strings.md)ガイダンス。 具体的には、常に明示的に記述*カルチャ インテント*変換と文字列の比較で (該当する場合)。
+次の[.NET で文字列を使用するためのベスト プラクティス](../../standard/base-types/best-practices-strings.md)ガイダンス。 具体的には、常に明示的に状態*文化的なインテント*変換と文字列の比較 (該当する場合)。
 
-## <a name="guidelines-for-f-facing-libraries"></a>F# に関するガイドラインのライブラリが直面しています。
+## <a name="guidelines-for-f-facing-libraries"></a>F# に関するガイドラインのライブラリに接続します。
 
-ここでは、パブリック f# の開発に関する推奨事項のライブラリが直面しています。f# の開発者によって使用するためのパブリック Api を公開するライブラリは、します。 F# を具体的には適用可能なライブラリ デザインの推奨事項のさまざまな。 具体的な推奨事項に従うがない場合は、.NET ライブラリ デザイン ガイドラインは、フォールバックのガイダンスです。
+このセクションでは、パブリック f# を開発するための推奨事項を表示します-ライブラリ; に接続します。f# 開発者が使用するためのパブリック Api を公開するライブラリは、します。 F# に具体的には適用可能なさまざまなライブラリ デザインの推奨事項は。 特定の推奨事項がない場合、.NET ライブラリのデザイン ガイドラインは、フォールバックのガイダンスです。
 
 ### <a name="naming-conventions"></a>名前付け規則
 
-#### <a name="use-net-naming-and-capitalization-conventions"></a>.NET の名前付けおよび大文字と小文字の規則を使用します
+#### <a name="use-net-naming-and-capitalization-conventions"></a>.NET の名前付けおよび大文字と小文字の規則を使用します。
 
-次の表では、.NET の名前付けおよび大文字と小文字の規則に従います。 F# の構成要素を含める小さな追加があります。
+次の表では、.NET の名前付けおよび大文字と小文字の規則に従います。 F# の構成要素を含めることも小さな追加機能があります。
 
 | 構成体 | Case | パーツ | 使用例 | メモ |
 |-----------|------|------|----------|-------|
-| 具象型 | PascalCase | 名詞または形容詞 | 一覧で、Double、複雑な | 具象型は、構造体、クラス、列挙体、デリゲート、レコード、および共用体です。 OCaml で小文字従来型の名前ですが、F# で採用しています型の .NET 名前付けスキーム。
+| 具象型 | PascalCase | 名詞または形容詞 | 一覧で、Double、複雑な | 具象型は、構造体、クラス、列挙、デリゲート、レコード、および共用体です。 型名が小文字従来 OCaml には、f# 型の .NET の名前付けスキームは採用します。
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| 共用体タグ     | PascalCase | 名詞 | いくつかの追加、成功 | パブリック Api では、プレフィックスを使わないでください。 必要に応じてなどの内部プレフィックスを使用して '' 入力チーム TAlpha を = | TBeta | TDelta '' '。 |
+| 共用体タグ     | PascalCase | 名詞 | いくつかの追加、成功 | パブリック Api では、プレフィックスを使用しないでください。 必要に応じてときなど、内部プレフィックスを使用して、' ' チームを入力 TAlpha を = | TBeta | TDelta '' '。 |
 | event          | PascalCase | 動詞 | ValueChanged/ValueChanging |  |
 | 例外     | PascalCase |      | WebException | 名前は、"Exception"で終わる必要があります。 |
 | フィールド          | PascalCase | 名詞 | CurrentName  | |
 | インターフェイス型 |  PascalCase | 名詞または形容詞 | IDisposable | 名前は、"I"で始まる必要があります。 |
 | メソッド |  PascalCase |  動詞 | ToString | |
-| 名前空間 | PascalCase | | Microsoft.FSharp.Core | 一般に使用`<Organization>.<Technology>[.<Subnamespace>]`、ただしテクノロジが組織に依存しない場合は、組織をドロップします。 |
+| 名前空間 | PascalCase | | Microsoft.FSharp.Core | 一般的に使用して`<Organization>.<Technology>[.<Subnamespace>]`、ただし、テクノロジは、組織の独立した場合、組織を削除します。 |
 | パラメーター | キャメル ケース | 名詞 |  typeName、変換、範囲 | |
-| (内部) の値を使用できます。 | キャメル ケースまたは PascalCase | 名詞と動詞 |  getValue、myTable |
-| 値 (外部) を使用できます。 | キャメル ケースまたは PascalCase | 名詞と動詞  | List.map、Dates.Today | let バインドされた値は、従来の機能のデザイン パターンに従うときに多くの場合、パブリック。 ただし、通常使用 PascalCase 識別子を他の .NET 言語から使用するとき。 |
-| プロパティ  | PascalCase  | 名詞または形容詞  | IsEndOfFile、背景色  | ブール型プロパティ、通常は使用して、ことができ、IsEndOfFile、いない IsNotEndOfFile と同様に、肯定的である必要があります。
+| (内部) の値を使用します。 | キャメル ケースまたは PascalCase | 名詞と動詞 |  getValue、myTable |
+| 値 (外部) の使用します。 | キャメル ケースまたは PascalCase | 名詞と動詞  | List.map、Dates.Today | let バインドされた値は、従来の機能の設計パターンに従うときに多くの場合、パブリック。 ただし、一般に PascalCase とき使用識別子は、他の .NET 言語から使用できます。 |
+| プロパティ  | PascalCase  | 名詞または形容詞  | IsEndOfFile、背景色  | ブール型プロパティ一般的に使用されできます IsEndOfFile、IsNotEndOfFile しないように、肯定を指定する必要があります。
 
 #### <a name="avoid-abbreviations"></a>省略形を回避します。
 
-.NET ガイドラインの省略形の使用を防ぐため (たとえば、"使用`OnButtonClick`なく`OnBtnClick`") です。 一般的な省略形など`Async`「非同期」の場合は、許容されます。 、関数型プログラミングでは、このガイドラインは無視される場合がありますたとえば、 `List.iter` 「反復処理する」の省略形を使用します。 このため、略語を使用して f# ではある程度の大きい値を許容する傾向があります-を-f# プログラミングでは、引き続き通常パブリック コンポーネントのデザインに避ける必要がありますが、します。
+.NET のガイドラインの省略形の使用を防ぐため (たとえば、"を使用して、`OnButtonClick`なく`OnBtnClick`")。 共通の省略形など`Async`「非同期」の場合は許容されます。 このガイドラインは関数型プログラミング; も無視されます。たとえば、 `List.iter` 「反復処理する」の省略形を使用します。 このため、略語を使用して f# のより充実を許容する傾向があります-に-f# プログラミングでは、まだ一般にパブリック コンポーネントのデザインに避ける必要がありますが、します。
 
-#### <a name="avoid-casing-name-collisions"></a>大文字小文字の区別の名前の衝突を避ける
+#### <a name="avoid-casing-name-collisions"></a>大文字小文字の区別、名前の衝突を避ける
 
-.NET のガイドラインでは、一部のクライアント言語 (たとえば、Visual Basic) 小文字は区別されませんので、名の競合を区別するために単独で大文字と小文字を使用できないことを言います。
+.NET のガイドラインには、一部のクライアント言語 (Visual Basic など) は大文字であるために、名前の競合を解消するために単独で大文字小文字の区別を使用できないことがあるとします。
 
-#### <a name="use-acronyms-where-appropriate"></a>頭字語を使用して適切な場所
+#### <a name="use-acronyms-where-appropriate"></a>適切な場所、頭字語を使用します。
 
-XML などの頭字語は、省略形ではないや、uncapitalized 形式 (Xml) での .NET ライブラリで広く使用されます。 のみよく知られている、広く認識されているの頭字語を使用する必要があります。
+XML などの頭字語は、省略形でないや、uncapitalized 形式 (Xml) での .NET ライブラリで広く使用されます。 のみ広く認識させ、よく知られた頭字語を使用する必要があります。
 
-#### <a name="use-pascalcase-for-generic-parameter-names"></a>PascalCase 名を使用するジェネリック パラメーター
+#### <a name="use-pascalcase-for-generic-parameter-names"></a>PascalCase を使用して、ジェネリック パラメーター名
 
-PascalCase 名を使用するジェネリック パラメーターの f# などのパブリック Api でのライブラリが直面しています。 具体的には、ような名前を使用して`T`、 `U`、 `T1`、`T2`の任意のジェネリック パラメーターを使用して特定の名前をなしませんし、f# に直接つながっているライブラリのような名前を使用して`Key`、 `Value`、 `Arg`(がないなど、 `TKey`)。
+F# などのパブリック Api でのジェネリック パラメーターの名前を PascalCase を使用しないでください-ライブラリに接続します。 ような名前を使用して、具体的には、 `T`、 `U`、 `T1`、`T2`の任意のジェネリック パラメーターを使用して特定の名前は合理的で、し、f# のライブラリに接続するような名前を使用して、 `Key`、 `Value`、 `Arg`(ただし、たとえばいない`TKey`)。
 
-#### <a name="use-either-pascalcase-or-camelcase-for-public-functions-and-values-in-f-modules"></a>パブリックの関数と f# モジュール内の値に PascalCase またはキャメル ケースのいずれかを使用します。
+#### <a name="use-either-pascalcase-or-camelcase-for-public-functions-and-values-in-f-modules"></a>PascalCase またはキャメル ケースのいずれかを使用して、パブリック関数および f# モジュール内の値
 
-キャメル ケースが使用するよう設計されているパブリック関数の使用修飾されていない (たとえば、 `invalidArg`)、(たとえば、List.map)「標準的なコレクション関数」にします。 どちらの場合も、関数名機能は言語のキーワードと同様にします。
+キャメル ケースが使用するように設計されたパブリック関数の使用非修飾 (たとえば、 `invalidArg`)、および (List.map など) の「標準的なコレクション関数」。 どちらの場合も、関数名は言語のキーワードのようにずっと機能します。
 
-### <a name="object-type-and-module-design"></a>オブジェクト、型、およびモジュールのデザイン
+### <a name="object-type-and-module-design"></a>オブジェクト、型、およびモジュールの設計
 
-#### <a name="use-namespaces-or-modules-to-contain-your-types-and-modules"></a>名前空間またはモジュールを使用してタイプやモジュールを含める
+#### <a name="use-namespaces-or-modules-to-contain-your-types-and-modules"></a>名前空間またはモジュールを使用して、型とモジュール
 
-コンポーネントのそれぞれの f# ファイルは、名前空間の宣言またはモジュールの宣言で始まる必要があります。
+コンポーネントでそれぞれの f# ファイルの名前空間の宣言またはモジュールの宣言のいずれかで開始します。
 
 ```fsharp
 namespace Fabrikam.BasicOperationsAndTypes
@@ -140,18 +140,18 @@ module CommonOperations =
     ...
 ```
 
-モジュールと名前空間を使用して、最上位レベルのコードを整理する間の相違点は次のとおりです。
+モジュールや名前空間を使用して、最上位レベルのコードを整理する間の相違点は次のとおりです。
 
 * 名前空間が複数のファイルにまたがることができます。
-* 名前空間は内部のモジュール内にある場合を除き、f# の関数を含めることはできません。
-* 指定されたモジュールのコードは、1 つのファイル内に含まれる必要があります。
-* 最上位レベルのモジュールは、内部のモジュールのなしの f# 関数を含めることができます。
+* 内部のモジュール内である場合を除いて、名前空間は f# の関数を含めることはできません。
+* 単一ファイル内の特定のモジュールのコードを含める必要があります。
+* 最上位レベルのモジュールが内部のモジュールを必要としないの f# 関数を含めることができます。
 
-最上位レベルの名前空間またはモジュール間の選択は、コードのコンパイルした形式に影響し、したがってが影響他の .NET 言語から、ビューは、API 最終的に利用できる f# コードの外部で。
+最上位レベルの名前空間またはモジュールの間で choice では、コードのコンパイル済みの形式に影響し、したがってが影響他の .NET 言語で表示する必要があります API 最終的に使用する f# コードの外部に。
 
-#### <a name="use-methods-and-properties-for-operations-intrinsic-to-object-types"></a>オブジェクトの種類に固有の操作のためのメソッドとプロパティを使用します。
+#### <a name="use-methods-and-properties-for-operations-intrinsic-to-object-types"></a>メソッドとプロパティを使用して、オブジェクトの種類に固有の操作
 
-オブジェクトを使用する場合は、メソッドおよびその型のプロパティとして利用できる機能が実装されていることを確認することをお勧めします。
+オブジェクトを使用する場合は、メソッドとプロパティをその型として使用できる機能が実装されることを確認することをお勧めします。
 
 ```fsharp
 type HardwareDevice() =
@@ -169,11 +169,11 @@ type HashTable<'Key,'Value>(comparer: IEqualityComparer<'Key>) =
     member this.ContainsValue(value) = ...
 ```
 
-そのメンバーに特定のメンバーが持つ機能の一括必要があるとは限りません実装はありませんが、その機能の利用できる部分の有効期限があります。
+必要があります、必ずしも、メンバーに実装していないメンバーについては、機能の大部分が機能を使用できる部分にする必要があります。
 
 #### <a name="use-classes-to-encapsulate-mutable-state"></a>クラスを使用して、変更可能な状態をカプセル化
 
-F# でこれのみ行う必要があります、いる状態は既にカプセル化されていないクロージャ、シーケンス式、または非同期計算などの別の言語コンストラクトでします。
+F# でこれのみ行う必要がある場所、状態は既にカプセル化されていないクロージャ、シーケンス式、または非同期計算などの別の言語コンストラクトです。
 
 ```fsharp
 type Counter() =
@@ -187,7 +187,7 @@ type Counter() =
 
 #### <a name="use-interfaces-to-group-related-operations"></a>インターフェイスを使用してグループ化に関連する操作
 
-インターフェイス型を使用して、一連の操作を表します。 これは、関数の組または関数のレコードなど、その他のオプションをお勧めします。
+インターフェイスの種類を使用して、一連の操作を表します。 関数の組などの関数のレコードの他のオプションをお勧めします。
 
 ```fsharp
 type Serializer =
@@ -195,7 +195,7 @@ type Serializer =
     abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
 ```
 
-優先します。
+優先。
 
 ```fsharp
 type Serializer<'T> = {
@@ -204,11 +204,11 @@ type Serializer<'T> = {
 }
 ```
 
-インターフェイスは、.NET では、どのようなファンクター通常できるようになりますを実現するために使用できるファースト クラスの概念です。 さらに、関数のレコードのことはできませんが、プログラムに存在: 型のエンコードに使用できます。
+インターフェイスは、.net では、何ファンクターは通常表示を実現するために使用できる最上級の概念です。 さらに、関数のレコードのことはできませんが、プログラムに移った型のエンコードに使用できます。
 
-#### <a name="use-a-module-to-group-functions-which-act-on-collections"></a>操作を実行するグループの機能をモジュールのコレクションを使用します
+#### <a name="use-a-module-to-group-functions-which-act-on-collections"></a>コレクションの操作を実行するグループの機能をモジュールを使用します。
 
-コレクション型を定義するときなどの操作の標準セットを提供することを検討してください`CollectionType.map`と`CollectionType.iter`) の新しいコレクション型。
+コレクション型を定義するときになどの操作の標準セットを提供することを検討してください`CollectionType.map`と`CollectionType.iter`) の新しいコレクション型。
 
 ```fsharp
 module CollectionType =
@@ -218,29 +218,29 @@ module CollectionType =
         ...
 ```
 
-このようなモジュールを含める場合は FSharp.Core で見つかった関数の名前付け規則に従います。
+このようなモジュールを含める場合は FSharp.Core の関数の名前付け規則に従います。
 
-#### <a name="use-a-module-to-group-functions-for-common-canonical-functions-especially-in-math-and-dsl-libraries"></a>数学関数や DSL ライブラリで特にの一般的な正規の関数グループ関数をモジュールを使用します。
+#### <a name="use-a-module-to-group-functions-for-common-canonical-functions-especially-in-math-and-dsl-libraries"></a>特にで数値演算と DSL ライブラリの一般的な正規の関数グループの機能をモジュールを使用します。
 
-たとえば、`Microsoft.FSharp.Core.Operators`されて自動的に開かれている最上位の関数のコレクション (と同様に`abs`と`sin`) FSharp.Core.dll によって提供されます。
+たとえば、`Microsoft.FSharp.Core.Operators`は、自動的に開かれているコレクションの最上位の関数です (など`abs`と`sin`) FSharp.Core.dll によって提供されます。
 
-同様に、統計のライブラリは関数を持つモジュールを含めることが`erf`と`erfc`に明示的にまたは自動的に開かれるこのモジュールは設計されています。
+同様に、統計ライブラリが関数を持つモジュールを含めることがあります`erf`と`erfc`を明示的にまたは自動的に開くこのモジュールは設計されています。
 
 #### <a name="consider-using-requirequalifiedaccess-and-carefully-apply-autoopen-attributes"></a>RequireQualifiedAccess の使用を検討し、慎重に AutoOpen 属性を適用
 
-追加する、`[<RequireQualifiedAccess>]`属性をモジュールにことを示し、モジュールが開かれていませんアクセスを修飾するモジュールの要素への参照が明示的に必要なことです。 たとえば、`Microsoft.FSharp.Collections.List`モジュールは、この属性を持ちます。
+追加、`[<RequireQualifiedAccess>]`属性をモジュールには、モジュールが開かれていないことと、アクセスを修飾するモジュールの要素への参照が明示的に必要なことを示します。 たとえば、`Microsoft.FSharp.Collections.List`モジュールにはこの属性があります。
 
-これは、機能は、関数と、モジュール内の値は、他のモジュールの名前と競合する可能性のある名前を持つ場合に便利です。 修飾のアクセスを必要とすると、長期的な保守容易性とライブラリの発展性が大幅に増やすできます。
+これは、機能は、関数と、モジュール内の値は、他のモジュール名と競合する可能性のある名前を持つ場合に便利です。 修飾のアクセスを必要とすると、長期的な保守容易性とライブラリの発展が大幅に向上できます。
 
-追加する、`[<AutoOpen>]`をモジュールに属性を含む名前空間が開かれたときに、モジュールが開かれることを意味します。 `[<AutoOpen>]`属性は、アセンブリが参照されている場合に自動的に開かれているモジュールを示すためにアセンブリにも適用できます。
+追加、`[<AutoOpen>]`モジュールに属性が含まれる名前空間が開かれたときに、モジュールが開かれることを意味します。 `[<AutoOpen>]`属性は、アセンブリ、アセンブリが参照されている場合に自動的に開かれているモジュールを示すためにも適用できます。
 
-統計ライブラリなど、 **MathsHeaven.Statistics**場合があります、`module MathsHeaven.Statistics.Operators`関数を含む`erf`と`erfc`です。 このモジュールとして指定することは正当`[<AutoOpen>]`です。 つまり、`open MathsHeaven.Statistics`もこのモジュールを開き、名前を`erf`と`erfc`スコープにします。 別なを使用して`[<AutoOpen>]`拡張メソッドが含まれるモジュールです。
+統計ライブラリではたとえば、 **MathsHeaven.Statistics**含めることができます、`module MathsHeaven.Statistics.Operators`関数を含む`erf`と`erfc`します。 このモジュールとしてマークするが妥当`[<AutoOpen>]`します。 つまり、`open MathsHeaven.Statistics`もがこのモジュールを開き、名前を`erf`と`erfc`スコープにします。 別なを使用して、`[<AutoOpen>]`拡張メソッドが含まれるモジュールです。
 
-使いすぎ`[<AutoOpen>]`汚染名前空間と属性に潜在顧客は、注意を払って使用する必要があります。 特定のドメインを賢く利用で特定のライブラリの`[<AutoOpen>]`使いやすさにつながることができます。
+多用する`[<AutoOpen>]`汚染の名前空間と属性に潜在顧客を注意して使用する必要があります。 特定のドメインを賢く利用で特定のライブラリの`[<AutoOpen>]`ユーザビリティは向上する可能性があります。
 
-#### <a name="consider-defining-operator-members-on-classes-where-using-well-known-operators-is-appropriate"></a>ここで、よく知られている演算子の使用は適切なクラスで演算子メンバーの定義を検討してください。
+#### <a name="consider-defining-operator-members-on-classes-where-using-well-known-operators-is-appropriate"></a>よく知られている演算子を使用して、適切なクラスで演算子メンバーの定義を検討してください。
 
-場合によってベクトルなどの数学的な構造をモデル化するクラスが使用されます。 モデル化されているドメインがよく知られている演算子を持つクラスに固有のメンバーとして定義することをお勧めします。
+場合によってベクトルなどの数学的構造をモデル化するクラスが使用されます。 モデル化されるドメインによく知られている演算子がある場合、クラスに固有のメンバーとして定義することお勧めします。
 
 ```fsharp
 type Vector(x:float) =
@@ -256,11 +256,11 @@ let v = Vector(5.0)
 let u = v * 10.0
 ```
 
-このガイドは、これらの型の .NET の一般的なガイダンスに対応します。 ただし、f# コーディングこれにより、これらの型の f# 関数と組み合わせておよび List.sumBy など、メンバーの制約のメソッドで使用するようにさらに重要なことができます。
+このガイダンスは、このような種類の一般的な .NET ガイダンスに対応します。 ただし、f# コードこれにより、これらの型の f# 関数と組み合わせておよび List.sumBy などのメンバー制約でのメソッドで使用するようにさらに重要ですができます。
 
-#### <a name="consider-using-compiledname-to-provide-a-net-friendly-name-for-other-net-language-consumers"></a>提供する CompiledName の使用を検討します。他の .NET 言語コンシューマー NET のフレンドリ名
+#### <a name="consider-using-compiledname-to-provide-a-net-friendly-name-for-other-net-language-consumers"></a>提供する CompiledName の使用を検討します。その他の .NET 言語のコンシューマーの NET のわかりやすい名前
 
-F# のコンシューマーの名前を 1 つのスタイルで何かにすることも (小文字のみに表示されるように静的メンバーなどモジュール バインド関数の場合と同様) がアセンブリにコンパイルすると、名前の別のスタイルがします。 使用することができます、`[<CompiledName>]`属性とは異なるスタイル コードを提供する非 f# アセンブリを使用します。
+F# コンシューマーの名前を 1 つのスタイルで何かすることがあります (などを小文字で静的メンバー モジュール連結関数の場合と同様)、アセンブリにコンパイルすると、名前の別のスタイルがあるがします。 使用することができます、`[<CompiledName>]`非 f# アセンブリを使用するコードのさまざまなスタイルを指定する属性。
 
 ```fsharp
 type Vector(x:float, y:float) =
@@ -274,11 +274,11 @@ type Vector(x:float, y:float) =
 let v = Vector.create 5.0 3.0
 ```
 
-使用して`[<CompiledName>]`、非 f# アセンブリのコンシューマーの .NET 名前付け規則を使用することができます。
+使用して`[<CompiledName>]`、非 f# アセンブリのコンシューマー向けの .NET の名前付け規則を使用することができます。
 
-#### <a name="use-method-overloading-for-member-functions-if-doing-so-provides-a-simpler-api"></a>メンバー関数の場合は、メソッドのオーバー ロードを使用するため、これにより、シンプルな API 場合
+#### <a name="use-method-overloading-for-member-functions-if-doing-so-provides-a-simpler-api"></a>メンバー関数の場合は、メソッドのオーバー ロードを使用するため、これによりより単純な API の場合
 
-メソッドのオーバー ロードは、さまざまなオプションと引数が、同様の機能を実行する必要がある API を簡略化するための強力なツールです。
+メソッドのオーバー ロードは、さまざまなオプションや引数が、同様の機能を実行する必要がある API を簡略化するための強力なツールです。
 
 ```fsharp
 type Logger() =
@@ -289,31 +289,31 @@ type Logger() =
         ...
 ```
 
-F# では、引数の型ではなく引数の数のオーバー ロードする方が一般的です。
+F# では、引数の型ではなく、引数の数にオーバー ロードする方が一般的です。
 
 #### <a name="hide-the-representations-of-record-and-union-types-if-the-design-of-these-types-is-likely-to-evolve"></a>これらの型のデザインが発展する可能性がある場合、レコード、共用体の型の表現を非表示にします。
 
-オブジェクトの具体的な表現を公開することを回避します。 たとえば、具象の形式を<xref:System.DateTime>値が .NET ライブラリ デザインの外部のパブリック API によって公開されていません。 実行時に、共通言語ランタイムは、実行全体で使用されるコミットの実装を認識します。 ただし、コンパイルされたコードはしない自体、具体的な表現への依存関係を取得します。
+オブジェクトの具体的な表現に表示されないようにします。 具体的な表現など<xref:System.DateTime>値は .NET ライブラリの設計の外部、パブリック API によって公開されません。 実行時に、共通言語ランタイムは、実行全体で使用されるコミットの実装を認識します。 ただし、コンパイル済みのコードはしない自体具体的な表現への依存関係を選択します。
 
 #### <a name="avoid-the-use-of-implementation-inheritance-for-extensibility"></a>機能拡張の実装の継承は使用しないでください。
 
-F# では、実装の継承がほとんど使用されません。 さらに、継承階層は多くの場合、複雑で、新しい必要条件は到着したときに変更するが困難にします。 継承の実装は、互換性とは、問題に最適なソリューションは、インターフェイスの実装など、ポリモーフィズムの設計時に、f# プログラム内で代替手法を取得する必要がありますが、まれなケースの f# では引き続き存在します。
+F# では、実装の継承がほとんど使用されません。 さらに、継承階層は多くの場合、複雑で、新しい要件が到着したときに変更が困難にします。 継承の実装は、互換性を維持し、まれなケースで、問題に最適なソリューションですが、インターフェイスの実装などのポリモーフィズムの設計時に、f# プログラムで代替手法を検索する必要があります f# でも存在します。
 
 ### <a name="function-and-member-signatures"></a>関数とメンバーのシグネチャ
 
-#### <a name="use-tuples-for-return-values-when-returning-a-small-number-of-multiple-unrelated-values"></a>少数の関連のない複数の値を返すときに、戻り値の組を使用します。
+#### <a name="use-tuples-for-return-values-when-returning-a-small-number-of-multiple-unrelated-values"></a>複数の関連のない値の数が少ないを返すときに、戻り値のタプルを使用します。
 
-戻り値の型、タプルを使用しての良い例を次に示します。
+戻り値の型で組を使用する良い例を次に示します。
 
 ```fsharp
 val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
 ```
 
-多くのコンポーネントを含む型を返すか、コンポーネントは、特定の単一のエンティティに関連する、場所は、組ではなく名前付きの型を使用することを検討してください。
+多くのコンポーネントを含む型を返すかを特定できる単一のエンティティには、コンポーネントが関係する場合は、タプルではなく名前付きの型を使用することを検討してください。
 
-#### <a name="use-asynct-for-async-programming-at-f-api-boundaries"></a>使用して`Async<T>`f# API の境界での非同期プログラミング
+#### <a name="use-asynct-for-async-programming-at-f-api-boundaries"></a>使用`Async<T>`f# API の境界での非同期プログラミング
 
-という名前の対応する同期操作があるかどうかは`Operation`を返す、 `T`、このという名前を付けると、非同期処理する必要があります`AsyncOperation`を返す場合`Async<T>`または`OperationAsync`を返す場合`Task<T>`です。 Begin/end メソッドを公開する、よく使用される .NET 型の使用を検討の`Async.FromBeginEnd`拡張メソッドを特定の .NET Api を F# で非同期プログラミング モデルを提供するファサードとして書き込みます。
+という名前の対応する同期操作があるかどうかは`Operation`を返す、 `T`、非同期操作を指定する必要がありますし、`AsyncOperation`返された場合`Async<T>`または`OperationAsync`返された場合`Task<T>`します。 Begin/end のメソッドを公開に一般的な .NET 型を使用を検討してください`Async.FromBeginEnd`.NET Api を f# 非同期プログラミング モデルを提供するファサードとして拡張メソッドを記述します。
 
 ```fsharp
 type SomeType =
@@ -329,45 +329,13 @@ type System.ServiceModel.Channels.IInputChannel with
 
 ### <a name="exceptions"></a>例外
 
-例外は、.NET の例外つまり、する必要がありますいない頻繁に発生実行時にします。 場合に、含まれている情報は重要です。 例外は、コア .NET; のファースト クラスの概念次のように、例外のアプリケーションを適切なコンポーネントのインターフェイスの設計の一部として使用するため it です。
-
-#### <a name="follow-the-net-guidelines-for-exceptions"></a>例外、.NET のガイドラインに従う
-
-[.NET ライブラリ デザイン ガイドライン](../../standard/design-guidelines/exceptions.md)のすべての .NET プログラミングのコンテキストでの例外の使用上のすばらしいアドバイスを提供します。 これらのガイドラインの一部としては。
-
-* 通常の制御フローの例外を使用しないでください。 この手法は OCaml などの言語で使用される多くの場合、これはバグが発生しやすくし、.NET で効率的なことができます。 代わりに、検討を返す、`None`オプションの失敗の原因、一般的なまたは予期される出現する位置を示す値。
-
-* 関数が正しく使用されていないときに、コンポーネントによってスローされる例外を文書化します。
-
-* 可能であれば、システムの名前空間から既存の例外を使用します。 回避<xref:System.ApplicationException>ことができます。
-
-* スローしないで<xref:System.Exception>ことをユーザー コードにはエスケープするときにします。 これは、使用しないが含まれています。 `failwith`、 `failwithf`、スクリプトで使用すると、開発中コード用の便利な関数は、より具体的な種類の例外がスローされることを優先するための f# ライブラリ コードから削除するかがいます。
-
-* 使用して`nullArg`、 `invalidArg`、および`invalidOp`をスローするためのメカニズムとして<xref:System.ArgumentNullException>、 <xref:System.ArgumentException>、および<xref:System.InvalidOperationException>適切な場合です。
-
-#### <a name="consider-using-option-values-for-return-types-when-failure-is-not-an-exceptional-scenario"></a>エラーが例外的なシナリオではない場合に戻り値の型のオプションの値を使用してください。
-
-例外に .NET アプローチはことがあります「例外的な」です。つまり、それらを実行する頻度が比較的低い。 ただし、一部の操作 (たとえば、テーブルを検索) が頻繁に失敗する可能性があります。 F# のオプションの値は、これらの操作の戻り値の型を表すための優れた方法です。 これらの操作は、通常、名のプレフィックス"try"で開始します。
-
-```fsharp
-// bad: throws exception if no element meets criteria
-member this.FindFirstIndex(pred : 'T -> bool) : int =
-    ...
-
-// bad: returns -1 if no element meets criteria
-member this.FindFirstIndex(pred : 'T -> bool) : int =
-    ...
-
-// good: returns None if no element meets criteria
-member this.TryFindFirstIndex(pred : 'T -> bool) : int option =
-    ...
-```
+参照してください[エラー管理](conventions.md#error-management)に、例外、結果、およびオプションの適切な使用について説明します。
 
 ### <a name="extension-members"></a>拡張メンバー
 
-#### <a name="carefully-apply-f-extension-members-in-f-to-f-components"></a>F# で f# 拡張メンバーを慎重に適用にする-f# コンポーネント
+#### <a name="carefully-apply-f-extension-members-in-f-to-f-components"></a>F# での f# の拡張メンバーを注意深く適用-に-f# コンポーネント
 
-F# の拡張メンバー一般にのみ使用してくださいのほとんどでは、そのモードの使用の種類に関連付けられた組み込みの操作のクロージャに含まれる操作。 1 つの一般的な用途は、さまざまな .NET 型の f# 慣用は Api を提供します。
+F# の拡張メンバーは、通常のみ使用のほとんどの使用のモードの種類に関連付けられた組み込みの操作のクロージャに含まれる操作。 一般的な用途の 1 つはさまざまな .NET 型の f# 慣用 Api を提供することです。
 
 ```fsharp
 type System.ServiceModel.Channels.IInputChannel with
@@ -382,9 +350,9 @@ type System.Collections.Generic.IDictionary<'Key,'Value> with
 
 ### <a name="union-types"></a>共用体の型
 
-#### <a name="use-discriminated-unions-instead-of-class-hierarchies-for-tree-structured-data"></a>クラスの階層構造ではなくツリー構造のデータの判別共用体を使用します。
+#### <a name="use-discriminated-unions-instead-of-class-hierarchies-for-tree-structured-data"></a>判別共用体をクラスの階層構造ではなくツリー構造のデータの使用します。
 
-ツリーのような構造体は、再帰的に定義されています。 これは、継承を使用して不適切な判別共用体で洗練されたです。
+ツリー状の構造体は、定義されている再帰的にします。 これは、継承、厄介なが判別共用体で洗練されました。
 
 ```fsharp
 type BST<'T> =
@@ -392,17 +360,17 @@ type BST<'T> =
     | Node of 'T * BST<'T> * BST<'T>
 ```
 
-判別共用体のツリーのようなデータを表すも使用するパターン マッチで exhaustiveness メリットを享受できます。
+判別共用体のツリーのようなデータを表すではパターン マッチングで exhaustiveness からメリットを得ることもできます。
 
-#### <a name="use-requirequalifiedaccess-on-union-types-whose-case-names-are-not-sufficiently-unique"></a>使用して`[<RequireQualifiedAccess>]`に名前を持つケースが十分に一意ではない共用体の型
+#### <a name="use-requirequalifiedaccess-on-union-types-whose-case-names-are-not-sufficiently-unique"></a>使用`[<RequireQualifiedAccess>]`で名前を持つケースが十分に一意でない共用体の型
 
-判別共用体ケースなどの別の意味のわかりやすい名前を同じ名前がここでは、ドメインで気づいたら可能性があります。 使用することができます`[<RequireQualifiedAccess>]`トリガーの順序に依存してにシャドウによる混乱を招くエラーを回避するために、ケースの名前を区別するために`open`ステートメント
+同じ名前が判別された共用体ケースなどのさまざまなもののわかりやすい名前をドメインでわかった可能性があります。 使用することができます`[<RequireQualifiedAccess>]`トリガーの順序に依存にシャドウによる混乱を招くエラーを回避するために名前の大文字と小文字を区別する`open`ステートメント
 
 #### <a name="hide-the-representations-of-discriminated-unions-for-binary-compatible-apis-if-the-design-of-these-types-is-likely-to-evolve"></a>これらの型のデザインが発展する可能性がある場合、バイナリの互換性のある Api の判別共用体の表現を非表示にします。
 
-共用体の型は、f# パターン マッチ フォームの簡潔なプログラミング モデルに依存します。 前述のように、これらの型のデザインが発展する可能性がある場合は、具体的なデータ表現を漏洩を避ける必要があります。
+共用体の型は、f# のパターンに一致するフォームの簡潔なプログラミング モデルに依存します。 前述のように、これらの型のデザインが発展する可能性がある場合は、具体的なデータ表現を漏洩を避ける必要があります。
 
-たとえば、判別共用体の形式を非表示にできるプライベートまたは内部の宣言を使用してまたは署名ファイルを使用します。
+プライベートまたは内部の宣言を使用して判別共用体の表現を隠すことが、または署名ファイルを使用しています。
 
 ```fsharp
 type Union =
@@ -411,15 +379,15 @@ type Union =
     | CaseB of string
 ```
 
-無秩序判別共用体を表示する場合があります、バージョンにハード ライブラリ ユーザー コードを分断することがなく。 代わりに、型の値に一致するパターンを許可するように 1 つまたは複数のアクティブなパターンを公開することを検討してください。
+判別共用体を無差別に開示する場合した方のバージョンにハード ライブラリ ユーザー コードを損なうことがなく。 代わりに、型の値に一致するパターンを許可するように 1 つまたは複数のアクティブ パターンを明らかに検討してください。
 
 アクティブ パターンでは、f# 共用体の型を直接公開することを回避しながらに一致するパターンを F# でコンシューマーに提供する別の方法を提供します。
 
-### <a name="inline-functions-and-member-constraints"></a>インライン関数とメンバーの制約
+### <a name="inline-functions-and-member-constraints"></a>インライン関数とメンバー制約
 
-#### <a name="define-generic-numeric-algorithms-using-inline-functions-with-implied-member-constraints-and-statically-resolved-generic-types"></a>暗黙的なメンバー制約と静的に解決されたジェネリック型とインライン関数を使用して、ジェネリックな数値アルゴリズムを定義します。
+#### <a name="define-generic-numeric-algorithms-using-inline-functions-with-implied-member-constraints-and-statically-resolved-generic-types"></a>暗黙的なメンバー制約とジェネリック型を静的に解決されるインライン関数を使用して、汎用的な数値アルゴリズムを定義します。
 
-算術メンバー制約と f# 比較制約は、f# のプログラミング用の標準はします。 次に例を示します。
+算術メンバー制約と f# 比較の制約は、f# プログラミングの標準です。 次に例を示します。
 
 ```fsharp
 let inline highestCommonFactor a b =
@@ -442,53 +410,53 @@ val inline highestCommonFactor : ^T -> ^T -> ^T
 
 これは、数値演算ライブラリ内のパブリック API の適切な関数です。
 
-#### <a name="avoid-using-member-constraints-to-simulate-type-classes-and-duck-typing"></a>型のクラスとダック」と入力をシミュレートするためにメンバー制約は使用しないでください。
+#### <a name="avoid-using-member-constraints-to-simulate-type-classes-and-duck-typing"></a>型のクラスとアヒル型定義をシミュレートするためにメンバー制約は使用しないでください。
 
-「入力ダック」をシミュレートすることは f# メンバー制約を使用します。 ただし、構成するメンバーを使用してこのではなく一般的なを f# で使用する必要があります-に、f# ライブラリ デザインします。 これは、未知または標準の暗黙的な制約に基づいてライブラリ デザインになり強い特定のフレームワークを 1 つのパターンに関連付けられたユーザー コードが発生する傾向があるためです。
+「ダック タイピング」をシミュレートすることは f# メンバー制約を使用します。 ただし、メンバーを使用してこのにない全般を f# で使用する必要があります-に-f# ライブラリ設計します。 これは、未知または標準の暗黙的な制約に基づいてライブラリ設計を強いと特定のフレームワークを 1 つのパターンに関連付けられていますが、ユーザー コードが発生する傾向があるためにです。
 
-さらに、この方法でメンバー制約が多用は非常に長いコンパイル時間につながる可能性があります。
+さらに、非常に長いコンパイル時間の結果としてこの方法でメンバーの制約を頻繁に使用される可能性があります。
 
 ### <a name="operator-definitions"></a>演算子の定義
 
-#### <a name="avoid-defining-custom-symbolic-operators"></a>シンボリック カスタムの演算子を定義しないように
+#### <a name="avoid-defining-custom-symbolic-operators"></a>シンボリック カスタムの演算子を定義しないでください。
 
-カスタム演算子は、一部の状況で不可欠な機能および実装コードの本文内で表記デバイスが非常に有用です。 ライブラリの新規ユーザーの名前付き関数でを使いやすくする多くの場合です。 さらに、カスタム シンボリック演算子は、ドキュメント、しにくいことができ、ユーザーでは検索され、検索エンジンの既存の制限のための演算子に関するヘルプを検索することが難しくします。
+カスタム演算子はいくつかの状況で不可欠な実装コードの大きな本文内で非常に有用な表記のデバイスです。 ライブラリの新しいユーザーの名前付きの関数は使いやすく多くの場合です。 さらに、ユーザーを検索演算子、IDE と検索エンジンの既存の制限のためのヘルプを検索することが難しく、シンボリック カスタムの演算子をドキュメントにハードことができます。
 
-その結果、という名前の関数、およびメンバーとして、機能を公開し、さらに、ドキュメントとすることのコストの認知表記の利点を上回る場合する場合にのみにこの機能のための演算子を公開することをお勧めします。
+その結果、名前付きの関数と、メンバーとして、機能を公開し、表記の利点がありますが、ドキュメントと cognitive コストのことを上回る場合にのみ、この機能のための演算子をさらに公開することをお勧めします。
 
 ### <a name="units-of-measure"></a>測定単位
 
-#### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>F# コードで追加した型の安全性の単位を慎重に使用します。
+#### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>F# コードで追加された型の安全性の測定単位を慎重に使用します。
 
-他の .NET 言語で表示したときに、メジャーの単位の追加入力情報が消去されます。 .NET コンポーネント、ツール、およびリフレクションが単位数 san の種類が表示される注意してください。 たとえば、c# コンシューマーは参照`float`なく`float<kg>`です。
+他の .NET 言語で表示したときに、メジャーの単位の追加入力情報が消去されます。 .NET コンポーネント、ツール、およびリフレクションは型-san の単位で表示されますが注意します。 たとえば、c# のコンシューマーが表示されます`float`なく`float<kg>`します。
 
 ### <a name="type-abbreviations"></a>型略称
 
 #### <a name="carefully-use-type-abbreviations-to-simplify-f-code"></a>型の省略形を使用して慎重に f# コードを簡略化
 
-.NET コンポーネント、ツール、およびリフレクション型の省略名は表示されません。 型の省略形の重要な使用法には、ドメインが表示されるより複雑実際にが、コンシューマーが混乱することもできます。
+.NET コンポーネント、ツール、およびリフレクションでは、型の省略名は表示されなくなります。 型の省略形の使用量を大幅には、ドメインの表示よりも複雑になるほど実際には、コンシューマーが混乱することもできます。
 
 #### <a name="avoid-type-abbreviations-for-public-types-whose-members-and-properties-should-be-intrinsically-different-to-those-available-on-the-type-being-abbreviated"></a>メンバーとプロパティが省略されている型で使用するものは本質的に異なる必要がありますのパブリック型の型の省略形を回避します。
 
-この場合、省略されている型は、定義されている実際の型の表現についてあまりが表示されます。 代わりに、クラス型または単一ケースの判別共用体での省略形の折り返しを検討してください (または、パフォーマンスが重要な場合は、構造体の型を使用して、省略形をラップすることを検討してください)。
+この場合、省略されている型は定義されている実際の型の表現についてはあまりが表示されます。 代わりに、クラス型または単一ケースの判別共用体の省略形の折り返しを検討してください (または、パフォーマンスが重要な場合は、構造体の型を使用して省略形をラップすることを検討してください)。
 
-たとえば、することは避けてなど、F# でマップの特殊なケースとして、複数のマップを定義します。
+たとえば、複数のマップの例の f# マップの特殊なケースとして定義することも考えは。
 
 ```fsharp
 type MultiMap<'Key,'Value> = Map<'Key,'Value list>
 ```
 
-ただし、この型でドット付き表記の論理操作は、マップでは、操作と同じではありません: などが妥当 lookup 操作にマップします。[キー] 例外が発生するのではなく、辞書にキーがない場合は、空のリストを返します。
+ただし、この種類でドット表記の論理操作でないマップでの操作と同じ – たとえば、lookup 操作にマップする妥当なは。[キー] に返された例外を発生させるのではなく、辞書にキーがない場合は、空のリスト。
 
-## <a name="guidelines-for-libraries-for-use-from-other-net-languages"></a>他の .NET 言語から使用するためのライブラリに関するガイドライン
+## <a name="guidelines-for-libraries-for-use-from-other-net-languages"></a>他の .NET 言語から使用するためのライブラリのガイドライン
 
-他の .NET 言語から使用するためのライブラリをデザインする場合に従う必要が、 [.NET ライブラリ デザイン ガイドライン](../../standard/design-guidelines/index.md)です。 このドキュメントでこれらのライブラリは f# ではなく、標準の .NET ライブラリとしてというラベルが付いた-制限なし構築 f# を使用するライブラリが直面しています。 標準の .NET ライブラリのデザインには、f# の使用を最小限に抑えることによって、.NET Framework の残りの部分と一貫性のある使い慣れたと慣用 Api を提供することを意味のパブリック API で特定のコンス トラクターです。 ルールは、次のセクションで説明します。
+他の .NET 言語から使用するためのライブラリを設計するときに準拠する重要なは、 [.NET ライブラリのデザイン ガイドライン](../../standard/design-guidelines/index.md)します。 このドキュメントでは、これらのライブラリを f# ではなく、標準の .NET ライブラリとしてラベル付けします。-f# を使用してライブラリに接続する、制限なく構築します。 Vanilla .NET ライブラリのデザインには、f# の使用を最小限に抑えることで親しみやすく、慣用 Api の .NET Framework の残りの部分と一貫性を提供することを意味のパブリック API で特定のコンス トラクター。 ルールは、次のセクションについて説明します。
 
-### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Namespace と型のデザイン (の他の .NET 言語から使用するライブラリ)
+### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>(他の .NET 言語から使用するためのライブラリ) の Namespace および型の設計
 
-#### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>コンポーネントのパブリック API への .NET の名前付け規則を適用します。
+#### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>コンポーネントのパブリック API を .NET の名前付け規則を適用します。
 
-省略名および .NET の大文字と小文字のガイドラインを使用する特別な注意してください。
+省略名と、.NET の大文字と小文字のガイドラインを使用する特別な注意してください。
 
 ```fsharp
 type pCoord = ...
@@ -498,13 +466,13 @@ type PolarCoordinate = ...
     member this.Theta = ...
 ```
 
-#### <a name="use-namespaces-types-and-members-as-the-primary-organizational-structure-for-your-components"></a>名前空間、型、およびメンバーをコンポーネントの主要な組織構造として使用します。
+#### <a name="use-namespaces-types-and-members-as-the-primary-organizational-structure-for-your-components"></a>主要な組織構造として、コンポーネントの名前空間、型、およびメンバーを使用します。
 
-パブリックな機能を含むすべてのファイルの先頭でなければなりません、`namespace`宣言、および名前空間で公開されたエンティティだけに、型を指定する必要があります。 F# モジュールを使用しないでください。
+パブリックな機能を含むすべてのファイルで始まり、`namespace`宣言、および名前空間でのみパブリックに公開されたエンティティに、型を指定する必要があります。 F# のモジュールを使用しないでください。
 
-実装コードは、ユーティリティ型、およびユーティリティ関数を保持するためにパブリックでないモジュールを使用します。
+実装コード、ユーティリティの種類、およびユーティリティ関数を保持するのにには、パブリックでないモジュールを使用します。
 
-静的な型必要がありますよりも優先される、モジュール API の将来の展開のオーバー ロードおよびその他の .NET API の設計概念 f# モジュール内では使用できませんの使用を許可するようにします。
+静的な型に優先されますモジュールを可能になる API の今後の進化 f# モジュール内で使用することはできませんをオーバー ロード、およびその他の .NET API 設計概念を使用するとします。
 
 たとえば、次のパブリック API: の代わりに
 
@@ -529,11 +497,11 @@ type Utilities =
     static member Add(x,y,z) = x + y + z
 ```
 
-#### <a name="use-f-record-types-in-vanilla-net-apis-if-the-design-of-the-types-wont-evolve"></a>型のデザインが変化しない場合は、バニラ .NET Api で f# レコード型を使用します。
+#### <a name="use-f-record-types-in-vanilla-net-apis-if-the-design-of-the-types-wont-evolve"></a>型のデザインが進化しない場合は、バニラ .NET Api で f# レコード型を使用してください。
 
-F# のレコードの種類は、単純な .NET クラスにコンパイルされます。 これらは、一部の単純で安定した種類の Api に適しています。 使用を検討する必要があります、`[<NoEquality>]`と`[<NoComparison>]`属性のインターフェイスの自動生成を抑制します。 また、パブリック フィールドとしてこれらの公開バニラ .NET Api で変更可能なレコードのフィールドは使用しないでください。 常にクラスが、API の将来の進化をより柔軟なオプションを提供するかどうかを検討してください。
+F# のレコードの種類は、単純な .NET クラスをコンパイルします。 これらは Api のいくつか単純で安定した型に適しています。 使用を検討する必要があります、`[<NoEquality>]`と`[<NoComparison>]`インターフェイスの自動生成を抑制する属性。 また、パブリック フィールドとしてこれらの公開バニラ .NET Api の変更可能なレコードのフィールドを使用しないでください。 常にクラスが API の将来の進化をより柔軟なオプションを提供するかどうかを検討してください。
 
-たとえば、次の f# コードは、c# コンシューマーにパブリック API を公開します。
+たとえば、次の f# コードは、c# コンシューマーへのパブリック API を公開します。
 
 F# の場合:
 
@@ -555,11 +523,11 @@ public sealed class MyRecord
 }
 ```
 
-#### <a name="hide-the-representation-of-f-union-types-in-vanilla-net-apis"></a>F# の共用体型バニラ .NET Api の形式を非表示にします。
+#### <a name="hide-the-representation-of-f-union-types-in-vanilla-net-apis"></a>F# 共用体型バニラ .NET Api での表現を非表示にします。
 
-F# 共用体型一般的に使用されないコンポーネントの境界を越えて f# であってに-f# コーディングします。 これらは、コンポーネント、およびライブラリ内で内部的に使用するときに、優れた実装デバイスです。
+F# の共用体型されません一般的に使用されるコンポーネントの境界を越えても f#-に-f# コーディングします。 コンポーネントとライブラリ内で内部的に使用する場合は、優れた実装デバイスです。
 
-バニラ .NET API をデザインする場合は、プライベート宣言または署名ファイルを使用して、union 型の表現を非表示にすることを検討します。
+Vanilla .NET API を設計するときは、プライベート宣言または署名ファイルを使用して、union 型の表現を非表示を検討してください。
 
 ```fsharp
 type PropLogic =
@@ -569,7 +537,7 @@ type PropLogic =
     | True
 ```
 
-目的を提供する、メンバーを持つ共用体の表現を内部的に使用する型を追加することも可能性があります。ネットワークに接続された API です。
+提供を目的に、メンバーと共用体の表現を内部的に使用する型を追加することも可能性があります。ネットワークに接続する API です。
 
 ```fsharp
 type PropLogic =
@@ -589,15 +557,15 @@ type PropLogic =
     static member CreateAnd(a,b) = And(a,b)
 ```
 
-#### <a name="design-gui-and-other-components-using-the-design-patterns-of-the-framework"></a>GUI の設計やフレームワークのデザイン パターンを使用して他のコンポーネント
+#### <a name="design-gui-and-other-components-using-the-design-patterns-of-the-framework"></a>GUI を設計およびフレームワークの設計パターンを使用して他のコンポーネント
 
-多くのさまざまなフレームワークは WinForms、WPF では、ASP.NET などの .NET 内で使用できます。 これらのフレームワークで使用するためのコンポーネントをデザインする場合は、それぞれの名前付けと設計の規則を使用してください。 たとえば、WPF のプログラミングでは、WPF のパターンのデザインをデザインするクラスを採用します。 ユーザー インターフェイスのプログラミング モデルでは、イベントなどのデザイン パターンを使用しておりなどのコレクションの通知に基づく<xref:System.Collections.ObjectModel>です。
+多くのさまざまなフレームワークは WinForms、WPF、および ASP.NET などの .NET 内で使用できます。 これらのフレームワークで使用するためのコンポーネントをデザインする場合は、それぞれの名前付けとデザインの規則を使用してください。 たとえば、wpf プログラミングでは、クラスを設計するための WPF 設計パターンを採用します。 ユーザー インターフェイス プログラミング モデルの場合、イベントなどの設計パターンを使用しなどの通知ベースのコレクションにある<xref:System.Collections.ObjectModel>します。
 
-### <a name="object-and-member-design-for-libraries-for-use-from-other-net-languages"></a>オブジェクトとメンバーのデザイン (の他の .NET 言語から使用するライブラリ)
+### <a name="object-and-member-design-for-libraries-for-use-from-other-net-languages"></a>(他の .NET 言語から使用するためのライブラリ) のオブジェクトとメンバーのデザイン
 
 #### <a name="use-the-clievent-attribute-to-expose-net-events"></a>CLIEvent 属性を使用して、.NET イベントを公開するには
 
-構築、`DelegateEvent`で特定の .NET デリゲート オブジェクトを取得する型と`EventArgs`(ではなく、 `Event`、使用する、`FSharpHandler`既定では型) を他の .NET 言語の使い慣れた方法でイベントが発行するためです。
+構築、`DelegateEvent`特定の .NET を使用したデリゲート オブジェクトを取得する型と`EventArgs`(なく`Event`、使用する、`FSharpHandler`既定で種類) イベントが他の .NET 言語を使い慣れた方法で公開されるため。
 
 ```fsharp
 type MyBadType() =
@@ -620,7 +588,7 @@ type MyGoodType() =
 
 #### <a name="expose-asynchronous-operations-as-methods-which-return-net-tasks"></a>.NET のタスクを返すメソッドとしての非同期操作を公開します。
 
-タスクは、アクティブな非同期計算を表す .NET で使用されます。 タスクは、一般的な f# より小さいアレンジ`Async<T>`オブジェクト、タスクの「は既に実行中」を表すされ、並列の構成を実行するか、キャンセルの信号、およびその他の伝達を非表示にする方法で同時に構成することはできませんコンテキスト パラメーターです。
+タスクは、アクティブな非同期計算を表す .NET で使用されます。 タスクは、一般的な f# よりも小さい合成`Async<T>`オブジェクトの場合、「は既に実行中」のタスクを表すされ、並列の合成を実行するか、キャンセルの信号、およびその他の伝達を非表示にする方法で一緒に構成することはできませんコンテキスト パラメーター。
 
 ただし、この場合でもタスクを返すメソッドは .NET での非同期プログラミングの標準的な表現です。
 
@@ -633,7 +601,7 @@ type MyType() =
     member this.ComputeAsync(x) = compute x |> Async.StartAsTask
 ```
 
-多くの場合も、明示的なキャンセル トークンをそのまま使用します。
+多くの場合は、明示的なキャンセル トークンをそのまま使用することもします。
 
 ```fsharp
 /// A type in a component designed for use from other .NET languages
@@ -642,11 +610,11 @@ type MyType() =
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
-#### <a name="use-net-delegate-types-instead-of-f-function-types"></a>F# 関数型ではなく .NET 型のデリゲートを使用します。
+#### <a name="use-net-delegate-types-instead-of-f-function-types"></a>F# 関数型ではなく .NET デリゲート型を使用します。
 
-ここで「f# 関数型」という意味では「矢印」型と同様に`int -> int`です。
+ここで「f# 関数型」という意味で「矢印」種類`int -> int`します。
 
-代わりにします。
+これには。
 
 ```fsharp
 member this.Transform(f:int->int) =
@@ -660,13 +628,13 @@ member this.Transform(f:Func<int,int>) =
     ...
 ```
 
-として f# 関数型が表示されます`class FSharpFunc<T,U>`他の .NET 言語にはデリゲート型を理解している言語機能とツールには適しています。 .NET Framework 3.5 以降を対象とする上位のメソッドを作成するときに、`System.Func`と`System.Action`デリゲートは、低摩擦方法でこれらの Api を使用する .NET 開発者に公開する右の Api です。 (.NET Framework 2.0 を対象とする場合、システム定義のデリゲート型は制限が多くなどの定義済みのデリゲート型の使用を検討`System.Converter<T,U>`または特定のデリゲート型を定義します)。
+として f# 関数型が表示されます`class FSharpFunc<T,U>`他の .NET 言語にはデリゲート型を理解できる言語機能とツールには適しています。 .NET Framework 3.5 以降を対象とする上位のメソッドを作成するときに、`System.Func`と`System.Action`デリゲートは、問題の少ない方法でこれらの Api を使用する .NET 開発者に公開する適切な Api。 (システム定義のデリゲート型がより限定的な .NET Framework 2.0 をターゲットにした場合など、定義済みのデリゲート型の使用を検討する必要が`System.Converter<T,U>`または特定のデリゲート型を定義します)。
 
-反対に、.NET のデリゲートが f# の自然な-ライブラリが直面している (f# で、次のセクションを参照してください-ライブラリが直面している)。 高階メソッドの標準の .NET ライブラリを開発するときに一般的な実装方法はすべて f# 関数型を使用して実装を作成し、実際の f# の最上部のシン ファサードとしてデリゲートを使用してパブリック API を作成、その結果、します。実装です。
+一方で、.NET のデリゲートではない f# のライブラリに接続する (f# で、次のセクションを参照してください-ライブラリに接続する)。 すべて f# 関数型を使用して実装を作成し、一番上にある実際の f# シン ファサードとしてデリゲートを使用してパブリック API を作成する標準の .NET ライブラリの上位のメソッドを開発する際に一般的な実装方法は、結果として、します。実装です。
 
-#### <a name="use-the-trygetvalue-pattern-instead-of-returning-f-option-values-and-prefer-method-overloading-to-taking-f-option-values-as-arguments"></a>F# オプション値を返す代わりに、TryGetValue パターンを使用して、引数としての f# のオプション値を取得するメソッドのオーバー ロードを優先
+#### <a name="use-the-trygetvalue-pattern-instead-of-returning-f-option-values-and-prefer-method-overloading-to-taking-f-option-values-as-arguments"></a>F# オプションの値を返す代わりに、TryGetValue パターンを使用し、引数としての f# のオプション値を取得するメソッドのオーバー ロードを優先
 
-Api で f# オプションの種類の使用の一般的なパターンの適切な標準の .NET を使用して .NET Api バニラに実装されている手法をデザインします。 F# のオプションの値を返す代わりにブール型の戻り値の型と"TryGetValue"パターンと同様に out パラメーターを使用して検討してください。 F# オプション値をパラメーターとして使用すると、代わりに、メソッドのオーバー ロードまたは省略可能な引数を使用を検討してください。
+Api で f# オプションの種類の使用の一般的なパターンはより優れたバニラで実装された標準の .NET を使用した .NET Api の設計手法です。 F# のオプションの値を返す代わりに、ブール型の戻り値の型と"TryGetValue"パターンのように out パラメーターを使用して検討してください。 F# オプション値をパラメーターとしてではなく、メソッドのオーバー ロードまたは省略可能な引数を使用してを検討してください。
 
 ```fsharp
 member this.ReturnOption() = Some 3
@@ -685,11 +653,11 @@ member this.ParamOverload(x : int) = x
 member this.ParamOverload(x : int, y : int) = x + y
 ```
 
-#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>使用して、.NET コレクション インターフェイス型 IEnumerable\<T\>および IDictionary\<キー、値\>パラメーターと戻り値
+#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>使用して、.NET コレクション インターフェイス型の IEnumerable\<T\>と IDictionary\<キー, Value\>パラメーターと戻り値
 
-.NET の配列などの具体的なコレクション型の使用を避ける`T[]`、f# の型`list<T>`、`Map<Key,Value>`と`Set<T>`などの .NET の具体的なコレクション型と`Dictionary<Key,Value>`です。 .NET ライブラリのデザイン ガイドラインのようなさまざまなコレクション型を使用するに関する有益なアドバイスがある`IEnumerable<T>`です。 配列の一部を使用して (`T[]`) は状況によっては、パフォーマンス grounds を許容します。 特にことに注意してください`seq<T>`だけ、f# には別名が`IEnumerable<T>`、したがって seq は多くの場合、バニラ .NET API の適切な型とします。
+.NET の配列などの具体的なコレクション型の使用を避けるため`T[]`、f# 型`list<T>`、`Map<Key,Value>`と`Set<T>`などの .NET の具体的なコレクション型と`Dictionary<Key,Value>`します。 .NET ライブラリのデザイン ガイドラインがあるなどのさまざまなコレクション型を使用するタイミングに関する優れたアドバイス`IEnumerable<T>`します。 配列のいくつかの使用 (`T[]`) は状況によっては、パフォーマンスの理由で許容されます。 特に注意`seq<T>`同様、f# のエイリアスは`IEnumerable<T>`、したがって seq は多くの場合、バニラ .NET API の適切な型。
 
-代わりに f# の一覧を示します。
+代わりに f# の一覧です。
 
 ```fsharp
 member this.PrintNames(names : string list) =
@@ -703,9 +671,9 @@ member this.PrintNames(names : seq<string>) =
     ...
 ```
 
-#### <a name="use-the-unit-type-as-the-only-input-type-of-a-method-to-define-a-zero-argument-method-or-as-the-only-return-type-to-define-a-void-returning-method"></a>引数を持たないメソッドを定義するメソッドの唯一の入力の型としてのユニットの種類を使用するか、唯一として void を返すメソッドを定義する型を返す
+#### <a name="use-the-unit-type-as-the-only-input-type-of-a-method-to-define-a-zero-argument-method-or-as-the-only-return-type-to-define-a-void-returning-method"></a>メソッドの唯一の入力型としてユニットの種類を使用して、引数を持たないメソッドを定義またはのみとして void を返すメソッドを定義する型を返す
 
-Unit 型の他の使用は避けてください。 これらは、適切です。
+ユニットの種類の他の使用を避けてください。 これらは、適切です。
 
 ```fsharp
 ✔ member this.NoArguments() = 3
@@ -713,15 +681,15 @@ Unit 型の他の使用は避けてください。 これらは、適切です�
 ✔ member this.ReturnVoid(x : int) = ()
 ```
 
-これは、正しくありません。
+これには。
 
 ```fsharp
 member this.WrongUnit( x:unit, z:int) = ((), ())
 ```
 
-#### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>標準の .NET API 境界での null 値を確認
+#### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>標準の .NET API の境界上で null 値のチェック
 
-F# 実装コードは、変更できないデザイン パターンと f# の型の null リテラルの使用上の制限のためより少ないの null 値を持つ傾向があります。 他の .NET 言語多くの場合、値として null より頻繁に使用します。 このため、バニラ .NET API を公開する f# コードを API 境界で null のパラメーターをチェックし、これらの値が f# 実装コードをより深くをフローさせることを防止します。 `isNull`関数またはパターンに一致する、`null`パターンを使用することができます。
+F# 実装コードに不変の設計パターンと f# の型の null リテラルの使用に関する制約のため、null の値が少ない傾向にあります。 他の .NET 言語多くの場合、値として null より頻繁に使用します。 このため、バニラ .NET API を公開する f# コードを API の境界の null のパラメーターを確認し、これらの値が f# 実装コードに深くを送信するを防ぐ。 `isNull`関数またはパターンに一致する、`null`パターンを使用できます。
 
 ```fsharp
 let checkNonNull argName (arg: obj) =
@@ -734,25 +702,25 @@ let checkNonNull` argName (arg: obj) =
     else ()
 ```
 
-#### <a name="avoid-using-tuples-as-return-values"></a>戻り値としての組は使用しないでください。
+#### <a name="avoid-using-tuples-as-return-values"></a>戻り値として組を使用しないでください。
 
-代わりに、集計のデータを保持するか、out パラメーターを使用して複数の値を返す名前付きの型を返すことを好みます。 組と構造体の組 .NET に存在して (c# の言語のサポート構造体の組を含む)、最もよくが用意されて理想的と予想される API .NET 開発者向けです。
+代わりに、集計のデータを保持するか、複数の値を返す出力パラメーターを使用して名前付きの型を返すことを好みます。 タプルと構造体のタプルは、.NET に存在 (c# の構造体のタプルの言語サポートを含む)、最もよくが用意されて、理想的なと予想される API .NET 開発者向け。
 
-#### <a name="avoid-the-use-of-currying-of-parameters"></a>パラメーターのカリー化は使用しないでください。
+#### <a name="avoid-the-use-of-currying-of-parameters"></a>パラメーターのカリー化を使用をしません。
 
-代わりに、呼び出し規約 .NET``Method(arg1,arg2,…,argN)``です。
+代わりに、.NET の呼び出し規約を使用して、``Method(arg1,arg2,…,argN)``します。
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str
 ```
 
-ヒント: 任意の .NET 言語から使用するためのライブラリをデザインする場合はありません、実際にいくつか実験的な c# および Visual Basic プログラミングことを確認する「フィール右」これらの言語から、ライブラリの代用。 また、ライブラリと、ドキュメントが開発者に期待どおりに表示されていることを確認するのに .NET Reflector や Visual Studio のオブジェクト ブラウザーなどのツールを使用することができます。
+ヒント: 任意の .NET 言語から使用するためのライブラリをデザインする場合はありません、実際にいくつか実験的な c# および Visual Basic プログラミング「フィール右」これらの言語、ライブラリを確実に置き換えます。 ライブラリとそのドキュメントが開発者に期待どおりに表示されていることを確認するのに、.NET Reflector Visual Studio オブジェクト ブラウザーなどのツールを使用することもできます。
 
 ## <a name="appendix"></a>付録
 
 ### <a name="end-to-end-example-of-designing-f-code-for-use-by-other-net-languages"></a>他の .NET 言語で使用するために f# コードの設計のエンド ツー エンドの例
 
-次のクラスを考えます。
+次のクラスを検討してください。
 
 ```fsharp
 open System
@@ -780,7 +748,7 @@ type Point1 =
     member Radius : double
 ```
 
-他の .NET 言語を使用するプログラマがこの f# 型の表示方法を見てをみましょう。 たとえば、おおよそ c#「署名」とおりです。
+この f# 型が別の .NET 言語を使用してプログラマに表示する方法を見てをみましょう。 たとえば、おおよそ C#「署名」とおりです。
 
 ```csharp
 // C# signature for the unadjusted Point1 class
@@ -802,15 +770,15 @@ public class Point1
 }
 ```
 
-F# でどのように表すかコンストラクトをここで注目してくださいいくつかの重要な点があります。 例えば:
+F# でどのように表すかコンストラクトをここで注意する重要な点があります。 例えば:
 
-* 引数の名前などのメタデータが保持されています。
+* 引数名などのメタデータが保持されています。
 
-* 2 つの引数を受け取る f# メソッドでは、c# のメソッドに 2 つの引数を受け取ることになります。
+* 2 つの引数を取る f# メソッドでは、2 つの引数を取る c# メソッドになります。
 
-* 関数および一覧は、対応する型が f# ライブラリへの参照になります。
+* 関数とリストは、対応する型が f# ライブラリへの参照になります。
 
-次のコードでは、これらの点を考慮に入れるには、このコードを調整する方法を示します。
+次のコードでは、このコードは、これらの点を考慮に入れてを調整する方法を示します。
 
 ```fsharp
 namespace SuperDuperFSharpLibrary.Types
@@ -854,7 +822,7 @@ type RadialPoint =
     member Radius : double
 ```
 
-C# シグネチャを次に示しますようになりました。
+C# シグネチャは次のように、ようになりました。
 
 ```csharp
 public class RadialPoint
@@ -875,12 +843,12 @@ public class RadialPoint
 }
 ```
 
-修正プログラムは、標準の .NET ライブラリの一部は、次のとおり、この型を使用する準備に対して行われます。
+Vanilla .NET ライブラリの一部は次のように、この型を使用する準備を修正します。
 
-* 複数の名前を調整: `Point1`、 `n`、 `l`、および`f`になった`RadialPoint`、 `count`、 `factor`、および`transform`、それぞれします。
+* いくつかの名前を調整: `Point1`、 `n`、 `l`、および`f`になった`RadialPoint`、 `count`、 `factor`、および`transform`、それぞれします。
 
-* 戻り値の型を使用する`seq<RadialPoint>`の代わりに`RadialPoint list`一覧の構築を使用して、変更することによって`[ ... ]`を使用してシーケンスの構築に`IEnumerable<RadialPoint>`です。
+* 戻り値の型を使用する`seq<RadialPoint>`の代わりに`RadialPoint list`を使用してリストの構築を変更することで`[ ... ]`を使用してシーケンスの構築に`IEnumerable<RadialPoint>`します。
 
 * .NET のデリゲート型を使用する`System.Func`f# 関数型の代わりにします。
 
-これにより、c# コードで使用するより良いまでです。
+これにより、c# コードで使用するよりはるかにします。

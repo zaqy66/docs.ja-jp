@@ -2,12 +2,12 @@
 title: アセンブリとグローバル アセンブリ キャッシュ (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 994498525aed3ebb08f2de7926c7adc2d3d95f56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07ee54fc19abecba5e8335f063277418ede80b36
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320928"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933026"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>アセンブリとグローバル アセンブリ キャッシュ (C#)
 アセンブリは、.NET ベースのアプリケーションの配置、バージョン管理、再利用、アクティベーション スコープ、およびセキュリティ権限の基本単位です。 アセンブリは、実行可能 (.exe) ファイルまたはダイナミック リンク ライブラリ (.dll) ファイルの形を取る、.NET Framework の構成要素です。 それらは、型の実装に関して必要な情報を共通言語ランタイムに提供します。 アセンブリは、機能的な論理的な単位を形成し、連携して動作するように構築された、型とリソースのコレクションと考えることができます。  
@@ -58,5 +58,6 @@ ms.locfileid: "33320928"
  [方法: アセンブリを読み込み、アンロードする (C#)](how-to-load-and-unload-assemblies.md)  
  [方法: ファイルがアセンブリであるかどうかを確認する (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
  [方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [チュートリアル: Visual Studio でマネージ アセンブリからの型を埋め込む (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+ 
+  [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
  [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
