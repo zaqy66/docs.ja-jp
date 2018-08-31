@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457568"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254354"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
 この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージ コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。  
@@ -17,7 +17,7 @@ ms.locfileid: "34457568"
  .NET Framework は、生産性の高いアプリ開発環境です。  強力で安全な言語と豊富なライブラリにより、アプリの開発生産性が高くなります。  ただし、高い生産性には責任が伴います。  .NET Framework のあらゆる機能を使用するするのであれば、必要に応じてコードのパフォーマンスを調整できるようにしておく必要があります。  
   
 ## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>新しいコンパイラのパフォーマンスがアプリに適用される理由  
- .NET コンパイラ プラットフォーム ("Roslyn") チームは、コードのモデリングと分析、ツールの開発、そして Visual Studio でのより充実したコード対応エクスペリエンスの実現のための新たな API を提供するため、C# および Visual Basic コンパイラをマネージ コードで再作成しました。  コンパイラの全体的な書き直しと、新しいコンパイラでの Visual Studio 機能の構築を通して、大規模 .NET Framework アプリや、大量データを処理するアプリに適用できる有用なパフォーマンス情報が明らかになりました。  C# コンパイラについてのこのような情報や例を活用するために、コンパイラについて理解しておく必要はありません。  
+ .NET コンパイラ プラットフォーム ("Roslyn") チームは、コードのモデリングと分析、ツールの開発、そして Visual Studio でのより充実したコード対応エクスペリエンスの実現のための新たな API を提供するため、C# および Visual Basic コンパイラをマネージド コードで再作成しました。  コンパイラの全体的な書き直しと、新しいコンパイラでの Visual Studio 機能の構築を通して、大規模 .NET Framework アプリや、大量データを処理するアプリに適用できる有用なパフォーマンス情報が明らかになりました。  C# コンパイラについてのこのような情報や例を活用するために、コンパイラについて理解しておく必要はありません。  
   
  Visual Studio ではコンパイラ API を使用して、ユーザーに人気のある IntelliSense 機能 (識別子とキーワードの色づけ、構文の入力候補一覧、エラーを示す波線、パラメーターのヒント、コードの問題、コードアクションなど) を作成します。  Visual Studio では、開発者がコードを入力するときや変更するときにこのヘルプが表示されます。コンパイラがコード開発者による編集内容をモデル化している間も、Visual Studio は応答性を維持する必要があります。  
   
@@ -196,7 +196,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...  
 ```  
   
- `WriteFormattedDocComment()` の最初のバージョンでは、配列、複数の部分文字列、トリミングされた部分文字列と空の `params` 配列が割り当てられました。  また、`"///"` の有無が確認されました。  修正後のコードは、インデックス作成のみを使用し、割り当てを行いません。  空白以外の最初の文字を検出し、文字を 1 つずつ調べて文字列が `"///"` で始まっているかどうかを確認します。  この新しいコードは `IndexOfFirstNonWhiteSpaceChar` の代わりに <xref:System.String.TrimStart%2A> を使用し、(指定された開始インデックスより後で) 空白以外の文字が含まれる最初のインデックスを返します。  この修正は完全ではありませんが、完全な解決策として類似の修正を適用する方法がわかります。  コード全体でこの方法を適用することで、`WriteFormattedDocComment()` 内のすべての割り当てを削除できます。  
+ `WriteFormattedDocComment()` の最初のバージョンでは、配列、複数の部分文字列、トリミングされた部分文字列と空の `params` 配列が割り当てられました。  また、`"///"` の有無が確認されました。  修正後のコードは、インデックス作成のみを使用し、割り当てを行いません。  空白以外の最初の文字を検出し、文字を 1 つずつ調べて文字列が `"///"` で始まっているかどうかを確認します。  新しいコードを使用して`IndexOfFirstNonWhiteSpaceChar`の代わりに<xref:System.String.TrimStart%2A>を空白以外の文字が発生します (指定した開始インデックス) の後に最初のインデックスを返します。  この修正は完全ではありませんが、完全な解決策として類似の修正を適用する方法がわかります。  コード全体でこの方法を適用することで、`WriteFormattedDocComment()` 内のすべての割り当てを削除できます。  
   
  **例 4: StringBuilder**  
   
@@ -277,7 +277,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  サイズ制限があるため、この単純なキャッシュ対策は適切なキャッシュ設計に準拠しています。  ただし、元のバージョンよりもコードが増えたため、保守コストも増加します。  このキャッシュ対策を取り入れるのは、パフォーマンスの問題を検出し、PerfView で <xref:System.Text.StringBuilder> 割り当てがその問題の大きな原因であることが示されている場合だけにしてください。  
   
 ### <a name="linq-and-lambdas"></a>LINQ とラムダ  
- 生産性の高い機能を使用するものの、コードがパフォーマンスに大きく影響する場合に、この機能を全体的に変更する必要があることが判明する例として、統合言語クエリ ( LINQ) とラムダ式の使用があります。  
+統合言語クエリ (LINQ)、ラムダ式と組み合わせて、生産性向上機能の例に示します。 ただし、その使用は時間の経過と共にパフォーマンスに大きな影響を与える可能性があり、コードを書き直す必要がある場合があります。
   
  **例 5: ラムダ、List\<T>、および IEnumerable\<T>**  
   
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 最初の行で、[ラムダ式 ](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` がローカル変数 `name` を[閉じ込めます](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)。  つまり、このコードは `predicate` が保持している[デリゲート](~/docs/csharp/language-reference/keywords/delegate.md)にオブジェクトを割り当てる以外に、`name` の値をキャプチャする環境を保持する静的クラスを割り当てます。  コンパイラは次のようなコードを生成します。  
+ 最初の行で、[ラムダ式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [閉じ込め](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)ローカル変数`name`します。  つまり、このコードは `predicate` が保持している[デリゲート](~/docs/csharp/language-reference/keywords/delegate.md)にオブジェクトを割り当てる以外に、`name` の値をキャプチャする環境を保持する静的クラスを割り当てます。  コンパイラは次のようなコードを生成します。  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -341,7 +341,7 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
   
  `symbols` 変数の型は <xref:System.Collections.Generic.List%601> です。  <xref:System.Collections.Generic.List%601> コレクション型は <xref:System.Collections.Generic.IEnumerable%601> を実装し、<xref:System.Collections.Generic.IEnumerator%601> が <xref:System.Collections.Generic.List%601>を使用して実装する列挙子 (`struct` インターフェイス) を適切に定義します。  クラスの代わりに構造体を使用すると、通常ヒープ割り当てが回避されます。ヒープ割り当ては、ガベージ コレクションのパフォーマンスに影響することがあります。  通常、列挙子は言語の `foreach` ループで使用されます。このループは、コール スタックで返される列挙子構造を使用します。  オブジェクトのスペースを確保するためにコール スタック ポインターをインクリメントしても、GC はヒープ割り当てのような影響を受けません。  
   
- 拡張 `FirstOrDefault` 呼び出しの場合、このコードは`GetEnumerator()` に対して <xref:System.Collections.Generic.IEnumerable%601> を呼び出す必要があります。  `symbols` を `enumerable` 型の `IEnumerable<Symbol>` 変数に割り当てると、実際のオブジェクトが <xref:System.Collections.Generic.List%601> であるという情報が失われます。  つまり、コードが `enumerable.GetEnumerator()` で列挙子をフェッチするときには、.NET Framework は返される構造体をボックス化し、`enumerator` 変数に割り当てる必要があります。  
+ 拡張 `FirstOrDefault` 呼び出しの場合、このコードは`GetEnumerator()` に対して <xref:System.Collections.Generic.IEnumerable%601> を呼び出す必要があります。  `symbols` を `enumerable` 型の `IEnumerable<Symbol>` 変数に割り当てると、実際のオブジェクトが <xref:System.Collections.Generic.List%601> であるという情報が失われます.  つまり、コードが `enumerable.GetEnumerator()` で列挙子をフェッチするときには、.NET Framework は返される構造体をボックス化し、`enumerator` 変数に割り当てる必要があります。  
   
  **例 5 の修正**  
   
@@ -465,9 +465,9 @@ class Compilation { /*...*/
  [このトピックのプレゼンテーションのビデオ](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [パフォーマンス](../../../docs/framework/performance/index.md)  
- [.NET のパフォーマンスのヒント](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone のパフォーマンス分析ツール](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Visual Studio プロファイラーでアプリケーションのボトルネックを見つける](http://msdn.microsoft.com/magazine/cc337887.aspx)  
- [Channel 9 PerfView のチュートリアル](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [高度なパフォーマンスのヒント](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [GitHub のリポジトリの dotnet/roslyn](https://github.com/dotnet/roslyn)
+ [.NET のパフォーマンスに関するヒント](http://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone パフォーマンス分析ツール](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Visual Studio Profiler でアプリケーションのボトルネックを見つける](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Channel 9 PerfView チュートリアル](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [高レベルのパフォーマンスのヒント](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [GitHub の dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn)

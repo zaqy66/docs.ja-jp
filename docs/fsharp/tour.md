@@ -2,197 +2,197 @@
 title: F# のツアー
 description: F# のプログラミング言語のコード サンプルを使ってこのツアーでの主な機能のいくつかを確認します。
 ms.date: 02/28/2018
-ms.openlocfilehash: 63c38d59376a148c439482fcf47488fc72b7b8aa
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753488"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924522"
 ---
 # <a name="tour-of-f"></a>F# のツアー #
 
-F# について学習する最善の方法では、f# コードを読み書きします。  この記事は、f# 言語の主な機能の一部の機能を確認として機能し、コンピューターに対して実行できます。 一部のコード スニペットでわかります。  詳細については、開発環境をセットアップして、チェック アウト[作業の開始](tutorials/getting-started/index.md)です。
+F# について学習する最善の方法では、f# コードを読み書きします。  この記事では、f# 言語の主な機能のいくつかツアーとして機能し、コンピューターに実行できる一部のコード スニペットが表示。  開発環境を設定する方法については、チェック アウト[Getting Started](tutorials/getting-started/index.md)します。
 
-F# である 2 つの主要な概念: 関数と型。  このツアーはこれら 2 つの概念には、言語の機能を強調します。
+F# である 2 つの主要な概念: 関数と型。  このツアーではこれら 2 つの概念には、言語の機能を強調します。
 
-## <a name="functions-and-modules"></a>関数とモジュール
+## <a name="functions-and-modules"></a>関数、およびモジュール
 
-任意の f# プログラムの最も基本的な部分が***関数***に編成***モジュール***です。  [関数](language-reference/functions/index.md)の入力、出力を生成するために作業を実行し、下では、編成された[モジュール](language-reference/modules.md)、f# で作業をグループ化する主要な手段であります。  使用して定義されている、 [ `let`バインディング](language-reference/functions/let-bindings.md)関数の名前し、その引数を定義します。
+任意の f# プログラムの最も基本的な部分が***関数***編成***モジュール***します。  [関数](language-reference/functions/index.md)出力を生成する入力に作業を実行し、で構成される[モジュール](language-reference/modules.md)、f# でグループ化する主な方法であります。  使用して定義されている、 [ `let`バインド](language-reference/functions/let-bindings.md)関数の名前し、その引数を定義します。
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let` バインドも値を他の言語での変数のような名前にバインドする方法です。  `let` バインディングは***不変***既定では、値または関数が名前にバインドされると、それを変更できないことを意味するインプレースでします。  これは、他の言語は、変数とは対照的***変更可能な***時間で任意の時点でその値の意味を変更できます。  変更可能なバインディングを必要とする場合を使用できます`let mutable ...`構文です。
+`let` バインディングでは、値を他の言語での変数のような名前にバインドする方法も。  `let` バインドは***不変***既定では、値または関数の名前をバインドしたら、変更できないことを意味する、インプレースします。  これは、他の言語での変数とは対照的***変更可能な***時間で任意の時点でその値の意味を変更できます。  変更可能なバインディングを必要とする場合は使用できます`let mutable ...`構文。
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
 ## <a name="numbers-booleans-and-strings"></a>数値、ブール値、および文字列
 
-.NET 言語として f# をサポートしている同じ基になる[プリミティブ型](language-reference/primitive-types.md).NET 内に存在します。
+.NET 言語として f# をサポートしています、同じ基になる[プリミティブ型](language-reference/primitive-types.md).NET 内に存在します。
 
-F# でさまざまな数値型の表現を次に示します。
+さまざまな数値型は f# で表されます。 次に示します。
 
 [!code-fsharp[Numbers](../../samples/snippets/fsharp/tour.fs#L49-L68)]
 
-ここでは、どのようなブール値と次のように基本的な条件付きロジックを実行します。
+どのようなブール値を次に示し、基本的な条件付きロジックを実行するようになります。
 
 [!code-fsharp[Bools](../../samples/snippets/fsharp/tour.fs#L142-L152)]
 
-ここではどのような basic[文字列](language-reference/strings.md)次のように操作します。
+ここでは、どのような basic と[文字列](language-reference/strings.md)操作のようになります。
 
 [!code-fsharp[Strings](../../samples/snippets/fsharp/tour.fs#L158-L180)]
 
 ## <a name="tuples"></a>タプル
 
-[組](language-reference/tuples.md)f# では大きな問題は、します。  これらは、名前のない、順序付きの値は、特定の値として扱うことのグループです。  これらの集計される、その他の値からの値として考えます。  判別しやすいように、関数から複数の値を返すまたはアドホック利便性の値をグループ化など、数多くの用途があります。
+[タプル](language-reference/tuples.md)は f# の大きな問題です。  これらは、値自体として扱うことができますが、名前のない、順序付けされた値のグループです。  それらの他の値からごとに集計値として考えます。  簡単に、関数から複数の値を返すまたはアドホック便宜上いくつかの値をグループ化など、数多くの用途があります。
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L186-L203)]
 
-F# 4.1、時点で作成することも`struct`組。  これらと相互運用も完全にも C# 7 または Visual Basic の 15 の組`struct`組。
+F# 4.1、時点で作成することも`struct`組。  これらも相互運用完全にも、C# 7/Visual Basic 15 タプル`struct`組。
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L205-L218)]
 
-ことに注意することが重要`struct`組が値型、タプルを参照する暗黙的に変換することはできませんまたはその逆です。  参照と構造体の組の間で明示的に変換する必要があります。
+ため、注意することが重要`struct`タプルが値型、タプルを参照する暗黙的に変換することはできませんまたはその逆です。  参照と構造体のタプルの間で明示的に変換する必要があります。
 
-## <a name="pipelines-and-composition"></a>パイプラインおよびコンポジション
+## <a name="pipelines-and-composition"></a>パイプラインと合成
 
-パイプ演算子のように`|>`f# でのデータを処理するときに広範囲に使用します。 これらの演算子は、柔軟な方法で「パイプライン」関数を確立するために使用できる関数です。 次の例は、どのようにこれらの演算子のパイプラインを構築する単純な機能を利用を行う手順について説明します。
+などの演算子をパイプ`|>`f# でのデータを処理するときに広く使用されます。 これらの演算子は、柔軟な方法で関数の「パイプライン」を確立するための関数です。 次の例では、方法を利用する機能の単純なパイプラインを構築するこれらの演算子の説明します。
 
 [!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-行われた前のサンプルの f#、リストの処理機能、ファースト クラスの関数を含む多数の機能の使用と[部分適用](language-reference/functions/index.md#partial-application-of-arguments)です。 これらの概念のそれぞれの深い理解がやや高度なことができますになる、ことがありますクリア関数を使用して、パイプラインを構築するときに、データを処理する方法に簡単にします。
+行われる前のサンプルの f# では、リスト処理関数をファーストクラスの関数を含む多くの機能の使用と[部分適用](language-reference/functions/index.md#partial-application-of-arguments)します。 これらの概念のそれぞれの深い理解がやや高度なことができますになる、する必要がありますがクリア関数を使用してパイプラインを構築するときにデータを処理する方法を簡単にします。
 
 ## <a name="lists-arrays-and-sequences"></a>リスト、配列、およびシーケンス
 
-リスト、配列、およびシーケンスは、f# コア ライブラリの次の 3 つの主なコレクション型です。
+リスト、配列、およびシーケンスは、f# コア ライブラリの次の 3 つのプライマリ コレクション型です。
 
-[一覧表示](language-reference/lists.md)は同じ型の要素の順序付けられ、変更できないコレクションです。  シングル リンク リスト、大規模な場合、列挙がランダム アクセスと連結に適さないのために用意されていることを意味します。  これは通常のリストを表すシングル リンク リストを使用しないでください、人気のある他の言語のリストとは対照的です。
+[一覧表示](language-reference/lists.md)は同じ型の要素の順序付けられた、変更できないコレクションです。  シングル リンク リスト、つまり、大規模な場合、列挙がランダム アクセスと連結するにはあまり適して本来は。  これは通常のリストを表すシングル リンク リストを使用しないでください、人気のある他の言語のリストとは対照的です。
 
 [!code-fsharp[Lists](../../samples/snippets/fsharp/tour.fs#L309-L359)]
 
-[配列](language-reference/arrays.md)が固定サイズ、*変更可能な*同じ型の要素のコレクション。  要素の高速なランダム アクセスをサポートし、F# では単に連続するメモリ ブロックのためのリストよりも高速です。
+[配列](language-reference/arrays.md)が固定サイズ*変更可能な*同じ型の要素のコレクション。  要素の高速なランダム アクセスをサポートし、f# リストのメモリ ブロックが連続するだけであるためよりも高速化されます。
 
 [!code-fsharp[Arrays](../../samples/snippets/fsharp/tour.fs#L368-L407)]
 
-[シーケンス](language-reference/sequences.md)要素は、すべて同じ型の一連の論理がします。  これらは、リストや配列、任意の論理一連の要素に、"view"することのできるよりもより一般的な型です。  目立つことができるので***レイジー***、つまり、必要な場合にのみ要素を計算することができます。
+[シーケンス](language-reference/sequences.md)は論理的な一連の同じ型のすべての要素。  これらは、リストと配列を論理的な一連の要素に、"view"をすることのできるより一般的な型です。  これらも目立つことができるので***遅延***、つまり、必要な場合にのみ要素を計算することができます。
 
 [!code-fsharp[Sequences](../../samples/snippets/fsharp/tour.fs#L418-L452)]
 
 ## <a name="recursive-functions"></a>再帰関数
 
-コレクションまたは要素のシーケンスの処理は、普通で[再帰](language-reference/functions/index.md#recursive-functions)f# でします。  F# がループと命令型プログラミングのサポートがありますが、再帰が優先正確性を保証する方が簡単です。
+コレクションまたは要素のシーケンス処理で通常実行[再帰](language-reference/functions/index.md#recursive-functions)f# でします。  F# は、for ループおよび命令型プログラミングのサポート、再帰は正確性を保証するために簡単だから優先です。
 
 >[!NOTE]
-次の例を使用してパターン マッチを利用、`match`式。  この基本的な構造は、この記事で後述について説明します。
+次の例を使用してパターン マッチングの利用、`match`式。  この基本的な構成要素はこの記事の後半で説明します。
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 
-F# でも末尾呼び出しの最適化で完全にサポートされるされてがループ構造と同じ速度で単なるように、再帰呼び出しを最適化する方法です。
+F# も末尾呼び出し最適化では、完全にサポートは、ループ コンストラクトと同じ速度ように再帰呼び出しを最適化する方法。
 
 ## <a name="record-and-discriminated-union-types"></a>レコードと判別された共用体型
 
-レコードと、共用体の型は f# コードで使用される 2 つの基本的なデータ型、f# のプログラムでデータを表現する最善の方法では、通常  このため、クラスのような他の言語で、構造の等値セマンティクスがあることの主な相違点の 1 つです。  つまり、「ネイティブ」比較が等しいかどうかは簡単です - 1 つが、互いに等しいかどうかはチェックします。
+レコード、共用体の型は、f# コードで使用される 2 つの基本的なデータ型を一般に、f# プログラムでデータを表現する最善の方法は。  これにより、そのクラスのような他の言語は、構造的等値セマンティクスを備えることの主な違いの 1 つです。  つまり、「ネイティブ」の比較が等しいかどうかは簡単です - チェックのいずれかが、他と等しいかどうかだけです。
 
-[レコード](language-reference/records.md)は省略可能なメンバー (メソッド) などで、名前付きの値の集計です。  C# や Java に慣れている場合、これら必要がありますと思われるした poco からまたは Pojo - と同様に構造の等価と手続きだけです。
+[レコード](language-reference/records.md)は省略可能なメンバー (メソッドなど) と、名前付きの値の集計。  C# または Java に詳しい場合は、し、これらように思われる Poco または Pojo - と同様に構造的等値と式だけです。
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
-F# 4.1、時点では、レコードとしても表すことができる`struct`s。  これは、`[<Struct>]`属性。
+F# 4.1、時点では、レコードとしても表すことができます`struct`秒。  これは、`[<Struct>]`属性。
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L561-L568)]
 
-[判別共用体 (Du)](language-reference/discriminated-unions.md)名前付きのフォームまたはケースの数を生じる可能性がある値が格納されています。  型に格納されたデータには、個別の値をいくつかのいずれかを指定できます。
+[判別共用体 (Du)](language-reference/discriminated-unions.md)は値の名前付きのフォームまたはケースの数である可能性があります。  型に格納されたデータには、いくつかの個別の値のいずれかを指定できます。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L575-L631)]
 
-として Du を使用することもできます。*単一ケースの判別共用体*、プリミティブ型をモデリングするドメインを支援します。  多くの場合、文字列およびその他のプリミティブ型、何かを表すために使用し、特定の意味を指定されたためです。  ただし、データのプリミティブ形式のみを使用する可能性が誤って正しくない値を割り当てるときに!  個別の単一ケース共用体の情報の各型を表すと、このシナリオでは、正しいかどうかを適用できます。
+Du として使用することもできます。*単一ケースの判別共用体*、ドメイン モデリングのプリミティブ型を支援します。  多くの場合、文字列およびその他のプリミティブ型を表すもの、使用されはそのため、特定の意味が与えられます。  ただし、データのプリミティブの表現のみを使用しては、誤って正しくない値を割り当てることになることができます!  個別の単一ケース共用体として情報の各型を表すと、このシナリオでは正確性を適用できます。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L633-L654)]
 
-単一ケース判別共用体、基になる値を取得する、上記のサンプルに示すように明示的に unwrap する必要があります。
+単一ケース判別された共用体、基になる値を取得する、上記のサンプルに示すように明示的に unwrap する必要があります。
 
-さらに、Du もサポートして再帰的な定義ツリーと本質的に再帰型データを簡単に記述することができます。  たとえば、ここでは方法でのバイナリ検索ツリーを表すことができる`exists`と`insert`関数。
+また、Du もサポート再帰的な定義では、ツリーと本質的に再帰型データを簡単に記述することができます。  たとえば、ここではどのでバイナリ検索ツリーを表すことができます`exists`と`insert`関数。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L656-L683)]
 
-Du を使用すると、データ型にツリーを再帰的な構造を表すできますが、この再帰的な構造で動作している単純ではいて正確性を保証します。  次のようにも、パターン マッチでサポートされます。
+Du するデータ型にツリーを再帰的な構造を表すため、この再帰構造で動作しているは簡単で、正確性が保証されます。  次に示すパターン マッチングでもサポートされます。
 
-さらに、として Du を表すことができる`struct`で秒、`[<Struct>]`属性。
+さらに、として Du を表すことができます`struct`を`[<Struct>]`属性。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L685-L696)]
 
-ただし、これを実施する際に注意する 2 つの主な操作があります。
+ただし、その際に留意する 2 つの重要事項があります。
 
 1. DU 構造体は、再帰的に定義することはできません。
 2. DU 構造体には、そのケースのそれぞれに一意の名前が必要です。
 
-上記に従わないと、コンパイル エラーが発生します。
+上記に従わないは、コンパイル エラーになります。
 
 ## <a name="pattern-matching"></a>パターン マッチ
 
-[パターン マッチ](language-reference/pattern-matching.md)f# の型に対する操作のための正確性をできる f# 言語機能します。  上記のサンプルからもわかるように相当量の`match x with ...`構文です。  このコンストラクトは、コンパイラは、排他的なパターン一致としてを介して、既知のデータ型を使用する場合は、可能なすべてのケースのアカウントを強制するには、データ型の"shape"を理解することができます。  これは正しいかどうか、非常に強力であり、コンパイル時にランタイム問題になる新機能は通常「リフト」に適切に使用できます。
+[パターン照合](language-reference/pattern-matching.md)により、f# の型に対する操作のための正確性が f# 言語機能です。  上記のサンプルのことに気付いたのかなり`match x with ...`構文。  このコンス トラクターにより、コンパイラを強制すると、パターンの完全一致として呼ばれるものを通じて、データ型を使用する場合は、すべての可能なケースのアカウントに、データ型の「形状」を理解することができます。  これは正しいかどうか、非常に強力な巧妙にどのようなコンパイル時にランタイムの問題は、通常「リフト」使用できます。
 
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L739)]
+[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
 
-短縮形を使用することもできます`function`のまま続行する関数を使用して作成する場合に有用なパターンに一致させるためのコンストラクト[部分適用](language-reference/functions/index.md#partial-application-of-arguments):。
+短縮形を使用することもできます`function`のため、関数を使用して作成する場合に有用なパターンに一致させるためのコンストラクト[部分適用](language-reference/functions/index.md#partial-application-of-arguments):。
 
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L741-L759)]
+[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
-使用に問題がありますが、`_`パターン。  これと呼ばれますが、[ワイルドカード パターン](language-reference/pattern-matching.md#wildcard-pattern)、「関係ない何かが」という方法であります。  、は便利ですが排他的なパターン マッチを誤ってバイパスおよび不要になったコンパイル時の実施恩恵を使用して注意が必要でない場合`_`です。  分解された型の特定部分を考慮しない場合に最も使用される照合、または最後の句のパターン マッチ式内のすべての意味のあるケースを列挙したときとパターンします。
+使用は、何かお気付き、`_`パターン。  これと呼ばれますが、[ワイルドカード パターン](language-reference/pattern-matching.md#wildcard-pattern)、「気にしません何かが」と答えるのですが。  、便利ですが誤ってバイパス徹底的なパターンに一致して不要になったコンパイル時の実施メリットを使用して注意が必要ない場合は`_`します。  分解された型の特定の情報が必要ない場合に最適な使用パターン マッチ式内のすべての意味のあるケースを列挙するときと一致する、または最後の句のパターンします。
 
-[アクティブ パターン](language-reference/active-patterns.md)パターン マッチで使用する別の強力な構造は、します。  パターン一致の呼び出しサイトでそれらを分解する、カスタムのフォームに入力データを分割できます。  パラメーター化できる、ため、関数として、パーティションを定義することができます。  アクティブ パターンをサポートするために、前の例を展開する次のようになります。
+[アクティブ パターン](language-reference/active-patterns.md)はパターン マッチングで使用する別の強力なコンストラクトです。  それらの分解パターン一致の呼び出しサイトでカスタムのフォームに入力データをパーティション化できます。  これらもパラメーター化できる、ため関数として、パーティションを定義することができます。  アクティブ パターンをサポートするために、前の例を展開するようになります。
 
-[!code-fsharp[ActivePatterns](../../samples/snippets/fsharp/tour.fs#L761-L783)]
+[!code-fsharp[ActivePatterns](../../samples/snippets/fsharp/tour.fs#L764-L786)]
 
 ## <a name="optional-types"></a>省略可能な型
 
-判別共用体の型の 1 つの特殊なケースは、オプション型、これは、f# コア ライブラリの一部であるために便利です。
+判別共用体の型の 1 つの特殊なケースは非常に役立つ、f# コア ライブラリの一部であるあるオプションの種類です。
 
-[オプションの種類](language-reference/options.md)は 2 つのケースのいずれかを表す型です: 値、またはまったく何も行われません。  値が可能性がありますか、特定の操作からされないことがあるシナリオでも使用されます。  これによって強制すると、アカウントのどちらの場合も、実行時の問題ではなく、コンパイル時の問題になります。  Api でよく使用されます、`null`について心配する必要があるのでを代わりに、"nothing"を表すため`NullReferenceException`多くの場合。
+[オプションの種類](language-reference/options.md)は 2 つのケースのいずれかを表す型です: 値、またはまったくありません。  値が場合がありますか、特定の操作からならない可能性がありますのシナリオで使用されます。  どちらの場合も、ランタイムの問題ではなく、コンパイル時の問題のためのアカウントに、必然です。  Api でよく使用されます、`null`を代わりに、"nothing"を表す使用について心配する必要がなくなります`NullReferenceException`多くの場合。
 
-[!code-fsharp[Options](../../samples/snippets/fsharp/tour.fs#L791-L811)]
+[!code-fsharp[Options](../../samples/snippets/fsharp/tour.fs#L789-L814)]
 
 ## <a name="units-of-measure"></a>測定単位
 
-# の型システムの固有の機能の 1 つは、メジャーの単位を数値リテラルのコンテキストを提供する機能です。
+# の型システムの固有の機能を 1 つの単位を数値リテラルのコンテキストを提供する機能があります。
 
-[測定単位](language-reference/units-of-measure.md)メートルなどの単位に数値型を関連付けること許可し、関数作業を実行数値リテラルではなく、単位にします。  これにより、コンパイラに渡された数値リテラルの種類を特定のコンテキストでなします、その作業の種類に関連付けられている実行時エラーがなくなることを確認できます。
+[測定単位](language-reference/units-of-measure.md)を使用すると、メートル単位などの単位に数値の種類の関連付けが関数を実行したり作業数値リテラルではなく、単位。  これにより、コンパイラに渡された数値リテラルの型によって、特定のコンテキストで意味が、これにより、ランタイム エラー、その種の作業に関連付けられていることを確認できます。
 
-[!code-fsharp[UnitsOfMeasure](../../samples/snippets/fsharp/tour.fs#L818-L839)]
+[!code-fsharp[UnitsOfMeasure](../../samples/snippets/fsharp/tour.fs#L817-L842)]
 
-F# コア ライブラリは、多くの SI 単位の種類と単位の変換を定義します。  詳細については、チェック アウト、 [Microsoft.FSharp.Data.UnitSystems.SI Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d)です。
+F# コア ライブラリでは、多くの SI 単位の種類と単位の変換を定義します。  詳細についてにチェック アウト、 [Microsoft.FSharp.Data.UnitSystems.SI Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d)します。
 
 ## <a name="classes-and-interfaces"></a>クラスとインターフェイス
 
-F# でも、.NET クラスの完全なサポート[インターフェイス](language-reference/interfaces.md)、[抽象クラス](language-reference/abstract-classes.md)、[継承](language-reference/inheritance.md)のようにします。
+F# もが、.NET クラスの完全なサポート[インターフェイス](language-reference/interfaces.md)、[抽象クラス](language-reference/abstract-classes.md)、[継承](language-reference/inheritance.md)など。
 
-[クラス](language-reference/classes.md).NET オブジェクトを表す型が持つことができるプロパティ、メソッド、およびイベントとしてその[メンバー](language-reference/members/index.md)です。
+[クラス](language-reference/classes.md)は、.NET オブジェクトを表す型がプロパティ、メソッド、およびイベントであることができます、[メンバー](language-reference/members/index.md)します。
 
-[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L848-L877)]
+[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L845-L880)]
 
-ジェネリック クラスの定義も非常に単純です。
+ジェネリック クラスの定義も非常に簡単です。
 
-[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L884-L905)]
+[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L883-L908)]
 
-インターフェイスを実装する、いずれかを使用できる`interface ... with`構文または[オブジェクト式](language-reference/object-expressions.md)です。
+インターフェイスを実装する、いずれかを使用できる`interface ... with`構文または[オブジェクト式](language-reference/object-expressions.md)します。
 
-[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L912-L931)]
+[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L911-L934)]
 
 ## <a name="which-types-to-use"></a>使用する型
 
-クラス、レコード、判別共用体、および組の存在は、重要な質問につながりますこれを使用しますか?。  ほとんどの環境で、すべてのように、応答は、状況に依存します。
+クラス、レコード、判別共用体、およびタプルの存在が重要な質問につながります。 使用すべきでしょうか。  ほとんどライフで、すべてのように、答えは、状況によって異なります。
 
-組は、関数から複数の値を返すと自体を値として、アドホック集計値の集計を使用するのに適しています。
+タプルは、関数から複数の値を返すおよびアドホック集計値の集計を使用して、自体の値として適しています。
 
-レコードは、"からのステップ アップ"組、ラベルと省略可能なメンバーのサポートを持つという名前です。  データ転送中のプログラムの実行の低手続き表現に最適です。  構造の等価性があるため、比較が簡単に使用されます。
+レコードは、"からのステップ アップ"組、ラベルと省略可能なメンバーのサポートということです。  データ転送中のプログラムを儀礼的表現に適しています。  構造の等値があるため比較で簡単に使用されます。
 
-判別共用体多く、用途がありますが、主要な利点は、すべての可能な「図形」データを持つことができるアカウントに一致するパターンと組み合わせて利用することができます。  
+判別共用体は数多くの用途がコア特典がアカウントのすべての可能な「図形」ことができるデータに一致するパターンと組み合わせて利用するため可能になります。  
 
-クラスは、情報を表すしても機能するには、その情報を関連付ける必要がある場合などの理由の数が膨大に最適です。  原則として、としては、概念的には、一部のデータに関連付けられている機能がある場合は大きな利点にはクラスとオブジェクト指向プログラミングの原則を使用してます。  クラスも推奨されるデータ型 c# と Visual Basic の相互運用時にこれらの言語は、ほぼすべてのクラスを使用。
+クラスは、情報を表すしても機能するには、その情報を関連付ける必要がある場合などの理由の数が膨大に適しています。  ルールの一般的に、概念的には、一部のデータに関連する機能がある場合は、大きな利点にはクラスとオブジェクト指向プログラミングの原則を使用してます。  クラスも優先されるデータ型 c# と Visual Basic での相互運用するときにこれらの言語では、ほぼすべてのクラスを使用します。
 
 ## <a name="next-steps"></a>次の手順
 
-これで、言語の主な機能の一部を説明しました、する必要があります、最初の f# プログラムを作成する準備完了!  チェック アウト[作業の開始](tutorials/getting-started/index.md)を開発環境を設定して、コードを記述する方法を参照してください。
+言語の主な機能のいくつかを確認したらには、最初の f# プログラムを作成できるようにする必要があります。  チェック アウト[Getting Started](tutorials/getting-started/index.md)に開発環境を設定して、コードを記述する方法について説明します。
 
-お好きなよう、さらに詳しく学習の次の手順を指定できますが、ことをお勧め[ファースト クラス値として機能](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)-->コア関数型プログラミングの概念には慣れてを取得します。  これらは、f# で堅牢なアプリケーションの構築に不可欠なされます。
+詳しくは、次の手順は好き、できますが、お勧めします[ファースト クラスの値として機能](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)-->コア関数型プログラミングの概念に慣れるにします。  これらは、f# で堅牢なアプリケーションの構築に不可欠になります。
 
-また、チェック アウト、 [f# 言語リファレンス](language-reference/index.md)を f# の包括的な概念説明のコレクションを参照してください。
+また、チェック アウト、 [f# 言語リファレンス](language-reference/index.md)を f# の概念的なコンテンツの包括的なコレクションを参照してください。
