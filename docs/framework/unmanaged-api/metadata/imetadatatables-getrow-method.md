@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 954b4df6b341e18c5a995b57541a72e236278c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d24dbcbdd8b0ed0736f7b59564cf72dffaa5a8f8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449596"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331334"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow メソッド
-指定したテーブルのインデックスにある表で、指定した行のインデックス行を取得します。  
+指定したテーブルのインデックス位置にある表に、指定した行インデックス位置にある行を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,11 +47,11 @@ HRESULT GetRow (
  `ppRow`  
  [out]行へのポインターへのポインター。  
   
-## <a name="remarks"></a>コメント  
- このメソッドの使用方法は、一貫性のある結果を返さないためお勧めしませんしないでください。 GUID のテーブルについては、共通言語基盤 (CLI) ドキュメント、特に「Partition II:: Metadata Definition and Semantics」を参照してください。 ドキュメントはオンラインで入手できます。MSDN の「[ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212)」 (ECMA の C# および共通言語基盤の標準規格) と、ECMA のインターナショナル Web サイトにある「[Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552)」を参照してください。  
+## <a name="remarks"></a>Remarks  
+ お勧めしません、このメソッドを使用して一貫性のある結果を返さないためです。 GUID の表については、共通言語基盤 (CLI) のドキュメント、特に「Partition II:: メタデータ Definition and Semantics」を参照してください。 ドキュメントはオンラインで入手できます。MSDN の「[ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212)」 (ECMA の C# および共通言語基盤の標準規格) と、ECMA のインターナショナル Web サイトにある「[Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)」を参照してください。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor.h  
   

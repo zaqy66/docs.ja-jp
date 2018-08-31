@@ -9,12 +9,12 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-ms.openlocfilehash: 3615ab1f9a9076b8db0e5fde1e5bd4a1a804f3bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 671553b496520f2c2ac3fea90b1514a6cdf1764a
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538529"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331762"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel コントロール (Windows フォーム)
 <xref:System.Windows.Forms.TableLayoutPanel> コントロールは、その内容をグリッド内に配置します。 レイアウトはデザイン時と実行時の両方で行われるため、アプリケーション環境の変更に合わせて動的に変更できます。 また、パネル内のコントロールが適切にサイズ変更されるため、親コントロールのサイズ変更や、ローカリゼーションに伴うテキスト長の変更に対応できます。  
@@ -38,13 +38,13 @@ ms.locfileid: "33538529"
  [方法: データ入力用のサイズ変更可能な Windows フォームを作成する](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)  
  <xref:System.Windows.Forms.TableLayoutPanel> コントロールを使用して、サイズ変更に適切に対応できるフォームを作成する例を示します。  
   
-1.  [方法: TableLayoutPanel コントロール内でコントロールを配置して伸縮する](http://msdn.microsoft.com/library/ms171688\(v=vs.110\))  
+1.  [方法: TableLayoutPanel コントロール内でコントロールを配置して伸縮する](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2.  [方法: TableLayoutPanel コントロールの行と列を拡大する](http://msdn.microsoft.com/library/ms171687\(v=vs.110\))  
+2.  [方法: TableLayoutPanel コントロールの行と列を拡大する](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3.  [方法: TableLayoutPanel コントロールの列と行を編集する](http://msdn.microsoft.com/library/ms171686\(v=vs.110\))  
+3.  [方法: TableLayoutPanel コントロールの列と行を編集する](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4.  [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](http://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
+4.  [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](https://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.TableLayoutPanel>  
@@ -60,4 +60,4 @@ ms.locfileid: "33538529"
  [ローカリゼーション](../../../../docs/standard/globalization-localization/localization.md)  
  ローカリゼーションに関連するトピックの概要を示します。  
   
- 参照してください[アプリケーションのローカライズ](http://msdn.microsoft.com/library/z68135h5\(v=vs.110\))または[アプリケーションのローカライズ](http://msdn.microsoft.com/library/z68135h5\(v=vs.120\))
+ 参照してください[Localizing Applications](https://msdn.microsoft.com/library/z68135h5\(v=vs.110\))または[Localizing Applications](https://msdn.microsoft.com/library/z68135h5\(v=vs.120\))

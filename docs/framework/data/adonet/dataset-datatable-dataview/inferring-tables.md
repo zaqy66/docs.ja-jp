@@ -2,11 +2,12 @@
 title: テーブルの推論
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: b14cbc39b02136ac7f226faf2636a69ac072f529
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332854"
 ---
 # <a name="inferring-tables"></a>テーブルの推論
 XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論するときには、ADO.NET では、テーブルを表す XML 要素を最初に決定します。 次の XML 構造の結果のテーブルに、**データセット**スキーマ。  
@@ -31,7 +32,7 @@ XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論
   
  **データセット:** DocumentElement  
   
- **Table:** Element1  
+ **テーブル:** Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -53,13 +54,13 @@ XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論
   
  **データセット:** DocumentElement  
   
- **Table:** Element1  
+ **テーブル:** Element1  
   
 |ChildElement1|  
 |-------------------|  
 |Text1|  
   
- ドキュメント (ルート) 要素に属性または子要素があり、それらが列として推論される場合には、そのドキュメント要素はテーブルとして推論されます。 要素として推論ドキュメントの要素に属性がありません。 や列として推論される子要素がある場合、**データセット**です。 たとえば、次のような XML があるとします。  
+ ドキュメント (ルート) 要素に属性または子要素があり、それらが列として推論される場合には、そのドキュメント要素はテーブルとして推論されます。 ドキュメント要素の属性も列として推論される子要素はありませんが、要素として推論されます、**データセット**します。 たとえば、次のような XML があるとします。  
   
 ```xml  
 <DocumentElement>  
@@ -72,7 +73,7 @@ XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論
   
  **データセット:** NewDataSet  
   
- **Table:** DocumentElement  
+ **テーブル:** DocumentElement  
   
 |Element1|Element2|  
 |--------------|--------------|  
@@ -86,11 +87,11 @@ XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論
 </DocumentElement>  
 ```  
   
- 推論プロセスが生成される、**データセット**"Element1"という名前のテーブルを含む"DocumentElement"という名前  
+ 推論プロセスによって生成される、**データセット**"Element1"という名前のテーブルを含む"DocumentElement"という名前  
   
  **データセット:** DocumentElement  
   
- **Table:** Element1  
+ **テーブル:** Element1  
   
 |attr1|attr2|  
 |-----------|-----------|  
@@ -110,7 +111,7 @@ XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論
   
  **データセット:** DocumentElement  
   
- **Table:** Element1  
+ **テーブル:** Element1  
   
 |Element1_Text|  
 |--------------------|  
@@ -123,4 +124,4 @@ XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論
  [XML の DataSet スキーマ情報の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad5862064966ccae4c313e7fa3d982ec9abbbcd2
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494177"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332188"
 ---
 # <a name="message-security-with-mutual-certificates"></a>メッセージ セキュリティと相互の証明書
-次のシナリオでは、Windows Communication Foundation (WCF) サービスとメッセージ セキュリティ モードを使用してセキュリティで保護されたクライアントを示します。 クライアントとサービスは、証明書を使用して認証されます。  
+次のシナリオでは、Windows Communication Foundation (WCF) サービスとクライアントのメッセージ セキュリティ モードを使用して保護を示しています。 クライアントとサービスは、証明書を使用して認証されます。  
   
  このシナリオは、X.509 証明書トークン プロファイルと共に WS-Security を使用するため、相互運用性があります。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33494177"
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>構成  
- 次のコードは、クライアントを構成します。 使用してクライアント証明書を指定する必要があります、 [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)です。 また、サービス証明書を使用して指定、 [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)です。  
+ 次のコードは、クライアントを構成します。 使用してクライアント証明書を指定する必要があります、 [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)します。 また、サービス証明書が指定されてを使用して、 [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)します。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -162,5 +162,5 @@ ms.locfileid: "33494177"
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric のセキュリティ モデル](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [方法: を作成し、開発時に、トランスポート セキュリティに WCF で一時的な証明書をインストール](http://go.microsoft.com/fwlink/?LinkId=244264)
+ [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [方法: を作成し、開発中にトランスポート セキュリティのための WCF で一時的な証明書をインストール](https://go.microsoft.com/fwlink/?LinkId=244264)

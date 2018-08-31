@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 20bf9b263a349f327f12d1f3c7753fb9f34436e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e844a673f1a60d5a151a6ae612d4af7a6712eef4
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654217"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332553"
 ---
 # <a name="collection-initializers-visual-basic"></a>コレクション初期化子 (Visual Basic)
 *コレクション初期化子*とは、コレクションを作成して一連の初期値を設定できる、短い構文です。 コレクション初期化子は、コレクションを既知の値のセットから作成する場合に便利です。値のセットの例として、メニュー オプションやカテゴリのリスト、数値の初期セット、曜日や月の名前の静的文字列のリスト、検証に使用する州のリストなどの地理的な場所が挙げられます。  
   
- コレクションの詳細については、「[コレクション](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)」を参照してください。  
+ コレクションの詳細については、「[コレクション](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)」を参照してください。  
   
  コレクション初期化子は、`From` キーワードの後に中かっこ (`{}`) を使用して指定できます。 これは、「[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)」で説明する配列リテラルの構文と似ています。 次の例では、コレクション初期化子を使用してコレクションを作成するさまざまな方法を示します。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33654217"
 |[方法: コレクション初期化子を使用してコレクションを作成する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|`IEnumerable` を実装するコレクション クラスに `Add` メソッドを含めてコレクション初期化子を使用できるようにする方法を説明します。|  
   
 ## <a name="see-also"></a>関連項目  
- [コレクション](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [コレクション](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [オブジェクト初期化子 : 名前付きの型と匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)  

@@ -10,49 +10,49 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: ca5b9c29d9138d4e17fbf187e35951dbec614aab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539852"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332566"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>方法 : Windows フォーム上のタブ オーダーを設定する
-タブ オーダーでは、ユーザーが TAB キーを押して 1 つのコントロールからでフォーカスを移動する順序です。 各フォームには、独自のタブ オーダーがあります。 既定では、タブ オーダーは、コントロールを作成した順序と同じです。 タブ オーダーの番号は 0 から始まります。  
+タブ オーダーは、ユーザーが TAB キーを押して 1 つのコントロールからでフォーカスを移動する順序です。 各フォームには、独自のタブ オーダーがあります。 既定では、タブ オーダーは、コントロールを作成した順序と同じです。 タブ オーダーの番号は 0 から始まります。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ### <a name="to-set-the-tab-order-of-a-control"></a>コントロールのタブ オーダーを設定するには  
   
-1.  **ビュー**  メニューのをクリックして**タブ オーダー**です。  
+1.  **ビュー**  メニューのをクリックして**タブ オーダー**します。  
   
-     これには、フォーム上のタブ オーダー選択モードがアクティブにします。 数値 (を表す、<xref:System.Windows.Forms.Control.TabIndex%2A>プロパティ) の各コントロールの左上隅に表示されます。  
+     これには、フォームのタブ オーダー選択モードがアクティブにします。 数値 (を表す、<xref:System.Windows.Forms.Control.TabIndex%2A>プロパティ) の各コントロールの左上隅に表示されます。  
   
 2.  タブの順序を確立するために順番にコントロールをクリックします。  
   
     > [!NOTE]
-    >  タブ オーダーのコントロールの位置は、0 以上、任意の値に設定できます。 重複が発生すると、2 つのコントロールの z オーダーが評価され、上位のコントロールが最初にタブ付き。 (Z オーダーは、フォームの z 軸 [奥行] に沿ってフォーム上のコントロールのビジュアルの重ね順です。 Z オーダーを決定するコントロールは、その他のコントロールの前にします。)Z オーダーの詳細については、次を参照してください。 [Windows フォームでのオブジェクトの階層構造](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)です。  
+    >  タブ オーダーのコントロールの位置は 0 以上、任意の値に設定できます。 重複が発生して、2 つのコントロールの z オーダーが評価され、上位のコントロールが最初にタブ付き。 (Z オーダーは、フォームの z 軸 [奥行] に沿ってフォーム上のコントロールのビジュアル レイヤー。 Z オーダーを決定するコントロールは、他のコントロールの前にします。)Z オーダーの詳細については、次を参照してください。 [Windows フォーム上のオブジェクトの階層構造](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)します。  
   
-3.  完了したら、をクリックして**タブ オーダー**上、**ビュー**タブ オーダー モードを終了するには、もう一度メニュー。  
+3.  完了したら、クリックして**タブ オーダー**上、**ビュー**タブ オーダー モードを終了するには、もう一度メニュー。  
   
     > [!NOTE]
-    >  フォーカスを取得できません。 コントロールだけでなく、無効になっており、非表示のコントロールがない、<xref:System.Windows.Forms.Control.TabIndex%2A>プロパティであり、タブ オーダーに含まれません。 ユーザーは、TAB キーを押すと、これらのコントロールはスキップされます。  
+    >  無効になっており、非表示のコントロールと、フォーカスを取得できませんコントロールがない、<xref:System.Windows.Forms.Control.TabIndex%2A>プロパティとは、タブ オーダーに含まれません。 ユーザーは、TAB キーを押すと、これらのコントロールはスキップされます。  
   
- プロパティ ウィンドウを使用して、タブ オーダーを設定する代わりに、<xref:System.Windows.Forms.Control.TabIndex%2A>プロパティです。 <xref:System.Windows.Forms.Control.TabIndex%2A>  タブの順序で配置されているコントロールのプロパティを決定します。 既定では、最初のコントロールの描画が、<xref:System.Windows.Forms.Control.TabIndex%2A>値 0、2 番目は、 <xref:System.Windows.Forms.Control.TabIndex%2A> 1 というようです。  
+ プロパティ ウィンドウを使用してタブ オーダーを設定する代わりに、<xref:System.Windows.Forms.Control.TabIndex%2A>プロパティ。 <xref:System.Windows.Forms.Control.TabIndex%2A>タブ オーダーの位置は、コントロールのプロパティを決定します。 既定では、最初のコントロールが描画されるが、<xref:System.Windows.Forms.Control.TabIndex%2A>値 0、2 番目に、 <xref:System.Windows.Forms.Control.TabIndex%2A> 1 の。  
   
- さらに、既定では、<xref:System.Windows.Forms.GroupBox>コントロールが持つ独自<xref:System.Windows.Forms.Control.TabIndex%2A>られている整数値。 A<xref:System.Windows.Forms.GroupBox>コントロール自体は、実行時にフォーカスを持つことはできません。 したがって、各コントロール、<xref:System.Windows.Forms.GroupBox>独自の 10 進数を持つ<xref:System.Windows.Forms.Control.TabIndex%2A>.0 で始まる値。 当然ながら、として、<xref:System.Windows.Forms.Control.TabIndex%2A>の<xref:System.Windows.Forms.GroupBox>コントロールがインクリメントされます、内のコントロールが増加します。 変更した場合、 <xref:System.Windows.Forms.Control.TabIndex%2A> 5、6 ~ 値、 <xref:System.Windows.Forms.Control.TabIndex%2A> 6.0 というように、グループの最初のコントロールの値が自動的に変更します。  
+ さらに、既定を<xref:System.Windows.Forms.GroupBox>コントロールがある独自<xref:System.Windows.Forms.Control.TabIndex%2A>整数の値。 A<xref:System.Windows.Forms.GroupBox>コントロール自体は実行時にフォーカスを持つことはできません。 内の各コントロール、そのため、<xref:System.Windows.Forms.GroupBox>が独自の 10 進数<xref:System.Windows.Forms.Control.TabIndex%2A>.0 から始まる値。 当然ながら、として、<xref:System.Windows.Forms.Control.TabIndex%2A>の<xref:System.Windows.Forms.GroupBox>コントロールがインクリメントされます、内のコントロールが適宜インクリメントされます。 変更した場合、 <xref:System.Windows.Forms.Control.TabIndex%2A> 5 から 6 までの値、 <xref:System.Windows.Forms.Control.TabIndex%2A> 6.0 では、という具合に、グループ内の最初のコントロールの値が自動的に変更します。  
   
- 最後に、フォームのさまざまの任意のコントロールは、タブ オーダーでスキップできます。 通常は、TAB キーを押して連続して実行時の選択、タブ オーダー内の各コントロールです。 無効にして、<xref:System.Windows.Forms.Control.TabStop%2A>プロパティ、行うことができます、フォームのタブ オーダーで経由で渡されるコントロール。  
+ 最後に、フォーム上の多数の任意のコントロールは、タブ オーダー内でスキップできます。 通常は、TAB キーを押して連続して実行時の選択タブ オーダー内の各コントロール。 無効にして、<xref:System.Windows.Forms.Control.TabStop%2A>プロパティ、経由で、フォームのタブ オーダー内で渡されるコントロールを行うことができます。  
   
 #### <a name="to-remove-a-control-from-the-tab-order"></a>タブ オーダーのコントロールを削除するには  
   
 1.  コントロールの設定<xref:System.Windows.Forms.Control.TabStop%2A>プロパティを`false`プロパティ ウィンドウでします。  
   
-     いる A コントロール<xref:System.Windows.Forms.Control.TabStop%2A>プロパティに設定された`false`TAB キーでコントロールを循環するときに、コントロールがスキップされた場合でも、タブ オーダー内での位置を維持できます。  
+     いる A コントロール<xref:System.Windows.Forms.Control.TabStop%2A>プロパティに設定された`false`コントロールをスキップして、TAB キーでコントロールを循環する場合でも、タブ オーダー内の位置を維持します。  
   
     > [!NOTE]
-    >  ラジオ ボタン グループでは、実行時に停止する 1 つのタブがします。 選択したボタン (ボタンは、その<xref:System.Windows.Forms.RadioButton.Checked%2A>プロパティに設定`true`) がその<xref:System.Windows.Forms.Control.TabStop%2A>プロパティが自動的に設定`true`れ、他のボタン、<xref:System.Windows.Forms.Control.TabStop%2A>プロパティに設定`false`です。 グループ化の詳細については<xref:System.Windows.Forms.RadioButton>コントロールを参照してください[セットとして機能する Windows フォーム RadioButton コントロールをグループ化](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)です。  
+    >  ラジオ ボタン グループには、実行時に停止する 1 つのタブがあります。 選択したボタン (ボタンは、その<xref:System.Windows.Forms.RadioButton.Checked%2A>プロパティに設定`true`) がその<xref:System.Windows.Forms.Control.TabStop%2A>プロパティが自動的に設定`true`他のボタンがありますが、その<xref:System.Windows.Forms.Control.TabStop%2A>プロパティに設定`false`します。 グループ化の詳細については<xref:System.Windows.Forms.RadioButton>コントロールを参照してください[セットとして機能する Windows フォーム RadioButton コントロールをグループ化](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)  

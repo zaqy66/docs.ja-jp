@@ -2,12 +2,12 @@
 title: '方法 : ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する'
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
-ms.openlocfilehash: 39103e86090ed57354efaf9c410a2733a58f06bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c21c1a80468bd81f2df69009afd2be86ee714250
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490871"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331710"
 ---
 # <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>方法 : ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] が Web サービスをホストする場合は、承認マネージャーをアプリケーションに統合してサービスを承認することができます。 承認マネージャーを使用して、アプリケーション開発者は個々の操作を定義できます。また、個々の操作をグループ化してタスクを形成できます。 次に管理者は、ロールを承認して特定のタスクまたは個々の操作を実行できます。 承認マネージャーでは、ロール、タスク、操作、ユーザーを管理する管理ツールとして Microsoft 管理コンソール (MMC) スナップインが提供されます。 管理者は、承認マネージャーのポリシー ストアを XML ファイル、Active Directory、または Active Directory アプリケーション モード (ADAM) ストアに構成します。  
@@ -29,7 +29,7 @@ ms.locfileid: "33490871"
 </system.web>  
 ```  
   
- 統合の詳細については、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] WCF アプリケーションでは、ロール プロバイダーを参照してください[する方法: ASP.NET ロール プロバイダーを使用して、サービスと](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)です。 承認マネージャーでの使用の詳細については[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]を参照してください[する方法: ASP.NET 2.0 で承認マネージャー (AzMan) を使用して](http://go.microsoft.com/fwlink/?LinkId=71303)です。  
+ 統合の詳細については、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] WCF アプリケーションでは、ロール プロバイダーを参照してください[方法: ASP.NET ロール プロバイダーを使用して、サービスと](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)します。 承認マネージャーの詳細については[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]を参照してください[方法: ASP.NET 2.0 で Authorization Manager (AzMan) 使用](https://go.microsoft.com/fwlink/?LinkId=71303)します。  
   
 ## <a name="see-also"></a>関連項目  
  [方法 : ASP.NET のロール プロバイダーとサービスを使用する](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)

@@ -9,26 +9,27 @@ helpviewer_keywords:
 - brushes [WPF], creating reflections
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
-ms.openlocfilehash: c791dbbe02faaba790c650d482db092702730fa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 716adff5c5c41e6601e384b6669516cb6ba1041d
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332495"
 ---
 # <a name="how-to-create-a-reflection"></a>方法 : 反射を作成する
-この例を使用する方法を示しています、<xref:System.Windows.Media.VisualBrush>反射を作成します。 <xref:System.Windows.Media.VisualBrush>既存 visual を表示することができます、反射や拡大などの興味深いビジュアル効果を生成するためにこの機能を使用することができます。  
+この例は、使用する方法を示します、<xref:System.Windows.Media.VisualBrush>反射を作成します。 <xref:System.Windows.Media.VisualBrush>既存のビジュアルを表示することができます、反射や拡大などの興味深い視覚効果を生成するために、この機能を使用することができます。  
   
 ## <a name="example"></a>例  
- 次の例では、<xref:System.Windows.Media.VisualBrush>の反射、<xref:System.Windows.Controls.Border>いくつかの要素を格納しています。 次の図は、この例で生成される出力を示しています。  
+ 次の例では、<xref:System.Windows.Media.VisualBrush>の反射を作成、<xref:System.Windows.Controls.Border>いくつかの要素を格納しています。 次の図は、この例で生成される出力を示しています。  
   
- ![A ビジュアル オブジェクトの反映](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
+ ![A がビジュアル オブジェクトを反映](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
 反映された Visual オブジェクト  
   
  [!code-csharp[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/ReflectionExample.cs#graphicsmmvisualbrushreflectionexamplewholepage)]
  [!code-vb[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/reflectionexample.vb#graphicsmmvisualbrushreflectionexamplewholepage)]
  [!code-xaml[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/ReflectionExample.xaml#graphicsmmvisualbrushreflectionexamplewholepage)]  
   
- 反射を作成する方法と、画面の部分を拡大する方法を示す例が含まれている完全なサンプルは、次を参照してください。 [VisualBrush サンプル](http://go.microsoft.com/fwlink/?LinkID=160049)です。  
+ 画面の一部を拡大する方法と反射を作成する方法を示す例が含まれているサンプル全体については、次を参照してください。 [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Media.VisualBrush>  

@@ -2,17 +2,17 @@
 title: 入れ子になっている要素に指定したリレーションシップの割り当て
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: e1fde0ef585621a6821838613a7e77dedf7042b1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0346ba04fd8af6b5abc81fe994dd40f9a6a37c1d
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756697"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332469"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>入れ子になっている要素に指定したリレーションシップの割り当て
-スキーマを含めることができます、 **msdata:Relationship**注釈をスキーマ内にある 2 つの要素間のマッピングを明示的に指定します。 2 つの要素で指定された**msdata:Relationship**スキーマでは、入れ子にすることができますが、する必要はありません。 マッピング プロセスを使用して**msdata:Relationship**を 2 つの列の間で主キー/外部キーのリレーションシップを生成するスキーマです。  
+スキーマを含めることができます、 **msdata:Relationship**注釈を明示的にスキーマの 2 つの要素間のマッピングを指定します。 2 つの要素で指定された**msdata:Relationship**スキーマで入れ子にできますが、する必要はありません。 マッピング プロセスを使用して**msdata:Relationship**で 2 つの列の間で主キー/外部キーのリレーションシップを生成するスキーマ。  
   
- 次の例を XML スキーマを示しています、 **OrderDetail**要素は、子要素の**順序**です。 **Msdata:Relationship**この親子リレーションシップを識別し、指定する、 **OrderNumber**列と生成された**順序**に関連するテーブル、**OrderNo**列と生成された**OrderDetail**テーブル。  
+ 次の例を XML スキーマを示しています、 **OrderDetail**要素の子要素は、**順序**します。 **Msdata:Relationship**この親子リレーションシップを識別することを指定して、 **OrderNumber** 、生成された**順序**テーブルに関連する、**OrderNo** 、生成された**OrderDetail**テーブル。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -61,7 +61,7 @@ ms.locfileid: "32756697"
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   間のリレーションシップ、**順序**と**OrderDetail**テーブル。 **入れ子になった**このリレーションシップのプロパティに設定されて**True**ため、**順序**と**OrderDetail**スキーマ内の要素が入れ子になった.  
+-   間のリレーションシップ、**順序**と**OrderDetail**テーブル。 **入れ子になった**このリレーションシップのプロパティに設定されて**True**ため、**順序**と**OrderDetail**スキーマで要素が入れ子になった.  
   
     ```  
     ParentTable: Order  
@@ -77,4 +77,4 @@ ms.locfileid: "32756697"
 ## <a name="see-also"></a>関連項目  
  [XML スキーマ (XSD) からの DataSet リレーションの生成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [XML スキーマ (XSD) 制約の DataSet 制約への割り当て](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
