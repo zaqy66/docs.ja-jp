@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 7aacb6ca64a8b45a9b54b3f9d8785c7c61a07e09
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105655"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254313"
 ---
 # <a name="file-and-stream-io"></a>ファイルおよびストリーム入出力
 ファイルおよびストリーム I/O (入出力) とは、ストレージ メディアとの間のデータの転送を指します。 .NET Framework では、`System.IO` 名前空間に、データ ストリームおよびファイルで同期的および非同期的に読み取りと書き込みを有効にする型が用意されています。 これらの名前空間には、ファイルを圧縮および圧縮解除する型、パイプとシリアル ポート経由の通信を有効にする型もあります。  
@@ -120,7 +120,7 @@ ms.locfileid: "37105655"
 ## <a name="isolated-storage"></a>分離ストレージ  
  分離ストレージは、コードと保存データを関連付ける標準化された方法を定義することにより、分離性と安全性を提供するデータ ストレージ機構です。 ストレージは、ユーザー、アセンブリ、および (必要に応じて) ドメイン別に分離された仮想ファイル システムを提供します。 分離ストレージは、アプリケーションにユーザー ファイルへのアクセス許可がない場合に特に便利です。 コンピューターのセキュリティ ポリシーによって制御される方法でアプリケーションの設定またはファイルを保存できます。  
   
- 分離ストレージは [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリには使用できません。代わりに、[Windows.Storage](/uwp/api/Windows.Storage) 名前空間のアプリケーション データ クラスを使用します。 詳細については、Windows デベロッパー センターの[アプリケーション データ](/previous-versions/windows/apps/hh464917(v=win.10))に関する説明を参照してください。  
+ 分離ストレージは [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリには使用できません。代わりに、[Windows.Storage](/uwp/api/Windows.Storage) 名前空間のアプリケーション データ クラスを使用します。 詳細については、Windows デベロッパー センターの[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))に関する説明を参照してください。  
   
  次のクラスは、分離ストレージを実装するときによく使用します。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "37105655"
   
 -   <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> など、特にファイル操作に関連する型は、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] に含まれていません。 代わりに、[StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx)、[StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx) など、[!INCLUDE[wrt](../../../includes/wrt-md.md)] の [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 名前空間の型を使用します。  
   
--   分離ストレージは使用できません。代わりに、[アプリケーション データ](/previous-versions/windows/apps/hh464917(v=win.10))を使用します。  
+-   分離ストレージは使用できません。代わりに、[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))を使用します。  
   
 -   UI スレッドをブロックしないように、<xref:System.IO.Stream.ReadAsync%2A>、<xref:System.IO.Stream.WriteAsync%2A> などの非同期メソッドを使用します。  
   
@@ -147,12 +147,12 @@ ms.locfileid: "37105655"
   
  必要に応じて、.NET Framework ストリームと Windows ランタイム ストリームを変換できます。 詳細については、「[方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)」または「[System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx)」を参照してください。 <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでの I/O 操作の詳細については、「[Quickstart: Reading and writing files (XAML)](/previous-versions/windows/apps/hh758325(v=win.10))」 (クイック スタート: ファイルの読み取りと書き込み) を参照してください。  
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでの I/O 操作の詳細については、「[Quickstart: Reading and writing files (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))」 (クイック スタート: ファイルの読み取りと書き込み) を参照してください。  
   
 ## <a name="io-and-security"></a>I/O とセキュリティ  
  <xref:System.IO?displayProperty=nameWithType> 名前空間のクラスを使用する場合、アクセス制御リスト (ACL: Access Control List) などのオペレーティング システムのセキュリティ要件に従い、ファイルとディレクトリへのアクセスを制御する必要があります。 この要件の他にも、<xref:System.Security.Permissions.FileIOPermission> で指定されている要件を満たす必要があります。 ACL はプログラムで管理できます。 詳細については、「[方法: アクセス制御リスト エントリを追加または削除する](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)」を参照してください。  
   
- 既定のセキュリティ ポリシーでは、インターネットまたはイントラネットのアプリケーションはユーザーのコンピューターのファイルにアクセスできません。 したがって、インターネットまたはイントラネットを経由してダウンロードされるコードを記述する場合に、物理ファイル パスを必要とする I/O クラスを使用しないでください。 代わりに、従来の .NET Framework アプリケーション用の[分離ストレージ](../../../docs/standard/io/isolated-storage.md)を使用するか、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリ用の[アプリケーション データ](/previous-versions/windows/apps/hh464917(v=win.10))を使用します。  
+ 既定のセキュリティ ポリシーでは、インターネットまたはイントラネットのアプリケーションはユーザーのコンピューターのファイルにアクセスできません。 したがって、インターネットまたはイントラネットを経由してダウンロードされるコードを記述する場合に、物理ファイル パスを必要とする I/O クラスを使用しないでください。 代わりに、従来の .NET Framework アプリケーション用の[分離ストレージ](../../../docs/standard/io/isolated-storage.md)を使用するか、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリ用の[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))を使用します。  
   
  セキュリティ チェックが実行されるのは、ストリームが構築されている場合だけです。 したがって、ストリームを開いて、そのストリームを信頼度の低いコードやアプリケーション ドメインに渡さないでください。  
   

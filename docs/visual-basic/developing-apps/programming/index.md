@@ -5,21 +5,21 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 74fd333b97f2e5fbbee3771f6715cc36bbd12037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587411"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255203"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic でのプログラミング
 このセクションでは、Visual Basic アプリケーションを作成するときに知っておきたいプログラミング タスクについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [コンピューター リソースへのアクセス](../../../visual-basic/developing-apps/programming/computer-resources/computer-resources.md)  
+ [コンピューター リソースへのアクセス](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
  `My.Computer` オブジェクトを使用して、アプリケーションを実行するコンピューターについての情報にアクセスし、そのコンピューターを制御する方法に関するドキュメントです。  
   
- [アプリケーションからの情報のログ記録](../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)  
+ [アプリケーションからの情報のログ記録](../../../visual-basic/developing-apps/programming/log-info/index.md)  
  `My.Application.Log` オブジェクトと `My.Log` オブジェクトを使用してアプリケーションの情報を記録する方法と、アプリケーションのログ機能を拡張する方法に関するドキュメントです。  
   
  [アクセス (ユーザー データに)](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "33587411"
  [アプリケーションの Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  アプリケーションによって参照される Web サービスに `My.WebServices` オブジェクトを使用してアクセスする方法に関するドキュメントです。  
   
- [アプリケーション設定へのアクセス](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)  
+ [アプリケーション設定へのアクセス](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  `My.Settings` オブジェクトを使用して、アプリケーションの設定にアクセスする方法に関するドキュメントです。  
   
  [ドライブ、ディレクトリ、およびファイルの処理](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
