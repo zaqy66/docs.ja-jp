@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: f362bd1e4a644488e85cdeca674d46ca340bde05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd792c2c26898cd3dfd7b52d865fa83636c426eb
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491749"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253974"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>方法 : WCF アクティブ化コンポーネントをインストールして設定する
-このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を設定するために必要な手順を説明で[!INCLUDE[wv](../../../../includes/wv-md.md)]HTTP 経由で通信を行わないサービスのネットワーク プロトコルの Windows Communication Foundation (WCF) をホストします。 以降の各セクションで、この構成に関する手順について概説します。  
+このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を設定するために必要な手順を説明に[!INCLUDE[wv](../../../../includes/wv-md.md)]HTTP では通信しないサービスのネットワーク プロトコルの Windows Communication Foundation (WCF) をホストします。 以降の各セクションで、この構成に関する手順について概説します。  
   
--   インストール (またはのインストールの確認) WCF アクティブ化コンポーネントです。  
+-   インストール (またはのインストールの確認)、WCF のアクティブ化コンポーネント。  
   
 -   非 HTTP プロトコルをサポートようにする WAS を構成します。 次の手順では、TCP アクティベーション用に [!INCLUDE[wv](../../../../includes/wv-md.md)] を構成します。  
   
- インストールと構成が、確認後、[する方法: WAS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)WAS を使用する非 HTTP エンドポイントを公開する WCF サービスを作成する手順についてはします。  
+ インストールと構成を参照してください。 後[方法: WAS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)WAS を使用する非 HTTP エンドポイントを公開する WCF サービスを作成する手順についてはします。  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>WCF 非 HTTP アクティブ化コンポーネントをインストールするには  
   
-1.  クリックして、**開始**ボタンをクリックし、をクリックして**コントロール パネルの **です。  
+1.  をクリックして、**開始**ボタンをクリックし、をクリックし、**コントロール パネルの **します。  
   
-2.  をクリックして**プログラム**、クリックして**プログラムと機能**します。  
+2.  クリックして**プログラム**、 をクリックし、**プログラムと機能**します。  
   
-3.  **タスク** メニューのをクリックして**Windows の機能のオンまたはオフ**です。  
+3.  **タスク** メニューのをクリックして**オンまたはオフにする Windows 機能**します。  
   
 4.  [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] ノードを検索し、それを選択して展開します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33491749"
     ```  
   
     > [!NOTE]
-    >  このコマンドはテキスト 1 行です。 このコマンドにより、/\<*WCF アプリケーション*> アプリケーションへの両方を使用してアクセスhttp://localhost  */ \<WCF アプリケーション >* と net.tcp://localhost/*\<WCF アプリケーション >* です。  
+    >  このコマンドはテキスト 1 行です。 このコマンドは有効、/\<*WCF アプリケーション*> アプリケーションに両方を使用してアクセスできる`http://localhost/<WCF Application>`と`net.tcp://localhost/<WCF Application>`します。
   
      このサンプル用に追加した net.tcp サイト バインディングを削除します。  
   

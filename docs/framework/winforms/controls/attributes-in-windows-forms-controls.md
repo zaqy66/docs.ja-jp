@@ -7,11 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: e06836e53a69394ad899bedc8e545dbff9b9c29d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 272ce198a61e0d1bbe9c44514aaf51db72f5d04c
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257924"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows フォーム コントロールの属性
 .NET Framework には、カスタム コントロールおよびカスタム コンポーネントのメンバーに適用できるさまざまな属性が用意されています。 これらの属性には、クラスの実行時の動作に影響を及ぼすものもあれば、デザイン時の動作に影響を及ぼすものもあります。  
@@ -23,10 +24,10 @@ ms.lasthandoff: 05/04/2018
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|プロパティに渡す値を指定し、そのプロパティが別のソースから値を取得するようにします。 これは "*アンビエンス*" と呼ばれています。|  
 |<xref:System.ComponentModel.BrowsableAttribute>|プロパティまたはイベントが **[プロパティ]** ウィンドウに表示されるかどうかを指定します。|  
-|<xref:System.ComponentModel.CategoryAttribute>|プロパティまたはイベントに表示される場合にグループ化するためのカテゴリの名前を指定します、<xref:System.Windows.Forms.PropertyGrid>コントロールに対して設定<xref:System.Windows.Forms.PropertySort.Categorized>モード。|  
+|<xref:System.ComponentModel.CategoryAttribute>|プロパティまたはイベントに表示するときにグループ化するためのカテゴリの名前を指定します、<xref:System.Windows.Forms.PropertyGrid>コントロールに対して設定<xref:System.Windows.Forms.PropertySort.Categorized>モード。|  
 |<xref:System.ComponentModel.DefaultValueAttribute>|プロパティの既定値を指定します。|  
 |<xref:System.ComponentModel.DescriptionAttribute>|プロパティまたはイベントの説明文を指定します。|  
-|<xref:System.ComponentModel.DisplayNameAttribute>|引数を受け取らないプロパティ、イベント、または `public``void` メソッドの表示名を指定します。|  
+|<xref:System.ComponentModel.DisplayNameAttribute>|引数を受け取らないプロパティ、イベント、または `public void` メソッドの表示名を指定します。|  
 |<xref:System.ComponentModel.EditorAttribute>|プロパティの変更に使用するエディターを指定します。|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|プロパティまたはメソッドをエディターで表示できるかどうかを指定します。|  
 |<xref:System.ComponentModel.Design.HelpKeywordAttribute>|クラスまたはメンバーのコンテキスト キーワードを指定します。|  

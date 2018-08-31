@@ -3,11 +3,11 @@ title: F# とは
 description: どのような f# プログラミング言語とはなどの f# プログラミングについて説明します。 豊富なデータ型、関数、およびそれらをまとめる方法について説明します。
 ms.date: 08/03/2018
 ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40240641"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256711"
 ---
 # <a name="what-is-f"></a>F# とは #
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b579c2c3ae22469706326ee17109b8e39dab60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 479f9f639548eb81351d1df3f8f08b29b393cba1
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650791"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257250"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 このモジュールが一部となるアセンブリの名前を指定します。  
@@ -30,19 +30,19 @@ ms.locfileid: "33650791"
 |---|---|  
 |`assembly_name`|このモジュールの一部となるアセンブリの名前。|  
   
-## <a name="remarks"></a>コメント  
- コンパイラ プロセス、`-moduleassemblyname`場合にのみ、オプション、`-target:module`オプションが指定されました。 これにより、コンパイラでモジュールを作成します。 コンパイラによって作成されたモジュールがで指定されたアセンブリに対してのみ有効では、`-moduleassemblyname`オプション。 別のアセンブリでモジュールを配置すると、実行時エラーが発生します。  
+## <a name="remarks"></a>Remarks  
+ コンパイラ プロセス、`-moduleassemblyname`オプション場合にのみ、`-target:module`オプションが指定されました。 これにより、コンパイラでモジュールを作成します。 コンパイラによって作成されたモジュールがで指定されたアセンブリに対してのみ有効ですが、`-moduleassemblyname`オプション。 別のアセンブリでモジュールを配置する場合は、実行時エラーが発生します。  
   
- `-moduleassemblyname`オプションは、次に当てはまる場合にのみ必要があります。  
+ `-moduleassemblyname`オプションは、次に該当する場合にのみ必要があります。  
   
 -   モジュール内のデータ型へのアクセスを必要な`Friend`参照先アセンブリの型。  
   
--   参照アセンブリがモジュールをビルドするアセンブリにフレンド アセンブリへのアクセスを許可します。  
+-   参照アセンブリがモジュールをビルドするアセンブリにフレンド アセンブリのアクセスを付与します。  
   
- モジュールの作成の詳細については、次を参照してください。 [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)です。 フレンド アセンブリの詳細については、次を参照してください。[フレンド アセンブリ](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)です。  
+ モジュールの作成方法の詳細については、次を参照してください。 [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)します。 フレンド アセンブリの詳細については、次を参照してください。[フレンド アセンブリ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)します。  
   
 > [!NOTE]
->  `-moduleassemblyname`オプションは、Visual Studio 開発環境からは利用できません。 使用可能なコマンド プロンプトからコンパイルするときにのみです。  
+>  `-moduleassemblyname`オプションは、Visual Studio 開発環境内からは使用できません。 コマンド プロンプトからコンパイルするときにのみ、は使用できます。  
   
 ## <a name="see-also"></a>関連項目  
  [方法: マルチファイル アセンブリをビルドする](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)  
@@ -53,4 +53,4 @@ ms.locfileid: "33650791"
  [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
  [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [フレンド アセンブリ](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)
+ [フレンド アセンブリ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)

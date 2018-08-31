@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 62bf3ce4bc7a0ff8109ec34fba77dd854c7679b8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f56445e9bdd030d591f9fc6300f9a24d330dbc20
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697119"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257371"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。  
@@ -102,9 +102,9 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
  証明書に関する一般的な質問は、どの証明書を使用するかということとその理由に関するものです。 その答えは、クライアントとサービスのどちらをプログラミングするかによって異なります。 以下に一般的なガイドラインを示します (これらの質問に対する包括的な答えではありません)。  
   
 ### <a name="service-certificates"></a>サービス証明書  
- サービス証明書の第一のタスクは、クライアントに対してサーバーを認証することです。 クライアントがサーバーを認証するときの最初のチェックの 1 つとして、"**サブジェクト**" フィールドの値とサービスへのアクセスに使用する URI (Uniform Resource Identifier) が比較されます。この場合、双方の DNS が一致する必要があります。 たとえば、サービスの URI が "http://www.contoso.com/endpoint/" の場合、"**サブジェクト**" フィールドにも値 "www.contoso.com" が含まれている必要があります。  
+ サービス証明書の第一のタスクは、クライアントに対してサーバーを認証することです。 クライアントがサーバーを認証するときの最初のチェックの 1 つとして、"**サブジェクト**" フィールドの値とサービスへのアクセスに使用する URI (Uniform Resource Identifier) が比較されます。この場合、双方の DNS が一致する必要があります。 たとえば、サービスの URI は、 `http://www.contoso.com/endpoint/` 、**サブジェクト**フィールドでは、値を含める必要がありますも`www.contoso.com`します。  
   
- このフィールドには複数の値を含めることができますが、各値の先頭にはその値を示す初期化コードが付加されます。 通常、初期化コードは共通名 (Common Name) を表す "CN" です。たとえば、"CN = www.contoso.com" のようになります。 "**サブジェクト**" フィールドを空白にすることもできます。この場合、"**サブジェクト代替名**" フィールドに値として **DNS 名**を含めることができます。  
+ このフィールドには複数の値を含めることができますが、各値の先頭にはその値を示す初期化コードが付加されます。 ほとんどの場合、初期化が"CN"の共通名は、たとえば、`CN = www.contoso.com`します。 "**サブジェクト**" フィールドを空白にすることもできます。この場合、"**サブジェクト代替名**" フィールドに値として **DNS 名**を含めることができます。  
   
  また、証明書の "**目的**" フィールドの値に、適切な値 ("サーバー認証" や "クライアント認証" など) を含める必要があります。  
   
@@ -170,7 +170,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
   
  WCF の最初のリリースでは、ドメイン ポリシーを参照せずにマッピングが実行されます。 そのため、マッピングが有効になっており、X.509 証明書がドメイン ポリシーを満たしていない場合は、最初のリリースの下で実行しているときには動作していた古いアプリケーションが動作しなくなる可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.Channels>  
  <xref:System.ServiceModel.Security>  
  <xref:System.ServiceModel>  

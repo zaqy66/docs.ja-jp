@@ -1,6 +1,6 @@
 ---
 title: GetNames 関数 (アンマネージ API リファレンス)
-description: GetNames 関数では、オブジェクトのプロパティの名前を取得します。
+description: GetNames 関数は、オブジェクトのプロパティの名前を取得します。
 ms.date: 11/06/2017
 api_name:
 - GetNames
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461982"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258112"
 ---
 # <a name="getnames-function"></a>GetNames 関数
 一部またはすべてのオブジェクトのプロパティの名前を取得します。 
@@ -47,69 +47,69 @@ HRESULT GetNames (
 [in]このパラメーターは使用されません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)インスタンス。
+[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `wszQualifierName`  
-[in]有効なポインター`LPCWSTR`フィルターの一部として動作する修飾子の名前を指定します。 詳細については、次を参照してください。、[解説](#remarks)セクションです。 このパラメーターは、`null` に設定できます。 
+[in]有効なへのポインター`LPCWSTR`フィルターの一部として動作する修飾子の名前を指定します。 詳細については、次を参照してください。、[解説](#remarks)セクション。 このパラメーターは、`null` に設定できます。 
 
 `lFlags`  
-[in]ビット フィールドの組み合わせ。 詳細については、次を参照してください。、[解説](#remarks)セクションです。
+[in]ビット フィールドの組み合わせ。 詳細については、次を参照してください。、[解説](#remarks)セクション。
 
 `pQualifierValue`   
-[in]有効なポインター`VARIANT`フィルター値に初期化された構造体。 このパラメーターは、`null` に設定できます。 
+[in]有効なへのポインター`VARIANT`フィルター値に初期化された構造体。 このパラメーターは、`null` に設定できます。 
 
 `pstrNames`  
-[out]A`SAFEARRAY`プロパティ名を格納する構造体。 項目で、このパラメーターは常にへのポインター`null`です。 参照してください、[解説](#remarks)詳細についてはします。 
+[out]A`SAFEARRAY`プロパティ名を含む構造体。 項目で、このパラメーターがありますへのポインター`null`します。 参照してください、[解説](#remarks)詳細についてはします。 
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。
+この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 1 つまたは複数のパラメーターが有効でないか、フラグとパラメーターの組み合わせが正しくないが指定されました。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 1 つまたは複数のパラメーターが無効、またはフラグとパラメーターの組み合わせが正しくないが指定されました。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数への呼び出しをラップする、 [IWbemClassObject::GetNames](https://msdn.microsoft.com/library/aa391447(v=vs.85).aspx)メソッドです。
+この関数の呼び出しをラップする、 [IWbemClassObject::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames)メソッド。
 
 返される名前付きのフラグとパラメーターの組み合わせによって制御されます。 たとえば、関数では、すべてのプロパティの名前またはキーのプロパティの名前のみを返すことができます。  プライマリ フィルターがで指定された、`lFlags`パラメーター、およびその他のパラメーターは、これによって異なります。
 
-フラグの値が`lFlags`ビット フィールドは、
+フラグの値で`lFlags`ビット フィールドには
 
 
-フラグとして渡すことができる、`lEnumFlags`引数は、ビット フィールドで定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。  その他のグループから任意のフラグを使って各グループから 1 つのフラグを組み合わせることができます。 ただし、同じグループにフラグは相互に排他的です。 
+フラグとして渡すことができる、`lEnumFlags`引数はビット フィールドで定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。  その他のグループからのすべてのフラグでは、各グループから 1 つのフラグを組み合わせることができます。 ただし、同じグループからのフラグは、相互に排他的です。 
 
-| グループ 1 フラグ |[値]  |説明  |
+| フラグのグループ 1 |[値]  |説明  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | すべてのプロパティ名を返します。 `strQualifierName` `pQualifierVal`使用されていません。 |
-| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | 指定した名前の修飾子を持つプロパティのみを返す、`strQualifierName`パラメーター。 このフラグを使用する必要がありますを指定する`strQualifierName`です。 |
-|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  によって指定された名前の修飾子を持たない唯一のプロパティを返す、`strQualifierName`パラメーター。 このフラグを使用する必要がありますを指定する`strQualifierName`です。 |
-|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | によって指定された名前の修飾子を持つプロパティのみを返す、`wszQualifierName`パラメーターで指定されているのと同じ値が設定されても、`pQualifierVal`構造体。 このフラグを使用する場合、両方を指定する必要があります、`wszQualifierName`と`pQualifierValue`です。 |
+| `WBEM_FLAG_ALWAYS` | 0 | すべてのプロパティ名が返されます。 `strQualifierName` `pQualifierVal`使用されていません。 |
+| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | 指定した名前の修飾子を持つプロパティのみを返す、`strQualifierName`パラメーター。 かどうかは、このフラグが使用される、指定する必要あります`strQualifierName`します。 |
+|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  指定された名前の修飾子がない唯一のプロパティを返す、`strQualifierName`パラメーター。 かどうかは、このフラグが使用される、指定する必要あります`strQualifierName`します。 |
+|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | 指定した名前の修飾子を持つプロパティのみを返す、`wszQualifierName`パラメーターで指定されているのと同じ値が設定されても、`pQualifierVal`構造体。 このフラグを使用する場合、両方を指定する必要があります、`wszQualifierName`と`pQualifierValue`します。 |
 
-| グループ 2 フラグ |[値]  |説明  |
+| フラグのグループ 2 |[値]  |説明  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | キーを定義するプロパティの名前のみを返します。 |
-|`WBEM_FLAG_REFS_ONLY` | 0x8 | 戻り値のみプロパティ名オブジェクト参照であります。 |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | 戻り値プロパティ名のみのオブジェクト参照であります。 |
 
 | フラグのグループ 3 |[値]  |説明  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 最派生クラスに属しているプロパティ名のみが返されます。 親クラスからプロパティを除外します。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 親クラスに属しているプロパティ名のみが返されます。 |
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | システムのプロパティの名前のみを返します。 |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | 非システムのプロパティの名前のみを返します。 |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | システムのプロパティ名のみが返されます。 |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | 非システムのプロパティ名のみが返されます。 |
 
-関数を常に割り当てる新しい`SAFEARRAY`を返す場合`WBEM_S_NO_ERROR`、および`pstrNames`は常に設定します。 指定したフィルターに一致するプロパティがない場合、返される配列要素がゼロことができます。 以外の場合、値が返されます場合`WBM_S_NO_ERROR`、新しい`SAFEARRAY`構造は返されません。
+関数は常に新しい割り当て`SAFEARRAY`返された場合`WBEM_S_NO_ERROR`、および`pstrNames`は常に設定されます。 指定したフィルターに一致するプロパティがない場合、返される配列要素の 0 ことができます。 関数を以外の値を返す場合`WBM_S_NO_ERROR`、新しい`SAFEARRAY`構造は返されません。
  
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目  
 [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

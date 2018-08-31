@@ -5,11 +5,11 @@ helpviewer_keywords:
 - PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
 ms.openlocfilehash: 3dd7c348c4dc36a7ff64e76a93c05ddb24837079
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584697"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254703"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>PrintForm コンポーネント (Visual Basic) を参照するアプリケーションの配置
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントを参照するアプリケーションを配置する場合は、コンポーネントをターゲット コンピューターにインストールする必要があります。  
@@ -19,7 +19,7 @@ ms.locfileid: "33584697"
 ## <a name="installing-the-printform-as-a-prerequisite"></a>必要条件として PrintForm をインストールする  
  アプリケーションを正しく配置するためには、アプリケーションによって参照されるすべてのコンポーネントを配置する必要もあります。 必須コンポーネントのインストール プロセスは、 *ブートストラップ*と呼ばれます。  
   
- ときに、<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>コンポーネントは、開発用コンピューターにインストールされているが、Microsoft Visual Basic Power Packs ブートス トラップ パッケージが、Visual Studio ブートス トラップ ディレクトリに追加します。 その後、 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] または Windows インストーラー配置のための必要条件を追加する手順に従うと、このパッケージが使用可能になります。  
+ ときに、<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>コンポーネントは開発用コンピューターにインストールされている、Microsoft Visual Basic Power Packs ブートス トラップ パッケージは、Visual Studio ブートス トラップ ディレクトリに追加されます。 その後、 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] または Windows インストーラー配置のための必要条件を追加する手順に従うと、このパッケージが使用可能になります。  
   
  既定では、ブートストラップ コンポーネントは、インストール パッケージと同じ場所から配置されます。 または、必要に応じてユーザーがダウンロードできるような URL またはファイルの共有位置からコンポーネントを配置することもできます。  
   

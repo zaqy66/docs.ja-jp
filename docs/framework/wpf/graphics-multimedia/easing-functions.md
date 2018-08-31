@@ -15,65 +15,57 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-ms.openlocfilehash: 3ce7c1824dc53c154ba1091ea62c1b8950b757c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 038d9423ddae6f16165ed0618beab8391c462ac9
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557564"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253212"
 ---
 # <a name="easing-functions"></a>イージング関数
 イージング関数を使うと、独自の数式をアニメーションに適用することができます。 たとえば、オブジェクトをリアルにバウンドさせたり、バネに乗っているように動作させたりすることができます。 キー フレーム アニメーションや From/To/By アニメーションを使ってこれらの効果を近似することもできますが、大量の作業が必要であり、アニメーションは数式を使うほど正確ではありません。  
   
- 継承することで、独自のカスタム イージング関数を作成するだけでなく<xref:System.Windows.Media.Animation.EasingFunctionBase>、ランタイムによって提供されるいくつかのイージング関数のいずれかを使用して、一般的な効果を作成することができます。  
+ 継承することによって、独自のカスタム イージング関数を作成するだけでなく<xref:System.Windows.Media.Animation.EasingFunctionBase>、ランタイムによって提供されるいくつかのイージング関数のいずれかを使用して、一般的な効果を作成することができます。  
   
--   <xref:System.Windows.Media.Animation.BackEase>: 取り消されますアニメーションの動き若干指定したパスにアニメーション化を開始する前にします。  
+-   <xref:System.Windows.Media.Animation.BackEase>: 取り消されますアニメーションの動き若干指定されたパスのアニメーションを開始する前に。  
   
--   <xref:System.Windows.Media.Animation.BounceEase>: バウンス効果を作成します。  
+-   <xref:System.Windows.Media.Animation.BounceEase>: バウンド効果を作成します。  
   
--   <xref:System.Windows.Media.Animation.CircleEase>: 加速または減速循環関数を使用するアニメーションを作成します。  
+-   <xref:System.Windows.Media.Animation.CircleEase>: 円関数を使って加速および減速するアニメーションを作成します。  
   
--   <xref:System.Windows.Media.Animation.CubicEase>: 加速または減速の公式を使用するアニメーションを作成する*f*(*t*) = *t*<sup>3</sup>です。  
+-   <xref:System.Windows.Media.Animation.CubicEase>: 式を使って加速および減速するアニメーションを作成します。 *f*(*t*) = *t*<sup>3</sup>します。  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>: するまでに前後に動く spring のようなアニメーションを作成します。  
+-   <xref:System.Windows.Media.Animation.ElasticEase>: スプリングが伸び縮みし静止するまでのようなアニメーションを作成します。  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>: 加速または減速指数の式を使用するアニメーションを作成します。  
+-   <xref:System.Windows.Media.Animation.ExponentialEase>: 指数の式を使って加速および減速するアニメーションを作成します。  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: 加速または減速の公式を使用するアニメーションを作成する*f*(*t*) = *t*<sup>p</sup> p は、 <xref:System.Windows.Media.Animation.PowerEase.Power%2A>プロパティです。  
+-   <xref:System.Windows.Media.Animation.PowerEase>: 式を使って加速および減速するアニメーションを作成します。 *f*(*t*) = *t*<sup>p</sup> p は、 <xref:System.Windows.Media.Animation.PowerEase.Power%2A>プロパティ。  
   
--   <xref:System.Windows.Media.Animation.QuadraticEase>: 加速または減速の公式を使用するアニメーションを作成する*f*(*t*) = *t*<sup>2</sup>です。  
+-   <xref:System.Windows.Media.Animation.QuadraticEase>: 式を使って加速および減速するアニメーションを作成します。 *f*(*t*) = *t*<sup>2</sup>します。  
   
--   <xref:System.Windows.Media.Animation.QuarticEase>: 加速または減速の公式を使用するアニメーションを作成する*f*(*t*) = *t*<sup>4</sup>です。  
+-   <xref:System.Windows.Media.Animation.QuarticEase>: 式を使って加速および減速するアニメーションを作成します。 *f*(*t*) = *t*<sup>4</sup>します。  
   
--   <xref:System.Windows.Media.Animation.QuinticEase>: 加速または減速の公式を使用するアニメーションを作成する*f*(*t*) = *t*<sup>5</sup>です。  
+-   <xref:System.Windows.Media.Animation.QuinticEase>: 作成、数式を使って加速および減速するアニメーション*f*(*t*) = *t*<sup>5</sup>します。  
   
--   <xref:System.Windows.Media.Animation.SineEase>: 加速または減速サイン (正弦) 式を使用するアニメーションを作成します。  
+-   <xref:System.Windows.Media.Animation.SineEase>: 正弦公式を使って加速および減速するアニメーションを作成します。  
   
- これらのイージング関数の動作は、次のサンプルを使って調べることができます。  
-  
- [このサンプルを実行する](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
-  
- アニメーションにイージング関数を適用するには、使用、`EasingFunction`アニメーションのプロパティをアニメーションに適用するイージング関数を指定します。 次の例に適用されます、<xref:System.Windows.Media.Animation.BounceEase>イージング関数を<xref:System.Windows.Media.Animation.DoubleAnimation>跳ね返り効果を作成します。  
-  
- [このサンプルを実行する](http://go.microsoft.com/fwlink/?LinkId=139798&sref=BounceEase)  
+ アニメーションにイージング関数を適用するには、使用、`EasingFunction`アニメーションのプロパティがアニメーションに適用するイージング関数を指定します。 次の例では、適用、<xref:System.Windows.Media.Animation.BounceEase>イージング関数を<xref:System.Windows.Media.Animation.DoubleAnimation>バウンド効果を作成します。  
   
  [!code-xaml[BounceEase_snippet#BounceEase](../../../../samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]  
   
  前の例では、イージング関数を From/To/By アニメーションに適用しました。 キー フレーム アニメーションにこれらのイージング関数を適用することもできます。 次の例では、キー フレームとそれらに関連付けられたイージング関数を使って、四角形が上方に縮まり、遅くなり、下方に延び (落下するように)、停止するアニメーションを作成します。  
   
- [このサンプルを実行する](http://go.microsoft.com/fwlink/?LinkId=139798&sref=EasingFunctionDoubleKeyFrame)  
-  
  [!code-xaml[EasingFunctionDoubleKeyFrame_snippet#EasingFunctionDoubleKeyFrame](../../../../samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)]  
   
- 使用することができます、<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>イージング関数の動作、つまり、変更するプロパティを変更する方法、アニメーションの補間します。 3 つの値を与えることができますがある<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
+ 使用することができます、<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>イージング関数の動作方法は、変更するプロパティがアニメーションの補間方法を変更します。 3 つの値を与えることができますがある<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: 補間には、イージング関数に関連付けられた数式が次に示します。  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: 補間では、イージング関数に関連付けられた数式に従います。  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: 補間に依存しているイージング機能に関連付けられている式の出力-100% の補間します。  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: 補間では、イージング関数に関連付けられた数式の出力を引いた値 100% の補間に従います。  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: 補間を使用して<xref:System.Windows.Media.Animation.EasingMode.EaseIn>アニメーションの前半のおよび<xref:System.Windows.Media.Animation.EasingMode.EaseOut>後半を 2 番目のです。  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: 補間を使用して<xref:System.Windows.Media.Animation.EasingMode.EaseIn>アニメーションの前半と<xref:System.Windows.Media.Animation.EasingMode.EaseOut>後半。  
   
- 下のグラフのさまざまな値を示す<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>場所*f*(*x*)、アニメーションの進行状況を表すと*t*時間を表します。  
+ 以下のグラフのさまざまな値を示す<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>場所*f*(*x*) アニメーションの進行状況を表すと*t*時間を表します。  
   
  <xref:System.Windows.Media.Animation.BackEase>  
   
@@ -120,11 +112,9 @@ ms.locfileid: "33557564"
  ![異なる EasingMode 値の SineEase](../../../../docs/framework/wpf/graphics-multimedia/media/sineease-graph.png "SineEase_Graph")  
   
 > [!NOTE]
->  使用することができます<xref:System.Windows.Media.Animation.PowerEase>と同じ動作を作成する<xref:System.Windows.Media.Animation.CubicEase>、 <xref:System.Windows.Media.Animation.QuadraticEase>、 <xref:System.Windows.Media.Animation.QuarticEase>、および<xref:System.Windows.Media.Animation.QuinticEase>を使用して、<xref:System.Windows.Media.Animation.PowerEase.Power%2A>プロパティです。 たとえば、使用する場合<xref:System.Windows.Media.Animation.PowerEase>の代替として<xref:System.Windows.Media.Animation.CubicEase>を指定、 <xref:System.Windows.Media.Animation.PowerEase.Power%2A> 3 の値。  
+>  使用することができます<xref:System.Windows.Media.Animation.PowerEase>と同じ動作を作成する<xref:System.Windows.Media.Animation.CubicEase>、 <xref:System.Windows.Media.Animation.QuadraticEase>、 <xref:System.Windows.Media.Animation.QuarticEase>、および<xref:System.Windows.Media.Animation.QuinticEase>を使用して、<xref:System.Windows.Media.Animation.PowerEase.Power%2A>プロパティ。 たとえば、使用する<xref:System.Windows.Media.Animation.PowerEase>の代わりに<xref:System.Windows.Media.Animation.CubicEase>を指定、 <xref:System.Windows.Media.Animation.PowerEase.Power%2A> 3 の値。  
   
- 継承することで、独自のカスタム イージング関数を作成するだけでなく、実行時に含まれるイージング関数を使用して、<xref:System.Windows.Media.Animation.EasingFunctionBase>です。 次の例では、簡単なカスタム イージング関数を作成する方法を示します。 イージング関数をオーバーライドすることで動作する方法を独自の数値演算ロジックを追加することができます、<xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A>メソッドです。  
-  
- [このサンプルを実行する](http://go.microsoft.com/fwlink/?LinkId=139798&sref=CustomEasingFunction)  
+ 継承することによって、独自のカスタム イージング関数を作成するだけでなく、実行時に含まれるイージング関数を使用して、<xref:System.Windows.Media.Animation.EasingFunctionBase>します。 次の例では、簡単なカスタム イージング関数を作成する方法を示します。 イージング関数の動作をオーバーライドすることで、独自の数値演算ロジックを追加することができます、<xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A>メソッド。   
   
  [!code-csharp[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/customlog10easingfunction.cs#customeasingfunction)]
  [!code-vb[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/customeasingfunction/visualbasic/customlog10easingfunction.vb#customeasingfunction)]
