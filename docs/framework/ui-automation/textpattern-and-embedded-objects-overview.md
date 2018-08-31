@@ -11,11 +11,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
-ms.translationtype: HT
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931616"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258578"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern および埋め込みオブジェクトの概要
 > [!NOTE]
@@ -75,7 +75,7 @@ ms.locfileid: "42931616"
   
 |呼び出されるメソッド|結果|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|文字列を返します"URLhttp://www.microsoft.comテキストに埋め込まれて"います。|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|文字列を返します"URL http://www.microsoft.comテキストに埋め込まれて"います。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|テキスト範囲を囲む最も内側の <xref:System.Windows.Automation.AutomationElement> を返します。この場合は、テキスト プロバイダー自体を表す <xref:System.Windows.Automation.AutomationElement> を返します。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|ハイパーリンク コントロールを表す <xref:System.Windows.Automation.AutomationElement> を返します。|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ( <xref:System.Windows.Automation.AutomationElement> は、前の `GetChildren` メソッドから返されるオブジェクト)|範囲を表すを返します"http://www.microsoft.com"。|  
