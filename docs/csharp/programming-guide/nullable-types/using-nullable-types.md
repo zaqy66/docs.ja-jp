@@ -1,102 +1,101 @@
 ---
 title: Null 許容型の使用 (C# プログラミング ガイド)
-ms.date: 07/20/2015
+description: Learn how to work with C# nullable types (C# Null 許容型の操作方法について)
+ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600a18cc4dc9d3eda5577336f209c5814a7edb88
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933130"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Null 許容型の使用 (C# プログラミング ガイド)
-Null 許容型は、基底の型のすべての値と、追加の [null](../../../csharp/language-reference/keywords/null.md) 値を表すことができます。 Null 許容型は、次のいずれかの形式で宣言します。  
+
+Null 許容型は、基になる値型 `T` のすべての値と、追加の [null](../../language-reference/keywords/null.md) 値を表す型です。 詳細については、「[Null 許容型](index.md)」のトピックを参照してください。
+
+Null 許容型は、`Nullable<T>` または `T?` のいずれかの形式で参照できます。 この 2 つの形式は同義であり、どちらでも使用できます。  
   
- `System.Nullable<T> variable`  
+## <a name="declaration-and-assignment"></a>宣言と代入
+
+値型は、対応する Null 許容型に暗黙的に変換できるので、基になる値型の場合と同様に Null 許容型に値を代入します。 `null` 値を代入することもできます。  例:
   
- - または -  
+[!code-csharp[declare and assign](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#1)]
+
+## <a name="examination-of-a-nullable-type-value"></a>Null 許容型の値の検査
+
+Null 許容型のインスタンスが null かどうかを調べて、基になる型の値を取得するには、次の読み取り専用プロパティを使用します。  
   
- `T? variable`  
+- <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> は、Null 許容型のインスタンスに、基になる型の値が含まれるかどうかを示します。
   
- `T` は、Null 許容型の基底の型です。 `T` には、`struct` を含む任意の値型を指定できますが、参照型は指定できません。  
+- <xref:System.Nullable%601.HasValue%2A> が `true` の場合、<xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> は基になる型の値を取得します。 <xref:System.Nullable%601.HasValue%2A> が `false` の場合、<xref:System.Nullable%601.Value%2A> プロパティは <xref:System.InvalidOperationException> をスローします。
   
- Null 許容型を使用するときの例として、通常のブール値変数が、true と false の 2 つの値をどのように持つことができるかを考えてみましょう。 この変数には、"未定義" を示す値はありません。 多くのプログラミング アプリケーションの中でも特にデータベース操作では、変数が未定義の状態で現れることがあります。 たとえば、データベース フィールドには、true や false の値が入力されている場合がありますが、値がまったく入力されていない場合もあります。 また、参照型に `null` を設定すると、その型が初期化されていないことを示すことができます。  
+次の例のコードでは、`HasValue` プロパティを使用して、値を表示する前に変数に値が格納されているかどうかをテストします。
   
- このような違いから、状態情報を格納する変数を追加したり、特別な値を使用したりするような余分なプログラミング作業が生じることがあります。 C# では、Null 許容型修飾子により、未定義の値を示す値型変数を作成できます。  
+[!code-csharp-interactive[use HasValue](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#2)]
   
-## <a name="examples-of-nullable-types"></a>Null 許容型の例  
- Null 許容型の基底の型には、任意の値型を使用できます。 例:  
+次の例に示すように、`HasValue` プロパティを使用する代わりに、Null 許容型の変数を `null` と比較することもできます。  
   
- [!code-csharp[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_1.cs)]  
+[!code-csharp-interactive[use comparison with null](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#3)]
+
+C# 7.0 以降では、[パターン マッチング](../../pattern-matching.md)を使用して Null 許容型の値を調べて取得することができます。
+
+[!code-csharp-interactive[use pattern matching](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#4)]
+
+## <a name="conversion-from-a-nullable-type-to-an-underlying-type"></a>Null 許容型から基になる型への変換
+
+Null 許容型の値を Null 非許容型に代入する必要がある場合は、[Null 合体演算子 `??`](../../language-reference/operators/null-coalescing-operator.md) を使用して、Null 許容型の値が null の場合に代入される値を指定します (<xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> メソッドを使用してこの操作を行うこともできます)。
   
-## <a name="the-members-of-nullable-types"></a>Null 許容型のメンバー  
- Null 許容型の各インスタンスには、次のような 2 つのパブリックな読み取り専用プロパティがあります。  
+[!code-csharp-interactive[?? operator](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#5)]
+
+Null 許容型の値が null の場合に使用される値を、基になる値型の既定値にする場合は、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> メソッドを使用します。
   
--   `HasValue`  
+Null 許容型を Null 非許容型に明示的にキャストすることができます。 例:  
   
-     `HasValue` は `bool` 型です。 変数が null 以外の値を格納している場合、このプロパティには `true` が設定されます。  
+[!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
+
+実行時に Null 許容型の値が null の場合は、明示的なキャストによって <xref:System.InvalidOperationException> がスローされます。
+
+Null 非許容値型は、対応する Null 許容型に暗黙的に変換されます。
   
--   `Value`  
+## <a name="operators"></a>演算子
+
+値型向けに存在している定義済みの単項演算子、2 項演算子およびすべてのユーザー定義演算子は、Null 許容型でも使用できます。 これらの演算子では、1 つまたは両方のオペランドが null の場合は null 値が生成され、null 以外の場合は、含まれている値に基づいて結果が算出されます。 例:  
   
-     `Value` は、基になっている型と同じ型です。 `HasValue` が `true` の場合、`Value` には意味のある値が含まれています。 `HasValue` が `false` の場合、`Value` にアクセスすると、<xref:System.InvalidOperationException> がスローされます。  
+[!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
   
- 次の例では、`HasValue` メンバーを使用して、値を表示する前に、変数に値が格納されているかどうかをテストします。  
+関係演算子 (`<`、`>`、`<=`、`>=`) では、1 つまたは両方のオペランドが null の場合、結果は `false` になります。 ある比較 (たとえば、`<=`) から返される結果が `false` であっても、逆の比較 (`>`) から返される結果が `true` であるとは限りません。 次の例は、10 が
+
+- null より大きくも等しくもなく、
+- null 未満でもないことを示しています。
   
- [!code-csharp[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_2.cs)]  
+[!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
- 値のテストは、次の例のように行うこともできます。  
+上記の例は、どちらも null である 2 つの null 許容型を等価比較すると、結果が `true` と評価されることを示しています。
+
+## <a name="boxing-and-unboxing"></a>ボックス化とボックス化解除
+
+Null 許容値型は、次の規則に従って[ボックス化](../types/boxing-and-unboxing.md)されます。
+
+- <xref:System.Nullable%601.HasValue%2A> が `false` を返した場合は、null 参照が生成されます。  
+- <xref:System.Nullable%601.HasValue%2A> が `true` を返した場合は、<xref:System.Nullable%601> のインスタンスではなく、基になる値型 `T` の値がボックス化されます。
+
+次の例に示すように、ボックス化された値型を、対応する Null 許容型にボックス化解除できます。
+
+[!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
+
+## <a name="the-bool-type"></a>bool? 型
+
+Null 許容 `bool?` 型は、[true](../../language-reference/keywords/true-literal.md)、[false](../../language-reference/keywords/false-literal.md)、[null](../../language-reference/keywords/null.md) の 3 つの異なる値を格納できます。 `bool?` 型は、SQL で使用されるブール変数型に似ています。 `&` 演算子と `|` 演算子によって生成される結果が SQL の 3 値のブール型と一致するようにするには、次の定義済みの演算子を指定します。
+
+- `bool? operator &(bool? x, bool? y)`  
+- `bool? operator |(bool? x, bool? y)`  
   
- [!code-csharp[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_3.cs)]  
+次の表に、これらの演算子のセマンティクスが定義されています。  
   
-## <a name="explicit-conversions"></a>明示的変換  
- Null 許容型は、キャストを明示的に使用するか、または `Value` プロパティを使用して通常の型にキャストできます。 例:  
-  
- [!code-csharp[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_4.cs)]  
-  
- 2 つのデータ型の間でユーザー定義の変換を定義している場合は、これらのデータ型の Null 許容バージョンを使用して、同じユーザー定義変換を実行することもできます。  
-  
-## <a name="implicit-conversions"></a>暗黙の型変換  
- Null 許容型の変数には、次の例のように `null` キーワードを使用して null に設定できます。  
-  
- [!code-csharp[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_5.cs)]  
-  
- 通常の型から null 許容型への変換は暗黙的です。  
-  
- [!code-csharp[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_6.cs)]  
-  
-## <a name="operators"></a>演算子  
- 値型向けに存在している定義済みの単項演算子、2 項演算子およびすべてのユーザー定義演算子は、Null 許容型でも使用できます。 これらの演算子は、オペランドが null の場合は null 値を生成し、null 以外の場合は、含まれている値に基づいて結果を算出します。 例:  
-  
- [!code-csharp[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_7.cs)]  
-  
- 2 つの null 許容型を比較したときに、一方の null 許容型の値が null でもう一方がそれ以外の場合は、`!=` (等しくない) を除くすべての比較が `false` と評価されます。 ある比較から返される結果が `false` であっても、逆のケースから返される結果が `true` とは限らない点が重要です。 次の例では、10 は null より大きくも小さくも等しくもありません。 `num1 != num2` のみが `true` と評価されます。  
-  
- [!code-csharp[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_8.cs)]  
-  
- どちらも null である 2 つの null 許容型を等価比較すると、結果は `true` と評価されます。  
-  
-## <a name="the--operator"></a>?? 演算子  
- `??` 演算子は、Null 許容型が Null 許容型以外の型に割り当てられているときに返す既定値を定義します。  
-  
- [!code-csharp[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_9.cs)]  
-  
- この演算子は、複数の Null 許容型で使用することもできます。 例:  
-  
- [!code-csharp[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_10.cs)]  
-  
-## <a name="the-bool-type"></a>bool? 型  
- Null 許容 `bool?` 型は、[true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md)、[null](../../../csharp/language-reference/keywords/null.md) の 3 つの異なる値を格納できます。 bool? から bool にキャストする方法については、「[方法: bool? から bool に安全にキャストする](../../../csharp/programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md)」を参照してください。  
-  
- Null 許容ブール値は、SQL で使用するブール値変数型と似ています。 `&` 演算子と `|` 演算子によって生成される結果が SQL の 3 値のブール型と一致するようにするには、次の定義済みの演算子を指定します。  
-  
- `bool? operator &(bool? x, bool? y)`  
-  
- `bool? operator |(bool? x, bool? y)`  
-  
- これらの演算子の結果を以下の表に示します。  
-  
-|x|y|x&y|x&#124;y|  
+|x|Y|x&y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
 |TRUE|False|false|true|  
@@ -107,9 +106,11 @@ Null 許容型は、基底の型のすべての値と、追加の [null](../../.
 |null|true|null|true|  
 |null|False|False|null|  
 |null|null|null|null|  
+
+これら 2 つの演算子は、「[演算子](#operators)」セクションで説明されている規則に従わないことに注意してください。オペランドの 1 つが null の場合も、演算子の評価の結果は null 以外である可能性があります。
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)  
- [Null 許容型のボックス化](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
- [null 許容値型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>関連項目
+
+ [Null 許容型](index.md)  
+ [C# プログラミング ガイド](../../programming-guide/index.md)  
+ [What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  

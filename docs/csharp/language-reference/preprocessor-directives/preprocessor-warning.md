@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: c56458e0100c23450655e48b2abfb346e18e0bb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59ca63d5089e377627a9116f24f9a0a1681bb4b2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268184"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932678"
 ---
 # <a name="warning-c-reference"></a>#warning (C# リファレンス)
-`#warning` を使用すると、コード内の特定の場所からレベル 1 の警告を生成できます。 例:  
+`#warning` を使用すると、コード内の特定の場所から [CS1030](../../misc/cs1030.md) レベル 1 のコンパイラの警告を生成できます。 例:  
   
 ```csharp
 #warning Deprecated code in this method.  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>コメント
  `#warning` は条件付きディレクティブ内で一般的に使用されます。 [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md) を使用してユーザー定義のエラーを生成することもできます。  
   
 ## <a name="example"></a>例  
-  
+
 ```csharp
 // preprocessor_warning.cs  
 // CS1030 expected  
 #define DEBUG  
-class MainClass   
+class MainClass
 {  
-    static void Main()   
+    static void Main()
     {  
 #if DEBUG  
 #warning DEBUG is defined  
@@ -39,8 +39,9 @@ class MainClass
     }  
 }  
 ```  
-  
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# プリプロセッサ ディレクティブ](../../../csharp/language-reference/preprocessor-directives/index.md)
+
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プリプロセッサ ディレクティブ](../../../csharp/language-reference/preprocessor-directives/index.md)

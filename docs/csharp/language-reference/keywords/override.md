@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: 8f692dfdf8bd34ddb62623d86ec3dadd2b8dead3
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: c0fdb777c4f5a64dbc92f6afe78cdb714585efe0
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199265"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752126"
 ---
 # <a name="override-c-reference"></a>override (C# リファレンス)
 `override` 修飾子は、継承したメソッド、プロパティ、インデクサー、またはイベントの抽象実装または仮想実装を拡張したり修飾したりする際に必要です。  
@@ -35,7 +35,7 @@ ms.locfileid: "39199265"
  `override` キーワードの使い方の詳細については、「[Override キーワードと New キーワードによるバージョン管理](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)」および「[Override キーワードと New キーワードを使用する場合について](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- この例では、`Employee` という基底クラスと、`SalesEmployee` という派生クラスを定義します。 `SalesEmployee` クラスには追加のプロパティ `salesbonus` があり、このプロパティを処理に含めるために、`CalculatePay` メソッドをオーバーライドします。  
+ この例では、`Employee` という基底クラスと、`SalesEmployee` という派生クラスを定義します。 `SalesEmployee` クラスには追加のフィールド `salesbonus` があり、このフィールドを処理に含めるために、`CalculatePay` メソッドをオーバーライドします。  
   
  [!code-csharp[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
   

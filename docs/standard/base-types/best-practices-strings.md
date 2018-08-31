@@ -1,6 +1,6 @@
 ---
 title: .NET の文字列を使用するためのベスト プラクティス
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bdc23c909be0f9df051d538ca93cbb0a8e31426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579731"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000152"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET の文字列を使用するためのベスト プラクティス
 <a name="top"></a> .NET には、ローカライズされたアプリケーションやグローバル化されたアプリケーションを開発するための広範なサポートが用意されており、文字列の並べ替えや表示などの一般的な操作を実行するときに、現在のカルチャの規則や特定のカルチャの規則を簡単に適用できるようになっています。 しかし、文字列の並べ替えや比較の操作は、必ずしもカルチャに依存するとは限りません。 たとえば、アプリケーションが内部で使用する文字列は、通常、すべてのカルチャで同じように処理される必要があります。 XML タグ、HTML タグ、ユーザー名、ファイル パス、システム オブジェクトの名前などのカルチャに依存しない文字列データがカルチャに依存するかのように解釈されると、アプリケーション コードで軽度のバグが発生したり、パフォーマンスが低下したり、場合によってはセキュリティの問題を引き起こしたりする可能性があります。  
@@ -121,7 +121,10 @@ ms.locfileid: "33579731"
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>文字列比較の詳細  
  文字列比較は、多くの文字列関連操作 (特に並べ替えおよび等価性テスト) の中核です。 文字列は、決まった順序で並べられています。たとえば、文字列の並べ替え済みリストで "my" が "string" の前にある場合は、比較で "my" が "string" 以下になる必要があります。 また、比較は等価性を暗黙的に定義します。 比較演算では、等価と見なされた文字列に対して 0 が返されます。 これは、どちらの文字列ももう一方の文字列より小さくないという意味に解釈するとわかりやすくなります。 文字列に関係する、意味のある操作のほとんどには、他の文字列との比較か、正しく定義された並べ替え操作の実行のいずれかまたは両方の処理が含まれています。  
-  
+
+> [!NOTE]
+> [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921) をダウンロードできます。これは、Windows オペレーティング システムの並べ替えおよび比較操作で使用される文字の重みに関する情報を含む一連のテキスト ファイルです。
+
  しかし、2 つの文字列の等価性や並べ替え順序を評価する場合、正しい結果は 1 つではありません。結果は、文字列の比較に使用される基準に依存するためです。 特に、序数に基づく文字列比較や、現在のカルチャまたはインバリアント カルチャ (英語をベースとする、ロケールに依存しないカルチャ) の大文字と小文字の規則や並べ替えの規則に基づく文字列比較では、さまざまな結果が返される可能性があります。  
   
 <a name="current_culture"></a>   
@@ -256,7 +259,7 @@ ms.locfileid: "33579731"
 ### <a name="stringcompareto"></a>String.CompareTo  
  既定の解釈: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>  
   
- このメソッドには、現時点では、 <xref:System.StringComparison> 型を指定するオーバーロードはありません。 通常は、このメソッドを推奨される <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> の形式に変換できます。  
+ このメソッドには、現時点では、<xref:System.StringComparison> 型を指定するオーバーロードはありません。 通常は、このメソッドを推奨される <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> の形式に変換できます。  
   
  このメソッドは、 <xref:System.IComparable> インターフェイスと <xref:System.IComparable%601> インターフェイスを実装する型に実装されます。 このメソッドには <xref:System.StringComparison> パラメーターのオプションがないため、実装する型のコンストラクターで <xref:System.StringComparer> を指定できるようにするのが一般的です。 次の例では、クラス コンストラクターに <xref:System.StringComparer> パラメーターを含む `FileName` クラスを定義しています。 この <xref:System.StringComparer> オブジェクトは、その後、 `FileName.CompareTo` メソッドで使用されています。  
   

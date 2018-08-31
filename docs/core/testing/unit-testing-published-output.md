@@ -4,12 +4,12 @@ description: dotnet vstest コマンドを使用してパブリッシュされ�
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: dbce1b6e616916e60e56318b773e8fcecbc55580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210254"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936027"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>パブリッシュされた出力を dotnet vstest でテストします
 
@@ -34,5 +34,6 @@ dotnet vstest out/MyProject.Tests.dll
 > 注: アプリが `netcoreapp` 以外のフレームワークを対象とする場合でも、対象のフレームワークでフレームワーク フラグを付けて渡すことで `dotnet vstest` コマンドを実行できます。 たとえば、`dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"` のようにします。 Visual Studio 2017 Update 5 では、望ましいフレームワークが自動的に検出されます。
 
 ## <a name="see-also"></a>関連項目
- [dotnet テストおよび xUnit を使用した単体テスト](unit-testing-with-dotnet-test.md)  
- [dotnet テストおよび MSTest を使用した単体テスト](unit-testing-with-mstest.md)  
+- [dotnet テストおよび xUnit を使用した単体テスト](unit-testing-with-dotnet-test.md)
+- [dotnet テストおよび NUnit を使用した単体テスト](unit-testing-with-nunit.md)
+- [dotnet テストおよび MSTest を使用した単体テスト](unit-testing-with-mstest.md)

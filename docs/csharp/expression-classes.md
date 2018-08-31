@@ -3,22 +3,22 @@ title: 式ツリーをサポートするフレームワークの型
 description: 式ツリーをサポートするフレームワークの型、式ツリーの作成、式ツリー API の操作テクニックについて説明します。
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 3110f2a9534085aba95fcb5c8e76f66229e79f86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214946"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934793"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>式ツリーをサポートするフレームワークの型
 
 [前へ -- 式ツリーの説明](expression-trees-explained.md)
 
 式ツリーを使用する .NET Core framework には、多くのクラスがあります。
-クラスの全リストは[ここ](/dotnet/core/api/System.Linq.Expressions)で確認できます。
+クラスの全リストは <xref:System.Linq.Expressions> で確認できます。
 ここでは、リストのすべてを説明するのではなく、フレームワークのクラスがどう設計されているかを把握します。
 
-言語設計の観点から言えば、式は、評価して値を返すコードの本体です。 式はごく単純な場合があります。定数式 `1` は定数値 1 を返します。 式が複雑になる場合もあります。式 `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` は二次方程式の 1 つの解を返します (式に解がある場合)。  
+言語設計の観点から言えば、式は、評価して値を返すコードの本体です。 式はごく単純な場合があります。定数式 `1` は定数値 1 を返します。 式が複雑になる場合もあります。式 `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` は二次方程式の 1 つの解を返します (式に解がある場合)。  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>すべては System.Linq.Expression から始まる
 

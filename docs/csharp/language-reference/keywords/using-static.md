@@ -6,23 +6,24 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9b7508c6e751f83fdc16a700ad68aa7de36e497
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929679"
 ---
 # <a name="using-static-directive-c-reference"></a>using static ディレクティブ (C# リファレンス)
 
-`using static` ディレクティブは、型名を指定せずにアクセスできる静的メンバーの型を指定します。 構文は次のとおりです。
+`using static` ディレクティブは、型名を指定せずにアクセスできる静的メンバーおよび入れ子にされた型を指定します。 構文は次のとおりです。
 
 ```csharp
-using static <fully-qualified-type-name>
+using static <fully-qualified-type-name>;
 ```
 
-*fully-qualified-type-name* は、型名を指定せずに参照できる静的メンバーの型の名前です。 完全修飾型名 (完全な名前空間名と型名) を指定しないと、C# によってコンパイラ エラー CS0246 "型または名前空間の名前 '<type-name>' が見つかりませんでした" が生成されます。
+*fully-qualified-type-name* は、型名を指定せずに参照できる静的メンバーおよび入れ子にされた型の名前です。 完全修飾型名 (完全な名前空間名と型名) を指定しないと、C# によってコンパイラ エラー [CS0246](../compiler-messages/cs0246.md) "型または名前空間名 'type/namespace' が見つかりませんでした。using ディレクティブまたはアセンブリ参照が不足しています" が生成されます。
 
-`using static` ディレクティブは、インスタンス メンバーがある場合でも、静的メンバーがあるすべての型に適用されます。 ただし、インスタンス メンバーは、型のインスタンスを通してのみ呼び出すことができます。
+`using static` ディレクティブは、インスタンス メンバーがある場合でも、静的メンバーがあるすべての型 (または入れ子にされた型) に適用されます。 ただし、インスタンス メンバーは、型のインスタンスを通してのみ呼び出すことができます。
 
 `using static` ディレクティブは、C# 6 で導入されました。
 
@@ -52,9 +53,9 @@ using static <fully-qualified-type-name>
 
 ## <a name="see-also"></a>関連項目
 
-[using ディレクティブ](using-directive.md)   
-[C# リファレンス](../../../csharp/language-reference/index.md)   
-[C# のキーワード](../../../csharp/language-reference/keywords/index.md)   
-[名前空間の使用](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
-[名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)   
-[名前空間](../../../csharp/programming-guide/namespaces/index.md)   
+- [using ディレクティブ](using-directive.md)
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [名前空間の使用](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [名前空間](../../../csharp/programming-guide/namespaces/index.md)

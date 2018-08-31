@@ -9,19 +9,20 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 971f85b2cabe79237ff62eb36de43873df1d2ae5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296144"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933588"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>キャストと型変換 (C# プログラミング ガイド)
-C# はコンパイル時 (変数が宣言された後) に静的に型指定されるため、その型が変数の型に変換可能でない限り、再宣言したり、別の型の値を格納するために使用することはできません。 たとえば、整数から任意の文字列に変換することはできません。 そのため、次のコードに示すように、`i` を整数として宣言した後、"Hello" という文字列を割り当てることはできません。  
+
+C# はコンパイル時 (変数が宣言された後) に静的に型指定されるため、その型が変数の型に暗黙的に変換可能でない限り、再び宣言したり、別の型の値を代入したりすることはできません。 たとえば、`string` を `int` に暗黙的に変換することはできません。 そのため、次のコードに示すように、`i` を `int` として宣言した後、"Hello" という文字列を代入することはできません。
   
 ```csharp  
 int i;  
-i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"  
+i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
 ```  
   
  しかし場合によっては、別の型の変数やメソッドのパラメーターに値をコピーする必要が生じることもあります。 たとえば、パラメーターが `double` として型指定されたメソッドに、整数の変数を渡す必要が生じることもあるでしょう。 また、クラス変数をインターフェイス型の変数に代入しなければならない場合もあるかもしれません。 この種の操作は、*型変換*と呼ばれます。 C# では、次のような変換を実行できます。  
@@ -35,7 +36,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 -   **ヘルパー クラスを使用する変換**: 整数と <xref:System.DateTime?displayProperty=nameWithType> オブジェクトの間、16 進文字列とバイト配列の間など、互換性のない型の間で変換を行うには、<xref:System.BitConverter?displayProperty=nameWithType> クラス、<xref:System.Convert?displayProperty=nameWithType> クラス、および組み込み数値型の `Parse` メソッド (<xref:System.Int32.Parse%2A?displayProperty=nameWithType> など) を使用できます。 詳しくは、「[方法: バイト配列を int に変換する](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)」、「[方法: 文字列を数値に変換する](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)」、および「[方法: 16 進文字列と数値型の間で変換する](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)」をご覧ください。  
   
 ## <a name="implicit-conversions"></a>暗黙の型変換  
- 組み込みの数値型の場合、格納される値を切り捨てたり丸めたりしなくても変数に収めることができるのであれば、暗黙的な変換を実行できます。 たとえば、[long](../../../csharp/language-reference/keywords/long.md) 型の変数 (8 バイトの整数) は、 [int](../../../csharp/language-reference/keywords/int.md) (32 ビット コンピューターでは 4 バイト) が格納できる任意の値を格納できます。 次の例の場合、コンパイラは右側の値を `bigNum` に割り当てる前に、値を `long` 型へと暗黙的に変換します。  
+ 組み込みの数値型の場合、格納される値を切り捨てたり丸めたりしなくても変数に収めることができるのであれば、暗黙的な変換を実行できます。 たとえば、[long](../../../csharp/language-reference/keywords/long.md) 型の変数 (64 ビットの整数) は、[int](../../../csharp/language-reference/keywords/int.md) (32 ビットの整数) が格納できる任意の値を格納できます。 次の例の場合、コンパイラは右側の `num` の値を `bigNum` に代入する前に、この値を `long` 型へと暗黙的に変換します。  
   
  [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   

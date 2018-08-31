@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d97d38c903cbb33097db0e109758d98527e00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14c046094db52f2db55bb095839d354c7e6c691e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591938"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912043"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>継続タスクを使用したタスクの連結
 非同期プログラミングでは、非同期操作で完了時に 2 番目の操作を呼び出してデータを渡すのが一般的です。 これまで、この処理はコールバック メソッドを使用して行っていました。 タスク並列ライブラリでは、 *継続タスク*に同じ機能が用意されています。 継続タスク (単に "継続" とも呼ばれます) とは、別のタスク (" *継続元*" と呼ばれます) が終了したときにそのタスクによって呼び出される非同期タスクのことです。  
@@ -44,7 +44,7 @@ ms.locfileid: "33591938"
  継続はそれ自体が <xref:System.Threading.Tasks.Task> であり、継続が開始されたスレッドをブロックするわけではありません。 継続タスクが終了するまでブロックするには、<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出します。  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>1 つの継続元に対する継続の作成  
- <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドを呼び出して、継続元が完了した時点で実行される継続を作成します。 次の例は、基本的なパターンを示しています (わかりやすくするために、例外処理は省略されています)。 現在の曜日の名前を示す `taskA`オブジェクトを返す継続元タスク <xref:System.DayOfWeek> が実行されます。 継続元が完了すると、継続タスク `taskB`に継続元が渡され、その結果を示す文字列が表示されます。  
+ <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドを呼び出して、継続元が完了した時点で実行される継続を作成します。 次の例は、基本的なパターンを示しています (わかりやすくするために、例外処理は省略されています)。 現在の曜日の名前を示す `taskA`オブジェクトを返す継続元タスク <xref:System.DayOfWeek> が実行されます。 継続元が完了すると、継続タスク `continuation` に継続元が渡され、その結果を示す文字列が表示されます。  
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  

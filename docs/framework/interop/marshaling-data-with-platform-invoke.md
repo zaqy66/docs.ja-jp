@@ -1,6 +1,6 @@
 ---
 title: プラットフォーム呼び出しによるデータのマーシャリング
-ms.date: 03/30/2017
+ms.date: 07/31/2018
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -10,30 +10,31 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391317"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911732"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>プラットフォーム呼び出しによるデータのマーシャリング
-アンマネージ ライブラリからエクスポートされた関数を呼び出すには、.NET Framework アプリケーションで、マネージ コード内にアンマネージ関数を表す関数プロトタイプが必要です。 プラットフォーム呼び出しがデータを正しくマーシャリングできるようにするプロトタイプを作成するには、次のことを実行する必要があります。  
+アンマネージド ライブラリからエクスポートされた関数を呼び出すには、.NET Framework アプリケーションで、マネージド コード内にアンマネージド 関数を表す関数プロトタイプが必要です。 プラットフォーム呼び出しがデータを正しくマーシャリングできるようにするプロトタイプを作成するには、次のことを実行する必要があります。  
   
--   <xref:System.Runtime.InteropServices.DllImportAttribute> 属性をマネージ コード内の静的関数またはメソッドに適用します。  
+-   <xref:System.Runtime.InteropServices.DllImportAttribute> 属性をマネージド コード内の静的関数またはメソッドに適用します。  
   
--   アンマネージ データ型をマネージ データ型に置き換えます。  
+-   アンマネージド データ型をマネージド データ型に置き換えます。  
   
- アンマネージ関数に付属のドキュメントを使用して、属性とその省略可能なフィールドを適用し、アンマネージ型をマネージ データ型に置き換えることによって、同等のマネージ プロトタイプを作成できます。 **DllImportAttribute** を適用する方法の詳細については、「[アンマネージ DLL 関数の処理](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)」を参照してください。  
+ アンマネージド 関数に付属のドキュメントを使用して、属性とその省略可能なフィールドを適用し、アンマネージド型をマネージド データ型に置き換えることによって、同等のマネージド プロトタイプを作成できます。 **DllImportAttribute** を適用する方法の詳細については、「[アンマネージ DLL 関数の処理](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)」を参照してください。  
   
- このセクションでは、アンマネージ ライブラリによってエクスポートされた関数に引数を渡し、その関数からの戻り値を受け取るための、マネージ関数のプロトタイプを作成する方法を示すサンプルを示します。 サンプルではまた、いつ <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性と <xref:System.Runtime.InteropServices.Marshal> クラスを使用して明示的にデータをマーシャリングするかをも示しています。  
+ このセクションでは、アンマネージド ライブラリによってエクスポートされた関数に引数を渡し、その関数からの戻り値を受け取るための、マネージド関数のプロトタイプを作成する方法を示すサンプルを示します。 サンプルではまた、いつ <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性と <xref:System.Runtime.InteropServices.Marshal> クラスを使用して明示的にデータをマーシャリングするかをも示しています。  
   
 ## <a name="platform-invoke-data-types"></a>プラットフォーム呼び出しのデータ型  
- 次の表は、Win32 API (Wtypes.h にリストされている) と C スタイルの関数で使用されるデータ型を一覧で示しています。 多くのアンマネージ ライブラリには、これらのデータ型をパラメーターや戻り値として渡す関数が含まれています。 3 番目の列には、マネージ コードで使用する、対応する .NET Framework の組み込みの値型またはクラスを一覧で示します。 場合によっては、表にリストされた型を、同じサイズの型に置き換えることができます。  
+ 次の表は、Win32 API (Wtypes.h にリストされている) と C スタイルの関数で使用されるデータ型を一覧で示しています。 多くのアンマネージ ライブラリには、これらのデータ型をパラメーターや戻り値として渡す関数が含まれています。 3 番目の列には、マネージド コードで使用する、対応する .NET Framework の組み込みの値型またはクラスを一覧で示します。 場合によっては、表にリストされた型を、同じサイズの型に置き換えることができます。  
   
-|Wtypes.h でのアンマネージ型|アンマネージ C 言語型|マネージ クラス名|説明|  
+|Wtypes.h でのアンマネージ型|アンマネージ C 言語型|マネージド クラス名|説明|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 ビット Windows オペレーティング システム、64 ビット Windows オペレーティング システムで 64 ビットに 32 ビットです。|  
+|**VOID**|**void**|<xref:System.Void?displayProperty=nameWithType>|値を返さない関数に適用されます。|
+|**HANDLE**|**void \***|<xref:System.IntPtr?displayProperty=nameWithType>|32 ビット Windows オペレーティング システム、64 ビット Windows オペレーティング システムで 64 ビットに 32 ビットです。|  
 |**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 ビット|  
 |**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 ビット|  
 |**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 ビット|  
@@ -45,10 +46,10 @@ ms.locfileid: "33391317"
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 ビット|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|ANSI で装飾します。|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|Unicode で装飾します。|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=nameWithType> または <xref:System.Text.StringBuilder?displayProperty=nameWithType>|ANSI で装飾します。|  
+|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> または <xref:System.Text.StringBuilder?displayProperty=nameWithType>|ANSI で装飾します。|  
 |**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> または <xref:System.Text.StringBuilder?displayProperty=nameWithType>|ANSI で装飾します。|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=nameWithType> または <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Unicode で装飾します。|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=nameWithType> または <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Unicode で装飾します。|  
+|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> または <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Unicode で装飾します。|  
+|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> または <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Unicode で装飾します。|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 ビット|  
 |**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64 ビット|  
   

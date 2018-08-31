@@ -1,5 +1,5 @@
 ---
-title: for (C# リファレンス)
+title: C# の for ステートメント
 ms.date: 06/13/2018
 f1_keywords:
 - for
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208008"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930951"
 ---
 # <a name="for-c-reference"></a>for (C# リファレンス)
 
 `for` ステートメントでは、指定されたブール式が `true` と評価される間に、ステートメントまたはステートメント ブロックが実行されます。
 
 `for` ステートメント ブロック内の任意の位置で、[break](break.md) ステートメントを使ってループから抜けることができます。または、[continue](continue.md) ステートメントを使って、ループ内の次の繰り返しにスキップできます。 また、[goto](goto.md)、[return](return.md)、[throw](throw.md) ステートメントのいずれかを使って `for` ループを終了することもできます。
-  
+
 ## <a name="structure-of-the-for-statement"></a>`for` ステートメントの構造
 
 `for` ステートメントには、*initializer*、*condition*、*iterator* のセクションが定義されています。
-  
+
 ```csharp
-for (initializer; condition; iterator)  
-    body  
+for (initializer; condition; iterator)
+    body
 ```
 
 3 つのセクションはすべて省略可能です。 ループの本体は、ステートメントまたはステートメントのブロックのいずれかです。
@@ -45,11 +45,11 @@ for (initializer; condition; iterator)
 
   - [代入](../operators/assignment-operator.md)ステートメント
 
-  - メソッドの呼び出し  
+  - メソッドの呼び出し
 
-  - 前置または後置の[インクリメント](../operators/increment-operator.md)式 (`++i`、`i++` など)  
+  - 前置または後置の[インクリメント](../operators/increment-operator.md)式 (`++i`、`i++` など)
 
-  - 前置または後置の[デクリメント](../operators/decrement-operator.md)式 (`--i`、`i--` など)  
+  - 前置または後置の[デクリメント](../operators/decrement-operator.md)式 (`--i`、`i--` など)
 
   - [new](new-operator.md) キーワードを使用したオブジェクト作成
 
@@ -73,15 +73,15 @@ i < 5
 
 ### <a name="the-iterator-section"></a>*iterator* セクション
 
-ループ本体の反復処理が終わるたびに実行される処理を *iterator* セクションで定義します。 *iterator* セクションには、次のステートメント式を 0 個以上、コンマで区切って記述します。  
+ループ本体の反復処理が終わるたびに実行される処理を *iterator* セクションで定義します。 *iterator* セクションには、次のステートメント式を 0 個以上、コンマで区切って記述します。
 
 - [代入](../operators/assignment-operator.md)ステートメント
 
-- メソッドの呼び出し  
+- メソッドの呼び出し
 
-- 前置または後置の[インクリメント](../operators/increment-operator.md)式 (`++i`、`i++` など)  
+- 前置または後置の[インクリメント](../operators/increment-operator.md)式 (`++i`、`i++` など)
 
-- 前置または後置の[デクリメント](../operators/decrement-operator.md)式 (`--i`、`i--` など)  
+- 前置または後置の[デクリメント](../operators/decrement-operator.md)式 (`--i`、`i--` など)
 
 - [new](new-operator.md) キーワードを使用したオブジェクト作成
 
@@ -96,23 +96,23 @@ i++
 ## <a name="examples"></a>使用例
 
 次の例は、`for` ステートメント セクションのやや特殊な使用例です。*initializer* セクションで外部ループ変数に値を代入し、*initializer* セクションと *iterator* セクションの両方でメソッドを呼び出しています。さらに、*iterator* セクションで 2 つの変数の値を変更しています。 **[実行]** を選択して、コード例を実行します。 その後に、コードを変更し、もう一度実行することができます。
-  
+
 [!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
-  
+
 次の例では、無限 `for` ループが定義されます。
-  
+
 [!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
-  
-## <a name="c-language-specification"></a>C# 言語仕様  
+
+## <a name="c-language-specification"></a>C# 言語仕様
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-  
+
 ## <a name="see-also"></a>関連項目
 
-[for ステートメント (C# 言語仕様)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[C# リファレンス](../index.md)  
-[C# プログラミング ガイド](../../programming-guide/index.md)  
-[C# のキーワード](index.md)  
-[foreach、in](foreach-in.md)  
-[for ステートメント (C++)](/cpp/cpp/for-statement-cpp)  
-[繰り返しステートメント](iteration-statements.md)
+- [for ステートメント (C# 言語仕様)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [foreach、in](foreach-in.md)
+- [for ステートメント (C++)](/cpp/cpp/for-statement-cpp)
+- [繰り返しステートメント](iteration-statements.md)

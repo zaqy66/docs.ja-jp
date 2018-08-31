@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: eb8ae25f260ed434c4aafcc064be8fb6bebaaac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7964a39bb84ac6af6b6c196c053f51c30301985c
+ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591380"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42792341"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>クリップボードのデータの格納と読み取り (Visual Basic)
 クリップボードは、テキスト、イメージなどのデータの格納に使用できます。 アクティブなプロセスすべてがこのクリップボードを共有しているため、クリップボードを使ってデータをプロセス間で転送することができます。 `My.Computer.Clipboard` オブジェクトを使用すると、クリップボードに簡単にアクセスして、読み込みや書き込みを実行できます。  
@@ -57,7 +57,7 @@ ms.locfileid: "33591380"
   
  [!code-vb[VbVbcnMyClipboard#2](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_6.vb)]  
   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> メソッドを使用して、クリップボードにデータを書き込みます。 この例では、`DataObject``dataChunk` をカスタム書式 `specialFormat` でクリップボードに書き込みます。  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> メソッドを使用して、クリップボードにデータを書き込みます。 この例では、`DataObject` `dataChunk`をカスタム書式 `specialFormat` でクリップボードに書き込みます。  
   
  [!code-vb[VbVbcnMyClipboard#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_7.vb)]  
   

@@ -1,6 +1,6 @@
 ---
 title: スレッドの使用とスレッド処理
-ms.date: 03/30/2017
+ms.date: 08/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
@@ -8,39 +8,52 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725a47cae6e3e91cf9e7385427bceece81f3c918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 871a0a06c9f1cc09fb86f20c85163fb8fcdf4100
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584181"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934132"
 ---
 # <a name="using-threads-and-threading"></a>スレッドの使用とスレッド処理
-このセクションのトピックでは、マネージ スレッドの作成と管理、マネージ スレッドにデータを渡して結果を戻す方法、およびスレッドを破棄して <xref:System.Threading.ThreadAbortException> を処理する方法について説明します。  
+
+.NET では、複数の操作を同時に実行するアプリケーションを記述できます。 他の操作を止める可能性がある操作は個別のスレッドで実行できます。これは*マルチスレッド*や*フリー スレッド*と呼ばれているプロセスです。  
   
-## <a name="in-this-section"></a>このセクションの内容  
- [スレッドを作成し、開始時にデータを渡す](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
- データを新しいスレッドに渡す方法とデータを戻す方法など、マネージ スレッドの作成について説明します。  
+マルチスレッドを利用するアプリケーションはユーザーの入力に対する応答性が良くなります。プロセッサを集中的に利用するタスクが個別のスレッドで実行されるため、ユーザー インターフェイスの動作が妨げられません。 マルチスレッドはまた、スケーラブルなアプリケーションの開発にも便利です。ワークロードが増えたとき、スレッドを追加できるからです。
+
+> [!NOTE]
+> アプリケーションのスレッドの動作をさらに細かく制御するには、スレッドを自分で管理します。 しかし、.NET Framework 4 以降では、<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> クラスおよび <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラス、[Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間の新しい同時実行コレクション クラス、スレッドではなくタスクの概念を基にした新しいプログラミング モデルにより、マルチスレッド プログラミングが大幅に簡略化されています。 詳細については、「[.NET での並列プログラミング](../parallel-programming/index.md)」と「[タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md)」を参照してください。
+
+## <a name="how-to-create-and-start-a-new-thread"></a>方法: 新しいスレッドを作成して開始する
+
+<xref:System.Threading.Thread?displayProperty=nameWithType> クラスの新しいインスタンスを作成し、コンストラクターに対して新しいスレッドで実行するメソッド名を指定して、新しいスレッドを作成します。 作成したスレッドを開始するには、<xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> メソッドを呼び出します。 詳細と例については、「[スレッドを作成し、開始時にデータを渡す](creating-threads-and-passing-data-at-start-time.md)」の記事と <xref:System.Threading.Thread> API リファレンスを参照してください。
+
+## <a name="how-to-stop-a-thread"></a>方法: スレッドを停止する
+
+スレッドの実行を終了するには、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用します。 このメソッドでは、呼び出されたスレッド上で <xref:System.Threading.ThreadAbortException> が生成されます。 詳細については、「[スレッドの破棄](destroying-threads.md)」を参照してください。
+
+.NET Framework 4 以降、<xref:System.Threading.CancellationToken?displayProperty=nameWithType> を使用してスレッドを協調的にキャンセルできます。 詳細については、「[スレッドの協調的な取り消し](canceling-threads-cooperatively.md)」を参照してください。
+
+<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> メソッドを使用すると、そのメソッドが呼び出されたスレッドが終了するまで呼び出し元のスレッドを待機させるようにすることができます。
+
+## <a name="how-to-pause-or-interrupt-a-thread"></a>方法: スレッドを一時停止または中断する
+
+<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> メソッドを使用して、現在のスレッドを指定した時間一時停止します。 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> メソッドを呼び出すことによって、ブロックされたスレッドを中断できます。 詳細については、「[スレッドの一時中断と再開](pausing-and-resuming-threads.md)」を参照してください。
+
+## <a name="thread-properties"></a>スレッド プロパティ
+
+<xref:System.Threading.Thread> プロパティの一部を次の表に示します。  
   
- [スレッドの一時中断と再開](../../../docs/standard/threading/pausing-and-resuming-threads.md)  
- マネージ スレッドの一時中断と再開の影響について説明します。  
-  
- [スレッドの破棄](../../../docs/standard/threading/destroying-threads.md)  
- マネージ スレッドの破棄の影響と、<xref:System.Threading.ThreadAbortException> の処理方法について説明します。  
-  
- [スレッドのスケジューリング](../../../docs/standard/threading/scheduling-threads.md)  
- スレッドの優先順位とスレッドのスケジューリングへの影響について説明します。  
-  
-## <a name="reference"></a>参照  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.Thread> クラスのリファレンス ドキュメントです。このクラスは、アンマネージ コードから作成されたか、マネージ アプリケーションで作成されたかにかかわらず、マネージ スレッドを表します。  
-  
- <xref:System.Threading.ThreadStart>  
- パラメーターなしのスレッド プロシージャを表す <xref:System.Threading.ThreadStart> デリゲートに関するリファレンス ドキュメントを提供します。  
-  
- <xref:System.Threading.ParameterizedThreadStart>  
- 厳密な型指定はありませんが、スレッド プロシージャにデータを渡す簡単な方法を提供します。  
-  
-## <a name="related-sections"></a>関連項目  
- [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)  
- マネージ スレッドの概要を提供します。
+|プロパティ|説明|  
+|--------------|-----------|  
+|<xref:System.Threading.Thread.IsAlive%2A>|スレッドが起動していて、正常終了しておらず中止されてもいない場合は、`true` が返されます。|  
+|<xref:System.Threading.Thread.IsBackground%2A>|スレッドがバックグラウンド スレッドかどうかを示すブール値を取得または設定します。 バックグラウンド スレッドはフォアグラウンド スレッドに似ていますが、プロセスの停止を防ぐことはありません。 あるプロセスに属するフォアグラウンド スレッドがすべて停止すると、共通言語ランタイムは、アライブ状態のバックグラウンド スレッドで <xref:System.Threading.Thread.Abort%2A> メソッドを呼び出し、プロセスを終了します。 詳細については、「[フォアグラウンド スレッドとバックグラウンド スレッド](foreground-and-background-threads.md)」を参照してください。|  
+|<xref:System.Threading.Thread.Name%2A>|スレッドの名前を取得または設定します。 デバッグ時、個々のスレッドを検出するために頻繁に使用されます。|  
+|<xref:System.Threading.Thread.Priority%2A>|オペレーティング システムがスレッド スケジュールに優先順位を設定するために使用する <xref:System.Threading.ThreadPriority> 値を取得または設定します。 詳細については、「[スレッドのスケジューリング](scheduling-threads.md)」と <xref:System.Threading.ThreadPriority> リファレンスを参照してください。|  
+|<xref:System.Threading.Thread.ThreadState%2A>|スレッドの現在の状態を示す <xref:System.Threading.ThreadState> 値を取得します。|  
+
+## <a name="see-also"></a>関連項目
+
+ <xref:System.Threading.Thread?displayProperty=nameWithType>  
+ [スレッドおよびスレッド処理](threads-and-threading.md)  
+ [並列プログラミング](../parallel-programming/index.md)  

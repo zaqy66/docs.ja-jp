@@ -1,51 +1,39 @@
 ---
 title: '方法: Null 許容型を識別する (C# プログラミング ガイド)'
-ms.date: 07/20/2015
+description: 型が Null 許容型か、インスタンスが Null 許容型であるかどうかを判断する方法について学習します。
+ms.date: 08/06/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: f3ac4ebd77fc92a133eb326919d5ba55264ced97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb7ab2b8c13c2b8b4b6cd60e7959a391cd7e75c1
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333184"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754957"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>方法: Null 許容型を識別する (C# プログラミング ガイド)
-C# の [typeof](../../../csharp/language-reference/keywords/typeof.md) 演算子を使用して、Null 許容型を表す <xref:System.Type> オブジェクトを作成することができます。  
+
+次の例では、<xref:System.Type?displayProperty=nameWithType> インスタンスが Null 許容型を表しているかどうかを判別する方法を示します。
+
+[!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
+
+例で示されているとおり、<xref:System.Type?displayProperty=nameWithType> オブジェクトの作成には、[typeof](../../language-reference/keywords/typeof.md) 演算子を使用します。  
   
-```  
-System.Type type = typeof(int?);  
-```  
+インスタンスが Null 許容型かどうかを判断したい場合は、<xref:System.Type> インスタンスが前述のコードでテストされるように、<xref:System.Object.GetType%2A?displayProperty=nameWithType> メソッドは使用しないでください。 Null 許容型のインスタンスで <xref:System.Object.GetType%2A?displayProperty=nameWithType> メソッドを呼び出した場合、そのインスタンスは <xref:System.Object> に[ボクシング](using-nullable-types.md#boxing-and-unboxing)されます。 Null 許容型の null 以外のインスタンスのボクシングは、基になる型の値のボクシングと等しいので、<xref:System.Object.GetType%2A> は、Null 許容型の基になる型を表す <xref:System.Type> オブジェクトを返します。
+
+[!code-csharp-interactive[GetType example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#2)]
+
+インスタンスが Null 許容型であるかどうかの判断には、[is](../../language-reference/keywords/is.md) 演算子は使用しないでください。 次の例のとおり、`is` 演算子の使用では、Null 許容型のインスタンスの型とその基になる型は判別できません。
+
+[!code-csharp-interactive[is operator example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#3)]
+
+次の例のコードを使用すると、インスタンスが Null 許容型であるかどうかを判別することができます。
+
+[!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
- <xref:System.Reflection> 名前空間のクラスおよびメソッドを使用して、Null 許容型を表す <xref:System.Type> オブジェクトを作成することもできます。 ただし、実行時に <xref:System.Object.GetType%2A> メソッドまたは `is` 演算子を使用して Null 許容型の変数から型情報を取得しようとすると、Null 許容型自体ではなく、基になる型を表す <xref:System.Type> オブジェクトが作成されます。  
-  
- Null 許容型に対して `GetType` を呼び出すと、型が暗黙的に <xref:System.Object> に変換されるときに、ボックス化操作が実行されます。 そのため、<xref:System.Object.GetType%2A> は常に、Null 許容型ではなく、基になる型を表す <xref:System.Type> オブジェクトを返します。  
-  
-```  
-int? i = 5;  
-Type t = i.GetType();  
-Console.WriteLine(t.FullName); //"System.Int32"  
-```  
-  
- C# の [is](../../../csharp/language-reference/keywords/is.md) 演算子も Null 許容型の基になる型に作用します。 そのため、変数が Null 許容型であるかどうかを判別する際に `is` を使用することはできません。 次の例は、`is` 演算子が Nullable\<int> 変数を int として処理することを示しています。  
-  
-```  
-static void Main(string[] args)  
-{  
-  int? i = 5;  
-  if (i is int) // true  
-    //…  
-}  
-```  
-  
-## <a name="example"></a>例  
- 次のコードを使用して、<xref:System.Type> オブジェクトが Null 許容型を表しているかどうかを判別します。 このトピックで前述したように、`Type` オブジェクトが <xref:System.Object.GetType%2A> の呼び出しから返された場合、このコードは常に false を返します。  
-  
-```  
-if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>)) {…}  
-```  
-  
-## <a name="see-also"></a>参照  
- [Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)  
- [Null 許容型のボックス化](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)
+## <a name="see-also"></a>関連項目
+
+[Null 許容型](index.md)  
+[Null 許容型の使用](using-nullable-types.md)  
+<xref:System.Nullable.GetUnderlyingType%2A>  

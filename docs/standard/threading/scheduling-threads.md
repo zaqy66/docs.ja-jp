@@ -8,18 +8,20 @@ helpviewer_keywords:
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 794dfe3dc8e8cded9f7008300351598bbd1dee07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a382dbea239b66e60d666a0e2e7add01d6d7bd54
+ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582809"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "42753592"
 ---
 # <a name="scheduling-threads"></a>スレッドのスケジューリング
-すべてのスレッドには、スレッド優先順位が割り当てられます。 共通言語ランタイム内で作成されたスレッドには、初期状態で **ThreadPriority.Normal** の優先順位が割り当てられます。 ランタイムの外部で作成されたスレッドは、マネージ環境に入る前に設定されていた優先順位を維持します。 任意のスレッドの優先順位を取得または設定するには、**Thread.Priority** プロパティを使用します。  
+
+すべてのスレッドには、スレッド優先順位が割り当てられます。 共通言語ランタイム内で作成されたスレッドには、初期状態で <xref:System.Threading.ThreadPriority.Normal?displayProperty=nameWithType> の優先順位が割り当てられます。 ランタイムの外部で作成されたスレッドは、マネージド環境に入る前に設定されていた優先順位を維持します。 任意のスレッドの優先順位を取得または設定するには、<xref:System.Threading.Thread.Priority?displayProperty=nameWithType> プロパティを使用します。  
   
  スレッドの実行は、優先順位に基づいてスケジュールされます。 スレッドがランタイム内で実行されている場合でも、オペレーティング システムは、すべてのスレッドにプロセッサ タイム スライスを割り当てます。 スレッドの実行順序を決定するために使用されるスケジューリング アルゴリズムの詳細は、オペレーティング システムによって異なります。 オペレーティング システムによっては、実行可能なスレッドの中で最も優先順位の高いスレッドが常に最初に実行されるようにスケジュールされます。 同じ優先順位を持つ複数のスレッドがすべて実行可能である場合、スケジューラは、その優先順位にあるスレッド間を循環することで各スレッドに一定の実行用タイム スライスを与えます。 より優先順位の高いスレッドが実行可能である限り、それよりも優先順位の低いスレッドは実行されません。 特定の優先順位を持つ実行可能なスレッドがなくなると、スケジューラは次に低い優先順位に移り、その優先順位にあるスレッドの実行をスケジュールします。 より優先順位の高いスレッドが実行可能になった場合も、それよりも優先順位の低いスレッドの代わりに優先順位の高いスレッドが実行されます。 また、オペレーティング システムは、アプリケーションのユーザー インターフェイスをフォアグラウンドとバックグラウンド間で移動させながら、スレッドの優先順位を動的に調整することもできます。 オペレーティング システムによっては、別のスケジューリング アルゴリズムが使用される場合があります。  
   
 ## <a name="see-also"></a>参照  
  [スレッドの使用とスレッド処理](../../../docs/standard/threading/using-threads-and-threading.md)  
- [Windows でのマネージ スレッド処理とアンマネージ スレッド処理](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)
+ 
+  [Windows でのマネージド スレッド処理とアンマネージド スレッド処理](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

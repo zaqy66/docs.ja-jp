@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: d99480c1b703bc46228e25f6acd7e7fbbcae6228
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106448"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935394"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>単純なデータ ドリブン CRUD マイクロサービスの作成
 
@@ -340,7 +340,7 @@ Swashbuckle は API Explorer と Swagger または [swagger-ui](https://github.c
 
 API Explorer は、ここで最も重要なものではありません。 Swagger メタデータで自身を記述できる Web API があると、多くのプラットフォームを対象とするクライアント プロキシ クラス コード ジェネレーターなど、Swagger ベースのツールから API をシームレスに使用できます。 たとえば、前に説明したように、[AutoRest](https://github.com/Azure/AutoRest) では .NET クライアント クラスが自動的に生成されます。 ただし、API クライアント ライブラリ、サーバー スタブ、ドキュメントのコード生成を自動化できる [swagger-codegen](https://github.com/swagger-api/swagger-codegen) のようなツールも利用できます。
 
-現時点では、Swashbuckle は、ASP.NET Core アプリケーション用の [Swashbuckle.Swashbuckle.AspNetCoreSwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) バージョン 1.0.0 以降のハイレベルなメタ パッケージ下の 2 つの内部 NuGet パッケージから構成されます。
+現時点では、Swashbuckle は、ASP.NET Core アプリケーション用の [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) バージョン 1.0.0 以降の高レベルのメタ パッケージ下の複数の内部 NuGet パッケージから構成されます。
 
 Web API プロジェクトでこれらの NuGet パッケージをインストールした後、次のコードのように、Startup クラスで Swagger を構成する必要があります。
 

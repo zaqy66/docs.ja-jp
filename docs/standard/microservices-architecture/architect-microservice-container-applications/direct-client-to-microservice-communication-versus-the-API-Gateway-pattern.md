@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 83ec054239814ba20ebeec1f3d50b9f7e6dcdd87
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: f820b0ed866c539beda641164ef42631263490d3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106279"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000072"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信
 
@@ -23,7 +23,7 @@ ms.locfileid: "37106279"
 
 **図 4-12**.  クライアントからマイクロサービスへの直接通信アーキテクチャの使用
 
-この方法では、 各マイクロサービスにパブリック エンドポイントがあり、マイクロサービスごとに異なる TCP ポートがある場合があります。 特定のサービスの URL の例として、Azure での URL を以下に示します。
+この方法では、各マイクロサービスにパブリック エンドポイントがあり、マイクロサービスごとに異なる TCP ポートがある場合があります。 特定のサービスの URL の例として、Azure での URL を以下に示します。
 
 <http://eshoponcontainers.westus.cloudapp.azure.com:88/>
 

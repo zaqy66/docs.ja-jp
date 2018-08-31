@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314644"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931554"
 ---
 # <a name="tour-of-net"></a>.NET のツアー
 
@@ -79,7 +79,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#、VB、F# では、ローカルな "*型推論*" をサポートします。 型推論は、コンパイラが右側にある式から左側にある式の型を推論するという意味です。 タイプ セーフの破損、または回避を意味するわけではありません。 結果の型には、推論されるすべてを含む厳密な型が含まれます。 前の例の `dog` と `cat` を書き換えて型の推論を導入し、残りの部分はそのままとします。
+C#、VB、F# では、ローカルな "*型推論*" をサポートします。 型推論は、コンパイラが右側にある式から左側にある式の型を推論するという意味です。 タイプ セーフの破損、または回避を意味するわけではありません。 結果の型には、推論されるすべてを含む厳密な型が含まれます。 前の例の `dog` を書き換えて型の推論を導入し、残りの部分はそのままとします。
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
@@ -121,7 +121,7 @@ LINQ は、データ操作のための単純な宣言型コードを記述でき
 
 どのオペレーティング システムにも、システム サービスを提供するアプリケーション プログラミング インターフェイス (API) が含まれています。 .NET には、その API を呼び出すためのいくつかの方法が用意されています。
 
-ネイティブの相互運用を行う主な方法が、"プラットフォーム呼び出し" (略して P/Invoke) を使用するものです。これは、Linux および Windows のプラットフォームに渡ってサポートされています。 Windows 限定でネイティブの相互運用を行う方法が "COM 相互運用" です。これは、マネージ コードで [COM コンポーネント](/cpp/atl/introduction-to-com)を操作する場合に使用します。 これは、P/Invoke インフラストラクチャ上に構築されますが、動作は少し異なります。
+ネイティブの相互運用を行う主な方法が、"プラットフォーム呼び出し" (略して P/Invoke) を使用するものです。これは、Linux および Windows のプラットフォームに渡ってサポートされています。 Windows 限定でネイティブの相互運用を行う方法が "COM 相互運用" です。これは、マネージド コードで [COM コンポーネント](/cpp/atl/introduction-to-com)を操作する場合に使用します。 これは、P/Invoke インフラストラクチャ上に構築されますが、動作は少し異なります。
 
 Java および Objective-C に対する Mono (つまり Xamarin) の相互運用性サポートの多くが同じようにして構築されています。つまり、同じ原則を使用しているということです。
 

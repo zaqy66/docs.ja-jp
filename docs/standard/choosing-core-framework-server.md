@@ -4,12 +4,12 @@ description: .NET でのサーバー アプリのビルド時に考慮する必�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: a9eaeae515041ee1d99ede5b004ecc85e453de2d
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298189"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934534"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
 
@@ -102,8 +102,8 @@ Docker コンテナーは、オンプレミスの Linux または Windows イン
 Microsoft やサードパーティ製のプラットフォームの中には、.NET Core をサポートしないものもあります。 たとえば、Service Fabric のステートフル Reliable Services や Service Fabric Reliable Actors などのいくつかの Azure サービスでは .NET Framework が必要です。 他のいくつかのサービスでは、.NET Core ではまだ使用できない SDK が提供されます。 すべての Azure サービスでは .NET Core を使用しているために、これは過渡的な状況です。 その間、クライアント SDK の代わりに同等の REST API をいつでも使用できます。
 
 ## <a name="see-also"></a>関連項目
- [ASP.NET と ASP.NET Core の選択](/aspnet/core/choose-aspnet-framework)  
- [.NET Core のガイド](../core/index.md)  
+
+ [ASP.NET と ASP.NET Core の選択](/aspnet/core/choose-aspnet-framework) [ターゲット フレームワーク](frameworks.md) [.NET Core のガイド](../core/index.md)  
  [.NET Framework から .NET Core への移植](../core/porting/index.md)  
  [Docker 上の .NET Framework のガイド](../framework/docker/index.md)  
  [.NET コンポーネントの概要](components.md)  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6aa309f2c6c44934f491229ac43003a05301bacb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8bb84f2e26471e004678afde99a1dd725db6832
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569747"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755107"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>方法: ConcurrentDictionary の項目を追加および削除する
 この例では、<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> の項目を追加、取得、更新、削除する方法を示します。 このコレクション クラスは、スレッド セーフな実装です。 同時に複数のスレッドが要素へのアクセスを試みる可能性がある場合は常に、このクラスを使用することをお勧めします。  
@@ -36,7 +36,7 @@ ms.locfileid: "33569747"
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> はマルチスレッド シナリオ向けに設計されています。 コレクションの項目を追加または削除するために、コードでロックを使用する必要はありません。 ただし、あるスレッドが値を取得した直後に、別のスレッドが同じキーと新しい値を指定してコレクションを更新する可能性が常にあります。  
   
- また、<xref:System.Collections.Concurrent.ConcurrentDictionary%602> のメソッドはすべてスレッド セーフですが、<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> や <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> などの一部のメソッドはアトミックではありません。 これらのメソッドに渡されるユーザー デリゲートは、ディクショナリの内部ロックの外側で呼び出されます  (これは、不明なコードがすべてのスレッドをブロックするのを防ぐために行われます)。そのため、次のような一連のイベントが発生する可能性があります。  
+ また、<xref:System.Collections.Concurrent.ConcurrentDictionary%602> のメソッドはすべてスレッド セーフですが、<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> や <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> などの一部のメソッドはアトミックではありません。 これらのメソッドに渡されるユーザー デリゲートは、ディクショナリの内部ロックの外側で呼び出されます (これは、不明なコードがすべてのスレッドをブロックするのを阻止するために実行されます)。 そのため、次のような一連のイベントが発生する可能性があります。  
   
  1\) threadA が <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> を呼び出しましたが、項目が見つからないため、valueFactory デリゲートを呼び出すことにより新しい項目を作成して追加します。  
   

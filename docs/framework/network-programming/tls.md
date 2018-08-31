@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: 41814129d038f8cb1ab98db0c7a4e0cbd7e7cd54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397261"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925505"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -119,7 +119,7 @@ OS の最新の修正プログラムをインストールする必要があり�
 
 ユーザーがプロトコルのバージョンを明示的に構成していない場合、WCF フレームワークは、TLS 1.2 以下で使用可能な最高のプロトコルを自動的に選びます。 詳しくは、前の「[証明書資格情報によるトランスポート セキュリティを使う WCF TCP トランスポートの場合](#wcf-tcp-cert)」をご覧ください。
 
-### <a name="for-net-framework-35---451-and-not-wcf"></a>.NET Framework 3.5 ～ 4.5.1 で、WCF を使用していない場合
+### <a name="for-net-framework-35---452-and-not-wcf"></a>.NET Framework 3.5 から 4.5.2 で、WCF を使用していない場合
 
 お使いのアプリを .NET Framework 4.7 以降のバージョンにアップグレードすることをお勧めします。 アップグレードできない場合は、以下の手順を実行します。 将来的には、.NET Framework 4.7 以降のバージョンにアップグレードするまで、お使いのアプリケーションが動作しなくなる可能性があります。
 
@@ -145,7 +145,7 @@ OS の最新の修正プログラムをインストールする必要があり�
 
 ## <a name="configuring-security-via-appcontext-switches-for-net-framework-46-or-later-versions"></a>AppContext スイッチによるセキュリティの構成 (.NET Framework 4.6 以降のバージョンの場合)
 
-このセクションで説明する [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) スイッチは、お使いのアプリの対象または実行環境が .NET Framework 4.6 以降のバージョンである場合に関係します。 既定によるものか、または明示的な設定によるものかに関係なく、可能な場合にはこれらのスイッチを `false` にする必要があります。 一方または両方のスイッチでセキュリティを構成する必要がある場合は、コードでセキュリティ プロトコルの値を指定しないでください。指定すると、スイッチの設定は無効になります。
+このセクションで説明する [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) スイッチは、お使いのアプリの対象または実行環境が .NET Framework 4.6 以降のバージョンである場合に関係します。 既定によるものか、または明示的な設定によるものかに関係なく、可能な場合にはこれらのスイッチを `false` にする必要があります。 一方または両方のスイッチでセキュリティを構成する必要がある場合は、コードでセキュリティ プロトコルの値を指定しないでください。指定すると、スイッチの設定はオーバーライドされます。
 
 HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP ソケット ネットワーク (<xref:System.Net.Security.SslStream>) のどちらを使っている場合でも、スイッチの効果は同じです。
 
@@ -179,7 +179,7 @@ TLS プロトコルについて詳しくは、「[軽減策: TLS プロトコル
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Windows レジストリによるセキュリティの構成
 
-`AppContext` スイッチの一方または両方を設定できない場合は、このセクションで説明する Windows レジストリ キーにより、アプリが使うセキュリティ プロトコルを制御することができます。 4.6 より前のバージョンの .NET Framework を対象にしている場合、または構成ファイルを編集できない場合は、一方または両方の `AppContext` スイッチを使用できないことがあります。 レジストリでセキュリティを構成する場合は、コードでセキュリティ プロトコルの値を指定しないでください。指定すると、レジストリの設定は無効になります。
+`AppContext` スイッチの一方または両方を設定できない場合は、このセクションで説明する Windows レジストリ キーにより、アプリが使うセキュリティ プロトコルを制御することができます。 4.6 より前のバージョンの .NET Framework を対象にしている場合、または構成ファイルを編集できない場合は、一方または両方の `AppContext` スイッチを使用できないことがあります。 レジストリでセキュリティを構成する場合は、コードでセキュリティ プロトコルの値を指定しないでください。指定すると、レジストリの設定はオーバーライドされます。
 
 レジストリ キーの名前は対応する `AppContext` スイッチの名前に似ていますが、名前の前に `DontEnable` が付いていません。 たとえば、`AppContext` スイッチ `DontEnableSchUseStrongCrypto` に対応するレジストリ キーの名前は [SchUseStrongCrypto](#schusestrongcrypto) です。
 

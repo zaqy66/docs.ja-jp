@@ -1,7 +1,7 @@
 ---
 title: 既定値の一覧表 (C# リファレンス)
-description: 既定のコンストラクターによって返される値の型の既定値について説明します。
-ms.date: 07/20/2015
+description: C# の値型における既定値について説明します。
+ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
@@ -11,28 +11,16 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], default constructor
 - types [C#], default constructor return values
-ms.openlocfilehash: 634a55304534b4269487f29be1fbb4930f51d8ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 184a9f42ddd3654a81aef0b7ce35e404de2d4bb9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218791"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935840"
 ---
 # <a name="default-values-table-c-reference"></a>既定値の一覧表 (C# リファレンス)
 
-次の表では、既定のコンストラクターによって返される値型の既定値を示します。 既定のコンストラクターは、次のように `new` 演算子を使って呼び出されます。
-
-```csharp
-int myInt = new int();
-```
-
-上のステートメントは次のステートメントと同じ効果があります。
-
-```csharp
-int myInt = 0;
-```
-
-C# では初期化されていない変数を使うことができないことに注意してください。
+次の表では、[値型](value-types.md)の既定値を示します。
 
 |値の種類|既定値|
 |----------------|-------------------|
@@ -41,7 +29,7 @@ C# では初期化されていない変数を使うことができないこと�
 |[char](char.md)|'\0'|
 |[decimal](decimal.md)|0M|
 |[double](double.md)|0.0D|
-|[enum](enum.md)|式 (E)0 によって生成される値。E は列挙型識別子です。|
+|[enum](enum.md)|式 `(E)0` によって生成される値。`E` は列挙型識別子です。|
 |[float](float.md)|0.0F|
 |[int](int.md)|0|
 |[long](long.md)|0L|
@@ -52,10 +40,36 @@ C# では初期化されていない変数を使うことができないこと�
 |[ulong](ulong.md)|0|
 |[ushort](ushort.md)|0|
 
+## <a name="remarks"></a>コメント
+
+C# で初期化されていない変数を使用することはできません。 変数はその型の既定値に初期化することができます。 また、型の既定値を使用して、メソッドの[省略可能な引数](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments)の既定値を指定することもできます。
+
+[既定の値式](../../programming-guide/statements-expressions-operators/default-value-expressions.md)を使用して、次の例に示すように、型の既定値を生成します。
+
+```csharp
+int a = default(int);
+```
+
+C# 7.1 以降、[`default` リテラル](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference)を使用して、その型の既定値に変数を初期化できます。
+
+```csharp
+int a = default;
+```
+
+また、次の例に示すように、既定のコンストラクターまたは暗黙的な既定のコンストラクターを使用して、値型の既定値を生成することもできます。 コンストラクターの詳細については、[コンストラクター](../../programming-guide/classes-and-structs/constructors.md)に関する記事を参照してください。
+
+```csharp
+int a = new int();
+```
+
+[参照型](reference-types.md)の既定値は `null` です。 [null 許容型](../../programming-guide/nullable-types/index.md)の既定値は、<xref:System.Nullable%601.HasValue%2A> プロパティが `false` で、<xref:System.Nullable%601.Value%2A> プロパティが未定義のインスタンスです。
+
 ## <a name="see-also"></a>関連項目
- [C# リファレンス](../index.md)  
- [C# プログラミング ガイド](../../programming-guide/index.md)  
- [値型の一覧表](value-types-table.md)  
- [値型](value-types.md)  
- [組み込み型の一覧表](built-in-types-table.md)  
- [型のリファレンス表](reference-tables-for-types.md)
+
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [型のリファレンス表](reference-tables-for-types.md)
+- [値型](value-types.md)
+- [値型の一覧表](value-types-table.md)
+- [組み込み型の一覧表](built-in-types-table.md)

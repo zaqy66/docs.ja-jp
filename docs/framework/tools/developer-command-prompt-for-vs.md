@@ -1,6 +1,6 @@
 ---
 title: Visual Studio 用開発者コマンド プロンプト
-ms.date: 06/18/2018
+ms.date: 08/14/2018
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e64facffd4face929b28d660ffd5210f127c3bd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 4c95074190419dd3e984c7659ede917b83b97f08
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315226"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754250"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 用開発者コマンド プロンプト
 
-Visual Studio の開発者コマンド プロンプトでは、.NET Framework ツールを使いやすくするための環境変数が自動的に設定されます。 開発者コマンド プロンプトは、完全版または Community Edition の Visual Studio でインストールされます。 Express バージョンの Visual Studio ではインストールされません。
+Visual Studio の開発者コマンド プロンプトでは、.NET Framework ツールを使いやすくするための環境変数が自動的に設定されます。
 
 > [!div class="button"]
 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
 ## <a name="searching-for-the-command-prompt-on-your-machine"></a>コンピューター上でのコマンド プロンプトの検索
 
-Visual Studio のバージョンと、インストールした追加の SDK に応じて、多くのコマンド プロンプトが表示される場合があります。 たとえば、Visual Studio の 64 ビット バージョンには、32 ビットと 64 ビットのコマンド プロンプトが用意されています (ほとんどのツールでは、32 ビット バージョンと 64 ビット バージョンに違いはありませんが、一部のツールでは、32 ビット環境と 64 ビット環境に固有の変更が加えられています)。次の手順でうまくいかない場合は、「[コンピューター上のファイルを手動で探す](#manually-locating-the-files-on-your-machine)」または「[Visual Studio 内からコマンド プロンプトを実行する](#running-command-prompt-from-inside-visual-studio)」を試してください。
+Visual Studio のバージョンと、インストールした追加の SDK に応じて、複数のコマンド プロンプトがある場合があります。 たとえば、Visual Studio の 64 ビット バージョンには、32 ビットと 64 ビットのコマンド プロンプトが用意されています (ほとんどのツールでは、32 ビット バージョンと 64 ビット バージョンに違いはありませんが、一部のツールでは、32 ビット環境と 64 ビット環境に固有の変更が加えられています)。次の手順でうまくいかない場合は、「[コンピューター上のファイルを手動で探す](#manually-locating-the-files-on-your-machine)」または「[Visual Studio 内からコマンド プロンプトを実行する](#running-command-prompt-from-inside-visual-studio)」を試してください。
 
 ### <a name="in-windows-10"></a>Windows 10 の場合
 
@@ -62,13 +62,13 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) や[それ以前のバージョン](https://developer.microsoft.com/windows/downloads/sdk-archive)など、他の SDK をインストールしている場合、ARM、x86、または x64 の各アーキテクチャ用のコマンド プロンプトがさらに表示されることがあります。 各ツールのドキュメントを参照して、どのバージョンのコマンド プロンプトを使用する必要があるかを確認してください。
 
-## <a name="manually-locating-the-files-on-your-machine"></a>コンピューター上のファイルを手動で探す
+## <a name="manually-locate-the-files-on-your-machine"></a>コンピューター上のファイルを手動で探す
 
 インストール済みのコマンド プロンプトのショートカットは、通常 Visual Studio の **[スタート] メニュー**用のフォルダー (C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools 内など) にあります。 ただし、コマンド プロンプトを探しても、何らかの理由によって期待した結果を得られない場合は、コンピューター上でそのショートカットを手動で探すことができます。 *VsDevCmd.bat* などのコマンド プロンプトのファイル名を検索するか、または Tools フォルダー (C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools など) に移動します (パスは、Visual Studio のバージョン、エディション、およびインストール先に応じて変わります)。
 
-## <a name="running-command-prompt-from-inside-visual-studio"></a>Visual Studio 内からコマンド プロンプトを実行する
+## <a name="run-command-prompt-from-inside-visual-studio"></a>Visual Studio 内からコマンド プロンプトを実行する
 
-簡単にアクセスできるように、Visual Studio の開発者コマンド プロンプトまたは他のコマンド プロンプトを Visual Studio の [ツール] メニューに追加することができます。このためには、[外部ツール一覧] にそのコマンド プロンプトを追加します。 この追加を行う方法は、次のとおりです。
+簡単にアクセスできるように、Visual Studio の開発者コマンド プロンプトまたは他のコマンド プロンプトを Visual Studio の **[ツール]** メニューに追加することができます。 ツールを使用できるようにするには、外部ツール一覧にそれを追加します。 次に手順を示します。
 
 1. Visual Studio を開きます。
 
@@ -86,9 +86,9 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 8. **[OK]** を選択します。
 
-この後、新しいメニュー項目が追加され、このコマンド プロンプトに **[ツール]** メニューからアクセスできるようになります。
+   新しいメニュー項目が追加され、このコマンド プロンプトに **[ツール]** メニューからアクセスできるようになります。
 
 ## <a name="see-also"></a>関連項目
 
- [ツール](../../../docs/framework/tools/index.md)  
- [Visual Studio の外部ツール](/visualstudio/ide/managing-external-tools)  
+- [ツール](../../../docs/framework/tools/index.md)
+- [Visual Studio の外部ツール](/visualstudio/ide/managing-external-tools)

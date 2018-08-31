@@ -10,25 +10,26 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520514"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925803"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成
 この記事では、イベント ログにメッセージを書き込む単純な Windows サービス アプリケーションを Visual Studio で作成する方法を示します。 サービスを作成して使用するために実行する基本的な手順は次のとおりです。  
   
 1.  [サービスの作成](#BK_CreateProject) Windows Service **プロジェクト テンプレートを使用して** を行い、構成します。 このテンプレートは、<xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> を継承するクラスを作成し、基本的なサービス コードの多く (サービスを開始するコードなど) を記述します。  
   
-2.  [サービスへの機能追加](#BK_WriteCode) プロシージャと <xref:System.ServiceProcess.ServiceBase.OnStart%2A> プロシージャの <xref:System.ServiceProcess.ServiceBase.OnStop%2A> を行い、再定義する他のすべてのメソッドを上書きします。  
+2.  
+  [サービスへの機能追加](#BK_WriteCode) プロシージャと <xref:System.ServiceProcess.ServiceBase.OnStart%2A> プロシージャの <xref:System.ServiceProcess.ServiceBase.OnStop%2A> を行い、再定義する他のすべてのメソッドをオーバーライドします。  
   
 3.  [サービスの状態の設定](#BK_SetStatus)。 既定では、<xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> で作成されたサービスは、利用可能な状態フラグのサブセットだけを実装します。 サービスの開始、一時停止、または停止に時間がかかる場合は、[保留の開始] または [保留の停止] などの状態値を実装し、操作の実行中であることを示すことができます。  
   
 4.  [サービスへのインストーラーの追加](#BK_AddInstallers) を行います。  
   
-5.  (省略可能) [スタートアップ パラメーターの設定](#BK_StartupParameters)を行い、既定の起動時の引数を指定して、ユーザーがサービスを手動で開始するときに既定の設定を上書きできるようにします。  
+5.  (省略可能) [スタートアップ パラメーターの設定](#BK_StartupParameters)を行い、既定の起動時の引数を指定して、ユーザーがサービスを手動で開始するときに既定の設定をオーバーライドできるようにします。  
   
 6.  [サービスの構築](#BK_Build)。  
   
@@ -161,7 +162,7 @@ ms.locfileid: "33520514"
   
 <a name="BK_SetStatus"></a>   
 ## <a name="setting-service-status"></a>サービスの状態の設定  
- サービスは、その状態をサービス コントロール マネージャーに報告します。これによりユーザーは、サービスが正常に機能しているかどうかを確認することができます。 既定では、 <xref:System.ServiceProcess.ServiceBase> を継承するサービスは、[停止]、[一時停止]、[実行中] など、限られた状態設定のセットを報告します。 サービスの開始に若干時間がかかるときは、[保留の開始] 状態を報告すると役立つ場合があります。 [保留の開始] と [保留の停止] の状態設定は、Windows の [SetServiceStatus 関数](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx)を呼び出すコードを追加することによって実装することもできます。  
+ サービスは、その状態をサービス コントロール マネージャーに報告します。これによりユーザーは、サービスが正常に機能しているかどうかを確認することができます。 既定では、 <xref:System.ServiceProcess.ServiceBase> を継承するサービスは、[停止]、[一時停止]、[実行中] など、限られた状態設定のセットを報告します。 サービスの開始に若干時間がかかるときは、[保留の開始] 状態を報告すると役立つ場合があります。 [保留の開始] と [保留の停止] の状態設定は、Windows の [SetServiceStatus 関数](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)を呼び出すコードを追加することによって実装することもできます。  
   
 #### <a name="to-implement-service-pending-status"></a>サービス保留の状態を実装するには  
   
@@ -225,7 +226,7 @@ ms.locfileid: "33520514"
     End Structure  
     ```  
   
-3.  `MyNewService` クラスで、プラットフォーム呼び出しを使用して、 [SetServiceStatus 関数](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) を宣言します。  
+3.  `MyNewService` クラスで、プラットフォーム呼び出しを使用して、[SetServiceStatus 関数](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) を宣言します。  
   
     ```csharp  
     [DllImport("advapi32.dll", SetLastError=true)]  
@@ -271,7 +272,7 @@ ms.locfileid: "33520514"
 6.  (省略可能) <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドに対してこの手順を繰り返します。  
   
 > [!CAUTION]
->  [サービス コントロール マネージャー](http://msdn.microsoft.com/library/windows/desktop/ms685150.aspx)は、[SERVICE_STATUS 構造体](http://msdn.microsoft.com/library/windows/desktop/ms685996.aspx)の `dwWaitHint` メンバーと `dwCheckpoint` メンバーを使って、Windows サービスの開始やシャットダウンまでの待機時間を判断します。 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドが長時間実行している場合、サービスは、インクリメントした `dwCheckPoint` 値で [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) をもう一度呼び出すことによって、追加の時間を要求できます。  
+>  [サービス コントロール マネージャー](/windows/desktop/Services/service-control-manager)は、[SERVICE_STATUS 構造体](/windows/desktop/api/winsvc/ns-winsvc-_service_status)の `dwWaitHint` メンバーと `dwCheckpoint` メンバーを使って、Windows サービスの開始やシャットダウンまでの待機時間を判断します。 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドが長時間実行している場合、サービスは、インクリメントした `dwCheckPoint` 値で [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) をもう一度呼び出すことによって、追加の時間を要求できます。  
   
 <a name="BK_AddInstallers"></a>   
 ## <a name="adding-installers-to-the-service"></a>サービスへのインストーラーの追加  

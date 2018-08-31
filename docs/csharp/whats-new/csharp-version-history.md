@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404594"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752083"
 ---
 # <a name="the-history-of-c"></a>C# の歴史 #
 
@@ -105,7 +105,11 @@ C# バージョン 4.0 は、バージョン 3.0 の革新的なステータス�
 C# バージョン 5.0 は、この言語の専心的なバージョンでした。 このバージョンに対するほぼすべての努力が、非同期プログラミングの `async` および `await` モデルというもう一つの革新的な言語の概念に注がれました。  主要な機能の一覧を次に示します。
 
 - [非同期メンバー](../async.md)
-- [呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [呼び出し元情報属性](../programming-guide/concepts/caller-information.md)
+
+### <a name="see-also"></a>参照
+
+* [コード プロジェクト: C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 呼び出し元情報属性を使用すると、さまざまな定型リフレクション コードを使用しなくても、実行しているコンテキストに関する情報を簡単に取得できます。 診断とログ記録のタスクでは、さまざまな用途があります。
 

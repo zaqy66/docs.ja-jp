@@ -3,12 +3,12 @@ title: ローカル関数とラムダ式の比較
 description: ローカル関数がラムダ式よりも適した選択肢となり得る理由について。
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 4fb8ea78b783871a19a8d5578d571e00da37642a
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 2b98ebeeb3866779715fa629c2518f739e196ae8
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472608"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931577"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>ローカル関数とラムダ式の比較
 
