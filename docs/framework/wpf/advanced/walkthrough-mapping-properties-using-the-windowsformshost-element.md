@@ -1,6 +1,6 @@
 ---
 title: 'チュートリアル : WindowsFormsHost 要素を使用したプロパティの割り当て'
-ms.date: 03/30/2017
+ms.date: 08/18/2018
 dev_langs:
 - csharp
 - vb
@@ -8,149 +8,156 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 771c0d972420b929ac757ced684de70d2dc7a58d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77027d771cf471e563e24c46d7794a18ad223541
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549303"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258519"
 ---
-# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a><span data-ttu-id="438bb-102">チュートリアル : WindowsFormsHost 要素を使用したプロパティの割り当て</span><span class="sxs-lookup"><span data-stu-id="438bb-102">Walkthrough: Mapping Properties Using the WindowsFormsHost Element</span></span>
-<span data-ttu-id="438bb-103">このチュートリアルで使用する方法、<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>プロパティにマップする[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、ホスト型に対応するプロパティをプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。</span><span class="sxs-lookup"><span data-stu-id="438bb-103">This walkthrough shows you how to use the <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> property to map [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] properties to corresponding properties on a hosted [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
-  
- <span data-ttu-id="438bb-104">このチュートリアルでは、以下のタスクを行います。</span><span class="sxs-lookup"><span data-stu-id="438bb-104">Tasks illustrated in this walkthrough include:</span></span>  
-  
--   <span data-ttu-id="438bb-105">プロジェクトの作成。</span><span class="sxs-lookup"><span data-stu-id="438bb-105">Creating the project.</span></span>  
-  
--   <span data-ttu-id="438bb-106">アプリケーションのレイアウトを定義します。</span><span class="sxs-lookup"><span data-stu-id="438bb-106">Defining the application layout.</span></span>  
-  
--   <span data-ttu-id="438bb-107">新しいプロパティ マッピングを定義します。</span><span class="sxs-lookup"><span data-stu-id="438bb-107">Defining a new property mapping.</span></span>  
-  
--   <span data-ttu-id="438bb-108">プロパティの既定のマッピングを削除しています。</span><span class="sxs-lookup"><span data-stu-id="438bb-108">Removing a default property mapping.</span></span>  
-  
--   <span data-ttu-id="438bb-109">プロパティの既定のマッピングを置換します。</span><span class="sxs-lookup"><span data-stu-id="438bb-109">Replacing a default property mapping.</span></span>  
-  
--   <span data-ttu-id="438bb-110">プロパティの既定のマッピングを拡張します。</span><span class="sxs-lookup"><span data-stu-id="438bb-110">Extending a default property mapping.</span></span>  
-  
- <span data-ttu-id="438bb-111">このチュートリアルでタスクの完全なコードについては、次を参照してください。 [WindowsFormsHost 要素のサンプルを使用してプロパティをマッピング](http://go.microsoft.com/fwlink/?LinkID=160019)です。</span><span class="sxs-lookup"><span data-stu-id="438bb-111">For a complete code listing of the tasks illustrated in this walkthrough, see [Mapping Properties Using the WindowsFormsHost Element Sample](http://go.microsoft.com/fwlink/?LinkID=160019).</span></span>  
-  
- <span data-ttu-id="438bb-112">完了したらにマップできる、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 、ホスト型に対応するプロパティをプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。</span><span class="sxs-lookup"><span data-stu-id="438bb-112">When you are finished, you will be able to map [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] properties to corresponding properties on a hosted [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
-  
-## <a name="prerequisites"></a><span data-ttu-id="438bb-113">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="438bb-113">Prerequisites</span></span>  
- <span data-ttu-id="438bb-114">このチュートリアルを実行するには、次のコンポーネントが必要です。</span><span class="sxs-lookup"><span data-stu-id="438bb-114">You need the following components to complete this walkthrough:</span></span>  
-  
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]<span data-ttu-id="438bb-115">。</span><span class="sxs-lookup"><span data-stu-id="438bb-115">.</span></span>  
-  
-## <a name="creating-the-project"></a><span data-ttu-id="438bb-116">プロジェクトの作成</span><span class="sxs-lookup"><span data-stu-id="438bb-116">Creating the Project</span></span>  
-  
-#### <a name="to-create-and-set-up-the-project"></a><span data-ttu-id="438bb-117">プロジェクトを作成し、設定するには</span><span class="sxs-lookup"><span data-stu-id="438bb-117">To create and set up the project</span></span>  
-  
-1.  <span data-ttu-id="438bb-118">という名前の WPF アプリケーション プロジェクトを作成する`PropertyMappingWithWfhSample`です。</span><span class="sxs-lookup"><span data-stu-id="438bb-118">Create a WPF Application project named `PropertyMappingWithWfhSample`.</span></span>  
-  
-2.  <span data-ttu-id="438bb-119">ソリューション エクスプ ローラーで、WindowsFormsIntegration.dll と呼ばれる WindowsFormsIntegration アセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="438bb-119">In Solution Explorer, add a reference to the WindowsFormsIntegration assembly, which is named WindowsFormsIntegration.dll.</span></span>  
-  
-3.  <span data-ttu-id="438bb-120">ソリューション エクスプ ローラーで、System.Drawing アセンブリおよび System.Windows.Forms アセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="438bb-120">In Solution Explorer, add references to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
-  
-## <a name="defining-the-application-layout"></a><span data-ttu-id="438bb-121">アプリケーションのレイアウトを定義します。</span><span class="sxs-lookup"><span data-stu-id="438bb-121">Defining the Application Layout</span></span>  
- <span data-ttu-id="438bb-122">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ベースのアプリケーションで使用する、<xref:System.Windows.Forms.Integration.WindowsFormsHost>ホストへの要素、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。</span><span class="sxs-lookup"><span data-stu-id="438bb-122">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application uses the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element to host a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
-  
-#### <a name="to-define-the-application-layout"></a><span data-ttu-id="438bb-123">アプリケーションのレイアウトを定義するには</span><span class="sxs-lookup"><span data-stu-id="438bb-123">To define the application layout</span></span>  
-  
-1.  <span data-ttu-id="438bb-124">Window1.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]です。</span><span class="sxs-lookup"><span data-stu-id="438bb-124">Open Window1.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
-  
-2.  <span data-ttu-id="438bb-125">既存のコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="438bb-125">Replace the existing code with the following code.</span></span>  
-  
-     [!code-xaml[PropertyMappingWithWfhSample#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml#1)]  
-  
-3.  <span data-ttu-id="438bb-126">Window1.xaml.cs の名前をコード エディターで開きます。</span><span class="sxs-lookup"><span data-stu-id="438bb-126">Open Window1.xaml.cs in the Code Editor.</span></span>  
-  
-4.  <span data-ttu-id="438bb-127">ファイルの先頭には、次の名前空間をインポートします。</span><span class="sxs-lookup"><span data-stu-id="438bb-127">At the top of the file, import the following namespaces.</span></span>  
-  
+# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a><span data-ttu-id="c9746-102">チュートリアル : WindowsFormsHost 要素を使用したプロパティの割り当て</span><span class="sxs-lookup"><span data-stu-id="c9746-102">Walkthrough: Mapping Properties Using the WindowsFormsHost Element</span></span>
+
+<span data-ttu-id="c9746-103">このチュートリアルは、使用する方法を示します、<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>プロパティにマップする[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、ホスト型に対応するプロパティをプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。</span><span class="sxs-lookup"><span data-stu-id="c9746-103">This walkthrough shows you how to use the <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> property to map [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] properties to corresponding properties on a hosted [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>
+
+<span data-ttu-id="c9746-104">このチュートリアルでは、以下のタスクを行います。</span><span class="sxs-lookup"><span data-stu-id="c9746-104">Tasks illustrated in this walkthrough include:</span></span>
+
+-   <span data-ttu-id="c9746-105">プロジェクトの作成。</span><span class="sxs-lookup"><span data-stu-id="c9746-105">Creating the project.</span></span>
+
+-   <span data-ttu-id="c9746-106">アプリケーションのレイアウトを定義します。</span><span class="sxs-lookup"><span data-stu-id="c9746-106">Defining the application layout.</span></span>
+
+-   <span data-ttu-id="c9746-107">新しいプロパティ マッピングを定義します。</span><span class="sxs-lookup"><span data-stu-id="c9746-107">Defining a new property mapping.</span></span>
+
+-   <span data-ttu-id="c9746-108">既定のプロパティ マッピングを削除しています。</span><span class="sxs-lookup"><span data-stu-id="c9746-108">Removing a default property mapping.</span></span>
+
+-   <span data-ttu-id="c9746-109">既定のプロパティ マッピングを置換します。</span><span class="sxs-lookup"><span data-stu-id="c9746-109">Replacing a default property mapping.</span></span>
+
+-   <span data-ttu-id="c9746-110">既定のプロパティ マッピングを拡張します。</span><span class="sxs-lookup"><span data-stu-id="c9746-110">Extending a default property mapping.</span></span>
+
+<span data-ttu-id="c9746-111">このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [WindowsFormsHost 要素のサンプルを使用してプロパティをマッピング](http://go.microsoft.com/fwlink/?LinkID=160019)します。</span><span class="sxs-lookup"><span data-stu-id="c9746-111">For a complete code listing of the tasks illustrated in this walkthrough, see [Mapping Properties Using the WindowsFormsHost Element Sample](http://go.microsoft.com/fwlink/?LinkID=160019).</span></span>
+
+<span data-ttu-id="c9746-112">マップが完了したらができます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、ホスト型に対応するプロパティをプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。</span><span class="sxs-lookup"><span data-stu-id="c9746-112">When you are finished, you will be able to map [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] properties to corresponding properties on a hosted [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="c9746-113">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="c9746-113">Prerequisites</span></span>
+
+<span data-ttu-id="c9746-114">このチュートリアルを実行するには、次のコンポーネントが必要です。</span><span class="sxs-lookup"><span data-stu-id="c9746-114">You need the following components to complete this walkthrough:</span></span>
+
+-   <span data-ttu-id="c9746-115">Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="c9746-115">Visual Studio 2017</span></span>
+
+## <a name="create-and-set-up-the-project"></a><span data-ttu-id="c9746-116">作成し、プロジェクトを設定します。</span><span class="sxs-lookup"><span data-stu-id="c9746-116">Create and set up the project</span></span>
+
+1.  <span data-ttu-id="c9746-117">作成、 **WPF アプリ**という名前のプロジェクト`PropertyMappingWithWfhSample`します。</span><span class="sxs-lookup"><span data-stu-id="c9746-117">Create a **WPF App** project named `PropertyMappingWithWfhSample`.</span></span>
+
+2.  <span data-ttu-id="c9746-118">**ソリューション エクスプ ローラー**、WindowsFormsIntegration.dll という WindowsFormsIntegration アセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="c9746-118">In **Solution Explorer**, add a reference to the WindowsFormsIntegration assembly, which is named WindowsFormsIntegration.dll.</span></span>
+
+3.  <span data-ttu-id="c9746-119">**ソリューション エクスプ ローラー**System.Drawing、および System.Windows.Forms アセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="c9746-119">In **Solution Explorer**, add references to the System.Drawing and System.Windows.Forms assemblies.</span></span>
+
+## <a name="defining-the-application-layout"></a><span data-ttu-id="c9746-120">アプリケーションのレイアウトを定義します。</span><span class="sxs-lookup"><span data-stu-id="c9746-120">Defining the Application Layout</span></span>
+
+<span data-ttu-id="c9746-121">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ベースのアプリケーションで使用する、<xref:System.Windows.Forms.Integration.WindowsFormsHost>ホストに要素を[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。</span><span class="sxs-lookup"><span data-stu-id="c9746-121">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application uses the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element to host a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>
+
+### <a name="to-define-the-application-layout"></a><span data-ttu-id="c9746-122">アプリケーションのレイアウトを定義するには</span><span class="sxs-lookup"><span data-stu-id="c9746-122">To define the application layout</span></span>
+
+1.  <span data-ttu-id="c9746-123">Window1.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="c9746-123">Open Window1.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>
+
+2.  <span data-ttu-id="c9746-124">既存のコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="c9746-124">Replace the existing code with the following code.</span></span>
+
+     [!code-xaml[PropertyMappingWithWfhSample#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml#1)]
+
+3.  <span data-ttu-id="c9746-125">Window1.xaml.cs のコード エディターでを開きます。</span><span class="sxs-lookup"><span data-stu-id="c9746-125">Open Window1.xaml.cs in the Code Editor.</span></span>
+
+4.  <span data-ttu-id="c9746-126">ファイルの上部にある次の名前空間をインポートします。</span><span class="sxs-lookup"><span data-stu-id="c9746-126">At the top of the file, import the following namespaces.</span></span>
+
      [!code-csharp[PropertyMappingWithWfhSample#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#20)]
-     [!code-vb[PropertyMappingWithWfhSample#20](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#20)]  
-  
-## <a name="defining-a-new-property-mapping"></a><span data-ttu-id="438bb-128">新しいプロパティ マッピングを定義します。</span><span class="sxs-lookup"><span data-stu-id="438bb-128">Defining a New Property Mapping</span></span>  
- <span data-ttu-id="438bb-129"><xref:System.Windows.Forms.Integration.WindowsFormsHost>要素がいくつかの既定のプロパティ マッピングを用意されています。</span><span class="sxs-lookup"><span data-stu-id="438bb-129">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element provides several default property mappings.</span></span> <span data-ttu-id="438bb-130">呼び出して新しいプロパティ マッピングを追加する、<xref:System.Windows.Forms.Integration.PropertyMap.Add%2A>メソッドを<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>します。</span><span class="sxs-lookup"><span data-stu-id="438bb-130">You add a new property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> method on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.</span></span>  
-  
-#### <a name="to-define-a-new-property-mapping"></a><span data-ttu-id="438bb-131">新しいプロパティ マッピングを定義するには</span><span class="sxs-lookup"><span data-stu-id="438bb-131">To define a new property mapping</span></span>  
-  
--   <span data-ttu-id="438bb-132">定義に次のコードをコピー、`Window1`クラスです。</span><span class="sxs-lookup"><span data-stu-id="438bb-132">Copy the following code into the definition for the `Window1` class.</span></span>  
-  
+     [!code-vb[PropertyMappingWithWfhSample#20](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#20)]
+
+## <a name="defining-a-new-property-mapping"></a><span data-ttu-id="c9746-127">新しいプロパティ マッピングを定義します。</span><span class="sxs-lookup"><span data-stu-id="c9746-127">Defining a New Property Mapping</span></span>
+
+<span data-ttu-id="c9746-128"><xref:System.Windows.Forms.Integration.WindowsFormsHost>要素はいくつかの既定のプロパティのマッピングを提供します。</span><span class="sxs-lookup"><span data-stu-id="c9746-128">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element provides several default property mappings.</span></span> <span data-ttu-id="c9746-129">新しいプロパティの割り当てを追加するには呼び出すことによって、<xref:System.Windows.Forms.Integration.PropertyMap.Add%2A>メソッドを<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>します。</span><span class="sxs-lookup"><span data-stu-id="c9746-129">You add a new property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> method on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.</span></span>
+
+### <a name="to-define-a-new-property-mapping"></a><span data-ttu-id="c9746-130">新しいプロパティ マッピングを定義するには</span><span class="sxs-lookup"><span data-stu-id="c9746-130">To define a new property mapping</span></span>
+
+-   <span data-ttu-id="c9746-131">定義に次のコードをコピー、`Window1`クラス。</span><span class="sxs-lookup"><span data-stu-id="c9746-131">Copy the following code into the definition for the `Window1` class.</span></span>
+
      [!code-csharp[PropertyMappingWithWfhSample#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
-     [!code-vb[PropertyMappingWithWfhSample#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]  
-  
-     <span data-ttu-id="438bb-133">`AddClipMapping`メソッドは、新しいマッピングを追加、<xref:System.Windows.UIElement.Clip%2A>プロパティです。</span><span class="sxs-lookup"><span data-stu-id="438bb-133">The `AddClipMapping` method adds a new mapping for the <xref:System.Windows.UIElement.Clip%2A> property.</span></span>  
-  
-     <span data-ttu-id="438bb-134">`OnClipChange`メソッドは、変換、<xref:System.Windows.UIElement.Clip%2A>プロパティを[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A>プロパティです。</span><span class="sxs-lookup"><span data-stu-id="438bb-134">The `OnClipChange` method translates the <xref:System.Windows.UIElement.Clip%2A> property to the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> property.</span></span>  
-  
-     <span data-ttu-id="438bb-135">`Window1_SizeChanged`メソッドを処理ウィンドウの<xref:System.Windows.FrameworkElement.SizeChanged>イベントと、アプリケーション ウィンドウに合わせてクリッピング領域のサイズします。</span><span class="sxs-lookup"><span data-stu-id="438bb-135">The `Window1_SizeChanged` method handles the window's <xref:System.Windows.FrameworkElement.SizeChanged> event and sizes the clipping region to fit the application window.</span></span>  
-  
-## <a name="removing-a-default-property-mapping"></a><span data-ttu-id="438bb-136">プロパティの既定のマッピングを削除します。</span><span class="sxs-lookup"><span data-stu-id="438bb-136">Removing a Default Property Mapping</span></span>  
- <span data-ttu-id="438bb-137">プロパティの既定のマッピングを削除する、<xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A>メソッドを<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>します。</span><span class="sxs-lookup"><span data-stu-id="438bb-137">Remove a default property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> method on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.</span></span>  
-  
-#### <a name="to-remove-a-default-property-mapping"></a><span data-ttu-id="438bb-138">プロパティの既定のマッピングを削除するには</span><span class="sxs-lookup"><span data-stu-id="438bb-138">To remove a default property mapping</span></span>  
-  
--   <span data-ttu-id="438bb-139">定義に次のコードをコピー、`Window1`クラスです。</span><span class="sxs-lookup"><span data-stu-id="438bb-139">Copy the following code into the definition for the `Window1` class.</span></span>  
-  
+     [!code-vb[PropertyMappingWithWfhSample#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
+
+     <span data-ttu-id="c9746-132">`AddClipMapping`メソッドは、新しいマッピングを追加、<xref:System.Windows.UIElement.Clip%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="c9746-132">The `AddClipMapping` method adds a new mapping for the <xref:System.Windows.UIElement.Clip%2A> property.</span></span>
+
+     <span data-ttu-id="c9746-133">`OnClipChange`メソッドは、変換、<xref:System.Windows.UIElement.Clip%2A>プロパティを[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="c9746-133">The `OnClipChange` method translates the <xref:System.Windows.UIElement.Clip%2A> property to the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> property.</span></span>
+
+     <span data-ttu-id="c9746-134">`Window1_SizeChanged`メソッドは処理ウィンドウの<xref:System.Windows.FrameworkElement.SizeChanged>イベントと、アプリケーション ウィンドウに合わせてクリッピング領域のサイズします。</span><span class="sxs-lookup"><span data-stu-id="c9746-134">The `Window1_SizeChanged` method handles the window's <xref:System.Windows.FrameworkElement.SizeChanged> event and sizes the clipping region to fit the application window.</span></span>
+
+## <a name="removing-a-default-property-mapping"></a><span data-ttu-id="c9746-135">既定のプロパティ マッピングを削除します。</span><span class="sxs-lookup"><span data-stu-id="c9746-135">Removing a Default Property Mapping</span></span>
+
+<span data-ttu-id="c9746-136">既定のプロパティ マッピングを削除する、<xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A>メソッドを<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>します。</span><span class="sxs-lookup"><span data-stu-id="c9746-136">Remove a default property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> method on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.</span></span>
+
+### <a name="to-remove-a-default-property-mapping"></a><span data-ttu-id="c9746-137">既定のプロパティ マッピングを削除するには</span><span class="sxs-lookup"><span data-stu-id="c9746-137">To remove a default property mapping</span></span>
+
+-   <span data-ttu-id="c9746-138">定義に次のコードをコピー、`Window1`クラス。</span><span class="sxs-lookup"><span data-stu-id="c9746-138">Copy the following code into the definition for the `Window1` class.</span></span>
+
      [!code-csharp[PropertyMappingWithWfhSample#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
-     [!code-vb[PropertyMappingWithWfhSample#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]  
-  
-     <span data-ttu-id="438bb-140">`RemoveCursorMapping`メソッドの既定のマッピングを削除する、<xref:System.Windows.FrameworkElement.Cursor%2A>プロパティです。</span><span class="sxs-lookup"><span data-stu-id="438bb-140">The `RemoveCursorMapping` method deletes the default mapping for the <xref:System.Windows.FrameworkElement.Cursor%2A> property.</span></span>  
-  
-## <a name="replacing-a-default-property-mapping"></a><span data-ttu-id="438bb-141">プロパティの既定のマッピングを置き換える</span><span class="sxs-lookup"><span data-stu-id="438bb-141">Replacing a Default Property Mapping</span></span>  
- <span data-ttu-id="438bb-142">既定のマッピングと呼び出し元を削除することでプロパティの既定のマッピングを置き換える、<xref:System.Windows.Forms.Integration.PropertyMap.Add%2A>メソッドを<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>します。</span><span class="sxs-lookup"><span data-stu-id="438bb-142">Replace a default property mapping by removing the default mapping and calling the <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> method on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.</span></span>  
-  
-#### <a name="to-replace-a-default-property-mapping"></a><span data-ttu-id="438bb-143">プロパティの既定のマッピングを置換するには</span><span class="sxs-lookup"><span data-stu-id="438bb-143">To replace a default property mapping</span></span>  
-  
--   <span data-ttu-id="438bb-144">定義に次のコードをコピー、`Window1`クラスです。</span><span class="sxs-lookup"><span data-stu-id="438bb-144">Copy the following code into the definition for the `Window1` class.</span></span>  
-  
+     [!code-vb[PropertyMappingWithWfhSample#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
+
+     <span data-ttu-id="c9746-139">`RemoveCursorMapping`メソッドの既定のマッピングを削除する、<xref:System.Windows.FrameworkElement.Cursor%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="c9746-139">The `RemoveCursorMapping` method deletes the default mapping for the <xref:System.Windows.FrameworkElement.Cursor%2A> property.</span></span>
+
+## <a name="replacing-a-default-property-mapping"></a><span data-ttu-id="c9746-140">既定のプロパティ マッピングを置き換える</span><span class="sxs-lookup"><span data-stu-id="c9746-140">Replacing a Default Property Mapping</span></span>
+
+<span data-ttu-id="c9746-141">既定のマッピングと呼び出しを削除することで、既定のプロパティ マッピングを置き換える、<xref:System.Windows.Forms.Integration.PropertyMap.Add%2A>メソッドを<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>します。</span><span class="sxs-lookup"><span data-stu-id="c9746-141">Replace a default property mapping by removing the default mapping and calling the <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> method on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.</span></span>
+
+### <a name="to-replace-a-default-property-mapping"></a><span data-ttu-id="c9746-142">既定のプロパティ マッピングを置換するには</span><span class="sxs-lookup"><span data-stu-id="c9746-142">To replace a default property mapping</span></span>
+
+-   <span data-ttu-id="c9746-143">定義に次のコードをコピー、`Window1`クラス。</span><span class="sxs-lookup"><span data-stu-id="c9746-143">Copy the following code into the definition for the `Window1` class.</span></span>
+
      [!code-csharp[PropertyMappingWithWfhSample#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
-     [!code-vb[PropertyMappingWithWfhSample#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]  
-  
-     <span data-ttu-id="438bb-145">`ReplaceFlowDirectionMapping`メソッドの既定のマッピングに置き換えて、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティです。</span><span class="sxs-lookup"><span data-stu-id="438bb-145">The `ReplaceFlowDirectionMapping` method replaces the default mapping for the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property.</span></span>  
-  
-     <span data-ttu-id="438bb-146">`OnFlowDirectionChange`メソッドは、変換、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティを[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A>プロパティです。</span><span class="sxs-lookup"><span data-stu-id="438bb-146">The `OnFlowDirectionChange` method translates the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property to the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> property.</span></span>  
-  
-     <span data-ttu-id="438bb-147">`cb_CheckedChanged`メソッド ハンドル、<xref:System.Windows.Forms.CheckBox.CheckedChanged>でイベントを<xref:System.Windows.Forms.CheckBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="438bb-147">The `cb_CheckedChanged` method handles the <xref:System.Windows.Forms.CheckBox.CheckedChanged> event on the <xref:System.Windows.Forms.CheckBox> control.</span></span> <span data-ttu-id="438bb-148">割り当てます、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティの値に基づきます、<xref:System.Windows.Forms.CheckBox.CheckState%2A>プロパティ</span><span class="sxs-lookup"><span data-stu-id="438bb-148">It assigns the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property based on the value of the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property</span></span>  
-  
-## <a name="extending-a-default-property-mapping"></a><span data-ttu-id="438bb-149">プロパティの既定のマッピングを拡張します。</span><span class="sxs-lookup"><span data-stu-id="438bb-149">Extending a Default Property Mapping</span></span>  
- <span data-ttu-id="438bb-150">プロパティの既定のマッピングを使用しても、独自のマッピングに付加して拡張できます。</span><span class="sxs-lookup"><span data-stu-id="438bb-150">You can use a default property mapping and also extend it with your own mapping.</span></span>  
-  
-#### <a name="to-extend-a-default-property-mapping"></a><span data-ttu-id="438bb-151">プロパティの既定のマッピングを拡張するには</span><span class="sxs-lookup"><span data-stu-id="438bb-151">To extend a default property mapping</span></span>  
-  
--   <span data-ttu-id="438bb-152">定義に次のコードをコピー、`Window1`クラスです。</span><span class="sxs-lookup"><span data-stu-id="438bb-152">Copy the following code into the definition for the `Window1` class.</span></span>  
-  
+     [!code-vb[PropertyMappingWithWfhSample#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
+
+     <span data-ttu-id="c9746-144">`ReplaceFlowDirectionMapping`メソッドの既定のマッピングを置き換える、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="c9746-144">The `ReplaceFlowDirectionMapping` method replaces the default mapping for the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property.</span></span>
+
+     <span data-ttu-id="c9746-145">`OnFlowDirectionChange`メソッドは、変換、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティを[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="c9746-145">The `OnFlowDirectionChange` method translates the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property to the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> property.</span></span>
+
+     <span data-ttu-id="c9746-146">`cb_CheckedChanged`メソッド ハンドル、<xref:System.Windows.Forms.CheckBox.CheckedChanged>上のイベント、<xref:System.Windows.Forms.CheckBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="c9746-146">The `cb_CheckedChanged` method handles the <xref:System.Windows.Forms.CheckBox.CheckedChanged> event on the <xref:System.Windows.Forms.CheckBox> control.</span></span> <span data-ttu-id="c9746-147">割り当てます、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティの値に基づいて、<xref:System.Windows.Forms.CheckBox.CheckState%2A>プロパティ</span><span class="sxs-lookup"><span data-stu-id="c9746-147">It assigns the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property based on the value of the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property</span></span>
+
+## <a name="extending-a-default-property-mapping"></a><span data-ttu-id="c9746-148">既定のプロパティ マッピングの拡張</span><span class="sxs-lookup"><span data-stu-id="c9746-148">Extending a Default Property Mapping</span></span>
+
+<span data-ttu-id="c9746-149">既定のプロパティ マッピングを使用しても、独自のマッピングでは拡張できます。</span><span class="sxs-lookup"><span data-stu-id="c9746-149">You can use a default property mapping and also extend it with your own mapping.</span></span>
+
+### <a name="to-extend-a-default-property-mapping"></a><span data-ttu-id="c9746-150">既定のプロパティ マッピングを拡張するには</span><span class="sxs-lookup"><span data-stu-id="c9746-150">To extend a default property mapping</span></span>
+
+-   <span data-ttu-id="c9746-151">定義に次のコードをコピー、`Window1`クラス。</span><span class="sxs-lookup"><span data-stu-id="c9746-151">Copy the following code into the definition for the `Window1` class.</span></span>
+
      [!code-csharp[PropertyMappingWithWfhSample#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
-     [!code-vb[PropertyMappingWithWfhSample#15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]  
-  
-     <span data-ttu-id="438bb-153">`ExtendBackgroundMapping`メソッドでは、カスタム プロパティ トランスレーターを追加すると、既存<xref:System.Windows.Controls.Control.Background%2A>プロパティ マッピングします。</span><span class="sxs-lookup"><span data-stu-id="438bb-153">The `ExtendBackgroundMapping` method adds a custom property translator to the existing <xref:System.Windows.Controls.Control.Background%2A> property mapping.</span></span>  
-  
-     <span data-ttu-id="438bb-154">`OnBackgroundChange`メソッドは、ホストされるコントロールの特定のイメージを割り当てます<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティです。</span><span class="sxs-lookup"><span data-stu-id="438bb-154">The `OnBackgroundChange` method assigns a specific image to the hosted control's <xref:System.Windows.Forms.Control.BackgroundImage%2A> property.</span></span> <span data-ttu-id="438bb-155">`OnBackgroundChange`既定のプロパティ マッピングが適用された後にメソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="438bb-155">The `OnBackgroundChange` method is called after the default property mapping is applied.</span></span>  
-  
-## <a name="initializing-your-property-mappings"></a><span data-ttu-id="438bb-156">プロパティ マッピングの初期化</span><span class="sxs-lookup"><span data-stu-id="438bb-156">Initializing Your Property Mappings</span></span>  
- <span data-ttu-id="438bb-157">プロパティ マッピングで既に説明したメソッドを呼び出して設定、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラー。</span><span class="sxs-lookup"><span data-stu-id="438bb-157">Set up your property mappings by calling the previously described methods in the <xref:System.Windows.FrameworkElement.Loaded> event handler.</span></span>  
-  
-#### <a name="to-initialize-your-property-mappings"></a><span data-ttu-id="438bb-158">プロパティ マッピングを初期化するには</span><span class="sxs-lookup"><span data-stu-id="438bb-158">To initialize your property mappings</span></span>  
-  
-1.  <span data-ttu-id="438bb-159">定義に次のコードをコピー、`Window1`クラスです。</span><span class="sxs-lookup"><span data-stu-id="438bb-159">Copy the following code into the definition for the `Window1` class.</span></span>  
-  
+     [!code-vb[PropertyMappingWithWfhSample#15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
+
+     <span data-ttu-id="c9746-152">`ExtendBackgroundMapping`メソッドでは、カスタム プロパティ トランスレーターを追加、既存<xref:System.Windows.Controls.Control.Background%2A>プロパティ マッピングします。</span><span class="sxs-lookup"><span data-stu-id="c9746-152">The `ExtendBackgroundMapping` method adds a custom property translator to the existing <xref:System.Windows.Controls.Control.Background%2A> property mapping.</span></span>
+
+     <span data-ttu-id="c9746-153">`OnBackgroundChange`メソッドは、ホストされるコントロールに、特定のイメージを割り当てます<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="c9746-153">The `OnBackgroundChange` method assigns a specific image to the hosted control's <xref:System.Windows.Forms.Control.BackgroundImage%2A> property.</span></span> <span data-ttu-id="c9746-154">`OnBackgroundChange`既定のプロパティ マッピングが適用された後、メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c9746-154">The `OnBackgroundChange` method is called after the default property mapping is applied.</span></span>
+
+## <a name="initializing-your-property-mappings"></a><span data-ttu-id="c9746-155">プロパティ マッピングの初期化</span><span class="sxs-lookup"><span data-stu-id="c9746-155">Initializing Your Property Mappings</span></span>
+
+<span data-ttu-id="c9746-156">既に説明したメソッドを呼び出すことによって、プロパティのマッピングを設定、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラー。</span><span class="sxs-lookup"><span data-stu-id="c9746-156">Set up your property mappings by calling the previously described methods in the <xref:System.Windows.FrameworkElement.Loaded> event handler.</span></span>
+
+### <a name="to-initialize-your-property-mappings"></a><span data-ttu-id="c9746-157">プロパティ マッピングを初期化するには</span><span class="sxs-lookup"><span data-stu-id="c9746-157">To initialize your property mappings</span></span>
+
+1.  <span data-ttu-id="c9746-158">定義に次のコードをコピー、`Window1`クラス。</span><span class="sxs-lookup"><span data-stu-id="c9746-158">Copy the following code into the definition for the `Window1` class.</span></span>
+
      [!code-csharp[PropertyMappingWithWfhSample#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#11)]
-     [!code-vb[PropertyMappingWithWfhSample#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#11)]  
-  
-     <span data-ttu-id="438bb-160">`WindowLoaded`メソッド ハンドル、<xref:System.Windows.FrameworkElement.Loaded>イベントと、次の初期化を実行します。</span><span class="sxs-lookup"><span data-stu-id="438bb-160">The `WindowLoaded` method handles the <xref:System.Windows.FrameworkElement.Loaded> event and performs the following initialization.</span></span>  
-  
-    -   <span data-ttu-id="438bb-161">作成、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="438bb-161">Creates a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> control.</span></span>  
-  
-    -   <span data-ttu-id="438bb-162">プロパティ マッピングをセットアップするチュートリアルの前半で定義されているメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="438bb-162">Calls the methods you defined earlier in the walkthrough to set up the property mappings.</span></span>  
-  
-    -   <span data-ttu-id="438bb-163">マップされているプロパティに初期値を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="438bb-163">Assigns initial values to the mapped properties.</span></span>  
-  
-2.  <span data-ttu-id="438bb-164">F5 キーを押してアプリケーションをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="438bb-164">Press F5 to build and run the application.</span></span> <span data-ttu-id="438bb-165">効果を確認するチェック ボックスをクリックして、<xref:System.Windows.FrameworkElement.FlowDirection%2A>マッピングします。</span><span class="sxs-lookup"><span data-stu-id="438bb-165">Click the check box to see the effect of the <xref:System.Windows.FrameworkElement.FlowDirection%2A> mapping.</span></span> <span data-ttu-id="438bb-166">チェック ボックスをクリックすると、レイアウトは左から右方向を反転させます。</span><span class="sxs-lookup"><span data-stu-id="438bb-166">When you click the check box, the layout reverses its left-right orientation.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="438bb-167">関連項目</span><span class="sxs-lookup"><span data-stu-id="438bb-167">See Also</span></span>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [<span data-ttu-id="438bb-168">Windows フォームと WPF プロパティの割り当て</span><span class="sxs-lookup"><span data-stu-id="438bb-168">Windows Forms and WPF Property Mapping</span></span>](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [<span data-ttu-id="438bb-169">WPF デザイナー</span><span class="sxs-lookup"><span data-stu-id="438bb-169">WPF Designer</span></span>](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- [<span data-ttu-id="438bb-170">チュートリアル: WPF での Windows フォーム コントロールのホスト</span><span class="sxs-lookup"><span data-stu-id="438bb-170">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+     [!code-vb[PropertyMappingWithWfhSample#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#11)]
+
+     <span data-ttu-id="c9746-159">`WindowLoaded`メソッド ハンドル、<xref:System.Windows.FrameworkElement.Loaded>イベントと、次の初期化を実行します。</span><span class="sxs-lookup"><span data-stu-id="c9746-159">The `WindowLoaded` method handles the <xref:System.Windows.FrameworkElement.Loaded> event and performs the following initialization.</span></span>
+
+    -   <span data-ttu-id="c9746-160">作成、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="c9746-160">Creates a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> control.</span></span>
+
+    -   <span data-ttu-id="c9746-161">プロパティ マッピングを設定するチュートリアルの前半で定義されているメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="c9746-161">Calls the methods you defined earlier in the walkthrough to set up the property mappings.</span></span>
+
+    -   <span data-ttu-id="c9746-162">マップされたプロパティに初期値を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="c9746-162">Assigns initial values to the mapped properties.</span></span>
+
+2.  <span data-ttu-id="c9746-163">**F5** キーを押してアプリケーションをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="c9746-163">Press **F5** to build and run the application.</span></span> <span data-ttu-id="c9746-164">効果を確認するチェック ボックスをクリックして、<xref:System.Windows.FrameworkElement.FlowDirection%2A>マッピングします。</span><span class="sxs-lookup"><span data-stu-id="c9746-164">Click the check box to see the effect of the <xref:System.Windows.FrameworkElement.FlowDirection%2A> mapping.</span></span> <span data-ttu-id="c9746-165">チェック ボックスをクリックすると、レイアウトは左から右方向を反転させます。</span><span class="sxs-lookup"><span data-stu-id="c9746-165">When you click the check box, the layout reverses its left-right orientation.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="c9746-166">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9746-166">See Also</span></span>
+
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [<span data-ttu-id="c9746-167">Windows フォームと WPF プロパティの割り当て</span><span class="sxs-lookup"><span data-stu-id="c9746-167">Windows Forms and WPF Property Mapping</span></span>](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [<span data-ttu-id="c9746-168">Visual Studio で XAML をデザインする</span><span class="sxs-lookup"><span data-stu-id="c9746-168">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [<span data-ttu-id="c9746-169">チュートリアル: WPF での Windows フォーム コントロールのホスト</span><span class="sxs-lookup"><span data-stu-id="c9746-169">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
