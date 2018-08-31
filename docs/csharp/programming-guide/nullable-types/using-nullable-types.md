@@ -1,116 +1,116 @@
 ---
 title: Null 許容型の使用 (C# プログラミング ガイド)
-ms.date: 07/20/2015
+description: Learn how to work with C# nullable types (C# Null 許容型の操作方法について)
+ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600a18cc4dc9d3eda5577336f209c5814a7edb88
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336922"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933130"
 ---
-# <a name="using-nullable-types-c-programming-guide"></a><span data-ttu-id="f398c-102">Null 許容型の使用 (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="f398c-102">Using Nullable Types (C# Programming Guide)</span></span>
-<span data-ttu-id="f398c-103">Null 許容型は、基底の型のすべての値と、追加の [null](../../../csharp/language-reference/keywords/null.md) 値を表すことができます。</span><span class="sxs-lookup"><span data-stu-id="f398c-103">Nullable types can represent all the values of an underlying type, and an additional [null](../../../csharp/language-reference/keywords/null.md) value.</span></span> <span data-ttu-id="f398c-104">Null 許容型は、次のいずれかの形式で宣言します。</span><span class="sxs-lookup"><span data-stu-id="f398c-104">Nullable types are declared in one of two ways:</span></span>  
+# <a name="using-nullable-types-c-programming-guide"></a><span data-ttu-id="2e50c-103">Null 許容型の使用 (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="2e50c-103">Using nullable types (C# Programming Guide)</span></span>
+
+<span data-ttu-id="2e50c-104">Null 許容型は、基になる値型 `T` のすべての値と、追加の [null](../../language-reference/keywords/null.md) 値を表す型です。</span><span class="sxs-lookup"><span data-stu-id="2e50c-104">Nullable types are types that represent all the values of an underlying value type `T`, and an additional [null](../../language-reference/keywords/null.md) value.</span></span> <span data-ttu-id="2e50c-105">詳細については、「[Null 許容型](index.md)」のトピックを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2e50c-105">For more information, see the [Nullable types](index.md) topic.</span></span>
+
+<span data-ttu-id="2e50c-106">Null 許容型は、`Nullable<T>` または `T?` のいずれかの形式で参照できます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-106">You can refer to a nullable type in any of the following forms: `Nullable<T>` or `T?`.</span></span> <span data-ttu-id="2e50c-107">この 2 つの形式は同義であり、どちらでも使用できます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-107">These two forms are interchangeable.</span></span>  
   
- `System.Nullable<T> variable`  
+## <a name="declaration-and-assignment"></a><span data-ttu-id="2e50c-108">宣言と代入</span><span class="sxs-lookup"><span data-stu-id="2e50c-108">Declaration and assignment</span></span>
+
+<span data-ttu-id="2e50c-109">値型は、対応する Null 許容型に暗黙的に変換できるので、基になる値型の場合と同様に Null 許容型に値を代入します。</span><span class="sxs-lookup"><span data-stu-id="2e50c-109">As a value type can be implicitly converted to the corresponding nullable type, you assign a value to a nullable type as you would for its underlying value type.</span></span> <span data-ttu-id="2e50c-110">`null` 値を代入することもできます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-110">You also can assign the `null` value.</span></span>  <span data-ttu-id="2e50c-111">例:</span><span class="sxs-lookup"><span data-stu-id="2e50c-111">For example:</span></span>
   
- <span data-ttu-id="f398c-105">- または -</span><span class="sxs-lookup"><span data-stu-id="f398c-105">-or-</span></span>  
+[!code-csharp[declare and assign](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#1)]
+
+## <a name="examination-of-a-nullable-type-value"></a><span data-ttu-id="2e50c-112">Null 許容型の値の検査</span><span class="sxs-lookup"><span data-stu-id="2e50c-112">Examination of a nullable type value</span></span>
+
+<span data-ttu-id="2e50c-113">Null 許容型のインスタンスが null かどうかを調べて、基になる型の値を取得するには、次の読み取り専用プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="2e50c-113">Use the following readonly properties to examine an instance of a nullable type for null and retrieve a value of an underlying type:</span></span>  
   
- `T? variable`  
+- <span data-ttu-id="2e50c-114"><xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> は、Null 許容型のインスタンスに、基になる型の値が含まれるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="2e50c-114"><xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> indicates whether an instance of a nullable type has a value of its underlying type.</span></span>
   
- <span data-ttu-id="f398c-106">`T` は、Null 許容型の基底の型です。</span><span class="sxs-lookup"><span data-stu-id="f398c-106">`T` is the underlying type of the nullable type.</span></span> <span data-ttu-id="f398c-107">`T` には、`struct` を含む任意の値型を指定できますが、参照型は指定できません。</span><span class="sxs-lookup"><span data-stu-id="f398c-107">`T` can be any value type including `struct`; it cannot be a reference type.</span></span>  
+- <span data-ttu-id="2e50c-115"><xref:System.Nullable%601.HasValue%2A> が `true` の場合、<xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> は基になる型の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="2e50c-115"><xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> gets the value of an underlying type if <xref:System.Nullable%601.HasValue%2A> is `true`.</span></span> <span data-ttu-id="2e50c-116"><xref:System.Nullable%601.HasValue%2A> が `false` の場合、<xref:System.Nullable%601.Value%2A> プロパティは <xref:System.InvalidOperationException> をスローします。</span><span class="sxs-lookup"><span data-stu-id="2e50c-116">If <xref:System.Nullable%601.HasValue%2A> is `false`, the <xref:System.Nullable%601.Value%2A> property throws an <xref:System.InvalidOperationException>.</span></span>
   
- <span data-ttu-id="f398c-108">Null 許容型を使用するときの例として、通常のブール値変数が、true と false の 2 つの値をどのように持つことができるかを考えてみましょう。</span><span class="sxs-lookup"><span data-stu-id="f398c-108">For an example of when you might use a nullable type, consider how an ordinary Boolean variable can have two values: true and false.</span></span> <span data-ttu-id="f398c-109">この変数には、"未定義" を示す値はありません。</span><span class="sxs-lookup"><span data-stu-id="f398c-109">There is no value that signifies "undefined".</span></span> <span data-ttu-id="f398c-110">多くのプログラミング アプリケーションの中でも特にデータベース操作では、変数が未定義の状態で現れることがあります。</span><span class="sxs-lookup"><span data-stu-id="f398c-110">In many programming applications, most notably database interactions, variables can occur in an undefined state.</span></span> <span data-ttu-id="f398c-111">たとえば、データベース フィールドには、true や false の値が入力されている場合がありますが、値がまったく入力されていない場合もあります。</span><span class="sxs-lookup"><span data-stu-id="f398c-111">For example, a field in a database may contain the values true or false, but it may also contain no value at all.</span></span> <span data-ttu-id="f398c-112">また、参照型に `null` を設定すると、その型が初期化されていないことを示すことができます。</span><span class="sxs-lookup"><span data-stu-id="f398c-112">Similarly, reference types can be set to `null` to indicate that they are not initialized.</span></span>  
+<span data-ttu-id="2e50c-117">次の例のコードでは、`HasValue` プロパティを使用して、値を表示する前に変数に値が格納されているかどうかをテストします。</span><span class="sxs-lookup"><span data-stu-id="2e50c-117">The code in the following example uses the `HasValue` property to test whether the variable contains a value before displaying it:</span></span>
   
- <span data-ttu-id="f398c-113">このような違いから、状態情報を格納する変数を追加したり、特別な値を使用したりするような余分なプログラミング作業が生じることがあります。</span><span class="sxs-lookup"><span data-stu-id="f398c-113">This disparity can create extra programming work, with additional variables used to store state information, the use of special values, and so on.</span></span> <span data-ttu-id="f398c-114">C# では、Null 許容型修飾子により、未定義の値を示す値型変数を作成できます。</span><span class="sxs-lookup"><span data-stu-id="f398c-114">The nullable type modifier enables C# to create value-type variables that indicate an undefined value.</span></span>  
+[!code-csharp-interactive[use HasValue](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#2)]
   
-## <a name="examples-of-nullable-types"></a><span data-ttu-id="f398c-115">Null 許容型の例</span><span class="sxs-lookup"><span data-stu-id="f398c-115">Examples of Nullable Types</span></span>  
- <span data-ttu-id="f398c-116">Null 許容型の基底の型には、任意の値型を使用できます。</span><span class="sxs-lookup"><span data-stu-id="f398c-116">Any value type may be used as the basis for a nullable type.</span></span> <span data-ttu-id="f398c-117">例:</span><span class="sxs-lookup"><span data-stu-id="f398c-117">For example:</span></span>  
+<span data-ttu-id="2e50c-118">次の例に示すように、`HasValue` プロパティを使用する代わりに、Null 許容型の変数を `null` と比較することもできます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-118">You also can compare a nullable type variable with `null` instead of using the `HasValue` property, as the following example shows:</span></span>  
   
- [!code-csharp[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_1.cs)]  
+[!code-csharp-interactive[use comparison with null](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#3)]
+
+<span data-ttu-id="2e50c-119">C# 7.0 以降では、[パターン マッチング](../../pattern-matching.md)を使用して Null 許容型の値を調べて取得することができます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-119">Beginning with C# 7.0, you can use [pattern matching](../../pattern-matching.md) to both examine and get a value of a nullable type:</span></span>
+
+[!code-csharp-interactive[use pattern matching](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#4)]
+
+## <a name="conversion-from-a-nullable-type-to-an-underlying-type"></a><span data-ttu-id="2e50c-120">Null 許容型から基になる型への変換</span><span class="sxs-lookup"><span data-stu-id="2e50c-120">Conversion from a nullable type to an underlying type</span></span>
+
+<span data-ttu-id="2e50c-121">Null 許容型の値を Null 非許容型に代入する必要がある場合は、[Null 合体演算子 `??`](../../language-reference/operators/null-coalescing-operator.md) を使用して、Null 許容型の値が null の場合に代入される値を指定します (<xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> メソッドを使用してこの操作を行うこともできます)。</span><span class="sxs-lookup"><span data-stu-id="2e50c-121">If you need to assign a nullable type value to a non-nullable type, use the [null-coalescing operator `??`](../../language-reference/operators/null-coalescing-operator.md) to specify the value to be assigned if a nullable type value is null (you also can use the <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> method to do that):</span></span>
   
-## <a name="the-members-of-nullable-types"></a><span data-ttu-id="f398c-118">Null 許容型のメンバー</span><span class="sxs-lookup"><span data-stu-id="f398c-118">The Members of Nullable Types</span></span>  
- <span data-ttu-id="f398c-119">Null 許容型の各インスタンスには、次のような 2 つのパブリックな読み取り専用プロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="f398c-119">Each instance of a nullable type has two public read-only properties:</span></span>  
+[!code-csharp-interactive[?? operator](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#5)]
+
+<span data-ttu-id="2e50c-122">Null 許容型の値が null の場合に使用される値を、基になる値型の既定値にする場合は、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="2e50c-122">Use the <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> method if the value to be used when a nullable type value is null should be the default value of the underlying value type.</span></span>
   
--   `HasValue`  
+<span data-ttu-id="2e50c-123">Null 許容型を Null 非許容型に明示的にキャストすることができます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-123">You can explicitly cast a nullable type to a non-nullable type.</span></span> <span data-ttu-id="2e50c-124">例:</span><span class="sxs-lookup"><span data-stu-id="2e50c-124">For example:</span></span>  
   
-     <span data-ttu-id="f398c-120">`HasValue` は `bool` 型です。</span><span class="sxs-lookup"><span data-stu-id="f398c-120">`HasValue` is of type `bool`.</span></span> <span data-ttu-id="f398c-121">変数が null 以外の値を格納している場合、このプロパティには `true` が設定されます。</span><span class="sxs-lookup"><span data-stu-id="f398c-121">It is set to `true` when the variable contains a non-null value.</span></span>  
+[!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
+
+<span data-ttu-id="2e50c-125">実行時に Null 許容型の値が null の場合は、明示的なキャストによって <xref:System.InvalidOperationException> がスローされます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-125">At run time, if the value of a nullable type is null, the explicit cast throws an <xref:System.InvalidOperationException>.</span></span>
+
+<span data-ttu-id="2e50c-126">Null 非許容値型は、対応する Null 許容型に暗黙的に変換されます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-126">A non-nullable value type is implicitly converted to the corresponding nullable type.</span></span>
   
--   `Value`  
+## <a name="operators"></a><span data-ttu-id="2e50c-127">演算子</span><span class="sxs-lookup"><span data-stu-id="2e50c-127">Operators</span></span>
+
+<span data-ttu-id="2e50c-128">値型向けに存在している定義済みの単項演算子、2 項演算子およびすべてのユーザー定義演算子は、Null 許容型でも使用できます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-128">The predefined unary and binary operators and any user-defined operators that exist for value types may also be used by nullable types.</span></span> <span data-ttu-id="2e50c-129">これらの演算子では、1 つまたは両方のオペランドが null の場合は null 値が生成され、null 以外の場合は、含まれている値に基づいて結果が算出されます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-129">These operators produce a null value if one or both operands are null; otherwise, the operator uses the contained values to calculate the result.</span></span> <span data-ttu-id="2e50c-130">例:</span><span class="sxs-lookup"><span data-stu-id="2e50c-130">For example:</span></span>  
   
-     <span data-ttu-id="f398c-122">`Value` は、基になっている型と同じ型です。</span><span class="sxs-lookup"><span data-stu-id="f398c-122">`Value` is of the same type as the underlying type.</span></span> <span data-ttu-id="f398c-123">`HasValue` が `true` の場合、`Value` には意味のある値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="f398c-123">If `HasValue` is `true`, `Value` contains a meaningful value.</span></span> <span data-ttu-id="f398c-124">`HasValue` が `false` の場合、`Value` にアクセスすると、<xref:System.InvalidOperationException> がスローされます。</span><span class="sxs-lookup"><span data-stu-id="f398c-124">If `HasValue` is `false`, accessing `Value` will throw a <xref:System.InvalidOperationException>.</span></span>  
+[!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
   
- <span data-ttu-id="f398c-125">次の例では、`HasValue` メンバーを使用して、値を表示する前に、変数に値が格納されているかどうかをテストします。</span><span class="sxs-lookup"><span data-stu-id="f398c-125">In this example, the `HasValue` member is used to test whether the variable contains a value before it tries to display it.</span></span>  
+<span data-ttu-id="2e50c-131">関係演算子 (`<`、`>`、`<=`、`>=`) では、1 つまたは両方のオペランドが null の場合、結果は `false` になります。</span><span class="sxs-lookup"><span data-stu-id="2e50c-131">For the relational operators (`<`, `>`, `<=`, `>=`), if one or both operands are null, the result is `false`.</span></span> <span data-ttu-id="2e50c-132">ある比較 (たとえば、`<=`) から返される結果が `false` であっても、逆の比較 (`>`) から返される結果が `true` であるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="2e50c-132">Do not assume that because a particular comparison (for example, `<=`) returns `false`, the opposite comparison (`>`) returns `true`.</span></span> <span data-ttu-id="2e50c-133">次の例は、10 が</span><span class="sxs-lookup"><span data-stu-id="2e50c-133">The following example shows that 10 is</span></span>
+
+- <span data-ttu-id="2e50c-134">null より大きくも等しくもなく、</span><span class="sxs-lookup"><span data-stu-id="2e50c-134">neither greater than or equal to null,</span></span>
+- <span data-ttu-id="2e50c-135">null 未満でもないことを示しています。</span><span class="sxs-lookup"><span data-stu-id="2e50c-135">nor less than null.</span></span>
   
- [!code-csharp[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_2.cs)]  
+[!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
- <span data-ttu-id="f398c-126">値のテストは、次の例のように行うこともできます。</span><span class="sxs-lookup"><span data-stu-id="f398c-126">Testing for a value can also be done as in the following example:</span></span>  
+<span data-ttu-id="2e50c-136">上記の例は、どちらも null である 2 つの null 許容型を等価比較すると、結果が `true` と評価されることを示しています。</span><span class="sxs-lookup"><span data-stu-id="2e50c-136">The above example also shows that an equality comparison of two nullable types that are both null evaluates to `true`.</span></span>
+
+## <a name="boxing-and-unboxing"></a><span data-ttu-id="2e50c-137">ボックス化とボックス化解除</span><span class="sxs-lookup"><span data-stu-id="2e50c-137">Boxing and unboxing</span></span>
+
+<span data-ttu-id="2e50c-138">Null 許容値型は、次の規則に従って[ボックス化](../types/boxing-and-unboxing.md)されます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-138">A nullable value type is [boxed](../types/boxing-and-unboxing.md) by the following rules:</span></span>
+
+- <span data-ttu-id="2e50c-139"><xref:System.Nullable%601.HasValue%2A> が `false` を返した場合は、null 参照が生成されます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-139">If <xref:System.Nullable%601.HasValue%2A> returns `false`, the null reference is produced.</span></span>  
+- <span data-ttu-id="2e50c-140"><xref:System.Nullable%601.HasValue%2A> が `true` を返した場合は、<xref:System.Nullable%601> のインスタンスではなく、基になる値型 `T` の値がボックス化されます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-140">If <xref:System.Nullable%601.HasValue%2A> returns `true`, a value of the underlying value type `T` is boxed, not the instance of <xref:System.Nullable%601>.</span></span>
+
+<span data-ttu-id="2e50c-141">次の例に示すように、ボックス化された値型を、対応する Null 許容型にボックス化解除できます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-141">You can unbox the boxed value type to the corresponding nullable type, as the following example shows:</span></span>
+
+[!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
+
+## <a name="the-bool-type"></a><span data-ttu-id="2e50c-142">bool? 型</span><span class="sxs-lookup"><span data-stu-id="2e50c-142">The bool? type</span></span>
+
+<span data-ttu-id="2e50c-143">Null 許容 `bool?` 型は、[true](../../language-reference/keywords/true-literal.md)、[false](../../language-reference/keywords/false-literal.md)、[null](../../language-reference/keywords/null.md) の 3 つの異なる値を格納できます。</span><span class="sxs-lookup"><span data-stu-id="2e50c-143">The `bool?` nullable type can contain three different values: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) and [null](../../language-reference/keywords/null.md).</span></span> <span data-ttu-id="2e50c-144">`bool?` 型は、SQL で使用されるブール変数型に似ています。</span><span class="sxs-lookup"><span data-stu-id="2e50c-144">The `bool?` type is like the Boolean variable type that is used in SQL.</span></span> <span data-ttu-id="2e50c-145">`&` 演算子と `|` 演算子によって生成される結果が SQL の 3 値のブール型と一致するようにするには、次の定義済みの演算子を指定します。</span><span class="sxs-lookup"><span data-stu-id="2e50c-145">To ensure that the results produced by the `&` and `|` operators are consistent with the three-valued Boolean type in SQL, the following predefined operators are provided:</span></span>
+
+- `bool? operator &(bool? x, bool? y)`  
+- `bool? operator |(bool? x, bool? y)`  
   
- [!code-csharp[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_3.cs)]  
+<span data-ttu-id="2e50c-146">次の表に、これらの演算子のセマンティクスが定義されています。</span><span class="sxs-lookup"><span data-stu-id="2e50c-146">The semantics of these operators is defined by the following table:</span></span>  
   
-## <a name="explicit-conversions"></a><span data-ttu-id="f398c-127">明示的変換</span><span class="sxs-lookup"><span data-stu-id="f398c-127">Explicit Conversions</span></span>  
- <span data-ttu-id="f398c-128">Null 許容型は、キャストを明示的に使用するか、または `Value` プロパティを使用して通常の型にキャストできます。</span><span class="sxs-lookup"><span data-stu-id="f398c-128">A nullable type can be cast to a regular type, either explicitly with a cast, or by using the `Value` property.</span></span> <span data-ttu-id="f398c-129">例:</span><span class="sxs-lookup"><span data-stu-id="f398c-129">For example:</span></span>  
-  
- [!code-csharp[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_4.cs)]  
-  
- <span data-ttu-id="f398c-130">2 つのデータ型の間でユーザー定義の変換を定義している場合は、これらのデータ型の Null 許容バージョンを使用して、同じユーザー定義変換を実行することもできます。</span><span class="sxs-lookup"><span data-stu-id="f398c-130">If a user-defined conversion is defined between two data types, the same conversion can also be used with the nullable versions of these data types.</span></span>  
-  
-## <a name="implicit-conversions"></a><span data-ttu-id="f398c-131">暗黙の型変換</span><span class="sxs-lookup"><span data-stu-id="f398c-131">Implicit Conversions</span></span>  
- <span data-ttu-id="f398c-132">Null 許容型の変数には、次の例のように `null` キーワードを使用して null に設定できます。</span><span class="sxs-lookup"><span data-stu-id="f398c-132">A variable of nullable type can be set to null with the `null` keyword, as shown in the following example:</span></span>  
-  
- [!code-csharp[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_5.cs)]  
-  
- <span data-ttu-id="f398c-133">通常の型から null 許容型への変換は暗黙的です。</span><span class="sxs-lookup"><span data-stu-id="f398c-133">The conversion from an ordinary type to a nullable type, is implicit.</span></span>  
-  
- [!code-csharp[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_6.cs)]  
-  
-## <a name="operators"></a><span data-ttu-id="f398c-134">演算子</span><span class="sxs-lookup"><span data-stu-id="f398c-134">Operators</span></span>  
- <span data-ttu-id="f398c-135">値型向けに存在している定義済みの単項演算子、2 項演算子およびすべてのユーザー定義演算子は、Null 許容型でも使用できます。</span><span class="sxs-lookup"><span data-stu-id="f398c-135">The predefined unary and binary operators and any user-defined operators that exist for value types may also be used by nullable types.</span></span> <span data-ttu-id="f398c-136">これらの演算子は、オペランドが null の場合は null 値を生成し、null 以外の場合は、含まれている値に基づいて結果を算出します。</span><span class="sxs-lookup"><span data-stu-id="f398c-136">These operators produce a null value if the operands are null; otherwise, the operator uses the contained value to calculate the result.</span></span> <span data-ttu-id="f398c-137">例:</span><span class="sxs-lookup"><span data-stu-id="f398c-137">For example:</span></span>  
-  
- [!code-csharp[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_7.cs)]  
-  
- <span data-ttu-id="f398c-138">2 つの null 許容型を比較したときに、一方の null 許容型の値が null でもう一方がそれ以外の場合は、`!=` (等しくない) を除くすべての比較が `false` と評価されます。</span><span class="sxs-lookup"><span data-stu-id="f398c-138">When you perform comparisons with nullable types, if the value of one of the nullable types is null and the other is not, all comparisons evaluate to `false` except for `!=` (not equal).</span></span> <span data-ttu-id="f398c-139">ある比較から返される結果が `false` であっても、逆のケースから返される結果が `true` とは限らない点が重要です。</span><span class="sxs-lookup"><span data-stu-id="f398c-139">It is important not to assume that because a particular comparison returns `false`, the opposite case returns `true`.</span></span> <span data-ttu-id="f398c-140">次の例では、10 は null より大きくも小さくも等しくもありません。</span><span class="sxs-lookup"><span data-stu-id="f398c-140">In the following example, 10 is not greater than, less than, nor equal to null.</span></span> <span data-ttu-id="f398c-141">`num1 != num2` のみが `true` と評価されます。</span><span class="sxs-lookup"><span data-stu-id="f398c-141">Only `num1 != num2` evaluates to `true`.</span></span>  
-  
- [!code-csharp[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_8.cs)]  
-  
- <span data-ttu-id="f398c-142">どちらも null である 2 つの null 許容型を等価比較すると、結果は `true` と評価されます。</span><span class="sxs-lookup"><span data-stu-id="f398c-142">An equality comparison of two nullable types that are both null evaluates to `true`.</span></span>  
-  
-## <a name="the--operator"></a><span data-ttu-id="f398c-143">??</span><span class="sxs-lookup"><span data-stu-id="f398c-143">The ??</span></span> <span data-ttu-id="f398c-144">演算子</span><span class="sxs-lookup"><span data-stu-id="f398c-144">Operator</span></span>  
- <span data-ttu-id="f398c-145">`??` 演算子は、Null 許容型が Null 許容型以外の型に割り当てられているときに返す既定値を定義します。</span><span class="sxs-lookup"><span data-stu-id="f398c-145">The `??` operator defines a default value that is returned when a nullable type is assigned to a non-nullable type.</span></span>  
-  
- [!code-csharp[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_9.cs)]  
-  
- <span data-ttu-id="f398c-146">この演算子は、複数の Null 許容型で使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="f398c-146">This operator can also be used with multiple nullable types.</span></span> <span data-ttu-id="f398c-147">例:</span><span class="sxs-lookup"><span data-stu-id="f398c-147">For example:</span></span>  
-  
- [!code-csharp[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_10.cs)]  
-  
-## <a name="the-bool-type"></a><span data-ttu-id="f398c-148">bool? 型</span><span class="sxs-lookup"><span data-stu-id="f398c-148">The bool? type</span></span>  
- <span data-ttu-id="f398c-149">Null 許容 `bool?` 型は、[true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md)、[null](../../../csharp/language-reference/keywords/null.md) の 3 つの異なる値を格納できます。</span><span class="sxs-lookup"><span data-stu-id="f398c-149">The `bool?` nullable type can contain three different values: [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) and [null](../../../csharp/language-reference/keywords/null.md).</span></span> <span data-ttu-id="f398c-150">bool? から bool にキャストする方法については、「[方法: bool? から bool に安全にキャストする](../../../csharp/programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f398c-150">For information about how to cast from a bool? to a bool, see [How to: Safely Cast from bool? to bool](../../../csharp/programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).</span></span>  
-  
- <span data-ttu-id="f398c-151">Null 許容ブール値は、SQL で使用するブール値変数型と似ています。</span><span class="sxs-lookup"><span data-stu-id="f398c-151">Nullable Booleans are like the Boolean variable type that is used in SQL.</span></span> <span data-ttu-id="f398c-152">`&` 演算子と `|` 演算子によって生成される結果が SQL の 3 値のブール型と一致するようにするには、次の定義済みの演算子を指定します。</span><span class="sxs-lookup"><span data-stu-id="f398c-152">To ensure that the results produced by the `&` and `|` operators are consistent with the three-valued Boolean type in SQL, the following predefined operators are provided:</span></span>  
-  
- `bool? operator &(bool? x, bool? y)`  
-  
- `bool? operator |(bool? x, bool? y)`  
-  
- <span data-ttu-id="f398c-153">これらの演算子の結果を以下の表に示します。</span><span class="sxs-lookup"><span data-stu-id="f398c-153">The results of these operators are listed in the following table:</span></span>  
-  
-|<span data-ttu-id="f398c-154">x</span><span class="sxs-lookup"><span data-stu-id="f398c-154">X</span></span>|<span data-ttu-id="f398c-155">y</span><span class="sxs-lookup"><span data-stu-id="f398c-155">y</span></span>|<span data-ttu-id="f398c-156">x&y</span><span class="sxs-lookup"><span data-stu-id="f398c-156">x&y</span></span>|<span data-ttu-id="f398c-157">x&#124;y</span><span class="sxs-lookup"><span data-stu-id="f398c-157">x&#124;y</span></span>|  
+|<span data-ttu-id="2e50c-147">x</span><span class="sxs-lookup"><span data-stu-id="2e50c-147">x</span></span>|<span data-ttu-id="2e50c-148">Y</span><span class="sxs-lookup"><span data-stu-id="2e50c-148">y</span></span>|<span data-ttu-id="2e50c-149">x&y</span><span class="sxs-lookup"><span data-stu-id="2e50c-149">x&y</span></span>|<span data-ttu-id="2e50c-150">x&#124;y</span><span class="sxs-lookup"><span data-stu-id="2e50c-150">x&#124;y</span></span>|  
 |-------|-------|---------|--------------|  
-|<span data-ttu-id="f398c-158">true</span><span class="sxs-lookup"><span data-stu-id="f398c-158">true</span></span>|<span data-ttu-id="f398c-159">true</span><span class="sxs-lookup"><span data-stu-id="f398c-159">true</span></span>|<span data-ttu-id="f398c-160">true</span><span class="sxs-lookup"><span data-stu-id="f398c-160">true</span></span>|<span data-ttu-id="f398c-161">true</span><span class="sxs-lookup"><span data-stu-id="f398c-161">true</span></span>|  
-|<span data-ttu-id="f398c-162">TRUE</span><span class="sxs-lookup"><span data-stu-id="f398c-162">true</span></span>|<span data-ttu-id="f398c-163">False</span><span class="sxs-lookup"><span data-stu-id="f398c-163">false</span></span>|<span data-ttu-id="f398c-164">false</span><span class="sxs-lookup"><span data-stu-id="f398c-164">false</span></span>|<span data-ttu-id="f398c-165">true</span><span class="sxs-lookup"><span data-stu-id="f398c-165">true</span></span>|  
-|<span data-ttu-id="f398c-166">true</span><span class="sxs-lookup"><span data-stu-id="f398c-166">true</span></span>|<span data-ttu-id="f398c-167">null</span><span class="sxs-lookup"><span data-stu-id="f398c-167">null</span></span>|<span data-ttu-id="f398c-168">null</span><span class="sxs-lookup"><span data-stu-id="f398c-168">null</span></span>|<span data-ttu-id="f398c-169">true</span><span class="sxs-lookup"><span data-stu-id="f398c-169">true</span></span>|  
-|<span data-ttu-id="f398c-170">False</span><span class="sxs-lookup"><span data-stu-id="f398c-170">false</span></span>|<span data-ttu-id="f398c-171">true</span><span class="sxs-lookup"><span data-stu-id="f398c-171">true</span></span>|<span data-ttu-id="f398c-172">False</span><span class="sxs-lookup"><span data-stu-id="f398c-172">false</span></span>|<span data-ttu-id="f398c-173">true</span><span class="sxs-lookup"><span data-stu-id="f398c-173">true</span></span>|  
-|<span data-ttu-id="f398c-174">False</span><span class="sxs-lookup"><span data-stu-id="f398c-174">false</span></span>|<span data-ttu-id="f398c-175">False</span><span class="sxs-lookup"><span data-stu-id="f398c-175">false</span></span>|<span data-ttu-id="f398c-176">False</span><span class="sxs-lookup"><span data-stu-id="f398c-176">false</span></span>|<span data-ttu-id="f398c-177">False</span><span class="sxs-lookup"><span data-stu-id="f398c-177">false</span></span>|  
-|<span data-ttu-id="f398c-178">False</span><span class="sxs-lookup"><span data-stu-id="f398c-178">false</span></span>|<span data-ttu-id="f398c-179">null</span><span class="sxs-lookup"><span data-stu-id="f398c-179">null</span></span>|<span data-ttu-id="f398c-180">False</span><span class="sxs-lookup"><span data-stu-id="f398c-180">false</span></span>|<span data-ttu-id="f398c-181">null</span><span class="sxs-lookup"><span data-stu-id="f398c-181">null</span></span>|  
-|<span data-ttu-id="f398c-182">null</span><span class="sxs-lookup"><span data-stu-id="f398c-182">null</span></span>|<span data-ttu-id="f398c-183">true</span><span class="sxs-lookup"><span data-stu-id="f398c-183">true</span></span>|<span data-ttu-id="f398c-184">null</span><span class="sxs-lookup"><span data-stu-id="f398c-184">null</span></span>|<span data-ttu-id="f398c-185">true</span><span class="sxs-lookup"><span data-stu-id="f398c-185">true</span></span>|  
-|<span data-ttu-id="f398c-186">null</span><span class="sxs-lookup"><span data-stu-id="f398c-186">null</span></span>|<span data-ttu-id="f398c-187">False</span><span class="sxs-lookup"><span data-stu-id="f398c-187">false</span></span>|<span data-ttu-id="f398c-188">False</span><span class="sxs-lookup"><span data-stu-id="f398c-188">false</span></span>|<span data-ttu-id="f398c-189">null</span><span class="sxs-lookup"><span data-stu-id="f398c-189">null</span></span>|  
-|<span data-ttu-id="f398c-190">null</span><span class="sxs-lookup"><span data-stu-id="f398c-190">null</span></span>|<span data-ttu-id="f398c-191">null</span><span class="sxs-lookup"><span data-stu-id="f398c-191">null</span></span>|<span data-ttu-id="f398c-192">null</span><span class="sxs-lookup"><span data-stu-id="f398c-192">null</span></span>|<span data-ttu-id="f398c-193">null</span><span class="sxs-lookup"><span data-stu-id="f398c-193">null</span></span>|  
+|<span data-ttu-id="2e50c-151">true</span><span class="sxs-lookup"><span data-stu-id="2e50c-151">true</span></span>|<span data-ttu-id="2e50c-152">true</span><span class="sxs-lookup"><span data-stu-id="2e50c-152">true</span></span>|<span data-ttu-id="2e50c-153">true</span><span class="sxs-lookup"><span data-stu-id="2e50c-153">true</span></span>|<span data-ttu-id="2e50c-154">true</span><span class="sxs-lookup"><span data-stu-id="2e50c-154">true</span></span>|  
+|<span data-ttu-id="2e50c-155">TRUE</span><span class="sxs-lookup"><span data-stu-id="2e50c-155">true</span></span>|<span data-ttu-id="2e50c-156">False</span><span class="sxs-lookup"><span data-stu-id="2e50c-156">false</span></span>|<span data-ttu-id="2e50c-157">false</span><span class="sxs-lookup"><span data-stu-id="2e50c-157">false</span></span>|<span data-ttu-id="2e50c-158">true</span><span class="sxs-lookup"><span data-stu-id="2e50c-158">true</span></span>|  
+|<span data-ttu-id="2e50c-159">true</span><span class="sxs-lookup"><span data-stu-id="2e50c-159">true</span></span>|<span data-ttu-id="2e50c-160">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-160">null</span></span>|<span data-ttu-id="2e50c-161">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-161">null</span></span>|<span data-ttu-id="2e50c-162">true</span><span class="sxs-lookup"><span data-stu-id="2e50c-162">true</span></span>|  
+|<span data-ttu-id="2e50c-163">False</span><span class="sxs-lookup"><span data-stu-id="2e50c-163">false</span></span>|<span data-ttu-id="2e50c-164">true</span><span class="sxs-lookup"><span data-stu-id="2e50c-164">true</span></span>|<span data-ttu-id="2e50c-165">False</span><span class="sxs-lookup"><span data-stu-id="2e50c-165">false</span></span>|<span data-ttu-id="2e50c-166">true</span><span class="sxs-lookup"><span data-stu-id="2e50c-166">true</span></span>|  
+|<span data-ttu-id="2e50c-167">False</span><span class="sxs-lookup"><span data-stu-id="2e50c-167">false</span></span>|<span data-ttu-id="2e50c-168">False</span><span class="sxs-lookup"><span data-stu-id="2e50c-168">false</span></span>|<span data-ttu-id="2e50c-169">False</span><span class="sxs-lookup"><span data-stu-id="2e50c-169">false</span></span>|<span data-ttu-id="2e50c-170">False</span><span class="sxs-lookup"><span data-stu-id="2e50c-170">false</span></span>|  
+|<span data-ttu-id="2e50c-171">False</span><span class="sxs-lookup"><span data-stu-id="2e50c-171">false</span></span>|<span data-ttu-id="2e50c-172">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-172">null</span></span>|<span data-ttu-id="2e50c-173">False</span><span class="sxs-lookup"><span data-stu-id="2e50c-173">false</span></span>|<span data-ttu-id="2e50c-174">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-174">null</span></span>|  
+|<span data-ttu-id="2e50c-175">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-175">null</span></span>|<span data-ttu-id="2e50c-176">true</span><span class="sxs-lookup"><span data-stu-id="2e50c-176">true</span></span>|<span data-ttu-id="2e50c-177">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-177">null</span></span>|<span data-ttu-id="2e50c-178">true</span><span class="sxs-lookup"><span data-stu-id="2e50c-178">true</span></span>|  
+|<span data-ttu-id="2e50c-179">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-179">null</span></span>|<span data-ttu-id="2e50c-180">False</span><span class="sxs-lookup"><span data-stu-id="2e50c-180">false</span></span>|<span data-ttu-id="2e50c-181">False</span><span class="sxs-lookup"><span data-stu-id="2e50c-181">false</span></span>|<span data-ttu-id="2e50c-182">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-182">null</span></span>|  
+|<span data-ttu-id="2e50c-183">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-183">null</span></span>|<span data-ttu-id="2e50c-184">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-184">null</span></span>|<span data-ttu-id="2e50c-185">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-185">null</span></span>|<span data-ttu-id="2e50c-186">null</span><span class="sxs-lookup"><span data-stu-id="2e50c-186">null</span></span>|  
+
+<span data-ttu-id="2e50c-187">これら 2 つの演算子は、「[演算子](#operators)」セクションで説明されている規則に従わないことに注意してください。オペランドの 1 つが null の場合も、演算子の評価の結果は null 以外である可能性があります。</span><span class="sxs-lookup"><span data-stu-id="2e50c-187">Note that these two operators don't follow the rules described in the [Operators](#operators) section: the result of an operator evaluation can be non-null even if one of the operands is null.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="f398c-194">参照</span><span class="sxs-lookup"><span data-stu-id="f398c-194">See Also</span></span>  
- [<span data-ttu-id="f398c-195">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="f398c-195">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="f398c-196">Null 許容型</span><span class="sxs-lookup"><span data-stu-id="f398c-196">Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/index.md)  
- [<span data-ttu-id="f398c-197">Null 許容型のボックス化</span><span class="sxs-lookup"><span data-stu-id="f398c-197">Boxing Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
- [<span data-ttu-id="f398c-198">null 許容値型</span><span class="sxs-lookup"><span data-stu-id="f398c-198">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a><span data-ttu-id="2e50c-188">関連項目</span><span class="sxs-lookup"><span data-stu-id="2e50c-188">See also</span></span>
+
+ [<span data-ttu-id="2e50c-189">Null 許容型</span><span class="sxs-lookup"><span data-stu-id="2e50c-189">Nullable types</span></span>](index.md)  
+ [<span data-ttu-id="2e50c-190">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="2e50c-190">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+ [<span data-ttu-id="2e50c-191">What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)</span><span class="sxs-lookup"><span data-stu-id="2e50c-191">What exactly does 'lifted' mean?</span></span>](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  

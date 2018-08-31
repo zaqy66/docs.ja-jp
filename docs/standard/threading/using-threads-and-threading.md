@@ -1,6 +1,6 @@
 ---
 title: スレッドの使用とスレッド処理
-ms.date: 03/30/2017
+ms.date: 08/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
@@ -8,39 +8,52 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725a47cae6e3e91cf9e7385427bceece81f3c918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 871a0a06c9f1cc09fb86f20c85163fb8fcdf4100
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584181"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934132"
 ---
-# <a name="using-threads-and-threading"></a><span data-ttu-id="90134-102">スレッドの使用とスレッド処理</span><span class="sxs-lookup"><span data-stu-id="90134-102">Using Threads and Threading</span></span>
-<span data-ttu-id="90134-103">このセクションのトピックでは、マネージ スレッドの作成と管理、マネージ スレッドにデータを渡して結果を戻す方法、およびスレッドを破棄して <xref:System.Threading.ThreadAbortException> を処理する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="90134-103">The topics in this section discuss the creation and management of managed threads, how to pass data to managed threads and get results back, and how to destroy threads and handle a <xref:System.Threading.ThreadAbortException>.</span></span>  
+# <a name="using-threads-and-threading"></a><span data-ttu-id="40f35-102">スレッドの使用とスレッド処理</span><span class="sxs-lookup"><span data-stu-id="40f35-102">Using threads and threading</span></span>
+
+<span data-ttu-id="40f35-103">.NET では、複数の操作を同時に実行するアプリケーションを記述できます。</span><span class="sxs-lookup"><span data-stu-id="40f35-103">With .NET, you can write applications that perform multiple operations at the same time.</span></span> <span data-ttu-id="40f35-104">他の操作を止める可能性がある操作は個別のスレッドで実行できます。これは*マルチスレッド*や*フリー スレッド*と呼ばれているプロセスです。</span><span class="sxs-lookup"><span data-stu-id="40f35-104">Operations with the potential of holding up other operations can execute on separate threads, a process known as *multithreading* or *free threading*.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="90134-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="90134-104">In This Section</span></span>  
- [<span data-ttu-id="90134-105">スレッドを作成し、開始時にデータを渡す</span><span class="sxs-lookup"><span data-stu-id="90134-105">Creating Threads and Passing Data at Start Time</span></span>](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
- <span data-ttu-id="90134-106">データを新しいスレッドに渡す方法とデータを戻す方法など、マネージ スレッドの作成について説明します。</span><span class="sxs-lookup"><span data-stu-id="90134-106">Discusses and demonstrates the creation of managed threads, including how to pass data to new threads and how to get data back.</span></span>  
+<span data-ttu-id="40f35-105">マルチスレッドを利用するアプリケーションはユーザーの入力に対する応答性が良くなります。プロセッサを集中的に利用するタスクが個別のスレッドで実行されるため、ユーザー インターフェイスの動作が妨げられません。</span><span class="sxs-lookup"><span data-stu-id="40f35-105">Applications that use multithreading are more responsive to user input because the user interface stays active as processor-intensive tasks execute on separate threads.</span></span> <span data-ttu-id="40f35-106">マルチスレッドはまた、スケーラブルなアプリケーションの開発にも便利です。ワークロードが増えたとき、スレッドを追加できるからです。</span><span class="sxs-lookup"><span data-stu-id="40f35-106">Multithreading is also useful when you create scalable applications, because you can add threads as the workload increases.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="40f35-107">アプリケーションのスレッドの動作をさらに細かく制御するには、スレッドを自分で管理します。</span><span class="sxs-lookup"><span data-stu-id="40f35-107">If you need more control over the behavior of the application's threads, you can manage the threads yourself.</span></span> <span data-ttu-id="40f35-108">しかし、.NET Framework 4 以降では、<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> クラスおよび <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラス、[Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間の新しい同時実行コレクション クラス、スレッドではなくタスクの概念を基にした新しいプログラミング モデルにより、マルチスレッド プログラミングが大幅に簡略化されています。</span><span class="sxs-lookup"><span data-stu-id="40f35-108">However, starting with the .NET Framework 4, multithreaded programming is greatly simplified with the <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> classes, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), new concurrent collection classes in the <xref:System.Collections.Concurrent?displayProperty=nameWithType> namespace, and a new programming model that is based on the concept of tasks rather than threads.</span></span> <span data-ttu-id="40f35-109">詳細については、「[.NET での並列プログラミング](../parallel-programming/index.md)」と「[タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="40f35-109">For more information, see [Parallel Programming](../parallel-programming/index.md) and [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md).</span></span>
+
+## <a name="how-to-create-and-start-a-new-thread"></a><span data-ttu-id="40f35-110">方法: 新しいスレッドを作成して開始する</span><span class="sxs-lookup"><span data-stu-id="40f35-110">How to: Create and start a new thread</span></span>
+
+<span data-ttu-id="40f35-111"><xref:System.Threading.Thread?displayProperty=nameWithType> クラスの新しいインスタンスを作成し、コンストラクターに対して新しいスレッドで実行するメソッド名を指定して、新しいスレッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="40f35-111">You create a new thread by creating a new instance of the <xref:System.Threading.Thread?displayProperty=nameWithType> class and providing the name of the method that you want to execute on a new thread to the constructor.</span></span> <span data-ttu-id="40f35-112">作成したスレッドを開始するには、<xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="40f35-112">To start a created thread, call the <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="40f35-113">詳細と例については、「[スレッドを作成し、開始時にデータを渡す](creating-threads-and-passing-data-at-start-time.md)」の記事と <xref:System.Threading.Thread> API リファレンスを参照してください。</span><span class="sxs-lookup"><span data-stu-id="40f35-113">For more information and examples, see the [Creating threads and passing data at start time](creating-threads-and-passing-data-at-start-time.md) article and the <xref:System.Threading.Thread> API reference.</span></span>
+
+## <a name="how-to-stop-a-thread"></a><span data-ttu-id="40f35-114">方法: スレッドを停止する</span><span class="sxs-lookup"><span data-stu-id="40f35-114">How to: Stop a thread</span></span>
+
+<span data-ttu-id="40f35-115">スレッドの実行を終了するには、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="40f35-115">To terminate the execution of a thread, use the <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="40f35-116">このメソッドでは、呼び出されたスレッド上で <xref:System.Threading.ThreadAbortException> が生成されます。</span><span class="sxs-lookup"><span data-stu-id="40f35-116">That method raises a <xref:System.Threading.ThreadAbortException> on the thread on which it's invoked.</span></span> <span data-ttu-id="40f35-117">詳細については、「[スレッドの破棄](destroying-threads.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="40f35-117">For more information, see [Destroying threads](destroying-threads.md).</span></span>
+
+<span data-ttu-id="40f35-118">.NET Framework 4 以降、<xref:System.Threading.CancellationToken?displayProperty=nameWithType> を使用してスレッドを協調的にキャンセルできます。</span><span class="sxs-lookup"><span data-stu-id="40f35-118">Beginning with the .NET Framework 4, you can use the <xref:System.Threading.CancellationToken?displayProperty=nameWithType> to cancel a thread cooperatively.</span></span> <span data-ttu-id="40f35-119">詳細については、「[スレッドの協調的な取り消し](canceling-threads-cooperatively.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="40f35-119">For more information, see [Canceling threads cooperatively](canceling-threads-cooperatively.md).</span></span>
+
+<span data-ttu-id="40f35-120"><xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> メソッドを使用すると、そのメソッドが呼び出されたスレッドが終了するまで呼び出し元のスレッドを待機させるようにすることができます。</span><span class="sxs-lookup"><span data-stu-id="40f35-120">Use the <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> method to make the calling thread wait for the termination of the thread on which the method is invoked.</span></span>
+
+## <a name="how-to-pause-or-interrupt-a-thread"></a><span data-ttu-id="40f35-121">方法: スレッドを一時停止または中断する</span><span class="sxs-lookup"><span data-stu-id="40f35-121">How to: Pause or interrupt a thread</span></span>
+
+<span data-ttu-id="40f35-122"><xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> メソッドを使用して、現在のスレッドを指定した時間一時停止します。</span><span class="sxs-lookup"><span data-stu-id="40f35-122">You use the <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> method to pause the current thread for a specified amount of time.</span></span> <span data-ttu-id="40f35-123"><xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> メソッドを呼び出すことによって、ブロックされたスレッドを中断できます。</span><span class="sxs-lookup"><span data-stu-id="40f35-123">You can interrupt a blocked thread by calling the <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="40f35-124">詳細については、「[スレッドの一時中断と再開](pausing-and-resuming-threads.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="40f35-124">For more information, see [Pausing and interrupting threads](pausing-and-resuming-threads.md).</span></span>
+
+## <a name="thread-properties"></a><span data-ttu-id="40f35-125">スレッド プロパティ</span><span class="sxs-lookup"><span data-stu-id="40f35-125">Thread properties</span></span>
+
+<span data-ttu-id="40f35-126"><xref:System.Threading.Thread> プロパティの一部を次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="40f35-126">The following table presents some of the <xref:System.Threading.Thread> properties:</span></span>  
   
- [<span data-ttu-id="90134-107">スレッドの一時中断と再開</span><span class="sxs-lookup"><span data-stu-id="90134-107">Pausing and Resuming Threads</span></span>](../../../docs/standard/threading/pausing-and-resuming-threads.md)  
- <span data-ttu-id="90134-108">マネージ スレッドの一時中断と再開の影響について説明します。</span><span class="sxs-lookup"><span data-stu-id="90134-108">Discusses the ramifications of pausing and resuming managed threads.</span></span>  
-  
- [<span data-ttu-id="90134-109">スレッドの破棄</span><span class="sxs-lookup"><span data-stu-id="90134-109">Destroying Threads</span></span>](../../../docs/standard/threading/destroying-threads.md)  
- <span data-ttu-id="90134-110">マネージ スレッドの破棄の影響と、<xref:System.Threading.ThreadAbortException> の処理方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="90134-110">Discusses the ramifications of destroying managed threads, and how to handle a <xref:System.Threading.ThreadAbortException>.</span></span>  
-  
- [<span data-ttu-id="90134-111">スレッドのスケジューリング</span><span class="sxs-lookup"><span data-stu-id="90134-111">Scheduling Threads</span></span>](../../../docs/standard/threading/scheduling-threads.md)  
- <span data-ttu-id="90134-112">スレッドの優先順位とスレッドのスケジューリングへの影響について説明します。</span><span class="sxs-lookup"><span data-stu-id="90134-112">Discusses thread priorities and how they affect thread scheduling.</span></span>  
-  
-## <a name="reference"></a><span data-ttu-id="90134-113">参照</span><span class="sxs-lookup"><span data-stu-id="90134-113">Reference</span></span>  
- <xref:System.Threading.Thread>  
- <span data-ttu-id="90134-114"><xref:System.Threading.Thread> クラスのリファレンス ドキュメントです。このクラスは、アンマネージ コードから作成されたか、マネージ アプリケーションで作成されたかにかかわらず、マネージ スレッドを表します。</span><span class="sxs-lookup"><span data-stu-id="90134-114">Provides reference documentation for the <xref:System.Threading.Thread> class, which represents a managed thread, whether it came from unmanaged code or was created in a managed application.</span></span>  
-  
- <xref:System.Threading.ThreadStart>  
- <span data-ttu-id="90134-115">パラメーターなしのスレッド プロシージャを表す <xref:System.Threading.ThreadStart> デリゲートに関するリファレンス ドキュメントを提供します。</span><span class="sxs-lookup"><span data-stu-id="90134-115">Provides reference documentation for the <xref:System.Threading.ThreadStart> delegate that represents parameterless thread procedures.</span></span>  
-  
- <xref:System.Threading.ParameterizedThreadStart>  
- <span data-ttu-id="90134-116">厳密な型指定はありませんが、スレッド プロシージャにデータを渡す簡単な方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="90134-116">Provides an easy way to pass data to a thread procedure, although without strong typing.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="90134-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="90134-117">Related Sections</span></span>  
- [<span data-ttu-id="90134-118">スレッドおよびスレッド処理</span><span class="sxs-lookup"><span data-stu-id="90134-118">Threads and Threading</span></span>](../../../docs/standard/threading/threads-and-threading.md)  
- <span data-ttu-id="90134-119">マネージ スレッドの概要を提供します。</span><span class="sxs-lookup"><span data-stu-id="90134-119">Provides an introduction to managed threading.</span></span>
+|<span data-ttu-id="40f35-127">プロパティ</span><span class="sxs-lookup"><span data-stu-id="40f35-127">Property</span></span>|<span data-ttu-id="40f35-128">説明</span><span class="sxs-lookup"><span data-stu-id="40f35-128">Description</span></span>|  
+|--------------|-----------|  
+|<xref:System.Threading.Thread.IsAlive%2A>|<span data-ttu-id="40f35-129">スレッドが起動していて、正常終了しておらず中止されてもいない場合は、`true` が返されます。</span><span class="sxs-lookup"><span data-stu-id="40f35-129">Returns `true` if a thread has been started and has not yet terminated normally or aborted.</span></span>|  
+|<xref:System.Threading.Thread.IsBackground%2A>|<span data-ttu-id="40f35-130">スレッドがバックグラウンド スレッドかどうかを示すブール値を取得または設定します。</span><span class="sxs-lookup"><span data-stu-id="40f35-130">Gets or sets a Boolean that indicates if a thread is a background thread.</span></span> <span data-ttu-id="40f35-131">バックグラウンド スレッドはフォアグラウンド スレッドに似ていますが、プロセスの停止を防ぐことはありません。</span><span class="sxs-lookup"><span data-stu-id="40f35-131">Background threads are like foreground threads, but a background thread doesn't prevent a process from stopping.</span></span> <span data-ttu-id="40f35-132">あるプロセスに属するフォアグラウンド スレッドがすべて停止すると、共通言語ランタイムは、アライブ状態のバックグラウンド スレッドで <xref:System.Threading.Thread.Abort%2A> メソッドを呼び出し、プロセスを終了します。</span><span class="sxs-lookup"><span data-stu-id="40f35-132">Once all foreground threads that belong to a process have stopped, the common language runtime ends the process by calling the <xref:System.Threading.Thread.Abort%2A> method on background threads that are still alive.</span></span> <span data-ttu-id="40f35-133">詳細については、「[フォアグラウンド スレッドとバックグラウンド スレッド](foreground-and-background-threads.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="40f35-133">For more information, see [Foreground and Background Threads](foreground-and-background-threads.md).</span></span>|  
+|<xref:System.Threading.Thread.Name%2A>|<span data-ttu-id="40f35-134">スレッドの名前を取得または設定します。</span><span class="sxs-lookup"><span data-stu-id="40f35-134">Gets or sets the name of a thread.</span></span> <span data-ttu-id="40f35-135">デバッグ時、個々のスレッドを検出するために頻繁に使用されます。</span><span class="sxs-lookup"><span data-stu-id="40f35-135">Most frequently used to discover individual threads when you debug.</span></span>|  
+|<xref:System.Threading.Thread.Priority%2A>|<span data-ttu-id="40f35-136">オペレーティング システムがスレッド スケジュールに優先順位を設定するために使用する <xref:System.Threading.ThreadPriority> 値を取得または設定します。</span><span class="sxs-lookup"><span data-stu-id="40f35-136">Gets or sets a <xref:System.Threading.ThreadPriority> value that is used by the operating system to prioritize thread scheduling.</span></span> <span data-ttu-id="40f35-137">詳細については、「[スレッドのスケジューリング](scheduling-threads.md)」と <xref:System.Threading.ThreadPriority> リファレンスを参照してください。</span><span class="sxs-lookup"><span data-stu-id="40f35-137">For more information, see [Scheduling threads](scheduling-threads.md) and the <xref:System.Threading.ThreadPriority> reference.</span></span>|  
+|<xref:System.Threading.Thread.ThreadState%2A>|<span data-ttu-id="40f35-138">スレッドの現在の状態を示す <xref:System.Threading.ThreadState> 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="40f35-138">Gets a <xref:System.Threading.ThreadState> value containing the current states of a thread.</span></span>|  
+
+## <a name="see-also"></a><span data-ttu-id="40f35-139">関連項目</span><span class="sxs-lookup"><span data-stu-id="40f35-139">See also</span></span>
+
+ <xref:System.Threading.Thread?displayProperty=nameWithType>  
+ [<span data-ttu-id="40f35-140">スレッドおよびスレッド処理</span><span class="sxs-lookup"><span data-stu-id="40f35-140">Threads and Threading</span></span>](threads-and-threading.md)  
+ [<span data-ttu-id="40f35-141">並列プログラミング</span><span class="sxs-lookup"><span data-stu-id="40f35-141">Parallel Programming</span></span>](../parallel-programming/index.md)  

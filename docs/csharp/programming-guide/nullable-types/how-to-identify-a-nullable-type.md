@@ -1,51 +1,39 @@
 ---
 title: '方法: Null 許容型を識別する (C# プログラミング ガイド)'
-ms.date: 07/20/2015
+description: 型が Null 許容型か、インスタンスが Null 許容型であるかどうかを判断する方法について学習します。
+ms.date: 08/06/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: f3ac4ebd77fc92a133eb326919d5ba55264ced97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb7ab2b8c13c2b8b4b6cd60e7959a391cd7e75c1
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333184"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754957"
 ---
-# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a><span data-ttu-id="efea7-102">方法: Null 許容型を識別する (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="efea7-102">How to: Identify a Nullable Type (C# Programming Guide)</span></span>
-<span data-ttu-id="efea7-103">C# の [typeof](../../../csharp/language-reference/keywords/typeof.md) 演算子を使用して、Null 許容型を表す <xref:System.Type> オブジェクトを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="efea7-103">You can use the C# [typeof](../../../csharp/language-reference/keywords/typeof.md) operator to create a <xref:System.Type> object that represents a Nullable type:</span></span>  
+# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a><span data-ttu-id="418f1-103">方法: Null 許容型を識別する (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="418f1-103">How to: Identify a nullable type (C# Programming Guide)</span></span>
+
+<span data-ttu-id="418f1-104">次の例では、<xref:System.Type?displayProperty=nameWithType> インスタンスが Null 許容型を表しているかどうかを判別する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="418f1-104">The following example shows how to determine whether a <xref:System.Type?displayProperty=nameWithType> instance represents a nullable type:</span></span>
+
+[!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
+
+<span data-ttu-id="418f1-105">例で示されているとおり、<xref:System.Type?displayProperty=nameWithType> オブジェクトの作成には、[typeof](../../language-reference/keywords/typeof.md) 演算子を使用します。</span><span class="sxs-lookup"><span data-stu-id="418f1-105">As the example shows, you use the [typeof](../../language-reference/keywords/typeof.md) operator to create a <xref:System.Type?displayProperty=nameWithType> object.</span></span>  
   
-```  
-System.Type type = typeof(int?);  
-```  
+<span data-ttu-id="418f1-106">インスタンスが Null 許容型かどうかを判断したい場合は、<xref:System.Type> インスタンスが前述のコードでテストされるように、<xref:System.Object.GetType%2A?displayProperty=nameWithType> メソッドは使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="418f1-106">If you want to determine whether an instance is of a nullable type, don't use the <xref:System.Object.GetType%2A?displayProperty=nameWithType> method to get a <xref:System.Type> instance to be tested with the preceding code.</span></span> <span data-ttu-id="418f1-107">Null 許容型のインスタンスで <xref:System.Object.GetType%2A?displayProperty=nameWithType> メソッドを呼び出した場合、そのインスタンスは <xref:System.Object> に[ボクシング](using-nullable-types.md#boxing-and-unboxing)されます。</span><span class="sxs-lookup"><span data-stu-id="418f1-107">When you call the <xref:System.Object.GetType%2A?displayProperty=nameWithType> method on an instance of a nullable type, the instance is [boxed](using-nullable-types.md#boxing-and-unboxing) to <xref:System.Object>.</span></span> <span data-ttu-id="418f1-108">Null 許容型の null 以外のインスタンスのボクシングは、基になる型の値のボクシングと等しいので、<xref:System.Object.GetType%2A> は、Null 許容型の基になる型を表す <xref:System.Type> オブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="418f1-108">As boxing of a non-null instance of a nullable type is equivalent to boxing of a value of the underlying type, <xref:System.Object.GetType%2A> returns a <xref:System.Type> object that represents the underlying type of a nullable type:</span></span>
+
+[!code-csharp-interactive[GetType example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#2)]
+
+<span data-ttu-id="418f1-109">インスタンスが Null 許容型であるかどうかの判断には、[is](../../language-reference/keywords/is.md) 演算子は使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="418f1-109">Don't use the [is](../../language-reference/keywords/is.md) operator to determine whether an instance is of a nullable type.</span></span> <span data-ttu-id="418f1-110">次の例のとおり、`is` 演算子の使用では、Null 許容型のインスタンスの型とその基になる型は判別できません。</span><span class="sxs-lookup"><span data-stu-id="418f1-110">As the following example shows, you cannot distinguish types of instances of a nullable type and its underlying type with using the `is` operator:</span></span>
+
+[!code-csharp-interactive[is operator example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#3)]
+
+<span data-ttu-id="418f1-111">次の例のコードを使用すると、インスタンスが Null 許容型であるかどうかを判別することができます。</span><span class="sxs-lookup"><span data-stu-id="418f1-111">You can use the code presented in the following example to determine whether an instance is of a nullable type:</span></span>
+
+[!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
- <span data-ttu-id="efea7-104"><xref:System.Reflection> 名前空間のクラスおよびメソッドを使用して、Null 許容型を表す <xref:System.Type> オブジェクトを作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="efea7-104">You can also use the classes and methods of the <xref:System.Reflection> namespace to generate <xref:System.Type> objects that represent Nullable types.</span></span> <span data-ttu-id="efea7-105">ただし、実行時に <xref:System.Object.GetType%2A> メソッドまたは `is` 演算子を使用して Null 許容型の変数から型情報を取得しようとすると、Null 許容型自体ではなく、基になる型を表す <xref:System.Type> オブジェクトが作成されます。</span><span class="sxs-lookup"><span data-stu-id="efea7-105">However, if you try to obtain type information from Nullable variables at runtime by using the <xref:System.Object.GetType%2A> method or the `is` operator, the result is a <xref:System.Type> object that represents the underlying type, not the Nullable type itself.</span></span>  
-  
- <span data-ttu-id="efea7-106">Null 許容型に対して `GetType` を呼び出すと、型が暗黙的に <xref:System.Object> に変換されるときに、ボックス化操作が実行されます。</span><span class="sxs-lookup"><span data-stu-id="efea7-106">Calling `GetType` on a Nullable type causes a boxing operation to be performed when the type is implicitly converted to <xref:System.Object>.</span></span> <span data-ttu-id="efea7-107">そのため、<xref:System.Object.GetType%2A> は常に、Null 許容型ではなく、基になる型を表す <xref:System.Type> オブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="efea7-107">Therefore <xref:System.Object.GetType%2A> always returns a <xref:System.Type> object that represents the underlying type, not the Nullable type.</span></span>  
-  
-```  
-int? i = 5;  
-Type t = i.GetType();  
-Console.WriteLine(t.FullName); //"System.Int32"  
-```  
-  
- <span data-ttu-id="efea7-108">C# の [is](../../../csharp/language-reference/keywords/is.md) 演算子も Null 許容型の基になる型に作用します。</span><span class="sxs-lookup"><span data-stu-id="efea7-108">The C# [is](../../../csharp/language-reference/keywords/is.md) operator also operates on a Nullable's underlying type.</span></span> <span data-ttu-id="efea7-109">そのため、変数が Null 許容型であるかどうかを判別する際に `is` を使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="efea7-109">Therefore you cannot use `is` to determine whether a variable is a Nullable type.</span></span> <span data-ttu-id="efea7-110">次の例は、`is` 演算子が Nullable\<int> 変数を int として処理することを示しています。</span><span class="sxs-lookup"><span data-stu-id="efea7-110">The following example shows that the `is` operator treats a Nullable\<int> variable as an int.</span></span>  
-  
-```  
-static void Main(string[] args)  
-{  
-  int? i = 5;  
-  if (i is int) // true  
-    //…  
-}  
-```  
-  
-## <a name="example"></a><span data-ttu-id="efea7-111">例</span><span class="sxs-lookup"><span data-stu-id="efea7-111">Example</span></span>  
- <span data-ttu-id="efea7-112">次のコードを使用して、<xref:System.Type> オブジェクトが Null 許容型を表しているかどうかを判別します。</span><span class="sxs-lookup"><span data-stu-id="efea7-112">Use the following code to determine whether a <xref:System.Type> object represents a Nullable type.</span></span> <span data-ttu-id="efea7-113">このトピックで前述したように、`Type` オブジェクトが <xref:System.Object.GetType%2A> の呼び出しから返された場合、このコードは常に false を返します。</span><span class="sxs-lookup"><span data-stu-id="efea7-113">Remember that this code always returns false if the `Type` object was returned from a call to <xref:System.Object.GetType%2A>, as explained earlier in this topic.</span></span>  
-  
-```  
-if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>)) {…}  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="efea7-114">参照</span><span class="sxs-lookup"><span data-stu-id="efea7-114">See Also</span></span>  
- [<span data-ttu-id="efea7-115">Null 許容型</span><span class="sxs-lookup"><span data-stu-id="efea7-115">Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/index.md)  
- [<span data-ttu-id="efea7-116">Null 許容型のボックス化</span><span class="sxs-lookup"><span data-stu-id="efea7-116">Boxing Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)
+## <a name="see-also"></a><span data-ttu-id="418f1-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="418f1-112">See also</span></span>
+
+[<span data-ttu-id="418f1-113">Null 許容型</span><span class="sxs-lookup"><span data-stu-id="418f1-113">Nullable types</span></span>](index.md)  
+[<span data-ttu-id="418f1-114">Null 許容型の使用</span><span class="sxs-lookup"><span data-stu-id="418f1-114">Using nullable types</span></span>](using-nullable-types.md)  
+<xref:System.Nullable.GetUnderlyingType%2A>  
