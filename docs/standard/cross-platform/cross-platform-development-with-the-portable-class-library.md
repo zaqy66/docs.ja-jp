@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 628c571ce645710482a29c813adb4fe1a59fd349
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933704"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400183"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>汎用性のあるクラス ライブラリを使用したプラットフォーム間の開発
 Visual Studio の .NET Framework ポータブル クラス ライブラリ プロジェクト タイプにより、Microsoft プラットフォームを対象としたクロスプラットフォーム アプリとライブラリをすばやく簡単に開発できます。  
@@ -25,7 +25,7 @@ Visual Studio の .NET Framework ポータブル クラス ライブラリ プ�
   
  Visual Studio でポータブル クラス ライブラリ プロジェクトを作成し、プロジェクトの開発を開始した後でも、ターゲット プラットフォームを変更できます。 Visual Studio は新しいアセンブリを使用してライブラリをコンパイルするので、コードに対して行う必要がある変更を確認できます。  
   
- この記事では、Visual Studio でのアプリの開発について説明します。しかし、Microsoft は、Xamarin などのほかのツールを使用してアプリとライブラリを開発するときに使用できるポータブル クラス ライブラリ参照アセンブリも提供します。 このようなアプリとライブラリは、Microsoft 以外のプラットフォーム上で .NET Framework ベースのランタイムで使用できます。 参照アセンブリの詳細については、ブログ記事を参照してください。[ポータブル クラス ライブラリ (PCL) すべてのプラットフォームで利用可能](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx)します。 アセンブリをダウンロードするを参照してください。 [Microsoft .NET ポータブル ライブラリ参照アセンブリ](http://www.microsoft.com/download/details.aspx?id=40727)、Microsoft ダウンロード センター。 Xamarin を使用したアセンブリを使用する方法の詳細については、ブログ記事を参照してください。 [PCL および .NET NuGet ライブラリが Xamarin のようになりました](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx)します。  
+ この記事では、Visual Studio でのアプリの開発について説明します。しかし、Microsoft は、Xamarin などのほかのツールを使用してアプリとライブラリを開発するときに使用できるポータブル クラス ライブラリ参照アセンブリも提供します。 このようなアプリとライブラリは、Microsoft 以外のプラットフォーム上で .NET Framework ベースのランタイムで使用できます。 参照アセンブリの詳細については、ブログ記事を参照してください。[ポータブル クラス ライブラリ (PCL) すべてのプラットフォームで利用可能](https://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx)します。 アセンブリをダウンロードするを参照してください。 [Microsoft .NET ポータブル ライブラリ参照アセンブリ](https://www.microsoft.com/download/details.aspx?id=40727)、Microsoft ダウンロード センター。 Xamarin を使用したアセンブリを使用する方法の詳細については、ブログ記事を参照してください。 [PCL および .NET NuGet ライブラリが Xamarin のようになりました](https://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx)します。  
   
  Visual Studio には、ポータブル クラス ライブラリの開発に役立つテンプレートがあります。 使用している Visual Studio のバージョンによっては、使用可能なテンプレートやメニューはこの記事で説明するものとは異なることがあります。  
   
@@ -110,7 +110,7 @@ Visual Studio 2013 更新プログラム 2 のポータブル クラス ライ�
   
  ターゲットを変更すると、変更後のターゲットに合わせて、プロジェクトの開発に使用できる API が変更されます。 Visual Studio は、ターゲットを変更したことで発生する可能性があるエラーと警告を報告します。  
   
- Visual Studio で変更を加える前に、アセンブリの移植性を評価する場合は、使用することができます、 [.NET Portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)します。  
+ Visual Studio で変更を加える前に、アセンブリの移植性を評価する場合は、使用することができます、 [.NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)します。  
   
  メニュー オプションは、ご使用の Visual Studio のバージョンによって異なります。  
   
@@ -224,6 +224,6 @@ Visual Studio 2012 の [ターゲットの変更] ダイアログ ボックス
 ## <a name="see-also"></a>関連項目  
  [MVVM を利用した汎用性のあるクラス ライブラリの使用](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
  [複数のプラットフォームを対象とするライブラリのアプリケーション リソース](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
- [.NET portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+ [.NET portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [配置](../../../docs/framework/deployment/net-framework-applications.md)
