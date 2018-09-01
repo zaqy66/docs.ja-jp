@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
 manager: douge
-ms.openlocfilehash: af6e4bf7697b3139f6809295737fdd0d90b7f013
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7fb148b96d5ff9804bcb0bb7c842c475c0f117
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512269"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385982"
 ---
 # <a name="developing-windows-service-applications"></a>Windows サービス アプリケーションの開発
 Microsoft Visual Studio または Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK を使用すると、サービスとしてインストールするアプリケーションを作成することで簡単に作成できます。 この種類のアプリケーションは、Windows サービスと呼ばれます。 フレームワーク機能を使用することで、サービスを作成、インストール、開始、停止したり、動作を制御したりできます。  
@@ -48,5 +48,5 @@ Microsoft Visual Studio または Microsoft [!INCLUDE[dnprdnshort](../../../incl
  <xref:System.ServiceProcess.ServiceInstaller>  
  <xref:System.ServiceProcess.ServiceProcessInstaller> クラスと共に使用して、サービスをインストール/アンインストールする <xref:System.ServiceProcess.ServiceInstaller> クラスの機能について説明します。  
   
- [NIB テンプレートからのプロジェクトの作成](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ [NIB テンプレートからのプロジェクトの作成](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
  この章で使用されるプロジェクトの種類と、それを選択する際に役立つガイドラインを説明します。

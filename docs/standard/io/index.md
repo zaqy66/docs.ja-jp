@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7aacb6ca64a8b45a9b54b3f9d8785c7c61a07e09
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254313"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394335"
 ---
 # <a name="file-and-stream-io"></a>ファイルおよびストリーム入出力
 ファイルおよびストリーム I/O (入出力) とは、ストレージ メディアとの間のデータの転送を指します。 .NET Framework では、`System.IO` 名前空間に、データ ストリームおよびファイルで同期的および非同期的に読み取りと書き込みを有効にする型が用意されています。 これらの名前空間には、ファイルを圧縮および圧縮解除する型、パイプとシリアル ポート経由の通信を有効にする型もあります。  
@@ -137,13 +137,13 @@ ms.locfileid: "43254313"
   
  次に、I/O 操作を [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリで使用する場合に注意する必要がある重要な違いを示します。  
   
--   <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> など、特にファイル操作に関連する型は、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] に含まれていません。 代わりに、[StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx)、[StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx) など、[!INCLUDE[wrt](../../../includes/wrt-md.md)] の [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 名前空間の型を使用します。  
+-   <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> など、特にファイル操作に関連する型は、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] に含まれていません。 代わりに、[StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx)、[StorageFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx) など、[!INCLUDE[wrt](../../../includes/wrt-md.md)] の [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 名前空間の型を使用します。  
   
 -   分離ストレージは使用できません。代わりに、[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))を使用します。  
   
 -   UI スレッドをブロックしないように、<xref:System.IO.Stream.ReadAsync%2A>、<xref:System.IO.Stream.WriteAsync%2A> などの非同期メソッドを使用します。  
   
--   パス ベース圧縮の型 <xref:System.IO.Compression.ZipFile> と <xref:System.IO.Compression.ZipFileExtensions> は使用できません。 代わりに、[Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) 名前空間の型を使用します。  
+-   パス ベース圧縮の型 <xref:System.IO.Compression.ZipFile> と <xref:System.IO.Compression.ZipFileExtensions> は使用できません。 代わりに、[Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) 名前空間の型を使用します。  
   
  必要に応じて、.NET Framework ストリームと Windows ランタイム ストリームを変換できます。 詳細については、「[方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)」または「[System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx)」を参照してください。 <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   

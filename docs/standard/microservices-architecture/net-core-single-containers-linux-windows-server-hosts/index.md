@@ -4,12 +4,12 @@ description: コンテナー化 .NET アプリケーションの .NET マイク�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 56c41a51cddeca6c74b09710f9536195a6a88904
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404500"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388629"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Linux または Windows Nano Server ホスト上で 1 つのコンテナー ベースの NET Core Web アプリケーションを展開する
 
@@ -41,7 +41,7 @@ eShopOnContainers の大幅に簡略化したバージョン (名前付き [eSho
 
 アプリケーションは、カタログ ストレージのために SQL Server データベースを使用します。 コンテナー ベースの展開では、このモノリシックなアプリケーションはマイクロサービス ベースのアプリケーションと同じデータ ストアにアクセスできます。 アプリケーションはモノリシック アプリケーションと共にコンテナー内で SQL Server を実行するように構成されます。 実稼働環境では、SQL Server は、Docker ホストの外部の高可用性コンピューターで実行されます。 開発またはテスト環境の利便性のために、独自のコンテナーで SQL Server を実行することをお勧めします。
 
-初期機能セットは、カタログの参照のみを有効にします。 更新プログラムは、コンテナー化アプリケーションの完全な機能セットを有効にします。 より高度なモノリシック Web アプリケーション アーキテクチャについては、「[ASP.NET Web Application architecture practices](https://aka.ms/webappebook)」(ASP.NET Web アプリケーション アーキテクチャのプラクティス) の電子書籍と、関連する [eShopOnWeb サンプル アプリケーション](http://aka.ms/WebAppArchitecture)で説明しています。
+初期機能セットは、カタログの参照のみを有効にします。 更新プログラムは、コンテナー化アプリケーションの完全な機能セットを有効にします。 より高度なモノリシック Web アプリケーション アーキテクチャについては、「[ASP.NET Web Application architecture practices](https://aka.ms/webappebook)」(ASP.NET Web アプリケーション アーキテクチャのプラクティス) の電子書籍と、関連する [eShopOnWeb サンプル アプリケーション](https://aka.ms/WebAppArchitecture)で説明しています。
 
 ## <a name="docker-support"></a>Docker のサポート
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4034a23b076bc0f3041f09dc4756646a926d6915
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314686"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332521"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
 .NET Framework ツールを使用すると、.NET Framework に対応したアプリケーションやコンポーネントを簡単に作成、配置、および管理できます。  
@@ -78,13 +78,13 @@ ms.locfileid: "36314686"
  .NET Framework 共通言語ランタイムを対象としたプログラムに含まれるバグの発見と修正について、ツールの販売元とアプリケーション開発者を支援するツールです。 このツールは、ランタイムのデバッグ API を使用してデバッグ サービスを提供します。  
   
  [Mgmtclassgen.exe (厳密型クラス ジェネレーター)](../../../docs/framework/tools/mgmtclassgen-exe.md)  
- 指定した WMI (Windows Management Instrumentation) クラスに対して、事前バインディングされたマネージ クラスを生成できます。  
+ 指定した WMI (Windows Management Instrumentation) クラスに対して、事前バインディングされたマネージド クラスを生成できます。  
   
- [Mpgo.exe (マネージ プロファイル ガイド付き最適化ツール)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)  
+ [Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)  
  一般的なエンド ユーザーのシナリオを使用してネイティブ イメージのアセンブリを調整できるようにします。 Mpgo.exe により、アプリケーション開発者によって選択されたトレーニング シナリオを使用したネイティブ イメージ アプリケーション アセンブリ (.NET Framework アセンブリではない) のプロファイル データの生成と消費が可能になります。  
   
  [Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- ネイティブ イメージ (コンパイルされたプロセッサ固有のマシン語コードを格納しているファイル) を使用することで、マネージ アプリケーションのパフォーマンスを改善します。 ランタイムは、Just-In-Time (JIT) コンパイラを使用してオリジナルのアセンブリをコンパイルする代わりに、キャッシュにあるネイティブ イメージを使用できます。  
+ ネイティブ イメージ (コンパイルされたプロセッサ固有のマシン語コードを格納しているファイル) を使用することで、マネージド アプリケーションのパフォーマンスを改善します。 ランタイムは、Just-In-Time (JIT) コンパイラを使用してオリジナルのアセンブリをコンパイルする代わりに、キャッシュにあるネイティブ イメージを使用できます。  
   
  [Peverify.exe (PEVerify ツール)](../../../docs/framework/tools/peverify-exe-peverify-tool.md)  
  Microsoft Intermediate Language (MSIL) コードと関連メタデータがタイプ セーフ要件を満たしているかどうかを検証する場合に役立ちます。 Microsoft Intermediate Language (MSIL) コードと関連メタデータがタイプ セーフ要件を満たしているかどうかを検証する場合に役立ちます。  
@@ -108,7 +108,7 @@ ms.locfileid: "36314686"
  厳密な名前を持つアセンブリを作成するときに役立ちます。 このツールには、キーの管理、署名の生成、署名の検査に関する各オプションが用意されています。  
   
  [SOS.dll (SOS デバッガー拡張)](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)  
- 内部の共通言語ランタイム環境に関する情報を提供して、WinDbg.exe デバッガーおよび Visual Studio におけるマネージ プログラムのデバッグを支援します。  
+ 内部の共通言語ランタイム環境に関する情報を提供して、WinDbg.exe デバッガーおよび Visual Studio におけるマネージド プログラムのデバッグを支援します。  
   
  [SqlMetal.exe (コード生成ツール)](../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
  .NET Framework の LINQ to SQL コンポーネント用のコードとマッピングを生成します。  
@@ -129,7 +129,7 @@ ms.locfileid: "36314686"
  Windows フォームで使用されるユーザー インターフェイス (UI) リソース (.resx ファイルまたは .resources ファイル) のローカライズを支援します。 文字列を翻訳した後、ローカライズされた文字列に合わせて、コントロールのサイズを変更したり、コントロールを移動したり、非表示にしたりできます。  
   
 ## <a name="related-sections"></a>関連項目  
- [ツール](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ [ツール](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
  isXPS 適合性ツール (isXPS.exe) およびパフォーマンス プロファイリング ツールなどのツールを含みます。  
   
  [Windows Communication Foundation ツール](../../../docs/framework/wcf/tools.md)  

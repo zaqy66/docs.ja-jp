@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999564"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421198"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -21,7 +21,7 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [メソッドに構造体を渡す場合とクラスを渡す場合の違いについて理解する](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
 - [ラムダ式の使用方法](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)。
 - [グローバル名前空間のエイリアスを使用して型名の競合を解決する](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。
-- [演算子のオーバーロードを使用する](../programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md)。
+- [演算子のオーバーロードを使用する](../language-reference/keywords/operator.md)。
 - [カスタム拡張メソッドを実装して呼び出す](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
 - C# のプログラマでも[ VB の `My` 名前空間を使用できる場合がある](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [拡張メソッドを使用して `enum` 型の新しいメソッドを作成する](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
@@ -33,8 +33,7 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [自動的に実装されたプロパティを宣言する](../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)。
 - [読み取り/書き込みのプロパティを宣言して使用する](../programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md)。
 - [定数を定義する](../programming-guide/classes-and-structs/how-to-define-constants.md)。
-- 
-  [文字列出力を提供するために `ToString` メソッドをオーバーライドする](../programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)。
+- [文字列出力を提供するために `ToString` メソッドをオーバーライドする](../programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)。
 - [抽象プロパティを定義する](../programming-guide/classes-and-structs/how-to-define-abstract-properties.md)。
 - [XML ドキュメント機能を使用してコードを文書化する](../programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)。
 - [インターフェイス メンバーを明示的に実装して](../programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)パブリック インターフェイスを簡潔に保つ。

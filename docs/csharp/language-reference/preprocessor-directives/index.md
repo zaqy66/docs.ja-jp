@@ -7,12 +7,12 @@ helpviewer_keywords:
 - preprocessor directives [C#]
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 63a7bdb6d36794e0380ca84443926338fe926e4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279920"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422002"
 ---
 # <a name="c-preprocessor-directives"></a>C# プリプロセッサ ディレクティブ
 このセクションでは、次の C# プリプロセッサ ディレクティブについて説明します。
@@ -39,5 +39,6 @@ ms.locfileid: "33279920"
 プリプロセッサ ディレクティブは、行の唯一の命令である必要があります。
 
 ## <a name="see-also"></a>関連項目
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)

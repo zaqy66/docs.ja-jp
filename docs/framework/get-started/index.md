@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07b19c062d314fe3280d9ebed818b484ff9d1b13
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: aef77e6f2ec572ec0969166770aaf617cc933d67
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314751"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387774"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework の概要
 
@@ -25,7 +25,7 @@ ms.locfileid: "36314751"
 <a name="Introducing"></a>
 ## <a name="what-is-the-net-framework"></a>.NET Framework とは
 
-.NET Framework は、実行中のアプリにさまざまなサービスを提供する、Windows 向けのマネージ実行環境です。 これは、実行中のアプリを処理する実行エンジンである共通言語ランタイム (CLR) と、開発者が独自のアプリから呼び出すことができる検証済みの再利用可能なコード ライブラリである .NET Framework クラス ライブラリから構成されています。 .NET Framework は実行中のアプリに次のようなサービスを提供します。
+.NET Framework は、実行中のアプリにさまざまなサービスを提供する、Windows 向けのマネージド実行環境です。 これは、実行中のアプリを処理する実行エンジンである共通言語ランタイム (CLR) と、開発者が独自のアプリから呼び出すことができる検証済みの再利用可能なコード ライブラリである .NET Framework クラス ライブラリから構成されています。 .NET Framework は実行中のアプリに次のようなサービスを提供します。
 
 - メモリ管理 多くのプログラミング言語では、プログラマがメモリの割り当てと解放およびオブジェクトの有効期間の処理を行う必要があります。 .NET Framework アプリでは、CLR がアプリに代わってこのサービスを提供します。
 
@@ -69,7 +69,7 @@ Windows 8 よりも前の Windows バージョンで .NET Framework を削除す
 
 1. オペレーティング システムにプレインストールされていない場合は、アプリが対象とする .NET Framework のバージョンをインストールします。 最新の製品バージョンである .NET Framework 4.7.2 は Windows 10 April 2018 Update にプレインストールされていますが、以前のバージョンの Windows オペレーティング システムでも使用できます。 .NET Framework システム要件については、「[.NET Framework システム要件](../../../docs/framework/get-started/system-requirements.md)」を参照してください。 その他のバージョンの .NET Framework のインストールの詳細については、[インストール ガイド](../../../docs/framework/install/guide-for-developers.md)に関するページを参照してください。 .NET Framework の追加パッケージは、アウト オブ バンドでリリースされます。これは、通常のリリース サイクルや定期的なリリース サイクルではなく、ローリング方式でリリースされるということを意味します。 これらのパッケージの詳細については、「[.NET Framework および特別なリリース](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)」を参照してください。
 
-2. .NET Framework でサポートされている、アプリ開発に使用する言語を選択します。 Microsoft の [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md)、および C++ と CLI を含む多くの言語から選択できます。 (.NET Framework のアプリを開発できるプログラミング言語は、[共通言語基盤 (CLI) 仕様](http://go.microsoft.com/fwlink/?LinkId=199862)に準拠します)。
+2. .NET Framework でサポートされている、アプリ開発に使用する言語を選択します。 Microsoft の [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md)、および C++ と CLI を含む多くの言語から選択できます。 (.NET Framework のアプリを開発できるプログラミング言語は、[共通言語基盤 (CLI) 仕様](https://go.microsoft.com/fwlink/?LinkId=199862)に準拠します)。
 
 3. アプリの作成に使用する、選択したプログラミング言語をサポートする開発環境を選択してインストールします。 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) は、.NET Framework アプリ用の Microsoft 統合開発環境 (IDE) です。 これには、いくつかエディションがあります。
 

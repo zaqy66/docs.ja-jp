@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2686d0db966192606656167d6e505f34ded333f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f38ed31748560292753789e38595a5e30f6ea08a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396530"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404609"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework およびアプリケーションの配置
 ここでは、アプリケーションと共に .NET Framework を配置する方法についての概要を示します。 情報のほとんどは、開発者、OEM、およびエンタープライズ管理者を対象としています。 コンピュータに .NET Framework をインストールするユーザーは、「[.NET Framework のインストール](~/docs/framework/install/index.md)」をご覧ください。  
@@ -58,13 +58,13 @@ ms.locfileid: "33396530"
   
 -   .NET Framework の配置 (OEM と管理者向け):  
   
-    -   [Windows アセスメント & デプロイメント キット (ADK)](http://go.microsoft.com/fwlink/p/?LinkId=254976)  
+    -   [Windows アセスメント & デプロイメント キット (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)  
   
     -   [管理者ガイド](../../../docs/framework/deployment/guide-for-administrators.md)  
   
  **サービス**  
   
--   一般的な情報については、「[.NET Framework blog (.NET Framework ブログ)](http://go.microsoft.com/fwlink/p/?LinkId=254977)」をご覧ください  
+-   一般的な情報については、「[.NET Framework blog (.NET Framework ブログ)](https://go.microsoft.com/fwlink/p/?LinkId=254977)」をご覧ください  
   
 -   [バージョンの検出](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "33396530"
 ### <a name="installation-location"></a>インストール場所  
  ランタイムがアプリケーションのアセンブリを検索できるようなアセンブリの配置先については、「[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)」をご覧ください。  
   
- アプリケーションの配置方法には、セキュリティの考慮事項も関係します。 コードが存在する場所に基づいて、マネージ コードにセキュリティ アクセス許可が付与されます。 インターネットなど、信頼度の低い場所にアプリケーションやコンポーネントを配置すると、そのアプリケーションやコンポーネントが実行できることは制限されます。 配置とセキュリティ上の考慮事項については、「[コード アクセス セキュリティの基礎](../../../docs/framework/misc/code-access-security-basics.md)」をご覧ください。  
+ アプリケーションの配置方法には、セキュリティの考慮事項も関係します。 コードが存在する場所に基づいて、マネージド コードにセキュリティ アクセス許可が付与されます。 インターネットなど、信頼度の低い場所にアプリケーションやコンポーネントを配置すると、そのアプリケーションやコンポーネントが実行できることは制限されます。 配置とセキュリティ上の考慮事項については、「[コード アクセス セキュリティの基礎](../../../docs/framework/misc/code-access-security-basics.md)」をご覧ください。  
   
 ## <a name="related-topics"></a>関連トピック  
   

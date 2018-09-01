@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f950779514975a3ee76af76506c7579e046537f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 323dfe7d68f5a6f6274ce23f82e25a337956b23c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393186"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386429"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF (Managed Extensibility Framework)
 ここでは、.NET Framework 4 で導入された Managed Extensibility Framework の概要を説明します。  
@@ -62,7 +62,7 @@ ms.locfileid: "33393186"
 ## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: サンプル アプリケーション  
  MEF が実行できる処理を理解する最も簡単な方法は、単純な MEF アプリケーションを作成することです。 この例では、SimpleCalculator という名前の単純な電卓を作成します。 SimpleCalculator の目的は、"5+3" や "6-2" などの形式で基本的な算術命令を受け取り、正しい答えを返すコンソール アプリケーションを作成することです。 MEF を使用すると、アプリケーション コードを変更せずに、新しい演算子を追加できます。  
   
- この例の完成したコードをダウンロードするには、[SimpleCalculator のサンプル](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)をご覧ください。  
+ この例の完成したコードをダウンロードするには、[SimpleCalculator のサンプル](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)をご覧ください。  
   
 > [!NOTE]
 >  SimpleCalculator を作成する目的は、これを使用する実際のシナリオを必ずしも提供することではなく、MEF の概念と構文を示すことにあります。 MEF の機能を最大限に活用できるアプリケーションの多くは、SimpleCalculator よりも複雑です。 その他のサンプルについては、GitHub の「[Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef)」をご覧ください。
@@ -471,6 +471,6 @@ public class Mod : SimpleCalculator.IOperation
   
 <a name="where_do_i_go_now"></a>   
 ## <a name="where-do-i-go-now"></a>次のステップ  
- この例の完成したコードをダウンロードするには、[SimpleCalculator のサンプル](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)をご覧ください。  
+ この例の完成したコードをダウンロードするには、[SimpleCalculator のサンプル](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)をご覧ください。  
   
- 詳しい情報とコード例については、「[Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282)」をご覧ください。 MEF 型の一覧については、<xref:System.ComponentModel.Composition?displayProperty=nameWithType> 名前空間を参照してください。
+ 詳しい情報とコード例については、「[Managed Extensibility Framework](https://go.microsoft.com/fwlink/?LinkId=144282)」をご覧ください。 MEF 型の一覧については、<xref:System.ComponentModel.Composition?displayProperty=nameWithType> 名前空間を参照してください。
