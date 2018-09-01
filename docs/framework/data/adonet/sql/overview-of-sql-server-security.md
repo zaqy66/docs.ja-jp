@@ -2,17 +2,17 @@
 title: SQL Server セキュリティの概要
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 84b6724417d03a30c131700e197744839d3a020d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25f9f96a550438d242ee409da0d09b7df06de33c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362235"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395803"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server セキュリティの概要
 セキュリティを幾重にも重ねて講じる多層防御は、セキュリティ上の脅威に対抗する最も有効な手段です。 SQL Server のセキュリティ アーキテクチャは、データベースの管理者および開発者が安全なデータベース アプリケーションを作成して脅威に対応できるように設計されています。 SQL Server は、前のバージョンに新しい機能を導入することによって絶えず進化してきました。 しかし、セキュリティを箱詰めして出荷することはできません。 アプリケーションには、それぞれ固有のセキュリティ要件があります。 開発者は、既知の脅威に対してどのような機能を組み合わせるのが最も効果的かを理解し、将来発生する可能性のある脅威を予測する必要があります。  
   
- SQL Server のインスタンスは、サーバーを頂点とする階層形式のエンティティのコレクションを持ちます。 各サーバーには複数のデータベースが存在し、各データベースには、セキュリティ保護可能なオブジェクトのコレクションが存在します。 セキュリティ保護可能なすべての SQL Server が関連付けられている*権限*に付与する、*プリンシパル*これは、個人、グループ、または SQL Server へのアクセス許可を処理します。 SQL Server のセキュリティ フレームワークを通じてセキュリティ保護可能なエンティティへのアクセスを管理する*認証*と*承認*です。  
+ SQL Server のインスタンスは、サーバーを頂点とする階層形式のエンティティのコレクションを持ちます。 各サーバーには複数のデータベースが存在し、各データベースには、セキュリティ保護可能なオブジェクトのコレクションが存在します。 セキュリティ保護可能なすべての SQL Server が関連付けられている*権限*に付与することができます、*プリンシパル*、これは、個々 のグループまたは SQL Server へのアクセス許可を処理します。 SQL Server のセキュリティ フレームワークをセキュリティ保護可能なエンティティへのアクセスを管理する*認証*と*承認*します。  
   
 -   認証は SQL Server にログオンするプロセスです。プリンシパルは、サーバーによって評価される資格情報を送信することによってアクセスを要求します。 認証対象となるユーザーまたはプロセスの ID は、認証によって確立されます。  
   
@@ -43,4 +43,4 @@ ms.locfileid: "33362235"
  [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server のセキュリティ](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

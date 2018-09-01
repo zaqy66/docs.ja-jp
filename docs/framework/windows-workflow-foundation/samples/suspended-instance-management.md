@@ -2,12 +2,12 @@
 title: 中断されたインスタンスの管理
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 8e8bb40b22633aa83b7a70ee94f37cefe48ba68e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f614770121185644c3395f923cf7835141653f55
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519224"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394601"
 ---
 # <a name="suspended-instance-management"></a>中断されたインスタンスの管理
 このサンプルでは、中断されているワークフロー インスタンスを管理する方法を示します。  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> の既定のアクションは `AbandonAndSuspend` です。 つまり、既定では、<xref:System.ServiceModel.WorkflowServiceHost> でホストされるワークフロー インスタンスからスローされた未処理の例外により、インスタンスがメモリから破棄され、インスタンスの永続バージョンが中断状態としてマークされることになります。 中断されたワークフロー インスタンスは、中断が解除されるまで実行できません。  
@@ -15,7 +15,7 @@ ms.locfileid: "33519224"
  このサンプルでは、コマンド ライン ユーティリティを実装して、中断されたインスタンスについてクエリを実行する方法、およびユーザーがインスタンスを再開または終了できるようにする方法を示します。 このサンプルでは、ワークフロー サービスから例外が意図的にスローされ、中断状態になります。 その後、コマンド ライン ユーティリティを使用してインスタンスについてクエリを実行し、さらに、インスタンスを再開または終了できます。  
   
 ## <a name="demonstrates"></a>使用例  
- <xref:System.ServiceModel.WorkflowServiceHost> <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>と<xref:System.ServiceModel.Activities.WorkflowControlEndpoint>の Windows Workflow Foundation (WF) です。  
+ <xref:System.ServiceModel.WorkflowServiceHost> <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>と<xref:System.ServiceModel.Activities.WorkflowControlEndpoint>Windows Workflow foundation (WF)。  
   
 ## <a name="discussion"></a>説明  
  このサンプルに実装されているコマンド ライン ユーティリティは、[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] に用意されている SQL インスタンス ストアの実装に固有のものです。 インスタンス ストアのカスタム実装がある場合は、サンプルの `WorkflowInstanceCommand` の実装を、使用しているインスタンス ストアに固有の実装に置き換えることで、このユーティリティを調整できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "33519224"
   
 2.  SQL Server データベースを設定します。  
   
-    1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]コマンド プロンプトで、次の処理、SuspendedInstanceManagement サンプル ディレクトリから"setup.cmd"を実行します。  
+    1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]コマンド プロンプトで、次は、SuspendedInstanceManagement サンプル ディレクトリから"setup.cmd"を実行します。  
   
         1.  SQL Server Express を使用して永続性データベースを作成します。 永続性データベースが既に存在する場合、データベースは削除され、再作成されます。  
   
@@ -42,23 +42,23 @@ ms.locfileid: "33519224"
   
 3.  サービス キューを設定します。  
   
-    1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]を右クリックし、 **SampleWorkflowApp**プロジェクトし、クリックして**スタートアップ プロジェクトとして設定**です。  
+    1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]を右クリックし、 **SampleWorkflowApp**プロジェクトし、クリックして**スタートアップ プロジェクトとして設定**します。  
   
-    2.  コンパイルしてキーを押して SampleWorkflowApp を実行する**f5 キーを押して**です。 これにより、必要なキューが作成されます。  
+    2.  コンパイルしてキーを押して SampleWorkflowApp を実行**F5**します。 これにより、必要なキューが作成されます。  
   
     3.  キーを押して**Enter** SampleWorkflowApp を停止します。  
   
     4.  コマンド プロンプトから Compmgmt.msc を実行して、[コンピューターの管理] コンソールを開きます。  
   
-    5.  展開**サービスとアプリケーション**、**メッセージ キュー**、**専用キュー**です。  
+    5.  展開**サービスとアプリケーション**、**メッセージ キュー**、**専用キュー**します。  
   
-    6.  右クリックして、 **ReceiveTx**キューし、選択**プロパティ**です。  
+    6.  右クリックして、 **ReceiveTx**キューし、選択**プロパティ**します。  
   
-    7.  選択、**セキュリティ**でき、タブ**Everyone**へのアクセス許可を持つ**メッセージの受信**、**メッセージのピーク**、および**メッセージを送信**です。  
+    7.  選択、**セキュリティ**でき、タブ**Everyone**へのアクセス許可を持つ**メッセージの受信**、**メッセージのピーク**、および**メッセージを送信**します。  
   
 4.  サンプルを実行します。  
   
-    1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]、デバッグなしでキーを押して、SampleWorkflowApp プロジェクトを再度実行**ctrl キーを押しながら f5 キーを押して**です。 2 つのエンドポイント アドレスがコンソール ウィンドウに出力されます。1 つはアプリケーション エンドポイントのアドレスで、もう 1 つは <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> のアドレスです。 その後、ワークフロー インスタンスが作成され、そのインスタンスの追跡レコードがコンソール ウィンドウに表示されます。 ワークフロー インスタンスから例外がスローされ、インスタンスは中断されて中止されます。  
+    1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]、キーを押してデバッグを行わず、SampleWorkflowApp プロジェクトを再度実行**Ctrl + F5**します。 2 つのエンドポイント アドレスがコンソール ウィンドウに出力されます。1 つはアプリケーション エンドポイントのアドレスで、もう 1 つは <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> のアドレスです。 その後、ワークフロー インスタンスが作成され、そのインスタンスの追跡レコードがコンソール ウィンドウに表示されます。 ワークフロー インスタンスから例外がスローされ、インスタンスは中断されて中止されます。  
   
     2.  次に、コマンド ライン ユーティリティを使用して、これらのインスタンスに対してさらに操作を実行できます。 コマンド ライン引数の構文は次のとおりです。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "33519224"
   
 1.  `vs2010` コマンド プロンプトから Compmgmt.msc を実行して、[コンピューターの管理] コンソールを開きます。  
   
-2.  展開**サービスとアプリケーション**、**メッセージ キュー**、**専用キュー**です。  
+2.  展開**サービスとアプリケーション**、**メッセージ キュー**、**専用キュー**します。  
   
 3.  削除、 **ReceiveTx**キュー。  
   
@@ -81,6 +81,6 @@ ms.locfileid: "33519224"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

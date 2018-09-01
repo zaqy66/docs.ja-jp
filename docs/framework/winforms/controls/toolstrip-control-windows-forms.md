@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
-ms.openlocfilehash: 49bf94959b2efb19ff6e3a273f4cd09905089b31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72ce238fdcbdcb81fc710a21d1675de67f4adc15
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540707"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393551"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip コントロール (Windows フォーム)
 <xref:System.Windows.Forms.ToolStrip> コントロールは、Windows フォーム アプリケーションでメニュー、コントロール、およびユーザー コントロールをホストするツール バーです。  
@@ -68,22 +68,22 @@ ms.locfileid: "33540707"
  <xref:System.Windows.Forms.ToolStrip> コントロールとメニューのマージをサポートする MDI フォームを作成する方法について説明します。  
   
  [方法: プロフェッショナル スタイルの ToolStrip コントロールを作成する](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)  
- 使用する方法について説明します、<xref:System.Windows.Forms.ToolStripProfessionalRenderer>を模倣した複合コントロールを作成するクラス、**ナビゲーション ウィンドウ**Microsoft® Outlook® によって提供されます。  
+ 使用する方法について説明します、<xref:System.Windows.Forms.ToolStripProfessionalRenderer>似た複合コントロールを作成するクラス、**ナビゲーション ウィンドウ**Microsoft® Outlook® で提供されます。  
   
  [方法: カスタムの ToolStripRenderer を実装する](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)  
  <xref:System.Windows.Forms.ToolStripRenderer> から派生するクラスを実装することによって、<xref:System.Windows.Forms.ToolStrip> コントロールの外観をカスタマイズする方法について説明します。  
   
--   [方法: デザイナーを使用して標準アイテムで基本的な Windows フォーム ToolStrip を作成します。](http://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
+-   [方法: デザイナーを使用して標準アイテムで基本的な Windows フォーム ToolStrip を作成します。](https://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
   
--   [方法: ToolStrip を ToolStripContainer からフォームに移動する](http://msdn.microsoft.com/library/ms171701\(v=vs.110\))  
+-   [方法: ToolStrip を ToolStripContainer からフォームに移動する](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [チュートリアル: プロフェッショナル スタイルの ToolStrip コントロールの作成](http://msdn.microsoft.com/library/ms233664\(v=vs.110\))  
+-   [チュートリアル: プロフェッショナル スタイルの ToolStrip コントロールの作成](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [チュートリアル: メニューのマージと ToolStrip コントロールのある MDI フォームを作成する](http://msdn.microsoft.com/library/ms233676\(v=vs.110\))  
+-   [チュートリアル: メニューのマージと ToolStrip コントロールのある MDI フォームを作成する](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
--   [[ToolStrip タスク] ダイアログ ボックス](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [[ToolStrip タスク] ダイアログ ボックス](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
   
--   [ToolStrip Items コレクション エディター](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [ToolStrip Items コレクション エディター](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.ToolStrip> クラス  

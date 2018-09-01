@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: 65e47bafda3e3e47241405c9c8b8e3b4b0055601
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 30b2c303b1823430c480f0706500f8f7e7053c4c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756606"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393107"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChange と RejectChange
-内のデータに加えられた変更の精度を確認した後、<xref:System.Data.DataTable>を使用して変更を受け入れることができます、<xref:System.Data.DataRow.AcceptChanges%2A>のメソッド、 <xref:System.Data.DataRow>、 <xref:System.Data.DataTable>、または<xref:System.Data.DataSet>、セットは、**現在**行値を**元**設定は、値を**RowState**プロパティを**Unchanged**です。 いずれかをクリアして承認または拒否する変更**RowError**情報と設定、 **HasErrors**プロパティを**false**です。 変更を受け入れるかまたは拒否した場合、データ ソース内で実行中の更新操作にも影響することがあります。 詳細については、次を参照してください。 [Dataadapter によるデータ ソースを更新](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)です。  
+内のデータに加えられた変更の精度を確認した後、<xref:System.Data.DataTable>を使用して変更を受け入れることができます、<xref:System.Data.DataRow.AcceptChanges%2A>のメソッド、 <xref:System.Data.DataRow>、 <xref:System.Data.DataTable>、または<xref:System.Data.DataSet>、これは、設定、**現在**行値を**元**値し、設定は、 **RowState**プロパティを**Unchanged**します。 いずれかをクリアして承認または変更を拒否する**RowError**情報と設定、 **HasErrors**プロパティを**false**します。 変更を受け入れるかまたは拒否した場合、データ ソース内で実行中の更新操作にも影響することがあります。 詳細については、次を参照してください。 [Dataadapter によるデータ ソースを更新](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)します。  
   
- 外部キー制約が存在しない場合、 **DataTable**、変更が受理されるかを使用して拒否された**AcceptChanges**と**RejectChanges** の子の行に反映されます**DataRow**によると、 **ForeignKeyConstraint.AcceptRejectRule**です。 詳細については、次を参照してください。 [DataTable の制約](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)です。  
+ 外部キー制約が存在しない場合、 **DataTable**、変更が承認されるかを使用して拒否された**AcceptChanges**と**RejectChanges** の子の行に反映されます**DataRow**に従い、 **ForeignKeyConstraint.AcceptRejectRule**します。 詳細については、次を参照してください。 [DataTable の制約](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)します。  
   
- 行にエラーがあるかどうかをチェックし、必要に応じてエラーを解決し、エラーを解決できない場合にはその行を拒否する例を次に示します。 解決エラー、メモ、 **RowError**値が空の文字列にリセット原因、 **HasErrors**設定するプロパティを**false**です。 エラーのあるすべての行が解決済みまたは拒否されると、ときに**AcceptChanges**全体のすべての変更を受け入れるために呼び出される**DataTable**です。  
+ 行にエラーがあるかどうかをチェックし、必要に応じてエラーを解決し、エラーを解決できない場合にはその行を拒否する例を次に示します。 解決、エラーのことに注意してください、 **RowError**値は空の文字列にリセット原因、 **HasErrors**プロパティを設定する**false**します。 エラーのあるすべての行が解決または拒否されたときに**AcceptChanges**全体のすべての変更を受け入れるために呼び出される**DataTable**します。  
   
 ```vb  
 If workTable.HasErrors Then  
@@ -61,4 +61,4 @@ workTable.AcceptChanges();
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataTable>  
  [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

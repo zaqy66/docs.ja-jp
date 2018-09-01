@@ -6,102 +6,102 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: fbe67e81bdc461e290b5cdbb9e1050aec32ce8fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 373478e8c21fca66cbfbf7a58fc7d53f65ce5d0b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566835"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396941"
 ---
 # <a name="xaml-services"></a>XAML サービス
-このトピックでは、サービスの .NET Framework XAML と呼ばれるテクノロジ一連の機能について説明します。 導入されたアセンブリである System.Xaml アセンブリに、ほとんどのサービスおよび説明する Api がある、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core アセンブリのセット。 サービスには、リーダーとライター、スキーマのクラスおよびスキーマのサポートは、ファクトリ クラス、XAML 言語の組み込みサポート、およびその他の XAML 言語機能の属性です。  
+このトピックでは、サービスの .NET Framework XAML と呼ばれるテクノロジ一連の機能について説明します。 サービスと記述された Api の大半がで導入された、System.Xaml アセンブリには、アセンブリ内にある、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core アセンブリのセット。 サービスには、リーダーとライターは、スキーマのクラスおよびスキーマのサポート、ファクトリ クラス、XAML 言語の組み込みサポート、およびその他の XAML 言語機能の属性を設定します。  
   
 ## <a name="about-this-documentation"></a>このドキュメントについて  
- .NET Framework XAML サービスの概念に関するドキュメントでは、XAML 言語とその可能性がありますに適用する方法、特定のフレームワークなどの経験があると想定[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Workflow Foundation または特定のテクノロジの機能領域で、たとえば、ビルドのカスタマイズの機能で<xref:Microsoft.Build.Framework.XamlTypes>です。 このドキュメントは、マークアップ言語、XAML 構文の用語、またはその他の入門資料として XAML の基礎を説明しません。 代わりに、このドキュメントは、具体的には、System.Xaml アセンブリ ライブラリで有効になっている .NET Framework XAML サービスの使用について説明します。 これらの Api のほとんどは、XAML 言語の統合および拡張機能のシナリオには。 次のいずれかがあります。  
+ .NET Framework XAML サービスの概念に関するドキュメントでは、XAML 言語とその可能性がありますに適用する方法、特定のフレームワークなどの経験があると想定[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Workflow Foundation、または特定のテクノロジの機能領域で、たとえば、ビルドのカスタマイズ機能<xref:Microsoft.Build.Framework.XamlTypes>します。 このドキュメントは、マークアップ言語、XAML 構文の用語、またはその他の入門資料として XAML の基本を説明しません。 代わりに、このドキュメントは、具体的には、System.Xaml アセンブリ ライブラリで有効になっている .NET Framework XAML サービスの使用に焦点を当てています。 これらの Api のほとんどは、XAML 言語の統合と拡張のシナリオです。 次のいずれかがあります。  
   
--   基本の XAML リーダーや XAML ライター (直接、XAML ノード ストリームを処理以外の場合は、独自の XAML リーダーや XAML ライターを派生) の機能を拡張します。  
+-   基本の XAML リーダーまたは XAML ライター (XAML ノード ストリームを直接処理は、独自の XAML リーダーまたは XAML ライターの派生) の機能を拡張します。  
   
--   特定のフレームワークの依存関係がない XAML 対応のカスタム型を定義して、XAML を伝えるために、型の属性は、.NET Framework XAML サービスのシステム特性を入力します。  
+-   特定のフレームワークの依存関係がない XAML 使用可能なカスタム型を定義して、XAML を伝達するために、型の属性を設定する .NET Framework XAML サービスのシステム特性を入力します。  
   
--   ビジュアル デザイナーの XAML マークアップのソースの対話型のエディターなど、アプリケーションのコンポーネントとしての XAML リーダーや XAML ライターをホストします。  
+-   ビジュアル デザイナーまたは対話型エディターの XAML マークアップ ソースなどのアプリケーションのコンポーネントとして、XAML リーダーまたは XAML ライターをホストします。  
   
--   XAML 値コンバーター (マークアップ拡張機能、カスタム型の型コンバーターの) を記述します。  
+-   XAML 値コンバーター (マークアップ拡張機能はカスタム型の型コンバーター) を記述します。  
   
--   カスタム XAML スキーマ コンテキストを定義する (バッキング型のソースの別のアセンブリの読み込みの手法を使用する以外の場合は常にではなく既知の型参照の手法を使用してアセンブリを反映した以外の場合は、CLR を使用して読み込まれたアセンブリの概念を使用して`AppDomain`と関連付けられているセキュリティ モデル)。  
+-   カスタム XAML スキーマ コンテキストを定義する (バッキング型のソースを別のアセンブリ読み込みの手法を使用して、アセンブリの反映; CLR を使用して読み込まれたアセンブリの概念を使用して既知の型参照の手法を使用して、常にではなく;`AppDomain`とその関連付けられているセキュリティ モデル)。  
   
 -   基本の XAML 型システムを拡張します。  
   
--   使用して、`Lookup`または`Invoker`に影響を与える、XAML の手法は、システムと型 backings の評価方法を入力します。  
+-   使用して、`Lookup`または`Invoker`XAML に影響するための手法は、システムと型 backings を評価する方法を入力します。  
   
- 言語としての XAML の入門資料を探してみてください[XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)です。 そのトピックについて説明します XAML は、新しいユーザー向けの両方に[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]と XAML マークアップと XAML 言語機能を使用して、さらにします。 別の役立つ文書は入門資料に、 [XAML 言語仕様](http://go.microsoft.com/fwlink/?LinkId=114525)です。  
+ 言語として XAML の入門資料を探している場合[XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)します。 そのトピックについて説明します XAML 新たに導入された対象ユーザーの両方を[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]と XAML マークアップと XAML 言語機能を使用することもできます。 別の便利なドキュメントがの入門資料、 [XAML 言語仕様](https://go.microsoft.com/fwlink/?LinkId=114525)します。  
   
-## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML サービスと System.Xaml に .NET アーキテクチャ  
- Microsoft .NET Framework の以前のバージョンでは Microsoft .NET Framework 上に構築されたフレームワークによって実装されていた XAML 言語機能のサポート ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Windows Workflow Foundation および Windows Communication Foundation (WCF))、およびどの特定のフレームワークによって使用していた、動作や使用される API では変化します。 これにより、XAML が含まれます。 パーサーと、オブジェクト グラフの作成メカニズム、XAML 言語の組み込み関数、シリアル化のサポート、およびなどです。  
+## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML サービスと .NET アーキテクチャでは System.Xaml  
+ Microsoft .NET Framework の以前のバージョン、XAML 言語機能が実装される、Microsoft .NET Framework 上に構築されたフレームワークのためのサポート ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Windows Workflow Foundation と Windows Communication Foundation (WCF))、そのため、その動作と API を使用する特定のフレームワークに応じて使用していたが変化します。 これは、中には、XAML パーサーと、オブジェクト グラフの作成メカニズム、XAML 言語の組み込み、シリアル化のサポート、およびなど。  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]と System.Xaml アセンブリの .NET Framework XAML サービスの XAML 言語機能をサポートするために必要な量を定義します。 これには、XAML リーダーと XAML ライターの基本クラスが含まれます。 フレームワーク固有の XAML 実装のいずれかに存在していたいない .NET Framework XAML サービスに追加された最も重要な機能は、xaml 型システム表現です。 型システム表現は、フレームワークの特定の機能に依存することがなく XAML の機能に重点を置いたオブジェクト指向の方法で XAML を表示します。  
+ [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]、.NET Framework XAML サービスと System.Xaml アセンブリの XAML 言語機能をサポートするために必要なものの多くを定義します。 これには、XAML リーダーと XAML ライターの基本クラスが含まれます。 フレームワーク固有の XAML 実装のいずれかでなかった、.NET Framework XAML サービスに追加された最も重要な機能は、XAML の型システム表現です。 型システム表現は、特定の機能のフレームワークに依存することがなく XAML の機能を中心にオブジェクト指向の方法で XAML を表示します。  
   
- XAML 型システムは、マークアップ形式または XAML の原点; の実行時の仕様によっては制限されません。またには、特定のバッキング型システムで制限。 XAML 型システムには、型、メンバー、XAML スキーマ コンテキスト、XML レベルの概念、およびその他の XAML 言語の概念または XAML の組み込みのオブジェクト表現が含まれています。 使用するか、XAML 型システムを拡張できるようになります XAML リーダーと XAML ライターなどのクラスから派生し、フレームワーク、テクノロジ、またはを使用するアプリケーションで有効になっている特定の機能に XAML 表現の機能を拡張またはXAML を出力します。 XAML スキーマ コンテキストの概念により、XAML オブジェクト ライターの実装を通じて、コンテキスト、および XAML ノードで、アセンブリ情報とテクノロジのバッキング型システムの組み合わせから実用的なオブジェクト グラフの書き込み操作ソースです。 XAML スキーマの概念の詳細についてはします。 参照してください[既定の XAML スキーマ コンテキストと WPF XAML スキーマ コンテキスト](../../../docs/framework/xaml-services/default-xaml-schema-context-and-wpf-xaml-schema-context.md)です。  
+ XAML 型システムは、マークアップ形式または XAML の生成元の実行時の詳細によっては制限されません。任意の特定のバッキング型システムによってに制限されます。 XAML 型システムには、型、メンバー、XAML スキーマ コンテキスト、XML レベルの概念、およびその他の XAML 言語の概念または XAML の組み込みのオブジェクト表現が含まれています。 使用して、または XAML 型システムの拡張により、XAML リーダーと XAML ライターのようなクラスから派生し、フレームワーク、テクノロジ、または使用するアプリケーションを有効になっている特定の機能に XAML 表現の機能を拡張すること、またはXAML を生成します。 XAML スキーマ コンテキストの概念により、XAML オブジェクト ライター実装、テクノロジのバッキング型システム、コンテキストと XAML ノード内のアセンブリ情報を通じて伝達との組み合わせから実用的なオブジェクト グラフの書き込み操作ソース。 XAML スキーマの概念の詳細についてはします。 参照してください[既定の XAML スキーマ コンテキストと WPF XAML スキーマ コンテキスト](../../../docs/framework/xaml-services/default-xaml-schema-context-and-wpf-xaml-schema-context.md)します。  
   
-## <a name="xaml-node-streams-xaml-readers-and-xaml-writers"></a>XAML ノード ストリーム、XAML リーダーと XAML ライター  
- .NET Framework XAML サービスは、XAML 言語と言語としての XAML を使用して、特定のテクノロジ間のリレーションシップで果たす役割を理解するのには、XAML ノード ストリームとその概念図形の API の概念を理解しておいて、用語集。 XAML ノード ストリームは、XAML 言語表記と XAML を表すかを定義するオブジェクト グラフ間の中間概念です。  
+## <a name="xaml-node-streams-xaml-readers-and-xaml-writers"></a>XAML ノード ストリーム、XAML リーダーおよび XAML ライター  
+ .NET Framework XAML サービスは、XAML 言語と言語として XAML を使用して、特定のテクノロジ間のリレーションシップで果たしている役割を理解するのには、XAML ノード ストリームとその概念による API の図形の概念を理解して用語集。 XAML ノード ストリームは、XAML 言語の表現と、XAML を表すかを定義するオブジェクト グラフ間の中間概念です。  
   
--   XAML リーダーは、何らかの形式で XAML を処理し、XAML ノード ストリームを生成するエンティティです。 API では、XAML リーダーは、基本クラスによって表される<xref:System.Xaml.XamlReader>です。  
+-   XAML リーダーは、何らかの形式で XAML を処理し、XAML ノード ストリームを生成するエンティティです。 API では、XAML リーダーは、基本クラスによって表される<xref:System.Xaml.XamlReader>します。  
   
--   XAML ライターは、XAML ノード ストリームを処理し、他のものを生成するエンティティです。 API では、XAML ライターが、基底クラスによって表される<xref:System.Xaml.XamlWriter>です。  
+-   XAML ライターは、XAML ノード ストリームを処理し、別のものを生成するエンティティです。 API では、XAML ライターが、基本クラスによって表される<xref:System.Xaml.XamlWriter>します。  
   
- XAML に関連する 2 つの最も一般的なシナリオは、オブジェクト グラフをインスタンス化する XAML を読み込んでアプリケーションまたはツールからのオブジェクト グラフの保存と (通常はテキスト ファイルとして保存されるマークアップ形式) で XAML 表現を生成します。 XAML を読み込むと、オブジェクト グラフの作成は、読み込みパスとしては、このドキュメントで多くの場合、呼ばれます。 保存または既存のオブジェクト グラフから XAML にシリアル化する多くの場合で参照されて保存先として、このドキュメントのパス。  
+ XAML に関連する 2 つの最も一般的なシナリオのオブジェクト グラフをインスタンス化する XAML を読み込み、アプリケーションやツールからのオブジェクト グラフの保存と (通常はマークアップ形式をテキスト ファイルとして保存) での XAML 表現を生成していること。 XAML の読み込みと、オブジェクト グラフの作成は、読み込みパスとしては、このドキュメントで多くの場合、呼ばれます。 保存または既存のオブジェクト グラフを XAML にシリアル化する多くの場合で参照されて保存先として、このドキュメントのパス。  
   
- 読み込みパスの最も一般的な型を以下に説明することができます。  
+ 読み込みパスの最も一般的な種類は、次のように記述できます。  
   
--   UTF でエンコードされた XML 形式での XAML 表現でを起動し、テキスト ファイルとして保存します。  
+-   UTF エンコードされた XML 形式での XAML 表現を起動し、テキスト ファイルとして保存します。  
   
 -   その XAML を読み込む<xref:System.Xaml.XamlXmlReader>します。 <xref:System.Xaml.XamlXmlReader> <xref:System.Xaml.XamlReader>サブクラスです。  
   
--   XAML ノード ストリームになります。 XAML ノード ストリームを使用して、個々 のノードにアクセスできる<xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> API です。 最も一般的な操作をここでは、XAML ノード ストリーム、「現在のレコード」を使用して各ノードの処理に進むには比喩します。  
+-   結果は、XAML ノード ストリームです。 使用して XAML ノード ストリームの個々 のノードにアクセスできる<xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> API。 最も一般的な操作をここでは、XAML ノード ストリームの「現在のレコード」を使用して各ノードの処理に進むにはメタファです。  
   
--   XAML ノード ストリームからの結果として得られるノードを渡す、 <xref:System.Xaml.XamlObjectWriter> API です。 <xref:System.Xaml.XamlObjectWriter> <xref:System.Xaml.XamlWriter>サブクラスです。  
+-   XAML ノード ストリームからの結果として得られるノードを渡す、 <xref:System.Xaml.XamlObjectWriter> API。 <xref:System.Xaml.XamlObjectWriter> <xref:System.Xaml.XamlWriter>サブクラスです。  
   
--   <xref:System.Xaml.XamlObjectWriter>ソース XAML ノード ストリームを使用して進行状況をに従って、一度に 1 つのオブジェクト、オブジェクト グラフを書き込みます。 これは XAML スキーマ コンテキストと、アセンブリと、バッキング型システムおよびフレームワークの型にアクセスできる実装を使用します。  
+-   <xref:System.Xaml.XamlObjectWriter>ソース XAML ノード ストリームを使用して進行状況に従って、一度に 1 つのオブジェクト、オブジェクト グラフを書き込みます。 これは、XAML スキーマ コンテキストと、アセンブリと、バッキング型システムとフレームワークの型にアクセスできる実装の支援を行います。  
   
 -   呼び出す<xref:System.Xaml.XamlObjectWriter.Result%2A>オブジェクト グラフのルート オブジェクトを取得する XAML ノード ストリームの末尾にします。  
   
- 保存パスの最も一般的な型を以下に説明することができます。  
+ 保存パスの最も一般的な種類は、次のように記述できます。  
   
--   オブジェクト グラフ全体のアプリケーションの実行時間を UI のコンテンツの実行時にアプリケーション全体のオブジェクト表現の小規模なセグメントまたは、実行時の状態で開始します。  
+-   実行全体のアプリケーション時間を UI のコンテンツおよび実行時にアプリケーション全体のオブジェクト表現の小さいセグメント、または、実行時の状態のオブジェクト グラフを起動します。  
   
--   アプリケーション ルートまたはドキュメントのルートなどの論理的開始オブジェクトにオブジェクトを読み込む<xref:System.Xaml.XamlObjectReader>します。 <xref:System.Xaml.XamlObjectReader> <xref:System.Xaml.XamlReader>サブクラスです。  
+-   アプリケーションのルートやドキュメントのルートなどの論理的開始オブジェクトから読み込むオブジェクトを<xref:System.Xaml.XamlObjectReader>します。 <xref:System.Xaml.XamlObjectReader> <xref:System.Xaml.XamlReader>サブクラスです。  
   
--   XAML ノード ストリームになります。 XAML ノード ストリームを使用して、個々 のノードにアクセスできる<xref:System.Xaml.XamlObjectReader>と<xref:System.Xaml.XamlReader>API です。 最も一般的な操作をここでは、XAML ノード ストリーム、「現在のレコード」を使用して各ノードの処理に進むには比喩します。  
+-   結果は、XAML ノード ストリームです。 使用して XAML ノード ストリームの個々 のノードにアクセスできる<xref:System.Xaml.XamlObjectReader>と<xref:System.Xaml.XamlReader>API。 最も一般的な操作をここでは、XAML ノード ストリームの「現在のレコード」を使用して各ノードの処理に進むにはメタファです。  
   
--   XAML ノード ストリームからの結果として得られるノードを渡す、 <xref:System.Xaml.XamlXmlWriter> API です。 <xref:System.Xaml.XamlXmlWriter> <xref:System.Xaml.XamlWriter>サブクラスです。  
+-   XAML ノード ストリームからの結果として得られるノードを渡す、 <xref:System.Xaml.XamlXmlWriter> API。 <xref:System.Xaml.XamlXmlWriter> <xref:System.Xaml.XamlWriter>サブクラスです。  
   
--   <xref:System.Xaml.XamlXmlWriter>エンコード XML UTF で XAML を書き込みます。 これは、ストリーム、またはその他の形式でテキスト ファイルとして保存できます。  
+-   <xref:System.Xaml.XamlXmlWriter>エンコードを XML UTF で XAML を書き込みます。 これは、ストリーム、またはその他の形式でテキスト ファイルとして保存できます。  
   
 -   呼び出す<xref:System.Xaml.XamlXmlWriter.Flush%2A>最終的な出力を取得します。  
   
- XAML ノード ストリームの概念の詳細については、次を参照してください。 [Understanding XAML ノード ストリームの構造と概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)です。  
+ XAML ノード ストリームの概念の詳細については、次を参照してください。 [Understanding XAML ノード Stream 構造と概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)します。  
   
 ### <a name="the-xamlservices-class"></a>XamlServices クラス  
- 常に XAML ノード ストリームを処理するために必要です Api を使用する場合は、基本的な読み込みパスまたは保存パスの基本的な場合は、<xref:System.Xaml.XamlServices>クラスです。  
+ 常に XAML ノード ストリームを処理するために必要です Api を使用する場合は、基本的な読み込みパスまたは保存パスの基本的な場合は、<xref:System.Xaml.XamlServices>クラス。  
   
--   さまざまなシグニチャ<xref:System.Xaml.XamlServices.Load%2A>読み込みパスの実装です。 ファイルまたはストリームを読み込むことができますか、または、読み込むことができます、 <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader>または<xref:System.Xaml.XamlReader>そのリーダーの Api を使用して読み込むによって、XAML 入力をラップします。  
+-   さまざまな署名<xref:System.Xaml.XamlServices.Load%2A>読み込みパスの実装します。 ファイルまたはストリームを読み込むことができますか、または読み込むことができますが、 <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader>または<xref:System.Xaml.XamlReader>そのリーダーの Api で読み込むことによって、XAML 入力をラップします。  
   
--   さまざまなシグニチャ<xref:System.Xaml.XamlServices.Save%2A>オブジェクト グラフを保存し、出力をストリームとして生成されるファイル、または<xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter>インスタンス。  
+-   さまざまな署名<xref:System.Xaml.XamlServices.Save%2A>オブジェクト グラフを保存し、ストリームとしての出力はファイル、または<xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter>インスタンス。  
   
--   <xref:System.Xaml.XamlServices.Transform%2A> XAML を変換、読み込みパスと保存をリンクして単一の操作としてのパス。 異なるスキーマ コンテキストまたは異なるバッキング型システムを使用でした<xref:System.Xaml.XamlReader>と<xref:System.Xaml.XamlWriter>、これは、生成される XAML がどのように変換される新機能に影響します。  
+-   <xref:System.Xaml.XamlServices.Transform%2A> XAML を変換、読み込みパスと保存をリンクすることで 1 回の操作のパス。 別のスキーマ コンテキストまたは異なるバッキング型システムを使用できます<xref:System.Xaml.XamlReader>と<xref:System.Xaml.XamlWriter>、これは、結果の XAML を変換する方法に影響します。  
   
- 使用する方法の詳細についての<xref:System.Xaml.XamlServices>を参照してください[XAMLServices クラスおよび基本的な XAML の読み取りまたは書き込み](../../../docs/framework/xaml-services/xamlservices-class-and-basic-xaml-reading-or-writing.md)です。  
+ 使用する方法の詳細についての<xref:System.Xaml.XamlServices>を参照してください[XAMLServices クラスおよび基本的な XAML の読み取りまたは書き込み](../../../docs/framework/xaml-services/xamlservices-class-and-basic-xaml-reading-or-writing.md)します。  
   
 ## <a name="xaml-type-system"></a>XAML 型システム  
- XAML 型システムでは、XAML ノード ストリームの特定の各ノードを使用するために必要な Api を提供します。  
+ XAML 型システムは、XAML ノード ストリームの特定の個々 のノードを使用するために必要な Api を提供します。  
   
- <xref:System.Xaml.XamlType> 開始オブジェクト ノードと end のオブジェクト ノード間で処理しているを使用するオブジェクトの表現です。  
+ <xref:System.Xaml.XamlType> 開始オブジェクト ノードと終了オブジェクト ノード間で処理しているとして使用するオブジェクトの表現です。  
   
- <xref:System.Xaml.XamlMember> メンバー ノードの開始と終了メンバー ノードの間で処理しているを使用するオブジェクトのメンバーの表現です。  
+ <xref:System.Xaml.XamlMember> メンバー ノードの開始と終了メンバー ノード間で処理しているとして使用するオブジェクトのメンバーの表現です。  
   
- などの Api<xref:System.Xaml.XamlType.GetAllMembers%2A>と<xref:System.Xaml.XamlType.GetMember%2A>と<xref:System.Xaml.XamlMember.DeclaringType%2A>間の関係をレポート、<xref:System.Xaml.XamlType>と<xref:System.Xaml.XamlMember>です。  
+ などの Api<xref:System.Xaml.XamlType.GetAllMembers%2A>と<xref:System.Xaml.XamlType.GetMember%2A>と<xref:System.Xaml.XamlMember.DeclaringType%2A>間の関係をレポートする<xref:System.Xaml.XamlType>と<xref:System.Xaml.XamlMember>。  
   
- .NET Framework XAML サービスによって実装される XAML 型システムの既定の動作をリフレクションを使用して、共通言語ランタイム (CLR) とアセンブリの CLR 型の静的分析に基づきます。 そのため、特定の CLR 型の XAML 型システムの既定の実装を型とそのメンバーの XAML スキーマを公開でき XAML 型システムの観点からレポートできます。 既定の XAML 型システムでの型の割り当ての概念は CLR の継承に対応しているし、インスタンス、値型の概念がサポートする動作と CLR の機能にもマップされます。  
+ .NET Framework XAML サービスによって実装される XAML 型システムの既定の動作は、リフレクションを使用して、共通言語ランタイム (CLR) とアセンブリの CLR 型の静的分析に基づくです。 そのため、特定の CLR 型 XAML 型システムの既定の実装型とそのメンバーの XAML スキーマを公開でき、XAML 型システムの観点からそれを報告できます。 既定の XAML 型システムでできるかどうかの型の概念は CLR の継承にマップし、インスタンスや値型の概念がサポートする動作や、CLR の機能にもマップされます。  
   
 ## <a name="reference-for-xaml-language-features"></a>XAML 言語機能のリファレンス  
- XAML をサポートするためには、.NET Framework XAML サービスは、XAML 言語の XAML 名前空間に定義されている XAML 言語の概念の特定の実装を提供します。 これらは、特定のリファレンス ページとして記載されています。 XAML リーダーまたは .NET Framework XAML サービスで定義されている XAML ライターによって処理されるときに、これらの言語機能がどのように動作するかの観点からは、言語の機能が記載されています。 詳細については、「 [XAML Namespace (x:) Language Features](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)」を参照してください。
+ XAML をサポートするためには、.NET Framework XAML サービスは、XAML 言語の XAML 名前空間に定義されている XAML 言語の概念の特定の実装を提供します。 これらは、特定の参照ページとして記載されています。 XAML リーダーまたは .NET Framework XAML サービスで定義されている XAML ライターによって処理されるときに、これらの言語機能がどのように動作するかの観点からは、言語機能が記載されています。 詳細については、「 [XAML Namespace (x:) Language Features](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)」を参照してください。

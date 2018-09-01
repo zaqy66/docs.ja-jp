@@ -9,25 +9,25 @@ ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e28ac8762c2c3a58a282b92da2b0a2dfadf32dbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db94a1a4588c2f889da8adb1cb3e47e208ce1211
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398971"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393718"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>UI オートメーション TableItem コントロール パターンの実装
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
- このトピックのガイドラインと規則を実装するための導入<xref:System.Windows.Automation.Provider.ITableItemProvider>、イベントおよびプロパティに関する情報も含まれます。 その他のリファレンスへのリンクは、概要の最後に記載します。  
+ このトピックのガイドラインと規則を実装するための紹介<xref:System.Windows.Automation.Provider.ITableItemProvider>、イベントおよびプロパティに関する情報などです。 その他のリファレンスへのリンクは、概要の最後に記載します。  
   
- <xref:System.Windows.Automation.TableItemPattern>コントロール パターンを実装するコンテナーの子コントロールをサポートするために使用<xref:System.Windows.Automation.Provider.ITableProvider>です。 個々 のセル機能へのアクセスが必要な同時実装によって提供される<xref:System.Windows.Automation.Provider.IGridItemProvider>です。 このコントロール パターンはに似て<xref:System.Windows.Automation.Provider.IGridItemProvider>を実装するコントロールを除いて、<xref:System.Windows.Automation.Provider.ITableItemProvider>プログラムによって、個々 のセルとその行および列情報間のリレーションシップを公開する必要があります。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)」をご覧ください。  
+ <xref:System.Windows.Automation.TableItemPattern>コントロール パターンが実装するコンテナーの子コントロールをサポートするために使用される<xref:System.Windows.Automation.Provider.ITableProvider>します。 個々 のセル機能へのアクセスが必要な同時実装によって提供される<xref:System.Windows.Automation.Provider.IGridItemProvider>します。 このコントロール パターンに似ています<xref:System.Windows.Automation.Provider.IGridItemProvider>実装するコントロールを除いて<xref:System.Windows.Automation.Provider.ITableItemProvider>プログラムで、個々 のセルとその行および列情報間のリレーションシップを公開する必要があります。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)」をご覧ください。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
   
--   関連するグリッド項目機能では、次を参照してください。 [UI オートメーション GridItem コントロール パターンを実装する](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)です。  
+-   関連するグリッド項目の機能を参照してください。 [UI オートメーション GridItem コントロール パターンを実装する](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)します。  
   
 <a name="Required_Members_for_ITableItemProvider"></a>   
 ## <a name="required-members-for-itableitemprovider"></a>ITableItemProvider の必須メンバー  

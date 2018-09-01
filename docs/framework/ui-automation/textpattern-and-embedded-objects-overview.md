@@ -10,16 +10,16 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4b846dfdd7c19a515c759fbeac1762cb47ca8876
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258578"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395479"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern および埋め込みオブジェクトの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] がテキスト ドキュメントまたはコンテナー内で埋め込みオブジェクトや子要素を公開する方法について説明します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "43258578"
   
  テキスト範囲の内容を走査する必要がある場合、 <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> メソッドを正常に実行するために、一連の手順がその背後で関係しています。  
   
-1.  テキスト範囲は正規化されます。つまり、テキスト範囲は <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> エンドポイントで低次元テキスト範囲に縮小されるため、 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> エンドポイントは不要になります。 この手順は、テキスト範囲にまたがる状況であいまいさをなくすために必要<xref:System.Windows.Automation.Text.TextUnit>境界: たとえば、"{U} RL [ http://www.microsoft.com ](http://www.microsoft.com)テキストに埋め込まれて"場所"{0}"と"}"がテキスト範囲エンドポイント。  
+1.  テキスト範囲は正規化されます。つまり、テキスト範囲は <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> エンドポイントで低次元テキスト範囲に縮小されるため、 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> エンドポイントは不要になります。 この手順は、テキスト範囲にまたがる状況であいまいさをなくすために必要<xref:System.Windows.Automation.Text.TextUnit>境界: たとえば、"{U} RL [ http://www.microsoft.com ](https://www.microsoft.com)テキストに埋め込まれて"場所"{0}"と"}"がテキスト範囲エンドポイント。  
   
 2.  結果として得られる範囲は、 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 内で、要求された <xref:System.Windows.Automation.Text.TextUnit> 境界の先頭に向かって後方に移動されます。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "43258578"
 ### <a name="hyperlink"></a>ハイパーリンク  
  **例 1: 埋め込みテキスト ハイパーリンクを含むテキスト範囲**  
   
- {URL [ http://www.microsoft.com ](http://www.microsoft.com)テキストに埋め込まれています。  
+ {URL [ http://www.microsoft.com ](https://www.microsoft.com)テキストに埋め込まれています。  
   
 |呼び出されるメソッド|結果|  
 |-------------------|------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "43258578"
   
  **例 3 - テキスト コンテナーのコンテンツを部分的にまたがるテキスト範囲。テキスト コンテナーには、テキスト範囲の一部ではない埋め込みテキスト ハイパーリンクがあります。**  
   
- {URL}[ http://www.microsoft.com ](http://www.microsoft.com)はテキストに埋め込まれます。  
+ {URL}[ http://www.microsoft.com ](https://www.microsoft.com)はテキストに埋め込まれます。  
   
 |呼び出されるメソッド|結果|  
 |-------------------|------------|  
@@ -159,4 +159,4 @@ ms.locfileid: "43258578"
  [UI オートメーションを使用した、埋め込みオブジェクトへのアクセス](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [UI オートメーションを使用したテーブルの内容の公開](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [UI オートメーションを使用したテキストのスキャン](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [TextPattern の検索と選択のサンプル](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [TextPattern の検索と選択のサンプル](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

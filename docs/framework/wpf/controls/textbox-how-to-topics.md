@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: 9e43e5661d3e6b559a1f9c9acb52313ff0a37e31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2319ea8522a90705cf65006ffb368801921cda57
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555764"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397528"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox に関する「方法」トピック
-このセクションで説明を使用した共通タスクを実行する方法を示す例について、<xref:System.Windows.Controls.TextBox>コントロール。  
+このセクションを使用して一般的なタスクを実行する方法を示す例を示します、<xref:System.Windows.Controls.TextBox>コントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [複数行の TextBox コントロールを作成する](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
@@ -42,5 +42,5 @@ ms.locfileid: "33555764"
  <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="see-also"></a>関連項目  
- [WPF Controls Gallery Sample](http://go.microsoft.com/fwlink/?LinkID=160053)  
+ [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)  
  [TextBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)

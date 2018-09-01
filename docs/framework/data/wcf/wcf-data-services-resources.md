@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 9efb8c54af40d135203868d93079d15dd7878cd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 790fe629ae709a9fcb57d5b551e9fa7aecfb04f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364447"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395566"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services リソース
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] の概要に関するトピックは次のとおりです。 これらのトピックの多くには、詳細情報が記載された関連トピックへのリンクも含まれています。  
@@ -18,45 +18,45 @@ ms.locfileid: "33364447"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] で使用可能な機能の概要について説明します。  
   
  [はじめに](../../../../docs/framework/data/adonet/ef/getting-started.md)  
- 設計し、を使用してデータ サービスにアクセスする方法について説明[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]で示すように、[クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)です。  
+ 設計およびを使用してデータ サービスにアクセスする方法について説明します[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]ように、[クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。  
   
  [アプリケーション シナリオ](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
- 作成するためのタスク ベースのアプローチを提供[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]およびアプリケーションへのアクセスを[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードします。  
+ タスク ベースのアプローチを作成するのには、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]にアクセスするアプリケーションと[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードします。  
   
- [Visual Studio と .NET Framework 用語集](http://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [Visual Studio と .NET Framework の用語集](https://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
  使用される用語が含まれています[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]と[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]ドキュメント。  
   
 ## <a name="external-resources"></a>外部リソース  
- 次の外部のリソースを作成するための追加情報とサポートを提供する[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開および使用するアプリケーション[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。  
+ 次の外部のリソースを作成するための追加情報とサポートの提供[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開および使用するアプリケーション[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。  
   
- [WCF Data Services フォーラム](http://go.microsoft.com/fwlink/?LinkId=150512)  
+ [WCF Data Services フォーラム](https://go.microsoft.com/fwlink/?LinkId=150512)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 開発者のためのデータ プログラミング サポート。  
   
- [WCF Data Services チームのブログ](http://go.microsoft.com/fwlink/?LinkId=150511)  
+ [WCF Data Services チームのブログ](https://go.microsoft.com/fwlink/?LinkId=150511)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] の機能の最新情報と説明が記載されているブログ。  
   
- [OData Web サイト](http://go.microsoft.com/fwlink/?LinkID=184554)  
+ [OData Web サイト](https://go.microsoft.com/fwlink/?LinkID=184554)  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] に関する主要な情報源。  
   
- [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248)  
- サンプル サービス、サンプル、および使用できるプログラミング ライブラリを含む[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。  
+ [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)  
+ サンプル サービス、サンプル、および操作するためのプログラミング ライブラリが含まれています[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。  
   
- [OData ブログ](http://go.microsoft.com/fwlink/?LinkId=185868)  
- に関する議論が記載されているブログ[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]プログラミングします。  
+ [OData ブログ](https://go.microsoft.com/fwlink/?LinkId=185868)  
+ についてのディスカッションを格納しているブログ[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]プログラミングします。  
   
- [データ アクセスおよびストレージ デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=91903)  
+ [データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=91903)  
  データ操作に関する情報やリソースが一度に見つかる場所。  
   
- [データ プラットフォーム操作方法?ビデオ: WCF Data Services シリーズ](http://go.microsoft.com/fwlink/?LinkId=124600)  
+ [データ プラットフォーム操作方法でしょうか。ビデオ: WCF Data Services シリーズ](https://go.microsoft.com/fwlink/?LinkId=124600)  
  データ サービスのビルドおよびアクセス方法について説明するビデオ スクリーン キャストのセットが提供されています。  
   
- [WCF データ サービスの概要:](http://go.microsoft.com/fwlink/?LinkID=131074)  
+ [概要: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] の利点に関する概要が記載されたホワイト ペーパー。  
   
- [Microsoft WCF Data Services の使用](http://go.microsoft.com/fwlink/?LinkID=131075)  
+ [Microsoft WCF Data Services の使用](https://go.microsoft.com/fwlink/?LinkID=131075)  
  追加情報およびクライアント アプリケーションのデータ サービスの作成とデータ サービスへのアクセスの例が記載されたホワイト ペーパー。  
   
- [Entity-relationship Model: Toward a Unified View データの](http://go.microsoft.com/fwlink/?LinkId=91909)Peter Pin-shan Chen、マサチューセッツ工科大学テクノロジによって  
+ [The Entity-relationship Model: Toward a Unified View データの](https://go.microsoft.com/fwlink/?LinkId=91909)Peter Pin-shan Chen、Massachusetts Institute of Technology  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] によって実装されるエンティティ リレーショナル モデルの基礎について説明します。 コンピューター分野で最もよく引用される 1976 年に書かれた論文。  
   
 ## <a name="see-also"></a>関連項目  

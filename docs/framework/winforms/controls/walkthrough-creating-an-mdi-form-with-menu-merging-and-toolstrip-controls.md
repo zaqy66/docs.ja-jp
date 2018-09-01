@@ -14,12 +14,12 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: d5fa1ebcc044a18e21e57aa2f66bd8486369fe42
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: a84b51679969f38955dd6a72ffe94ec8ca70b3df
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255694"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393045"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>チュートリアル : メニューのマージと ToolStrip コントロールのある MDI フォームを作成する
 <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間は、マルチ ドキュメント インターフェイス (MDI) アプリケーションをサポートし、<xref:System.Windows.Forms.MenuStrip> コントロールはメニューの結合をサポートします。 MDI フォームは、<xref:System.Windows.Forms.ToolStrip> コントロールもサポートします。  
@@ -107,7 +107,7 @@ ms.locfileid: "43255694"
   
 1.  という名前の新しいフォームを追加`ChildForm`をプロジェクトにします。  
   
-     詳細については、次を参照してください。[方法: Windows フォームをプロジェクトに追加](http://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1)します。  
+     詳細については、次を参照してください。[方法: Windows フォームをプロジェクトに追加](https://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1)します。  
   
 2.  **ツールボックス**、ドラッグ、<xref:System.Windows.Forms.MenuStrip>子フォームにコントロール。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "43255694"
   
 4.  **Items コレクション エディター**  ダイアログ ボックスで、新しい追加<xref:System.Windows.Forms.ToolStripMenuItem>という名前の**ChildMenuItem**子メニューにします。  
   
-     詳細については、次を参照してください。 [ToolStrip Items コレクション エディター](http://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)します。  
+     詳細については、次を参照してください。 [ToolStrip Items コレクション エディター](https://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)します。  
   
 ## <a name="testing-the-form"></a>フォームのテスト  
   

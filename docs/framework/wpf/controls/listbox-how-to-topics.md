@@ -7,20 +7,20 @@ helpviewer_keywords:
 - ListBox control [WPF], how-to topics
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
-ms.openlocfilehash: 474057801cb1a1883282e435faa9d7a85870102c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d7f37acb2c0e09a0a9104a0bb7bd90b2d324a4d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551779"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396172"
 ---
 # <a name="listbox-how-to-topics"></a>ListBox に関する「方法」トピック
-このセクションのトピックを使用する方法について説明、<xref:System.Windows.Controls.ListBox>コントロールに項目の選択可能なリストを表示します。  
+このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.ListBox>項目の選択可能なリストを表示するコントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ListBox にデータをバインドする](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
  [ListBoxItem を取得する](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- [方法: ItemsControl にデータを追加](http://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
+ [方法: データの ItemsControl を追加します。](https://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
  [ListBox のスクロール速度を向上させる](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
 ## <a name="reference"></a>参照  

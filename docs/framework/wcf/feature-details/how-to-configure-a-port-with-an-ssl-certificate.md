@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: c3cede1eb90b963f4c0b567a8df48925bca9b02d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0595bcbd3dcae7977c8734b7d3858df2412c962
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494830"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395307"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>方法 : SSL 証明書を使用してポートを構成する
-自己ホスト型 Windows Communication Foundation (WCF) サービスを作成するときに、<xref:System.ServiceModel.WSHttpBinding>クラスのトランスポート セキュリティを使用する、X.509 証明書でポートを構成することも必要があります。 自己ホスト型サービスを作成するのでなければ、インターネット インフォメーション サービス (IIS) でサービスをホストできます。 詳細については、次を参照してください。 [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)です。  
+自己ホスト型 Windows Communication Foundation (WCF) サービスを作成するときに、<xref:System.ServiceModel.WSHttpBinding>クラスを使用してトランスポート セキュリティ、X.509 証明書でポートを構成することも必要があります。 自己ホスト型サービスを作成するのでなければ、インターネット インフォメーション サービス (IIS) でサービスをホストできます。 詳細については、次を参照してください。 [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)します。  
   
  ポートを構成する場合に使用するツールは、コンピューターで実行されているオペレーティング システムによって異なります。  
   
- [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] または [!INCLUDE[wxp](../../../../includes/wxp-md.md)] を実行している場合は、HttpCfg.exe ツールを使用します。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] では、このツールは自動的にインストールされています。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]、ツールをダウンロードする[Windows XP Service Pack 2 サポート ツール](http://go.microsoft.com/fwlink/?LinkId=88606)です。 詳細については、次を参照してください。 [Httpcfg の概要](http://go.microsoft.com/fwlink/?LinkId=88605)です。 [Windows サポート ツールのマニュアル](http://go.microsoft.com/fwlink/?LinkId=94840)Httpcfg.exe ツールの構文について説明します。  
+ [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] または [!INCLUDE[wxp](../../../../includes/wxp-md.md)] を実行している場合は、HttpCfg.exe ツールを使用します。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] では、このツールは自動的にインストールされています。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]、ツールをダウンロードする[Windows XP Service Pack 2 サポート ツール](https://go.microsoft.com/fwlink/?LinkId=88606)します。 詳細については、次を参照してください。 [Httpcfg の概要](https://go.microsoft.com/fwlink/?LinkId=88605)します。 [Windows サポート ツールのドキュメント](https://go.microsoft.com/fwlink/?LinkId=94840)Httpcfg.exe ツールの構文について説明します。  
   
  [!INCLUDE[wv](../../../../includes/wv-md.md)] を実行している場合は、Netsh.exe ツールを使用します。これは既にインストールされています。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33494830"
   
 ### <a name="to-determine-how-ports-are-configured"></a>ポートの構成を確認するには  
   
-1.  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]または[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、HttpCfg.exe ツールを使用して、現在のポート構成を表示を使用して、**クエリ**と**ssl**スイッチ、次の例で示すようにします。  
+1.  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]または[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、HttpCfg.exe ツールを使用して、現在のポート構成を表示するを使用して、**クエリ**と**ssl**スイッチ、次の例に示すようにします。  
   
     ```  
     httpcfg query ssl  
@@ -55,9 +55,9 @@ ms.locfileid: "33494830"
   
 ### <a name="to-get-a-certificates-thumbprint"></a>証明書の拇印を取得するには  
   
-1.  証明書 MMC スナップインを使用して、クライアント認証を目的として含む X.509 証明書を検索します。 詳細については、次を参照してください。[する方法: MMC スナップインで証明書の表示](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)です。  
+1.  証明書 MMC スナップインを使用して、クライアント認証を目的として含む X.509 証明書を検索します。 詳細については、「[方法: MMC スナップインを使用して証明書を参照する](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください。  
   
-2.  証明書の拇印にアクセスします。 詳細については、次を参照してください。[する方法: 証明書のサムプリントを取得](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)です。  
+2.  証明書の拇印にアクセスします。 詳細については、次を参照してください。[方法: 証明書のサムプリントを取得](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)します。  
   
 3.  証明書のサムプリントを、メモ帳などのテキスト エディターにコピーします。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "33494830"
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   **-I**スイッチの構文には`IP`:`port`コンピューターのポート 8012 に証明書を設定するツールに指示します。 "0.0.0.0" の部分は、必要に応じて、コンピューターの実際の IP アドレスに置き換えてください。  
+    -   **-I**スイッチの構文には`IP`:`port`し、コンピューターのポート 8012 に証明書を設定するツールに指示します。 "0.0.0.0" の部分は、必要に応じて、コンピューターの実際の IP アドレスに置き換えてください。  
   
-    -   **-H**スイッチは、証明書のサムプリントを指定します。  
+    -   **-H**証明書の拇印を指定します。  
   
 2.  [!INCLUDE[wv](../../../../includes/wv-md.md)] では、Netsh.exe ツールを使用します。次に例を示します。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "33494830"
   
     -   **Certhash**パラメーターは、証明書のサムプリントを指定します。  
   
-    -   **Ipport**パラメーターは、IP アドレスとポートを指定し、機能と同様、 **-i**説明した Httpcfg.exe ツールのスイッチ。  
+    -   **Ipport**パラメーターは、IP アドレスとポートを指定し、同様に機能、 **-i**説明した Httpcfg.exe ツールのスイッチ。  
   
-    -   **Appid**パラメーターが所有しているアプリケーションの識別に使用できる GUID です。  
+    -   **Appid**パラメーターは、所有するアプリケーションを識別するために使用できる GUID です。  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>SSL 証明書をポート番号にバインドし、クライアント証明書をサポートするには  
   
@@ -95,7 +95,7 @@ ms.locfileid: "33494830"
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
     ```  
   
-     **-F**スイッチの構文には`n`n は 1 ~ 7 の数値。 前の例のように 2 を指定すると、クライアントはトランスポート層で認証することになります。 値として 3 を指定すると、クライアント証明書が有効になり、それらの証明書が Windows アカウントに対応付けられます。 他の値については、HttpCfg.exe のヘルプ機能を参照してください。  
+     **-F**スイッチの構文には`n`n は 1 ~ 7 の数値です。 前の例のように 2 を指定すると、クライアントはトランスポート層で認証することになります。 値として 3 を指定すると、クライアント証明書が有効になり、それらの証明書が Windows アカウントに対応付けられます。 他の値については、HttpCfg.exe のヘルプ機能を参照してください。  
   
 2.  [!INCLUDE[wv](../../../../includes/wv-md.md)] では、トランスポート層で X.509 証明書を使用して認証するクライアントをサポートするには、前と同じ手順を実行しますが、次のように追加のパラメーターを指定します。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "33494830"
     httpcfg query ssl>myMachinePorts.txt  
     ```  
   
-2.  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]または[!INCLUDE[wxp](../../../../includes/wxp-md.md)]を使用して、HttpCfg.exe ツールを使用して、**削除**と**ssl**キーワード。 使用して、 **-i**スイッチを指定する、 `IP`:`port`数、および **-h**スイッチ拇印を指定します。  
+2.  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]または[!INCLUDE[wxp](../../../../includes/wxp-md.md)]を使用して、HttpCfg.exe ツールを使用して、**削除**と**ssl**キーワード。 使用して、 **-i**スイッチを指定、 `IP`:`port`数、および **-h**拇印を指定するスイッチ。  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
