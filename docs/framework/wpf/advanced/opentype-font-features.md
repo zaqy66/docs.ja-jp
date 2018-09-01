@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: a8ee4107ee7db20f2948ea9a33ef853815a22665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3d1dd9f7ef8122ac5573121e4f779fade776c8c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549605"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389677"
 ---
 # <a name="opentype-font-features"></a>OpenType フォントの機能
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] における [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント技術の主要機能の概要を説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "33549605"
 > [!NOTE]
 >  Windows SDK には、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションで使用できるサンプルの [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント セットが含まれています。 これらのフォントでは、このトピックで説明していく機能の大半が提供されています。 詳細については、「[OpenType フォント パックのサンプル](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)」を参照してください。  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント書式の詳細については、[OpenType の仕様](http://go.microsoft.com/fwlink/?LinkId=96731)に関するページを参照してください。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント書式の詳細については、[OpenType の仕様](https://go.microsoft.com/fwlink/?LinkId=96731)に関するページを参照してください。  
   
 ### <a name="advanced-typographic-extensions"></a>高度なテキスト編集の拡張機能  
  高度なテキスト編集のテーブル ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] レイアウト テーブル) では、[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] または CFF アウトラインを使用してフォントの機能を拡張しています。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] レイアウトのフォントには、フォントの機能を拡張する追加の情報が含まれ、高品質の国際タイポグラフィをサポートします。 ほとんどの [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、利用可能な [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 機能全体のサブセットのみを公開するものです。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントには次のような特徴があります。  
@@ -51,32 +51,32 @@ ms.locfileid: "33549605"
   
 -   フォントには明示的なスクリプトと言語情報が含まれるため、テキスト処理アプリケーションはそれに従って動作を調整可能。  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] レイアウト テーブルについては、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] の仕様の[「フォント ファイル テーブル」](http://www.microsoft.com/typography/otspec/otff.htm)セクションで詳しく説明されています。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] レイアウト テーブルについては、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] の仕様の[「フォント ファイル テーブル」](https://www.microsoft.com/typography/otspec/otff.htm)セクションで詳しく説明されています。  
   
- この概要の残りの部分では、幅と、視覚的にで関心のいくつかの柔軟性が導入されています[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]のプロパティによって公開される機能、<xref:System.Windows.Documents.Typography>オブジェクト。 このオブジェクトの詳細については、「[タイポグラフィ クラス](#typography_class)」を参照してください。  
+ この概要の残りの部分では、幅と、視覚的に、興味のいくつかの柔軟性が導入されています[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]のプロパティによって公開される機能、<xref:System.Windows.Documents.Typography>オブジェクト。 このオブジェクトの詳細については、「[タイポグラフィ クラス](#typography_class)」を参照してください。  
   
 <a name="variants"></a>   
 ## <a name="variants"></a>バリアント  
  バリアントを使用して、上付き文字と下付きなどのさまざまなタイポグラフィ スタイルを表示します。  
   
 ### <a name="superscripts-and-subscripts"></a>上付き/下付きの文字  
- <xref:System.Windows.Documents.Typography.Variants%2A>プロパティでは、上付き文字と下付き文字の値を設定することができます、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]フォントです。  
+ <xref:System.Windows.Documents.Typography.Variants%2A>プロパティでは、上付き文字と下付き文字の値を設定することができます、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]フォント。  
   
  次のテキストは、Palatino Linotype フォントの上付き文字を示したものです。  
   
  ![OpenType の上付き文字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont14.gif "opentypefont14")  
 OpenType の上付き文字を使用するテキスト  
   
- 次のマークアップの例のプロパティを使用して、Palatino Linotype フォントの上付き文字を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Palatino Linotype フォントの上付き文字を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
   
- 次のテキストは、Palatino Linotype フォントの下付き文字を表示します。  
+ 次のテキストでは、Palatino Linotype フォントの下付き文字を表示します。  
   
  ![OpenType の下付き文字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont15.gif "opentypefont15")  
 OpenType の下付き文字を使用するテキスト  
   
- 次のマークアップの例のプロパティを使用して、Palatino Linotype フォントの下付き文字を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Palatino Linotype フォントの下付き文字を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
   
@@ -86,7 +86,7 @@ OpenType の下付き文字を使用するテキスト
  ![OpenType の上付き文字と下付き文字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont16.gif "opentypefont16")  
 OpenType の上付き文字と下付き文字を使用するテキスト  
   
- 次のマークアップの例は、のプロパティを使用して、フォントの下付き文字の上付き文字とを定義する方法を示します、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例上付き文字とのプロパティを使用して、フォントの下付き文字を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
   
@@ -99,27 +99,27 @@ OpenType の上付き文字と下付き文字を使用するテキスト
  ![OpenType の大文字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
 OpenType の大文字を使用するテキスト  
   
- 次のマークアップの例は、英大文字のプロパティを使用して、Pescadero フォントを定義する方法を示します、<xref:System.Windows.Documents.Typography>オブジェクト。 "SmallCaps" 形式を使用する場合は、先頭の大文字は無視されます。  
+ 次のマークアップ例のプロパティを使用して Pescadero フォントの大文字を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。 "SmallCaps" 形式を使用する場合は、先頭の大文字は無視されます。  
   
  [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
 ### <a name="titling-capitals"></a>タイトル用大文字  
- タイトル用大文字は、重みと縦横比が軽く、標準の大文字よりも洗練された印象を与えるように設計されています。 タイトル用大文字は、見出しとしてフォント サイズを大きくに用いられます。 次のテキストには、Pescadero フォントの通常の動作とタイトル用大文字が表示されます。 2 番目の行のテキストの幅の狭い縦線の幅に注意してください。  
+ タイトル用大文字は、重みと縦横比が軽く、標準の大文字よりも洗練された印象を与えるように設計されています。 タイトル用大文字は、見出しとして大きなフォント サイズで通常使用されます。 次のテキストには、Pescadero フォントの標準的なタイトル用大文字が表示されます。 2 番目の行のテキストの幅の狭い縦線の幅に注意してください。  
   
  ![OpenType のタイトル大文字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont20.gif "OpenTypeFont20")  
 OpenType のタイトル大文字を使用するテキスト  
   
- 次のマークアップの例は、タイトル用大文字のプロパティを使用して、Pescadero フォントを定義する方法を示します、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Pescadero フォントのタイトル用大文字を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
   
 ### <a name="capital-spacing"></a>大文字スペーシング  
- 大文字スペーシングは、テキストをすべて大文字にする場合に間隔を広くする機能です。 大文字は通常小文字とのブレンドに設計されます。 間で魅力的な間隔を表示し、大文字と小文字可能性がありますが密接すぎますすべて大文字を使用する場合。 次のテキストは、Pescadero フォントの通常の動作と大文字の間隔を表示します。  
+ 大文字スペーシングは、テキストをすべて大文字にする場合に間隔を広くする機能です。 通常、英大文字は小文字と調和させる設計されます。 間で魅力的な間隔を表示し、大文字と小文字をあまりにも堅く見えますすべて大文字を使用する場合。 次のテキストは、Pescadero フォントの標準的な大文字の間隔を表示します。  
   
  ![OpenType の大文字スペーシングを使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont21.gif "OpenTypeFont21")  
 OpenType の大文字スペーシングを使用するテキスト  
   
- 次のマークアップの例のプロパティを使用して、Pescadero フォントの大文字の間隔を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Pescadero フォントの大文字スペーシングを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
   
@@ -140,7 +140,7 @@ OpenType の大文字スペーシングを使用するテキスト
  ![OpenType の標準合字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont04.gif "opentypefont04")  
 OpenType の標準合字を使用するテキスト  
   
- 次のマークアップの例のプロパティを使用して、Pericles フォントの標準合字のグリフを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Pericles フォントの標準合字グリフを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
   
@@ -149,7 +149,7 @@ OpenType の標準合字を使用するテキスト
  ![OpenType の随意合字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont05.gif "opentypefont05")  
 OpenType の随意合字を使用するテキスト  
   
- 次のマークアップの例のプロパティを使用して、Pericles フォントの随意合字のグリフを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Pericles フォントの随意合字グリフを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
@@ -163,7 +163,7 @@ OpenType の標準合字を使用するテキスト
  ![OpenType の標準合字を無効になっているテキストを使用して](../../../../docs/framework/wpf/advanced/media/opentypefont07.gif "opentypefont07")  
 OpenType の無効な標準合字を使用するテキスト  
   
- 次のマークアップの例のプロパティを使用して、Palatino Linotype フォントの標準合字のグリフを無効にする方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Palatino Linotype フォントの標準合字グリフを無効にする方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
   
@@ -171,25 +171,25 @@ OpenType の無効な標準合字を使用するテキスト
 ## <a name="swashes"></a>飾り付き  
  飾り付きは装飾的なグリフで、カリグラフィを連想させる、手の込んだ装飾が使用されます。 次のテキストには、Pescadero フォントの標準と飾り付きグリフが表示されます。  
   
- ![OpenType の標準と飾り付きグリフを使用するテキスト](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")  
+ ![OpenType の標準と飾り付きグリフを使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")  
 OpenType の標準グリフと飾り付きグリフを使用するテキスト  
   
- 飾り付きは、季節のご挨拶などの短いフレーズで装飾的な要素としてよく使用されます。 次のテキストは、イベントの名前の大文字を強調するのに巻き髭を使用します。  
+ 飾り付きは、季節のご挨拶などの短いフレーズで装飾的な要素としてよく使用されます。 次のテキストは、イベントの名前の大文字を強調するために、飾り付きを使用します。  
   
  ![OpenType の巻き髭を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont09.gif "opentypefont09")  
 OpenType の巻き髭を使用するテキスト  
   
- 次のマークアップの例のプロパティを使用して、フォントの巻き髭を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して、フォントの飾り付きを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
   
 ### <a name="contextual-swashes"></a>コンテキスト飾り付き  
- 飾り付きグリフの特定の組み合わせでは、隣りあう文字の下に延びる部分が重なり合うなど、美しくない外観になる可能性があります。 コンテキスト スワッシュを使用するより優れた外観を生成する代替スワッシュ グリフを使用できます。 次のテキストは前に、とコンテキスト スワッシュが適用された後に、同じ単語を示します。  
+ 飾り付きグリフの特定の組み合わせでは、隣りあう文字の下に延びる部分が重なり合うなど、美しくない外観になる可能性があります。 コンテキスト飾り付きを使用してより優れた外観を生成する代替の飾り付きグリフを使用することができます。 コンテキスト飾り付きを適用した後と前に、次のテキストは同じ単語を示します。  
   
  ![OpenType のコンテキスト巻き髭を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont19.gif "OpenTypeFont19")  
 OpenType のコンテキスト巻き髭を使用するテキスト  
   
- 次のマークアップの例は、のプロパティを使用して、Pescadero フォント コンテキスト スワッシュを定義する方法を示します、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Pescadero フォントのコンテキスト飾り付きを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
   
@@ -205,11 +205,11 @@ OpenType の標準グリフを使用するテキスト
  ![OpenType のスタイル代替グリフを使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")  
 OpenType のスタイル代替グリフを使用するテキスト  
   
- 次のマークアップの例のプロパティを使用して、Pericles フォントのスタイル代替グリフを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Pericles フォントのスタイル代替グリフを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
   
- 次のテキストは、いくつか他のスタイル代替グリフの Pericles フォントを表示します。  
+ 次のテキストには、いくつかその他のスタイル代替グリフ Pericles フォントが表示されます。  
   
  ![OpenType のスタイル代替グリフを使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont03.gif "opentypefont03")  
 OpenType のスタイル代替グリフを使用するテキスト  
@@ -219,22 +219,22 @@ OpenType のスタイル代替グリフを使用するテキスト
  [!code-xaml[OpenTypeFontSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#3)]  
   
 ### <a name="random-contextual-alternates"></a>ランダムなコンテキスト代替  
- ランダムなコンテキスト代替は、単一文字に複数の代替グリフを提供します。 スクリプトの種類のフォントで実装された場合、この機能は、一連のランダムに選択されたグリフの外観にわずかに異なりますを使用して手書き入力をシミュレートできます。 次のテキストは、Lindsey フォントのランダムなコンテキスト代替グリフを使用します。 注意して、文字"a"が多少異なります外観  
+ ランダムなコンテキスト代替は、単一文字に複数の代替グリフを提供します。 スクリプトの種類のフォントで実装された場合、この機能は、一連の外観に違いが多少ランダムに選択されたグリフを使用して手書き入力をシミュレートできます。 次のテキストは、Lindsey フォントのランダムなコンテキスト代替を使用します。 注意して、文字"a"は少し異なります外観  
   
- ![OpenType のランダムなコンテキスト代替グリフを使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont23.gif "OpenTypeFont23")  
+ ![OpenType のランダムなコンテキスト代替を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont23.gif "OpenTypeFont23")  
 OpenType のランダムなコンテキスト代替を使用するテキスト  
   
- 次のマークアップの例のプロパティを使用して、Lindsey フォントのランダムなコンテキスト代替グリフを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Lindsey フォントのランダムなコンテキスト代替を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
   
 ### <a name="historical-forms"></a>歴史的形式  
- 歴史的形式は、過去に一般的であった表示形式です。 次のテキストには、「ボストン, Massachusetts」という語句が表示されます。 Palatino Linotype フォントのグリフの履歴フォームを使用します。  
+ 歴史的形式は、過去に一般的であった表示形式です。 次のテキストには、「ボストン, マサチューセッツ州」という語句が表示されます。 Palatino Linotype フォントのグリフの履歴フォームを使用します。  
   
- ![OpenType の履歴フォームを使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont10.gif "opentypefont10")  
+ ![OpenType の歴史的形式を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont10.gif "opentypefont10")  
 OpenType の履歴フォームを使用するテキスト  
   
- 次のマークアップの例のプロパティを使用して、Palatino Linotype フォントの履歴フォームを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Palatino Linotype フォントの歴史的形式を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
   
@@ -247,17 +247,17 @@ OpenType の履歴フォームを使用するテキスト
   
  次のテキストは、Palatino Linotype フォントの小数スタイルを示したものです。  
   
- ![OpenType を使用してテキストをスラッシュし、分数を積み上げ](../../../../docs/framework/wpf/advanced/media/opentypefont12.gif "opentypefont12")  
+ ![スラッシュし、分数を OpenType を使用してテキスト](../../../../docs/framework/wpf/advanced/media/opentypefont12.gif "opentypefont12")  
 OpenType の分数 (横) と分数 (縦) を使用するテキスト  
   
- 次のマークアップの例は、分数のプロパティを使用して、Palatino Linotype フォント スタイルを定義する方法を示します、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Palatino Linotype フォントの小数スタイルを定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>旧式スタイルの数字  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、旧式スタイルの数字形式をサポートします。 この形式は、もはや標準ではなくなったスタイルで数字を表示するのに便利です。 次のテキストは、Palatino Linotype フォントの標準と古いスタイルの数値表示形式で 18 世紀日付を表示します。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、旧式スタイルの数字形式をサポートします。 この形式は、もはや標準ではなくなったスタイルで数字を表示するのに便利です。 次のテキストは、Palatino Linotype フォントの標準と古いスタイルの数字形式で、18 世紀日付を表示します。  
   
- ![OpenType の古いスタイルの数字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")  
+ ![OpenType の旧式スタイルの数字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")  
 OpenType の古いスタイルの数字を使用するテキスト  
   
  次のテキストは、Palatino Linotype フォントの標準の数字と、旧式スタイルの数字を示したものです。  
@@ -265,44 +265,44 @@ OpenType の古いスタイルの数字を使用するテキスト
  ![OpenType 古いスタイルの数字セットを使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont13.gif "opentypefont13")  
 OpenType の古いスタイルの数字セットを使用するテキスト  
   
- 次のマークアップの例のプロパティを使用して、Palatino Linotype フォントの古いスタイルの数字を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Palatino Linotype フォントの旧式スタイルの数字を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>プロポーショナルと表形式の数字  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントはプロポーショナルと表形式の数字をサポートし、数字を扱うときに幅を調整します。 プロポーショナルの数字では、それぞれの数字は異なる幅を持つものとして扱われます。たとえば "1" は "5" より狭い幅です。 表形式の図は、位置が揃う垂直方向に、型が財務情報の読みやすさを向上できるように、等幅の数字として扱われます。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントはプロポーショナルと表形式の数字をサポートし、数字を扱うときに幅を調整します。 プロポーショナルの数字では、それぞれの数字は異なる幅を持つものとして扱われます。たとえば "1" は "5" より狭い幅です。 表形式の図表は、財務型情報の読みやすさの向上に配置、垂直方向、等幅の数字として扱われます。  
   
- 次のテキストは、Miramonte フォントを使用して最初の列に 2 つのプロポーショナル数字を表示します。 「5」と「1」数字の幅の違いに注意してください。 2 番目の列は、表形式の図の機能を使用して調整幅と同じ 2 つの数値を示します。  
+ 次のテキストには、Miramonte フォントを使用して最初の列に 2 つのプロポーショナル数字が表示されます。 「5」と「1」数字の幅の違いに注意してください。 2 番目の列には、表形式の図の機能を使用して調整幅と同じ 2 つの数値が表示されます。  
   
- ![OpenType のプロポーショナル & 表形式の数字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont22.gif "OpenTypeFont22")  
+ ![OpenType のプロポーショナルと表形式の数字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont22.gif "OpenTypeFont22")  
 OpenType のプロポーショナルと表形式の数字を使用するテキスト  
   
- 次のマークアップの例は、のプロパティを使用して、Miramonte フォント比例と表形式の数値を定義する方法を示します、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例のプロパティを使用して Miramonte フォントのプロポーショナルと表形式の数字を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>スラッシュ付きゼロ  
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、英文字 "O" と数字の "0" の違いを強調するためのスラッシュ付きゼロの数字形式をサポートします。 スラッシュ付きゼロは、財務およびビジネス情報における ID によく使用されます。  
   
- 次のテキストには、Miramonte フォントを使用して、サンプル注文識別子が表示されます。 最初の行は、標準の数字を使用します。 使用する 2 番目の線はスラッシュ ゼロ大文字の"O"により優れたコントラストを提供します。  
+ 次のテキストには、Miramonte フォントを使用して、サンプル注文識別子が表示されます。 最初の行では、標準の数字を使用します。 使用する 2 番目の線はスラッシュ ゼロに大文字の"O"より優れたコントラストを提供します。  
   
  ![OpenType を使用してテキストをスラッシュ ゼロ](../../../../docs/framework/wpf/advanced/media/opentypefont17.gif "OpenTypeFont17")  
 OpenType のスラッシュ付きのゼロを使用するテキスト  
   
- 次のマークアップの例を定義する方法を示しています。 スラッシュ ゼロのプロパティを使用して、Miramonte フォント、<xref:System.Windows.Documents.Typography>オブジェクト。  
+ 次のマークアップ例は、定義する方法を示しますのプロパティを使用して Miramonte フォントのスラッシュ ゼロ、<xref:System.Windows.Documents.Typography>オブジェクト。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>タイポグラフィ クラス  
- <xref:System.Windows.Documents.Typography>オブジェクトは一連の機能を公開する、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]フォントをサポートしています。 プロパティを設定して<xref:System.Windows.Documents.Typography>マークアップではを活用するドキュメントを作成することが簡単に[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]機能します。  
+ <xref:System.Windows.Documents.Typography>オブジェクトは、一連の機能を公開する、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]フォントをサポートしています。 プロパティを設定して<xref:System.Windows.Documents.Typography>、マークアップでは、ドキュメントの利用を簡単に作成できます[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]機能します。  
   
  次のテキストは、Pescadero フォントの標準の大文字と、その後に "SmallCaps" および "AllSmallCaps" のスタイルをあてた文字を示したものです。 この場合、同じフォント サイズは 3 つすべての単語の使用します。  
   
  ![OpenType の大文字を使用してテキストを](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
 OpenType の大文字を使用するテキスト  
   
- 次のマークアップの例は、英大文字のプロパティを使用して、Pescadero フォントを定義する方法を示します、<xref:System.Windows.Documents.Typography>オブジェクト。 "SmallCaps" 形式を使用する場合は、先頭の大文字は無視されます。  
+ 次のマークアップ例のプロパティを使用して Pescadero フォントの大文字を定義する方法を示しています、<xref:System.Windows.Documents.Typography>オブジェクト。 "SmallCaps" 形式を使用する場合は、先頭の大文字は無視されます。  
   
  [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
@@ -362,7 +362,7 @@ OpenType の大文字を使用するテキスト
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Documents.Typography>  
- [OpenType の仕様](http://go.microsoft.com/fwlink/?LinkId=96731)  
+ [OpenType の仕様](https://go.microsoft.com/fwlink/?LinkId=96731)  
  [WPF のタイポグラフィ](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [OpenType フォント パックのサンプル](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
  [アプリケーションでのフォントのパッケージング](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

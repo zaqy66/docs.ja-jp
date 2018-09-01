@@ -15,39 +15,40 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 451c54bf6272b4fbff46b5298ba5b6a9290656e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bb6e6568822f3edcabf50a4fceb7cc6386f05ef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388005"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>方法 : Modifiers プロパティおよび GenerateMember プロパティを使用する
-2 つのプロパティが、デザイン環境で提供される Windows フォームでコンポーネントを配置する場合:`GenerateMember`と`Modifiers`です。 `GenerateMember`プロパティは、Windows フォーム デザイナーでコンポーネントのメンバー変数を生成するときを指定します。 `Modifiers`プロパティは、そのメンバー変数に割り当てられている、アクセス修飾子。 場合の値、`GenerateMember`プロパティは`false`の値、`Modifiers`プロパティは影響を与えません。  
+2 つのプロパティが、デザイン環境によって提供される Windows フォームにコンポーネントを配置すると:`GenerateMember`と`Modifiers`します。 `GenerateMember`プロパティは、Windows フォーム デザイナーでコンポーネントのメンバー変数を生成するときを指定します。 `Modifiers`プロパティは、そのメンバー変数に割り当てられているアクセス修飾子。 場合の値、`GenerateMember`プロパティは`false`の値、`Modifiers`プロパティは影響を与えません。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
-### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>コンポーネントからのメンバーであるかどうかを指定するには  
+### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>コンポーネント フォームのメンバーであるかどうかを指定するには  
   
 1.  Windows フォーム デザイナーでフォームを開きます。  
   
 2.  開く、**ツールボックス**、フォームで、3 つの配置と<xref:System.Windows.Forms.Button>コントロール。  
   
-3.  設定、`GenerateMember`と`Modifiers`の各プロパティ<xref:System.Windows.Forms.Button>次の表に従って管理します。  
+3.  設定、`GenerateMember`と`Modifiers`の各プロパティ<xref:System.Windows.Forms.Button>次の表に従ってコントロール。  
   
-    |ボタン名|GenerateMember 値|修飾子の値|  
+    |ボタンの名前|GenerateMember 値|修飾子の値|  
     |-----------------|--------------------------|---------------------|  
     |`button1`|`true`|`private`|  
     |`button2`|`true`|`protected`|  
-    |`button3`|`false`|変更はありません。|  
+    |`button3`|`false`|変更なし|  
   
 4.  ソリューションをビルドします。  
   
 5.  **ソリューション エクスプローラー**で、**[すべてのファイルを表示]** ボタンをクリックします。  
   
-6.  開く、 **Form1**ノード、および、**コード エディター**、開かれている、 **Form1.Designer.vb**または**Form1.Designer.cs**ファイル。 このファイルには、Windows フォーム デザイナーによって生成されます。 コードが含まれています。  
+6.  開く、 **Form1**ノード、および、**コード エディター**、オープン、 **Form1.Designer.vb**または**Form1.Designer.cs**ファイル。 このファイルには、Windows フォーム デザイナーによって出力されるコードが含まれています。  
   
-7.  3 つのボタンの宣言を検索します。 次のコード例で指定されたの違いを示します、`GenerateMember`と`Modifiers`プロパティです。  
+7.  3 つのボタンの宣言を探します。 次のコード例で指定された相違点を示しています、`GenerateMember`と`Modifiers`プロパティ。  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/04/2018
      [!code-vb[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
->  既定では、Windows フォーム デザイナーが割り当てられます、 `private` (`Friend` Visual basic) 修飾子などのコンテナー コントロールを<xref:System.Windows.Forms.Panel>です。 場合、ベース<xref:System.Windows.Forms.UserControl>または<xref:System.Windows.Forms.Form>コンテナー コントロールを持つ継承されたコントロールとフォームで新しい子を入力することはできません。 解決する基本のコンテナー コントロールの修飾子を変更するには`protected`または`public`です。  
+>  既定では、Windows フォーム デザイナーによって、 `private` (`Friend` Visual basic) 修飾子などのコンテナー コントロールを<xref:System.Windows.Forms.Panel>します。 場合、ベース<xref:System.Windows.Forms.UserControl>または<xref:System.Windows.Forms.Form>がコンテナー コントロールでは、継承されたコントロールとフォーム内の新しい子を受け付けることができません。 ソリューションは、基本のコンテナー コントロールの修飾子を変更する`protected`または`public`します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Forms.Button>  

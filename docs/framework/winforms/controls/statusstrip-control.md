@@ -5,12 +5,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
-ms.openlocfilehash: b3d7a1c68dbaa29c83bd066a8cb3ed2775672d98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 157db8b9fbbbb6e1c6af41b4cf3903f4a762d763
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534502"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385727"
 ---
 # <a name="statusstrip-control"></a>StatusStrip コントロール
 Windows フォームの `StatusStrip` コントロールは、フォーム上で領域として使用され、通常はウィンドウの下端に表示されます。アプリケーションは、このコントロールにさまざまな種類のステータス情報を表示できます `StatusStrip` コントロールには、通常は `ToolStripStatusLabel` コントロールを配置し、状態を示すためのテキストまたはアイコンや、処理の完了状態を視覚的に表示するための <xref:System.Windows.Forms.ToolStripProgressBar> を表示します。  
@@ -22,7 +22,7 @@ Windows フォームの `StatusStrip` コントロールは、フォーム上で
  [方法: StatusStrip 内で Spring プロパティを対話的に使用する](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
  `Spring` プロパティを使用して、`ToolStripStatusLabel` を `StatusStrip` 内で対話式に中央揃えする方法を示します。  
   
- 参照してください[StatusStrip Items コレクション エディター](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))、 [StatusStrip Items コレクション エディター](http://msdn.microsoft.com/library/ms233642\(v=vs.110\))です。  
+ 参照してください[StatusStrip Items コレクション エディター](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))、 [StatusStrip Items コレクション エディター](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.StatusStrip>  

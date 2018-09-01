@@ -5,35 +5,35 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 5b36879413442ff99da034fcbee6bf6388affa6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 513029c1bd5cc4af52fcee97f7fab961729e613c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528720"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389056"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>方法 : デザイン時にフォームの端に合わせてコントロールを配置する
-コントロールを設定して、フォームの端に合わせて調整を行うことができます、<xref:System.Windows.Forms.Control.Dock%2A>です。 このプロパティは、フォーム内のコントロールの場所を指定します。 <xref:System.Windows.Forms.Control.Dock%2A> プロパティには次の値のいずれかを設定できます。  
+コントロールを設定して、フォームの端に合わせて整列を行うことができます、<xref:System.Windows.Forms.Control.Dock%2A>します。 このプロパティは、フォーム内のコントロールの場所を指定します。 <xref:System.Windows.Forms.Control.Dock%2A> プロパティには次の値のいずれかを設定できます。  
   
 |設定|コントロールへの影響|  
 |-------------|----------------------------|  
 |<xref:System.Windows.Forms.DockStyle.Bottom>|フォームの下部にドッキングします。|  
 |<xref:System.Windows.Forms.DockStyle.Fill>|フォームの残りの全スペースを埋めます。|  
 |<xref:System.Windows.Forms.DockStyle.Left>|フォームの左側にドッキングします。|  
-|<xref:System.Windows.Forms.DockStyle.None>|指定された場所に表示されますどこにもドッキングせず、<xref:System.Windows.Forms.Control.Location%2A>です。|  
+|<xref:System.Windows.Forms.DockStyle.None>|によって指定された場所に表示されます、任意の場所と、ドッキングせずその<xref:System.Windows.Forms.Control.Location%2A>します。|  
 |<xref:System.Windows.Forms.DockStyle.Right>|フォームの右側にドッキングします。|  
 |<xref:System.Windows.Forms.DockStyle.Top>|フォームの上部にドッキングします。|  
   
- これらの値は、コードでも設定できます。 詳細については、次を参照してください。[する方法: コントロールをフォームの端を揃える](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)です。  
+ これらの値は、コードでも設定できます。 詳細については、次を参照してください。[方法: コントロールをフォームの端を揃える](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)します。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>デザイン時に、コントロールの Dock プロパティを設定するには  
   
 1.  Windows フォーム デザイナーでコントロールを選択します。  
   
-2.  **プロパティ**ウィンドウで、ドロップダウン リスト ボックスには、[次へ] をクリック、<xref:System.Windows.Forms.Control.Dock%2A>プロパティです。  
+2.  **プロパティ**ウィンドウで、ドロップダウン リスト ボックスには、[次へ] をクリックして、<xref:System.Windows.Forms.Control.Dock%2A>プロパティ。  
   
      6 つを表すグラフィカル インターフェイス<xref:System.Windows.Forms.Control.Dock%2A>設定が表示されます。  
   

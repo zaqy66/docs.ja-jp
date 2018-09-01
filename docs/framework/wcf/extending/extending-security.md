@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 94aefe80674c5b4ec6fcce6a41d9b68e093f4262
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a16416e580dabd6a9057e11a8183437529ca83e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809402"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384413"
 ---
 # <a name="extending-security"></a>セキュリティの拡張
-新しいクレームの種類とカスタム トークンに合わせて、Windows Communication Foundation (WCF) のセキュリティ インフラストラクチャを拡張できます。 このセクションの各トピックでは、この方法について説明します。  
+新しいクレームの種類とカスタム トークンに対応するためには、Windows Communication Foundation (WCF) のセキュリティ インフラストラクチャを拡張できます。 このセクションの各トピックでは、この方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [セキュリティ アーキテクチャ](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
+ [セキュリティ アーキテクチャ](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
  WCF セキュリティ システムのアーキテクチャについて説明します。  
   
  [カスタム資格情報と資格情報の検証](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  

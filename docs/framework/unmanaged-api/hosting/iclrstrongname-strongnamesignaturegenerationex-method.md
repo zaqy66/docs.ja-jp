@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bf9a94c55258193e3172459da129ba16f9c3265
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81f1eb4236bab72caf4421342e1f54d6d2f32607
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435438"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384245"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx メソッド
-指定したフラグに基づいて、指定したアセンブリの厳密な名前の署名を生成します。  
+指定したフラグに基づいて、指定されたアセンブリの厳密な名前の署名を生成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,28 +43,28 @@ HRESULT StrongNameSignatureGenerationEx (
   
 #### <a name="parameters"></a>パラメーター  
  `wszFilePath`  
- [in]厳密な名前の署名の生成対象となるアセンブリのマニフェストを格納しているファイルへのパス。  
+ [in]厳密な名前の署名を生成するアセンブリのマニフェストを含むファイルへのパス。  
   
  `wszKeyContainer`  
  [in]公開/秘密キー ペアを格納するキー コンテナーの名前。  
   
- 場合`pbKeyBlob`が null、`wszKeyContainer`暗号化サービス プロバイダー (CSP) 内で有効なコンテナーを指定する必要があります。 この場合、コンテナーに格納されているキーのペアは、ファイルの署名に使用されます。  
+ 場合`pbKeyBlob`が null、`wszKeyContainer`暗号化サービス プロバイダー (CSP) 内で有効なコンテナーを指定する必要があります。 ここでは、コンテナーに格納されているキーのペアは、ファイルの署名に使用します。  
   
- 場合`pbKeyBlob`が null でないと見なされますのキー ペア キー バイナリ ラージ オブジェクト (BLOB) に含まれています。  
+ 場合`pbKeyBlob`が null でないと見なされます、キーのペア キー バイナリ ラージ オブジェクト (BLOB) に格納します。  
   
  `pbKeyBlob`  
- [in]公開/秘密キー ペアへのポインター。 Win32 によって作成された形式では、このペア`CryptExportKey`関数。 場合`pbKeyBlob`は null、によって指定されたキー コンテナー`wszKeyContainer`キー ペアを格納すると見なされます。  
+ [in]公開/秘密キーのペアへのポインター。 このペアは、Win32 によって作成された形式で、`CryptExportKey`関数。 場合`pbKeyBlob`が null で指定されたキー コンテナー`wszKeyContainer`キー ペアを格納すると見なされます。  
   
  `cbKeyBlob`  
- [in]サイズをバイト単位での`pbKeyBlob`します。  
+ [in]サイズ (バイト単位) の`pbKeyBlob`します。  
   
  `ppbSignatureBlob`  
- [out]共通言語ランタイムをするには、署名を返します場所へのポインター。 場合`ppbSignatureBlob`が null の場合、ランタイム、署名ファイルに格納で指定された`wszFilePath`です。  
+ [out]共通言語ランタイムには、署名を返す位置へのポインター。 場合`ppbSignatureBlob`が null の場合、ランタイム、シグネチャ ファイルに格納で指定された`wszFilePath`します。  
   
- 場合`ppbSignatureBlob`が null でない、共通言語ランタイムは領域を割り当てますを返す、署名します。 呼び出し元が使用して、この領域を解放する必要があります、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)メソッドです。  
+ 場合`ppbSignatureBlob`が null でない共通言語ランタイム割り当て領域が、署名を返します。 呼び出し元が使用して、この領域を解放する必要があります、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)メソッド。  
   
  `pcbSignatureBlob`  
- [out]返された署名のバイト単位のサイズ。  
+ [out]返される署名のバイト単位のサイズ。  
   
  `dwFlags`  
  [in]1 つ以上の次の値。  
@@ -74,25 +74,25 @@ HRESULT StrongNameSignatureGenerationEx (
 -   `SN_TEST_SIGN` (0x00000002) - テスト アセンブリに署名します。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK` メソッドが正常に完了した場合それ以外の場合、失敗を示す HRESULT 値 (を参照してください[の共通 HRESULT 値](http://go.microsoft.com/fwlink/?LinkId=213878)一覧)。  
+ `S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。  
   
-## <a name="remarks"></a>コメント  
- Null を指定する`wszFilePath`署名を作成することがなく、署名のサイズを計算します。  
+## <a name="remarks"></a>Remarks  
+ Null を指定`wszFilePath`署名を作成することがなく、署名のサイズを計算します。  
   
  署名は、いずれか、ファイルに直接格納または呼び出し元に返されます。  
   
- 場合`SN_SIGN_ALL_FILES`が指定されているが、公開キーは含まれません (両方`pbKeyBlob`と`wszFilePath`が null)、リンクされたモジュールのハッシュが再計算されますが、アセンブリは、再署名することはありません。  
+ 場合`SN_SIGN_ALL_FILES`が指定されてが公開キーは含まれません (両方`pbKeyBlob`と`wszFilePath`が null の場合)、リンクされたモジュールのハッシュが再計算されますが、アセンブリは、再署名することはありません。  
   
- 場合`SN_TEST_SIGN`を指定すると、共通言語ランタイム ヘッダーは、アセンブリは厳密な名前で署名されていることを示すためには変更されません。  
+ 場合`SN_TEST_SIGN`を指定すると、共通言語ランタイム ヘッダーは、アセンブリが厳密な名前で署名されているかを示すには変更されません。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [StrongNameSignatureGeneration メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)  

@@ -2,22 +2,22 @@
 title: ブリッジとエラー処理
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804392"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389069"
 ---
 # <a name="bridging-and-error-handling"></a>ブリッジとエラー処理
-このサンプルでは、クライアントと異なるバインディングを使用するサービスの間の通信をブリッジの Windows Communication Foundation (WCF) ルーティング サービスを使用する方法を示します。 また、バックアップ サービスを使用してフェールオーバーのシナリオに対処する方法も示します。 ルーティング サービスは、コンテンツ ベースのルーターをアプリケーションに含めるしやすく WCF コンポーネントです。 このサンプルは、ルーティング サービスを使用して通信するために標準の WCF 電卓のサンプルを適合させます。  
+このサンプルでは、クライアントと異なるバインディングを使用するサービスの間の通信をブリッジでの Windows Communication Foundation (WCF) ルーティング サービスを使用する方法を示します。 また、バックアップ サービスを使用してフェールオーバーのシナリオに対処する方法も示します。 ルーティング サービスは、WCF コンポーネント、アプリケーションでコンテンツ ベースのルーターを含めるが簡単です。 このサンプルでは、ルーティング サービスを使用して通信するために標準の WCF 電卓のサンプルを適応します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33804392"
   
 2.  Visual Studio で F5 キーを押すか、Ctrl キーと Shift キーを押しながら B キーを押します。  
   
-    1.  F5 キーを押したときに必要なプロジェクトを自動的に起動する場合は、ソリューションを右クリックし、選択**プロパティ**、し、、**スタートアップ プロジェクト**ノードの下**の共通プロパティ****マルチ スタートアップ プロジェクト**にすべてのプロジェクトを設定および**開始**です。  
+    1.  F5 キーを押してに必要なプロジェクトを自動で起動する場合は、ソリューションを右クリックし、選択**プロパティ**、し、**スタートアップ プロジェクト**ノードの下**の共通プロパティ**を選択します**マルチ スタートアップ プロジェクト**、すべてのプロジェクトに設定し、**開始**します。  
   
     2.  Ctrl キーと Shift キーを押しながら B キーを押してプロジェクトをビルドすると、次のアプリケーションが開始します。  
   
@@ -70,4 +70,4 @@ ms.locfileid: "33804392"
  Contoso では、外部には相互運用可能なサービスのエンドポイントを公開し、内部ではパフォーマンスを最適化したいと考えています。 そのため、外部には BasicHttpBinding を使用するエンドポイントを通じてサービスを公開し、内部ではルーティング サービスを使用して、そのサービスの NetTcpBinding を使用するエンドポイントにその接続をブリッジしています。 さらに、Contoso では、運用サービスのいずれかが一時的に停止した場合でも、サービスの提供を継続できるようにしたいと考えています。そのため、ルーター サービスの背後で複数のエンドポイントを仮想化し、必要に応じて、エラー処理機能を使用して自動的にバックアップ エンドポイントにフェールオーバーされるようにしています。  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric ホスティングと永続性のサンプル](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

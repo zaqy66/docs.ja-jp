@@ -10,18 +10,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: a6b1e78d17d952590510bdda80bf802ccc094285
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c70de1bf6a5340b6f5b2c652110ed9be5536665
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541438"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389981"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>チュートリアル : Visual Basic による Windows フォーム コントロールからの継承
-Visual basic では、経由の強力なカスタム コントロールを作成することができます*継承*です。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォームの機能を継承<xref:System.Windows.Forms.Button>制御、およびと呼ばれるカスタム プロパティを公開`ButtonValue`です。  
+Visual basic の場合は、使用して強力なカスタム コントロールを作成できます*継承*します。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォームから機能を継承<xref:System.Windows.Forms.Button>、制御し、という名前のカスタム プロパティを公開`ButtonValue`します。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ## <a name="creating-the-project"></a>プロジェクトの作成  
  新しいプロジェクトを作成するときは、ルート名前空間、アセンブリ名、プロジェクト名を設定し、既定のコンポーネントが適切な名前空間に含まれるようにするために、プロジェクトの名前を指定します。  
@@ -40,13 +40,13 @@ Visual basic では、経由の強力なカスタム コントロールを作成
   
 5.  **[ValueButton.vb]** ノードを開いて、デザイナーによって生成されたコード ファイル (**ValueButton.Designer.vb**) を表示します。 このファイルを**コード エディター**で開きます。  
   
-6.  検索、`Class`ステートメントでは、 `Partial Public Class ValueButton`、このコントロールから継承する型を変更および<xref:System.Windows.Forms.UserControl>に<xref:System.Windows.Forms.Button>です。 これにより、継承されたコントロールのすべての機能を継承する、<xref:System.Windows.Forms.Button>コントロール。  
+6.  検索、`Class`ステートメントでは、 `Partial Public Class ValueButton`、このコントロールから継承する型を変更および<xref:System.Windows.Forms.UserControl>に<xref:System.Windows.Forms.Button>します。 これにより、継承されたコントロールのすべての機能を継承するように、<xref:System.Windows.Forms.Button>コントロール。  
   
-7.  検索、`InitializeComponent`メソッドおよび削除を代入する行、<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>プロパティです。 このプロパティに存在しません、<xref:System.Windows.Forms.Button>コントロール。  
+7.  検索、`InitializeComponent`メソッドと remove を割り当てる行、<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>プロパティ。 このプロパティに存在しません、<xref:System.Windows.Forms.Button>コントロール。  
   
 8.  **[ファイル]** メニューの **[すべて保存]** をクリックして、プロジェクトを保存します。  
   
-     ビジュアル デザイナーは使用できなくなっていることに注意してください。 <xref:System.Windows.Forms.Button>コントロールは独自の描画、デザイナーでその外観を変更することができません。 ビジュアル表現は同じでなければから継承するクラスと (つまり、 <xref:System.Windows.Forms.Button>) コードで変更しない限り、します。  
+     ビジュアル デザイナーは使用できなくなっていることに注意してください。 <xref:System.Windows.Forms.Button>コントロールは独自の描画、デザイナーでは、その外観を変更することがないです。 ビジュアル表現は同じでなければから継承するクラスと (つまり、 <xref:System.Windows.Forms.Button>)、コードで変更しない限り、します。  
   
 > [!NOTE]
 >  UI 要素のないコンポーネントをデザイン サーフェイスに追加することは可能です。  
@@ -94,7 +94,7 @@ Visual basic では、経由の強力なカスタム コントロールを作成
   
 1.  **[ファイル]** メニューの **[追加]** をポイントし、**[新しいプロジェクト]** をクリックして **[新しいプロジェクトの追加]** ダイアログ ボックスを開きます。  
   
-2.  Visual Basic のプロジェクト ノードを選択し、クリックして**Windows フォーム アプリケーション**です。  
+2.  Visual Basic のプロジェクト ノードを選択し、クリックして**Windows フォーム アプリケーション**します。  
   
 3.  **[名前]** ボックスに「`Test`」と入力します。  
   
@@ -122,7 +122,7 @@ Visual basic では、経由の強力なカスタム コントロールを作成
   
 5.  `ButtonValue` プロパティを `5` に設定します。  
   
-6.  **すべての Windows フォーム**のタブ、**ツールボックス**をダブルクリックして**ラベル**を追加する、<xref:System.Windows.Forms.Label>をフォームにコントロールです。  
+6.  **すべての Windows フォーム**のタブ、**ツールボックス**、 をダブルクリックします**ラベル**を追加する、<xref:System.Windows.Forms.Label>をフォームにコントロール。  
   
 7.  ラベルをフォームの中央に配置し直します。  
   
@@ -150,5 +150,5 @@ Visual basic では、経由の強力なカスタム コントロールを作成
  [チュートリアル: Visual Basic による複合コントロールの作成](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [継承の基礎 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [コンポーネント作成のチュートリアル](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+ [継承の基本 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [コンポーネント作成のチュートリアル](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

@@ -2,19 +2,19 @@
 title: メッセージ相関
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 7105c66153625b4a7a2b9a2d61a2ab2821cab2af
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e4cd5dfd6f03370a408dc6f8fb39c983db3d43df
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806592"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389410"
 ---
 # <a name="message-correlation"></a>メッセージ相関
-このサンプルでは、Windows Communication Foundation (WCF) サービスに、メッセージ キュー (MSMQ) アプリケーションが MSMQ メッセージを送信する方法および要求/応答シナリオでは、送信者と受信者のアプリケーション間でメッセージを相関する方法を示します。 このサンプルでは、msmqIntegrationBinding バインディングを使用します。 この場合、サービスは自己ホスト型コンソール アプリケーションで、サービスがキュー内のメッセージを受信したかどうかを監視できます。 k  
+このサンプルでは、Windows Communication Foundation (WCF) サービスをメッセージ キュー (MSMQ) アプリケーションが MSMQ メッセージを送信する方法と、要求/応答シナリオでは、送信者と受信者のアプリケーション間のメッセージの関連付け方法を示します。 このサンプルでは、msmqIntegrationBinding バインディングを使用します。 この場合、サービスは自己ホスト型コンソール アプリケーションで、サービスがキュー内のメッセージを受信したかどうかを監視できます。 k  
   
  サービスは、送信側からの受信メッセージを処理し、送信側に応答メッセージを返信します。 送信側は、受信した応答を、最初に送信した要求に関連付けます。 メッセージの `MessageID` プロパティと `CorrelationID` プロパティを使用すると、要求メッセージと応答メッセージが関連付けられます。  
   
- `IOrderProcessor` サービス コントラクトは、キューでの使用に適した一方向サービス操作を定義します。 MSMQ メッセージには Action ヘッダーがないので、さまざまな MSMQ メッセージを操作コントラクトに自動的にマッピングすることはできません。 したがってこの場合、存在する操作コントラクトは 1 つだけです。 サービス内に複数の操作コントラクトを定義する場合は、ディスパッチする操作コントラクトを決定するために使用できる、MSMQ メッセージ内のヘッダー (ラベルや correlationID など) に関する情報をアプリケーションで提供する必要があります。 これに示されている、[カスタム Demux](../../../../docs/framework/wcf/samples/custom-demux.md)です。  
+ `IOrderProcessor` サービス コントラクトは、キューでの使用に適した一方向サービス操作を定義します。 MSMQ メッセージには Action ヘッダーがないので、さまざまな MSMQ メッセージを操作コントラクトに自動的にマッピングすることはできません。 したがってこの場合、存在する操作コントラクトは 1 つだけです。 サービス内に複数の操作コントラクトを定義する場合は、ディスパッチする操作コントラクトを決定するために使用できる、MSMQ メッセージ内のヘッダー (ラベルや correlationID など) に関する情報をアプリケーションで提供する必要があります。 これは、方法については、[カスタム Demux](../../../../docs/framework/wcf/samples/custom-demux.md)します。  
   
  さらに、MSMQ メッセージには、操作コントラクトの別のパラメータにマッピングされるヘッダーに関する情報は含まれません。 したがって、操作コントラクトに存在するパラメータは 1 つだけです。 型のパラメーターが<!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`-->、`System.ServiceModel.MSMQIntegration.MsmqMessage`基になる MSMQ メッセージが含まれています。 `MsmqMessage<T>` クラスの型 "T" は、シリアル化されて MSMQ メッセージ本文に含まれているデータを表します。 このサンプルでは、`PurchaseOrder` 型がシリアル化されて MSMQ メッセージ本文になっています。  
 
@@ -65,9 +65,9 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```
 
- サービスは、MSMQ メッセージをキューに送信するためにカスタム クライアント `OrderResponseClient` を使用します。 受信してメッセージを処理するアプリケーションは、MSMQ アプリケーションと WCF アプリケーションではありませんは暗黙のサービス コントラクト、2 つのアプリケーション間です。 したがって、このシナリオでは Svcutil.exe ツールを使用してプロキシを作成することはできません。  
+ サービスは、MSMQ メッセージをキューに送信するためにカスタム クライアント `OrderResponseClient` を使用します。 受け取って、メッセージを処理するアプリケーションの MSMQ アプリケーションと WCF アプリケーションではないため、ありません暗黙のサービス コントラクト、2 つのアプリケーション間。 したがって、このシナリオでは Svcutil.exe ツールを使用してプロキシを作成することはできません。  
   
- カスタム プロキシは基本的に、使用するすべての WCF アプリケーションの同じ、`msmqIntegrationBinding`メッセージを送信するバインディング。 他のプロキシと異なり、サービス操作の範囲は含まれません。 メッセージ送信操作のみです。  
+ カスタム プロキシは、使用するすべての WCF アプリケーションで同じでは基本的に、`msmqIntegrationBinding`メッセージを送信するバインディング。 他のプロキシと異なり、サービス操作の範囲は含まれません。 メッセージ送信操作のみです。  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -213,7 +213,7 @@ static void PlaceOrder()
  発注の応答を受信する MSMQ キューは、構成ファイルの appSettings セクションで指定されます。次のサンプル構成を参照してください。  
   
 > [!NOTE]
->  キュー名では、ドット (.) を使用してローカル コンピューターを表し、バックスラッシュを使用してパスを区切ります。 WCF エンドポイントのアドレスは msmq.formatname スキームを指定し、ローカル コンピューターを"localhost"を使用します。 URI の msmq.formatname の後には、MSMQ ガイドラインに沿って正しく書式設定された形式名が続きます。  
+>  キュー名では、ドット (.) を使用してローカル コンピューターを表し、バックスラッシュを使用してパスを区切ります。 WCF エンドポイントのアドレスでは、msmq.formatname スキームが指定し、ローカル コンピューター"localhost"を使用します。 URI の msmq.formatname の後には、MSMQ ガイドラインに沿って正しく書式設定された形式名が続きます。  
   
 ```xml  
 <appSettings>  
@@ -271,23 +271,23 @@ static void DisplayOrderStatus()
   
 ### <a name="to-setup-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。  
   
     1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] でサーバー マネージャーを開きます。  
   
-    2.  展開して、**機能**タブです。  
+    2.  展開、**機能**タブ。  
   
-    3.  右クリック**プライベート メッセージ キュー**を選択して**新規**、**プライベート キュー**です。  
+    3.  右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。  
   
     4.  チェック、**トランザクション**ボックス。  
   
-    5.  入力`ServiceModelSamplesTransacted`として、新しいキューの名前。  
+    5.  入力`ServiceModelSamplesTransacted`として新しいキューの名前。  
   
 3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-4.  単一コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+4.  1 台のコンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -308,10 +308,10 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>関連項目  
  [WCF でのキュー](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [メッセージ キュー](http://go.microsoft.com/fwlink/?LinkId=94968)
+ [メッセージ キュー](https://go.microsoft.com/fwlink/?LinkId=94968)

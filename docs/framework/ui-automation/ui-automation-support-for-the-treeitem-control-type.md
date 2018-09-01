@@ -9,16 +9,16 @@ ms.assetid: 229f341a-477f-434e-b877-4db9973068eb
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ca9ad34a51d7cc051416dc9e856f886bfbdb28a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdab82eb1cb0fd63fe00bc3184b19bc1edd561f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409855"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387608"
 ---
 # <a name="ui-automation-support-for-the-treeitem-control-type"></a>UI オートメーションによる TreeItem コントロール型のサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、TreeItem コントロール型に対する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のサポートについて説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でのコントロール型とは、コントロールが <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> プロパティを使用するために満たす必要がある一連の条件のことです。 これらの条件には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティ値、およびコントロール パターンに関する特定のガイドラインが含まれます。  
   
@@ -28,11 +28,11 @@ ms.locfileid: "33409855"
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
- 次の表に、ツリー項目コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、各ビューに含めることができる内容について説明します。 詳細については、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーを参照してください[UI オートメーション ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)です。  
+ 次の表に、ツリー項目コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、各ビューに含めることができる内容について説明します。 詳細については、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーを参照してください[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)します。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|TreeItem<br /><br /> -チェック ボックスをオン (0 または 1)<br />イメージ (0 または 1)<br />-Button (0 または 1)<br />-TreeItem (0 以上)|TreeItem<br /><br /> -TreeItem (0 以上)|  
+|TreeItem<br /><br /> -CheckBox (0 または 1)<br />-イメージ (0 または 1)<br />-Button (0 または 1)<br />-TreeItem (0 以上)|TreeItem<br /><br /> -TreeItem (0 以上)|  
   
  ツリー項目コントロールは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに 0 個以上のツリー項目の子を持つことができます。 ツリー項目コントロールに次に示すコントロール パターンで公開されている以外の機能がある場合は、コントロールは Data Item コントロール型に基づく必要があります。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33409855"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、リスト コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)です。  
+ 次の表に、リスト コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)します。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|[値]|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -66,11 +66,11 @@ ms.locfileid: "33409855"
 |コントロール パターン/パターン プロパティ|サポート/値|メモ|  
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|状況に依存|ツリー項目に操作可能な別のコマンドがある場合は、このコントロール パターンを実装します。|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|[はい]|すべてのツリー項目を展開または折りたたむことができます。|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|はい|すべてのツリー項目を展開または折りたたむことができます。|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|展開されたノード、折りたたまれたノード、またはリーフ ノード|ツリー項目は、展開されたり、折りたたまれたりしない場合は、リーフ ノードになります。|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|状況に依存|ツリー コンテナーが Scroll コントロール パターンをサポートする場合、このコントロール パターンを実装します。|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|状況に依存|ユーザーがツリー コンテナーに戻るときに、アクティブな選択を保持することができる場合、このコントロール パターンを実装します。|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|[はい]|このプロパティは、コンテナー内のすべての項目に対して同じコンテナーを公開します。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|はい|このプロパティは、コンテナー内のすべての項目に対して同じコンテナーを公開します。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|状況に依存|ツリー項目に関連付けられたチェック ボックスがある場合、このコントロール パターンを実装します。|  
   
 <a name="Required_UI_Automation_Events"></a>   

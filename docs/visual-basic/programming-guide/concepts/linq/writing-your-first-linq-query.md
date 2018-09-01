@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 44fbf35ee4ab5a0c4763269808f0817a33d05b40
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998438"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387635"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>初めての LINQ クエリの作成 (Visual Basic)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは、専用のクエリ言語で表現されます。 時間の経過と共にさまざまな言語用に開発したさまざまな種類のデータ ソース、たとえば、SQL のリレーショナル データベースや XML 用の XQuery です。 これにより、必要なアプリケーション開発者はデータ ソースまたはサポートされているデータ形式の種類ごとに新しいクエリ言語について説明します。  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- それぞれの種類のデータ ソースを作成する方法の詳細については、対応する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーのドキュメントを参照してください。 (これらのプロバイダーの一覧は、次を参照してください[LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。)。基本的な規則は単純です。 を[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]データ ソースは、ジェネリックをサポートする任意のオブジェクト<xref:System.Collections.Generic.IEnumerable%601>インターフェイス、またはこれを継承するインターフェイス。  
+ それぞれの種類のデータ ソースを作成する方法の詳細については、対応する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーのドキュメントを参照してください。 (これらのプロバイダーの一覧は、次を参照してください[LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。)。基本的な規則は単純です。 を[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]データ ソースは、ジェネリックをサポートする任意のオブジェクト<xref:System.Collections.Generic.IEnumerable%601>インターフェイス、またはこれを継承するインターフェイス。  
   
 > [!NOTE]
 >  などの型<xref:System.Collections.ArrayList>非ジェネリックをサポートする<xref:System.Collections.IEnumerable>としてインターフェイスを使用することができますも[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]データ ソース。 使用する例については、<xref:System.Collections.ArrayList>を参照してください[方法: LINQ (Visual Basic) の ArrayList を照会](how-to-query-an-arraylist-with-linq.md)します。  

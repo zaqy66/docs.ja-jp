@@ -2,12 +2,12 @@
 title: DynamicActivity の作成
 ms.date: 03/30/2017
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-ms.openlocfilehash: 93435be69f90ca0b74dae6b934cb145fabb7afff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 270066fafd5c71b2a720ca305433159c172872aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518104"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385262"
 ---
 # <a name="dynamicactivity-creation"></a>DynamicActivity の作成
 このサンプルでは、<xref:System.Activities.DynamicActivity> アクティビティを使用して実行時にアクティビティを作成する 2 つの異なる方法を示します。  
@@ -112,13 +112,13 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- XAML は、[!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] を使用して視覚的に作成できます。 Visual Studio プロジェクトに含まれている場合は、「ビルド アクション」を"None"にコンパイルされないように設定することを確認します。 その後、XAML は、次の呼び出しを使用して動的に読み込むことができます。  
+ XAML は、[!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] を使用して視覚的に作成できます。 Visual Studio プロジェクトに含まれている場合は、「ビルド アクション」を"None"にコンパイルされるを防ぐために設定することを確認します。 その後、XAML は、次の呼び出しを使用して動的に読み込むことができます。  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
 ```  
   
- プログラムによって、または XAML ワークフローを読み込むことによって作成された <xref:System.Activities.DynamicActivity> インスタンスは、次のコード例に示すように使用できます。 「機能」に渡されることに注意してください、 `WorkflowInvoker.Invoke` "act"は、<xref:System.Activities.Activity>最初のコード例で定義されています。  
+ プログラムによって、または XAML ワークフローを読み込むことによって作成された <xref:System.Activities.DynamicActivity> インスタンスは、次のコード例に示すように使用できます。 渡される"act"ことに注意してください、 `WorkflowInvoker.Invoke` "act"は、<xref:System.Activities.Activity>最初のコード例で定義されています。  
   
 ```  
 IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary<string, object> { { "Numbers", numbers } });  
@@ -143,6 +143,6 @@ Console.WriteLine("The average calculated using the code activity is = " + resul
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`

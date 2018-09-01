@@ -2,12 +2,12 @@
 title: LINQ to XML およびDOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: f62b7564e9ba7adfe1aa83c5d0336d7a43e7c362
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0a23a773e927155ca22456ea403549b255718ad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652774"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389946"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML およびDOM (Visual Basic)
 このセクションでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] と、現在主流の XML プログラミング API である W3C ドキュメント オブジェクト モデル (DOM) との主な違いについて説明します。  
@@ -74,7 +74,7 @@ Dim contacts = _
   
  このように、XML ツリーを構築するコードのインデントにより、基になる XML の構造が示されます。  
   
- 詳細については、次を参照してください。 [XML ツリーを作成する」(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)です。  
+ 詳細については、次を参照してください。 [XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)します。  
   
 ## <a name="working-directly-with-xml-elements"></a>XML 要素の直接操作  
  一般に、XML によるプログラミングで重視されるのは XML 要素であり、その属性が重要となる場合が多くあります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、XML 要素と XML 属性を直接操作できます。 たとえば、次のようなことが可能です。  
@@ -99,12 +99,12 @@ doc.AppendChild(name)
  LINQ to XML を使用する場合、<xref:System.Xml.Linq.XDocument> クラスを使用するのは、ドキュメントのルート レベルにコメントや処理命令を追加する場合だけです。  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>名前と名前空間の処理の単純化  
- 一般に XML プログラミングでは、名前、名前空間、および名前空間プレフィックスの処理が複雑になります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用すると、名前空間プレフィックスを処理する必要がなくなるため、名前と名前空間が単純化されます。 必要に応じて名前空間プレフィックスを制御することはできますが、 明示的に制御しないようにすることもできます。その場合、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] がシリアル中に名前空間プレフィックスを必要に応じて割り当てます。必要ない場合は、既定の名前空間を使用してシリアル化します。 既定の名前空間が使用された場合は、結果のドキュメントには名前空間プレフィックスは含まれません。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の操作](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)です。  
+ 一般に XML プログラミングでは、名前、名前空間、および名前空間プレフィックスの処理が複雑になります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用すると、名前空間プレフィックスを処理する必要がなくなるため、名前と名前空間が単純化されます。 必要に応じて名前空間プレフィックスを制御することはできますが、 明示的に制御しないようにすることもできます。その場合、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] がシリアル中に名前空間プレフィックスを必要に応じて割り当てます。必要ない場合は、既定の名前空間を使用してシリアル化します。 既定の名前空間が使用された場合は、結果のドキュメントには名前空間プレフィックスは含まれません。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
   
  DOM にはその他に、ノードの名前を変更できないという問題もあります。 ノード名の変更が必要な場合は、新しいノードを作成し、そこにすべての子ノードをコピーする必要があります。この場合、元のノード固有の特性は失われます。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、この問題を回避するために、ノードに対して <xref:System.Xml.Linq.XName> プロパティを設定できます。  
   
 ## <a name="static-method-support-for-loading-xml"></a>XML を読み込むための静的メソッドのサポート  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、インスタンス メソッドの代わりに静的メソッドを使用して XML を読み込むことができます。 これにより、読み込みと解析が簡略化されます。 詳細については、次を参照してください。[する方法: ファイル (Visual Basic) から XML を読み込み](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)です。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、インスタンス メソッドの代わりに静的メソッドを使用して XML を読み込むことができます。 これにより、読み込みと解析が簡略化されます。 詳細については、次を参照してください。[方法: ファイル (Visual Basic) から XML を読み込む](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)します。  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>DTD の構成要素に関するサポートの削除  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、XML プログラミングのさらなる簡略化のために、エンティティとエンティティ参照のサポートが削除されています。 エンティティの管理は複雑で、ほとんど利用されていません。 これらのサポートを削除することにより、パフォーマンスが向上し、プログラミング インターフェイスが簡略化されます。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ツリーが設定されると、すべての DTD エンティティが展開されます。  
@@ -125,10 +125,10 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、空白は <xref:System.Xml.Linq.XText> ノードとして格納されます。DOM とは違って、特殊なノード型である <xref:System.Xml.XmlNodeType.Whitespace> は使用されません。  
   
 ## <a name="support-for-annotations"></a>注釈のサポート  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 要素は、注釈の拡張可能なセットをサポートしています。 このサポートは、スキーマの情報、要素が UI にバインドされているかどうかの情報、またはアプリケーション固有のその他の情報など、要素に関するさまざまな情報を追跡する場合に利用できます。 詳細については、「[LINQ to XML 注釈](http://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5)」を参照してください。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 要素は、注釈の拡張可能なセットをサポートしています。 このサポートは、スキーマの情報、要素が UI にバインドされているかどうかの情報、またはアプリケーション固有のその他の情報など、要素に関するさまざまな情報を追跡する場合に利用できます。 詳細については、「[LINQ to XML 注釈](https://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5)」を参照してください。  
   
 ## <a name="support-for-schema-information"></a>スキーマ情報のサポート  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、<xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間の拡張メソッドによって XSD 検証がサポートされています。 これにより、XML ツリーが XSD に準拠しているかどうかを検証できます。 また、スキーマ検証後の情報セット (PSVI) を使用して XML ツリーを設定できます。 詳細については、「[方法: XSD を使用して検証する](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b)」および「<xref:System.Xml.Schema.Extensions>」を参照してください。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、<xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間の拡張メソッドによって XSD 検証がサポートされています。 これにより、XML ツリーが XSD に準拠しているかどうかを検証できます。 また、スキーマ検証後の情報セット (PSVI) を使用して XML ツリーを設定できます。 詳細については、「[方法: XSD を使用して検証する](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b)」および「<xref:System.Xml.Schema.Extensions>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [はじめに (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

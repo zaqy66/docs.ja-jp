@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 428dae2d10cd0f49a337c5b0439c5dcc72f83432
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257384"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385873"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>チュートリアル : バックグラウンド操作を使用するフォームの実装
 場合は、完了に長い時間がかかる操作があると応答を停止する、ユーザー インターフェイス (UI) を設定したくない、または「ハング」しを使用できます、<xref:System.ComponentModel.BackgroundWorker>クラスを別のスレッドで操作を実行します。  
@@ -57,7 +57,7 @@ ms.locfileid: "43257384"
   
 5.  最初の名前を変更<xref:System.Windows.Forms.Button>コントロール`startAsyncButton`設定と、<xref:System.Windows.Forms.Control.Text%2A>プロパティを`Start Async`します。 2 つ目の名前を変更<xref:System.Windows.Forms.Button>コントロール`cancelAsyncButton`、設定、<xref:System.Windows.Forms.Control.Text%2A>プロパティを`Cancel Async`します。 設定の<xref:System.Windows.Forms.Control.Enabled%2A>プロパティを`false`します。  
   
-6.  この 2 つのイベント ハンドラーを作成、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント。 詳細については、「[方法 : デザイナーを使用してイベント ハンドラーを作成する](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)」を参照してください。  
+6.  この 2 つのイベント ハンドラーを作成、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント。 詳細については、「[方法 : デザイナーを使用してイベント ハンドラーを作成する](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)」を参照してください。  
   
 7.  ドラッグ、<xref:System.Windows.Forms.Label>コントロールから、**ツールボックス**をフォームに名前を変更し、`resultLabel`します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "43257384"
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>非同期イベント ハンドラーを実装するには  
   
-1.  **プロパティ** ウィンドウで、<xref:System.ComponentModel.BackgroundWorker>が選択されているコンポーネントをクリックして、**イベント**ボタン。 ダブルクリックして、<xref:System.ComponentModel.BackgroundWorker.DoWork>と<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベントをイベント ハンドラーを作成します。 イベント ハンドラーの使用方法の詳細については、「[方法 : デザイナーを使用してイベント ハンドラーを作成する](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)」を参照してください。  
+1.  **プロパティ** ウィンドウで、<xref:System.ComponentModel.BackgroundWorker>が選択されているコンポーネントをクリックして、**イベント**ボタン。 ダブルクリックして、<xref:System.ComponentModel.BackgroundWorker.DoWork>と<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベントをイベント ハンドラーを作成します。 イベント ハンドラーの使用方法の詳細については、「[方法 : デザイナーを使用してイベント ハンドラーを作成する](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)」を参照してください。  
   
 2.  フォームで `ComputeFibonacci` という新しいメソッドを作成します。 このメソッドがバックグラウンドで実行され、実際の処理を行います。 このコードは、フィボナッチ アルゴリズムの再帰的実装を示しています。これは、非常に非効率であり、数が大きくなるにつれて、完了までの所要時間が急激に増大します。 ここでは、アプリケーションで長時間の遅延が発生する可能性のある操作を示すために、このコードを使用しています。  
   
@@ -166,8 +166,8 @@ ms.locfileid: "43257384"
 ## <a name="see-also"></a>関連項目  
  <xref:System.ComponentModel.BackgroundWorker>  
  [マネージド スレッド処理の実施](../../../../docs/standard/threading/managed-threading-best-practices.md)  
- [コンポーネントのマルチスレッド](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [ビルド内にありません: Visual Basic でのマルチスレッド](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [コンポーネントのマルチスレッド](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [ビルド内にありません: Visual Basic でのマルチスレッド](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [方法: バックグラウンド操作を使用するフォームを実装する](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
  [チュートリアル: 操作をバックグラウンドで実行する](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
  [BackgroundWorker コンポーネント](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

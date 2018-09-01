@@ -10,12 +10,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536762"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384955"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl コントロール (Windows フォーム)
 Windows フォーム `TabControl` は、ノートの仕切りや書類キャビネットのフォルダー セットのラベルに似た、複数のタブを表示します。 タブには画像やその他のコントロールを含めることができます。 プロパティ ページを作成するには、`TabControl` を使用します。  
@@ -36,7 +36,7 @@ Windows フォーム `TabControl` は、ノートの仕切りや書類キャビ�
  [方法: タブ ページを無効化する](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
  ユーザーの資格情報に基づいて、タブのページへのアクセスを制限する方法について説明します。  
   
- 参照してください[する方法: を追加し、デザイナーで Windows フォーム TabControl を使用して、削除がタブ](http://msdn.microsoft.com/library/ms233654\(v=vs.110\))、[する方法: タブ ページを使用して、デザイナーにコントロールを追加](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
+ 参照してください[方法: 追加し、削除の Windows フォーム TabControl を使用して、デザイナー タブ](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md)、[方法: タブ ページを使用して、デザイナーにコントロールを追加](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.TabControl> クラス  

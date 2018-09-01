@@ -2,12 +2,12 @@
 title: プロバイダー マニフェストの仕様
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 02faee9ad69bd75f4df608b9a4767560945c7bb3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767142"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387303"
 ---
 # <a name="provider-manifest-specification"></a>プロバイダー マニフェストの仕様
 ここでは、データ ストア プロバイダーでデータ ストアの型および関数がどのようにサポートされているかについて説明します。  
@@ -23,9 +23,9 @@ ms.locfileid: "32767142"
   
  プロバイダー マニフェストは、データ ストアへの接続を開くことなく、デザイン時にツールで読み込むことができる必要があります。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]大文字と小文字が区別が、基になるデータ ストアができない可能性があります。 マニフェストで定義および使用されている EDM 成果物 (識別子や型名など) では、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の大文字と小文字の区別を使用する必要があります。 大文字と小文字が区別されるデータ ストア要素がプロバイダー マニフェストに含まれる場合、その大文字と小文字の区別はプロバイダー マニフェストで保持する必要があります。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]ケースの機密性が高いが、基になるデータ ストアができない可能性があります。 マニフェストで定義および使用されている EDM 成果物 (識別子や型名など) では、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の大文字と小文字の区別を使用する必要があります。 大文字と小文字が区別されるデータ ストア要素がプロバイダー マニフェストに含まれる場合、その大文字と小文字の区別はプロバイダー マニフェストで保持する必要があります。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、すべてのデータ プロバイダーに対応するプロバイダー マニフェストが必要です。 プロバイダーがないプロバイダーを使用しようとする場合のマニフェスト、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]エラーが表示されます。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、すべてのデータ プロバイダーに対応するプロバイダー マニフェストが必要です。 プロバイダーがないプロバイダーを使用しようとする場合とマニフェスト、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]エラーが表示されます。  
   
  プロバイダーとの対話で例外が発生したときに [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によってスローされる例外の種類を次の表に示します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "32767142"
  プロバイダーでは、次のシナリオをサポートしています。  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>対称型マッピングによるプロバイダーの記述  
- プロバイダーを作成することができます、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]各ストアの種類がマッピングの方向に関係なく、単一の EDM 型にマップする場所です。 EDM 型に対応する非常に単純なマッピングを持つプロバイダー型では、型システムが単純であるか EDM 型と一致するため、対称ソリューションを使用できます。  
+ プロバイダーを作成することができます、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]各ストアの種類がマッピングの方向に関係なく、単一の EDM 型にマップされます。 EDM 型に対応する非常に単純なマッピングを持つプロバイダー型では、型システムが単純であるか EDM 型と一致するため、対称ソリューションを使用できます。  
   
  ドメインの単純さを利用して、静的な宣言型プロバイダー マニフェストを作成することができます。  
   
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>プロバイダー マニフェスト トークンを使用する  
- オフライン シナリオの場合、SSDL の表現からトークンが選択されます。 SSDL では、ProviderManifestToken を指定することができます (を参照してください[スキーマ要素 (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222)詳細については)。 たとえば、接続を開くことができない場合、SSDL には、マニフェストに関する情報を指定するプロバイダー マニフェスト トークンがあります。  
+ オフライン シナリオの場合、SSDL の表現からトークンが選択されます。 SSDL により、ProviderManifestToken を指定する (を参照してください[スキーマ要素 (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222)詳細については)。 たとえば、接続を開くことができない場合、SSDL には、マニフェストに関する情報を指定するプロバイダー マニフェスト トークンがあります。  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
@@ -262,7 +262,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |ReturnType|String|Ｘ|Void|関数の戻り値の EDM 型|  
 |Aggregate|Boolean|Ｘ|False|関数が集計関数の場合は True|  
 |BuiltIn|Boolean|Ｘ|True|関数がデータ ストアに組み込まれている場合は True|  
-|StoreFunctionName|String|×|\<名 >|データ ストア内の関数名。  関数名のリダイレクト レベルを許可できます。|  
+|StoreFunctionName|String|いいえ|\<名 >|データ ストア内の関数名。  関数名のリダイレクト レベルを許可できます。|  
 |NiladicFunction|Boolean|Ｘ|False|関数にパラメーターが必要なく、パラメーターなしで呼び出される場合は True|  
 |ParameterType<br /><br /> Semantics|ParameterSemantics|Ｘ|AllowImplicit<br /><br /> 変換|クエリ パイプラインによるパラメーター型の置換の処理方法の選択<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: e49404626f6de1bfe260f0abb692d68ad779a7ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508515"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391851"
 ---
 # <a name="service-transaction-behavior"></a>サービス トランザクションの動作
-このサンプルでは、クライアント調整トランザクションの使用方法と、サービス トランザクションの動作を制御する ServiceBehaviorAttribute と OperationBehaviorAttribute の設定方法について説明します。 このサンプルがに基づいて、[作業の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装しますが、データベース テーブルと、電卓操作の合計を実行しているステートフルで実行される操作のサーバー ログを維持するために拡張されています。 サーバー ログ テーブルへの書き込みを保存するかどうかは、クライアント調整トランザクションの結果によって異なります。クライアント トランザクションが完了しない場合は、Web サービス トランザクションにより、データベースへの更新はコミットされません。  
+このサンプルでは、クライアント調整トランザクションの使用方法と、サービス トランザクションの動作を制御する ServiceBehaviorAttribute と OperationBehaviorAttribute の設定方法について説明します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスの実装が、データベース テーブルと合計電卓操作を実行しているステートフルに実行された操作のサーバー ログを保持するように拡張します。 サーバー ログ テーブルへの書き込みを保存するかどうかは、クライアント調整トランザクションの結果によって異なります。クライアント トランザクションが完了しない場合は、Web サービス トランザクションにより、データベースへの更新はコミットされません。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -100,7 +100,7 @@ client.Close();
   
     -   `ReleaseServiceInstanceOnTransactionComplete` プロパティは、トランザクションが完了したときにサービス インスタンスを再利用するかどうかを指定します。 `false` に設定すると、サービスは操作要求全体で同じサービス インスタンスを保持します。 この設定は、現在高を保持するために必要です。 `true` に設定すると、各アクションが完了するたびに新しいインスタンスが生成されます。  
   
-    -   `TransactionAutoCompleteOnSessionClose` プロパティは、セッションの終了時に未解決のトランザクションを完了するかどうかを指定します。 設定することによって`false`、個々 の操作が設定するか、`OperationBehaviorAttribute``TransactionAutoComplete`プロパティを`true`またはへの呼び出しを明示的に要求する、`SetTransactionComplete`メソッドがトランザクションを完了します。 このサンプルでは、両方の方法を示します。  
+    -   `TransactionAutoCompleteOnSessionClose` プロパティは、セッションの終了時に未解決のトランザクションを完了するかどうかを指定します。 設定することで`false`、個別の操作で設定するか、`OperationBehaviorAttribute``TransactionAutoComplete`プロパティを`true`への呼び出しを明示的に要求するか、`SetTransactionComplete`メソッドがトランザクションを完了します。 このサンプルでは、両方の方法を示します。  
   
 -   `ServiceContractAttribute` :  
   
@@ -210,23 +210,23 @@ Creating new service instance...
   
 2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
- マシン間でサンプルを実行する場合は、Microsoft 分散トランザクション コーディネーター (MSDTC) ネットワーク トランザクション フローを有効にし、WsatConfig.exe ツールを使用して、Windows Communication Foundation (WCF) トランザクションのネットワークを有効にするを構成する必要があります。サポートしてください。  
+ マシン間で、サンプルを実行する場合は、Microsoft 分散トランザクション コーディネーター (MSDTC) ネットワーク トランザクション フローを有効にし、WsatConfig.exe ツールを使用して、Windows Communication Foundation (WCF) のトランザクションのネットワークを有効にするを構成する必要があります。サポート。  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>分散トランザクション コーディネータ (MSDTC) を構成してサンプルを別のコンピュータで実行できるようにするには  
   
 1.  サービス コンピューターで、受信ネットワーク トランザクションを許可するように MSDTC を構成します。  
   
-    1.  **開始** メニューの "éˆú"**コントロール パネルの **、し**管理ツール**、し、**コンポーネント サービス**です。  
+    1.  **開始** メニューに移動します**コントロール パネル**、し**管理ツール**、し**コンポーネント サービス**します。  
   
-    2.  右クリック**マイ コンピューター**選択**プロパティ**です。  
+    2.  右クリック**マイ コンピューター**選択**プロパティ**します。  
   
-    3.  **MSDTC**  タブで、をクリックして**セキュリティ構成**です。  
+    3.  **MSDTC** ] タブで [**セキュリティ構成**します。  
   
-    4.  確認**ネットワーク DTC アクセス**と**を許可する受信**です。  
+    4.  確認**ネットワーク DTC アクセス**と**を許可する受信**します。  
   
-    5.  をクリックして**はい**MS DTC サービスを再起動し、をクリックする**OK**です。  
+    5.  をクリックして**はい**MS DTC サービスを再起動し **[ok]**。  
   
     6.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
@@ -234,25 +234,25 @@ Creating new service instance...
   
     1.  Windows ファイアウォール アプリケーションをコントロール パネルから実行します。  
   
-    2.  **例外** タブで、をクリックして**プログラムの追加**です。  
+    2.  **例外**] タブで [**プログラムの追加**します。  
   
     3.  C:\WINDOWS\System32 フォルダーに移動します。  
   
-    4.  Msdtc.exe を選択し、クリックして**開く**です。  
+    4.  Msdtc.exe を選択し、クリックして**オープン**します。  
   
-    5.  をクリックして**ok**を閉じる、**プログラムの追加** ダイアログ ボックスをクリック**OK** Windows ファイアウォール アプレットを閉じます。  
+    5.  をクリックして**ok**を閉じる、**プログラムの追加** ダイアログ ボックスをクリックします**OK** Windows ファイアウォール アプレットを閉じます。  
   
 3.  クライアント コンピューターで、送信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
   
-    1.  **開始** メニューの "éˆú"**コントロール パネルの **、し**管理ツール**、し、**コンポーネント サービス**です。  
+    1.  **開始** メニューに移動します**コントロール パネル**、し**管理ツール**、し**コンポーネント サービス**します。  
   
-    2.  右クリック**マイ コンピューター**選択**プロパティ**です。  
+    2.  右クリック**マイ コンピューター**選択**プロパティ**します。  
   
-    3.  **MSDTC**  タブで、をクリックして**セキュリティ構成**です。  
+    3.  **MSDTC** ] タブで [**セキュリティ構成**します。  
   
-    4.  確認**ネットワーク DTC アクセス**と**送信を許可する**です。  
+    4.  確認**ネットワーク DTC アクセス**と**送信を許可する**します。  
   
-    5.  をクリックして**はい**MS DTC サービスを再起動し、をクリックする**OK**です。  
+    5.  をクリックして**はい**MS DTC サービスを再起動し **[ok]**。  
   
     6.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
@@ -261,7 +261,7 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   

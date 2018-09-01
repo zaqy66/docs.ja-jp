@@ -2,12 +2,12 @@
 title: 高度なポリシー
 ms.date: 03/30/2017
 ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
-ms.openlocfilehash: 81cf2fb428833d4ca8cccf197011b69f2ccf3108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: becdc28affd877239474d6f0f007a480297bccb8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515556"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387890"
 ---
 # <a name="advanced-policy"></a>高度なポリシー
 このサンプルは、単純なポリシーのサンプルを拡張するものです。 単純なポリシーのサンプルに含まれる個人向け割引ルールとビジネス割引ルールの他に、新しいルールがいくつか追加されています。  
@@ -50,7 +50,7 @@ ms.locfileid: "33515556"
   
  **ErrorTotalRule:**  
   
- 場合は合計\<0  
+ IF 合計\<0  
   
  THEN Error = "Fired ErrorTotalRule"; Halt  
   
@@ -73,7 +73,7 @@ ms.locfileid: "33515556"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\AdvancedPolicy`  
   

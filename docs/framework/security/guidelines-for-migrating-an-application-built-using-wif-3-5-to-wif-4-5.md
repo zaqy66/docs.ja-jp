@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 60e9dd96824b2c9bef81d236bab8f577f9fb2062
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5db0925900a357134cf0103bbebbf5c9aac9e688
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399297"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386866"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン
 ## <a name="applies-to"></a>対象  
@@ -27,7 +27,7 @@ ms.locfileid: "33399297"
 ### <a name="assembly-and-namespace-changes"></a>アセンブリおよび名前空間の変更  
  WIF 3.5 では、WIF クラスはすべて `Microsoft.IdentityModel` アセンブリ (microsoft.identitymicrosoft.identitymodel.dll) に含まれています。 WIF 4.5 では、WIF クラスは、`mscorlib` (mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll)、および `System.ServiceModel` (System.ServiceModel.dll) というアセンブリに分割されています。  
   
- WIF 3.5 クラスはすべて `Microsoft.IdentityModel` 名前空間 (`Microsoft.IdentityModel`、`Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Web` など) の 1 つに含まれていました。 WIF 4.5 では、WIF クラスは [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) 名前空間、<xref:System.Security.Claims?displayProperty=nameWithType> 名前空間、および <xref:System.ServiceModel.Security?displayProperty=nameWithType> 名前空間に分散されています。 この再編成に加えて、一部の WIF 3.5 クラスは WIF 4.5 では削除されました。  
+ WIF 3.5 クラスはすべて `Microsoft.IdentityModel` 名前空間 (`Microsoft.IdentityModel`、`Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Web` など) の 1 つに含まれていました。 WIF 4.5 では、WIF クラスは [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 名前空間、<xref:System.Security.Claims?displayProperty=nameWithType> 名前空間、および <xref:System.ServiceModel.Security?displayProperty=nameWithType> 名前空間に分散されています。 この再編成に加えて、一部の WIF 3.5 クラスは WIF 4.5 では削除されました。  
   
  次の表に、より重要な WIF 4.5 の名前空間とそれに含まれるクラスの種類を示します。 WIF 3.5 および WIF 4.5 間で名前空間を対応付ける方法および WIF 4.5 で削除された名前空間とクラスの詳細については、「[Namespace Mapping between WIF 3.5 and WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)」(WIF 3.5 と WIF 4.5 間での名前空間マッピング) を参照してください。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "33399297"
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio ツールの変更  
  WIF 3.5 SDK では、スタンドアロンのフェデレーション ユーティリティである FedUtil.exe (FedUtil) が用意されており、これを使用して WIF 対応アプリケーションでの ID 管理をセキュリティ トークン サービス (STS) に外部委託できました。 このツールにより、WIF の設定がアプリケーション構成ファイルに追加され、アプリケーションは 1 つ以上の STS からセキュリティ トークンを取得できました。また **[STS サービス参照の追加]** ボタンによって Visual Studio に表示されました。 FedUtil は WIF 4.5 には付属していません。 代わりに、WIF 4.5 は Identity and Access Tool for Visual Studio 2012 という名前の新しい Visual Studio の拡張ツールをサポートします。これを使用することで、ID 管理を STS に外部委託するために必要な WIF の設定を備えたアプリケーションの構成ファイルを変更できます。 また Identity and Access Tool は、WIF 対応アプリケーションのテストに使用できる Local STS と呼ばれる STS を実装しています。 多くの場合、この機能により、開発中のソリューションをテストするのに WIF 3.5 で頻繁に必要とされたカスタム STS をビルドする必要がなくなりました。 したがって、STS のテンプレートは、Visual Studio 2012 でサポートされなくなりました。ただし、STS の開発をサポートするクラスは WIF 4.5 でも使用できます。  
   
- Visual Studio の Extensions and Updates Manager から Identity and Access Tool をインストールするか、または Code Gallery の「[Identity and Access Tool for Visual Studio 2012](http://go.microsoft.com/fwlink/?LinkID=245849)」 (Visual Studio 2012 の ID およびアクセス ツール) ページからダウンロードできます。 Visual Studio ツールの変更を次のリストにまとめます。  
+ Visual Studio の Extensions and Updates Manager から Identity and Access Tool をインストールするか、または Code Gallery の「[Identity and Access Tool for Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=245849)」 (Visual Studio 2012 の ID およびアクセス ツール) ページからダウンロードできます。 Visual Studio ツールの変更を次のリストにまとめます。  
   
 -   [STS サービス参照の追加] 機能は削除されています。 その代わりとなるのが Identity and Access Tool です。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "33399297"
 ## <a name="enabling-wif-35-in-windows-8"></a>Windows 8 で WIF 3.5 を有効にする  
  WIF 4.5 は .NET 4.5 の一部であるため、Windows 8 および Windows Server 2012 を実行するコンピューターで自動的に有効になり、WIF 4.5 を使用して作成されたアプリケーションは、既定では Windows 8 または Windows Server 2012 で実行されます。 ただし、WIF 3.5 を使用して作成されたアプリケーションは、Windows 8 または Windows Server 2012 を実行しているコンピューター上で実行することが必要になる場合があります。 この場合、ターゲット コンピューターで WIF 3.5 を有効にする必要があります。 これは、Windows 8 を実行するコンピューター上で、展開イメージのサービスと管理 (DISM) ツールを使用して行うことができます。 Windows Server 2012 を実行するコンピューターで、DISM ツールを使用するか、または Windows PowerShell の `Add-WindowsFeature` コマンドレットを使用できます。 どちらの場合も、適切なコマンドは、コマンド ラインまたは Windows PowerShell の環境内から呼び出すことができます。  
   
- 次のコマンドは、DISM ツールをコマンド ラインまたは Windows PowerShell の環境内から使用する方法を示します。 既定では、DISM PowerShell モジュールは Windows 8 および Windows Server 2012 に含まれるので、インポートする必要はありません。 Windows PowerShell を使用した DISM の使い方の詳細については、「[Windows PowerShell の DISM の使用方法](http://go.microsoft.com/fwlink/?LinkId=254419)」を参照してください。  
+ 次のコマンドは、DISM ツールをコマンド ラインまたは Windows PowerShell の環境内から使用する方法を示します。 既定では、DISM PowerShell モジュールは Windows 8 および Windows Server 2012 に含まれるので、インポートする必要はありません。 Windows PowerShell を使用した DISM の使い方の詳細については、「[Windows PowerShell の DISM の使用方法](https://go.microsoft.com/fwlink/?LinkId=254419)」を参照してください。  
   
  DISM を使用して WIF 3.5 を有効にするには:  
   

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: f79991ef7f5d88cf87d1635e8c415ffd2c8b69cd
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 7c9b713571cea3d2c8c5f6511f2cfab7e87b80ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253366"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387444"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Service クライアント ユーティリティ (DataSvcUtil.exe)
 
 DataSvcUtil.exe は、コマンド ライン ツールを使用する WCF Data Services によって提供される、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードし、.NET Framework クライアント アプリケーションからデータ サービスにアクセスするために必要なクライアント データ サービス クラスを生成します。 このユーティリティでは、以下のメタデータ ソースを使用してデータ クラスを生成できます。
 
--   データ サービスのルート URI。 ユーティリティは、データ サービスによって公開されるデータ モデルが記述されたサービス メタデータ ドキュメントを要求します。 詳細については、次を参照してください。 [OData: サービス メタデータ ドキュメント](http://go.microsoft.com/fwlink/?LinkId=186070)します。
+-   データ サービスのルート URI。 ユーティリティは、データ サービスによって公開されるデータ モデルが記述されたサービス メタデータ ドキュメントを要求します。 詳細については、次を参照してください。 [OData: サービス メタデータ ドキュメント](https://go.microsoft.com/fwlink/?LinkId=186070)します。
 
--   定義されている概念スキーマ定義言語 (CSDL) を使用して定義されているデータ モデル ファイル (.csdl)、 [ \[MC-CSDL\]: 概念スキーマ定義ファイル形式](http://go.microsoft.com/fwlink/?LinkID=159072)仕様。
+-   定義されている概念スキーマ定義言語 (CSDL) を使用して定義されているデータ モデル ファイル (.csdl)、 [ \[MC-CSDL\]: 概念スキーマ定義ファイル形式](https://go.microsoft.com/fwlink/?LinkID=159072)仕様。
 
--   Entity Framework に付属する Entity Data Model ツールを使用して作成された .edmx ファイル。 詳細については、次を参照してください。、 [ \[MC-EDMX\]: データ サービス パッケージング形式のエンティティ データ モデル](http://go.microsoft.com/fwlink/?LinkID=178833)仕様。
+-   Entity Framework に付属する Entity Data Model ツールを使用して作成された .edmx ファイル。 詳細については、次を参照してください。、 [ \[MC-EDMX\]: データ サービス パッケージング形式のエンティティ データ モデル](https://go.microsoft.com/fwlink/?LinkID=178833)仕様。
 
 詳細については、次を参照してください。[方法: 手動で生成クライアント データ サービス クラス](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)します。
 

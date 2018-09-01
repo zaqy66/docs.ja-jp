@@ -2,12 +2,12 @@
 title: SQL Server での認証
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 85f441d2181d434ec9fccca5841296106d0d7e3f
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 8d7fcb149059c06b7875663e4df5272312121c87
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754482"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394096"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server での認証
 SQL Server は、Windows 認証モードと混合モードの 2 つの認証モードをサポートしています。  
@@ -83,5 +83,4 @@ SQL Server は、Windows 認証モードと混合モードの 2 つの認証モ�
  [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [データ ソースへの接続](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [接続文字列](../../../../../docs/framework/data/adonet/connection-strings.md)  
- 
-  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

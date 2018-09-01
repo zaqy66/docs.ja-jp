@@ -2,12 +2,12 @@
 title: チュートリアルによる学習
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 028bd2af9ba88136e5955c6776b0d765af20fca3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1386d0e8fadddab5cd15818cb616bf331262e654
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362222"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385459"
 ---
 # <a name="learning-by-walkthroughs"></a>チュートリアルによる学習
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメントには、いくつかのチュートリアルが用意されています。 このトピックでは、チュートリアルに関する全般的な話題 (トラブルシューティングを含む) を取り上げます。また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] について学ぶための、いくつかの入門レベルのチュートリアルへのリンクを示します。  
@@ -30,20 +30,20 @@ ms.locfileid: "33362222"
 ## <a name="general"></a>全般  
  以下の情報は、これらのチュートリアル全体に該当します。  
   
--   環境の場合: 各[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]チュートリアルでは、その統合開発環境 (IDE) として Visual Studio を使用します。  
+-   環境: 各[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]チュートリアルでは、その統合開発環境 (IDE) として Visual Studio を使用します。  
   
--   SQL エンジン : これらのチュートリアルは、SQL Server Express を使用して実装できるように作成されています。 SQL Server Express を持っていない場合は、無料でダウンロードできます。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)です。  
+-   SQL エンジン : これらのチュートリアルは、SQL Server Express を使用して実装できるように作成されています。 SQL Server Express を持っていない場合は、無料でダウンロードできます。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
   
     > [!NOTE]
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のチュートリアルでは、ファイル名を接続文字列として使用します。 ファイル名を指定するだけで済むのは、SQL Server Express ユーザーのために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に備わっている機能です。 セキュリティ問題には常に注意してください。 詳細については、次を参照してください。 [LINQ to SQL でセキュリティ](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)です。  
+    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のチュートリアルでは、ファイル名を接続文字列として使用します。 ファイル名を指定するだけで済むのは、SQL Server Express ユーザーのために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に備わっている機能です。 セキュリティ問題には常に注意してください。 詳細については、次を参照してください。 [LINQ to SQL におけるセキュリティ](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)します。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] チュートリアルでは、Northwind サンプル データベースが通常必要とします。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)です。  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通常、チュートリアルには、Northwind サンプル データベースが必要です。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
   
--   ダイアログ ボックスとメニュー コマンドが表示のチュートリアルで異なる場合があります、アクティブな設定または Visual Studio のエディションによっては、ヘルプの説明。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+-   アクティブな設定またはエディションの Visual Studio によって、ヘルプの説明から、ダイアログ ボックスとメニュー コマンドのチュートリアルが表示が異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 -   多階層のシナリオに関連するチュートリアルでは、開発用コンピューターとは別のコンピューターにサーバーが配置されていることと、そのサーバーにアクセスするための適切なアクセス許可が必要です。  
   
--   通常、Northwind サンプル データベースの Orders テーブルを表すクラスの名前は `[Order]` です。 エスケープ処理が必要な`Order`Visual Basic のキーワードです。  
+-   通常、Northwind サンプル データベースの Orders テーブルを表すクラスの名前は `[Order]` です。 に必要なエスケープが`Order`Visual Basic のキーワードです。  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
  これらのチュートリアルで使用するデータベースにアクセスするための十分なアクセス許可がない場合、ランタイム エラーが発生することがあります。 特に一般的な問題を解決するためのヒントについては、以下の手順を参照してください。  
@@ -53,26 +53,26 @@ ms.locfileid: "33362222"
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>データベース ログオンを確認または変更するには  
   
-1.  Windows の**開始** メニューのをポイント**すべてのプログラム**、 **Microsoft SQL Server 2005**、 をポイント**構成ツール**をクリックし、**SQL Server 構成マネージャー**です。  
+1.  Windows で**開始**メニューで、**すべてのプログラム**、 **Microsoft SQL Server 2005**、 をポイント**構成ツール**、順にクリックします**SQL Server 構成マネージャー**します。  
   
-2.  左側のウィンドウで、 **SQL Server 構成マネージャー**をクリックして**SQL Server 2005 Services**です。  
+2.  左側のウィンドウで、 **SQL Server 構成マネージャー**、 をクリックして**SQL Server 2005 Services**します。  
   
-3.  右側のペインで右クリック**SQL Server (SQLEXPRESS)**、クリックして**プロパティ**です。  
+3.  右側のウィンドウで右クリック**SQL Server (SQLEXPRESS)**、 をクリックし、**プロパティ**します。  
   
-4.  クリックして、**ログオン**タブし、サーバーにログオンを行う方法を確認してください。  
+4.  をクリックして、**ログオン**タブし、サーバーにログオンを行う方法を確認します。  
   
      ほとんどの場合、**ローカル システム**動作します。  
   
-     変更を加えた場合はクリックして**再起動**サービスを再起動します。  
+     変更を行った場合にクリックします**再起動**サービスを再起動します。  
   
 ### <a name="protocols"></a>プロトコル  
- 場合によっては、アプリケーションがデータベースにアクセスするためのプロトコルが正しく設定されていないこともあります。 たとえば、**名前付きパイプ**のチュートリアルに必要なプロトコル[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]既定で無効になっています。  
+ 場合によっては、アプリケーションがデータベースにアクセスするためのプロトコルが正しく設定されていないこともあります。 たとえば、**名前付きパイプ**のチュートリアルに必要とされる、プロトコル[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は既定で有効になっていません。  
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>名前付きパイプ プロトコルを有効にするには  
   
-1.  左側のウィンドウで、 **SQL Server 構成マネージャー**、展開**SQL Server 2005 ネットワークの構成**、クリックして**SQLEXPRESS のプロトコル**です。  
+1.  左側のウィンドウで、 **SQL Server 構成マネージャー**、展開**SQL Server 2005 ネットワークの構成**、 をクリックし、 **SQLEXPRESS のプロトコル**します。  
   
-2.  右側のウィンドウでことを確認、**名前付きパイプ**プロトコルを有効にします。 そうでない場合は右クリック**名前付きパイプ** をクリックし、**を有効にする**です。  
+2.  右側のウィンドウで、**名前付きパイプ**プロトコルを有効にします。 そうでない場合は右クリック**名前付きパイプ**し**を有効にする**します。  
   
      サービスの停止および再起動が必要になります。 次のブロックの手順に従って操作します。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "33362222"
   
 ##### <a name="to-stop-and-restart-the-service"></a>サービスを停止および再起動するには  
   
-1.  左側のウィンドウで、 **SQL Server 構成マネージャー**をクリックして**SQL Server 2005 Services**です。  
+1.  左側のウィンドウで、 **SQL Server 構成マネージャー**、 をクリックして**SQL Server 2005 Services**します。  
   
-2.  右側のペインで右クリック**SQL Server (SQLEXPRESS)**、クリックして**停止**です。  
+2.  右側のウィンドウで右クリック**SQL Server (SQLEXPRESS)**、 をクリックし、**停止**します。  
   
-3.  右クリック**SQL Server (SQLEXPRESS)**、クリックして**再起動**です。  
+3.  右クリック**SQL Server (SQLEXPRESS)**、 をクリックし、**再起動**します。  
   
 ## <a name="see-also"></a>関連項目  
  [はじめに](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

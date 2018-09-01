@@ -2,12 +2,12 @@
 title: .NET Framework Data Provider for Oracle のシステム要件
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: a5ce0e831af40cbe86e6ac901d6e92d5a60f8774
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60d57e30e2a1588ec6e0b9e253f371f8fbae28bc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363519"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385748"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle のシステム要件
 .NET Framework Data Provider for Oracle を使用するには、MDAC (Microsoft Data Access Components) のバージョン 2.6 以降が必要です。 MDAC 2.8 SP1 をインストールすることをお勧めします。  
@@ -26,17 +26,17 @@ ms.locfileid: "33363519"
 Unicode=True   
 ```  
   
- UTF-16 モードで Oracle クライアント ライブラリを初期化することができます。 これにより、Oracle クライアント ライブラリで、マルチバイト文字列の代わりに UTF-16 (UCS-2 とよく似ています) が使用できるようになります。 新たに変換作業を行わなくても、Data Provider for Oracle で Oracle のコード ページを常に使用できます。 この構成は、Oracle 9i クライアントを使用して、AL16UTF16 の代替文字セットを持つ Oracle 9i データベースと通信する場合に動作します。 その他のリソースが、Unicode に変換するために必要な Oracle 9i クライアントが Oracle 9i サーバーと通信を行うとき**CommandText**を適切なマルチ バイト文字の値を設定する 9i サーバーが使用されます。 安全な構成が確保されていることがわかっている場合は、`Unicode=True` を接続文字列に追加することにより回避することができます。  
+ UTF-16 モードで Oracle クライアント ライブラリを初期化することができます。 これにより、Oracle クライアント ライブラリで、マルチバイト文字列の代わりに UTF-16 (UCS-2 とよく似ています) が使用できるようになります。 新たに変換作業を行わなくても、Data Provider for Oracle で Oracle のコード ページを常に使用できます。 この構成は、Oracle 9i クライアントを使用して、AL16UTF16 の代替文字セットを持つ Oracle 9i データベースと通信する場合に動作します。 その他のリソースが、Unicode に変換するために必要な Oracle 9i クライアントが Oracle 9i サーバーと通信を行うとき**CommandText**を適切なマルチ バイト文字の値を設定するサーバーを使用して Oracle9i します。 安全な構成が確保されていることがわかっている場合は、`Unicode=True` を接続文字列に追加することにより回避することができます。  
   
 ### <a name="mixing-versions-of-oracle-client-and-oracle-server"></a>Oracle クライアントと Oracle サーバーのバージョンの混在  
- Oracle 8i クライアントがアクセスできない**NCHAR**、 **NVARCHAR2**、または**NCLOB**サーバーの各国語文字セットが AL16UTF16 として指定されている場合、Oracle 9i データベース内のデータ (既定の設定を Oracle 9i)。 UTF-16 文字セットのサポートは Oracle 9i まで導入されなかったため、Oracle 8i クライアントでは読み取れません。  
+ Oracle 8i クライアントがアクセスできない**NCHAR**、 **NVARCHAR2**、または**NCLOB**サーバーの各国語文字セットが AL16UTF16 として指定した場合、Oracle 9i データベース内のデータ (、既定の設定を Oracle 9i)。 UTF-16 文字セットのサポートは Oracle 9i まで導入されなかったため、Oracle 8i クライアントでは読み取れません。  
   
 ### <a name="working-with-utf-8-data"></a>UTF-8 データの使用  
  代替文字セットを設定するには、レジストリ キー HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOMEID\NLS_LANG を UTF8 に設定します。 詳細については、ご使用のプラットフォームに関する Oracle のインストール ノートを参照してください。 既定の設定は、Oracle Client ソフトウェアのインストールに使用する言語の基本文字セットになっています。 接続するデータベースの各国語文字セットと言語が一致するように設定されていないと、パラメーターと列の組み合わせは、各国語文字セットではなくプライマリ データベースの文字セットでデータを送受信します。  
   
 ### <a name="oraclelob-can-only-update-full-characters"></a>OracleLob で更新できるのは Full 文字列のみです。  
- ユーザビリティ上の理由から、<xref:System.Data.OracleClient.OracleLob>オブジェクトは、.NET Framework Stream クラスから継承し、提供**ReadByte**と**WriteByte**メソッドです。 メソッドも実装など**CopyTo**と**消去**その、Oracle のセクションで動作**LOB**オブジェクト。 Oracle クライアント ソフトウェアが多数の文字を使用する Api を提供する一方、 **LOB**s (**CLOB**と**NCLOB**)。 ただし、これらの API は full 文字列でのみ動作します。 Data Provider for Oracle がサポートを実装するこの違いにより、**読み取り**と**ReadByte**バイトの方法で utf-16 データを操作します。 ただし、他の方法、 **OracleLob**オブジェクトは full 文字列操作のみを許可します。  
+ ユーザビリティ上の理由から、<xref:System.Data.OracleClient.OracleLob>オブジェクトは、.NET Framework Stream クラスから継承し、提供**ReadByte**と**WriteByte**メソッド。 メソッドも実装など**CopyTo**と**消去**その、Oracle のセクションで動作**LOB**オブジェクト。 これに対し、Oracle クライアント ソフトウェアはさまざまな文字を使用する Api を提供します。 **LOB**s (**CLOB**と**NCLOB**)。 ただし、これらの API は full 文字列でのみ動作します。 Data Provider for Oracle のサポートの実装この違いにより、**読み取り**と**ReadByte**バイトの方法で utf-16 データを操作します。 ただし、他の方法、 **OracleLob**オブジェクトは full 文字列操作のみを許可します。  
   
 ## <a name="see-also"></a>関連項目  
  [Oracle および ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

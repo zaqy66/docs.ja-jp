@@ -2,15 +2,15 @@
 title: サポートされていないシナリオ
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 5cc4e65ce4f93a352b651203757a484a9d90a85d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c0ee061f754e85244bffdc06cbe23aee68d2222
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507715"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388531"
 ---
 # <a name="unsupported-scenarios"></a>サポートされていないシナリオ
-さまざまな理由で、Windows Communication Foundation (WCF) では、いくつかの特定のセキュリティ シナリオはサポートされません。 たとえば、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition は SSPI または Kerberos 認証プロトコルを実装していない、したがって WCF サポートしていませんプラットフォーム上の Windows 認証でサービスを実行します。 ユーザー名/パスワードや HTTP/HTTPS 統合認証など、他の認証メカニズムは、Windows XP Home Edition で WCF を実行している場合にサポートされます。  
+さまざまな理由は、Windows Communication Foundation (WCF) は一部の特定のセキュリティ シナリオをサポートしていません。 たとえば、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition は SSPI または Kerberos 認証プロトコルを実装していないため WCF サポートしていないプラットフォームで Windows 認証を使用したサービスを実行します。 ユーザー名/パスワードや HTTP/HTTPS 統合認証などの他の認証メカニズムは、Windows XP Home Edition で WCF を実行している場合にサポートされます。  
   
 ## <a name="impersonation-scenarios"></a>偽装シナリオ  
   
@@ -18,7 +18,7 @@ ms.locfileid: "33507715"
  WCF クライアントが、偽装で Windows 認証を使用して WCF サービスへの非同期呼び出しを行うと、偽装 ID ではなくクライアント プロセスの ID で認証が行われる場合があります。  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP と有効化されたセキュリティ コンテキスト トークン クッキー  
- WCF が偽装をサポートしていませんし、<xref:System.InvalidOperationException>が、次の条件に当てはまる場合にスローされます。  
+ WCF が偽装をサポートしていません、<xref:System.InvalidOperationException>が、次の条件が存在する場合にスローされます。  
   
 -   オペレーティング システムが [!INCLUDE[wxp](../../../../includes/wxp-md.md)] である。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33507715"
   
 -   状態ベースのセキュリティ コンテキスト トークン (SCT: Security Context Token) が作成された (既定では、作成は無効になっています)。  
   
- 状態ベースの SCT はカスタム バインドの使用によってのみ作成できます。 詳細については、次を参照してください[する方法: セキュリティで保護されたセッションのセキュリティ コンテキスト トークンを作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)。コードでトークンを有効にするには、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> メソッドまたは <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> メソッドを使用して、セキュリティ バインディング要素 (<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> または <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>) を作成し、`requireCancellation` パラメーターを `false` に設定します。 このパラメーターは、SCT のキャッシュを参照します。 値を `false` に設定することによって、状態ベースの SCT 機能が有効になります。  
+ 状態ベースの SCT はカスタム バインドの使用によってのみ作成できます。 詳細については、次を参照してください[方法: セキュリティで保護されたセッションのセキュリティ コンテキスト トークン作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)。コードでトークンを有効にするには、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> メソッドまたは <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> メソッドを使用して、セキュリティ バインディング要素 (<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> または <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>) を作成し、`requireCancellation` パラメーターを `false` に設定します。 このパラメーターは、SCT のキャッシュを参照します。 値を `false` に設定することによって、状態ベースの SCT 機能が有効になります。  
   
  または、構成において、<`customBinding`> を作成し、<`security`> 要素を追加して `authenticationMode` 属性に SecureConversation および `requireSecurityContextCancellation` 属性に `true` を設定することによってもトークンが有効になります。  
   
@@ -36,52 +36,52 @@ ms.locfileid: "33507715"
 >  上記の要件は限定的です。 たとえば、<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> は Windows ID を生成するバインド要素を作成しますが、SCT を確立しません。 したがって、`Required` で [!INCLUDE[wxp](../../../../includes/wxp-md.md)] オプションと共に使用できます。  
   
 ### <a name="possible-aspnet-conflict"></a>考えられる ASP.NET との競合  
- WCF と[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]両方を有効にしたり、偽装を無効にします。 ときに[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]WCF アプリケーションをホスト、WCF の間で競合が発生する可能性がありますと[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]構成設定。 競合が発生した場合、WCF 設定が優先しない限り、<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>プロパティに設定されている<xref:System.ServiceModel.ImpersonationOption.NotAllowed>、その場合、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]権限借用設定が優先されます。  
+ WCF と[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]両方を有効にしたり、偽装を無効にします。 ときに[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]WCF アプリケーションをホスト、WCF との間の競合が存在し、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]構成設定。 競合が発生した場合、WCF 設定が優先しない限り、<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>プロパティに設定されて<xref:System.ServiceModel.ImpersonationOption.NotAllowed>、その場合、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]権限借用の設定が優先されます。  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>偽装を有効にすると、アセンブリの読み込みに失敗する場合がある  
  偽装されたコンテキストにアセンブリを読み込むためのアクセス権がない場合、共通言語ランタイム (CLR: Common Language Runtime) が AppDomain のアセンブリを初めて読み込もうとしたときに、その <xref:System.AppDomain> はエラーをキャッシュします。 この場合、偽装を元に戻した後、元に戻されたコンテキストにアセンブリを読み込むためのアクセス権があったとしても、それ以降のアセンブリの読み込みは失敗します。 これは、ユーザー コンテキストの変更後に、CLR が読み込みを再試行しないためです。 このエラーから回復するには、アプリケーション ドメインを再起動する必要があります。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> クラスの <xref:System.ServiceModel.Security.WindowsClientCredential> プロパティの既定値は <xref:System.Security.Principal.TokenImpersonationLevel.Identification> です。 ほとんどの場合、ID レベルの偽装コンテキストには、追加のアセンブリを読み込むための権限がありません。 これは既定値であるため、非常に一般的な状態として認識しておく必要があります。 ID レベルの偽装は、偽装プロセスが `SeImpersonate` 権限を持たない場合にも発生します。 詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)です。  
+>  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> クラスの <xref:System.ServiceModel.Security.WindowsClientCredential> プロパティの既定値は <xref:System.Security.Principal.TokenImpersonationLevel.Identification> です。 ほとんどの場合、ID レベルの偽装コンテキストには、追加のアセンブリを読み込むための権限がありません。 これは既定値であるため、非常に一般的な状態として認識しておく必要があります。 ID レベルの偽装は、偽装プロセスが `SeImpersonate` 権限を持たない場合にも発生します。 詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
   
 ### <a name="delegation-requires-credential-negotiation"></a>委任には資格情報ネゴシエーションが必要  
- 委任で Kerberos 認証プロトコルを使用するには、資格情報ネゴシエーションを使用する Kerberos プロトコル ("マルチレッグ" Kerberos または "マルチステップ" Kerberos とも呼ばれます) を実装する必要があります。 資格情報ネゴシエーションを使用しない Kerberos 認証 (ワンショット Kerberos またはシングルレッグ Kerberos とも呼ばれる) を実装した場合は、例外がスローされます。 資格情報ネゴシエーションを実装する方法の詳細については、次を参照してください。 [Windows 認証エラーのデバッグ](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)です。  
+ 委任で Kerberos 認証プロトコルを使用するには、資格情報ネゴシエーションを使用する Kerberos プロトコル ("マルチレッグ" Kerberos または "マルチステップ" Kerberos とも呼ばれます) を実装する必要があります。 資格情報ネゴシエーションを使用しない Kerberos 認証 (ワンショット Kerberos またはシングルレッグ Kerberos とも呼ばれる) を実装した場合は、例外がスローされます。 資格情報ネゴシエーションを実装する方法の詳細については、次を参照してください。 [Windows 認証エラーのデバッグ](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)します。  
   
 ## <a name="cryptography"></a>暗号  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>対称キーを使用する場合にのみサポートされる SHA-256  
- WCF では、さまざまな暗号化およびシステム指定のバインディングでアルゴリズム スイートを使用して指定できる署名ダイジェスト作成アルゴリズムをサポートします。 セキュリティを強化は、WCF は、署名ダイジェスト ハッシュを作成するためのセキュリティで保護されたハッシュ アルゴリズム (SHA) 2 アルゴリズム、具体的には、sha-256 をサポートします。 このリリースは、Kerberos キーなどの対称キーを使用する場合、およびメッセージに署名するために X.509 証明書を使用しない場合に限り SHA-256 をサポートします。 WCF が (X.509 証明書で使用する) RSA 署名をサポートしていませんで rsa-sha256 をサポートの現在がないのための sha-256 ハッシュを使用して、[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]です。  
+ WCF には、さまざまな暗号化と、システム指定のバインディングでアルゴリズム スイートを使用して指定できる署名ダイジェスト作成アルゴリズムがサポートしています。 セキュリティを強化は、WCF は、署名ダイジェスト ハッシュを作成するため、セキュア ハッシュ アルゴリズム (SHA) 2 アルゴリズムでは、具体的にはの SHA 256 をサポートします。 このリリースは、Kerberos キーなどの対称キーを使用する場合、およびメッセージに署名するために X.509 証明書を使用しない場合に限り SHA-256 をサポートします。 WCF ではサポートしていません (X.509 証明書で使用する) RSA 署名で rsa-sha256 を現在のサポートがないのための SHA 256 ハッシュを使用して、[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]します。  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>サポートされていない FIPS 準拠の SHA-256 ハッシュ  
- Sha-256 を使用するアルゴリズム スイートが FIPS 準拠アルゴリズムの使用が必要なシステムで WCF でサポートされていないために、WCF は sha-256 FIPS 準拠のハッシュをサポートしません。  
+ WCF は sha-256 FIPS 準拠のハッシュをサポートしていないため、システムが FIPS 準拠アルゴリズムの使用が必要な場合の WCF でサポートされていないことを SHA 256 を使用するアルゴリズム スイート。  
   
 ### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a>レジストリを編集すると、FIPS 準拠のアルゴリズムが失敗する場合がある  
- 連邦情報処理規格 (FIPS: Federal Information Processing Standards) 準拠のアルゴリズムを有効または無効にするには、Microsoft 管理コンソール (MMC: Microsoft Management Console) のローカル セキュリティ設定スナップインを使用します。 レジストリでこの設定にアクセスすることもできます。 ただし、WCF をサポートしないこと、レジストリを使用して、設定をリセットします。 値を 1 または 0 以外に設定すると、CLR とオペレーティング システム間で不整合が発生する可能性があります。  
+ 連邦情報処理規格 (FIPS: Federal Information Processing Standards) 準拠のアルゴリズムを有効または無効にするには、Microsoft 管理コンソール (MMC: Microsoft Management Console) のローカル セキュリティ設定スナップインを使用します。 レジストリでこの設定にアクセスすることもできます。 ただし、WCF はサポートされないこと、レジストリを使用して、設定をリセットします。 値を 1 または 0 以外に設定すると、CLR とオペレーティング システム間で不整合が発生する可能性があります。  
   
 ### <a name="fips-compliant-aes-encryption-limitation"></a>FIPS 準拠の AES 暗号化の制限  
  FIPS 準拠の AES 暗号化は、ID レベルの偽装での双方向コールバックでは機能しません。  
   
 ### <a name="cngksp-certificates"></a>CNG/KSP 証明書  
- *Cryptography API: Next Generation (CNG)* は、CryptoAPI 用の長期的な置換です。 この API は、アンマネージ コードで使用可能な[!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]以降の Windows バージョン。  
+ *Cryptography API: Next Generation (CNG)* 長期にわたって置き換え、CryptoAPI のです。 この API は、アンマネージ コードで使用できる[!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]以降の Windows バージョン。  
   
- .NET framework 4.6.1 と以前のバージョンは、従来の CryptoAPI CNG/KSP 証明書の処理に使用するためこれらの証明書をサポートしています。 .NET Framework 4.6.1 と以前のバージョンで証明書の使用には、例外が発生します。  
+ .NET framework 4.6.1 と以前のバージョンは、従来の CryptoAPI CNG/KSP 証明書を処理するために使用されるため、これらの証明書をサポートしています。 .NET Framework 4.6.1 と以前のバージョンでこれらの証明書の使用には、例外が発生します。  
   
  証明書に KSP が使用されているかどうかを知る方法は 2 つあります。  
   
 -   `p/invoke` を `CertGetCertificateContextProperty` に対して実行し、返された `dwProvType` で `CertGetCertificateContextProperty` を調べる。  
   
--   使用して、`certutil`証明書を照会するためのコマンドラインからコマンド。 詳細については、次を参照してください。[証明書のトラブルシューティングに関する Certutil のタスク](http://go.microsoft.com/fwlink/?LinkId=120056)です。  
+-   使用して、`certutil`証明書を調べるためのコマンドラインからコマンド。 詳細については、次を参照してください。[証明書のトラブルシューティングに関する Certutil タスク](https://go.microsoft.com/fwlink/?LinkId=120056)します。  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET の偽装と ASP.NET 互換を使用する必要がある場合にメッセージ セキュリティが失敗する  
- WCF は、次の設定の組み合わせをサポートしていませんので、クライアント認証できなくなることができます。  
+ WCF では、クライアント認証を防止するため、次の設定の組み合わせはサポートされません。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] の偽装を有効にしている。 これは、Web.config ファイルに設定して、`impersonate`の属性、<`identity`> 要素を`true`です。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] の偽装を有効にしている。 これは、Web.config ファイルで設定して、`impersonate`の属性、<`identity`> 要素を`true`します。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換性モードが有効になって、`aspNetCompatibilityEnabled`の属性、 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)に`true`です。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換性モードが有効になって、`aspNetCompatibilityEnabled`の属性、 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)に`true`します。  
   
 -   メッセージ モード セキュリティを使用している。  
   
- これを回避するには、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換モードを無効にします。 またはの場合、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互換モードは必須では無効にする、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]権限の借用機能し、WCF に用意されている権限借用を代わりに使用します。 詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)です。  
+ これを回避するには、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換モードを無効にします。 または、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互換モードが必要ですが、無効にする、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]権限借用機能し、WCF が提供する偽装の代わりに使用します。 詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 リテラル アドレス エラー  
  クライアントとサービスが同じコンピューター上に存在し、サービスに対して IPv6 リテラル アドレスが使用されている場合は、セキュリティ要求が失敗します。  

@@ -2,12 +2,12 @@
 title: DataSet スキーマの推論プロセスの概要
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 9bcc5ce1574eed60d2ef1aa35bdafe8c6050e44c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1583d5232a3dd483bbe2a6fa0b1bc8a3ae6a659f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760272"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395824"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>DataSet スキーマの推論プロセスの概要
 推論プロセスでは、まず、テーブルとして推論する XML ドキュメントの要素を決定します。 XML ドキュメントの残りの要素から、それらのテーブルの列が推論によって決定されます。 入れ子状のテーブルの場合は、入れ子になった <xref:System.Data.DataRelation> オブジェクトと <xref:System.Data.ForeignKeyConstraint> オブジェクトが生成されます。  
@@ -26,9 +26,9 @@ ms.locfileid: "32760272"
   
 -   属性または子要素を持たず、繰り返し出現することもない要素は、列として推論されます。  
   
--   推論されたその他の要素内で入れ子になったテーブルとして推論される要素のテーブルとして、入れ子になった**DataRelation** 2 つのテーブル間に作成されます。 新しいプライマリ キーの列が名前付き**TableName_Id**が両方のテーブルに追加されで使用される、 **DataRelation**です。 A **ForeignKeyConstraint**間を使用して 2 つのテーブルが作成、 **TableName_Id**列です。  
+-   推論されたその他の要素内で入れ子になったテーブルとして推論される要素のテーブルとして、入れ子になった**DataRelation** 2 つのテーブルが作成されます。 新しいプライマリ キーの列が名前付き**TableName_Id**が両方のテーブルに追加されで使用される、 **DataRelation**します。 A **ForeignKeyConstraint**を使用して 2 つのテーブル間に作成、 **TableName_Id**列。  
   
--   新しい列の名前は、要素のテーブルとして推論されると、テキストは含まれていない子要素を持つ**TableName_Text**の各要素のテキストを作成します。 テーブルとして推論される要素にテキストだけでなく、子要素もある場合、テキストは無視されます。  
+-   新しい列がという名前のテーブルとして推論されると、テキストは含まれていない子要素を持つ要素の**TableName_Text**の各要素のテキストが作成されます。 テーブルとして推論される要素にテキストだけでなく、子要素もある場合、テキストは無視されます。  
   
 ## <a name="see-also"></a>関連項目  
  [XML からの DataSet リレーショナル構造の推論](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
@@ -36,4 +36,4 @@ ms.locfileid: "32760272"
  [XML の DataSet スキーマ情報の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

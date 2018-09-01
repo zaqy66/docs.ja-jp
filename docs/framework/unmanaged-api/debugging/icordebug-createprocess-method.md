@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 044f94a567dc4bc2b169ba2a5f2a5d7b4f98e516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dfda61706af3e1043d271c0aa74264bd99a4076c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408578"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386592"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess メソッド
-プロセスと、デバッガーの制御下で、プライマリ スレッドが起動します。  
+プロセスと、デバッガーの制御下で、プライマリ スレッドを起動します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,52 +54,52 @@ HRESULT CreateProcess (
  [in]実行中のプロセスによって実行されるコマンドラインを指定する null で終わる文字列へのポインター。 アプリケーション名 (たとえば、"SomeApp.exe") は、最初の引数である必要があります。  
   
  `lpProcessAttributes`  
- [in]Win32 へのポインター`SECURITY_ATTRIBUTES`をプロセスのセキュリティ記述子を指定します。 場合`lpProcessAttributes`は null、既定のセキュリティ記述子は、プロセスを取得します。  
+ [in]Win32 へのポインター`SECURITY_ATTRIBUTES`プロセスのセキュリティ記述子を指定する構造体。 場合`lpProcessAttributes`が null の場合、既定のセキュリティ記述子は、プロセスに取得します。  
   
  `lpThreadAttributes`  
- [in]Win32 へのポインター`SECURITY_ATTRIBUTES`をプロセスのプライマリ スレッドのセキュリティ記述子を指定します。 場合`lpThreadAttributes`は null、既定のセキュリティ記述子は、スレッドを取得します。  
+ [in]Win32 へのポインター`SECURITY_ATTRIBUTES`プロセスのプライマリ スレッドのセキュリティ記述子を指定する構造体。 場合`lpThreadAttributes`が null の場合、既定のセキュリティ記述子は、スレッドに取得します。  
   
  `bInheritHandles`  
- [in]設定`true`呼び出し元のプロセスで継承可能な各ハンドルが、実行中のプロセスによって継承されたことを示すために、または`false`ハンドルを継承しないことを示すためにします。 継承されたハンドルは、元のハンドルと同じ値とアクセス権限を持っています。  
+ [in]設定`true`、実行中のプロセスによって呼び出し元のプロセスで継承可能な各ハンドルを継承することを示すまたは`false`ハンドルを継承しないことを示します。 継承されたハンドルは、元のハンドルと同じ値とアクセス権限を持っています。  
   
  `dwCreationFlags`  
- [in]ビットごとの組み合わせ、 [Win32 プロセス作成フラグ](http://go.microsoft.com/fwlink/?linkid=69981)優先順位クラスと実行中のプロセスの動作を制御します。  
+ [in]ビットごとの組み合わせ、 [Win32 プロセス作成フラグ](https://go.microsoft.com/fwlink/?linkid=69981)優先度クラスと、実行中のプロセスの動作を制御します。  
   
  `lpEnvironment`  
  [in]新しいプロセスの環境ブロックへのポインター。  
   
  `lpCurrentDirectory`  
- [in]プロセスの現在のディレクトリへの完全パスを指定する null で終わる文字列へのポインター。 このパラメーターが null の場合、新しいプロセスは、呼び出し元プロセスとして同じ現在のドライブとディレクトリがあります。  
+ [in]プロセスの現在のディレクトリにフルパスを指定する null で終わる文字列へのポインター。 このパラメーターが null の場合、新しいプロセスは、呼び出し元プロセスとして同じの現在のドライブとディレクトリがあります。  
   
  `lpStartupInfo`  
- [in]Win32 へのポインター`STARTUPINFOW`ウィンドウ ステーション、デスクトップ、標準のハンドル、および実行中のプロセスのメイン ウィンドウの外観を指定します。  
+ [in]Win32 へのポインター`STARTUPINFOW`ウィンドウ ステーション、デスクトップ、標準のハンドル、および実行中のプロセスのメイン ウィンドウの外観を指定する構造体。  
   
  `lpProcessInformation`  
  [in]Win32 へのポインター`PROCESS_INFORMATION`を起動するプロセスに関する識別情報を指定します。  
   
  `debuggingFlags`  
- [in]デバッグ オプションを指定する CorDebugCreateProcessFlags 列挙型の値です。  
+ [in]デバッグ オプションを指定する CorDebugCreateProcessFlags 列挙型の値。  
   
  `ppProcess`  
- [out]ICorDebugProcess を表す、オブジェクト、プロセスのアドレスへのポインター。  
+ [out]プロセスを表す ICorDebugProcess オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- このメソッドのパラメーターは、Win32 のと同じ`CreateProcess`メソッドです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドのパラメーターは、Win32 のと同じ`CreateProcess`メソッド。  
   
- アンマネージ混合モード デバッグを有効にするには設定`dwCreationFlags`DEBUG_PROCESS に&#124;DEBUG_ONLY_THIS_PROCESS です。 マネージ デバッグのみを使用する場合は、これらのフラグを設定しないでください。  
+ アンマネージの混在モードのデバッグを有効にするには設定`dwCreationFlags`DEBUG_PROCESS に&#124;DEBUG_ONLY_THIS_PROCESS します。 マネージ デバッグのみを使用する場合は、これらのフラグを設定しないでください。  
   
- デバッガーとプロセスが (アタッチされたプロセス) をデバッグするかどうか、単一のコンソールを共有し、相互運用機能デバッグを使用する場合は、可能であれば接続されているプロセスがコンソールのロックを保持し、デバッグ イベントで停止します。 デバッガーは、コンソールを使用するあらゆる試みをブロックし、されます。 この問題を回避するで防ぐを設定、`dwCreationFlags`パラメーター。  
+ かどうか、デバッガーとプロセスをデバッグ (アタッチされたプロセス)、単一のコンソールを共有し、相互運用機能デバッグを使用する場合は、コンソールのロックを保持して、デバッグ イベントで停止にアタッチされたプロセスのことです。 デバッガーにし、コンソールを使用しようがブロックされます。 この問題を回避するで防ぐを設定、`dwCreationFlags`パラメーター。  
   
- 相互運用機能デバッグは IA 64 ベースおよび AMD64 ベースのプラットフォームなど Win9x と x86 以外のプラットフォームではサポートされていません。  
+ IA 64 ベースおよび AMD64 ベースのプラットフォームなどの Win9x と x86 以外のプラットフォームでは、相互運用機能デバッグはサポートされていません。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

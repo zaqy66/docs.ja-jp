@@ -24,22 +24,22 @@ helpviewer_keywords:
 - Keys.Alt enumeration member
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-ms.openlocfilehash: 1c89149fc07f89028b21fa513fd84dee4e890968
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f73dea640bc2059353b2a250188b901f360ea750
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540018"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392526"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>方法 : どの修飾子キーが押されたかを判断する
-ユーザーのキー入力を受け付けるアプリケーションを作成するときの SHIFT、alt キーを押し、CTRL キーなどの修飾子キーの監視にすることもできます。 修飾子キーが押されると組み合わせて、その他のキーを持つか、マウスのクリックで、アプリケーションが適切に応答できます。 たとえば、s が押された場合、画面に表示する"s"があるだけけれども、ctrl キーを押しながら S キーを押すと、現在のドキュメントが保存されます。 処理する場合、<xref:System.Windows.Forms.Control.KeyDown>イベント、<xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A>のプロパティ、<xref:System.Windows.Forms.KeyEventArgs>受信イベントにハンドラーを指定しますどの修飾子キーが押されました。 または、<xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>プロパティ<xref:System.Windows.Forms.KeyEventArgs>同様のビットごとの OR と組み合わせると修飾子キーが押された文字を指定します。 ただし、処理している場合、<xref:System.Windows.Forms.Control.KeyPress>イベントまたは、マウス イベント、イベント ハンドラーがこの情報を受け取りません。 この場合、使用する必要があります、<xref:System.Windows.Forms.Control.ModifierKeys%2A>のプロパティ、<xref:System.Windows.Forms.Control>クラスです。 どちらの場合は、適切なビットごとの AND を実行する必要があります<xref:System.Windows.Forms.Keys>値とをテストする値。 <xref:System.Windows.Forms.Keys>列挙には、演算を実行することが重要であるため、各修飾子キーの値が正しいとのバリエーションが提供しています。 たとえば、SHIFT キーがで表される<xref:System.Windows.Forms.Keys.Shift>、 <xref:System.Windows.Forms.Keys.ShiftKey>、<xref:System.Windows.Forms.Keys.RShiftKey>と<xref:System.Windows.Forms.Keys.LShiftKey>修飾子キーと shift キーを押しをテストする正しい値<xref:System.Windows.Forms.Keys.Shift>です。 同様に、する修飾子として ctlr 番号と alt キーをテストする必要がありますを使用して、<xref:System.Windows.Forms.Keys.Control>と<xref:System.Windows.Forms.Keys.Alt>それぞれ値します。  
+ユーザーのキーボード操作を許可しているアプリケーションを作成するときの SHIFT、ALT、CTRL キーなどの修飾子キーを監視することもできます。 他のキーまたはマウス クリックで、組み合わせて修飾子キーが押された、ときに、アプリケーションが適切に応答できます。 たとえば、s が押された場合、画面に表示する"s"が生じるだけですが、ctrl キーを押しながら S キーを押すと、現在のドキュメントが保存されます。 処理する場合、<xref:System.Windows.Forms.Control.KeyDown>イベント、<xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A>のプロパティ、<xref:System.Windows.Forms.KeyEventArgs>受信したイベント ハンドラーを指定しますどの修飾子キーが押されました。 または、<xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>プロパティの<xref:System.Windows.Forms.KeyEventArgs>もビットごとの OR と組み合わせると修飾子キーが押された文字を指定します。 ただし、処理する場合、<xref:System.Windows.Forms.Control.KeyPress>イベントまたはマウス イベント、イベント ハンドラーは、この情報を受信しません。 この場合、使用する必要があります、<xref:System.Windows.Forms.Control.ModifierKeys%2A>のプロパティ、<xref:System.Windows.Forms.Control>クラス。 どちらの場合、適切なビットごとの AND を実行する必要があります<xref:System.Windows.Forms.Keys>値およびテストする値。 <xref:System.Windows.Forms.Keys>列挙には、バリエーションの各修飾子キーは、ため、ビット演算を実行することが重要と適切な値が提供しています。 たとえば、SHIFT キーがによって表される<xref:System.Windows.Forms.Keys.Shift>、 <xref:System.Windows.Forms.Keys.ShiftKey>、<xref:System.Windows.Forms.Keys.RShiftKey>と<xref:System.Windows.Forms.Keys.LShiftKey>修飾子キーと shift キーをテストする適切な値<xref:System.Windows.Forms.Keys.Shift>します。 同様に、修飾子として ctlr 番号と alt キーをテストする必要がありますを使用して、<xref:System.Windows.Forms.Keys.Control>と<xref:System.Windows.Forms.Keys.Alt>それぞれ値します。  
   
 > [!NOTE]
->  Visual Basic プログラマは、を通じてキーの情報にもアクセスできます、<xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A>プロパティ  
+>  Visual Basic プログラマにとっては、を通じてキーの情報にもアクセスできます、<xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A>プロパティ  
   
-### <a name="to-determine-which-modifier-key-was-pressed"></a>どの修飾子キーが押されたを決定するには  
+### <a name="to-determine-which-modifier-key-was-pressed"></a>どの修飾子キーが押されたかを判断するには  
   
--   演算を使用して`AND`演算子、<xref:System.Windows.Forms.Control.ModifierKeys%2A>プロパティと値の<xref:System.Windows.Forms.Keys>特定の修飾子キーが押されるかどうかを決定する列挙です。 次のコード例で、SHIFT キーが押されたかどうかを確認する方法を示しています、<xref:System.Windows.Forms.Control.KeyPress>イベント ハンドラー。  
+-   ビットごとの使用`AND`演算子と共に、<xref:System.Windows.Forms.Control.ModifierKeys%2A>プロパティと値の<xref:System.Windows.Forms.Keys>特定の修飾子キーが押されたかどうかを決定する列挙体。 次のコード例で、SHIFT キーが押されたかどうかを確認する方法を示しています、<xref:System.Windows.Forms.Control.KeyPress>イベント ハンドラー。  
   
      [!code-cpp[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/CS/form1.cs#5)]
@@ -49,4 +49,4 @@ ms.locfileid: "33540018"
  <xref:System.Windows.Forms.Keys>  
  <xref:System.Windows.Forms.Control.ModifierKeys%2A>  
  [Windows フォーム アプリケーションにおけるキーボード入力](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [方法: Visual basic での CapsLock の判断](http://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)
+ [方法: CapsLock は Visual basic のかどうかを判断します。](https://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)

@@ -2,24 +2,24 @@
 title: エンティティ アクティビティ
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-ms.openlocfilehash: 96301c15b849749299e744a435068c3ec9be2e3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519137"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385805"
 ---
 # <a name="entity-activities"></a>エンティティ アクティビティ
-このサンプルでは、Windows Workflow Foundation と ADO.NET Entity Framework を使用して、データ アクセスを簡素化する方法を示します。  
+このサンプルでは、Windows Workflow Foundation と ADO.NET Entity Framework を使用して、データ アクセスを簡略化する方法を示します。  
   
- ADO.NET Entity Framework を使用すると、開発者は、ドメイン固有のオブジェクト、プロパティ、およびリレーションシップ (Customers、Orders、Order Details、およびこれらのエンティティ間のリレーションシップなど) の形式でデータを扱うことができます。 ADO.NET Entity Framework では、この機能を実現するために、リレーショナル ストレージ スキーマに対して直接プログラムを作成するのではなく、概念アプリケーション モデルに対してプログラムを作成できる抽象化レベルを提供します。 詳細については、ADO.NET Entity Framework を参照してください[ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549)です。  
+ ADO.NET Entity Framework を使用すると、開発者は、ドメイン固有のオブジェクト、プロパティ、およびリレーションシップ (Customers、Orders、Order Details、およびこれらのエンティティ間のリレーションシップなど) の形式でデータを扱うことができます。 ADO.NET Entity Framework では、この機能を実現するために、リレーショナル ストレージ スキーマに対して直接プログラムを作成するのではなく、概念アプリケーション モデルに対してプログラムを作成できる抽象化レベルを提供します。 ADO.NET Entity Framework の参照の詳細については[ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkId=165549)します。  
   
 ## <a name="sample-details"></a>サンプルの詳細  
  このサンプルでは、`Northwind` データベースを使用します。また、`Northwind` データベースを作成および削除するためのスクリプトが用意されています (Setup.cmd と Cleanup.cmd)。 このサンプルのプロジェクトには、`Northwind` データベースに基づく Entity Data Model が含まれています。 このモデルは、プロジェクトに含まれている `Northwind.edmx` ファイルを開くことで見つかります。 これは、ADO.NET Entity Framework を使用してアクセスできるオブジェクトの形状を定義するモデルです。  
   
  このサンプルには、次のアクティビティがあります。  
   
--   `EntitySQLQuery`: `EntitySQLQuery` アクティビティを使用すると、Entity SQL クエリ文字列に基づいてデータベースからオブジェクトを取得できます。 Entity SQL はストレージに依存しない SQL と似たクエリ言語です。この言語では、概念モデルに基づいて、またモデルまたはドメインの一部であるエンティティに基づいて、クエリを指定できます。 Entity SQL 言語の詳細については、次を参照してください。 [Entity SQL 言語](http://go.microsoft.com/fwlink/?LinkId=165646)します。  
+-   `EntitySQLQuery`: `EntitySQLQuery` アクティビティを使用すると、Entity SQL クエリ文字列に基づいてデータベースからオブジェクトを取得できます。 Entity SQL はストレージに依存しない SQL と似たクエリ言語です。この言語では、概念モデルに基づいて、またモデルまたはドメインの一部であるエンティティに基づいて、クエリを指定できます。 Entity SQL 言語の詳細については、次を参照してください。 [Entity SQL 言語](https://go.microsoft.com/fwlink/?LinkId=165646)します。  
   
 -   `EntityLinqQuery`: このアクティビティを使用すると、LINQ クエリまたは LINQ 述語に基づいてデータベースからオブジェクトを取得できます。  
   
@@ -252,6 +252,6 @@ return new ObjectContextScope
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-ms.openlocfilehash: eb4ea812318e5a7df6a1bffefa5d47bf2c929f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540191"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385121"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip コントロール (Windows フォーム)
 このコントロールは、アプリケーション コマンドをグループ化して簡単にアクセスできるようにします。  
@@ -55,19 +55,19 @@ ms.locfileid: "33540191"
  [方法: MDI アプリケーションでメニューの自動マージを設定する](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  実行時にメニュー項目を自動的にマージする方法について説明します。  
   
--   [MenuStrip Items コレクション エディター](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [MenuStrip Items コレクション エディター](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [方法: ToolStripMenuItems をコピーする](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))  
+-   [方法: ToolStripMenuItems をコピーする](how-to-copy-toolstripmenuitems.md)  
   
--   [方法: デザイナーを使用して ToolStripMenuItems を非表示にする](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))  
+-   [方法: デザイナーを使用して ToolStripMenuItems を非表示にする](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [方法: デザイナーを使用して ToolStripMenuItems を無効にする](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))  
+-   [方法: デザイナーを使用して ToolStripMenuItems を無効にする](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [方法: ToolStripMenuItems を移動する](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))  
+-   [方法: ToolStripMenuItems を移動する](how-to-move-toolstripmenuitems.md)  
   
--   [チュートリアル: 標準メニュー項目をフォームに用意する](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))  
+-   [チュートリアル: 標準メニュー項目をフォームに用意する](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [[MenuStrip タスク] ダイアログ ボックス](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [[MenuStrip タスク] ダイアログ ボックス](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.MenuStrip>  

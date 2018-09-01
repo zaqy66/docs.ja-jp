@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 ms.openlocfilehash: 8e64a819e9670a29e97140a32c81f5ff9006f83e
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231512"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388553"
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>チュートリアル : DataRepeater コントロールでのデータの表示 (Visual Studio)
 このチュートリアルでは、 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> コントロールにバインドされたデータを表示する基本的なシナリオ全体を示します。  
@@ -20,7 +20,7 @@ ms.locfileid: "35231512"
 ## <a name="prerequisite"></a>必須コンポーネント  
  このチュートリアルには、Northwind サンプル データベースが必要です。  
   
- 開発用コンピューターにこのデータベースがいない場合は、Microsoft ダウンロード センターからダウンロードできます。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)です。  
+ 開発用コンピューターにこのデータベースがいない場合は、Microsoft ダウンロード センターからダウンロードできます。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
   
 ## <a name="overview"></a>概要  
  このチュートリアルの前半部分は、次の 4 つの主要なタスクについて説明します。  
@@ -88,7 +88,7 @@ ms.locfileid: "35231512"
   
          - または -  
   
-    -   **[新しい接続]** をクリックし、新しいデータ接続を構成します。 詳細については、次を参照してください。[新しい接続を追加](/visualstudio/data-tools/add-new-connections)です。  
+    -   **[新しい接続]** をクリックし、新しいデータ接続を構成します。 詳細については、次を参照してください。[新しい接続を追加](/visualstudio/data-tools/add-new-connections)します。  
   
 5.  データベースにパスワードが必要な場合は、該当するオプションを選択して重要情報を含め、 **[次へ]** をクリックします。  
   

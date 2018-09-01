@@ -20,30 +20,30 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 9e256e93d7857c8674a1d711fa9cafd3ed9a29f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591628"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390900"
 ---
 # <a name="decimal-data-type-visual-basic"></a>10 進型 (Decimal) (Visual Basic)
-可変 10 の累乗によってスケーリング 96 ビット (12 バイト) 整数値を表す 128 ビット (16 バイト) 値の符号付き保持します。 スケール ファクターです。 小数点の右側にある数字の数を指定します。範囲は 0 から 28 です。 最大有効値は 0 (小数点は除く) の小数点以下桁数、79,228,162,514,264,337,593,543,950,335 +/-(7 +/-.9228162514264337593543950335E + 28)。 小数点以下桁数が 28 7.9228162514264337593543950335 については、最大値し、(1 e ~ 28) +/-+/-0.0000000000000000000000000001 は、0 以外の最小値。  
+符号付き 10 の累乗によってスケーリング 96 ビット (12 バイト) の整数値を表す 128 ビット (16 バイト) 値を保持します。 スケール ファクターは小数点の右側にある数字の数を指定します。その範囲は 0 から 28 です。 最大有効値は 0 (数値) の小数点以下桁数、79,228,162,514,264,337,593,543,950,335 +/-(7 +/-.9228162514264337593543950335E + 28)。 小数点以下桁数が 28 7.9228162514264337593543950335 については、最大値は、および 0 以外の最小値は、(1 e ~ 28) +/-+/-0.0000000000000000000000000001。  
   
-## <a name="remarks"></a>コメント  
- `Decimal`データ型有効桁数の最大数を提供しています。 最大 29 桁をサポートしており 7.9228 x 10 を超える値を表すことができる ^28 です。 など、計算に特に適しています財務、桁の数字の数が多い必要がありますが、丸め誤差が許容することはできません。  
+## <a name="remarks"></a>Remarks  
+ `Decimal`データ型有効桁数の最大数を提供しています。 最大 29 桁をサポートし、7.9228 x 10 を超える値を表すことができます ^28。 など、計算に特に適しています金融機関、多くの桁数が必要ですが、丸めエラーを許容することはできません。  
   
  `Decimal` の既定値は 0 です。  
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **有効桁数です。** `Decimal` 浮動小数点データ型がありません。 `Decimal`構造体は、符号ビット、およびスケール ファクター値のどの部分が、小数を指定する整数のバイナリ整数値を保持します。 このため、`Decimal`番号より正確な表現を持つ浮動小数点型よりもメモリ内 (`Single`と`Double`)。  
+-   **有効桁数です。** `Decimal` 浮動小数点データ型はありません。 `Decimal`構造体は、符号ビットとスケール ファクターがどの程度の値が 10 進数の割合を指定する整数値のバイナリ整数値を保持します。 このため、`Decimal`番号は、浮動小数点型よりもメモリ内でより正確な表現を持ち (`Single`と`Double`)。  
   
 -   **パフォーマンス。** `Decimal`データ型はすべての数値型の最も遅い。 データ型を選択する前にパフォーマンスと精度の重要性を比較検討する必要があります。  
   
--   **拡大します。** `Decimal`拡大変換後のデータ型`Single`または`Double`です。 つまり、変換することができます`Decimal`影響を受けずにこれらの型のいずれかに、<xref:System.OverflowException?displayProperty=nameWithType>エラーです。  
+-   **拡大します。** `Decimal`拡大変換後のデータ型`Single`または`Double`します。 つまり、変換できる`Decimal`遭遇することがなくこれらの型のいずれかに、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
   
--   **後続のゼロです。** Visual Basic では、後続の 0 は格納されません、`Decimal`リテラルです。 ただし、`Decimal`変数には、計算に必要なすべての後続のゼロが保持されます。 次に例を示します。  
+-   **後続のゼロ。** Visual Basic では後続の 0 を格納しません、`Decimal`リテラル。 ただし、`Decimal`変数には、計算に必要なすべての後続のゼロが保持されます。 次に例を示します。  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -57,14 +57,14 @@ ms.locfileid: "33591628"
   
      出力`MsgBox`前の例では、次のようにします。  
   
-     d1 2.375、d2 を = = 1.625、d3 4.000、d4 = 4 を =  
+     d1 2.375、d2 の = = 1.625、d3 4.000、d4 を = = 4  
   
 -   **型宣言文字。** あるリテラルにリテラルの型文字 `D` を付けると、そのリテラルは `Decimal` に変換されます。 ある識別子に識別子の型文字 `@` を付けると、その識別子は整数型 (`Decimal`) に変換されます。  
   
--   **Framework の型。** .NET Framework において対応する型は、<xref:System.Decimal?displayProperty=nameWithType> 構造体です。  
+-   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Decimal?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="range"></a>範囲  
- 使用する必要があります、`D`に大きな値を代入する文字を入力、`Decimal`変数または定数。 この要件は、コンパイラが、リテラルとして解釈されるので`Long`リテラルの型文字以下の例のように、リテラルに依存しない限り、します。  
+ 使用する必要があります、`D`文字入力すると大きな値を割り当てる、`Decimal`変数または定数。 この要件は、コンパイラがリテラルとして解釈されるので`Long`しない限り、リテラルの型文字以下、リテラルの例を次に示します。  
   
 ```  
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.  
@@ -72,17 +72,17 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.  
 ```  
   
- 宣言`bigDec1`に割り当てられている値の範囲に収まるので、オーバーフローを生成しない`Long`です。 `Long`に値を割り当てることができます、`Decimal`変数。  
+ 宣言`bigDec1`に割り当てられている値の範囲内に収まるために、オーバーフローを生成しない`Long`します。 `Long`に値を割り当てることができます、`Decimal`変数。  
   
- 宣言`bigDec2`用に割り当てられている値が大きすぎるために、オーバーフロー エラーが発生`Long`です。 数値リテラルとして最初に解釈できないため、`Long`に割り当てることができない、`Decimal`変数。  
+ 宣言`bigDec2`用に割り当てられている値が大きすぎるために、オーバーフロー エラーが発生`Long`します。 数値リテラルとしてまず解釈できないため、`Long`に割り当てることができない、`Decimal`変数。  
   
- `bigDec3`、リテラルの型文字`D`としてリテラルを解釈するコンパイラを強制することで問題が解決、`Decimal`の代わりとして、`Long`です。  
+ `bigDec3`、リテラルの型文字`D`としてリテラルを解釈するコンパイラを強制することで、問題を解決する`Decimal`の代わりとして、 `Long`。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Decimal?displayProperty=nameWithType>  
  <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>  
  <xref:System.Math.Round%2A?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
  [Single データ型](../../../visual-basic/language-reference/data-types/single-data-type.md)  
  [Double 型](../../../visual-basic/language-reference/data-types/double-data-type.md)  
  [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
