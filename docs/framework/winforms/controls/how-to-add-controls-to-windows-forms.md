@@ -9,51 +9,51 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 2dd048fb074d1ec5bb7bc0a67f196d5d51281545
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528478"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422550"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="78bfc-102">方法 : Windows フォームにコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="78bfc-102">How to: Add Controls to Windows Forms</span></span>
-<span data-ttu-id="78bfc-103">ほとんどのフォームは、フォームのサーフェイスにコントロールを追加してユーザー インターフェイス (UI) を定義するよう設計されています。</span><span class="sxs-lookup"><span data-stu-id="78bfc-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="78bfc-104">A*コントロール*情報の表示や、ユーザー入力をそのまま使用するために使用するフォームのコンポーネントは、します。</span><span class="sxs-lookup"><span data-stu-id="78bfc-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="78bfc-105">コントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)です。</span><span class="sxs-lookup"><span data-stu-id="78bfc-105">For more information about controls, see [Windows Forms Controls](../../../../docs/framework/winforms/controls/index.md).</span></span>  
+# <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="03a47-102">方法 : Windows フォームにコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="03a47-102">How to: Add Controls to Windows Forms</span></span>
+<span data-ttu-id="03a47-103">ほとんどのフォームは、ユーザー インターフェイス (UI) を定義するフォームのサーフェイスにコントロールを追加して設計されています。</span><span class="sxs-lookup"><span data-stu-id="03a47-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="03a47-104">A*コントロール*は情報を表示するか、ユーザー入力をそのまま使用するためのフォーム上のコンポーネントです。</span><span class="sxs-lookup"><span data-stu-id="03a47-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="03a47-105">コントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)します。</span><span class="sxs-lookup"><span data-stu-id="03a47-105">For more information about controls, see [Windows Forms Controls](../../../../docs/framework/winforms/controls/index.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="78bfc-106">実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="78bfc-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="78bfc-107">設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="78bfc-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="78bfc-108">詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="78bfc-108">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+>  <span data-ttu-id="03a47-106">実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="03a47-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="03a47-107">設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="03a47-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="03a47-108">詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="03a47-108">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-draw-a-control-on-a-form"></a><span data-ttu-id="78bfc-109">フォーム上のコントロールを描画するには</span><span class="sxs-lookup"><span data-stu-id="78bfc-109">To draw a control on a form</span></span>  
+### <a name="to-draw-a-control-on-a-form"></a><span data-ttu-id="03a47-109">フォームのコントロールを描画するには</span><span class="sxs-lookup"><span data-stu-id="03a47-109">To draw a control on a form</span></span>  
   
-1.  <span data-ttu-id="78bfc-110">フォームを開きます。</span><span class="sxs-lookup"><span data-stu-id="78bfc-110">Open the form.</span></span> <span data-ttu-id="78bfc-111">詳細については、次を参照してください。[する方法: デザイナーでの Windows フォームの表示](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)です。</span><span class="sxs-lookup"><span data-stu-id="78bfc-111">For more information, see [How to: Display Windows Forms in the Designer](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).</span></span>  
+1.  <span data-ttu-id="03a47-110">フォームを開きます。</span><span class="sxs-lookup"><span data-stu-id="03a47-110">Open the form.</span></span> <span data-ttu-id="03a47-111">詳細については、次を参照してください。[方法: デザイナーでの Windows フォームの表示](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)します。</span><span class="sxs-lookup"><span data-stu-id="03a47-111">For more information, see [How to: Display Windows Forms in the Designer](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).</span></span>  
   
-2.  <span data-ttu-id="78bfc-112">**ツールボックス**フォームに追加するコントロールをクリックします。</span><span class="sxs-lookup"><span data-stu-id="78bfc-112">In the **Toolbox**, click the control you want to add to your form.</span></span>  
+2.  <span data-ttu-id="03a47-112">**ツールボックス**フォームに追加するコントロールをクリックします。</span><span class="sxs-lookup"><span data-stu-id="03a47-112">In the **Toolbox**, click the control you want to add to your form.</span></span>  
   
-3.  <span data-ttu-id="78bfc-113">フォームに存在するコントロールの左上隅をクリックしを配置するコントロールの右下隅の任意の場所にドラッグします。</span><span class="sxs-lookup"><span data-stu-id="78bfc-113">On the form, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.</span></span>  
+3.  <span data-ttu-id="03a47-113">フォーム、検索するコントロールの左上隅をクリックし、検索するコントロールの右下隅を先にドラッグします。</span><span class="sxs-lookup"><span data-stu-id="03a47-113">On the form, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.</span></span>  
   
-     <span data-ttu-id="78bfc-114">コントロールは、指定した位置とサイズでフォームに追加されます。</span><span class="sxs-lookup"><span data-stu-id="78bfc-114">The control is added to the form with the specified location and size.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="78bfc-115">各コントロールには、定義されている既定のサイズがあります。</span><span class="sxs-lookup"><span data-stu-id="78bfc-115">Each control has a default size defined.</span></span> <span data-ttu-id="78bfc-116">ドラッグして、コントロールの既定のサイズで、フォームにコントロールを追加することができます、**ツールボックス**をフォームにします。</span><span class="sxs-lookup"><span data-stu-id="78bfc-116">You can add a control to your form in the control's default size by dragging it from the **Toolbox** to the form.</span></span>  
-  
-### <a name="to-drag-a-control-to-a-form"></a><span data-ttu-id="78bfc-117">コントロールをフォームにドラッグするには</span><span class="sxs-lookup"><span data-stu-id="78bfc-117">To drag a control to a form</span></span>  
-  
-1.  <span data-ttu-id="78bfc-118">フォームを開きます。</span><span class="sxs-lookup"><span data-stu-id="78bfc-118">Open the form.</span></span> <span data-ttu-id="78bfc-119">詳細については、次を参照してください。[する方法: デザイナーでの Windows フォームの表示](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)です。</span><span class="sxs-lookup"><span data-stu-id="78bfc-119">For more information, see [How to: Display Windows Forms in the Designer](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).</span></span>  
-  
-2.  <span data-ttu-id="78bfc-120">**ツールボックス**フォームにドラッグしてコントロールをクリックします。</span><span class="sxs-lookup"><span data-stu-id="78bfc-120">In the **Toolbox**, click the control you want and drag it to your form.</span></span>  
-  
-     <span data-ttu-id="78bfc-121">コントロールは、既定のサイズで指定した場所にあるフォームに追加されます。</span><span class="sxs-lookup"><span data-stu-id="78bfc-121">The control is added to the form at the specified location in its default size.</span></span>  
+     <span data-ttu-id="03a47-114">コントロールは、指定した位置とサイズをフォームに追加されます。</span><span class="sxs-lookup"><span data-stu-id="03a47-114">The control is added to the form with the specified location and size.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="78bfc-122">内のコントロールをダブルクリックすることができます、**ツールボックス**を既定のサイズで、フォームの左上隅に追加します。</span><span class="sxs-lookup"><span data-stu-id="78bfc-122">You can double-click a control in the **Toolbox** to add it to the upper-left corner of the form in its default size.</span></span>  
+    >  <span data-ttu-id="03a47-115">各コントロールには、定義されている既定のサイズがあります。</span><span class="sxs-lookup"><span data-stu-id="03a47-115">Each control has a default size defined.</span></span> <span data-ttu-id="03a47-116">コントロールの既定のサイズで、フォームにコントロールを追加するにはからドラッグすることで、**ツールボックス**をフォームにします。</span><span class="sxs-lookup"><span data-stu-id="03a47-116">You can add a control to your form in the control's default size by dragging it from the **Toolbox** to the form.</span></span>  
   
-     <span data-ttu-id="78bfc-123">実行時に、フォームにコントロールを動的に追加することができますも。</span><span class="sxs-lookup"><span data-stu-id="78bfc-123">You can also add controls dynamically to a form at run time.</span></span> <span data-ttu-id="78bfc-124">次のコード例で、<xref:System.Windows.Forms.TextBox>コントロールは、フォームに追加するときに、<xref:System.Windows.Forms.Button>コントロールがクリックされました。</span><span class="sxs-lookup"><span data-stu-id="78bfc-124">In the following code example, a <xref:System.Windows.Forms.TextBox> control will be added to the form when a <xref:System.Windows.Forms.Button> control is clicked.</span></span>  
+### <a name="to-drag-a-control-to-a-form"></a><span data-ttu-id="03a47-117">コントロールをフォームにドラッグするには</span><span class="sxs-lookup"><span data-stu-id="03a47-117">To drag a control to a form</span></span>  
+  
+1.  <span data-ttu-id="03a47-118">フォームを開きます。</span><span class="sxs-lookup"><span data-stu-id="03a47-118">Open the form.</span></span> <span data-ttu-id="03a47-119">詳細については、次を参照してください。[方法: デザイナーでの Windows フォームの表示](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)します。</span><span class="sxs-lookup"><span data-stu-id="03a47-119">For more information, see [How to: Display Windows Forms in the Designer](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).</span></span>  
+  
+2.  <span data-ttu-id="03a47-120">**ツールボックス**フォームにドラッグしてコントロールをクリックします。</span><span class="sxs-lookup"><span data-stu-id="03a47-120">In the **Toolbox**, click the control you want and drag it to your form.</span></span>  
+  
+     <span data-ttu-id="03a47-121">コントロールは、既定のサイズで指定した場所にあるフォームに追加されます。</span><span class="sxs-lookup"><span data-stu-id="03a47-121">The control is added to the form at the specified location in its default size.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="78bfc-125">次の手順が必要ですがあるフォーム、**ボタン**コントロール、`Button1`に既に配置されている、します。</span><span class="sxs-lookup"><span data-stu-id="78bfc-125">The following procedure requires the existence of a form with a **Button** control, `Button1`, already placed on it.</span></span>  
+    >  <span data-ttu-id="03a47-122">コントロールをダブルクリックすることができます、**ツールボックス**既定のサイズで、フォームの左上隅に追加します。</span><span class="sxs-lookup"><span data-stu-id="03a47-122">You can double-click a control in the **Toolbox** to add it to the upper-left corner of the form in its default size.</span></span>  
   
-### <a name="to-add-a-control-to-a-form-programmatically"></a><span data-ttu-id="78bfc-126">プログラムによってコントロールをフォームに追加するには</span><span class="sxs-lookup"><span data-stu-id="78bfc-126">To add a control to a form programmatically</span></span>  
+     <span data-ttu-id="03a47-123">実行時に、フォームにコントロールを動的に追加することができますも。</span><span class="sxs-lookup"><span data-stu-id="03a47-123">You can also add controls dynamically to a form at run time.</span></span> <span data-ttu-id="03a47-124">次のコード例で、<xref:System.Windows.Forms.TextBox>コントロールがフォームに追加時に、<xref:System.Windows.Forms.Button>コントロールがクリックされました。</span><span class="sxs-lookup"><span data-stu-id="03a47-124">In the following code example, a <xref:System.Windows.Forms.TextBox> control will be added to the form when a <xref:System.Windows.Forms.Button> control is clicked.</span></span>  
   
-1.  <span data-ttu-id="78bfc-127">ボタンの処理をメソッドで`Click`フォームのクラスを制御変数への参照を追加するには、次のような挿入コード内のイベント設定コントロールの`Location`、し、コントロールを追加します。</span><span class="sxs-lookup"><span data-stu-id="78bfc-127">In the method that handles the button's `Click` event within your form's class, insert code similar to the following to add a reference to your control variable, set the control's `Location`, and add the control.</span></span>  
+    > [!NOTE]
+    >  <span data-ttu-id="03a47-125">次の手順が使用して、フォームが存在する必要があります、**ボタン**コントロール、`Button1`に既に配置した、します。</span><span class="sxs-lookup"><span data-stu-id="03a47-125">The following procedure requires the existence of a form with a **Button** control, `Button1`, already placed on it.</span></span>  
+  
+### <a name="to-add-a-control-to-a-form-programmatically"></a><span data-ttu-id="03a47-126">プログラムでコントロールをフォームに追加するには</span><span class="sxs-lookup"><span data-stu-id="03a47-126">To add a control to a form programmatically</span></span>  
+  
+1.  <span data-ttu-id="03a47-127">ボタンを処理するメソッドで`Click`、制御変数への参照を追加するには、次のようなコードを挿入、フォームのクラス内のイベントの設定、コントロールの`Location`コントロールを追加します。</span><span class="sxs-lookup"><span data-stu-id="03a47-127">In the method that handles the button's `Click` event within your form's class, insert code similar to the following to add a reference to your control variable, set the control's `Location`, and add the control.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -84,14 +84,14 @@ ms.locfileid: "33528478"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="78bfc-128">コントロールの他のプロパティを初期化するコードを追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="78bfc-128">You can also add code to initialize other properties of the control.</span></span>  
+    >  <span data-ttu-id="03a47-128">コントロールの他のプロパティを初期化するコードを追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="03a47-128">You can also add code to initialize other properties of the control.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="78bfc-129">悪意のあるを参照して、ローカル コンピューターがネットワーク経由のセキュリティ リスクを公開する可能性があります`UserControl`です。</span><span class="sxs-lookup"><span data-stu-id="78bfc-129">You might expose your local computer to a security risk through the network by referencing a malicious `UserControl`.</span></span> <span data-ttu-id="78bfc-130">誤ってそれをプロジェクトに追加した後に、有害なカスタム コントロールを作成する悪意のあるユーザーの場合は問題にならなければのみとなります。</span><span class="sxs-lookup"><span data-stu-id="78bfc-130">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>  
+    >  <span data-ttu-id="03a47-129">悪意のあるを参照して、ローカル コンピューターがネットワーク経由のセキュリティ リスクを公開する`UserControl`します。</span><span class="sxs-lookup"><span data-stu-id="03a47-129">You might expose your local computer to a security risk through the network by referencing a malicious `UserControl`.</span></span> <span data-ttu-id="03a47-130">誤ってそれをプロジェクトに追加した後に、有害なカスタム コントロールを作成する悪意のあるユーザーの場合の問題のみなります。</span><span class="sxs-lookup"><span data-stu-id="03a47-130">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78bfc-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="78bfc-131">See Also</span></span>  
- [<span data-ttu-id="78bfc-132">Windows フォーム コントロール</span><span class="sxs-lookup"><span data-stu-id="78bfc-132">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
- [<span data-ttu-id="78bfc-133">Windows フォームでのコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="78bfc-133">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [<span data-ttu-id="78bfc-134">方法: Windows フォーム上のコントロールのサイズを変更する</span><span class="sxs-lookup"><span data-stu-id="78bfc-134">How to: Resize Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- [<span data-ttu-id="78bfc-135">方法: Windows フォーム コントロールによって表示されるテキストを設定する</span><span class="sxs-lookup"><span data-stu-id="78bfc-135">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [<span data-ttu-id="78bfc-136">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="78bfc-136">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="03a47-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="03a47-131">See Also</span></span>  
+ [<span data-ttu-id="03a47-132">Windows フォーム コントロール</span><span class="sxs-lookup"><span data-stu-id="03a47-132">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="03a47-133">Windows フォームでのコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="03a47-133">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="03a47-134">方法: Windows フォーム上のコントロールのサイズを変更する</span><span class="sxs-lookup"><span data-stu-id="03a47-134">How to: Resize Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
+ [<span data-ttu-id="03a47-135">方法: Windows フォーム コントロールによって表示されるテキストを設定する</span><span class="sxs-lookup"><span data-stu-id="03a47-135">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [<span data-ttu-id="03a47-136">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="03a47-136">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
