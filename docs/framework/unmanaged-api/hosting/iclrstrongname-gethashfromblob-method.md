@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a489e05435ce160c65e936f448688d69b3a965f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ca958f8472d7f7e1a44ad4ab237f582f92713c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435262"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402739"
 ---
-# <a name="iclrstrongnamegethashfromblob-method"></a><span data-ttu-id="a4039-102">ICLRStrongName::GetHashFromBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="a4039-102">ICLRStrongName::GetHashFromBlob Method</span></span>
-<span data-ttu-id="a4039-103">指定したハッシュ アルゴリズムを使用して、指定されたメモリ アドレスのアセンブリのハッシュを取得します。</span><span class="sxs-lookup"><span data-stu-id="a4039-103">Gets a hash of the assembly at the specified memory address, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamegethashfromblob-method"></a><span data-ttu-id="ccd98-102">ICLRStrongName::GetHashFromBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="ccd98-102">ICLRStrongName::GetHashFromBlob Method</span></span>
+<span data-ttu-id="ccd98-103">指定したハッシュ アルゴリズムを使用して、指定されたメモリ アドレスにあるアセンブリのハッシュを取得します。</span><span class="sxs-lookup"><span data-stu-id="ccd98-103">Gets a hash of the assembly at the specified memory address, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a4039-104">構文</span><span class="sxs-lookup"><span data-stu-id="a4039-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ccd98-104">構文</span><span class="sxs-lookup"><span data-stu-id="ccd98-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromBlob (  
@@ -40,36 +40,36 @@ HRESULT GetHashFromBlob (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a4039-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a4039-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ccd98-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ccd98-105">Parameters</span></span>  
  `pbBlob`  
- <span data-ttu-id="a4039-106">[in]ハッシュされるメモリ ブロックのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="a4039-106">[in] A pointer to the address of the memory block to be hashed.</span></span>  
+ <span data-ttu-id="ccd98-106">[in]ハッシュされるメモリ ブロックのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="ccd98-106">[in] A pointer to the address of the memory block to be hashed.</span></span>  
   
  `cchBlob`  
- <span data-ttu-id="a4039-107">[in]メモリ ブロックの長さ、(バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="a4039-107">[in] The length, in bytes, of the memory block.</span></span>  
+ <span data-ttu-id="ccd98-107">[in]メモリ ブロックの長さ、(バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="ccd98-107">[in] The length, in bytes, of the memory block.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="a4039-108">[入力、出力].ハッシュ アルゴリズムを指定する定数。</span><span class="sxs-lookup"><span data-stu-id="a4039-108">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="a4039-109">既定のアルゴリズムに 0 を使用します。</span><span class="sxs-lookup"><span data-stu-id="a4039-109">Use zero for the default algorithm.</span></span>  
+ <span data-ttu-id="ccd98-108">[入力、出力]ハッシュ アルゴリズムを指定する定数。</span><span class="sxs-lookup"><span data-stu-id="ccd98-108">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="ccd98-109">既定のアルゴリズムに 0 を使用します。</span><span class="sxs-lookup"><span data-stu-id="ccd98-109">Use zero for the default algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="a4039-110">[out]返されるハッシュ バッファー。</span><span class="sxs-lookup"><span data-stu-id="a4039-110">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="ccd98-110">[out]返されたハッシュ バッファー。</span><span class="sxs-lookup"><span data-stu-id="ccd98-110">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="a4039-111">[in]場合は、要求された最大サイズ`pbHash`です。</span><span class="sxs-lookup"><span data-stu-id="a4039-111">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="ccd98-111">[in]要求の最大サイズの`pbHash`します。</span><span class="sxs-lookup"><span data-stu-id="ccd98-111">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="a4039-112">[out]サイズ (バイト単位)、返された`pbHash`です。</span><span class="sxs-lookup"><span data-stu-id="a4039-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="ccd98-112">[out]サイズ (バイト単位)、返された`pbHash`します。</span><span class="sxs-lookup"><span data-stu-id="ccd98-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a4039-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="a4039-113">Return Value</span></span>  
- <span data-ttu-id="a4039-114">`S_OK` メソッドが正常に完了した場合それ以外の場合、失敗を示す HRESULT 値 (を参照してください[の共通 HRESULT 値](http://go.microsoft.com/fwlink/?LinkId=213878)一覧)。</span><span class="sxs-lookup"><span data-stu-id="a4039-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ccd98-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="ccd98-113">Return Value</span></span>  
+ <span data-ttu-id="ccd98-114">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="ccd98-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a4039-115">要件</span><span class="sxs-lookup"><span data-stu-id="a4039-115">Requirements</span></span>  
- <span data-ttu-id="a4039-116">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="a4039-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ccd98-115">要件</span><span class="sxs-lookup"><span data-stu-id="ccd98-115">Requirements</span></span>  
+ <span data-ttu-id="ccd98-116">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ccd98-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a4039-117">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a4039-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="ccd98-117">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="ccd98-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="a4039-118">**ライブラリ:** MSCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="a4039-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ccd98-118">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="ccd98-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a4039-119">**.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4039-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="ccd98-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ccd98-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4039-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="a4039-120">See Also</span></span>  
- [<span data-ttu-id="a4039-121">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a4039-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ccd98-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="ccd98-120">See Also</span></span>  
+ [<span data-ttu-id="ccd98-121">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ccd98-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

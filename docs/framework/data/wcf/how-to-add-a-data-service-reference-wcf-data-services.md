@@ -1,34 +1,36 @@
 ---
 title: '方法: データ サービス参照を追加する (WCF Data Services)'
-ms.date: 03/30/2017
+ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 62c6f318-3ee1-433a-b7a3-efa234c3034c
-ms.openlocfilehash: a8dcc01fb7a564a363cabed6a22738cd520d317f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc1786e1c6102c702374989253cd3ce23e3f7b54
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356232"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404424"
 ---
-# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a><span data-ttu-id="f9b63-102">方法: データ サービス参照を追加する (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="f9b63-102">How to: Add a Data Service Reference (WCF Data Services)</span></span>
-<span data-ttu-id="f9b63-103">使用することができます、**サービス参照の追加**への参照を追加する Visual Studio でのダイアログ[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]です。</span><span class="sxs-lookup"><span data-stu-id="f9b63-103">You can use the **Add Service Reference** dialog in Visual Studio to add a reference to [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span> <span data-ttu-id="f9b63-104">参照をデータ サービスに追加すると、Visual Studio で開発したクライアント アプリケーションのデータ サービスに容易にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="f9b63-104">This enables you to more easily access a data service in a client application that you develop in Visual Studio.</span></span> <span data-ttu-id="f9b63-105">この手順を完了すると、データ サービスから取得されたメタデータに基づいてデータ クラスが生成されます。</span><span class="sxs-lookup"><span data-stu-id="f9b63-105">When you complete this procedure, data classes are generated based on metadata that is obtained from the data service.</span></span> <span data-ttu-id="f9b63-106">詳細については、次を参照してください。[データ サービス クライアント ライブラリを生成する](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)です。</span><span class="sxs-lookup"><span data-stu-id="f9b63-106">For more information, see [Generating the Data Service Client Library](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).</span></span>  
-  
-### <a name="to-add-a-data-service-reference"></a><span data-ttu-id="f9b63-107">データ サービス参照を追加するには</span><span class="sxs-lookup"><span data-stu-id="f9b63-107">To add a data service reference</span></span>  
-  
-1.  <span data-ttu-id="f9b63-108">(オプション) データ サービスがソリューションの一部ではなく、実行していない場合は、データ サービスを開始して、データ サービスの URI を記録します。</span><span class="sxs-lookup"><span data-stu-id="f9b63-108">(Optional) If the data service is not part of the solution and is not already running, start the data service and note the URI of the data service.</span></span>  
-  
-2.  <span data-ttu-id="f9b63-109">クライアント プロジェクトを右クリックし、**サービス参照の追加**です。</span><span class="sxs-lookup"><span data-stu-id="f9b63-109">Right-click the client project and then select **Add Service Reference**.</span></span>  
-  
-3.  <span data-ttu-id="f9b63-110">データ サービスが、現在のソリューションの一部の場合は、クリックして**Discover**です。</span><span class="sxs-lookup"><span data-stu-id="f9b63-110">If the data service is part of the current solution, click **Discover**.</span></span>  
-  
-     <span data-ttu-id="f9b63-111">- または -</span><span class="sxs-lookup"><span data-stu-id="f9b63-111">-or-</span></span>  
-  
-     <span data-ttu-id="f9b63-112">**アドレス**ボックスに、データ サービスのベース URL を入力するように`http://localhost:1234/Northwind.svc`、クリックして**移動**です。</span><span class="sxs-lookup"><span data-stu-id="f9b63-112">In the **Address** text box, type the base URL of the data service, such as `http://localhost:1234/Northwind.svc`, and then click **Go**.</span></span>  
-  
-4.  <span data-ttu-id="f9b63-113">**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="f9b63-113">Click **OK**.</span></span>  
-  
-     <span data-ttu-id="f9b63-114">新しいコード ファイルが追加されます。このコード ファイルには、データ サービス リソースにアクセスし、オブジェクトとしてデータ サービス リソースと対話するデータ クラスが含まれています。</span><span class="sxs-lookup"><span data-stu-id="f9b63-114">This adds a new code file that contains the data classes that are used to access and interact with data service resources as objects.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f9b63-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="f9b63-115">See Also</span></span>  
- [<span data-ttu-id="f9b63-116">クイック スタート</span><span class="sxs-lookup"><span data-stu-id="f9b63-116">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a><span data-ttu-id="a6737-102">方法: データ サービス参照 (WCF Data Services) の追加</span><span class="sxs-lookup"><span data-stu-id="a6737-102">How to: Add a data service reference (WCF Data Services)</span></span>
+
+<span data-ttu-id="a6737-103">使用することができます、**サービス参照の追加**WCF Data Services への参照を追加する Visual Studio でダイアログ。</span><span class="sxs-lookup"><span data-stu-id="a6737-103">You can use the **Add Service Reference** dialog in Visual Studio to add a reference to WCF Data Services.</span></span> <span data-ttu-id="a6737-104">参照をデータ サービスに追加すると、Visual Studio で開発したクライアント アプリケーションのデータ サービスに容易にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a6737-104">This enables you to more easily access a data service in a client application that you develop in Visual Studio.</span></span> <span data-ttu-id="a6737-105">この手順を完了すると、データ サービスから取得されたメタデータに基づいてデータ クラスが生成されます。</span><span class="sxs-lookup"><span data-stu-id="a6737-105">When you complete this procedure, data classes are generated based on metadata that is obtained from the data service.</span></span> <span data-ttu-id="a6737-106">詳細については、次を参照してください。[データ サービス クライアント ライブラリの生成](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)します。</span><span class="sxs-lookup"><span data-stu-id="a6737-106">For more information, see [Generating the Data Service Client Library](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).</span></span>
+
+## <a name="add-a-data-service-reference"></a><span data-ttu-id="a6737-107">データ サービス参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="a6737-107">Add a data service reference</span></span>
+
+1. <span data-ttu-id="a6737-108">(オプション) データ サービスがソリューションの一部ではなく、実行していない場合は、データ サービスを開始して、データ サービスの URI を記録します。</span><span class="sxs-lookup"><span data-stu-id="a6737-108">(Optional) If the data service is not part of the solution and is not already running, start the data service and note the URI of the data service.</span></span>
+
+2. <span data-ttu-id="a6737-109">Visual Studio での**ソリューション エクスプ ローラー**、クライアント プロジェクトを右クリックし、**追加** > **サービス参照の**します。</span><span class="sxs-lookup"><span data-stu-id="a6737-109">In Visual Studio, in **Solution Explorer**, right-click the client project and then select **Add** > **Service Reference**.</span></span>
+
+3. <span data-ttu-id="a6737-110">データ サービスが現在のソリューションの一部である場合は、クリックして**Discover**します。</span><span class="sxs-lookup"><span data-stu-id="a6737-110">If the data service is part of the current solution, click **Discover**.</span></span>
+
+     <span data-ttu-id="a6737-111">- または -</span><span class="sxs-lookup"><span data-stu-id="a6737-111">-or-</span></span>
+
+     <span data-ttu-id="a6737-112">**アドレス**テキスト ボックスに、入力、データ サービスのベース URL など`http://localhost:1234/Northwind.svc`、 をクリックし、**移動**します。</span><span class="sxs-lookup"><span data-stu-id="a6737-112">In the **Address** text box, type the base URL of the data service, such as `http://localhost:1234/Northwind.svc`, and then click **Go**.</span></span>
+
+4. <span data-ttu-id="a6737-113">**[OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="a6737-113">Select **OK**.</span></span>
+
+     <span data-ttu-id="a6737-114">アクセスして、データ サービス リソースとやり取りするデータ クラスを含む新しいコード ファイルは、プロジェクトに追加されます。</span><span class="sxs-lookup"><span data-stu-id="a6737-114">A new code file that contains the data classes that can access and interact with data service resources is added to the project.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="a6737-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="a6737-115">See also</span></span>
+
+- [<span data-ttu-id="a6737-116">クイック スタート</span><span class="sxs-lookup"><span data-stu-id="a6737-116">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
