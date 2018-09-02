@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365879"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425757"
 ---
 # <a name="code-contracts"></a>コード コントラクト
 コード コントラクトを使用すると、事前条件、事後条件、およびオブジェクト不変条件をコードで指定できます。 事前条件とは、メソッドやプロパティに入るときに満たされている必要がある要件です。 事後条件は、メソッドやプロパティのコードが終了するときの予測を表します。 オブジェクト不変条件は、正しい状態のクラスに対して予期される状態を表します。  
@@ -35,7 +35,7 @@ ms.locfileid: "33365879"
   
  コントラクト クラスのほとんどのメソッドは、条件付きでコンパイルされます。したがって、それらのメソッドの呼び出しは、`#define` ディレクティブを使用して CONTRACTS_FULL という特別なシンボルを定義した場合にのみコンパイラで生成されます。 CONTRACTS_FULL を使用すると、コードで `#ifdef` ディレクティブを使用せずにコントラクトを記述して、コントラクトを含むものと含まないものなど、さまざまなビルドを生成できます。  
   
- コード コントラクトを使用するためのツールおよび詳細な手順については、MSDN DevLabs Web サイトの「[Code Contracts](http://go.microsoft.com/fwlink/?LinkId=152461)」(コード コントラクト) を参照してください。  
+ コード コントラクトを使用するためのツールおよび詳細な手順については、MSDN DevLabs Web サイトの「[Code Contracts](https://go.microsoft.com/fwlink/?LinkId=152461)」(コード コントラクト) を参照してください。  
   
 ## <a name="preconditions"></a>実行前の状態  
  事前条件を指定するには、<xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> メソッドを使用します。 事前条件では、メソッドが呼び出される状態を指定します。 通常は、有効なパラメーター値を指定するために使用されます。 事前条件で参照されるすべてのメンバーは、アクセス レベルが少なくともメソッド自体と同じである必要があります。そうでない場合、メソッドのすべての呼び出し元がその事前条件を理解できない場合があります。 また、条件に副作用がないようにする必要もあります。 事前条件が満たされなかった場合の実行時の動作は、ランタイム アナライザーによって決定されます。  

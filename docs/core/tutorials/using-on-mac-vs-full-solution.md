@@ -4,12 +4,12 @@ description: このトピックでは、再利用可能なライブラリと単�
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314699"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457044"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築
 
@@ -95,7 +95,7 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
            public void IgnoreCasing()
            {
                var wordCount = WordCount.GetWordCount("Jack", "Jack jack");
-   
+
                Assert.NotEqual(2, wordCount);
            }
        }
@@ -117,7 +117,7 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
    ![[単体テスト] パネルの [ドッキング] アイコン](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. **[すべて実行]** ボタンをクリックします。
-   
+
    テストは失敗します。これが正しい結果です。 テスト メソッドは、`GetWordCount` メソッドに指定された文字列 "Jack jack" から `inputString` "Jack" の 2 つのインスタンスが返されないことをアサートします。 単語の大文字と小文字は `GetWordCount` メソッドでは考慮されないため、2 つのインスタンスが返されます。 2 *is not equal to* 2 というアサーションは失敗します。 これは正しい結果であり、テストのロジックは適切です。
 
    ![テスト失敗](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
@@ -135,8 +135,8 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
    [InlineData(0, "Ting", "Does not appear in the string.")]
    [InlineData(1, "Ting", "Ting appears once.")]
    [InlineData(2, "Ting", "Ting appears twice with Ting.")]
-   public void CountInstancesCorrectly(int count, 
-                                       string searchWord, 
+   public void CountInstancesCorrectly(int count,
+                                       string searchWord,
                                        string inputString)
    {
        Assert.NotEqual(count, WordCount.GetWordCount(searchWord,
@@ -145,7 +145,7 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
    ```
 
    `CountInstancesCorrectly` は、`GetWordCount` メソッドが正しくカウントすることを確認します。 `InlineData` は確認するカウント、検索語、および入力文字列を示します。 テスト メソッドはデータの行ごとに一度実行されます。 繰り返しますが、データのカウントが正しく、値が `GetWordCount` メソッドで返されるカウントと一致することがわかっている場合でも、まず、`Assert.NotEqual` を使用して失敗をアサートする必要があります。 意図的にテストを失敗させる手順を実行するのは、最初は時間の無駄と思えるかもしれませんが、まず、テストを失敗させてロジックを確認することはテストのロジックを確認するうえで重要なことです。 失敗させようとしたのに成功するテスト メソッドがある場合、そのテストのロジックにバグがあります。 テスト メソッドを作成するたびに、この手順を実行することをお勧めします。
-   
+
 1. ファイルを保存し、もう一度テストを実行します。 大文字と小文字のテストは成功しますが、3 つのカウント テストは失敗します。 これは予想したとおりの結果です。
 
    ![テスト失敗](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
@@ -192,4 +192,4 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio 2017 for Mac リリース ノート](/visualstudio/releasenotes/vs2017-mac-relnotes)
+* [Visual Studio 2017 for Mac リリース ノート](/visualstudio/releasenotes/vs2017-mac-relnotes)

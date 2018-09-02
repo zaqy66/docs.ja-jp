@@ -2,16 +2,16 @@
 title: 非同期プログラミング
 ms.date: 03/30/2017
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 29324a07ffdaf99d1b7631ad8e94e773ed509fcc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759908"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425726"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
-このトピックでの非同期プログラミングのサポートについて説明します、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (SqlClient) で導入された非同期のプログラミング機能をサポートするために、これらの拡張を含む[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]です。  
+このトピックでの非同期プログラミングのサポート、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (SqlClient) で導入された非同期のプログラミング機能をサポートするために行われた機能強化を含む[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。  
   
 ## <a name="legacy-asynchronous-programming"></a>従来の非同期プログラミング  
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] より前のバージョンでは、SqlClient による非同期プログラミングは、次のメソッドと `Asynchronous Processing=true` 接続プロパティを使用して行われていました。  
@@ -43,7 +43,7 @@ ms.locfileid: "32759908"
   
  現在は、コールバックを使用したり、コードを複数のメソッドやラムダ式で分割したりせずに、非同期メソッドを呼び出すことができるようになりました。  
   
- `async` 修飾子はメソッドが非同期であることを示します。 `async` メソッドを呼び出すと、タスクが返されます。 ときに、`await`演算子は、タスクに適用、現在のメソッドはすぐに終了します。 タスクが終了すると、同じメソッド内で実行が再開されます。
+ `async` 修飾子はメソッドが非同期であることを示します。 `async` メソッドを呼び出すと、タスクが返されます。 ときに、`await`タスクに演算子が適用される、現在のメソッドがすぐに終了します。 タスクが終了すると、同じメソッド内で実行が再開されます。
   
 > [!WARNING]
 >  非同期呼び出しは、アプリケーションで `Context Connection` 接続文字列キーワードも使用されている場合はサポートされません。  
@@ -86,7 +86,7 @@ ms.locfileid: "32759908"
   
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
- その他の非同期メンバーがサポートするために追加された[SqlClient ストリーミング サポート](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)です。  
+ その他の非同期メンバーがサポートするために追加された[SqlClient ストリーミング サポート](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)します。  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>同期から非同期接続を開く  
  既存のアプリケーションをアップグレードして、新しい非同期機能を使用できます。 たとえば、同期接続アルゴリズムを使用したアプリケーションで、データベースに接続するたびに UI スレッドをブロックし、接続すると、ユーザーがサインインしたことを他のユーザーに通知するストアド プロシージャが呼び出されるとします。  
@@ -172,7 +172,7 @@ class A {
 ### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>基本プロバイダー モデルと新しい非同期機能を使用する  
  異なるデータベースに接続してクエリを実行できるツールを作成することが必要になる場合があります。 基本プロバイダー モデルと新しい非同期機能を使用できます。  
   
- 分散トランザクションを使用するには、サーバー上で Microsoft Distributed Transaction Controller (MSDTC) サービスを有効にする必要があります。 MSDTC を有効にする方法については、次を参照してください。 [Web サーバーで MSDTC を有効にする方法](http://msdn.microsoft.com/library/dd327979.aspx)です。  
+ 分散トランザクションを使用するには、サーバー上で Microsoft Distributed Transaction Controller (MSDTC) サービスを有効にする必要があります。 MSDTC を有効にする方法については、次を参照してください。 [Web サーバーで MSDTC を有効にする方法](https://msdn.microsoft.com/library/dd327979.aspx)します。  
   
 ```csharp
 using System;  
@@ -627,10 +627,10 @@ namespace SqlBulkCopyAsyncCodeSample {
 ```  
   
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>MARS を使用して複数のコマンドを非同期的に使用する  
- 例では、接続を 1 つを開き、 **AdventureWorks**データベース。 <xref:System.Data.SqlClient.SqlCommand> オブジェクトを使用して、<xref:System.Data.SqlClient.SqlDataReader> が作成されます。 リーダーが使用されると、2 番目の <xref:System.Data.SqlClient.SqlDataReader> リーダーが開かれます。このとき、最初の <xref:System.Data.SqlClient.SqlDataReader> から取得したデータが 2 番目のリーダーの WHERE 句に入力されます。  
+ 1 つの接続を開く例を示します、 **AdventureWorks**データベース。 <xref:System.Data.SqlClient.SqlCommand> オブジェクトを使用して、<xref:System.Data.SqlClient.SqlDataReader> が作成されます。 リーダーが使用されると、2 番目の <xref:System.Data.SqlClient.SqlDataReader> リーダーが開かれます。このとき、最初の <xref:System.Data.SqlClient.SqlDataReader> から取得したデータが 2 番目のリーダーの WHERE 句に入力されます。  
   
 > [!NOTE]
->  次の例は、サンプル**AdventureWorks** SQL Server に付属のデータベースです。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
+>  次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
   
 ```csharp
 using System;  
@@ -697,12 +697,12 @@ class Class1 {
 ```  
   
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>MARS を使用してデータの読み取りと更新を非同期的に行う  
- MARS を使用すると、複数の保留中の操作について、読み取り操作と DML (データ操作言語) 操作の両方で 1 つの接続を使用することができます。 この機能により、アプリケーションで接続ビジー エラーを処理する必要がなくなります。 さらに、MARS ではサーバー側カーソルのユーザーを置き換えることができます。通常、この処理は多くのリソースを消費します。 最後に、複数の操作は、単一の接続で実行できる、ために共有することを使用する必要がなくなるため、同じトランザクション コンテキスト**sp_getbindtoken**と**sp_bindsession**格納されているシステムプロシージャです。  
+ MARS を使用すると、複数の保留中の操作について、読み取り操作と DML (データ操作言語) 操作の両方で 1 つの接続を使用することができます。 この機能により、アプリケーションで接続ビジー エラーを処理する必要がなくなります。 さらに、MARS ではサーバー側カーソルのユーザーを置き換えることができます。通常、この処理は多くのリソースを消費します。 最後に、複数の操作は、1 つの接続に対して使用できます、共有することを使用する必要がないため、同じトランザクション コンテキスト**sp_getbindtoken**と**sp_bindsession**システムに格納されています。手順です。  
   
- 次のコンソール アプリケーションでは、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを 3 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと使用する方法、および 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを MARS を有効にして使用する方法について示します。 最初のコマンド オブジェクトでは、格付けが 5 のベンダーの一覧を取得します。 2 番目のコマンド オブジェクトでは、<xref:System.Data.SqlClient.SqlDataReader> から提供されるベンダー ID を使用して特定のベンダーのすべての製品について 2 番目の <xref:System.Data.SqlClient.SqlDataReader> を読み取ります。 各製品のレコードは、2 番目の <xref:System.Data.SqlClient.SqlDataReader> によってアクセスされます。 どのような新しいを決定する計算を実行**OnOrderQty**する必要があります。 更新する 3 番目のコマンド オブジェクトを使用して、 **ProductVendor**新しい値を持つテーブルです。 このプロセスはすべて単一のトランザクションで行われ、最後にロールバックされます。  
+ 次のコンソール アプリケーションでは、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを 3 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと使用する方法、および 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを MARS を有効にして使用する方法について示します。 最初のコマンド オブジェクトでは、格付けが 5 のベンダーの一覧を取得します。 2 番目のコマンド オブジェクトでは、<xref:System.Data.SqlClient.SqlDataReader> から提供されるベンダー ID を使用して特定のベンダーのすべての製品について 2 番目の <xref:System.Data.SqlClient.SqlDataReader> を読み取ります。 各製品のレコードは、2 番目の <xref:System.Data.SqlClient.SqlDataReader> によってアクセスされます。 どのような新しいを決定する計算を実行**OnOrderQty**する必要があります。 更新する 3 番目のコマンド オブジェクトを使用して、 **ProductVendor**新しい値を含むテーブル。 このプロセスはすべて単一のトランザクションで行われ、最後にロールバックされます。  
   
 > [!NOTE]
->  次の例は、サンプル**AdventureWorks** SQL Server に付属のデータベースです。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
+>  次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
   
 ```csharp
 using System;  
