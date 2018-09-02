@@ -2,12 +2,12 @@
 title: CancellationScope の使用
 ms.date: 03/30/2017
 ms.assetid: 39c5c338-b316-43d6-b7fe-a543281dd1ec
-ms.openlocfilehash: 62b798b29149e30a2fae680b507f62ef0a2e23d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82d44fff869f207c09dc7685fc3470630e001a59
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517467"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401783"
 ---
 # <a name="using-cancellationscope"></a>CancellationScope の使用
 このサンプルでは、<xref:System.Activities.Statements.CancellationScope> アクティビティを使用してアプリケーション内の処理を取り消す方法を示します。  
@@ -35,6 +35,6 @@ ms.locfileid: "33517467"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\CancellationScope`

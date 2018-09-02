@@ -2,29 +2,29 @@
 title: (Visual Basic) の非同期アプリにおける再入の処理
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 4b899a695fef0e626eb9db3d376a74acba17b086
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b633e3cf9a499cd5f364692cd0461aed640fe54d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697158"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401891"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>(Visual Basic) の非同期アプリにおける再入の処理
 非同期コードをアプリに含める場合は、再入を考慮し、場合によっては回避することをお勧めします。これは、完了前に非同期操作の再入力を参照します。 再入の可能性を特定して処理しないと、予期しない結果が発生する可能性があります。  
   
  **このトピックの内容**  
   
--   [再入を認識する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [再入を認識する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [再入を処理する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [再入を処理する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [[Start] ボタンを無効にする](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [[Start] ボタンを無効にする](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [操作を取り消して再開する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [操作を取り消して再開する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [複数の操作を実行して出力をキューに登録する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [複数の操作を実行して出力をキューに登録する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [例のアプリをレビューして実行する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [例のアプリをレビューして実行する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
 > [!NOTE]
 >  この例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。  
@@ -84,20 +84,20 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- このトピックの最後にスクロールすると、この出力を生成するコードをレビューできます。 コードを試してみるには、ソリューションをローカル コンピューターにダウンロードにし、WebsiteDownload プロジェクトを実行するか、このトピックの最後にあるコードを使用して独自のプロジェクトを作成します。詳細と手順については、「[例のアプリをレビューして実行する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」を参照してください。  
+ このトピックの最後にスクロールすると、この出力を生成するコードをレビューできます。 コードを試してみるには、ソリューションをローカル コンピューターにダウンロードにし、WebsiteDownload プロジェクトを実行するか、このトピックの最後にあるコードを使用して独自のプロジェクトを作成します。詳細と手順については、「[例のアプリをレビューして実行する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」を参照してください。  
   
 ##  <a name="BKMK_HandlingReentrancy"></a>再入を処理する  
  再入の処理は、アプリで何を行うかに応じてさまざまな方法で実行できます。 このトピックでは、次の例を紹介します。  
   
--   [[Start] ボタンを無効にする](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [[Start] ボタンを無効にする](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
      処理の実行中、ユーザーが中断できないように **[Start]** ボタンを無効にします。  
   
--   [操作を取り消して再開する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [操作を取り消して再開する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
      ユーザーが **[Start]** を再度クリックしたときに実行されている処理を取り消し、最後に要求された処理を続行できるようにします。  
   
--   [複数の操作を実行して出力をキューに登録する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [複数の操作を実行して出力をキューに登録する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
      要求されたすべての処理を非同期的に実行できるようにします。ただし、各処理の結果が順番にまとめて表示されるように出力を調整します。  
   
@@ -132,9 +132,9 @@ End Sub
 ###  <a name="BKMK_CancelAndRestart"></a>操作を取り消して再開する  
  **[Start]** ボタンを無効にせず、有効の状態を保持できますが、ユーザーがボタンを再度クリックしたときに、実行中の処理を取り消し、最後に開始された処理を続行できます。  
   
- 取り消し処理の詳細については、次を参照してください。[非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)です。  
+ キャンセルの詳細については、次を参照してください。[非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)します。  
   
- このシナリオを設定するには、「[例のアプリをレビューして実行する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」に用意されている基本コードを次のように変更します。 また、完成したアプリを「[Async Samples: Reentrancy in .NET Desktop Apps (非同期の例: .NET デスクトップ アプリでの再入)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」からダウンロードすることもできます。 このプロジェクトの名前は CancelAndRestart です。  
+ このシナリオを設定するには、「[例のアプリをレビューして実行する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」に用意されている基本コードを次のように変更します。 また、完成したアプリを「[Async Samples: Reentrancy in .NET Desktop Apps (非同期の例: .NET デスクトップ アプリでの再入)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」からダウンロードすることもできます。 このプロジェクトの名前は CancelAndRestart です。  
   
 1.  すべてのメソッドのスコープである <xref:System.Threading.CancellationTokenSource> 変数、`cts` を宣言します。  
   
@@ -162,7 +162,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  末尾に`StartButton_Click`、現在のプロセスが完了したらの値の設定により`cts`に`Nothing`です。  
+4.  末尾に`StartButton_Click`、現在のプロセスが完了したら、設定の値`cts`に`Nothing`します。  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -285,11 +285,11 @@ TOTAL bytes returned:  890591
  部分的なリストを削除するには、`StartButton_Click` コードの先頭行のコメントを解除して、ユーザーが操作を再開するたびに、テキスト ボックスをクリアします。  
   
 ###  <a name="BKMK_RunMultipleOperations"></a>複数の操作を実行して出力をキューに登録する  
- この 3 番目の例は、ユーザーが **[Start]** ボタンをクリックするたびに非同期操作が開始され、すべての操作が完了まで実行されるという点で最も複雑です。 要求されたすべての操作によって Web サイトがリストから非同期的にダウンロードされますが、操作からの出力は順次表示されます。 つまり、「[再入を認識する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」の出力に示されているように、実際のダウンロード アクティビティはインターリーブされますが、各グループの結果のリストは個別に表示されます。  
+ この 3 番目の例は、ユーザーが **[Start]** ボタンをクリックするたびに非同期操作が開始され、すべての操作が完了まで実行されるという点で最も複雑です。 要求されたすべての操作によって Web サイトがリストから非同期的にダウンロードされますが、操作からの出力は順次表示されます。 つまり、「[再入を認識する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」の出力に示されているように、実際のダウンロード アクティビティはインターリーブされますが、各グループの結果のリストは個別に表示されます。  
   
  操作は、表示プロセスのゲートキーパーとして機能するグローバル <xref:System.Threading.Tasks.Task>、`pendingWork` を共有します。  
   
- この例を実行するには、変更を「[アプリケーションをビルドする](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」のコードに貼り付けます。また、「[アプリをダウンロードする](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」の手順に従って、サンプルをダウンロードし、QueueResults プロジェクトを実行することもできます。  
+ この例を実行するには、変更を「[アプリケーションをビルドする](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」のコードに貼り付けます。また、「[アプリをダウンロードする](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」の手順に従って、サンプルをダウンロードし、QueueResults プロジェクトを実行することもできます。  
   
  次の出力は、ユーザーが 1 度だけ **[Start]** ボタンをクリックした場合の結果を示しています。 文字ラベル A は、**[Start]** ボタンが最初にクリックされた結果であることを示しています。 数字は、ダウンロード対象の一覧における URL の順序を示しています。  
   
@@ -473,7 +473,7 @@ Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks
 End Function  
 ```  
   
- この例を実行するには、変更を「[アプリケーションをビルドする](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」のコードに貼り付けます。また、「[アプリをダウンロードする](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」の手順に従って、サンプルをダウンロードし、QueueResults プロジェクトを実行することもできます。  
+ この例を実行するには、変更を「[アプリケーションをビルドする](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」のコードに貼り付けます。また、「[アプリをダウンロードする](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」の手順に従って、サンプルをダウンロードし、QueueResults プロジェクトを実行することもできます。  
   
 #### <a name="points-of-interest"></a>目的のポイント  
  出力で先頭にシャープ記号 (#) が付いている情報行は、この例の動作を明確に示しています。  
@@ -516,7 +516,7 @@ End Function
     TOTAL bytes returned:  915908  
     ```  
   
--   `pendingWork`タスクは`Nothing`の開始時`FinishOneGroupAsync`グループ A ののみを最初に開始します。 `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。  
+-   `pendingWork`タスクが`Nothing`の開始時`FinishOneGroupAsync`グループ A についてのみ最初に開始しました。 `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。  
   
 -   次の 2 行は、出力に必ず同時に表示されます。 `StartButton_Click` のグループ操作が開始してから、グループのタスクが `pendingWork` に割り当てられるまでの間、コードが中断されることは決してありません。  
   
@@ -558,7 +558,7 @@ End Function
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3.  **インストールされたテンプレート** ウィンドウで、展開**Visual Basic**の順に展開および**Windows**です。  
+3.  **インストールされたテンプレート**ウィンドウで、展開**Visual Basic**、順に展開**Windows**します。  
   
 4.  プロジェクトの種類の一覧の **[WPF アプリケーション]** をクリックします。  
   
@@ -592,7 +592,7 @@ End Function
   
 8.  <xref:System.Net.Http> への参照を追加します。  
   
-9. **ソリューション エクスプ ローラー**MainWindow.xaml.vb のショートカット メニューを開き、クリックして**コードの表示**です。  
+9. **ソリューション エクスプ ローラー**MainWindow.xaml.vb のショートカット メニューを開き、選択し、**コードの表示**します。  
   
 10. MainWindow.xaml.vb でのコードを次のコードに置き換えます。  
   
@@ -674,7 +674,7 @@ End Function
   
 11. Ctrl キーを押しながら F5 キーを押してプログラムを実行し、**[Start]** ボタンを複数回クリックします。  
   
-12. 「[[Start] ボタンを無効にする](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」、「[操作を取り消して再開する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」、または「[複数の操作を実行して出力をキューに登録する](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」の変更を行って再入を処理します。  
+12. 「[[Start] ボタンを無効にする](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」、「[操作を取り消して再開する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」、または「[複数の操作を実行して出力をキューに登録する](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)」の変更を行って再入を処理します。  
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  

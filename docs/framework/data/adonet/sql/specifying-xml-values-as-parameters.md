@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: c963b3e08eba7776a0ed579017f1e84828794379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355299"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399857"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>パラメーターとしての XML 値の指定
-開発者がのインスタンスを使用してその値を指定できますクエリには、その値は、XML 文字列パラメーターが必要とする場合、 **SqlXml**データ型。 実際にはありませんテクニックです。SQL Server の XML 列では、他のデータ型とまったく同じ方法でパラメーター値をそのまま使用します。  
+クエリには、値を持つ XML 文字列のパラメーターが必要な場合は、開発者がのインスタンスを使用してその値を提供できます、 **SqlXml**データ型。 特別な処理はありません。SQL Server の XML 列では、他のデータ型とまったく同じ方法でパラメーター値をそのまま使用します。  
   
 ## <a name="example"></a>例  
- 次のコンソール アプリケーションで新しいテーブルを作成する、 **AdventureWorks**データベース。 新しいテーブルには、という名前の列が含まれています。 **SalesID**とという XML 列を**SalesInfo**です。  
+ 次のコンソール アプリケーションで新しいテーブルを作成し、 **AdventureWorks**データベース。 新しいテーブルには、という名前の列が含まれています。 **SalesID**という名前の XML 列と**SalesInfo**します。  
   
 > [!NOTE]
 >  **AdventureWorks**既定では、SQL Server をインストールするときにサンプル データベースはインストールされません。 SQL Server Setup を実行してインストールします。  
   
- この例では、新しいテーブルに行を挿入するために <xref:System.Data.SqlClient.SqlCommand> オブジェクトを準備します。 保存されたファイルに必要な XML データを提供する、 **SalesInfo**列です。  
+ この例では、新しいテーブルに行を挿入するために <xref:System.Data.SqlClient.SqlCommand> オブジェクトを準備します。 保存したファイルに必要な XML データを提供する、 **SalesInfo**列。  
   
  この例を実行させるために必要なファイルを作成するには、プロジェクトと同じフォルダー内に新しいテキスト ファイルを作成します。 ファイルに MyTestStoreData.xml という名前を付けます。 ファイルをメモ帳で開き、次のテキストをコピーして貼り付けます。  
   
@@ -162,4 +162,4 @@ class Class1
 ## <a name="see-also"></a>関連項目  
  <xref:System.Data.SqlTypes.SqlXml>  
  [SQL Server における XML データ](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

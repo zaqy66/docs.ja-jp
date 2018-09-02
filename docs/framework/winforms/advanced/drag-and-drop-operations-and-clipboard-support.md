@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Clipboard [Windows Forms], Windows Forms
 ms.assetid: 7cce79b6-5835-46fd-b690-73f12ad368b2
-ms.openlocfilehash: 05cc79abdeb41cd3bfb7db21ebb206eb309ad5d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2bb3c24298ffe5308af03c5af5bae697a22c33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522573"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398633"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>ドラッグ アンド ドロップ操作とクリップボードのサポート
 一連のイベントを処理することで、Windows ベースのアプリケーション内でユーザーによるドラッグ アンド ドロップ操作を有効にすることができます。最も顕著なのは <xref:System.Windows.Forms.Control.DragEnter>、<xref:System.Windows.Forms.Control.DragLeave>、および <xref:System.Windows.Forms.Control.DragDrop> のイベントです。  
@@ -42,4 +42,4 @@ ms.locfileid: "33522573"
  ドラッグ操作を開始するときに中心となる複雑なメソッドについて説明します。  
   
  <xref:System.Windows.Forms.Clipboard>  
- 参照してください[する方法: アクティブな MDI 子フォームにデータを送信](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\))です。
+ 参照してください[方法: アクティブな MDI 子にデータを送信](https://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\))します。

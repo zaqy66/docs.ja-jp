@@ -8,18 +8,18 @@ helpviewer_keywords:
 - border thickness [WPF]
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
-ms.openlocfilehash: 119c4397dee76429e776378ee89fa49747dbfce4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c8f9e83468a7b189b96efca2e175c0f3fe0dfff
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544344"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399354"
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>方法 : ThicknessConverter オブジェクトを使用する
 ## <a name="example"></a>例  
- この例は、のインスタンスを作成する方法を示しています。<xref:System.Windows.ThicknessConverter>境界線の太さを変更するとします。  
+ この例のインスタンスを作成する方法を示しています。<xref:System.Windows.ThicknessConverter>境界線の太さを変更するとします。  
   
- 例と呼ばれるカスタム メソッドを定義する`changeThickness`; このメソッドは最初のコンテンツを変換、<xref:System.Windows.Controls.ListBoxItem>個別で定義されている、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイルのインスタンスを<xref:System.Windows.Thickness>、後に、コンテンツに変換します、<xref:System.String>です。 このメソッドは、<xref:System.Windows.Controls.ListBoxItem>を<xref:System.Windows.ThicknessConverter>に変換するオブジェクト、<xref:System.Windows.Controls.ContentControl.Content%2A>の<xref:System.Windows.Controls.ListBoxItem>のインスタンスに<xref:System.Windows.Thickness>です。 この値がの値として渡されたし、<xref:System.Windows.Controls.Border.BorderThickness%2A>のプロパティ、<xref:System.Windows.Controls.Border>です。  
+ 例では、呼び出されるカスタム メソッドを定義します`changeThickness`; このメソッドは、最初の内容を変換、<xref:System.Windows.Controls.ListBoxItem>個別で定義されている、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]のインスタンスへのファイル<xref:System.Windows.Thickness>、後に、コンテンツに変換します、 <xref:System.String>。 このメソッドは、<xref:System.Windows.Controls.ListBoxItem>に、<xref:System.Windows.ThicknessConverter>オブジェクトで、変換、<xref:System.Windows.Controls.ContentControl.Content%2A>の<xref:System.Windows.Controls.ListBoxItem>のインスタンスに<xref:System.Windows.Thickness>。 この値の値として戻されますが、<xref:System.Windows.Controls.Border.BorderThickness%2A>のプロパティ、<xref:System.Windows.Controls.Border>します。  
   
  この例は実行できません。  
   
@@ -30,6 +30,6 @@ ms.locfileid: "33544344"
  <xref:System.Windows.Thickness>  
  <xref:System.Windows.ThicknessConverter>  
  <xref:System.Windows.Controls.Border>  
- [方法: Margin プロパティの変更](http://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
- [方法: ListBoxItem を新しいデータ型に変換します。](http://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)  
+ [方法: Margin プロパティの変更](https://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
+ [方法: ListBoxItem を新しいデータ型に変換します。](https://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)  
  [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)

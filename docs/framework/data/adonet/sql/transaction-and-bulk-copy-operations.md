@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: 9b485ac3f12587256a56fdfa44cf8b9c8b41a6bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24657f541daf5bb098f8db3b59a3241ecf832d39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365343"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398866"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>トランザクションとバルク コピー操作
 バルク コピー操作は、単独の操作として、または、手順が複数あるトランザクションの 1 手順として実行されます。 手順が複数あるトランザクションの 1 手順として実行する場合、同一トランザクション内でバルク コピー操作を複数回実行することができます。また、挿入、更新、削除などの他のデータベース操作を実行していても、トランザクション全体をコミットまたはロールバックできます。  
   
- 既定では、バルク コピー操作は単独の操作として実行されます。 このバルク コピー操作は非トランザクション方式で処理され、ロールバックできません。 使用することができますをロールバックする一括コピーの一部またはすべてエラーが発生する必要がある場合、 <xref:System.Data.SqlClient.SqlBulkCopy>-管理するトランザクション、既存のトランザクション内でバルク コピー操作の実行、またはに参加させる、 **System.Transactions** <xref:System.Transactions.Transaction>.  
+ 既定では、バルク コピー操作は単独の操作として実行されます。 このバルク コピー操作は非トランザクション方式で処理され、ロールバックできません。 使用することができますをロールバックする一括コピーの一部またはすべてエラーが発生する必要がある場合、 <xref:System.Data.SqlClient.SqlBulkCopy>-トランザクションの管理、既存のトランザクション内でバルク コピー操作を実行またはに参加させる、 **System.Transactions** <xref:System.Transactions.Transaction>.  
   
 ## <a name="performing-a-non-transacted-bulk-copy-operation"></a>非トランザクション処理のバルク コピー操作の実行  
  次のコンソール アプリケーションでは、非トランザクション処理のバルク コピー操作で処理中にエラーが検出されたときに、そのエラーの内容を表示します。  
   
- 例では、ソース テーブルとコピー先のテーブルは、それぞれ、`Identity`という名前の列**ProductID**です。 コードがすべての行を削除することによって最初に、変換先テーブルを準備し、行行、1 つを挿入**ProductID**ソース テーブルに存在しています。 既定では、`Identity` 列の新しい値は追加した各行のコピー先のテーブル内で生成されます。 この例では、代わりに、コピー元のテーブルからの `Identity` 値を使用するバルク ロード処理を強制的に行う接続が開かれている場合、オプションが設定されます。  
+ 例では、ソース テーブルと変換先テーブルが含まれて、`Identity`という名前の列**ProductID**します。 コードは、すべての行を削除することによって、変換先テーブルを準備する最初といる行を 1 つを挿入する**ProductID**ソース テーブルに存在しています。 既定では、`Identity` 列の新しい値は追加した各行のコピー先のテーブル内で生成されます。 この例では、代わりに、コピー元のテーブルからの `Identity` 値を使用するバルク ロード処理を強制的に行う接続が開かれている場合、オプションが設定されます。  
   
  このバルク コピー操作は、<xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> プロパティを 10 に設定して実行されます。 処理中に無効な行が検出されると、例外がスローされます。 この最初の例では、バルク コピー操作はトランザクション処理ではありません。 エラー発生ポイントまでにコピーされたバッチはすべてコミットされ、重複キーが含まれるバッチはロールバックされます。また、バルク コピー操作は、他のバッチを処理する前に中止されます。  
   
 > [!NOTE]
->  」の説明に従って、作業テーブルを作成していない限り、このサンプルは実行されません[バルク コピー サンプルのセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)です。 使用する構文を示すためにこのコードが提供される**SqlBulkCopy**のみです。 簡単かつ迅速に使用する元と移行先のテーブルは、同じ SQL Server インスタンスに存在する場合は、 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT`ステートメント、データをコピーします。  
+>  このサンプルでは」の説明に従って、作業テーブルを作成していない限りは実行されません[バルク コピー サンプルのセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)します。 使用する構文を示すためにこのコードが提供される**SqlBulkCopy**のみです。 簡単かつ迅速に使用元と変換先のテーブルは、同じ SQL Server インスタンスに存在する場合は、 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT`ステートメント、データをコピーします。  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -41,7 +41,7 @@ ms.locfileid: "33365343"
  次のコンソール アプリケーションは前の例とほぼ同じですが、バルク コピー操作で専用のトランザクションが管理される点が異なります。 エラー発生ポイントまでにコピーされたバッチはすべてコミットされ、重複キーが含まれるバッチはロールバックされます。また、バルク コピー操作は、他のバッチを処理する前に中止されます。  
   
 > [!IMPORTANT]
->  」の説明に従って、作業テーブルを作成していない限り、このサンプルは実行されません[バルク コピー サンプルのセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)です。 使用する構文を示すためにこのコードが提供される**SqlBulkCopy**のみです。 簡単かつ迅速に使用する元と移行先のテーブルは、同じ SQL Server インスタンスに存在する場合は、 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT`ステートメント、データをコピーします。  
+>  このサンプルでは」の説明に従って、作業テーブルを作成していない限りは実行されません[バルク コピー サンプルのセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)します。 使用する構文を示すためにこのコードが提供される**SqlBulkCopy**のみです。 簡単かつ迅速に使用元と変換先のテーブルは、同じ SQL Server インスタンスに存在する場合は、 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT`ステートメント、データをコピーします。  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -54,11 +54,11 @@ ms.locfileid: "33365343"
  次のコンソール アプリケーションは最初の (トランザクションのない) 例とほぼ同じですが、バルク コピー操作がより大きな外部トランザクションに含まれている点が異なります。 主キーの違反エラーが発生した場合、トランザクションはすべてロールバックされ、コピー先のテーブルに行は追加されません。  
   
 > [!IMPORTANT]
->  」の説明に従って、作業テーブルを作成していない限り、このサンプルは実行されません[バルク コピー サンプルのセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)です。 使用する構文を示すためにこのコードが提供される**SqlBulkCopy**のみです。 簡単かつ迅速に使用する元と移行先のテーブルは、同じ SQL Server インスタンスに存在する場合は、 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT`ステートメント、データをコピーします。  
+>  このサンプルでは」の説明に従って、作業テーブルを作成していない限りは実行されません[バルク コピー サンプルのセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)します。 使用する構文を示すためにこのコードが提供される**SqlBulkCopy**のみです。 簡単かつ迅速に使用元と変換先のテーブルは、同じ SQL Server インスタンスに存在する場合は、 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT`ステートメント、データをコピーします。  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server でのバルク コピー操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

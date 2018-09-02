@@ -2,17 +2,17 @@
 title: 'チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 535b431fcf8ab5dafa134b8a3c1e2f7eacd6b427
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e00798a5e591ed8621cd0b5dbb4adfd1d41989bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696508"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399679"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)
 async/await 機能を使用することで、非同期プログラムをより簡単かつ直感的に記述できます。 同期コードに似た非同期コードを記述し、通常の非同期コードが必要とする難しいコールバック関数や継続の処理をコンパイラに任せます。  
   
- 非同期機能の詳細については、次を参照してください。 [Async および Await (Visual Basic) を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)です。  
+ 非同期機能の詳細については、次を参照してください。 [Async および Await (Visual Basic) を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)します。  
   
  このチュートリアルは、Web サイトの一覧でのバイト数の合計を計算する同期 Windows Presentation Foundation (WPF) アプリケーションから開始します。 その後、新しい機能を使用して、アプリケーションを非同期ソリューションに変換します。  
   
@@ -45,7 +45,7 @@ async/await 機能を使用することで、非同期プログラムをより�
 -   [例](#BKMK_CompleteCodeExamples)  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- お使いのコンピューターに、Visual Studio 2012 以降がインストールされている必要があります。 詳しくは、[Microsoft Web サイト](http://go.microsoft.com/fwlink/?LinkId=235233)をご覧ください。  
+ お使いのコンピューターに、Visual Studio 2012 以降がインストールされている必要があります。 詳しくは、[Microsoft Web サイト](https://go.microsoft.com/fwlink/?LinkId=235233)をご覧ください。  
   
 ###  <a name="CreateWPFApp"></a> WPF アプリケーションを作成するには  
   
@@ -55,7 +55,7 @@ async/await 機能を使用することで、非同期プログラムをより�
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3.  **インストールされたテンプレート**] ウィンドウでは、Visual Basic を選択し、[ **WPF アプリケーション**プロジェクトの種類の一覧からです。  
+3.  **インストールされたテンプレート**ウィンドウが Visual Basic を選択し、 **WPF アプリケーション**プロジェクトの種類の一覧から。  
   
 4.  **[名前]** ボックスに「`AsyncExampleWPF`」と入力して、**[OK]** を選択します。  
   
@@ -110,9 +110,9 @@ async/await 機能を使用することで、非同期プログラムをより�
 ##  <a name="BKMK_AddStatesandDirs"></a>   
 ###  <a name="ImportsState"></a> 必要な Imports ステートメントを追加するには  
   
-1.  **ソリューション エクスプ ローラー**MainWindow.xaml.vb のショートカット メニューを開き、クリックして**コードの表示**です。  
+1.  **ソリューション エクスプ ローラー**MainWindow.xaml.vb のショートカット メニューを開き、選択し、**コードの表示**します。  
   
-2.  次の追加`Imports`していない場合は既に存在コード ファイルの上部にあるステートメントです。  
+2.  次の追加`Imports`存在していない場合は、コード ファイルの上部にあるステートメント。  
   
     ```vb  
     Imports System.Net.Http  
@@ -123,7 +123,7 @@ async/await 機能を使用することで、非同期プログラムをより�
 ##  <a name="BKMK_CreatSynchApp"></a>   
 ###  <a name="synchronous"></a> 同期アプリケーションを作成するには  
   
-1.  デザイン ウィンドウで、MainWindow.xaml をダブルクリック、**開始**を作成するボタン、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
+1.  デザイン ウィンドウの MainWindow.xaml をダブルクリックして、**開始**を作成するボタン、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
   
 2.  MainWindow.xaml.vb での本文に次のコードをコピー `startButton_Click`:  
   
@@ -145,7 +145,7 @@ async/await 機能を使用することで、非同期プログラムをより�
   
     -   `DisplayResults` は、各 URL のバイト配列内のバイト数を表示します。  
   
-     次の 4 つのメソッドをコピーし、下に貼り付けます、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
+     次の 4 つのメソッドをコピーしてから下に、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
   
     ```vb  
     Private Sub SumPageSizes()  
@@ -265,7 +265,7 @@ async/await 機能を使用することで、非同期プログラムをより�
   
 2.  `GetResponseAsync` は、<xref:System.Threading.Tasks.Task%601> を返します。 この場合、*タスク戻り変数*の `TResult` の型は <xref:System.Net.WebResponse> です。 このタスクは、要求されたデータのダウンロードが完了し、タスクが最後まで実行された後に、実際の `WebResponse` オブジェクトを生成するという約束です。  
   
-     取得する、`WebResponse`タスクから値を適用、 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)演算子への呼び出しを`GetResponseAsync`次のコードに示すようにします。  
+     取得する、`WebResponse`タスクから値を適用、 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)演算子への呼び出しを`GetResponseAsync`次のコードに示すように、します。  
   
     ```vb  
     Using response As WebResponse = Await webReq.GetResponseAsync()  
@@ -280,11 +280,11 @@ async/await 機能を使用することで、非同期プログラムをより�
     'Using response As WebResponse = Await responseTask  
     ```  
   
-     `webReq.GetResponseAsync` への呼び出しによって、`Task(Of WebResponse)` または `Task<WebResponse>` が返されます。 `Await`を取得するタスクに演算子を適用、`WebResponse`値。  
+     `webReq.GetResponseAsync` への呼び出しによって、`Task(Of WebResponse)` または `Task<WebResponse>` が返されます。 `Await`演算子を取得するタスクに適用されます、`WebResponse`値。  
   
-     非同期メソッドにタスクの完了に依存しない処理がある場合、メソッドはこれら 2 つのステートメントの間、つまり非同期メソッドへの呼び出しから、await 演算子の適用までの間にその処理を続行することができます。 例については、次を参照してください。[する方法: 複数の Web 要求を使用して Async および Await (Visual Basic) から同時に](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)と[する方法: Task.WhenAll (Visual Basic) にを使用して Asyncwalkthrough を拡張](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)です。  
+     非同期メソッドにタスクの完了に依存しない処理がある場合、メソッドはこれら 2 つのステートメントの間、つまり非同期メソッドへの呼び出しから、await 演算子の適用までの間にその処理を続行することができます。 例については、次を参照してください。[方法: 複数の Web 要求を並列でを使用して Async および Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)と[方法: Task.WhenAll を使用する」(Visual Basic) して Async Walkthrough を拡張](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)します。  
   
-3.  前の手順で `Await` 演算子を追加したため、コンパイラ エラーが発生します。 マークされたメソッドでのみ使用できます、演算子、 [Async](../../../../visual-basic/language-reference/modifiers/async.md)修飾子です。 `CopyTo` への呼び出しを `CopyToAsync` への呼び出しに置き換える変換手順を繰り返す間は、エラーを無視してください。  
+3.  前の手順で `Await` 演算子を追加したため、コンパイラ エラーが発生します。 演算子でマークされているメソッドでのみ使用できます、 [Async](../../../../visual-basic/language-reference/modifiers/async.md)修飾子。 `CopyTo` への呼び出しを `CopyToAsync` への呼び出しに置き換える変換手順を繰り返す間は、エラーを無視してください。  
   
     -   呼び出されるメソッドの名前を <xref:System.IO.Stream.CopyToAsync%2A> に変更します。  
   
@@ -305,15 +305,15 @@ async/await 機能を使用することで、非同期プログラムをより�
         'Await copyTask  
         ```  
   
-4.  `GetURLContents` 内で必要な作業として残っているのは、メソッド シグネチャの調整のみです。 使用することができます、`Await`演算子でマークされたメソッドでのみ、 [Async](../../../../visual-basic/language-reference/modifiers/async.md)修飾子です。 次のコードに示すように、修飾子を追加し、メソッドを*非同期メソッド*としてマークします。  
+4.  `GetURLContents` 内で必要な作業として残っているのは、メソッド シグネチャの調整のみです。 使用することができます、`Await`演算子でマークされているメソッドでのみ、 [Async](../../../../visual-basic/language-reference/modifiers/async.md)修飾子。 次のコードに示すように、修飾子を追加し、メソッドを*非同期メソッド*としてマークします。  
   
     ```vb  
     Private Async Function GetURLContents(url As String) As Byte()  
     ```  
   
-5.  非同期メソッドの戻り値の型は、必ず<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>です。 Visual Basic でのメソッドは、`Task` または `Task(Of T)` を返す `Function` にするか、`Sub` にする必要があります。 通常、`Sub`メソッドは非同期のイベント ハンドラーでのみ使用場所`Sub`が必要です。 使用する場合に、 `Task(T)` 、完成したメソッドがある場合、[返す](../../../../visual-basic/language-reference/statements/return-statement.md)の値を返すステートメントは、T を入力し、使用する`Task`完成したメソッドが意味のある値を返さない場合です。  
+5.  非同期メソッドの戻り値の型は、必ず<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>します。 Visual Basic でのメソッドは、`Task` または `Task(Of T)` を返す `Function` にするか、`Sub` にする必要があります。 通常、`Sub`メソッドは非同期のイベント ハンドラーでのみ使用場所`Sub`が必要です。 使用する場合は、 `Task(T)` 、完成したメソッドがある場合、[返す](../../../../visual-basic/language-reference/statements/return-statement.md)の値を返すステートメントが、T を入力し、使用する`Task`完成したメソッドが意味のある値を返さない場合。  
   
-     詳細については、次を参照してください。 [Async 戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)です。  
+     詳細については、次を参照してください。 [Async 戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)します。  
   
      メソッド `GetURLContents` には return ステートメントがあり、このステートメントはバイト配列を返します。 そのため、非同期バージョンの戻り値の型は Task(T) であり、T はバイト配列です。 メソッド シグネチャに、次の変更を加えます。  
   
@@ -359,7 +359,7 @@ async/await 機能を使用することで、非同期プログラムをより�
   
     -   メソッド名に "Async" を追加します。  
   
-    -   今回、タスク戻り変数の T がない理由は、`SumPageSizesAsync` が T のための値を返さないからです (メソッドに `Return` ステートメントがありません)。ただし、メソッドは待機可能になるために `Task` を返す必要があります。 そのため、変更、メソッドの型から`Sub`に`Function`です。 関数の戻り値の型は、`Task` です。  
+    -   今回、タスク戻り変数の T がない理由は、`SumPageSizesAsync` が T のための値を返さないからです (メソッドに `Return` ステートメントがありません)。ただし、メソッドは待機可能になるために `Task` を返す必要があります。 そのためからメソッドの型を変更`Sub`に`Function`します。 関数の戻り値の型は、`Task` です。  
   
      これらの変更を次のコードに示します。  
   
@@ -403,7 +403,7 @@ async/await 機能を使用することで、非同期プログラムをより�
     startButton.IsEnabled = True  
     ```  
   
-     再入の詳細については、次を参照してください。 [(Visual Basic) の非同期アプリにおける再入の処理](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)です。  
+     再入の詳細については、次を参照してください。 [(Visual Basic) の非同期アプリにおける再入の処理](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)します。  
   
 4.  最後に、`Async` 修飾子を宣言に追加し、イベント ハンドラーが `SumPagSizesAsync` を待機できるようにします。  
   
@@ -411,7 +411,7 @@ async/await 機能を使用することで、非同期プログラムをより�
     Async Sub startButton_Click(sender As Object, e As RoutedEventArgs) Handles startButton.Click  
     ```  
   
-     通常、イベント ハンドラーの名前は変更されません。 戻り値の型に変更されていない`Task`イベント ハンドラーでなければならないため`Sub`Visual Basic におけるプロシージャです。  
+     通常、イベント ハンドラーの名前は変更されません。 戻り値の型が変更されていない`Task`イベント ハンドラーである必要がありますので`Sub`Visual Basic におけるプロシージャ。  
   
      同期処理から非同期処理へのプロジェクトの変換が完了しました。  
   
@@ -679,6 +679,6 @@ End Class
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
  [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [非同期の戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [タスク ベースの非同期プログラミング (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [タスク ベースの非同期プログラミング (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)  
  [方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
  [方法: Async と Await を使用して複数の Web 要求を並列実行する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

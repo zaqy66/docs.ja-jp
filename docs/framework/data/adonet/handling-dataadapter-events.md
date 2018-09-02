@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: f2b07b8d42069fa98ba51dea75f9695e7adce0b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7013f855fb54f6c67c569ccabda91727359d22b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759154"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398761"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter のイベント処理
 ADO.NET <xref:System.Data.Common.DataAdapter> は、データ ソースのデータに対して行われた変更に応答するときに使用できる 3 つのイベントを公開します。 `DataAdapter` のイベントを次の表に示します。  
@@ -39,7 +39,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> は、データ ソースのデー
   
  `ContinueUpdateOnError` プロパティを使用して更新行に関するエラーを処理することもできます。 `DataAdapter.ContinueUpdateOnError` を `true` に設定すると、行を更新した結果、例外がスローされようとしているときに、例外のテキストをその行の `RowError` 情報の中に格納し、例外をスローせずに処理を続行できます。 これにより、`Update` が完了した時点でエラーに応答できるようになります。これに対して `RowUpdated` イベントを使用すると、エラーが発生した時点でエラーに応答できます。  
   
- イベント ハンドラーを追加および削除する方法を次のコード サンプルに示します。 `RowUpdating` イベント ハンドラーは、削除されたすべてのレコードのログをタイムスタンプと共に記録します。 `RowUpdated`イベント ハンドラーの追加エラー情報を`RowError`内の行のプロパティ、 `DataSet`、例外を抑制し、処理を続行 (の動作をミラーリング`ContinueUpdateOnError`  =  `true`)。  
+ イベント ハンドラーを追加および削除する方法を次のコード サンプルに示します。 `RowUpdating` イベント ハンドラーは、削除されたすべてのレコードのログをタイムスタンプと共に記録します。 `RowUpdated`イベント ハンドラーの追加エラー情報を`RowError`内の行のプロパティ、 `DataSet`、例外を抑制および処理を続行 (の動作をミラーリング`ContinueUpdateOnError`  =  `true`)。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -191,4 +191,4 @@ protected static void FillError(object sender, FillErrorEventArgs args)
  [DataSet のイベント処理](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
  [DataTable イベントの処理](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  [イベント](../../../../docs/standard/events/index.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

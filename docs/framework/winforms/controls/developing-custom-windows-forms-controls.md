@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 935358664f93b6428b9153a9bcbed862aeee07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528669"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397604"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>.NET Framework を使用したカスタム Windows フォーム コントロールの開発
 Windows フォーム コントロールは、ユーザー インターフェイスの機能をカプセル化して、クライアント側の Windows ベースのアプリケーションで使用される再利用可能なコンポーネントです。 Windows フォームは、すぐに使用できる多数のコントロールを提供するだけでなく、独自のコントロールを開発するためのインフラストラクチャも提供します。 既存のコントロールの結合、既存のコントロールの拡張、または独自のカスタム コントロールの記述ができます。 このセクションでは、Windows フォーム コントロールの開発に役立つ背景情報とサンプルを提供します。  
@@ -51,13 +51,13 @@ Windows フォーム コントロールは、ユーザー インターフェイ�
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [コンポーネントのデザイン時属性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [コンポーネントのデザイン時属性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
  ビジュアル デザイナーでデザインするときに正しく表示されるようにコンポーネントとコントロールに適用するメタデータ属性の一覧を表示します。  
   
- [デザイン時サポートの拡張](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [デザイン時サポートの拡張](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  デザイン時サポートを提供するエディターやデザイナーなどのクラスを実装する方法について説明します。  
   
- [方法 : コンポーネントおよびコントロールのライセンス処理を行う](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
+ [方法 : コンポーネントおよびコントロールのライセンス処理を行う](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
  コントロールやコンポーネントのライセンスを実装する方法について説明します。  
   
- 「[デザイン時の Windows フォーム コントロールの開発](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\))」も参照してください。
+ 「[デザイン時の Windows フォーム コントロールの開発](https://msdn.microsoft.com/library/w29y3h59\(v=vs.110\))」も参照してください。

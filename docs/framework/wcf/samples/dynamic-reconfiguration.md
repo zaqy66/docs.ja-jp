@@ -2,22 +2,22 @@
 title: 動的再構成
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-ms.openlocfilehash: 81a2b494c48476e683053e12e58264e756201124
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a147a1d6cf61001832661376363ecc850ecad309
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810381"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401341"
 ---
 # <a name="dynamic-reconfiguration"></a>動的再構成
-このサンプルでは、Windows Communication Foundation (WCF) ルーティング サービスを使用します。 ルーティング サービスは、コンテンツ ベースのルーターをアプリケーションに含めるしやすく WCF コンポーネントです。 このサンプルは、ルーティング サービスを使用して通信するために標準の WCF 電卓のサンプルを適合させます。 このサンプルでは、実行時にルーティング サービスを動的に再構成する方法を示します。  
+このサンプルでは、Windows Communication Foundation (WCF) ルーティング サービスを使用します。 ルーティング サービスは、WCF コンポーネント、アプリケーションでコンテンツ ベースのルーターを含めるが簡単です。 このサンプルでは、ルーティング サービスを使用して通信するために標準の WCF 電卓のサンプルを適応します。 このサンプルでは、実行時にルーティング サービスを動的に再構成する方法を示します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\DynamicReconfiguration`  
   
@@ -30,13 +30,13 @@ ms.locfileid: "33810381"
   
 1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] を使用して DynamicReconfiguration.sln を開きます。  
   
-2.  開くには**ソリューション エクスプ ローラー****ソリューション エクスプ ローラー**から、**ビュー**メニュー。  
+2.  開くには**ソリューション エクスプ ローラー**、**ソリューション エクスプ ローラー**から、**ビュー**メニュー。  
   
-3.  キーを押して**f5 キーを押して**または**CTRL + SHIFT + B** Visual Studio でします。  
+3.  キーを押して**F5**または**CTRL + SHIFT + B** Visual Studio でします。  
   
-    1.  キーを押したときに必要なプロジェクトを自動的に起動するかかどうか**f5 キーを押して**、ソリューションを右クリックし **プロパティ**です。 選択、**スタートアップ プロジェクト**ノードの下**共通プロパティ**左側のウィンドウでします。 選択、**マルチ スタートアップ プロジェクト**ラジオ ボタンと、すべてのプロジェクトに対して、設定、**開始**アクション。  
+    1.  自動的に起動に必要なプロジェクト キーを押すかかどうか**f5 キーを押して**ソリューションを右クリックし、選択、**プロパティ**します。 選択、**スタートアップ プロジェクト**ノードの下**共通プロパティ**左側のウィンドウでします。 選択、**マルチ スタートアップ プロジェクト**オプション ボタンをクリックし、すべてのプロジェクトに設定、**開始**アクション。  
   
-    2.  使用してプロジェクトをビルドする場合**CTRL + SHIFT + B**、次のアプリケーションを開始する必要があります。  
+    2.  プロジェクトをビルドする場合**CTRL + SHIFT + B**、次のアプリケーションを開始する必要があります。  
   
         1.  電卓クライアント (./CalculatorClient/bin/client.exe)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "33810381"
   
 6.  また、電卓サービスと丸め処理を行う電卓サービスは、呼び出された操作のログをそれぞれのコンソール ウィンドウに出力します。  
   
-7.  クライアント コンソール ウィンドウには、「終了」を入力し、enter キーを押して終了します。  
+7.  クライアント コンソール ウィンドウでは、"quit"を入力し、ENTER を押して終了します。  
   
 8.  サービスを終了するには、サービス コンソール ウィンドウで Enter キーを押します。  
   
@@ -83,4 +83,4 @@ ms.locfileid: "33810381"
  Contoso では、すべてのサービスを仮想化して 1 つのエンドポイントのみを公開し、そのエンドポイントを通じて複数の異なる種類のサービスへのアクセスを提供したいと考えています。 この場合は、ルーティング サービスのコンテンツ ベースのルーティング機能を使用して受信要求の送信先を決定します。  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric ホスティングと永続性のサンプル](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

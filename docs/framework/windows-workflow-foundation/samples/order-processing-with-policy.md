@@ -2,12 +2,12 @@
 title: ポリシーを使用した注文処理
 ms.date: 03/30/2017
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-ms.openlocfilehash: 15e274a7a513a3208e3a54575dc354310743b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b927d8e7090f96b22c0510f9651070ab999c91be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519419"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398371"
 ---
 # <a name="order-processing-with-policy"></a>ポリシーを使用した注文処理
 注文処理ポリシー サンプルでは、Windows WF (Workflow Foundation) の [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] に導入された重要な機能の一部を示しています。 次の機能が WF ルール エンジンに新しく追加されました。  
@@ -24,7 +24,7 @@ ms.locfileid: "33519419"
  このサンプルでは、使用できるアイテムの番号付きリストと郵便番号で構成される顧客の注文を入力する、`OrderProcessingPolicy` プロジェクトを示します。 両方の入力が正しい場合は、注文が正常に処理されますが、正しくない場合は、ポリシーによってエラー オブジェクトが作成され、オーバーロードされた `+` 演算子と定義済みの拡張メソッドによって、ユーザーにエラーが通知されます。  
   
 > [!NOTE]
->  拡張メソッドの詳細については、次を参照してください。 [c# バージョン 3.0 の仕様](http://go.microsoft.com/fwlink/?LinkId=95402)です。  
+>  拡張メソッドの詳細については、次を参照してください。 [c# バージョン 3.0 の仕様](https://go.microsoft.com/fwlink/?LinkId=95402)します。  
   
  サンプルは、以下のプロジェクトで構成されます。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33519419"
   
          このルールでは、上記の 2 つの `OrderErrorCollection` オブジェクト、`invalidItemNumErrorCollection` および `invalidIZipCodeErrorCollection` の 2 つのルールによって追加されたエラーがあるかどうかを確認します。 エラーがある場合 (`invalidItemNumErrorCollection` または `invalidZipCodeErrorCollection`が `null` ではない場合)、このルールによって以下の処理が行われます。  
   
-        1.  呼び出し、オーバー ロードされた`+`の内容をコピーする演算子`invalidItemNumErrorCollection`と`invalidZipCodeErrorCollection`を`invalidOrdersCollection``OrderErrorCollection`インスタンス。  
+        1.  オーバー ロードされた呼び出し`+`の内容をコピーする演算子`invalidItemNumErrorCollection`と`invalidZipCodeErrorCollection`を`invalidOrdersCollection``OrderErrorCollection`インスタンス。  
   
         2.  `PrintOrderErrors` の `invalidOrdersCollection` 拡張メソッドを呼び出し、`ErrorText` 内のすべての `orderError` オブジェクトの `invalidOrdersCollection` プロパティを出力します。  
   
@@ -140,6 +140,6 @@ Another Order? (Y/N): n
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`
