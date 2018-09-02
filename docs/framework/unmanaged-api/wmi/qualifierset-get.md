@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_Get 関数 (アンマネージ API リファレンス)
-description: QualifierSet_Get 関数では、名前付きの修飾子を取得します。
+description: QualifierSet_Get 関数は、名前付き修飾子を取得します。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Get
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1bc57ab45a0452d9e3a50f0ab2de786ad73204a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e8c10a680f1caffd583097b16c046729fe10b140
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458648"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415395"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get 関数
 指定した名前付き修飾子を取得します。  
@@ -47,7 +47,7 @@ HRESULT QualifierSet_Get (
 [in]このパラメーターは使用されません。
 
 `ptr`   
-[in]ポインター、 [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)インスタンス。
+[in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。
 
 `wszName`   
 [in]値が要求された修飾子の名前。
@@ -59,28 +59,28 @@ HRESULT QualifierSet_Get (
 [out]成功した場合、正しい型および修飾子の値。 関数が失敗した場合、`VARIANT`によって示される`pVal`は変更されません。 このパラメーターが場合`null`パラメーターは無視されます。
 
 `plFlavor`   
-[out]修飾子フレーバーのビットを要求された修飾子を受け取る long 整数へのポインター。 このパラメーターを指定できますフレーバー情報が必要ない場合`null`です。 
+[out]要求された修飾子の修飾子のフレーバー ビットを受け取る LONG へのポインター。 このパラメーターを指定できますフレーバー情報が望ましくない場合`null`します。 
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。
+この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが正しくありません。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定した修飾子が存在しません。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数への呼び出しをラップする、 [IWbemQualifierSet::Get](https://msdn.microsoft.com/library/aa391867(v=vs.85).aspx)メソッドです。
+この関数の呼び出しをラップする、 [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get)メソッド。
 
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目  
 [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

@@ -16,29 +16,29 @@ helpviewer_keywords:
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
 ms.openlocfilehash: aac30a8b0272ae6c141138a91585953237ab8098
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650642"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403543"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>チュートリアル: クラスの定義 (Visual Basic)
 
-このチュートリアルでは、オブジェクトの作成に使用できるクラスを定義する方法を示します。 また、プロパティとメソッドを新しいクラスに追加する方法を説明し、オブジェクトを初期化する方法を示します。  
+このチュートリアルでは、オブジェクトを作成し使用するクラスを定義する方法を示します。 また、プロパティとメソッドを新しいクラスに追加する方法を示しますされ、オブジェクトを初期化する方法を示します。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="to-define-a-class"></a>クラスを定義するには
   
-1.  クリックして、プロジェクトを作成**新しいプロジェクト**上、**ファイル**メニュー。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+1.  クリックしてプロジェクトを作成**新しいプロジェクト**上、**ファイル**メニュー。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  新しいプロジェクトを表示する Visual Basic プロジェクト テンプレートの一覧から Windows アプリケーションを選択します。  
+2.  Windows アプリケーションを新しいプロジェクトを表示する Visual Basic プロジェクト テンプレートの一覧から選択します。  
   
 3.  クリックして、プロジェクトに新しいクラスを追加**クラスの追加**上、**プロジェクト**メニュー。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
 4.  選択、**クラス**テンプレート。  
   
-5.  新しいクラスの名前を`UserNameInfo.vb`、順にクリック**追加**新しいクラスのコードを表示します。  
+5.  新しいクラスの名前`UserNameInfo.vb`、 をクリックし、**追加**新しいクラスのコードを表示します。  
   
      [!code-vb[VbVbalrOOP#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#5)]
   
@@ -49,7 +49,7 @@ ms.locfileid: "33650642"
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
-     としてフィールドを宣言する`Private`クラス内でのみ使用できることを意味します。 利用できるフィールドからクラスの外部などのアクセス修飾子を使用して、`Public`以上のアクセスを提供します。 詳細については、次を参照してください。 [Visual Basic でのレベルのアクセス](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)です。  
+     フィールドとして宣言する`Private`クラス内でのみ使用できることを意味します。 利用できるフィールドからクラスの外部でなどのアクセス修飾子を使用して`Public`のアクセスを提供します。 詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
   
 7.  次のコードを追加することで、クラスのプロパティを定義します。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "33650642"
   
      [!code-vb[VbVbalrOOP#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#10)]
   
-     `Sub New`コンス トラクターはこのクラスに基づくオブジェクトの作成時に自動的に呼び出されます。 このコンス トラクターは、ユーザー名を格納するフィールドの値を設定します。  
+     `Sub New`コンス トラクターはこのクラスに基づくオブジェクトが作成されたときに自動的に呼び出されます。 このコンス トラクターは、ユーザー名を保持するフィールドの値を設定します。  
   
 ## <a name="to-create-a-button-to-test-the-class"></a>クラスをテストするためのボタンを作成するには
   
-1.  スタートアップ フォームをデザイン モードをでその名前を右クリックして変更**ソリューション エクスプ ローラー**クリックし、**ビュー デザイナー**です。 既定では、Windows アプリケーション プロジェクトをスタートアップ フォームに Form1.vb がという名前です。 メイン フォームが表示されます。  
+1.  その名前を右クリックしてスタートアップ フォームをデザイン モードに変更**ソリューション エクスプ ローラー**  をクリックし、**ビュー デザイナー**します。 既定では、Windows アプリケーション プロジェクトのスタートアップ フォームは、Form1.vb をという名前です。 メイン フォームが表示されます。  
   
 2.  メイン フォームにボタンを追加し、ダブルクリックのコードを表示して、`Button1_Click`イベント ハンドラー。 テストのプロシージャを呼び出すには、次のコードを追加します。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "33650642"
   
 ## <a name="to-run-your-application"></a>アプリケーションを実行するには
   
-1.  F5 キーを押してアプリケーションを実行します。 テストのプロシージャを呼び出してフォーム上のボタンをクリックします。 元のことを示すメッセージを表示`UserName`"MOORE、BOBBY"では、プロシージャを呼び出す、`Capitalize`オブジェクトのメソッドです。  
+1.  F5 キーを押してアプリケーションを実行します。 テストのプロシージャを呼び出すフォーム上のボタンをクリックします。 元のことを示すメッセージを表示`UserName`"MOORE、BOBBY"は、プロシージャが呼び出されるため、`Capitalize`オブジェクトのメソッド。  
   
-2.  をクリックして**OK**メッセージ ボックスを閉じます。 `Button1 Click`プロシージャの値を変更する、`UserName`プロパティの新しい値のことを示すメッセージを表示および`UserName`"Worden、Joe"は、します。  
+2.  クリックして**OK**メッセージ ボックスを閉じます。 `Button1 Click`の値を変更する手順、`UserName`プロパティの新しい値のことを示すメッセージを表示および`UserName`"Worden、Joe"は。  
   
 ## <a name="see-also"></a>関連項目
 

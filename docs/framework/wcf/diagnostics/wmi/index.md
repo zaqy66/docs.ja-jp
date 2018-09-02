@@ -2,12 +2,12 @@
 title: 診断用の WMI (Windows Management Instrumentation) の使用
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: b1ebb6b438df6d7efb5342a82e42220a58ea5cbd
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908147"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406921"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>診断用の WMI (Windows Management Instrumentation) の使用
 Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時のサービスの検査データを公開します。  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentat
  この構成エントリには、WMI インターフェイスが開示されます。 管理アプリケーションはこのインターフェイスを通して接続し、アプリケーションの Management Instrumentation にアクセスできるようになります。  
   
 ## <a name="accessing-wmi-data"></a>WMI データへのアクセス  
- WMI データには、複数の異なる方法でアクセスできます。 マイクロソフトでは、WMI Api を提供するスクリプト、Visual Basic アプリケーション、C++ アプリケーションでは、および[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]します。 詳細については、次を参照してください。 [WMI を使用した](http://go.microsoft.com/fwlink/?LinkId=95183)します。  
+ WMI データには、複数の異なる方法でアクセスできます。 マイクロソフトでは、WMI Api を提供するスクリプト、Visual Basic アプリケーション、C++ アプリケーションでは、および[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]します。 詳細については、次を参照してください。 [WMI を使用した](https://go.microsoft.com/fwlink/?LinkId=95183)します。  
   
 > [!CAUTION]
 >  .NET Framework 提供のメソッドを使用し、プログラムで WMI データにアクセスする場合、そのようなメソッドは接続確立時に例外をスローする場合があることを認識しておく必要があります。 接続は、<xref:System.Management.ManagementObject> インスタンスの構築中に確立されませんが、実際のデータ交換が含まれた最初の要求時に確立されます。 したがって、`try..catch` ブロックを使用して例外をキャッチする必要があります。  
@@ -147,13 +147,13 @@ Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentat
 Whoami /user  
 ```  
   
- これにより、現在のユーザーの SID が提供されますが、この方法を使用して任意のユーザーで SID を取得することはできません。 SID を取得するもう 1 つのメソッドは、使用する、 [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)ツールから、[管理タスク用の Windows 2000 リソース キット ツール](http://go.microsoft.com/fwlink/?LinkId=178660)します。 このツールは、2 人のユーザー (ローカルまたはドメイン) の SID を比較し、副作用として、2 つの SID をコマンド ラインに出力します。 詳細については、次を参照してください。 [Well Known Sid](http://go.microsoft.com/fwlink/?LinkId=186468)します。  
+ これにより、現在のユーザーの SID が提供されますが、この方法を使用して任意のユーザーで SID を取得することはできません。 SID を取得するもう 1 つのメソッドは、使用する、 [getsid.exe](https://go.microsoft.com/fwlink/?LinkId=186467)ツールから、[管理タスク用の Windows 2000 リソース キット ツール](https://go.microsoft.com/fwlink/?LinkId=178660)します。 このツールは、2 人のユーザー (ローカルまたはドメイン) の SID を比較し、副作用として、2 つの SID をコマンド ラインに出力します。 詳細については、次を参照してください。 [Well Known Sid](https://go.microsoft.com/fwlink/?LinkId=186468)します。  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>リモート WMI オブジェクトのインスタンスへのアクセス  
  リモート コンピューター上の WCF WMI インスタンスにアクセスする必要がある場合は、パケットのプライバシーへのアクセスに使用するツールを有効にする必要があります。 次のセクションでは、WMI CIM Studio、Windows Management Instrumentation テスト、および .NET SDK 2.0 を使用してこれらを実現する方法を説明します。  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
- インストールした場合[WMI Administrative Tools](http://go.microsoft.com/fwlink/?LinkId=95185)、WMI インスタンスのアクセスに、WMI CIM Studio を使用することができます。 このツールは次のフォルダーにあります。  
+ インストールした場合[WMI Administrative Tools](https://go.microsoft.com/fwlink/?LinkId=95185)、WMI インスタンスのアクセスに、WMI CIM Studio を使用することができます。 このツールは次のフォルダーにあります。  
   
  **%windir%\Program Files\WMI ツール\\**  
   

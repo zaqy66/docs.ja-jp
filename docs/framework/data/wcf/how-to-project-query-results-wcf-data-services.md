@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
 ms.openlocfilehash: c1eb2618e14f0e02aa5e1a2e91aa93fe0831c7c7
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932978"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418487"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>方法: クエリ結果を射影する (WCF Data Services)
 射影は、エンティティの特定のプロパティのみが応答で返されるように指定することにより、クエリによって返されるデータの量を減らすためのメカニズムです。 結果に射影を実行することができます、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クエリを使用するか、`$select`クエリ オプションまたはを使用して、[選択](~/docs/csharp/language-reference/keywords/select-clause.md)句 ([選択](~/docs/visual-basic/language-reference/queries/select-clause.md)Visual Basic で)、LINQ クエリでします。 詳細については、次を参照してください。[データ サービスのクエリ](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)します。  

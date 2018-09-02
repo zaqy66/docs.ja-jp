@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 3446b6b8eeb646fa8929efa10366cb6a83627eae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652013"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402616"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 言語の機能
-次のトピックでは、紹介し、Visual Basic では、オブジェクト指向プログラミング言語の重要なコンポーネントについて説明します。 フォームとコントロールを使用してアプリケーションのユーザー インターフェイスを作成した後、アプリケーションの動作を定義するコードを作成する必要があります。 最新のプログラミング言語と Visual Basic では、一般的なプログラミング構成要素と言語要素の数がサポートしています。  
+次のトピックでは、紹介し、Visual Basic では、オブジェクト指向のプログラミング言語の重要なコンポーネントについて説明します。 フォームとコントロールを使用してアプリケーションのユーザー インターフェイスを作成した後、アプリケーションの動作を定義するコードを作成する必要があります。 最新のプログラミング言語と Visual Basic では、さまざまな一般的なプログラミング構成要素と言語要素がサポートされています。  
   
- 他の言語でプログラミングしたことがある場合、このセクションで説明されている内容の大半はすでに知っている可能性があります。 構造のほとんどは、他の言語と似ていますが、Visual Basic のイベント ドリブン性質は微妙な違いについて説明します。  
+ 他の言語でプログラミングしたことがある場合、このセクションで説明されている内容の大半はすでに知っている可能性があります。 構造のほとんどは、他の言語と似ていますが、Visual Basic のイベント ドリブンの特質は微妙な違いについて説明します。  
   
  プログラミングの経験がない場合、このセクションの説明は、コードを記述するための基礎を紹介するものになります。 基本を理解すると、Visual Basic を使用して強力なアプリケーションを作成できます。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "33652013"
  Visual Basic での XML の使用方法について説明しているトピックへのリンクを示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [コレクション](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [コレクション](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  .NET Framework で提供されているコレクションの種類について説明します。 単純なコレクションおよびキーと値のペアのコレクションを使用する方法を示します。  
   
  [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  

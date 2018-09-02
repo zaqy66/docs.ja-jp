@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 96d54efbabbd95a24f1fb7118305ddbff4dfd110
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935407"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415825"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>チュートリアル : XAML を使用したボタンの作成
 このチュートリアルでは、Windows Presentation Foundation (WPF) アプリケーションで使用するためのアニメーションのボタンを作成する方法について説明します。 このチュートリアルでは、スタイルとテンプレートを使用して、コードの再利用し、ボタンの宣言からボタンのロジックの分離を許可するカスタマイズされたボタンのリソースを作成します。 このチュートリアルが完全に記述された[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。  
@@ -361,7 +361,7 @@ ms.locfileid: "42935407"
   
      F5 キーを押してアプリケーションを実行し、ボタンのいずれかをクリックします。 フォーカスをしているために、クリックした後、ボタンが強調表示されたままことに注意してください。 新しいボタンに別のボタンをクリックすると、最後の 1 つがそれを失ったときにフォーカスを取得します。  
   
-4.  **アニメーションを追加**<xref:System.Windows.UIElement.MouseEnter> **と** <xref:System.Windows.UIElement.MouseLeave> **:** 次一部のアニメーションをトリガーに追加します。   任意の場所内の次のマークアップを追加、`ControlTemplate.Triggers`ブロックします。  
+4.  **アニメーションを追加**<xref:System.Windows.UIElement.MouseEnter> **と** <xref:System.Windows.UIElement.MouseLeave> **:** 次一部のアニメーションをトリガーに追加します。 任意の場所内の次のマークアップを追加、`ControlTemplate.Triggers`ブロックします。  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  
