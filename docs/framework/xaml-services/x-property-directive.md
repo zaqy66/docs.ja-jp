@@ -2,12 +2,12 @@
 title: x:Property ディレクティブ
 ms.date: 03/30/2017
 ms.assetid: 618555a8-c893-455c-810f-ac54cd24ef10
-ms.openlocfilehash: 0d554d8ba4d69b4c2d4cc01f3965ade7e508bb0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f982c30a345f95c7a1c7e70de8c5cc4de62cbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563700"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419774"
 ---
 # <a name="xproperty-directive"></a>x:Property ディレクティブ
 マークアップで XAML プロパティを宣言します。  
@@ -31,7 +31,7 @@ ms.locfileid: "33563700"
 |`propertyName`|定義されるプロパティのメンバーの名前。|  
 |`propertyType`|このプロパティの型を指定する型名 (またはその他の文字列の形式、フレームワーク固有)。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  .NET Framework XAML サービス実装では、 `x:Property` には直接の型のバッキングはありませんが、<xref:System.Windows.Markup.PropertyDefinition> クラスによってサポートされています。 XAML ノード ストリームでは、`x:Property` 要素は、XAML 言語の XAML 名前空間から `Property` という名前のメンバーとして表されます。 メンバー `Property` は、マークアップによって宣言された属性を保持します。  
   
  `Name` と `Type` の意味は .NET Framework XAML サービス レベルでは割り当てられません。 これらは、特定のフレームワークによって課される可能性がある規則の下で後に解釈される文字列の値として、初期の XAML ノード ストリームに格納されます。 意味は、実装によって、XAML の名前および XAML 型の意味と揃えるか、バッキング型のシステムでのみ有効になることがあります。  
@@ -39,4 +39,4 @@ ms.locfileid: "33563700"
  マークアップでメンバーの定義を指定する手段として `x:Members` の実用的な使用法をサポートするため、メンバーを変更可能なクラスに関連付ける必要があります。 目的とするモデルは、`x:Members` が `x:Class` を指定する型のメンバーとして存在することです。 ただし、型とメンバーを関連付けたり、動的メンバーの定義を作成したりするメカニズムは、.NET Framework XAML サービス レベルではサポートされません。 これは、XAML のメンバーの定義をサポートするアプリケーション モデルがある個々のフレームワークに残されています。 一般に、XAML をマークアップ コンパイルするとともに、XAML と分離コードの統合または純粋な XAML からのアセンブリの生成を行う MSBUILD のビルド操作が、この機能をサポートするために必要です。  
   
 ## <a name="xproperty-for-windows-workflow-foundation"></a>Windows Workflow Foundation の x:Property  
- Windows Workflow Foundation では、 `x:Property` は、全体が XAML で構成されるカスタム アクティビティのメンバーや、分離コードを含むアクティビティ デザイナーの XAML で定義された動的メンバーを定義します。 `x:Class` は、XAML の運用環境のルート要素にも指定する必要があります。 これは、.NET Framework XAML サービス レベルの要件ではありませんが、全般にカスタム アクティビティと Windows Workflow Foundation の XAML をサポートする MSBUILD のビルド アクションによって XAML の運用環境が読み込まれるときの要件になります。 Windows Workflow Foundation が目的の値として、純粋な XAML 型名を使用しない、 `x:Property` `Type`属性があり、ここで文書化されていない規約を代わりに使用します。 詳細については、次を参照してください。[動的アクティビティの作成](http://msdn.microsoft.com/library/dd807392.aspx)です。
+ Windows Workflow Foundation では、 `x:Property` は、全体が XAML で構成されるカスタム アクティビティのメンバーや、分離コードを含むアクティビティ デザイナーの XAML で定義された動的メンバーを定義します。 `x:Class` は、XAML の運用環境のルート要素にも指定する必要があります。 これは、.NET Framework XAML サービス レベルの要件ではありませんが、全般にカスタム アクティビティと Windows Workflow Foundation の XAML をサポートする MSBUILD のビルド アクションによって XAML の運用環境が読み込まれるときの要件になります。 Windows Workflow Foundation がその目的とする値として、純粋な XAML 型名を使用しない、 `x:Property` `Type`属性し、代わりにここで説明されていない規則を使用します。 詳細については、次を参照してください。[動的アクティビティの作成](https://msdn.microsoft.com/library/dd807392.aspx)です。

@@ -2,15 +2,15 @@
 title: カスタム型を使用した Switch アクティビティの使用
 ms.date: 03/30/2017
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
-ms.openlocfilehash: 2b6f3109324064cb5e746de9c61e5a70c4c4d60b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b24a03573b31f3fb1c34d4aa6e03bc11f5b25455
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517882"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423566"
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>カスタム型を使用した Switch アクティビティの使用
-このサンプルでは、<xref:System.Activities.Statements.Switch%601> アクティビティを有効にしてユーザー定義の複合型を実行時に評価する方法について説明します。 従来のほとんどの手続き型プログラミング言語で、[切り替える](http://go.microsoft.com/fwlink/?LinkId=180521)ステートメントが変数の条件の評価に基づいて実行ロジックを選択します。 従来、`switch` ステートメントは、静的に評価できる式を対象としています。 つまり、たとえば C# では、プリミティブ型 (<xref:System.Boolean>、<xref:System.Int32>、<xref:System.String>、列挙型など) のみがサポートされます。  
+このサンプルでは、<xref:System.Activities.Statements.Switch%601> アクティビティを有効にしてユーザー定義の複合型を実行時に評価する方法について説明します。 従来のほとんどの手続き型プログラミング言語での[切り替える](https://go.microsoft.com/fwlink/?LinkId=180521)ステートメントは、変数の条件の評価に基づいて実行ロジックを選択します。 従来、`switch` ステートメントは、静的に評価できる式を対象としています。 つまり、たとえば C# では、プリミティブ型 (<xref:System.Boolean>、<xref:System.Int32>、<xref:System.String>、列挙型など) のみがサポートされます。  
   
  カスタム クラスで切り替えを有効にするには、カスタム複合型の値を実行時に評価するロジックを実装する必要があります。 このサンプルでは、`Person` という名前のカスタム複合型で切り替えを有効にする方法を示します。  
   
@@ -105,13 +105,13 @@ ms.locfileid: "33517882"
   
  このサンプルには、次のファイルが含まれています。  
   
--   **Person.cs**: 定義、`Person`クラスです。  
+-   **Person.cs**: 定義、`Person`クラス。  
   
--   **PersonConverter.cs**: の型コンバーター、`Person`クラスです。  
+-   **PersonConverter.cs**: の型コンバーター、`Person`クラス。  
   
--   **Sequence.xaml**: ワークフローを切り替えられる、`Person`型です。  
+-   **Sequence.xaml**: ワークフローを切り替え、`Person`型。  
   
--   **Program.cs**: ワークフローを実行する主な機能です。  
+-   **Program.cs**: ワークフローを実行する main 関数。  
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
@@ -126,7 +126,7 @@ ms.locfileid: "33517882"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   

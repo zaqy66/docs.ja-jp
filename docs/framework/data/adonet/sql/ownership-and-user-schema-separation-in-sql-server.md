@@ -2,18 +2,18 @@
 title: SQL Server における所有権とユーザーとスキーマの分離
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358408"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421578"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server における所有権とユーザーとスキーマの分離
 オブジェクトの所有者は、それを管理するための取り消し不可能な権限を持ちます。これは SQL Server のセキュリティの核となる概念です。 オブジェクトの所有者から権限を削除することはできません。また、特定のユーザーがデータベース内のオブジェクトを所有しているときに、そのユーザーをデータベースから削除することもできません。  
   
 ## <a name="user-schema-separation"></a>ユーザーとスキーマの分離  
- ユーザーとスキーマの分離により、データベース オブジェクトの権限をより柔軟に管理できるようになりました。 A*スキーマ*できるグループ オブジェクトを別の名前空間に、データベース オブジェクトを名前付きコンテナーです。 たとえば、AdventureWorks サンプル データベースには、Production、Sales、および HumanResources というスキーマが格納されています。  
+ ユーザーとスキーマの分離により、データベース オブジェクトの権限をより柔軟に管理できるようになりました。 A*スキーマ*は個別の名前空間をグループ オブジェクトにできるデータベース オブジェクトの名前付きコンテナーです。 たとえば、AdventureWorks サンプル データベースには、Production、Sales、および HumanResources というスキーマが格納されています。  
   
  オブジェクトを参照する 4 つの部分から成る命名構文では、スキーマ名が指定されます。  
   
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[ユーザーとスキーマの分離](http://msdn.microsoft.com/library/ms190387.aspx)SQL Server オンライン ブック|ユーザーとスキーマの分離によって導入された変更について説明します。 新しい動作とそれが所有権、カタログ ビュー、および権限に与える影響を取り上げています。|  
+|[ユーザーとスキーマの分離](https://msdn.microsoft.com/library/ms190387.aspx)で SQL Server オンライン ブック|ユーザーとスキーマの分離によって導入された変更について説明します。 新しい動作とそれが所有権、カタログ ビュー、および権限に与える影響を取り上げています。|  
   
 ## <a name="see-also"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -63,4 +63,4 @@ Server.Database.DatabaseSchema.DatabaseObject
  [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [SQL Server のサーバー ロールとデータベース ロール](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [SQL Server の承認とアクセス許可](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

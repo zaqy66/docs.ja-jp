@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Form [Visual Basic], printing
 ms.assetid: df963bf6-3ee1-49f4-8b2e-1d95d1beb0be
-ms.openlocfilehash: 5f8e620fce2b85d3f3cdb66bf80967f8eb281361
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 723524c7c9876d353624ad47d504ea2528a31cfe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590014"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422728"
 ---
 # <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>方法: PrintForm コンポーネントを使用してフォームを印刷する (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントを使用すると、 <xref:System.Drawing.Printing.PrintDocument> コンポーネントを使わなくても、画面に表示されているとおりにフォームのイメージをすぐに印刷することができます。 次の手順では、プリンター、印刷プレビュー ウィンドウ、およびカプセル化された PostScript ファイルにフォームを印刷する方法を示します。  
   
- PowerPack コントロールは、Visual Studio には含まれなくなりましたが、 [ダウンロード センター](http://www.microsoft.com/en-us/download/details.aspx?id=25169)からダウンロードできます。  
+ PowerPack コントロールは不要になった Visual Studio で、含まれていますからダウンロードすることができます、[ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=25169)します。  
   
 ### <a name="to-print-a-form-to-the-default-printer"></a>既定のプリンターにフォームを印刷するには  
   

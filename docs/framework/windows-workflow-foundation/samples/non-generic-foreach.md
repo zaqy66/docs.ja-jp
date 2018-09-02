@@ -2,17 +2,17 @@
 title: 非ジェネリックの ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: c67f6e3c3afb893f7bb5713d64ce2f119eebc157
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b94ad54d248af7f6ad45c11b9860dd415db840f9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519481"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419318"
 ---
 # <a name="non-generic-foreach"></a>非ジェネリックの ForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] などの制御フロー アクティビティのセットのツールボックスに付属<xref:System.Activities.Statements.ForEach%601>、反復処理に使用できるように<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`コレクション。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] などの制御フロー アクティビティのセットをツールボックスに付属<xref:System.Activities.Statements.ForEach%601>、反復処理に使用できる<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`コレクション。  
   
- <xref:System.Activities.Statements.ForEach%601> 必要があります、<xref:System.Activities.Statements.ForEach%601.Values%2A>プロパティの型を<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`です。 そのため、ユーザーを実装するデータ構造を繰り返し処理してから<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`インターフェイス (たとえば、 <xref:System.Collections.ArrayList>)。 <xref:System.Activities.Statements.ForEach%601> の非ジェネリック バージョンにはこの要件はありませんが、コレクション内の値の型の互換性を確保するために実行時の複雑さが増します。  
+ <xref:System.Activities.Statements.ForEach%601> 必要があります、<xref:System.Activities.Statements.ForEach%601.Values%2A>プロパティの型を<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`します。 これは、ため、ユーザーを実装するデータ構造を反復<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`インターフェイス (たとえば、 <xref:System.Collections.ArrayList>)。 <xref:System.Activities.Statements.ForEach%601> の非ジェネリック バージョンにはこの要件はありませんが、コレクション内の値の型の互換性を確保するために実行時の複雑さが増します。  
   
  このサンプルでは、非ジェネリックの <xref:System.Activities.Statements.ForEach%601> アクティビティとそのデザイナーを実装する方法を示します。 このアクティビティは、<xref:System.Collections.ArrayList> の反復処理に使用できます。  
   
@@ -72,7 +72,7 @@ Activity sampleUsage =
 |値が `null` である|必須のアクティビティ引数 'Values' の値が指定されませんでした。|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach デザイナー  
- サンプルのアクティビティ デザイナーは、組み込みの <xref:System.Activities.Statements.ForEach%601> アクティビティ用に提供されているデザイナーに外観が似ています。 デザイナーは、ツールボックス、**サンプル**、**非ジェネリック アクティビティ**カテゴリ。 デザイナーの名前は**ForEachWithBodyFactory**ツールボックスでアクティビティによって公開されるため、 <xref:System.Activities.Presentation.IActivityTemplateFactory> 、ツールボックスの使用を作成するアクティビティ適切に構成された<xref:System.Activities.ActivityAction>です。  
+ サンプルのアクティビティ デザイナーは、組み込みの <xref:System.Activities.Statements.ForEach%601> アクティビティ用に提供されているデザイナーに外観が似ています。 ツールボックス、デザイナーが表示されます、**サンプル**、**非ジェネリック アクティビティ**カテゴリ。 デザイナーの名前は**ForEachWithBodyFactory**ツールボックスで、活動が公開するため、<xref:System.Activities.Presentation.IActivityTemplateFactory>で適切に構成されたアクティビティを作成するツールボックスで、<xref:System.Activities.ActivityAction>します。  
   
 ```  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -97,9 +97,9 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1.  選択したプロジェクトをソリューションのスタートアップ プロジェクトに設定します。  
   
-    1.  **CodeTestClient**コードを使用して、アクティビティを使用する方法を示します。  
+    1.  **CodeTestClient**コードを使用して、アクティビティを使用する方法を示しています。  
   
-    2.  **DesignerTestClient**デザイナー内でアクティビティを使用する方法を示します。  
+    2.  **DesignerTestClient**デザイナー内でアクティビティを使用する方法を示しています。  
   
 2.  プロジェクトをビルドして実行します。  
   
@@ -108,6 +108,6 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

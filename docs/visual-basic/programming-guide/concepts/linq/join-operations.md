@@ -2,12 +2,12 @@
 title: 結合操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 4f375946b69eadb885873889b28790730943a3d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7d6592f0dee221eb2f6fb3a2f2c484064364ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645604"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425375"
 ---
 # <a name="join-operations-visual-basic"></a>結合操作 (Visual Basic)
 2 つのデータ ソースの "*結合*" とは、あるデータ ソースのオブジェクトを、共通の属性を共有する別のデータ ソースのオブジェクトと関連付けることです。  
@@ -31,7 +31,7 @@ ms.locfileid: "33645604"
  <xref:System.Linq>  
  [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [結合およびクロス積クエリの作成](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [結合およびクロス積クエリの作成](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
  [Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)  
  [方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
- [方法: 複数のソース (LINQ) (Visual Basic) からオブジェクトのコレクションへの追加](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+ [方法: 複数のソース (LINQ) (Visual Basic) からオブジェクト コレクションの設定](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

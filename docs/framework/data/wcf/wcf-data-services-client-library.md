@@ -6,23 +6,23 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 95ca3ab8768b59b52640cfd17d230a544a8b2052
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f389530b287d1c7a11a88972ef948347d3ea533
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365515"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421596"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services クライアント ライブラリ
-HTTP 要求を送信し、データ サービスが返す [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] フィードを処理できるのであれば、どのようなアプリケーションでも [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ベースのデータ サービスと対話できます。 この相互運用性によって、広範な Web 対応アプリケーションから [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ベースのサービスにアクセスすることが可能になります。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用する際に、豊富なプログラミングの経験を提供するクライアント ライブラリを含む[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].NET Framework や Silverlight ベースのアプリケーションからのフィードです。  
+HTTP 要求を送信し、データ サービスが返す [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] フィードを処理できるのであれば、どのようなアプリケーションでも [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ベースのデータ サービスと対話できます。 この相互運用性によって、広範な Web 対応アプリケーションから [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ベースのサービスにアクセスすることが可能になります。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用する場合は、高度なプログラミング エクスペリエンスを提供するクライアント ライブラリが含まれています[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]から .NET Framework または Silverlight ベースのアプリケーションにフィードします。  
   
- クライアント ライブラリの 2 つの主要なクラスは、<xref:System.Data.Services.Client.DataServiceContext> クラスと <xref:System.Data.Services.Client.DataServiceQuery%601> クラスです。 <xref:System.Data.Services.Client.DataServiceContext> クラスは、特定のデータ サービスに対してサポートされている操作をカプセル化します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] サービスはステートレスですが、コンテキストはステートレスではありません。 したがって、使用することができます、<xref:System.Data.Services.Client.DataServiceContext>変更管理などの機能をサポートするために、データ サービスとのやり取りの間でクライアントの状態を維持するクラス。 このクラスは、ID の管理と変更の追跡も行います。 <xref:System.Data.Services.Client.DataServiceQuery%601> クラスは、特定のエンティティ セットに対するクエリを表します。  
+ クライアント ライブラリの 2 つの主要なクラスは、<xref:System.Data.Services.Client.DataServiceContext> クラスと <xref:System.Data.Services.Client.DataServiceQuery%601> クラスです。 <xref:System.Data.Services.Client.DataServiceContext> クラスは、特定のデータ サービスに対してサポートされている操作をカプセル化します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] サービスはステートレスですが、コンテキストはステートレスではありません。 そのため、使用することができます、<xref:System.Data.Services.Client.DataServiceContext>変更管理などの機能をサポートするために、データ サービスとの対話操作間におけるクライアントの状態を維持するクラス。 このクラスは、ID の管理と変更の追跡も行います。 <xref:System.Data.Services.Client.DataServiceQuery%601> クラスは、特定のエンティティ セットに対するクエリを表します。  
   
- このセクションでは、クライアント ライブラリを使用して .NET Framework クライアント アプリケーションからデータにアクセスしてデータを変更する方法について説明します。 使用する方法についての詳細、 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Silverlight ベースのアプリケーションでは、クライアント ライブラリを参照してください[WCF Data Services (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=186016)です。 その他のクライアント ライブラリが用意されて使用できるようにする、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]他の種類のアプリケーションでフィードします。 詳細については、次を参照してください。、 [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185796)です。  
+ このセクションでは、クライアント ライブラリを使用して .NET Framework クライアント アプリケーションからデータにアクセスしてデータを変更する方法について説明します。 使用する方法についての詳細、 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Silverlight ベースのアプリケーションでは、クライアント ライブラリを参照してください[WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016)します。 その他のクライアント ライブラリを利用できますを使用することができます、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]他の種類のアプリケーションにフィードします。 詳細については、次を参照してください。、 [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [データ サービス クライアント ライブラリの生成](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
- クライアント ライブラリおよびに基づくクライアント データ サービス クラスを生成する方法について説明します[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。  
+ クライアント ライブラリとに基づくクライアント データ サービス クラスを生成する方法について説明します[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。  
   
  [データ サービスに対するクエリ](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  クライアント ライブラリを使用して .NET Framework ベースのアプリケーションからデータ サービスを照会する方法について説明します。  

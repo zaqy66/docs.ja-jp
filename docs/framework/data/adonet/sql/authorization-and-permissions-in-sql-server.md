@@ -2,12 +2,12 @@
 title: SQL Server の承認と権限
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: bddbbd7eac29d33801042276e5f4ca9a05a83c1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdf5112e3f0e2cada4885b0b66adf248f0ffe808
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364224"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424148"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server の承認と権限
 データベース オブジェクトを作成する際は、ユーザーがそれらのオブジェクトにアクセスできるように明示的に権限を付与する必要があります。 セキュリティ保護可能なすべてのオブジェクトには、権限ステートメントを使ってプリンシパルに付与することのできる権限が関連付けられています。  
@@ -56,7 +56,7 @@ ms.locfileid: "33364224"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[アクセス許可](http://msdn.microsoft.com/library/ms191291.aspx)SQL Server オンライン ブック|権限の階層、カタログ ビュー、および固定サーバー ロールと固定データベース ロールの権限について説明します。|  
+|[アクセス許可](/sql/relational-databases/security/permissions-database-engine)|権限の階層、カタログ ビュー、および固定サーバー ロールと固定データベース ロールの権限について説明します。|
   
 ## <a name="see-also"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -64,4 +64,4 @@ ms.locfileid: "33364224"
  [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [SQL Server のサーバー ロールとデータベース ロール](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [SQL Server における所有権とユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

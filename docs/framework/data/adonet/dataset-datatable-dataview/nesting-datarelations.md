@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 3f17d81ac41c90e7f1c48523a4ced91bc788a962
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9255615c7786773f1d4f453b910fdccdf191721f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761897"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420275"
 ---
 # <a name="nesting-datarelations"></a>DataRelation の入れ子化
-データのリレーショナル表現では、各テーブルに含まれている行が、列または列セットを使用して相互に関連付けられています。 ADO.NET の <xref:System.Data.DataSet> では、テーブル間のリレーションシップは <xref:System.Data.DataRelation> を使用して実装されます。 作成するときに、 **DataRelation**列の親子リレーションシップは、このリレーションだけをとおして管理されます。 テーブルと列はそれぞれ別個のエンティティです。 XML のデータ階層表現では、子要素が入れ子の状態で含まれている親要素によって親子のリレーションシップが表現されます。  
+データのリレーショナル表現では、各テーブルに含まれている行が、列または列セットを使用して相互に関連付けられています。 ADO.NET の <xref:System.Data.DataSet> では、テーブル間のリレーションシップは <xref:System.Data.DataRelation> を使用して実装されます。 作成するときに、 **DataRelation**列の親子リレーションシップは、リレーションだけをとおして管理されます。 テーブルと列はそれぞれ別個のエンティティです。 XML のデータ階層表現では、子要素が入れ子の状態で含まれている親要素によって親子のリレーションシップが表現されます。  
   
- 子オブジェクトの入れ子を容易にするときに、**データセット**と同期されて、<xref:System.Xml.XmlDataDocument>またはを使用して XML データとして書き込まれた**WriteXml**、 **DataRelation**公開、**入れ子になった**プロパティです。 設定、**入れ子になった**のプロパティ、 **DataRelation**に**true**子を XML データとして書き込まれるときに、親の列は入れ子にするリレーションシップの行と、または同期されている、 **XmlDataDocument**です。 **入れ子になった**のプロパティ、 **DataRelation**は**false**既定でします。  
+ 子オブジェクトの入れ子を実現するときに、**データセット**と同期されて、<xref:System.Xml.XmlDataDocument>またはを使用して XML データとして書き込まれる**WriteXml**、 **DataRelation**公開、**入れ子になった**プロパティ。 設定、**入れ子になった**のプロパティを**DataRelation**に**true**子には、XML データとして書き込まれるときに、親列内で入れ子にするリレーションシップの行を原因または同期されて、 **XmlDataDocument**します。 **入れ子になった**のプロパティ、 **DataRelation**は**false**、既定では。  
   
- たとえば、次**データセット**です。  
+ たとえば、次**データセット**します。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -59,9 +59,9 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- **入れ子になった**のプロパティ、 **DataRelation**オブジェクトに設定されていない**true**この**データセット**、子オブジェクトが入れ子になっていません。親要素内でときにこの**データセット**は XML データとして表されます。 XML 表現を変換する、**データセット**を格納している関連**データセット**入れ子でないデータの関係を使用できるパフォーマンスが低下します。 データ リレーションシップは入れ子にすることをお勧めします。 これを行うには、設定、**入れ子になった**プロパティを**true**です。 次に、トップダウン階層形式の XPath クエリ式を使用してデータを検索、変換するコードを XSLT スタイル シートに記述します。  
+ **入れ子になった**のプロパティ、 **DataRelation**オブジェクトに設定されていない**true**この**データセット**、子オブジェクトが入れ子になっていません。親要素内でときにこの**データセット**は XML データとして表されます。 XML 表現に変換する、**データセット**を格納している関連**データセット**に入れ子にされたデータ リレーションシップのパフォーマンスの低下が発生することができます。 データ リレーションシップは入れ子にすることをお勧めします。 これを行うには、設定、**入れ子になった**プロパティを**true**します。 次に、トップダウン階層形式の XPath クエリ式を使用してデータを検索、変換するコードを XSLT スタイル シートに記述します。  
   
- 次のコード例は、呼び出しの結果を示しています。 **WriteXml**上、**データセット**です。  
+ 次のコード例は、呼び出しの結果を示しています。 **WriteXml**上、**データセット**します。  
   
 ```xml  
 <CustomerOrders>  
@@ -91,7 +91,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- 注意してください、**顧客**要素および**Orders**要素が兄弟要素として表示されます。 必要な場合、 **Orders** 、それぞれの親要素の子として表示する要素、**入れ子になった**のプロパティ、 **DataRelation** に設定する必要があります**true**しするには、次を追加します。  
+ なお、**顧客**要素と**注文**要素が兄弟要素として表示されます。 場合は、**注文**要素をそれぞれの親要素の子として、**入れ子になった**のプロパティ、 **DataRelation** に設定する必要があります**true**とするには、次を追加します。  
   
 ```vb  
 customerOrders.Nested = True  
@@ -101,7 +101,7 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- 次のコードは、結果の出力は、のようになりますで、 **Orders**要素は、該当する親要素内で入れ子になっています。  
+ 次のコードは、結果の出力がどのようなで、**注文**要素は、該当する親要素内に入れ子にします。  
   
 ```xml  
 <CustomerOrders>  
@@ -135,4 +135,4 @@ customerOrders.Nested = true;
  [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataRelation の追加](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
  [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

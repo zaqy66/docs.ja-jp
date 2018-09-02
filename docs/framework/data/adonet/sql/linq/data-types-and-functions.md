@@ -2,12 +2,12 @@
 title: データ型と関数
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: a7205d7fbdeb2b6cffcf49fb30e2ff2a25137403
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362186"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418066"
 ---
 # <a name="data-types-and-functions"></a>データ型と関数
 次の表の各トピックでは、共通言語ランタイム (CLR) のメンバー、コンストラクト、およびキャストに対する LINQ to SQL でのサポートについて説明します。 サポートされているメンバーおよびコンストラクトは、LINQ to SQL クエリで使用できます。  
@@ -34,4 +34,4 @@ ms.locfileid: "33362186"
 ## <a name="see-also"></a>関連項目  
  [SQL と CLR の型の不一致](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Visual Studio での .NET framework クラス ライブラリ](http://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)
+ [Visual Studio で .NET framework クラス ライブラリ](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

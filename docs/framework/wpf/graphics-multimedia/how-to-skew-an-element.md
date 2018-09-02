@@ -6,32 +6,32 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: 8bd860a71253a55cb3148426dbb61cbd3477e95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f828e4d4e59fa5ed31f81f3e83570a25add19e01
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561564"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424295"
 ---
 # <a name="how-to-skew-an-element"></a>方法 : 要素を傾斜させる
-この例を使用する方法を示しています、<xref:System.Windows.Media.SkewTransform>要素を傾けるにします。 傾斜 (スキューと呼ばれることもあります) は、一様でない方法で座標空間を拡大する変換です。 一般的な用途の 1 つ、<xref:System.Windows.Media.SkewTransform>をシミュレートするため、[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]で深さ[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]オブジェクト。  
+この例は、使用する方法を示します、<xref:System.Windows.Media.SkewTransform>要素を傾斜します。 傾斜 (スキューと呼ばれることもあります) は、一様でない方法で座標空間を拡大する変換です。 一般的な用途の 1 つ、<xref:System.Windows.Media.SkewTransform>をシミュレートするため、[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]で深さ[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]オブジェクト。  
   
- 使用して、<xref:System.Windows.Media.SkewTransform.CenterX%2A>と<xref:System.Windows.Media.SkewTransform.CenterY%2A>のポイントを中心に指定のプロパティ、<xref:System.Windows.Media.SkewTransform>です。  
+ 使用して、<xref:System.Windows.Media.SkewTransform.CenterX%2A>と<xref:System.Windows.Media.SkewTransform.CenterY%2A>のポイントの中心を指定するプロパティ、<xref:System.Windows.Media.SkewTransform>します。  
   
- 使用して、<xref:System.Windows.Media.SkewTransform.AngleX%2A>と<xref:System.Windows.Media.SkewTransform.AngleY%2A>プロパティを x 軸と y 軸の傾斜角度を指定し、現在の座標系これらの軸に沿った傾斜をします。  
+ 使用して、<xref:System.Windows.Media.SkewTransform.AngleX%2A>と<xref:System.Windows.Media.SkewTransform.AngleY%2A>x 軸と y 軸の傾斜角度を指定して、これらの軸に沿って現在の座標系を傾斜させるプロパティ。  
   
- 傾斜変換の効果を予測することを検討<xref:System.Windows.Media.SkewTransform.AngleX%2A>元の座標システムに対して相対的な x 軸の値のずれ。 そのため、 <xref:System.Windows.Media.SkewTransform.AngleX%2A> 30、y 軸原点を 30 度回転し、傾斜 x-30 ° を原点からの値。 同様に、 <xref:System.Windows.Media.SkewTransform.AngleY%2A> 30 の原点から 30 度、図形の y 値のずれ。 これは、座標系の x または y での 30 度の平行移動 (移動) と同じ効果はないことに注意してください。  
+ 傾斜変換の効果を予測するを検討してください。 <xref:System.Windows.Media.SkewTransform.AngleX%2A> x 軸の値、元の座標系を傾斜します。 そのため、 <xref:System.Windows.Media.SkewTransform.AngleX%2A> 30 の y 軸が原点を通って 30 度回転し、値では、x-が原点から 30 度傾斜します。 同様に、 <xref:System.Windows.Media.SkewTransform.AngleY%2A> 30 の図形の y 値を原点から 30 度傾斜します。 これは、座標系の x または y での 30 度の平行移動 (移動) と同じ効果はないことに注意してください。  
   
- 次の例に 45 度の水平方向の傾斜を適用する、 <xref:System.Windows.Shapes.Rectangle> (0, 0) の中心点からです。  
+ 次の例は、水平方向に 45 度の傾斜を適用する<xref:System.Windows.Shapes.Rectangle>(0, 0) の中心点からです。  
   
 ## <a name="example"></a>例  
  [!code-xaml[transformsSample#41](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
   
- 次の例に 45 度の水平方向の傾斜を適用する、 <xref:System.Windows.Shapes.Rectangle> (25,25) の中心点からです。  
+ 次の例は、水平方向に 45 度の傾斜を適用する<xref:System.Windows.Shapes.Rectangle>中心点 (25, 25) から。  
   
  [!code-xaml[transformsSample#42](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
   
- 次の例に 45 度の垂直方向の傾斜を適用する、 <xref:System.Windows.Shapes.Rectangle> (25,25) の中心点からです。  
+ 次の例は、垂直方向に 45 度の傾斜を適用する<xref:System.Windows.Shapes.Rectangle>中心点 (25, 25) から。  
   
  [!code-xaml[transformsSample#43](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33561564"
  ![SkewTransform の例](../../../../docs/framework/wpf/graphics-multimedia/media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
 説明した 3 つの SkewTransform の例  
   
- 完全なサンプルについては、「[2-D 変換のサンプル](http://go.microsoft.com/fwlink/?LinkID=158252)」をご覧ください。  
+ 完全なサンプルについては、「[2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Media.Transform>  

@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58a9c0d02f4a24acc0df4d4a36d65e02f8bb7603
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bee42db7b9a92723b0640d0b3747a7921b8617c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396212"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418986"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework のログ記録の制御
 Windows イベント トレーシング (ETW: Event Tracing for Windows) を使用して共通言語ランタイム (CLR: Common Language Runtime) イベントを記録できます。 トレースの作成および表示には次のツールを使用します。  
   
--   Windows オペレーティング システムに含まれる [Logman](http://go.microsoft.com/fwlink/?LinkId=150916) および [Tracerpt](http://go.microsoft.com/fwlink/?LinkId=150919) コマンド ライン ツール。  
+-   Windows オペレーティング システムに含まれる [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) および [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) コマンド ライン ツール。  
   
--   [Windows Performance Toolkit](http://msdn.microsoft.com/library/windows/hardware/hh162945.aspx) の [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) ツール。 Xperf の詳細については、[Windows のパフォーマンスに関するブログ](http://go.microsoft.com/fwlink/?LinkId=179509)を参照してください。  
+-   [Windows Performance Toolkit](https://msdn.microsoft.com/library/windows/hardware/hh162945.aspx) の [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) ツール。 Xperf の詳細については、[Windows のパフォーマンスに関するブログ](https://go.microsoft.com/fwlink/?LinkId=179509)を参照してください。  
   
  CLR イベントの情報をキャプチャするには、コンピューターに CLR プロバイダーがインストールされている必要があります。 プロバイダーがインストールされているかどうかを確認するには、コマンド プロンプトで「`logman query providers`」と入力します。 プロバイダーの一覧が表示されます。 その一覧に、次のような CLR プロバイダーのエントリが含まれている必要があります。  
   
@@ -28,12 +28,12 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- 一覧に CLR プロバイダーが含まれていない場合は、Windows Vista 以降のオペレーティング システムで Windows [Wevtutil](http://go.microsoft.com/fwlink/?LinkID=150915) コマンド ライン ツールを使用してインストールできます。 管理者としてコマンド プロンプト ウィンドウを開き、 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] のフォルダー (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\) に移動します。 このフォルダーに、CLR-ETW.man ファイルが含まれています。 コマンド プロンプトで次のコマンドを入力して CLR プロバイダーをインストールします。  
+ 一覧に CLR プロバイダーが含まれていない場合は、Windows Vista 以降のオペレーティング システムで Windows [Wevtutil](https://go.microsoft.com/fwlink/?LinkID=150915) コマンド ライン ツールを使用してインストールできます。 管理者としてコマンド プロンプト ウィンドウを開き、 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] のフォルダー (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\) に移動します。 このフォルダーに、CLR-ETW.man ファイルが含まれています。 コマンド プロンプトで次のコマンドを入力して CLR プロバイダーをインストールします。  
   
  `wevtutil im CLR-ETW.man`  
   
 ## <a name="capturing-clr-etw-events"></a>CLR ETW イベントのキャプチャ  
- コマンド ライン ツールの [Logman](http://go.microsoft.com/fwlink/?LinkId=150916) および [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) を使用して ETW イベントをキャプチャできます。また、[Tracerpt](http://go.microsoft.com/fwlink/?LinkId=150919) および [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) ツールを使用してトレース イベントをデコードできます。  
+ コマンド ライン ツールの [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) および [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) を使用して ETW イベントをキャプチャできます。また、[Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) および [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) ツールを使用してトレース イベントをデコードできます。  
   
  ログを有効にするには、次の 3 つの項目を指定する必要があります。  
   
@@ -109,5 +109,5 @@ Provider                                 GUID
      このコマンドを使用すると、XPerf によって、表示可能なコンマ区切り値 (CSV) ファイルとしてイベントがダンプされます。 イベントが異なればフィールドも異なるので、この CSV ファイルには、データの前に複数のヘッダー行が含まれます。 すべての行の先頭のフィールドはイベントの種類を表します。このフィールドは、残りのフィールドを判別するために使用されるヘッダーを示します。  
   
 ## <a name="see-also"></a>関連項目  
- [Windows パフォーマンス ツールキット](http://go.microsoft.com/fwlink/?LinkID=161141)  
+ [Windows パフォーマンス ツールキット](https://go.microsoft.com/fwlink/?LinkID=161141)  
  [共通言語ランタイムの ETW イベント](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

@@ -2,12 +2,12 @@
 title: ReceiveContext が有効な WCF チャネル
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
-ms.openlocfilehash: 3e5ac914ae4d0c97ed617ea4a8d5a893ec740179
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502935"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442747"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>ReceiveContext が有効な WCF チャネル
 このサンプルでは、<xref:System.ServiceModel.Channels.ReceiveContext> を有効にした WCF チャネルの有用性を示します。 このサンプルでは、NetMSMQ チャネルを使用して 2 つの数値の積を見つけるサービスを実装します。  
@@ -19,7 +19,7 @@ ms.locfileid: "33502935"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\ReceiveContextProductGenerator`  
   
@@ -29,25 +29,25 @@ ms.locfileid: "33502935"
   
     1.  MSMQ を [!INCLUDE[lserver](../../../../includes/lserver-md.md)] にインストールするには  
   
-        1.  **サーバー マネージャー**をクリックして**機能**します。  
+        1.  **サーバー マネージャー**、 をクリックして**機能**します。  
   
-        2.  右側のペインで**機能の概要**をクリックして**機能の追加**です。  
+        2.  右側のウィンドウで**機能の概要**、 をクリックして**機能の追加**します。  
   
-        3.  結果ウィンドウで、展開**メッセージ キュー**です。  
+        3.  結果ウィンドウで、展開**メッセージ キュー**します。  
   
-        4.  展開**メッセージ キュー サービス**です。  
+        4.  展開**メッセージ キュー サービス**します。  
   
-        5.  をクリックして**ディレクトリ サービス統合**(コンピューターの場合、ドメインに参加している)、をクリックして**HTTP サポート**です。  
+        5.  クリックして**ディレクトリ サービス統合**(コンピューターの場合、ドメインに参加している)、順にクリックします**HTTP サポート**します。  
   
-        6.  をクリックして **[次へ]**、クリックして**インストール**です。  
+        6.  クリックして**次**、順にクリックします**インストール**します。  
   
     2.  MSMQ を [!INCLUDE[wv](../../../../includes/wv-md.md)] にインストールするには  
   
         1.  **[コントロール パネル]** を開きます。  
   
-        2.  をクリックして**プログラム**し、**プログラムと機能**をクリックして**Windows の機能のオンとオフを**です。  
+        2.  クリックして**プログラム**し、**プログラムと機能**、 をクリックして**Windows 機能の有効化オンとオフを**します。  
   
-        3.  展開**Microsoft メッセージ キュー (MSMQ) Server**、展開**Microsoft メッセージ キュー (MSMQ) Server Core**、次のメッセージ キュー機能をインストールする チェック ボックスを選択。  
+        3.  展開**Microsoft メッセージ キュー (MSMQ) Server**、展開**Microsoft メッセージ キュー (MSMQ) Server Core**、しインストールする次のメッセージ キュー機能のチェック ボックスを選択します。  
   
             -   [メッセージ キュー サーバー]  
   

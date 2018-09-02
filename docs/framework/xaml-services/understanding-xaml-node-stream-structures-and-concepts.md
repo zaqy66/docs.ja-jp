@@ -6,11 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423245"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML ノード ストリームの構造と概念について
 .NET Framework XAML サービスに実装されている XAML リーダーと XAML ライターは、XAML ノード ストリームの設計概念に基づいています。 XAML ノード ストリームは、一連の XAML ノードを概念化したものです。 この概念化では、XAML プロセッサは、XAML 内のノードのリレーションシップの構造を 1 つずつ処理します。 常に、開いている XAML ノード ストリームに存在する現在のレコードまたは現在の位置は 1 つのみで、API の多くの側面がレポートするのは、その位置から入手できる情報のみです。 XAML ノード ストリームの現在のノードは、オブジェクト、メンバー、または値として記述できます。 XAML を XAML ノード ストリームとして扱うことで、XAML リーダーは XAML ライターと通信するとともに、XAML に関するパスの読み込みまたはパスの保存操作中に、XAML ノード ストリームのコンテンツをプログラムが表示、操作、または変更できるようにします。 XAML リーダーおよびライターの API の設計と XAML ノード ストリームの概念は、 [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] および <xref:System.Xml.XmlReader> クラスと <xref:System.Xml.XmlWriter> クラスなど、以前の関連するリーダーとライターの設計と概念に似ています。 このトピックでは、XAML ノード ストリームの概念について説明するとともに、XAML ノード レベルで XAML 表現と対話するルーチンを記述する方法について説明します。  
@@ -79,7 +80,7 @@ while (xxr.Read()) {
  XAML ノード ループとして使用する以外に XAML 表現を使用する可能性があるその他の方法があります。 たとえば、インデックス付きのノードを読み取ることができる XAML リーダー、特に `x:Name`、 `x:Uid`、またはその他の識別子を介して直接ノードにアクセスする XAML リーダーが存在することがあります。 .NET framework XAML サービスは、完全な実装を提供していませんが、サービスとサポートの種類を通じて推奨されたパターンを提供します。 詳細については、次のトピックを参照してください。 <xref:System.Xaml.IXamlIndexingReader> および <xref:System.Xaml.XamlNodeList>.  
   
 > [!TIP]
->  Microsoft では、Microsoft XAML Toolkit と呼ばれるアウトオブバンド リリースも生成しています。 このアウトオブバンド リリースは、まだプレリリース段階です。 しかし、プレリリース版のコンポーネントの使用をご希望の場合、Microsoft XAML Toolkit では、XAML ツールと XAML の静的分析用の興味深いリソースが提供されています。 Microsoft XAML Toolkit には、XAML DOM API、FxCop の分析のサポート、および Silverlight の XAML スキーマ コンテキストが含まれています。 詳細については、「 [Microsoft XAML Toolkit](http://code.msdn.microsoft.com/XAML)」を参照してください。  
+>  Microsoft では、Microsoft XAML Toolkit と呼ばれるアウトオブバンド リリースも生成しています。 このアウトオブバンド リリースは、まだプレリリース段階です。 しかし、プレリリース版のコンポーネントの使用をご希望の場合、Microsoft XAML Toolkit では、XAML ツールと XAML の静的分析用の興味深いリソースが提供されています。 Microsoft XAML Toolkit には、XAML DOM API、FxCop の分析のサポート、および Silverlight の XAML スキーマ コンテキストが含まれています。 詳細については、次を参照してください。 [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML)します。  
   
 <a name="working_with_the_current_node"></a>   
 ## <a name="working-with-the-current-node"></a>現在のノードの操作  

@@ -2,15 +2,15 @@
 title: OperationContext へのアクセス
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: cefbc3b10114b427518e640809462eedb131d695
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c7ce1c9c37ee93b58a07376e0aeae045f0ca408
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516634"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419758"
 ---
 # <a name="accessing-operationcontext"></a>OperationContext へのアクセス
-このサンプルで示す方法、メッセージング アクティビティ (<xref:System.ServiceModel.Activities.Receive>と<xref:System.ServiceModel.Activities.Send>) にアクセスする、カスタムのスコープ アクティビティと共に使用できます<xref:System.ServiceModel.OperationContext.Current%2A>アタッチしたり、送信または受信メッセージ内のカスタム メッセージ ヘッダーを取得します。  
+このサンプルでは、メッセージング アクティビティ (<xref:System.ServiceModel.Activities.Receive>と<xref:System.ServiceModel.Activities.Send>) にアクセスする、カスタムのスコープ アクティビティと共に使用できます<xref:System.ServiceModel.OperationContext.Current%2A>アタッチし、または、送信または受信メッセージ内のカスタム メッセージ ヘッダーを取得します。  
   
 ## <a name="demonstrates"></a>使用例  
  メッセージング アクティビティ、<xref:System.ServiceModel.Activities.ISendMessageCallback>、<xref:System.ServiceModel.Activities.IReceiveMessageCallback>。  
@@ -20,7 +20,7 @@ ms.locfileid: "33516634"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  このサンプルでは、HTTP エンドポイントを使用してワークフロー サービスを公開します。 このサンプルを適切な URL Acl を実行するを追加する必要があります (を参照してください[を構成する HTTP および HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)詳細については)、管理者として Visual Studio を実行しているか、適切な Acl を追加する管理者特権のプロンプトで次のコマンドを実行することによってです。 ドメインとユーザー名は置き換えてください。  
+1.  このサンプルでは、HTTP エンドポイントを使用してワークフロー サービスを公開します。 このサンプルで、適切な URL Acl を実行するを追加する必要があります (を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細については)、Visual Studio を管理者として実行されているか、適切な Acl を追加する管理者特権のプロンプトで次のコマンドを実行すること。 ドメインとユーザー名は置き換えてください。  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
@@ -30,9 +30,9 @@ ms.locfileid: "33516634"
   
     1.  ソリューションをビルドします。  
   
-    2.  複数のスタートアップ プロジェクトを設定するには、ソリューションを右クリックしを選択すると**スタートアップ プロジェクトの**します。  
+    2.  複数のスタートアップ プロジェクトを設定するには、ソリューションを右クリックし、選択**スタートアップ プロジェクトの設定**します。  
   
-    3.  追加**サービス**と**クライアント**(その順序で) 複数のスタートアップ プロジェクトとして。  
+    3.  追加**サービス**と**クライアント**(順序) で複数のスタートアップ プロジェクトとして。  
   
     4.  アプリケーションを実行します。 クライアント コンソールに実行中のワークフローが 2 回示され、[サービス] ウィンドウにこれらのワークフローのインスタンス ID が示されます。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "33516634"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`

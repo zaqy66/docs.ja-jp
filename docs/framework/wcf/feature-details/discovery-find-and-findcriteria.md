@@ -2,15 +2,15 @@
 title: 探索検索と FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495321"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423324"
 ---
 # <a name="discovery-find-and-findcriteria"></a>探索検索と FindCriteria
-探索検索操作は、1 つ以上のサービスを探索するためにクライアントによって開始される操作であり、探索における主要なアクションの 1 つです。 検索を実行すると、WS-Discovery Probe メッセージがネットワークを介して送信されます。 指定された条件に一致するサービスは、WS-Discovery ProbeMatch メッセージを使用して応答します。 探索メッセージの詳細については、次を参照してください。、 [Ws-discovery 仕様](http://go.microsoft.com/fwlink/?LinkID=122347)です。  
+探索検索操作は、1 つ以上のサービスを探索するためにクライアントによって開始される操作であり、探索における主要なアクションの 1 つです。 検索を実行すると、WS-Discovery Probe メッセージがネットワークを介して送信されます。 指定された条件に一致するサービスは、WS-Discovery ProbeMatch メッセージを使用して応答します。 探索メッセージの詳細については、次を参照してください。、 [Ws-discovery 仕様](https://go.microsoft.com/fwlink/?LinkID=122347)します。  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  <xref:System.ServiceModel.Discovery.DiscoveryClient> クラスは、検索操作を実行するメカニズムを提供し、探索クライアントの操作を簡単に実行できるようにします。 このクラスには、(ブロックする) 同期検索を実行する <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> メソッドと、ブロックしない非同期検索を実行する <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> メソッドが含まれます。 どちらのメソッドも <xref:System.ServiceModel.Discovery.FindCriteria> パラメーターを使用し、<xref:System.ServiceModel.Discovery.FindResponse> オブジェクトを介してユーザーに結果を提供します。  
@@ -20,7 +20,7 @@ ms.locfileid: "33495321"
   
  検索条件は、次のとおりです。  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 省略できます。 検索対象のサービスのコントラクト名、およびサービスの検索に通常使用される条件を指定します。 複数のコントラクト名が指定されると、すべてのコントラクトに一致するサービス エンドポイントのみが応答します。 WCF ではエンドポイントのみをサポートできること 1 つのコントラクトに注意してください。  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 省略できます。 検索対象のサービスのコントラクト名、およびサービスの検索に通常使用される条件を指定します。 複数のコントラクト名が指定されると、すべてのコントラクトに一致するサービス エンドポイントのみが応答します。 Wcf エンドポイントのみをサポートできること 1 つのコントラクトに注意してください。  
   
 -   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - 省略できます。 Scopes は、個々のサービス エンドポイントの分類に使用される絶対 URI です。 複数のエンドポイントが同じコントラクトを公開し、これらのエンドポイントのサブセットを検索する手段が必要な場合は、これを使用できます。 複数のスコープが指定されると、すべてのスコープに一致するサービス エンドポイントのみが応答します。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33495321"
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>: 大文字と小文字が区別される基本の文字列比較を実行します。  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 区切られたセグメント単位で一致する「/」です。 検索するhttp://contoso/building1と同じスコープを持つサービスhttp://contoso/building/floor1です。 一致しない注http://contoso/building100最後の 2 つのセグメントが一致しないためです。  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 区切られたセグメント単位で一致する「/」。 検索する http://contoso/building1スコープを持つサービスに一致 http://contoso/building/floor1します。 一致しないので注意 http://contoso/building100最後の 2 つのセグメントが一致しないためです。  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>: LDAP URL を使用してセグメント単位でスコープの一致を判定します。  
   

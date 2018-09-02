@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 302c26571e9843a4b7c3c440969e4159ef2d10ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec4ef17687e4e1bf2cc18182a64fc7361fe3b6f7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362577"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421984"
 ---
 # <a name="retrieving-binary-data"></a>バイナリ データの取得
-既定では、 **DataReader**行全体のデータは使用するとすぐに行として受信したデータを読み込みます。 バイナリ ラージ オブジェクト (BLOB) には、1 行に収まらない数ギガバイトのデータが含まれる場合があるため、別の処理が必要です。 **Command.ExecuteReader**メソッド オーバー ロードを実行するには、<xref:System.Data.CommandBehavior>引数の既定の動作を変更する、 **DataReader**です。 渡すことができます<xref:System.Data.CommandBehavior.SequentialAccess>を**ExecuteReader**の既定の動作を変更する方法、 **DataReader**行のデータを読み込み中には、代わりにそれがデータを読み込む順番が受信できるようにします。 これは BLOB やその他の大きなデータ構造を読み込む場合に理想的な処理です。 この動作は、データ ソースによって異なる場合があります。 たとえば、Microsoft Access から BLOB を返すと、受け取ったデータから順に読み込むのではなく、BLOB 全体をメモリに読み込みます。  
+既定で、 **DataReader**行全体のデータが使用可能なすぐに行として受信データを読み込みます。 バイナリ ラージ オブジェクト (BLOB) には、1 行に収まらない数ギガバイトのデータが含まれる場合があるため、別の処理が必要です。 **Command.ExecuteReader**メソッドをオーバー ロードには、<xref:System.Data.CommandBehavior>引数の既定の動作を変更する、 **DataReader**します。 渡すことができます<xref:System.Data.CommandBehavior.SequentialAccess>を**ExecuteReader**の既定の動作を変更する方法、 **DataReader**行のデータを読み込む代わりがデータを読み込む順番に受信できるようにします。 これは BLOB やその他の大きなデータ構造を読み込む場合に理想的な処理です。 この動作は、データ ソースによって異なる場合があります。 たとえば、Microsoft Access から BLOB を返すと、受け取ったデータから順に読み込むのではなく、BLOB 全体をメモリに読み込みます。  
   
- 設定するときに、 **DataReader**を使用する**SequentialAccess**、返されるフィールドにアクセスするシーケンスを確認することが重要です。 既定の動作、 **DataReader**、次の行を読み取るまでは、任意の順序で返されるフィールドにアクセスすることができますが、使用可能になるとすぐに行全体が読み込まれます。 使用する場合**SequentialAccess**ただし、によって返されるフィールドにアクセスする必要があります、 **DataReader**の順序で。 たとえば、クエリが 3 つの列 (3 番目の列は BLOB) を返す場合、最初のフィールドおよび 2 番目のフィールドの値は、3 番目のフィールドの BLOB データにアクセスする前に返す必要があります。 最初のフィールドまたは 2 番目のフィールドの前に 3 番目のフィールドにアクセスした場合は、最初のフィールドと 2 番目のフィールドの値は使用できなくなります。 これは、ため**SequentialAccess**が変更、 **DataReader**シーケンスと、データにデータを返すことはできませんの後に、 **DataReader**を越えて読み取りができます。  
+ 設定するときに、 **DataReader**を使用する**SequentialAccess**、返されるフィールドにアクセスするシーケンスに注意することが重要です。 既定の動作、 **DataReader**、次の行が読み取られるまで、任意の順序で返されるフィールドにアクセスすることができますが、使用可能になるとすぐに行全体が読み込まれます。 使用する場合**SequentialAccess**ただし、によって返されるフィールドにアクセスする必要があります、 **DataReader**の順序で。 たとえば、クエリが 3 つの列 (3 番目の列は BLOB) を返す場合、最初のフィールドおよび 2 番目のフィールドの値は、3 番目のフィールドの BLOB データにアクセスする前に返す必要があります。 最初のフィールドまたは 2 番目のフィールドの前に 3 番目のフィールドにアクセスした場合は、最初のフィールドと 2 番目のフィールドの値は使用できなくなります。 これは、ため**SequentialAccess**が変更、 **DataReader**シーケンスと、データにデータを返すが後に使用できる、 **DataReader**が。  
   
- BLOB フィールドのデータにアクセスするときに使用して、 **GetBytes**または**GetChars**型指定されたアクセサーの**DataReader**配列のデータを読み込みます。 使用することも**GetString**文字データです。 ただしです。 システム リソースを節約するためには、BLOB 値全体を 1 つの文字列変数に読み込むことは望ましくありません。 特定のバッファー サイズのデータを返すように指定する代わりに、返されたデータから読み込む先頭バイトまたは先頭文字の開始位置を指定できます。 **GetBytes**と**GetChars**が返されます、`long`をバイト数または返される文字数を表す値です。 Null 配列を渡す場合**GetBytes**または**GetChars**、返される long 型の値はバイトまたはキャラクター、BLOB 内の合計数になります。 オプションで、データ読み込みの開始位置を示す、配列内のインデックスを指定できます。  
+ 使用して、BLOB フィールドのデータにアクセスするとき、 **GetBytes**または**GetChars**型指定されたアクセサーの**DataReader**データの配列を設定します。 使用することも**GetString**文字データ用ただしします。 システム リソースを節約するためには、BLOB 値全体を 1 つの文字列変数に読み込むことは望ましくありません。 特定のバッファー サイズのデータを返すように指定する代わりに、返されたデータから読み込む先頭バイトまたは先頭文字の開始位置を指定できます。 **GetBytes**と**GetChars**が返されます、`long`をバイト数または返される文字数を表す値。 Null 配列を渡す場合**GetBytes**または**GetChars**、long 型の値の合計バイト数または BLOB 内の文字数になりますが返されます。 オプションで、データ読み込みの開始位置を示す、配列内のインデックスを指定できます。  
   
 ## <a name="example"></a>例  
- 次の例は、パブリッシャーから ID およびロゴを返します、 **pubs** Microsoft SQL Server のサンプル データベース。 発行者 ID (`pub_id`) は文字フィールドであり、ロゴはイメージ、つまり、BLOB です。 **ロゴ**フィールドはビットマップで、この例では、バイナリ データを使用して返されます**GetBytes**です。 フィールドには順番にアクセスする必要があるため、現在の行のデータに対して発行者 ID はロゴの前にアクセスされることに注意してください。  
+ 次の例では、返す発行者 ID およびロゴ、 **pubs** Microsoft SQL server のサンプル データベース。 発行者 ID (`pub_id`) は文字フィールドであり、ロゴはイメージ、つまり、BLOB です。 **ロゴ**フィールドは、ビットマップを使用してバイナリ データを返す例を示します**GetBytes**します。 フィールドには順番にアクセスする必要があるため、現在の行のデータに対して発行者 ID はロゴの前にアクセスされることに注意してください。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -154,6 +154,6 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [Datareader の操作](http://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [Datareader の操作](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
  [SQL Server のバイナリ データと大きな値のデータ](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

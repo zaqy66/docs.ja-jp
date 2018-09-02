@@ -2,12 +2,12 @@
 title: カスタム検索基準
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 6c9363add13e38ded75685e4115a5084629d6505
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503211"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421451"
 ---
 # <a name="custom-find-criteria"></a>カスタム検索基準
 このサンプルでは、ロジックを使用するカスタム スコープ一致の作成方法とカスタム探索サービスの実装方法を示します。 クライアントは、カスタム スコープ一致機能を使用して、システムによって提供される WCF Discovery の検索機能を改良および拡張します。 このサンプルでは次のシナリオを扱います。  
@@ -25,7 +25,7 @@ ms.locfileid: "33503211"
 -   アルゴリズムに基づくカスタム スコープ一致の実装  
   
 ## <a name="discussion"></a>説明  
- クライアントは、条件に一致する"OR"タイプの検索します。 サービスは、エンドポイントのスコープがクライアントによって指定されたスコープのいずれかと一致した場合、応答を送り返します。 この場合、クライアントは、次のいずれかのスコープを含む電卓サービスを検索します。  
+ クライアントは検索条件に一致する"OR"の型。 サービスは、エンドポイントのスコープがクライアントによって指定されたスコープのいずれかと一致した場合、応答を送り返します。 この場合、クライアントは、次のいずれかのスコープを含む電卓サービスを検索します。  
   
 1.  `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -39,13 +39,13 @@ ms.locfileid: "33503211"
   
  サービス プロジェクトを開きます。 カスタム探索サービスの実装には、次の 3 つのファイルを使用します。  
   
-1.  **AsyncResult.cs**: これは、実装、`AsyncResult`探索方法で必要となります。  
+1.  **AsyncResult.cs**: これはの実装、`AsyncResult`の探索方法で必要な。  
   
 2.  **CustomDiscoveryService.cs**: このファイルは、カスタム探索サービスを実装します。 この実装では、<xref:System.ServiceModel.Discovery.DiscoveryService> クラスを拡張し、必要なメソッドをオーバーライドします。 <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> メソッドの実装に注意してください。 このメソッドは、ルールに基づくカスタム スコープ一致がクライアントによって指定されているかどうかをチェックします。 これはクライアントが前に指定したカスタム URI です。 カスタムの規則が指定されている場合は、"OR"一致ロジックを実装するコード パスが実行されます。  
   
      このカスタム ロジックでは、サービスに含まれている各エンドポイントのスコープがすべてチェックされます。 エンドポイントのスコープのいずれかがクライアントによって指定されたスコープのいずれかに一致した場合、探索サービスはクライアントに送り返す応答にそのエンドポイントを追加します。  
   
-3.  **CustomDiscoveryExtension.cs**: 探索サービスの実装の最後の手順は、カスタムのこの実装を接続するサービス ホストにサービスを検出します。 ここで使用するヘルパー クラスは `CustomDiscoveryExtension` クラスです。 このクラスは <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> クラスを拡張します。 ユーザーは <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> メソッドをオーバーライドする必要があります。 この場合、このメソッドは、前に作成されたカスタム探索サービスのインスタンスを返します。 `PublishedEndpoints` は、<xref:System.Collections.ObjectModel.ReadOnlyCollection%601> に追加されるすべてのアプリケーション エンドポイントを含む <xref:System.ServiceModel.ServiceHost> です。 カスタム探索サービスは、これを使用して内部リストを設定します。 ユーザーは、その他のエンドポイント メタデータも追加できます。  
+3.  **CustomDiscoveryExtension.cs**: 探索サービスの実装の最後の手順は、カスタムのこの実装を接続することです。 サービス ホストにサービスを検出します。 ここで使用するヘルパー クラスは `CustomDiscoveryExtension` クラスです。 このクラスは <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> クラスを拡張します。 ユーザーは <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> メソッドをオーバーライドする必要があります。 この場合、このメソッドは、前に作成されたカスタム探索サービスのインスタンスを返します。 `PublishedEndpoints` は、<xref:System.Collections.ObjectModel.ReadOnlyCollection%601> に追加されるすべてのアプリケーション エンドポイントを含む <xref:System.ServiceModel.ServiceHost> です。 カスタム探索サービスは、これを使用して内部リストを設定します。 ユーザーは、その他のエンドポイント メタデータも追加できます。  
   
  最後に、Program.cs を開きます。 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> と `CustomDiscoveryExtension` の両方がホストに追加されていることに注意してください。 これが完了し、探索メッセージの受信に使用されるエンドポイントがホストに追加されると、アプリケーションがカスタム探索サービスを使用できるようになります。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "33503211"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

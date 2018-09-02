@@ -9,51 +9,51 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 2dd048fb074d1ec5bb7bc0a67f196d5d51281545
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528478"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422550"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>方法 : Windows フォームにコントロールを追加する
-ほとんどのフォームは、フォームのサーフェイスにコントロールを追加してユーザー インターフェイス (UI) を定義するよう設計されています。 A*コントロール*情報の表示や、ユーザー入力をそのまま使用するために使用するフォームのコンポーネントは、します。 コントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)です。  
+ほとんどのフォームは、ユーザー インターフェイス (UI) を定義するフォームのサーフェイスにコントロールを追加して設計されています。 A*コントロール*は情報を表示するか、ユーザー入力をそのまま使用するためのフォーム上のコンポーネントです。 コントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)します。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
-### <a name="to-draw-a-control-on-a-form"></a>フォーム上のコントロールを描画するには  
+### <a name="to-draw-a-control-on-a-form"></a>フォームのコントロールを描画するには  
   
-1.  フォームを開きます。 詳細については、次を参照してください。[する方法: デザイナーでの Windows フォームの表示](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)です。  
+1.  フォームを開きます。 詳細については、次を参照してください。[方法: デザイナーでの Windows フォームの表示](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)します。  
   
 2.  **ツールボックス**フォームに追加するコントロールをクリックします。  
   
-3.  フォームに存在するコントロールの左上隅をクリックしを配置するコントロールの右下隅の任意の場所にドラッグします。  
+3.  フォーム、検索するコントロールの左上隅をクリックし、検索するコントロールの右下隅を先にドラッグします。  
   
-     コントロールは、指定した位置とサイズでフォームに追加されます。  
+     コントロールは、指定した位置とサイズをフォームに追加されます。  
   
     > [!NOTE]
-    >  各コントロールには、定義されている既定のサイズがあります。 ドラッグして、コントロールの既定のサイズで、フォームにコントロールを追加することができます、**ツールボックス**をフォームにします。  
+    >  各コントロールには、定義されている既定のサイズがあります。 コントロールの既定のサイズで、フォームにコントロールを追加するにはからドラッグすることで、**ツールボックス**をフォームにします。  
   
 ### <a name="to-drag-a-control-to-a-form"></a>コントロールをフォームにドラッグするには  
   
-1.  フォームを開きます。 詳細については、次を参照してください。[する方法: デザイナーでの Windows フォームの表示](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)です。  
+1.  フォームを開きます。 詳細については、次を参照してください。[方法: デザイナーでの Windows フォームの表示](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)します。  
   
 2.  **ツールボックス**フォームにドラッグしてコントロールをクリックします。  
   
      コントロールは、既定のサイズで指定した場所にあるフォームに追加されます。  
   
     > [!NOTE]
-    >  内のコントロールをダブルクリックすることができます、**ツールボックス**を既定のサイズで、フォームの左上隅に追加します。  
+    >  コントロールをダブルクリックすることができます、**ツールボックス**既定のサイズで、フォームの左上隅に追加します。  
   
-     実行時に、フォームにコントロールを動的に追加することができますも。 次のコード例で、<xref:System.Windows.Forms.TextBox>コントロールは、フォームに追加するときに、<xref:System.Windows.Forms.Button>コントロールがクリックされました。  
+     実行時に、フォームにコントロールを動的に追加することができますも。 次のコード例で、<xref:System.Windows.Forms.TextBox>コントロールがフォームに追加時に、<xref:System.Windows.Forms.Button>コントロールがクリックされました。  
   
     > [!NOTE]
-    >  次の手順が必要ですがあるフォーム、**ボタン**コントロール、`Button1`に既に配置されている、します。  
+    >  次の手順が使用して、フォームが存在する必要があります、**ボタン**コントロール、`Button1`に既に配置した、します。  
   
-### <a name="to-add-a-control-to-a-form-programmatically"></a>プログラムによってコントロールをフォームに追加するには  
+### <a name="to-add-a-control-to-a-form-programmatically"></a>プログラムでコントロールをフォームに追加するには  
   
-1.  ボタンの処理をメソッドで`Click`フォームのクラスを制御変数への参照を追加するには、次のような挿入コード内のイベント設定コントロールの`Location`、し、コントロールを追加します。  
+1.  ボタンを処理するメソッドで`Click`、制御変数への参照を追加するには、次のようなコードを挿入、フォームのクラス内のイベントの設定、コントロールの`Location`コントロールを追加します。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -87,7 +87,7 @@ ms.locfileid: "33528478"
     >  コントロールの他のプロパティを初期化するコードを追加することもできます。  
   
     > [!IMPORTANT]
-    >  悪意のあるを参照して、ローカル コンピューターがネットワーク経由のセキュリティ リスクを公開する可能性があります`UserControl`です。 誤ってそれをプロジェクトに追加した後に、有害なカスタム コントロールを作成する悪意のあるユーザーの場合は問題にならなければのみとなります。  
+    >  悪意のあるを参照して、ローカル コンピューターがネットワーク経由のセキュリティ リスクを公開する`UserControl`します。 誤ってそれをプロジェクトに追加した後に、有害なカスタム コントロールを作成する悪意のあるユーザーの場合の問題のみなります。  
   
 ## <a name="see-also"></a>関連項目  
  [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)  

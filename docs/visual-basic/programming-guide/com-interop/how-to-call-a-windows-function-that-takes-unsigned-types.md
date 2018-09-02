@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 44c67470def430a9ba924483899f0db6a9c798a2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d66b74f06abe6b337c24859c444f7a8c2aa52c13
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999910"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421524"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>方法: 符号なしの型を使用する Windows の機能を呼び出す (Visual Basic)
 クラス、モジュール、または符号なし整数型のメンバーを含む構造体を使用する場合は、Visual Basic でのこれらのメンバーを表示できます。  
@@ -75,7 +75,7 @@ ms.locfileid: "42999910"
     >  Windows アプリケーション プログラミング インターフェイス (API) など、アンマネージ コードに呼び出しを行う、潜在的なセキュリティ リスクにコードを公開します。  
   
     > [!IMPORTANT]
-    >  Windows API を呼び出すと、アンマネージ コード アクセス許可が必要です。 詳細については、次を参照してください。<xref:System.Security.Permissions.SecurityPermission>と[コード アクセス許可](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)します。  
+    >  Windows API を呼び出すと、アンマネージ コード アクセス許可が必要です。 詳細については、次を参照してください。<xref:System.Security.Permissions.SecurityPermission>と[コード アクセス許可](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)します。  
   
 ## <a name="see-also"></a>関連項目  
  [データの種類](../../../visual-basic/language-reference/data-types/index.md)  

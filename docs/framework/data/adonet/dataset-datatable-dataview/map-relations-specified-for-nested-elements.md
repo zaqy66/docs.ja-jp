@@ -3,11 +3,11 @@ title: 入れ子になっている要素に指定したリレーションシッ�
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
 ms.openlocfilehash: 0346ba04fd8af6b5abc81fe994dd40f9a6a37c1d
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332469"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423862"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>入れ子になっている要素に指定したリレーションシップの割り当て
 スキーマを含めることができます、 **msdata:Relationship**注釈を明示的にスキーマの 2 つの要素間のマッピングを指定します。 2 つの要素で指定された**msdata:Relationship**スキーマで入れ子にできますが、する必要はありません。 マッピング プロセスを使用して**msdata:Relationship**で 2 つの列の間で主キー/外部キーのリレーションシップを生成するスキーマ。  

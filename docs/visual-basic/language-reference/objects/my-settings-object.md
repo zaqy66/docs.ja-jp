@@ -1,5 +1,5 @@
 ---
-title: My.Settings オブジェクト
+title: My.Settings オブジェクト (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.MySettingsProperty.Settings
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 54176ae6706311b17227c7dc21a5060c9b369753
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83bba35340a917b649369fc1eb7a01a2bc6a2188
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603033"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442773"
 ---
 # <a name="mysettings-object"></a>My.Settings オブジェクト
 プロパティと、アプリケーションの設定にアクセスするためのメソッドを提供します。  
   
-## <a name="remarks"></a>コメント  
- `My.Settings`オブジェクトがアプリケーションの設定にアクセスできるようにし、動的に格納およびプロパティの設定と、アプリケーションの他の情報を取得することができます。 詳細については、「[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)」を参照してください。  
+## <a name="remarks"></a>Remarks  
+ `My.Settings`オブジェクトは、アプリケーションの設定へのアクセスを提供し、動的に格納し、プロパティの設定と、アプリケーションの他の情報を取得することができます。 詳細については、「[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)」を参照してください。  
   
 ## <a name="properties"></a>プロパティ  
- `My.Settings` オブジェクトのプロパティを使用すると、アプリケーションの設定にアクセスできます。 を追加または削除の設定を使用して、**設定デザイナー**です。  
+ `My.Settings` オブジェクトのプロパティを使用すると、アプリケーションの設定にアクセスできます。 を追加または削除の設定を使用して、**設定デザイナー**します。  
   
- 各設定には、**名前**、**型**、**スコープ**、および**値**、これらの設定を決定し、方法各設定にアクセスするプロパティ表示されます、`My.Settings`オブジェクト。  
+ 各設定は、**名前**、**型**、**スコープ**と**値**、これらの設定を確認する方法各設定にアクセスするプロパティ表示されます、`My.Settings`オブジェクト。  
   
 -   **名前**プロパティの名前を指定します。  
   
@@ -31,16 +31,16 @@ ms.locfileid: "33603033"
   
 -   **スコープ**プロパティは読み取り専用のかどうかを示します。 値が場合**アプリケーション**、プロパティは読み取り専用です。 値の場合**ユーザー**、プロパティが読み取り/書き込みです。  
   
--   **値**プロパティの既定値です。  
+-   **値**はプロパティの既定値です。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |---|---|  
-|`Reload`|最後に保存された値からユーザーの設定を再読み込みします。|  
+|`Reload`|最後に保存されている値からユーザーの設定を再読み込みします。|  
 |`Save`|現在のユーザー設定を保存します。|  
   
- `My.Settings`オブジェクトは、高度なプロパティおよびから継承されたメソッドにも提供、<xref:System.Configuration.ApplicationSettingsBase>クラスです。  
+ `My.Settings`オブジェクトは、高度なプロパティとから継承されたメソッドにも提供します、<xref:System.Configuration.ApplicationSettingsBase>クラス。  
   
 ## <a name="tasks"></a>[タスク]  
  次の表に、関連するタスクの例については、`My.Settings`オブジェクト。  

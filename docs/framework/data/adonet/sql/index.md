@@ -2,12 +2,12 @@
 title: SQL Server と ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: cfb24be22ebec9a49c489ddcbff4824c4cd3cf34
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 32fc946f46ddac63d87b7e5a3d8f7120799f7223
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935085"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423079"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server と ADO.NET
 このセクションでは、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 固有の機能および動作について説明します。  
@@ -45,5 +45,4 @@ ms.locfileid: "42935085"
  [ADO.NET でのデータ型のマッピング](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET でのデータの取得および変更](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- 
-  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: f29b8e01239f46b0d56319ba3da1a8fe179a17e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 047805ad91d87550da80448fd10883ae58647bd6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601154"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420055"
 ---
 # <a name="ltexceptiongt-visual-basic"></a>&lt;例外&gt;(Visual Basic)
 どの例外がスローされる可能性を指定します。  
@@ -28,15 +28,15 @@ ms.locfileid: "33601154"
  `description`  
  説明です。  
   
-## <a name="remarks"></a>コメント  
- 使用して、`<exception>`タグをどの例外をスローするを指定します。 このタグは、メソッドの定義に適用されます。  
+## <a name="remarks"></a>Remarks  
+ 使用して、`<exception>`タグをどの例外をスローすることができますを指定します。 このタグは、メソッドの定義に適用されます。  
   
  コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- この例では、`<exception>`例外を記述するタグを`IntDivide`関数がスローすることができます。  
+ この例では、`<exception>`例外を記述するタグを`IntDivide`関数はスローできます。  
   
  [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
   
 ## <a name="see-also"></a>関連項目  
- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

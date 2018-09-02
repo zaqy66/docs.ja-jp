@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 664785bc97574eff73dc1c2be64f407641df6b00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccb16a0996386f3518bc52e95c1892c56e8bbad2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484570"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420833"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>トレースに関するセキュリティの考慮事項と役立つヒント
 ここでは、機密情報を漏洩の危険から守る方法と共に、WebHost を使用する場合の便利なヒントについて説明します。  
@@ -86,9 +86,9 @@ ms.locfileid: "33484570"
   
  変更点はアプリケーションが開始されるか、再起動されるまで、反映されません。 両方の属性も `true` に設定されている場合は、イベントは開始時にログに記録されます。 また、`logKnownPii` が `true` に設定され、`enableLoggingKnownPii` が `false` に設定されている場合にも、イベントはログに記録されます。  
   
- PII のログ記録の詳細については、次を参照してください。 [PII セキュリティ ロックダウン](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md)サンプルです。  
+ PII のログ記録の詳細については、次を参照してください。 [PII セキュリティ ロックダウン](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md)サンプル。  
   
- コンピューターの管理者およびアプリケーションを配置するユーザーは、これらの 2 種類のスイッチを使用する場合に注意する必要があります。 PII のログ記録が有効になっている場合は、セキュリティ キーと PII がログに記録されます。 ログ記録を無効にしても、機密情報およびアプリケーション固有のデータは、依然としてメッセージのヘッダーと本体に記録されています。 プライバシー、公開されない PII を保護する詳細については、次を参照してください。[ユーザー プライバシー](http://go.microsoft.com/fwlink/?LinkID=94647)です。  
+ コンピューターの管理者およびアプリケーションを配置するユーザーは、これらの 2 種類のスイッチを使用する場合に注意する必要があります。 PII のログ記録が有効になっている場合は、セキュリティ キーと PII がログに記録されます。 ログ記録を無効にしても、機密情報およびアプリケーション固有のデータは、依然としてメッセージのヘッダーと本体に記録されています。 プライバシーと pii の公開を防止の詳細については、次を参照してください。[ユーザー プライバシー](https://go.microsoft.com/fwlink/?LinkID=94647)します。  
   
  また、接続が確立されるたび (接続指向トランスポートの場合)、またはメッセージが送信されるたび (それ以外の場合) に、メッセージ送信者の IP アドレスが記録されます。 これは、送信者の同意を得ずに行われます。 ただし、このログ記録は Information レベルまたは Verbose レベルだけで実行されます。これらのトレース レベルは既定ではありません。また、ライブ デバッグを行う場合を除き、運用環境ではお勧めしません。  
   

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: a389f75ca6516f8bad55934717bee056aca65f1f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757061"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418753"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView からの DataTable の作成
-データ ソースからデータを取得し、<xref:System.Data.DataTable> にデータを格納した後、再度データを取得せずに、返されたデータの並べ替え、フィルター処理、または制限の適用を行うことが必要になる場合があります。 これを行うには、<xref:System.Data.DataView> クラスを使用します。 さらに、新しいを作成する必要がある場合<xref:System.Data.DataTable>から、 <xref:System.Data.DataView>、使用することができます、<xref:System.Data.DataView.ToTable%2A>に、新しいすべての行と列、またはデータのサブセットをコピーする方法<xref:System.Data.DataTable>です。 <xref:System.Data.DataView.ToTable%2A> メソッドには、次の操作を行うためのオーバーロード機能があります。  
+データ ソースからデータを取得し、<xref:System.Data.DataTable> にデータを格納した後、再度データを取得せずに、返されたデータの並べ替え、フィルター処理、または制限の適用を行うことが必要になる場合があります。 これを行うには、<xref:System.Data.DataView> クラスを使用します。 さらに、新たに作成する必要がある場合<xref:System.Data.DataTable>から、 <xref:System.Data.DataView>、使用することができます、<xref:System.Data.DataView.ToTable%2A>メソッドは、新しいすべての行および列、またはデータのサブセットをコピーする<xref:System.Data.DataTable>します。 <xref:System.Data.DataView.ToTable%2A> メソッドには、次の操作を行うためのオーバーロード機能があります。  
   
 -   <xref:System.Data.DataTable> 内の列のサブセットである列を含む <xref:System.Data.DataView> の作成  
   
--   作成、<xref:System.Data.DataTable>から一意の行のみが含まれている、 <xref:System.Data.DataView>TRANSACT-SQL の DISTINCT キーワードと同様にします。  
+-   作成、<xref:System.Data.DataTable>異なる行のみを含む、 <xref:System.Data.DataView>TRANSACT-SQL の DISTINCT キーワードと同様にします。  
   
 ## <a name="example"></a>例  
- 次のコンソール アプリケーションの例を作成、<xref:System.Data.DataTable>からデータを含む、 **Person.Contact**テーブルに、 **AdventureWorks**サンプル データベース。 次に、例では、作成、並べ替えおよびフィルター選択された<xref:System.Data.DataView>に基づいて、<xref:System.Data.DataTable>です。 内容を表示した後、<xref:System.Data.DataTable>と<xref:System.Data.DataView>、例では、新たに作成<xref:System.Data.DataTable>から、<xref:System.Data.DataView>を呼び出して、<xref:System.Data.DataView.ToTable%2A>メソッドを使用可能な列のサブセットのみを選択します。 最後に、新しい <xref:System.Data.DataTable> の内容が表示されます。  
+ 次のコンソール アプリケーションの例を作成、<xref:System.Data.DataTable>からデータを格納している、 **Person.Contact**テーブルに、 **AdventureWorks**サンプル データベース。 次に、例では、作成、並べ替え、フィルター<xref:System.Data.DataView>に基づいて、<xref:System.Data.DataTable>します。 内容を表示した後、<xref:System.Data.DataTable>と<xref:System.Data.DataView>、例は、作成、新しい<xref:System.Data.DataTable>から、<xref:System.Data.DataView>呼び出すことによって、<xref:System.Data.DataView.ToTable%2A>メソッドを使用できる列のサブセットのみを選択します。 最後に、新しい <xref:System.Data.DataTable> の内容が表示されます。  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -208,4 +208,4 @@ Console.WriteLine();
 ## <a name="see-also"></a>関連項目  
  <xref:System.Data.DataView.ToTable%2A>  
  [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

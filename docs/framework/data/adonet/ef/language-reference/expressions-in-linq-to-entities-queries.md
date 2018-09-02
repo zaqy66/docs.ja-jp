@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
 ms.openlocfilehash: dccf3ab1a619222cdf2db54673718eb103aee2fb
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331723"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422270"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities クエリ内の式
 式は、単一の値、オブジェクト、メソッド、または名前空間として評価されるコード フラグメントです。 式には、リテラル値、メソッド呼び出し、演算子とそのオペランド、または単純な名前を含めることができます。 単純な名前には、変数、型メンバー、メソッド パラメーター、名前空間、または型の名前を指定できます。 式では、他の式をパラメーターとして使用する演算子、またはパラメーターが他のメソッド呼び出しであるメソッド呼び出しを使用できます。 したがって、単純な式だけでなく、非常に複雑な式も作成できます。  

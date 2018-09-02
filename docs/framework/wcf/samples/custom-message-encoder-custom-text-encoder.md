@@ -2,12 +2,12 @@
 title: 'カスタム メッセージ エンコーダー : カスタム テキスト エンコーダー'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808066"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418827"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>カスタム メッセージ エンコーダー : カスタム テキスト エンコーダー
 このサンプルでは、Windows Communication Foundation (WCF) を使用してカスタム テキスト メッセージ エンコーダーを実装する方法を示します。  
@@ -17,7 +17,7 @@ ms.locfileid: "33808066"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
@@ -41,14 +41,14 @@ ms.locfileid: "33808066"
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+2.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-3.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+3.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-4.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>メッセージ エンコーダー ファクトリとメッセージ エンコーダー  
- <xref:System.ServiceModel.ServiceHost> またはクライアント チャネルが開かれると、デザイン時コンポーネント `CustomTextMessageBindingElement` は `CustomTextMessageEncoderFactory` を作成します。 このファクトリは、`CustomTextMessageEncoder` を作成します。 メッセージ エンコーダーは、ストリーミング モードとバッファー モードの両方で動作し、 <xref:System.Xml.XmlReader> と <xref:System.Xml.XmlWriter> を使用してメッセージの読み取りと書き込みを行います。 最適化された XML リーダーと utf-8、utf-16、および Big-endean Unicode だけをサポートする WCF のライターではなくこれらのリーダーとライターをサポート プラットフォームがサポートされているすべてのエンコーディングします。  
+ <xref:System.ServiceModel.ServiceHost> またはクライアント チャネルが開かれると、デザイン時コンポーネント `CustomTextMessageBindingElement` は `CustomTextMessageEncoderFactory` を作成します。 このファクトリは、`CustomTextMessageEncoder` を作成します。 メッセージ エンコーダーは、ストリーミング モードとバッファー モードの両方で動作し、 <xref:System.Xml.XmlReader> と <xref:System.Xml.XmlWriter> を使用してメッセージの読み取りと書き込みを行います。 最適化された XML リーダーと utf-8、utf-16、および Big-endean Unicode だけをサポートする WCF のライターではなくこれらのリーダーとライターをサポートしてすべてサポートされているプラットフォームのエンコードします。  
   
  カスタム テキスト メッセージ エンコーダーのコード例を次に示します。  
   
@@ -191,11 +191,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>メッセージ エンコーディング バインド要素  
- バインド要素には、WCF ランタイム スタックの構成ができるようにします。 WCF アプリケーションでカスタム メッセージ エンコーダーを使用するには、バインド要素が必要なランタイム スタックの適切なレベルで適切な設定で、メッセージ エンコーダー ファクトリを作成します。  
+ バインド要素は、WCF ランタイム スタックの構成を許可します。 WCF アプリケーションでカスタム メッセージ エンコーダーを使用するバインド要素が必要なランタイム スタックの適切なレベルで適切な設定で、メッセージ エンコーダー ファクトリを作成します。  
   
- `CustomTextMessageBindingElement` は <xref:System.ServiceModel.Channels.BindingElement> 基本クラスから派生し、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> クラスを継承します。 これにより、このバインド要素、メッセージ エンコーディング バインド要素として認識するその他の WCF コンポーネントです。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> を実装すると、一致するメッセージ エンコーダー ファクトリのインスタンスが適切に設定されて返されます。  
+ `CustomTextMessageBindingElement` は <xref:System.ServiceModel.Channels.BindingElement> 基本クラスから派生し、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> クラスを継承します。 これにより、メッセージ エンコーディング バインド要素として、このバインド要素を認識するその他の WCF コンポーネントです。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> を実装すると、一致するメッセージ エンコーダー ファクトリのインスタンスが適切に設定されて返されます。  
   
- `CustomTextMessageBindingElement` は、プロパティを介して `MessageVersion`、`ContentType`、および `Encoding` の設定を公開します。 エンコーダーは、Soap11Addressing と Soap12Addressing1 の両方のバージョンをサポートします。 既定値は Soap11Addressing1 です。 また、`ContentType` の既定値は "text/xml" です。 `Encoding` プロパティでは、必要な文字エンコーディングの値を設定できます。 サンプルのクライアントとサービスを使用して ISO 8859-1 (Latin1) 文字エン コードでサポートされていない、 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> WCF のです。  
+ `CustomTextMessageBindingElement` は、プロパティを介して `MessageVersion`、`ContentType`、および `Encoding` の設定を公開します。 エンコーダーは、Soap11Addressing と Soap12Addressing1 の両方のバージョンをサポートします。 既定値は Soap11Addressing1 です。 また、`ContentType` の既定値は "text/xml" です。 `Encoding` プロパティでは、必要な文字エンコーディングの値を設定できます。 サンプルのクライアントとサービスを使用して ISO 8859-1 (Latin1) 文字エン コードではサポートされていません、 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> WCF の。  
   
  カスタム テキスト メッセージ エンコーダーを使用してプログラムでバインディングを作成する方法を次のコードに示します。  
   
@@ -211,7 +211,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
 ## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>メッセージ エンコーディング バインド要素へのメタデータのサポートの追加  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> から派生するすべての型は、サービスに対して生成される WSDL ドキュメント内の SOAP バインドのバージョンを更新します。 これを行うには、`ExportEndpoint` インターフェイス上に <xref:System.ServiceModel.Description.IWsdlExportExtension> メソッドを実装し、生成された WSDL を変更します。 このサンプルでは、`CustomTextMessageBindingElement` は `TextMessageEncodingBinidngElement` からの WSDL エクスポート ロジックを使用します。  
   
- このサンプルの場合、クライアント構成は手動構成です。 Svcutil.exe を使用してクライアント構成を生成することはできません。`CustomTextMessageBindingElement` では、動作を記述するポリシー アサーションがエクスポートされないからです。 通常は、カスタム バインディング要素上に <xref:System.ServiceModel.Description.IPolicyExportExtension> インターフェイスを実装して、バインディング要素によって実装される動作または機能を記述するカスタム ポリシー アサーションをエクスポートする必要があります。 カスタム バインド要素のポリシー アサーションをエクスポートする方法の例は、次を参照してください。、[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプルです。  
+ このサンプルの場合、クライアント構成は手動構成です。 Svcutil.exe を使用してクライアント構成を生成することはできません。`CustomTextMessageBindingElement` では、動作を記述するポリシー アサーションがエクスポートされないからです。 通常は、カスタム バインディング要素上に <xref:System.ServiceModel.Description.IPolicyExportExtension> インターフェイスを実装して、バインディング要素によって実装される動作または機能を記述するカスタム ポリシー アサーションをエクスポートする必要があります。 カスタム バインド要素のポリシー アサーションをエクスポートする方法の例は、次を参照してください。、[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。  
   
 ## <a name="message-encoding-binding-configuration-handler"></a>メッセージ エンコーディング バインド構成ハンドラー  
  前のセクションでは、カスタム テキスト メッセージ エンコーダーをプログラムによって使用する方法を示しました。 `CustomTextMessageEncodingBindingSection` は構成ハンドラーを実装します。この構成ハンドラーにより、カスタム テキスト メッセージ エンコーダーを構成ファイル内で使用することを指定できます。 `CustomTextMessageEncodingBindingSection` クラスは <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> クラスから派生します。 `BindingElementType` プロパティでは、このセクション用に作成するバインディング要素の型が構成システムに通知されます。  

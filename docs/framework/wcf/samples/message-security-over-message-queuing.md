@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 25a06ac7c13f0abe0f1e8bf27fe117aa9cf038bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7bb69fa40637629e416336a893f98277cb6ed08
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507824"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419689"
 ---
 # <a name="message-security-over-message-queuing"></a>メッセージ キューを介したメッセージ セキュリティ
 このサンプルでは、クライアントの認証で X.509v3 証明書による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、サーバーの X.509v3 証明書を MSMQ 経由で使用するサーバー認証が必要です。 MSMQ ストア内のメッセージの暗号化を保持したり、アプリケーションで独自のメッセージ認証を実行できるようにするには、メッセージ セキュリティの使用が望ましい場合があります。  
   
- このサンプルがに基づいて、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)サンプルです。 メッセージは暗号化されて署名されます。  
+ このサンプルがに基づいて、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)サンプル。 メッセージは暗号化されて署名されます。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。  
   
     1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] でサーバー マネージャーを開きます。  
   
-    2.  展開して、**機能**タブです。  
+    2.  展開、**機能**タブ。  
   
-    3.  右クリック**プライベート メッセージ キュー**を選択して**新規**、**プライベート キュー**です。  
+    3.  右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。  
   
     4.  チェック、**トランザクション**ボックス。  
   
-    5.  入力`ServiceModelSamplesTransacted`として、新しいキューの名前。  
+    5.  入力`ServiceModelSamplesTransacted`として新しいキューの名前。  
   
 3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33507824"
   
 4.  Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-5.  クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+5.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -57,9 +57,9 @@ ms.locfileid: "33507824"
   
 3.  クライアント プログラム ファイルを、クライアント コンピューターに作成したクライアント ディレクトリにコピーします。 Setup.bat、Cleanup.bat、ImportServiceCert.bat の各ファイルもクライアントにコピーします。  
   
-4.  サーバーで `setup.bat service` を実行します。 実行している`setup.bat`で、`service`引数が、コンピューターの完全修飾ドメイン名でサービス証明書を作成し、サービス証明書が Service.cer というファイルにエクスポートします。  
+4.  サーバーで `setup.bat service` を実行します。 実行している`setup.bat`で、`service`引数が、コンピューターの完全修飾ドメイン名でサービス証明書を作成し、Service.cer というファイルに、サービス証明書をエクスポートします。  
   
-5.  新しい証明書名を反映するようにサービスの service.exe.config の編集 (で、`findValue`属性、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) は、コンピューターの完全修飾ドメイン名と同じです。  
+5.  新しい証明書名を反映するようにサービスの service.exe.config を編集 (で、`findValue`属性、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) これは、コンピューターの完全修飾ドメイン名と同じです。  
   
 6.  Service.cer ファイルを、サービス ディレクトリからクライアント コンピューターのクライアント ディレクトリにコピーします。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33507824"
   
 12. サービス コンピューターで、コマンド プロンプトから Service.exe を起動します。  
   
-13. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+13. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 ### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
@@ -90,12 +90,12 @@ ms.locfileid: "33507824"
 ## <a name="demonstrates"></a>使用例  
  クライアントは、サービスの公開キーを使用してメッセージを暗号化し、独自の証明書を使用してメッセージ署名を行います。 キューからのメッセージを読み込むサービスは、信頼されたユーザーのストア内の証明書を使用して、クライアント証明書を認証します。 次にメッセージを復号化し、サービス操作にディスパッチします。  
   
- されるため、Windows Communication Foundation (WCF) メッセージは MSMQ メッセージの本文のペイロードとして、本文は MSMQ ストアで暗号化されたまま維持します。 これによりメッセージは、望ましくない公開から保護されます。 MSMQ 自体では、送信されるメッセージが暗号化されているかどうかは認識されません。  
+ Windows Communication Foundation (WCF) メッセージは MSMQ メッセージの本文のペイロードとして送信されるがため、本文は MSMQ ストアで暗号化されたは残ります。 これによりメッセージは、望ましくない公開から保護されます。 MSMQ 自体では、送信されるメッセージが暗号化されているかどうかは認識されません。  
   
  このサンプルは、MSMQ でメッセージ レベルの相互認証を使用する方法を示します。 証明書は、帯域外で交換されます。 サービスとクライアントは同時に実行される必要がないため、キューに置かれたアプリケーションでは常にその状態です。  
   
 ## <a name="description"></a>説明  
- サンプルのクライアントとサービス コードと同じ、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)違いの 1 つのサンプルです。 操作コントラクトには、メッセージの署名および暗号化が必要であることを示す注釈が保護レベルで付けられます。  
+ サンプルのクライアントとサービスのコードと同じ、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)違いの 1 つのサンプルです。 操作コントラクトには、メッセージの署名および暗号化が必要であることを示す注釈が保護レベルで付けられます。  
 
 ```csharp
 // Define a service contract.   
@@ -169,7 +169,7 @@ public interface IOrderProcessor
   
  セキュリティ モードが Message に設定されている場合は、ClientCredentialType は Certificate に設定されることに注意してください。  
   
- サービス構成には、サービスの資格情報を指定するサービス動作が含まれます。この資格情報は、クライアントがサービスを認証する際に使用されます。 サーバー証明書のサブジェクト名が指定された、`findValue`属性、 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)です。  
+ サービス構成には、サービスの資格情報を指定するサービス動作が含まれます。この資格情報は、クライアントがサービスを認証する際に使用されます。 サーバー証明書のサブジェクト名が指定された、`findValue`属性、 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)します。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -302,7 +302,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
 -   クライアント証明書のサーバーの信頼された証明書ストアへのインストール。  
   
-     バッチ ファイルの次の行では、クライアント証明書をサーバーの TrustedPeople ストアにコピーし、サーバーが信頼/非信頼を判断できるようにします。 証明書の Windows Communication Foundation (WCF) サービスから信頼される TrustedPeople ストアにインストールされている場合、クライアント証明書検証モードを設定する必要があります`PeerOrChainTrust`または`PeerTrust`値。 前のサービス構成サンプルを参照して、構成ファイルを使用してこれを行う手順を確認してください。  
+     バッチ ファイルの次の行では、クライアント証明書をサーバーの TrustedPeople ストアにコピーし、サーバーが信頼/非信頼を判断できるようにします。 証明書の Windows Communication Foundation (WCF) サービスによって信頼されていると TrustedPeople ストアにインストールされている場合、クライアント証明書検証モードを設定する必要があります`PeerOrChainTrust`または`PeerTrust`値。 前のサービス構成サンプルを参照して、構成ファイルを使用してこれを行う手順を確認してください。  
   
     ```bat
     echo ************  
@@ -325,7 +325,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     %SERVER_NAME% 変数はサーバー名を指定します。 証明書は LocalMachine ストアに保存されます。 セットアップ バッチ ファイルがサービスの引数を指定して実行されているかどうか (など、 `setup.bat service`)、%server_name% には、コンピューターの完全修飾ドメイン名が含まれています。それ以外の場合、既定値は localhost  
+     %SERVER_NAME% 変数はサーバー名を指定します。 証明書は LocalMachine ストアに保存されます。 セットアップ バッチ ファイルがサービスの引数で実行されているかどうか (など、 `setup.bat service`)、%server_name% には、コンピューターの完全修飾ドメイン名が含まれています。それ以外の場合、既定値は localhost  
   
 -   サーバー証明書のクライアントの信頼された証明書ストアへのインストール。  
   
@@ -343,7 +343,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a857523b15631aa9c112c9c0d208d96b0ec0d4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47ed75d377814a740edece2b6a69e44acbd8ef0c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396460"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424373"
 ---
 # <a name="ltpropertygt-element-net-native"></a>&lt;Property&gt; 要素 (.NET ネイティブ)
 プロパティにランタイム リフレクション ポリシーを適用します。  
@@ -57,7 +57,7 @@ ms.locfileid: "33396460"
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  プロパティのポリシーが明示的に定義されていない場合は、親要素の実行時ポリシーを継承します。  
   
 ## <a name="example"></a>例  
@@ -75,7 +75,7 @@ ms.locfileid: "33396460"
   
  このファイルは、`All` クラスの `Activate` ポリシーに `Book` 値を適用します。これにより、リフレクションを介してクラス コンストラクターにアクセスできるようになります。 `Browse` クラスの `Book` ポリシーは、その親名前空間から継承されます。 これは `Required Public` に設定され、メタデータが実行時に使用できるようになります。  
   
- この例のソース コードを次に示します。 `outputBlock` 変数は、[TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) コントロールを表します。  
+ この例のソース コードを次に示します。 `outputBlock` 変数は、[TextBlock](https://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) コントロールを表します。  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

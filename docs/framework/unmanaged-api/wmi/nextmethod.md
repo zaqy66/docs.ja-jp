@@ -1,6 +1,6 @@
 ---
 title: NextMethod 関数 (アンマネージ API リファレンス)
-description: NextMethod 関数では、列挙体の次のメソッドを取得します。
+description: NextMethod 関数は、列挙体の次のメソッドを取得します。
 ms.date: 11/06/2017
 api_name:
 - NextMethod
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4559663194cb845fb0cc040e1f6739e38caa0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d019c67849197cd24171ff607e60e9f08d5ff70
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461144"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43451624"
 ---
 # <a name="nextmethod-function"></a>NextMethod 関数
-呼び出しで始まる列挙体の次のメソッドを取得[BeginMethodEnumeration](beginmethodenumeration.md)です。  
+呼び出しで開始する列挙体の次のメソッドを取得します。 [BeginMethodEnumeration](beginmethodenumeration.md)します。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -47,7 +47,7 @@ HRESULT NextMethod (
 [in]このパラメーターは使用されません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)インスタンス。
+[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `lFlags`  
 [in]予約されています。 このパラメーターは、0 を指定する必要があります。
@@ -56,37 +56,37 @@ HRESULT NextMethod (
 [out]指すポインター`null`呼び出しの前にします。 ときに、関数からの新しいアドレス`BSTR`メソッド名を格納しています。 
 
 `ppSignatureIn`  
-[out]ポインターを受け取るポインター、 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)を格納している、`in`メソッドのパラメーターです。 
+[out]ポインターを受け取るポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)を格納している、`in`メソッドのパラメーター。 
 
 `ppSignatureOut`  
-[out]ポインターを受け取るポインター、 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)を格納している、`out`メソッドのパラメーターです。 
+[out]ポインターを受け取るポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)を格納している、`out`メソッドのパラメーター。 
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。
+この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
-| `WBEM_E_UNEXPECTED` | 0x8004101d | 呼び出しが入っていなかった、 [ `BeginEnumeration` ](beginenumeration.md)関数。 |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | 呼び出しがなかった、 [ `BeginEnumeration` ](beginenumeration.md)関数。 |
 | `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | 列挙には、プロパティがあります。 |
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数への呼び出しをラップする、 [IWbemClassObject::NextMethod](https://msdn.microsoft.com/library/aa391454(v=vs.85).aspx)メソッドです。
+この関数の呼び出しをラップする、 [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod)メソッド。
 
-呼び出し元が呼び出しによって列挙のシーケンスを開始、 [BeginMethodEnumeration](beginmethodenumeration.md)関数、および関数が戻るまで [NextMethod] 関数を呼び出す`WBEM_S_NO_MORE_DATA`です。 必要に応じて、呼び出し元が完了すると、シーケンスを呼び出して[EndMethodEnumeration](endmethodenumeration.md)です。 呼び出し元が呼び出すことで列挙体を早期終了可能性があります[EndMethodEnumeration](endmethodenumeration.md)いつでもできます。
+呼び出し元が呼び出すことによって列挙体シーケンスを開始、 [BeginMethodEnumeration](beginmethodenumeration.md)関数、および関数が戻るまで [NextMethod] 関数を呼び出して`WBEM_S_NO_MORE_DATA`します。 呼び出し元が呼び出すことによって、シーケンスを完了する必要に応じて、 [EndMethodEnumeration](endmethodenumeration.md)します。 呼び出し元が呼び出すことによって、列挙体を早期終了可能性があります[EndMethodEnumeration](endmethodenumeration.md)いつでもできます。
 
 ## <a name="example"></a>例
 
-C++ の例では、次を参照してください。、 [IWbemClassObject::NextMethod](https://msdn.microsoft.com/library/aa391454(v=vs.85).aspx)メソッドです。
+C++ の例では、次を参照してください。、 [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod)メソッド。
 
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目  
 [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

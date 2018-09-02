@@ -2,17 +2,17 @@
 title: SQL Server データ型と ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: da98ac72fab0bc3934cef79aeec9b12d003b6888
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 878bbe41f259f1e50cd0a41669c7a352e78bc0f1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363503"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424354"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server データ型と ADO.NET
 SQL Server と .NET Framework は異なる型システムに基づいているので、両者間でデータ損失が発生する可能性があります。 データの整合性を維持するために、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) では、SQL Server データを処理するための型指定されたアクセサー メソッドが提供されています。 <xref:System.Data.SqlDbType> クラスの列挙値を使用して、<xref:System.Data.SqlClient.SqlParameter> データ型を指定できます。  
   
- 詳細については、データを記述する型を SQL Server と .NET Framework データ型間のマッピング テーブルを参照してください[SQL Server データ型マッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)です。  
+ テーブル データを記述する型の SQL Server と .NET Framework データ型間のマッピングと詳細については、次を参照してください。 [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)します。  
   
  SQL Server 2008 では、業務上のニーズに対応して、日時データ、構造化データ、半構造化データ、および非構造化データを扱うための新しいデータ型が導入されました。 新しいデータ型は、SQL Server 2008 オンライン ブックで説明されています。  
   
@@ -20,7 +20,7 @@ SQL Server と .NET Framework は異なる型システムに基づいている�
   
  **SQL Server オンライン ブック**  
   
-1.  [データ型 (データベース エンジン)](http://go.microsoft.com/fwlink/?LinkID=107468)  
+1.  [データ型 (データベース エンジン)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SqlTypes と DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
@@ -59,4 +59,4 @@ SQL Server と .NET Framework は異なる型システムに基づいている�
  [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [テーブル値パラメーター](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  [SQL Server のバイナリ データと大きな値のデータ](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

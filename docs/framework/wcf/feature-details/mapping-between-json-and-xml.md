@@ -2,12 +2,12 @@
 title: JSON と XML 間のマッピング
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: e8cc356a30d11a6f07cf4444efbeda2faf5b0471
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931470"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421724"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON と XML 間のマッピング
 <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> によって作成されるリーダーとライターには、JSON (JavaScript Object Notation) コンテンツでの XML API が備わっています。 JSON は、JavaScript のオブジェクト リテラルのサブセットを使用してデータをエンコードします。 リーダーとライターはこのファクトリによって生成された、ときにも使用 JSON コンテンツの送信または受信を使用する Windows Communication Foundation (WCF) アプリケーション、<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>または<xref:System.ServiceModel.WebHttpBinding>します。  
@@ -38,7 +38,7 @@ ms.locfileid: "42931470"
  さらに、JSON メッセージの例では、WCF によって受信され、ログに記録が場合、先行ログの XML フラグメントが表示されます。  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>JSON と XML 情報セット間のマッピング  
- 」の説明に従っての JSON の間のマッピングが正式は[RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (を除く特定と緩和された特定の制限を追加するその他の制限) XML 情報セット (としないテキスト形式の XML) として記載[XML 情報設定](http://go.microsoft.com/fwlink/?LinkId=98809)します。 定義は、このトピックを参照してください。*情報項目*と角かっこ [] 内のフィールド。  
+ 」の説明に従っての JSON の間のマッピングが正式は[RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (を除く特定と緩和された特定の制限を追加するその他の制限) XML 情報セット (としないテキスト形式の XML) として記載[XML 情報設定](https://go.microsoft.com/fwlink/?LinkId=98809)します。 定義は、このトピックを参照してください。*情報項目*と角かっこ [] 内のフィールド。  
   
  空白の JSON ドキュメントが空の XML ドキュメントにマップされ、空の XML ドキュメントは空白の JSON ドキュメントにマップされます。 XML JSON へのマッピングからでは、空白文字の前とドキュメントの後に末尾の空白文字は使用できません。  
   

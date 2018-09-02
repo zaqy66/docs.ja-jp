@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 728bac6985d47afdb4263f8c41a9d282dd2574b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d5d91db9256cdfb3aa0062d66333f13797ee1bb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396414"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424212"
 ---
 # <a name="net-performance-tips"></a>.NET のパフォーマンスに関するヒント
 *パフォーマンス*という用語は、プログラムの実行速度を表す一般的な用語です。 ソース コード内で特定の基本規則に従うことにより、実行速度を上げることができることもあります。 プログラムによっては、コードを綿密に調べることが重要で、プロファイラーを使用して、可能な限り速く実行しているかどうかを確認することが必要な場合もあります。 一方、記述どおりに許容可能な速度でコードが実行されているため、このような最適化が必要ないプログラムもあります。 ここでは、パフォーマンスの低下が発生する一般的な状況と、パフォーマンスを向上させるためのヒント、およびパフォーマンスに関する追加のトピックについて説明します。 パフォーマンスの計画と計測の詳細については、「[Performance](../../../docs/framework/performance/index.md)」(パフォーマンス) を参照してください。  
@@ -30,20 +30,20 @@ ms.locfileid: "33396414"
   
 ## <a name="other-resources"></a>その他の参照情報  
   
--   [高速なマネージ コードを書く: 何にコストがかかるのかを知る](http://go.microsoft.com/fwlink/?LinkId=99294)  
+-   [高速なマネージド コードを書く: 何にコストがかかるのかを知る](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [高パフォーマンスのマネージ アプリケーションを書く: 入門編](http://go.microsoft.com/fwlink/?LinkId=99295)  
+-   [高パフォーマンスのマネージド アプリケーションを書く: 入門編](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [ガベージ コレクターの基本とパフォーマンスのヒント](http://go.microsoft.com/fwlink/?LinkId=99296)  
+-   [ガベージ コレクターの基本とパフォーマンスのヒント](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [.NET アプリケーションのパフォーマンス関連のヒントとトリック](http://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [.NET アプリケーションのパフォーマンス関連のヒントとトリック](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani が紹介するパフォーマンスに関するニュース](http://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Rico Mariani が紹介するパフォーマンスに関するニュース](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
 -   [Vance Morrison のブログ](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>関連項目  
  [パフォーマンス](../../../docs/framework/performance/index.md)  
- [プログラミングの概念](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
+ [プログラミングの概念](https://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
  [Visual Basic プログラミング ガイド](../../visual-basic/programming-guide/index.md)  
- [C# プログラミング ガイド](http://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)
+ [C# プログラミング ガイド](https://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)

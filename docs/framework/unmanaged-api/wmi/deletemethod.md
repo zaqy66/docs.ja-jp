@@ -1,6 +1,6 @@
 ---
 title: DeleteMethod 関数 (アンマネージ API リファレンス)
-description: DeleteMethod 関数は、CIM クラス定義から、指定したメソッドを削除します。
+description: DeleteMethod 関数では、CIM クラスの定義から、指定されたメソッドを削除します。
 ms.date: 11/06/2017
 api_name:
 - DeleteMethod
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd862910d0c9bb0274158c2c516211cef598a553
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457809"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421790"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod 関数
-CIM クラス定義から、指定したメソッドを削除します。
+CIM クラスの定義から、指定されたメソッドを削除します。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -44,33 +44,33 @@ HRESULT Delete (
 [in]このパラメーターは使用されません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)インスタンス。
+[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `wszName`  
-[in]クラスのテーブルから削除するメソッドの名前。 `wszName` 有効なポインターである必要があります`LPCWSTR`です。
+[in]クラス テーブルから削除するメソッドの名前。 `wszName` 有効なポインターである必要があります`LPCWSTR`します。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。
+この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | 指定されたメソッドが存在しません。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがありません。 |
 | `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数への呼び出しをラップする、 [IWbemClassObject::DeleteMethod](https://msdn.microsoft.com/library/aa391439(v=vs.85).aspx)メソッドです。
+この関数の呼び出しをラップする、 [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod)メソッド。
 
-メソッドの削除はサポートされていません[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) CIM インスタンスを指すポインターです。
+メソッドの削除はサポートされていません[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) CIM インスタンスを指すポインター。
 
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目  
 [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

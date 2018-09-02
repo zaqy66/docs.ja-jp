@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: c6b3151a95f949100e10e630da848e34ebbf1187
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 25d7f49644996d87ddb5d191dc313916c0ca6fbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764399"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423910"
 ---
 # <a name="working-with-data-definition-language"></a>データ定義言語の操作
-以降で、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]バージョン 4、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]データ定義言語 (DDL) をサポートしています。 これにより、接続文字列、およびストレージ (SSDL) モデルのメターデータに基づいて、データベース インスタンスを作成または削除できます。  
+以降では、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]バージョン 4、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]データ定義言語 (DDL) をサポートしています。 これにより、接続文字列、およびストレージ (SSDL) モデルのメターデータに基づいて、データベース インスタンスを作成または削除できます。  
   
  <xref:System.Data.Objects.ObjectContext> の次のメソッドでは、接続文字列と SSDL の内容を使用して、データベースの作成と削除、データベースが存在するかどうかの確認、生成された DDL スクリプトの表示を実行します。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "32764399"
   
 2.  既存のモデルをアプリケーションに追加します。  
   
-    1.  空のモデル名を追加`SchoolModel`です。 空のモデルを作成するを参照してください。、[する方法: 新しい .edmx ファイルを作成する](http://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2)トピックです。  
+    1.  という名前の空のモデルを追加`SchoolModel`します。 空のモデルを作成するを参照してください。、[方法: 新しい .edmx ファイルを作成する](https://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2)トピック。  
   
      SchoolModel.edmx ファイルがプロジェクトに追加されます。  
   
-    1.  概念、記憶域をコピーしてから School モデルのコンテンツのマッピング、 [School モデル](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)トピックです。  
+    1.  概念、ストレージをコピーしてから、School モデルのコンテンツのマッピング、 [School モデル](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)トピック。  
   
     2.  SchoolModel.edmx ファイルを開き、`edmx:Runtime` タグ内にその内容を貼り付けます。  
   

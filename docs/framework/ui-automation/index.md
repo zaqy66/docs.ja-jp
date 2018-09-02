@@ -9,26 +9,26 @@ ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 79e67e58e6280d176969f770f91b5ab93d728b95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28686beeb030573ec195f46cea8305688d51c6a6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400329"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420890"
 ---
 # <a name="accessibility"></a>ユーザー補助
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] は [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] の新しいアクセシビリティ フレームワークです。 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] に関する情報へのプログラムによるアクセスを提供することで、ユーザー補助技術製品および自動テスト フレームワークに対するニーズに応えます。 さらに、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] を使用することで、コントロールとアプリケーション開発者は自社製品をアクセス可能にすることができます。  
   
- このドキュメントでは、マネージ コードの [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] について説明します。 C++ での [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプログラミングの詳細については、「[UI Automation for Win32 Applications](https://msdn.microsoft.com/library/ms726294.aspx)」 (Win32 アプリケーションの UI オートメーション) を参照してください。  
+ このドキュメントでは、マネージド コードの [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)][!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] について説明します。 C++ での [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプログラミングの詳細については、「[UI Automation for Win32 Applications](https://msdn.microsoft.com/library/ms726294.aspx)」 (Win32 アプリケーションの UI オートメーション) を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ユーザー補助のベスト プラクティス](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
  [UI オートメーションの基礎](../../../docs/framework/ui-automation/index.md)  
- [マネージ コードの UI オートメーション プロバイダー](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
- [マネージ コードの UI オートメーション クライアント](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
+ [マネージド コードの UI オートメーション プロバイダー](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
+ [マネージド コードの UI オートメーション クライアント](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
  [UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
  [UI オートメーション テキスト パターン](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
  [UI オートメーション コントロール型](../../../docs/framework/ui-automation/ui-automation-control-types.md)  

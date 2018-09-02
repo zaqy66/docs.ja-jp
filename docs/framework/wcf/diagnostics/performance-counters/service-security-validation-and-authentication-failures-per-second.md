@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0dadf11888e55a96b15e09d5f4b326e8c5e18a02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb0d4fdebf07dacfa7f33d8645332348270128e4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474819"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422505"
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>サービス : 1 秒あたりのセキュリティ検証と認証エラー
 カウンター名 : 1 秒あたりのセキュリティ検証と認証エラー  
@@ -31,6 +31,6 @@ ms.locfileid: "33474819"
   
 -   TLSNEGO/SPNEGO ハンドシェイク中にエラーが発生した。  
   
- このカウンターは、パフォーマンス カウンター型[PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)、その値は、次の式を使用して計算  
+ このカウンターは、パフォーマンス カウンター型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)、次の数式を使用して、その値が計算されます  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)

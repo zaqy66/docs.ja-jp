@@ -2,12 +2,12 @@
 title: コレクション アクティビティの使用
 ms.date: 03/30/2017
 ms.assetid: e1977cf8-1695-4071-b946-7046fe39601e
-ms.openlocfilehash: 3c30a7fb46d9b155ec645a7b6845715d808d63b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a92208583ddf1c0d5d85b5af6a250a15ac8851b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516600"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422628"
 ---
 # <a name="using-collection-activities"></a>コレクション アクティビティの使用
 このサンプルでは、<xref:System.Activities.Statements.AddToCollection%601> インターフェイスを実装するクラスでコレクション アクティビティ (<xref:System.Activities.Statements.ClearCollection%601>、<xref:System.Activities.Statements.ExistsInCollection%601>、<xref:System.Activities.Statements.RemoveFromCollection%601>、および <xref:System.Collections.ICollection>) を使用する方法と、コレクションを反復処理してコレクション内の各要素の内容を出力するカスタム アクティビティを作成する方法を示します。 `PrintCollection` という名前のカスタム アクティビティは、`Numbers` という名前のコレクションの項目メンバーをコンソールに出力します。  
@@ -25,8 +25,8 @@ ms.locfileid: "33516600"
   
 |ソリューション|説明|メイン ファイル|  
 |-|-|-|  
-|CodedWorkflow|プログラムでコレクション アクティビティを呼び出す方法を示すサンプル クライアント アプリケーション。|**PrintCollection.cs**: コレクション内のすべての項目をコンソールに出力するヘルパー アクティビティ。<br /><br /> **Program.cs**: 一連コレクション アクティビティにはが含まれており、それを実行するシーケンス アクティビティを構築します。|  
-|DesignerWorkflow|ワークフロー デザイナーでコレクション アクティビティを宣言的に使用する方法を示すサンプル クライアント アプリケーション。|**CollectionWorkflow.xaml**: コレクション アクティビティを使用して、デザイナーで宣言によって作成されたワークフローです。<br /><br /> **PrintCollection.cs**: コレクション内のすべての項目をコンソールに出力するヘルパー アクティビティ。<br /><br /> **Program.cs**: CollectionWorkflow.xaml に記述されたワークフローを呼び出します。|  
+|CodedWorkflow|プログラムでコレクション アクティビティを呼び出す方法を示すサンプル クライアント アプリケーション。|**PrintCollection.cs**: コレクション内のすべての項目をコンソールに出力するヘルパー アクティビティ。<br /><br /> **Program.cs**: プログラムによって、一連のコレクション アクティビティを実行するシーケンス アクティビティをビルドします。|  
+|DesignerWorkflow|ワークフロー デザイナーでコレクション アクティビティを宣言的に使用する方法を示すサンプル クライアント アプリケーション。|**CollectionWorkflow.xaml**: コレクション アクティビティを使用するデザイナーで宣言によって作成されたワークフローです。<br /><br /> **PrintCollection.cs**: コレクション内のすべての項目をコンソールに出力するヘルパー アクティビティ。<br /><br /> **Program.cs**: CollectionWorkflow.xaml に記述されたワークフローを呼び出します。|  
   
  デモでは、`Numbers` という名前のカスタム定義アクティビティを使用して、コレクション `PrintCollection` の項目メンバーをコンソールに出力します。  
   
@@ -43,6 +43,6 @@ ms.locfileid: "33516600"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`

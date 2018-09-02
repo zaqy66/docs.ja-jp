@@ -2,12 +2,12 @@
 title: 確認
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
-ms.openlocfilehash: 334ac362333565626dd2bb8dcaede27fbab16f33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518847"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419491"
 ---
 # <a name="confirmation"></a>確認
 このサンプルでは、<xref:System.Activities.Statements.CompensableActivity> および確認を使用する 4 つの一般的なシナリオを示します。 確認を示すために、4 つのワークフローを実行します。 このサンプルには、宣言型バージョンと命令型バージョンが用意されています。  
@@ -32,13 +32,13 @@ ms.locfileid: "33518847"
   
 3.  次の出力を確認します。  
   
- **明示的な確認: workflowCompensableActivity1 の開始: BodyCompensableActivity2: BodyCompensableActivity1: workflowCompensableActivity2 の確認 HandlerEnd: 確認 HandlerExplicit の補正: 開始workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: workflowCompensableActivity2 の補正 HandlerEnd: 確認 HandlerCustom 確認ハンドラー: 開始 workflowCompensableActivity1 の。BodyCompensableActivity2: BodyCompensableActivity3: workflowCompensableActivity1 の BodyEnd: 確認 HandlerCompensableActivity2: 確認 HandlerCompensableActivity3: 確認ハンドラーの確認 HandlerVariable アクセス。WorkflowCompensableActivity1 の開始: BodyCompensableActivity1: 合計: 15CompensableActivity2: BodyCompensableActivity2: 7、sumCompensableActivity2 を追加する: 合計: workflowCompensableActivity2 の 22End: 確認HandlerCompensableActivity1: 確認 HandlerCompensableActivity2: 合計: 22CompensableActivity2: 12 を引いた後、合計になります: を終了する 10Press を入力してください。**  
+ **明示的な確認: workflowCompensableActivity1 の開始: BodyCompensableActivity2: BodyCompensableActivity1: workflowCompensableActivity2 の確認 HandlerEnd: 確認 HandlerExplicit の補正: 開始workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: workflowCompensableActivity2 の補正 HandlerEnd: 確認 HandlerCustom 確認ハンドラー: 開始 workflowCompensableActivity1 の。BodyCompensableActivity2: BodyCompensableActivity3: workflowCompensableActivity1 の BodyEnd: 確認 HandlerCompensableActivity2: 確認 HandlerCompensableActivity3: 確認ハンドラーで確認 HandlerVariable アクセス。WorkflowCompensableActivity1 の開始: BodyCompensableActivity1: 合計: 15CompensableActivity2: BodyCompensableActivity2: 7、sumCompensableActivity2 を追加する: 合計: workflowCompensableActivity2 の 22End: 確認HandlerCompensableActivity1: 確認 HandlerCompensableActivity2: 合計: 22CompensableActivity2: 合計をここでは 12 を引いた後: を終了する 10Press」と入力します。**  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\Confirmation`

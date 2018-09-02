@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: a701a516a93cf94f76950b7b1b1c7f3a9b41214e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a8dcd0a835bb669b669d5a510e01142c85ea07a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505845"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421225"
 ---
 # <a name="discovery-security-sample"></a>探索のセキュリティのサンプル
-Discovery 仕様では、探索プロセスに参加するエンドポイントをセキュリティで保護する必要はありません。 探索メッセージをセキュリティで強化することで、さまざまな種類の攻撃 (メッセージの改ざん、サービス拒否、リプレイ、なりすまし) が軽減されます。 このサンプルでは、コンパクトな署名形式 (WS-Discovery 仕様のセクション 8.2 を参照) を使用してメッセージ署名の計算と検証を行うカスタム チャネルの実装方法を示します。 このサンプルでは、両方をサポート、 [2005 Discovery 仕様](http://go.microsoft.com/fwlink/?LinkId=177912)と[バージョン 1.1](http://go.microsoft.com/fwlink/?LinkId=179677)です。  
+Discovery 仕様では、探索プロセスに参加するエンドポイントをセキュリティで保護する必要はありません。 探索メッセージをセキュリティで強化することで、さまざまな種類の攻撃 (メッセージの改ざん、サービス拒否、リプレイ、なりすまし) が軽減されます。 このサンプルでは、コンパクトな署名形式 (WS-Discovery 仕様のセクション 8.2 を参照) を使用してメッセージ署名の計算と検証を行うカスタム チャネルの実装方法を示します。 このサンプルでは、両方をサポート、 [2005 Discovery 仕様](https://go.microsoft.com/fwlink/?LinkId=177912)と[バージョン 1.1](https://go.microsoft.com/fwlink/?LinkId=179677)します。  
   
  カスタム チャネルは、探索エンドポイントおよびアナウンス エンドポイントの既存のチャネル スタックの上に適用されます。 これにより、署名ヘッダーがすべての送信メッセージに適用されます。 署名は受信メッセージで検証され、署名が一致しない場合やメッセージに署名がない場合、そのメッセージは破棄されます。 このサンプルでは、メッセージの署名と検証を行うために証明書を使用します。  
   
@@ -39,7 +39,7 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
 > [!NOTE]
 >  `PrefixList` は、Discovery プロトコルの 2008 バージョンで追加されました。  
   
- このサンプルでは、署名を計算するために、展開される署名のアイテムを特定します。 WS-Discovery 仕様の規定のとおり、XML 署名 (`SignedInfo`) が `ds` 名前空間プレフィックスを使用して作成されます。 探索の本文とすべてのヘッダーおよびアドレス名前空間は署名で参照されるため、改ざんされることはありません。 参照される各要素が排他的正規化を使用して変換されます (http://www.w3.org/2001/10/xml-exc-c14n# )、sha-1 ダイジェスト値を計算し、(http://www.w3.org/2000/09/xmldsig#sha1 )。 参照されるすべての要素とそのダイジェストの値に基づいて、署名の値が計算 RSA アルゴリズムを使用して (http://www.w3.org/2000/09/xmldsig#rsa-sha1 )。  
+ このサンプルでは、署名を計算するために、展開される署名のアイテムを特定します。 WS-Discovery 仕様の規定のとおり、XML 署名 (`SignedInfo`) が `ds` 名前空間プレフィックスを使用して作成されます。 探索の本文とすべてのヘッダーおよびアドレス名前空間は署名で参照されるため、改ざんされることはありません。 参照される各要素は、排他的正規化を使用して変換されます (http://www.w3.org/2001/10/xml-exc-c14n# )、sha-1 のダイジェスト値を計算し、(http://www.w3.org/2000/09/xmldsig#sha1 )。 すべての参照先の要素とそのダイジェストの値に基づいて、署名値が計算 RSA アルゴリズムを使用して (http://www.w3.org/2000/09/xmldsig#rsa-sha1 )。  
   
  メッセージは、クライアントが指定した証明書を使用して署名されます。 バインディング要素の作成時に、ストアの場所、名前、および証明書のサブジェクト名を指定する必要があります。 コンパクトな署名の `KeyId` は、署名トークンのキー識別子を表します。これは、署名トークンのサブジェクト キー識別子 (SKI) か、署名トークンの公開キーの SHA-1 ハッシュ (SKI が存在しない場合) です。  
   
@@ -53,7 +53,7 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
   
 -   **サービス**: ICalculatorService コントラクトを公開するサービス、自己ホスト型です。 このサービスは、Discoverable としてマークされます。 メッセージの署名に使用する証明書の詳細はユーザーが指定します。ストアの場所と名前、証明書のサブジェクト名またはその他の一意の識別子、およびクライアント証明書 (受信メッセージの署名のチェックに使用する証明書) の保存場所を指定します。 これらの詳細に基づいて、セキュリティが追加された UdpDiscoveryEndpoint が作成されて使用されます。  
   
--   **クライアント**: このクラスは、icalculatorservice と、サービスでメソッドを呼び出すしようとします。 ここでも、メッセージの署名と検証を行うために、セキュリティが追加された <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> が作成されて使用されます。  
+-   **クライアント**: このクラスは、ICalculatorService を検出して、サービスでメソッドを呼び出すしようとします。 ここでも、メッセージの署名と検証を行うために、セキュリティが追加された <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> が作成されて使用されます。  
   
 -   **AnnouncementListener**: オンラインおよびオフラインのアナウンスをリッスンし、セキュリティで保護されたアナウンス エンドポイントを使用する自己ホスト型サービスです。  
   
@@ -64,7 +64,7 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
   
 1.  Visual Studio コマンド プロンプトから Setup.bat スクリプトを実行します。 このサンプルでは、証明書を使用してメッセージの署名と検証を行います。 スクリプトによって、証明書が Makecert.exe を使用して作成され、Certmgr.exe を使用してインストールされます。 このスクリプトは、管理者権限で実行する必要があります。  
   
-2.  でビルドして、サンプルを実行する Visual Studio で Security.sln ファイルを開くし、選択**すべてリビルド**です。 複数のプロジェクトを開始するソリューションのプロパティを更新: 選択**開始**DiscoverySecureChannels を除くすべてのプロジェクトです。 通常どおりソリューションを実行します。  
+2.  をビルドして、サンプルを実行する Visual Studio で Security.sln ファイルを開くし、選択**すべてリビルド**します。 複数のプロジェクトを開始するソリューションのプロパティを更新する: 選択**開始**DiscoverySecureChannels を除くすべてのプロジェクト。 通常どおりソリューションを実行します。  
   
 3.  サンプルの作業が終了したら、このサンプルで作成した証明書を削除する Cleanup.bat スクリプトを実行します。  
   
@@ -73,7 +73,7 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   

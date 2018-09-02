@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b07318406268023e2d66259b2cb68750d64613e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 72c45e821a59c1e910b5c8422df02978046eb56b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408165"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425225"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord メソッド
-ターゲット プロセスに関連付けられたコンテキスト レコードを取得するために、共通言語ランタイム (CLR: Common Language Runtime) データ アクセス サービスによって呼び出されます。 たとえば、ダンプ ターゲットについてなります経由で渡されるコンテキスト レコードと同じ、`ExceptionParam`への引数、 [MiniDumpWriteDump](http://msdn.microsoft.com/library/windows/desktop/ms680360\(v=vs.85\).aspx) Windows デバッグ ヘルプ ライブラリ (DbgHelp) の関数。  
+ターゲット プロセスに関連付けられたコンテキスト レコードを取得するために、共通言語ランタイム (CLR: Common Language Runtime) データ アクセス サービスによって呼び出されます。 たとえば、ダンプ ターゲットについて、これと等価になります経由で渡されたコンテキスト レコード、`ExceptionParam`への引数、 [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) Windows デバッグ ヘルプ ライブラリ (DbgHelp) の関数。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ HRESULT GetExceptionContextRecord(
  [出力] 実際にバッファーに書き込まれるバイト数を受け取る `ULONG32` 型へのポインター。  
   
  `buffer`  
- [出力] コンテキスト レコードのコピーを受け取るメモリ バッファーへのポインター。 例外レコードとして返されます、[コンテキスト](http://msdn.microsoft.com/library/windows/desktop/ms679284\(v=vs.85\).aspx)型です。  
+ [出力] コンテキスト レコードのコピーを受け取るメモリ バッファーへのポインター。 例外レコードとして返されます、[コンテキスト](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)型。  
   
 ## <a name="return-value"></a>戻り値  
  戻り値は、成功の場合は `S_OK` で、失敗の場合は `HRESULT` コードです。 次が `HRESULT` コードに含まれることはありますが、限定されているわけではありません。  
@@ -53,19 +53,19 @@ HRESULT GetExceptionContextRecord(
 |`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|コンテキスト レコードはターゲットに関連付けられていません。|  
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|入力バッファーのサイズが足りないため、コンテキスト レコードを格納できません。|  
   
-## <a name="remarks"></a>コメント  
- [コンテキスト](http://msdn.microsoft.com/library/windows/desktop/ms679284\(v=vs.85\).aspx)Windows SDK によって提供されたヘッダーで定義されているプラットフォームに固有の構造です。  
+## <a name="remarks"></a>Remarks  
+ [コンテキスト](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)は Windows SDK によって提供されたヘッダーで定義されているプラットフォームに固有の構造体です。  
   
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData.idl、ClrData.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [ICLRDataTarget3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
