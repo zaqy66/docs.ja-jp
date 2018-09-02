@@ -2,66 +2,66 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 5869cbe62f8f3dd1b81dd176cf95a4a0a5491967
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 59828e988659b9fc5644ff801f77171103630660
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765439"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388223"
 ---
-# <a name="adonet"></a><span data-ttu-id="76a81-102">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="76a81-102">ADO.NET</span></span>
-<span data-ttu-id="76a81-103">ADO.NET は、.NET Framework のプログラミングでデータ アクセス サービスを使用できるようにするためのクラスの集合です。</span><span class="sxs-lookup"><span data-stu-id="76a81-103">ADO.NET is a set of classes that expose data access services for .NET Framework programmers.</span></span> <span data-ttu-id="76a81-104">ADO.NET は、分散型データ共有アプリケーションを作成する、さまざまなコンポーネントのセットを提供します。</span><span class="sxs-lookup"><span data-stu-id="76a81-104">ADO.NET provides a rich set of components for creating distributed, data-sharing applications.</span></span> <span data-ttu-id="76a81-105">ADO.NET は .NET Framework の不可欠な部分であり、リレーショナル データ、XML データ、およびアプリケーション データへのアクセス機能を提供します。</span><span class="sxs-lookup"><span data-stu-id="76a81-105">It is an integral part of the .NET Framework, providing access to relational, XML, and application data.</span></span> <span data-ttu-id="76a81-106">ADO.NET は、アプリケーション、ツール、言語、またはインターネット ブラウザーが使用するフロントエンド データベース クライアントや中間層ビジネス オブジェクトの作成を含む、各種の開発ニーズをサポートします。</span><span class="sxs-lookup"><span data-stu-id="76a81-106">ADO.NET supports a variety of development needs, including the creation of front-end database clients and middle-tier business objects used by applications, tools, languages, or Internet browsers.</span></span>  
+# <a name="adonet"></a><span data-ttu-id="4d55f-102">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="4d55f-102">ADO.NET</span></span>
+<span data-ttu-id="4d55f-103">ADO.NET は、.NET Framework のプログラミングでデータ アクセス サービスを使用できるようにするためのクラスの集合です。</span><span class="sxs-lookup"><span data-stu-id="4d55f-103">ADO.NET is a set of classes that expose data access services for .NET Framework programmers.</span></span> <span data-ttu-id="4d55f-104">ADO.NET は、分散型データ共有アプリケーションを作成する、さまざまなコンポーネントのセットを提供します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-104">ADO.NET provides a rich set of components for creating distributed, data-sharing applications.</span></span> <span data-ttu-id="4d55f-105">ADO.NET は .NET Framework の不可欠な部分であり、リレーショナル データ、XML データ、およびアプリケーション データへのアクセス機能を提供します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-105">It is an integral part of the .NET Framework, providing access to relational, XML, and application data.</span></span> <span data-ttu-id="4d55f-106">ADO.NET は、アプリケーション、ツール、言語、またはインターネット ブラウザーが使用するフロントエンド データベース クライアントや中間層ビジネス オブジェクトの作成を含む、各種の開発ニーズをサポートします。</span><span class="sxs-lookup"><span data-stu-id="4d55f-106">ADO.NET supports a variety of development needs, including the creation of front-end database clients and middle-tier business objects used by applications, tools, languages, or Internet browsers.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="76a81-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="76a81-107">In This Section</span></span>  
- [<span data-ttu-id="76a81-108">ADO.NET の新機能</span><span class="sxs-lookup"><span data-stu-id="76a81-108">What's New in ADO.NET</span></span>](../../../../docs/framework/data/adonet/whats-new.md)  
- <span data-ttu-id="76a81-109">ADO.NET の新機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="76a81-109">Introduces features that are new in ADO.NET.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="4d55f-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="4d55f-107">In This Section</span></span>  
+ [<span data-ttu-id="4d55f-108">ADO.NET の新機能</span><span class="sxs-lookup"><span data-stu-id="4d55f-108">What's New in ADO.NET</span></span>](../../../../docs/framework/data/adonet/whats-new.md)  
+ <span data-ttu-id="4d55f-109">ADO.NET の新機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-109">Introduces features that are new in ADO.NET.</span></span>  
   
- [<span data-ttu-id="76a81-110">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="76a81-110">ADO.NET Overview</span></span>](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- <span data-ttu-id="76a81-111">ADO.NET のデザインとコンポーネントを紹介します。</span><span class="sxs-lookup"><span data-stu-id="76a81-111">Provides an introduction to the design and components of ADO.NET.</span></span>  
+ [<span data-ttu-id="4d55f-110">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="4d55f-110">ADO.NET Overview</span></span>](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ <span data-ttu-id="4d55f-111">ADO.NET のデザインとコンポーネントを紹介します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-111">Provides an introduction to the design and components of ADO.NET.</span></span>  
   
- [<span data-ttu-id="76a81-112">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="76a81-112">Entity Framework</span></span>](http://go.microsoft.com/fwlink/?LinkID=213876)  
- <span data-ttu-id="76a81-113">Entity Framework を使用してアプリケーションを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="76a81-113">Describes how to create applications using the Entity Framework.</span></span>  
+ [<span data-ttu-id="4d55f-112">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="4d55f-112">Entity Framework</span></span>](https://go.microsoft.com/fwlink/?LinkID=213876)  
+ <span data-ttu-id="4d55f-113">Entity Framework を使用してアプリケーションを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-113">Describes how to create applications using the Entity Framework.</span></span>  
   
- [<span data-ttu-id="76a81-114">ADO.NET アプリケーションのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="76a81-114">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- <span data-ttu-id="76a81-115">ADO.NET を使用する場合の安全なコーディング方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="76a81-115">Describes secure coding practices when using ADO.NET.</span></span>  
+ [<span data-ttu-id="4d55f-114">ADO.NET アプリケーションのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="4d55f-114">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ <span data-ttu-id="4d55f-115">ADO.NET を使用する場合の安全なコーディング方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-115">Describes secure coding practices when using ADO.NET.</span></span>  
   
- [<span data-ttu-id="76a81-116">ADO.NET でのデータ型のマッピング</span><span class="sxs-lookup"><span data-stu-id="76a81-116">Data Type Mappings in ADO.NET</span></span>](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- <span data-ttu-id="76a81-117">.NET Framework データ型と .NET Framework データ プロバイダーとの間のデータ型のマッピングについて説明します。</span><span class="sxs-lookup"><span data-stu-id="76a81-117">Describes data type mappings between .NET Framework data types and the .NET Framework data providers.</span></span>  
+ [<span data-ttu-id="4d55f-116">ADO.NET でのデータ型のマッピング</span><span class="sxs-lookup"><span data-stu-id="4d55f-116">Data Type Mappings in ADO.NET</span></span>](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ <span data-ttu-id="4d55f-117">.NET Framework データ型と .NET Framework データ プロバイダーとの間のデータ型のマッピングについて説明します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-117">Describes data type mappings between .NET Framework data types and the .NET Framework data providers.</span></span>  
   
- [<span data-ttu-id="76a81-118">DataSet、DataTable、および DataView</span><span class="sxs-lookup"><span data-stu-id="76a81-118">DataSets, DataTables, and DataViews</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- <span data-ttu-id="76a81-119">`DataSets`、型指定された `DataSets`、`DataTables`、および `DataViews` の作成方法と使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="76a81-119">Describes how to create and use `DataSets`, typed `DataSets`, `DataTables`, and `DataViews`.</span></span>  
+ [<span data-ttu-id="4d55f-118">DataSet、DataTable、および DataView</span><span class="sxs-lookup"><span data-stu-id="4d55f-118">DataSets, DataTables, and DataViews</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ <span data-ttu-id="4d55f-119">`DataSets`、型指定された `DataSets`、`DataTables`、および `DataViews` の作成方法と使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-119">Describes how to create and use `DataSets`, typed `DataSets`, `DataTables`, and `DataViews`.</span></span>  
   
- [<span data-ttu-id="76a81-120">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="76a81-120">LINQ to DataSet</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
- <span data-ttu-id="76a81-121">プログラミング例を含め、LINQ to DataSet に関する情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="76a81-121">Provides information about LINQ to DataSet, including programming examples.</span></span>  
+ [<span data-ttu-id="4d55f-120">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="4d55f-120">LINQ to DataSet</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
+ <span data-ttu-id="4d55f-121">プログラミング例を含め、LINQ to DataSet に関する情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-121">Provides information about LINQ to DataSet, including programming examples.</span></span>  
   
- [<span data-ttu-id="76a81-122">ADO.NET でのデータの取得および変更</span><span class="sxs-lookup"><span data-stu-id="76a81-122">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- <span data-ttu-id="76a81-123">`Commands`、`DataReaders`、および `DataAdapters` を使用してデータ ソースに接続し、データの取得や変更を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="76a81-123">Describes how to connect to a data source and how to retrieve and modify data using `Commands`, `DataReaders` and `DataAdapters`.</span></span>  
+ [<span data-ttu-id="4d55f-122">ADO.NET でのデータの取得および変更</span><span class="sxs-lookup"><span data-stu-id="4d55f-122">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ <span data-ttu-id="4d55f-123">`Commands`、`DataReaders`、および `DataAdapters` を使用してデータ ソースに接続し、データの取得や変更を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-123">Describes how to connect to a data source and how to retrieve and modify data using `Commands`, `DataReaders` and `DataAdapters`.</span></span>  
   
- [<span data-ttu-id="76a81-124">SQL Server と ADO.NET</span><span class="sxs-lookup"><span data-stu-id="76a81-124">SQL Server and ADO.NET</span></span>](../../../../docs/framework/data/adonet/sql/index.md)  
- <span data-ttu-id="76a81-125">SQL Server 固有の機能の使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="76a81-125">Describes how to work with features and functionality that are specific to SQL Server.</span></span>  
+ [<span data-ttu-id="4d55f-124">SQL Server と ADO.NET</span><span class="sxs-lookup"><span data-stu-id="4d55f-124">SQL Server and ADO.NET</span></span>](../../../../docs/framework/data/adonet/sql/index.md)  
+ <span data-ttu-id="4d55f-125">SQL Server 固有の機能の使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-125">Describes how to work with features and functionality that are specific to SQL Server.</span></span>  
   
- [<span data-ttu-id="76a81-126">Oracle および ADO.NET</span><span class="sxs-lookup"><span data-stu-id="76a81-126">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- <span data-ttu-id="76a81-127">.NET Framework Data Provider for Oracle 固有の機能および動作について説明します。</span><span class="sxs-lookup"><span data-stu-id="76a81-127">Describes features and behaviors that are specific to the .NET Framework Data Provider for Oracle.</span></span>  
+ [<span data-ttu-id="4d55f-126">Oracle および ADO.NET</span><span class="sxs-lookup"><span data-stu-id="4d55f-126">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ <span data-ttu-id="4d55f-127">.NET Framework Data Provider for Oracle 固有の機能および動作について説明します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-127">Describes features and behaviors that are specific to the .NET Framework Data Provider for Oracle.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="76a81-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="76a81-128">Related Sections</span></span>  
- [<span data-ttu-id="76a81-129">ネイティブ コードと .NET Framework コードのセキュリティ</span><span class="sxs-lookup"><span data-stu-id="76a81-129">PAVE Security in Native and .NET Framework Code</span></span>](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- <span data-ttu-id="76a81-130">Visual Studio、.NET Framework、および暗号のセキュリティに関するトピックへのリンクが掲載されています。</span><span class="sxs-lookup"><span data-stu-id="76a81-130">Provides links to security topics for Visual Studio, the .NET Framework, and cryptography.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="4d55f-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="4d55f-128">Related Sections</span></span>  
+ [<span data-ttu-id="4d55f-129">ネイティブ コードと .NET Framework コードのセキュリティ</span><span class="sxs-lookup"><span data-stu-id="4d55f-129">PAVE Security in Native and .NET Framework Code</span></span>](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
+ <span data-ttu-id="4d55f-130">Visual Studio、.NET Framework、および暗号のセキュリティに関するトピックへのリンクが掲載されています。</span><span class="sxs-lookup"><span data-stu-id="4d55f-130">Provides links to security topics for Visual Studio, the .NET Framework, and cryptography.</span></span>  
   
- [<span data-ttu-id="76a81-131">統合言語クエリ (LINQ)</span><span class="sxs-lookup"><span data-stu-id="76a81-131">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- <span data-ttu-id="76a81-132">LINQ に関連したトピックおよびサンプルへのリンクが掲載されています。</span><span class="sxs-lookup"><span data-stu-id="76a81-132">Provides links to LINQ topics and samples.</span></span>  
+ [<span data-ttu-id="4d55f-131">統合言語クエリ (LINQ)</span><span class="sxs-lookup"><span data-stu-id="4d55f-131">LINQ (Language-Integrated Query)</span></span>](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ <span data-ttu-id="4d55f-132">LINQ に関連したトピックおよびサンプルへのリンクが掲載されています。</span><span class="sxs-lookup"><span data-stu-id="4d55f-132">Provides links to LINQ topics and samples.</span></span>  
   
- [<span data-ttu-id="76a81-133">WCF Data Services 4.5</span><span class="sxs-lookup"><span data-stu-id="76a81-133">WCF Data Services 4.5</span></span>](../../../../docs/framework/data/wcf/index.md)  
- <span data-ttu-id="76a81-134">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] を使用して、Open Data Protocol (OData) を実装するデータ サービスを Web またはインターネットに配置する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="76a81-134">Describes how to use [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to deploy data services on the Web or an intranet that implement the Open Data Protocol (OData).</span></span>  
+ [<span data-ttu-id="4d55f-133">WCF Data Services 4.5</span><span class="sxs-lookup"><span data-stu-id="4d55f-133">WCF Data Services 4.5</span></span>](../../../../docs/framework/data/wcf/index.md)  
+ <span data-ttu-id="4d55f-134">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] を使用して、Open Data Protocol (OData) を実装するデータ サービスを Web またはインターネットに配置する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4d55f-134">Describes how to use [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to deploy data services on the Web or an intranet that implement the Open Data Protocol (OData).</span></span>  
   
- [<span data-ttu-id="76a81-135">コア開発テクノロジ</span><span class="sxs-lookup"><span data-stu-id="76a81-135">Core Development Technologies</span></span>](https://msdn.microsoft.com/library/csxbhtye.aspx)  
- <span data-ttu-id="76a81-136">.NET Framework の標準的な開発タスクに関する情報へのリンクが掲載されています。</span><span class="sxs-lookup"><span data-stu-id="76a81-136">Provides links to information about standard development tasks in the .NET Framework.</span></span>  
+ [<span data-ttu-id="4d55f-135">コア開発テクノロジ</span><span class="sxs-lookup"><span data-stu-id="4d55f-135">Core Development Technologies</span></span>](https://msdn.microsoft.com/library/csxbhtye.aspx)  
+ <span data-ttu-id="4d55f-136">.NET Framework の標準的な開発タスクに関する情報へのリンクが掲載されています。</span><span class="sxs-lookup"><span data-stu-id="4d55f-136">Provides links to information about standard development tasks in the .NET Framework.</span></span>  
   
- [<span data-ttu-id="76a81-137">高度な開発テクノロジ</span><span class="sxs-lookup"><span data-stu-id="76a81-137">Advanced Development Technologies</span></span>](https://msdn.microsoft.com/library/a493kdy6.aspx)  
- <span data-ttu-id="76a81-138">.NET Framework の最新の開発タスクと開発手法に関する情報へのリンクが記載されています。</span><span class="sxs-lookup"><span data-stu-id="76a81-138">Provides links to information about sophisticated development tasks and techniques in the .NET Framework.</span></span>  
+ [<span data-ttu-id="4d55f-137">高度な開発テクノロジ</span><span class="sxs-lookup"><span data-stu-id="4d55f-137">Advanced Development Technologies</span></span>](https://msdn.microsoft.com/library/a493kdy6.aspx)  
+ <span data-ttu-id="4d55f-138">.NET Framework の最新の開発タスクと開発手法に関する情報へのリンクが記載されています。</span><span class="sxs-lookup"><span data-stu-id="4d55f-138">Provides links to information about sophisticated development tasks and techniques in the .NET Framework.</span></span>  
   
- [<span data-ttu-id="76a81-139">サンプルとクイック スタート</span><span class="sxs-lookup"><span data-stu-id="76a81-139">Samples and Quickstarts</span></span>](https://msdn.microsoft.com/library/ms184422.aspx)  
- <span data-ttu-id="76a81-140">.NET Framework に関連するすべてのサンプルとクイックスタート サンプルの詳細な一覧が掲載されています。</span><span class="sxs-lookup"><span data-stu-id="76a81-140">Provides complete listings of all samples and QuickStart samples associated with the .NET Framework.</span></span>  
+ [<span data-ttu-id="4d55f-139">サンプルとクイック スタート</span><span class="sxs-lookup"><span data-stu-id="4d55f-139">Samples and Quickstarts</span></span>](https://msdn.microsoft.com/library/ms184422.aspx)  
+ <span data-ttu-id="4d55f-140">.NET Framework に関連するすべてのサンプルとクイックスタート サンプルの詳細な一覧が掲載されています。</span><span class="sxs-lookup"><span data-stu-id="4d55f-140">Provides complete listings of all samples and QuickStart samples associated with the .NET Framework.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="76a81-141">関連項目</span><span class="sxs-lookup"><span data-stu-id="76a81-141">See Also</span></span>  
- [<span data-ttu-id="76a81-142">Visual Studio でのデータへのアクセス</span><span class="sxs-lookup"><span data-stu-id="76a81-142">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [<span data-ttu-id="76a81-143">ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="76a81-143">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="4d55f-141">関連項目</span><span class="sxs-lookup"><span data-stu-id="4d55f-141">See Also</span></span>  
+ [<span data-ttu-id="4d55f-142">Visual Studio でのデータへのアクセス</span><span class="sxs-lookup"><span data-stu-id="4d55f-142">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)  
+ [<span data-ttu-id="4d55f-143">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="4d55f-143">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

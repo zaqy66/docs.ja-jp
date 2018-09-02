@@ -1,6 +1,6 @@
 ---
 title: BlessIWbemServicesObject 関数 (アンマネージ API リファレンス)
-description: BlessIWbemServicesObject 関数では、ユーザーの資格情報が IWbemServices オブジェクトへのアクセスを許可するかどうかを示します
+description: BlessIWbemServicesObject 関数では、ユーザーの資格情報が [iwbemservices] オブジェクトへのアクセスを許可するかどうかを示します
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServicesObject
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1380d03d4456e0695777775ae786a19982d691b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457920"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394979"
 ---
-# <a name="blessiwbemservicesobject-function"></a><span data-ttu-id="b1690-103">BlessIWbemServicesObject 関数</span><span class="sxs-lookup"><span data-stu-id="b1690-103">BlessIWbemServicesObject function</span></span>
-<span data-ttu-id="b1690-104">ユーザーの資格情報が、指定されたアクセスを許可するかどうかを示す[IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx)オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="b1690-104">Indicates whether the user credentials permit access to a specified [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) object.</span></span>   
+# <a name="blessiwbemservicesobject-function"></a><span data-ttu-id="4638c-103">BlessIWbemServicesObject 関数</span><span class="sxs-lookup"><span data-stu-id="4638c-103">BlessIWbemServicesObject function</span></span>
+<span data-ttu-id="4638c-104">ユーザーの資格情報が、指定されたアクセスを許可するかどうかを示す[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="4638c-104">Indicates whether the user credentials permit access to a specified [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) object.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="b1690-105">構文</span><span class="sxs-lookup"><span data-stu-id="b1690-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4638c-105">構文</span><span class="sxs-lookup"><span data-stu-id="4638c-105">Syntax</span></span>  
   
 ```  
 HRESULT BlessIWbemServicesObject (
@@ -41,41 +41,41 @@ HRESULT BlessIWbemServicesObject (
 );
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="b1690-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b1690-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="4638c-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4638c-106">Parameters</span></span>
 
 `pIWbemServices`  
-<span data-ttu-id="b1690-107">[in]WMI サービス オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b1690-107">[in] A pointer to a WMI service object.</span></span>
+<span data-ttu-id="4638c-107">[in]WMI サービス オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="4638c-107">[in] A pointer to a WMI service object.</span></span>
 
 `strUser`  
-<span data-ttu-id="b1690-108">[in]ユーザー名。</span><span class="sxs-lookup"><span data-stu-id="b1690-108">[in] The user name.</span></span>
+<span data-ttu-id="4638c-108">[in]ユーザー名。</span><span class="sxs-lookup"><span data-stu-id="4638c-108">[in] The user name.</span></span>
 
 `strPassword`  
-<span data-ttu-id="b1690-109">[in]関連付けられているパスワード`strUser`です。</span><span class="sxs-lookup"><span data-stu-id="b1690-109">[in] The password associated with `strUser`.</span></span>
+<span data-ttu-id="4638c-109">[in]関連付けられているパスワード`strUser`します。</span><span class="sxs-lookup"><span data-stu-id="4638c-109">[in] The password associated with `strUser`.</span></span>
 
-<span data-ttu-id="b1690-110">`strAuthority` [in]ユーザーのドメイン名。</span><span class="sxs-lookup"><span data-stu-id="b1690-110">`strAuthority` [in] The domain name of the user.</span></span> <span data-ttu-id="b1690-111">参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。</span><span class="sxs-lookup"><span data-stu-id="b1690-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="4638c-110">`strAuthority` [in]ユーザーのドメイン名。</span><span class="sxs-lookup"><span data-stu-id="4638c-110">`strAuthority` [in] The domain name of the user.</span></span> <span data-ttu-id="4638c-111">参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。</span><span class="sxs-lookup"><span data-stu-id="4638c-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
-<span data-ttu-id="b1690-112">`impLevel` [in]権限借用レベルです。</span><span class="sxs-lookup"><span data-stu-id="b1690-112">`impLevel` [in] The impersonation level.</span></span>
+<span data-ttu-id="4638c-112">`impLevel` [in]偽装レベル。</span><span class="sxs-lookup"><span data-stu-id="4638c-112">`impLevel` [in] The impersonation level.</span></span>
 
-<span data-ttu-id="b1690-113">`authnLevel` [in]承認レベル。</span><span class="sxs-lookup"><span data-stu-id="b1690-113">`authnLevel` [in] The authorization level.</span></span>
+<span data-ttu-id="4638c-113">`authnLevel` [in]承認レベル。</span><span class="sxs-lookup"><span data-stu-id="4638c-113">`authnLevel` [in] The authorization level.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="b1690-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="b1690-114">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="4638c-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="4638c-114">Return value</span></span>
 
-<span data-ttu-id="b1690-115">この関数によって返される次の値が定義されている、 *WinError.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。</span><span class="sxs-lookup"><span data-stu-id="b1690-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="4638c-115">この関数によって返される次の値が定義されている、 *WinError.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="4638c-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="b1690-116">定数</span><span class="sxs-lookup"><span data-stu-id="b1690-116">Constant</span></span>  |<span data-ttu-id="b1690-117">[値]</span><span class="sxs-lookup"><span data-stu-id="b1690-117">Value</span></span>  |<span data-ttu-id="b1690-118">説明</span><span class="sxs-lookup"><span data-stu-id="b1690-118">Description</span></span>  |
+|<span data-ttu-id="4638c-116">定数</span><span class="sxs-lookup"><span data-stu-id="4638c-116">Constant</span></span>  |<span data-ttu-id="4638c-117">値</span><span class="sxs-lookup"><span data-stu-id="4638c-117">Value</span></span>  |<span data-ttu-id="4638c-118">説明</span><span class="sxs-lookup"><span data-stu-id="4638c-118">Description</span></span>  |
 |---------|---------|---------|
-| `E_INVALIDARG` | <span data-ttu-id="b1690-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="b1690-119">0x80070057</span></span> | <span data-ttu-id="b1690-120">1 つまたは複数の引数が無効です。</span><span class="sxs-lookup"><span data-stu-id="b1690-120">One or more arguments are invalid.</span></span> |
-| `E_POINTER` | <span data-ttu-id="b1690-121">0x80004003</span><span class="sxs-lookup"><span data-stu-id="b1690-121">0x80004003</span></span> | <span data-ttu-id="b1690-122">`pIWbemServices` は `null` です。</span><span class="sxs-lookup"><span data-stu-id="b1690-122">`pIWbemServices` is `null`.</span></span> | 
-| `E_FAIL` | <span data-ttu-id="b1690-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="b1690-123">0x80000008</span></span> | <span data-ttu-id="b1690-124">不明なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="b1690-124">An unspecified error has occurred.</span></span> |
-| `E_OUTOFMEMORY` | <span data-ttu-id="b1690-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="b1690-125">0x80000002</span></span> | <span data-ttu-id="b1690-126">操作の実行に使用できるは、メモリ不足です。</span><span class="sxs-lookup"><span data-stu-id="b1690-126">Insufficient memory is available to perform the operation.</span></span> | 
-| `S_OK` | <span data-ttu-id="b1690-127">0</span><span class="sxs-lookup"><span data-stu-id="b1690-127">0</span></span> | <span data-ttu-id="b1690-128">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="b1690-128">The function call was successful.</span></span> | 
+| `E_INVALIDARG` | <span data-ttu-id="4638c-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="4638c-119">0x80070057</span></span> | <span data-ttu-id="4638c-120">1 つまたは複数の引数が無効です。</span><span class="sxs-lookup"><span data-stu-id="4638c-120">One or more arguments are invalid.</span></span> |
+| `E_POINTER` | <span data-ttu-id="4638c-121">0x80004003</span><span class="sxs-lookup"><span data-stu-id="4638c-121">0x80004003</span></span> | <span data-ttu-id="4638c-122">`pIWbemServices` は `null` です。</span><span class="sxs-lookup"><span data-stu-id="4638c-122">`pIWbemServices` is `null`.</span></span> | 
+| `E_FAIL` | <span data-ttu-id="4638c-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="4638c-123">0x80000008</span></span> | <span data-ttu-id="4638c-124">不明なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="4638c-124">An unspecified error has occurred.</span></span> |
+| `E_OUTOFMEMORY` | <span data-ttu-id="4638c-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="4638c-125">0x80000002</span></span> | <span data-ttu-id="4638c-126">メモリ不足のためでは、操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="4638c-126">Insufficient memory is available to perform the operation.</span></span> | 
+| `S_OK` | <span data-ttu-id="4638c-127">0</span><span class="sxs-lookup"><span data-stu-id="4638c-127">0</span></span> | <span data-ttu-id="4638c-128">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="4638c-128">The function call was successful.</span></span> | 
 
-## <a name="requirements"></a><span data-ttu-id="b1690-129">要件</span><span class="sxs-lookup"><span data-stu-id="b1690-129">Requirements</span></span>  
- <span data-ttu-id="b1690-130">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="b1690-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4638c-129">要件</span><span class="sxs-lookup"><span data-stu-id="4638c-129">Requirements</span></span>  
+ <span data-ttu-id="4638c-130">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4638c-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b1690-131">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="b1690-131">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="4638c-131">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="4638c-131">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="b1690-132">**.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="b1690-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="4638c-132">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="4638c-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b1690-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="b1690-133">See also</span></span>  
-[<span data-ttu-id="b1690-134">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="b1690-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="4638c-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="4638c-133">See also</span></span>  
+[<span data-ttu-id="4638c-134">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="4638c-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
