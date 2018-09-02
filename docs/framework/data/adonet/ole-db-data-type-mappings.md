@@ -2,12 +2,12 @@
 title: OLE DB データ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 4287b125b26bc0c7233f59322c84e2ac27c0c594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2dbea33140e6cdd7370c1822d2bd6513917a31ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758933"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457106"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB データ型のマッピング
 .NET Framework Data Provider for ADO および OLE DB ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) のデータ型から推論される <xref:System.Data.OleDb> の型を次の表に示します。 <xref:System.Data.OleDb.OleDbDataReader> の型指定されたアクセサー メソッドも示します。  
@@ -18,7 +18,7 @@ ms.locfileid: "32758933"
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
 |adBoolean|DBTYPE_BOOL|Boolean|GetBoolean()|  
 |adBSTR|DBTYPE_BSTR|String|GetString()|  
-|adChapter|DBTYPE_HCHAPTER|`DataReader` によってサポートされます。 参照してください[DataReader を使用してデータを取得する](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)です。|GetValue()|  
+|adChapter|DBTYPE_HCHAPTER|`DataReader` によってサポートされます。 参照してください[DataReader によるデータの取得](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)します。|GetValue()|  
 |adChar|DBTYPE_STR|String|GetString()|  
 |adCurrency|DBTYPE_CY|Decimal (10 進数型)|GetDecimal()|  
 |adDate|DBTYPE_DATE|DateTime|GetDateTime()|  
@@ -47,8 +47,8 @@ ms.locfileid: "32758933"
 |adUserDefined|DBTYPE_UDT|サポート外||  
 |adVarNumeric|DBTYPE_VARNUMERIC|サポート外||  
   
- \* OLE DB 型の`DBTYPE_IUNKNOWN`と`DBTYPE_IDISPATCH`、オブジェクト参照はポインターのマーシャ リングされた表現です。  
+ \* OLE DB 型の`DBTYPE_IUNKNOWN`と`DBTYPE_IDISPATCH`、オブジェクト参照はポインターのマーシャ リングされた表現。  
   
 ## <a name="see-also"></a>関連項目  
  [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

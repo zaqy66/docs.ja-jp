@@ -1,31 +1,31 @@
 ---
-title: My.Computer.Audio オブジェクト
+title: My.Computer.Audio オブジェクト (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Audio object
 - My.Computer.Audio object
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
-ms.openlocfilehash: 3e2ef617ecf5f5618007f2b12247afc8b9505021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 805e2a87e586e96048dd40033e7d80a74dcc94e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596581"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462364"
 ---
 # <a name="mycomputeraudio-object"></a>My.Computer.Audio オブジェクト
 サウンドを再生するためのメソッドを提供します。  
   
-## <a name="remarks"></a>コメント  
- メソッドとプロパティについては、`My.Computer.Audio`オブジェクトを参照してください<xref:Microsoft.VisualBasic.Devices.Audio>です。  
+## <a name="remarks"></a>Remarks  
+ メソッドとプロパティについては、`My.Computer.Audio`オブジェクトを参照してください<xref:Microsoft.VisualBasic.Devices.Audio>します。  
   
- 詳細については、次を参照してください。[サウンドの再生に関して](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)です。  
+ 詳細については、次を参照してください。[サウンドの再生に関して](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)します。  
   
 ## <a name="requirements"></a>要件  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
  **クラス:** <xref:Microsoft.VisualBasic.Devices.Audio>  
   
- **アセンブリ:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目  
  [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)

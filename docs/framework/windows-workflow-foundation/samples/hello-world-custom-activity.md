@@ -2,12 +2,12 @@
 title: Hello World カスタム アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 72b1dd0a-9aad-47d5-95a9-a1024ee1d0a1
-ms.openlocfilehash: 35ae5933515b3280b0d8d95157c8dd5f40f7b320
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fde745fae7470ec763b6b5030a60436a6525e3c0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515844"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470776"
 ---
 # <a name="hello-world-custom-activity"></a>Hello World カスタム アクティビティ
 このサンプルでは、いくつかの主要機能の Windows Workflow Foundation (WF)、単純なカスタム アクティビティを作成する方法などを示します。 このサンプルで示す機能では、C# でカスタム アクティビティを作成し、`in` 引数と `out` 引数 (<xref:System.Activities.InArgument> と <xref:System.Activities.OutArgument>) を使用します。  
@@ -17,7 +17,7 @@ ms.locfileid: "33515844"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\HelloWorld`  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33515844"
  このプロジェクトには、次のファイルがあります。  
   
  AppendString.cs  
- 複数の文字列を 1 つにするカスタム アクティビティです。 文字列を受け取りし、リテラル テキスト文字列を出力として完全なメッセージを"says hello world"に結合します。  
+ 複数の文字列を 1 つにするカスタム アクティビティです。 文字列を受け取りし、出力として完全なメッセージを"says hello world"のリテラル テキスト文字列と結合します。  
   
  PrependString.cs  
  このアクティビティは、定義済みの文字列を入力文字列の先頭に付けます。  

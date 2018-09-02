@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: 57d7342ab88bcafbb8bcd1d288254b5e81846975
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d5de5ed3f557842fb28a3cf92b1923a709195d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363115"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466298"
 ---
 # <a name="manipulating-data"></a>データの操作
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) の導入前は、開発者は複数の接続またはサーバー側のカーソルのいずれかを使用して特定のシナリオを解決しなければなりませんでした。 さらに、複数の接続、トランザクションの状況で使用されていたときにバインドされた接続 (で**sp_getbindtoken**と**sp_bindsession**) が必要でした。 以下のシナリオでは、複数の接続の代わりに MARS の有効な接続の使い方について説明します。  
@@ -19,10 +19,10 @@ ms.locfileid: "33363115"
  次のコンソール アプリケーションでは、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを 2 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと使用する方法、および 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを MARS を有効にして使用する方法について示します。  
   
 ### <a name="example"></a>例  
- 例では、接続を 1 つを開き、 **AdventureWorks**データベース。 <xref:System.Data.SqlClient.SqlCommand> オブジェクトを使用して、<xref:System.Data.SqlClient.SqlDataReader> が作成されます。 リーダーが使用されると、2 番目の <xref:System.Data.SqlClient.SqlDataReader> リーダーが開かれます。このとき、最初の <xref:System.Data.SqlClient.SqlDataReader> から取得したデータが 2 番目のリーダーの WHERE 句に入力されます。  
+ 1 つの接続を開く例を示します、 **AdventureWorks**データベース。 <xref:System.Data.SqlClient.SqlCommand> オブジェクトを使用して、<xref:System.Data.SqlClient.SqlDataReader> が作成されます。 リーダーが使用されると、2 番目の <xref:System.Data.SqlClient.SqlDataReader> リーダーが開かれます。このとき、最初の <xref:System.Data.SqlClient.SqlDataReader> から取得したデータが 2 番目のリーダーの WHERE 句に入力されます。  
   
 > [!NOTE]
->  次の例は、サンプル**AdventureWorks** SQL Server に付属のデータベースです。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
+>  次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
   
 ```vb  
 Option Strict On  
@@ -164,13 +164,13 @@ static void Main()
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>MARS によるデータの読み取りと更新  
- MARS を使用すると、複数の保留中の操作について、読み取り操作と DML (データ操作言語) 操作の両方で 1 つの接続を使用することができます。 この機能により、アプリケーションで接続ビジー エラーを処理する必要がなくなります。 さらに、MARS ではサーバー側カーソルのユーザーを置き換えることができます。通常、この処理は多くのリソースを消費します。 最後に、複数の操作は、単一の接続で実行できる、ために共有することを使用する必要がなくなるため、同じトランザクション コンテキスト**sp_getbindtoken**と**sp_bindsession**格納されているシステムプロシージャです。  
+ MARS を使用すると、複数の保留中の操作について、読み取り操作と DML (データ操作言語) 操作の両方で 1 つの接続を使用することができます。 この機能により、アプリケーションで接続ビジー エラーを処理する必要がなくなります。 さらに、MARS ではサーバー側カーソルのユーザーを置き換えることができます。通常、この処理は多くのリソースを消費します。 最後に、複数の操作は、1 つの接続に対して使用できます、共有することを使用する必要がないため、同じトランザクション コンテキスト**sp_getbindtoken**と**sp_bindsession**システムに格納されています。手順です。  
   
 ### <a name="example"></a>例  
- 次のコンソール アプリケーションでは、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを 3 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと使用する方法、および 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを MARS を有効にして使用する方法について示します。 最初のコマンド オブジェクトでは、格付けが 5 のベンダーの一覧を取得します。 2 番目のコマンド オブジェクトでは、<xref:System.Data.SqlClient.SqlDataReader> から提供されるベンダー ID を使用して特定のベンダーのすべての製品について 2 番目の <xref:System.Data.SqlClient.SqlDataReader> を読み取ります。 各製品のレコードは、2 番目の <xref:System.Data.SqlClient.SqlDataReader> によってアクセスされます。 どのような新しいを決定する計算を実行**OnOrderQty**する必要があります。 更新する 3 番目のコマンド オブジェクトを使用して、 **ProductVendor**新しい値を持つテーブルです。 このプロセスはすべて単一のトランザクションで行われ、最後にロールバックされます。  
+ 次のコンソール アプリケーションでは、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを 3 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと使用する方法、および 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを MARS を有効にして使用する方法について示します。 最初のコマンド オブジェクトでは、格付けが 5 のベンダーの一覧を取得します。 2 番目のコマンド オブジェクトでは、<xref:System.Data.SqlClient.SqlDataReader> から提供されるベンダー ID を使用して特定のベンダーのすべての製品について 2 番目の <xref:System.Data.SqlClient.SqlDataReader> を読み取ります。 各製品のレコードは、2 番目の <xref:System.Data.SqlClient.SqlDataReader> によってアクセスされます。 どのような新しいを決定する計算を実行**OnOrderQty**する必要があります。 更新する 3 番目のコマンド オブジェクトを使用して、 **ProductVendor**新しい値を含むテーブル。 このプロセスはすべて単一のトランザクションで行われ、最後にロールバックされます。  
   
 > [!NOTE]
->  次の例は、サンプル**AdventureWorks** SQL Server に付属のデータベースです。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
+>  次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
   
 ```vb  
 Option Strict On  
@@ -404,4 +404,4 @@ private static string GetConnectionString()
   
 ## <a name="see-also"></a>関連項目  
  [複数のアクティブな結果セット (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

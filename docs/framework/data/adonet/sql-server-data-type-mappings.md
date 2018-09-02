@@ -2,12 +2,12 @@
 title: SQL Server データ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: 26ba7aa730eb9c30cfeaf50c59d6b9721fe5857d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362466"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456397"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server データ型のマッピング
 SQL Server と .NET Framework は異なる型システムを使用しています。 たとえば、.NET Framework の <xref:System.Decimal> 構造体の最大小数点以下桁数は 28 ですが、SQL Server の decimal データ型と numeric データ型の最大小数点以下桁数は 38 です。 データを読み書きするときにデータの整合性を保つために、<xref:System.Data.SqlClient.SqlDataReader> では、.NET Framework の型を返すアクセサー メソッドと共に、<xref:System.Data.SqlTypes> のオブジェクトを返す SQL Server 固有の型指定されたアクセサー メソッドを公開しています。 SQL Server の型と .NET Framework の型は、両方とも <xref:System.Data.DbType> および <xref:System.Data.SqlDbType> クラスの列挙によって表されます。これらは <xref:System.Data.SqlClient.SqlParameter> データ型を指定するときに使用できます。  
@@ -49,15 +49,16 @@ SQL Server と .NET Framework は異なる型システムを使用していま�
 |varchar|String<br /><br /> Char[]|<xref:System.Data.SqlDbType.VarChar>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>, <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|none|  
   
-<sup>1</sup>設定することはできません、`DbType`のプロパティ、`SqlParameter`に`SqlDbType.Date`です。  
-<sup>2</sup>の基になる型がわかっている場合は、特定の型指定されたアクセサーを使用して、`sql_variant`です。  
+<sup>1</sup>設定することはできません、`DbType`のプロパティを`SqlParameter`に`SqlDbType.Date`します。  
+<sup>2</sup>の基になる型がわかっている場合は、特定の型指定されたアクセサーを使用して、`sql_variant`します。  
   
-## <a name="sql-server-books-online-reference"></a>SQL Server オンライン ブックの参照  
- SQL Server データ型の詳細については、次を参照してください。[データ型 (データベース エンジン)](http://go.microsoft.com/fwlink/?LinkID=107468)です。  
+## <a name="sql-server-documentation"></a>SQL Server のドキュメント
+
+SQL Server データ型の詳細については、次を参照してください。[データ型 (TRANSACT-SQL)](/sql/t-sql/data-types/data-types-transact-sql)します。
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server データ型と ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [SQL Server のバイナリ データと大きな値のデータ](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [ADO.NET でのデータ型のマッピング](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [パラメーターおよびパラメーター データ型の構成](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

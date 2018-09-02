@@ -2,18 +2,18 @@
 title: Interop アクティビティと .NET Framework 4 内の .NET Framework 3.0 WF アクティビティの使用
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: 8110c86ab8bf5c557dbf8eb361d4ead2e256a3b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518412"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467506"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Interop アクティビティと .NET Framework 4 内の .NET Framework 3.0 WF アクティビティの使用
 <xref:System.Activities.Statements.Interop> アクティビティは、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ワークフロー内に [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) アクティビティをラップする [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) アクティビティです。 WF 3 アクティビティは、単一のリーフ アクティビティまたはツリー全体のアクティビティです。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] アクティビティの実行 (取り消しおよび例外処理を含む) および保持は、実行中の [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ワークフロー インスタンスのコンテキスト内で発生します。  
   
 > [!NOTE]
->  <xref:System.Activities.Statements.Interop> 、ワークフローのプロジェクトがあるない限り、ワークフロー デザイナー ツールボックスにアクティビティが表示されないその**ターゲット フレームワーク**の設定に **.NET Framework 4.5**です。  
+>  <xref:System.Activities.Statements.Interop> 、ワークフローのプロジェクトがあるない限り、ワークフロー デザイナー ツールボックスにアクティビティが表示されないその**ターゲット フレームワーク**設定 **.NET Framework 4.5**します。  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>WF 3 アクティビティと Interop アクティビティを使用するための基準  
  <xref:System.Activities.Statements.Interop> アクティビティ内で WF 3 アクティビティを正常に実行するには、次の基準を満たす必要があります。  
@@ -24,12 +24,12 @@ ms.locfileid: "33518412"
   
 -   WF 3 アクティビティにパブリックの既定コンストラクターがあります。  
   
--   <xref:System.Activities.Statements.Interop> アクティビティがサポートできるインターフェイス型にある制限のため、<xref:System.Workflow.Activities.HandleExternalEventActivity> と <xref:System.Workflow.Activities.CallExternalMethodActivity> は直接使用できませんが、ワークフロー通信アクティビティ ツール (WCA.exe) を使用して作成される派生アクティビティを使用できます。 参照してください[Windows Workflow Foundation ツール](http://go.microsoft.com/fwlink/?LinkId=178889)詳細についてはします。  
+-   <xref:System.Activities.Statements.Interop> アクティビティがサポートできるインターフェイス型にある制限のため、<xref:System.Workflow.Activities.HandleExternalEventActivity> と <xref:System.Workflow.Activities.CallExternalMethodActivity> は直接使用できませんが、ワークフロー通信アクティビティ ツール (WCA.exe) を使用して作成される派生アクティビティを使用できます。 参照してください[Windows Workflow Foundation ツール](https://go.microsoft.com/fwlink/?LinkId=178889)詳細についてはします。  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Interop アクティビティ内の WF 3 アクティビティの構成  
  データを構成して、相互運用上の境界にまたがって WF 3 アクティビティとの間でやり取りするには、WF 3 アクティビティのプロパティとメタデータのプロパティを <xref:System.Activities.Statements.Interop> アクティビティで公開します。 WF 3 アクティビティのメタデータのプロパティ (<xref:System.Workflow.ComponentModel.Activity.Name%2A> など) は、<xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> コレクションを介して公開されます。 これは、WF 3 アクティビティのメタデータのプロパティに関する値を定義するために使用される名前と値ペアのコレクションです。 メタデータのプロパティは、<xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> フラグを設定する依存関係プロパティに基づくプロパティです。  
   
- WF 3 アクティビティのプロパティは、<xref:System.Activities.Statements.Interop.ActivityProperties%2A> コレクションを介して公開されます。 これは名前と値ペアのセットです。この各値は <xref:System.Activities.Argument> オブジェクトで、WF 3 アクティビティのプロパティの属性を定義するために使用されます。 としてすべてのプロパティを表示、WF 3 アクティビティのプロパティの方向は推論できないため、 <xref:System.Activities.InArgument> / <xref:System.Activities.OutArgument>ペア。 アクティビティによるプロパティの使用方法によっては、<xref:System.Activities.InArgument> エントリ、<xref:System.Activities.OutArgument> エントリ、またはその両方を提供できます。 コレクションに含まれる <xref:System.Activities.InArgument> エントリの想定される名前は、WF 3 アクティビティに定義されているプロパティの名前です。 予想される名前、<xref:System.Activities.OutArgument>コレクション内のエントリは、プロパティの名前、および文字列"Out"を連結します。  
+ WF 3 アクティビティのプロパティは、<xref:System.Activities.Statements.Interop.ActivityProperties%2A> コレクションを介して公開されます。 これは名前と値ペアのセットです。この各値は <xref:System.Activities.Argument> オブジェクトで、WF 3 アクティビティのプロパティの属性を定義するために使用されます。 WF 3 アクティビティのプロパティの方向を推論できないために、すべてのプロパティとして表示されます、 <xref:System.Activities.InArgument> / <xref:System.Activities.OutArgument>ペア。 アクティビティによるプロパティの使用方法によっては、<xref:System.Activities.InArgument> エントリ、<xref:System.Activities.OutArgument> エントリ、またはその両方を提供できます。 コレクションに含まれる <xref:System.Activities.InArgument> エントリの想定される名前は、WF 3 アクティビティに定義されているプロパティの名前です。 想定される名前、<xref:System.Activities.OutArgument>コレクション内のエントリは、プロパティの名前、および文字列"Out"を連結します。  
   
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Interop アクティビティ内で WF 3 アクティビティを使用する際の制限  
  WF 3 システム標準アクティビティは、<xref:System.Activities.Statements.Interop> アクティビティで直接ラップすることはできません。 <xref:System.Workflow.Activities.DelayActivity> などの一部の WF 3 アクティビティの場合、これは類似する WF 4.5 アクティビティがあることが原因です。 その他のアクティビティの場合、これはそのアクティビティの機能がサポートされないことが原因です。 多くの WF 3 システム標準アクティビティは、次の制限に従い、<xref:System.Activities.Statements.Interop> アクティビティによってラップしたワークフロー内で使用できます。  

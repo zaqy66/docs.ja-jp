@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ImageList component [Windows Forms]
 - image controls
 ms.assetid: 83b48634-782b-464d-9b7d-568dc6e0bef2
-ms.openlocfilehash: 68296328a574997d5211bbd26ea4ca40be926e75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce847507785b06874425e2efe678b86fc868507e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532939"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464922"
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList コンポーネント (Windows フォーム)
 Windows フォーム `ImageList` コンポーネントは、コントロールで表示するイメージの保存に使用します。 イメージ リストでは、一貫性のある 1 つのイメージのカタログのコードを記述することができます。  
@@ -22,7 +22,7 @@ Windows フォーム `ImageList` コンポーネントは、コントロール�
  [方法: Windows フォームの ImageList コンポーネントにイメージを追加または削除する](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)  
  イメージの一覧からイメージを追加および削除する方法を説明します。  
   
- 参照してください[する方法: デザイナーを使って ImageList イメージを追加または](http://msdn.microsoft.com/library/ms233674\(v=vs.110\))です。  
+ 参照してください[方法: デザイナーを使って ImageList イメージを追加または](how-to-add-or-remove-imagelist-images-with-the-designer.md)します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.ImageList>  

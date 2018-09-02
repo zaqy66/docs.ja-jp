@@ -7,28 +7,28 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
-ms.openlocfilehash: 5ab634994e3d229ae9d107bd89b667465d252056
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f13240df9879f656d986845552e8e93a74ade8f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538491"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470893"
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel コントロールの概要
-A<xref:System.Windows.Forms.ToolStripPanel>では、1 つの領域の配置とラフティング<xref:System.Windows.Forms.ToolStrip>、 <xref:System.Windows.Forms.MenuStrip>、および<xref:System.Windows.Forms.StatusStrip>コントロール。 複数<xref:System.Windows.Forms.ToolStrip>コントロールに応じて垂直または水平方向のスタック、<xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A>の<xref:System.Windows.Forms.ToolStripPanel>です。  
+A<xref:System.Windows.Forms.ToolStripPanel>の配置とラフティングの 1 つの領域を提供します。 <xref:System.Windows.Forms.ToolStrip>、 <xref:System.Windows.Forms.MenuStrip>、および<xref:System.Windows.Forms.StatusStrip>コントロール。 複数<xref:System.Windows.Forms.ToolStrip>コントロールに応じて垂直方向または水平方向のスタック、<xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A>の<xref:System.Windows.Forms.ToolStripPanel>します。  
   
 ### <a name="important-toolstrippanel-members"></a>重要な ToolStripPanel メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripPanel.Orientation%2A>|取得または水平方向または垂直方向を示す値を設定、<xref:System.Windows.Forms.ToolStripPanel>です。|  
-|<xref:System.Windows.Forms.ToolStripPanel.Renderer%2A>|取得または設定、<xref:System.Windows.Forms.ToolStripRenderer>の外観をカスタマイズするために使用する<xref:System.Windows.Forms.ToolStripPanel>です。|  
-|<xref:System.Windows.Forms.ToolStripPanel.RenderMode%2A>|取得または設定に適用される描画スタイル、<xref:System.Windows.Forms.ToolStripPanel>です。|  
-|<xref:System.Windows.Forms.ToolStripPanel.RowMargin%2A>|取得または設定、間隔 (ピクセル単位) 間、<xref:System.Windows.Forms.ToolStripPanelRow>と<xref:System.Windows.Forms.ToolStripPanel>です。|  
-|<xref:System.Windows.Forms.ToolStripPanel.Rows%2A>|取得、<xref:System.Windows.Forms.ToolStripPanelRow>この<xref:System.Windows.Forms.ToolStripPanel>です。|  
-|<xref:System.Windows.Forms.ToolStripPanel.Join%2A>|追加、<xref:System.Windows.Forms.ToolStrip>を<xref:System.Windows.Forms.ToolStripPanel>です。|  
+|<xref:System.Windows.Forms.ToolStripPanel.Orientation%2A>|水平または垂直方向を示す値を取得または、<xref:System.Windows.Forms.ToolStripPanel>します。|  
+|<xref:System.Windows.Forms.ToolStripPanel.Renderer%2A>|取得または設定します、<xref:System.Windows.Forms.ToolStripRenderer>の外観をカスタマイズするために使用する<xref:System.Windows.Forms.ToolStripPanel>します。|  
+|<xref:System.Windows.Forms.ToolStripPanel.RenderMode%2A>|取得または設定に適用される描画スタイル、<xref:System.Windows.Forms.ToolStripPanel>します。|  
+|<xref:System.Windows.Forms.ToolStripPanel.RowMargin%2A>|取得または (ピクセル単位) 間の間隔を設定、 <xref:System.Windows.Forms.ToolStripPanelRow> 、<xref:System.Windows.Forms.ToolStripPanel>します。|  
+|<xref:System.Windows.Forms.ToolStripPanel.Rows%2A>|取得、<xref:System.Windows.Forms.ToolStripPanelRow>この<xref:System.Windows.Forms.ToolStripPanel>します。|  
+|<xref:System.Windows.Forms.ToolStripPanel.Join%2A>|追加、<xref:System.Windows.Forms.ToolStrip>を<xref:System.Windows.Forms.ToolStripPanel>します。|  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Forms.ToolStripContainer>  
  <xref:System.Windows.Forms.ToolStripContentPanel>  
- [ToolStrip のサンプル](http://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)
+ [ToolStrip のサンプル](https://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)

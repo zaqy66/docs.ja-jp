@@ -2,12 +2,12 @@
 title: WorkflowApplication ReadLine ホスト
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518539"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470854"
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine ホスト
 このサンプルは、汎用 ReadLine ホストです。 用意されている `ReadLine` アクティビティ (または文字列を使用して再開されるブックマークからデータを取得する他の同様のアクティビティ) を使用して、任意のワークフローを読み込んで実行することができます。 `WriteLine` アクティビティ、または <xref:System.Activities.Statements.WriteLine.TextWriter%2A> 拡張に書き込みを行うアクティビティからの出力は、ホスト ウィンドウに送られます。 インスタンスがアイドル状態の場合、そのインスタンスの使用可能なブックマークがコンボ ボックスに表示されます。 ブックマークを選択してテキストを入力し、ブックマークを再開するボタンをクリックすると、ワークフローの実行が続行されます。 選択したワークフローを取り消したり、中止または終了することもできます。 既定では永続化が有効になっており、ホストをシャットダウンして再起動しても、データベースに格納されているインスタンスがインスタンスの一覧に読み込まれます。 <xref:System.Activities.WorkflowApplication> レベルのイベントをホストに出力するには、追跡を使用します。オプションで、アクティビティ レベルの詳細な追跡も行うことができます。  
@@ -33,17 +33,17 @@ ms.locfileid: "33518539"
   
 6.  実行後、永続化を有効にするか無効にするかを必要に応じて切り替えることができます。 また、詳細なアクティビティ追跡についても、有効にするか無効にするかを切り替えることができます。  
   
-7.  横に、省略記号ボタンを押して、**実行**をワークフローの XAML ファイルで定義されている参照ボタンをクリックします。  
+7.  横にある省略記号ボタンを押して、**実行**XAML ファイルで定義されたワークフローを参照するボタンをクリックします。  
   
      SampleWorkflows フォルダーには、サンプルが 2 つあります。 parallel1.xaml サンプルはアイドル状態になります。  
   
-8.  例を選択すると、キーを押して、**実行**ボタンをクリックします。  
+8.  例を選択すると、次のようにキーを押して、**実行**ボタンをクリックします。  
   
-9. 場合、またはワークフローがアイドル状態になったときに、**ブックマーク**コンボ ボックスには、使用可能なブックマークが設定されます。  
+9. または、ワークフローがアイドル状態になったとき、**ブックマーク**コンボ ボックスには、使用可能なブックマークが設定されます。  
   
 10. ここで、ブックマークの再開や、ワークフローの取り消し、中止、または終了を実行できます。 また、ホストをシャットダウンして再起動することもできます。 永続化を有効なままにしてあれば、シャットダウン時にインスタンスがアンロードされ、起動時に再度読み込まれます。  
   
-     ブックマークを再開するには、目的のブックマークの選択、キーを押して、コンボ ボックスの横にあるテキスト ボックスに値を入力**ブックマークの再開**です。  
+     ブックマークを再開するには、目的のブックマークの選択、キーを押して、コンボ ボックスの横にあるテキスト ボックスに値を入力**ブックマークの再開**します。  
   
 #### <a name="to-remove-the-instance-store-database"></a>インスタンス ストア データベースを削除するには  
   
@@ -56,6 +56,6 @@ ms.locfileid: "33518539"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

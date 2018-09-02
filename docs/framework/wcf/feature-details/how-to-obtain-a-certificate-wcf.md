@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 368401d91aa2a83110631d583660d6ccebf8d4fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 664eb62997123ea248b0b69700b86bf794646d4b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491508"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465863"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>方法 : 証明書 (WCF) を取得する
-Windows Communication Foundation (WCF) のいずれかを使用するには、その機能は、X.509 証明書を使用して、最初に証明書を取得します。  
+Windows Communication Foundation (WCF) のいずれかを使用するには、その機能を使用して、X.509 証明書の最初に証明書を取得します。  
   
 ### <a name="to-obtain-an-x509-certificate"></a>X.509 証明書を取得するには  
   
@@ -20,7 +20,7 @@ Windows Communication Foundation (WCF) のいずれかを使用するには、�
   
     -   VeriSign, Inc. などの証明機関から証明書を購入します。  
   
-    -   独自の証明書サービスを設定し、証明機関に証明書への署名を依頼します。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、Windows 2000 Server、Windows 2000 Server Datacenter、および Windows 2000 Datacenter Server にはすべて、公開キー基盤 (PKI) をサポートする証明書サービスが用意されています。 Windows Server 2008 を使用して、 [Active Directory Certificate Services](http://go.microsoft.com/fwlink/?LinkID=153483)証明機関を管理するロール。  
+    -   独自の証明書サービスを設定し、証明機関に証明書への署名を依頼します。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、Windows 2000 Server、Windows 2000 Server Datacenter、および Windows 2000 Datacenter Server にはすべて、公開キー基盤 (PKI) をサポートする証明書サービスが用意されています。 Windows Server 2008 で使用して、 [Active Directory Certificate Services](https://go.microsoft.com/fwlink/?LinkID=153483)証明機関を管理します。  
   
     -   独自の証明書サービスを設定し、証明書には署名しません。  
   

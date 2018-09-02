@@ -13,71 +13,72 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 0a0208194bd6cf24f61c58ece88e41b674e924fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73d3a0bef1ab075aee8e06f676ef17b853773552
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468065"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>チュートリアル : デザイナーを使用した、ListView コントロールと TreeView コントロールを含むエクスプローラー スタイルのインターフェイスの作成
-Visual Studio の利点の 1 つは、時間の短い形式でプロ並みの Windows フォーム アプリケーションを作成する権限です。 一般的なシナリオは、ユーザー インターフェイス (UI) を作成するとは<xref:System.Windows.Forms.ListView>と<xref:System.Windows.Forms.TreeView>Windows エクスプ ローラーの機能の Windows オペレーティング システムのようなコントロールです。 Windows エクスプ ローラーでは、ユーザーのコンピューター上のファイルとフォルダーの階層構造を表示します。  
+Visual Studio の利点の 1 つは、時間の短い形式で本格的な Windows フォーム アプリケーションを作成する機能です。 一般的なシナリオがユーザー インターフェイス (UI) で作成して<xref:System.Windows.Forms.ListView>と<xref:System.Windows.Forms.TreeView>Windows オペレーティング システムの Windows エクスプ ローラーの機能のようなコントロール。 Windows エクスプ ローラーは、ユーザーのコンピューター上のファイルとフォルダーの階層構造を表示します。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
-### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>ListView コントロールと TreeView コントロールを含むフォームを作成するには  
+### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>ListView、TreeView コントロールを含むフォームを作成するには  
   
 1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2.  **新しいプロジェクト** ダイアログ ボックスで、次の操作します。  
+2.  **新しいプロジェクト** ダイアログ ボックスで、次の操作を行います。  
   
-    1.  カテゴリで選択するか**Visual Basic**または**Visual c#** です。  
+    1.  カテゴリでいずれかを選択**Visual Basic**または**Visual c#** します。  
   
-    2.  テンプレートの一覧で選択**Windows フォーム アプリケーション**です。  
+    2.  テンプレートの一覧で選択**Windows フォーム アプリケーション**します。  
   
 3.  **[OK]** をクリックします。 新しい Windows フォーム プロジェクトが作成されます。  
   
-4.  追加、<xref:System.Windows.Forms.SplitContainer>コントロールをフォームと設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>です。  
+4.  追加、<xref:System.Windows.Forms.SplitContainer>コントロールをフォームにし、設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>します。  
   
-5.  追加、<xref:System.Windows.Forms.ImageList>という`imageList1`フォームと 2 つのイメージを追加する [プロパティ] ウィンドウを使用する: フォルダー イメージとその順序で、ドキュメント イメージ。  
+5.  追加、<xref:System.Windows.Forms.ImageList>という名前の`imageList1`フォームと 2 つのイメージを追加する [プロパティ] ウィンドウを使用する: フォルダーのイメージとその順序で、ドキュメントのイメージ。  
   
-6.  追加、<xref:System.Windows.Forms.TreeView>という名前のコントロール`treeview1`フォームの左側に配置し、<xref:System.Windows.Forms.SplitContainer>コントロール。 [プロパティ] ウィンドウで`treeView1`次の操作します。  
+6.  追加、<xref:System.Windows.Forms.TreeView>という名前のコントロール`treeview1`をフォームに配置の左側にある、<xref:System.Windows.Forms.SplitContainer>コントロール。 [プロパティ] ウィンドウで`treeView1`次の操作を行います。  
   
     1.  <xref:System.Windows.Forms.Control.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill> に設定します。  
   
     2.  <xref:System.Windows.Forms.TreeView.ImageList%2A> プロパティを `imagelist1.` に設定します。  
   
-7.  追加、<xref:System.Windows.Forms.ListView>という名前のコントロール`listView1`フォームの右側に配置し、<xref:System.Windows.Forms.SplitContainer>コントロール。 [プロパティ] ウィンドウで`listview1`次の操作します。  
+7.  追加、<xref:System.Windows.Forms.ListView>という名前のコントロール`listView1`をフォームの右側の上に移動し、<xref:System.Windows.Forms.SplitContainer>コントロール。 [プロパティ] ウィンドウで`listview1`次の操作を行います。  
   
     1.  <xref:System.Windows.Forms.Control.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill> に設定します。  
   
     2.  <xref:System.Windows.Forms.ListView.View%2A> プロパティを <xref:System.Windows.Forms.View.Details> に設定します。  
   
-    3.  省略記号ボタンをクリックして ColumnHeader コレクション エディターを開きます (![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) で、<xref:System.Windows.Forms.ListView.Columns%2A>プロパティ**です。** 3 つの列を追加し、設定、<xref:System.Windows.Forms.ColumnHeader.Text%2A>プロパティを`Name`、 `Type`、および`Last Modified`、それぞれします。 **[OK]** をクリックしてダイアログ ボックスを閉じます。  
+    3.  省略記号をクリックして、ColumnHeader コレクション エディターを開きます (![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) で、<xref:System.Windows.Forms.ListView.Columns%2A>プロパティ**します。** 3 つの列を追加し、設定、<xref:System.Windows.Forms.ColumnHeader.Text%2A>プロパティを`Name`、 `Type`、および`Last Modified`、それぞれします。 **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
     4.  <xref:System.Windows.Forms.ListView.SmallImageList%2A> プロパティを `imageList1.` に設定します。  
   
-8.  データを読み込むコードを実装する、<xref:System.Windows.Forms.TreeView>ノードとサブノードを使用します。 `Form1` クラスに次のコードを追加します。  
+8.  データを読み込むコードを実装、<xref:System.Windows.Forms.TreeView>ノードおよびサブノードにします。 `Form1` クラスに次のコードを追加します。  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  
   
-9. 上記のコードでは、名前空間を使用するため、適切な using を追加または、フォームの上部にあるステートメントをインポートします。  
+9. 前のコードでは、System.IO 名前空間を使用するため、適切な using の追加または、フォームの上部にあるステートメントをインポートします。  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#4)]  
   
-10. フォームのコンス トラクターの前の手順からセットアップ メソッドを呼び出すまたは<xref:System.Windows.Forms.Form.Load>イベント処理メソッドです。 このコードをフォームのコンス トラクターに追加します。  
+10. フォームのコンス トラクターの前の手順からのセットアップ メソッドを呼び出すまたは<xref:System.Windows.Forms.Form.Load>イベント処理メソッド。 このコードをフォームのコンス トラクターに追加します。  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]  
   
-11. 処理、<xref:System.Windows.Forms.TreeView.NodeMouseClick>イベントを`treeview1` **、**を設定するコードを実装および`listview1`ノードがクリックされたときに、ノードの内容とします。 `Form1` クラスに次のコードを追加します。  
+11. 処理、<xref:System.Windows.Forms.TreeView.NodeMouseClick>イベントを`treeview1` **、** を設定するコードを実装し、`listview1`ノードのコンテンツ ノードがクリックされたときに使用します。 `Form1` クラスに次のコードを追加します。  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]  
   
-     C# を使用している場合があることを確認、<xref:System.Windows.Forms.TreeView.NodeMouseClick>イベント処理メソッドに関連付けられているイベントです。 このコードをフォームのコンス トラクターに追加します。  
+     C# を使用している場合があることを確認、<xref:System.Windows.Forms.TreeView.NodeMouseClick>イベントのイベント処理メソッドに関連付けられています。 このコードをフォームのコンス トラクターに追加します。  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#5)]  
   
@@ -88,10 +89,10 @@ Visual Studio の利点の 1 つは、時間の短い形式でプロ並みの Wi
   
 -   F5 キーを押してアプリケーションを実行します。  
   
-     含む分割フォームが表示されます、<xref:System.Windows.Forms.TreeView>左側にある、プロジェクト ディレクトリを表示するコントロールと<xref:System.Windows.Forms.ListView>3 つの列の右側にあるコントロールです。 走査することができます、<xref:System.Windows.Forms.TreeView>ディレクトリ ノードを選択して、<xref:System.Windows.Forms.ListView>選択したディレクトリの内容が格納されます。  
+     含む分割フォームが表示されます、<xref:System.Windows.Forms.TreeView>左側にある、プロジェクト ディレクトリを表示するコントロールと<xref:System.Windows.Forms.ListView>3 つの列の右側にあるコントロール。 走査することができます、<xref:System.Windows.Forms.TreeView>ディレクトリのノードを選択して、<xref:System.Windows.Forms.ListView>は選択したディレクトリの内容が格納されます。  
   
 ## <a name="next-steps"></a>次の手順  
- このアプリケーションでは、使用できる方法の例<xref:System.Windows.Forms.TreeView>と<xref:System.Windows.Forms.ListView>化を制御します。 これらのコントロールの詳細については、次のトピックを参照してください。  
+ このアプリケーションは、使用できる方法の例を示します<xref:System.Windows.Forms.TreeView>と<xref:System.Windows.Forms.ListView>化を制御します。 これらのコントロールの詳細については、次のトピックを参照してください。  
   
 -   [方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加する](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   

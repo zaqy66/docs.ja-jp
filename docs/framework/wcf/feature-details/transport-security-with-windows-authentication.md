@@ -7,19 +7,19 @@ dev_langs:
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: d291cd3d00f8d0d40e0b8543d5347e1509cb8b90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adc1bf7c51eeef715e98bb67c5f6a2e44e09b35f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498603"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466611"
 ---
 # <a name="transport-security-with-windows-authentication"></a>トランスポート セキュリティと Windows 認証
-次のシナリオでは、Windows Communication Foundation (WCF) クライアントと Windows セキュリティによって保護されたサービスを示します。 プログラミングの詳細については、次を参照してください。[する方法: Windows 資格情報でサービスをセキュリティで保護された](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)です。  
+次のシナリオでは、Windows Communication Foundation (WCF) クライアントと Windows セキュリティで保護されたサービスを説明します。 プログラミングの詳細については、次を参照してください。[方法: Windows 資格情報でサービスをセキュリティで保護された](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)します。  
   
  イントラネットの Web サービスでは人事情報を表示しています。 クライアントは Windows フォーム アプリケーションです。 このアプリケーションは、Kerberos コントローラーで保護されたドメインに展開されています。  
   
- ![トランスポート セキュリティ Windows 認証を](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
+ ![トランスポート セキュリティが Windows 認証を使用した](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
   
 |特徴|説明|  
 |--------------------|-----------------|  
@@ -122,4 +122,4 @@ ms.locfileid: "33498603"
 ## <a name="see-also"></a>関連項目  
  [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [方法: Windows 資格情報でサービスをセキュリティで保護する](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Windows Server App Fabric のセキュリティ モデル](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

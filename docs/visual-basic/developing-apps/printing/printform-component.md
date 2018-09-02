@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-ms.openlocfilehash: 6cb7cfe022b2b4d23f47a47ec70f08d5c0ccbc7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591409"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472086"
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm コンポーネント (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Visual basic のコンポーネントでは、実行時に Windows フォームのイメージを印刷することができます。 この動作は、Visual Basic の以前のバージョンで使用されていた `PrintForm` メソッドの動作に代わるものです。  
   
- PowerPack コントロールは、Visual Studio には含まれなくなりましたが、 [ダウンロード センター](http://www.microsoft.com/en-us/download/details.aspx?id=25169)からダウンロードできます。  
+ PowerPack コントロールは不要になった Visual Studio で、含まれていますからダウンロードすることができます、[ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=25169)します。  
   
 ## <a name="printform-component-overview"></a>PrintForm コンポーネントの概要  
  一般的に Windows フォームでは、紙の書類やレポートのような書式のフォームを作成して、フォームのイメージを印刷します。 <xref:System.Drawing.Printing.PrintDocument> コンポーネントを使ってこれを行うこともできますが、これを使用すると多くのコードが必要になる可能性があります。 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントを使用すると、 <xref:System.Drawing.Printing.PrintDocument> コンポーネントを使わなくても、フォームのイメージをプリンターに印刷し、印刷プレビュー ウィンドウに表示し、ファイルに出力することができます。  
@@ -50,7 +50,7 @@ ms.locfileid: "33591409"
   
 -   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.QueryPageSettings> イベント。 各ページが印刷される直前に発生します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  <xref:System.Drawing.Graphics> メソッドによって描画されたテキストやグラフィックスがフォームに含まれる場合、これを印刷するには基本的な <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> (`Print()`) メソッドを使用してください。 オーバーロードされた <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> メソッドを使用すると、オペレーティング システムによってはグラフィックスが描画されない場合があります。  
   
  フォームの幅がプリンター用紙の幅より広い場合、フォームの右側が途切れる可能性があります。 印刷用のフォームをデザインするときには、標準的な用紙サイズにフォームが収まることを確認してください。  

@@ -2,51 +2,51 @@
 title: .NET Framework 4 ワークフローでの相互運用アクティビティの使用
 ms.date: 03/30/2017
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-ms.openlocfilehash: 64e8aef01aefa23dc98b42ab835de097d6c222df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02eeaf5bb7ff484ba5982197fc395e247cd5a87f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520228"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466726"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>.NET Framework 4 ワークフローでの相互運用アクティビティの使用
 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] または [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] を使用して作成したアクティビティは、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] アクティビティを使うことにより <xref:System.Activities.Statements.Interop> ワークフローで使用できます。 ここでは、<xref:System.Activities.Statements.Interop> アクティビティの概要について説明します。  
   
 > [!NOTE]
->  <xref:System.Activities.Statements.Interop> 、ワークフローのプロジェクトがあるない限り、ワークフロー デザイナー ツールボックスにアクティビティが表示されないその**ターゲット フレームワーク**の設定に **.Net Framework 4**またはそれ以降。  
+>  <xref:System.Activities.Statements.Interop> 、ワークフローのプロジェクトがあるない限り、ワークフロー デザイナー ツールボックスにアクティビティが表示されないその**ターゲット フレームワーク**設定 **.Net Framework 4**またはそれ以降。  
   
 ## <a name="using-the-interop-activity-in-net-framework-45-workflows"></a>.NET Framework 4.5 ワークフローでの相互運用アクティビティの使用  
  このトピックでは、[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] アクティビティを含む `DiscountCalculator` アクティビティ ライブラリを作成します。 `DiscountCalculator` は、購入額に基づいて割引を計算し、<xref:System.Workflow.Activities.SequenceActivity> を含む <xref:System.Workflow.Activities.PolicyActivity> で構成されます。  
   
 > [!NOTE]
->  このトピックで作成する [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] アクティビティでは、<xref:System.Workflow.Activities.PolicyActivity> を使用してアクティビティのロジックを実装します。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] ワークフローでルールを使用するためにカスタムの <xref:System.Activities.Statements.Interop> アクティビティまたは [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] アクティビティを使用する必要はありません。 内のルールを使用する例については、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]ワークフローを使用せず、<xref:System.Activities.Statements.Interop>アクティビティを参照してください、 [.NET Framework 4.5 のポリシー アクティビティ](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)サンプルです。  
+>  このトピックで作成する [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] アクティビティでは、<xref:System.Workflow.Activities.PolicyActivity> を使用してアクティビティのロジックを実装します。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] ワークフローでルールを使用するためにカスタムの <xref:System.Activities.Statements.Interop> アクティビティまたは [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] アクティビティを使用する必要はありません。 内のルールを使用する例については、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]ワークフローを使用せず、<xref:System.Activities.Statements.Interop>アクティビティを参照してください、 [.NET Framework 4.5 のポリシー アクティビティ](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)サンプル。  
   
 #### <a name="to-create-the-net-framework-35-activity-library-project"></a>.NET Framework 3.5 アクティビティ ライブラリ プロジェクトを作成するには  
   
 1.  開いている[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]選択**新規**し**プロジェクト.** **ファイル**メニュー。  
   
-2.  展開、**その他のプロジェクトの種類**内のノード、**インストールされたテンプレート**ペイン**Visual Studio ソリューション**です。  
+2.  展開、**その他のプロジェクトの種類**内のノード、**インストールされたテンプレート**ペイン**Visual Studio ソリューション**します。  
   
-3.  選択**空のソリューション**から、 **Visual Studio ソリューション** ボックスの一覧です。 型`PolicyInteropDemo`で、**名前**ボックスし、をクリックして**OK**です。  
+3.  選択**空のソリューション**から、 **Visual Studio ソリューション**一覧。 型`PolicyInteropDemo`で、**名前**ボックスし、をクリックして**OK**します。  
   
 4.  右クリック**PolicyInteropDemo**で**ソリューション エクスプ ローラー**選択**追加**し**新しいプロジェクト**.  
   
     > [!TIP]
-    >  場合、**ソリューション エクスプ ローラー**ウィンドウが表示されている、select**ソリューション エクスプ ローラー**から、**ビュー**メニュー。  
+    >  場合、**ソリューション エクスプ ローラー**ウィンドウが表示される、選択**ソリューション エクスプ ローラー**から、**ビュー**メニュー。  
   
-5.  **インストールされたテンプレート**一覧で、 **Visual c#** し**ワークフロー**です。 選択 **.NET Framework 3.5**クリックして .NET Framework のバージョンのドロップダウン リストから**Workflow Activity Library**から、**テンプレート** ボックスの一覧です。  
+5.  **インストールされたテンプレート**一覧で、 **Visual c#** し**ワークフロー**します。 選択 **.NET Framework 3.5**クリックして .NET Framework のバージョンのドロップダウン リストから**Workflow Activity Library**から、**テンプレート**一覧。  
   
-6.  型`PolicyActivityLibrary`で、**名前**ボックスし、をクリックして**OK**です。  
+6.  型`PolicyActivityLibrary`で、**名前**ボックスし、をクリックして**OK**します。  
   
-7.  右クリック**Activity1.cs**で**ソリューション エクスプ ローラー**選択**削除**です。 **[OK]** をクリックして確定します。  
+7.  右クリック**Activity1.cs**で**ソリューション エクスプ ローラー**選択**削除**します。 **[OK]** をクリックして確定します。  
   
 #### <a name="to-create-the-discountcalculator-activity"></a>DiscountCalculator アクティビティを作成するには  
   
 1.  右クリック**PolicyActivityLibrary**で**ソリューション エクスプ ローラー**選択**追加**し**アクティビティ**.  
   
-2.  選択**アクティビティ (コード分離付き)** から、 **Visual c# アイテム** ボックスの一覧です。 型`DiscountCalculator`で、**名前**ボックスし、をクリックして**OK**です。  
+2.  選択**アクティビティ (コード分離付き)** から、 **Visual c# アイテム**一覧。 型`DiscountCalculator`で、**名前**ボックスし、をクリックして**OK**します。  
   
-3.  右クリック**DiscountCalculator.xoml**で**ソリューション エクスプ ローラー**選択**コードの表示**です。  
+3.  右クリック**DiscountCalculator.xoml**で**ソリューション エクスプ ローラー**選択**コードの表示**します。  
   
 4.  `DiscountCalculator` クラスに次の 3 つのプロパティを追加します。  
   
@@ -59,25 +59,25 @@ ms.locfileid: "33520228"
     }  
     ```  
   
-5.  右クリック**DiscountCalculator.xoml**で**ソリューション エクスプ ローラー**選択**ビュー デザイナー**です。  
+5.  右クリック**DiscountCalculator.xoml**で**ソリューション エクスプ ローラー**選択**ビュー デザイナー**します。  
   
-6.  ドラッグ、**ポリシー**からアクティビティを**Windows Workflow v3.0**のセクションで、**ツールボックス**内にドロップし、 **DiscountCalculator**アクティビティ.  
+6.  ドラッグ、**ポリシー**からのアクティビティ、 **Windows Workflow v3.0**のセクション、**ツールボックス**にドロップし、 **DiscountCalculator**アクティビティ.  
   
     > [!TIP]
-    >  場合、**ツールボックス**ウィンドウが表示されている、select**ツールボックス**から、**ビュー**メニュー。  
+    >  場合、**ツールボックス**ウィンドウが表示される、選択**ツールボックス**から、**ビュー**メニュー。  
   
 #### <a name="to-configure-the-rules"></a>ルールを構成するには  
   
-1.  クリックして、新しく追加した**ポリシー**してが選択されていない場合に選択し、アクティビティ。  
+1.  新しく追加 をクリックして**ポリシー**が選択されていない場合に選択し、するアクティビティ。  
   
-2.  クリックして、 **RuleSetReference**プロパティに、**プロパティ**ウィンドウを選択し、プロパティの右側にある省略記号ボタンをクリックします。  
+2.  をクリックして、 **RuleSetReference**プロパティ、**プロパティ**ウィンドウを選択し、プロパティの右側にある省略記号ボタンをクリックします。  
   
     > [!TIP]
     >  場合、**プロパティ**ウィンドウが表示されていない、選択**プロパティ ウィンドウ**から、**ビュー**メニュー。  
   
 3.  選択**新規 をクリックしています**.  
   
-4.  をクリックして**規則の追加**です。  
+4.  クリックして**規則の追加**します。  
   
 5.  次の式を入力、**条件**ボックス。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "33520228"
     this.DiscountPercent = 0.075  
     ```  
   
-7.  をクリックして**規則の追加**です。  
+7.  クリックして**規則の追加**します。  
   
 8.  次の式を入力、**条件**ボックス。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "33520228"
     this.DiscountPercent = 0.15  
     ```  
   
-10. をクリックして**規則の追加**です。  
+10. クリックして**規則の追加**します。  
   
 11. 次の式を入力、**条件**ボックス。  
   
@@ -125,9 +125,9 @@ ms.locfileid: "33520228"
     this.Total = this.Subtotal  
     ```  
   
-14. をクリックして**OK**を閉じる、**ルール セット エディター**  ダイアログ ボックス。  
+14. クリックして**OK**を閉じる、**ルール セット エディター**  ダイアログ ボックス。  
   
-15. 新たに作成されたことを確認<xref:System.Workflow.Activities.Rules.RuleSet>でが選択されている、**名前**ボックスの一覧し、をクリックして **[ok]** です。  
+15. 新たに作成されたことを確認します<xref:System.Workflow.Activities.Rules.RuleSet>でが選択されている、**名前**ボックスの一覧をクリックします**OK**。  
   
 16. Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。  
   
@@ -154,23 +154,23 @@ Rule3: IF this.DiscountPercent > 0
   
 1.  右クリック**PolicyInteropDemo**で**ソリューション エクスプ ローラー**選択**追加**、し**新しいプロジェクト**.  
   
-2.  いることを確認 **.NET Framework 4.5** .NET Framework のバージョンのドロップダウン リストで選択され、選択**ワークフロー コンソール アプリケーション**から、 **Visual c# アイテム** ボックスの一覧です。  
+2.  いることを確認 **.NET Framework 4.5**が .NET Framework のバージョンのドロップダウン リストで選択されているし、選択**ワークフロー コンソール アプリケーション**から、 **Visual c# アイテム**一覧。  
   
-3.  型`PolicyInteropHost`に、**名前**ボックスし、をクリックして**OK**です。  
+3.  型`PolicyInteropHost`に、**名前**ボックスし、をクリックして**OK**します。  
   
-4.  右クリック**PolicyInteropHost**で**ソリューション エクスプ ローラー**選択**プロパティ**です。  
+4.  右クリック**PolicyInteropHost**で**ソリューション エクスプ ローラー**選択**プロパティ**します。  
   
-5.  **ターゲット フレームワーク**ドロップダウン ボックスの一覧で選択を変更するから **.NET Framework 4 Client Profile**に **.NET Framework 4.5**です。 をクリックして**はい**ことを確認します。  
+5.  **ターゲット フレームワーク**ドロップダウン リストから選択を変更する一覧で、 **.NET Framework 4 Client Profile**に **.NET Framework 4.5**します。 クリックして**はい**を確認します。  
   
 6.  右クリック**PolicyInteropHost**で**ソリューション エクスプ ローラー**選択**参照の追加**.  
   
-7.  選択**PolicyActivityLibrary**から、**プロジェクト** タブでをクリックし、 **OK**です。  
+7.  選択**PolicyActivityLibrary**から、**プロジェクト** タブでをクリックし、 **OK**します。  
   
 8.  右クリック**PolicyInteropHost**で**ソリューション エクスプ ローラー**選択**参照の追加**.  
   
-9. 選択**System.Workflow.Activities**、 **System.Workflow.ComponentModel**、し**System.Workflow.Runtime**から、 **.NET** タブでをクリックし、 **OK**です。  
+9. 選択**System.Workflow.Activities**、 **System.Workflow.ComponentModel**、し**System.Workflow.Runtime**から、 **.NET** タブでをクリックし、 **OK**します。  
   
-10. 右クリック**PolicyInteropHost**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**です。  
+10. 右クリック**PolicyInteropHost**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**します。  
   
 11. Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。  
   
@@ -179,7 +179,7 @@ Rule3: IF this.DiscountPercent > 0
   
 ##### <a name="to-use-the-interop-activity-in-code"></a>コードで Interop アクティビティを使用するには  
   
-1.  右クリック**Program.cs**で**ソリューション エクスプ ローラー**選択**コードの表示**です。  
+1.  右クリック**Program.cs**で**ソリューション エクスプ ローラー**選択**コードの表示**します。  
   
 2.  ファイルの先頭に次の `using` ステートメントを追加します。  
   
@@ -263,49 +263,49 @@ Rule3: IF this.DiscountPercent > 0
   
 ##### <a name="to-host-the-policyactivity-using-a-workflow-designer-created-workflow"></a>ワークフロー デザイナーで作成したワークフローを使用して PolicyActivity をホストするには  
   
-1.  右クリック**Workflow1.xaml**で**ソリューション エクスプ ローラー**選択**削除**です。 **[OK]** をクリックして確定します。  
+1.  右クリック**Workflow1.xaml**で**ソリューション エクスプ ローラー**選択**削除**します。 **[OK]** をクリックして確定します。  
   
 2.  右クリック**PolicyInteropHost**で**ソリューション エクスプ ローラー**選択**追加**、**新しい項目の追加**.  
   
-3.  展開して、 **Visual c# アイテム**ノード**ワークフロー**です。 選択**アクティビティ**から、 **Visual c# アイテム** ボックスの一覧です。  
+3.  展開、 **Visual c# アイテム**ノード**ワークフロー**します。 選択**アクティビティ**から、 **Visual c# アイテム**一覧。  
   
-4.  型`DiscountWorkflow`に、**名前**ボックスし、をクリックして**追加**です。  
+4.  型`DiscountWorkflow`に、**名前**ボックスし、をクリックして**追加**します。  
   
-5.  クリックして、**引数**を表示するワークフロー デザイナーの左下のボタン、**引数**ウィンドウです。  
+5.  をクリックして、**引数**を表示するワークフロー デザイナーの左下のボタン、**引数**ウィンドウ。  
   
-6.  をクリックして**引数の作成**です。  
+6.  クリックして**引数の作成**です。  
   
-7.  型`Subtotal`に、**名前**ボックスで、**で**から、**方向**ドロップダウン リストで、**二重**から**引数の型**ドロップ ダウンし、enter キーを押して引数を保存します。  
-  
-    > [!NOTE]
-    >  場合**二重**に含まれていない、**引数の型**ドロップダウン リストで、**型を参照しています.**、型`System.Double`で、**型名**ボックスし、をクリックして**OK**です。  
-  
-8.  をクリックして**引数の作成**です。  
-  
-9. 型`DiscountPercent`に、**名前**ボックスで、**アウト**から、**方向**ドロップダウン リストで、**二重**から**引数の型**ドロップ ダウンし、enter キーを押して引数を保存します。  
-  
-10. をクリックして**引数の作成**です。  
-  
-11. 型`Total`に、**名前**ボックスで、**アウト**から、**方向**ドロップダウン リストで、**二重**から**引数の型**ドロップ ダウンし、enter キーを押して引数を保存します。  
-  
-12. クリックして、**引数**を閉じる、ワークフロー デザイナーの左下のボタン、**引数**ウィンドウです。  
-  
-13. ドラッグ、**シーケンス**からアクティビティを**制御フロー**のセクションで、**ツールボックス**し、ワークフロー デザイナー画面にドロップします。  
-  
-14. ドラッグ、**相互運用機能**からアクティビティを**移行**のセクションで、**ツールボックス**内にドロップし、**シーケンス**アクティビティ。  
-  
-15. クリックして、**相互運用機能**上のアクティビティ、 **[参照] をクリックしています.** ラベルを入力**DiscountCalculator**で、**型名**ボックスし、をクリックして**OK**です。  
+7.  型`Subtotal`に、**名前**ボックスで、**で**から、**方向**ドロップダウン リストで選択**二重**から**引数の型**ドロップダウン、し、enter キーを押して引数を保存します。  
   
     > [!NOTE]
-    >  <xref:System.Activities.Statements.Interop> アクティビティをワークフローに追加し、`DiscountCalculator` 型を <xref:System.Activities.Statements.Interop.ActivityType%2A> として指定すると、<xref:System.Activities.Statements.Interop> アクティビティは 3 つの <xref:System.Activities.ArgumentDirection.In> 引数と 3 つの <xref:System.Activities.ArgumentDirection.Out> 引数を公開します。これは `DiscountCalculator` アクティビティの 3 つのパブリック プロパティを表します。 <xref:System.Activities.ArgumentDirection.In>引数は、3 つのパブリック プロパティと、3 つと同じ名前を付ける<xref:System.Activities.ArgumentDirection.Out>引数と一致する名前がある**アウト**プロパティ名に付加します。 次の手順では、前の手順で作成したワークフロー引数を、<xref:System.Activities.Statements.Interop> アクティビティの引数にバインドします。  
+    >  場合**二重**内にない、**引数の型**ドロップダウン リストで、**型を参照しています.**、型`System.Double`で、**型名**ボックスし、をクリックして**OK**します。  
   
-16. 型`DiscountPercent`に、 **VB の式を入力**の右側のボックスに、 **DiscountPercentOut**プロパティと TAB キーを押します。  
+8.  クリックして**引数の作成**です。  
   
-17. 型`Subtotal`に、 **VB の式を入力**の右側のボックスに、 **Subtotal**プロパティと TAB キーを押します。  
+9. 型`DiscountPercent`に、**名前**ボックスで、**アウト**から、**方向**ドロップダウン リストで選択**二重**から**引数の型**ドロップダウン、し、enter キーを押して引数を保存します。  
   
-18. 型`Total`に、 **VB の式を入力**の右側のボックスに、 **TotalOut**プロパティと TAB キーを押します。  
+10. クリックして**引数の作成**です。  
   
-19. 右クリック**Program.cs**で**ソリューション エクスプ ローラー**選択**コードの表示**です。  
+11. 型`Total`に、**名前**ボックスで、**アウト**から、**方向**ドロップダウン リストで選択**二重**から**引数の型**ドロップダウン、し、enter キーを押して引数を保存します。  
+  
+12. をクリックして、**引数**を閉じる、ワークフロー デザイナーの左下のボタン、**引数**ウィンドウ。  
+  
+13. ドラッグ、**シーケンス**からのアクティビティ、**制御フロー**のセクション、**ツールボックス**し、ワークフロー デザイナー画面にドロップします。  
+  
+14. ドラッグ、**相互運用機能**からのアクティビティ、**移行**のセクション、**ツールボックス**にドロップし、**シーケンス**アクティビティ。  
+  
+15. をクリックして、**相互運用機能**上のアクティビティ、 **[参照] をクリックします.** ラベルに、入力**DiscountCalculator**で、**型名**ボックスし、をクリックして**OK**します。  
+  
+    > [!NOTE]
+    >  <xref:System.Activities.Statements.Interop> アクティビティをワークフローに追加し、`DiscountCalculator` 型を <xref:System.Activities.Statements.Interop.ActivityType%2A> として指定すると、<xref:System.Activities.Statements.Interop> アクティビティは 3 つの <xref:System.Activities.ArgumentDirection.In> 引数と 3 つの <xref:System.Activities.ArgumentDirection.Out> 引数を公開します。これは `DiscountCalculator` アクティビティの 3 つのパブリック プロパティを表します。 <xref:System.Activities.ArgumentDirection.In>引数が 3 つのパブリック プロパティ、および 3 つと同じ名前を持つ<xref:System.Activities.ArgumentDirection.Out>引数と一致する名前がある**アウト**プロパティ名に追加されます。 次の手順では、前の手順で作成したワークフロー引数を、<xref:System.Activities.Statements.Interop> アクティビティの引数にバインドします。  
+  
+16. 型`DiscountPercent`に、 **VB の式を入力します。** の右側のボックスに、 **DiscountPercentOut**プロパティと TAB キーを押します。  
+  
+17. 型`Subtotal`に、 **VB の式を入力します。** の右側のボックスに、 **Subtotal**プロパティと TAB キーを押します。  
+  
+18. 型`Total`に、 **VB の式を入力します。** の右側のボックスに、 **TotalOut**プロパティと TAB キーを押します。  
+  
+19. 右クリック**Program.cs**で**ソリューション エクスプ ローラー**選択**コードの表示**します。  
   
 20. ファイルの先頭に次の `using` ステートメントを追加します。  
   
@@ -359,11 +359,11 @@ Rule3: IF this.DiscountPercent > 0
   
 |ルール機能|ドキュメント|  
 |-------------------|-------------------|  
-|ルールの概要|[Windows Workflow Foundation ルール エンジンの概要](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|RuleSet|[ワークフローでの RuleSets の使用](http://go.microsoft.com/fwlink/?LinkId=178516)と <xref:System.Workflow.Activities.Rules.RuleSet>|  
-|ルールの評価|[RuleSets 内のルールの評価](http://go.microsoft.com/fwlink/?LinkId=178517)|  
-|ルール チェーン|[フォワード チェーン コントロール](http://go.microsoft.com/fwlink/?LinkId=178518)と[ルールのフォワード チェーン](http://go.microsoft.com/fwlink/?LinkId=178519)|  
-|ルール内コレクションの処理|[ルール内コレクションの処理](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|PolicyActivity の使用|[PolicyActivity アクティビティの使用](http://go.microsoft.com/fwlink/?LinkId=178521)と <xref:System.Workflow.Activities.PolicyActivity>|  
+|ルールの概要|[Windows Workflow Foundation ルール エンジンの概要](https://go.microsoft.com/fwlink/?LinkID=152836)|  
+|RuleSet|[ワークフロー内での Ruleset の使用](https://go.microsoft.com/fwlink/?LinkId=178516)と <xref:System.Workflow.Activities.Rules.RuleSet>|  
+|ルールの評価|[ルール セット内のルール評価](https://go.microsoft.com/fwlink/?LinkId=178517)|  
+|ルール チェーン|[フォワード チェーン コントロール](https://go.microsoft.com/fwlink/?LinkId=178518)と[ルールのフォワード チェーン](https://go.microsoft.com/fwlink/?LinkId=178519)|  
+|ルール内コレクションの処理|[ルール内コレクションの処理](https://go.microsoft.com/fwlink/?LinkId=178520)|  
+|PolicyActivity の使用|[PolicyActivity アクティビティの使用](https://go.microsoft.com/fwlink/?LinkId=178521)と <xref:System.Workflow.Activities.PolicyActivity>|  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] で作成したワークフローでは、たとえば宣言的アクティビティ条件や条件付きアクティビティ ([!INCLUDE[wf1](../../../includes/wf1-md.md)]、<xref:System.Workflow.Activities.ConditionedActivityGroup> など) など、<xref:System.Workflow.Activities.ReplicatorActivity> に用意されているルール機能のすべてを使用するわけではありません。 必要に応じて、この機能は [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] および [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] を使用して作成したワークフローに使用できます。 詳細については、次を参照してください。[移行ガイダンス](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)です。
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] で作成したワークフローでは、たとえば宣言的アクティビティ条件や条件付きアクティビティ ([!INCLUDE[wf1](../../../includes/wf1-md.md)]、<xref:System.Workflow.Activities.ConditionedActivityGroup> など) など、<xref:System.Workflow.Activities.ReplicatorActivity> に用意されているルール機能のすべてを使用するわけではありません。 必要に応じて、この機能は [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] および [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] を使用して作成したワークフローに使用できます。 詳細については、次を参照してください。[移行ガイダンス](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)します。

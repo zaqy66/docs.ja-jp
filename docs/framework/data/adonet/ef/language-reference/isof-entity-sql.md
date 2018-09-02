@@ -2,12 +2,12 @@
 title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 7aecb8e2740ffd711278bfd5735c71c2dacf9c3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dbea0c3a0087c88bf5ffda7b921764b8a0f9f21d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762141"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465448"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 式の型が指定の型であるか、またはそのサブタイプであるかを判断します。  
@@ -34,8 +34,8 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
 ## <a name="return-value"></a>戻り値  
  `true` が型 T で、T が基本データ型または `expression` の派生型である場合は、`type` となります。`expression` が実行時に null である場合は null となり、それ以外の場合は `false` となります。  
   
-## <a name="remarks"></a>コメント  
- 式`expression IS NOT OF (type)`と`expression IS NOT OF (ONLY type)`構文は同じ`NOT (expression IS OF (type))`と`NOT (expression IS OF (ONLY type))`、それぞれします。  
+## <a name="remarks"></a>Remarks  
+ 式`expression IS NOT OF (type)`と`expression IS NOT OF (ONLY type)`を構文的に等価`NOT (expression IS OF (type))`と`NOT (expression IS OF (ONLY type))`、それぞれします。  
   
  次の表に、いくつかの通常およびコーナー パターンにおける `IS OF` 演算子の動作を示します。 すべての例外はクライアント側にスローされてから、プロバイダーが呼び出されます。  
   
@@ -52,7 +52,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
 |RowType IS OF (RowType)|スロー|  
   
 ## <a name="example"></a>例  
- 次[!INCLUDE[esql](../../../../../../includes/esql-md.md)]クエリ、IS OF 演算子を使用して、クエリ式の種類を確認して、TREAT 演算子を使用して Course 型のオブジェクトを OnsiteCourse 型のオブジェクトのコレクションに変換します。 基づくクエリでは、 [School モデル](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)です。  
+ 次[!INCLUDE[esql](../../../../../../includes/esql-md.md)]クエリが、IS OF 演算子を使用して、クエリ式の種類を判断し、TREAT 演算子を使用して、Course 型のオブジェクトを OnsiteCourse 型のオブジェクトのコレクションに変換します。 クエリに基づいていますが、 [School モデル](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)します。  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   

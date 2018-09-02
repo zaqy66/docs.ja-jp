@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 45b9ee94b35f368a9d0c96381083aa58c9a23f77
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: e8fa4c084ae9c775a18de06c344b2c0b439c2b1b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255489"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467816"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 属性
 指定します[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]マークアップ ファイルで発生した名前空間プレフィックスを無視できます、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサ。 `mc:Ignorable`属性は、カスタムの名前空間のマッピングとのマークアップの互換性をサポートしている[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]バージョン管理します。  
@@ -62,8 +62,8 @@ ms.locfileid: "43255489"
  既定で、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサは、無視された要素内のコンテンツを無視します。 ただし、追加の属性を指定できます[mc:ProcessContent 属性](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)、[次へ] の使用可能な親要素によって無視された要素内のコンテンツの継続処理を要求します。  
   
  たとえば、区切り記号として 1 つ以上の空白文字を使用して、属性で複数のプレフィックスを指定できます:`mc:Ignorable="ignore1 ignore2"`します。  
-  
- [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]名前空間は、他の要素とのこの領域内に記載されていない属性を定義、[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]します。 詳細については、次を参照してください。 [XML マークアップ互換性仕様](http://go.microsoft.com/fwlink/?LinkId=73824)します。  
+
+ [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]名前空間は、他の要素とのこの領域内に記載されていない属性を定義、[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]します。 詳細については、次を参照してください。 [XML マークアップ互換性仕様](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Markup.XamlReader>  

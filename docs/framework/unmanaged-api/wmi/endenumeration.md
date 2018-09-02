@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 33c73e58be39a7f1ffa9300947c3ee552231adab
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257494"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462312"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration 関数
 呼び出しで開始した、列挙体シーケンスの終了、 [BeginEnumeration 関数](beginenumeration.md)します。  

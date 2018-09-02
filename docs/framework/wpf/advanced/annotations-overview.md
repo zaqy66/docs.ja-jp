@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 80555ad714ffe5cab6722d2d6d45fb6a6bb45609
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540844"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463968"
 ---
 # <a name="annotations-overview"></a>注釈の概要
 用紙にメモやコメントを書くことは普通の行為であり、人はそれを当たり前のことと思っています。 そのようなメモやコメントが "注釈" です。注釈をドキュメントに追加することで情報に目印を付け、興味のある内容を強調表示し、後で参照します。 印刷したドキュメントにメモを書くことは簡単で一般的な行為ですが、電子ドキュメントに個人的なコメントを追加する機能は利用できるとしても一般的に非常に限定されています。  
   
- このトピックは、いくつかの一般的な種類の注釈、付箋を具体的にはのハイライトを確認しを示していますが、どのように[!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)]これらの種類の Windows Presentation Foundation (WPF) ドキュメントを通じてアプリケーションで注釈が容易になりますコントロールを表示します。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 注釈をサポートするドキュメント表示コントロールを含める<xref:System.Windows.Controls.FlowDocumentReader>と<xref:System.Windows.Controls.FlowDocumentScrollViewer>から派生したコントロールにも、<xref:System.Windows.Controls.Primitives.DocumentViewerBase>など<xref:System.Windows.Controls.DocumentViewer>と<xref:System.Windows.Controls.FlowDocumentPageViewer>です。  
+ このトピックでは、いくつかの一般的な種類の注釈、特に付箋と強調表示、レビューしを示していますが、どのように[!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)]これらの種類の Windows Presentation Foundation (WPF) のドキュメントをアプリケーションで注釈を容易になります。コントロールを表示します。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 注釈をサポートするドキュメント表示コントロールには、<xref:System.Windows.Controls.FlowDocumentReader>と<xref:System.Windows.Controls.FlowDocumentScrollViewer>コントロールから派生したほか、<xref:System.Windows.Controls.Primitives.DocumentViewerBase>など<xref:System.Windows.Controls.DocumentViewer>と<xref:System.Windows.Controls.FlowDocumentPageViewer>します。  
   
   
 <a name="caf1_type_stickynotes"></a>   
@@ -43,7 +43,7 @@ ms.locfileid: "33540844"
   
  ![注釈の強調表示](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
   
- ユーザーは通常、まずいくつかのテキストまたは、目的の項目を選択し、表示するを右クリックして注釈を作成、<xref:System.Windows.Controls.ContextMenu>注釈オプション。  次の例は、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]宣言に使用できる、<xref:System.Windows.Controls.ContextMenu>ルーティングのコマンドを作成して注釈を管理ユーザーがアクセスできるとします。  
+ 通常、ユーザーは最初にいくつかのテキストや、関心のある項目を選択して表示する右クリックし、注釈を作成、<xref:System.Windows.Controls.ContextMenu>注釈オプション。  次の例は、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]宣言に使用できる、<xref:System.Windows.Controls.ContextMenu>ルーティング コマンドに作成および注釈を管理するユーザーにアクセスできます。  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33540844"
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- 別のシナリオ例にはでは、注釈および電子メールでドキュメント リーダー間で付箋の交換を可能にするアプリケーションが含まれます。 そのような機能を利用すると、交換された注釈を含むページにドキュメント リーダーで移動できます。  
+ もう 1 つのシナリオ例にはでは、注釈や付箋を電子メールでドキュメント リーダー間の交換を有効にするアプリケーションが含まれます。 そのような機能を利用すると、交換された注釈を含むページにドキュメント リーダーで移動できます。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
@@ -75,4 +75,4 @@ ms.locfileid: "33540844"
  [ContextMenu の概要](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
  [コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [フロー ドキュメントの概要](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [方法: メニュー アイテムにコマンドを追加する](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+ [方法: メニュー アイテムにコマンドを追加する](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

@@ -2,15 +2,15 @@
 title: '&lt;netHttpBinding&gt; の &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: be96306b61b3eb6bfb8d3305ccbb05bb3ec4549d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30098d2b9a9087eb0543bdd7c8a899cd66c91ed8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354113"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466712"
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; の &lt;message&gt;
-メッセージ レベルのセキュリティの設定を定義、 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)です。  
+メッセージ レベル セキュリティの設定を定義、 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)します。  
   
  \<system.ServiceModel >  
 \<bindings>  
@@ -41,8 +41,8 @@ ms.locfileid: "33354113"
   
 |値|説明|  
 |-----------|-----------------|  
-|UserName|-UserName 資格情報を使用してサーバーにクライアントの認証が必要です。 この資格情報は、<`clientCredentials`> 要素を使用して指定する必要があります。<br />WCF では、パスワード ダイジェストの送信、またはパスワードを使用して、そのようなキーを使用して、メッセージ セキュリティのためのキーの派生は使用できません。 そのため、WCF では、トランスポートは、UserName 資格情報を使用する場合にセキュリティで保護することを強制します。 `basicHttpBinding` の場合は、SSL チャネルの設定が必要です。|  
-|証明書|証明書を使用してクライアントをサーバーに認証するように要求します。 この場合のクライアント資格情報は、<`clientCredentials`> および <`clientCertificate`> を使用して指定する必要があります。 さらに、メッセージのセキュリティ モードを使用する場合は、クライアントにサービス証明書を準備する必要があります。 ここではサービスの資格情報を使用して指定する必要があります<xref:System.ServiceModel.Description.ClientCredentials>クラスまたは`ClientCredentials`動作要素をサービスを指定することを使用して証明書、 \<serviceCertificate > serviceCredentials の要素。|  
+|UserName|-ユーザー名資格情報を使用してサーバーにクライアントを認証する必要があります。 この資格情報は、<`clientCredentials`> 要素を使用して指定する必要があります。<br />WCF は、パスワード ダイジェストの送信、またはパスワードを使用して、このようなキーを使用して、メッセージ セキュリティのためのキーの派生をサポートしていません。 そのため、WCF トランスポートは、UserName 資格情報を使用する場合にセキュリティで保護することを強制します。 `basicHttpBinding` の場合は、SSL チャネルの設定が必要です。|  
+|証明書|証明書を使用してクライアントをサーバーに認証するように要求します。 この場合のクライアント資格情報は、<`clientCredentials`> および <`clientCertificate`> を使用して指定する必要があります。 さらに、メッセージのセキュリティ モードを使用する場合は、クライアントにサービス証明書を準備する必要があります。 ここでサービス資格情報を使用して指定する必要があります<xref:System.ServiceModel.Description.ClientCredentials>クラスまたは`ClientCredentials`動作の要素と、サービスの指定を使用して証明書の\<serviceCertificate > serviceCredentials の要素。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -51,7 +51,7 @@ ms.locfileid: "33354113"
   
 |要素|説明|  
 |-------------|-----------------|  
-|<`security`> の要素 <`netHttpBinding`>|<`netHttpBinding`> 要素のセキュリティ機能を定義します。|  
+|<`security`> 要素の <`netHttpBinding`>|<`netHttpBinding`> 要素のセキュリティ機能を定義します。|  
   
 ## <a name="example"></a>例  
  このサンプルでは、basicHttpBinding とメッセージ セキュリティを使用するアプリケーションを実装する方法を示します。 サービスの次の構成例では、エンドポイント定義によって basicHttpBinding が指定され、`Binding1` という名前のバインディング構成が参照されます。 サービスがクライアントに対してサービス自体を認証するために使用する証明書は、`behaviors` 要素の下にある構成ファイルの `serviceCredentials` セクションで設定されます。 クライアントがサービスに対してクライアント自体を認証するために使用する証明書に適用される検証モードも、`behaviors` 要素の下にある `clientCertificate` セクションで設定されます。  
@@ -129,5 +129,5 @@ ms.locfileid: "33354113"
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  
  [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [バインディングを使用して、Windows Communication Foundation サービスとクライアントを構成するには](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 82bba149f06fc68f2f01e0e7641d98ebb861dbe6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62e2d05ec724b633de42c4b8e7183676d411791d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364857"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468827"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>サービス操作の呼び出し (WCF Data Services)
-[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] は、データ サービスのサービス操作を定義します。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、データ サービスのメソッドとしてこのような操作を定義できます。 他のデータ サービス リソースと同様に、これらのサービス操作は URI によってアドレス指定できます。 サービス操作では、エンティティ型のコレクション、1 つのエンティティ型のインスタンス、およびプリミティブ型 (整数、文字列など) を返すことができます。 さらに、サービス操作では、`null` (Visual Basic の場合は `Nothing`) を返すこともできます。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリを使用して、HTTP GET 要求をサポートするサービス操作にアクセスすることができます。 この種のサービス操作は、<xref:System.ServiceModel.Web.WebGetAttribute> が適用されたメソッドとして定義されます。 詳細については、次を参照してください。[サービス操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)です。  
+[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] は、データ サービスのサービス操作を定義します。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、データ サービスのメソッドとしてこのような操作を定義できます。 他のデータ サービス リソースと同様に、これらのサービス操作は URI によってアドレス指定できます。 サービス操作では、エンティティ型のコレクション、1 つのエンティティ型のインスタンス、およびプリミティブ型 (整数、文字列など) を返すことができます。 さらに、サービス操作では、`null` (Visual Basic の場合は `Nothing`) を返すこともできます。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリを使用して、HTTP GET 要求をサポートするサービス操作にアクセスすることができます。 この種のサービス操作は、<xref:System.ServiceModel.Web.WebGetAttribute> が適用されたメソッドとして定義されます。 詳細については、次を参照してください。[サービス操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)します。  
   
  サービス操作は、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] を実装するデータ サービスによって返されるメタデータに公開されます。 メタデータ内で、サービス操作は、`FunctionImport` 要素として表されます。 厳密に型指定された <xref:System.Data.Services.Client.DataServiceContext> を生成するとき、この要素は "サービス参照の追加" と DataSvcUtil.exe ツールで無視されます。 このため、サービス操作を直接呼び出すために使用できるコンテキストにはメソッドはありません。 ただし、次のいずれかの方法を使用して、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアントでサービス操作を呼び出すことができます。  
   
 -   <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> で <xref:System.Data.Services.Client.DataServiceContext> メソッドを呼び出し、サービス操作の URI をその他のパラメーターと共に指定します。 このメソッドは、GET サービス操作の呼び出しに使用されます。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> の <xref:System.Data.Services.Client.DataServiceContext> メソッドを使用して、<xref:System.Data.Services.Client.DataServiceQuery%601> オブジェクトを作成します。 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> を呼び出すとき、サービス操作の名前が `entitySetName` パラメーターに渡されます。 このメソッドは、列挙されたときまたは <xref:System.Data.Services.Client.DataServiceQuery%601> メソッドが呼び出されたときにサービス操作を呼び出す <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> オブジェクトを返します。 このメソッドは、コレクションを返す GET サービス操作の呼び出しに使用されます。 1 つのパラメーターは、<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> メソッドを使用して指定することができます。 このメソッドによって返される <xref:System.Data.Services.Client.DataServiceQuery%601> オブジェクトは、クエリ オブジェクトのようにさらに構成できます。 詳細については、次を参照してください。[データ サービスのクエリ](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)です。  
+-   <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> の <xref:System.Data.Services.Client.DataServiceContext> メソッドを使用して、<xref:System.Data.Services.Client.DataServiceQuery%601> オブジェクトを作成します。 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> を呼び出すとき、サービス操作の名前が `entitySetName` パラメーターに渡されます。 このメソッドは、列挙されたときまたは <xref:System.Data.Services.Client.DataServiceQuery%601> メソッドが呼び出されたときにサービス操作を呼び出す <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> オブジェクトを返します。 このメソッドは、コレクションを返す GET サービス操作の呼び出しに使用されます。 1 つのパラメーターは、<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> メソッドを使用して指定することができます。 このメソッドによって返される <xref:System.Data.Services.Client.DataServiceQuery%601> オブジェクトは、クエリ オブジェクトのようにさらに構成できます。 詳細については、次を参照してください。[データ サービスのクエリ](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)します。  
   
 ## <a name="considerations-for-calling-service-operations"></a>サービス操作の呼び出しに関する考慮事項  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアントを使用してサービス操作を呼び出す際は、次の点に注意してください。  
   
--   データ サービスを非同期的にアクセスするときに、同等の非同期を使用する必要があります<xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>メソッド<xref:System.Data.Services.Client.DataServiceContext>または<xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>メソッド<xref:System.Data.Services.Client.DataServiceQuery%601>です。  
+-   データ サービスを非同期的にアクセスするときに、同等の非同期を使用する必要があります<xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>メソッド<xref:System.Data.Services.Client.DataServiceContext>または<xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>メソッド<xref:System.Data.Services.Client.DataServiceQuery%601>します。  
   
 -   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリは、プリミティブ型のコレクションを返すサービス操作からの結果を具体化できません。  
   
@@ -32,20 +32,20 @@ ms.locfileid: "33364857"
   
 -   <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> を使用して、エンティティまたはプリミティブ型の単一の結果を返す GET サービス操作または 1 つ以上の入力パラメーターを必要とする GET サービス操作を呼び出すことはできません。 代わりに <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> メソッドを呼び出す必要があります。  
   
--   ツールによって生成される厳密に型指定された <xref:System.Data.Services.Client.DataServiceContext> 部分クラスで <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> メソッドまたは <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> メソッドを使用してサービス操作を呼び出す拡張メソッドを作成することを検討してください。 これにより、コンテキストから直接サービス操作を呼び出すことができます。 詳細については、ブログの投稿を参照してください。[サービス操作と、WCF Data Services クライアント](http://go.microsoft.com/fwlink/?LinkId=215668)です。  
+-   ツールによって生成される厳密に型指定された <xref:System.Data.Services.Client.DataServiceContext> 部分クラスで <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> メソッドまたは <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> メソッドを使用してサービス操作を呼び出す拡張メソッドを作成することを検討してください。 これにより、コンテキストから直接サービス操作を呼び出すことができます。 詳細については、ブログの投稿を参照してください。[サービス操作と、WCF Data Services クライアント](https://go.microsoft.com/fwlink/?LinkId=215668)します。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> を使用してサービス操作を呼び出す場合、クライアント ライブラリは、アンパサンド (&amp;) などの予約文字のパーセント エンコードを実行し、文字列内の単一引用符をエスケープして、<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> に入力された文字を自動的にエスケープします。 ただしを呼び出す場合のいずれか、 *Execute*メソッドを呼び出してサービス操作では、このユーザーが指定した文字列の値のエスケープを実行することを忘れないでください。 URI 内の単一引用符は、単一引用符のペアとしてエスケープされます。  
+-   <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> を使用してサービス操作を呼び出す場合、クライアント ライブラリは、アンパサンド (&amp;) などの予約文字のパーセント エンコードを実行し、文字列内の単一引用符をエスケープして、<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> に入力された文字を自動的にエスケープします。 ただし、ときに呼び出すことの 1 つ、 *Execute*メソッドを呼び出すサービス操作では、このユーザーが指定した文字列値のエスケープを実行することができます。 URI 内の単一引用符は、単一引用符のペアとしてエスケープされます。  
   
 ## <a name="examples-of-calling-service-operations"></a>サービス操作の呼び出しの例  
  このセクションには、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリを使用してサービス操作を呼び出す方法を示す次の例が含まれています。  
   
--   [Execute 呼び出して&lt;T&gt;エンティティのコレクションを返す](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
+-   [Execute 呼び出して&lt;T&gt;エンティティのコレクションを取得するには](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   
--   [CreateQuery を使用して&lt;T&gt;エンティティのコレクションを返す](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
+-   [CreateQuery を使用して&lt;T&gt;エンティティのコレクションを取得するには](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
   
 -   [Execute 呼び出して&lt;T&gt;を 1 つのエンティティを返す](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
   
--   [Execute 呼び出して&lt;T&gt;プリミティブ値のコレクションを返す](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
+-   [Execute 呼び出して&lt;T&gt;プリミティブ値のコレクションを取得するには](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
   
 -   [Execute 呼び出して&lt;T&gt;を 1 つのプリミティブ値を返す](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "33364857"
 -   [サービス操作の非同期呼び出し](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteAsync)  
   
 <a name="ExecuteIQueryable"></a>   
-### <a name="calling-executet-to-return-a-collection-of-entities"></a>Execute 呼び出して\<T > をエンティティのコレクションを返す  
+### <a name="calling-executet-to-return-a-collection-of-entities"></a>Execute 呼び出して\<T > のエンティティのコレクションを取得するには  
  次の例では、文字列パラメーター `city` を受け取り、<xref:System.Linq.IQueryable%601> を返す、GetOrdersByCity という名前のサービス操作を呼び出します。  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationiqueryable)]
@@ -63,7 +63,7 @@ ms.locfileid: "33364857"
  この例では、サービス操作は、`Order` オブジェクトのコレクションを関連する `Order_Detail` オブジェクトと共に返します。  
   
 <a name="CreateQueryIQueryable"></a>   
-### <a name="using-createqueryt-to-return-a-collection-of-entities"></a>CreateQuery を使用して\<T > をエンティティのコレクションを返す  
+### <a name="using-createqueryt-to-return-a-collection-of-entities"></a>CreateQuery を使用して\<T > のエンティティのコレクションを取得するには  
  次の例では、<xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> を使用して、同じ GetOrdersByCity サービス操作を呼び出すために使用される <xref:System.Data.Services.Client.DataServiceQuery%601> を返します。  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationCreateQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationcreatequery)]
@@ -81,7 +81,7 @@ ms.locfileid: "33364857"
  この例では、<xref:System.Linq.Enumerable.FirstOrDefault%2A> メソッドを使用して、実行時に単一の Order エンティティのみを要求します。  
   
 <a name="ExecutePrimitiveCollection"></a>   
-### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a>Execute 呼び出して\<T > のプリミティブ値のコレクションを返す  
+### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a>Execute 呼び出して\<T > のプリミティブ値のコレクションを取得するには  
  次の例では、文字列値のコレクションを返すサービス操作を呼び出します。  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationEnumString](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationenumstring)]  

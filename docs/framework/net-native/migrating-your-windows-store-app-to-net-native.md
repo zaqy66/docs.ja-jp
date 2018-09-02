@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a44819e8a8c0b07b3ffbfb2d92533cbdc558ef6
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3909855db109938794fad3e0afc99d492009b81c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874745"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461788"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows ストア アプリの .NET ネイティブへの移行
-.NET ネイティブ アプリ、Windows ストアまたは開発者のコンピューター上の静的なコンパイルを提供します。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いは、.NET ネイティブ試行との互換性を維持するために、 [Windows ストア アプリ用 .NET](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)します。 ほとんどの場合、Windows ストア アプリ用 .NET で機能する機能は、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、次の領域で、標準的な Windows ストア アプリ用 .NET と .NET ネイティブのこれらの違いについて説明します。  
+.NET ネイティブ アプリ、Windows ストアまたは開発者のコンピューター上の静的なコンパイルを提供します。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いは、.NET ネイティブ試行との互換性を維持するために、 [Windows ストア アプリ用 .NET](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)します。 ほとんどの場合、Windows ストア アプリ用 .NET で機能する機能は、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、次の領域で、標準的な Windows ストア アプリ用 .NET と .NET ネイティブのこれらの違いについて説明します。  
   
 -   [全般的なランタイムの違い](#Runtime)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "37874745"
   
 -   <xref:System.RuntimeFieldHandle> 構造体と <xref:System.RuntimeMethodHandle> 構造体のパブリック メンバーはサポートされません。 これらの型は、LINQ、式ツリー、および静的な配列の初期化でのみサポートされます。  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> と <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> の基底クラスには隠ぺいされたメンバーが含まれるため、明示的なオーバーライドなしでオーバーライドできます。 これは、その他の [RuntimeReflectionExtensions.GetRuntime*](http://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx) メソッドの場合も同様です。  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> と <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> の基底クラスには隠ぺいされたメンバーが含まれるため、明示的なオーバーライドなしでオーバーライドできます。 これは、他の場合は true。 も[RuntimeReflectionExtensions.GetRuntime*](https://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx)メソッド。  
   
 -   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> と <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> は、特定の組み合わせ (たとえば、byref の配列) を作成しようとしたときに失敗しません。  
   
@@ -151,13 +151,13 @@ ms.locfileid: "37874745"
   
 -   <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> 属性が型に適用されない場合、<xref:System.PlatformNotSupportedException> プロパティは <xref:System.Runtime.InteropServices.GuidAttribute> 例外をスローします。 GUID は主に COM サポートで使用されます。  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>メソッドは、.NET ネイティブで、短い日付を含む文字列を正しく解析します。 ただし、Microsoft サポート技術情報の記事 [KB2803771](http://support.microsoft.com/kb/2803771) と [KB2803755](http://support.microsoft.com/kb/2803755)で説明されている日付と時刻の解析の変更に対する互換性は保持されません。  
+-   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>メソッドは、.NET ネイティブで、短い日付を含む文字列を正しく解析します。 ただし、日付の変更に対する互換性は保持されませんし、マイクロソフト サポート技術情報の記事で説明されている時刻の解析[KB2803771](https://support.microsoft.com/kb/2803771)と[KB2803755](https://support.microsoft.com/kb/2803755)します。  
   
 -   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` .NET ネイティブで正しく丸められます。 CLR の一部のバージョンでは、結果の文字列が丸められるのではなく、切り捨てられます。  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient の違い  
- .NET ネイティブで、<xref:System.Net.Http.HttpClientHandler>クラス WinINet を内部的に使用する (を通じて、 [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)クラス) の代わりに、<xref:System.Net.WebRequest>と<xref:System.Net.WebResponse>標準的な Windows ストア アプリ用 .NET で使用されるクラス。  WinINet では、 <xref:System.Net.Http.HttpClientHandler> クラスでサポートされる構成オプションがすべてサポートされるわけではありません。  結果は次のようになります。  
+ .NET ネイティブで、<xref:System.Net.Http.HttpClientHandler>クラス WinINet を内部的に使用する (を通じて、 [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)クラス) の代わりに、<xref:System.Net.WebRequest>と<xref:System.Net.WebResponse>標準的な Windows ストア アプリ用 .NET で使用されるクラス。  WinINet では、 <xref:System.Net.Http.HttpClientHandler> クラスでサポートされる構成オプションがすべてサポートされるわけではありません。  結果は次のようになります。  
   
 -   機能プロパティの一部<xref:System.Net.Http.HttpClientHandler>返す`false`.NET ネイティブで返す一方`true`標準的な Windows ストア アプリ用 .NET でします。  
   
@@ -167,11 +167,11 @@ ms.locfileid: "37874745"
   
  **プロキシ**  
   
- [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) クラスは、要求ごとのプロキシの構成とオーバーライドをサポートしません。  つまり、.NET ネイティブのすべての要求使用システムに構成されたプロキシ サーバーまたはプロキシ サーバーなしの値に応じて、<xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType>プロパティ。  Windows ストア アプリ用 .NET では、プロキシ サーバーは <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> プロパティにより定義されます。  .NET ネイティブでの設定で、<xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>以外の値を`null`スロー、<xref:System.PlatformNotSupportedException>例外。  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType>プロパティが返す`false`で .NET ネイティブが返されますが、`true`標準の .NET Framework の Windows ストア アプリで。  
+ [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)クラスは、構成と、要求ごとに、プロキシのオーバーライドをサポートしていません。  つまり、.NET ネイティブのすべての要求使用システムに構成されたプロキシ サーバーまたはプロキシ サーバーなしの値に応じて、<xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType>プロパティ。  Windows ストア アプリ用 .NET では、プロキシ サーバーは <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> プロパティにより定義されます。  .NET ネイティブでの設定で、<xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>以外の値を`null`スロー、<xref:System.PlatformNotSupportedException>例外。  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType>プロパティが返す`false`で .NET ネイティブが返されますが、`true`標準の .NET Framework の Windows ストア アプリで。  
   
  **自動リダイレクト**  
   
- [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) クラスでは、自動リダイレクトの最大数の構成が許可されません。  標準の Windows ストア アプリ用 .NET での <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> プロパティの値は既定で 50 で、変更できません。 このプロパティの値は 10 がスローされますを変更しようと .NET ネイティブの<xref:System.PlatformNotSupportedException>例外。  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType>プロパティが返す`false`で .NET ネイティブが返されますが、 `true` Windows ストア アプリ用 .NET で。  
+ [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)クラスを構成する自動リダイレクトの最大数が許可されません。  標準の Windows ストア アプリ用 .NET での <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> プロパティの値は既定で 50 で、変更できません。 このプロパティの値は 10 がスローされますを変更しようと .NET ネイティブの<xref:System.PlatformNotSupportedException>例外。  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType>プロパティが返す`false`で .NET ネイティブが返されますが、 `true` Windows ストア アプリ用 .NET で。  
   
  **自動展開**  
   
@@ -199,8 +199,7 @@ ms.locfileid: "37874745"
   
 <a name="Interop"></a>   
 ### <a name="interop-differences"></a>相互運用の違い  
- 
-  **非推奨の API**  
+ **非推奨の API**  
   
  マネージド コードで相互運用性のために使用される頻度が低い API のいくつかが、非推奨にされました。 これらの Api がスローされる .NET ネイティブと共に使用すると、<xref:System.NotImplementedException>または<xref:System.PlatformNotSupportedException>例外、またはコンパイラ エラーが発生します。 Windows ストア アプリ用 .NET では、これらの API は廃止としてマークされていますが、これらの API を呼び出すとコンパイラ エラーではなくコンパイラの警告が生成されます。  
   
@@ -218,9 +217,9 @@ ms.locfileid: "37874745"
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> サポートされてと共に使用した場合など、いくつかのシナリオでの例外をスローしますが、 [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx)や byref バリアント。  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> サポートされてと共に使用した場合など、いくつかのシナリオでの例外をスローしますが、 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)や byref バリアント。  
   
- 非推奨の [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) サポート用 API:  
+ 非推奨の Api の[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)サポートします。  
   
 |型|メンバー|  
 |----------|------------|  
@@ -319,7 +318,7 @@ ms.locfileid: "37874745"
   
     -   `BStr`  
   
-    -   [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509.aspx)  
+    -   [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
   
  ただし、.NET ネイティブは以下をサポートします。  
   
@@ -327,7 +326,7 @@ ms.locfileid: "37874745"
   
 -   マネージド型での <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> インターフェイスの実装  
   
--   実装する、 [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx)インターフェイスを使用したマネージ型で、<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>属性。 ただし、 `IDispatch`から COM オブジェクトを呼び出すことはできず、マネージド オブジェクトは `IDispatch`を実装できないことに注意してください。  
+-   実装する、 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)インターフェイスを使用したマネージ型で、<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>属性。 ただし、 `IDispatch`から COM オブジェクトを呼び出すことはできず、マネージド オブジェクトは `IDispatch`を実装できないことに注意してください。  
   
  リフレクションを使用したプラットフォーム呼び出しメソッドの呼び出しはサポートされません。 この制限を回避するには、別のメソッドでメソッド呼び出しをラップし、リフレクションを使用してラッパーを代わりに呼び出します。  
   
@@ -401,7 +400,7 @@ ms.locfileid: "37874745"
   
  **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**  
   
- 内の型、 [System.ServiceModel.* 名前空間](http://msdn.microsoft.com/library/gg145010.aspx)は .NET ネイティブでサポートされていません。 そうした型には、次のようなものがあります。  
+ 内の型、 [System.ServiceModel.* 名前空間](https://msdn.microsoft.com/library/gg145010.aspx)は .NET ネイティブでサポートされていません。 そうした型には、次のようなものがあります。  
   
 ||  
 |-|  
@@ -674,5 +673,5 @@ ms.locfileid: "37874745"
 ## <a name="see-also"></a>関連項目  
  [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [.NET Windows ストア アプリの概要](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+ [.NET Windows ストア アプリの概要](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
  [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

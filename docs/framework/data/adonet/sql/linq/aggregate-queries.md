@@ -2,12 +2,12 @@
 title: 集計クエリ
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: e4d5e0a9dc1ffb0bf1857fee788d46947f3901d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358844"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464154"
 ---
 # <a name="aggregate-queries"></a>集計クエリ
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、`Average`、`Count`、`Max`、`Min`、および `Sum` の各集計演算子をサポートしています。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の集計演算子には、次の特性があります。  
@@ -18,11 +18,11 @@ ms.locfileid: "33358844"
   
 -   通常、集計クエリはコレクションではなく 1 つの数値を返します。  
   
-     詳細については、次を参照してください。[集計操作](http://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4)です。  
+     詳細については、次を参照してください。[集計操作](https://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4)します。  
   
 -   匿名型に対して集計を呼び出すことはできません。  
   
- 以下のトピックの例は、Northwind サンプル データベースから派生しています。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)です。  
+ 以下のトピックの例は、Northwind サンプル データベースから派生しています。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [一連の数値の平均値の取得](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  

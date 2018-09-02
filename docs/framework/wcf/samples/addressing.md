@@ -2,15 +2,15 @@
 title: アドレス指定
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 94ac903afb27f1b87f0ca8bf05cb891d0d9ee34c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502239"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468366"
 ---
 # <a name="addressing"></a>アドレス指定
-アドレス指定のサンプルでは、エンドポイント アドレスのさまざまな特性と機能を示します。 サンプルがに基づいて、[作業の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)です。 このサンプルでは、サービスは自己ホスト型です。 サービスとクライアントは両方ともコンソール アプリケーションです。 サービスでは、エンドポイントの相対アドレスと絶対アドレスを組み合わせて複数のエンドポイントを定義します。  
+アドレス指定のサンプルでは、エンドポイント アドレスのさまざまな特性と機能を示します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。 このサンプルでは、サービスは自己ホスト型です。 サービスとクライアントは両方ともコンソール アプリケーションです。 サービスでは、エンドポイントの相対アドレスと絶対アドレスを組み合わせて複数のエンドポイントを定義します。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -40,7 +40,7 @@ ms.locfileid: "33502239"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- この場合、相対アドレスが空 ("") のため、エンドポイント アドレスはベース アドレスと同じになります。 実際のエンドポイント アドレスがhttp://localhost:8000/servicemodelsamples/serviceです。  
+ この場合、相対アドレスが空 ("") のため、エンドポイント アドレスはベース アドレスと同じになります。 実際のエンドポイント アドレスが http://localhost:8000/servicemodelsamples/serviceします。  
   
  2 番目のエンドポイント定義でも、相対アドレスを指定します。次のサンプル構成を参照してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33502239"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 相対アドレス "test" がベース アドレスの末尾に追加されています。 実際のエンドポイント アドレスがhttp://localhost:8000/servicemodelsamples/service/testです。  
+ 相対アドレス "test" がベース アドレスの末尾に追加されています。 実際のエンドポイント アドレスが http://localhost:8000/servicemodelsamples/service/testします。  
   
  3 番目のエンドポイント定義では、絶対アドレスを指定します。次のサンプル構成を参照してください。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33502239"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- このアドレスでは、ベース アドレスは使用されていません。 実際のエンドポイント アドレスがhttp://localhost:8001/hello/servicemodelsamplesです。  
+ このアドレスでは、ベース アドレスは使用されていません。 実際のエンドポイント アドレスが http://localhost:8001/hello/servicemodelsamplesします。  
   
  4 番目のエンドポイント アドレスは、絶対アドレスと別のトランスポート (ここでは TCP) を指定しています。 このアドレスでは、ベース アドレスは使用されていません。 具体的には net.tcp://localhost:9000/servicemodelsamples/service です。  
   
@@ -118,11 +118,11 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
     > [!NOTE]
     >  Svcutil.exe を使用してこのサンプルの構成を再生成した場合は、クライアント コードに一致するように、クライアント構成内のエンドポイント名を変更してください。  
@@ -132,7 +132,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   

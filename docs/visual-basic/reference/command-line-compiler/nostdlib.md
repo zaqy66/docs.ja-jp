@@ -9,11 +9,11 @@ ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3764409f13a00f6d8a050bfbdd0f59e537a5ded3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652719"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456293"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 コンパイラが自動的に標準のライブラリを参照します。  
@@ -24,17 +24,17 @@ ms.locfileid: "33652719"
 -nostdlib  
 ```  
   
-## <a name="remarks"></a>コメント  
- `-nostdlib`オプションは、System.dll アセンブリへの自動参照を削除し、コンパイラが Vbc.rsp ファイルを読み取ることを防止します。 Vbc.exe ファイルと同じディレクトリにある、Vbc.rsp ファイルを一般的に使用される参照[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アセンブリとインポート、`System`と`Microsoft.VisualBasic`名前空間。  
+## <a name="remarks"></a>Remarks  
+ `-nostdlib`オプションは、System.dll アセンブリへの自動参照を削除し、コンパイラが Vbc.rsp ファイルを読み取ることを防ぎます。 Vbc.exe のファイルと同じディレクトリにある、Vbc.rsp ファイルを一般的に使用される参照[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アセンブリとインポート、`System`と`Microsoft.VisualBasic`名前空間。  
   
 > [!NOTE]
 >  Mscorlib.dll および Microsoft.VisualBasic.dll のアセンブリは、常に参照されます。  
   
 > [!NOTE]
->  `-nostdlib`オプションは、Visual Studio 開発環境からは利用できません; は、コマンドラインからコンパイルするときにのみ使用します。  
+>  `-nostdlib`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`T2.vb`標準ライブラリを参照することがなくです。 設定する必要があります、`_MYTYPE`条件付きコンパイル定数を削除するには、「空白」の文字列に、`My`オブジェクト。  
+ 次のコードのコンパイル`T2.vb`標準ライブラリを参照することがなく。 設定する必要があります、`_MYTYPE`条件付きコンパイル定数文字列を削除するには、「空」に、`My`オブジェクト。  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

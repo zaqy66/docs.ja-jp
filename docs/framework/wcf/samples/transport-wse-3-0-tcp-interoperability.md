@@ -2,15 +2,15 @@
 title: 'トランスポート : WSE 3.0 TCP 相互運用性'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 8cdd88b354f2e07c84ccfda85c8552d37ca2f519
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b727da998736944afd23f7dcfbf45a1f6049d1d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808013"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461697"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>トランスポート : WSE 3.0 TCP 相互運用性
-WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カスタムの Windows Communication Foundation (WCF) トランスポートとして、TCP 二重セッションを実装する方法を示します。 さらに、チャネル レイヤーの拡張機能を使用して、ネットワーク経由で既存の配置システムと連結する方法も示します。 次の手順では、このカスタムの WCF トランスポートをビルドする方法を示します。  
+WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カスタムの Windows Communication Foundation (WCF) トランスポートとして、TCP 二重セッションを実装する方法を示します。 さらに、チャネル レイヤーの拡張機能を使用して、ネットワーク経由で既存の配置システムと連結する方法も示します。 次の手順では、このカスタム WCF トランスポートを構築する方法を示します。  
   
 1.  まず TCP ソケットを使用して、DIME フレームを使用する <xref:System.ServiceModel.Channels.IDuplexSessionChannel> のクライアント実装とサーバー実装を作成し、メッセージ境界を決定します。  
   
@@ -37,7 +37,7 @@ WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カス�
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- <xref:System.ServiceModel.Channels.Message> がバイトにエンコードされたら、ネットワーク上に送信する必要があります。 これを行うには、メッセージ境界を定義するシステムが必要です。 WSE 3.0 のバージョンを使用する[DIME](http://go.microsoft.com/fwlink/?LinkId=94999)フレーミング プロトコルにします。 `WriteData` はこのフレーム ロジックをカプセル化して、byte[] を一連の DIME レコードにラップします。  
+ <xref:System.ServiceModel.Channels.Message> がバイトにエンコードされたら、ネットワーク上に送信する必要があります。 これを行うには、メッセージ境界を定義するシステムが必要です。 WSE 3.0 のバージョンを使用して[DIME](https://go.microsoft.com/fwlink/?LinkId=94999)フレーム プロトコルとして。 `WriteData` はこのフレーム ロジックをカプセル化して、byte[] を一連の DIME レコードにラップします。  
   
  メッセージ受信用のロジックは、上記のロジックとほぼ同じです。 複雑な点は、主に、読み取られたソケットによって返されるバイトが、要求されたバイトよりも少ない場合があることに関する処理です。 メッセージを受信するには、`WseTcpDuplexSessionChannel` がネットワーク経由でないバイトを読み取って DIME フレームを復号化し、その後<xref:System.ServiceModel.Channels.MessageEncoder> を使用して byte[] を <xref:System.ServiceModel.Channels.Message> に変換します。  
   
@@ -62,7 +62,7 @@ WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カス�
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel` ベースにロジックを追加`WseTcpDuplexSessionChannel`に TCP サーバーに接続する`channel.Open`時間。 まず、次のコードに示すようにホスト名を解決して IP アドレスに変換します。  
+-   `ClientWseTcpDuplexSessionChannel` ベースにロジックを追加します。`WseTcpDuplexSessionChannel`に TCP サーバーに接続する`channel.Open`時間。 まず、次のコードに示すようにホスト名を解決して IP アドレスに変換します。  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -79,7 +79,7 @@ WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カス�
 ## <a name="channel-listener"></a>チャネル リスナー  
  TCP トランスポートを記述する次の手順では、サーバー チャネルを受け入れるための <xref:System.ServiceModel.Channels.IChannelListener> の実装を作成します。  
   
--   `WseTcpChannelListener` 派生した<xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > および [Begin] Open と On [Begin] の上書きに近いリッスン ソケットの有効期間を制御します。 OnOpen で、IP_ANY でリッスンするソケットを作成します。 より高度な実装では、同様に IPv6 でリッスンする 2 つ目のソケットを作成できます。 そのような実装では、IP アドレスをホスト名で指定することもできます。  
+-   `WseTcpChannelListener` 派生した<xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > と上書き [Begin] Open と On [Begin] に近いリッスン ソケットの有効期間を制御します。 OnOpen で、IP_ANY でリッスンするソケットを作成します。 より高度な実装では、同様に IPv6 でリッスンする 2 つ目のソケットを作成できます。 そのような実装では、IP アドレスをホスト名で指定することもできます。  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -172,7 +172,7 @@ Symbols:
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  このサンプルを実行するには、WSE 3.0 と WSE `TcpSyncStockService` サンプルがインストールされている必要があります。 ダウンロードできる[MSDN から WSE 3.0](http://go.microsoft.com/fwlink/?LinkId=95000)です。  
+1.  このサンプルを実行するには、WSE 3.0 と WSE `TcpSyncStockService` サンプルがインストールされている必要があります。 ダウンロードできる[MSDN から WSE 3.0](https://go.microsoft.com/fwlink/?LinkId=95000)します。  
   
 > [!NOTE]
 >  [!INCLUDE[lserver](../../../../includes/lserver-md.md)] では WSE 3.0 がサポートされていないので、このオペレーティング システムでは `TcpSyncStockService` サンプルをインストールすることも、実行することもできません。  
@@ -183,7 +183,7 @@ Symbols:
   
     2.  StockService プロジェクトをスタートアップ プロジェクトに設定します。  
   
-    3.  StockService プロジェクトの StockService.cs を開き、`StockService` クラスの [Policy] 属性をコメント化します。 これにより、サンプルのセキュリティが無効になります。 WCF は、WSE 3.0 のセキュリティで保護されたエンドポイントと相互運用できます、中には、このサンプルはカスタム TCP トランスポートに重点を置いてを保持するセキュリティが無効になります。  
+    3.  StockService プロジェクトの StockService.cs を開き、`StockService` クラスの [Policy] 属性をコメント化します。 これにより、サンプルのセキュリティが無効になります。 WCF は、WSE 3.0 のセキュリティで保護されたエンドポイントと相互運用できます、中には、カスタム TCP トランスポートに重点を置いて、このサンプルを保持するセキュリティが無効になります。  
   
     4.  F5 キーを押して、`TcpSyncStockService` を開始します。 サービスが新しいコンソール ウィンドウで開始します。  
   

@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505770"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469909"
 ---
 # <a name="getting-started-sample"></a>入門サンプル
-この入門サンプルでは、一般的なサービスと Windows Communication Foundation (WCF) を使用して一般的なクライアントを実装する方法を示します。 このサンプルは、他のすべての基本的な技術サンプルの基礎になります。  
+Getting Started サンプルでは、一般的なサービスと Windows Communication Foundation (WCF) を使用して一般的なクライアントを実装する方法を示します。 このサンプルは、他のすべての基本的な技術サンプルの基礎になります。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -25,18 +25,18 @@ ms.locfileid: "33505770"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
  サービスが実行する操作は、メタデータとしてパブリックに公開するサービス コントラクト内に表されています。 また、サービスにはその操作を実装するためのコードが含まれています。  
   
- クライアントには、サービス コントラクトの定義と、サービスにアクセスするためのプロキシ クラスが含まれています。 使用してサービス メタデータからプロキシ コードを生成、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)です。  
+ クライアントには、サービス コントラクトの定義と、サービスにアクセスするためのプロキシ クラスが含まれています。 使用するサービス メタデータからプロキシ コードが生成された、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。  
   
  [!INCLUDE[wv](../../../../includes/wv-md.md)] では、サービスは Windows アクティベーション サービス (WAS) 内でホストされます。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] と [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] では、インターネット インフォメーション サービス (IIS) と ASP.NET によってホストされます。 サービスを IIS または WAS でホストすることにより、サービスに初めてアクセスしたときにそのサービスを自動的にアクティブ化できます。  
   
 > [!NOTE]
->  IIS ではなく、コンソール アプリケーションでサービスをホストする場合は、サンプルを使用して作業を開始する場合を参照してください、[自己ホスト](../../../../docs/framework/wcf/samples/self-host.md)サンプルです。  
+>  IIS ではなく、コンソール アプリケーションでサービスをホストする場合は、サンプルを使用する場合を参照してください、[セルフホスト](../../../../docs/framework/wcf/samples/self-host.md)サンプル。  
   
  サービスとクライアントは、アクセスの詳細を構成ファイルの設定により指定します。この方法によって展開時の柔軟性が得られます。 この設定には、アドレス、バインディング、およびコントラクトを指定するエンドポイント定義が含まれます。 バインディングは、サービスへのアクセス方法を示すためのトランスポートとセキュリティの詳細を指定します。  
   
@@ -141,9 +141,9 @@ public class CalculatorService : ICalculator
   
  サービスは、IIS ホストまたは WAS ホストから提供されるベース アドレスで、エンドポイントを公開します。 バインディングの構成には、標準の <xref:System.ServiceModel.WSHttpBinding> を使用します。これは HTTP 通信と Web サービスの標準プロトコルを提供し、アドレス指定とセキュリティをサポートします。 コントラクトは、サービスによって実装される `ICalculator` です。  
   
- サービスにアクセスできるように構成されている、http://localhost/servicemodelsamples/service.svc同じコンピューター上のクライアントによってです。 リモート コンピューター上のクライアントがサービスにアクセスするには、localhost の代わりに完全修飾ドメイン名を指定する必要があります。  
+ サービスにアクセスできるように構成されている、 http://localhost/servicemodelsamples/service.svc同じコンピューター上のクライアントによって。 リモート コンピューター上のクライアントがサービスにアクセスするには、localhost の代わりに完全修飾ドメイン名を指定する必要があります。  
   
- 既定では、フレームワークはメタデータを公開しません。 オンに、サービスのような場合、<xref:System.ServiceModel.Description.ServiceMetadataBehavior>に metadata exchange (MEX) エンドポイントを公開およびhttp://localhost/servicemodelsamples/service.svc/mexです。 これを設定する構成を次に示します。  
+ 既定では、フレームワークはメタデータを公開しません。 そのため、サービスがオン、<xref:System.ServiceModel.Description.ServiceMetadataBehavior>に metadata exchange (MEX) エンドポイントを公開および http://localhost/servicemodelsamples/service.svc/mexします。 これを設定する構成を次に示します。  
   
 ```xaml  
 <system.serviceModel>  
@@ -173,7 +173,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- によって生成されたクライアント クラスを使用して特定のコントラクト型を使用して、クライアントは通信、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)です。 このように生成されたクライアントは、ファイル generatedClient.cs または generatedClient.vb に含まれています。 このユーティリティは、特定のサービス用のメタデータを取得し、特定のコントラクト型を使用して通信するクライアント アプリケーションによって使用されるクライアントを生成します。 クライアント コードを生成するには、ホストされるサービスを利用できる必要があります。このサービスは、更新されたメタデータの取得に使用されるためです。  
+ によって生成されるクライアント クラスを使用して特定のコントラクト型を使用して、クライアントは通信、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 このように生成されたクライアントは、ファイル generatedClient.cs または generatedClient.vb に含まれています。 このユーティリティは、特定のサービス用のメタデータを取得し、特定のコントラクト型を使用して通信するクライアント アプリケーションによって使用されるクライアントを生成します。 クライアント コードを生成するには、ホストされるサービスを利用できる必要があります。このサービスは、更新されたメタデータの取得に使用されるためです。  
   
  次のコマンドをクライアント ディレクトリで SDK コマンド プロンプトから実行して、型指定のあるプロキシを生成します。  
   
@@ -272,16 +272,16 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- この入門サンプルでは、サービスとクライアントの標準的な作成方法を示します。 他の[基本](../../../../docs/framework/wcf/samples/basic-sample.md)で特定の製品の機能を示すには、このサンプルをビルドします。  
+ この入門サンプルでは、サービスとクライアントの標準的な作成方法を示します。 他の[基本](../../../../docs/framework/wcf/samples/basic-sample.md)特定の製品の機能を示すには、このサンプルをビルドします。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+3.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [方法: マネージ アプリケーションで WCF サービスをホストする](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
+ [How to: Host a WCF Service in a Managed Application](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
  [方法 : IIS で WCF サービスをホストする](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

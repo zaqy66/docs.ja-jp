@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51a0538670a834435aff8d2b6c81b78450fe47f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396761"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474078"
 ---
 # <a name="runtime-directive-policy-settings"></a>ランタイム ディレクティブ ポリシーの設定
 > [!NOTE]
->  このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](http://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。  
+>  このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。  
   
  .NET ネイティブのランタイム ディレクティブ ポリシー設定は、実行時に型と型のメンバーのメタデータが使用可能かどうかを決定します。 必要なメタデータがない場合、COM または Windows ランタイムへの .NET Framework 型のリフレクション、シリアル化と逆シリアル化、またはマーシャリングを利用する操作が失敗し、例外をスローする可能性があります。 最も一般的な例外は、[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) と、[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) (相互運用の場合) です。  
   

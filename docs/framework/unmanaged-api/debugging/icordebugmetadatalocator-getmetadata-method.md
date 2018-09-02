@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c7042f7eee1ccd03d04cc20c5a0db83d986b0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470828"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData メソッド
 デバッガーが要求した操作を完了するために必要となるメタデータが含まれているモジュールの完全パスを返すように、デバッガーに求めます。  
@@ -45,7 +46,7 @@ HRESULT GetMetaData(
  [in] ファイルの完全パスを表す null で終わる文字列。 完全なパスが使用できない場合、名前とファイルの拡張子 (*filename*.*拡張機能*)。  
   
  `dwImageTimeStamp`  
- [in] イメージの PE ファイル ヘッダーのタイムスタンプ。 このパラメーターは、シンボル サーバーの使用可能性があることができます ([SymSrv](http://msdn.microsoft.com/library/cc266470.aspx)) 参照します。  
+ [in] イメージの PE ファイル ヘッダーのタイムスタンプ。 このパラメーターは、シンボル サーバーの使用可能性があることができます ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) 参照。  
   
  `dwImageSize`  
  [in] PE ファイル ヘッダーのイメージ サイズ。 このパラメーターは、SymSrv の検索に使用される可能性があります。  
@@ -61,7 +62,7 @@ HRESULT GetMetaData(
  `wszPathBuffer`  
  [out] 要求されたメタデータを格納するファイルの完全パスが、デバッガーによりコピーされるバッファーへのポインター。  
   
- `ofReadOnly`からフラグ、 [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列挙体を使用して、このファイル内のメタデータを読み取り専用のアクセス権を要求します。  
+ `ofReadOnly`からフラグ、 [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列挙体を使用して、このファイル内のメタデータへの読み取り専用アクセスを要求します。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。 これ以外のエラー HRESULT はすべて、ファイルを取得できないことを示します。  
@@ -71,17 +72,17 @@ HRESULT GetMetaData(
 |S_OK|メソッドは正常に完了しました。 `wszPathBuffer` にはファイルの完全パスが含まれます。また終端は null です。|  
 |E_NOT_SUFFICIENT_BUFFER|`wszPathBuffer` の現在のサイズが十分ではないため、完全パスを保持できません。 この場合、`pcchPathBuffer` に必要な `WCHAR` の数 (終端の null 文字も含む) が格納され、要求されたバッファー サイズで `GetMetaData` がもう一度呼び出されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `wszImagePath` にダンプのモジュールの完全パスが格納されている場合は、ダンプが収集されたコンピューターからのパスを示しています。 この場所にはファイルが存在しない、または同じ名前の正しくないファイルがパス上に格納されている可能性があります。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [ICorDebugThread4 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  

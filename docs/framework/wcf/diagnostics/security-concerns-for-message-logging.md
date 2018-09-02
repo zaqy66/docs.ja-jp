@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6da641ec5da20c80f4c1034ded8a3be7d036b5a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804132"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466492"
 ---
 # <a name="security-concerns-for-message-logging"></a>メッセージ ログ記録のセキュリティの考慮事項
 ここでは、メッセージ ログに表示される機密データだけでなく、メッセージ ログによって生成されるイベントを保護する方法についても説明します。  
@@ -17,7 +17,7 @@ ms.locfileid: "33804132"
 ## <a name="security-concerns"></a>セキュリティに関する注意事項  
   
 ### <a name="logging-sensitive-information"></a>機密情報のログ記録  
- Windows Communication Foundation (WCF) では、アプリケーション固有のヘッダーと本文内のデータは変更しません。 また、WCF では、アプリケーション固有のヘッダーまたは本文データにある個人情報は追跡しません。  
+ Windows Communication Foundation (WCF) では、アプリケーション固有のヘッダーおよび本文内のデータは変更されません。 また、WCF では、アプリケーション固有のヘッダーまたは本文データにある個人情報は追跡されません。  
   
  メッセージのログ記録が有効になっていると、アプリケーション固有ヘッダー内にある個人情報 (クエリ文字列など)、および本文情報 (クレジット カード番号) がログ内で確認できるようになります。 アプリケーションを配置するユーザーは、構成ファイルとログ ファイルに対するアクセス制御を実施する必要があります。 この種の情報を表示しないようにするには、ログ記録を無効にするか、ログを共有する場合にこの種のデータにフィルターをかけて除外します。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "33804132"
   
  変更点はアプリケーションが開始されるか、再起動されるまで、反映されません。 両方の属性も `true` に設定されている場合は、イベントは開始時にログに記録されます。 また、`logKnownPii` が `true` に設定され、`enableLoggingKnownPii` が `false` に設定されている場合にも、イベントはログに記録されます。  
   
- コンピューターの管理者およびアプリケーションを配置するユーザーは、これらの 2 種類のスイッチを使用する場合に注意する必要があります。 PII のログ記録が有効になっている場合は、セキュリティ キーと PII がログに記録されます。 ログ記録を無効にしても、機密情報およびアプリケーション固有のデータは、依然としてメッセージのヘッダーと本体に記録されています。 プライバシーと公開されない PII の保護に関する詳細については、次を参照してください。[ユーザー プライバシー](http://go.microsoft.com/fwlink/?LinkID=94647)です。  
+ コンピューターの管理者およびアプリケーションを配置するユーザーは、これらの 2 種類のスイッチを使用する場合に注意する必要があります。 PII のログ記録が有効になっている場合は、セキュリティ キーと PII がログに記録されます。 ログ記録を無効にしても、機密情報およびアプリケーション固有のデータは、依然としてメッセージのヘッダーと本体に記録されています。 詳細な説明については、プライバシーと pii の公開を防止するには、次を参照してください。[ユーザー プライバシー](https://go.microsoft.com/fwlink/?LinkID=94647)します。  
   
 > [!CAUTION]
 >  PII は無効なメッセージでは非表示になりません。 このようなメッセージは、変更されずにそのままログに記録されます。 上に示した属性は、このことに影響を与えません。  
@@ -107,9 +107,9 @@ ms.locfileid: "33804132"
   
 -   Log Known PII On : このイベントは、既知の PII のログ記録が有効になっている場合に発生します。 これは、ようなときに、`enableLoggingKnownPii`属性、 `machineSettings` Machine.config ファイルの要素に設定されている`true`、および`logKnownPii`の属性、 `source` に、App.configまたはWeb.configファイル内の要素が設定されている`true`.  
   
--   Log Known PII Not Allowed : このイベントは既知の PII のログ記録が許可されていない場合に発生します。 これは、ようなときに、`logKnownPii`の属性、 `source` 、App.config または Web.config ファイル内の要素に設定されている`true`、ですが、`enableLoggingKnownPii`属性、 `machineSettings` にMachine.configファイルの要素が設定されている`false`. 例外をスローすることはありません。  
+-   Log Known PII Not Allowed : このイベントは既知の PII のログ記録が許可されていない場合に発生します。 これは、ようなときに、`logKnownPii`の属性、 `source` 、App.config または Web.config ファイル内の要素に設定されている`true`が、`enableLoggingKnownPii`属性、 `machineSettings` にMachine.configファイルの要素が設定されている`false`. 例外をスローすることはありません。  
   
- これらのイベントは、Windows に付属するイベント ビューアー ツールを使用して表示できます。 詳細については、次を参照してください。[イベント ログ](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)です。  
+ これらのイベントは、Windows に付属するイベント ビューアー ツールを使用して表示できます。 詳細については、これは、次を参照してください。[イベントがログ記録](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)  

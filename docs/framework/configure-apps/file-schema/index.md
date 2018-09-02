@@ -24,12 +24,12 @@ ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b227ba343db7996d38d5a485b54629a1f4ed28bd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c7aebbfd0d25f6c5a9266857816a1723cb0c660e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744110"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466585"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework の構成ファイル スキーマ
 
@@ -78,10 +78,10 @@ ms.locfileid: "32744110"
 
 ## <a name="related-sections"></a>関連項目
 
-[リモート処理設定スキーマ](http://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) リモート処理を実装するクライアント アプリケーションとサーバー アプリケーションを構成する要素について説明します。
+[リモート処理設定スキーマ](https://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) リモート処理を実装するクライアント アプリケーションとサーバー アプリケーションを構成する要素について説明します。
 
-[ASP.NET の設定スキーマ](http://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) ASP.NET Web アプリケーションの動作を制御する要素について説明します。
+[ASP.NET の設定スキーマ](https://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) ASP.NET Web アプリケーションの動作を制御する要素について説明します。
 
-[Web サービス設定スキーマ](http://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) ASP.NET Web サービス、およびそれらのクライアントの動作を制御する要素について説明します。
+[Web サービス設定スキーマ](https://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) ASP.NET Web サービス、およびそれらのクライアントの動作を制御する要素について説明します。
 
-[.NET Framework アプリの構成](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) セキュリティ、アセンブリのバインディング、および .NET Framework のリモート処理を構成する方法について説明します。
+[.NET Framework アプリの構成](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) セキュリティ、アセンブリのバインディング、および .NET Framework のリモート処理を構成する方法について説明します。

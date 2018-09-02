@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: bff2b51fbc8fec6e7cd2b24700d1c4dc38c007f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550021"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464948"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>WPF のブラウザーのホスト処理をサポートするネイティブ API
-ホスティング[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]Web ブラウザーでのアプリケーションは、WPF ホストから登録されている Active ドキュメント サーバー (DocObject とも呼ばれます) によって容易になります。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 直接アクティブ化でき、アクティブなドキュメントと統合できます。 Xbap loose XAML 内およびドキュメント Mozilla ブラウザーのホスティング用[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]に類似したホスティング環境を提供する、NPAPI プラグインを提供、 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Active ドキュメント サーバーとして[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]はします。 ただし、Xbap と XAML をホストする最も簡単な実用的な方法が他のブラウザーでドキュメント、Internet Explorer Web ブラウザー コントロールでは、スタンドアロン アプリケーション。 Web ブラウザー コントロールは、複雑な Active ドキュメント サーバー ホスティング環境を提供いない、独自のホストをカスタマイズし、その環境を拡張し、現在のアクティブなドキュメントと直接通信することができます。  
+ホストの[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]WPF ホストから登録されているアクティブなドキュメント サーバー (DocObject とも呼ばれます) での Web ブラウザーでアプリケーションが容易になります。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 直接アクティブ化でき、アクティブなドキュメントと統合できます。 Xbap の Mozilla ブラウザーの場合は、loose XAML ドキュメントをホストするため[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]のようなホスティング環境を提供する、NPAPI プラグインを提供します、 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Active ドキュメント サーバーとして[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]は。 ただし、Xbap と XAML をホストする最も簡単な実用的な方法が他のブラウザーで文書化し、スタンドアロン アプリケーションは、Internet Explorer Web ブラウザー コントロールを使用します。 Web ブラウザー コントロールは、複雑な Active ドキュメント サーバー ホスティング環境を提供していない独自のホストをカスタマイズし、その環境を拡張し、現在のアクティブなドキュメントと直接通信することができます。  
   
- [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Active ドキュメント サーバーなど、いくつかの一般的なホスト インターフェイスを実装する[IOleObject](http://go.microsoft.com/fwlink/?LinkId=162049)、[示す](http://go.microsoft.com/fwlink/?LinkId=162050)、 [IOleInPlaceActiveObject](http://go.microsoft.com/fwlink/?LinkId=162051)、[IPersistMoniker](http://go.microsoft.com/fwlink/?LinkId=162045)、 [IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047)です。 Web ブラウザー コントロールでホストされている、これらのインターフェイスはによって返されるオブジェクトからのクエリをすることができます、 [IWebBrowser2::Document](http://go.microsoft.com/fwlink/?LinkId=162048)プロパティです。  
+ [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Active ドキュメント サーバーなど、いくつかの一般的なホスティング インターフェイスを実装する[IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049)、[示す](https://go.microsoft.com/fwlink/?LinkId=162050)、 [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051)、[IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045)、 [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)します。 これらのインターフェイスによって返されるオブジェクトからのクエリにできる、Web ブラウザー コントロールでホストされているときに、 [IWebBrowser2::Document](https://go.microsoft.com/fwlink/?LinkId=162048)プロパティ。  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- WPF Active ドキュメント サーバー実装[IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047) (null コマンド グループ GUID) の標準の OLE コマンド グループのナビゲーション関連およびブラウザー固有のさまざまなコマンドをサポートしています。 さらに、CGID_PresentationHost をという名前のカスタム コマンド グループを認識します。 現時点では、このグループ内で定義されている 1 つだけのコマンドがあります。  
+ WPF の Active ドキュメント サーバーの実装の[IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) (null コマンド グループ GUID) では、標準の OLE コマンド グループのさまざまなナビゲーション関連およびブラウザー固有のコマンドをサポートしています。 さらに、CGID_PresentationHost と呼ばれるカスタム コマンドのグループを認識します。 現時点では、このグループ内で定義された 1 つのコマンドがあります。  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
@@ -29,7 +29,7 @@ enum PresentationHostCommands {
 };  
 ```  
   
- PHCMDID_TABINTO では、Shift キーの状態に応じて、そのコンテンツの最初と最後のフォーカス可能な要素にフォーカスを切り替える PresentationHost ように指示します。  
+ PHCMDID_TABINTO では、Shift キーの状態によって、そのコンテンツの最初と最後のフォーカスを設定できる要素にフォーカスを切り替える PresentationHost を指示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  

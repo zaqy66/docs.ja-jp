@@ -6,25 +6,23 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: a58a528cd1a2246ddfdff7997b7c7cb0d8dcc6a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33df9e050dd8c2b3ace8ff89cbd5939b538fcd95
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531054"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466797"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>方法 : デザイナーを使って Windows フォーム コントロールを型にバインドする
-データをやり取りするコントロールを作成する際、オブジェクトではなく型にコントロールをバインドすることが必要な場合があります。 データを使用できないが、データ バインド コントロールで型のパブリック インターフェイスからデータを表示する必要がある場合、通常はデザイン時にコントロールを型にバインドする必要があります。 次の手順を新規作成する方法を説明する<xref:System.Windows.Forms.BindingSource>されている型にバインドし、型のプロパティのいずれかにバインドする方法、<xref:System.Windows.Forms.TextBox.Text%2A>のプロパティ、<xref:System.Windows.Forms.TextBox>です。  
+データをやり取りするコントロールを作成する際、オブジェクトではなく型にコントロールをバインドすることが必要な場合があります。 データを使用できないが、データ バインド コントロールで型のパブリック インターフェイスからデータを表示する必要がある場合、通常はデザイン時にコントロールを型にバインドする必要があります。 次の手順を新規作成する方法を説明する<xref:System.Windows.Forms.BindingSource>は、型にバインドし、いずれかの型のプロパティにバインドする方法、<xref:System.Windows.Forms.TextBox.Text%2A>のプロパティを<xref:System.Windows.Forms.TextBox>します。  
   
 ### <a name="to-bind-the-bindingsource-to-a-type"></a>BindingSource を型にバインドするには  
   
-1.  Windows フォーム プロジェクトを作成します。  
-  
-     詳細については、「[方法 : Windows アプリケーション プロジェクトを作成する](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)」を参照してください。  
+1.  Windows フォーム プロジェクトの作成 (**ファイル** > **新規** > **プロジェクト** > **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
   
 2.  **デザイン**ビューで、ドラッグ、<xref:System.Windows.Forms.BindingSource>コンポーネントをフォームにします。  
   
-3.  **プロパティ**ウィンドウで、矢印をクリックして、<xref:System.Windows.Forms.BindingSource.DataSource%2A>プロパティです。  
+3.  **プロパティ**ウィンドウで、矢印をクリックして、<xref:System.Windows.Forms.BindingSource.DataSource%2A>プロパティ。  
   
 4.  **DataSource UI 型エディター**で、**[プロジェクト データ ソースの追加]** をクリックします。  
   
@@ -49,9 +47,9 @@ ms.locfileid: "33531054"
   
 2.  **[プロパティ]** ウィンドウで **(DataBindings)** ノードを展開します。  
   
-3.  矢印をクリックして、次に、<xref:System.Windows.Forms.TextBox.Text%2A>プロパティです。  
+3.  矢印をクリックして、<xref:System.Windows.Forms.TextBox.Text%2A>プロパティ。  
   
-4.  **データ ソースの UI 型エディター**、ノードを展開します、<xref:System.Windows.Forms.BindingSource>以前は、追加され、プロパティにバインドするバインドの種類の選択、<xref:System.Windows.Forms.TextBox.Text%2A>のプロパティ、<xref:System.Windows.Forms.TextBox>です。  
+4.  **DataSource UI 型エディター**、ノードを展開、<xref:System.Windows.Forms.BindingSource>以前に追加しにバインドするバインドの型のプロパティを選択、<xref:System.Windows.Forms.TextBox.Text%2A>のプロパティ、<xref:System.Windows.Forms.TextBox>します。  
   
 ## <a name="see-also"></a>関連項目  
  [BindingSource コンポーネント](../../../../docs/framework/winforms/controls/bindingsource-component.md)  

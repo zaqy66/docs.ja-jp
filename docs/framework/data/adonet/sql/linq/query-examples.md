@@ -2,18 +2,18 @@
 title: クエリの例
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: b7fe03a951b6b8cfccc0c0bc4a1ccfc90e903dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362628"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464355"
 ---
 # <a name="query-examples"></a>クエリの例
-このセクションでは、一般的な Visual Basic および c# の例を示します[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]クエリ。 Visual Studio を使用している開発者は、サンプルのセクションで、使用可能なサンプル ソリューションでより多くの例を参照できます。 詳細については、次を参照してください。[サンプル](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)です。  
+このセクションでは、一般的な Visual Basic と c# の例を提供します。[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]クエリ。 Visual Studio を使用している開発者は、「サンプル」セクションで使用可能なサンプル ソリューションでより多く例を見つけることができます。 詳細については、次を参照してください。[サンプル](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)します。  
   
 > [!IMPORTANT]
->  *db*のコード例でよく使用されて[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメント。 *db*のインスタンスであると見なされます、 *Northwind*から継承されるクラスが<xref:System.Data.Linq.DataContext>です。  
+>  *db*でのコード例でよく使用されて[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメント。 *db*のインスタンスであると見なされますが、 *Northwind*クラスから継承<xref:System.Data.Linq.DataContext>します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [集計クエリ](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -65,7 +65,7 @@ ms.locfileid: "33362628"
  結合の例を示します`select`と他の機能 (たとえば、*匿名型*) クエリ射影を作成します。  
   
 ## <a name="related-sections"></a>関連項目  
- [標準クエリ演算子の概要](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [標準クエリ演算子の概要](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
  標準クエリ演算子の概念について説明します。  
   
  [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  

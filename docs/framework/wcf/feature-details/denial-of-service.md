@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 52a22d96e981ff10d444569465d8e74ddf890836
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496114"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457126"
 ---
 # <a name="denial-of-service"></a>サービス拒否
 サービス拒否は、メッセージを処理できなくしたり、メッセージ処理を大幅に遅延させたりするなど、システムに過大な負荷が生じた場合に発生します。  
@@ -44,24 +44,24 @@ ms.locfileid: "33496114"
 ## <a name="auditing-event-log-can-be-filled"></a>監査イベント ログがいっぱいになる可能性がある  
  悪意のあるユーザーに監査が有効になっていることを知られると、その攻撃者に監査エントリの書き込みにつながる無効なメッセージを送信される可能性があります。 このような方法で監査ログに書き込みが行われると、監査システムに障害が発生します。  
   
- これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。 イベント ビューアーを使用して表示し、イベント ログを管理する方法の詳細については、次を参照してください。[イベント ビューアー](http://go.microsoft.com/fwlink/?LinkId=186123)です。 詳細については、次を参照してください。[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)です。  
+ これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。 イベント ビューアーを使用して、イベント ログを表示および管理の詳細については、次を参照してください。[イベント ビューアー](https://go.microsoft.com/fwlink/?LinkId=186123)します。 詳細については、次を参照してください。[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)します。  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>IAuthorizationPolicy の無効な実装によりサービスが停止する可能性がある  
  欠陥のある <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> インターフェイスの実装で <xref:System.IdentityModel.Policy.IAuthorizationPolicy> メソッドを呼び出すと、サービスが停止する可能性があります。  
   
- 回避方法 : 信頼されたコードのみを使用します。 つまり、ユーザーが記述しテストしたコード、または信頼されたプロバイダーが提供するコードのみを使用します。 十分な検討を行わずに、<xref:System.IdentityModel.Policy.IAuthorizationPolicy> の信頼されない拡張をユーザーのコードに接続することを許可しないでください。 これは、サービスの実装で使用されるすべての拡張に当てはまります。 WCF 機能拡張ポイントを使用してアプリケーション コードと接続されている外部コードとの区別を行いません。  
+ 回避方法 : 信頼されたコードのみを使用します。 つまり、ユーザーが記述しテストしたコード、または信頼されたプロバイダーが提供するコードのみを使用します。 十分な検討を行わずに、<xref:System.IdentityModel.Policy.IAuthorizationPolicy> の信頼されない拡張をユーザーのコードに接続することを許可しないでください。 これは、サービスの実装で使用されるすべての拡張に当てはまります。 WCF 機能拡張ポイントを使用してアプリケーション コードと接続されている外部コードの違いを行いません。  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Kerberos の最大トークン サイズの変更が必要になる場合がある  
- クライアントが多数のグループ (実際の数はグループにより異なるが、約 900) に属している場合、メッセージ ヘッダーのブロックが 64 KB を超えると問題が発生する場合があります。 その場合は、サイズを増やし、最大 Kerberos トークン、Microsoft サポート記事に説明されて"[バッファー不足が IIS に接続するために Internet Explorer Kerberos 認証が動作しない](http://go.microsoft.com/fwlink/?LinkId=89176)"。 また、Kerberos トークンの増加に合わせて WCF メッセージの最大サイズを大きく必要があります。  
+ クライアントが多数のグループ (実際の数はグループにより異なるが、約 900) に属している場合、メッセージ ヘッダーのブロックが 64 KB を超えると問題が発生する場合があります。 Microsoft サポート記事で説明、最大 Kerberos トークン サイズを増やすことができる場合、"[Internet Explorer Kerberos 認証は IIS に接続する十分なバッファーのため機能しません](https://go.microsoft.com/fwlink/?LinkId=89176)"。 また、Kerberos トークンの増加に対応するために WCF メッセージの最大サイズを増やす必要があります。  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>自動登録によってコンピューターに同一サブジェクト名の証明書が複数発生する  
  *自動登録*の機能は、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]ユーザーとコンピューターの証明書を自動的に登録します。 この機能が有効になっているドメイン上にコンピューターがある場合、新しいコンピューターがネットワークに参加するたびに、クライアント認証を目的とする X.509 証明書が自動的に作成されローカル コンピューターの個人用証明書のストアに自動で挿入されます。 ただし、自動登録では、キャッシュに作成されたすべての証明書に同じサブジェクト名が使用されます。  
   
- 影響は、WCF サービスが自動登録のドメインで開くには失敗することです。 コンピューターの完全修飾ドメイン ネーム システム (DNS) 名を持つ証明書が複数あるため、既定サービスの X.509 資格情報検索の条件が不明確になり、このような問題が発生します。 この場合、1 つは自動登録で作成された証明書、もう 1 つは自己発行された証明書です。  
+ 影響は、自動登録のドメインで開くには WCF サービスが失敗することです。 コンピューターの完全修飾ドメイン ネーム システム (DNS) 名を持つ証明書が複数あるため、既定サービスの X.509 資格情報検索の条件が不明確になり、このような問題が発生します。 この場合、1 つは自動登録で作成された証明書、もう 1 つは自己発行された証明書です。  
   
- これを軽減するために参照をより正確な検索条件を使用して使用する正確な証明書、 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)です。 たとえば、<xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> オプションを使用し、一意の拇印 (ハッシュ) により証明書を指定します。  
+ これを防ぐに参照をより正確な検索条件を使用して使用する正確な証明書、 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)します。 たとえば、<xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> オプションを使用し、一意の拇印 (ハッシュ) により証明書を指定します。  
   
- 自動登録機能の詳細については、次を参照してください。 [Windows Server 2003 の証明書の自動登録](http://go.microsoft.com/fwlink/?LinkId=95166)です。  
+ 自動登録機能の詳細については、次を参照してください。 [Certificate Autoenrollment in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=95166)します。  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>複数の代替サブジェクト名の最後が承認に使用される  
  まれなケースとして X.509 証明書に複数の代替サブジェクト名が含まれる場合、その代替サブジェクト名を使用して承認を行うと、承認は失敗する場合があります。  
@@ -69,13 +69,13 @@ ms.locfileid: "33496114"
 ## <a name="protect-configuration-files-with-acls"></a>ACL を使用して構成ファイルを保護する  
  [!INCLUDE[infocard](../../../../includes/infocard-md.md)] で発行されたトークンについては、必須およびオプションのクレームをコードおよび構成ファイルに指定できます。 これにより、対応する要素が、セキュリティ トークン サービスに送信される `RequestSecurityToken` メッセージに送出されます。 攻撃者は、コードまたは構成を変更して必須またはオプションのクレームを削除でき、対象サービスへのアクセスが許可されていないトークンをセキュリティ トークン サービスに発行させることができます。  
   
- これを防ぐには、コンピューターにアクセスして構成ファイルを変更する必要があります。 アクセス制御リスト (ACL: Access Control List) を使用して構成ファイルをセキュリティで保護します。 WCF では、コードに含まれるアプリケーションのディレクトリまたはグローバル アセンブリ キャッシュの構成から読み込まれるには、このようなコードが許可されます前に必要です。 ディレクトリの ACL を使用してディレクトリをセキュリティで保護します。  
+ これを防ぐには、コンピューターにアクセスして構成ファイルを変更する必要があります。 アクセス制御リスト (ACL: Access Control List) を使用して構成ファイルをセキュリティで保護します。 WCF では、コードは、構成から読み込まれるには、このようなコードを許可することは前に、アプリケーション ディレクトリまたはグローバル アセンブリ キャッシュにする必要があります。 ディレクトリの ACL を使用してディレクトリをセキュリティで保護します。  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>1 つのサービスに対して、セキュリティで保護されたセッションが最大数に達する  
  クライアントがサービスにより正常に認証され、セキュリティで保護されたセッションがサービスと共に確立されると、クライアントがセッションをキャンセルするか、セッションの期限が切れるまで、サービスはそのセッションを追跡します。 セッションが確立されるたびに、1 つのサービスで同時にアクティブにできるセッションは上限に近づいていきます。 この上限に達した場合、1 つ以上のアクティブなセッションが期限切れになるかまたはクライアントによりキャンセルされるまで、そのサービスで新しいセッションの作成を試みるクライアントは拒否されます。 クライアントは 1 つのサービスで複数のセッションを保持できますが、その各セッションは上限に反映されます。  
   
 > [!NOTE]
->  ステートフルなセッションを使用する場合、前の段落は適用されません。 ステートフルなセッションの詳細については、次を参照してください。[する方法: セキュリティで保護されたセッションのセキュリティ コンテキスト トークンを作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)です。  
+>  ステートフルなセッションを使用する場合、前の段落は適用されません。 ステートフルなセッションの詳細については、次を参照してください。[方法: セキュリティで保護されたセッションのセキュリティ コンテキスト トークン作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)です。  
   
  これを防ぐには、<xref:System.ServiceModel.Channels.SecurityBindingElement> クラスの <xref:System.ServiceModel.Channels.SecurityBindingElement> プロパティを設定して、アクティブなセッションの最大数とセッションの最長有効期間の制限を設定します。  
   

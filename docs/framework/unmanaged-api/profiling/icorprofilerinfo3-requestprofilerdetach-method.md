@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e69a15d70b8f1b9e271571be92f1f6717a9f196c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5171022d35c6f9e194ddcf615d29610ea2e0d4fb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461517"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465539"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach メソッド
 プロファイラーをデタッチするようにランタイムに指示します。  
@@ -44,27 +44,27 @@ HRESULT RequestProfilerDetach(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|デタッチ要求は有効です。またデタッチ プロシージャは別のスレッドで継続しています。 デタッチが完了すると、`ProfilerDetachSucceeded` イベントが発行されます。|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|プロファイラーが失敗しました、 [iunknown::queryinterface](http://go.microsoft.com/fwlink/?LinkID=144867)の試行、 [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)インターフェイスで、デタッチ操作をサポートするために実装する必要がある必要があります。 デタッチは試行されませんでした。|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|プロファイラーが失敗しました、 [iunknown::queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867)の試行、 [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)インターフェイスで、デタッチ操作をサポートするために実装する必要がある必要があります。 デタッチは試行されませんでした。|  
 |CORPROF_E_IMMUTABLE_FLAGS_SET|プロファイラーが起動時に変更できないフラグを設定しているため、デタッチできません。 デタッチは試行されませんでした。プロファイラーは完全にアタッチされたままです。|  
-|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|デタッチは、プロファイラーを使用するには、Microsoft intermediate language (MSIL) コードがインストルメント化されているため不可能または挿入された`enter` / `leave`フックします。 デタッチは試行されませんでした。プロファイラーは完全にアタッチされたままです。<br /><br /> **注**インストルメント化した MSIL は、コードを使用してプロファイラーによって提供されるコードでは、 [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)メソッドです。|  
-|CORPROF_E_RUNTIME_UNINITIALIZED|マネージ アプリケーションでランタイムがまだ初期化されていません。 (つまり、ランタイムは完全には読み込まれていません。)プロファイラーのコールバックの内部にデタッチが要求される場合、このエラー コードが返される可能性があります[icorprofilercallback::initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)メソッドです。|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT|サポートされていないタイミングで `RequestProfilerDetach` が呼び出されました。 これは、いない内からでは、マネージ スレッドでメソッドを呼び出した場合に発生、 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)メソッド、または内から、 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)ガベージ コレクションを許容できないメソッドです。 詳細については、次を参照してください。 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)です。|  
+|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|デタッチは、プロファイラーの使用が Microsoft intermediate language (MSIL) コードでは、インストルメント化されているため、または挿入`enter` / `leave`フックします。 デタッチは試行されませんでした。プロファイラーは完全にアタッチされたままです。<br /><br /> **注**インストルメント化した MSIL は、コードを使用してプロファイラーによって提供されるコードでは、 [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)メソッド。|  
+|CORPROF_E_RUNTIME_UNINITIALIZED|マネージド アプリケーションでランタイムがまだ初期化されていません。 (つまり、ランタイムは完全には読み込まれていません。)このエラー コードは、プロファイラー コールバックの内部でデタッチが要求されたときに返される可能性があります[icorprofilercallback::initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)メソッド。|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT|サポートされていないタイミングで `RequestProfilerDetach` が呼び出されました。 これは、内からされませんが、マネージ スレッドでメソッドが呼び出された場合に発生します、 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)メソッド内から、 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)ガベージ コレクションが許されないメソッド。 詳細については、次を参照してください。 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  デタッチ プロシージャの実行中に、デタッチ スレッド (プロファイラーのデタッチのために作成されたスレッド) は、すべてのスレッドがプロファイラーのコードを終了したかどうかを時々チェックします。 プロファイラーは、退避が終了するまでの予想時間を、`dwExpectedCompletionMilliseconds` パラメーターを介して提供する必要があります。 使用に適した値は、特定の `ICorProfilerCallback*` メソッド内でプロファイラーが使う通常の時間です。この値は、プロファイラーが使うと想定される最大時間の半分未満にしないでください。  
   
- デタッチ スレッドでは `dwExpectedCompletionMilliseconds` を使用して、プロファイラーのコールバック コードがすべてのスタックからポップされたかどうかをチェックする前にスリープする時間の長さを指定します。 次のアルゴリズムの詳細は今後の CLR のリリースで変更される可能性がありますが、これはプロファイラーをアンロードしても安全なタイミングを決定するために `dwExpectedCompletionMilliseconds` を利用する 1 つの方法を示しています。 デタッチ スレッドはまず `dwExpectedCompletionMilliseconds` ミリ秒間、スリープ状態になります。 スリープから復帰、後に、CLR はプロファイラーのコールバック コードがまだ存在していることを検出した場合は、デタッチ スレッドがスリープ状態再び、今度は 2 回用`dwExpectedCompletionMilliseconds`(ミリ秒)。 この 2 回目のスリープから復帰した後に、プロファイラーのコールバック コードがまだ存在することがデタッチ スレッドで検出された場合、再チェックが行われる前に 10 分間、スリープ状態になります。 デタッチ スレッドは継続して 10 分ごとに再チェックを行います。  
+ デタッチ スレッドでは `dwExpectedCompletionMilliseconds` を使用して、プロファイラーのコールバック コードがすべてのスタックからポップされたかどうかをチェックする前にスリープする時間の長さを指定します。 次のアルゴリズムの詳細は今後の CLR のリリースで変更される可能性がありますが、これはプロファイラーをアンロードしても安全なタイミングを決定するために `dwExpectedCompletionMilliseconds` を利用する 1 つの方法を示しています。 デタッチ スレッドはまず `dwExpectedCompletionMilliseconds` ミリ秒間、スリープ状態になります。 デタッチ スレッドがスリープ 2 回のこの時点で、もう一度、スリープ状態からアクティブになる後、は、CLR は、プロファイラーのコールバック コードがまだ存在することを検出した場合は、 `dwExpectedCompletionMilliseconds` (ミリ秒)。 この 2 回目のスリープから復帰した後に、プロファイラーのコールバック コードがまだ存在することがデタッチ スレッドで検出された場合、再チェックが行われる前に 10 分間、スリープ状態になります。 デタッチ スレッドは継続して 10 分ごとに再チェックを行います。  
   
  プロファイラーが `dwExpectedCompletionMilliseconds` を 0 (ゼロ) に指定している場合、CLR は既定値 5000 を使用します。この設定では、チェックが 5 秒後に行われ、その次は 10 秒後に、それ以降は 10 分ごとに再チェックが行われます。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [ICorProfilerInfo3 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  

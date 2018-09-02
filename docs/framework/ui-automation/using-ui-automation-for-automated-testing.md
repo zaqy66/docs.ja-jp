@@ -9,16 +9,16 @@ ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 55795a0176f70925fd89fe6f8065dfa481f76a15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fe3d511b92ff055e80999fa498c24a44f771ebf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410086"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457006"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>UI オートメーションによる自動テスト
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  ここでは、自動テストのシナリオで、プログラムによるアクセスのためのフレームワークとして [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] がどのように役立つかについて説明します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33410086"
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>UI オートメーションの実装  
- 既に述べたように、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の統一されたモデルを使用しない場合、フレームワーク内のコントロールのプロパティや動作を公開するためには、フレームワーク固有の情報をテスト ツールや開発者が知る必要があります。 複数 UI フレームワークが Windows オペレーティング システム内には常に存在することがある、ためにを含む[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]、でき、Windows Presentation Foundation (WPF)、それを持つ複数のアプリケーションをテストするタスクが困難な場合似たようなコントロールです。 次の表では、例として、あるボタン コントロールに関連付けられた名前 (またはテキスト) を取得するために必要なフレームワーク固有のプロパティ名と、それと同等の単一 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。  
+ 既に述べたように、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の統一されたモデルを使用しない場合、フレームワーク内のコントロールのプロパティや動作を公開するためには、フレームワーク固有の情報をテスト ツールや開発者が知る必要があります。 複数の UI フレームワーク Windows オペレーティング システム内には常に存在することができる、のでなど[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]、Windows Presentation Foundation (WPF) を持つ複数のアプリケーションをテストする面倒な作業をすることと似たコントロール。 次の表では、例として、あるボタン コントロールに関連付けられた名前 (またはテキスト) を取得するために必要なフレームワーク固有のプロパティ名と、それと同等の単一 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。  
   
 |UI オートメーション コントロール型|UI フレームワーク|フレームワーク固有のプロパティ|UI Automation のプロパティ|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "33410086"
   
  UI オートメーション プロバイダーは、そのコントロールのフレームワーク固有のプロパティから、同等の [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティへのマッピングを行います。  
   
- 実装する方法について[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロバイダー内にある[マネージ コードの UI オートメーション プロバイダー](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)です。 コントロール パターンを実装する方法については、「 [UI Automation Control Patterns](../../../docs/framework/ui-automation/ui-automation-control-patterns.md) 」および「 [UI Automation Text Pattern](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)」を参照してください。  
+ 実装について[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロバイダー内にある[マネージ コードの UI オートメーション プロバイダー](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)します。 コントロール パターンを実装する方法については、「 [UI Automation Control Patterns](../../../docs/framework/ui-automation/ui-automation-control-patterns.md) 」および「 [UI Automation Text Pattern](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)」を参照してください。  
   
 <a name="Testing_with_UI_Automation"></a>   
 ## <a name="ui-automation-in-a-client"></a>クライアントにおける UI オートメーション  
@@ -95,10 +95,10 @@ ms.locfileid: "33410086"
   
 |||  
 |-|-|  
-|UI オートメーション参照を追加します。|UI オートメーション クライアントに必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の dll を次に示します。<br /><br /> -UIAutomationClient.dll へのアクセスを提供する、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]クライアント側 Api です。<br />、Uiautomationclientsideprovider.dll は自動化する機能を提供する[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]コントロール。 「 [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)」を参照してください。<br />-UIAutomationTypes.dll で定義されている特定の型へのアクセスを提供する[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]です。|  
+|UI オートメーション参照を追加します。|UI オートメーション クライアントに必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の dll を次に示します。<br /><br /> -UIAutomationClient.dll へのアクセスを提供する、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]クライアント側 Api。<br />-UIAutomationClientSideProvider.dll を自動化する機能を提供する[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]コントロール。 「 [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)」を参照してください。<br />-UIAutomationTypes.dll で定義されている特定の型へのアクセスを提供する[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]します。|  
 |<xref:System.Windows.Automation> 名前空間を追加します。|この名前空間には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のテキスト処理以外の機能を使用するために UI オートメーション クライアントが必要とするすべてのものが含まれています。|  
 |<xref:System.Windows.Automation.Text> 名前空間を追加します。|この名前空間には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のテキスト処理機能を使用するために UI オートメーション クライアントが必要とするすべてのものが含まれています。|  
-|目的のコントロールを検索します。|自動テスト スクリプトは、目的のコントロールを表す UI オートメーション要素をオートメーション ツリー内で検索します。<br /><br /> コードで UI オートメーション要素を取得する方法は複数あります。<br /><br /> -クエリ、[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]を使用して、<xref:System.Windows.Automation.Condition>ステートメントです。 この場合は、通常、言語に依存しない <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> を使用します。 **注:** 、<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>明細化できる Inspect.exe などのツールを使用して取得できます、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]コントロールのプロパティです。 <br /><br /> -を使用して、<xref:System.Windows.Automation.TreeWalker>クラス全体を走査する[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーまたはそのサブセットです。<br />フォーカスを追跡します。<br />-コントロールの hWnd を使用します。<br />-マウス カーソルの場所など、画面上の位置を使用します。<br /><br /> 「 [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)」を参照してください。|  
+|目的のコントロールを検索します。|自動テスト スクリプトは、目的のコントロールを表す UI オートメーション要素をオートメーション ツリー内で検索します。<br /><br /> コードで UI オートメーション要素を取得する方法は複数あります。<br /><br /> -クエリ、[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]を使用して、<xref:System.Windows.Automation.Condition>ステートメント。 この場合は、通常、言語に依存しない <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> を使用します。 **注:** 、<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>明細化できる Inspect.exe などのツールを使用して取得できます、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]コントロールのプロパティ。 <br /><br /> -を使用して、<xref:System.Windows.Automation.TreeWalker>クラス全体を走査する[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーまたはそのサブセットです。<br />フォーカスを追跡します。<br />-コントロールの hWnd を使用します。<br />-マウス カーソルの場所など、画面位置を使用します。<br /><br /> 「 [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)」を参照してください。|  
 |コントロール パターンを取得します。|コントロール パターンは、機能的によく似た複数のコントロールにおける共通の動作を公開します。<br /><br /> 自動テスト スクリプトは、テストする必要があるコントロールを特定すると、それらの UI オートメーション要素から目的のコントロール パターンを取得します。 たとえば、一般的なボタン機能には <xref:System.Windows.Automation.InvokePattern> コントロール パターンを、ウィンドウ機能には <xref:System.Windows.Automation.WindowPattern> コントロール パターンを使用します。<br /><br /> 「 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)」を参照してください。|  
 |UI を自動化します。|自動テスト スクリプトで、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] フレームワークの任意の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] を、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターンによって公開された情報や機能を使用して制御できるようになりました。|  
   
@@ -106,7 +106,7 @@ ms.locfileid: "33410086"
 ## <a name="related-tools-and-technologies"></a>関連ツールと関連技術  
  複数の関連ツールや関連技術で、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を使用した自動テストがサポートされています。  
   
--   Inspect.exe は、[!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]を収集するために使用するアプリケーション[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロバイダーとクライアントの開発とデバッグの両方の情報です。 Inspect.exe に含まれる、[!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]です。  
+-   Inspect.exe は、[!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]収集するために使用できるアプリケーション[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロバイダーとクライアントの開発とデバッグの両方の情報。 含まれている Inspect.exe、[!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]します。  
   
 -   MSAABridge は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] クライアントに対して [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 情報を公開します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] と [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] の間に継続性を持たせる主な目的は、既存の [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] クライアントが [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を実装済みの任意のフレームワークと対話できるようにすることです。  
   

@@ -2,12 +2,12 @@
 title: フォーム ポスト
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-ms.openlocfilehash: 005aba6ab8a8fcbe4f4e4f79055e04cff059f47d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503764"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464935"
 ---
 # <a name="form-post"></a>フォーム ポスト
 このサンプルでは、WCF REST プログラミング モデルを拡張して新しい受信要求形式をサポートする方法を示します。 このサンプルには、要求を HTML フォーム ポストから [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型に逆シリアル化できるフォーマッタの実装も含まれています。 また、このサンプルでは T4 テンプレートを使用して、ユーザーが WCF REST サービスにポストバックできる HTML フォームを提供する HTML ページを返します。  
@@ -25,13 +25,13 @@ ms.locfileid: "33503764"
   
  HtmlFormProcessing ライブラリ プロジェクトには、他のカスタム要求フォーマッタを作成するために使用できる抽象基本クラス `RequestBodyDispatchFormatter` も含まれています。 `RequestBodyDispatchFormatter` から派生させると、開発者は、基本クラスで URI テンプレート パラメーターを操作のメソッド パラメーターにマップできるようにする要求本文の逆シリアル化ロジックに集中できます。 また、HtmlFormProcessing ライブラリ プロジェクトには、`HtmlFormProcessingBehavior` から派生させて既定の要求フォーマッタをカスタム要求フォーマッタに置き換える方法を示す <xref:System.ServiceModel.Description.WebHttpBehavior> クラスもあります。  
   
- このコンソール アプリケーション プロジェクトの拡張、[基本的なリソース サービス](../../../../docs/framework/wcf/samples/basic-resource-service.md)サンプルです。 基本的なリソース サービス サンプルは、WCF REST プログラミング モデルを使用してリソースを公開する方法を示しています。 基本的なリソース サービス サンプルでは、コレクション内の顧客を作成、取得、更新、および削除できるように、顧客コレクション リソースが公開されています。 基本的なリソース サービス サンプルでは、ネイティブでサポートされる XML と JSON の 2 つの受信要求形式のみが使用されます。  
+ このコンソール アプリケーション プロジェクトの拡張、[基本的なリソース サービス](../../../../docs/framework/wcf/samples/basic-resource-service.md)サンプル。 基本的なリソース サービス サンプルは、WCF REST プログラミング モデルを使用してリソースを公開する方法を示しています。 基本的なリソース サービス サンプルでは、コレクション内の顧客を作成、取得、更新、および削除できるように、顧客コレクション リソースが公開されています。 基本的なリソース サービス サンプルでは、ネイティブでサポートされる XML と JSON の 2 つの受信要求形式のみが使用されます。  
   
- このフォーム ポスト サンプルのコンソール アプリケーションでは、HtmlFormProcessing ライブラリのカスタム フォーマッタが使用されるので、ユーザーはブラウザーを使用して HTML フォーム ポストから要求を送信することで顧客を作成できます。 また、このサンプルでは、サービスにポストバックされるフォームを含む HTML ページを返す操作も追加します。 この HTML ページは、事前に処理された T4 テンプレートを使用して生成されます。この T4 テンプレートは .tt ファイルと自動生成された .cs ファイルで構成されます。 開発者は、.tt ファイルを使用して変数と制御構造を含むテンプレート フォームで応答を作成できます。 T4 の詳細については、次を参照してください。[を使用してテキスト テンプレートで成果物を生成する](http://go.microsoft.com/fwlink/?LinkId=178139)です。  
+ このフォーム ポスト サンプルのコンソール アプリケーションでは、HtmlFormProcessing ライブラリのカスタム フォーマッタが使用されるので、ユーザーはブラウザーを使用して HTML フォーム ポストから要求を送信することで顧客を作成できます。 また、このサンプルでは、サービスにポストバックされるフォームを含む HTML ページを返す操作も追加します。 この HTML ページは、事前に処理された T4 テンプレートを使用して生成されます。この T4 テンプレートは .tt ファイルと自動生成された .cs ファイルで構成されます。 開発者は、.tt ファイルを使用して変数と制御構造を含むテンプレート フォームで応答を作成できます。 T4 の詳細については、次を参照してください。[を使用してテキスト テンプレートで成果物を生成する](https://go.microsoft.com/fwlink/?LinkId=178139)します。  
   
 #### <a name="to-run-the-sample"></a>サンプルを実行するには  
   
-1.  フォーム ポスト サンプルのソリューションを開きます。 サンプルを正しく実行するには、[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] を起動するときに、管理者として実行する必要があります。 これには、右クリックし、[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]アイコンをクリックしてコンテキスト メニューから [管理者として実行] を選択します。  
+1.  フォーム ポスト サンプルのソリューションを開きます。 サンプルを正しく実行するには、[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] を起動するときに、管理者として実行する必要があります。 これには、右クリックし、[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]アイコンと、コンテキスト メニューから"管理者として実行 を選択します。  
   
 2.  Ctrl キーと Shift キーを押しながら B キーを押してソリューションをビルドし、Ctrl キーを押しながら F5 キーを押してコンソール アプリケーションの FormPost プロジェクトを実行します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33503764"
   
 4.  サンプルが実行されると、クライアントは現在のアクティビティのステータス (顧客を追加しているのか、顧客を更新しているのか、顧客を削除しているのか、または現在の顧客の一覧をサービスから取得しているのか) をコンソール ウィンドウに書き込みます。  
   
-5.  顧客フォームの URI を参照するように求められます。 ブラウザーを開き、指定された URI を参照します。 クリックして、顧客のアドレスと名前を入力、**送信**ボタンをクリックします。  
+5.  顧客フォームの URI を参照するように求められます。 ブラウザーを開き、指定された URI を参照します。 名前と、顧客とクリックのアドレスを入力、**送信**ボタンをクリックします。  
   
 6.  コンソール ウィンドウでサンプルの実行を続けるには、任意のキーを押します。  
   
@@ -52,6 +52,6 @@ ms.locfileid: "33503764"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Web\FormPost`

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 5eb85c6f3ca232f8b53ac01d57ee71f73415cf83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e01e5d1dc0fad8171e705e85debc2b15d6a506eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533544"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466535"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>方法 : デザイナーを使用してピクチャを読み込む (Windows フォーム)
-Windows フォームで<xref:System.Windows.Forms.PictureBox>コントロール、読み込みし、設定して、デザイン時にフォームに画像を表示できます、<xref:System.Windows.Forms.PictureBox.Image%2A>に有効な画像のプロパティです。 次の表は、使用可能なファイルの種類を示します。  
+Windows フォームで<xref:System.Windows.Forms.PictureBox>コントロール、読み込みし、設定して、デザイン時にフォームに画像を表示できます、<xref:System.Windows.Forms.PictureBox.Image%2A>に有効な画像のプロパティ。 次の表では、許容されるファイルの種類を示します。  
   
 |型|ファイル名拡張子|  
 |----------|-------------------------|  
@@ -27,21 +27,21 @@ Windows フォームで<xref:System.Windows.Forms.PictureBox>コントロール�
 |JPEG|.jpg|  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ### <a name="to-display-a-picture-at-design-time"></a>デザイン時に画像を表示するには  
   
-1.  描画、<xref:System.Windows.Forms.PictureBox>フォーム上のコントロールです。  
+1.  描画を<xref:System.Windows.Forms.PictureBox>フォーム上のコントロール。  
   
-2.  プロパティ ウィンドウで、次のように選択します。、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティ、し、省略記号ボタンを表示をクリックして、**開く** ダイアログ ボックス。  
+2.  プロパティ ウィンドウで、選択、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティ、省略記号を表示するボタンをクリックし、**オープン** ダイアログ ボックス。  
   
-3.  特定のファイル タイプ (たとえば、.gif ファイルを探している場合にこれを選択、**ファイルの種類**ボックス。  
+3.  特定のファイルの種類 (たとえば、.gif ファイル) を探している場合にそれを選択します。、**ファイルの種類**ボックス。  
   
 4.  表示するファイルを選択します。  
   
 ### <a name="to-clear-the-picture-at-design-time"></a>デザイン時に、画像を消去するには  
   
-1.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティと、イメージ オブジェクトの名前の左側に表示される小さなのサムネイル画像を右クリックします。 選択**リセット**です。  
+1.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティと、イメージ オブジェクトの名前の左側に表示される小さなのサムネイル画像を右クリックします。 選択**リセット**します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Forms.PictureBox>  

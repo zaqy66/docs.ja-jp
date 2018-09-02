@@ -8,31 +8,31 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: f94a965f724e85fb63ed9c98ebddba40938eb9b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 271652fe9e98f9a381da5655bd313e12f8ee917d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545559"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465669"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>方法 : 印刷ダイアログ ボックスを呼び出す
-アプリケーションから印刷する機能を提供するだけで作成して開く、、<xref:System.Windows.Controls.PrintDialog>オブジェクト。  
+アプリケーションから印刷する機能を提供することが単に作成して開くと、<xref:System.Windows.Controls.PrintDialog>オブジェクト。  
   
 ## <a name="example"></a>例  
- <xref:System.Windows.Controls.PrintDialog> コントロールには、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、構成、および [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ジョブの送信用の 1 つのエントリ ポイントが用意されています。 コントロールが使いやすいを使用して、インスタンス化できます[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]マークアップやコード。 次の例では、インスタンスを作成し、コードでコントロールを開く方法とそのプリンターから印刷する方法を示します。 ダイアログ ボックスは、ユーザーを特定のページ範囲を設定するオプションを確認する方法も示しています。 コード例では、FixedDocumentSequence.xps c: ドライブのルート内のファイルがあることを前提としています。  
+ <xref:System.Windows.Controls.PrintDialog> コントロールには、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、構成、および [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ジョブの送信用の 1 つのエントリ ポイントが用意されています。 コントロールは使いやすいを使用してインスタンス化することができます[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]マークアップまたはコード。 次の例では、インスタンス化し、コードで、コントロールを開く方法およびそのプリンターから印刷する方法を示します。 ダイアログは、ユーザーを特定のページ範囲を設定するオプションを確認する方法も示します。 コード例では、FixedDocumentSequence.xps c: ドライブのルート内のファイルがあることを前提としています。  
   
  [!code-csharp[printdialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  
   
- ダイアログ ボックスが表示されたら、ユーザーは自分のコンピューターにインストールされているプリンターを選択することになります。 選択した場合のオプションもありますが、 [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319)を作成する、[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]印刷ではなくファイル。  
+ ダイアログ ボックスが開いたら、ユーザーはコンピューターにインストールされているプリンターからを選択することになります。 選択した場合のオプションもありますが、 [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)を作成する、[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]印刷ではなくファイル。  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>の制御[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、これは、このトピックの内容について説明する必要がありますと混同しないで、 <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> Windows フォームのコンポーネントです。  
+>  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>のコントロール[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、このトピックでこれについては説明する必要がありますと混同しないで、 <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> Windows フォームのコンポーネント。  
   
- 厳密には、使用することができます、<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>ダイアログを開くことがなくメソッドです。 その意味では、コンポーネントとして含まれる未知、印刷コントロールを使用できます。 パフォーマンス上の理由から、いずれかを使用する方がよいなりますが、<xref:System.Printing.PrintQueue.AddJob%2A>メソッドまたは多くのいずれかの<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>と<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>のメソッド、 <xref:System.Windows.Xps.XpsDocumentWriter>。 詳細については、これは、次を参照してください。 [XPS ファイルをプログラムによって印刷](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)とします。  
+ 使用する厳密に言えば、<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>ダイアログを開くことがなくメソッド。 その意味で、コントロールを非表示の印刷コンポーネントとして使用できます。 パフォーマンス上の理由から、いずれかを使用する方がよい場合がなりますが、<xref:System.Printing.PrintQueue.AddJob%2A>メソッドまたはその、多数の<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>と<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>のメソッド、<xref:System.Windows.Xps.XpsDocumentWriter>します。 詳細については、これは、次を参照してください。 [XPS ファイルをプログラムによって印刷](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)とします。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Controls.PrintDialog>  
  [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [印刷の概要](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319)
+ [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-ms.openlocfilehash: 351efadfa2c97e9f36610e251c1a2f935d02514b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5af2ce568b4c4bcb66de13f18a29b3f465672ffd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527211"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456413"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>ダイアログ ボックス コントロールおよびコンポーネント (Windows フォーム)
 次の Windows フォーム コントロールおよびコンポーネントは、標準のダイアログ ボックスを表示します。 各ダイアログ ボックスで使用できる機能に関する詳細については、リンクに従ってください。  
@@ -67,4 +67,4 @@ ms.locfileid: "33527211"
  [SaveFileDialog コンポーネントの概要](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
  保存するファイルとそれらの保存先を選択します。  
   
- 「[Windows フォームのダイアログ ボックス](http://msdn.microsoft.com/library/2chz8edb\(v=vs.110\))」もご覧ください。
+ 「[Windows フォームのダイアログ ボックス](https://msdn.microsoft.com/library/2chz8edb\(v=vs.110\))」もご覧ください。

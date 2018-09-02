@@ -16,48 +16,48 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: facc756061e7eb381abecc544ca4b15bfdde6343
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecf6bff10e98ab7f008cfd176f59687f34d89553
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440048"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43471956"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost インターフェイス
-ホストが起動し、作成して既定のドメインにアクセスして、プロセスで実行されているすべてのドメインを列挙するアプリケーション ドメインを構成する共通言語ランタイム (CLR) を明示的に停止できるようにするメソッドを提供します。  
+ホストが起動し、作成して既定のドメインにアクセスして、プロセスで実行されているすべてのドメインを列挙するために、アプリケーション ドメインを構成する共通言語ランタイム (CLR) を明示的に停止できるようにするメソッドを提供します。  
   
- .NET framework version 2.0 では、このインターフェイスはによって置き換え[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)です。  
+ .NET framework version 2.0 では、このインターフェイスはによって置き換え[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
 |[CloseEnum メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-closeenum-method.md)|ドメイン リストの先頭に戻るには、ドメインの列挙子をリセットします。|  
-|[CreateDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)|アプリケーション ドメインを作成します。 呼び出し元は、型のインターフェイス ポインターを受け取ります<xref:System._AppDomain>型のインスタンスに<xref:System.AppDomain?displayProperty=nameWithType>です。|  
-|[CreateDomainEx メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)|アプリケーション ドメインを作成します。 この方法では、呼び出し、返されたその他の機能を構成する IAppDomainSetup インスタンス<xref:System._AppDomain>インスタンス。|  
-|[CreateDomainSetup メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|型のインターフェイス ポインターを取得`IAppDomainSetup`を<xref:System.AppDomainSetup>インスタンス。 `IAppDomainSetup` 作成する前に、アプリケーション ドメインの側面を構成する方法を提供します。|  
-|[CreateEvidence メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|型のインターフェイス ポインターを取得<xref:System.Security.Principal.IIdentity>、これにより、ホストに渡すセキュリティ証拠を作成する[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)または[CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)です。|  
+|[CreateDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)|アプリケーション ドメインを作成します。 呼び出し元が型のインターフェイス ポインターを受け取る<xref:System._AppDomain>型のインスタンスに<xref:System.AppDomain?displayProperty=nameWithType>します。|  
+|[CreateDomainEx メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)|アプリケーション ドメインを作成します。 この方法により、呼び出し、返された追加の機能を構成する IAppDomainSetup インスタンス<xref:System._AppDomain>インスタンス。|  
+|[CreateDomainSetup メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|型のインターフェイス ポインターを取得`IAppDomainSetup`を<xref:System.AppDomainSetup>インスタンス。 `IAppDomainSetup` 作成される前に、アプリケーション ドメインの側面を構成する方法を提供します。|  
+|[CreateEvidence メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|型のインターフェイス ポインターを取得<xref:System.Security.Principal.IIdentity>、ホストに渡すセキュリティ証拠を作成することができます[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)または[CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)します。|  
 |[CreateLogicalThreadState メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createlogicalthreadstate-method.md)|使用しないでください。|  
-|[CurrentDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-currentdomain-method.md)|型のインターフェイス ポインターを取得<xref:System._AppDomain>を表す現在のスレッドで読み込まれているドメインです。|  
+|[CurrentDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-currentdomain-method.md)|型のインターフェイス ポインターを取得<xref:System._AppDomain>を現在のスレッドで読み込まれているドメインを表します。|  
 |[DeleteLogicalThreadState メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-deletelogicalthreadstate-method.md)|使用しないでください。|  
 |[EnumDomains メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md)|現在のプロセスで、ドメインの列挙子を取得します。|  
-|[GetConfiguration メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-getconfiguration-method.md)|ホストが CLR のコールバックの構成を指定できるようにするオブジェクトを取得します。|  
-|[GetDefaultDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-getdefaultdomain-method.md)|型のインターフェイス ポインターを取得<xref:System._AppDomain>現在のプロセスの既定のドメインを表すです。|  
+|[GetConfiguration メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-getconfiguration-method.md)|ホストは、CLR のコールバックの構成を指定できるようにするオブジェクトを取得します。|  
+|[GetDefaultDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-getdefaultdomain-method.md)|型のインターフェイス ポインターを取得<xref:System._AppDomain>現在のプロセスの既定のドメインを表します。|  
 |[LocksHeldByLogicalThread メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-locksheldbylogicalthread-method.md)|使用しないでください。|  
-|[MapFile メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-mapfile-method.md)|メモリに指定されたファイルをマップします。 このメソッドは、互換性のために残されています。|  
-|[NextDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-nextdomain-method.md)|列挙体の次のドメインへのインターフェイス ポインターを取得します。|  
-|[Start メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-start-method.md)|CLR を起動します。|  
-|[Stop メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-stop-method.md)|現在のプロセスのランタイムでコードの実行を停止します。|  
+|[MapFile メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-mapfile-method.md)|指定したファイルをメモリにマップします。 このメソッドは、互換性のために残されています。|  
+|[NextDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-nextdomain-method.md)|列挙体で、次のドメインへのインターフェイス ポインターを取得します。|  
+|[Start メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-start-method.md)|CLR を開始します。|  
+|[Stop メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-stop-method.md)|現在のプロセスの実行時にコードの実行を停止します。|  
 |[SwitchInLogicalThreadState メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-switchinlogicalthreadstate-method.md)|使用しないでください。|  
 |[SwitchOutLogicalThreadState メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-switchoutlogicalthreadstate-method.md)|使用しないでください。|  
-|[UnloadDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|現在のプロセスから指定されたアプリケーション ドメインをアンロードします。|  
+|[UnloadDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|現在のプロセスから指定したアプリケーション ドメインをアンロードします。|  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
  **.NET framework のバージョン:** 1.0、1.1  
   
@@ -65,6 +65,6 @@ ms.locfileid: "33440048"
  <xref:System.AppDomain>  
  [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)  
  [ICLRRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [ランタイム ホスト](http://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
+ [ランタイム ホスト](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
  [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [CorRuntimeHost コクラス](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

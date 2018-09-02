@@ -9,16 +9,16 @@ ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bef3393cda31e546afdb7b720cb08a2d45cb45bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3008b710a6fcaba476fd8c425beaa8eb11f9e52
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409472"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470078"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>UI オートメーションによる DataItem コントロール型のサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、DataItem コントロール型に対する [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] のサポートについて説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] でのコントロール型とは、コントロールが <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> プロパティを使用するために満たす必要がある一連の条件のことです。 これらの条件には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティ値、およびコントロール パターンに関する特定のガイドラインが含まれます。  
   
@@ -28,17 +28,17 @@ ms.locfileid: "33409472"
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
- 次の表に、データ項目コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 詳細については、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーを参照してください[UI オートメーション ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)です。  
+ 次の表に、データ項目コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 詳細については、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーを参照してください[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)します。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コントロール ビュー|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コンテンツ ビュー|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|DataItem<br /><br /> -異なります (0 以上階層で構造化できます)。|DataItem<br /><br /> -異なります (0 以上階層で構造化できます)。|  
+|DataItem<br /><br /> -異なります (0 以上階層で構造化することができます)。|DataItem<br /><br /> -異なります (0 以上階層で構造化することができます)。|  
   
  データ グリッド内のデータ項目要素は、さまざまなオブジェクトをホストできます。たとえば、別のレイヤーのデータ項目や、テキスト、イメージ、エディット コントロールなどの特定のグリッド要素をホストできます。 データ項目要素に特定のオブジェクトの役割がある場合は、その要素を特定のコントロール型 (たとえば、グリッド内の選択可能なデータ項目の場合は ListItem コントロール型など) として公開する必要があります。  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、データ項目コントロールに特に関連する値または定義を持つプロパティを示します。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)です。  
+ 次の表に、データ項目コントロールに特に関連する値または定義を持つプロパティを示します。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)します。  
   
 |プロパティ|[値]|メモ|  
 |--------------|-----------|-----------|  
@@ -64,7 +64,7 @@ ms.locfileid: "33409472"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|状況に依存|データ項目を展開したり折りたたんだりして、情報の表示/非表示を切り替える場合、Expand Collapse パターンをサポートする必要があります。|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|状況に依存|データ項目の集合が、空間的に項目間を移動できるコンテナー内にある場合、データ項目は Grid Item パターンをサポートします。|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|状況に依存|画面に収まる項目数を超える項目がデータ コンテナーにある場合、すべてのデータ項目は Scroll Item パターンを使用して、スクロールして表示する機能をサポートします。|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|[はい]|すべてのデータ項目は、項目が選択されたタイミングを示す Selection Item パターンをサポートする必要があります。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|はい|すべてのデータ項目は、項目が選択されたタイミングを示す Selection Item パターンをサポートする必要があります。|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|状況に依存|データ項目が Data Grid コントロール型の中に含まれている場合、このパターンをサポートします。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|状況に依存|データ項目に循環する状態が含まれる場合。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|状況に依存|データ項目の主要なテキストが編集可能な場合は、Value パターンをサポートする必要があります。|  
@@ -105,7 +105,7 @@ ms.locfileid: "33409472"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コントロール ビュー|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コンテンツ ビュー|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-グループ"Contoso"(テーブル、グリッド)<br />-DataItem"Accounts Receivable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />イメージの"Accounts Receivable.doc"<br />-"Name"(TableItem、GridItem、値"Accounts Receivable.doc") を編集します。<br />編集「日時」(TableItem、GridItem、値"2006/8/25 3時 29分 PM")<br />-[サイズ] (GridItem、TableItem、値"11.0 KB) を編集します。<br />-DataItem"Accounts Payable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-   ...|-グループ"Contoso"(テーブル、グリッド)<br />-DataItem"Accounts Receivable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />イメージの"Accounts Receivable.doc"<br />-"Name"(TableItem、GridItem、値"Accounts Receivable.doc") を編集します。<br />編集「日時」(TableItem、GridItem、値"2006/8/25 3時 29分 PM")<br />-[サイズ] (GridItem、TableItem、値"11.0 KB) を編集します。<br />-DataItem"Accounts Payable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-   …|  
+|-グループ"Contoso"(テーブル、グリッド)<br />-DataItem"Accounts Receivable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-"Accounts Receivable.doc"のイメージします。<br />-"Name"(TableItem、GridItem、値"Accounts Receivable.doc") を編集します。<br />編集「更新日」(TableItem、GridItem、値"2006 年 8 月 25 日午後 3時 29分")<br />-[サイズ] (、TableItem、GridItem 値"11.0 KB) を編集します。<br />-DataItem"Accounts Payable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-   ...|-グループ"Contoso"(テーブル、グリッド)<br />-DataItem"Accounts Receivable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-"Accounts Receivable.doc"のイメージします。<br />-"Name"(TableItem、GridItem、値"Accounts Receivable.doc") を編集します。<br />編集「更新日」(TableItem、GridItem、値"2006 年 8 月 25 日午後 3時 29分")<br />-[サイズ] (、TableItem、GridItem 値"11.0 KB) を編集します。<br />-DataItem"Accounts Payable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-   …|  
   
  グリッドが選択可能な項目のリストを表している場合、DataItem コントロール型の代わりに、ListItem コントロール型で対応する UI 要素を公開できます。 前の例では、グループ ("Contoso") の下の DataItem 要素 ("Accounts Receivable.doc" および "Accounts Payable.doc") を ListItem コントロール型として公開することで、その型が既に SelectionItem コントロール パターンをサポートしているため、それらの要素を向上させることができます。  
   

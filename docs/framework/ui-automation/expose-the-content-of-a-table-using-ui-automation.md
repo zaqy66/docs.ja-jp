@@ -12,24 +12,24 @@ ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 874eada0714ed0f96248ebac8edb0efe205d9f21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8be813a16e1cdbf8367a358d91cf3b958ac36398
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407184"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466326"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>UI オートメーションを使用したテーブルの内容の公開
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
- このトピックではどのように[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]使用して表形式のコントロール内の各セルのコンテンツと組み込みのプロパティを公開することができます。  
+ このトピックではどのように[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]表形式コントロール内の各セルのコンテンツと組み込みのプロパティを公開するために使用できます。  
   
 ## <a name="example"></a>例  
- 次のコード例を取得する方法を示しています、<xref:System.Windows.Automation.AutomationElement>テーブル セルの内容を表す; 行および列のインデックス、行と列の範囲、および行および列のヘッダー情報などのセルのプロパティも取得します。 この例では、フォーカス変更イベント ハンドラーを使用して、キーボードの走査を実装する表形式のコントロールをシミュレートする[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]です。 フォーカス変更イベントには、各テーブルの項目の情報が公開します。  
+ 次のコード例は、取得する方法を示します、<xref:System.Windows.Automation.AutomationElement>表のセルの内容を表す; 行および列のインデックス、行と列の範囲、および行および列のヘッダー情報など、セルのプロパティも取得します。 この例では、フォーカス変更イベント ハンドラーを使用して、表形式を実装するコントロールのキーボード トラバーサルをシミュレートする[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]します。 フォーカス変更イベントの各テーブルの項目の情報が公開されます。  
   
 > [!NOTE]
->  フォーカスの変更がグローバル デスクトップ イベントであるため、テーブルの外部のフォーカス変更イベントをフィルター処理する必要があります。 参照してください、 [TrackFocus サンプル](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9)関連の実装です。  
+>  フォーカスの変更は、グローバル デスクトップ イベントであるため、テーブルの外部のフォーカス変更イベントをフィルター処理する必要があります。 参照してください、 [TrackFocus サンプル](https://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9)の関連する実装。  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

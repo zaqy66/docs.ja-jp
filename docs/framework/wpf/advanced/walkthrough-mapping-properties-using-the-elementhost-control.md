@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 89d2c6476334080fb162eadd4b2bf5984970f3fd
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 34119d889c8d6600fdda12cac33192c32d8e0fa6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934682"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467125"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>チュートリアル : ElementHost コントロールを使用したプロパティの割り当て
 
@@ -29,7 +29,7 @@ ms.locfileid: "42934682"
 
 -   既定のプロパティ マッピングを拡張します。
 
-このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [ElementHost コントロールのサンプルを使用してプロパティをマッピング](http://go.microsoft.com/fwlink/?LinkID=160018)します。
+このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [ElementHost コントロールのサンプルを使用してプロパティをマッピング](https://go.microsoft.com/fwlink/?LinkID=160018)します。
 
 マップが完了したらができます[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]を対応するプロパティ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ホストされている要素のプロパティ。
 
@@ -62,7 +62,7 @@ ms.locfileid: "42934682"
 
 4.  Windows フォーム デザイナーで `Form1` を開きます。 イベント ハンドラーを追加するためのフォームをダブルクリックして、<xref:System.Windows.Forms.Form.Load>イベント。
 
-5.  Windows フォーム デザイナーに戻るし、フォームのイベント ハンドラーを追加<xref:System.Windows.Forms.Control.Resize>イベント。 詳細については、次を参照してください。[方法: イベント ハンドラーを使用して作成デザイナー](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)します。
+5.  Windows フォーム デザイナーに戻るし、フォームのイベント ハンドラーを追加<xref:System.Windows.Forms.Control.Resize>イベント。 詳細については、次を参照してください。[方法: イベント ハンドラーを使用して作成デザイナー](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)します。
 
 6.  宣言、<xref:System.Windows.Forms.Integration.ElementHost>フィールドに、`Form1`クラス。
 
@@ -146,5 +146,5 @@ ms.locfileid: "42934682"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Windows フォームと WPF プロパティの割り当て](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [WPF デザイナー](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

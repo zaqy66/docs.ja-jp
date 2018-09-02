@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807841"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469831"
 ---
 # <a name="configuring-message-logging"></a>メッセージ ログの構成
 ここでは、さまざまなシナリオでのメッセージ ログの構成方法を示します。  
   
 ## <a name="enabling-message-logging"></a>メッセージ ログの有効化  
- Windows Communication Foundation (WCF) では、既定ではメッセージを記録しません。 メッセージ ログをアクティブにするには、トレース リスナーを `System.ServiceModel.MessageLogging` トレース ソースに追加し、構成ファイルで `<messagelogging>` 要素の属性を設定する必要があります。  
+ Windows Communication Foundation (WCF) では、既定でメッセージを記録しません。 メッセージ ログをアクティブにするには、トレース リスナーを `System.ServiceModel.MessageLogging` トレース ソースに追加し、構成ファイルで `<messagelogging>` 要素の属性を設定する必要があります。  
   
  次の例は、ログを有効にして追加オプションを指定する方法を示しています。  
   
 ```xml  
 <system.diagnostics>  
   <sources>  
-      <source name="System.ServiceModel.MessageLogging">  
-        <listeners>  
-                 <add name="messages"  
-                 type="System.Diagnostics.XmlWriterTraceListener"  
-                 initializeData="c:\logs\messages.svclog" />  
-          </listeners>  
-      </source>  
-    </sources>  
+    <source name="System.ServiceModel.MessageLogging">  
+      <listeners>  
+         <add name="messages"  
+              type="System.Diagnostics.XmlWriterTraceListener"  
+              initializeData="c:\logs\messages.svclog" />  
+        </listeners>  
+    </source>  
+  </sources>  
 </system.diagnostics>  
   
 <system.serviceModel>  
@@ -45,7 +45,7 @@ ms.locfileid: "33807841"
 </system.serviceModel>  
 ```  
   
- メッセージ ログの設定の詳細については、次を参照してください。[トレースとメッセージ ログの推奨設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)です。  
+ メッセージ ログの設定の詳細については、次を参照してください。[トレースとメッセージ ログの推奨設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)します。  
   
  `add` を使用して、使用するリスナーの名前と型を指定することができます。 この例の構成では、リスナーに "messages" という名前を付け、使用する型として標準の .NET Framework トレース リスナー (`System.Diagnostics.XmlWriterTraceListener`) を追加しています。 `System.Diagnostics.XmlWriterTraceListener` を使用する場合は、構成ファイルで出力ファイルの場所と名前を指定する必要があります。 指定するには、`initializeData` をログ ファイルの名前に設定します。 それ以外の場合、例外がスローされます。 また、既定のファイルにログを出力するカスタム リスナーを実装することもできます。  
   
@@ -60,14 +60,14 @@ ms.locfileid: "33807841"
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- トレース ソースを無効にする場合は、代わりに `logMessagesAtServiceLevel` 要素の `logMalformedMessages` 属性、`logMessagesAtTransportLevel` 属性、および `messageLogging` 属性を使用する必要があります。 これらすべての属性を `false` に設定します。 この設定を行うには、構成エディター UI インターフェイスで前のコード例の構成ファイルを使用するか、または WMI を使用します。 構成エディター ツールの詳細については、次を参照してください。[構成エディター ツール (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)です。 WMI の詳細については、次を参照してください。[診断の Windows Management Instrumentation を使用して](../../../../docs/framework/wcf/diagnostics/wmi/index.md)です。  
+ トレース ソースを無効にする場合は、代わりに `logMessagesAtServiceLevel` 要素の `logMalformedMessages` 属性、`logMessagesAtTransportLevel` 属性、および `messageLogging` 属性を使用する必要があります。 これらすべての属性を `false` に設定します。 この設定を行うには、構成エディター UI インターフェイスで前のコード例の構成ファイルを使用するか、または WMI を使用します。 構成エディター ツールの詳細については、次を参照してください。[構成エディター ツール (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)します。 WMI の詳細については、次を参照してください。[診断用の Windows Management Instrumentation のを使用して](../../../../docs/framework/wcf/diagnostics/wmi/index.md)します。  
   
 ## <a name="logging-levels-and-options"></a>ログ レベルとオプション  
  受信メッセージの場合は、メッセージが形成された直後、サービス レベルでメッセージがユーザー コードで処理される直前、および正しくないメッセージが検出されたときに、ログが記録されます。  
   
  送信メッセージの場合は、メッセージがユーザー コードから出力された直後およびメッセージがネットワークに出力される直前に、ログが記録されます。  
   
- WCF では、次の 2 つの異なるレベル、サービスとトランスポートでメッセージを記録します。 不正なメッセージも記録されます。 3 つのカテゴリは互いに独立しており、構成で個別に有効にすることができます。  
+ WCF では、2 つの異なるレベル、サービスとトランスポートでメッセージを記録します。 不正なメッセージも記録されます。 3 つのカテゴリは互いに独立しており、構成で個別に有効にすることができます。  
   
  `logMessagesAtServiceLevel` 要素の `logMalformedMessages`、`logMessagesAtTransportLevel`、および `messageLogging` の各属性を設定することによって、ログ レベルを制御することができます。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "33807841"
   
 -   全体メッセージの記録 (`logEntireMessage` 属性) : この値は、全体メッセージ (メッセージ ヘッダーと本文) を記録するかどうかを指定します。 既定値は、`false` で、ヘッダーだけ記録することを意味します。 この設定は、サービス メッセージ ログ レベルおよびトランスポート メッセージ ログ レベルに影響を与えます。  
   
--   記録するメッセージの最大数 (`maxMessagesToLog` 属性) : この値は、記録するメッセージの最大数を指定します。 すべてのメッセージ (サービス メッセージ、トランスポート メッセージ、および不正メッセージ) が、このクォータに対してカウントされます。 クォータに達すると、トレースが出力され、それ以上メッセージは記録されません。 既定値は 10000 です。  
+-   記録するメッセージの最大数 (`maxMessagesToLog` 属性) : この値は、記録するメッセージの最大数を指定します。 すべてのメッセージ (サービス メッセージ、トランスポート メッセージ、および不正メッセージ) が、このクォータに対してカウントされます。 クォータに達すると、トレースが出力され、それ以上メッセージは記録されません。 既定値は、10000 です。  
   
 -   記録するメッセージの最大サイズ (`maxSizeOfMessageToLog` 属性) : この値は、記録するメッセージの最大サイズをバイト単位で指定します。 サイズ制限を超えたメッセージは記録されず、そのメッセージに対して何の処理も実行されません。 この設定は、すべてのトレース レベルに影響を与えます。 ServiceModel トレースがオンの場合は、最初の記録ポイントで警告レベル トレース (ServiceModelSend* または TransportReceive) が出力され、ユーザーに通知します。 サービス レベルとトランスポート レベルのメッセージの既定値は 256 K ですが、正しくないメッセージの既定値は 4 K です。  
   
@@ -94,11 +94,11 @@ ms.locfileid: "33807841"
   
  構成ファイルでトレース リスナーを定義していない場合は、ログ レベルの指定に関係なくログ出力は生成されません。  
   
- このセクションで説明されている属性などのメッセージ ログ オプションは、実行時に WMI (Windows Management Instrumentation) を使用して変更できます。 アクセスすることによってこれ行う、 [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)ブール型プロパティを公開するインスタンス: `LogMessagesAtServiceLevel`、 `LogMessagesAtTransportLevel`、および`LogMalformedMessages`です。 そのため、メッセージ ログ用のトレース リスナーを構成していても、これらのオプションを構成で `false` に設定している場合は、後でアプリケーションを実行しているときに `true` に変更できます。 これで、メッセージ ログが実行時に有効になります。 同様に、構成ファイルでメッセージ ログを有効にしている場合は、実行時に WMI を使用して無効にできます。 詳細については、次を参照してください。[診断の Windows Management Instrumentation を使用して](../../../../docs/framework/wcf/diagnostics/wmi/index.md)です。  
+ このセクションで説明されている属性などのメッセージ ログ オプションは、実行時に WMI (Windows Management Instrumentation) を使用して変更できます。 これを行うへのアクセス、 [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)インスタンスで、これらのブール型プロパティを公開します: `LogMessagesAtServiceLevel`、 `LogMessagesAtTransportLevel`、および`LogMalformedMessages`します。 そのため、メッセージ ログ用のトレース リスナーを構成していても、これらのオプションを構成で `false` に設定している場合は、後でアプリケーションを実行しているときに `true` に変更できます。 これで、メッセージ ログが実行時に有効になります。 同様に、構成ファイルでメッセージ ログを有効にしている場合は、実行時に WMI を使用して無効にできます。 詳細については、次を参照してください。[診断用の Windows Management Instrumentation のを使用して](../../../../docs/framework/wcf/diagnostics/wmi/index.md)します。  
   
  メッセージ ログの `source` フィールドは、要求メッセージを送信または受信する際に要求/応答または一方向の要求については、サービス モデル レイヤーまたはトランスポート レイヤーで、または正しくないメッセージの場合に、メッセージを記録するコンテキストを指定します。  
   
- 正しくないメッセージは、の`source`と等しい`Malformed`です。 それ以外の場合、source には、コンテキストに基づいて、以下の値が設定されます。  
+ 正しくないメッセージは、の`source`と等しい`Malformed`します。 それ以外の場合、source には、コンテキストに基づいて、以下の値が設定されます。  
   
  要求/応答の場合  
   
@@ -164,6 +164,6 @@ ms.locfileid: "33807841"
  `type` 属性は、型のアセンブリ修飾名に設定する必要があることに注意してください。  
   
 ## <a name="see-also"></a>関連項目  
- [\<メッセージ ログ >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
+ [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
  [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
  [トレースとメッセージ ログの推奨設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

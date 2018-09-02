@@ -2,12 +2,12 @@
 title: '&lt;ws2007FederationHttpBinding&gt; の &lt;message&gt; 要素'
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 565a0c6027e94954c81c11f96fbd5473dbcd4fdf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3f0dbc3128af812c7fd09eed5acd90ab43ec8351
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750818"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474240"
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt; の &lt;message&gt; 要素
 メッセージ レベルのセキュリティの設定を定義、 [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)要素。  
@@ -88,7 +88,7 @@ ms.locfileid: "32750818"
 |属性|説明|  
 |---------------|-----------------|  
 |`algorithmSuite`|省略可能です。 メッセージの暗号化、署名、およびキー ラップ アルゴリズムを設定します。 アルゴリズムとキー サイズは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> クラスにより決まります。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。<br /><br /> それぞれの値については次の表を参照してください。 既定値は Basic256 です。|  
-|`issuedKeyType`|発行されるキーの種類を指定します。 以下の値が有効です。<br /><br /> SymmetricKey<br />-PublicKey<br />-BearerKey<br /><br /> 既定値は SymmetricKey です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
+|`issuedKeyType`|発行されるキーの種類を指定します。 以下の値が有効です。<br /><br /> SymmetricKey<br />-公開鍵<br />-BearerKey<br /><br /> 既定値は SymmetricKey です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
 |`issuedTokenType`|発行されるトークンの型を指定する URI。 既定値は、`null` です。|  
 |`negotiateServiceCredential`|サービス資格情報がネゴシエーションの一部として交換されるか、帯域外で使用できるかを指定する値。 既定値は `true` で、サービス資格情報がネゴシエートされます。|  
   
@@ -135,5 +135,5 @@ ms.locfileid: "32750818"
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [サービスとクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  
  [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [バインディングを使用して、Windows Communication Foundation サービスとクライアントを構成するには](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

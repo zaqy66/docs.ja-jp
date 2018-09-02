@@ -2,12 +2,12 @@
 title: InvokeMethod
 ms.date: 03/30/2017
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
-ms.openlocfilehash: 12d028515c34c0e3593c90b81a5589fb05f36b82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 861e0cf160aec9814abcf8c27c37ce13a5d88b2a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517739"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457182"
 ---
 # <a name="invokemethod"></a>InvokeMethod
 このサンプルでは、<xref:System.Activities.Statements.InvokeMethod> アクティビティを使用してクラスのメソッドを呼び出すさまざまな方法を示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "33517739"
 12. オブジェクトのインスタンスから値を取得します。  
   
 ## <a name="to-use-this-sample"></a>このサンプルを使用するには  
- このサンプルには、2 つのバージョンが用意されています。 このサンプルの最初のバージョンは、の使用法を示しています<xref:System.Activities.Statements.InvokeMethod>c# コードから Windows Workflow Foundation (WF) のプログラミング モデルを使用して、Codedworkflow \cs フォルダーにあります。 第 2 のバージョンでは、XAML で <xref:System.Activities.Statements.InvokeMethod> を使用する方法を示します。これは、DesignerWorkflow\CS フォルダーにあります。  
+ このサンプルには、2 つのバージョンが用意されています。 このサンプルの最初のバージョンの使用を示して<xref:System.Activities.Statements.InvokeMethod>Windows Workflow Foundation (WF) のプログラミング モデルを使用してコードを c# を使用して、codedworkflow \cs フォルダー下にあります。 第 2 のバージョンでは、XAML で <xref:System.Activities.Statements.InvokeMethod> を使用する方法を示します。これは、DesignerWorkflow\CS フォルダーにあります。  
   
 #### <a name="to-run-the-coded-workflow-sample"></a>コード化されたワークフロー サンプルを実行するには  
   
@@ -65,6 +65,6 @@ ms.locfileid: "33517739"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`

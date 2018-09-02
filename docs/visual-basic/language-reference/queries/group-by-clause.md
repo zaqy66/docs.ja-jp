@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 7cf688dc2e0ccd10c8bfbe5f0308f0aa808fbef0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88707ed6c0e3e5a0ecf1f0812d31634bbdca3123
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605031"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462520"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 句 (Visual Basic)
 クエリ結果の要素をグループ化します。 これを使用して、グループごとに集計関数を適用することもできます。 グループ化操作は、1 つ以上のキーに基づきます。  
@@ -59,10 +59,10 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
      グループに適用する集計関数を含めることもできます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Group By` 句を使用して、クエリの結果をグループに分割できます。 グループ化は、1 つのキー、または複数のキーで構成される複合キーに基づいて行われます。 一致するキー値と関連付けられた要素は、同じグループに入れられます。  
   
- グループの参照に使用するメンバー名を示すには、 `aggregateList` 句の `Into` パラメーターと `Group` キーワードを使用します。 `Into` 句に集計関数を含めることで、グループ化された要素の値を計算することもできます。 標準の集計関数の一覧は、次を参照してください。 [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)です。  
+ グループの参照に使用するメンバー名を示すには、 `aggregateList` 句の `Into` パラメーターと `Group` キーワードを使用します。 `Into` 句に集計関数を含めることで、グループ化された要素の値を計算することもできます。 標準の集計関数の一覧は、次を参照してください。 [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)します。  
   
 ## <a name="example"></a>例  
  以下のコード例では、場所 (国) に基づいて顧客の一覧をグループ化し、各グループ内の顧客の数を返します。 結果は、国名によって並べ替えられます。 グループ化した結果は、市区町村名によって並べ替えられます。  
@@ -71,7 +71,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="see-also"></a>関連項目  
  [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [クエリ](../../../visual-basic/language-reference/queries/queries.md)  
+ [クエリ](../../../visual-basic/language-reference/queries/index.md)  
  [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)  

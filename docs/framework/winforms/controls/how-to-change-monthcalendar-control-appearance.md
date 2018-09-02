@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの MonthCalendar コントロールを変更する&#39;s 外観'
+title: '方法: Windows フォームの MonthCalendar コントロールを変更する&#39;外観'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: aab2625afd5159cb2ce726bce16e917a9ad4d834
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f91363764099cabfa1a7939ff07e627aeb6c815
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531327"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467666"
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>方法: Windows フォームの MonthCalendar コントロールを変更する&#39;s 外観
-Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロールでは、さまざまな方法で、カレンダーの外観をカスタマイズすることができます。 たとえば、配色を設定でき、または週の数と現在の日付を非表示に選択できます。  
+# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>方法: Windows フォームの MonthCalendar コントロールを変更する&#39;外観
+Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロールでは、さまざまな方法で、カレンダーの外観をカスタマイズできます。 たとえば、配色を設定でき、または週数と現在の日付を非表示に選択できます。  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>月間予定表の配色を変更するには  
   
--   プロパティを設定します。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>、<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>と<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>です。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>プロパティが、週の日間も、フォントの色を決定します。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>プロパティが表示されている月または数か月の手順の前後の日付の色を決定します。  
+-   プロパティを設定します。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>、<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>と<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>します。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>も、プロパティは、曜日のフォントの色を決定します。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>プロパティ直前および直後の表示されている月または数か月の日付の色を決定します。  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -42,11 +42,11 @@ Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロール�
     ```  
   
     > [!NOTE]
-    >  以降、Windows Vista とは、テーマによって、一部のプロパティを設定変わらないことがあります、カレンダーの外観です。 たとえば、Aero のテーマを使用する Windows を設定すると、設定、 <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>、 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>、 <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>、または<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>プロパティは影響を与えません。 これは、予定表の更新バージョンが実行時に現在のオペレーティング システムのテーマから派生した外観でレンダリングされているためです。 これらのプロパティを使用し、カレンダーの以前のバージョンを有効にする場合は、アプリケーションの visual スタイルが無効にできます。 Visual スタイルを無効にすると、アプリケーションでは、その他のコントロールの動作と外観が影響があります。 Visual Basic での visual スタイルを無効にするには、プロジェクト デザイナーを開きをオフにして、**を有効にする XP の視覚スタイル**チェック ボックスをオンします。 C# での visual スタイルを無効にするには、Program.cs を開きをコメント アウト`Application.EnableVisualStyles();`です。 Visual スタイルの詳細については、次を参照してください。[する方法: Windows XP Visual スタイルを有効にする](http://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)です。  
+    >  以降 Windows vista では、テーマによっては、いくつかのプロパティを設定する可能性がありますいないの外観を変更、予定表。 Windows が設定されて、Aero のテーマを使用する場合の設定など、 <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>、 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>、 <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>、または<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>プロパティは影響を与えません。 これは、実行時に、現在のオペレーティング システム テーマから派生した外観の予定表の更新バージョンがレンダリングされるためです。 これらのプロパティを使用し、カレンダーの以前のバージョンを有効にする場合は、アプリケーションの visual スタイルが無効にできます。 Visual スタイルを無効にすると、アプリケーションでは、その他のコントロールの動作と外観が影響可能性があります。 Visual Basic での visual スタイルを無効にするには、プロジェクト デザイナーを開きし、オフに、**を有効にする XP visual スタイル**チェック ボックスをオンします。 C# での visual スタイルを無効にする Program.cs を開きをコメント アウト`Application.EnableVisualStyles();`します。 Visual スタイルの詳細については、次を参照してください。[方法: Windows XP Visual スタイルを有効にする](https://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)します。  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>コントロールの下部にある現在の日付を表示するには  
   
--   <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> プロパティを `true` に設定します。 次の例は、今日の日付の形式がダブルクリックされたときの表示を切り替えます。  
+-   <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> プロパティを `true` に設定します。 次の例は、フォームがダブルクリックされたときに、今日の日付を省略すると表示を切り替えます。  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -74,7 +74,7 @@ Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロール�
        }  
     ```  
   
-     (Visual C# の場合、 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターに次のコードを追加します。  
+     (Visual c#、 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  
@@ -87,9 +87,9 @@ Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロール�
   
 ### <a name="to-display-week-numbers"></a>週番号を表示するには  
   
--   <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> プロパティを `true` に設定します。 [プロパティ] ウィンドウまたはコードでは、このプロパティを設定することができます。  
+-   <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> プロパティを `true` に設定します。 コードで、または [プロパティ] ウィンドウで、このプロパティを設定できます。  
   
-     別の列、週の最初の日の左側に週番号が表示されます。  
+     別の列の週の最初の日の左側に週番号が表示されます。  
   
     ```vb  
     MonthCalendar1.ShowWeekNumbers = True  

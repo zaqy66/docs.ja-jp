@@ -6,26 +6,26 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 2d5b79244d867ea4b6134413d42710b2eadc871e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 249210d2bcb7a9ef2c5bf1aed00bcfe138193aab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532387"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456708"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>方法 : Windows フォームで Windows エクスプローラー スタイルのインターフェイスを作成する
-Windows エクスプ ローラーは、準備ができて、使いやすさのためのアプリケーションの一般的なユーザー インターフェイス選択です。  
+Windows エクスプ ローラーは、準備ができて、慣れ親しんだのためのアプリケーションの一般的なユーザー インターフェイス選択です。  
   
- Windows エクスプ ローラーは、基本的に、<xref:System.Windows.Forms.TreeView>コントロールと<xref:System.Windows.Forms.ListView>別のパネル上のコントロールです。 パネルは、スプリッターによってサイズ変更可能で行われます。 このコントロールの配置は、表示する情報と参照に対して非常に効果的です。  
+ Windows エクスプ ローラーは、基本的に、<xref:System.Windows.Forms.TreeView>コントロールと<xref:System.Windows.Forms.ListView>別のパネル上のコントロール。 パネルは、スプリッターによってサイズ変更可能で行われます。 このコントロールの配置は、情報の表示と参照は非常に効果的です。  
   
- 次の手順では、Windows エクスプ ローラーのようなフォームでコントロールを配置する方法を示します。 Windows エクスプ ローラーのアプリケーションのファイル参照機能を追加する方法には表示されません。  
+ 次の手順では、Windows エクスプ ローラーのようなフォームでコントロールを配置する方法を示します。 Windows エクスプ ローラー アプリケーションのファイル参照機能を追加する方法は表示されません。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ### <a name="to-create-a-windows-explorer-style-windows-form"></a>Windows エクスプ ローラー スタイルの Windows フォームを作成するには  
   
-1.  新しい Windows アプリケーション プロジェクトを作成します。 詳細については、「[方法 : Windows アプリケーション プロジェクトを作成する](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)」を参照してください。  
+1.  新しい Windows アプリケーション プロジェクトを作成 (**ファイル** > **新規** > **プロジェクト** > **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
   
 2.  **ツールボックス**:  
   
@@ -35,19 +35,19 @@ Windows エクスプ ローラーは、準備ができて、使いやすさの�
   
     3.  ドラッグ、<xref:System.Windows.Forms.ListView>にコントロールを**SplitterPanel2** (のパネル、<xref:System.Windows.Forms.SplitContainer>マークされているコントロール**Panel2**)。  
   
-3.  CTRL キーを押しながらクリックするとさらに、3 つすべてのコントロールを選択します。 選択した場合、<xref:System.Windows.Forms.SplitContainer>制御、パネルではなく、分割バーをクリックします。  
+3.  CTRL キーをクリックするとさらに 3 つすべてのコントロールを選択します。 選択すると、<xref:System.Windows.Forms.SplitContainer>コントロールをパネルではなく、スプリッター バーをクリックします。  
   
     > [!NOTE]
-    >  使用しないで、**すべて選択**コマンドを**編集**メニュー。 これを行う場合、次の手順で必要なプロパティには表示されません、**プロパティ**ウィンドウです。  
+    >  使用しないでください、**すべて選択**コマンドを**編集**メニュー。 これを行う場合、次の手順で必要なプロパティでは表示されません、**プロパティ**ウィンドウ。  
   
-4.  **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>です。  
+4.  **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>します。  
   
 5.  F5 キーを押してアプリケーションを実行します。  
   
-     フォームには、Windows エクスプ ローラーのような 2 部構成のユーザー インターフェイスが表示されます。  
+     フォームには、Windows エクスプ ローラーのような 2 つの部分のユーザー インターフェイスが表示されます。  
   
     > [!NOTE]
-    >  分割線をドラッグすると、パネル サイズが変更されます。  
+    >  分割線をドラッグすると、パネルでは、自身サイズを変更します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Forms.SplitContainer>  

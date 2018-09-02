@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 836e920ef7c95d4a7a2b752c2f76f29d8c880e7c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: de2fc0f562b079d5310ed2cd81211e14d4257515
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750467"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468547"
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt; の &lt;security&gt;
-セキュリティ機能を表す、 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)です。  
+セキュリティ機能を表す、 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)します。  
   
  \<system.ServiceModel >  
 \<bindings>  
@@ -46,14 +46,14 @@ ms.locfileid: "32750467"
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|-省略可能です。 適用するセキュリティの種類を指定します。 既定値は、`Message` です。<br />-この属性は型<xref:System.ServiceModel.SecurityMode>です。|  
+|モード|-省略可能。 適用するセキュリティの種類を指定します。 既定値は `Message` です。<br />-この属性が型<xref:System.ServiceModel.SecurityMode>します。|  
   
 ## <a name="mode-attribute"></a>Mode 属性  
   
 |値|説明|  
 |-----------|-----------------|  
 |なし|セキュリティを無効にします。|  
-|Transport|セキュリティは、HTTPS を使用して確保されます。 サービスは、SSL 証明書を使用して構成する必要があります。 メッセージは、HTTPS を使用して完全にセキュリティで保護され、サービスの SSL 証明書を使用するクライアントによって認証されます。 クライアント認証は、`ClientCredentials` 属性を使用して制御されます。 [\<トランスポート >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)です。|  
+|Transport|セキュリティは、HTTPS を使用して確保されます。 サービスは、SSL 証明書を使用して構成する必要があります。 メッセージは、HTTPS を使用して完全にセキュリティで保護され、サービスの SSL 証明書を使用するクライアントによって認証されます。 クライアント認証は、`ClientCredentials` 属性を使用して制御されます。 [\<トランスポート >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)します。|  
 |メッセージ|セキュリティは、SOAP メッセージ セキュリティを使用して確保されます。 既定では、SOAP 本文は暗号化および署名されます。 このモードは、サービス資格情報をクライアントの帯域外で使用可能にするかどうか、使用するアルゴリズム スイート、Security.Message プロパティを使用してメッセージ本文に適用する保護レベルなど、さまざまな機能を提供します。 クライアント認証はセッションごとに 1 回実行され、認証の結果はセッションの存続中にキャッシュされます。|  
 |TransportWithMessageCredential|このモードでは、HTTPS は、整合性、機密性、およびサーバー認証を提供し、SOAP メッセージ セキュリティはクライアント認証を提供します。 既定では、クライアント認証はセッションごとに 1 回実行され、認証の結果はセッションの存続中にキャッシュされます。|  
   
@@ -70,7 +70,7 @@ ms.locfileid: "32750467"
 |-------------|-----------------|  
 |[\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|HTTP トランスポート アプリケーションのセキュリティで保護されたバインド。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  WSHttpBinding クラスは、WS-* 仕様を実装するサービスと相互運用するようにデザインされています。 このバインディングのトランスポート セキュリティは、SSL (Secure Sockets Layer) over HTTP または HTTPS です。  
   
 ## <a name="see-also"></a>関連項目  
@@ -81,5 +81,5 @@ ms.locfileid: "32750467"
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  
  [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [バインディングを使用して、Windows Communication Foundation サービスとクライアントを構成するには](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

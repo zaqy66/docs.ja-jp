@@ -9,37 +9,37 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: a6c08d33682e5e2cc936c3aa6aa109ad3389a367
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f26e21d824420fc4ff0480de21f260309c5c2e11
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532900"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456721"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>方法 :デザイナーを使って ToolBar ボタンのアイコンを定義する
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
- <xref:System.Windows.Forms.ToolBar> ボタンは、ユーザーがそれらに含まれるを識別しやすくのアイコンを表示できます。 これに画像を追加することによって実現、<xref:System.Windows.Forms.ImageList>コンポーネントと関連付けることで、<xref:System.Windows.Forms.ToolBar>コントロール。  
+ <xref:System.Windows.Forms.ToolBar> ボタンは、ユーザーがそれらに含まれるを簡単に識別のアイコンを表示できません。 これは画像を追加することによって実現、<xref:System.Windows.Forms.ImageList>コンポーネントと関連付けること、<xref:System.Windows.Forms.ToolBar>コントロール。  
   
- 次の手順が必要です、 **Windows アプリケーション**が含まれているフォーム プロジェクト、<xref:System.Windows.Forms.ToolBar>コントロールと<xref:System.Windows.Forms.ImageList>コンポーネントです。 このようなプロジェクトの設定の詳細については、次を参照してください。[する方法: Windows アプリケーション プロジェクトを作成](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)と[する方法: Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)です。  
+ 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.ToolBar>コントロールと<xref:System.Windows.Forms.ImageList>コンポーネント。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法: Windows アプリケーション プロジェクトを作成](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)と[方法: Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>デザイン時ツール バー ボタンのアイコンを設定するには  
+### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>デザイン時にツール バー ボタンのアイコンを設定するには  
   
-1.  イメージを追加、<xref:System.Windows.Forms.ImageList>コンポーネントです。 詳細については、次を参照してください。[する方法: デザイナーを使って ImageList イメージを追加または](../../../../docs/framework/winforms/controls/how-to-add-or-remove-imagelist-images-with-the-designer.md)です。  
+1.  イメージを追加、<xref:System.Windows.Forms.ImageList>コンポーネント。 詳細については、次を参照してください。[方法: デザイナーを使って ImageList イメージを追加または](../../../../docs/framework/winforms/controls/how-to-add-or-remove-imagelist-images-with-the-designer.md)します。  
   
-2.  選択、<xref:System.Windows.Forms.ToolBar>フォーム上のコントロールです。  
+2.  選択、<xref:System.Windows.Forms.ToolBar>フォーム上のコントロール。  
   
-3.  **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.ToolBar>コントロールの<xref:System.Windows.Forms.ToolBar.ImageList%2A>プロパティを<xref:System.Windows.Forms.ImageList>コンポーネントです。  
+3.  **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.ToolBar>コントロールの<xref:System.Windows.Forms.ToolBar.ImageList%2A>プロパティを<xref:System.Windows.Forms.ImageList>コンポーネント。  
   
-4.  クリックして、<xref:System.Windows.Forms.ToolBar>コントロールの<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティを選択し、省略記号ボタン (![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) を開くには、ボタン**ToolBarButton コレクション エディター**です。  
+4.  をクリックして、<xref:System.Windows.Forms.ToolBar>コントロールの<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティを選択し、省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) ボタンを**ツールバー ・ ボタン コレクション エディター**します。  
   
-5.  使用して、**追加**ボタンを追加するにはボタン、<xref:System.Windows.Forms.ToolBar>コントロール。  
+5.  使用して、**追加**にボタンを追加するボタン、<xref:System.Windows.Forms.ToolBar>コントロール。  
   
-6.  **プロパティ**の右側のペインに表示されるウィンドウ、 **ToolBarButton コレクション エディター**、設定、<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>各ツールバーのボタン、リスト内の値のいずれかのプロパティを追加した画像の描画、<xref:System.Windows.Forms.ImageList>コンポーネントです。  
+6.  **プロパティ**ウィンドウの右側にあるペインに表示される、**ツールバー ・ ボタン コレクション エディター**、設定、<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>一覧で、値の 1 つは、各ツール バー ボタンのプロパティを追加したイメージの描画、<xref:System.Windows.Forms.ImageList>コンポーネント。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Forms.ToolBar>  

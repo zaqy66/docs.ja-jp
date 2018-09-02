@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: d5e90d7cab0763dcc1635f8c383c434240498766
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 09f634c870eb78c16192ed30ffbbfdc71fdd5142
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254829"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456439"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの WPF 複合コントロールのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コード、ことができます、既存の拡張をより効果的な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーションを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ではなく最初から修正します。 一般的なシナリオで実装したコントロールを 1 つを埋め込む、または場合に、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows フォーム アプリケーション内で。 WPF コントロールをカスタマイズする方法の詳細については、次を参照してください。[コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)します。  
@@ -24,7 +24,7 @@ ms.locfileid: "43254829"
   
 -   Windows フォーム ホスト アプリケーションを実装する。  
   
- このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [Windows フォームのサンプルでの WPF 複合コントロールをホストしている](http://go.microsoft.com/fwlink/?LinkID=159996)します。  
+ このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [Windows フォームのサンプルでの WPF 複合コントロールをホストしている](https://go.microsoft.com/fwlink/?LinkID=159996)します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  

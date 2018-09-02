@@ -2,12 +2,12 @@
 title: WAS アクティベーション アーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497998"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457161"
 ---
 # <a name="was-activation-architecture"></a>WAS アクティベーション アーキテクチャ
 ここでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) の各コンポーネントについて説明します。  
@@ -87,4 +87,4 @@ ms.locfileid: "33497998"
   
 ## <a name="see-also"></a>関連項目  
  [WCF で使用するための WAS を設定する](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Windows Server App Fabric のホスティング機能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

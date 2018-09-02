@@ -11,38 +11,38 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 783c75ed4577831b7ca444870c97063e8a057346
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646683"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456491"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>方法: 変数内で複数の値を保持する (Visual Basic)
-変数を宣言する必要がある場合は、複数の値を保持する*複合データ型*です。  
+として宣言する場合、変数が 1 つ以上の値を保持する*複合データ型*します。  
   
- [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)構造体、配列、およびクラスが含まれます。 複合データ型の変数は、基本データ型とその他の複合型の組み合わせを保持できます。 構造体とクラスは、コードだけではなく、データを保持できます。  
+ [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)構造体、配列、およびクラスが含まれます。 複合データ型の変数には、基本データ型とその他の複合型の組み合わせを保持できます。 構造体とクラスは、コードだけではなく、データを保持できます。  
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>変数に 1 つ以上の値を保持するには  
   
-1.  変数を使用する複合データ型を確認します。  
+1.  変数の使用する複合データ型を確認します。  
   
 2.  複合データ型が既に定義されていない場合、変数が使用できるように定義します。  
   
-    -   含む構造体を定義、 [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)です。  
+    -   含む構造体の定義、 [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)します。  
   
-    -   格納された配列を定義、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)です。  
+    -   配列を定義、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)します。  
   
-    -   クラスを定義、[クラス ステートメント](../../../../visual-basic/language-reference/statements/class-statement.md)です。  
+    -   クラスを定義、[クラス ステートメント](../../../../visual-basic/language-reference/statements/class-statement.md)します。  
   
-3.  使用して変数を宣言、`Dim`ステートメントです。  
+3.  使用して変数を宣言、`Dim`ステートメント。  
   
 4.  変数名に続けて、`As`句。  
   
-5.  以下の`As`キーワード、適切な複合データ型の名前に置き換えます。  
+5.  に従って、`As`キーワードは、適切な複合データ型の名前に置き換えます。  
   
 ## <a name="see-also"></a>関連項目  
- [データの種類](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
  [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
  [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

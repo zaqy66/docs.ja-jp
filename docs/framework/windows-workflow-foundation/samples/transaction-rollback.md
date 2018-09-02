@@ -2,12 +2,12 @@
 title: トランザクションのロールバック
 ms.date: 03/30/2017
 ms.assetid: 7f377147-7529-4689-a588-608cee87fdf8
-ms.openlocfilehash: 15333b159625f07449b0a93634a1a9a854614a57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8134623248b072ec5a095ab9b10840e94a09243c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517158"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464124"
 ---
 # <a name="transaction-rollback"></a>トランザクションのロールバック
 このサンプルでは、アンビエント <xref:System.Activities.NativeActivity> にアクセスしてアンビエント トランザクションを取得し、そのトランザクションを明示的にロールバックするカスタム <xref:System.Activities.RuntimeTransactionHandle> を作成する方法を示します。  
@@ -32,7 +32,7 @@ ms.locfileid: "33517158"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactionRollback`  
   

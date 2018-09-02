@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69c7e30168686eeb7d530b167b1f87c567c63874
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408633"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463196"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>方法: WIF トレースを使用してクレーム対応アプリケーションおよびサービスをデバッグする
 ## <a name="applies-to"></a>対象  
@@ -77,14 +77,14 @@ ms.locfileid: "33408633"
     </system.diagnostics>  
     ```  
   
-3.  上記の構成は、詳細トレース イベントを生成し、*WIFTrace.e2e* ファイルにログを記録するよう WIF に指示します。 **switchValue** スイッチの値の完全なリストについては、「[トレースの構成](http://msdn.microsoft.com/library/ms733025.aspx)」トピックにあるトレース レベルの表を参照してください。  
+3.  上記の構成は、詳細トレース イベントを生成し、*WIFTrace.e2e* ファイルにログを記録するよう WIF に指示します。 **switchValue** スイッチの値の完全なリストについては、「[トレースの構成](../wcf/diagnostics/tracing/configuring-tracing.md)」トピックにあるトレース レベルの表を参照してください。  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>手順 2 – トレース ビューアー ツールを使用して WIF のトレース ファイルを分析する  
  このステップでは、トレース ビューアー ツール (SvcTraceViewer.exe) を使用して WIF のトレース ログを分析します。  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>トレース ビューアー ツール (SvcTraceViewer.exe) を使用して WIF のトレース ログを分析するには  
   
-1.  トレース ビューアー ツール (SvcTraceViewer.exe) は、Windows SDK の一部として同梱されています。 Windows SDK をまだインストールしていない場合は、こちら ([Windows SDK](http://www.microsoft.com/download/en/details.aspx?id=8279)) からダウンロードできます。  
+1.  トレース ビューアー ツール (SvcTraceViewer.exe) は、Windows SDK の一部として同梱されています。 Windows SDK をまだインストールしていない場合は、こちら ([Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279)) からダウンロードできます。  
   
 2.  トレース ビューアー ツール (SvcTraceViewer.exe) を実行します。 通常、これはインストール パスの **Bin** フォルダーから使用できます。  
   
@@ -105,8 +105,8 @@ ms.locfileid: "33408633"
   
 |**エラー ID**|**エラー メッセージ**|**エラーを修復するために必要な操作**|  
 |-|-|-|  
-|ID4175|セキュリティ トークンの発行者は、IssuerNameRegistry で認識されませんでした。  この発行者からのセキュリティ トークンを承認するには、この発行者の有効な名前を返すように IssuerNameRegistry を構成します。|このエラーは、MMC スナップインから拇印をコピーして、*Web.config* ファイルに貼り付けると発生する可能性があります。 具体的には、[証明書のプロパティ] ウィンドウからコピーするときに、テキスト文字列内で余分な印刷できない文字を取得することがあります。 この余分な文字は、拇印一致が失敗するとします。正しく拇印をコピーする手順を参照してください。 [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|セキュリティ トークンの発行者は、IssuerNameRegistry で認識されませんでした。  この発行者からのセキュリティ トークンを承認するには、この発行者の有効な名前を返すように IssuerNameRegistry を構成します。|このエラーは、MMC スナップインから拇印をコピーして、*Web.config* ファイルに貼り付けると発生する可能性があります。 具体的には、[証明書のプロパティ] ウィンドウからコピーするときに、テキスト文字列内で余分な印刷できない文字を取得することがあります。 この余分な文字により、拇印と失敗しますを。正しく拇印をコピーする手順はここにあります。 [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>関連項目  
   
--   [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](http://msdn.microsoft.com/library/aa751795.aspx)
+-   [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

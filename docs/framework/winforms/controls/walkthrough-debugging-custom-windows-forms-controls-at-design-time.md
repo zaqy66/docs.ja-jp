@@ -16,11 +16,11 @@ helpviewer_keywords:
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 ms.openlocfilehash: 824c1e47cf50dc13a3a986e48a49158b15dbb935
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331799"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455732"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>チュートリアル : カスタム Windows フォーム コントロールのデザイン時のデバッグ
 カスタム コントロールを作成するときに多くの場合、表示されますが、デザイン時の動作をデバッグするために必要です。 これは、カスタム コントロールのカスタム デザイナーを作成する場合に特に当てはまります。 詳細については、次を参照してください。[チュートリアル: 作成、Windows フォーム コントロールを受け取るの Visual Studio デザイン時機能を利用](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)します。  

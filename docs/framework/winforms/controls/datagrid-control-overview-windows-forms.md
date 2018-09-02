@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 1849fd0d81b00f1fa351d2a8cf1d2ed567e04401
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529494"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462465"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid コントロールの概要 (Windows フォーム)
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "33529494"
   
  次のスクリーン ショットは、複数のテーブルのデータにバインドされた DataGrid を示しています。  
   
- ![複数のテーブルを持つデータにバインドされた DataGrid](../../../../docs/framework/winforms/controls/media/vbcontrol1.gif "vbControl1")  
+ ![複数のテーブルのデータにバインドされた DataGrid](../../../../docs/framework/winforms/controls/media/vbcontrol1.gif "vbControl1")  
 複数のテーブルを持つデータにバインドされた DataGrid  
   
  <xref:System.Windows.Forms.DataGrid> はデータセットのユーザー インターフェイス、関連するテーブル間のナビゲーション、および豊富な書式設定および編集機能を提供することができます。  
@@ -52,9 +52,9 @@ ms.locfileid: "33529494"
 ## <a name="binding-data-to-the-control"></a>コントロールへのデータのバインド  
  <xref:System.Windows.Forms.DataGrid> コントロールが機能するために、デザイン時に <xref:System.Windows.Forms.DataGrid.DataSource%2A> プロパティと <xref:System.Windows.Forms.DataGrid.DataMember%2A> プロパティを使用して、または実行時に <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> メソッドを使用してデータ ソースにバインドする必要があります。 このバインディングは、<xref:System.Windows.Forms.DataGrid> を <xref:System.Data.DataSet> や <xref:System.Data.DataTable> などのインスタンス化されたデータ ソース オブジェクトにポイントします。 <xref:System.Windows.Forms.DataGrid> コントロールは、データ上で実行されるアクションの結果を表示します。 ほとんどのデータに固有の動作は、<xref:System.Windows.Forms.DataGrid> によってではなく、データ ソースによって実行されます。  
   
- バインドされたデータセット内のデータが任意のメカニズムにより更新された場合に、<xref:System.Windows.Forms.DataGrid> コントロールが変更を反映します。 データ グリッド、表のスタイル、および列のスタイルがある場合、`ReadOnly`プロパティに設定`false`、を通じて、データセット内のデータを更新することができます、<xref:System.Windows.Forms.DataGrid>コントロール。  
+ バインドされたデータセット内のデータが任意のメカニズムにより更新された場合に、<xref:System.Windows.Forms.DataGrid> コントロールが変更を反映します。 データ グリッド、表のスタイルおよび列のスタイルがある場合、`ReadOnly`プロパティに設定`false`、を介して、データセット内のデータを更新することができます、<xref:System.Windows.Forms.DataGrid>コントロール。  
   
- <xref:System.Windows.Forms.DataGrid> には、一度に 1 つのテーブルのみを表示できます。 テーブル間で親子のリレーションシップが定義される場合、ユーザーが関連するテーブルの間で移動して、<xref:System.Windows.Forms.DataGrid> コントロールで表示されるテーブルを選択できます。 バインディングについては、<xref:System.Windows.Forms.DataGrid>コントロールを[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]デザイン時または実行時に、データ ソースを参照してください[する方法: Windows フォーム DataGrid コントロールをデータ ソースにバインド](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)です。  
+ <xref:System.Windows.Forms.DataGrid> には、一度に 1 つのテーブルのみを表示できます。 テーブル間で親子のリレーションシップが定義される場合、ユーザーが関連するテーブルの間で移動して、<xref:System.Windows.Forms.DataGrid> コントロールで表示されるテーブルを選択できます。 バインディングについては、<xref:System.Windows.Forms.DataGrid>への制御、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]デザイン時または実行時に、データ ソースを参照してください[方法: Windows フォームの DataGrid コントロールをデータ ソースにバインド](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
   
  <xref:System.Windows.Forms.DataGrid> の有効なデータ ソースには、次が含まれます。  
   
@@ -90,14 +90,14 @@ ms.locfileid: "33529494"
 |複数の関連テーブル。|グリッドに、テーブルを選択するツリー ビューを表示でき、グリッドに親テーブルを表示するよう指定することもできます。 親テーブル内のレコードでは、ユーザーが関連する子の行に移動できます。|  
   
 > [!NOTE]
->  データセットのテーブルは、<xref:System.Data.DataRelation> を使用して関連付けられます。  参照してください[ハイパーリンク"http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)"データセットのリレーションシップ](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\))または[データセットのリレーションシップ](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))です。  
+>  データセットのテーブルは、<xref:System.Data.DataRelation> を使用して関連付けられます。  参照してください[HYPERLINK"http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)"データセットのリレーションシップ](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\))または[データセットのリレーションシップ](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))します。  
   
  <xref:System.Windows.Forms.DataGrid> コントロールがテーブルに表示され、<xref:System.Windows.Forms.DataGrid.AllowSorting%2A> プロパティが `true` に設定される場合、データは列ヘッダーをクリックして再度並べ替えることができます。 ユーザーは行の追加やセルの編集も実行できます。  
   
  一連のテーブル間のリレーションシップは、ナビゲーションの親/子構造体を使用してユーザーに表示されます。 親テーブルは最高レベルのデータ、および子テーブルは、親テーブルの個別の一覧から派生した個々 のデータ テーブルです。 展開コントロールは、子テーブルを含む各親の行に表示されます。 展開コントロールをクリックすると、子テーブルへの Web のようなリンクの一覧が生成されます。 ユーザーがリンクを選択すると、子テーブルが表示されます。 親行の表示/非表示のアイコン (![親行の表示&#47;非表示アイコン](../../../../docs/framework/winforms/controls/media/vbicon.gif "vbIcon")) をクリックすると、親テーブルに関する情報が非表示になるか、または、ユーザーが以前非表示にしている場合は再表示します。 ユーザーは、戻るボタンをクリックして、前に表示されていたテーブルに移動することができます。  
   
 ## <a name="columns-and-rows"></a>列と行  
- <xref:System.Windows.Forms.DataGrid> は、<xref:System.Windows.Forms.DataGrid> コントロールの <xref:System.Windows.Forms.DataGrid.TableStyles%2A> プロパティに含まれる <xref:System.Windows.Forms.DataGridTableStyle> オブジェクトのコレクションから構成されます。 テーブルのスタイルには、<xref:System.Windows.Forms.DataGridTableStyle> の <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> プロパティに含まれる <xref:System.Windows.Forms.DataGridColumnStyle> オブジェクトのコレクションが含まれる可能性があります。 編集することができます、<xref:System.Windows.Forms.DataGrid.TableStyles%2A>と<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティからアクセスできるコレクション エディターを使用して、**プロパティ**ウィンドウです。  
+ <xref:System.Windows.Forms.DataGrid> は、<xref:System.Windows.Forms.DataGrid> コントロールの <xref:System.Windows.Forms.DataGrid.TableStyles%2A> プロパティに含まれる <xref:System.Windows.Forms.DataGridTableStyle> オブジェクトのコレクションから構成されます。 テーブルのスタイルには、<xref:System.Windows.Forms.DataGridTableStyle> の <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> プロパティに含まれる <xref:System.Windows.Forms.DataGridColumnStyle> オブジェクトのコレクションが含まれる可能性があります。 編集することができます、<xref:System.Windows.Forms.DataGrid.TableStyles%2A>と<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティを通じてアクセスできるコレクション エディターを使用して、**プロパティ**ウィンドウ。  
   
  <xref:System.Windows.Forms.DataGrid> コントロールに関連付けられている任意の <xref:System.Windows.Forms.DataGridTableStyle> は <xref:System.Windows.Forms.GridTableStylesCollection> によってアクセスできます。 <xref:System.Windows.Forms.GridTableStylesCollection> は、<xref:System.Windows.Forms.DataGridTableStyle> コレクション エディターを使用してデザイナーで編集することも、<xref:System.Windows.Forms.DataGrid> コントロールの <xref:System.Windows.Forms.DataGrid.TableStyles%2A> プロパティからプログラムで編集することもできます。  
   
@@ -124,7 +124,7 @@ DataGrid コントロールに含まれるオブジェクトを次の図に示�
   
  列のスタイルは、表のスタイルがデータ テーブルに関連するのと同じように、データセット内の列に関連します。 各テーブルに一度に 1 つの表のスタイルのみ定義できるように、各列も、特定のテーブルのスタイルで一度に 1 つの列のスタイルのみ定義できます。 このリレーションシップは、列の <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> プロパティで定義されます。  
   
- を列のスタイルを追加せず、テーブルのスタイルを作成した Visual Studio は、フォームおよびグリッドが実行時に作成されるときに、既定の列スタイルを追加します。 ただし、テーブルのスタイルを作成して、列のスタイルを追加する、Visual Studio は列スタイルは作成されません。 また、列のスタイルを定義し、マッピングの名前に割り当てて、グリッドに表示する列を持つようにする必要があります。  
+ 列スタイルを追加せず、テーブルのスタイルを作成した場合、Visual Studio はフォームおよびグリッドが実行時に作成されたときに既定の列スタイルを追加します。 ただし、テーブル スタイルを作成し、列のスタイルを追加する場合 Visual Studio ではこの列のスタイルが作成されません。 また、列のスタイルを定義し、マッピングの名前に割り当てて、グリッドに表示する列を持つようにする必要があります。  
   
  列のスタイルに列を割り当てることでデータ グリッドに含まれる列を指定し、列に割り当てられた列のスタイルがないため、グリッドに表示されていないデータセットのデータの列を含めることができます。 ただし、データセットにデータ列が含まれているため、表示されていないデータをプログラムで編集できます。  
   

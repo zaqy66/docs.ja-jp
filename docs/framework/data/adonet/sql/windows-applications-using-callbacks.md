@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 7f8a23c32d4c1e2a91cd83770935b071764943e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365476"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457022"
 ---
 # <a name="windows-applications-using-callbacks"></a>コールバックを使用した Windows アプリケーション
 非同期処理は多くの場合、データベース操作を開始し、データベース操作が完了するまで待つことなく、他のプロセスの実行を継続できるようにします。 ただし、ほとんどの場合、データベース操作の完了時に何らかの処理を行う必要があります。 たとえば、Windows アプリケーションでは、ユーザー インターフェイス スレッドの応答性を維持しながら、時間のかかる操作をバックグラウンド スレッドに委任することができます。 また一方、データベース操作の完了時に、この結果を使用してフォームを表示することができます。 このような場合、コールバックによって最適に実行されます。  
@@ -380,4 +380,4 @@ private void Form1_Load(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>関連項目  
  [非同期操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

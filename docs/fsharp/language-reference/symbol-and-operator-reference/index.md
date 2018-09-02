@@ -1,13 +1,13 @@
 ---
 title: シンボルと演算子のリファレンス (F#)
-description: シンボルと f# のプログラミング言語で使用する演算子について説明します。
+description: シンボルと f# のプログラミング言語で使用される演算子について説明します。
 ms.date: 04/04/2018
-ms.openlocfilehash: 79518b990f3a5c794f7658490bdadc2d5b985504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52fc7539027f0cf86a82223a5970d86d7ec60c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566705"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457201"
 ---
 # <a name="symbol-and-operator-reference"></a>シンボルと演算子のリファレンス
 
@@ -82,10 +82,10 @@ ms.locfileid: "33566705"
 |`=?`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、"等しい" 演算を実行します。<br /></li><ul/>|
 |`==`|該当なし。|<ul><li>F# では使用されません。 等値演算には `=` を使用します。<br /></li><ul/>|
 |`>`|[算術演算子](arithmetic-operators.md)|<ul><li>左辺が右辺より大きい場合は `true` を返します。それ以外の場合は `false` を返します。<br /></li><ul/>|
-|`>?`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、"大なり" 演算を実行します。<br /></li><ul/>|
+|`>?`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型の場合は、「より大きい」操作を実行します。<br /></li><ul/>|
 |`>>`|[関数](../functions/index.md)|<ul><li>2 つの関数を合成します (前方合成演算子)。<br /></li><ul/>|
 |`>>>`|[ビット処理演算子](bitwise-operators.md)|<ul><li>左辺にある数のビットを、右辺に指定された桁数だけ右にシフトします。<br /></li><ul/>|
-|`>=`|[算術演算子](arithmetic-operators.md)|<ul><li>返します`true`左側にあるが、右側にある; 以上の場合、それを返します`false`です。<br /></li><ul/>|
+|`>=`|[算術演算子](arithmetic-operators.md)|<ul><li>返します`true`左側にあるが、右側にある; 以上の場合を返しますそれ以外の場合、`false`します。<br /></li><ul/>|
 |`>=?`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、"以上" 演算を実行します。<br /></li><ul/>|
 |`?`|[パラメーターと引数](../parameters-and-arguments.md)|<ul><li>省略可能な引数を指定します。<br /></li><li>動的メソッドや動的プロパティの呼び出しのための演算子として使用されます。 独自の実装を提供する必要があります。<br /></li><ul/>|
 |`? ... <- ...`|詳細情報はありません。|<ul><li>動的プロパティを設定するための演算子として使用されます。 独自の実装を提供する必要があります。<br /></li><ul/>|

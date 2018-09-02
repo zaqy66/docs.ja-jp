@@ -2,12 +2,12 @@
 title: FILESTREAM データ
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: fb7291fad15917614f5eebd31ad0e239c987a81d
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931401"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463170"
 ---
 # <a name="filestream-data"></a>FILESTREAM データ
 FILESTREAM ストレージ属性は、varbinary(max) 列に格納されるバイナリ (BLOB) データに対応しています。 FILESTREAM の導入前は、バイナリ データの格納するために特別な処理が必要でした。 テキスト ドキュメント、イメージ、ビデオなどの非構造化データはデータベース外に保存されることが多く、そのために管理が困難でした。  
@@ -176,8 +176,8 @@ namespace FileStreamTest
 |-----------|-----------------|  
 |[設計と実装の FILESTREAM ストレージ](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|FILESTREAM ドキュメントと関連項目へのリンクを示します。|  
 |[FILESTREAM の概要](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|FILESTREAM ストレージを使用するタイミング、および SQL Server データベース エンジンと NTFS ファイル システムを統合する方法について説明します。|  
-|[FILESTREAM ストレージの概要](http://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|FILESTREAM を SQL Server のインスタンス上で有効にする方法、データベースと FILESTREAM データを格納するテーブルの作成方法、および FILESTREAM データを含んでいる行の操作方法について説明します。|  
-|[クライアント アプリケーションでの FILESTREAM ストレージの使用](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|FILESTREAM データを操作するための Win32 API 関数について説明します。|  
+|[FILESTREAM ストレージの概要](https://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|FILESTREAM を SQL Server のインスタンス上で有効にする方法、データベースと FILESTREAM データを格納するテーブルの作成方法、および FILESTREAM データを含んでいる行の操作方法について説明します。|  
+|[クライアント アプリケーションでの FILESTREAM ストレージの使用](https://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|FILESTREAM データを操作するための Win32 API 関数について説明します。|  
 |[FILESTREAM と他の SQL Server 機能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|FILESTREAM データを SQL Server の他の機能と共に使用する際の注意事項、ガイドライン、および制限事項について説明します。|  
   
 ## <a name="see-also"></a>関連項目  
@@ -185,5 +185,4 @@ namespace FileStreamTest
  [ADO.NET でのデータの取得および変更](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [コード アクセス セキュリティと ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
  [SQL Server のバイナリ データと大きな値のデータ](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- 
-  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: cdd636a1854b891605abadaf31b1667e235eea92
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 8121b6e8c5a136f5f89b59636a7cb7f15794164a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253199"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462480"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML ブラウザー アプリケーションの概要
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "43253199"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>新しい XAML ブラウザー アプリケーション (XBAP) の作成  
- 新しい XBAP プロジェクトを作成する最も簡単な方法では、Microsoft Visual Studio を使用します。 新しいプロジェクトを作成するときに、テンプレートの一覧で **[WPF ブラウザー アプリケーション]** を選択します。 詳細については、「[方法: 新しい WPF ブラウザー アプリケーション プロジェクトを作成する](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)」を参照してください。  
+ 新しい XBAP プロジェクトを作成する最も簡単な方法では、Microsoft Visual Studio を使用します。 新しいプロジェクトを作成するときに、テンプレートの一覧で **[WPF ブラウザー アプリケーション]** を選択します。 詳細については、「[方法: 新しい WPF ブラウザー アプリケーション プロジェクトを作成する](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)」を参照してください。  
   
  XBAP プロジェクトを実行すると、そのプロジェクトは、スタンドアロン ウィンドウではなくブラウザー ウィンドウで開きます。 Visual Studio から、XBAP をデバッグするときに、アプリケーションはインターネット ゾーン アクセス許可を持つが実行され、これらのアクセス許可が超過した場合、セキュリティ例外をスローしたがってされます。 詳細については、[セキュリティ](../../../../docs/framework/wpf/security-wpf.md)に関するページと、「[WPF 部分信頼セキュリティ](../../../../docs/framework/wpf/wpf-partial-trust-security.md)」を参照してください。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "43253199"
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>ホスト Web ページとの通信  
- アプリケーションが HTML フレーム内でホストされている場合は、XBAP を含む Web ページと通信できます。 取得することによって、これを行う、<xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A>プロパティの<xref:System.Windows.Interop.BrowserInteropHelper>します。 このプロパティは、HTML ウィンドウを表すスクリプト オブジェクトを返します。 [window オブジェクト](http://go.microsoft.com/fwlink/?LinkId=160274)上のプロパティ、メソッド、およびイベントにアクセスするには、標準のドット構文を使用します。 スクリプト メソッドおよびグローバル変数にアクセスすることもできます。 次の例は、スクリプト オブジェクトを取得して、ブラウザーを閉じる方法を示しています。  
+ アプリケーションが HTML フレーム内でホストされている場合は、XBAP を含む Web ページと通信できます。 取得することによって、これを行う、<xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A>プロパティの<xref:System.Windows.Interop.BrowserInteropHelper>します。 このプロパティは、HTML ウィンドウを表すスクリプト オブジェクトを返します。 [window オブジェクト](https://go.microsoft.com/fwlink/?LinkId=160274)上のプロパティ、メソッド、およびイベントにアクセスするには、標準のドット構文を使用します。 スクリプト メソッドおよびグローバル変数にアクセスすることもできます。 次の例は、スクリプト オブジェクトを取得して、ブラウザーを閉じる方法を示しています。  
   
  [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
@@ -176,7 +176,7 @@ ms.locfileid: "43253199"
 > [!NOTE]
 >  前の表で説明した動作は、ClickOnce 信頼済み配置モデルに従っていない完全な信頼の XBAP の動作です。  
   
- 完全な信頼の XBAP を配置する場合は、ClickOnce 信頼済み配置モデルを使用することをお勧めします。 このモデルにより、セキュリティ ゾーンに関係なく、完全な信頼を XBAP に自動的に付与できるため、ユーザーにプロンプトが表示されることはありません。 このモデルの一部として、信頼された発行元からの証明書を使用して、アプリケーションに署名する必要があります。 細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」および「[Introduction to Code Signing (コード署名の概要)](http://go.microsoft.com/fwlink/?LinkId=166327)」を参照してください。  
+ 完全な信頼の XBAP を配置する場合は、ClickOnce 信頼済み配置モデルを使用することをお勧めします。 このモデルにより、セキュリティ ゾーンに関係なく、完全な信頼を XBAP に自動的に付与できるため、ユーザーにプロンプトが表示されることはありません。 このモデルの一部として、信頼された発行元からの証明書を使用して、アプリケーションに署名する必要があります。 細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」および「[Introduction to Code Signing (コード署名の概要)](https://go.microsoft.com/fwlink/?LinkId=166327)」を参照してください。  
   
 <a name="xbap_start_time_performance_considerations"></a>   
 ## <a name="xbap-start-time-performance-considerations"></a>XBAP 起動時のパフォーマンスに関する考慮事項  

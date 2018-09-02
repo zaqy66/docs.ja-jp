@@ -6,30 +6,30 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 9055ec9c4b646e0c86819e4e72db8ce20086bace
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542211"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466864"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>方法 : バインド コントロールを作成して表示データの書式を設定する
-Windows フォーム データ バインディングを使用して、データ バインド コントロールに表示されるデータの書式を設定することができます、**フォーマットと詳細バインド** ダイアログ ボックス。  
+Windows フォーム データ バインディングでは、データ バインド コントロールを使用して表示データの書式を設定することができます、**フォーマットと詳細バインド** ダイアログ ボックス。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ### <a name="to-bind-a-control-and-format-the-displayed-data"></a>コントロールをバインドして表示データの書式を設定するには  
   
 1.  データ ソースに接続します。  
   
-     詳細については、次を参照してください。[データ ソースに接続する](../../../docs/framework/data/adonet/connecting-to-a-data-source.md)です。  
+     詳細については、次を参照してください。[データ ソースに接続する](../../../docs/framework/data/adonet/connecting-to-a-data-source.md)します。  
   
 2.  フォームでコントロールを選択し、[プロパティ] ウィンドウを開きます。  
   
-3.  展開して、 **(DataBindings)** プロパティ、し、 **(詳細)** ボックスで、省略記号ボタンをクリックして (![VisualStudioEllipsesButton スクリーン ショット](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) を表示する、**フォーマットと詳細バインド** ダイアログ ボックスは、そのコントロールのプロパティの一覧が掲載されています。  
+3.  展開、 **(DataBindings)** プロパティ、し、 **(詳細)** ボックスで、省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) を表示する、**フォーマットと詳細バインド**ダイアログ ボックスで、そのコントロールのプロパティの完全な一覧があります。  
   
-4.  プロパティを選択してバインドして、をクリックします、**バインド**矢印です。  
+4.  クリックして、バインド プロパティを選択、**バインド**矢印。  
   
      使用できるデータ ソースの一覧が表示されます。  
   
@@ -39,7 +39,7 @@ Windows フォーム データ バインディングを使用して、データ 
   
 6.  バインド先の要素の名前をクリックします。  
   
-7.  **種類の形式を**ボックスで、コントロールに表示されるデータに適用する形式をクリックします。  
+7.  **種類の形式を**ボックスに、コントロールに表示されるデータに適用する形式をクリックします。  
   
      どの形式でも、データ ソースに <xref:System.DBNull> が含まれている場合には、コントロールに表示する値を指定できます。 それ以外の場合、オプションは、選択する形式の種類に応じて多少変わります。 次の表に、形式の種類とオプションを示します。  
   
@@ -50,9 +50,9 @@ Windows フォーム データ バインディングを使用して、データ 
     |通貨|使用して小数点以下桁数を指定**小数点**アップダウン コントロール。|  
     |日付と時刻|日付と時刻を内の項目のいずれかを選択して表示する必要がある方法を選択、**型**選択ボックス。|  
     |指数|使用して小数点以下桁数を指定**小数点**アップダウン コントロール。|  
-    |カスタム|カスタム書式指定文字列を使用するように指定します。<br /><br /> 詳細については、[型の書式設定](../../../docs/standard/base-types/formatting-types.md)に関するページをご覧ください。 **注:** カスタム書式指定文字列は、データ ソースとバインドされたコントロール間のラウンド トリップが正常にする保証はありません。 その代わりに、バインディングで <xref:System.Windows.Forms.Binding.Parse> イベントまたは <xref:System.Windows.Forms.Binding.Format> イベントを処理し、イベント処理コードでカスタム書式を適用します。|  
+    |カスタム|カスタム書式指定文字列を使用するように指定します。<br /><br /> 詳細については、[型の書式設定](../../../docs/standard/base-types/formatting-types.md)に関するページをご覧ください。 **注:** カスタム書式指定文字列は、データ ソースとバインドされたコントロール間のラウンド トリップが正常に保証されていません。 その代わりに、バインディングで <xref:System.Windows.Forms.Binding.Parse> イベントまたは <xref:System.Windows.Forms.Binding.Format> イベントを処理し、イベント処理コードでカスタム書式を適用します。|  
   
-8.  をクリックして**OK**を閉じる、**フォーマットと詳細バインド** ダイアログ ボックスと プロパティ ウィンドウに戻り値。  
+8.  をクリックして**OK**を閉じる、**フォーマットと詳細バインド** ダイアログ ボックスと プロパティ ウィンドウに戻ります。  
   
 ## <a name="see-also"></a>関連項目  
  [方法: Windows フォームに単純バインド コントロールを作成する](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
