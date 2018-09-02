@@ -2,19 +2,19 @@
 title: 入力アクティビティの待機
 ms.date: 03/30/2017
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-ms.openlocfilehash: 750a217699abe8b2eb2eaaa364002137d335a41a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e878e8c91c5da12a68da848694ce790896517c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518998"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401210"
 ---
 # <a name="wait-for-input-activity"></a>入力アクティビティの待機
-このサンプルでは、ワークフローに名前付きブックマークを作成する方法を示します。 Windows Workflow Foundation (WF) では、宣言型ブックマークを作成するアクティビティは用意されていません。 そのため、ワークフローにブックマークを作成する場合は、ブックマークを作成するカスタム アクティビティを記述する必要があります。 このサンプルで定義される `WaitForInput` アクティビティはこの機能を提供します。そのため、ユーザーはワークフロー内で宣言によってブックマークを作成できます。  
+このサンプルでは、ワークフローに名前付きブックマークを作成する方法を示します。 Windows Workflow Foundation (WF) では、宣言型ブックマークを作成するアクティビティは提供されません。 そのため、ワークフローにブックマークを作成する場合は、ブックマークを作成するカスタム アクティビティを記述する必要があります。 このサンプルで定義される `WaitForInput` アクティビティはこの機能を提供します。そのため、ユーザーはワークフロー内で宣言によってブックマークを作成できます。  
   
 ## <a name="projects-in-this-sample"></a>このサンプルのプロジェクト  
   
-|**プロジェクト名**|**説明**|**メイン ファイルします。**|  
+|**プロジェクト名**|**説明**|**メイン ファイル**|  
 |-|-|-|  
 |WaitForInput|`WaitForInput` アクティビティとそのデザイナーが含まれます。|WaitForInput.cs<br /><br /> `WaitForInput` アクティビティ定義。|  
 |||WaitForInputDesigner.xaml<br /><br /> `WaitForInput` アクティビティのカスタム デザイナー。|  
@@ -57,6 +57,6 @@ ms.locfileid: "33518998"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`

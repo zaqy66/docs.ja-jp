@@ -2,12 +2,12 @@
 title: Visual Studio での f# の概要します。
 description: Visual Studio で f# を使用する方法について説明します。
 ms.date: 07/03/2018
-ms.openlocfilehash: a4a12a322d7e5144f2d720541f6ef65ca12737dd
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874716"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415735"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio での f# の概要します。
 
@@ -47,7 +47,7 @@ val square: x:int -> int
 
 ## <a name="running-your-code"></a>コードの実行
 
-コードを実行してキーを押して、結果を参照してください**ctrl + f5**します。  これは、デバッグを行わず、プログラムを実行し、結果を確認することができます。  または、選択することができます、**デバッグ**トップレベル メニューの Visual Studio 内の項目し、選択**デバッグなしで開始**します。
+コードを実行してキーを押して、結果を参照してください**Ctrl**+**F5**します。  これにより、デバッグを行わずにプログラムを実行し、結果を確認することができます。  または、選択することができます、**デバッグ**トップレベル メニューの Visual Studio 内の項目し、選択**デバッグなしで開始**します。
 
 次の Visual Studio のポップアップをコンソール ウィンドウに出力が表示されます。
 
@@ -62,4 +62,8 @@ val square: x:int -> int
 まだインストールしていない場合はチェック アウト、 [f# のツアー](../tour.md)、f# 言語のコア機能の一部が含まれています。  一部の f# の機能の概要が表示され Visual Studio にコピーして実行できる十分なコード サンプルを提供します。  使用できますが、いくつかの優れた外部リソースがあるの紹介、 [f# ガイド](../index.md)します。
 
 ## <a name="see-also"></a>関連項目
- [F# のツアー](../tour.md) [f# 言語リファレンス](../language-reference/index.md)[型推論](../language-reference/type-inference.md)[シンボルと演算子のリファレンス](../language-reference/symbol-and-operator-reference/index.md)
+
+- [F# のツアー](../tour.md)
+- [F# 言語リファレンス](../language-reference/index.md)
+- [型の推論](../language-reference/type-inference.md)
+- [シンボルと演算子のリファレンス](../language-reference/symbol-and-operator-reference/index.md)

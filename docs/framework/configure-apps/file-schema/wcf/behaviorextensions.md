@@ -2,12 +2,12 @@
 title: '&lt;behaviorExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: bb59ceeb478d0324fddc98a206a00dbd170b5ac9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d025497956715913923e839cb6c482f44f96babb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749583"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415793"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 動作の拡張により、ユーザーはユーザー定義の動作要素を作成できます。 これらの要素は、標準の Windows Communication Foundation (WCF) 動作要素と共に使用できます。 `behaviorExtensions` セクションでは、構成で使用できるように要素を定義します。 次の例は、一般的な動作拡張を示します。  
@@ -44,7 +44,7 @@ ms.locfileid: "32749583"
   
  攻撃者が CLR 検索順序を悪用して、未承認のコードを実行する可能性があります。 (厳密な) 完全修飾名を使用すると、型が一意に識別され、システムのセキュリティがさらに強化されます。  
   
- 詳細については、次を参照してください。[ランタイムがアセンブリを検索する方法](http://go.microsoft.com/fwlink/?LinkId=95336)と<xref:System.AppDomain.TypeResolve>です。  
+ 詳細については、次を参照してください。[ランタイムがアセンブリを検索する方法](https://go.microsoft.com/fwlink/?LinkId=95336)と<xref:System.AppDomain.TypeResolve>します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  

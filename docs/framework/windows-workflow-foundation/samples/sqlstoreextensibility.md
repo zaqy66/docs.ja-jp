@@ -2,12 +2,12 @@
 title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-ms.openlocfilehash: 37c83a9c1062fe074e41ec5db211fd513355c045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518487"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408766"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 このサンプルでは、SQL ワークフロー インスタンス ストアの昇格したプロパティの使用法と構成を示します。 SQL Workflow Instance Store は、SQL ベースのインスタンス ストアの実装です。 SQL Workflow Instance Store を使用すると、インスタンスの状態を SQL Server データベースや SQL Server Express データベースに保存したり読み込んだりすることができます。 ストア拡張機能を使用すると、ユーザーは、インスタンス ストアに格納されるプロパティを定義できます。 このようなプロパティは、ユーザーがクエリを実行できる昇格したプロパティ ビューに表示されます。  
@@ -48,19 +48,19 @@ ms.locfileid: "33518487"
     > [!WARNING]
     >  SQL Server の既定以外のインスタンスにデータベースをインストールした場合は、ソリューションをビルドする前に、コードの接続文字列を更新してください。  
   
-3.  管理者特権でのプロジェクトの bin ディレクトリ (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) に移動してサンプルを実行[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]SqlStoreExtensibility.exe を右クリックしを選択すると、**として実行管理者**です。  
+3.  プロジェクトの bin ディレクトリ (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) に移動して、サンプルを管理者特権で実行[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]SqlStoreExtensibility.exe を右クリックし、選択、**として実行管理者**します。  
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>サンプルが正常に動作していることを確認するには  
   
-1.  SQL Server Management Studio を使用して、選択してインスタンス テーブルの内容を表示する**データベース**、 **InstanceStore**、し**System.ServiceModel.Activities.DurableInstancing.InstanceTable**オブジェクト エクスプ ローラーで右クリック**System.ServiceModel.Activities.DurableInstancing.InstanceTable** の選択**上位 1000 行を選択して**です。 SQL Server Management Studio の詳細については、次を参照してください[SQL Server Management Studio の概要。](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  SQL Server Management Studio を使用して、選択してインスタンス テーブルの内容を表示する**データベース**、 **InstanceStore**、し**System.ServiceModel.Activities.DurableInstancing.InstanceTable**オブジェクト エクスプ ローラーで右クリックして**System.ServiceModel.Activities.DurableInstancing.InstanceTable** を選択します。**上位 1000 行を選択します。** します。 SQL Server Management Studio の詳細については、次を参照してください[SQL Server Management Studio の概要。](https://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  一覧表示されるワークフロー インスタンスを確認します。  
   
 3.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] コマンド プロンプトで、サンプル ディレクトリ (\WF\Basic\Persistence\SqlStoreExtensibility) にある QueryInstanceStore.cmd スクリプトを実行します。  
   
-4.  カウンターの値が表示される確認して**CountStatus**です。  
+4.  下に表示されるカウンターの値を観察**CountStatus**します。  
   
-5.  スクリプトを数回実行して、 **CountStats**値の変更。  
+5.  何回かスクリプトを実行して、 **CountStats**値の変更。  
   
 6.  Enter キーを押してワークフロー アプリケーションを終了します。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "33518487"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
 ## <a name="see-also"></a>関連項目  
  [ワークフローの永続性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
  [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [AppFabric ホスティングと永続性のサンプル](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

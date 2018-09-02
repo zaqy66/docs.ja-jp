@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - TreeView control [Windows Forms]
 ms.assetid: 879438b4-4eac-45c6-b345-0229c9b21ab0
-ms.openlocfilehash: ee6c5583718f871c96929d659fe4a681528b27ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b4db06eedc0ada7c34f3ba6f6c80b783866bed2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538237"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404158"
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView コントロール (Windows フォーム)
 Windows フォームの `TreeView` コントロールでは、Windows オペレーティング システムの Windows エクスプローラーの左側のウィンドウにファイルやフォルダーが表示されるのと同じように、ノードの階層を表示することができます。  
@@ -38,8 +38,8 @@ Windows フォームの `TreeView` コントロールでは、Windows オペレ�
   
  [方法: ショートカット メニューを TreeView ノードに追加する](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
  ツリー ビュー ノードにショートカット メニューを追加する方法について説明します。  
-  
- 参照してください[する方法: 追加し、Windows フォーム TreeView コントロールを使用して、デザイナーでのノード削除](http://msdn.microsoft.com/library/ms233651\(v=vs.110\))、[する方法: デザイナーを使用して TreeNode にショートカット メニューをアタッチ](http://msdn.microsoft.com/library/ms171708\(v=vs.110\))です。  
+
+参照してください[方法: 追加し、Windows フォーム TreeView コントロールを使用して、デザイナーでのノードを削除](add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md)、および[方法: デザイナーを使用して TreeNode にショートカット メニューをアタッチ](how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md)します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.TreeView> クラス  

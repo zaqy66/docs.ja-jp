@@ -13,24 +13,24 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 58ad0578f478b5cbc1d2a263fdf6b14b4555a339
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf0e22eab3b6517521dbe06a73f63af232746df1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542185"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404649"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>方法 : Windows フォームの Timer コンポーネントを使用して一定間隔でプロシージャを実行する
 ループが完了するまで特定の間隔で実行するプロシージャや、設定した間隔が経過した時点で実行するプロシージャを作成することがあるかもしれません。 <xref:System.Windows.Forms.Timer> コンポーネントにより、このようなプロシージャが可能になります。  
   
- このコンポーネントは、Windows フォームの環境用に設計されています。 サーバー環境に適したタイマーが必要な場合は、「[サーバー ベースのタイマーの概要](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)」を参照してください。  
+ このコンポーネントは、Windows フォームの環境用に設計されています。 サーバー環境に適したタイマーが必要な場合は、「[サーバー ベースのタイマーの概要](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)」を参照してください。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.Timer> コンポーネントを使用する場合に、いくつかの制限があります。 詳細については、次を参照してください。 [、Windows フォームの Timer コンポーネントの Interval プロパティの制限事項](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)です。  
+>  <xref:System.Windows.Forms.Timer> コンポーネントを使用する場合に、いくつかの制限があります。 詳細については、次を参照してください。 [、Windows フォームの Timer コンポーネントの Interval プロパティの制限事項](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)します。  
   
 ### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Timer コンポーネントで設定された間隔でプロシージャを実行するには  
   
-1.  <xref:System.Windows.Forms.Timer> をフォームに追加します。 プログラムでこれを実行する方法については、次の例のセクションを参照してください。 Visual Studio では、コンポーネントをフォームに追加することもあります。 参照してください[する方法: Windows フォームへのユーザー インターフェイスを持たないコントロールの追加](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\))です。  
+1.  <xref:System.Windows.Forms.Timer> をフォームに追加します。 プログラムでこれを実行する方法については、次の例のセクションを参照してください。 Visual Studio では、コンポーネントをフォームに追加することもあります。 参照してください[方法: Windows フォームへのユーザー インターフェイスを持たないコントロールの追加](https://msdn.microsoft.com/library/becyw7bz\(v=vs.110\))します。  
   
 2.  タイマーの <xref:System.Windows.Forms.Timer.Interval%2A> プロパティ (ミリ秒) を設定します。 このプロパティは、プロシージャを再度実行する前に、経過する時間の長さを決定します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33542185"
 5.  適切なタイミングで <xref:System.Windows.Forms.Timer.Enabled%2A> プロパティを `false` に設定し、プロシージャがもう一度実行されることがないようにします。 間隔を設定`0`タイマーを停止するには発生しません。  
   
 ## <a name="example"></a>例  
- この最初のコード例は、1 秒単位で 1 日の時間を追跡します。 フォーム上で <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label>、および <xref:System.Windows.Forms.Timer> コンポーネントを使用します。 <xref:System.Windows.Forms.Timer.Interval%2A> プロパティが 1000 (1 秒に等しい) に設定されます。 <xref:System.Windows.Forms.Timer.Tick> イベントで、ラベルのキャプションが現在の時刻に設定されます。 ボタンをクリックしたときに、<xref:System.Windows.Forms.Timer.Enabled%2A> プロパティが `false` に設定されると、タイマーがラベルのキャプションを更新しなくなります。 次のコード例では、フォームがあることが必要です、<xref:System.Windows.Forms.Button>という名前のコントロール`Button1`、<xref:System.Windows.Forms.Timer>という名前のコントロール`Timer1`、および<xref:System.Windows.Forms.Label>という名前のコントロール`Label1`です。  
+ この最初のコード例は、1 秒単位で 1 日の時間を追跡します。 フォーム上で <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label>、および <xref:System.Windows.Forms.Timer> コンポーネントを使用します。 <xref:System.Windows.Forms.Timer.Interval%2A> プロパティが 1000 (1 秒に等しい) に設定されます。 <xref:System.Windows.Forms.Timer.Tick> イベントで、ラベルのキャプションが現在の時刻に設定されます。 ボタンをクリックしたときに、<xref:System.Windows.Forms.Timer.Enabled%2A> プロパティが `false` に設定されると、タイマーがラベルのキャプションを更新しなくなります。 次のコード例では、使用して、フォームが必要です、<xref:System.Windows.Forms.Button>という名前のコントロール`Button1`、<xref:System.Windows.Forms.Timer>という名前のコントロール`Timer1`、および<xref:System.Windows.Forms.Label>という名前のコントロール`Label1`します。  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -149,7 +149,7 @@ private:
 ```  
   
 ## <a name="example"></a>例  
- この 2 つ目のコード例は、ループが終了するまでにプロシージャを 600 ミリ秒ごとに実行します。 次のコード例では、フォームがあることが必要です、<xref:System.Windows.Forms.Button>という名前のコントロール`Button1`、<xref:System.Windows.Forms.Timer>という名前のコントロール`Timer1`、および<xref:System.Windows.Forms.Label>という名前のコントロール`Label1`です。  
+ この 2 つ目のコード例は、ループが終了するまでにプロシージャを 600 ミリ秒ごとに実行します。 次のコード例では、使用して、フォームが必要です、<xref:System.Windows.Forms.Button>という名前のコントロール`Button1`、<xref:System.Windows.Forms.Timer>という名前のコントロール`Timer1`、および<xref:System.Windows.Forms.Label>という名前のコントロール`Label1`します。  
   
 ```vb  
 ' This variable will be the loop counter.  

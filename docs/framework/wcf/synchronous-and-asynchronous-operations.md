@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 8f2d962f40f2b56b1d1dda68129f477e4277ae1d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: c2948cf76f7763eae51689973346965bc6c720a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728353"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404217"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同期操作と非同期操作
 ここでは、非同期サービス操作の実装と呼び出しについて説明します。  
@@ -56,7 +56,7 @@ ms.locfileid: "34728353"
 3.  IAsyncResult 非同期パターン  
   
 #### <a name="task-based-asynchronous-pattern"></a>タスク ベースの非同期パターン  
- 非同期操作を実装する方法としては、最も直接的でわかりやすいタスク ベースの非同期パターンが推奨されます。 この方法を使用するには、単にサービス操作を実装し、戻り値の型 Task\<T> (T は論理操作によって返される型) を指定します。 例:  
+ 非同期操作を実装する方法としては、最も直接的でわかりやすいタスク ベースの非同期パターンが推奨されます。 この方法を使用するには、単にサービス操作を実装し、戻り値の型 Task\<T> (T は論理操作によって返される型) を指定します。 例えば:  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -73,7 +73,7 @@ public class SampleService:ISampleService
 }  
 ```  
   
- SampleMethodTaskAsync 操作は、論理操作によって文字列が返されるため、Task\<string> を返します。 タスク ベースの非同期パターンの詳細については、「[タスク ベースの非同期パターン](http://go.microsoft.com/fwlink/?LinkId=232504)」を参照してください。  
+ SampleMethodTaskAsync 操作は、論理操作によって文字列が返されるため、Task\<string> を返します。 タスク ベースの非同期パターンの詳細については、「[タスク ベースの非同期パターン](https://go.microsoft.com/fwlink/?LinkId=232504)」を参照してください。  
   
 > [!WARNING]
 >  タスク ベースの非同期パターンを使用している場合、操作の完了を待機している間に例外が発生すると T:System.AggregateException がスローされる場合があります。 この例外は、クライアントまたはサービスで発生することがあります。  
@@ -107,7 +107,7 @@ public class AsyncExample
 }  
 ```  
   
- イベント ベースの非同期パターンの詳細については、「[イベント ベースの非同期パターンの概要](http://go.microsoft.com/fwlink/?LinkId=232515)」を参照してください。  
+ イベント ベースの非同期パターンの詳細については、「[イベント ベースの非同期パターンの概要](https://go.microsoft.com/fwlink/?LinkId=232515)」を参照してください。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 非同期パターン  
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 非同期プログラミング パターンを使用し、`<Begin>` プロパティが <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> に設定されている `true` メソッドを使用することで、サービス操作を非同期に実装できます。 この場合の非同期操作は、同期操作と同じ形式でメタデータに公開されます。つまり、要求メッセージとそれに関連する応答メッセージを伴う単独操作として公開されます。 このとき、クライアント プログラミング モデルは選択が可能です。 サービスが呼び出されたときに要求/応答メッセージ交換が行われていれば、クライアント プログラミング モデルは、このパターンを同期操作または非同期操作として表すことができます。  
@@ -192,6 +192,6 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  メッセージ オブジェクトを `Result` プロパティとして受け取り、返された値をそのオブジェクトのプロパティとして取得する場合は、**/messageContract** コマンド オプションを使用します。 これにより、`Result` オブジェクトの <xref:System.EventArgs> プロパティとして応答メッセージを返すシグネチャが生成されます。 すべての内部戻り値は、応答メッセージ オブジェクトのプロパティになります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  
  <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

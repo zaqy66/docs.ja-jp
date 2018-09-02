@@ -2,15 +2,15 @@
 title: 配信不能キュー
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 9f92aeb02d997820fa2955419a3cdcf1c4369b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f30e9486c8798e3610e13e6abe1c2612c70b69f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507982"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417134"
 ---
 # <a name="dead-letter-queues"></a>配信不能キュー
-このサンプルでは、配信できなかったメッセージの処理方法を示します。 基にして、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)サンプルです。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。  
+このサンプルでは、配信できなかったメッセージの処理方法を示します。 基にして、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)サンプル。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }  
 ```
 
- サービスのコード サンプルでは、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)です。  
+ サービスのコード サンプルでは、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)します。  
   
  サービスとの通信はトランザクションのスコープ内で実行されます。 サービスはキューからメッセージを読み取って操作を実行し、操作の結果を表示します。 このアプリケーションでは、配信不能メッセージ用の配信不能キューも作成します。  
 
@@ -310,23 +310,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。  
   
     1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] でサーバー マネージャーを開きます。  
   
-    2.  展開して、**機能**タブです。  
+    2.  展開、**機能**タブ。  
   
-    3.  右クリック**プライベート メッセージ キュー**を選択して**新規**、**プライベート キュー**です。  
+    3.  右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。  
   
     4.  チェック、**トランザクション**ボックス。  
   
-    5.  入力`ServiceModelSamplesTransacted`として、新しいキューの名前。  
+    5.  入力`ServiceModelSamplesTransacted`として新しいキューの名前。  
   
 3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-4.  サンプルを実行、1 つまたは複数コンピューター構成の変更のキューに名適切に、localhost をコンピューターの完全な名前に置き換えてしての指示に従って、 [WindowsCommunicationFoundationサンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  実行するサンプル 1 つまたは複数コンピューター構成の変更のキュー名、適切に localhost、コンピューターの完全な名前との指示に従います[Windows Communication Foundation サンプルを実行している](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>ワークグループに参加しているコンピューターでこのサンプルを実行するには  
   
@@ -357,7 +357,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

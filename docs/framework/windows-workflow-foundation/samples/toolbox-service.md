@@ -2,12 +2,12 @@
 title: ツールボックス サービス
 ms.date: 03/30/2017
 ms.assetid: 742212d0-445e-41ed-9739-9ee848ce7f1b
-ms.openlocfilehash: 0b3ea56d28d202bd8356fea1783b6675a708631d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b21f10c763f3f82591f947eb4cc48cf90f4ac79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516192"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406463"
 ---
 # <a name="toolbox-service"></a>ツールボックス サービス
 このサンプルでは、ワークフローのコンテキストに基づいて [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] ツールボックス アクティビティを更新する方法を示します。 このサンプルには、カスタム アクティビティが選択されているかどうかに基づいてツールボックスの内容を変更するワークフローが含まれています。  
@@ -39,19 +39,19 @@ public interface IActivityToolboxService
   
 3.  Workflow.xaml ファイルを開きます。  
   
-4.  追加、 **[customactivity]** にドラッグして、ツールボックスから削除します。 ツールボックス カテゴリの追加と呼ばれることに注意してください: **New WF Category**の他のアクティビティと**割り当てる**です。  
+4.  追加、 **CustomActivity**ドラッグして、ツールボックスから削除します。 ツールボックス カテゴリが追加で呼び出すことに注意してください: **New WF Category**するその他のアクティビティを含む**割り当てる**します。  
   
-5.  現在の選択を解除、 **[customactivity]** 別のアクティビティをドラッグします。  
+5.  選択を解除、 **CustomActivity**別のアクティビティをドラッグします。  
   
-6.  項目**割り当てる**カテゴリで**New WF Category**ツールボックスの下では削除されました。 また、このカテゴリには項目がほかにないので、カテゴリも削除されます。  
+6.  項目**割り当てる**カテゴリ**New WF Category**ツールボックスの下で削除したようになりました。 また、このカテゴリには項目がほかにないので、カテゴリも削除されます。  
   
-7.  選択、 **[customactivity]** 再度とカテゴリと**割り当てる**アクティビティが再度追加します。  
+7.  選択、 **CustomActivity**もう一度と、カテゴリと**割り当てる**アクティビティが再度追加されます。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\IActivityToolboxService`

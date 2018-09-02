@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d7b12004efce76f9ac591f18fd0f4e06fdd7fd0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934952"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416961"
 ---
 # <a name="profiling-overview"></a>プロファイリングの概要
 <a name="top"></a> プロファイラーは、別のアプリケーションの実行を監視するツールです。 共通言語ランタイム (CLR: Common Language Runtime) プロファイラーは、プロファイル API を使用して CLR とのメッセージの送受信を行う関数で構成されるダイナミック リンク ライブラリ (DLL: Dynamic Link Library) です。 プロファイラー DLL は、実行時に CLR によって読み込まれます。  
@@ -209,7 +209,7 @@ ms.locfileid: "42934952"
 ### <a name="stack-snapshot"></a>スタック スナップショット  
  スタック スナップショットは、ある特定の時点でのスレッドのスタックのトレースです。 プロファイル API はスタックでのマネージド関数のトレースをサポートしますが、アンマネージド 関数のトレースはプロファイラー独自のスタック ウォーカーで処理する必要があります。  
   
- プロファイラーでマネージ スタックをプログラムする方法の詳細については、次を参照してください。、 [icorprofilerinfo 2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)このドキュメント セット内のメソッドと[、.NET Framework 2.0 における Profiler スタック ウォーク。基本、そしてその向こう](http://go.microsoft.com/fwlink/?LinkId=73638)します。
+ プロファイラーでマネージ スタックをプログラムする方法の詳細については、次を参照してください。、 [icorprofilerinfo 2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)このドキュメント セット内のメソッドと[、.NET Framework 2.0 における Profiler スタック ウォーク。基本、そしてその向こう](https://go.microsoft.com/fwlink/?LinkId=73638)します。
   
 ### <a name="shadow-stack"></a>シャドウ スタック  
  スナップショット方式を頻繁に使用すると、すぐにパフォーマンスの問題につながる可能性があります。 使用して場合、プロファイラーで代わりに、シャドウ スタックを構築スタック トレースを頻繁に行う場合は、 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)、 [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)、[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)例外コールバック。 シャドウ スタックは常に最新であり、スタック スナップショットが必要なときいつでも簡単にストレージにコピーできます。  

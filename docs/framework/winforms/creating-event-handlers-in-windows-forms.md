@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 96697fa54b569b6d1ce092ebfc76ef593f2ac66f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9095946d52360c69fd6c4dd6285039fb3e1874d5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539154"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401597"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Windows フォーム内でのイベント ハンドラーの作成
 イベント ハンドラーは、ユーザーがボタンをクリックする、またはメッセージ キューがメッセージを受信するなどのイベントが発生したときに実行するアクションを決定する、コード内の手順です。 イベントが発生すると、そのイベントを受信した一つまたは複数のイベント ハンドラーが実行されます。 イベントは複数のハンドラーに割り当てられ、特定のイベントを処理するメソッドは動的に変更できます。 イベント ハンドラーを作成するには、Windows フォーム デザイナーを使用することもできます。  
@@ -34,7 +34,7 @@ ms.locfileid: "33539154"
  [Windows フォームのイベントの順序](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Windows フォーム コントロールで発生するイベントの順序について説明します。  
   
- [方法 : デザイナーを使用してイベント ハンドラーを作成する](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [方法 : デザイナーを使用してイベント ハンドラーを作成する](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
  Windows フォーム デザイナーを使用してイベント ハンドラーを作成する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  

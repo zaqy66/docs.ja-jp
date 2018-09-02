@@ -1,15 +1,15 @@
 ---
-title: 完了 (Visual Basic の場合) は、1 つ後の残りの非同期タスクのキャンセルします。
+title: 1 つは、完全な (Visual Basic) 後の残りの非同期タスクのキャンセルします。
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: baf18ed4c2a4693f0765358d9f9a56842991cf29
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 5dab0c4aa14710fe78d2473675aea8b8c8bb73b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728340"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402258"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>完了 (Visual Basic の場合) は、1 つ後の残りの非同期タスクのキャンセルします。
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>1 つは、完全な (Visual Basic) 後の残りの非同期タスクのキャンセルします。
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> メソッドを <xref:System.Threading.CancellationToken> と共に使用すると、1 つのタスクが完了したときに残りのすべてのタスクを取り消しできます。 `WhenAny` メソッドは、タスクのコレクションである引数を受け取ります。 このメソッドは、すべてのタスクを開始し、単一のタスクを返します。 単一のタスクは、コレクションのいずれかのタスクが完了すると完了します。  
   
  この例では、キャンセル トークンを `WhenAny` と共に使用して、タスクのコレクションから最初のタスクを終了まで保持し、残りのタスクを取り消す方法を示しています。 各タスクは、Web サイトのコンテンツをダウンロードします。 この例は最初のダウンロードが完了したコンテンツの長さを表示し、他のダウンロードを取り消します。  
@@ -24,7 +24,7 @@ ms.locfileid: "34728340"
   
 2.  メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
   
-3.  **プロジェクトを開く** ダイアログ ボックスでは、圧縮解除したサンプル コードが含まれるフォルダーを開き、AsyncFineTuningVB のソリューション (.sln) ファイルを開きます。  
+3.  **プロジェクトを開く** ダイアログ ボックスでは、圧縮を解除するには、サンプル コードを保持するフォルダーを開き、AsyncFineTuningVB のソリューション (.sln) ファイルを開きます。  
   
 4.  **ソリューション エクスプローラー**で、**CancelAfterOneTask** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "34728340"
  プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルを確認できます。  
   
 ## <a name="building-the-example"></a>例のビルド  
- このトピックの例で開発したプロジェクトに追加[非同期タスクまたはタスクの一覧を取り消す](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0)タスクの一覧をキャンセルします。 この例では、**[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。  
+ このトピックの例で開発されたプロジェクトに追加[非同期タスクまたはタスクの一覧のキャンセル](https://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0)タスクのリストを取り消します。 この例では、**[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。  
   
  この例を自分で 1 つずつビルドするには、"例をダウンロードする" セクションの手順に従います。ただし、**[スタートアップ プロジェクト]** として **CancelAListOfTasks** を選択します。 そのプロジェクトに、このトピックでの変更を追加します。  
   
- MainWindow.xaml.vb ファイル、 **CancelAListOfTasks**プロジェクトでのループから各 web サイトの処理手順を移動することによって、移行を開始`AccessTheWebAsync`次のメソッドを非同期にします。  
+ MainWindow.xaml.vb ファイル、 **CancelAListOfTasks**プロジェクトで、ループから各 web サイトの処理手順を移動することによって、移行を開始`AccessTheWebAsync`次の非同期メソッドにします。  
   
 ```vb  
 ' ***Bundle the processing steps for a website into one async method.  

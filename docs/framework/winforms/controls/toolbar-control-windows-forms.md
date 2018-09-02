@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: e21b31805eb0b840866313f16cc85ea33c84e515
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8162dfc898f7965d65de918d2a5b1f7afbfdf9b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537126"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400850"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar コントロール (Windows フォーム)
 > [!NOTE]
@@ -34,7 +34,7 @@ ms.locfileid: "33537126"
  [方法: ツール バー ボタンのメニュー イベントをトリガーする](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
  `ToolBar` コントロールでユーザーがクリックするボタンを解釈するコードの記述方法について説明します。  
   
- 参照してください[する方法: ツールバー ボタンを使用して、デザイナーのアイコンを定義する](http://msdn.microsoft.com/library/ms233659\(v=vs.110\))、[する方法: ツールバー コントロールを使用して、デザイナーに追加のボタン](http://msdn.microsoft.com/library/ms233650\(v=vs.110\))です。  
+ 参照してください[方法: ツールバー ボタンを使用して、デザイナーのアイコンを定義](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)、[方法: ツール バー コントロールを使用して、デザイナーにボタンを追加](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.ToolBar> クラス  

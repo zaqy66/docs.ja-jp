@@ -2,22 +2,22 @@
 title: 永続性発行済みトークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7def23a00e42e134d8c0b9bd911710917681ad31
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807552"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404878"
 ---
 # <a name="durable-issued-token-provider"></a>永続性発行済みトークン プロバイダー
 このサンプルでは、カスタム クライアントの発行済みトークン プロバイダーを実装する方法を示します。  
   
 ## <a name="discussion"></a>説明  
- トークン プロバイダーでは、Windows Communication Foundation (WCF) を使用すると、セキュリティ インフラストラクチャに資格情報を提供します。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF に付属して、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。  
+ Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報の入力に使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF に付属する[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。  
   
 -   組み込みのトークン プロバイダが連係動作できない資格情報ストアがある場合。  
   
--   ユーザーが WCF クライアントが資格情報を使用する場合に詳細を提供するときに、ポイントからの資格情報を変換するための独自のカスタム メカニズムを提供する場合は。  
+-   ユーザーは、WCF クライアントが資格情報を使用する場合の詳細を提供するときに、ポイントから資格情報を変換するための独自のカスタム メカニズムを提供する場合は。  
   
 -   カスタム トークンを構築している場合。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "33807552"
   
 -   クライアントをカスタム トークン プロバイダーを使用して構成する手順。  
   
--   発行済みトークンをキャッシュし、WCF クライアントに提供される方法です。  
+-   発行済みトークンをキャッシュして、WCF クライアントに提供される方法です。  
   
 -   サーバーがクライアントによってサーバーの X.509 証明書を使用して認証される手順。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33807552"
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
- このサンプルでは、ICalculator コントラクトを使用して、公開する、 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)です。 このバインディングのクライアント側の構成は、次のコードに示すとおりです。  
+ このサンプルを公開、ICalculator コントラクトを使用して、 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)します。 このバインディングのクライアント側の構成は、次のコードに示すとおりです。  
   
 ```xml  
 <bindings>
@@ -110,7 +110,7 @@ ms.locfileid: "33807552"
  セキュリティ トークン サービスは、標準の wsHttpBinding を使用して、単一のエンドポイントを公開します。 セキュリティ トークン サービスは、クライアントからのトークンの要求に応答し、クライアントが Windows アカウントを使用して認証していることを前提として、クライアントのユーザー名がクレームとして含まれているトークンを発行します。 セキュリティ トークン サービスは、トークン作成の一環として、CN=STS 証明書に関連付けられている秘密キーを使用して、トークンに署名します。 また、対称キーを作成し、CN=localhost 証明書に関連付けられている秘密キーを使用して暗号化します。 セキュリティ トークン サービスは、トークンをクライアントに返すときに、対称キーも返します。 クライアントは、発行されたトークンを Calculator サービスに提示し、対称キーを使用してメッセージに署名することで対称キーを認識していることを証明します。  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>カスタム クライアント資格情報とトークン プロバイダ  
- 次の手順は、発行済みトークンをキャッシュするカスタム トークン プロバイダーを開発して、WCF と統合する方法を示します: セキュリティ。  
+ 次の手順は、発行済みトークンをキャッシュ、カスタム トークン プロバイダーを開発し、それを WCF に統合する方法を示します: セキュリティ。  
   
 #### <a name="to-develop-a-custom-token-provider"></a>カスタム トークン プロバイダーを開発するには  
   
@@ -235,7 +235,7 @@ ms.locfileid: "33807552"
   
 1.  setup.cmd ファイルを実行して、必要な証明書を作成します。  
   
-2.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。 ソリューション内のすべてのプロジェクトがビルドされていることを確認します (Shared、RSTRSTR、Service、SecurityTokenService、Client)。  
+2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。 ソリューション内のすべてのプロジェクトがビルドされていることを確認します (Shared、RSTRSTR、Service、SecurityTokenService、Client)。  
   
 3.  Service.exe と SecurityTokenService.exe がどちらも管理者権限で実行されていることを確認します。  
   
@@ -250,7 +250,7 @@ ms.locfileid: "33807552"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
   

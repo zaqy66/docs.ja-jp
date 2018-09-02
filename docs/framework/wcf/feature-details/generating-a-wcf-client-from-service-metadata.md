@@ -2,12 +2,12 @@
 title: サービス メタデータからの WCF クライアントの生成
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 55034868b465b63dca3ca28238d81b348d9d6893
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 78804eb7f4139280e7d72c5a45aa0ae4cc3c2d77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027929"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403693"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>サービス メタデータからの WCF クライアントの生成
 ここでは、Svcutil.exe の各種のスイッチを使用して、メタデータ ドキュメントからクライアントを生成する方法を説明します。  
@@ -18,9 +18,9 @@ ms.locfileid: "37027929"
   
 -   指定された `/mex` 付きアドレスへの MEX 要求  
   
--   DISCO 要求 (を使用して、 [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) ASP.NET Web サービスから) 指定されたアドレスにします。  
+-   DISCO 要求 (を使用して、 [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) ASP.NET Web サービスから) 指定されたアドレスへ。  
   
- Svcutil.exe は、Web サービス記述言語 (WSDL: Web Services Description Language) ファイル、またはサービスから受け取ったポリシー ファイルに基づいてクライアントを生成します。 ユーザー プリンシパル名 (UPN) が、ユーザー名と連結することによって生成された"\@"し、完全修飾ドメイン名 (FQDN) を追加します。 ただし、ユーザーの Active Directory に登録されている場合、この形式が正しくないと、ツールを生成する UPN は、次のエラー メッセージでの Kerberos 認証で、失敗を発生させる:**ログオンの試行が失敗しました。** この問題を解決するには、このツールが生成するクライアント ファイルを手動で修正する必要があります。  
+ Svcutil.exe は、Web サービス記述言語 (WSDL: Web Services Description Language) ファイル、またはサービスから受け取ったポリシー ファイルに基づいてクライアントを生成します。 ユーザー プリンシパル名 (UPN) が、ユーザー名と連結することによって生成された"\@"し、完全修飾ドメイン名 (FQDN) を追加します。 ただし、Active Directory に登録されているユーザーの場合は、この形式が正しくないと、ツールを生成する UPN が次のエラー メッセージでの Kerberos 認証に失敗するを原因:**ログオンの試行が失敗しました。** この問題を解決するには、このツールが生成するクライアント ファイルを手動で修正する必要があります。  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
@@ -30,7 +30,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |オプション|説明|  
 |------------|-----------------|  
-|**/reference:\<ファイル パス >**|指定されたアセンブリの型を参照します。 クライアントの生成時に、このオプションを使用して、インポートするメタデータを表す型を含むアセンブリを指定します。<br /><br /> 短縮形 : `/r`|  
+|**/reference:\<ファイルのパス >**|指定されたアセンブリの型を参照します。 クライアントの生成時に、このオプションを使用して、インポートするメタデータを表す型を含むアセンブリを指定します。<br /><br /> 短縮形 : `/r`|  
 |**/excludeType:\<type>**|参照されるコントラクト型から除外する完全修飾またはアセンブリ修飾の型名を指定します。<br /><br /> 短縮形 : `/et`|  
   
 ## <a name="choosing-a-serializer"></a>シリアライザーの選択  
@@ -47,7 +47,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |オプション|説明|  
 |------------|-----------------|  
-|**/language:\<言語 >**|コード生成に使用するプログラミング言語を指定します。 Machine.config ファイルに登録された言語名か、<xref:System.CodeDom.Compiler.CodeDomProvider> から継承するクラスの完全修飾名のいずれかを指定します。<br /><br /> 値は、c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp になります。<br /><br /> 既定値: csharp<br /><br /> 短縮形 : `/l`<br /><br /> 詳細については、次を参照してください。 [CodeDomProvider クラス](http://go.microsoft.com/fwlink/?LinkId=94778)です。|  
+|**/language:\<言語 >**|コード生成に使用するプログラミング言語を指定します。 Machine.config ファイルに登録された言語名か、<xref:System.CodeDom.Compiler.CodeDomProvider> から継承するクラスの完全修飾名のいずれかを指定します。<br /><br /> 値は、c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp になります。<br /><br /> 既定値: csharp<br /><br /> 短縮形 : `/l`<br /><br /> 詳細については、次を参照してください。 [CodeDomProvider クラス](https://go.microsoft.com/fwlink/?LinkId=94778)します。|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>クライアントの名前空間の選択  
   

@@ -9,40 +9,40 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: 55ec68e8918c9f7fbc9d3ac0062926cc03cb5e10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b972da093fc50563c5db93e61aeb8421f9bf20b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556654"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407547"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>方法 : ビュー内のデータをフィルター処理する
 この例では、ビュー内のデータをフィルター処理する方法を示します。  
   
 ## <a name="example"></a>例  
- フィルターを作成するには、フィルターのロジックを提供するメソッドを定義します。 メソッドがコールバックとして使用され、型のパラメーターを受け入れる`object`です。 次のメソッドでは、すべてを返します、`Order`オブジェクトと、`filled`プロパティを"No"、残りのオブジェクトをフィルター処理に設定します。  
+ フィルターを作成するには、フィルター処理のロジックを提供するメソッドを定義します。 メソッドは、コールバックとして使用され、型のパラメーターを受け入れる`object`します。 次のメソッドは、すべてを返します、`Order`オブジェクトを`filled`プロパティを"No"に、オブジェクトの残りの部分でフィルター処理を設定します。  
   
  [!code-csharp[SortFilter#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#2)]
  [!code-vb[SortFilter#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#2)]  
   
- 次の例で示すように、フィルターを適用できます。 この例では`myCollectionView`は、<xref:System.Windows.Data.ListCollectionView>オブジェクト。  
+ 次の例に示すように、フィルターを適用できます。 この例で`myCollectionView`は、<xref:System.Windows.Data.ListCollectionView>オブジェクト。  
   
  [!code-csharp[SortFilter#Filter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#filter)]
  [!code-vb[SortFilter#Filter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#filter)]  
   
- フィルター処理を元に戻すに設定することができます、<xref:System.Windows.Data.CollectionView.Filter%2A>プロパティを`null`:  
+ フィルター処理を元に戻すには、設定することができます、<xref:System.Windows.Data.CollectionView.Filter%2A>プロパティを`null`:  
   
  [!code-csharp[SortFilter#Unfilter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
  [!code-vb[SortFilter#Unfilter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- 作成またはビューを取得する方法については、次を参照してください。[データ コレクションの既定のビューを取得する](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)です。 完了の例では、次を参照してください。[並べ替えおよび View サンプル内のアイテムのフィルタ リング](http://go.microsoft.com/fwlink/?LinkID=160040)です。  
+ ビューを取得または作成する方法については、次を参照してください。[データ コレクションの既定のビューを取得](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)します。 完全な例では、次を参照してください。[並べ替えとビューのサンプル内の項目をフィルター処理](https://go.microsoft.com/fwlink/?LinkID=160040)します。  
   
- ビュー オブジェクトが元の場合、<xref:System.Windows.Data.CollectionViewSource>オブジェクト、イベント ハンドラーを設定してフィルター処理ロジックを適用する、<xref:System.Windows.Data.CollectionViewSource.Filter>イベント。 次の例では、`listingDataView`のインスタンスは、<xref:System.Windows.Data.CollectionViewSource>です。  
+ ビュー オブジェクトの場合、<xref:System.Windows.Data.CollectionViewSource>オブジェクトのイベント ハンドラーを設定してフィルター処理のロジックを適用する、<xref:System.Windows.Data.CollectionViewSource.Filter>イベント。 次の例では、`listingDataView`のインスタンスである<xref:System.Windows.Data.CollectionViewSource>します。  
   
  [!code-csharp[DataBindingLab#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
  [!code-vb[DataBindingLab#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
   
- この例の実装を次に示します`ShowOnlyBargainsFilter`フィルター イベント ハンドラー。 このイベント ハンドラーを使用して、<xref:System.Windows.Data.FilterEventArgs.Accepted%2A>プロパティをフィルターで除外`AuctionItem`を持つオブジェクト、 `CurrentPrice` $25 以上です。  
+ この例の実装を次に示します`ShowOnlyBargainsFilter`フィルター イベント ハンドラー。 このイベント ハンドラーを使用して、<xref:System.Windows.Data.FilterEventArgs.Accepted%2A>プロパティをフィルターで除外`AuctionItem`を持つオブジェクトを`CurrentPrice`25 ドル以上。  
   
  [!code-csharp[DataBindingLab#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  

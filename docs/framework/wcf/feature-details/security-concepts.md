@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2379c009cacf4cd2adac0aeebbade437e8483af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32b05766f82059634e6ad808c75fea6cc9e820e5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497400"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402490"
 ---
 # <a name="security-concepts"></a>セキュリティの概念
 このセクションでは、Windows Communication Foundation (WCF) のセキュリティに関連する概念について簡単に説明します。  
@@ -19,10 +19,10 @@ ms.locfileid: "33497400"
  セキュリティの実装で使用される概念の概要を示します。  
   
  [分散アプリケーションのセキュリティ](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- WCF が分散アプリケーション トポグラフィでセキュリティがどのように提供する方法の概要。  
+ WCF が分散アプリケーション トポグラフィでセキュリティを提供する方法の概要。  
   
  [セキュリティ用語](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
- WCF セキュリティの説明に使用される用語集。  
+ WCF セキュリティについて説明するときに使用される用語の用語集。  
   
 ## <a name="reference"></a>参照  
  <xref:System.ServiceModel>  
@@ -41,4 +41,4 @@ ms.locfileid: "33497400"
 ## <a name="see-also"></a>関連項目  
  [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)  
  [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric のセキュリティ モデル](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

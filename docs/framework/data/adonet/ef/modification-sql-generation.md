@@ -2,17 +2,17 @@
 title: 変更 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071953"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417248"
 ---
 # <a name="modification-sql-generation"></a>変更 SQL 生成
 ここでは、SQL:1999 準拠のデータベース プロバイダーのための変更 SQL 生成モジュールを開発する方法について説明します。 このモジュールは、変更コマンド ツリーを適切な SQL INSERT ステートメント、UPDATE ステートメント、または DELETE ステートメントに変換します。  
   
- SQL 生成の select ステートメントの詳細については、次を参照してください。 [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)です。  
+ Select ステートメントの SQL 生成の詳細については、次を参照してください。 [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)します。  
   
 ## <a name="overview-of-modification-command-trees"></a>変更コマンド ツリーの概要  
  変更 SQL 生成モジュールは、指定された入力 DbModificationCommandTree に基づいて、データベースに固有の変更 SQL ステートメントを生成します。  
@@ -27,9 +27,9 @@ ms.locfileid: "37071953"
   
  DbModificationCommandTree とその実装によって生成される、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]常に単一行の操作を表します。 ここでは、これら 3 つの種類の実装と、.NET Framework Version 3.5 における制約について説明します。  
   
- ![ダイアグラム](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![図](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree には、変更操作のターゲット セットを表す Target プロパティがあります。 入力セットを定義する Target の Expression プロパティは、常に DbScanExpression です。  DbScanExpression は、どちらか、テーブルまたはビューを表すことができます、または一連のデータ定義クエリを使用した場合は、メタデータ プロパティの"Defining Query"、ターゲットが null 以外です。  
+ DbModificationCommandTree には、変更操作のターゲット セットを表す Target プロパティがあります。 入力セットを定義する Target の Expression プロパティは、常に DbScanExpression です。  DbScanExpression は、どちらか、テーブルまたはビューを表すことができます。 または一連のデータ定義クエリ メタデータ プロパティを"Defining Query"、ターゲットの場合は null 以外。  
   
  モデル内で定義クエリを使用してセットが定義されているが、対応する変更操作のための関数が指定されていない場合、クエリを表す DbScanExpression は、変更のターゲットとしてプロバイダーにのみ影響を与えます。 プロバイダーによっては、このようなシナリオはサポートされません (たとえば、SqlClient ではサポートされません)。  
   
@@ -83,7 +83,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression。  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>サンプル プロバイダーでの変更 SQL 生成  
- [Entity Framework サンプル プロバイダー](http://go.microsoft.com/fwlink/?LinkId=180616)をサポートする ADO.NET データ プロバイダーのコンポーネントを示しています、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]です。 このサンプルは、SQL Server 2005 データベースを対象としており、System.Data.SqlClient ADO.NET 2.0 データ プロバイダーの最上位にラッパーとして実装されます。  
+ [Entity Framework サンプル プロバイダー](https://go.microsoft.com/fwlink/?LinkId=180616)をサポートする ADO.NET データ プロバイダーのコンポーネントを示して、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]します。 このサンプルは、SQL Server 2005 データベースを対象としており、System.Data.SqlClient ADO.NET 2.0 データ プロバイダーの最上位にラッパーとして実装されます。  
   
  SQL Generation\DmlSqlGenerator.cs ファイル内にあるサンプル プロバイダーの変更 SQL 生成モジュールは、DbModificationCommandTree を入力として受け取り、単一の変更 SQL ステートメントを生成します。この後に、DbModificationCommandTree によって指定された場合にリーダーを返す SELECT ステートメントが続く場合もあります。 生成されたコマンドの構造は、対象の SQL Server データベースの影響を受けます。  
   
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>挿入 SQL コマンドの生成  
  サンプル プロバイダーで指定されている DbInsertCommandTree に対して生成される挿入コマンドは、以下に示す 2 つの挿入テンプレートのどちらかに基づいています。  
   
- 1 つ目のテンプレートには、SetClauses のリストの値を受け取って挿入を実行するコマンドと、挿入された行の Returning プロパティが null 以外の場合にその Returning プロパティで指定されたプロパティを返す SELECT ステートメントが含まれています。 述語要素"\@ @ROWCOUNT > 0" は行が挿入された場合は true です。 述語要素"keyMemberI = keyValueI &#124; scope_identity()"図形は、"keyMemberI = scope_identity()"scope_identity は、identity (に挿入された最後の id 値を返すために、keyMemeberI がストア生成のキーが場合にのみストア生成の) 列です。  
+ 1 つ目のテンプレートには、SetClauses のリストの値を受け取って挿入を実行するコマンドと、挿入された行の Returning プロパティが null 以外の場合にその Returning プロパティで指定されたプロパティを返す SELECT ステートメントが含まれています。 述語要素"\@ @ROWCOUNT > 0" は行が挿入された場合は true。 述語要素"keyMemberI = keyValueI &#124; scope_identity()"図形は、"keyMemberI = scope_identity()"scope_identity() では、identity (に挿入された最後の id 値を返すために、keyMemeberI がストア生成のキーでは場合に、のみ列のストア生成)。  
   
 ```  
 -- first insert Template  

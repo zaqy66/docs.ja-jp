@@ -9,20 +9,20 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-ms.openlocfilehash: 267a56cbfd9025e2e20f1468535e5544146535a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b58318a3e0e9881725d3c260251288c720fa4132
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529865"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406824"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>デザイン時の Windows フォーム コントロールの開発
 コントロールの作成者は、.NET Framework のさまざまなコントロール作成テクノロジを利用できます。 既存のコントロールを組み合わせた複合コントロールしかデザインできないといった制約はなくなりました。 継承により、既存の複合コントロールや既存の Windows フォーム コントロールから、独自のコントロールを作成できます。 カスタム描画を実装する独自のコントロールを設計することもできます。 これらのオプションを使うと、非常に柔軟にビジュアル インターフェイスのデザインと機能を決めることができます。 これらの機能を利用するには、オブジェクト ベースのプログラミング概念について理解しておく必要があります。  
   
 > [!NOTE]
->  継承、十分に理解する必要はありませんを参照する役に立つ場合があります[継承の基礎 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)です。  
+>  継承、十分に理解する必要はありませんを参照する役に立つ場合があります[継承の基本 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)します。  
   
- Web フォームで使うカスタム コントロールを作る場合は、「[カスタム ASP.NET サーバー コントロールの開発](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)」をご覧ください。  
+ Web フォームで使うカスタム コントロールを作る場合は、「[カスタム ASP.NET サーバー コントロールの開発](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)」をご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [チュートリアル: Visual Basic による複合コントロールの作成](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "33529865"
  Windows フォーム コントロールでスマート タグ機能を使う方法を示します。  
   
  [チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化](../../../../docs/framework/winforms/controls/serializing-collections-designerserializationvisibilityattribute.md)  
- 使用する方法を示します、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType>属性、コレクションにシリアル化します。  
+ 使用する方法を示しています、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType>コレクションをシリアル化する属性。  
   
  [チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  Windows フォーム コントロールのデザイン時動作をデバッグする方法を示します。  
@@ -59,19 +59,19 @@ ms.locfileid: "33529865"
  複合コントロール作成手順の概要を説明します。  
   
  [方法: 既存の Windows フォーム コントロールから継承する](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
- 継承することによって拡張コントロールを作成する方法を示しています、<xref:System.Windows.Forms.Button>クラスを制御します。  
+ 継承することにより拡張コントロールを作成する方法を示しています、<xref:System.Windows.Forms.Button>クラスを制御します。  
   
  [方法: コントロール クラスを継承する](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
  拡張コントロールの作成の概要を説明します。  
   
  [方法: デザイン時にフォームの端に合わせてコントロールを配置する](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- 使用する方法を示します、<xref:System.Windows.Forms.Control.Dock%2A>プロパティを合わせて、コントロールが占有するフォームの端を配置します。  
+ 使用する方法を示しています、<xref:System.Windows.Forms.Control.Dock%2A>プロパティを合わせて、フォームの端にコントロールを配置します。  
   
  [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  **ツールボックスのカスタマイズ** ダイアログ ボックスに表示されるようにコントロールをインストールする手順を示します。  
   
  [方法: コントロールにツールボックス ビットマップを指定する](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)  
- 使用する方法を示します、<xref:System.Drawing.ToolboxBitmapAttribute>で、カスタム コントロールの横にあるアイコンを表示する、**ツールボックス**です。  
+ 使用する方法を示しています、<xref:System.Drawing.ToolboxBitmapAttribute>で、カスタム コントロールの横にあるアイコンを表示する、**ツールボックス**します。  
   
  [方法: UserControl の実行時の動作をテストする](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
  **UserControl テスト コンテナー**を使って複合コントロールの動作をテストする方法を示します。  

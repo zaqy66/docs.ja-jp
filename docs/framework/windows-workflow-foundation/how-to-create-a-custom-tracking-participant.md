@@ -5,32 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 6439a056ec1baccf6c059f779a577723761c489b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9a83f64b7ea0de275631d7d3b8d2755671223ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519533"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418079"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>カスタム追跡参加要素を作成する方法
 ワークフロー追跡により、ワークフロー実行の状態が視覚的に示されます。 ワークフロー ランタイムによって、ワークフローのライフサイクル イベント、アクティビティのライフサイクル イベント、ブックマークの再開、およびエラーについて説明する追跡レコードが出力されます。 これらの追跡レコードは、追跡参加要素によって使用されます。 Windows Workflow Foundation (WF) には、追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む標準の追跡参加要素が含まれています。 これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。 チュートリアルのこの手順では、`WriteLine` アクティビティの出力をキャプチャするカスタム追跡参加要素と追跡プロファイルを作成して、ユーザーに表示できるようにする方法について説明します。  
   
 > [!NOTE]
->  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する前に、これまでのトピックを完了する必要があります。 完成版をダウンロードまたはチュートリアルのビデオ チュートリアルを表示を参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](http://go.microsoft.com/fwlink/?LinkID=248976)です。  
+>  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する前に、これまでのトピックを完了する必要があります。 完成版をダウンロードまたはチュートリアルのビデオ チュートリアルを表示を参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
   
 ## <a name="in-this-topic"></a>このトピックの内容  
   
 -   [カスタム追跡参加要素を作成するには](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
   
--   [追跡プロファイルを作成して、追跡参加要素を登録するには](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
+-   [追跡プロファイルを作成し、追跡参加要素を登録するには](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
   
 -   [追跡情報を表示するには](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
   
--   [ビルドおよびアプリケーションを実行するには](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
+-   [ビルドして、アプリケーションの実行](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
 ###  <a name="BKMK_CustomTrackingParticipant"></a> カスタム追跡参加要素を作成するには  
   
-1.  右クリック**NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**追加**、**クラス**です。 型`StatusTrackingParticipant`に、**名前**ボックスし、をクリックして**追加**です。  
+1.  右クリックして**NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**追加**、**クラス**します。 型`StatusTrackingParticipant`に、**名前**ボックス、およびクリックして**追加**します。  
   
 2.  次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "33519533"
     }  
     ```  
   
-     追跡プロファイルを指定しない場合は、既定の追跡プロファイルが使用されます。 既定の追跡プロファイルを使用する場合は、すべての `ActivityStates` に関する追跡レコードが出力されます。 ここでは、`WriteLine` アクティビティのライフサイクル中に 1 回だけテキストをキャプチャする必要があるため、`ActivityStates.Executing` 状態からテキストを抽出するだけです。 [追跡プロファイルを作成して、追跡参加要素を登録する](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)、だけを指定する追跡プロファイルが作成された`WriteLine``ActivityStates.Executing`追跡レコードが生成されます。  
+     追跡プロファイルを指定しない場合は、既定の追跡プロファイルが使用されます。 既定の追跡プロファイルを使用する場合は、すべての `ActivityStates` に関する追跡レコードが出力されます。 ここでは、`WriteLine` アクティビティのライフサイクル中に 1 回だけテキストをキャプチャする必要があるため、`ActivityStates.Executing` 状態からテキストを抽出するだけです。 [追跡プロファイルを作成し、追跡参加要素を登録する](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)、だけを指定する追跡プロファイルが作成された`WriteLine``ActivityStates.Executing`追跡レコードが生成されます。  
   
-###  <a name="BKMK_TrackingProfile"></a> 追跡プロファイルを作成して、追跡参加要素を登録するには  
+###  <a name="BKMK_TrackingProfile"></a> 追跡プロファイルを作成し、追跡参加要素を登録するには  
   
-1.  右クリック**WorkflowHostForm**で**ソリューション エクスプ ローラー**選択**コードの表示**です。  
+1.  右クリックして**WorkflowHostForm**で**ソリューション エクスプ ローラー**選択**コードの表示**します。  
   
 2.  次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "33519533"
   
 ###  <a name="BKMK_DisplayTracking"></a> 追跡情報を表示するには  
   
-1.  右クリック**WorkflowHostForm**で**ソリューション エクスプ ローラー**選択**コードの表示**です。  
+1.  右クリックして**WorkflowHostForm**で**ソリューション エクスプ ローラー**選択**コードの表示**します。  
   
 2.  `InstanceId_SelectedIndexChanged` ハンドラーで、ステータス ウィンドウをクリアするコードの直後に次のコードを追加します。  
   
@@ -320,29 +320,29 @@ ms.locfileid: "33519533"
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a> ビルドおよびアプリケーションを実行するには  
+###  <a name="BKMK_BuildAndRun"></a> ビルドして、アプリケーションの実行  
   
 1.  Ctrl キーと Shift キーを押しながら B キーを押してアプリケーションをビルドします。  
   
 2.  Ctrl キーを押しながら F5 キーを押してアプリケーションを起動します。  
   
-3.  推測ゲームを開始、およびをクリックするワークフローの種類の範囲を選択して**新しいゲーム**です。 推定値を入力、**推測**ボックスし、をクリックして**移動**推定値を送信します。 ワークフローの状態がステータス ウィンドウに表示されます。 この出力は、`WriteLine` アクティビティからキャプチャされます。 選択して、別のワークフローに切り替え、**ワークフロー インスタンス Id**コンボ ボックスと、現在のワークフローの状態が削除されたことに注意してください。 以前のワークフローに戻して、次の例のように、状態が復元されることを確認します。  
+3.  推測ゲームとワークフローを開始、およびクリックしての種類の範囲を選択**新しいゲーム**します。 推定値を入力、**推測**ボックスし、をクリックして**移動**推定値を送信します。 ワークフローの状態がステータス ウィンドウに表示されます。 この出力は、`WriteLine` アクティビティからキャプチャされます。 いずれかから選択して、別のワークフローに切り替えて、**ワークフロー インスタンス Id**コンボ ボックスと、現在のワークフローの状態が削除されたことに注意してください。 以前のワークフローに戻して、次の例のように、状態が復元されることを確認します。  
   
     > [!NOTE]
     >  追跡が有効になる前に開始されたワークフローに切り替えた場合、状態は表示されません。 ただし、推定値を追加すると、この時点では追跡が有効になっているため、その状態が保存されます。  
   
- **1 ~ 10 の間の数値を入力してください。**  
-**推定値が大きすぎます。**   
-**1 ~ 10 の間の数値を入力してください。**    
+ **1 から 10 までの数値を入力してください。**  
+**推定値が多すぎます。**   
+**1 から 10 までの数値を入力してください。**    
     > [!NOTE]
-    >  この情報は、乱数の範囲を決定する場合に役立ちますが、これまでに作成された推定値に関する情報を含んでいません。 この情報は、次の手順で[する方法: 複数のバージョンのホストはワークフロー サイド バイ サイドの](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。  
+    >  この情報は、乱数の範囲を決定する場合に役立ちますが、これまでに作成された推定値に関する情報を含んでいません。 この情報は、次の手順では[方法: ホストの複数バージョンをワークフロー サイド バイ サイドの](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。  
   
      ワークフロー インスタンス ID を書き留め、ゲームを最後まで実行します。  
   
-4.  Windows エクスプ ローラーを開きに移動、 **numberguessworkflowhost \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって)。 プロジェクトの実行可能ファイルに加え、GUID ファイル名が付いたファイルがあることに注意します。 前の手順で完了したワークフローのワークフロー インスタンス ID に対応するファイルを特定してメモ帳で開きます。 追跡情報は、次のような情報が含まれています。  
+4.  Windows エクスプ ローラーを開きに移動し、 **numberguessworkflowhost \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって)。 プロジェクトの実行可能ファイルに加え、GUID ファイル名が付いたファイルがあることに注意します。 前の手順で完了したワークフローのワークフロー インスタンス ID に対応するファイルを特定してメモ帳で開きます。 追跡情報は、次のような情報が含まれています。  
   
- **1 ~ 10 の間の数値を入力してください。**  
-**推定値が大きすぎます。**   
-**1 ~ 10 の間の数値を入力してください。**   
-**推定値が大きすぎます。**   
-**1 ~ 10 の間の数値を入力してください**だけでなく、ユーザーの推定値がない場合、この追跡データは、ワークフローの最後の推定値に関する情報。 これは、追跡情報がワークフローからの `WriteLine` 出力のみで構成されており、表示される最後のメッセージがワークフロー完了後に `Completed` ハンドラーから表示されるためです。 チュートリアルでは、次の手順で[する方法: ホストはワークフロー サイド バイ サイドの複数のバージョン](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)、既存の`WriteLine`アクティビティが変更され、ユーザーの推定値と追加の表示を`WriteLine`アクティビティを追加します。最終的な結果が表示されます。 これらの変更が統合されると、[する方法: ホストはワークフロー サイド バイ サイドの複数のバージョン](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)同時に複数のバージョンのワークフローをホストする方法を示します。
+ **1 から 10 までの数値を入力してください。**  
+**推定値が多すぎます。**   
+**1 から 10 までの数値を入力してください。**   
+**推定値が多すぎます。**   
+**1 から 10 までの数値を入力してください**だけでなく、ユーザーの推定値がない場合、この追跡データにが含まれていませんワークフローの最後の推定値に関する情報には。 これは、追跡情報がワークフローからの `WriteLine` 出力のみで構成されており、表示される最後のメッセージがワークフロー完了後に `Completed` ハンドラーから表示されるためです。 チュートリアルの次の手順で[方法: をワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)、既存の`WriteLine`アクティビティは、ユーザーの推定値と追加を表示する変更`WriteLine`アクティビティを追加します。最終的な結果が表示されます。 これらの変更が統合されると、[方法: をワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)と同時に複数のバージョンのワークフローをホストする方法を示します。

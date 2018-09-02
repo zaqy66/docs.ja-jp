@@ -2,15 +2,15 @@
 title: ワークフロー サービスのホスティング
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: b42dd42b9697d87d7721fc5edc2dfde01f1d37c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932834"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416366"
 ---
 # <a name="hosting-workflow-services"></a>ワークフロー サービスのホスティング
-ワークフロー サービスが受信メッセージに応答するには、ワークフロー サービスがホストされている必要があります。 ワークフロー サービスは WCF メッセージング インフラストラクチャを使用するため、これと似た方法でホストされます。 WCF のサービスと同様に、インターネット インフォメーション サービス (IIS)、または Windows プロセス アクティブ化サービス (WAS) の下で、任意の管理対象のアプリケーションでワークフロー サービスをホストできます。 さらに、ワークフロー サービスは、Windows Server Appfabric でホストできます。 Windows Server App Fabric の詳細については、次を参照してください。 [Windows Server App Fabric のドキュメント](http://go.microsoft.com/fwlink/?LinkId=193037)、 [AppFabric のホスティング機能](http://go.microsoft.com/fwlink/?LinkId=196494)、および[AppFabric ホスティングの概念](http://go.microsoft.com/fwlink/?LinkId=196495)します。 WCF をホストするさまざまな方法の詳細については、「」を参照をサービスの[ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)します。
+ワークフロー サービスが受信メッセージに応答するには、ワークフロー サービスがホストされている必要があります。 ワークフロー サービスは WCF メッセージング インフラストラクチャを使用するため、これと似た方法でホストされます。 WCF のサービスと同様に、インターネット インフォメーション サービス (IIS)、または Windows プロセス アクティブ化サービス (WAS) の下で、任意の管理対象のアプリケーションでワークフロー サービスをホストできます。 さらに、ワークフロー サービスは、Windows Server Appfabric でホストできます。 Windows Server App Fabric の詳細については、次を参照してください。 [Windows Server App Fabric のドキュメント](https://go.microsoft.com/fwlink/?LinkId=193037)、 [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=196494)、および[AppFabric ホスティングの概念](https://go.microsoft.com/fwlink/?LinkId=196495)します。 WCF をホストするさまざまな方法の詳細については、「」を参照をサービスの[ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)します。
 
 ## <a name="hosting-in-a-managed-application"></a>マネージド アプリケーションでのホスト
  マネージド アプリケーションでワークフロー サービスをホストするには、<xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスを使用します。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> コンストラクターにより、シングルトン ワークフロー サービス インスタンス、ワークフロー サービス定義、またはワークフロー メッセージング アクティビティを使用するアクティビティを指定できます。 呼び出す <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> サービスが受信メッセージのリッスンを開始します。
@@ -51,7 +51,7 @@ ms.locfileid: "42932834"
  カスタム アクティビティへの参照を追加する必要があります、<`Assemblies`> セクション <`System.Web.Compilation`> のアプリケーション ドメインに読み込まれ、XAML デシリアライザーが型を見つけることができるようにします。 これらの設定をコンピューター上のすべてのアプリケーションに適用する必要がある場合は、アプリケーション レベルまたはルートの Web.config で設定できます。
 
 ## <a name="deployment"></a>配置
- 配置作業を容易にするために、Web 配置ツールが作成されています。 このツールを使用すると、アプリケーションの IIS 6.0 および IIS 7.0 間での移行や、サーバー ファームの同期のほか、Web アプリケーションのパッケージ化、アーカイブ、および配置を実行できます。 詳細については、次を参照してください。 [MS 配置ツール](http://go.microsoft.com/fwlink/?LinkId=178690)します。
+ 配置作業を容易にするために、Web 配置ツールが作成されています。 このツールを使用すると、アプリケーションの IIS 6.0 および IIS 7.0 間での移行や、サーバー ファームの同期のほか、Web アプリケーションのパッケージ化、アーカイブ、および配置を実行できます。 詳細については、次を参照してください。 [MS 配置ツール](https://go.microsoft.com/fwlink/?LinkId=178690)します。
 
 ## <a name="see-also"></a>関連項目
 

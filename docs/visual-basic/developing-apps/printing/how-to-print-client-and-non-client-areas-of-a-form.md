@@ -8,17 +8,17 @@ helpviewer_keywords:
 - entire form
 - non-client area [Visual Basic], printing
 ms.assetid: 856bb0e4-dbc3-47e2-81cd-4b376cf07757
-ms.openlocfilehash: 566cf295462945a6bc90bc96f8907de34646bd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5109993146a8d53d5cbeebcc52c018a6f0f57ed5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584743"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408440"
 ---
 # <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>方法: フォームのクライアント領域と非クライアント領域を印刷する (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントを使用すると、 <xref:System.Drawing.Printing.PrintDocument> コンポーネントを使わなくても、画面に表示されているとおりにフォームのイメージをすぐに印刷することができます。 次の手順では、クライアント領域と非クライアント領域の両方を含むフォームを印刷する方法を示します。 非クライアント領域にはタイトル バー、境界、およびスクロール バーが含まれます。  
   
- PowerPack コントロールは、Visual Studio には含まれなくなりましたが、 [ダウンロード センター](http://www.microsoft.com/en-us/download/details.aspx?id=25169)からダウンロードできます。  
+ PowerPack コントロールは不要になった Visual Studio で、含まれていますからダウンロードすることができます、[ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=25169)します。  
   
 ### <a name="to-print-both-the-client-and-the-non-client-areas-of-a-form"></a>フォームのクライアント領域と非クライアント領域の両方を印刷するには  
   

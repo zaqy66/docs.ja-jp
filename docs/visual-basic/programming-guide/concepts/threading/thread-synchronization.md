@@ -2,12 +2,12 @@
 title: スレッドの同期 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3278ed1e98f71e11d47f55a0d4cb50f44ae02027
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655092"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406625"
 ---
 # <a name="thread-synchronization-visual-basic"></a>スレッドの同期 (Visual Basic)
 次のセクションでは、マルチスレッド アプリケーションでリソースへのアクセスを同期するために使用できる機能とクラスについて説明します。  
@@ -20,14 +20,14 @@ ms.locfileid: "33655092"
   
  マルチスレッド プログラミングの背景情報については、以下を参照してください。  
   
--   [マネージ スレッド処理の基本](../../../../standard/threading/managed-threading-basics.md)  
+-   [マネージド スレッド処理の基本](../../../../standard/threading/managed-threading-basics.md)  
   
 -   [スレッドの使用とスレッド処理](../../../../standard/threading/using-threads-and-threading.md)  
   
--   [マネージ スレッド処理の実施](../../../../standard/threading/managed-threading-best-practices.md)  
+-   [マネージド スレッド処理の実施](../../../../standard/threading/managed-threading-best-practices.md)  
   
-## <a name="the-lock-and-synclock-keywords"></a>ロックと SyncLock キーワード  
- Visual Basic`SyncLock`他のスレッドによるコードのブロックを中断することがなく完了するまで実行することを確認するステートメントを使用できます。 これは、コード ブロックの実行中に、特定のオブジェクトに対して同時に使用できないロックを取得することで実現されます。  
+## <a name="the-lock-and-synclock-keywords"></a>ロックおよび SyncLock キーワード  
+ Visual Basic`SyncLock`他のスレッドによるコードのブロックを中断することがなく完了するまで実行されることを確認するステートメントを使用できます。 これは、コード ブロックの実行中に、特定のオブジェクトに対して同時に使用できないロックを取得することで実現されます。  
   
  `SyncLock` ステートメントには引数としてオブジェクトが渡され、その後に、一度に 1 つのスレッドだけが実行するコード ブロックが続きます。 例えば:  
   
@@ -147,7 +147,6 @@ End Module
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [マルチスレッド アプリケーション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
  [SyncLock ステートメント](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
  [ミューテックス](../../../../standard/threading/mutexes.md)  
  [インタロックされた操作](../../../../standard/threading/interlocked-operations.md)  

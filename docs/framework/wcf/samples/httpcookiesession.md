@@ -2,15 +2,15 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 64a7cba7b1bbc55a4504e3af4784fcb2a84f0fa1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: fdde238d4a4fd9291c520d4ef13694c3648c8298
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807229"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402634"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-このサンプルでは、カスタム プロトコル チャネルを作成し、セッション管理用の HTTP クッキーを使用する方法を示します。 このチャネルには、Windows Communication Foundation (WCF) サービスと ASMX クライアント間または WCF クライアントと ASMX サービス間の通信ができるようにします。  
+このサンプルでは、カスタム プロトコル チャネルを作成し、セッション管理用の HTTP クッキーを使用する方法を示します。 このチャネルでは、Windows Communication Foundation (WCF) サービスと ASMX クライアントまたは WCF クライアントと ASMX サービス間の通信ができます。  
   
  クライアントがセッション ベースの ASMX Web サービス内で Web メソッドを呼び出すと、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] エンジンは次の処理を行います。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33807229"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
@@ -83,7 +83,7 @@ InputQueue<RequestContext> requestQueue;
  対応するクライアント チャネルは、`HttpCookieSessionChannelFactory` クラスにあります。 チャネルの作成中、チャネル ファクトリは内部要求チャネルを `HttpCookieRequestSessionChannel` でラップします。 `HttpCookieRequestSessionChannel` クラスは、基になる要求チャネルへの呼び出しを転送します。 クライアントがプロキシを閉じると、`HttpCookieRequestSessionChannel` はチャネルが閉じられようとしていることを示すメッセージをサービスに送信します。 そのため、サービス チャネル スタックは、使用中のセッション チャネルを正常にシャットダウンできます。  
   
 ## <a name="binding-and-binding-element"></a>バインディングとバインド要素  
- サービスとクライアントのチャネルを作成した後は、次の手順は、WCF ランタイムに統合するは。 チャネルは、wcf バインディングとバインド要素を介して公開されます。 バインディングは、1 つまたは複数のバインド要素で構成されています。 WCF は、いくつかのシステム定義バインディングです。たとえば、BasicHttpBinding や WSHttpBinding などです。 `HttpCookieSessionBindingElement` クラスには、バインディング要素の実装が含まれています。 この実装によってチャネル リスナとチャネル ファクトリの作成メソッドがオーバーライドされ、必要なチャネル リスナまたはチャネル ファクトリがインスタンス化されます。  
+ サービスとクライアントのチャネルを作成した後は、次の手順は、WCF ランタイムに統合するは。 チャネルは、バインディングとバインド要素を介して WCF に公開されます。 バインディングは、1 つまたは複数のバインド要素で構成されています。 WCF は、いくつかのシステム定義バインディング。たとえば、BasicHttpBinding や WSHttpBinding などです。 `HttpCookieSessionBindingElement` クラスには、バインディング要素の実装が含まれています。 この実装によってチャネル リスナとチャネル ファクトリの作成メソッドがオーバーライドされ、必要なチャネル リスナまたはチャネル ファクトリがインスタンス化されます。  
   
  このサンプルでは、サービスの説明のポリシー アサーションを使用します。 これにより、サンプルのチャネルの要件を、そのサービスを利用できる他のクライアントに公開できます。 たとえば、このバインド要素はポリシー アサーションを公開し、セッションがサポートされていることを潜在的なクライアントに通知します。 このサンプルでは、バインディング要素の構成で `ExchangeTerminateMessage` プロパティが有効になっています。そのため、サービスで余分なメッセージ交換アクションがサポートされ、セッションでのメッセージ交換が終了されることを示すために必要なアサーションが追加されます。 その後、クライアントはこのアクションを使用できます。 `HttpCookieSessionBindingElement` から作成されたポリシー アサーションを、次の WSDL コードに示します。  
   
@@ -133,7 +133,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>テスト コード  
- このサンプルのトランスポートを使用するテスト コードは、クライアント ディレクトリとサービス ディレクトリで使用できます。 2 つのテストで構成されます — 1 つのテストを使用するバインディングを使用して`allowCookies`'éý'`true`クライアントにします。 2 つ目のテストは、バインディングで明示的なシャットダウン (メッセージ交換の終了) を有効にします。  
+ このサンプルのトランスポートを使用するテスト コードは、クライアント ディレクトリとサービス ディレクトリで使用できます。 2 つのテストで構成されます: 1 つのテストでバインディングを使用して`allowCookies`に設定`true`クライアント。 2 つ目のテストは、バインディングで明示的なシャットダウン (メッセージ交換の終了) を有効にします。  
   
  このサンプルを実行すると、次の出力が表示されます。  
   
@@ -164,10 +164,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+2.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-3.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+3.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-4.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 ## <a name="see-also"></a>関連項目

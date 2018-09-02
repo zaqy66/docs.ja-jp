@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: a25afbe0124f7870df886a1e26e0df2a0716b205
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63d6a17e5aaf3e5d39ed0eda288e75c071be4d73
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360191"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405435"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>SqlDependency を使用した変更の検出
 クエリ結果が最初に取得されたクエリ結果と異なることを検出するために、<xref:System.Data.SqlClient.SqlDependency> オブジェクトを <xref:System.Data.SqlClient.SqlCommand> に関連付けることができます。 さらに、`OnChange` イベントにデリゲートを割り当てることができます。このイベントは、関連付けられたコマンドの結果が変わったときに発生します。 コマンドを実行する前に、コマンドを <xref:System.Data.SqlClient.SqlDependency> に関連付ける必要があります。 また、`HasChanges` の <xref:System.Data.SqlClient.SqlDependency> プロパティを使用しても、データが最初に取得されて以降にクエリ結果が変化したかどうかを判別できます。  
   
 ## <a name="security-considerations"></a>セキュリティの考慮事項  
- 指定されたコマンドについて基になるデータが変更されたという通知を受け取るために、依存関係を持つインフラストラクチャでは <xref:System.Data.SqlClient.SqlConnection> が呼び出されると、<xref:System.Data.SqlClient.SqlDependency.Start%2A> が開かれることを利用します。 クライアントが `SqlDependency.Start` の呼び出しを開始できるかどうかは、<xref:System.Data.SqlClient.SqlClientPermission> を使用し、コード アクセス セキュリティ属性を利用することで制御します。 詳細については、次を参照してください。[クエリ通知の有効化](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)と[コード アクセス セキュリティと ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)です。  
+ 指定されたコマンドについて基になるデータが変更されたという通知を受け取るために、依存関係を持つインフラストラクチャでは <xref:System.Data.SqlClient.SqlConnection> が呼び出されると、<xref:System.Data.SqlClient.SqlDependency.Start%2A> が開かれることを利用します。 クライアントが `SqlDependency.Start` の呼び出しを開始できるかどうかは、<xref:System.Data.SqlClient.SqlClientPermission> を使用し、コード アクセス セキュリティ属性を利用することで制御します。 詳細については、次を参照してください。[クエリ通知を有効にする](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)と[コード アクセス セキュリティと ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)します。  
   
 ### <a name="example"></a>例  
  次の手順に従って、依存関係を宣言し、コマンドを実行して、結果セットが変更された場合に通知を受け取ります。  
@@ -94,7 +94,7 @@ void SomeMethod()
   
         // Create a dependency and associate it with the SqlCommand.  
         SqlDependency dependency=new SqlDependency(command);  
-        // Maintain the refence in a class member.  
+        // Maintain the reference in a class member.  
   
         // Subscribe to the SqlDependency event.  
         dependency.OnChange+=new  
@@ -124,4 +124,4 @@ void Termination()
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server のクエリ通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

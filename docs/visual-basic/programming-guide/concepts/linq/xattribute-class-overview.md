@@ -3,11 +3,11 @@ title: XAttribute クラスの概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
 ms.openlocfilehash: 08b8ebf31a39325c98023d4bb333f8e06bbdeb3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646966"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406429"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>XAttribute クラスの概要 (Visual Basic)
 属性は、要素に関連付けられている名前と値のペアです。 <xref:System.Xml.Linq.XAttribute> クラスは、XML 属性を表します。  
@@ -25,7 +25,7 @@ ms.locfileid: "33646966"
 |`XAttribute(XName name, object content)`|<xref:System.Xml.Linq.XAttribute> オブジェクトを作成します。 `name` 引数には属性の名前を指定し、`content` には属性のコンテンツを指定します。|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>属性を持つ要素の作成  
- 次のコードは、Visual Basic で XML リテラルを使用して、属性を含む要素を示しています。  
+ 次のコードは、Visual Basic で XML リテラルを使用して属性を格納する要素を示しています。  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  

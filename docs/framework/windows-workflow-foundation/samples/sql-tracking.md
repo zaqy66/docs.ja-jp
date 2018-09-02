@@ -2,15 +2,15 @@
 title: SQL 追跡
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 9c42690570fb3f90f576327dcc5cfe870288b99a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f8d7bbd57965b4d7399373416caea87d4d84187
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518307"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402674"
 ---
 # <a name="sql-tracking"></a>SQL 追跡
-このサンプルでは、カスタム SQL 追跡参加要素を作成し、追跡レコードを SQL データベースに書き込む方法を示します。 Windows Workflow Foundation (WF) ワークフローをワークフロー インスタンスの実行時に視覚的に追跡を提供します。 追跡ランタイムでは、ワークフローの実行中にワークフロー追跡レコードが出力されます。 ワークフロー追跡の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)です。  
+このサンプルでは、カスタム SQL 追跡参加要素を作成し、追跡レコードを SQL データベースに書き込む方法を示します。 Windows Workflow Foundation (WF) は、ワークフロー インスタンスの実行時に可視性を示すワークフロー追跡を提供します。 追跡ランタイムでは、ワークフローの実行中にワークフロー追跡レコードが出力されます。 ワークフロー追跡の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)します。  
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
@@ -33,15 +33,15 @@ ms.locfileid: "33518307"
   
 7.  ブラウザーに、[StockPriceService] ページが表示され、ローカル サービスの WSDL アドレスが示されます。 このアドレスをコピーします。  
   
-     ローカル サービスの WSDL アドレスの例はhttp://localhost:65193/StockPriceService.xamlx?wsdlします。  
+     ローカル サービスの WSDL アドレスの例は http://localhost:65193/StockPriceService.xamlx?wsdlします。  
   
 8.  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] を使用して、WCF テスト クライアント (WcfTestClient.exe) を実行します。 このテスト クライアントは Microsoft Visual Studio 10.0\Common7\IDE ディレクトリにあります。  
   
-9. WCF テスト クライアントで、をクリックして、**ファイル**メニュー**サービスの追加**です。 テキスト ボックスにローカル サービスのアドレスを貼り付けます。 をクリックして**OK**ダイアログ ボックスを閉じます。  
+9. WCF テスト クライアントでのクリックして、**ファイル**メニュー選択し、**サービスの追加**します。 テキスト ボックスにローカル サービスのアドレスを貼り付けます。 クリックして**OK**ダイアログ ボックスを閉じます。  
   
-10. WCF テスト クライアントでダブルクリックして**GetStockPrice**です。 開き、`GetStockPrice`操作を 1 つのパラメーター値の型を受け取る`Contoso` をクリック**Invoke**です。  
+10. WCF テスト クライアントでダブルクリック **[getstockprice]** します。 開き、`GetStockPrice`操作を 1 つのパラメーター値の型を受け取る`Contoso` をクリック**Invoke**します。  
   
-11. 出力された追跡レコードが SQL データベースに書き込まれます。 追跡レコードを表示するには、SQL Management Studio で TrackingSample データベースを開き、テーブルに移動します。 SQL Server Management Studio の詳細については、次を参照してください。 [SQL Server Management Studio の概要](http://go.microsoft.com/fwlink/?LinkId=165645)です。 SQL Server 2008 Management Studio Express をダウンロードできる[ここ](http://go.microsoft.com/fwlink/?LinkId=180520)です。 テーブルで選択クエリを実行すると、それぞれのテーブルに格納されている追跡レコード内のデータが表示されます。  
+11. 出力された追跡レコードが SQL データベースに書き込まれます。 追跡レコードを表示するには、SQL Management Studio で TrackingSample データベースを開き、テーブルに移動します。 SQL Server Management Studio の詳細については、次を参照してください。 [SQL Server Management Studio の概要](https://go.microsoft.com/fwlink/?LinkId=165645)します。 SQL Server 2008 Management Studio Express をダウンロードできます[ここ](https://go.microsoft.com/fwlink/?LinkId=180520)します。 テーブルで選択クエリを実行すると、それぞれのテーブルに格納されている追跡レコード内のデータが表示されます。  
   
 #### <a name="to-uninstall-the-sample"></a>サンプルをアンインストールするには  
   
@@ -55,9 +55,9 @@ ms.locfileid: "33518307"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

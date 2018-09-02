@@ -27,12 +27,12 @@ ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 709f5c021a0e923641c01632bc2da2bc3e285ee9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4bd30b26a3e05f97904200cab40234d00924820c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759726"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402402"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>構成ファイルを使用してアプリを構成する方法
 .NET Framework を使用すると、開発者および管理者は、構成ファイルを使用することにより、アプリケーションの実行方法を制御し、アプリケーションの実行に柔軟性を持たせることができます。 構成ファイルは XML ファイルで、必要に応じて変更できます。 管理者は、アプリケーションからアクセスできるプロテクト リソース、アプリケーションが使用するアセンブリのバージョン、およびリモート アプリケーションやオブジェクトの配置場所を制御できます。 開発者は、構成ファイル内に設定を格納できます。これにより、設定変更のたびにアプリケーションを再コンパイルする必要がなくなります。 このセクションでは、設定できる内容と、アプリケーションを設定することが有益である理由を説明します。  
@@ -55,7 +55,7 @@ ms.locfileid: "32759726"
 ```  
   
 ## <a name="machine-configuration-files"></a>マシン構成ファイル  
- マシン構成ファイル Machine.config には、コンピューター全体に適用する設定を含めます。 このファイルは、%*runtime install path*%\Config ディレクトリに含まれています。 Machine.config には、マシン全体のアセンブリ バインディング、組み込みの[リモート処理チャネル](http://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18)、および ASP.NET に関する構成設定が含まれます。  
+ マシン構成ファイル Machine.config には、コンピューター全体に適用する設定を含めます。 このファイルは、%*runtime install path*%\Config ディレクトリに含まれています。 Machine.config には、マシン全体のアセンブリ バインディング、組み込みの[リモート処理チャネル](https://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18)、および ASP.NET に関する構成設定が含まれます。  
   
  構成システムは、まずマシン構成ファイル内で、[**\<appSettings>** 要素](~/docs/framework/configure-apps/file-schema/appsettings/index.md)と、開発者が定義したその他の構成セクションを調べます。 次に、アプリケーション構成ファイルを調べます。 マシン構成ファイルを管理しやすくするには、これらの設定をアプリケーション構成ファイルに配置するのが最適です。 しかし、それらの設定をマシン構成ファイル内に配置した方が、システムの保守が簡単になります。 たとえば、クライアント アプリケーションとサーバー アプリケーションの両方で使用されるサードパーティ コンポーネントがある場合、そのコンポーネントの設定を 1 か所に設まとめた方が簡単です。 この場合、同じ設定を 2 つのファイルに配置する必要がなくなるという点から、設定を格納するのに適した場所はマシン構成ファイルになります。  
   
@@ -126,9 +126,9 @@ ms.locfileid: "32759726"
  [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)  
  [アセンブリの場所の指定](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  [アセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- [構成ファイルを使用してリモート オブジェクトを登録します。](http://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
- [ASP.NET Web サイトの管理](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [NIB: セキュリティ ポリシーの管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
+ [構成ファイルを使用してリモート オブジェクトの登録](https://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
+ [ASP.NET Web サイト管理](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
+ [NIB: セキュリティ ポリシーの管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
  [Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
  [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [リモート オブジェクト](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+ [リモート オブジェクト](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)

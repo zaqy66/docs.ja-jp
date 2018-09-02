@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: f1c56ed83fa214cf781a833e05642635ac24b0c5
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753501"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404672"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>方法 : 基本的な Windows Communication Foundation サービスをホストおよび実行する
 Windows Communication Foundation (WCF) アプリケーションの作成に必要な 6 つのタスクのうちの 3 番目がこれです。 6 つのすべてのタスクの概要については、「[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)」を参照してください。  
@@ -151,7 +151,7 @@ Windows Communication Foundation (WCF) アプリケーションの作成に必�
   
     2.  手順 2 - サービスをホストする <xref:System.ServiceModel.ServiceHost> クラスのインスタンスを作成します。 コンストラクターは、サービス コントラクトを実装するクラスの型と、サービスのベース アドレスの、2 つのパラメーターを受け取ります。  
   
-    3.  手順 3 - <xref:System.ServiceModel.Description.ServiceEndpoint> インスタンスを作成します。 サービス エンドポイントは、アドレス、バインディング、およびサービス コントラクトから構成されます。 <xref:System.ServiceModel.Description.ServiceEndpoint> コンストラクターは、サービス コントラクト インターフェイスの型、バインディング、およびアドレスを受け取ります。 サービス コントラクトは、サービス型に定義および実装した `ICalculator` です。 このサンプルで使用するバインディングは、WS-* 仕様に準拠するエンドポイントへの接続に使用される組み込みのバインディングである <xref:System.ServiceModel.WSHttpBinding> です。 WCF バインディングの詳細については、[WCF バインディングの概要](../../../docs/framework/wcf/bindings-overview.md)に関するページを参照してください。 エンドポイントを識別するために、ベース アドレスにアドレスが追加されます。 このコードに指定されているアドレスは "CalculatorService" です。そのため、エンドポイントの完全修飾アドレスは `"http://localhost:8000/GettingStarted/CalculatorService"` になります。 .NET Framework 4.0 以降を使用するとき、サービス エンドポイントの追加は任意です。 これらのバージョンでは、エンドポイントがコードまたは構成で指定されていない場合、WCF は、サービスで実装されたベース アドレスとコントラクトの組み合わせごとに、1 つの既定のエンドポイントを追加します。 既定のエンドポイントの詳細については、「[Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md)」 (エンドポイント アドレスの指定) を参照してください。 既定のエンドポイントについては、「[Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。  
+    3.  手順 3 - <xref:System.ServiceModel.Description.ServiceEndpoint> インスタンスを作成します。 サービス エンドポイントは、アドレス、バインディング、およびサービス コントラクトから構成されます。 <xref:System.ServiceModel.Description.ServiceEndpoint> コンストラクターは、サービス コントラクト インターフェイスの型、バインディング、およびアドレスを受け取ります。 サービス コントラクトは、サービス型に定義および実装した `ICalculator` です。 このサンプルで使用するバインディングは、WS-* 仕様に準拠するエンドポイントへの接続に使用される組み込みのバインディングである <xref:System.ServiceModel.WSHttpBinding> です。 WCF バインディングの詳細については、[WCF バインディングの概要](../../../docs/framework/wcf/bindings-overview.md)に関するページを参照してください。 エンドポイントを識別するために、ベース アドレスにアドレスが追加されます。 このコードで指定されたアドレスは"CalculatorService"エンドポイントの完全修飾アドレスは`"http://localhost:8000/GettingStarted/CalculatorService"`します。  
   
         > [!IMPORTANT]
         >  サービス エンドポイントの追加は、.NET Framework 4 以降を使用する場合は省略可能です。 これらのバージョンでは、エンドポイントがコードまたは構成で指定されていない場合、WCF は、サービスで実装されたベース アドレスとコントラクトの組み合わせごとに、1 つの既定のエンドポイントを追加します。 既定のエンドポイントの詳細については、「[Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md)」 (エンドポイント アドレスの指定) を参照してください。 既定のエンドポイントについては、「[Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。  
@@ -160,6 +160,12 @@ Windows Communication Foundation (WCF) アプリケーションの作成に必�
   
     5.  手順 5 - 受信メッセージをリッスンするために <xref:System.ServiceModel.ServiceHost> を開きます。 コードでは、ユーザーによる Enter キーの押下を待機しています。 この動作を行わない場合、アプリは直ちに終了し、サービスはシャットダウンします。また、try/catch ブロックが使用されている点にも注意してください。 <xref:System.ServiceModel.ServiceHost> がインスタンス化された後、他のコードはすべて try/catch ブロックに配置されます。 <xref:System.ServiceModel.ServiceHost> によってスローされた例外を安全にキャッチする方法の詳細については、「[Avoiding Problems with the Using Statement](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)」 (using ステートメントで問題を回避する) を参照してください。  
   
+> [!IMPORTANT]
+> コードで行われた変更を反映するように GettingStartedLib で App.config を編集します。 
+> 1. 14 行を変更します。 `<service name="GettingStartedLib.CalculatorService">`
+> 2. 行 17 を変更します。 `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+> 3. 変更するには、22 行目 `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+        
 ### <a name="to-verify-the-service-is-working"></a>サービスが正常に機能していることを確認するには  
   
 1.  [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 内から GettingStartedHost コンソール アプリケーションを実行します。 [!INCLUDE[wv](../../../includes/wv-md.md)] 以降のオペレーティング システムでは、サービスを管理者権限で実行する必要があります。 Visual Studio が管理者権限で実行されるため、GettingStartedHost も管理者権限で実行されます。 新しいコマンド プロンプトを管理者権限で開いて、service.exe をその中で実行することもできます。  
@@ -420,6 +426,6 @@ End Module
   
  これでサービスが実行されていることが確認できました。 [クライアントの作成方法](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)に関するページにお進みください。 トラブルシューティングについては、「[Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)」 (チュートリアル入門のトラブルシューティング) を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [はじめに](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [自己ホスト](../../../docs/framework/wcf/samples/self-host.md)

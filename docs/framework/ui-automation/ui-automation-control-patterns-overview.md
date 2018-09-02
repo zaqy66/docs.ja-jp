@@ -8,16 +8,16 @@ ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 1b02618676a1162681c67d34a2c6f43def07893c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73ac290c688436e7ce74e1baaf9f7dbbbecb66bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409027"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418740"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI オートメーション コントロール パターンの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] コントロール パターンについて説明します。 コントロール パターンは、コントロール型や外観に関係なく、コントロールの機能を分類したり公開したりするための手段です。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33409027"
   
  UI オートメーション クライアントは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターン クラスのメソッドとプロパティにアクセスし、それらを使用して [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]に関する情報を取得したり、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]を操作したりします。 これらのコントロール パターン クラスは、 <xref:System.Windows.Automation> 名前空間 (たとえば、 <xref:System.Windows.Automation.InvokePattern> や <xref:System.Windows.Automation.SelectionPattern>) にあります。  
   
- クライアントを使用して<xref:System.Windows.Automation.AutomationElement>メソッド (など<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>または<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) または[!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]アクセサーにアクセスする、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]パターンのプロパティです。 各コントロール パターン クラスにはフィールド メンバー (たとえば、 <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>' または<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) をそのコントロール パターンを識別しへのパラメーターとして渡すことができます<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>または<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>のパターンを取得する、<xref:System.Windows.Automation.AutomationElement>です。  
+ クライアントを使用して、<xref:System.Windows.Automation.AutomationElement>メソッド (など<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>または<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) または[!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]アクセサーにアクセスする、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]パターンのプロパティ。 各コントロール パターン クラスを持つフィールド メンバー (たとえば、 <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>' または<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) をそのコントロール パターンを識別し、パラメーターとして渡すことができます<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>または<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>のパターンを取得する、 <xref:System.Windows.Automation.AutomationElement>。  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>動的コントロール パターン  

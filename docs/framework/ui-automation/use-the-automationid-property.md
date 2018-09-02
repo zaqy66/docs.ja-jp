@@ -12,16 +12,16 @@ ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bd5985dd531b13ca91efd9c0aa7987ff6a57e56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84aa8dd866d5870d8cd4e6c8c4951fa1e49a4052
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401041"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400267"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID プロパティの使用
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックには、 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> を使用して [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内の要素を配置する方法とタイミングを示すシナリオおよびサンプル コードが記載されています。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33401041"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>永続的なパスを使用して、既に特定されている AutomationElement に戻る  
   
--   クライアント アプリケーションは (単純なテスト スクリプトから、堅牢な記録と再生のためのユーティリティまで)、ファイルを開くダイアログやメニュー項目など、現在インスタンス化されていないために UI オートメーション ツリーに存在しない要素にアクセスしなければならないことがあります。 これらの要素をインスタンス化するには、AutomationID、コントロール パターンとイベント リスナーなどの [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] プロパティを使用することで、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] アクションの特定のシーケンスを再現または「再生」する必要があります。 参照してください[スクリプト ジェネレーターのサンプルのテスト](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0)を使用する例については[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]との対話をユーザーに基づくテスト スクリプトを生成する、[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]です。  
+-   クライアント アプリケーションは (単純なテスト スクリプトから、堅牢な記録と再生のためのユーティリティまで)、ファイルを開くダイアログやメニュー項目など、現在インスタンス化されていないために UI オートメーション ツリーに存在しない要素にアクセスしなければならないことがあります。 これらの要素をインスタンス化するには、AutomationID、コントロール パターンとイベント リスナーなどの [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] プロパティを使用することで、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] アクションの特定のシーケンスを再現または「再生」する必要があります。 参照してください[テスト Script Generator Sample](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0)を使用する例については[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]との対話をユーザーに基づくテスト スクリプトを生成する、[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]します。  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

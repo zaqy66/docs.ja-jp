@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 79749f5e593fbf4ea282cc5c8000be88098b702f
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874596"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406497"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
 通常、データベース サーバーへの接続は、時間のかかるいくつかの手順で構成されています。 ソケットまたは名前付きパイプなどの物理チャネルの確立、サーバーとの最初のハンドシェイクの実行、接続文字列の情報の解析、サーバーによる接続の認証、現在のトランザクションへ参加するための検証などの手順を行う必要があります。  
@@ -124,7 +124,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>アプリケーション ロールおよび接続プール  
- `sp_setapprole` システム ストアド プロシージャの呼び出しにより SQL Server のアプリケーション ロールが起動された後は、その接続のセキュリティ コンテキストをリセットすることはできません。 ただし、プールを有効した場合は、プールに接続が返され、プール接続が再利用されると、エラーが発生します。 詳細については、サポート技術情報の記事を参照してください"[OLE DB リソース プールでは、SQL アプリケーション ロール エラー](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。"。  
+ `sp_setapprole` システム ストアド プロシージャの呼び出しにより SQL Server のアプリケーション ロールが起動された後は、その接続のセキュリティ コンテキストをリセットすることはできません。 ただし、プールを有効した場合は、プールに接続が返され、プール接続が再利用されると、エラーが発生します。 詳細については、サポート技術情報の記事を参照してください"[OLE DB リソース プールでは、SQL アプリケーション ロール エラー](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。"。  
   
 ### <a name="application-role-alternatives"></a>アプリケーション ロールに代わる方法  
  アプリケーション ロールに代わるセキュリティ メカニズムの使用をお勧めします。 詳細については、次を参照してください。 [SQL Server でのアプリケーション ロールの作成](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)です。  
@@ -133,5 +133,4 @@ using (SqlConnection connection = new SqlConnection(
  [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [SQL Server と ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)  
- 
-  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

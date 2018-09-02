@@ -2,15 +2,15 @@
 title: '&lt;wsDualHttpBinding&gt; の &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-ms.openlocfilehash: 29bb222cff120d1b3600c8da9f73c54fdc389a35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed91a7a84a1e529e88fa05af1013e0151b527e39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356477"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417952"
 ---
 # <a name="ltmessagegt-of-ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt; の &lt;message&gt;
-メッセージ レベル セキュリティを定義、 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)です。  
+メッセージ レベル セキュリティを定義、 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)します。  
   
  \<system.ServiceModel >  
 \<bindings>  
@@ -70,7 +70,7 @@ ms.locfileid: "33356477"
 |-----------|-----------------|  
 |なし|サービスが匿名クライアントと対話できるようになります。 サービス側では、サービスがクライアントの資格情報を必要としないことを示しています。 クライアント側では、クライアントがクライアントの資格情報を提示しないことを示しています。|  
 |Windows|SOAP 交換を、Windows 資格情報の認証されたコンテキストで行うことが可能になります。 `negotiateServiceCredential` 属性が `true` に設定されている場合、SSPI ネゴシエーションと Kerberos (同時使用可能な標準) のいずれかが実行されます。|  
-|UserName|サービスが、UserName 資格情報を使用したクライアントの認証を要求できるようにします。 WCF では、パスワード ダイジェストの送信、またはパスワードを使用して、メッセージ セキュリティのようなキーを使用してキーの派生は使用できません。 そのため、WCF は、UserName 資格情報を使用する場合、トランスポートは、セキュリティで保護を適用します。 この資格情報モードは、`negotiateServiceCredential` 属性に基づいて、同時実行可能な交換か、同時実行できないネゴシエーションのいずれかになります。|  
+|UserName|サービスが、UserName 資格情報を使用したクライアントの認証を要求できるようにします。 WCF は、パスワード ダイジェストの送信、またはパスワードを使用して、このようなキーを使用して、メッセージ セキュリティのためのキーの派生をサポートしていません。 そのため、WCF は、UserName 資格情報を使用する場合、トランスポート、セキュリティで保護を適用します。 この資格情報モードは、`negotiateServiceCredential` 属性に基づいて、同時実行可能な交換か、同時実行できないネゴシエーションのいずれかになります。|  
 |証明書|証明書を使用したクライアントの認証を、サービスで要求することが可能になります。 メッセージのセキュリティ モードが使用されており、`negotiateServiceCredential` 属性が `false` に設定されている場合、クライアントをサービス証明書で準備する必要があります。|  
 |IssuedToken|カスタム トークン (通常はセキュリティ トークン サービスにより発行される) を指定します。|  
   
@@ -81,7 +81,7 @@ ms.locfileid: "33356477"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|セキュリティ機能を定義、 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)です。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|セキュリティ機能を定義、 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)します。|  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>  
@@ -91,5 +91,5 @@ ms.locfileid: "33356477"
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  
  [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [バインディングを使用して、Windows Communication Foundation サービスとクライアントを構成するには](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

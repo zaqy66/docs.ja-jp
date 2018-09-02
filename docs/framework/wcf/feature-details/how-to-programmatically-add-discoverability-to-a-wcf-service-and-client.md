@@ -2,21 +2,21 @@
 title: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する方法
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495484"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408260"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>プログラムを使用して探索可能性に WCF サービスとクライアントを追加する方法
-このトピックでは、Windows Communication Foundation (WCF) サービスを探索可能にする方法について説明します。 基にして、[自己ホスト](http://go.microsoft.com/fwlink/?LinkId=145523)サンプルです。  
+このトピックでは、Windows Communication Foundation (WCF) サービスを探索可能にする方法について説明します。 基にして、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプル。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>既存の自己ホスト サービス サンプルを探索用に構成するには  
   
 1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] で自己ホスト ソリューションを開きます。 このサンプルは、TechnologySamples\Basic\Service\Hosting\SelfHost ディレクトリにあります。  
   
-2.  `System.ServiceModel.Discovery.dll` への参照をサービス プロジェクトに追加します。 "System エラー メッセージが表示することがあります. ServiceModel.Discovery.dll またはその依存関係の 1 つの以降のバージョンが必要です、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ... プロジェクトで指定された値" このメッセージを表示する場合は、ソリューション エクスプ ローラーでプロジェクトを右クリックして選択**プロパティ**です。 **プロジェクト プロパティ**ウィンドウ、ことを確認して、**ターゲット フレームワーク**は[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。  
+2.  `System.ServiceModel.Discovery.dll` への参照をサービス プロジェクトに追加します。 "System エラー メッセージが表示することがあります. ServiceModel.Discovery.dll またはその依存関係の 1 つの以降のバージョンが必要です、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ... プロジェクトで指定されている"ソリューション エクスプ ローラーでプロジェクトを右クリックして、このメッセージを表示する場合**プロパティ**します。 **プロジェクトのプロパティ**ウィンドウで、ことを確認、**ターゲット フレームワーク**は[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。  
   
 3.  Service.cs ファイルを開き、次の `using` ステートメントを追加します。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "33495484"
   
 2.  `System.ServiceModel.dll` および `System.ServiceModel.Discovery.dll` への参照を追加します。  
   
-3.  GeneratedClient.cs ファイルおよび App.config ファイルを、既存のクライアント プロジェクトから新しい DiscoveryClientApp プロジェクトに追加します。 これを行うには、内のファイルを右クリックし、**ソリューション エクスプ ローラー****コピー**、し、選択、 **DiscoveryClientApp**プロジェクトを右クリックして選択**貼り付け**です。  
+3.  GeneratedClient.cs ファイルおよび App.config ファイルを、既存のクライアント プロジェクトから新しい DiscoveryClientApp プロジェクトに追加します。 これを行うには、内のファイルを右クリックし、**ソリューション エクスプ ローラー**を選択します**コピー**を選び、 **DiscoveryClientApp** のプロジェクトを右クリックし、**貼り付け**します。  
   
 4.  Program.cs を開きます。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "33495484"
     }  
     ```  
   
-     WCF を示すこの、<xref:System.ServiceModel.Discovery.DiscoveryClient>クラスは、探索メッセージの送受信に標準の UDP 探索エンドポイントを使用する必要があります。  
+     これを WCF に指示する、<xref:System.ServiceModel.Discovery.DiscoveryClient>クラスは、標準の UDP 探索エンドポイントを使用して探索メッセージを送受信する必要があります。  
   
 8.  次の行では、<xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> メソッドを呼び出し、検索対象のサービス コントラクトを含む <xref:System.ServiceModel.Discovery.FindCriteria> インスタンスを指定します。 ここでは、`ICalculator` を指定します。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "33495484"
   
      このメソッドは、`FindCalculatorServiceAddress` から返されたエンドポイント アドレスを使用して、電卓サービスを呼び出します。  
   
-11. `InvokeCalculatorService` メソッド内で、`CalculatorServiceClient` クラスのインスタンスを作成します。 このクラスは、[自己ホスト](http://go.microsoft.com/fwlink/?LinkId=145523)サンプルです。 これは、Svcutil.exe を使用して生成されました。  
+11. `InvokeCalculatorService` メソッド内で、`CalculatorServiceClient` クラスのインスタンスを作成します。 このクラスは、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプル。 これは、Svcutil.exe を使用して生成されました。  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ ms.locfileid: "33495484"
     ```  
   
 ## <a name="example"></a>例  
- このサンプルで使用されているコード全体の一覧を次に示します。 このコードに基づいているため、[自己ホスト](http://go.microsoft.com/fwlink/?LinkId=145523)サンプルでは、変更されたファイルのみが表示されます。 自己ホストのサンプルに関する詳細については、次を参照してください。[のセットアップ手順](http://go.microsoft.com/fwlink/?LinkId=145522)です。  
+ このサンプルで使用されているコード全体の一覧を次に示します。 このコードが基づいているため、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプルに変更されるファイルの一覧が表示されます。 自己ホスト サンプルの詳細については、次を参照してください。[セットアップ手順](https://go.microsoft.com/fwlink/?LinkId=145522)します。  
   
 ```csharp  
 // Service.cs  

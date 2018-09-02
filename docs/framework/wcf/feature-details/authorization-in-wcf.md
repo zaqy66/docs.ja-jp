@@ -5,19 +5,19 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: c6bf779c7baeea1f9a253ad0bde966cea67b57aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e7632dda1a1bd2b60b71c385ad58c23e4207534
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488573"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408317"
 ---
 # <a name="authorization-in-wcf"></a>WCF での承認
-承認は、サービスやファイルなどのリソースへのアクセスと権限を制御するプロセスです。 このセクションのトピックで Windows Communication Foundation (WCF) のさまざまな方法でこの基本タスクを実行する方法を示します。  
+承認は、サービスやファイルなどのリソースへのアクセスと権限を制御するプロセスです。 このセクションのトピックでは、Windows Communication Foundation (WCF) でさまざまな方法でこの基本的なタスクを実行する方法を説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [アクセス制御機構](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
- 推奨される使用して、WCF での承認機構の概要を提供します。  
+ 推奨される使用して、WCF 承認メカニズムの概要を提供します。  
   
  [方法: PrincipalPermissionAttribute クラスでアクセスを制限する](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute> を使用してサービスへのアクセスを制限するプロセスを示します。  
@@ -26,7 +26,7 @@ ms.locfileid: "33488573"
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] のロール プロバイダー機能を使用できるようにサービスを構成する手順について説明します。  
   
  [方法 : ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] は、承認マネージャーを使って Web サイトの承認を管理できます。 WCF を利用できる同様に、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Authorization マネージャー クライアントの承認の組み合わせ。  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] は、承認マネージャーを使って Web サイトの承認を管理できます。 WCF を活用できる同様に、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Authorization マネージャー クライアントの承認の組み合わせ。  
   
  [ID モデルを使用したクレームと承認の管理](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  ID モデル インフラストラクチャをクレーム ベースの承認に使用する際の基本について説明します。  
@@ -48,4 +48,4 @@ ms.locfileid: "33488573"
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric のセキュリティ モデル](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

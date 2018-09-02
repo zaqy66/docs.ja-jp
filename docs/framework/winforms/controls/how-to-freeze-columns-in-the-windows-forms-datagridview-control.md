@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: 6eb6fab4b147365221ba79a682c4eaf744d24b25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df8ac7e7db74d4e8df8872b5ec7f8f2ec774b3c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532670"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407299"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>方法 : Windows フォーム DataGridView コントロールの列を固定する
 ユーザーが Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールに表示されるデータを確認するときに、1 つの列または列のセットを頻繁に参照しなければならないことがあります。 たとえば、多数の列を含む顧客情報のテーブルを表示するとき、顧客名を常に表示して、その他の列は表示領域外にスクロールするようにできると便利です。  
@@ -26,7 +26,7 @@ ms.locfileid: "33532670"
   
  列の <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> プロパティは、列が常にグリッド内で表示されるかどうかを決定します。  
   
- Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[する方法: Windows フォーム DataGridView コントロールを使用して、デザイナーで列の固定](http://msdn.microsoft.com/library/717ss6s6\(v=vs.110\))です。  
+ Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[方法: Windows フォーム DataGridView コントロールを使用して、デザイナーで列の固定](https://msdn.microsoft.com/library/717ss6s6\(v=vs.110\))します。  
   
 ### <a name="to-freeze-a-column-programmatically"></a>プログラムで列を固定するには  
   

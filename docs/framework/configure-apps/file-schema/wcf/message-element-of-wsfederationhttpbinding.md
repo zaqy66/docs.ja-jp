@@ -2,15 +2,15 @@
 title: '&lt;wsFederationHttpBinding&gt; の &lt;message&gt; 要素'
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 24d7370eaadba08d449b886a09cb9903ca0a64c2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 820ee7015a51ecc5510889516faef20292cfbc07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751104"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416595"
 ---
 # <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt; の &lt;message&gt; 要素
-メッセージ レベルのセキュリティの設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)です。  
+メッセージ レベル セキュリティの設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)します。  
   
  \<system.ServiceModel >  
 \<bindings>  
@@ -88,7 +88,7 @@ ms.locfileid: "32751104"
 |属性|説明|  
 |---------------|-----------------|  
 |algorithmSuite|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 この属性の有効な値については、「algorithmSuite 属性」の表を参照してください。 既定値は `Basic256` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。|  
-|issuedKeyType|発行されるキーの種類を指定します。 以下の値が有効です。<br /><br /> SymmetricKey<br />-PublicKey<br /><br /> 既定値は、`SymmetricKey` です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
+|issuedKeyType|発行されるキーの種類を指定します。 以下の値が有効です。<br /><br /> SymmetricKey<br />-公開鍵<br /><br /> 既定値は `SymmetricKey` です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
 |issuedTokenType|発行されるトークンの型を指定する URI を含む文字列。 既定値は、`null` です。|  
 |negotiateServiceCredential|サービス資格情報がネゴシエーションの一部として交換されるか、帯域外で使用できるかを指定するブール値。 既定値は `true` で、サービス資格情報がネゴシエートされます。|  
   
@@ -135,5 +135,5 @@ ms.locfileid: "32751104"
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [サービスとクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  
  [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [バインディングを使用して、Windows Communication Foundation サービスとクライアントを構成するには](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 1d245327c1e7d53de9a88c93ff0399d8e231a1df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd3b6bbb47dfd72bf70091c9ca4d6fc5e228d950
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493322"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406938"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>方法 : サービス モニカーを登録および構成する
-型付きコントラクトで、Windows Communication Foundation (WCF) サービス モニカーを COM アプリケーションを使用する前を COM に必要な属性型を登録して必要なバインドと、COM アプリケーションとモニカーを構成する必要があります。構成します。  
+型指定されたコントラクトを持つ COM アプリケーション内で Windows Communication Foundation (WCF) サービス モニカーを使用する前を COM に必要な属性型を登録して必要なバインディングで、COM アプリケーションとモニカーを構成する必要があります。構成します。  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>必要な属性を備えた型を COM に登録するには  
   
-1.  使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ツールを WCF サービスからメタデータのコントラクトを取得します。 これは、WCF クライアント アセンブリおよびクライアント アプリケーション構成ファイルをソース コードを生成します。  
+1.  使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF サービスからメタデータ コントラクトを取得するためのツール。 これには、WCF クライアントのアセンブリとクライアント アプリケーション構成ファイルのソース コードが生成されます。  
   
 2.  アセンブリ内で定義されている型に `ComVisible` という設定をします。 Visual Studio プロジェクトで、AssemblyInfo.cs ファイルに次の属性を追加してください。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33493322"
     [assembly: ComVisible(true)]  
     ```  
   
-3.  厳密な名前のアセンブリとマネージの WCF クライアントをコンパイルします。 そのためには暗号キー ペアで署名する必要があります。 詳細については、次を参照してください。[厳密な名前でアセンブリに署名](http://go.microsoft.com/fwlink/?LinkId=94874)、.NET 開発者ガイド 』 でします。  
+3.  厳密な名前のアセンブリとして管理対象の WCF クライアントをコンパイルします。 そのためには暗号キー ペアで署名する必要があります。 詳細については、次を参照してください。[厳密な名前でアセンブリに署名](https://go.microsoft.com/fwlink/?LinkId=94874).NET Developer's Guide でします。  
   
 4.  アセンブリ登録 (Regasm.exe) ツールに `/tlb` オプションを指定して、アセンブリで定義されている型を COM に登録します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33493322"
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>COM アプリケーションとモニカーに必要なバインディングを設定するには  
   
--   バインディングの定義を配置 (によって生成された、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成されたクライアント アプリケーション構成ファイルに) クライアント アプリケーションの構成ファイルにします。 たとえば、Visual Basic 6.0 で開発した実行可能ファイルの名前が CallCenterClient.exe の場合、これと同じディレクトリに、CallCenterConfig.exe.config という名前で構成ファイルを作成します。 するとクライアント アプリケーションはモニカーを使えるようになります。 バインド構成は必要ありません、標準バインド WCF に用意された型のいずれかを使用する場合に注意してください。  
+-   バインディングの定義の配置 (によって生成された、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成されたクライアント アプリケーションの構成ファイルで) クライアント アプリケーションの構成ファイルで。 たとえば、Visual Basic 6.0 で開発した実行可能ファイルの名前が CallCenterClient.exe の場合、これと同じディレクトリに、CallCenterConfig.exe.config という名前で構成ファイルを作成します。 するとクライアント アプリケーションはモニカーを使えるようになります。 バインド構成は必要ありません、標準バインド WCF に用意された型のいずれかを使用する場合に注意してください。  
   
      次の型が登録されています。  
   

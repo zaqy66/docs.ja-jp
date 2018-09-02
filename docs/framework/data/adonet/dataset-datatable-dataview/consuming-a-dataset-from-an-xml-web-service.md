@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: da3eca875df9b80f66241a2ecb72c5ba5c1df309
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ab96e8f3395a78c88184872a2c78b71fb2bf7b9e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758842"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403462"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web サービスからの DataSet の使用
-<xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **データセット**「シリアル化可能」への入力として指定できますか、ストリームのコンテンツに追加のコーディングなし XML Web サービスからの出力が必要な点で、**データセット**XML Web サービスからクライアントをバックアップします。 **データセット**DiffGram 形式を使用して XML ストリームに暗黙的に変換、ネットワーク経由で送信される、として、XML ストリームから再構築し、**データセット**受信側でします。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、次を参照してください。 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)です。  
+<xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **データセット**への入力として指定できますまたはコードを追加せず、XML Web サービスからの出力のコンテンツをストリームするために必要という点では、「シリアル化可能な」、**データセット**XML Web サービスからクライアントとバックエンド。 **データセット**DiffGram 形式を使用して XML ストリームに暗黙的に変換は、ネットワーク経由で送信およびとして XML ストリームから再構築し、**データセット**受信側でします。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、次を参照してください。 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)します。  
   
- 次の例は、XML Web サービスと使用するクライアントを作成する方法を示します、**データセット**リレーショナル データ (変更後のデータを含む) を解決するには、更新プログラムは、元のデータ ソースをバックアップします。  
+ 次の例は、XML Web サービスとを使用してクライアントを作成する方法を示します、**データセット**(変更されたデータを含む)、リレーショナル データの転送を解決するには、元のデータ ソースを更新します。  
   
 > [!NOTE]
->  XML Web サービスを作成する場合は、常にセキュリティへの影響を考慮することをお勧めします。 XML Web サービスをセキュリティで保護する方法の詳細については、次を参照してください。[セキュリティで保護する XML Web サービス作成を使用して ASP.NET](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)です。  
+>  XML Web サービスを作成する場合は、常にセキュリティへの影響を考慮することをお勧めします。 XML Web サービスをセキュリティで保護する方法の詳細については、次を参照してください。[セキュリティで保護する XML Web Services Created Using ASP.NET](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)します。  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>DataSet を返し、処理する XML Web サービスを作成するには、次のようにします。  
   
 1.  XML Web サービスを作成します。  
   
-     例では、XML Web サービスが作成されたデータを返す、ここではから顧客の一覧、 **Northwind**データベース、および受信、**データセット**、データ更新を使用する XML Web サービス元のデータ ソースに解決します。  
+     例では、XML Web サービスが作成から顧客の一覧をここでは、データを返す、 **Northwind**データベース、および受信を**データセット**データへの更新プログラムを使用する XML Web サービス元のデータ ソースに解決します。  
   
-     XML Web サービスは 2 つのメソッドを公開: **GetCustomers**、顧客の一覧を返すと**UpdateCustomers**、更新プログラムをデータ ソースに解決します。 この XML Web サービスは、Web サーバー上の DataSetSample.asmx というファイルに格納されます。 次のコードは、DataSetSample.asmx の内容の概要を示しています。  
+     XML Web サービスは、2 つのメソッドを公開します: **GetCustomers**、顧客の一覧を返すと**UpdateCustomers**、更新プログラムをデータ ソースに解決します。 この XML Web サービスは、Web サーバー上の DataSetSample.asmx というファイルに格納されます。 次のコードは、DataSetSample.asmx の内容の概要を示しています。  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -157,13 +157,13 @@ ms.locfileid: "32758842"
     }  
     ```  
   
-     一般的なシナリオで、 **UpdateCustomers**オプティミスティック同時実行制御違反をキャッチするメソッドを記述するとします。 説明を簡単にするために、この例では UpdateCustmoers メソッドを省略しています。 オプティミスティック同時実行制御の詳細については、次を参照してください。[オプティミスティック同時実行制御](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)です。  
+     一般的なシナリオで、 **UpdateCustomers**メソッド オプティミスティック同時実行制御違反をキャッチに書き込まれます。 説明を簡単にするために、この例では UpdateCustmoers メソッドを省略しています。 オプティミスティック同時実行制御の詳細については、次を参照してください。[オプティミスティック同時実行制御](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)します。  
   
 2.  XML Web サービス プロキシを作成します。  
   
      XML Web サービスのクライアントは、公開されたメソッドを使用するために SOAP プロキシを必要とします。 このプロキシは、Visual Studio を使用して生成することができます。 Visual Studio から既存の Web サービスへの Web 参照を設定することにより、この手順で説明されているすべての動作が自動的に実行されます。 プロキシ クラスを手動で作成する場合は、後述の手順を参照してください。 ほとんどの場合、Visual Studio による、クライアント アプリケーションのプロキシ クラスの作成で十分です。  
   
-     プロキシは、Web サービス記述言語ツールを使用して作成できます。 たとえば、XML Web サービスが、URL で公開されているhttp://myserver/data/DataSetSample.asmxの名前空間と Visual Basic .NET プロキシを作成するには、次のようコマンドを発行**WebData.DSSample**ファイル sample.vb に格納します。  
+     プロキシは、Web サービス記述言語ツールを使用して作成できます。 たとえば、XML Web サービスが、URL で公開されている http://myserver/data/DataSetSample.asmxの名前空間と Visual Basic .NET プロキシを作成する、次のコマンドを発行**WebData.DSSample**ファイル sample.vb に格納します。  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
@@ -189,9 +189,9 @@ ms.locfileid: "32758842"
   
 3.  XML Web サービスのクライアントを作成します。  
   
-     Visual studio での Web サービス プロキシ クラスを生成する場合は、単に、クライアント プロジェクトを作成して、ソリューション エクスプ ローラー ウィンドウで、プロジェクトを右クリックしをクリックして**Web 参照の追加**から Web サービスの選択と(この必要があります、Web サービス エンドポイントのアドレスを提供して、Web サービスでは、現在のソリューション内または現在のコンピューターで使用可能な場合。) Web サービスの一覧上記の手順に従って、XML Web サービス プロキシを作成した場合は、それをクライアント コードにインポートし、XML Web サービスのメソッドを処理できます。 次のサンプル コード、呼び出し、プロキシ ライブラリがインポート**GetCustomers** 、顧客の一覧を取得する追加、新しい顧客しを返します、**データセット**、更新プログラムがある**UpdateCustomers**.  
+     Visual studio で、Web サービス プロキシ クラスを生成する場合は、簡単に、クライアント プロジェクトを作成し、ソリューション エクスプ ローラー ウィンドウで、プロジェクトを右クリックし、 をクリックして**Web 参照の追加**から Web サービスを選択します。(この必要があります、Web サービス エンドポイントのアドレスを提供して、Web サービスを現在のソリューション内、または現在のコンピューターで使用できない場合。) Web サービスの一覧上記の手順に従って、XML Web サービス プロキシを作成した場合は、それをクライアント コードにインポートし、XML Web サービスのメソッドを処理できます。 次のサンプル コードは、プロキシのライブラリ呼び出しをインポート**GetCustomers**顧客の一覧を取得する、新しい顧客に追加して返します、**データセット**する更新プログラムが、 **UpdateCustomers**.  
   
-     例では、渡される通知、**データセット**によって返される**DataSet.GetChanges**に**UpdateCustomers**変更行のみに渡される必要があるため**UpdateCustomers**です。 **UpdateCustomers**返しますは解決された**データセット**、することができます**マージ**既存に**データセット**を組み込むと、解決された変更更新プログラムからの行エラー情報。 次のコードには、Web 参照を作成する Visual Studio を使用することと、Web 参照の dssample に変更済みの名前を変更したことが前提としています、 **Web 参照の追加** ダイアログ ボックス。  
+     例では、渡される通知、**データセット**によって返される**DataSet.GetChanges**に**UpdateCustomers**変更行のみに渡される必要があるため**UpdateCustomers**します。 **UpdateCustomers** 、解決を返します**データセット**、し、可能な**マージ**既存**データセット**を組み込むと、解決された変更更新プログラムからの行エラー情報。 次のコードには、Web 参照を作成する Visual Studio を使用していると、名前が dssample に変更済みの Web 参照が前提としています、 **Web 参照の追加** ダイアログ ボックス。  
   
     ```vb  
     Imports System  
@@ -267,4 +267,4 @@ ms.locfileid: "32758842"
  [DataAdapter によるデータ ソースの更新](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Web サービス記述言語ツール (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

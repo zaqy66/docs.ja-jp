@@ -7,18 +7,18 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: d6a2b663c566aae48c694ffc335fcef0ce24034f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ce801a96bc4ef48934b983838dcf8578a5bc6e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528945"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405348"
 ---
 # <a name="control-type-recommendations"></a>コントロールの種類に関するアドバイス
 .NET Framework は、新しいコントロールを開発して実装する機能を提供します。 使い慣れたユーザー コントロールだけでなく、独自の描画を実行するカスタム コントロールを作成することも、継承によって既存のコントロールの機能を拡張することもできるようになりました。 作成するコントロールの種類の決定が、混乱を招く可能性があります。 このセクションでは、継承できるさまざまな種類のコントロールの間の違いについて説明し、プロジェクトに合わせて選択する種類に関する注意点を示しています。  
   
 > [!NOTE]
->  Web フォームで使用するコントロールを作成する場合は、「[カスタム ASP.NET サーバー コントロールの開発](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)」を参照してください。  
+>  Web フォームで使用するコントロールを作成する場合は、「[カスタム ASP.NET サーバー コントロールの開発](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)」を参照してください。  
   
 ## <a name="inheriting-from-a-windows-forms-control"></a>Windows フォーム コントロールからの継承  
  既存の Windows フォーム コントロールから継承されたコントロールを派生できます。 この方法では、すべての Windows フォーム コントロールの本質的な機能をすべて保持して、カスタム プロパティ、メソッド、またはその他の機能を追加することでその機能を拡張することができます。 たとえば、数値のみを受け付け、入力を自動的に値に変換できる <xref:System.Windows.Forms.TextBox> から派生したコントロールを作成することができます。 このようなコントロールには、テキスト ボックスのテキストが変更されるたびに呼び出される検証コードが含まれ、値のプロパティを追加で持つことができます。 一部のコントロールでは、基本クラスの <xref:System.Windows.Forms.Control.OnPaint%2A> メソッドをオーバーライドすることで、コントロールのグラフィカル インターフェイスにカスタムの外観を追加することができます。  
@@ -45,39 +45,39 @@ ms.locfileid: "33528945"
   
 -   標準コントロールでは使用できないカスタムの機能を実装する必要があります。  
   
--   [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](http://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+-   [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   
--   [チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
+-   [チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [チュートリアル : Visual C# による Windows フォーム コントロールからの継承](http://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
+-   [チュートリアル : Visual C# による Windows フォーム コントロールからの継承](https://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
--   [方法 : コントロールにツールボックス ビットマップを指定する](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
+-   [方法 : コントロールにツールボックス ビットマップを指定する](https://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
--   [方法: 既存の Windows フォーム コントロールから継承する](http://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
+-   [方法: 既存の Windows フォーム コントロールから継承する](https://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
   
--   [チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ](http://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
+-   [チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ](https://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
   
--   [方法: コントロール クラスを継承する](http://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
+-   [方法: コントロール クラスを継承する](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
   
--   [方法: UserControl の実行時の動作をテストする](http://msdn.microsoft.com/library/ms171738\(v=vs.110\))  
+-   [方法: UserControl の実行時の動作をテストする](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [方法: デザイン時にフォームの端に合わせてコントロールを配置する](http://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
+-   [方法: デザイン時にフォームの端に合わせてコントロールを配置する](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
   
--   [方法: UserControl クラスを継承する](http://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
+-   [方法: UserControl クラスを継承する](https://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
   
--   [方法: Windows フォームのコントロールを作成する](http://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
+-   [方法: Windows フォームのコントロールを作成する](https://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
   
--   [方法: 複合コントロールを作成する](http://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
+-   [方法: 複合コントロールを作成する](https://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
   
--   [チュートリアル : Visual Basic による複合コントロールの作成](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
+-   [チュートリアル : Visual Basic による複合コントロールの作成](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [チュートリアル: Visual C# による複合コントロールの作成](http://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
+-   [チュートリアル: Visual C# による複合コントロールの作成](https://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
--   [チュートリアル : Visual Basic による Windows フォーム コントロールからの継承](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
+-   [チュートリアル : Visual Basic による Windows フォーム コントロールからの継承](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   
--   [方法: デザイン時機能を活用した Windows フォーム コントロールを作成する](http://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
+-   [方法: デザイン時機能を活用した Windows フォーム コントロールを作成する](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
   
--   [方法: デザイン時機能を活用した Windows フォーム コントロールを作成する](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [方法: デザイン時機能を活用した Windows フォーム コントロールを作成する](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
 ## <a name="see-also"></a>関連項目  
  [方法: シンプルな Windows フォーム コントロールを開発する](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  

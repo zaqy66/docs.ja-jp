@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 185edce5bd8a4772545ec966a6b3f74b204aa2b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f6078baba86868fa03f37873731c39e73ac81f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494782"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401877"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows クライアントとのメッセージ セキュリティ
 このシナリオでは、Windows Communication Foundation (WCF) クライアントとメッセージ セキュリティ モードによって保護されたサーバーを示します。 クライアントとサービスは、Windows 資格情報を使用して認証します。  
@@ -120,4 +120,4 @@ ms.locfileid: "33494782"
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric のセキュリティ モデル](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

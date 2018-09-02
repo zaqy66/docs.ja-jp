@@ -2,19 +2,19 @@
 title: エラーの送信と処理
 ms.date: 03/30/2017
 ms.assetid: 98e8e04d-2ac9-4a33-ae08-462f757a7a14
-ms.openlocfilehash: 6796b4daccd88adc3bd006f454ce96ca155fbcb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 896f209e7daeeab2bb33c1fde15298aae96c8776
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516127"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406659"
 ---
 # <a name="sending-and-handling-faults"></a>エラーの送信と処理
 このサンプルでは、<xref:System.ServiceModel.Activities.SendReply> および <xref:System.ServiceModel.Activities.ReceiveReply> メッセージング アクティビティを使用して、予期したエラーと予期しないエラーを送受信する方法を示します。 このシナリオでは、最初のクライアント要求で、その <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> コレクションに含まれている予期したエラーが発生します。 次のいくつかのクライアント要求によって、予期しないエラーを受信してから、最後の要求が成功します。  
   
 ## <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  開いている[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]を右クリックして、管理者特権での権限を持つ、[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]アイコンを選択して**管理者として実行**です。  
+1.  開いている[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]を右クリックし、管理者特権でのアクセス許可を持つ、[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]アイコンを**管理者として実行**します。  
   
 2.  Faults.sln ソリューション ファイルを開きます。  
   
@@ -22,17 +22,17 @@ ms.locfileid: "33516127"
   
 4.  サービス プロジェクトを実行します。  
   
-    1.  **ソリューション エクスプ ローラー**を右クリックし、`FaultService`プロジェクトし、選択**スタートアップ プロジェクトとして設定**です。  
+    1.  **ソリューション エクスプ ローラー**を右クリックし、`FaultService`順に選択して**スタートアップ プロジェクトとして設定**します。  
   
     2.  Ctrl キーを押しながら、F5 キーを押します。  
   
-5.  別のコピーを開く[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]を右クリックして、管理者特権での権限を持つ、[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]アイコンを選択して**管理者として実行**です。  
+5.  別のコピーを開く[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]を右クリックし、管理者特権でのアクセス許可を持つ、[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]アイコンを**管理者として実行**します。  
   
 6.  Faults.sln ソリューション ファイルを開きます。  
   
 7.  クライアント プロジェクトを実行します。  
   
-    1.  **ソリューション エクスプ ローラー**を右クリックし、`FaultClient`プロジェクトし、選択**スタートアップ プロジェクトとして設定**です。  
+    1.  **ソリューション エクスプ ローラー**を右クリックし、`FaultClient`順に選択して**スタートアップ プロジェクトとして設定**します。  
   
     2.  Ctrl キーを押しながら、F5 キーを押します。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "33516127"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Faults`

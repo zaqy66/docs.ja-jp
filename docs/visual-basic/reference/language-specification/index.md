@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: cfdf6945be3f440013716694e633e7ca9c064729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6708ad107a2ee5b4ba2896d811c103ed49b476b8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648669"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403829"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 言語仕様
-Visual Basic 言語仕様は、Visual Basic の文法と構文に関するすべての質問に対する回答の権限を持つソースです。 Visual Basic リファレンス ドキュメントで取り上げられていない、言語に関する詳細情報が含まれています。  
+Visual Basic 言語仕様は、Visual Basic の文法と構文に関するあらゆる疑問に答えるの権限を持つソースです。 Visual Basic のリファレンス ドキュメントで取り上げられていない、言語に関する詳細情報が含まれています。  
   
- この仕様は、[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=188623)で入手できます。  
+ この仕様は、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=188623)で入手できます。  
   
 このサイトには、[VB 11 仕様](../../../../_vblang/spec/introduction.md)が含まれています。 この仕様は、[dotnet/vblang GitHub レポジトリ](https://github.com/dotnet/vblang/blob/master/spec/README.md) に含まれるマークダウン ファイルからビルドされています。
 

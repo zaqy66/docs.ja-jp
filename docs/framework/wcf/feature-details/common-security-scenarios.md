@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0fb51ea0624c4fa686e4e99ffb9c30decedfea10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 220795488d6e4bedf40e0764040470c18d3a3b48
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490904"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402783"
 ---
 # <a name="common-security-scenarios"></a>一般的なセキュリティ シナリオ
 ここでは、考えられるさまざまなクライアントおよびサービスのセキュリティ構成の一覧を示します。 構成はさまざまな要因により異なります。 たとえば、サービスやクライアントがイントラネット上にあるかどうか、また、セキュリティが Windows とトランスポート (HTTPS など) のどちらで提供されるかなどが考えられます。  
@@ -36,7 +36,7 @@ ms.locfileid: "33490904"
  証明書によってセキュリティ保護されたクライアントとサービスを示します。  
   
  [メッセージ セキュリティと匿名クライアント](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- クライアントと WCF メッセージ セキュリティによって保護されたサービスを示します。  
+ クライアントと WCF メッセージ セキュリティで保護されたサービスを示します。  
   
  [ユーザー名クライアントを使用したメッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  クライアントは、ドメイン ユーザー名とパスワードを使用してクライアントのログオンを許可する Windows フォーム アプリケーションです。  
@@ -83,4 +83,4 @@ ms.locfileid: "33490904"
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティ ガイドラインとベスト プラクティス](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- [Windows Server App Fabric のセキュリティ モデル](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

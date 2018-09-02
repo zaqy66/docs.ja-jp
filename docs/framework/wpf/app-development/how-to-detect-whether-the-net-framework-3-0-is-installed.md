@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: 09de427980ecfb515b8d341d0d7833b878140286
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546492"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401850"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>方法: .NET Framework 3.0 がインストールされているかどうかを確認する
-管理者は、システム上の Microsoft .NET Framework アプリケーションを展開したりする前にする必要がありますまずことを確認した .NET Framework ランタイムが存在します。 このトピックで HTML または JavaScript で記述されたスクリプトは、.NET Framework は、システムに存在するかどうかを決定する管理者を使用できることです。  
+管理者がシステム上の Microsoft .NET Framework アプリケーションを展開できる前にまず、.NET Framework ランタイムが存在するを確認する必要があります。 このトピックでは、HTML または JavaScript で記述されたスクリプトを提供します。 管理者は、.NET Framework が、システム上に存在するかどうかを使用できます。  
   
 > [!NOTE]
->  配置、および Microsoft .NET Framework の検出がの説明を参照してインストールする方法についての詳細、[を展開する Microsoft .NET Framework バージョン 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)です。  
+>  配置、および Microsoft .NET Framework の検出が、説明を参照してインストールする方法についての詳細、[を展開する Microsoft .NET Framework バージョン 3.0](https://go.microsoft.com/fwlink/?LinkId=96739)します。  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR"ユーザー エージェント文字列を検出します。  
- .NET Framework がインストールされている場合、MSI は、".NET CLR"とバージョン番号を UserAgent 文字列に追加します。 次の例では、単純な HTML ページに埋め込まれたスクリプトを示します。 スクリプトは、.NET Framework がインストールされているし、検索の結果のステータス メッセージを表示するかどうかを判断する UserAgent 文字列を検索します。  
+## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR"のユーザー エージェント文字列を検出します。  
+ .NET Framework がインストールされている場合、MSI は、".NET CLR"とバージョン番号を UserAgent 文字列に追加します。 次の例では、単純な HTML ページに埋め込まれたスクリプトを示します。 スクリプトでは、.NET Framework がインストールされているし、検索の結果のステータス メッセージが表示されるかどうかを判断する UserAgent 文字列を検索します。  
   
 ```  
 <HTML>  

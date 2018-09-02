@@ -6,12 +6,12 @@ helpviewer_keywords:
 - codepage compiler option [Visual Basic]
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
-ms.openlocfilehash: 383b6adae94c27efdd236de31ddfa8d16a6d4648
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8aee51df3ba9f92ca662fbbfbd73998e4a3b4538
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648529"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405697"
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 コンパイルですべてのソース コード ファイルに使用するコード ページを指定します。  
@@ -26,15 +26,15 @@ ms.locfileid: "33648529"
   
 |用語|定義|  
 |---|---|  
-|`id`|必須。 コンパイラによって指定されたコード ページを使用して`id`ソース ファイルのエンコーディングを解釈します。|  
+|`id`|必須。 コンパイラで指定されたコード ページを使用して`id`ソース ファイルのエンコーディングを解釈します。|  
   
-## <a name="remarks"></a>コメント  
- 使用することができます、特定のエンコードで保存されたソース コードをコンパイルする`-codepage`するコード ページを使用する必要がありますを指定します。 `-codepage`オプションは、コンパイル時にすべてのソース コード ファイルに適用されます。 詳細については、次を参照してください。 [.NET Framework の文字エンコーディング](http://msdn.microsoft.com/library/bf6d9823-4c2d-48af-b280-919c5af66ae9)です。  
+## <a name="remarks"></a>Remarks  
+ 使用することが特定のエンコーディングで保存されたソース コードをコンパイルする`-codepage`コード ページを使用する必要がありますを指定します。 `-codepage`オプションは、コンパイル時にすべてのソース コード ファイルに適用されます。 詳細については、次を参照してください。 [.NET Framework における文字エンコーディング](https://msdn.microsoft.com/library/bf6d9823-4c2d-48af-b280-919c5af66ae9)します。  
   
- `-codepage`シグネチャを持つ現在の ANSI コード ページ、Unicode または utf-8 を使用して、ソース コード ファイルを保存した場合、オプションは必要ありません。 Visual Studio に保存既定では、すべてのソース コード ファイルが現在の ANSI コード ページで、ユーザーで他のエンコーディングを指定しない限り、**エンコード** ダイアログ ボックス。 Visual Studio を使用して、**エンコード** ダイアログ ボックスを開くにはソース コード ファイルを別のコード ページを保存します。  
+ `-codepage`オプションは、シグネチャを持つ現在の ANSI コード ページ、Unicode または utf-8 を使用して、ソース コード ファイルを保存した場合は必要ありません。 Visual Studio に保存既定では、すべてのソース コード ファイルが現在の ANSI コード ページで、ユーザーで別のエンコードを指定しない限り、**エンコード** ダイアログ ボックス。 Visual Studio を使用して、**エンコード**異なるコード ページで保存されたソース コード ファイルを開く ダイアログ ボックス。  
   
 > [!NOTE]
->  `-codepage`オプションは、Visual Studio 開発環境からは利用できません; は、コマンドラインからコンパイルするときにのみ使用します。  
+>  `-codepage`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)

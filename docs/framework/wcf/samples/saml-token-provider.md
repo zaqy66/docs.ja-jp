@@ -2,23 +2,23 @@
 title: SAML トークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 509469404e2c3866c26b5e1817a819519203c175
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808781"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418040"
 ---
 # <a name="saml-token-provider"></a>SAML トークン プロバイダー
-このサンプルでは、カスタム クライアントの SAML トークン プロバイダーを実装する方法を示します。 資格情報をセキュリティ インフラストラクチャに提供するトークン プロバイダーでは、Windows Communication Foundation (WCF) が使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider に付属します。 WCF も付属しています、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。  
+このサンプルでは、カスタム クライアントの SAML トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider で出荷されます。 WCF にも付属、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。  
   
 -   トークン プロバイダーが連携動作できない資格情報ストアがある場合。  
   
--   ユーザーが WCF クライアント フレームワークが資格情報を使用する場合に詳細を提供するときに、ポイントからの資格情報を変換するための独自のカスタム メカニズムを提供する場合は。  
+-   ユーザーは、WCF クライアント フレームワークが資格情報を使用する場合に、詳細を提供するときに、ポイントから資格情報を変換するための独自のカスタム メカニズムを提供する場合は。  
   
 -   カスタム トークンを構築している場合。  
   
- このサンプルでは、SAML トークンが使用する WCF クライアント フレームワークの外部から取得したことを許可するカスタム トークン プロバイダーを構築する方法を示します。  
+ このサンプルでは、使用する WCF クライアント フレームワークの外部から取得した SAML トークンを使用するカスタム トークン プロバイダーを構築する方法を示します。  
   
  このサンプルに示されている手順の概要は次のとおりです。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33808781"
   
 -   SAML トークンをカスタム クライアント資格情報に渡す手順。  
   
--   どのように、SAML トークンは、WCF クライアント フレームワークに提供されています。  
+-   どのように、SAML トークンは、WCF クライアント フレームワークに提供されます。  
   
 -   サーバーがクライアントによってサーバーの X.509 証明書を使用して認証される手順。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "33808781"
 </system.serviceModel>  
 ```  
   
- 次の手順は、カスタムの SAML トークン プロバイダーを開発して、WCF と統合する方法を示します: セキュリティ フレームワーク。  
+ 次の手順は、カスタムの SAML トークン プロバイダーを開発し、それを WCF に統合する方法を示します。 セキュリティ フレームワーク。  
   
 1.  カスタムの SAML トークン プロバイダーを作成します。  
   
@@ -353,9 +353,9 @@ ms.locfileid: "33808781"
   
 #### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
 > [!NOTE]
 >  Svcutil.exe を使用してこのサンプルの構成を再生成した場合は、クライアント コードに一致するように、クライアント構成内のエンドポイント名を変更してください。  
@@ -371,7 +371,7 @@ ms.locfileid: "33808781"
   
 3.  Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4.  クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+4.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 #### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -393,7 +393,7 @@ ms.locfileid: "33808781"
   
 9. クライアント コンピューターで、コマンド プロンプト ウィンドウから `Client.exe` を起動します。  
   
-10. クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+10. クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   

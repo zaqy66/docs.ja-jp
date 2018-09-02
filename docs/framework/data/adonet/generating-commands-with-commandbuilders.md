@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: 752cccc9e10dd3056817945d1f9f5f3cf7d84227
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766284"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415764"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>CommandBuilder でのコマンドの生成
 `SelectCommand` プロパティが実行時に動的に指定される場合、たとえばクエリ ツールを使用してユーザーの記述したクエリ構文を解釈する場合は、適切な `InsertCommand`、`UpdateCommand`、または `DeleteCommand` をデザイン時に指定することはできません。 <xref:System.Data.DataTable> を単一データベース テーブルに割り当てたり、単一データベースから生成する場合は、<xref:System.Data.Common.DbCommandBuilder> オブジェクトを利用して自動的に `DeleteCommand` の `InsertCommand`、`UpdateCommand`、および <xref:System.Data.Common.DbDataAdapter> を生成できます。  
@@ -23,9 +23,9 @@ ms.locfileid: "32766284"
   
  `DataAdapter` との関連付けが行われていて、<xref:System.Data.Common.DbCommandBuilder> の `InsertCommand`、`UpdateCommand`、`DeleteCommand` の各プロパティが null 参照である場合、`DataAdapter` は自動的にこれらのプロパティを生成します。 プロパティに対して既に `Command` が存在する場合は、既存の `Command` が使用されます。  
   
- 複数のテーブルを結合して作成したデータベース ビューは、単一データベース テーブルとは見なされません。 この場合は、<xref:System.Data.Common.DbCommandBuilder> を使用してコマンドを自動的に生成できないため、コマンドを明示的に指定する必要があります。 更新を解決するためのコマンドを明示的に設定については、`DataSet`データ ソースを参照してください。 [Dataadapter によるデータ ソースを更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)です。  
+ 複数のテーブルを結合して作成したデータベース ビューは、単一データベース テーブルとは見なされません。 この場合は、<xref:System.Data.Common.DbCommandBuilder> を使用してコマンドを自動的に生成できないため、コマンドを明示的に指定する必要があります。 更新を解決するのにはコマンドを明示的に設定する方法については、 `DataSet` 、データ ソースを参照してください。 [Dataadapter によるデータ ソースを更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)します。  
   
- 出力パラメーターを `DataSet` の更新行に割り当てることが必要な場合があります。 一般的なタスクの 1 つは、データ ソースの自動的に生成された ID フィールドまたはタイムスタンプの値を取得することです。 <xref:System.Data.Common.DbCommandBuilder> は、既定では更新行の列に出力パラメーターを割り当てません。 その場合は、コマンドを明示的に指定する必要があります。 挿入された行の列に自動的に生成された id フィールドのマッピングの例は、次を参照してください。 [Id の取得や Autonumber 値](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)です。  
+ 出力パラメーターを `DataSet` の更新行に割り当てることが必要な場合があります。 一般的なタスクの 1 つは、データ ソースの自動的に生成された ID フィールドまたはタイムスタンプの値を取得することです。 <xref:System.Data.Common.DbCommandBuilder> は、既定では更新行の列に出力パラメーターを割り当てません。 その場合は、コマンドを明示的に指定する必要があります。 挿入行の列に自動的に生成された id フィールドのマッピングの例は、次を参照してください。 [Id の取得や値および Autonumber 値](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)します。  
   
 ## <a name="rules-for-automatically-generated-commands"></a>コマンドの自動生成規則  
  コマンドの自動生成規則を次の表に示します。  
@@ -37,7 +37,7 @@ ms.locfileid: "32766284"
 |`DeleteCommand`|`RowState` が <xref:System.Data.DataRowState.Deleted> に設定されているテーブル内のすべての行に対して、データ ソースの行を削除します。 列の値とその行の主キー列の値が一致し、さらにデータ ソースのその他の列がその行の元の値と一致する、すべての行を削除します。 詳細については、このトピックで後述する「更新および削除のオプティミスティック同時実行制御」を参照してください。|  
   
 ## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>更新および削除のオプティミスティック同時実行制御  
- に対するコマンドの自動 UPDATE および DELETE ステートメントを生成するロジックがに基づいて*オプティミスティック同時実行制御*-つまり、レコードの編集のためロックされていない、他のユーザーまたはプロセスによっていつでも変更できます。 レコードは SELECT ステートメントによって返された後、UPDATE ステートメントまたは DELETE ステートメントの実行前に変更されている可能性もあるため、自動的に生成される UPDATE ステートメントまたは DELETE ステートメントには、元のすべての値を含み、データ ソースから削除されていない行だけを更新するように指定した WHERE 句が含まれます。 これにより、新しいデータが上書きされるのを防ぎます。 自動的に生成された更新コマンドが削除済みの行、または <xref:System.Data.DataSet> にある元の値が含まれていない行を更新しようとすると、コマンドはどのレコードにも反映されずに、<xref:System.Data.DBConcurrencyException> がスローされます。  
+ UPDATE および DELETE ステートメントを自動的にコマンドを生成するためのロジックに基づく*オプティミスティック同時実行制御*-つまり、レコードを編集するためにロックされていない、他のユーザーまたはプロセスによっていつでも変更できます。 レコードは SELECT ステートメントによって返された後、UPDATE ステートメントまたは DELETE ステートメントの実行前に変更されている可能性もあるため、自動的に生成される UPDATE ステートメントまたは DELETE ステートメントには、元のすべての値を含み、データ ソースから削除されていない行だけを更新するように指定した WHERE 句が含まれます。 これにより、新しいデータが上書きされるのを防ぎます。 自動的に生成された更新コマンドが削除済みの行、または <xref:System.Data.DataSet> にある元の値が含まれていない行を更新しようとすると、コマンドはどのレコードにも反映されずに、<xref:System.Data.DBConcurrencyException> がスローされます。  
   
  元の値とは関係なく UPDATE または DELETE を実行する場合は、`UpdateCommand` に明示的に `DataAdapter` を設定し、コマンドの自動生成は行わないでください。  
   
@@ -86,7 +86,7 @@ builder.QuoteSuffix = "]";
 Console.WriteLine(builder.GetUpdateCommand().CommandText)  
 ```  
   
- 次の例では、`Customers` データセットに `custDS` テーブルを作成し直します。 **RefreshSchema**を新しい列情報を自動的に生成されたコマンドを更新するメソッドが呼び出されます。  
+ 次の例では、`Customers` データセットに `custDS` テーブルを作成し直します。 **RefreshSchema**メソッドが呼び出され、この新しい列情報を自動的に生成されたコマンドを更新します。  
   
 ```vb  
 ' Assumes an open SqlConnection and SqlDataAdapter inside of a Using block.  
@@ -112,4 +112,4 @@ adapter.Fill(custDS, "Customers");
  [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [コマンドの実行](../../../../docs/framework/data/adonet/executing-a-command.md)  
  [DbConnection、DbCommand、および DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

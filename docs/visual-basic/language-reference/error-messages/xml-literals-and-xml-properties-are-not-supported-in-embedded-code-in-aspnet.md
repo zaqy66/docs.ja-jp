@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-ms.openlocfilehash: 559889587b30418dc2fe2860cfbf90f91605c668
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 893fdb1b9b3b5ace6b869c7b64ce7483ff523023
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594843"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403326"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>XML リテラルおよび XML プロパティは、ASP.NET 内の埋め込みコードではサポートされません
-ASP.NET 内の埋め込みコードでは、XML リテラルおよび XML プロパティがサポートされていません。 XML の機能を使用するには、分離コードをコードを移動します。  
+ASP.NET 内の埋め込みコードでは、XML リテラルおよび XML プロパティがサポートされていません。 XML の機能を使用するには、分離コードにコードを移動します。  
   
- XML リテラルまたは XML 軸プロパティが埋め込まれたコード内で定義されている (`<%= =>`) ASP.NET ファイルにします。  
+ 埋め込みコード内で、XML リテラルまたは XML 軸プロパティが定義されている (`<%= =>`) で、ASP.NET ファイル。  
   
  **エラー ID:** BC31200  
   
@@ -27,5 +27,5 @@ ASP.NET 内の埋め込みコードでは、XML リテラルおよび XML プロ
   
 ## <a name="see-also"></a>関連項目  
  [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)  
- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)  
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

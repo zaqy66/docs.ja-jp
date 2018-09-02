@@ -8,14 +8,14 @@ helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
 ms.openlocfilehash: 13a4e35cd27ed5aa135cec77c4415f223cba70f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596058"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403037"
 ---
 # <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>パラメーターの型&#39; &lt;parametername&gt; &#39; CLS 準拠ではありません
-プロシージャとしてマークされている`<CLSCompliant(True)>`としてマークされている型とパラメーターを宣言していますが、 `<CLSCompliant(False)>`、マークされていないか修飾されていません、非準拠の型になっているためです。  
+プロシージャがマーク`<CLSCompliant(True)>`としてマークされている型のパラメーターを宣言しますが、 `<CLSCompliant(False)>`、マークされていない、または非準拠の型であるためには修飾されません。  
   
  プロシージャを[言語への非依存性および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md) (CLS) に準拠させるには、CLS 準拠型のみを使用する必要があります。 これは、パラメーターの型、戻り値の型、およびすべてのローカル変数の型に適用されます。  
   
@@ -39,8 +39,8 @@ ms.locfileid: "33596058"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   プロシージャは、この特定の型のパラメーターを受け取る必要があります、削除、<xref:System.CLSCompliantAttribute>です。 プロシージャは CLS 準拠になりません。  
+-   プロシージャは、この特定の型のパラメーターを受け取る必要があります、削除、<xref:System.CLSCompliantAttribute>します。 プロシージャは CLS 準拠になりません。  
   
 -   プロシージャは、CLS に準拠する必要があります、最も近い CLS 準拠型にこのパラメーターの型を変更します。 たとえば、2,147,483,647 を超える値の範囲が不要な場合は、 `UInteger` の代わりに `Integer` を使用できます。 拡張範囲が必要な場合は、 `UInteger` の代わりに `Long`を使用できます。  
   
--   オートメーション オブジェクトや COM オブジェクトとやり取りする場合は、一部の型のデータ幅が [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] とは異なることに注意してください。 たとえば、他の多くの環境では `int` は 16 ビットです。 このようなコンポーネントから 16 ビット整数を受け取る場合として宣言`Short`の代わりに`Integer`マネージ コードを Visual Basic でします。
+-   オートメーション オブジェクトや COM オブジェクトとやり取りする場合は、一部の型のデータ幅が [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] とは異なることに注意してください。 たとえば、他の多くの環境では `int` は 16 ビットです。 このようなコンポーネントから 16 ビット整数を受け取る場合宣言として`Short`の代わりに`Integer`管理対象の Visual Basic コードです。

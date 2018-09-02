@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe7c1eddd67e678e7086d948efb854a6b4b52f6e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539492"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400381"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>方法: コマンドラインから Windows フォーム アプリケーションを作成します。
-次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  参照してください[チュートリアル: 簡単な Windows フォームの作成](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))です。  
+次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  参照してください[チュートリアル: 単純な Windows フォームを作成する](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))します。  
   
 ## <a name="procedure"></a>プロシージャ  
   
@@ -44,9 +44,9 @@ ms.locfileid: "33539492"
   
 4.  `Main` メソッドをクラスに追加します。  
   
-    1.  適用、 <xref:System.STAThreadAttribute> c# `Main` Windows フォーム アプリケーションを指定するメソッドは、シングル スレッド アパートメントです。 (属性は必要ありません Visual basic で Windows フォーム アプリケーションを使用して開発 Visual Basic を使用して、シングル スレッド アパートメント モデル既定ためです。)  
+    1.  適用、 <xref:System.STAThreadAttribute> c# `Main` Windows フォーム アプリケーションを指定するメソッドは、シングル スレッド アパートメント。 (属性は必要ありません Visual basic で Windows フォーム アプリケーション開発された Visual Basic の使用をシングル スレッド アパートメント モデルを既定であるためです。)  
   
-    2.  呼び出す<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>スタイルを適用するオペレーティング システムをアプリケーションにします。  
+    2.  呼び出す<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>アプリケーションにオペレーティング システムのスタイルを適用します。  
   
     3.  フォームのインスタンスを作成して実行します。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "33539492"
 3.  コマンド プロンプトで次のように入力します。 `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>コントロールの追加とイベントの処理  
- 前の手順は、コンパイルして実行する基本的な Windows フォームを作成する方法を示しました。 次の手順では、コントロールを作成してフォームに追加し、コントロールのイベントを処理する方法を示します。 Windows フォームに追加できるコントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](../../../docs/framework/winforms/controls/index.md)です。  
+ 前の手順は、コンパイルして実行する基本的な Windows フォームを作成する方法を示しました。 次の手順では、コントロールを作成してフォームに追加し、コントロールのイベントを処理する方法を示します。 Windows フォームに追加することができます、コントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](../../../docs/framework/winforms/controls/index.md)します。  
   
  Windows フォーム アプリケーションを作成する方法を理解するだけでなく、イベント ベースのプログラミングとユーザー入力を処理する方法を理解する必要があります。 詳細については、次を参照してください[Windows フォームでのイベント ハンドラーの作成](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)、および[ユーザー入力の処理。](../../../docs/framework/winforms/controls/handling-user-input.md)  
   

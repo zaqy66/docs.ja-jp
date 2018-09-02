@@ -2,12 +2,12 @@
 title: ADO.NET での接続文字列
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 03d768430139fa1078f39b470403abcf75dd83a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b4e057cab4c562fc51893631c35d66409e1c3731
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757217"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399870"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET での接続文字列
 .NET Framework 2.0 では、接続文字列を扱う新しい機能が導入されました。接続文字列ビルダー クラスに追加された新しいキーワードもその 1 つであり、有効な接続文字列を実行時に簡単に作成できるようになっています。  
@@ -39,4 +39,4 @@ ms.locfileid: "32757217"
   
 ## <a name="see-also"></a>関連項目  
  [データ ソースへの接続](/cpp/data/odbc/connecting-to-a-data-source)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

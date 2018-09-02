@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 851c724d354b0e819ca320c32e98249f2ec66506
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0e38bc663d3c2143703ba178eb8ac420bb1baa08
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765842"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400547"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter を使用したデータの変更
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> オブジェクトの <xref:System.Data.Common.DbProviderFactory> メソッドを使用すると、ファクトリの作成時に指定した基になるデータ プロバイダーに対して厳密に型指定された <xref:System.Data.Common.DbDataAdapter> オブジェクトを取得できます。 続いて <xref:System.Data.Common.DbCommandBuilder> を使用することで、データ ソースに対して <xref:System.Data.DataSet> のデータの挿入、更新、削除を実行するコマンドを作成できます。  
@@ -46,4 +46,4 @@ ms.locfileid: "32765842"
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [DbProviderFactory の取得](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
  [DbConnection、DbCommand、および DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

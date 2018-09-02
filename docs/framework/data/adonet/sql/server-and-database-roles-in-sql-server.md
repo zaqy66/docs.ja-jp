@@ -2,12 +2,12 @@
 title: SQL Server のサーバー ロールとデータベース ロール
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 196ca0791f42414b9da8dff32eb8285045fd7e63
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925466"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403145"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server のサーバー ロールとデータベース ロール
 SQL Server では、すべてのバージョンで、個々のユーザーではなくロール (つまり、ユーザーのグループ) に対して権限を割り当てることのできるロール ベースのセキュリティが使用されています。 固定サーバー ロールおよび固定データベース ロールには、固定された一連の権限が割り当てられています。  
@@ -27,8 +27,8 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[サーバー レベル ロール](/sql/relational-databases/security/authentication-access/server-level-roles)と[固定サーバー ロールの権限](http://msdn.microsoft.com/library/ms175892.aspx)で SQL Server オンライン ブック|固定サーバー ロールと SQL Server に関連付けられている権限について説明します。|  
-|[データベース レベル ロール](/sql/relational-databases/security/authentication-access/database-level-roles)と[固定データベース ロールのアクセス許可](http://msdn.microsoft.com/library/ms189612.aspx)で SQL Server オンライン ブック|固定データベース ロールおよびそれに関連付けられている権限について説明します。|  
+|[サーバー レベル ロール](/sql/relational-databases/security/authentication-access/server-level-roles)と[固定サーバー ロールの権限](https://msdn.microsoft.com/library/ms175892.aspx)で SQL Server オンライン ブック|固定サーバー ロールと SQL Server に関連付けられている権限について説明します。|  
+|[データベース レベル ロール](/sql/relational-databases/security/authentication-access/database-level-roles)と[固定データベース ロールのアクセス許可](https://msdn.microsoft.com/library/ms189612.aspx)で SQL Server オンライン ブック|固定データベース ロールおよびそれに関連付けられている権限について説明します。|  
   
 ## <a name="database-roles-and-users"></a>データベース ロールおよびユーザー  
  データベース ユーザー アカウントはデータベース オブジェクトを扱う関係上、ログインにマップされている必要があります。 データベース ユーザーをデータベース ロールに追加すると、そのロールに関連付けられたすべての権限セットが継承されます。 すべての権限を付与できます。  
@@ -58,7 +58,7 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[Id およびアクセス制御](http://msdn.microsoft.com/library/bb510418.aspx)で SQL Server オンライン ブック|プリンシパル、ロール、資格情報、セキュリティ保護可能なリソース、および権限について説明したトピックへのリンクが含まれています。|  
+|[Id およびアクセス制御](https://msdn.microsoft.com/library/bb510418.aspx)で SQL Server オンライン ブック|プリンシパル、ロール、資格情報、セキュリティ保護可能なリソース、および権限について説明したトピックへのリンクが含まれています。|  
 |[プリンシパル](/sql/relational-databases/security/authentication-access/principals-database-engine)で SQL Server オンライン ブック|プリンシパルの説明のほか、サーバー ロールとデータベース ロールについて説明したトピックへのリンクが含まれています。|  
   
 ## <a name="see-also"></a>関連項目  
@@ -67,5 +67,4 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
  [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [SQL Server における所有権とユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [SQL Server の承認とアクセス許可](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- 
-  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

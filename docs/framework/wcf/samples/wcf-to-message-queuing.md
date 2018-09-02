@@ -2,15 +2,15 @@
 title: Windows Communication Foundation でのメッセージ キュー
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 0864098a55cbd7b43100bf9e0a1836e749eb2bc9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806371"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403621"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation でのメッセージ キュー
-このサンプルでは、Windows Communication Foundation (WCF) アプリケーションがメッセージ キュー (MSMQ) アプリケーションにメッセージを送信する方法を示します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。 サービスとクライアントは同時に実行されていなくてもかまいません。  
+このサンプルでは、メッセージ キュー (MSMQ) アプリケーションを Windows Communication Foundation (WCF) アプリケーションがメッセージを送信する方法を示します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。 サービスとクライアントは同時に実行されていなくてもかまいません。  
   
  サービスは、メッセージをキューから受信して注文を処理します。 サービスはトランザクション キューを作成し、メッセージがメッセージ ハンドラによって受信されるように設定します。次のサンプル コードを参照してください。  
 
@@ -96,9 +96,9 @@ Console.WriteLine("Order has been submitted:{0}", po);
 client.Close();  
 ```
 
- クライアントは、MSMQ メッセージをキューに送信するためにカスタム クライアントを順に使用します。 受信してメッセージを処理するアプリケーションは、MSMQ アプリケーションと WCF アプリケーションではありませんは暗黙のサービス コントラクト、2 つのアプリケーション間です。 したがって、このシナリオでは Svcutil.exe ツールを使用してプロキシを作成することはできません。  
+ クライアントは、MSMQ メッセージをキューに送信するためにカスタム クライアントを順に使用します。 受け取って、メッセージを処理するアプリケーションの MSMQ アプリケーションと WCF アプリケーションではないため、ありません暗黙のサービス コントラクト、2 つのアプリケーション間。 したがって、このシナリオでは Svcutil.exe ツールを使用してプロキシを作成することはできません。  
   
- カスタムのクライアントには基本的を使用するすべての WCF アプリケーションの同じ、`MsmqIntegration`メッセージを送信するバインディング。 他のクライアントと異なり、サービス操作の範囲は含まれません。 メッセージ送信操作のみです。  
+ カスタムのクライアントは、使用するすべての WCF アプリケーションで同じでは基本的に、`MsmqIntegration`メッセージを送信するバインディング。 他のクライアントと異なり、サービス操作の範囲は含まれません。 メッセージ送信操作のみです。  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -130,27 +130,27 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  サンプルを実行すると、クライアントとサービスのアクティビティがサービスとクライアントの両方のコンソール ウィンドウに表示されます。 サービスがクライアントから受信したメッセージを表示できます。 どちらかのコンソールで Enter キーを押すと、サービスとクライアントがどちらもシャットダウンされます。 キューが使用されているので、クライアントとサービスが同時に実行されている必要はありません。 たとえば、クライアントを実行してシャットダウンした後にサービスを起動しても、サービスはメッセージを受信します。  
   
 > [!NOTE]
->  このサンプルを実行するには、メッセージ キューがインストールされている必要があります。 インストール手順を参照して[メッセージ キュー](http://go.microsoft.com/fwlink/?LinkId=94968)です。  
+>  このサンプルを実行するには、メッセージ キューがインストールされている必要があります。 インストール手順を参照してください。[メッセージ キュー](https://go.microsoft.com/fwlink/?LinkId=94968)します。  
   
 ### <a name="to-setup-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。  
   
     1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] でサーバー マネージャーを開きます。  
   
-    2.  展開して、**機能**タブです。  
+    2.  展開、**機能**タブ。  
   
-    3.  右クリック**プライベート メッセージ キュー**を選択して**新規**、**プライベート キュー**です。  
+    3.  右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。  
   
     4.  チェック、**トランザクション**ボックス。  
   
-    5.  入力`ServiceModelSamplesTransacted`として、新しいキューの名前。  
+    5.  入力`ServiceModelSamplesTransacted`として新しいキューの名前。  
   
 3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-4.  単一コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+4.  1 台のコンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -169,10 +169,10 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   
 ## <a name="see-also"></a>関連項目  
  [方法 : WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [メッセージ キュー](http://go.microsoft.com/fwlink/?LinkId=94968)
+ [メッセージ キュー](https://go.microsoft.com/fwlink/?LinkId=94968)

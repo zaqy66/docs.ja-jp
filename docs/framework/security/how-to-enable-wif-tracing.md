@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 459d74f3faf9fab4cba047a87ccff77d193e9026
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17650e06cb505dd778a9c0980c2a32fda8099cb4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399566"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407574"
 ---
 # <a name="how-to-enable-wif-tracing"></a>方法: WIF トレースの有効化
 ## <a name="applies-to"></a>対象  
@@ -19,7 +19,7 @@ ms.locfileid: "33399566"
 -   ASP.NET® Web フォーム  
   
 ## <a name="summary"></a>まとめ  
- ここでは、ASP.NET アプリケーションの WIF トレースを有効にするための詳細な操作手順を示します。 また、トレース リスナーとログが正しく動作していることを確認するためにアプリケーションをテストする方法についても説明します。 ここでは、セキュリティ トークン サービス (STS) を作成するための詳細な手順については説明しません。代わりに、Identity and Access Tool に付属している開発用 STS を使用します。 開発用 STS はテスト用に用意されたもので、実際の認証は行いません。 このページの内容を完了するには、Identity and Access Tool をインストールする必要があります。 これは、「[Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)」からダウンロードできます。  
+ ここでは、ASP.NET アプリケーションの WIF トレースを有効にするための詳細な操作手順を示します。 また、トレース リスナーとログが正しく動作していることを確認するためにアプリケーションをテストする方法についても説明します。 ここでは、セキュリティ トークン サービス (STS) を作成するための詳細な手順については説明しません。代わりに、Identity and Access Tool に付属している開発用 STS を使用します。 開発用 STS はテスト用に用意されたもので、実際の認証は行いません。 このページの内容を完了するには、Identity and Access Tool をインストールする必要があります。 これは、「[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)」からダウンロードできます。  
   
 > [!IMPORTANT]
 >  パッシブ アプリケーション (つまり、WS フェデレーション プロトコルを使用するアプリケーション) の WIF トレースを有効にすると、アプリケーションをサービス拒否 (DoS) 攻撃に晒したり、悪意のあるユーザーに情報を開示する可能性があります。 これにはパッシブ RP とパッシブ STS の両方が含まれます。 したがって、稼動環境ではパッシブ RP またはパッシブ STS の WIF トレースを有効にしないことをお勧めします。  

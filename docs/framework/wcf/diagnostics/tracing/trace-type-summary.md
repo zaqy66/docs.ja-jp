@@ -2,17 +2,17 @@
 title: トレースの種類の概要
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: e3bc66753dd44e1dc4c7417caf593820300f69a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73777df2b58b14947c416ce409bcb42d439499ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486043"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403844"
 ---
 # <a name="trace-type-summary"></a>トレースの種類の概要
-[Sourcelevels](http://go.microsoft.com/fwlink/?LinkID=94943)さまざまなトレース レベルを定義します。 重大なエラー、警告、情報、および Verbose も同様の説明、`ActivityTracing`の出力を切り替えるかをフラグは、境界とアクティビティ転送イベントをトレースします。  
+[レベルをソース](https://go.microsoft.com/fwlink/?LinkID=94943)さまざまなトレース レベルの定義: 重大、エラー、警告、情報、および Verbose の説明も示されています、`ActivityTracing`境界とアクティビティ転送イベントのトレースの出力を切り替えるかをフラグ。  
   
- 確認することも[TraceEventType](http://go.microsoft.com/fwlink/?LinkId=95169)から出力できるトレースの種類の<xref:System.Diagnostics>します。  
+ 確認することも[TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169)から出力できるトレースの種類の<xref:System.Diagnostics>します。  
   
  最も重要な種類を次の表に示します。  
   

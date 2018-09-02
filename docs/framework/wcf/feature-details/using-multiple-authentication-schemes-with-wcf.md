@@ -2,18 +2,18 @@
 title: WCF での複数の認証方式の使用
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 140211f10f7cdc88a3df8eb8ea1c30df73b0c4c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498447"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408974"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>WCF での複数の認証方式の使用
-WCF では、単一のエンドポイントに複数の認証方式を指定できるようになりました。 さらに、Web ホスト サービスは、認証設定を IIS から直接継承できます。 自己ホスト型サービスは、使用可能な認証方式を指定できます。 IIS での認証設定の詳細については、次を参照してください[IIS 認証。](http://go.microsoft.com/fwlink/?LinkId=232458)  
+WCF では、単一のエンドポイントに複数の認証方式を指定できるようになりました。 さらに、Web ホスト サービスは、認証設定を IIS から直接継承できます。 自己ホスト型サービスは、使用可能な認証方式を指定できます。 IIS での認証設定の詳細については、次を参照してください[IIS 認証。](https://go.microsoft.com/fwlink/?LinkId=232458)  
   
 ## <a name="iis-hosted-services"></a>IIS でホストされるサービス  
- IIS でホストされるサービスでは、IIS で使用する認証方式を設定します。 サービスの web.config ファイルでバインディング構成で指定 clientCredential の種類を"InheritedFromHost"として、次の XML スニペットに示すように。  
+ IIS でホストされるサービスでは、IIS で使用する認証方式を設定します。 サービスの web.config ファイルでバインド構成で型を指定 clientCredential"InheritedFromHost"として次の XML スニペットに示すようにします。  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ WCF では、単一のエンドポイントに複数の認証方式を指定で�
     </bindings>  
 ```  
   
- ServiceAuthenticationBehavior を使用して、サービスで使用する認証方式のサブセットだけをするを指定する、または\<serviceAuthenticationManager > 要素。 これをコードで構成する場合は、次のコード スニペットに示すように ServiceAuthenticationBehavior を使用します。  
+ ServiceAuthenticationBehavior を使用して、サービスで使用する認証方式のサブセットのみをすることを指定する、または\<serviceAuthenticationManager > 要素。 これをコードで構成する場合は、次のコード スニペットに示すように ServiceAuthenticationBehavior を使用します。  
   
 ```csharp  
 // ...  
@@ -63,7 +63,7 @@ else
  この結果、IIS で選択した内容に応じて、ここに示されている認証方式のサブセットに限り、サービス エンドポイントへの適用が検討されます。 つまり、開発者は serviceAuthenticationManager の一覧から基本認証を省略することによって、リストから基本認証を除外することができます。IIS で有効になっている場合でも、サービス エンドポイントには適用されません。  
   
 ## <a name="self-hosted-services"></a>自己ホスト型サービス  
- 自己ホスト型サービスは、設定を継承する IIS がないため、構成方法が少し異なります。 ここで使用して、 \<serviceAuthenticationManager > 要素または ServiceAuthenticationBehavior 継承される認証設定を指定します。 コード例を次に示します。  
+ 自己ホスト型サービスは、設定を継承する IIS がないため、構成方法が少し異なります。 ここで使用して、 \<serviceAuthenticationManager > 要素または ServiceAuthenticationBehavior を継承される認証設定を指定します。 コード例を次に示します。  
   
 ```csharp  
 // ...  

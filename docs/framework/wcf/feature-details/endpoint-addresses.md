@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a2815c7c63e9ba9615904028081956b138b1befa
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925479"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404568"
 ---
 # <a name="endpoint-addresses"></a>エンドポイント アドレス
 すべてのエンドポイントにはこれと関連するアドレスがあり、エンドポイントの検索と識別に使用されます。 このアドレスは主にエンドポイントの位置を指定する URI (Uniform Resource Identifier) で構成されます。 エンドポイント アドレスが、Windows Communication Foundation (WCF) のプログラミング モデルで表される、<xref:System.ServiceModel.EndpointAddress>クラスを含む、省略可能な<xref:System.ServiceModel.EndpointAddress.Identity%2A>他のエンドポイントによるエンドポイントの認証を有効にするプロパティをメッセージをおよび一連の省略可能な交換<xref:System.ServiceModel.EndpointAddress.Headers%2A>プロパティで、サービスに到達するために必要な SOAP ヘッダーを定義します。 オプションのヘッダーは、サービス エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 エンドポイントのアドレスは、ネットワーク上では WS-Addressing エンドポイント参照 (EPR) として表されます。  
   
 ## <a name="uri-structure-of-an-address"></a>アドレスの URI 構造  
- ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 URI の 4 つの部分ではたとえば、http://www.fabrikam.com:322/mathservice.svc/secureEndpoint次のように取り上げることができます。  
+ ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 URI の 4 つの部分ではたとえば、 http://www.fabrikam.com:322/mathservice.svc/secureEndpoint次のように取り上げることができます。  
   
 -   スキーム : http:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "42925479"
 </system.serviceModel>  
 ```  
   
- 前の例では、net.tcp://payroll.myorg.com: 8000 およびhttp://shipping.myorg.com:8000経由で渡される、それぞれのスキーム、唯一のベース アドレスします。  
+ 前の例では、net.tcp://payroll.myorg.com: 8000 および http://shipping.myorg.com:8000経由で渡される、それぞれのスキーム、唯一のベース アドレスします。  
   
  `baseAddressPrefixFilter` では、ワイルカードはサポートされません。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "42925479"
   
 -   コードを使用する場合、カスタムのアドレス ヘッダーは <xref:System.ServiceModel.Channels.AddressHeader> クラスを使用して作成し、<xref:System.ServiceModel.EndpointAddress> の構築時に使用されます。  
   
--   構成でカスタム[\<ヘッダー >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)の子として指定されて、 [\<エンドポイント >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)要素。  
+-   構成でカスタム[\<ヘッダー >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)の子として指定されて、 [\<エンドポイント >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)要素。  
   
  配置後もヘッダーを変更できるため、コードよりも構成を使用する方法を一般的にお勧めします。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "42925479"
   
 -   コードを使用する場合、カスタム リッスン アドレスはエンドポイントの動作コレクションに <xref:System.ServiceModel.Description.ClientViaBehavior> クラスを追加して指定します。  
   
--   構成では、カスタム リッスン アドレスを指定します、`ListenUri`サービスの属性[\<エンドポイント >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)要素。  
+-   構成では、カスタム リッスン アドレスを指定します、`ListenUri`サービスの属性[\<エンドポイント >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)要素。  
   
 ### <a name="custom-soap-address-filter"></a>カスタム SOAP アドレス フィルター  
  エンドポイントの SOAP アドレス フィルター (<xref:System.ServiceModel.EndpointAddress.Uri%2A>) を定義するには、<xref:System.ServiceModel.EndpointAddress.Headers%2A> に任意の <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> プロパティを組み合わせて使用します。 既定では、このフィルターは受信メッセージの `To` メッセージ ヘッダーが、エンドポイントの URI に一致し、必要なすべてのエンドポイント ヘッダーがメッセージ内に存在していることを検証します。  

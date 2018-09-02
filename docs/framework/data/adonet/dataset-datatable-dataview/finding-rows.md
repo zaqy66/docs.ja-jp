@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: 57ed6045ca0ea9f9579640839e8198716cf79fe0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: daa8097bc5dfee203f988915b1e4a8bdcd2c50e0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760883"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408085"
 ---
 # <a name="finding-rows"></a>行の検索
-<xref:System.Data.DataView.Find%2A> の <xref:System.Data.DataView.FindRows%2A> メソッドと <xref:System.Data.DataView> メソッドを使用すると、並べ替えキーの値に基づいて行を検索できます。 値が検索の大文字小文字の区別、**検索**と**FindRows**メソッドはによって決定されます、 **CaseSensitive** 、基になるプロパティ<xref:System.Data.DataTable>です。 検索結果を返すには、検索値が既存の並べ替えキーの値と完全に一致している必要があります。  
+<xref:System.Data.DataView.Find%2A> の <xref:System.Data.DataView.FindRows%2A> メソッドと <xref:System.Data.DataView> メソッドを使用すると、並べ替えキーの値に基づいて行を検索できます。 値の検索の大文字小文字の区別、**検索**と**FindRows**メソッドはによって決定されます、 **CaseSensitive** 、基になるプロパティ<xref:System.Data.DataTable>します。 検索結果を返すには、検索値が既存の並べ替えキーの値と完全に一致している必要があります。  
   
- **検索**メソッドのインデックスを持つ整数を返します、<xref:System.Data.DataRowView>検索条件に一致します。 複数の行には、検索条件、一致した最初のインデックスのみが一致する場合**DataRowView**が返されます。 一致が見つからない場合**検索**-1 を返します。  
+ **検索**メソッドのインデックスを持つ整数を返します、<xref:System.Data.DataRowView>検索条件に一致します。 1 つ以上の行が一致した最初のインデックスのみである検索条件と一致する場合**DataRowView**が返されます。 一致が見つからない場合**検索**-1 を返します。  
   
- 複数の行に一致する検索結果を返すを使用して、 **FindRows**メソッドです。 **FindRows**同様の機能、**検索**メソッドを返します点を除いて、 **DataRowView**配列内のすべての一致する行を参照する、 **DataView**です。 一致が見つからない場合、 **DataRowView**配列は空になります。  
+ 使用して、複数の行に一致する検索結果を返す、 **FindRows**メソッド。 **FindRows**同様の機能、**検索**メソッドを返す点を除いて、 **DataRowView**一致するすべての行を参照する配列、 **DataView**します。 一致が見つからない場合、 **DataRowView**配列は空になります。  
   
- 使用する、**検索**または**FindRows**並べ替え順を指定する必要がありますメソッドで設定するか注文**ApplyDefaultSort**に**true**またはを使用して、**並べ替え**プロパティです。 並べ替え順序が指定されないと、例外がスローされます。  
+ 使用する、**検索**または**FindRows**並べ替え順を指定する必要がありますメソッド順序を設定して**ApplyDefaultSort**に**true**またはを使用して、**並べ替え**プロパティ。 並べ替え順序が指定されないと、例外がスローされます。  
   
- **検索**と**FindRows**メソッドがの長さが並べ替え順序で列の数と一致する入力として値の配列を取得します。 1 つの列に基づく並べ替えの場合は、1 つの値を渡します。 複数列に基づく並べ替えの場合は、オブジェクトの配列を渡します。 複数の列で並べ替えには、オブジェクトの配列内の値と一致するがで指定された列の順序に注意してください、**並べ替え**のプロパティ、 **DataView**です。  
+ **検索**と**FindRows**メソッドは、長さが、並べ替え順序の列の数と一致する入力として値の配列を取得します。 1 つの列に基づく並べ替えの場合は、1 つの値を渡します。 複数列に基づく並べ替えの場合は、オブジェクトの配列を渡します。 複数の列で並べ替えには、オブジェクトの配列内の値と一致するがで指定された列の順序に注意してください、**並べ替え**のプロパティ、 **DataView**します。  
   
- 次のコード例は、**検索**メソッドに対して呼び出されると、 **DataView** 1 つの列の並べ替え順序を持つ。  
+ 次のコード例は、**検索**に対して呼び出されるメソッドを**DataView**で 1 つの列の並べ替え順序。  
   
 ```vb  
 Dim custView As DataView = _  
@@ -55,7 +55,7 @@ else
     custView[rowIndex]["CompanyName"].ToString());  
 ```  
   
- 場合、**並べ替え**プロパティが複数の列を指定します、によって指定された順序で各列に対して検索値を持つオブジェクトの配列を渡す必要があります、**並べ替え**プロパティは、次のコード例に示すようにします。  
+ 場合、**並べ替え**プロパティが複数の列を指定しますで指定された順序で各列の検索値でオブジェクトの配列を渡す必要があります、**並べ替え**プロパティは、次のコード例に示すようにします。  
   
 ```vb  
 Dim custView As DataView = _  
@@ -97,4 +97,4 @@ else
  <xref:System.Data.DataTable>  
  <xref:System.Data.DataView>  
  [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

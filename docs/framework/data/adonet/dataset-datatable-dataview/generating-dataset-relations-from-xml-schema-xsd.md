@@ -2,12 +2,12 @@
 title: XML スキーマ (XSD) からの DataSet リレーションの生成
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7c73dcec3d23b094436791af6649de83b9eacad9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758439"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416353"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XML スキーマ (XSD) からの DataSet リレーションの生成
 <xref:System.Data.DataSet> では、親子のリレーションを作成することにより、2 つ以上の列間の関連付けを行います。 3 つの方法を表す、**データセット**XML スキーマ定義言語 (XSD) スキーマ内の関係。  
@@ -16,10 +16,10 @@ ms.locfileid: "32758439"
   
 -   使用して、 **msdata:Relationship**注釈。  
   
--   指定して、**います**せず、 **msdata:ConstraintOnly**注釈。  
+-   指定、 **xs:keyref**せず、 **msdata:ConstraintOnly**注釈。  
   
 ## <a name="nested-complex-types"></a>入れ子になった複合型  
- スキーマ内で複数の複合型の定義が入れ子になっている場合は、それらの入れ子状の要素間に親子のリレーションシップがあります。 次の XML スキーマ フラグメントことを示しています**OrderDetail**の子要素、**順序**要素。  
+ スキーマ内で複数の複合型の定義が入れ子になっている場合は、それらの入れ子状の要素間に親子のリレーションシップがあります。 次の XML スキーマ フラグメントことを示しています**OrderDetail**の子要素には、**順序**要素。  
   
 ```xml  
 <xs:element name="Order">  
@@ -33,10 +33,10 @@ ms.locfileid: "32758439"
 </xs:element>  
 ```  
   
- XML スキーマの割り当て処理にテーブルが作成、**データセット**スキーマで入れ子になった複合型に対応します。 親として使用されるその他の列も作成**-** 生成されたテーブルの子列です。 これらの親を**-** 子列は主キー/外部キー制約を指定することと同じではない、リレーションシップを指定します。  
+ XML スキーマのマッピング プロセス内のテーブルの作成、**データセット**スキーマで入れ子になった複合型に対応しています。 親として使用されるその他の列も作成**-** 生成されたテーブルの子列。 これらの親注**-** 子列はリレーションシップが指定される主キー/外部キー制約を指定すると同じです。  
   
 ## <a name="msdatarelationship-annotation"></a>msdata:Relationship 注釈  
- **Msdata:Relationship**注釈では、入れ子になっていない、スキーマ内の要素間の親子関係を明示的に指定することができます。 次の例の構造を示しています、**リレーションシップ**要素。  
+ **Msdata:Relationship**注釈では、スキーマ内の入れ子になっていない要素間の親子リレーションシップを明示的に指定できます。 次の例の構造を示しています、**リレーションシップ**要素。  
   
 ```xml  
 <msdata:Relationship name="CustOrderRelationship"    
@@ -46,9 +46,9 @@ msdata:parentkey=""
 msdata:childkey="" />  
 ```  
   
- 属性、 **msdata:Relationship**注釈としても、親子関係に関与する要素を識別する、 **parentkey**と**childkey**要素と属性、リレーションシップに関係します。 マッピング プロセスでは、この情報を使用して、内のテーブルを生成する、**データセット**し、これらのテーブルの主キー/外部キーのリレーションシップを作成します。  
+ 属性、 **msdata:Relationship**注釈としても、親子リレーションシップに関連する要素を識別する、 **parentkey**と**childkey**要素と属性、リレーションシップに関係します。 マッピング プロセスでは、この情報を使用して、内のテーブルを生成する、**データセット**とこれらのテーブル間の主キー/外部キー リレーションシップを作成します。  
   
- たとえば、次のスキーマ フラグメントを指定して**順序**と**OrderDetail**同じレベルの要素 (入れ子にできません)。 スキーマを指定します、 **msdata:Relationship**注釈で、これら 2 つの要素間の親子リレーションシップを指定します。 この例では、明示的なリレーションシップを指定してくださいを使用して、 **msdata:Relationship**注釈。  
+ たとえば、次のスキーマ フラグメントを指定します**順序**と**OrderDetail**同じレベルの要素 (入れ子になっていない)。 スキーマを指定します、 **msdata:Relationship**注釈で、これら 2 つの要素間の親子リレーションシップを指定します。 使用して、明示的なリレーションシップを指定する必要があります、ここで、 **msdata:Relationship**注釈。  
   
 ```xml  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
@@ -78,24 +78,24 @@ msdata:childkey="" />
   </xs:annotation>  
 ```  
   
- マッピング プロセスを使用して、**リレーションシップ**要素間の親子リレーションシップを作成する、 **OrderNumber**内の列、**順序**テーブルと、 **OrderNo**内の列、 **OrderDetail**テーブルに、**データセット**です。 割り当て処理で指定されるのはリレーションシップだけで、リレーショナル データベースにおける主キー制約や外部キー制約の場合とは異なり、該当する列の値に対する制約が自動的に指定されることはありません。  
+ マッピング プロセスを使用して、**リレーションシップ**要素間の親子リレーションシップを作成する、 **OrderNumber**内の列、**順序**テーブルと、 **OrderNo**内の列、 **OrderDetail**テーブルに、**データセット**します。 割り当て処理で指定されるのはリレーションシップだけで、リレーショナル データベースにおける主キー制約や外部キー制約の場合とは異なり、該当する列の値に対する制約が自動的に指定されることはありません。  
   
 ### <a name="in-this-section"></a>このセクションの内容  
  [入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
- 制約およびリレーションで暗黙的に作成された説明、**データセット**XML スキーマで入れ子になった要素が発生したとき。  
+ 制約およびリレーションで暗黙的に作成された説明を**データセット**XML スキーマで入れ子になった要素が発生した場合。  
   
  [入れ子になっている要素に指定したリレーションシップの割り当て](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
- リレーションを明示的に設定する方法について説明、**データセット**XML スキーマで入れ子になった要素。  
+ リレーションを明示的に設定する方法について説明します、**データセット**XML スキーマで入れ子になった要素。  
   
  [入れ子になっていない要素間のリレーションの指定](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
- リレーションシップを作成する方法について説明します、**データセット**入れ子になっていない XML スキーマの要素の間です。  
+ リレーションシップを作成する方法について説明します、**データセット**入れ子にされていない XML スキーマ要素間。  
   
 ### <a name="related-sections"></a>関連項目  
  [XML スキーマ (XSD) からの DataSet リレーショナル構造の派生](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- リレーショナル構造体、またはスキーマについて説明します、**データセット**XML スキーマ定義言語 (XSD) スキーマから作成します。  
+ リレーショナル構造体、またはスキーマをについて説明します、**データセット**XML スキーマ定義言語 (XSD) スキーマから作成されました。  
   
  [XML スキーマ (XSD) 制約の DataSet 制約への割り当て](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- 一意制約と外部キー制約の作成に使用される XML スキーマの要素について説明します、**データセット**です。  
+ 一意であり、外部キー制約を作成するために使用する XML スキーマの要素について説明します、**データセット**します。  
   
 ## <a name="see-also"></a>関連項目  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

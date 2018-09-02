@@ -8,30 +8,30 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: e6e268169949994e1b58b5b8a7dcd0429895fb38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524171"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400531"
 ---
 # <a name="how-to-create-application-settings"></a>方法 : アプリケーション設定を作成する
-マネージ コードを使用することにより、新しいアプリケーション設定を作成し、フォームまたはフォームのコントロールのプロパティにバインドして、これらの設定が実行時に自動的に読み込まれて保存されるようにすることができます。  
+マネージド コードを使用することにより、新しいアプリケーション設定を作成し、フォームまたはフォームのコントロールのプロパティにバインドして、これらの設定が実行時に自動的に読み込まれて保存されるようにすることができます。  
   
  次の手順では、<xref:System.Configuration.ApplicationSettingsBase> から派生するラッパー クラスを手動で作成します。 このクラスには、公開する各アプリケーション設定に対して、パブリックにアクセスできるプロパティを追加します。  
   
- また、Visual Studio デザイナーで最小限のコードを使用してこの手順を実行することもできます。  参照してください[する方法: アプリケーション設定を使用して作成デザイナー](http://msdn.microsoft.com/library/wabtadw6\(v=vs.110\))です。  
+ また、Visual Studio デザイナーで最小限のコードを使用してこの手順を実行することもできます。  参照してください[方法: アプリケーション設定を使用して作成デザイナー](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\))します。  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>新しいアプリケーション設定をプログラムで作成するには  
   
-1.  プロジェクトに新しいクラスを追加して、名前を変更します。 この手順では、このクラスを呼び出して、`MyUserSettings`です。 クラスの派生元が <xref:System.Configuration.ApplicationSettingsBase> になるようクラス定義を変更します。  
+1.  プロジェクトに新しいクラスを追加して、名前を変更します。 この手順では、このクラスを呼び出し、`MyUserSettings`します。 クラスの派生元が <xref:System.Configuration.ApplicationSettingsBase> になるようクラス定義を変更します。  
   
-2.  必要な各アプリケーション設定のこのラッパー クラスでプロパティを定義し、設定のスコープに応じて、そのプロパティを <xref:System.Configuration.ApplicationScopedSettingAttribute> または <xref:System.Configuration.UserScopedSettingAttribute> のいずれかを使用して適用します。 設定のスコープの詳細については、次を参照してください。[アプリケーション設定の概要](../../../../docs/framework/winforms/advanced/application-settings-overview.md)です。 ここまでで、コードは次のようになります。  
+2.  必要な各アプリケーション設定のこのラッパー クラスでプロパティを定義し、設定のスコープに応じて、そのプロパティを <xref:System.Configuration.ApplicationScopedSettingAttribute> または <xref:System.Configuration.UserScopedSettingAttribute> のいずれかを使用して適用します。 設定のスコープの詳細については、次を参照してください。[アプリケーション設定の概要](../../../../docs/framework/winforms/advanced/application-settings-overview.md)します。 ここまでで、コードは次のようになります。  
   
      [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
      [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
-3.  アプリケーションでこのラッパー クラスのインスタンスを作成します。 これは、一般的にはメイン フォームのプライベート メンバーです。 クラスを定義したので、それをプロパティにバインドする必要があります。この場合は、フォームの <xref:System.Windows.Forms.Form.BackColor%2A> プロパティです。 これを実現するには、フォームの `Load`イベント ハンドラー。  
+3.  アプリケーションでこのラッパー クラスのインスタンスを作成します。 これは、一般的にはメイン フォームのプライベート メンバーです。 クラスを定義したので、それをプロパティにバインドする必要があります。この場合は、フォームの <xref:System.Windows.Forms.Form.BackColor%2A> プロパティです。 これを実現するにはフォームの`Load`イベント ハンドラー。  
   
      [!code-csharp[ApplicationSettings.Create#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
      [!code-vb[ApplicationSettings.Create#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  

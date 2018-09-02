@@ -2,12 +2,12 @@
 title: '&lt;netNamedPipeBinding&gt; の &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 9116532c8b4aae2f7539706b97d564444195c79d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0006be71ee67d5f274d8af8087f2d111cddb12b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753145"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407256"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; の &lt;transport&gt;
 名前付きパイプのトランスポート セキュリティ設定を定義します。  
@@ -38,7 +38,7 @@ ms.locfileid: "32753145"
   
 |属性|説明|  
 |---------------|-----------------|  
-|protectionLevel|名前付きパイプの保護レベルを定義します。 メッセージに署名すると、転送中のメッセージが第三者によって改ざんされるリスクを軽減します。 暗号化により、転送中にデータレベルのプライバシーが提供されます。 以下の値が有効です。<br /><br /> -None: 保護されません。<br />-Sign: メッセージは署名されます。<br />-EncryptAndSign: メッセージが暗号化および署名されます。<br /><br /> 既定値は EncryptAndSign です。|  
+|protectionLevel|名前付きパイプの保護レベルを定義します。 メッセージに署名すると、転送中のメッセージが第三者によって改ざんされるリスクを軽減します。 暗号化により、転送中にデータレベルのプライバシーが提供されます。 以下の値が有効です。<br /><br /> -None: 保護されません。<br />署名: メッセージが署名されます。<br />-EncryptAndSign: メッセージが暗号化および署名されます。<br /><br /> 既定値は EncryptAndSign です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -57,5 +57,5 @@ ms.locfileid: "32753145"
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  
  [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [バインディングを使用して、Windows Communication Foundation サービスとクライアントを構成するには](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

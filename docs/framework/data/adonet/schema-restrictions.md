@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: c62f934561fa4a6c352ff84b8c1201461c42de39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357258"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417083"
 ---
 # <a name="schema-restrictions"></a>スキーマの制限
-2 番目の省略可能なパラメーター、 **GetSchema**メソッドは、スキーマ情報の量を制限するために使用される制限が返されに渡される、 **GetSchema**文字列の配列としてメソッド. 配列での位置により、渡すことができる値が決定します。これは、制限の番号に相当します。  
+2 番目の省略可能なパラメーター、 **GetSchema**メソッドが返されるスキーマ情報の量を制限するために使用される制限事項、およびに渡される、 **GetSchema**文字列の配列としてメソッド. 配列での位置により、渡すことができる値が決定します。これは、制限の番号に相当します。  
   
  たとえば、次の表は、.NET Framework Data Provider for SQL Server を使用して、"Tables" スキーマ コレクションによりサポートされる制限を示しています。 SQL Server スキーマ コレクションの追加の制限をこのトピックの終わりに示します。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33357258"
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ## <a name="specifying-restriction-values"></a>制限値の指定  
- "Tables" スキーマ コレクションの制限の 1 つを使用するには、4 つの要素を使って文字列の配列を作成してから、制限の番号と一致する要素内に値を配置します。 たとえば、テーブルを制限によって返される、 **GetSchema** "Sales"スキーマ内のテーブルのみをメソッドに渡す前に"Sales"に配列の 2 番目の要素を設定する、 **GetSchema**メソッドです。  
+ "Tables" スキーマ コレクションの制限の 1 つを使用するには、4 つの要素を使って文字列の配列を作成してから、制限の番号と一致する要素内に値を配置します。 たとえば、テーブルを制限によって返される、 **GetSchema** 、"Sales"スキーマ内のテーブルのみをメソッドに渡す前に"Sales"配列の 2 番目の要素の設定、 **GetSchema**メソッド。  
   
 > [!NOTE]
 >  `SqlClient` と `OracleClient` の制限のコレクションには、追加の `ParameterName` 列があります。 制限の既定の列は、下位互換性のために存在してはいますが、現在は無視されています。 制限の値を指定する場合、文字列置換ではなく、パラメーター付きのクエリを使って、SQL への注入攻撃のリスクを最小限にする必要があります。  
@@ -33,10 +33,10 @@ ms.locfileid: "33357258"
 > [!NOTE]
 >  配列内の要素数は、指定したスキーマ コレクションでサポートされる制限数以下にする必要があります。そうでない場合、<xref:System.ArgumentException> がスローされます。 制限は最大数よりも小さい場合があります。 指定されていない制限は、null (無制限) と見なされます。  
   
- 呼び出すことによってサポートされている制限の一覧を特定の .NET Framework マネージ プロバイダーを照会することができます、 **GetSchema** "Restrictions"は、制限のスキーマ コレクションの名前を持つメソッドです。 これにより、コレクション名の一覧、制限の名前、既定の制限値、および制限の番号と共に、<xref:System.Data.DataTable> が返されます。  
+ 呼び出すことによってサポートされている制限の一覧を決定する .NET Framework マネージ プロバイダーを照会することができます、 **GetSchema** 「制限」は、制限のスキーマのコレクションの名前を持つメソッド。 これにより、コレクション名の一覧、制限の名前、既定の制限値、および制限の番号と共に、<xref:System.Data.DataTable> が返されます。  
   
 ### <a name="example"></a>例  
- 次の例を使用する方法を示します、<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>の .NET Framework Data Provider for SQL Server メソッド<xref:System.Data.SqlClient.SqlConnection>に関する、すべてのテーブルに含まれているスキーマ情報を取得するクラス、 **AdventureWorks**サンプル データベース、および"Sales"スキーマ内のテーブルのみに返される情報を制限します。  
+ 次の例では、使用する方法、 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 、.NET Framework Data Provider for SQL Server 方法<xref:System.Data.SqlClient.SqlConnection>に関するすべてのテーブルに含まれるスキーマ情報を取得するクラス、 **AdventureWorks**サンプル データベース、および"Sales"スキーマ内のテーブルのみに返される情報を制限します。  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -143,7 +143,7 @@ class Program
   
 |制限の名前|パラメーター名|制限の既定値|制限の番号|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|名前|@Name|名前|1|  
+|name|@Name|name|1|  
   
 ### <a name="tables"></a>[テーブル]  
   
@@ -195,7 +195,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|名前|@Name|SPECIFIC_NAME|3|  
+|name|@Name|SPECIFIC_NAME|3|  
 |パラメーター|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>手順  
@@ -204,7 +204,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|名前|@Name|SPECIFIC_NAME|3|  
+|name|@Name|SPECIFIC_NAME|3|  
 |型|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
@@ -239,7 +239,7 @@ class Program
 |Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Owner|@Owner|CONSTRAINT_SCHEMA|2|  
 |テーブル|@Table|TABLE_NAME|3|  
-|名前|@Name|CONSTRAINT_NAME|4|  
+|name|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008 スキーマの制限  
  次の表に、SQL Server 2008 スキーマ コレクションの制限を示します。 これらの制限は、.NET Framework 3.5 SP1 および SQL Server 2008 以降で有効です。 これらの制限は、以前のバージョンの .NET Framework および SQL Server ではサポートされません。  
@@ -262,4 +262,4 @@ class Program
 |Column|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>関連項目  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

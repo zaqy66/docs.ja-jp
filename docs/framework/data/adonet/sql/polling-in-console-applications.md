@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 4fc9a787aa03af311ed219f0831a4d0e41544be8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363394"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416709"
 ---
 # <a name="polling-in-console-applications"></a>コンソール アプリケーションでのポーリング
 ADO.NET での非同期操作は、1 つのスレッドで他のタスクを実行している間に、別のスレッドで時間のかかるデータベース操作を開始できます。 ただし、ほとんどの場合、データベース操作が完了するまでは、アプリケーションを続行できない状態に最終的に達することになります。 このような場合は、操作が完了したかどうかを確認するために、非同期操作をポーリングすると便利です。  
@@ -18,7 +18,7 @@ ADO.NET での非同期操作は、1 つのスレッドで他のタスクを実�
  <xref:System.IAsyncResult.IsCompleted%2A> プロパティを使用して、操作が完了したかどうかを確認できます。  
   
 ## <a name="example"></a>例  
- 次のコンソール アプリケーション内のデータの更新、 **AdventureWorks**サンプル データベース、その作業を非同期的に実行します。 長時間にわたるプロセスをエミュレートするために、この例では、コマンド テキスト内に WAITFOR ステートメントを挿入します。 通常は、コマンドの実行を遅くする必要はありませんが、非同期動作の例をわかりやすく示すために、この場合はあえて遅くしています。  
+ 次のコンソール アプリケーション内のデータの更新、 **AdventureWorks**サンプル データベースを非同期的にその作業を実行します。 長時間にわたるプロセスをエミュレートするために、この例では、コマンド テキスト内に WAITFOR ステートメントを挿入します。 通常は、コマンドの実行を遅くする必要はありませんが、非同期動作の例をわかりやすく示すために、この場合はあえて遅くしています。  
   
 ```vb  
 Imports System  
@@ -192,4 +192,4 @@ class Class1
   
 ## <a name="see-also"></a>関連項目  
  [非同期操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

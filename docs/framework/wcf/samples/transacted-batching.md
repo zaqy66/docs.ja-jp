@@ -2,12 +2,12 @@
 title: トランザクション バッチ
 ms.date: 03/30/2017
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-ms.openlocfilehash: 7df65b8f3f149deac841010e392f3919b24506b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abada9aaf5fac8f05599467f385e708e1898832f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508879"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416649"
 ---
 # <a name="transacted-batching"></a>トランザクション バッチ
 このサンプルでは、メッセージ キュー (MSMQ) を使用して、トランザクション読み取りをバッチ処理する方法を示します。 トランザクション バッチは、キューを使用する通信でトランザクション読み取りのパフォーマンスを最適化するための機能です。  
@@ -21,30 +21,30 @@ ms.locfileid: "33508879"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。  
   
     1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] でサーバー マネージャーを開きます。  
   
-    2.  展開して、**機能**タブです。  
+    2.  展開、**機能**タブ。  
   
-    3.  右クリック**プライベート メッセージ キュー**を選択して**新規**、**プライベート キュー**です。  
+    3.  右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。  
   
     4.  チェック、**トランザクション**ボックス。  
   
-    5.  入力`ServiceModelSamplesTransacted`として、新しいキューの名前。  
+    5.  入力`ServiceModelSamplesTransacted`として新しいキューの名前。  
   
     > [!NOTE]
     >  このサンプルでは、クライアントは多数のメッセージをバッチの一部として送信します。 通常、サービス アプリケーションがこれらを処理するのに多少の時間がかかります。  
   
 3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-4.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+4.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>ワークグループに属しているコンピューターまたは Active Directory 統合のないコンピューターでこのサンプルを実行するには  
   
-1.  <xref:System.ServiceModel.NetMsmqBinding> を使用する場合の既定では、トランスポート セキュリティが有効です。 MSMQ トランスポート セキュリティでは、2 つの関連するプロパティがある<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>と<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`既定では、認証モードに設定`Windows`保護レベルに設定されていると`Sign`です。 MSMQ の認証機能と署名機能を利用するには、ドメインに MSMQ があることと、MSMQ に関する Active Directory の統合オプションがインストールされていることが必要です。 この条件を満たしていないコンピューターでこのサンプルを実行すると、エラーになります。  
+1.  <xref:System.ServiceModel.NetMsmqBinding> を使用する場合の既定では、トランスポート セキュリティが有効です。 MSMQ トランスポート セキュリティでは、2 つの関連するプロパティがある<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>と<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`既定では、認証モードが設定されて`Windows`保護レベルに設定し、`Sign`します。 MSMQ の認証機能と署名機能を利用するには、ドメインに MSMQ があることと、MSMQ に関する Active Directory の統合オプションがインストールされていることが必要です。 この条件を満たしていないコンピューターでこのサンプルを実行すると、エラーになります。  
   
 2.  ドメインに属していないコンピュータ、または Active Directory 統合がインストールされていないコンピュータを使用する場合は、トランスポート セキュリティをオフにします。オフにするには、認証モードと保護レベルを `None` にします。この構成の例を次に示します。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "33508879"
   
  メッセージの送受信にトランザクションが使用されている場合、実際には 2 つの別個のトランザクションが存在しています。 クライアントがトランザクションのスコープ内でメッセージを送信する場合、トランザクションはクライアントおよびクライアント キュー マネージャにとってローカルとなります。 サービスがトランザクションのスコープ内でメッセージを受信する場合、トランザクションはサービスおよび受信キュー マネージャにとってローカルとなります。 クライアントとサービスは同じトランザクションに参加していません。むしろ、キューに対して操作 (送信や受信など) を実行する場合は異なるトランザクションを使用することに注意してください。  
   
- このサンプルでは、複数のサービス操作を実行する際に単一のトランザクションを使用します。 これはパフォーマンス最適化機能としてのみ使用されるもので、アプリケーションのセマンティクスには影響しません。 サンプルがに基づいて[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)です。  
+ このサンプルでは、複数のサービス操作を実行する際に単一のトランザクションを使用します。 これはパフォーマンス最適化機能としてのみ使用されるもので、アプリケーションのセマンティクスには影響しません。 サンプルがに基づいて[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)します。  
   
 ## <a name="comments"></a>コメント  
  このサンプルでは、クライアントはトランザクションのスコープ内からメッセージのバッチをサービスに送信します。 パフォーマンスの最適化を示すために、この例では最大 2,500 という多数のメッセージを送信します。  
@@ -370,7 +370,7 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   
