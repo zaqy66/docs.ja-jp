@@ -4,12 +4,12 @@ description: .NET Core の新機能について。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 59a1f61de365218d649e3392fbce84cd6d530ed5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566340"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456888"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 の新機能
 
@@ -30,7 +30,7 @@ ms.locfileid: "34566340"
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-この `dotnet restore` の自動実行は、`--no-restore` スイッチを `new`、`run`、`build`、`publish`、`pack`、`test` コマンドに渡すことで、無効にすることもできます。 
+この `dotnet restore` の自動実行は、`--no-restore` スイッチを `new`、`run`、`build`、`publish`、`pack`、`test` コマンドに渡すことで、無効にすることもできます。
 
 ### <a name="retargeting-to-net-core-20"></a>.NET Core 2.0 への再ターゲット
 
@@ -76,7 +76,7 @@ ms.locfileid: "34566340"
 
    このコマンドにより、*Program.vb* というファイル名の Visual Basic ソース コードとともに、ファイル拡張子が `.vbproj` のプロジェクト ファイルが作成されます。 このファイル内に、"Hello World!" という文字列を コンソール ウィンドウに表示するためのソース コードが含まれています。
 
-1.  `dotnet run` コマンドを入力します。 [.NET Core CLI ](../tools/index.md)によりアプリケーションが自動的にコンパイルされて実行され、"Hello World!" メッセージが表示されます。 コンソール ウィンドウに表示します。
+1. `dotnet run` コマンドを入力します。 [.NET Core CLI ](../tools/index.md)によりアプリケーションが自動的にコンパイルされて実行され、"Hello World!" メッセージが表示されます。 コンソール ウィンドウに表示します。
 
 ### <a name="support-for-c-71"></a>C# 7.1 のサポート
 
@@ -162,4 +162,5 @@ Visual Studio のプロジェクトを再ターゲットするには、そのプ
 - [Azure Cloud にデプロイされたアプリケーション](/azure/architecture/reference-architectures/index.md)
 
 ## <a name="see-also"></a>関連項目
-[ASP.NET Core 2.0 の新機能](/aspnet/core/aspnetcore-2.0)
+
+* [ASP.NET Core 2.0 の新機能](/aspnet/core/aspnetcore-2.0)
