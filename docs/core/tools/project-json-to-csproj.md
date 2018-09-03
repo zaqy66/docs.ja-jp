@@ -4,12 +4,12 @@ description: 「project.json 要素と csproj 要素の間のマッピング」�
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: d262792cd6821d35dcaf2f4bb9c05625e1bcd2fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 369075f91c0d5ea6c7eb5d09ac2535c4e60f28f6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218804"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419416"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json プロパティと csproj プロパティの間のマッピング
 
@@ -17,8 +17,8 @@ ms.locfileid: "33218804"
 
 .NET Core ツールの開発中、重要なデザイン変更が行われました。*project.json* ファイルのサポートが終了となり、代わりに.NET Core プロジェクトが MSBuild/csproj 形式に移行されました。
 
-この記事では、*project.json* の設定が MSBuild/csproj 形式でどのように表示されるか説明します。最新バージョンのツールにプロジェクトをアップグレードするとき、新しい形式の利用方法を知り、移行ツールで行われた変更を理解できます。 
- 
+この記事では、*project.json* の設定が MSBuild/csproj 形式でどのように表示されるか説明します。最新バージョンのツールにプロジェクトをアップグレードするとき、新しい形式の利用方法を知り、移行ツールで行われた変更を理解できます。
+
 ## <a name="the-csproj-format"></a>csproj 形式
 
 新しい形式の \*.csproj は XML ベースの形式です。 次の例は、`Microsoft.NET.Sdk` を利用した .NET Core プロジェクトのルート ノードです。 Web プロジェクトの場合、使用される SDK は `Microsoft.NET.Sdk.Web` です。
@@ -32,6 +32,7 @@ ms.locfileid: "33218804"
 ## <a name="common-top-level-properties"></a>一般的な最上位プロパティ
 
 ### <a name="name"></a>name
+
 ```json
 {
   "name": "MyProjectName"
@@ -40,7 +41,7 @@ ms.locfileid: "33218804"
 
 サポート対象から除外されました。 csproj では、これは、ディレクトリ名により定義される、プロジェクト ファイル名により決定されます。 たとえば、`MyProjectName.csproj` のようにします。
 
-既定では、プロジェクト ファイル名により、`<AssemblyName>` プロパティと `<PackageId>` プロパティの値も指定されます。 
+既定では、プロジェクト ファイル名により、`<AssemblyName>` プロパティと `<PackageId>` プロパティの値も指定されます。
 
 ```xml
 <PropertyGroup>
@@ -49,7 +50,8 @@ ms.locfileid: "33218804"
 </PropertyGroup>
 ```
 
-project.json に `buildOptions\outputName` プロパティが定義されている場合、`<AssemblyName>` には `<PackageId>` 以外の値が設定されます。 詳細については、「[その他の共通ビルド オプション](#other-common-build-options)」を参照してください。
+project.json に `buildOptions\outputName` プロパティが定義されている場合、`<AssemblyName>` には `<PackageId>` 以外の値が設定されます。
+詳細については、「[その他の共通ビルド オプション](#other-common-build-options)」を参照してください。
 
 ### <a name="version"></a>version
 
@@ -58,6 +60,7 @@ project.json に `buildOptions\outputName` プロパティが定義されてい�
   "version": "1.0.0-alpha-*"
 }
 ```
+
 `VersionPrefix` プロパティおよび `VersionSuffix` プロパティを使用します。
 
 ```xml
@@ -67,7 +70,7 @@ project.json に `buildOptions\outputName` プロパティが定義されてい�
 </PropertyGroup>
 ```
 
-`Version` プロパティを使用することもできますが、これにより、パッケージ処理中にバージョン設定が上書きされることがあります。
+`Version` プロパティを使用することもできますが、これにより、パッケージ処理中にバージョン設定がオーバーライドされることがあります。
 
 ```xml
 <PropertyGroup>
@@ -105,6 +108,7 @@ And it's really great!</Description>
 ## <a name="frameworks"></a>frameworks
 
 ### <a name="one-target-framework"></a>1 つのターゲット フレームワーク
+
 ```json
 {
   "frameworks": {
@@ -130,7 +134,7 @@ And it's really great!</Description>
 }
 ```
 
-`TargetFrameworks` プロパティを使用し、ターゲット フレームワークの一覧を定義します。 複数のフレームワーク値を区切るには、セミコロンを使用します。 
+`TargetFrameworks` プロパティを使用し、ターゲット フレームワークの一覧を定義します。 複数のフレームワーク値を区切るには、セミコロンを使用します。
 
 ```xml
 <PropertyGroup>
@@ -141,7 +145,8 @@ And it's really great!</Description>
 ## <a name="dependencies"></a>依存関係
 
 > [!IMPORTANT]
-> 依存関係がパッケージではなく、**プロジェクト**の場合、形式は異なります。 詳細については、「[依存関係の種類](#dependency-type)」セクションを参照してください。
+> 依存関係がパッケージではなく、**プロジェクト**の場合、形式は異なります。
+> 詳細については、「[依存関係の種類](#dependency-type)」セクションを参照してください。
 
 ### <a name="netstandardlibrary-metapackage"></a>NETStandard.Library のメタパッケージ
 
@@ -178,6 +183,7 @@ And it's really great!</Description>
 移行されたプロジェクトの `<RuntimeFrameworkVersion>` 値はインストールした SDK のバージョンにより決定されます。
 
 ### <a name="top-level-dependencies"></a>最上位の依存関係
+
 ```json
 {
   "dependencies": {
@@ -193,6 +199,7 @@ And it's really great!</Description>
 ```
 
 ### <a name="per-framework-dependencies"></a>フレームワーク別の依存関係
+
 ```json
 {
   "framework": {
@@ -250,6 +257,7 @@ And it's really great!</Description>
 ### <a name="dependency-type"></a>依存関係の種類
 
 #### <a name="type-project"></a>type: project
+
 ```json
 {
   "dependencies": {
@@ -271,8 +279,8 @@ And it's really great!</Description>
 > [!NOTE]
 > `dotnet pack --version-suffix $suffix` がプロジェクト参照の依存関係バージョンを決定する方法が無効になります。
 
-
 #### <a name="type-build"></a>type: build
+
 ```json
 {
   "dependencies": {
@@ -291,6 +299,7 @@ And it's really great!</Description>
 ```
 
 #### <a name="type-platform"></a>type: platform
+
 ```json
 {
   "dependencies": {
@@ -302,9 +311,10 @@ And it's really great!</Description>
 }
 ```
 
-csproj には同等のものがありません。 
+csproj には同等のものがありません。
 
 ## <a name="runtimes"></a>runtimes
+
 ```json
 {
   "runtimes": {
@@ -322,6 +332,7 @@ csproj には同等のものがありません。
 ```
 
 ### <a name="standalone-apps-self-contained-deployment"></a>スタンドアロン アプリ (自己完結型の展開)
+
 project.json では、`runtimes` セクションを定義することは、ビルドと公開の間にアプリがスタンドアロンであったことを意味します。
 MSBuild では、ビルド中、すべてのプロジェクトが*移植可能*ですが、スタンドアロンとして公開できます。
 
@@ -330,6 +341,7 @@ MSBuild では、ビルド中、すべてのプロジェクトが*移植可能*�
 詳細については、「[自己完結型の展開 (SCD)](../deploying/index.md#self-contained-deployments-scd)」を参照してください。
 
 ## <a name="tools"></a>ツール
+
 ```json
 {
   "tools": {
@@ -442,7 +454,7 @@ MSBuild では、ビルド中、すべてのプロジェクトが*移植可能*�
 
 ```json
 {
-  "packOptions": {    
+  "packOptions": {
     "summary": "numl is a machine learning library intended to ease the use of using standard modeling techniques for both prediction and clustering.",
     "tags": ["machine learning", "framework"],
     "releaseNotes": "Version 0.9.12-beta",
@@ -474,7 +486,8 @@ MSBuild では、ビルド中、すべてのプロジェクトが*移植可能*�
 </PropertyGroup>
 ```
 
-MSBuild では、`owners` 要素に相当するものはありません。 `summary` の場合、MSBuild の `<Description>` プロパティを利用できます (ただし、`summary` の値はそのプロパティに自動的に移行されません)。そのプロパティが [`description`](#-other-common-root-level-options) 要素にマッピングされているためです。
+MSBuild では、`owners` 要素に相当するものはありません。
+`summary` の場合、MSBuild の `<Description>` プロパティを利用できます (ただし、`summary` の値はそのプロパティに自動的に移行されません)。そのプロパティが [`description`](#-other-common-root-level-options) 要素にマッピングされているためです。
 
 ## <a name="scripts"></a>スクリプト
 
@@ -499,7 +512,6 @@ MSBuild でこれに相当するものは[ターゲット](/visualstudio/msbuild
   <Exec Command="removeTempFiles.cmd" />
 </Target>
 ```
-
 
 ## <a name="runtimeoptions"></a>runtimeOptions
 
@@ -531,6 +543,7 @@ MSBuild でこれに相当するものは[ターゲット](/visualstudio/msbuild
 ```
 
 "System.GC.Server" プロパティは csproj ファイルに移行されます。
+
 ```xml
 <PropertyGroup>
   <ServerGarbageCollection>true</ServerGarbageCollection>
@@ -538,6 +551,7 @@ MSBuild でこれに相当するものは[ターゲット](/visualstudio/msbuild
 ```
 
 ただし、csproj のこれらの値はすべて MSBuild プロパティと共に設定できます。
+
 ```xml
 <PropertyGroup>
   <ServerGarbageCollection>true</ServerGarbageCollection>
@@ -549,13 +563,15 @@ MSBuild でこれに相当するものは[ターゲット](/visualstudio/msbuild
 ```
 
 ## <a name="shared"></a>shared
+
 ```json
 {
   "shared": "shared/**/*.cs"
 }
 ```
 
-csproj ではサポートされていません。 代わりに、*.nuspec* ファイルにコンテンツ ファイルを追加する必要があります。 詳細については、「[Including content files](/nuget/schema/nuspec#including-content-files)」 (コンテンツ ファイルを追加する) を参照してください。
+csproj ではサポートされていません。 代わりに、*.nuspec* ファイルにコンテンツ ファイルを追加する必要があります。
+詳細については、「[Including content files](/nuget/schema/nuspec#including-content-files)」 (コンテンツ ファイルを追加する) を参照してください。
 
 ## <a name="files"></a>ファイル
 
@@ -613,7 +629,8 @@ MSBuild では、これは[項目](/visualstudio/msbuild/common-msbuild-project-
 
 .nupkg 内のパッケージ レイアウトは `PackagePath="path"` で変更できます。
 
-`Content` を除き、ほとんどの項目グループで、パッケージに `Pack="true"` を明示的に追加する必要があります。 MSBuild の `<IncludeContentInPack>` プロパティが既定で `true` に設定されているため、`Content` はパッケージの*コンテンツ* フォルダーに置かれます。 詳細については、「[Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package)」 (パッケージにコンテンツを追加する) を参照してください。
+`Content` を除き、ほとんどの項目グループで、パッケージに `Pack="true"` を明示的に追加する必要があります。 MSBuild の `<IncludeContentInPack>` プロパティが既定で `true` に設定されているため、`Content` はパッケージの*コンテンツ* フォルダーに置かれます。
+詳細については、「[Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package)」 (パッケージにコンテンツを追加する) を参照してください。
 
 `PackagePath="%(Identity)"` は、パッケージ パスをプロジェクト関連のファイル パスに設定する簡単な方法です。
 
@@ -659,4 +676,4 @@ MSBuild では、これは[項目](/visualstudio/msbuild/common-msbuild-project-
 
 ## <a name="see-also"></a>参照
 
-[CLI の変更の概要](../tools/cli-msbuild-architecture.md)
+* [CLI の変更の概要](../tools/cli-msbuild-architecture.md)

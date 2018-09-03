@@ -4,12 +4,12 @@ description: .NET Core 2.1 の新機能について。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935580"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43392850"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 
@@ -49,7 +49,7 @@ ms.locfileid: "42935580"
    ```console
    dotnet watch -- --verbose build
    ```
-  
+
    `--verbose` オプションの前にある `--` オプションに注目してください。 これは、子プロセスである `dotnet` に渡される引数から `dotnet watch` コマンドに直接渡されるオプションを区切るものです。 このオプションを使用しないと、`--verbose` オプションが `dotnet build` コマンドではなく `dotnet watch` コマンドに適用されます。
   
    詳細については、「[dotnet watch を使用した ASP.NET Core アプリの開発](/aspnet/core/tutorials/dotnet-watch)」を参照してください。
@@ -88,7 +88,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="roll-forward"></a>ロールフォワード
 
-.NET Core 2.0 以降のすべての .NET Core アプリケーションは、システムにインストールされている最新の*マイナー バージョン*に自動的にロールフォワードされます。 
+.NET Core 2.0 以降のすべての .NET Core アプリケーションは、システムにインストールされている最新の*マイナー バージョン*に自動的にロールフォワードされます。
 
 .NET Core 2.0 以降では、アプリケーションのビルドに使用した .NET Core のバージョンが実行時に存在しない場合、インストールされている .NET Core の最新の*マイナー バージョン*に対してアプリケーションが自動的に実行されます。 つまり、アプリケーションが .NET Core 2.0 を使用してビルドされ、ホスト システムにインストールされているのが .NET Core 2.0 ではなく .NET Core 2.1 である場合は、.NET Core 2.1 を使用してアプリケーションが実行されます。
 
@@ -233,6 +233,6 @@ Linux と macOS では、<xref:System.Net.Http.HttpClient> をプロセス単位
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Core の新機能](index.md)  
-[EF Core 2.1 の新機能](/ef/core/what-is-new/ef-core-2.1)  
-[ASP.NET Core 2.1 の新機能](/aspnet/core/aspnetcore-2.1)
+* [.NET Core の新機能](index.md)  
+* [EF Core 2.1 の新機能](/ef/core/what-is-new/ef-core-2.1)  
+* [ASP.NET Core 2.1 の新機能](/aspnet/core/aspnetcore-2.1)
