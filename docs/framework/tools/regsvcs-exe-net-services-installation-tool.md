@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a13912d006b522e86997fc7850befb996db4b7bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3de5b196d6ec35febe4ba30f7ac41bacacf884cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400251"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487433"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET サービス インストール ツール)
 .NET サービス インストール ツールは、次のアクションを実行します。  
@@ -67,7 +67,7 @@ ms.locfileid: "33400251"
 ## <a name="remarks"></a>コメント  
  Regsvcs.exe には、*assemblyFile.dll* で指定されているソース アセンブリ ファイルが必要です。 このアセンブリは、厳密な名前で署名する必要があります。 厳密な名前での署名について詳しくは、「[厳密な名前でのアセンブリへの署名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)」をご覧ください。 対象アプリケーションおよびタイプ ライブラリの名前は、オプションです。 引数 *applicationName* はソース アセンブリ ファイルから生成できます。存在しない場合は、Regsvcs.exe によって作成されます。 引数 *typelibraryfile* にはタイプ ライブラリ名を指定できます。 タイプ ライブラリ名を指定しない場合、Regsvcs.exe は既定値としてアセンブリ名を使用します。  
   
- Regsvcs.exe がコンポーネントのメソッドを登録する場合は、それらのメソッドに対する[確認要求](http://msdn.microsoft.com/library/e5283e28-2366-4519-b27d-ef5c1ddc1f48)と[リンク確認要求](../../../docs/framework/misc/link-demands.md)の影響を受けます。 このツールは完全に信頼された環境で実行されるため、アクセス許可に対するほとんどの確認要求は成功します。 ただし、Regsvcs.exe では、<xref:System.Security.Permissions.StrongNameIdentityPermission> または <xref:System.Security.Permissions.PublisherIdentityPermission> に対する確認要求やリンク確認要求によって保護されたメソッドを含むコンポーネントを登録することはできません。  
+ Regsvcs.exe がコンポーネントのメソッドを登録する場合は、それらのメソッドに対する[確認要求](https://msdn.microsoft.com/library/e5283e28-2366-4519-b27d-ef5c1ddc1f48)と[リンク確認要求](../../../docs/framework/misc/link-demands.md)の影響を受けます。 このツールは完全に信頼された環境で実行されるため、アクセス許可に対するほとんどの確認要求は成功します。 ただし、Regsvcs.exe では、<xref:System.Security.Permissions.StrongNameIdentityPermission> または <xref:System.Security.Permissions.PublisherIdentityPermission> に対する確認要求やリンク確認要求によって保護されたメソッドを含むコンポーネントを登録することはできません。  
   
  Regsvcs.exe を使用するには、ローカル コンピューターの管理特権が必要です。  
   

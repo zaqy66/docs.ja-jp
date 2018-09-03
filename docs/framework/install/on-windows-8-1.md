@@ -5,12 +5,12 @@ description: Windows 8.1 に .NET Framework をインストールする方法に
 author: rlander
 ms.author: mairaw
 ms.date: 10/22/2017
-ms.openlocfilehash: 761441798ff1f8261b573aa734580aec5849489b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a44471e16729468983b76febea7704bf2a0518ff
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391665"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488067"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Windows 8.1 と Windows Server 2012 R2 に .NET Framework をインストールする
 
@@ -18,7 +18,7 @@ ms.locfileid: "33391665"
 
 ![このアプリケーションを開始できませんでした。](./media/this-application-could-not-be-started.png)
 
-これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 これは Windows 8.1 と Windows Server 2012 R2 でサポートされており、[Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に付属します。
+これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 これは Windows 8.1 と Windows Server 2012 R2 でサポートされており、[Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に付属します。
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
@@ -28,7 +28,7 @@ ms.locfileid: "33391665"
 
 <!-- (https://www.microsoft.com/net/framework/versions/net472?utm_source=ms-docs&utm_medium=referral) -->
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) は、.NET Framework 4.0 以降用に構築されたアプリケーションを実行するために使用できます。
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) は、.NET Framework 4.0 以降用に構築されたアプリケーションを実行するために使用できます。
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
