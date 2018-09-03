@@ -1,54 +1,42 @@
 ---
-title: '方法 : Visual Studio で LINQ to DataSet プロジェクトを作成する'
-ms.date: 03/30/2017
+title: LINQ to DataSet プロジェクトで Visual Studio を作成します。
+ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 094d766146fe55a865713a4672a2bee6a838ff55
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 12544c6b5153a5f6300072d1646f2c119fb255a1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758868"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482179"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a><span data-ttu-id="e2cb3-102">方法 : Visual Studio で LINQ to DataSet プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="e2cb3-102">How to: Create a LINQ to DataSet Project In Visual Studio</span></span>
-<span data-ttu-id="e2cb3-103">別の種類の [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] プロジェクトでは、特定のインポートされる名前空間 (Visual Basic) または `using` ディレクティブ (C#) および参照が必要です。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-103">The different types of [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] projects require certain imported namespaces (Visual Basic) or `using` directives (C#) and references.</span></span> <span data-ttu-id="e2cb3-104">最小要件は、System.Core.dll への参照と、`using` の <xref:System.Linq> ディレクティブです。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-104">The minimum requirement is a reference to System.Core.dll and a `using` directive for <xref:System.Linq>.</span></span> <span data-ttu-id="e2cb3-105">既定では、これらは新しい [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] プロジェクトを作成した場合に提供されます。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-105">By default, these are supplied if you create a new [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] project.</span></span> <span data-ttu-id="e2cb3-106">また、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] では、System.Data.dll および System.Data.DataSetExtensions.dll への参照と、`Imports` (Visual Basic) または `using` (C#) ディレクティブも必要です。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-106">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] also requires a reference to System.Data.dll and System.Data.DataSetExtensions.dll and an `Imports` (Visual Basic) or `using` (C#) directive.</span></span>  
-  
- <span data-ttu-id="e2cb3-107">以前のバージョンの Visual Studio のプロジェクトをアップグレードする場合、これらの LINQ 関連の参照を手動で追加する必要がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-107">If you are upgrading a project from an earlier version of Visual Studio, you might have to supply these LINQ-related references manually.</span></span> <span data-ttu-id="e2cb3-108">さらに、.NET Framework バージョン 3.5 をプロジェクトのターゲットとして手動で設定する必要がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-108">You might also have to manually set the project to target the .NET Framework version 3.5.</span></span>  
-  
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a><span data-ttu-id="c7729-102">方法: LINQ to DataSet プロジェクトで Visual Studio を作成</span><span class="sxs-lookup"><span data-stu-id="c7729-102">How to: Create a LINQ to DataSet project In Visual Studio</span></span>
+
+<span data-ttu-id="c7729-103">LINQ プロジェクトの種類は、特定のアセンブリ参照とインポートされた名前空間 (Visual Basic) が必要です。 または[を使用して](../../../csharp/language-reference/keywords/using-directive.md)ディレクティブ (c#)。</span><span class="sxs-lookup"><span data-stu-id="c7729-103">The different types of LINQ projects require certain assembly references and imported namespaces (Visual Basic) or [using](../../../csharp/language-reference/keywords/using-directive.md) directives (C#).</span></span> <span data-ttu-id="c7729-104">LINQ の最低要件への参照を*System.Core.dll*と`using`ディレクティブを<xref:System.Linq>します。</span><span class="sxs-lookup"><span data-stu-id="c7729-104">The minimum requirement for LINQ is a reference to *System.Core.dll* and a `using` directive for <xref:System.Linq>.</span></span>
+
+<span data-ttu-id="c7729-105">これらの要件は、Visual Studio 2017 で新しい c# コンソール アプリ プロジェクトを作成する場合に、既定で提供されます。</span><span class="sxs-lookup"><span data-stu-id="c7729-105">These requirements are supplied by default if you create a new C# console app project in Visual Studio 2017.</span></span> <span data-ttu-id="c7729-106">プロジェクトを Visual Studio の以前のバージョンからアップグレードする場合は、これらの LINQ に関連する参照を手動で指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c7729-106">If you're upgrading a project from an earlier version of Visual Studio, you might have to supply these LINQ-related references manually.</span></span>
+
+<span data-ttu-id="c7729-107">LINQ to DataSet を 2 つの他の参照を必要と*System.Data.dll*と*System.Data.DataSetExtensions.dll*します。</span><span class="sxs-lookup"><span data-stu-id="c7729-107">LINQ to DataSet requires two additional references to *System.Data.dll* and *System.Data.DataSetExtensions.dll*.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="e2cb3-109">コマンド プロンプトから構築する場合での LINQ に関連する Dll を手動で参照する必要があります`drive` **:** \Program Files\Reference Assemblies\Microsoft\Framework\v3.5 です。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-109">If you are building from a command prompt, you must manually reference the LINQ-related DLLs in `drive`**:** \Program Files\Reference Assemblies\Microsoft\Framework\v3.5.</span></span>  
-  
-### <a name="to-target-the-net-framework-35"></a><span data-ttu-id="e2cb3-110">.NET Framework 3.5 をターゲットとして設定するには</span><span class="sxs-lookup"><span data-stu-id="e2cb3-110">To target the .NET Framework 3.5</span></span>  
-  
-1.  <span data-ttu-id="e2cb3-111">[!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] で、新しい Visual Basic または C# プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-111">In [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)], create a new Visual Basic or C# project.</span></span> <span data-ttu-id="e2cb3-112">または、Visual Studio 2005 で作成されている Visual Basic または C# プロジェクトを開き、指示に従って [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] プロジェクトに変換します。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-112">Alternatively, you can open a Visual Basic or C# project that was created in Visual Studio 2005 and follow the prompts to convert it to a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] project.</span></span>  
-  
-2.  <span data-ttu-id="e2cb3-113">C# プロジェクトをクリックして、**プロジェクト** メニューをクリックして**プロパティ**です。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-113">For a C# project, click the **Project** menu, and then click **Properties**.</span></span>  
-  
-    1.  <span data-ttu-id="e2cb3-114">**アプリケーション**プロパティ] ページで、[.NET Framework 3.5、**ターゲット フレームワーク**ドロップダウン リスト。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-114">In the **Application** property page, select .NET Framework 3.5 in the **Target Framework** drop-down list.</span></span>  
-  
-3.  <span data-ttu-id="e2cb3-115">Visual Basic プロジェクトをクリックして、**プロジェクト** メニューをクリックして**プロパティ**です。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-115">For a Visual Basic project, click the **Project** menu, and then click **Properties**.</span></span>  
-  
-    1.  <span data-ttu-id="e2cb3-116">**コンパイル**プロパティ ページで、をクリックして**詳細コンパイル オプション**で .NET Framework 3.5 をクリックして、**ターゲット フレームワーク (すべての構成)** ドロップダウン リスト。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-116">In the **Compile** property page, click **Advanced Compile Options** and then select .NET Framework 3.5 in the **Target Framework (all configurations)** drop-down list.</span></span>  
-  
-4.  <span data-ttu-id="e2cb3-117">**プロジェクト** メニューのをクリックして**参照の追加**をクリックして、 **.NET**  タブで、下方向にスクロール**System.Core**をクリックし、 をクリックして**Ok**です。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-117">On the **Project** menu, click **Add Reference**, click the **.NET** tab, scroll down to **System.Core**, click it, and then click **OK**.</span></span>  
-  
-5.  <span data-ttu-id="e2cb3-118">ソース コード ファイルまたはプロジェクトに `using` の <xref:System.Linq> ディレクティブまたはインポートされる名前空間を追加します。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-118">Add a `using` directive or imported namespace for <xref:System.Linq> to your source code file or project.</span></span>  
-  
-     <span data-ttu-id="e2cb3-119">詳細については、次を参照してください。[ディレクティブを使用して](~/docs/csharp/language-reference/keywords/using-directive.md)または[する方法: 追加またはインポートされた名前空間 (Visual Basic) を削除する](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)です。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-119">For more information, see [using Directive](~/docs/csharp/language-reference/keywords/using-directive.md) or [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).</span></span>  
-  
-### <a name="to-enable-linq-to-dataset-functionality"></a><span data-ttu-id="e2cb3-120">LINQ to DataSet 機能を有効にするには</span><span class="sxs-lookup"><span data-stu-id="e2cb3-120">To enable LINQ to DataSet functionality</span></span>  
-  
-1.  <span data-ttu-id="e2cb3-121">必要に応じて、このトピックの前の方で説明した手順に従って、System.Core.dll への参照および System.Linq の `using` ディレクティブまたはインポートされる名前空間を追加します。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-121">If necessary, follow the steps earlier in this topic to add a reference to System.Core.dll and a `using` directive or imported namespace for System.Linq.</span></span>  
-  
-2.  <span data-ttu-id="e2cb3-122">C# または Visual Basic の場合をクリックして、**プロジェクト** メニューをクリックして**参照の追加**です。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-122">In C# or Visual Basic, click the **Project** menu, and then click **Add Reference**.</span></span>  
-  
-3.  <span data-ttu-id="e2cb3-123">**参照の追加** ダイアログ ボックスをクリックして、 **.NET**タブが前面にない場合。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-123">In the **Add Reference** dialog box, click the **.NET** tab if it is not on top.</span></span> <span data-ttu-id="e2cb3-124">下方向にスクロール**System.Data**と**System.Data.DataSetExtensions**にをクリックします。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-124">Scroll down to **System.Data** and **System.Data.DataSetExtensions** and click on them.</span></span> <span data-ttu-id="e2cb3-125">クリックして、 **OK**ボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-125">Click the **OK** button.</span></span>  
-  
-4.  <span data-ttu-id="e2cb3-126">ソース コード ファイルまたはプロジェクトに `using` の <xref:System.Data> ディレクティブまたはインポートされる名前空間を追加します。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-126">Add a `using` directive or imported namespace for <xref:System.Data> to your source code file or project.</span></span> <span data-ttu-id="e2cb3-127">詳細については、次を参照してください。[ディレクティブを使用して](~/docs/csharp/language-reference/keywords/using-directive.md)または[する方法: 追加またはインポートされた名前空間 (Visual Basic) を削除する](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)です。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-127">For more information, see [using Directive](~/docs/csharp/language-reference/keywords/using-directive.md) or [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).</span></span>  
-  
-5.  <span data-ttu-id="e2cb3-128">LINQ to Dataset 機能を使用するために、System.Data.DataSetExtensions.dll への参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-128">Add a reference to System.Data.DataSetExtensions.dll for LINQ to Dataset functionality.</span></span> <span data-ttu-id="e2cb3-129">System.Data.dll への参照が追加されていない場合はこれを追加します。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-129">Add a reference to System.Data.dll if it does not already exist.</span></span>  
-  
-6.  <span data-ttu-id="e2cb3-130">オプションで、データベースにどのように接続するかに合わせて、`using` または `System.Data.Common` の `System.Data.SqlClient` ディレクティブまたはインポートされる名前空間を追加します。</span><span class="sxs-lookup"><span data-stu-id="e2cb3-130">Optionally, add a `using` directive or imported namespace for `System.Data.Common` or `System.Data.SqlClient`, depending on how you connect to the database.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="e2cb3-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="e2cb3-131">See Also</span></span>  
- [<span data-ttu-id="e2cb3-132">はじめに</span><span class="sxs-lookup"><span data-stu-id="e2cb3-132">Getting Started</span></span>](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
- [<span data-ttu-id="e2cb3-133">はじめに (LINQ について)</span><span class="sxs-lookup"><span data-stu-id="e2cb3-133">Getting Started with LINQ</span></span>](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+> <span data-ttu-id="c7729-108">コマンド プロンプトから構築する場合は、LINQ 関連の Dll を手動で参照する必要があります *%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.5*します。</span><span class="sxs-lookup"><span data-stu-id="c7729-108">If you're building from a command prompt, you must manually reference the LINQ-related DLLs in *%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.5*.</span></span>
+
+## <a name="to-enable-linq-to-dataset-functionality"></a><span data-ttu-id="c7729-109">LINQ to DataSet 機能を有効にするには</span><span class="sxs-lookup"><span data-stu-id="c7729-109">To enable LINQ to DataSet functionality</span></span>
+
+<span data-ttu-id="c7729-110">既存のプロジェクトで DataSet 機能を LINQ を有効にするには次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="c7729-110">Follow these steps to to enable LINQ to DataSet functionality in an existing project.</span></span>
+
+1. <span data-ttu-id="c7729-111">参照を追加**System.Core**、 **System.Data**、および**System.Data.DataSetExtensions**します。</span><span class="sxs-lookup"><span data-stu-id="c7729-111">Add references to **System.Core**, **System.Data**, and **System.Data.DataSetExtensions**.</span></span>
+
+   <span data-ttu-id="c7729-112">**ソリューション エクスプ ローラー**を右クリックし、**参照**ノード**参照の追加**します。</span><span class="sxs-lookup"><span data-stu-id="c7729-112">In **Solution Explorer**, right-click on the **References** node and select **Add Reference**.</span></span> <span data-ttu-id="c7729-113">**参照マネージャー**ダイアログ ボックスで、 **System.Core**、 **System.Data**、および**System.Data.DataSetExtensions**します。</span><span class="sxs-lookup"><span data-stu-id="c7729-113">In the **Reference Manager** dialog box, select **System.Core**, **System.Data**, and **System.Data.DataSetExtensions**.</span></span> <span data-ttu-id="c7729-114">**[OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="c7729-114">Select **OK**.</span></span>
+
+1. <span data-ttu-id="c7729-115">追加[を使用して](../../../csharp/language-reference/keywords/using-directive.md)ディレクティブ (または[Imports ステートメント](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)Visual basic) の**System.Data**と**System.Linq**します。</span><span class="sxs-lookup"><span data-stu-id="c7729-115">Add [using](../../../csharp/language-reference/keywords/using-directive.md) directives (or [Imports statements](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) in Visual Basic) for **System.Data** and **System.Linq**.</span></span>
+
+   ```csharp
+   using System.Data;
+   using System.Linq;
+   ```
+
+1. <span data-ttu-id="c7729-116">必要に応じて、追加、`using`ディレクティブ (または`Imports`ステートメント) の**System.Data.Common**または**System.Data.SqlClient**データベースに接続する方法によって異なります。</span><span class="sxs-lookup"><span data-stu-id="c7729-116">Optionally, add a `using` directive (or `Imports` statement) for **System.Data.Common** or **System.Data.SqlClient**, depending on how you connect to the database.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="c7729-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="c7729-117">See also</span></span>
+
+- [<span data-ttu-id="c7729-118">LINQ to DataSet を概要します。</span><span class="sxs-lookup"><span data-stu-id="c7729-118">Get started with LINQ to DataSet</span></span>](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

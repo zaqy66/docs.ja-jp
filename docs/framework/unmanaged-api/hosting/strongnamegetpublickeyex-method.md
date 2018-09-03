@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03e3ff2adc238640034309e0f9eab6e786472631
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 82dbacdcf89a44455bb4963e73dc5e91bda1cbc7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446091"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482451"
 ---
-# <a name="strongnamegetpublickeyex-method"></a><span data-ttu-id="df5fd-102">StrongNameGetPublicKeyEx メソッド</span><span class="sxs-lookup"><span data-stu-id="df5fd-102">StrongNameGetPublicKeyEx Method</span></span>
-<span data-ttu-id="df5fd-103">公開/秘密キーのペアから公開キーを取得し、ハッシュ アルゴリズムと署名アルゴリズムを指定します。</span><span class="sxs-lookup"><span data-stu-id="df5fd-103">Gets the public key from a public/private key pair, and specifies a hash algorithm and a signature algorithm.</span></span>  
+# <a name="strongnamegetpublickeyex-method"></a><span data-ttu-id="b67ec-102">StrongNameGetPublicKeyEx メソッド</span><span class="sxs-lookup"><span data-stu-id="b67ec-102">StrongNameGetPublicKeyEx Method</span></span>
+<span data-ttu-id="b67ec-103">公開/秘密キーのペアから公開キーを取得し、ハッシュ アルゴリズムおよび署名アルゴリズムを指定します。</span><span class="sxs-lookup"><span data-stu-id="b67ec-103">Gets the public key from a public/private key pair, and specifies a hash algorithm and a signature algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df5fd-104">構文</span><span class="sxs-lookup"><span data-stu-id="df5fd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b67ec-104">構文</span><span class="sxs-lookup"><span data-stu-id="b67ec-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameGetPublicKey (   
@@ -41,60 +41,60 @@ HRESULT StrongNameGetPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="df5fd-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="df5fd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b67ec-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b67ec-105">Parameters</span></span>  
  `pwzKeyContainer`  
- <span data-ttu-id="df5fd-106">[in]公開/秘密キー ペアを格納するキー コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="df5fd-106">[in] The name of the key container that contains the public/private key pair.</span></span> <span data-ttu-id="df5fd-107">場合`pbKeyBlob`が null、`szKeyContainer`暗号化サービス プロバイダー (CSP) 内で有効なコンテナーを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="df5fd-107">If `pbKeyBlob` is null, `szKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="df5fd-108">ここで、`StrongNameGetPublicKeyEx`メソッドは、コンテナーに格納されているキーのペアから公開キーを抽出します。</span><span class="sxs-lookup"><span data-stu-id="df5fd-108">In this case, the `StrongNameGetPublicKeyEx` method extracts the public key from the key pair stored in the container.</span></span>  
+ <span data-ttu-id="b67ec-106">[in]公開/秘密キー ペアを格納するキー コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="b67ec-106">[in] The name of the key container that contains the public/private key pair.</span></span> <span data-ttu-id="b67ec-107">場合`pbKeyBlob`が null、`szKeyContainer`暗号化サービス プロバイダー (CSP) 内で有効なコンテナーを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b67ec-107">If `pbKeyBlob` is null, `szKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="b67ec-108">ここで、`StrongNameGetPublicKeyEx`メソッドは、コンテナーに格納されているキーのペアから公開キーを抽出します。</span><span class="sxs-lookup"><span data-stu-id="b67ec-108">In this case, the `StrongNameGetPublicKeyEx` method extracts the public key from the key pair stored in the container.</span></span>  
   
- <span data-ttu-id="df5fd-109">場合`pbKeyBlob`が null でないと見なされますのキー ペア キー バイナリ ラージ オブジェクト (BLOB) に含まれています。</span><span class="sxs-lookup"><span data-stu-id="df5fd-109">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
+ <span data-ttu-id="b67ec-109">場合`pbKeyBlob`が null でないと見なされます、キーのペア キー バイナリ ラージ オブジェクト (BLOB) に格納します。</span><span class="sxs-lookup"><span data-stu-id="b67ec-109">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
   
- <span data-ttu-id="df5fd-110">キーは、1024 ビットの Rivest-shamir-adleman (RSA) 署名キーである必要があります。</span><span class="sxs-lookup"><span data-stu-id="df5fd-110">The keys must be 1024-bit Rivest-Shamir-Adleman (RSA) signing keys.</span></span> <span data-ttu-id="df5fd-111">この時点では、その他の種類のキーはサポートされません。</span><span class="sxs-lookup"><span data-stu-id="df5fd-111">No other types of keys are supported at this time.</span></span>  
+ <span data-ttu-id="b67ec-110">キーは、1024 ビット Rivest-Shamir-Adleman (RSA) 署名キーである必要があります。</span><span class="sxs-lookup"><span data-stu-id="b67ec-110">The keys must be 1024-bit Rivest-Shamir-Adleman (RSA) signing keys.</span></span> <span data-ttu-id="b67ec-111">この時点でその他の種類のキーがサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="b67ec-111">No other types of keys are supported at this time.</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="df5fd-112">[in]公開/秘密キー ペアへのポインター。</span><span class="sxs-lookup"><span data-stu-id="df5fd-112">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="df5fd-113">Win32 によって作成された形式では、このペア`CryptExportKey`関数。</span><span class="sxs-lookup"><span data-stu-id="df5fd-113">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="df5fd-114">場合`pbKeyBlob`は null、によって指定されたキー コンテナー`szKeyContainer`キー ペアを格納すると見なされます。</span><span class="sxs-lookup"><span data-stu-id="df5fd-114">If `pbKeyBlob` is null, the key container specified by `szKeyContainer` is assumed to contain the key pair.</span></span>  
+ <span data-ttu-id="b67ec-112">[in]公開/秘密キーのペアへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b67ec-112">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="b67ec-113">このペアは、Win32 によって作成された形式で、`CryptExportKey`関数。</span><span class="sxs-lookup"><span data-stu-id="b67ec-113">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="b67ec-114">場合`pbKeyBlob`が null で指定されたキー コンテナー`szKeyContainer`キー ペアを格納すると見なされます。</span><span class="sxs-lookup"><span data-stu-id="b67ec-114">If `pbKeyBlob` is null, the key container specified by `szKeyContainer` is assumed to contain the key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="df5fd-115">[in]サイズをバイト単位での`pbKeyBlob`します。</span><span class="sxs-lookup"><span data-stu-id="df5fd-115">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="b67ec-115">[in]サイズ (バイト単位) の`pbKeyBlob`します。</span><span class="sxs-lookup"><span data-stu-id="b67ec-115">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
  `ppbPublicKeyBlob`  
- <span data-ttu-id="df5fd-116">[out]返される公開キー BLOB。</span><span class="sxs-lookup"><span data-stu-id="df5fd-116">[out] The returned public key BLOB.</span></span> <span data-ttu-id="df5fd-117">`ppbPublicKeyBlob`パラメーターが、共通言語ランタイムによって割り当てられるし、呼び出し元に返されます。</span><span class="sxs-lookup"><span data-stu-id="df5fd-117">The `ppbPublicKeyBlob` parameter is allocated by the common language runtime and returned to the caller.</span></span> <span data-ttu-id="df5fd-118">呼び出し元を使用して、メモリを解放する必要があります、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)メソッドです。</span><span class="sxs-lookup"><span data-stu-id="df5fd-118">The caller must free the memory by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
+ <span data-ttu-id="b67ec-116">[out]返される公開キー BLOB。</span><span class="sxs-lookup"><span data-stu-id="b67ec-116">[out] The returned public key BLOB.</span></span> <span data-ttu-id="b67ec-117">`ppbPublicKeyBlob`パラメーターは、共通言語ランタイムによって割り当てられ、呼び出し元に返されます。</span><span class="sxs-lookup"><span data-stu-id="b67ec-117">The `ppbPublicKeyBlob` parameter is allocated by the common language runtime and returned to the caller.</span></span> <span data-ttu-id="b67ec-118">呼び出し元を使用して、メモリを解放する必要があります、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="b67ec-118">The caller must free the memory by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
   
  `pcbPublicKeyBlob`  
- <span data-ttu-id="df5fd-119">[out]返される公開キー BLOB のサイズ。</span><span class="sxs-lookup"><span data-stu-id="df5fd-119">[out] The size of the returned public key BLOB.</span></span>  
+ <span data-ttu-id="b67ec-119">[out]返される公開キー BLOB のサイズ。</span><span class="sxs-lookup"><span data-stu-id="b67ec-119">[out] The size of the returned public key BLOB.</span></span>  
   
  `uHashAlgId`  
- <span data-ttu-id="df5fd-120">[in]アセンブリのハッシュ アルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="df5fd-120">[in] The assembly hash algorithm.</span></span> <span data-ttu-id="df5fd-121">指定できる値の一覧については、「解説」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="df5fd-121">See the Remarks section for a list of accepted values.</span></span>  
+ <span data-ttu-id="b67ec-120">[in]アセンブリ ハッシュ アルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="b67ec-120">[in] The assembly hash algorithm.</span></span> <span data-ttu-id="b67ec-121">指定できる値の一覧については、「解説」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b67ec-121">See the Remarks section for a list of accepted values.</span></span>  
   
  `uReserved`  
- <span data-ttu-id="df5fd-122">[in]将来使用するために予約されています既定値は null です。</span><span class="sxs-lookup"><span data-stu-id="df5fd-122">[in] Reserved for future use; defaults to null.</span></span>  
+ <span data-ttu-id="b67ec-122">[in]今後使用するために予約されていますnull を既定値です。</span><span class="sxs-lookup"><span data-stu-id="b67ec-122">[in] Reserved for future use; defaults to null.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="df5fd-123">戻り値</span><span class="sxs-lookup"><span data-stu-id="df5fd-123">Return Value</span></span>  
- <span data-ttu-id="df5fd-124">`S_OK` メソッドが正常に完了した場合それ以外の場合、失敗を示す HRESULT 値 (を参照してください[の共通 HRESULT 値](http://go.microsoft.com/fwlink/?LinkId=213878)一覧)。</span><span class="sxs-lookup"><span data-stu-id="df5fd-124">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b67ec-123">戻り値</span><span class="sxs-lookup"><span data-stu-id="b67ec-123">Return Value</span></span>  
+ <span data-ttu-id="b67ec-124">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="b67ec-124">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="df5fd-125">コメント</span><span class="sxs-lookup"><span data-stu-id="df5fd-125">Remarks</span></span>  
- <span data-ttu-id="df5fd-126">公開キーが含まれている、 [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)構造体。</span><span class="sxs-lookup"><span data-stu-id="df5fd-126">The public key is contained in a [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) structure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b67ec-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="b67ec-125">Remarks</span></span>  
+ <span data-ttu-id="b67ec-126">公開キーが含まれている、 [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)構造体。</span><span class="sxs-lookup"><span data-stu-id="b67ec-126">The public key is contained in a [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="df5fd-127">コメント</span><span class="sxs-lookup"><span data-stu-id="df5fd-127">Remarks</span></span>  
- <span data-ttu-id="df5fd-128">次の表に、許容される値のセット、`uHashAlgId`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="df5fd-128">The following table shows the set of accepted values for the `uHashAlgId` parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b67ec-127">Remarks</span><span class="sxs-lookup"><span data-stu-id="b67ec-127">Remarks</span></span>  
+ <span data-ttu-id="b67ec-128">次の表に、許容される値のセット、`uHashAlgId`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="b67ec-128">The following table shows the set of accepted values for the `uHashAlgId` parameter.</span></span>  
   
-|<span data-ttu-id="df5fd-129">名前</span><span class="sxs-lookup"><span data-stu-id="df5fd-129">Name</span></span>|<span data-ttu-id="df5fd-130">[値]</span><span class="sxs-lookup"><span data-stu-id="df5fd-130">Value</span></span>|  
+|<span data-ttu-id="b67ec-129">name</span><span class="sxs-lookup"><span data-stu-id="b67ec-129">Name</span></span>|<span data-ttu-id="b67ec-130">[値]</span><span class="sxs-lookup"><span data-stu-id="b67ec-130">Value</span></span>|  
 |----------|-----------|  
-|<span data-ttu-id="df5fd-131">なし</span><span class="sxs-lookup"><span data-stu-id="df5fd-131">None</span></span>|<span data-ttu-id="df5fd-132">0</span><span class="sxs-lookup"><span data-stu-id="df5fd-132">0</span></span>|  
-|<span data-ttu-id="df5fd-133">SHA-1</span><span class="sxs-lookup"><span data-stu-id="df5fd-133">SHA-1</span></span>|<span data-ttu-id="df5fd-134">0x8004</span><span class="sxs-lookup"><span data-stu-id="df5fd-134">0x8004</span></span>|  
-|<span data-ttu-id="df5fd-135">SHA-256</span><span class="sxs-lookup"><span data-stu-id="df5fd-135">SHA-256</span></span>|<span data-ttu-id="df5fd-136">0x800c</span><span class="sxs-lookup"><span data-stu-id="df5fd-136">0x800c</span></span>|  
-|<span data-ttu-id="df5fd-137">SHA-384</span><span class="sxs-lookup"><span data-stu-id="df5fd-137">SHA-384</span></span>|<span data-ttu-id="df5fd-138">0x800d</span><span class="sxs-lookup"><span data-stu-id="df5fd-138">0x800d</span></span>|  
-|<span data-ttu-id="df5fd-139">SHA-512</span><span class="sxs-lookup"><span data-stu-id="df5fd-139">SHA-512</span></span>|<span data-ttu-id="df5fd-140">0x800e</span><span class="sxs-lookup"><span data-stu-id="df5fd-140">0x800e</span></span>|  
+|<span data-ttu-id="b67ec-131">なし</span><span class="sxs-lookup"><span data-stu-id="b67ec-131">None</span></span>|<span data-ttu-id="b67ec-132">0</span><span class="sxs-lookup"><span data-stu-id="b67ec-132">0</span></span>|  
+|<span data-ttu-id="b67ec-133">SHA 1</span><span class="sxs-lookup"><span data-stu-id="b67ec-133">SHA-1</span></span>|<span data-ttu-id="b67ec-134">0x8004</span><span class="sxs-lookup"><span data-stu-id="b67ec-134">0x8004</span></span>|  
+|<span data-ttu-id="b67ec-135">SHA-256</span><span class="sxs-lookup"><span data-stu-id="b67ec-135">SHA-256</span></span>|<span data-ttu-id="b67ec-136">0x800c</span><span class="sxs-lookup"><span data-stu-id="b67ec-136">0x800c</span></span>|  
+|<span data-ttu-id="b67ec-137">SHA-384</span><span class="sxs-lookup"><span data-stu-id="b67ec-137">SHA-384</span></span>|<span data-ttu-id="b67ec-138">0x800d</span><span class="sxs-lookup"><span data-stu-id="b67ec-138">0x800d</span></span>|  
+|<span data-ttu-id="b67ec-139">SHA 512</span><span class="sxs-lookup"><span data-stu-id="b67ec-139">SHA-512</span></span>|<span data-ttu-id="b67ec-140">0x800e</span><span class="sxs-lookup"><span data-stu-id="b67ec-140">0x800e</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="df5fd-141">要件</span><span class="sxs-lookup"><span data-stu-id="df5fd-141">Requirements</span></span>  
- <span data-ttu-id="df5fd-142">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="df5fd-142">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b67ec-141">要件</span><span class="sxs-lookup"><span data-stu-id="b67ec-141">Requirements</span></span>  
+ <span data-ttu-id="b67ec-142">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b67ec-142">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="df5fd-143">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="df5fd-143">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="b67ec-143">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="b67ec-143">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="df5fd-144">**ライブラリ:** MSCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="df5fd-144">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b67ec-144">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="b67ec-144">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="df5fd-145">**.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="df5fd-145">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="b67ec-145">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b67ec-145">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df5fd-146">関連項目</span><span class="sxs-lookup"><span data-stu-id="df5fd-146">See Also</span></span>  
- [<span data-ttu-id="df5fd-147">StrongNameTokenFromPublicKey メソッド</span><span class="sxs-lookup"><span data-stu-id="df5fd-147">StrongNameTokenFromPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  
- [<span data-ttu-id="df5fd-148">PublicKeyBlob 構造体</span><span class="sxs-lookup"><span data-stu-id="df5fd-148">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
- [<span data-ttu-id="df5fd-149">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="df5fd-149">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
- [<span data-ttu-id="df5fd-150">StrongNameGetPublicKey メソッド</span><span class="sxs-lookup"><span data-stu-id="df5fd-150">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
+## <a name="see-also"></a><span data-ttu-id="b67ec-146">関連項目</span><span class="sxs-lookup"><span data-stu-id="b67ec-146">See Also</span></span>  
+ [<span data-ttu-id="b67ec-147">StrongNameTokenFromPublicKey メソッド</span><span class="sxs-lookup"><span data-stu-id="b67ec-147">StrongNameTokenFromPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  
+ [<span data-ttu-id="b67ec-148">PublicKeyBlob 構造体</span><span class="sxs-lookup"><span data-stu-id="b67ec-148">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
+ [<span data-ttu-id="b67ec-149">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b67ec-149">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
+ [<span data-ttu-id="b67ec-150">StrongNameGetPublicKey メソッド</span><span class="sxs-lookup"><span data-stu-id="b67ec-150">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)

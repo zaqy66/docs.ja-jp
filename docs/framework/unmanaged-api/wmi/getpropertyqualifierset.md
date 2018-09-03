@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935701"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481196"
 ---
-# <a name="getpropertyqualifierset-function"></a><span data-ttu-id="6e269-103">GetPropertyQualifierSet 関数</span><span class="sxs-lookup"><span data-stu-id="6e269-103">GetPropertyQualifierSet function</span></span>
-<span data-ttu-id="6e269-104">特定のプロパティを設定する修飾子を取得します。</span><span class="sxs-lookup"><span data-stu-id="6e269-104">Retrieves the qualifier set for a particular property.</span></span>
+# <a name="getpropertyqualifierset-function"></a><span data-ttu-id="66ca6-103">GetPropertyQualifierSet 関数</span><span class="sxs-lookup"><span data-stu-id="66ca6-103">GetPropertyQualifierSet function</span></span>
+<span data-ttu-id="66ca6-104">特定のプロパティを設定する修飾子を取得します。</span><span class="sxs-lookup"><span data-stu-id="66ca6-104">Retrieves the qualifier set for a particular property.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="6e269-105">構文</span><span class="sxs-lookup"><span data-stu-id="6e269-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66ca6-105">構文</span><span class="sxs-lookup"><span data-stu-id="66ca6-105">Syntax</span></span>  
   
 ```  
 HRESULT GetPropertyQualifierSet (
@@ -39,49 +39,49 @@ HRESULT GetPropertyQualifierSet (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="6e269-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6e269-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="66ca6-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="66ca6-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="6e269-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="6e269-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="66ca6-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="66ca6-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="6e269-108">[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="6e269-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="66ca6-108">[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="66ca6-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszMethod`  
-<span data-ttu-id="6e269-109">[in]プロパティ名。</span><span class="sxs-lookup"><span data-stu-id="6e269-109">[in] The property  name.</span></span> <span data-ttu-id="6e269-110">`wszProperty` 有効なをポイントする必要があります`LPCWSTR`します。</span><span class="sxs-lookup"><span data-stu-id="6e269-110">`wszProperty` must point to a valid `LPCWSTR`.</span></span> 
+<span data-ttu-id="66ca6-109">[in]プロパティ名。</span><span class="sxs-lookup"><span data-stu-id="66ca6-109">[in] The property  name.</span></span> <span data-ttu-id="66ca6-110">`wszProperty` 有効なをポイントする必要があります`LPCWSTR`します。</span><span class="sxs-lookup"><span data-stu-id="66ca6-110">`wszProperty` must point to a valid `LPCWSTR`.</span></span> 
 
 `ppQualSet`  
-<span data-ttu-id="6e269-111">[out]プロパティの修飾子にアクセスできるインターフェイス ポインターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="6e269-111">[out] Receives the interface pointer that allows access to the qualifiers of the property.</span></span> <span data-ttu-id="6e269-112">`ppQualSet` として `null` を使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="6e269-112">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="6e269-113">かどうかは、エラーが発生し、新しいオブジェクトは返されませんを指すポインターを設定`null`します。</span><span class="sxs-lookup"><span data-stu-id="6e269-113">If an error occurs, a new object is not returned, and the pointer is set to point to `null`.</span></span> 
+<span data-ttu-id="66ca6-111">[out]プロパティの修飾子にアクセスできるインターフェイス ポインターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="66ca6-111">[out] Receives the interface pointer that allows access to the qualifiers of the property.</span></span> <span data-ttu-id="66ca6-112">`ppQualSet` として `null` を使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="66ca6-112">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="66ca6-113">かどうかは、エラーが発生し、新しいオブジェクトは返されませんを指すポインターを設定`null`します。</span><span class="sxs-lookup"><span data-stu-id="66ca6-113">If an error occurs, a new object is not returned, and the pointer is set to point to `null`.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="6e269-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="6e269-114">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="66ca6-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="66ca6-114">Return value</span></span>
 
-<span data-ttu-id="6e269-115">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="6e269-115">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="66ca6-115">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="66ca6-115">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="6e269-116">定数</span><span class="sxs-lookup"><span data-stu-id="6e269-116">Constant</span></span>  |<span data-ttu-id="6e269-117">値</span><span class="sxs-lookup"><span data-stu-id="6e269-117">Value</span></span>  |<span data-ttu-id="6e269-118">説明</span><span class="sxs-lookup"><span data-stu-id="6e269-118">Description</span></span>  |
+|<span data-ttu-id="66ca6-116">定数</span><span class="sxs-lookup"><span data-stu-id="66ca6-116">Constant</span></span>  |<span data-ttu-id="66ca6-117">値</span><span class="sxs-lookup"><span data-stu-id="66ca6-117">Value</span></span>  |<span data-ttu-id="66ca6-118">説明</span><span class="sxs-lookup"><span data-stu-id="66ca6-118">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="6e269-119">0x80041001</span><span class="sxs-lookup"><span data-stu-id="6e269-119">0x80041001</span></span> | <span data-ttu-id="6e269-120">一般的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="6e269-120">There has been a general failure.</span></span> |
-| `WBEM_E_NOT_FOUND` | <span data-ttu-id="6e269-121">0x80041002</span><span class="sxs-lookup"><span data-stu-id="6e269-121">0x80041002</span></span> | <span data-ttu-id="6e269-122">指定されたメソッドが存在しません。</span><span class="sxs-lookup"><span data-stu-id="6e269-122">The specified method does not exist.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="6e269-123">0x80041006</span><span class="sxs-lookup"><span data-stu-id="6e269-123">0x80041006</span></span> | <span data-ttu-id="6e269-124">操作を完了するのに十分なメモリがあります。</span><span class="sxs-lookup"><span data-stu-id="6e269-124">Not enough memory is available to complete the operation.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="6e269-125">0x80041008</span><span class="sxs-lookup"><span data-stu-id="6e269-125">0x80041008</span></span> | <span data-ttu-id="6e269-126">パラメーターが`null`します。</span><span class="sxs-lookup"><span data-stu-id="6e269-126">A parameter is `null`.</span></span> |
-| `WBEM_E_SYSTEM_PROPERTY` | <span data-ttu-id="6e269-127">0x80041030</span><span class="sxs-lookup"><span data-stu-id="6e269-127">0x80041030</span></span> | <span data-ttu-id="6e269-128">関数は、システム プロパティの修飾子を取得しようとします。</span><span class="sxs-lookup"><span data-stu-id="6e269-128">The function attempts to get qualifiers of a system property.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="6e269-129">0</span><span class="sxs-lookup"><span data-stu-id="6e269-129">0</span></span> | <span data-ttu-id="6e269-130">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="6e269-130">The function call was successful.</span></span>  |
+|`WBEM_E_FAILED` | <span data-ttu-id="66ca6-119">0x80041001</span><span class="sxs-lookup"><span data-stu-id="66ca6-119">0x80041001</span></span> | <span data-ttu-id="66ca6-120">一般的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="66ca6-120">There has been a general failure.</span></span> |
+| `WBEM_E_NOT_FOUND` | <span data-ttu-id="66ca6-121">0x80041002</span><span class="sxs-lookup"><span data-stu-id="66ca6-121">0x80041002</span></span> | <span data-ttu-id="66ca6-122">指定されたメソッドが存在しません。</span><span class="sxs-lookup"><span data-stu-id="66ca6-122">The specified method does not exist.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="66ca6-123">0x80041006</span><span class="sxs-lookup"><span data-stu-id="66ca6-123">0x80041006</span></span> | <span data-ttu-id="66ca6-124">操作を完了するのに十分なメモリがあります。</span><span class="sxs-lookup"><span data-stu-id="66ca6-124">Not enough memory is available to complete the operation.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="66ca6-125">0x80041008</span><span class="sxs-lookup"><span data-stu-id="66ca6-125">0x80041008</span></span> | <span data-ttu-id="66ca6-126">パラメーターが`null`します。</span><span class="sxs-lookup"><span data-stu-id="66ca6-126">A parameter is `null`.</span></span> |
+| `WBEM_E_SYSTEM_PROPERTY` | <span data-ttu-id="66ca6-127">0x80041030</span><span class="sxs-lookup"><span data-stu-id="66ca6-127">0x80041030</span></span> | <span data-ttu-id="66ca6-128">関数は、システム プロパティの修飾子を取得しようとします。</span><span class="sxs-lookup"><span data-stu-id="66ca6-128">The function attempts to get qualifiers of a system property.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="66ca6-129">0</span><span class="sxs-lookup"><span data-stu-id="66ca6-129">0</span></span> | <span data-ttu-id="66ca6-130">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="66ca6-130">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="6e269-131">Remarks</span><span class="sxs-lookup"><span data-stu-id="6e269-131">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="66ca6-131">Remarks</span><span class="sxs-lookup"><span data-stu-id="66ca6-131">Remarks</span></span>
 
-<span data-ttu-id="6e269-132">この関数の呼び出しをラップする、 [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset)メソッド。</span><span class="sxs-lookup"><span data-stu-id="6e269-132">This function wraps a call to the [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) method.</span></span> 
+<span data-ttu-id="66ca6-132">この関数の呼び出しをラップする、 [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset)メソッド。</span><span class="sxs-lookup"><span data-stu-id="66ca6-132">This function wraps a call to the [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) method.</span></span> 
 
-<span data-ttu-id="6e269-133">この関数の呼び出しがサポートされるは、現在のオブジェクトが CIM クラスの定義である場合にのみです。</span><span class="sxs-lookup"><span data-stu-id="6e269-133">A call to this function is supported only if the current object is a CIM class definition.</span></span> <span data-ttu-id="6e269-134">メソッドの操作は利用できません[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters CIM インスタンスをポイントしています。</span><span class="sxs-lookup"><span data-stu-id="6e269-134">Method manipulation is not available for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters that point to CIM instances.</span></span>
+<span data-ttu-id="66ca6-133">この関数の呼び出しがサポートされるは、現在のオブジェクトが CIM クラスの定義である場合にのみです。</span><span class="sxs-lookup"><span data-stu-id="66ca6-133">A call to this function is supported only if the current object is a CIM class definition.</span></span> <span data-ttu-id="66ca6-134">メソッドの操作は利用できません[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters CIM インスタンスをポイントしています。</span><span class="sxs-lookup"><span data-stu-id="66ca6-134">Method manipulation is not available for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters that point to CIM instances.</span></span>
 
-<span data-ttu-id="6e269-135">各メソッドには、独自の修飾子が可能性があるため、 [IWbemQualifierSet ポインター](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)により、呼び出し元を追加、編集、またはこれらの修飾子を削除します。</span><span class="sxs-lookup"><span data-stu-id="6e269-135">Because each method may have its own qualifiers, the [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span>
+<span data-ttu-id="66ca6-135">各メソッドには、独自の修飾子が可能性があるため、 [IWbemQualifierSet ポインター](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)により、呼び出し元を追加、編集、またはこれらの修飾子を削除します。</span><span class="sxs-lookup"><span data-stu-id="66ca6-135">Because each method may have its own qualifiers, the [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span>
 
-<span data-ttu-id="6e269-136">システムのプロパティは修飾子を持たないため、関数を返します`WBEM_E_SYSTEM_PROPERTY`を取得しようとした場合、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)システム プロパティへのポインター。</span><span class="sxs-lookup"><span data-stu-id="6e269-136">Because system properties have no qualifiers, the function returns `WBEM_E_SYSTEM_PROPERTY` if you attempt to obtain a [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) pointer for a system property.</span></span>
+<span data-ttu-id="66ca6-136">システムのプロパティは修飾子を持たないため、関数を返します`WBEM_E_SYSTEM_PROPERTY`を取得しようとした場合、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)システム プロパティへのポインター。</span><span class="sxs-lookup"><span data-stu-id="66ca6-136">Because system properties have no qualifiers, the function returns `WBEM_E_SYSTEM_PROPERTY` if you attempt to obtain a [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) pointer for a system property.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="6e269-137">要件</span><span class="sxs-lookup"><span data-stu-id="6e269-137">Requirements</span></span>  
-<span data-ttu-id="6e269-138">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6e269-138">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66ca6-137">要件</span><span class="sxs-lookup"><span data-stu-id="66ca6-137">Requirements</span></span>  
+<span data-ttu-id="66ca6-138">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="66ca6-138">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6e269-139">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="6e269-139">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="66ca6-139">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="66ca6-139">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="6e269-140">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="6e269-140">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="66ca6-140">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="66ca6-140">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e269-141">関連項目</span><span class="sxs-lookup"><span data-stu-id="6e269-141">See also</span></span>  
-[<span data-ttu-id="6e269-142">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="6e269-142">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="66ca6-141">関連項目</span><span class="sxs-lookup"><span data-stu-id="66ca6-141">See also</span></span>  
+[<span data-ttu-id="66ca6-142">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="66ca6-142">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
