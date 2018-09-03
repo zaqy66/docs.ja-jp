@@ -1,6 +1,6 @@
 ---
 title: Delete 関数 (アンマネージ API リファレンス)
-description: Delete 関数は、CIM クラス定義から、指定されたプロパティとその修飾子のすべてを削除します。
+description: 機能の削除は、CIM クラスの定義から、指定したプロパティとその修飾子のすべてを削除します。
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460244"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479865"
 ---
 # <a name="delete-function"></a>関数を削除します。
-CIM クラス定義から、指定したプロパティとその修飾子のすべてを削除します。
+CIM クラスの定義から、指定したプロパティとその修飾子のすべてを削除します。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -44,16 +44,16 @@ HRESULT Delete (
 [in]このパラメーターは使用されません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)インスタンス。
+[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `wszName`  
-[in]削除するプロパティの名前。 `wszName` 有効なポインターである必要があります`LPCWSTR`です。
+[in]削除するプロパティの名前。 `wszName` 有効なポインターである必要があります`LPCWSTR`します。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。
+この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 不明なエラーが発生しました。 |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | プロパティを削除することはできません。 |
@@ -63,18 +63,18 @@ HRESULT Delete (
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | プロパティは、基本クラスから継承されます。 |
 | `WBEM_E_SYSTEM_PROPERTY` | | プロパティは、システム プロパティです。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | 関数は、現在のクラスの上書きの既定値を削除します。 親クラスでこのプロパティの既定値は、reactiviated されました。 | 
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | 関数は、現在のクラスを上書きする既定値を削除します。 親クラスでは、このプロパティの既定値は reactiviated されました。 | 
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数への呼び出しをラップする、 [IWbemClassObject::Delete](https://msdn.microsoft.com/library/aa391438(v=vs.85).aspx)メソッドです。
+この関数の呼び出しをラップする、 [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete)メソッド。
 
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目  
 [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
