@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 7248f352f95f2883fda9c92386f6ed769f9f2bf8
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792374"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43452795"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 言語のチュートリアル
 チュートリアルでは、製品や特定の機能領域について学習を開始するのに適した一般的なシナリオについて詳細な手順を示します。  
@@ -47,7 +47,7 @@ ms.locfileid: "42792374"
  [COM オブジェクトによる継承の実装](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  クラスを含む COM オブジェクトを Visual Basic 6.0 で作成し、そのオブジェクトを Visual Basic で基底クラスとして使用する方法について説明します。  
   
- [マルチスレッド](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
+ [マルチスレッド](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  テキスト ファイルで単語を検索するマルチスレッド アプリケーションの作成方法について説明します。  
   
  [My.Application.Log による情報の書き込み先の確認](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
@@ -62,8 +62,7 @@ ms.locfileid: "42792374"
  [カスタム ログ リスナーの作成](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  カスタム ログ リスナーを作成する方法と、`My.Application.Log` オブジェクトの出力を待機するように構成する方法について説明します。  
   
- 
-  [マネージド アセンブリからの型の埋め込み](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [マネージド アセンブリからの型の埋め込み](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
  アセンブリの作成方法と、アセンブリから型を埋め込むクライアント プログラムを作成する方法を示します。  
   
  [パスワードの複雑さの検証 (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -78,8 +77,8 @@ ms.locfileid: "42792374"
  [NET Framework のメソッドによるファイル操作](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] のメソッドを使用して、ファイル情報を確認する方法、ファイル内で文字列を検索する方法、およびファイルへの書き込みを行う方法について説明します。  
   
- [オブジェクトの永続化 (Visual Basic)](http://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [オブジェクトの永続化 (Visual Basic)](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
  簡単なオブジェクトを作成し、そのデータをファイルに永続化する方法について説明します。  
   
- [使用法から生成機能によるテスト ファーストのサポート](http://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [使用法から生成機能によるテスト ファーストのサポート](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
  テスト ファースト開発を行う方法について説明します。この開発では、単体テストを作成してからソース コードを記述して、テストを成功させます。
