@@ -2,26 +2,26 @@
 title: 既定の段落スタイルの検索 (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: e29ca281e1867a72a76a28765912c39675ca0f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c81ad1aed25eea3b8363caebe0eb980ca69c557
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335953"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479826"
 ---
-# <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="96171-102">既定の段落スタイルの検索 (C#)</span><span class="sxs-lookup"><span data-stu-id="96171-102">Finding the Default Paragraph Style (C#)</span></span>
-<span data-ttu-id="96171-103">「WordprocessingML ドキュメント内の情報の操作」チュートリアルでの最初のタスクは、ドキュメント内にある段落の既定のスタイルを検索することです。</span><span class="sxs-lookup"><span data-stu-id="96171-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
+# <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="317c1-102">既定の段落スタイルの検索 (C#)</span><span class="sxs-lookup"><span data-stu-id="317c1-102">Finding the Default Paragraph Style (C#)</span></span>
+<span data-ttu-id="317c1-103">「WordprocessingML ドキュメント内の情報の操作」チュートリアルでの最初のタスクは、ドキュメント内にある段落の既定のスタイルを検索することです。</span><span class="sxs-lookup"><span data-stu-id="317c1-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="96171-104">例</span><span class="sxs-lookup"><span data-stu-id="96171-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="317c1-104">例</span><span class="sxs-lookup"><span data-stu-id="317c1-104">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="96171-105">説明</span><span class="sxs-lookup"><span data-stu-id="96171-105">Description</span></span>  
- <span data-ttu-id="96171-106">次の例では、Office Open XML WordprocessingML ドキュメントを開き、パッケージのドキュメント パーツとスタイル パーツを検索した後、既定のスタイル名を検索するクエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="96171-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="96171-107">Office Open XML ドキュメント パッケージおよびその構成パーツについて詳しくは、「[Office Open XML WordprocessingML ドキュメントの詳細 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="96171-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span></span>  
+### <a name="description"></a><span data-ttu-id="317c1-105">説明</span><span class="sxs-lookup"><span data-stu-id="317c1-105">Description</span></span>  
+ <span data-ttu-id="317c1-106">次の例では、Office Open XML WordprocessingML ドキュメントを開き、パッケージのドキュメント パーツとスタイル パーツを検索した後、既定のスタイル名を検索するクエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="317c1-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="317c1-107">Office Open XML ドキュメント パッケージおよびその構成パーツについて詳しくは、「[Office Open XML WordprocessingML ドキュメントの詳細 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="317c1-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span></span>  
   
- <span data-ttu-id="96171-108">このクエリは、値が "paragraph" である `w:style` という名前の属性と、値が "1" である `w:type` という名前の属性を持つ `w:default` という名前のノードを検索します。</span><span class="sxs-lookup"><span data-stu-id="96171-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="96171-109">これらの属性を持つ XML ノードは 1 つしかないため、このクエリは、<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 演算子を使用してコレクションをシングルトンに変換します。</span><span class="sxs-lookup"><span data-stu-id="96171-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="96171-110">次に、`w:styleId` という名前の属性の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="96171-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
+ <span data-ttu-id="317c1-108">このクエリは、値が "paragraph" である `w:style` という名前の属性と、値が "1" である `w:type` という名前の属性を持つ `w:default` という名前のノードを検索します。</span><span class="sxs-lookup"><span data-stu-id="317c1-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="317c1-109">これらの属性を持つ XML ノードは 1 つしかないため、このクエリは、<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 演算子を使用してコレクションをシングルトンに変換します。</span><span class="sxs-lookup"><span data-stu-id="317c1-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="317c1-110">次に、`w:styleId` という名前の属性の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="317c1-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
   
- <span data-ttu-id="96171-111">この例では、WindowsBase アセンブリのクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="96171-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="96171-112">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="96171-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="317c1-111">この例では、WindowsBase アセンブリのクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="317c1-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="317c1-112">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="317c1-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="96171-113">コード</span><span class="sxs-lookup"><span data-stu-id="96171-113">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="317c1-113">コード</span><span class="sxs-lookup"><span data-stu-id="317c1-113">Code</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -76,17 +76,17 @@ string defaultStyle =
 Console.WriteLine("The default style is: {0}", defaultStyle);  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="96171-114">コメント</span><span class="sxs-lookup"><span data-stu-id="96171-114">Comments</span></span>  
- <span data-ttu-id="96171-115">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="96171-115">This example produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="317c1-114">コメント</span><span class="sxs-lookup"><span data-stu-id="317c1-114">Comments</span></span>  
+ <span data-ttu-id="317c1-115">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="317c1-115">This example produces the following output:</span></span>  
   
 ```  
 The default style is: Normal  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="96171-116">次の手順</span><span class="sxs-lookup"><span data-stu-id="96171-116">Next Steps</span></span>  
- <span data-ttu-id="96171-117">次の例では、ドキュメント内のすべての段落およびそのスタイルを検索する同様のクエリを記述します。</span><span class="sxs-lookup"><span data-stu-id="96171-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="317c1-116">次の手順</span><span class="sxs-lookup"><span data-stu-id="317c1-116">Next Steps</span></span>  
+ <span data-ttu-id="317c1-117">次の例では、ドキュメント内のすべての段落およびそのスタイルを検索する同様のクエリを記述します。</span><span class="sxs-lookup"><span data-stu-id="317c1-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
   
--   [<span data-ttu-id="96171-118">段落とそのスタイルの取得 (C#)</span><span class="sxs-lookup"><span data-stu-id="96171-118">Retrieving the Paragraphs and Their Styles (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+-   [<span data-ttu-id="317c1-118">段落とそのスタイルの取得 (C#)</span><span class="sxs-lookup"><span data-stu-id="317c1-118">Retrieving the Paragraphs and Their Styles (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a><span data-ttu-id="96171-119">参照</span><span class="sxs-lookup"><span data-stu-id="96171-119">See Also</span></span>  
- [<span data-ttu-id="96171-120">チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作</span><span class="sxs-lookup"><span data-stu-id="96171-120">Tutorial: Manipulating Content in a WordprocessingML Document</span></span>](http://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)
+## <a name="see-also"></a><span data-ttu-id="317c1-119">参照</span><span class="sxs-lookup"><span data-stu-id="317c1-119">See Also</span></span>  
+ [<span data-ttu-id="317c1-120">チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作</span><span class="sxs-lookup"><span data-stu-id="317c1-120">Tutorial: Manipulating Content in a WordprocessingML Document</span></span>](https://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)

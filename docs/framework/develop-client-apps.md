@@ -14,53 +14,53 @@ helpviewer_keywords:
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
 ms.openlocfilehash: 987f8e25014e8ce6413c998f6eb78d821558ecec
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999696"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43400364"
 ---
-# <a name="developing-client-applications-with-the-net-framework"></a><span data-ttu-id="090e5-102">.NET Framework を使用したクライアント アプリケーションの開発</span><span class="sxs-lookup"><span data-stu-id="090e5-102">Developing client applications with the .NET Framework</span></span>
+# <a name="developing-client-applications-with-the-net-framework"></a><span data-ttu-id="99ffa-102">.NET Framework を使用したクライアント アプリケーションの開発</span><span class="sxs-lookup"><span data-stu-id="99ffa-102">Developing client applications with the .NET Framework</span></span>
 
-<span data-ttu-id="090e5-103">.NET Framework で Windows ベースのアプリケーションを開発する方法は複数あります。</span><span class="sxs-lookup"><span data-stu-id="090e5-103">There are several ways to develop Windows-based applications with the .NET Framework.</span></span> <span data-ttu-id="090e5-104">次のツールおよびフレームワークのいずれかを使用することができます。</span><span class="sxs-lookup"><span data-stu-id="090e5-104">You can use any of these tools and frameworks:</span></span> 
+<span data-ttu-id="99ffa-103">.NET Framework で Windows ベースのアプリケーションを開発する方法は複数あります。</span><span class="sxs-lookup"><span data-stu-id="99ffa-103">There are several ways to develop Windows-based applications with the .NET Framework.</span></span> <span data-ttu-id="99ffa-104">次のツールおよびフレームワークのいずれかを使用することができます。</span><span class="sxs-lookup"><span data-stu-id="99ffa-104">You can use any of these tools and frameworks:</span></span> 
 
-* [<span data-ttu-id="090e5-105">ユニバーサル Windows プラットフォーム (UWP)</span><span class="sxs-lookup"><span data-stu-id="090e5-105">Universal Windows Platform (UWP)</span></span>](https://developer.microsoft.com/windows/apps)
-* [<span data-ttu-id="090e5-106">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="090e5-106">Windows Presentation Foundation (WPF)</span></span>](../../docs/framework/wpf/index.md)
-* [<span data-ttu-id="090e5-107">Windows フォーム</span><span class="sxs-lookup"><span data-stu-id="090e5-107">Windows Forms</span></span>](../../docs/framework/winforms/index.md)
+* [<span data-ttu-id="99ffa-105">ユニバーサル Windows プラットフォーム (UWP)</span><span class="sxs-lookup"><span data-stu-id="99ffa-105">Universal Windows Platform (UWP)</span></span>](https://developer.microsoft.com/windows/apps)
+* [<span data-ttu-id="99ffa-106">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="99ffa-106">Windows Presentation Foundation (WPF)</span></span>](../../docs/framework/wpf/index.md)
+* [<span data-ttu-id="99ffa-107">Windows フォーム</span><span class="sxs-lookup"><span data-stu-id="99ffa-107">Windows Forms</span></span>](../../docs/framework/winforms/index.md)
 
-<span data-ttu-id="090e5-108">このセクションには、Windows Presentation Foundation または Windows Forms を使用して Windows ベースのアプリケーションを作成する方法について説明しているトピックがあります。</span><span class="sxs-lookup"><span data-stu-id="090e5-108">This section contains topics that describe how to create Windows-based applications by using Windows Presentation Foundation or by using Windows Forms.</span></span> <span data-ttu-id="090e5-109">ただし、.NET Framework を使用して Web アプリケーションを作成したり、コンピューターやデバイス向けのクライアント アプリケーションを作成したりして、Microsoft Store で公開することもできます。</span><span class="sxs-lookup"><span data-stu-id="090e5-109">However, you can also create web applications using the .NET Framework, and client applications for computers or devices that you make available through the Microsoft Store.</span></span>
+<span data-ttu-id="99ffa-108">このセクションには、Windows Presentation Foundation または Windows Forms を使用して Windows ベースのアプリケーションを作成する方法について説明しているトピックがあります。</span><span class="sxs-lookup"><span data-stu-id="99ffa-108">This section contains topics that describe how to create Windows-based applications by using Windows Presentation Foundation or by using Windows Forms.</span></span> <span data-ttu-id="99ffa-109">ただし、.NET Framework を使用して Web アプリケーションを作成したり、コンピューターやデバイス向けのクライアント アプリケーションを作成したりして、Microsoft Store で公開することもできます。</span><span class="sxs-lookup"><span data-stu-id="99ffa-109">However, you can also create web applications using the .NET Framework, and client applications for computers or devices that you make available through the Microsoft Store.</span></span>
  
-## <a name="in-this-section"></a><span data-ttu-id="090e5-110">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="090e5-110">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="99ffa-110">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="99ffa-110">In this section</span></span>
 
-[<span data-ttu-id="090e5-111">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="090e5-111">Windows Presentation Foundation</span></span>](../../docs/framework/wpf/index.md)  
-<span data-ttu-id="090e5-112">WPF を使用したアプリケーション開発の詳細について説明します。</span><span class="sxs-lookup"><span data-stu-id="090e5-112">Provides information about developing applications by using WPF.</span></span>
+[<span data-ttu-id="99ffa-111">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="99ffa-111">Windows Presentation Foundation</span></span>](../../docs/framework/wpf/index.md)  
+<span data-ttu-id="99ffa-112">WPF を使用したアプリケーション開発の詳細について説明します。</span><span class="sxs-lookup"><span data-stu-id="99ffa-112">Provides information about developing applications by using WPF.</span></span>
 
-[<span data-ttu-id="090e5-113">Windows フォーム</span><span class="sxs-lookup"><span data-stu-id="090e5-113">Windows Forms</span></span>](../../docs/framework/winforms/index.md)  
-<span data-ttu-id="090e5-114">Windows フォームを使用したアプリケーション開発の詳細について説明します。</span><span class="sxs-lookup"><span data-stu-id="090e5-114">Provides information about developing applications by using Windows Forms.</span></span>
+[<span data-ttu-id="99ffa-113">Windows フォーム</span><span class="sxs-lookup"><span data-stu-id="99ffa-113">Windows Forms</span></span>](../../docs/framework/winforms/index.md)  
+<span data-ttu-id="99ffa-114">Windows フォームを使用したアプリケーション開発の詳細について説明します。</span><span class="sxs-lookup"><span data-stu-id="99ffa-114">Provides information about developing applications by using Windows Forms.</span></span>
 
-[<span data-ttu-id="090e5-115">共通クライアント技術</span><span class="sxs-lookup"><span data-stu-id="090e5-115">Common Client Technologies</span></span>](../../docs/framework/common-client-technologies/index.md)  
-<span data-ttu-id="090e5-116">クライアント アプリケーションを開発する場合に使用できる、その他の方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="090e5-116">Provides information about additional technologies that can be used when developing client applications.</span></span>
+[<span data-ttu-id="99ffa-115">共通クライアント技術</span><span class="sxs-lookup"><span data-stu-id="99ffa-115">Common Client Technologies</span></span>](../../docs/framework/common-client-technologies/index.md)  
+<span data-ttu-id="99ffa-116">クライアント アプリケーションを開発する場合に使用できる、その他の方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="99ffa-116">Provides information about additional technologies that can be used when developing client applications.</span></span>
 
-## <a name="related-sections"></a><span data-ttu-id="090e5-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="090e5-117">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="99ffa-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="99ffa-117">Related sections</span></span>
 
-[<span data-ttu-id="090e5-118">ユニバーサル Windows プラットフォーム</span><span class="sxs-lookup"><span data-stu-id="090e5-118">Universal Windows Platform</span></span>](https://developer.microsoft.com/windows/apps)  
-<span data-ttu-id="090e5-119">Microsoft Store を介してユーザーが利用できる Windows 10 用のアプリケーションを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="090e5-119">Describes how to create applications for Windows 10 that you can make available to users through the Windows Store.</span></span>
+[<span data-ttu-id="99ffa-118">ユニバーサル Windows プラットフォーム</span><span class="sxs-lookup"><span data-stu-id="99ffa-118">Universal Windows Platform</span></span>](https://developer.microsoft.com/windows/apps)  
+<span data-ttu-id="99ffa-119">Microsoft Store を介してユーザーが利用できる Windows 10 用のアプリケーションを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="99ffa-119">Describes how to create applications for Windows 10 that you can make available to users through the Windows Store.</span></span>
 
-[<span data-ttu-id="090e5-120">UWP アプリ用 .NET</span><span class="sxs-lookup"><span data-stu-id="090e5-120">.NET for UWP apps</span></span>](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
-<span data-ttu-id="090e5-121">Windows コンピューターとデバイスに展開できるストア アプリ用 .NET Framework のサポートについて説明します。</span><span class="sxs-lookup"><span data-stu-id="090e5-121">Describes the .NET Framework support for Store apps, which can be deployed to Windows computers and devices.</span></span>
+[<span data-ttu-id="99ffa-120">UWP アプリ用 .NET</span><span class="sxs-lookup"><span data-stu-id="99ffa-120">.NET for UWP apps</span></span>](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
+<span data-ttu-id="99ffa-121">Windows コンピューターとデバイスに展開できるストア アプリ用 .NET Framework のサポートについて説明します。</span><span class="sxs-lookup"><span data-stu-id="99ffa-121">Describes the .NET Framework support for Store apps, which can be deployed to Windows computers and devices.</span></span>
 
-<span data-ttu-id="090e5-122">[Windows Phone Silverlight 用の .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span><span class="sxs-lookup"><span data-stu-id="090e5-122">[.NET API for Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span></span>  
-<span data-ttu-id="090e5-123">Windows Phone Silverlight を使用したアプリを構築するために利用できる .NET Framework API の一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="090e5-123">Lists the .NET Framework APIs you can use for building apps with Windows Phone Silverlight.</span></span>
+<span data-ttu-id="99ffa-122">[Windows Phone Silverlight 用の .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span><span class="sxs-lookup"><span data-stu-id="99ffa-122">[.NET API for Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span></span>  
+<span data-ttu-id="99ffa-123">Windows Phone Silverlight を使用したアプリを構築するために利用できる .NET Framework API の一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="99ffa-123">Lists the .NET Framework APIs you can use for building apps with Windows Phone Silverlight.</span></span>
   
-[<span data-ttu-id="090e5-124">複数のプラットフォームの開発</span><span class="sxs-lookup"><span data-stu-id="090e5-124">Developing for Multiple Platforms</span></span>](../../docs/standard/cross-platform/index.md)  
-<span data-ttu-id="090e5-125">複数の種類のクライアント アプリを対象にするために .NET Framework を使用できるさまざまな方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="090e5-125">Describes the different methods you can use the .NET Framework to target multiple client app types.</span></span>
+[<span data-ttu-id="99ffa-124">複数のプラットフォームの開発</span><span class="sxs-lookup"><span data-stu-id="99ffa-124">Developing for Multiple Platforms</span></span>](../../docs/standard/cross-platform/index.md)  
+<span data-ttu-id="99ffa-125">複数の種類のクライアント アプリを対象にするために .NET Framework を使用できるさまざまな方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="99ffa-125">Describes the different methods you can use the .NET Framework to target multiple client app types.</span></span>
 
-[<span data-ttu-id="090e5-126">ASP.NET Web サイト入門</span><span class="sxs-lookup"><span data-stu-id="090e5-126">Get Started with ASP.NET Web Sites</span></span>](http://www.asp.net/get-started/websites)  
-<span data-ttu-id="090e5-127">ASP.NET を使用して Web アプリを開発する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="090e5-127">Describes the ways you can develop web apps using ASP.NET.</span></span>
+[<span data-ttu-id="99ffa-126">ASP.NET Web サイト入門</span><span class="sxs-lookup"><span data-stu-id="99ffa-126">Get Started with ASP.NET Web Sites</span></span>](http://www.asp.net/get-started/websites)  
+<span data-ttu-id="99ffa-127">ASP.NET を使用して Web アプリを開発する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="99ffa-127">Describes the ways you can develop web apps using ASP.NET.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="090e5-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="090e5-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="99ffa-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="99ffa-128">See also</span></span>
 
-[<span data-ttu-id="090e5-129">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="090e5-129">.NET Standard</span></span>](../../docs/standard/net-standard.md)  
-[<span data-ttu-id="090e5-130">概要</span><span class="sxs-lookup"><span data-stu-id="090e5-130">Overview</span></span>](../../docs/framework/get-started/overview.md)  
-[<span data-ttu-id="090e5-131">開発ガイド</span><span class="sxs-lookup"><span data-stu-id="090e5-131">Development Guide</span></span>](../../docs/framework/development-guide.md)  
-[<span data-ttu-id="090e5-132">Windows サービス アプリケーション</span><span class="sxs-lookup"><span data-stu-id="090e5-132">Windows Service Applications</span></span>](../../docs/framework/windows-services/index.md)  
+[<span data-ttu-id="99ffa-129">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="99ffa-129">.NET Standard</span></span>](../../docs/standard/net-standard.md)  
+[<span data-ttu-id="99ffa-130">概要</span><span class="sxs-lookup"><span data-stu-id="99ffa-130">Overview</span></span>](../../docs/framework/get-started/overview.md)  
+[<span data-ttu-id="99ffa-131">開発ガイド</span><span class="sxs-lookup"><span data-stu-id="99ffa-131">Development Guide</span></span>](../../docs/framework/development-guide.md)  
+[<span data-ttu-id="99ffa-132">Windows サービス アプリケーション</span><span class="sxs-lookup"><span data-stu-id="99ffa-132">Windows Service Applications</span></span>](../../docs/framework/windows-services/index.md)  
