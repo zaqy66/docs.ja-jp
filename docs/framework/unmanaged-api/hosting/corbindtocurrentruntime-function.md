@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3667ac5a19664507b767ee6c5421a5e93f6cdfe0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 021f2b7a720c2190d56bdb2b35214c581a7b5f56
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433257"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456936"
 ---
-# <a name="corbindtocurrentruntime-function"></a><span data-ttu-id="80b66-102">CorBindToCurrentRuntime 関数</span><span class="sxs-lookup"><span data-stu-id="80b66-102">CorBindToCurrentRuntime Function</span></span>
-<span data-ttu-id="80b66-103">XML ファイルに格納されているバージョン情報を使用して、共通言語ランタイム (CLR: Common Language Runtime) をプロセスに読み込みます。</span><span class="sxs-lookup"><span data-stu-id="80b66-103">Loads the common language runtime (CLR) into a process by using version information stored in an XML file.</span></span> <span data-ttu-id="80b66-104">XML ファイルの形式は、標準的なアプリケーション構成ファイルの後にモデル化されます。</span><span class="sxs-lookup"><span data-stu-id="80b66-104">The format of the XML file is modeled after the standard application configuration file.</span></span> <span data-ttu-id="80b66-105">構成ファイルの詳細については、「[構成ファイル スキーマ](../../../../docs/framework/configure-apps/file-schema/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="80b66-105">For more information about configuration files, see [Configuration File Schema](../../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
+# <a name="corbindtocurrentruntime-function"></a><span data-ttu-id="960d9-102">CorBindToCurrentRuntime 関数</span><span class="sxs-lookup"><span data-stu-id="960d9-102">CorBindToCurrentRuntime Function</span></span>
+<span data-ttu-id="960d9-103">XML ファイルに格納されているバージョン情報を使用して、共通言語ランタイム (CLR: Common Language Runtime) をプロセスに読み込みます。</span><span class="sxs-lookup"><span data-stu-id="960d9-103">Loads the common language runtime (CLR) into a process by using version information stored in an XML file.</span></span> <span data-ttu-id="960d9-104">XML ファイルの形式は、標準的なアプリケーションの構成ファイルの後にモデル化されます。</span><span class="sxs-lookup"><span data-stu-id="960d9-104">The format of the XML file is modeled after the standard application configuration file.</span></span> <span data-ttu-id="960d9-105">構成ファイルの詳細については、「[構成ファイル スキーマ](../../../../docs/framework/configure-apps/file-schema/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="960d9-105">For more information about configuration files, see [Configuration File Schema](../../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
   
- <span data-ttu-id="80b66-106">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="80b66-106">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="80b66-107">参照してください[プロセスに、共通言語ランタイムを読み込む](http://msdn.microsoft.com/library/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f)します。</span><span class="sxs-lookup"><span data-stu-id="80b66-107">See [Loading the Common Language Runtime into a Process](http://msdn.microsoft.com/library/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f).</span></span>  
+ <span data-ttu-id="960d9-106">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="960d9-106">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="960d9-107">参照してください[、共通言語ランタイムをプロセスに読み込む](https://msdn.microsoft.com/library/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f)します。</span><span class="sxs-lookup"><span data-stu-id="960d9-107">See [Loading the Common Language Runtime into a Process](https://msdn.microsoft.com/library/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="80b66-108">構文</span><span class="sxs-lookup"><span data-stu-id="80b66-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="960d9-108">構文</span><span class="sxs-lookup"><span data-stu-id="960d9-108">Syntax</span></span>  
   
 ```  
 HRESULT CorBindToCurrentRuntime (  
@@ -40,37 +40,36 @@ HRESULT CorBindToCurrentRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="80b66-109">パラメーター</span><span class="sxs-lookup"><span data-stu-id="80b66-109">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="960d9-109">パラメーター</span><span class="sxs-lookup"><span data-stu-id="960d9-109">Parameters</span></span>  
  `pwszFileName`  
- <span data-ttu-id="80b66-110">[in]読み込む CLR のバージョンを指定するアプリケーション構成ファイルの名前。</span><span class="sxs-lookup"><span data-stu-id="80b66-110">[in] The name of an application configuration file that specifies the version of the CLR to load.</span></span> <span data-ttu-id="80b66-111">ファイル名が完全でない場合、呼び出しを行った実行可能ファイルと同じディレクトリにあると見なされます。</span><span class="sxs-lookup"><span data-stu-id="80b66-111">If the file name is not fully qualified, it is assumed to be in the same directory as the executable making the call.</span></span>  
+ <span data-ttu-id="960d9-110">[in]読み込む CLR のバージョンを示すアプリケーション構成ファイルの名前。</span><span class="sxs-lookup"><span data-stu-id="960d9-110">[in] The name of an application configuration file that specifies the version of the CLR to load.</span></span> <span data-ttu-id="960d9-111">ファイル名が完全修飾しない場合、呼び出しを行う実行可能ファイルと同じディレクトリであると見なされます。</span><span class="sxs-lookup"><span data-stu-id="960d9-111">If the file name is not fully qualified, it is assumed to be in the same directory as the executable making the call.</span></span>  
   
- <span data-ttu-id="80b66-112">読み込むランタイムのバージョンがバージョン属性で説明されている、 [ \<requiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)構成ファイルの要素。</span><span class="sxs-lookup"><span data-stu-id="80b66-112">The version of the runtime to be loaded is described by the version attribute in the [\<requiredRuntime>](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) element of the configuration file.</span></span>  
+ <span data-ttu-id="960d9-112">読み込むランタイムのバージョンがバージョン属性で説明されている、 [ \<requiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)構成ファイルの要素。</span><span class="sxs-lookup"><span data-stu-id="960d9-112">The version of the runtime to be loaded is described by the version attribute in the [\<requiredRuntime>](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) element of the configuration file.</span></span>  
   
- <span data-ttu-id="80b66-113">バージョンが指定されていない場合、または場合、`<requiredRuntime>`要素が見つかりません、コンピューターにインストールされている CLR の最新バージョンが読み込まれています。</span><span class="sxs-lookup"><span data-stu-id="80b66-113">If no version is specified, or if the `<requiredRuntime>` element cannot be found, the latest version of the CLR that is installed on the machine is loaded.</span></span>  
+ <span data-ttu-id="960d9-113">バージョンが指定されていない場合、または場合、`<requiredRuntime>`要素が見つからない場合、マシンにインストールされている CLR の最新バージョンが読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="960d9-113">If no version is specified, or if the `<requiredRuntime>` element cannot be found, the latest version of the CLR that is installed on the machine is loaded.</span></span>  
   
  `rclsid`  
- <span data-ttu-id="80b66-114">[in]`CLSID`を実装するいずれかのコクラスの[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)または[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="80b66-114">[in] The `CLSID` of the coclass that implements either the [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) or the [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface.</span></span> <span data-ttu-id="80b66-115">サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。</span><span class="sxs-lookup"><span data-stu-id="80b66-115">Supported values are CLSID_CorRuntimeHost or CLSID_CLRRuntimeHost.</span></span>  
+ <span data-ttu-id="960d9-114">[in]`CLSID`のいずれかを実装するコクラスの[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)または[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="960d9-114">[in] The `CLSID` of the coclass that implements either the [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) or the [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface.</span></span> <span data-ttu-id="960d9-115">サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。</span><span class="sxs-lookup"><span data-stu-id="960d9-115">Supported values are CLSID_CorRuntimeHost or CLSID_CLRRuntimeHost.</span></span>  
   
  `riid`  
- <span data-ttu-id="80b66-116">[入力] 要求するインターフェイスの `IID`。</span><span class="sxs-lookup"><span data-stu-id="80b66-116">[in] The `IID` of the interface you are requesting.</span></span> <span data-ttu-id="80b66-117">サポートされている値は IID_ICorRuntimeHost と IID_ICLRRuntimeHost です。</span><span class="sxs-lookup"><span data-stu-id="80b66-117">Supported values are IID_ICorRuntimeHost or IID_ICLRRuntimeHost.</span></span>  
+ <span data-ttu-id="960d9-116">[入力] 要求するインターフェイスの `IID`。</span><span class="sxs-lookup"><span data-stu-id="960d9-116">[in] The `IID` of the interface you are requesting.</span></span> <span data-ttu-id="960d9-117">サポートされている値は IID_ICorRuntimeHost と IID_ICLRRuntimeHost です。</span><span class="sxs-lookup"><span data-stu-id="960d9-117">Supported values are IID_ICorRuntimeHost or IID_ICLRRuntimeHost.</span></span>  
   
  `ppv`  
- <span data-ttu-id="80b66-118">[out]返されたインターフェイス ポインター。</span><span class="sxs-lookup"><span data-stu-id="80b66-118">[out] The returned interface pointer.</span></span>  
+ <span data-ttu-id="960d9-118">[out]返されるインターフェイス ポインター。</span><span class="sxs-lookup"><span data-stu-id="960d9-118">[out] The returned interface pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="80b66-119">要件</span><span class="sxs-lookup"><span data-stu-id="80b66-119">Requirements</span></span>  
- <span data-ttu-id="80b66-120">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="80b66-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="960d9-119">要件</span><span class="sxs-lookup"><span data-stu-id="960d9-119">Requirements</span></span>  
+ <span data-ttu-id="960d9-120">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="960d9-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="80b66-121">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="80b66-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="960d9-121">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="960d9-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="80b66-122">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80b66-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="960d9-122">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="960d9-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="80b66-123">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80b66-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="960d9-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="960d9-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80b66-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="80b66-124">See Also</span></span>  
- [<span data-ttu-id="80b66-125">CorBindToRuntime 関数</span><span class="sxs-lookup"><span data-stu-id="80b66-125">CorBindToRuntime Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  
- [<span data-ttu-id="80b66-126">CorBindToRuntimeByCfg 関数</span><span class="sxs-lookup"><span data-stu-id="80b66-126">CorBindToRuntimeByCfg Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)  
- [<span data-ttu-id="80b66-127">CorBindToRuntimeEx 関数</span><span class="sxs-lookup"><span data-stu-id="80b66-127">CorBindToRuntimeEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)  
- [<span data-ttu-id="80b66-128">CorBindToRuntimeHost 関数</span><span class="sxs-lookup"><span data-stu-id="80b66-128">CorBindToRuntimeHost Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
- [<span data-ttu-id="80b66-129">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="80b66-129">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
- <span data-ttu-id="80b66-130">
-  [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)</span><span class="sxs-lookup"><span data-stu-id="80b66-130">[Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="960d9-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="960d9-124">See Also</span></span>  
+ [<span data-ttu-id="960d9-125">CorBindToRuntime 関数</span><span class="sxs-lookup"><span data-stu-id="960d9-125">CorBindToRuntime Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  
+ [<span data-ttu-id="960d9-126">CorBindToRuntimeByCfg 関数</span><span class="sxs-lookup"><span data-stu-id="960d9-126">CorBindToRuntimeByCfg Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)  
+ [<span data-ttu-id="960d9-127">CorBindToRuntimeEx 関数</span><span class="sxs-lookup"><span data-stu-id="960d9-127">CorBindToRuntimeEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)  
+ [<span data-ttu-id="960d9-128">CorBindToRuntimeHost 関数</span><span class="sxs-lookup"><span data-stu-id="960d9-128">CorBindToRuntimeHost Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
+ [<span data-ttu-id="960d9-129">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="960d9-129">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
+ [<span data-ttu-id="960d9-130">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="960d9-130">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
