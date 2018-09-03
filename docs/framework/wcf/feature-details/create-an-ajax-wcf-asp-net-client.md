@@ -1,171 +1,171 @@
 ---
-title: '方法 : AJAX 対応 WCF サービスとこのサービスにアクセスする ASP.NET クライアントを作成する'
-ms.date: 03/30/2017
+title: Visual Studio で、AJAX 対応 WCF サービスと ASP.NET クライアントを作成します。
+ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 58971d11ab76112627dd81d53381236932268e25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07a1e903991e09243572f2a99c19edae7f9793b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490631"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384287"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="c8733-102">方法 : AJAX 対応 WCF サービスとこのサービスにアクセスする ASP.NET クライアントを作成する</span><span class="sxs-lookup"><span data-stu-id="c8733-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
-<span data-ttu-id="c8733-103">このトピックでは、Visual Studio 2008 を使用して、AJAX 対応の Windows Communication Foundation (WCF) サービスとサービスにアクセスする ASP.NET クライアントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c8733-103">This topic shows how to use Visual Studio 2008 to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span> <span data-ttu-id="c8733-104">これらを作成するための手順を示した後、「使用例」のセクションにサービスおよびクライアント用のコードを示します。</span><span class="sxs-lookup"><span data-stu-id="c8733-104">The code for the service and for the client are provided in the Example section after the steps for creating them are described in the Procedures section.</span></span>  
-  
-### <a name="to-create-the-aspnet-client-application"></a><span data-ttu-id="c8733-105">ASP.NET クライアント アプリケーションを作成するには</span><span class="sxs-lookup"><span data-stu-id="c8733-105">To create the ASP.NET client application</span></span>  
-  
-1.  <span data-ttu-id="c8733-106">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] を開きます。</span><span class="sxs-lookup"><span data-stu-id="c8733-106">Open [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
-  
-2.  <span data-ttu-id="c8733-107">**ファイル**メニューの **新規**、し**プロジェクト**、し**Web**、し、 **のASP.NETWebアプリケーション**.</span><span class="sxs-lookup"><span data-stu-id="c8733-107">From the **File** menu, select **New**, then **Project**, then **Web**, and then select **ASP.NET Web Application**.</span></span>  
-  
-3.  <span data-ttu-id="c8733-108">プロジェクトに名前を`SandwichServices` をクリック**OK**です。</span><span class="sxs-lookup"><span data-stu-id="c8733-108">Name the Project `SandwichServices` and click **OK**.</span></span>  
-  
-### <a name="to-create-the-wcf-ajax-enabled-service"></a><span data-ttu-id="c8733-109">WCF AJAX 対応サービスを作成するには</span><span class="sxs-lookup"><span data-stu-id="c8733-109">To create the WCF AJAX-enabled service</span></span>  
-  
-1.  <span data-ttu-id="c8733-110">右クリックし、`SandwichServices`でプロジェクトを**ソリューション エクスプ ローラー**ウィンドウと選択**追加**、し**新しい項目の**、し**AJAX 対応 WCF サービス**.</span><span class="sxs-lookup"><span data-stu-id="c8733-110">Right-click the `SandwichServices` project in the **Solution Explorer** window and select **Add**, then **New Item**, and then **AJAX-enabled WCF Service**.</span></span>  
-  
-2.  <span data-ttu-id="c8733-111">サービスの名前を付けます`CostService`で、**名前**ボックスし、をクリックして**追加**です。</span><span class="sxs-lookup"><span data-stu-id="c8733-111">Name the service `CostService` in the **Name** box and click **Add**.</span></span>  
-  
-3.  <span data-ttu-id="c8733-112">CostService.svc.cs ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="c8733-112">Open the CostService.svc.cs file.</span></span>  
-  
-4.  <span data-ttu-id="c8733-113">指定して、`Namespace`の<xref:System.ServiceModel.ServiceContractAttribute>として`SandwichService`:</span><span class="sxs-lookup"><span data-stu-id="c8733-113">Specify the `Namespace` for <xref:System.ServiceModel.ServiceContractAttribute> as `SandwichService`:</span></span>  
-  
-    ```  
-    namespace SandwichServices  
-    {  
-      [ServiceContract(Namespace = "SandwichServices")]  
-      [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]  
-       public class CostService  
-       {  
-         …  
-       }  
-     }  
-    ```  
-  
-5.  <span data-ttu-id="c8733-114">サービスに操作を実装します。</span><span class="sxs-lookup"><span data-stu-id="c8733-114">Implement the operations in the service.</span></span> <span data-ttu-id="c8733-115">コントラクトの一部であることを示すために、各操作に <xref:System.ServiceModel.OperationContractAttribute> を追加します。</span><span class="sxs-lookup"><span data-stu-id="c8733-115">Add the <xref:System.ServiceModel.OperationContractAttribute> to each of the operations to indicate that they are part of the contract.</span></span> <span data-ttu-id="c8733-116">次の例では、指定したサンドイッチの数に対して価格を返すメソッドを実装します。</span><span class="sxs-lookup"><span data-stu-id="c8733-116">The following example implements a method that returns the cost of a given quantity of sandwiches.</span></span>  
-  
-    ```  
-    public class CostService  
-    {  
-        [OperationContract]  
-        public double CostOfSandwiches(int quantity)  
-        {  
-            return 1.25 * quantity;  
-        }  
-  
-    // Add more operations here and mark them with [OperationContract]  
-    }  
-    ```  
-  
-### <a name="to-configure-the-client-to-access-the-service"></a><span data-ttu-id="c8733-117">サービスにアクセスするようにクライアントを構成するには</span><span class="sxs-lookup"><span data-stu-id="c8733-117">To configure the client to access the service</span></span>  
-  
-1.  <span data-ttu-id="c8733-118">Default.aspx ページを開き、選択、**デザイン**ビュー。</span><span class="sxs-lookup"><span data-stu-id="c8733-118">Open the Default.aspx page and select the **Design** view.</span></span>  
-  
-2.  <span data-ttu-id="c8733-119">**ビュー**メニューの **ツールボックス**です。</span><span class="sxs-lookup"><span data-stu-id="c8733-119">From the **View** menu, select **Toolbox**.</span></span>  
-  
-3.  <span data-ttu-id="c8733-120">展開して、 **AJAX Extensions**ノードやドラッグ アンド ドロップ、 **ScriptManager** Default.aspx ページ。</span><span class="sxs-lookup"><span data-stu-id="c8733-120">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** on to the Default.aspx page.</span></span>  
-  
-4.  <span data-ttu-id="c8733-121">右クリックし、 **ScriptManager**選択**プロパティ**です。</span><span class="sxs-lookup"><span data-stu-id="c8733-121">Right-click the **ScriptManager** and select **Properties**.</span></span>  
-  
-5.  <span data-ttu-id="c8733-122">展開、 **Services**内のコレクション、**プロパティ**ウィンドウを開きます、 **ServiceReference コレクション エディター**ウィンドウです。</span><span class="sxs-lookup"><span data-stu-id="c8733-122">Expand the **Services** collection in the **Properties** window to open up the **ServiceReference Collection Editor** window.</span></span>  
-  
-6.  <span data-ttu-id="c8733-123">をクリックして**追加**、指定`CostService.svc`として、**パス** をクリックし、参照**OK**です。</span><span class="sxs-lookup"><span data-stu-id="c8733-123">Click **Add**, specify `CostService.svc` as the **Path** referenced, and click **OK**.</span></span>  
-  
-7.  <span data-ttu-id="c8733-124">展開、 **HTML**内のノード、**ツールボックス**ドラッグ アンド ドロップし、**入力 (ボタン)** Default.aspx ページ。</span><span class="sxs-lookup"><span data-stu-id="c8733-124">Expand the **HTML** node in the **Toolbox** and drag and drop an **Input (Button)** on to the Default.aspx page.</span></span>  
-  
-8.  <span data-ttu-id="c8733-125">右クリックし、**ボタン**選択**プロパティ**です。</span><span class="sxs-lookup"><span data-stu-id="c8733-125">Right-click the **Button** and select **Properties**.</span></span>  
-  
-9. <span data-ttu-id="c8733-126">変更、**値**フィールドを`Price for 3 Sandwiches`です。</span><span class="sxs-lookup"><span data-stu-id="c8733-126">Change the **Value** field to `Price for 3 Sandwiches`.</span></span>  
-  
-10. <span data-ttu-id="c8733-127">ダブルクリックして、**ボタン**JavaScript コードにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="c8733-127">Double-click the **Button** to access the JavaScript code.</span></span>  
-  
-11. <span data-ttu-id="c8733-128">内で次の JavaScript コードに渡す、<`script`> 要素。</span><span class="sxs-lookup"><span data-stu-id="c8733-128">Pass in the following JavaScript code within the <`script`> element.</span></span>  
-  
-    ```  
-    function Button1_onclick() {  
-    var service = new SandwichServices.CostService();  
-    service.CostOfSandwiches(3, onSuccess, null, null);  
-    }  
-  
-    function onSuccess(result){  
-    alert(result);  
-    }  
-    ```  
-  
-### <a name="to-access-the-service-from-the-client"></a><span data-ttu-id="c8733-129">クライアントからサービスにアクセスするには</span><span class="sxs-lookup"><span data-stu-id="c8733-129">To access the service from the client</span></span>  
-  
-1.  <span data-ttu-id="c8733-130">Ctrl キーを押しながら F5 キーを押して、サービスと Web クライアントを起動します。</span><span class="sxs-lookup"><span data-stu-id="c8733-130">Use Ctrl +F5 to launch the service and the Web client.</span></span> <span data-ttu-id="c8733-131">クリックして、 **Price for 3 Sandwiches** 「3.75」の予想される出力を生成するボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="c8733-131">Click the **Price for 3 Grilled Sandwiches** button to generate the expected output of "3.75".</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="c8733-132">例</span><span class="sxs-lookup"><span data-stu-id="c8733-132">Example</span></span>  
- <span data-ttu-id="c8733-133">この例には、WCFService.svc.cs ファイルに含まれるサービスのコードと Default.aspx ファイルに含まれるクライアントのコードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="c8733-133">This example contains the service code contained in the WCFService.svc.cs file and the client code contained in the Default.aspx file.</span></span>  
-  
-```  
-//The service code contained in the CostService.svc.cs file.  
-  
-using System;  
-using System.Linq;  
-using System.Runtime.Serialization;  
-using System.ServiceModel;  
-using System.ServiceModel.Activation;  
-using System.ServiceModel.Web;  
-  
-namespace SandwichServices  
-{  
-    [ServiceContract(Namespace="SandwichServices")]  
-    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]  
-    public class CostService  
-    {  
-        // Add [WebGet] attribute to use HTTP GET  
-        [OperationContract]  
-        public double CostOfSandwiches(int quantity)  
-        {  
-            return 1.25 * quantity;  
-        }  
-  
-        // Add more operations here and mark them with [OperationContract]  
-    }  
-}  
-//The code for hosting the service is contained in the CostService.svc file.  
-  
-<%@ ServiceHost Language="C#" Debug="true" Service="SandwichServices.CostService" CodeBehind="CostService.svc.cs" %>  
-  
-//The client code contained in the Default.aspx file.  
-  
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SandwichServices._Default" %>  
-  
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
-  
-<html >  
-<head runat="server">  
-    <title>Untitled Page</title>  
-<script language="javascript" type="text/javascript">  
-// <!CDATA[  
-  
-function Button1_onclick() {  
-var service = new SandwichServices.CostService();  
-service.CostOfSandwiches(3, onSuccess, null, null);  
-}  
-  
-function onSuccess(result){  
-alert(result);  
-}  
-  
-// ]]>  
-</script>  
-</head>  
-<body>  
-    <form id="form1" runat="server">  
-    <div>  
-  
-    </div>  
-    <asp:ScriptManager ID="ScriptManager1" runat="server">  
-        <services>  
-            <asp:servicereference Path="CostService.svc" />  
-        </services>  
-    </asp:ScriptManager>  
-    </form>  
-    <p>  
-        <input id="Button1" type="button" value="Price for 3 Sandwiches" onclick="return Button1_onclick()" /></p>  
-</body>  
-</html>  
-```     
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="d2228-102">方法 : AJAX 対応 WCF サービスとこのサービスにアクセスする ASP.NET クライアントを作成する</span><span class="sxs-lookup"><span data-stu-id="d2228-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
+
+<span data-ttu-id="d2228-103">このトピックでは、Visual Studio を使用して、AJAX 対応の Windows Communication Foundation (WCF) サービスと、サービスにアクセスする ASP.NET クライアントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="d2228-103">This topic shows how to use Visual Studio to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span>
+
+## <a name="create-an-aspnet-web-app"></a><span data-ttu-id="d2228-104">ASP.NET Web アプリを作成する</span><span class="sxs-lookup"><span data-stu-id="d2228-104">Create an ASP.NET web app</span></span>
+
+1. <span data-ttu-id="d2228-105">Visual Studio を開きます。</span><span class="sxs-lookup"><span data-stu-id="d2228-105">Open Visual Studio.</span></span>
+
+1. <span data-ttu-id="d2228-106">**ファイル**メニューの **新規** > **プロジェクト**</span><span class="sxs-lookup"><span data-stu-id="d2228-106">From the **File** menu, select **New** > **Project**</span></span>
+
+1. <span data-ttu-id="d2228-107">**新しいプロジェクト**ダイアログ ボックスで、展開、**インストール済み** > **Visual c#** > **Web**カテゴリ、し、選択**ASP.NET Web アプリケーション (.NET Framework)** します。</span><span class="sxs-lookup"><span data-stu-id="d2228-107">In the **New Project** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select **ASP.NET Web Application (.NET Framework)**.</span></span>
+
+1. <span data-ttu-id="d2228-108">プロジェクトに名前を**SandwichServices**  をクリック**OK**します。</span><span class="sxs-lookup"><span data-stu-id="d2228-108">Name the Project **SandwichServices** and click **OK**.</span></span>
+
+1. <span data-ttu-id="d2228-109">**新しい ASP.NET Web アプリケーション**ダイアログ ボックスで、**空**選び**OK**。</span><span class="sxs-lookup"><span data-stu-id="d2228-109">In the **New ASP.NET Web Application** dialog, select **Empty** and then select **OK**.</span></span>
+
+   ![Visual Studio で ASP.NET web アプリの種類のダイアログ](../media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+
+## <a name="add-a-web-form"></a><span data-ttu-id="d2228-111">Web フォームを追加します。</span><span class="sxs-lookup"><span data-stu-id="d2228-111">Add a web form</span></span>
+
+1. <span data-ttu-id="d2228-112">SandwichServices プロジェクトを右クリックして**ソリューション エクスプ ローラー**選択**追加** > **新しい項目の**します。</span><span class="sxs-lookup"><span data-stu-id="d2228-112">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+
+1. <span data-ttu-id="d2228-113">**新しい項目の追加**ダイアログ ボックスで、展開、**インストール済み** > **Visual c#** > **Web**カテゴリ、し、選択、 **Web フォーム**テンプレート。</span><span class="sxs-lookup"><span data-stu-id="d2228-113">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **Web Form** template.</span></span>
+
+1. <span data-ttu-id="d2228-114">既定の名前 (**WebForm1**)、し、**追加**します。</span><span class="sxs-lookup"><span data-stu-id="d2228-114">Accept the default name (**WebForm1**), and then select **Add**.</span></span>
+
+   <span data-ttu-id="d2228-115">*WebForm1.aspx*で開きます**ソース**ビュー。</span><span class="sxs-lookup"><span data-stu-id="d2228-115">*WebForm1.aspx* opens in **Source** view.</span></span>
+
+1. <span data-ttu-id="d2228-116">内で次のマークアップを追加、 **\<本文 >** タグ。</span><span class="sxs-lookup"><span data-stu-id="d2228-116">Add the following markup inside the **\<body>** tags:</span></span>
+
+   ```html
+   <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
+   <br />
+   <span id="additionResult"></span>
+   ```
+
+## <a name="create-an-ajax-enabled-wcf-service"></a><span data-ttu-id="d2228-117">AJAX 対応 WCF サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="d2228-117">Create an AJAX-enabled WCF service</span></span>
+
+1. <span data-ttu-id="d2228-118">SandwichServices プロジェクトを右クリックして**ソリューション エクスプ ローラー**選択**追加** > **新しい項目の**します。</span><span class="sxs-lookup"><span data-stu-id="d2228-118">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+
+1. <span data-ttu-id="d2228-119">**新しい項目の追加**ダイアログ ボックスで、展開、**インストール済み** > **Visual c#** > **Web**カテゴリ、し、選択、 **(AJAX 対応) WCF サービス**テンプレート。</span><span class="sxs-lookup"><span data-stu-id="d2228-119">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **WCF Service (AJAX-enabled)** template.</span></span>
+
+   ![Visual Studio での WCF サービス (AJAX 対応) の項目テンプレート](../media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+
+1. <span data-ttu-id="d2228-121">サービスの名前を付けます**CostService**選び**追加**。</span><span class="sxs-lookup"><span data-stu-id="d2228-121">Name the service **CostService** and then select **Add**.</span></span>
+
+   <span data-ttu-id="d2228-122">*CostService.svc.cs*エディターで開きます。</span><span class="sxs-lookup"><span data-stu-id="d2228-122">*CostService.svc.cs* opens in the editor.</span></span>
+
+1. <span data-ttu-id="d2228-123">サービスの操作を実装します。</span><span class="sxs-lookup"><span data-stu-id="d2228-123">Implement the operation in the service.</span></span> <span data-ttu-id="d2228-124">サンドイッチの量のコストを計算する CostService クラスには、次のメソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="d2228-124">Add the following method to the CostService class to calculate the cost of a quantity of sandwiches:</span></span>
+
+    ```csharp
+    [OperationContract]
+    public double CostOfSandwiches(int quantity)
+    {
+        return 1.25 * quantity;
+    }
+    ```
+
+## <a name="configure-the-client-to-access-the-service"></a><span data-ttu-id="d2228-125">サービスにアクセスするクライアントを構成します。</span><span class="sxs-lookup"><span data-stu-id="d2228-125">Configure the client to access the service</span></span>
+
+1. <span data-ttu-id="d2228-126">開く、 *WebForm1.aspx*選択ファイルを開き、**デザイン**ビュー。</span><span class="sxs-lookup"><span data-stu-id="d2228-126">Open the *WebForm1.aspx* file and select the **Design** view.</span></span>
+
+2. <span data-ttu-id="d2228-127">**ビュー**メニューの **ツールボックス**します。</span><span class="sxs-lookup"><span data-stu-id="d2228-127">From the **View** menu, select **Toolbox**.</span></span>
+
+3. <span data-ttu-id="d2228-128">展開、 **AJAX Extensions**ノードやドラッグ アンド ドロップ、 **ScriptManager**フォーム上にします。</span><span class="sxs-lookup"><span data-stu-id="d2228-128">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** onto the form.</span></span>
+
+4. <span data-ttu-id="d2228-129">戻り、**ソース**間に次のコードを追加、表示、  **\<ScriptManager >** WCF サービスへのパスを指定するタグ。</span><span class="sxs-lookup"><span data-stu-id="d2228-129">Back in the **Source** view, add the following code between the **\<ScriptManager>** tags to specify the path to the WCF service:</span></span>
+
+    ```html
+    <Services>
+       <asp:ServiceReference Path="~/CostService.svc" />
+    </Services>
+    ```
+
+1. <span data-ttu-id="d2228-130">Javascript 関数のコードを追加`Calculate()`します。</span><span class="sxs-lookup"><span data-stu-id="d2228-130">Add the code for the Javascript function `Calculate()`.</span></span> <span data-ttu-id="d2228-131">次のコードを配置、**ヘッド**web フォームのセクション。</span><span class="sxs-lookup"><span data-stu-id="d2228-131">Place the following code in the **head** section of the web form:</span></span>
+
+    ```javascript
+    <script type="text/javascript">
+
+        function Calculate() {
+            CostService.CostOfSandwiches(3, onSuccess);
+        }
+
+        function onSuccess(result) {
+            var myres = $get("additionResult");
+            myres.innerHTML = result;
+        }
+
+    </script>
+    ```
+
+   <span data-ttu-id="d2228-132">このコードの 3 つのサンドイッチの価格を計算する CostService メソッドを呼び出すしと呼ばれる範囲内に結果を表示**しくみが**します。</span><span class="sxs-lookup"><span data-stu-id="d2228-132">This code calls the method of CostService to calculate the price for three sandwiches, and then displays the result in the span called **additionResult**.</span></span>
+
+## <a name="run-the-program"></a><span data-ttu-id="d2228-133">プログラムを実行する</span><span class="sxs-lookup"><span data-stu-id="d2228-133">Run the program</span></span>
+
+<span data-ttu-id="d2228-134">確認します*WebForm1.aspx*にフォーカスがあり、キーを押します**開始**web クライアントを起動するボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="d2228-134">Make sure that *WebForm1.aspx* has focus, and then press **Start** button to launch the web client.</span></span> <span data-ttu-id="d2228-135">ボタンが緑色の三角形とような**IIS Express (Microsoft Edge)** します。</span><span class="sxs-lookup"><span data-stu-id="d2228-135">The button has a green triangle and says something like **IIS Express (Microsoft Edge)**.</span></span> <span data-ttu-id="d2228-136">または、キーを押して**F5**します。</span><span class="sxs-lookup"><span data-stu-id="d2228-136">Or, you can press **F5**.</span></span> <span data-ttu-id="d2228-137">をクリックして、 **3 sandwiches の価格**ある「3.75」想定される出力を生成するボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="d2228-137">Click the **Price of 3 sandwiches** button to generate the expected output of "3.75".</span></span>
+
+## <a name="example-code"></a><span data-ttu-id="d2228-138">コード例</span><span class="sxs-lookup"><span data-stu-id="d2228-138">Example code</span></span>
+
+<span data-ttu-id="d2228-139">完全なコードを次に、 *CostService.svc.cs*ファイル。</span><span class="sxs-lookup"><span data-stu-id="d2228-139">Following is the full code in the *CostService.svc.cs* file :</span></span>
+
+```csharp
+using System.ServiceModel;
+using System.ServiceModel.Activation;
+
+namespace SandwichServices
+{
+    [ServiceContract(Namespace = "")]
+    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
+    public class CostService
+    {
+        [OperationContract]
+        public double CostOfSandwiches(int quantity)
+        {
+            return 1.25 * quantity;
+        }
+    }
+}
+```
+
+<span data-ttu-id="d2228-140">すべての内容を次に、 *WebForm1.aspx*ページ。</span><span class="sxs-lookup"><span data-stu-id="d2228-140">Following is the full contents of the *WebForm1.aspx* page:</span></span>
+
+```aspx-csharp
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+
+        function Calculate() {
+            CostService.CostOfSandwiches(3, onSuccess);
+        }
+
+        function onSuccess(result) {
+            var myres = $get("additionResult");
+            myres.innerHTML = result;
+        }
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Services>
+                <asp:ServiceReference Path="~/CostService.svc" />
+            </Services>
+        </asp:ScriptManager>
+
+        <input type="button" value="Price of 3 sandwiches" onclick="Calculate()" />
+        <br />
+        <span id="additionResult"></span>
+    </form>
+</body>
+</html>
+```
