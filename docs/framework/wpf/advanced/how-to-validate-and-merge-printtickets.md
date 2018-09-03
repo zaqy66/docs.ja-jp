@@ -10,48 +10,48 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 11160d7ec59914afbe501ba731c0c04a85ffc4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37a1c0600b8429158336968507ddc8cfb6d8f98b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548494"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485639"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>方法 : PrintTickets を検証およびマージする
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [印刷スキーマ](http://go.microsoft.com/fwlink/?LinkId=186397)柔軟性と拡張性が含まれています<xref:System.Printing.PrintCapabilities>と<xref:System.Printing.PrintTicket>要素。 前者明細化して、印刷デバイスの機能および後者デバイスが特定のシーケンスのドキュメント、個々 のドキュメント、または個々 のページに対してこれらの機能を使用する方法を指定します。  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [印刷スキーマ](https://go.microsoft.com/fwlink/?LinkId=186397)柔軟性と拡張性が含まれています<xref:System.Printing.PrintCapabilities>と<xref:System.Printing.PrintTicket>要素。 印刷デバイスの機能を列記前者と後者の場合、デバイスが特定のシーケンスのドキュメント、個々 のドキュメント、または個々 のページに対してこれらの機能を使用する方法を指定します。  
   
- 印刷をサポートするアプリケーションのタスクの一般的なシーケンスは次のようになります。  
+ 印刷をサポートするアプリケーションのタスクの一般的なシーケンスであるようです。  
   
 1.  プリンターの機能を決定します。  
   
 2.  構成、<xref:System.Printing.PrintTicket>それらの機能を使用します。  
   
-3.  検証、<xref:System.Printing.PrintTicket>です。  
+3.  検証、<xref:System.Printing.PrintTicket>します。  
   
  この記事では、これを行う方法を示します。  
   
 ## <a name="example"></a>例  
- 次の単純な例ではプリンターが両面印刷をサポートするかどうかのみが必要な両面印刷します。 主な手順は次のとおりです。  
+ 次の単純な例でプリンターが両面印刷をサポートするかどうかのみが必要な両面印刷します。 主要な手順は次のとおりです。  
   
-1.  取得、<xref:System.Printing.PrintCapabilities>オブジェクトを<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>メソッドです。  
+1.  取得、<xref:System.Printing.PrintCapabilities>オブジェクトを<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>メソッド。  
   
-2.  必要な機能の存在をテストします。 次の例ではテスト、<xref:System.Printing.PrintCapabilities.DuplexingCapability%2A>のプロパティ、<xref:System.Printing.PrintCapabilities>用紙の長辺に沿って「ページに」用紙の両面に印刷する機能が存在するオブジェクトします。 <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A>コレクションでは、使用して、`Contains`メソッドの<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>します。  
+2.  必要な機能の有無をテストします。 次の例では、テスト、<xref:System.Printing.PrintCapabilities.DuplexingCapability%2A>のプロパティ、<xref:System.Printing.PrintCapabilities>用紙の長辺に沿って「ページに」用紙の両面に印刷の機能が存在するオブジェクトします。 <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A>はコレクションを使用して、`Contains`メソッドの<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>。  
   
     > [!NOTE]
-    >  この手順は必ずしも必要ではありません。 <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>下で使用方法は、各要求を確認するのには、<xref:System.Printing.PrintTicket>プリンターの機能を比較します。 プリンターでは、要求された機能はサポートされていない場合、プリンター ドライバーは、別の要求に置き換え、<xref:System.Printing.PrintTicket>メソッドによって返されます。  
+    >  この手順では、厳密には必要ありません。 <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>以下で使用方法は、各要求を確認するのには、<xref:System.Printing.PrintTicket>プリンターの機能を比較します。 プリンター ドライバーがで別の要求を置き換えて、要求された機能がプリンターでサポートされていない場合、<xref:System.Printing.PrintTicket>メソッドによって返されます。  
   
-3.  プリンターが両面印刷をサポートする場合、サンプル コードでは、<xref:System.Printing.PrintTicket>両面印刷を要求します。 アプリケーションでは設定で使用できるすべての可能なプリンターが指定されていない、<xref:System.Printing.PrintTicket>要素。 場合はプログラマと製品のインストール時の両方の浪費になります。 代わりに、コードが両面印刷要求のみを設定し、その後、これをマージ<xref:System.Printing.PrintTicket>、既存の完全に構成され、検証、 <xref:System.Printing.PrintTicket>、ここでは、ユーザーの既定<xref:System.Printing.PrintTicket>です。  
+3.  サンプル コードを作成、プリンターが両面印刷をサポートする場合、<xref:System.Printing.PrintTicket>二重求められます。 アプリケーションでは設定で使用可能なすべての可能なプリンターが指定されていない、<xref:System.Printing.PrintTicket>要素。 プログラマとプログラムの時間の無駄なことです。 代わりに、コードは二重化の要求のみを設定し、これをマージ<xref:System.Printing.PrintTicket>既存の完全に構成され、検証、 <xref:System.Printing.PrintTicket>、ここでは、ユーザーの既定<xref:System.Printing.PrintTicket>します。  
   
-4.  同様に、サンプルを呼び出す、<xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>メソッド、新しい結合を最小限に抑える<xref:System.Printing.PrintTicket>ユーザーの既定値は<xref:System.Printing.PrintTicket>です。 返されます。、<xref:System.Printing.ValidationResult>を含む新しい<xref:System.Printing.PrintTicket>としてそのプロパティのいずれか。  
+4.  したがって、サンプルを呼び出す、<xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>メソッドを新しいマージ最小限、 <xref:System.Printing.PrintTicket> 、既定値は、ユーザーの<xref:System.Printing.PrintTicket>します。 返されます、<xref:System.Printing.ValidationResult>を含む新しい<xref:System.Printing.PrintTicket>としてそのプロパティのいずれか。  
   
-5.  サンプルをテストし、新しい<xref:System.Printing.PrintTicket>両面印刷を要求します。 場合は、このサンプルでは、ユーザーの新しい既定の印刷チケットします。 上記の手順 2 を省略したプリンターが、長辺に沿って両面印刷をサポートしていませんしかどうか、テスト結果となります`false`です。 (前の注を参照してください)。  
+5.  サンプルをテストし、新しい<xref:System.Printing.PrintTicket>二重化を要求します。 場合は、サンプルを使用すると、ユーザーの新しい既定の印刷チケット。 上記の手順 2 を省略したかどうかと、プリンターが両面印刷、長辺に沿ってをサポートしていませんでしたし、テスト結果となります`false`します。 (上記の注を参照してください)。  
   
-6.  変更をコミットする最後の重要な手順では、<xref:System.Printing.PrintQueue.UserPrintTicket%2A>のプロパティ、<xref:System.Printing.PrintQueue>で、<xref:System.Printing.PrintQueue.Commit%2A>メソッドです。  
+6.  最後の重要な手順に変更をコミットするには、<xref:System.Printing.PrintQueue.UserPrintTicket%2A>のプロパティ、<xref:System.Printing.PrintQueue>で、<xref:System.Printing.PrintQueue.Commit%2A>メソッド。  
   
  [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
  [!code-vb[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
   
- この例をすばやくテストすることができます、ように残りの部分は次に示します。 プロジェクトと名前空間を作成して、この記事で名前空間ブロックに両方のコード スニペットを貼り付けます。  
+ すぐにこの例をテストするように、残りの部分は次に示します。 プロジェクトと名前空間を作成し、この記事では、名前空間ブロックに両方のコード スニペットを貼り付けます。  
   
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
@@ -66,4 +66,4 @@ ms.locfileid: "33548494"
  <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
  [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [印刷の概要](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [スキーマを印刷します。](http://go.microsoft.com/fwlink/?LinkId=186397)
+ [印刷スキーマ](https://go.microsoft.com/fwlink/?LinkId=186397)

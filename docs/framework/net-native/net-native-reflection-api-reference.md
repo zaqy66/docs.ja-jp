@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ea47b8402f1bd2f66c957ff9126c8dff094a7ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a2a27f788fa84c41ccb818266fffc816237bb48
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397755"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486949"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET ネイティブ リフレクション API リファレンス
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] には次の 3 つの新しい例外型が含まれています。 [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、 [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、および [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)です。 3 つの例外型すべてについて、次の点に注意してください。  
@@ -25,7 +25,7 @@ ms.locfileid: "33397755"
 -   [MissingMetadataException トラブルシューティング ツール](http://dotnet.github.io/native/troubleshooter/method.html) (メソッドの場合)。  
   
 > [!NOTE]
->  このリファレンスでは、 [!INCLUDE[net_native](../../../includes/net-native-md.md)]に固有の 3 つの例外の型について説明しています。 .NET Framework の主要なリフレクション API に関するリファレンス ドキュメントについては、「 [System.Reflection 名前空間](http://msdn.microsoft.com/library/gg145033.aspx)」を参照してください。 .NET Framework の主要な相互運用 API に関するリファレンス ドキュメントについては、「 <xref:System.Runtime.InteropServices>」を参照してください。  
+>  このリファレンスでは、 [!INCLUDE[net_native](../../../includes/net-native-md.md)]に固有の 3 つの例外の型について説明しています。 .NET Framework の主要なリフレクション API のリファレンス ドキュメントについては、次を参照してください。 [System.Reflection 名前空間](https://msdn.microsoft.com/library/gg145033.aspx)します。 .NET Framework の主要な相互運用 API に関するリファレンス ドキュメントについては、「 <xref:System.Runtime.InteropServices>」を参照してください。  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection 名前空間  
  <xref:System.Reflection> 名前空間には、.NET Framework でリフレクションに使用される主要な型が含まれています。 [!INCLUDE[net_native](../../../includes/net-native-md.md)]の場合は、次の 2 つの新しい例外の種類も含まれています。  

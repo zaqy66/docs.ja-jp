@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: f2c3aab20dc5bcf9b0f9f7053323ccd7a04443cc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755052"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485730"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
 このトピックでは、XAML 構文の要素の説明に使用される用語を定義します。 これらの用語は、具体的には、XAML または System.Xaml レベルでの XAML 言語のサポートを有効になっている XAML の基本的な概念を使用する他のフレームワークも、このドキュメントは、WPF のドキュメントの両方の残りの部分でよく使用されます。 このトピックでは、トピックで導入された基本的な用語で展開[XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)します。  
@@ -45,7 +45,7 @@ ms.locfileid: "42755052"
 ## <a name="the-xaml-language-specification"></a>XAML 言語仕様  
  ここで定義されている XAML 構文の用語の定義または、XAML 言語仕様内で参照されてもします。 XAML では、依存しか、拡張 XML の構造上のルールは XML に基づく言語です。 一部の用語はから共有されてまたは XML 言語または XML ドキュメント オブジェクト モデルを記述する場合によく使用する用語に基づきます。  
   
- XAML 言語仕様の詳細については、ダウンロード[ \[MS XAML\] ](http://go.microsoft.com/fwlink/?LinkId=114525) Microsoft ダウンロード センターから。  
+ XAML 言語仕様の詳細については、ダウンロード[ \[MS XAML\] ](https://go.microsoft.com/fwlink/?LinkId=114525) Microsoft ダウンロード センターから。  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML と CLR  

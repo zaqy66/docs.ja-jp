@@ -2,12 +2,12 @@
 title: 厳密に型指定された拡張のサンプル
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 10e5f2772b1d5cb9508f9e990cfd385d96096018
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eccb0ce240d01ab8592a44daddcfa7aa3d2023fb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507614"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482873"
 ---
 # <a name="strongly-typed-extensions-sample"></a>厳密に型指定された拡張のサンプル
 このサンプルでは、例を示す目的で <xref:System.ServiceModel.Syndication.SyndicationFeed> クラスを使用します。 ただし、このサンプルで示すパターンは、拡張データをサポートするすべての配信クラスで使用できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "33507614"
 </entry>  
 ```  
   
- `<in-reply-to>`要素が 3 つの必須属性を指定します (`ref`、`type`と`href`) 中に、拡張機能の追加の属性と拡張機能の要素が存在することもできます。  
+ `<in-reply-to>`要素が必要な 3 つの属性を指定します (`ref`、`type`と`href`) 追加の拡張属性と拡張機能の要素が存在することもできます。  
   
 ## <a name="modeling-the-in-reply-to-element"></a>In-Reply-To 要素のモデル化  
  このサンプルでは、`<in-reply-to>` 要素は <xref:System.Xml.Serialization.IXmlSerializable> を実装する CLR としてモデル化されており、<xref:System.Runtime.Serialization.DataContractSerializer> と共に使用できます。 さらに、次のサンプル コードに示すように、要素のデータにアクセスするメソッドおよびプロパティも実装しています。  
@@ -272,18 +272,18 @@ public class ThreadedItem : SyndicationItem
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  
   

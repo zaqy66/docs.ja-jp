@@ -2,12 +2,12 @@
 title: プロパティ昇格アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-ms.openlocfilehash: 46e74c8c479e545778db92e15de3cb8798dafa11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519926"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481138"
 ---
 # <a name="property-promotion-activity"></a>プロパティ昇格アクティビティ
 このサンプルでは、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 昇格機能をワークフロー作成に直接統合するエンド ツー エンドのソリューションを示します。 昇格機能の使用を単純化する構成要素、ワークフロー アクティビティ、およびワークフロー拡張機能のコレクションが用意されています。 また、サンプルには、このコレクションの使用方法を示す簡単なワークフローが含まれています。  
@@ -37,11 +37,11 @@ ms.locfileid: "33519926"
   
     1.  サンプル ディレクトリ (\WF\Basic\Persistence\PropertyPromotionActivity) に移動して、CreateInstanceStore.cmd を実行します。  
   
-    2.  管理特権がない場合は、SQL Server ログインを作成します。 SQL Server Management Studio でに移動**セキュリティ**、**ログイン**です。 右クリック**ログイン**し、新しいログインを作成します。 開くことによって、自分の ACL ユーザーを SQL ロールに追加**データベース**、 **InstanceStore**、**セキュリティ**です。 右クリック**ユーザー**選択**新しいユーザー**です。 設定、**ログイン名**上記で作成したユーザーにします。 そのユーザーを、System.Activities.DurableInstancing.InstanceStoreUsers (およびその他) のデータベース ロールのメンバーシップに追加します。 ユーザーが既に存在している場合もあります (ユーザー dbo など)。  
+    2.  管理特権がない場合は、SQL Server ログインを作成します。 SQL Server Management studio に移動**セキュリティ**、**ログイン**します。 右クリックして**ログイン**新しいログインを作成します。 開き、自分の ACL ユーザーを SQL ロールに追加**データベース**、 **InstanceStore**、**セキュリティ**します。 右クリック**ユーザー**選択**新しいユーザー**します。 設定、**ログイン名**上記で作成したユーザーにします。 そのユーザーを、System.Activities.DurableInstancing.InstanceStoreUsers (およびその他) のデータベース ロールのメンバーシップに追加します。 ユーザーが既に存在している場合もあります (ユーザー dbo など)。  
   
 2.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] で PropertyPromotionActivity.sln ソリューション ファイルを開きます。  
   
-3.  ローカルの SQL Server Express 以外のデータベースにインスタンス ストアを作成した場合は、データベース接続文字列を更新する必要があります。 下の App.config ファイルを変更、 **CounterServiceApplication**の値を設定して、`connectionString`属性を`sqlWorkflowInstanceStorePromotion`ノードが初期化されている永続性データベースを指定するため、手順 1 でします。  
+3.  ローカルの SQL Server Express 以外のデータベースにインスタンス ストアを作成した場合は、データベース接続文字列を更新する必要があります。 下の App.config ファイルの変更、 **CounterServiceApplication**の値を設定して、`connectionString`属性を`sqlWorkflowInstanceStorePromotion`ノード初期化された永続性データベースを指すため、手順 1 でします。  
   
 4.  ソリューションをビルドして実行します。 これにより、カウンター WF サービスが開始され、ワークフロー インスタンスが自動的に開始されます。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "33519926"
 ## <a name="understanding-this-sample"></a>このサンプルについて  
  サンプルには、次の 2 つのプロジェクトと SQL ファイルが含まれています。  
   
--   **CounterServiceApplication**単純なカウンター WF サービスをホストするコンソール アプリケーションです。 `Start` エンドポイントを通して一方向のメッセージを受信すると、ワークフローは 0 から 29 までをカウントし、2 秒ごとにカウンター変数がインクリメントされます。 カウンターがインクリメントされるたびに、ワークフローが永続化され、昇格されたプロパティは [dbo].[CounterService] ビューで更新されます。 コンソール アプリケーションが実行されると、WF サービスをホストし、メッセージを `Start` エンドポイントに送信して、カウンター WF インスタンスを作成します。  
+-   **CounterServiceApplication**は単純なカウンター WF サービスをホストするコンソール アプリケーションです。 `Start` エンドポイントを通して一方向のメッセージを受信すると、ワークフローは 0 から 29 までをカウントし、2 秒ごとにカウンター変数がインクリメントされます。 カウンターがインクリメントされるたびに、ワークフローが永続化され、昇格されたプロパティは [dbo].[CounterService] ビューで更新されます。 コンソール アプリケーションが実行されると、WF サービスをホストし、メッセージを `Start` エンドポイントに送信して、カウンター WF インスタンスを作成します。  
   
--   **PropertyPromotionActivity**構成要素、ワークフロー アクティビティ、およびワークフロー拡張機能を含むクラス ライブラリを**CounterServiceApplication**を使用します。  
+-   **PropertyPromotionActivity**構成要素、ワークフロー アクティビティ、およびワークフロー拡張機能を含むクラス ライブラリですが、 **CounterServiceApplication**を使用します。  
   
--   **PropertyPromotionActivitySQLSample.sql**を作成し、ビュー [dbo] を追加します [。CounterService]、データベースにします。  
+-   **PropertyPromotionActivitySQLSample.sql**を作成し、[dbo] ビューを追加します [。CounterService] データベースにします。  
   
 ### <a name="counterserviceapplication"></a>CounterServiceApplication  
   
@@ -99,7 +99,7 @@ go
  `promotedValue` 要素の順序は、`InstancePromotedProperties` ビューの昇格されたプロパティの位置と相関しています。 `Count` は最初の `promotedValue` 要素です。 その結果、`Value1` ビューの `InstancePromotedProperties` 列にマップされます。 `LastIncrementedAt` は 2 番目の `promotedValue` 要素です。 その結果、`Value2` ビューの `InstancePromotedProperties` 列にマップされます。  
   
 #### <a name="using-the-promotevalue-activity"></a>PromoteValue アクティビティの使用  
- Windows Workflow Foundation Designer で CounterService.xamlx ファイルを調べます。 WF の定義には、`PromoteValue<DateTime>` および `PromoteValue<Int32>` の 2 つの特別なアクティビティがあります。  
+ Windows Workflow Foundation デザイナーで CounterService.xamlx ファイルを確認します。 WF の定義には、`PromoteValue<DateTime>` および `PromoteValue<Int32>` の 2 つの特別なアクティビティがあります。  
   
  `PromoteValue<Int32>` アクティビティには、`Name` として定義されているその `Count` メンバーがあります。 これは、構成の最初の `promotedValue` 要素と一致し、`Value` ワークフロー変数として定義されているその `Counter` があります。 ワークフローが永続化されると、`Counter` ワークフロー変数は昇格されたプロパティとして `Value1` ビューの `InstancePromotedProperties` 列に保存されます。  
   
@@ -107,17 +107,17 @@ go
   
  `PromotedValue` アクティビティには、`ClearExistingPromotedData` というブール型のメンバーもあります。 このメンバーを `true` に設定すると、ワークフローのその時点までのすべての昇格されたプロパティ値が消去されます。 たとえば、Sequence アクティビティが次のように定義されているとします。  
   
-1.  PromoteValue {名前 =「カウント」、値 3 を =}  
+1.  PromoteValue {名前 ="Count"、値 3 を =}  
   
 2.  PromoteValue {名前 = 値"LastIncrementedAt"1-1-2000 の =}  
   
 3.  永続化  
   
-4.  PromoteValue {名前「カウント」、値 = 4、ClearExistingPromotedData を = = true}  
+4.  PromoteValue {名前 ="Count"、値 = 4、ClearExistingPromotedData = true}  
   
 5.  永続化  
   
- 2 番目の永続化では、`Count` の昇格された値は 4 になります。 ただし、昇格された値の`LastIncrementedAt`なります`NULL`です。 手順 4. で `ClearExistingPromotedData` を `true` に設定しなかった場合は、2 番目の永続化の後、Count の昇格された値は 4 になります。 その結果、`LastIncrementedAt` の昇格された値は 1-1-2000 のままです。  
+ 2 番目の永続化では、`Count` の昇格された値は 4 になります。 ただし、昇格された値の`LastIncrementedAt`なります`NULL`します。 手順 4. で `ClearExistingPromotedData` を `true` に設定しなかった場合は、2 番目の永続化の後、Count の昇格された値は 4 になります。 その結果、`LastIncrementedAt` の昇格された値は 1-1-2000 のままです。  
   
 ### <a name="propertypromotionactivity"></a>PropertyPromotionActivity  
  このクラス ライブラリには、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 昇格機能の使用を単純化する次のパブリック クラスが含まれています。  
@@ -142,7 +142,7 @@ public class PromoteValue<T> : CodeActivity
  このアクティビティの前に昇格されたすべての値を消去します。  
   
  Name (string)  
- このプロパティを表す名前。 これはの name 属性と一致する必要があります、 \<promotedValue > 構成内の要素。  
+ このプロパティを表す名前。 これはの name 属性と一致する必要があります、 \<promotedValue > 要素で構成します。  
   
  値 (InArgument\<T >)  
  列に格納する変数/値。  
@@ -186,9 +186,9 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric ホスティングと永続性のサンプル](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

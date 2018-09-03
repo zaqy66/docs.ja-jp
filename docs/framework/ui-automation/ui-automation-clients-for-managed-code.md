@@ -10,16 +10,16 @@ ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 2b49ab4d454fd97bbcb8290127456f1cc29916e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7ae01ae597d189166352230da4b80770d6518ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400997"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488158"
 ---
-# <a name="ui-automation-clients-for-managed-code"></a>マネージ コードの UI オートメーション クライアント
+# <a name="ui-automation-clients-for-managed-code"></a>マネージド コードの UI オートメーション クライアント
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このセクションには、UI オートメーション クライアントの概要と、クライアントの開発に役立つハウツーに関するトピックが含まれています。  
   

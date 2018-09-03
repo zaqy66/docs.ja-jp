@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 0fe20ffa19d14dcaecac30198c5c0e2d19fb9fa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556914"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482977"
 ---
 # <a name="control-styles-and-templates"></a>コントロールのスタイルとテンプレート
-Windows Presentation Foundation (WPF) コントロールがある、<xref:System.Windows.Controls.ControlTemplate>そのコントロールのビジュアル ツリーを格納しています。 変更することにより、構造体とコントロールの外観を変更することができます、<xref:System.Windows.Controls.ControlTemplate>を制御するのです。 コントロールのビジュアル ツリーの一部のみを置換する方法はありません。設定する必要があります、コントロールのビジュアル ツリーを変更する、 <xref:System.Windows.Controls.Control.Template%2A> 、新規および完了するコントロールのプロパティ<xref:System.Windows.Controls.ControlTemplate>です。  
+Windows Presentation Foundation (WPF) コントロールが、<xref:System.Windows.Controls.ControlTemplate>そのコントロールのビジュアル ツリーを格納しています。 構造とコントロールの外観を変更するには変更することによって、<xref:System.Windows.Controls.ControlTemplate>を制御するのです。 コントロールのビジュアル ツリーの一部だけを置換する方法はありません。設定する必要があります、コントロールのビジュアル ツリーを変更する、<xref:System.Windows.Controls.Control.Template%2A>その新しいと完全にコントロールのプロパティ<xref:System.Windows.Controls.ControlTemplate>します。  
   
- デスクトップ テーマにより、使用するリソース ディクショナリが決まります。 デスクトップ テーマのリソース ディクショナリを取得するには、「[既定の WPF テーマ](http://go.microsoft.com/fwlink/?LinkID=158252)」を参照してください。  
+ デスクトップ テーマにより、使用するリソース ディクショナリが決まります。 デスクトップ テーマのリソース ディクショナリを取得するには、「[既定の WPF テーマ](https://go.microsoft.com/fwlink/?LinkID=158252)」を参照してください。  
   
  次の表は、リソース ディクショナリ ファイル名とデスクトップ テーマの対応関係をまとめたものです。  
   
@@ -50,10 +50,10 @@ Windows Presentation Foundation (WPF) コントロールがある、<xref:System
  [ListView のスタイルとテンプレート](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
  [メニューのスタイルとテンプレート](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
  [NavigationWindow のスタイルとテンプレート](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox スタイルとテンプレート](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [PasswordBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
  [ProgressBar のスタイルとテンプレート](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
  [RadioButton のスタイルとテンプレート](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton スタイルとテンプレート](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
+ [RepeatButton のスタイルとテンプレート](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
  [ScrollBar のスタイルとテンプレート](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
  [ScrollViewer のスタイルとテンプレート](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
  [スライダーのスタイルとテンプレート](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
@@ -61,7 +61,7 @@ Windows Presentation Foundation (WPF) コントロールがある、<xref:System
  [TabControl のスタイルとテンプレート](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [TextBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
  [つまみのスタイルとテンプレート](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [トグル ボタンのスタイルとテンプレート](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [ToggleButton のスタイルとテンプレート](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar のスタイルとテンプレート](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [ToolTip のスタイルとテンプレート](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
  [TreeView のスタイルとテンプレート](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  

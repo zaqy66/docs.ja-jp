@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 219a806441e0f6ce501dc691f4c965168a250aeb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31edbc8f4cbb09f8720b373780f1b0646a985b20
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365749"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481684"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server と System.Transactions の統合
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] バージョン 2.0 では、 <xref:System.Transactions> 名前空間を介してアクセスできるトランザクション フレームワークが導入されました。 このフレームワークでは、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]を含む [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]に完全に統合された形でトランザクションが公開されます。  
@@ -19,7 +19,7 @@ ms.locfileid: "33365749"
   
  以降で[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]2.0、 <xref:System.Data.SqlClient> SQL Server を使用する場合は、昇格可能なトランザクションをサポートしています。 昇格可能なトランザクションは、必要な場合以外、分散トランザクションのオーバーヘッドの増加を引き起こすことはありません。 昇格可能なトランザクションは、自動、開発者による介入は必要ありません。  
   
- 昇格可能なトランザクションは、使用する場合にのみ使用可能な[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server (`SqlClient`) と SQL Server。  
+ 昇格可能なトランザクションは、使用するときにのみ使用可能な[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server (`SqlClient`) と SQL Server。  
   
 ## <a name="creating-promotable-transactions"></a>昇格可能なトランザクションの作成  
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider for SQL Server では昇格可能なトランザクションをサポートしており、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> 名前空間内のクラスを介して処理されます。 昇格可能なトランザクションでは、必要が生じるまで分散トランザクションの作成を延期することで、分散トランザクションが最適化されます。 必要なリソース マネージャーが 1 つだけである場合は、分散トランザクションは発生しません。  
@@ -28,7 +28,7 @@ ms.locfileid: "33365749"
 >  部分信頼のシナリオで分散トランザクションに昇格するには、 <xref:System.Transactions.DistributedTransactionPermission> が必要です。  
   
 ## <a name="promotable-transaction-scenarios"></a>昇格可能なトランザクションのシナリオ  
- 分散トランザクションは一般的にシステム リソースを大量に消費するため、トランザクションでアクセスされるすべてのリソース マネージャーを統合する、Microsoft Distributed Transaction Coordinator (MS DTC) で管理されます。 昇格可能なトランザクションは特殊な形式の<xref:System.Transactions>単純な SQL Server トランザクションに処理を効果的に委任するトランザクション。 <xref:System.Transactions>、 <xref:System.Data.SqlClient>、および SQL Server は必要に応じて、完全な分散トランザクションに昇格、トランザクションの処理に必要な作業を調整します。  
+ 分散トランザクションは一般的にシステム リソースを大量に消費するため、トランザクションでアクセスされるすべてのリソース マネージャーを統合する、Microsoft Distributed Transaction Coordinator (MS DTC) で管理されます。 昇格可能なトランザクションは特殊な形式の<xref:System.Transactions>トランザクションに単純な SQL Server トランザクションの作業を効率よく委任します。 <xref:System.Transactions>、 <xref:System.Data.SqlClient>、および SQL Server は、必要に応じて完全な分散トランザクションに昇格、トランザクションの処理に必要な作業を調整します。  
   
  昇格可能なトランザクションを使用する利点は、アクティブな <xref:System.Transactions.TransactionScope> トランザクションによって接続が開かれ、その他の接続が開いていない場合に、完全な分散トランザクションによるオーバーヘッドが生じることなく、トランザクションが軽量なトランザクションとしてコミットされることです。  
   
@@ -230,4 +230,4 @@ End Function
   
 ## <a name="see-also"></a>関連項目  
  [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

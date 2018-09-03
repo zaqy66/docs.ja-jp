@@ -8,16 +8,16 @@ ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: d3ec88eb1054c4cc14f01320c85924c9ca346361
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 624ee2b8554c6d83d62db87ab3161421527829c4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398808"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484362"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>クライアントの UI オートメーション コントロール パターン
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  この概要では、UI オートメーション クライアントのコントロール パターンについて説明します。 また、UI オートメーション クライアントがコントロール パターンを使用して、 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]の情報にアクセスするしくみについても説明します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33398808"
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
 ## <a name="retrieving-properties-on-control-patterns"></a>コントロール パターンのプロパティの取得  
- クライアントは、<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> または <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> を呼び出し、返されたオブジェクトを適切な型にキャストすることで、コントロール パターンのプロパティ値を取得できます。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)です。  
+ クライアントは、<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> または <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> を呼び出し、返されたオブジェクトを適切な型にキャストすることで、コントロール パターンのプロパティ値を取得できます。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)します。  
   
  `GetPropertyValue` メソッドに加え、 [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] アクセサーを介してパターンの [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティにアクセスすることで、プロパティ値を取得することもできます。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "33398808"
  [UI オートメーションを使用したコントロールの呼び出し](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
  [UI オートメーションを使用した、チェック ボックスのトグル状態の取得](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [UI オートメーション クライアントのコントロール パターン マッピング](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [TextPattern の挿入テキスト サンプル](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
- [TextPattern の検索と選択のサンプル](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)  
- [InvokePattern および ExpandCollapsePattern メニュー項目のサンプル](http://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+ [TextPattern の挿入テキスト サンプル](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
+ [TextPattern の検索と選択のサンプル](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)  
+ [InvokePattern および ExpandCollapsePattern メニュー項目のサンプル](https://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)

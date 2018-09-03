@@ -2,12 +2,12 @@
 title: WCF サービスの簡略化された構成
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 80e2ac83ec0e07176d6afe6d34c63fb4d8e836d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebdf7ab62676bb0c8ac99a5335a3047fcdd5a9b3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502265"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482892"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF サービスの簡略化された構成
 このサンプルでは、一般的なサービスおよび Windows Communication Foundation (WCF) を使用してクライアントを実装して構成する方法を示します。 このサンプルは、他のすべての基本的な技術サンプルの基礎になります。  
@@ -37,7 +37,7 @@ ms.locfileid: "33502265"
 </configuration>  
 ```  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] では、`<service>` 要素は省略可能です。 サービスでエンドポイントが定義されていない場合、各ベース アドレスのエンドポイントと実装されたコントラクトがサービスに追加されます。 このベース アドレスがコントラクト名に追加されてエンドポイントが決定され、バインドがアドレス スキームで決定されます。 次のコード例は、簡略化された構成ファイルを示しています。 サービスにアクセスできるように構成されている、http://localhost/servicemodelsamples/service.svc同じコンピューター上のクライアントによってです。 リモート コンピューター上のクライアントがサービスにアクセスするには、localhost の代わりに完全修飾ドメイン名を指定する必要があります。 既定では、サービスはメタデータを公開しません。 そのため、サービスは <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 動作を有効にします。  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] では、`<service>` 要素は省略可能です。 サービスでエンドポイントが定義されていない場合、各ベース アドレスのエンドポイントと実装されたコントラクトがサービスに追加されます。 このベース アドレスがコントラクト名に追加されてエンドポイントが決定され、バインドがアドレス スキームで決定されます。 次のコード例は、簡略化された構成ファイルを示しています。 サービスにアクセスできるように構成されている、 http://localhost/servicemodelsamples/service.svc同じコンピューター上のクライアントによって。 リモート コンピューター上のクライアントがサービスにアクセスするには、localhost の代わりに完全修飾ドメイン名を指定する必要があります。 既定では、サービスはメタデータを公開しません。 そのため、サービスは <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 動作を有効にします。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -57,27 +57,27 @@ ms.locfileid: "33502265"
   
 ### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
 3.  次の手順に従ってサンプルを実行します。  
   
-    1.  右クリックして、**サービス**プロジェクトし、選択**スタートアップ プロジェクトとして設定**、キーを押します**ctrl キーを押しながら f5 キー**です。  
+    1.  右クリックして、**サービス**順に選択して**スタートアップ プロジェクトとして設定**、キーを押します**Ctrl + F5**します。  
   
     2.  コンソール出力でサービスが動作していることが確認されるまで待機します。  
   
-    3.  右クリックして、**クライアント**プロジェクトし、選択**スタートアップ プロジェクトとして設定**、キーを押します**ctrl キーを押しながら f5 キー**です。  
+    3.  右クリックして、**クライアント**順に選択して**スタートアップ プロジェクトとして設定**、キーを押します**Ctrl + F5**します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric 管理のサンプル](http://go.microsoft.com/fwlink/?LinkId=193960)  
+ [AppFabric 管理のサンプル](https://go.microsoft.com/fwlink/?LinkId=193960)  
  [簡略化された構成](../../../../docs/framework/wcf/simplified-configuration.md)

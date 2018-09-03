@@ -8,32 +8,32 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 62c5610bf5590594f34a3401b9397bb17d23f5ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d13650cb3e9a4e97a6642992b7211f323b9ea96
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556680"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483022"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>方法 : コードでバインディングを作成する
-この例を作成し、設定する方法を示しています、<xref:System.Windows.Data.Binding>のコードにします。  
+この例を作成し、設定する方法を示しています、<xref:System.Windows.Data.Binding>コード。  
   
 ## <a name="example"></a>例  
- <xref:System.Windows.FrameworkElement>クラスおよび<xref:System.Windows.FrameworkContentElement>両方を公開するクラス、`SetBinding`メソッドです。 これらのクラスを継承する要素をバインドする場合を呼び出すことができます、<xref:System.Windows.FrameworkElement.SetBinding%2A>メソッドを直接です。  
+ <xref:System.Windows.FrameworkElement>クラスおよび<xref:System.Windows.FrameworkContentElement>クラスの両方を公開、`SetBinding`メソッド。 これらのクラスを継承する要素をバインドする場合を呼び出すことができます、<xref:System.Windows.FrameworkElement.SetBinding%2A>メソッドを直接します。  
   
- 次の例は、という名前のクラスを作成`MyData`、という名前のプロパティが含まれています`MyDataProperty`です。  
+ 次の例は、という名前のクラスを作成`MyData`、という名前のプロパティを含む`MyDataProperty`します。  
   
  [!code-csharp[CodeOnlyBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/MyData.cs#dataobject)]
  [!code-vb[CodeOnlyBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/MyData.vb#dataobject)]  
   
- 次の例では、バインディングのソースを設定するバインディング オブジェクトを作成する方法を示します。  この例では<xref:System.Windows.FrameworkElement.SetBinding%2A>にバインドする、<xref:System.Windows.Controls.TextBlock.Text%2A>プロパティの`myText`、これは、<xref:System.Windows.Controls.TextBlock>コントロールを`MyDataProperty`です。  
+ 次の例では、バインディング、バインディングのソースを設定するオブジェクトを作成する方法を示します。  この例では<xref:System.Windows.FrameworkElement.SetBinding%2A>にバインドする、<xref:System.Windows.Controls.TextBlock.Text%2A>プロパティの`myText`、これは、<xref:System.Windows.Controls.TextBlock>コントロールに`MyDataProperty`。  
   
  [!code-csharp[CodeOnlyBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
- 完全なコード サンプルでは、次を参照してください。[コードのみのバインドのサンプル](http://msdn.microsoft.com/library/764aaf0b-2216-4941-9548-9c98da18d1a6)です。  
+ 完全なコード サンプルでは、次を参照してください。[コードのみのバインドのサンプル](https://msdn.microsoft.com/library/764aaf0b-2216-4941-9548-9c98da18d1a6)します。  
   
- 呼び出し元ではなく<xref:System.Windows.FrameworkElement.SetBinding%2A>、使用することができます、<xref:System.Windows.Data.BindingOperations.SetBinding%2A>の静的メソッド、<xref:System.Windows.Data.BindingOperations>クラスです。 次の例を呼び出して<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>の代わりに<xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType>にバインドする`myText`に`myDataProperty`です。  
+ 呼び出す代わりに<xref:System.Windows.FrameworkElement.SetBinding%2A>、使用することができます、<xref:System.Windows.Data.BindingOperations.SetBinding%2A>の静的メソッド、<xref:System.Windows.Data.BindingOperations>クラス。 次の例で呼び出し<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>の代わりに<xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType>にバインドする`myText`に`myDataProperty`します。  
   
  [!code-csharp[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#bosetbinding)]
  [!code-vb[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  

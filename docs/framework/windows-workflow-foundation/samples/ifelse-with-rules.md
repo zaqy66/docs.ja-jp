@@ -2,17 +2,17 @@
 title: ルール付き IfElse
 ms.date: 03/30/2017
 ms.assetid: c4ad9bb2-9037-413a-8b14-59ed7b927a9e
-ms.openlocfilehash: 179ec29f957894433fb527a14048460f5ff6ee5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31906f04149a0ca7659201965ca565c7fa2af305
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515122"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483007"
 ---
 # <a name="ifelse-with-rules"></a>ルール付き IfElse
 このサンプルでは、ルール条件を <xref:System.Workflow.Activities.IfElseActivity> アクティビティで使用する方法を示します。  
   
- このサンプルでは、ホストから `OrderValue` パラメータが渡されます。 このパラメータの値は、<xref:System.Workflow.Activities.IfElseActivity> アクティビティの最初の分岐のルール条件で使用されます。 場合、値が 10,000 未満の場合、最初の分岐が実行され、<xref:System.Workflow.Activities.CodeActivity>最初の分岐のアクティビティの出力**マネージャーの承認を取得**コンソールにします。 値が 10,000 を超える場合、 <xref:System.Workflow.Activities.CodeActivity> 2 番目の分岐のアクティビティが実行され、印刷**取得 VP 承認**です。  
+ このサンプルでは、ホストから `OrderValue` パラメータが渡されます。 このパラメータの値は、<xref:System.Workflow.Activities.IfElseActivity> アクティビティの最初の分岐のルール条件で使用されます。 値が 10,000 未満の場合は、最初の分岐を実行して、<xref:System.Workflow.Activities.CodeActivity>最初の分岐のアクティビティの出力**Get Manager Approval**コンソールにします。 値が 10,000 を超える場合、 <xref:System.Workflow.Activities.CodeActivity> 2 番目の分岐のアクティビティが実行され、印刷**Get VP Approval**します。  
   
 ### <a name="to-build-the-sample"></a>サンプルをビルドするには  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33515122"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\IfElseWithRules`  
   

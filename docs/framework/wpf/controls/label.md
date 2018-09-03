@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 310c9549814a2686fb29e98ea81baa642b6a16bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec5dda6c2a4690106e47ecb447ea2a409e474856
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553729"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476067"
 ---
 # <a name="label"></a>group1
-<xref:System.Windows.Controls.Label> コントロールが通常の情報を提供して、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]です。  従来、<xref:System.Windows.Controls.Label>テキストのみが格納されているが、<xref:System.Windows.Controls.Label>に付属している[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、 <xref:System.Windows.Controls.ContentControl>、いずれかのテキストを含めることができます、または<xref:System.Windows.UIElement>です。  
+<xref:System.Windows.Controls.Label> コントロールが通常の情報を提供、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。  従来を<xref:System.Windows.Controls.Label>のみのテキストが格納されているが、<xref:System.Windows.Controls.Label>付属している[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、 <xref:System.Windows.Controls.ContentControl>、いずれかのテキストを含めることができますまたは<xref:System.Windows.UIElement>。  
   
- A<xref:System.Windows.Controls.Label>アクセス キーの機能や外観の両方のサポートを提供します。 アクセスを有効にクイック キーボード コントロールなどでよく使用される、<xref:System.Windows.Controls.TextBox>です。 割り当てる、<xref:System.Windows.Controls.Label>を<xref:System.Windows.Controls.Control>、設定されて、<xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType>プロパティをコントロールをユーザーがアクセス キーを押すとフォーカスを取得する必要があります。  
+ A<xref:System.Windows.Controls.Label>アクセス キーの機能およびビジュアルの両方のサポートを提供します。 などのコントロールへの簡単なキーボード アクセスを有効にするでよく使用される、<xref:System.Windows.Controls.TextBox>します。 割り当てる、<xref:System.Windows.Controls.Label>を<xref:System.Windows.Controls.Control>に設定して、<xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType>プロパティをコントロールをユーザーのアクセス キーを押したときに、フォーカスを取得する必要があります。  
   
- 次の図は、 <xref:System.Windows.Controls.Label> 「テーマ」を対象とする、<xref:System.Windows.Controls.ComboBox>です。  ユーザーが押すと、<xref:System.Windows.Controls.ComboBox>がフォーカスを取得します。  詳細については、次を参照してください。[する方法: ラベルのターゲット プロパティを設定](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)です。  
+ 次の図は、 <xref:System.Windows.Controls.Label> 「テーマ」を対象とする、<xref:System.Windows.Controls.ComboBox>します。  ユーザーがキーを押したときに、<xref:System.Windows.Controls.ComboBox>がフォーカスを受け取る。  詳細については、次を参照してください。[方法: ラベルのターゲット プロパティを設定](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)します。  
   
- ![使用してラベルの付いた表示プロパティを示しています](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
+ ![表示プロパティを示しますを使用してラベルの付いた](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: ラベルのターゲット プロパティを設定する](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [方法: ラベルのターゲット プロパティを設定する](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Label>

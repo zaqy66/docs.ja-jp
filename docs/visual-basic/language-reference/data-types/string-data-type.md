@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257953"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481612"
 ---
 # <a name="string-data-type-visual-basic"></a>文字列型 (String) (Visual Basic)
 0 ~ 65535 の値範囲の符号なし 16 ビット (2 バイト) コード ポイントのシーケンスを保持します。 各*コード ポイント*、または文字コードを 1 つの Unicode 文字を表します。 文字列は、0 からおよそ 20億を含めることができます (2 ^31) の Unicode 文字。  

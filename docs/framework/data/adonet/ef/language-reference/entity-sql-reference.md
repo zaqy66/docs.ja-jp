@@ -2,12 +2,12 @@
 title: Entity SQL リファレンス
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: d6b40d0c1662e18ed83c58bfdde7b6dac65220dd
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39221050"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487420"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL リファレンス
 
@@ -67,7 +67,7 @@ ms.locfileid: "39221050"
 |[\! (論理 NOT)](not-entity-sql.md)|論理 NOT。|
 |[&#124;&#124;(論理 OR)](or-entity-sql.md)|論理 OR。|
 |[CASE](case-entity-sql.md)|一連のブール式を評価して結果を決定します。|
-|[THEN](then-entity-sql.md)|結果、[とき](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998)句を true に評価された場合。|
+|[THEN](then-entity-sql.md)|結果、[とき](https://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998)句を true に評価された場合。|
 
 ## <a name="query-operators"></a>クエリ演算子
 

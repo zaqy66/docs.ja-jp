@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: d513ddd41d87da7274f961969d261724b49aab65
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 57b353ba945377d9056f7726d96befbd5466ffa6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807815"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481303"
 ---
 # <a name="token-provider"></a>トークン プロバイダー
-このサンプルでは、カスタム トークン プロバイダーを実装する方法を示します。 資格情報をセキュリティ インフラストラクチャに提供するトークン プロバイダーでは、Windows Communication Foundation (WCF) が使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider に付属します。 WCF も付属しています、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。  
+このサンプルでは、カスタム トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider で出荷されます。 WCF にも付属、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。  
   
 -   トークン プロバイダーが連携動作できない資格情報ストアがある場合。  
   
--   ユーザーが WCF クライアント フレームワークが資格情報を使用する場合に詳細を提供するときに、ポイントからの資格情報を変換するための独自のカスタム メカニズムを提供する場合は。  
+-   ユーザーは、WCF クライアント フレームワークが資格情報を使用する場合に、詳細を提供するときに、ポイントから資格情報を変換するための独自のカスタム メカニズムを提供する場合は。  
   
 -   カスタム トークンを構築している場合。  
   
@@ -248,9 +248,9 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには  
   
@@ -267,7 +267,7 @@ static void DisplayIdentityInformation()
   
 5.  password プロンプトに対して、username プロンプトで入力したものと同じ文字列を入力します。  
   
-6.  クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+6.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 #### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -289,7 +289,7 @@ static void DisplayIdentityInformation()
   
 9. クライアント コンピューターで、コマンド プロンプト ウィンドウから `Client.exe` を起動します。  
   
-10. クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+10. クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   

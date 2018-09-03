@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 217b54a615d7c553e714ef87b3c2bb6a1919ae98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1571e43d6a89af453d6289ccb646c7222f0a5ad6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435376"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483111"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a>ICLRStrongName::StrongNameSignatureGeneration メソッド
-指定したアセンブリの厳密な名前の署名を生成します。  
+指定されたアセンブリの厳密な名前の署名を生成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,47 +42,47 @@ HRESULT StrongNameSignatureGeneration (
   
 #### <a name="parameters"></a>パラメーター  
  `wszFilePath`  
- [in]厳密な名前の署名の生成対象となるアセンブリのマニフェストを格納しているファイルへのパス。  
+ [in]厳密な名前の署名を生成するアセンブリのマニフェストを含むファイルへのパス。  
   
  `wszKeyContainer`  
  [in]公開/秘密キー ペアを格納するキー コンテナーの名前。  
   
- 場合`pbKeyBlob`が null、`wszKeyContainer`暗号化サービス プロバイダー (CSP) 内で有効なコンテナーを指定する必要があります。 この場合、コンテナーに格納されているキーのペアは、ファイルの署名に使用されます。  
+ 場合`pbKeyBlob`が null、`wszKeyContainer`暗号化サービス プロバイダー (CSP) 内で有効なコンテナーを指定する必要があります。 ここでは、コンテナーに格納されているキーのペアは、ファイルの署名に使用します。  
   
- 場合`pbKeyBlob`が null でないと見なされますのキー ペア キー バイナリ ラージ オブジェクト (BLOB) に含まれています。  
+ 場合`pbKeyBlob`が null でないと見なされます、キーのペア キー バイナリ ラージ オブジェクト (BLOB) に格納します。  
   
- キーは、1024 ビットの Rivest-shamir-adleman (RSA) 署名キーである必要があります。 この時点では、その他の種類のキーはサポートされません。  
+ キーは、1024 ビット Rivest-Shamir-Adleman (RSA) 署名キーである必要があります。 この時点でその他の種類のキーがサポートされていません。  
   
  `pbKeyBlob`  
- [in]公開/秘密キー ペアへのポインター。 Win32 によって作成された形式では、このペア`CryptExportKey`関数。 場合`pbKeyBlob`は null、によって指定されたキー コンテナー`wszKeyContainer`キー ペアを格納すると見なされます。  
+ [in]公開/秘密キーのペアへのポインター。 このペアは、Win32 によって作成された形式で、`CryptExportKey`関数。 場合`pbKeyBlob`が null で指定されたキー コンテナー`wszKeyContainer`キー ペアを格納すると見なされます。  
   
  `cbKeyBlob`  
- [in]サイズをバイト単位での`pbKeyBlob`します。  
+ [in]サイズ (バイト単位) の`pbKeyBlob`します。  
   
  `ppbSignatureBlob`  
- [out]共通言語ランタイムをするには、署名を返します場所へのポインター。 場合`ppbSignatureBlob`が null の場合、ランタイム、署名ファイルに格納で指定された`wszFilePath`です。  
+ [out]共通言語ランタイムには、署名を返す位置へのポインター。 場合`ppbSignatureBlob`が null の場合、ランタイム、シグネチャ ファイルに格納で指定された`wszFilePath`します。  
   
- 場合`ppbSignatureBlob`が null でない、共通言語ランタイムは領域を割り当てますを返す、署名します。 呼び出し元を使用してこの領域を解放する必要があります、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)メソッドです。  
+ 場合`ppbSignatureBlob`が null でない共通言語ランタイム割り当て領域が、署名を返します。 使用して呼び出し元がこの領域を解放する必要があります、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)メソッド。  
   
  `pcbSignatureBlob`  
- [out]返された署名のバイト単位のサイズ。  
+ [out]返される署名のバイト単位のサイズ。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK` メソッドが正常に完了した場合それ以外の場合、失敗を示す HRESULT 値 (を参照してください[の共通 HRESULT 値](http://go.microsoft.com/fwlink/?LinkId=213878)一覧)。  
+ `S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。  
   
-## <a name="remarks"></a>コメント  
- Null を指定する`wszFilePath`署名を作成することがなく、署名のサイズを計算します。  
+## <a name="remarks"></a>Remarks  
+ Null を指定`wszFilePath`署名を作成することがなく、署名のサイズを計算します。  
   
- 署名があることができます、ファイルに直接格納または呼び出し元に返されます。  
+ 署名は、ファイルに直接格納または呼び出し元に返されます。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [StrongNameSignatureGenerationEx メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  

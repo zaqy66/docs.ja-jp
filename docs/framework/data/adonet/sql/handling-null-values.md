@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 9c0b6d250dcedc9b5996c50ccdb2f183707e54e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 039a6f5aab2f1b857f98803f8b3d6425cc549877
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364272"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486042"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 列の値が不明または欠落している場合は、リレーショナル データベースの NULL 値が使用されます。 NULL は空文字列 (文字または日付時刻データ型) でもゼロ値 (数値データ型) でもありません。 ANSI SQL-92 の規格では、すべてのデータ型について NULL は同一でなければならないと規定されているため、すべての NULL が一貫して処理されます。 <xref:System.Data.SqlTypes> 名前空間では、<xref:System.Data.SqlTypes.INullable> インターフェイスを実装することで NULL セマンティクスが提供されます。 <xref:System.Data.SqlTypes> 内の各データ型には、それぞれ独自に `IsNull` プロパティと `Null` 値があり、データ型のインスタンスに割り当てることができます。  
   
 > [!NOTE]
->  .NET Framework version 2.0 では、NULL 許容型がサポートされました。この型を使用することで、値型を拡張して基になる型のすべての値を表すことができます。 これらの CLR NULL 許容型は、<xref:System.Nullable> 構造体のインスタンスを表します。 この機能は、値の型がボックスまたはアンボックスされるときに特に有効であり、オブジェクト型との互換性が強化されます。 ANSI SQL の NULL は `null` 参照 (Visual Basic では `Nothing`) と動作が異なるため、CLR NULL 許容型は NULL のデータベースへの格納を意図したものではありません。 データベースの ANSI SQL NULL 値を操作するには、<xref:System.Data.SqlTypes> ではなく <xref:System.Nullable> NULL を使用します。 Visual Basic での null 許容型を参照してください CLR の使用の詳細については[null 許容値型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)、および C# の場合は、「 [null 許容型を使用して](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)です。  
+>  .NET Framework version 2.0 では、NULL 許容型がサポートされました。この型を使用することで、値型を拡張して基になる型のすべての値を表すことができます。 これらの CLR NULL 許容型は、<xref:System.Nullable> 構造体のインスタンスを表します。 この機能は、値の型がボックスまたはアンボックスされるときに特に有効であり、オブジェクト型との互換性が強化されます。 ANSI SQL の NULL は `null` 参照 (Visual Basic では `Nothing`) と動作が異なるため、CLR NULL 許容型は NULL のデータベースへの格納を意図したものではありません。 データベースの ANSI SQL NULL 値を操作するには、<xref:System.Data.SqlTypes> ではなく <xref:System.Nullable> NULL を使用します。 Visual Basic での null 許容型を参照してください CLR の使用の詳細については[null 許容値型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)、および c#」をご覧ください[null 許容型を使用して](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)します。  
   
 ## <a name="nulls-and-three-valued-logic"></a>NULL および 3 つの値を持つロジック  
  列定義に NULL 値を許可することで、3 つの値を持つロジックをアプリケーションに定義できます。 比較によって、次の 3 つの条件のうちの 1 つを評価できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "33364272"
  ![真理値表](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>ANSI_NULLS オプションについて  
- <xref:System.Data.SqlTypes> では、ANSI_NULLS オプションが SQL Server で設定された場合と同じセマンティクスになります。 すべての算術演算子 (+、-、*、/、%)、ビットごとの演算子 (~、&、 &#124;)、ほとんどの関数が返す null の場合は、オペランドまたは引数のいずれかが null 以外に、プロパティ、および`IsNull`です。  
+ <xref:System.Data.SqlTypes> では、ANSI_NULLS オプションが SQL Server で設定された場合と同じセマンティクスになります。 すべての算術演算子 (+、-、*、/、%)、ビットごとの演算子 (~、&、 &#124;)、ほとんどの関数が null の場合は、オペランドまたは引数のいずれかが null 以外に、プロパティ、戻って`IsNull`します。  
   
  ANSI sql-92 標準がサポートしていません*columnName* WHERE 句で NULL を = です。 SQL Server では、ANSI_NULLS オプションによって、データベース内の既定の NULL 値と、NULL 値に対する比較の評価の両方が制御されます。 ANSI_NULLS がオン (既定) である場合、IS NULL 演算子を NULL 値のテストを行う式で使用する必要があります。 たとえば次の比較では、ANSI_NULLS がオンである場合、常に不明となります。  
   
@@ -87,7 +87,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  さらに、`DataRow.["columnName"]` の NULL 値割り当てのインスタンスには、次の規則が適用されます。  
   
-1.  既定値*既定*値は`DbNull.Value`ここでは、適切な厳密厳密に型指定された null 列に null 値が型指定された点を除いてすべてです。  
+1.  既定の*既定*値は`DbNull.Value`が適切な厳密に厳密に型指定された null 列に null 値が型指定された点を除いてすべて。  
   
 2.  XML ファイルへのシリアル化中に NULL 値が書き出されることはありません ("xsi:nil" と同じ)。  
   
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>NULL 値と SqlTypes および CLR 型との比較  
- NULL 値を比較する場合は、`Equals` メソッドによって <xref:System.Data.SqlTypes> で NULL 値を評価する方法と、CLR 型を使用する方法との違いを理解することが重要です。 すべての<xref:System.Data.SqlTypes>`Equals`メソッドが null 値を評価するためにデータベース セマンティクスを使用します。 比較に null が得られますかまたは両方の値が null の場合。 その一方で、2 つの `Equals` に対して CLR <xref:System.Data.SqlTypes> メソッドを使用した場合は、両方が NULL であれば true が得られます。 これは、CLR `String.Equals` メソッドなどのインスタンス メソッドを使用した場合と、`SqlString.Equals` などの静的/共有メソッドを使用した場合の違いを反映しています。  
+ NULL 値を比較する場合は、`Equals` メソッドによって <xref:System.Data.SqlTypes> で NULL 値を評価する方法と、CLR 型を使用する方法との違いを理解することが重要です。 すべての<xref:System.Data.SqlTypes>`Equals`メソッドが null 値を評価するためにデータベース セマンティクスを使用: null のいずれかまたは両方の値が null の場合の比較となります。 その一方で、2 つの `Equals` に対して CLR <xref:System.Data.SqlTypes> メソッドを使用した場合は、両方が NULL であれば true が得られます。 これは、CLR `String.Equals` メソッドなどのインスタンス メソッドを使用した場合と、`SqlString.Equals` などの静的/共有メソッドを使用した場合の違いを反映しています。  
   
  次のコード サンプルでは、`SqlString.Equals` メソッドと `String.Equals` メソッドにそれぞれ NULL 値のペアを渡し、次に空の文字列のペアを渡した場合の、各メソッドの結果の違いを示します。  
   
@@ -143,4 +143,4 @@ String.Equals instance method:
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server データ型と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

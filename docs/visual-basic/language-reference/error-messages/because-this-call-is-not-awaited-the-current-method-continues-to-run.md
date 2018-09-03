@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 754fc6750e63f6d9f39da94041fc452829bca46d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591435"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480894"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>この呼び出しは待機されなかったため、現在のメソッドの実行は呼び出しの完了を待たずに続行されます。
 この呼び出しは待機されなかったため、現在のメソッドの実行は呼び出しの完了を待たずに続行されます。 呼び出しの結果に 'Await' 演算子を適用することを検討してください。  
@@ -23,7 +23,7 @@ ms.locfileid: "33591435"
   
  ベスト プラクティスとしては、常に呼び出しを待機する必要があります。  
   
- 既定では、このメッセージは警告です。 警告を非表示や、警告をエラーとして扱う方法の詳細については、次を参照してください。 [Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)です。  
+ 既定では、このメッセージは警告です。 警告を非表示または警告をエラーとして扱う方法の詳細については、次を参照してください。 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)します。  
   
  **エラー ID:** BC42358  
   
@@ -117,7 +117,7 @@ ms.locfileid: "33591435"
   
      ボタンとテキスト ボックスを含むシンプルなウィンドウが、MainWindow.xaml の **[デザイン]** ビューに表示されます。  
   
-     XAML デザイナーの詳細については、「[XAML デザイナーを使用した UI の作成](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)」を参照してください。 独自の単純な UI を構築する方法については、「[チュートリアル: Async と Await を使用した Web へのアクセス](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042)」の WPF アプリケーションの作成に関するセクションと単純な WPF MainWindow のデザインに関するセクションを参照してください。  
+     XAML デザイナーの詳細については、「[XAML デザイナーを使用した UI の作成](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)」を参照してください。 独自の単純な UI を構築する方法については、「[チュートリアル: Async と Await を使用した Web へのアクセス](https://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042)」の WPF アプリケーションの作成に関するセクションと単純な WPF MainWindow のデザインに関するセクションを参照してください。  
   
 4.  MainWindow.xaml.vb のコードを次のコードに置き換えます。  
   

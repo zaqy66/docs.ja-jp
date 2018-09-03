@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94d17b6c8150744d4beca5e74827d235f81af08c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33aab5ee23a1f0d30d1f9f3079856ca30d46d2ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433316"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487243"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile メソッド
-指定されたファイルの内容のハッシュを生成します。  
+指定したファイルのコンテンツのハッシュを生成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,10 +41,10 @@ HRESULT GetHashFromFile (
   
 #### <a name="parameters"></a>パラメーター  
  `szFilePath`  
- [in]ハッシュには、ファイルの名前。  
+ [in]ハッシュするファイルの名前。  
   
  `piHashAlg`  
- [入力、出力].ハッシュを生成するときに使用するアルゴリズムです。 有効なアルゴリズムを使用して、Win32 CryptoAPI で定義されています。 場合`piHashAlg`は 0、CALG_SHA 1 が使用される既定のアルゴリズムに設定します。  
+ [入力、出力]ハッシュを生成するときに使用するアルゴリズム。 有効なアルゴリズムを使用して、Win32 CryptoAPI で定義されています。 場合`piHashAlg`CALG_SHA 1 が使用される既定のアルゴリズムを 0 に設定されます。  
   
  `pbHash`  
  [out]生成されたハッシュを含むバイト配列。  
@@ -53,22 +53,22 @@ HRESULT GetHashFromFile (
  [in]バッファーの最大サイズを`pbHash`を指します。  
   
  `pchHash`  
- [out]サイズ (バイト単位)、返された`pbHash`です。  
+ [out]サイズ (バイト単位)、返された`pbHash`します。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK` メソッドが正常に完了した場合それ以外の場合、失敗を示す HRESULT 値 (を参照してください[の共通 HRESULT 値](http://go.microsoft.com/fwlink/?LinkId=213878)一覧)。  
+ `S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。  
   
-## <a name="remarks"></a>コメント  
- このメソッドと同じ、 [iclrstrongname::gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)メソッド、名前を指定する点を除いては Unicode ではなく ANSI です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは同じ、 [iclrstrongname::gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)メソッド、名前を指定する点を除いては Unicode ではなく ANSI です。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [GetHashFromFileW メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  

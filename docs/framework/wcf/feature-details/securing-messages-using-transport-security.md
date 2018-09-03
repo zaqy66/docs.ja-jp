@@ -4,24 +4,24 @@ ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 50e450f4241abc7d8b688c58a121f64c3ca0e709
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ab04326404a4b90e30036594a7152e6118c2138
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499464"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482842"
 ---
 # <a name="securing-messages-using-transport-security"></a>トランスポート セキュリティを使用したメッセージのセキュリティ保護
 ここでは、キューに送信されるメッセージをセキュリティで保護するために使用できるメッセージ キュー (MSMQ) トランスポート セキュリティについて説明します。  
   
 > [!NOTE]
->  このトピック全体を読み取る前にお勧めお読みになる[セキュリティの基本概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)です。  
+>  このトピックを読む前にお勧めお読みになる[セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)します。  
   
  次の図は、Windows Communication Foundation (WCF) を使用してキューに置かれた通信の概念モデルを提供します。 この図および用語を使用して、トランスポート セキュリティの概念について解説します。  
   
  ![アプリケーション ダイアグラムをキューに置かれた](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散キュー図")  
   
- WCF を使用してメッセージのキューを送信するときに<xref:System.ServiceModel.NetMsmqBinding>、WCF メッセージは MSMQ メッセージの本文として添付されます。 トランスポート セキュリティは、MSMQ メッセージ全体 (MSMQ メッセージ ヘッダーまたはプロパティ、およびメッセージ本文) をセキュリティで保護します。 MSMQ メッセージの本文になっているためには、WCF メッセージを保護するトランスポート セキュリティを使用してもします。  
+ WCF を使用してメッセージ キューに送信するときに<xref:System.ServiceModel.NetMsmqBinding>、WCF メッセージは MSMQ メッセージの本文として添付します。 トランスポート セキュリティは、MSMQ メッセージ全体 (MSMQ メッセージ ヘッダーまたはプロパティ、およびメッセージ本文) をセキュリティで保護します。 MSMQ メッセージの本文であるためにでは、WCF メッセージは保護もトランスポート セキュリティを使用します。  
   
  トランスポート セキュリティの背後にある重要な概念は、メッセージがターゲット キューに到達するためには、クライアントがセキュリティ要件を満たす必要があるという点です。 これは、メッセージ セキュリティとは異なります。メッセージ セキュリティでは、メッセージを受信するアプリケーションに対してメッセージが保護されます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33499464"
   
  また、MSMQ は、Active Directory に登録されていないメッセージに証明書を添付する機能も提供します。 この場合は、添付された証明書を使用してメッセージが署名されたことが保証されます。  
   
- WCF は、MSMQ トランスポート セキュリティの一部として、これらのオプションを提供され、トランスポート セキュリティの中核です。  
+ WCF MSMQ トランスポート セキュリティの一部としてこれら両方のオプションを提供する、トランスポート セキュリティの中核です。  
   
  既定では、トランスポート セキュリティが有効になります。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "33499464"
 #### <a name="certificate-authentication-mode"></a>証明書認証モード  
  証明書認証モードを選択した場合は、Active Directory 統合をインストールする必要がありません。 実際、(Active Directory 統合をインストールせずに) MSMQ をワークグループ モードでインストールしている場合や、SOAP リライアブル メッセージ プロトコル (SRMP: SOAP Reliable Messaging Protocol) 転送プロトコルを使用してメッセージをキューに送信する場合など、<xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> だけが機能するというケースもあります。  
   
- WCF メッセージと共に送信するときに<xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>、WCF チャネルは MSMQ メッセージを Windows SID をアタッチできません。 そのため、ターゲット キューの ACL は、キューへの送信に対して `Anonymous` ユーザー アクセスを許可する必要があります。 受信側キュー マネージャーは、証明書を使用して MSMQ メッセージが署名されたかどうかをチェックしますが、認証は行いません。  
+ WCF メッセージの送信中<xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>、WCF チャネルは MSMQ メッセージに Windows SID をアタッチできません。 そのため、ターゲット キューの ACL は、キューへの送信に対して `Anonymous` ユーザー アクセスを許可する必要があります。 受信側キュー マネージャーは、証明書を使用して MSMQ メッセージが署名されたかどうかをチェックしますが、認証は行いません。  
   
- クレームと id 情報を持つ証明書が設定されます、 <xref:System.ServiceModel.ServiceSecurityContext> WCF のキューに置かれたトランスポート チャネルによってです。 サービスは、この情報を使用して独自の方式で送信者の認証を行います。  
+ クレームと id 情報を持つ証明書が表示される、 <xref:System.ServiceModel.ServiceSecurityContext> WCF のキューに置かれたトランスポート チャネルによって。 サービスは、この情報を使用して独自の方式で送信者の認証を行います。  
   
 ### <a name="msmq-protection-level"></a>MSMQ の保護レベル  
  保護レベルは、MSMQ メッセージが改ざんされないように MSMQ メッセージを保護する方法を決定します。 これは、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> プロパティで指定します。 既定値は <xref:System.Net.Security.ProtectionLevel.Sign> です。  
@@ -96,9 +96,9 @@ ms.locfileid: "33499464"
 ### <a name="msmq-hash-algorithm"></a>MSMQ ハッシュ アルゴリズム  
  ハッシュ アルゴリズムは、MSMQ メッセージのデジタル署名を作成するために使用されるアルゴリズムを指定します。 受信側キュー マネージャーも、これと同じアルゴリズムを使用して MSMQ メッセージを認証します。 このプロパティは、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> が <xref:System.Net.Security.ProtectionLevel.Sign> または <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> に設定されている場合にのみ使用されます。  
   
- サポートされるアルゴリズムは、`MD5`、`SHA1`、`SHA256`、および `SHA512` です。 既定値は、`SHA1` です。  
+ サポートされるアルゴリズムは、`MD5`、`SHA1`、`SHA256`、および `SHA512` です。 既定値は `SHA1` です。  
   
 ## <a name="see-also"></a>関連項目  
- [メッセージ キュー](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
+ [メッセージ キュー](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
  [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

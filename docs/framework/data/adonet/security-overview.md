@@ -2,12 +2,12 @@
 title: セキュリティ Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4e8d1502096dc452d21158e4fb3684298be9b982
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361940"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481732"
 ---
 # <a name="security-overview"></a>セキュリティの概要
 アプリケーションのセキュリティ保護は継続的なプロセスとして行う必要があります。 開発者は、アプリケーションがあらゆる攻撃に対して安全であることを常に保証できるわけではありません。これは、新しい技術がもたらす未知の攻撃を予測することが不可能なためです。 反対に、システムに欠陥が発見 (または公開) されていない場合も、そのシステムに欠陥がないとは限りません。 プロジェクトの設計フェーズでセキュリティを考慮することはもちろんのこと、アプリケーションの使用期間を通じてセキュリティをいかに確保してゆくかを計画しておく必要があります。  
@@ -18,7 +18,7 @@ ms.locfileid: "33361940"
  最終段階でセキュリティが実装された場合、新しい制限によりソフトウェアが誤動作を起こしたり、予期していなかった機能を組み込むためにソフトウェアの書き換えが必要となって、バグの発生が増えます。 また、書き換えたすべてのコードが新たなバグの原因となる可能性もあります。 このような理由から、新しい機能の開発と平行して進めるよう、開発プロセスの早い段階でセキュリティを考慮する必要があります。  
   
 ### <a name="threat-modeling"></a>脅威モデリング  
- システムがどのような攻撃に曝されているかを理解せずに、攻撃からシステムを保護することはできません。 セキュリティ上の脅威を評価するプロセスと呼ばれる*脅威のモデリング*、尤度と、ADO.NET アプリケーションのセキュリティ侵害の影響を及ぼす可能性を特定する必要があります。  
+ システムがどのような攻撃に曝されているかを理解せずに、攻撃からシステムを保護することはできません。 セキュリティの脅威を評価するプロセスと呼ばれる*脅威のモデル化*、尤度と、ADO.NET アプリケーションでのセキュリティ侵害の影響を判断する必要があります。  
   
  脅威のモデリングは、1) 攻撃者の視点を理解し、2) システムのセキュリティの特徴を把握し、3) 脅威を特定するという、大きく 3 つの手順で構成されます。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33361940"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[脅威のモデリング](http://go.microsoft.com/fwlink/?LinkId=98353)MSDN セキュリティ デベロッパー センター サイト|脅威のモデリング プロセスを理解し、開発したアプリケーションの脅威モデルを構築するうえで役に立ちます。|  
+|[Threat Modeling](https://go.microsoft.com/fwlink/?LinkId=98353) MSDN セキュリティ デベロッパー センター サイト|脅威のモデリング プロセスを理解し、開発したアプリケーションの脅威モデルを構築するうえで役に立ちます。|  
   
 ## <a name="the-principle-of-least-privilege"></a>最小特権の原則  
  アプリケーションの設計、ビルド、および配置は、アプリケーションが攻撃されるという前提で行う必要があります。 多くの場合、こうした攻撃は、コードを実行しているユーザーの権限で悪意のあるコードを実行することによって行われます。 高い技術を持った攻撃者が脆弱性を悪用することによって作成したコードも存在します。 セキュリティの計画を立てるときは、常に最悪のシナリオを想定するようにしてください。  
@@ -67,7 +67,7 @@ ms.locfileid: "33361940"
 |リソース|説明|  
 |--------------|-----------------|  
 |[コード アクセス セキュリティと ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|ADO.NET アプリケーションの観点から、コード アクセス セキュリティ、ロール ベース セキュリティ、および部分信頼環境間の相互作用について説明します。|  
-|[コード アクセス セキュリティ](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|.NET Framework の CAS について説明する追加のトピックへのリンクが含まれています。|  
+|[コード アクセス セキュリティ](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|.NET Framework の CAS について説明する追加のトピックへのリンクが含まれています。|  
   
 ## <a name="database-security"></a>データベース セキュリティ  
  最小特権の原則はデータ ソースにも適用されます。 データベース セキュリティの一般的なガイドラインは次のとおりです。  
@@ -89,7 +89,7 @@ ms.locfileid: "33361940"
 |リソース|説明|  
 |--------------|-----------------|  
 |[SQL Server のセキュリティ](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|SQL Server のセキュリティの概要を説明します。アプリケーションのシナリオを交えながら、SQL Server を対象とした安全な ADO.NET アプリケーションを作成するための指針を提供します。|  
-|[データ アクセスに関する推奨事項](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|データへのアクセスおよびデータベース操作の実行に関連した推奨事項について説明します。|  
+|[データ アクセス戦略に関する推奨事項](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|データへのアクセスおよびデータベース操作の実行に関連した推奨事項について説明します。|  
   
 ## <a name="security-policy-and-administration"></a>セキュリティ ポリシーと管理  
  コード アクセス セキュリティ (CAS) ポリシーの管理が不適切だと、セキュリティの脆弱性を招く可能性があります。 アプリケーションを展開した後は、セキュリティ監視技法を適用し、新しい脅威が現れた際はそのリスクを評価する必要があります。  
@@ -98,11 +98,11 @@ ms.locfileid: "33361940"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[NIB: セキュリティ ポリシーの管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|セキュリティ ポリシーの作成と管理について説明します。|  
-|[NIB: セキュリティ ポリシーのベスト プラクティス](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|セキュリティ ポリシーの管理方法について説明したトピックへのリンクを提供します。|  
+|[NIB: セキュリティ ポリシーの管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|セキュリティ ポリシーの作成と管理について説明します。|  
+|[NIB: セキュリティ ポリシーのベスト プラクティス](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|セキュリティ ポリシーの管理方法について説明したトピックへのリンクを提供します。|  
   
 ## <a name="see-also"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [ネイティブ コードと .NET Framework コードのセキュリティ](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
+ [ネイティブ コードと .NET Framework コードのセキュリティ](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [SQL Server のセキュリティ](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

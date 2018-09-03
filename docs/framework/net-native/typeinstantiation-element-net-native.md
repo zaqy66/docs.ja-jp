@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30802eff0b960c2a19e5cebb4757bfeff809d322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9fefa302a269e08300f0393434b66ca8738a27b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394733"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481288"
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt; 要素 (.NET ネイティブ)
 構築されたジェネリック型にランタイム リフレクション ポリシーを適用します。  
@@ -93,13 +93,13 @@ ms.locfileid: "33394733"
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
 |`<TypeInstantiation>`|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  リフレクション、シリアル化、および相互運用属性はすべて省略可能です。 ただし、そのうち少なくとも 1 つが存在する必要があります。  
   
  `<TypeInstantiation>` 要素が [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)、[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)、[\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 要素の子である場合、親要素により定義されたポリシー設定をオーバーライドします。 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 要素が対応するジェネリック型定義を定義している場合、`<TypeInstantiation>` 要素は、指定の構築されたジェネリック型のインスタンス化についてのみランタイム リフレクション ポリシーをオーバーライドします。  
   
 ## <a name="example"></a>例  
- 次の例では、リフレクションを使用して、構築された <xref:System.Collections.Generic.Dictionary%602> オブジェクトからジェネリック型定義を取得します。 また、リフレクションを使用して、構築されたジェネリック型とジェネリック型定義を表す <xref:System.Type> オブジェクトに関する情報も表示します。 例の変数 `b` は [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) コントロールです。  
+ 次の例では、リフレクションを使用して、構築された <xref:System.Collections.Generic.Dictionary%602> オブジェクトからジェネリック型定義を取得します。 また、リフレクションを使用して、構築されたジェネリック型とジェネリック型定義を表す <xref:System.Type> オブジェクトに関する情報も表示します。 例の変数 `b` は [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) コントロールです。  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   

@@ -7,11 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a8a454919a195a0f0c03ed6890e51b2723f64fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5d82f41e3722ab568f14fbbb00bb0972d759a329
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485914"
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt;要素
 .NET Framework の 2 つの異なる実装にある同じアセンブリを 1 つのアプリケーションから参照できるように、既定の動作を無効にすることができます。既定の動作では、アプリケーションの移植性を高めるために、このようなアセンブリは同等のものとして扱われます。  
@@ -55,8 +56,8 @@ ms.lasthandoff: 05/03/2018
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
 |`assemblyBinding`|アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。|  
   
-## <a name="remarks"></a>コメント  
- 以降で、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]が自動的にサポート、.NET Framework の 2 つの実装のいずれかを使用するアプリケーションなど、.NET Framework の実装または .NET Framework for Silverlight の実装です。 特定の .NET Framework アセンブリの 2 つの実装は、アセンブリ バインダーで同等と見なされます。 一部のシナリオでは、アプリケーションの移植性を高めるためのこの機能が問題になります。 そのようなシナリオでは、`<supportPortability>` 要素を使用して、この機能を無効にすることができます。  
+## <a name="remarks"></a>Remarks  
+ 以降では、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]サポートは、.NET Framework の 2 つの実装のいずれかを使用するアプリケーションに自動的に提供が .NET Framework の実装または .NET Framework for Silverlight の実装のいずれかの例です。 特定の .NET Framework アセンブリの 2 つの実装は、アセンブリ バインダーで同等と見なされます。 一部のシナリオでは、アプリケーションの移植性を高めるためのこの機能が問題になります。 そのようなシナリオでは、`<supportPortability>` 要素を使用して、この機能を無効にすることができます。  
   
  一例として、特定の参照アセンブリの .NET Framework の実装と .NET Framework for Silverlight の実装の両方を参照する必要があるアセンブリが挙げられます。 たとえば、WPF (Windows Presentation Foundation) で作成された XAML デザイナーにおいて、デザイナーのユーザー インターフェイスとして WPF デスクトップの実装を参照すると共に、Silverlight の実装に組み込まれている WPF のサブセットも参照する必要がある場合があります。 既定では、この 2 つのアセンブリはアセンブリ バインディングで同等と見なされるため、別々に参照するとコンパイラ エラーが発生します。 この要素を使用すると、既定の動作を無効にし、コンパイルを正常に実行できます。  
   
@@ -78,5 +79,5 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [/appconfig (c# コンパイラ オプション)](http://msdn.microsoft.com/library/ee523958.aspx)  
- [.NET framework アセンブリの統一の概要](http://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+ [/appconfig (c# コンパイラ オプション)](https://msdn.microsoft.com/library/ee523958.aspx)  
+ [.NET framework アセンブリ統合の概要](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

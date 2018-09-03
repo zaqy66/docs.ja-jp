@@ -2,19 +2,19 @@
 title: アクティビティ ライブラリ
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-ms.openlocfilehash: 75a7f0203b27e331f9c33fa95be7f6fb95354b7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29b3efd648ac103526f572a2cac5b8b67c4b220a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518516"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486569"
 ---
 # <a name="activity-library"></a>アクティビティ ライブラリ
 このセクションには、高度なカスタム アクティビティでは、Windows Workflow Foundation (WF) を示すサンプルが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [.NET Framework 4.5 のポリシー アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
- Policy4 アクティビティにより、Windows Workflow Foundation の方法を示します[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> Windows Workflow Foundation に使用されるオブジェクト[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) WF 3.5 に付属しているルール エンジンを使用して直接です。  
+ Policy4 アクティビティでの Windows Workflow Foundation を使用する方法について示します[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクトでの Windows Workflow Foundation で使用される[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) WF 3.5 に付属しているルール エンジンを使用して直接します。  
   
  [値の範囲で切り替えを行うカスタム アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
  <xref:System.Activities.Statements.Switch%601> の使用を拡張するカスタム アクティビティを作成する方法を示します。  
@@ -47,16 +47,16 @@ ms.locfileid: "33518516"
  `ThrottleParallelForEach` アクティビティは、実行する同時分岐の数を制限するための同時実行要因を設定できるという 1 つの例外を除き、<xref:System.Activities.Statements.ParallelForEach%601> アクティビティと似ていることについて示します。  
   
  [エンティティ アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/entity-activities.md)  
- Windows Workflow Foundation と ADO.NET Entity Framework を使用して、データ アクセスを簡素化する方法を示します。  
+ Windows Workflow Foundation と ADO.NET Entity Framework を使用して、データ アクセスを簡略化する方法を示します。  
   
  [データベース アクセス アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
- 取得または情報を変更し、使用するデータベースへのアクセスを許可するアクティビティを作成する方法を示します[ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081)データベースにアクセスします。  
+ 取得、情報を変更または使用するデータベースへのアクセスを許可するアクティビティを作成する方法を示します[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)データベースにアクセスします。  
   
  [CommentOut アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/commentout-activity.md)  
  実行のパスから他のアクティビティを削除し、それらを有効にコメント化するカスタム アクティビティを記述する方法を示します。  
   
  [.NET Framework 4.5 の外部化されたポリシー アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
- ExternalizedPolicy4 アクティビティが既存の Windows Workflow Foundation を実行できるようにする方法を示します[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>の Windows Workflow Foundation のオブジェクト[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接を使用して、ルール エンジンは、つまりWF 3.5 に付属しています。  
+ ExternalizedPolicy4 アクティビティにより、既存の Windows Workflow Foundation での実行方法を示します[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクトの Windows Workflow Foundation の[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接を使用して、ルール エンジンはWF 3.5 に付属しています。  
   
  [NoPersistScope アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  
  ワークフローでシリアル化不可能で破棄可能な状態を処理する方法を示します。  

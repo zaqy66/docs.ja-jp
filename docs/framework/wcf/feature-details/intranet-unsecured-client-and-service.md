@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e44b7af6581e6c5abdcb2f82b02d152dd22d0b3b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492249"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475895"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>セキュリティで保護されていないイントラネットのクライアントとサービス
-次の図は、WCF アプリケーションをセキュリティで保護されたプライベート ネットワーク上の情報を提供する開発された単純な Windows Communication Foundation (WCF) サービスを示しています。 データは、重要度が低い、ネットワークが本質的にセキュリティで保護する必要がまたはセキュリティは、WCF インフラストラクチャの下のレイヤーによって提供されるため、セキュリティは必要ありません。  
+次の図は、WCF アプリケーションをセキュリティで保護されたプライベート ネットワークに関する情報を提供するために開発の単純な Windows Communication Foundation (WCF) サービスを示しています。 重要度の低いデータは、ネットワークの本質的にセキュリティで保護されたことが必要ですか、WCF インフラストラクチャの下のレイヤーによってセキュリティが提供されるため、セキュリティは必要ありません。  
   
  ![イントラネットのセキュリティ保護されていないクライアントとサービスのシナリオ](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
@@ -83,7 +83,7 @@ ms.locfileid: "33492249"
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>コード  
- 次のコードは、TCP プロトコルを使用してセキュリティ保護されていないエンドポイントにアクセスする基本的な WCF クライアントを示しています。  
+ 次のコードでは、TCP プロトコルを使用してセキュリティ保護されていないエンドポイントにアクセスする基本的な WCF クライアントを示します。  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
@@ -117,4 +117,4 @@ ms.locfileid: "33492249"
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.NetTcpBinding>  
  [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric のセキュリティ モデル](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

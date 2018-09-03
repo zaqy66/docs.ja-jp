@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: 1f7cfa17ce763ff84eeb052a4ea1a3a900970782
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2ea15703b09cd722f5c7fd01f8112482f3c04f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528633"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488197"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows フォームおよびアンマネージ アプリケーションの概要
 Windows フォーム アプリケーションとコントロールは、いくつかの注意事項がありますが、アンマネージ アプリケーションと相互運用できます。 次のセクションでは、Windows フォーム アプリケーションとコントロールがサポートするシナリオと構成、および、サポートしないシナリオと構成について説明します。  
@@ -35,7 +35,7 @@ Windows フォーム アプリケーションとコントロールは、いく�
 ## <a name="hosting-windows-forms-components-as-activex-controls"></a>ActiveX コントロールとして Windows フォームのコンポーネントをホストする  
  .NET Framework 1.1 では、MFC 7.0 以降のバージョンを含めるようサポートが拡張されました。 このサポートには、MFC 7.0 以降の ActiveX コントロール コンテナーと完全に互換性があるすべてのコンテナーが含まれています。  
   
- ただし、Windows フォーム コントロールの ActiveX コントロールとしての登録はサポートされません。 また、Windows フォーム コントロールの `com.ms.win32.Ole32.CoCreateInstance` メソッドの呼び出しはサポートされていません。 Windows フォーム コントロールのマネージ アクティベーションだけがサポートされます。 Windows フォーム コントロールを作成すると、ActiveX コントロールの場合と同様に MFC アプリケーションでホストできます。  
+ ただし、Windows フォーム コントロールの ActiveX コントロールとしての登録はサポートされません。 また、Windows フォーム コントロールの `com.ms.win32.Ole32.CoCreateInstance` メソッドの呼び出しはサポートされていません。 Windows フォーム コントロールのマネージド アクティベーションだけがサポートされます。 Windows フォーム コントロールを作成すると、ActiveX コントロールの場合と同様に MFC アプリケーションでホストできます。  
   
  アンマネージ アプリケーションで Windows フォーム コントロールを使用するには、アンマネージ CLR ホスティング API を使用して CLR をホストするか、C++ interop 機能を使用する必要があります。 C++ interop 機能の使用が、推奨されるソリューションです。  
   
@@ -59,7 +59,7 @@ Windows フォーム アプリケーションとコントロールは、いく�
  [Windows フォームとアンマネージ アプリケーション](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)  
  [.NET Framework アプリケーションにおける COM 相互運用性](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [COM 相互運用性サンプル](http://msdn.microsoft.com/library/09c38567-6380-4d70-848a-e896a4ca05f4)  
+ [COM 相互運用性サンプル](https://msdn.microsoft.com/library/09c38567-6380-4d70-848a-e896a4ca05f4)  
  [Aximp.exe (Windows フォーム ActiveX コントロール インポーター)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
  [COM への .NET Framework コンポーネントの公開](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [COM 用のアセンブリのパッケージ化](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  

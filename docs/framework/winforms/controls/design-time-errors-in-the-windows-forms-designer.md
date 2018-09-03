@@ -8,11 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 00296b51563a5f973b8e5d64c55867568ff0324e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480936"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows フォーム デザイナーでのデザイン時エラー
 このトピックでは、Windows フォーム デザイナーで読み込みに失敗したときに場合に Microsoft Visual Studio に表示されるデザイン時のエラー リストの意味と使用法について説明します。 このエラー リストが表示された場合、デザイナーのバグであると解釈するのではなく、コード内のエラーを修正するための参考情報であると考えてください。  
@@ -44,15 +45,15 @@ ms.lasthandoff: 05/04/2018
 ### <a name="forum-posts-about-this-error"></a>このエラーに関するフォーラムの投稿  
  追加のヘルプには、エラーに関連する MSDN フォーラムの投稿へのリンクが含まれています。 フォーラムは、エラー メッセージの文字列に基づいて検索されます。 次のフォーラムを検索することもできます。  
   
--   [Windows フォーム デザイナーのフォーラム](http://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [Windows フォーム デザイナーのフォーラム](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows フォームのフォーラム](http://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [Windows フォームのフォーラム](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>無視して続行する  
  エラー状態を無視して、デザイナーの読み込みを続行することもできます。 この操作を選択すると、予期しない動作が発生する可能性があります。 たとえば、デザイン サーフェイスにコントロールが表示されない場合があります。  
   
 ## <a name="see-also"></a>関連項目  
- [デザイン時の開発のトラブルシューティング](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [デザイン時開発のトラブルシューティング](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
  [コントロールとコンポーネントの作成時のトラブルシューティング](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  [デザイン時の Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Windows フォーム デザイナーのエラー メッセージ](http://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+ [Windows フォーム デザイナーのエラー メッセージ](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)

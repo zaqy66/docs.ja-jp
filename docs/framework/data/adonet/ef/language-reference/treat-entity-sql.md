@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 932f335bf6a502b031dcf09b8050e278a0bbe9f8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c3291dc6d5bc79430c8bf011ee6a2f4dc213ffad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763977"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486897"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 特定の基本データ型のオブジェクトを指定の派生型のオブジェクトとして処理します。  
@@ -34,7 +34,7 @@ TREAT ( expression as type)
 ## <a name="return-value"></a>戻り値  
  指定されたデータ型の値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  TREAT は関連クラス間でキャストを実行するために使用します。 たとえば、 `Employee` が `Person` から派生し、p が `Person`型である場合、 `TREAT(p AS NamespaceName.Employee)` はジェネリック型の `Person` インスタンスを `Employee`にキャストします。つまり、p を `Employee`として処理できます。  
   
  TREAT は、次のようにクエリを実行できる継承シナリオで使用されます。  
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  このクエリは、 `Person` エンティティを `Employee` 型にキャストします。 p の値が実際には `Employee`型でない場合、この式は `null`値を返します。  
   
 > [!NOTE]
->  指定された式`Employee`指定されたデータ型のサブタイプである必要があります`Person`データ型は、式のサブタイプである必要があります。 そうでない場合は、コンパイル時にエラーが発生します。  
+>  指定された式`Employee`指定したデータ型のサブタイプである必要があります`Person`データ型の式のサブタイプである必要があります。 そうでない場合は、コンパイル時にエラーが発生します。  
   
  次の表に、いくつかの通常パターンと一般的でないパターンにおける TREAT の動作を示します。 すべての例外はクライアント側にスローされてから、プロバイダーが呼び出されます。  
   
@@ -62,7 +62,7 @@ WHERE p IS OF (NamespaceName.Employee)
 |`TREAT (RowType AS RowType)`|例外をスローします。|  
   
 ## <a name="example"></a>例  
- 次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、TREAT 演算子を使用して、Course 型のオブジェクトを OnsiteCourse 型のオブジェクトのコレクションに変換します。 基づくクエリでは、 [School モデル](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)です。  
+ 次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、TREAT 演算子を使用して、Course 型のオブジェクトを OnsiteCourse 型のオブジェクトのコレクションに変換します。 クエリに基づいていますが、 [School モデル](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)します。  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   

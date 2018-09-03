@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: d9456926b228fadca940f6c4698829494382e237
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355523"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481789"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server のインスタンスの列挙 (ADO.NET)
-SQL Server では、現在のネットワーク内の SQL Server インスタンスを検索するアプリケーションを許可します。 <xref:System.Data.Sql.SqlDataSourceEnumerator> クラスは、表示可能なすべてのサーバーに関する情報が含まれた <xref:System.Data.DataTable> を提供することで、アプリケーション開発者にこの情報を公開します。 これは、テーブルには、ユーザーが新しい接続を作成しようとしたときに指定されたリストと一致してで利用可能なすべてのサーバーを含むドロップダウン リストを展開しているネットワークで使用できるサーバー インスタンスの一覧が含まれています返される、**接続。プロパティ** ダイアログ ボックス。 結果には一部のインスタンスが表示されないことがあります。  
+SQL Server には、現在のネットワーク内の SQL Server インスタンスを検索するアプリケーションが許可されます。 <xref:System.Data.Sql.SqlDataSourceEnumerator> クラスは、表示可能なすべてのサーバーに関する情報が含まれた <xref:System.Data.DataTable> を提供することで、アプリケーション開発者にこの情報を公開します。 これは、テーブルには、ユーザーが新しい接続を作成しようとしたときに指定された一覧と一致してで使用可能なすべてのサーバーを含むドロップダウン リストを展開するネットワークで使用できるサーバー インスタンスの一覧が含まれています返される、**接続。プロパティ** ダイアログ ボックス。 結果には一部のインスタンスが表示されないことがあります。  
   
 > [!NOTE]
 >  大半の Windows サービスと同様に、できるだけ少ない特権で SQL Browser サービスを実行することをお勧めします。 SQL Browser サービスの詳細および SQL Browser サービスの動作を管理する方法については、SQL Server オンライン ブックを参照してください。  
@@ -58,7 +58,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 > [!NOTE]
 >  サーバー列挙は、完全に信頼された環境で実行している場合にのみ利用できます。 部分的に信頼された環境で実行されているアセンブリは、<xref:System.Data.SqlClient.SqlClientPermission> Code Access Security (CAS) アクセス許可を持っている場合でも、サーバー列挙を使用できません。  
   
- SQL Server の情報を提供する、 <xref:System.Data.Sql.SqlDataSourceEnumerator> SQL Browser という名前は、外部 Windows サービスを使用しています。 このサービスは既定で有効になりますが、管理者がこのサービスをオフにしたり無効にしたりすると、サーバー インスタンスがこのクラスから見えなくなります。  
+ SQL Server の情報を提供する、 <xref:System.Data.Sql.SqlDataSourceEnumerator> SQL Browser という名前の外部 Windows サービスを利用しています。 このサービスは既定で有効になりますが、管理者がこのサービスをオフにしたり無効にしたりすると、サーバー インスタンスがこのクラスから見えなくなります。  
   
 ## <a name="example"></a>例  
  次のコンソール アプリケーションは、表示可能なすべての SQL Server インスタンスに関する情報を取得し、コンソール ウィンドウにその情報を表示します。  
@@ -126,4 +126,4 @@ class Program
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

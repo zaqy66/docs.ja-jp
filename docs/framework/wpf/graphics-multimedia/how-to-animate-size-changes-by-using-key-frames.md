@@ -7,11 +7,11 @@ helpviewer_keywords:
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
 ms.openlocfilehash: 69845d1d75f81042bbeb20ee6b1015f5c2f53b81
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332095"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479933"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>方法 : キー フレームを使用してサイズの変更をアニメーション化する
 この例では、キー フレームを使用してサイズの変更をアニメーション化する方法を示します。  

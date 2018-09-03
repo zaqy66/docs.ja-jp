@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28189ab4ab1a9be9265d1cca020039b5302fb5d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b106005ff07f55e05ae66dba94041cd8b5c24bb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590535"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482299"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte データ型 (Visual Basic)
-0 から 255 までの範囲の 8 ビット (1 バイト) の符号なし整数を保持します。
+0 から 255 までの範囲の符号なし 8 ビット (1 バイト) 整数を保持します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 使用して、`Byte`バイナリ データを格納するデータ型。  
   
@@ -27,20 +27,20 @@ ms.locfileid: "33590535"
 
 ## <a name="literal-assignments"></a>リテラルの割り当て
 
-宣言して初期化することができます、`Byte`変数の 10 進数リテラル、16 進数のリテラルに 8 進数のリテラルを割り当てまたは (Visual Basic 2017 以降)、バイナリ リテラルです。 整数リテラルは、範囲の場合、 `Byte` (である場合より小さい<xref:System.Byte.MinValue?displayProperty=nameWithType>以上<xref:System.Byte.MaxValue?displayProperty=nameWithType>)、コンパイル エラーが発生します。
+宣言し、初期化を`Byte`10 進リテラル、16 進リテラル、8 進数のリテラルを割り当てることや (Visual Basic 2017 以降) バイナリ リテラルでは、変数。 整数リテラルの範囲外の場合、 `Byte` (である場合より小さい<xref:System.Byte.MinValue?displayProperty=nameWithType>以上<xref:System.Byte.MaxValue?displayProperty=nameWithType>)、コンパイル エラーが発生します。
 
-次の例では、整数と等しい 16 進数、10 進数として表される 201 とからバイナリ リテラルを暗黙的に変換[整数](integer-data-type.md)に`byte`値。
+次の例では、整数が 16 進数、10 進数として表される 201 に等しくなりからのバイナリ リテラルを暗黙的に変換されます[整数](integer-data-type.md)に`byte`値。
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Byte)]
 
 > [!NOTE]
-> プレフィックスを使用する`&h`または`&H`、16 進数リテラル プレフィックスを表すために`&b`または`&B`バイナリ リテラル、およびプレフィックスを意味する`&o`または`&O`を 8 進数のリテラルを示すためにします。 10 進リテラルには、プレフィックスはありません。
+> プレフィックスを使用する`&h`または`&H`を 16 進リテラル、プレフィックスを示すために`&b`または`&B`、バイナリ リテラル、およびプレフィックスを示すために`&o`または`&O`を 8 進数のリテラルを示すためにします。 10 進リテラルには、プレフィックスはありません。
 
-Visual Basic 2017 から始めて、使用することできますもアンダー スコア文字`_`、読みやすさを強化するために、桁区切り記号として次の例として示します。
+Visual Basic 2017 から始めて、使用することできますも、アンダー スコア文字`_`、読みやすさを強化するために、桁区切り記号として次の例として示します。
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
-Visual Basic 15.5 から始めて、使用することできますも、アンダー スコア文字 (`_`) のプレフィックスと 16 進数、バイナリ、または 8 進数の数字間に先行する区切り記号として。 例えば:
+Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例えば:
 
 ```vb
 Dim number As Byte = &H_6A
@@ -52,24 +52,24 @@ Dim number As Byte = &H_6A
 
 -   **負の数。** `Byte`符号なしの型は、負の数を表すことはできません。 単項マイナスを使用する場合 (`-`) 型に評価される式で演算子`Byte`、Visual Basic の式を変換する`Short`最初。
   
--   **形式を変換します。** Visual Basic の読み取りまたは書き込みをファイルまたは Dll、メソッド、およびプロパティを呼び出すとき、データ形式間で自動的に変換できます。 格納されているバイナリ データ`Byte`変数および配列はこのような形式の変換中に保持されます。 使用しないで、 `String` ANSI、Unicode 形式の間で変換中にその内容が破損する可能性があるため、バイナリ データの変数です。
+-   **形式の変換。** Visual Basic の読み取りまたはファイルの書き込み時に、または Dll、メソッド、およびプロパティを呼び出すときは、データ形式間で自動的に変換できます。 格納されているバイナリ データ`Byte`変数および配列はこのような形式の変換中に保持されます。 使用しないようにする、 `String` ANSI および Unicode 形式の間で変換中にその内容が破損することがあるため、バイナリ データ変数。
 
--   **拡大します。** `Byte`拡大変換後のデータ型`Short`、 `UShort`、 `Integer`、 `UInteger`、 `Long`、 `ULong`、 `Decimal`、 `Single`、または`Double`です。 つまり、変換することができます`Byte`影響を受けずにこれらの型のいずれかに、<xref:System.OverflowException?displayProperty=nameWithType>エラーです。
+-   **拡大します。** `Byte`拡大変換後のデータ型`Short`、 `UShort`、 `Integer`、 `UInteger`、 `Long`、 `ULong`、 `Decimal`、 `Single`、または`Double`します。 つまり、変換できる`Byte`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。
   
 -   **型宣言文字。** `Byte` リテラルの型文字または識別子の型文字がありません。
 
--   **Framework の型。** .NET Framework において対応する型は、<xref:System.Byte?displayProperty=nameWithType> 構造体です。
+-   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Byte?displayProperty=nameWithType> 構造体です。
 
 ## <a name="example"></a>例
 
- 次の例では、`b`は、`Byte`変数。 ステートメントでは、変数の範囲およびにビット シフト演算子の適用を示しています。
+ 次の例では、`b`は、`Byte`変数。 ステートメントは、変数の範囲とビット シフト演算子のアプリケーションを示します。
 
 [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
 
 ## <a name="see-also"></a>関連項目
 
  <xref:System.Byte?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
  [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

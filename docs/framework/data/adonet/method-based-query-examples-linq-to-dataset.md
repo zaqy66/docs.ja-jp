@@ -2,15 +2,15 @@
 title: メソッド ベースのクエリ例 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 0700711ece5cd8dda4688862e0ff19a3a63effdf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 569292cc03f7cbcbaff2d8625849285ff6e2146e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765907"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482536"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>メソッド ベースのクエリ例 (LINQ to DataSet)
-このセクションでは、標準クエリ演算子を使った [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] プログラミングの例をメソッド ベースのクエリ構文を中心に紹介しています。 <xref:System.Data.DataSet>これらの例で使用されるを使用して設定されます、`FillDataSet`で指定されているメソッド[、データセットにデータを読み込む](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)します。 詳細については、次を参照してください。[標準クエリ演算子の概要](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)です。  
+このセクションでは、標準クエリ演算子を使った [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] プログラミングの例をメソッド ベースのクエリ構文を中心に紹介しています。 <xref:System.Data.DataSet>これらの例で使用されるを使用して設定されますが、`FillDataSet`メソッドで指定されている[をデータセットにデータを読み込む](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 詳細については、次を参照してください。[標準クエリ演算子の概要](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [射影](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  

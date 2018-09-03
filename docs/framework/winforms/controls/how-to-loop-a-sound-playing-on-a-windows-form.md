@@ -10,12 +10,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 67e1f8abe6872358a29ab8f6734b58c1c1bc809c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6b227915a98bb757b559d229ebc1ee757ffb25c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533758"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480118"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>方法 : Windows フォームでサウンドの再生をループする
 サウンドを繰り返し再生するコード例を次に示します。 `stopPlayingButton_Click` イベント ハンドラー内のコードが実行されると、現在再生されているサウンドが停止します。 サウンドが再生されていない場合は、何も起こりません。  
@@ -31,7 +31,7 @@ ms.locfileid: "33533758"
   
 -   ファイル名 `"c:\Windows\Media\chimes.wav"` を有効なファイル名に置き換えます。  
   
- Visual Basic または Visual c# のコマンドラインからこの例のビルドについては、次を参照してください。[コマンドラインからのビルド](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)です。 この例では、Visual Studio は、新しいプロジェクトにコードを貼り付けることによってもビルドできます。  また、「 [方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
+ Visual Basic または Visual c# のコマンドラインからこの例の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  ファイルの操作は、適切な例外処理ブロックで囲む必要があります。  

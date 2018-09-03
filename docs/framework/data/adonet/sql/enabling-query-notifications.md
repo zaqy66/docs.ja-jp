@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: 4cda3ce3bcae7741df66496c87ba6654e0bbfe6e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c164490464d839dacefaf570c8956bf15caeb7de
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356013"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480543"
 ---
 # <a name="enabling-query-notifications"></a>クエリ通知の有効化
 クエリ通知を使用するアプリケーションには、いくつか共通する要件があります。 SQL クエリ通知をサポートするには、データ ソースが正しく設定され、ユーザーがクライアント側およびサーバー側の正しい権限を所有している必要があります。  
@@ -30,23 +30,23 @@ ms.locfileid: "33356013"
   
  **SQL Server オンライン ブック**  
   
--   [クエリ通知の作成](http://msdn.microsoft.com/library/ms181122.aspx)  
+-   [通知のクエリを作成します。](https://msdn.microsoft.com/library/ms181122.aspx)  
   
--   [Service Broker のセキュリティに関する考慮事項](http://msdn.microsoft.com/library/ms166059.aspx)  
+-   [Service Broker のセキュリティに関する考慮事項](https://msdn.microsoft.com/library/ms166059.aspx)  
   
--   [セキュリティと保護 (Service Broker)](http://msdn.microsoft.com/library/bb522911.aspx)  
+-   [セキュリティと保護 (Service Broker)](https://msdn.microsoft.com/library/bb522911.aspx)  
   
--   [通知サービスのセキュリティに関する考慮事項](http://msdn.microsoft.com/library/ms172604.aspx)  
+-   [通知サービスのセキュリティに関する考慮事項](https://msdn.microsoft.com/library/ms172604.aspx)  
   
--   [クエリ通知の権限](http://msdn.microsoft.com/library/ms188311.aspx)  
+-   [クエリ通知の権限](https://msdn.microsoft.com/library/ms188311.aspx)  
   
--   [Service Broker の国際化に関する考慮事項](http://msdn.microsoft.com/library/ms166028.aspx)  
+-   [Service Broker の国際化に関する考慮事項](https://msdn.microsoft.com/library/ms166028.aspx)  
   
--   [ソリューション設計に関する考慮事項 (Service Broker)](http://msdn.microsoft.com/library/bb522899.aspx)  
+-   [ソリューション設計に関する考慮事項 (Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
   
--   [Service Broker 開発者向けの情報](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker 開発者向けの情報](https://msdn.microsoft.com/library/ms166100.aspx)  
   
--   [開発者ガイド (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Developer's Guide (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>サンプル コードを実行するためのクエリ通知の有効化  
  Service Broker を有効にする、 **AdventureWorks**データベースの SQL Server Management Studio を使用して、次の TRANSACT-SQL ステートメントを実行します。  
@@ -86,4 +86,4 @@ CREATE SERVICE ContactChangeNotifications
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server のクエリ通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

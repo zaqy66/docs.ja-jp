@@ -1,6 +1,6 @@
 ---
 title: GetDemultiplexedStub 関数 (アンマネージ API リファレンス)
-description: GetDemultiplexedStub 関数では、Windows の管理から非同期呼び出しの受信をクライアントを支援するためには、オブジェクト転送シンクを作成します。
+description: GetDemultiplexedStub 関数は、クライアントを Windows の管理から非同期呼び出しの受信を支援するために、オブジェクト転送シンクを作成します。
 ms.date: 11/06/2017
 api_name:
 - GetDemultiplexedStub
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b195d3a512c537ca409bd2039add9e69abaf4df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456363"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482357"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 関数
-Windows の管理から非同期呼び出しの受信をクライアントを支援するためには、オブジェクト転送シンクを作成します。
+クライアントを Windows の管理から非同期呼び出しの受信を支援するために、オブジェクト転送シンクを作成します。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,26 +41,26 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>パラメーター
 
 `pObject`  
-[in]クライアントのインプロセス実装へのポインター [IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx)です。
+[in]クライアントのインプロセス実装へのポインター [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)します。
 
 `isLocal`  
 [in]イベントがローカルかどうかを示すフラグ (`true`)、それ以外の`false`します。
 
 `ppObject`  
-[out]クライアントを Windows の管理から非同期呼び出しの受信を支援するためにオブジェクトの転送シンクです。
+[out]Windows の管理から非同期呼び出しの受信をクライアントを支援するためにオブジェクトのフォワーダー シンク。
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は`S_OK`(0) です。
+関数が成功した場合、戻り値は`S_OK`(0)。
 
-関数が失敗した場合、戻り値がゼロ以外のエラー コードです。 拡張エラー情報を取得する呼び出し、 [GetErrorInfo](geterrorinfo.md)関数。
+関数が失敗した場合、戻り値が 0 以外のエラー コードにします。 拡張エラー情報を取得する、 [GetErrorInfo](geterrorinfo.md)関数。
     
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目  
 [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

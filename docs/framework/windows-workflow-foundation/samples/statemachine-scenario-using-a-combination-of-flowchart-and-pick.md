@@ -2,12 +2,12 @@
 title: FlowChart と Pick の組み合わせを使用する StateMachine シナリオ
 ms.date: 03/30/2017
 ms.assetid: 88d81395-f7a3-41d8-8439-20a425c538a6
-ms.openlocfilehash: 0f7fc809b2fb7107de355546ca52a4d2ba2b39f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0f8e884a8a6c62c4e7edaf5cc9727bf7bfe8603
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517937"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485497"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>FlowChart と Pick の組み合わせを使用する StateMachine シナリオ
 このサンプルでは、<xref:System.Activities.Statements.Flowchart> アクティビティと <xref:System.Activities.Statements.Pick> アクティビティを組み合わせて簡単なストップウォッチ シナリオを実装する方法を示します。 このサンプルでは、Pick アクティビティ内で Receive と Send を使用して、ストップウォッチ イベントをリッスンします。  
@@ -17,7 +17,7 @@ ms.locfileid: "33517937"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合は、ダウンロード ページに移動をすべて Windows Communication Foundation (WCF) をダウンロードし、[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合は、(ダウンロード ページ) に移動してすべての Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`  
   
@@ -35,15 +35,15 @@ ms.locfileid: "33517937"
   
 2.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
   
-3.  StopWatchService.exe を開始[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)].exe ファイルを右クリックしを選択すると、管理者として**管理者として実行**です。  
+3.  StopWatchService.exe をスタート[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)].exe ファイルを右クリックしを選択すると、管理者として**管理者として実行**します。  
   
     1.  StateMachineWithPick\CS\StopWatchService\bin\Debug フォルダーに移動します。  
   
-    2.  StopWatchService.exe ファイルを右クリックし **管理者として実行**です。  
+    2.  StopWatchService.exe ファイルを右クリックして**管理者として実行**します。  
   
 4.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 内から StopWatchClient クライアント アプリケーションを開始します。  
   
-    1.  **ソリューション エクスプ ローラー**、select、 **StopWatchClient**プロジェクトを右クリックして**スタートアップ プロジェクトとして設定**です。  
+    1.  **ソリューション エクスプ ローラー**を選択、 **StopWatchClient**プロジェクトし、右クリックして**スタートアップ プロジェクトとして設定**します。  
   
     2.  ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
   
@@ -54,6 +54,6 @@ ms.locfileid: "33517937"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`

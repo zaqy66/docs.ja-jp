@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: e55e28fd3acdb145e03f0916e3681e95cc7a041a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755384"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486543"
 ---
 # <a name="childviews-and-relations"></a>ChildView とリレーション
-<xref:System.Data.DataSet> 内のテーブル間にリレーションシップが存在する場合は、このリレーションシップの子テーブルの行が含まれている <xref:System.Data.DataView> を作成できます。このような DataView を作成するには、親テーブルの行に対して <xref:System.Data.DataRowView.CreateChildView%2A> の <xref:System.Data.DataRowView> メソッドを使用します。 たとえば、次のコードが表示されます**カテゴリ**およびその関連**製品**順に並べ替えてアルファベット順に**CategoryName**と**ProductName**.  
+<xref:System.Data.DataSet> 内のテーブル間にリレーションシップが存在する場合は、このリレーションシップの子テーブルの行が含まれている <xref:System.Data.DataView> を作成できます。このような DataView を作成するには、親テーブルの行に対して <xref:System.Data.DataRowView.CreateChildView%2A> の <xref:System.Data.DataRowView> メソッドを使用します。 たとえば、次のコードが表示されます**カテゴリ**とその関連**製品**で並べ替えられた順序はアルファベット順で**CategoryName**と**ProductName**.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -78,4 +78,4 @@ foreach (DataRowView catDRV in catView)
  <xref:System.Data.DataView>  
  <xref:System.Data.DataRowView>  
  [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

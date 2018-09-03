@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: f0267a774d284cac1672ff971d6af3ec3439c84d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb4c59c76142420f479b0b16a6d80317e98d159
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540645"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486011"
 ---
 # <a name="windows-forms-data-binding"></a>Windows フォームでのデータ バインディング
 Windows フォームでのデータ バインディングは、データ ソースの情報をフォーム上のコントロールで表示したり変更したりする手段を提供します。 従来のデータ ソースに対してだけでなく、データを格納したほとんどすべての構造に対してバインドできます。  
@@ -37,7 +37,7 @@ Windows フォームでのデータ バインディングは、データ ソー�
  <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装する方法について説明します。 インターフェイスは、バインドしたコントロールを通してビジネス オブジェクトのプロパティの変更内容を通信します。  
   
  [方法: PropertyNameChanged パターンを適用する](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
- 適用する方法を示しています、 *PropertyName*Changed パターンを Windows フォーム ユーザー コントロールのプロパティです。  
+ 適用する方法を示しています、 *PropertyName*Changed パターンを Windows フォーム ユーザー コントロールのプロパティ。  
   
  [方法: ITypedList インターフェイスを実装する](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
  <xref:System.ComponentModel.ITypedList> インターフェイスを実装して、バインドできるリストのスキーマを検出できるようにする方法について説明します。  
@@ -51,7 +51,7 @@ Windows フォームでのデータ バインディングは、データ ソー�
  [方法: 子テーブルの選択行が現在位置を保持することを保証する](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
  親テーブルのフィールドが変更された場合に、子テーブルの選択行が変更されないことを保証する方法について説明しています。  
   
- 参照してください[データ バインディングに関連するインターフェイス](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\))、[する方法: Windows フォームでのデータの移動](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\))、[する方法: Windows フォームに単純バインド コントロールを作成する](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\))です。  
+ 参照してください[データ バインディングに関連するインターフェイス](https://msdn.microsoft.com/library/41e17s4b\(v=vs.110\))、[方法: Windows フォームでのデータの移動](https://msdn.microsoft.com/library/b63ha24w\(v=vs.110\))、[方法: Windows フォームに単純バインド コントロールを作成する](https://msdn.microsoft.com/library/sw223a62\(v=vs.110\))します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
@@ -67,4 +67,4 @@ Windows フォームでのデータ バインディングは、データ ソー�
  [DataGridView コントロール](../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  バインドできるデータ グリッド コントロールの使用方法の例を示すトピックの一覧を示します。  
   
- 参照してください[Visual Studio でデータにアクセスする](/visualstudio/data-tools/accessing-data-in-visual-studio)です。
+ 参照してください[Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)します。

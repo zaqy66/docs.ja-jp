@@ -2,12 +2,12 @@
 title: カスタム補正のサンプル
 ms.date: 03/30/2017
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
-ms.openlocfilehash: 55161a46bebca2cce41803ca405cb2b1df57b3fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac141a48f87f5b14f6b528f7b3ceb7fdddeaf2d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514325"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475869"
 ---
 # <a name="custom-compensation-sample"></a>カスタム補正のサンプル
 このサンプルでは、<xref:System.Activities.Statements.CompensableActivity> とその補正ハンドラーを使用してカスタム補正ロジックを定義する方法を示します。 このサンプルでは、トラック レンタル会社のシナリオをモデル化しています。  
@@ -48,6 +48,6 @@ ms.locfileid: "33514325"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`

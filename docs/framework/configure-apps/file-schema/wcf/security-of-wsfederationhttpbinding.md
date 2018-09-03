@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2f2a25f06aa90dc1cbb63f4f91d6032ef017dab2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 81d0f17971653c3e3ecd27ddde745a65c8b4f26d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749804"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482549"
 ---
 # <a name="ltsecuritygt-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt; の &lt;security&gt;
-セキュリティ設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)です。  
+セキュリティ設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)します。  
   
  \<system.ServiceModel >  
 \<bindings>  
@@ -108,7 +108,7 @@ ms.locfileid: "32749804"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|すべてのバインド機能を定義、 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)です。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|すべてのバインド機能を定義、 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)します。|  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.WSFederationHttpSecurity>  
@@ -120,5 +120,5 @@ ms.locfileid: "32749804"
  [資格情報の種類の選択](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  
  [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [バインディングを使用して、Windows Communication Foundation サービスとクライアントを構成するには](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

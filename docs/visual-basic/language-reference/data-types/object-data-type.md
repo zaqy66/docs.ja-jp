@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
 ms.openlocfilehash: 94d3ddcf71194eb69a2d26bcdf549aaf693e46e6
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255707"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485561"
 ---
 # <a name="object-data-type"></a>Object Data Type
 オブジェクトを参照するアドレスを保持します。 参照型 (文字列、配列、クラス、またはインターフェイス) を割り当てることができます、`Object`変数。 `Object`変数は、任意の値型のデータを指すことも (数値、 `Boolean`、 `Char`、 `Date`、構造体、または列挙型)。  

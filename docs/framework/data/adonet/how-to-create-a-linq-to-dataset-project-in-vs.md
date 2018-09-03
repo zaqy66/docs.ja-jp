@@ -1,53 +1,42 @@
 ---
-title: '方法 : Visual Studio で LINQ to DataSet プロジェクトを作成する'
-ms.date: 03/30/2017
+title: LINQ to DataSet プロジェクトで Visual Studio を作成します。
+ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 094d766146fe55a865713a4672a2bee6a838ff55
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 12544c6b5153a5f6300072d1646f2c119fb255a1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482179"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>方法 : Visual Studio で LINQ to DataSet プロジェクトを作成する
-別の種類の [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] プロジェクトでは、特定のインポートされる名前空間 (Visual Basic) または `using` ディレクティブ (C#) および参照が必要です。 最小要件は、System.Core.dll への参照と、`using` の <xref:System.Linq> ディレクティブです。 既定では、これらは新しい [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] プロジェクトを作成した場合に提供されます。 また、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] では、System.Data.dll および System.Data.DataSetExtensions.dll への参照と、`Imports` (Visual Basic) または `using` (C#) ディレクティブも必要です。  
-  
- 以前のバージョンの Visual Studio のプロジェクトをアップグレードする場合、これらの LINQ 関連の参照を手動で追加する必要がある場合があります。 さらに、.NET Framework バージョン 3.5 をプロジェクトのターゲットとして手動で設定する必要がある場合があります。  
-  
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>方法: LINQ to DataSet プロジェクトで Visual Studio を作成
+
+LINQ プロジェクトの種類は、特定のアセンブリ参照とインポートされた名前空間 (Visual Basic) が必要です。 または[を使用して](../../../csharp/language-reference/keywords/using-directive.md)ディレクティブ (c#)。 LINQ の最低要件への参照を*System.Core.dll*と`using`ディレクティブを<xref:System.Linq>します。
+
+これらの要件は、Visual Studio 2017 で新しい c# コンソール アプリ プロジェクトを作成する場合に、既定で提供されます。 プロジェクトを Visual Studio の以前のバージョンからアップグレードする場合は、これらの LINQ に関連する参照を手動で指定する必要があります。
+
+LINQ to DataSet を 2 つの他の参照を必要と*System.Data.dll*と*System.Data.DataSetExtensions.dll*します。
+
 > [!NOTE]
->  コマンド プロンプトから構築する場合での LINQ に関連する Dll を手動で参照する必要があります`drive` **:** \Program Files\Reference Assemblies\Microsoft\Framework\v3.5 です。  
-  
-### <a name="to-target-the-net-framework-35"></a>.NET Framework 3.5 をターゲットとして設定するには  
-  
-1.  [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] で、新しい Visual Basic または C# プロジェクトを作成します。 または、Visual Studio 2005 で作成されている Visual Basic または C# プロジェクトを開き、指示に従って [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] プロジェクトに変換します。  
-  
-2.  C# プロジェクトをクリックして、**プロジェクト** メニューをクリックして**プロパティ**です。  
-  
-    1.  **アプリケーション**プロパティ] ページで、[.NET Framework 3.5、**ターゲット フレームワーク**ドロップダウン リスト。  
-  
-3.  Visual Basic プロジェクトをクリックして、**プロジェクト** メニューをクリックして**プロパティ**です。  
-  
-    1.  **コンパイル**プロパティ ページで、をクリックして**詳細コンパイル オプション**で .NET Framework 3.5 をクリックして、**ターゲット フレームワーク (すべての構成)** ドロップダウン リスト。  
-  
-4.  **プロジェクト** メニューのをクリックして**参照の追加**をクリックして、 **.NET**  タブで、下方向にスクロール**System.Core**をクリックし、 をクリックして**Ok**です。  
-  
-5.  ソース コード ファイルまたはプロジェクトに `using` の <xref:System.Linq> ディレクティブまたはインポートされる名前空間を追加します。  
-  
-     詳細については、次を参照してください。[ディレクティブを使用して](~/docs/csharp/language-reference/keywords/using-directive.md)または[する方法: 追加またはインポートされた名前空間 (Visual Basic) を削除する](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)です。  
-  
-### <a name="to-enable-linq-to-dataset-functionality"></a>LINQ to DataSet 機能を有効にするには  
-  
-1.  必要に応じて、このトピックの前の方で説明した手順に従って、System.Core.dll への参照および System.Linq の `using` ディレクティブまたはインポートされる名前空間を追加します。  
-  
-2.  C# または Visual Basic の場合をクリックして、**プロジェクト** メニューをクリックして**参照の追加**です。  
-  
-3.  **参照の追加** ダイアログ ボックスをクリックして、 **.NET**タブが前面にない場合。 下方向にスクロール**System.Data**と**System.Data.DataSetExtensions**にをクリックします。 クリックして、 **OK**ボタンをクリックします。  
-  
-4.  ソース コード ファイルまたはプロジェクトに `using` の <xref:System.Data> ディレクティブまたはインポートされる名前空間を追加します。 詳細については、次を参照してください。[ディレクティブを使用して](~/docs/csharp/language-reference/keywords/using-directive.md)または[する方法: 追加またはインポートされた名前空間 (Visual Basic) を削除する](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)です。  
-  
-5.  LINQ to Dataset 機能を使用するために、System.Data.DataSetExtensions.dll への参照を追加します。 System.Data.dll への参照が追加されていない場合はこれを追加します。  
-  
-6.  オプションで、データベースにどのように接続するかに合わせて、`using` または `System.Data.Common` の `System.Data.SqlClient` ディレクティブまたはインポートされる名前空間を追加します。  
-  
-## <a name="see-also"></a>関連項目  
- [はじめに](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
- [はじめに (LINQ について)](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+> コマンド プロンプトから構築する場合は、LINQ 関連の Dll を手動で参照する必要があります *%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.5*します。
+
+## <a name="to-enable-linq-to-dataset-functionality"></a>LINQ to DataSet 機能を有効にするには
+
+既存のプロジェクトで DataSet 機能を LINQ を有効にするには次の手順に従います。
+
+1. 参照を追加**System.Core**、 **System.Data**、および**System.Data.DataSetExtensions**します。
+
+   **ソリューション エクスプ ローラー**を右クリックし、**参照**ノード**参照の追加**します。 **参照マネージャー**ダイアログ ボックスで、 **System.Core**、 **System.Data**、および**System.Data.DataSetExtensions**します。 **[OK]** を選択します。
+
+1. 追加[を使用して](../../../csharp/language-reference/keywords/using-directive.md)ディレクティブ (または[Imports ステートメント](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)Visual basic) の**System.Data**と**System.Linq**します。
+
+   ```csharp
+   using System.Data;
+   using System.Linq;
+   ```
+
+1. 必要に応じて、追加、`using`ディレクティブ (または`Imports`ステートメント) の**System.Data.Common**または**System.Data.SqlClient**データベースに接続する方法によって異なります。
+
+## <a name="see-also"></a>関連項目
+
+- [LINQ to DataSet を概要します。](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

@@ -12,38 +12,38 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 00f77fe5e98099868e02d74fe1adc7690cb95cca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbd914d8b4239bbae1de7031e68b2900cf5ad6a3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590278"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478053"
 ---
 # <a name="boolean-data-type-visual-basic"></a>ブール型 (Boolean) (Visual Basic)
-値を保持できるのみ`True`または`False`です。 キーワード`True`と`False`の 2 つの状態に対応している`Boolean`変数。  
+値を保持できるのみ`True`または`False`します。 キーワード`True`と`False`の 2 つの状態に対応して`Boolean`変数。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用して、[ブール データ型 (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) true または false などの 2 つの状態値が含まれてはい/いいえ、またはオン/オフにします。  
   
  `Boolean` の既定値は `False` です。  
   
- `Boolean` 値は、数値としては格納されませんし、格納された値が数値に相当するものではありません。 数値と等価の値に依存するコードを記述する必要がありますしない`True`と`False`です。 使用を制限する必要があります、可能な限り`Boolean`仕様で定められている論理値変数。  
+ `Boolean` 値は、数値として格納しないと、番号に相当する、保存された値が意図されていません。 数値と等価の値に依存するコードを記述する必要がありますしない`True`と`False`します。 使用を制限する必要があります、可能な限り`Boolean`変数を論理値に設計されています。  
   
 ## <a name="type-conversions"></a>型変換  
- Visual Basic でに数値データ型の値を変換するときに`Boolean`、0 になります`False`になり、その他のすべての値`True`です。 Visual Basic の変換と`Boolean`値、数値型を`False`が 0 になったと`True`-1 になります。  
+ Visual Basic でに数値データ型の値を変換するときに`Boolean`、0 になります`False`他のすべての値になると`True`します。 Visual Basic の変換と`Boolean`値、数値型を`False`が 0 になると`True`-1 になります。  
   
- 間で変換する際に`Boolean`値と、数値データ型は、する .NET Framework 変換メソッドは、常に生成しない変換の Visual Basic のキーワードと同じ結果に留意してください。 Visual Basic の変換には、以前のバージョンと互換性のある動作が保持されるためです。 詳細についてを参照してください「ブール型は変換する数値型不適切」[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)です。  
+ 間で変換する際に`Boolean`値と、数値データ型を保持する .NET Framework の変換メソッドは常に生成しない Visual Basic の変換キーワードと同じ結果に注意してください。 Visual Basic の変換には、以前のバージョンと互換性のある動作が保持されるためです。 詳細についてを参照してください「ブール型は変換する数値型不適切」[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **負の数。** `Boolean` 数値型ではないと、負の値を表すことはできません。 いずれの場合は、使用しないで`Boolean`数値の値を保持します。  
+-   **負の数。** `Boolean` 数値型ではないと、負の値を表すことはできません。 いずれの場合も、行わないで`Boolean`数値の値を保持します。  
   
 -   **型宣言文字。** `Boolean` リテラルの型文字または識別子の型文字がありません。  
   
--   **Framework の型。** .NET Framework において対応する型は、<xref:System.Boolean?displayProperty=nameWithType> 構造体です。  
+-   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Boolean?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="example"></a>例  
- 次の例では、`runningVB`は、`Boolean`単純なはい/いいえの設定を格納する変数。  
+ 次の例では、`runningVB`は、`Boolean`変数で、単純なはい/いいえの設定を格納します。  
   
 ```  
 Dim runningVB As Boolean  
@@ -55,7 +55,7 @@ End If
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Boolean?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
  [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  

@@ -8,16 +8,16 @@ ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 3e700e7e726b5cb71d3b7d863bdb31951aacd885
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9994f6a3026c790acdb35af3300379786f615607
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399207"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481985"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI オートメーション要素の取得
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、 <xref:System.Windows.Automation.AutomationElement> 要素の [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] オブジェクトを取得するさまざまな方法について説明します。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33399207"
 ## <a name="root-element"></a>ルート要素  
  <xref:System.Windows.Automation.AutomationElement> オブジェクトの検索には必ず、開始場所が必要です。 この開始場所には、デスクトップ、アプリケーション ウィンドウ、コントロールなど任意の要素を指定できます。  
   
- 元のすべての要素が子と、デスクトップのルート要素が、静的なから取得した<xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType>プロパティです。  
+ 元のすべての要素が派生する、デスクトップのルート要素が、静的なから取得した<xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType>プロパティ。  
   
 > [!CAUTION]
 >  通常、 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>の直接の子のみの取得を試行する必要があります。 子孫の検索は、数百または数千もの要素を反復処理する場合があり、スタック オーバーフローを引き起こす可能性があります。 下位レベルの特定の要素を取得しようとする場合、アプリケーション ウィンドウから、または下位レベルのコンテナーから検索を開始する必要があります。  

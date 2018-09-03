@@ -5,12 +5,12 @@ helpviewer_keywords:
 - raw input [WPF]
 - FilterInputMessage method [WPF]
 ms.assetid: 4d74c6cf-7d1d-49ff-96c1-231340ce54f5
-ms.openlocfilehash: 69bc1e973b690454bcf91487c12dc4ce0ac46a17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a22071696ca012968e042e15cd8a9f4b876fd9f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548406"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479972"
 ---
 # <a name="filterinputmessage"></a>FilterInputMessage
 E_NOTIMPL が返されない限り、メッセージを受信するたびに PresentationHost.exe によって呼び出されます。  
@@ -33,14 +33,14 @@ HRESULT FilterInputMessage( [in] MSG* pMsg ) ;
   
  S_FALSE - フィルターはこのメッセージを処理しました。それ以降の処理は実行されません。  
   
- E_NOTIMPL – この値が返される場合は[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)は再度呼び出されません。 この値は、カスタムの進行状況の提供のみを対象とするホスト アプリケーションから返されることがあります。PresentationHost.exe へのエラー ユーザー インターフェイスは、PresentationHost.exe からの未加工の入力メッセージの転送を対象としていません。  
+ E_NOTIMPL – この値が返された場合[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)は再度呼び出されません。 この値は、カスタムの進行状況の提供のみを対象とするホスト アプリケーションから返されることがあります。PresentationHost.exe へのエラー ユーザー インターフェイスは、PresentationHost.exe からの未加工の入力メッセージの転送を対象としていません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  PresentationHost.exe は、キーボード、マウス、およびリモート コントロールなどのさまざまな未加工入力デバイスのターゲットになります。 場合によって、ホスト アプリケーションでの動作は PresentationHost.exe で使用される入力に依存します。 たとえば、ホスト アプリケーションは、特定のユーザー インターフェイス要素を表示するかどうかを判断するために、特定の入力メッセージの受信に依存することがあります。  
   
- ホスト アプリケーションがこれらの動作を提供するために必要な入力メッセージを受信するには、PresentationHost.exe では、呼び出すことによって、ホストされるアプリケーションに適切な未加工の入力メッセージを転送[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)です。  
+ ホスト アプリケーションがこれらの動作を提供するために必要な入力メッセージを受信するには、PresentationHost.exe では、呼び出すことによってホストされるアプリケーションに適切な未加工の入力メッセージを転送[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)します。  
   
- ホストされるアプリケーションでは、生の入力メッセージを受信によって返された生の入力デバイス (ヒューマン インターフェイス デバイス) のセットを登録して[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)です。  
+ ホストされるアプリケーションがによって返される未加工の入力デバイス (ヒューマン インターフェイス デバイス) のセットを登録して未加工の入力メッセージを受信[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [WM_INPUT 通知](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputmessages/wm_input.asp)
+ [WM_INPUT 通知](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputmessages/wm_input.asp)

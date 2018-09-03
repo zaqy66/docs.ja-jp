@@ -2,12 +2,12 @@
 title: 変数と引数の追跡
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: f1938da55d2e1d88c88f83ff75f357e23f1eb81f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516985"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481493"
 ---
 # <a name="variable-and-argument-tracking"></a>変数と引数の追跡
 ワークフローの実行を追跡するときは、データを抽出すると便利です。 これにより、実行後に追跡レコードにアクセスするときにコンテキストが追加されます。 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] では、追跡を使用して、ワークフローのアクティビティのスコープ内の参照可能な変数や引数を抽出できます。 プロファイルを追跡すると、データを簡単に抽出できるようになります。  
@@ -17,7 +17,7 @@ ms.locfileid: "33516985"
   
 -   変数名によって変数が指定されている場合、追跡されている現在のアクティビティと親アクティビティ内の変数が追跡で検索されます。 変数は、現在のアクティビティのスコープと親スコープ内で検索されます。  
   
--   名前を使用して抽出する変数が指定されている場合 ="*"、追跡されている現在のアクティビティ内のすべての変数を抽出します。 この場合、スコープ内の変数でも、親アクティビティで定義されているものは抽出されません。  
+-   抽出される変数名を使用して指定した場合は、="*"、追跡されている現在のアクティビティ内のすべての変数が抽出されます。 この場合、スコープ内の変数でも、親アクティビティで定義されているものは抽出されません。  
   
  引数の抽出時、抽出される引数はアクティビティの状態によって異なります。 アクティビティの状態が Executing である場合、`InArguments` のみが抽出に使用できます。 他のアクティビティ状態 (Closed、Faulted、Canceled) については、すべての引数、InArguments と OutArguments の両方が抽出に使用できます。  
   
@@ -47,5 +47,5 @@ ms.locfileid: "33516985"
 3.  カスタムの追跡参加要素については、変数や引数に格納されている機密情報が WF コードによって公開されないようにします。  
   
 ## <a name="see-also"></a>関連項目  
- [Windows Server App Fabric の監視](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [アプリケーション App Fabric の監視](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)

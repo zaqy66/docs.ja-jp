@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 8058f0fac8a0401f72f84e2d2e91c28c7e46d1e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90e00e4264ff808151c9e1c58fdaf290765620c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493364"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488171"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>方法 : WCF サービス操作を非同期に呼び出す
-ここでは、クライアントからサービス操作に非同期にアクセスする方法について説明します。 このトピックのサービスは、`ICalculator` インターフェイスを実装しています。 クライアントは、イベント ドリブンの非同期呼び出しモデルを使用して、このインターフェイスで操作を非同期に呼び出すことができます  (イベント ベースの非同期呼び出しモデルについての詳細については、次を参照してください。[イベント ベースの非同期パターンを使用したマルチ スレッド プログラミング](http://go.microsoft.com/fwlink/?LinkId=248184))。 例については、サービスに非同期的に操作を実装する方法を示す、次を参照してください。[する方法: 非同期サービス操作を実装する](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)です。 同期および非同期の操作の詳細については、次を参照してください。[同期と非同期の操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)です。  
+ここでは、クライアントからサービス操作に非同期にアクセスする方法について説明します。 このトピックのサービスは、`ICalculator` インターフェイスを実装しています。 クライアントは、イベント ドリブンの非同期呼び出しモデルを使用して、このインターフェイスで操作を非同期に呼び出すことができます  (イベント ベースの非同期呼び出しモデルの詳細については、次を参照してください。[イベント ベースの非同期パターンを使用したマルチ スレッド プログラミング](https://go.microsoft.com/fwlink/?LinkId=248184))。 サービスで操作を非同期的に実装する方法の例を参照してください[方法: 非同期サービス操作を実装](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)します。 同期および非同期操作の詳細については、次を参照してください。[同期および非同期操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)します。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ChannelFactory%601> を使用している場合、イベント ドリブンの非同期呼び出しモデルはサポートされません。 使用して非同期呼び出しを行う方法について、<xref:System.ServiceModel.ChannelFactory%601>を参照してください[する方法: 呼び出し操作に非同期的を使用して、チャネル ファクトリ](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)です。  
+>  <xref:System.ServiceModel.ChannelFactory%601> を使用している場合、イベント ドリブンの非同期呼び出しモデルはサポートされません。 使用して非同期呼び出しを行う方法については、<xref:System.ServiceModel.ChannelFactory%601>を参照してください[方法: 呼び出し操作に非同期を使用してチャネル ファクトリ](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)します。  
   
 ## <a name="procedure"></a>プロシージャ  
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>WCF サービス操作を非同期に呼び出すには  
   
-1.  実行、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)両方を持つツール、`/async`と`/tcv:Version35`次のコマンドに示すように、このコマンド オプションを一緒にします。  
+1.  実行、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)両方のツール、`/async`と`/tcv:Version35`次のコマンドで示すように、このコマンド オプションをまとめてします。  
   
     ```  
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
@@ -30,12 +30,12 @@ ms.locfileid: "33493364"
   
      これは、クラスを生成、だけでなく、同期操作と標準的なデリゲートに基づく非同期操作、WCF クライアントが含まれています。  
   
-    -   2 つ <`operationName` > `Async` -イベント ベースの非同期呼び出し方法で使用するための操作です。 例えば:  
+    -   2 つ <`operationName` > `Async` -イベント ベースの非同期呼び出し方法で使用するための操作。 例えば:  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   フォームの操作が完了しましたイベント <`operationName` > `Completed` -イベント ベースの非同期呼び出し方法を使用します。 例えば:  
+    -   フォームの操作完了イベント <`operationName` > `Completed` -イベント ベースの非同期呼び出し方法を使用します。 例えば:  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
@@ -50,7 +50,7 @@ ms.locfileid: "33493364"
      [!code-csharp[EventAsync#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#4)]
      [!code-vb[EventAsync#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#4)]  
   
-3.  操作を呼び出す前に、新しいジェネリックを使用して<xref:System.EventHandler%601?displayProperty=nameWithType>型の <`operationName` > `EventArgs` (前の手順で作成された) ハンドラー メソッドを追加する、<`operationName` > `Completed`イベント。 まず、<`operationName` > `Async`メソッドです。 例えば:  
+3.  操作を呼び出す前に、新しいジェネリックを使用して<xref:System.EventHandler%601?displayProperty=nameWithType>型の <`operationName` > `EventArgs` (前の手順で作成した) ハンドラー メソッドを追加して、<`operationName` > `Completed`イベント。 まず、<`operationName` > `Async`メソッド。 例えば:  
   
      [!code-csharp[EventAsync#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#5)]
      [!code-vb[EventAsync#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#5)]  

@@ -2,12 +2,12 @@
 title: 組み込みの構成
 ms.date: 03/30/2017
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-ms.openlocfilehash: 8488a753cb1c540d9c34d9bcf7b2a3112302a122
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e76c019d9fc1b416e6fa8175a70b5fd01d9ff53e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518621"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476119"
 ---
 # <a name="built-in-configuration"></a>組み込みの構成
 このサンプルでは、SQL Workflow Instance Store の使用法と構成を示します。 SQL Workflow Instance Store は、SQL ベースのインスタンス ストアの実装です。 SQL Workflow Instance Store を使用すると、インスタンスの状態を SQL Server データベースや SQL Server Express データベースに保存したり読み込んだりすることができます。  
@@ -17,7 +17,7 @@ ms.locfileid: "33518621"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合は、ダウンロード ページに移動をすべて Windows Communication Foundation (WCF) をダウンロードし、[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合は、(ダウンロード ページ) に移動してすべての Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33518621"
   
  このカウント ワークフローは、ワークフロー サービス ホストによってホストされる自己ホスト型サービスです。 プログラムの `Main` メソッドは、カウント ワークフローをホストするワークフロー サービス ホストのインスタンスを作成し、 カウント ワークフローにアクセスできるエンドポイントを定義します。 その後、SQL Workflow Instance Store を構成するために使用される SQL Workflow Instance Store の動作を定義します。 続いて、カウント ワークフローの start メソッドを呼び出すクライアントがプログラムで作成されます。  
   
- プログラムを開始すると、カウンターが自動的にカウントを開始します。 インスタンスを読み込んで SQL Workflow Instance Store を構成するのに数秒かかる場合もあります。 ワークフロー インスタンス ストアの詳細については、次を参照してください。 [SQL Workflow Instance Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)です。  
+ プログラムを開始すると、カウンターが自動的にカウントを開始します。 インスタンスを読み込んで SQL Workflow Instance Store を構成するのに数秒かかる場合もあります。 ワークフロー インスタンス ストアの詳細については、次を参照してください。 [SQL Workflow Instance Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)します。  
   
  このサンプルは、2 つの部分で構成されています。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "33518621"
   
 2.  サンプル ディレクトリ (\WF\Basic\Persistence\BuiltInConfiguration\CS) に移動して、CreateInstanceStore.cmd を実行します。  
   
-3.  管理特権がない場合は、SQL Server ログインを作成します。 移動して`Security`、**ログイン**です。 右クリック**ログイン**し、新しいログインを作成します。  
+3.  管理特権がない場合は、SQL Server ログインを作成します。 移動して`Security`、**ログイン**します。 右クリックして**ログイン**新しいログインを作成します。  
   
-4.  自分の ACL ユーザーを SQL ロールに追加します。 開いている**データベース**、 **InstanceStore**、**セキュリティ**です。 右クリック**ユーザー**選択**新規ユーザー**です。 設定、**ログイン名**前の手順で作成したユーザーにします。 データベース ロールのメンバーシップにユーザーを追加**System.Activities.DurableInstancing.InstanceStoreUsers** (など)。 ユーザーが既に存在している場合もあります (ユーザー dbo など)。  
+4.  自分の ACL ユーザーを SQL ロールに追加します。 開いている**データベース**、 **InstanceStore**、**セキュリティ**します。 右クリック**ユーザー**選択**新しいユーザー**します。 設定、**ログイン名**前の手順で作成されたユーザーにします。 データベース ロールのメンバーシップにユーザーを追加**System.Activities.DurableInstancing.InstanceStoreUsers** (など)。 ユーザーが既に存在している場合もあります (ユーザー dbo など)。  
   
 5.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] で InstanceStore.sln ファイルを開き、Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。  
   
-6.  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]は、サンプルの該当する bin \debug ディレクトリ (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug) に移動し、InstanceStore.exe を右クリックして選択**を管理者として実行**. このサンプルはチャネル リスナーを開くため、管理特権で実行する必要があります。  
+6.  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]、サンプルの該当する bin \debug ディレクトリ (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug) に移動し、InstanceStore.exe を右クリックしておよび選択**を管理者として実行**. このサンプルはチャネル リスナーを開くため、管理特権で実行する必要があります。  
   
 7.  ローカルの SQL Server Express 以外のデータベースにインスタンス ストアを作成した場合は、サンプルのデータベース接続文字列 (InstanceStore1 プロジェクトの Program.cs にある `const string ConnectionString` と、InstanceStore2 プロジェクトの App.config にある `connectionString` 属性) を更新してサンプルを再コンパイルする必要があります。  
   
@@ -83,15 +83,15 @@ ms.locfileid: "33518621"
   
 1.  サンプルの実行中に、SQL Server Management Studio を起動します。  
   
-2.  **オブジェクト エクスプ ローラー****データベース**、 **InstanceStore**、**テーブル**、し**System.activities.durableinstancing.instancetable**です。  
+2.  **オブジェクト エクスプ ローラー**、**データベース**、 **InstanceStore**、**テーブル**、し **[System.activities.durableinstancing.instancetable]** します。  
   
-3.  右クリックして**InstanceTable**選択**上位 1000 行**です。  
+3.  右クリックして**InstanceTable**選択**上位 1000 行**します。  
   
-4.  あることと、新しいエントリを確認、**ロックの有効期限**5 秒ごとに変化 (タスク バーのをクリックして**Execute**クエリを更新するボタン)。 これは、設定の結果、**ホストのロック更新時間**5 にします。  
+4.  新しいエントリがあることを確認、**ロックの有効期限**、5 秒ごとに変更 (タスクバーのをクリックして**Execute**クエリを更新するボタン)。 これは、設定の結果として、**ホストのロック更新時間**5 にします。  
   
-5.  カウントの完了後にインスタンス テーブルのエントリが削除されることを確認します。 これは、設定の結果、**インスタンス完了アクション**に**DeleteAll**です。  
+5.  カウントの完了後にインスタンス テーブルのエントリが削除されることを確認します。 これは、設定の結果として**インスタンス完了アクション**に**DeleteAll**します。  
   
-6.  ワークフロー ホスト アプリケーションが終了されることを確認してから、ENTER キーを押して、 **LockOwnersTable**を削除します。  
+6.  ワークフロー ホスト アプリケーションが終了されることを確認するには ENTER キーを押して、 **LockOwnersTable**は削除されます。  
   
 #### <a name="to-uninstall-the-sample"></a>サンプルをアンインストールするには  
   
@@ -102,9 +102,9 @@ ms.locfileid: "33518621"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric ホスティングと永続性のサンプル](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

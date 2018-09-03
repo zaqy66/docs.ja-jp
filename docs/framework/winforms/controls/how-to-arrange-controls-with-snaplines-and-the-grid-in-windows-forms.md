@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: 9b6a4dbf90ea3541c5919ac1d7c8470b6f0dfcc4
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bbe6ae2adfe364e41f6627e6b067aa8e18e6e079
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253392"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488082"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>方法 : コントロールを Windows フォームのスナップ線とグリッドを使用して配置する
 Visual Studio のレイアウト機能を使用すると、フォーム上のコントロールの配置場所を正確に指定できます。 コントロールをフォームに追加またはフォーム上の移動を行と、Windows フォーム デザイナーのグリッドの列に自動的に配置またはスナップ線の機能を使用してコントロールを配置することができます。  
@@ -25,7 +25,7 @@ Visual Studio のレイアウト機能を使用すると、フォーム上のコ
   
 -   選択、 **SnapToGrid** Windows フォーム デザイナーでレイアウト モード**オプション** ダイアログ ボックス。  
   
-     詳細については、次を参照してください。 [全般、Windows フォーム デザイナー、オプション ダイアログ ボックス](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)です。 すべてのコントロールでは、グリッド上の点に沿った自体今すぐ揃えます。  
+     詳細については、次を参照してください。 [全般、Windows フォーム デザイナー、オプション ダイアログ ボックス](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)です。 すべてのコントロールでは、グリッド上の点に沿った自体今すぐ揃えます。  
   
      グリッドの個々 のコントロールをスナップするには、それらの場所にロックできます。 ただしがロックされているときに移動したりできないサイズを変更します。 コントロールのロックの詳細については、次を参照してください。[方法: Windows フォーム コントロールのロック](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md)します。  
   
@@ -36,7 +36,7 @@ Visual Studio のレイアウト機能を使用すると、フォーム上のコ
      詳細については、次を参照してください。[チュートリアル: Arranging Controls on Windows フォームを使用してスナップ](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)します。 スナップ線を使用して、フォーム上のコントロールを揃えたり整列したりすることができますようになりました。  
   
 ## <a name="see-also"></a>関連項目  
- [一般に、Windows フォーム デザイナー オプション ダイアログ ボックス](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [一般に、Windows フォーム デザイナー オプション ダイアログ ボックス](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)  
  [方法: Windows フォームにコントロールを追加する](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  

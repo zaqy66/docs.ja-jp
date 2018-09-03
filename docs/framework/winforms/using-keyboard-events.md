@@ -9,15 +9,15 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 706b4d87ddbb6afadfd90af866520e6feaa58ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542263"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484910"
 ---
 # <a name="using-keyboard-events"></a>キーボード イベントの使用
-多くの Windows フォーム プログラムは、キーボード イベントを処理することによってキーボード入力を処理します。 ここでは、どのような場合に各キーボード イベントを使用するか、また各イベントがどのようなデータを提供するかについての詳細を含め、キーボード イベントの概要について説明します。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))、[イベントの概要 (Windows フォーム)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))です。  
+多くの Windows フォーム プログラムは、キーボード イベントを処理することによってキーボード入力を処理します。 ここでは、どのような場合に各キーボード イベントを使用するか、また各イベントがどのようなデータを提供するかについての詳細を含め、キーボード イベントの概要について説明します。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))、[イベントの概要 (Windows フォーム)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))します。  
   
 ## <a name="keyboard-events"></a>キーボード イベント  
  Windows フォームは、ユーザーがキーボードのキーを押したときに発生する 2 つのイベントと、キーボードのキーを離したときに発生する 1 つのイベントを提供します。これらのイベントは次のとおりです。  
@@ -28,7 +28,7 @@ ms.locfileid: "33542263"
   
 -   <xref:System.Windows.Forms.Control.KeyUp> イベント。ユーザーがキーを離したときに 1 回発生します。  
   
- ユーザーがキーを押すと、Windows フォームは、キーボード メッセージが文字キーまたは物理キーのどちらを示しているかに基づいて、発生させるイベントを決定します。 文字および物理キーの詳細については、次を参照してください。[キーボード入力のしくみ](../../../docs/framework/winforms/how-keyboard-input-works.md)です。  
+ ユーザーがキーを押すと、Windows フォームは、キーボード メッセージが文字キーまたは物理キーのどちらを示しているかに基づいて、発生させるイベントを決定します。 文字と物理キーの詳細については、次を参照してください。[キーボード入力のしくみ](../../../docs/framework/winforms/how-keyboard-input-works.md)します。  
   
  上の 3 つのキーボード イベントに関する説明を次の表に示します。  
   

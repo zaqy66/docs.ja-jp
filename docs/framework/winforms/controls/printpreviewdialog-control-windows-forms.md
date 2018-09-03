@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview (using designer)
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
-ms.openlocfilehash: a6fc2f5127debaa54fe195d935da9b61cdc0902b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f35343ca06666580d744b4d6e0fa954afedbd9c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538380"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480144"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog コントロール (Windows フォーム)
 Windows フォームの `PrintPreviewDialog` コントロールは、ドキュメントを印刷時の状態で表示するために使用される事前構成済みダイアログ ボックスです。 このコントロールは、独自のダイアログ ボックスを使用しない簡易ソリューションとして、Windows ベースのアプリケーションの中で使用します。 このコントロールには、印刷を開始するボタン、ズーム イン用のボタン、1 ページまたは複数ページを表示するボタン、およびダイアログ ボックスを閉じるためのボタンが含まれています。  
@@ -32,7 +32,7 @@ Windows フォームの `PrintPreviewDialog` コントロールは、ドキュ�
  [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   
- [Windows フォーム ダイアログ ボックスの重要コード](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ [Windows フォーム ダイアログ ボックスの重要コード](https://go.microsoft.com/fwlink/?LinkID=102575)  
  Windows フォーム ダイアログ ボックスのコントロールとコンポーネント、基本的な機能を実行するために必要なコードについて説明します。 (MSDN オンライン ライブラリの技術記事)  
   
  [ダイアログ ボックス コントロールおよびコンポーネント](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  

@@ -2,12 +2,12 @@
 title: カスタム メッセージ インターセプター
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: a59b2075473e2ca4c8cb8751fd6cb733f282238b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5a72a964c571cf68d4b215f4029ff95c52cba0e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806319"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486741"
 ---
 # <a name="custom-message-interceptor"></a>カスタム メッセージ インターセプター
 このサンプルでは、チャネル拡張モデルの使用方法を示します。 特に、チャネル ファクトリとチャネル リスナーを作成するカスタム バインド要素を実装して、ランタイム スタックの特定のポイントですべての送受信メッセージを中断する方法を示します。 また、このサンプルには、こうしたカスタム ファクトリの使用方法を示すクライアントとサーバーも含まれます。  
@@ -22,11 +22,11 @@ ms.locfileid: "33806319"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- このサンプルでは、WCF のベスト プラクティスに従うと、チャネル フレームワークを使用して Windows Communication Foundation (WCF) でカスタム階層チャネルを作成するための推奨手順について説明します。 カスタム階層チャネルを作成する手順は、次のとおりです。  
+ このサンプルでは、チャネル フレームワークを使用して、WCF のベスト プラクティスに従うと Windows Communication Foundation (WCF) でカスタム階層チャネルを作成するための推奨手順について説明します。 カスタム階層チャネルを作成する手順は、次のとおりです。  
   
 1.  どのチャネル形状をチャネル ファクトリおよびチャネル リスナがサポートするかを決定します。  
   
@@ -52,7 +52,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>バインド要素の追加  
- このサンプルでは、`InterceptingBindingElement` というカスタム バインディング要素を定義します。 `InterceptingBindingElement` `ChannelMessageInterceptor`は入力としてこれを使用して`ChannelMessageInterceptor`通過するメッセージを操作します。 公開する必要があるクラスはこれだけです。 ファクトリ、リスナ、およびチャネルはすべて、ランタイム パブリック インターフェイスの内部実装として設定できます。  
+ このサンプルでは、`InterceptingBindingElement` というカスタム バインディング要素を定義します。 `InterceptingBindingElement` `ChannelMessageInterceptor` 、入力としてこれを使用して`ChannelMessageInterceptor`通過するメッセージを操作します。 公開する必要があるクラスはこれだけです。 ファクトリ、リスナ、およびチャネルはすべて、ランタイム パブリック インターフェイスの内部実装として設定できます。  
   
 ```  
 public class InterceptingBindingElement : BindingElement  
@@ -153,11 +153,11 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+2.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-3.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+3.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-4.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 5.  最初に Service.exe を実行して次に Client.exe を実行し、両方のコンソール ウィンドウで出力を表示します。  
   

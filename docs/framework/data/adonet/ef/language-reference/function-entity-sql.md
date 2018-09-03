@@ -2,12 +2,12 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: c101032aed3e94e6bbf1d16319a616131fa6b60b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1c02583400f9092dcb5008239bfd1fd73c63c326
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760675"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485548"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 Entity SQL クエリ コマンドのスコープに関数を定義します。  
@@ -50,7 +50,7 @@ FUNCTION function-name
  ROW **(**`row_expression`**)**  
  1 つまたは複数の値から構造的に型指定された匿名レコードを返す式。 詳細については、「 [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  関数のシグネチャが異なっていれば、名前が同じ複数の関数をインラインで宣言することは可能です。 詳細については、「 [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md)」を参照してください。  
   
  関数がインラインである場合、Entity SQL コマンドに呼び出せるのは、そのコマンド内で定義された後のみです。 ただし、インライン関数を別のインライン関数内で呼び出す場合には、呼び出される関数が定義される前でも後でもかまいません。 次の例では、関数 B が定義される前に、関数 A が関数 B を呼び出しています。  
@@ -61,9 +61,9 @@ FUNCTION function-name
   
  `A()`  
   
- 詳細については、次を参照してください。[する方法: ユーザー定義関数を呼び出す](http://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)です。  
+ 詳細については、次を参照してください。[方法: ユーザー定義関数を呼び出す](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)します。  
   
- 関数をモデル自体で宣言することもできます。 モデルで宣言された関数は、コマンドでインラインで宣言された関数と同じように実行されます。 詳細については、次を参照してください。[ユーザー定義関数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)です。  
+ 関数をモデル自体で宣言することもできます。 モデルで宣言された関数は、コマンドでインラインで宣言された関数と同じように実行されます。 詳細については、次を参照してください。[ユーザー定義関数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)します。  
   
 ## <a name="example"></a>例  
  次の Entity SQL コマンドは、関数 `Products` を定義します。この関数は、整数値を受け取って、返された製品をフィルター処理します。  

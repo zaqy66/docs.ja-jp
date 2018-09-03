@@ -1,23 +1,23 @@
 ---
-title: オプション&lt;キーワード&gt;ステートメント
+title: オプション&lt;キーワード&gt;ステートメント (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: c5a53faec01b8c10de5802eccb21d66350193696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598231"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484528"
 ---
 # <a name="option-ltkeywordgt-statement"></a>オプション&lt;キーワード&gt;ステートメント
 ソース ファイル全体に適用されるコンパイラ オプションを指定するステートメントについて説明します。  
   
-## <a name="remarks"></a>コメント  
- コンパイラ オプションには、すべての変数に明示的に宣言する必要があるかどうか、型の縮小変換で行うか、明示的またはかどうか、テキストまたはバイナリ値として文字列を比較する必要がありますを制御できます。  
+## <a name="remarks"></a>Remarks  
+ コンパイラ オプションには、すべての変数を明示的に宣言する必要があるかどうか、型の縮小変換する必要がありますがかどうか、明示的なであるかテキストまたはバイナリ値の文字列の比較かどうかを制御できます。  
   
  キーワード `Option` は次のコンテキストで使用できます。  
   

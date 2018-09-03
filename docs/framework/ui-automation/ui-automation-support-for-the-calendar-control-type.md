@@ -9,16 +9,16 @@ ms.assetid: e91a7393-a7f9-4838-a1a6-857438b24bc9
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 752ac4cfddd5ca8c8b42d05e1a452cd0ef60ee36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5f40c19d537ffb48a1077a30e1a9b0d66c4f791
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409519"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484568"
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>UI オートメーションによる Calendar コントロール型のサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、Calendar コントロール型に対する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のサポートについて説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でのコントロール型とは、コントロールが <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> プロパティを使用するために満たす必要がある一連の条件のことです。 条件には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティの値、コントロール パターン、および [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントに関する特定のガイドラインが含まれます。  
   
@@ -28,17 +28,17 @@ ms.locfileid: "33409519"
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
- 次の表では、カレンダー コントロールに関連した [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 詳細については、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーを参照してください[UI オートメーション ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)です。  
+ 次の表では、カレンダー コントロールに関連した [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 詳細については、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーを参照してください[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)します。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|予定表<br /><br /> <ul><li>DataGrid<br /><br /> <ul><li>Header (0 または 1)</li><li>HeaderItem (0 または 7、数量は列に表示される日数によって異なる)</li><li>ListItem (数量は表示される日数によって異なる)</li><li>Button (0 または 2、カレンダー ビューのページ移動用)</li></ul></li></ul>|予定表<br /><br /> -ListItem (数量によって異なる日の数が表示されます)|  
+|予定表<br /><br /> <ul><li>DataGrid<br /><br /> <ul><li>Header (0 または 1)</li><li>HeaderItem (0 または 7、数量は列に表示される日数によって異なる)</li><li>ListItem (数量は表示される日数によって異なる)</li><li>Button (0 または 2、カレンダー ビューのページ移動用)</li></ul></li></ul>|予定表<br /><br /> -ListItem (数量によって異なります日数が表示されます)|  
   
  Calendar コントロールは、ユーザー インターフェイスのさまざまな形式で表すことができます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに含まれることが保証されるコントロールは、データ グリッド、ヘッダー、ヘッダー項目、およびリスト項目のコントロールだけです。  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、カレンダー コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)です。  
+ 次の表に、カレンダー コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)します。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|[値]|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -59,11 +59,11 @@ ms.locfileid: "33409519"
   
 |コントロール パターン/パターン プロパティ|サポート|メモ|  
 |---------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|[はい]|1 か月の中に含まれる日付が空間的に移動できる項目になるため、カレンダー コントロールは必ず Grid パターンをサポートします。|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|はい|1 か月の中に含まれる日付が空間的に移動できる項目になるため、カレンダー コントロールは必ず Grid パターンをサポートします。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|状況に依存|ほとんどのカレンダー コントロールはページごとのビューのフリッピングをサポートしています。 ページ移動をサポートするために、Scroll パターンを使用することをお勧めします。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|状況に依存|ほとんどのカレンダー コントロールは、特定の日付、月、または年を、サブ要素の選択内容の形で保存します。 複数選択が可能なカレンダーもあれば、1 つしか選択できないカレンダーもあります。|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|[はい]|カレンダー コントロールには曜日のサブツリー内に常にヘッダーがあるため、Table パターンがサポートされる必要があります。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|×|カレンダー コントロールでは値を直接設定できないため、このコントロールに Value コントロール パターンは必要ありません。 特定の日付がコントロールに関連付けられている場合は、Selection コントロール パターンによって情報を提供する必要があります。|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|はい|カレンダー コントロールには曜日のサブツリー内に常にヘッダーがあるため、Table パターンがサポートされる必要があります。|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|いいえ|カレンダー コントロールでは値を直接設定できないため、このコントロールに Value コントロール パターンは必要ありません。 特定の日付がコントロールに関連付けられている場合は、Selection コントロール パターンによって情報を提供する必要があります。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  

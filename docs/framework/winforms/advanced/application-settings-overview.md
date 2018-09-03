@@ -8,17 +8,17 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: a827eeeca3f9d2719b4467bd19e66b3a40eb2c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e38be762fbfdaccc7d5ba01a1f24f5f3086ca8bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520462"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480419"
 ---
 # <a name="application-settings-overview"></a>アプリケーション設定の概要
 このトピックでは、アプリケーションとユーザーのために設定のデータを作成して格納する方法について説明します。  
   
- Windows フォームのアプリケーション設定の機能により、カスタム アプリケーションと、クライアント コンピューター上のユーザー設定の作成、保存、および保守が簡単になります。 Windows フォーム アプリケーションの設定ではデータベースの接続文字列など、アプリケーションのデータだけでなく、ユーザー アプリケーションの設定などのユーザー固有のデータを格納することができます。 Visual Studio またはカスタムのマネージ コードを使用して、新しい設定の作成、ディスクからの読み取りまたは書き込み、フォームのプロパティへのバインド、および読み込みと保存の前の設定データの検証を実行することができます。  
+ Windows フォームのアプリケーション設定の機能により、カスタム アプリケーションと、クライアント コンピューター上のユーザー設定の作成、保存、および保守が簡単になります。 Windows フォーム アプリケーションの設定ではデータベースの接続文字列など、アプリケーションのデータだけでなく、ユーザー アプリケーションの設定などのユーザー固有のデータを格納することができます。 Visual Studio またはカスタムのマネージド コードを使用して、新しい設定の作成、ディスクからの読み取りまたは書き込み、フォームのプロパティへのバインド、および読み込みと保存の前の設定データの検証を実行することができます。  
   
  アプリケーション設定は、開発者がカスタム コードをほとんど使用しないでアプリケーションの状態を保存でき、以前のバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]の動的プロパティに代わるものです。 アプリケーション設定には、読み取り専用で、遅延バインディングであり、複数のカスタム プログラミングを必要とする動的プロパティに対する多くの機能強化が含まれます。 動的プロパティ クラスは [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]で保持されていますが、アプリケーション設定クラスを少しラップするシェル クラスです。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33520462"
  アプリケーション設定には、情報を自動的に暗号化するための組み込みの機能がありません。 データベースのパスワードなどのセキュリティ関連の情報は、クリア テキストで保存しないでください。 このような機密情報を格納する場合、アプリケーション開発者に、機密情報の安全性を確保する責任があります。 接続文字列を格納する場合は、URL にパスワードをハード コーディングするのではなく、Windows 統合セキュリティを使用することをお勧めします。 詳細については、「 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)」を参照してください。  
   
 ## <a name="getting-started-with-application-settings"></a>アプリケーション設定の概要  
- Visual Studio を使用している場合に、Windows フォーム デザイナーの **[プロパティ]** ウィンドウの **(ApplicationSettings)** プロパティを使用して設定を定義することができます。 この方法で設定を定義する場合、Visual Studio は各設定をクラス プロパティに関連付けるカスタムのマネージ ラッパー クラスを自動的に作成します。 また、Visual Studio は、フォームが表示されるとコントロールの設定が自動的に復元され、フォームが閉じられると自動的に保存されるように、フォームまたはコントロールのプロパティへの設定のバインドも処理します。  
+ Visual Studio を使用している場合に、Windows フォーム デザイナーの **[プロパティ]** ウィンドウの **(ApplicationSettings)** プロパティを使用して設定を定義することができます。 この方法で設定を定義する場合、Visual Studio は各設定をクラス プロパティに関連付けるカスタムのマネージド ラッパー クラスを自動的に作成します。 また、Visual Studio は、フォームが表示されるとコントロールの設定が自動的に復元され、フォームが閉じられると自動的に保存されるように、フォームまたはコントロールのプロパティへの設定のバインドも処理します。  
   
  設定のより詳細なコントロールが必要な場合は、独自のカスタムのアプリケーション設定のラッパー クラスを定義することができます。 これは、 <xref:System.Configuration.ApplicationSettingsBase>からクラスを派生させ、各設定に対応するプロパティを追加して、これらのプロパティに特別な属性を適用することで実現します。 ラッパー クラスを作成する方法については、「 [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)」を参照してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33520462"
  <xref:System.Configuration.LocalFileSettingsProvider>  
  <xref:System.Configuration.IPersistComponentSettings>  
  [方法: アプリケーション設定を検証する](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
- [アプリケーションの設定の管理 (.NET)](http://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
+ [アプリケーションの設定の管理 (.NET)](https://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
  [方法: 実行時に設定を C# で読み取る](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
  [アプリケーション設定とユーザー設定の使用](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
  [アプリケーション設定アーキテクチャ](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  

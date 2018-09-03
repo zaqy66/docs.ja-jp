@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 65228490dd90aaf1f1d76b6a37f9cb9e8a739746
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ddf4b0701ea563465ca3023c73f588f4e0f3a5f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533589"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488041"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>方法 : Windows フォームの DataGridView コントロールの列を非表示にする
 Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールで使用できる列の一部のみを表示したいときがあります。 たとえば、管理の資格情報を持つユーザーには従業員の給与の列を表示し、その他のユーザーには非表示にしたいときがあります。 また、多数の列を含み、その一部のみを表示したいデータ ソースにコントロールをバインドすることもあります。 この場合、通常は列を非表示にするよりは、必要がない列を削除します。  
   
  <xref:System.Windows.Forms.DataGridView> コントロールでは、列の <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> プロパティの値により、その列が表示されているかどうかが決定されます。  
   
- Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[する方法: Windows フォーム DataGridView コントロールを使用して、デザイナーで列を非表示に](http://msdn.microsoft.com/library/kaswfbes\(v=vs.110\))です。  
+ Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[方法: Windows フォーム DataGridView コントロールを使用して、デザイナーで列を非表示に](https://msdn.microsoft.com/library/kaswfbes\(v=vs.110\))します。  
   
 ### <a name="to-hide-a-column-programmatically"></a>プログラムで列を非表示にするには  
   

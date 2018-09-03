@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: e30403f9c97f31e93c22a9658ffb74d4d02a49ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d7cb4869e9e460373bffbf33f61f61ecb6e9948
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490644"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486728"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>方法 : WCF クライアントと WSE3.0 サービスを相互運用するために構成する
-Windows Communication Foundation (WCF) クライアントは、WCF クライアントが Ws-addressing 仕様の 2004 年 8 月版を使用して構成されている場合に、Microsoft .NET (WSE) サービスの Web サービス拡張 3.0 とネットワーク レベルで互換性がします。  
+Windows Communication Foundation (WCF) クライアントと Microsoft .NET (WSE) サービスの Web サービス拡張 3.0 とネットワーク レベル互換性は、Ws-addressing 仕様の 2004 年 8 月バージョンを使用する WCF クライアントが構成されている場合。  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>WSE 3.0 Web サービスと相互運用するように WCF クライアントを構成するには  
   
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF) クライアントは、WCF クライア�
   
      WSE Web サービス、WCF クライアント クラスが作成されます。  
   
-     WCF クライアントを作成する方法については、次を参照してください。、[する方法: クライアントを作成する](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)です。  
+     WCF クライアントを作成する方法については、次を参照してください。、[方法: クライアントを作成する](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。  
   
 2.  WSE 3.0 Web サービスと通信できるバインディングを表すクラスを作成します。  
   
-     次のクラスの一部である、 [WSE との相互運用](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)サンプルです。  
+     次のクラスの一部である、 [WSE との相互運用](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)サンプル。  
   
     1.  <xref:System.ServiceModel.Channels.Binding> クラスから派生するクラスを作成します。  
   
@@ -50,13 +50,13 @@ Windows Communication Foundation (WCF) クライアントは、WCF クライア�
   
 3.  クライアントのアプリケーション コードでは、コードを追加してバインディングのプロパティを設定します。  
   
-     次のコード例を WCF クライアント必要があります使用するように指定メッセージの保護と認証、WSE 3.0 で定義されている`AnonymousForCertificate`設定不要のセキュリティ アサーションです。 また、セキュリティで保護されたセッションと派生キーが必要です。  
+     次のコード例では、ことは、WSE 3.0 で定義されていると、WCF クライアントにそのメッセージの保護と認証の設定が使用する必要がありますを指定します`AnonymousForCertificate`設定不要のセキュリティ アサーション。 また、セキュリティで保護されたセッションと派生キーが必要です。  
   
      [!code-csharp[c_WCFClientToWSEService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#4)]
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>例  
- WSE 3.0 の設定不要のセキュリティ アサーションのプロパティに対応するプロパティを公開するカスタムのバインディングを定義するコード例を次に示します。 カスタムのバインディングは、名前は`WseHttpBinding`、WCF クライアントのバインディング プロパティを指定を使用して、します。  
+ WSE 3.0 の設定不要のセキュリティ アサーションのプロパティに対応するプロパティを公開するカスタムのバインディングを定義するコード例を次に示します。 名前は、カスタムのバインディング`WseHttpBinding`、使用して、WCF クライアントのバインドのプロパティを指定します。  
   
   
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]
@@ -64,4 +64,4 @@ Windows Communication Foundation (WCF) クライアントは、WCF クライア�
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.Channels.Binding>  
- [WSE との相互運用](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [WSE との相互運用](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)

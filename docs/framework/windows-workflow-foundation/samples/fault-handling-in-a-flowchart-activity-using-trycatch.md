@@ -2,12 +2,12 @@
 title: TryCatch を使用した Flowchart アクティビティでのエラー処理
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: cc7630be868a5bdc1a07e8d935e5dd3269b4ae22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e89c80ecfa8ec93fdde82b5638c504ded681a4fc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518064"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487024"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>TryCatch を使用した Flowchart アクティビティでのエラー処理
 このサンプルでは、複雑な制御フロー アクティビティ内で <xref:System.Activities.Statements.TryCatch> アクティビティを使用する方法を示します。  
@@ -18,7 +18,7 @@ ms.locfileid: "33518064"
   
 |パラメーター|説明|  
 |----------------|-----------------|  
-|promoCode|販売促進コード。 型: String<br /><br /> 使用できる値は次のとおりです (かっこ内は値の説明)。<br /><br /> 単一 (単一)<br />MNK (子供のいないで既婚。)<br />MWK (子供の既婚。)|  
+|promoCode|販売促進コード。 型: String<br /><br /> 使用できる値は次のとおりです (かっこ内は値の説明)。<br /><br /> -単一 (単一)<br />MNK (子供の既婚。)<br />MWK (子供の既婚。)|  
 |numKids|子供の数。 型: int|  
   
  `CreateFlowchartWithFaults` アクティビティでは、<xref:System.Activities.Statements.FlowSwitch%601> 引数を有効にする `promoCode` アクティビティを使用し、次の式を使って割引率を計算します。  
@@ -27,7 +27,7 @@ ms.locfileid: "33518064"
 |--------------------------|--------------------|  
 |Single|10|  
 |MNK|16|  
-|MWK|15 + (1 – 1/`numberOfKids`)\*10**注:** 可能性のある、この計算がスローすることが、<xref:System.DivideByZeroException>です。 そのため、割引率の計算は、<xref:System.Activities.Statements.TryCatch> 例外をキャッチして割引率をゼロに設定する <xref:System.DivideByZeroException> アクティビティでラップされます。|  
+|MWK|15 + (1 – 1/`numberOfKids`)\*10**注:** 可能性のある、この計算をスローできます、<xref:System.DivideByZeroException>します。 そのため、割引率の計算は、<xref:System.Activities.Statements.TryCatch> 例外をキャッチして割引率をゼロに設定する <xref:System.DivideByZeroException> アクティビティでラップされます。|  
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33518064"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   

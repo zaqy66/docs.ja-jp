@@ -9,22 +9,22 @@ ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9e04814885ae0963d4da99acecf00dc646ecc96f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 875a9f3a20b7bb5e66ecf3f6b5e3b3cf229e2bf9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400732"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481066"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>UI オートメーション Dock コントロール パターンの実装
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  ここでは、プロパティに関する情報など、 <xref:System.Windows.Automation.Provider.IDockProvider>を実装するガイドラインと規則について説明します。 その他のリファレンスへのリンクは、トピックの最後に記載します。  
   
  <xref:System.Windows.Automation.DockPattern> コントロール パターンは、ドッキング コンテナー内のコントロールのドッキング プロパティを公開するために使用します。 ドッキング コンテナーは、子要素を互いに水平方向または垂直方向に整列できるコントロールです。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)」をご覧ください。  
   
- ![ドッキング コンテナーは、ドッキングされた 2 つの子にします。] (../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+ ![ドッキングされた 2 つの子を持つドッキング コンテナー。](../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
 "Class View" ウィンドウが DockPosition.Right に "Error List" ウィンドウが DockPosition.Bottom にそれぞれ配置された Visual Studio のドッキングの例  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
@@ -56,7 +56,7 @@ ms.locfileid: "33400732"
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> 場合、コントロールは、要求されたドッキング スタイルを実行することはできません。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -コントロールは、要求されたドッキング スタイルを実行できません。|  
   
 ## <a name="see-also"></a>関連項目  
  [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  

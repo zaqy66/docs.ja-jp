@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2ac3788b68626eb04a6f2cbac995b8e5b4ebf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e47c2ac69317b2d2db489dce9a0102b5fe304c05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442583"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483056"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2 メソッド
-厳密な名前付きのアセンブリの署名を確認しの ECMA キーから実際のキーへのマッピングを提供します。  
+厳密な名前付きのアセンブリの署名を検証し、ECMA キーから実際のキーへのマッピングを提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,28 +43,28 @@ HRESULT StrongNameSignatureVerificationEx (
  [in]検証するアセンブリのポータブル実行可能 (.exe または .dll) ファイルへのパス。  
   
  `fForceVerification`  
- [in]`true` 、それ以外のレジストリ設定を上書きする必要がある場合でも、検証を実行する`false`です。  
+ [in]`true` 。 それ以外のレジストリ設定を上書きする必要がある場合でも、検証を実行する`false`します。  
   
  `pbEcmaPublicKey`  
- [in]実際のキーの公開キーを ECMA からマッピングへのポインターの検証に使用します。  
+ [in]実際のキーを ECMA の公開キーからのマッピングへのポインターの検証に使用します。  
   
  `cbEcmaPublicKey`  
- [in]実際の ECMA パブリック キーの長さ。  
+ [in]ECMA の実際の公開キーの長さ。  
   
  `pfWasVerified`  
- [out]`true`厳密な名前の署名が確認済み、それ以外の場合は`false`します。 このパラメーターに設定されても`false`検証は、レジストリ設定のために成功した場合。  
+ [out]`true` 、厳密な名前の署名が確認済み。 それ以外の場合`false`します。 このパラメーターに設定されても`false`検証がレジストリ設定により成功した場合。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK` 検証が成功した場合それ以外の場合、失敗を示す HRESULT 値 (を参照してください[の共通 HRESULT 値](http://go.microsoft.com/fwlink/?LinkId=213878)一覧)。  
+ `S_OK` 検証が成功した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [StrongNameSignatureVerification メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  

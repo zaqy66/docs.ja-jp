@@ -10,18 +10,18 @@ ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c042be74eef5a179030e3431454c468a3b4f7aaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 178d1d39e0301a4d2fefa17c3ffca77575c7b137
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409868"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482764"
 ---
 # <a name="ui-automation-control-patterns"></a>UI オートメーション コントロール パターン
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
- このセクションで使用する方法の詳細については、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]パターンを制御します。  
+ このセクションを使用する方法の詳細については、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]コントロール パターン。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [UI オートメーション Dock コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-dock-control-pattern.md)  

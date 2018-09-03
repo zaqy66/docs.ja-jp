@@ -2,12 +2,12 @@
 title: TransactedReceiveScope の使用
 ms.date: 03/30/2017
 ms.assetid: d455f1dc-bfc5-43d6-8ae9-bc3b3a3ea08a
-ms.openlocfilehash: 635235504a08a151053026cf25c68750dc335eef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc1c418f3fa116f5e1c1647af3543a38122842f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517307"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481472"
 ---
 # <a name="use-of-transactedreceivescope"></a>TransactedReceiveScope の使用
 このサンプルでは、クライアントからサーバーにトランザクションをフローする方法を示します。このために、<xref:System.Activities.Statements.TransactionScope> を使用してクライアント上に新しいトランザクションを作成し、<xref:System.ServiceModel.Activities.TransactedReceiveScope> を使用してフローされたトランザクションを含むメッセージを受信し、サーバー上でトランザクションの有効期間のスコープを設定します。 このサンプルは、クライアントとサーバーの役割を果たす 2 つのプロジェクトで構成されます。  
@@ -22,9 +22,9 @@ ms.locfileid: "33517307"
   
 1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] で TransactedReceiveScope.sln ソリューションを開きます。  
   
-2.  ソリューションをビルドするには、ctrl キーと shift キーを押しながら B キーを押してまたは選択**ソリューションのビルド**から、**ビルド**メニュー。  
+2.  ソリューションをビルドするには、CTRL + SHIFT + B キーを押しますまたは選択**ソリューションのビルド**から、**ビルド**メニュー。  
   
-3.  ビルドが成功した後、ソリューションを右クリックし  **スタートアップ プロジェクトの**します。 ダイアログ ボックスで、次のように選択します。**マルチ スタートアップ プロジェクト**両方のプロジェクトのアクションを確認してください**開始**です。  
+3.  ビルドが完了すると、ソリューションを右クリックしを選択**スタートアップ プロジェクトの設定**します。 ダイアログ ボックスで、次のように選択します。**マルチ スタートアップ プロジェクト**させ、両方のプロジェクトのアクションが**開始**します。  
   
 4.  F5 キーを押すか、選択**デバッグの開始**から、**デバッグ**メニュー。 または、ctrl キーを押しながら f5 キーを押してまたは選択**デバッグなしで開始**から、**デバッグ**] メニューの [デバッグなしで実行します。  
   
@@ -36,6 +36,6 @@ ms.locfileid: "33517307"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TransactedReceiveScope`

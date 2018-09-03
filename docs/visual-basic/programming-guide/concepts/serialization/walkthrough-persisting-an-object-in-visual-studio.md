@@ -1,13 +1,13 @@
 ---
-title: Visual Studio (Visual Basic) でオブジェクトを保持します。
+title: Visual Studio (Visual Basic) でのオブジェクトの永続化
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 2523aefc90e22fe79f22e90d8da68c35c8dd24b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25951327028b9b8ced8506b3ba6395e8c9e6abed
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655611"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483685"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio でのオブジェクトの永続化 (Visual Basic)
 オブジェクトのプロパティはデザイン時に既定値に設定できますが、そのオブジェクトが破棄されると、実行時に入力した値はすべて失われます。 シリアル化によってインスタンス間でオブジェクトのデータを永続化すると、値を保存しておき、次にそのオブジェクトをインスタンス化するときに、その値を取得することができます。  
@@ -31,7 +31,7 @@ ms.locfileid: "33655611"
   
 ### <a name="to-create-the-loan-class"></a>Loan クラスを作成するには  
   
-1.  新しいクラス ライブラリ プロジェクトを作成して、"LoanClass" という名前を付けます。 詳細については、「[ソリューションとプロジェクトの作成](http://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)」を参照してください。  
+1.  新しいクラス ライブラリ プロジェクトを作成して、"LoanClass" という名前を付けます。 詳細については、「[ソリューションとプロジェクトの作成](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)」を参照してください。  
   
 2.  **ソリューション エクスプローラー**で、Class1 ファイルのショートカット メニューを開き、**[名前の変更]** を選択します。 ファイルの名前を `Loan` に変更し、Enter キーを押します。 ファイルの名前を変更すると、クラスの名前も `Loan` に変更されます。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "33655611"
   
 1.  **[ファイル]** メニューで **[追加]**、**[新しいプロジェクト]** の順に選択して、Windows フォーム アプリケーション プロジェクトをソリューションに追加します。  
   
-2.  **新しいプロジェクトの追加** ダイアログ ボックスで、選択**Windows フォーム アプリケーション**、入力と`LoanApp`クリックして、プロジェクトの名前として**ok** ダイアログ ボックスを閉じます。  
+2.  **[新しいプロジェクトの追加]** ダイアログ ボックスで、**[Windows フォーム アプリケーション]** を選択し、プロジェクト名として「`LoanApp`」と入力します。次に、**[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 3.  **ソリューション エクスプローラー** で LoanApp プロジェクトを選択します。  
   
