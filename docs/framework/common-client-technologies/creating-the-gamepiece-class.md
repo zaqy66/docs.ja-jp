@@ -2,12 +2,12 @@
 title: GamePiece クラスの作成
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-ms.openlocfilehash: 0939da6eca579bd030bfe18b24d8364fbcc4fc82
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744513"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43395396"
 ---
 # <a name="creating-the-gamepiece-class"></a>GamePiece クラスの作成
 **GamePiece** クラスは、Microsoft XNA ゲーム ピースのイメージの読み込み、ゲーム ピースに関係するマウスの状態の追跡、マウスのキャプチャ、操作と慣性の処理の実行、およびゲーム ピースがビュー ポートの限度に達したときの跳ね返り機能の提供に必要な機能をすべてカプセル化します。  
@@ -25,7 +25,7 @@ ms.locfileid: "32744513"
 ## <a name="class-constructor"></a>クラスのコンストラクター  
  **GamePiece** クラスのコンストラクターは、次のパラメーターを受け入れます。  
   
--   [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) 型。 ここで渡される参照は、プライベート メンバー `spriteBatch` に割り当てられ、ゲーム ピースが自身をレンダリングするときに [SpriteBatch.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) メソッドにアクセスするために使用されます。 さらに、[GraphicsDevice](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) プロパティは、ゲーム ピースに関連付けられた [Texture](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) オブジェクトの作成や、ゲーム ピースがウィンドウの境界に達したことを検知してピースが跳ね返るようにするための、ビュー ポートのサイズの取得にも使用されます。  
+-   [SpriteBatch](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) 型。 ここで渡される参照は、プライベート メンバー `spriteBatch` に割り当てられ、ゲーム ピースが自身をレンダリングするときに [SpriteBatch.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) メソッドにアクセスするために使用されます。 さらに、[GraphicsDevice](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) プロパティは、ゲーム ピースに関連付けられた [Texture](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) オブジェクトの作成や、ゲーム ピースがウィンドウの境界に達したことを検知してピースが跳ね返るようにするための、ビュー ポートのサイズの取得にも使用されます。  
   
 -   ゲーム ピースに使用するイメージのファイル名を指定する文字列。  
   
@@ -78,11 +78,11 @@ ms.locfileid: "32744513"
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
   
- これまでに提示したロジックで、実際に慣性の推定が発生するものはありません。 これは、**ProcessInertia** メソッドで実現されます。 このメソッドは、ゲームの更新ループ ([Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) メソッド) から繰り返し呼び出され、*processInertia* フラグが `true` に設定されていることを確認します。設定されている場合は <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> メソッドを呼び出します。 このメソッドを呼び出すと、推定が発生して、<xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> イベントが発生します。  
+ これまでに提示したロジックで、実際に慣性の推定が発生するものはありません。 これは、**ProcessInertia** メソッドで実現されます。 このメソッドは、ゲームの更新ループ ([Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) メソッド) から繰り返し呼び出され、*processInertia* フラグが `true` に設定されていることを確認します。設定されている場合は <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> メソッドを呼び出します。 このメソッドを呼び出すと、推定が発生して、<xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> イベントが発生します。  
   
  [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
   
- いずれかの描画メソッドのオーバーロードが呼び出されるまで、ゲーム ピースは実際に表示されません。 このメソッドの最初のオーバー ロードは、ゲームの描画ループから繰り返し呼び出されます ([Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) メソッド)。 これにより、現在の位置、回転、およびスケール ファクターでゲーム ピースが表示されます。  
+ いずれかの描画メソッドのオーバーロードが呼び出されるまで、ゲーム ピースは実際に表示されません。 このメソッドの最初のオーバー ロードは、ゲームの描画ループから繰り返し呼び出されます ([Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) メソッド)。 これにより、現在の位置、回転、およびスケール ファクターでゲーム ピースが表示されます。  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   

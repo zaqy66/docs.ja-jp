@@ -3,23 +3,24 @@ title: XML コメントによるコードの文書化
 description: XML ドキュメント コメントを含むコードを文書化し、コンパイル時に XML ドキュメント ファイルを生成する方法を説明します。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1284f179c7debb323ea3bbd302df1f02bf8b31b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c94e98478e71449a3f9cc4bf1f21462e17a371b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218506"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43392497"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML コメントによるコードの文書化
 
-XML 文書化コメントは、ユーザー定義型またはユーザー定義メンバーの定義の上に追加する特殊なコメントです。 このコメントが特殊な理由は、コンパイル時にコンパイラで処理して、XML 文書化ファイルを生成できることです。
+XML 文書化コメントは、ユーザー定義型またはユーザー定義メンバーの定義の上に追加する特殊なコメントです。
+このコメントが特殊な理由は、コンパイル時にコンパイラで処理して、XML 文書化ファイルを生成できることです。
 コンパイラによって生成された XML ファイルは、.NET アセンブリと共に配布できます。これにより、Visual Studio や他の IDE で、IntelliSense を使用して型やメンバーに関する概要情報を表示できます。 さらに、[DocFX](https://dotnet.github.io/docfx/) や [Sandcastle](https://github.com/EWSoftware/SHFB) のようなツールを使用して XML ファイルを実行し、API リファレンスの Web サイトを生成することができます。
 
 XML 文書化コメントは、その他すべてのコメントと同じように、コンパイラによって無視されます。
 
 コンパイル時に XML ファイルを生成するには、次のいずれかを実行します。
 
-- .NET Core を使用してコマンド ラインからアプリケーションを開発している場合は、.csproj プロジェクト ファイルの `<PropertyGroup>` セクションに [DocumentationFile 要素](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) を追加できます。 次の例では、プロジェクト ディレクトリの中に、アセンブリと同じルート ファイル名で XML ファイルが生成されます。
+- .NET Core を使用してコマンド ラインからアプリケーションを開発している場合は、.csproj プロジェクト ファイルの `<PropertyGroup>` セクションに [DocumentationFile 要素](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) を追加できます。 次の例では、プロジェクト ディレクトリの中に、アセンブリと同じルート ファイル名で XML ファイルが生成されます。
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -27,11 +28,11 @@ XML 文書化コメントは、その他すべてのコメントと同じよう�
 
    XML ファイルの名前と正確な絶対パスまたは相対パスを指定することもできます。 次の例では、アプリケーションのデバッグ バージョンと同じディレクトリに XML ファイルが生成されます。
 
-    ```xml
+   ```xml
    <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
    ```
 
-- Visual Studio を使用してアプリケーションを開発する場合は、プロジェクトを右クリックして、**[プロパティ]** を選択します。 プロパティ ダイアログ ボックスで、**[ビルド]** タブをクリックし、**[XML ドキュメント ファイル]** をオンにします。 コンパイラがファイルを書き込む場所を変更することもできます。 
+- Visual Studio を使用してアプリケーションを開発する場合は、プロジェクトを右クリックして、**[プロパティ]** を選択します。 プロパティ ダイアログ ボックスで、**[ビルド]** タブをクリックし、**[XML ドキュメント ファイル]** をオンにします。 コンパイラがファイルを書き込む場所を変更することもできます。
 
 - コマンド ラインから .NET Framework アプリケーションをコンパイルする場合は、コンパイル時に [/doc コンパイラ オプション](language-reference/compiler-options/doc-compiler-option.md)を追加してください。  
 
@@ -121,7 +122,8 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 
 [!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
-`cref` は**必須**属性です。現在のコンパイル環境から使用できる型またはその型のメンバーへの参照を表します。 プロジェクトまたは参照されたアセンブリに定義されている任意の型を指定できます。
+`cref` は**必須**属性です。現在のコンパイル環境から使用できる型またはその型のメンバーへの参照を表します。
+プロジェクトまたは参照されたアセンブリに定義されている任意の型を指定できます。
 
 ### <a name="ltseealsogt"></a>&lt;seealso&gt;
 
@@ -174,7 +176,8 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 [!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
 コードから、クリック可能な相互参照を含む、詳細なドキュメント Web サイトを生成できます。 ただし、別の問題に直面します。コードが読みにくくなります。
-大量の情報を処理する必要があり、このコードを利用する開発者にとって非常に厄介です。 さいわい、これに対処するのに役立つ XML タグがあります。
+大量の情報を処理する必要があり、このコードを利用する開発者にとって非常に厄介です。
+さいわい、これに対処するのに役立つ XML タグがあります。
 
 ### <a name="ltincludegt"></a>&lt;include&gt;
 
@@ -184,11 +187,12 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 
 [!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
 
-上に示した XML では、各メンバーの文書化コメントが、タグの働きを表す名前の付いたタグの内側に直接記述されています。 自分の方法を選択できます。 XML コメントを別のファイルに移動したので、`<include>` タグを使用して、コードがどのように読みやすくなるか見てみましょう。
+上に示した XML では、各メンバーの文書化コメントが、タグの働きを表す名前の付いたタグの内側に直接記述されています。 自分の方法を選択できます。
+XML コメントを別のファイルに移動したので、`<include>` タグを使用して、コードがどのように読みやすくなるか見てみましょう。
 
 [!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
-このようになります。コードは読みやすい状態に戻り、しかも文書化の情報は失われていません。 
+このようになります。コードは読みやすい状態に戻り、しかも文書化の情報は失われていません。
 
 `filename` は、文書化の情報を含む XML ファイルの名前を表す属性です。
 
@@ -217,6 +221,6 @@ Sandcastle などのツールを使用すると、[`<event>`](http://ewsoftware.
 - コンパイラは、ファイルのパスおよびコードの他の部分への参照を含むパラメーターを検証します。
 
 ## <a name="see-also"></a>関連項目
-[XML ドキュメント コメント (C# プログラミング ガイド)](programming-guide/xmldoc/xml-documentation-comments.md)
 
-[ドキュメント コメント用の推奨タグ (C# プログラミング ガイド)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+* [XML ドキュメント コメント (C# プログラミング ガイド)](programming-guide/xmldoc/xml-documentation-comments.md)
+* [ドキュメント コメント用の推奨タグ (C# プログラミング ガイド)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

@@ -3,12 +3,12 @@ title: 内部結合の実行 (C# での LINQ)
 description: C# で LINQ を使用して、内部結合を実行する方法について説明します。
 ms.date: 12/1/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
-ms.openlocfilehash: 5dedab3fe83d4c16f8f0879f564cdd39e2b2446c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2f6aad30dc8278ce1bb88bacc19b27deaa0288c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404201"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484171"
 ---
 # <a name="perform-inner-joins"></a>内部結合の実行
 
@@ -66,8 +66,8 @@ C# の 2 番目の `join` 句では、`Person` 型の `Owner` プロパティと
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.Linq.Enumerable.Join%2A>  
-<xref:System.Linq.Enumerable.GroupJoin%2A>  
-[グループ化結合の実行](perform-grouped-joins.md)  
-[左外部結合の実行](perform-left-outer-joins.md)  
-[匿名型](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>  
+- <xref:System.Linq.Enumerable.GroupJoin%2A>  
+- [グループ化結合の実行](perform-grouped-joins.md)  
+- [左外部結合の実行](perform-left-outer-joins.md)  
+- [匿名型](../programming-guide/classes-and-structs/anonymous-types.md)  

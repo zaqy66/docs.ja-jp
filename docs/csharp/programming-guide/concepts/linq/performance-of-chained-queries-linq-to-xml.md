@@ -2,12 +2,12 @@
 title: 連結クエリのパフォーマンス (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: dca2fa37a18209c5970172cb084151a58ea4ebc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e0b2ec0b73afe10e21c83499c1a3a52c923f591
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336366"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43466931"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>連結クエリのパフォーマンス (LINQ to XML) (C#)
 LINQ (および LINQ to XML) の重要な利点の 1 つは、連結クエリが、大きい複雑な単一クエリと同様のパフォーマンスを発揮できるという点です。  
@@ -54,7 +54,7 @@ foreach (var i in query2)
   
  反復子の詳細については、「[yield](../../../../csharp/language-reference/keywords/yield.md)」を参照してください。  
   
- クエリの連結に関する詳細なチュートリアルについては、「[チュートリアル: クエリの連結](http://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c)」を参照してください。  
+ クエリの連結に関する詳細なチュートリアルについては、「[チュートリアル: クエリの連結](https://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [パフォーマンス (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

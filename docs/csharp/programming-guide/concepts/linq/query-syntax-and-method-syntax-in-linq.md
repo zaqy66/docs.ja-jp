@@ -6,11 +6,11 @@ helpviewer_keywords:
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
 ms.openlocfilehash: 6b943da442d2ec1210911cb9f4b6a0d56c7216d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336353"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465886"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ でのクエリ構文とメソッド構文 (C#)
 統合言語クエリ ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) の入門的なドキュメントでは、ほとんどのクエリが、LINQ の宣言型クエリ構文を使用して記述されています。 ただし、クエリ構文は、コードのコンパイル時に、.NET 共通言語ランタイム (CLR) 用のメソッド呼び出しに変換する必要があります。 これらのメソッド呼び出しが、標準クエリ演算子 (`Where`、`Select`、`GroupBy`、`Join`、`Max`、`Average` など) を呼び出します。 これらは、クエリ構文ではなくメソッド構文を使用して直接呼び出すことができます。  

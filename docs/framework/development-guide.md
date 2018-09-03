@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ee74c0f2ae316c7dd36dd943dc5c8636ee53fb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c42311368bf94a2629f656b61b09cb7c2c5f68b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391099"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387990"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework の開発ガイド
 ここでは、.NET Framework アプリの作成、構成、デバッグ、保護、および配置を行う方法について説明します。 また、動的プログラミング、相互運用性、拡張性、メモリ管理、スレッド処理などの技術領域に関する情報も提供します。  
@@ -39,16 +39,16 @@ ms.locfileid: "33391099"
  Visual Studio および .NET Framework を使用して、サービスとしてインストールされるアプリを作成し、その動作を開始、停止、制御する方法について説明します。  
   
  [.NET での並列処理、同時実行、および非同期プログラミング](../../docs/standard/parallel-processing-and-concurrency.md)  
- マネージ スレッド処理、並列プログラミング、および非同期プログラミングのデザイン パターンについて説明します。  
+ マネージド スレッド処理、並列プログラミング、および非同期プログラミングのデザイン パターンについて説明します。  
   
  [.NET Framework のネットワーク プログラミング](../../docs/framework/network-programming/index.md)  
- アプリにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージ実装について説明します。  
+ アプリにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージド実装について説明します。  
   
  [.NET Framework アプリの構成](configure-apps/index.md)    
  構成ファイルを使用して、.NET Framework アプリを再コンパイルすることなく設定を変更する方法を説明します。  
   
  [.NET ネイティブによるアプリのコンパイル](../../docs/framework/net-native/index.md)  
- [!INCLUDE[net_native](../../includes/net-native-md.md)] プリコンパイル テクノロジを使用して、Windows ストア アプリをビルドおよび配置する方法について説明します。 [!INCLUDE[net_native](../../includes/net-native-md.md)] は、マネージ コード (C#) で記述され、.NET Framework を対象とするアプリをネイティブ コードにコンパイルします。  
+ [!INCLUDE[net_native](../../includes/net-native-md.md)] プリコンパイル テクノロジを使用して、Windows ストア アプリをビルドおよび配置する方法について説明します。 [!INCLUDE[net_native](../../includes/net-native-md.md)] は、マネージド コード (C#) で記述され、.NET Framework を対象とするアプリをネイティブ コードにコンパイルします。  
   
  [セキュリティ](../../docs/standard/security/index.md)  
  .NET Framework において安全なアプリの開発を促進するクラスおよびサービスに関する情報を示します。  
@@ -65,7 +65,7 @@ ms.locfileid: "33391099"
  [パフォーマンス](../../docs/framework/performance/index.md)  
  キャッシュ、遅延初期化、信頼性、および ETW イベントについて説明します。  
   
- <!--zz [Advanced Reading for the .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
+ <!--zz [Advanced Reading for the .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
 ## <a name="reference"></a>参照  
@@ -82,5 +82,5 @@ ms.locfileid: "33391099"
  [ツール](../../docs/framework/tools/index.md)  
  .NET Framework テクノロジを使ってアプリを開発、構成、配置するのに役立つツールについて説明します。  
   
- [.NET Framework のサンプル](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
+ [.NET Framework のサンプル](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  .NET Framework のテクノロジを紹介するサンプル アプリを参照できる MSDN コード サンプル ギャラリーへのリンクです。

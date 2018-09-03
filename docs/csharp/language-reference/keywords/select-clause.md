@@ -8,11 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 6e7277b5d714e48059fe1ed7e8b85e46a14a840c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcab29cdbe98b5e49463d9a2781d43d4b9ee9544
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467342"
 ---
 # <a name="select-clause-c-reference"></a>select 句 (C# リファレンス)
 クエリ式で、`select` 句は、クエリが実行されたときに生成される値の型を指定します。 結果は、以前のすべての句の評価と `select` 句自体の式に基づいています。 クエリ式は、`select` 句または [group](../../../csharp/language-reference/keywords/group-clause.md) 句のいずれかで終了する必要があります。  
@@ -33,11 +34,12 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>コメント  
  コンパイル時に、`select` 句は、<xref:System.Linq.Enumerable.Select%2A> 標準クエリ演算子へのメソッドの呼び出しに変換されます。  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [クエリ キーワード (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [from 句](../../../csharp/language-reference/keywords/from-clause.md)  
- [partial (メソッド) (C# リファレンス)](../../../csharp/language-reference/keywords/partial-method.md)  
- [匿名型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [クエリ キーワード (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [from 句](../../../csharp/language-reference/keywords/from-clause.md)  
+- [partial (メソッド) (C# リファレンス)](../../../csharp/language-reference/keywords/partial-method.md)  
+- [匿名型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

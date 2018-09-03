@@ -4,11 +4,11 @@ description: C# の文字列補間を使用した結果文字列に書式設定�
 author: pkulikov
 ms.date: 05/09/2018
 ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058940"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43419100"
 ---
 # <a name="string-interpolation-in-c"></a>C# における文字列補間 #
 

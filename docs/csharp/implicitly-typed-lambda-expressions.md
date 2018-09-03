@@ -3,12 +3,12 @@ title: 暗黙的に型指定されるラムダ式
 description: 暗黙的に型指定される変数宣言を使用してラムダ式を宣言することはできない理由を説明します。
 ms.date: 06/20/2016
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.openlocfilehash: f06c55f51c30c941d6d507ac8e2edd95c5152742
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a6b52ba49ea39c0cb37e72b0ad40e18986c9be0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211824"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43401501"
 ---
 # <a name="implicitly-typed-lambda-expressions"></a>暗黙的に型指定されるラムダ式
 
@@ -17,6 +17,6 @@ ms.locfileid: "33211824"
 
 代入の左右どちらの側でも、代入演算子の反対側の辺のオブジェクトを調べて型が一致するかどうかを判断するようコンパイラに指示することはできません。
 
-C# 言語でこの動作が指定されている理由については、[この記事](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf)を参照してください (PDF ダウンロード)。
+C# 言語でこの動作が指定されている理由については、[この記事](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf)を参照してください (PDF ダウンロード)。
 
 

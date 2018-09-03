@@ -4,18 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-ms.openlocfilehash: 92eb7a79c0e7522d1474537aeefbfdb083a11dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d334459b0d530ec37925c98abfd061c04ce1290
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332040"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485652"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>方法 : ポインターを使用して配列要素にアクセスする (C# プログラミング ガイド)
 安全ではないコンテキストでは、次の例のように、ポインターを利用してメモリ内の要素にアクセスできます。  
   
-```  
- char* charPointer = stackalloc char[123];  
+```csharp  
+char* charPointer = stackalloc char[123];  
 for (int i = 65; i < 123; i++)  
 {  
     charPointer[i] = (char)i; //access array elements  

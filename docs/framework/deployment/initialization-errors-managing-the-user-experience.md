@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe59075f04443ba40c209b6cda5a5071d16c79e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392149"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43394742"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初期化エラー: ユーザー エクスペリエンスの管理
-共通言語ランタイムの (CLR) のアクティベーション システムでは、マネージ アプリケーション コードの実行に使用する CLR のバージョンを特定します。 アクティベーション システムで、読み込む CLR のバージョンを検出できない場合もあります。 通常、この状況は、特定のコンピューターで無効になっているかインストールされていない CLR バージョンがアプリケーションで必要な場合に発生します。 要求されたバージョンが見つからない場合、CLR アクティベーション システムは、呼び出された関数またはインターフェイスから HRESULT エラー コードを返します。また、アプリケーションを実行しているユーザーにはエラー メッセージが表示されることがあります。 ここでは、HRESULT コードの一覧を示し、エラー メッセージが表示されないようにする方法について説明します。  
+共通言語ランタイムの (CLR) のアクティベーション システムでは、マネージド アプリケーション コードの実行に使用する CLR のバージョンを特定します。 アクティベーション システムで、読み込む CLR のバージョンを検出できない場合もあります。 通常、この状況は、特定のコンピューターで無効になっているかインストールされていない CLR バージョンがアプリケーションで必要な場合に発生します。 要求されたバージョンが見つからない場合、CLR アクティベーション システムは、呼び出された関数またはインターフェイスから HRESULT エラー コードを返します。また、アプリケーションを実行しているユーザーにはエラー メッセージが表示されることがあります。 ここでは、HRESULT コードの一覧を示し、エラー メッセージが表示されないようにする方法について説明します。  
   
  CLR には、「[方法: CLR のアクティブ化に関する問題をデバッグする](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)」で説明されているように、CLR のアクティベーションに関する問題のデバッグに役立つログ インフラストラクチャが用意されています。 このインフラストラクチャと[アセンブリ バインド ログ](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)は完全に異なりますので混同しないでください。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33392149"
   
  [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) メソッドは、入力として [METAHOST_POLICY_FLAGS](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 列挙型のメンバーを受け取ります。 METAHOST_POLICY_SHOW_ERROR_DIALOG フラグを含めると、CLR の要求されたバージョンが見つからない場合にエラー メッセージを要求することができます。 既定では、エラー メッセージは表示されません  ([ICLRMetaHost::GetRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) メソッドは、このフラグを受け取らず、エラー メッセージを表示する他の方法を提供しません)。  
   
- Windows には、プロセス内で実行するコードの結果としてエラー メッセージを表示するかどうかを宣言する際に使用できる [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242) 関数が用意されています。 SEM_FAILCRITICALERRORS フラグを指定すると、エラー メッセージが表示されないようにすることができます。  
+ Windows には、プロセス内で実行するコードの結果としてエラー メッセージを表示するかどうかを宣言する際に使用できる [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242) 関数が用意されています。 SEM_FAILCRITICALERRORS フラグを指定すると、エラー メッセージが表示されないようにすることができます。  
   
  ただし、一部のシナリオでは、アプリケーション プロセスで設定された SEM_FAILCRITICALERRORS の設定をオーバーライドすることが重要です。 たとえば、CLR をホストし、SEM_FAILCRITICALERRORS が設定されているプロセスでホストされるネイティブの COM コンポーネントがある場合、その特定のアプリケーション プロセス内でエラー メッセージを表示する影響に応じて、フラグをオーバーライドできます。 この場合、次のいずれかのフラグを使用して、SEM_FAILCRITICALERRORS をオーバーライドできます。  
   
@@ -68,8 +68,8 @@ ms.locfileid: "33392149"
   
 |CLR ホスト|説明|エラー メッセージ ポリシー|エラー メッセージを無効にできるか|  
 |--------------|-----------------|--------------------------|------------------------------------|  
-|マネージ EXE ホスト|マネージ EXE を起動します。|.NET Framework のバージョンが見つからない場合に表示される|×|  
-|マネージ COM ホスト|マネージ COM コンポーネントをプロセスに読み込みます。|.NET Framework のバージョンが見つからない場合に表示される|はい (SEM_FAILCRITICALERRORS フラグを設定すると可能)|  
+|マネージド EXE ホスト|マネージド EXE を起動します。|.NET Framework のバージョンが見つからない場合に表示される|×|  
+|マネージド COM ホスト|マネージド COM コンポーネントをプロセスに読み込みます。|.NET Framework のバージョンが見つからない場合に表示される|はい (SEM_FAILCRITICALERRORS フラグを設定すると可能)|  
 |ClickOnce ホスト|ClickOnce アプリケーションを起動します。|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降で、.NET Framework のバージョンが見つからない場合に表示される|×|  
 |XBAP ホスト|WPF XBAP アプリケーションを起動します。|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降で、.NET Framework のバージョンが見つからない場合に表示される|×|  
   

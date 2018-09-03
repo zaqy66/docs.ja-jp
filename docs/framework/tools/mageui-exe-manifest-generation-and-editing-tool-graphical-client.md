@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 0772fcb32ce4d7500b358db312241e489b3a24c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb93e53e7b77ee2747bce3fb9a45d7061450e65c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404954"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390261"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)
 MageUI.exe でサポートされている機能は、コマンド ライン ツール Mage.exe の機能と同じですが、MageUI.exe には、Windows ベースのユーザー インターフェイス (UI) があります。 このツールを使用すると、配置マニフェストおよびアプリケーション マニフェストを作成および編集でき、これらのマニフェストに署名することができます。 MageUI.exe で作成される新しいマニフェストは、[!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] を対象とします。 以前のバージョンの .NET Framework を対象にするには、以前のバージョンの MageUI.exe を使用する必要があります。 マニフェストに対してアセンブリの追加または削除を実行しても、既存のマニフェストに再署名しても、MageUI.exe は [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] を対象にするようにマニフェストを更新しません。 詳しくは、「[Mage.exe (マニフェストの生成および編集ツール)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)」をご覧ください。  
@@ -65,7 +65,7 @@ MageUI.exe でサポートされている機能は、コマンド ライン ツ�
 |**新規**|証明機関 (CA: Certificate Authority) によって証明できない、.pfx ファイルを新規作成します。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] の配置に署名するために使用する証明書の種類の詳細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」を参照してください。|  
 |**パスワード**|この証明書で署名するために使用するパスワードの入力欄です。 該当しない場合は、空白にできます。|  
 |**保存された証明書で署名する**|使用しているコンピューターの証明書ストアに格納されている、選択可能なデジタル署名が一覧表示されます。|  
-|**タイムスタンプ URI**|デジタル タイムスタンプ サービスの URI (Uniform Resource Locator) が表示されます。 次のバージョンのアプリケーションを配置する前にデジタル証明書の有効期限が切れる場合、マニフェストにタイムスタンプを設定すると、マニフェストに再署名する必要がなくなります。 詳細については、[Windows ルート証明書プログラムのメンバー](http://go.microsoft.com/fwlink/?LinkId=159000)に関するページと「[ClickOnce and Authenticode](/visualstudio/deployment/clickonce-and-authenticode)」 (ClickOnce と Authenticode)を参照してください。|  
+|**タイムスタンプ URI**|デジタル タイムスタンプ サービスの URI (Uniform Resource Locator) が表示されます。 次のバージョンのアプリケーションを配置する前にデジタル証明書の有効期限が切れる場合、マニフェストにタイムスタンプを設定すると、マニフェストに再署名する必要がなくなります。 詳細については、[Windows ルート証明書プログラムのメンバー](https://go.microsoft.com/fwlink/?LinkId=159000)に関するページと「[ClickOnce and Authenticode](/visualstudio/deployment/clickonce-and-authenticode)」 (ClickOnce と Authenticode)を参照してください。|  
 |**署名しない**|デジタル証明書から署名を追加せずにマニフェストを保存できます。|  
   
 ## <a name="tab-and-panel-descriptions"></a>タブおよびパネルの説明  
@@ -91,7 +91,7 @@ MageUI.exe でサポートされている機能は、コマンド ライン ツ�
 |----------------|-----------------|  
 |**Name**|必須。 アプリケーション マニフェストの名前です。 通常、ファイル名と同じです。|  
 |**Version**|必須。 *N.N.N.N* という形式の配置バージョン番号です。 先頭のメジャー ビルド番号だけが必須です。 たとえば、アプリケーションのバージョンが 1.0 の場合、有効な値は、`1``1.0`、`1.0.0`、および `1.0.0.0` です。|  
-|**プロセッサ**|任意。 この配置を実行できるコンピューターのアーキテクチャです。 既定値は `msil` (Microsoft Intermediate Language) です。これは、すべてのマネージ アセンブリでの既定の形式です。 アプリケーションのアセンブリを特定のアーキテクチャ用にプリコンパイルした場合は、このフィールドを変更します。 プリコンパイルの詳細については、「[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)」を参照してください。|  
+|**プロセッサ**|任意。 この配置を実行できるコンピューターのアーキテクチャです。 既定値は `msil` (Microsoft Intermediate Language) です。これは、すべてのマネージド アセンブリでの既定の形式です。 アプリケーションのアセンブリを特定のアーキテクチャ用にプリコンパイルした場合は、このフィールドを変更します。 プリコンパイルの詳細については、「[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)」を参照してください。|  
 |**カルチャ**|任意。 このアプリケーションが実行される国/地域を、2 つの部分で構成される ISO のコードで指定します。 既定値は、`neutral` です。|  
 |**公開キー トークン**|省略可能です。 このアプリケーション マニフェストが署名されたときの公開キーです。 新しいマニフェストまたは未署名のマニフェストでは、このフィールドに [`Unsigned`] と表示されます。|  
   
@@ -127,7 +127,7 @@ MageUI.exe でサポートされている機能は、コマンド ライン ツ�
   
 |UI 要素|説明|  
 |----------------|-----------------|  
-|**アクセス許可セットの種類**|‏このアプリケーションをクライアントで実行するために必要な、最小のアクセス許可セットです。 これらのアクセス許可セットおよび必要なアクセス許可については、「[NIB: 名前付きアクセス許可セット](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)」を参照してください。|  
+|**アクセス許可セットの種類**|‏このアプリケーションをクライアントで実行するために必要な、最小のアクセス許可セットです。 これらのアクセス許可セットおよび必要なアクセス許可については、「[NIB: 名前付きアクセス許可セット](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)」を参照してください。|  
 |**詳細**|アクセス許可セットを表すために作成された、アプリケーション マニフェスト用の XML です。 アプリケーション マニフェストの XML 形式に精通している場合を除き、この XML を手動で編集しないでください。 詳細については、「[ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)」を参照してください。|  
   
 ### <a name="deployment-manifest-tab"></a>[配置マニフェスト] タブ  
@@ -148,7 +148,7 @@ MageUI.exe でサポートされている機能は、コマンド ライン ツ�
 |----------------|-----------------|  
 |**Name**|必須。 配置マニフェストの名前です。 通常、ファイル名と同じです。|  
 |**Version**|必須。 *N.N.N.N* という形式の配置バージョン番号です。 先頭のメジャー ビルド番号だけが必須です。 たとえば、アプリケーションのバージョンが 1.0 の場合、有効な値は、`1``1.0`、`1.0.0`、および `1.0.0.0` です。|  
-|**プロセッサ**|任意。 この配置を実行できるコンピューターのアーキテクチャです。 既定値は `msil` (Microsoft Intermediate Language) です。これは、すべてのマネージ アセンブリの既定の形式です。 アプリケーションのアセンブリを特定のアーキテクチャ用にコンパイルした場合は、このフィールドを変更します。|  
+|**プロセッサ**|任意。 この配置を実行できるコンピューターのアーキテクチャです。 既定値は `msil` (Microsoft Intermediate Language) です。これは、すべてのマネージド アセンブリの既定の形式です。 アプリケーションのアセンブリを特定のアーキテクチャ用にコンパイルした場合は、このフィールドを変更します。|  
 |**カルチャ**|任意。 このアプリケーションの実行環境となる、ISO の国/地域コードです。2 つの部分で構成されています。 既定値は、`neutral` です。|  
 |**公開キー トークン**|任意。 この配置マニフェストが署名されたときの公開キーです。 新しいマニフェストまたは未署名のマニフェストでは、このフィールドに [`Unsigned`] と表示されます。|  
   

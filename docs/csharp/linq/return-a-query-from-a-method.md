@@ -3,12 +3,12 @@ title: メソッドからクエリを返す
 description: クエリを返す方法。
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 13f0839f712cb76b34c98157a30315787d300109
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 1c5fa534f3f39f8201d93b986e687d85bb303736
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404159"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473945"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>方法 : メソッドからクエリを返す (C# プログラミング ガイド)
 この例では、メソッドから、クエリを戻り値として返す方法と `out` パラメーターとして返す方法を示します。  
@@ -20,5 +20,6 @@ ms.locfileid: "37404159"
   
  [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
-## <a name="see-also"></a>参照  
- [統合言語クエリ (LINQ)](index.md)
+## <a name="see-also"></a>参照
+
+- [統合言語クエリ (LINQ)](index.md)

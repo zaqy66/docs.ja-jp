@@ -2,12 +2,12 @@
 title: オブジェクト指向プログラミング (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 0dee6edf966e8e2a3e430e60f1c3d51354d08bf3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6194cb93b10d5b9f5d25fc42cff6c071627d411
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340594"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43415489"
 ---
 # <a name="object-oriented-programming-c"></a>オブジェクト指向プログラミング (C#)
 C# は、カプセル化、継承、ポリモーフィズムなど、オブジェクト指向プログラミングを完全にサポートします。  
@@ -185,7 +185,7 @@ public class SampleClass
  「[コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)」。  
   
 ####  <a name="Finalizers"></a> ファイナライザー  
- ファイナライザーは、クラスのインスタンスを破棄するために使います。 .NET Framework では、アプリケーション内のマネージ オブジェクトのメモリの割り当てと解放は、ガベージ コレクターによって自動的に管理されます。 ただし、アプリケーションで作成されるアンマネージ リソースを適切にクリーンアップするために、ファイナライザーも必要になることがあります。 1 つのクラスに定義できるファイナライザーは 1 つだけです。  
+ ファイナライザーは、クラスのインスタンスを破棄するために使います。 .NET Framework では、アプリケーション内のマネージド オブジェクトのメモリの割り当てと解放は、ガベージ コレクターによって自動的に管理されます。 ただし、アプリケーションで作成されるアンマネージ リソースを適切にクリーンアップするために、ファイナライザーも必要になることがあります。 1 つのクラスに定義できるファイナライザーは 1 つだけです。  
   
  .NET Framework のファイナライザーおよびガベージ コレクションについて詳しくは、「[ガベージ コレクション](../../../standard/garbage-collection/index.md)」をご覧ください。  
   
@@ -307,7 +307,7 @@ var sampleObject =
  基底クラスを継承するコード例を次に示します。  
   
 ```csharp  
-class DerivedClass:BaseClass{}  
+class DerivedClass:BaseClass {}  
 ```  
   
  既定では、すべてのクラスが継承可能になります。 ただし、クラスを基底クラスとして使用できないように指定したり、基底クラスとしてのみ使用できるクラスを作成したりできます。  

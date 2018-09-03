@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: ad8127bfdd7178051077e6f3fe75c777acf5d345
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9986a91b18c536773f4ca20b71c54588c3e95f32
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321949"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476132"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>オブジェクト初期化子とコレクション初期化子 (C# プログラミング ガイド)
 オブジェクト初期化子を使用すると、オブジェクトの作成時にアクセスできるフィールドまたはプロパティに、コンストラクターを呼び出して代入ステートメントを使用しなくても、値を割り当てることができます。 オブジェクト初期化子の構文では、コンストラクターの引数を指定することも、引数 (およびかっこ構文) を省略することもできます。  以下の例では、名前付きの型である `Cat` でオブジェクト初期化子を使用する方法と、既定のコンストラクターを呼び出す方法を示します。 `Cat` クラス内で自動実装プロパティが使用されています。 詳細については、「[自動実装プロパティ](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)」を参照してください。  
@@ -43,9 +43,6 @@ foreach(var p in productInfos){...}
 ```csharp
 select new {p.ProductName, Price = p.UnitPrice};  
 ```  
-  
-## <a name="object-initializers-with-nullable-types"></a>オブジェクト初期化子と Null 許容型  
- オブジェクト初期化子を null 許容構造体と共に使用すると、コンパイル時にエラーになります。  
   
 ## <a name="collection-initializers"></a>コレクション初期化子  
  コレクション初期化子を使うと、<xref:System.Collections.IEnumerable> を実装するコレクション型を初期化するときに 1 つ以上の要素の初期化子を指定でき、適切なシグネチャの `Add` をインスタンス メソッドまたは拡張メソッドとして使用できます。 要素の初期化子は、単純な値、式またはオブジェクト初期化子です。 コレクション初期化子を使用すると、ソース コード内でクラスの `Add` メソッドの呼び出しを複数回指定する必要がなくなります。コンパイラによって呼び出しが追加されるためです。  

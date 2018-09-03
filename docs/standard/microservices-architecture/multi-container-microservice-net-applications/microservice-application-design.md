@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーション向けの 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6cbe4512c8ed89540599d1257046bd080b464165
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4adf7e759d4475d0bb9b3aa0abe8dbdc5e57edd3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105960"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470117"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>マイクロサービス指向アプリケーションの設計
 
@@ -63,7 +63,7 @@ ms.locfileid: "37105960"
 
 ### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: .NET Core とコンテナーを使用して配置されるマイクロサービス用のリファレンス アプリケーション
 
-知識を持っていない可能性がある仮想ビジネス ドメインを検討する代わりに、アーキテクチャとテクノロジにフォーカスできるようにするために、既知のビジネス ドメインが選択されています。具体的には、製品カタログの提示、顧客からの注文の受け取り、在庫の確認、およびその他のビジネス機能を実行する単純化された eコマース (eショップ) アプリケーションです。 このコンテナー ベースのアプリケーションのソース コードは、[eShopOnContainers](http://aka.ms/MicroservicesArchitecture) GitHub リポジトリから入手できます。
+知識を持っていない可能性がある仮想ビジネス ドメインを検討する代わりに、アーキテクチャとテクノロジにフォーカスできるようにするために、既知のビジネス ドメインが選択されています。具体的には、製品カタログの提示、顧客からの注文の受け取り、在庫の確認、およびその他のビジネス機能を実行する単純化された eコマース (eショップ) アプリケーションです。 このコンテナー ベースのアプリケーションのソース コードは、[eShopOnContainers](https://aka.ms/MicroservicesArchitecture) GitHub リポジトリから入手できます。
 
 アプリケーションは、さまざまなストアの UI フロント エンド (Web アプリケーションとネイティブ モバイル アプリ) と、サーバー側で必要なすべての操作用のバックエンド マイクロサービスとコンテナーを含む複数のサブシステムで構成されます。 図 8-1 は、リファレンス アプリケーションのアーキテクチャを示しています。
 
@@ -79,7 +79,7 @@ ms.locfileid: "37105960"
 
 -   イベント ベースの非同期通信。 これは、マイクロサービス間で更新を伝達するか、外部アプリケーションと統合するために、イベント バス経由で発生します。 イベント バスは、RabbitMQ などのメッセージング ブローカー インフラストラクチャ テクノロジを使用するか、Azure Service Bus、NServiceBus、MassTransit、Brighter などの上位レベルのサービス バスを使用して実装できます。
 
-アプリケーションは、コンテナーの形の一連のマイクロサービスとして配置されます。 クライアント アプリは、マイクロサービス間の通信と同じようにこれらのコンテナーと通信できます。 前述のように、この初期アーキテクチャでは、クライアントからマイクロサービスへの直接的な通信を行うアーキテクチャを使用しています。これは、クライアント アプリケーションが各マイクロサービスに直接的に要求できることを意味します。 各マイクロサービスには、https://servicename.applicationname.companyname などのパブリック エンドポイントがあります。 必要であれば、各マイクロサービスは、別の TCP ポートを使用できます。 実稼働環境では、その URL はマイクロサービスのロード バランサーにマップされ、要求は使用可能なマイクロサービス インスタンス間に分散されます。
+アプリケーションは、コンテナーの形の一連のマイクロサービスとして配置されます。 クライアント アプリは、マイクロサービス間の通信と同じようにこれらのコンテナーと通信できます。 前述のように、この初期アーキテクチャでは、クライアントからマイクロサービスへの直接的な通信を行うアーキテクチャを使用しています。これは、クライアント アプリケーションが各マイクロサービスに直接的に要求できることを意味します。 各マイクロサービスには、 https://servicename.applicationname.companyname などのパブリック エンドポイントがあります。 必要であれば、各マイクロサービスは、別の TCP ポートを使用できます。 実稼働環境では、その URL はマイクロサービスのロード バランサーにマップされ、要求は使用可能なマイクロサービス インスタンス間に分散されます。
 
 **eShopOnContainers での API ゲーウェイと 直接的な通信に関する重要なメモ** このガイドのアーキテクチャのセクションで説明したように、クライアントからマイクロサービスへの直接的な通信を行うアーキテクチャは、大規模で複雑なマイクロサービス ベースのアプリケーションを作成する場合は難点がある可能性があります。 ただし、eShopOnContainers などの小規模のアプリケーションでは十分に有用です。目的は、Docker コンテナー ベースのアプリケーションの開発を簡単に開始することであり、マイクロサービスの開発の自律性に影響を与える可能性がある、単一のモノリシック API ゲートウェイは開発しません。
 
@@ -171,7 +171,7 @@ ms.locfileid: "37105960"
 
 -   [ドメイン駆動設計の N レイヤー](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/)。
 
--   [クリーン アーキテクチャ](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)([eShopOnWeb](http://aka.ms/WebAppArchitecture)で使用されています)
+-   [クリーン アーキテクチャ](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)([eShopOnWeb](https://aka.ms/WebAppArchitecture)で使用されています)
 
 -   [コマンド クエリ責務分離](https://martinfowler.com/bliki/CQRS.html) (CQRS)。
 

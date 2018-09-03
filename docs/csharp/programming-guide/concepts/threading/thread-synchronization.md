@@ -2,11 +2,12 @@
 title: スレッドの同期 (C#)
 ms.date: 07/20/2015
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-ms.openlocfilehash: 138b94ef8ae5fc54e42277127f9b22f88803457f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ed6cad647c965882a63282ce32c998cec138eec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463157"
 ---
 # <a name="thread-synchronization-c"></a>スレッドの同期 (C#)
 次のセクションでは、マルチスレッド アプリケーションでリソースへのアクセスを同期するために使用できる機能とクラスについて説明します。  
@@ -19,11 +20,11 @@ ms.lasthandoff: 05/04/2018
   
  マルチスレッド プログラミングの背景情報については、以下を参照してください。  
   
--   [マネージ スレッド処理の基本](../../../../standard/threading/managed-threading-basics.md)  
+-   [マネージド スレッド処理の基本](../../../../standard/threading/managed-threading-basics.md)  
   
 -   [スレッドの使用とスレッド処理](../../../../standard/threading/using-threads-and-threading.md)  
   
--   [マネージ スレッド処理の実施](../../../../standard/threading/managed-threading-best-practices.md)  
+-   [マネージド スレッド処理の実施](../../../../standard/threading/managed-threading-best-practices.md)  
   
 ## <a name="the-lock-keyword"></a>lock キーワード  
  C# `lock` ステートメントを使用すると、他のスレッドからの割り込みを受けることなくコード ブロックを確実に最後まで実行できます。 これは、コード ブロックの実行中に、特定のオブジェクトに対して同時に使用できないロックを取得することで実現されます。  
@@ -159,7 +160,6 @@ class ThreadingExample
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [マルチスレッド アプリケーション (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [lock ステートメント](../../../../csharp/language-reference/keywords/lock-statement.md)  
  [ミューテックス](../../../../standard/threading/mutexes.md)  
  [インタロックされた操作](../../../../standard/threading/interlocked-operations.md)  

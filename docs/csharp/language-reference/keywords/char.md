@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: ea465e240a1d74b3f473316ca63b05bd0ba90777
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 95ecfaaf1397f7a4598faba6528b38170062145a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028033"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463222"
 ---
 # <a name="char-c-reference"></a>char (C# リファレンス)
 
@@ -42,13 +42,13 @@ ms.locfileid: "37028033"
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.Char>  
-[C# リファレンス](../../../csharp/language-reference/index.md)  
-[C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-[C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-[整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-[Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)  
-[文字列](../../../csharp/programming-guide/strings/index.md)
+- <xref:System.Char>  
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
+- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)  
+- [文字列](../../../csharp/programming-guide/strings/index.md)

@@ -5,12 +5,12 @@ description: Windows 8 に .NET Framework をインストールする方法に�
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: f912013773759c6c8f52734f74bdca867f60e7a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1edc928318ec56853df06c1382465e24d9604c9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386910"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43416455"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Windows 8 と Windows Server 2012 に .NET Framework をインストールする
 
@@ -18,7 +18,7 @@ ms.locfileid: "33386910"
 
 ![このアプリケーションを開始できませんでした。](./media/this-application-could-not-be-started.png)
 
-これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 Windows Server 2012 ではサポートされていますが、Windows 8 ではサポートされていません。 [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に付属しています。
+これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 Windows Server 2012 ではサポートされていますが、Windows 8 ではサポートされていません。 [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に付属しています。
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
@@ -27,7 +27,7 @@ ms.locfileid: "33386910"
 
 .NET Framework 4.7.2 は Windows Server 2012 でサポートされています。 Windows 8 ではサポートされていません。
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) は、.NET Framework 4.0 以降用に構築されたアプリケーションを実行するために使用できます。
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) は、.NET Framework 4.0 以降用に構築されたアプリケーションを実行するために使用できます。
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 

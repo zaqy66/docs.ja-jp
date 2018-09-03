@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: c6c2bae39764e78fad2510bbc8937b0ac790bef5
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 91020886e381d8410358cae9511107e28c51452a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172007"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464909"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>暗黙的に型指定されるローカル変数 (C# プログラミング ガイド)
 ローカル変数は、明示的な型を指定しないで宣言できます。 `var` キーワードは、初期化ステートメントの右辺にある式から変数の型を推論するようにコンパイラに指示します。 推論される型は、組み込み型、匿名型、ユーザー定義型、または .NET Framework クラス ライブラリで定義されている型である可能性があります。 `var` で配列を初期化する方法の詳細については、「[暗黙的に型指定される配列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)」を参照してください。  
@@ -81,7 +81,7 @@ ms.locfileid: "34172007"
  [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
  [var](../../../csharp/language-reference/keywords/var.md)  
  [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [統合言語クエリ (LINQ)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [統合言語クエリ (LINQ)](../../../csharp/linq/index.md)  
  [for](../../../csharp/language-reference/keywords/for.md)  
  [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)  
  [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)

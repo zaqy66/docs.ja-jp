@@ -7,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: ddea59e76835ccccd07c299f819796336cddada8
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7931da2e5f5c493b54eb1f33a1d6f57b38592f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172150"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399019"
 ---
 # <a name="struct-c-reference"></a>struct (C# リファレンス)
 `struct` 型は、通常、関連する変数 (四角形の座標やインベントリ内の項目の特性など) の小さなグループをカプセル化するのに使用される値型です。 次の例に単純な構造体の宣言を示します。  
@@ -41,14 +41,15 @@ public struct Book
 ## <a name="c-language-specification"></a>C# 言語仕様  
  例については、「[構造体の使用](../../../csharp/programming-guide/classes-and-structs/using-structs.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
- [既定値の一覧表](../../../csharp/language-reference/keywords/default-values-table.md)  
- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [型](../../../csharp/language-reference/keywords/types.md)  
- [値型](../../../csharp/language-reference/keywords/value-types.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [interface](../../../csharp/language-reference/keywords/interface.md)  
- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
+- [既定値の一覧表](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [型](../../../csharp/language-reference/keywords/types.md)  
+- [値型](../../../csharp/language-reference/keywords/value-types.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [interface](../../../csharp/language-reference/keywords/interface.md)  
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)

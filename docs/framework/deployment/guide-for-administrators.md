@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a909b7c940f22e6435fc72a370b8a4ed17d5f937
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925058"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408247"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 配置ガイド (管理者向け)
 この記事では、システム管理者が Microsoft System Center Configuration Manager を使用して [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] とそのシステムの依存関係をネットワーク経由で配置する方法を手順に沿って説明します。 ここでは、すべての対象のクライアント コンピューターが .NET Framework の最小要件を満たしていることを前提としています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] のインストールに必要なソフトウェア要件とハードウェア要件の一覧については、「[システム要件](../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
@@ -20,7 +20,7 @@ ms.locfileid: "42925058"
 > [!NOTE]
 >  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、System Center Configuration Manager、Active Directory など、このドキュメントで言及されるソフトウェアには、ライセンス条項が適用されます。 このドキュメントの内容は、ライセンス条項がソフトウェアの適切なライセンス取得者によって確認され、同意されていることを前提にしています 記載の内容についても、ライセンス条項は効力があるものとします。  
 >   
->  .NET Framework のサポートの詳細については、Microsoft サポート オンラインの [Microsoft .NET Framework のサポート ライフサイクル ポリシー](http://go.microsoft.com/fwlink/?LinkId=196607)に関するページを参照してください。  
+>  .NET Framework のサポートの詳細については、Microsoft サポート オンラインの [Microsoft .NET Framework のサポート ライフサイクル ポリシー](https://go.microsoft.com/fwlink/?LinkId=196607)に関するページを参照してください。  
   
  このトピックは、次のセクションで構成されています。  
   
@@ -37,16 +37,16 @@ ms.locfileid: "42925058"
 ## <a name="the-deployment-process"></a>配置プロセス  
  サポートするインフラストラクチャが整っている場合は、System Center 2012 Configuration Manager を使用して、.NET Framework 再頒布可能パッケージをネットワーク上のコンピューターに配置します。 インフラストラクチャを構築するには、コレクション、ソフトウェアのパッケージとプログラム、配布ポイント、配置という 5 つの主要な項目を作成し定義する必要があります。  
   
--   **コレクション**は、ユーザー、ユーザー グループ、コンピューターなど、.NET Framework の配置先となる Configuration Manager リソースのグループです。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコレクション](http://technet.microsoft.com/library/gg682169.aspx)」を参照してください。  
+-   **コレクション**は、ユーザー、ユーザー グループ、コンピューターなど、.NET Framework の配置先となる Configuration Manager リソースのグループです。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコレクション](https://technet.microsoft.com/library/gg682169.aspx)」を参照してください。  
   
--   **パッケージとプログラム**は、通常、クライアント コンピューターにインストールされるソフトウェア アプリケーションを表しますが、個々のファイル、更新プログラム、さらには個々のコマンドが含まれることがあります。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のパッケージとプログラム](http://technet.microsoft.com/library/gg699369.aspx)」を参照してください。  
+-   **パッケージとプログラム**は、通常、クライアント コンピューターにインストールされるソフトウェア アプリケーションを表しますが、個々のファイル、更新プログラム、さらには個々のコマンドが含まれることがあります。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のパッケージとプログラム](https://technet.microsoft.com/library/gg699369.aspx)」を参照してください。  
   
--   **配布ポイント**は、ソフトウェアをクライアント コンピューター上で実行するために必要なファイルを格納する Configuration Manager のサイト システムの役割です。 Configuration Manager クライアントは、ソフトウェア配置を受け取って処理するときに、配布ポイントに接続してソフトウェアに関連するコンテンツをダウンロードし、インストール処理を開始します。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコンテンツ管理の概要](http://technet.microsoft.com/library/gg682083.aspx)」を参照してください。  
+-   **配布ポイント**は、ソフトウェアをクライアント コンピューター上で実行するために必要なファイルを格納する Configuration Manager のサイト システムの役割です。 Configuration Manager クライアントは、ソフトウェア配置を受け取って処理するときに、配布ポイントに接続してソフトウェアに関連するコンテンツをダウンロードし、インストール処理を開始します。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコンテンツ管理の概要](https://technet.microsoft.com/library/gg682083.aspx)」を参照してください。  
   
--   **配置**は、指定されたターゲット コレクションの該当するメンバーにソフトウェア パッケージをインストールするよう指示します。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager でのアプリケーションの展開方法](http://technet.microsoft.com/library/gg682082.aspx)」を参照してください。  
+-   **配置**は、指定されたターゲット コレクションの該当するメンバーにソフトウェア パッケージをインストールするよう指示します。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager でのアプリケーションの展開方法](https://technet.microsoft.com/library/gg682082.aspx)」を参照してください。  
   
 > [!IMPORTANT]
->  このトピックの手順では、パッケージとプログラムを作成するための一般的な設定を使用していて、すべての可能な設定について説明していない場合があります。 その他の Configuration Manager の配置オプションについては、[Configuration Manager のドキュメント ライブラリ](http://technet.microsoft.com/library/gg682041.aspx)を参照してください。  
+>  このトピックの手順では、パッケージとプログラムを作成するための一般的な設定を使用していて、すべての可能な設定について説明していない場合があります。 その他の Configuration Manager の配置オプションについては、[Configuration Manager のドキュメント ライブラリ](https://technet.microsoft.com/library/gg682041.aspx)を参照してください。  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>.NET Framework の配置  
@@ -62,7 +62,7 @@ ms.locfileid: "42925058"
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>コレクションの作成  
- この手順では、パッケージとプログラムを配置するコンピューターを選択し、それをデバイス コレクションにグループ化します。 Configuration Manager でコレクションを作成するときは、ダイレクト メンバーシップ規則 (コレクション メンバーを手動で指定) またはクエリ規則 (指定した条件に基づいて Configuration Manager がコレクション メンバーを決定) を使用できます。 メンバーシップ規則の詳細については、クエリ規則とダイレクト規則も含めて、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコレクションの概要](http://technet.microsoft.com/library/gg682177.aspx)」を参照してください。  
+ この手順では、パッケージとプログラムを配置するコンピューターを選択し、それをデバイス コレクションにグループ化します。 Configuration Manager でコレクションを作成するときは、ダイレクト メンバーシップ規則 (コレクション メンバーを手動で指定) またはクエリ規則 (指定した条件に基づいて Configuration Manager がコレクション メンバーを決定) を使用できます。 メンバーシップ規則の詳細については、クエリ規則とダイレクト規則も含めて、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコレクションの概要](https://technet.microsoft.com/library/gg682177.aspx)」を参照してください。  
   
  コレクションを作成するには  
   
@@ -84,7 +84,7 @@ ms.locfileid: "42925058"
   
 9. **デバイス コレクションの作成ウィザード**の **[メンバーシップの規則]** ページで、**[次へ]** をクリックし、ウィザードの処理を完了します。  
   
- コレクションの詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコレクション](http://technet.microsoft.com/library/bb693730.aspx)」を参照してください。  
+ コレクションの詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコレクション](https://technet.microsoft.com/library/bb693730.aspx)」を参照してください。  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>.NET Framework 再頒布可能パッケージとプログラムの作成  
@@ -128,9 +128,9 @@ ms.locfileid: "42925058"
 |------------|-----------------|  
 |**/q**|クワイエット モードを設定します。 ユーザー入力は必要なく、出力は表示されません。|  
 |**/norestart**|セットアップ プログラムが自動的に再起動しないようにします。 このオプションを使用する場合、Configuration Manager でコンピューターの再起動を処理する必要があります。|  
-|**/chainingpackage** *PackageName*|チェーンを行っているパッケージの名前を指定します。 この情報は、[Microsoft カスタマー エクスペリエンス向上プログラム (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244) に申し込んだ場合のその他のインストール セッション情報と共に報告されます。 パッケージ名にスペースが含まれている場合は、区切り記号として二重引用符を使用します (例: **/chainingpackage "Chaining Product"**)。|  
+|**/chainingpackage** *PackageName*|チェーンを行っているパッケージの名前を指定します。 この情報は、[Microsoft カスタマー エクスペリエンス向上プログラム (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244) に申し込んだ場合のその他のインストール セッション情報と共に報告されます。 パッケージ名にスペースが含まれている場合は、区切り記号として二重引用符を使用します (例: **/chainingpackage "Chaining Product"**)。|  
   
- これらの手順によって、.NET Framework 4.5 という名前のパッケージが作成されます。 プログラムは、.NET Framework 4.5 のサイレント インストールを配置します。 サイレント インストールでは、ユーザーはインストール プロセスと対話しないので、チェーン アプリケーションがリターン コードをキャプチャし、再起動を処理する必要があります。「[Getting Progress Information from an Installation Package](http://go.microsoft.com/fwlink/?LinkId=179606)」 (インストール パッケージからの進行状況に関する情報の取得) を参照してください。  
+ これらの手順によって、.NET Framework 4.5 という名前のパッケージが作成されます。 プログラムは、.NET Framework 4.5 のサイレント インストールを配置します。 サイレント インストールでは、ユーザーはインストール プロセスと対話しないので、チェーン アプリケーションがリターン コードをキャプチャし、再起動を処理する必要があります。「[Getting Progress Information from an Installation Package](https://go.microsoft.com/fwlink/?LinkId=179606)」 (インストール パッケージからの進行状況に関する情報の取得) を参照してください。  
  
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>配布ポイントの選択  
@@ -154,7 +154,7 @@ ms.locfileid: "42925058"
   
 8.  ウィザードを完了します。  
   
- これでパッケージには、.NET Framework 4.5 をサイレントで配置するために必要なすべての情報が含まれています。 パッケージとプログラムを配置する前に、そのパッケージが配布ポイントにインストールされていることを確認します。Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコンテンツ管理の操作とメンテナンス](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent)」の「コンテンツの監視」セクションを参照してください。  
+ これでパッケージには、.NET Framework 4.5 をサイレントで配置するために必要なすべての情報が含まれています。 パッケージとプログラムを配置する前に、そのパッケージが配布ポイントにインストールされていることを確認します。Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコンテンツ管理の操作とメンテナンス](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent)」の「コンテンツの監視」セクションを参照してください。  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>パッケージの配置  
@@ -179,7 +179,7 @@ ms.locfileid: "42925058"
 9. ウィザードの **[ユーザー側の表示と操作]** ページで、既定値を使用し、**[次へ]** をクリックします。  
   
     > [!WARNING]
-    >  稼動環境では、配置スケジュールで異なる選択が必要になるポリシーが適用されている場合があります。 これらのオプションについては、TechNet ライブラリの「[[提供情報の名前のプロパティ] の [スケジュール] タブ](http://technet.microsoft.com/library/bb694016.aspx)」を参照してください。  
+    >  稼動環境では、配置スケジュールで異なる選択が必要になるポリシーが適用されている場合があります。 これらのオプションについては、TechNet ライブラリの「[[提供情報の名前のプロパティ] の [スケジュール] タブ](https://technet.microsoft.com/library/bb694016.aspx)」を参照してください。  
   
 10. ウィザードの **[配布ポイント]** ページで、既定値を使用し、**[次へ]** をクリックします。  
   
@@ -193,27 +193,27 @@ ms.locfileid: "42925058"
   
  **Active Directory、DNS、DHCP:**  
   
--   [Windows Server 2008 向け Active Directory Domain Services](http://technet.microsoft.com/library/dd378891.aspx)  
+-   [Windows Server 2008 向け Active Directory Domain Services](https://technet.microsoft.com/library/dd378891.aspx)  
   
--   [DNS サーバー](http://technet.microsoft.com/library/cc732997.aspx)  
+-   [DNS サーバー](https://technet.microsoft.com/library/cc732997.aspx)  
   
--   [DHCP サーバー](http://technet.microsoft.com/library/cc896553.aspx)  
+-   [DHCP サーバー](https://technet.microsoft.com/library/cc896553.aspx)  
   
  **SQL Server 2008:**  
   
--   [SQL Server 2008 のインストール (SQL Server ビデオ)](http://technet.microsoft.com/library/dd299415.aspx)  
+-   [SQL Server 2008 のインストール (SQL Server ビデオ)](https://technet.microsoft.com/library/dd299415.aspx)  
   
--   [SQL Server 2008 のデータベース管理者向けセキュリティ概要](http://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
+-   [SQL Server 2008 のデータベース管理者向けセキュリティ概要](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (管理ポイント、配布ポイント):**  
   
--   [System Center 2012 Configuration Manager のサイト管理](http://technet.microsoft.com/library/gg681983.aspx)  
+-   [System Center 2012 Configuration Manager のサイト管理](https://technet.microsoft.com/library/gg681983.aspx)  
   
--   [Configuration Manager の単一サイトの計画と展開](http://technet.microsoft.com/library/bb680961.aspx)  
+-   [Configuration Manager の単一サイトの計画と展開](https://technet.microsoft.com/library/bb680961.aspx)  
   
  **Windows コンピューター用の System Center 2012 Configuration Manager クライアント:**  
   
--   [System Center 2012 Configuration Manager のクライアントの展開](http://technet.microsoft.com/library/gg699391.aspx)  
+-   [System Center 2012 Configuration Manager のクライアントの展開](https://technet.microsoft.com/library/gg699391.aspx)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>トラブルシューティング  
@@ -248,17 +248,17 @@ ms.locfileid: "42925058"
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>ダウンロードのエラー コード  
   
--   [Background Intelligent Transfer Service (BITS) のエラー コード](http://msdn.microsoft.com/library/aa362823.aspx)  
+-   [Background Intelligent Transfer Service (BITS) のエラー コード](https://msdn.microsoft.com/library/aa362823.aspx)  
   
--   [URL モニカーのエラー コード](http://msdn.microsoft.com/library/ms775145.aspx)  
+-   [URL モニカーのエラー コード](https://msdn.microsoft.com/library/ms775145.aspx)  
   
 -   [WinHttp エラー コード](/windows/desktop/WinHttp/error-messages)  
   
  その他のエラー コード:   
   
--   [Windows インストーラーのエラー コード](http://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Windows インストーラーのエラー コード](https://msdn.microsoft.com/library/aa368542.aspx)  
   
--   [Windows Update エージェントの結果コード](http://technet.microsoft.com/library/cc720442.aspx)  
+-   [Windows Update エージェントの結果コード](https://technet.microsoft.com/library/cc720442.aspx)  
   
 ## <a name="see-also"></a>参照  
  [配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: d4e57347a11b804f3ea7f4bb9736c134c4b71929
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961314"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468655"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>方法: 複数の文字列を連結する (C# ガイド)
 
@@ -23,7 +23,6 @@ ms.locfileid: "37961314"
 次の例では、ソース コードを読みやすくするために、連結を使用して長い文字列リテラルを短い文字列に分割しています。 これらの部分は、コンパイル時に単一の文字列に連結されます。 関係する文字列の数に関係なく、実行時にパフォーマンス コストは発生しません。  
   
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
-  
 
 文字列変数を連結する場合は、`+` または `+=` 演算子、[文字列補間](../language-reference/tokens/interpolated.md)または <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.String.Concat%2A?displayProperty=nameWithType>、<xref:System.String.Join%2A?displayProperty=nameWithType>、<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> メソッドを使用できます。 `+` 演算子は使い方が簡単で、直感的なコードにすることができます。 1 つのステートメントで複数の `+` 演算子を使用している場合でも、文字列の内容がコピーされるのは 1 回のみです。 次のコードは、`+` および `+=` 演算子を使用して文字列を連結する例を示しています。
 
@@ -34,7 +33,7 @@ ms.locfileid: "37961314"
 [!code-csharp-interactive[building strings using string interpolation](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#3)]  
   
 > [!NOTE]
->  文字列連結操作において、C# コンパイラでは null 文字列は空の文字列と同様に扱われます。
+> 文字列連結操作において、C# コンパイラでは null 文字列は空の文字列と同様に扱われます。
 
 文字列を連結する他のメソッドとして、<xref:System.String.Format%2A?displayProperty=nameWithType> があります。 このメソッドは、少数のコンポーネント文字列から文字列を作成する場合に有効です。
 
@@ -54,8 +53,9 @@ ms.locfileid: "37961314"
 
 [GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)ダウンロードすることができます。
 
-## <a name="see-also"></a>参照  
- <xref:System.String>  
- <xref:System.Text.StringBuilder>  
- [C# プログラミング ガイド](../programming-guide/index.md)  
- [文字列](../programming-guide/strings/index.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.String>  
+- <xref:System.Text.StringBuilder>  
+- [C# プログラミング ガイド](../programming-guide/index.md)  
+- [文字列](../programming-guide/strings/index.md)

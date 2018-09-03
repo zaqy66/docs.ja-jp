@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /utf8output compiler option [C#]
 - -utf8output compiler option [C#]
 ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
-ms.openlocfilehash: 85cd06da673d0d24c936acf81765169e0778b437
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32c239f7563101cb1dddedbf868d298806353492
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213260"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476262"
 ---
 # <a name="-utf8output-c-compiler-options"></a>-utf8output (C# コンパイラ オプション)
 **-utf8output** オプションは UTF-8 エンコードを使用してコンパイラ出力を表示します。  
@@ -30,4 +30,5 @@ ms.locfileid: "33213260"
  このコンパイラ オプションは Visual Studio では使用できず、プログラムで変更することはできません。  
   
 ## <a name="see-also"></a>参照  
- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)

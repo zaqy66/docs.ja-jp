@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32ee3babe054d55a45cc8826843252dba6aa2be7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390251"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484806"
 ---
 # <a name="registration-free-com-interop"></a>登録を必要としない COM 相互運用機能
 登録を必要としない COM 相互運用機能は、アセンブリ情報を格納するために Windows レジストリを使用しないで、コンポーネントをアクティブにします。 展開中にコンピューター上のコンポーネントを登録するのではなく、バインディングとアクティベーションに関する情報を含む Win32 スタイルのマニフェスト ファイルをデザイン時に作成します。 レジストリ キーではなく、これらのマニフェスト ファイルが、オブジェクトのアクティベーションを指示します。  
@@ -32,7 +32,7 @@ ms.locfileid: "33390251"
   
 ### <a name="requirements-for-registration-free-com-interop"></a>登録を必要としない COM 相互運用機能の要件  
   
-1.  登録を必要としない COM 相互運用機能のサポートは、ライブラリ アセンブリの種類に応じて、具体的にはアセンブリがアンマネージ (COM side-by-side) であるかマネージ (.NET ベース) であるかによって、多少異なります。 次の表は、それぞれのアセンブリの種類について、オペレーティング システムと .NET Framework のバージョン要件を示しています。  
+1.  登録を必要としない COM 相互運用機能のサポートは、ライブラリ アセンブリの種類に応じて、具体的にはアセンブリがアンマネージド (COM side-by-side) であるかマネージド (.NET ベース) であるかによって、多少異なります。 次の表は、それぞれのアセンブリの種類について、オペレーティング システムと .NET Framework のバージョン要件を示しています。  
   
     |アセンブリの種類|オペレーティング システム|.NET Framework のバージョン|  
     |-------------------|----------------------|----------------------------|  
@@ -45,11 +45,11 @@ ms.locfileid: "33390251"
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>登録を必要としないアクティベーション用の COM コンポーネントの構成  
   
-1.  COM コンポーネントが登録を必要としないアクティベーションに含まれるようにするには、それを side-by-side アセンブリとして展開する必要があります。 Side-by-side アセンブリはアンマネージ アセンブリです。  詳しくは、「[Using Side-by-side Assemblies](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)」(side-by-side アセンブリの使用) をご覧ください。  
+1.  COM コンポーネントが登録を必要としないアクティベーションに含まれるようにするには、それを side-by-side アセンブリとして展開する必要があります。 Side-by-side アセンブリはアンマネージ アセンブリです。  詳しくは、「[Using Side-by-side Assemblies](/windows/desktop/SbsCs/using-side-by-side-assemblies)」(side-by-side アセンブリの使用) をご覧ください。  
   
      COM の side-by-side アセンブリを使用するには、.NET ベースのアプリケーション開発者が、バインディングとアクティベーションの情報を含むアプリケーション マニフェストを提供する必要があります。 Windows XP オペレーティング システムには、アンマネージの side-by-side アセンブリのサポートが組み込まれています。 オペレーティング システムでサポートされている COM ランタイムは、アクティブ化されるコンポーネントがレジストリに存在しない場合、アプリケーション マニフェストをスキャンしてアクティベーション情報を見つけます。  
   
-     登録を必要としないアクティベーションは、Windows XP にインストールされている COM コンポーネントでは省略可能です。 アプリケーションに side-by-side アセンブリを追加する方法の詳細な手順については、「[Using Side-by-side Assemblies](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)」(side-by-side アセンブリの使用) をご覧ください。  
+     登録を必要としないアクティベーションは、Windows XP にインストールされている COM コンポーネントでは省略可能です。 アプリケーションに side-by-side アセンブリを追加する方法の詳細な手順については、「[Using Side-by-side Assemblies](/windows/desktop/SbsCs/using-side-by-side-assemblies)」(side-by-side アセンブリの使用) をご覧ください。  
   
     > [!NOTE]
     >  Side-by-side 実行は、ランタイムの複数のバージョンと、特定のバージョンのランタイムを使用するアプリケーションおよびコンポーネントの複数のバージョンを、同一のコンピューター上で同時に実行できるようにするための、.NET Framework の機能です。 Side-by-side 実行と side-by-side アセンブリは、side-by-side 機能を提供するための別個のメカニズムです。  

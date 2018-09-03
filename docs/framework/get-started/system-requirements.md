@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaa508963bc4920aae65b1d172e2dc15f13451bf
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 909b9369aba6b22899ae3fe7ac15eb470c5c2697
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925117"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390758"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework のシステム要件
 
@@ -73,7 +73,7 @@ ms.locfileid: "42925117"
 
 - .NET Framework 4 は、IA64 プラットフォームもサポートしています。
 
-- すべてのプラットフォームについて最大限の互換性とセキュリティが得られるように、[Windows Update Web サイト](http://go.microsoft.com/fwlink/?LinkId=168461)から入手できる最新の Windows Service Pack にアップグレードし、重要な更新プログラムをインストールすることをお勧めします。
+- すべてのプラットフォームについて最大限の互換性とセキュリティが得られるように、[Windows Update Web サイト](https://go.microsoft.com/fwlink/?LinkId=168461)から入手できる最新の Windows Service Pack にアップグレードし、重要な更新プログラムをインストールすることをお勧めします。
 
 - 64 ビット オペレーティング システムでは、.NET Framework は WOW64 (64 ビット コンピューター上での 32 ビット処理) とネイティブ 64 ビット処理の両方をサポートしています。
 
@@ -99,7 +99,7 @@ ms.locfileid: "42925117"
 
 - Windows Server 2008 SP2 では、.NET Framework は、Server Core ロールでサポートされていません。
 
-- すべてのプラットフォームについて最大限の互換性とセキュリティが得られるように、[Windows Update Web サイト](http://go.microsoft.com/fwlink/?LinkId=168461)から入手できる最新の Windows Service Pack にアップグレードし、重要な更新プログラムを適用することをお勧めします。 一部のオペレーティング システムでは、最新の Windows Service Pack のインストールが必要になる場合があります。
+- すべてのプラットフォームについて最大限の互換性とセキュリティが得られるように、[Windows Update Web サイト](https://go.microsoft.com/fwlink/?LinkId=168461)から入手できる最新の Windows Service Pack にアップグレードし、重要な更新プログラムを適用することをお勧めします。 一部のオペレーティング システムでは、最新の Windows Service Pack のインストールが必要になる場合があります。
 
 - 64 ビット オペレーティング システムでは、.NET Framework は WOW64 (64 ビット コンピューター上での 32 ビット処理) とネイティブ 64 ビット処理の両方をサポートしています。
 

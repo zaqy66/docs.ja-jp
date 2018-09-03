@@ -4,12 +4,12 @@ description: HttpClientFactory は、自己主張性の強いファクトリで�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 89382f266eacc97b5e1ee5416c92dbd662427cd1
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878764"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43395541"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -78,7 +78,7 @@ IHttpClientFactory から `HttpClient` オブジェクトを取得するたび�
 プール内の HttpMessageHandler オブジェクトには、有効期間があります。この有効期間は、プール内の HttpMessageHandler インスタンスを再利用できる期間です。 既定値は 2 分ですが、名前付きクライアントまたは型指定されたクライアントごとにオーバーライドできます。 オーバーライドするには、次のコードに示すように、クライアントを作成するときに返される IHttpClientBuilder で SetHandlerLifetime() を呼び出します。
 
 ```csharp
-//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Basket Typed Client 
+//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
 services.AddHttpClient<ICatalogService, CatalogService>()
                  .SetHandlerLifetime(TimeSpan.FromMinutes(5));  
 ```

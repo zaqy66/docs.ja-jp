@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 96607f1dd7f019169446e29a08496fb54e1ed493
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: d09ce4ea972a3064298eebdf0b8b80999ee8441e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961184"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480982"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# リファレンス)
 
@@ -24,49 +24,47 @@ ms.locfileid: "37961184"
 
 最後の 2 つのコンテキストは、C# 7.2 で追加されました。
 
-## <a name="readonly-field-example"></a>読み取り専用フィールドの例  
+## <a name="readonly-field-example"></a>読み取り専用フィールドの例
 
-この例では、`year` フィールドの値は、クラス コンストラクターで値が割り当てられていても `ChangeYear` メソッドでは変更できません。  
-  
-[!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]  
-  
-`readonly` のフィールドに値を割り当てることができるのは、次のコンテキスト内に限られます。  
-  
-- 値が宣言で初期化される場合。次に例を示します。  
+この例では、`year` フィールドの値は、クラス コンストラクターで値が割り当てられていても `ChangeYear` メソッドでは変更できません。
+
+[!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]
+
+`readonly` のフィールドに値を割り当てることができるのは、次のコンテキスト内に限られます。
+
+- 値が宣言で初期化される場合。次に例を示します。
 
 ```csharp
-public readonly int y = 5;  
+public readonly int y = 5;
 ```
 
 - インスタンス フィールド宣言を含むクラスのインスタンス コンストラクター内。
 - 静的フィールド宣言を含むクラスの静的コンストラクター内。
 
-また、これらのコンストラクター コンテキスト内でのみ、`readonly` フィールドを [out](out-parameter-modifier.md) パラメーターまたは [ref](ref.md) パラメーターとして渡すことができます。  
-  
+また、これらのコンストラクター コンテキスト内でのみ、`readonly` フィールドを [out](out-parameter-modifier.md) パラメーターまたは [ref](ref.md) パラメーターとして渡すことができます。
+
 > [!NOTE]
-> `readonly` キーワードは [const](const.md) キーワードとは異なります。 `const` フィールドは、フィールドの宣言でしか初期化できません。 `readonly` フィールドは、宣言またはコンストラクターのどちらかで初期化できます。 このため、`readonly` フィールドは、使用するコンストラクターに応じて異なる値を持つことができます。 また、次の例のように、`const` フィールドがコンパイル時定数であるのに対し、`readonly` フィールドは実行時定数として使用できます。  
+> `readonly` キーワードは [const](const.md) キーワードとは異なります。 `const` フィールドは、フィールドの宣言でしか初期化できません。 `readonly` フィールドは、宣言またはコンストラクターのどちらかで初期化できます。 このため、`readonly` フィールドは、使用するコンストラクターに応じて異なる値を持つことができます。 また、次の例のように、`const` フィールドがコンパイル時定数であるのに対し、`readonly` フィールドは実行時定数として使用できます。
 
 ```csharp
-public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
+public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
 ```
 
-[!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]  
-  
-上の例で、次の例のようなステートメントを使うものとします。  
-  
-`p2.y = 66;        // Error`  
-  
-この場合、次のコンパイル エラー メッセージが表示されます。  
-  
-`The left-hand side of an assignment must be an l-value`  
-  
-これは、定数に値を割り当てようとしたときのエラーと同じです。  
+[!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]
+
+上の例で、次の例のようなステートメントを使うものとします。
+
+`p2.y = 66;        // Error`
+
+この場合、次のコンパイル エラー メッセージが表示されます。
+
+`A readonly field cannot be assigned to (except in a constructor or a variable initializer)`
 
 ## <a name="readonly-struct-example"></a>読み取り専用の構造体の例
 
 `struct` 定義での `readonly` 修飾子は、構造体が**変更不可**であることを宣言します。 次の例のように、`struct` のすべてのインスタンス フィールドを `readonly` とマークする必要があります。
 
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]  
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
 
 前の例では、[読み取り専用の自動プロパティ](../../properties.md#read-only)を使ってその記憶域を宣言しています。 これは、これらのプロパティに対して `readonly` バッキング フィールドを作成するようコンパイラに指示します。 `readonly` フィールドを直接宣言することもできます。
 
@@ -88,16 +86,18 @@ public readonly struct Point
 
 `ref return` での `readonly` 修飾子は、返される参照を変更できないことを示します。 次の例は、origin に参照を返します。 `readonly` 修飾子を使用して、呼び出し元が origin を変更できないことを示しています。
 
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]  
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
 返される型を `readonly struct` にする必要はありません。 `ref` で返すことができる任意の型を、`ref readonly` で返すことができます。
 
-## <a name="c-language-specification"></a>C# 言語仕様  
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>参照  
-[C# リファレンス](../../../csharp/language-reference/index.md)  
-[C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-[C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-[修飾子](../../../csharp/language-reference/keywords/modifiers.md)  
-[const](../../../csharp/language-reference/keywords/const.md)  
-[フィールド](../../../csharp/programming-guide/classes-and-structs/fields.md)
+## <a name="c-language-specification"></a>C# 言語仕様
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [修飾子](modifiers.md)
+- [const](const.md)
+- [フィールド](../../programming-guide/classes-and-structs/fields.md)

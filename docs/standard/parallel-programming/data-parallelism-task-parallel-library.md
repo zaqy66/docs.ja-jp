@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bf162a3ef9f66e7c7d74c96f13c055857818a2b
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: f414e5b0463e28427c8c60e2f8b8774ad6973da2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070955"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464138"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>データの並列化 (タスク並列ライブラリ)
 "*データの並列化*" とは、ソース コレクションまたは配列の要素に対して、同じ操作を同時に (つまり、並列で) 実行するシナリオを意味します。 データの並列化操作では、複数のスレッドが異なるセグメント上で同時に操作できるようにソース コレクションがパーティション分割されます。  
   
- タスク並列ライブラリ (TPL) は <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> クラスによって、データの並列化をサポートします。 このクラスでは、[for](~/docs/csharp/language-reference/keywords/for.md) ループおよび [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) ループ (Visual Basic では `For` および `For Each`) をメソッド ベースで並列実装できます。 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ループまたは <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> ループに対するループのロジックは、順次ループを記述する場合と同等に記述します。 スレッドまたはキューの作業項目を作成する必要はありません。 基本のループでは、ロックを取得する必要はありません。 TPL では低水準の作業はすべて自動的に行われます。 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> の使い方について詳しくは、ドキュメント「[Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](http://www.microsoft.com/download/details.aspx?id=19222)」(並列プログラミングのパターン: .NET Framework 4 の並列パターンの理解と適用) をダウンロードしてご覧ください。 次のコード例では、単純な `foreach` ループおよびそのループに相当する並列を示しています。  
+ タスク並列ライブラリ (TPL) は <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> クラスによって、データの並列化をサポートします。 このクラスでは、[for](~/docs/csharp/language-reference/keywords/for.md) ループおよび [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) ループ (Visual Basic では `For` および `For Each`) をメソッド ベースで並列実装できます。 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ループまたは <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> ループに対するループのロジックは、順次ループを記述する場合と同等に記述します。 スレッドまたはキューの作業項目を作成する必要はありません。 基本のループでは、ロックを取得する必要はありません。 TPL では低水準の作業はすべて自動的に行われます。 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> の使い方について詳しくは、ドキュメント「[Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)」(並列プログラミングのパターン: .NET Framework 4 の並列パターンの理解と適用) をダウンロードしてご覧ください。 次のコード例では、単純な `foreach` ループおよびそのループに相当する並列を示しています。  
   
 > [!NOTE]
 >  ここでは、ラムダ式を使用して TPL でデリゲートを定義します。 C# または Visual Basic のラムダ式についての情報が必要な場合は、「[Lambda Expressions in PLINQ and TPL (PLINQ および TPL のラムダ式)](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)」を参照してください。  
@@ -31,7 +31,7 @@ ms.locfileid: "37070955"
  並列ループを実行すると、TPL はデータ ソースをパーティション分割して、ループで複数の部分を同時に操作できるようにします。 背後では、タスク スケジューラが、システム リソースおよび作業負荷に基づいてタスクをパーティション分割します。 作業負荷のバランスが崩れると、可能な場合、スケジューラは複数のスレッドとプロセッサ間で作業を再配分します。  
   
 > [!NOTE]
->  固有のカスタム パーティショナーまたはスケジューラを使うこともできます。 詳細については、「[PLINQ および TPL 用のカスタム パーティショナー](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)」および[TaskScheduler](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)に関するページを参照してください。  
+>  固有のカスタム パーティショナーまたはスケジューラを使うこともできます。 詳細については、「[PLINQ および TPL 用のカスタム パーティショナー](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)」および[TaskScheduler](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)に関するページを参照してください。  
   
  <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドの両方に、ループの実行を停止または中断させるオーバーロードが複数ある場合は、その他のスレッドのループ状態の監視、スレッド ローカルの状態の維持、スレッド ローカル オブジェクトの終了、同時実行の程度の制御などを行います。 この機能を有効にするヘルパー要素には、<xref:System.Threading.Tasks.ParallelLoopState>、<xref:System.Threading.Tasks.ParallelOptions>、<xref:System.Threading.Tasks.ParallelLoopResult>、<xref:System.Threading.CancellationToken>、および <xref:System.Threading.CancellationTokenSource> があります。  
   

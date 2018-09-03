@@ -7,12 +7,12 @@ helpviewer_keywords:
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: cc215971d63a0ee61eb25ac45834a81fbbc50b96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216913"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474295"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>数値結果テーブルの書式設定 (C# リファレンス)
 数値結果の書式を指定するには、<xref:System.String.Format%2A?displayProperty=nameWithType> メソッドを使用するか、`String.Format` を呼び出す <xref:System.Console.Write%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドを使用するか、[文字列補間](../tokens/interpolated.md)を使用します。 書式を指定するには、書式指定文字列を使用します。 サポートされる標準の書式指定文字列を次の表に示します。 書式指定文字列は `Axx` という形式になります。この `A` は書式指定子、`xx` は精度指定子です。 書式指定子は、数値に適用する書式の種類を制御し、精度指定子は、書式付き出力の有効桁数または小数点以下の桁数を制御します。 精度指定子の値は 0 から 99 の範囲です。  
@@ -29,9 +29,10 @@ ms.locfileid: "33216913"
 |N または n|数値|Console.Write("{0:N}", 2500000);|2,500,000.00|  
 |X または x|16 進数|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)  
- [型のリファレンス表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [string](../../../csharp/language-reference/keywords/string.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)  
+- [型のリファレンス表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [string](../../../csharp/language-reference/keywords/string.md)

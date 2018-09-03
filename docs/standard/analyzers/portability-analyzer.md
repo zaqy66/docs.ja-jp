@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f310e5fe45315dfa41d596c92d9412dc6b3bc125
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 515dd7a393d87811377aa5d9fb02de35943b6966
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567563"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43415689"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -39,7 +39,7 @@ ms.locfileid: "33567563"
 
 ![移植性レポート](./media/portability-analyzer/portability-report.png)
 
-Visual Studio を使用しない場合は、 コマンド プロンプトから Portability Analyzer を使用することもできます。 [API Portability Analyzer](http://www.microsoft.com/download/details.aspx?id=42678) をダウンロードします。
+Visual Studio を使用しない場合は、 コマンド プロンプトから Portability Analyzer を使用することもできます。 [API Portability Analyzer](https://www.microsoft.com/download/details.aspx?id=42678) をダウンロードします。
 
 *   現在のディレクトリを分析するには、次のコマンドを入力します。`\...\ApiPort.exe analyze -f .`
 *   特定の .dll ファイルの一覧を分析するには、次のコマンドを入力します。`\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`

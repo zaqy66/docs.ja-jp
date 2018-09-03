@@ -9,11 +9,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: cede0d730e0c0bdaaa1b9b39c729b49677b81ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480596"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (C# コンパイラ オプション)
 **-nologo** オプションは、コンパイラの開始時のサインオン バナーの表示と、コンパイル時の情報メッセージの表示を抑制します。  
@@ -30,5 +31,6 @@ ms.lasthandoff: 05/04/2018
  このコンパイラ オプションは Visual Studio では使用できず、プログラムで変更することはできません。  
   
 ## <a name="see-also"></a>参照  
- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

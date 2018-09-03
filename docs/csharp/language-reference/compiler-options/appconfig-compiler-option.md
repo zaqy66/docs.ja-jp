@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 3fca0821b8665354d840783fca3ab90ece41b2cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33f79967c34736f2175e0bb6e2b5b88d211545c2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214771"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398509"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (C# コンパイラ オプション)
 **-appconfig** コンパイラ オプションを利用すると、C# アプリケーションで、アセンブリのバインド時に共通言語ランタイム (CLR) にアセンブリのアプリケーション構成 (app.config) ファイルの場所を指定できます。  
@@ -55,5 +55,6 @@ ms.locfileid: "33214771"
 ```  
   
 ## <a name="see-also"></a>参照  
- [\<supportPortability> 要素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
- [アルファベット順の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+
+- [\<supportPortability> 要素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
+- [アルファベット順の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)

@@ -7,27 +7,27 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4deb355a7b523437ae31a1d2b9c79e3b8d4f40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e30b1a5a4d3b50c80edaac29cbd6b90f3ddd103b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391226"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43400504"
 ---
 # <a name="how-to-create-com-wrappers"></a>方法: COM ラッパーを作成する
 [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] の機能または .NET Framework のツールである Tlbimp.exe と Regasm.exe を使用して、COM (コンポーネント オブジェクト モデル) ラッパーを作成することができます。 どちらの方法でも以下の 2 種類の COM ラッパーが作成されます。  
   
--   タイプ ライブラリからの[ランタイム呼び出し可能ラッパー](../../../docs/framework/interop/runtime-callable-wrapper.md)。マネージ コードで COM オブジェクトを実行します。  
+-   タイプ ライブラリからの[ランタイム呼び出し可能ラッパー](../../../docs/framework/interop/runtime-callable-wrapper.md)。マネージド コードで COM オブジェクトを実行します。  
   
--   必要なレジストリ設定を含む [COM 呼び出し可能ラッパー](../../../docs/framework/interop/com-callable-wrapper.md)。ネイティブ アプリケーションでマネージ オブジェクトを実行します。  
+-   必要なレジストリ設定を含む [COM 呼び出し可能ラッパー](../../../docs/framework/interop/com-callable-wrapper.md)。ネイティブ アプリケーションでマネージド オブジェクトを実行します。  
   
  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] では、プロジェクトに参照として COM ラッパーを追加できます。  
   
-## <a name="wrapping-com-objects-in-a-managed-application"></a>マネージ アプリケーションでの COM オブジェクトのラップ  
+## <a name="wrapping-com-objects-in-a-managed-application"></a>マネージド アプリケーションでの COM オブジェクトのラップ  
   
 #### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Visual Studio を使用してランタイム呼び出し可能ラッパーを作成するには  
   
-1.  マネージ アプリケーションのプロジェクトを開きます。  
+1.  マネージド アプリケーションのプロジェクトを開きます。  
   
 2.  **[プロジェクト]** メニューの **[すべてのファイルを表示]** をクリックします。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33391226"
  これで、COM オブジェクトにアクセスするためのコードを作成できます。 まず、`Imports` ステートメント ([!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] の場合) または `Using` ステートメント ([!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)] の場合) などのオブジェクトを宣言します。  
   
 > [!NOTE]
->  Microsoft Office コンポーネントをプログラミングする場合は、最初に Microsoft ダウンロード センターから [Microsoft Office プライマリ相互運用機能アセンブリ](http://go.microsoft.com/fwlink/?LinkId=50479) (PIA) をインストールします。 手順 4 で、必要な Office 製品で使用可能な最新バージョンのオブジェクト ライブラリ (**Microsoft Word 11.0 Object Library** など) を選択します。  
+>  Microsoft Office コンポーネントをプログラミングする場合は、最初に Microsoft ダウンロード センターから [Microsoft Office プライマリ相互運用機能アセンブリ](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA) をインストールします。 手順 4 で、必要な Office 製品で使用可能な最新バージョンのオブジェクト ライブラリ (**Microsoft Word 11.0 Object Library** など) を選択します。  
   
 #### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework ツールを使用してランタイム呼び出し可能ラッパーを作成するには  
   
@@ -48,11 +48,11 @@ ms.locfileid: "33391226"
   
  このツールは、元のタイプ ライブラリで定義された型のランタイム メタデータを含むアセンブリを作成します。  
   
-## <a name="wrapping-managed-objects-in-a-native-application"></a>ネイティブ アプリケーションでのマネージ オブジェクトのラップ  
+## <a name="wrapping-managed-objects-in-a-native-application"></a>ネイティブ アプリケーションでのマネージド オブジェクトのラップ  
   
 #### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Visual Studio を使用して COM 呼び出し可能ラッパーを作成するには  
   
-1.  ネイティブ コードで実行するマネージ クラス用のクラス ライブラリ プロジェクトを作成します。 このクラスには既定のコンストラクターが必要です。  
+1.  ネイティブ コードで実行するマネージド クラス用のクラス ライブラリ プロジェクトを作成します。 このクラスには既定のコンストラクターが必要です。  
   
      AssemblyInfo ファイルで、アセンブリの 4 つの部分で構成される完全なバージョン番号があることを確認します。 この番号は、Windows レジストリでバージョンを管理するために必要となります。 バージョン番号の詳細については、「[アセンブリのバージョン管理](../../../docs/framework/app-domains/assembly-versioning.md)」を参照してください。  
   

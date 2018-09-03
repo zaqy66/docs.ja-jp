@@ -5,12 +5,12 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: e37f0e72ee02915d16509fb2ff48bd114e8ad466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2469e8a0fbf8181a720201637ab5ac5ef02055d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217975"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400866"
 ---
 # <a name="lambda-expressions"></a>ラムダ式 #
 
@@ -78,7 +78,7 @@ ms.locfileid: "33217975"
 
 ## <a name="lambda-expressions-and-tuples"></a>ラムダ式とタプル ##
 
-C# 7.0 以降、C# 言語はタプルの組み込みサポートを提供します。 タプルは、ラムダ式への引数として指定できるほか、ラムダ式で返すこともできます。 場合によっては、C# コンパイラは、型の推定を使用して、タプル コンポーネントの型を判定することもあります。 
+C# 7.0 以降、C# 言語はタプルの組み込みサポートを提供します。 タプルは、ラムダ式への引数として指定できるほか、ラムダ式で返すこともできます。 場合によっては、C# コンパイラは、型の推定を使用して、タプル コンポーネントの型を判定することもあります。
 
 タプルを定義するには、そのコンポーネントのコンマ区切りリストをかっこで囲みます。 次の例では、5 つのコンポーネントを持つタプルを使用して、ラムダ式に連続した数値を渡します。このラムダ式により、各値が 2 倍になり、乗算の結果を格納する 5 つのコンポーネントを持つタプルが返されます。
 
@@ -154,6 +154,6 @@ C# におけるタプルのサポートの詳細については、「[C# Tuple t
 
 ## <a name="see-also"></a>関連項目 ##
 
-[LINQ (統合言語クエリ)](../standard/using-linq.md)   
-[匿名メソッド](programming-guide/statements-expressions-operators/anonymous-methods.md)   
-[式ツリー](expression-trees.md)
+- [統合言語クエリ (LINQ)](../standard/using-linq.md)
+- [匿名メソッド](programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [式ツリー](expression-trees.md)

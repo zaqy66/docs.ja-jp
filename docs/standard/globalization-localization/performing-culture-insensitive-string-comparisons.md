@@ -1,6 +1,6 @@
 ---
 title: カルチャを認識しない文字列比較の実行
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35805d1760b0e06d33498efeeb3104979da26bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84b1c10b655fefcd420a0c3cf038dba00e688d3e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573608"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461658"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>カルチャを認識しない文字列比較の実行
 既定では、<xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドはカルチャを認識し、大文字と小文字を区別する比較を実行します。 また、このメソッドには、使用するカルチャを `culture` パラメーターで指定し、使用する比較規則を `comparisonType` パラメーターで指定できる、複数のオーバーロードが含まれています。 既定のオーバーロードの代わりにこれらのメソッドを呼び出すと、特定のメソッド呼び出しで使用する規則に関するあいまいさが解消され、特定の比較がカルチャに依存するかどうかが明確になります。  
@@ -38,9 +38,12 @@ ms.locfileid: "33573608"
   
  [!code-csharp[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/cs/cultureinsensitive1.cs#1)]
  [!code-vb[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/vb/cultureinsensitive1.vb#1)]  
-  
-## <a name="see-also"></a>参照  
- <xref:System.String.Compare%2A?displayProperty=nameWithType>  
- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
- [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
- [文字列を使用するためのベスト プラクティス](../../../docs/standard/base-types/best-practices-strings.md)
+
+[Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921) をダウンロードできます。これは、Windows オペレーティング システムの並べ替えおよび比較操作で使用される文字の重みに関する情報を含む一連のテキスト ファイルです。
+
+## <a name="see-also"></a>関連項目
+
+- <xref:System.String.Compare%2A?displayProperty=nameWithType>  
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
+- [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+- [文字列を使用するためのベスト プラクティス](../../../docs/standard/base-types/best-practices-strings.md)

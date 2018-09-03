@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 3cd49a17991f3d7606b0364a83be2b2e30ba0cce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 4b6dfdbce131371553fc729206de29794266bfbe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961379"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482510"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe を使用したコマンド ラインからのビルド
 C# コンパイラは、その実行可能ファイルの名前 (*csc.exe*) をコマンド プロンプトに入力することによって呼び出します。
@@ -96,11 +96,12 @@ csc -target:library -out:Something.xyz *.cs
 C# コンパイラを起動してもオブジェクト (*.obj*) ファイルは作成されず、出力ファイルが直接作成されます。 このため、C# コンパイラにはリンカーが不要です。
 
 ## <a name="see-also"></a>関連項目
- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
- [アルファベット順の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [カテゴリ別の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
- [Main() とコマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [コマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
- [方法: コマンド ライン引数を表示する](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [方法: foreach を使用してコマンド ライン引数にアクセスする](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Main() の戻り値](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [アルファベット順の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+- [カテゴリ別の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+- [Main() とコマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [コマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
+- [方法: コマンド ライン引数を表示する](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [方法: foreach を使用してコマンド ライン引数にアクセスする](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Main() の戻り値](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

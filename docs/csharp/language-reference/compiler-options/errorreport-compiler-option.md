@@ -8,18 +8,18 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: d7e001834d670e7c88488c6db887d1d8e671beef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcbb9467da87a82147176bb0feb00383aff2c77f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218986"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43420260"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# コンパイラ オプション)
 このオプションは、C# 内部コンパイラ エラーを Microsoft に報告する方法として便利です。  
   
 > [!NOTE]
->  Windows Vista と Windows Server 2008 の場合、Windows エラー報告 (WER) 経由で行った設定が Visual Studio のエラー報告設定によって上書きされることはありません。 WER 設定は、常に Visual Studio のエラー報告設定よりも優先されます。  
+>  Windows Vista と Windows Server 2008 の場合、Windows エラー報告 (WER) 経由で行った設定が Visual Studio のエラー報告設定によってオーバーライドされることはありません。 WER 設定は、常に Visual Studio のエラー報告設定よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,4 +62,5 @@ ms.locfileid: "33218986"
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)

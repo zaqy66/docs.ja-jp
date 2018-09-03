@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 985ba9cfefce458fac73aa4b92de0b3d438405c6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: f586b6d097a8592fd74e92df7886b519d623e478
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948343"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393006"
 ---
 # <a name="const-c-reference"></a>const (C# リファレンス)
 
@@ -64,8 +64,8 @@ public const int c2 = c1 + 100;
 
 ## <a name="see-also"></a>関連項目
 
-[C# リファレンス](../../../csharp/language-reference/index.md)  
-[C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-[C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-[修飾子](../../../csharp/language-reference/keywords/modifiers.md)  
-[readonly](../../../csharp/language-reference/keywords/readonly.md)
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
+- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)  
+- [readonly](../../../csharp/language-reference/keywords/readonly.md)

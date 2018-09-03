@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: e6c28ee0c575bd6010a8aad76fc978062c5fc6a4
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 892b24b0283314f5aded0405df55a93069cf91e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960756"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43404030"
 ---
 # <a name="checked-c-reference"></a>checked (C# リファレンス)
 
@@ -42,8 +42,8 @@ ms.locfileid: "37960756"
 
 ## <a name="see-also"></a>関連項目
 
-[C# リファレンス](../../../csharp/language-reference/index.md)  
-[C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-[C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-[Checked と Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
-[unchecked](../../../csharp/language-reference/keywords/unchecked.md)
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
+- [Checked と Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
+- [unchecked](../../../csharp/language-reference/keywords/unchecked.md)

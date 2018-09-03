@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fabf1a133ca3c3b3ba39a4898ce0aceb378f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbea588604ebd5ad39e134a4ecfe771c89fb1121
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571983"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390569"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正規表現でのその他の構成体
 .NET の正規表現には、次の 3 つのその他の言語コンストラクトが含まれます。 1 つは、正規表現パターンの途中で特定の一致オプションを有効または無効にすることができます。 残りの 2 つは、正規表現にコメントを含めることができます。  
@@ -63,7 +63,7 @@ ms.locfileid: "33571983"
 ## <a name="inline-comment"></a>インライン コメント  
  `(?#` *comment*`)` コンストラクトを使用して、正規表現にインライン コメントを含めることができます。 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> メソッドによって返される文字列にコメントが含まれますが、正規表現エンジンは、パターン マッチングでコメントのどの部分も使用しません。 コメントは、最初の閉じかっこで終了します。  
   
- 次の例では、前のセクションの例の最初の正規表現パターンを繰り返しています。 比較で大文字小文字を区別するかどうかを示す 2 つのインライン コメントを正規表現に追加しています。 正規表現パターン `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b` は、次のように定義されます。  
+ 次の例では、前のセクションの例の最初の正規表現パターンを繰り返しています。 比較で大文字小文字を区別するかどうかを示す 2 つのインライン コメントを正規表現に追加しています。 正規表現パターン `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` は、次のように定義されます。  
   
 |パターン|説明|  
 |-------------|-----------------|  
@@ -92,7 +92,6 @@ ms.locfileid: "33571983"
 |`\d+`|1 個以上の 10 進数と一致します。|  
 |`(,-*\d+)*`|0 個または 1 つのコンマの後にオプションのマイナス記号が続き、その後に 1 つ以上の 10 進数が続くパターンと一致します。|  
 |`(\:\w{1,4}?)*`|0 個または 1 つのコロンの後に 1 ～ 4 個の、ただし可能な限り少ない空白文字が続くパターンと一致します。|  
-|`(?#case insensitive comparison)`|インライン コメント。 これは、パターンマッチング動作に影響を与えません。|  
 |`\}`|右中かっこと一致します。|  
 |`(?x)`|行末のコメントが認識されるように、パターンの空白を無視するオプションを有効にします。|  
 |`# Looks for a composite format item.`|行末のコメント。|  

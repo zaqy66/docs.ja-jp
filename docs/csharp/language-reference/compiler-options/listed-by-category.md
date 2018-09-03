@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 88ae18b11a48fd8b9610032e913c97d4c15d1c21
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 891e5eac249f4bd22b6eadde7509de2d07cd1576
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472413"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479839"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>カテゴリ別の C# コンパイラ オプションの一覧
 
@@ -80,7 +80,7 @@ ms.locfileid: "34472413"
 |オプション|目的|
 |------------|-------------|
 |[-link](link-compiler-option.md)|指定したアセンブリ内の COM 型情報をプロジェクトで使用できるようにします。|
-|[-linkresource](linkresource-compiler-option.md)|マネージ リソースへのリンクを作成します。|
+|[-linkresource](linkresource-compiler-option.md)|マネージド リソースへのリンクを作成します。|
 |[-resource](resource-compiler-option.md)|.NET Framework のリソースを出力ファイルに埋め込みます。|
 |[-win32icon](win32icon-compiler-option.md)|出力ファイルに挿入する .ico ファイルを指定します。|
 |[/win32res:](win32res-compiler-option.md)|出力ファイルに挿入する Win32 リソースを指定します。|
@@ -114,6 +114,6 @@ ms.locfileid: "34472413"
 
 ## <a name="see-also"></a>参照
 
- [C# コンパイラ オプション](index.md)  
- [アルファベット順の C# コンパイラ オプションの一覧](listed-alphabetically.md)  
- [方法: Visual Studio のコマンドラインのための環境変数を設定する](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [C# コンパイラ オプション](index.md)  
+- [アルファベット順の C# コンパイラ オプションの一覧](listed-alphabetically.md)  
+- [方法: Visual Studio のコマンドラインのための環境変数を設定する](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

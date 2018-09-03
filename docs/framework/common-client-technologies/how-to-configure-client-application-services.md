@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: 004798ce8cf429f2a94d856e6b3a55447c2ad5fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744757"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43399239"
 ---
 # <a name="how-to-configure-client-application-services"></a>方法 : クライアント アプリケーション サービスを構成する
-このトピックでは、Visual Studio **プロジェクト デザイナー**を使用して、クライアント アプリケーション サービスを有効にし、構成する方法について説明します。 クライアント アプリケーション サービスを使用してユーザーを検証し、既存の [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスからユーザーのロールおよび設定を取得することができます。 構成した後に、「[クライアント アプリケーション サービスの概要](../../../docs/framework/common-client-technologies/client-application-services-overview.md)」に記載されているように、アプリケーション コード内で有効にされているサービスにアクセスできます。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスの詳細については、「[ASP.NET アプリケーション サービスの概要](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)」を参照してください。  
+このトピックでは、Visual Studio **プロジェクト デザイナー**を使用して、クライアント アプリケーション サービスを有効にし、構成する方法について説明します。 クライアント アプリケーション サービスを使用してユーザーを検証し、既存の [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスからユーザーのロールおよび設定を取得することができます。 構成した後に、「[クライアント アプリケーション サービスの概要](../../../docs/framework/common-client-technologies/client-application-services-overview.md)」に記載されているように、アプリケーション コード内で有効にされているサービスにアクセスできます。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスの詳細については、「[ASP.NET アプリケーション サービスの概要](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)」を参照してください。  
   
  クライアント アプリケーション サービスは、**プロジェクト デザイナー**の **[サービス]** ページで有効にし、構成することができます。 **[サービス]** ページは、プロジェクトの App.config ファイル内の値を更新します。 **プロジェクト デザイナー**にアクセスするには、**[プロジェクト]** メニューの **[プロパティ]** を使用します。 **[サービス]** ページの詳細については、「[Services Page, Project Designer](https://msdn.microsoft.com/library/bb398109)」([サービス] ページ (プロジェクト デザイナー)) を参照してください。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "32744757"
   
 2.  **[オフラインでログインできるようにパスワードのハッシュをローカルに保存する]** をオンまたはオフにします。 このオプションを選択すると、ユーザーのパスワードの暗号化された形式がローカルでキャッシュされます。 これは、アプリケーションにオフライン モードを実装する場合に便利です。 このオプションを選択すると、<xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> プロパティが `true` に設定されている場合でもユーザーを検証できます。  
   
-3.  **[サーバー Cookie の期限が切れた場合は常に再度ログオンすることをユーザーに要求する]** をオンまたはオフにします。 認証 Cookie はリモート サービスで構成され、ユーザーのログインがアクティブであり続ける期間を示します。 Cookie を構成する方法の詳細については、「[authentication の forms 要素 (ASP.NET 設定スキーマ)](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3)」の「`timeout` 属性」を参照してください。  
+3.  **[サーバー Cookie の期限が切れた場合は常に再度ログオンすることをユーザーに要求する]** をオンまたはオフにします。 認証 Cookie はリモート サービスで構成され、ユーザーのログインがアクティブであり続ける期間を示します。 Cookie を構成する方法の詳細については、「[authentication の forms 要素 (ASP.NET 設定スキーマ)](https://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3)」の「`timeout` 属性」を参照してください。  
   
      このオプションを選択した場合、認証 Cookie の有効期限が切れた後にリモート ロールまたは Web 設定サービスにアクセスしようとすると、<xref:System.Net.WebException> がスローされます。 この例外を処理し、ログイン ダイアログ ボックスを表示して、ユーザーを再検証することができます。 この動作の例は、「[チュートリアル: クライアント アプリケーション サービスの使用](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)」を参照してください。 このオプションは、公共の場所に配置されたアプリケーションで、使用後にアプリケーションを実行中のままにしているユーザーが無期限に認証されないようにするのに便利です。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "32744757"
 ## <a name="using-custom-providers"></a>カスタム プロバイダーの使用  
  既定では、クライアント アプリケーション サービスの機能は、<xref:System.Web.ClientServices.Providers?displayProperty=nameWithType> 名前空間のプロバイダーを使用します。 **プロジェクト デザイナー**の **[サービス]** ページを使用してアプリケーションを構成すると、これらのプロバイダーへの参照が App.config ファイルに追加されます。 これらの既定のプロバイダーは、サーバー上の対応するプロバイダーにアクセスします。 Web サービスは、多くの場合、<xref:System.Web.Security.SqlMembershipProvider> や <xref:System.Web.Security.SqlRoleProvider> などのプロバイダーからユーザー データにアクセスするように構成されます。  
   
- カスタム サービス プロバイダーを使用する場合は、通常、サーバーにアクセスするすべてのクライアント アプリケーションに影響を与えるようにサーバー側のプロバイダーを変更します。 ただし、クライアント側で既定以外のプロバイダーを使用することもできます。 次の手順に示すように、プロジェクトの App.config ファイルでカスタム認証またはロール プロバイダーを指定できます。 カスタム認証とロール プロバイダーを作成する方法については、「[メンバーシップ プロバイダーを実装する](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)」と「[ロール プロバイダーを実装する](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)」を参照してください。 また、カスタム設定プロバイダーを使用するには、プロジェクトの `Settings` クラス (C# では `Properties.Settings.Default` として、Visual Basic では `My.Settings` としてアクセス) を変更します。 詳細については、「[アプリケーション設定アーキテクチャ](../../../docs/framework/winforms/advanced/application-settings-architecture.md)」を参照してください。  
+ カスタム サービス プロバイダーを使用する場合は、通常、サーバーにアクセスするすべてのクライアント アプリケーションに影響を与えるようにサーバー側のプロバイダーを変更します。 ただし、クライアント側で既定以外のプロバイダーを使用することもできます。 次の手順に示すように、プロジェクトの App.config ファイルでカスタム認証またはロール プロバイダーを指定できます。 カスタム認証とロール プロバイダーを作成する方法については、「[メンバーシップ プロバイダーを実装する](https://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)」と「[ロール プロバイダーを実装する](https://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)」を参照してください。 また、カスタム設定プロバイダーを使用するには、プロジェクトの `Settings` クラス (C# では `Properties.Settings.Default` として、Visual Basic では `My.Settings` としてアクセス) を変更します。 詳細については、「[アプリケーション設定アーキテクチャ](../../../docs/framework/winforms/advanced/application-settings-architecture.md)」を参照してください。  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>既定以外のプロバイダーを使用するようにクライアント アプリケーション サービスを構成するには  
   
@@ -147,7 +147,7 @@ ms.locfileid: "32744757"
  [[サービスの詳細設定] ダイアログ ボックス](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [方法: クライアント アプリケーション サービスでユーザーのログインを実装する](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [チュートリアル : クライアント アプリケーション サービスの使用](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
- [メンバシップ プロバイダの実装](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
- [ロール プロバイダの実装](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
+ [メンバシップ プロバイダの実装](https://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
+ [ロール プロバイダの実装](https://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
  [アプリケーション設定アーキテクチャ](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [SQL Server 向けアプリケーション サービス データベースの作成と構成](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+ [SQL Server 向けアプリケーション サービス データベースの作成と構成](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

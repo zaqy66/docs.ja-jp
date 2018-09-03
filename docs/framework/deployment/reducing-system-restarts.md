@@ -8,14 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e54dcb585c06f2bf49c41f763e03e5624a033442
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7e45a863c46090dd62d5e1c80b5f0149d9460cf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43424078"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5 のインストール中のシステム再起動の削減
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] インストーラーは[再起動マネージャー](http://go.microsoft.com/fwlink/?LinkId=231425)を使用して、インストール中のシステムの再起動をできる限り回避します。 アプリケーションのセットアップ プログラムで .NET Framework をインストールする場合は、再起動マネージャーとやり取りしてこの機能を利用できます。 詳しくは、「[方法: .NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)」をご覧ください。  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] インストーラーは[再起動マネージャー](https://go.microsoft.com/fwlink/?LinkId=231425)を使用して、インストール中のシステムの再起動をできる限り回避します。 アプリケーションのセットアップ プログラムで .NET Framework をインストールする場合は、再起動マネージャーとやり取りしてこの機能を利用できます。 詳しくは、「[方法: .NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)」をご覧ください。  
   
 ## <a name="reasons-for-a-restart"></a>再起動の理由  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] のインストールにおいて、.NET Framework 4 アプリケーションがインストール中に使用されている場合は、システムの再起動が必要になります。 これは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] が .NET Framework 4 のファイルを置き換え、インストール中にこれらのファイルが使用可能になっている必要があるためです。 多くの場合、再起動は使用中の .NET Framework 4 アプリケーションをプリエンティブに検出し、終了することで回避できます。 ただし、一部のシステム アプリケーションは終了しないでください。 このような場合、再起動は回避できません。  

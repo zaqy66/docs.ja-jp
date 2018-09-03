@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4e1e1671238d3cc5944bfe53b49f7d0ddd969aff
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105370"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43418641"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>複数のマイクロサービスによって生成されるビジュアル UI シェイプ、レイアウトなど、マイクロサービスを基にしている複合 UI を作成する
 
@@ -35,7 +35,7 @@ ms.locfileid: "37105370"
 
 マイクロサービスによってドライブされる複合 UI アプローチは、使用する UI テクノロジに応じて、直面する困難の度合いが異なる可能性があります。 たとえば、SPA またはネイティブ モバイル アプリをビルドするために使用する技法 (Xamarin アプリを開発する場合などで、このアプローチの場合は困難の度合いが大きい) が従来の Web アプリケーションをビルドするために使用する技法と異なる場合があります。
 
-[eShopOnContainers](http://aka.ms/MicroservicesArchitecture) サンプル アプリケーションでは複数の理由からモノリシック UI アプローチを使用します。 まず、マイクロサービスとコンテナーの場合です。 複合 UI は高度な技法であり、UI の設計および開発するときには複雑な処理も求められます。 次に、eShopOnContainers でも Xamarin に基づいたネイティブ モバイル アプリが実現されます。この場合は、クライアント C\# 側での処理がより複雑になります。
+[eShopOnContainers](https://aka.ms/MicroservicesArchitecture) サンプル アプリケーションでは複数の理由からモノリシック UI アプローチを使用します。 まず、マイクロサービスとコンテナーの場合です。 複合 UI は高度な技法であり、UI の設計および開発するときには複雑な処理も求められます。 次に、eShopOnContainers でも Xamarin に基づいたネイティブ モバイル アプリが実現されます。この場合は、クライアント C\# 側での処理がより複雑になります。
 
 次の参照情報を使用してマイクロサービスに基づく複合 UI に関する知識を深めることをお勧めします。
 

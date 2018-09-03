@@ -3,11 +3,11 @@ title: XML 名前空間の使用 (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
 ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330474"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416242"
 ---
 # <a name="working-with-xml-namespaces-c"></a>XML 名前空間の使用 (C#)
 このセクションのトピックでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] で名前空間がどのようにサポートされるかについて説明します。  

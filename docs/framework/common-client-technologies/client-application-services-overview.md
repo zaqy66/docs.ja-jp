@@ -5,12 +5,12 @@ helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-ms.openlocfilehash: 7ec8d2423c8f9d25ef48c0f0cc0d9627864c9c27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744497"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43408562"
 ---
 # <a name="client-application-services-overview"></a>クライアント アプリケーション サービスの概要
 クライアント アプリケーション サービスにより、Windows フォーム アプリケーションおよび Windows Presentation Foundation (WPF) アプリケーションから [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] ログイン サービス、ロール サービス、プロファイル サービスに簡単にアクセスできます。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスは、[!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] と [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] に付属している Microsoft ASP.NET 2.0 AJAX Extensions に含まれています。 これらのサービスにより、複数の Web ベースおよび Windows ベースのアプリケーションで、単一のサーバーから提供されるユーザー情報とユーザー管理機能を共有できます。  
@@ -25,7 +25,7 @@ ms.locfileid: "32744497"
   
 -   Visual Studio アプリケーション設定デザイナーとの統合。 Visual Studio でプロジェクトに設定を追加するときに、クライアント設定サービス プロバイダーを介してアクセスされる設定を指定できます。  
   
- 以下のセクションでは、これらの機能について詳しく説明します。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスの詳細については、「[ASP.NET アプリケーション サービスの概要](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)」を参照してください。  
+ 以下のセクションでは、これらの機能について詳しく説明します。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスの詳細については、「[ASP.NET アプリケーション サービスの概要](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)」を参照してください。  
   
 ## <a name="authentication"></a>認証  
  クライアント アプリケーション サービスを使用して、既存の [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 認証サービスを介してユーザーを検証できます。 Windows 認証またはフォーム認証を使用してユーザーを認証できます。 Windows 認証では、ユーザーがコンピューターまたはドメインにログオンしたときにオペレーティング システムによって付与されたユーザー ID が使用されます。 通常、社内イントラネット上に配置されているアプリケーションにはWindows 認証を使用します。 フォーム認証では、アプリケーションにログイン コントロールを組み込み、取得した資格情報を認証プロバイダーに渡します。 通常、インターネット上に配置されたアプリケーションにはフォーム認証を使用します。  
@@ -40,17 +40,17 @@ ms.locfileid: "32744497"
   
  フォーム認証で資格情報プロバイダーを使用するようにアプリケーションを構成する際には、<xref:System.Web.Security.Membership.ValidateUser%2A> メソッドのパラメーターとして空の文字列または `null` を渡す必要があります。 サービス プロバイダーは <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=nameWithType> メソッド実装を呼び出します。 通常、このメソッドを実装してダイアログ ボックスを表示し、データが設定された <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> オブジェクトを返します。  
   
- 認証の詳細については、「[ASP.NET の認証](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)」を参照してください。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 認証サービスの設定方法の詳細については、「[ASP.NET AJAX でのフォーム認証の使用](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)」を参照してください。  
+ 認証の詳細については、「[ASP.NET の認証](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)」を参照してください。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 認証サービスの設定方法の詳細については、「[ASP.NET AJAX でのフォーム認証の使用](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)」を参照してください。  
   
 ## <a name="roles"></a>役割  
  クライアント アプリケーション サービスを使用して、既存の [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] ロール サービスからロール情報を取得できます。 現在の認証済みユーザーが特定のロールに属すかどうかを判断するには、`static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> プロパティから取得された <xref:System.Security.Principal.IPrincipal> 参照の <xref:System.Security.Principal.IPrincipal.IsInRole%2A> メソッドを呼び出します。 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> メソッドは、パラメーターとしてロール名を受け取り、現在のユーザーが特定のロールにあるかどうかを示す <xref:System.Boolean> 値を返します。 ユーザーが認証されない場合、または指定されたロールに属していない場合、このメソッドは `false` を返します。  
   
- [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] ロール サービスの設定方法の詳細については、「[ASP.NET AJAX でのロール情報の使用](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)」を参照してください。  
+ [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] ロール サービスの設定方法の詳細については、「[ASP.NET AJAX でのロール情報の使用](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)」を参照してください。  
   
 ## <a name="settings"></a>設定  
  クライアント アプリケーション サービスを使用して、既存の [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] プロファイル サービスからユーザー アプリケーション設定を取得できます。 クライアント アプリケーション サービスの Web 設定機能は、[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] のアプリケーション設定機能と統合されています。 Web 設定を取得するには、まず、Visual Studio プロジェクト デザイナーの **[設定]** タブを使用して、プロジェクトの `Settings` クラス (C# では `Properties.Settings.Default`、Visual Basic では `My.Settings` としてアクセスされる) を生成します。 **[設定]** タブの **[Web 設定の読み込み]** ボタンをクリックして Web 設定を読み込み、これを生成された `Settings` クラスに追加することができます。 すべての認証済みユーザーまたはすべての匿名ユーザーによって使用されるように構成された Web 設定を使用できます。  
   
- アプリケーション設定の詳細については、「[アプリケーション設定の概要](../../../docs/framework/winforms/advanced/application-settings-overview.md)」を参照してください。 Visual Studio で設定クラスを生成するのではなく独自の設定クラスを実装する方法について詳しくは、「[方法: アプリケーション設定を作成する](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)」をご覧ください。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] プロファイル サービスの設定方法の詳細については、「[ASP.NET AJAX でのプロファイル情報の使用](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)」を参照してください。  
+ アプリケーション設定の詳細については、「[アプリケーション設定の概要](../../../docs/framework/winforms/advanced/application-settings-overview.md)」を参照してください。 Visual Studio で設定クラスを生成するのではなく独自の設定クラスを実装する方法について詳しくは、「[方法: アプリケーション設定を作成する](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)」をご覧ください。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] プロファイル サービスの設定方法の詳細については、「[ASP.NET AJAX でのプロファイル情報の使用](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)」を参照してください。  
   
 ## <a name="client-application-services-classes"></a>クライアント アプリケーション サービスのクラス  
  次の表は、クライアント アプリケーション サービス機能を実装するクラスの説明です。  
@@ -82,10 +82,10 @@ ms.locfileid: "32744497"
  [方法: クライアント アプリケーション サービスでユーザーのログインを実装する](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [チュートリアル : クライアント アプリケーション サービスの使用](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [アプリケーション設定の概要](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [ASP.NET アプリケーション サービスの概要](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
- [ASP.NET AJAX でのフォーム認証の使用](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [ASP.NET AJAX でのロール情報の使用](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [ASP.NET AJAX でのプロファイル情報の使用](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
- [ASP.NET の認証](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
- [ロールを使用した承認の管理](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
- [SQL Server 向けアプリケーション サービス データベースの作成と構成](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+ [ASP.NET アプリケーション サービスの概要](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [ASP.NET AJAX でのフォーム認証の使用](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [ASP.NET AJAX でのロール情報の使用](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [ASP.NET AJAX でのプロファイル情報の使用](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [ASP.NET の認証](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
+ [ロールを使用した承認の管理](https://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
+ [SQL Server 向けアプリケーション サービス データベースの作成と構成](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

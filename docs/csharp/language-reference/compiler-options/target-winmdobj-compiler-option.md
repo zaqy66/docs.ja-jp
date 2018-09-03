@@ -2,15 +2,15 @@
 title: -target:winmdobj (C# コンパイラ オプション)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: b0b1ec0bed174484e9ed7b9ecddbe82b0c705325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38d0dedbca56475d4f2561c99e8b29e01e9d7a90
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218659"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473932"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C# コンパイラ オプション)
-**-target:winmdobj** コンパイラ オプションを使用すると、コンパイラは、Windows ランタイム バイナリ (.winmd) ファイルに変換できる .winmdobj 中間ファイルを作成します。 .winmd ファイルは、マネージ言語プログラムだけでなく JavaScript および C++ プログラムでも使用できます。  
+**-target:winmdobj** コンパイラ オプションを使用すると、コンパイラは、Windows ランタイム バイナリ (.winmd) ファイルに変換できる .winmdobj 中間ファイルを作成します。 .winmd ファイルは、マネージド言語プログラムだけでなく JavaScript および C++ プログラムでも使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,5 +47,6 @@ csc -target:winmdobj filename.cs
 ```  
   
 ## <a name="see-also"></a>参照  
- [-target (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)

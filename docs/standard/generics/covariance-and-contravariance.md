@@ -14,11 +14,11 @@ ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80c3a772ae4dfba53982ed28c0bd54f500c50b08
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932949"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43466055"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>ジェネリックの共変性と反変性
 <a name="top"></a> 共変性と反変性は、元の指定よりも強い派生型 (具体性が高い) と弱い派生型 (具体性が低い) を使用する能力を示す用語です。 ジェネリック型パラメーターは、ジェネリック型の代入と使用の柔軟性を向上させるために、共変性と反変性をサポートしています。 型システムにおいて、共変性、反変性、および不変性は、次のように定義されます。 各例では、基底クラスが `Base` という名前であり、派生クラスが `Derived`という名前であるとします。  
@@ -27,14 +27,13 @@ ms.locfileid: "42932949"
   
      最初に指定された型よりも強い派生型を使用できるようにします。  
   
-     `IEnumerable<Derived>` (Visual Basic では`IEnumerable(Of Derived)` ) のインスタンスを `IEnumerable<Base>`型の変数に割り当てることができます。  
+     `IEnumerable<Derived>` (Visual Basic では `IEnumerable(Of Derived)`) のインスタンスを `IEnumerable<Base>` 型の変数に割り当てることができます。  
   
 -   `Contravariance`  
   
      最初に指定された型よりも一般的な (弱い派生の) 型を使用できるようにします。  
   
-     
-          `Action<Base>` (Visual Basic では `Action(Of Base)`) のインスタンスを `Action<Derived>` 型の変数に割り当てることができます。  
+     `Action<Base>` (Visual Basic では `Action(Of Base)`) のインスタンスを `Action<Derived>` 型の変数に割り当てることができます。  
   
 -   `Invariance`  
   

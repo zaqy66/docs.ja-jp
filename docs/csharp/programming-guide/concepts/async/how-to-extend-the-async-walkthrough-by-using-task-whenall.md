@@ -2,12 +2,12 @@
 title: '方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 4bdd3f32d2fa502de8ada352c522198a89a17f97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7df5c1f1ffbcc8c60fd6ed0596088f0842ef9ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339470"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482815"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)
 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> メソッドを使用すると、「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」の非同期ソリューションのパフォーマンスを向上できます。 このメソッドは、タスクのコレクションとして表される、複数の非同期操作を非同期に待機します。  
@@ -61,7 +61,7 @@ ms.locfileid: "33339470"
     //}  
     ```  
   
-3.  タスクのコレクションを作成します。 次のコードは、<xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)を定義します。 タスクは、クエリが評価されるときに開始されます。  
+3.  タスクのコレクションを作成します。 次のコードは、<xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)を定義します。 タスクは、クエリが評価されるときに開始されます。  
   
      `SumPageSizesAsync` の宣言の後の `urlList` メソッドに、次のコードを追加します。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "33339470"
     //}  
     ```  
   
-3.  <xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)を定義します。 タスクは、クエリが評価されるときに開始されます。  
+3.  <xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)を定義します。 タスクは、クエリが評価されるときに開始されます。  
   
      `SumPageSizesAsync` および `client` の宣言の後の `urlList` メソッドに、次のコードを追加します。  
   

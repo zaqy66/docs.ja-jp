@@ -3,12 +3,12 @@ title: 実行時における述語フィルターの動的指定 (C# での LINQ
 description: C# で LINQ を使用して、実行時に述語フィルターを動的に指定する方法について説明します。
 ms.date: 12/1/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: 7051d7c754a0db29771a2e03a3b624c0e434eecd
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6798b80d482bd6ae2133c0bf861f30c43f6738b1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404091"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482041"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>実行時における述語フィルターの動的指定
 
@@ -70,5 +70,5 @@ ms.locfileid: "37404091"
 
 ## <a name="see-also"></a>関連項目
 
-[統合言語クエリ (LINQ)](index.md)  
-[where 句](../language-reference/keywords/where-clause.md)  
+- [統合言語クエリ (LINQ)](index.md)
+- [where 句](../language-reference/keywords/where-clause.md)

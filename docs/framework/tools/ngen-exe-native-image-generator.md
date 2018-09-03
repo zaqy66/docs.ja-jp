@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0811e32a9483238d1cd15084c19951075c8a36a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3875b4f44a2c2aad5cc5021d55e22e99bb00a91e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399555"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405907"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (ネイティブ イメージ ジェネレーター)
-ネイティブ イメージ ジェネレーター (Ngen.exe) は、マネージ アプリケーションのパフォーマンスを向上するツールです。 Ngen.exe は、コンパイルされたプロセッサ固有のマシン コードを含むファイルであるネイティブ イメージを作成してローカル コンピューターのネイティブ イメージ キャッシュにインストールします。 ランタイムは、Just-In-Time (JIT) コンパイラを使用してオリジナルのアセンブリをコンパイルする代わりに、キャッシュにあるネイティブ イメージを使用できます。  
+ネイティブ イメージ ジェネレーター (Ngen.exe) は、マネージド アプリケーションのパフォーマンスを向上するツールです。 Ngen.exe は、コンパイルされたプロセッサ固有のマシン コードを含むファイルであるネイティブ イメージを作成してローカル コンピューターのネイティブ イメージ キャッシュにインストールします。 ランタイムは、Just-In-Time (JIT) コンパイラを使用してオリジナルのアセンブリをコンパイルする代わりに、キャッシュにあるネイティブ イメージを使用できます。  
   
  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] では、次の変更が Ngen.exe に加えられました。  
   
@@ -48,12 +48,12 @@ ms.locfileid: "33399555"
   
 -   イメージを無効化する原因の一部が解決されました。  
   
- Windows 8 の場合、「[ネイティブ イメージ タスク](http://msdn.microsoft.com/library/9b1f7590-4e0d-4737-90ef-eaf696932afb)」を参照してください。  
+ Windows 8 の場合、「[ネイティブ イメージ タスク](#native-image-task)」を参照してください。  
   
  Ngen.exe とネイティブ イメージ サービスの使用に関する追加情報については、「[ネイティブ イメージ サービス][Native Image Service]」を参照してください。  
   
 > [!NOTE]
->  .NET Framework バージョン 1.0 とバージョン 1.1 の Ngen.exe 構文は、「[ネイティブ イメージ ジェネレーター (Ngen.exe) のレガシ構文](http://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324)」に記されています。  
+>  .NET Framework バージョン 1.0 とバージョン 1.1 の Ngen.exe 構文は、「[ネイティブ イメージ ジェネレーター (Ngen.exe) のレガシ構文](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324)」に記されています。  
   
  このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
@@ -140,7 +140,7 @@ ngen /? | /help
   
  Ngen.exe は依存関係のカウントを保持します。 たとえば、`MyAssembly.exe` と `YourAssembly.exe` がネイティブ イメージ キャッシュにインストールされており、この両方とも `OurDependency.dll` を参照するとします。 `MyAssembly.exe` がアンインストールされても、`OurDependency.dll` はアンインストールされません。 これが削除されるのは、`YourAssembly.exe` もアンインストールされた場合だけです。  
   
- アセンブリのネイティブ イメージをグローバル アセンブリ キャッシュに生成している場合は表示名を指定します。 「<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>」を参照してください。  
+ アセンブリのネイティブ イメージをグローバル アセンブリ キャッシュに生成している場合は表示名を指定します。 以下を参照してください。<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>  
   
  Ngen.exe が生成するネイティブ イメージは、アプリケーション ドメイン間で共有できます。 つまり、アプリケーション ドメイン間でアセンブリを共有する必要のあるアプリケーション シナリオでは Ngen.exe を使用できます。 ドメイン中立性は、次の手順で指定します。  
   
@@ -183,7 +183,7 @@ ngen /? | /help
   
     -   [アセンブリ バインディング ログ ビューアー](#Fusion)  
   
-    -   [JITCompilationStart マネージ デバッグ アシスタント](#MDA)  
+    -   [JITCompilationStart マネージド デバッグ アシスタント](#MDA)  
   
     -   [ネイティブ イメージ生成の中止](#OptOut)  
   
@@ -261,7 +261,7 @@ ngen /? | /help
  ネイティブ イメージにベース アドレスを設定するには、コンパイラの適切なオプションを使用してアセンブリのベース アドレスを設定します。 Ngen.exe は、このベース アドレスをネイティブ イメージに使用します。  
   
 > [!NOTE]
->  ネイティブ イメージは、元になるマネージ アセンブリより大きくなります。 ベース アドレスは、この大きなサイズを考慮して算出する必要があります。  
+>  ネイティブ イメージは、元になるマネージド アセンブリより大きくなります。 ベース アドレスは、この大きなサイズを考慮して算出する必要があります。  
   
  dumpbin.exe などのツールを使用すると、ネイティブ イメージの推奨ベース アドレスを表示できます。  
   
@@ -351,7 +351,7 @@ using namespace System::Runtime::CompilerServices;
   
 -   アセンブリが参照するすべてのアセンブリの正確な ID。  
   
-     マネージ アセンブリを更新する場合、そのアセンブリに直接または間接に依存するすべてのネイティブ イメージが無効になるため、これらを再生成する必要があります。 これには、通常の参照と強くバインドされた依存関係も含まれます。 ソフトウェア更新プログラムを適用するときには、インストール プログラムで `Ngen Update` コマンドを実行して、依存するすべてのネイティブ イメージを再生成する必要があります。  
+     マネージド アセンブリを更新する場合、そのアセンブリに直接または間接に依存するすべてのネイティブ イメージが無効になるため、これらを再生成する必要があります。 これには、通常の参照と強くバインドされた依存関係も含まれます。 ソフトウェア更新プログラムを適用するときには、インストール プログラムで `Ngen Update` コマンドを実行して、依存するすべてのネイティブ イメージを再生成する必要があります。  
   
 -   セキュリティ関連の要因。  
   
@@ -368,8 +368,8 @@ using namespace System::Runtime::CompilerServices;
  アプリケーションでネイティブ イメージが使用されているかどうかを確認するには、[Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用できます。 バインディング ログ ビューアーのウィンドウの **[ログのカテゴリ]** ボックスで、**[ネイティブ イメージ]** をクリックします。 Fuslogvw.exe は、ネイティブ イメージが拒否された理由に関する情報を提供します。  
   
 <a name="MDA"></a>   
-### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>JITCompilationStart マネージ デバッグ アシスタント  
- [jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) マネージ デバッグ アシスタント (MDA) を使用すると、JIT コンパイラが関数のコンパイルを開始するタイミングを判別できます。  
+### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>JITCompilationStart マネージド デバッグ アシスタント  
+ [jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) マネージド デバッグ アシスタント (MDA) を使用すると、JIT コンパイラが関数のコンパイルを開始するタイミングを判別できます。  
   
 <a name="OptOut"></a>   
 ### <a name="opting-out-of-native-image-generation"></a>ネイティブ イメージ生成の中止  
@@ -514,7 +514,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
  ネイティブ イメージ サービスに関連する例については、「[ネイティブ イメージ サービス][Native Image Service]」を参照してください。  
   
 ## <a name="native-image-task"></a>ネイティブ イメージ タスク  
- ネイティブ イメージ タスクは、ネイティブ イメージを生成および保持する Windows タスクです。 ネイティブ イメージ タスクは、サポートされるシナリオでネイティブ イメージを自動的に生成し、解放します。 (「[ネイティブ イメージの作成](http://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418)」を参照してください)。また、インストーラーが、[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) を使用して、遅延時にネイティブ イメージを生成および更新できるようにします。  
+ ネイティブ イメージ タスクは、ネイティブ イメージを生成および保持する Windows タスクです。 ネイティブ イメージ タスクは、サポートされるシナリオでネイティブ イメージを自動的に生成し、解放します。 (「[ネイティブ イメージの作成](https://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418)」を参照してください)。また、インストーラーが、[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) を使用して、遅延時にネイティブ イメージを生成および更新できるようにします。  
   
  各アーキテクチャを対象とするアプリケーションのコンパイルを許可するために、ネイティブ イメージ タスクはコンピューターでサポートされる CPU アーキテクチャごとに一度登録されます。  
   
@@ -586,7 +586,7 @@ ngen executeQueuedItems
   
 ## <a name="see-also"></a>参照  
  [ツール](../../../docs/framework/tools/index.md)  
- [マネージ実行プロセス](../../../docs/standard/managed-execution-process.md)  
+ [マネージド実行プロセス](../../../docs/standard/managed-execution-process.md)  
  [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 

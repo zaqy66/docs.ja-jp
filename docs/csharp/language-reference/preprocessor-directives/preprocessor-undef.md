@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: 2877ab7cb1b124dd26a76766cdc9940caf454f4e
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 3957d58f61e51fab01618f5e1146be9cd0da58fd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143493"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467147"
 ---
 # <a name="undef-c-reference"></a>#undef (C# リファレンス)
 `#undef` を使用すると、シンボルを未定義にすることができます。未定義のシンボルを [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ディレクティブで式として使用すると、その式は `false` と評価されます。  
@@ -19,15 +19,15 @@ ms.locfileid: "37143493"
  シンボルは、[#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) ディレクティブまたは [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) コンパイラ オプションのいずれかで定義できます。 `#undef` ディレクティブは、ファイル内で、ディレクティブではない他のステートメントよりも前に記述する必要があります。  
   
 ## <a name="example"></a>例  
-  
+
 ```csharp
 // preprocessor_undef.cs  
 // compile with: /d:DEBUG  
 #undef DEBUG  
 using System;  
-class MyClass   
+class MyClass
 {  
-    static void Main()   
+    static void Main()
     {  
 #if DEBUG  
         Console.WriteLine("DEBUG is defined");  
@@ -36,10 +36,12 @@ class MyClass
 #endif  
     }  
 }  
-```  
-  
- **DEBUG が定義されていません**  
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# プリプロセッサ ディレクティブ](../../../csharp/language-reference/preprocessor-directives/index.md)
+```
+
+**DEBUG が定義されていません**
+
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プリプロセッサ ディレクティブ](../../../csharp/language-reference/preprocessor-directives/index.md)

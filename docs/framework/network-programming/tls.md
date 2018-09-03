@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925505"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389778"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -231,7 +231,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-schannel-protocols-in-the-windows-registry"></a>Windows レジストリでの Schannel プロトコルの構成
 
-レジストリを使って、クライアントやサーバー アプリがネゴシエートするプロトコルをきめ細かく制御することができます。 アプリのネットワークは Schannel ([Secure Channel (セキュリティで保護されたチャネル)](https://msdn.microsoft.com/library/windows/desktop/aa380123) の別名) を通してやり取りされます。 `Schannel` を構成することにより、アプリの動作を構成することができます。
+レジストリを使って、クライアントやサーバー アプリがネゴシエートするプロトコルをきめ細かく制御することができます。 アプリのネットワークは Schannel ([Secure Channel (セキュリティで保護されたチャネル)](/windows/desktop/SecAuthN/secure-channel) の別名) を通してやり取りされます。 `Schannel` を構成することにより、アプリの動作を構成することができます。
 
 最上位は `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` レジストリ キーです。 そのキーの下に、`SSL 2.0`、`SSL 3.0`、`TLS 1.0`、`TLS 1.1`、`TLS 1.2` のセットで任意のサブキーを作成できます。 これらの各サブキーの下に、サブキー `Client` と `Server` の一方または両方を作成できます。 `Client` および `Server` の下には、DWORD 値 `DisabledByDefault` (0 または 1) および `Enabled` (0 または 0xFFFFFFFF) を作成できます。
 
@@ -239,8 +239,8 @@ Windows Registry Editor Version 5.00
 
 有効になっている場合 (既定では、`AppContext` スイッチまたは Windows レジストリにより)、アプリが TLS セキュリティ プロトコルを要求すると、.NET Framework は `SCH_USE_STRONG_CRYPTO` フラグを使います。 `SCH_USE_STRONG_CRYPTO` フラグは、`AppContext` スイッチまたはレジストリを使って、既定で有効にすることができます。 OS は `Schannel` にフラグを渡して、既知の脆弱な暗号アルゴリズム、暗号スイート、および相互運用性向上のために他で有効になっている可能性のある TLS/SSL プロトコルのバージョンを無効にするよう指示します。 詳細については次を参照してください:
 
-- [セキュリティで保護されたチャネル](https://msdn.microsoft.com/library/windows/desktop/aa380123)
-- [SCHANNEL_CRED 構造体](https://msdn.microsoft.com/library/windows/desktop/aa379810)
+- [セキュリティで保護されたチャネル](/windows/desktop/SecAuthN/secure-channel)
+- [SCHANNEL_CRED 構造体](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
 
 `SCH_USE_STRONG_CRYPTO` フラグは、ユーザーが <xref:System.Net.SecurityProtocolType> または <xref:System.Security.Authentication.SslProtocols> の `Tls` (TLS 1.0)、`Tls11`、または `Tls12` 列挙値を明示的に使ったときも、`Schannel` に渡されます。
 

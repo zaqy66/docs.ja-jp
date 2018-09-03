@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6519cb6bb7006f62ef83cd6baf8f2e32a44d19
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c3bd568cf504125bc99801815d08764417b42cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744383"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43468999"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>方法 : グローバル アセンブリ キャッシュにアセンブリをインストールする
 厳密な名前付きのアセンブリをグローバル アセンブリ キャッシュ (GAC) にインストールには、次の 2 つの方法があります。  
@@ -23,7 +23,7 @@ ms.locfileid: "32744383"
 > [!IMPORTANT]
 >  GAC にインストールできるのは、厳密な名前付きのアセンブリだけです。 厳密な名前付きのアセンブリを作成する方法については、「[方法: 厳密な名前でアセンブリに署名する](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)」を参照してください。  
   
--   [Windows インストーラー](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx)を使用する。  
+-   [Windows インストーラー](/windows/desktop/Msi/windows-installer-portal)を使用する。  
   
      この操作を行うには、Visual Studio 2012 および Visual Studio 2013 で、InstallShield Limited Edition プロジェクトを作成します。  
   
@@ -82,4 +82,4 @@ gacutil -i hello.dll
  [方法: グローバル アセンブリ キャッシュからアセンブリを削除する](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  [Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [方法: 厳密な名前でアセンブリに署名する](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Windows インストーラーの配置](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)
+ [Windows インストーラーの配置](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)

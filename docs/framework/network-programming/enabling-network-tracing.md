@@ -14,15 +14,15 @@ ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56a24f93e92fbfbd2dbb1156a1c3ef786f59034e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0ab0aeecdbd6cf763ae34cfa3bcd50af1874d39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390462"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421491"
 ---
 # <a name="enabling-network-tracing"></a>ネットワークのトレースの有効化
-ネットワークのトレースでは、メソッド呼び出しについての情報、およびマネージ アプリケーションによって生成されるネットワーク トラフィックについての情報にアクセスできます。 アプリケーションでネットワーク トレースを有効にするには、次のタスクを実行する必要があります。  
+ネットワークのトレースでは、メソッド呼び出しについての情報、およびマネージド アプリケーションによって生成されるネットワーク トラフィックについての情報にアクセスできます。 アプリケーションでネットワーク トレースを有効にするには、次のタスクを実行する必要があります。  
   
 -   トレースを有効にしてコードをコンパイルします。 トレースを有効にするために必要なコンパイラ スイッチの詳細については、「[方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)」を参照してください。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33390462"
   
  最も一般的なトレース先 (トレース リスナーとも呼ばれます) は、既定のリスナーとログ ファイルです。  
   
- トレース リスナーを指定しない場合、トレースは既定のリスナーを使用します。 .NET Framework SDK に付属の CLR デバッガーや、Windows SDK に付属の DBwin32.exe などのマネージ コード対応のデバッガーでコードを実行することで、既定のリスナーに送信されたメッセージを表示することができます。 CLR デバッガーを使用すると、**[出力]** ウィンドウにトレース メッセージが表示されます。  
+ トレース リスナーを指定しない場合、トレースは既定のリスナーを使用します。 .NET Framework SDK に付属の CLR デバッガーや、Windows SDK に付属の DBwin32.exe などのマネージド コード対応のデバッガーでコードを実行することで、既定のリスナーに送信されたメッセージを表示することができます。 CLR デバッガーを使用すると、**[出力]** ウィンドウにトレース メッセージが表示されます。  
   
  ファイルを使用してトレースを受信する場合は、次の例のように、構成設定を使用して、ログ ファイルを指定できます  (構成ファイルに関する全般的な説明については、「[構成ファイル](../../../docs/framework/configure-apps/index.md)」を参照してください)。  
   
@@ -51,4 +51,4 @@ ms.locfileid: "33390462"
 ## <a name="see-also"></a>参照  
  [ネットワークのトレースの解釈](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [.NET Framework のネットワークのトレース](../../../docs/framework/network-programming/network-tracing.md)  
- [実装とトレースの概要](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [実装とトレースの概要](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

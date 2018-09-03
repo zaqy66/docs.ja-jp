@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935394"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396117"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>単純なデータ ドリブン CRUD マイクロサービスの作成
 
@@ -326,7 +326,7 @@ Swagger のメタデータは、Microsoft Flow、PowerApps、Azure Logic Apps �
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Swashbuckle NuGet パッケージで API Swagger メタデータの生成を自動化する方法
 
-手動での (JSON または YAML ファイルでの) Swagger メタデータの生成は面倒な作業となる場合があります。 ただし、[Swashbuckle NuGet パッケージ](http://aka.ms/swashbuckledotnetcore)を使用して Swagger API メタデータを動的に生成して、ASP.NET Web API サービスの API 検出を自動化することができます。
+手動での (JSON または YAML ファイルでの) Swagger メタデータの生成は面倒な作業となる場合があります。 ただし、[Swashbuckle NuGet パッケージ](https://aka.ms/swashbuckledotnetcore)を使用して Swagger API メタデータを動的に生成して、ASP.NET Web API サービスの API 検出を自動化することができます。
 
 Swashbuckle では、ASP.NET Web API プロジェクトの Swagger メタデータが自動的に生成されます。 ASP.NET Core Web API プロジェクトと従来の ASP.NET Web API、さらに Azure API アプリ、Azure Mobile App、ASP.NET に基づく Azure Service Fabric マイクロサービスなどのその他のフレーバーがサポートされます。 また、参照アプリケーションの場合と同様に、コンテナーにデプロイされている単純な Web API もサポートされます。
 
