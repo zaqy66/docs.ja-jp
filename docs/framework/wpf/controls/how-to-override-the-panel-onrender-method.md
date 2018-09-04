@@ -15,23 +15,23 @@ helpviewer_keywords:
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
 ms.openlocfilehash: 8f3b65bdfe96efdc57c6b8d30991439d3bdb0bc5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404437"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506216"
 ---
-# <a name="how-to-override-the-panel-onrender-method"></a><span data-ttu-id="fbbcf-102">方法 : パネルの OnRender メソッドをオーバーライドする</span><span class="sxs-lookup"><span data-stu-id="fbbcf-102">How to: Override the Panel OnRender Method</span></span>
-<span data-ttu-id="fbbcf-103">この例は、オーバーライドする方法を示します、<xref:System.Windows.Controls.Panel.OnRender%2A>メソッドの<xref:System.Windows.Controls.Panel>レイアウト要素にカスタムのグラフィカルな効果を追加するためにします。</span><span class="sxs-lookup"><span data-stu-id="fbbcf-103">This example shows how to override the <xref:System.Windows.Controls.Panel.OnRender%2A> method of <xref:System.Windows.Controls.Panel> in order to add custom graphical effects to a layout element.</span></span>  
+# <a name="how-to-override-the-panel-onrender-method"></a><span data-ttu-id="8abc5-102">方法 : パネルの OnRender メソッドをオーバーライドする</span><span class="sxs-lookup"><span data-stu-id="8abc5-102">How to: Override the Panel OnRender Method</span></span>
+<span data-ttu-id="8abc5-103">この例は、オーバーライドする方法を示します、<xref:System.Windows.Controls.Panel.OnRender%2A>メソッドの<xref:System.Windows.Controls.Panel>レイアウト要素にカスタムのグラフィカルな効果を追加するためにします。</span><span class="sxs-lookup"><span data-stu-id="8abc5-103">This example shows how to override the <xref:System.Windows.Controls.Panel.OnRender%2A> method of <xref:System.Windows.Controls.Panel> in order to add custom graphical effects to a layout element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fbbcf-104">例</span><span class="sxs-lookup"><span data-stu-id="fbbcf-104">Example</span></span>  
- <span data-ttu-id="fbbcf-105">使用して、<xref:System.Windows.Controls.Panel.OnRender%2A>表示パネル要素にグラフィック効果を追加するにはメソッドです。</span><span class="sxs-lookup"><span data-stu-id="fbbcf-105">Use the <xref:System.Windows.Controls.Panel.OnRender%2A> method in order to add graphical effects to a rendered panel element.</span></span> <span data-ttu-id="fbbcf-106">たとえば、このメソッドを使用すると、カスタム境界線や背景の効果を追加します。</span><span class="sxs-lookup"><span data-stu-id="fbbcf-106">For example, you can use this method to add custom border or background effects.</span></span> <span data-ttu-id="fbbcf-107">A<xref:System.Windows.Media.DrawingContext>オブジェクトは、図形、テキスト、画像、またはビデオを描画するためのメソッドを提供する引数として渡されます。</span><span class="sxs-lookup"><span data-stu-id="fbbcf-107">A <xref:System.Windows.Media.DrawingContext> object is passed as an argument, which provides methods for drawing shapes, text, images, or videos.</span></span> <span data-ttu-id="fbbcf-108">その結果、このメソッドは、パネル オブジェクトのカスタマイズに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="fbbcf-108">As a result, this method is useful for customization of a panel object.</span></span>  
+## <a name="example"></a><span data-ttu-id="8abc5-104">例</span><span class="sxs-lookup"><span data-stu-id="8abc5-104">Example</span></span>  
+ <span data-ttu-id="8abc5-105">使用して、<xref:System.Windows.Controls.Panel.OnRender%2A>表示パネル要素にグラフィック効果を追加するにはメソッドです。</span><span class="sxs-lookup"><span data-stu-id="8abc5-105">Use the <xref:System.Windows.Controls.Panel.OnRender%2A> method in order to add graphical effects to a rendered panel element.</span></span> <span data-ttu-id="8abc5-106">たとえば、このメソッドを使用すると、カスタム境界線や背景の効果を追加します。</span><span class="sxs-lookup"><span data-stu-id="8abc5-106">For example, you can use this method to add custom border or background effects.</span></span> <span data-ttu-id="8abc5-107">A<xref:System.Windows.Media.DrawingContext>オブジェクトは、図形、テキスト、画像、またはビデオを描画するためのメソッドを提供する引数として渡されます。</span><span class="sxs-lookup"><span data-stu-id="8abc5-107">A <xref:System.Windows.Media.DrawingContext> object is passed as an argument, which provides methods for drawing shapes, text, images, or videos.</span></span> <span data-ttu-id="8abc5-108">その結果、このメソッドは、パネル オブジェクトのカスタマイズに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="8abc5-108">As a result, this method is useful for customization of a panel object.</span></span>  
   
  [!code-csharp[LightWeightCustomPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LightWeightCustomPanel/CSharp/OffsetPanel.cs#1)]
  [!code-vb[LightWeightCustomPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LightWeightCustomPanel/visualbasic/offsetpanel.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="fbbcf-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="fbbcf-109">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8abc5-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="8abc5-109">See Also</span></span>  
  <xref:System.Windows.Controls.Panel>  
- [<span data-ttu-id="fbbcf-110">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="fbbcf-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="fbbcf-111">カスタム放射状パネルのサンプル</span><span class="sxs-lookup"><span data-stu-id="fbbcf-111">Custom Radial Panel Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159982)  
- [<span data-ttu-id="fbbcf-112">方法トピック</span><span class="sxs-lookup"><span data-stu-id="fbbcf-112">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)
+ [<span data-ttu-id="8abc5-110">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="8abc5-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [<span data-ttu-id="8abc5-111">カスタム放射状パネルのサンプル</span><span class="sxs-lookup"><span data-stu-id="8abc5-111">Custom Radial Panel Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159982)  
+ [<span data-ttu-id="8abc5-112">方法トピック</span><span class="sxs-lookup"><span data-stu-id="8abc5-112">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)

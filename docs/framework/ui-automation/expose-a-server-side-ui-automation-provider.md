@@ -12,25 +12,25 @@ ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9700b9cfef92da48a61b033ecf7b7357c113a994
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6180a5091b6072af97fd108b27a8dbe6cfd71324
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400381"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501274"
 ---
-# <a name="expose-a-server-side-ui-automation-provider"></a><span data-ttu-id="91015-102">サーバー側 UI オートメーション プロバイダーの公開</span><span class="sxs-lookup"><span data-stu-id="91015-102">Expose a Server-side UI Automation Provider</span></span>
+# <a name="expose-a-server-side-ui-automation-provider"></a><span data-ttu-id="7c4ce-102">サーバー側 UI オートメーション プロバイダーの公開</span><span class="sxs-lookup"><span data-stu-id="7c4ce-102">Expose a Server-side UI Automation Provider</span></span>
 > [!NOTE]
->  <span data-ttu-id="91015-103">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="91015-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="91015-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="91015-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="7c4ce-103">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="7c4ce-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="7c4ce-104">に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。</span><span class="sxs-lookup"><span data-stu-id="7c4ce-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="91015-105">このトピックにはでホストされているサーバー側 UI オートメーション プロバイダーを公開する方法を示すコード例が含まれています、<xref:System.Windows.Forms.Control?displayProperty=nameWithType>ウィンドウです。</span><span class="sxs-lookup"><span data-stu-id="91015-105">This topic contains example code that shows how to expose a server-side UI Automation provider that is hosted in a <xref:System.Windows.Forms.Control?displayProperty=nameWithType> window.</span></span>  
+ <span data-ttu-id="7c4ce-105">このトピックにはでホストされているサーバー側 UI オートメーション プロバイダーを公開する方法を示すコード例が含まれています、<xref:System.Windows.Forms.Control?displayProperty=nameWithType>ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="7c4ce-105">This topic contains example code that shows how to expose a server-side UI Automation provider that is hosted in a <xref:System.Windows.Forms.Control?displayProperty=nameWithType> window.</span></span>  
   
- <span data-ttu-id="91015-106">この例は、WM_GETOBJECT (クライアント アプリケーションがウィンドウに関する情報を要求したときに、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コア サービスによって送信されるメッセージ) をトラップするためのウィンドウ プロシージャをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="91015-106">The example overrides the window procedure to trap WM_GETOBJECT, which is the message sent by the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core service when a client application requests information about the window.</span></span>  
+ <span data-ttu-id="7c4ce-106">この例は、WM_GETOBJECT (クライアント アプリケーションがウィンドウに関する情報を要求したときに、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コア サービスによって送信されるメッセージ) をトラップするためのウィンドウ プロシージャをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="7c4ce-106">The example overrides the window procedure to trap WM_GETOBJECT, which is the message sent by the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core service when a client application requests information about the window.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="91015-107">例</span><span class="sxs-lookup"><span data-stu-id="91015-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7c4ce-107">例</span><span class="sxs-lookup"><span data-stu-id="7c4ce-107">Example</span></span>  
  [!code-csharp[UIAFragmentProvider_snip#116](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#116)]
  [!code-vb[UIAFragmentProvider_snip#116](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#116)]  
   
-## <a name="see-also"></a><span data-ttu-id="91015-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="91015-108">See Also</span></span>  
- [<span data-ttu-id="91015-109">UI オートメーション プロバイダーの概要</span><span class="sxs-lookup"><span data-stu-id="91015-109">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [<span data-ttu-id="91015-110">サーバー側 UI オートメーション プロバイダーの実装</span><span class="sxs-lookup"><span data-stu-id="91015-110">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a><span data-ttu-id="7c4ce-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="7c4ce-108">See Also</span></span>  
+ [<span data-ttu-id="7c4ce-109">UI オートメーション プロバイダーの概要</span><span class="sxs-lookup"><span data-stu-id="7c4ce-109">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
+ [<span data-ttu-id="7c4ce-110">サーバー側 UI オートメーション プロバイダーの実装</span><span class="sxs-lookup"><span data-stu-id="7c4ce-110">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
