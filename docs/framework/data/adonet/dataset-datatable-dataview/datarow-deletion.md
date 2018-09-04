@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
 ms.openlocfilehash: e7e687dfa6af47161be9d26054eb58f319a5099d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425597"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502701"
 ---
 # <a name="datarow-deletion"></a>DataRow の削除
 2 つのメソッドを使用して削除できます、<xref:System.Data.DataRow>オブジェクトから、<xref:System.Data.DataTable>オブジェクト:**削除**のメソッド、<xref:System.Data.DataRowCollection>オブジェクト、および<xref:System.Data.DataRow.Delete%2A>のメソッド、 **DataRow**オブジェクト。 一方、<xref:System.Data.DataRowCollection.Remove%2A>メソッドの削除、 **DataRow**から、 **DataRowCollection**、<xref:System.Data.DataRow.Delete%2A>メソッドは、行の削除をマークするだけです。 実際の削除は、アプリケーションを呼び出すときに発生します。、 **AcceptChanges**メソッド。 <xref:System.Data.DataRow.Delete%2A> を使用すると、行を実際に削除する前に、削除対象としてどの行がマークされているかをプログラムによってチェックできます。 削除対象としてマークされている行の <xref:System.Data.DataRow.RowState%2A> プロパティは、<xref:System.Data.DataRow.Delete%2A> に設定されています。  

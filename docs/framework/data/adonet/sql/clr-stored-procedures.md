@@ -3,11 +3,11 @@ title: CLR ストアド プロシージャ
 ms.date: 03/30/2017
 ms.assetid: fd7eea9b-218a-4988-8c9a-8abcc6031c66
 ms.openlocfilehash: 1f8aa6fb9243706d07caa4527af0c4c880aa70a6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43424335"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503112"
 ---
 # <a name="clr-stored-procedures"></a>CLR ストアド プロシージャ
 ストアド プロシージャは、スカラー式では使用できないルーチンです。 ストアド プロシージャは、表形式の結果とメッセージをクライアントに返したり、データ定義言語 (DDL) ステートメントおよびデータ操作言語 (DML) ステートメントを呼び出したり、出力パラメーターを返したりすることができます。  

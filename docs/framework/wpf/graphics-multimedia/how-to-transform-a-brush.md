@@ -10,11 +10,11 @@ helpviewer_keywords:
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
 ms.openlocfilehash: ebc8d4c6cb36d76b70691cce183f9e6070d19822
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399428"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507048"
 ---
 # <a name="how-to-transform-a-brush"></a>方法 : ブラシを変換する
 この例は、変換する方法を示しています。<xref:System.Windows.Media.Brush>その 2 つの変換プロパティを使用して、オブジェクト:<xref:System.Windows.Media.Brush.RelativeTransform%2A>と<xref:System.Windows.Media.Brush.Transform%2A>します。  

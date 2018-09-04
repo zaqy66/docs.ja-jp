@@ -10,11 +10,11 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
 ms.openlocfilehash: 278fd4ed0622673a49bfaa2567501b832bd535d3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469961"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506053"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>方法 : Windows フォーム コントロールを DBNull データベース値にバインドする
 データ ソースに Windows フォーム コントロールをバインドして、データ ソースが <xref:System.DBNull> 値を返す場合、イベントの処理、書式設定、または解析なしで、適切な値に置き換えることができます。 <xref:System.Windows.Forms.Binding.NullValue%2A> プロパティは、データ ソースの値を書式設定または解析する際、<xref:System.DBNull> を指定されたオブジェクトに変換します。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
 ms.openlocfilehash: fdf2134d487787404cccbde1ba0f8c95cb6a4a3d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385570"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503906"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>方法 : Windows フォーム コントロールを型にバインドする
 データをやり取りするコントロールを作成する際、オブジェクトではなく型にコントロールをバインドすることが必要な場合があります。 このような状況は、特にデータを使用できないデザイン時に発生しますが、データ バインド コントロールは、型のパブリック インターフェイスから情報を表示する必要があります。 たとえば、<xref:System.Windows.Forms.DataGridView> コントロールを Web サービスによって公開されているオブジェクトにバインドし、デザイン時に <xref:System.Windows.Forms.DataGridView> コントロールで列にカスタム型のメンバー名のラベルを付けたいときがあります。  

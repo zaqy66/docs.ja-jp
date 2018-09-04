@@ -10,11 +10,11 @@ helpviewer_keywords:
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
 ms.openlocfilehash: 8b5a7f7d428925590236351d56073024f6ad32b7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467021"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506821"
 ---
 # <a name="brush-transformation-overview"></a>ブラシの変換の概要
 Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.Brush.Transform%2A>と<xref:System.Windows.Media.Brush.RelativeTransform%2A>します。 これらのプロパティを使うと、ブラシの内容を回転、拡大縮小、傾斜、移動できます。 このトピックでは、これら 2 つのプロパティの違いについて説明し、それらの使用例を示します。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
 ms.openlocfilehash: 207010f594959708322aed2e630935252c873cf8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466172"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510756"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>方法 : IIS で WCF サービスをホストする
 このトピックでは、インターネット インフォメーション サービス (IIS) でホストされている Windows Communication Foundation (WCF) サービスを作成するために必要な基本的な手順について説明します。 このトピックは、IIS に関する知識があり、IIS 管理ツールを使用して IIS アプリケーションを作成および管理する方法を理解していることを前提としています。 IIS の詳細については、次を参照してください。[インターネット インフォメーション サービス](https://go.microsoft.com/fwlink/?LinkId=132449)します。 IIS 環境での実行がプロセスのリサイクルなどの IIS 機能を最大限に活用する WCF サービスはアイドル シャット ダウン、処理状況の監視、およびメッセージ ベースのアクティブ化します。 このホスト オプションでは、IIS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 IIS ホストは、HTTP トランスポートでのみ使用できます。  

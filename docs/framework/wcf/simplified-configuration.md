@@ -2,15 +2,15 @@
 title: 簡略化された構成
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 9f35a5f4fa4ae6be63bd75a24f58b56dd236ee9c
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 4893cb0d01d2a4a11bffd94768155512dce263a9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808511"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509523"
 ---
 # <a name="simplified-configuration"></a>簡略化された構成
-Windows Communication Foundation (WCF) サービスを構成すると、複雑なタスクを指定できます。 さまざまなオプションがあり、どの設定が必要であるかをいつでも簡単に判断できるとは限りません。 構成ファイルは、WCF サービスの柔軟性を向上させ、それらもは発見しにくい問題の多くのソースです。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] では、このような問題に対応し、サービス構成の規模と複雑さを軽減する手段を提供しています。  
+Windows Communication Foundation (WCF) サービスを構成すると、複雑な作業ができる場合があります。 さまざまなオプションがあり、どの設定が必要であるかをいつでも簡単に判断できるとは限りません。 構成ファイルは、WCF サービスの柔軟性を向上させ、多くの問題を見つけるためにハードのソースもができます。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] では、このような問題に対応し、サービス構成の規模と複雑さを軽減する手段を提供しています。  
   
 ## <a name="simplified-configuration"></a>簡略化された構成  
  WCF サービス構成ファイルで、<`system.serviceModel`> セクションが含まれています、<`service`> ホストされているサービスごとの要素。 <`service`> 要素には、各サービスに対して公開されるエンドポイントと、必要に応じて一連のサービス動作を指定する <`endpoint`> 要素が含まれます。 <`endpoint`> 要素は、エンドポイントが公開するアドレス、バインド、およびコントラクトと、必要に応じてバインド構成およびエンドポイントの動作を指定します。 <`system.serviceModel`> セクションには、サービスまたはエンドポイントの動作を指定できる <`behaviors`> 要素も含まれます。 構成ファイルの <`system.serviceModel`> セクションの例を次に示します。  
@@ -108,12 +108,12 @@ Windows Communication Foundation (WCF) サービスを構成すると、複雑�
 ```  
   
 > [!IMPORTANT]
->  この機能は、WCF サービス構成にのみ適用され、クライアント構成には適用されません。 ほとんどの場合、WCF クライアント構成は、svcutil.exe などのツールを使用したり、Visual Studio からサービス参照を追加したりすることで生成されます。 WCF クライアントを手動で構成している場合は、追加する必要があります、\<クライアント > 要素を構成し、呼び出すエンドポイントを指定します。  
+>  この機能は、WCF サービス構成にのみ適用され、クライアント構成には適用されません。 ほとんどの場合、WCF クライアント構成は、svcutil.exe などのツールを使用したり、Visual Studio からサービス参照を追加したりすることで生成されます。 WCF クライアントを手動で構成している場合は、追加する必要があります。、\<クライアント > 要素を構成し、呼び出すエンドポイントを指定します。  
   
 ## <a name="see-also"></a>関連項目  
  [構成ファイルを使用してサービスを構成する方法](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [サービスのバインディングの構成](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  [システムが提供するバインディングの構成](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [サービスの構成](../../../docs/framework/wcf/configuring-services.md)  
- [Windows Communication Foundation アプリケーションの構成](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Windows Communication Foundation アプリケーションの構成](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [コード内での WCF サービスの構成](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

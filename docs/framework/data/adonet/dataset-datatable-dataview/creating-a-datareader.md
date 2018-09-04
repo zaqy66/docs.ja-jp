@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
 ms.openlocfilehash: 1ede51ed9119051a647fd27d8d02cd2c93e61bbb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43442721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510038"
 ---
 # <a name="creating-a-datareader"></a>DataReader の作成
 <xref:System.Data.DataTable> クラスおよび <xref:System.Data.DataSet> クラスには、<xref:System.Data.DataTable.CreateDataReader%2A> の内容または <xref:System.Data.DataTable> オブジェクトの <xref:System.Data.DataSet> コレクションの内容を、読み取り専用で前方参照専用の 1 つ以上の結果セットとして返す <xref:System.Data.DataSet.Tables%2A> メソッドがあります。  

@@ -2,12 +2,12 @@
 title: ユーザー名パスワード検証
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 8fefa1556f853ab1f3a6f7664bdf7ffc5fc79850
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5e99cf1768abbd2ab0472f5d2193a5d5e751fe4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508320"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512324"
 ---
 # <a name="user-name-password-validator"></a>ユーザー名パスワード検証
 このサンプルでは、カスタム UserNamePassword 検証を実装する方法を示します。 これは、アプリケーションの要件に適した組み込みの UserNamePassword 検証モードがない場合に便利です。たとえば、ユーザー名とパスワードの組み合わせがデータベースなどの外部ストアに保存されている場合などです。 このサンプルでは、2 つの特定のユーザー名とパスワードの組み合わせをチェックする、カスタム検証を備えたサービスを示します。 クライアントはそのようなユーザー名とパスワードの組み合わせを使用して、サービスに対する認証を行います。  
@@ -17,7 +17,7 @@ ms.locfileid: "33508320"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33508320"
   
 -   サーバーがそのサーバーの X.509 証明書を使用して認証される。  
   
- サービスは、そのサービスとの通信に使用する単一エンドポイントを公開します。エンドポイントは構成ファイル (App.config) で定義します。エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 標準バインディングの構成は`wsHttpBinding`WS Securityand ユーザー名認証を使用して既定値です。 サービス動作では、クライアントのユーザー名とパスワードの組み合わせを検証するための `Custom` モード、および検証クラスの型を指定します。 さらに、`serviceCertificate` 要素を使用しているサーバー証明書も指定します。 サーバー証明書が同じ値を格納するが、`SubjectName`として、`findValue`で、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)です。  
+ サービスは、そのサービスとの通信に使用する単一エンドポイントを公開します。エンドポイントは構成ファイル (App.config) で定義します。エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 標準的なバインディングが構成されている`wsHttpBinding`WS Securityand ユーザー名認証を使用する既定値です。 サービス動作では、クライアントのユーザー名とパスワードの組み合わせを検証するための `Custom` モード、および検証クラスの型を指定します。 さらに、`serviceCertificate` 要素を使用しているサーバー証明書も指定します。 サーバー証明書が同じ値を格納するが、`SubjectName`として、`findValue`で、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)します。  
   
 ```xml  
 <system.serviceModel>  
@@ -278,7 +278,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 #### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには  
   
-1.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+1.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
 2.  サンプルを単一コンピューター構成で実行するか、複数コンピューター構成で実行するかに応じて、次の手順に従います。  
   
@@ -293,7 +293,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 3.  Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4.  クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+4.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 #### <a name="to-run-the-sample-across-machines"></a>サンプルを複数コンピューターで実行するには  
   
@@ -315,7 +315,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 9. クライアント コンピューターで、コマンド プロンプト ウィンドウから Client.exe を起動します。  
   
-10. クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+10. クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   

@@ -3,11 +3,11 @@ title: 制約の種類
 ms.date: 03/30/2017
 ms.assetid: b6b246e6-1130-4698-9625-c5c42abcbfed
 ms.openlocfilehash: 202a2c7b3a3fc400552e42c8606457964af66af2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401533"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506613"
 ---
 # <a name="constraint-types"></a>制約の種類
 このサンプルでは、ワークフローに制約を適用する 2 種類の方法を示します。1 つはアクティビティの内部 (ビルド) から適用する方法で、もう 1 つはアクティビティの外部 (ポリシー) から適用する方法です。 このシナリオでは、(サードパーティのソフトウェア会社の) アクティビティ作成者が 2 つの引数間のリレーションシップを検証します。 ここでは、コストが価格以下になるようにする必要があります。 これは、一般的な検証ビルド制約です。  

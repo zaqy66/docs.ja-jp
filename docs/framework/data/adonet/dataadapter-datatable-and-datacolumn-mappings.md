@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
 ms.openlocfilehash: 9f33ae085bef2b611d1ce95bed1b26f9101a10b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385227"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505243"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable と DataColumn のマップ
 A **DataAdapter** 0 個以上のコレクションを含む<xref:System.Data.Common.DataTableMapping>オブジェクトでその**TableMappings**プロパティ。 A **DataTableMapping** 、データ ソースに対するクエリから返されるデータ間のマスター マップを提供し、<xref:System.Data.DataTable>します。 **DataTableMapping**の代わりに名前を渡すことができます、 **DataTable**名、**入力**のメソッド、 **DataAdapter**します。 次の例では、作成、 **DataTableMapping**という**AuthorsMapping**の**作成者**テーブル。  

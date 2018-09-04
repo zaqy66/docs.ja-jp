@@ -3,11 +3,11 @@ title: LINQ to SQL を使用する n 層アプリケーションとリモート 
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
 ms.openlocfilehash: 7af17500df9a0038ac4fa1eb3ad07a4c07190fa0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384261"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512054"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>LINQ to SQL を使用する n 層アプリケーションとリモート アプリケーション
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用する n 層つまり多層アプリケーションを作成することができます。 通常、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]データ コンテキスト、エンティティ クラス、およびクエリ構築ロジック上にある、中間層とデータ アクセス層 (DAL)。 ビジネス ロジックと非永続的データは、エンティティとデータ コンテキストの部分クラスと部分メソッドの中に完全に実装できます。または、別個のクラスに実装することもできます。  

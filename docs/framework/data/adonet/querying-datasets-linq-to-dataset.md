@@ -3,11 +3,11 @@ title: DataSet のクエリ (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
 ms.openlocfilehash: 5ecf85a73cd38fc1fa575bd591618e5273b390e0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422443"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510143"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>DataSet のクエリ (LINQ to DataSet)
 <xref:System.Data.DataSet> オブジェクトへのデータの読み込みが完了すると、そのデータセットに対してクエリを実行できるようになります。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を使ったクエリの作成方法は、他の [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 対応データ ソースに対して [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] を使用する方法と似ています。 ただしを使用すると[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]クエリを実行、<xref:System.Data.DataSet>オブジェクトの列挙クエリを実行する<xref:System.Data.DataRow>カスタム型の列挙体ではなく、オブジェクト。 つまりのメンバーのいずれかを使用できます、<xref:System.Data.DataRow>クラス、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]クエリ。 これにより、高度で複雑なクエリの作成が可能となります。  

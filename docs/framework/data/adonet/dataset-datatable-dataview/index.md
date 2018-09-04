@@ -2,11 +2,12 @@
 title: DataSet、DataTable、および DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 2303b0ce9bc8b389a3a7af9e8fcfbcb13d0007ae
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0f537ad8ff468de54adc8bc820a060eaca357be9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506250"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable、および DataView
 ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であり、含まれているデータ ソースとは関係なく、一貫性のあるリレーショナル プログラミング モデルを提供します。 <xref:System.Data.DataSet> とは、テーブル間のリレーションシップだけでなく、包括するテーブル、整列するテーブル、およびデータを制約するテーブルを含むデータのセットを表します。  
@@ -19,7 +20,7 @@ ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であ
   
 -   XML を使用して、<xref:System.Data.DataSet> の内容を読み込んだり、永続化したりできます。 詳しくは、「[DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)」を参照してください。  
   
- 厳密に型指定された <xref:System.Data.DataSet> も XML Web サービスを使用して転送できます。 <xref:System.Data.DataSet> は、XML Web サービスを使用してデータの転送が理想的に行えるように設計されています。 XML Web サービスの概要については、「[XML Web サービスの概要](http://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)」を参照してください。 XML Web サービスから <xref:System.Data.DataSet> を使用する例については、「[XML Web サービスからの DataSet の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)」を参照してください。  
+ 厳密に型指定された <xref:System.Data.DataSet> も XML Web サービスを使用して転送できます。 <xref:System.Data.DataSet> は、XML Web サービスを使用してデータの転送が理想的に行えるように設計されています。 XML Web サービスの概要については、「[XML Web サービスの概要](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)」を参照してください。 XML Web サービスから <xref:System.Data.DataSet> を使用する例については、「[XML Web サービスからの DataSet の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [DataSet の作成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset.md)  
@@ -79,4 +80,4 @@ ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であ
   
 ## <a name="see-also"></a>関連項目  
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

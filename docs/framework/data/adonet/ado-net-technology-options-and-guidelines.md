@@ -3,11 +3,11 @@ title: ADO.NET テクノロジのオプションとガイドライン
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
 ms.openlocfilehash: 7312b2eae0e307fa50c89d37918403ee33412ec3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403936"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507993"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET テクノロジのオプションとガイドライン
 ADO.NET データ プラットフォームは、概念エンティティ データ モデルに対してプログラムを作成できるようにして、開発者に必要とされるコード作成と保守作業の量を減らすための、複数のリリースにわたる戦略です。 このプラットフォームには、ADO.NET Entity Framework と関連技術が含まれています。  

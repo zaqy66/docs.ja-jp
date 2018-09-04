@@ -10,11 +10,11 @@ helpviewer_keywords:
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
 ms.openlocfilehash: cfe61860e21a7c1b8317d22880440745d49e6751
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: HT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489826"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510833"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>方法 : Windows フォーム DataGridView コントロールの列の並べ替えを有効にする
 <xref:System.Windows.Forms.DataGridView> コントロールで列の並べ替えを有効にすると、ユーザーは列ヘッダーをマウスでドラッグすることにより列を新しい場所に移動できます。 <xref:System.Windows.Forms.DataGridView> コントロールでは、<xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> プロパティ値によってユーザーが列を別の場所に移動できるかどうかが決まります。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
 ms.openlocfilehash: 90357b96d570ec1b2f80f8809ccfde69977bbc25
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481911"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509804"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server のデータベース ミラーリング
 SQL Server のデータベース ミラーリング機能を使用すると、スタンバイ サーバー上に SQL Server データベースのコピー (ミラー) を保持できます。 ミラーリングは、常にデータのコピーが 2 つ別々に存在することを保証し、高可用性とデータの完全な冗長性をもたらします。 .NET Data Provider for SQL Server では、データベース ミラーリングが暗黙的にサポートされているため、SQL Server データベース用に構成されている場合は、開発者が操作を行ったり、コードを作成したりする必要はありません。 さらに、<xref:System.Data.SqlClient.SqlConnection> オブジェクトは、<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 内のフェールオーバー パートナー サーバーの名前を指定できる明示的な接続モードをサポートします。  

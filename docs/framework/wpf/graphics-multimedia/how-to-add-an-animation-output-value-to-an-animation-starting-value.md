@@ -5,11 +5,11 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: b89a82be-b03d-481e-a8d3-cc513d09ca00
 ms.openlocfilehash: bae7bf57507e3345c92cbbaf24491d86772425a4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407052"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501597"
 ---
 # <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>方法 : アニメーションの出力値をアニメーションの開始値に追加する
 この例では、アニメーションの開始値をアニメーションの出力値を追加する方法を示します。  

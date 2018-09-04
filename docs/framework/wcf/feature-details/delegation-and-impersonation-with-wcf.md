@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: 08b78a2a6e7d27f28ddd5c9b771f690bc16b1717
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484588"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505418"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF の委任と偽装
 *偽装* は、サービス ドメインのリソースへのクライアント アクセスを制限するためにサービスが使用する一般的な手法です。 サービス ドメインのリソースは、ローカル ファイルなどのコンピューター リソースの場合もあれば (偽装)、ファイル共有などの別のコンピューター上のリソースの場合もあります (委任)。 サンプル アプリケーションについては、「 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)」を参照してください。 偽装の使用方法の例については、「 [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)」を参照してください。  

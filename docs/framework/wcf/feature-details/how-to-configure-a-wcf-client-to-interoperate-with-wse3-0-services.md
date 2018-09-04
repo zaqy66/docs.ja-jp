@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
 ms.openlocfilehash: 9d7cb4869e9e460373bffbf33f61f61ecb6e9948
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486728"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505456"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>方法 : WCF クライアントと WSE3.0 サービスを相互運用するために構成する
 Windows Communication Foundation (WCF) クライアントと Microsoft .NET (WSE) サービスの Web サービス拡張 3.0 とネットワーク レベル互換性は、Ws-addressing 仕様の 2004 年 8 月バージョンを使用する WCF クライアントが構成されている場合。  

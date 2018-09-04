@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9172c20a-9876-4b3b-9c97-1963c02b1993
 ms.openlocfilehash: fe00e669449d40320a2038697976423db83ade5b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394208"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511548"
 ---
 # <a name="sqltypes-and-the-dataset"></a>SqlTypes と DataSet
 ADO.NET 2.0 では、`DataSet` 名前空間を介した <xref:System.Data.SqlTypes> の型のサポートが拡張されました。 <xref:System.Data.SqlTypes> の型は、SQL Server データベースのデータ型と同じセマンティクスと有効桁数を備えたデータ型を用意するように設計されています。 <xref:System.Data.SqlTypes> の個々のデータ型には、それに相当する SQL Server のデータ型があり、基本となるデータ表現はいずれも同じです。  

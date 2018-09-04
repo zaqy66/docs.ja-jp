@@ -2,15 +2,15 @@
 title: SQL Server スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 248e5f4caf47f09742358240fa43f46169f0b1e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7020c74d41ce1feef38c4dfc66117a7b8c8eff4e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361056"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508491"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server スキーマ コレクション
-Microsoft .NET Framework Data Provider for SQL Server は、共通のスキーマ コレクションに加えて追加のスキーマ コレクションをサポートしています。 スキーマ コレクションは、使用している SQL Server のバージョンによって多少異なります。 サポートされるスキーマ コレクションの一覧を確認するのには、呼び出し、 **GetSchema**メソッド引数のない、またはスキーマ コレクション名に"metadatacollections を指定して"います。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。  
+Microsoft .NET Framework Data Provider for SQL Server は、共通のスキーマ コレクションに加えて追加のスキーマ コレクションをサポートしています。 スキーマ コレクションは、使用している SQL Server のバージョンによって多少異なります。 サポートされるスキーマ コレクションの一覧を確認するのには、呼び出し、 **GetSchema**メソッド引数なしでまたはスキーマ コレクション名に"metadatacollections を指定"します。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。  
   
 ## <a name="databases"></a>Databases  
   
@@ -51,7 +51,7 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
-|type_desc|String|インデックスの種類。次のいずれかの値になります。<br /><br /> -HEAP<br />クラスター化<br />-   NONCLUSTERED<br />XML<br />空間|  
+|type_desc|String|インデックスの種類。次のいずれかの値になります。<br /><br /> -ヒープ<br />クラスター化<br />-   NONCLUSTERED<br />XML<br />空間|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -257,4 +257,4 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
   
 ## <a name="see-also"></a>関連項目  
  [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

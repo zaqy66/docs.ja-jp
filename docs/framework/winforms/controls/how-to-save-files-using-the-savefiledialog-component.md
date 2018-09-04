@@ -11,33 +11,33 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: ca6ca5adbbe20a438ba936778ba71f1a163b40e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4755d950da6726f007ae3333a558f3cafdcada9b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540531"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508161"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>方法 : SaveFileDialog コンポーネントを使用してファイルを保存する
-<xref:System.Windows.Forms.SaveFileDialog>コンポーネントにより、ユーザーがファイル システムを参照し、保存するファイルを選択します。 このダイアログ ボックスは、ユーザーがダイアログ ボックス内で選択したファイルのパスと名前を返します。 ただし、ファイルを実際にディスクに書き込むためのコードを記述する必要があります。  
+<xref:System.Windows.Forms.SaveFileDialog>コンポーネントにより、ユーザーがファイル システムを参照して保存するファイルを選択します。 このダイアログ ボックスは、ユーザーがダイアログ ボックス内で選択したファイルのパスと名前を返します。 ただし、ファイルを実際にディスクに書き込むためのコードを記述する必要があります。  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>SaveFileDialog コンポーネントを使用してファイルを保存するには  
   
 -   **[ファイルの保存]** ダイアログ ボックスを表示し、ユーザーによって選択されたファイルを保存するメソッドを呼び出します。  
   
-     使用して、<xref:System.Windows.Forms.SaveFileDialog>コンポーネントの<xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>メソッド、ファイルを保存します。 このメソッドの結果、<xref:System.IO.Stream>オブジェクトに書き込むことができます。  
+     使用して、<xref:System.Windows.Forms.SaveFileDialog>コンポーネントの<xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>メソッド、ファイルを保存します。 この方法を使用する、<xref:System.IO.Stream>オブジェクトに書き込むことができます。  
   
-     使用して次の例、 <xref:System.Windows.Forms.DialogResult> 、ファイルの名前を取得するプロパティと<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>ファイルを保存する方法です。 <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>メソッドの結果をファイルに書き込むストリーム。  
+     使用して次の例、 <xref:System.Windows.Forms.DialogResult> 、ファイルの名前を取得するプロパティと<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>ファイルを保存するメソッド。 <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>方法を使用すると、ファイルを書き込むストリーム。  
   
-     次の例では、<xref:System.Windows.Forms.Button>コントロールにイメージが割り当てられます。 ボタンをクリックすると、<xref:System.Windows.Forms.SaveFileDialog>型 .gif、.jpeg、.bmp ファイルを許可するフィルターを使用してコンポーネントをインスタンス化します。 [ファイルの保存] ダイアログ ボックスでこれらの種類のファイルが選択されると、ボタンのイメージが保存されます。  
+     次の例では、<xref:System.Windows.Forms.Button>コントロールにイメージが割り当てられます。 ボタンをクリックすると、<xref:System.Windows.Forms.SaveFileDialog>コンポーネントがファイルの種類として .gif、.jpeg、および .bmp を許可するフィルターをインスタンス化します。 [ファイルの保存] ダイアログ ボックスでこれらの種類のファイルが選択されると、ボタンのイメージが保存されます。  
   
     > [!IMPORTANT]
-    >  取得または設定する、<xref:System.Windows.Forms.FileDialog.FileName%2A>プロパティをアセンブリが必要です、特権レベル許可によって、<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>クラスです。 部分的に信頼されたコンテキストで実行している場合、プロセスは、特権がないために例外をスローする可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../docs/framework/misc/code-access-security-basics.md)」をご覧ください。  
+    >  取得または設定する、<xref:System.Windows.Forms.FileDialog.FileName%2A>プロパティ、アセンブリに必要です特権レベルを付与して、<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>クラス。 部分的に信頼されたコンテキストで実行している場合、プロセスは、特権がないために例外をスローする可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../docs/framework/misc/code-access-security-basics.md)」をご覧ください。  
   
-     この例では、フォームに、<xref:System.Windows.Forms.Button>コントロールをその<xref:System.Windows.Forms.ButtonBase.Image%2A>プロパティ型 .gif、.jpeg、.bmp のファイルに設定します。  
+     この例では、フォームに、<xref:System.Windows.Forms.Button>コントロールをその<xref:System.Windows.Forms.ButtonBase.Image%2A>プロパティの種類として .gif、.jpeg、または .bmp ファイルに設定します。  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.FileDialog>クラスの<xref:System.Windows.Forms.FileDialog.FilterIndex%2A>プロパティ (、継承、原因の一部では、<xref:System.Windows.Forms.SaveFileDialog>クラス) は 1 から始まるインデックスを使用します。 これは、ファイルをバイナリ形式ではなくプレーン テキストで保存する場合など、データを特定の形式で保存するコードを記述する場合に重要です。 このプロパティは、次のコード例に示されています。  
+    >  <xref:System.Windows.Forms.FileDialog>クラスの<xref:System.Windows.Forms.FileDialog.FilterIndex%2A>プロパティ (、継承が原因の一部では、<xref:System.Windows.Forms.SaveFileDialog>クラス) は 1 から始まるインデックスを使用します。 これは、ファイルをバイナリ形式ではなくプレーン テキストで保存する場合など、データを特定の形式で保存するコードを記述する場合に重要です。 このプロパティは、次のコード例に示されています。  
   
     ```vb  
     Private Sub Button2_Click(ByVal sender As System.Object, _  
@@ -161,7 +161,7 @@ ms.locfileid: "33540531"
        }  
     ```  
   
-     (Visual c# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターに次のコードを追加します。  
+     (Visual c# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  
@@ -172,10 +172,10 @@ ms.locfileid: "33540531"
        System::EventHandler(this, &Form1::button2_Click);  
     ```  
   
-     ファイル ストリームの書き込みの詳細については、次を参照してください。<xref:System.IO.FileStream.BeginWrite%2A>と<xref:System.IO.FileStream.Write%2A>です。  
+     ファイル ストリームの書き込みの詳細については、次を参照してください。<xref:System.IO.FileStream.BeginWrite%2A>と<xref:System.IO.FileStream.Write%2A>します。  
   
     > [!NOTE]
-    >  などの特定のコントロール、<xref:System.Windows.Forms.RichTextBox>制御、ファイルを保存する機能があります。 詳細については、MSDN オンライン ライブラリの技術文書「[Windows フォーム ダイアログ ボックスの重要コード](http://go.microsoft.com/fwlink/?LinkID=102575)」の「SaveFileDialog コンポーネント」を参照してください。  
+    >  などの特定のコントロール、<xref:System.Windows.Forms.RichTextBox>制御、ファイルを保存する機能があります。 詳細については、MSDN オンライン ライブラリの技術文書「[Windows フォーム ダイアログ ボックスの重要コード](https://go.microsoft.com/fwlink/?LinkID=102575)」の「SaveFileDialog コンポーネント」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Forms.SaveFileDialog>  

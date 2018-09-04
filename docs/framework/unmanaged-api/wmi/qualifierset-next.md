@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 938044a4e932139eb8a4d0a5d2f998cbc6f193cb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405528"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507694"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next 関数
-呼び出しで開始する列挙体で、[次へ] 修飾子を取得、 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)関数。   
+[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 関数の呼び出しによって開始された列挙型内の次の修飾子が返されます。   
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

@@ -3,11 +3,11 @@ title: SendParameters および ReceiveParameters アクティビティの基本
 ms.date: 03/30/2017
 ms.assetid: 1b6b1681-3d41-403f-bfe2-3f600f24aa8c
 ms.openlocfilehash: c13999ad1571a6413e30e801b6c642000f8e4654
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467696"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504009"
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a>SendParameters および ReceiveParameters アクティビティの基本的な使用方法
 このサンプルでは、<xref:System.ServiceModel.Activities.SendParametersContent> アクティビティと <xref:System.ServiceModel.Activities.ReceiveParametersContent> アクティビティの使用方法を示します。 このサービスは、文字列引数を取得して、クライアントに入力を再度エコーするという 1 つの操作を公開します。 このサンプルで示すのは、これらのメッセージング アクティビティのパラメーターを設定する方法です。  

@@ -13,11 +13,11 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a01da268a8347e93982604520f9dcb1d4e91327d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389626"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501616"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>チュートリアル : 暗号化アプリケーションの作成
 このチュートリアルでは、コンテンツの暗号化および復号化の方法を示します。 コード例は、Windows フォーム アプリケーション向けに設計されています。 このアプリケーションは、スマート カードを使用するなどの実際のシナリオは示していません。 代わりに、暗号化と復号化の基礎を示しています。  
@@ -53,7 +53,7 @@ ms.locfileid: "43389626"
 ## <a name="creating-a-windows-forms-application"></a>Windows フォーム アプリケーションの作成  
  このチュートリアルにあるほとんどのコード例は、ボタン コントロールのイベント ハンドラーとして設計されています。 次の表は、サンプル アプリケーションに必要なコントロールと、コード例に一致する必要な名前を示しています。  
   
-|コントロール|name|テキストのプロパティ (必要に応じて)|  
+|コントロール|名前|テキストのプロパティ (必要に応じて)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|ファイルの暗号化|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|ファイルの復号化|  

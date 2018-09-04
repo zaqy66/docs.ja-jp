@@ -8,28 +8,28 @@ helpviewer_keywords:
 - data binding [WPF], binding to XDocument
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
-ms.openlocfilehash: 7e4f9cc2f5e6815a35b4911f5b4a480161d66ef3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83254bcb0b2aef53a53874a67e8ae169ad242d57
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556693"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499940"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>方法 : XDocument、XElement、または LINQ for XML クエリの結果にバインドする
-この例は、XML データをバインドする方法を示します、<xref:System.Windows.Controls.ItemsControl>を使用して<xref:System.Xml.Linq.XDocument>です。  
+この例では、XML データの連結、<xref:System.Windows.Controls.ItemsControl>を使用して<xref:System.Xml.Linq.XDocument>します。  
   
 ## <a name="example"></a>例  
- 次の XAML コードを定義、<xref:System.Windows.Controls.ItemsControl>のデータ型のデータ テンプレートが含まれていますと`Planet`で、 `http://planetsNS` XML 名前空間。 名前空間を占有する XML データ型では、名前空間をかっこで囲んで含める必要があります。また、その XML データ型が、XAML マークアップ拡張機能が出現する可能性がある場所に出現する場合は、名前空間の前に、かっこのエスケープ シーケンスを使用して指定する必要があります。 このコードは、動的に対応するプロパティにバインド、<xref:System.Xml.Linq.XContainer.Element%2A>と<xref:System.Xml.Linq.XElement.Attribute%2A>のメソッド、<xref:System.Xml.Linq.XElement>クラスです。 動的プロパティによって、XAML がこれらのメソッドの名前を共有する動的プロパティにバインドできます。 詳細については、「[LINQ to XML の動的プロパティ](/visualstudio/designers/linq-to-xml-dynamic-properties)」を参照してください。 XML 用の既定の名前空間宣言が属性名には適用されないことに注意してください。  
+ 次の XAML コードを定義、<xref:System.Windows.Controls.ItemsControl>型のデータのデータ テンプレートが含まれています`Planet`で、 `http://planetsNS` XML 名前空間。 名前空間を占有する XML データ型では、名前空間をかっこで囲んで含める必要があります。また、その XML データ型が、XAML マークアップ拡張機能が出現する可能性がある場所に出現する場合は、名前空間の前に、かっこのエスケープ シーケンスを使用して指定する必要があります。 このコードに対応する動的プロパティにバインド、<xref:System.Xml.Linq.XContainer.Element%2A>と<xref:System.Xml.Linq.XElement.Attribute%2A>のメソッド、<xref:System.Xml.Linq.XElement>クラス。 動的プロパティによって、XAML がこれらのメソッドの名前を共有する動的プロパティにバインドできます。 詳細については、「[LINQ to XML の動的プロパティ](/visualstudio/designers/linq-to-xml-dynamic-properties)」を参照してください。 XML 用の既定の名前空間宣言が属性名には適用されないことに注意してください。  
   
  [!code-xaml[XLinqExample#StackPanelResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
 [!code-xaml[XLinqExample#ItemsControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#itemscontrol)]  
   
- 次の c# コード呼び出し<xref:System.Xml.Linq.XDocument.Load%2A>という名前の要素のすべてのサブ要素をスタック パネル のデータ コンテキストを設定および`SolarSystemPlanets`で、 `http://planetsNS` XML 名前空間。  
+ 次の c# のコード呼び出し<xref:System.Xml.Linq.XDocument.Load%2A>という名前の要素のすべてのサブ要素をスタック パネルのデータ コンテキストを設定および`SolarSystemPlanets`で、 `http://planetsNS` XML 名前空間。  
   
  [!code-csharp[XLinqExample#LoadDCFromFile](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromfile)]
  [!code-vb[XLinqExample#LoadDCFromFile](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromfile)]  
   
- 使用して XAML リソースとして XML データを格納することができます<xref:System.Windows.Data.ObjectDataProvider>です。 コード例全体については、「[L2DBForm.xaml ソース コード](http://msdn.microsoft.com/library/624e96d4-6d27-4195-8ac2-2f3835f6c57e)」を参照してください。 次の例は、コードでデータ コンテキストをオブジェクト リソースに設定する方法を示しています。  
+ 使用して XAML リソースとして XML データを格納できる<xref:System.Windows.Data.ObjectDataProvider>します。 コード例全体については、「[L2DBForm.xaml ソース コード](https://msdn.microsoft.com/library/624e96d4-6d27-4195-8ac2-2f3835f6c57e)」を参照してください。 次の例は、コードでデータ コンテキストをオブジェクト リソースに設定する方法を示しています。  
   
  [!code-csharp[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromxaml)]
  [!code-vb[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromxaml)]  

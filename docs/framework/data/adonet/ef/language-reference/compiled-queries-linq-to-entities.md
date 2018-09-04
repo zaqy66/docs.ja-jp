@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
 ms.openlocfilehash: 362ba0000c739c8fc216186514a63531e603c637
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398213"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502022"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>コンパイル済みクエリ (LINQ to Entities)
 似たような構造のクエリを Entity Framework で何度も実行するアプリケーションがある場合は、クエリを一度コンパイルし、異なるパラメーターを指定して複数回実行することで、パフォーマンスを改善できる場合がよくあります。 たとえば、アプリケーションで特定の市区町村に住む顧客をすべて取得する必要がある場合は、ユーザーが実行時にフォーム内で市区町村を指定します。 LINQ to Entities では、この目的のためにコンパイル済みクエリをサポートしています。  

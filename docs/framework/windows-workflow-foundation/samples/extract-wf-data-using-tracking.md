@@ -2,18 +2,18 @@
 title: 追跡を使用した WF データの抽出
 ms.date: 03/30/2017
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-ms.openlocfilehash: 22b147521d4ce0c72fadfb7adc81e05f10ce52b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef8118df2c5834e32c40760ef31f75660893d89b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519874"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501584"
 ---
 # <a name="extract-wf-data-using-tracking"></a>追跡を使用した WF データの抽出
 このサンプルでは、ワークフロー追跡を使用して、アクティビティからワークフロー変数と引数を抽出する方法を示します。 また、追跡レコードへの注釈の追加、およびカスタム追跡レコード内のデータ ペイロードの抽出の例も示します。 このサンプルでは、ワークフローからデータを抽出するために Event Tracing for Windows (ETW) 追跡参加要素を使用します。  
   
 ## <a name="sample-details"></a>サンプルの詳細  
- Windows Workflow Foundation (WF) は、ワークフロー インスタンスの実行を把握するための追跡を提供します。 追跡ランタイムでは、ワークフローの実行中にワークフロー追跡レコードが出力されます。 このワークフロー追跡レコードと共に、ワークフロー インスタンス内のデータをワークフローから抽出することができます。 追跡レコードから抽出できるデータの種類の詳細を以下に示します。  
+ Windows Workflow Foundation (WF) は、ワークフロー インスタンスの実行を視覚化して追跡を提供します。 追跡ランタイムでは、ワークフローの実行中にワークフロー追跡レコードが出力されます。 このワークフロー追跡レコードと共に、ワークフロー インスタンス内のデータをワークフローから抽出することができます。 追跡レコードから抽出できるデータの種類の詳細を以下に示します。  
   
 1.  アクティビティ内のワークフロー変数とアクティビティの実行時の追跡レコード。  
   
@@ -96,31 +96,31 @@ ms.locfileid: "33519874"
   
 6.  サービスを呼び出す前に、イベント ビューアーを起動し、ワークフロー サービスから生成された追跡イベントをイベント ログでリッスンしていることを確認します。  
   
-7.  **開始**メニューの **管理ツール**し**イベント ビューアー**です。  
+7.  **開始**メニューの **管理ツール**し**イベント ビューアー**します。  
   
-8.  イベント ビューアーのツリー ビューに移動**イベント ビューアー**、 **Applications and Services Logs**、および**Microsoft**です。 右クリック**Microsoft**選択**ビュー**し**分析およびデバッグ ログ**です。  
+8.  イベント ビューアーのツリー ビューでに移動します。**イベント ビューアー**、 **Applications and Services Logs**、および**Microsoft**します。 右クリック**Microsoft**選択**ビュー**し**分析およびデバッグ ログ**します。  
   
-     いることを確認、 **分析およびデバッグ ログ**オプションはオンにします。  
+     いることを確認、 **分析およびデバッグ ログ**オプションをオンにします。  
   
-9. イベント ビューアーのツリー ビューに移動**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**です。 右クリック**分析**選択**ログの有効化**です。  
+9. イベント ビューアーのツリー ビューでに移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 。**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの有効化**します。  
   
 10. [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] を使用して、WCF テスト クライアントを開きます。  
   
-     WCF テスト クライアント (WcfTestClient.exe) にあります、 \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]インストール フォルダー > \Common7\IDE\ フォルダーです。  
+     WCF テスト クライアント (WcfTestClient.exe) にある、 \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]インストール フォルダー > \Common7\IDE\ フォルダーにあります。  
   
      [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] の既定のインストール フォルダーは C:\Program Files\Microsoft Visual Studio 10.0 です。  
   
-11. WCF テスト クライアントで、次のように選択します。**サービスの追加**から、**ファイル**メニュー。  
+11. WCF テスト クライアントで次のように選択します。**サービスの追加**から、**ファイル**メニュー。  
   
      前の手順でコピーしたローカル サービスの WSDL アドレスを入力ボックスに追加します。  
   
 12. WCF テスト クライアントで、`GetStockPrice` をダブルクリックします。  
   
-     `GetStockPrice` メソッドが開きます。 この要求はパラメーターを 1 つ受け取ります。 値を使用して**Contoso**です。  
+     `GetStockPrice` メソッドが開きます。 この要求はパラメーターを 1 つ受け取ります。 値を使用して**Contoso**します。  
   
-13. をクリックして**呼び出す**です。  
+13. クリックして**呼び出す**します。  
   
-14. イベント ビューアーに戻りに移動**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**です。 右クリック**分析**選択**更新**です。 ワークフロー イベントのイベント ID の範囲は 100 ～ 199 です。  
+14. イベント ビューアーに戻りに移動**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**更新**します。 ワークフロー イベントのイベント ID の範囲は 100 ～ 199 です。  
   
      イベントには、イベント ビューアーで表示できる注釈、変数、引数、およびカスタム追跡レコードが含まれます。  
   
@@ -131,11 +131,11 @@ ms.locfileid: "33519874"
   
 1.  イベント ビューアーを開きます。  
   
-2.  移動**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー アプリケーション**です。 右クリック**分析**選択**ログの無効化**です。  
+2.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。  
   
-3.  移動**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー アプリケーション**です。 右クリック**分析**選択**ログの消去**です。  
+3.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー-アプリケーション**します。 右クリック**分析**選択**ログの消去**します。  
   
-     選択、**オフ**イベントをクリアするにはオプションです。  
+     選択、**オフ**イベントを消去するオプション。  
   
 ## <a name="known-issue"></a>既知の問題  
   
@@ -144,16 +144,16 @@ ms.locfileid: "33519874"
 >   
 >  `The description for Event ID <id> from source Microsoft-Windows-Application Server-Applications cannot be found. Either the component that raises this event is not installed on your local computer or the installation is corrupted. You can install or repair the component on the local computer.`  
 >   
->  このエラーが発生した場合はクリックして**更新**[操作] ウィンドウ。 これにより、イベントが正常にデコードされます。  
+>  このエラーが発生した場合はクリックして**更新**操作 ウィンドウでします。 これにより、イベントが正常にデコードされます。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

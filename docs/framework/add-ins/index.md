@@ -15,11 +15,11 @@ ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eb2485f2ecf0426360dba80d443500a92b5a7af6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482224"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510055"
 ---
 # <a name="add-ins-and-extensibility"></a>アドインおよび拡張機能
 <a name="top"></a> アドインには、ホスト アプリケーションのための拡張機能またはサービスが用意されています。 開発者は、 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のプログラミング モデルを使用してアドインを開発し、ホスト アプリケーションでそれらをアクティブ化できます。 こうした機能は、このモデルで、ホストとアドインの間に通信パイプラインを構築することによって実現します。 このモデルは、 <xref:System.AddIn>、 <xref:System.AddIn.Hosting>、 <xref:System.AddIn.Pipeline>、 <xref:System.AddIn.Contract> の各名前空間の型を使用することによって実装されます。  

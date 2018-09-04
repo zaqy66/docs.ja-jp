@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
 ms.openlocfilehash: 5e91ab9fbd2fdeb0aa5d836a1eedfb5e0b45ecba
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425798"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510453"
 ---
 # <a name="how-to-implement-binding-validation"></a>方法 : バインディングの検証の実装
 この例は、使用する方法を示します、<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>し、無効な値を入力したら、ユーザーに通知する視覚的なフィードバックを提供するスタイルのトリガーのカスタム検証規則に基づいています。  

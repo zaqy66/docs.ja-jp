@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 0b4cdfa7bab1f41f80926b20da3e63a72a2d165d
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 641a1cc0fd0ec53872ee3312e7da06923b82ddd7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912001"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507606"
 ---
 # <a name="optimistic-concurrency"></a>オプティミスティック同時実行制御
 マルチユーザー環境には、データベースのデータを更新するための 2 つのモデルがあります。オプティミスティック同時実行制御とペシミスティック同時実行制御です。 <xref:System.Data.DataSet> オブジェクトは、データをリモート処理するときや、データと対話するときのように長時間にわたる利用状況では、オプティミスティック同時実行制御の使用を奨励するように設計されています。  
@@ -211,5 +211,4 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
  [DataAdapter によるデータ ソースの更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [行エラー情報](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
  [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- 
-  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

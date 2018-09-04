@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
 ms.openlocfilehash: 24fbf17f02072b2d9922ca0998805b916afc41b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463710"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510161"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>複合 Windows フォーム コントロールの開発
 異なる複数の Windows フォーム コントロールを組み合わせることによって、複合 Windows フォーム コントロールを開発できます。 派生した複合コントロール<xref:System.Web.UI.UserControl>ユーザー コントロールと呼ばれます。 基底クラス <xref:System.Windows.Forms.UserControl> は、子コントロールに対してキーボード ルーティングを提供し、子コントロールがフォーカスを受け取れるようにします。 ユーザー コントロールの例は、次を参照してください。、<xref:System.Windows.Forms.UserControl>サンプルは、[方法: Windows フォーム コントロールに属性を適用](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)します。  

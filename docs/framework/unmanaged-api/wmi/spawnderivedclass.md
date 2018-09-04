@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 04df65a29584f7e2de44389d815b915a541e38f0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: HT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489800"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507498"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 関数
-指定したオブジェクトから新しく派生クラス オブジェクトを作成します。    
+指定したオブジェクトから新たに派生するクラス オブジェクトが作成されます。    
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

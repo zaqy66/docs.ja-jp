@@ -3,11 +3,11 @@ title: JSON シリアル化
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
 ms.openlocfilehash: 02e81fe8d75ae7b752641d1f9a650fcfe5873141
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384485"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510068"
 ---
 # <a name="json-serialization"></a>JSON シリアル化
 このサンプルでは、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を使用して、JavaScript Object Notation (JSON) 形式のデータをシリアル化および逆シリアル化する方法を示します。 このシリアル化エンジンによって、JSON データを [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型のインスタンスに変換したり JSON データに戻したりすることができます。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> では、<xref:System.Runtime.Serialization.DataContractSerializer> と同じ型をサポートしています。 JSON データ形式は、特に Asynchronous JavaScript and XML (AJAX) スタイルの Web アプリケーションを作成するときに便利です。 Windows Communication Foundation (WCF) での AJAX のサポートは、ScriptManager コントロールを介して ASP.NET AJAX と共に使用に最適です。 ASP.NET AJAX での Windows Communication Foundation (WCF) を使用する方法の例については、次を参照してください。、 [AJAX のサンプル](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)します。  

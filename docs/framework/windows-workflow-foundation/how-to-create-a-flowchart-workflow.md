@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
 ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474026"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502152"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>フローチャート ワークフローを作成する方法
 ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 など両方の組み込みのアクティビティを使用するワークフローを作成する手順をこのトピックで、<xref:System.Activities.Statements.Flowchart>アクティビティ、およびカスタム アクティビティ、前の[方法: アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  

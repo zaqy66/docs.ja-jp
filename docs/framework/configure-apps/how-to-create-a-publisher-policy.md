@@ -11,11 +11,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 3fdc3786be3307e8c882a33b5139ee34344733b8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404411"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504819"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成する
 アセンブリの販売できる状態の監視アプリケーションがアップグレード済みのアセンブリに発行者ポリシー ファイルを含めることによって、新しいバージョンのアセンブリを使用する必要があります。 発行者ポリシー ファイルは、アセンブリのリダイレクトとコードの基本設定を指定し、アプリケーション構成ファイルと同じ形式を使用します。 発行者ポリシー ファイルがアセンブリにコンパイルし、グローバル アセンブリ キャッシュに配置します。  
@@ -92,7 +92,7 @@ ms.locfileid: "43404411"
   
 1.  コマンド プロンプトで次のコマンドを入力します。  
   
-     **gacutil/i***publisherPolicyAssemblyFile*   
+     **gacutil/i***publisherPolicyAssemblyFile*  
   
      次のコマンドは、追加`policy.1.0.myAssembly.dll`グローバル アセンブリ キャッシュにします。  
   

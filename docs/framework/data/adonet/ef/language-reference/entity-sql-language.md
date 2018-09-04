@@ -3,11 +3,11 @@ title: Entity SQL 言語
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
 ms.openlocfilehash: 1df5372bed2c4c4b026662e0d1912683dd8752e9
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331955"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509610"
 ---
 # <a name="entity-sql-language"></a>Entity SQL 言語
 Entity SQL は、ストレージに依存しない SQL と似たクエリ言語です。 Entity SQL を使用すると、オブジェクトとして、または表形式でエンティティ データに対してクエリを実行できます。 次の場合には Entity SQL の使用を検討してください。  

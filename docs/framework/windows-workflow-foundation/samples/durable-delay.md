@@ -3,11 +3,11 @@ title: 永続的な遅延
 ms.date: 03/30/2017
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
 ms.openlocfilehash: 2a7692e28d60232913ae5d11a90025e59664c0e5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406577"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507634"
 ---
 # <a name="durable-delay"></a>永続的な遅延
 このサンプルでは、永続的な遅延を使用する方法を示します。これは、遅延の間、ワークフローを永続的なデバイスに永続化する遅延のことです。 このサンプル ワークフローには、遅延によって分割された 2 つのコンソールへのメッセージが含まれています。 遅延が発生すると、ワークフローがアンロードされ、ワークフローはメモリに再読み込みされるまでワークフロー インスタンス ストアで 5 秒間待機します。  

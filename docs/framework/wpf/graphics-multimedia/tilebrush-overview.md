@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480907"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505140"
 ---
 # <a name="tilebrush-overview"></a>TileBrush の概要
 <xref:System.Windows.Media.TileBrush> オブジェクトを提供する非常に大量のイメージで領域を塗りつぶす方法を制御<xref:System.Windows.Media.Drawing>、または<xref:System.Windows.Media.Visual>します。 このトピックでは、使用する方法を説明します<xref:System.Windows.Media.TileBrush>方法の詳細に制御する機能、 <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、または<xref:System.Windows.Media.VisualBrush>領域を塗りつぶします。  

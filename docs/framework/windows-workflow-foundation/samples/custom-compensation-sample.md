@@ -3,11 +3,11 @@ title: カスタム補正のサンプル
 ms.date: 03/30/2017
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
 ms.openlocfilehash: ac141a48f87f5b14f6b528f7b3ceb7fdddeaf2d2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475869"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503720"
 ---
 # <a name="custom-compensation-sample"></a>カスタム補正のサンプル
 このサンプルでは、<xref:System.Activities.Statements.CompensableActivity> とその補正ハンドラーを使用してカスタム補正ロジックを定義する方法を示します。 このサンプルでは、トラック レンタル会社のシナリオをモデル化しています。  

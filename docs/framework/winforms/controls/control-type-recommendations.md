@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
 ms.openlocfilehash: 5ce801a96bc4ef48934b983838dcf8578a5bc6e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405348"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503018"
 ---
 # <a name="control-type-recommendations"></a>コントロールの種類に関するアドバイス
 .NET Framework は、新しいコントロールを開発して実装する機能を提供します。 使い慣れたユーザー コントロールだけでなく、独自の描画を実行するカスタム コントロールを作成することも、継承によって既存のコントロールの機能を拡張することもできるようになりました。 作成するコントロールの種類の決定が、混乱を招く可能性があります。 このセクションでは、継承できるさまざまな種類のコントロールの間の違いについて説明し、プロジェクトに合わせて選択する種類に関する注意点を示しています。  

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID481
 ms.assetid: 6ac18c39-042b-423a-9d95-25a7745c84dd
 ms.openlocfilehash: 7b4bc13d8c76a7144268e83752eb9ed64eb61e38
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463066"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508615"
 ---
 # <a name="picture-is-not-valid"></a>ピクチャが有効ではありません
 フォームまたはコントロールの `Picture` プロパティに、ビットマップ、アイコン、または Windows メタファイル以外のグラフィック形式を割り当てようとしました。  

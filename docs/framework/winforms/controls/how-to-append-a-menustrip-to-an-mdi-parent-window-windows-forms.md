@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
 ms.openlocfilehash: bfce2e5c787bd18321d1203286e98d8f75cbf173
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386079"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500639"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>方法 : MenuStrip を MDI 親ウィンドウに追加する (Windows フォーム)
 アプリケーションの中には、マルチ ドキュメント インターフェイス (MDI) 子ウィンドウの種類が MDI 親ウィンドウと異なるものがあります。 たとえば、MDI 親がスプレッドシートで、MDI 子がグラフの場合があります。 そのような場合は、異なる種類の MDI 子ウィンドウがアクティブになったときに、MDI 子メニューの内容で MDI 親メニューの内容を更新する必要があります。  

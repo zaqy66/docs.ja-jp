@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 290c2f58d0259d5a0df52711f63c48521891ae12
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407528"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502082"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>方法: モデル定義関数をオブジェクト メソッドとして呼び出す
 ここでは、モデル定義関数を <xref:System.Data.Objects.ObjectContext> オブジェクトのメソッドまたはカスタム クラスの静的メソッドとして呼び出す方法について説明します。 A*モデル定義関数*は概念モデルで定義されている関数です。 このトピックで説明する手順は、これらの関数を LINQ to Entities クエリから呼び出すのではなく、直接呼び出す方法を示すものです。 Linq to Entities クエリ モデル定義関数を呼び出す方法の詳細については、次を参照してください。[方法: クエリの Call Model-Defined 関数](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)します。  

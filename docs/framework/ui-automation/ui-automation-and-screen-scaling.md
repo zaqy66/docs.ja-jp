@@ -13,16 +13,16 @@ ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c34c10ee1701adba2dfb64be8ef39d6bf9f203e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b5f3f42158a8b86a247a0e8a1ada3a37edc0df1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399679"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499966"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI オートメーションおよび画面の拡大縮小
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] では、ユーザーが [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] 設定を変更して、画面上のほとんどの [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 要素を拡大表示できます。 この機能は長い間、 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]で有効でしたが、以前のバージョンでは、アプリケーションによって拡大縮小を実装しなければなりませんでした。 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]では、独自の拡大縮小処理を行わないアプリケーションのすべてについて、デスクトップ ウィンドウ マネージャーが既定の拡大縮小を行います。 UI オートメーション クライアント アプリケーションでは、この機能を考慮に入れる必要があります。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33399679"
   
  たとえば、ダイアログ ボックスを設計し、座標 (100, 48) にボタンを配置するとします。 このダイアログ ボックスが既定の 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]で表示される場合、ボタンは物理座標 (100, 48) に位置します。 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]の場合は、物理座標 (125, 60) に位置します。 しかし、論理座標は [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] の設定に関係なく、(100, 48) のままです。  
   
- 論理座標は、 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] の設定に関係なく、オペレーティング システムとアプリケーションの動作を一貫性のあるものとするので重要です。 たとえば、<xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>通常、論理座標を返します。 カーソルをダイアログ ボックス内の要素に移動すると、 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] の設定に関係なく、同じ座標が返されます。 (100, 100) にコントロールを描画する場合、そのコントロールはこの論理座標に描画され、 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] の設定に関係なく、同じ相対位置を占めることになります。  
+ 論理座標は、 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] の設定に関係なく、オペレーティング システムとアプリケーションの動作を一貫性のあるものとするので重要です。 たとえば、<xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>通常論理座標を返します。 カーソルをダイアログ ボックス内の要素に移動すると、 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] の設定に関係なく、同じ座標が返されます。 (100, 100) にコントロールを描画する場合、そのコントロールはこの論理座標に描画され、 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] の設定に関係なく、同じ相対位置を占めることになります。  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
 ## <a name="scaling-in-ui-automation-clients"></a>UI オートメーション クライアントにおける拡大縮小  
@@ -61,12 +61,12 @@ ms.locfileid: "33399679"
   
  解決方法は 2 つの部分で構成されます。  
   
-1.  まず、クライアント アプリケーションを [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]対応にします。 それには、起動時に [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 関数 `SetProcessDPIAware` を呼び出します。 マネージ コードで、次の宣言によりこの関数を使用できるようになります。  
+1.  まず、クライアント アプリケーションを [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]対応にします。 それには、起動時に [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 関数 `SetProcessDPIAware` を呼び出します。 マネージド コードで、次の宣言によりこの関数を使用できるようになります。  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     この関数は、プロセス全体を [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]対応にします。つまり、プロセスに属するすべてのウィンドウは拡大縮小されません。 [蛍光ペンのサンプル](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)、たとえば、強調表示の四角形を構成する 4 つのウィンドウはから取得した物理座標にある[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]、論理座標ではありません。 この例が [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]非対応だったなら、強調表示はデスクトップ上の論理座標で描画されるため、96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 以外の環境では誤った位置に配置されることになります。  
+     この関数は、プロセス全体を [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]対応にします。つまり、プロセスに属するすべてのウィンドウは拡大縮小されません。 [蛍光ペン サンプル](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)、たとえば、強調表示の四角形を構成する 4 つのウィンドウはから取得した物理座標にある[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]、論理座標ではありません。 この例が [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]非対応だったなら、強調表示はデスクトップ上の論理座標で描画されるため、96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 以外の環境では誤った位置に配置されることになります。  
   
 2.  カーソルの座標を取得するには、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 関数 `GetPhysicalCursorPos`を呼び出します。 次の例に、この関数を宣言して使用する方法を示します。  
   
@@ -79,4 +79,4 @@ ms.locfileid: "33399679"
  アプリケーションが [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]非対応のアプリケーションと直接プロセス間通信を行う場合は、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 関数 `PhysicalToLogicalPoint` および `LogicalToPhysicalPoint`を使用して、論理座標と物理座標を互いに変換できます。  
   
 ## <a name="see-also"></a>関連項目  
- [蛍光ペンのサンプル](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [蛍光ペンのサンプル](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

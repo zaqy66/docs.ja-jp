@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
 ms.openlocfilehash: 542437b419547ffd00dff193546b6d29cdc7e63a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43424192"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504294"
 ---
 # <a name="handling-datatable-events"></a>DataTable イベントの処理
 <xref:System.Data.DataTable> オブジェクトは、アプリケーションが処理できる一連のイベントを提供します。 `DataTable` のイベントを次の表に示します。  

@@ -3,11 +3,11 @@ title: TransactedReceiveScope の使用
 ms.date: 03/30/2017
 ms.assetid: d455f1dc-bfc5-43d6-8ae9-bc3b3a3ea08a
 ms.openlocfilehash: bc1c418f3fa116f5e1c1647af3543a38122842f5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481472"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501643"
 ---
 # <a name="use-of-transactedreceivescope"></a>TransactedReceiveScope の使用
 このサンプルでは、クライアントからサーバーにトランザクションをフローする方法を示します。このために、<xref:System.Activities.Statements.TransactionScope> を使用してクライアント上に新しいトランザクションを作成し、<xref:System.ServiceModel.Activities.TransactedReceiveScope> を使用してフローされたトランザクションを含むメッセージを受信し、サーバー上でトランザクションの有効期間のスコープを設定します。 このサンプルは、クライアントとサーバーの役割を果たす 2 つのプロジェクトで構成されます。  

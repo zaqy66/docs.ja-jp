@@ -2,12 +2,12 @@
 title: '方法 : トランザクション サービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: d59c0b96b766f0692c7b84a02deed55e32dc655a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bba3a1f9c1d08e882cd5e4117c97f9f84d0c2be8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494980"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509868"
 ---
 # <a name="how-to-create-a-transactional-service"></a>方法 : トランザクション サービスを作成する
 このサンプルでは、トランザクション サービスを作成する際のさまざまな側面と、サービス操作を調整するためにクライアントが起動するトランザクションの使用について説明します。  
@@ -65,7 +65,7 @@ ms.locfileid: "33494980"
     }  
     ```  
   
-3.  構成ファイルでバインディングを構成して、トランザクション コンテキストのフローを指定し、そのとき使用されるプロトコルを指定します。 詳細については、次を参照してください。 [ServiceModel トランザクションの構成](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)です。 具体的には、エンドポイント要素の `binding` 属性でバインド型を指定します。 [\<エンドポイント >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)要素が含まれています、`bindingConfiguration`という名前のバインディング構成を参照する属性を`transactionalOleTransactionsTcpBinding`のサンプル構成を次に示すようにします。  
+3.  構成ファイルでバインディングを構成して、トランザクション コンテキストのフローを指定し、そのとき使用されるプロトコルを指定します。 詳細については、次を参照してください。 [ServiceModel トランザクションの構成](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)します。 具体的には、エンドポイント要素の `binding` 属性でバインド型を指定します。 [\<エンドポイント >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)要素が含まれています、`bindingConfiguration`という名前のバインド構成を参照する属性`transactionalOleTransactionsTcpBinding`の次のサンプル構成に示すようにします。  
   
     ```xml  
     <service name="CalculatorService">  
@@ -91,7 +91,7 @@ ms.locfileid: "33494980"
   
 ### <a name="supporting-multiple-transaction-protocols"></a>複数のトランザクション プロトコルのサポート  
   
-1.  最適なパフォーマンスは、クライアントおよび Windows Communication Foundation (WCF) を使用して記述されたサービスに関連するシナリオの OleTransactions プロトコルを使用する必要があります。 ただし、サード パーティのプロトコル スタックとの相互運用性が必要なシナリオでは、WS-AT (WS-AtomicTransaction) プロトコルが有用です。 次のサンプル構成で示すように、適切なプロトコル固有のバインディングを持つ複数のエンドポイントを提供することで両方のプロトコルを受け入れるように WCF サービスを構成することができます。  
+1.  最適なパフォーマンスをクライアントと Windows Communication Foundation (WCF) を使用して作成されたサービスを必要とするシナリオの OleTransactions プロトコルを使用する必要があります。 ただし、サード パーティのプロトコル スタックとの相互運用性が必要なシナリオでは、WS-AT (WS-AtomicTransaction) プロトコルが有用です。 次のサンプル構成で示すように、適切なプロトコル固有のバインディングを持つ複数のエンドポイントを提供することで両方のプロトコルをそのまま使用する WCF サービスを構成できます。  
   
     ```xml  
     <service name="CalculatorService">  
@@ -126,7 +126,7 @@ ms.locfileid: "33494980"
   
 ### <a name="controlling-the-completion-of-a-transaction"></a>トランザクションの完了の制御  
   
-1.  既定では、WCF 操作では、未処理の例外がスローされなかった場合にトランザクションが自動的に完了します。 この動作を変更するには、<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> プロパティと <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> メソッドを使用します。 ある操作を他の操作と同じトランザクション内で行う必要がある場合 (借方と貸方の操作など)、次の <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 操作の例に示すように、`false` プロパティを `Debit` に設定することで自動完了の動作を無効にできます。 `Debit` 操作で使用されるトランザクションは、<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 操作に示すように `true` プロパティが `Credit1` に設定されているメソッドが呼び出されるまで、または <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 操作に示すように、`Credit2` メソッドを呼び出してトランザクションの完了が明示的に示されるまで、完了しません。 2 つの貸方操作は説明のために示されています。一般には単一の貸方処理が使用されます。  
+1.  既定では、WCF 操作では、未処理の例外がスローされない場合のトランザクションが自動的に完了します。 この動作を変更するには、<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> プロパティと <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> メソッドを使用します。 ある操作を他の操作と同じトランザクション内で行う必要がある場合 (借方と貸方の操作など)、次の <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 操作の例に示すように、`false` プロパティを `Debit` に設定することで自動完了の動作を無効にできます。 `Debit` 操作で使用されるトランザクションは、<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 操作に示すように `true` プロパティが `Credit1` に設定されているメソッドが呼び出されるまで、または <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 操作に示すように、`Credit2` メソッドを呼び出してトランザクションの完了が明示的に示されるまで、完了しません。 2 つの貸方操作は説明のために示されています。一般には単一の貸方処理が使用されます。  
   
     ```  
     [ServiceBehavior]  
@@ -182,7 +182,7 @@ ms.locfileid: "33494980"
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>トランザクション サービス インスタンスの有効期間の制御  
   
-1.  WCF を使用して、<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>プロパティは、トランザクションが完了するときに、基になるサービス インスタンスを解放するかどうかを指定します。 既定値はため`true`WCF 展示、効率的で予測可能な「ジャストでタイム」アクティベーション動作をそれ以外の場合、構成されている場合を除き、します。 後続するトランザクションでサービスを呼び出すと、前回のトランザクションの状態が残らない新規のサービス インスタンスが必ず呼び出されます。 これは通常は便利ですが、トランザクションの完了後もサービス インスタンス内に状態を保持する必要がある場合もあります。 この例としては、必要な状態やリソースへのハンドルの取得または再構成に負荷がかかる場合があります。 これを実行するには、<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> プロパティを `false` に設定します。 このように設定することで、インスタンスとこれに関連する任意の状態が、後続する呼び出しからも利用できるようになります。 この設定を使用する場合は、状態とトランザクションを消去して完了するタイミングと方法を入念に考慮する必要があります。 `runningTotal` 変数を使用してインスタンスを保持することで、これを行う方法を次のサンプルに示します。  
+1.  WCF を使用して、<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>トランザクションが完了すると、基になるサービス インスタンスがリリースされたかどうかを指定するプロパティ。 既定値はため`true`WCF 展示、効率的で予測可能な"- just-in-time"アクティベーション動作をそれ以外の場合、構成されている場合を除き、します。 後続するトランザクションでサービスを呼び出すと、前回のトランザクションの状態が残らない新規のサービス インスタンスが必ず呼び出されます。 これは通常は便利ですが、トランザクションの完了後もサービス インスタンス内に状態を保持する必要がある場合もあります。 この例としては、必要な状態やリソースへのハンドルの取得または再構成に負荷がかかる場合があります。 これを実行するには、<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> プロパティを `false` に設定します。 このように設定することで、インスタンスとこれに関連する任意の状態が、後続する呼び出しからも利用できるようになります。 この設定を使用する場合は、状態とトランザクションを消去して完了するタイミングと方法を入念に考慮する必要があります。 `runningTotal` 変数を使用してインスタンスを保持することで、これを行う方法を次のサンプルに示します。  
   
     ```  
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
 ms.openlocfilehash: 4f389530b287d1c7a11a88972ef948347d3ea533
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421596"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508961"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services クライアント ライブラリ
 HTTP 要求を送信し、データ サービスが返す [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] フィードを処理できるのであれば、どのようなアプリケーションでも [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ベースのデータ サービスと対話できます。 この相互運用性によって、広範な Web 対応アプリケーションから [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ベースのサービスにアクセスすることが可能になります。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用する場合は、高度なプログラミング エクスペリエンスを提供するクライアント ライブラリが含まれています[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]から .NET Framework または Silverlight ベースのアプリケーションにフィードします。  

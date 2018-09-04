@@ -9,16 +9,16 @@ ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0fb24b42518b6ffdeb30dc8daa926d598fb542ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4fd5c0b35e2d99cd81720aa0c7dd587f5cb3298
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409689"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510211"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>UI オートメーションによる RadioButton コントロール型のサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージ <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](http://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、RadioButton コントロール型の [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] サポートについて説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でのコントロール型とは、コントロールが <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> プロパティを使用するために満たす必要がある一連の条件のことです。 これらの条件には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティ値、およびコントロール パターンに関する特定のガイドラインが含まれます。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33409689"
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
- 次の表に、オプション ボタン コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 詳細については、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーを参照してください[UI オートメーション ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)です。  
+ 次の表に、オプション ボタン コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 詳細については、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーを参照してください[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)します。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "33409689"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、RadioButton コントロール型に特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを列挙します。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)です。  
+ 次の表に、RadioButton コントロール型に特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを列挙します。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)します。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|[値]|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -59,7 +59,7 @@ ms.locfileid: "33409689"
   
 |コントロール パターン/コントロール パターン プロパティ|サポート/値|メモ|  
 |-----------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|[はい]|すべてのオプション ボタン コントロールが、それ自体を選択可能にする選択項目パターンをサポートする必要があります。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|はい|すべてのオプション ボタン コントロールが、それ自体を選択可能にする選択項目パターンをサポートする必要があります。|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|「ノート」をご覧ください。|UI オートメーション クライアントが特定のコンテキスト内で相互に関連する他のオプション ボタンを特定できるためには、 `SelectionContainerProperty` が設定されている必要があります。  オプション ボタンの [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] バージョンでは、このプロパティがサポートされません。これは、従来のフレームワークからこの情報を取得できないためです。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Never|オプション ボタンは、いったん設定されると、その状態を循環させることができません。  このパターンは、オプション ボタンではサポートしないでください。|  
   

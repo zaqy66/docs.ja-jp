@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
 ms.openlocfilehash: 72dc0c55a946bfa8ffc6f87bdbf353a20205185e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462533"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500600"
 ---
 # <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>方法 : Windows フォームの DataGridView 行にバインドされたオブジェクトにアクセスする
 場合によっては、ビジネス オブジェクトのコレクションに格納されている情報のテーブルを表示すると便利です。 <xref:System.Windows.Forms.DataGridView> コントロールをそのようなコレクションにバインドすると、<xref:System.ComponentModel.BrowsableAttribute> によって参照不可にマークされない限り、各パブリック プロパティが独自の列に表示されます。 たとえば、`Customer` オブジェクトのコレクションに**名前**や**アドレス**などの列が含まれるようになります。  

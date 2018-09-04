@@ -3,11 +3,11 @@ title: '&lt;mexHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
 ms.openlocfilehash: 37b8ef1c842e1b9082ebcf0f2996b74cafc5c133
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482422"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510694"
 ---
 # <a name="ltmexhttpbindinggt"></a>&lt;mexHttpBinding&gt;
 HTTP 経由の WS-MetadataExchange (WS-MEX) メッセージ交換に使用されるバインディングの設定を指定します。  

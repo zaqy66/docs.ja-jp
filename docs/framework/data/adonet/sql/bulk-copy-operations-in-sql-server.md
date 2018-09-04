@@ -3,11 +3,11 @@ title: SQL Server でのバルク コピー操作
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.openlocfilehash: 16709d1bdc03c767d1e3aed808de220bf91e76ee
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43455667"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510741"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server でのバルク コピー操作
 Microsoft SQL Server には、という一般的なコマンド ライン ユーティリティが含まれています。 **bcp**の高速で一括 SQL Server データベースのテーブルまたはビューに大きなファイルをコピーします。 <xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用すると、同様の機能を備えたマネージド コード ソリューションを作成できます。 SQL Server のテーブルにデータを読み込むには、INSERT ステートメントを使用するなどの方法もありますが、<xref:System.Data.SqlClient.SqlBulkCopy> を使用すれば他の方法よりもパフォーマンス面で大幅に有利になります。  

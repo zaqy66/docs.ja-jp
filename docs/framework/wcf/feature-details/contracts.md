@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
 ms.openlocfilehash: 1960a9c547892119d1bc0fb7efb51dfa5498a9c2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418674"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503243"
 ---
 # <a name="contracts"></a>コントラクト
 このセクションでは、定義し、Windows Communication Foundation (WCF) コントラクトを実装する方法を示します。 サービス コントラクトとは、エンドポイントが外部と何をやりとりするかを指定するものです。 より具体的には、要求/応答、一方向、双方向というような、基本的なメッセージ交換パターン (MEP) として編成された一連のメッセージに関する記述です。 サービス コントラクトが一連のメッセージ交換に論理的に関連付けられていれば、サービスの操作は単一のメッセージ交換になります。 たとえば、`Hello` という操作は、必ず 1 つのメッセージを受け取らなければならず (呼び出し元があいさつを通知できるようにするため) 、これに対してメッセージを返したり、返さなかったりします (その操作がマナーを守っているかどうかによる)。  

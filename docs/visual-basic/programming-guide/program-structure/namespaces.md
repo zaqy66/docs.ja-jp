@@ -17,11 +17,11 @@ helpviewer_keywords:
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 ms.openlocfilehash: 11fe6956ae2e61d6d715f1d5814e20c4a4d00292
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402982"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509315"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic における名前空間
 アセンブリ内で定義されているオブジェクトは、名前空間によって編成されています。 アセンブリには複数の名前空間を含めることができます。さらに、名前空間の中に他の名前空間を含めることもできます。 名前空間を使用するとあいまいさがなくなるため、クラス ライブラリを使用する場合など、多数のオブジェクトを使用する場合に参照が簡単になります。  

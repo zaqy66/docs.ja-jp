@@ -3,11 +3,11 @@ title: WCF 構成スキーマ
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
 ms.openlocfilehash: 11123d30138e8e1e763af0a01245e774dfba14f6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508903"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 構成スキーマ
 Windows Communication Foundation (WCF) 構成要素を使用すると、WCF サービスとクライアント アプリケーションを構成できます。 [ 構成エディター ツール (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) を使用して、クライアントとサービスの構成ファイルを作成および変更できます。 構成ファイルは XML として書式設定されているので、テキスト エディターを使用して手動で編集する場合は、XML について理解している必要があります。 理解しないで編集すると、XML 要素タグや属性が見つからないなどの問題が発生する可能性があります。 問題の原因は、XML 要素タグと属性が大文字と小文字を区別することによります。  

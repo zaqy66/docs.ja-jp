@@ -2,15 +2,15 @@
 title: NamedPipe アクティベーション
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 46b59dab0f67c66ca364d9e880ef519386d0df94
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806384"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504273"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe アクティベーション
-このサンプルでは、名前付きパイプを介して通信するサービスをアクティブ化するために、Windows プロセス アクティブ化サービス (WAS: Windows Process Activation Service) を使用してサービスをホストする方法を示します。 このサンプルがに基づいて、[作業の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)する必要があります[!INCLUDE[wv](../../../../includes/wv-md.md)]を実行します。  
+このサンプルでは、名前付きパイプを介して通信するサービスをアクティブ化するために、Windows プロセス アクティブ化サービス (WAS: Windows Process Activation Service) を使用してサービスをホストする方法を示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)必要があります[!INCLUDE[wv](../../../../includes/wv-md.md)]を実行します。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -20,7 +20,7 @@ ms.locfileid: "33806384"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
   
@@ -159,17 +159,17 @@ Press <ENTER> to terminate client.
   
 1.  [!INCLUDE[iisver](../../../../includes/iisver-md.md)] がインストールされていることを確認します。 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] は WAS のアクティブ化に必要です。  
   
-2.  確実に実行する、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+2.  実行済みであることを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
      さらに、WCF 非 HTTP アクティブ化コンポーネントをインストールする必要があります。  
   
-    1.  **開始** メニューの 選択**コントロール パネルの **です。  
+    1.  **[スタート]** メニューの **[コントロール パネル]** をクリックします。  
   
     2.  選択**プログラムと機能**します。  
   
-    3.  をクリックして**Windows コンポーネントをオンまたはオフ**です。  
+    3.  クリックして**Windows コンポーネントをオンまたはオフ**します。  
   
-    4.  展開して、 **Microsoft .NET Framework 3.0**ノードとチェック、 **Windows Communication Foundation NON-HTTP Activation**機能します。  
+    4.  展開、 **Microsoft .NET Framework 3.0**ノードとチェック、 **Windows Communication Foundation NON-HTTP Activation**機能します。  
   
 3.  名前付きパイプのアクティブ化をサポートするように Windows プロセス アクティブ化サービス (WAS) を構成します。  
   
@@ -223,4 +223,4 @@ Press <ENTER> to terminate client.
         >  このコマンドは、全体で 1 行のテキストになるように入力する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric ホスティングと永続性のサンプル](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

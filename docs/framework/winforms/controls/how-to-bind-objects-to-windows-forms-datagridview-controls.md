@@ -10,11 +10,11 @@ helpviewer_keywords:
 - object binding [Windows Forms], DataGridView control
 ms.assetid: cb8f29fa-577e-4e2b-883f-3a01c6189b9c
 ms.openlocfilehash: 142009bb2c845384c19e5999896afbfa2ebd0a3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397070"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511777"
 ---
 # <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>方法 : オブジェクトを Windows フォーム DataGridView コントロールにバインドする
 各オブジェクトが別々の行として表示されるように <xref:System.Windows.Forms.DataGridView> コントロールにオブジェクトのコレクションをバインドする方法を次のコード例に示します。 また、この例では、<xref:System.Windows.Forms.DataGridViewComboBoxColumn> にプロパティとして列挙型を表示し、コンボ ボックスのドロップダウン リストに列挙値が含まれるようにする方法も示されています。  

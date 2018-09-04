@@ -6,12 +6,12 @@ helpviewer_keywords:
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-ms.openlocfilehash: 77ff87bcb8c325e87564dfbadf87729ed8a28209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a00bfa0772273f9374d292e27f5fba174172ca6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537851"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499875"
 ---
 # <a name="timer-component-windows-forms"></a>Timer コンポーネント (Windows フォーム)
 Windows フォーム <xref:System.Windows.Forms.Timer> は、一定の間隔でイベントを発生させるコンポーネントです。 このコンポーネントは、Windows フォームの環境用に設計されています。  
@@ -37,5 +37,5 @@ Windows フォーム <xref:System.Windows.Forms.Timer> は、一定の間隔で�
  [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   
- [Visual Basic 6.0 ユーザー向けの timer コントロール](http://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
+ [Visual Basic 6.0 ユーザー向けの timer コントロール](https://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
  以前のバージョンと比較して、Visual Basic のタイマー機能がどのように変更されたか説明します。
