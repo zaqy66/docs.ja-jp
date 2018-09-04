@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: f32b1c9f800a1ec2d80511cbbf46aba9840075d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d52c6bfdadf0a53ac4c5f62c37f1056c6702a82c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553765"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server のプロバイダー統計情報
 .NET Framework version 2.0 以降では、.NET Framework Data Provider for SQL Server によって実行時の統計がサポートされています。 統計情報を有効にするには、有効な接続オブジェクトを作成した後で、<xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> プロパティを `True` に設定する必要があります。 統計情報が有効にされると、<xref:System.Collections.IDictionary> オブジェクトの <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> メソッドを通じて <xref:System.Data.SqlClient.SqlConnection> 参照を取得することにより、"時間単位のスナップショット" として統計情報を確認できます。 名前と値がペアになったディクショナリ エントリのセットとして、一覧を列挙します。 これらの名前と値のペアは順序付けられていません。 いつでも <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> メソッドを呼び出して、カウンターをリセットすることができます。 統計情報収集が有効になっていない場合、例外は生成されません。 また、<xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> が最初に呼び出されるずに <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> が呼び出されると、取得される値は各エントリの初期値になります。 統計情報を有効にしてからアプリケーションをしばらく実行した後で統計情報を無効にした場合、取得される値には、統計情報が無効にされた時点までに収集された値が含まれます。 すべての統計情報の値は、接続ごとに収集されます。  
   
 ## <a name="statistical-values-available"></a>使用できる統計情報の値  
- 現在、Microsoft SQL Server プロバイダーから使用できる項目は 18 種類あります。 利用可能なアイテムの数は、経由でアクセスできる、**カウント**のプロパティ、<xref:System.Collections.IDictionary>インターフェイスによって返されるリファレンス<xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>です。 共通言語ランタイムを使用してすべてのプロバイダー統計カウンター<xref:System.Int64>型 (**長い**c# および Visual Basic で)、64 ビット幅であります。 最大値、 **int64**データ型で定義されている、 **int64 です。MaxValue**フィールド、((2^63)-1))。 カウンターの値がこの最大値に達すると、これ以降カウンターは正確ではないと見なされます。 つまり、 **int64 です。MaxValue**-1((2^63)-2) はすべての統計の最大有効値は実質的にします。  
+ 現在、Microsoft SQL Server プロバイダーから使用できる項目は 18 種類あります。 使用してアクセスできる使用可能な項目の数、**カウント**のプロパティ、<xref:System.Collections.IDictionary>インターフェイスによって返される参照<xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>します。 共通言語ランタイムを使用して、すべてのプロバイダー統計情報のカウンター<xref:System.Int64>型 (**長い**c# および Visual Basic で)、64 ビット幅であります。 最大値、 **int64**によって定義されているデータ型、 **int64。MaxValue**フィールド、((2^63)-1))。 カウンターの値がこの最大値に達すると、これ以降カウンターは正確ではないと見なされます。 つまり、 **int64。MaxValue**-1((2^63)-2) は、事実上すべての統計の最大有効値。  
   
 > [!NOTE]
 >  プロバイダーの統計情報を返すためにディクショナリが使用されているのは、返される統計情報の数値、名前、および順序が今後変更される可能性があるためです。 アプリケーションでは、ディクショナリ内で見つかった特定の値に依存する必要はありませんが、値が存在するかどうかや、この値に応じて分岐させるかどうかを確認する必要があります。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
  次のコンソール アプリケーションは、接続で統計情報を有効にして、4 つの各統計情報の値を取得し、コンソール ウィンドウに出力する方法を示します。  
   
 > [!NOTE]
->  次の例は、サンプル**AdventureWorks** SQL Server に付属のデータベースです。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
+>  次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
   
 ```vb  
 Option Strict On  
@@ -203,7 +204,7 @@ namespace CS_Stats_Console_GetValue
  次のコンソール アプリケーションは、接続で統計情報を有効にし、使用可能なすべての統計情報の値を列挙子を使って取得して、コンソール ウィンドウに出力する方法を示します。  
   
 > [!NOTE]
->  次の例は、サンプル**AdventureWorks** SQL Server に付属のデータベースです。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
+>  次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
   
 ```vb  
 Option Strict On  
@@ -339,4 +340,4 @@ namespace CS_Stats_Console_GetAll
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

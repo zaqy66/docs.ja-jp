@@ -2,22 +2,22 @@
 title: 高度なフィルター
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-ms.openlocfilehash: de8577be2d56ec3c942fd8736e350234daf6a35a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805617"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564201"
 ---
 # <a name="advanced-filters"></a>高度なフィルター
-このサンプルでは、Windows Communication Foundation (WCF) ルーティング サービスを使用します。 ルーティング サービスは、コンテンツ ベースのルーターをアプリケーションに含めるしやすく WCF コンポーネントです。 このサンプルは、ルーティング サービスを使用して通信するために標準の WCF 電卓のサンプルを適合させます。 そして、メッセージ フィルターとメッセージ フィルター テーブルを使用してコンテンツ ベースのルーティング ロジックを定義する方法を説明します。  
+このサンプルでは、Windows Communication Foundation (WCF) ルーティング サービスを使用します。 ルーティング サービスは、WCF コンポーネント、アプリケーションでコンテンツ ベースのルーターを含めるが簡単です。 このサンプルでは、ルーティング サービスを使用して通信するために標準の WCF の電卓のサンプルを適応します。 そして、メッセージ フィルターとメッセージ フィルター テーブルを使用してコンテンツ ベースのルーティング ロジックを定義する方法を説明します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedFilters`  
   
@@ -49,7 +49,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- 3 番目のフィルターは、<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> です。 このフィルターは、指定したアドレス プレフィックス (アドレスの前半部分) に一致するアドレスを持つエンドポイントで受信されたメッセージに一致します。 としてこの例では、アドレス プレフィックスが定義されている"http://localhost/routingservice/router/rounding/"です。 つまり、受信メッセージにアドレスが"http://localhost/routingservice/router/rounding/*"は、このフィルターで一致します。 この場合は、丸め処理を行う電卓のエンドポイントに表示されるメッセージのアドレスを持つ"http://localhost/routingservice/router/rounding/calculator"です。  
+ 3 番目のフィルターは、<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> です。 このフィルターは、指定したアドレス プレフィックス (アドレスの前半部分) に一致するアドレスを持つエンドポイントで受信されたメッセージに一致します。 としてこの例では、アドレス プレフィックスが定義されている"http://localhost/routingservice/router/rounding/"。 つまり、宛てのメッセージの受信メッセージ"http://localhost/routingservice/router/rounding/*"がこのフィルターで一致します。 この場合は、丸め処理を行う電卓のエンドポイントで表示されるメッセージのアドレスを持つ"http://localhost/routingservice/router/rounding/calculator"。  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -78,11 +78,11 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] を使用して AdvancedFilters.sln を開きます。  
   
-2.  開くには**ソリューション エクスプ ローラー****ソリューション エクスプ ローラー**から、**ビュー**メニュー。  
+2.  開くには**ソリューション エクスプ ローラー**、**ソリューション エクスプ ローラー**から、**ビュー**メニュー。  
   
-3.  Visual Studio で f5 キーまたは CTRL + SHIFT + B にキーを押します。  
+3.  Visual Studio で f5 キーまたは CTRL + SHIFT + B キーを押します。  
   
-    1.  F5 キーを押したときに必要なプロジェクトを自動的に起動する場合は、ソリューションを右クリックし **プロパティ**です。 選択、**スタートアップ プロジェクト**ノードの下**共通プロパティ**左側のウィンドウでします。 選択、**マルチ スタートアップ プロジェクト**ラジオ ボタンと、すべてのプロジェクトに対して、設定、**開始**アクション。  
+    1.  F5 キーを押してに必要なプロジェクトを自動で起動する場合は、ソリューションを右クリックし **プロパティ**します。 選択、**スタートアップ プロジェクト**ノードの下**共通プロパティ**左側のウィンドウでします。 選択、**マルチ スタートアップ プロジェクト**オプション ボタンをクリックし、すべてのプロジェクトに設定、**開始**アクション。  
   
     2.  Ctrl キーと Shift キーを押しながら B キーを押してプロジェクトをビルドする場合は、次のアプリケーションを開始する必要があります。  
   
@@ -140,7 +140,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 8.  また、電卓サービスと丸め処理を行う電卓サービスは、呼び出された操作のログをそれぞれのコンソール ウィンドウに出力します。  
   
-9. クライアント コンソール ウィンドウで次のように入力します。`quit`を終了するには ENTER キーを押します。  
+9. クライアント コンソール ウィンドウで、入力`quit`を終了するには ENTER キーを押します。  
   
 10. サービスを終了するには、サービス コンソール ウィンドウで Enter キーを押します。  
   
@@ -154,4 +154,4 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
  Contoso では、すべてのサービスを仮想化して 1 つのエンドポイントのみを公開し、そのエンドポイントを通じて複数の異なる種類のサービスへのアクセスを提供したいと考えています。 この場合は、ルーティング サービスのコンテンツ ベースのルーティング機能を使用して受信要求の送信先を決定します。  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric ホスティングと永続性のサンプル](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

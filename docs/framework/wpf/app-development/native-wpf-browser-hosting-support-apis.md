@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
 ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464948"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562391"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>WPF のブラウザーのホスト処理をサポートするネイティブ API
 ホストの[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]WPF ホストから登録されているアクティブなドキュメント サーバー (DocObject とも呼ばれます) での Web ブラウザーでアプリケーションが容易になります。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 直接アクティブ化でき、アクティブなドキュメントと統合できます。 Xbap の Mozilla ブラウザーの場合は、loose XAML ドキュメントをホストするため[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]のようなホスティング環境を提供する、NPAPI プラグインを提供します、 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Active ドキュメント サーバーとして[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]は。 ただし、Xbap と XAML をホストする最も簡単な実用的な方法が他のブラウザーで文書化し、スタンドアロン アプリケーションは、Internet Explorer Web ブラウザー コントロールを使用します。 Web ブラウザー コントロールは、複雑な Active ドキュメント サーバー ホスティング環境を提供していない独自のホストをカスタマイズし、その環境を拡張し、現在のアクティブなドキュメントと直接通信することができます。  

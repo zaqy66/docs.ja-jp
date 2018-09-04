@@ -8,17 +8,17 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: 7eb562d81bdd8c9187672b31ed08ed6ac27da41c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5a954158388e8b85589042e9d1f3b82c1747e30
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561951"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563690"
 ---
 # <a name="how-to-rotate-an-object"></a>方法 : オブジェクトを回転させる
-次の例では、オブジェクトを回転させる方法を示します。 例では、最初に作成、<xref:System.Windows.Media.RotateTransform>し、その<xref:System.Windows.Media.RotateTransform.Angle%2A>(度単位)。  
+次の例では、オブジェクトを回転させる方法を示します。 例では、最初に作成、<xref:System.Windows.Media.RotateTransform>を指定してその<xref:System.Windows.Media.RotateTransform.Angle%2A>(度単位)。  
   
- 次の例では回転、 <xref:System.Windows.Shapes.Polyline> 45 度の左上隅のオブジェクトします。  
+ 次の例では、回転、 <xref:System.Windows.Shapes.Polyline> 45 度の左上隅のオブジェクトします。  
   
 ## <a name="example"></a>例  
  [!code-xaml[Transforms_snip#RotatePolylineAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineabouttopleft)]  
@@ -26,23 +26,23 @@ ms.locfileid: "33561951"
  [!code-csharp[Transforms_Procedural_snip#RotatePolylineAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/RotateTransformExample.cs#rotatepolylineabouttopleft)]
  [!code-vb[Transforms_Procedural_snip#RotatePolylineAboutTopLeft](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/RotateTransformExample.vb#rotatepolylineabouttopleft)]  
   
- <xref:System.Windows.Media.RotateTransform.CenterX%2A>と<xref:System.Windows.Media.RotateTransform.CenterY%2A>のプロパティ、<xref:System.Windows.Media.RotateTransform>オブジェクトの回転についてポイントを指定します。 この中心点は、変換する要素の座標空間で表します。 既定では、回転は (0,0) に適用されます。これは変換対象のオブジェクトの左上隅です。  
+ <xref:System.Windows.Media.RotateTransform.CenterX%2A>と<xref:System.Windows.Media.RotateTransform.CenterY%2A>のプロパティ、<xref:System.Windows.Media.RotateTransform>ポイント オブジェクトが回転を指定します。 この中心点は、変換する要素の座標空間で表します。 既定では、回転は (0,0) に適用されます。これは変換対象のオブジェクトの左上隅です。  
   
- 次の例では回転、<xref:System.Windows.Shapes.Polyline>ポイント (25, 50) 時計回りに 45 度のオブジェクトします。  
+ 次の例では、回転、 <xref:System.Windows.Shapes.Polyline> (25, 50) にした、時計回りに 45 度のオブジェクトします。  
   
  [!code-xaml[Transforms_snip#RotatePolylineAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineaboutcenter)]  
   
  [!code-csharp[Transforms_Procedural_snip#RotatePolylineAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/RotateTransformExample.cs#rotatepolylineaboutcenter)]
  [!code-vb[Transforms_Procedural_snip#RotatePolylineAboutCenter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/RotateTransformExample.vb#rotatepolylineaboutcenter)]  
   
- 次の図に、適用した結果、 <xref:System.Windows.Media.Transform> 2 つのオブジェクトにします。  
+ 次の図は、適用した結果、<xref:System.Windows.Media.Transform>に 2 つのオブジェクト。  
   
  ![中心点が異なる 45 度の回転](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
 異なる中心点を軸に 45 度回転させた 2 つのオブジェクト  
   
- <xref:System.Windows.Shapes.Polyline>前の例では、<xref:System.Windows.UIElement>です。 適用すると、<xref:System.Windows.Media.Transform>を<xref:System.Windows.UIElement.RenderTransform%2A>のプロパティ、 <xref:System.Windows.UIElement>、使用することができます、<xref:System.Windows.UIElement.RenderTransformOrigin%2A>の配信元を指定するプロパティすべて<xref:System.Windows.Media.Transform>要素に適用されます。 <xref:System.Windows.UIElement.RenderTransformOrigin%2A>プロパティが相対座標を使用して、そのサイズがわからない場合でも、要素の中心に、変換を適用することができます。 詳細と例についてを参照してください。[指定の相対値を使用して変換の原点](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)です。  
+ <xref:System.Windows.Shapes.Polyline>前の例では、<xref:System.Windows.UIElement>します。 適用すると、<xref:System.Windows.Media.Transform>を<xref:System.Windows.UIElement.RenderTransform%2A>のプロパティを<xref:System.Windows.UIElement>、使用することができます、<xref:System.Windows.UIElement.RenderTransformOrigin%2A>の原点を指定するプロパティすべて<xref:System.Windows.Media.Transform>要素に適用します。 <xref:System.Windows.UIElement.RenderTransformOrigin%2A>プロパティは、相対座標を使用して、そのサイズがわからない場合でも、要素の中央に変換を適用することができます。 詳細については、および例についてを参照してください。[を相対値での変換の原点を指定する](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)します。  
   
- 完全なサンプルについては、「[2-D 変換のサンプル](http://go.microsoft.com/fwlink/?LinkID=158252)」をご覧ください。  
+ 完全なサンプルについては、「[2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Media.Transform>  

@@ -2,15 +2,15 @@
 title: ADO.NET での side-by-side 実行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 793a48966192326e2a1273c6ea4b9c9eddda76fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7435f64afa9ce45a29f4d0a537219f31968eb3f5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365450"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558651"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET での side-by-side 実行
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の side-by-side 実行は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の複数のバージョンがインストールされている 1 台のコンピューター上で、アプリケーションのコンパイル時のバージョンのみを使用して、アプリケーションを実行する機能です。 サイド バイ サイド実行を構成する方法の詳細については、次を参照してください。[サイド バイ サイド実行](../../../../docs/framework/deployment/side-by-side-execution.md)です。  
+[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の side-by-side 実行は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の複数のバージョンがインストールされている 1 台のコンピューター上で、アプリケーションのコンパイル時のバージョンのみを使用して、アプリケーションを実行する機能です。 サイド バイ サイドで実行を構成する方法の詳細については、次を参照してください。[サイド バイ サイド実行](../../../../docs/framework/deployment/side-by-side-execution.md)します。  
   
  あるバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を使用してコンパイルされたアプリケーションを、別のバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] で実行することもできます。 ただし、インストールされている [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のバージョンごとにアプリケーションをコンパイルして、各バージョンを別々に実行することをお勧めします。 いずれの場合でも、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の各リリース間の変更によって生じるアプリケーションの上位互換性または下位互換性の問題に注意する必要があります。  
   
@@ -20,14 +20,14 @@ ms.locfileid: "33365450"
  下位互換性とは、アプリケーションが [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の新しいバージョン用にコンパイルされ、機能を低下させずに、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の以前のバージョンで引き続き実行できることを意味します。 当然のことながら、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の新しいバージョンで導入された機能については、これは該当しません。  
   
 ## <a name="the-net-framework-data-provider-for-odbc"></a>.NET Framework Data Provider for ODBC  
- Version 1.1 以降、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC (<xref:System.Data.Odbc>) は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の一部として同梱されています。 ODBC データ プロバイダーが使用できる[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]バージョン 1.0 の開発者、Web ダウンロードとしてから、[データ アクセスおよびストレージ デベロッパー センター](http://go.microsoft.com/fwlink/?linkid=4173)です。 名前空間をダウンロードした[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for ODBC は**Microsoft.Data.Odbc**です。  
+ Version 1.1 以降、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC (<xref:System.Data.Odbc>) は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の一部として同梱されています。 ODBC データ プロバイダーが使用できる[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]からバージョン 1.0 の開発者がダウンロード、[データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?linkid=4173)します。 名前空間をダウンロードした[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for ODBC は**Microsoft.Data.Odbc**します。  
   
- 用に開発されたアプリケーションがある場合、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.0、ODBC データ プロバイダーを使用して、データ ソースへの接続でそのアプリケーションを実行する、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]バージョン 1.1 または以降のバージョンが、ODBC の名前空間を更新する必要がありますデータ プロバイダーに**System.Data.Odbc**です。 その後で、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の新しいバージョン用に再コンパイルする必要があります。  
+ 用に開発されたアプリケーションがある場合、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]して、データ ソースに接続する ODBC データ プロバイダーを使用するバージョン 1.0 がでそのアプリケーションを実行する、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.1 または以降のバージョンが、ODBC の名前空間を更新する必要がありますデータ プロバイダーを**System.Data.Odbc**します。 その後で、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の新しいバージョン用に再コンパイルする必要があります。  
   
- ODBC データ プロバイダーを使用してデータ ソースに接続する [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 以降用に開発したアプリケーションがあり、そのアプリケーションを [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 で実行する場合は、ODBC データ プロバイダーをダウンロードし、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 システムにインストールする必要があります。 必要があります変更する名前空間には、ODBC データ プロバイダー **Microsoft.Data.Odbc**のアプリケーションをコンパイルし、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]バージョン 1.0。  
+ ODBC データ プロバイダーを使用してデータ ソースに接続する [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 以降用に開発したアプリケーションがあり、そのアプリケーションを [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 で実行する場合は、ODBC データ プロバイダーをダウンロードし、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 システムにインストールする必要があります。 必要があります変更する名前空間に ODBC データ プロバイダーの**Microsoft.Data.Odbc**のアプリケーションをコンパイルし、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]バージョン 1.0。  
   
 ## <a name="the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle  
- Version 1.1 以降、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle (<xref:System.Data.OracleClient>) は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の一部として同梱されています。 データ プロバイダーが使用できる[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]バージョン 1.0 の開発者、Web ダウンロードとしてから、[データ アクセスおよびストレージ デベロッパー センター](http://go.microsoft.com/fwlink/?linkid=4173)です。  
+ Version 1.1 以降、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle (<xref:System.Data.OracleClient>) は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の一部として同梱されています。 データ プロバイダーが使用できる[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]からバージョン 1.0 の開発者がダウンロード、[データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?linkid=4173)します。  
   
  このデータ プロバイダーを使用してデータ ソースに接続する、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 以降用に開発したアプリケーションがあり、そのアプリケーションを [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 で実行する場合は、該当するデータ プロバイダーをダウンロードし、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 システムにインストールする必要があります。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "33365450"
 ## <a name="sqlcommand-execution"></a>SqlCommand の実行  
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.1 以降では、<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> がデータ ソースでコマンドを実行する方法が変更されました。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0、<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>のコンテキストですべてのコマンドを実行、 **sp_executesql**ストアド プロシージャです。 その結果、接続の状態に影響を与えるコマンド (たとえば、SET NOCOUNT ON) は、現在のコマンドの実行だけに適用されます。 接続が開かれている間に実行される後続のコマンドについては、接続の状態は変更されません。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 で<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>のコンテキストですべてのコマンドを実行、 **sp_executesql**ストアド プロシージャ。 その結果、接続の状態に影響を与えるコマンド (たとえば、SET NOCOUNT ON) は、現在のコマンドの実行だけに適用されます。 接続が開かれている間に実行される後続のコマンドについては、接続の状態は変更されません。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.1 以降<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>のみのコンテキストでコマンドを実行、 **sp_executesql**ストアド プロシージャのコマンドは、パラメーターを格納して、パフォーマンス上の利点を提供する場合。 その結果、接続の状態に影響を与えるコマンドが、非パラメーター化コマンドに含まれている場合、接続が開いている間に実行される後続のすべてのコマンドに対して、接続の状態を変更します。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.1 以降<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>のみのコンテキストでコマンドを実行、 **sp_executesql**ストアド プロシージャの場合は、コマンドにパラメーター、これにより、パフォーマンスの向上。 その結果、接続の状態に影響を与えるコマンドが、非パラメーター化コマンドに含まれている場合、接続が開いている間に実行される後続のすべてのコマンドに対して、接続の状態を変更します。  
   
  たとえば、<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> への呼び出しで次のバッチ コマンドが実行されるとします。  
   
@@ -67,4 +67,4 @@ SET NOCOUNT OFF;
 ## <a name="see-also"></a>関連項目  
  [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

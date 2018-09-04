@@ -2,15 +2,15 @@
 title: ADO.NET でのデータの取得および変更
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 0c970c01352aecf6a25bac1b89b9f79c96f80d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361544"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562564"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET でのデータの取得および変更
-データベース アプリケーションの主な機能は、データ ソースとの接続およびデータベースに格納されているデータの取得です。 使用してデータの取得も同様のコマンドを実行することができます、アプリケーションとデータ ソース間のブリッジとしての ADO.NET の .NET Framework データ プロバイダーの機能、 **DataReader**または**DataAdapter**. データベースに格納されているデータを更新する機能は、データベース アプリケーションの重要な機能の 1 つです。 ADO.NET でデータの更新を使用して、 **DataAdapter**と<xref:System.Data.DataSet>、および**コマンド**オブジェクトも含まれますトランザクションを使用します。  
+データベース アプリケーションの主な機能は、データ ソースとの接続およびデータベースに格納されているデータの取得です。 使用してデータの取得も同様のコマンドを実行することができます、アプリケーションと、データ ソース間のブリッジとしての ADO.NET の .NET Framework データ プロバイダーの機能、 **DataReader**または**DataAdapter**. データベースに格納されているデータを更新する機能は、データベース アプリケーションの重要な機能の 1 つです。 ADO.NET では、データを更新する必要がありますを使用して、 **DataAdapter**と<xref:System.Data.DataSet>、および**コマンド**オブジェクトも含まれますトランザクションを使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [データ ソースへの接続](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
@@ -32,10 +32,10 @@ ms.locfileid: "33361544"
  ローカル トランザクションや分散トランザクションの実行方法、およびオプティミスティック同時実行の使用方法について説明します。  
   
  [ID 値および Autonumber 値の取得](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- 生成された値のマッピングの例を示します、 **identity**またはの SQL Server テーブル内の列、 **Autonumber**フィールドをテーブルに挿入された行の列の Access テーブルにします。 `DataTable` での ID 値の結合について説明します。  
+ 生成された値のマッピングの例を示します、 **identity**用または SQL Server テーブル内の列、 **Autonumber**テーブルでの挿入された行の列に、Microsoft Access テーブルのフィールド。 `DataTable` での ID 値の結合について説明します。  
   
  [バイナリ データの取得](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- バイナリ データまたは使用して大規模なデータ構造体を取得する方法について説明`CommandBehavior`です。`SequentialAccess` 既定の動作を変更する、`DataReader`です。  
+ バイナリ データまたは使用して大規模なデータ構造体を取得する方法について説明します`CommandBehavior`します。`SequentialAccess` 既定の動作を変更する、`DataReader`します。  
   
  [ストアド プロシージャでのデータの変更](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  ストアド プロシージャの入力パラメーターおよび出力パラメーターを使用してデータベースに行を挿入し、新しい ID 値を返す方法について説明します。  
@@ -56,11 +56,11 @@ ms.locfileid: "33361544"
  非同期プログラミングに対する [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] サポートについて説明します。  
   
  [SqlClient ストリーミング サポート](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- 完全にメモリに読み込まれていることをしなくても SQL Server からアプリケーション ストリーム データを記述する方法について説明します。  
+ 完全にメモリに読み込まれていることをしなくても SQL Server からアプリケーション データのストリームを記述する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目  
  [ADO.NET でのデータ型のマッピング](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [DataSet、DataTable、および DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server と ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

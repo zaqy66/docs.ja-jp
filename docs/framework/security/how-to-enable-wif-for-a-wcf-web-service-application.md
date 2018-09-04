@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: bd0ad5392010772c3205d8f148c985de2706de01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71897299d68c2f0e43def8e70730ea456d6e9e24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398991"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564718"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>操作方法: WCF Web サービス アプリケーションの WIF を有効にする
 ## <a name="applies-to"></a>対象  
@@ -19,7 +19,7 @@ ms.locfileid: "33398991"
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>まとめ  
- ここでは、WCF Web サービスの WIF を有効にするための詳細な操作手順を示します。 また、アプリケーションの実行中に Web サービスが正しくクレームを表示しているかどうかを確認するためにアプリケーションをテストする方法についても説明します。 ここでは、セキュリティ トークン サービス (STS) を作成するための詳細な手順については説明しません。代わりに、Identity and Access Tool に付属している開発用 STS を使用します。 開発用 STS はテスト用に用意されたもので、実際の認証は行いません。 このページの内容を完了するには、Identity and Access Tool をインストールする必要があります。 これは、「[Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)」からダウンロードできます。  
+ ここでは、WCF Web サービスの WIF を有効にするための詳細な操作手順を示します。 また、アプリケーションの実行中に Web サービスが正しくクレームを表示しているかどうかを確認するためにアプリケーションをテストする方法についても説明します。 ここでは、セキュリティ トークン サービス (STS) を作成するための詳細な手順については説明しません。代わりに、Identity and Access Tool に付属している開発用 STS を使用します。 開発用 STS はテスト用に用意されたもので、実際の認証は行いません。 このページの内容を完了するには、Identity and Access Tool をインストールする必要があります。 これは、「[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)」からダウンロードできます。  
   
 ## <a name="contents"></a>目次  
   

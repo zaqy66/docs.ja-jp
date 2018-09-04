@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
 ms.openlocfilehash: 41ab0b36c5f3632ff4458d1289295ab2c9efe7c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420478"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555116"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>方法 : デザイナーを使用して Windows フォーム DataGridView 列の種類を変更する
 Windows フォームに既に追加されている列の型を変更することがありますする<xref:System.Windows.Forms.DataGridView>コントロール。 たとえば、一部のコントロールをデータ ソースにバインドすると、自動的に生成される列の型を変更したい場合があります。 これは、関連テーブル内の行を外部キーを含む列を表示するテーブルがある場合に便利です。 この場合、関連テーブルから意味のある値を表示するコンボ ボックスの列と、これらの外部キーを表示するテキスト ボックスの列を置換することがあります。  

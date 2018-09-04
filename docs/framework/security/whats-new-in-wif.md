@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0a5bc7d53405966bcb86750780473c4060d7ced3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a275c32caefb54b11cc605c1339526465c8319a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400420"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562425"
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5 の新機能
 Windows Identity Foundation (WIF) の最初のバージョンは、スタンドアロンのダウンロードとして提供され、.NET 3.5 SP1 タイム フレームで導入されたため、WIF 3.5 と呼ばれています。 .NET 4.5 以降、WIF は .NET Framework の一部になっています。 .NET Framework で直接 WIF クラスを使用できるようになったため、.NET でクレーム ベースの ID をより深く統合できるようになり、クレームを簡単に使用できるようになりました。 WIF 3.5 用に作成されたアプリケーションは、新しいモデルを利用するために、変更する必要があります。詳細については、「[Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)」(WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン) を参照してください。  
@@ -17,7 +17,7 @@ Windows Identity Foundation (WIF) の最初のバージョンは、スタンド�
  主な変更点は、以下のとおりです。  
   
 ## <a name="wif-is-now-part-of-the-net-framework"></a>WIF の .NET Framework への組み込み  
- WIF クラスは、複数のアセンブリに分散されています。主なものは、`mscorlib`、`System.IdentityModel`、`System.IdentityModel.Services`、および `System.ServiceModel` です。 同様に、WIF クラスは、複数の名前空間 (<xref:System.Security.Claims?displayProperty=nameWithType>、複数の [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) 名前空間、および <xref:System.ServiceModel.Security?displayProperty=nameWithType>) に分散されています。 <xref:System.Security.Claims?displayProperty=nameWithType> 名前空間には、新しい <xref:System.Security.Claims.ClaimsPrincipal> クラスと <xref:System.Security.Claims.ClaimsIdentity> クラスが含まれています (以下を参照)。 .NET のすべての原則は、<xref:System.Security.Claims.ClaimsPrincipal> から派生しています。 WIF の名前空間およびそれに含まれるクラスの種類の詳細については、「[WIF API Reference](../../../docs/framework/security/wif-api-reference.md)」(WIF API リファレンス) を参照してください。 WIF 3.5 と WIF 4.5 間の名前空間のマッピング方法の詳細については、「[Namespace Mapping between WIF 3.5 and WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)」(WIF 3.5 と WIF 4.5 間での名前空間マッピング) を参照してください。  
+ WIF クラスは、複数のアセンブリに分散されています。主なものは、`mscorlib`、`System.IdentityModel`、`System.IdentityModel.Services`、および `System.ServiceModel` です。 同様に、WIF クラスは、複数の名前空間 (<xref:System.Security.Claims?displayProperty=nameWithType>、複数の [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 名前空間、および <xref:System.ServiceModel.Security?displayProperty=nameWithType>) に分散されています。 <xref:System.Security.Claims?displayProperty=nameWithType> 名前空間には、新しい <xref:System.Security.Claims.ClaimsPrincipal> クラスと <xref:System.Security.Claims.ClaimsIdentity> クラスが含まれています (以下を参照)。 .NET のすべての原則は、<xref:System.Security.Claims.ClaimsPrincipal> から派生しています。 WIF の名前空間およびそれに含まれるクラスの種類の詳細については、「[WIF API Reference](../../../docs/framework/security/wif-api-reference.md)」(WIF API リファレンス) を参照してください。 WIF 3.5 と WIF 4.5 間の名前空間のマッピング方法の詳細については、「[Namespace Mapping between WIF 3.5 and WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)」(WIF 3.5 と WIF 4.5 間での名前空間マッピング) を参照してください。  
   
 ## <a name="new-claims-model-and-principal-object"></a>新しいクレームのモデルとプリンシパル オブジェクト  
  クレームは、.NET Framework 4.5 の中核にあります。 基本クレーム クラス (<xref:System.Security.Claims.Claim>、<xref:System.Security.Claims.ClaimsIdentity>、<xref:System.Security.Claims.ClaimsPrincipal>、<xref:System.Security.Claims.ClaimTypes>および <xref:System.Security.Claims.ClaimValueTypes>) はすべて、`mscorlib` 名前空間の <xref:System.Security.Claims?displayProperty=nameWithType> 直下に存在しています。 インターフェイスを使用しなくても、.NET の ID システムにクレームを入力できるようになりました。<xref:System.Security.Principal.WindowsPrincipal>、<xref:System.Security.Principal.GenericPrincipal>、および <xref:System.Web.Security.RolePrincipal> は、<xref:System.Security.Claims.ClaimsPrincipal> から継承されるようになりました。また、<xref:System.Security.Principal.WindowsIdentity>、<xref:System.Security.Principal.GenericIdentity>、および <xref:System.Web.Security.FormsIdentity> は、<xref:System.Security.Claims.ClaimsIdentity> から継承されるようになりました。 つまり、主要なクラスはすべて、クレームに対応しています。 WIF 3.5 の統合クラスとインターフェイス (`WindowsClaimsIdentity`、`WindowsClaimsPrincipal`、`IClaimsPrincipal`、および `IClaimsIdentity`) は削除されました。 また、<xref:System.Security.Claims.ClaimsIdentity> クラスはメソッドを公開しているため、その ID のクレームのコレクションを照会しやすくなっています。  
@@ -32,7 +32,7 @@ Windows Identity Foundation (WIF) の最初のバージョンは、スタンド�
   
 ## <a name="changes-to-the-wif-45-api"></a>WIF 4.5 API の変更点  
   
--   一般的に、クレーム関連クラスは <xref:System.Security.Claims?displayProperty=nameWithType> 名前空間にあります。WCF 関連クラス (WS-Trust シナリオに使用されるサービス コントラクト、チャネル、チャネル ファクトリ、およびサービス ホスト) は <xref:System.ServiceModel.Security?displayProperty=nameWithType> にあります。また、他のすべての WIF クラスは、さまざまな [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) 名前空間 (たとえば、WS-* および SAML 成果物を表すクラス、トークン ハンドラーおよび関連クラス、WS-Federation シナリオで使用されるクラスなど) に分散されています。 詳細については、「[Namespace Mapping between WIF 3.5 and WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)」(WIF 3.5 と WIF 4.5 間での名前空間マッピング) と「[WIF API Reference](../../../docs/framework/security/wif-api-reference.md)」(WIF API リファレンス) を参照してください。  
+-   一般的に、クレーム関連クラスは <xref:System.Security.Claims?displayProperty=nameWithType> 名前空間にあります。WCF 関連クラス (WS-Trust シナリオに使用されるサービス コントラクト、チャネル、チャネル ファクトリ、およびサービス ホスト) は <xref:System.ServiceModel.Security?displayProperty=nameWithType> にあります。また、他のすべての WIF クラスは、さまざまな [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 名前空間 (たとえば、WS-* および SAML 成果物を表すクラス、トークン ハンドラーおよび関連クラス、WS-Federation シナリオで使用されるクラスなど) に分散されています。 詳細については、「[Namespace Mapping between WIF 3.5 and WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)」(WIF 3.5 と WIF 4.5 間での名前空間マッピング) と「[WIF API Reference](../../../docs/framework/security/wif-api-reference.md)」(WIF API リファレンス) を参照してください。  
   
 -   マシン キーは、Web ファームのシナリオのセッション クッキーで使用できるように有効化されています。 詳細については、「[WIF および Web ファーム](../../../docs/framework/security/wif-and-web-farms.md)」を参照してください。  
   

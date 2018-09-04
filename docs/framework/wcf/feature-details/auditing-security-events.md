@@ -6,28 +6,28 @@ helpviewer_keywords:
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bad963db8d0e3644204824645f702c7b7b84963d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496026"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558385"
 ---
 # <a name="auditing-security-events"></a>セキュリティ イベントの監査
-Windows Communication Foundation (WCF) を作成するアプリケーション ログに記録できます (か、成功、失敗、または両方) のセキュリティ イベント監査機能を使用します。 これらのイベントは Windows システム イベント ログに書き込まれ、イベント ビューアーを使用して確認できます。  
+Windows Communication Foundation (WCF) で作成されたアプリケーションは、監査機能とセキュリティ イベント (成功、失敗、またはその両方) にログインできます。 これらのイベントは Windows システム イベント ログに書き込まれ、イベント ビューアーを使用して確認できます。  
   
  監査を使用すると、管理者は既に発生した攻撃や現在進行中の攻撃を検出できます。 また、開発者がセキュリティ関連の問題をデバッグする際にも役立ちます。 たとえば、認証またはポリシー チェックの構成エラーによって承認済みユーザーへのアクセスが拒否された場合、開発者は、イベント ログを検査することによって、このエラーの原因をすばやく発見し、取り出すことができます。  
   
- WCF セキュリティの詳細については、次を参照してください。[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)です。 WCF プログラミングの詳細については、次を参照してください。[基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)です。  
+ WCF セキュリティの詳細については、次を参照してください。[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)します。 WCF プログラミングの詳細については、次を参照してください。[基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)します。  
   
 ## <a name="audit-level-and-behavior"></a>監査レベルと動作  
  セキュリティ監査には次の 2 つのレベルがあります。  
   
 -   呼び出し元を承認するサービス承認レベル。  
   
--   メッセージ レベルを WCF メッセージの有効性が確認され、呼び出し元を認証します。  
+-   メッセージ レベルで WCF をメッセージの有効性チェックし、呼び出し元を認証します。  
   
- 両方の監査の成功または失敗と呼ばれるレベルを確認することができます、*監査動作*です。  
+ 両方の監査の成功または失敗と呼ばれるレベルを確認することができます、*監査動作*します。  
   
 ## <a name="audit-log-location"></a>監査ログの場所  
  監査のレベルと動作を決定したら、ユーザー (または管理者) は監査ログの場所を指定できます。 監査ログの場所は、Default、Application、および Security の 3 つから選択できます。 Default を指定した場合、ログの実際の場所は、ユーザーが使用しているシステムと、セキュリティ ログへの書き込みがサポートされているかどうかによって決まります。 詳細については、このトピックの「「オペレーティング システム」セクションを参照してください。  
@@ -53,10 +53,10 @@ Windows Communication Foundation (WCF) を作成するアプリケーション �
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|サービス レベルで監査されるサービス承認イベントの種類を指定します。 `None`、`Failure`、`Success` および `SuccessOrFailure` から選択できます。|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|監査が失敗した場合に、クライアント要求をどのように処理するかを指定します。 たとえば、`SeAuditPrivilege` を持たないサービスがセキュリティ ログへの書き込みを試行したとします。 この場合、既定値の `true` が設定されていると、エラーは無視され、クライアント要求は正常に処理されます。|  
   
- ログ監査イベントをアプリケーションの設定の例は、次を参照してください。[する方法: セキュリティ イベントの監査](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)です。  
+ 監査イベントを記録するアプリケーションの設定の例は、次を参照してください。[方法: セキュリティ イベントの監査](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)します。  
   
 ### <a name="configuration"></a>構成  
- 追加して監査動作を指定する構成を使用することもできます、 [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)下にある、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)です。 下にある要素を追加する必要があります、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)次のコードに示すようにします。  
+ 追加して監査動作を指定する構成を使用することもできます、 [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)下、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)します。 下の要素を追加する必要があります、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)次のコードに示すようにします。  
   
 ```xml  
 <configuration>  
@@ -78,7 +78,7 @@ Windows Communication Foundation (WCF) を作成するアプリケーション �
  監査が有効になっているが、`auditLogLocation` が指定されていない場合、セキュリティ ログへの書き込みをサポートしているプラットフォームでの既定のログ名は "セキュリティ" ログになります。それ以外の場合は、"アプリケーション" ログになります。 セキュリティ ログへの書き込みをサポートしているオペレーティング システムは [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wv](../../../../includes/wv-md.md)] だけです。 詳細については、このトピックの「「オペレーティング システム」セクションを参照してください。  
   
 ## <a name="security-considerations"></a>セキュリティの考慮事項  
- 監査が有効になっていることが悪意のあるユーザーに知られた場合、そのユーザーは監査エントリの書き込みにつながる無効なメッセージを送信する可能性があります。 このような方法で監査ログに書き込みが行われると、監査システムに障害が発生します。 これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。 詳細については、上で利用可能な Windows XP では、イベント ビューアーを使用して、イベント ログの管理の表示と、Microsoft サポート記事を参照して[表示および Windows XP でイベント ビューアーでイベント ログを管理する方法](http://go.microsoft.com/fwlink/?LinkId=89150)です。  
+ 監査が有効になっていることが悪意のあるユーザーに知られた場合、そのユーザーは監査エントリの書き込みにつながる無効なメッセージを送信する可能性があります。 このような方法で監査ログに書き込みが行われると、監査システムに障害が発生します。 これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。 詳細についてで使用可能な Windows XP では、イベント ビューアーを使用して、イベント ログの管理の表示とに、Microsoft サポート記事をご覧ください。[表示、および Windows XP のイベント ビューアーのイベント ログを管理する方法](https://go.microsoft.com/fwlink/?LinkId=89150)します。  
   
  [!INCLUDE[wxp](../../../../includes/wxp-md.md)] のアプリケーション ログに書き込まれた監査イベントは、すべての認証済みユーザーに表示されます。  
   
@@ -108,4 +108,4 @@ Windows Communication Foundation (WCF) を作成するアプリケーション �
  [方法 : セキュリティ イベントを監査する](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
- [Windows Server App Fabric のセキュリティ モデル](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

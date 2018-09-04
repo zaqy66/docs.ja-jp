@@ -2,22 +2,22 @@
 title: '方法 : WAS で WCF サービスをホストする'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 7050d866233b248c7c8f9f41337ce451b5510c30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd48957f7f8410b4b0df39fe125c35e4fc98cb8e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492669"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560296"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>方法 : WAS で WCF サービスをホストする
-このトピックのアウトラインを Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を作成するために必要な基本的な手順は、Windows Communication Foundation (WCF) サービスをホストします。 WAS は、HTTP 以外のトランスポート プロトコルで動作するインターネット インフォメーション サービス (IIS) 機能を一般化した新しいプロセス アクティブ化サービスです。 WCF では、リスナー アダプター インターフェイスを使用して、TCP、名前付きパイプ、およびメッセージ キューなど、WCF によってサポートされる非 HTTP プロトコルを介して受信されるアクティブ化要求を通信します。  
+このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を作成するために必要な基本的な手順について説明しますには、Windows Communication Foundation (WCF) サービスがホストされています。 WAS は、HTTP 以外のトランスポート プロトコルで動作するインターネット インフォメーション サービス (IIS) 機能を一般化した新しいプロセス アクティブ化サービスです。 WCF では、TCP、名前付きパイプ、およびメッセージ キューなど、WCF によってサポートされる非 HTTP プロトコルを介して受信されるアクティブ化要求を通信するために、リスナー アダプター インターフェイスを使用します。  
   
- このホスト オプションでは、WAS アクティブ化コンポーネントのインストールと構成が正しく行われている必要がありますが、アプリケーションの一部としてホスト コードを記述する必要はありません。 インストールして、WAS の構成に関する詳細については、次を参照してください。[する方法: WCF アクティブ化コンポーネントの構成のインストールと](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)です。  
+ このホスト オプションでは、WAS アクティブ化コンポーネントのインストールと構成が正しく行われている必要がありますが、アプリケーションの一部としてホスト コードを記述する必要はありません。 インストールして、WAS の構成の詳細については、次を参照してください。[方法: WCF アクティブ化コンポーネントの構成のインストールと](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)します。  
   
 > [!WARNING]
 >  Web サーバーの要求処理パイプラインをクラシック モードに設定すると、WAS のアクティブ化がサポートされません。 WAS のアクティブ化を使用する場合は、Web サーバーの要求処理パイプラインを統合モードに設定する必要があります。  
   
- WCF サービスが WAS でホストされている場合は、標準バインディングが、通常の方法で使用されます。 ただし、WAS でホストされるサービスを <xref:System.ServiceModel.NetTcpBinding> や <xref:System.ServiceModel.NetNamedPipeBinding> を使用して構成する場合は、制限を遵守する必要があります。 つまり、異なるエンドポイントが同じトランスポートを使用する場合、次の 7 つのプロパティでバインディング設定が一致する必要があります。  
+ WCF サービスが WAS でホストされている、ときに、標準のバインディングは、通常の方法で使用されます。 ただし、WAS でホストされるサービスを <xref:System.ServiceModel.NetTcpBinding> や <xref:System.ServiceModel.NetNamedPipeBinding> を使用して構成する場合は、制限を遵守する必要があります。 つまり、異なるエンドポイントが同じトランスポートを使用する場合、次の 7 つのプロパティでバインディング設定が一致する必要があります。  
   
 -   ConnectionBufferSize  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33492669"
   
  バインディングの設定が一致しない場合、これらのプロパティの値は常に最初に初期化されたエンドポイントによって決定されるため、後で追加されるエンドポイントは <xref:System.ServiceModel.ServiceActivationException> をスローします。  
   
- この例の元のコピーを次を参照してください。 [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)です。  
+ この例のソースのコピーを次を参照してください。 [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)します。  
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>WAS でホストされる基本サービスを作成するには  
   
@@ -74,7 +74,7 @@ ms.locfileid: "33492669"
   
 ### <a name="to-create-a-client-to-use-the-service"></a>サービスを使用するクライアントを作成するには  
   
-1.  使用して[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)サービス メタデータからコードを生成するためのコマンドラインからです。  
+1.  使用[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)サービス メタデータからコードを生成するためのコマンドラインから。  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
@@ -100,4 +100,4 @@ ms.locfileid: "33492669"
   
 ## <a name="see-also"></a>関連項目  
  [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Windows Server App Fabric のホスティング機能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

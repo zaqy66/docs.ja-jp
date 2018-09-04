@@ -8,34 +8,34 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: cbdc693197344fe570c1462f6ca3115018eb69d6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803742"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558892"
 ---
 # <a name="basic-wcf-programming"></a>基本的な WCF プログラミング
-このセクションでは、Windows Communication Foundation (WCF) アプリケーションを作成するための基礎を表示します。  
+ここでは、Windows Communication Foundation (WCF) アプリケーションを作成するための基礎を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [基本的なプログラミング ライフサイクル](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- 設計、構築、および WCF サービスとクライアント アプリケーションの展開のライフ サイクルについて説明します。  
+ 設計、構築、および WCF サービスとクライアント アプリケーションの配置のライフ サイクルについて説明します。  
   
  [サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  サービス コントラクトの設計および実装方法、メッセージ交換パターンの選択方法、エラー コントラクトの指定方法、およびその他のサービスの基本的な側面について説明します。  
   
  [サービスの構成](../../../docs/framework/wcf/configuring-services.md)  
- コントラクトの要件をサポート、ローカル ランタイム動作をカスタマイズして、サービスを公開するアドレスを指定する WCF サービスを構成する方法について説明します。  
+ コントラクトの要件をサポートして、ローカル ランタイムの動作をカスタマイズおよびサービスの発行にアドレスを指定する WCF サービスを構成する方法について説明します。  
   
  [ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)  
  アプリケーションでサービスをホストするときの基本について説明します。  
   
  [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)  
- サービスからメタデータを取得、WCF クライアント コードに変換する、セキュリティの問題を処理し、ビルド、構成、および WCF クライアントをホストする方法について説明します。  
+ サービスからメタデータを取得、WCF クライアント コードに変換する、セキュリティの問題を処理し、ビルド、構成、および、WCF クライアントをホストする方法について説明します。  
   
  [拡張機能の概要](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- カスタム ソリューションを作成する WCF の拡張方法について説明します。  
+ カスタム ソリューションを作成する WCF を拡張する方法について説明します。  
   
  [WCF トラブルシューティング クイックスタート](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
  最も起こりやすい問題の一部を挙げ、その問題の解決方法とその問題の詳細情報を掲載している場所について説明します。  
@@ -61,7 +61,7 @@ ms.locfileid: "33803742"
   
  [Windows Communication Foundation ツール](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation サンプル](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation サンプル](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [はじめに](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

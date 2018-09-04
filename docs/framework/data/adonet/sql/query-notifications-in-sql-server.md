@@ -2,12 +2,12 @@
 title: SQL Server のクエリ通知
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 60ab686437f764a006fca5a2043d02288ea46d0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4e58a3eecc18fb5693e9850163533b0a1a6a574
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364072"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563659"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server のクエリ通知
 クエリ通知は Service Broker インフラストラクチャに基づいて構築されており、データが変更されたときにクエリ通知を使用してアプリケーションに通知できます。 この機能は、Web アプリケーションなど、データベースから情報のキャッシュを提供し、ソース データが変更された場合に通知を必要とするアプリケーションに特に役立ちます。  
@@ -24,19 +24,19 @@ ms.locfileid: "33364072"
   
  通知は SELECT ステートメントおよび EXECUTE ステートメントに対して設定できます。 EXECUTE ステートメントを使用した場合、SQL Server では、EXECUTE ステートメント自体ではなく、EXECUTE ステートメントで実行されたコマンドに対する通知が登録されます。 コマンドは、SELECT ステートメントの要件と制限を満たしている必要があります。 通知を登録するコマンドに複数のステートメントが含まれている場合、データベース エンジンによりバッチ内のステートメントごとに通知が作成されます。  
   
- を開発しているアプリケーション データが変更されたときに、信頼性の高いの 1 秒未満の通知が必要な場合は、セクションを参照**効率的なクエリ通知戦略の計画**と**クエリ通知に代わる方法**で、[通知の計画](http://go.microsoft.com/fwlink/?LinkId=211984)SQL Server オンライン ブックの「します。 クエリ通知と SQL Server Service Broker の詳細については、次の SQL Server オンライン ブックのトピックへのリンクを参照してください。  
+ セクションを参照してデータが変更されたときに、信頼できる即時の通知が必要なアプリケーションを開発している場合、**効率的なクエリ通知戦略の計画**と**クエリに代わる方法通知**で、[通知の計画](https://go.microsoft.com/fwlink/?LinkId=211984)SQL Server オンライン ブックのトピックです。 クエリ通知と SQL Server Service Broker の詳細については、次の SQL Server オンライン ブックのトピックへのリンクを参照してください。  
   
  **SQL Server オンライン ブック**  
   
--   [クエリ通知の使用](http://msdn.microsoft.com/library/ms175110.aspx)  
+-   [クエリ通知の使用](https://msdn.microsoft.com/library/ms175110.aspx)  
   
--   [クエリ通知の作成](http://msdn.microsoft.com/library/ms181122.aspx)  
+-   [通知のクエリを作成します。](https://msdn.microsoft.com/library/ms181122.aspx)  
   
--   [Service Broker](http://msdn.microsoft.com/library/bb522889.aspx)  
+-   [Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
   
--   [Service Broker 開発者向けの情報](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker 開発者向けの情報](https://msdn.microsoft.com/library/ms166100.aspx)  
   
--   [開発 (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+-   [開発 (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [クエリ通知の有効化](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
@@ -63,4 +63,4 @@ ms.locfileid: "33364072"
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

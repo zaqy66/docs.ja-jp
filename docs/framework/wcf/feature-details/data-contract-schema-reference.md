@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496800"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554694"
 ---
 # <a name="data-contract-schema-reference"></a>データ コントラクト スキーマの参照
 ここでは、XML シリアル化用の共通言語ランタイム (CLR) 型を表すために <xref:System.Runtime.Serialization.DataContractSerializer> が使用する XML スキーマ (XSD) のサブセットについて説明します。  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer のマッピング  
- `DataContractSerializer`メタデータ エンドポイントを使用して、Windows Communication Foundation (WCF) サービスからメタデータをエクスポートする際に、XSD を CLR 型をマップまたは[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)です。 詳細については、次を参照してください。[データ コントラクト シリアライザー](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)です。  
+ `DataContractSerializer`メタデータ エンドポイントを使用して Windows Communication Foundation (WCF) サービスからメタデータをエクスポートするときに、CLR 型を XSD にマッピングまたは[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 詳細については、次を参照してください。[データ コントラクト シリアライザー](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)します。  
   
  また、 `DataContractSerializer` は、Svcutil.exe を使用して Web サービス記述言語 (WSDL) や XSD ドキュメントにアクセスし、サービスまたはクライアントのデータ コントラクトを生成するときに、XSD を CLR 型にマッピングします。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33496800"
   
 ## <a name="general-information"></a>一般情報  
   
--   スキーマ名前空間については、「 [XML Schema (XML スキーマ)](http://go.microsoft.com/fwlink/?LinkId=95475)」を参照してください。 このドキュメントでは、プレフィックス "xs" を使用しています。  
+-   スキーマの名前空間が説明されている[XML スキーマ](https://go.microsoft.com/fwlink/?LinkId=95475)します。 このドキュメントでは、プレフィックス "xs" を使用しています。  
   
 -   スキーマ以外の名前空間を含む属性は無視されます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33496800"
 |---------------|------------------|  
 |`attributeFormDefault`|無視されます。|  
 |`blockDefault`|無視されます。|  
-|`elementFormDefault`|修飾する必要があります。 `DataContractSerializer`でスキーマをサポートするには、すべての要素を修飾する必要があります。 これには、いずれかの設定によってxs:schema/@elementFormDefaultを"qualified"かを設定してxs:element/@form各個々 の要素の宣言を"qualified"にします。|  
+|`elementFormDefault`|修飾する必要があります。 `DataContractSerializer`でスキーマをサポートするには、すべての要素を修飾する必要があります。 これは、いずれかの設定によって実現できますxs:schema/@elementFormDefaultを"qualified"かを設定してxs:element/@formごとの個々 の要素の宣言を"qualified"にします。|  
 |`finalDefault`|無視されます。|  
 |`Id`|無視されます。|  
 |`targetNamespace`|サポートされます。データ コントラクト名前空間にマッピングされます。 この属性を指定しなかった場合は、空の名前空間が使用されます。 予約された名前空間をすることはできません http://schemas.microsoft.com/2003/10/Serialization/ です。|  
@@ -68,7 +68,7 @@ ms.locfileid: "33496800"
 ## <a name="complex-types--xscomplextype"></a>複合型 – \<xs:complexType >  
   
 ### <a name="general-information"></a>一般情報  
- 各複合型\<xs:complexType > データ コントラクトにマップします。  
+ 各複合型\<xs:complexType > データ コントラクトにマップされます。  
   
 ### <a name="xscomplextype-attributes"></a>\<xs:complexType >: 属性  
   
@@ -92,11 +92,11 @@ ms.locfileid: "33496800"
 |`choice`|禁止|  
 |`sequence`|サポートされます。データ コントラクトのデータ メンバーにマッピングされます。|  
 |`attribute`|use="prohibited" の場合でも禁止です (ただし、例外が 1 つあります)。 標準シリアル化スキーマ名前空間のオプションの属性のみがサポートされます。 これらは、データ コントラクト プログラミング モデルのデータ メンバーにマッピングされません。 現在、これらの属性で意味のあるものは 1 つだけです。詳細については、ISerializable のセクションを参照してください。 他の属性はすべて無視されます。|  
-|`attributeGroup`|禁止。 リリースでは、WCF v1、`DataContractSerializer`の存在が無視されます`attributeGroup`内`xs:complexType`です。|  
+|`attributeGroup`|禁止。 WCF v1 リリースでは、`DataContractSerializer`の存在を無視`attributeGroup`内`xs:complexType`します。|  
 |`anyAttribute`|禁止。|  
 |(空)|データ メンバーを持たないデータ コントラクトにマッピングされます。|  
   
-### <a name="xssequence-in-a-complex-type-attributes"></a>\<xs:sequence > 複合型で: 属性  
+### <a name="xssequence-in-a-complex-type-attributes"></a>\<xs:sequence > の複合型: 属性  
   
 |属性|Schema|  
 |---------------|------------|  
@@ -126,7 +126,7 @@ ms.locfileid: "33496800"
   
 -   `<xs:schema>` 内で GED (グローバル要素宣言) として発生します。  
   
-### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs:element > maxOccurs = 1 内で、 \<xs:sequence > (データ メンバー)  
+### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs:element > maxOccurs = 1 で、 \<xs:sequence > (データ メンバー)  
   
 |属性|Schema|  
 |---------------|------------|  
@@ -142,7 +142,7 @@ ms.locfileid: "33496800"
 |`minOccurs`|データ メンバーの <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティにマッピングされます (`IsRequired` が 1 の場合、 `minOccurs` は true です)。|  
 |`nillable`|型のマッピングに影響します。 「型/プリミティブのマッピング」を参照してください。|  
   
-### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs:element > に maxOccurs > 1 内で、 \<xs:sequence > (コレクション)  
+### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs:element > に maxOccurs > 1 内、 \<xs:sequence > (コレクション)  
   
 -   <xref:System.Runtime.Serialization.CollectionDataContractAttribute>にマッピングされます。  
   
@@ -200,9 +200,9 @@ ms.locfileid: "33496800"
 |`keyref`|無視されます。|  
 |(空白)|サポートされています。|  
   
- \* 使用する場合、`simpleType`と`complexType,`匿名型のマッピングは、同じ非匿名型、匿名データ コントラクトがないする点を除いて、および要素名から派生して生成された名前で、名前付きのデータ コントラクトが作成されるようにします。 匿名型のルールは、次のとおりです。  
+ \* 使用する場合、`simpleType`と`complexType,`匿名データ コントラクトはありませんが、要素名から派生する生成された名前で名前付きのデータ コントラクトが作成されるように匿名型のマッピングは非匿名のタイプと同じです。 匿名型のルールは、次のとおりです。  
   
--   WCF 実装の詳細: 場合、`xs:element`名にピリオドが含まれていない場合、匿名型、外部データ コントラクト型の内部型にマップします。 名前にピリオドが含まれている場合、結果のデータ コントラクト型は、内部型ではなく、独立した型になります。  
+-   WCF 実装の詳細: 場合、`xs:element`名にピリオドが含まれていない場合、匿名型、外側のデータ コントラクト型の内部型にマップされます。 名前にピリオドが含まれている場合、結果のデータ コントラクト型は、内部型ではなく、独立した型になります。  
   
 -   内部型の生成されたデータ コントラクト名は、外部型のデータ コントラクト名の後にピリオド、要素の名前、および文字列 "Type" が付いたものになります。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "33496800"
   
 -   `xs:string` 以外の制限ファセットを持たない `xs:enumeration` の単純型制限は、列挙データ コントラクトにマッピングされます。  
   
--   その他すべての単純型制限は、それぞれが制限する型にマッピングされます。 たとえば、 `xs:int` の制限は、 `xs:int` 自体と同様に整数にマッピングされます。 プリミティブ型のマッピングの詳細については、型/プリミティブのマッピングを参照してください。  
+-   その他すべての単純型制限は、それぞれが制限する型にマッピングされます。 たとえば、 `xs:int` の制限は、 `xs:int` 自体と同様に整数にマッピングされます。 プリミティブ型のマッピングの詳細については、「型/プリミティブのマッピングを参照してください。  
   
 ### <a name="xsrestriction-attributes"></a>\<xs:restriction >: 属性  
   
@@ -241,7 +241,7 @@ ms.locfileid: "33496800"
 |`base`|サポートされている単純型または `xs:anyType`のみ有効です。|  
 |`id`|無視されます。|  
   
-### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs:restriction > 以外の場合: コンテンツ  
+### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs:restriction > それ以外の場合: コンテンツ  
   
 |目次|Schema|  
 |--------------|------------|  
@@ -536,7 +536,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- データ コントラクトのシリアル化スキーマで宣言されたオプションの属性 `ser:FactoryType` は、型を逆シリアル化できるファクトリ クラスを参照します。 ファクトリ クラスは、使用する `DataContractSerializer` インスタンスの既知の型コレクションの一部である必要があります。 既知の型の詳細については、次を参照してください。[データ コントラクトの既知の型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)です。  
+ データ コントラクトのシリアル化スキーマで宣言されたオプションの属性 `ser:FactoryType` は、型を逆シリアル化できるファクトリ クラスを参照します。 ファクトリ クラスは、使用する `DataContractSerializer` インスタンスの既知の型コレクションの一部である必要があります。 既知の型の詳細については、次を参照してください。 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。  
   
 ## <a name="datacontract-serialization-schema"></a>DataContract のシリアル化スキーマ  
  `DataContractSerializer` によってエクスポートされたいくつかのスキーマでは、次の特別なデータ コントラクト シリアル化名前空間の型、要素、および属性を使用します。  

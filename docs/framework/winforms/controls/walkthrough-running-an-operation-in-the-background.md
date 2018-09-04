@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: 09019f24248985c0a1057873f0226ee69a30ca9d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463475"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562959"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>チュートリアル : 操作をバックグラウンドで実行する
 完了に長い時間がかかる操作を実行しており、ユーザー インターフェイスで遅延が発生しないようにするには<xref:System.ComponentModel.BackgroundWorker> クラスを使用して別のスレッドで操作を実行できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "43463475"
   
 1.  2 つの Windows フォーム デザイナーでアクティブなフォームにドラッグ<xref:System.Windows.Forms.Button>コントロールを**ツールボックス**フォームを設定して、`Name`と<xref:System.Windows.Forms.Control.Text%2A>次の表に従って、ボタンのプロパティ。  
   
-    |ボタン|name|テキスト|  
+    |ボタン|名前|テキスト|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Start**|  
     |`button2`|`cancelBtn`|**キャンセル**|  

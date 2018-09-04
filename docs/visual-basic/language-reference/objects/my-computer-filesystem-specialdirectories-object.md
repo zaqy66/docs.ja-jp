@@ -1,16 +1,16 @@
 ---
-title: My.Computer.FileSystem.SpecialDirectories オブジェクト
+title: My.Computer.FileSystem.SpecialDirectories オブジェクト (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.SpecialDirectories object
 - SpecialDirectories object
 ms.assetid: d5f375c3-094b-4011-8438-17a31bc6df2b
-ms.openlocfilehash: 9ceede5a717b26d349f9a306864f74ac0ec33691
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5556a71fbe6f4ca90fb07966fb5fa0203eb8aaee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959511"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554475"
 ---
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories オブジェクト
 一般的に参照されるディレクトリにアクセスするためのプロパティを提供します。  
@@ -20,7 +20,7 @@ ms.locfileid: "37959511"
   
  詳細については、次を参照してください。[方法: My Documents ディレクトリの内容を取得](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
  **クラス:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (へのアクセスを提供します<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)。  

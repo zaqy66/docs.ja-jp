@@ -3,11 +3,11 @@ title: AspNetRouteIntegration
 ms.date: 03/30/2017
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
 ms.openlocfilehash: 8d9a0710e5106cbc3d02a06e81f4f8ed9ae3e03b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475882"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561833"
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 このサンプルでは、ASP.NET ルートを使用した Windows Communication Foundation (WCF) REST サービスをホストする方法を示します。 [基本的なリソース サービス](../../../../docs/framework/wcf/samples/basic-resource-service.md)サンプルは、このシナリオの自己ホスト型のバージョンを示しており、サービスの実装の詳細について説明します。 ここでは、ASP.NET 統合機能について集中的に説明します。 ASP.NET ルーティングの詳細については、次を参照してください。<xref:System.Web.Routing>します。  

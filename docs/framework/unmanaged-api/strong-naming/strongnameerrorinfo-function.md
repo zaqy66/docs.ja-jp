@@ -21,14 +21,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481970"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560589"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo 関数
-厳密な名前の関数のいずれかで発生した最後のエラー コードを取得します。  
+厳密な名前の関数のいずれかに基づいて最後に発生したエラー コードが取得されます。  
   
  この関数は非推奨とされました。  
   
@@ -54,4 +54,4 @@ HRESULT StrongNameErrorInfo ();
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
- [厳密な名前付けグローバル静的関数](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+ [Strong Naming Global Static 関数](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

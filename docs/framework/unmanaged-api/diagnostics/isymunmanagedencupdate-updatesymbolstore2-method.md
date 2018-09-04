@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02eaaa1c3336b6e99b8c8deabb944e292e35a2a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 78d9e27299c9d7ed7d6cb9b09dd659ba081c5fde
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425184"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554729"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 メソッド
-により、コンパイラが行情報が要件を満たしていれば、プログラム データベース (PDB) のストリームから変更されていない関数を省略できます。 PDB の行の古い情報と、関数のすべての行の 1 つのデルタは、正しい行情報を確認できます。  
+コンパイラが行情報が要件を満たしている限り、プログラム データベース (PDB) のストリームから変更されていない関数を省略できるようにします。 PDB の行の古い情報と、関数のすべての行の 1 つのデルタは正しい行情報を確認できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,16 +38,16 @@ HRESULT UpdateSymbolStore2(
   
 #### <a name="parameters"></a>パラメーター  
  `pIStream`  
- [in]ポインター、 [IStream](https://msdn.microsoft.com/library/aa380034.aspx)行情報を格納します。  
+ [in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)行情報を格納します。  
   
  `pDeltaLines`  
- [in]ポインター、 [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)に変更された行を含む構造体。  
+ [in]ポインターを[SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)が変更された行を含む構造体。  
   
  `cDeltaLines`  
- [in]A`ULONG`が変更された行の数を表すです。  
+ [in]A`ULONG`が変更された行の数を表します。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** CorSym.idl、CorSym.h  

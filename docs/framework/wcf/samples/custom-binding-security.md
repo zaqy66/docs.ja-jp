@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2a0d716c3689b506ad29d99f006f1a4bb7c53a3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61e8be6f7f621340a684bff69ec5c9d64ab36c61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507030"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565191"
 ---
 # <a name="custom-binding-security"></a>カスタム バインド セキュリティ
 このサンプルでは、カスタム バインドを使用してセキュリティを構成する方法を示します。 カスタム バインドを使用して、セキュリティで保護されたトランスポートと共にメッセージ レベルのセキュリティを有効にする方法を示します。 これは、クライアントとサービス間でメッセージを転送する際にセキュリティで保護されたトランスポートが必要であると同時に、そのメッセージをメッセージ レベルでセキュリティ保護する必要がある場合に便利です。 この構成は、システム指定のバインディングではサポートされていません。  
@@ -25,7 +25,7 @@ ms.locfileid: "33507030"
   
 -   Windows メッセージ セキュリティ。  
   
- カスタム バインドの構成により、トランスポートのセキュリティ保護が有効になると同時に、メッセージ レベルのセキュリティも有効になります。 バインド要素の順序は重要では、カスタム バインディングを定義するため、チャネル スタック内のレイヤーを表します (を参照してください[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md))。 カスタム バインドはサービスとクライアントの構成ファイルで定義されます。次のサンプル構成を参照してください。  
+ カスタム バインドの構成により、トランスポートのセキュリティ保護が有効になると同時に、メッセージ レベルのセキュリティも有効になります。 バインド要素の順序はカスタム バインディングを定義する各チャネル スタック内のレイヤーを表すために重要です (を参照してください[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md))。 カスタム バインドはサービスとクライアントの構成ファイルで定義されます。次のサンプル構成を参照してください。  
   
 ```xml  
 <bindings>  
@@ -59,7 +59,7 @@ ms.locfileid: "33507030"
 </behaviors>  
 ```  
   
- さらに、カスタム バインディングは Windows 資格情報の種類 (既定の資格情報の種類) によるメッセージ セキュリティを使用します。 これは `security` バインディング要素によって実現されます。 Kerberos 認証機構が利用できる場合は、クライアントとサービスはどちらもメッセージ レベルのセキュリティを使用して認証されます。 サンプルを Active Directory 環境で実行する場合、この認証が行われます。 Kerberos 認証機構が利用できない場合は、NTLM 認証が使用されます。 NTLM はサービスに対してクライアントを認証しますが、クライアントに対するサービスの認証は行いません。 `security`を使用するバインド要素が構成されている`SecureConversation``authenticationType`、その結果は、クライアントとサービスの両方でセキュリティ セッションを作成します。 これは、サービスの双方向コントラクトを動作させるために必要です。  
+ さらに、カスタム バインディングは Windows 資格情報の種類 (既定の資格情報の種類) によるメッセージ セキュリティを使用します。 これは `security` バインディング要素によって実現されます。 Kerberos 認証機構が利用できる場合は、クライアントとサービスはどちらもメッセージ レベルのセキュリティを使用して認証されます。 サンプルを Active Directory 環境で実行する場合、この認証が行われます。 Kerberos 認証機構が利用できない場合は、NTLM 認証が使用されます。 NTLM はサービスに対してクライアントを認証しますが、クライアントに対するサービスの認証は行いません。 `security`バインド要素が使用するよう構成`SecureConversation``authenticationType`、その結果は、クライアントとサービスの両方でセキュリティ セッションが作成されます。 これは、サービスの双方向コントラクトを動作させるために必要です。  
   
  このサンプルを実行する場合は、操作要求および応答はクライアントのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
@@ -107,11 +107,11 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+3.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには  
   
@@ -124,7 +124,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4.  クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+4.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -136,12 +136,12 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3.  Setup.bat ファイルと Cleanup.bat ファイルをサービス コンピューターにコピーします。  
   
-    4.  Visual Studio コマンド プロンプトで次のコマンドは、管理者特権で開いた実行:`Setup.bat service`です。 これにより、バッチ ファイルが実行されたコンピューターの名前と一致するサブジェクト名を持つ、サービス証明書が作成されます。  
+    4.  Visual Studio コマンド プロンプトで次のコマンドは、管理者特権で開いた実行:`Setup.bat service`します。 これにより、バッチ ファイルが実行されたコンピューターの名前と一致するサブジェクト名を持つ、サービス証明書が作成されます。  
   
         > [!NOTE]
         >  Setup.bat バッチ ファイルは、Visual Studio 2010 コマンド プロンプトから実行します。 path 環境変数が SDK のインストール ディレクトリを指している必要があります。 この環境変数は、Visual Studio 2010 コマンド プロンプトで自動設定されます。  
   
-    5.  変更、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)前の手順で生成された証明書のサブジェクト名を反映するように Service.exe.config ファイル内で。  
+    5.  変更、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)前の手順で生成された証明書のサブジェクト名を反映するように、Service.exe.config ファイル内で。  
   
     6.  コマンド プロンプトから Service.exe を起動します。  
   
@@ -180,7 +180,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>  
         ```  
   
-    7.  ドメイン環境でサービスが NetworkService または LocalSystem 以外のアカウントで実行されている場合は、クライアントの App.config ファイル内のサービス エンドポイントのエンドポイント ID を変更し、サービスの実行に使用されているアカウントに基づいて、適切な UPN または SPN を設定する必要がある場合があります。 エンドポイントの id に関する詳細については、次を参照してください。、[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)トピックです。  
+    7.  ドメイン環境でサービスが NetworkService または LocalSystem 以外のアカウントで実行されている場合は、クライアントの App.config ファイル内のサービス エンドポイントのエンドポイント ID を変更し、サービスの実行に使用されているアカウントに基づいて、適切な UPN または SPN を設定する必要がある場合があります。 エンドポイント id の詳細については、次を参照してください。、[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)トピック。  
   
     8.  コマンド プロンプトから Client.exe を起動します。  
   
