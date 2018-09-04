@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 60e4c6e98ca9e71d1a095a0c7ee1df6be6d13f4b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0e678f6577c07e4d56c485e0fd104397eddbd079
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934874"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517456"
 ---
 # <a name="namespaces-c-programming-guide"></a>名前空間 (C# プログラミング ガイド)
 C# プログラミングでは、名前空間が 2 つの方法でよく使用されます。 最初の方法では、次のように .NET Framework で名前空間を使用して、その多くのクラスを整理します。  
@@ -52,9 +52,10 @@ C# プログラミングでは、名前空間が 2 つの方法でよく使用�
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [using ディレクティブ](../../../csharp/language-reference/keywords/using-directive.md)  
- [:: 演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [。演算子](../../../csharp/language-reference/operators/member-access-operator.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [using ディレクティブ](../../../csharp/language-reference/keywords/using-directive.md)  
+- [:: 演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [。演算子](../../../csharp/language-reference/operators/member-access-operator.md)

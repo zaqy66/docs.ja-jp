@@ -2,12 +2,12 @@
 title: ワークフローからの OData フィードの利用
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: 7b9b55d92d81772ed1601ec246cfc2e8aa96c016
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: a7e2a0658294681b154b11f48563ebc562c47210
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754620"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562481"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>ワークフローからの OData フィードの利用
 
@@ -15,7 +15,7 @@ WCF Data Services は [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Northwind Odata サービス サンプルの使用
 
-このトピックの例を使用して、Northwind データ サービス サンプル[ http://services.odata.org/Northwind/Northwind.svc/](http://go.microsoft.com/fwlink/?LinkID=187426)します。 このサービスは [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) に含まれており、Northwind データベース サンプルへの読み取り専用アクセスを提供します。 書き込みアクセスが必要な場合、またはローカルの WCF Data Service が必要な場合は、「 [クイック スタート (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=131076) 」の手順に従って、Northwind データベースへのアクセスを提供するローカルの OData サービスを作成できます。 クイックスタートの手順に従う場合は、このトピックのコード例に指定されている URI をローカルの URI に置き換えてください。
+このトピックの例を使用して、Northwind データ サービス サンプル[ http://services.odata.org/Northwind/Northwind.svc/](https://go.microsoft.com/fwlink/?LinkID=187426)します。 このサービスがの一部として提供される、 [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)サンプル Northwind データベースへの読み取り専用アクセスを提供します。 書き込みアクセスが必要なまたはローカルの WCF Data Service が必要な場合の手順を利用できる場合、 [WCF Data Services クイック スタート](https://go.microsoft.com/fwlink/?LinkID=131076)Northwind データベースへのアクセスを提供するローカルの OData サービスを作成します。 クイックスタートの手順に従う場合は、このトピックのコード例に指定されている URI をローカルの URI に置き換えてください。
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>クライアント ライブラリを使用した OData フィードの使用
 
@@ -30,14 +30,14 @@ Northwind クライアント ライブラリを生成するには、 **の** [�
 サービスによって公開されるサービス操作はなく、 **[サービス]** ボックスの一覧には Northwind データ サービスによって公開されるエンティティを表す項目が含まれていることに注意してください。 サービス参照を追加すると、これらのエンティティに対するクラスが生成され、クライアント コードで使用できるようになります。 このトピックの例ではこれらのクラスと `NorthwindEntities` クラスを使用してクエリを実行します。
 
 > [!NOTE]
-> 詳細については、次を参照してください。[データ サービス クライアント ライブラリ (WCF Data Services) を生成する](http://go.microsoft.com/fwlink/?LinkID=191611)します。
+> 詳細については、次を参照してください。[データ サービス クライアント ライブラリ (WCF Data Services) を生成する](https://go.microsoft.com/fwlink/?LinkID=191611)します。
 
 ### <a name="using-asynchronous-methods"></a>非同期メソッドの使用
 
 Web のリソースにアクセスするときに発生することのある、待機時間に伴う問題に対処するために、WCF Data Services には非同期でアクセスすることをお勧めします。 WCF Data Services クライアント ライブラリは、クエリを呼び出すための非同期のメソッドを含めるし、Windows Workflow Foundation (WF) の提供、<xref:System.Activities.AsyncCodeActivity>非同期アクティビティを作成するためのクラス。 <xref:System.Activities.AsyncCodeActivity> 派生アクティビティを書き込んで、非同期メソッドを含む [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] クラスを利用するか、非同期で実行するコードをメソッドに含め、デリゲートを使用して呼び出すことができます。 ここでは、 <xref:System.Activities.AsyncCodeActivity> 派生アクティビティの例を 2 つ紹介します。1 つは WCF Data Services クライアント ライブラリの非同期メソッドを使用し、もう 1 つはデリゲートを使用しています。
 
 > [!NOTE]
-> 詳細については、次を参照してください。[非同期操作 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396)と[非同期アクティビティを作成する](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)します。
+> 詳細については、次を参照してください。[非同期操作 (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193396)と[非同期アクティビティを作成する](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)します。
 
 ### <a name="using-client-library-asynchronous-methods"></a>クライアント ライブラリの非同期メソッドの使用
 
@@ -77,7 +77,7 @@ Calling WCF Data Service...
 次の例では、 `ListCustomers` アクティビティを定義します。 このアクティビティは、Northwind データ サービス サンプルを照会し、Northwind データベース内の顧客をすべて含む `List<Customer>` を返します。 非同期操作は `GetCustomers` メソッドによって実行されます。 このメソッドは、サービスに対してすべての顧客を照会し、これらの顧客を `List<Customer>`にコピーします。 次に、結果がページングされているかどうかを確認します。 ページングされている場合は、サービスに対して結果の次のページを照会し、それを一覧に追加します。処理は顧客データをすべて取得するまで続行されます。
 
 > [!NOTE]
-> WCF Data Services でのページングの詳細についてを参照してください。 [方法: ページングされた結果を読み込む (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452)。
+> WCF Data Services でのページングの詳細についてを参照してください。 [方法: ページングされた結果 (WCF Data Services) を読み込む](https://go.microsoft.com/fwlink/?LinkId=193452)します。
 
 顧客がすべて追加されると、一覧が返されます。 `GetCustomers` メソッドはアクティビティの <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライドで指定されます。 メソッドには戻り値があるので、メソッドを指定するために `Func<string, List<Customer>>` が作成されます。
 
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-この例は、ワークフロー アプリケーションの作成者が OData サービスから返された生データを使用できる方法の 1 つを示しています。 Uri を使用して WCF Data Services にアクセスする方法の詳細については、次を参照してください。 [(WCF Data Services) にアクセスするデータ サービス リソース](http://go.microsoft.com/fwlink/?LinkId=193397)と[OData: URI 規則](http://go.microsoft.com/fwlink/?LinkId=185564)します。
+この例は、ワークフロー アプリケーションの作成者が OData サービスから返された生データを使用できる方法の 1 つを示しています。 Uri を使用して WCF Data Services にアクセスする方法の詳細については、次を参照してください。 [(WCF Data Services) にアクセスするデータ サービス リソース](https://go.microsoft.com/fwlink/?LinkId=193397)と[OData: URI 規則](https://go.microsoft.com/fwlink/?LinkId=185564)します。

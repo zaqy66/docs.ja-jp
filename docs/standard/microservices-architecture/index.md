@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/06/2018
-ms.openlocfilehash: 154cb0eafb8f14d61191b7cad749cb93d269ff34
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6b57f66068409ade24eecff636b9dd3f4084fd71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105065"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516152"
 ---
 ![](./media/cover.png)
 
@@ -143,7 +143,7 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 eShopOnContainers アプリケーションは、.NET Core および Docker コンテナーを使用して展開するように設計されたマイクロサービスのための参照アプリです。 アプリケーションは、いくつかの e ストア UI フロント エンド (Web アプリとネイティブ モバイル アプリ) を含む複数のサブシステムで構成されます。 また、バック エンドのマイクロサービスと必要なサーバー側のすべての操作のためのコンテナーも含まれています。
 
-このマイクロ サービスとコンテナー ベースのアプリケーション ソース コードは、オープン ソースで、[eShopOnContainers](http://aka.ms/MicroservicesArchitecture) GitHub リポジトリから入手できます。
+このマイクロ サービスとコンテナー ベースのアプリケーション ソース コードは、オープン ソースで、[eShopOnContainers](https://aka.ms/MicroservicesArchitecture) GitHub リポジトリから入手できます。
 
 ## <a name="send-us-your-feedback"></a>フィードバックをお寄せください。
 

@@ -1,8 +1,9 @@
 ---
-title: デスクトップ アプリケーションのリソース
-ms.date: 03/30/2017
+title: .NET Apps でのリソース
+ms.date: 07/25/2018
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
 - application resources
 - resource files
 - satellite assemblies
@@ -12,23 +13,21 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 023099adeeebf21b7dba631bde75332524eb0cc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399258"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408286"
 ---
-# <a name="resources-in-desktop-apps"></a>デスクトップ アプリケーションのリソース
+# <a name="resources-in-net-apps"></a>.NET Apps でのリソース
 ほとんどの製品レベルのアプリでは、リソースを使用する必要があります。 リソースは実行不可能なデータであり、アプリと共に論理的に配置されます。 このリソースは、アプリ内ではエラー メッセージまたはユーザー インターフェイスの一部として表示できます。 リソースには、文字列、イメージ、永続化されたオブジェクトなど、多数の形式のデータを含めることができます。 (永続化されたオブジェクトをリソース ファイルに書き込むには、そのオブジェクトをシリアル化できることが必要です)。データをリソース ファイルに格納しておけば、アプリ全体を再コンパイルすることなくデータを変更できます。 また、データの格納場所が 1 つになり、複数の場所に格納されているハードコーディングされたデータを利用する必要がなくなります。  
   
- .NET Framework は、デスクトップ アプリのリソースの作成とローカライズを包括的にサポートします。 さらに、.NET Framework は、デスクトップ アプリのローカライズされたリソースのパッケージ化および配置のためのシンプルなモデルもサポートしています。  
+ .NET Framework および .NET Core では、リソースの作成とローカライズが包括的にサポートされます。 さらに、.NET では、ローカライズされたリソースのパッケージ化および配置のためのシンプルなモデルがサポートされています。  
   
- ASP.NET のリソースの詳細については、Internet Explorer デベロッパー センターの「[ASP.NET Web ページのリソースの概要](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)」を参照してください。  
+ ASP.NET のリソースについては、「[ASP.NET Web ページのリソースの概要](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)」を参照してください。  
   
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリは、デスクトップ アプリとは異なるリソース モデルを使用して、1 つのパッケージ リソース インデックス (PRI) ファイルにリソースを格納します。 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリのリソースの詳細については、Windows デベロッパー センターの「[Windows ストア アプリでのリソースの作成と取得](http://go.microsoft.com/fwlink/p/?LinkId=241674)」を参照してください。  
-  
-## <a name="creating-and-localizing-resources"></a>リソースの作成とローカライズ  
+ ## <a name="creating-and-localizing-resources"></a>リソースの作成とローカライズ  
  ローカライズされていないアプリでは、リソース ファイルをアプリ データ、特にソース コード内の複数の場所にハードコーディングされる可能性がある文字列のリポジトリとして使用できます。 ほとんどの場合、リソースはテキスト (.txt) ファイルまたは XML (.resx) ファイルとして作成し、[Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用して .resources バイナリ ファイルにコンパイルします。 これらのファイルは、言語コンパイラでアプリの実行可能ファイルに埋め込むことができます。 リソースの作成の詳細については、[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)に関する記事を参照してください。  
   
  アプリのリソースを特定のカルチャに合わせてローカライズすることもできます。 これにより、アプリのローカライズ (翻訳) バージョンを構築できます。 ローカライズされたリソースを使用するアプリを開発する場合、ニュートラル カルチャまたはフォールバック カルチャとして使用するカルチャを指定します。適切なリソースがない場合はそのカルチャのリソースが使用されます。 一般に、ニュートラル カルチャのリソースはアプリの実行可能ファイルに格納されます。 個々のローカライズされたカルチャのその他のリソースはスタンドアロンのサテライト アセンブリに格納されます。 詳細については、[サテライト アセンブリの作成](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)に関する記事を参照してください。  
@@ -47,11 +46,11 @@ ms.locfileid: "33399258"
   
 -   カルチャが明示的に割り当てられていない場合は、<xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> プロパティから既定のスレッド UI カルチャを取得します。  
   
--   既定のスレッド UI カルチャが明示的に割り当てられていない場合は、Windows の `GetUserDefaultUILanguage` 関数を呼び出して、ローカル コンピューター上の現在のユーザーのカルチャを取得します。  
+-   既定のスレッド UI カルチャが明示的に割り当てられていない場合は、ローカル コンピューター上の現在のユーザーのカルチャを取得します。 Windows 上で実行されている .NET 実装では、[`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 関数を呼び出すことにより、それが行われます。  
   
  現在の UI カルチャを設定する方法の詳細については、「<xref:System.Globalization.CultureInfo>」リファレンス ページと「<xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>」リファレンス ページを参照してください。  
   
- これで、<xref:System.Resources.ResourceManager?displayProperty=nameWithType> クラスを使用して、現在の UI カルチャまたは特定のカルチャのリソースを取得できます。 <xref:System.Resources.ResourceManager> クラスはデスクトップ アプリのリソースを取得する場合に最もよく使用されますが、<xref:System.Resources?displayProperty=nameWithType> 名前空間には、リソースの取得に使用できるその他のタイプも含まれています。 次の設定があります。  
+ これで、<xref:System.Resources.ResourceManager?displayProperty=nameWithType> クラスを使用して、現在の UI カルチャまたは特定のカルチャのリソースを取得できます。 <xref:System.Resources.ResourceManager> クラスは、リソースを取得する場合に最もよく使用されますが、<xref:System.Resources?displayProperty=nameWithType> 名前空間には、リソースの取得に使用できるその他のタイプも含まれています。 次の設定があります。  
   
 -   <xref:System.Resources.ResourceReader> クラス。アセンブリに埋め込まれているリソースまたはスタンドアロンの .resources バイナリ ファイルに格納されているリソースを列挙できます。 これは、実行時に使用可能なリソースの正確な名前がわからない場合に役立ちます。  
   

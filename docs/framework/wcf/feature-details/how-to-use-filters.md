@@ -132,7 +132,7 @@ ms.locfileid: "42754652"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     始まるアドレスでメッセージを受信するかどうかは"http://localhost/routingservice/router/rounding/"に、このフィルターが評価されます**true**します。 この構成で使用されるベース アドレスである"http://localhost/routingservice/router「と"丸め/calculator"は、roundingEndpoint に指定したアドレス、このエンドポイントと通信するために使用する完全なアドレスは」http://localhost/routingservice/router/rounding/calculator"、このフィルターに一致します。  
+     始まるアドレスでメッセージを受信するかどうかは"http://localhost/routingservice/router/rounding/"に、このフィルターが評価されます**true**します。 この構成で使用されるベース アドレスである "http://localhost/routingservice/router" と"丸め/calculator"は、roundingEndpoint に指定したアドレス、このエンドポイントと通信するために使用する完全なアドレスは "http://localhost/routingservice/router/rounding/calculator" 、このフィルターに一致します。  
   
     > [!NOTE]
     >  PrefixEndpointAddress フィルターは、一致するメッセージの確認を行う際にホスト名を評価しません。これは、1 つのホストへの参照を表す際に使用できるホスト名にはさまざまな種類があり、そのすべてが、クライアント アプリケーションからホストを参照するための正しい方法であるためです。 たとえば、次の例はすべて、同じホストを参照します。  

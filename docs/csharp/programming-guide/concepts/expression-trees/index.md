@@ -2,12 +2,12 @@
 title: 式ツリー (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 14ca5394a21b8dddb6c4431e6cabbf44a2f9add2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f17b4fba92c502ca6d53fef7ac6d01f2fdefc02e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326499"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526866"
 ---
 # <a name="expression-trees-c"></a>式ツリー (C#)
 式ツリーでは、コードがツリー状のデータ構造で表示されます。各ノードは 1 つの式に対応しています。たとえば、メソッドの呼び出しや `x < y` のような二項演算などです。  
@@ -147,10 +147,11 @@ Console.WriteLine(expr.Compile()(4));
   
  詳細については、「[方法: 式ツリーを実行する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Linq.Expressions>  
- [方法 : 式ツリーを実行する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [方法: 式ツリーを変更する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
- [ラムダ式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [動的言語ランタイムの概要](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- [プログラミングの概念 (C#)](../../../../csharp/programming-guide/concepts/index.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Linq.Expressions>  
+- [方法 : 式ツリーを実行する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+- [方法: 式ツリーを変更する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
+- [ラムダ式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [動的言語ランタイムの概要](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+- [プログラミングの概念 (C#)](../../../../csharp/programming-guide/concepts/index.md)

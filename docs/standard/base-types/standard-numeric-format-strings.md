@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753820"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403190"
 ---
 # <a name="standard-numeric-format-strings"></a>標準の数値書式指定文字列
 
@@ -33,8 +33,10 @@ ms.locfileid: "42753820"
   
 -   `xx` は *精度指定子* です。これは省略可能な整数値です。 精度指定子は 0 ～ 99 の範囲で指定され、結果の桁数に影響します。 精度指定子は、文字列形式の数値の桁数を制御することに注意してください。 精度指定子では、数値を丸めません。 丸め操作を実行するには、<xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType>、または <xref:System.Math.Round%2A?displayProperty=nameWithType> の各メソッドを使用します。  
   
-     *精度指定子*が結果文字列内の小数部の桁数を制御する際、結果文字列は、ゼロから離れる方向に丸められる数を反映します (つまり、<xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> を使用します)。  
-  
+    *精度指定子*によって結果文字列内の小数部の桁数を制御する場合、結果文字列では無限に正確な結果に最も近い表現可能な結果に丸められた数値が反映されます。 同じように近い表現可能な結果が 2 つある場合は、次のようになります。
+    - **.NET Framework および .NET Core 2.0 までの .NET Core の場合**、最下位の数字が大きい方の結果が選択されます (つまり、<xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> が使用されます)。
+    - **.NET Core 2.1 以降の場合**、ランタイムでは最下位の数字が同一である結果が選択されます (つまり、<xref:System.MidpointRounding.ToEven?displayProperty=nameWithType> が使用されます)。 
+
     > [!NOTE]
     >  精度指定子は、結果文字列の桁数を決定します。 結果文字列に先頭または末尾のスペースを埋め込むには、[複合書式指定](../../../docs/standard/base-types/composite-formatting.md)機能を使用して、書式指定項目に *alignment コンポーネント*を定義します。  
   

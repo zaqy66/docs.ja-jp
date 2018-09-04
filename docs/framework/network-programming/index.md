@@ -10,15 +10,15 @@ ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: efecd4f2858843a2401e3d69538d87f92475b816
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4ed8fa218e97f4a6b06bd1c8a06d9b300b16119
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397898"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557180"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework のネットワーク プログラミング
-Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージ実装を提供します。 ネットワーク アプリケーションは、プラグ可能なプロトコルを基に自動的に新しいインターネット プロトコルを使用するように作成することも、ソケット レベルでネットワークを使用できるように Windows ソケット インターフェイスのマネージ実装を使用することもできます。  
+Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージド実装を提供します。 ネットワーク アプリケーションは、プラグ可能なプロトコルを基に自動的に新しいインターネット プロトコルを使用するように作成することも、ソケット レベルでネットワークを使用できるように Windows ソケット インターフェイスのマネージド実装を使用することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 
@@ -41,7 +41,7 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
  .NET Framework 構成ファイルを使用して、インターネット アプリケーションを構成する方法について説明します。  
   
  [.NET Framework のネットワークのトレース](../../../docs/framework/network-programming/network-tracing.md)  
- .NET Framework のネットワークのトレースを使用して、メソッド呼び出しについての情報、およびマネージ アプリケーションによって生成されるネットワーク トラフィックについての情報を取得する方法を説明します。  
+ .NET Framework のネットワークのトレースを使用して、メソッド呼び出しについての情報、およびマネージド アプリケーションによって生成されるネットワーク トラフィックについての情報を取得する方法を説明します。  
   
  [ネットワーク アプリケーションのキャッシュ管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  <xref:System.Net.WebClient?displayProperty=nameWithType>、<xref:System.Net.WebRequest?displayProperty=nameWithType>、および <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> クラスを使用するアプリケーションでキャッシュを使用する方法について説明します。  
@@ -114,19 +114,19 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
  ネットワーク イベント、変更、統計、およびプロパティについての情報をプログラムで収集するクラス。  
   
  <xref:System.Net.PeerToPeer?displayProperty=nameWithType>  
- ピア名前解決プロトコル (PNRP) のマネージ実装を開発者に提供します。  
+ ピア名前解決プロトコル (PNRP) のマネージド実装を開発者に提供します。  
   
  <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType>  
- ピア ツー ピア コラボレーション インターフェイスのマネージ実装を開発者に提供します。  
+ ピア ツー ピア コラボレーション インターフェイスのマネージド実装を開発者に提供します。  
   
  <xref:System.Net.Security?displayProperty=nameWithType>  
  ホスト間の安全な通信のためのネットワーク ストリームを提供するクラス。  
   
  <xref:System.Net.Sockets?displayProperty=nameWithType>  
- ネットワークへのアクセスの制御を支援する必要のある開発者のための、Windows ソケット (Winsock) インターフェイスのマネージ実装が用意されています。  
+ ネットワークへのアクセスの制御を支援する必要のある開発者のための、Windows ソケット (Winsock) インターフェイスのマネージド実装が用意されています。  
   
  <xref:System.Net.WebSockets?displayProperty=nameWithType>  
- WebSocket インターフェイスのマネージ実装を開発者に提供します。  
+ WebSocket インターフェイスのマネージド実装を開発者に提供します。  
   
  <xref:System.Uri?displayProperty=nameWithType>  
  URI (Uniform Resource Identifier) のオブジェクト表現を可能にし、URI の一部へ簡単にアクセスできるようにします。  
@@ -142,5 +142,5 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
  [.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](../../../docs/framework/network-programming/tls.md)  
  [ネットワーク プログラミング方法のトピック](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN Code Gallery 上の .NET 用のネットワークのサンプル](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
- [HttpClient のサンプル](http://go.microsoft.com/fwlink/?LinkId=242550)
+ [MSDN Code Gallery 上の .NET 用のネットワークのサンプル](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
+ [HttpClient のサンプル](https://go.microsoft.com/fwlink/?LinkId=242550)

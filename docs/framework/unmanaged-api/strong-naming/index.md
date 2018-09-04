@@ -8,109 +8,109 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c397a325edb49e3f10a46b242888b8d138957af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44ca428c028f9c3ee0a5e9a087f95af627d49f25
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462378"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470104"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>厳密な名前付け (アンマネージ API リファレンス)
-厳密な名前付け API では、クライアントが厳密な名前のアセンブリの署名を管理できるようにします。  
+厳密な名前付け API を使用すると、アセンブリに対する厳密な名前の署名をクライアントで管理できます。  
   
- 厳密な名前を使用してアセンブリに署名すると、アセンブリ マニフェストを格納しているファイルに公開キー暗号化が追加されます。 厳密な名前の署名には、名前の一意性を確認するのに役立ち、名前の悪用を防止し、参照が解決されたときに、一意の id を持つ呼び出し元を提供します。 ただし、信頼レベルが関連付けられていない、厳密な名前です。  
+ 厳密な名前を使用してアセンブリに署名すると、アセンブリ マニフェストを格納しているファイルに公開キー暗号化が追加されます。 厳密な名前による署名では、名前の一意性の検証を支援し、名前の悪用を防止し、参照が解決されたときに呼び出し元に一意の ID を提供できます。 しかし、厳密な名前に信頼性のレベルは関連付けられていません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [厳密な名前付けグローバル静的関数](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
- 厳密な名前付け API で使用されるアンマネージ グローバル静的関数をについて説明します。  
+ [Strong Naming Global Static 関数](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ 厳密な名前付け API で使用されるアンマネージド グローバル静的関数について説明します。  
   
 > [!NOTE]
->  これらの関数のすべてが削除されてから始まる、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]です。 推奨される代替方法については、次を参照してください。、 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)インターフェイスです。  
+>  [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 以降、これらの関数すべてが非推奨となりました。 推奨されている代わりの関数については、[ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) インターフェイスを参照してください。  
   
  [GetHashFromAssemblyFile 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
- 指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュを取得します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [GetHashFromAssemblyFileW 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfilew-function.md)  
- 指定したハッシュ アルゴリズムを使用して、Unicode 文字列として指定したアセンブリ ファイルのハッシュを取得します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したハッシュ アルゴリズムを使用して、Unicode 文字列として指定したアセンブリ ファイルのハッシュ値が取得されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [GetHashFromBlob 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromblob-function.md)  
- 指定したハッシュ アルゴリズムを使用して、指定されたメモリ アドレスのアセンブリのハッシュを取得します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したハッシュ アルゴリズムを使用して、指定したメモリ アドレスにあるアセンブリのハッシュが取得されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [GetHashFromFile 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md)  
- 指定されたファイルの内容のハッシュを生成します。  推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したファイルの内容に対してハッシュが生成されます。  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [GetHashFromFileW 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md)  
- Unicode 文字列で指定されたファイルの内容のハッシュを生成します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ Unicode 文字列で指定されたファイルの内容に対してハッシュが作成されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [GetHashFromHandle 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromhandle-function.md)  
- 指定したハッシュ アルゴリズムを使用して、指定したファイル ハンドルを持つファイルの内容のハッシュを生成します。  推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したハッシュ アルゴリズムを使用して、指定したファイル ハンドルを含むファイルの内容に対してハッシュが作成されます。  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameCompareAssemblies 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamecompareassemblies-function.md)  
- 2 つのアセンブリが厳密な名前の署名によってのみが異なるかどうかを判断します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 厳密な名前の署名に基づいて 2 つのアセンブリが異なるかどうかが判定されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameErrorInfo 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)  
- 厳密な名前の関数のいずれかによって発生した最後のエラー コードを取得します。  
+ 厳密な名前の関数のいずれかに基づいて最後に発生したエラー コードが取得されます。  
   
  [StrongNameFreeBuffer 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)  
- など、厳密な名前の関数を前回呼び出したときに割り当てられたメモリを解放[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)、 [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)、または[StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md).   推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)、[StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)、または[StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md) などの厳密な名前の関数に対する前の呼び出しで割り当てられたメモリが解放されます。   [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameGetBlob 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblob-function.md)  
- 指定したアドレスに実行可能ファイルのバイナリ表現を指定したバッファーに設定します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したアドレスにある実行可能ファイルのバイナリ表現が、指定したバッファーに入れられます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameGetBlobFromImage 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblobfromimage-function.md)  
- 指定されたメモリ アドレスでのアセンブリ イメージのバイナリ表現を取得します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したメモリ アドレスにあるアセンブリ イメージのバイナリ表現が取得されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameGetPublicKey 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)  
- プライベート/パブリック キーのペアから公開キーを取得します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 秘密/公開キーの組から公開キーが取得されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameHashSize 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamehashsize-function.md)  
- 指定したハッシュ アルゴリズムを使用して、ハッシュに必要なバッファー サイズを取得します。  推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したハッシュ アルゴリズムを使用して、ハッシュに必須のバッファー サイズが取得されます。  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameKeyDelete 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md)  
- 指定したキー コンテナーを削除します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したキー コンテナーが削除されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameKeyGen 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygen-function.md)  
- 厳密な名前に使用するために新しい公開/秘密キー ペアを作成します。  推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 厳密な名前を使用するために新しい公開/秘密キーの組が作成されます。  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameKeyGenEx 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygenex-function.md)  
- 厳密な名前を使用して指定されたキー サイズで新しい公開/秘密キー ペアを生成します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 厳密な名前を使用するために、指定したキー サイズによって新しい公開/秘密キーの組が作成されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameKeyInstall 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md)  
- 公開/秘密キー ペアをコンテナーにインポートします。  推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 公開/秘密キーの組がコンテナーにインポートされます。  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameSignatureGeneration 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)  
- 指定したアセンブリの厳密な名前の署名を生成します。   推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したアセンブリに対して厳密な名前の署名が生成されます。   [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameSignatureGenerationEx 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegenerationex-function.md)  
- 指定したフラグに基づいて、指定したアセンブリの厳密な名前の署名を生成します。    推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したフラグに基づいて、指定したアセンブリに対する厳密な名前の署名が作成されます。    [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameSignatureSize 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md)  
- 厳密な名前の署名のサイズを返します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 厳密な名前の署名のサイズが返されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameSignatureVerification 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)  
- 指定されたパスにあるアセンブリ マニフェストに指定したフラグに従って検証される厳密な名前の署名が含まれるかどうかを示す値を取得します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したパスにあるアセンブリ マニフェストに厳密な名前の署名が含まれるかどうかを示す値が取得されます。これは指定したフラグに従って確認されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameSignatureVerificationEx 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationex-function.md)  
- 指定されたパスにあるアセンブリ マニフェストに厳密な名前の署名が含まれるかどうかを示す値を取得します。  推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したパスにあるアセンブリ マニフェストに厳密な名前の署名が含まれるかどうかを示す値が取得されます。  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameSignatureVerificationFromImage 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationfromimage-function.md)  
- メモリに既にマップされているアセンブリが関連付けられている公開キーの有効なことを確認します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ メモリに既にマップされているアセンブリが、関連付けられている公開キーに対して有効であるかどうかが確認されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameTokenFromAssembly 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)  
- 指定したアセンブリ ファイルから、厳密な名前のトークンを作成します。  推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したアセンブリ ファイルから、厳密な名前トークンが作成されます。  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameTokenFromAssemblyEx 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassemblyex-function.md)  
- 指定したアセンブリ ファイルから、厳密な名前のトークンを作成し、公開キーを返します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 指定したアセンブリ ファイルから厳密な名前のトークンが作成され、公開キーが返されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
  [StrongNameTokenFromPublicKey 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
- 公開キーを表すトークンを取得します。 推奨されなくなった、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+ 公開キーを表すトークンが取得されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
   
- [厳密な名前付け構造体](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
- 厳密な名前のアセンブリの署名を管理する厳密な名前付け API を使用するアンマネージ構造体について説明します。  
+ [厳密な名前付け構造体](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ アセンブリに対する厳密な名前の署名を管理するために、厳密な名前付け API によって使用されるアンマネージド構造体について説明します。  
   
  [PublicKeyBlob 構造体](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
- バイナリ形式で公開/秘密キーのペアの公開キーを表します。  
+ 公開/秘密キーの組の公開キーがバイナリ形式で表されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
  [アンマネージ API リファレンス](../../../../docs/framework/unmanaged-api/index.md)
