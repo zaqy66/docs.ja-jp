@@ -3,11 +3,11 @@ title: 制限された並列 ForEach
 ms.date: 03/30/2017
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
 ms.openlocfilehash: 7149e6db8992bff5b436ffae4a77d985ec255986
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397914"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564906"
 ---
 # <a name="throttled-parallel-foreach"></a>制限された並列 ForEach
 `ThrottleParallelForEach`アクティビティと似ています、 <!--zz <xref:System.Activities.Statements.ParallelForEach>--> `System.Activities.Statements.ParallelForEach`アクティビティが 1 つの例外を使用できることを同時実行要因を設定を実行する同時分岐の数を制限します。 `ThrottleParallelForEach` アクティビティは、<xref:System.Activities.NativeActivity> クラスを介してのみアクセスできる他のアクティビティ (子アクティビティ) をスケジュールする必要があるため、<xref:System.Activities.NativeActivityContext> クラスから派生します。  

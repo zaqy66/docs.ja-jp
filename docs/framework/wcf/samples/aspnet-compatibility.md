@@ -3,11 +3,11 @@ title: ASP.NET 互換性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
 ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398236"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659514"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 互換性
 このサンプルでは、Windows Communication Foundation (WCF) での ASP.NET 互換モードを有効にする方法を示します。 ASP.NET ファイル/URL 承認、セッション状態などの機能の ASP.NET 互換モードは、ASP.NET アプリケーション パイプラインに完全に参加し、ことで実行されているサービスを使用して、<xref:System.Web.HttpContext>クラス。 <xref:System.Web.HttpContext>クラスは、cookie、セッション、およびその他の ASP.NET 機能へのアクセスを使用できます。 このモードでは、バインディングは HTTP トランスポートを使用し、サービス自体は IIS でホストされる必要があります。  
