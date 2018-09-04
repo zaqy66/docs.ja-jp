@@ -2,32 +2,32 @@
 title: カスタム複合デザイナー - Workflow Item Presenter
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 5bdc952bb4b920f0b5a7d272423ec2d922a94798
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7519ea560bab1e0c6651ad0b37c8477297b0d64d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517119"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526831"
 ---
-# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="04221-102">カスタム複合デザイナー - Workflow Item Presenter</span><span class="sxs-lookup"><span data-stu-id="04221-102">Custom Composite Designers - Workflow Item Presenter</span></span>
-<span data-ttu-id="04221-103"><xref:System.Activities.Presentation.WorkflowItemPresenter>任意のアクティビティを配置できる「ドロップ ゾーン」を作成するため、WF デザイナー プログラミング モデル内の主要な型です。</span><span class="sxs-lookup"><span data-stu-id="04221-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="04221-104">このサンプルでは、そのこのような「ドロップ ゾーン」を表示しますアクティビティ デザイナーの構築</span><span class="sxs-lookup"><span data-stu-id="04221-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  
+# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="7cc83-102">カスタム複合デザイナー - Workflow Item Presenter</span><span class="sxs-lookup"><span data-stu-id="7cc83-102">Custom Composite Designers - Workflow Item Presenter</span></span>
+<span data-ttu-id="7cc83-103"><xref:System.Activities.Presentation.WorkflowItemPresenter>任意のアクティビティを配置できる場所の「ドロップ ゾーン」を作成するため、WF デザイナー プログラミング モデル内の主要な型です。</span><span class="sxs-lookup"><span data-stu-id="7cc83-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="7cc83-104">このサンプルは、このような「ドロップ ゾーンです。」を表示するアクティビティ デザイナーを構築する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="7cc83-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  
   
- <span data-ttu-id="04221-105">このサンプルでは、次の方法を示します。</span><span class="sxs-lookup"><span data-stu-id="04221-105">This sample demonstrates:</span></span>  
+ <span data-ttu-id="7cc83-105">このサンプルでは、次の方法を示します。</span><span class="sxs-lookup"><span data-stu-id="7cc83-105">This sample demonstrates:</span></span>  
   
-## <a name="demonstrates"></a><span data-ttu-id="04221-106">使用例</span><span class="sxs-lookup"><span data-stu-id="04221-106">Demonstrates</span></span>  
+## <a name="demonstrates"></a><span data-ttu-id="7cc83-106">使用例</span><span class="sxs-lookup"><span data-stu-id="7cc83-106">Demonstrates</span></span>  
   
--   <span data-ttu-id="04221-107"><xref:System.Activities.Presentation.WorkflowItemPresenter> を使用したカスタム アクティビティ デザイナーの作成</span><span class="sxs-lookup"><span data-stu-id="04221-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
+-   <span data-ttu-id="7cc83-107"><xref:System.Activities.Presentation.WorkflowItemPresenter> を使用したカスタム アクティビティ デザイナーの作成</span><span class="sxs-lookup"><span data-stu-id="7cc83-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
   
--   <span data-ttu-id="04221-108">メタデータ ストアを使用したカスタム デザイナーの登録。</span><span class="sxs-lookup"><span data-stu-id="04221-108">Registering the custom designer using the metadata store.</span></span>  
+-   <span data-ttu-id="7cc83-108">メタデータ ストアを使用したカスタム デザイナーの登録。</span><span class="sxs-lookup"><span data-stu-id="7cc83-108">Registering the custom designer using the metadata store.</span></span>  
   
--   <span data-ttu-id="04221-109">宣言および命令による再ホストされたツールボックスのプログラミング。</span><span class="sxs-lookup"><span data-stu-id="04221-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>  
+-   <span data-ttu-id="7cc83-109">宣言および命令による再ホストされたツールボックスのプログラミング。</span><span class="sxs-lookup"><span data-stu-id="7cc83-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="04221-110">サンプルの詳細</span><span class="sxs-lookup"><span data-stu-id="04221-110">Sample Details</span></span>  
- <span data-ttu-id="04221-111">このサンプルのコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="04221-111">The code for this sample shows:</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="7cc83-110">サンプルの詳細</span><span class="sxs-lookup"><span data-stu-id="7cc83-110">Sample Details</span></span>  
+ <span data-ttu-id="7cc83-111">このサンプルのコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="7cc83-111">The code for this sample shows:</span></span>  
   
--   <span data-ttu-id="04221-112">カスタム アクティビティ デザイナーは `SimpleNativeActivity` クラス用に作成されます。</span><span class="sxs-lookup"><span data-stu-id="04221-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>  
+-   <span data-ttu-id="7cc83-112">カスタム アクティビティ デザイナーは `SimpleNativeActivity` クラス用に作成されます。</span><span class="sxs-lookup"><span data-stu-id="7cc83-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>  
   
--   <span data-ttu-id="04221-113"><xref:System.Activities.Presentation.WorkflowItemPresenter> を使用してカスタム アクティビティ デザイナーを作成します。</span><span class="sxs-lookup"><span data-stu-id="04221-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
+-   <span data-ttu-id="7cc83-113"><xref:System.Activities.Presentation.WorkflowItemPresenter> を使用してカスタム アクティビティ デザイナーを作成します。</span><span class="sxs-lookup"><span data-stu-id="7cc83-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
   
 ```xaml  
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"  
@@ -63,23 +63,23 @@ ms.locfileid: "33517119"
 </sap:ActivityDesigner>  
 ```  
   
- <span data-ttu-id="04221-114">`ModelItem.Body` にバインドする WPF のデータ バインドの使用に注意してください。</span><span class="sxs-lookup"><span data-stu-id="04221-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> <span data-ttu-id="04221-115">`ModelItem` プロパティは、<xref:System.Activities.Presentation.ActivityDesigner>デザイナーはされているため、ここでは、基になるオブジェクトを参照する**SimpleNativeActivity**です。</span><span class="sxs-lookup"><span data-stu-id="04221-115">`ModelItem` is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>  
+ <span data-ttu-id="7cc83-114">`ModelItem.Body` にバインドする WPF のデータ バインドの使用に注意してください。</span><span class="sxs-lookup"><span data-stu-id="7cc83-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> <span data-ttu-id="7cc83-115">`ModelItem` プロパティは、 <xref:System.Activities.Presentation.ActivityDesigner> 、デザイナーをこの場合、使用されている、基になるオブジェクトを表す**SimpleNativeActivity**します。</span><span class="sxs-lookup"><span data-stu-id="7cc83-115">`ModelItem` is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>  
   
-#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="04221-116">サンプルをセットアップ、ビルド、および実行するには</span><span class="sxs-lookup"><span data-stu-id="04221-116">To setup, build, and run the sample</span></span>  
+#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="7cc83-116">サンプルをセットアップ、ビルド、および実行するには</span><span class="sxs-lookup"><span data-stu-id="7cc83-116">To setup, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="04221-117">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] で、ソリューションを開きます。</span><span class="sxs-lookup"><span data-stu-id="04221-117">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="7cc83-117">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] で、ソリューションを開きます。</span><span class="sxs-lookup"><span data-stu-id="7cc83-117">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="04221-118">F5 キーを押してアプリケーションをコンパイルし、実行します。</span><span class="sxs-lookup"><span data-stu-id="04221-118">Press F5 to compile and run the application.</span></span>  
+2.  <span data-ttu-id="7cc83-118">F5 キーを押してアプリケーションをコンパイルし、実行します。</span><span class="sxs-lookup"><span data-stu-id="7cc83-118">Press F5 to compile and run the application.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="04221-119">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="04221-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="04221-120">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="04221-120">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="7cc83-119">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="7cc83-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7cc83-120">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="7cc83-120">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="04221-121">このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。</span><span class="sxs-lookup"><span data-stu-id="04221-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="04221-122">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="04221-122">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="7cc83-121">このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。</span><span class="sxs-lookup"><span data-stu-id="7cc83-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7cc83-122">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="7cc83-122">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
-## <a name="see-also"></a><span data-ttu-id="04221-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="04221-123">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7cc83-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="7cc83-123">See Also</span></span>  
  <xref:System.Activities.Presentation.WorkflowItemPresenter>  
- [<span data-ttu-id="04221-124">ワークフロー デザイナーを使用したアプリケーションの開発</span><span class="sxs-lookup"><span data-stu-id="04221-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+ [<span data-ttu-id="7cc83-124">ワークフロー デザイナーを使用したアプリケーションの開発</span><span class="sxs-lookup"><span data-stu-id="7cc83-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

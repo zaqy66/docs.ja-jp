@@ -5,65 +5,65 @@ ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 764e7fba31a7fb3fc40ec85ab4d0fb6e18e57390
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931773"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519046"
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a><span data-ttu-id="15a55-102">方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションをビルドする</span><span class="sxs-lookup"><span data-stu-id="15a55-102">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>
-## <a name="applies-to"></a><span data-ttu-id="15a55-103">対象</span><span class="sxs-lookup"><span data-stu-id="15a55-103">Applies To</span></span>  
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a><span data-ttu-id="2547f-102">方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションをビルドする</span><span class="sxs-lookup"><span data-stu-id="2547f-102">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>
+## <a name="applies-to"></a><span data-ttu-id="2547f-103">対象</span><span class="sxs-lookup"><span data-stu-id="2547f-103">Applies To</span></span>  
   
--   <span data-ttu-id="15a55-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="15a55-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
+-   <span data-ttu-id="2547f-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="2547f-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   <span data-ttu-id="15a55-105">ASP.NET® Web フォーム</span><span class="sxs-lookup"><span data-stu-id="15a55-105">ASP.NET® Web Forms</span></span>  
+-   <span data-ttu-id="2547f-105">ASP.NET® Web フォーム</span><span class="sxs-lookup"><span data-stu-id="2547f-105">ASP.NET® Web Forms</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="15a55-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="15a55-106">Summary</span></span>  
- <span data-ttu-id="15a55-107">この操作方法では、簡単なクレーム対応 ASP.NET Web フォーム アプリケーションを作成するための詳細な手順を示します。</span><span class="sxs-lookup"><span data-stu-id="15a55-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET Web Forms application.</span></span> <span data-ttu-id="15a55-108">また、フェデレーション認証を正常に実装するために簡単なクレーム対応 ASP.NET Web フォーム アプリケーションをテストする方法も示します。</span><span class="sxs-lookup"><span data-stu-id="15a55-108">It also provides instructions for how to test the simple claims-aware ASP.NET Web Forms application for successful implementation of federated authentication.</span></span> <span data-ttu-id="15a55-109">この操作方法には、セキュリティ トークン サービス (STS) の詳細な作成手順は含まれていません。既に STS が構成済みであると想定します。</span><span class="sxs-lookup"><span data-stu-id="15a55-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
+## <a name="summary"></a><span data-ttu-id="2547f-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="2547f-106">Summary</span></span>  
+ <span data-ttu-id="2547f-107">この操作方法では、簡単なクレーム対応 ASP.NET Web フォーム アプリケーションを作成するための詳細な手順を示します。</span><span class="sxs-lookup"><span data-stu-id="2547f-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET Web Forms application.</span></span> <span data-ttu-id="2547f-108">また、フェデレーション認証を正常に実装するために簡単なクレーム対応 ASP.NET Web フォーム アプリケーションをテストする方法も示します。</span><span class="sxs-lookup"><span data-stu-id="2547f-108">It also provides instructions for how to test the simple claims-aware ASP.NET Web Forms application for successful implementation of federated authentication.</span></span> <span data-ttu-id="2547f-109">この操作方法には、セキュリティ トークン サービス (STS) の詳細な作成手順は含まれていません。既に STS が構成済みであると想定します。</span><span class="sxs-lookup"><span data-stu-id="2547f-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="15a55-110">目次</span><span class="sxs-lookup"><span data-stu-id="15a55-110">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="2547f-110">目次</span><span class="sxs-lookup"><span data-stu-id="2547f-110">Contents</span></span>  
   
--   <span data-ttu-id="15a55-111">目的</span><span class="sxs-lookup"><span data-stu-id="15a55-111">Objectives</span></span>  
+-   <span data-ttu-id="2547f-111">目的</span><span class="sxs-lookup"><span data-stu-id="2547f-111">Objectives</span></span>  
   
--   <span data-ttu-id="15a55-112">手順の要約</span><span class="sxs-lookup"><span data-stu-id="15a55-112">Summary of Steps</span></span>  
+-   <span data-ttu-id="2547f-112">手順の要約</span><span class="sxs-lookup"><span data-stu-id="2547f-112">Summary of Steps</span></span>  
   
--   <span data-ttu-id="15a55-113">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="15a55-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="2547f-113">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="2547f-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="15a55-114">手順 2 – クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="15a55-114">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
+-   <span data-ttu-id="2547f-114">手順 2 – クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="2547f-114">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
   
--   <span data-ttu-id="15a55-115">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="15a55-115">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="2547f-115">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="2547f-115">Step 3 – Test Your Solution</span></span>  
   
-## <a name="objectives"></a><span data-ttu-id="15a55-116">目的</span><span class="sxs-lookup"><span data-stu-id="15a55-116">Objectives</span></span>  
+## <a name="objectives"></a><span data-ttu-id="2547f-116">目的</span><span class="sxs-lookup"><span data-stu-id="2547f-116">Objectives</span></span>  
   
--   <span data-ttu-id="15a55-117">クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="15a55-117">Configure ASP.NET Web Forms application for claims-based authentication</span></span>  
+-   <span data-ttu-id="2547f-117">クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="2547f-117">Configure ASP.NET Web Forms application for claims-based authentication</span></span>  
   
--   <span data-ttu-id="15a55-118">クレーム対応 ASP.NET Web フォーム アプリケーションが正常であることをテストする</span><span class="sxs-lookup"><span data-stu-id="15a55-118">Test successful claims-aware ASP.NET Web Forms application</span></span>  
+-   <span data-ttu-id="2547f-118">クレーム対応 ASP.NET Web フォーム アプリケーションが正常であることをテストする</span><span class="sxs-lookup"><span data-stu-id="2547f-118">Test successful claims-aware ASP.NET Web Forms application</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="15a55-119">手順の要約</span><span class="sxs-lookup"><span data-stu-id="15a55-119">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="2547f-119">手順の要約</span><span class="sxs-lookup"><span data-stu-id="2547f-119">Summary of Steps</span></span>  
   
--   <span data-ttu-id="15a55-120">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="15a55-120">Step 1 – Create Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="2547f-120">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="2547f-120">Step 1 – Create Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="15a55-121">手順 2 – フェデレーション認証用の ASP.NET Web フォーム アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="15a55-121">Step 2 – Configure ASP.NET Web Forms Application for Federated Authentication</span></span>  
+-   <span data-ttu-id="2547f-121">手順 2 – フェデレーション認証用の ASP.NET Web フォーム アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="2547f-121">Step 2 – Configure ASP.NET Web Forms Application for Federated Authentication</span></span>  
   
--   <span data-ttu-id="15a55-122">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="15a55-122">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="2547f-122">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="2547f-122">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="15a55-123">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="15a55-123">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
- <span data-ttu-id="15a55-124">この手順では、新しい ASP.NET Web フォーム アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="15a55-124">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="2547f-123">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="2547f-123">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+ <span data-ttu-id="2547f-124">この手順では、新しい ASP.NET Web フォーム アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="2547f-124">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
   
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="15a55-125">簡単な ASP.NET アプリケーションを作成するには</span><span class="sxs-lookup"><span data-stu-id="15a55-125">To create a simple ASP.NET application</span></span>  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="2547f-125">簡単な ASP.NET アプリケーションを作成するには</span><span class="sxs-lookup"><span data-stu-id="2547f-125">To create a simple ASP.NET application</span></span>  
   
-1.  <span data-ttu-id="15a55-126">Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="15a55-126">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
+1.  <span data-ttu-id="2547f-126">Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="2547f-126">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  <span data-ttu-id="15a55-127">**[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="15a55-127">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
+2.  <span data-ttu-id="2547f-127">**[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="2547f-127">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3.  <span data-ttu-id="15a55-128">**[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。</span><span class="sxs-lookup"><span data-stu-id="15a55-128">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3.  <span data-ttu-id="2547f-128">**[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。</span><span class="sxs-lookup"><span data-stu-id="2547f-128">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a><span data-ttu-id="15a55-129">手順 2 – クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="15a55-129">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
- <span data-ttu-id="15a55-130">この手順では、構成エントリを ASP.NET Web フォーム アプリケーションの *Web.config* 構成ファイルに追加して、クレーム対応にします。</span><span class="sxs-lookup"><span data-stu-id="15a55-130">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET Web Forms application to make it claims-aware.</span></span>  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a><span data-ttu-id="2547f-129">手順 2 – クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="2547f-129">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
+ <span data-ttu-id="2547f-130">この手順では、構成エントリを ASP.NET Web フォーム アプリケーションの *Web.config* 構成ファイルに追加して、クレーム対応にします。</span><span class="sxs-lookup"><span data-stu-id="2547f-130">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET Web Forms application to make it claims-aware.</span></span>  
   
-#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a><span data-ttu-id="15a55-131">クレーム ベースの認証用の ASP.NET アプリケーションを構成するには</span><span class="sxs-lookup"><span data-stu-id="15a55-131">To configure ASP.NET application for claims-based authentication</span></span>  
+#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a><span data-ttu-id="2547f-131">クレーム ベースの認証用の ASP.NET アプリケーションを構成するには</span><span class="sxs-lookup"><span data-stu-id="2547f-131">To configure ASP.NET application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="15a55-132">**\<configuration>** 開始要素のすぐ後の *Web.config* 構成ファイルに、次の構成セクション エントリを追加します。</span><span class="sxs-lookup"><span data-stu-id="15a55-132">Add the following configuration section entries to the *Web.config* configuration file immediately after the **\<configuration>** opening element:</span></span>  
+1.  <span data-ttu-id="2547f-132">**\<configuration>** 開始要素のすぐ後の *Web.config* 構成ファイルに、次の構成セクション エントリを追加します。</span><span class="sxs-lookup"><span data-stu-id="2547f-132">Add the following configuration section entries to the *Web.config* configuration file immediately after the **\<configuration>** opening element:</span></span>  
   
     ```xml  
     <configSections>  
@@ -72,7 +72,7 @@ ms.locfileid: "42931773"
     </configSections>  
     ```  
   
-2.  <span data-ttu-id="15a55-133">次のように、アプリケーションのフェデレーション メタデータへのアクセスを有効にする **\<location>** 要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="15a55-133">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
+2.  <span data-ttu-id="2547f-133">次のように、アプリケーションのフェデレーション メタデータへのアクセスを有効にする **\<location>** 要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="2547f-133">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -84,7 +84,7 @@ ms.locfileid: "42931773"
     </location>  
     ```  
   
-3.  <span data-ttu-id="15a55-134">**\<system.web>** 要素内で以下の構成エントリを追加して、ユーザーを拒否し、ネイティブ認証を無効にし、認証を管理するために WIF を有効にします。</span><span class="sxs-lookup"><span data-stu-id="15a55-134">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
+3.  <span data-ttu-id="2547f-134">**\<system.web>** 要素内で以下の構成エントリを追加して、ユーザーを拒否し、ネイティブ認証を無効にし、認証を管理するために WIF を有効にします。</span><span class="sxs-lookup"><span data-stu-id="2547f-134">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
   
     ```xml  
     <authorization>  
@@ -93,7 +93,7 @@ ms.locfileid: "42931773"
     <authentication mode="None" />  
     ```  
   
-4.  <span data-ttu-id="15a55-135">フェデレーション認証用のモジュールを定義する **\<system.webServer>** 要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="15a55-135">Add a **\<system.webServer>** element that defines the modules for federated authentication.</span></span> <span data-ttu-id="15a55-136">*PublicKeyToken* 属性は、前の手順で追加した **\<configSections>** エントリの *PublicKeyToken* 属性と同じである必要があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="15a55-136">Note that the *PublicKeyToken* attribute must be the same as the *PublicKeyToken* attribute for the **\<configSections>** entries added earlier:</span></span>  
+4.  <span data-ttu-id="2547f-135">フェデレーション認証用のモジュールを定義する **\<system.webServer>** 要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="2547f-135">Add a **\<system.webServer>** element that defines the modules for federated authentication.</span></span> <span data-ttu-id="2547f-136">*PublicKeyToken* 属性は、前の手順で追加した **\<configSections>** エントリの *PublicKeyToken* 属性と同じである必要があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="2547f-136">Note that the *PublicKeyToken* attribute must be the same as the *PublicKeyToken* attribute for the **\<configSections>** entries added earlier:</span></span>  
   
     ```xml  
     <system.webServer>  
@@ -104,7 +104,7 @@ ms.locfileid: "42931773"
     </system.webServer>  
     ```  
   
-5.  <span data-ttu-id="15a55-137">以下の Windows Identity Foundation 関連の構成エントリを追加し、ASP.NET アプリケーションの URL とポート番号が、**\<audienceUris>** エントリ、**\<wsFederation>** 要素の **realm** 属性、および **\<wsFederation>** 要素の **reply** 属性の値と一致することを確認します。</span><span class="sxs-lookup"><span data-stu-id="15a55-137">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="15a55-138">また、**issuer** の値がセキュリティ トークン サービス (STS) URL に適したものであることを確認します。</span><span class="sxs-lookup"><span data-stu-id="15a55-138">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
+5.  <span data-ttu-id="2547f-137">以下の Windows Identity Foundation 関連の構成エントリを追加し、ASP.NET アプリケーションの URL とポート番号が、**\<audienceUris>** エントリ、**\<wsFederation>** 要素の **realm** 属性、および **\<wsFederation>** 要素の **reply** 属性の値と一致することを確認します。</span><span class="sxs-lookup"><span data-stu-id="2547f-137">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="2547f-138">また、**issuer** の値がセキュリティ トークン サービス (STS) URL に適したものであることを確認します。</span><span class="sxs-lookup"><span data-stu-id="2547f-138">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -128,16 +128,16 @@ ms.locfileid: "42931773"
     </system.identityModel.services>  
     ```  
   
-6.  <span data-ttu-id="15a55-139"><xref:System.IdentityModel> アセンブリに参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="15a55-139">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
+6.  <span data-ttu-id="2547f-139"><xref:System.IdentityModel> アセンブリに参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="2547f-139">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
   
-7.  <span data-ttu-id="15a55-140">ソリューションをコンパイルして、エラーがないかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="15a55-140">Compile the solution to make sure there are no errors.</span></span>  
+7.  <span data-ttu-id="2547f-140">ソリューションをコンパイルして、エラーがないかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="2547f-140">Compile the solution to make sure there are no errors.</span></span>  
   
-## <a name="step-3--test-your-solution"></a><span data-ttu-id="15a55-141">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="15a55-141">Step 3 – Test Your Solution</span></span>  
- <span data-ttu-id="15a55-142">この手順では、クレーム ベースの認証用に構成された ASP.NET Web フォーム アプリケーションをテストします。</span><span class="sxs-lookup"><span data-stu-id="15a55-142">In this step you will test your ASP.NET Web Forms application configured for claims-based authentication.</span></span> <span data-ttu-id="15a55-143">基本テストを実行するには、セキュリティ トークン サービス (STS) で発行されたトークンでクレームを表示するコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="15a55-143">To perform a basic test, you will add code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="2547f-141">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="2547f-141">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="2547f-142">この手順では、クレーム ベースの認証用に構成された ASP.NET Web フォーム アプリケーションをテストします。</span><span class="sxs-lookup"><span data-stu-id="2547f-142">In this step you will test your ASP.NET Web Forms application configured for claims-based authentication.</span></span> <span data-ttu-id="2547f-143">基本テストを実行するには、セキュリティ トークン サービス (STS) で発行されたトークンでクレームを表示するコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="2547f-143">To perform a basic test, you will add code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
   
-#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a><span data-ttu-id="15a55-144">クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションをテストするには</span><span class="sxs-lookup"><span data-stu-id="15a55-144">To test your ASP.NET Web Form application for claims-based authentication</span></span>  
+#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a><span data-ttu-id="2547f-144">クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションをテストするには</span><span class="sxs-lookup"><span data-stu-id="2547f-144">To test your ASP.NET Web Form application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="15a55-145">**TestApp** プロジェクトの下にある **Default.aspx** ファイルを開き、既存のマークアップを次のマークアップに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="15a55-145">Open the **Default.aspx** file under the **TestApp** project and replace its existing markup with the following markup:</span></span>  
+1.  <span data-ttu-id="2547f-145">**TestApp** プロジェクトの下にある **Default.aspx** ファイルを開き、既存のマークアップを次のマークアップに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="2547f-145">Open the **Default.aspx** file under the **TestApp** project and replace its existing markup with the following markup:</span></span>  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -159,12 +159,12 @@ ms.locfileid: "42931773"
     </html>  
     ```  
   
-2.  <span data-ttu-id="15a55-146">**Default.aspx** を保存し、**Default.aspx.cs** という名前の分離コード ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="15a55-146">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
+2.  <span data-ttu-id="2547f-146">**Default.aspx** を保存し、**Default.aspx.cs** という名前の分離コード ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="2547f-146">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="15a55-147">**Default.aspx.cs** は、ソリューション エクスプローラーで **Default.aspx** の下に隠れていることがあります。</span><span class="sxs-lookup"><span data-stu-id="15a55-147">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="15a55-148">**Default.aspx.cs** が表示されない場合は、**Default.aspx** の横の三角形をクリックして展開します。</span><span class="sxs-lookup"><span data-stu-id="15a55-148">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
+    >  <span data-ttu-id="2547f-147">**Default.aspx.cs** は、ソリューション エクスプローラーで **Default.aspx** の下に隠れていることがあります。</span><span class="sxs-lookup"><span data-stu-id="2547f-147">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="2547f-148">**Default.aspx.cs** が表示されない場合は、**Default.aspx** の横の三角形をクリックして展開します。</span><span class="sxs-lookup"><span data-stu-id="2547f-148">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
   
-3.  <span data-ttu-id="15a55-149">**Default.aspx.cs** の **Page_Load** メソッド内の既存のコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="15a55-149">Replace the existing code in the **Page_Load** method of **Default.aspx.cs** with the following code:</span></span>  
+3.  <span data-ttu-id="2547f-149">**Default.aspx.cs** の **Page_Load** メソッド内の既存のコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="2547f-149">Replace the existing code in the **Page_Load** method of **Default.aspx.cs** with the following code:</span></span>  
   
     ```csharp  
     using System;  
@@ -203,8 +203,8 @@ ms.locfileid: "42931773"
     }  
     ```  
   
-4.  <span data-ttu-id="15a55-150">**Default.aspx.cs** を保存して、ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="15a55-150">Save **Default.aspx.cs**, and build the solution.</span></span>  
+4.  <span data-ttu-id="2547f-150">**Default.aspx.cs** を保存して、ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="2547f-150">Save **Default.aspx.cs**, and build the solution.</span></span>  
   
-5.  <span data-ttu-id="15a55-151">**F5** キーを押して、ソリューションを実行します。</span><span class="sxs-lookup"><span data-stu-id="15a55-151">Run the solution by pressing the **F5** key.</span></span>  
+5.  <span data-ttu-id="2547f-151">**F5** キーを押して、ソリューションを実行します。</span><span class="sxs-lookup"><span data-stu-id="2547f-151">Run the solution by pressing the **F5** key.</span></span>  
   
-6.  <span data-ttu-id="15a55-152">セキュリティ トークン サービスで発行されたトークンでクレームを表示するページが表示されます。</span><span class="sxs-lookup"><span data-stu-id="15a55-152">You should be presented with the page that displays the claims in the token that was issued to you by the Security Token Service.</span></span>
+6.  <span data-ttu-id="2547f-152">セキュリティ トークン サービスで発行されたトークンでクレームを表示するページが表示されます。</span><span class="sxs-lookup"><span data-stu-id="2547f-152">You should be presented with the page that displays the claims in the token that was issued to you by the Security Token Service.</span></span>

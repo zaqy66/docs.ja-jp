@@ -8,30 +8,30 @@ helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
 ms.openlocfilehash: fc907eb078044ae06e0da19e38a4bbff28192346
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395465"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516165"
 ---
-# <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a><span data-ttu-id="4d46b-102">方法 : ToolStripContentPanel にコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="4d46b-102">How to: Add a Control to a ToolStripContentPanel</span></span>
-<span data-ttu-id="4d46b-103"><xref:System.Windows.Forms.ToolStripContentPanel> に対して、1 つまたは複数のコントロールをプログラムで追加できます。</span><span class="sxs-lookup"><span data-stu-id="4d46b-103">You can programmatically add one or more controls to a <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  
+# <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a><span data-ttu-id="fa138-102">方法 : ToolStripContentPanel にコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="fa138-102">How to: Add a Control to a ToolStripContentPanel</span></span>
+<span data-ttu-id="fa138-103"><xref:System.Windows.Forms.ToolStripContentPanel> に対して、1 つまたは複数のコントロールをプログラムで追加できます。</span><span class="sxs-lookup"><span data-stu-id="fa138-103">You can programmatically add one or more controls to a <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4d46b-104">例</span><span class="sxs-lookup"><span data-stu-id="4d46b-104">Example</span></span>  
- <span data-ttu-id="4d46b-105">次のコード例は、<xref:System.Windows.Forms.RichTextBox> を <xref:System.Windows.Forms.ToolStripContentPanel> に追加する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="4d46b-105">The following code example demonstrates how to add a <xref:System.Windows.Forms.RichTextBox> to a <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  
+## <a name="example"></a><span data-ttu-id="fa138-104">例</span><span class="sxs-lookup"><span data-stu-id="fa138-104">Example</span></span>  
+ <span data-ttu-id="fa138-105">次のコード例は、<xref:System.Windows.Forms.RichTextBox> を <xref:System.Windows.Forms.ToolStripContentPanel> に追加する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="fa138-105">The following code example demonstrates how to add a <xref:System.Windows.Forms.RichTextBox> to a <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStripContainer#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripContainer/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStripContainer#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripContainer/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="4d46b-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="4d46b-106">Compiling the Code</span></span>  
- <span data-ttu-id="4d46b-107">このコード例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="4d46b-107">This code example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="fa138-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="fa138-106">Compiling the Code</span></span>  
+ <span data-ttu-id="fa138-107">このコード例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="fa138-107">This code example requires:</span></span>  
   
--   <span data-ttu-id="4d46b-108">System、System.Data、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="4d46b-108">References to the System, System.Data and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="fa138-108">System、System.Data、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="fa138-108">References to the System, System.Data and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="4d46b-109">コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。</span><span class="sxs-lookup"><span data-stu-id="4d46b-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="4d46b-110">新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。</span><span class="sxs-lookup"><span data-stu-id="4d46b-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="4d46b-111">また、「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」または「[[ToolStripContainer タスク] ダイアログ ボックス](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))」も参照してください。</span><span class="sxs-lookup"><span data-stu-id="4d46b-111">See also [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)) or [ToolStripContainer Tasks Dialog Box](https://msdn.microsoft.com/library/ms233647\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="fa138-109">コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。</span><span class="sxs-lookup"><span data-stu-id="fa138-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="fa138-110">新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。</span><span class="sxs-lookup"><span data-stu-id="fa138-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="fa138-111">また、「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」または「[[ToolStripContainer タスク] ダイアログ ボックス](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))」も参照してください。</span><span class="sxs-lookup"><span data-stu-id="fa138-111">See also [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)) or [ToolStripContainer Tasks Dialog Box](https://msdn.microsoft.com/library/ms233647\(v=vs.110\)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d46b-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="4d46b-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fa138-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="fa138-112">See Also</span></span>  
  <xref:System.Windows.Forms.ToolStripContentPanel>  
  <xref:System.Windows.Forms.ToolStripContainer>  
- [<span data-ttu-id="4d46b-113">ToolStripContainer コントロール</span><span class="sxs-lookup"><span data-stu-id="4d46b-113">ToolStripContainer Control</span></span>](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
- [<span data-ttu-id="4d46b-114">ToolStrip コントロール</span><span class="sxs-lookup"><span data-stu-id="4d46b-114">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+ [<span data-ttu-id="fa138-113">ToolStripContainer コントロール</span><span class="sxs-lookup"><span data-stu-id="fa138-113">ToolStripContainer Control</span></span>](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
+ [<span data-ttu-id="fa138-114">ToolStrip コントロール</span><span class="sxs-lookup"><span data-stu-id="fa138-114">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
