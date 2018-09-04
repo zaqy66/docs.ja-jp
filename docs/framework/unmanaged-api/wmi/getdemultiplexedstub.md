@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482357"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659200"
 ---
-# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="751c2-103">GetDemultiplexedStub 関数</span><span class="sxs-lookup"><span data-stu-id="751c2-103">GetDemultiplexedStub function</span></span>
-<span data-ttu-id="751c2-104">クライアントを Windows の管理から非同期呼び出しの受信を支援するために、オブジェクト転送シンクを作成します。</span><span class="sxs-lookup"><span data-stu-id="751c2-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="5c046-103">GetDemultiplexedStub 関数</span><span class="sxs-lookup"><span data-stu-id="5c046-103">GetDemultiplexedStub function</span></span>
+<span data-ttu-id="5c046-104">Windows 管理から非同期呼び出しを受信する際にクライアントを支援するオブジェクト転送シンクが作成されます。</span><span class="sxs-lookup"><span data-stu-id="5c046-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="751c2-105">構文</span><span class="sxs-lookup"><span data-stu-id="751c2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c046-105">構文</span><span class="sxs-lookup"><span data-stu-id="5c046-105">Syntax</span></span>  
   
 ```  
 HRESULT GetDemultiplexedStub (
@@ -38,29 +38,29 @@ HRESULT GetDemultiplexedStub (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="751c2-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="751c2-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="5c046-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5c046-106">Parameters</span></span>
 
 `pObject`  
-<span data-ttu-id="751c2-107">[in]クライアントのインプロセス実装へのポインター [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)します。</span><span class="sxs-lookup"><span data-stu-id="751c2-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
+<span data-ttu-id="5c046-107">[in]クライアントのインプロセス実装へのポインター [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)します。</span><span class="sxs-lookup"><span data-stu-id="5c046-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
 
 `isLocal`  
-<span data-ttu-id="751c2-108">[in]イベントがローカルかどうかを示すフラグ (`true`)、それ以外の`false`します。</span><span class="sxs-lookup"><span data-stu-id="751c2-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
+<span data-ttu-id="5c046-108">[in]イベントがローカルかどうかを示すフラグ (`true`)、それ以外の`false`します。</span><span class="sxs-lookup"><span data-stu-id="5c046-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
 
 `ppObject`  
-<span data-ttu-id="751c2-109">[out]Windows の管理から非同期呼び出しの受信をクライアントを支援するためにオブジェクトのフォワーダー シンク。</span><span class="sxs-lookup"><span data-stu-id="751c2-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+<span data-ttu-id="5c046-109">[out]Windows の管理から非同期呼び出しの受信をクライアントを支援するためにオブジェクトのフォワーダー シンク。</span><span class="sxs-lookup"><span data-stu-id="5c046-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="751c2-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="751c2-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="5c046-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="5c046-110">Return value</span></span>
 
-<span data-ttu-id="751c2-111">関数が成功した場合、戻り値は`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="751c2-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="5c046-111">関数が成功した場合、戻り値は`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="5c046-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="751c2-112">関数が失敗した場合、戻り値が 0 以外のエラー コードにします。</span><span class="sxs-lookup"><span data-stu-id="751c2-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="751c2-113">拡張エラー情報を取得する、 [GetErrorInfo](geterrorinfo.md)関数。</span><span class="sxs-lookup"><span data-stu-id="751c2-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="5c046-112">関数が失敗した場合、戻り値が 0 以外のエラー コードにします。</span><span class="sxs-lookup"><span data-stu-id="5c046-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="5c046-113">拡張エラー情報を取得する、 [GetErrorInfo](geterrorinfo.md)関数。</span><span class="sxs-lookup"><span data-stu-id="5c046-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
     
-## <a name="requirements"></a><span data-ttu-id="751c2-114">要件</span><span class="sxs-lookup"><span data-stu-id="751c2-114">Requirements</span></span>  
- <span data-ttu-id="751c2-115">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="751c2-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5c046-114">要件</span><span class="sxs-lookup"><span data-stu-id="5c046-114">Requirements</span></span>  
+ <span data-ttu-id="5c046-115">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5c046-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="751c2-116">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="751c2-116">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="5c046-116">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="5c046-116">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="751c2-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="751c2-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="5c046-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="5c046-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="751c2-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="751c2-118">See also</span></span>  
-[<span data-ttu-id="751c2-119">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="751c2-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="5c046-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="5c046-118">See also</span></span>  
+[<span data-ttu-id="5c046-119">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="5c046-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
