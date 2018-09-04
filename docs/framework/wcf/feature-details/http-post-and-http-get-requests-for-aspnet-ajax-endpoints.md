@@ -3,11 +3,11 @@ title: '方法 : ASP.NET AJAX エンドポイントのために HTTP POST また
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
 ms.openlocfilehash: 079bbd98b3fc3d5538f87cad39a4a83a0dc1e242
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
-ms.translationtype: HT
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998483"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481843"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>方法 : ASP.NET AJAX エンドポイントのために HTTP POST または HTTP GET を選択する
 Windows Communication Foundation (WCF) クライアントの Web サイトの JavaScript から呼び出すことができる ASP.NET AJAX 対応エンドポイントを公開するサービスを作成することができます。 このようなサービスを構築するための基本的な手順については[方法: ASP.NET AJAX エンドポイントを追加する構成を使用](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)と[方法: ASP.NET AJAX エンドポイントなしを使用して構成を追加](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)します。  

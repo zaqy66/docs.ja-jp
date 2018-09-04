@@ -2,12 +2,12 @@
 title: アセンブリとグローバル アセンブリ キャッシュ (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 07ee54fc19abecba5e8335f063277418ede80b36
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408919"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534324"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>アセンブリとグローバル アセンブリ キャッシュ (C#)
 アセンブリは、.NET ベースのアプリケーションの配置、バージョン管理、再利用、アクティベーション スコープ、およびセキュリティ権限の基本単位です。 アセンブリは、実行可能 (.exe) ファイルまたはダイナミック リンク ライブラリ (.dll) ファイルの形を取る、.NET Framework の構成要素です。 それらは、型の実装に関して必要な情報を共通言語ランタイムに提供します。 アセンブリは、機能的な論理的な単位を形成し、連携して動作するように構築された、型とリソースのコレクションと考えることができます。  
@@ -50,13 +50,14 @@ ms.locfileid: "43408919"
 > [!NOTE]
 >  Visual Studio でアセンブリをビルドするには、**[ビルド]** メニューの **[ビルド]** を選択します。  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)  
- [共通言語ランタイムのアセンブリ](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [フレンド アセンブリ (C#)](friend-assemblies.md)  
- [方法 : アセンブリを他のアプリケーションと共有する (C#)](how-to-share-an-assembly-with-other-applications.md)  
- [方法: アセンブリを読み込み、アンロードする (C#)](how-to-load-and-unload-assemblies.md)  
- [方法: ファイルがアセンブリであるかどうかを確認する (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
- [方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
- [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)  
+- [共通言語ランタイムのアセンブリ](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [フレンド アセンブリ (C#)](friend-assemblies.md)  
+- [方法 : アセンブリを他のアプリケーションと共有する (C#)](how-to-share-an-assembly-with-other-applications.md)  
+- [方法: アセンブリを読み込み、アンロードする (C#)](how-to-load-and-unload-assemblies.md)  
+- [方法: ファイルがアセンブリであるかどうかを確認する (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
+- [方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+- [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

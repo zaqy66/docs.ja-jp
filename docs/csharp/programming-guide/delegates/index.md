@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 9711b3c52f6d28d37e0b0d4d4de2f1be6bb46283
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3924d070ea012faf33f1d808b92b1328626ef567
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499539"
+ms.locfileid: "43558411"
 ---
 # <a name="delegates-c-programming-guide"></a>デリゲート (C# プログラミング ガイド)
 [デリゲート](../../../csharp/language-reference/keywords/delegate.md)は、特定のパラメーター リストおよび戻り値の型を使用して、メソッドへの参照を表す型です。 デリゲートをインスタンス化するときは、互換性のあるシグネチャと戻り値の型を持つ任意のメソッドにそのインスタンスを関連付けることができます。 メソッドは、デリゲート インスタンスを使用して起動する (呼び出す) ことができます。  
@@ -65,7 +65,8 @@ ms.locfileid: "43499539"
   
  「[Learn」の「g C# 3.0: Master the Fundamentals of C# 3.0 (C# 3.0 の学習: C# 3.0 の基礎を習得)](https://msdn.microsoft.com/library/orm-9780596521066-01-17.aspx) 」の「 [Learn」の「g C# 3.0: Master the fundamentals of C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)」  
   
-## <a name="see-also"></a>参照  
- <xref:System.Delegate>  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [イベント](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Delegate>  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [イベント](../../../csharp/programming-guide/events/index.md)

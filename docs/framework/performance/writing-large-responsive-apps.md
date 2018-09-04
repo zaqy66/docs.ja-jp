@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
-ms.translationtype: MT
+ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254354"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418966"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
 この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージ コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。  
@@ -38,7 +38,7 @@ ms.locfileid: "43254354"
  アプリでの主要な顧客エクスペリエンスやシナリオについてパフォーマンスの目標を設定し、パフォーマンスを測定するテストを作成してください。  テスト失敗の調査には科学的な手法を使用します。ガイドとなるプロファイルを使用して、どのような問題が発生しているかを仮定し、実験やコード変更によってその仮定を検証します。  定期的にテストを実施して、時間の経過と共にベースライン パフォーマンス測定を確立します。これにより、パフォーマンス後退を引き起こしている変更を切り分けることができます。  パフォーマンス測定を厳密に実施することで、不要なコード更新に時間をかけることを回避できます。  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事実 3: 優れたツールには大きな効果がある  
- 優れたツールを使用すれば、最も大きなパフォーマンスの問題 (CPU、メモリ、またはディスク) の詳細を迅速に確認し、このようなボトルネックを引き起こしているコードを特定できます。  Microsoft は、[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone Analysis Tool](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)、[PerfView](http://www.microsoft.com/download/details.aspx?id=28567) など、さまざまなパフォーマンス ツールを提供しています。  
+ 優れたツールを使用すれば、最も大きなパフォーマンスの問題 (CPU、メモリ、またはディスク) の詳細を迅速に確認し、このようなボトルネックを引き起こしているコードを特定できます。  Microsoft は、[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone Analysis Tool](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)、[PerfView](https://www.microsoft.com/download/details.aspx?id=28567) など、さまざまなパフォーマンス ツールを提供しています。  
   
  PerfView は、ディスク I/O、GC イベント、メモリなどの深刻な問題に取り組む際に役立つ極めて強力な無償のツールです。  パフォーマンスに関連する [Windows イベント トレーシング](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) イベントをキャプチャし、アプリ別、プロセス別、スタック別、およびスレッド別に情報を容易に確認できます。  PerfView は、アプリによって割り当てられるメモリの種類と量、そしてメモリの割り当てにどの関数またはコール スタックがどの程度関与しているのかを示します。 詳細については、ツールに付属している詳しいヘルプ トピック、デモ、ビデオ (Channel 9 の [PerfView チュートリアル](http://channel9.msdn.com/Series/PerfView-Tutorial) など) を参照してください。  
   
@@ -281,7 +281,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
   
  **例 5: ラムダ、List\<T>、および IEnumerable\<T>**  
   
- この例では、[LINQ と関数スタイルのコード](http://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)を利用し、与えられた名前文字列で、コンパイラのモデルで記号を探します。  
+ この例では、[LINQ と関数スタイルのコード](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)を利用し、与えられた名前文字列で、コンパイラのモデルで記号を探します。  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 最初の行で、[ラムダ式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [閉じ込め](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)ローカル変数`name`します。  つまり、このコードは `predicate` が保持している[デリゲート](~/docs/csharp/language-reference/keywords/delegate.md)にオブジェクトを割り当てる以外に、`name` の値をキャプチャする環境を保持する静的クラスを割り当てます。  コンパイラは次のようなコードを生成します。  
+ 最初の行で、[ラムダ式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [閉じ込め](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)ローカル変数`name`します。  つまり、このコードは `predicate` が保持している[デリゲート](~/docs/csharp/language-reference/keywords/delegate.md)にオブジェクトを割り当てる以外に、`name` の値をキャプチャする環境を保持する静的クラスを割り当てます。  コンパイラは次のようなコードを生成します。  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -362,7 +362,7 @@ public Symbol FindMatchingSymbol(string name)
  このコードは LINQ 拡張メソッド、ラムダ、列挙子を使用しないため、割り当ての問題は発生しません。  `symbols` コレクションが <xref:System.Collections.Generic.List%601> であることをコンパイラが認識でき、結果列挙子 (構造体) を適切な型のローカル変数にバインドしてボックス化を回避できるため、割り当てが発生しません。  この関数の元のバージョンは、C# の高い性能と .NET Framework の生産性を示す最適な例でした。  この新しく効率性が高いバージョンは、保守のために複雑なコードを追加することなく、このような品質を保持します。  
   
 ### <a name="async-method-caching"></a>非同期のメソッド キャッシュ  
- 次の例は、キャッシュされた結果を[非同期](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)メソッドで使用しようとすると発生する一般的な問題を示します。  
+ 次の例は、キャッシュされた結果を[非同期](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)メソッドで使用しようとすると発生する一般的な問題を示します。  
   
  **例 6: 非同期メソッドでのキャッシュ**  
   
@@ -465,9 +465,9 @@ class Compilation { /*...*/
  [このトピックのプレゼンテーションのビデオ](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [パフォーマンス](../../../docs/framework/performance/index.md)  
- [.NET のパフォーマンスに関するヒント](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone パフォーマンス分析ツール](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Visual Studio Profiler でアプリケーションのボトルネックを見つける](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [.NET のパフォーマンスに関するヒント](https://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone パフォーマンス分析ツール](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Visual Studio Profiler でアプリケーションのボトルネックを見つける](https://msdn.microsoft.com/magazine/cc337887.aspx)  
  [Channel 9 PerfView チュートリアル](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [高レベルのパフォーマンスのヒント](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [高レベルのパフォーマンスのヒント](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
  [GitHub の dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn)

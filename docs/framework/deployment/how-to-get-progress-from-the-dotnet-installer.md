@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393310"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472047"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>方法: .NET Framework 4.5 インストーラーの進行状況を表示する
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は再頒布可能なランタイムです。 このバージョンの .NET Framework 用アプリを開発する場合は、アプリのセットアップに必要なパーツとして、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを含める (チェーンする) ことができます。 セットアップ手順をカスタマイズまたは統一するために、アプリケーションのセットアップの進行状況を表示する一方で、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップをサイレントで起動し、その進行状況を追跡できます。 サイレントな追跡を可能にするために、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップ (監視対象) ではメモリ マップ I/O (MMIO) セグメントを使用してプロトコルを定義し、セットアップ (ウォッチャーつまりチェーン元) と通信します。 このプロトコルは、チェーン元が進行状況情報や詳細な結果を取得してメッセージに応答し、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを取り消す方法を定義します。  
@@ -35,7 +35,7 @@ ms.locfileid: "33393310"
   
          これらの名前は、実際のセットアップ プログラムの固有な名前に置き換えてください。  
   
-    2.  MMIO セクションから読み取ります。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、ダウンロード操作とインストール操作は同時に行われます。 .NET Framework の 1 つのパーツがインストールしている間に、別のパーツがダウンロードします。 その結果、進行状況は、0 から 255 まで増加する 2 つの値 (`m_downloadSoFar` および `m_installSoFar`) として MMIO セクションに送り返されます (書き込まれます)。 255 が書き込まれて、.NET Framework が終了すると、インストールは完了します。  
+    2.  MMIO セクションから読み取ります。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、ダウンロード操作とインストール操作は同時に行われます。.NET Framework の 1 つのパーツがインストールしている間に、別のパーツがダウンロードします。 その結果、進行状況は、0 から 255 まで増加する 2 つの値 (`m_downloadSoFar` および `m_installSoFar`) として MMIO セクションに送り返されます (書き込まれます)。 255 が書き込まれて、.NET Framework が終了すると、インストールは完了します。  
   
 -   **終了コード**。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 再頒布可能プログラムを呼び出すためのコマンドからの以下の終了コードは、セットアップが成功または失敗したことを示します。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "33393310"
 > [!WARNING]
 >  例の実行は、管理者として行う必要があります。  
   
- MSDN サンプル ギャラリーから [.NET Framework 4.5 チェーン元のサンプル](http://go.microsoft.com/fwlink/?LinkId=231345)の完全な Visual Studio ソリューションをダウンロードできます。  
+ MSDN サンプル ギャラリーから [.NET Framework 4.5 チェーン元のサンプル](https://go.microsoft.com/fwlink/?LinkId=231345)の完全な Visual Studio ソリューションをダウンロードできます。  
   
  以下のセクションでは、この例の重要なファイルである MMIOChainer.h、ChainingdotNet4.cpp、および IProgressObserver.h について説明します。  
   
 #### <a name="mmiochainerh"></a>MMIOChainer.h  
   
--   MMIOChainer.h ファイル ([完全なコード](http://go.microsoft.com/fwlink/?LinkId=231369)を参照) には、データ構造体の定義と、チェーン元クラスが派生する基底クラスが含まれます。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は MMIO データ構造体を拡張し、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] インストーラーが必要とするデータを処理できるようにします。 MMIO 構造体への変更には下位互換性があるため、.NET Framework 4 チェーン元は、再コンパイルを必要とせずに .NET Framework 4.5 のセットアップで機能します。 ただし、このシナリオはシステムの再起動を削減するための機能をサポートしていません。  
+-   MMIOChainer.h ファイル ([完全なコード](https://go.microsoft.com/fwlink/?LinkId=231369)を参照) には、データ構造体の定義と、チェーン元クラスが派生する基底クラスが含まれます。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は MMIO データ構造体を拡張し、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] インストーラーが必要とするデータを処理できるようにします。 MMIO 構造体への変更には下位互換性があるため、.NET Framework 4 チェーン元は、再コンパイルを必要とせずに .NET Framework 4.5 のセットアップで機能します。 ただし、このシナリオはシステムの再起動を削減するための機能をサポートしていません。  
   
      バージョン フィールドは、構造体およびメッセージ形式へのリビジョンを識別するための手段を提供します。  .NET Framework セットアップでは、`VirtualQuery` 関数を呼び出してファイル マップのサイズを判断することで、チェーン元インターフェイスのバージョンを判別します。  サイズがバージョン フィールドに対応できる十分な大きさである場合、.NET Framework セットアップでは指定された値を使用します。 .NET Framework 4 の場合のように、バージョン フィールドを含めるにはファイル マップが小さすぎる場合、セットアップ プロセスではバージョン 0 (4) を使用します。 .NET Framework セットアップが送信しようとするメッセージのバージョンをチェーン元がサポートしていない場合、.NET Framework セットアップでは応答を無視します。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "33393310"
   
 #### <a name="iprogressobserverh"></a>IProgressObserver.h  
   
--   IProgressObserver.h ファイルは進行状況のオブザーバー ([完全なコードを参照](http://go.microsoft.com/fwlink/?LinkId=231370)) を実装します。 このオブザーバーは、ダウンロードとインストールの進行状況 (1% ～ 100% 完了を示す、符号なしの `char` 0 ～ 255 の値で指定) の通知を受け取ります。 オブザーバーは、チェーン対象がメッセージを送信したときにも通知を受け取ります。通知を受け取ったオブザーバーは、応答を送信する必要があります。  
+-   IProgressObserver.h ファイルは進行状況のオブザーバー ([完全なコードを参照](https://go.microsoft.com/fwlink/?LinkId=231370)) を実装します。 このオブザーバーは、ダウンロードとインストールの進行状況 (1% ～ 100% 完了を示す、符号なしの `char` 0 ～ 255 の値で指定) の通知を受け取ります。 オブザーバーは、チェーン対象がメッセージを送信したときにも通知を受け取ります。通知を受け取ったオブザーバーは、応答を送信する必要があります。  
   
     ```cpp  
         class IProgressObserver  
@@ -112,7 +112,7 @@ ms.locfileid: "33393310"
   
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp  
   
--   [ChainingdotNet4.5.cpp](http://go.microsoft.com/fwlink/?LinkId=231368) ファイルは、`Server` クラスを実装します。このクラスは `MmioChainer` クラスから派生し、適切なメソッドをオーバーライドして進行状況情報を表示します。 MmioChainer は、指定されたセクション名でセクションを作成し、指定されたイベント名でチェーン元を初期化します。 イベント名は、マップされたデータ構造体に保存されます。 セクションとイベント名は一意にする必要があります。 次のコードの `Server` クラスは、指定されたセットアップ プログラムを起動して進行状況を監視し、終了コードを返します。  
+-   [ChainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) ファイルは、`Server` クラスを実装します。このクラスは `MmioChainer` クラスから派生し、適切なメソッドをオーバーライドして進行状況情報を表示します。 MmioChainer は、指定されたセクション名でセクションを作成し、指定されたイベント名でチェーン元を初期化します。 イベント名は、マップされたデータ構造体に保存されます。 セクションとイベント名は一意にする必要があります。 次のコードの `Server` クラスは、指定されたセットアップ プログラムを起動して進行状況を監視し、終了コードを返します。  
   
     ```cpp  
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver  

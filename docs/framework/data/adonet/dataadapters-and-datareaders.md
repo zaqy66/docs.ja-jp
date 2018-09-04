@@ -2,15 +2,15 @@
 title: DataAdapter と DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 7fd7013478bbf30c2a7e915045e3dd192ca92540
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758101"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476223"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter と DataReader
-ADO.NET を使用する**DataReader**をデータベースからデータの読み取り専用、前方参照専用のストリームを取得します。 結果が返されるように、クエリが実行され、それらを要求するまで、クライアントのネットワーク バッファーに格納されますを使用して、**読み取り**のメソッド、 **DataReader**です。 使用して、 **DataReader** 、使用可能になるとすぐにデータを取得して (既定) の両方に、アプリケーションのパフォーマンスを向上できるメモリ、システムのオーバーヘッドを減らすことで、一度に 1 行のみを格納します。  
+ADO.NET を使用する**DataReader**をデータベースからデータの読み取り専用、前方参照専用のストリームを取得します。 結果が返されるように、クエリが実行され、それらを要求するまで、クライアントのネットワーク バッファーに格納されますを使用して、**読み取り**のメソッド、 **DataReader**します。 使用して、 **DataReader** (既定) と、使用可能になるとすぐにデータを取得することによって、アプリケーションのパフォーマンスを向上できるメモリ、システムのオーバーヘッドを減らすことで、一度に 1 行のみを格納します。  
   
  <xref:System.Data.Common.DataAdapter> は、データ ソースからデータを取得し、1 つの <xref:System.Data.DataSet> 内でテーブルを設定するために使用されます。 また、`DataAdapter` は、`DataSet` に対して加えられた変更をデータ ソースに反映させます。 `DataAdapter` は .NET Framework データ プロバイダーの `Connection` オブジェクトを使用してデータ ソースに接続し、`Command` オブジェクトを使用してデータ ソースからデータを取得し、変更をデータ ソースに反映させます。  
   
@@ -18,7 +18,7 @@ ADO.NET を使用する**DataReader**をデータベースからデータの読�
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [DataReader によるデータの取得](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
- ADO.NET の説明**DataReader**オブジェクトと、ストリームを返す結果のデータ ソースから使用する方法です。  
+ ADO.NET をについて説明します。 **DataReader**オブジェクトと、データ ソースから結果のストリームを返すために使用方法。  
   
  [DataAdapter からの DataSet の読み込み](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  `DataSet` を使用して `DataAdapter` にテーブル、列、および行を設定する方法について説明します。  
@@ -49,4 +49,4 @@ ADO.NET を使用する**DataReader**をデータベースからデータの読�
  [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [DataSet、DataTable、および DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

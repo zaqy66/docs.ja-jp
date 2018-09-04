@@ -14,11 +14,11 @@ ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408286"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524730"
 ---
 # <a name="resources-in-net-apps"></a>.NET Apps でのリソース
 ほとんどの製品レベルのアプリでは、リソースを使用する必要があります。 リソースは実行不可能なデータであり、アプリと共に論理的に配置されます。 このリソースは、アプリ内ではエラー メッセージまたはユーザー インターフェイスの一部として表示できます。 リソースには、文字列、イメージ、永続化されたオブジェクトなど、多数の形式のデータを含めることができます。 (永続化されたオブジェクトをリソース ファイルに書き込むには、そのオブジェクトをシリアル化できることが必要です)。データをリソース ファイルに格納しておけば、アプリ全体を再コンパイルすることなくデータを変更できます。 また、データの格納場所が 1 つになり、複数の場所に格納されているハードコーディングされたデータを利用する必要がなくなります。  

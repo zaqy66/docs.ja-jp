@@ -2,15 +2,15 @@
 title: アーキテクチャとデザイン
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: c2e8ff5f21a2941d75b21915552e6935a1423978
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766869"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419605"
 ---
 # <a name="architecture-and-design"></a>アーキテクチャとデザイン
-SQL 生成モジュール、[サンプル プロバイダー](http://go.microsoft.com/fwlink/?LinkId=180616)コマンド ツリーを表す式ツリー上のビジターとして実装されます。 生成は、式ツリーを介した単一のパスで行われます。  
+SQL 生成モジュール、[サンプル プロバイダー](https://go.microsoft.com/fwlink/?LinkId=180616)コマンド ツリーを表す式ツリー上のビジターとして実装されます。 生成は、式ツリーを介した単一のパスで行われます。  
   
  ツリーのノードはボトムアップ方式で処理されます。 まず、中間構造として SqlSelectStatement または SqlBuilder が生成され、どちらも ISqlFragment を実装します。 次に、文字列である SQL ステートメントがその構造から生成されます。 中間構造には 2 つの理由があります。  
   
@@ -18,14 +18,14 @@ SQL 生成モジュール、[サンプル プロバイダー](http://go.microsof
   
 -   別名の名前を変更するには、名前の変更中に競合が発生しないように、使用されているすべての別名を識別する必要があります。 SqlBuilder で名前変更の選択を遅らせるには、Symbol オブジェクトを使用して、名前変更の候補となる列を表します。  
   
- ![ダイアグラム](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![図](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  最初のフェーズでは、式ツリーにアクセスしている間、式が SqlSelectStatement にグループ化され、結合がフラット化され、結合の別名がフラット化されます。 この段階では、Symbol オブジェクトは、名前変更が可能な列または入力の別名を表します。  
   
  2 番目のフェーズでは、実際の文字列を生成している間、別名の名前が変更されます。  
   
 ## <a name="data-structures"></a>データ構造  
- このセクションで説明で使用される型、[サンプル プロバイダー](http://go.microsoft.com/fwlink/?LinkId=180616) SQL ステートメントの作成に使用することです。  
+ このセクションで使用される型の説明、[サンプル プロバイダー](https://go.microsoft.com/fwlink/?LinkId=180616)使用して SQL ステートメントを作成することです。  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  このセクションでは、ISqlFragment インターフェイスを実装するクラスについて説明します。このインターフェイスは、2 つの目的を達成します。  
@@ -52,7 +52,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- SqlSelectStatement は、"SELECT... の図形の正規 SQL SELECT ステートメント 差出人。 WHERE … グループ化してください. ORDER BY"です。  
+ SqlSelectStatement は、"SELECT... の図形の正規 SQL SELECT ステートメントを表します 差出人。 WHERE … グループ化してください. ORDER BY"。  
   
  各 SQL 句は StringBuilder によって表されます。 また、Distinct が指定されているかどうか、およびステートメントが最上位かどうかを追跡します。 ステートメントが最上位ではなく、ステートメントに TOP 句も含まれていない場合は、ORDER BY 句は省略されます。  
   
@@ -212,13 +212,13 @@ private bool IsParentAJoin{get}
 ### <a name="input-alias-redirecting"></a>入力の別名のリダイレクト  
  入力の別名のリダイレクトは、シンボル テーブルによって行われます。  
   
- 入力の別名のリダイレクトを説明するための最初の例を参照してください[コマンド ツリーのベスト プラクティスから SQL を生成する](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)です。  この例では、"a" を投影の "b" にリダイレクトする必要がありました。  
+ 入力の別名のリダイレクトを説明するための最初の例を参照してください[コマンド ツリーのベスト プラクティスからの SQL の生成](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)します。  この例では、"a" を投影の "b" にリダイレクトする必要がありました。  
   
  SqlSelectStatement オブジェクトが作成されると、ノードへの入力であるエクステントが SqlSelectStatement の From プロパティに配置されます。 Symbol (<symbol_b>) は、入力バインディング名 ("b") に基づいて作成され、エクステントおよび "AS  " +  <symbol_b> が From 句に追加されることを表します。  シンボルは FromExtents プロパティにも追加されます。  
   
  シンボルはシンボル テーブルにも追加され、入力バインディング名がシンボルにリンクされます ("b", <symbol_b>)。  
   
- 後続のノードが SqlSelectStatement を再利用する場合、シンボル テーブルにエントリが追加され、その入力バインディング名がそのシンボルにリンクされます。 例では、入力バインディング名が"a"の DbProjectExpression は、SqlSelectStatement を再利用し、追加 ("a"、 \< symbol_b >) をテーブルにします。  
+ 後続のノードが SqlSelectStatement を再利用する場合、シンボル テーブルにエントリが追加され、その入力バインディング名がそのシンボルにリンクされます。 この例では、入力バインディング名が"a"の DbProjectExpression は、SqlSelectStatement を再利用を追加 ("a"、 \< symbol_b >) をテーブルにします。  
   
  SqlSelectStatement を再利用しているノードの入力バインディング名を式で参照すると、その参照は、シンボル テーブルを使用して、リダイレクトされた正しいシンボルに解決されます。 "a" を表す DbVariableReferenceExpression にアクセスしているときに "a.x" から "a" に解決されると、Symbol <symbol_b> に解決されます。  
   
@@ -324,7 +324,7 @@ ORDER BY sk1, sk2, ...
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>  
 ```  
   
- ここで\<leftSqlSelectStatement > および\<rightSqlSelectStatement > は Sqlselectstatement の各、入力にアクセスして取得および\<setOp > (UNION ALL など)、対応する操作は、します。  
+ 場所\<leftSqlSelectStatement > および\<rightSqlSelectStatement > は Sqlselectstatement の入力のそれぞれにアクセスして取得したと\<表します > は、対応する操作 (UNION ALL など)。  
   
 ### <a name="dbscanexpression"></a>DbScanExpression  
  (別の結合の左側の子である結合への入力として) 結合コンテキストにアクセスすると、DbScanExpression は対応するターゲット (定義クエリ、テーブル、またはビュー) のターゲット SQL と共に SqlBuilder を返します。 それ以外の場合は、対応するターゲットに対応するように設定された FROM フィールドを使用して新しい SqlSelectStatement が作成されます。  

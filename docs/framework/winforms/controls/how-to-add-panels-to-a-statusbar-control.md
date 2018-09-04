@@ -10,27 +10,27 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: fa5246d76e09091350a5d5276f2c06824b9906d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: dd006f669ab6f0186bbcc7d1c76f9852ab6e8f60
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527626"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43476038"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>方法 : StatusBar コントロールにパネルを追加する
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip>と<xref:System.Windows.Forms.ToolStripStatusLabel>コントロールの置換し、する機能を追加、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>コントロールですただし、、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>場合、旧バージョンとの互換性と将来の使用の両方のコントロールが保持されますします。選択します。  
+>  <xref:System.Windows.Forms.StatusStrip>と<xref:System.Windows.Forms.ToolStripStatusLabel>コントロールの置換し、する機能を追加、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>を制御しますただし、、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>場合、下位互換性と将来の使用の両方のコントロールが保持されますします。選択します。  
   
- 内のプログラミング可能な領域、 [StatusBar コントロール](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)コントロールのインスタンスから成る、<xref:System.Windows.Forms.StatusBarPanel>クラスです。 追加を追加するには、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>クラスです。  
+ 内のプログラミング可能な領域を[StatusBar コントロール](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)コントロールのインスタンスから成る、<xref:System.Windows.Forms.StatusBarPanel>クラス。 追加機能を追加するには、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>クラス。  
   
-### <a name="to-add-panels-to-a-status-bar"></a>ステータス バーにパネルを追加するには  
+### <a name="to-add-panels-to-a-status-bar"></a>ステータス バー パネルを追加するには  
   
-1.  プロシージャでは、ステータス バー パネルの作成に追加することによって、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>です。 を通じて渡されたインデックスを使用して個々 のパネルのプロパティの設定を指定、<xref:System.Windows.Forms.StatusBar.Panels%2A>プロパティです。  
+1.  プロシージャでは、ステータス バー パネルを追加することによって作成、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>します。 を介して渡されたインデックスを使用して個別のパネルにプロパティの設定を指定、<xref:System.Windows.Forms.StatusBar.Panels%2A>プロパティ。  
   
-     アイコンの場所は次のコード例では、パスが設定、**マイ ドキュメント**フォルダーです。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターがこのフォルダーを含めることを想定するために使用されます。 この場所を選択すると、最小限のシステム アクセスのレベルを持つユーザーは、アプリケーションを安全に実行もできます。 次の例には、フォームが必要です、<xref:System.Windows.Forms.StatusBar>コントロールが既に追加されています。  
+     アイコンの場所は次のコード例で、パスが設定、 **My Documents**フォルダー。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。 この場所を選択すると、ユーザーは最小限のシステム アクセスのレベルでアプリケーションを安全に実行もできます。 次の例では、使用して、フォームが必要です、<xref:System.Windows.Forms.StatusBar>コントロールが既に追加されています。  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>は、0 から始まるコレクションので、コードが続行する必要があります。  
+    >  <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>は、0 から始まるコレクションので、コードがそれに応じて続行する必要があります。  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -123,7 +123,7 @@ ms.locfileid: "33527626"
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Forms.StatusBar>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [コレクション エディター ダイアログ ボックス](http://msdn.microsoft.com/library/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
+ [コレクション エディター ダイアログ ボックス](https://msdn.microsoft.com/library/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
  [方法: ステータス バー パネルのサイズを設定する](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
  [チュートリアル: ステータス バー情報の実行時更新](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
  [方法: Windows フォームの StatusBar コントロールでクリックされたパネルを確認する](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
