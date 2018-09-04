@@ -3,51 +3,51 @@ title: Hello World カスタム アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 72b1dd0a-9aad-47d5-95a9-a1024ee1d0a1
 ms.openlocfilehash: fde745fae7470ec763b6b5030a60436a6525e3c0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470776"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533497"
 ---
-# <a name="hello-world-custom-activity"></a><span data-ttu-id="743c6-102">Hello World カスタム アクティビティ</span><span class="sxs-lookup"><span data-stu-id="743c6-102">Hello World Custom Activity</span></span>
-<span data-ttu-id="743c6-103">このサンプルでは、いくつかの主要機能の Windows Workflow Foundation (WF)、単純なカスタム アクティビティを作成する方法などを示します。</span><span class="sxs-lookup"><span data-stu-id="743c6-103">This sample demonstrates several key features of Windows Workflow Foundation (WF), including how to create a simple custom activity.</span></span> <span data-ttu-id="743c6-104">このサンプルで示す機能では、C# でカスタム アクティビティを作成し、`in` 引数と `out` 引数 (<xref:System.Activities.InArgument> と <xref:System.Activities.OutArgument>) を使用します。</span><span class="sxs-lookup"><span data-stu-id="743c6-104">Some of the features demonstrated in this sample are creating a custom activity in C# and using `in` and `out` arguments (<xref:System.Activities.InArgument> and <xref:System.Activities.OutArgument>).</span></span>  
+# <a name="hello-world-custom-activity"></a><span data-ttu-id="169b3-102">Hello World カスタム アクティビティ</span><span class="sxs-lookup"><span data-stu-id="169b3-102">Hello World Custom Activity</span></span>
+<span data-ttu-id="169b3-103">このサンプルでは、いくつかの主要機能の Windows Workflow Foundation (WF)、単純なカスタム アクティビティを作成する方法などを示します。</span><span class="sxs-lookup"><span data-stu-id="169b3-103">This sample demonstrates several key features of Windows Workflow Foundation (WF), including how to create a simple custom activity.</span></span> <span data-ttu-id="169b3-104">このサンプルで示す機能では、C# でカスタム アクティビティを作成し、`in` 引数と `out` 引数 (<xref:System.Activities.InArgument> と <xref:System.Activities.OutArgument>) を使用します。</span><span class="sxs-lookup"><span data-stu-id="169b3-104">Some of the features demonstrated in this sample are creating a custom activity in C# and using `in` and `out` arguments (<xref:System.Activities.InArgument> and <xref:System.Activities.OutArgument>).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="743c6-105">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="743c6-105">The samples may already be installed on your computer.</span></span> <span data-ttu-id="743c6-106">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="743c6-106">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="169b3-105">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="169b3-105">The samples may already be installed on your computer.</span></span> <span data-ttu-id="169b3-106">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="169b3-106">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="743c6-107">このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。</span><span class="sxs-lookup"><span data-stu-id="743c6-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="743c6-108">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="743c6-108">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="169b3-107">このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。</span><span class="sxs-lookup"><span data-stu-id="169b3-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="169b3-108">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="169b3-108">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\HelloWorld`  
   
-## <a name="creating-a-workflow-in-code"></a><span data-ttu-id="743c6-109">コードでのワークフローの作成</span><span class="sxs-lookup"><span data-stu-id="743c6-109">Creating a Workflow in Code</span></span>  
- <span data-ttu-id="743c6-110">このサンプルでは、C# コードを使用して、2 つのカスタム アクティビティを作成します。</span><span class="sxs-lookup"><span data-stu-id="743c6-110">In this sample, two custom activities are created using C# code.</span></span> <span data-ttu-id="743c6-111">どちらのカスタム アクティビティも、<xref:System.Activities.Activity%601> から直接または間接に継承して、1 つの値を返します。</span><span class="sxs-lookup"><span data-stu-id="743c6-111">Both custom activities inherit directly or indirectly from <xref:System.Activities.Activity%601> to return a single value.</span></span> <span data-ttu-id="743c6-112">非ジェネリック クラス <xref:System.Activities.Activity> から継承する代わりにジェネリックな戻り値を使用する利点は、特定のアクティビティ (<xref:System.Activities.Statements.Assign> など) が、作成されるアクティビティの一部として使用する場合に戻り値にアクセスできることです。</span><span class="sxs-lookup"><span data-stu-id="743c6-112">The advantage of using the generic return value, instead of inheriting from the non-generic <xref:System.Activities.Activity> class, is that some activities (such as <xref:System.Activities.Statements.Assign>) are able to access the return value when used as part of a composed activity.</span></span>  
+## <a name="creating-a-workflow-in-code"></a><span data-ttu-id="169b3-109">コードでのワークフローの作成</span><span class="sxs-lookup"><span data-stu-id="169b3-109">Creating a Workflow in Code</span></span>  
+ <span data-ttu-id="169b3-110">このサンプルでは、C# コードを使用して、2 つのカスタム アクティビティを作成します。</span><span class="sxs-lookup"><span data-stu-id="169b3-110">In this sample, two custom activities are created using C# code.</span></span> <span data-ttu-id="169b3-111">どちらのカスタム アクティビティも、<xref:System.Activities.Activity%601> から直接または間接に継承して、1 つの値を返します。</span><span class="sxs-lookup"><span data-stu-id="169b3-111">Both custom activities inherit directly or indirectly from <xref:System.Activities.Activity%601> to return a single value.</span></span> <span data-ttu-id="169b3-112">非ジェネリック クラス <xref:System.Activities.Activity> から継承する代わりにジェネリックな戻り値を使用する利点は、特定のアクティビティ (<xref:System.Activities.Statements.Assign> など) が、作成されるアクティビティの一部として使用する場合に戻り値にアクセスできることです。</span><span class="sxs-lookup"><span data-stu-id="169b3-112">The advantage of using the generic return value, instead of inheriting from the non-generic <xref:System.Activities.Activity> class, is that some activities (such as <xref:System.Activities.Statements.Assign>) are able to access the return value when used as part of a composed activity.</span></span>  
   
- <span data-ttu-id="743c6-113">AppendString</span><span class="sxs-lookup"><span data-stu-id="743c6-113">AppendString</span></span>  
- <span data-ttu-id="743c6-114">このアクティビティは、<xref:System.Activities.Activity%601> から継承し、2 つの文字列を 1 つに連結する <xref:System.Activities.Statements.Assign> アクティビティを使用します。</span><span class="sxs-lookup"><span data-stu-id="743c6-114">This activity inherits from <xref:System.Activities.Activity%601>, and uses an <xref:System.Activities.Statements.Assign> activity that concatenates two strings together.</span></span>  
+ <span data-ttu-id="169b3-113">AppendString</span><span class="sxs-lookup"><span data-stu-id="169b3-113">AppendString</span></span>  
+ <span data-ttu-id="169b3-114">このアクティビティは、<xref:System.Activities.Activity%601> から継承し、2 つの文字列を 1 つに連結する <xref:System.Activities.Statements.Assign> アクティビティを使用します。</span><span class="sxs-lookup"><span data-stu-id="169b3-114">This activity inherits from <xref:System.Activities.Activity%601>, and uses an <xref:System.Activities.Statements.Assign> activity that concatenates two strings together.</span></span>  
   
- <span data-ttu-id="743c6-115">Prepend String</span><span class="sxs-lookup"><span data-stu-id="743c6-115">Prepend String</span></span>  
- <span data-ttu-id="743c6-116">このアクティビティは、<xref:System.Activities.CodeActivity%601> から直接継承し、`AppendString` アクティビティと同様の機能を作成します。この機能は、既存のアクティビティから構成されるのではなく、コードに実装されているロジックを使用します。</span><span class="sxs-lookup"><span data-stu-id="743c6-116">This activity inherits directly from <xref:System.Activities.CodeActivity%601>, and creates similar functionality to the `AppendString` activity, which uses logic implemented in code rather than being composed of a pre-existing activity.</span></span>  
+ <span data-ttu-id="169b3-115">Prepend String</span><span class="sxs-lookup"><span data-stu-id="169b3-115">Prepend String</span></span>  
+ <span data-ttu-id="169b3-116">このアクティビティは、<xref:System.Activities.CodeActivity%601> から直接継承し、`AppendString` アクティビティと同様の機能を作成します。この機能は、既存のアクティビティから構成されるのではなく、コードに実装されているロジックを使用します。</span><span class="sxs-lookup"><span data-stu-id="169b3-116">This activity inherits directly from <xref:System.Activities.CodeActivity%601>, and creates similar functionality to the `AppendString` activity, which uses logic implemented in code rather than being composed of a pre-existing activity.</span></span>  
   
- <span data-ttu-id="743c6-117">このプロジェクトには、次のファイルがあります。</span><span class="sxs-lookup"><span data-stu-id="743c6-117">The following files are included in this project.</span></span>  
+ <span data-ttu-id="169b3-117">このプロジェクトには、次のファイルがあります。</span><span class="sxs-lookup"><span data-stu-id="169b3-117">The following files are included in this project.</span></span>  
   
- <span data-ttu-id="743c6-118">AppendString.cs</span><span class="sxs-lookup"><span data-stu-id="743c6-118">AppendString.cs</span></span>  
- <span data-ttu-id="743c6-119">複数の文字列を 1 つにするカスタム アクティビティです。</span><span class="sxs-lookup"><span data-stu-id="743c6-119">The custom activity that appends strings together.</span></span> <span data-ttu-id="743c6-120">文字列を受け取りし、出力として完全なメッセージを"says hello world"のリテラル テキスト文字列と結合します。</span><span class="sxs-lookup"><span data-stu-id="743c6-120">It takes in a string and combines it with a literal text string " says hello world" to form a complete message as output.</span></span>  
+ <span data-ttu-id="169b3-118">AppendString.cs</span><span class="sxs-lookup"><span data-stu-id="169b3-118">AppendString.cs</span></span>  
+ <span data-ttu-id="169b3-119">複数の文字列を 1 つにするカスタム アクティビティです。</span><span class="sxs-lookup"><span data-stu-id="169b3-119">The custom activity that appends strings together.</span></span> <span data-ttu-id="169b3-120">文字列を受け取りし、出力として完全なメッセージを"says hello world"のリテラル テキスト文字列と結合します。</span><span class="sxs-lookup"><span data-stu-id="169b3-120">It takes in a string and combines it with a literal text string " says hello world" to form a complete message as output.</span></span>  
   
- <span data-ttu-id="743c6-121">PrependString.cs</span><span class="sxs-lookup"><span data-stu-id="743c6-121">PrependString.cs</span></span>  
- <span data-ttu-id="743c6-122">このアクティビティは、定義済みの文字列を入力文字列の先頭に付けます。</span><span class="sxs-lookup"><span data-stu-id="743c6-122">This activity prefixes a predefined string to an input string.</span></span>  
+ <span data-ttu-id="169b3-121">PrependString.cs</span><span class="sxs-lookup"><span data-stu-id="169b3-121">PrependString.cs</span></span>  
+ <span data-ttu-id="169b3-122">このアクティビティは、定義済みの文字列を入力文字列の先頭に付けます。</span><span class="sxs-lookup"><span data-stu-id="169b3-122">This activity prefixes a predefined string to an input string.</span></span>  
   
- <span data-ttu-id="743c6-123">Sequence1.xaml</span><span class="sxs-lookup"><span data-stu-id="743c6-123">Sequence1.xaml</span></span>  
- <span data-ttu-id="743c6-124">`AppendString` カスタム アクティビティと `PrependString` カスタム アクティビティを使用するワークフローです。</span><span class="sxs-lookup"><span data-stu-id="743c6-124">A workflow that uses the `AppendString` and `PrependString` custom activities.</span></span>  
+ <span data-ttu-id="169b3-123">Sequence1.xaml</span><span class="sxs-lookup"><span data-stu-id="169b3-123">Sequence1.xaml</span></span>  
+ <span data-ttu-id="169b3-124">`AppendString` カスタム アクティビティと `PrependString` カスタム アクティビティを使用するワークフローです。</span><span class="sxs-lookup"><span data-stu-id="169b3-124">A workflow that uses the `AppendString` and `PrependString` custom activities.</span></span>  
   
- <span data-ttu-id="743c6-125">Program.cs</span><span class="sxs-lookup"><span data-stu-id="743c6-125">Program.cs</span></span>  
- <span data-ttu-id="743c6-126">ワークフローを実行するプログラムです。</span><span class="sxs-lookup"><span data-stu-id="743c6-126">A program that runs the workflow.</span></span>  
+ <span data-ttu-id="169b3-125">Program.cs</span><span class="sxs-lookup"><span data-stu-id="169b3-125">Program.cs</span></span>  
+ <span data-ttu-id="169b3-126">ワークフローを実行するプログラムです。</span><span class="sxs-lookup"><span data-stu-id="169b3-126">A program that runs the workflow.</span></span>  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="743c6-127">このサンプルを使用するには</span><span class="sxs-lookup"><span data-stu-id="743c6-127">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="169b3-127">このサンプルを使用するには</span><span class="sxs-lookup"><span data-stu-id="169b3-127">To use this sample</span></span>  
   
-1.  <span data-ttu-id="743c6-128">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] を使用して、HelloWorld.sln ソリューション ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="743c6-128">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the HelloWorld.sln solution file.</span></span>  
+1.  <span data-ttu-id="169b3-128">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] を使用して、HelloWorld.sln ソリューション ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="169b3-128">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the HelloWorld.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="743c6-129">ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。</span><span class="sxs-lookup"><span data-stu-id="743c6-129">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="169b3-129">ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。</span><span class="sxs-lookup"><span data-stu-id="169b3-129">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="743c6-130">ソリューションを実行するには、F5 キーを押します。</span><span class="sxs-lookup"><span data-stu-id="743c6-130">To run the solution, press F5.</span></span>
+3.  <span data-ttu-id="169b3-130">ソリューションを実行するには、F5 キーを押します。</span><span class="sxs-lookup"><span data-stu-id="169b3-130">To run the solution, press F5.</span></span>
