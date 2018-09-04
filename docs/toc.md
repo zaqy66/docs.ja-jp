@@ -63,6 +63,7 @@
 
 <!-- .NET Core Content -->
 # [.NET Core のガイド](core/index.md)
+## [.NET Core の詳細情報](core/about.md)
 ## [開始するには](core/get-started.md)
 ### [C# および Visual Studio Code の使用を開始する](core/tutorials/with-visual-studio-code.md)
 ### [Visual Studio 2017 での .NET Core を使用した C# Hello World アプリの構築](core/tutorials/with-visual-studio.md)
@@ -108,6 +109,7 @@
 ### [.NET Core アプリケーションの Docker イメージのビルド](core/docker/building-net-docker-images.md)
 ### [Visual Studio Tools for Docker](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [単体テスト](core/testing/index.md)
+### [ベスト プラクティスの単体テスト](core/testing/unit-testing-best-practices.md)
 ### [xUnit を使用した C# の単体テスト](core/testing/unit-testing-with-dotnet-test.md)
 ### [NUnit を使用した C# の単体テスト](core/testing/unit-testing-with-nunit.md)
 ### [MSTest を使用した C# の単体テスト](core/testing/unit-testing-with-mstest.md)
@@ -118,10 +120,13 @@
 ### [NUnit を使用した VB の単体テスト](core/testing/unit-testing-visual-basic-with-nunit.md)
 ### [MSTest を使用した VB の単体テスト](core/testing/unit-testing-visual-basic-with-mstest.md)
 ### [選択的単体テストの実行](core/testing/selective-unit-tests.md)
-### [単体テストで発行された出力](core/testing/unit-testing-published-output.md)
+### [発行された出力の単体テスト](core/testing/unit-testing-published-output.md)
 ### [Visual Studio を使用した .NET Core プロジェクトの Live Unit Testing](/visualstudio/test/live-unit-testing-start)
 ## [バージョン管理](core/versions/index.md)
+### [.NET Core のバージョン履歴](core/versions/version-history.md)
 ### [.NET Core のバージョンの選択](core/versions/selection.md)
+### [.NET Core のインストール管理](core/versions/install-management.md)
+### [期限切れのランタイムと SDK の削除](core/versions/remove-runtime-sdk-versions.md)
 ## [ランタイム識別子のカタログ](core/rid-catalog.md)
 ## [.NET Core SDK の概要](core/sdk.md)
 ## [.NET Core CLI ツール](core/tools/index.md)
@@ -293,7 +298,6 @@
 <!-- F# Content -->
 # [F# のガイド](fsharp/index.md)
 
-## [F# のツアー](fsharp/tour.md)
 ## [開始するには](fsharp/get-started/index.md)
 ### [F# のインストール](fsharp/get-started/install-fsharp.md)
 ### [Visual Studio 入門](fsharp/get-started/get-started-visual-studio.md)
@@ -301,38 +305,19 @@
 ### [Visual Studio Code および Ionide の概要](fsharp/get-started/get-started-vscode.md)
 ### [.NET Core CLI の概要](fsharp/get-started/get-started-command-line.md)
 
-## [F# スタイル ガイド](fsharp/style-guide/index.md)
-### [F# コードのフォーマットに関するガイドライン](fsharp/style-guide/formatting.md)
-### [F# のコーディング規則](fsharp/style-guide/conventions.md)
-### [F# コンポーネント デザインのガイドライン](fsharp/style-guide/component-design-guidelines.md)
+## [F# とは](fsharp/what-is-fsharp.md)
+## [F# のツアー](fsharp/tour.md)
 
 ## チュートリアル
-### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
+### 関数型プログラミングの概要
+#### [ファーストクラスの値としての関数](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
+### 非同期と同時実行プログラミング
+#### [非同期プログラミング](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 ### [型プロバイダー](fsharp/tutorials/type-providers/index.md)
 #### [型プロバイダーの作成](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [型プロバイダーのセキュリティ](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [型プロバイダーのトラブルシューティング](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
-
-<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
-## 関数型プログラミングの概要
-### [ファーストクラスの値としての関数](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
-
-<!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
-### 非同期と同時実行プログラミング
-#### [非同期プログラミング](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-
-<!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
-### [Visual F# の開発環境の機能](fsharp/using-fsharp-in-visual-studio/visual-fsharp-development-environment-features.md)
-### [プロジェクトの構成](fsharp/using-fsharp-in-visual-studio/configuring-projects.md)
-### [以前のバージョンの .NET の対象化](fsharp/using-fsharp-in-visual-studio/targeting-older-versions-of-net.md)
-
-## [Azure での F# の使用](fsharp/using-fsharp-on-azure/index.md)
-### [F# を使用した Azure Blob Storage の概要](fsharp/using-fsharp-on-azure/blob-storage.md)
-### [F# を使用した Azure File Storage の概要](fsharp/using-fsharp-on-azure/file-storage.md)
-### [F# を使用した Azure Queue Storage の概要](fsharp/using-fsharp-on-azure/queue-storage.md)
-### [F# を使用した Azure Table Storage の概要](fsharp/using-fsharp-on-azure/table-storage.md)
-<!--### [Using F# on Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)-->
-### [F# の Azure の依存関係のためのパッケージ管理](fsharp/using-fsharp-on-azure/package-management.md)
+### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 
 ## [F# 言語リファレンス](fsharp/language-reference/index.md)
 ### [キーワード リファレンス](fsharp/language-reference/keyword-reference.md)
@@ -361,6 +346,7 @@
 ### [F# コレクション型](fsharp/language-reference/fsharp-collection-types.md)
 ### [リスト](fsharp/language-reference/lists.md)
 ### [オプション](fsharp/language-reference/options.md)
+### [値のオプション](fsharp/language-reference/value-options.md)
 ### [結果](fsharp/language-reference/results.md)
 ### [シーケンス](fsharp/language-reference/sequences.md)
 ### [配列](fsharp/language-reference/arrays.md)
@@ -431,26 +417,37 @@
 ### [ソース行、ファイル、およびパスの識別子](fsharp/language-reference/source-line-file-path-identifiers.md)
 ### [呼び出し元情報](fsharp/language-reference/caller-information.md)
 ### [冗語構文](fsharp/language-reference/verbose-syntax.md)
-### [コードのフォーマットに関するガイドライン](fsharp/language-reference/code-formatting-guidelines.md)
+
+## [F# スタイル ガイド](fsharp/style-guide/index.md)
+### [F# コードのフォーマットに関するガイドライン](fsharp/style-guide/formatting.md)
+### [F# のコーディング規則](fsharp/style-guide/conventions.md)
+### [F# コンポーネント デザインのガイドライン](fsharp/style-guide/component-design-guidelines.md)
+
+## [Azure での F# の使用](fsharp/using-fsharp-on-azure/index.md)
+### [F# を使用した Azure Blob Storage の概要](fsharp/using-fsharp-on-azure/blob-storage.md)
+### [F# を使用した Azure File Storage の概要](fsharp/using-fsharp-on-azure/file-storage.md)
+### [F# を使用した Azure Queue Storage の概要](fsharp/using-fsharp-on-azure/queue-storage.md)
+### [F# を使用した Azure Table Storage の概要](fsharp/using-fsharp-on-azure/table-storage.md)
+### [F# の Azure の依存関係のためのパッケージ管理](fsharp/using-fsharp-on-azure/package-management.md)
 <!-- End F# Content -->
 
 <!-- VB Content -->
 # [Visual Basic のガイド](visual-basic/index.md)
+## [Visual Basic の新機能](visual-basic/getting-started/whats-new.md)
 ## [開始するには](visual-basic/getting-started/index.md)
-### [Visual Basic の新機能](visual-basic/getting-started/whats-new.md)
 ### [Visual Studio における Visual Basic の互換性に影響する変更点](visual-basic/getting-started/breaking-changes-in-visual-studio.md)
 ### [Visual Basic プログラマのための追加リソース](visual-basic/getting-started/additional-resources.md)
 
 ## [開発 (アプリケーションを)](visual-basic/developing-apps/index.md)
 
 ### [Visual Basic でのプログラミング](visual-basic/developing-apps/programming/index.md)
-#### [コンピューター リソースへのアクセス](visual-basic/developing-apps/programming/computer-resources/computer-resources.md)
-#### [アプリケーションからの情報のログ記録](visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+#### [コンピューター リソースへのアクセス](visual-basic/developing-apps/programming/computer-resources/index.md)
+#### [アプリケーションからの情報のログ記録](visual-basic/developing-apps/programming/log-info/index.md)
 #### [アクセス (ユーザー データに)](visual-basic/developing-apps/programming/accessing-user-data.md)
 #### [アプリケーション フォームへのアクセス](visual-basic/developing-apps/programming/accessing-application-forms.md)
 #### [アプリケーションの Web サービスへのアクセス](visual-basic/developing-apps/programming/accessing-application-web-services.md)
 ##### [方法 : Web サービスを非同期で呼び出す](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
-#### [アプリケーション設定へのアクセス](visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)
+#### [アプリケーション設定へのアクセス](visual-basic/developing-apps/programming/app-settings/index.md)
 #### [ドライブ、ディレクトリ、およびファイルの処理](visual-basic/developing-apps/programming/drives-directories-files/processing.md)
 
 ### [My による開発](visual-basic/developing-apps/development-with-my/index.md)
@@ -463,7 +460,7 @@
 ### [データへのアクセス](visual-basic/developing-apps/accessing-data.md)
 ### [コンポーネントの作成および使用](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [印刷とレポート](visual-basic/developing-apps/printing/printing-and-reporting.md)
+### [印刷とレポート](visual-basic/developing-apps/printing/index.md)
 #### [PrintForm コンポーネント](visual-basic/developing-apps/printing/printform-component.md)
 #### [方法: スクロール可能フォームを印刷する](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
 #### [方法: フォームのクライアント領域と非クライアント領域を印刷する](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
@@ -472,29 +469,9 @@
 #### [PrintForm コンポーネントを参照するアプリケーションの配置](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
 #### [Visual Studio アプリケーションへの印刷可能なレポートの追加](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
 
-### [Windows フォーム アプリケーションの基礎](visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)
-### [Power Packs コントロール](visual-basic/developing-apps/windows-forms/power-packs-controls.md)
-### [DataRepeater コントロール](visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)
-#### [DataRepeater コントロールの概要](visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
-#### [DataRepeater コントロールの仮想モード](visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md)
-#### [方法: DataRepeater コントロールに、バインドされたデータを表示する](visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)
-#### [方法: DataRepeater コントロールに非バインド コントロールを表示する](visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)
-#### [方法: DataRepeater コントロールのレイアウトを変更する](visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)
-#### [方法: DataRepeater コントロールの外観を変更する](visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
-#### [方法: DataRepeater コントロールに項目ヘッダーを表示する](visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)
-#### [方法: DataRepeater の項目の追加と削除を無効にする](visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)
-#### [方法: DataRepeater コントロールでデータを検索する](visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)
-#### [方法: 2 つの DataRepeater コントロールを使用してマスター/詳細形式のフォームを作成する](visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
-#### [チュートリアル: DataRepeater コントロールでのデータの表示](visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)
-#### [DataRepeater コントロールのトラブルシューティング](visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
-### [ライン コントロールとシェイプ コントロール](visual-basic/developing-apps/windows-forms/line-and-shape-controls-visual-studio.md)
-#### [ライン コントロールとシェイプ コントロールの概要](visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
-#### [方法: LineShape コントロールを使用して線を描画する](visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
-#### [方法: OvalShape コントロールおよび RectangleShape コントロールを使用して図形を描画する](visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)
-#### [方法: 図形間のタブ移動を有効にする](visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
-#### [Power Packs コントロールを参照するアプリケーションの配置](visual-basic/developing-apps/windows-forms/deploying-applications-that-reference-power-packs-controls-visual-studio.md)
+### [Windows フォーム アプリケーションの基礎](visual-basic/developing-apps/windows-forms/index.md)
 
-### [Visual Basic でのプロジェクトのカスタマイズと My の拡張](visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)
+### [Visual Basic でのプロジェクトのカスタマイズと My の拡張](visual-basic/developing-apps/customizing-extending-my/index.md)
 #### [My 名前空間の拡張](visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
 #### [カスタム My 拡張のパッケージ化と配置](visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
 #### [Visual Basic アプリケーション モデルの拡張](visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
@@ -588,7 +565,7 @@
 #### [文字列操作の概要](visual-basic/language-reference/keywords/string-manipulation-summary.md)
 ### [属性](visual-basic/language-reference/attributes.md)
 ### [定数と列挙体](visual-basic/language-reference/constants-and-enumerations.md)
-### [トレースの種類の概要](visual-basic/language-reference/data-types/data-type-summary.md)
+### [トレースの種類の概要](visual-basic/language-reference/data-types/index.md)
 #### [Boolean データ型](visual-basic/language-reference/data-types/boolean-data-type.md)
 #### [Byte データ型](visual-basic/language-reference/data-types/byte-data-type.md)
 #### [Char データ型](visual-basic/language-reference/data-types/char-data-type.md)
@@ -606,7 +583,7 @@
 #### [ULong データ型](visual-basic/language-reference/data-types/ulong-data-type.md)
 #### [ユーザー定義型](visual-basic/language-reference/data-types/user-defined-data-type.md)
 #### [UShort データ型](visual-basic/language-reference/data-types/ushort-data-type.md)
-### [ディレクティブ](visual-basic/language-reference/directives/directives.md)
+### [ディレクティブ](visual-basic/language-reference/directives/index.md)
 #### [#Const ディレクティブ](visual-basic/language-reference/directives/const-directive.md)
 #### [#ExternalSource ディレクティブ](visual-basic/language-reference/directives/externalsource-directive.md)
 #### [#If...Then...#Else ディレクティブ](visual-basic/language-reference/directives/if-then-else-directives.md)
@@ -737,7 +714,7 @@
 #### [論理ビット処理演算子](visual-basic/language-reference/operators/logical-bitwise-operators.md)
 #### [その他の演算子](visual-basic/language-reference/operators/miscellaneous-operators.md)
 ### [プロパティ](visual-basic/language-reference/properties.md)
-### [クエリ](visual-basic/language-reference/queries/queries.md)
+### [クエリ](visual-basic/language-reference/queries/index.md)
 #### [Aggregate 句](visual-basic/language-reference/queries/aggregate-clause.md)
 #### [Distinct 句](visual-basic/language-reference/queries/distinct-clause.md)
 #### [Equals 句](visual-basic/language-reference/queries/equals-clause.md)
@@ -827,7 +804,7 @@
 #### [属性リスト](visual-basic/language-reference/statements/attribute-list.md)
 #### [パラメーター リスト](visual-basic/language-reference/statements/parameter-list.md)
 #### [型リスト](visual-basic/language-reference/statements/type-list.md)
-### [XML のコメント用タグ](visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+### [XML のコメント用タグ](visual-basic/language-reference/xmldoc/index.md)
 #### [<c>](visual-basic/language-reference/xmldoc/c.md)
 #### [<code>](visual-basic/language-reference/xmldoc/code.md)
 #### [<example>](visual-basic/language-reference/xmldoc/example.md)
@@ -845,7 +822,7 @@
 #### [<summary>](visual-basic/language-reference/xmldoc/summary.md)
 #### [<typeparam>](visual-basic/language-reference/xmldoc/typeparam.md)
 #### [<value>](visual-basic/language-reference/xmldoc/value.md)
-### [XML 軸プロパティ](visual-basic/language-reference/xml-axis/xml-axis-properties.md)
+### [XML 軸プロパティ](visual-basic/language-reference/xml-axis/index.md)
 #### [XML 属性軸プロパティ](visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 #### [XML 子軸プロパティ](visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
 #### [XML 子孫軸プロパティ](visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
@@ -1140,6 +1117,7 @@
 ### [Machine Learning 用語集](machine-learning/resources/glossary.md)
 ### [Machine Learning の基本](machine-learning/resources/basics.md)
 ### [Machine Learning のタスク](machine-learning/resources/tasks.md)
+### [データ変換](machine-learning/resources/transforms.md)
 
 <!-- End ML.NET Content -->
 
