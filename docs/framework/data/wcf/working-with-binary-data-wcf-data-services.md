@@ -8,37 +8,37 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9df9dadc3d4e4e62b216134bbc2fd69c4e1122e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f7ee114a5a480d470c2c32b5b83e287b07e9537
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365372"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515556"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>バイナリ データの操作 (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリを使用すると、取得し、更新からバイナリ データ、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードを次の方法のいずれか。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリを使用すると、取得し、更新からのバイナリ データ、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]次の方法のいずれかでフィードします。  
   
 -   エンティティのプリミティブ型のプロパティとして。 メモリに容易に読み込むことができる小さいバイナリ データ オブジェクトを操作する場合は、この方法が適しています。 この場合、バイナリ プロパティは、データ モデルによって公開されるエンティティ プロパティです。データ サービスは、応答メッセージの Base-64 バイナリ エンコード XML としてバイナリ データをシリアル化します。  
   
 -   個別のバイナリ リソース ストリームとして。 写真、ビデオ、またはその他の種類のバイナリ エンコード データを表すバイナリ ラージ オブジェクト (BLOB) データにアクセスしたり、変更したりする場合は、この方法が適しています。  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 定義されている HTTP を使用してバイナリ データのストリーミングを実装する、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]です。 このメカニズムでは、バイナリ データは切り離されたメディア リソースとして扱われますが、メディア リンク エントリと呼ばれるエンティティに関連します。 詳細については、次を参照してください。[ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)です。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 定義されている HTTP を使用してバイナリ データのストリーミングを実装、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]します。 バイナリ データはこのメカニズムでは別のメディア リソースとして扱われますが、メディア リンク エントリと呼ばれるエンティティに関連します。 詳細については、次を参照してください。[ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)します。  
   
 > [!TIP]
->  バイナリ画像ファイルをダウンロードする Windows Presentation Foundation (WPF) クライアント アプリケーションを作成する方法の詳細な手順の例については、 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 、写真を格納するサービスの投稿をご覧ください[データ Services ストリーミング プロバイダー シリーズ-パート2: クライアントからメディア リソース ストリームへのアクセス](http://go.microsoft.com/fwlink/?LinkId=201637)です。 ブログの記事で取り上げるストリーミング フォト データ サービスのサンプル コードをダウンロードするを参照してください。、[ストリーミング フォト データ サービスのサンプル](http://go.microsoft.com/fwlink/?LinkId=198988)MSDN コード ギャラリーでします。  
+>  バイナリ画像ファイルをダウンロードする Windows Presentation Foundation (WPF) クライアント アプリケーションを作成する方法の手順例については、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]写真を格納しているサービスの投稿をご覧ください[Data Services ストリーミング プロバイダー シリーズ-パート2: クライアントからメディア リソースの Stream へのアクセス](https://go.microsoft.com/fwlink/?LinkId=201637)します。 ブログの投稿で取り上げられているストリーミング フォト データ サービスのサンプル コードをダウンロードするには、次を参照してください。、[ストリーミング フォト データ サービスのサンプル](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN コード ギャラリーでします。  
   
 ## <a name="entity-metadata"></a>エンティティ メタデータ  
- メディア リソース ストリームが関連付けられているエンティティは、データ サービス メタデータで `HasStream` 属性によって示されます。この属性は、メディア リンク エントリであるエンティティ型に適用されます。 次の例で、`PhotoInfo`エンティティがメディア リンク エントリで示される、関連するメディア リソースを持つ、`HasStream`属性。  
+ メディア リソース ストリームが関連付けられているエンティティは、データ サービス メタデータで `HasStream` 属性によって示されます。この属性は、メディア リンク エントリであるエンティティ型に適用されます。 次の例では、`PhotoInfo`エンティティがメディア リンク エントリで示される、関連するメディア リソースがある、`HasStream`属性。  
   
  [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
   
- このトピックのその他の例では、メディア リソース ストリームにアクセスし変更する方法を紹介します。 使用して、.NET Framework クライアント アプリケーションでメディア リソース ストリームを使用する方法の完全な例については、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリは、投稿を参照してください[クライアントからメディア リソース ストリームへのアクセス](http://go.microsoft.com/fwlink/?LinkID=201637)です。  
+ このトピックのその他の例では、メディア リソース ストリームにアクセスし変更する方法を紹介します。 使用して、.NET Framework クライアント アプリケーションでメディア リソース ストリームを使用する方法の完全な例については、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリは、記事をご覧ください[クライアントからメディア リソースの Stream へのアクセス](https://go.microsoft.com/fwlink/?LinkID=201637)します。  
   
 ## <a name="accessing-the-binary-resource-stream"></a>バイナリ リソース ストリームへのアクセス  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリには、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ベースのデータ サービスからのバイナリ リソース ストリームにアクセスするためのメソッドが用意されています。 メディア リソースをダウンロードするときには、メディア リソースの URI を使用することも、メディア リソース データ自体を含むバイナリ ストリームを取得することもできます。 メディア リソース データをバイナリ ストリームとしてアップロードすることもできます。  
   
 > [!TIP]
->  バイナリ画像ファイルをダウンロードする Windows Presentation Foundation (WPF) クライアント アプリケーションを作成する方法の詳細な手順の例については、 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 、写真を格納するサービスの投稿をご覧ください[データ Services ストリーミング プロバイダー シリーズ-パート2: クライアントからメディア リソース ストリームへのアクセス](http://go.microsoft.com/fwlink/?LinkId=201637)です。 ブログの記事で取り上げるストリーミング フォト データ サービスのサンプル コードをダウンロードするを参照してください。、[ストリーミング フォト データ サービスのサンプル](http://go.microsoft.com/fwlink/?LinkId=198988)MSDN コード ギャラリーでします。  
+>  バイナリ画像ファイルをダウンロードする Windows Presentation Foundation (WPF) クライアント アプリケーションを作成する方法の手順例については、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]写真を格納しているサービスの投稿をご覧ください[Data Services ストリーミング プロバイダー シリーズ-パート2: クライアントからメディア リソースの Stream へのアクセス](https://go.microsoft.com/fwlink/?LinkId=201637)します。 ブログの投稿で取り上げられているストリーミング フォト データ サービスのサンプル コードをダウンロードするには、次を参照してください。、[ストリーミング フォト データ サービスのサンプル](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN コード ギャラリーでします。  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>バイナリ ストリームの URI の取得  
  画像やその他のメディア ファイルなど、取得するメディア リソースの種類によっては、アプリケーションでメディア リソースの URI を使用する方がバイナリ データ ストリーム自体を処理するよりも簡単です。 特定のメディア リンク エントリに関連付けられているリソース ストリームの URI を取得するには、そのエンティティを追跡している <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> インスタンスの <xref:System.Data.Services.Client.DataServiceContext> メソッドを呼び出す必要があります。 次の例は、クライアントで新しい画像を作成するために使用するメディア リソース ストリームの URI を取得するために <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> メソッドを呼び出す方法を示しています。  

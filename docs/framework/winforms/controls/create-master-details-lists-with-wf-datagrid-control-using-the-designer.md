@@ -6,34 +6,34 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 20a6f059efab5469879d3c3a45f4005020414316
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44cb9cc77e109acd7dd4b2e02f4c93a4f9a35407
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529978"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501335"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>方法 : デザイナーで Windows フォーム DataGrid コントロールを使用してマスター/詳細リストを作成する
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
- 場合、<xref:System.Data.DataSet>は一連の関連テーブルの 2 つ使用できます<xref:System.Windows.Forms.DataGrid>マスター/詳細形式でデータを表示するコントロール。 1 つ<xref:System.Windows.Forms.DataGrid>マスター グリッドに指定し、詳細グリッドに、もう一方を指定します。 マスターの一覧にエントリを選択すると、詳細の一覧ですべての関連する子エントリのとおりです。 たとえば場合、 <xref:System.Data.DataSet> Customers テーブルと関連の Orders テーブルを含むマスター グリッドに Customers テーブルと Orders テーブルに、詳細グリッドを指定するとします。 マスター グリッドから、顧客がオンの場合、すべての注文を Orders テーブル内でその顧客に関連付けられているの詳細グリッドに表示されます。  
+ 場合、<xref:System.Data.DataSet>は一連の関連テーブルの 2 つ使用できます<xref:System.Windows.Forms.DataGrid>マスター/詳細形式でデータを表示するコントロール。 1 つ<xref:System.Windows.Forms.DataGrid>マスター グリッドに指定し、2 つ目は詳細グリッドに指定します。 マスター リストのエントリを選択すると、すべての関連する子エントリ、詳細の一覧に表示されます。 たとえば場合、 <xref:System.Data.DataSet> Customers テーブルと関連する Orders テーブルを含むマスター グリッドに Customers テーブルと Orders テーブル詳細グリッドに指定します。 マスター グリッドから顧客を選択すると、すべての Orders テーブルでは、その顧客に関連付けられている注文の詳細グリッドで表示されます。  
   
- 次の手順が必要です、 **Windows アプリケーション**プロジェクト。 このようなプロジェクトの設定の詳細については、次を参照してください。[する方法: Windows アプリケーション プロジェクトを作成](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)です。  
+ 次の手順が必要です、 **Windows アプリケーション**プロジェクト (**ファイル** > **新規** > **プロジェクト** >  **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォームアプリケーション**)。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>デザイナーでマスター/詳細リストを作成するには  
   
-1.  2 つ追加<xref:System.Windows.Forms.DataGrid>フォームのコントロールです。 詳細については、次を参照してください。[する方法: Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)です。 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、<xref:System.Windows.Forms.DataGrid>コントロールに含まれていない、**ツールボックス**既定です。 詳細については、次を参照してください。[する方法: ツールボックス アイテムの追加](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)です。  
+1.  2 つ追加<xref:System.Windows.Forms.DataGrid>フォームのコントロール。 詳細については、次を参照してください。[方法: Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、<xref:System.Windows.Forms.DataGrid>制御されていない、**ツールボックス**既定。 詳細については、次を参照してください。[方法: ツールボックス アイテムの追加](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)します。  
   
     > [!NOTE]
-    >  次の手順には適用されない[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]が使用される、**データ ソース**デザイン時のデータ バインディングのウィンドウ。 詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)と[する方法: Windows フォーム アプリケーションで関連するデータを表示](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)です。  
+    >  次の手順には適用されません[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、使用、**データ ソース**デザイン時のデータ バインディングのウィンドウ。 詳細については、次を参照してください。 [Visual Studio でのデータ コントロールをバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)と[方法: Windows フォーム アプリケーションで関連データを表示](https://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)します。  
   
-2.  次の 2 つ以上のテーブルをドラッグして**サーバー エクスプ ローラー**をフォームにします。  
+2.  2 つ以上のテーブルをドラッグして**サーバー エクスプ ローラー**をフォームにします。  
   
-3.  **データ**メニューの **データセットの生成**です。  
+3.  **データ**メニューの **データセットの生成**します。  
   
 4.  XML デザイナーを使用してテーブル間のリレーションシップを設定します。 詳細については、次を参照してください。"する方法: 一対多を作成する XML スキーマおよびデータセットでリレーションシップ"msdn です。  
   
@@ -41,15 +41,15 @@ ms.locfileid: "33529978"
   
 6.  構成、<xref:System.Windows.Forms.DataGrid>マスター グリッドを次のように指定するコントロール。  
   
-    1.  選択、<xref:System.Data.DataSet>のドロップ ダウン リストから、<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティです。  
+    1.  選択、<xref:System.Data.DataSet>でドロップダウン リストから、<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティ。  
   
-    2.  ドロップダウン リストからマスター テーブル (たとえば、"Customers") を選択、<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティです。  
+    2.  マスター テーブル (たとえば、"Customers") でドロップダウン リストから選択、<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティ。  
   
 7.  構成、<xref:System.Windows.Forms.DataGrid>詳細グリッドを次のように指定するコントロール。  
   
-    1.  選択、<xref:System.Data.DataSet>のドロップ ダウン リストから、<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティです。  
+    1.  選択、<xref:System.Data.DataSet>でドロップダウン リストから、<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティ。  
   
-    2.  ドロップダウン リストから、マスター/詳細テーブル間の関係 (たとえば、"Customers.CustOrd") を選択、<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティです。 リレーションシップを表示するために、プラス記号をクリックすると、ノードを展開します (**+**) ドロップダウン リストのマスター テーブルの横にある記号。  
+    2.  ドロップダウン リストからマスター/詳細テーブル間のリレーションシップ (たとえば、"Customers.CustOrd") を選択して、<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティ。 リレーションシップを表示するには、プラス記号をクリックして、ノードを展開します (**+**) ドロップダウン リストのマスター テーブルの横にサインオンします。  
   
 ## <a name="see-also"></a>関連項目  
  [DataGrid コントロール](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  

@@ -2,16 +2,16 @@
 title: .NET Framework 4.5 の外部化されたポリシー アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: a98dedace72ef9d43d9b65335b462f6ad4f649b0
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4d107188bbcb46006ba6a6eab491ccb97aa4a83d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254408"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503408"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 の外部化されたポリシー アクティビティ
 
-このサンプルでは、ExternalizedPolicy4 アクティビティを使用して既存の実行方法について[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Windows Workflow Foundation (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクト[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]ルール エンジンを使用して直接 Windows Workflow Foundation (WF 4.5)WF 3.5 に付属しています。 このアクティビティを使用すると、既存の WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> を開いて実行できます。 Windows Workflow Foundation の一部として含まれている WF 3.5 ルール エンジンの詳細については、「 [Windows Workflow Foundation ルール エンジンの概要](http://go.microsoft.com/fwlink/?LinkId=166079)します。 移行の詳細については規則を[!INCLUDE[wf1](../../../../includes/wf1-md.md)]で[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]、移行のガイダンスをお読みください[移行ガイダンス](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)します。
+このサンプルでは、ExternalizedPolicy4 アクティビティを使用して既存の実行方法について[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Windows Workflow Foundation (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクト[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]ルール エンジンを使用して直接 Windows Workflow Foundation (WF 4.5)WF 3.5 に付属しています。 このアクティビティを使用すると、既存の WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> を開いて実行できます。 Windows Workflow Foundation の一部として含まれている WF 3.5 ルール エンジンの詳細については、「 [Windows Workflow Foundation ルール エンジンの概要](https://go.microsoft.com/fwlink/?LinkId=166079)します。 移行の詳細については規則を[!INCLUDE[wf1](../../../../includes/wf1-md.md)]で[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]、移行のガイダンスをお読みください[移行ガイダンス](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)します。
 
 ## <a name="projects-in-this-sample"></a>このサンプルのプロジェクト
 
@@ -87,7 +87,7 @@ ExternalizedPolicy4 デザイナーを使用すると、コードを記述せず
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。
+> このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。
 >
 > このサンプルは、次のディレクトリに格納されます。
 >

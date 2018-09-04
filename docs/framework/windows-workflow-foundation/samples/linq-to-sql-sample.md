@@ -2,22 +2,22 @@
 title: LINQ to SQL のサンプル
 ms.date: 03/30/2017
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-ms.openlocfilehash: 3cfcaf3de1a22b8bb5505083f127a9888b99dbd8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 83dc8433459f64860baaca2e8309fbc85e2bb3a2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806719"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515369"
 ---
 # <a name="linq-to-sql-sample"></a>LINQ to SQL のサンプル
 このサンプルでは、SQL Server データベース内のテーブルの LINQ to SQL クエリ エンティティを使用するアクティビティを作成する方法を示します。  
   
 > [!IMPORTANT]
->  WCF サンプルは、既にコンピューターにインストールできます。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+>  WCF のサンプルは、既にコンピューターにインストールできます。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardspace`  
 >   
->  このディレクトリが存在しない場合は、このページの上部にあるサンプルのダウンロードのリンクをクリックします。 このリンクがダウンロードしのすべてをインストールすることに注意してください、 [!INCLUDE[wf1](../../../../includes/wf1-md.md)]、WCF、および[!INCLUDE[infocard](../../../../includes/infocard-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合は、このページの上部にあるサンプルのダウンロードのリンクをクリックします。 このリンクをダウンロードし、すべてのインストールに注意してください、 [!INCLUDE[wf1](../../../../includes/wf1-md.md)]、WCF、および[!INCLUDE[infocard](../../../../includes/infocard-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
   
@@ -84,10 +84,10 @@ new FindInSqlTable<Employee>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Liiinq\LinqToSql`  
   
 ## <a name="see-also"></a>関連項目  
- [LINQ to SQL](http://go.microsoft.com/fwlink/?LinkId=150376)  
- [はじめに (LINQ to SQL)](http://go.microsoft.com/fwlink/?LinkId=150377)
+ [LINQ to SQL](https://go.microsoft.com/fwlink/?LinkId=150376)  
+ [はじめに (LINQ to SQL)](https://go.microsoft.com/fwlink/?LinkId=150377)

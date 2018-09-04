@@ -2,12 +2,12 @@
 title: ワークフロー アプリケーションの永続化
 ms.date: 03/30/2017
 ms.assetid: abcff14c-f047-4195-ba26-d27f4a82c24e
-ms.openlocfilehash: e5c0cf23dd238c0c5a81519b5e6c415f4ef75f1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c225a9ed56a742fce0aaff3704bab31dabb0b9a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519188"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500005"
 ---
 # <a name="persisting-a-workflow-application"></a>ワークフロー アプリケーションの永続化
 このサンプルでは、<xref:System.Activities.WorkflowApplication> を実行し、アイドル状態になったときにアンロードしてから、再読み込みしてその実行を継続する方法を示します。  
@@ -17,11 +17,11 @@ ms.locfileid: "33519188"
   
  サンプル ワークフローは、ユーザーに名前の入力を求める <xref:System.Activities.Statements.WriteLine> アクティビティ、`ReadLine` の再開を通じて名前を入力として受け取るための <xref:System.Activities.Bookmark> アクティビティ、およびメッセージをユーザーにエコーするためのもう 1 つの <xref:System.Activities.Statements.WriteLine> です。 ワークフローが入力を待機しているとき、これは永続化に適したポイントになります。 これは <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> ポイントと呼ばれています。 <xref:System.Activities.WorkflowApplication> は、ワークフロー プログラムが永続化可能で、ブックマークの再開待ちの状態で、他の処理が実行されていないとき常に、<xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> イベントを発生します。 このサンプルのワークフローでは、そのポイントが `ReadLine` アクティビティの実行開始直後に発生します。  
   
- A<xref:System.Activities.WorkflowApplication>永続化を実行するように設定する<!--zz <xref:System.Runtime.Persistence.InstanceStore> -->`System.Runtime.Persistence.InstanceStore`です。 このサンプルでは、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> を使用しています。 <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`に割り当てる必要があります、<xref:System.Activities.WorkflowApplication.InstanceStore%2A>前に、プロパティ、<xref:System.Activities.WorkflowApplication>を実行します。  
+ A<xref:System.Activities.WorkflowApplication>永続化を実行するよう設定されて、 <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`します。 このサンプルでは、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> を使用しています。 <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`に割り当てる必要があります、<xref:System.Activities.WorkflowApplication.InstanceStore%2A>前に、プロパティ、<xref:System.Activities.WorkflowApplication>を実行します。  
   
  このサンプルでは、<xref:System.Activities.WorkflowApplication.PersistableIdle%2A> イベントにハンドラーを追加します。 このイベントのハンドラーは、<xref:System.Activities.WorkflowApplication> を返すことによって <xref:System.Activities.PersistableIdleAction> が行う処理を示します。 <xref:System.Activities.PersistableIdleAction.Unload> が返された場合、<xref:System.Activities.WorkflowApplication> はアンロードされます。  
   
- その後、このサンプルはユーザーからの入力を受け入れ、永続化されたワークフローを新しい <xref:System.Activities.WorkflowApplication> に読み込みます。 これは、新しい作成によって<xref:System.Activities.WorkflowApplication>、再作成、 <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`、インスタンスに完了してアンロードされたイベントに関連付けると、呼び出すことで、<xref:System.Activities.WorkflowApplication.Load%2A>ターゲット ワークフロー インスタンスの識別子を使用します。 インスタンスが取得されたら、`ReadLine` アクティビティのブックマークが再開されます。 ワークフローは、`ReadLine` アクティビティ内から実行を続け、最後まで実行します。 ワークフローが完了してアンロードするときに、 <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`ワークフローを削除する最後にもう一度と呼びます。  
+ その後、このサンプルはユーザーからの入力を受け入れ、永続化されたワークフローを新しい <xref:System.Activities.WorkflowApplication> に読み込みます。 これは新しいを作成することによって<xref:System.Activities.WorkflowApplication>、再作成、 <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`、インスタンスに完了してアンロードされたイベントに関連付けると、呼び出して<xref:System.Activities.WorkflowApplication.Load%2A>ターゲット ワークフロー インスタンスの識別子を使用します。 インスタンスが取得されたら、`ReadLine` アクティビティのブックマークが再開されます。 ワークフローは、`ReadLine` アクティビティ内から実行を続け、最後まで実行します。 ワークフローが完了し、アンロード、 <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`ワークフローを削除する最後にもう一度と呼びます。  
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33519188"
     > [!CAUTION]
     >  SQL Server の既定以外のインスタンスにデータベースをインストールした場合は、ソリューションをビルドする前に、コードの接続文字列を更新してください。  
   
-4.  管理者特権でのプロジェクトの bin ディレクトリ (\WF\Basic\Persistence\InstancePersistence\bin\Debug) に移動してサンプルを実行[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]Workflow.exe を右クリックしを選択すると、 **を管理者として実行**.  
+4.  プロジェクトの bin ディレクトリ (\WF\Basic\Persistence\InstancePersistence\bin\Debug) に移動して、サンプルを管理者特権で実行[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]Workflow.exe を右クリックし、選択、 **を管理者として実行**.  
   
 #### <a name="to-remove-the-instance-store-database"></a>インスタンス ストア データベースを削除するには  
   
@@ -52,9 +52,9 @@ ms.locfileid: "33519188"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\InstancePersistence`  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric ホスティングと永続性のサンプル](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

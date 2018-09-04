@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 396553ce72e34a6af40f54fa45035a218b7fdb17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e30f4b21d8b8f1a4c5a168402ce5cc386d932f86
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539690"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510612"
 ---
 # <a name="listview-control-windows-forms"></a>ListView コントロール (Windows フォーム)
 Windows フォーム `ListView` コントロールにはアイコン表示で項目の一覧が表示されます。 リスト ビューを使用すると、Windows エクスプローラーの右側のペインのようなユーザー インターフェイスを作成することができます。  
@@ -58,15 +58,15 @@ Windows フォーム `ListView` コントロールにはアイコン表示で項
  [方法: ListView コントロールに検索機能を追加する](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
  プログラムでいずれかのテキストの検索または画面座標を使用してアイテムを検索する方法について説明します。  
   
--   [方法: デザイナーを使って Windows フォーム ListView コントロールの "並べて表示" ビューを有効にする](http://msdn.microsoft.com/library/ms233655\(v=vs.110\))  
+-   [方法: デザイナーを使って Windows フォーム ListView コントロールの "並べて表示" ビューを有効にする](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [方法: デザイナーで Windows フォーム ListView コントロールを使って項目を追加および削除する](http://msdn.microsoft.com/library/ms233671\(v=vs.110\))  
+-   [方法: デザイナーで Windows フォーム ListView コントロールを使って項目を追加および削除する](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [方法: デザイナーを使って Windows フォーム ListView コントロールに列を追加する](http://msdn.microsoft.com/library/ms233652\(v=vs.110\))  
+-   [方法: デザイナーを使って Windows フォーム ListView コントロールに列を追加する](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [方法: デザイナーを使って Windows フォーム ListView コントロールの項目をグループ化する](http://msdn.microsoft.com/library/ms233663\(v=vs.110\))  
+-   [方法: デザイナーを使って Windows フォーム ListView コントロールの項目をグループ化する](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [チュートリアル: デザイナーを使用した、ListView コントロールと TreeView コントロールを含むエクスプローラー スタイルのインターフェイスの作成](http://msdn.microsoft.com/library/ms171645\(v=vs.110\))  
+-   [チュートリアル: デザイナーを使用した、ListView コントロールと TreeView コントロールを含むエクスプローラー スタイルのインターフェイスの作成](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.ListView> クラス  
@@ -82,7 +82,7 @@ Windows フォーム `ListView` コントロールにはアイコン表示で項
  [方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成する](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  複数のペインで Windows フォームのレイアウトを設定するための方法を説明します。  
   
- [Windows XP の機能と Windows フォーム コントロール](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ [Windows XP の機能と Windows フォーム コントロール](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
  <xref:System.Windows.Forms.ListView> コントロールに適用される、Windows XP に固有の機能を活用する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目  

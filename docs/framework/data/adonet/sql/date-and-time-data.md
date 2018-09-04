@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b7d5aca6b2c992e4f1d6bdef2a687d1ff43bf71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354869"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514004"
 ---
 # <a name="date-and-time-data"></a>日付と時刻のデータ
 SQL Server 2008 では、日付と時刻の情報を扱うための新しいデータ型が導入されました。 新しいデータ型には、日付と時刻の別個のデータ型と、範囲、有効桁数、タイム ゾーン処理が向上した拡張データ型が含まれています。 .NET Framework 3.5 Service Pack (SP) 1 以降では、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) が SQL Server 2008 データベース エンジンの新機能すべてをサポートします。 SqlClient でこれらの新機能を使用するには、.NET Framework 3.5 SP1 以降をインストールする必要があります。  
@@ -21,7 +21,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
   
  **SQL Server オンライン ブック**  
   
-1.  [日付と時刻のデータを使用します。](http://go.microsoft.com/fwlink/?LinkID=98361)  
+1.  [日付と時刻のデータの使用](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 で導入された日付/時刻データ型  
  次の表は、新しい日付と時刻のデータ型の説明です。  
@@ -41,12 +41,12 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
   
  Transact-SQL の SET LANGUAGE ステートメントは、日付の構成要素の並べ方を決定する DATEFORMAT を暗黙に設定します。 日付構成要素の表記順序が MDY、DMY、YMD、YDM、MYD、DYM のいずれであるかを明確にするには、接続で Transact-SQL の SET DATEFORMAT ステートメントを使用します。  
   
- 接続で DATEFORMAT を指定しないと、SQL Server はその接続に関連付けられている既定の言語を使用します。 たとえば、日付文字列 '01/02/03' は、言語が United States English に設定されているサーバーでは MDY (January 2, 2003) として、British English に設定されているサーバーでは DMY (February 1, 2003) として処理されます。 年は、SQL Server の終了年の規則に従って決定されます。この規則では、世紀の値を割り当てるための終了日が定義されます。 詳細については、次を参照してください。 [2 つの digit year cutoff オプション](http://go.microsoft.com/fwlink/?LinkId=120473)SQL Server オンライン ブック。  
+ 接続で DATEFORMAT を指定しないと、SQL Server はその接続に関連付けられている既定の言語を使用します。 たとえば、日付文字列 '01/02/03' は、言語が United States English に設定されているサーバーでは MDY (January 2, 2003) として、British English に設定されているサーバーでは DMY (February 1, 2003) として処理されます。 年は、SQL Server の終了年の規則に従って決定されます。この規則では、世紀の値を割り当てるための終了日が定義されます。 詳細については、次を参照してください。 [two digit year cutoff オプション](https://go.microsoft.com/fwlink/?LinkId=120473)SQL Server オンライン ブックの「します。  
   
 > [!NOTE]
 >  YDM 日付書式は、文字列形式から `date`、`time`、`datetime2`、または `datetimeoffset` に変換する場合にはサポートされません。  
   
- SQL Server が日付と時刻のデータを解釈する方法の詳細については、次を参照してください。[を使用して日付と時刻のデータ](http://go.microsoft.com/fwlink/?LinkID=98361)SQL Server 2008 オンライン ブック。  
+ SQL Server が日付と時刻のデータを解釈する方法の詳細については、次を参照してください。[を使用して日付と時刻のデータ](https://go.microsoft.com/fwlink/?LinkID=98361)SQL Server 2008 オンライン ブックの「します。  
   
 ## <a name="datetime-data-types-and-parameters"></a>Date/Time データ型とパラメーター  
  新しい日付型と時刻型をサポートするために、<xref:System.Data.SqlDbType> には、次の列挙値が追加されています。  
@@ -59,10 +59,10 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
   
 -   `SqlDbType.DateTimeOffSet`  
 
-データ型を指定することができます、 <xref:System.Data.SqlClient.SqlParameter> 、上記のいずれかを使用して<xref:System.Data.SqlDbType>列挙体です。 
+データ型を指定することができます、 <xref:System.Data.SqlClient.SqlParameter> 、上記のいずれかを使用して<xref:System.Data.SqlDbType>列挙体。 
 
 > [!NOTE]
-> 設定することはできません、`DbType`のプロパティ、`SqlParameter`に`SqlDbType.Date`です。
+> 設定することはできません、`DbType`のプロパティを`SqlParameter`に`SqlDbType.Date`します。
 
  <xref:System.Data.SqlClient.SqlParameter> オブジェクトの <xref:System.Data.SqlClient.SqlParameter.DbType%2A> プロパティを特定の `SqlParameter` 列挙値に設定することによって、<xref:System.Data.DbType> の型をジェネリックに指定することもできます。 <xref:System.Data.DbType> データ型と `datetime2` データ型をサポートするために、`datetimeoffset` には、次の列挙値が追加されています。  
   
@@ -88,9 +88,9 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|値を NULL に設定できるかどうかを取得または設定します。 サーバーに NULL パラメーター値を送る場合は、<xref:System.DBNull> (Visual Basic の場合は `null`) ではなく、`Nothing` を指定する必要があります。 データベースの null 値の詳細については、次を参照してください。 [Null 値の処理](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)です。|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|値を NULL に設定できるかどうかを取得または設定します。 サーバーに NULL パラメーター値を送る場合は、<xref:System.DBNull> (Visual Basic の場合は `null`) ではなく、`Nothing` を指定する必要があります。 データベースの null 値の詳細については、次を参照してください。 [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)します。|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|その値の最大桁数を取得または設定します。 この設定値は date データ型と time データ型では無視されます。|  
-|<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|取得または設定、小数点以下桁数値の時刻部分は解決`Time`、 `DateTime2`、および`DateTimeOffset`です。 既定値は 0 です。これは、実際の桁数が値から推論されてサーバーに送られることを意味します。|  
+|<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|値の時刻部分を解決して、小数点以下桁数を取得または`Time`、 `DateTime2`、および`DateTimeOffset`します。 既定値は 0 です。これは、実際の桁数が値から推論されてサーバーに送られることを意味します。|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|date データ型と time データ型では無視されます。|  
 |<xref:System.Data.SqlClient.SqlParameter.Value%2A>|パラメーター値を取得または設定します。|  
 |<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|パラメーター値を取得または設定します。|  
@@ -101,7 +101,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
 ### <a name="creating-parameters"></a>パラメーターの作成  
  <xref:System.Data.SqlClient.SqlParameter> オブジェクトは、そのコンストラクターを使って作成できるほか、<xref:System.Data.SqlClient.SqlCommand> の <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> メソッドを呼び出して、`Add`<xref:System.Data.SqlClient.SqlParameterCollection> コレクションにそれを追加することによって作成することもできます。 `Add` メソッドは、入力としてコンストラクター引数または既存のパラメーター オブジェクトを受け取ります。  
   
- このトピックの次のセクションでは、日付と時刻のパラメーターを指定する方法の例を示します。 パラメーターの操作の例については、次を参照してください。[構成パラメーターとパラメーターのデータ型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)と[DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)です。  
+ このトピックの次のセクションでは、日付と時刻のパラメーターを指定する方法の例を示します。 パラメーターの使用方法の例については、次を参照してください。[構成パラメーターとパラメーターのデータ型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)と[DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)します。  
   
 ### <a name="date-example"></a>Date の例  
  次のコード フラグメントは、`date` パラメーターの指定方法を示しています。  
@@ -184,7 +184,7 @@ command.Parameters.AddWithValue( _
     "@date", DateTimeOffset.Parse("16660902"))  
 ```  
   
- `@date`パラメーターにマップでした、 `date`、 `datetime`、または`datetime2`サーバー上のデータ型。 新しい `datetime` データ型を使用するときは、パラメーターの <xref:System.Data.SqlDbType> プロパティをそのインスタンスのデータ型に明示的に設定する必要があります。 <xref:System.Data.SqlDbType.Variant> の使用やパラメーター値の明示的な指定により、`datetime` および `smalldatetime` データ型との下位互換性の問題が発生する場合があります。  
+ `@date`パラメーターにマップできます、 `date`、 `datetime`、または`datetime2`サーバー上のデータ型。 新しい `datetime` データ型を使用するときは、パラメーターの <xref:System.Data.SqlDbType> プロパティをそのインスタンスのデータ型に明示的に設定する必要があります。 <xref:System.Data.SqlDbType.Variant> の使用やパラメーター値の明示的な指定により、`datetime` および `smalldatetime` データ型との下位互換性の問題が発生する場合があります。  
   
  次の表は、どの `SqlDbTypes` がどの CLR 型から推論されるかを示しています。  
   
@@ -235,12 +235,12 @@ command.Parameters.AddWithValue( _
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[日付および時刻データ型および関数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=98360)|Transact-SQL の日付と時刻のデータ型および関数の概要について説明します。|  
-|[日付と時刻のデータを使用します。](http://go.microsoft.com/fwlink/?LinkId=98361)|日付と時刻のデータ型と関数の情報、および使用例を示します。|  
-|[データ型 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008 のシステム データ型について説明します。|  
+|[日付と時刻のデータ型および関数 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Transact-SQL の日付と時刻のデータ型および関数の概要について説明します。|  
+|[日付と時刻のデータの使用](https://go.microsoft.com/fwlink/?LinkId=98361)|日付と時刻のデータ型と関数の情報、および使用例を示します。|  
+|[データ型 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008 のシステム データ型について説明します。|  
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [SQL Server データ型と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

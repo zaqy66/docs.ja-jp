@@ -12,37 +12,37 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: 1be8a31957bc439c140c1b6c5fc24e3221860c80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 409d94e46cae3e4daf7df930097f0a3d46360633
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529510"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500587"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>方法 : デザイナーを使ってデータ ソースに Windows フォーム DataGrid コントロールをバインドする
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
- Windows フォーム<xref:System.Windows.Forms.DataGrid>コントロールは具体的には、データ ソースから情報を表示するように設計されています。 デザイン時に設定して、コントロールをバインドする、<xref:System.Windows.Forms.DataGrid.DataSource%2A>と<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティ、または呼び出すことによって実行時に、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッドです。 さまざまなデータ ソースからデータを表示できますが、最も一般的なソース、データセットとデータのビューです。  
+ Windows フォーム<xref:System.Windows.Forms.DataGrid>コントロールが具体的には、データ ソースから情報を表示するように設計します。 デザイン時に設定して、コントロールをバインドする、<xref:System.Windows.Forms.DataGrid.DataSource%2A>と<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティ、または呼び出すことによって実行時に、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッド。 さまざまなデータ ソースからデータを表示できますが、最も一般的なソース、データセットとデータのビューです。  
   
- デザイン時に、データ ソースが利用可能な場合は — たとえば、フォームには、データセットまたはデータ ビューのインスタンスが含まれている場合: デザイン時に、データ ソースにグリッドをバインドすることができます。 グリッドで、データのようをプレビューできます。  
+ デザイン時にデータ ソースが使用可能な場合: たとえば、フォームには、データセットまたはデータ ビューのインスタンスが含まれている場合: グリッドは、デザイン時に、データ ソースにバインドできます。 グリッドで、データの見た目をプレビューできます。  
   
- 実行時にプログラムでは、グリッドをバインドすることもできます。 これは、実行時に取得した情報に基づいてデータ ソースを設定する場合に便利です。 たとえば、アプリケーションは、ユーザーに表示するテーブルの名前を指定を使用できます可能性があります。 データ ソースがデザイン時に存在しない状況で必要です。 これには、配列、コレクション、型指定されていないデータセット、およびデータ リーダーなどのデータ ソースが含まれます。  
+ グリッドは実行時にプログラムでバインドすることもできます。 これは、実行時に取得した情報に基づくデータ ソースを設定する場合に便利です。 たとえば、アプリケーション ユーザーに表示するテーブルの名前を指定することができます。 場所、データ ソースがデザイン時に存在しない状況で必要です。 これには、配列、コレクション、型指定されていないデータセット、およびデータ リーダーなどのデータ ソースが含まれます。  
   
- 次の手順が必要です、 **Windows アプリケーション**が含まれているフォーム プロジェクト、<xref:System.Windows.Forms.DataGrid>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[する方法: Windows アプリケーション プロジェクトを作成](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)と[する方法: Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)です。 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、<xref:System.Windows.Forms.DataGrid>コントロールに含まれていない、**ツールボックス**既定です。 追加の詳細については、次を参照してください。[する方法: ツールボックス アイテムの追加](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)です。 また、 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、使用することができます、**データ ソース**デザイン時のデータ バインディングのウィンドウ。 詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)です。  
+ 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.DataGrid>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法: Windows アプリケーション プロジェクトを作成](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)と[方法: Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、<xref:System.Windows.Forms.DataGrid>制御されていない、**ツールボックス**既定。 追加の詳細については、次を参照してください。[方法: ツールボックス アイテムの追加](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)します。 また、 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、使用することができます、**データソース**デザイン時のデータ バインディングのウィンドウ。 詳細については、次を参照してください。 [Visual Studio でのデータ コントロールをバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)します。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
-### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>デザイナーで 1 つのテーブルにデータ グリッド コントロールにデータ バインドする  
+### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>デザイナーで 1 つのテーブルへ DataGrid コントロールのデータをバインドする  
   
-1.  コントロールの設定<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティにバインドするデータ項目を含むオブジェクトをします。  
+1.  コントロールの設定<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティにバインドするデータ項目を格納するオブジェクトをします。  
   
 2.  データ ソースがデータセットの場合は、設定、<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティにバインドするテーブルの名前にします。  
   
-3.  データ ソースが、データセットまたはデータセットのテーブルに基づいたデータ ビューの場合は、データセットへのデータ、フォームにコードを追加します。  
+3.  データ ソースがデータセットまたはデータセットのテーブルに基づくデータ ビューの場合は、データセットを挿入するためのフォームにコードを追加します。  
   
-     実際に使用するコードは、データセットがデータを取得する場所によって異なります。 データセットは、データベースから直接登録されているが、通常を呼び出した場合、`Fill`という名前のデータセットに読み込まれる次のコード例のように、データ アダプターの`DsCategories1`:  
+     実際に使用するコードは、データセットがデータを取得する場所に依存します。 通常、呼び出す場合は、データセットをデータベースから直接登録されている、`Fill`メソッドという名前のデータセットを設定します次のコード例のように、データ アダプターの`DsCategories1`:。  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -58,15 +58,15 @@ ms.locfileid: "33529510"
   
 4.  (省略可能)グリッドに適切なテーブルのスタイルおよび列のスタイルを追加します。  
   
-     テーブルのスタイルがない場合、テーブルが表示されますが、最低限の書式とすべての列が表示されます。  
+     テーブル スタイルがない場合は、テーブルが表示されますが、最低限の書式と表示されているすべての列。  
   
-### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>デザイナーでデータセットの複数のテーブルにデータ グリッド コントロールにデータ バインドする  
+### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>デザイナーでデータセットの複数のテーブルへ DataGrid コントロールのデータをバインドする  
   
-1.  コントロールの設定<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティにバインドするデータ項目を含むオブジェクトをします。  
+1.  コントロールの設定<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティにバインドするデータ項目を格納するオブジェクトをします。  
   
-2.  (つまり、relation オブジェクトが含まれている) 場合、データセットに関連するテーブルが含まれる場合、設定、<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティを親テーブルの名前にします。  
+2.  (リレーションシップ オブジェクトが含まれている) 場合は、データセットに関連するテーブルが含まれる場合、設定、<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティを親テーブルの名前にします。  
   
-3.  データセットを読み込むコードを記述します。  
+3.  データセットを挿入するコードを記述します。  
   
 ## <a name="see-also"></a>関連項目  
  [DataGrid コントロールの概要](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ed6a7fbe550dad85cf505eaf20a446803b84c96f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 365416a82881c32b8fdcd3211aa42acb9f273483
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410417"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502730"
 ---
 # <a name="wif-and-web-farms"></a>WIF および Web ファーム
 Windows Identity Foundation (WIF) を使用して、Web ファームに展開されている証明書利用者 (RP) アプリケーションのリソースをセキュリティで保護するには、ファーム内の別のコンピューターで実行されている RP アプリケーションのインスタンスのトークンを WIF が処理できるように、特定の手順を実行する必要があります。 この処理には、セッション トークン シグネチャの検証、セッション トークンの暗号化と復号化、再生されたセキュリティ トークンの検出が含まれます。  
@@ -56,7 +56,7 @@ Windows Identity Foundation (WIF) を使用して、Web ファームに展開さ
 -   アプリケーションで再生されたトークンを検出する場合、<xref:System.IdentityModel.Tokens.TokenReplayCache> から派生させ、[\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 構成要素内のトークン再生キャッシュ サービスを示すことで、トークン再生キャッシュの場合に同様の分散キャッシュ戦略に従う必要があります。  
   
 > [!IMPORTANT]
->  すべての XML の例とこのトピックのコードがから取得、 [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408)サンプルです。  
+>  このトピックのコードで、XML の例のすべてから取得されますが、 [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)サンプル。  
   
 > [!IMPORTANT]
 >  このトピックの例は変更せずに提供されています。また、変更せずに実稼働コードで使用しないでください。  

@@ -2,12 +2,12 @@
 title: プログラミング ガイド (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 70fb2d38a055a6b376a711aae28ba69e6c2dd771
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c6b026d86a898aa52d93833ac3e447d6f6cba11
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353287"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513371"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>プログラミング ガイド (LINQ to DataSet)
 ここでは、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を使用したプログラミングに関する概要情報と例を提供します。  
@@ -23,9 +23,9 @@ ms.locfileid: "33353287"
  <xref:System.Data.DataRowComparer> オブジェクトを使用してデータ行を比較する方法について説明します。  
   
  [クエリによる DataTable の作成](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
- 作成に関する情報を提供、<xref:System.Data.DataTable>から、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリを使用して、<xref:System.Data.DataTableExtensions.CopyToDataTable%2A>メソッドです。  
+ 作成する方法について説明します、<xref:System.Data.DataTable>から、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリを使用して、<xref:System.Data.DataTableExtensions.CopyToDataTable%2A>メソッド。  
   
- [方法: CopyToDataTable を実装する\<T > ジェネリック型 T が DataRow ではありません](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
+ [方法: 実装 CopyToDataTable\<T > ジェネリック型 T が DataRow ではありません](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
  `CopyToDataTable<T>` 型以外のジェネリック パラメーター T を持つカスタム <xref:System.Data.DataRow> メソッドの実装方法について説明します。  
   
  [ジェネリック メソッド Field および SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
@@ -52,7 +52,7 @@ ms.locfileid: "33353287"
   
  <xref:System.Data.DataView>  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
- [ビルド内にありません: LINQ の一般的なプログラミング ガイド](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049)  
- [LINQ フレームワーク](http://msdn.microsoft.com/library/897ea0fc-40db-4694-bbe5-7dd339d5bf94)
+## <a name="see-also"></a>関連項目
+
+- [LINQ と ADO.NET](linq-and-ado-net.md)  
+- [統合言語クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)

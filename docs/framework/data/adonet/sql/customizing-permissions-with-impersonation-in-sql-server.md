@@ -2,12 +2,12 @@
 title: SQL Server での借用を使用した権限のカスタマイズ
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: ac2c6805a9ab49d95f68e56306d7d9fb8aab2a2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfee153a1293ec89285dbeabd1ed64a89764a717
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362644"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513973"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>SQL Server での借用を使用した権限のカスタマイズ
 多くのアプリケーションでは、ベース テーブルへのアクセスを制限する組み合わせ所有権を利用して、ストアド プロシージャを使ってデータにアクセスします。 ストアド プロシージャに対して EXECUTE 権限を付与するとき、ベース テーブルに対する権限を取り消したり拒否したりできます。 ストアド プロシージャとテーブルの所有者が同じ場合、SQL Server では呼び出し元の権限をチェックしません。 ただし、オブジェクトの所有者が異なる場合や、動的 SQL の場合には、組み合わせ所有権が無効になります。  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>REVERT での EXECUTE AS の使用  
  Transact-SQL REVERT ステートメントを使用して、元の実行コンテキストに戻ることができます。  
   
- オプションの句で WITH NO REVERT COOKIE = @variableName、により、場合、呼び出し元に、実行コンテキストを切り替える、@variableName変数には、適切な値が含まれています。 これにより、接続プールが使用されている環境では実行コンテキストを呼び出し元に切り替えることができます。 の値@variableNameEXECUTE AS の呼び出し元のみが知っているステートメントでは、呼び出し元保証できる、アプリケーションを呼び出すエンドユーザーが実行コンテキストを変更することはできません。 接続は、閉じられるとプールに返されます。 接続の詳細については、ADO.NET のプールを参照してください[SQL サーバー接続プール (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)です。  
+ オプションの句で WITH NO REVERT COOKIE =@variableName場合、に、呼び出し元に、実行コンテキストを切り替えることにより、@variableName変数に適切な値が含まれています。 これにより、接続プールが使用されている環境では実行コンテキストを呼び出し元に切り替えることができます。 の値@variableNameEXECUTE AS の呼び出し元のみが知っているステートメントでは、呼び出し元保証できるは、アプリケーションを呼び出すエンドユーザーによって実行コンテキストを変更することはできません。 接続は、閉じられるとプールに返されます。 接続の詳細については、ADO.NET でのプールを参照してください[SQL Server の接続プール (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)します。  
   
 ### <a name="specifying-the-execution-context"></a>実行コンテキストの指定  
  EXECUTE AS は、ユーザーを指定するだけでなく、次のキーワードを指定して使用することもできます。  
@@ -65,14 +65,6 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 -   SELF :  SELF として実行すると、ストアド プロシージャの作成者のセキュリティ コンテキストで実行されます。 これは、指定されたユーザーとして実行することと同じです。指定されたユーザーとは、プロシージャを作成または変更した人物です。  
   
-## <a name="external-resources"></a>外部リソース  
- 詳細については、次のリソースを参照してください。  
-  
-|リソース|説明|  
-|--------------|-----------------|  
-|[コンテキストの切り替え](http://msdn.microsoft.com/library/ms188268.aspx)SQL Server オンライン ブック|EXECUTE AS 句の使用方法を説明しているトピックへのリンクが用意されています。|  
-|[EXECUTE AS を使用してカスタム アクセス許可セットを作成する](http://msdn.microsoft.com/library/ms190384.aspx)と[モジュールで EXECUTE AS を使用して](http://msdn.microsoft.com/library/ms178106.aspx)SQL Server オンライン ブック|EXECUTE AS 句の使用方法を説明するトピックです。|  
-  
 ## <a name="see-also"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
@@ -81,4 +73,4 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
  [SQL Server での安全な動的 SQL の作成](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [SQL Server でのストアド プロシージャの署名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [ストアド プロシージャでのデータの変更](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

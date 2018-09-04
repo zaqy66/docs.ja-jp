@@ -11,11 +11,12 @@ ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3459ebd2f1df38ac70e9211fd4865e227cd996cb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aad369b35837089d05f5d7517e023671f0178011
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507805"
 ---
 # <a name="redirecting-assembly-versions"></a>アセンブリ バージョンのリダイレクト
 コンパイル時のバインド参照のリダイレクト先として、.NET Framework アセンブリ、サードパーティ製のアセンブリ、または独自のアプリのアセンブリを指定できます。 アプリで別のバージョンのアセンブリを使用するようにリダイレクトするには、発行者ポリシーを使用する、アプリ構成ファイルを使用する、コンピューター構成ファイルを使用するなど、さまざまな方法があります。 ここでは、.NET Framework でのアセンブリ バインドの動作の仕組みと、構成方法について説明します。  
@@ -65,11 +66,11 @@ ms.lasthandoff: 05/03/2018
   
  `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`  
   
- [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]で、アプリが .NET Framework の旧バージョンを対象とする場合、自動バインド リダイレクトを有効にすることができます。 どのアセンブリについても、app.config ファイルにバインド リダイレクト情報を記述することによって、この既定の動作をオーバーライドし、バインド リダイレクト機能をオフにすることができます。 この機能をオンまたはオフにする方法については、次を参照してください。[する方法: 有効化と自動バインディング リダイレクトを無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)です。  
+ [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]で、アプリが .NET Framework の旧バージョンを対象とする場合、自動バインド リダイレクトを有効にすることができます。 どのアセンブリについても、app.config ファイルにバインド リダイレクト情報を記述することによって、この既定の動作をオーバーライドし、バインド リダイレクト機能をオフにすることができます。 この機能をオンまたはオフにする方法については、次を参照してください。[方法: 有効化と自動バインディング リダイレクトを無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)します。  
   
 <a name="bypass_PP"></a>   
 ### <a name="bypassing-publisher-policy"></a>発行者ポリシーの省略  
- アプリの構成ファイルの発行者ポリシーを必要に応じてオーバーライドできます。 たとえば、下位互換性を維持しているとされる新しいアセンブリ バージョンでも、アプリを破壊する可能性があります。 発行者ポリシーを省略する場合は、追加、 [ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)要素を[ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)セット、とアプリ構成ファイル内の要素**適用**属性を**ありません**が優先以前のど**はい**設定します。  
+ アプリの構成ファイルの発行者ポリシーを必要に応じてオーバーライドできます。 たとえば、下位互換性を維持しているとされる新しいアセンブリ バージョンでも、アプリを破壊する可能性があります。 発行者ポリシーをバイパスする場合は、追加、 [ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)要素を[ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)アプリ構成ファイル、および、セット内の要素**適用**属性を**ありません**、前が優先されます**はい**設定します。  
   
  `<publisherPolicy apply="no" />`  
   
@@ -77,11 +78,11 @@ ms.lasthandoff: 05/03/2018
   
 <a name="BKMK_Redirectingassemblyversionsatthemachinelevel"></a>   
 ## <a name="redirecting-assembly-versions-at-the-machine-level"></a>コンピューター レベルでのアセンブリ バージョンのリダイレクト  
- コンピューター管理者が 1 台のコンピューター上のすべてのアプリで特定のアセンブリ バージョンを使用する場合も、まれにあります。 たとえば、セキュリティ ホールを修復するために、すべてのアプリで特定のアセンブリ バージョンを使用する場合があります。 コンピューターの構成ファイル内でアセンブリをリダイレクトした場合は、そのコンピューターで旧バージョンを使用しているすべてのアプリが新バージョンを使用するようになります。 コンピューター構成ファイルは、アプリ構成ファイルおよび発行者ポリシー ファイルよりも優先されます。 このファイルは、%*runtime install path*%\Config ディレクトリに含まれています。 通常、.NET Framework は %drive%\Windows\Microsoft.NET\Framework ディレクトリにインストールされます。  
+ コンピューター管理者が 1 台のコンピューター上のすべてのアプリで特定のアセンブリ バージョンを使用する場合も、まれにあります。 たとえば、セキュリティ ホールを修復するために、すべてのアプリで特定のアセンブリ バージョンを使用する場合があります。 コンピューターの構成ファイル内でアセンブリをリダイレクトした場合は、そのコンピューターで旧バージョンを使用しているすべてのアプリが新バージョンを使用するようになります。 コンピューター構成ファイルは、アプリ構成ファイルおよび発行者ポリシー ファイルよりもオーバーライドされます。 このファイルは、%*runtime install path*%\Config ディレクトリに含まれています。 通常、.NET Framework は %drive%\Windows\Microsoft.NET\Framework ディレクトリにインストールされます。  
   
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>   
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>構成ファイル内でのアセンブリ バインドの指定  
- アプリ構成ファイル、コンピューター構成ファイル、発行者ポリシー ファイルのいずれの場合も、同じ XML 形式を使用してバインド リダイレクトを指定できます。 別に、1 つのアセンブリ バージョンをリダイレクトするを使用して、 [ \<bindingRedirect >](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)要素。 **oldVersion** 属性では、1 つのアセンブリ バージョンまたはバージョンの範囲を指定できます。 `newVersion` 属性では、1 つのバージョンを指定する必要があります。  たとえば、 `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` は、アセンブリ バージョン 1.1.0.0 ～ 1.2.0.0 の代わりにバージョン 2.0.0.0 を使用するようにランタイムに指示します。  
+ アプリ構成ファイル、コンピューター構成ファイル、発行者ポリシー ファイルのいずれの場合も、同じ XML 形式を使用してバインド リダイレクトを指定できます。 使用して、別の 1 つのアセンブリ バージョンをリダイレクトする、 [ \<bindingRedirect >](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)要素。 **oldVersion** 属性では、1 つのアセンブリ バージョンまたはバージョンの範囲を指定できます。 `newVersion` 属性では、1 つのバージョンを指定する必要があります。  たとえば、 `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` は、アセンブリ バージョン 1.1.0.0 ～ 1.2.0.0 の代わりにバージョン 2.0.0.0 を使用するようにランタイムに指示します。  
   
  次のコード例は、さまざまなバインディング リダイレクトのシナリオを示しています。 この例では、 `myAssembly`のバージョンの範囲に対するリダイレクトと、 `mySecondAssembly`の単一のバインド リダイレクトを指定します。 この例では、発行者ポリシー ファイルによって `myThirdAssembly`のバインド リダイレクトがオーバーライドされないことも指定しています。  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>特定のバージョンへのアセンブリ バインドの制限  
- 使用することができます、 **appliesTo**属性を[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)アセンブリ バインディング参照を .NET の特定のバージョンのリダイレクトをアプリ構成ファイル内の要素フレームワーク。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **appliesTo** 属性が指定されていない場合、[\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 要素は、.NET Framework のすべてのバージョンに適用されます。  
+ 使用することができます、 **appliesTo**属性を[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)アセンブリ バインディング参照を .NET の特定のバージョンをリダイレクトするアプリ構成ファイル内の要素フレームワーク。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **appliesTo** 属性が指定されていない場合、[\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 要素は、.NET Framework のすべてのバージョンに適用されます。  
   
  たとえば、.NET Framework 3.5 アセンブリのアセンブリ バインドをリダイレクトするには、アプリ構成ファイルに次の XML コードを追加します。  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 05/03/2018
  [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [アプリの構成](../../../docs/framework/configure-apps/index.md)  
- [.NET Framework アプリの構成](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [.NET Framework アプリの構成](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [ランタイム設定スキーマ](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)  
  [方法: 発行者ポリシーを作成する](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

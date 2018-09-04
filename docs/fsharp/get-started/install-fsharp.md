@@ -1,13 +1,13 @@
 ---
 title: F# のインストールします。
 description: お客様の環境に基づいて、f# をインストールする方法について説明します。
-ms.date: 07/03/2018
-ms.openlocfilehash: 142265a95e1d3ee1603a89f650a24c6a45709181
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.date: 08/28/2018
+ms.openlocfilehash: 6c10b958e35bf7925965d076a48839b0ce19d2c0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878847"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515898"
 ---
 # <a name="install-f"></a>F# のインストールします。 #
 
@@ -29,34 +29,34 @@ ms.locfileid: "37878847"
 
 ## <a name="install-f-with-visual-studio-code"></a>Visual Studio Code で f# のインストールします。
 
-必要があります[git がインストールされている](https://git-scm.com/download)と、パスにするに収録 ionide の概要でのプロジェクト テンプレートの使用します。 」と入力して正しくインストールされていることを確認する`git --version`キーを押して、コマンド プロンプトで**Enter**します。
+必要があります[git がインストールされている](https://git-scm.com/download)を PATH にで使用可能なプロジェクト テンプレートの使用します。 」と入力して正しくインストールされていることを確認する`git --version`キーを押して、コマンド プロンプトで**Enter**します。
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-Ionide の概要を使用して[Mono](http://www.mono-project.com)します。 MacOS で Mono をインストールする最も簡単な方法は、Homebrew を使用してです。 単に、ターミナルに、次を入力します。
+[Mono](http://www.mono-project.com)使用[f# Interactive](../tutorials/fsharp-interactive/index.md)をサポートします。 MacOS で Mono をインストールする最も簡単な方法は、Homebrew を使用してです。 単に、ターミナルに、次を入力します。
 
 ```console
 brew install mono
 ```
 
-インストールする必要がありますも、 [.NET Core SDK](https://www.microsoft.com/net/download)します。
+インストールことも、 [.NET Core SDK](https://www.microsoft.com/net/download)します。
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-Linux では、ionide の概要も使用して[Mono](https://www.mono-project.com)します。 Debian または Ubuntu の場合は、次を使用できます。
+[Mono](https://www.mono-project.com)使用[f# Interactive](../tutorials/fsharp-interactive/index.md)をサポートします。 Debian または Ubuntu の場合は、次を使用できます。
 
 ```console
 sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
-インストールする必要がありますも、 [.NET Core SDK](https://www.microsoft.com/net/download)します。
+インストールことも、 [.NET Core SDK](https://www.microsoft.com/net/download)します。
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-Windows の場合は、まず[f# サポートを含む Visual Studio をインストール](#install-f-with-visual-studio)します。 これにより、書き込み、コンパイル、および f# コードの実行に必要なすべてのコンポーネントがインストールされます。
+インストール[f# のサポートを使用した Visual Studio](#install-f-with-visual-studio)します。 これにより、書き込み、コンパイル、および f# コードの実行に必要なすべてのコンポーネントがインストールされます。
 
-インストールする必要がありますも、 [.NET Core SDK](https://www.microsoft.com/net/download/)します。
+インストールことも、 [.NET Core SDK](https://www.microsoft.com/net/download/)します。
 
 ---
 

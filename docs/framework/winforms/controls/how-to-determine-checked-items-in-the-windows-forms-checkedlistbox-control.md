@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 98b4ef7c4ac73e1560bd5c68f22898e46585d082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70884051ba440c5d0f9d282b7edf189c8f52807e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531015"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505440"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>方法 : Windows フォーム CheckedListBox コントロールでオンになっている項目を判断する
-Windows フォームでデータを表示する場合、<xref:System.Windows.Forms.CheckedListBox>コントロールすることができますか、コレクションの反復に格納されている、<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>プロパティ、または手順を使用して、一覧から、<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>どの項目がチェックを調べます。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>メソッドの引数として、項目のインデックス番号を受け取り、返します`true`または`false`です。 期待するとは対照的、<xref:System.Windows.Forms.ListBox.SelectedItems%2A>と<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>プロパティはどの項目がチェックを決定していません。 項目が強調表示を判断します。  
+Windows フォームでのデータを表示するときに<xref:System.Windows.Forms.CheckedListBox>コントロールすることができますか、コレクションを反復処理に格納されている、<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>プロパティ、または手順を使用して、一覧から、<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>どの項目がチェックを調べます。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>メソッドの引数として、項目のインデックス番号を受け取り、返します`true`または`false`します。 予想どおり何とは異なり、<xref:System.Windows.Forms.ListBox.SelectedItems%2A>と<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>プロパティはどの項目がチェックを特定できません。 項目が強調表示が決まります。  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>CheckedListBox コントロールでチェックされた項目を決定するには  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>CheckedListBox コントロールでチェックされた項目を確認するには  
   
-1.  反復処理する、<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>コレクションは 0 から始まるために、0 から始まるコレクション。 このメソッドが表示項目数の一覧で、メモには、全体的なリストではなく、項目がチェックされます。 次のコードでのようにテキストを表示する場合は、一覧の最初の項目がチェックされないため、2 番目の項目がチェックされて、ように"チェック項目 1 MyListItem2 ="です。  
+1.  反復処理、<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>コレクションは、0 から始まるために、0 から始まるコレクション。 このメソッドは数が表示項目の一覧で、メモは、全体的なリストではなく項目を確認します。 次のコードがなどのテキストを表示する場合は、一覧の最初の項目がチェックされないため、2 番目の項目がオンになって、ように"チェックされている項目 1 MyListItem2 ="。  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -42,11 +42,11 @@ Windows フォームでデータを表示する場合、<xref:System.Windows.For
     {  
        // If so, loop through all checked items and print results.  
        string s = "";  
-       for(int x = 0; x <= checkedListBox1.CheckedItems.Count - 1 ; x++)  
+       for(int x = 0; x < checkedListBox1.CheckedItems.Count ; x++)  
        {  
           s = s + "Checked Item " + (x+1).ToString() + " = " + checkedListBox1.CheckedItems[x].ToString() + "\n";  
        }  
-    MessageBox.Show (s);  
+       MessageBox.Show(s);  
     }  
     ```  
   
@@ -56,7 +56,7 @@ Windows フォームでデータを表示する場合、<xref:System.Windows.For
     {  
        // If so, loop through all checked items and print results.  
        String ^ s = "";  
-       for(int x = 0; x <= checkedListBox1->CheckedItems->Count - 1; x++)  
+       for(int x = 0; x < checkedListBox1->CheckedItems->Count; x++)  
        {  
           s = String::Concat(s, "Checked Item ", (x+1).ToString(),  
              " = ", checkedListBox1->CheckedItems[x]->ToString(),  
@@ -68,7 +68,7 @@ Windows フォームでデータを表示する場合、<xref:System.Windows.For
   
      - または  
   
-2.  ステップ実行、<xref:System.Windows.Forms.CheckedListBox.Items%2A>コレクション、コレクションは、0 から始まるために、0 から始まるおよび呼び出し、<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>の各項目に対してメソッドです。 このメソッドが表示項目数、一覧全体での先頭の項目リストはチェックされませんので実行して、2 番目の項目がチェックされてのようなものが表示されます"の項目 2 = MyListItem2"です。  
+2.  ステップ実行、<xref:System.Windows.Forms.CheckedListBox.Items%2A>コレクション、コレクションは、0 から始まるために、0 から始まるおよび呼び出し、<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>項目ごとにメソッド。 このメソッドは数が表示項目全体の一覧では、最初の項目の場合、リストはチェックされませんので実行して、2 番目の項目がオンになって、ようなものが表示されます"項目 2 = MyListItem2"。  
   
     ```vb  
     Dim i As Integer  

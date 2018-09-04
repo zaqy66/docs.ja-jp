@@ -9,17 +9,17 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 0ac3514505ca42870d77317feec30a27e4384e6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ade8eae67d29e2f3cb42911e42ed8696623db62
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655115"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507899"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>チュートリアル: イベントの処理 (Visual Basic)
-これは、2 番目のイベントを使用する方法を示す 2 つのトピックです。 最初のトピックでは、[チュートリアル: イベントを宣言して発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)、宣言およびイベントを発生させる方法を示します。 このセクションでは、行われるときにイベントを処理するのに方法を示します。 フォームとそのチュートリアルからクラスを使用します。  
+これは、2 番目のイベントを使用する方法を示す 2 つのトピックです。 最初のトピックでは、[チュートリアル: イベントを宣言して発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)を宣言してイベントを発生させる方法を示しています。 このセクションでは、実行するときにイベントを処理するのに方法について説明フォームとそのチュートリアルからクラスを使用します。  
   
- `Widget`クラスの例は、従来のイベント処理のステートメントを使用します。 Visual Basic では、イベントの処理の他の手法を提供します。 演習として使用するには、この例を変更することができます、`AddHandler`と`Handles`ステートメントです。  
+ `Widget`クラスの例は、従来のイベント処理ステートメントを使用します。 Visual Basic では、イベントの処理を他の手法を提供します。 演習として使用するには、この例を変更することができます、`AddHandler`と`Handles`ステートメント。  
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>ウィジェットのクラスのことですイベントを処理するには  
   
@@ -27,52 +27,52 @@ ms.locfileid: "33655115"
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
   
-     `WithEvents`キーワードを指定する変数`mWidget`オブジェクトのイベントを処理するために使用します。 オブジェクトの種類を指定するには、オブジェクトの作成元となるクラスの名前を指定します。  
+     `WithEvents`キーワードを指定する変数`mWidget`オブジェクトのイベントを処理するために使用します。 オブジェクトの種類を指定するには、オブジェクトを作成するクラスの名前を指定します。  
   
-     変数`mWidget`で宣言された`Form1`ため`WithEvents`変数はクラス レベルである必要があります。 これは、配置することでクラスの種類に関係なく当てはまります。  
+     変数`mWidget`で宣言されている`Form1`ため`WithEvents`変数はクラス レベルである必要があります。 これはクラスの配置の種類に関係なく当てはまります。  
   
-     変数`mblnCancel`、キャンセルに使用、`LongTask`メソッドです。  
+     変数`mblnCancel`をキャンセルするために使用、`LongTask`メソッド。  
   
 ## <a name="writing-code-to-handle-an-event"></a>イベントを処理するコードの記述  
- 使用して変数を宣言するとすぐに`WithEvents`、クラスの左のドロップダウン リストで、変数名が表示されます**コード エディター**です。 選択すると`mWidget`、`Widget`右のドロップダウン リストにクラスのイベントが表示されます。 イベントの対応するプロシージャのプレフィックスを持つイベントを選択すると表示`mWidget`とアンダー スコア。 関連付けられているすべてのイベント プロシージャ、`WithEvents`変数は、プレフィックスとして変数名を指定します。  
+ 使用して変数を宣言するとすぐに`WithEvents`、クラスの左側のドロップダウン リストで、変数名が表示されます。**コード エディター**します。 選択すると`mWidget`、`Widget`クラスのイベントが右のドロップダウン リストに表示されます。 イベントを選択するには、プレフィックスを持つ、対応するイベント プロシージャが表示されます`mWidget`とアンダー スコア。 関連付けられているすべてのイベント プロシージャを`WithEvents`変数は、プレフィックスとして変数名を指定します。  
   
 #### <a name="to-handle-an-event"></a>イベントを処理するには  
   
-1.  選択`mWidget`で、左側のドロップダウン リストから、**コード エディター**です。  
+1.  選択`mWidget`で、左側のドロップダウン リストから、**コード エディター**します。  
   
-2.  選択、`PercentDone`右のドロップダウン リストからのイベントです。 **コード エディター**開きます、`mWidget_PercentDone`イベント プロシージャです。  
+2.  選択、`PercentDone`右のドロップダウン リストからイベント。 **コード エディター**開きます、`mWidget_PercentDone`イベント プロシージャ。  
   
     > [!NOTE]
-    >  **コード エディター**は役立ちますが、必須ではない新しいイベント ハンドラーを挿入するためです。 このチュートリアルでは、イベント ハンドラーのコードに直接コピーするより直接的です。  
+    >  **コード エディター**は役立ちますが、新しいイベント ハンドラーを挿入するための必要ありません。 このチュートリアルでは、イベント ハンドラーのコードに直接コピーするより直接的します。  
   
 3.  `mWidget_PercentDone` イベント ハンドラーに次のコードを追加します。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
   
-     ときに、`PercentDone`イベントは、イベントの手順で完了したパーセントが表示されます、`Label`コントロール。 `DoEvents`メソッドにより、再描画するラベルもにより、ユーザーをクリックして、**キャンセル**ボタンをクリックします。  
+     たびに、`PercentDone`イベントは、イベント プロシージャの完了率が表示されます、`Label`コントロール。 `DoEvents`メソッドを再描画するラベルを使用し、また、ユーザーがクリックする可能性、**キャンセル**ボタンをクリックします。  
   
-4.  次のコードを追加、`Button2_Click`イベントのハンドラー。  
+4.  次のコードを追加、`Button2_Click`イベント ハンドラー。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
   
- ユーザーがクリックした場合、**キャンセル**中にボタン`LongTask`が実行されている、`Button2_Click`イベントが実行されるとすぐに、`DoEvents`ステートメントが発生するイベント処理を許可します。 クラス レベルの変数`mblnCancel`に設定されている`True`、および`mWidget_PercentDone`イベントことをテストし、設定、`ByRef Cancel`引数`True`です。  
+ ユーザーがクリックした場合、**キャンセル**中にボタン`LongTask`が実行されている、`Button2_Click`イベントが実行されるとすぐに、`DoEvents`ステートメントが発生するイベントの処理を使用できます。 クラス レベルの変数`mblnCancel`に設定されている`True`、および`mWidget_PercentDone`イベントは、ためのテストし、設定、`ByRef Cancel`引数`True`。  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>WithEvents 変数をオブジェクトに接続します。  
- `Form1` 処理するようになりました設定、`Widget`オブジェクトのイベントです。 すべてのタスクが見つかりません、`Widget`どこかにします。  
+ `Form1` 処理するために設定するようになりました、`Widget`オブジェクトのイベント。 残っているは検索、`Widget`どこか。  
   
- 変数を宣言するときに`WithEvents`デザイン時にオブジェクトが関連付けられていないこと。 A`WithEvents`変数は、その他のすべてのオブジェクト変数と同じようにします。 オブジェクトを作成しを使って参照を代入する必要がある、`WithEvents`変数。  
+ 変数を宣言するときに`WithEvents`デザイン時にオブジェクトが関連付けられていないこと。 A`WithEvents`変数は、他のすべてのオブジェクト変数と同じです。 オブジェクトを作成しを使って参照を代入する必要がある、`WithEvents`変数。  
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>オブジェクトを作成してへの参照を割り当てる  
   
-1.  選択 **(Form1 イベント)** で、左側のドロップダウン リストから、**コード エディター**です。  
+1.  選択 **(Form1 イベント)** で、左側のドロップダウン リストから、**コード エディター**します。  
   
-2.  選択、`Load`右のドロップダウン リストからのイベントです。 **コード エディター**開きます、`Form1_Load`イベント プロシージャです。  
+2.  選択、`Load`右のドロップダウン リストからイベント。 **コード エディター**開きます、`Form1_Load`イベント プロシージャ。  
   
-3.  次のコードを追加、`Form1_Load`イベントを作成する手順、 `Widget`:  
+3.  次のコードを追加、`Form1_Load`イベント プロシージャを作成、 `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
- このコードが実行されると、Visual Basic の作成、`Widget`オブジェクトをイベント 'éú' に関連付けられているイベント プロシージャ`mWidget`です。 した時点で、ときに、`Widget`を発生させますその`PercentDone`イベント、`mWidget_PercentDone`イベント プロシージャを実行します。  
+ このコードが実行されると、Visual Basic を作成、`Widget`オブジェクトし、そのイベントを接続に関連付けられているイベント プロシージャに`mWidget`します。 した時点で、ときに、`Widget`を発生させますその`PercentDone`、イベント、`mWidget_PercentDone`イベント プロシージャを実行します。  
   
 #### <a name="to-call-the-longtask-method"></a>LongTask メソッドを呼び出す  
   
@@ -80,41 +80,41 @@ ms.locfileid: "33655115"
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
   
- 前に、`LongTask`メソッドを呼び出すことは、完了した割合が表示されますが初期化する必要があります、ラベルと、クラス レベル`Boolean`フラグに設定する必要があります、メソッドの取り消し`False`です。  
+ 前に、`LongTask`メソッドが呼び出されると、ラベルの表示が完了した割合を初期化する必要があり、クラス レベル`Boolean`フラグ設定するメソッドをキャンセルする必要があります`False`します。  
   
- `LongTask` タスクの継続時間 12.2 秒の呼び出されます。 `PercentDone`イベントは、1 回すべて 3 分の 1 秒です。 イベントが発生するたびに、`mWidget_PercentDone`イベント プロシージャを実行します。  
+ `LongTask` 12.2 秒のタスクの実行時間と呼びます。 `PercentDone`イベントは、1 回ごとに 3 分の 1、2 つ目の。 イベントが発生すると、毎回、`mWidget_PercentDone`イベント プロシージャを実行します。  
   
- ときに`LongTask`が完了したら、`mblnCancel`かどうかをテスト`LongTask`通常は、終了したためが停止している場合、または`mblnCancel`に設定された`True`です。 前者の場合にのみ、完了したパーセントが更新されます。  
+ ときに`LongTask`が完了したら、`mblnCancel`かどうかをテスト`LongTask`通常は、終了したため、停止した場合、または`mblnCancel`に設定された`True`。 達成率は、前者の場合にのみ更新されます。  
   
 #### <a name="to-run-the-program"></a>プログラムを実行するには  
   
-1.  F5 キーを押してプロジェクトを実行モードにします。  
+1.  F5 キーを押して、実行モードで、プロジェクトを配置します。  
   
-2.  クリックして、**タスクの開始**ボタンをクリックします。 毎回、`PercentDone`イベントは、ラベルは、タスクが完了の割合で更新します。  
+2.  をクリックして、**タスクの開始**ボタンをクリックします。 毎回、`PercentDone`イベントは、ラベルは、タスクが完了の割合で更新されます。  
   
-3.  クリックして、**キャンセル**タスクを停止するボタンをクリックします。 注意しての外観、**キャンセル**ボタンをクリックすると、すぐには変化しません。 `Click`イベントまで発生することはできません、`My.Application.DoEvents`ステートメントにより、イベント処理します。  
+3.  をクリックして、**キャンセル**タスクを停止するボタンをクリックします。 注意の外観、**キャンセル**ボタンがクリックするとすぐには変更されません。 `Click`イベントまで発生することはできません、`My.Application.DoEvents`ステートメントは、イベント処理を使用できます。  
   
     > [!NOTE]
-    >  `My.Application.DoEvents`の形式として、メソッドがまったく同じ方法でイベントを処理できません。 たとえば、このチュートリアルでは、する必要があります をクリックして、**キャンセル**2 回ボタンをクリックします。 使用することができますを許可するフォームがイベントを直接処理する場合のマルチ スレッド化します。 詳細については、次を参照してください。[スレッド](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)です。  
+    >  `My.Application.DoEvents`フォームは、メソッドがまったく同じ方法でイベントを処理できません。 たとえば、このチュートリアルでは、する必要があります をクリックして、**キャンセル**2 回ボタンをクリックします。 使用することができます、イベントを直接処理するためのフォームは、マルチ スレッドです。 詳細については、次を参照してください。[スレッド処理](https://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)します。  
   
- F11 キーをプログラムを実行して、コードを 1 行ずつ処理するときにあります。 実行に入力する方法がわかります`LongTask`、し、簡単に再入力`Form1`たびに、`PercentDone`イベントが発生します。  
+ F11 キーを押してプログラムを実行し、コードを 1 行ずつ処理するときにあります。 実行の入力を明確に確認`LongTask`、し、簡単に再入力`Form1`たびに、`PercentDone`イベントが発生します。  
   
- 何が起こる場合、実行中のコードに戻ってに`Form1`、`LongTask`メソッドが再び呼び出されたしますか? 場合、スタック オーバーフローが発生する最悪の場合、`LongTask`イベントが発生するたびに呼び出されました。  
+ 何が起こる場合、実行中のコードに戻る`Form1`、`LongTask`メソッドが再度呼び出されたでしょうか。 場合、スタック オーバーフローが発生する最悪の場合、`LongTask`イベントが発生するたびに呼び出されました。  
   
- 変数が発生することができます`mWidget`別のイベントを処理する`Widget`新しいへの参照を割り当てることによってオブジェクト`Widget`に`mWidget`です。 実際には、内のコードを行うことができます`Button1_Click`ボタンをクリックするたびにこの操作を行います。  
+ 変数が可能性`mWidget`、別のイベントを処理する`Widget`新しいへの参照を割り当てることでオブジェクト`Widget`に`mWidget`します。 コードでは、実際には、行うことができます`Button1_Click`ボタンをクリックするたびにこの操作を行います。  
   
-#### <a name="to-handle-events-for-a-different-widget"></a>さまざまなウィジェットのイベントを処理するには  
+#### <a name="to-handle-events-for-a-different-widget"></a>別のウィジェットのイベントを処理するには  
   
--   次のコード行を追加、`Button1_Click`を読み取る行のすぐ前の手順`mWidget.LongTask(12.2, 0.33)`:  
+-   次のコードの行を追加、`Button1_Click`という行のすぐ前に、プロシージャ`mWidget.LongTask(12.2, 0.33)`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
   
- 上記のコードが新たに作成`Widget`たびにこのボタンをクリックします。 すぐに、`LongTask`メソッドが完了するへの参照を`Widget`がリリースされると、`Widget`は破棄されます。  
+ 上記のコードを作成する新しい`Widget`たびにこのボタンをクリックします。 すぐに、`LongTask`メソッドが完了するへの参照、`Widget`がリリースされると、`Widget`は破棄されます。  
   
- A`WithEvents`変数は、一度に 1 つのオブジェクト参照を含めることができる場合は、異なるを割り当てるよう`Widget`オブジェクトを`mWidget`、前の`Widget`オブジェクトのイベントを処理しなくなります。 場合`mWidget`古いへの参照を含む唯一のオブジェクト変数`Widget`オブジェクトは破棄されます。 いくつかからイベントを処理する場合`Widget`オブジェクトを使用して、`AddHandler`ステートメントを個別に各オブジェクトからのイベントを処理します。  
+ A`WithEvents`変数は、一度に 1 つのオブジェクト参照を含めることができます別に割り当てた場合、`Widget`オブジェクトを`mWidget`、前の`Widget`オブジェクトのイベントを処理できなくなります。 場合`mWidget`古いへの参照を格納している唯一のオブジェクト変数`Widget`オブジェクトは破棄されます。 いくつかのイベントを処理する場合`Widget`、オブジェクトを使用して、`AddHandler`ステートメントを個別に各オブジェクトからのイベントを処理します。  
   
 > [!NOTE]
->  だけを宣言できます`WithEvents`、として変数が必要なの配列が`WithEvents`変数はサポートされていません。  
+>  数を宣言する`WithEvents`変数としてする必要がありますの配列が`WithEvents`変数がサポートされていません。  
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル : イベントの宣言と発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  

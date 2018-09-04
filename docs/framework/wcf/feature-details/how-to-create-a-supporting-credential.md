@@ -2,25 +2,25 @@
 title: '方法 : サポート資格情報を作成する'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 6ec7412d1de2bca349c7cfbf4a37c98ca60cc78d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef4d9a406e6fc929e4ad59911d587e462c9b2b65
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499992"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>方法 : サポート資格情報を作成する
-カスタムのセキュリティ スキームでは、複数の資格情報が必要になることがあります。 たとえば、サービスが、ユーザー名とパスワードだけでなく、クライアントが 18 歳以上であることを証明する資格情報もクライアントに要求することがあります。 2 番目の資格情報は、*資格情報をサポートする*です。 このトピックでは、Windows Communication Foundation (WCF) クライアントにこのような資格情報を実装する方法について説明します。  
+カスタムのセキュリティ スキームでは、複数の資格情報が必要になることがあります。 たとえば、サービスが、ユーザー名とパスワードだけでなく、クライアントが 18 歳以上であることを証明する資格情報もクライアントに要求することがあります。 2 番目の資格情報が、*資格情報をサポートしている*します。 このトピックでは、Windows Communication Foundation (WCF) クライアントでこのような資格情報を実装する方法について説明します。  
   
 > [!NOTE]
->  サポート資格情報の仕様は、WS-SecurityPolicy 仕様の一部です。 詳細については、次を参照してください。 [Web サービスのセキュリティ仕様](http://go.microsoft.com/fwlink/?LinkId=88537)です。  
+>  サポート資格情報の仕様は、WS-SecurityPolicy 仕様の一部です。 詳細については、次を参照してください。 [Web サービス セキュリティ仕様](https://go.microsoft.com/fwlink/?LinkId=88537)します。  
   
 ## <a name="supporting-tokens"></a>トークンのサポート  
- メッセージ セキュリティを使用すると、簡単に言えば、*プライマリ資格情報*は常に (たとえば、X.509 証明書または Kerberos チケット) メッセージをセキュリティで保護するために使用します。  
+ メッセージのセキュリティを使用する場合に簡単に言うと、*プライマリ資格情報*は常に (たとえば、X.509 証明書または Kerberos チケット) メッセージをセキュリティで保護するために使用します。  
   
- セキュリティ バインディングを使用して、仕様で定義された、*トークン*メッセージ交換をセキュリティで保護します。 A*トークン*セキュリティ資格情報の表現です。  
+ セキュリティ バインディングを使用して、仕様で定義された、*トークン*メッセージ交換をセキュリティで保護します。 A*トークン*はセキュリティ資格情報を表したものです。  
   
- セキュリティ バインディングは、セキュリティ バインディング ポリシーで特定されたプライマリ トークンを使用して、署名を作成します。 この署名と呼ばれます、*メッセージの署名*です。  
+ セキュリティ バインディングは、セキュリティ バインディング ポリシーで特定されたプライマリ トークンを使用して、署名を作成します。 この署名と呼ばれます、*メッセージ署名*します。  
   
  メッセージ署名に関連付けられたトークンによって提供されるクレームを増やすために、追加のトークンを指定できます。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33495887"
 |署名および暗号化|暗号化された署名付きサポート トークンは、`wsse:SecurityHeader` に表示されたときに暗号化されている署名付きサポート トークンです。|  
   
 ## <a name="programming-supporting-credentials"></a>サポート資格情報のプログラミング  
- サポート トークンを作成する必要がありますを使用するサービスを作成する、 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)です。 (詳細については、次を参照してください[する方法: SecurityBindingElement 作成するカスタム バインドを使用して、](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)。  
+ サポート トークンを作成する必要がありますを使用するサービスを作成する、 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)します。 (詳細については、次を参照してください[方法: SecurityBindingElement 作成カスタム バインドを使用して、](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)。  
   
  カスタム バインドを作成する最初の手順は、次の 3 種類のいずれかのセキュリティ バインド要素を作成することです。  
   
