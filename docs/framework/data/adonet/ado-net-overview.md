@@ -2,25 +2,25 @@
 title: ADO.NET の概要
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 50881c05c8b6f2602d19817373a16e4661d3d133
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757945"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489813"
 ---
 # <a name="adonet-overview"></a>ADO.NET の概要
 ADO.NET は、SQL Server や XML などのデータ ソースや、OLE DB や ODBC 経由で公開されるデータ ソースに対する一貫性を持ったアクセス機能を実現します。 データを共有する消費者向けアプリケーションで ADO.NET を使用することで、そのようなデータ ソースへの接続や、データ ソースに格納されているデータの取得、操作、更新を実行できます。  
   
  ADO.NET は、データ操作の中からデータ アクセス機能を分離し、個別にまたは組み合わせて使用できる、独立したコンポーネントへと分解します。 ADO.NET には、データベースとの接続、コマンドの実行、および結果の取得を行うための .NET Framework データ プロバイダーが含まれます。 この結果は直接処理され、ADO.NET <xref:System.Data.DataSet> オブジェクトに格納されます。この結果は、ユーザーに暫定的に公開したり、複数のソースからのデータと組み合わせたり、層間で受け渡したりするために使用されます。 `DataSet` オブジェクトを .NET Framework データ プロバイダーに関係なく使用した場合でも、アプリケーションにとってローカルなデータや XML から提供されたデータを管理できます。  
   
- ADO.NET クラスは System.Data.dll にあり、System.Xml.dll に含まれている XML クラスに統合されています。 データベースに接続するサンプル コードから、データを取得し、そのデータをコンソール ウィンドウに表示、参照してください。 [ADO.NET コード例](../../../../docs/framework/data/adonet/ado-net-code-examples.md)です。  
+ ADO.NET クラスは System.Data.dll にあり、System.Xml.dll に含まれている XML クラスに統合されています。 データベースに接続するサンプル コードは、そこからデータを取得し、コンソール ウィンドウでそのデータを表示するを参照してください。 [ADO.NET のコード例](../../../../docs/framework/data/adonet/ado-net-code-examples.md)します。  
   
- マネージ コードを作成する開発者は、ADO.NET により、ネイティブのコンポーネント オブジェクト モデル (COM) 開発者が ActiveX Data Object (ADO) によって利用できる機能と同等の機能を利用できます。 .NET アプリケーションでのデータのアクセスには、ADO ではなく ADO.NET を使用することをお勧めします。  
+ マネージド コードを作成する開発者は、ADO.NET により、ネイティブのコンポーネント オブジェクト モデル (COM) 開発者が ActiveX Data Object (ADO) によって利用できる機能と同等の機能を利用できます。 .NET アプリケーションでのデータのアクセスには、ADO ではなく ADO.NET を使用することをお勧めします。  
   
- ADO.NET は、.NET Framework におけるデータ アクセスの最も直接的な方法を提供します。 上位レベルの抽象化により、基になるストレージ モデルではなく、概念モデルに対して動作するアプリケーションを次を参照してください。、 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)です。  
+ ADO.NET は、.NET Framework におけるデータ アクセスの最も直接的な方法を提供します。 基になるストレージ モデルではなく、概念モデルに対して動作するアプリケーションを使用するより高度な抽象化を参照してください、 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)します。  
   
- **プライバシーに関する声明**: System.Data.dll、System.Data.Design.dll、System.Data.OracleClient.dll、System.Data.SqlXml.dll、System.Data.Linq.dll、System.Data.SqlServerCe.dll、system.data.datasetextensions.dll へおよびアセンブリがありませんユーザーの個人データと非プライベート データを区別します。  これらのアセンブリによって、ユーザーの個人データの収集、格納、送信が実行されることはありません。 ただし、サードパーティ製のアプリケーションでこれらのアセンブリが使用され、ユーザーの個人データの収集、格納、送信が行われる可能性はあります。  
+ **プライバシーに関する声明**: System.Data.dll、System.Data.Design.dll、System.Data.OracleClient.dll、System.Data.SqlXml.dll、System.Data.Linq.dll、System.Data.SqlServerCe.dll、system.data.datasetextensions.dll の各およびアセンブリがありませんユーザーの個人データとそれ以外のデータを区別します。  これらのアセンブリによって、ユーザーの個人データの収集、格納、送信が実行されることはありません。 ただし、サードパーティ製のアプリケーションでこれらのアセンブリが使用され、ユーザーの個人データの収集、格納、送信が行われる可能性はあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ADO.NET のアーキテクチャ](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -60,4 +60,4 @@ ADO.NET は、SQL Server や XML などのデータ ソースや、OLE DB や OD
 ## <a name="see-also"></a>関連項目  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

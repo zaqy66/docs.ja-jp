@@ -8,17 +8,18 @@ ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a2eafc6b5ad1446fd07518f877a8ec001ad8dbd6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1a129abca5888120d03c42689ac825d768733a9d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489943"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt;要素 (Web 設定)
-ASP.NET アプリケーションが統合モードで実行されているときに、プロセス全体の動作を管理する ASP.NET によって使用される構成設定を指定[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン。  
+ASP.NET アプリケーションが統合モードで実行されている場合に、プロセス全体の動作を管理する、ASP.NET で使用される構成設定を指定します[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン。  
   
 > [!IMPORTANT]
->  ASP.NET アプリケーションがホストされている場合のみ機能サポートこの要素と機能[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]またはそれ以降のバージョン。  
+>  ASP.NET アプリケーションがホストされている場合のみ機能をサポートこの要素と機能[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン。  
   
  \<configuration>  
 \<system.web > 要素 (Web 設定)  
@@ -41,8 +42,8 @@ ASP.NET アプリケーションが統合モードで実行されているとき
 |属性|説明|  
 |---------------|-----------------|  
 |`maxConcurrentRequestsPerCPU`|ASP.NET では、CPU ごとの同時要求の数を指定します。|  
-|`maxConcurrentThreadsPerCPU`|アプリケーション プールの cpu ごと実行できる同時スレッドの数を指定します。 これにより、CPU ごとの要求を処理するために使用するマネージ スレッドの数を制限するため、ASP.NET の同時実行を制御する別の方法です。 既定では、この設定は、0 で、エントリの CLR スレッド プールでは、作成できるスレッドの数も制限されていますが、ASP.NET は CPU ごとに作成できるスレッドの数が制限されませんは。|  
-|`requestQueueLimit`|1 つのプロセスで ASP.NET のキューにすることが要求の最大数を指定します。 2 つまたは複数の ASP.NET アプリケーションは、単一のアプリケーション プールで実行すると、アプリケーション プール内の任意のアプリケーションへの要求の累積的なセットは、この設定の対象です。|  
+|`maxConcurrentThreadsPerCPU`|アプリケーション プールの各 CPU の実行できる同時スレッドの数を指定します。 これにより、CPU あたりの要求を処理するために使用できるマネージ スレッドの数を制限するため、ASP.NET の同時実行を制御する別の方法を提供します。 既定では、この設定は 0 で、ASP.NET で制限しないこと、CPU ごとに作成できるスレッドの数が、CLR スレッド プールでは、作成できるスレッドの数によっても制限は。|  
+|`requestQueueLimit`|ASP.NET の 1 つのプロセスでキューに追加される要求の最大数を指定します。 2 つまたは複数の ASP.NET アプリケーションは、1 つのアプリケーション プールで実行すると、アプリケーション プール内の任意のアプリケーションに対する要求の累積的なセットは、この設定の対象です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -53,20 +54,20 @@ ASP.NET アプリケーションが統合モードで実行されているとき
 |-------------|-----------------|  
 |[\<system.web >](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET がホスト アプリケーションと対話する方法についてを説明します。|  
   
-## <a name="remarks"></a>コメント  
- 実行すると[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]統合モードで以降のバージョンがこの要素を組み合わせて、アプリケーションが IIS アプリケーション プールでホストされている場合に、ASP.NET がスレッドとキューの要求を管理する方法を設定できますか。 IIS 6 を実行するかを実行する[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]クラシック モードで、または ISAPI モードには、これらの設定は無視されます。  
+## <a name="remarks"></a>Remarks  
+ 実行するときに[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]統合モードで以降のバージョンがこの要素を組み合わせて、アプリケーションが IIS アプリケーション プールでホストされている場合に、ASP.NET がスレッドとキューの要求を管理する方法を設定できますか。 IIS 6 を実行するかを実行する[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]クラシック モードまたは ISAPI モードでは、これらの設定は無視されます。  
   
- `applicationPool`設定は、.NET Framework の特定のバージョンで実行されるすべてのアプリケーション プールに適用します。 Aspnet.config ファイルでは、設定が含まれています。 バージョン 2.0 および .NET framework 4.0 には、このファイルのバージョンがあります。 (バージョン 3.0 および 3.5、.NET Framework のファイルを共有 aspnet.config バージョン 2.0。)  
+ `applicationPool`設定、.NET Framework の特定のバージョンで実行されるすべてのアプリケーション プールに適用されます。 設定は、aspnet.config ファイルに格納されます。 このファイルのバージョン 2.0 と 4.0 の .NET Framework のバージョンがあります。 (バージョン 3.0 および .NET framework 3.5 に、バージョン 2.0 ではある aspnet.config ファイルが共有)。  
   
 > [!IMPORTANT]
->  実行する場合[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]で[!INCLUDE[win7](../../../../../includes/win7-md.md)]、すべてのアプリケーション プールの個別の aspnet.config ファイルを構成することができます。 これにより、各アプリケーション プールのスレッドのパフォーマンスを調整できます。  
+>  実行する場合[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]で[!INCLUDE[win7](../../../../../includes/win7-md.md)]、すべてのアプリケーション プールの別の aspnet.config ファイルを構成することができます。 これにより、各アプリケーション プールのスレッドのパフォーマンスを調整できます。  
   
- `maxConcurrentRequestsPerCPU`設定、「5000」の既定の設定、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]が実際には、CPU ごとの 5000 以上の要求がない限り、要求の調整をオフに効果的が ASP.NET によって制御されます。 既定の設定は、CPU あたりの同時実行を自動的に管理する CLR のスレッド プールの代わりに依存します。 広く利用非同期要求の処理、またはネットワーク I/O でブロックされている多くの実行時間の長い要求のあるアプリケーションにメリットが増加した既定の制限を[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]です。 設定`maxConcurrentRequestsPerCPU`ASP.NET 要求を処理するマネージ スレッドの使用を解除します。 0 にします。 IIS アプリケーション プールでアプリケーションを実行すると、要求が IIS I/O のスレッドで維持され、IIS のスレッドの設定によって同時実行を調整するため。  
+ `maxConcurrentRequestsPerCPU`設定、「5000」の既定の設定、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]が実際には、CPU あたり 5000 以上の要求がない限り、要求の調整をオフに効果的が ASP.NET によって制御されます。 既定の設定は、CPU あたりの同時実行を自動的に管理する CLR のスレッド プールに代わりに依存します。 非同期要求の処理の広範な使用を構成する、またはネットワーク I/O でブロックされている多くの実行時間の長い要求のアプリケーションにメリットが増加の既定の制限から、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]します。 設定`maxConcurrentRequestsPerCPU`ASP.NET 要求を処理するためのマネージ スレッドの使用を解除します。 0 にします。 アプリケーションを IIS アプリケーション プールで実行すると、IIS の I/O スレッドで常に要求とスレッドの IIS 設定によって同時実行を調整するためです。  
   
- `requestQueueLimit`設定と同じように機能、`requestQueueLimit`の属性、 [processModel](http://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d)要素は、ASP.NET アプリケーションの Web.config ファイルに設定します。 ただし、 `requestQueueLimit` aspnet.config ファイルで設定よりも優先、 `requestQueueLimit` Web.config ファイルで設定します。 つまり、両方の属性が設定されている場合 (既定では、これが true)、 `requestQueueLimit` aspnet.config ファイルで設定が優先されます。  
+ `requestQueueLimit`設定と同じように機能、`requestQueueLimit`の属性、 [processModel](https://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d)要素で、ASP.NET アプリケーションの Web.config ファイルで設定されます。 ただし、 `requestQueueLimit` aspnet.config ファイルの設定のオーバーライド、 `requestQueueLimit` Web.config ファイルで設定します。 つまり、両方の属性が設定されている場合 (既定では、これが true)、 `requestQueueLimit` aspnet.config ファイルで設定が優先されます。  
   
 ## <a name="example"></a>例  
- 次の例では、次のような状況で aspnet.config ファイルで ASP.NET プロセス全体の動作を構成する方法を示します。  
+ 次の例では、次の状況で aspnet.config ファイルに ASP.NET プロセス全体の動作を構成する方法を示します。  
   
 -   アプリケーションがホストされている、[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]アプリケーション プール。  
   

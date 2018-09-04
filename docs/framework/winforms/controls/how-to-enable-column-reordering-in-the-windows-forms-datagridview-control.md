@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], reordering columns
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
-ms.openlocfilehash: fbcafae2cb4e4cc320c31794269355d6312b95b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: cfe61860e21a7c1b8317d22880440745d49e6751
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532585"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489826"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>方法 : Windows フォーム DataGridView コントロールの列の並べ替えを有効にする
 <xref:System.Windows.Forms.DataGridView> コントロールで列の並べ替えを有効にすると、ユーザーは列ヘッダーをマウスでドラッグすることにより列を新しい場所に移動できます。 <xref:System.Windows.Forms.DataGridView> コントロールでは、<xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> プロパティ値によってユーザーが列を別の場所に移動できるかどうかが決まります。  
   
- Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[する方法: Windows フォーム DataGridView コントロールを使用して、デザイナーで列の並べ替えを有効にします。](http://msdn.microsoft.com/library/8xwtyc86\(v=vs.110\))  
+ Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[方法: Windows フォーム DataGridView コントロールを使用して、デザイナーで列の並べ替えを有効にします。](https://msdn.microsoft.com/library/8xwtyc86\(v=vs.110\))  
   
 ### <a name="to-enable-column-reordering-programmatically"></a>プログラムで列の並べ替えを有効にするには  
   

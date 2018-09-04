@@ -2,12 +2,12 @@
 title: アクティビティ デリゲートの使用
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 96a412a066342fb9c459e1388c5b58847ebac390
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb23f6a79b6f2390952f9aadc1cf08099acb289b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518953"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489930"
 ---
 # <a name="using-activity-delegates"></a>アクティビティ デリゲートの使用
 アクティビティ デリゲートを使用すると、アクティビティの作成者は、特定の署名を持つコールバックを公開できます。アクティビティのユーザーは、この署名用のアクティビティベースのハンドラーを提供できます。 2 種類のアクティビティ デリゲートを使用できます。<xref:System.Activities.ActivityAction%601> は、戻り値を持たないアクティビティ デリゲートを定義する場合に使用され、<xref:System.Activities.ActivityFunc%601> は戻り値を持つアクティビティ デリゲートを定義する場合に使用されます。  
@@ -27,9 +27,9 @@ ms.locfileid: "33518953"
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- オブジェクト初期化子の詳細については、次を参照してください。[する方法: オブジェクト コンス トラクター (c# プログラミング ガイド) を呼び出さずに初期化](http://go.microsoft.com/fwlink/?LinkId=161015)と[する方法: オブジェクト初期化子を使用してオブジェクトを宣言](http://go.microsoft.com/fwlink/?LinkId=161016)です。  
+ オブジェクト初期化子の詳細については、次を参照してください。[方法: コンス トラクター (c# プログラミング ガイド) を呼び出さずにオブジェクトを初期化](https://go.microsoft.com/fwlink/?LinkId=161015)と[方法: オブジェクト初期化子を使用してオブジェクトを宣言](https://go.microsoft.com/fwlink/?LinkId=161016)します。  
   
- 次の例では、ワークフローで <xref:System.Activities.Statements.TryCatch> アクティビティを使用します。 ワークフローによって <xref:System.ApplicationException> がスローされ、<xref:System.Activities.Statements.Catch%601> アクティビティによってこの例外が処理されます。 ハンドラーを<xref:System.Activities.Statements.Catch%601>アクティビティのアクティビティ アクションは、<xref:System.Activities.Statements.WriteLine>を使用して、アクティビティ、および例外の詳細を介して送信されるが、 `ex` <xref:System.Activities.DelegateInArgument%601>です。  
+ 次の例では、ワークフローで <xref:System.Activities.Statements.TryCatch> アクティビティを使用します。 ワークフローによって <xref:System.ApplicationException> がスローされ、<xref:System.Activities.Statements.Catch%601> アクティビティによってこの例外が処理されます。 ハンドラーは、<xref:System.Activities.Statements.Catch%601>アクティビティのアクティビティのアクションは、<xref:System.Activities.Statements.WriteLine>を使用して、アクティビティ、および例外の詳細をフローさせるが、 `ex` <xref:System.Activities.DelegateInArgument%601>。  
   
  [!code-csharp[CFX_WorkflowApplicationExample#33](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
   
