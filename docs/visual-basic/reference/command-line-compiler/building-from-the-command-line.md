@@ -13,38 +13,38 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: 391e16da86aa741a1b78f35d9afd95688f33c4db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89bcd6e0e7c1cc867bf853dc9bbe96628942ace2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654136"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542272"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>コマンド ラインからのビルド (Visual Basic)
-Visual Basic プロジェクトで構成された 1 つまたは複数の独立したソース ファイルです。 コンパイルと呼ばれる過程で、これらのファイルが 1 つのパッケージにまとめられて — アプリケーションとして実行できる 1 つの実行可能ファイルです。  
+Visual Basic プロジェクトでは、1 つ以上の別のソース ファイルの構成されます。 コンパイルと呼ばれるプロセス中にこれらのファイルが 1 つのパッケージにまとめられて — アプリケーションとして実行できる 1 つの実行可能ファイルです。  
   
- Visual Basic では、Visual Studio 統合開発環境 (IDE) 内からプログラムをコンパイルする代わりに、コマンド ライン コンパイラを提供します。 コマンド ライン コンパイラが状況を必要としない、IDE の機能の完全なセット用に設計された — たとえば、またはする場合を使用して限られたシステムのメモリまたはストレージの領域を持つコンピューター用の記述。  
+ Visual Basic では、Visual Studio 統合開発環境 (IDE) 内からプログラムをコンパイルする代わりに、コマンド ライン コンパイラを提供します。 コマンド ライン コンパイラが状況を必要としない IDE の機能の完全なセット用に設計されたなどとを使用する限られたシステムのメモリまたは記憶域スペースを持つコンピューターの書き込み。  
   
   Visual Studio IDE 内からソース ファイルをコンパイルするには、選択、**ビルド**コマンドを**ビルド**メニュー。  
   
 > [!TIP]
->  関連付けられているに関する情報を表示するには、Visual Studio IDE を使用してプロジェクト ファイルをビルドするときに**vbc**コマンドと、出力ウィンドウにそのスイッチ。 この情報を表示、開く、[オプション ダイアログ ボックス、プロジェクトとソリューションをビルドおよび実行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)、し、設定、 **MSBuild プロジェクトのビルド出力の詳細度**に**標準**またはより高度な詳細度。 詳細については、「[方法: ビルド ログ ファイルを表示、保存、および構成する](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7)」をご覧ください。  
+>  関連付けられているに関する情報を表示するには、Visual Studio IDE を使用してプロジェクト ファイルをビルドするときに**vbc**コマンドと、出力ウィンドウにそのスイッチ。 この情報を表示するには、開く、[オプション ダイアログ ボックス、プロジェクトとソリューションをビルドおよび実行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)、し、設定、 **MSBuild プロジェクト ビルドの出力の詳細**に**標準**または、詳細度の高いレベル。 詳細については、「[方法: ビルド ログ ファイルを表示、保存、および構成する](https://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7)」をご覧ください。  
   
- MSBuild を使用して、コマンド プロンプトでのプロジェクト (.vbproj) ファイルをコンパイルすることができます。 詳細については、次を参照してください。[コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)と[チュートリアル: MSBuild を使用して](/visualstudio/msbuild/walkthrough-using-msbuild)です。  
+ MSBuild を使用してコマンド プロンプトで、プロジェクト (.vbproj) ファイルをコンパイルすることができます。 詳細については、次を参照してください。[コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)と[チュートリアル: MSBuild の使用](/visualstudio/msbuild/walkthrough-using-msbuild)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法 : コマンド ライン コンパイラを起動する](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  
- MS-DOS のプロンプトで、または特定のサブディレクトリからコマンド ライン コンパイラを起動する方法について説明します。  
+ MS-DOS のプロンプトで、または特定のサブディレクトリからのコマンド ライン コンパイラを起動する方法について説明します。  
   
  [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  独自の用途を変更するコマンドラインのサンプルの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
  [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- アルファベット順または目的別に整理コンパイラ オプションの一覧を提供します。  
+ アルファベット順または目的別に整理のコンパイラ オプションの一覧を提供します。  
   
  [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- コードの特定のセクションをコンパイルする方法について説明します。  
+ 特定のセクションのコードをコンパイルする方法について説明します。  
   
  [Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
- 対象が別のビルドに含まれます、プロジェクトのプロパティ を選択およびが正しい順序でプロジェクトのビルドを整理する方法について説明します。
+ 対象はさまざまなビルドに含まれます、プロジェクトのプロパティ を選択およびプロジェクトの正しい順序でビルドを整理する方法について説明します。

@@ -2,18 +2,18 @@
 title: SqlClient による LocalDB のサポート
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 33368ca4b2dc5397087d29e515db6c1094e350bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359798"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532710"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient による LocalDB のサポート
-SQL Server コード名 Denali 以降は、LocalDB と呼ばれる SQL Server の簡易バージョンは使用できます。 このトピックでは、LocalDB データベースに接続する方法について説明します。  
+SQL Server コード名 Denali 以降では、LocalDB と呼ばれる SQL Server の軽量バージョンは提供されます。 このトピックでは、LocalDB データベースに接続する方法について説明します。  
   
-## <a name="remarks"></a>コメント  
- LocalDB をインストールして、LocalDB インスタンスを構成する方法を含む LocalDB の詳細については、SQL Server オンライン ブックを参照してください。  
+## <a name="remarks"></a>Remarks  
+ LocalDB は、LocalDB をインストールして、LocalDB インスタンスを構成する方法などの詳細については、SQL Server オンライン ブックを参照してください。  
   
  LocalDB の主な機能の概要  
   
@@ -31,7 +31,7 @@ SQL Server コード名 Denali 以降は、LocalDB と呼ばれる SQL Server �
   
  `User Instance=True` は LocalDB データベースに接続するときに使用することはできません。  
   
- LocalDB は [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065)からダウンロードできます。 LocalDB インスタンスのデータ変更に sqlcmd.exe を使用する場合は、SQL Server 2012、SQL Server 2012 Feature Pack から取得することもできます。 sqlcmd が必要です。  
+ LocalDB からダウンロードできます[Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065)します。 Sqlcmd.exe を使用する LocalDB インスタンスのデータを変更するため、SQL Server 2012、SQL Server 2012 Feature Pack から取得することもできます。 から sqlcmd を必要があります。  
   
 ## <a name="programmatically-create-a-named-instance"></a>名前付きインスタンスをプログラムによって作成する  
  アプリケーションは、次のように名前付きインスタンスを作成してデータベースを指定できます。  
@@ -60,4 +60,4 @@ SQL Server コード名 Denali 以降は、LocalDB と呼ばれる SQL Server �
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server の機能と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

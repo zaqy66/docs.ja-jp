@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF content [Windows Forms], hosting in Windows Forms
 - interoperability [WPF]
 ms.assetid: a1f7a90c-0bbb-4781-8c3c-8cc8bef2488d
-ms.openlocfilehash: d17273f52d0cef118b79fef03af72522f6677073
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15cab9266af5840aa4b37a62b71bd5010b7a859a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529822"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535643"
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a>チュートリアル: デザイン時のホストされている WPF 要素のプロパティの変更
 このチュートリアルでは、Windows フォームでホストされている Windows Presentation Foundation (WPF) コントロールのプロパティ値を変更する方法について説明します。  
@@ -28,7 +28,7 @@ ms.locfileid: "33529822"
 -   Visual Studio の WPF デザイナーを使用してプロパティの値を変更する。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
@@ -43,16 +43,16 @@ ms.locfileid: "33529822"
   
 #### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
--   Visual Basic または Visual c# のという名前で新しい Windows フォーム アプリケーション プロジェクトを作成`WpfHost`です。  
+-   Visual Basic または Visual c# のという名前で新しい Windows フォーム アプリケーション プロジェクトを作成する`WpfHost`します。  
   
 ## <a name="creating-the-wpf-control"></a>WPF コントロールの作成  
  プロジェクトに WPF コントロール型を追加したら、フォーム状に配置できます。  
   
 #### <a name="to-create-wpf-controls"></a>WPF コントロールを作成するには  
   
-1.  新しい WPF <xref:System.Windows.Controls.UserControl> をプロジェクトに追加します。 コントロール型の既定の名前である `UserControl1.xaml` を使用します。 詳細については、次を参照してください。[チュートリアル: 新しい WPF コンテンツの作成デザイン時に Windows フォームで](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)です。  
+1.  新しい WPF <xref:System.Windows.Controls.UserControl> をプロジェクトに追加します。 コントロール型の既定の名前である `UserControl1.xaml` を使用します。 詳細については、次を参照してください。[チュートリアル: 新しい WPF コンテンツの作成には、デザイン時に Windows フォーム](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)します。  
   
-2.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.Controls.Control.Background%2A>プロパティを`Blue`です。  
+2.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.Controls.Control.Background%2A>プロパティを`Blue`します。  
   
 3.  プロジェクトをビルドします。  
   
@@ -63,15 +63,15 @@ ms.locfileid: "33529822"
   
 1.  Windows フォーム デザイナーで `Form1` を開きます。  
   
-2.  **ツールボックス**で、 **WPF ユーザー コントロール** タブをダブルクリックして`UserControl1`のインスタンスを作成する`UserControl1`フォームにします。  
+2.  **ツールボックス**で、 **WPF ユーザー コントロール** タブで、ダブルクリックして`UserControl1`のインスタンスを作成する`UserControl1`フォームにします。  
   
      `UserControl1` のインスタンスは、`elementHost1` という名前の新しい <xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストされます。  
   
-3.  **ElementHost タスク**スマート タグ パネルで、**ホストされているコンテンツの編集**です。  
+3.  **ElementHost タスク**スマート タグ パネルで、**ホストされているコンテンツの編集**します。  
   
      UserControl1.xaml が WPF デザイナーで開きます。  
   
-4.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.Controls.Control.Background%2A>プロパティを`Red`です。  
+4.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.Controls.Control.Background%2A>プロパティを`Red`します。  
   
 5.  プロジェクトをリビルドします。  
   
@@ -87,4 +87,4 @@ ms.locfileid: "33529822"
  [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [WPF コントロールの使用](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [WPF デザイナー](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+ [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)

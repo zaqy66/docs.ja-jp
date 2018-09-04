@@ -2,12 +2,12 @@
 title: SQL Server での安全な動的 SQL の作成
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 5357bb4ad82f5fe9a70f15a540aba355e847ad71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753475"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538188"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server での安全な動的 SQL の作成
 SQL インジェクションとは、悪意のあるユーザーによって、有効な入力データの代わりに Transact-SQL ステートメントが入力されることをいいます。 この入力データが検証されずにサーバーに直接渡され、挿入されたコードがアプリケーションでそのまま実行された場合、その攻撃によってデータが破損または破壊される可能性があります。  
@@ -17,7 +17,7 @@ SQL インジェクションとは、悪意のあるユーザーによって、�
 ## <a name="anatomy-of-a-sql-injection-attack"></a>SQL インジェクション攻撃の分析  
  インジェクションのプロセスは、テキスト文字列を途中で終了し、新しいコマンドを追加することによって行われます。 挿入されたコマンドが実行される前に別の文字列が追加される可能性があるため、攻撃者は挿入する文字列をコメント記号 "--" で終了させます。 後続のテキストは実行時には無視されます。 セミコロン (;) 区切り記号を使用することで、複数のコマンドを挿入できます。  
   
- 挿入された SQL コードが構文的に正しい限り、改ざんをプログラムによって検出するのは不可能です。 そのため、すべてのユーザー入力を検証し、使用しているサーバーで作成された SQL コマンドを実行するコードを注意深くレビューする必要があります。 検証されていないユーザー入力は決して連結しないでください。 文字列の連結は、スクリプト インジェクションの最初の段階です。  
+ 挿入された SQL コードが構文的に正しい限り、改ざんをプログラムによって検出するのは不可能です。 そのため、すべてのユーザー入力を検証し、使用しているサーバーで作成された SQL コマンドを実行するコードを注意深く確認する必要があります。 検証されていないユーザー入力は決して連結しないでください。 文字列の連結は、スクリプト インジェクションの最初の段階です。  
   
  次に、有用なガイドラインを示します。  
   
@@ -53,7 +53,7 @@ SQL インジェクションとは、悪意のあるユーザーによって、�
 ### <a name="execute-as"></a>EXECUTE AS  
  EXECUTE AS 句を使用すると、呼び出し元の権限が EXECUTE AS 句で指定されたユーザーの権限に置き換えられます。 入れ子になったストアド プロシージャやトリガーは、プロキシ ユーザーのセキュリティ コンテキストで実行されることに注意してください。 これにより、行レベルのセキュリティに依存するアプリケーションや監査を必要とするアプリケーションが中断されることがあります。 ユーザーの識別情報を返す関数では、最初の呼び出し元ではなく EXECUTE AS 句で指定されたユーザーが返されます。 プロシージャの実行後、または REVERT ステートメントが発行されたときにのみ、実行コンテキストが最初の呼び出し元に戻ります。  
   
-### <a name="certificate-signing"></a>証明書署名  
+### <a name="certificate-signing"></a>証明書による署名  
  証明書により署名されているストアド プロシージャが実行されると、証明書ユーザーに許可される権限が呼び出し元の権限にマージされます。 実行コンテキストは変わりません。証明書ユーザーは呼び出し元の権限を借用しません。 ストアド プロシージャの署名を実装するには、いくつかの手順を実行する必要があります。 プロシージャが変更されるたびに、再度署名する必要があります。  
   
 ### <a name="cross-database-access"></a>複数のデータベースへのアクセス  
@@ -66,11 +66,11 @@ SQL インジェクションとは、悪意のあるユーザーによって、�
 |--------------|-----------------|  
 |「[ストアド プロシージャ](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)」と「[SQL インジェクション](/sql/relational-databases/security/sql-injection)」 (SQL Server オンライン ブック)|ストアド プロシージャの作成方法と SQL インジェクションのしくみについて説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [SQL Server でのストアド プロシージャを使用したアクセス許可の管理](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [SQL Server でのストアド プロシージャの署名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [SQL Server での借用を使用したアクセス許可のカスタマイズ](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

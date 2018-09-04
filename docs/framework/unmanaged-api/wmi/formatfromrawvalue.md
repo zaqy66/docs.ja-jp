@@ -1,6 +1,6 @@
 ---
 title: FormatFromRawValue 関数 (アンマネージ API リファレンス)
-description: FormatFromRawValue 関数では、生のパフォーマンス データを指定した形式に変換します。
+description: FormatFromRawValue 関数では、生のパフォーマンス データを指定された形式に変換します。
 ms.date: 11/21/2017
 api_name:
 - FormatFromRawValue
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460422"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542168"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 関数
-形式の変換が時間ベースの場合は、指定された形式に 1 つの生のパフォーマンス データの値または生のパフォーマンス データの 2 つの値に変換します。   
+1 つの生のパフォーマンス データ値が指定した形式に変換されます。この形式変換が時間ベースである場合は、2 つの生のパフォーマンス データ値が変換されます。   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,53 +44,53 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>パラメーター
 
 `dwCounterType`  
-[in]カウンターの型。 カウンターの種類の一覧は、次を参照してください。 [WMI パフォーマンス カウンターの種類](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx)です。 `dwCounterType` 以外の場合は、どのカウンター型でもかまいません`PERF_LARGE_RAW_FRACTION`と`PERF_LARGE_RAW_BASE`です。 
+[in]カウンターの型。 カウンターの種類の一覧は、次を参照してください。 [WMI パフォーマンス カウンターの種類](/windows/desktop/WmiSdk/wmi-performance-counter-types)します。 `dwCounterType` 以外の任意のカウンター タイプ`PERF_LARGE_RAW_FRACTION`と`PERF_LARGE_RAW_BASE`します。 
 
 `dwFormat`  
-[in]生のパフォーマンス データを変換先形式です。 次の値のいずれかを指定できます。
+[in]生のパフォーマンス データを変換先の形式。 次の値のいずれかを指定できます。
 
-|定数  |[値]  |説明 |
+|定数  |値  |説明 |
 |---------|---------|---------|
-| `PDH_FMT_DOUBLE` |0x00000200 | 倍精度浮動小数点値として計算された値を返します。 | 
+| `PDH_FMT_DOUBLE` |0x00000200 | 倍精度浮動小数点値として計算される値を返します。 | 
 | `PDH_FMT_LARGE` | 0x00000400 | 計算される値を 64 ビット整数として返します。 |
 | `PDH_FMT_LONG` | 0x00000100 | 計算される値を 32 ビット整数として返します。 |
 
-次のスケーリングのフラグのいずれかの論理和は以前の値のいずれかのことができます。
+次のスケーリング フラグのいずれかの論理和前の値のいずれかのことができます。
 
-|定数  |[値]  |説明 |
+|定数  |値  |説明 |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | カウンターのスケール ファクターは適用されません。 |
-| `PDH_FMT_1000` | 0x00002000 | 1,000 最終的な値を乗算します。 | 
+| `PDH_FMT_1000` | 0x00002000 | 1000 で最終的な値を乗算します。 | 
 
 `pTimeBase`  
-[in]形式の変換が必要な場合、時間ベースへのポインター。 時間ベースの情報は、形式変換の必要はありません、このパラメーターの値は無視されます。
+[in]形式の変換に必要な場合、時間ベースへのポインター。 時間ベースの情報は、形式変換の必要はありません、このパラメーターの値は無視されます。
 
-`pRawValue1` [in]ポインター、 [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)生のパフォーマンスの値を表す構造です。
+`pRawValue1` [in]ポインターを[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)生のパフォーマンス値を表す構造体です。
 
-`pRawValue2` [in]ポインター、 [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)を 2 番目の生のパフォーマンス値を表す構造です。 このパラメーターを指定する場合は、2 番目の生のパフォーマンス値が必要ではありません、`null`です。
+`pRawValue2` [in]ポインターを[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) 2 番目の生のパフォーマンス値を表す構造体です。 2 番目の生のパフォーマンス値が必要でない場合、このパラメーターがあります`null`します。
 
-`pFmtValue` [out]ポインター、 [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx)書式設定されたパフォーマンスの値を受け取る。
+`pFmtValue` [out]ポインターを[ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx)を書式設定されたパフォーマンスの値を受け取る構造体。
 
 ## <a name="return-value"></a>戻り値
 
 この関数では、次の値が返されます。
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
-| `ERROR_SUCCESS` | 0 | 関数呼び出しが成功します。 |
-| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | 必須の引数は、見つからないか正しくないです。 | 
-| `PDH_INVALID_HANDLE` | 0xC0000BBC | ハンドルが有効な PDH オブジェクトではありません。 |
+| `ERROR_SUCCESS` | 0 | 関数呼び出しは成功します。 |
+| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | 必須の引数が不足しているか、正しくありません。 | 
+| `PDH_INVALID_HANDLE` | 0xC0000BBC | ハンドルが有効な PDH オブジェクトです。 |
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数への呼び出しをラップする、 [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx)関数。
+この関数の呼び出しをラップする、 [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx)関数。
 
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ライブラリ:** PerfCounter.dll  
+ **ライブラリ:** どちら  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目  
 [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

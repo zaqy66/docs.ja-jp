@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 927158f940d9b96cd06873c7d3e710be91b887e9
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 2b0719320db5843d5d010bfbd70e551646e3ded9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071619"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533392"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value プロパティ (Visual Basic)
 コレクションの最初の要素の値にアクセスできるように<xref:System.Xml.Linq.XElement>オブジェクト。  
@@ -32,23 +32,23 @@ object.Value
 |`object`|必須。 <xref:System.Xml.Linq.XElement> オブジェクトのコレクション。|  
   
 ## <a name="return-value"></a>戻り値  
- A `String` 、コレクションの最初の要素の値を格納しているか、`Nothing`コレクションが空の場合。  
+ A `String` 、コレクションの最初の要素の値を格納しているまたは`Nothing`コレクションが空の場合。  
   
 ## <a name="remarks"></a>Remarks  
- <xref:System.Xml.Linq.XElement.Value%2A>プロパティでは、最初の要素のコレクション内の値にアクセスする簡単な<xref:System.Xml.Linq.XElement>オブジェクト。 まず、このプロパティは、コレクションに少なくとも 1 つのオブジェクトが含まれているかどうかを確認します。 このプロパティを返しますのかどうか、コレクションが空、`Nothing`です。 このプロパティがの値を返しますそれ以外の場合、<xref:System.Xml.Linq.XElement.Value%2A>コレクションの最初の要素のプロパティです。  
+ <xref:System.Xml.Linq.XElement.Value%2A>プロパティでは、コレクションの最初の要素の値にアクセスしやすい<xref:System.Xml.Linq.XElement>オブジェクト。 このプロパティは、少なくとも 1 つのオブジェクトがコレクションに含まれるかどうかをまず確認します。 このプロパティを返しますのかどうか、コレクションが空、`Nothing`します。 このプロパティがの値を返しますそれ以外の場合、<xref:System.Xml.Linq.XElement.Value%2A>コレクションの最初の要素のプロパティ。  
   
 > [!NOTE]
->  使用して XML 属性の値にアクセスするときに、'\@' 識別子、属性が返される値として、`String`を明示的に指定する必要はありませんし、<xref:System.Xml.Linq.XAttribute.Value%2A>プロパティです。  
+>  使用して XML 属性の値にアクセスするときに、'\@' 識別子、属性の値として返されます、`String`を明示的に指定する必要はありませんし、<xref:System.Xml.Linq.XAttribute.Value%2A>プロパティ。  
   
- コレクション内の他の要素にアクセスするには、XML 拡張インデクサー プロパティを使用することができます。 詳細については、次を参照してください。[拡張インデクサー プロパティ](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)です。  
+ コレクション内の他の要素にアクセスするには、XML 拡張機能インデクサー プロパティを使用できます。 詳細については、次を参照してください。[拡張インデクサー プロパティ](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)します。  
   
 ## <a name="inheritance"></a>継承  
- ほとんどのユーザーが実装する必要はありません<xref:System.Collections.Generic.IEnumerable%601>、およびそのためこのセクションを無視することができます。  
+ ほとんどのユーザーが実装する必要はありません<xref:System.Collections.Generic.IEnumerable%601>、し、このため、このセクションを無視できます。  
   
- <xref:System.Xml.Linq.XElement.Value%2A>拡張機能を実装する型のプロパティは、`IEnumerable(Of XElement)`です。 拡張メソッドのバインディングと同様には、この拡張機能プロパティのバインディング: 型、インターフェイスの 1 つを実装して"Value"という名前を持つプロパティが定義されて、そのプロパティが優先順位、拡張機能のプロパティです。 つまり、この<xref:System.Xml.Linq.XElement.Value%2A>プロパティを実装するクラスの新しいプロパティを定義することによりオーバーライドできます`IEnumerable(Of XElement)`です。  
+ <xref:System.Xml.Linq.XElement.Value%2A>プロパティを実装する型の拡張機能プロパティは、`IEnumerable(Of XElement)`します。 この拡張機能プロパティのバインドは、バインディングの拡張メソッドに似ています。 そのプロパティに、拡張機能プロパティに優先が型は、インターフェイスの 1 つを実装し、"Value"の名前を持つプロパティを定義、場合。 つまり、この<xref:System.Xml.Linq.XElement.Value%2A>プロパティを実装するクラスの新しいプロパティを定義することでオーバーライドする`IEnumerable(Of XElement)`します。  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、<xref:System.Xml.Linq.XElement.Value%2A>プロパティのコレクションの最初のノードへのアクセスを<xref:System.Xml.Linq.XElement>オブジェクト。 例では、すべての子ノードがという名前のコレクションを取得する子軸プロパティを使用して`phone`内にある、`contact`オブジェクト。  
+ 次の例は、使用する方法を示します、<xref:System.Xml.Linq.XElement.Value%2A>プロパティのコレクションの最初のノードへのアクセスを<xref:System.Xml.Linq.XElement>オブジェクト。 例では、という名前のすべての子ノードのコレクションを取得する子軸プロパティを使用して`phone`内にある、`contact`オブジェクト。  
   
  [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
   
@@ -57,7 +57,7 @@ object.Value
  `Phone number: 206-555-0144`  
   
 ## <a name="example"></a>例  
- 次の例は、のコレクションから、XML 属性の値を取得する方法を示しています。<xref:System.Xml.Linq.XAttribute>オブジェクト。 この例の値を表示する属性軸プロパティを使用して、`type`のすべての属性、`phone`要素。  
+ 次の例は、のコレクションから XML 属性の値を取得する方法を示しています。<xref:System.Xml.Linq.XAttribute>オブジェクト。 例では、値を表示する属性軸プロパティを使用して、`type`のすべての属性、`phone`要素。  
   
  [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   
@@ -70,7 +70,7 @@ object.Value
 ## <a name="see-also"></a>関連項目  
  <xref:System.Xml.Linq.XElement>  
  <xref:System.Collections.Generic.IEnumerable%601>  
- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)  
  [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)  
  [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  [拡張メソッド](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  

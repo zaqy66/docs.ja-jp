@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d08cfbde82f74dcf88ddadd844854bdfeb403935
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 59e3f54f4d3ce0c191193ff63a3c2bce5b93a1bd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754263"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538032"
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt;要素
 部分名が使用された場合に動的に読み込む必要があるアセンブリの完全名を指定します。  
@@ -41,7 +41,7 @@ ms.locfileid: "32754263"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`partialName`|必須の属性です。<br /><br /> コードに表示されるアセンブリの部分名を指定します。|  
+|`partialName`|必須の属性です。<br /><br /> コードに表示されるアセンブリの部分的な名前を指定します。|  
 |`fullName`|必須の属性です。<br /><br /> グローバル アセンブリ キャッシュに表示されるアセンブリの完全な名前を指定します。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -55,13 +55,13 @@ ms.locfileid: "32754263"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
-## <a name="remarks"></a>コメント  
- 呼び出す、<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>部分アセンブリ名を使用して、メソッド、共通言語ランタイムによってのみ、アプリケーション ベース ディレクトリ内のアセンブリを探すようにします。 使用して、  **\<qualifyAssembly >** (名前、バージョン、公開キー トークン、およびカルチャ) の完全なアセンブリ情報を提供し、により、共通言語ランタイムを検索するアプリケーション構成ファイル内の要素グローバル アセンブリ キャッシュにアセンブリ。  
+## <a name="remarks"></a>Remarks  
+ 呼び出す、<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>部分的なアセンブリ名を使用して、メソッドにより、共通言語ランタイム アプリケーション ベース ディレクトリのみでアセンブリを検索します。 使用して、  **\<qualifyAssembly >** (名前、バージョン、公開キー トークン、およびカルチャ) のアセンブリの完全な情報を入力し、検索する共通言語ランタイムが発生する、アプリケーション構成ファイル内の要素グローバル アセンブリ キャッシュ内のアセンブリ。  
   
- **FullName**属性がアセンブリ id の 4 つのフィールドを含める必要があります。 名前、バージョン、公開キー トークン、およびカルチャ。 **それよりも**属性では、アセンブリは参照部分的にする必要があります。 アセンブリのテキストの名前 (最も一般的なケース) を少なくとも指定する必要がありますが、バージョン、公開キー トークン、またはカルチャ (または、4 つが、すべての 4 つの任意の組み合わせ) にも含めることができます。 **それよりも**の呼び出しで指定された名前に一致する必要があります。 たとえば、指定することはできません`"math"`として、**それよりも**構成ファイルと呼び出し属性`Assembly.Load("math, Version=3.3.3.3")`コードにします。  
+ **FullName**属性がアセンブリ id の 4 つのフィールドを含める必要があります。 名前、バージョン、公開キー トークン、およびカルチャ。 **それよりも**属性は、アセンブリを参照部分的にする必要があります。 アセンブリのテキスト名 (最も一般的なケース) を少なくとも指定する必要がありますが、バージョン、公開キー トークン、またはカルチャ (または、4 つが、すべての 4 つの任意の組み合わせ) にも含めることができます。 **それよりも**の呼び出しで指定された名前に一致する必要があります。 たとえば、指定することはできません`"math"`として、**それよりも**、構成ファイルと呼び出し属性`Assembly.Load("math, Version=3.3.3.3")`コードにします。  
   
 ## <a name="example"></a>例  
- 次の例は、呼び出しを論理的にオンに`Assembly.Load("math")`に`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`です。  
+ 次の例は、呼び出しを論理的にオンに`Assembly.Load("math")`に`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`します。  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ ms.locfileid: "32754263"
 ## <a name="see-also"></a>関連項目  
  [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [NIB: 部分アセンブリ参照](http://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+ [NIB: 部分アセンブリ参照](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)

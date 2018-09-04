@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 910da1073f0dc787be26d2c87b5bf49b4115aaef
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: db4a1d1e515dee5b107b2c2067d8b0fe58ccf836
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809902"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537775"
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 の新機能
 このトピックでは、Windows Communication Foundation (WCF) の新機能について説明します。  
@@ -19,7 +19,7 @@ ms.locfileid: "33809902"
  WCF 4.5 アプリケーションの開発および保守を容易にするために多大な労力が費やされてきました。 詳細については、次を参照してください。 [WCF の単純化機能](../../../docs/framework/wcf/wcf-simplification-features.md)します。  
   
 ### <a name="task-based-async-support"></a>タスク ベースの非同期のサポート  
- 既定では、サービス参照の追加によって、タスクを返す非同期サービス操作メソッドが生成されます。 この処理は、同期メソッドと非同期メソッドの両方に対して行われます。 これにより、新しいタスク ベースの非同期プログラミング モデルを使用して、サービス操作を非同期に呼び出すことができます。 生成されたプロキシ メソッドを呼び出すと、WCF によって非同期操作を表すタスク オブジェクトが構築され、そのタスクが返されます。 操作が完了したら、タスクを完了します。  非同期操作を実装する場合は、タスク ベースの非同期操作として実装できます。 詳細については、「[同期と非同期の操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)です。  
+ 既定では、サービス参照の追加によって、タスクを返す非同期サービス操作メソッドが生成されます。 この処理は、同期メソッドと非同期メソッドの両方に対して行われます。 これにより、新しいタスク ベースの非同期プログラミング モデルを使用して、サービス操作を非同期に呼び出すことができます。 生成されたプロキシ メソッドを呼び出すと、WCF によって非同期操作を表すタスク オブジェクトが構築され、そのタスクが返されます。 操作が完了すると、タスクを完了します。  非同期操作を実装する場合は、タスク ベースの非同期操作として実装できます。 詳細については、「[同期および非同期操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)します。  
   
 ### <a name="simplified-generated-configuration-files"></a>生成された構成ファイルの簡略化  
  Visual Studio でサービス参照を追加したり、SvcUtil.exe ツールを使用したりすると、クライアント構成ファイルが生成されます。 以前のバージョンの WCF では、このような構成ファイルには、各バインド プロパティの値が既定値であっても、その値が含まれていました。 WCF 4.5 では、生成された構成ファイルには、既定値以外の値に設定されているバインド プロパティのみが含まれます。  
@@ -30,10 +30,10 @@ ms.locfileid: "33809902"
  WCF では、コントラクト優先の開発がサポートされるようになりました。 svcutl.exe には、WSDL ドキュメントからサービス コントラクトとデータ コントラクトを生成できるようにする /serviceContract スイッチがあります。  
   
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>ポータブル サブセット プロジェクトからのサービス参照の追加  
- ポータブル サブセット プロジェクトにより、.NET アセンブリ プログラマは 1 つのソース ツリーを保持しつつ、システムを構築できるようになります。また、ポータブル サブセット プロジェクトは、複数の .NET プラットフォーム (デスクトップ、Silverlight、Windows Phone、および XBOX) をサポートしています。 ポータブル サブセット プロジェクトは、任意の .NET プラットフォームで使用できる .NET framework アセンブリである .NET ポータブル ライブラリのみを参照します。 開発者から見れば、他の WCF クライアント アプリケーション内でサービス参照を追加するのと同じです。 詳細については、次を参照してください。[ポータブル サブセット プロジェクトでサービス参照の追加](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)です。  
+ ポータブル サブセット プロジェクトにより、.NET アセンブリ プログラマは 1 つのソース ツリーを保持しつつ、システムを構築できるようになります。また、ポータブル サブセット プロジェクトは、複数の .NET プラットフォーム (デスクトップ、Silverlight、Windows Phone、および XBOX) をサポートしています。 ポータブル サブセット プロジェクトは、任意の .NET プラットフォームで使用できる .NET framework アセンブリである .NET ポータブル ライブラリのみを参照します。 開発者から見れば、他の WCF クライアント アプリケーション内でサービス参照を追加するのと同じです。 詳細については、次を参照してください。[ポータブル サブセット プロジェクトでサービス参照の追加](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)します。  
   
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 互換性モードの既定値の変更  
- WCF には ASP.NET 互換性モードが用意されています。これにより、開発者は WCF サービスを作成する際に ASP.NET HTTP パイプラインの機能へのフル アクセスが付与されます。 このモードを使用するに設定する必要があります、`aspNetCompatibilityEnabled`属性を true に、 [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config のセクションです。さらに、この appDomain 内のサービスでは、`RequirementsMode` の <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> プロパティを <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> または <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> に設定しておく必要があります。 既定では<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>に設定されているようになりました<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>です。 詳細については、次を参照してください。 [Windows Communication Foundation の新](../../../docs/framework/wcf/whats-new.md)と[WCF サービスと ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)です。  
+ WCF には ASP.NET 互換性モードが用意されています。これにより、開発者は WCF サービスを作成する際に ASP.NET HTTP パイプラインの機能へのフル アクセスが付与されます。 このモードを使用するに設定する必要があります、`aspNetCompatibilityEnabled`属性を true に、 [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config のセクション。さらに、この appDomain 内のサービスでは、`RequirementsMode` の <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> プロパティを <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> または <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> に設定しておく必要があります。 既定で<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>に設定されているようになりました<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>します。 詳細については、次を参照してください。 [Windows Communication Foundation の新](../../../docs/framework/wcf/whats-new.md)と[WCF サービスと ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)します。  
   
 ### <a name="new-transport-default-values"></a>トランスポートの新しい既定値  
  構成を簡略化するため、多くのトランスポート プロパティの既定値が変更されました。 詳細については、次を参照してください。 [WCF の単純化機能](../../../docs/framework/wcf/wcf-simplification-features.md)します。  
@@ -57,7 +57,7 @@ ms.locfileid: "33809902"
  サード パーティの WSDL の処理スタックには、xsd:import を使用して他のドキュメントに依存している WSDL ドキュメントを処理できないものもあります。  WCF により、すべての WSDL 情報が 1 つのドキュメントで返されるように指定できるようになりました。 単一 WSDL ドキュメントをリクエストするには、サービスからメタデータを要求するときに、その URI に "?singleWSDL" を追加します。  
   
 ## <a name="websocket-support"></a>WebSocket のサポート  
- Websocket は、TCP と同様のパフォーマンス特性を持つポート 80 と 443 で真の双方向通信を実現するテクノロジです。 WebSocket トランスポート経由の通信をサポートするために 2 つの新しいバインドが追加されました。 <xref:System.ServiceModel.NetHttpBinding> および <xref:System.ServiceModel.NetHttpsBinding>。 詳細については、次を参照してください。:[システム指定のバインディング](../../../docs/framework/wcf/system-provided-bindings.md)です。  
+ Websocket は、TCP と同様のパフォーマンス特性を持つポート 80 と 443 で真の双方向通信を実現するテクノロジです。 WebSocket トランスポート経由の通信をサポートするために 2 つの新しいバインドが追加されました。 <xref:System.ServiceModel.NetHttpBinding> および <xref:System.ServiceModel.NetHttpsBinding>。 詳細については、次を参照してください。: [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)します。  
   
 ## <a name="new-transport-default-values"></a>トランスポートの新しい既定値  
  次の表は、変更された設定と追加情報の場所を示しています。  
@@ -66,15 +66,15 @@ ms.locfileid: "33809902"
 |--------------|--------|-----------------|------------------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * プロセッサの数|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * トランスポート用のプロセッサの数<br /><br /> 4 \* SMSvcHost.exe 用のプロセッサの数|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Net.TCP ポート共有サービスを構成します。](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * トランスポート用のプロセッサの数<br /><br /> 4 \* SMSvcHost.exe のプロセッサの数|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Net.TCP ポート共有サービスを構成します。](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * プロセッサの数|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
-|receiveTimeout|SMSvcHost.exe|30 秒|[Net.TCP ポート共有サービスを構成する](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|receiveTimeout|SMSvcHost.exe|30 秒|[Net.TCP ポート共有サービスを構成する](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
   
 ## <a name="xml-editor-tooltips"></a>XML エディターのツールヒント  
  新規および既存の WCF サービスの開発者がサービスを構成するうえで役立つよう、Visual Studio の XML エディターでは、サービス構成ファイルに含まれる各構成要素とそのプロパティにツールヒントが表示されるようになりました。  
   
 ## <a name="configuring-wcf-services-in-code"></a>コード内での WCF サービスの構成  
- Windows Communication Foundation (WCF) では、構成ファイルまたはコードを使用してサービスの構成をすることができます。  構成ファイルは、サービスを配置した後に構成する必要がある場合に便利です。 構成ファイルを使用する場合、IT 専門家は構成ファイルを更新するだけで、再コンパイルの必要はありません。 ただし、構成ファイルの管理は複雑で難しくなる場合があります。 構成ファイルのデバッグはサポートされていません。また、構成要素は名前で参照されるため、構成ファイルの作成時にエラーが発生しやすく、構成ファイルの作成が困難になります。 WCF では、コードでサービスを構成することもできます。 以前のバージョンのコードで WCF (4.0 およびそれ以前) 構成サービスが自己ホスト型では、簡単、<xref:System.ServiceModel.ServiceHost>クラスを使用するエンドポイントと、ServiceHost.Open を呼び出す前に動作を構成します。 ただし、Web ホストのシナリオでは、<xref:System.ServiceModel.ServiceHost> クラスにアクセスできません。 Web ホスト サービスを構成するには、`System.ServiceModel.ServiceHostFactory` を作成して必要な構成を実行する <xref:System.ServiceModel.Activation.ServiceHostFactory> を作成する必要がありました。 .NET 4.5 以降で、WCF では、両方を構成する簡単な方法は自己ホスト型し、web ホスト サービスでコードを提供します。 詳細については、次を参照してください。[コードで WCF サービスを構成する](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)です。  
+ Windows Communication Foundation (WCF) では、構成ファイルまたはコードを使用してサービスを構成できます。  構成ファイルは、サービスを配置した後に構成する必要がある場合に便利です。 構成ファイルを使用する場合、IT 専門家は構成ファイルを更新するだけで、再コンパイルの必要はありません。 ただし、構成ファイルの管理は複雑で難しくなる場合があります。 構成ファイルのデバッグはサポートされていません。また、構成要素は名前で参照されるため、構成ファイルの作成時にエラーが発生しやすく、構成ファイルの作成が困難になります。 WCF では、コードでサービスを構成することもできます。 以前のバージョンのコードで WCF (4.0 およびそれ以前) 構成サービスが自己ホスト型のシナリオで簡単、<xref:System.ServiceModel.ServiceHost>クラスを使用すると、エンドポイント、ServiceHost.Open を呼び出す前に動作を構成します。 ただし、Web ホストのシナリオでは、<xref:System.ServiceModel.ServiceHost> クラスにアクセスできません。 Web ホスト サービスを構成するには、`System.ServiceModel.ServiceHostFactory` を作成して必要な構成を実行する <xref:System.ServiceModel.Activation.ServiceHostFactory> を作成する必要がありました。 .NET 4.5 以降、WCF では、両方を構成する簡単な方法は自己ホスト型し、web ホスト コードでサービスを提供します。 詳細については、次を参照してください。[コードで WCF サービスを構成する](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)します。  
   
 ## <a name="channelfactory-caching"></a>ChannelFactory のキャッシュ  
  WCF クライアント アプリケーションでは、<xref:System.ServiceModel.ChannelFactory%601> クラスを使用して WCF サービスとの通信チャネルを作成します。  <xref:System.ServiceModel.ChannelFactory%601> インスタンスを作成する場合は、次の操作が必要になるため、オーバーヘッドが生じます。  
@@ -87,31 +87,31 @@ ms.locfileid: "33809902"
   
 4.  リソースの破棄  
   
- このオーバーヘッドを最小限に抑えるために、WCF では、WCF クライアント プロキシの使用時にチャネル ファクトリをキャッシュできます。 詳細については、次を参照してください。[チャネル ファクトリとキャッシュ](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md)です。  
+ このオーバーヘッドを最小限に抑えるために、WCF では、WCF クライアント プロキシの使用時にチャネル ファクトリをキャッシュできます。 詳細については、次を参照してください。[チャネル ファクトリとキャッシュ](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md)します。  
   
 ## <a name="compression-and-the-binary-encoder"></a>圧縮およびバイナリ エンコーダー  
- WCF 4.5 以降の WCF バイナリ エンコーダーでは、圧縮がサポートされます。 圧縮の種類は <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> プロパティで構成されます。 クライアントとサービスの両方で <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> のプロパティを構成する必要があります。 圧縮は、HTTP、HTTPS、および TCP の各プロトコルに対して有効です。 クライアントが圧縮を使用するよう指定しても、サービスで圧縮がサポートされていない場合は、プロトコルの不一致を示すプロトコルの例外がスローされます。 詳細については、次を参照してください[メッセージ エンコーダーを選択する。](../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ WCF 4.5 以降の WCF バイナリ エンコーダーでは、圧縮がサポートされます。 圧縮の種類は <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> プロパティで構成されます。 クライアントとサービスの両方で <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> のプロパティを構成する必要があります。 圧縮は、HTTP、HTTPS、および TCP の各プロトコルに対して有効です。 クライアントが圧縮を使用するよう指定しても、サービスで圧縮がサポートされていない場合は、プロトコルの不一致を示すプロトコルの例外がスローされます。 詳細については、次を参照してください[メッセージ エンコーダーを選択。](../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
   
 ## <a name="udp"></a>UDP  
- これにより開発者は「ファイア アンド忘れた」を使用するサービスを記述する UDP トランスポートのサポートが追加されているメッセージです。 クライアントは、サービスにメッセージを送信しますが、サービスからの応答を期待しません。  
+ これにより、開発者は「ファイア アンド フォーゲット」を使用するサービスを記述する UDP トランスポートのサポートが追加されているメッセージします。 クライアントは、サービスにメッセージを送信しますが、サービスからの応答を期待しません。  
   
 ## <a name="multiple-authentication-support"></a>複数認証のサポート  
  HTTP トランスポートとトランスポート セキュリティを使用する際に、IIS でサポートされている複数の認証モードを単一の WCF エンドポイントで使用できるようになりました。 IIS では仮想ディレクトリで複数の認証モードを有効にできます。この機能によって、単一の WCF エンドポイントでは、WCF サービスがホストされている仮想ディレクトリで有効になっている複数の認証モードをサポートできます。  
   
 ## <a name="idn-support"></a>IDN サポート  
- 国際化ドメイン名を持つ WCF サービスのためのサポートが追加されました。 詳細については、次を参照してください。 [WCF と国際化ドメイン名](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md)です。  
+ 国際化ドメイン名を持つ WCF サービスのためのサポートが追加されました。 詳細については、次を参照してください。 [WCF と国際化ドメイン名](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md)します。  
   
 ## <a name="httpclient"></a>HttpClient  
- HTTP 要求の処理が容易になるように <xref:System.Net.Http.HttpClient> という新しいクラスが追加されました。 詳細については、次を参照してください。[ソーシャルと HTTP サービスに接続されているアプリケーションを作成する](http://go.microsoft.com/fwlink/?LinkId=231886)と[HTTP クライアントのサンプル](http://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)です。  
+ HTTP 要求の処理が容易になるように <xref:System.Net.Http.HttpClient> という新しいクラスが追加されました。 詳細については、次を参照してください。[ソーシャルで HTTP サービスに接続されているアプリケーションを作成する](https://go.microsoft.com/fwlink/?LinkId=231886)と[HTTP クライアントのサンプル](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)します。  
   
 ## <a name="configuration-intellisense"></a>構成の Intellisense  
  プロジェクトで定義されるカスタム属性の構成ファイル内の属性値では、構成の迅速で正確な操作を簡単にするために Intellisense がサポートされています。  
   
 ## <a name="configuration-tooltips"></a>構成のツールヒント  
- WCF 要素と属性ようになりました、XML エディターでのヒントをより簡単を持ち、要素または属性の目的を正確に特定します。  
+ WCF 要素と属性をより簡単に、XML エディターでのヒントがあるし、要素または属性の目的を正確に特定ようになりました。  
   
 ## <a name="paste-data-as-classes"></a>クラスとしてのデータの貼り付け  
- WCF プロジェクトでは、XML で定義されたデータ型 (サービスで公開されるデータ型など) をコード ページに直接貼り付けることができます。 XML 型は CLR 型として貼り付けられます。 参照してください[XML からデータ型クラスを生成する](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)詳細についてはします。  
+ WCF プロジェクトでは、XML で定義されたデータ型 (サービスで公開されるデータ型など) をコード ページに直接貼り付けることができます。 XML 型は CLR 型として貼り付けられます。 参照してください[XML からデータ型クラスを生成する](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)の詳細。  
   
 ## <a name="webservicehost-and-default-endpoints"></a>WebServiceHost と既定のエンドポイント  
  Visual Studio 2010 では、明示的にエンドポイントを指定したかどうかにかかわらず、WebServiceHost によって自動的に既定のエンドポイントが作成されました。 Visual Studio 2012 では、エンドポイントが明示的に追加されていない場合にのみ、WebServiceHost によって既定のエンドポイントが作成されます。 クライアントが既定のエンドポイントを必要としている場合は、明示的にエンドポイントを追加し、クライアントで参照することができます。 または、アプリケーションの構成ファイルに次の設定を追加することで、以前の動作に戻すように WCF に指定することもできます。  

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 96dfee3304369c300c40d595860898c51ff728aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46d70a0b0ccc33755666867240be8778b5638947
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496589"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537801"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation のキュー
-このセクションのトピックでは、キューの Windows Communication Foundation (WCF) のサポートについて説明します。 WCF では、利用する Microsoft メッセージ キュー (以前は MSMQ と呼ばれます) をトランスポートとしてによってキューのサポートを提供および、次のシナリオを実現できます。  
+このセクションのトピックでは、キューの Windows Communication Foundation (WCF) のサポートについて説明します。 WCF では、キューで利用する Microsoft メッセージ キュー (以前は MSMQ と呼ばれます) をトランスポートとしてのサポートを提供し、次のシナリオを実現できます。  
   
 -   疎結合アプリケーション。 送信元アプリケーションは、受信側アプリケーションでメッセージ処理の用意ができているかどうかを確認せずにキューにメッセージを送信できます。 キューにより処理の独立性が提供されるため、送信元アプリケーションは、受信側アプリケーションのメッセージ処理速度とは関係なく、キューにメッセージを送信できます。 キューに対するメッセージの送信がメッセージ処理と密接に結び付けられていない場合は、システムの全体的な可用性が向上します。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "33496589"
   
 -   操作の切断。 モバイル デバイスのように遅延の大きなネットワーク、または可用性に制限のあるネットワークを介して通信を行う場合に、送信、受信、および処理の各操作を切断できます。 エンドポイントが切断された場合も、キューによってこれらの操作を続行できます。 接続が再度確立されると、メッセージはキューから受信側アプリケーションに転送されます。  
   
- WCF アプリケーションでキューの機能を使用するには、標準のバインディングのいずれかを使用またはカスタム バインディングを作成するには、標準バインディングのいずれかの要件を満たしていない場合。 関連の標準バインディングおよび 1 つを選択する方法の詳細については、次を参照してください。[する方法: WCF エンドポイントとメッセージ キュー アプリケーションとメッセージを交換](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)です。 カスタム バインディングの作成の詳細については、次を参照してください。[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)です。  
+ WCF アプリケーションでキューの機能を使用するには、標準のバインディングのいずれかを使用することができます。 またはカスタム バインドを作成するには、標準バインディングのいずれかの要件を満たしていない場合。 関連する標準バインディングと 1 つを選択する方法の詳細については、次を参照してください。[方法: WCF エンドポイントとメッセージ キュー アプリケーションでメッセージを交換](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)します。 カスタム バインドを作成する方法の詳細については、「[カスタム バインディング](../../../../docs/framework/wcf/extending/custom-bindings.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [キューの概要](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "33496589"
  有害メッセージ (受信側アプリケーションへの配信試行の回数が最大値を超えたメッセージ) の処理方法を説明します。  
   
  [Windows Vista、Windows Server 2003、および Windows XP におけるキュー機能の相違点](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- WCF キューの機能との間の違いをまとめたもの[!INCLUDE[wv](../../../../includes/wv-md.md)]、 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、および[!INCLUDE[wxp](../../../../includes/wxp-md.md)]です。  
+ WCF のキュー機能との間の違いをまとめたものです。 [!INCLUDE[wv](../../../../includes/wv-md.md)]、 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、および[!INCLUDE[wxp](../../../../includes/wxp-md.md)]します。  
   
  [トランスポート セキュリティを使用したメッセージのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  トランスポート セキュリティを使用して、キューに置かれたメッセージを保護する方法を説明します。  
@@ -65,4 +65,4 @@ ms.locfileid: "33496589"
  キューによる通信を WCF を使用するためのベスト プラクティスについて説明します。  
   
 ## <a name="see-also"></a>関連項目  
- [メッセージ キュー](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+ [メッセージ キュー](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

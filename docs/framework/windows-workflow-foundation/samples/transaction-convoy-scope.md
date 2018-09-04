@@ -2,12 +2,12 @@
 title: トランザクション コンボイ スコープ
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
-ms.openlocfilehash: 4b053c15768a20ade4a469c9a40af797f49c268b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516566"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536092"
 ---
 # <a name="transaction-convoy-scope"></a>トランザクション コンボイ スコープ
 このサンプルでは、パラレルなコンボイ メッセージング アクティビティ パターンを <xref:System.ServiceModel.Activities.TransactedReceiveScope> と組み合わせて作成し、多数の操作をすべて同じトランザクションで任意の順序で行うことができるプロトコルをモデル化する方法を示します。 また、トランザクションがサーバーにフローされないためにクライアントで使用できるトランザクションがない場合に、<xref:System.ServiceModel.Activities.TransactedReceiveScope> で自動的に新しいトランザクションを作成する方法も示します。  
@@ -24,9 +24,9 @@ ms.locfileid: "33516566"
   
 3.  どちらのプロジェクトも開始されるように設定されていることを確認します。  
   
-    1.  **ソリューション エクスプ ローラー**、ソリューションを右クリックし  **スタートアップ プロジェクトの**します。  
+    1.  **ソリューション エクスプ ローラー**ソリューションを右クリックし、選択、**スタートアップ プロジェクトの設定**します。  
   
-    2.  選択**マルチ スタートアップ プロジェクト**の両方のプロジェクトのアクションに設定されていることを確認および**開始**です。  
+    2.  選択**マルチ スタートアップ プロジェクト**に両方のプロジェクトのアクションが設定されていることを確認および**開始**。  
   
 4.  ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
   
@@ -39,6 +39,6 @@ ms.locfileid: "33516566"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`

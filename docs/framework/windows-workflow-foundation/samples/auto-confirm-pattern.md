@@ -2,12 +2,12 @@
 title: 自動確認パターン
 ms.date: 03/30/2017
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
-ms.openlocfilehash: b30703ffba3b721ac544ea6471ec47ce7f746d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a032c05743b64fe58b0b187328b5216080ba6e19
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515994"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552271"
 ---
 # <a name="auto-confirm-pattern"></a>自動確認パターン
 このサンプルは、カスタム `AutoConfirmScope` アクティビティを示す 3 つのシナリオで構成されます。 1 つ目のサンプルでは、2 番目と 3 番目の補正可能なアクティビティが `AutoConfirmScope` で入れ子になっている 4 つの補正可能なアクティビティのシーケンスが正常に実行された場合を示します。 2 つ目のサンプルでは、同じシーケンスを示しますが、4 番目の <xref:System.Activities.Statements.CompensableActivity> の実行後に例外が発生します。 3 つ目のシナリオでは、同じシーケンスを示しますが、2 番目の `AutoConfirmScope` の完了後に <xref:System.Activities.Statements.CompensableActivity> で例外が発生します。  
@@ -35,6 +35,6 @@ ms.locfileid: "33515994"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`

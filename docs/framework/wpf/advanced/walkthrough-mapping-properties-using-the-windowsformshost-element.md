@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 77027d771cf471e563e24c46d7794a18ad223541
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4841ce260adfb5d0c0d4b0f359ac9998521d584b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258519"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529648"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>チュートリアル : WindowsFormsHost 要素を使用したプロパティの割り当て
 
@@ -33,7 +33,7 @@ ms.locfileid: "43258519"
 
 -   既定のプロパティ マッピングを拡張します。
 
-このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [WindowsFormsHost 要素のサンプルを使用してプロパティをマッピング](http://go.microsoft.com/fwlink/?LinkID=160019)します。
+このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [WindowsFormsHost 要素のサンプルを使用してプロパティをマッピング](https://go.microsoft.com/fwlink/?LinkID=160019)します。
 
 マップが完了したらができます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、ホスト型に対応するプロパティをプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。
 

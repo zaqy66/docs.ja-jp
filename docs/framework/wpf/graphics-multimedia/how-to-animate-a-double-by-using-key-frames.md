@@ -9,32 +9,32 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 4adeb858ab1b69ef1b00f7bf3b6868dbcbbc4154
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67466bbb5fd7e7a46c312e14666c23048bf43d80
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557434"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552258"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>方法 : キー フレームを使用して Double 値をアニメーション化する
 この例を受け取るプロパティの値をアニメーション化する方法を示しています、<xref:System.Double>キー フレームを使用しています。  
   
 ## <a name="example"></a>例  
- 次の例では、画面を横切るように四角形を移動します。 この例では、<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>アニメーション化するクラス、<xref:System.Windows.Media.TranslateTransform.X%2A>のプロパティ、<xref:System.Windows.Media.TranslateTransform>に適用される、<xref:System.Windows.Shapes.Rectangle>です。 無期限に繰り返すこのアニメーションでは、次の方法で 3 つのキー フレームを使用します。  
+ 次の例では、画面を横切るように四角形を移動します。 この例では、<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>をアニメーション化するクラス、<xref:System.Windows.Media.TranslateTransform.X%2A>のプロパティを<xref:System.Windows.Media.TranslateTransform>に適用される、 <xref:System.Windows.Shapes.Rectangle>。 無期限に繰り返すこのアニメーションでは、次の方法で 3 つのキー フレームを使用します。  
   
-1.  最初の 3 秒間には、インスタンスを使用して、<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>パスに沿った四角形の開始位置からの一定の割合で 500 の位置に移動するクラス。 などの線形のキー フレーム<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>値の間のスムーズな線形遷移を作成します。  
+1.  最初の 3 秒のインスタンスを使用して、<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>クラス パスに沿った四角形の開始位置からの一定の速度で 500 の位置に移動します。 などの線形キーフレーム<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>値の間の滑らかな線形トランジションを作成します。  
   
-2.  4 番目の 2 つ目の末尾には、インスタンスを使用して、<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>突然四角形を次の位置に移動するクラス。 などの個別のキー フレーム<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>値間の突然のジャンプを作成します。 この例では、開始位置にあった四角形が突然 500 の位置に出現します。  
+2.  4 番目の 2 つ目の末尾にはのインスタンスを使用して、<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>クラスに次の位置に突然四角形を移動します。 などの不連続のキーフレーム<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>値の間に急なジャンプを作成します。 この例では、開始位置にあった四角形が突然 500 の位置に出現します。  
   
-3.  最後の 2 つの秒単位でのインスタンスを使用して、<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>四角形の開始位置に移動するクラス。 スプライン キー フレームのような<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>変数の値に基づいて値の間で遷移を作成する、<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>プロパティです。 この例では、四角形の動きは最初はゆっくりしていますが、時間セグメントの終点に向かった急激に速くなります。  
+3.  最後の 2 秒では、インスタンスを使用して、<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>クラスに四角形を開始位置に移動します。 スプライン キー フレームのような<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>の値に基づいて値の間に可変遷移を作成、<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>プロパティ。 この例では、四角形の動きは最初はゆっくりしていますが、時間セグメントの終点に向かった急激に速くなります。  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/AltDoubleAnimationUsingKeyFramesExample.xaml#altdoubleanimationusingkeyframeswholepage)]  
   
- サンプル全体については、「[キーフレーム アニメーションのサンプル](http://go.microsoft.com/fwlink/?LinkID=160012)」を参照してください。  
+ サンプル全体については、「[キーフレーム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160012)」を参照してください。  
   
- この例のコードを使用して他のアニメーション例と一貫性を保つのため、<xref:System.Windows.Media.Animation.Storyboard>を適用するオブジェクト、<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>です。 または、コード内の 1 つのアニメーションを適用するときに使いやすく、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>メソッドを使用してではなく、<xref:System.Windows.Media.Animation.Storyboard>です。 例については、「[ストーリーボードを使用せずにプロパティをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)」を参照してください。  
+ この例のコードを使用して、他のアニメーション例と一貫性を保つのため、<xref:System.Windows.Media.Animation.Storyboard>を適用するオブジェクト、<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>します。 または、コード内で 1 つのアニメーションを適用する場合は簡単に使用、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>メソッドを使用してではなく、<xref:System.Windows.Media.Animation.Storyboard>します。 例については、「[ストーリーボードを使用せずにプロパティをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  

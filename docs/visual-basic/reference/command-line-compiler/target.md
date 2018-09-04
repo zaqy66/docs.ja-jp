@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4097d82772c24bb0416bcb3f6d48bd1c7f101b95
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 17528bb9faf137029b35e4a9f28bab7a28ae25db
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254569"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542259"
 ---
 # <a name="-target-visual-basic"></a>-ターゲット (Visual Basic)
 コンパイラの出力形式を指定します。  
@@ -33,7 +33,7 @@ ms.locfileid: "43254569"
 |`-target:library`|コンパイラがダイナミック リンク ライブラリ (DLL) を作成します。<br /><br /> ダイナミック リンク ライブラリ ファイルは、拡張子が .dll で作成されます。<br /><br /> それ以外の場合を指定しない限り、`-out`オプション、出力ファイル名は、最初の入力ファイルの名前を受け取ります。<br /><br /> DLL を作成するときに、`Sub Main`手順は必要ありません。|  
 |`-target:module`|コンパイラがアセンブリに追加できるモジュールを生成します。<br /><br /> .Netmodule の拡張子を持つ出力ファイルが作成されます。<br /><br /> .NET 共通言語ランタイムは、アセンブリがないファイルを読み込むことができません。 ただし、組み込むことができます、このようなファイル、アセンブリのアセンブリ マニフェストを使用して`-reference`します。<br /><br /> 使用して両方のモジュールをアセンブリ マニフェストに組み込む必要があります 1 つのモジュール内のコードでは、別のモジュールの内部型を参照するときに`-reference`します。<br /><br /> [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)オプションは、モジュールからメタデータをインポートします。|  
 |`-target:winexe`|コンパイラ実行可能ファイルの Windows ベースのアプリケーションを作成します。<br /><br /> 拡張子が .exe の実行可能ファイルが作成されます。 Windows ベースのアプリケーションは、いずれかのいずれかからユーザー インターフェイスを提供する、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]クラス ライブラリまたは Win32 Api を使用します。<br /><br /> それ以外の場合を指定しない限り、`-out`オプション、出力ファイル名を含む入力ファイルの名前、`Sub Main`プロシージャ。<br /><br /> 1 つだけ`Sub Main`.exe ファイルにコンパイルされるソース コード ファイル内のプロシージャが必要です。 コードが 1 つ以上のクラスがある場合、`Sub Main`プロシージャを使用して、`-main`コンパイラ オプションを指定するクラスが含まれています、`Sub Main`プロシージャ|  
-|`-target:appcontainerexe`|コンパイラで、アプリケーション コンテナーで実行する必要がある実行可能な Windows ベース アプリケーションを作成します。 この設定が使用するように設計[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]アプリケーション。<br /><br /> **Appcontainerexe**設定は、ビットの特性のフィールドを設定、[ポータブル実行可能ファイル](https://msdn.microsoft.com/library/windows/desktop/ms680547(v=vs.85).aspx?id=19509)ファイル。 このビットは、アプリケーション コンテナーでアプリを実行する必要があることを示します。 場合にエラーが発生したこのビットが設定されている場合、`CreateProcess`メソッドは、アプリ コンテナーの外部でアプリケーションを起動しようとしています。 このビットを設定するとは別 **-/target:appcontainerexe**と等価 **-/target:winexe**します。<br /><br /> 拡張子が .exe の実行可能ファイルが作成されます。<br /><br /> それ以外の場合を使用して指定しない限り、`-out`オプション、出力ファイル名を含む入力ファイルの名前、`Sub Main`プロシージャ。<br /><br /> 1 つだけ`Sub Main`.exe ファイルにコンパイルされるソース コード ファイル内のプロシージャが必要です。 コードを持つ 1 つ以上のクラスに含まれるかどうか、`Sub Main`プロシージャを使用して、`-main`コンパイラ オプションを指定するクラスが含まれています、`Sub Main`プロシージャ|  
+|`-target:appcontainerexe`|コンパイラで、アプリケーション コンテナーで実行する必要がある実行可能な Windows ベース アプリケーションを作成します。 この設定が使用するように設計[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]アプリケーション。<br /><br /> **Appcontainerexe**設定は、ビットの特性のフィールドを設定、[ポータブル実行可能ファイル](/windows/desktop/Debug/pe-format)ファイル。 このビットは、アプリケーション コンテナーでアプリを実行する必要があることを示します。 場合にエラーが発生したこのビットが設定されている場合、`CreateProcess`メソッドは、アプリ コンテナーの外部でアプリケーションを起動しようとしています。 このビットを設定するとは別 **-/target:appcontainerexe**と等価 **-/target:winexe**します。<br /><br /> 拡張子が .exe の実行可能ファイルが作成されます。<br /><br /> それ以外の場合を使用して指定しない限り、`-out`オプション、出力ファイル名を含む入力ファイルの名前、`Sub Main`プロシージャ。<br /><br /> 1 つだけ`Sub Main`.exe ファイルにコンパイルされるソース コード ファイル内のプロシージャが必要です。 コードを持つ 1 つ以上のクラスに含まれるかどうか、`Sub Main`プロシージャを使用して、`-main`コンパイラ オプションを指定するクラスが含まれています、`Sub Main`プロシージャ|  
 |`-target:winmdobj`|コンパイラが、Windows ランタイム バイナリ (.winmd) ファイルに変換できる中間ファイルを作成します。 .Winmd ファイルは、マネージ言語プログラムだけでなく、JavaScript および C++ プログラムで使用できます。<br /><br /> 拡張子が .winmdobj 中間ファイルが作成されます。<br /><br /> それ以外の場合を使用して指定しない限り、`-out`オプション、出力ファイル名は、最初の入力ファイルの名前を受け取ります。 A`Sub Main`手順は必要ありません。<br /><br /> .Winmdobj ファイルが入力として使用するように設計、 <xref:Microsoft.Build.Tasks.WinMDExp> Windows メタデータ (WinMD) ファイルを生成するためのツールをエクスポートします。 WinMD ファイルは、.winmd の拡張機能を備え、JavaScript、C++、および Windows ランタイム使用して、元のライブラリと WinMD 定義から、コード両方にはが含まれています。|  
   
  指定しない限り`-target:module`、`-target`により、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]出力ファイルに追加するアセンブリのマニフェスト。  

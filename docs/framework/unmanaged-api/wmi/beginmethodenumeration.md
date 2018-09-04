@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43476093"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536386"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 関数
 オブジェクトの使用可能なメソッドの列挙を開始します。  

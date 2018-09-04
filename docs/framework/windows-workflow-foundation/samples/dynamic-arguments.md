@@ -3,11 +3,11 @@ title: 動的引数
 ms.date: 03/30/2017
 ms.assetid: 122ad479-d306-4602-a943-5aefe711329d
 ms.openlocfilehash: dcf6b84889f3bd7d043f736336c39634cd5384c7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387241"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530442"
 ---
 # <a name="dynamic-arguments"></a>動的引数
 このサンプルでは、アクティビティの作成者ではなくアクティビティのコンシューマーによって引数が定義されるアクティビティの実装方法を示します。 ここではそのために、ランタイムによるアクティビティのメタデータの構築方法をオーバーライドします。  

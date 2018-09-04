@@ -5,14 +5,14 @@ helpviewer_keywords:
 - feedback [WCF]
 - customer feedback [WCF]
 ms.assetid: ba0fd32b-cbcb-4f5b-b913-d98514ab5650
-ms.openlocfilehash: 0f21a4abc7134fbfd5369ae2b3f7f5cf56915c01
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5067495aa24d5ae7e60633ed6a0ce5c0af081367
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810162"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538624"
 ---
 # <a name="feedback-and-community"></a>フィードバックとコミュニティ
-コメントをお寄せに関する Windows Communication Foundation (WCF) または[!INCLUDE[infocard](../../../includes/infocard-md.md)]ドキュメント。 SDK の各ページの末尾には "このトピックに関するご意見をマイクロソフトまでお寄せください" という記述があります。 リンクをクリックして、全般的なご意見や特定のトピックに関するご提案を書いてお送りください。  
+ご意見や懸念事項、Windows Communication Foundation (WCF) についてのご提案や[!INCLUDE[infocard](../../../includes/infocard-md.md)]ドキュメント。 SDK の各ページの末尾には "このトピックに関するご意見をマイクロソフトまでお寄せください" という記述があります。 リンクをクリックして、全般的なご意見や特定のトピックに関するご提案を書いてお送りください。  
   
- 詳細については、探している場合、または WCF 興味のあるユーザーとテクニックを共有する場合、 [MSDN Windows Communication Foundation フォーラム](http://go.microsoft.com/fwlink/?LinkId=186463)です。
+ 詳細については、探している場合、または技術を WCF に関心がある他のユーザーと共有する場合、 [MSDN Windows Communication Foundation フォーラム](https://go.microsoft.com/fwlink/?LinkId=186463)します。

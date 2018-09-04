@@ -2,12 +2,12 @@
 title: 拡張保護ポリシー
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 00d1500b271625addde4499bc62b5ed4d689caf9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59a377a94978741f3f116bab819dff77d8b0fee4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504359"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532346"
 ---
 # <a name="extended-protection-policy"></a>拡張保護ポリシー
 拡張保護は、man-in-the-middle (MITM) 攻撃に対するセキュリティ イニシアチブです。 MITM 攻撃はセキュリティの脅威です。MITM は、クライアントの資格情報を取得し、その資格情報をサーバーに転送します。  
@@ -26,27 +26,27 @@ ms.locfileid: "33504359"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  インターネット インフォメーション サービスをインストール**コントロール パネルの **、**プログラムの追加/削除**、 **Windows の機能の**します。  
+1.  インターネット インフォメーション サービス インストール**コントロール パネル**、**プログラム追加と削除**、 **Windows 機能**します。  
   
-2.  インストール**Windows 認証**で**Windows の機能の**、**インターネット インフォメーション サービス**、 **World Wide Web サービス**、 **セキュリティ**、および**Windows 認証**です。  
+2.  インストール**Windows 認証**で**Windows 機能**、**インターネット インフォメーション サービス**、 **World Wide Web サービス**、 **セキュリティ**、および**Windows 認証**します。  
   
-3.  インストール**Windows Communication Foundation HTTP Activation**で**Windows の機能の**、 **Microsoft .NET Framework 3.5.1**、および**Windows 通信Foundation HTTP Activation**です。  
+3.  インストール**Windows Communication Foundation HTTP Activation**で**Windows 機能**、 **Microsoft .NET Framework 3.5.1**、および**Windows 通信Foundation HTTP Activation**します。  
   
 4.  このサンプルを実行するには、サーバーとの安全なチャネルを確立する必要のあるクライアントが必要なので、インターネット インフォメーション サービス (IIS) マネージャーからインストールすることのできるサーバー証明書が存在する必要があります。  
   
-    1.  IIS マネージャーを開きます。 開いている**サーバー証明書**に表示される、**機能ビュー**  タブのルート ノード (コンピューター名) を選択するとします。  
+    1.  IIS マネージャーを開きます。 開いている**サーバー証明書**に表示される、**機能ビュー**  タブのルート ノード (マシン名) を選択するとします。  
   
     2.  このサンプルをテストする目的で、自己署名証明書を作成します。 インターネット エクスプローラーで証明書の安全性に関するプロンプトが表示されないようにする場合は、信頼されたルート証明機関ストアに証明書をインストールします。  
   
-5.  開く、**アクション**ウィンドウの既定の Web サイトです。 をクリックして**サイトを編集する**、**バインド**です。 HTTPS が存在しない場合は、ポート番号を 443 に指定して HTTPS を追加します。 前の手順で作成した SSL 証明書を割り当てます。  
+5.  開く、**アクション**既定の Web サイトのウィンドウ。 クリックして**サイトの編集**、**バインド**します。 HTTPS が存在しない場合は、ポート番号を 443 に指定して HTTPS を追加します。 前の手順で作成した SSL 証明書を割り当てます。  
   
 6.  サービスをビルドします。 これにより、仮想ディレクトリが IIS に作成され、サービスを Web ホストにするために必要な .dll ファイル、.svc ファイルおよび .config ファイルがコピーされます。  
   
-7.  IIS マネージャーを開きます。 仮想ディレクトリを右クリックし (**ExtendedProtection**)、前の手順で作成しました。 選択**アプリケーションへの変換**です。  
+7.  IIS マネージャーを開きます。 仮想ディレクトリを右クリックして (**ExtendedProtection**)、前の手順で作成されました。 選択**アプリケーションへの変換**します。  
   
-8.  開く、**認証**モジュール IIS マネージャーでこの仮想ディレクトリと有効にする**Windows 認証**です。  
+8.  開く、**認証**モジュール IIS マネージャーではこの仮想ディレクトリと有効にする**Windows 認証**します。  
   
-9. 開いている**詳細設定** **Windows 認証**この仮想ディレクトリに設定し、**必要**です。  
+9. オープン**詳細設定** **Windows 認証**この仮想ディレクトリに設定**ために必要な**。  
   
 10. ブラウザー ウィンドウから HTTPS URL にアクセスして (完全修飾ドメイン名を指定します) サービスをテストできます。 リモート コンピューターからこの URL にアクセスする場合は、すべての受信 HTTP および HTTPS 通信に対してファイアウォールが開かれていることを確認してください。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "33504359"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

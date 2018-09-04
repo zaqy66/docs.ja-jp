@@ -3,11 +3,11 @@ title: 判別共用体 (F#)
 description: F# を使用する方法について説明します判別共用体。
 ms.date: 05/16/2016
 ms.openlocfilehash: 3340933ac8e2b6fe0215c684691d216a28b64787
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238525"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537598"
 ---
 # <a name="discriminated-unions"></a>判別共用体
 

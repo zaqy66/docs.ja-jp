@@ -12,11 +12,11 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
 ms.openlocfilehash: 5104ef5714819bd69cfd5b6d754e81b97f235e31
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43472099"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529222"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>方法: LINQ を使用してクエリ結果を並べ替える (Visual Basic)
 統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。  

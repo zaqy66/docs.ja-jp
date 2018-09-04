@@ -5,16 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 185bcb64522115d0c60ae90ee22a73610139c8c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536635"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>方法 : WCF エンドポイントを使用してキューに置かれたメッセージを交換する
-キューを確認してくださいクライアントと Windows Communication Foundation (WCF) サービスの間で信頼できるメッセージングを発生する場合でも、通信時に、サービスは使用できません。 次の手順では、WCF サービスを実装するときに、クライアントと、標準を使用して、サービスの間で永続的な通信がバインド キューに登録することを確認する方法を示します。  
+キューは、通信時に、サービスをご利用いただけません場合でも、信頼性の高いメッセージングがクライアントと、Windows Communication Foundation (WCF) サービスの間で発生することことを確認します。 次の手順では、WCF サービスを実装する場合、クライアントと、標準を使用してサービスの間の永続的な通信がバインディング キューに登録することを確認する方法を示します。  
   
- このセクションを使用する方法について説明<xref:System.ServiceModel.NetMsmqBinding>の WCF クライアントと WCF サービスの間でキューに置かれた通信します。  
+ このセクションを使用する方法を説明します<xref:System.ServiceModel.NetMsmqBinding>の WCF クライアントと WCF サービスの間のキューに置かれた通信します。  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>WCF サービスでキューを使用するには  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  サービス アドレスを指定し、標準の <xref:System.ServiceModel.Description.ServiceEndpoint> バインディングを使用する <xref:System.ServiceModel.NetMsmqBinding> を構成で定義します。 詳細については、WCF 構成を使用して、次を参照してください。 [Windows Communication Foundation アプリケーションを構成する](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)です。  
+5.  サービス アドレスを指定し、標準の <xref:System.ServiceModel.Description.ServiceEndpoint> バインディングを使用する <xref:System.ServiceModel.NetMsmqBinding> を構成で定義します。 詳細については、WCF 構成を使用して、次を参照してください。 [Windows Communication Foundation アプリケーションを構成する](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)します。  
   
   
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>キューに置かれたサービスのクライアントを作成するには  
   
-1.  次の例では、ホスト アプリケーションを実行し、Svcutil.exe ツールを使用して、WCF クライアントを作成する方法を示します。  
+1.  次の例では、ホスティング アプリケーションを実行し、Svcutil.exe ツールを使用して WCF クライアントを作成する方法を示します。  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/04/2018
   
   
   
-3.  呼び出し、トランザクション キューに書き込むトランザクション スコープを作成する、`SubmitPurchaseOrder`操作と閉じる、WCF クライアントは、次の例で示すようにします。  
+3.  呼び出し、トランザクション キューに書き込むトランザクション スコープを作成、`SubmitPurchaseOrder`操作と閉じる、WCF クライアントは、次の例に示すようにします。  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
@@ -89,6 +90,6 @@ ms.lasthandoff: 05/04/2018
  [方法 : WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  [Windows Communication Foundation でのメッセージ キュー](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [メッセージ キュー (MSMQ) のインストール](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [メッセージ キュー統合バインディングのサンプル](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [メッセージ キュー統合バインディング サンプル](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Windows Communication Foundation へのメッセージ キュー](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [メッセージ キューを介したメッセージ セキュリティ](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

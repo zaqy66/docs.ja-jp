@@ -6,11 +6,12 @@ helpviewer_keywords:
 - ContextMenuStrip control [Windows Forms]
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-ms.openlocfilehash: 45b37a3cc542295368a9304cb49078d88c347228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5f2246ef70ed627ecd311c1f3e5666afcd9b5ef
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552180"
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip コントロール
 <xref:System.Windows.Forms.ContextMenuStrip> コントロールは、コントロールに関連付けるショートカット メニューを提供します。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
  [方法: ContextMenuStrip のオープン イベントを処理する](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
  <xref:System.Windows.Forms.ToolStripDropDown.Opening> イベントを処理することで、<xref:System.Windows.Forms.ContextMenuStrip> コントロールの動作をカスタマイズする方法について説明します。  
   
- 参照してください[ContextMenuStrip タスク ダイアログ ボックス](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))または[ContextMenuStrip Items コレクション エディター](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))です。  
+ 参照してください[ContextMenuStrip タスク ダイアログ ボックス](https://msdn.microsoft.com/library/ms233646\(v=vs.110\))または[ContextMenuStrip Items コレクション エディター](https://msdn.microsoft.com/library/ms233641\(v=vs.110\))します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.MenuStrip>  

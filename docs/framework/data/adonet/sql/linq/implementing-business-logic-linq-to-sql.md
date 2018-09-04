@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 6216a3d6dd21f1dcb3348565a9f1870be7c7905a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362052"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552232"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>ビジネス ロジックの実装 (LINQ to SQL)
 このトピックの「ビジネス ロジック」とは、データベースでデータを挿入、更新、または削除される前にデータに適用されるカスタム規則または検証テストのことです。 ビジネス ロジックは、「ビジネス ルール」または「ドメイン ロジック」とも呼ばれます。 n 層アプリケーションでは、通常、論理層として設計されるため、プレゼンテーション層やデータ アクセス層から独立して変更できます。 データベースのデータを更新、挿入、または削除する前または後に、データ アクセス層によってビジネス ロジックを呼び出すことができます。  
   
- ビジネス ロジックは、フィールドの型がテーブル列の型と互換性を持つかどうか確認するスキーマ検証のような簡単なものにすることもできます。 または、任意の複雑な方法で相互に影響するオブジェクトのセットから成るビジネス ロジックも可能です。 規則は、データベース上のストアド プロシージャとして、またはメモリ内のオブジェクトとして実装可能です。 ただし、ビジネス ロジックを実装した場合[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]データ アクセス コードからビジネス ロジックを分離する部分クラスと部分メソッドを使用して有効にします。  
+ ビジネス ロジックは、フィールドの型がテーブル列の型と互換性を持つかどうか確認するスキーマ検証のような簡単なものにすることもできます。 または、任意の複雑な方法で相互に影響するオブジェクトのセットから成るビジネス ロジックも可能です。 規則は、データベース上のストアド プロシージャとして、またはメモリ内のオブジェクトとして実装可能です。 ただし、ビジネス ロジックを実装、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]データ アクセス コードからビジネス ロジックを分離する部分クラスと部分メソッドを使用できるようにします。  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>LINQ to SQL でビジネス ロジックを呼び出す方法  
  手動で、または[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]か SQLMetal を使用してデザイン時にエンティティ クラスを生成すると、部分クラスとして定義されます。 つまり、別個のコード ファイル内で、カスタム ビジネス ロジックを格納するエンティティ クラスの別の部分を定義できます。 コンパイル時に 2 つの部分が 1 つのクラスに結合されます。 ただし、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]または SQLMetal を使ってエンティティ クラスを再生成する必要がある場合には、そうしてもかまいません。その場合、開発者が作成したクラスの部分は変更されません。  
@@ -25,7 +25,7 @@ ms.locfileid: "33362052"
  別個のコード ファイル内に作成する実装定義では、必要な任意のカスタム ロジックを実行できます。 部分クラス自体をドメイン層として使用できます。または、部分メソッドの実装定義から別個の 1 つ以上のオブジェクトに呼び出すこともできます。 どちらの場合も、ビジネス ロジックはデータ アクセス コードとプレゼンテーション層コードから明確に分離されています。  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>機能拡張ポイントの詳細  
- 次の例で生成されたコードの一部を示しています、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]の`DataContext`を 2 つのテーブルを持つクラス:`Customers`と`Orders`です。 このクラスで Insert、Update、および Delete メソッドがテーブルごとに定義されていることに注意してください。  
+ 次の例によって生成されたコードの一部を示しています、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]の`DataContext`を 2 つのテーブルを持つクラス:`Customers`と`Orders`します。 このクラスで Insert、Update、および Delete メソッドがテーブルごとに定義されていることに注意してください。  
   
 ```vb  
 Partial Public Class Northwnd  
@@ -69,7 +69,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- 部分クラス内で Insert、Update、および Delete メソッドを実装すると、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ランタイムは <xref:System.Data.Linq.DataContext.SubmitChanges%2A> の呼び出し時に、既定のメソッドの代わりにこれらのメソッドを呼び出します。 こうすることで、作成、読み取り、更新、削除操作の既定の動作をオーバーライドできます。 詳細については、次を参照してください。[チュートリアル: 更新、およびエンティティ クラスの動作を削除、挿入をカスタマイズするには、](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)です。  
+ 部分クラス内で Insert、Update、および Delete メソッドを実装すると、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ランタイムは <xref:System.Data.Linq.DataContext.SubmitChanges%2A> の呼び出し時に、既定のメソッドの代わりにこれらのメソッドを呼び出します。 こうすることで、作成、読み取り、更新、削除操作の既定の動作をオーバーライドできます。 詳細については、次を参照してください。[チュートリアル: 更新、およびエンティティ クラスの動作を削除、挿入をカスタマイズするには、](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)します。  
   
  `OnCreated` メソッドはクラス コンストラクター内で呼び出されます。  
   
@@ -155,7 +155,7 @@ public string CustomerID
 }  
 ```  
   
- クラスの開発者が作成する部分で、メソッドの実装定義を記述します。 入力した後、Visual Studio で`partial`クラスの他の部分にメソッド定義の IntelliSense が表示されます。  
+ クラスの開発者が作成する部分で、メソッドの実装定義を記述します。 入力した後、Visual Studio で`partial`メソッドの定義、クラスの他の部分での IntelliSense が表示されます。  
   
 ```vb  
 Partial Public Class Customer  
@@ -181,7 +181,7 @@ partial class Customer
   
  [チュートリアル : エンティティ クラスの挿入、更新、および削除の動作のカスタマイズ](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [チュートリアル: エンティティ クラスへの検証の追加](http://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
+ [チュートリアル: エンティティ クラスに検証を追加します。](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
 ## <a name="see-also"></a>関連項目  
  [部分クラスと部分メソッド](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  

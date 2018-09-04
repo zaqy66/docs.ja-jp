@@ -8,18 +8,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 6f35881bdb7a781d817c9f671962d0445bfd8e27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f19b207c840994ffa3aa364135583b5daeb26827
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538742"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542285"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>方法 : 既存の Windows フォーム コントロールから継承する
-既存のコントロールの機能を拡張する場合は、継承によって既存のコントロールから派生したコントロールを作成できます。 既存のコントロールから継承すると、そのコントロールのすべての機能およびビジュアル プロパティが引き継がれます。 継承するコントロールを作成する場合など、 <xref:System.Windows.Forms.Button>、新しいコントロールにはなりますおよび act とまったく同じ標準<xref:System.Windows.Forms.Button>コントロール。 その後で、カスタム メソッドやカスタム プロパティの実装によって、新しいコントロールの機能を拡張または変更できます。 一部のコントロールで変更することできますも、継承されたコントロールの外観をオーバーライドしてその<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドです。  
+既存のコントロールの機能を拡張する場合は、継承によって既存のコントロールから派生したコントロールを作成できます。 既存のコントロールから継承すると、そのコントロールのすべての機能およびビジュアル プロパティが引き継がれます。 継承するコントロールを作成する場合など<xref:System.Windows.Forms.Button>は、新しいコントロールになります、act とまったく同じ標準<xref:System.Windows.Forms.Button>コントロール。 その後で、カスタム メソッドやカスタム プロパティの実装によって、新しいコントロールの機能を拡張または変更できます。 一部のコントロールで変更することできますも継承されたコントロールの外観をオーバーライドしてその<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ### <a name="to-create-an-inherited-control"></a>継承したコントロールを作成するには  
   
@@ -37,11 +37,11 @@ ms.locfileid: "33538742"
   
 5.  C# を使用している場合は、コード エディターで CustomControl1.cs を開きます。  
   
-6.  継承されるクラス宣言を検索<xref:System.Windows.Forms.Control>です。  
+6.  継承されるクラス宣言を見つけます<xref:System.Windows.Forms.Control>します。  
   
 7.  基底クラスを継承元のコントロールに変更します。  
   
-     継承する場合など<xref:System.Windows.Forms.Button>、クラス宣言を次に変更します。  
+     継承したい場合など<xref:System.Windows.Forms.Button>、クラス宣言を次に変更します。  
   
     ```vb  
     Partial Class CustomControl1  
@@ -56,10 +56,10 @@ ms.locfileid: "33538742"
   
 9. コントロールに組み込むカスタム メソッドやカスタム プロパティを実装します。  
   
-10. コントロールの外観を変更する場合は、オーバーライド、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドです。  
+10. コントロールの外観を変更する場合は、オーバーライド、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド。  
   
     > [!NOTE]
-    >  オーバーライドする<xref:System.Windows.Forms.Control.OnPaint%2A>すべてのコントロールの外観を変更することはできません。 これらのコントロールを持つすべての Windows が行う、描画 (たとえば、 <xref:System.Windows.Forms.TextBox>) 呼び出すことはありません、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド、なり、しないで使用するカスタム コード。 かどうかを変更する特定のコントロールのヘルプ ドキュメントを参照してください、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドは使用できます。 すべての Windows フォーム コントロールの一覧については、「[Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)」を参照してください。 コントロールがない場合<xref:System.Windows.Forms.Control.OnPaint%2A>メンバー メソッドとして一覧に表示できない外観を変更するこのメソッドをオーバーライドしています。 カスタム描画の詳細については、「[コントロールのカスタム描画およびレンダリング](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)」を参照してください。  
+    >  オーバーライドする<xref:System.Windows.Forms.Control.OnPaint%2A>すべてのコントロールの外観を変更することはできません。 これらのコントロールを持つすべての描画が Windows によって行われます (たとえば、 <xref:System.Windows.Forms.TextBox>) 呼び出すことはありません、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド、なり、決して使用して、カスタム コード。 かどうかを変更する特定のコントロールのヘルプ ドキュメントを参照してください、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドを使用できます。 すべての Windows フォーム コントロールの一覧については、「[Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)」を参照してください。 コントロールがない場合<xref:System.Windows.Forms.Control.OnPaint%2A>メンバー メソッドとして一覧に表示できない外観を変更するこのメソッドをオーバーライドすることで。 カスタム描画の詳細については、「[コントロールのカスタム描画およびレンダリング](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)」を参照してください。  
   
     ```vb  
     Protected Overrides Sub OnPaint(ByVal e As _  

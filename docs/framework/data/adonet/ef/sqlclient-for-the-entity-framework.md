@@ -3,11 +3,11 @@ title: Entity Framework 用 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
 ms.openlocfilehash: 430e0e143519f97802c8cef4eee658b482a81880
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425674"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532225"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>Entity Framework 用 SqlClient
 このセクションでは、.NET Framework Data Provider for SQL Server (SqlClient) について説明します。これによって、Microsoft SQL Server 上で Entity Framework が機能できるようになります。  

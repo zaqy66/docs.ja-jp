@@ -15,11 +15,11 @@ ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f60a2283c01d0dc2665dafaa99ea52000aa3bc47
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407487"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552284"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>クラス、構造体、およびインターフェイスの名前
 次の名前付けのガイドラインは、一般的な種類の名前付けに適用されます。  

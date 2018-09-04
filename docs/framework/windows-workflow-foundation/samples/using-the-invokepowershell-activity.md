@@ -2,12 +2,12 @@
 title: InvokePowerShell アクティビティの使用
 ms.date: 03/30/2017
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa42cddd930b755e9938a02a137ee77ee273fad0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520241"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538868"
 ---
 # <a name="using-the-invokepowershell-activity"></a>InvokePowerShell アクティビティの使用
 InvokePowerShell サンプルでは、`InvokePowerShell` アクティビティを使用して Windows PowerShell コマンドを呼び出す方法を示します。  
@@ -25,7 +25,7 @@ InvokePowerShell サンプルでは、`InvokePowerShell` アクティビティ�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -35,8 +35,8 @@ InvokePowerShell サンプルでは、`InvokePowerShell` アクティビティ�
 |プロジェクト名|説明|メイン ファイル|  
 |------------------|-----------------|----------------|  
 |CodedClient|PowerShell アクティビティを使用するサンプル クライアント アプリケーション。|-   **Program.cs**: InvokePowerShell アクティビティを呼び出すシーケンス ベースのワークフローをプログラムで作成します。|  
-|DesignerClient|`InvokePowerShell` カスタム アクティビティや他のさまざまなカスタム アクティビティを含むカスタム アクティビティのセットと、それらを使用するワークフロー。|<ul><li>アクティビティ:<br /><br /> <ul><li>**PrintCollection.cs**: コンソールをコレクション内のすべての項目を出力するヘルパー アクティビティ。</li><li>**ReadLine.cs**: コンソールからの入力を読み取るのためのヘルパー アクティビティ。</li></ul></li><li>ファイル システム:<br /><br /> <ul><li>**Copy.xaml**: ファイルをコピーするアクティビティ。</li><li>**CreateFile.xaml**: ファイルを作成するアクティビティ。</li><li>**DeleteFile.xaml**: ファイルを削除するアクティビティ。</li><li>**MakeDir.xaml**: ディレクトリを作成するアクティビティ。</li><li>**Move.xaml**: ファイルを移動するアクティビティ。</li><li>**ReadFile.xaml**: ファイルを読み取り、その内容を返すアクティビティ。</li><li>**TestPath.xaml**: パスの存在をテストするアクティビティ。</li></ul></li><li>プロセス:<br /><br /> <ul><li>**GetProcess.xaml**: 実行中のプロセス一覧を取得するアクティビティ。</li><li>**StopProcess.xaml**: 特定のプロセスを停止するアクティビティ。</li></ul></li><li>**Program.cs**: Sequence1 ワークフローを呼び出します。</li><li>**Sequence1.xaml**: シーケンス ベースのワークフローです。</li></ul>|  
-|PowerShell|`InvokePowerShell` アクティビティと、それに関連付けられたデザイナー。|アクティビティのファイル<br /><br /> -   **ExecutePowerShell.cs**: アクティビティのメインの実行ロジック。<br />-   **InvokePowerShell.cs**: ジェネリック (値を返す) バージョンと非ジェネリック (値) のバージョンを含むメインの実行ロジックのラッパー。 これは、アクティビティのパブリック インターフェイスです。<br />-   **NoPersistZone.cs**: このアクティビティでは、すべての子アクティビティがの永続化します。 このクラスは、`InvokePowerShell` アクティビティの実装の中で、アクティビティが実行の途中で永続化されるのを防ぐために使用されます。<br /><br /> デザイナーのファイル:<br /><br /> 1.**ArgumentDictionaryEditor.cs**: ユーザーがの引数を編集できる Windows ダイアログ、`InvokePowerShell`アクティビティ。<br />2.**GenericInvokePowerShellDesigner.xaml**と**GenericInvokePowerShellDesigner.xaml.cs**: ジェネリックの外観を定義`InvokePowerShell`でアクティビティ[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]です。<br />3.**InvokePowerShellDesigner.xaml**と**InvokePowerShellDesigner.cs**: 非ジェネリックの外観を定義`InvokePowerShell`でアクティビティ[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]です。|  
+|DesignerClient|`InvokePowerShell` カスタム アクティビティや他のさまざまなカスタム アクティビティを含むカスタム アクティビティのセットと、それらを使用するワークフロー。|<ul><li>アクティビティ:<br /><br /> <ul><li>**PrintCollection.cs**: コンソールに、コレクション内のすべての項目を出力するヘルパー アクティビティ。</li><li>**ReadLine.cs**: コンソールから入力を読み取るのためのヘルパー アクティビティ。</li></ul></li><li>ファイル システム:<br /><br /> <ul><li>**Copy.xaml**: ファイルをコピーするアクティビティ。</li><li>**CreateFile.xaml**: ファイルを作成するアクティビティ。</li><li>**DeleteFile.xaml**: ファイルを削除するアクティビティ。</li><li>**MakeDir.xaml**: ディレクトリを作成するアクティビティ。</li><li>**Move.xaml**: ファイルを移動するアクティビティ。</li><li>**ReadFile.xaml**: ファイルを読み取り、その内容を返すアクティビティ。</li><li>**TestPath.xaml**: パスの存在をテストするアクティビティ。</li></ul></li><li>プロセス:<br /><br /> <ul><li>**GetProcess.xaml**: 実行中のプロセスの一覧を取得するアクティビティ。</li><li>**StopProcess.xaml**: 特定のプロセスを停止するアクティビティ。</li></ul></li><li>**Program.cs**: Sequence1 ワークフローを呼び出します。</li><li>**Sequence1.xaml**: シーケンス ベースのワークフロー。</li></ul>|  
+|PowerShell|`InvokePowerShell` アクティビティと、それに関連付けられたデザイナー。|アクティビティのファイル<br /><br /> -   **ExecutePowerShell.cs**: アクティビティのメインの実行ロジック。<br />-   **InvokePowerShell.cs**: ジェネリック (値を返す) バージョンと非ジェネリック (以外の戻り値の値) のバージョンが含まれるメインの実行ロジックのラッパーです。 これは、アクティビティのパブリック インターフェイスです。<br />-   **NoPersistZone.cs**: このアクティビティは、永続化からすべての子アクティビティを防止します。 このクラスは、`InvokePowerShell` アクティビティの実装の中で、アクティビティが実行の途中で永続化されるのを防ぐために使用されます。<br /><br /> デザイナーのファイル:<br /><br /> 1.**ArgumentDictionaryEditor.cs**: A Windows ダイアログ ボックスの引数を編集するユーザーが、`InvokePowerShell`アクティビティ。<br />2.**GenericInvokePowerShellDesigner.xaml**と**GenericInvokePowerShellDesigner.xaml.cs**: ジェネリックの外観を定義`InvokePowerShell`アクティビティ[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]します。<br />3.**InvokePowerShellDesigner.xaml**と**InvokePowerShellDesigner.cs**: 非ジェネリックの外観を定義`InvokePowerShell`アクティビティ[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]します。|  
   
  PowerShell アクティビティの使用方法を把握しているとその内部機能を理解しやすくなるため、クライアント プロジェクトから先に説明します。  
   
@@ -166,10 +166,10 @@ new ForEach<PSObject>
     Grid.Row="1" Grid.Column="1" />  
 ```  
   
- デザイナーでカスタマイズできるのは、デザイン キャンバスでのアクティビティの外観を定義する .xaml ファイルだけではありません。 アクティビティのパラメーターを表示するために使用されるダイアログ ボックスもカスタマイズできます。 これらのパラメーターや PowerShell 変数は、PowerShell コマンドの動作に影響します。 アクティビティとして公開<!--zz <xref:System.Collections.Generic.Dictionary%601>-->`System.Collections.Generic.Dictionary`型です。 これらの型を編集できるダイアログ ボックスは、ArgumentDictionaryEditor.cs、PropertyEditorResources.xaml、および PropertyEditorResources.cs で定義されています。  
+ デザイナーでカスタマイズできるのは、デザイン キャンバスでのアクティビティの外観を定義する .xaml ファイルだけではありません。 アクティビティのパラメーターを表示するために使用されるダイアログ ボックスもカスタマイズできます。 これらのパラメーターや PowerShell 変数は、PowerShell コマンドの動作に影響します。 アクティビティとして公開されます<!--zz <xref:System.Collections.Generic.Dictionary%601>-->`System.Collections.Generic.Dictionary`型。 これらの型を編集できるダイアログ ボックスは、ArgumentDictionaryEditor.cs、PropertyEditorResources.xaml、および PropertyEditorResources.cs で定義されています。  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
- このサンプルを実行するには Windows PowerShell をインストールする必要があります。 この場所から Windows PowerShell をインストールすることができます: [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383)です。  
+ このサンプルを実行するには Windows PowerShell をインストールする必要があります。 Windows PowerShell は、この場所からインストールできます。 [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=150383)します。  
   
 #### <a name="to-run-the-coded-client"></a>コード クライアントを実行するには  
   
@@ -177,7 +177,7 @@ new ForEach<PSObject>
   
 2.  ソリューションを右クリックしてビルドします。  
   
-3.  右クリックし、 **CodedClient**プロジェクトし、選択**スタートアップ プロジェクトとして設定**です。  
+3.  右クリックし、 **CodedClient**順に選択して**スタートアップ プロジェクトとして設定**します。  
   
 4.  Ctrl キーを押しながら F5 キーを押してアプリケーションを実行します。  
   
@@ -187,7 +187,7 @@ new ForEach<PSObject>
   
 2.  ソリューションを右クリックしてビルドします。  
   
-3.  右クリックし、 **DesignerClient**プロジェクトし、選択**スタートアップ プロジェクトとして設定**です。  
+3.  右クリックし、 **DesignerClient**順に選択して**スタートアップ プロジェクトとして設定**します。  
   
 4.  Ctrl キーを押しながら F5 キーを押してアプリケーションを実行します。  
   
@@ -204,6 +204,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`

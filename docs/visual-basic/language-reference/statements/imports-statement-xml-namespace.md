@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 51b63a11fd2987d82f9a7599b39d15856a0abb1d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243829"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533643"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports ステートメント (XML 名前空間)
 XML リテラルおよび XML 軸のプロパティで使用するための XML 名前空間プレフィックスをインポートします。  
@@ -35,7 +35,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="remarks"></a>Remarks  
  使用することができます、 `Imports` XML リテラルおよび XML 軸のプロパティをまたはに渡されるパラメーターとして使用できるグローバルの XML 名前空間を定義するステートメント、`GetXmlNamespace`演算子。 (使用方法について、`Imports`型の名前を使用するコードで使用できるエイリアスをインポートするステートメントを参照してください[Imports ステートメント (.NET Namespace よぶ型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md))。使用して XML 名前空間を宣言する構文、`Imports`ステートメントは XML で使用される構文と同じです。 そのため、XML ファイルから名前空間宣言をコピーしで使用する`Imports`ステートメント。  
   
- XML 名前空間プレフィックスは、繰り返し、同じ名前空間からの XML 要素を作成する場合に便利です。 XML 名前空間プレフィックスが宣言された、`Imports`ステートメントがファイルにすべてのコードで使用可能であるという意味でグローバルです。 XML 要素リテラルおよび XML 軸のプロパティにアクセスするときに作成するときに使用することができます。 詳細については、次を参照してください。 [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)と[XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)します。  
+ XML 名前空間プレフィックスは、繰り返し、同じ名前空間からの XML 要素を作成する場合に便利です。 XML 名前空間プレフィックスが宣言された、`Imports`ステートメントがファイルにすべてのコードで使用可能であるという意味でグローバルです。 XML 要素リテラルおよび XML 軸のプロパティにアクセスするときに作成するときに使用することができます。 詳細については、次を参照してください。 [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)と[XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)します。  
   
  名前空間プレフィックスなしのグローバル XML 名前空間を定義するかどうか (たとえば、 `Imports <xmlns="http://SomeNameSpace>"`)、その名前空間には、既定の XML 名前空間と見なされます。 既定の XML 名前空間は、任意の XML 要素リテラルまたは名前空間を明示的に指定されていない XML 属性軸プロパティに使用されます。 指定した名前空間が空の名前空間が場合、既定の名前空間が使用されます (つまり、 `xmlns=""`)。 既定の XML 名前空間は、XML リテラルの XML 属性または名前空間がない XML 属性軸プロパティには適用されません。  
   
@@ -90,6 +90,6 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="see-also"></a>関連項目  
  [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)  
  [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
  [GetXmlNamespace 演算子](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

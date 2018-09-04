@@ -2,12 +2,12 @@
 title: サンプル XML ドキュメント (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: 1110a4b89158e0230401c449aa95d74be72eccc7
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f1860eed059de4b6922976da8d3b9190cf96bbed
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244534"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533269"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>サンプル XML ドキュメント (LINQ to XML)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメント全体にわたって、コード例とコード スニペットで使用されているサンプル ファイルは次のとおりです。  
@@ -26,7 +26,7 @@ ms.locfileid: "39244534"
 |[サンプル XML ファイル: テスト構成 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|擬似テスト構成データを含む XML ドキュメント。|  
 |[サンプル XML ファイル: 名前空間内のテスト構成](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|擬似テスト構成データを含む、名前空間内の XML ドキュメント。|  
 |[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|顧客と注文を含む XML ドキュメント。|  
-|[サンプル XSD ファイル: 顧客と注文](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92) を検証する XML スキーマ定義 (XSD)。|  
+|[サンプル XSD ファイル: 顧客と注文](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](https://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92) を検証する XML スキーマ定義 (XSD)。|  
 |[サンプル XML ファイル: 名前空間内の顧客と注文](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|顧客と注文を含む、名前空間内の XML ドキュメント。|  
 |[サンプル XML ファイル: 数値データ (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|集計およびグループ化に適したデータを含む XML ドキュメント。|  
 |[サンプル XML ファイル: 名前空間内の数値データ](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|集計およびグループ化に適したデータを含む、名前空間内の XML ドキュメント。|  

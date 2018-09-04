@@ -3,11 +3,11 @@ title: Windows サービス アプリケーションのホスト
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
 ms.openlocfilehash: 2b3935babec0c7cdc3ffca5dd11d693fdfee7a89
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483097"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532560"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows サービス アプリケーションのホスト
 Windows サービス (従来 Windows NT サービスと呼ばれていたもの) が提供するプロセス モデルが特に適しているのは、長い期間にわたって動作し続ける必要があり、どのような形式でもユーザー インターフェイスを表示することのないアプリケーションです。 Windows サービス アプリケーションのプロセスの有効期間を管理するのは、サービス コントロール マネージャー (SCM) です。SCM を使用して、Windows サービス アプリケーションを起動、停止、および一時停止できます。 「常時オン」のアプリケーションの適切なホスティング環境のため、コンピューターの起動時に自動的に開始する、Windows サービスのプロセスを構成することができます。 Windows サービス アプリケーションの詳細については、次を参照してください。 [Windows サービス アプリケーション](https://go.microsoft.com/fwlink/?LinkId=89450)します。  

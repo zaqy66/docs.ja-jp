@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 790bb8d4ea1e146d94ea7cf153b8909c6cc1af7a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e7c94dce5b50fe93f00aaaa72206be3394faf62
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762846"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542207"
 ---
 # <a name="how-to-call-custom-database-functions"></a>カスタム データベース関数を呼び出す方法
 ここでは、データベースで定義されたカスタム関数を LINQ Entities クエリから呼び出す方法について説明します。  
@@ -23,18 +23,18 @@ ms.locfileid: "32762846"
   
 1.  データベースにカスタム関数を作成します。  
   
-     SQL Server でのユーザー定義関数の作成の詳細については、次を参照してください。 [CREATE FUNCTION (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkID=139871)です。  
+     SQL Server でカスタム関数を作成する方法の詳細については、次を参照してください。 [CREATE FUNCTION (Transact SQL)](https://go.microsoft.com/fwlink/?LinkID=139871)します。  
   
 2.  関数を .edmx ファイルのストア スキーマ定義言語 (SSDL) で宣言します。 関数の名前は、データベースで宣言される関数と同じ名前にする必要があります。  
   
-     詳細については、次を参照してください。[関数要素 (SSDL)](http://msdn.microsoft.com/library/b60cfc3d-8b93-423e-8c99-b867256640a4)です。  
+     詳細については、次を参照してください。[関数要素 (SSDL)](https://msdn.microsoft.com/library/b60cfc3d-8b93-423e-8c99-b867256640a4)します。  
   
 3.  対応するメソッドをアプリケーション コードのクラスに追加して、<xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> をそのメソッドに適用する必要があります。属性の <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> パラメーターと <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> パラメーターが、それぞれ概念モデルの名前空間名と概念モデルの関数名であることに注意してください。 LINQ の関数名解決では、大文字と小文字が区別されます。  
   
 4.  LINQ to Entities クエリからメソッドを呼び出します。  
   
 ## <a name="example"></a>例  
- 次の例は、カスタム データベース関数を LINQ to Entities クエリから呼び出す方法について説明します。 この例では、School モデルを使用します。 School モデルについては、次を参照してください。 [School サンプル データベースを作成する](http://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0)と[学校 .edmx ファイルを生成する](http://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758)です。  
+ 次の例は、カスタム データベース関数を LINQ to Entities クエリから呼び出す方法について説明します。 この例では、School モデルを使用します。 School モデルについては、次を参照してください。 [School サンプル データベースの作成](https://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0)と[School .edmx ファイルを生成する](https://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758)します。  
   
  次のコードは、`AvgStudentGrade` 関数を School のサンプル データベースに追加しています。  
   
@@ -61,5 +61,5 @@ ms.locfileid: "32762846"
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>関連項目  
- [.edmx ファイルの概要](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [.edmx ファイルの概要](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

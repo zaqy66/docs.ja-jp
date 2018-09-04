@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 6880b04a3f8a82c1e109c32674804c5241913a8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487073"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540206"
 ---
 # <a name="custom-bindings"></a>カスタム バインディング
-システムが提供するバインディングの中にサービスの要件を満たすものがない場合は、<xref:System.ServiceModel.Channels.CustomBinding> クラスを使用できます。 すべてのバインディングは、バインド要素の順序付き集合から作成されます。 カスタム バインドは、一連のシステム指定のバインド要素から作成したり、ユーザー定義のカスタム バインド要素を含めたりできます。 カスタム バインド要素を使用すると、たとえば、新しいトランスポートまたはエンコーダーをサービス エンドポイントで使用できるようになります。 実施例については、次を参照してください。[カスタム バインディングのサンプル](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)です。 詳細については、次を参照してください。 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)です。  
+システムが提供するバインディングの中にサービスの要件を満たすものがない場合は、<xref:System.ServiceModel.Channels.CustomBinding> クラスを使用できます。 すべてのバインディングは、バインド要素の順序付き集合から作成されます。 カスタム バインドは、一連のシステム指定のバインド要素から作成したり、ユーザー定義のカスタム バインド要素を含めたりできます。 カスタム バインド要素を使用すると、たとえば、新しいトランスポートまたはエンコーダーをサービス エンドポイントで使用できるようになります。 実施例については、次を参照してください。[カスタム バインドのサンプル](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)します。 詳細については、次を参照してください。 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)します。  
   
 ## <a name="construction-of-a-custom-binding"></a>カスタム バインドの構築  
  カスタム バインディングは、特定の順序で "積み重ねられている" バインディング要素のコレクションから <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> コンストラクターを使用して作成します。  
@@ -64,11 +64,11 @@ ms.locfileid: "33487073"
   
 |レイヤー|オプション|必須|  
 |-----------|-------------|--------------|  
-|トランザクション|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|×|  
+|トランザクション|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|いいえ|  
 |信頼性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Ｘ|  
-|セキュリティ|<xref:System.ServiceModel.Channels.SecurityBindingElement>|×|  
-|エンコード|テキスト、バイナリ、MTOM (Message Transmission Optimization Mechanism)、カスタム|[はい]|  
-|Transport|TCP、HTTP、HTTPS、名前付きパイプ (IPC)、ピアツーピア (P2P)、メッセージ キュー (MSMQ)、カスタム|[はい]|  
+|セキュリティ|<xref:System.ServiceModel.Channels.SecurityBindingElement>|いいえ|  
+|エンコード|テキスト、バイナリ、MTOM (Message Transmission Optimization Mechanism)、カスタム|はい|  
+|Transport|TCP、HTTP、HTTPS、名前付きパイプ (IPC)、ピアツーピア (P2P)、メッセージ キュー (MSMQ)、カスタム|はい|  
   
  さらに、独自のバインド要素を定義し、それを定義済みの層のいずれかの間に挿入できます。  
   

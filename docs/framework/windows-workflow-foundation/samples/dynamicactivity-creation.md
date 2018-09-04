@@ -3,11 +3,11 @@ title: DynamicActivity の作成
 ms.date: 03/30/2017
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
 ms.openlocfilehash: 270066fafd5c71b2a720ca305433159c172872aa
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385262"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534018"
 ---
 # <a name="dynamicactivity-creation"></a>DynamicActivity の作成
 このサンプルでは、<xref:System.Activities.DynamicActivity> アクティビティを使用して実行時にアクティビティを作成する 2 つの異なる方法を示します。  
