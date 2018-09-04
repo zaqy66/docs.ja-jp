@@ -8,44 +8,44 @@ ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: d3e8269fc05caf70f4329ce8f13a3633a8982c0b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389920"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564153"
 ---
-# <a name="message-security-with-an-anonymous-client"></a><span data-ttu-id="3e6cd-102">メッセージ セキュリティと匿名クライアント</span><span class="sxs-lookup"><span data-stu-id="3e6cd-102">Message Security with an Anonymous Client</span></span>
-<span data-ttu-id="3e6cd-103">次のシナリオでは、クライアントと Windows Communication Foundation (WCF) メッセージ セキュリティで保護されたサービスを説明します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-103">The following scenario shows a client and service secured by Windows Communication Foundation (WCF) message security.</span></span> <span data-ttu-id="3e6cd-104">設計目標は、トランスポート セキュリティではなくメッセージ セキュリティを使用することです。これによって将来、多様なクレームに基づくモデルをサポートできます。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-104">A design goal is to use message security rather than transport security, so that in the future it can support a richer claims-based model.</span></span> <span data-ttu-id="3e6cd-105">承認に多様なクレームの使用に関する詳細については、次を参照してください。[管理クレームと Id モデルでの承認](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-105">For more information about using rich claims for authorization, see [Managing Claims and Authorization with the Identity Model](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span></span>  
+# <a name="message-security-with-an-anonymous-client"></a><span data-ttu-id="66f12-102">メッセージ セキュリティと匿名クライアント</span><span class="sxs-lookup"><span data-stu-id="66f12-102">Message Security with an Anonymous Client</span></span>
+<span data-ttu-id="66f12-103">次のシナリオでは、クライアントと Windows Communication Foundation (WCF) メッセージ セキュリティで保護されたサービスを説明します。</span><span class="sxs-lookup"><span data-stu-id="66f12-103">The following scenario shows a client and service secured by Windows Communication Foundation (WCF) message security.</span></span> <span data-ttu-id="66f12-104">設計目標は、トランスポート セキュリティではなくメッセージ セキュリティを使用することです。これによって将来、多様なクレームに基づくモデルをサポートできます。</span><span class="sxs-lookup"><span data-stu-id="66f12-104">A design goal is to use message security rather than transport security, so that in the future it can support a richer claims-based model.</span></span> <span data-ttu-id="66f12-105">承認に多様なクレームの使用に関する詳細については、次を参照してください。[管理クレームと Id モデルでの承認](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)します。</span><span class="sxs-lookup"><span data-stu-id="66f12-105">For more information about using rich claims for authorization, see [Managing Claims and Authorization with the Identity Model](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span></span>  
   
- <span data-ttu-id="3e6cd-106">サンプル アプリケーションでは、次を参照してください。[メッセージ セキュリティ匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-106">For a sample application, see [Message Security Anonymous](../../../../docs/framework/wcf/samples/message-security-anonymous.md).</span></span>  
+ <span data-ttu-id="66f12-106">サンプル アプリケーションでは、次を参照してください。[メッセージ セキュリティ匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)します。</span><span class="sxs-lookup"><span data-stu-id="66f12-106">For a sample application, see [Message Security Anonymous](../../../../docs/framework/wcf/samples/message-security-anonymous.md).</span></span>  
   
- <span data-ttu-id="3e6cd-107">![メッセージ セキュリティと匿名クライアント](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span><span class="sxs-lookup"><span data-stu-id="3e6cd-107">![Message security with an anynymous client](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span></span>  
+ <span data-ttu-id="66f12-107">![メッセージ セキュリティと匿名クライアント](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span><span class="sxs-lookup"><span data-stu-id="66f12-107">![Message security with an anynymous client](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span></span>  
   
-|<span data-ttu-id="3e6cd-108">特徴</span><span class="sxs-lookup"><span data-stu-id="3e6cd-108">Characteristic</span></span>|<span data-ttu-id="3e6cd-109">説明</span><span class="sxs-lookup"><span data-stu-id="3e6cd-109">Description</span></span>|  
+|<span data-ttu-id="66f12-108">特徴</span><span class="sxs-lookup"><span data-stu-id="66f12-108">Characteristic</span></span>|<span data-ttu-id="66f12-109">説明</span><span class="sxs-lookup"><span data-stu-id="66f12-109">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="3e6cd-110">セキュリティ モード</span><span class="sxs-lookup"><span data-stu-id="3e6cd-110">Security Mode</span></span>|<span data-ttu-id="3e6cd-111">メッセージ</span><span class="sxs-lookup"><span data-stu-id="3e6cd-111">Message</span></span>|  
-|<span data-ttu-id="3e6cd-112">相互運用性</span><span class="sxs-lookup"><span data-stu-id="3e6cd-112">Interoperability</span></span>|<span data-ttu-id="3e6cd-113">WCF のみ</span><span class="sxs-lookup"><span data-stu-id="3e6cd-113">WCF only</span></span>|  
-|<span data-ttu-id="3e6cd-114">認証 (サーバー)</span><span class="sxs-lookup"><span data-stu-id="3e6cd-114">Authentication (Server)</span></span>|<span data-ttu-id="3e6cd-115">初期ネゴシエーションには、サーバー認証が必要ですが、クライアント認証は不要です</span><span class="sxs-lookup"><span data-stu-id="3e6cd-115">Initial negotiation requires server authentication, but not client authentication</span></span>|  
-|<span data-ttu-id="3e6cd-116">認証 (クライアント)</span><span class="sxs-lookup"><span data-stu-id="3e6cd-116">Authentication (Client)</span></span>|<span data-ttu-id="3e6cd-117">なし</span><span class="sxs-lookup"><span data-stu-id="3e6cd-117">None</span></span>|  
-|<span data-ttu-id="3e6cd-118">整合性</span><span class="sxs-lookup"><span data-stu-id="3e6cd-118">Integrity</span></span>|<span data-ttu-id="3e6cd-119">はい、共有のセキュリティ コンテキストを使用します</span><span class="sxs-lookup"><span data-stu-id="3e6cd-119">Yes, using shared security context</span></span>|  
-|<span data-ttu-id="3e6cd-120">機密性</span><span class="sxs-lookup"><span data-stu-id="3e6cd-120">Confidentiality</span></span>|<span data-ttu-id="3e6cd-121">はい、共有のセキュリティ コンテキストを使用します</span><span class="sxs-lookup"><span data-stu-id="3e6cd-121">Yes, using shared security context</span></span>|  
-|<span data-ttu-id="3e6cd-122">Transport</span><span class="sxs-lookup"><span data-stu-id="3e6cd-122">Transport</span></span>|<span data-ttu-id="3e6cd-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="3e6cd-123">HTTP</span></span>|  
+|<span data-ttu-id="66f12-110">セキュリティ モード</span><span class="sxs-lookup"><span data-stu-id="66f12-110">Security Mode</span></span>|<span data-ttu-id="66f12-111">メッセージ</span><span class="sxs-lookup"><span data-stu-id="66f12-111">Message</span></span>|  
+|<span data-ttu-id="66f12-112">相互運用性</span><span class="sxs-lookup"><span data-stu-id="66f12-112">Interoperability</span></span>|<span data-ttu-id="66f12-113">WCF のみ</span><span class="sxs-lookup"><span data-stu-id="66f12-113">WCF only</span></span>|  
+|<span data-ttu-id="66f12-114">認証 (サーバー)</span><span class="sxs-lookup"><span data-stu-id="66f12-114">Authentication (Server)</span></span>|<span data-ttu-id="66f12-115">初期ネゴシエーションには、サーバー認証が必要ですが、クライアント認証は不要です</span><span class="sxs-lookup"><span data-stu-id="66f12-115">Initial negotiation requires server authentication, but not client authentication</span></span>|  
+|<span data-ttu-id="66f12-116">認証 (クライアント)</span><span class="sxs-lookup"><span data-stu-id="66f12-116">Authentication (Client)</span></span>|<span data-ttu-id="66f12-117">なし</span><span class="sxs-lookup"><span data-stu-id="66f12-117">None</span></span>|  
+|<span data-ttu-id="66f12-118">整合性</span><span class="sxs-lookup"><span data-stu-id="66f12-118">Integrity</span></span>|<span data-ttu-id="66f12-119">はい、共有のセキュリティ コンテキストを使用します</span><span class="sxs-lookup"><span data-stu-id="66f12-119">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="66f12-120">機密性</span><span class="sxs-lookup"><span data-stu-id="66f12-120">Confidentiality</span></span>|<span data-ttu-id="66f12-121">はい、共有のセキュリティ コンテキストを使用します</span><span class="sxs-lookup"><span data-stu-id="66f12-121">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="66f12-122">Transport</span><span class="sxs-lookup"><span data-stu-id="66f12-122">Transport</span></span>|<span data-ttu-id="66f12-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="66f12-123">HTTP</span></span>|  
   
-## <a name="service"></a><span data-ttu-id="3e6cd-124">サービス</span><span class="sxs-lookup"><span data-stu-id="3e6cd-124">Service</span></span>  
- <span data-ttu-id="3e6cd-125">次のコードと構成は、別々に実行します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-125">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="3e6cd-126">次のいずれかの操作を行います。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-126">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="66f12-124">サービス</span><span class="sxs-lookup"><span data-stu-id="66f12-124">Service</span></span>  
+ <span data-ttu-id="66f12-125">次のコードと構成は、別々に実行します。</span><span class="sxs-lookup"><span data-stu-id="66f12-125">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="66f12-126">次のいずれかの操作を行います。</span><span class="sxs-lookup"><span data-stu-id="66f12-126">Do one of the following:</span></span>  
   
--   <span data-ttu-id="3e6cd-127">構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-127">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="66f12-127">構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="66f12-127">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="3e6cd-128">提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-128">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="66f12-128">提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。</span><span class="sxs-lookup"><span data-stu-id="66f12-128">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="3e6cd-129">コード</span><span class="sxs-lookup"><span data-stu-id="3e6cd-129">Code</span></span>  
- <span data-ttu-id="3e6cd-130">次のコードは、メッセージ セキュリティを使用するサービス エンドポイントの作成方法を示します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-130">The following code shows how to create a service endpoint that uses message security.</span></span>  
+### <a name="code"></a><span data-ttu-id="66f12-129">コード</span><span class="sxs-lookup"><span data-stu-id="66f12-129">Code</span></span>  
+ <span data-ttu-id="66f12-130">次のコードは、メッセージ セキュリティを使用するサービス エンドポイントの作成方法を示します。</span><span class="sxs-lookup"><span data-stu-id="66f12-130">The following code shows how to create a service endpoint that uses message security.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
  [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]  
   
-### <a name="configuration"></a><span data-ttu-id="3e6cd-131">構成</span><span class="sxs-lookup"><span data-stu-id="3e6cd-131">Configuration</span></span>  
- <span data-ttu-id="3e6cd-132">コードの代わりに次の構成を使用できます。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-132">The following configuration can be used instead of the code.</span></span> <span data-ttu-id="3e6cd-133">サービス動作要素を使用して、クライアントに対するサービスの認証に使用する証明書を指定します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-133">The service behavior element is used to specify a certificate that is used to authenticate the service to the client.</span></span> <span data-ttu-id="3e6cd-134">サービス要素は、`behaviorConfiguration` 属性を使用して動作を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-134">The service element must specify the behavior using the `behaviorConfiguration` attribute.</span></span> <span data-ttu-id="3e6cd-135">バインド要素で、クライアント資格情報の種類が `None` であることを指定します。この資格情報の種類では、匿名クライアントがサービスを使用できます。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-135">The binding element specifies that the client credential type is `None`, allowing anonymous clients to use the service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="66f12-131">構成</span><span class="sxs-lookup"><span data-stu-id="66f12-131">Configuration</span></span>  
+ <span data-ttu-id="66f12-132">コードの代わりに次の構成を使用できます。</span><span class="sxs-lookup"><span data-stu-id="66f12-132">The following configuration can be used instead of the code.</span></span> <span data-ttu-id="66f12-133">サービス動作要素を使用して、クライアントに対するサービスの認証に使用する証明書を指定します。</span><span class="sxs-lookup"><span data-stu-id="66f12-133">The service behavior element is used to specify a certificate that is used to authenticate the service to the client.</span></span> <span data-ttu-id="66f12-134">サービス要素は、`behaviorConfiguration` 属性を使用して動作を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="66f12-134">The service element must specify the behavior using the `behaviorConfiguration` attribute.</span></span> <span data-ttu-id="66f12-135">バインド要素で、クライアント資格情報の種類が `None` であることを指定します。この資格情報の種類では、匿名クライアントがサービスを使用できます。</span><span class="sxs-lookup"><span data-stu-id="66f12-135">The binding element specifies that the client credential type is `None`, allowing anonymous clients to use the service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -86,24 +86,24 @@ ms.locfileid: "43389920"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="3e6cd-136">Client</span><span class="sxs-lookup"><span data-stu-id="3e6cd-136">Client</span></span>  
- <span data-ttu-id="3e6cd-137">次のコードと構成は、別々に実行します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-137">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="3e6cd-138">次のいずれかの操作を行います。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-138">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="66f12-136">Client</span><span class="sxs-lookup"><span data-stu-id="66f12-136">Client</span></span>  
+ <span data-ttu-id="66f12-137">次のコードと構成は、別々に実行します。</span><span class="sxs-lookup"><span data-stu-id="66f12-137">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="66f12-138">次のいずれかの操作を行います。</span><span class="sxs-lookup"><span data-stu-id="66f12-138">Do one of the following:</span></span>  
   
--   <span data-ttu-id="3e6cd-139">コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-139">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="66f12-139">コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="66f12-139">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="3e6cd-140">エンドポイント アドレスを定義しないクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-140">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="3e6cd-141">代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-141">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="3e6cd-142">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-142">For example:</span></span>  
+-   <span data-ttu-id="66f12-140">エンドポイント アドレスを定義しないクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="66f12-140">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="66f12-141">代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。</span><span class="sxs-lookup"><span data-stu-id="66f12-141">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="66f12-142">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="66f12-142">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="3e6cd-143">コード</span><span class="sxs-lookup"><span data-stu-id="3e6cd-143">Code</span></span>  
- <span data-ttu-id="3e6cd-144">クライアントのインスタンスを作成するコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-144">The following code creates an instance of the client.</span></span> <span data-ttu-id="3e6cd-145">バインディングはメッセージ モード セキュリティを使用し、クライアント資格情報の種類は None に設定されます。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-145">The binding uses message mode security, and the client credential type is set to none.</span></span>  
+### <a name="code"></a><span data-ttu-id="66f12-143">コード</span><span class="sxs-lookup"><span data-stu-id="66f12-143">Code</span></span>  
+ <span data-ttu-id="66f12-144">クライアントのインスタンスを作成するコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="66f12-144">The following code creates an instance of the client.</span></span> <span data-ttu-id="66f12-145">バインディングはメッセージ モード セキュリティを使用し、クライアント資格情報の種類は None に設定されます。</span><span class="sxs-lookup"><span data-stu-id="66f12-145">The binding uses message mode security, and the client credential type is set to none.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
  [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]  
   
-### <a name="configuration"></a><span data-ttu-id="3e6cd-146">構成</span><span class="sxs-lookup"><span data-stu-id="3e6cd-146">Configuration</span></span>  
- <span data-ttu-id="3e6cd-147">クライアントを構成する場合のコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="3e6cd-147">The following code configures the client.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="66f12-146">構成</span><span class="sxs-lookup"><span data-stu-id="66f12-146">Configuration</span></span>  
+ <span data-ttu-id="66f12-147">クライアントを構成する場合のコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="66f12-147">The following code configures the client.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -133,9 +133,9 @@ ms.locfileid: "43389920"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3e6cd-148">関連項目</span><span class="sxs-lookup"><span data-stu-id="3e6cd-148">See Also</span></span>  
- [<span data-ttu-id="3e6cd-149">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="3e6cd-149">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="3e6cd-150">分散アプリケーションのセキュリティ</span><span class="sxs-lookup"><span data-stu-id="3e6cd-150">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- [<span data-ttu-id="3e6cd-151">メッセージ セキュリティ匿名</span><span class="sxs-lookup"><span data-stu-id="3e6cd-151">Message Security Anonymous</span></span>](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- [<span data-ttu-id="3e6cd-152">サービス ID と認証</span><span class="sxs-lookup"><span data-stu-id="3e6cd-152">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="3e6cd-153">Windows Server App Fabric のセキュリティ モデル</span><span class="sxs-lookup"><span data-stu-id="3e6cd-153">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="66f12-148">関連項目</span><span class="sxs-lookup"><span data-stu-id="66f12-148">See Also</span></span>  
+ [<span data-ttu-id="66f12-149">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="66f12-149">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="66f12-150">分散アプリケーションのセキュリティ</span><span class="sxs-lookup"><span data-stu-id="66f12-150">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [<span data-ttu-id="66f12-151">メッセージ セキュリティ匿名</span><span class="sxs-lookup"><span data-stu-id="66f12-151">Message Security Anonymous</span></span>](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
+ [<span data-ttu-id="66f12-152">サービス ID と認証</span><span class="sxs-lookup"><span data-stu-id="66f12-152">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="66f12-153">Windows Server App Fabric のセキュリティ モデル</span><span class="sxs-lookup"><span data-stu-id="66f12-153">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

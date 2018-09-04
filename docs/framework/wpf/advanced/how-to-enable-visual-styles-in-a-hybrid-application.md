@@ -8,67 +8,67 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 2d714ad020f2f7b6a6343c8f8e3901b59dfd23a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4684e277335a119d41d5bd79d504ed37a76d6fc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545624"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552861"
 ---
-# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a><span data-ttu-id="1536b-102">方法 : ハイブリッド アプリケーションで視覚スタイルを有効にする</span><span class="sxs-lookup"><span data-stu-id="1536b-102">How to: Enable Visual Styles in a Hybrid Application</span></span>
-<span data-ttu-id="1536b-103">このトピックは、有効にする方法を示しています。[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]上の visual スタイル、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]でホストされるコントロール、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ベースのアプリケーションです。</span><span class="sxs-lookup"><span data-stu-id="1536b-103">This topic shows how to enable [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual styles on a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control hosted in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span>  
+# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a><span data-ttu-id="70b11-102">方法 : ハイブリッド アプリケーションで視覚スタイルを有効にする</span><span class="sxs-lookup"><span data-stu-id="70b11-102">How to: Enable Visual Styles in a Hybrid Application</span></span>
+<span data-ttu-id="70b11-103">このトピックでは、有効にする方法を示しています。[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]で視覚スタイルを、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]でホストされているコントロールを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ベースのアプリケーション。</span><span class="sxs-lookup"><span data-stu-id="70b11-103">This topic shows how to enable [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual styles on a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control hosted in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span>  
   
- <span data-ttu-id="1536b-104">アプリケーションが呼び出す場合、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッド、ほとんどの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールが自動的に使用の visual スタイルでアプリケーションを実行時に[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]です。</span><span class="sxs-lookup"><span data-stu-id="1536b-104">If your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method, most of your [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls will automatically use visual styles when your application is run on [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].</span></span> <span data-ttu-id="1536b-105">詳細については、次を参照してください。 [Visual スタイルを使用しているコントロールのレンダリング](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)です。</span><span class="sxs-lookup"><span data-stu-id="1536b-105">For more information, see [Rendering Controls with Visual Styles](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).</span></span>  
+ <span data-ttu-id="70b11-104">アプリケーションを呼び出す場合、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッドでは、ほとんどの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]、アプリケーションの実行時に、コントロールに視覚スタイルは使用に自動的に[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="70b11-104">If your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method, most of your [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls will automatically use visual styles when your application is run on [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].</span></span> <span data-ttu-id="70b11-105">詳細については、次を参照してください。 [Visual スタイルを使用しているコントロールのレンダリング](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)します。</span><span class="sxs-lookup"><span data-stu-id="70b11-105">For more information, see [Rendering Controls with Visual Styles](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).</span></span>  
   
- <span data-ttu-id="1536b-106">このトピックで示すタスクの完全なコードについては、次を参照してください。[ハイブリッド アプリケーションのサンプルの Visual スタイルを有効にすると](http://go.microsoft.com/fwlink/?LinkID=159986)です。</span><span class="sxs-lookup"><span data-stu-id="1536b-106">For a complete code listing of the tasks illustrated in this topic, see [Enabling Visual Styles in a Hybrid Application Sample](http://go.microsoft.com/fwlink/?LinkID=159986).</span></span>  
+ <span data-ttu-id="70b11-106">このトピックで示すタスクの完全なコード一覧については、次を参照してください。[ハイブリッド アプリケーションのサンプルの Visual スタイルを有効にする](https://go.microsoft.com/fwlink/?LinkID=159986)します。</span><span class="sxs-lookup"><span data-stu-id="70b11-106">For a complete code listing of the tasks illustrated in this topic, see [Enabling Visual Styles in a Hybrid Application Sample](https://go.microsoft.com/fwlink/?LinkID=159986).</span></span>  
   
-## <a name="enabling-windows-forms-visual-styles"></a><span data-ttu-id="1536b-107">Windows フォーム視覚スタイルの有効化</span><span class="sxs-lookup"><span data-stu-id="1536b-107">Enabling Windows Forms Visual Styles</span></span>  
+## <a name="enabling-windows-forms-visual-styles"></a><span data-ttu-id="70b11-107">Windows フォーム視覚スタイルの有効化</span><span class="sxs-lookup"><span data-stu-id="70b11-107">Enabling Windows Forms Visual Styles</span></span>  
   
-#### <a name="to-enable-windows-forms-visual-styles"></a><span data-ttu-id="1536b-108">Windows フォーム視覚スタイルを有効にするには</span><span class="sxs-lookup"><span data-stu-id="1536b-108">To enable Windows Forms visual styles</span></span>  
+#### <a name="to-enable-windows-forms-visual-styles"></a><span data-ttu-id="70b11-108">Windows フォーム視覚スタイルを有効にするには</span><span class="sxs-lookup"><span data-stu-id="70b11-108">To enable Windows Forms visual styles</span></span>  
   
-1.  <span data-ttu-id="1536b-109">作成、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]という名前のアプリケーション プロジェクト`HostingWfWithVisualStyles`です。</span><span class="sxs-lookup"><span data-stu-id="1536b-109">Create a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Application project named `HostingWfWithVisualStyles`.</span></span>  
+1.  <span data-ttu-id="70b11-109">作成、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]という名前のアプリケーション プロジェクト`HostingWfWithVisualStyles`します。</span><span class="sxs-lookup"><span data-stu-id="70b11-109">Create a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Application project named `HostingWfWithVisualStyles`.</span></span>  
   
-2.  <span data-ttu-id="1536b-110">ソリューション エクスプローラーで、次のアセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="1536b-110">In Solution Explorer, add references to the following assemblies.</span></span>  
+2.  <span data-ttu-id="70b11-110">ソリューション エクスプローラーで、次のアセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="70b11-110">In Solution Explorer, add references to the following assemblies.</span></span>  
   
-    -   <span data-ttu-id="1536b-111">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="1536b-111">WindowsFormsIntegration</span></span>  
+    -   <span data-ttu-id="70b11-111">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="70b11-111">WindowsFormsIntegration</span></span>  
   
-    -   <span data-ttu-id="1536b-112">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="1536b-112">System.Windows.Forms</span></span>  
+    -   <span data-ttu-id="70b11-112">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="70b11-112">System.Windows.Forms</span></span>  
   
-3.  <span data-ttu-id="1536b-113">ツールボックスでダブルクリックして、<xref:System.Windows.Controls.Grid>を配置するにはアイコン、<xref:System.Windows.Controls.Grid>デザイン サーフェイス上の要素。</span><span class="sxs-lookup"><span data-stu-id="1536b-113">In the Toolbox, double-click the <xref:System.Windows.Controls.Grid> icon to place a <xref:System.Windows.Controls.Grid> element on the design surface.</span></span>  
+3.  <span data-ttu-id="70b11-113">ツールボックスでダブルクリックして、<xref:System.Windows.Controls.Grid>を配置するにはアイコン、<xref:System.Windows.Controls.Grid>デザイン サーフェイス上の要素。</span><span class="sxs-lookup"><span data-stu-id="70b11-113">In the Toolbox, double-click the <xref:System.Windows.Controls.Grid> icon to place a <xref:System.Windows.Controls.Grid> element on the design surface.</span></span>  
   
-4.  <span data-ttu-id="1536b-114">[プロパティ] ウィンドウでの値を設定、<xref:System.Windows.FrameworkElement.Height%2A>と<xref:System.Windows.FrameworkElement.Width%2A>プロパティ**自動**です。</span><span class="sxs-lookup"><span data-stu-id="1536b-114">In the Properties window, set the values of the <xref:System.Windows.FrameworkElement.Height%2A> and <xref:System.Windows.FrameworkElement.Width%2A> properties to **Auto**.</span></span>  
+4.  <span data-ttu-id="70b11-114">[プロパティ] ウィンドウでの値を設定、<xref:System.Windows.FrameworkElement.Height%2A>と<xref:System.Windows.FrameworkElement.Width%2A>プロパティ**自動**します。</span><span class="sxs-lookup"><span data-stu-id="70b11-114">In the Properties window, set the values of the <xref:System.Windows.FrameworkElement.Height%2A> and <xref:System.Windows.FrameworkElement.Width%2A> properties to **Auto**.</span></span>  
   
-5.  <span data-ttu-id="1536b-115">[デザイン] ビューまたは XAML ビューで、選択、<xref:System.Windows.Window>です。</span><span class="sxs-lookup"><span data-stu-id="1536b-115">In Design view or XAML view, select the <xref:System.Windows.Window>.</span></span>  
+5.  <span data-ttu-id="70b11-115">デザイン ビューまたは XAML ビューで、選択、<xref:System.Windows.Window>します。</span><span class="sxs-lookup"><span data-stu-id="70b11-115">In Design view or XAML view, select the <xref:System.Windows.Window>.</span></span>  
   
-6.  <span data-ttu-id="1536b-116">[プロパティ] ウィンドウ、**イベント**タブです。</span><span class="sxs-lookup"><span data-stu-id="1536b-116">In the Properties window, click the **Events** tab.</span></span>  
+6.  <span data-ttu-id="70b11-116">[プロパティ] ウィンドウ、**イベント**タブ。</span><span class="sxs-lookup"><span data-stu-id="70b11-116">In the Properties window, click the **Events** tab.</span></span>  
   
-7.  <span data-ttu-id="1536b-117">ダブルクリックして、<xref:System.Windows.FrameworkElement.Loaded>イベント。</span><span class="sxs-lookup"><span data-stu-id="1536b-117">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>
+7.  <span data-ttu-id="70b11-117">ダブルクリックして、<xref:System.Windows.FrameworkElement.Loaded>イベント。</span><span class="sxs-lookup"><span data-stu-id="70b11-117">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>
   
-8.  <span data-ttu-id="1536b-118">MainWindow.xaml.vb または MainWindow.xaml.cs で処理する次のコードを挿入、<xref:System.Windows.FrameworkElement.Loaded>イベント。</span><span class="sxs-lookup"><span data-stu-id="1536b-118">In MainWindow.xaml.vb or MainWindow.xaml.cs, insert the following code to handle the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
+8.  <span data-ttu-id="70b11-118">MainWindow.xaml.vb または MainWindow.xaml.cs で、処理するために次のコードを挿入、<xref:System.Windows.FrameworkElement.Loaded>イベント。</span><span class="sxs-lookup"><span data-stu-id="70b11-118">In MainWindow.xaml.vb or MainWindow.xaml.cs, insert the following code to handle the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
   
      [!code-csharp[HostingWfWithVisualStyles#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWfWithVisualStyles/CSharp/HostingWfWithVisualStyles/Window1.xaml.cs#11)]
      [!code-vb[HostingWfWithVisualStyles#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfWithVisualStyles/VisualBasic/HostingWfWithVisualStyles/Window1.xaml.vb#11)]  
   
-9. <span data-ttu-id="1536b-119">F5 キーを押してアプリケーションをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="1536b-119">Press F5 to build and run the application.</span></span>  
+9. <span data-ttu-id="70b11-119">F5 キーを押してアプリケーションをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="70b11-119">Press F5 to build and run the application.</span></span>  
   
-     <span data-ttu-id="1536b-120">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールが visual スタイルで描画します。</span><span class="sxs-lookup"><span data-stu-id="1536b-120">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is painted with visual styles.</span></span>  
+     <span data-ttu-id="70b11-120">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールが visual スタイルで塗りつぶされます。</span><span class="sxs-lookup"><span data-stu-id="70b11-120">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is painted with visual styles.</span></span>  
   
-## <a name="disabling-windows-forms-visual-styles"></a><span data-ttu-id="1536b-121">Windows フォーム視覚スタイルの無効化</span><span class="sxs-lookup"><span data-stu-id="1536b-121">Disabling Windows Forms Visual Styles</span></span>  
- <span data-ttu-id="1536b-122">Visual スタイルを無効にするには、削除するだけを呼び出し、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッドです。</span><span class="sxs-lookup"><span data-stu-id="1536b-122">To disable visual styles, simply remove the call to the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method.</span></span>  
+## <a name="disabling-windows-forms-visual-styles"></a><span data-ttu-id="70b11-121">Windows フォーム視覚スタイルの無効化</span><span class="sxs-lookup"><span data-stu-id="70b11-121">Disabling Windows Forms Visual Styles</span></span>  
+ <span data-ttu-id="70b11-122">Visual スタイルを無効にするには、単にへの呼び出しを削除、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッド。</span><span class="sxs-lookup"><span data-stu-id="70b11-122">To disable visual styles, simply remove the call to the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method.</span></span>  
   
-#### <a name="to-disable-windows-forms-visual-styles"></a><span data-ttu-id="1536b-123">Windows フォーム視覚スタイルを無効にするには</span><span class="sxs-lookup"><span data-stu-id="1536b-123">To disable Windows Forms visual styles</span></span>  
+#### <a name="to-disable-windows-forms-visual-styles"></a><span data-ttu-id="70b11-123">Windows フォーム視覚スタイルを無効にするには</span><span class="sxs-lookup"><span data-stu-id="70b11-123">To disable Windows Forms visual styles</span></span>  
   
-1.  <span data-ttu-id="1536b-124">コード エディターで MainWindow.xaml.vb または MainWindow.xaml.cs を開きます。</span><span class="sxs-lookup"><span data-stu-id="1536b-124">Open MainWindow.xaml.vb or MainWindow.xaml.cs in the Code Editor.</span></span>  
+1.  <span data-ttu-id="70b11-124">コード エディターで MainWindow.xaml.vb または MainWindow.xaml.cs を開きます。</span><span class="sxs-lookup"><span data-stu-id="70b11-124">Open MainWindow.xaml.vb or MainWindow.xaml.cs in the Code Editor.</span></span>  
   
-2.  <span data-ttu-id="1536b-125">呼び出しをコメント、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッドです。</span><span class="sxs-lookup"><span data-stu-id="1536b-125">Comment out the call to the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method.</span></span>  
+2.  <span data-ttu-id="70b11-125">呼び出しをコメント、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッド。</span><span class="sxs-lookup"><span data-stu-id="70b11-125">Comment out the call to the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method.</span></span>  
   
-3.  <span data-ttu-id="1536b-126">F5 キーを押してアプリケーションをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="1536b-126">Press F5 to build and run the application.</span></span>  
+3.  <span data-ttu-id="70b11-126">F5 キーを押してアプリケーションをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="70b11-126">Press F5 to build and run the application.</span></span>  
   
-     <span data-ttu-id="1536b-127">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールが既定のシステムのスタイルで描画します。</span><span class="sxs-lookup"><span data-stu-id="1536b-127">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is painted with the default system style.</span></span>  
+     <span data-ttu-id="70b11-127">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールが既定のシステム スタイルで塗りつぶされます。</span><span class="sxs-lookup"><span data-stu-id="70b11-127">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is painted with the default system style.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1536b-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="1536b-128">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="70b11-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="70b11-128">See Also</span></span>  
  <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>  
  <xref:System.Windows.Forms.VisualStyles>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [<span data-ttu-id="1536b-129">visual スタイルが使用されているコントロールのレンダリング</span><span class="sxs-lookup"><span data-stu-id="1536b-129">Rendering Controls with Visual Styles</span></span>](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
- [<span data-ttu-id="1536b-130">チュートリアル: WPF での Windows フォーム コントロールのホスト</span><span class="sxs-lookup"><span data-stu-id="1536b-130">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+ [<span data-ttu-id="70b11-129">visual スタイルが使用されているコントロールのレンダリング</span><span class="sxs-lookup"><span data-stu-id="70b11-129">Rendering Controls with Visual Styles</span></span>](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
+ [<span data-ttu-id="70b11-130">チュートリアル: WPF での Windows フォーム コントロールのホスト</span><span class="sxs-lookup"><span data-stu-id="70b11-130">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)

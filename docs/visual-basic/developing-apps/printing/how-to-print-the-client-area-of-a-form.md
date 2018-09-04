@@ -5,37 +5,37 @@ helpviewer_keywords:
 - client area [Visual Basic], printing
 ms.assetid: c06c9c0e-bc07-48cd-9596-e29a2ff96236
 ms.openlocfilehash: b2f13d1ec151a5fd1967b522a601e0e19de04cbb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419285"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659406"
 ---
-# <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a><span data-ttu-id="c8b29-102">方法: フォームのクライアント領域を印刷する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8b29-102">How to: Print the Client Area of a Form (Visual Basic)</span></span>
-<span data-ttu-id="c8b29-103"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントを使用すると、 <xref:System.Drawing.Printing.PrintDocument> コンポーネントを使わなくてもフォームのイメージをすばやく印刷できます。</span><span class="sxs-lookup"><span data-stu-id="c8b29-103">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component enables you to quickly print an image of a form without using a <xref:System.Drawing.Printing.PrintDocument> component.</span></span> <span data-ttu-id="c8b29-104">次の手順では、タイトル バー、罫線、およびスクロール バー以外の、フォームのクライアント領域だけを印刷する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c8b29-104">The following procedure shows how to print just the client area of a form, without the title bar, borders, and scroll bars.</span></span>  
+# <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a><span data-ttu-id="60344-102">方法: フォームのクライアント領域を印刷する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60344-102">How to: Print the Client Area of a Form (Visual Basic)</span></span>
+<span data-ttu-id="60344-103"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントを使用すると、 <xref:System.Drawing.Printing.PrintDocument> コンポーネントを使わなくてもフォームのイメージをすばやく印刷できます。</span><span class="sxs-lookup"><span data-stu-id="60344-103">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component enables you to quickly print an image of a form without using a <xref:System.Drawing.Printing.PrintDocument> component.</span></span> <span data-ttu-id="60344-104">次の手順では、タイトル バー、罫線、およびスクロール バー以外の、フォームのクライアント領域だけを印刷する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="60344-104">The following procedure shows how to print just the client area of a form, without the title bar, borders, and scroll bars.</span></span>  
   
- <span data-ttu-id="c8b29-105">PowerPack コントロールは不要になった Visual Studio で、含まれていますからダウンロードすることができます、[ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=25169)します。</span><span class="sxs-lookup"><span data-stu-id="c8b29-105">The PowerPack controls are no longer included in Visual Studio, but you can download them from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=25169).</span></span>  
+ <span data-ttu-id="60344-105">PowerPack コントロールは不要になった Visual Studio で、含まれていますからダウンロードすることができます、[ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=25169)します。</span><span class="sxs-lookup"><span data-stu-id="60344-105">The PowerPack controls are no longer included in Visual Studio, but you can download them from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=25169).</span></span>  
   
-### <a name="to-print-the-client-area-of-a-form"></a><span data-ttu-id="c8b29-106">フォームのクライアント領域を印刷するには</span><span class="sxs-lookup"><span data-stu-id="c8b29-106">To print the client area of a form</span></span>  
+### <a name="to-print-the-client-area-of-a-form"></a><span data-ttu-id="60344-106">フォームのクライアント領域を印刷するには</span><span class="sxs-lookup"><span data-stu-id="60344-106">To print the client area of a form</span></span>  
   
-1.  <span data-ttu-id="c8b29-107">**ツールボックス**で、 **[Visual Basic PowerPacks]** タブをクリックして、 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントをフォームにドラッグします。</span><span class="sxs-lookup"><span data-stu-id="c8b29-107">In the **Toolbox**, click the **Visual Basic PowerPacks** tab and then drag the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component onto the form.</span></span>  
+1.  <span data-ttu-id="60344-107">**ツールボックス**で、 **[Visual Basic PowerPacks]** タブをクリックして、 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントをフォームにドラッグします。</span><span class="sxs-lookup"><span data-stu-id="60344-107">In the **Toolbox**, click the **Visual Basic PowerPacks** tab and then drag the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component onto the form.</span></span>  
   
-     <span data-ttu-id="c8b29-108"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントをコンポーネント トレイに追加します。</span><span class="sxs-lookup"><span data-stu-id="c8b29-108">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component is added to the component tray.</span></span>  
+     <span data-ttu-id="60344-108"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントをコンポーネント トレイに追加します。</span><span class="sxs-lookup"><span data-stu-id="60344-108">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component is added to the component tray.</span></span>  
   
-2.  <span data-ttu-id="c8b29-109">**[プロパティ]** ウィンドウで、 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> プロパティを <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>に設定します。</span><span class="sxs-lookup"><span data-stu-id="c8b29-109">In the **Properties** window, set the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> property to <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>.</span></span>  
+2.  <span data-ttu-id="60344-109">**[プロパティ]** ウィンドウで、 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> プロパティを <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>に設定します。</span><span class="sxs-lookup"><span data-stu-id="60344-109">In the **Properties** window, set the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> property to <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>.</span></span>  
   
-3.  <span data-ttu-id="c8b29-110">適切なイベント ハンドラー (たとえば `Click` [印刷] **の**`Button`イベント ハンドラー) に、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="c8b29-110">Add the following code in the appropriate event handler (for example, in the `Click` event handler for a **Print**`Button`).</span></span>  
+3.  <span data-ttu-id="60344-110">適切なイベント ハンドラー (たとえば `Click` [印刷] **の**`Button`イベント ハンドラー) に、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="60344-110">Add the following code in the appropriate event handler (for example, in the `Click` event handler for a **Print**`Button`).</span></span>  
   
     ```  
     PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption.ClientAreaOnly)  
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="c8b29-111">オペレーティング システムによっては、 <xref:System.Drawing.Graphics> メソッドによって描画されたテキストやグラフィックスが正しく印刷されないことがあります。</span><span class="sxs-lookup"><span data-stu-id="c8b29-111">On some operating systems, text or graphics drawn by <xref:System.Drawing.Graphics> methods may not print correctly.</span></span> <span data-ttu-id="c8b29-112">この場合は、互換性のある印刷メソッドを使用します。 `PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption CompatibleModeClientAreaOnly).`</span><span class="sxs-lookup"><span data-stu-id="c8b29-112">In this case, use the compatible printing method: `PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption CompatibleModeClientAreaOnly).`</span></span>  
+    >  <span data-ttu-id="60344-111">オペレーティング システムによっては、 <xref:System.Drawing.Graphics> メソッドによって描画されたテキストやグラフィックスが正しく印刷されないことがあります。</span><span class="sxs-lookup"><span data-stu-id="60344-111">On some operating systems, text or graphics drawn by <xref:System.Drawing.Graphics> methods may not print correctly.</span></span> <span data-ttu-id="60344-112">この場合は、互換性のある印刷メソッドを使用します。 `PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption CompatibleModeClientAreaOnly).`</span><span class="sxs-lookup"><span data-stu-id="60344-112">In this case, use the compatible printing method: `PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption CompatibleModeClientAreaOnly).`</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8b29-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="c8b29-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="60344-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="60344-113">See Also</span></span>  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
- [<span data-ttu-id="c8b29-114">PrintForm コンポーネント</span><span class="sxs-lookup"><span data-stu-id="c8b29-114">PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/printform-component.md)  
- [<span data-ttu-id="c8b29-115">方法: フォームのクライアント領域と非クライアント領域を印刷する</span><span class="sxs-lookup"><span data-stu-id="c8b29-115">How to: Print Client and Non-Client Areas of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- [<span data-ttu-id="c8b29-116">方法: スクロール可能フォームを印刷する</span><span class="sxs-lookup"><span data-stu-id="c8b29-116">How to: Print a Scrollable Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+ [<span data-ttu-id="60344-114">PrintForm コンポーネント</span><span class="sxs-lookup"><span data-stu-id="60344-114">PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/printform-component.md)  
+ [<span data-ttu-id="60344-115">方法: フォームのクライアント領域と非クライアント領域を印刷する</span><span class="sxs-lookup"><span data-stu-id="60344-115">How to: Print Client and Non-Client Areas of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
+ [<span data-ttu-id="60344-116">方法: スクロール可能フォームを印刷する</span><span class="sxs-lookup"><span data-stu-id="60344-116">How to: Print a Scrollable Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
