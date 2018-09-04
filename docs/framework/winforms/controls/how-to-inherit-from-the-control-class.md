@@ -8,18 +8,18 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: da80d46f27d7cd721af7a9600d2b0cde84876d23
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a0eea1930699ed85fcf0eaf184ba0aabe398d73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534584"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43531746"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>方法 : コントロール クラスを継承する
-Windows フォームで使用する完全なカスタム コントロールを作成する場合から継承する必要があります、<xref:System.Windows.Forms.Control>クラスです。 継承するときに、<xref:System.Windows.Forms.Control>を計画および実装の詳細を実行するオプションを提供するオプションの最大範囲とクラスが必要です。 継承する場合<xref:System.Windows.Forms.Control>コントロールの動作を実現する非常に基本的な機能を継承します。 本来の機能、<xref:System.Windows.Forms.Control>クラス、キーボードとマウスを介してユーザー入力の処理、境界とコントロールのサイズを定義、windows ハンドルを提供およびメッセージの処理とセキュリティを提供します。 描画機能 (ここではコントロールのグラフィカル インターフェイスを実際に表示する機能) や、ユーザーとやり取りするための特定の機能は含まれていません。 このような機能はすべて、カスタム コードによって提供する必要があります。  
+Windows フォームで使用する完全なカスタム コントロールを作成する場合から継承する必要があります、<xref:System.Windows.Forms.Control>クラス。 継承中に、<xref:System.Windows.Forms.Control>クラスは、多くの計画と実装を実行することは、オプションの最大範囲にも提供が必要です。 継承する場合<xref:System.Windows.Forms.Control>コントロールを動作を実現する非常に基本的な機能を継承します。 固有の機能、<xref:System.Windows.Forms.Control>クラス、キーボードとマウスによるユーザー入力の処理、コントロールのサイズと境界を定義します。、、windows ハンドルを提供しますおよびメッセージの処理とセキュリティを提供します。 描画機能 (ここではコントロールのグラフィカル インターフェイスを実際に表示する機能) や、ユーザーとやり取りするための特定の機能は含まれていません。 このような機能はすべて、カスタム コードによって提供する必要があります。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ### <a name="to-create-a-custom-control"></a>カスタム コントロールを作成するには  
   
@@ -33,7 +33,7 @@ Windows フォームで使用する完全なカスタム コントロールを�
   
 4.  F7 キーを押して、カスタム コントロールの**コード エディター**を開きます。  
   
-5.  検索、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドの呼び出しを除く空になります、<xref:System.Windows.Forms.Control.OnPaint%2A>基底クラスのメソッドです。  
+5.  検索、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドの呼び出しを除いて空白になります<xref:System.Windows.Forms.Control.OnPaint%2A>基本クラスのメソッド。  
   
 6.  コントロールで使用するカスタム描画が組み込まれるように、コードを修正します。  
   

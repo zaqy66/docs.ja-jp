@@ -5,11 +5,11 @@ ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 81d7bc6d8d530b2cd3fc528c3f8b44ec8f98f237
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393376"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522214"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
 Windows Communication Foundation (WCF) での動作は、サービス レベルまたはエンドポイント レベルでの実行時の動作を変更します。 (一般に、表示動作の詳細については[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md))。*セキュリティ動作*および監査ログの資格情報、認証、承認、制御できるようにします。 動作は、プログラムまたは構成を通じて使用できます。 ここでは、セキュリティ機能に関連する以下の動作の構成について説明します。  

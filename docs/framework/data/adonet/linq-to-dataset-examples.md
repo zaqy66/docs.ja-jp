@@ -2,15 +2,15 @@
 title: LINQ to DataSet の例
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: f0b836e4f19011dc3d75f0681f7205cec6cb9110
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 09a5d652d1d75a02966f3ed38fe9d3aa7901a87b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764971"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524843"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet の例
-このセクションでは[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]プログラミングの標準クエリ演算子を使用する例を紹介します。 <xref:System.Data.DataSet>これらの例で使用されるを使用して設定されます、`FillDataSet`で指定されているメソッド[、データセットにデータを読み込む](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)します。 詳細については、次を参照してください。[標準クエリ演算子の概要](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)です。  
+このセクションでは[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]プログラミングの標準クエリ演算子を使用する例。 <xref:System.Data.DataSet>これらの例で使用されるを使用して設定されますが、`FillDataSet`メソッドで指定されている[をデータセットにデータを読み込む](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 詳細については、次を参照してください。[標準クエリ演算子の概要](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [クエリ式の例](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  

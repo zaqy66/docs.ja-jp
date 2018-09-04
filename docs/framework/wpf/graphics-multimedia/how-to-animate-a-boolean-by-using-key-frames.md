@@ -10,11 +10,11 @@ helpviewer_keywords:
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
 ms.openlocfilehash: 0142748a5c8e9a4375802d1b48beec0501d37e7c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468277"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521075"
 ---
 # <a name="how-to-animate-a-boolean-by-using-key-frames"></a>方法 : キー フレームを使用してブール値をアニメーション化する
 この例のブール型プロパティ値をアニメーション化する方法を示しています、<xref:System.Windows.Controls.Button>キー フレームを使用して制御します。  

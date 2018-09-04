@@ -6,15 +6,15 @@ helpviewer_keywords:
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 4805b4f111e950c18a34822ebfb48eca4134b0da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab525cba0cc313466b22bc59bc458d2e355b86cb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508372"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524795"
 ---
 # <a name="message-security-anonymous"></a>メッセージ セキュリティ匿名
-メッセージ セキュリティ匿名サンプルは、Windows Communication Foundation (WCF) アプリケーションの実装には、クライアント認証とメッセージ レベルのセキュリティを使用するは、サーバーの X.509 を使用するサーバー認証を必要とする方法を示しています。証明書です。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 このサンプルがに基づいて、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)サンプルです。 このサンプルは、クライアント コンソール プログラム (.exe) と、インターネット インフォメーション サービス (IIS) によってホストされるサービス ライブラリ (.dll) で構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  
+メッセージ セキュリティ匿名サンプルは、Windows Communication Foundation (WCF) アプリケーションを実装するクライアント認証なしでメッセージ レベルのセキュリティを使用するが、サーバーの X.509 を使用して、サーバー認証を必要とする方法を示します証明書。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 このサンプルがに基づいて、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)サンプル。 このサンプルは、クライアント コンソール プログラム (.exe) と、インターネット インフォメーション サービス (IIS) によってホストされるサービス ライブラリ (.dll) で構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -60,7 +60,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- サービスの認証に使用する資格情報がで指定された、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)です。 サーバー証明書の `SubjectName` には、`findValue` 属性に指定されている値と同じ値が指定されている必要があります。次のサンプル コードを参照してください。  
+ サービスの認証に使用する資格情報がで指定された、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)します。 サーバー証明書の `SubjectName` には、`findValue` 属性に指定されている値と同じ値が指定されている必要があります。次のサンプル コードを参照してください。  
   
 ```xml  
 <behaviors>  
@@ -111,7 +111,7 @@ public class CalculatorService : ICalculator
   
  このサンプルでは、サービスの証明書を認証するために、<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> を <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> に設定します。 これは、`behaviors` セクションのクライアントの App.config ファイルで行われます。 つまり、証明書がユーザーの Trusted People ストア内に存在している場合、その証明書は発行者のチェーンが検証されることなく信頼されます。 証明機関 (CA) から発行された証明書を要求しなくともサンプルを実行できるようにするため、ここでは便宜上この設定が使用されます。 この設定は、既定の ChainTrust よりも安全性が低くなります。 `PeerOrChainTrust` を製品版のコードで使用する前に、この設定のセキュリティへの影響について慎重に考慮する必要があります。  
   
- クライアント実装への呼び出しを追加して、`IsCallerAnonymous`メソッドと、それ以外の場合と変わりません、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)サンプルです。  
+ クライアント実装への呼び出しを追加して、`IsCallerAnonymous`メソッドと、それ以外の場合違いはありません、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)サンプル。  
 
 ```csharp
 // Create a client with a client endpoint configuration.  
@@ -194,7 +194,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
@@ -211,7 +211,7 @@ Press <ENTER> to terminate client.
   
 4.  Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-5.  クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+5.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -223,7 +223,7 @@ Press <ENTER> to terminate client.
   
 4.  クライアント プログラム ファイルを、クライアント コンピューターに作成したクライアント ディレクトリにコピーします。 Setup.bat、Cleanup.bat、ImportServiceCert.bat の各ファイルもクライアントにコピーします。  
   
-5.  サーバー上で管理特権を使用して Visual Studio コマンド プロンプトを開き、`setup.bat service` を実行します。 実行している`setup.bat`で、`service`引数が、コンピューターの完全修飾ドメイン名でサービス証明書を作成し、サービス証明書が Service.cer というファイルにエクスポートします。  
+5.  サーバー上で管理特権を使用して Visual Studio コマンド プロンプトを開き、`setup.bat service` を実行します。 実行している`setup.bat`で、`service`引数が、コンピューターの完全修飾ドメイン名でサービス証明書を作成し、Service.cer というファイルに、サービス証明書をエクスポートします。  
   
 6.  新しい証明書名を反映するように Web.config を編集 (で、`findValue`属性、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md))、これは、コンピューターの完全修飾ドメイン名と同じです。  
   
@@ -233,7 +233,7 @@ Press <ENTER> to terminate client.
   
 9. クライアント上で、管理特権を使用して Visual Studio コマンド プロンプトを開き、ImportServiceCert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。  
   
-10. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+10. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 ### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   

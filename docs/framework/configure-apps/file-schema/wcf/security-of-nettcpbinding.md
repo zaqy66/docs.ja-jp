@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: f58dd0ee1b00785e82628e5442c736866ffe7db5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 13aeb3261fdb9689caa1dea1ec7382fdb9d9b1ce
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751234"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516974"
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; の &lt;security&gt;
 バインディングのセキュリティ設定を定義します。  
@@ -62,9 +62,9 @@ ms.locfileid: "32751234"
   
 |要素|説明|  
 |-------------|-----------------|  
-|バインド|バインド要素、 [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)です。|  
+|バインド|バインド要素、 [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  標準バインディングにはそれぞれ、転送セキュリティ要件を制御するためのパラメーターが用意されています。 通常、これらのパラメーターには、使用されるセキュリティ レベル (メッセージ レベルまたはトランスポート レベル) を指定したセキュリティ モードと、クライアント資格情報の種類が含まれています。 これらのパラメーターが提示するオプションの選択に基づいて、適切なセキュリティが設定されたチャネル スタックが構築されます。  
   
  WCF (Windows Communication Foundation) に用意されているシステム標準のバインディグは、最も一般的なシナリオ要件の一部を満たすように設計されたセットです。 これらのバイディングでは、特定のシナリオを対象とするセキュリティ要件を指定できます。  
@@ -79,5 +79,5 @@ ms.locfileid: "32751234"
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  
  [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [バインディングを使用して、Windows Communication Foundation サービスとクライアントを構成するには](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

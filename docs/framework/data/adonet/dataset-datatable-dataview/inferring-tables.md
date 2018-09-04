@@ -3,11 +3,11 @@ title: テーブルの推論
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528173"
 ---
 # <a name="inferring-tables"></a>テーブルの推論
 XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論するときには、ADO.NET では、テーブルを表す XML 要素を最初に決定します。 次の XML 構造の結果のテーブルに、**データセット**スキーマ。  

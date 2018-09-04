@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 8ee47ddce273e564673d96d2b2e276b68879373f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d5031136b48b50ef7ad34b97942b7f6d8054d340
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760467"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522317"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable への列の追加
-A<xref:System.Data.DataTable>のコレクションを格納<xref:System.Data.DataColumn>によって参照されるオブジェクト、**列**テーブルのプロパティです。 この列のコレクションと制約によって、テーブルのスキーマ (構造) が定義されます。  
+A<xref:System.Data.DataTable>のコレクションを含む<xref:System.Data.DataColumn>によって参照されるオブジェクト、**列**テーブルのプロパティ。 この列のコレクションと制約によって、テーブルのスキーマ (構造) が定義されます。  
   
- 作成する**DataColumn**を使用してテーブル内のオブジェクト、 **DataColumn**コンス トラクター、または呼び出すことによって、**追加**のメソッド、**列**これは、テーブルのプロパティ、<xref:System.Data.DataColumnCollection>です。 **追加**メソッドは省略可能なを受け取ります**ColumnName**、 **DataType**、および**式**引数新たに作成および**DataColumn**コレクションのメンバーとして。 指定することも、既存**DataColumn**オブジェクトし、コレクションに追加しを追加の参照を返します**DataColumn**要求されている場合。 **DataTable**オブジェクトがすべてのデータ ソースに固有ではないのデータ型を指定するときに .NET Framework の型が使用される、 **DataColumn**です。  
+ 作成する**DataColumn**を使用してテーブル内のオブジェクト、 **DataColumn**コンス トラクター、または呼び出すことによって、**追加**のメソッド、**列**これは、テーブルのプロパティを<xref:System.Data.DataColumnCollection>します。 **追加**メソッドは省略可能な**ColumnName**、 **DataType**、および**式**引数新たに作成および**DataColumn**コレクションのメンバーとして。 既存のも受け付けます**DataColumn**オブジェクトし、コレクションに追加しを追加の参照を返します**DataColumn**要求された場合。 **DataTable**オブジェクトは任意のデータ ソースに固有ではないのデータ型を指定するときに .NET Framework の型が使用される、 **DataColumn**します。  
   
- 次の例では、次の 4 つの列を**DataTable**です。  
+ 次の例では、4 つの列に、 **DataTable**します。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -44,10 +44,10 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- 例では、ことに注意してプロパティを**CustID**列は許可しないように設定**DBNull**値とを一意になる値を制限します。 ただし、定義した場合、 **CustID**列、テーブルの主キー列として、 **AllowDBNull**プロパティに自動的に設定する**false**と、 **Unique**プロパティに自動的に設定する**true**です。 詳細については、次を参照してください。[主キーを定義する](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)です。  
+ この例では、プロパティを**CustID**列は許可しないように設定**DBNull**値と一意である値を制限します。 ただし、定義した場合、 **CustID**列、テーブルの主キー列として、 **AllowDBNull**プロパティに自動的に設定する**false**と、 **Unique**プロパティに自動的に設定する**true**します。 詳細については、次を参照してください。[主キーを定義する](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)します。  
   
 > [!CAUTION]
->  列が列の増分の既定の名前を指定された列の列名が指定されない場合*N、* "Column1"から始めて、これが追加されたときに、 **DataColumnCollection**です。 名前付け規則を回避することをお勧め"列*N*"の既存の既定の列名と競合があります、名前を指定するために、列名を指定するときに、 **DataColumnCollection**です。 指定した名前が既に存在する場合は、例外がスローされます。  
+>  列の列名が指定されていない場合、列が指定された列のインクリメンタル既定名*N、* "Column1"から始めて、ときに追加されます、 **DataColumnCollection**します。 名前付け規則を回避することをお勧めします。"列*N*"の既存の既定の列名と競合する可能性が名前を指定するために、列名を指定するときに、 **DataColumnCollection**します。 指定した名前が既に存在する場合は、例外がスローされます。  
   
  <xref:System.Xml.Linq.XElement> を、<xref:System.Data.DataColumn.DataType%2A> 内の <xref:System.Data.DataColumn> の <xref:System.Data.DataTable> として使用すると、データを読み取るときに XML シリアル化が機能しません。 たとえば、<xref:System.Xml.XmlDocument> メソッドを使用して `DataTable.WriteXml` を書き込むと、XML へのシリアル化で <xref:System.Xml.Linq.XElement> に親ノードが追加されます。 この問題に対処するには、<xref:System.Data.SqlTypes.SqlXml> の代わりに <xref:System.Xml.Linq.XElement> 型を使用します。 `ReadXml` および `WriteXml` は、<xref:System.Data.SqlTypes.SqlXml> で適切に機能します。  
   
@@ -57,4 +57,4 @@ workTable.Columns.Add("Purchases", typeof(Double));
  <xref:System.Data.DataTable>  
  [DataTable スキーマの定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

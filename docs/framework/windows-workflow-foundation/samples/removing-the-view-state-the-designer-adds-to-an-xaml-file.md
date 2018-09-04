@@ -3,11 +3,11 @@ title: デザイナーによって XAML ファイルに追加されるビュー�
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
 ms.openlocfilehash: ed2fda0bb66b2c8fe58c60acc6f80b9e9c8e984e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386934"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524953"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>デザイナーによって XAML ファイルに追加されるビューステートの削除
 このサンプルでは、<xref:System.Windows.Markup.XamlWriter> から派生するクラスを作成する方法を示し、XAML ファイルからビュー ステートを削除します。 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] は、ビュー ステートと呼ばれる情報を XAML ドキュメントに書き込みます。 ビュー ステートは、ランタイムでは不必要なレイアウト配置などの、デザイン時に必要な情報を参照します。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] は、編集時に、XAML ドキュメントにこの情報を挿入します。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] は、`mc:Ignorable` 属性を持つ XAML ファイルにビュー ステートを書き込みます。この結果、ランタイムが XAML ファイルを読み込みとき、この情報は読み込まれません。 このサンプルでは、XAML ノードの処理中にそのビューステート情報を削除するクラスを作成する方法を示します。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
 ms.openlocfilehash: 92b3444f81f00ee709c22836126073d342c6fa05
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394641"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526818"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ に関する留意点 (WCF Data Services)
 このトピックでは、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアントを使用しているときに LINQ クエリを作成および実行する方法と、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] を実装するデータ サービスを LINQ で照会する場合の制限について説明します。 作成して、に対するクエリの実行の詳細については、 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-ベースのデータ サービスを参照してください[データ サービスのクエリ](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)します。  

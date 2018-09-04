@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b2e1b08d1091e482c6b02fe015a58219ff80768
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462190"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517562"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 関数
-名前付きの修飾子と値を書き込みます。 新しい修飾子には、同じ名前の前の値が上書きされます。 修飾子が存在しない場合は作成されます。 
+名前付き修飾子と値が書き込まれます。 新しい修飾子は、同じ名前の前の値を上書きします。 修飾子が存在しない場合は作成されます。 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -46,45 +46,45 @@ HRESULT QualifierSet_Put (
 [in]このパラメーターは使用されません。
 
 `ptr`   
-[in]ポインター、 [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)インスタンス。
+[in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。
 
 `wszName`   
 [in]書き込む修飾子の名前。
 
-`pVal` [in]有効なポインター`VARIANT`書き込む修飾子を格納しています。 このパラメーターを指定できません`null`です。
+`pVal` [in]有効なへのポインター`VARIANT`書き込む修飾子を格納しています。 このパラメーターにすることはできません`null`します。
 
-`lFlavor` [in]この修飾子に必要な修飾子のフレーバーを定義する次の定数の 1 つ。 既定値は`WBEM_FLAVOR_OVERRIDABLE`(0) です。
+`lFlavor` [in]この修飾子の必要な修飾子のフレーバーを定義する次の定数の 1 つ。 既定値は`WBEM_FLAVOR_OVERRIDABLE`(0)。
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | 修飾子は、派生クラスまたはインスタンスでオーバーライドできます。 **これは、既定値です。** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | この修飾子は、インスタンスに反映されます。 |
-| `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | 修飾子は、派生クラスに伝達されます。 |
+| `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | 修飾子は、派生クラスに反映します。 |
 | ' WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | この修飾子は、派生クラスまたはインスタンスではオーバーライドできません。 |
-| ' WBEM_FLAVOR_AMENDED | 0x80 | 修飾子はローカライズされます。 |
+| ' WBEM_FLAVOR_AMENDED | 0x80 | 修飾子がローカライズされます。 |
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定義する定数として、コード。
+この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |[値]  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 指定する無効なが試行されました、**キー**することはできません、キー プロパティでの修飾子です。 キーが指定されて om c; オブジェクトの定義はアセンブリと、インスタンスごとに変更することはできません。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが正しくありません。 |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal`パラメーターが正しい型ではありません。 |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | 呼び出すことはできません、`QualifierSet_Put`修飾子のメソッド オーバーライドの所有するオブジェクトが許可されていません。 |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 指定する無効なが試行されました、**キー**修飾子プロパティのキーにすることはできません。 キーが指定された om c; オブジェクトのクラス定義し、インスタンスごとに変更することはできません。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal`パラメーターが有効な修飾子型ではありません。 |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | 呼び出すことはできません、`QualifierSet_Put`メソッド修飾子を所有するオブジェクトが許可されていないためにオーバーライドします。 |
 | `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数への呼び出しをラップする、 [IWbemQualifierSet::Put](https://msdn.microsoft.com/library/aa391871(v=vs.85).aspx)メソッドです。
+この関数の呼び出しをラップする、 [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put)メソッド。
 
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目  
 [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 718a0c086181546ba7b7fb3b31fce0732dd99382
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401768"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517117"
 ---
 # <a name="specifying-an-endpoint-address"></a>エンドポイント アドレスの指定
 Windows Communication Foundation (WCF) サービスとすべての通信は、そのエンドポイントを介して行われます。 各 <xref:System.ServiceModel.Description.ServiceEndpoint> は、<xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>、および <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> で構成されます。 コントラクトでは、使用できる操作を指定します。 バインディングでは、サービスとの通信方法を指定し、アドレスでは、サービスの場所を指定します。 各エンドポイントには、一意のアドレスを設定する必要があります。 エンドポイント アドレスは、<xref:System.ServiceModel.EndpointAddress> クラスによって表します。このクラスは、サービスのアドレスを表す URI (Uniform Resource Identifier)、サービスのセキュリティ ID を表す <xref:System.ServiceModel.EndpointAddress.Identity%2A>、およびオプションの <xref:System.ServiceModel.EndpointAddress.Headers%2A> のコレクションで構成されます。 オプション ヘッダーは、エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 たとえば、ヘッダーを使用して、受信メッセージの処理方法や、エンドポイントからの応答メッセージの送信先を指定できるほか、複数のサービス インスタンスが使用できる場合に、特定ユーザーからの受信メッセージの処理に使用するインスタンスを指定できます。  

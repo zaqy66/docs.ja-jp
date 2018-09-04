@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
 ms.openlocfilehash: daa8097bc5dfee203f988915b1e4a8bdcd2c50e0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408085"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515413"
 ---
 # <a name="finding-rows"></a>行の検索
 <xref:System.Data.DataView.Find%2A> の <xref:System.Data.DataView.FindRows%2A> メソッドと <xref:System.Data.DataView> メソッドを使用すると、並べ替えキーの値に基づいて行を検索できます。 値の検索の大文字小文字の区別、**検索**と**FindRows**メソッドはによって決定されます、 **CaseSensitive** 、基になるプロパティ<xref:System.Data.DataTable>します。 検索結果を返すには、検索値が既存の並べ替えキーの値と完全に一致している必要があります。  

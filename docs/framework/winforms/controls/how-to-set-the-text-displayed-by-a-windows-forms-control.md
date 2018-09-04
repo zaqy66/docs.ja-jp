@@ -22,11 +22,11 @@ helpviewer_keywords:
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
 ms.openlocfilehash: d9c9bea26cfc3d5b2cfc4484173a7680ff2fc34d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399327"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525036"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>方法 : Windows フォーム コントロールによって表示されるテキストを設定する
 Windows フォーム コントロールは、通常、コントロールの主な機能に関連するいくつかのテキストを表示します。 たとえば、<xref:System.Windows.Forms.Button> コントロールは、通常、ボタンがクリックされたときにどのようなアクションを実行するかを示すキャプションを表示します。 すべてのコントロールに対して、<xref:System.Windows.Forms.Control.Text%2A> プロパティを使用してテキストを設定または返すことができます。 <xref:System.Windows.Forms.Control.Font%2A> プロパティを使用して、フォントを変更することができます。 また、デザイナーを使用してテキストを設定することもできます。  参照してください[方法: アクセス キーの Windows フォーム コントロールを使用して作成デザイナー](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)、[方法: デザイナーを使用して Windows フォーム コントロールによって表示されるテキストを設定](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)、[方法: イメージを設定しますによって表示される、Windows フォーム デザイナーを使用してコントロール](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)します。  

@@ -9,28 +9,28 @@ helpviewer_keywords:
 - radial gradients [WPF], painting with
 - painting [WPF], with radial gradients
 ms.assetid: b5d0fc8a-8986-4796-b003-a75b41a48928
-ms.openlocfilehash: d794f85ce4968e1cf1759df5358834f3b4cdfb50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75c28cd19ec0423589b6485884842468b89b5e8c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560643"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526792"
 ---
 # <a name="how-to-paint-an-area-with-a-radial-gradient"></a>方法 : 放射状グラデーションを使用して領域を塗りつぶす
-この例を使用する方法を示しています、<xref:System.Windows.Media.RadialGradientBrush>放射状グラデーションで領域を塗りつぶすクラス。  
+この例は、使用する方法を示します、<xref:System.Windows.Media.RadialGradientBrush>放射状グラデーションを使用して領域を描画するクラス。  
   
 ## <a name="example"></a>例  
- 次の例では、<xref:System.Windows.Media.RadialGradientBrush>放射状グラデーション赤青の淡い緑から黄色から遷移を含む四角形を描画します。  
+ 次の例では、<xref:System.Windows.Media.RadialGradientBrush>四角形を淡い緑、青、赤黄色から遷移放射状のグラデーションを使用します。  
   
  [!code-csharp[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/RadialGradientBrushSnippet.cs#simpleradialgradientexamplewholepage)]
  [!code-vb[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/radialgradientbrushsnippet.vb#simpleradialgradientexamplewholepage)]
  [!code-xaml[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/RadialGradientBrushSnippet.xaml#simpleradialgradientexamplewholepage)]  
   
- 次の図は、前の例からのグラデーションを示します。 グラデーションの終了位置が示されています。  
+ 次の図は、前の例のグラデーションを示しています。 グラデーションの終了位置が強調されています。  
   
  ![放射状グラデーションでのグラデーション境界](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
   
 > [!NOTE]
->  このトピックの例では、制御点を設定するための既定の座標系を使用します。 既定の座標システムは境界ボックスに対する相対: 0%、境界ボックスの場合は 0、1 は、境界ボックスの 100% を示します。 この座標系を変更するには設定して、<xref:System.Windows.Media.GradientBrush.MappingMode%2A>プロパティ値を<xref:System.Windows.Media.BrushMappingMode.Absolute>です。 絶対座標系は、境界ボックスに相対しません。 値は、ローカル空間に直接変換されます。  
+>  このトピックの例では、コントロール ポイントを設定するための既定の座標系を使用します。 既定の座標系は境界ボックスに対して相対的です: 0、境界ボックスの 0% を示し、1 は境界ボックスの 100% を示します。 この座標系を設定して変更することができます、<xref:System.Windows.Media.GradientBrush.MappingMode%2A>プロパティ値を<xref:System.Windows.Media.BrushMappingMode.Absolute>します。 絶対座標系は、境界ボックスに相対しません。 値は、ローカル空間に直接変換されます。  
   
- 追加<xref:System.Windows.Media.RadialGradientBrush>例についてを参照してください、[ブラシ サンプル](http://go.microsoft.com/fwlink/?LinkID=159973)です。 グラデーションおよびその他の種類のブラシの詳細については、次を参照してください。[純色、グラデーションの概要でペイント](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)です。
+ 追加<xref:System.Windows.Media.RadialGradientBrush>例についてを参照してください、[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)します。 グラデーションおよびその他の種類のブラシの詳細については、次を参照してください。[純色およびグラデーション概要](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)します。

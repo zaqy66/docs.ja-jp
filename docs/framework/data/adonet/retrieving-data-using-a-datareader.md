@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 4370a7a700a01943548bf067827e6640245caf4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482165"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516792"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>DataReader によるデータの取得
 使用してデータの取得、 **DataReader**のインスタンスを作成、**コマンド**オブジェクトを作成した後、 **DataReader**呼び出して**Command.ExecuteReader**データ ソースから行を取得します。 次の例を使用して、 **DataReader**場所`reader`は有効な datareader と`command`有効な Command オブジェクトを表します。  

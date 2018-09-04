@@ -2,12 +2,12 @@
 title: SQL Server でのアプリケーション ロールの作成
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: cb3bcb08877d8a17ea40ea48440c1d71560d0e5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 811654b73cd1cc0b8c17565b45613253de3c0e81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362528"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522014"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>SQL Server でのアプリケーション ロールの作成
 アプリケーション ロールは、データベース ロールやユーザーに対してではなく、アプリケーションに権限を割り当てる手段です。 ユーザーはデータベースに接続し、アプリケーション ロールをアクティブ化して、そのアプリケーションに付与された権限を使用することになります。 アプリケーション ロールに付与された権限は、接続している間のみ有効です。  
@@ -47,19 +47,19 @@ ms.locfileid: "33362528"
   
  以下の代替策を検討する必要があります。  
   
--   EXECUTE AS ステートメントに NO REVERT 句と WITH COOKIE 句を指定してコンテキスト切り替えを行う。 ログインにマップされていないユーザー アカウントをデータベースに作成し、 このアカウントに権限を割り当てるようにします。 EXECUTE AS はパスワード ベースではなく、権限ベースであるため、非ログイン ユーザーで使用した方が高いセキュリティを確保できます。 詳細については、次を参照してください。 [SQL Server での偽装でのアクセス許可をカスタマイズする](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)です。  
+-   EXECUTE AS ステートメントに NO REVERT 句と WITH COOKIE 句を指定してコンテキスト切り替えを行う。 ログインにマップされていないユーザー アカウントをデータベースに作成し、 このアカウントに権限を割り当てるようにします。 EXECUTE AS はパスワード ベースではなく、権限ベースであるため、非ログイン ユーザーで使用した方が高いセキュリティを確保できます。 詳細については、次を参照してください。 [SQL Server での借用を使用したアクセス許可をカスタマイズする](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)します。  
   
--   証明書を使ってストアド プロシージャに署名し、そのプロシージャを実行するのに必要な権限だけを付与する。 詳細については、次を参照してください。 [SQL Server でストアド プロシージャの署名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)です。  
+-   証明書を使ってストアド プロシージャに署名し、そのプロシージャを実行するのに必要な権限だけを付与する。 詳細については、次を参照してください。 [SQL Server でのストアド プロシージャの署名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)します。  
   
 ## <a name="external-resources"></a>外部リソース  
  詳細については、次のリソースを参照してください。  
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[アプリケーション ロール](http://msdn.microsoft.com/library/ms190998.aspx)SQL Server オンライン ブック|SQL Server 2008 でアプリケーション ロールを作成および使用する方法について説明します。|  
+|[アプリケーション ロール](/sql/relational-databases/security/authentication-access/application-roles)|SQL Server 2008 でアプリケーション ロールを作成および使用する方法について説明します。|  
   
 ## <a name="see-also"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

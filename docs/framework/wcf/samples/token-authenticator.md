@@ -2,15 +2,15 @@
 title: トークン認証システム
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5c103f5a5a4f95761a5c19e6a8d6159a7439d05a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808332"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523221"
 ---
 # <a name="token-authenticator"></a>トークン認証システム
-このサンプルでは、カスタム トークンの認証システムを実装する方法を示します。 トークン認証システムの Windows Communication Foundation (WCF) が自己矛盾がないと id の認証トークンに関連付けられていることを確認するメッセージで使用されるトークンの検証に使用されます。  
+このサンプルでは、カスタム トークンの認証システムを実装する方法を示します。 トークン認証システムの Windows Communication Foundation (WCF) では、自己矛盾があるし、id の認証トークンに関連付けられていることを確認するメッセージで使用されるトークンを検証するために使用されます。  
   
  カスタム トークン認証システムは次のようなさまざまな場合に役立ちます。  
   
@@ -24,11 +24,11 @@ ms.locfileid: "33808332"
   
 -   サーバーがカスタム トークン認証システムを使用してクライアント資格情報を検証する方法。  
   
--   どの WCF サービス コードは、カスタム トークン認証システムを結び付けるです。  
+-   どのカスタム トークン認証システムを使用して WCF サービスのコードに結び付いています。  
   
 -   サーバーの X.509 証明書を使用してそのサーバーを認証する方法。  
   
- このサンプルでは、呼び出し元の id はカスタム トークン認証プロセスの後に WCF からアクセスできる、方法も示します。  
+ このサンプルでは、呼び出し元の id は、カスタム トークン認証処理後に WCF からアクセスできる、方法も示します。  
   
  サービスは、そのサービスとの通信に使用する単一エンドポイントを公開します。エンドポイントは App.config 構成ファイルで定義します。 エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 バインディングの構成には、標準の `wsHttpBinding` が使用されます。このセキュリティ モードは、`wsHttpBinding` の既定モードであるメッセージに設定されます。 このサンプルは、クライアント ユーザー名認証を使用するように標準の `wsHttpBinding`を設定します。 また、サービスは `serviceCredentials` 動作を使用してサービス証明書の構成も行います。 `securityCredentials` 動作を使用すると、サービス証明書を指定できます。 クライアントはサービス証明書を使用して、サービスを認証し、メッセージを保護します。 次の構成では、次のセットアップ手順で説明しているサンプル セットアップでインストールされる localhost 証明書を参照しています。  
   
@@ -324,9 +324,9 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには  
   
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4.  クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+4.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 #### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。  
   
-10. クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+10. クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   

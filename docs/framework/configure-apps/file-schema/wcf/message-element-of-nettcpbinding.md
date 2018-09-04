@@ -2,15 +2,15 @@
 title: '&lt;netTcpBinding&gt; の &lt;message&gt; 要素'
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 4a487d695cab259fc6b82fdf44b4c1bfdf5d04e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f88de91fa14ce06a69939441ad47e5ae5fb6b126
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364127"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524103"
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; の &lt;message&gt; 要素
-構成されているエンドポイントのメッセージ レベルのセキュリティ要件の種類を定義、 [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)です。  
+構成されているエンドポイントのメッセージ レベルのセキュリティ要件の種類を定義、 [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)します。  
   
  \<system.ServiceModel >  
 \<bindings>  
@@ -64,7 +64,7 @@ ms.locfileid: "33364127"
 |-----------|-----------------|  
 |なし|サービスが匿名クライアントと対話できるようになります。 サービス側では、サービスがクライアントの資格情報を必要としないことを示しています。 クライアント側では、クライアントがクライアントの資格情報を提示しないことを示しています。|  
 |Windows|SOAP 交換を、Windows 資格情報の認証されたコンテキストで行うことが可能になります。|  
-|UserName|サービスが、UserName 資格情報を使用したクライアントの認証を要求できるようにします。 WCF では、パスワード ダイジェストの送信、またはパスワードを使用して、メッセージ セキュリティのようなキーを使用してキーの派生は使用できません。 そのため、WCF は、UserName 資格情報を使用する場合、トランスポートは、セキュリティで保護を適用します。 この資格情報モードは、`negotiateServiceCredential` 属性に基づいて、同時実行可能な交換か、同時実行できないネゴシエーションのいずれかになります。|  
+|UserName|サービスが、UserName 資格情報を使用したクライアントの認証を要求できるようにします。 WCF は、パスワード ダイジェストの送信、またはパスワードを使用して、このようなキーを使用して、メッセージ セキュリティのためのキーの派生をサポートしていません。 そのため、WCF は、UserName 資格情報を使用する場合、トランスポート、セキュリティで保護を適用します。 この資格情報モードは、`negotiateServiceCredential` 属性に基づいて、同時実行可能な交換か、同時実行できないネゴシエーションのいずれかになります。|  
 |証明書|証明書を使用したクライアントの認証を、サービスで要求することが可能になります。 メッセージ セキュリティ モードが使用され、`negotiateServiceCredential` 属性が `false` に設定されている場合、クライアントにサービス証明書を準備する必要があります。|  
 |IssuedToken|通常はセキュリティ トークン サービス (STS) により発行されるカスタム トークンを指定します。|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33364127"
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|<xref:System.ServiceModel.Configuration.NetTcpBindingElement>のセキュリティ機能を定義します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  メッセージは、SOAP メッセージの整合性と機密性を確保し、通信ピアの相互認証を行うために、メッセージ レベルのセキュリティを使用します。 バインディング上でこのセキュリティ モードが選択された場合、チャネル スタックは、メッセージ セキュリティ バインド要素を使用して構成され、SOAP メッセージは WS-Security* 標準に従って保護されます。  
   
 ## <a name="see-also"></a>関連項目  
@@ -88,5 +88,5 @@ ms.locfileid: "33364127"
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  
  [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [バインディングを使用して、Windows Communication Foundation サービスとクライアントを構成するには](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

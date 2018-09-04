@@ -3,11 +3,11 @@ title: 結合操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: 2c7d6592f0dee221eb2f6fb3a2f2c484064364ce
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425375"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516961"
 ---
 # <a name="join-operations-visual-basic"></a>結合操作 (Visual Basic)
 2 つのデータ ソースの "*結合*" とは、あるデータ ソースのオブジェクトを、共通の属性を共有する別のデータ ソースのオブジェクトと関連付けることです。  

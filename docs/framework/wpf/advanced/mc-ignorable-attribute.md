@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
 ms.openlocfilehash: e8fa4c084ae9c775a18de06c344b2c0b439c2b1b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467816"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517362"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 属性
 指定します[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]マークアップ ファイルで発生した名前空間プレフィックスを無視できます、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサ。 `mc:Ignorable`属性は、カスタムの名前空間のマッピングとのマークアップの互換性をサポートしている[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]バージョン管理します。  

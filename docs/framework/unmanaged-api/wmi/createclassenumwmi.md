@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b38e4753105932d2464bf78797a6979aeb0a0aee
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908184"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527840"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi 関数
-指定した選択基準に適合するすべてのクラスの列挙子を返します。  
+指定した選択条件を満たしたすべてのクラスに対する列挙子が返されます。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

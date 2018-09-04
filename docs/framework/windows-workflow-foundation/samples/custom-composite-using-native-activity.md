@@ -3,11 +3,11 @@ title: Native Activity を使用したカスタム複合
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
 ms.openlocfilehash: d9caa6e950af8f800644793db84aa85cc8255914
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406837"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528687"
 ---
 # <a name="custom-composite-using-native-activity"></a>Native Activity を使用したカスタム複合
 このサンプルでは、他の <xref:System.Activities.NativeActivity> オブジェクトをスケジュールしてワークフローの実行のフローを制御する <xref:System.Activities.Activity> を作成する方法を示します。 この方法を示すために、このサンプルでは一般的な制御フローである Sequence と While の 2 つを使用します。  

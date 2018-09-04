@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423245"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519448"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML ノード ストリームの構造と概念について
 .NET Framework XAML サービスに実装されている XAML リーダーと XAML ライターは、XAML ノード ストリームの設計概念に基づいています。 XAML ノード ストリームは、一連の XAML ノードを概念化したものです。 この概念化では、XAML プロセッサは、XAML 内のノードのリレーションシップの構造を 1 つずつ処理します。 常に、開いている XAML ノード ストリームに存在する現在のレコードまたは現在の位置は 1 つのみで、API の多くの側面がレポートするのは、その位置から入手できる情報のみです。 XAML ノード ストリームの現在のノードは、オブジェクト、メンバー、または値として記述できます。 XAML を XAML ノード ストリームとして扱うことで、XAML リーダーは XAML ライターと通信するとともに、XAML に関するパスの読み込みまたはパスの保存操作中に、XAML ノード ストリームのコンテンツをプログラムが表示、操作、または変更できるようにします。 XAML リーダーおよびライターの API の設計と XAML ノード ストリームの概念は、 [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] および <xref:System.Xml.XmlReader> クラスと <xref:System.Xml.XmlWriter> クラスなど、以前の関連するリーダーとライターの設計と概念に似ています。 このトピックでは、XAML ノード ストリームの概念について説明するとともに、XAML ノード レベルで XAML 表現と対話するルーチンを記述する方法について説明します。  

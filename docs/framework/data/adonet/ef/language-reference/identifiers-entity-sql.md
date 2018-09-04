@@ -3,11 +3,11 @@ title: 識別子 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 390c69dec6caed1ffe6faccb5893174d2c211a6b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419716"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528581"
 ---
 # <a name="identifiers-entity-sql"></a>識別子 (Entity SQL)
 識別子はクエリ式の別名、変数参照、オブジェクトのプロパティ、関数などを表すために [!INCLUDE[esql](../../../../../../includes/esql-md.md)] で使用されます。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 識別子の 2 種類があります。 単純な識別子と引用符で囲まれた識別子。  

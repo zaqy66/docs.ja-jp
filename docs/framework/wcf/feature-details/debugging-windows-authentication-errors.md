@@ -8,19 +8,19 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: d9226324b69e5c27738abb35bb155a43964b9127
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92efda893d0d96b5d0f6de90364faec0b85c79aa
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495874"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513248"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 認証エラーのデバッグ
-セキュリティ機構として Windows 認証を使用する場合、セキュリティ サポート プロバイダー インターフェイス (SSPI: Security Support Provider Interface) がセキュリティ プロセスを処理します。 SSPI 層でセキュリティ エラーが発生したときに、Windows Communication Foundation (WCF) によって、表示されます。 このトピックでは、エラーの診断に役立つフレームワークと一連の質問を示します。  
+セキュリティ機構として Windows 認証を使用する場合、セキュリティ サポート プロバイダー インターフェイス (SSPI: Security Support Provider Interface) がセキュリティ プロセスを処理します。 SSPI 層でセキュリティ エラーが発生すると、Windows Communication Foundation (WCF) によってが表示されます。 このトピックでは、エラーの診断に役立つフレームワークと一連の質問を示します。  
   
- Kerberos プロトコルの概要については、次を参照してください。 [Kerberos の詳細](http://go.microsoft.com/fwlink/?LinkID=86946)以外の場合は、SSPI の概要」を参照して[SSPI](http://go.microsoft.com/fwlink/?LinkId=88941)です。  
+ Kerberos プロトコルの概要については、次を参照してください。 [Kerberos](https://go.microsoft.com/fwlink/?LinkID=86946)、SSPI の概要を参照してください。 [SSPI](https://go.microsoft.com/fwlink/?LinkId=88941)します。  
   
- Windows 認証の場合は、WCF が通常使用して、 *Negotiate*クライアントとサービス間の Kerberos 相互認証を実行するセキュリティ サポート プロバイダー (SSP)、します。 Kerberos プロトコルがない場合、WCF はフォールバック NT LAN Manager (NTLM) に既定で使用できます。 ただし、WCF、Kerberos プロトコルのみを使用する (および Kerberos が使用できない場合に例外をスローする) を構成することができます。 Kerberos プロトコルの制限付きのフォームを使用する WCF を構成することもできます。  
+ WCF の通常の使用、Windows 認証のため、*ネゴシエート*クライアントとサービス間の Kerberos 相互認証を実行するセキュリティ サポート プロバイダー (SSP)、します。 場合は、Kerberos プロトコルは、WCF はフォールバック NT LAN Manager (NTLM) を既定で、ご利用いただけません。 ただし、WCF、Kerberos プロトコルのみを使用する (および Kerberos が使用できない場合に例外をスローする) を構成できます。 Kerberos プロトコルの制限付きの形式を使用する WCF を構成することもできます。  
   
 ## <a name="debugging-methodology"></a>デバッグ方法  
  基本的な方法は次のとおりです。  
@@ -62,11 +62,11 @@ ms.locfileid: "33495874"
 ### <a name="kerberos-protocol"></a>Kerberos プロトコル  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos プロトコルでの SPN と UPN の問題  
- Windows 認証を使用し、SSPI が Kerberos プロトコルを使用またはネゴシエートする場合、クライアント エンドポイントが使用する URL には、サービス URL 内のサービスのホストの完全修飾ドメイン名が含まれている必要があります。 これは、これは最も一般的でサービスを実行している Active Directory ドメインにコンピューターが追加されたときに作成されるコンピューター (既定値) のサービス プリンシパル名 (SPN) キーへのアクセスが、サービスが実行されているアカウントにある前提としています、。ネットワーク サービス アカウント。 サービスがコンピューターの SPN キーにアクセスできない場合は、クライアントのエンドポイント ID でサービスを実行しているアカウントの正しい SPN またはユーザー プリンシパル名 (UPN: User Principal Name) を指定する必要があります。 SPN と UPN の WCF のしくみの詳細については、次を参照してください。[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)です。  
+ Windows 認証を使用し、SSPI が Kerberos プロトコルを使用またはネゴシエートする場合、クライアント エンドポイントが使用する URL には、サービス URL 内のサービスのホストの完全修飾ドメイン名が含まれている必要があります。 これは、サービスが実行されているアカウントが Active Directory ドメインでサービスを実行してこれは最も一般的に、コンピューターが追加されたときに作成されるコンピューター (既定値) のサービス プリンシパル名 (SPN) キーにアクセスを前提としています、ネットワーク サービス アカウント。 サービスがコンピューターの SPN キーにアクセスできない場合は、クライアントのエンドポイント ID でサービスを実行しているアカウントの正しい SPN またはユーザー プリンシパル名 (UPN: User Principal Name) を指定する必要があります。 SPN と UPN と WCF のしくみについての詳細については、次を参照してください。[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
   
  Web ファームや Web ガーデンなどの負荷分散シナリオでは、各アプリケーションに一意のアカウントを定義し、そのアカウントに SPN を割り当て、アプリケーションのサービスすべてがそのアカウントで実行されるようにするのが一般的です。  
   
- サービスのアカウント用の SPN を取得するには、Active Directory ドメイン管理者である必要があります。 詳細については、次を参照してください。 [Kerberos テクニカル Supplement for Windows](http://go.microsoft.com/fwlink/?LinkID=88330)です。  
+ サービスのアカウント用の SPN を取得するには、Active Directory ドメイン管理者である必要があります。 詳細については、次を参照してください。 [Kerberos Technical Supplement for Windows](https://go.microsoft.com/fwlink/?LinkID=88330)します。  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos プロトコル ダイレクトでは Domain Machine アカウントでサービスを実行する必要がある  
  この状況は、次のコードに示すように、`ClientCredentialType` プロパティが `Windows` に設定され、<xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> プロパティが `false` に設定されている場合に発生します。  
@@ -93,12 +93,12 @@ ms.locfileid: "33495874"
   
     1.  NTLM を使用できないようにするには、コードで `ChannelFactory.Credentials.Windows.AllowNtlm = false` ステートメントを使用します。  
   
-    2.  構成ファイルで `allowNtlm` 属性を `false` に設定することもできます。 この属性に含まれている、 [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)です。  
+    2.  構成ファイルで `allowNtlm` 属性を `false` に設定することもできます。 この属性に含まれている、 [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)します。  
   
 ### <a name="ntlm-protocol"></a>NTLM プロトコル  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>ネゴシエート SSP は NTLM にフォールバックするが、NTLM が無効になっている  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>プロパティに設定されている`false`、それが原因で、ベスト エフォート NTLM が使用されている場合に例外をスローするように、Windows Communication Foundation (WCF)。 ただし、このプロパティを `false` に設定しても、ネットワーク経由で NTLM 資格情報が送信されなくなるとは限りません。  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>プロパティに設定されて`false`、それが原因で NTLM が使用されている場合に例外をスローする最善の努力をするように、Windows Communication Foundation (WCF)。 ただし、このプロパティを `false` に設定しても、ネットワーク経由で NTLM 資格情報が送信されなくなるとは限りません。  
   
  NTLM へのフォールバックを無効にする方法を次に示します。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "33495874"
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- 権限借用の詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)です。  
+ 権限借用の詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
   
  もう 1 つの方法として、SYSTEM ビルトイン アカウントを使用する Windows サービスとしてクライアントを実行します。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "33495874"
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>SSPI を使用できない  
- 次のオペレーティング システムはサーバーとして使用すると、Windows 認証をサポートしていません: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition、および[!INCLUDE[wv](../../../../includes/wv-md.md)]Home edition。  
+ 次のオペレーティング システムは、サーバーとして使用すると、Windows 認証をサポートしていません: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition、および[!INCLUDE[wv](../../../../includes/wv-md.md)]Home edition。  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>異なる ID を使用した開発と展開  
  アプリケーションを 1 台のコンピューターで開発し、別のコンピューターに展開し、異なるアカウントの種類を使用して各コンピューターで認証を行う場合、動作の違いが発生する場合があります。 たとえば、`SSPI Negotiated` 認証モードを使用して Windows XP Professional コンピューターでアプリケーションを開発するとします。 ローカル ユーザー アカウントを使用して認証する場合は、NTLM プロトコルが使用されます。 アプリケーションを開発した後は、ドメイン アカウントで実行されるサービスを Windows Server 2003 コンピューターに展開します。 この時点で、クライアントは Kerberos とドメイン コントローラーを使用するため、このサービスを認証できなくなります。  

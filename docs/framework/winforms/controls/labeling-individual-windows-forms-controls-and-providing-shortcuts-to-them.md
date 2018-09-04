@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
 ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409021"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521005"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>各 Windows フォーム コントロールのラベル設定とショートカットの作成
 Windows フォームに追加されたコントロールには、ユーザー操作をさらに特殊化するために使用されるプロパティとメソッドがあります。 ユーザーのニーズに合わせてユーザー インターフェイスをカスタマイズすることは、適切に設計された Windows アプリケーションにおいて非常に重要です。  

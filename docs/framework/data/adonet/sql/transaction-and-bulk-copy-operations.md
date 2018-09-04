@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
 ms.openlocfilehash: 24657f541daf5bb098f8db3b59a3241ecf832d39
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398866"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515080"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>トランザクションとバルク コピー操作
 バルク コピー操作は、単独の操作として、または、手順が複数あるトランザクションの 1 手順として実行されます。 手順が複数あるトランザクションの 1 手順として実行する場合、同一トランザクション内でバルク コピー操作を複数回実行することができます。また、挿入、更新、削除などの他のデータベース操作を実行していても、トランザクション全体をコミットまたはロールバックできます。  

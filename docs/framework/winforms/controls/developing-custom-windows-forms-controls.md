@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
 ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397604"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525537"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>.NET Framework を使用したカスタム Windows フォーム コントロールの開発
 Windows フォーム コントロールは、ユーザー インターフェイスの機能をカプセル化して、クライアント側の Windows ベースのアプリケーションで使用される再利用可能なコンポーネントです。 Windows フォームは、すぐに使用できる多数のコントロールを提供するだけでなく、独自のコントロールを開発するためのインフラストラクチャも提供します。 既存のコントロールの結合、既存のコントロールの拡張、または独自のカスタム コントロールの記述ができます。 このセクションでは、Windows フォーム コントロールの開発に役立つ背景情報とサンプルを提供します。  

@@ -3,11 +3,11 @@ title: パフォーマンスに関する考慮事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 ms.openlocfilehash: d244c3e9c48aed1844a90f1f42d33a91edc80046
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391943"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520377"
 ---
 # <a name="performance-considerations-entity-framework"></a>パフォーマンスに関する考慮事項 (Entity Framework)
 このトピックでは、ADO.NET Entity Framework のパフォーマンス特性を示し、Entity Framework アプリケーションのパフォーマンスを向上させるために役立つ注意事項について説明します。  

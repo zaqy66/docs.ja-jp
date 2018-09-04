@@ -2,20 +2,20 @@
 title: 永続性インスタンス コンテキスト
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f5c066ae06e44f6cac4b9a7b98487aa6226b969f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808609"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524427"
 ---
 # <a name="durable-instance-context"></a>永続性インスタンス コンテキスト
-このサンプルでは、永続性インスタンス コンテキストを有効にするには、Windows Communication Foundation (WCF) ランタイムをカスタマイズする方法を示します。 バッキング ストアとして、SQL Server 2005 (この場合は SQL Server 2005 Express) を使用します。 ただし、カスタム ストレージ機構にアクセスする方法も示します。  
+このサンプルでは、永続性インスタンス コンテキストを有効にする Windows Communication Foundation (WCF) ランタイムをカスタマイズする方法を示します。 バッキング ストアとして、SQL Server 2005 (この場合は SQL Server 2005 Express) を使用します。 ただし、カスタム ストレージ機構にアクセスする方法も示します。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
- このサンプルでは、チャネル レイヤと WCF のサービス モデル レイヤーの両方を拡張する必要があります。 したがって、実装の詳細に進む前に基になる概念を理解する必要があります。  
+ このサンプルでは、チャネル レイヤーと、WCF のサービス モデル レイヤーの両方を拡張する必要があります。 したがって、実装の詳細に進む前に基になる概念を理解する必要があります。  
   
  永続性インスタンス コンテキストは、現実のケースでも頻繁に起こりうるものです。 たとえば、ショッピング カート アプリケーションには、買い物を中断しても別の日に再開できる機能が用意されています。 そのため、ショッピング カートに翌日アクセスすると、元のコンテキストが復元されます。 接続が切断されている間、ショッピング カート アプリケーション (サーバー上) はショッピング カートのインスタンスを保持しないことに注意してください。 その代わり、状態を永続的なストレージ メディアに保持し、復元されたコンテキストの新しいインスタンスを構築するときにこの状態を使用します。 したがって、同じコンテキストに対してサービスを提供できるサービス インスタンスは、以前のインスタンスと同じではありません (つまり、メモリ アドレスが同じではありません)。  
   
@@ -120,7 +120,7 @@ if (isFirstMessage)
 }  
 ```  
   
- これらのチャネルの実装では、WCF チャネル ランタイムに追加されます、`DurableInstanceContextBindingElement`クラスと`DurableInstanceContextBindingElementSection`適切にします。 参照してください、 [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)チャネルのバインド要素と要素のセクションをバインディングの詳細については、サンプルのドキュメントです。  
+ これらのチャネル実装は、WCF チャネル ランタイムに追加、`DurableInstanceContextBindingElement`クラスと`DurableInstanceContextBindingElementSection`クラスが適切にします。 参照してください、 [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)チャネルのバインド要素とバインディング要素セクションの詳細については、サンプル ドキュメント。  
   
 ## <a name="service-model-layer-extensions"></a>サービス モデル レイヤの拡張  
  コンテキスト ID がチャネル レイヤを通過すると、インスタンス化をカスタマイズするようにサービス側の動作を実装できます。 このサンプルでは、記憶域マネージャを使用して永続ストアからの状態の読み込みと、永続ストアへの状態の保存が行われます。 前述のように、このサンプルにはバッキング ストアとして SQL Server 2005 を使用する記憶域マネージャが用意されています。 ただし、この拡張に対してカスタム ストレージ機構を追加することもできます。 これを行うには、すべての記憶域マネージャが実装する必要のあるパブリック インターフェイスを宣言します。  
@@ -229,15 +229,15 @@ else
   
  永続ストレージのインスタンスの読み取りや書き込みに必要なインフラストラクチャを実装します。 ここで、サービス側の動作を変更するために必要な手順を行う必要があります。  
   
- この処理の最初の手順として、チャネル レイヤを通過したコンテキスト ID を現在の InstanceContext に保存する必要があります。 InstanceContext は、WCF ディスパッチャーとサービス インスタンス間のリンクとして機能するランタイム コンポーネントです。 これを使用すると、追加の状態と動作をサービス インスタンスに提供できます。 セッションの多い通信では、コンテキスト ID は最初のメッセージだけに含まれて送信されるので、これが重要になります。  
+ この処理の最初の手順として、チャネル レイヤを通過したコンテキスト ID を現在の InstanceContext に保存する必要があります。 InstanceContext とは、WCF ディスパッチャーとサービス インスタンス間のリンクとして機能するランタイム コンポーネントです。 これを使用すると、追加の状態と動作をサービス インスタンスに提供できます。 セッションの多い通信では、コンテキスト ID は最初のメッセージだけに含まれて送信されるので、これが重要になります。  
   
- WCF では、新しい状態と、拡張可能オブジェクト パターンを使用して動作を追加することにより、InstanceContext ランタイム コンポーネントの拡張を使用します。 拡張可能オブジェクト パターンは WCF で使用されるか、新しい機能を持つ既存のランタイム クラスを拡張するか、オブジェクトに新しい状態の機能を追加します。 拡張可能オブジェクト パターン - IExtensibleObject に 3 つのインターフェイスがある\<T >、IExtension\<T >、および IExtensionCollection\<T >:  
+ WCF では、新しい状態と、拡張可能オブジェクト パターンを使用して動作を追加することで、InstanceContext ランタイム コンポーネントの拡張を使用します。 拡張可能オブジェクト パターンは、またはオブジェクトに新しい状態の機能を追加するか、新しい機能を既存のランタイム クラスを拡張する、WCF で使用されます。 拡張可能オブジェクト パターン - IExtensibleObject で 3 つのインターフェイスがある\<T >、IExtension\<T >、および IExtensionCollection\<T >:  
   
--   IExtensibleObject\<T > インターフェイスはオブジェクトを拡張して、機能をカスタマイズすることによって実装されます。  
+-   IExtensibleObject\<T > インターフェイスは、機能をカスタマイズする拡張機能を許可するオブジェクトによって実装されます。  
   
--   基準にして IExtension\<T > インターフェイスは T 型のクラスの拡張であるオブジェクトによって実装  
+-   基準にして IExtension\<T > インターフェイスの型 T のクラスの拡張であるオブジェクトによって実装されます  
   
--   IExtensionCollection\<T > インターフェイスはで、型ごとに IExtensions を取得できます IExtensions のコレクション。  
+-   IExtensionCollection\<T > インターフェイスは IExtensions をその型を取得するためにできる IExtensions のコレクション。  
   
  このため、IExtension インターフェイスを実装して、コンテキスト ID を保存するために必要な状態を定義する、InstanceContextExtension クラスを作成する必要があります。 このクラスではさらに、使用される記憶域マネージャを保持する状態も提供されます。 新しい状態が保存された後では、その状態を変更できません。 したがって、インスタンスが作成される際、読み取り専用のプロパティを使用してのみアクセス可能になった時点で、状態がインスタンスに提供され、保存されます。  
   
@@ -279,7 +279,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  既に説明したように、コンテキスト ID は `Properties` クラスの `Message` コレクションから読み取られ、拡張クラスのコンストラクタに渡されます。 これによって、レイヤ間で情報を交換する場合の一貫性のある方法が示されます。  
   
- 次の重要な手順は、サービス インスタンスの作成手順をオーバーライドすることです。 WCF では、カスタムのインスタンス化動作を実装し、IInstanceProvider インターフェイスを使用して、ランタイムにフックを使用します。 新しい `InstanceProvider` クラスがこの処理を行うために実装されます。 コンストラクタでは、インスタンス プロバイダから予期されるサービス型が受け入れられます。 これは、後で新しいインスタンスの作成に使用されます。 `GetInstance` 実装では、永続するインスタンスを検索する記憶域マネージャのインスタンスが作成されます。 `null` が返された場合、サービス型の新しいインスタンスがインスタンス化され、呼び出し元に返されます。  
+ 次の重要な手順は、サービス インスタンスの作成手順をオーバーライドすることです。 WCF はインスタンス化動作を実装し、IInstanceProvider インターフェイスを使用して、ランタイムにフックできます。 新しい `InstanceProvider` クラスがこの処理を行うために実装されます。 コンストラクタでは、インスタンス プロバイダから予期されるサービス型が受け入れられます。 これは、後で新しいインスタンスの作成に使用されます。 `GetInstance` 実装では、永続するインスタンスを検索する記憶域マネージャのインスタンスが作成されます。 `null` が返された場合、サービス型の新しいインスタンスがインスタンス化され、呼び出し元に返されます。  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -350,9 +350,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  ここまでを要約すると、このサンプルでは、カスタム コンテキスト ID を交換するためにカスタム ワイヤ プロトコルを有効化するチャネルを作成しました。また、永続ストレージのインスタンスを読み込むように、既定のインスタンス化動作を上書きしました。  
   
- 残りの手順は、サービス インスタンスを永続ストレージに保存することです。 既に説明したとおり、`IStorageManager` 実装に状態を保存するには、あらかじめ必要な機能があります。 今すぐ必要があります統合しこの WCF ランタイムとします。 これを行うには、サービス実装クラスのメソッドに適用可能な別の属性が必要です。 つまりこの属性は、サービス インスタンスの状態を変更するメソッドに適用できることが必要です。  
+ 残りの手順は、サービス インスタンスを永続ストレージに保存することです。 既に説明したとおり、`IStorageManager` 実装に状態を保存するには、あらかじめ必要な機能があります。 する必要がありますと統合できるようこの WCF ランタイム。 これを行うには、サービス実装クラスのメソッドに適用可能な別の属性が必要です。 つまりこの属性は、サービス インスタンスの状態を変更するメソッドに適用できることが必要です。  
   
- この機能は、`SaveStateAttribute` クラスに実装されています。 実装`IOperationBehavior`操作ごとに、WCF ランタイムを変更するクラス。 この属性でマークされたメソッドは、WCF ランタイムによって呼び出される、`ApplyBehavior`中に、適切なメソッド`DispatchOperation`が構築されます。 このメソッドの実装のコードは 1 行です。  
+ この機能は、`SaveStateAttribute` クラスに実装されています。 またも実装`IOperationBehavior`操作ごとに、WCF ランタイムを変更するクラス。 この属性でマークされたメソッドは、WCF ランタイムが呼び出す、`ApplyBehavior`メソッド中に、適切な`DispatchOperation`が構築されます。 このメソッドの実装のコードは 1 行です。  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -374,7 +374,7 @@ return result;
 ```  
   
 ## <a name="using-the-extension"></a>拡張機能の使用  
- 両方、チャネル レイヤとサービス モデル レイヤの拡張を完了して WCF アプリケーションで使用することができますようになりました。 サービスでは、カスタム バインドを使用してチャネルをチャネル スタックに追加し、サービス実装クラスの詳細を適切な属性で指定する必要があります。  
+ チャネル レイヤとサービス モデル レイヤの拡張を行うし、WCF アプリケーションで使用することができますようになりました。 サービスでは、カスタム バインドを使用してチャネルをチャネル スタックに追加し、サービス実装クラスの詳細を適切な属性で指定する必要があります。  
   
 ```  
 [DurableInstanceContext]  
@@ -442,11 +442,11 @@ Press ENTER to shut down client
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-3.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!NOTE]
 >  このサンプルを実行するには、SQL Server 2005 または SQL Express 2005 を実行している必要があります。 SQL Server 2005 を実行している場合は、サービスの接続文字列の構成を変更する必要があります  複数コンピューターで実行している場合、SQL Server が必要なのはサーバー コンピューターだけです。  
@@ -456,7 +456,7 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   

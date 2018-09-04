@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
 ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396334"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525883"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-AtomicTransaction サポートの構成
 ここでは、WS-AtomicTransaction (WS-AT) 構成ユーティリティを使用して WS-AT サポートを構成する方法について説明します。  

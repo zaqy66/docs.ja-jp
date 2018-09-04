@@ -3,11 +3,11 @@ title: 基本的な AJAX サービス
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
 ms.openlocfilehash: d8da6469101511b6b5a9ce19a11f1e5e3fe9d83e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402717"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524884"
 ---
 # <a name="basic-ajax-service"></a>基本的な AJAX サービス
 このサンプルでは、Windows Communication Foundation (WCF) を使用して基本的な ASP.NET Asynchronous JavaScript and XML (AJAX) サービス (Web ブラウザー クライアントから JavaScript コードを使用してアクセスできるサービス) を作成する方法を示します。 このサービスは、<xref:System.ServiceModel.Web.WebGetAttribute> 属性を使用してサービスが HTTP GET 要求に応答し、JSON (JavaScript Object Notation) データ形式を使用して応答するように構成されていることを確認します。  

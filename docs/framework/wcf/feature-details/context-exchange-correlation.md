@@ -3,11 +3,11 @@ title: コンテキスト交換の相関関係
 ms.date: 03/30/2017
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
 ms.openlocfilehash: d9de111fa08b4a398bba52bc903ea1fec8c7f298
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483698"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519733"
 ---
 # <a name="context-exchange-correlation"></a>コンテキスト交換の相関関係
 コンテキスト相関関係がで説明されているコンテキスト交換メカニズムに基づく、 [.NET コンテキスト交換プロトコルの仕様](https://go.microsoft.com/fwlink/?LinkId=166059)します。 コンテキスト相関関係では、既知のコンテキスト ヘッダーまたはクッキーを使用して、メッセージを正しいインスタンスに関連付けます。 コンテキスト相関関係を使用するには、<xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding>、<xref:System.ServiceModel.NetTcpContextBinding> などのコンテキスト ベースのバインディングが、<xref:System.ServiceModel.Activities.WorkflowServiceHost> に提供されるエンドポイントで使用される必要があります。 このトピックでは、メッセージング アクティビティを指定したコンテキスト相関関係をワークフロー サービス内で使用する方法について説明します。  

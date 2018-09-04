@@ -3,11 +3,11 @@ title: トークンのサポート
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
 ms.openlocfilehash: 14f1cbf628e0666f0a8e96123cafe29ba300ea78
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470867"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524816"
 ---
 # <a name="supporting-tokens"></a>トークンのサポート
 このトークンのサポート サンプルでは、WS-Security を使用するメッセージに追加トークンを追加する方法を示します。 この例では、ユーザー名セキュリティ トークンに加え、X.509 バイナリ セキュリティ トークンを追加します。 トークンは、WS-Security メッセージ ヘッダーでクライアントからサービスに渡されます。そのメッセージの一部は X.509 証明書を所有していることを受信側に証明するため、X.509 セキュリティ トークンに関連付けられた秘密キーで署名されます。 これは、複数のクレームをメッセージに関連付けて送信側を認証または承認する必要がある場合に便利です。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  

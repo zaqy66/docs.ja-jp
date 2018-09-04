@@ -2,23 +2,25 @@
 title: '&lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: 4afdaaa62c1ac3241eb7382d0995bed51bde73e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c50ca451052c9ad9d7ab6a0cb5387e644196191e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748907"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525007"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
-トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングのセットを定義する構成セクションを表します。 を実行時に既定のエンドポイントを作成する場合、Windows Communication Foundation (WCF) は構成されたマッピングは確認し、ベース アドレスの特定に使用するバインディングを決定します。  
+トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングのセットを定義する構成セクションを表します。 実行時に既定のエンドポイントを作成するときに、Windows Communication Foundation (WCF) が構成済みのマッピングではされ、特定に使用するバインディングをベース アドレスを決定します。  
   
- \<system.serviceModel>  
-\<protocolMapping >  
+[**\<system.serviceModel >**](system-servicemodel.md)  
+&nbsp;&nbsp;**\<protocolMapping >**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml
-   <protocolMapping>    <add binding="String"         bindingConfiguration="String"         scheme="http/net.msmq/net.pipe/net.tcp"/></protocolMapping>  
+<protocolMapping>
+   <add binding="String" bindingConfiguration="String" scheme="http/net.msmq/net.pipe/net.tcp"/>
+</protocolMapping>  
 ```
 
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -31,13 +33,13 @@ ms.locfileid: "32748907"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<フィルター >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングが含まれています。|  
+|[\<フィルター >](filters-of-routing.md)|トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングが含まれています。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|system.ServiceModel|すべての WCF 構成要素のルート要素です。|  
+|[\<system.serviceModel>](system-servicemodel.md)|すべての WCF 構成要素のルート要素です。|  
   
 ## <a name="example"></a>例  
  次の構成例は、machine.config ファイル内の既定のプロトコル マッピングを示しています。 machine.config ファイルを変更することで、既定のマッピングをコンピューター レベルでオーバーライドできます。 または、アプリケーションのスコープ内だけでオーバーライドする場合は、アプリケーション構成ファイルのこのセクションをオーバーライドし、各プロトコル スキームのマッピングを変更できます。  

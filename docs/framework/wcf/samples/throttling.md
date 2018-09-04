@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
 ms.openlocfilehash: f214e3a5230d6cf16b3bde5d89078160ed95f96f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481593"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519167"
 ---
 # <a name="throttling"></a>調整
 調整のサンプルでは、調整コントロールの使用方法を示します。 調整コントロールは、同時呼び出し、同時インスタンス、または同時セッションの数を制限して、リソースの過剰消費を防ぎます。 調整の動作は、サービス構成ファイルの設定で指定されます。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。  

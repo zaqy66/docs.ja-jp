@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
 ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461064"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526689"
 ---
 # <a name="query-projections-wcf-data-services"></a>クエリ射影 (WCF Data Services)
 プロジェクションのメカニズムを提供する、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]応答で返されるエンティティの特定のプロパティのみ指定することで、クエリによって返されるフィード内のデータの量を削減します。 詳細については、次を参照してください。 [OData: Select システム クエリ オプション ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)します。  

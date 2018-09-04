@@ -3,11 +3,11 @@ title: ReceiveContext が有効な WCF チャネル
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
 ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43442747"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515931"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>ReceiveContext が有効な WCF チャネル
 このサンプルでは、<xref:System.ServiceModel.Channels.ReceiveContext> を有効にした WCF チャネルの有用性を示します。 このサンプルでは、NetMSMQ チャネルを使用して 2 つの数値の積を見つけるサービスを実装します。  

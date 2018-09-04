@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b3d84873-7403-4957-8e20-b4ae39f50214
 ms.openlocfilehash: 1a936c5374137dbe25e16ababfa8a4f0c86edbbb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392729"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521771"
 ---
 # <a name="how-to-call-canonical-functions"></a>正規関数を呼び出す方法
 <xref:System.Data.Objects.EntityFunctions> クラスには、LINQ to Entities クエリで使用する正規関数を公開するメソッドが含まれています。 正規関数については、「[正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)」を参照してください。  

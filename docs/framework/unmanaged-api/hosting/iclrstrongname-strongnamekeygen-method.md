@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b4fbb8785f788c9eb34f32b5078201f8253066
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d925e30786c742708f345fc23f14c79521cbc6f3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433329"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519953"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>ICLRStrongName::StrongNameKeyGen メソッド
-厳密な名前に使用するために新しい公開/秘密キー ペアを作成します。  
+厳密な名前を使用するために新しい公開/秘密キーの組が作成されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,35 +40,35 @@ HRESULT StrongNameKeyGen (
   
 #### <a name="parameters"></a>パラメーター  
  `wszKeyContainer`  
- [in]要求されたキー コンテナーの名前です。 `wszKeyContainer` 空でない文字列または一時的な名前を生成するのには null でなければなりません。  
+ [in]要求されたキー コンテナーの名前。 `wszKeyContainer` 空でない文字列または一時的な名前を生成する null であること。  
   
  `dwFlags`  
- [in]登録キーのままにするかどうかを指定する値。 次の値がサポートされています。  
+ [in]登録されているキーのままにするかどうかを示す値。 次の値がサポートされています。  
   
--   0x00000000 の際に使用される`wszKeyContainer`は一時的なキー コンテナー名を生成する場合は null です。  
+-   0x00000000 の際に使用される`wszKeyContainer`一時的なキー コンテナーの名前を生成する場合は null です。  
   
--   0x00000001 (`SN_LEAVE_KEY`)-キーを左に登録する必要がありますを指定します。  
+-   0x00000001 (`SN_LEAVE_KEY`) のキーを左に登録する必要がありますを指定します。  
   
  `ppbKeyBlob`  
  [out]返された公開/秘密キー ペア。  
   
  `pcbKeyBlob`  
- [out]サイズをバイト単位での`ppbKeyBlob`します。  
+ [out]サイズ (バイト単位) の`ppbKeyBlob`します。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK` メソッドが正常に完了した場合それ以外の場合、失敗を示す HRESULT 値 (を参照してください[の共通 HRESULT 値](http://go.microsoft.com/fwlink/?LinkId=213878)一覧)。  
+ `S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。  
   
-## <a name="remarks"></a>コメント  
- [Iclrstrongname::strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)メソッドは、1024 ビット キーを作成します。 呼び出す必要があります、キーが取得された後、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)を割り当てられたメモリを解放するメソッド。  
+## <a name="remarks"></a>Remarks  
+ [Iclrstrongname::strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)メソッドは、1024 ビットのキーを作成します。 呼び出す必要があります、キーが取得された後、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)を割り当てられたメモリを解放するメソッド。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [StrongNameKeyGenEx メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  

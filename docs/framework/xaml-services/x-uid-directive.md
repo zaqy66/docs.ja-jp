@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
 ms.openlocfilehash: 7075f8258e617d2d13d4585fdd5fb7aefaa50664
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452631"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528389"
 ---
 # <a name="xuid-directive"></a>x:Uid ディレクティブ
 マークアップ要素の一意の識別子を提供します。 多くのシナリオでは、この一意の識別子は XAML のローカライズ プロセスとツールによって使用されます。  

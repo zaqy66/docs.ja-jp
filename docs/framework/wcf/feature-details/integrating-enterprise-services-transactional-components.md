@@ -3,11 +3,11 @@ title: エンタープライズ サービスのトランザクション コン�
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
 ms.openlocfilehash: 1fd338e57dab16a02cd31de6b45d4c5291591043
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481858"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514618"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>エンタープライズ サービスのトランザクション コンポーネントの統合
 Windows Communication Foundation (WCF) は、Enterprise Services と統合するための自動メカニズムを提供します (を参照してください[COM + アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md))。 ただし、柔軟性を高めるために、エンタープライズ サービス内でホストされるトランザクション コンポーネントを内部的に使用するサービスを開発する場合があります。 WCF トランザクション機能に基づいているため、<xref:System.Transactions>インフラストラクチャ、WCF を使用した Enterprise Services を統合するためのプロセスは間の相互運用性を指定するのと同じですが<xref:System.Transactions>と」の説明に従って、エンタープライズ サービス[Enterprise Services および COM + トランザクションとの相互運用性](https://go.microsoft.com/fwlink/?LinkId=94949)します。  

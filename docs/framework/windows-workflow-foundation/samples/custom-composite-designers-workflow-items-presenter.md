@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: e78a738bf74f49eaa192b45324db5e4bb7a3e872
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 708b62290900db3e668de81c31f3a1dc85eb6d19
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516524"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528937"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>カスタム複合デザイナー - Workflow Items Presenter
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> は、格納されている要素のコレクションを編集できる、WF デザイナー プログラミング モデル内の主要な型です。 このサンプルでは、このような編集可能なコレクションを表示するアクティビティ デザイナーの構築方法を示します。  
@@ -19,13 +19,13 @@ ms.locfileid: "33516524"
   
 -   <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> を使用したカスタム アクティビティ デザイナーの作成  
   
--   「折りたたまれている」および「展開されている」ビューを示すアクティビティ デザイナーを作成します。  
+-   「折りたたまれている」と「拡張」ビューを使用して、アクティビティ デザイナーを作成します。  
   
 -   再ホストされたアプリケーションでの既定のデザイナーのオーバーライド  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  開く、 **UsingWorkflowItemsPresenter.sln**サンプル ソリューションの c# または VB で[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]です。  
+1.  開く、 **UsingWorkflowItemsPresenter.sln** c# または vb の場合に、サンプル ソリューション[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]します。  
   
 2.  ソリューションをビルドして実行します。 再ホストされたワークフロー デザイナー アプリケーションが開き、アクティビティをキャンバスにドラッグできます。  
   
@@ -153,7 +153,7 @@ End Sub
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   

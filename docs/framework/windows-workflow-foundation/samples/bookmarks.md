@@ -3,11 +3,11 @@ title: Bookmarks2
 ms.date: 03/30/2017
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
 ms.openlocfilehash: 6bcc4e27566b9c8553e0792558c281a6b1f1caf4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387390"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528991"
 ---
 # <a name="bookmarks"></a>ブックマーク
 このサンプルでは、外部入力を受信するためのブックマークを作成するカスタム アクティビティを記述する方法を示します。 また、このサンプルでは、基本的なコンソール アプリケーションによってワークフローでカスタム アクティビティを使用し、実行中のワークフロー インスタンスに関連付けられたブックマークを探索および再開する方法を示します。 ブックマークの詳細については、次を参照してください。[ブックマーク](../../../../docs/framework/windows-workflow-foundation/bookmarks.md)します。  

@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43460986"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518757"
 ---
 # <a name="put-function"></a>Put 関数
-名前付きプロパティを新しい値に設定します。
+名前付きプロパティが新しい値に設定されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     

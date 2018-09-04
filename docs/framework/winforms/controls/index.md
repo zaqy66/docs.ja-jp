@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-ms.openlocfilehash: f1111e05d485993b29b97f48f92a27a3af26fb4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b3b49ca61d491a2593db7b43bf3efd0b63af650
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537604"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526248"
 ---
 # <a name="windows-forms-controls"></a>Windows フォーム コントロール
 Windows フォーム アプリケーションのユーザー インターフェイスを設計および変更するときは、コントロールを追加、整列、配置する必要があります。 コントロールは、フォーム オブジェクトに含まれるオブジェクトです。 コントロールの各種類には、そのコントロールを特定の目的に適したものにする固有のプロパティ、メソッド、イベントのセットがあります。 デザイナーでコントロールを操作し、実行時にコントロールを動的に追加するコードを記述できます。  
@@ -39,5 +39,5 @@ Windows フォーム アプリケーションのユーザー インターフェ�
  [クライアント アプリケーション](../../../../docs/framework/develop-client-apps.md)  
  Windows ベースのアプリケーションの開発の概要を説明します。  
   
- [Windows フォームのチュートリアル](http://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
+ [Windows フォームのチュートリアル](https://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
  Windows フォームとコントロールに関するチュートリアル トピックの一覧を示します。

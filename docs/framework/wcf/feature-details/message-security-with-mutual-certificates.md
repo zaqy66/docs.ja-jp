@@ -8,11 +8,11 @@ ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: ad5862064966ccae4c313e7fa3d982ec9abbbcd2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399805"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522131"
 ---
 # <a name="message-security-with-mutual-certificates"></a>メッセージ セキュリティと相互の証明書
 次のシナリオでは、Windows Communication Foundation (WCF) サービスとクライアントのメッセージ セキュリティ モードを使用して保護を示しています。 クライアントとサービスは、証明書を使用して認証されます。  

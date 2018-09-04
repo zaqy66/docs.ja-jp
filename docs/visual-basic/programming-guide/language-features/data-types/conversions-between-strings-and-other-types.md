@@ -10,11 +10,11 @@ helpviewer_keywords:
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
 ms.openlocfilehash: 38acd9056f9517e6d8b62691cdeb1a2960bec800
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469855"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516575"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>文字列とその他の型との変換 (Visual Basic)
 、数値を変換する`Boolean`、または日付/時刻値を、`String`します。 逆方向に変換することもできます。-数値、文字列値から`Boolean`、または`Date`: 文字列の内容は、先のデータ型の有効な値として解釈される場合。 できない場合、実行時エラーが発生します。  

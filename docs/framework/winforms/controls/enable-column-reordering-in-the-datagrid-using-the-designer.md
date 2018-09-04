@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
 ms.openlocfilehash: 3786ba561ca5687b92614f2c54537d64f48e6d64
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389933"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529048"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法 : デザイナーを使用して Windows フォーム DataGridView コントロールの列の並べ替えを有効にする
 Windows フォームに表示されるデータを表示するときに<xref:System.Windows.Forms.DataGridView>コントロール、ユーザーことがありますする特定の列の値を比較します。 これは、できますしない列は、コントロールでは、広く区切られている場合に便利な特にで関心のあるすべての列を表示するには、ユーザーが前後へ水平方向にスクロールする必要があります。 列の順序を変更できるので、列の値を容易に比較を行うことができます。 列の並べ替えを有効にすると、ユーザーは、マウスで列ヘッダーをドラッグして列を新しい位置に移動できます。  

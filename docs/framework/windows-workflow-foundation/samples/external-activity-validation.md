@@ -3,11 +3,11 @@ title: 外部アクティビティの検証
 ms.date: 03/30/2017
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
 ms.openlocfilehash: 4805bec3deed0779b02687b11dd487e673802925
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423895"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527808"
 ---
 # <a name="external-activity-validation"></a>外部アクティビティの検証
 このサンプルでは、ユーザーが作成するものではないビルトイン アクティビティに検証ロジックを追加する方法を示します。 検証ロジックでは、ワークフロー内に存在するすべての <xref:System.Activities.Statements.If> アクティビティに <xref:System.Activities.Statements.If.Then%2A> または <xref:System.Activities.Statements.If.Else%2A> のいずれかのプロパティが強制的に設定されます。 また、ワークフロー内に存在するすべての <xref:System.Activities.Statements.Pick> アクティビティに複数の分岐が含まれているかどうかが確認され、分岐が含まれていない場合は警告が生成されます。  

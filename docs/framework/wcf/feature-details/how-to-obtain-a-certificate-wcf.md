@@ -5,11 +5,11 @@ helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
 ms.openlocfilehash: 664eb62997123ea248b0b69700b86bf794646d4b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465863"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519223"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>方法 : 証明書 (WCF) を取得する
 Windows Communication Foundation (WCF) のいずれかを使用するには、その機能を使用して、X.509 証明書の最初に証明書を取得します。  

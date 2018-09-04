@@ -2,12 +2,12 @@
 title: 命令型 TransactionScope でのワークフローの実行
 ms.date: 03/30/2017
 ms.assetid: bd0e8686-c1d0-4400-a541-da94ed03afc7
-ms.openlocfilehash: 44efc13efaa45274068fb44cc154b515bd774a35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2744434e807664ca93b4f5bc27a1f3b89716ce87
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516960"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520171"
 ---
 # <a name="execute-a-workflow-in-an-imperative-transactionscope"></a>命令型 TransactionScope でのワークフローの実行
 このサンプルでは、命令型 C# コードから <xref:System.Activities.WorkflowInvoker> で <xref:System.Transactions.Transaction> を使用してワークフローを実行する方法を示します。  
@@ -34,6 +34,6 @@ ms.locfileid: "33516960"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\ImperativeTransaction`

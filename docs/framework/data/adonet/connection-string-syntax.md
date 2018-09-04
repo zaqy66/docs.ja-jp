@@ -3,11 +3,11 @@ title: 接続文字列の構文
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 3d8b37315ab3ceea2ddedd139787627e86b6a131
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469922"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522474"
 ---
 # <a name="connection-string-syntax"></a>接続文字列の構文
 すべての .NET Framework データ プロバイダーは、`Connection` を継承する <xref:System.Data.Common.DbConnection> オブジェクトに加え、プロバイダー固有の <xref:System.Data.Common.DbConnection.ConnectionString%2A> プロパティを持ちます。 それぞれのプロバイダーに固有の接続文字列の構文は、対応する `ConnectionString` プロパティのトピックで説明されています。 次の表は、.NET Framework に含まれている 4 つのデータ プロバイダーを一覧にしたものです。  

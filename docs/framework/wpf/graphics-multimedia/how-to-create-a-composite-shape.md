@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 ms.assetid: 8e5c7ef4-d7ed-4c43-afc9-ca01325c300b
 ms.openlocfilehash: 9892120d13a067586dbf6472a6873b6a52c2d8b4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43457084"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515165"
 ---
 # <a name="how-to-create-a-composite-shape"></a>方法 : 複合図形を作成する
 この例を使用して複合図形を作成する方法を示しています。<xref:System.Windows.Media.Geometry>オブジェクトとそれらを表示を使用して、<xref:System.Windows.Shapes.Path>要素。 次の例では、 <xref:System.Windows.Media.LineGeometry>、<xref:System.Windows.Media.EllipseGeometry>と<xref:System.Windows.Media.RectangleGeometry>を併用、<xref:System.Windows.Media.GeometryGroup>複合図形を作成します。 ジオメトリを使用して描画し、<xref:System.Windows.Shapes.Path>要素。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
 ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406497"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514964"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
 通常、データベース サーバーへの接続は、時間のかかるいくつかの手順で構成されています。 ソケットまたは名前付きパイプなどの物理チャネルの確立、サーバーとの最初のハンドシェイクの実行、接続文字列の情報の解析、サーバーによる接続の認証、現在のトランザクションへ参加するための検証などの手順を行う必要があります。  

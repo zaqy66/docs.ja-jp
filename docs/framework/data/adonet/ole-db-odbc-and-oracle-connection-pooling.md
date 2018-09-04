@@ -2,12 +2,12 @@
 title: OLE DB、ODBC、および Oracle 接続プール
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3ce65036605b7693955c3a6064fca80263d3538f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803125"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527377"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC、および Oracle 接続プール
 接続をプールすると、アプリケーションのパフォーマンスとスケーラビリティを大幅に改善できます。 このセクションでは、OLE DB、ODBC、および Oracle 用の .NET Framework データ プロバイダーの接続プールについて説明します。  
@@ -21,12 +21,12 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了または破棄することをお勧めします。 明示的に終了されていない接続は、プールに返されない場合があります。 たとえば、スコープ外に出ても、明示的に終了されていない接続は、最大プール サイズに達した時点でその接続がまだ有効である場合にだけ接続プールに返されます。  
   
- OLE DB セッションまたはリソースのプールと OLE DB プロバイダー サービスの既定をオーバーライドしてプール機能を無効にする方法の詳細については、次を参照してください。、 [OLE DB プログラマ ガイド](http://go.microsoft.com/fwlink/?linkid=45232)です。  
+ OLE DB セッションまたはリソース プールだけでなく OLE DB プロバイダー サービスの既定をオーバーライドしてプール機能を無効にする方法の詳細については、次を参照してください。、 [OLE DB プログラマ ガイド](https://go.microsoft.com/fwlink/?linkid=45232)します。  
   
 ## <a name="connection-pooling-for-odbc"></a>Odbc の接続プール  
  .NET Framework Data Provider for ODBC の接続プールは、接続に使用される ODBC ドライバー マネージャーによって管理されるため、.NET Framework Data Provider for ODBC の影響は受けません。  
   
- 有効にするにまたは、接続プールを無効にする、開く**ODBC データ ソース アドミニストレーター**コントロール パネルの [管理ツール] フォルダーにします。 **接続プーリング** タブでは、インストールされている各 ODBC ドライバーに対する接続プール パラメーターを指定することができます。 ODBC ドライバーの接続プールを変更すると、その ODBC ドライバーを使用するすべてのアプリケーションに影響します。  
+ 接続プーリングの無効化を有効または、開いて**ODBC データ ソース アドミニストレーター**コントロール パネルの [管理ツール] フォルダーにします。 **接続プーリング** タブでは、接続プールの各 ODBC ドライバーがインストールされているパラメーターを指定できます。 ODBC ドライバーの接続プールを変更すると、その ODBC ドライバーを使用するすべてのアプリケーションに影響します。  
   
 ## <a name="connection-pooling-for-oracleclient"></a>OracleClient の接続プール  
  Oracle の .NET データ プロバイダーは ADO.NET クライアント アプリケーションに自動的に接続プールを提供します。 また、接続プール機能の動作を制御する接続文字列修飾子を指定することもできます (このトピックの後の「接続文字列キーワードによる接続プールの制御」を参照してください)。  
@@ -48,10 +48,10 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  既に存在しないサーバーへの接続が存在する場合は、接続プーラーが、その接続が切断されていることをまだ検出せず、無効というマークを付けていない状況のときに、プールからその接続を削除できます。 このような状況が発生したときは、例外が生成されます。 ただし、その場合も開発者は接続を終了して解放し、プールへ返す必要があります。  
   
- クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージ オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳細については、次を参照してください。[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)です。  
+ クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳細については、次を参照してください。[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)します。  
   
 ### <a name="transaction-support"></a>トランザクションのサポート  
- 接続はプールから取り出され、トランザクション コンテキストに基づいて割り当てられます。 要求スレッドのコンテキストと割り当てられた接続は一致している必要があります。 したがって、各接続プールを実際に細分化接続に関連付けられていると、それらにないトランザクション コンテキストに*N*した特定のトランザクション コンテキストを持つ接続が含まれる目盛り。  
+ 接続はプールから取り出され、トランザクション コンテキストに基づいて割り当てられます。 要求スレッドのコンテキストと割り当てられた接続は一致している必要があります。 そのため、各接続プールを実際に細分接続に関連付けられている、それらにないトランザクション コンテキストに*N*特定のトランザクション コンテキストとの接続が含まれる目盛り。  
   
  接続が終了すると、その接続は解放されてプールへ返り、さらに、そのトランザクション コンテキストに基づいて特定のサブプールへ返ります。 そのため、分散トランザクションが保留状態である場合を含め、エラーを発生させることなく、開発者が接続を終了させることは可能です。 これにより、分散トランザクションを後でコミットまたはアボートできます。  
   
@@ -71,4 +71,4 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ## <a name="see-also"></a>関連項目  
  [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

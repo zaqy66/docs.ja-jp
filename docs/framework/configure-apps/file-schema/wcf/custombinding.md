@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 5d423a29430284c904bcfe8eb11ec470a62ecf57
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 514d0770bd94e55ef3eb7ce2421d1d031c90c3e9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751786"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527136"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 ユーザーのメッセージ スタックを完全に制御できます。  
@@ -182,7 +182,7 @@ ms.locfileid: "32751786"
 |属性|説明|  
 |---------------|-----------------|  
 |closeTimeout|クローズ操作が完了するまでの期間を指定する <xref:System.TimeSpan> 値。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
-|name|バインディングの構成名を格納する文字列です。 この値は、カスタム バインディングの識別文字列として機能するユーザー定義文字列です。 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 以降では、バインディングおよび動作に名前を付ける必要はありません。 既定の構成と無名のバインディングおよび動作の詳細については、次を参照してください。[簡略化された構成](../../../../../docs/framework/wcf/simplified-configuration.md)と[WCF サービスの構成を簡略化](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)です。|  
+|name|バインディングの構成名を格納する文字列です。 この値は、カスタム バインディングの識別文字列として機能するユーザー定義文字列です。 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 以降では、バインディングおよび動作に名前を付ける必要はありません。 既定の構成と無名のバインディングおよび動作の詳細については、「[簡略化された構成](../../../../../docs/framework/wcf/simplified-configuration.md)」と「[WCF サービスの構成を簡略化](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」を参照してください。|  
 |openTimeout|実行中の操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |receiveTimeout|受信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |sendTimeout|送信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
@@ -205,7 +205,7 @@ ms.locfileid: "32751786"
 |-------------|-----------------|  
 |バインディング|Windows Communication Foundation アプリケーションのすべてのバインディングを含みます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  カスタム バインドを使用すると、WCF メッセージ スタックのフル コントロールが可能になります。 特定のエンティティの構成要素を追加した、特別にカスタマイズされたバインディングを作成できます。 たとえば、ユーザーは `httpsTransport` セクション、`reliableSession` セクション、および `security` セクションを組み合わせて、信頼できるセキュリティで保護された HTTPS ベースのバインディングを作成できます。  
   
  個別のバインディングは、メッセージ スタックを、スタック要素の構成要素をスタックに出現する順序で指定することにより定義します。 各要素は、スタック内の 1 つの要素を定義および構成します。 各カスタム バインディング内のトランスポート要素は 1 つだけにする必要があります。 この要素がない場合、メッセージ スタックは不完全です。  
@@ -260,7 +260,7 @@ ms.locfileid: "32751786"
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   最下位には、必須のトランスポート要素があります。 独自のトランスポートを使用してまたはトランスポート バインド要素の Windows Communication Foundation (WCF) によって提供されるのいずれかを使用できます。  
+-   最下位には、必須のトランスポート要素があります。 独自のトランスポートを使用して、または Windows Communication Foundation (WCF) によって提供される要素のバインディングのトランスポートのいずれかを使用できます。  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -290,7 +290,7 @@ ms.locfileid: "32751786"
   
  さらに、独自のバインド要素を定義し、それを定義済みの層のいずれかの間に挿入できます。  
   
- カスタム バインドを変更するシステム提供のバインディングを使用する方法の詳細については、次を参照してください。[する方法: システム指定のバインディングをカスタマイズ](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)です。  
+ カスタム システム指定のバインディングを変更するバインドを使用する方法の詳細については、次を参照してください。[方法: システム指定のバインディングをカスタマイズ](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)します。  
   
 1.  
   
@@ -306,4 +306,4 @@ ms.locfileid: "32751786"
  [customBinding 要素](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  
  [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [バインディングを使用して、Windows Communication Foundation サービスとクライアントを構成するには](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)
+ [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)

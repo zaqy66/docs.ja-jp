@@ -10,11 +10,11 @@ helpviewer_keywords:
 - matrix animation with offset accumulation [WPF]
 ms.assetid: 1bca90ef-9832-4128-8ed6-62908e7ec146
 ms.openlocfilehash: 1d3b74ede9cde1928138d4d8625e8625354f5748
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43456478"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522757"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>方法 : パスに沿ってオブジェクトをアニメーション化する (オフセット累積による行列アニメーション)
 この例は、使用する方法を示します、<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>クラス パスに沿ってオブジェクトをアニメーション化して、そのオフセットを蓄積するアニメーションを繰り返すたびの値します。  

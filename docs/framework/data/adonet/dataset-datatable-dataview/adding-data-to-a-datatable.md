@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
 ms.openlocfilehash: c1ebe2d735924c559f450f4041884dc9845e4fe0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396086"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514516"
 ---
 # <a name="adding-data-to-a-datatable"></a>DataTable へのデータの追加
 <xref:System.Data.DataTable> を作成し、列と制約を使用してそのテーブルの構造を定義した後で、テーブルに新しいデータ行を追加できます。 新しい行を追加するには、新しい変数を <xref:System.Data.DataRow> 型として宣言します。 新しい**DataRow**を呼び出すと、オブジェクトが返されます、<xref:System.Data.DataTable.NewRow%2A>メソッド。 **DataTable**を作成し、 **DataRow**で定義されている、オブジェクトが、テーブルの構造に基づく、<xref:System.Data.DataColumnCollection>します。  

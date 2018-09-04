@@ -3,11 +3,11 @@ title: 密結合クライアント サーバー アプリケーションと LINQ
 ms.date: 03/30/2017
 ms.assetid: e083d805-dcf6-459d-b9af-9ef0563f2dd7
 ms.openlocfilehash: 9c36fc1f402d3791611af47a3a6d997db4f31167
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408961"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521881"
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>密結合クライアント サーバー アプリケーションと LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] プレゼンテーション層の密結合のスマート クライアントと中間層で使用できます。 読み取り専用データ アクセス、オプティミスティック同時実行チェックなし、またはタイムスタンプを使用したオプティミスティック同時実行のシナリオの場合、非リモートのシナリオに比べて複雑さはほぼ同じです。 しかし、元の値を使用したオプティミスティック同時実行チェックをデータベースで行う必要がある場合、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は DataSet のようなレベルのデータ ラウンド トリップをサポートしません。 ただし、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中間層は任意のプラットフォーム上のクライアントとの間でデータをやり取りできます。  

@@ -2,15 +2,15 @@
 title: Windows のイベント トレースへの追跡イベント
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 82de8ee74c12019f815adc63f2ca4441ad95d325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b2e43e169faade06d8816d9ae517b6957fbf1ee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519507"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527097"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows のイベント トレースへの追跡イベント
-このサンプルでは、Windows Workflow Foundation (WF) ワークフロー サービスの追跡を有効にして、イベント トレース for Windows (ETW) で追跡イベントを出力する方法を示します。 ワークフロー追跡レコードを ETW に出力するために、このサンプルでは ETW 追跡参加要素 (<xref:System.Activities.Tracking.EtwTrackingParticipant>) を使用します。  
+このサンプルでは、Windows Workflow Foundation (WF) ワークフロー サービスの追跡を有効にして、追跡イベントで Event Tracing for Windows (ETW) を出力する方法を示します。 ワークフロー追跡レコードを ETW に出力するために、このサンプルでは ETW 追跡参加要素 (<xref:System.Activities.Tracking.EtwTrackingParticipant>) を使用します。  
   
  このサンプルのワークフローでは、要求を受け取り、入力データの逆数を入力変数に割り当てて、クライアントに逆数を返します。 入力データが 0 の場合、処理されない 0 による除算の例外が発生し、ワークフローが中止されます。 追跡を有効にすると、エラー追跡レコードが ETW に出力され、後でエラーをトラブルシューティングする際に役立ちます。 ETW 追跡参加要素は、追跡レコードを定期受信するように追跡プロファイルで構成されています。 追跡プロファイルは、Web.config ファイルで定義され、構成パラメーターとして ETW 追跡参加要素に渡されます。 ETW 追跡参加要素は、ワークフロー サービスの Web.config ファイルで構成され、サービス動作としてサービスに適用されます。 このサンプルでは、イベント ログの追跡イベントをイベント ビューアーを使用して確認します。  
   
@@ -45,37 +45,37 @@ ms.locfileid: "33519507"
   
 3.  ソリューションを実行するには、F5 キーを押します。  
   
-     既定では、サービスがリッスンしているポート 53797 (http://localhost:53797/SampleWorkflowService.xamlx)です。  
+     既定では、サービスがリッスンしているポート 53797 (http://localhost:53797/SampleWorkflowService.xamlx)します。  
   
 4.  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] を使用して、WCF テスト クライアントを開きます。  
   
-     WCF テスト クライアント (WcfTestClient.exe) にあります、 \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]インストール フォルダー > \Common7\IDE\ フォルダーです。  
+     WCF テスト クライアント (WcfTestClient.exe) にある、 \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]インストール フォルダー > \Common7\IDE\ フォルダーにあります。  
   
      [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] の既定のインストール フォルダーは C:\Program Files\Microsoft Visual Studio 10.0 です。  
   
-5.  WCF テスト クライアントで、次のように選択します。**サービスの追加**から、**ファイル**メニュー。  
+5.  WCF テスト クライアントで次のように選択します。**サービスの追加**から、**ファイル**メニュー。  
   
-     入力ボックスにエンドポイントのアドレスを追加します。 既定値は、http://localhost:53797/SampleWorkflowService.xamlx です。  
+     入力ボックスにエンドポイントのアドレスを追加します。 既定値は http://localhost:53797/SampleWorkflowService.xamlx です。  
   
 6.  イベント ビューアー アプリケーションを開きます。  
   
-     サービスを呼び出す前に起動してからイベント ビューアー、**開始**メニューの **実行**に入力`eventvwr.exe`です。 ワークフロー サービスから生成された追跡イベントをイベント ログでリッスンしていることを確認します。  
+     サービスを呼び出す前に起動してからイベント ビューアー、**開始**メニューの **実行**に入力`eventvwr.exe`します。 ワークフロー サービスから生成された追跡イベントをイベント ログでリッスンしていることを確認します。  
   
-7.  イベント ビューアーのツリー ビューに移動**イベント ビューアー**、 **Applications and Services Logs**、および**Microsoft**です。 右クリック**Microsoft**選択**ビュー**し**分析およびデバッグ ログ**分析を有効にして、デバッグ ログに  
+7.  イベント ビューアーのツリー ビューでに移動します。**イベント ビューアー**、 **Applications and Services Logs**、および**Microsoft**します。 右クリック**Microsoft**選択と**ビュー**し**分析およびデバッグ ログ**およびデバッグ ログの分析を有効にするには  
   
-     いることを確認、 **分析およびデバッグ ログ**オプションはオンにします。  
+     いることを確認、 **分析およびデバッグ ログ**オプションをオンにします。  
   
-8.  イベント ビューアーのツリー ビューに移動**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**です。 右クリック**分析**選択**ログの有効化**を有効にする、**分析**ログ。  
+8.  イベント ビューアーのツリー ビューでに移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 。**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの有効化**有効にする、**分析**ログ。  
   
 9. WCF テスト クライアントで、`GetData` をダブルクリックしてサービスをテストします。  
   
      `GetData` メソッドが開きます。 この要求はパラメーターを 1 つ受け取ります。値が 0 (既定値) になっていることを確認します。  
   
-     をクリックして**呼び出す**です。  
+     クリックして**呼び出す**します。  
   
 10. ワークフローから出力されたイベントを確認します。  
   
-     イベント ビューアーに戻りに移動**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**です。 右クリック**分析**選択**更新**です。  
+     イベント ビューアーに戻りに移動**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**更新**します。  
   
      イベント ビューアーにワークフロー イベントが表示されます。 ワークフロー実行イベントが表示され、その中にワークフローのエラーに対応する未処理の例外が含まれていることに注意してください。 また、アクティビティがエラーをスローしたことを示す警告イベントもワークフロー アクティビティから出力されます。  
   
@@ -125,18 +125,18 @@ ms.locfileid: "33519507"
   
 1.  イベント ビューアーを開きます。  
   
-2.  移動**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー アプリケーション**です。 右クリック**分析**選択**ログの無効化**です。  
+2.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。  
   
-3.  移動**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー アプリケーション**です。 右クリック**分析**選択**ログの消去**です。  
+3.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー-アプリケーション**します。 右クリック**分析**選択**ログの消去**します。  
   
-4.  選択、**オフ**イベントをクリアするにはオプションです。  
+4.  選択、**オフ**イベントを消去するオプション。  
   
 ## <a name="known-issue"></a>既知の問題  
   
 > [!NOTE]
 >  イベント ビューアーの既知の問題により、ETW イベントをデコードできない場合があります。 その場合、次のようなエラー メッセージが表示されます。  
 >   
->  イベント ID の説明\<id > 元の Microsoft Windows アプリケーション サーバー-アプリケーションが見つかりません。 このイベントを発生させるコンポーネントがローカル コンピューターにインストールされていないか、インストールが破損しています。 ローカル コンピューターにコンポーネントをインストールするか、コンポーネントを修復してください。  
+>  イベント ID の説明\<id > 元が Microsoft Windows のアプリケーション サーバー-アプリケーションが見つかりません。 このイベントを発生させるコンポーネントがローカル コンピューターにインストールされていないか、インストールが破損しています。 ローカル コンピューターにコンポーネントをインストールするか、コンポーネントを修復してください。  
 >   
 >  このエラーが発生した場合は、操作ウィンドウで [最新の情報に更新] をクリックしてください。 これにより、イベントが正常にデコードされます。  
   
@@ -145,9 +145,9 @@ ms.locfileid: "33519507"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

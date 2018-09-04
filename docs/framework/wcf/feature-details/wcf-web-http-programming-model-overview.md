@@ -3,11 +3,11 @@ title: WCF Web HTTP プログラミング モデルの概要
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
 ms.openlocfilehash: f1185e7f8d455a59edf2b11e4e77ac6470d768fc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417339"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517076"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP プログラミング モデルの概要
 Windows Communication Foundation (WCF) WEB HTTP プログラミング モデルでは、wcf WEB HTTP サービスの構築に必要な基本的な要素を提供します。 WCF WEB HTTP サービスへのアクセスを可能なクライアント、Web ブラウザーなどの広い範囲に設計されていて、次の一意の要件があります。  

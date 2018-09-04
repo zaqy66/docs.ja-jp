@@ -3,11 +3,11 @@ title: SQL Server のサーバー ロールとデータベース ロール
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403145"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517906"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server のサーバー ロールとデータベース ロール
 SQL Server では、すべてのバージョンで、個々のユーザーではなくロール (つまり、ユーザーのグループ) に対して権限を割り当てることのできるロール ベースのセキュリティが使用されています。 固定サーバー ロールおよび固定データベース ロールには、固定された一連の権限が割り当てられています。  

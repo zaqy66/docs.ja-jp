@@ -3,11 +3,11 @@ title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
 ms.openlocfilehash: 75719e91daba189c1d93491a1db26acc80100bea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409171"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514753"
 ---
 # <a name="dataviews"></a>DataView
 <xref:System.Data.DataView> では、<xref:System.Data.DataTable> に格納されているデータのさまざまなビューを作成できます。この機能は、データ連結アプリケーションで頻繁に使用されます。 使用して、 **DataView**、さまざまな並べ替え順序、テーブル内のデータを公開して、によって行の状態やフィルター式に基づいてデータをフィルター処理できます。  

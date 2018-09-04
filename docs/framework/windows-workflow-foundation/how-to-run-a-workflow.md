@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 704527bde2ac6bf555d40db836baf938c0c5cd96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47227bdd23efc9648da25bc879c7946dadee4594
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519520"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527944"
 ---
 # <a name="how-to-run-a-workflow"></a>ワークフローを実行する方法
 このトピックでは、Windows Workflow Foundation チュートリアル入門の続きと、ワークフロー ホストを作成して、前の「 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 」で定義したワークフローを実行する方法について説明します。  
@@ -19,11 +19,11 @@ ms.locfileid: "33519520"
 >  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する前に、「 [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) 」および「 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)」を完了する必要があります。  
   
 > [!NOTE]
->  チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](http://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。  
+>  このチュートリアルの完成版をダウンロードするを参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
   
 ### <a name="to-create-the-workflow-host-project"></a>ワークフロー ホスト プロジェクトを作成するには  
   
-1.  ソリューションを開いて、前の[する方法: アクティビティを作成する](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)を使用してトピック[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]です。  
+1.  前のソリューションを開きます[方法: アクティビティを作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)を使用してトピック[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]します。  
   
 2.  **ソリューション エクスプローラー** で **WF45GettingStartedTutorial** ソリューションを右クリックし、 **[追加]** をポイントして、 **[新しいプロジェクト]** をクリックします。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "33519520"
      このハンドラーは、次の推定値を待機してワークフローがアイドル状態になるたびに呼び出され、 `idleAction` <xref:System.Threading.AutoResetEvent> が設定されます。 次の手順のコードでは、 `idleEvent` と `syncEvent` を使用して、ワークフローが次の推定値を待機しているのか、完了しているのかを判断します。  
   
     > [!NOTE]
-    >  この例では、ホスト アプリケーションは <xref:System.Activities.WorkflowApplication.Completed%2A> および <xref:System.Activities.WorkflowApplication.Idle%2A> ハンドラーの自動リセット イベントを使用して、ホスト アプリケーションとワークフローの進行状況を同期させます。 ブックマークを再開する前にワークフローがアイドル状態になるのをブロックして待機する必要はありませんが、この例では同期イベントが必要であるため、ホストはワークフローが完了しているのか、さらにユーザーの入力を待っているのかを <xref:System.Activities.Bookmark>を使用して把握します。 詳細については、次を参照してください。[ブックマーク](../../../docs/framework/windows-workflow-foundation/bookmarks.md)です。  
+    >  この例では、ホスト アプリケーションは <xref:System.Activities.WorkflowApplication.Completed%2A> および <xref:System.Activities.WorkflowApplication.Idle%2A> ハンドラーの自動リセット イベントを使用して、ホスト アプリケーションとワークフローの進行状況を同期させます。 ブックマークを再開する前にワークフローがアイドル状態になるのをブロックして待機する必要はありませんが、この例では同期イベントが必要であるため、ホストはワークフローが完了しているのか、さらにユーザーの入力を待っているのかを <xref:System.Activities.Bookmark>を使用して把握します。 詳細については、次を参照してください。[ブックマーク](../../../docs/framework/windows-workflow-foundation/bookmarks.md)します。  
   
 3.  `WaitOne`への呼び出しを削除して、ユーザーからの入力を収集して <xref:System.Activities.Bookmark>を再開するためのコードに置き換えます。  
   

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
 ms.openlocfilehash: 9e8bcd4503ec840e46022a55cc08dc0610eaa60b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468212"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512467"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] スレッド処理の難しさから開発者を保存する設計されています。 その結果、ほとんどの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開発者は、複数のスレッドを使用するインターフェイスを記述する必要はありません。 マルチ スレッド プログラムは複雑になり、デバッグが困難であるため、シングル スレッドのソリューションが存在する場合、回避する必要があります。  

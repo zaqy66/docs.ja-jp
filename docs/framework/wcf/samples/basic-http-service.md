@@ -3,11 +3,11 @@ title: 基本的な HTTP サービス
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
 ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390381"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516630"
 ---
 # <a name="basic-http-service"></a>基本的な HTTP サービス
 このサンプルでは、"POX"(Plain Old XML) サービス-Windows Communication Foundation (WCF) REST プログラミング モデルを使用するとよく呼ばれる、HTTP ベース、RPC ベース サービスを実装する方法を示します。 このサンプルは、2 つのコンポーネントで構成されています。 自己ホスト型 WCF HTTP サービス (Service.cs) と、サービスを作成し、への呼び出しを、コンソール アプリケーション (Program.cs)。  

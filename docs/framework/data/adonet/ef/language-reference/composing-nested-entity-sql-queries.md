@@ -2,14 +2,15 @@
 title: 入れ子になった Entity SQL クエリの作成
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 92e3153350787ef75c48ee52f1b6c68e09e15b4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a0efa672a57a9255af2d90af1725b34be75600e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528158"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>入れ子になった Entity SQL クエリの作成
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、機能の豊富な関数言語です。 ビルド ブロック[!INCLUDE[esql](../../../../../../includes/esql-md.md)]式を指定します。 従来の SQL とは異なり[!INCLUDE[esql](../../../../../../includes/esql-md.md)]は表形式の結果セットに限定されません。[!INCLUDE[esql](../../../../../../includes/esql-md.md)]リテラル、パラメーター、または入れ子になった式が複雑な式の作成をサポートしています。 式の値は、パラメーター化されたまたは他の式で構成できます。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、機能の豊富な関数言語です。 ビルド ブロック[!INCLUDE[esql](../../../../../../includes/esql-md.md)]式を指定します。 従来の SQL とは異なり[!INCLUDE[esql](../../../../../../includes/esql-md.md)]は表形式の結果セットに限定されません。[!INCLUDE[esql](../../../../../../includes/esql-md.md)]リテラル、パラメーター、または入れ子になった式が複雑な式の作成をサポートしています。 式の値をパラメーター化されたまたはその他の式で構成できます。  
   
 ## <a name="nested-expressions"></a>入れ子になった式  
  入れ子になった式は、その式によって返される型の値が受け入れられる場所であればどこにでも配置できます。 次に例を示します。  
@@ -45,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- 次の例では、入れ子内の式に正しく[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:[する方法: 共用体の 2 つのクエリで注文](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)です。  
+ 次の例は、内の式を正しく入れ子にする方法を示します[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:[方法: 共用体の 2 つのクエリで注文](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)します。  
   
 ## <a name="nested-queries-in-projection"></a>投影内の入れ子になったクエリ  
  project 句内の入れ子になったクエリは、サーバーでデカルト積に変換されないことがあります。 SLQ Server などの一部のバックエンド サーバーでは、これによって TempDB テーブルのサイズが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす場合があります。  

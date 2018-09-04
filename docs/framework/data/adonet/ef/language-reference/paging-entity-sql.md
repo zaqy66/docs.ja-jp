@@ -3,11 +3,11 @@ title: ページング (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ba4f334d-03e5-4a7b-9d42-628f4639b9a2
 ms.openlocfilehash: 4c9a08604c90422ac461bdd7db895b18b633e87e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402086"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516469"
 ---
 # <a name="paging-entity-sql"></a>ページング (Entity SQL)
 物理的なページングを使用して実行できる、[スキップ](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)と[制限](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)でサブ句、 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)句。 物理的ページングを決定的に実行するには、SKIP と LIMIT を使用する必要があります。 使用する必要がある、非決定的な方法で結果内の行の数を制限する場合は、[上部](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)します。 TOP および SKIP/LIMIT は、同時には指定できません。  

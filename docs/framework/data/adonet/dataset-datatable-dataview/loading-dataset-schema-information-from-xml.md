@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
 ms.openlocfilehash: a076dcbbe79a7ec0dfbd727e0d0c752bd4675eef
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398607"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515983"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML の DataSet スキーマ情報の読み込み
 スキーマを<xref:System.Data.DataSet>(そのテーブル、列、リレーション、および制約) はプログラムによって作成された、**入力**または**FillSchema**のメソッド、<xref:System.Data.Common.DataAdapter>から読み込まれたまたは、XML ドキュメントです。 読み込めません**データセット**スキーマ情報を XML ドキュメントから、いずれかを使用できます、 **ReadXmlSchema**または**InferXmlSchema**のメソッド、**データセット**. **ReadXmlSchema**を使用すると、読み込みまたは推論**データセット**XML スキーマ定義言語 (XSD) スキーマ、またはインライン XML スキーマを持つ XML ドキュメントを含むドキュメントからスキーマ情報。 **InferXmlSchema**指定した特定の XML 名前空間を無視しているときに、XML ドキュメントからスキーマを推論することができます。  

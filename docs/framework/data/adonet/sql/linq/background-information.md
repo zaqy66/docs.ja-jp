@@ -2,23 +2,23 @@
 title: 背景情報
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 66d2047a064663cfe93823d92d30f682d557c493
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363218"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515633"
 ---
 # <a name="background-information"></a>背景情報
 このセクションのトピックでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の使用に関する基本事項の範囲を超えた概念と手順について説明します。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] コードおよびアプリケーションの他の例を参照するには、次の手順に従います。  
   
--   特定の問題に関する Microsoft のドキュメントを検索します。  
+-   特定の問題について Microsoft のドキュメントを検索します。  
   
--   含める、 [LINQ フォーラム](http://go.microsoft.com/fwlink/?LinkId=76488)、専門家の複雑なトピックについての詳細を説明することができます。  
+-   参加、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。  
   
--   ホワイト ペーパーを参照の詳細を示す[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic および c# のコード例に完了しませんでした。 詳細については、次を参照してください。 [LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](http://go.microsoft.com/fwlink/?LinkId=93205)です。  
+-   ホワイト ペーパーを参照の詳細を示す[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と c# のコード例を完了します。 詳細については、次を参照してください。 [LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ADO.NET および LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "33363218"
  検証コードおよび他のカスタマイズを追加する方法について説明します。  
   
  [データ バインディング](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
- 説明方法[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]を使用して<xref:System.ComponentModel.IListSource>データ バインディングをサポートするためにします。  
+ 説明方法[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]を使用して<xref:System.ComponentModel.IListSource>データ バインディングをサポートします。  
   
  [継承のサポート](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] オブジェクト モデルにおける継承の役割と、クエリ内で関連する演算子を使用する方法について説明します。  

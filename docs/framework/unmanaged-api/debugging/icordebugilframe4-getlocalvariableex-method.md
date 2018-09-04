@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a82f092a0f10fd621ac4facdee201fa239e1c1b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a1de5287331e196355932d20daabe103914cd564
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414530"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520013"
 ---
 # <a name="icordebugilframe4getlocalvariableex-method"></a>ICorDebugILFrame4::GetLocalVariableEx メソッド
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -38,7 +38,7 @@ HRESULT GetLocalVariableEx(
   
 #### <a name="parameters"></a>パラメーター  
  `flags`  
- [in][ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)プロファイラー ReJIT インストルメンテーションに追加された変数がフレームに含まれるかどうかを指定する列挙体メンバーです。  
+ [in][ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)プロファイラー ReJIT インストルメンテーションに追加された変数がフレーム内に含まれるかどうかを指定する列挙型メンバー。  
   
  `dwIndex`  
  [in] IL スタック フレーム内のローカル変数のインデックス。  
@@ -46,19 +46,19 @@ HRESULT GetLocalVariableEx(
  `ppValue`  
  [out]取得した値を表す"ICorDebugValue"オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- このメソッドがに似ていますが、 [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)メソッドを除いて、任意でアクセスする変数がプロファイラー ReJIT インストルメンテーションに追加します。 このメソッドを呼び出すと、`flags`の値`ILCODE_ORIGINAL_IL`は呼び出すことと同じ[GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)以外の場合は、メソッドはローカル変数を追加、インストルメント化されてそれらの変数にアクセスできません。 `ILCODE_REJIT_IL` は、デバッガーがプロファイラー ReJIT インストルメンテーションに追加されたローカル変数にアクセスできるようにします。 IL がインストルメントされていない場合、メソッドは `E_INVALIDARG` を返します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、 [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)メソッド、点を除いてことが必要に応じてプロファイラー ReJIT インストルメンテーションに追加された変数にアクセスします。 このメソッドを呼び出すと、`flags`の値`ILCODE_ORIGINAL_IL`呼び出しと同じですが[GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)ローカル変数を追加、メソッドがインストルメント化されている場合これらの変数にアクセスすることはできません。 `ILCODE_REJIT_IL` は、デバッガーがプロファイラー ReJIT インストルメンテーションに追加されたローカル変数にアクセスできるようにします。 IL がインストルメントされていない場合、メソッドは `E_INVALIDARG` を返します。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [ICorDebugILFrame4 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
  [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [ReJIT: ハウツー ガイド](http://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+ [ReJIT: ハウツー ガイド](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)

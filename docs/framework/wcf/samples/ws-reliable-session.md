@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
 ms.openlocfilehash: ec9163eded7f77053b94b7cb0ff0995dca575612
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407808"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526416"
 ---
 # <a name="ws-reliable-session"></a>WS 信頼できるセッション
 このサンプルでは、信頼できるセッションの使用方法を示します。 信頼できるセッションは、信頼できるメッセージとセッションをサポートします。 信頼できるメッセージは、エラー時に通信を再試行するほか、メッセージの順次到着などの配信の保証を指定できるようにします。 セッションでは、呼び出し間でクライアントの状態が保持されます。 サンプルでは、クライアントの状態を保持するセッションを実装し、配信順序を保証することを指定します。  

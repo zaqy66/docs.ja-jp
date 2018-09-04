@@ -3,11 +3,11 @@ title: どのような&#39;s .NET 4.5 での Windows Workflow Foundation の新�
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
 ms.openlocfilehash: cfc8be396e9327ee38ea20e8757993aafe7e2151
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396049"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513577"
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>どのような&#39;s .NET 4.5 での Windows Workflow Foundation の新機能
 Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]新しいアクティビティ、デザイナー機能、ワークフロー開発モデルなど、多くの新機能が導入されています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された新しいワークフロー機能の多くは、ホストを変更したワークフロー デザイナーでサポートされています (ただし、すべての機能がサポートされているわけではありません)。 サポートされている新しい機能の詳細については、次を参照してください。[再ホストされたワークフロー デザイナーでの新しい Workflow Foundation 4.5 機能のサポート](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)します。 最新バージョンを使用する .NET 3.0 および .NET 3.5 ワークフロー アプリケーションの移行の詳細については、次を参照してください。[移行ガイダンス](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)します。 ここでは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された新しいワークフロー機能の概要について説明します。  
