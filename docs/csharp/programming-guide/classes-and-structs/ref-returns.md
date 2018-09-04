@@ -4,12 +4,12 @@ description: ref 戻り値と ref ローカル変数を定義して使用する�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33339619"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510566"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 戻り値と ref ローカル変数
 
@@ -122,7 +122,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 この 2 番目のバージョンは、シークされる値が配列の末尾近くにあるようなシナリオのシーケンスが長い場合に、より効率的です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ref キーワード](../../language-reference/keywords/ref.md)  
-[値の型による参照セマンティクス](../../../csharp/reference-semantics-with-value-types.md)
+- [ref キーワード](../../language-reference/keywords/ref.md)  
+- [値の型による参照セマンティクス](../../../csharp/reference-semantics-with-value-types.md)

@@ -1,13 +1,13 @@
 ---
 title: ML.NET のリソース
 description: カスタム AI ソリューションの作成と、.NET アプリケーションへの統合を支援するため、この ML.NET のリソースを拡張します。
-ms.date: 06/05/2018
-ms.openlocfilehash: 8cda1321e1b4a5d16e14ca73e709498341fe04e9
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.date: 07/27/2018
+ms.openlocfilehash: cea0f8fe30e01340c5eb671f39f28a6cbf33884c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34862348"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485007"
 ---
 # <a name="mlnet-resources"></a>ML.NET のリソース
 
@@ -16,3 +16,4 @@ ms.locfileid: "34862348"
 - [Machine Learning 用語集](glossary.md): Machine Learning の重要な用語の定義が含まれています。
 - [Machine Learning の基本](basics.md): Machine Learning を使い始めるための学習リソースのリンクを提供しています。
 - [Machine Learning のタスク](tasks.md): ML.NET でサポートされるさまざまな Machine Learning の使用シナリオについて説明しています。
+- [データ変換](transforms.md): ML.NET でサポートされているデータ変換の概要を提供します。
