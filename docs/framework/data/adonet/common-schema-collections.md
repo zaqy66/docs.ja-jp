@@ -2,12 +2,12 @@
 title: 共通のスキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: 29ccd2af4268a86ae4c2047ad2523f68b0f6489e
-ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
+ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "37072125"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735375"
 ---
 # <a name="common-schema-collections"></a>共通のスキーマ コレクション
 共通のスキーマ コレクションとは、それぞれの .NET Framework マネージド プロバイダーにより実装されるスキーマ コレクションのことです。 呼び出すことによってサポートされるスキーマ コレクションの一覧を決定する .NET Framework マネージ プロバイダーを照会することができます、 **GetSchema**メソッド引数なしでまたはスキーマ コレクション名に"metadatacollections を指定"します。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。 これらのコレクションは、必要なすべての列を表現します。 プロバイダーでは、任意で列を追加できます。 たとえば、`SqlClient` と `OracleClient` は、ParameterName を制限のコレクションに追加します。  
@@ -97,5 +97,4 @@ ms.locfileid: "37072125"
 ## <a name="see-also"></a>関連項目  
  [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [GetSchema およびスキーマ コレクション](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- 
-  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
