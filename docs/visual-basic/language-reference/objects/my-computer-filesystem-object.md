@@ -13,30 +13,30 @@ helpviewer_keywords:
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
 ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390929"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733792"
 ---
-# <a name="mycomputerfilesystem-object"></a><span data-ttu-id="ef2d8-102">My.Computer.FileSystem オブジェクト</span><span class="sxs-lookup"><span data-stu-id="ef2d8-102">My.Computer.FileSystem Object</span></span>
-<span data-ttu-id="ef2d8-103">ドライブ、ファイル、ディレクトリを操作するためのプロパティとメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="ef2d8-103">Provides properties and methods for working with drives, files, and directories.</span></span>  
+# <a name="mycomputerfilesystem-object"></a><span data-ttu-id="6171c-102">My.Computer.FileSystem オブジェクト</span><span class="sxs-lookup"><span data-stu-id="6171c-102">My.Computer.FileSystem Object</span></span>
+<span data-ttu-id="6171c-103">ドライブ、ファイル、ディレクトリを操作するためのプロパティとメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="6171c-103">Provides properties and methods for working with drives, files, and directories.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ef2d8-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="ef2d8-104">Remarks</span></span>  
- <span data-ttu-id="ef2d8-105">メソッドとプロパティについては、`My.Computer.FileSystem`オブジェクトを参照してください<xref:Microsoft.VisualBasic.FileIO.FileSystem>します。</span><span class="sxs-lookup"><span data-stu-id="ef2d8-105">For information about the methods and properties of the `My.Computer.FileSystem` object, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6171c-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="6171c-104">Remarks</span></span>  
+ <span data-ttu-id="6171c-105">メソッドとプロパティについては、`My.Computer.FileSystem`オブジェクトを参照してください<xref:Microsoft.VisualBasic.FileIO.FileSystem>します。</span><span class="sxs-lookup"><span data-stu-id="6171c-105">For information about the methods and properties of the `My.Computer.FileSystem` object, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span></span>  
   
- <span data-ttu-id="ef2d8-106">詳細については、次を参照してください。 [Visual basic におけるファイル アクセス](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)します。</span><span class="sxs-lookup"><span data-stu-id="ef2d8-106">For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span></span>  
+ <span data-ttu-id="6171c-106">詳細については、次を参照してください。 [Visual basic におけるファイル アクセス](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)します。</span><span class="sxs-lookup"><span data-stu-id="6171c-106">For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ef2d8-107">内のクラスを使用することも、<xref:System.IO?displayProperty=nameWithType>ドライブ、ファイル、およびディレクトリを使用する名前空間。</span><span class="sxs-lookup"><span data-stu-id="ef2d8-107">You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.</span></span>  
+>  <span data-ttu-id="6171c-107">内のクラスを使用することも、<xref:System.IO?displayProperty=nameWithType>ドライブ、ファイル、およびディレクトリを使用する名前空間。</span><span class="sxs-lookup"><span data-stu-id="6171c-107">You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ef2d8-108">要件</span><span class="sxs-lookup"><span data-stu-id="ef2d8-108">Requirements</span></span>  
- <span data-ttu-id="ef2d8-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="ef2d8-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="6171c-108">要件</span><span class="sxs-lookup"><span data-stu-id="6171c-108">Requirements</span></span>  
+ <span data-ttu-id="6171c-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="6171c-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- <span data-ttu-id="ef2d8-110">**クラス:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (へのアクセスを提供します<xref:Microsoft.VisualBasic.FileIO.FileSystem>)。</span><span class="sxs-lookup"><span data-stu-id="ef2d8-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span></span>  
+ <span data-ttu-id="6171c-110">**クラス:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (へのアクセスを提供します<xref:Microsoft.VisualBasic.FileIO.FileSystem>)。</span><span class="sxs-lookup"><span data-stu-id="6171c-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span></span>  
   
- <span data-ttu-id="ef2d8-111">**アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="ef2d8-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="6171c-111">**アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="6171c-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ef2d8-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef2d8-112">See Also</span></span>  
- [<span data-ttu-id="ef2d8-113">My.Computer.FileSystem.SpecialDirectories オブジェクト</span><span class="sxs-lookup"><span data-stu-id="ef2d8-113">My.Computer.FileSystem.SpecialDirectories Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
- [<span data-ttu-id="ef2d8-114">My.Computer オブジェクト</span><span class="sxs-lookup"><span data-stu-id="ef2d8-114">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="6171c-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="6171c-112">See Also</span></span>  
+ [<span data-ttu-id="6171c-113">My.Computer.FileSystem.SpecialDirectories オブジェクト</span><span class="sxs-lookup"><span data-stu-id="6171c-113">My.Computer.FileSystem.SpecialDirectories Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
+ [<span data-ttu-id="6171c-114">My.Computer オブジェクト</span><span class="sxs-lookup"><span data-stu-id="6171c-114">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
