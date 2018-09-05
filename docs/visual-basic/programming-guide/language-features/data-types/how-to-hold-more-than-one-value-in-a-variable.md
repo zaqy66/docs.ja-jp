@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
 ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43456491"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517964"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>方法: 変数内で複数の値を保持する (Visual Basic)
 として宣言する場合、変数が 1 つ以上の値を保持する*複合データ型*します。  

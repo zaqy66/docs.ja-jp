@@ -2,12 +2,12 @@
 title: コレクション (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 563cef59c0e52d41dcdeaa51b5bc4d7b8f9554f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 510abe7d818b3a45869824bc52dc4fde38238f7b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644317"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504445"
 ---
 # <a name="collections-visual-basic"></a>コレクション (Visual Basic)
 多くのアプリケーションで、関連するオブジェクトのグループの作成および管理が必要になります。 オブジェクトをグループ化するには、オブジェクトの配列を作成する方法と、オブジェクトのコレクションを作成する方法があります。  
@@ -51,7 +51,7 @@ ms.locfileid: "33644317"
 ## <a name="using-a-simple-collection"></a>単純なコレクションを使用する  
  このセクションの例は、厳密に型指定されたオブジェクトの一覧を使用できる、ジェネリックの <xref:System.Collections.Generic.List%601> クラスを使用します。  
   
- 次の例は、文字列のリストを作成しを使用して、文字列を反復処理し、[ごとにしています.[次へ]](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメントです。  
+ 次の例は、文字列のリストを作成しを使用して、文字列を反復処理し、[ごとにしています.[次へ]](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント。  
   
 ```vb  
 ' Create a list of strings.  
@@ -306,7 +306,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function  
 ```  
   
- 次の例では、キーによって項目をすばやく検索するために、<xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> の <xref:System.Collections.Generic.Dictionary%602.Item%2A> メソッドと `Dictionary` プロパティを使用します。 `Item`プロパティでは、項目にアクセスすることができます、`elements`コレクションを使用して、 `elements(symbol)` Visual basic コードです。  
+ 次の例では、キーによって項目をすばやく検索するために、<xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> の <xref:System.Collections.Generic.Dictionary%602.Item%2A> メソッドと `Dictionary` プロパティを使用します。 `Item`プロパティを使用すると、アイテムへのアクセス、`elements`コレクションを使用して、 `elements(symbol)` Visual Basic でのコード。  
   
 ```vb  
 Private Sub FindInDictionary(ByVal symbol As String)  
@@ -338,7 +338,7 @@ End Sub
   
 <a name="BKMK_LINQ"></a> 
 ##  <a name="using-linq-to-access-a-collection"></a>LINQ を使用してコレクションにアクセスする  
- 統合言語クエリ (LINQ) を使用してコレクションにアクセスできます。 LINQ クエリは、フィルター処理、並べ替え、およびグループ化の機能を提供します。 詳細については、次を参照してください。 [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)です。  
+ 統合言語クエリ (LINQ) を使用してコレクションにアクセスできます。 LINQ クエリは、フィルター処理、並べ替え、およびグループ化の機能を提供します。 詳細については、次を参照してください。 [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)します。  
   
  次の例では、ジェネリック `List` に対して LINQ クエリを実行します。 LINQ クエリは、結果が格納されている別のコレクションを戻します。  
   
@@ -462,9 +462,9 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>カスタム コレクションを定義する  
- <xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Collections.IEnumerable> のインターフェイスを実装してコレクションを定義できます。 詳細については、次を参照してください。[コレクションを列挙して](http://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f)です。  
+ <xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Collections.IEnumerable> のインターフェイスを実装してコレクションを定義できます。 詳細については、次を参照してください。[コレクションを列挙する](https://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f)します。  
   
- カスタム コレクションを定義できますが、通常は、.NET Framework に含まれるコレクションを使用することが推奨されます。これについては、このトピックの[コレクションの種類](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)で既に説明されています。  
+ カスタム コレクションを定義できますが、通常は、.NET Framework に含まれるコレクションを使用することが推奨されます。これについては、このトピックの[コレクションの種類](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)で既に説明されています。  
   
  次の例は、`AllColors` という名前のカスタム コレクション クラスを定義します。 このクラスは、<xref:System.Collections.IEnumerable> メソッドの実装を必要とする <xref:System.Collections.IEnumerable.GetEnumerator%2A> インターフェイスを実装します。  
   
@@ -540,13 +540,13 @@ End Class
   
 <a name="BKMK_Iterators"></a>
 ##  <a name="iterators"></a>Iterators  
- *反復子*は、コレクションに対するカスタム イテレーションを実行するために使用されます。 反復子は、メソッドまたは `get` アクセサーのいずれかです。 反復子を使用して、 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを一度にいずれかのコレクションの各要素を返します。  
+ *反復子*は、コレクションに対するカスタム イテレーションを実行するために使用されます。 反復子は、メソッドまたは `get` アクセサーのいずれかです。 反復子を使用して、 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを一度に 1 つのコレクションの各要素を返します。  
   
- 使用して、反復子を呼び出す、[ごとにしています.[次へ]](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメントです。 `For Each` ループの各イテレーションは、反復子を呼び出します。 `Yield` ステートメントが反復子に到達すると、式が戻され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。  
+ 使用して、反復子を呼び出す、[ごとにしています.[次へ]](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント。 `For Each` ループの各イテレーションは、反復子を呼び出します。 `Yield` ステートメントが反復子に到達すると、式が戻され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。  
   
- 詳細については、次を参照してください。[反復子 (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)です。  
+ 詳細については、次を参照してください。[反復子 (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)します。  
   
- 次の例は、反復子メソッドを使用します。 Iterator メソッドには、`Yield`内にあるステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 `ListEvenNumbers` メソッドでは、`For Each` ステートメント本文の各イテレーションが、反復子メソッドの呼び出しを作成し、これが次の `Yield` ステートメントに続行されます。  
+ 次の例は、反復子メソッドを使用します。 反復子メソッドには、`Yield`内にあるステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 `ListEvenNumbers` メソッドでは、`For Each` ステートメント本文の各イテレーションが、反復子メソッドの呼び出しを作成し、これが次の `Yield` ステートメントに続行されます。  
   
 ```vb  
 Public Sub ListEvenNumbers()  
@@ -577,7 +577,7 @@ End Function
  [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [コレクションとデータ構造体](../../../standard/collections/index.md)  
- [コレクションの作成と操作](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [コレクションの作成と操作](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [コレクション クラスの選択](../../../standard/collections/selecting-a-collection-class.md)  
  [コレクション内での比較と並べ替え](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)
