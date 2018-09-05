@@ -2,12 +2,12 @@
 title: 値のオプション (f#)
 description: オプションの種類の構造体のバージョンでは、f# の値のオプションの種類について説明します。
 ms.date: 06/16/2018
-ms.openlocfilehash: 4c255cbbcfd9cb480230de09cd370a401c87343a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5647ef61725401b10a6045b14eef11f5b041e3e9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527584"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747501"
 ---
 # <a name="value-options"></a>値のオプション
 
@@ -80,4 +80,4 @@ val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 
 ## <a name="see-also"></a>関連項目
 
-[オプション](options.md)
+- [オプション](options.md)

@@ -3,11 +3,11 @@ title: 1 秒あたりの不明なトランザクション操作
 ms.date: 03/30/2017
 ms.assetid: 7e6b0716-c107-42e5-a21d-31d988e7a691
 ms.openlocfilehash: f7365c4e5f03711129916c8c6964f7e25e9b553e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416688"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734721"
 ---
 # <a name="transacted-operations-in-doubt-per-second"></a>1 秒あたりの不明なトランザクション操作
 カウンター名 : 1 秒あたりの不明なトランザクション操作。  

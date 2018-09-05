@@ -12,15 +12,15 @@ ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 60699f0335bb35589341558800cfd64503d0aa0a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4d39dc28082fbed932a60228ac216f2f700c2e9f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748427"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734708"
 ---
 # <a name="ltstartupgt-element"></a>&lt;スタートアップ&gt;要素
-共通言語ランタイム スタートアップ情報を指定します。  
+共通言語ランタイムのスタートアップの情報を指定します。  
   
  \<configuration>  
 \<startup>  
@@ -39,14 +39,14 @@ ms.locfileid: "32748427"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`useLegacyV2RuntimeActivationPolicy`|省略可能な属性です。<br /><br /> 有効にするかどうかを指定します、[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]ランタイムのアクティブ化ポリシーを使用して、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]アクティブ化ポリシー。|  
+|`useLegacyV2RuntimeActivationPolicy`|省略可能な属性です。<br /><br /> 有効にするかどうかを指定します、[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]ランタイムのアクティブ化ポリシーを使用するか、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]アクティブ化ポリシー。|  
   
 ## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy 属性  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|`true`|有効にする[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]ランタイムのアクティブ化ポリシーは、レガシ ランタイムのアクティブ化の手法をバインドする、選択したランタイムの (など、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) の代わりに、構成ファイルから選択した実行時にCLR バージョン 2.0 では、それらを上限です。 したがって、CLR version 4 以降を構成ファイルから選択した場合、.NET Framework の以前のバージョンで作成された混合モード アセンブリは、選択した CLR バージョンを読み込まれます。 CLR バージョン 1.1 または CLR バージョン 2.0 の実質的にインプロセスでサイド バイ サイド機能を無効にする、同じプロセスに読み込みを禁止この値を設定します。|  
-|`false`|既定のアクティブ化ポリシーを使用して、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]は後で、レガシ ランタイムに CLR version 1.1 または 2.0 を読み込むプロセス ライセンス認証の手法を許可するとします。 この値を設定すると、以降、.NET Framework 4 でビルドされた場合を除き、.NET Framework 4 に、またはそれ以降の読み込みから混合モードのアセンブリができなくなります。 この値が既定値です。|  
+|`true`|有効にする[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]ランタイムのアクティブ化ポリシーは、レガシ ランタイムのアクティブ化の手法をバインドする、選択したランタイムの (など、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md))、ランタイムの代わりに、構成ファイルから選択するにはCLR バージョン 2.0 では、それらを上限します。 したがって、CLR バージョン 4 以降を構成ファイルから選択した場合、.NET Framework の以前のバージョンで作成された混合モードのアセンブリは、選択した CLR バージョンで読み込まれます。 この値の設定も、実質的にインプロセスでサイド バイ サイドでの機能を無効にする、同じプロセスに読み込みの CLR バージョン 1.1 または CLR バージョン 2.0 はできません。|  
+|`false`|既定のアクティブ化ポリシーを使用して、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]レガシ ランタイムをプロセスに CLR 1.1 または 2.0 バージョンを読み込む手法をアクティブ化を許可するが、後で対象とします。 この値を設定すると、混合モードのアセンブリから、またはそれ以降、.NET Framework 4 でビルドされた場合を除きに、.NET Framework 4 またはそれ以降の読み込みができません。 この値が既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -61,16 +61,16 @@ ms.locfileid: "32748427"
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **\<SupportedRuntime >** 1.1 以降、ランタイムのバージョンを使用して構築されたすべてのアプリケーションで要素を使用する必要があります。 ランタイムのバージョン 1.0 をサポートするために構築されたアプリケーションを使用する必要があります、  **\<requiredRuntime >** 要素。  
   
- Microsoft Internet Explorer でホストされているアプリケーションのスタートアップ コードは無視されます、 **\<スタートアップ >** 要素とその子要素です。  
+ Microsoft Internet Explorer でホストされるアプリケーションのスタートアップ コードは無視されます、 **\<スタートアップ >** 要素とその子要素。  
   
 ## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>UseLegacyV2RuntimeActivationPolicy 属性  
- この属性は、アプリケーションなどに、レガシ アクティブ化のパスを使用する場合に便利です、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)、それらのパスを以前のバージョンではなく CLR の version 4 をアクティブ化して、アプリケーションがある場合、またはビルドされた、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]が .NET Framework の以前のバージョンでビルドされた混合モード アセンブリに依存しています。 そのようなシナリオで属性を設定`true`です。  
+ この属性は、アプリケーションなどに、レガシ アクティブ化パスを使用する場合に便利ですが、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)、それらのパスを以前のバージョンではなく、CLR の version 4 をアクティブ化して、アプリケーションがある場合、または構築された、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]が以前のバージョンの .NET Framework でビルドされた混合モードのアセンブリに依存しています。 そのようなシナリオで、属性を設定して`true`します。  
   
 > [!NOTE]
->  属性を設定`true`CLR バージョン 1.1 または CLR バージョン 2.0 のプロセスでサイド バイ サイド機能を効果的に無効化が同じプロセスに読み込みを禁止 (を参照してください[COM 相互運用機能のサイド バイ サイド実行](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32))。  
+>  属性を設定`true`CLR version 1.1 または CLR バージョン 2.0 が実質的にインプロセスでサイド バイ サイドでの機能を無効にする、同じプロセスに読み込まれなくなります (を参照してください[COM 相互運用機能のサイド バイ サイドで実行](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32))。  
   
 ## <a name="example"></a>例  
  次の例では、構成ファイルでランタイムのバージョンを指定する方法を示します。  
@@ -94,6 +94,6 @@ ms.locfileid: "32748427"
 ## <a name="see-also"></a>関連項目  
  [スタートアップ設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> 使用するランタイム バージョンの指定](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
- [COM 相互運用機能のサイド バイ サイド実行](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
+ [\<PaveOver> 使用するランタイム バージョンの指定](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
+ [COM 相互運用機能のサイド バイ サイドで実行](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
  [インプロセスの side-by-side 実行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

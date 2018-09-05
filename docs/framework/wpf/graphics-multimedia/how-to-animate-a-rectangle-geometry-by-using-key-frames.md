@@ -9,30 +9,30 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 581dc89d21091ad0ce856d7a7ced84fd7bcea9d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b4a620ea58026c3be1b09d01a595e965e4c2b45
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559283"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43722932"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>方法 : キー フレームを使用して四角形のジオメトリをアニメーション化する
-この例は、アニメーション化する方法を示しています。、<xref:System.Windows.Media.RectangleGeometry.Rect%2A>のプロパティ、<xref:System.Windows.Media.RectangleGeometry>キー フレームを使用しています。  
+この例は、アニメーション化する方法を示しています。、<xref:System.Windows.Media.RectangleGeometry.Rect%2A>のプロパティを<xref:System.Windows.Media.RectangleGeometry>キー フレームを使用しています。  
   
 ## <a name="example"></a>例  
- 次の例では、<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>アニメーション化するクラス、<xref:System.Windows.Media.RectangleGeometry.Rect%2A>のプロパティ、<xref:System.Windows.Media.RectangleGeometry>です。 このアニメーションは、次の方法で 3 つのキー フレームを使用します。  
+ 次の例では、<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>をアニメーション化するクラス、<xref:System.Windows.Media.RectangleGeometry.Rect%2A>のプロパティを<xref:System.Windows.Media.RectangleGeometry>します。 このアニメーションは、次の方法で 3 つのキー フレームを使用します。  
   
-1.  最初の 2 秒間には、インスタンスを使用して、<xref:System.Windows.Media.Animation.LinearRectKeyFrame>位置、幅、および四角形の高さの段階的な変更をアニメーション化するクラス。 などの線形のキー フレーム<xref:System.Windows.Media.Animation.LinearRectKeyFrame>値の間のスムーズな線形遷移を作成します。  
+1.  最初の 2 秒のインスタンスを使用して、<xref:System.Windows.Media.Animation.LinearRectKeyFrame>位置、幅、および四角形の高さを徐々 に変化をアニメーション化するクラス。 などの線形キーフレーム<xref:System.Windows.Media.Animation.LinearRectKeyFrame>値の間の滑らかな線形トランジションを作成します。  
   
-2.  インスタンスを使用している 0.5 秒は、次の終了時に、<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>突然四角形の高さを低くクラス。 などの個別のキー フレーム<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>されている値の間での急激な変化を作成、高さの減少が迅速に行われ、微妙ではありません。  
+2.  インスタンスを使用して、[次へ] の末尾の 0.5 秒、<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>クラスを四角形の高さを突然低きます。 などの不連続のキーフレーム<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>されている値の間での急激な変化を作成、高さの減少は短時間で発生しはありません。  
   
-3.  最後の 2 秒間には、インスタンスを使用して、<xref:System.Windows.Media.Animation.SplineRectKeyFrame>四角形を元の位置とサイズに変更するクラス。 スプライン キー フレームのような<xref:System.Windows.Media.Animation.SplineRectKeyFrame>変数の値に基づいて値の間で遷移を作成する、<xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A>プロパティです。 この例では、変化は最初はゆっくりしていますが、時間セグメントの終点に向かって急激に速くなります。  
+3.  最後の 2 秒のインスタンスを使用して、<xref:System.Windows.Media.Animation.SplineRectKeyFrame>四角形を元の位置とサイズに変更するクラス。 スプライン キー フレームのような<xref:System.Windows.Media.Animation.SplineRectKeyFrame>の値に基づいて値の間に可変遷移を作成、<xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A>プロパティ。 この例では、変化は最初はゆっくりしていますが、時間セグメントの終点に向かって急激に速くなります。  
   
  [!code-csharp[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/RectAnimationUsingKeyFramesExample.cs#rectanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/rectanimationusingkeyframesexample.vb#rectanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/RectAnimationUsingKeyFramesExample.xaml#rectanimationusingkeyframeswholepage)]  
   
- サンプル全体については、「[キーフレーム アニメーションのサンプル](http://go.microsoft.com/fwlink/?LinkID=160012)」を参照してください。  
+ サンプル全体については、「[キーフレーム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160012)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Media.RectangleGeometry>  

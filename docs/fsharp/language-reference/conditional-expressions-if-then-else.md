@@ -1,18 +1,17 @@
 ---
 title: '条件式: if... then...else (F#)'
-description: コードの別の分岐を実行するのには、f# で条件付きの式を記述する方法を説明します。
+description: F# コードの別の分岐を実行する条件式を記述する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: a3ca3c20a659ccf5dc432d0a747ff176ec889e9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10e4224bef772f00520cf5a0fff2f2920147c2fc
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563134"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745197"
 ---
 # <a name="conditional-expressions-ifthenelse"></a>条件式: `if...then...else`
 
-`if...then...else`式は、コードの別の分岐を実行し、別の値によって指定されるブール式を評価することもできます。
-
+`if...then...else`式は、コードの別の分岐を実行し、指定されたブール式に応じて異なる値に評価されます。
 
 ## <a name="syntax"></a>構文
 
@@ -20,12 +19,14 @@ ms.locfileid: "33563134"
 if boolean-expression then expression1 [ else expression2 ]
 ```
 
-## <a name="remarks"></a>コメント
-前の構文で*expression1*ブール式を評価するときに実行`true`、それ以外の*expression2*を実行します。
+## <a name="remarks"></a>Remarks
 
-異なり、他の言語で、`if...then...else`構造は式、ステートメントではなくです。 つまりを実行する分岐の最後の式の値には、値が生成されます。 各分岐で生成される値の型が一致する必要があります。 明示的ながある場合`else`分岐では、そのタイプが`unit`です。 したがって場合の種類、`then`分岐以外の任意の型は、 `unit`、必要があります、`else`分岐と同じ戻り値の型。 チェーンと`if...then...else`式のキーワードを使用することができます、併せて`elif`の代わりに`else if`; それらが等しい。
+前の構文で*expression1*ブール式を評価するときに実行される`true`、それ以外の*expression2*を実行します。
+
+異なり、他の言語で、`if...then...else`コンストラクトは式、ステートメントではありません。 つまり、実行する分岐の最後の式の値では、値が生成されます。 各分岐で生成された値の型が一致する必要があります。 明示的ながある場合`else`ブランチ、その型は、`unit`します。 そのため場合の種類、`then`分岐以外の任意の型は、 `unit`、必要があります、`else`ブランチと同じ戻り値の型。 チェーンと`if...then...else`キーワードを使用することができます、併せて式`elif`の代わりに`else if`; が等しい。
 
 ## <a name="example"></a>例
+
 次の例を使用する方法を示しています、`if...then...else`式。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
@@ -38,5 +39,5 @@ You are only 9 years old and already learning F#? Wow!
 ```
 
 ## <a name="see-also"></a>関連項目
-[F# 言語リファレンス](index.md)
 
+- [F# 言語リファレンス](index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 4ad0b287aa37104e01015ef0a44cf500bc885c29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356761"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724007"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework におけるデータとモデリング
 ここでは、ADO.NET、統合言語クエリ (LINQ: Language-Integrated Query)、WCF Data Services、および XML を使用してデータにアクセスする方法について説明します。  
@@ -20,7 +20,7 @@ ms.locfileid: "33356761"
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  ADO.NET のアーキテクチャについて説明します。また、ADO.NET のクラスを使用してアプリケーション データを管理し、データ ソース (Microsoft SQL Server、OLE DB データ ソース、および XML を含む) とやり取りする方法についても説明します。  
   
- [LINQ ポータル](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [LINQ ポータル](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  統合言語クエリ (LINQ) に関連するドキュメントへのリンクを示します。  
   
  [トランザクション処理](../../../docs/framework/data/transactions/index.md)  
@@ -32,11 +32,11 @@ ms.locfileid: "33356761"
  [XML ドキュメントと XML データ](../../../docs/standard/data/xml/index.md)  
  .NET Framework で XML ドキュメントおよびデータを処理するための、統合された包括的な一連のクラスについて概説します。  
   
- [XML 標準のリファレンス](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
+ [XML 標準のリファレンス](https://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  Microsoft がサポートする XML 標準に関するリファレンス情報を提供します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Microsoft SQL Server のモデリング テクノロジー](http://go.microsoft.com/fwlink/?LinkId=193039)  
+ [Microsoft SQL Server のモデリング テクノロジー](https://go.microsoft.com/fwlink/?LinkId=193039)  
  データに基づくアプリケーションをカスタム方式で迅速に設計および開発することを可能にする一連のテクノロジについて説明します。  
   
  [開発ガイド](../../../docs/framework/development-guide.md)  

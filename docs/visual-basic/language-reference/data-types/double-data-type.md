@@ -19,45 +19,45 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: c2d3d7d360ccb240bafbe0e19e9f396adfba7f7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590265"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734813"
 ---
 # <a name="double-data-type-visual-basic"></a>倍精度浮動小数点数型 (Double) (Visual Basic)
--- をからの値の範囲は IEEE の 64 ビット (8 バイト) の倍精度浮動小数点数の符号付き 4.94065645841246544E-負の値と 4.94065645841246544E から 324-324 1.79769313486231570 e + 308 ~正の値。 倍精度数値には、実数の概算値が格納されます。  
+-- をから IEEE の 64 ビット (8 バイト) の倍精度浮動小数点数の符号付き 4.94065645841246544E-負の値と 4.94065645841246544E から 324-324 1.79769313486231570 e + 308 ~正の値。 倍精度数値には、実数の概数が格納されます。  
   
-## <a name="remarks"></a>コメント  
- `Double`データ型、最大および最小規模が大きくを提供しています。  
+## <a name="remarks"></a>Remarks  
+ `Double`データ型最大および最小の大きさを提供しています。  
   
  `Double` の既定値は 0 です。  
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **有効桁数です。** 浮動小数点数を使用する場合は、ことが常に正確に表現でないメモリに注意してください。 これにより予期しない結果を比較値などの特定の操作から、`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)です。  
+-   **有効桁数です。** 浮動小数点数を使用するときに、常にないことを正確に表現メモリ内に注意してください。 値の比較などの特定の操作から予期しない結果に可能性と`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
   
--   **後続のゼロです。** 浮動小数点データ型には、後続のゼロ文字の任意の内部表現はありません。 たとえば、それらによって区別されません 4.2000 および 4.2 です。 したがって、末尾のゼロは表示されませんを表示する場合、または印刷の浮動小数点値。  
+-   **後続のゼロ。** 浮動小数点データ型には、末尾のゼロの文字の任意の内部表現はありません。 たとえば、これらは区別されません 4.2000 および 4.2 します。 その結果、末尾のゼロは表示されません表示した場合、または印刷の浮動小数点値。  
   
--   **型宣言文字。** あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。 たとえば、整数値が続く場合`R`に値が変更された、`Double`です。  
+-   **型宣言文字。** あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。 たとえば、整数値が続く場合`R`に値が変更された、`Double`します。  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
     Dim dub As Double = 4.0R  
     ```  
   
-     ある識別子に識別子の型文字 `#` を付けると、その識別子は整数型 (`Double`) に変換されます。 次の例では、変数`num`として型指定されて、 `Double`:  
+     ある識別子に識別子の型文字 `#` を付けると、その識別子は整数型 (`Double`) に変換されます。 次の例では、変数`num`として型指定された、 `Double`:  
   
     ```  
     Dim num# = 3  
     ```  
   
--   **Framework の型。** .NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。  
+-   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Double?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
  [Decimal データ型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
  [Single データ型](../../../visual-basic/language-reference/data-types/single-data-type.md)  
  [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 1c669860b545150e75777b8c8cc434f47675ec5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f8384140b813400e106ad959684264304541c93
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541795"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740626"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>チュートリアル : Visual C# による複合コントロールの作成 #
 複合コントロールは、カスタム グラフィカル インターフェイスを作成し、再利用するための手段を提供します。 複合コントロールは、基本的には視覚的に表示されるコンポーネントです。 そのため、複合コントロールは、1 つ以上の Windows フォーム コントロール、コンポーネント、または機能を拡張できるコード ブロックで構成されます。コード ブロックでは、ユーザー入力の検証、表示プロパティの変更、作成者が必要とする他のタスクの実行などによって機能を拡張します。 複合コントロールは、他のコントロールと同様に Windows フォームに配置できます。 このチュートリアルの前半では、`ctlClock` という単純な複合コントロールを作成します。 チュートリアルの後半では、継承によって `ctlClock` の機能を拡張します。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ## <a name="creating-the-project"></a>プロジェクトの作成  
  新しいプロジェクトを作成するときは、ルート名前空間、アセンブリ名、プロジェクト名を設定し、既定のコンポーネントが適切な名前空間に含まれるようにするために、プロジェクトの名前を指定します。  
@@ -28,14 +28,14 @@ ms.locfileid: "33541795"
   
 1.  **[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックして **[新しいプロジェクト]** ダイアログ ボックスを開きます。  
   
-2.  Visual c# プロジェクトのリストから、選択、 **Windows フォーム コントロール ライブラリ**プロジェクト テンプレート、型`ctlClockLib`で、**名前**ボックスし、をクリックして **[ok]** です。  
+2.  Visual c# プロジェクトのリストから選択、 **Windows フォーム コントロール ライブラリ**プロジェクト テンプレートで、「`ctlClockLib`で、**名前**ボックスと順にクリックします **[ok]**。  
   
      プロジェクト名 `ctlClockLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、`ctlClock` という名前のコンポーネントが 2 つのアセンブリに含まれている場合、`ctlClockLib.ctlClock.` を使用して目的の `ctlClock` コンポーネントを指定できます。  
   
 3.  ソリューション エクスプローラーで、**[UserControl1.cs]** を右クリックし、**[名前の変更]** をクリックします。 ファイル名を `ctlClock.cs` に変更します。 コード要素 "UserControl1" へのすべての参照の名前を変更するかどうかをたずねられたら、**[はい]** をクリックします。  
   
     > [!NOTE]
-    >  既定では、複合コントロールを継承から、<xref:System.Windows.Forms.UserControl>システムによって提供されるクラスです。 <xref:System.Windows.Forms.UserControl>クラスは、すべての複合コントロールに必要な機能を提供し、標準的なメソッドとプロパティを実装します。  
+    >  既定では、複合コントロールを継承から、<xref:System.Windows.Forms.UserControl>システムによって提供されるクラス。 <xref:System.Windows.Forms.UserControl>クラスは、すべての複合コントロールに必要な機能を提供し、標準的なメソッドとプロパティを実装します。  
   
 4.  **[ファイル]** メニューの **[すべて保存]** をクリックして、プロジェクトを保存します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33541795"
   
 2.  **ツールボックス**の **[コモン コントロール]** ノードを展開し、**[Label]** をダブルクリックします。  
   
-     A<xref:System.Windows.Forms.Label>という名前のコントロール`label1`デザイナー画面上のコントロールに追加します。  
+     A<xref:System.Windows.Forms.Label>という名前のコントロール`label1`デザイナー画面上にコントロールに追加されます。  
   
 3.  デザイナーで **[label1]** をクリックします。 [プロパティ] ウィンドウで、次のプロパティを設定します。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "33541795"
   
 4.  **ツールボックス**の **[コンポーネント]** ノードを展開し、**[Timer]** をダブルクリックします。  
   
-     <xref:System.Windows.Forms.Timer>コンポーネントは、実行時に視覚的表現がありません。 そのため、コントロールと共にデザイナー画面に表示されるのではなく、**コンポーネント デザイナー** (デザイナー画面の下部にあるトレイ) に表示されます。  
+     <xref:System.Windows.Forms.Timer>コンポーネントは、実行時にビジュアル表現を持ちません。 そのため、コントロールと共にデザイナー画面に表示されるのではなく、**コンポーネント デザイナー** (デザイナー画面の下部にあるトレイ) に表示されます。  
   
-5.  **コンポーネント デザイナー**、 をクリックして**timer1**、し、設定、<xref:System.Windows.Forms.Timer.Interval%2A>プロパティを`1000`と<xref:System.Windows.Forms.Timer.Enabled%2A>プロパティを`true`です。  
+5.  **Component Designer**、 をクリックして**timer1**、し、設定、<xref:System.Windows.Forms.Timer.Interval%2A>プロパティを`1000`と<xref:System.Windows.Forms.Timer.Enabled%2A>プロパティを`true`します。  
   
      <xref:System.Windows.Forms.Timer.Interval%2A>プロパティは、頻度を制御、<xref:System.Windows.Forms.Timer>コンポーネントのタイマー刻み。 `timer1` が時を刻むたびに、`timer1_Tick` イベントのコードが実行されます。 このプロパティは、タイマーの刻み間隔をミリ秒単位で表します。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "33541795"
 9. **[ファイル]** メニューの **[すべて保存]** をクリックして、プロジェクトを保存します。  
   
 ## <a name="adding-properties-to-the-composite-control"></a>複合コントロールへのプロパティの追加  
- 時計コントロールを今すぐカプセル化、<xref:System.Windows.Forms.Label>コントロールと<xref:System.Windows.Forms.Timer>それぞれ固有のプロパティの独自のセットを持つコンポーネントです。 時計コントロールを今後使用するユーザーは、これらのコントロールの個々のプロパティにアクセスすることはできませんが、適切なコード ブロックを記述することで、カスタム プロパティを作成して公開できます。 次の手順では、ユーザーが背景とテキストの色を変更できるようにするプロパティをコントロールに追加します。  
+ 時計コントロールにカプセル化されました、<xref:System.Windows.Forms.Label>コントロールと<xref:System.Windows.Forms.Timer>コンポーネントは、それぞれに固有のプロパティの独自のセット。 時計コントロールを今後使用するユーザーは、これらのコントロールの個々のプロパティにアクセスすることはできませんが、適切なコード ブロックを記述することで、カスタム プロパティを作成して公開できます。 次の手順では、ユーザーが背景とテキストの色を変更できるようにするプロパティをコントロールに追加します。  
   
 #### <a name="to-add-a-property-to-your-composite-control"></a>複合コントロールにプロパティを追加するには  
   
@@ -241,9 +241,9 @@ ms.locfileid: "33541795"
     > [!NOTE]
     >  複合コントロールを今後使用するユーザーが、その内部のコントロールにアクセスできるようにする場合は、内部のコントロールを `public` または `protected` として宣言します。 これにより、適切なコードを使用して、複合コントロールに含まれているコントロールのプロパティの設定や変更が可能になります。  
   
-3.  追加、<xref:System.Windows.Forms.Label>複合コントロールを制御します。  
+3.  追加、<xref:System.Windows.Forms.Label>複合コントロールにコントロール。  
   
-4.  使用して、マウスをドラッグ、 <xref:System.Windows.Forms.Label> [表示] ボックスのすぐ下にあるコントロールです。 [プロパティ] ウィンドウで、次のプロパティを設定します。  
+4.  ドラッグして、マウスを使用して、<xref:System.Windows.Forms.Label>表示ボックスのすぐ下にあるコントロール。 [プロパティ] ウィンドウで、次のプロパティを設定します。  
   
     |プロパティ|設定|  
     |--------------|-------------|  
@@ -359,7 +359,7 @@ ms.locfileid: "33541795"
   
 6.  **[ctlAlarmClock]** をダブルクリックして、`ctlAlarmClock` のコピーをフォームに追加します。  
   
-7.  **ツールボックス**を特定し、ダブルクリック、 **DateTimePicker**を追加する、<xref:System.Windows.Forms.DateTimePicker>をフォームに制御し、追加、<xref:System.Windows.Forms.Label>コントロールをダブルクリックして**ラベル**.  
+7.  **ツールボックス**をダブルクリック**DateTimePicker**を追加する、<xref:System.Windows.Forms.DateTimePicker>をフォームに制御し、追加、<xref:System.Windows.Forms.Label>コントロールをダブルクリックして**ラベル**.  
   
 8.  マウスを使用して、各コントロールをフォーム上の使いやすい場所に配置します。  
   
@@ -392,9 +392,9 @@ ms.locfileid: "33541795"
   
 13. **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
-     テスト プログラムが起動します。 現在の時刻が更新されるに注意してください、`ctlAlarmClock`制御、およびに開始時刻が表示されている、<xref:System.Windows.Forms.DateTimePicker>コントロール。  
+     テスト プログラムが起動します。 現在の時刻が更新されることに注意してください、`ctlAlarmClock`制御、およびその開始時刻を示します、<xref:System.Windows.Forms.DateTimePicker>コントロール。  
   
-14. クリックして、<xref:System.Windows.Forms.DateTimePicker>時間 (分) が表示されます。  
+14. をクリックして、<xref:System.Windows.Forms.DateTimePicker>の分が表示されます。  
   
 15. キーボードを使用して、`ctlAlarmClock` に表示されている現在の時刻の 1 分後の値を設定します。  
   
@@ -406,7 +406,7 @@ ms.locfileid: "33541795"
   
 ## <a name="see-also"></a>関連項目  
  [さまざまなカスタム コントロール](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [コンポーネントによるプログラミング](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [コンポーネント作成のチュートリアル](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
+ [コンポーネントによるプログラミング](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
+ [コンポーネント作成のチュートリアル](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
  [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [チュートリアル: Visual C# による Windows フォーム コントロールからの継承](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

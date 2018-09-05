@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 09f634c870eb78c16192ed30ffbbfdc71fdd5142
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456439"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735476"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの WPF 複合コントロールのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コード、ことができます、既存の拡張をより効果的な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーションを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ではなく最初から修正します。 一般的なシナリオで実装したコントロールを 1 つを埋め込む、または場合に、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows フォーム アプリケーション内で。 WPF コントロールをカスタマイズする方法の詳細については、次を参照してください。[コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)します。  
@@ -229,7 +229,7 @@ Windows フォーム アプリケーションでホストされる WPF 複合コ
   
 4.  次の追加<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>フォームのコントロール。  
   
-    |name|テキスト|  
+    |名前|テキスト|  
     |----------|----------|  
     |groupBox1|背景色|  
     |groupBox2|前景色|  
@@ -241,7 +241,7 @@ Windows フォーム アプリケーションでホストされる WPF 複合コ
   
 5.  次の追加<xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>にコントロールを<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>コントロール。  
   
-    |GroupBox|name|テキスト|  
+    |GroupBox|名前|テキスト|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|元|  
     |groupBox1|radioBackgroundLightGreen|ライトグリーン|  
@@ -262,7 +262,7 @@ Windows フォーム アプリケーションでホストされる WPF 複合コ
   
 6.  次の追加<xref:System.Windows.Forms.Label?displayProperty=nameWithType>最後制御<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>します。 これらのコントロールによって返されるデータの表示、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合コントロール。  
   
-    |GroupBox|name|テキスト|  
+    |GroupBox|名前|テキスト|  
     |--------------|----------|----------|  
     |groupBox7|lblName|名前:|  
     |groupBox7|lblAddress|番地:|  

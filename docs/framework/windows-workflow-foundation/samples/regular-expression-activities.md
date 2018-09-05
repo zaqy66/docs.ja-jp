@@ -2,15 +2,15 @@
 title: 正規表現アクティビティ
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
-ms.openlocfilehash: 34b1f18f26f0b79c4b8711d65da5707a85cf3bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519835"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743165"
 ---
 # <a name="regular-expression-activities"></a>正規表現アクティビティ
-このサンプルでは、<xref:System.Text.RegularExpressions> 名前空間の正規表現機能を公開する一連のアクティビティを作成する方法を示します。 このカスタム アクティビティはワークフロー アプリケーション内で使用できます。 正規表現の詳細については、次を参照してください。 [N:System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace です。  
+このサンプルでは、<xref:System.Text.RegularExpressions> 名前空間の正規表現機能を公開する一連のアクティビティを作成する方法を示します。 このカスタム アクティビティはワークフロー アプリケーション内で使用できます。 正規表現の詳細については、次を参照してください。 [N:System.Text.RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace です。  
   
  次の表に、このサンプルのカスタム アクティビティの詳細を示します。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33519835"
 |------------------------------|-----------------|  
 |Pattern (必須)|検索に使用する正規表現。|  
 |Input (必須)|検索対象の入力文字列。|  
-|RegexOptions|ビットごとの OR の組み合わせ[RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446)列挙値。|  
+|RegexOptions|ビットごとの OR の組み合わせ[RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446)列挙値。|  
 |戻り値|指定されたパターンで一致が見つかった場合は `true`、それ以外の場合は `false`。|  
   
  次のコード例は、`IsMatch` カスタム アクティビティの使用方法を示します。  
@@ -51,7 +51,7 @@ new IsMatch
 |------------------------------|-----------------|  
 |Pattern (必須)|検索に使用する正規表現。|  
 |Input (必須)|検索対象の入力文字列。|  
-|RegexOptions|ビットごとの OR の組み合わせ[RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446)列挙値。|  
+|RegexOptions|ビットごとの OR の組み合わせ[RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446)列挙値。|  
 |戻り値|一致する文字列のコレクションが格納された <xref:System.Text.RegularExpressions.MatchCollection>。|  
   
  次のコード例は、`Matches` カスタム アクティビティの使用方法を示します。  
@@ -75,7 +75,7 @@ new Matches
 |Input (必須)|検索対象の入力文字列。|  
 |Replacement|置換文字列。<br /><br /> `Replacement` が指定されると、`MatchEvaluator` プロパティは無視されます。 `Replacement` または `MatchEvaluator` のどちらかのプロパティを設定する必要があります。|  
 |MatchEvaluator|各一致文字列を調べ、元の一致文字列または置換文字列のどちらかを返すカスタム メソッド。<br /><br /> `Replacement` が指定されると、`MatchEvaluator` プロパティは無視されます。 `Replacement` または `MatchEvaluator` のどちらかのプロパティを設定する必要があります。|  
-|RegexOptions|ビットごとの OR の組み合わせ[RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446)列挙値。|  
+|RegexOptions|ビットごとの OR の組み合わせ[RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446)列挙値。|  
 |戻り値|一致する文字列のコレクションが格納された <xref:System.Text.RegularExpressions.MatchCollection>。|  
   
  次のコード例は、`Replace` カスタム アクティビティの使用方法を示します。  
@@ -111,6 +111,6 @@ new Replace
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Regex`

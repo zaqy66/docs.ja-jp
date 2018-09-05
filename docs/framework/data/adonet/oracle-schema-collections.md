@@ -2,12 +2,12 @@
 title: Oracle スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766856"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745347"
 ---
 # <a name="oracle-schema-collections"></a>Oracle スキーマ コレクション
 Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ コレクションに加えて次のスキーマ コレクションをサポートしています。  
@@ -103,7 +103,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |INSTANCES|String|インデックスがスキャンされるインスタンス数。|  
 |PARTITIONED|String|このインデックスがパーティション分割されているかどうか (はい&#124;なし)。|  
 |TEMPORARY|String|インデックスが一時テーブルにあるかどうかを示します。|  
-|GENERATED|String|インデックスの名前は、システムによって生成されるかどうか (Y&#124;N)。|  
+|GENERATED|String|インデックスの名前はシステムによって生成される、かどうか (Y&#124;N)。|  
 |SECONDARY|String|インデックスが Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトでかどうか (Y&#124;N)。|  
 |BUFFER_POOL|String|インデックス ブロックで使用される既定のバッファー プールの名前。|  
 |USER_STATS|String|統計情報がユーザーによって直接入力されたものかどうかを示します。|  
@@ -146,7 +146,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |STATUS|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|  
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|  
 |GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|  
-|SECONDARY|String|これは、Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトかどうか (Y &#124; N)。|  
+|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|  
 |CREATED|DateTime|オブジェクトが作成された日付。|  
   
 ## <a name="sequences"></a>シーケンス  
@@ -221,7 +221,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |STATUS|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|  
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|  
 |GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|  
-|SECONDARY|String|これは、Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトかどうか (Y &#124; N)。|  
+|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|  
   
 ## <a name="packages"></a>パッケージ  
   
@@ -237,7 +237,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |STATUS|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|  
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|  
 |GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|  
-|SECONDARY|String|これは、Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトかどうか (Y &#124; N)。|  
+|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|  
 |CREATED|DateTime|オブジェクトが作成された日付。|  
   
 ## <a name="packagebodies"></a>PackageBodies  
@@ -254,7 +254,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |STATUS|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|  
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|  
 |GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|  
-|SECONDARY|String|これは、Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトかどうか (Y &#124; N)。|  
+|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|  
 |CREATED|DateTime|オブジェクトが作成された日付。|  
   
 ## <a name="arguments"></a>引数  
@@ -380,4 +380,4 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |CHAR_USED|String|文字列のバイト数制限 (B) または文字数制限 (C) が正式であるかどうかを示します。|  
   
 ## <a name="see-also"></a>関連項目  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

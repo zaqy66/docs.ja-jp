@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 81a75007f1d4a13828867e6419412ea9f4c28906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365061"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735528"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>アプリケーション シナリオ (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 公開およびとしてデータを使用するためのシナリオのコア セットをサポートしている[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードします。 このトピックでは、これらのシナリオに関連するトピックを紹介します。  
   
- リレーショナル データベースからのデータとしての公開、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。  
+ データベースからリレーショナル データを公開、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。  
  -   [クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
 -   [サービスとしてのデータの公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
@@ -37,20 +37,20 @@ ms.locfileid: "33365061"
 -   [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Silverlight ベースのクライアント アプリケーションの [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] フィードを使用する。  
- -   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [非同期操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [方法: データ サービスのデータ コントロールをバインド (WCF データ サービス/Silverlight)](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [方法: データ サービスのデータをコントロール (WCF Data Services/silverlight) にバインドします。](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  AJAX ベースのクライアント アプリケーションの [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] フィードを使用する。  
  -   [クライアント アプリケーションでのデータ サービスの使用](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [OData: URI 規則](http://go.microsoft.com/fwlink/?LinkId=185564)  
+-   [OData: URI 規則](https://go.microsoft.com/fwlink/?LinkId=185564)  
   
--   [OData: JavaScript Object Notation (JSON) 形式](http://go.microsoft.com/fwlink/?LinkId=185790)  
+-   [OData: JavaScript Object Notation (JSON) 形式](https://go.microsoft.com/fwlink/?LinkId=185790)  
   
- 使用するデータをエンド ツー エンド ソリューションを作成する[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]クライアントとサーバー間でデータを転送します。  
+ 使用するエンド ツー エンドのデータ ソリューションを作成[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]クライアントとサーバー間でデータを転送します。  
  -   [クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
 -   [クライアント アプリケーションでのデータ サービスの使用](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,14 +62,14 @@ ms.locfileid: "33365061"
   
 -   [非同期操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
- 公開および使用、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードがアクセスして変更をストリームとしてバイナリ ラージ オブジェクトにします。  
+ 公開および使用、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]がアクセスして変更をストリームとしてバイナリ ラージ オブジェクトをフィードします。  
  -   [ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
   
 -   [バイナリ データの操作](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
   
- バインド[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Windows Presentation Framework (WPF) アプリケーション内のコントロールにフィードできます。  
+ バインド[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Windows Presentation Framework (WPF) アプリケーションでフィードをコントロールします。  
  -   [コントロールへのデータのバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
   
 -   [方法: Windows Presentation Foundation 要素にデータをバインドする](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  

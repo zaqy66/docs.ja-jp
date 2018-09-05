@@ -2,12 +2,12 @@
 title: 'カスタム メッセージ エンコーダー : 圧縮エンコーダー'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 5dc665da3b28a98f1b3016d38ce706bf77dce06f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808742"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735875"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>カスタム メッセージ エンコーダー : 圧縮エンコーダー
 このサンプルでは、Windows Communication Foundation (WCF) プラットフォームを使用してカスタム エンコーダーを実装する方法を示します。  
@@ -17,7 +17,7 @@ ms.locfileid: "33808742"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33808742"
  このサンプルは、クライアント コンソール プログラム (.exe)、自己ホスト型サービス コンソール プログラム (.exe)、および圧縮メッセージ エンコーダー ライブラリ (.dll) で構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。 コントラクトは `ISampleServer` インターフェイスによって定義されます。このインターフェイスでは、基本的な文字列のエコー操作 (`Echo` と `BigEcho`) が公開されます。 クライアントは指定された操作を同期要求し、サービスはクライアントにメッセージをそのまま戻すことによって応答します。 クライアント アクティビティとサービス アクティビティは、コンソール ウィンドウに表示されます。 このサンプルの目的は、カスタム エンコーダを記述する方法と、ネットワーク上でメッセージを圧縮したときの影響を示すことです。 圧縮メッセージ エンコーダーにインストルメンテーションを追加すると、メッセージのサイズ、処理時間、またはその両方を計算することができます。  
   
 > [!NOTE]
->  .NET Framework 4 では、サーバーが (GZip や Deflate などのアルゴリズムで作成された) 圧縮された応答を送信する場合は自動展開は、WCF クライアントで有効になってがします。 このサービスがインターネット インフォメーション サービス (IIS) で Web ホストされる場合は、サービスが圧縮された応答を送信するように IIS を構成することができます。 このサンプルは、クライアントとサービスの両方で圧縮および展開を行うという要件がある場合、またはサービスが自己ホスト型である場合に使用できます。  
+>  .NET Framework 4 では、サーバーが (GZip や Deflate などのアルゴリズムで作成された) 圧縮された応答を送信する場合自動展開は、WCF クライアントで有効になってが。 このサービスがインターネット インフォメーション サービス (IIS) で Web ホストされる場合は、サービスが圧縮された応答を送信するように IIS を構成することができます。 このサンプルは、クライアントとサービスの両方で圧縮および展開を行うという要件がある場合、またはサービスが自己ホスト型である場合に使用できます。  
   
  このサンプルでは、ビルドし、WCF アプリケーションにカスタム メッセージ エンコーダーを統合する方法を示します。 GZipEncoder.dll ライブラリは、クライアントとサービスの両方で配置されます。 また、このサンプルではメッセージを圧縮したときの影響も示します。 GZipEncoder.dll のコードでは、次が示されます。  
   
@@ -57,13 +57,13 @@ ms.locfileid: "33808742"
   
 5.  エンコーダ レイヤはクラス ファクトリとして実装されます。 カスタム エンコーダ用にパブリックに公開する必要があるのはエンコーダのクラス ファクトリだけです。 <xref:System.ServiceModel.ServiceHost> オブジェクトまたは <xref:System.ServiceModel.ChannelFactory%601> オブジェクトが作成されると、ファクトリ オブジェクトがバインディング要素によって返されます。 メッセージ エンコーダは、バッファ モードまたはストリーミング モードで動作できます。 このサンプルでは、バッファ モードとストリーミング モードの両方を示します。  
   
- 各モードの `ReadMessage` 抽象クラスには、関連する `WriteMessage` メソッドと `MessageEncoder` メソッドがあります。 エンコード処理の大部分はこれらのメソッドで行われます。 サンプルでは、既存のテキスト エンコーダとバイナリ メッセージ エンコーダをラップします。 これにより、内部のエンコーダがネットワーク上でのメッセージの表現の読み取りと書き込みを代行し、圧縮エンコーダがその結果を圧縮または解凍できます。 メッセージ エンコーディング用のパイプラインがないため、これは、WCF で複数のエンコーダーを使用するための唯一のモデル。 メッセージが解凍されると、結果として得られたメッセージは、処理対象のチャネル スタックの上にスタックとして渡されます。 圧縮中は、結果として得られる圧縮メッセージは指定されたストリームに直接書き込まれます。  
+ 各モードの `ReadMessage` 抽象クラスには、関連する `WriteMessage` メソッドと `MessageEncoder` メソッドがあります。 エンコード処理の大部分はこれらのメソッドで行われます。 サンプルでは、既存のテキスト エンコーダとバイナリ メッセージ エンコーダをラップします。 これにより、内部のエンコーダがネットワーク上でのメッセージの表現の読み取りと書き込みを代行し、圧縮エンコーダがその結果を圧縮または解凍できます。 メッセージ エンコーディングのパイプラインがないため、これは、WCF で複数のエンコーダーを使用するための唯一のモデルです。 メッセージが解凍されると、結果として得られたメッセージは、処理対象のチャネル スタックの上にスタックとして渡されます。 圧縮中は、結果として得られる圧縮メッセージは指定されたストリームに直接書き込まれます。  
   
  このサンプルは、ヘルパー メソッド (`CompressBuffer` と `DecompressBuffer`) を使用して、バッファを、`GZipStream` クラスを使用するストリームに変換します。  
   
  バッファ内の `ReadMessage` クラスと `WriteMessage` クラスは、`BufferManager` クラスを使用します。 エンコーダにはエンコーダ ファクトリを通じてのみアクセスできます。 `MessageEncoderFactory` 抽象クラスは、現在のエンコーダにアクセスするための `Encoder` という名前のプロパティと、セッションをサポートするエンコーダを作成するための `CreateSessionEncoder` という名前のメソッドを提供します。 チャネルがセッションをサポートし、順序付けされて信頼できるシナリオでは、このようなエンコーダを使用できます。 このシナリオでは、ネットワークに書き込まれるデータの各セッションを最適化できます。 これが必要でない場合は、基本メソッドをオーバーロードしないでください。 `Encoder` プロパティは、セッションのないエンコーダにアクセスする機構を備えており、`CreateSessionEncoder` メソッドの既定の実装では、このプロパティの値が返されます。 サンプルでは既存のエンコーダをラップして圧縮を行うので、`MessageEncoderFactory` の実装では、内部のエンコーダ ファクトリを表す `MessageEncoderFactory` が受け入れられます。  
   
- これで、エンコーダーおよびエンコーダー ファクトリを定義するは、WCF クライアントとサービスで使用できます。 ただし、これらのエンコーダをチャネル スタックに追加する必要があります。 <xref:System.ServiceModel.ServiceHost> クラスと <xref:System.ServiceModel.ChannelFactory%601> クラスの派生クラスを作成して `OnInitialize` メソッドをオーバーライドすると、このエンコーダ ファクトリを手動で追加することができます。 また、カスタム バインディング要素を介してエンコーダ ファクトリを公開することもできます。  
+ エンコーダーおよびエンコーダー ファクトリを定義すると、これでは、WCF クライアントおよびサービスで使用できます。 ただし、これらのエンコーダをチャネル スタックに追加する必要があります。 <xref:System.ServiceModel.ServiceHost> クラスと <xref:System.ServiceModel.ChannelFactory%601> クラスの派生クラスを作成して `OnInitialize` メソッドをオーバーライドすると、このエンコーダ ファクトリを手動で追加することができます。 また、カスタム バインディング要素を介してエンコーダ ファクトリを公開することもできます。  
   
  新しいカスタム バインディング要素を作成するには、<xref:System.ServiceModel.Channels.BindingElement> クラスの派生クラスを作成します。 ただし、バインド要素には複数の型があります。 カスタム バインディング要素がメッセージ エンコード バインディング要素として認識されるには、さらに <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> も実装する必要があります。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> は、新しいメッセージ エンコーダ ファクトリ (`CreateMessageEncoderFactory`) を作成するためのメソッドを公開します。このメソッドを実装すると、一致するメッセージ エンコーダ ファクトリのインスタンスが返されます。 また、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> にはアドレス バージョンを示すプロパティがあります。 このサンプルでは既存のエンコーダをラップするので、サンプルの実装では既存のエンコーダ バインディング要素もラップし、内部のエンコーダ バインディング要素をコンストラクタへのパラメータとして設定して、プロパティを介して公開します。 `GZipMessageEncodingBindingElement` クラスを実装する方法を次のサンプル コードに示します。  
   
@@ -293,7 +293,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />  
 ```  
   
- この構成ハンドラーを使用するのに登録する必要あります内で、 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)要素は、次のサンプル構成で示すようにします。  
+ この構成ハンドラーを使用する内で登録する必要があります、 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)要素は、次のサンプル構成で示すようにします。  
   
 ```xml  
 <extensions>  
@@ -340,18 +340,18 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+2.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-3.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+3.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-4.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   

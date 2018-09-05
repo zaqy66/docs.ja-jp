@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cac4ebb46fabad49e2e4e6a7d566522ca027094
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c05e27226a58086c806e8977ba50a55873d1167e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745475"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735889"
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt;要素
-かどうか、ランタイムを使用して COM 相互運用機能リモート処理ではなく呼び出しは、すべてのアプリケーション ドメインの境界を越えてを指定します。  
+かどうか、ランタイムが使用 COM 相互運用機能のリモート処理ではなくすべての呼び出しに対してアプリケーション ドメイン境界を越えてを指定します。  
   
  \<configuration>  
 \<ランタイム >  
@@ -34,14 +34,14 @@ ms.locfileid: "32745475"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> ランタイムは COM 相互運用機能のリモート処理ではなくアプリケーション ドメインの境界を越えて使用するかどうかを示します。|  
+|`enabled`|必須の属性です。<br /><br /> ランタイムがアプリケーション ドメイン境界を越えて、リモート処理ではなく COM 相互運用機能を使用するかどうかを示します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|`false`|ランタイムは、アプリケーション ドメインの境界を越えて、リモート処理を使用します。 既定値です。|  
-|`true`|ランタイムは、アプリケーション ドメインの境界を越えて COM 相互運用機能を使用します。|  
+|`false`|ランタイムは、アプリケーション ドメイン境界を越えて、リモート処理を使用します。 既定値です。|  
+|`true`|ランタイムは、アプリケーション ドメイン境界を越えて、COM 相互運用機能を使用します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -53,17 +53,17 @@ ms.locfileid: "32745475"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
-## <a name="remarks"></a>コメント  
- 設定すると、`enabled`属性を`true`ランタイムが次のように動作します。  
+## <a name="remarks"></a>Remarks  
+ 設定すると、`enabled`属性を`true`、次のように、ランタイム。  
   
--   ランタイムは呼び出しません[iunknown::queryinterface](http://go.microsoft.com/fwlink/?LinkID=144867)の[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)インターフェイスの場合、 [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003)インターフェイスが COM インターフェイスを使用してドメインを入力します。 代わりに、構築、[ランタイム呼び出し可能ラッパー](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) オブジェクトの周りです。  
+-   ランタイムは呼び出しません[iunknown::queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867)の[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)インターフェイスの場合に、 [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003)インターフェイスが COM インターフェイスを使用してドメインを入力します。 代わりに、構築、[ランタイム呼び出し可能ラッパー](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) オブジェクト。  
   
--   受信すると、ランタイムは E_NOINTERFACE を返します、`QueryInterface`を呼び出して、 [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)のいずれかのインターフェイス[COM 呼び出し可能ラッパー](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) このドメインで作成されました。  
+-   受信すると、ランタイムは E_NOINTERFACE を返します、`QueryInterface`を呼び出し、 [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)のいずれかのインターフェイス[COM 呼び出し可能ラッパー](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) このドメインで作成されています。  
   
- これら 2 つの動作では、COM 経由でのすべての呼び出しがアプリケーション ドメインの境界を使用して COM を越えてマネージ オブジェクトとリモート処理ではなく COM 相互運用機能間でやり取りすることを確認します。  
+ これら 2 つの動作では、アプリケーション ドメインの境界の使用 COM を越えてマネージ オブジェクトとリモート処理ではなく COM 相互運用機能の間のインターフェイスを COM 経由ですべての呼び出しを確認してください。  
   
 ## <a name="example"></a>例  
- 次の例では、分離の境界を越えて相互運用、ランタイムで COM を使用するように指定する方法を示します。  
+ 次の例では、分離境界を越えて相互運用機能、ランタイムで COM を使用することを指定する方法を示します。  
   
 ```xml  
 <configuration>  
