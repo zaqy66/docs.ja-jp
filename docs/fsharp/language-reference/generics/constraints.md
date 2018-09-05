@@ -2,12 +2,12 @@
 title: 制約 (F#)
 description: F# でジェネリック型または関数の型引数の要件を指定するジェネリック型パラメーターに適用される制約について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 7af064159d2722256f0db8286a99fc02435a99cd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936866"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525606"
 ---
 # <a name="constraints"></a>制約
 
@@ -35,7 +35,7 @@ type-parameter-list when constraint1 [ and constraint2]
 |デリゲートの制約|: 委任&lt;*タプルの型パラメーター*、*戻り値の型*&gt;|必要がありますを指定した引数を持つデリゲート型であるし、戻り値を指定された型一般的な用途は想定されていません。|
 |比較の制約|: 比較|指定された型には、比較をサポートする必要があります。|
 |等しいかどうかの制約|: 等しいかどうか|指定された型には、等しいかどうかをサポートする必要があります。|
-|アンマネージド制約|: 管理されていません。|指定された型は、アンマネージ型である必要があります。 アンマネージ型は、プリミティブ型 (`sbyte`、 `byte`、 `char`、 `nativeint`、 `unativeint`、 `float32`、 `float`、 `int16`、 `uint16`、 `int32`、 `uint32`、 `int64`、 `uint64`、または`decimal`)、列挙型、 `nativeptr&lt;_&gt;`、または非ジェネリック構造体のフィールドは、すべてのアンマネージ型。|
+|アンマネージド制約|: 管理されていません。|指定された型は、アンマネージ型である必要があります。 アンマネージ型は、プリミティブ型 (`sbyte`、 `byte`、 `char`、 `nativeint`、 `unativeint`、 `float32`、 `float`、 `int16`、 `uint16`、 `int32`、 `uint32`、 `int64`、 `uint64`、または`decimal`)、列挙型、 `nativeptr<_>`、または非ジェネリック構造体のフィールドは、すべてのアンマネージ型。|
 一般に、制約の種類がない型で使用できる機能を使用するコードがある場合に制約を追加する必要があります。 たとえば、クラス型を指定する型の制約を使用する場合は、ジェネリック関数または型では、そのクラスのメソッドのいずれかを使用できます。
 
 制約を指定する場合があります必要な型パラメーターを明示的に記述する場合、制約、コンパイラがあるないため使用している機能は型の実行時に指定する場合がある任意の型では使用できないことを検証する方法にパラメーター。

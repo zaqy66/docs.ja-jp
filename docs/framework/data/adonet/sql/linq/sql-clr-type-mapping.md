@@ -2,12 +2,12 @@
 title: SQL と CLR の型マッピング
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33365528"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735437"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL と CLR の型マッピング
 LINQ to SQL では、リレーショナル データベースのデータ モデルが、任意のプログラミング言語で表されるオブジェクト モデルに対応付けられています。 アプリケーションが実行されると、LINQ to SQL は、オブジェクト モデルの統合言語クエリを SQL に変換し、それをデータベースに送信して実行します。 データベースから結果が返されると、LINQ to SQL はその結果をプログラミング言語で操作できるオブジェクトに変換し直します。  
@@ -60,7 +60,7 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
   
 -   SQL Server では、一部のデータ型が、CLR の対応する型のデータとは異なる順序で並べ替えられます。 たとえば、SQL Server の `UNIQUEIDENTIFIER` 型のデータは、CLR の <xref:System.Guid?displayProperty=nameWithType> 型のデータとは異なる順序で並べ替えられます。  
   
--   SQL Server では、一部の文字列比較操作の処理が CLR とは異なります。 SQL Server での文字列比較の動作は、サーバー上の照合順序の設定によって決まります。 詳細については、次を参照してください。[照合順序の使用](http://go.microsoft.com/fwlink/?LinkId=115330)、Microsoft SQL Server オンライン ブックの「します。  
+-   SQL Server では、一部の文字列比較操作の処理が CLR とは異なります。 SQL Server での文字列比較の動作は、サーバー上の照合順序の設定によって決まります。 詳細については、次を参照してください。[照合順序の使用](https://go.microsoft.com/fwlink/?LinkId=115330)、Microsoft SQL Server オンライン ブックの「します。  
   
 -   SQL Server では、マップされている一部の関数で、CLR とは異なる値が返されることがあります。 たとえば、末尾の空白文字のみが異なる 2 つの文字列を等価関数で比較した場合、SQL Server では等しいと見なされるのに対し、CLR では等しくないと見なされます。  
   
@@ -232,11 +232,11 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
 ### <a name="sql-server-filestream"></a>SQL Server の FILESTREAM  
  `FILESTREAM` 列の `VARBINARY(MAX)` 属性は、Microsoft SQL Server 2008 以降で使用できます.NET Framework version 3.5 SP1 以降の LINQ to SQL では、これらの属性にマップすることができます。  
   
- `VARBINARY(MAX)` 属性を持つ `FILESTREAM` 列を <xref:System.Data.Linq.Binary> オブジェクトにマップすることはできますが、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドを使用して `FILESTREAM` 属性を持つ列を自動的に作成することはできません。 詳細については`FILESTREAM`を参照してください[FILESTREAM の概要](http://go.microsoft.com/fwlink/?LinkId=115291)で Microsoft SQL Server オンライン ブックの「します。  
+ `VARBINARY(MAX)` 属性を持つ `FILESTREAM` 列を <xref:System.Data.Linq.Binary> オブジェクトにマップすることはできますが、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドを使用して `FILESTREAM` 属性を持つ列を自動的に作成することはできません。 詳細については`FILESTREAM`を参照してください[FILESTREAM の概要](https://go.microsoft.com/fwlink/?LinkId=115291)で Microsoft SQL Server オンライン ブックの「します。  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>バイナリ シリアル化  
- クラスが <xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装している場合は、オブジェクトを SQL バイナリ フィールド (`BINARY`、`VARBINARY`、`IMAGE`) にシリアル化できます。 <xref:System.Runtime.Serialization.ISerializable> インターフェイスの実装方法に従って、オブジェクトのシリアル化と逆シリアル化が行われます。 詳細については、次を参照してください。[バイナリ シリアル化](http://go.microsoft.com/fwlink/?LinkId=115581)します。  
+ クラスが <xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装している場合は、オブジェクトを SQL バイナリ フィールド (`BINARY`、`VARBINARY`、`IMAGE`) にシリアル化できます。 <xref:System.Runtime.Serialization.ISerializable> インターフェイスの実装方法に従って、オブジェクトのシリアル化と逆シリアル化が行われます。 詳細については、次を参照してください。[バイナリ シリアル化](https://go.microsoft.com/fwlink/?LinkId=115581)します。  
   
 <a name="MiscMapping"></a>   
 ## <a name="miscellaneous-mapping"></a>その他のマッピング  
