@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
 ms.openlocfilehash: a7573e14d224e2ec861b301816d6d886fd147180
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401030"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671241"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>方法 : カスタム ユーザー名およびパスワード検証を使用する
 既定では、ユーザー名とパスワードを使用すると認証では、Windows Communication Foundation (WCF) を使用して Windows ユーザー名とパスワードを検証します。 ただし、WCF では、カスタム ユーザー名とパスワードの認証スキームとも呼ばれます*バリデーター*します。 ユーザー名およびパスワードのカスタム検証を組み込むには、<xref:System.IdentityModel.Selectors.UserNamePasswordValidator> から派生するクラスを作成して構成します。  

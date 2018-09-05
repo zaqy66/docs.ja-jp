@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90469469c864e235ff96e7dd2f0f3ebfcef9d7b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41679d4041a6a5a7b9b71a451a083c539d6b4c7b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395467"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672176"
 ---
 # <a name="getting-started-with-net-native"></a>.NET ネイティブの概要
 Windows 10 用に新しい Windows アプリを作成する場合も、既存の Windows ストア アプリを移行する場合も、次に示す同じ手順を実行することになります。 [!INCLUDE[net_native](../../../includes/net-native-md.md)] アプリを作成するには、次の手順を実行します。  
@@ -114,7 +114,7 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
   
 ## <a name="see-also"></a>関連項目  
  [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [NIB: .NET ネイティブのセットアップと構成](http://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
+ [NIB: .NET ネイティブのセットアップと構成](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
  [.NET ネイティブとコンパイル](../../../docs/framework/net-native/net-native-and-compilation.md)  
  [リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [リフレクションに依存する API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  

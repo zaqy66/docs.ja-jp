@@ -3,11 +3,11 @@ title: XML スキーマ制約およびリレーションシップ
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
 ms.openlocfilehash: bcb6e257a40040701612b73768a98e056bccd6c5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43479998"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673753"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML スキーマ制約およびリレーションシップ
 XML スキーマ定義言語 (XSD) スキーマでは、制約を指定することができます (一意、キー、およびキー参照制約) との関係 (を使用して、 **msdata:Relationship**注釈)。 このトピックでは、XML スキーマで指定した制約およびリレーションシップを解釈して <xref:System.Data.DataSet> を生成する方法について説明します。  

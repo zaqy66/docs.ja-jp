@@ -5,11 +5,11 @@ ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 169a16126df395eabecfa969f63a004b9e27cb41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670679"
 ---
 # <a name="claims-based-identity-model"></a>クレームベースの ID モデル
 クレーム対応アプリケーションをビルドすると、ユーザー ID はアプリケーションでクレーム セットとして表されます。 1 つの要求は、ユーザーの名前、別の電子メール アドレスがあります。 これは、ユーザーが要求を行うたびにユーザーの識別に必要なすべての情報がアプリケーションに提供されるように外部 ID システムを構成し、同時に、信頼できるソースから提供される ID データを暗号化によって保護するという考え方です。  

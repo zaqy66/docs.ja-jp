@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: c0cc0834dc087df89131a720f517cd34f757a0f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763671"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672262"
 ---
 # <a name="merging-dataset-contents"></a>DataSet の内容のマージ
 <xref:System.Data.DataSet.Merge%2A> メソッドを使用して、<xref:System.Data.DataSet>、<xref:System.Data.DataTable>、または <xref:System.Data.DataRow> の配列の内容を既存の `DataSet` にマージできます。 いくつかの要因とオプションが、新しいデータを既存の `DataSet` にマージする方法に影響します。  
@@ -31,7 +31,7 @@ ms.locfileid: "32763671"
 >  この動作は .NET Framework version 2.0 で変更されました。 .NET Framework version 1.1 では、名前空間はサポートされていましたが、マージ操作中には無視されました。 そのため、<xref:System.Data.DataSet> プロパティ値を使用する <xref:System.Data.DataTable.Namespace%2A> の動作は、実行されている .NET Framework のバージョンに応じて変わります。 たとえば、`DataSets` を含む 2 つの `DataTables` があり、どちらの <xref:System.Data.DataTable.TableName%2A> プロパティの値も同じですが、<xref:System.Data.DataTable.Namespace%2A> プロパティの値が異なっているとします。 .NET Framework 1.1 では、この 2 つの <xref:System.Data.DataTable.Namespace%2A> オブジェクトをマージするときには <xref:System.Data.DataSet> の名前の違いが無視されます。 しかし、バージョン 2.0 以降では、マージを実行すると対象の `DataTables` に新しい <xref:System.Data.DataSet> が 2 つ作成されます。 元の `DataTables` はマージの影響を受けません。  
   
 ## <a name="preservechanges"></a>PreserveChanges  
- `DataSet`、`DataTable`、または `DataRow` の各配列を `Merge` メソッドに渡すときに、オプション パラメーターを含めることができます。そのパラメーターを使用して、変更内容を既存の `DataSet` に保存するかどうか、および受信データで見つかった新しいスキーマの要素を処理する方法を指定します。 受信データの後に続く最初のオプション パラメーターは、Boolean 型のフラグ <xref:System.Data.LoadOption.PreserveChanges> で、変更内容を既存の `DataSet` に保存するかどうかを指定します。 `PreserveChanges` フラグを `true` に設定した場合、既存の行の `Current` 行バージョンの値は受信する値で上書きされません。 `PreserveChanges` フラグを `false` に設定した場合、既存の行の `Current` 行バージョンの値が受信した値で上書きされます。 `PreserveChanges` フラグを指定しない場合は、既定で `false` に設定されます。 行のバージョンの詳細については、次を参照してください。[行の状態と行のバージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
+ `DataSet`、`DataTable`、または `DataRow` の各配列を `Merge` メソッドに渡すときに、オプション パラメーターを含めることができます。そのパラメーターを使用して、変更内容を既存の `DataSet` に保存するかどうか、および受信データで見つかった新しいスキーマの要素を処理する方法を指定します。 受信データの後に続く最初のオプション パラメーターは、Boolean 型のフラグ <xref:System.Data.LoadOption.PreserveChanges> で、変更内容を既存の `DataSet` に保存するかどうかを指定します。 `PreserveChanges` フラグを `true` に設定した場合、既存の行の `Current` 行バージョンの値は受信する値で上書きされません。 `PreserveChanges` フラグを `false` に設定した場合、既存の行の `Current` 行バージョンの値が受信した値で上書きされます。 `PreserveChanges` フラグを指定しない場合は、既定で `false` に設定されます。 行のバージョンの詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
   
  `PreserveChanges` を `true` に設定すると、既存の行のデータは <xref:System.Data.DataRowVersion.Current> 行バージョンで保存されますが、既存の行の <xref:System.Data.DataRowVersion.Original> 行バージョンのデータは受信した行の `Original` 行バージョンのデータで上書きされます。 既存の行の <xref:System.Data.DataRow.RowState%2A> は、<xref:System.Data.DataRowState.Modified> に設定されます。 適用される例外を次に示します。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "32763671"
  `DataSet` 内に、`Unchanged` に設定され、主キー値が 1 である既存の行があるとします。 マージ操作の際、受信した行が `Modified` に設定され、`Original` 行バージョンの主キーの値が 2 であり、`Current` 行バージョンの主キーの値が 1 である場合、`Original` 行バージョンの主キーの値が一致しないため、既存の行と受信した行は一致していると見なされません。 マージが完了し、制約がチェックされると、`Current` 行バージョンの主キーの値が主キー列の UNIQUE 制約に違反するため、例外がスローされます。  
   
 > [!NOTE]
->  ID 列などの自動インクリメント列を含むデータベース テーブルに行を挿入すると、挿入によって返される ID 列の値が `DataSet` の列の値と一致せず、返された列がマージされずに追加されることがあります。 詳細については、次を参照してください。 [Id の取得や Autonumber 値](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)です。  
+>  ID 列などの自動インクリメント列を含むデータベース テーブルに行を挿入すると、挿入によって返される ID 列の値が `DataSet` の列の値と一致せず、返された列がマージされずに追加されることがあります。 詳細については、次を参照してください。 [Id の取得や値および Autonumber 値](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)します。  
   
  次のコード サンプルでは、スキーマが異なる 2 つの `DataSet` オブジェクトをマージし、その 2 つの受信 `DataSet` オブジェクトのスキーマを組み合わせたスキーマを持つ 1 つの `DataSet` を作成します。  
   
@@ -84,4 +84,4 @@ ms.locfileid: "32763671"
  [DataAdapter と DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [ADO.NET でのデータの取得および変更](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ID 値および Autonumber 値の取得](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

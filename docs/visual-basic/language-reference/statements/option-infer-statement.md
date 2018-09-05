@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245792"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672586"
 ---
 # <a name="option-infer-statement"></a>Option Infer ステートメント
 変数の宣言でローカル型推論を使用できるようにします。  
@@ -41,12 +41,12 @@ Option Infer { On | Off }
   
  次の図では、`Option Infer` がオンになっています。 宣言 `Dim someVar = 2` 内の変数は、型の推定によって整数として宣言されています。  
   
- ![宣言の IntelliSense ビュー。] (../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
+ ![宣言の IntelliSense ビュー。](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
 Option Infer がオンのときの IntelliSense  
   
  次の図では、`Option Infer` がオフになっています。 宣言 `Dim someVar = 2` 内の変数は、型の推定によって `Object` として宣言されています。 この例で、 **Option Strict**設定に設定されて**オフ**上、 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)します。  
   
- ![宣言の IntelliSense ビュー。] (../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
+ ![宣言の IntelliSense ビュー。](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
 Option Infer がオフのときの IntelliSense  
   
 > [!NOTE]
@@ -81,7 +81,7 @@ Option Infer がオフのときの IntelliSense
 |Ｘ|Ｘ|`Dim qty`|`Option Strict` がオフ (既定値) の場合、変数は `Nothing` に設定されます。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
 |Ｘ|○|`Dim qty = 5`|`Option Infer` がオン (既定値) の場合、変数は初期化子のデータ型になります。 参照してください[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
 |○|Ｘ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 詳細については、次を参照してください。 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)します。|  
-|[はい]|○|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
+|はい|○|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
   
 ## <a name="example"></a>例  
  次の例では、`Option Infer` ステートメントがローカル型推論をどのように有効にするかを示します。  

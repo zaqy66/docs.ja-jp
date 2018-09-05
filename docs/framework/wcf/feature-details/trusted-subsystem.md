@@ -5,16 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 59c44609017ab18a176624b7ef6d409005151c3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac789ba81d728c067be515479e749440bb5809d4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671968"
 ---
 # <a name="trusted-subsystem"></a>信頼できるサブシステム
 クライアントは、ネットワーク全体に分散している 1 つ以上の Web サービスにアクセスします。 Web サービスは、追加のリソース (データベースや他の Web サービスなど) に対するアクセスが、Web サービスのビジネス ロジック内にカプセル化されるように設計されています。 これらのリソースは、非承認のアクセスに対して保護する必要があります。 信頼できるサブシステムの処理を次の図に示します。  
   
- ![信頼できるサブシステム](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
+ ![サブシステムを信頼された](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  上図に示した信頼できるサブシステムの処理について、以下の手順で説明します。  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
 |整合性|はい|  
 |機密性|はい|  
 |Transport|クライアントと信頼できるサブシステム サービス間にある HTTP<br /><br /> 信頼できるサブシステム サービスとリソース (バックエンド サービス) の間にある NET.TCP|  
-|バインド|<xref:System.ServiceModel.WSHttpBinding> および<xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|バインド|<xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>リソース (バックエンド サービス)  
   
@@ -211,4 +212,4 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric のセキュリティ モデル](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

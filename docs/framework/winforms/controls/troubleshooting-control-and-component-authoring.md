@@ -11,15 +11,15 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 9100d6dc41f982af340d747ad447009a183b3c7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: caad6a76b52a970e133425c484602deb8801d252
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540980"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670666"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>コントロールとコンポーネントの作成時のトラブルシューティング
-このトピックでは、コンポーネントとコントロールの開発時に発生する次の一般的な問題について説明します。 詳細については、「[コンポーネントによるプログラミング](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)」を参照してください。  
+このトピックでは、コンポーネントとコントロールの開発時に発生する次の一般的な問題について説明します。 詳細については、「[コンポーネントによるプログラミング](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)」を参照してください。  
   
 -   ツールボックスにコントロールを追加できない  
   
@@ -67,7 +67,7 @@ ms.locfileid: "33540980"
          コントロールが**ツールボックス**に追加されます。  
   
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Windows フォームのユーザー コントロールまたはコンポーネントをデバッグできない  
- コントロールがから派生している場合、<xref:System.Windows.Forms.UserControl>クラス、テスト コンテナーで実行時の動作をデバッグすることができます。 詳細については、「[方法: UserControl の実行時の動作をテストする](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)」を参照してください。  
+ コントロールがから派生している場合、<xref:System.Windows.Forms.UserControl>クラス、テスト コンテナーで、実行時の動作をデバッグすることができます。 詳細については、「[方法: UserControl の実行時の動作をテストする](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)」を参照してください。  
   
  他のカスタム コントロールやカスタム コンポーネントはスタンドアロン プロジェクトではありません。 そのため、Windows フォーム プロジェクトなどのアプリケーションでホストする必要があります。 コントロールまたはコンポーネントをデバッグするには、Windows フォーム プロジェクトに追加する必要があります。  
   
@@ -102,16 +102,16 @@ ms.locfileid: "33540980"
  コンポーネントまたはコントロールは、パラメーターなしで既定のコンストラクターを提供する必要があります。 デザイン環境では、コンポーネントまたはコントロールのインスタンスを作成するときに、パラメーターを受け取るコンストラクター オーバーロードにパラメーターを提供しません。  
   
 ## <a name="stathreadattribute"></a>STAThreadAttribute  
- <xref:System.STAThreadAttribute> Windows フォームがシングル スレッド アパートメント モデルを使用する共通言語ランタイム (CLR) に通知します。 この属性を Windows フォーム アプリケーションの `Main` メソッドに適用していない場合、意図しない動作が発生することがあります。 たとえば、背景画像されない可能性がありますなどのコントロールに対して<xref:System.Windows.Forms.ListView>です。 また、一部のコントロールでは、オートコンプリートやドラッグ アンド ドロップの動作を正常に行うためにこの属性が必要になる場合もあります。  
+ <xref:System.STAThreadAttribute> Windows フォームがシングル スレッド アパートメント モデルを使用する共通言語ランタイム (CLR) に通知します。 この属性を Windows フォーム アプリケーションの `Main` メソッドに適用していない場合、意図しない動作が発生することがあります。 などのコントロールに対して、背景画像が表示されない<xref:System.Windows.Forms.ListView>します。 また、一部のコントロールでは、オートコンプリートやドラッグ アンド ドロップの動作を正常に行うためにこの属性が必要になる場合もあります。  
   
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>ツールボックスにコンポーネント アイコンが表示されない  
- 使用すると<xref:System.Drawing.ToolboxBitmapAttribute>にカスタム コンポーネントにアイコンを関連付けるには、ビットマップは自動生成されたコンポーネントをツールボックスに表示されません。 ビットマップを表示するには、**[ツールボックス アイテムの選択]** ダイアログ ボックスを使用してコントロールを再読み込みします。 詳細については、「[方法 : コントロールにツールボックス ビットマップを指定する](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)」を参照してください。  
+ 使用すると<xref:System.Drawing.ToolboxBitmapAttribute>をカスタム コンポーネントにアイコンを関連付けるには、ビットマップは自動生成されたコンポーネントのツールボックスに表示されません。 ビットマップを表示するには、**[ツールボックス アイテムの選択]** ダイアログ ボックスを使用してコントロールを再読み込みします。 詳細については、「[方法 : コントロールにツールボックス ビットマップを指定する](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [デザイン時の Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  [チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
  [方法: UserControl の実行時の動作をテストする](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
  [チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- [コンポーネントの作成](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- [デザイン時の開発のトラブルシューティング](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
- [コンポーネントによるプログラミング](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+ [コンポーネントの作成](https://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
+ [デザイン時開発のトラブルシューティング](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [コンポーネントによるプログラミング](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)

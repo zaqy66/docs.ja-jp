@@ -3,11 +3,11 @@ title: フォーム ポスト
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
 ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464935"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672138"
 ---
 # <a name="form-post"></a>フォーム ポスト
 このサンプルでは、WCF REST プログラミング モデルを拡張して新しい受信要求形式をサポートする方法を示します。 このサンプルには、要求を HTML フォーム ポストから [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型に逆シリアル化できるフォーマッタの実装も含まれています。 また、このサンプルでは T4 テンプレートを使用して、ユーザーが WCF REST サービスにポストバックできる HTML フォームを提供する HTML ページを返します。  

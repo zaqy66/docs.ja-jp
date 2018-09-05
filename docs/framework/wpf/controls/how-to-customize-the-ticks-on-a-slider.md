@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
 ms.openlocfilehash: 045a2f540a37cdea84d2bf2f3ed1e74e122bdbb5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388307"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674433"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>方法 : スライダーの目盛りをカスタマイズする
 この例は、作成する方法を示します、<xref:System.Windows.Controls.Slider>目盛りがあるコントロール。  

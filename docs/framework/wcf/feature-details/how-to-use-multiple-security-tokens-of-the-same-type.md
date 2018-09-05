@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 67a9fd51377294ab6afb5a3d7deaec19fb134b21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25afbb268a0ef7772585a0f3829b56f135758b61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490748"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672321"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>方法 : 同じ型の複数のセキュリティ トークンを使用する
 -   [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 では、クライアント メッセージには任意の型のトークンを 1 つしか含めることができませんでしたが、 現在は、同じ型の複数のトークンをクライアント メッセージに含めることができるようになりました。 このトピックでは、同じ型の複数のトークンをクライアント メッセージに含める方法について説明します。  
@@ -52,4 +52,4 @@ ms.locfileid: "33490748"
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  
   
 ## <a name="see-also"></a>関連項目  
- [セキュリティ アーキテクチャ](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [セキュリティ アーキテクチャ](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

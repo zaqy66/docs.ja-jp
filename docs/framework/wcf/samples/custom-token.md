@@ -2,12 +2,12 @@
 title: カスタム トークン
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 03472f76310fa99568f13f0aa49d9e2a3453ac30
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809850"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671100"
 ---
 # <a name="custom-token"></a>カスタム トークン
 このサンプルでは、Windows Communication Foundation (WCF) アプリケーションにカスタム トークンの実装を追加する方法を示します。 この例では、`CreditCardToken` を使用して、クライアントのクレジット カードに関する情報をサーバーに安全に渡します。 このトークンは、WS-Security メッセージ ヘッダー内で渡され、対称セキュリティ バインディング要素を使用してメッセージ本文と他のメッセージ ヘッダーと共に署名および暗号化されます。 これは、組み込みのトークンでは不十分な場合に役立ちます。 このサンプルでは、組み込みのトークンのいずれかを使用する代わりに、カスタム セキュリティ トークンをサービスに提供する方法を示します。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  
@@ -21,7 +21,7 @@ ms.locfileid: "33809850"
   
 -   サービスがカスタム セキュリティ トークンを使用および検証する方法。  
   
--   どの WCF サービス コードは、カスタム セキュリティ トークンを含む受信したセキュリティ トークンに関する情報を取得できます。  
+-   どの WCF サービスのコードでは、カスタム セキュリティ トークンを含む受信したセキュリティ トークンに関する情報を取得できます。  
   
 -   サーバーの X.509 証明書を使用して、メッセージの暗号化や署名に使用する対称キーを保護する方法。  
   
@@ -115,9 +115,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>カスタム セキュリティ トークンの実装  
- WCF では、カスタム セキュリティ トークンを有効にするには、カスタム セキュリティ トークンのオブジェクト表現を作成します。 サンプルのこの表現は、`CreditCardToken` クラスにあります。 このオブジェクト表現は、セキュリティ トークンのすべての関連情報を保持し、セキュリティ トークンに含まれるセキュリティ キーのリストを提供します。 この場合、クレジット カード セキュリティ トークンにはセキュリティ キーが含まれません。  
+ WCF でのカスタム セキュリティ トークンを有効にするには、カスタム セキュリティ トークンのオブジェクト表現を作成します。 サンプルのこの表現は、`CreditCardToken` クラスにあります。 このオブジェクト表現は、セキュリティ トークンのすべての関連情報を保持し、セキュリティ トークンに含まれるセキュリティ キーのリストを提供します。 この場合、クレジット カード セキュリティ トークンにはセキュリティ キーが含まれません。  
   
- 次のセクションには、新機能、ネットワーク経由で送信するカスタム トークンを有効にするための実行し、WCF エンドポイントで使用する必要がありますがについて説明します。  
+ 次のセクションには、どのようなネットワーク経由で送信されるカスタム トークンを有効にして WCF エンドポイントで使用する必要がありますがについて説明します。  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -155,7 +155,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>カスタム クレジット カード トークンのメッセージへの提供とメッセージからの取得  
- WCF でのセキュリティ トークン シリアライザーは、メッセージ内の XML からセキュリティ トークンのオブジェクト表現を作成して、XML 形式のセキュリティ トークンの作成を担当します。 また、セキュリティ トークンを指すキー識別子の読み取りと書き込みなど、他の機能も備えていますが、この例ではセキュリティ トークン関連の機能だけを使用します。 カスタム トークンを有効にするには、独自のセキュリティ トークン シリアライザーを実装する必要があります。 このサンプルでは、この目的のために `CreditCardSecurityTokenSerializer` クラスを使用します。  
+ WCF でのセキュリティ トークン シリアライザーは、メッセージ内の XML からセキュリティ トークンのオブジェクト表現を作成し、セキュリティ トークンの XML フォームを作成する責任を負います。 また、セキュリティ トークンを指すキー識別子の読み取りと書き込みなど、他の機能も備えていますが、この例ではセキュリティ トークン関連の機能だけを使用します。 カスタム トークンを有効にするには、独自のセキュリティ トークン シリアライザーを実装する必要があります。 このサンプルでは、この目的のために `CreditCardSecurityTokenSerializer` クラスを使用します。  
   
  サービス側では、カスタム シリアライザーは XML 形式のカスタム トークンを読み取り、そこからカスタム トークンのオブジェクト表現を作成します。  
   
@@ -593,9 +593,9 @@ string GetCallerCreditCardNumber()
   
 #### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには  
   
@@ -606,7 +606,7 @@ string GetCallerCreditCardNumber()
   
 1.  Client.exe を client\bin ディレクトリで起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-2.  クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+2.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 #### <a name="to-run-the-sample-across-computer"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -628,7 +628,7 @@ string GetCallerCreditCardNumber()
   
 9. クライアント コンピューターで、コマンド プロンプト ウィンドウから Client.exe を起動します。  
   
-10. クライアントとサービスできない場合は通信するためを参照してください。[トラブルシューティングのヒント](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)です。  
+10. クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   

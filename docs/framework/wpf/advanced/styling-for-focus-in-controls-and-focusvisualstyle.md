@@ -6,32 +6,32 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 6c73c8bbfcf7631094ddf89641de9af38f86f88e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549517"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672632"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>コントロールのフォーカスのスタイルと FocusVisualStyle
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] キーボード フォーカスを受け取るときに、コントロールの外観を変更するための 2 つの並列メカニズムを提供します。 最初のメカニズムがなどを使用してプロパティの setter のプロパティは<xref:System.Windows.UIElement.IsKeyboardFocused%2A>スタイルまたはコントロールに適用されているテンプレート内で。 2 番目の機構の値として別のスタイルを提供する、<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>プロパティです"visual スタイルにフォーカスする"または他の UI コントロールのビジュアル ツリーを変更するのではなく、コントロールの上に描画される装飾用の別個のビジュアル ツリーの作成。置換する要素。 このトピックでは、これらのメカニズムが適切であるシナリオについて説明します。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] キーボード フォーカスを受け取るときに、コントロールの外観を変更するための 2 つの並列メカニズムを提供します。 最初のメカニズムは、プロパティなどのプロパティ set アクセス操作子を使用する<xref:System.Windows.UIElement.IsKeyboardFocused%2A>スタイルまたはコントロールに適用されているテンプレート内で。 2 つ目のメカニズムの値として別のスタイルを提供する、<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>プロパティまたはその他の UI コントロールのビジュアル ツリーを変更するのではなく、コントロールの上に描画される装飾の個別のビジュアル ツリーを作成する「フォーカスのビジュアル スタイル」置換することで要素。 このトピックでは、これらのメカニズムが適切なシナリオについて説明します。  
    
   
 <a name="Purpose"></a>   
-## <a name="the-purpose-of-focus-visual-style"></a>フォーカスの Visual スタイルの目的は、  
- フォーカス visual スタイル機能では、任意の UI 要素にキーボード ナビゲーションに基づいてビジュアル ユーザー フィードバックを導入するため、一般的な「オブジェクト モデル」を提供します。 新しいテンプレートをコントロールに適用するか、特定のテンプレート構成を知ることがなく可能です。  
+## <a name="the-purpose-of-focus-visual-style"></a>フォーカスのビジュアル スタイルの目的は、  
+ フォーカス表示スタイルの機能は、UI 要素にキーボード ナビゲーションに基づく visual ユーザーからのフィードバックを導入するための一般的な「オブジェクト モデル」を提供します。 特定のテンプレート構成を知る必要も、コントロールに新しいテンプレートを適用することがなく可能です。  
   
- ただし、正確に機能するため、フォーカス visual スタイル コントロール テンプレートを知らなくても、フォーカスの visual スタイルを使用してコントロールの表示可能な視覚的なフィードバックは必ずしも制限されます。 機能が実際に行うには、コントロールの描画のテンプレートを使用して作成されると、ビジュアル ツリーの上に別のビジュアル ツリー (装飾) をオーバーレイをします。 格納するスタイルを使用してこの別個のビジュアル ツリーを定義する、<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>プロパティです。  
+ ただし、フォーカスの視覚スタイルの機能は、コントロール テンプレートを知ることがなく機能するために正確にフォーカスのビジュアル スタイルを使用してコントロールの表示可能な視覚的フィードバックは必ずしも制限されます。 機能が実際には、テンプレートを通じて、コントロールの描画によって作成されたビジュアル ツリーの上に別のビジュアル ツリー (装飾) をオーバーレイすることです。 表示されるスタイルを使用してこの個別のビジュアル ツリーを定義する、<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>プロパティ。  
   
 <a name="Default"></a>   
-## <a name="default-focus-visual-style-behavior"></a>フォーカス Visual スタイルの既定の動作  
- フォーカスの visual スタイルは、キーボードによってフォーカス操作が開始されたときにのみ機能します。 任意のマウス操作またはプログラムでフォーカスの変更は、visual スタイルのフォーカス モードを無効にします。 フォーカス モードの違いの詳細については、次を参照してください。[フォーカス概要](../../../../docs/framework/wpf/advanced/focus-overview.md)です。  
+## <a name="default-focus-visual-style-behavior"></a>フォーカスの Visual スタイルの既定の動作  
+ フォーカス表示スタイルは、キーボードでフォーカスのアクションが開始された場合にのみ機能します。 任意のマウス操作またはプログラムによるフォーカスの変更は、visual スタイルのフォーカス モードを無効にします。 フォーカス モードの違いの詳細については、次を参照してください。[フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)します。  
   
- コントロールのテーマには、すべてのコントロールのテーマでのフォーカス visual スタイルになる既定フォーカス visual スタイルの動作が含まれます。 このテーマ スタイルは、静的なキーの値によって識別される<xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>です。 アプリケーション レベルで、独自のフォーカス visual スタイルを宣言する場合は、テーマからこの既定のスタイルの動作を置き換えます。 また、全体のテーマを定義する場合、全体のテーマの既定の動作の線のスタイルを定義するこれと同じキーを使用する必要があります。  
+ コントロールのテーマには、テーマのすべてのコントロールのフォーカスの視覚スタイルになる既定フォーカス visual スタイルの動作が含まれます。 このテーマ スタイルは、静的なキーの値によって識別される<xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>します。 アプリケーション レベルで、独自のフォーカス表示スタイルを宣言するときに、このテーマから既定のスタイル動作を置き換えます。 また、全体のテーマを定義する場合に、全体のテーマの既定の動作のスタイルを定義するこれと同じキーを使用する必要があります。  
   
- テーマで既定フォーカス visual スタイルは一般に非常に単純です。 おおよその近似値を次に示します。  
+ テーマ、既定のフォーカスの視覚スタイルは一般に、非常に単純です。 おおよその近似値を次に示します。  
   
-```  
+```xaml  
 <Style x:Key="{x:Static SystemParameters.FocusVisualStyleKey}">  
   <Setter Property="Control.Template">  
     <Setter.Value>  
@@ -47,34 +47,34 @@ ms.locfileid: "33549517"
 ```  
   
 <a name="When"></a>   
-## <a name="when-to-use-focus-visual-styles"></a>フォーカスの Visual スタイルを使用する場合  
- 概念的には、コントロールに適用されるフォーカス visual スタイルの外観は、コントロール間で一貫している必要があります。 一貫性を実現する方法の 1 つは、テーマで定義されている各コントロールを取得、まったく同じフォーカス visual スタイル、またはスタイルのいくつかのバリエーションのいずれかを全体のテーマを作成している場合にのみ、visual スタイルが関連する視覚的にフォーカスをコントロールから続きを変更するにはロール。 代わりに、ページまたは、UI にキーボード フォーカスのすべての要素のスタイルを設定する同じスタイル (または類似スタイル) を使用する場合があります。  
+## <a name="when-to-use-focus-visual-styles"></a>フォーカスの視覚スタイルを使用する場合  
+ 概念的には、コントロールに適用されるフォーカスの視覚スタイルの外観は、コントロール間で一貫している必要があります。 一貫性を実現する方法の 1 つがコントロールから続きに visual スタイルで、テーマで定義されている各コントロールを取得フォーカス表示スタイルをまったく同じまたはスタイルのいくつかのバリエーションのいずれかを全体のテーマを作成する場合にのみが関連する視覚的にフォーカスを変更するにはrol します。 ページまたは UI にキーボード フォーカスのすべての要素のスタイルを設定する同じスタイル (または同様のスタイル) を使用する場合があります。  
   
- 設定<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>テーマの一部ではない個別のコントロールのスタイルでは、フォーカスの使用目的ではない visual スタイル。 これは、コントロール間の一貫性のない visual 動作がキーボード フォーカスに関するユーザー エクスペリエンスに混乱する可能性があるためです。 されない意図的に一貫性のあるテーマで、キーボード フォーカス コントロール固有の動作する場合は、はるかに優れた方法を使用してトリガーのスタイルでの個々 の入力状態プロパティなど<xref:System.Windows.UIElement.IsFocused%2A>または<xref:System.Windows.UIElement.IsKeyboardFocused%2A>です。  
+ 設定<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>テーマの一部ではない個々 のコントロールのスタイルはフォーカスの使用目的ではない視覚スタイル。 これは、コントロール間の一貫性のない visual 動作がキーボード フォーカスに関するユーザー エクスペリエンスは混乱を招く可能性があるためにです。 キーボード フォーカスは、テーマ間で一貫性のあるは意図的にコントロール固有の動作をコントロールするはるかに優れた方法は、スタイルのトリガーをなど、個々 の入力の状態のプロパティを使用します<xref:System.Windows.UIElement.IsFocused%2A>または<xref:System.Windows.UIElement.IsKeyboardFocused%2A>します。  
   
- フォーカスはキーボード フォーカスの専用の visual スタイルが機能します。 そのため、フォーカスの visual スタイルは、ユーザー補助機能の種類です。 場合 UI の変更の種類、フォーカスのマウスを使用しているかどうか、キーボード、またはプログラムでは、次をフォーカスの visual スタイルを使用しないでくださいして代わりに、set アクセス操作子およびスタイルまたはテンプレートの一般的なフォーカス プロパティの値から作業をトリガーに使用する必要があります。ように`IsFocused`または`IsFocusWithin`です。  
+ フォーカスの視覚スタイルがキーボード フォーカスの専用の機能です。 そのため、フォーカスの視覚スタイルは、ユーザー補助機能の種類です。 マウスを使用しているかどうか、フォーカスの任意の型の UI の変更をする場合キーボード、またはプログラムによって、しするが、フォーカスの視覚スタイルを使用しないでくださいし、set アクセス操作子とスタイルまたはテンプレートの全般的な焦点プロパティの値から作業をでトリガーを使用する必要があります。など<xref:System.Windows.UIElement.IsFocused%2A>または<xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>します。  
   
 <a name="How"></a>   
-## <a name="how-to-create-a-focus-visual-style"></a>フォーカスの Visual スタイルを作成する方法  
- フォーカスの visual スタイルがある用に作成する、スタイル、<xref:System.Windows.Style.TargetType%2A>の<xref:System.Windows.Controls.Control>します。 スタイルは、主に、<xref:System.Windows.Controls.ControlTemplate>です。 フォーカスの visual スタイルに割り当てられた型にする対象の型を指定しない、<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>です。  
+## <a name="how-to-create-a-focus-visual-style"></a>フォーカス表示スタイルを作成する方法  
+ フォーカスのビジュアル スタイルを指定することは常に作成する、スタイル、<xref:System.Windows.Style.TargetType%2A>の<xref:System.Windows.Controls.Control>します。 主にスタイルが加え、<xref:System.Windows.Controls.ControlTemplate>します。 型であることに、フォーカスの視覚スタイルが割り当てられている対象の型を指定しない、<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>します。  
   
- 対象の型は常にため<xref:System.Windows.Controls.Control>、すべてのコントロールに共通するプロパティを使用してスタイルを設定する必要があります (のプロパティを使用して、<xref:System.Windows.Controls.Control>クラスとその基本クラス)。 UI 要素にオーバーレイとして正しく機能するコントロールの機能領域を隠さない、テンプレートを作成する必要があります。 一般に、視覚的なフィードバック表示されるコントロールの余白の外部またはコントロールのヒット テストがブロックされていない一時または控えめな効果とフォーカス visual スタイルが適用されるつまり。 テンプレート バインディングで使用できるサイズ変更と、オーバーレイ テンプレートの配置を決定するための便利なプロパティが含まれます<xref:System.Windows.FrameworkElement.ActualHeight%2A>、 <xref:System.Windows.FrameworkElement.ActualWidth%2A>、 <xref:System.Windows.FrameworkElement.Margin%2A>、および<xref:System.Windows.Controls.Control.Padding%2A>です。  
+ 対象の型は常にため<xref:System.Windows.Controls.Control>、すべてのコントロールに共通するプロパティを使用してスタイルを設定する必要があります (のプロパティを使用して、<xref:System.Windows.Controls.Control>クラスとその基本クラス)。 UI 要素にオーバーレイとして正しく機能して、コントロールの機能領域を隠さないテンプレートを作成する必要があります。 つまり、通常、視覚的なフィードバックが表示されること、コントロールのマージンの外部またはコントロールのヒット テストがブロックされていない一時的または控えめな効果と、フォーカスのビジュアル スタイルを適用します。 サイズ変更と、オーバーレイのテンプレートの配置を決定するために利用できるテンプレートのバインドで使用できるプロパティが含まれます<xref:System.Windows.FrameworkElement.ActualHeight%2A>、 <xref:System.Windows.FrameworkElement.ActualWidth%2A>、 <xref:System.Windows.FrameworkElement.Margin%2A>、および<xref:System.Windows.Controls.Control.Padding%2A>します。  
   
 <a name="Alternatives"></a>   
-## <a name="alternatives-to-using-a-focus-visual-style"></a>フォーカスの Visual スタイルを使用に代わる方法  
- フォーカスの visual スタイルを使用してが適切ではありません、1 つのコントロールをスタイル処理のみか、またはコントロール テンプレートをより細かく制御するための場合があるその他の多くのアクセス可能なプロパティやビジュアルを作成できる手法フォーカスの変更に応答で動作します。  
+## <a name="alternatives-to-using-a-focus-visual-style"></a>フォーカスのビジュアル スタイルの使用に代わる方法  
+ 状況でフォーカスのビジュアル スタイルを使用して、適切でない 1 つのコントロールをスタイル設定はのみか、またはコントロール テンプレートをより細かく制御するためがあるその他の多くのアクセス可能なプロパティやビジュアルを作成できる手法フォーカスの変更に応答で動作します。  
   
- トリガー、setter、およびイベント セッターがすべてで詳しく説明されている[スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)です。 ルーティングされたイベントの処理は、後ほど[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)です。  
+ トリガー、setter、およびイベント setter がすべてで詳しく説明されている[スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)します。 ルーティング イベントの処理は、後ほど[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)します。  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
- キーボード フォーカス、特に関心がある場合、<xref:System.Windows.UIElement.IsKeyboardFocused%2A>プロパティに対して依存関係プロパティを使用できる<xref:System.Windows.Trigger>です。 スタイルまたはテンプレートのプロパティ トリガーは非常に具体的には、1 つのコントロールとその他のコントロールのキーボード フォーカスの動作に一致する可能性がありますいない視覚的には、キーボード フォーカスの動作を定義するためのより適切な手法です。  
+ キーボード フォーカスを具体的には関心がある場合、<xref:System.Windows.UIElement.IsKeyboardFocused%2A>プロパティの依存関係プロパティを使用できる<xref:System.Windows.Trigger>します。 スタイルまたはテンプレートのいずれかのプロパティ トリガーは、非常に具体的には、1 つのコントロールについては、他のコントロールのキーボード フォーカスの動作に一致する可能性がありますいない視覚的には、キーボード フォーカスの動作を定義するためのより適切な手法です。  
   
- 別のような依存関係プロパティが<xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>、合成内またはコントロールの機能領域内で任意の場所は、キーボード フォーカスを視覚的に呼び出すために必要な場合に使用する適切なされる可能性があります。 たとえば、配置する場合があります、<xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>トリガー キーボード フォーカスがより正確にでも複数のコントロールをグループ化するパネルを異なる方法で表示されるようにあるそのパネル内の各要素にします。  
+ 別のような依存関係プロパティが<xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>、合成内またはコントロールの機能領域内ではどこかに、視覚的に、そのキーボード フォーカスを呼び出そうとする場合に使用する適切なされる可能性があります。 たとえば、配置する場合があります、<xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>トリガー場合でも、キーボード フォーカスがより正確に可能性があります、いくつかのコントロールをグループ化するパネルが異なる方法に表示されるようにそのパネル内の各要素にします。  
   
- イベントを使用することもできます。<xref:System.Windows.UIElement.GotKeyboardFocus>と<xref:System.Windows.UIElement.LostKeyboardFocus>(およびプレビュー同等)。 これらのイベントを使用するには、基礎として、 <xref:System.Windows.EventSetter>、または分離コードでイベントのハンドラーを記述することができます。  
+ イベントを使用することもできます。<xref:System.Windows.UIElement.GotKeyboardFocus>と<xref:System.Windows.UIElement.LostKeyboardFocus>(と同様に、プレビューの同等)。 基礎として、これらのイベントを使用することができます、 <xref:System.Windows.EventSetter>、または分離コードでイベントのハンドラーを記述することができます。  
   
 ### <a name="other-focus-properties"></a>その他のフォーカス プロパティ  
- Setter を基本または上をトリガーする必要がありますフォーカスを変更するすべての考えられる原因を視覚的な動作を生成する場合は、<xref:System.Windows.UIElement.IsFocused%2A>依存関係プロパティをまたはに、<xref:System.Windows.UIElement.GotFocus>または<xref:System.Windows.UIElement.LostFocus>に使用されるイベント、<xref:System.Windows.EventSetter>です。  
+ Setter の基本やをトリガーする必要がありますのフォーカスを変更するすべての考えられる原因を視覚的な動作を生成する場合は、<xref:System.Windows.UIElement.IsFocused%2A>依存関係プロパティでは、別の方法で、<xref:System.Windows.UIElement.GotFocus>または<xref:System.Windows.UIElement.LostFocus>に使用されるイベント、<xref:System.Windows.EventSetter>します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  

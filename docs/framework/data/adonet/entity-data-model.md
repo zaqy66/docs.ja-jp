@@ -3,11 +3,11 @@ title: エンティティ データ モデル
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: e76527b497434ada06762fcab931522fffa2a16b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385595"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674019"
 ---
 # <a name="entity-data-model"></a>エンティティ データ モデル
 Entity Data Model (EDM) は、格納される形式に関係なく、データ構造を記述する一連の概念です。 EDM は、1976 年に Peter Chen により記述されたエンティティ リレーションシップ モデルを取り入れていますが、これを土台にして利用法が拡張されています。  

@@ -1,16 +1,16 @@
 ---
 title: 行の状態とバージョン
-ms.date: 03/30/2017
+ms.date: 07/19/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: d36556b62a95a7af1097d8fe88597569c81c0111
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 629e8b0bea1cd5c1dd80409acd7c03e0e033b5bc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759414"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672815"
 ---
 # <a name="row-states-and-row-versions"></a>行の状態とバージョン
 ADO.NET は、行の状態とバージョンを使用してテーブル内の行を管理します。 行状態は、1 つの行のステータスを示します。行バージョンは、1 つの行の値が変更されるときに、変更に応じてその行に格納される現在の値、元の値、既定値などを維持します。 たとえば、ある行の 1 つの列を変更すると、この行の状態は `Modified` になり、次の 2 つの行バージョンが存在することになります。`Current` には現在の行値が格納され、`Original` にはその列が変更される前の行値が格納されます。  
@@ -44,7 +44,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
 |DataRowVersion の値|説明|  
 |--------------------------|-----------------|  
 |<xref:System.Data.DataRowVersion.Current>|行の現在の値。 この行バージョンは、`RowState` の `Deleted` を持つ行については存在しません。|  
-|<xref:System.Data.DataRowVersion.Default>|特定の行の既定の行バージョン。 `Added`、`Modified`、または `Unchanged` 行の既定の行バージョンは、`Current` です。 `Deleted` 行の既定の行バージョンは、`Original` です。 `Detached` 行の既定の行バージョンは、`Proposed` です。|  
+|<xref:System.Data.DataRowVersion.Default>|特定の行の既定の行バージョン。 `Added`、`Modified`、または `Deleted` 行の既定の行バージョンは、`Current` です。 `Detached` 行の既定の行バージョンは、`Proposed` です。|  
 |<xref:System.Data.DataRowVersion.Original>|行の元の値。 この行バージョンは、`RowState` の `Added` を持つ行については存在しません。|  
 |<xref:System.Data.DataRowVersion.Proposed>|行に対して提示された値。 この行バージョンは、行、つまり `DataRowCollection` の一部ではない行に対する編集操作の間存在します。|  
   
@@ -98,4 +98,4 @@ foreach (DataRow delRow in delRows)
  [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [DataAdapter と DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

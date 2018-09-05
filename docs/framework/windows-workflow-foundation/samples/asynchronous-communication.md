@@ -2,15 +2,15 @@
 title: 非同期通信
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: 9eafeab89aefb181ae016dc0219f9155d9bd2a25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515161"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670718"
 ---
 # <a name="asynchronous-communication"></a>非同期通信
-このサンプルでは、既定の 2 つの異なる Windows Workflow Foundation (WF) サービスの間の通信の非同期的の実行方法を示します。  
+このサンプルでは、既定の 2 つの異なる Windows Workflow Foundation (WF) サービスの間の通信の非同期の実行方法を示します。  
   
 ## <a name="demonstrates"></a>使用例  
  [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サービス間の非同期通信  
@@ -31,19 +31,19 @@ ms.locfileid: "33515161"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  右クリックし、 **AsynchronousCommunication**ソリューションと選択**プロパティ**です。  
+1.  右クリックし、 **AsynchronousCommunication**ソリューションと選択**プロパティ**します。  
   
-2.  **共通プロパティ****スタートアップ プロジェクト**を選択し、**マルチ スタートアップ プロジェクト**です。  
+2.  **共通プロパティ**を選択します**スタートアップ プロジェクト**、選び**マルチ スタートアップ プロジェクト**します。  
   
-3.  移動**RentalApprovalService**一覧の最初の位置に続く**CreditCheckService**で始まり、**クライアント**です。 設定、**開始**3 つすべてのプロジェクトのアクション。  
+3.  移動**RentalApprovalService**リスト内の最初の位置、続けて**CreditCheckService**、その後に**クライアント**します。 設定、**開始**3 つすべてのプロジェクトで動作します。  
   
-4.  をクリックして**OK**、f5 キーを押して、サンプルを実行するとします。  
+4.  をクリックして**OK**、f5 キーを押して、サンプルを実行します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\AsynchronousCommunication`

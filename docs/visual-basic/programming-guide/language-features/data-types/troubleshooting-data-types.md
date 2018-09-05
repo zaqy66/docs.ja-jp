@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: c5ff9d097c0660956a9751a23511d8273766227c
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 9bbc7f51de9899354184d051d8f1a584651dd030
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245675"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671792"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>データ型のトラブルシューティング (Visual Basic)
 このページには、組み込みデータ型の操作を実行するときに発生する一般的な問題が一覧表示されます。  
@@ -117,6 +117,6 @@ ms.locfileid: "39245675"
  [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
  [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [データ型の有効な使用方法](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

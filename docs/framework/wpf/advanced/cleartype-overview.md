@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 1d434fa913d077d72f0f889dc69eccc8a9ed0e9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 236d6dec444c8169c164e9f096c7f81a336fdca4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540805"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674379"
 ---
 # <a name="cleartype-overview"></a>ClearType の概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] テクノロジの概要について説明します。  
@@ -42,29 +42,29 @@ ClearType の以前のバージョンと新しいバージョンを使用した�
   
  次の例では、y 方向のアンチエイリアシングを使用しない場合の効果を示します。 この場合、文字の上下で境界がギザギザになっていることがよくわかります。  
   
- ![緩やかな曲線上にギザギザした境界を含むテキスト](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+ ![緩やかな曲線上のギザギザした境界が付いたテキスト](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 緩やかな曲線上にギザギザした境界が付いたテキスト  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] には、ギザギザした境界を滑らかにする y 方向レベルのアンチエイリアシング機能があります。 これは、東アジア言語を読みやすくするために特に重要です。これらの言語の表意文字では、緩やかな曲線の量が水平方向と垂直方向でほぼ同じであるからです。  
   
  次の例では、y 方向のアンチエイリアシングの効果を示します。 この場合、文字の上下の曲線が滑らかに表示されています。  
   
- ![ClearType y を含むテキスト&#45;anti 方向&#45;エイリアス](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![テキストを ClearType y&#45;方向&#45;エイリアス](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 ClearType の y 方向アンチエイリアシングを適用したテキスト  
   
 <a name="hardware_acceleration"></a>   
 ## <a name="hardware-acceleration"></a>ハードウェアの高速化  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、ハードウェア アクセラレーションを利用してパフォーマンスを向上させ、CPU の負荷および必要なシステム メモリを削減します。 グラフィックス カードのピクセル シェーダーおよびビデオ メモリを使用することにより、[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] では特にアニメーション使用時のテキストのレンダリングが速くなります。  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] によって、システム全体の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 設定が変更されることはありません。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] を無効にすると、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のアンチエイリアシングがグレースケール モードに設定されます。 また、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] によって、[ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx) の設定が変更されることはありません。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] によって、システム全体の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 設定が変更されることはありません。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] を無効にすると、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のアンチエイリアシングがグレースケール モードに設定されます。 また、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] によって、[ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx) の設定が変更されることはありません。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のアーキテクチャ設計における決定事項の 1 つに、解像度に依存しないレイアウトによる高解像度 DPI モニターのサポート向上があります。高解像度モニターの普及は進みつつあるからです。 この決定を受けて、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ではエイリアス化されたテキスト レンダリングや、一部の東アジア言語フォントのビットマップをサポートしないことになりました。これらはどちらも解像度に依存するためです。  
   
 <a name="further_information"></a>   
 ## <a name="further-information"></a>詳細情報  
- [ClearType の情報](http://www.microsoft.com/typography/ClearTypeInfo.mspx)  
+ [ClearType の情報](https://www.microsoft.com/typography/ClearTypeInfo.mspx)  
   
- [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
+ [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>関連項目  
  [ClearType レジストリの設定](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
