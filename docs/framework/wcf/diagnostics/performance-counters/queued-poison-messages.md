@@ -3,16 +3,16 @@ title: キューに置かれた有害メッセージ
 ms.date: 03/30/2017
 ms.assetid: 8257ba45-08ac-4301-93c3-c93b4b78737a
 ms.openlocfilehash: aa688be3a5907de75fcb5c4fdb92e0f3fe88bfbe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422155"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856310"
 ---
-# <a name="queued-poison-messages"></a><span data-ttu-id="405fc-102">キューに置かれた有害メッセージ</span><span class="sxs-lookup"><span data-stu-id="405fc-102">Queued Poison Messages</span></span>
-<span data-ttu-id="405fc-103">カウンター名 : キューに置かれた有害メッセージ。</span><span class="sxs-lookup"><span data-stu-id="405fc-103">Counter Name: Queued Poison Messages.</span></span>  
+# <a name="queued-poison-messages"></a><span data-ttu-id="d642b-102">キューに置かれた有害メッセージ</span><span class="sxs-lookup"><span data-stu-id="d642b-102">Queued Poison Messages</span></span>
+<span data-ttu-id="d642b-103">カウンター名 : キューに置かれた有害メッセージ。</span><span class="sxs-lookup"><span data-stu-id="d642b-103">Counter Name: Queued Poison Messages.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="405fc-104">説明</span><span class="sxs-lookup"><span data-stu-id="405fc-104">Description</span></span>  
- <span data-ttu-id="405fc-105">このサービスでキューに置かれたトランスポートによって有害とマークされたメッセージの数です。</span><span class="sxs-lookup"><span data-stu-id="405fc-105">Number of messages that are marked poisoned by the queued transport at this service.</span></span>  
+## <a name="description"></a><span data-ttu-id="d642b-104">説明</span><span class="sxs-lookup"><span data-stu-id="d642b-104">Description</span></span>  
+ <span data-ttu-id="d642b-105">このサービスでキューに置かれたトランスポートによって有害とマークされたメッセージの数です。</span><span class="sxs-lookup"><span data-stu-id="d642b-105">Number of messages that are marked poisoned by the queued transport at this service.</span></span>  
   
- <span data-ttu-id="405fc-106">参照してください[有害メッセージの処理](https://go.microsoft.com/fwlink/?LinkID=96233)ときにメッセージが有害とマークの詳細についてはします。</span><span class="sxs-lookup"><span data-stu-id="405fc-106">See [Poison-Message Handling](https://go.microsoft.com/fwlink/?LinkID=96233) for more information on when messages are marked poisoned.</span></span>
+ <span data-ttu-id="d642b-106">参照してください[有害メッセージの処理](https://go.microsoft.com/fwlink/?LinkID=96233)ときにメッセージが有害とマークの詳細についてはします。</span><span class="sxs-lookup"><span data-stu-id="d642b-106">See [Poison-Message Handling](https://go.microsoft.com/fwlink/?LinkID=96233) for more information on when messages are marked poisoned.</span></span>

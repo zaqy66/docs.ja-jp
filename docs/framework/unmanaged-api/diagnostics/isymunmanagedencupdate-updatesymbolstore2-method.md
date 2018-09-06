@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 78d9e27299c9d7ed7d6cb9b09dd659ba081c5fde
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554729"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876256"
 ---
-# <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a><span data-ttu-id="37080-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 メソッド</span><span class="sxs-lookup"><span data-stu-id="37080-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 Method</span></span>
-<span data-ttu-id="37080-103">コンパイラが行情報が要件を満たしている限り、プログラム データベース (PDB) のストリームから変更されていない関数を省略できるようにします。</span><span class="sxs-lookup"><span data-stu-id="37080-103">Allows a compiler to omit functions that have not been modified from the program database (PDB) stream, provided the line information meets the requirements.</span></span> <span data-ttu-id="37080-104">PDB の行の古い情報と、関数のすべての行の 1 つのデルタは正しい行情報を確認できます。</span><span class="sxs-lookup"><span data-stu-id="37080-104">The correct line information can be determined with the old PDB line information and one delta for all lines in the function.</span></span>  
+# <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a><span data-ttu-id="f85ca-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 メソッド</span><span class="sxs-lookup"><span data-stu-id="f85ca-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 Method</span></span>
+<span data-ttu-id="f85ca-103">コンパイラが行情報が要件を満たしている限り、プログラム データベース (PDB) のストリームから変更されていない関数を省略できるようにします。</span><span class="sxs-lookup"><span data-stu-id="f85ca-103">Allows a compiler to omit functions that have not been modified from the program database (PDB) stream, provided the line information meets the requirements.</span></span> <span data-ttu-id="f85ca-104">PDB の行の古い情報と、関数のすべての行の 1 つのデルタは正しい行情報を確認できます。</span><span class="sxs-lookup"><span data-stu-id="f85ca-104">The correct line information can be determined with the old PDB line information and one delta for all lines in the function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37080-105">構文</span><span class="sxs-lookup"><span data-stu-id="37080-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f85ca-105">構文</span><span class="sxs-lookup"><span data-stu-id="f85ca-105">Syntax</span></span>  
   
 ```  
 HRESULT UpdateSymbolStore2(  
@@ -36,21 +36,21 @@ HRESULT UpdateSymbolStore2(
     [in]  ULONG         cDeltaLines);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="37080-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="37080-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f85ca-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f85ca-106">Parameters</span></span>  
  `pIStream`  
- <span data-ttu-id="37080-107">[in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)行情報を格納します。</span><span class="sxs-lookup"><span data-stu-id="37080-107">[in] A pointer to an [IStream](/windows/desktop/api/objidl/nn-objidl-istream) that contains the line information.</span></span>  
+ <span data-ttu-id="f85ca-107">[in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)行情報を格納します。</span><span class="sxs-lookup"><span data-stu-id="f85ca-107">[in] A pointer to an [IStream](/windows/desktop/api/objidl/nn-objidl-istream) that contains the line information.</span></span>  
   
  `pDeltaLines`  
- <span data-ttu-id="37080-108">[in]ポインターを[SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)が変更された行を含む構造体。</span><span class="sxs-lookup"><span data-stu-id="37080-108">[in] A pointer to a [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) structure that contains the lines that have changed.</span></span>  
+ <span data-ttu-id="f85ca-108">[in]ポインターを[SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)が変更された行を含む構造体。</span><span class="sxs-lookup"><span data-stu-id="f85ca-108">[in] A pointer to a [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) structure that contains the lines that have changed.</span></span>  
   
  `cDeltaLines`  
- <span data-ttu-id="37080-109">[in]A`ULONG`が変更された行の数を表します。</span><span class="sxs-lookup"><span data-stu-id="37080-109">[in] A `ULONG` that represents the number of lines that have changed.</span></span>  
+ <span data-ttu-id="f85ca-109">[in]A`ULONG`が変更された行の数を表します。</span><span class="sxs-lookup"><span data-stu-id="f85ca-109">[in] A `ULONG` that represents the number of lines that have changed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="37080-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="37080-110">Return Value</span></span>  
- <span data-ttu-id="37080-111">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="37080-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f85ca-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="f85ca-110">Return Value</span></span>  
+ <span data-ttu-id="f85ca-111">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="f85ca-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="37080-112">要件</span><span class="sxs-lookup"><span data-stu-id="37080-112">Requirements</span></span>  
- <span data-ttu-id="37080-113">**ヘッダー:** CorSym.idl、CorSym.h</span><span class="sxs-lookup"><span data-stu-id="37080-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f85ca-112">要件</span><span class="sxs-lookup"><span data-stu-id="f85ca-112">Requirements</span></span>  
+ <span data-ttu-id="f85ca-113">**ヘッダー:** CorSym.idl、CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f85ca-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37080-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="37080-114">See Also</span></span>  
- [<span data-ttu-id="37080-115">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="37080-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f85ca-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="f85ca-114">See Also</span></span>  
+ [<span data-ttu-id="f85ca-115">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f85ca-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
