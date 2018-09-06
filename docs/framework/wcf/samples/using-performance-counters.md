@@ -2,15 +2,15 @@
 title: パフォーマンス カウンターの使用
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 8784b4a481b8313d370aad1d8f265dcb44ab3ed6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 787a3d08b463980721fb207d029057e14618db5e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807320"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43860420"
 ---
 # <a name="using-performance-counters"></a>パフォーマンス カウンターの使用
-このサンプルでは、ユーザー定義のパフォーマンス カウンターを作成する方法と Windows Communication Foundation (WCF) パフォーマンス カウンターにアクセスする方法を示します。 このサンプルがに基づいて、[作業の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)です。  
+このサンプルでは、ユーザー定義のパフォーマンス カウンターを作成する方法と Windows Communication Foundation (WCF) パフォーマンス カウンターにアクセスする方法を示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -27,31 +27,31 @@ ms.locfileid: "33807320"
 </configuration>  
 ```  
   
- このタスクを実行することもを使用して、[構成エディター ツール (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)です。  
+ このタスクを実行することもを使用して、[構成エディター ツール (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)します。  
   
  パフォーマンス カウンターを有効にすると、サービスの WCF パフォーマンス カウンタのスイート全体が有効にします。 .NET Framework は、`ServiceModelService`、`ServiceModelEndpoint`、および `ServiceModelOperation` の 3 つのレベルで、パフォーマンス データを自動的に保持します。 これらの各レベルには、"呼び出し"、"1 秒あたりの呼び出し回数"、"承認されていないセキュリティ呼び出し" などのパフォーマンス カウンタがあります。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
 2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+3.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 ### <a name="to-view-performance-data"></a>パフォーマンス データを表示するには  
   
-1.  ツールを起動、パフォーマンス モニター をクリックして**開始**、**を実行しています.**、入力`perfmon` をクリック**ok、** またはコントロール パネルから選択**管理ツール** をダブルクリック**パフォーマンス**です。  
+1.  クリックして、パフォーマンス モニター ツールを開始**開始**、**を実行しています.**、入力`perfmon` をクリック**OK、** またはコントロール パネルで、次のように選択します。**管理ツール** をダブルクリックします**パフォーマンス**します。  
   
     > [!NOTE]
     >  サンプル コードが実行されるまでは、カウンタを追加することはできません。  
   
 2.  一覧表示されているパフォーマンス カウンタを削除するには、削除するパフォーマンス カウンタを選択して Del キーを押します。  
   
-3.  グラフ ウィンドウを右クリックして、WCF のカウンターを追加**カウンターの追加**です。 **カウンターの追加**ダイアログ ボックスで、 **ServiceModelOperation 3.0.0.0、ServiceModelEndpoint 3.0.0.0、または ServiceModelService 3.0.0.0**パフォーマンス オブジェクト でドロップダウン リスト ボックス。 表示するカウンタを一覧から選択します。  
+3.  グラフ ウィンドウを右クリックして、WCF のカウンターを追加**カウンターの追加**します。 **カウンターの追加**ダイアログ ボックスで、 **ServiceModelOperation 3.0.0.0、ServiceModelEndpoint 3.0.0.0、または ServiceModelService 3.0.0.0**パフォーマンス オブジェクト でドロップダウン リスト ボックス。 表示するカウンタを一覧から選択します。  
   
     > [!NOTE]
-    >  WCF サービスがコンピューター上で実行されていない場合、サービスの WCF パフォーマンス カウンタはありません。  
+    >  コンピューターで実行されている WCF サービスがない場合、サービスの WCF パフォーマンス カウンタはありません。  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>構成エディターを使用してカウンターを有効にするには  
   
@@ -61,9 +61,9 @@ ms.locfileid: "33807320"
   
 3.  サンプル アプリケーションの service フォルダーに移動し、Web.config ファイルを開きます。  
   
-4.  をクリックして**診断**構成ツリーにします。  
+4.  クリックして**診断**構成ツリーにします。  
   
-5.  トグル**パフォーマンス カウンター**で、**診断**'All' を表示するウィンドウです。  
+5.  切り替え**パフォーマンス カウンター**で、**診断**'All' を表示するウィンドウ。  
   
 6.  構成ファイルを保存し、エディターを終了します。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "33807320"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に、 [Windows Communication Foundation (WCF) および .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](http://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプルです。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

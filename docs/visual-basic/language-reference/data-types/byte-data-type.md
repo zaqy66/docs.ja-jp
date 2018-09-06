@@ -10,11 +10,11 @@ ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3b106005ff07f55e05ae66dba94041cd8b5c24bb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732145"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869371"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte データ型 (Visual Basic)
 0 から 255 までの範囲の符号なし 8 ビット (1 バイト) 整数を保持します。

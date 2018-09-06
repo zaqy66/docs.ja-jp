@@ -5,33 +5,33 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15d36cc2d3073c9f695de81407ecabcd5e3bba30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574518"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871213"
 ---
 # <a name="extension-methods"></a>拡張メソッド
-拡張メソッドは、言語の機能により、インスタンス メソッドの呼び出し構文を使用して呼び出されるメソッドは静的です。 これらのメソッドは、操作するためには、メソッドのインスタンスを表すには、少なくとも 1 つのパラメーターを取得する必要があります。  
+拡張メソッドは、言語機能により、インスタンス メソッドの呼び出し構文を使用して呼び出される静的メソッドです。 これらのメソッドは、メソッドは、操作の対象のインスタンスを表す 1 つ以上のパラメーターを取得する必要があります。  
   
- このような拡張メソッドを定義するクラスが「スポンサー」クラスと呼ばれ、静的な宣言する必要があります。 拡張メソッドを使用するには、スポンサー クラスを定義する名前空間をインポートいずれかの必要があります。  
+ このような拡張メソッドを定義するクラスは、「スポンサー」クラスと呼ばれます、静的に宣言する必要があります。 拡張メソッドを使用するには、スポンサー クラスを定義する名前空間をインポート 1 つあります。  
   
  **X AVOID** いないこと、お持ちでない型に特に拡張メソッドを定義します。  
   
- 型のソース コードを所有する場合は、通常のインスタンス メソッドを代わりに使用することを検討します。 所有していない場合に、メソッドを追加するには、十分に注意します。 拡張メソッドを多めに使用では、これらのメソッドがあるように設計されていない種類の Api に混乱が生じる可能性があります。  
+ 型のソース コードを所有している場合は、通常のインスタンス メソッドを代わりに使用を検討してください。 所有していない場合に、メソッドを追加するには、十分に注意します。 自由に使用して拡張メソッドでは、これらのメソッドを使用してデザインされていない型の Api に混乱が生じる可能性があります。  
   
  **✓ CONSIDER** 拡張メソッドを使用して、次のシナリオのいずれかで。  
   
--   ヘルパーを提供するには、コア インターフェイスの観点から機能と言われます場合、インターフェイスのすべての実装に関連する機能を記述できます。 具体的な実装は、インターフェイスそれ以外の場合に割り当てることができないためにです。 たとえば、`LINQ to Objects`演算子がすべての拡張メソッドとして実装されて<xref:System.Collections.Generic.IEnumerable%601>型です。 したがって、いずれか`IEnumerable<>`実装が自動的に LINQ 有効にします。  
+-   ヘルパーを提供するには、コア インターフェイスの観点からは機能している場合、インターフェイスのすべての実装に関連する機能を記述できます。 具体的な実装は、インターフェイスにそれ以外の場合割り当てることはできないためにです。 たとえば、`LINQ to Objects`演算子は、すべての拡張メソッドとして実装されます<xref:System.Collections.Generic.IEnumerable%601>型。 そのため、いずれか`IEnumerable<>`実装は、LINQ で自動的に有効にします。  
   
--   インスタンス メソッドがいくつかの型への依存関係が、このような依存関係をどのように発生する場合、依存関係の管理規則ができなくなります。 依存関係など、<xref:System.String>に<xref:System.Uri?displayProperty=nameWithType>が許容されない可能性がありますので`String.ToUri()`を返すインスタンス メソッド`System.Uri`依存関係の管理の観点から正しくないデザインになります。 拡張機能の静的メソッド`Uri.ToUri(this string str)`返す`System.Uri`量より優れた設計になります。  
+-   インスタンス メソッドがいくつかの型への依存関係がこのような依存関係をどのように導入するときに、依存関係の管理規則ができなくなります。 依存関係など<xref:System.String>に<xref:System.Uri?displayProperty=nameWithType>はおそらく、望ましくないため、`String.ToUri()`インスタンス メソッドが返す`System.Uri`依存関係の管理の観点から正しくない設計になります。 静的な拡張メソッド`Uri.ToUri(this string str)`返す`System.Uri`はるかに優れた設計になります。  
   
  **X AVOID** で拡張メソッドを定義する<xref:System.Object?displayProperty=nameWithType>です。  
   
- VB のユーザーは拡張メソッド構文を使用してオブジェクト参照でこのようなメソッドを呼び出すことができません。 VB は vb の場合は参照を宣言するオブジェクトが遅延するすべてのメソッド呼び出しを強制的にバインドされているため、このようなメソッドの呼び出しをサポートしていません (と呼ばれる実際のメンバーは実行時に決定されます) 中、拡張メソッドへのバインドはコンパイル時 (早期に決定されますバインドされている)。  
+ VB のユーザーは拡張メソッド構文を使用してオブジェクト参照でこのようなメソッドを呼び出すことができません。 VB は VB での参照を宣言するオブジェクトが遅延するすべてのメソッド呼び出しを強制的にバインドされているため、このようなメソッドの呼び出しをサポートしていません (と呼ばれる実際のメンバーは実行時に決定されます)、拡張メソッドへのバインドは、コンパイル時 (事前に決定中バインドされている場合)。  
   
- ガイドラインは、同じバインド動作が存在するその他の言語に適用されることに注意してください。 または、拡張メソッドはサポートされていません。  
+ 同じバインディング動作が存在する場合は、他の言語にガイドラインが適用されることに注意してください。 または、拡張メソッドがサポートされていません。  
   
  **X DO NOT** インターフェイスにメソッドを追加または依存関係の管理用である場合を除き、拡張の型と同じ名前空間の拡張メソッドを格納します。  
   
@@ -41,12 +41,13 @@ ms.locfileid: "33574518"
   
  **X DO NOT** 通常その他の機能に関連付けられている名前空間の機能を実装する拡張メソッドを定義します。 代わりに、所属する機能に関連付けられている名前空間で定義します。  
   
- **X AVOID** 拡張メソッド (たとえば、「拡張」) を専用の名前空間の汎用名前付けします。 わかりやすい名前 (たとえば、「ルーティング」) 代わりにします。  
+ **X AVOID** 拡張メソッド (たとえば、「拡張」) を専用の名前空間の汎用名前付けします。 わかりやすい名前を (たとえば、「ルーティング」) 代わりにします。  
   
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>関連項目
+
+- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

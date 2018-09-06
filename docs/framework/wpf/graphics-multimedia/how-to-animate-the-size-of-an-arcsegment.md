@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
 ms.openlocfilehash: 21d9e773dc03a42e2cfba0bbe47d9831d93d5c69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733863"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43802426"
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a>方法 : ArcSegment のサイズをアニメーション化する
 この例は、アニメーション化する方法を示しています、<xref:System.Windows.Media.ArcSegment.Size%2A>のプロパティ、<xref:System.Windows.Media.ArcSegment>します。  

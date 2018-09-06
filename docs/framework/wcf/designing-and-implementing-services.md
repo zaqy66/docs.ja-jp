@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 ms.openlocfilehash: 673712912b674c48dee094859364df9b22c51c82
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425238"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877295"
 ---
 # <a name="designing-and-implementing-services"></a>サービスの設計と実装
 このセクションでは、定義および WCF コントラクトを実装する方法を示します。 サービス コントラクトとは、エンドポイントが外部と何をやりとりするかを指定するものです。 より具体的には、要求/応答、一方向、双方向というような、基本的なメッセージ交換パターン (MEP) として編成された一連のメッセージに関する記述です。 サービス コントラクトが一連のメッセージ交換に論理的に関連付けられていれば、サービスの操作は単一のメッセージ交換になります。 たとえば、`Hello` という操作は、必ず 1 つのメッセージを受け取らなければならず (呼び出し元があいさつを通知できるようにするため) 、これに対してメッセージを返したり、返さなかったりします (その操作がマナーを守っているかどうかによる)。  

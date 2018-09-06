@@ -3,11 +3,11 @@ title: WCF サービス ホスト (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
 ms.openlocfilehash: 6f719756688af066a42c3f73a860038dad1e5a53
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565309"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857220"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF サービス ホスト (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) サービス ホスト (WcfSvcHost.exe) を使用すると、自動的にホストし、実装したサービスをテストするには、(F5) Visual Studio デバッガーを起動できます。 WCF テスト クライアント (WcfTestClient.exe) または独自のクライアントを検出して潜在的なエラーを修正するを使用してサービスをテストできます。  

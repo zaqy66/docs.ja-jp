@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
 ms.openlocfilehash: 185bcb64522115d0c60ae90ee22a73610139c8c3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747263"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865596"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>方法 : WCF エンドポイントを使用してキューに置かれたメッセージを交換する
 キューは、通信時に、サービスをご利用いただけません場合でも、信頼性の高いメッセージングがクライアントと、Windows Communication Foundation (WCF) サービスの間で発生することことを確認します。 次の手順では、WCF サービスを実装する場合、クライアントと、標準を使用してサービスの間の永続的な通信がバインディング キューに登録することを確認する方法を示します。  

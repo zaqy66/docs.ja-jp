@@ -3,11 +3,11 @@ title: 自動確認パターン
 ms.date: 03/30/2017
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
 ms.openlocfilehash: a032c05743b64fe58b0b187328b5216080ba6e19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552271"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864056"
 ---
 # <a name="auto-confirm-pattern"></a>自動確認パターン
 このサンプルは、カスタム `AutoConfirmScope` アクティビティを示す 3 つのシナリオで構成されます。 1 つ目のサンプルでは、2 番目と 3 番目の補正可能なアクティビティが `AutoConfirmScope` で入れ子になっている 4 つの補正可能なアクティビティのシーケンスが正常に実行された場合を示します。 2 つ目のサンプルでは、同じシーケンスを示しますが、4 番目の <xref:System.Activities.Statements.CompensableActivity> の実行後に例外が発生します。 3 つ目のシナリオでは、同じシーケンスを示しますが、2 番目の `AutoConfirmScope` の完了後に <xref:System.Activities.Statements.CompensableActivity> で例外が発生します。  

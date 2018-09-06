@@ -3,11 +3,11 @@ title: コンテンツ ベースの相関関係
 ms.date: 03/30/2017
 ms.assetid: 8638b5d6-1d59-456d-8acd-179a5b39b260
 ms.openlocfilehash: c0367f480701468dcd5024ea3439bdcd38acc78f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785818"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865772"
 ---
 # <a name="content-based-correlation"></a>コンテンツ ベースの相関関係
 このサンプルでは、メッセージング アクティビティ (<xref:System.ServiceModel.Activities.Send>、<xref:System.ServiceModel.Activities.Receive>、<xref:System.ServiceModel.Activities.SendReply>、および <xref:System.ServiceModel.Activities.ReceiveReply>) を 1 つまたは複数のコンテンツ ベースの相関関係で使用する方法を示します。 このシナリオでは、最初に発注書 ID に基づいて 1 つの相関関係を初期化し、後から顧客 ID に基づいて別の相関関係を作成します。 ここでは、<xref:System.ServiceModel.Activities.Receive> アクティビティで、既存の相関関係を追跡し、なおかつ同じ受信メッセージに基づいて新しい相関関係を初期化する方法を示します。  

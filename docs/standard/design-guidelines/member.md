@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c04b431224a1d4f03e85397b854a52856e114e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571398"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871019"
 ---
 # <a name="member-design-guidelines"></a>メンバーのデザインのガイドライン
-メソッド、プロパティ、イベント、コンス トラクター、およびフィールドは、メンバーとしてまとめて呼ばれます。 メンバーは、最終的に、フレームワークのエンドユーザーに、フレームワークの機能が公開されている手段です。  
+メソッド、プロパティ、イベント、コンス トラクター、およびフィールドは、メンバーとしてまとめて呼ばれます。 メンバーが、最終的に、フレームワークのエンドユーザーに、フレームワークの機能が公開されていることを意味します。  
   
- メンバーは、仮想または非仮想、具象か抽象クラスで静的メソッドまたはインスタンスを指定でき、ユーザー補助機能のいくつかの異なるスコープを持つことができます。 このすべてのさまざまな驚異的な表現力には、同時に、フレームワーク デザイナー部分注意が必要です。  
+ メンバーは、仮想または非仮想、具象か抽象クラスで静的メソッドまたはインスタンスにできるし、ユーザー補助機能のいくつかの異なるスコープを持つことができます。 さまざまな種類すべてでは、驚異的な表現力を提供しますが、同時に、framework デザイナー側注意が必要です。  
   
- この章では、任意の型のメンバーをデザインするときに従う必要がありますの基本的なガイドラインを提供します。  
+ この章では、任意の型のメンバーを設計するときに従う必要がありますの基本的なガイドラインを提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [メンバーのオーバーロード](../../../docs/standard/design-guidelines/member-overloading.md)  
@@ -33,9 +33,10 @@ ms.locfileid: "33571398"
  [拡張メソッド](../../../docs/standard/design-guidelines/extension-methods.md)  
  [演算子のオーバーロード](../../../docs/standard/design-guidelines/operator-overloads.md)  
  [パラメーターのデザイン](../../../docs/standard/design-guidelines/parameter-design.md)  
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>関連項目
+
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

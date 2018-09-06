@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
 ms.openlocfilehash: 5a3bbd1d4d75c84dda741d382c8dd7568dbb474b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561127"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43859531"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier ディレクティブ
 XAML のコンパイルの動作を変更するときに`x:Class`も提供されます。 部分を作成する代わりに、具体的には、`class`を持つ、`Public`アクセス レベル (既定)、指定された`x:Class`で作成、`NotPublic`アクセス レベル。 この動作では、生成されたアセンブリ内のクラスのアクセス レベルに影響します。  

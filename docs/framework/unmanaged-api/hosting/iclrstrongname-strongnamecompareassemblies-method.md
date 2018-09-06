@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3eb23da5accd89931ee4b883bfa162035ec26ddd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384623"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861037"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies メソッド
-2 つのアセンブリが厳密な名前の署名だけが異なるかどうかを判断します。  
+厳密な名前の署名に基づいて 2 つのアセンブリが異なるかどうかが判定されます。  
   
 ## <a name="syntax"></a>構文  
   

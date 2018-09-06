@@ -11,11 +11,11 @@ helpviewer_keywords:
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
 ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534848"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867619"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl コントロール (Windows フォーム)
 Windows フォーム `TabControl` は、ノートの仕切りや書類キャビネットのフォルダー セットのラベルに似た、複数のタブを表示します。 タブには画像やその他のコントロールを含めることができます。 プロパティ ページを作成するには、`TabControl` を使用します。  

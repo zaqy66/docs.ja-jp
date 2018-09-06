@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 747fc21aceae60e362c72391ae265e45d6f8445f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ca42d25a5f3456c6a10eff76d7015656322abae
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579315"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874057"
 ---
 # <a name="operator-overloads"></a>演算子のオーバーロード
-演算子のオーバー ロードは、framework の型をした組み込みの言語プリミティブを表示を許可します。  
+演算子のオーバー ロードは、組み込みの言語プリミティブとして表示するフレームワークの種類を許可します。  
   
- 許可されている、いくつかの状況で役に立ちますが、演算子のオーバー ロードを慎重に使用してください。 演算子のオーバー ロードがされて悪用などの単純なメソッドにする必要のある操作で演算子を使用するフレームワークの設計者が開始されたときに多くの場合があります。 次のガイドラインには、演算子のオーバー ロードを使用するタイミングと方法を決定するのに役立ちます。  
+ 許可されている、いくつかの状況で便利ですが、演算子のオーバー ロードを慎重に使用してください。 演算子のオーバー ロードがされて悪用などの単純なメソッドにする必要がある操作の演算子を使用するフレームワークの設計者を開始するときに多くの場合があります。 次のガイドラインを使用するとが演算子のオーバー ロードを使用するタイミングと方法を決定できます。  
   
  **X AVOID** を除く演算子のオーバー ロードを定義する必要があります (組み込み) のプリミティブ型と感じての種類でします。  
   
@@ -32,19 +32,19 @@ ms.locfileid: "33579315"
   
  **X DO NOT** 演算子のオーバー ロードを定義するときに分別して使用します。  
   
- 演算子のオーバー ロードが簡単にすぐに操作の結果がどうなる場合に便利です。 1 を減算できる理にかなってなど<xref:System.DateTime>別の`DateTime`を取得し、<xref:System.TimeSpan>です。 ただしが適切でない共用体の 2 つのデータベース クエリでは、論理、union 演算子を使用するか、ストリームに書き込むシフト演算子を使用します。  
+ 演算子のオーバー ロードは、それがすぐに明らかななります操作の結果に便利です。 たとえば、理にかなって 1 を減算できます<xref:System.DateTime>別の`DateTime`を取得し、<xref:System.TimeSpan>します。 ただし、適切なは、共用体の 2 つのデータベース クエリに論理演算子を使用するかをシフト演算子を使用して、ストリームへの書き込みはできません。  
   
  **X DO NOT** オーバー ロードを定義する型のオペランドの少なくとも 1 つがない限り、演算子がオーバー ロードを提供します。  
   
  **✓ DO** 対称的に演算子をオーバー ロードします。  
   
- たとえば、オーバー ロードする場合、`operator==`もオーバー ロードする必要がある、`operator!=`です。 同様に、オーバー ロードする場合、`operator<`もオーバー ロードする必要がある、`operator>`のようにします。  
+ たとえば、オーバー ロードする場合、 `operator==`、オーバー ロードもする必要があります、`operator!=`します。 同様に、オーバー ロードする場合、 `operator<`、オーバー ロードする必要がありますも、`operator>`など。  
   
  **✓ CONSIDER** 各オーバー ロードされた演算子に対応するフレンドリ名を持つメソッドを提供します。  
   
- 多くの言語は、演算子のオーバー ロードをサポートしていません。 このため、演算子をオーバー ロードする型が、同等の機能は、適切なドメイン固有の名前を持つセカンダリ メソッドを含めることをお勧めします。  
+ 多くの言語は、演算子のオーバー ロードをサポートしていません。 このため、演算子をオーバー ロードする型が同等の機能を提供します。 ドメイン固有の適切な名前を持つセカンダリ メソッドを含めることをお勧めします。  
   
- 次の表には、演算子と、対応するわかりやすいメソッド名の一覧が含まれています。  
+ 次の表には、演算子と、対応するメソッドのフレンドリ名の一覧が含まれています。  
   
 |C# 演算子記号|メタデータ名|フレンドリ名|  
 |-------------------------|-------------------|-------------------|  
@@ -88,31 +88,32 @@ ms.locfileid: "33579315"
 |`~`|`op_OnesComplement`|`OnesComplement`|  
   
 ### <a name="overloading-operator-"></a>演算子をオーバー ロード = =  
- オーバー ロード`operator ==`はかなり複雑になります。 演算子のセマンティクスをなどの他のいくつかのメンバーと互換性がある必要があります<xref:System.Object.Equals%2A?displayProperty=nameWithType>です。  
+ オーバー ロード`operator ==`は非常に複雑になります。 演算子のセマンティクスをなど、他のいくつかのメンバーと互換性がある必要があります<xref:System.Object.Equals%2A?displayProperty=nameWithType>します。  
   
 ### <a name="conversion-operators"></a>変換演算子  
- 変換演算子は、単項演算子を別の型に変換できるようにします。 演算子は、オペランドまたは戻り値の型のいずれかの静的メンバーとして定義する必要があります。 変換演算子の 2 種類があります。 明示的および暗黙的なです。  
+ 変換演算子は、単項演算子を別の型に変換できるようにします。 演算子は、オペランドまたは戻り値の型のいずれかの静的メンバーとして定義する必要があります。 変換演算子の 2 種類があります。 明示的および暗黙的な。  
   
  **X DO NOT** エンドユーザーでこのような変換が明確に予期されていない場合は、変換演算子を提供します。  
   
  **X DO NOT** 型のドメインの外部の変換演算子を定義します。  
   
- たとえば、 <xref:System.Int32>、 <xref:System.Double>、および<xref:System.Decimal>はのすべての数値型に対し<xref:System.DateTime>はありません。 したがって、存在しないはず変換演算子に変換する、`Double(long)`を`DateTime`です。 コンス トラクターは、このような場合が優先されます。  
+ たとえば、 <xref:System.Int32>、 <xref:System.Double>、および<xref:System.Decimal>はのすべての数値型に対し<xref:System.DateTime>はありません。 そのため、ことはありません変換への変換演算子を`Double(long)`を`DateTime`します。 このような場合、コンス トラクターが優先されます。  
   
  **X DO NOT** 変換が損失を伴う可能性がある場合は、暗黙的な変換演算子を提供します。  
   
- たとえば、存在することはできませんから暗黙的な変換`Double`に`Int32`ため`Double`よりも広い範囲を持つ`Int32`します。 変換が損失を伴う可能性がある場合でも、明示的な変換演算子を指定することができます。  
+ たとえば、存在することはできませんからの暗黙的な変換`Double`に`Int32`ため`Double`よりも広い範囲が`Int32`します。 変換ではデータ損失の可能性がある場合でも、明示的な変換演算子を指定できます。  
   
  **X DO NOT** 暗黙的なキャストから例外をスローします。  
   
- エンドユーザーがないかもしれません変換が行われているために、何が起こっているかを理解するため非常に困難です。  
+ エンドユーザーへの変換が行われていることが認識されない可能性があります、ために何が起こっているかを理解するは困難です。  
   
  **✓ DO** スロー<xref:System.InvalidCastException?displayProperty=nameWithType>でキャスト演算子への呼び出しが損失を伴う変換と演算子のコントラクトでは、非可逆の変換は許可されません。  
   
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>関連項目
+
+- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

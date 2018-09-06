@@ -1,17 +1,17 @@
 ---
 title: 'ループ: for...to 式 (F#)'
-description: 参照してくださいか f# データ型.. ループでループ変数の値の範囲を反復処理に式を使用します。
+description: 参照してください方法 f# for….. ループ変数の値の範囲をループで反復処理する式に使用されます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 841c7d557abc11e0253cb87ab8081cc77671b44b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800470"
 ---
 # <a name="loops-forto-expression"></a>ループ: for...to 式
 
-`for...to`ループでループ変数の値の範囲を反復処理する式を使用します。
-
+`for...to`ループ変数の値の範囲をループで反復処理する式を使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -20,10 +20,11 @@ for identifier = start [ to | downto ] finish do
     body-expression
 ```
 
-## <a name="remarks"></a>コメント
-識別子の型がの型から推論されます、*開始*と*完了*式。 これらの式の型は、32 ビット整数値である必要があります。
+## <a name="remarks"></a>Remarks
 
-式では技術的には、`for...to`命令型プログラミング言語では、従来のステートメントのようにします。 戻り値の型、*式本体*する必要があります`unit`です。 次の例では、さまざまな使用、`for...to`式。
+識別子の型の型から推論されます、*開始*と*完了*式。 これらの式の型は、32 ビット整数である必要があります。
+
+式では技術的には、`for...to`は命令型プログラミング言語では、従来のステートメントのようにします。 戻り値の型、*式の本体*あります`unit`します。 次の例では、さまざまな使用、`for...to`式。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
 
@@ -36,8 +37,7 @@ for identifier = start [ to | downto ] finish do
 ```
 
 ## <a name="see-also"></a>関連項目
-[F# 言語リファレンス](index.md)
 
-[ループ: `for...in` 式](loops-for-in-expression.md)
-
-[ループ: `while...do` 式](loops-while-do-expression.md)
+- [F# 言語リファレンス](index.md)
+- [ループ: `for...in` 式](loops-for-in-expression.md)
+- [ループ: `while...do` 式](loops-while-do-expression.md)

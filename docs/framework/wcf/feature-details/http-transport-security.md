@@ -5,11 +5,11 @@ ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 00ba9aff27fa1332c311c3e5afa2937259c42bae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401571"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862184"
 ---
 # <a name="http-transport-security"></a>HTTP トランスポート セキュリティ
 トランスポートとして HTTP を使用すると、SSL (Secure Sockets Layer) によりセキュリティが提供されます。 SSL はクライアントに対してサービスの認証を行い、機密性 (暗号化) をチャネルに提供する技術としてインターネットで広く使用されています。 このトピックでは、SSL のしくみし、Windows Communication Foundation (WCF) でその実装方法について説明します。  

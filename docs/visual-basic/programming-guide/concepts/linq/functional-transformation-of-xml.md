@@ -3,11 +3,11 @@ title: XML (Visual Basic) の関数型変換
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
 ms.openlocfilehash: 25e5d743b983badaefa3012b8839e4b039419ee9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532048"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800700"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>XML (Visual Basic) の関数型変換
 このトピックでは、XML ドキュメントを変更するための純粋関数型変換の方法について説明し、手続き型の方法と比較します。  

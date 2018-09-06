@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724722"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800129"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 関数
 特定のメソッドで設定された修飾子が取得されます。

@@ -9,40 +9,41 @@ helpviewer_keywords:
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d47934c3fed17f75a97ef5da0397c6ceba53d68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65c54fe9a076a219c61280a98c390b16f56b5015
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571118"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873943"
 ---
 # <a name="field-design"></a>フィールドのデザイン
-カプセル化の原則が、最も重要な概念のいずれかのオブジェクト指向デザインします。 この原則は、オブジェクト内に格納されているデータはそのオブジェクトにのみアクセスできることを示します。  
+カプセル化の原理は、最も重要な概念の 1 つをオブジェクト指向設計にです。 この原則は、データ オブジェクト内に格納されますが、そのオブジェクトのみがアクセスできるがあることを示しています。  
   
- 原則を解釈する便利な方法は、言い換えれば、その型 (名前やタイプの変更) のフィールドへの変更が、型のメンバーを以外のコードを変更せずにできるように、型を設計することができます。 この解釈は、すぐに、すべてのフィールドをプライベートでなければならないことを意味します。  
+ 原則を解釈する便利な方法は、型のメンバー以外のコードを損なうことがなくその型 (名前または種類の変更) のフィールドに変更ができるように、型を設計する必要がありますには。 この解釈は、すぐに、すべてのフィールドがプライベートでなければならないことを意味します。  
   
- この厳密な制限から定数と静的な読み取り専用のフィールドは必要であるため、このようなフィールドほぼ定義では、決してを変更するお除外します。  
+ 定数と静的な読み取り専用フィールドは、このようなフィールドの定義によってほぼ必要はまったくありませんを変更するために、この厳密な制限から除外します。  
   
  **X DO NOT** パブリックまたは保護されたインスタンス フィールドを提供します。  
   
- Public または protected ようにではなくフィールドにアクセスするため、プロパティを提供する必要があります。  
+ Public または protected にする代わりにフィールドへのアクセスのプロパティを提供する必要があります。  
   
  **✓ DO** は決して変化しない定数の定数フィールドを使用します。  
   
- コンパイラは、コードの呼び出しに直接 const フィールドの値を書き込みますがします。 そのため、const の値は変更不可能互換性の問題の危険を回避します。  
+ コンパイラは、const フィールドの値を直接コードを呼び出すに焼き付けます。 そのため、const 値は、決して互換性の問題のリスクを負うことがなく変更できます。  
   
  **✓ DO** のパブリック静的を使用して`readonly`フィールドの定義済みのオブジェクト インスタンス。  
   
- 型の定義済みのインスタンスが場合、により読み取り専用で、型自体の静的フィールドをパブリックとしてと宣言します。  
+ 型の定義済みのインスタンスがある場合により読み取り専用で、型自体の静的フィールドをパブリックとしてと宣言します。  
   
  **X DO NOT** への変更可能な型のインスタンスを割り当てる`readonly`フィールドです。  
   
- 変更可能な型は、インスタンスは作成後に変更することができますのインスタンスを持つ型です。 たとえば、配列、ほとんどのコレクション、およびストリームは変更可能な型が<xref:System.Int32?displayProperty=nameWithType>、 <xref:System.Uri?displayProperty=nameWithType>、および<xref:System.String?displayProperty=nameWithType>はすべて変更できません。 参照型のフィールドで読み取り専用の修飾子には、置き換えられるのフィールドに格納されているインスタンスができなくなりますが、フィールドのインスタンス データのインスタンスを変更するメンバーを呼び出すことによって変更されているを妨げることはできません。  
+ 変更可能な型は、インスタンス化した後で変更することができますのインスタンスの型です。 たとえば、配列、ほとんどのコレクション、およびストリームは変更可能な型が<xref:System.Int32?displayProperty=nameWithType>、 <xref:System.Uri?displayProperty=nameWithType>、および<xref:System.String?displayProperty=nameWithType>はすべて不変です。 参照型のフィールドに対する読み取り専用修飾子には、置き換えられるのフィールドに格納されているインスタンスができなくなりますが、フィールドのインスタンスのデータのインスタンスを変更するメンバーを呼び出すことによって変更を妨げることはできません。  
   
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>関連項目
+
+- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

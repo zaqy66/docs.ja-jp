@@ -3,11 +3,11 @@ title: 形式の自動選択
 ms.date: 03/30/2017
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
 ms.openlocfilehash: 4fd695195f5c7c13bc088248a6b3c12388328d37
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784759"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873050"
 ---
 # <a name="automatic-format-selection"></a>形式の自動選択
 このサンプルでは、操作コードで形式を明示的に設定する方法と、モデルをプログラミングする Windows Communication Foundation (WCF) REST を使用した (XML または JSON) 形式の自動選択を有効にする方法を示します。  

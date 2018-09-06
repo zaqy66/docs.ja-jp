@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554407"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864577"
 ---
 # <a name="transforms-overview"></a>変換の概要
 このトピックでは、使用する方法を説明します、 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform>クラスには、回転、拡大縮小、移動 (平行移動)、および傾斜させる<xref:System.Windows.FrameworkElement>オブジェクト。  

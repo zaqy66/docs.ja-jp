@@ -10,11 +10,11 @@ helpviewer_keywords:
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
 ms.openlocfilehash: 75016e9e04cf47782add18c87f7c677931743a4e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556179"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865645"
 ---
 # <a name="windows-forms-security"></a>Windows フォームのセキュリティ
 Windows フォームには、コード ベース (セキュリティ レベルは、コードを実行しているユーザーに関係なく、コードの設定) であるセキュリティ モデルが機能します。 これは既に、コンピューター システム上の場所に可能性のあるすべてのセキュリティ スキーマです。 これらは、(など、ゾーン ベースのセキュリティ Internet Explorer で使用可能なブラウザーやオペレーティング システム (Windows NT の資格情報に基づくセキュリティ) などを含めることができます。  

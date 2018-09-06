@@ -2,12 +2,12 @@
 title: キーワード リファレンス (F#)
 description: すべての f# 言語のキーワードに関する情報へのリンクを検索します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 18bf5f00cdd5250c0fbd503d096e5415a8b9feea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526190"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856025"
 ---
 # <a name="keyword-reference"></a>キーワード リファレンス
 
@@ -132,8 +132,7 @@ ms.locfileid: "43526190"
 * `volatile`
 
 ## <a name="see-also"></a>関連項目
-[F# 言語リファレンス](index.md)
 
-[シンボルと演算子のリファレンス](symbol-and-operator-reference/index.md)
-
-[コンパイラ オプション](compiler-options.md)
+- [F# 言語リファレンス](index.md)
+- [シンボルと演算子のリファレンス](symbol-and-operator-reference/index.md)
+- [コンパイラ オプション](compiler-options.md)

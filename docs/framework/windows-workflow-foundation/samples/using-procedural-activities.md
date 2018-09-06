@@ -3,11 +3,11 @@ title: 手続き型アクティビティの使用
 ms.date: 03/30/2017
 ms.assetid: 1c67f739-3878-48ad-806c-b2ce0d6733a0
 ms.openlocfilehash: bd83f1a0fa9f3af7c22cee73fbc4f984a9ebf53c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732041"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804770"
 ---
 # <a name="using-procedural-activities"></a>手続き型アクティビティの使用
 このサンプルでは、<xref:System.Activities.Statements.Sequence>、<xref:System.Activities.Statements.Assign>、<xref:System.Activities.Statements.If>、<xref:System.Activities.Statements.While>、<xref:System.Activities.Statements.Switch%601>、<xref:System.Activities.Statements.TryCatch>、および <xref:System.Activities.Statements.WriteLine> の各アクティビティを使用して推測ゲームを実装します。 推測ゲームではランダムな数値が選択され、プレーヤーはその数値を推測する必要があります。 プレーヤーが送信した推測が間違っていると、ワークフローは、その値が正解よりも上か下かを示すヒントを提供します。 プレーヤーが 7 回未満で数値を推測できた場合は、特別な祝福のメッセージがユーザーに表示されます。  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f589225dde1ba2aabc4ca32542339a771c3287d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535427"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43859518"
 ---
 # <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid メソッド
 指定したインデックス位置の行から GUID を取得します。  

@@ -2,18 +2,19 @@
 title: アクセス制御 (F#)
 description: 型、メソッド、および f# のプログラミング言語で、関数などのプログラミング要素へのアクセスを制御する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6b13ac03d2a4a6c53b53d4c790760f5d51b334ee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 66a260d326acf07391e3775e5a7853654b4feee4
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540437"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803975"
 ---
 # <a name="access-control"></a>アクセス制御
 
 *アクセス制御*型、メソッド、および関数など、特定のプログラム要素を使用できるは、クライアントの宣言を参照します。
 
 ## <a name="basics-of-access-control"></a>アクセス制御の基礎
+
 F# でのアクセス制御指定子`public`、 `internal`、および`private`モジュール、型、メソッド、値の定義、関数、プロパティ、および明示的なフィールドに適用できます。
 
 - `public` すべての呼び出し元によって、エンティティにアクセスできることを示します。
@@ -22,7 +23,7 @@ F# でのアクセス制御指定子`public`、 `internal`、および`private`�
 
 - `private` エンティティを外側の型またはモジュールからのみアクセスできることを示します。
 
->[!NOTE] 
+>[!NOTE]
 アクセス指定子`protected`をサポートしている言語で作成されたタイプを使用している場合は許容されるが、f# で使用されていない`protected`アクセスします。 そのため、保護されているメソッドをオーバーライドする場合、メソッドが、クラスとその子孫内でのみアクセス可能なします。
 
 場合を除き、エンティティの名前の前に、指定子を配置する一般に、`mutable`または`inline`指定子を使用すると、コントロールのアクセス指定子の後に表示されます。
@@ -32,6 +33,7 @@ F# でのアクセス制御指定子`public`、 `internal`、および`private`�
 F# での署名は、f# プログラム要素へのアクセスを制御するための別のメカニズムを提供します。 署名は、アクセス制御の必要はありません。 詳細については、「[シグネチャ](signatures.md)」を参照してください。
 
 ## <a name="rules-for-access-control"></a>アクセス制御のルール
+
 アクセス制御では、次の規則に従います。
 
 - 継承宣言 (の使用は、`inherit`クラスの基本クラスを指定する)、インターフェイスの宣言 (つまりを指定するクラスがインターフェイスを実装する) 場合は、および抽象メンバーが常に外側の型と同じのアクセシビリティを持ちます。 そのため、これらのコンストラクトでアクセス制御の指定子は使用できません。
@@ -41,15 +43,16 @@ F# での署名は、f# プログラム要素へのアクセスを制御する�
 - ユーザー補助のレコードの種類の個々 のフィールドのことはできませんが、レコード自体のアクセシビリティによって決定されます。 特定のレコードのラベルは、レコード自体よりもそれはずばりアクセス可能です。
 
 ## <a name="example"></a>例
+
 次のコードでは、コントロールのアクセス指定子の使用を示します。 プロジェクトで、2 つのファイルがある`Module1.fs`と`Module2.fs`します。 各ファイルは、暗黙的にモジュールです。 そのため、2 つのモジュールがある`Module1`と`Module2`します。 プライベート型と内部の型がで定義されている`Module1`します。 プライベート型からアクセスできない`Module2`が内部の型ができます。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/access-control/snippet1.fs)]
-    
+
 次のコードで作成された型のアクセシビリティをテストする`Module1.fs`します。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/access-control/snippet2.fs)]
-    
-## <a name="see-also"></a>関連項目
-[F# 言語リファレンス](index.md)
 
-[シグネチャ](signatures.md)
+## <a name="see-also"></a>関連項目
+
+- [F# 言語リファレンス](index.md)
+- [シグネチャ](signatures.md)

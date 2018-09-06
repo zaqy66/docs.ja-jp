@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
 ms.openlocfilehash: 3b031c6e3dc04637128f95ca8e922d3298981287
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786942"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863204"
 ---
 # <a name="character-data-types-visual-basic"></a>文字データ型 (Visual Basic)
 Visual Basic では*文字データ型*文字や表示可能な文字を処理します。 Unicode 文字の場合は、どちらも、処理中に`Char`は単一の文字を保持`String`不特定数文字にはが含まれています。  

@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0aefcc61a9ce283f1230cd44ffae549725bb15f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3e48d5a088fc6cff3dbdaaa77e6fa561c33f400
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589098"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865522"
 ---
 # <a name="decrypting-data"></a>データの復号化
 復号化は、暗号化の逆の操作です。 秘密キーの暗号化では、データの暗号化に使用されたキーと IV の両方を把握しておく必要があります。 公開キーの暗号化では、公開キー (データが秘密キーで暗号化された場合) または秘密キー (データが公開キーで暗号化された場合) のいずれかを把握しておく必要があります。  
   
 ## <a name="symmetric-decryption"></a>対称復号化  
- 対称アルゴリズムで暗号化されたデータの復号化は、対称アルゴリズムでデータを暗号化する際に使用するプロセスと似ています。 <xref:System.Security.Cryptography.CryptoStream> クラスは、任意のマネージ ストリーム オブジェクトから読み取られたデータを復号化するために、.NET Framework が提供する対称暗号化クラスと共に使用されます。  
+ 対称アルゴリズムで暗号化されたデータの復号化は、対称アルゴリズムでデータを暗号化する際に使用するプロセスと似ています。 <xref:System.Security.Cryptography.CryptoStream> クラスは、任意のマネージド ストリーム オブジェクトから読み取られたデータを復号化するために、.NET Framework が提供する対称暗号化クラスと共に使用されます。  
   
- 次の例は、 <xref:System.Security.Cryptography.RijndaelManaged> クラスのインスタンスを新規作成して、これを <xref:System.Security.Cryptography.CryptoStream> オブジェクトの復号化に使用する方法を示しています。 この例では、まず **RijndaelManaged** クラスのインスタンスを新規作成します。 次に、 **CryptoStream** オブジェクトを作成して、 `MyStream`というマネージ ストリームの値に初期化します。 次に、 **RijndaelManaged** クラスの **CreateDecryptor** メソッドに、暗号化で使用されたキーおよび IV と同じキーと IV が渡されます。これが **CryptoStream** コンストラクターに渡されます。 最後に、ストリームに対する読み取りのアクセスを指定するために、 **CryptoStreamMode.Read** 列挙体が **CryptoStream** コンストラクターに渡されます。  
+ 次の例は、 <xref:System.Security.Cryptography.RijndaelManaged> クラスのインスタンスを新規作成して、これを <xref:System.Security.Cryptography.CryptoStream> オブジェクトの復号化に使用する方法を示しています。 この例では、まず **RijndaelManaged** クラスのインスタンスを新規作成します。 次に、 **CryptoStream** オブジェクトを作成して、 `MyStream`というマネージド ストリームの値に初期化します。 次に、 **RijndaelManaged** クラスの **CreateDecryptor** メソッドに、暗号化で使用されたキーおよび IV と同じキーと IV が渡されます。これが **CryptoStream** コンストラクターに渡されます。 最後に、ストリームに対する読み取りのアクセスを指定するために、 **CryptoStreamMode.Read** 列挙体が **CryptoStream** コンストラクターに渡されます。  
   
 ```vb  
 Dim RMCrypto As New RijndaelManaged()  
@@ -202,7 +202,8 @@ SymmetricKey = RSA.Decrypt( EncryptedSymmetricKey, false);
 SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [暗号化と復号化のためのキーの生成](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [データの暗号化](../../../docs/standard/security/encrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>関連項目
+
+- [暗号化と復号化のためのキーの生成](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [データの暗号化](../../../docs/standard/security/encrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

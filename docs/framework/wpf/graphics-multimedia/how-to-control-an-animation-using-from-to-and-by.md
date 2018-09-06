@@ -8,11 +8,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: e422c008ae3051ecd69b3278eb05fc0e2d1b1a0b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734734"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858806"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>方法 : "From"、"To"、および "By" を使用してアニメーションを制御する
 "から/に/By"または「基本アニメーション」が 2 つのターゲット値の間の遷移を作成します (を参照してください[アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)さまざまな種類のアニメーションの概要について)。 基本的なアニメーションのターゲット値を設定する次のように使用します。 その<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>、 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>、および<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ。  次の表にまとめたものですが、どのように<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>、 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>、および<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティを同時に使用することや、個別に、アニメーションのターゲットを決定する値します。  

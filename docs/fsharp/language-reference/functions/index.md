@@ -1,20 +1,19 @@
 ---
 title: 関数 (F#)
-description: F# および f# のサポートについて共通の関数型プログラミング構成要素内の関数について説明します。
+description: 関数の f# と、f# が共通の関数型プログラミング構成要素をどのようにがサポートする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: c96dddb07ca671a9e823fb25f6f6c3788fe32fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566406"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43803913"
 ---
 # <a name="functions"></a>関数
 
 関数は、あらゆるプログラミング言語においてプログラムの実行の基本となる単位です。 他の言語の場合と同様に、F# の関数にもそれぞれ名前と本体があり、パラメーターや引数を受け取ることができます。 F# ではさらに、関数型プログラミング構成要素もサポートしています。たとえば、関数を値として処理したり、名前のない関数を式で使用したりできます。また、関数の合成による新しい関数の作成、カリー化関数、関数の引数の部分適用による関数の暗黙の定義などがサポートされます。
 
 関数を定義するには `let` キーワードを使用します。再帰関数の場合は、`let rec` というキーワードの組み合わせを使用します。
-
 
 ## <a name="syntax"></a>構文
 
@@ -25,7 +24,8 @@ let [inline] function-name parameter-list [ : return-type ] = function-body
 let rec function-name parameter-list = recursive-function-body
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
+
 *function-name* は、関数を表す識別子です。 *parameter-list* は、スペースで区切られた一連のパラメーターで構成されます。 「パラメーター」で説明するように、各パラメーターの明示的な型を指定できます。 特定の引数型を指定しない場合は、コンパイラによって型が関数本体から推測されます。 *function-body* は式で構成されます。 関数本体を構成する式は、通常、複数の式から成る複合式で、その最後の式が戻り値になります。 *return-type* では、コロンの後に戻り値の型を指定します。これは省略可能です。 戻り値の型を明示的に指定しない場合は、コンパイラによって最後の式から特定されます。
 
 単純な関数定義は、次のようになります。
@@ -38,8 +38,8 @@ let f x = x + 1
 
 関数は、`inline` としてマークできます。 `inline` の詳細については、「[Inline Functions](../functions/inline-functions.md)」(インライン関数) を参照してください。
 
-
 ## <a name="scope"></a>スコープ
+
 モジュール スコープ以外のスコープの任意のレベルでは、値または関数の名前を再利用してもエラーになりません。 名前を再利用する場合、後から宣言した名前が前に宣言した名前をシャドウします。 ただし、モジュールの最上位のスコープでは名前が一意である必要があります。 たとえば次のコードは、モジュール スコープではエラーになりますが、関数内ではエラーになりません。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
@@ -47,8 +47,9 @@ let f x = x + 1
 しかし、次のコードはどのスコープ レベルでも許容されます。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
-    
-#### <a name="parameters"></a>パラメーター
+
+### <a name="parameters"></a>パラメーター
+
 パラメーターの名前は、関数名の後に指定されます。 次の例のように、パラメーターの型を指定できます。
 
 ```fsharp
@@ -69,16 +70,16 @@ let f x = (x, x)
 
 関数は、任意の型の 1 つの引数からタプルを作成します。 型が指定されていないために、任意の引数の型と関数を使用できます。 詳細については、「[自動ジェネリック化](../generics/automatic-generalization.md)」を参照してください。
 
-
 ## <a name="function-bodies"></a>関数本体
+
 関数本体には、ローカル変数と関数の定義を含めることができます。 それらの変数と関数のスコープは、現在の関数の本体内に限られます。 軽量構文オプションを有効にしている場合は、次の例に示すように、定義が関数本体に含まれていることをインデントによって示す必要があります。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
 詳細については、「[コードのフォーマットに関するガイドライン](../code-formatting-guidelines.md)」および「[Verbose Syntax](../verbose-syntax.md)」 (冗語構文) を参照してください。
 
-
 ## <a name="return-values"></a>戻り値
+
 コンパイラは、関数本体の最後の式を使用して戻り値とその型を特定します。 最後の式の型が前の式から推論される場合もあります。 前のセクションの関数 `cylinderVolume` では、`pi` の型は、リテラル `3.14159` の型から `float` と特定されます。 コンパイラは、`pi` の型を使用して、式 `h * pi * r * r` の型が `float` であると判断します。 このため、関数全体の戻り値の型が `float` になります。
 
 戻り値を明示的に指定するには、次のようにコードを記述します。
@@ -92,6 +93,7 @@ let cylinderVolume (radius : float) (length : float) : float
 ```
 
 ## <a name="calling-a-function"></a>関数の呼び出し
+
 関数を呼び出すには、関数名の後にスペースを入れ、その後にスペースで区切った引数を指定します。 たとえば、関数 **cylinderVolume** を呼び出して結果を値 **vol** に割り当てるには、次のコードを記述します。
 
 ```fsharp
@@ -99,6 +101,7 @@ let vol = cylinderVolume 2.0 3.0
 ```
 
 ## <a name="partial-application-of-arguments"></a>引数の部分適用
+
 指定されている数より少ない数の引数を渡すと、残りの引数を使用する新しい関数が作成されます。 これは、*カリー化*と呼ばれる引数の処理方法で、F# のような関数型プログラミング言語の特徴の 1 つです。 たとえば、半径がそれぞれ **2.0** と **3.0** の 2 つのパイプを使用しているとします。 次のようにして、パイプの体積を特定する関数を作成することができます。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
@@ -106,16 +109,17 @@ let vol = cylinderVolume 2.0 3.0
 その後、必要に応じて、2 つのサイズのパイプのさまざまな長さを追加の引数として指定します。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
-    
+
 ## <a name="recursive-functions"></a>再帰関数
+
 *再帰関数*はそれらの関数自体を呼び出す関数です。 再帰関数を使用するには、**let** キーワードの後に **rec** キーワードを指定する必要があります。 関数の本体から再帰関数を呼び出す方法は、他の関数呼び出しの場合と変わりません。 次の再帰関数は、*n* 番目のフィボナッチ数を計算します。 フィボナッチ数列は、古代から知られている数列で、数例の各数値が、前の 2 つの連続する数値の和になります。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
 再帰関数は、特殊な手法 (アキュムレータや継続の使用など) を意識して慎重に使用しないと、プログラム スタックのオーバーフローを引き起こしたり、プログラムの実行効率が低下したりする可能性があります。
 
-
 ## <a name="function-values"></a>関数の値
+
 F# では、すべての関数が値と見なされ、実際に、*関数値*と呼ばれています。 関数は値であるため、他の関数の引数として使用したり、値が使用されるその他のコンテキストで使用したりできます。 次に関数値を引数として受け取る関数の例を示します。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
@@ -132,16 +136,16 @@ F# では、すべての関数が値と見なされ、実際に、*関数値*と
 
 結果は 200 になります。
 
-
 ## <a name="lambda-expressions"></a>ラムダ式
+
 *ラムダ式*とは、名前のない関数です。 前の例では、名前のある関数 **increment** と **mul** を定義しましたが、次のように、代わりにラムダ式を使用することもできます。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
 ラムダ式を定義するには、`fun` キーワードを使用します。 ラムダ式は関数定義に似ていますが、引数リストと関数本体の区切りに `=` トークンではなく `->` トークンを使用する点が異なります。 通常の関数定義と同様に、引数の型は、推論されるようにすることも、明示的に指定することもできます。ラムダ式の戻り値の型も、本体の最後の式の型から推論されます。 詳細については、「[ラムダ式: `fun` キーワード](../functions/lambda-expressions-the-fun-keyword.md)」を参照してください。
 
-
 ## <a name="function-composition-and-pipelining"></a>関数合成とパイプライン処理
+
 F# の関数は、その他の関数から構成することができます。 **function1** と **function2** という 2 つの関数を合成すると、**function1** に続いて **function2** を適用する別の関数になります。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
@@ -195,10 +199,10 @@ let result4 = Pipeline2 2
 ```
 
 ## <a name="overloading-functions"></a>オーバーロードの対象となる関数
+
 関数ではなく型のメソッドをオーバー ロードすることができます。 詳細については、「[メソッド](../members/methods.md)」を参照してください。
 
-
 ## <a name="see-also"></a>関連項目
-[値](../values/index.md)
 
-[F# 言語リファレンス](../index.md)
+- [値](../values/index.md)
+- [F# 言語リファレンス](../index.md)

@@ -3,11 +3,11 @@ title: CancellationScope の使用
 ms.date: 03/30/2017
 ms.assetid: 39c5c338-b316-43d6-b7fe-a543281dd1ec
 ms.openlocfilehash: 82d44fff869f207c09dc7685fc3470630e001a59
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731522"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43854984"
 ---
 # <a name="using-cancellationscope"></a>CancellationScope の使用
 このサンプルでは、<xref:System.Activities.Statements.CancellationScope> アクティビティを使用してアプリケーション内の処理を取り消す方法を示します。  

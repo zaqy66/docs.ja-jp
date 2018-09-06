@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554933"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43860325"
 ---
 # <a name="decimal-data-type-visual-basic"></a>10 進型 (Decimal) (Visual Basic)
 符号付き 10 の累乗によってスケーリング 96 ビット (12 バイト) の整数値を表す 128 ビット (16 バイト) 値を保持します。 スケール ファクターは小数点の右側にある数字の数を指定します。その範囲は 0 から 28 です。 最大有効値は 0 (数値) の小数点以下桁数、79,228,162,514,264,337,593,543,950,335 +/-(7 +/-.9228162514264337593543950335E + 28)。 小数点以下桁数が 28 7.9228162514264337593543950335 については、最大値は、および 0 以外の最小値は、(1 e ~ 28) +/-+/-0.0000000000000000000000000001。  

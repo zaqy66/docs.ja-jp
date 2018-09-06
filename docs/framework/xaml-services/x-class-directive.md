@@ -11,11 +11,11 @@ helpviewer_keywords:
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
 ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565347"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856193"
 ---
 # <a name="xclass-directive"></a>x:Class ディレクティブ
 マークアップと分離コードの間の部分クラスを結合する XAML マークアップのコンパイルを構成します。 内の別のコード ファイルでコードの部分クラスが定義されている、[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]言語は、通常、マークアップの部分クラスは、XAML のコンパイル時にコードを生成して作成します。  

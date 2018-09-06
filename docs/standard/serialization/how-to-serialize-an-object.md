@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: b979d63132b44ee2e05fcc55cfdd4c79309a159b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581447"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875750"
 ---
 # <a name="how-to-serialize-an-object"></a>方法 : オブジェクトをシリアル化する
 オブジェクトをシリアル化するには、まず、シリアル化の対象となるオブジェクトを作成し、パブリック プロパティとパブリック フィールドを設定します。 この処理を行うには、転送形式、つまり XML ストリームをストリームとファイルのいずれとして格納するかを決定する必要があります。 たとえば、XML ストリームを永続的な形式で保存する必要がある場合は、<xref:System.IO.FileStream> オブジェクトを作成します。  
@@ -50,6 +50,7 @@ ms.locfileid: "33581447"
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [方法 : オブジェクトを逆シリアル化する](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a>関連項目
+
+- [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [方法 : オブジェクトを逆シリアル化する](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

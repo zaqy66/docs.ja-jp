@@ -10,11 +10,11 @@ helpviewer_keywords:
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
 ms.openlocfilehash: cf9491c7eee7dee197e9a3b91d35bc7f71f4e956
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735904"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863107"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>方法 : デザイナーを使用して Windows フォーム コントロールによって表示されるイメージを設定する
 いくつかの Windows フォーム コントロールは、イメージを表示できます。 イメージ、アイコンをボタン上のフロッピー ディスク アイコンなど、コントロールの目的を明確にする、**保存**コマンド。 コントロールの外観を与えるための背景画像の代わりに、アイコンもあります。  

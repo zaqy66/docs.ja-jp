@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998467"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875588"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory および WSTrustChannel
 Windows Communication Foundation (WCF) をよくご存じの方は、WCF クライアントが既にフェデレーションに対応していることを理解されていると思います。 <xref:System.ServiceModel.WSFederationHttpBinding> または同様のカスタム バインドを使用して WCF クライアントを構成することで、サービスに対するフェデレーション認証を有効にすることができます。  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) をよくご存じの方は、WCF クラ�
   
 -   WCF クライアントで WIF を有効にして、ActAs 要素または OnBehalfOf 要素を STS への RST に挿入する。  
   
--   WIF を単独で使用して、STS からトークンを取得し、WCF クライアントがこのトークンを使用して認証できるようにする。 詳細については、[ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) サンプルを参照してください。  
+-   WIF を単独で使用して、STS からトークンを取得し、WCF クライアントがこのトークンを使用して認証できるようにする。 詳細については、[ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) サンプルを参照してください。  
   
  最初のシナリオは明快であるため、改めて説明しません。既存の WCF クライアントは、引き続き WIF 証明書利用者および STS と動作します。 このトピックでは、残りの 2 つのシナリオについて説明します。  
   

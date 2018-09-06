@@ -12,11 +12,11 @@ ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 36b2cba14f15cebdcc7f371f53f46b657ab12758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655773"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43854403"
 ---
 # <a name="-netcf"></a>-netcf
 [!INCLUDE[Compact](~/includes/compact-md.md)] が対象になるようにコンパイラを設定します。  
@@ -27,21 +27,21 @@ ms.locfileid: "33655773"
 -netcf  
 ```  
   
-## <a name="remarks"></a>コメント  
- `-netcf`オプションは、ターゲットに Visual Basic コンパイラ、[!INCLUDE[Compact](~/includes/compact-md.md)]完全ではなく[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]です。 言語機能は完全にのみ存在する[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]は無効になります。  
+## <a name="remarks"></a>Remarks  
+ `-netcf`オプションは、ターゲットに Visual Basic コンパイラ、[!INCLUDE[Compact](~/includes/compact-md.md)]完全ではなく[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]します。 言語機能は、完全にのみ存在する[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]は無効です。  
   
- `-netcf`オプションで使用するように設計された[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)です。 無効になっている言語機能`-netcf`、同じ言語機能を対象となるファイル内に存在しない`-sdkpath`です。  
+ `-netcf`オプションがと共に使用するように設計[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)します。 無効になっている言語機能`-netcf`同じ言語機能を対象となるファイルに存在しない`-sdkpath`します。  
   
 > [!NOTE]
->  `-netcf`オプションは、Visual Studio 開発環境からは利用できません; は、コマンドラインからコンパイルするときにのみ使用します。 `-netcf` Visual Basic プロジェクトのデバイスが読み込まれるときに、オプションを設定します。  
+>  `-netcf`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。 `-netcf` Visual Basic プロジェクトのデバイスが読み込まれるときにオプションを設定します。  
   
- `-netcf`オプションは次の言語機能を変更します。  
+ `-netcf`オプションは、次の言語機能を変更します。  
   
--   [終了\<キーワード > ステートメント](../../../visual-basic/language-reference/statements/end-keyword-statement.md)プログラムの実行を終了するには、キーワードが無効になっています。 次のプログラムをコンパイルしてなしで実行されます`-netcf`はコンパイル時に失敗した`-netcf`です。  
+-   [エンド\<キーワード > ステートメント](../../../visual-basic/language-reference/statements/end-keyword-statement.md)キーワードで、プログラムの実行を終了するが無効になっています。 次のプログラムをコンパイルして実行なし`-netcf`がコンパイル時にでは失敗`-netcf`します。  
   
      [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
   
--   遅延バインディングするには、すべての形式が無効です。 認識された遅延バインディングのシナリオが発生した場合に、コンパイル時エラーが生成されます。 次のプログラムをコンパイルしてなしで実行されます`-netcf`はコンパイル時に失敗した`-netcf`です。  
+-   遅延バインディングするには、すべての形式が無効です。 認識される遅延バインディング シナリオが発生した場合に、コンパイル時エラーが生成されます。 次のプログラムをコンパイルして実行なし`-netcf`がコンパイル時にでは失敗`-netcf`します。  
   
      [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
   
@@ -49,7 +49,7 @@ ms.locfileid: "33655773"
   
      [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
--   Visual Basic から削除された Visual Basic 6.0 のキーワードを使用して、別のエラーが生成されるとき`-netcf`を使用します。 これには、次のキーワードのエラー メッセージに影響します。  
+-   Visual Basic から削除された Visual Basic 6.0 のキーワードを使用して、別のエラーを生成時に`-netcf`使用されます。 これには、次のキーワードのエラー メッセージに影響します。  
   
     -   `Open`  
   
@@ -84,7 +84,7 @@ ms.locfileid: "33655773"
     -   `Line`  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`Myfile.vb`で、[!INCLUDE[Compact](~/includes/compact-md.md)]の既定のインストール ディレクトリで見つかった mscorlib.dll および Microsoft.VisualBasic.dll のバージョンを使用して、[!INCLUDE[Compact](~/includes/compact-md.md)]が C ドライブにします。 通常の最新バージョンを使用すると、[!INCLUDE[Compact](~/includes/compact-md.md)]です。  
+ 次のコードのコンパイル`Myfile.vb`で、[!INCLUDE[Compact](~/includes/compact-md.md)]の既定のインストール ディレクトリにある mscorlib.dll および Microsoft.VisualBasic.dll のバージョンを使用して、 [!INCLUDE[Compact](~/includes/compact-md.md)] C ドライブにします。 通常の最新バージョンを使用すると、[!INCLUDE[Compact](~/includes/compact-md.md)]します。  
   
 ```console  
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  

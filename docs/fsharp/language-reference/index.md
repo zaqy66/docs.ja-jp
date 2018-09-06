@@ -2,22 +2,20 @@
 title: F# 言語リファレンス
 description: トークンの言語、概念、型、式、およびコンストラクトのコンパイラでサポートされているトピックへの参照をこのから f# 言語機能情報を検索します。
 ms.date: 05/16/2016
-ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937086"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873251"
 ---
 # <a name="f-language-reference"></a>F# 言語リファレンス
 
 このセクションでは、f# 言語、.NET を対象とするマルチ パラダイム プログラミング言語への参照です。 F# 言語は、関数型プログラミング、オブジェクト指向プログラミング、および命令型プログラミングのモデルをサポートします。
 
-
 ## <a name="f-tokens"></a>F# トークン
+
 次の表に、F# でトークンとして使用されるキーワード、シンボル、およびリテラルを表にまとめたリファレンス トピックを示します。
-
-
 
 |タイトル|説明|
 |-----|-----------|
@@ -26,9 +24,8 @@ ms.locfileid: "37937086"
 |[リテラル](literals.md)|F# のリテラル値の構文と、F# のリテラルの型情報を指定する方法を示します。|
 
 ## <a name="f-language-concepts"></a>F# 言語の概念
+
 次の表に、言語の概念について説明したリファレンス トピックを示します。
-
-
 
 |Title|説明|
 |-----|-----------|
@@ -56,9 +53,8 @@ ms.locfileid: "37937086"
 |[冗語構文](verbose-syntax.md)|軽量構文が有効になっていない場合の F# の構成要素の構文について説明します。 冗語構文は、コード ファイルの先頭にある `#light "off"` ディレクティブで示されています。|
 
 ## <a name="f-types"></a>F# の型
+
 次の表に、F# 言語でサポートされる型について説明したリファレンス トピックを示します。
-
-
 
 |Title|説明|
 |-----|-----------|
@@ -88,6 +84,7 @@ ms.locfileid: "37937086"
 |[型プロバイダー](../tutorials/type-providers/index.md)|型プロバイダーについて説明します。組み込みの型プロバイダーを使用してデータベースや Web サービスにアクセスする方法に関するチュートリアルへのリンクを提供します。|
 
 ## <a name="f-expressions"></a>F# の式
+
 次の表に、F# の式を説明するトピックの一覧を示します。
 
 |Title|説明|
@@ -105,6 +102,7 @@ ms.locfileid: "37937086"
 |[クエリ式](query-expressions.md)|クエリ式について説明します。これは、F# 用の LINQ を実装し、データ ソースや列挙可能なコレクションに対するクエリを記述できるようにする言語機能です。|
 
 ## <a name="compiler-supported-constructs"></a>コンパイラでサポートされる構成要素
+
 次の表に、特殊なコンパイラでサポートされる構成要素を説明するトピックの一覧を示します。
 
 |トピック|説明|
@@ -114,4 +112,5 @@ ms.locfileid: "37937086"
 |[ソース行、ファイル、およびパスの識別子](source-line-file-path-identifiers.md)|`__LINE__`、`__SOURCE_DIRECTORY__`、`__SOURCE_FILE__` の識別子について説明します。これは、コード内のソース行番号、ディレクトリおよびファイル名にアクセスするできるようにする組み込みの値です。|
 
 ## <a name="see-also"></a>関連項目
-[Visual F#](../index.md)
+
+- [Visual F#](../index.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 656b34a828ef6acd488cc84ca98d5a4bbaaa2cdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589806"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869994"
 ---
 # <a name="cryptographic-signatures"></a>暗号署名
 <a name="top"></a> 暗号デジタル署名は、公開キー アルゴリズムを使用してデータの整合性を提供します。 デジタル署名を使用してデータに署名すると、第三者が署名を検証し、データが署名者から発信され、署名後に変更されていないことを証明できます。 デジタル署名の詳細については、「 [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)」を参照してください。  
@@ -105,7 +105,7 @@ class Class1
 ### <a name="signing-xml-files"></a>XML ファイルへの署名  
  .NET Framework に用意されている <xref:System.Security.Cryptography.Xml> 名前空間を使用すると、XML に署名できます。 XML が特定のソースから送信されたことを検証する場合は、XML への署名が重要です。 たとえば、XML を使用する株価情報サービスを使用している場合であれば、署名されているかどうかによって XML のソースを検証できます。  
   
- この名前空間のクラスに従って、 [XML 署名の構文と処理に関する勧告](https://www.w3.org/TR/xmldsig-core/)World Wide Web Consortium からです。  
+ この名前空間のクラスに従って、 [XML 署名の構文と処理に関する勧告](https://www.w3.org/TR/xmldsig-core/)World Wide Web Consortium から。  
   
  [ページのトップへ](#top)  
   
@@ -121,7 +121,7 @@ class Class1
   
 -   署名者が使用したハッシュ アルゴリズム。  
   
- <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスによって署名された署名を検証するには、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスを使用します。 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスに対しては、署名者の公開キーを提供する必要があります。 公開キーを指定するには、剰余値と指数部の値が必要になります  (これらの値は、公開キーと秘密キーのペアの作成者が提供する必要があります)。最初に作成、<xref:System.Security.Cryptography.RSACryptoServiceProvider>は署名を検証し、初期化する公開キーを保持するオブジェクト、 <xref:System.Security.Cryptography.RSAParameters> modulus および exponent 公開キーを指定する値を構造体。  
+ <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスによって署名された署名を検証するには、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスを使用します。 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスに対しては、署名者の公開キーを提供する必要があります。 公開キーを指定するには、剰余値と指数部の値が必要になります  (これらの値は、公開キーと秘密キーのペアの作成者が提供する必要があります)。最初に作成、<xref:System.Security.Cryptography.RSACryptoServiceProvider>オブジェクトは、署名を検証し、初期化する公開キーを保持するために、<xref:System.Security.Cryptography.RSAParameters>公開キーを指定する modulus および exponent 値値構造体。  
   
  次のコードは、 <xref:System.Security.Cryptography.RSAParameters> 構造体の作成を示しています。 `Modulus` プロパティは `ModulusData` というバイト配列の値に設定し、 `Exponent` プロパティは `ExponentData`というバイト配列の値に設定します。  
   
@@ -141,7 +141,7 @@ RSAKeyInfo.Exponent = ExponentData;
   
  このプロセスを説明する例を次に示します。 この例で、 `HashValue` と `SignedHashValue` は、リモートにいる関係者から提供されるバイト配列です。 リモートにいる関係者は、SHA1 アルゴリズムを使用して `HashValue` に署名し、デジタル署名 `SignedHashValue`を生成します。 次に、  
   
- <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> メソッドは、デジタル署名が有効で、署名に使用されたことを確認、`HashValue`です。  
+ <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> メソッドは、デジタル署名が有効で、署名に使用されたことを確認、`HashValue`します。  
   
 ```vb  
 Dim RSA As New RSACryptoServiceProvider()  
@@ -172,5 +172,6 @@ else
   
  上記のコードでは、署名が有効であれば "`The signature is valid`" を表示し、署名が無効であれば "`The signature is not valid`" を表示します。  
   
-## <a name="see-also"></a>関連項目  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>関連項目
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

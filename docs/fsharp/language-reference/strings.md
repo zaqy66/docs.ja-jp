@@ -2,12 +2,12 @@
 title: 文字列 (F#)
 description: F# の 'string' 型が Unicode 文字のシーケンスとして変更不可のテキストを表示する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 7309e93bf0a6518d03a9f850804a4f580e2c96b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561292"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799344"
 ---
 # <a name="strings"></a>文字列
 
@@ -17,6 +17,7 @@ ms.locfileid: "43561292"
 `string`型が Unicode 文字のシーケンスとして変更不可のテキストを表します。 `string` は、.NET Framework の `System.String` のエイリアスです。
 
 ## <a name="remarks"></a>Remarks
+
 文字列リテラルは引用符 (") 文字で区切られます。 円記号 ( \\ ) 特定の特殊文字をエンコードするために使用します。 円記号と、次の文字の組み合わせと呼ばれる、*エスケープ シーケンス*します。 エスケープ シーケンスが f# 文字列リテラルは、次の表に示すでサポートされています。
 
 |文字|エスケープ シーケンス|
@@ -66,23 +67,27 @@ def
 ASCII 文字列型の符号なしバイトの配列で表現できます`byte[]`します。 サフィックスを追加する`B`を ASCII 文字列であることを示すリテラル文字列にします。 ASCII 文字列リテラルのバイト配列を使用では、Unicode のエスケープ シーケンスを除く、Unicode 文字列として同じエスケープ シーケンスをサポートします。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
-    
+
 ## <a name="string-operators"></a>文字列演算子
+
 文字列を連結する 2 つの方法があります: を使用して、`+`演算子またはを使用して、`^`演算子。 `+`演算子が、.NET Framework の文字列処理機能との互換性を維持します。
 
 次の例は、文字列の連結を示しています。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
-    
+
 ## <a name="string-class"></a>String クラス
+
 F# の文字列型である .NET Framework では実際に`System.String`すべての入力、`System.String`メンバーは使用できます。 これが含まれています、`+`演算子、文字列の連結に使用される、`Length`プロパティ、および`Chars`プロパティで、文字列を Unicode 文字の配列として返します。 文字列の詳細については、次を参照してください。`System.String`します。
 
 使用して、`Chars`プロパティの`System.String`文字列の個々 の文字の次のコードに示すように、インデックスを指定することでアクセスできます。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
-    
+
 ## <a name="string-module"></a>文字列のモジュール
+
 含まれている文字列の処理の追加機能、`String`でモジュール、`FSharp.Core`名前空間。 詳細については、次を参照してください。 [Core.String モジュール](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d)します。
 
 ## <a name="see-also"></a>関連項目
-[F# 言語リファレンス](index.md)
+
+- [F# 言語リファレンス](index.md)

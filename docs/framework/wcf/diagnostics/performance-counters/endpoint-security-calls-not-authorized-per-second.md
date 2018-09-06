@@ -5,11 +5,11 @@ ms.assetid: c8a1547b-986b-45c1-b302-dea0cd4b516d
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 4cefdd7480c7d0e9475b1883e603d9db1f287d4a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532331"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43799214"
 ---
 # <a name="endpoint-security-calls-not-authorized-per-second"></a>エンドポイント : 1 秒あたりの承認されていないセキュリティ呼び出し
 カウンター名 : 1 秒あたりの承認されていないセキュリティ呼び出し。  

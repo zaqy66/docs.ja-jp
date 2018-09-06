@@ -10,11 +10,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
 ms.openlocfilehash: 5899531291c22ada76213905d0f2ca6944fcbba7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408021"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857207"
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a>方法 : イメージで領域を塗りつぶす
 この例は、使用する方法を示します、<xref:System.Windows.Media.ImageBrush>イメージで領域を塗りつぶすクラス。 <xref:System.Windows.Media.ImageBrush>で指定された 1 つのイメージを表示します。 その<xref:System.Windows.Media.ImageBrush.ImageSource%2A>プロパティ。  

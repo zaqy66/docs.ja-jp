@@ -9,11 +9,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 02244043d802029364c7a725940f03ecdd21f573
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661792"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864658"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI オートメーション クライアントのコントロール パターン マッピング
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "43661792"
 |メニュー|なし|なし|なし|  
 |メニュー バー|なし|展開/折りたたみ、ドック、変換|なし|  
 |メニュー項目|なし|展開/折りたたみ、呼び出し、選択項目、トグル|なし|  
-|ペイン|なし|ドック、 スクロール、変換|ウィンドウ|  
+|ペイン|なし|ドック、 スクロール、変換|[Window]|  
 |進行状況バー|なし|範囲の値、値|なし|  
 |オプション ボタン|選択項目|なし|切り替え|  
 |スクロール バー|なし|範囲値|スクロール|  

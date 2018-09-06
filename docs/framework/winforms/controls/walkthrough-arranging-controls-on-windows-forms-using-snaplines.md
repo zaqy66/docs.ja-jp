@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 170b79f03515ab371f7013c267b28ba85dafd0f5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741842"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875435"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>チュートリアル : スナップ線を使用した Windows フォーム上のコントロールの配置
 フォーム上のコントロールを正確に配置することは、多くのアプリケーションで優先度の高い作業です。 Windows フォーム デザイナーでは、これを実現するさまざまなレイアウト ツールを提供します。 最も重要なの 1 つは、<xref:System.Windows.Forms.Design.Behavior.SnapLine>機能します。  

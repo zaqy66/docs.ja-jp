@@ -3,11 +3,11 @@ title: トランザクション バッチ
 ms.date: 03/30/2017
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
 ms.openlocfilehash: abada9aaf5fac8f05599467f385e708e1898832f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558509"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856064"
 ---
 # <a name="transacted-batching"></a>トランザクション バッチ
 このサンプルでは、メッセージ キュー (MSMQ) を使用して、トランザクション読み取りをバッチ処理する方法を示します。 トランザクション バッチは、キューを使用する通信でトランザクション読み取りのパフォーマンスを最適化するための機能です。  

@@ -5,22 +5,22 @@ ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7398202cc265fbd55b9bf0b5a53367dedcab57b0
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 75c83dc75d1c86c89169fcc54220ced2a195bfbe
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948486"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866859"
 ---
 # <a name="dependency-properties"></a>依存関係プロパティ
-依存関係プロパティ (DP) は、たとえば (フィールド) の型の変数に保存することではなく、プロパティ ストア内の値を格納する標準プロパティです。  
+依存関係プロパティ (DP) は、たとえば (フィールド) の型の変数に格納することではなく、プロパティ ストアにその値を格納する標準プロパティです。  
   
- 割り当てられた依存プロパティはオブジェクトとそのコンテナーの間のリレーションシップを記述する「プロパティ」を表す、Get および Set の静的メソッドとしてモデル化された依存関係プロパティの種類 (の位置など、`Button`上のオブジェクト、 `Panel`コンテナー) です。  
+ 依存プロパティは、ある種のオブジェクトとそのコンテナーの間のリレーションシップを記述する「プロパティ」を表す、Get と Set の静的メソッドとしてモデル化された依存関係プロパティ (の位置など、`Button`上のオブジェクトを`Panel`コンテナーの場合)。  
   
  **✓ DO** プロパティ スタイル設定、トリガー、データ バインディング、アニメーション、動的なリソース、および継承などの WPF 機能をサポートする必要がある場合は、依存関係プロパティを提供します。  
   
 ## <a name="dependency-property-design"></a>依存関係プロパティのデザイン  
- **✓ DO** から継承<xref:System.Windows.DependencyObject>、または依存関係プロパティを実装する場合、そのサブタイプのいずれか。 種類は、プロパティ ストアの非常に効率的な実装を提供し、自動的に WPF データ バインディングをサポートします。  
+ **✓ DO** から継承<xref:System.Windows.DependencyObject>、または依存関係プロパティを実装する場合、そのサブタイプのいずれか。 型は、プロパティ ストアの非常に効率的な実装を提供し、自動的に WPF データ バインドをサポートします。  
   
  **✓ DO** 正規の CLR プロパティとパブリックな静的読み取り専用フィールドのインスタンスを格納する提供<xref:System.Windows.DependencyProperty?displayProperty=nameWithType>各依存関係プロパティです。  
   
@@ -30,18 +30,18 @@ ms.locfileid: "36948486"
   
  **X DO NOT** コード内の依存関係プロパティの既定値を明示的に設定を代わりにメタデータの設定です。  
   
- プロパティの既定値を明示的に設定するから、スタイルなどのいくつかの暗黙的な方法で設定されているそのプロパティをできない場合があります。  
+ プロパティの既定値を明示的に設定するをスタイル設定などのいくつかの暗黙的な方法で設定されているから、そのプロパティをできない場合があります。  
   
  **X DO NOT** 静的フィールドにアクセスする標準コード以外のプロパティ アクセサーにコードを配置します。  
   
- 静的フィールドを直接使用するコードはありませんは実行、スタイルなどの暗黙的な方法で、プロパティが設定されている場合のスタイルを設定するためです。  
+ コードがしません実行をスタイル設定などの暗黙的な方法で、プロパティが設定されている場合のスタイルを設定するため、静的フィールドを直接使用します。  
   
- **X DO NOT** 依存関係プロパティを使用してセキュリティで保護されたデータを格納します。 さらにプライベート依存関係プロパティをパブリックにアクセスすることができます。  
+ **X DO NOT** 依存関係プロパティを使用してセキュリティで保護されたデータを格納します。 プライベートでも依存関係プロパティは、パブリックにアクセスできます。  
   
 ## <a name="attached-dependency-property-design"></a>接続されている依存関係プロパティのデザイン  
- 前のセクションで説明されている依存関係プロパティの宣言する型の組み込みのプロパティを表しますたとえば、`Text`プロパティは、プロパティの`TextButton`を宣言しています。 依存関係プロパティの特別な種類は、接続されている依存関係プロパティです。  
+ 依存関係プロパティが、前のセクションで説明されている宣言型の組み込みのプロパティを表しますたとえば、`Text`プロパティは、プロパティの`TextButton`、宣言します。 依存関係プロパティの特殊なは、接続されている依存関係プロパティです。  
   
- 添付プロパティの典型的な例は、<xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType>プロパティです。 プロパティ ボタン (いないグリッドの) 列の位置を表すは"にアタッチされて"ボタン グリッドで、グリッドで、ボタンが含まれている場合にのみ関連します。  
+ 添付プロパティの典型的な例は、<xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType>プロパティ。 プロパティ ボタン (いないグリッドの) 列の位置を表しますは"にアタッチされている"ボタンのグリッドで、グリッドで、ボタンが含まれている場合にのみ関連します。  
   
 ```xaml
 <Grid>  
@@ -55,7 +55,7 @@ ms.locfileid: "36948486"
 </Grid>  
 ```  
   
- 添付プロパティの定義は、アクセサーが静的の Get および Set メソッドによって表される点を除いて、ほとんどの場合と同様に、通常の依存関係プロパティの検索します。  
+ 添付プロパティの定義は、アクセサーが静的な Get と Set メソッドによって表されることを除いて、通常の依存関係プロパティのほとんどの場合ようになります。  
   
 ```csharp
 public class Grid {  
@@ -78,26 +78,27 @@ public class Grid {
 ```  
   
 ## <a name="dependency-property-validation"></a>依存関係プロパティの検証  
- プロパティは、多くの場合、検証と呼ばれるものを実装します。 プロパティの値を変更する試みが行われたときに検証ロジックを実行します。  
+ プロパティは、多くの場合、検証と呼ばれるものを実装します。 プロパティの値を変更する試行したときに検証ロジックを実行します。  
   
- 残念なことに依存関係プロパティのアクセサーでは、任意の検証コードを含めることはできません。 代わりに、依存関係プロパティの検証ロジックは、プロパティの登録中に指定する必要があります。  
+ 残念なことに依存関係プロパティのアクセサーには、任意の検証コードを含めることはできません。 代わりに、依存関係プロパティの検証ロジックは、プロパティの登録時に指定する必要があります。  
   
- **X DO NOT** プロパティのアクセサーの依存関係プロパティの検証ロジックを配置します。 代わりに、検証コールバックを渡す`DependencyProperty.Register`メソッドです。  
+ **X DO NOT** プロパティのアクセサーの依存関係プロパティの検証ロジックを配置します。 代わりに、検証コールバックを渡す`DependencyProperty.Register`メソッド。  
   
 ## <a name="dependency-property-change-notifications"></a>依存関係プロパティの変更通知  
- **X DO NOT** 依存関係プロパティのアクセサーでの変更通知のロジックを実装します。 依存関係プロパティを変更通知のコールバックを指定することによって処理するために使用する必要があります組み込みの変更通知機能があり、<xref:System.Windows.PropertyMetadata>です。  
+ **X DO NOT** 依存関係プロパティのアクセサーでの変更通知のロジックを実装します。 依存関係プロパティに変更通知のコールバックを指定して使用する必要があります組み込みの変更通知機能があり、<xref:System.Windows.PropertyMetadata>します。  
   
-## <a name="dependency-property-value-coercion"></a>依存関係プロパティの値の強制  
- プロパティの強制変換は、プロパティ ストアが実際に変更する前に、set アクセス操作子がプロパティ set アクセス操作子に渡された値が変更されたときに行われます。  
+## <a name="dependency-property-value-coercion"></a>依存関係プロパティの値の強制型変換  
+ プロパティ ストアが実際に変更する前に、setter をプロパティ set アクセス操作子に渡された値が変更されたときにプロパティの強制型変換が行われます。  
   
  **X DO NOT** 依存関係プロパティのアクセサーに強制変換ロジックを実装します。  
   
- 依存関係プロパティが、ビルトインの強制変換機能を持っているし、強制型変換のコールバックを指定することによって使用できます、`PropertyMetadata`です。  
+ 依存関係プロパティは、組み込みの強制型変換機能を持っているし、強制型変換のコールバックを指定することによって使用できます、`PropertyMetadata`します。  
   
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
- [共通デザイン パターン](../../../docs/standard/design-guidelines/common-design-patterns.md)
+## <a name="see-also"></a>関連項目
+
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [共通デザイン パターン](../../../docs/standard/design-guidelines/common-design-patterns.md)
