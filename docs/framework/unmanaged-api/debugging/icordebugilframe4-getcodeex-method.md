@@ -15,18 +15,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 24be4507e8ad6cde1e9c50582e352f0fc9b12ed3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552728"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779365"
 ---
-# <a name="icordebugilframe4getcodeex-method"></a><span data-ttu-id="58c2e-102">ICorDebugILFrame4::GetCodeEx メソッド</span><span class="sxs-lookup"><span data-stu-id="58c2e-102">ICorDebugILFrame4::GetCodeEx Method</span></span>
-<span data-ttu-id="58c2e-103">[.NET Framework 4.5.2 以降のバージョンでのみでサポート]</span><span class="sxs-lookup"><span data-stu-id="58c2e-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilframe4getcodeex-method"></a><span data-ttu-id="6f86d-102">ICorDebugILFrame4::GetCodeEx メソッド</span><span class="sxs-lookup"><span data-stu-id="6f86d-102">ICorDebugILFrame4::GetCodeEx Method</span></span>
+<span data-ttu-id="6f86d-103">[.NET Framework 4.5.2 以降のバージョンでのみでサポート]</span><span class="sxs-lookup"><span data-stu-id="6f86d-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="58c2e-104">このスタック フレームが実行中のコードに対するポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="58c2e-104">Gets a pointer to the code that this stack frame is executing.</span></span>  
+ <span data-ttu-id="6f86d-104">このスタック フレームが実行中のコードに対するポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="6f86d-104">Gets a pointer to the code that this stack frame is executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="58c2e-105">構文</span><span class="sxs-lookup"><span data-stu-id="58c2e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f86d-105">構文</span><span class="sxs-lookup"><span data-stu-id="6f86d-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetCodeEx(  
@@ -35,26 +35,26 @@ HRESULT GetCodeEx(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="58c2e-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="58c2e-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6f86d-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6f86d-106">Parameters</span></span>  
  `flags`  
- <span data-ttu-id="58c2e-107">[in][ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)フレームでプロファイラーの ReJIT 要求によって定義された中間言語 (IL) が含まれているかどうかを指定する列挙型メンバー。</span><span class="sxs-lookup"><span data-stu-id="58c2e-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether the intermediate language (IL) defined by the profiler's ReJIT request is included in the frame.</span></span>  
+ <span data-ttu-id="6f86d-107">[in][ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)フレームでプロファイラーの ReJIT 要求によって定義された中間言語 (IL) が含まれているかどうかを指定する列挙型メンバー。</span><span class="sxs-lookup"><span data-stu-id="6f86d-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether the intermediate language (IL) defined by the profiler's ReJIT request is included in the frame.</span></span>  
   
  `ppCode`  
- <span data-ttu-id="58c2e-108">[out]このスタック フレームが実行中のコードを表す"ICorDebugCode"オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="58c2e-108">[out] A pointer to the address of an "ICorDebugCode" object that represents the code that this stack frame is executing.</span></span>  
+ <span data-ttu-id="6f86d-108">[out]このスタック フレームが実行中のコードを表す"ICorDebugCode"オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="6f86d-108">[out] A pointer to the address of an "ICorDebugCode" object that represents the code that this stack frame is executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="58c2e-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="58c2e-109">Remarks</span></span>  
- <span data-ttu-id="58c2e-110">このメソッドは、 [icordebugframe::getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)メソッド、必要に応じてアクセスするコード プロファイラーの ReJIT 要求によって定義されている点が異なります。</span><span class="sxs-lookup"><span data-stu-id="58c2e-110">This method is similar to the [ICorDebugFrame::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md) method, except that it optionally accesses code defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="58c2e-111">このメソッドを呼び出すと、`flags`の値`ILCODE_ORIGINAL_IL`呼び出しと同じですが[GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)メソッドがインストルメント化されている場合その IL はアクセスできません。</span><span class="sxs-lookup"><span data-stu-id="58c2e-111">Calling this method with a `flags` value of `ILCODE_ORIGINAL_IL` is equivalent to calling [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md); if the method is instrumented, its IL will not be accessible.</span></span> <span data-ttu-id="58c2e-112">`ILCODE_REJIT_IL` を使用するとデバッガーは、プロファイラーの ReJIT 要求で定義された IL にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="58c2e-112">`ILCODE_REJIT_IL` allows the debugger to access the IL defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="58c2e-113">IL がインストルメント化されない場合`ppCode`は**null**、メソッドを返しますと`S_OK`します。</span><span class="sxs-lookup"><span data-stu-id="58c2e-113">If the IL is not instrumented, `ppCode` is **null**, and the method returns `S_OK`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6f86d-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="6f86d-109">Remarks</span></span>  
+ <span data-ttu-id="6f86d-110">このメソッドは、 [icordebugframe::getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)メソッド、必要に応じてアクセスするコード プロファイラーの ReJIT 要求によって定義されている点が異なります。</span><span class="sxs-lookup"><span data-stu-id="6f86d-110">This method is similar to the [ICorDebugFrame::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md) method, except that it optionally accesses code defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="6f86d-111">このメソッドを呼び出すと、`flags`の値`ILCODE_ORIGINAL_IL`呼び出しと同じですが[GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)メソッドがインストルメント化されている場合その IL はアクセスできません。</span><span class="sxs-lookup"><span data-stu-id="6f86d-111">Calling this method with a `flags` value of `ILCODE_ORIGINAL_IL` is equivalent to calling [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md); if the method is instrumented, its IL will not be accessible.</span></span> <span data-ttu-id="6f86d-112">`ILCODE_REJIT_IL` を使用するとデバッガーは、プロファイラーの ReJIT 要求で定義された IL にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="6f86d-112">`ILCODE_REJIT_IL` allows the debugger to access the IL defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="6f86d-113">IL がインストルメント化されない場合`ppCode`は**null**、メソッドを返しますと`S_OK`します。</span><span class="sxs-lookup"><span data-stu-id="6f86d-113">If the IL is not instrumented, `ppCode` is **null**, and the method returns `S_OK`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="58c2e-114">要件</span><span class="sxs-lookup"><span data-stu-id="58c2e-114">Requirements</span></span>  
- <span data-ttu-id="58c2e-115">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="58c2e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f86d-114">要件</span><span class="sxs-lookup"><span data-stu-id="6f86d-114">Requirements</span></span>  
+ <span data-ttu-id="6f86d-115">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6f86d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="58c2e-116">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="58c2e-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6f86d-116">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6f86d-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="58c2e-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58c2e-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6f86d-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6f86d-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="58c2e-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58c2e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="6f86d-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f86d-118">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58c2e-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="58c2e-119">See Also</span></span>  
- [<span data-ttu-id="58c2e-120">ICorDebugILFrame4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="58c2e-120">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
- [<span data-ttu-id="58c2e-121">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="58c2e-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="58c2e-122">ReJIT: ハウツー ガイド</span><span class="sxs-lookup"><span data-stu-id="58c2e-122">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+## <a name="see-also"></a><span data-ttu-id="6f86d-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="6f86d-119">See Also</span></span>  
+ [<span data-ttu-id="6f86d-120">ICorDebugILFrame4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6f86d-120">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
+ [<span data-ttu-id="6f86d-121">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6f86d-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="6f86d-122">ReJIT: ハウツー ガイド</span><span class="sxs-lookup"><span data-stu-id="6f86d-122">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
