@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: 4b0ce12f6361d3dc6e5cc3601e96fc3a9bcf3841
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18d09d8018303aab6a69801c84c7ec9c6ea19ca9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603978"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788624"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 句 (Visual Basic)
-次のクエリ句で、重複を回避するのには、現在の範囲変数の値を制限します。  
+次のクエリ句で、重複を排除する現在の範囲変数の値を制限します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -24,17 +24,17 @@ ms.locfileid: "33603978"
 Distinct  
 ```  
   
-## <a name="remarks"></a>コメント  
- 使用することができます、`Distinct`句に固有のアイテムの一覧を返します。 `Distinct`句によって重複するクエリの結果を無視するクエリ。 `Distinct`句は、すべてで指定されたフィールドの戻り値の重複する値に適用されます、`Select`句。 ない場合は`Select`句を指定する、`Distinct`句は、クエリで特定の範囲変数に適用、`From`句。 範囲変数が、不変の型でない場合は、型のすべてのメンバーには、既存のクエリ結果が一致する場合、クエリはのみ、クエリ結果が無視されます。  
+## <a name="remarks"></a>Remarks  
+ 使用することができます、`Distinct`句を一意の項目の一覧を返します。 `Distinct`句によって重複するクエリの結果を無視するクエリ。 `Distinct`句は、すべての戻り値で指定されたフィールドの重複する値を適用、`Select`句。 ない場合は`Select`句が指定されて、`Distinct`で特定されたクエリの範囲変数に句が適用される、`From`句。 クエリは、範囲変数が変更不可の型でない場合、既存のクエリ結果に一致する型のすべてのメンバーである場合は、クエリ結果を無視してはのみです。  
   
 ## <a name="example"></a>例  
- 次のクエリ式は、顧客注文のリストと顧客のリストを結合します。 `Distinct`句は一意の顧客名のリストを返し、注文日に含まれています。  
+ 次のクエリ式では、顧客の一覧と顧客の注文のリストを結合します。 `Distinct`句は、一意の顧客名のリストを返し、注文日に含まれています。  
   
  [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/distinct-clause_1.vb)]  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [クエリ](../../../visual-basic/language-reference/queries/queries.md)  
+ [クエリ](../../../visual-basic/language-reference/queries/index.md)  
  [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
  [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)

@@ -2,12 +2,12 @@
 title: Mac 用 Visual Studio での f# の概要します。
 description: F# で Visual Studio for mac を使用する方法について説明します
 ms.date: 07/03/2018
-ms.openlocfilehash: 200c3a8fee072797a54d15d8989937f4cadb33e2
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 6aceec299c29e04aecd7999cd1dda6a56dd2779a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874654"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785532"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Mac 用 Visual Studio での f# の概要します。
 
@@ -114,8 +114,9 @@ val it : bool = true
 まだインストールしていない場合はチェック アウト、 [f# のツアー](../tour.md)、f# 言語のコア機能の一部が含まれています。  一部の f# の機能の概要が表示され Visual Studio for Mac にコピーして実行できる十分なコード サンプルを提供します。  使用できますが、いくつかの優れた外部リソースがあるの紹介、 [f# ガイド](../index.md)します。
 
 ## <a name="see-also"></a>関連項目
- [Visual F#](../index.md)  
- [F# のツアー](../tour.md)  
- [F# 言語リファレンス](../language-reference/index.md)  
- [型の推論](../language-reference/type-inference.md)  
- [シンボルと演算子のリファレンス](../language-reference/symbol-and-operator-reference/index.md)  
+
+- [Visual F#](../index.md)  
+- [F# のツアー](../tour.md)  
+- [F# 言語リファレンス](../language-reference/index.md)  
+- [型の推論](../language-reference/type-inference.md)  
+- [シンボルと演算子のリファレンス](../language-reference/symbol-and-operator-reference/index.md)  

@@ -2,18 +2,19 @@
 title: ビット処理演算子 (F#)
 description: F# プログラミング言語で使用可能なビットごとの演算子について説明します。
 ms.date: 07/20/2018
-ms.openlocfilehash: abd2778eba422b3ce2a3472efd458446854b3d2f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559557"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784369"
 ---
 # <a name="bitwise-operators"></a>ビット処理演算子
 
 このトピックでは、f# 言語で使用可能なビットごとの演算子について説明します。
 
 ## <a name="summary-of-bitwise-operators"></a>ビットごとの演算子の概要
+
 次の表では、ボックス化解除された整数型の f# 言語でサポートされているビットごとの演算子について説明します。
 
 |演算子|メモ|
@@ -28,9 +29,7 @@ ms.locfileid: "43559557"
 次の種類は、ビットごとの演算子で使用できます: `byte`、 `sbyte`、 `int16`、 `uint16`、 `int32 (int)`、 `uint32`、 `int64`、 `uint64`、 `nativeint`、および`unativeint`します。
 
 ## <a name="see-also"></a>関連項目
-[シンボルと演算子のリファレンス](index.md)
 
-[算術演算子](arithmetic-operators.md)
-
-[ブール演算子](boolean-operators.md)
-
+- [シンボルと演算子のリファレンス](index.md)
+- [算術演算子](arithmetic-operators.md)
+- [ブール演算子](boolean-operators.md)
