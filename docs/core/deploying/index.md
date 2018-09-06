@@ -4,12 +4,12 @@ description: .NET Core アプリケーションの展開。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792427"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562007"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core アプリケーションの展開
 
@@ -21,7 +21,7 @@ ms.locfileid: "37792427"
 
 ## <a name="framework-dependent-deployments-fdd"></a>フレームワークに依存する展開 (FDD)
 
-FDD では、アプリ、およびサードパーティの依存関係のみを展開します。 アプリは、ターゲット システムに存在する .NET Core のバージョンを使うので、.NET Core を展開する必要はありません。 これは、.NET Core アプリの既定の展開モデルです。
+FDD では、アプリ、およびサードパーティの依存関係のみを展開します。 アプリは、ターゲット システムに存在する .NET Core のバージョンを使うので、.NET Core を展開する必要はありません。 これは、.NET Core および .NET Core をターゲットとする ASP.NET Core アプリの既定の展開モデルです。
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>フレームワークに依存する展開を作成する理由
 
@@ -70,9 +70,9 @@ CLI ツールで .NET Core アプリを展開する手順の例については�
 - 自己完結型の展開
 - サードパーティの依存関係を含む、自己完結型の展開
 
-# <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
-[CLI ツールで .NET Core アプリを展開する](deploy-with-cli.md)   
-[Visual Studio で .NET Core アプリを展開する](deploy-with-vs.md)   
-[パッケージ、メタパッケージ、フレームワーク](../packages.md)   
-[.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+* [CLI ツールで .NET Core アプリを展開する](deploy-with-cli.md)
+* [Visual Studio で .NET Core アプリを展開する](deploy-with-vs.md)
+* [パッケージ、メタパッケージ、フレームワーク](../packages.md)
+* [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)

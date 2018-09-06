@@ -137,7 +137,7 @@ ms.locfileid: "34457759"
   
 <a name="styling_controltemplates"></a>   
 ## <a name="control-templates"></a>コントロール テンプレート  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、<xref:System.Windows.Controls.ControlTemplate>コントロールのコントロールの外観を定義します。 構造体とコントロールの外観を変更するには、新しい定義することによって<xref:System.Windows.Controls.ControlTemplate>コントロール。 多くの場合、これによって、独自のカスタム コントロールを作成する必要がない程度に十分な柔軟性を得られます。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、<xref:System.Windows.Controls.ControlTemplate>コントロールのコントロールの外観を定義します。 構造体とコントロールの外観を変更するには、新しい定義することによって<xref:System.Windows.Controls.ControlTemplate>コントロール。 多くの場合、これによって、独自のカスタム コントロールを作成する必要がない程度に十分な柔軟性を得られます。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
   
 <a name="styling_triggers"></a>   
 ## <a name="triggers"></a>トリガー  

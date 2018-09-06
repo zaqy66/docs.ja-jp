@@ -63,7 +63,7 @@ ms.locfileid: "33565864"
   
 <a name="service_context_for_a_value_converter"></a>   
 ## <a name="service-context-for-a-value-converter"></a>値コンバーターのサービス コンテキスト  
- 値コンバーターを実装する際には、通常、値コンバーターが適用されるコンテキストにアクセスする必要があります。 このコンテキストは、サービス コンテキストと呼ばれます。 サービス コンテキストには、アクティブな XAML スキーマ コンテキスト、XAML スキーマ コンテキストや XAML オブジェクト ライターが提供する型マッピング システムへのアクセスなどの情報が含まれます。 値コンバーターで使用可能なサービス コンテキストとサービス コンテキストが提供するサービスへのアクセス方法の詳細については、「 [Service Contexts Available to Type Converters and Markup Extensions](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)」を参照してください。  
+ 値コンバーターを実装する際には、通常、値コンバーターが適用されるコンテキストにアクセスする必要があります。 このコンテキストは、サービス コンテキストと呼ばれます。 サービス コンテキストには、アクティブな XAML スキーマ コンテキスト、XAML スキーマ コンテキストや XAML オブジェクト ライターが提供する型マッピング システムへのアクセスなどの情報が含まれます。 値コンバーターで使用可能なサービス コンテキストとサービス コンテキストが提供するサービスへのアクセス方法の詳細については、「[型コンバーターおよびマークアップ拡張機能で使用できるサービス コンテキスト](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Markup.MarkupExtension>  

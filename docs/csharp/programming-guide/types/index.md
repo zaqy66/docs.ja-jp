@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 15f3a774255923aba83f15700540369040c02dcd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ba019d4104ec6669ef07b608f40fc1489c994cbf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961535"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525489"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 ## <a name="types-variables-and-values"></a>型、変数、および値  
@@ -99,7 +99,7 @@ int i = 5;
 char c = 'Z';  
 ```  
   
- 値型は、"*シール*" されています。たとえば <xref:System.Int32?displayProperty=nameWithType> から値型を派生させることはできません。構造体は <xref:System.ValueType?displayProperty=nameWithType> からしか継承できないため、任意のユーザー定義型または構造体を継承する構造体を定義することはできません。 ただし、構造体は 1 つ以上のインターフェイスを実装できます。 構造体型は、インターフェイス型にキャストできます。これを行うと、"*ボックス化操作*" によって、構造体がマネージド ヒープ上の参照型オブジェクト内にラップされます。 ボックス化操作が発生するのは、入力パラメーターとして <xref:System.Object?displayProperty=nameWithType> を受け取るメソッドに値型を渡した場合です。 詳細については、「[ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)」を参照してください。  
+ 値型は、"*シール*" されています。たとえば <xref:System.Int32?displayProperty=nameWithType> から値型を派生させることはできません。構造体は <xref:System.ValueType?displayProperty=nameWithType> からしか継承できないため、任意のユーザー定義型または構造体を継承する構造体を定義することはできません。 ただし、構造体は 1 つ以上のインターフェイスを実装できます。 構造体型は、実装する任意のインターフェイス型にキャストできます。これを行うと、"*ボックス化操作*" によって、構造体がマネージド ヒープ上の参照型オブジェクト内にラップされます。 ボックス化操作が発生するのは、入力パラメーターとして <xref:System.Object?displayProperty=nameWithType> または任意のインターフェイス型を受け取るメソッドに値型を渡した場合です。 詳細については、「[ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)」を参照してください。  
   
  独自のカスタム値型を作成するには、[struct](../../../csharp/language-reference/keywords/struct.md) キーワードを使用します。 通常、構造体は、次の例に示すように、少数の関連する変数のコンテナーとして使用します。  
   
@@ -183,8 +183,9 @@ stringList.Add(4);
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [XML データ型の変換](../../../standard/data/xml/conversion-of-xml-data-types.md)  
- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [XML データ型の変換](../../../standard/data/xml/conversion-of-xml-data-types.md)  
+- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)

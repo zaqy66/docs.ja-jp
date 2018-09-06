@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9a716244c779a25ad75c9db37aade0524e9e740
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442918"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508523"
 ---
 # <a name="unmanaged-api-reference"></a>アンマネージ API リファレンス
 このセクションには、ランタイム ホスト、コンパイラ、逆アセンブラー、難読化ツール、デバッガー、プロファイラーなど、マネージ コード関連のアプリケーションが使用できるアンマネージ API に関する情報が含まれています。  
@@ -32,7 +32,7 @@ ms.locfileid: "33442918"
  [定数](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  CorSym.idl で定義される定数について説明します。  
   
- [カスタム インターフェイス属性](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [カスタム インターフェイス属性](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  コンポーネント オブジェクト モデル (COM) のカスタム インターフェイス属性について説明します。  
   
  [デバッグ](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -57,7 +57,7 @@ ms.locfileid: "33442918"
  厳密な名前付け API について説明します。これによりクライアントは、アセンブリに対する厳密な名前の署名を管理できます。  
 
  [WMI およびパフォーマンス カウンター](wmi/index.md)  
- Windows Management Instrumentation (WMI) のライブラリへの呼び出しをラップする Api について説明します。
+ Windows Management Instrumentation (WMI) ライブラリへの呼び出しをラッピングするAPI について説明します。
   
  [Tlbexp ヘルパー関数](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  タイプ ライブラリ エクスポーター (Tlbexp.exe) がアセンブリからタイプ ライブラリへの変換プロセス中に使用する、2 つのヘルパー関数とインターフェイスについて説明します。  
@@ -65,4 +65,4 @@ ms.locfileid: "33442918"
 ## <a name="related-sections"></a>関連項目  
  [開発ガイド](../../../docs/framework/development-guide.md)  
   
- [.NET Framework の高度な読み取り](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [.NET Framework の高度な読み取り](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
