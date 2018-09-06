@@ -3,11 +3,11 @@ title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: 2849d159fbfdb0c0739b76fd288a987d4ce3d02f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560146"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786066"
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet> は、テーブル、リレーションシップ、および制約のコレクションで構成されます。 ADO.NET では、<xref:System.Data.DataTable>オブジェクトは、テーブルを表すために使用する**データセット**します。 A **DataTable**リレーショナル データをメモリ内の 1 つのテーブルを表すデータがローカルにします。NET ベースのアプリケーションが存在するを使用して Microsoft SQL Server などのデータ ソースからデータを読み込むことができます、 **DataAdapter**詳細については、次を参照してください[DataAdapter からの Dataset](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  

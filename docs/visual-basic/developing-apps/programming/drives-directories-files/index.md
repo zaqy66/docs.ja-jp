@@ -10,11 +10,11 @@ helpviewer_keywords:
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
 ms.openlocfilehash: 0c9c1c787138595f725316a580acda9c5d4d43a9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43662658"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777565"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>ドライブ、ディレクトリ、およびファイルの処理 (Visual Basic)
 Visual Basic では、`My.Computer.FileSystem` オブジェクトを使用して、ドライブ、フォルダー、ファイルを処理できます。このオブジェクトは、`FileOpen` 関数や `Write` 関数などの従来のメソッドに比べて、パフォーマンスが優れており、使い方も簡単です (従来のメソッドも引き続き使用できます)。 以下のセクションでは、これらの方法について詳しく説明します。  

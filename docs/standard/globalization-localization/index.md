@@ -14,11 +14,11 @@ ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 653a39d1e217d0478ff7c9b01c6ac146fe6b5fac
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561250"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43786441"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET アプリケーションのグローバライズとローカライズ
 1 つ以上の言語にローカライズされるアプリケーションなど、[国際対応アプリケーション](https://msdn.microsoft.com/goglobal/bb978433.aspx)を開発するには、グローバリゼーション、ローカライズ対象の確認、およびローカリゼーションの 3 つの手順が必要です。  
