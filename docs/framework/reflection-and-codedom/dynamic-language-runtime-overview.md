@@ -10,11 +10,11 @@ ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a4645efc9276429cbdb0812f1ca501c89ea5dbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557338"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855153"
 ---
 # <a name="dynamic-language-runtime-overview"></a>動的言語ランタイムの概要
 *動的言語ランタイム* (DLR) とは、動的言語の一連のサービスを共通言語ランタイム (CLR) に追加するランタイム環境です。 DLR により、.NET Framework 上で実行される動的言語の開発や、静的に型指定された言語への動的機能の追加が簡単になります。  
