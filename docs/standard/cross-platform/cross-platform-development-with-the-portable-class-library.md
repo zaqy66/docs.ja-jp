@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 628c571ce645710482a29c813adb4fe1a59fd349
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bd5ad69cc661005d20db4c4bcdda762c6432f416
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745409"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886059"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>汎用性のあるクラス ライブラリを使用したプラットフォーム間の開発
 Visual Studio の .NET Framework ポータブル クラス ライブラリ プロジェクト タイプにより、Microsoft プラットフォームを対象としたクロスプラットフォーム アプリとライブラリをすばやく簡単に開発できます。  
@@ -32,7 +32,7 @@ Visual Studio の .NET Framework ポータブル クラス ライブラリ プ�
 > [!WARNING]
 >  Visual Studio 2013 Update 2 には、ポータブル クラス ライブラリ テンプレートの更新が含まれています。 以前のバージョンの Visual Studio と Visual Studio 2013 が同じコンピューターにインストールされているがあり、その後、更新プログラム 2 への変更をインストールする場合、**ターゲット フレームワーク**の選択肢は、Visual Studio の両方のバージョンに適用されます。  
   
- このトピックの内容  
+ このトピックの内容:  
   
  [Visual Studio のサポート](#vs_support)  
  [ポータブル クラス ライブラリ プロジェクトを作成します。](#create_pcl)  
@@ -221,9 +221,10 @@ Visual Studio 2012 の [ターゲットの変更] ダイアログ ボックス
 </div>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MVVM を利用した汎用性のあるクラス ライブラリの使用](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
- [複数のプラットフォームを対象とするライブラリのアプリケーション リソース](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
- [.NET portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
- [配置](../../../docs/framework/deployment/net-framework-applications.md)
+## <a name="see-also"></a>関連項目
+
+- [MVVM を利用した汎用性のあるクラス ライブラリの使用](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
+- [複数のプラットフォームを対象とするライブラリのアプリケーション リソース](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+- [.NET portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+- [配置](../../../docs/framework/deployment/net-framework-applications.md)
