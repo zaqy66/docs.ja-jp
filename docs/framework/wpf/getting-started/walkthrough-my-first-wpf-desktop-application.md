@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38f6e16616ad931641539d3ae164381ddd9ad941
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a8f806a1f1f7840f21e82d77d1b639b9318259e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931726"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885182"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
 
@@ -38,7 +38,7 @@ ms.locfileid: "42931726"
 チュートリアルの目的は、スタンドアロンのユーザーを選択したユーザーの経費報告書を表示できる Windows アプリケーションを構築したします。 アプリケーションは、ブラウザー スタイルのウィンドウでホストされているいくつかの WPF ページで構成されます。
 
 > [!TIP]
-> このチュートリアルの構築に使用するサンプル コードでは、Visual Basic と c# で使用可能な[Introduction to Building WPF Applications](http://go.microsoft.com/fwlink/?LinkID=160008)します。
+> このチュートリアルの構築に使用するサンプル コードでは、Visual Basic と c# で使用可能な[Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008)します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -83,7 +83,7 @@ ms.locfileid: "42931726"
 
     この XAML ファイルは、アプリケーションのメイン ウィンドウであるため、ページで作成されたコンテンツを表示します。 <xref:System.Windows.Window>クラスは、タイトル、サイズ、アイコンなど、ウィンドウのプロパティを定義し、閉じるか、非表示などのイベントを処理します。
 
-4. 変更、<xref:System.Windows.Window>要素を<xref:System.Windows.Navigation.NavigationWindow>の次の XAML に示しますように。
+4. <xref:System.Windows.Navigation.NavigationWindow>.xaml の<xref:System.Windows.Window>要素を、次に示すように変更します。
 
    ```xaml
    <NavigationWindow x:Class="ExpenseIt.MainWindow"
@@ -93,7 +93,7 @@ ms.locfileid: "42931726"
    </NavigationWindow>
    ```
 
-   このアプリは、ユーザーの入力に応じてさまざまなコンテンツに移動します。 これは、ため、main<xref:System.Windows.Window>に変更する必要があります、<xref:System.Windows.Navigation.NavigationWindow>します。 <xref:System.Windows.Navigation.NavigationWindow> すべてのプロパティを継承<xref:System.Windows.Window>します。 <xref:System.Windows.Navigation.NavigationWindow> XAML ファイル内の要素のインスタンスを作成する、<xref:System.Windows.Navigation.NavigationWindow>クラス。 詳細については、次を参照してください。[ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)します。
+   このアプリは、ユーザーの入力に応じてさまざまなコンテンツに移動します。 そのため、メイン ウィンドウを<xref:System.Windows.Window>から<xref:System.Windows.Navigation.NavigationWindow>に変更する必要があります。 <xref:System.Windows.Navigation.NavigationWindow>  は、<xref:System.Windows.Window>のすべてのプロパティを継承しています。 <xref:System.Windows.Navigation.NavigationWindow> XAML ファイル内の要素のインスタンスを作成する、<xref:System.Windows.Navigation.NavigationWindow>クラス。 詳細については、次を参照してください。[ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)します。
 
 5. 次のプロパティを変更、<xref:System.Windows.Navigation.NavigationWindow>要素。
 
@@ -326,7 +326,7 @@ ms.locfileid: "42931726"
 
 1. 開いている *`ExpenseItHome.xaml`* します。
 
-2. 追加、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント ハンドラーを<xref:System.Windows.Controls.Button>要素。 詳細については、次を参照してください。[方法: 単純なイベント ハンドラーを作成](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)です。
+2. 追加、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント ハンドラーを<xref:System.Windows.Controls.Button>要素。 詳細については、次を参照してください。[方法: 単純なイベント ハンドラーを作成](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)です。
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -464,7 +464,7 @@ ms.locfileid: "42931726"
 
     [!code-xaml[ExpenseIt#30](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#30)]
 
-4. テンプレートを適用する、<xref:System.Windows.Controls.DataGrid>経費を表示する列がデータを報告します。
+4. 置換、<xref:System.Windows.Controls.DataGridTextColumn>を持つ要素<xref:System.Windows.Controls.DataGridTemplateColumn>、<xref:System.Windows.Controls.DataGrid>要素とそれらにテンプレートを適用します。
 
     [!code-xaml[ExpenseIt#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 
