@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 51df8ad695b3e59b368499d35ac76cc7ac0cd6e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5465238e4b9deaa13c76cb35122fcaded7acd7f7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363365"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736660"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET アプリケーションでの SqlDependency
 ここでは、ASP.NET の <xref:System.Data.SqlClient.SqlDependency> オブジェクトを使用して、<xref:System.Web.Caching.SqlCacheDependency> を間接的に使用する方法の例を示します。 <xref:System.Web.Caching.SqlCacheDependency> オブジェクトでは <xref:System.Data.SqlClient.SqlDependency> を使用して通知をリッスンし、キャッシュを適切に更新します。  
   
 > [!NOTE]
->  サンプル コードは、内のスクリプトを実行することによって、クエリ通知を有効にした前提としています。[クエリ通知の有効化](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)です。  
+>  サンプル コードは、内のスクリプトを実行することによって、クエリ通知を有効にした前提としています。[クエリ通知を有効にする](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)します。  
   
 ## <a name="about-the-sample-application"></a>サンプル アプリケーションについて  
  サンプル アプリケーションでは、単一の ASP.NET Web ページを使用して、製品情報を表示、 **AdventureWorks**で SQL Server データベース、<xref:System.Web.UI.WebControls.GridView>コントロール。 ページが読み込まれる際に、<xref:System.Web.UI.WebControls.Label> コントロールに現在の時刻が入力されます。 次に、<xref:System.Web.Caching.SqlCacheDependency> オブジェクトを定義し、最長 3 分間キャッシュ データを格納するように <xref:System.Web.Caching.Cache> オブジェクトのプロパティを設定します。 その後、データベースに接続し、データを取得します。 ページが読み込まれ、アプリケーションが実行されると、ASP.NET ではキャッシュからデータが取得されます。これは、ページ上の時刻が変更されないことで確認できます。 監視しているデータが変化すると、ASP.NET によりキャッシュが無効化され、`GridView` コントロールに最新データが再入力されることで、`Label` コントロールに表示される時刻が更新されます。  
@@ -47,7 +47,7 @@ ms.locfileid: "33363365"
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  `GetConnectionString` および `GetSQL` という 2 つのヘルパー メソッドを追加します。 定義される接続文字列は、統合セキュリティを利用します。 使用しているアカウントと必要なデータベース アクセス許可があることを確認する必要があります、サンプル データベース**AdventureWorks**が有効になっている通知します。 詳細については、次を参照してください。[特別な考慮事項とを使用してクエリ通知](http://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7)です。  
+5.  `GetConnectionString` および `GetSQL` という 2 つのヘルパー メソッドを追加します。 定義される接続文字列は、統合セキュリティを利用します。 使用しているアカウントが必要なデータベース権限とのことを確認する必要があります、サンプル データベース**AdventureWorks**が通知を有効にします。 詳細については、次を参照してください。[特別な考慮事項とを使用してクエリ通知](https://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7)します。  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  
@@ -59,4 +59,4 @@ ms.locfileid: "33363365"
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server のクエリ通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET のマネージ プロバイダーと DataSet デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

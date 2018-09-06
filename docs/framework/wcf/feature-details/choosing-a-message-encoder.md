@@ -3,11 +3,11 @@ title: メッセージ エンコーダーを選択する
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 5d2b55f04954cdd855ff9e224d2bc0405919f7a3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535189"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773108"
 ---
 # <a name="choosing-a-message-encoder"></a>メッセージ エンコーダーを選択する
 このトピックでは、Windows Communication Foundation (WCF) に含まれているメッセージ エンコーダーを選択するための基準をについて説明します。 バイナリ、テキスト、および Message Transmission Optimization Mechanism (MTOM)。  

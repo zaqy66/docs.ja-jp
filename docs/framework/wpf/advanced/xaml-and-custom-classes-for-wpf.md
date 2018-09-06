@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
 ms.openlocfilehash: acf3ba12a9a7e6ba9a8e378892098f5f265a23d9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461801"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779761"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF における XAML とカスタム クラス
 XAML に実装されている[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]フレームワークは、いずれかで、カスタムのクラスまたは構造体を定義する機能をサポートしている[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]言語、およびしアクセス クラスの XAML マークアップを使用しています。 組み合わせを使用できる[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-XAML 名前空間のプレフィックスにカスタムの型をマップして、通常の種類と同じマークアップ ファイル内でカスタム型を定義します。 このトピックでは、XAML 要素として使用するのには、カスタム クラスが満たす必要がある要件について説明します。  

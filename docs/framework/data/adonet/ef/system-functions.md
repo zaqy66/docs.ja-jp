@@ -2,19 +2,19 @@
 title: システム関数
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
-ms.openlocfilehash: 91c8e178fc6903dddc287ac2ca00c3152a9e3ce7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 277f2f9c69610b134f3f95787f065f65b01712d2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765725"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749302"
 ---
 # <a name="system-functions"></a>システム関数
 .NET Framework Data Provider for SQL Server (SqlClient) には、次のシステム関数が用意されています。  
   
 |関数|説明|  
 |--------------|-----------------|  
-|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|チェックサム値を返します。 `CHECKSUM` は、ハッシュ インデックスの作成に使用します。<br /><br /> **引数**<br /><br /> `value`: A `Boolean`、 `Byte`、 `Int16`、 `Int32`、 `Int64`、 `Single`、 `Decimal`、 `Double`、 `DateTime`、 `String`、 `Binary`、または`Guid`です。 1 つ、2 つ、または 3 つの値を指定できます。<br /><br /> **戻り値**<br /><br /> 指定された式の絶対値。<br /><br /> **例**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
+|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|チェックサム値を返します。 `CHECKSUM` は、ハッシュ インデックスの作成に使用します。<br /><br /> **引数**<br /><br /> `value`: A `Boolean`、 `Byte`、 `Int16`、 `Int32`、 `Int64`、 `Single`、 `Decimal`、 `Double`、 `DateTime`、 `String`、 `Binary`、または`Guid`します。 1 つ、2 つ、または 3 つの値を指定できます。<br /><br /> **戻り値**<br /><br /> 指定された式の絶対値。<br /><br /> **例**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
 |`CURRENT_TIMESTAMP ()`|有効桁数が 7 (SQL Server 2008) または 3 (SQL Server 2005) の `DateTime` 値に使用する現在の日付と時刻を SQL Server の内部形式で生成します。<br /><br /> **戻り値**<br /><br /> 現在のシステム日時を `DateTime` として表現した値。<br /><br /> **例**<br /><br /> `SqlServer.CURRENT_TIMESTAMP()`|  
 |`CURRENT_ USER` `()`|現在のユーザーの名前を返します。<br /><br /> **戻り値**<br /><br /> ASCII の `String`。<br /><br /> **例**<br /><br /> `SqlServer.CURRENT_USER()`|  
 |`DATALENGTH` `(` `expression` `)`|式を表すために必要なバイト数を返します。<br /><br /> **引数**<br /><br /> `expression`: A `Boolean`、 `Byte`、 `Int16`、 `Int32`、 `Int64`、 `Single`、 `Decimal`、 `Double`、 `DateTime`、 `Time`、 `DateTimeOffset`、 `String`、 `Binary`、または`Guid`.<br /><br /> **戻り値**<br /><br /> プロパティのサイズ (`Int32`)。<br /><br /> **例**<br /><br /> `SELECT VALUE SqlServer.DATALENGTH(P.Name)FROM`<br /><br /> `AdventureWorksEntities.Product AS P`|  
@@ -28,7 +28,7 @@ ms.locfileid: "32765725"
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[システム関数 Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115918)|[システム関数 Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115917)|[システム関数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115919)|  
+|[システム関数 Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[システム関数 Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[システム関数 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
   
 ## <a name="see-also"></a>関連項目  
  [Entity SQL 言語](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  

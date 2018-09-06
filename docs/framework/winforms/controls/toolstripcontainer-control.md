@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: d969e456c16f344e9f301511a89615b3c741151b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb05627925534820544edc15e1fe06bf57f0ae84
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538849"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740963"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer コントロール
 <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolStripContainer> の使用による、ビルトイン ラフティング (ドッキングされているときに、ツールの領域内の水平または垂直のスペースを共有) を備えています。  
@@ -35,7 +35,7 @@ ms.locfileid: "33538849"
  <xref:System.Windows.Forms.ToolStripContentPanel>  
  <xref:System.Windows.Forms.ToolStripContainer> コントロールの <xref:System.Windows.Forms.ToolStripContentPanel> のリファレンス ドキュメントを提供します。  
   
- 参照してください[ToolStripContainer タスク ダイアログ ボックス](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))です。  
+ 参照してください[ToolStripContainer タスク ダイアログ ボックス](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))します。  
   
 ## <a name="related-sections"></a>関連項目  
  <xref:System.Windows.Forms.ToolStripPanel>  

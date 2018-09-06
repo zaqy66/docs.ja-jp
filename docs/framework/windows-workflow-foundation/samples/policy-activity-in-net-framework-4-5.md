@@ -3,11 +3,11 @@ title: .NET Framework 4.5 のポリシー アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
 ms.openlocfilehash: 9d8983f2f1d3f75beffeacfff4b673f6c23c4204
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390129"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741235"
 ---
 # <a name="policy-activity-in-net-framework-45"></a>.NET Framework 4.5 のポリシー アクティビティ
 Policy4 アクティビティでの Windows Workflow Foundation [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクトでの Windows Workflow Foundation で使用される[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) WF 3.5 に付属しているルール エンジンを使用して直接します。 このアクティビティを使用すると、WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> を作成して実行できます。 Windows Workflow Foundation の一部として含まれている WF 3.5 ルール エンジンの詳細については、Windows Workflow Foundation ルール エンジンの概要を参照してください。 移行の詳細については WF へのルール[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]をお読みください[移行ガイダンス](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)します。  

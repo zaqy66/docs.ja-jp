@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
 ms.openlocfilehash: 1a0d92c7acad58d3618c3f50b7463022352cf542
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560858"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741962"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>データベースからの単一の値の取得
 テーブルやデータ ストリームの形式ではなく、単に 1 つの値をデータベース情報として返すことが必要な場合があります。 たとえば、数などの集約関数の結果を返すようにする可能性があります (\*)、SUM(Price)、または AVG(Quantity) します。 **コマンド**オブジェクトを使用して 1 つの値を返す機能を提供する、 **ExecuteScalar**メソッド。 **ExecuteScalar**メソッドはスカラー値、結果セットの最初の行の最初の列の値として返します。  

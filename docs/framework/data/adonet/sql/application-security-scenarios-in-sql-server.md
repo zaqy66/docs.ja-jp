@@ -3,11 +3,11 @@ title: SQL Server におけるアプリケーション セキュリティのシ�
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535990"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777809"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server におけるアプリケーション セキュリティのシナリオ
 安全な SQL Server クライアント アプリケーションを作成するにあたって、絶対に正しいという唯一の方法はありません。 アプリケーションの要件、配置環境、およびユーザー数は、アプリケーションごとに異なります。 配置した当初は十分なセキュリティが確保されたアプリケーションも、時間の経過と共に安全性が低下してゆくことが考えられます。 将来発生する脅威を正確に予測することは不可能です。  

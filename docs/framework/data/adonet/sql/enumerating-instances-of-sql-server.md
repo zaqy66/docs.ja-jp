@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481789"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776302"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server のインスタンスの列挙 (ADO.NET)
 SQL Server には、現在のネットワーク内の SQL Server インスタンスを検索するアプリケーションが許可されます。 <xref:System.Data.Sql.SqlDataSourceEnumerator> クラスは、表示可能なすべてのサーバーに関する情報が含まれた <xref:System.Data.DataTable> を提供することで、アプリケーション開発者にこの情報を公開します。 これは、テーブルには、ユーザーが新しい接続を作成しようとしたときに指定された一覧と一致してで使用可能なすべてのサーバーを含むドロップダウン リストを展開するネットワークで使用できるサーバー インスタンスの一覧が含まれています返される、**接続。プロパティ** ダイアログ ボックス。 結果には一部のインスタンスが表示されないことがあります。  

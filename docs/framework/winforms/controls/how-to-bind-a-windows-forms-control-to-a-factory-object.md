@@ -12,11 +12,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
 ms.openlocfilehash: f085e7b7d20f958a90777ddb820924a07a5e2d8d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534991"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43780065"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>方法 : Windows フォーム コントロールをファクトリ オブジェクトにバインドする
 データをやり取りするコントロールを作成している際に、他のオブジェクトを生成するオブジェクトやメソッドにコントロールをバインドすることが必要な場合があります。 このようなオブジェクトやメソッドは、ファクトリと呼ばれます。 たとえば、データ ソースがメモリまたは型内のオブジェクトではなく、メソッドの呼び出しからの戻り値の場合があります。 ソースがコレクションを返す限り、コントロールをこの種類のデータ ソースにバインドできます。  

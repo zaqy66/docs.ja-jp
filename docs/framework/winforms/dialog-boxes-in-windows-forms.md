@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
 ms.openlocfilehash: ef07c087ca43efaf99231453fcb56af0db24234a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733249"
+ms.locfileid: "43776951"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Windows フォームのダイアログ ボックス
 ダイアログ ボックスは、ユーザーとのやり取りおよび情報の取得のために使用します。 簡単に言えば、ダイアログ ボックスとは <xref:System.Windows.Forms.FormBorderStyle> 列挙値のプロパティが `FixedDialog` に設定されたフォームのことです。 Visual Studio で、Windows フォーム デザイナーを使用して、独自のカスタム ダイアログ ボックスを作成できます。 `Label`、`Textbox`、および `Button` などのコントロールを追加し、ダイアログ ボックスを特定のニーズに合わせてカスタマイズできます。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]もなど、定義済みのダイアログ ボックスが含まれます**ファイルを開く**とメッセージ ボックスは、独自のアプリケーションを調整できます。 詳細については、次を参照してください。 [ ダイアログ ボックス コントロールおよびコンポーネント](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)します。  

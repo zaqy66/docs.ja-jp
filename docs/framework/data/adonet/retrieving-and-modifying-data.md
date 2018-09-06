@@ -3,11 +3,11 @@ title: ADO.NET でのデータの取得および変更
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562564"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779352"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET でのデータの取得および変更
 データベース アプリケーションの主な機能は、データ ソースとの接続およびデータベースに格納されているデータの取得です。 使用してデータの取得も同様のコマンドを実行することができます、アプリケーションと、データ ソース間のブリッジとしての ADO.NET の .NET Framework データ プロバイダーの機能、 **DataReader**または**DataAdapter**. データベースに格納されているデータを更新する機能は、データベース アプリケーションの重要な機能の 1 つです。 ADO.NET では、データを更新する必要がありますを使用して、 **DataAdapter**と<xref:System.Data.DataSet>、および**コマンド**オブジェクトも含まれますトランザクションを使用します。  

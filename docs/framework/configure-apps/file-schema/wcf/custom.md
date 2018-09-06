@@ -2,12 +2,12 @@
 title: '&lt;custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 19f960c14b6171557ec0f353dae34f26d7a7686c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748361"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776224"
 ---
 # <a name="ltcustomgt"></a>&lt;custom&gt;
 ユーザー設定のピア リゾルバー サービスの設定を指定します。  
@@ -52,8 +52,8 @@ ms.locfileid: "32748361"
 |-------------|-----------------|  
 |[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|ピア メッシュ ID を解決してメッシュに参加する複数ノードを表すピア ノード アドレスのセットを取得するために使用されるピア リゾルバー。|  
   
-## <a name="remarks"></a>コメント  
- この要素は、サービスをホストするピアのエンドポイント アドレスや特定のバインディング設定など、カスタム ピア リゾルバー サービスの基本設定を定義します。 カスタム競合回避モジュールを作成する方法の詳細については、次を参照してください。 [PeerChannel アプリケーションにカスタム競合回避モジュールを追加する](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)です。  
+## <a name="remarks"></a>Remarks  
+ この要素は、サービスをホストするピアのエンドポイント アドレスや特定のバインディング設定など、カスタム ピア リゾルバー サービスの基本設定を定義します。 カスタム競合回避モジュールを作成する方法の詳細については、次を参照してください。 [PeerChannel アプリケーションへのカスタム競合回避モジュールの追加](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
@@ -61,4 +61,4 @@ ms.locfileid: "32748361"
  <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
  <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
  [ピア リゾルバー](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [PeerChannel アプリケーションにカスタム競合回避モジュールを追加します。](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+ [PeerChannel アプリケーションへのカスタム競合回避モジュールの追加](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

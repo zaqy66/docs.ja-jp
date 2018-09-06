@@ -1,17 +1,17 @@
 ---
 title: 結果 (f#)
-description: エラー トレラント コードを作成するのに役立つ、f# '結果' の型を使用する方法を説明します。
+description: F# の '発生' 型を使用して、エラー トレラントなコードを作成できるようにする方法について説明します。
 ms.date: 04/24/2017
-ms.openlocfilehash: 432e420ba7c2005caa46250dde82c2c67c9d3ae3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563009"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749250"
 ---
 # <a name="results"></a>結果
 
-4.1 以降では f# である、`Result<'T,'TFailure>`組み込むことのできるエラー トレラント コードを記述するために使用できる型です。
+F# 4.1 以降では、ある、`Result<'T,'TFailure>`できるエラー トレラントのコードを書くために使用できる型。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ type Result<'T,'TError> =
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-結果の型は、[構造体の判別共用体](discriminated-unions.md#struct-discriminated-unions)、f# 4.1 で導入された他の機能であります。  ここの構造の等値セマンティクスが適用されます。
+結果型は、[構造体の判別共用体](discriminated-unions.md#struct-discriminated-unions)、f# 4.1 で導入されたもう 1 つの機能であります。  構造の等値セマンティクスがここに適用されます。
 
-`Result` Monadic エラーの処理では、多くの場合と呼ばれる型が使用される通常[連続的指向プログラミング](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)f# のコミュニティ内です。  次の単純な例では、この方法を示します。
+`Result`モナディック エラー処理と呼ばれるに多くの場合で、型が通常使用される[鉄道指向プログラミング](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)f# コミュニティ内で。  次の単純な例では、この方法を示します。
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,10 +80,9 @@ let test() =
 test()
 ```
 
-非常に簡単をすべて返すことを強制した場合は、さまざまな検証機能を連結することがわかります、`Result`です。  これによりを細かくする必要があるとコンポーザブルとしては次のような機能に分割できます。  付加価値もあります*強制*の使用[パターンに一致する](pattern-matching.md)検証のラウンドの最後に、プログラムの正確性を適用する交替でします。
+非常に簡単に返すためにすべてを強制する場合は、さまざまな検証機能を連結、ご覧のとおり、`Result`します。  このような機能を必要に応じて、コンポーザブルである小規模なを分割するこのことができます。  これも、追加の値を持つ*を適用する*の使用[パターンに一致する](pattern-matching.md)検証のラウンドの末尾には、プログラムの正確性の高いを適用すると、それに続いて。
 
 ## <a name="see-also"></a>関連項目
 
-[判別共用体](discriminated-unions.md)
-
-[パターン一致](pattern-matching.md)
+- [判別共用体](discriminated-unions.md)
+- [パターン一致](pattern-matching.md)

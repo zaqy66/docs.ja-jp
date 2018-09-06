@@ -2,12 +2,12 @@
 title: 基本的な型 (f#)
 description: F# 言語で使用される基本的な基本的な型を検出します。
 ms.date: 07/09/2018
-ms.openlocfilehash: fdb5e95e102fcf721569156c7fb3a32604fff1dd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937199"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777208"
 ---
 # <a name="basic-types"></a>基本的な型
 
@@ -38,4 +38,5 @@ ms.locfileid: "37937199"
 使用して、64 ビット整数型の整数が大きすぎると計算を行うことができます、 [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa)型。 `bigint` 基本的な型であるとは見なされません省略形は`System.Numerics.BigInteger`します。
 
 ## <a name="see-also"></a>関連項目
-[F# 言語リファレンス](index.md)
+
+- [F# 言語リファレンス](index.md)

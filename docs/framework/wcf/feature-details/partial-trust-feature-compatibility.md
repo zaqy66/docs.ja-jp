@@ -3,11 +3,11 @@ title: 部分信頼機能の互換性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43451663"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745597"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信頼機能の互換性
 Windows Communication Foundation (WCF) では、部分信頼環境で実行されている場合、機能の限定されたサブセットがサポートされます。 部分信頼でサポートされる機能は、「 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 」のトピックで説明される特定のシナリオを念頭にデザインされています。  

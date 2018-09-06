@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: 5b0fbf50455545a12adbc03bf2cd05d52de69936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553789"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746247"
 ---
 # <a name="panel-how-to-topics"></a>パネルに関する「方法」トピック
-このセクションのトピックを使用する方法について説明、<xref:System.Windows.Controls.Panel>要素および関連する[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]です。  
+このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.Panel>要素および関連[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: 要素に、LayoutTransform を適用](http://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
+ [方法: 要素に、LayoutTransform を適用します。](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [カスタム パネル要素を作成する](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [パネルの OnRender メソッドをオーバーライドする](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
  [要素の Height プロパティを設定する](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - DataRepeater, topic list
 ms.assetid: 68e0cf5e-e2cb-480a-80cc-d13eb6c9b3dd
 ms.openlocfilehash: 0d317310a7ae9369fab32acfe30a61d2c20c96c2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422518"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776263"
 ---
 # <a name="datarepeater-control-visual-studio"></a>DataRepeater コントロール (Visual Studio)
 Visual Basic Power Packs の <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> コントロールは、データベース テーブルの行などの繰り返されるデータを表示するコントロールの、スクロール可能なコンテナーです。 データのレイアウトを詳細に制御する必要がある場合は、 <xref:System.Windows.Forms.DataGridView> コントロールの代わりにこのコントロールを使用できます。  

@@ -2,12 +2,12 @@
 title: サンプル データベースのダウンロード
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 4f5799b395abbbb5a4e61bac9572c808bb4ad5a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359677"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741703"
 ---
 # <a name="downloading-sample-databases"></a>サンプル データベースのダウンロード
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のドキュメントに収録されている多数のサンプルとチュートリアルでは、Northwind サンプル データベースと SQL Server Express Edition が使用されています。 これらの製品は、Microsoft のダウンロード サイトから無料でダウンロードできます。  
@@ -18,26 +18,26 @@ ms.locfileid: "33359677"
   
 1.  Internet Explorer を開始します。  
   
-2.  移動して、 [Northwind および Pubs サンプル データベース](http://go.microsoft.com/fwlink?linkid=64296)Web サイトです。  
+2.  移動して、 [Northwind および Pubs サンプル データベース](https://go.microsoft.com/fwlink?linkid=64296)Web サイト。  
   
 3.  **[ダウンロード]** をクリックします。  
   
-4.  **ファイルのダウンロード**ダイアログ ボックスで、**保存**です。  
+4.  **ファイルのダウンロード**ダイアログ ボックスで、**保存**します。  
   
-5.  ファイルをダウンロード後をダブルクリックして、 **Nwind.exe**データベースをインストールするファイル。  
+5.  ファイルがダウンロードされたら、ダブルクリック、 **Nwind.exe**データベースをインストールするファイル。  
   
-     既定では、データベースがインストールされているで*ドライブ*: \SQL Server 2000 Sample Databases です。  
+     既定では、データベースがインストールされている*ドライブ*: \SQL Server 2000 Sample Databases します。  
   
 ## <a name="downloading-sql-server-express-edition"></a>SQL Server Express Edition のダウンロード  
- SQL Server Express Edition は無料で入手でき、アプリケーションと共に再配布できます。 Visual Studio を使用している場合は、Pro 以上のエディションの SQL Server Express Edition が含まれています。  
+ SQL Server Express Edition は無料で入手でき、アプリケーションと共に再配布できます。 Visual Studio を使用している場合は、Pro 以上のエディションの SQL Server Express Edition が含まれます。  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express Edition をダウンロードおよびインストールするには  
   
 1.  Internet Explorer を開始します。  
   
-2.  移動して、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink?linkid=74602) Web サイトです。  
+2.  移動して、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink?linkid=74602) Web サイト。  
   
-3.  [キーワード] ボックスで、次のように入力します。 **SQL Server Express**です。  
+3.  キーワード ボックスに「 **SQL Server Express**します。  
   
 4.  **[検索]** をクリックします。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "33359677"
 6.  Web サイトに記載されているインストールの指示に従います。  
   
 ## <a name="downloading-management-studio-express"></a>Management Studio Express のダウンロード  
- データベースにアクセスするにはダウンロードしたデータベースを変更する場合は、**サーバー エクスプ ローラー** Visual studio 統合開発環境 (IDE)、または Microsoft SQL Server Management Studio Express (SSMSE) を使用します.  
+ データベースにアクセスするにはダウンロードしたデータベースを変更する場合は、**サーバー エクスプ ローラー** Visual studio 統合開発環境 (IDE)、または Microsoft SQL Server Management Studio Express (SSMSE) を使用して、.  
   
 #### <a name="to-download-management-studio-express"></a>Management Studio Express をダウンロードするには  
   
--   ある手順に従って、 [SSMSE サイト](http://go.microsoft.com/fwlink/?LinkId=95933)です。  
+-   ある手順に従って、 [SSMSE サイト](https://go.microsoft.com/fwlink/?LinkId=95933)します。  
   
 ## <a name="see-also"></a>関連項目  
  [はじめに](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
