@@ -2,12 +2,12 @@
 title: コンピュテーション式 (F#)
 description: F# でシーケンス処理できるし、制御フローの作成とバインドを使用して結合で計算を作成するための便利な構文を作成する方法について説明します。
 ms.date: 07/27/2018
-ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "36207434"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800918"
 ---
 # <a name="computation-expressions"></a>コンピュテーション式
 
@@ -229,8 +229,6 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 上記のコードへの呼び出しで`Run`と`Delay`計算式ビルダー クラスで定義されていない場合は省略します。 としてここで示される、計算式の本体`{| cexpr |}`は、次の表で説明されている翻訳によってビルダー クラスのメソッドに関連する呼び出しに変換されます。 コンピュテーション式`{| cexpr |}`に従ってこれらの変換を再帰的に定義されているは、 `expr` f# の式と`cexpr`計算式です。
 
-
-
 |正規表現|変換|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
@@ -361,7 +359,7 @@ let comp = eventually {
         printfn " x = %d" x
     return 3 + 4 }
 
-// Try the remaining lines in F# interactive to see how this 
+// Try the remaining lines in F# interactive to see how this
 // computation expression works in practice.
 let step x = Eventually.step x
 
@@ -386,9 +384,11 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 コンピュテーション式には、式から返される、基になる型があります。 計算の結果または遅延の計算を実行できる、基になる型を表すことがあります。 または何らかの種類のコレクションを反復処理する方法を提供できます。 前の例では、基になる型が**最終的に**します。 シーケンス式では、基になる型は<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>します。 クエリ式では、基になる型は<xref:System.Linq.IQueryable?displayProperty=nameWithType>します。 非同期ワークフローでは、基になる型は[ `Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)します。 `Async`オブジェクトは、結果を計算するために実行する作業を表します。 たとえば、呼び出す[ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)計算を実行し、結果が返されます。
 
 ## <a name="custom-operations"></a>カスタム操作
+
 コンピュテーション式のカスタム処理を定義し、オペレーターはコンピュテーション式でカスタム操作を使用できます。 たとえば、クエリ式でクエリ演算子を含めることができます。 カスタム操作を定義するときに、Yield を定義する必要がありますとコンピュテーション式内のメソッド。 カスタム操作を定義するには、そのコンピュテーション式のビルダー クラスに配置し、適用、 [ `CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)します。 この属性は、カスタム操作で使用する名前を引数として文字列を受け取ります。 この名前は、そのコンピュテーション式の中かっこの開始時のスコープに渡されます。 そのため、このブロックでカスタム操作と同じ名前を指定する識別子を使用しないでください。 たとえばなどの識別子の使用を避ける`all`または`last`クエリ式で。
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>新しいカスタム操作で既存のビルダーを拡張します。
+
 ビルダー クラスは、既にある場合は、このビルダー クラスの外部からのカスタム操作が拡張できます。 拡張機能は、モジュール内で宣言する必要があります。 名前空間には、同じファイルで、型が定義されている同じ名前空間宣言のグループを除く拡張メンバーを含めることはできません。
 
 次の例は、既存の拡張機能`Microsoft.FSharp.Linq.QueryBuilder`クラス。
@@ -402,10 +402,8 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 ```
 
 ## <a name="see-also"></a>関連項目
-[F# 言語リファレンス](index.md)
 
-[非同期ワークフロー](asynchronous-workflows.md)
-
-[シーケンス](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-
-[クエリ式](query-expressions.md)
+- [F# 言語リファレンス](index.md)
+- [非同期ワークフロー](asynchronous-workflows.md)
+- [シーケンス](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [クエリ式](query-expressions.md)
