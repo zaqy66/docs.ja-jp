@@ -11,47 +11,47 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31dd785c419d9a8e11eb23deabd2dfa71c4d6e9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99d38b336b5e655dd1c96682eec90c5fbe8469d6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572347"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885299"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>方法: 埋め込みリソースからタイム ゾーンを復元
 
-このトピックでは、リソース ファイルに保存されているタイム ゾーンを復元する方法について説明します。 タイム ゾーンを保存する方法についてを参照してください[する方法: 埋め込みリソースにタイム ゾーンを保存](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)です。
+このトピックでは、リソース ファイルに保存されているタイム ゾーンを復元する方法について説明します。 情報およびタイム ゾーンを保存する方法の手順では、次を参照してください。[方法: 埋め込みリソースにタイム ゾーンを保存](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)します。
 
 ### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>埋め込みリソースから TimeZoneInfo オブジェクトを逆シリアル化するには
 
-1. 取得するタイム ゾーンが、カスタム タイム ゾーンでない場合は、インスタンス化しようとそれを使用して、<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>メソッドです。
+1. 取得するタイム ゾーンでない場合、カスタム タイム ゾーンを使用してインスタンス化することをお試しください。、<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>メソッド。
 
-2. インスタンスを作成、<xref:System.Resources.ResourceManager>埋め込みリソース ファイルとリソース ファイルを格納するアセンブリへの参照の完全修飾名を渡すことによってオブジェクト。
+2. インスタンスを作成、<xref:System.Resources.ResourceManager>リソース ファイルを含むアセンブリへの参照と埋め込みリソース ファイルの完全修飾名を渡すことによってオブジェクト。
 
-   使用して、埋め込みリソース ファイルの完全修飾名を特定できない場合、 [Ildasm.exe (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)アセンブリのマニフェストを検査します。 `.mresource`エントリは、リソースを識別します。 リソースの完全修飾名は、例では、`SerializeTimeZoneData.SerializedTimeZones`です。
+   使用して、埋め込みリソース ファイルの完全修飾名を特定できない場合、 [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)アセンブリのマニフェストを確認します。 `.mresource`エントリは、リソースを識別します。 リソースの完全修飾名は、例では、`SerializeTimeZoneData.SerializedTimeZones`します。
 
-   呼び出してへの参照を取得するには、リソース ファイルがタイム ゾーンのインスタンス化コードを含む同じアセンブリに埋め込まれている場合、 `static` (`Shared` Visual Basic で)<xref:System.Reflection.Assembly.GetExecutingAssembly%2A>メソッドです。
+   呼び出してへの参照を取得するには、リソース ファイルは、タイム ゾーンのインスタンス化コードを含む同じアセンブリに埋め込まれている場合、 `static` (`Shared` Visual Basic で)<xref:System.Reflection.Assembly.GetExecutingAssembly%2A>メソッド。
 
-3. 場合への呼び出し、<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>メソッドが失敗する、または、カスタム タイム ゾーンをインスタンス化する場合は、呼び出すことによって、シリアル化されたタイム ゾーンを表す文字列を取得、<xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>メソッドです。
+3. 場合に呼び出し、<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>メソッドが失敗した、またはカスタムのタイム ゾーンをインスタンス化する場合は、呼び出すことによって、シリアル化されたタイム ゾーンを格納する文字列を取得、<xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>メソッド。
 
-4. 呼び出して、タイム ゾーン データを逆シリアル化、<xref:System.TimeZoneInfo.FromSerializedString%2A>メソッドです。
+4. 呼び出すことによって、タイム ゾーン データを逆シリアル化、<xref:System.TimeZoneInfo.FromSerializedString%2A>メソッド。
 
 ## <a name="example"></a>例
 
-次の例を逆シリアル化、<xref:System.TimeZoneInfo>埋め込み .NET XML リソース ファイルに格納されているオブジェクト。
+次の例では、逆シリアル化、 <xref:System.TimeZoneInfo> embedded .NET XML リソース ファイルに格納されているオブジェクト。
 
 [!code-csharp[TimeZone2.Serialization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#3)]
 [!code-vb[TimeZone2.Serialization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#3)]
 
-このコードは、ことを確認する例外処理を示しています、<xref:System.TimeZoneInfo>アプリケーションで必要なオブジェクトが存在します。 最初のインスタンスを作成しよう、<xref:System.TimeZoneInfo>オブジェクトを使用して、レジストリから取得して、<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>メソッドです。 タイム ゾーンをインスタンス化できない場合は、埋め込みリソース ファイルから取得します。
+このコードは、ことを確認する例外処理を示しています、<xref:System.TimeZoneInfo>アプリケーションで必要なオブジェクトが存在します。 インスタンスを作成するときはまず、<xref:System.TimeZoneInfo>オブジェクトを使用して、レジストリから取得して、<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>メソッド。 タイム ゾーンをインスタンス化できない場合は、埋め込みリソース ファイルから取得します。
 
-カスタム タイム ゾーンのデータ (タイム ゾーンを使用してインスタンス化、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッド) が保存されていないレジストリで、コードを呼び出すことはできません、 <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> Palmer、南極のタイム ゾーンをインスタンス化します。 代わりに、すぐに見た目を呼び出す前に、タイム ゾーンのデータを含む文字列を取得する埋め込みリソース ファイルを<xref:System.TimeZoneInfo.FromSerializedString%2A>メソッドです。
+ため、カスタムのタイム ゾーンのデータ (を使用してインスタンスのタイム ゾーン、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッド) が格納されていないレジストリで、コードを呼び出すことはできません、 <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> Palmer、南極大陸のタイム ゾーンをインスタンス化します。 呼び出す前に、タイム ゾーンのデータを含む文字列を取得する埋め込みリソース ファイルをすぐに確認、代わりに、<xref:System.TimeZoneInfo.FromSerializedString%2A>メソッド。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
 この例で必要な要素は次のとおりです。
 
-* System.Windows.Forms.dll および System.Core.dll への参照がプロジェクトに追加します。
+* System.Windows.Forms.dll、System.Core.dll への参照をプロジェクトに追加します。
 
 * 次の名前空間は、インポートします。
 
@@ -60,6 +60,6 @@ ms.locfileid: "33572347"
 
 ## <a name="see-also"></a>関連項目
 
-[日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
-[タイム ゾーンの概要](../../../docs/standard/datetime/time-zone-overview.md)
-[する方法: 埋め込みリソースにタイム ゾーンを保存](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+* [タイム ゾーンの概要](../../../docs/standard/datetime/time-zone-overview.md)
+* [方法: 埋め込みリソースにタイム ゾーンを保存する](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

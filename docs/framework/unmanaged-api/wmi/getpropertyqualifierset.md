@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786181"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43880316"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet 関数
 特定のプロパティで設定された修飾子が取得されます。

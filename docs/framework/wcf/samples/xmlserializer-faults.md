@@ -3,11 +3,11 @@ title: XmlSerializer エラー
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
 ms.openlocfilehash: 760b88a6682032b8c8915fd0ea657029d2d0444e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533913"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040890"
 ---
 # <a name="xmlserializer-faults"></a>XmlSerializer エラー
 <xref:System.Xml.Serialization.XmlSerializer> のエラー コントラクトのサンプルでは、<xref:System.Xml.Serialization.XmlSerializer> を使用して、エラー情報をサービスからクライアントに通信する方法を示します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、いくつか追加コードが内部例外をエラーに変換するサービスに追加します。 クライアントは 0 による除算を試行し、サービスを強制的にエラー状態にします。  

@@ -2,17 +2,16 @@
 title: 列挙型 (F#)
 description: F# のリテラルの代わりに列挙体を使用して、読みやすく、保守しやすいコードを作成する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: b51df53caf2e193496cb3694c913cbae08f7eaf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518838"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891643"
 ---
 # <a name="enumerations"></a>列挙
 
 *列挙体*とも呼ばれます*列挙型*、および整数型は、ラベルが割り当てられ、値のサブセットにします。 リテラルの代わりに使用すると、コードの読み取りおよび保守が容易になります。
-
 
 ## <a name="syntax"></a>構文
 
@@ -24,6 +23,7 @@ type enum-name =
 ```
 
 ## <a name="remarks"></a>Remarks
+
 値を指定する点を除いてを単純な値を持つ判別共用体と同様、列挙型を検索します。 通常、値は、0 または 1 から始まる整数またはビット位置を表す整数です。 またを使用する必要がある列挙体のビット位置を表す場合は、[フラグ](xref:System.FlagsAttribute)属性。
 
 、たとえば、を使用できるようにリテラル、サフィックスを持つように、使用されるリテラルから列挙体の基になる型が決定されます`1u`、 `2u`、で、符号なし整数 (`uint32`) 型。
@@ -49,8 +49,8 @@ type enum-name =
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
 さらに、ケースの列挙型として常に出力されます。`public`します。 これは、c# および .NET プラットフォームの残りの部分に配置します。
-    
-## <a name="see-also"></a>関連項目
-[F# 言語リファレンス](index.md)
 
-[キャストと変換](casting-and-conversions.md)
+## <a name="see-also"></a>関連項目
+
+- [F# 言語リファレンス](index.md)
+- [キャストと変換](casting-and-conversions.md)

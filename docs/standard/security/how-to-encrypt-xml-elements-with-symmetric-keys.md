@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9fa06ed0befd82a3efdd46deaa2362b1f10fa35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5c221dc05787c6d76d998977069ad327a3dfa83
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586076"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881224"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>方法 : 共通キーで XML 要素を暗号化する
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML の暗号化を使用すると、データが簡単に読み取られる心配をせずに機密性の高い XML を格納またはトランスポートできます。  この手順では、Advanced Encryption Standard (AES) アルゴリズム (Rijndael としても知られる) を使用して XML 要素を復号化します。  
   
- この手順を使用して暗号化された XML 要素を復号化する方法については、次を参照してください。[する方法: 対称キーで XML 要素を復号化](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)です。  
+ この手順を使用して暗号化された XML 要素を復号化する方法については、次を参照してください。[方法: 対称キーで XML 要素を復号化](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)します。  
   
  XML データの暗号化に AES のような対称アルゴリズムを使用するときは、XML データの暗号化と復号化に同じキーを使用する必要があります。  この手順の例では、暗号化された XML が同じキーを使用して復号化されること、および暗号化側と復号化側で使用するアルゴリズムとキーが一致していることを前提としています。  この例では、暗号化された XML 内での AES キーの格納や暗号化は行いません。  
   
@@ -99,8 +99,9 @@ ms.locfileid: "33586076"
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  暗号化キーをプレーンテキストで保存したり、コンピューター間でプレーンテキストでキーを転送したりしないでください。  代わりに、セキュリティで保護されたキー コンテナーを使用して暗号化キーを格納します。  
   
- 暗号化キーを使用して完了したら、各バイトをゼロ (0) にするか、マネージ暗号化クラスの <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> メソッドを呼び出してメモリから消去します。  
+ 暗号化キーを使用して完了したら、各バイトをゼロ (0) にするか、マネージド暗号化クラスの <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> メソッドを呼び出してメモリから消去します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Security.Cryptography.Xml>  
- [方法: 共通キーで XML 要素を復号化する](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Security.Cryptography.Xml>  
+- [方法: 共通キーで XML 要素を復号化する](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)

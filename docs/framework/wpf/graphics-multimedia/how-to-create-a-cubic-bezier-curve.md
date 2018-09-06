@@ -8,11 +8,11 @@ helpviewer_keywords:
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
 ms.openlocfilehash: 2dd9dfa7f15ce00261c87f316079c25a7aa52532
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734669"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032083"
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>方法 : 3 次ベジエ曲線を作成する
 この例では、3 次ベジエ曲線を作成する方法を示します。 3 次ベジエ曲線を作成するには、使用、 <xref:System.Windows.Media.PathGeometry>、 <xref:System.Windows.Media.PathFigure>、および<xref:System.Windows.Media.BezierSegment>クラス。  結果のジオメトリを表示するには使用、<xref:System.Windows.Shapes.Path>要素と共に使用または、<xref:System.Windows.Media.GeometryDrawing>または<xref:System.Windows.Media.DrawingContext>します。 次の例についてから 3 次ベジエ曲線を描画 (10, 100) に (300, 100)。 曲線がの制御点 (100, 0) と (200、200)。  

@@ -5,11 +5,11 @@ ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 32b05766f82059634e6ad808c75fea6cc9e820e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542908"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877363"
 ---
 # <a name="security-concepts"></a>セキュリティの概念
 このセクションでは、Windows Communication Foundation (WCF) のセキュリティに関連する概念について簡単に説明します。  

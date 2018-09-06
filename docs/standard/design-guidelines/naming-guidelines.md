@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53ffb641d3e507a937c304725b3c8590d046338e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572971"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031836"
 ---
 # <a name="naming-guidelines"></a>名前付けのガイドライン
-次のフレームワークの開発に名前付け規則の一貫性を確保すると、フレームワークの使いやすさに主要な金額があります。 これにより、広範囲に分散されたプロジェクトの多くの開発者によって使用されるフレームワークです。 フォームの整合性を超えるフレームワーク要素の名前は簡単に理解する必要があり、各要素の機能を伝達する必要があります。  
+次の一貫した開発フレームワークの名前付け規則のセットと、フレームワークの使いやすさへの主要な貢献を指定できます。 これにより、広範囲に分散されたプロジェクトで多くの開発者が使用するフレームワークができます。 フォームの整合性を超えるフレームワーク要素の名前は簡単に理解する必要があり、各要素の機能を伝達する必要があります。  
   
- この章の目標は、開発者に即時わかりやすい名前に一貫性のある名前付け規則のセットを提供します。  
+ この章の目的は、開発者に即時に意味のある名前になる、一貫性のある名前付け規則のセットを提供することです。  
   
- 一般的なコード開発のガイドラインは、コード全体でより一貫性のある名前付けになると、これらの名前付け規則を採用することが必要があるだけは公開される Api に適用 (public または protected の型とメンバー、および明示的に実装されたインターフェイス)。  
+ パブリックに公開される Api に適用するには、のみ必要がありますが、一般的なコードの開発のガイドラインが、コード全体でより一貫性のある名前付けになると、これらの名前付け規則を採用すること、(パブリックまたはプロテクト型とメンバー、および明示的に実装されたインターフェイス)。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [大文字の使用規則](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
@@ -36,9 +36,10 @@ ms.locfileid: "33572971"
  [型のメンバーの名前](../../../docs/standard/design-guidelines/names-of-type-members.md)  
  [パラメーターに名前を付ける](../../../docs/standard/design-guidelines/naming-parameters.md)  
  [リソースに名前を付ける](../../../docs/standard/design-guidelines/naming-resources.md)  
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>関連項目
+
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

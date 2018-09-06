@@ -2,12 +2,12 @@
 title: SchemaImporterExtension の技術サンプル
 ms.date: 03/30/2017
 ms.assetid: 3f5eb78f-0ef6-433a-b095-3a63b1ce0bc9
-ms.openlocfilehash: 07856c9825785aa7bbc123d0a835e4dc863b8ec6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 042ea9eecb7820d4ffb88bdb8862aec1e7f6e483
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581356"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042492"
 ---
 # <a name="schemaimporterextension-technology-sample"></a>SchemaImporterExtension の技術サンプル
 [サンプルのダウンロード](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
@@ -36,22 +36,23 @@ ms.locfileid: "33581356"
   
 2.  コマンド ラインで**実行ファイル名**を入力します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  サンプルのバイナリ ファイルを作成する方法およびサンプルを登録する手順の詳細については、ソース コード ファイルおよび build.proj ファイル内のコメントを参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.CodeDom.CodeCompileUnit>  
- <xref:System.CodeDom.CodeNamespace>  
- <xref:System.CodeDom.CodeNamespaceImport>  
- <xref:Microsoft.CSharp.CSharpCodeProvider>  
- <xref:System.Xml.Serialization.IXmlSerializable>  
- <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>  
- <xref:System.CodeDom>  
- <xref:System.CodeDom.Compiler>  
- <xref:System.Web.Services.Description>  
- <xref:System.Web.Services.Discovery>  
- <xref:System.Xml.Serialization>  
- <xref:System.Uri>  
- <xref:Microsoft.VisualBasic.VBCodeProvider>  
- <xref:System.Web.Services.Description.WebReference>  
- <xref:System.Xml.Serialization.XmlSchemaImporter>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.CodeDom.CodeCompileUnit>  
+- <xref:System.CodeDom.CodeNamespace>  
+- <xref:System.CodeDom.CodeNamespaceImport>  
+- <xref:Microsoft.CSharp.CSharpCodeProvider>  
+- <xref:System.Xml.Serialization.IXmlSerializable>  
+- <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>  
+- <xref:System.CodeDom>  
+- <xref:System.CodeDom.Compiler>  
+- <xref:System.Web.Services.Description>  
+- <xref:System.Web.Services.Discovery>  
+- <xref:System.Xml.Serialization>  
+- <xref:System.Uri>  
+- <xref:Microsoft.VisualBasic.VBCodeProvider>  
+- <xref:System.Web.Services.Description.WebReference>  
+- <xref:System.Xml.Serialization.XmlSchemaImporter>

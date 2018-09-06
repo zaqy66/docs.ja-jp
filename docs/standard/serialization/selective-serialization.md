@@ -7,12 +7,12 @@ helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-ms.openlocfilehash: 6a91501c4c3763250a64c9849694bc4e5fa4829f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74e21045ec70faf6ee82200a15362d51edf61433
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581538"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879286"
 ---
 # <a name="selective-serialization"></a>選択的シリアル化
 クラスには、シリアル化できないフィールドが含まれていることがよくあります。 たとえば、クラスのメンバー変数の 1 つにスレッド ID が格納されているとします。 クラスを逆シリアル化すると、クラスのシリアル化時に格納された ID を持つスレッドが実行されなくなることがあります。したがって、この値をシリアル化しても意味はありません。 以下のように、メンバー変数に [NonSerialized](xref:System.NonSerializedAttribute) 属性を使用してマークすることで、メンバー変数がシリアル化されないようにすることができます。  
@@ -31,7 +31,8 @@ public class MyObject
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>関連項目  
- [バイナリ シリアル化](binary-serialization.md)  
- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)  
- [セキュリティとシリアル化](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>関連項目
+
+- [バイナリ シリアル化](binary-serialization.md)  
+- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)  
+- [セキュリティとシリアル化](../../../docs/framework/misc/security-and-serialization.md)

@@ -2,11 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 7e04155c3129fd3b70977dd2960ccdc99c194cab
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a02899ab9dc751cfee1127a092854b81b8360db
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037020"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities は、開発者が Visual Basic または Visual C# を使用して Entity Framework 概念モデルに対するクエリを作成するための統合言語クエリ (LINQ) のサポートを提供します。 Entity Framework に対するクエリで代表的なものが、コマンド ツリー クエリです。これはオブジェクト コンテキストに対して実行されます。 LINQ to Entities では、統合言語クエリ (LINQ) クエリをコマンド ツリー クエリに変換し、そのクエリを Entity Framework に対して実行します。返されたオブジェクトは、Entity Framework でも LINQ でも使用できます。 次に、LINQ to Entities クエリを作成して実行する手順を示します。  
@@ -29,7 +30,7 @@ LINQ to Entities は、開発者が Visual Basic または Visual C# を使用�
   
  LINQ to Entities クエリは、クエリ式の構文とメソッド ベースのクエリ構文という 2 とおりの構文を使って作成できます。 クエリ式の構文とメソッド ベースのクエリ構文は、C# 3.0 と Visual Basic 9.0 で新たに導入された機能です。  
   
- 詳細については、次を参照してください。[で LINQ to Entities クエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)です。  
+ 詳細については、次を参照してください。[で LINQ to Entities クエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)します。  
   
 ## <a name="query-conversion"></a>クエリの変換  
  LINQ to Entities クエリを Entity Framework に対して実行するには、LINQ クエリを Entity Framework に対して実行できるコマンド ツリー表現に変換する必要があります。  
@@ -38,18 +39,18 @@ LINQ to Entities は、開発者が Visual Basic または Visual C# を使用�
   
  Entity Framework では、演算子と式は 1 つの型の階層で表された後、コマンド ツリーに配置されます。 このコマンド ツリーが、Entity Framework でのクエリの実行に使用されます。 LINQ クエリをコマンド ツリーとして表現できない場合、クエリの変換中に例外がスローされます。 LINQ to Entities クエリを変換する際には、標準クエリ演算子の変換と式の変換という 2 つの変換が実行されます。  
   
- LINQ to Entities で正しく変換されない LINQ 標準クエリ演算子は多数あります。 このような演算子を使用すると、クエリの変換時に例外が発生します。 サポートされている LINQ to Entities 演算子の一覧は、次を参照してください。[サポートされているとサポートされていない LINQ メソッド (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)です。  
+ LINQ to Entities で正しく変換されない LINQ 標準クエリ演算子は多数あります。 このような演算子を使用すると、クエリの変換時に例外が発生します。 サポートされている LINQ to Entities クエリの一覧は、次を参照してください。[サポートされているとサポートされていない LINQ メソッド (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)します。  
   
- 詳細については、LINQ to Entities で標準クエリ演算子を使用して、次を参照してください。 [LINQ to Entities クエリで標準クエリ演算子](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)です。  
+ LINQ to Entities で標準クエリ演算子の使用に関する詳細については、次を参照してください。 [LINQ to Entities クエリでの標準クエリ演算子](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)します。  
   
- 一般的に、LINQ to Entities の式はサーバー上で評価されるため、式の動作が CLR セマンティクスに従っているとは限りません。 詳細については、次を参照してください。 [LINQ to Entities クエリ内の式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)です。  
+ 一般的に、LINQ to Entities の式はサーバー上で評価されるため、式の動作が CLR セマンティクスに従っているとは限りません。 詳細については、次を参照してください。 [LINQ to Entities クエリ内の式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)します。  
   
- CLR メソッドの呼び出しが、データ ソースの正規関数にマップする方法については、次を参照してください。[正規の関数マッピングに CLR メソッド](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)です。  
+ CLR メソッドの呼び出しをデータ ソースの正規関数にマップする方法については、次を参照してください。 [CLR メソッドと正規関数マッピング](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)します。  
   
- 正規の呼び出し、データベース、する方法とカスタム関数内からについて[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]クエリを参照してください[LINQ to Entities クエリ内の関数の呼び出し](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)です。  
+ 内からカスタム関数と標準的な呼び出し、データベース、する方法については[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]クエリを参照してください[LINQ to Entities クエリ内の関数の呼び出し](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)します。  
   
 ## <a name="query-execution"></a>クエリの実行  
- ユーザーが LINQ クエリを作成すると、Entity Framework と互換性のある表現 (コマンド ツリーの形) に変換された後、データ ソースに対して実行されます。 クエリの実行時に、すべてのクエリ式 (またはクエリの構成要素) がクライアントまたはサーバー上で評価されます。 これには、結果の具体化やエンティティの投影で使用される式も含まれます。 詳細については、次を参照してください。[クエリの実行](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)です。 クエリを 1 回コンパイルして、複数回実行で他のパラメーターによってパフォーマンスを向上させる方法については、次を参照してください。[コンパイルされたクエリ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)です。  
+ ユーザーが LINQ クエリを作成すると、Entity Framework と互換性のある表現 (コマンド ツリーの形) に変換された後、データ ソースに対して実行されます。 クエリの実行時に、すべてのクエリ式 (またはクエリの構成要素) がクライアントまたはサーバー上で評価されます。 これには、結果の具体化やエンティティの投影で使用される式も含まれます。 詳細については、次を参照してください。[クエリの実行](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)します。 クエリを 1 回コンパイルしてから、実行する複数回異なるパラメーターを使用してパフォーマンスを向上させる方法については、次を参照してください。[コンパイルされたクエリ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)します。  
   
 ## <a name="materialization"></a>具体化  
  具体化は、クエリの結果を CLR 型としてクライアントに返すプロセスです。 LINQ to Entities では、クエリの結果のデータ レコードは決して返されません。常に返されるのは、ユーザーまたは Entity Framework で定義された CLR 型、またはコンパイラによって生成される CLR 型 (匿名型) です。 オブジェクトの具体化は、すべて Entity Framework によって実行されます。 Entity Framework と CLR とのマッピングができないことが原因でエラーが発生すると、オブジェクトの具体化中に例外がスローされます。  
@@ -64,7 +65,7 @@ LINQ to Entities は、開発者が Visual Basic または Visual C# を使用�
   
 -   匿名型。  
   
- 詳細については、次を参照してください。[クエリ結果](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)です。  
+ 詳細については、次を参照してください。[クエリ結果](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
@@ -89,6 +90,6 @@ LINQ to Entities は、開発者が Visual Basic または Visual C# を使用�
   
 ## <a name="see-also"></a>関連項目  
  [LINQ to Entities の既知の問題および注意点](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
- [統合言語クエリ (LINQ)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [統合言語クエリ (LINQ)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [LINQ と ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

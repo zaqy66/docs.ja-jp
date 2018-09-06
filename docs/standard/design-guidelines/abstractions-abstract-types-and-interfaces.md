@@ -10,34 +10,35 @@ helpviewer_keywords:
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5863b4ae9cad940e4dd47ef93e07763916427f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ad8b2dd3dbf2a7a75c98a3115d4351dfea4e1a0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573027"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891299"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象化 (抽象型およびインターフェイス)
-抽象化では、コントラクトを記述、コントラクトの完全な実装は提供されませんする型です。 抽象化は通常インターフェイスまたは抽象クラスとして実装され、適切に定義された一連のコントラクトを実装する型の必要なセマンティクスを説明するリファレンス ドキュメントになります。 .NET Framework における最も重要な抽象化のものが<xref:System.IO.Stream>、 <xref:System.Collections.Generic.IEnumerable%601>、および<xref:System.Object>です。  
+抽象化は、コントラクトを記述するコントラクトの完全な実装を提供しない型です。 抽象化は通常インターフェイスまたは抽象クラスとして実装し、適切に定義された一連のコントラクトを実装する型の必要なセマンティクスを説明するリファレンス ドキュメントが付属します。 .NET Framework で最も重要な抽象化のものが<xref:System.IO.Stream>、 <xref:System.Collections.Generic.IEnumerable%601>、および<xref:System.Object>します。  
   
- 抽象化のコントラクトをサポートする具象型を実装して、フレームワーク Api のかかる (で動作している) でこの具象型を使用してフレームワークを拡張することができます、抽象化します。  
+ 抽象化のコントラクトをサポートする具象型を実装して、フレームワーク Api がかかる (操作) でこの具象型を使用してフレームワークを拡張することができます、抽象化します。  
   
- 時間のテストに耐えることができるわかりやすいで便利な抽象化は、デザインに非常に困難です。 メインの難易度は適切ないいえが少ないと、メンバーのセットを取得しています。 抽象化のメンバーが多すぎる場合は、難しいかを実装することが不可能になります。 約束されていた機能が少なすぎますメンバーがある場合に、多くの興味深いシナリオでは役に立たなくなります。  
+ 時の試練に耐え得ることが有意義で便利な抽象化は、設計することは困難です。 メインの難しさがなくなると不要な少なく、メンバーの適切なセットを取得しています。 抽象化のメンバーが多すぎる場合は、難しいかを実装することが不可能になります。 約束の機能が少なすぎますメンバー場合は、多くの興味深いシナリオで役に立たないになります。  
   
- 悪影響が多すぎますの抽象化フレームワークでは、フレームワークの使いやすさに影響を与えます。 非常に具体的な実装との抽象型で動作している Api の大きい画像に適合する方法を理解することがなく抽象化を理解しにくいは多くの場合です。 また、抽象化とそのメンバーの名前は抽象的に、する多くの場合にわかりにくいつかめない最初にそれらの使用より広範なコンテキストを理解することがなくです。  
+ フレームワークで多くの抽象化には、フレームワークの使いやすさも悪影響に影響します。 多くの場合、具体的な実装と抽象化で動作している Api の大きい画像に組み込む方法を理解せず、抽象化を理解することが難しくなります。 また、抽象化とそのメンバーの名前は必ずしも抽象頻繁なものになりますわかりにくいと印象は最初の使用量のより広範なコンテキストを理解することがなく。  
   
- ただし、抽象化は、その他の機能拡張メカニズムできない多くの場合と一致する非常に強力な機能拡張を提供します。 プラグインなど、多くのアーキテクチャのパターンの中核制御の反転 (IoC)、パイプライン、やなど。 フレームワークのテストの容易性のきわめて重要です。 適切な抽象化を使用すれば、単体テストするために大量の依存関係を消去できます。 要約すると、抽象化は、最新のオブジェクト指向フレームワークのいる豊富な機能を担当します。  
+ ただし、抽象化は、その他の拡張メカニズムは、できない多くの場合と一致する非常に強力な機能拡張を提供します。 多くのアーキテクチャ パターン、プラグインなどの中核には制御の反転 (IoC)、パイプライン、やなど。 フレームワークのテストの容易性の非常に重要なもいます。 適切な抽象化を使用すれば、単体テストするために大量の依存関係を消去できます。 要約すると、抽象化は、最新のオブジェクト指向フレームワークのいる豊富な機能を担当します。  
   
  **X DO NOT** いくつかの具体的な実装と、抽象化を使用する Api を開発してテストする場合を除き、抽象化を提供します。  
   
  **✓ DO** 抽象化を設計するときは、抽象クラスとインターフェイス間慎重に選択します。  
   
- **✓ CONSIDER** 抽象クラスの具象実装のテストの参照を提供します。 そのようなテストは、実装では、コントラクトを正しく実装するかどうかをテストするユーザーを許可する必要があります。  
+ **✓ CONSIDER** 抽象クラスの具象実装のテストの参照を提供します。 このようなテストは、その実装が正しく、コントラクトを実装するかどうかをテストするユーザーを許可する必要があります。  
   
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
- [機能拡張のデザイン](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a>関連項目
+
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [機能拡張のデザイン](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

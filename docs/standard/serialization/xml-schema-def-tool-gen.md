@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: c169a3068b240e8d4d1cdb1d307938ee113066fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2edaf7ba540035fbf2f49ba78b41ab99f8889391
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582367"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032096"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>方法 : XML スキーマ定義ツールを使用してクラスと XML スキーマ ドキュメントを生成する
 XML スキーマ定義ツール (Xsd.exe) を使用して、クラスを説明する XML スキーマを生成したり、XML スキーマで定義されるクラスを生成したりできます。 次の手順では、これらの操作の実行方法を示します。  
@@ -27,7 +27,7 @@ XML スキーマ定義ツール (Xsd.exe) を使用して、クラスを説明�
     xsd mySchema.xsd  
     ```  
   
-     ツールは、2001 年 3 月 16 日付けの World Wide Web Consortium XML 仕様を参照するスキーマのみを処理できます。 つまり、XML スキーマ名前空間がある必要があります"http://www.w3.org/2001/XMLSchema"次の例で示すようにします。  
+     ツールは、2001 年 3 月 16 日付けの World Wide Web Consortium XML 仕様を参照するスキーマのみを処理できます。 つまり、XML スキーマ名前空間がある必要があります"http://www.w3.org/2001/XMLSchema"次の例に示すようにします。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -52,11 +52,12 @@ XML スキーマ定義ツール (Xsd.exe) を使用して、クラスを説明�
   
      スキーマが、"schema0.xsd" という名前から順に書き込まれます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Data.DataSet>  
- [XML スキーマ定義ツールと XML シリアル化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
- [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [XML スキーマ定義ツール (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [方法 : オブジェクトをシリアル化する](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [方法 : オブジェクトを逆シリアル化する](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Data.DataSet>  
+- [XML スキーマ定義ツールと XML シリアル化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
+- [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [XML スキーマ定義ツール (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
+- <xref:System.Xml.Serialization.XmlSerializer>  
+- [方法 : オブジェクトをシリアル化する](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [方法 : オブジェクトを逆シリアル化する](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

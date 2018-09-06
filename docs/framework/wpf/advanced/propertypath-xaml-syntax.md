@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535475"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042544"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath の XAML 構文
 <xref:System.Windows.PropertyPath>オブジェクトがサポートする、複雑なインライン[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]構文を使用するさまざまなプロパティを設定するため、<xref:System.Windows.PropertyPath>型を値として。 このトピックの「ドキュメント、<xref:System.Windows.PropertyPath>バインディングとアニメーション構文に適用される構文です。  

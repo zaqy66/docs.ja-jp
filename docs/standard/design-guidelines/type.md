@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af7511f4159fdbfe2d3f972dc927e9ee11fd586f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7fb9964d0e542c0937c55ae65bd88b3f7149fa8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572890"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036026"
 ---
 # <a name="type-design-guidelines"></a>型のデザインのガイドライン
-CLR の観点からは、型の 2 つのカテゴリがあります: 参照型と値の型: フレームワーク デザインの詳細については、するためにお種類以上の論理グループ分け、それぞれ独自の特定のデザイン規則には。  
+CLR の観点からは、型の 2 つのカテゴリがあります: 参照型と値の型: フレームワークの設計に関する詳細については、するために、それぞれに独自の特定のデザイン規則より論理的にグループの種類を分割しますが、します。  
   
- クラスは、参照型の一般的なケースです。 ほとんどのフレームワークの型の大部分を構成します。 クラスは、豊富なサポートされるオブジェクト指向の機能の設定と、一般的な適用性、人気を支払わなかったです。 基本クラスと抽象クラスは、拡張機能に関連する特殊な論理グループです。  
+ クラスは、参照型の一般的なケースです。 ほとんどのフレームワークの型の大部分を構成します。 クラスは、豊富なオブジェクト指向の機能がサポートされるを設定して、一般的な適用性を人気を助かりました。 基底クラスと抽象クラスは、拡張機能に関連する、特殊な論理グループです。  
   
- インターフェイスは、参照型と値の型の両方によって実装可能な型の型です。 したがって、参照型と値の型のポリモーフィックな階層のルートとして使用することができます。 さらに、インターフェイスを使用して、CLR によってネイティブにサポートされていない複数の継承をシミュレートすることができます。  
+ インターフェイスは、参照型と値の型の両方で実装できる型です。 したがって、参照型と値の型のポリモーフィックな階層のルートとして使用ができます。 さらに、インターフェイスは、CLR によってネイティブでサポートされていない複数の継承をシミュレートするために使用できます。  
   
- 構造体は、値型の一般的なケースがあり、小規模で単純な種類、言語プリミティブのような用に予約する必要があります。  
+ 構造体の値型の一般的なケースは、小規模で単純な種類、言語プリミティブのように予約されている必要があります。  
   
- 列挙型は、日、週、コンソールの色、およびなどのような値の短いセットを定義するために使用する値型の特殊なケースです。  
+ 列挙型は、週、コンソールの色の日などの値の短いセットを定義するのに使用される値型の特殊なケースです。  
   
- 静的クラスは、静的メンバーのコンテナーを目的としての種類です。 その他の操作へのショートカットを提供するよく使用されます。  
+ 静的クラスは、型の静的メンバーのコンテナーを意図したものです。 その他の操作へのショートカットを提供するよく使用されます。  
   
- デリゲート、例外、属性、配列、およびコレクションは、特別な用途のためのもので、参照型のすべての特殊なケースであり、設計と使用法についてのガイドラインがこのドキュメントで部分で説明されています。  
+ デリゲート、例外、属性、配列、およびコレクションは、特定の用途のためのもので、参照型のすべての特殊なケースと、この書籍での設計と使用法のガイドラインは別の場所について説明します。  
   
  **✓ DO** 各型が適切に定義された一連の関連するメンバーは、関連付けられていない機能のランダムなコレクションだけでなくであることを確認します。  
   
@@ -42,9 +42,10 @@ CLR の観点からは、型の 2 つのカテゴリがあります: 参照型�
  [構造体のデザイン](../../../docs/standard/design-guidelines/struct.md)  
  [列挙型デザイン](../../../docs/standard/design-guidelines/enum.md)  
  [入れ子にされた型](../../../docs/standard/design-guidelines/nested-types.md)  
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>関連項目
+
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

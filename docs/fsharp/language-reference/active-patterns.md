@@ -2,12 +2,12 @@
 title: アクティブ パターン (F#)
 description: アクティブ パターンを使用して、f# プログラミング言語で入力データを分割する名前付きのパーティションを定義する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 964ae8eb6db0191fab1e5a816e29bd0819605f2c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786499"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881877"
 ---
 # <a name="active-patterns"></a>アクティブ パターン
 
@@ -44,7 +44,7 @@ let (|identifier|_|) [ arguments ] = expression
 
 アクティブ パターンの別の使用など、同じ基になるデータがさまざまな可能な表現を持っている場合、複数の方法でデータ型を分解することです。 たとえば、`Color`オブジェクトは、RGB 表現や、HSB 表現に分解する可能性があります。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
 上記のプログラムの出力は次のとおりです。
 
@@ -72,9 +72,9 @@ BlanchedAlmond
 
 ## <a name="partial-active-patterns"></a>部分的なアクティブ パターン
 
-場合によっては、入力領域の一部のみをパーティション分割する必要があります。 その場合は、うちのいくつかの入力に一致が他の入力と一致しない部分のパターンのセットを作成します。 常に値を生成しないアクティブ パターンが呼び出される*アクティブ パターンの部分的な*; オプションの種類である戻り値があります。 部分アクティブ パターンを定義するには、バナナ クリップ内のパターンの一覧の最後にワイルドカード文字 (_) を使用します。 次のコードでは、部分的なアクティブ パターンの使用を示します。
+場合によっては、入力領域の一部のみをパーティション分割する必要があります。 その場合は、うちのいくつかの入力に一致が他の入力と一致しない部分のパターンのセットを作成します。 常に値を生成しないアクティブ パターンが呼び出される*アクティブ パターンの部分的な*; オプションの種類である戻り値があります。 ワイルドカード文字を使用する部分的なアクティブ パターンを定義する (\_) バナナ クリップ内のパターンの一覧の最後にします。 次のコードでは、部分的なアクティブ パターンの使用を示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
 前の例の出力は次のとおりです。
 
@@ -88,7 +88,7 @@ Something else : Not matched.
 
 部分的なアクティブ パターンを使用する場合、個々 の選択肢があります不整合のあるまたは相互に排他的ですが、必要はありません。 次の例では、パターンの四角形とキューブのパターンのない不整合のある、いくつかの数字は四角形と、64 などのキューブの両方であるためです。 次のプログラムは、すべての整数が四角形とキューブの両方が 1000000 最大を出力します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 出力は次のとおりです。
 
@@ -109,7 +109,7 @@ Something else : Not matched.
 
 アクティブ パターンは、常に一致する項目の少なくとも 1 つの引数を受け取りますが、この場合、名前でも、追加の引数がかかる*パラメーター化されたアクティブ パターン*適用されます。 追加の引数は、特殊化する一般的なパターンを使用できます。 たとえば、多くの場合、文字列を解析する正規表現を使用するアクティブ パターンに含める部分アクティブ パターンを使用する次のコードのように、追加のパラメーターとして正規`Integer`上記のコード例で定義されています。 この例では、一般的なである ParseRegex アクティブ パターンをカスタマイズする正規表現を使用して、さまざまな日付形式の文字列が与えられます。 一致した文字列を DateTime コンス トラクターに渡すことができる整数に変換するには、整数アクティブ パターンを使用します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
 前のコードの出力は次のとおりです。
 
@@ -119,7 +119,7 @@ Something else : Not matched.
 
 アクティブ パターンは、パターン マッチング式のみに制限することはありません、let バインドで使用することもできます。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
 前のコードの出力は次のとおりです。
 

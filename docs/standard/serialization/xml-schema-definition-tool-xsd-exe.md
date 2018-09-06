@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 71a964831b661e97d3be3853a179849e037d3ff6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3a16e92dab6994de6bfa99c248ff0b13658e22d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592459"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879778"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML スキーマ定義ツール (Xsd.exe) は、XDR、XML、および XSD ファイル、またはランタイム アセンブリ内のクラスから XML スキーマ クラスまたは共通言語ランタイム クラスを生成します。  
@@ -68,7 +68,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|  
 |**/t****[ype]****:***typename*|スキーマの作成対象とする型の名前を指定します。 複数の型の引数を指定できます。 *typename* によって名前空間が特定されない場合、指定された型を持つアセンブリに含まれるすべての型が対象となります。 *typename* によって名前空間が特定される場合は、その型だけが対象になります。 *typename* の末尾がアスタリスク (\*) の場合は、\* の前にある文字列で始まる型のすべてが対象となります。 `/type` オプションを省略すると、アセンブリに含まれるすべての型についてスキーマが生成されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  Xsd.exe が実行する操作を次の表に示します。  
   
  XDR から XSD へ  
@@ -86,7 +86,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  クラスから XSD へ  
  ランタイム アセンブリ ファイルに含まれる 1 つ以上の型から XML スキーマを生成します。 生成されたスキーマは、`System.Xml.Serialization.XmlSerializer` で使用される XML 形式を定義します。  
   
- Xsd.exe によって操作できるのは、W3C (World Wide Web Consortium) が提唱する XSD (XML スキーマ定義) に準拠した XML スキーマだけです。 XML スキーマ定義提案または XML 標準の詳細については、次を参照してください。http://w3.orgです。  
+ Xsd.exe によって操作できるのは、W3C (World Wide Web Consortium) が提唱する XSD (XML スキーマ定義) に準拠した XML スキーマだけです。 XML スキーマ定義の提案や XML 標準の詳細については、次を参照してください。 http://w3.orgします。  
   
 ## <a name="setting-options-with-an-xml-file"></a>XML ファイルによるオプションの設定  
  `/parameters` スイッチを使用すると、各種のオプションを設定する単一の XML ファイルを指定できます。 設定できるオプションは、XSD.exe ツールの使用方法によって異なります。 選択肢には、スキーマの生成、コード ファイルの生成、または `DataSet` 機能を含むコード ファイルの生成があります。 たとえば、コード ファイルではなくスキーマを生成する場合、実行可能ファイル (.exe) またはタイプ ライブラリ (.dll) ファイルの名前に `<assembly\>` 要素を設定できます。 次の XML に、指定された実行可能ファイルで `<generateSchemas\>` 要素を使用する方法を示します。  
@@ -221,11 +221,12 @@ xsd /dataset /language:CS XSDSchemaFile.xsd
 xsd myAssembly.dll    
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Data.DataSet>  
- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
- [ツール](../../../docs/framework/tools/index.md)      
- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [LINQ to DataSet の概要](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [型指定された DataSet のクエリ](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [統合言語クエリ (LINQ)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Data.DataSet>  
+- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
+- [ツール](../../../docs/framework/tools/index.md)      
+- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+- [LINQ to DataSet の概要](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+- [型指定された DataSet のクエリ](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+- [統合言語クエリ (LINQ)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
