@@ -3,13 +3,13 @@ title: CSDL 仕様
 ms.date: 03/30/2017
 ms.assetid: 6bb94c37-87da-447a-8dfd-83d1c4b5a2d2
 ms.openlocfilehash: f3acb7933392fcd8a1d952354a2b45e4b588834e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777292"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061261"
 ---
-# <a name="csdl-specification"></a><span data-ttu-id="e28ea-102">CSDL 仕様</span><span class="sxs-lookup"><span data-stu-id="e28ea-102">CSDL Specification</span></span>
-<span data-ttu-id="e28ea-103">[Msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef)サイトでは、Entity Framework のコンテンツのメインの場所。</span><span class="sxs-lookup"><span data-stu-id="e28ea-103">The [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
+# <a name="csdl-specification"></a><span data-ttu-id="0a4ef-102">CSDL 仕様</span><span class="sxs-lookup"><span data-stu-id="0a4ef-102">CSDL Specification</span></span>
+<span data-ttu-id="0a4ef-103">[Msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef)サイトでは、Entity Framework のコンテンツのメインの場所。</span><span class="sxs-lookup"><span data-stu-id="0a4ef-103">The [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
   
- <span data-ttu-id="e28ea-104">このトピックの内容は次のページで使用できるようになりました: [CSDL 仕様](https://msdn.microsoft.com/data/jj652004)します。</span><span class="sxs-lookup"><span data-stu-id="e28ea-104">The content for this topic is now available on the following page: [CSDL Specification](https://msdn.microsoft.com/data/jj652004).</span></span>
+ <span data-ttu-id="0a4ef-104">このトピックの内容は次のページで使用できるようになりました: [CSDL 仕様](https://msdn.microsoft.com/data/jj652004)します。</span><span class="sxs-lookup"><span data-stu-id="0a4ef-104">The content for this topic is now available on the following page: [CSDL Specification](https://msdn.microsoft.com/data/jj652004).</span></span>

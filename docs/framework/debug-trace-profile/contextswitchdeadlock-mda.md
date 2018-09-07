@@ -15,54 +15,54 @@ ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fdbad4a5eb9a9d0c81ae8d29394652e9f6df136e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935859"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44046172"
 ---
-# <a name="contextswitchdeadlock-mda"></a><span data-ttu-id="dbc85-102">contextSwitchDeadlock MDA</span><span class="sxs-lookup"><span data-stu-id="dbc85-102">contextSwitchDeadlock MDA</span></span>
+# <a name="contextswitchdeadlock-mda"></a><span data-ttu-id="5b047-102">contextSwitchDeadlock MDA</span><span class="sxs-lookup"><span data-stu-id="5b047-102">contextSwitchDeadlock MDA</span></span>
 
-<span data-ttu-id="dbc85-103">`contextSwitchDeadlock` マネージド デバッグ アシスタント (MDA) は、COM コンテキストの遷移の試行中にデッドロックが検出されるとアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="dbc85-103">The `contextSwitchDeadlock` managed debugging assistant (MDA) is activated when a deadlock is detected during an attempted COM context transition.</span></span>
+<span data-ttu-id="5b047-103">`contextSwitchDeadlock` マネージド デバッグ アシスタント (MDA) は、COM コンテキストの遷移の試行中にデッドロックが検出されるとアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="5b047-103">The `contextSwitchDeadlock` managed debugging assistant (MDA) is activated when a deadlock is detected during an attempted COM context transition.</span></span>
 
-## <a name="symptoms"></a><span data-ttu-id="dbc85-104">症状</span><span class="sxs-lookup"><span data-stu-id="dbc85-104">Symptoms</span></span>
+## <a name="symptoms"></a><span data-ttu-id="5b047-104">症状</span><span class="sxs-lookup"><span data-stu-id="5b047-104">Symptoms</span></span>
 
-<span data-ttu-id="dbc85-105">最も一般的な症状は、マネージ コードから実行されたアンマネージ COM コンポーネントの呼び出しから戻らないことです。</span><span class="sxs-lookup"><span data-stu-id="dbc85-105">The most common symptom is that a call on an unmanaged COM component from managed code does not return.</span></span>  <span data-ttu-id="dbc85-106">別の症状として、メモリの使用量が時間と共に増加する場合もあります。</span><span class="sxs-lookup"><span data-stu-id="dbc85-106">Another symptom is memory usage increasing over time.</span></span>
+<span data-ttu-id="5b047-105">最も一般的な症状は、マネージ コードから実行されたアンマネージ COM コンポーネントの呼び出しから戻らないことです。</span><span class="sxs-lookup"><span data-stu-id="5b047-105">The most common symptom is that a call on an unmanaged COM component from managed code does not return.</span></span>  <span data-ttu-id="5b047-106">別の症状として、メモリの使用量が時間と共に増加する場合もあります。</span><span class="sxs-lookup"><span data-stu-id="5b047-106">Another symptom is memory usage increasing over time.</span></span>
 
-## <a name="cause"></a><span data-ttu-id="dbc85-107">原因</span><span class="sxs-lookup"><span data-stu-id="dbc85-107">Cause</span></span>
+## <a name="cause"></a><span data-ttu-id="5b047-107">原因</span><span class="sxs-lookup"><span data-stu-id="5b047-107">Cause</span></span>
 
-<span data-ttu-id="dbc85-108">最も考えられる原因として、シングルスレッド アパートメント (STA) スレッドがメッセージ ポンプを行っていないことがあります。</span><span class="sxs-lookup"><span data-stu-id="dbc85-108">The most probable cause is that a single-threaded apartment (STA) thread is not pumping messages.</span></span> <span data-ttu-id="dbc85-109">STA スレッドが、メッセージ ポンプを行わずに待機しているか、または時間のかかる操作を実行していて、メッセージ キューのポンプを許可していません。</span><span class="sxs-lookup"><span data-stu-id="dbc85-109">The STA thread is either waiting without pumping messages or is performing lengthy operations and is not allowing the message queue to pump.</span></span>
+<span data-ttu-id="5b047-108">最も考えられる原因として、シングルスレッド アパートメント (STA) スレッドがメッセージ ポンプを行っていないことがあります。</span><span class="sxs-lookup"><span data-stu-id="5b047-108">The most probable cause is that a single-threaded apartment (STA) thread is not pumping messages.</span></span> <span data-ttu-id="5b047-109">STA スレッドが、メッセージ ポンプを行わずに待機しているか、または時間のかかる操作を実行していて、メッセージ キューのポンプを許可していません。</span><span class="sxs-lookup"><span data-stu-id="5b047-109">The STA thread is either waiting without pumping messages or is performing lengthy operations and is not allowing the message queue to pump.</span></span>
 
-<span data-ttu-id="dbc85-110">メモリ使用量が時間の経過と共に増加する症状は、ファイナライザー スレッドがアンマネージ COM コンポーネント上の `Release` を呼び出そうとして、そのコンポーネントが戻らない場合に発生します。</span><span class="sxs-lookup"><span data-stu-id="dbc85-110">Memory usage increasing over time is caused by the finalizer thread attempting to call `Release` on an unmanaged COM component and that component is not returning.</span></span>  <span data-ttu-id="dbc85-111">このため、ファイナライザーは他のオブジェクトを再利用できなくなります。</span><span class="sxs-lookup"><span data-stu-id="dbc85-111">This prevents the finalizer from reclaiming other objects.</span></span>
+<span data-ttu-id="5b047-110">メモリ使用量が時間の経過と共に増加する症状は、ファイナライザー スレッドがアンマネージ COM コンポーネント上の `Release` を呼び出そうとして、そのコンポーネントが戻らない場合に発生します。</span><span class="sxs-lookup"><span data-stu-id="5b047-110">Memory usage increasing over time is caused by the finalizer thread attempting to call `Release` on an unmanaged COM component and that component is not returning.</span></span>  <span data-ttu-id="5b047-111">このため、ファイナライザーは他のオブジェクトを再利用できなくなります。</span><span class="sxs-lookup"><span data-stu-id="5b047-111">This prevents the finalizer from reclaiming other objects.</span></span>
 
-<span data-ttu-id="dbc85-112">既定では、Visual Basic コンソール アプリケーションのメイン スレッドのスレッド処理モデルは STA です。</span><span class="sxs-lookup"><span data-stu-id="dbc85-112">By default, the threading model for the main thread of Visual Basic console applications is STA.</span></span> <span data-ttu-id="dbc85-113">STA スレッドが共通言語ランタイムまたはサードパーティ コントロールを通じて COM 相互運用性を直接または間接的に使用する場合、この MDA がアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="dbc85-113">This MDA is activated if an STA thread uses COM interoperability either directly or indirectly through the common language runtime or a third-party control.</span></span>  <span data-ttu-id="dbc85-114">Visual Basic コンソール アプリケーションでこの MDA がアクティブ化されるのを防ぐには、メイン メソッドに <xref:System.MTAThreadAttribute> 属性を適用するか、またはメッセージをポンプするようにアプリケーションを変更します。</span><span class="sxs-lookup"><span data-stu-id="dbc85-114">To avoid activating this MDA in a Visual Basic console application, apply the <xref:System.MTAThreadAttribute> attribute to the main method or modify the application to pump messages.</span></span>
+<span data-ttu-id="5b047-112">既定では、Visual Basic コンソール アプリケーションのメイン スレッドのスレッド処理モデルは STA です。</span><span class="sxs-lookup"><span data-stu-id="5b047-112">By default, the threading model for the main thread of Visual Basic console applications is STA.</span></span> <span data-ttu-id="5b047-113">STA スレッドが共通言語ランタイムまたはサードパーティ コントロールを通じて COM 相互運用性を直接または間接的に使用する場合、この MDA がアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="5b047-113">This MDA is activated if an STA thread uses COM interoperability either directly or indirectly through the common language runtime or a third-party control.</span></span>  <span data-ttu-id="5b047-114">Visual Basic コンソール アプリケーションでこの MDA がアクティブ化されるのを防ぐには、メイン メソッドに <xref:System.MTAThreadAttribute> 属性を適用するか、またはメッセージをポンプするようにアプリケーションを変更します。</span><span class="sxs-lookup"><span data-stu-id="5b047-114">To avoid activating this MDA in a Visual Basic console application, apply the <xref:System.MTAThreadAttribute> attribute to the main method or modify the application to pump messages.</span></span>
 
-<span data-ttu-id="dbc85-115">次のすべての条件が満たされる場合、この MDA が誤ってアクティブ化される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dbc85-115">It is possible for this MDA to be falsely activated when all of the following conditions are met:</span></span>
+<span data-ttu-id="5b047-115">次のすべての条件が満たされる場合、この MDA が誤ってアクティブ化される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="5b047-115">It is possible for this MDA to be falsely activated when all of the following conditions are met:</span></span>
 
--   <span data-ttu-id="dbc85-116">アプリケーションがライブラリを通じて直接または間接的に STA スレッドから COM コンポーネントを作成する。</span><span class="sxs-lookup"><span data-stu-id="dbc85-116">An application creates COM components from STA threads either directly or indirectly through libraries.</span></span>
+-   <span data-ttu-id="5b047-116">アプリケーションがライブラリを通じて直接または間接的に STA スレッドから COM コンポーネントを作成する。</span><span class="sxs-lookup"><span data-stu-id="5b047-116">An application creates COM components from STA threads either directly or indirectly through libraries.</span></span>
 
--   <span data-ttu-id="dbc85-117">デバッガーでアプリケーションが中断され、ユーザーがアプリケーションを続行したか、またはステップ操作を実行した。</span><span class="sxs-lookup"><span data-stu-id="dbc85-117">The application was stopped in the debugger and the user either continued the application or performed a step operation.</span></span>
+-   <span data-ttu-id="5b047-117">デバッガーでアプリケーションが中断され、ユーザーがアプリケーションを続行したか、またはステップ操作を実行した。</span><span class="sxs-lookup"><span data-stu-id="5b047-117">The application was stopped in the debugger and the user either continued the application or performed a step operation.</span></span>
 
--   <span data-ttu-id="dbc85-118">アンマネージ デバッグが有効になっていない。</span><span class="sxs-lookup"><span data-stu-id="dbc85-118">Unmanaged debugging is not enabled.</span></span>
+-   <span data-ttu-id="5b047-118">アンマネージ デバッグが有効になっていない。</span><span class="sxs-lookup"><span data-stu-id="5b047-118">Unmanaged debugging is not enabled.</span></span>
 
-<span data-ttu-id="dbc85-119">MDA が誤ってアクティブ化されたかどうかを判断するには、すべてのブレークポイントを無効にし、アプリケーションを再び実行して、中断なしで実行させます。</span><span class="sxs-lookup"><span data-stu-id="dbc85-119">To determine if the MDA is being falsely activated, disable all breakpoints, restart the application, and allow it to run without stopping.</span></span> <span data-ttu-id="dbc85-120">MDA がアクティブ化されない場合は、最初のアクティブ化は誤りだった可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dbc85-120">If the MDA is not activated, it is likely the initial activation was false.</span></span> <span data-ttu-id="dbc85-121">その場合は、MDA を無効にして、デバッグ セッションとの干渉を防ぎます。</span><span class="sxs-lookup"><span data-stu-id="dbc85-121">In this case, disable the MDA to avoid interference with the debugging session.</span></span>
+<span data-ttu-id="5b047-119">MDA が誤ってアクティブ化されたかどうかを判断するには、すべてのブレークポイントを無効にし、アプリケーションを再び実行して、中断なしで実行させます。</span><span class="sxs-lookup"><span data-stu-id="5b047-119">To determine if the MDA is being falsely activated, disable all breakpoints, restart the application, and allow it to run without stopping.</span></span> <span data-ttu-id="5b047-120">MDA がアクティブ化されない場合は、最初のアクティブ化は誤りだった可能性があります。</span><span class="sxs-lookup"><span data-stu-id="5b047-120">If the MDA is not activated, it is likely the initial activation was false.</span></span> <span data-ttu-id="5b047-121">その場合は、MDA を無効にして、デバッグ セッションとの干渉を防ぎます。</span><span class="sxs-lookup"><span data-stu-id="5b047-121">In this case, disable the MDA to avoid interference with the debugging session.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="dbc85-122">この MDA は、既定の Visual Studio のセットです。</span><span class="sxs-lookup"><span data-stu-id="dbc85-122">This MDA is in the default set for Visual Studio.</span></span> <span data-ttu-id="dbc85-123">Mda を無効にする方法については、次を参照してください。[マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)します。</span><span class="sxs-lookup"><span data-stu-id="dbc85-123">For information about how to disable MDAs, see [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).</span></span>
+> <span data-ttu-id="5b047-122">この MDA は、既定の Visual Studio のセットです。</span><span class="sxs-lookup"><span data-stu-id="5b047-122">This MDA is in the default set for Visual Studio.</span></span> <span data-ttu-id="5b047-123">Mda を無効にする方法については、次を参照してください。[マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)します。</span><span class="sxs-lookup"><span data-stu-id="5b047-123">For information about how to disable MDAs, see [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).</span></span>
 
-## <a name="resolution"></a><span data-ttu-id="dbc85-124">解像度</span><span class="sxs-lookup"><span data-stu-id="dbc85-124">Resolution</span></span>
+## <a name="resolution"></a><span data-ttu-id="5b047-124">解像度</span><span class="sxs-lookup"><span data-stu-id="5b047-124">Resolution</span></span>
 
-<span data-ttu-id="dbc85-125">STA メッセージ ポンプに関する COM 規則に従います。</span><span class="sxs-lookup"><span data-stu-id="dbc85-125">Follow COM rules regarding STA message pumping.</span></span>
+<span data-ttu-id="5b047-125">STA メッセージ ポンプに関する COM 規則に従います。</span><span class="sxs-lookup"><span data-stu-id="5b047-125">Follow COM rules regarding STA message pumping.</span></span>
 
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="dbc85-126">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="dbc85-126">Effect on the Runtime</span></span>
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="5b047-126">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="5b047-126">Effect on the Runtime</span></span>
 
-<span data-ttu-id="dbc85-127">この MDA は CLR に影響しません。</span><span class="sxs-lookup"><span data-stu-id="dbc85-127">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="dbc85-128">COM コンテキストに関するデータを報告するだけです。</span><span class="sxs-lookup"><span data-stu-id="dbc85-128">It only reports data about COM contexts.</span></span>
+<span data-ttu-id="5b047-127">この MDA は CLR に影響しません。</span><span class="sxs-lookup"><span data-stu-id="5b047-127">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="5b047-128">COM コンテキストに関するデータを報告するだけです。</span><span class="sxs-lookup"><span data-stu-id="5b047-128">It only reports data about COM contexts.</span></span>
 
-## <a name="output"></a><span data-ttu-id="dbc85-129">出力</span><span class="sxs-lookup"><span data-stu-id="dbc85-129">Output</span></span>
+## <a name="output"></a><span data-ttu-id="5b047-129">出力</span><span class="sxs-lookup"><span data-stu-id="5b047-129">Output</span></span>
 
-<span data-ttu-id="dbc85-130">現在のコンテキストおよびターゲット コンテキストを説明するメッセージです。</span><span class="sxs-lookup"><span data-stu-id="dbc85-130">A message describing the current context and the target context.</span></span>
+<span data-ttu-id="5b047-130">現在のコンテキストおよびターゲット コンテキストを説明するメッセージです。</span><span class="sxs-lookup"><span data-stu-id="5b047-130">A message describing the current context and the target context.</span></span>
 
-## <a name="configuration"></a><span data-ttu-id="dbc85-131">構成</span><span class="sxs-lookup"><span data-stu-id="dbc85-131">Configuration</span></span>
+## <a name="configuration"></a><span data-ttu-id="5b047-131">構成</span><span class="sxs-lookup"><span data-stu-id="5b047-131">Configuration</span></span>
 
 ```xml
 <mdaConfig>
@@ -72,9 +72,8 @@ ms.locfileid: "42935859"
 </mdaConfig>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="dbc85-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="dbc85-132">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5b047-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="5b047-132">See Also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- <span data-ttu-id="dbc85-133">
-  [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)</span><span class="sxs-lookup"><span data-stu-id="dbc85-133">[Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)</span></span>
-- [<span data-ttu-id="dbc85-134">相互運用マーシャリング</span><span class="sxs-lookup"><span data-stu-id="dbc85-134">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="5b047-133">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="5b047-133">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="5b047-134">相互運用マーシャリング</span><span class="sxs-lookup"><span data-stu-id="5b047-134">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

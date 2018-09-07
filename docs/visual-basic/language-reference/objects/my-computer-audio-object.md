@@ -6,26 +6,26 @@ helpviewer_keywords:
 - My.Computer.Audio object
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
 ms.openlocfilehash: 805e2a87e586e96048dd40033e7d80a74dcc94e9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744045"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065811"
 ---
-# <a name="mycomputeraudio-object"></a><span data-ttu-id="5913e-102">My.Computer.Audio オブジェクト</span><span class="sxs-lookup"><span data-stu-id="5913e-102">My.Computer.Audio Object</span></span>
-<span data-ttu-id="5913e-103">サウンドを再生するためのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="5913e-103">Provides methods for playing sounds.</span></span>  
+# <a name="mycomputeraudio-object"></a><span data-ttu-id="c30a1-102">My.Computer.Audio オブジェクト</span><span class="sxs-lookup"><span data-stu-id="c30a1-102">My.Computer.Audio Object</span></span>
+<span data-ttu-id="c30a1-103">サウンドを再生するためのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="c30a1-103">Provides methods for playing sounds.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5913e-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="5913e-104">Remarks</span></span>  
- <span data-ttu-id="5913e-105">メソッドとプロパティについては、`My.Computer.Audio`オブジェクトを参照してください<xref:Microsoft.VisualBasic.Devices.Audio>します。</span><span class="sxs-lookup"><span data-stu-id="5913e-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c30a1-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="c30a1-104">Remarks</span></span>  
+ <span data-ttu-id="c30a1-105">メソッドとプロパティについては、`My.Computer.Audio`オブジェクトを参照してください<xref:Microsoft.VisualBasic.Devices.Audio>します。</span><span class="sxs-lookup"><span data-stu-id="c30a1-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
   
- <span data-ttu-id="5913e-106">詳細については、次を参照してください。[サウンドの再生に関して](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)します。</span><span class="sxs-lookup"><span data-stu-id="5913e-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
+ <span data-ttu-id="c30a1-106">詳細については、次を参照してください。[サウンドの再生に関して](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)します。</span><span class="sxs-lookup"><span data-stu-id="c30a1-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5913e-107">要件</span><span class="sxs-lookup"><span data-stu-id="5913e-107">Requirements</span></span>  
- <span data-ttu-id="5913e-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="5913e-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="c30a1-107">要件</span><span class="sxs-lookup"><span data-stu-id="c30a1-107">Requirements</span></span>  
+ <span data-ttu-id="c30a1-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="c30a1-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="5913e-109">**クラス:** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="5913e-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
+ <span data-ttu-id="c30a1-109">**クラス:** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="c30a1-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
   
- <span data-ttu-id="5913e-110">**アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="5913e-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="c30a1-110">**アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="c30a1-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5913e-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="5913e-111">See Also</span></span>  
- [<span data-ttu-id="5913e-112">My.Computer オブジェクト</span><span class="sxs-lookup"><span data-stu-id="5913e-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="c30a1-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="c30a1-111">See Also</span></span>  
+ [<span data-ttu-id="c30a1-112">My.Computer オブジェクト</span><span class="sxs-lookup"><span data-stu-id="c30a1-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
