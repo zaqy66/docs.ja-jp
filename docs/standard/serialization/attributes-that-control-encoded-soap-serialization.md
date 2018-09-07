@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 07c4c1e9b9a9da2e9a585efdcac644c616012078
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7b5a48003ff9bfb398c05c8d70a9076d49ad83d6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778566"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065655"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>エンコード済み SOAP シリアル化を制御する属性
 
@@ -34,10 +34,10 @@ ms.locfileid: "43778566"
 
 ## <a name="see-also"></a>関連項目
 
-[XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)  
-[方法 : オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
-[方法 : SOAP エンコード済み XML シリアル化をオーバーライドする](how-to-override-encoded-soap-xml-serialization.md)  
-[属性](../../../docs/standard/attributes/index.md)  
-<xref:System.Xml.Serialization.XmlSerializer>  
-[方法 : オブジェクトをシリアル化する](how-to-serialize-an-object.md)  
-[方法 : オブジェクトを逆シリアル化する](how-to-deserialize-an-object.md)
+- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)  
+- [方法 : オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+- [方法 : SOAP エンコード済み XML シリアル化をオーバーライドする](how-to-override-encoded-soap-xml-serialization.md)  
+- [属性](../../../docs/standard/attributes/index.md)  
+- <xref:System.Xml.Serialization.XmlSerializer>  
+- [方法 : オブジェクトをシリアル化する](how-to-serialize-an-object.md)  
+- [方法 : オブジェクトを逆シリアル化する](how-to-deserialize-an-object.md)

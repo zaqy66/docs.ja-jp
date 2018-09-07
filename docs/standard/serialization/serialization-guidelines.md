@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 51d561009a2f497cf4cf720abd5a414cbbbb2e64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592094"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060334"
 ---
 # <a name="serialization-guidelines"></a>シリアル化のガイドライン
 このドキュメントには、シリアル化できるように API をデザインする際に考慮すべきガイドラインを示します。  
@@ -104,7 +104,7 @@ ms.locfileid: "33592094"
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2.  XML シリアル化属性を適用することで提供される、シリアル化された XML の形状をより細かく制御する場合は、<xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装することを検討してください。 2 つのメソッド、インターフェイスの<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>と<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>をシリアル化された XML ストリームを完全に制御できるようにします。 また、<xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性を適用することで、その型用に生成される XML スキーマを制御することもできます。  
+2.  XML シリアル化属性を適用することで提供される、シリアル化された XML の形状をより細かく制御する場合は、<xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装することを検討してください。 2 つのメソッド、インターフェイスの<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>と<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>を使用するシリアル化された XML ストリームを完全に制御できます。 また、<xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性を適用することで、その型用に生成される XML スキーマを制御することもできます。  
   
 #### <a name="supporting-runtime-serialization"></a>ランタイム シリアル化のサポート  
  *ランタイム シリアル化*は .NET リモート処理で使用されるテクノロジです。 .NET リモート処理を使用して型を変換する場合、ランタイム シリアル化がサポートされていることを確認する必要があります。  
@@ -138,11 +138,12 @@ ms.locfileid: "33592094"
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>関連項目  
- [データ コントラクトの使用](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [データ コントラクト シリアライザー](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- [データ コントラクト シリアライザーでサポートされる型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [バイナリ シリアル化](binary-serialization.md)  
- [リモート オブジェクト](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)  
- [セキュリティとシリアル化](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>関連項目
+
+- [データ コントラクトの使用](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+- [データ コントラクト シリアライザー](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+- [データ コントラクト シリアライザーでサポートされる型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+- [バイナリ シリアル化](binary-serialization.md)  
+- [リモート オブジェクト](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)  
+- [セキュリティとシリアル化](../../../docs/framework/misc/security-and-serialization.md)

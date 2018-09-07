@@ -5,12 +5,12 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 773aca8cbbd78f5480e254ff559192955beb18d9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 615421afe522770bfcff38ffdb23917d7925150d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532475"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083909"
 ---
 # <a name="reference-visual-basic"></a>リファレンス (Visual Basic)
 このセクションでは、Visual Basic プログラミングのさまざまな側面に関するリファレンス情報へのリンクを提供します。  
@@ -42,5 +42,5 @@ ms.locfileid: "43532475"
  [Visual Studio の XML ツール](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Visual Studio で使用可能な各種の XML ツールでは、トピックへのリンクを提供します。  
   
- [オートメーションと機能拡張のリファレンス](https://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
+ [オートメーションと機能拡張のリファレンス](/visualstudio/extensibility/extensibility-in-visual-studio)  
  Automation と Visual Studio での共有と言語固有コンポーネントの機能拡張に関するトピックへのリンクを提供します。

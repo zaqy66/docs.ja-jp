@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a37ec8a5d62e4a4eb7cfcd22f684821cfd204945
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fca25786096ebeb97c133d306129f33f2bb4580
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579887"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065342"
 ---
 # <a name="working-with-calendars"></a>カレンダーの使用
 
-日時の値は特定の時点を表しますが、その文字列形式はカルチャに依存し、特定のカルチャで日時の値の表示に使用される規則と、そのカルチャで使用される暦の両方に応じて決まります。 このトピックでは、.NET の予定表のサポートについて説明し、日付の値を使用する場合、calendar クラスの使用を説明します。
+日時の値は特定の時点を表しますが、その文字列形式はカルチャに依存し、特定のカルチャで日時の値の表示に使用される規則と、そのカルチャで使用される暦の両方に応じて決まります。 このトピックでは、.NET でのカレンダーのサポートについて説明し、日付の値を使用する場合に、calendar クラスの使用について説明します。
 
-## <a name="calendars-in-net"></a>.NET の予定表
+## <a name="calendars-in-net"></a>.NET で予定表
 
-派生して .NET の暦はすべて、<xref:System.Globalization.Calendar?displayProperty=nameWithType>基本の暦の実装を提供するクラス。 <xref:System.Globalization.Calendar> クラスを継承するクラスの 1 つに <xref:System.Globalization.EastAsianLunisolarCalendar> クラスがあります。これは、すべての太陰太陽暦の基本クラスです。 .NET には、次のカレンダー実装が用意されています。
+派生して .NET でのすべてのカレンダー、<xref:System.Globalization.Calendar?displayProperty=nameWithType>クラスを基本の暦の実装を提供します。 <xref:System.Globalization.Calendar> クラスを継承するクラスの 1 つに <xref:System.Globalization.EastAsianLunisolarCalendar> クラスがあります。これは、すべての太陰太陽暦の基本クラスです。 .NET には、次のカレンダー実装が含まれています。
 
 * <xref:System.Globalization.ChineseLunisolarCalendar>。中国の太陰太陽暦を表します。
 
@@ -94,7 +94,7 @@ ms.locfileid: "33579887"
 [!code-csharp[Conceptual.Calendars#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/datesandcalendars2.cs#3)]
 [!code-vb[Conceptual.Calendars#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/datesandcalendars2.vb#3)]
 
-### <a name="instantiating-dates-based-on-a-calendar"></a>カレンダーの日付をインスタンス化します。
+### <a name="instantiating-dates-based-on-a-calendar"></a>カレンダーに基づく日付をインスタンス化します。
 
 <xref:System.DateTime> と <xref:System.DateTimeOffset> の値はグレゴリオ暦に基づくため、別の暦の日、月、または年の値を使用する場合は、<xref:System.Globalization.Calendar> 型のパラメーターを含むオーバーロードされたコンストラクターを呼び出して日付の値をインスタンス化する必要があります。 また、特定の暦の <xref:System.Globalization.Calendar.ToDateTime%2A?displayProperty=nameWithType> メソッドのいずれかのオーバーロードを呼び出して、特定の暦の値に基づいて <xref:System.DateTime> オブジェクトをインスタンス化することもできます。
 
@@ -126,20 +126,20 @@ ms.locfileid: "33579887"
 
 ### <a name="calendars-and-date-ranges"></a>暦と日付範囲
 
-暦でサポートされている最も古い日付は、暦の <xref:System.Globalization.Calendar.MinSupportedDateTime%2A?displayProperty=nameWithType> プロパティによって示されます。 <xref:System.Globalization.GregorianCalendar> クラスでは、その日付は西暦 0001 年 1 月 1 日 です。 .NET の他の予定表のほとんどは、それ以降の日付をサポートします。 暦でサポートされている最も古い日付より前の日付と時刻の値を処理しようとすると、<xref:System.ArgumentOutOfRangeException> 例外がスローされます。
+暦でサポートされている最も古い日付は、暦の <xref:System.Globalization.Calendar.MinSupportedDateTime%2A?displayProperty=nameWithType> プロパティによって示されます。 <xref:System.Globalization.GregorianCalendar> クラスでは、その日付は西暦 0001 年 1 月 1 日 です。 .NET の他のカレンダーの大半は、以降の日付をサポートします。 暦でサポートされている最も古い日付より前の日付と時刻の値を処理しようとすると、<xref:System.ArgumentOutOfRangeException> 例外がスローされます。
 
-ただし、重要な例外が 1 つあります。 <xref:System.DateTime> オブジェクトと <xref:System.DateTimeOffset> オブジェクトの既定の (初期化されていない) 値は、<xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType> 値と同じです。 このカレンダーにおける日付の書式を設定しようとする場合をサポートしていない西暦 0001 年 1 月 1 日 書式指定子を指定しないと、書式設定メソッドが、"G"(一般の日付/時刻のパターン) 書式指定子ではなく、"s"(並べ替え可能な日付/時刻のパターン) 書式指定子を使用します。 その結果、書式設定操作は <xref:System.ArgumentOutOfRangeException> 例外をスローしません。 代わりに、サポートされていない日付を返します。 この問題を、次の例で説明します。この例は、現在のカルチャが日本語 (日本) に設定されていれば和暦で、アラビア語 (エジプト) に設定されていればウムアルクラ暦で、<xref:System.DateTime.MinValue?displayProperty=nameWithType> の値を表示します。 また、現在のカルチャを英語 (米国) に設定し、これらの各 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> オブジェクトで <xref:System.Globalization.CultureInfo> メソッドを呼び出します。 どの場合も、並べ替え可能な日付と時刻のパターンを使用して、日付が表示されます。
+ただし、重要な例外が 1 つあります。 <xref:System.DateTime> オブジェクトと <xref:System.DateTimeOffset> オブジェクトの既定の (初期化されていない) 値は、<xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType> 値と同じです。 西暦 0001 年 1 月 1日をサポートしない予定表では、この日付の書式設定しようとする場合 書式指定子を指定しない、書式指定メソッドは、"G"(一般の日付/時刻のパターン) 書式指定子ではなく、"s"(並べ替え可能な日付/時刻のパターン) 書式指定子を使用します。 その結果、書式設定操作は <xref:System.ArgumentOutOfRangeException> 例外をスローしません。 代わりに、サポートされていない日付を返します。 この問題を、次の例で説明します。この例は、現在のカルチャが日本語 (日本) に設定されていれば和暦で、アラビア語 (エジプト) に設定されていればウムアルクラ暦で、<xref:System.DateTime.MinValue?displayProperty=nameWithType> の値を表示します。 また、現在のカルチャを英語 (米国) に設定し、これらの各 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> オブジェクトで <xref:System.Globalization.CultureInfo> メソッドを呼び出します。 どの場合も、並べ替え可能な日付と時刻のパターンを使用して、日付が表示されます。
 
 [!code-csharp[Conceptual.Calendars#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/minsupporteddatetime1.cs#11)]
 [!code-vb[Conceptual.Calendars#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/minsupporteddatetime1.vb#11)]
 
 ## <a name="working-with-eras"></a>時代 (年号) の操作
 
-暦では通常、日付が時代 (年号) に分けられます。 ただし、 <xref:System.Globalization.Calendar> .NET のクラスは、カレンダー、およびほとんどのによって定義されたすべての時代をサポートしていません、<xref:System.Globalization.Calendar>クラスは 1 つの時代のみをサポートします。 複数の時代 (年号) をサポートしているのは、<xref:System.Globalization.JapaneseCalendar> クラスと <xref:System.Globalization.JapaneseLunisolarCalendar> クラスだけです。
+暦では通常、日付が時代 (年号) に分けられます。 ただし、 <xref:System.Globalization.Calendar> .NET のクラスは、予定表とのほとんどによって定義されたすべての時代をサポートしていません、<xref:System.Globalization.Calendar>クラスは時代は 1 つのみをサポートします。 複数の時代 (年号) をサポートしているのは、<xref:System.Globalization.JapaneseCalendar> クラスと <xref:System.Globalization.JapaneseLunisolarCalendar> クラスだけです。
 
 ### <a name="eras-and-era-names"></a>時代 (年号) と時代 (年号) の名前
 
-.NET では、特定の暦の実装でサポートされる時代 (年号) を表す整数が格納されている逆の順序での<xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>配列。 現在の時代 (年号) のインデックスは 0 で、複数の時代 (年号) をサポートする <xref:System.Globalization.Calendar> クラスの場合は、後に続く各インデックスが前の時代 (年号) に対応します。 <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> 配列における現在の時代 (年号) のインデックスは、静的な <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> プロパティで定義されます。これは定数であり、値は常に 0 になります。 個々の <xref:System.Globalization.Calendar> クラスには、現在の時代 (年号) の値を返す静的フィールドも含まれています。 これらを次の表に示します。
+.NET では、特定の暦の実装でサポートされる時代 (年号) を表す整数が逆の順序で格納、<xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>配列。 現在の時代 (年号) のインデックスは 0 で、複数の時代 (年号) をサポートする <xref:System.Globalization.Calendar> クラスの場合は、後に続く各インデックスが前の時代 (年号) に対応します。 <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> 配列における現在の時代 (年号) のインデックスは、静的な <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> プロパティで定義されます。これは定数であり、値は常に 0 になります。 個々の <xref:System.Globalization.Calendar> クラスには、現在の時代 (年号) の値を返す静的フィールドも含まれています。 これらを次の表に示します。
 
 | Calendar クラス                                        | 現在の時代 (年号) のフィールド                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -160,7 +160,7 @@ ms.locfileid: "33579887"
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
 
-また、"g" カスタム日時書式指定文字列では、日付と時刻の文字列形式に暦の時代 (年号) の名前が含まれます。 詳細については、次を参照してください。[カスタムの日付と時刻の書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)です。
+また、"g" カスタム日時書式指定文字列では、日付と時刻の文字列形式に暦の時代 (年号) の名前が含まれます。 詳細については、次を参照してください。[カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)します。
 
 ### <a name="instantiating-a-date-with-an-era"></a>日付、時代 (年号) のインスタンス化します。
 
@@ -179,7 +179,7 @@ ms.locfileid: "33579887"
 [!code-vb[Conceptual.Calendars#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings1.vb#8)]
 
 > [!WARNING]
-> <xref:System.Globalization.JapaneseCalendar>クラスは、.net での日付と複数の時代 (年号) をサポートでの現在の暦ことができる唯一の calendar クラス、<xref:System.Globalization.CultureInfo>オブジェクト - 具体的には、<xref:System.Globalization.CultureInfo>日本語 (日本) のカルチャを表すオブジェクト。
+> <xref:System.Globalization.JapaneseCalendar>クラスが唯一のカレンダー クラスの現在の暦は、両方のサポートしている日付の 1 つ以上の時代 (年号) に .NET で、<xref:System.Globalization.CultureInfo>オブジェクト - 具体的には、<xref:System.Globalization.CultureInfo>日本語 (日本) のカルチャを表すオブジェクト。
 
 どの暦の場合も、"g" カスタム書式指定子の結果の文字列には時代 (年号) が含まれます。 次の例では、"MM-dd-yyyy g" というカスタム書式指定文字列を使用して、結果の文字列に時代 (年号) を含めています。現在の暦はグレゴリオ暦です。
 
@@ -193,5 +193,5 @@ ms.locfileid: "33579887"
 
 ## <a name="see-also"></a>関連項目
 
-[方法: グレゴリオ暦以外の暦で日付を表示](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-[サンプル: カレンダーの週範囲ユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+* [方法: グレゴリオ暦以外の暦で日付を表示](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+* [サンプル: 暦の週の範囲はユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: c43505497b947004ffb282346459967579d52375
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43674084"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44066803"
 ---
 # <a name="xaml-resources"></a>XAML リソース
 リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。 リソースの例には、ブラシ、スタイルが含まれます。 この概要でのリソースを使用する方法を説明します[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 作成し、コードを使用して、またはコードの間で同じ意味でリソースにアクセスすることができますもと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 詳細については、次を参照してください。[リソースとコード](../../../../docs/framework/wpf/advanced/resources-and-code.md)します。  

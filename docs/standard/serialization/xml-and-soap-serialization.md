@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: ca3b31c1d60770a6b9db5e92275d9840036ee0b0
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 366a4a42ff0bf968e51e11a66fa81566a47c86ea
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42753909"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075284"
 ---
 # <a name="xml-and-soap-serialization"></a>XML シリアル化および SOAP シリアル化
 
@@ -92,4 +92,4 @@ ASP.NET を使用した XML Web サービスのプログラミング方法につ
 
 ## <a name="see-also"></a>関連項目
 
-[バイナリ シリアル化](binary-serialization.md)  
+- [バイナリ シリアル化](binary-serialization.md)

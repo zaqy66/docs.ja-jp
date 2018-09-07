@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
-ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
+ms.openlocfilehash: cd3defd969b5f26fb95e7feca9c3d533e67272b1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36338105"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071097"
 ---
 # <a name="general-naming-conventions"></a>一般的な名前付け規則
-このセクションでは、一般的な名前付け規則単語の選択に関連する言語固有の名前を使用しないようにする方法の省略形と頭字語、および推奨事項の使用に関するガイドラインについて説明します。  
+このセクションでは、一般的な名前付け規則、単語の選択に関連する言語固有の名前を使用しないようにする方法の省略形と頭字語、および推奨事項の使用に関するガイドラインについて説明します。  
   
 ## <a name="word-choice"></a>単語の選択  
  **✓ DO** 読みやすい識別子の名前を選択します。  
   
- という名前のプロパティなど、`HorizontalAlignment`は英語 - よりも読みやすく`AlignmentHorizontal`です。  
+ たとえば、という名前のプロパティ`HorizontalAlignment`英語 - よりも読みやすく、`AlignmentHorizontal`します。  
   
  **✓ DO** 簡潔さよりも読みやすさを優先します。  
   
- プロパティ名`CanScrollHorizontally`がよりも良い`ScrollableX`(x 軸にあいまいな参照)。  
+ プロパティ名`CanScrollHorizontally`よりは`ScrollableX`(x 軸にあいまいな参照)。  
   
  **X DO NOT** アンダー スコア、ハイフン、またはその他の英数字以外の文字を使用します。  
   
@@ -41,23 +41,23 @@ ms.locfileid: "36338105"
   
  **X AVOID** 広くのキーワードと競合する識別子を使用してプログラミング言語を使用します。  
   
- ルール 4 の共通言語仕様 (CLS)、に従って準拠のすべての言語は、その言語のキーワードを識別子として使用する名前付きの項目にアクセスできるようにするメカニズムを提供する必要があります。 C# の場合、たとえば、使用して、@ ここではエスケープ メカニズムとしてマークします。 ただし、勧めまだメソッドを使用して、エスケープ シーケンスが指定されていない場合よりも非常に困難になっているために、一般的なキーワードを回避することをお勧めします。  
+ に従って規則 4 の共通言語仕様 (CLS) に準拠しているすべての言語はその言語のキーワードを識別子として使用する名前付きの項目へのアクセスを許可するメカニズムを提供する必要があります。 C# の場合は、たとえば、使用して、@ 記号にエスケープ メカニズムとして。 ただしはよりもなしで 1 つのエスケープ シーケンスでメソッドを使用するより難しいために、一般的なキーワードを回避することはお勧めもします。  
   
-## <a name="using-abbreviations-and-acronyms"></a>略称や頭字語を使用します。  
+## <a name="using-abbreviations-and-acronyms"></a>省略形と頭字語を使用します。  
  **X DO NOT** 識別子名の一部としての省略形または短縮形を使用します。  
   
- たとえば、使用して`GetWindow`なく`GetWin`です。  
+ たとえば、使用して`GetWindow`なく`GetWin`します。  
   
  **X DO NOT** 広く受け入れられていると偶数の場合は、必要な場合にのみではない任意の頭字語を使用します。  
   
-## <a name="avoiding-language-specific-names"></a>言語固有の名前の回避  
+## <a name="avoiding-language-specific-names"></a>言語固有の名前を回避します。  
  **✓ DO** 型名に言語固有のキーワードではなく、意味的にわかりやすい名前を使用します。  
   
- たとえば、`GetLength`よりも優れた名前は、`GetInt`です。  
+ たとえば、`GetLength`よりもよい名前は、`GetInt`します。  
   
  **✓ DO** まれなケース識別子には、その型以外の意味があるない場合に言語固有の名前ではなく、汎用の CLR 型名を使用します。  
   
- たとえば、メソッドへの変換<xref:System.Int64>という名前を付ける必要があります`ToInt64`ではなく、 `ToLong` (ため<xref:System.Int64>、c# の CLR 名です-特定のエイリアス`long`)。 次の表は、CLR 型名 (だけでなく c#、Visual Basic、および C++ の対応する型名) を使用していくつかの基本データ型を示します。  
+ たとえば、メソッドに変換する<xref:System.Int64>名前を指定する必要があります`ToInt64`ではなく、 `ToLong` (ため<xref:System.Int64>(C#) CLR 名は、-固有のエイリアス`long`)。 次の表は、CLR の型名 (およびその c#、Visual Basic、および C++ の対応する型名) を使用していくつかの基本データ型を表示します。  
   
 |C#|Visual Basic|C++|CLR|  
 |---------|------------------|-----------|---------|  
@@ -85,7 +85,7 @@ ms.locfileid: "36338105"
   
  **✓ DO** を既存の API の新しいバージョンを示すプレフィックスではなく、サフィックスを追加することを希望します。  
   
- これは、役立ちます探索ドキュメントについてを参照するときに IntelliSense を使用してまたはします。 古いバージョンの API はほとんどのブラウザーおよび IntelliSense は、アルファベット順に識別子を表示するため、新しい Api の近くに編成できます。  
+ ドキュメントについてを参照するときに検出を支援はこれまたは IntelliSense を使用します。 古いバージョンの API はほとんどのブラウザーと IntelliSense は、アルファベット順に識別子を表示するための新しい Api の近くに編成します。  
   
  **✓ CONSIDER** サフィックスまたはプリフィックスを追加する代わりに、まったく新しいが意味のある識別子を使用します。  
   
@@ -93,12 +93,13 @@ ms.locfileid: "36338105"
   
  **X DO NOT** "Ex"(または類似した) を使用して、同じ API の以前のバージョンと区別する識別子のサフィックスです。  
   
- **✓ DO** 32 ビット整数の代わりに 64 ビット整数 (長整数) で動作する Api のバージョンを導入するときに、「64」サフィックスを使用します。 のみ、既存の 32 ビット API が存在する場合に、この方法を実行する必要があります。しないことを 64 ビット バージョンのみでの新しい api です。  
+ **✓ DO** 32 ビット整数の代わりに 64 ビット整数 (長整数) で動作する Api のバージョンを導入するときに、「64」サフィックスを使用します。 既存の 32 ビットの API が存在する場合は、この手法を採用するだけで済みますしないため、64 ビット バージョンのみで新しい Api を行います。  
   
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
- [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>関連項目
+
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)
