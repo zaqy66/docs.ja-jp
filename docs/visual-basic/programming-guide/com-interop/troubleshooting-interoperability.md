@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 5b92eaf56e337b8a8128bb3a0706ecdb76177c0e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8525fa7eca2f61d3091a7597db94247b4701ed19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516828"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086519"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>相互運用性のトラブルシューティング (Visual Basic)
 マネージ コードと COM の相互運用するときに、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]、1 つ以上の次の一般的な問題が発生する可能性があります。  
@@ -126,11 +126,12 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  共有されていないアセンブリは、呼び出し元のアプリケーションでのディレクトリに並べて配置してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (タイプ ライブラリ エクスポーター)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
- [チュートリアル : COM オブジェクトによる継承の実装](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [グローバル アセンブリ キャッシュ](../../../framework/app-domains/gac.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
+- [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)  
+- [チュートリアル : COM オブジェクトによる継承の実装](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+- [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+- [グローバル アセンブリ キャッシュ](../../../framework/app-domains/gac.md)

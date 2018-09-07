@@ -13,11 +13,11 @@ helpviewer_keywords:
 - change notifications
 ms.assetid: ab8b4096-37ff-4e30-aabc-de79a2f2e972
 ms.openlocfilehash: cd2a15d5c3cbdf15f055196e63548a1240202479
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43880271"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087464"
 ---
 # <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>方法 : BindingSource ResetItem メソッドを使用して変更通知を発生させる
 コントロールのデータ ソースの中には、項目が変更、追加、または削除されても変更通知が発生しないものがあります。 <xref:System.Windows.Forms.BindingSource> コンポーネントを使用すると、そのようなデータ ソースをバインドし、コードから変更通知を発生させることができます。  
