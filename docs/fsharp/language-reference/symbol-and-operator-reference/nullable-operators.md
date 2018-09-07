@@ -1,23 +1,23 @@
 ---
 title: Null 許容の演算子 (F#)
-description: F# のプログラミング言語で使用できる null 許容の演算子について説明します。
+description: F# プログラミング言語で利用できる null 許容の演算子について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 63ad7da2d584b96eee8765b57fc671befbcbd38b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566351"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036780"
 ---
 # <a name="nullable-operators"></a>Null 許容の演算子
 
-Null 許容の演算子は、1 つまたは両方の側での null 許容の算術型を使用する算術演算または比較の二項演算子です。 Null 許容型は、実際の値の代わりに null を許可するデータベースなどのソースからデータを操作するときに頻繁に発生します。 Null 許容の演算子は、クエリ式でよく使用されます。 算術演算子および比較の null 許容の演算子に加えて、変換演算子を null 許容型の間で変換を使用できます。 特定のクエリ演算子の null 許容バージョンもあります。
-
+Null 許容の演算子は、1 つまたは両方の側で null 許容型の数値型で動作する二項演算または比較演算子です。 Null 許容型は、実際の値の代わりに null 値が許容データベースなどのソースからデータを操作するときに頻繁に発生します。 Null 許容の演算子は、クエリ式でよく使用されます。 Null 許容の演算子の算術演算や比較では、だけでなく、null 許容型の間で変換する変換演算子を使用できます。 特定のクエリ演算子の null 許容バージョンもあります。
 
 ## <a name="table-of-nullable-operators"></a>Null 許容の演算子のテーブル
-次の表には、f# 言語でサポートされる null 許容の演算子が一覧表示します。
 
-|左側に null 値を許容|右側に null 値を許容|両辺が null 許容型|
+次の表には、f# 言語でサポートされている null 許容の演算子が一覧表示します。
+
+|左側に null 許容型|右側に null 許容型|Null 許容の両方の側|
 |---|---|---|
 |[?>=](https://msdn.microsoft.com/library/94d29e32-a204-4f60-a527-6b0af86268f3)|[>=?](https://msdn.microsoft.com/library/0a255d8e-8cae-4160-ae61-243a5d96583f)|[?>=?](https://msdn.microsoft.com/library/3051a50f-d276-4c84-9d73-bf2efeddef94)|
 |[?>](https://msdn.microsoft.com/library/62dc0021-1312-4ac3-be87-798b60b81bb6)|[>?](https://msdn.microsoft.com/library/0ad1284b-de48-4a04-83d8-b6f13c9c8936)|[?>?](https://msdn.microsoft.com/library/dc18b6fa-30c4-47b0-9057-794439378a05)|
@@ -31,12 +31,13 @@ Null 許容の演算子は、1 つまたは両方の側での null 許容の算�
 |[?/](https://msdn.microsoft.com/library/add02a42-f556-40a7-a168-fbf2053322e3)|[/?](https://msdn.microsoft.com/library/1de07646-3778-476d-8c61-5d37495d463c)|[?/?](https://msdn.microsoft.com/library/b17be0ac-bf98-4590-861d-a4dd6c6fa535)|
 |[?%](https://msdn.microsoft.com/library/44297bba-1bd9-4ed2-a848-f1e1e598db87)|[%?](https://msdn.microsoft.com/library/a4c178e5-eec4-42e8-847f-90b24fc609fe)|[?%?](https://msdn.microsoft.com/library/dd555f20-1be3-4b8d-81f1-bf1921e62fda)|
 
-## <a name="remarks"></a>コメント
-Null 許容の演算子に含まれる、 [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007)名前空間内のモジュール[Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)です。 Null 許容型のデータの型は`System.Nullable<'T>`します。
+## <a name="remarks"></a>Remarks
 
-クエリ式では、null 許容型は、値の代わりに null 値を許容するデータ ソースからデータを選択するときに発生します。 テーブル内の各データ列では、SQL Server データベースで null 値が許可されるかどうかを示す属性があります。 Null 値が許可されている場合、データベースから返されるデータが null などのプリミティブ データ型で表すことはできませんを含めることができます`int`、`float`のようにします。 データとして返されますそのため、`System.Nullable<int>`の代わりに`int`、および`System.Nullable<float>`の代わりに`float`です。 実際の値を取得できます、`System.Nullable<'T>`オブジェクトを使用して、`Value`プロパティ、およびするかを判別できます、`System.Nullable<'T>`オブジェクトに値を呼び出すことによって、`HasValue`メソッドです。 他の便利な方法は、`System.Nullable<'T>.GetValueOrDefault`メソッドで、値、または適切な型の既定値を取得することができます。 既定値はなんらかの形式の 0 の場合など、「ゼロ」値 0.0、または`false`です。
+Null 許容の演算子が含まれる、 [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007)名前空間モジュール[Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)します。 Null 許容のデータの型は`System.Nullable<'T>`します。
 
-Null 許容型はなどの通常の変換演算子を使用して、null 非許容のプリミティブ型に変換することがあります`int`または`float`です。 Null 許容型の変換演算子を使用して、1 つの null 許容型から別の null 許容型に変換することもできます。 適切な変換演算子は、標準と同じ名前になりますが、個別のモジュールでは、 [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e)内のモジュール、 [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)名前空間。 通常、クエリ式を使用する場合は、この名前空間を開きます。 プレフィックスを追加することで、null 許容型の変換演算子を使用する場合は、`Nullable.`適切な変換演算子と、次のコードに示すようにします。
+クエリ式で null 許容型は、値の代わりに null を許可するデータ ソースからデータを選択するときに発生します。 テーブル内の各データ列では、SQL Server データベースで null 値が許可されるかどうかを示す属性があります。 Null 値が許可されている場合、データベースから返されるデータがなどのプリミティブ データ型で表すことができない null を含めることができます`int`、`float`など。 として、データが返されますそのため、`System.Nullable<int>`の代わりに`int`、および`System.Nullable<float>`の代わりに`float`します。 実際の値を取得できます、`System.Nullable<'T>`オブジェクトを使用して、`Value`プロパティ、およびするかを判別できます、`System.Nullable<'T>`オブジェクトが呼び出すことによっての値を持つ、`HasValue`メソッド。 もう 1 つの便利なメソッドは、`System.Nullable<'T>.GetValueOrDefault`メソッドで、値、または適切な型の既定値を取得することができます。 既定値「ゼロ」値、0 などの何らかの形式は、0.0、または`false`します。
+
+Null 許容型は、通常の変換演算子を使用して、null 非許容のプリミティブ型に変換可能性があります`int`または`float`します。 Null 許容型の変換演算子を使用して、1 つの null 許容型から別の null 許容型に変換することもできます。 適切な変換演算子がある標準のものと同じ名前が、個別のモジュールでは、 [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e)でモジュール、 [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)名前空間。 通常、クエリ式を使用する場合は、この名前空間を開きます。 プレフィックスを追加することで、null 許容型の変換演算子を使用する場合、`Nullable.`に、適切な変換演算子は、次のコードに示すようにします。
 
 ```fsharp
 open Microsoft.FSharp.Linq
@@ -52,9 +53,9 @@ printfn "%f" (float nullableFloat)
 
 出力は `10.000000`になります。
 
-など、null 許容型のデータ フィールドの演算子のクエリ`sumByNullable`クエリ式で使用する場合もあります。 非 null 許容型のクエリ演算子はありません、null 許容型で型と互換性のある null 値を許容データ値を使用しているときに、適切なクエリ演算子の null 許容バージョンを使用する必要があります。 詳細については、次を参照してください。[クエリ式](../query-expressions.md)です。
+Null 許容のデータ フィールド、演算子などのクエリ`sumByNullable`クエリ式で使用するためも存在します。 Null 非許容の型のクエリ演算子は null 許容型を型と互換性のあるのため、null 許容型のデータ値を使用する場合は、適切なクエリ演算子の null 許容バージョンを使用する必要があります。 詳細については、次を参照してください。[クエリ式](../query-expressions.md)します。
 
-次の例では、f# クエリ式で null 許容の演算子の使用を示します。 最初のクエリは、null 許容の演算子; を使用せず、クエリを記述する方法を示しています。2 番目のクエリは、null 許容の演算子を使用する同等のクエリを示しています。 このサンプル コードを使用するデータベースを設定する方法を含む、完全コンテキストを参照してください。[チュートリアル: 型プロバイダーを使用して SQL データベースへのアクセス](../../tutorials/type-providers/accessing-a-sql-database.md)です。
+次の例では、f# クエリ式で null 許容の演算子の使用を示しています。 最初のクエリは、null 許容の演算子では; を使用せず、クエリを記述する方法を示しています。2 番目のクエリは、null 許容の演算子を使用する同等のクエリを示しています。 このサンプル コードを使用するデータベースを設定する方法など、完全なコンテキストを参照してください。[チュートリアル: 型プロバイダーを使用して SQL Database へのアクセス](../../tutorials/type-providers/accessing-a-sql-database.md)します。
 
 ```fsharp
 open System
@@ -84,6 +85,5 @@ query {
 
 ## <a name="see-also"></a>関連項目
 
-[型プロバイダー](../../tutorials/type-providers/index.md)
-
-[クエリ式](../query-expressions.md)
+- [型プロバイダー](../../tutorials/type-providers/index.md)
+- [クエリ式](../query-expressions.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 04561adb254d001b5e4c7867a4017ede74972011
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a145e3e1b73db6fdfbc5f1408231e78f55b559d1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486197"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892202"
 ---
 # <a name="c-programming-guide"></a>C# プログラミング ガイド
 このセクションでは、C# 言語の重要な機能に関する詳細と、.NET Framework 経由でアクセスできる C# の機能について説明します。  
@@ -69,7 +69,7 @@ ms.locfileid: "43486197"
  [XML ドキュメント コメント](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>プラットフォーム セクション  
- [アプリケーション ドメイン (C# と Visual Basic)](https://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [アプリケーション ドメイン](../../framework/app-domains/application-domains.md)  
   
  [アセンブリとグローバル アセンブリ キャッシュ](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   
@@ -85,6 +85,7 @@ ms.locfileid: "43486197"
   
  [リフレクション](../../csharp/programming-guide/concepts/reflection.md)  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../csharp/language-reference/index.md)  
- [C#](../../csharp/index.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../csharp/language-reference/index.md)  
+- [C#](../../csharp/index.md)

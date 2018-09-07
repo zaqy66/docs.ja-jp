@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-ms.openlocfilehash: 20e8b857759253736d11bc31988fadb4843fa87a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3625f7a108675a3a9ab6be16ef94ae7e7c107612
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334861"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060571"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>ファイル システムとレジストリ (C# プログラミング ガイド)
 以下のトピックでは、C# と .NET Framework を使用して、ファイル、フォルダー、レジストリに対するさまざまな基本操作を実行する方法を示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "33334861"
 |[方法: レジストリにキーを作成する](../../../csharp/programming-guide/file-system/how-to-create-a-key-in-the-registry.md)|キーをシステム レジストリに書き込む方法を示します。|  
   
 ## <a name="related-sections"></a>関連項目  
- [ファイルおよびストリーム入出力](https://msdn.microsoft.com/library/k3352a4t)  
+ [ファイルおよびストリーム入出力](../../../standard/io/index.md)  
   
  [方法: ファイルおよびフォルダーのコピー、削除、および移動を行う (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md)  
   
