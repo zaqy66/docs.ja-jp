@@ -3,11 +3,11 @@ title: コンピュテーション式 (F#)
 description: F# でシーケンス処理できるし、制御フローの作成とバインドを使用して結合で計算を作成するための便利な構文を作成する方法について説明します。
 ms.date: 07/27/2018
 ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800918"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44048271"
 ---
 # <a name="computation-expressions"></a>コンピュテーション式
 
