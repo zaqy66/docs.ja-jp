@@ -9,11 +9,11 @@ ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7e6bc0230afe2dfc03b1aeeae46a3ba54599c8da
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875448"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084935"
 ---
 # <a name="property-design"></a>プロパティのデザイン
 プロパティはメソッドに厳密にはよく似ていますは、使用シナリオの観点からはまったく異なります。 これらは、スマート フィールドとして認識する必要があります。 呼び出し元のフィールドの構文とメソッドの柔軟性があります。  

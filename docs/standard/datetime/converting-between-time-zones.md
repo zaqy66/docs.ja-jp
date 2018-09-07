@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64b971e71019359cebc1493a410e748a1fd7b7cb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c77832a4c578ddb2c8a427b133e53ab4ab5c5e3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734982"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080622"
 ---
 # <a name="converting-times-between-time-zones"></a>タイム ゾーン間での時刻の変換
 
@@ -125,6 +125,6 @@ UTC を現地時刻に変換するには、呼び出し、<xref:System.DateTime.
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.TimeZoneInfo>
-[日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
-[ローカル システムで定義されているタイム ゾーンの検索](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+* <xref:System.TimeZoneInfo>
+* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+* [ローカル システムで定義されているタイム ゾーンの検索](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)

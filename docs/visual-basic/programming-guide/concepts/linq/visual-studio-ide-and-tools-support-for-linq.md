@@ -2,12 +2,12 @@
 title: Visual Studio IDE およびツールの LINQ (Visual Basic) のサポート
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: d284b47a0745b0c514f5e8c530d649c49b4cfa4f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b6b6cda40da1d54a68fdf924e6bf92efd5dec7a0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038180"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081717"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE およびツールの LINQ (Visual Basic) のサポート
 Visual Studio 統合開発環境 (IDE) では、LINQ アプリケーションの開発をサポートする次の機能が提供されています。  
@@ -16,7 +16,7 @@ Visual Studio 統合開発環境 (IDE) では、LINQ アプリケーションの
  オブジェクト リレーショナル デザイナーで使用できるビジュアル デ ザイン ツールは、 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)を基になるデータベース内のリレーショナル データを表す Visual Basic でクラスを生成するアプリケーション。 詳しくは、「[Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)」をご覧ください。  
   
 ## <a name="sqlmetal-command-line-tool"></a>SQLMetal コマンド ライン ツール  
- SQLMetal は、ビルド プロセスで使用できるコマンド ライン ツールです。既存のデータベースから、LINQ to SQL アプリケーションで使用するためのクラスを生成できます。 詳しくは、「[SqlMetal.exe (コード生成ツール)](https://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614)」をご覧ください。  
+ SQLMetal は、ビルド プロセスで使用できるコマンド ライン ツールです。既存のデータベースから、LINQ to SQL アプリケーションで使用するためのクラスを生成できます。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ## <a name="linq-aware-code-editor"></a>LINQ 対応のコード エディター  
  Visual Basic のコード エディターには、LINQ が広範囲に IntelliSense と書式設定機能がサポートしています。  

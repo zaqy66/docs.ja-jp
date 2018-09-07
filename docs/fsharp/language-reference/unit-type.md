@@ -3,11 +3,11 @@ title: unit 型 (F#)
 description: 値はありませんが必要なまたは必要なときに言語の構文で値が必要な場所、場所を保持するために f# 'unit' の型を使用する多くの場合について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: c3dfa5f63c25a1e8abc0f75b905c129b311479af
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773433"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44097153"
 ---
 # <a name="unit-type"></a>Unit 型
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198859"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098538"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Visual Basic アプリケーションにおけるデータ アクセス
 Visual Basic には、データにアクセスするアプリケーションを開発する際に役立ついくつかの新機能が用意されています。 Windows アプリケーションのデータ バインド フォームは、[[データ ソース]](/visualstudio/data-tools/add-new-data-sources) ウィンドウからフォームに項目をドラッグすることにより作成できます。 データをコントロールにバインドするには、**[データ ソース]** ウィンドウから既存のコントロールに項目をドラッグします。  
@@ -55,5 +55,4 @@ Visual Basic には、データにアクセスするアプリケーションを�
  [ADO.NET](../../framework/data/adonet/index.md)  
  .NET Framework プログラマにデータ アクセス サービスを公開する ADO.NET クラスについて説明します。
 
- [Office ソリューションにおけるデータ](https://msdn.microsoft.com/library/xx069ybh)  
- Office ソリューションでデータを操作する方法を説明するページへのリンクを示します。スキーマ指向プログラミング、データ キャッシュ、およびサーバー側データ アクセスに関する説明が含まれます。
+ [Office ソリューションにおけるデータ](/visualstudio/vsto/data-in-office-solutions)Office ソリューションでデータを操作する方法を説明するページへのリンクが含まれています。

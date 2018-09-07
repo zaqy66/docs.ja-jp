@@ -3,11 +3,11 @@ title: パターン マッチ (F#)
 description: 論理構造体を使用してデータを比較または構成要素にデータを分解したり、データから情報を抽出するパターンが f# の使用方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855244"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077185"
 ---
 # <a name="pattern-matching"></a>パターン マッチ
 
