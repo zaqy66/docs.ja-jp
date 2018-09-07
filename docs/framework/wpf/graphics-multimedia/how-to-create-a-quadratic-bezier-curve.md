@@ -7,34 +7,34 @@ helpviewer_keywords:
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
 ms.openlocfilehash: 8481a7e0e6d682a335b22ea6cdf73a23a9f155af
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43880511"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085833"
 ---
-# <a name="how-to-create-a-quadratic-bezier-curve"></a><span data-ttu-id="8d1db-102">方法 : 2 次ベジエ曲線を作成する</span><span class="sxs-lookup"><span data-stu-id="8d1db-102">How to: Create a Quadratic Bezier Curve</span></span>
-<span data-ttu-id="8d1db-103">この例では、2 次ベジエ曲線を作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="8d1db-103">This example shows how to create a quadratic Bezier curve.</span></span>  <span data-ttu-id="8d1db-104">2 次ベジエ曲線を作成するには、使用、 <xref:System.Windows.Media.PathGeometry>、 <xref:System.Windows.Media.PathFigure>、および<xref:System.Windows.Media.QuadraticBezierSegment>クラス。</span><span class="sxs-lookup"><span data-stu-id="8d1db-104">To create a quadratic Bezier curve, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.QuadraticBezierSegment> classes.</span></span>  
+# <a name="how-to-create-a-quadratic-bezier-curve"></a><span data-ttu-id="9aef6-102">方法 : 2 次ベジエ曲線を作成する</span><span class="sxs-lookup"><span data-stu-id="9aef6-102">How to: Create a Quadratic Bezier Curve</span></span>
+<span data-ttu-id="9aef6-103">この例では、2 次ベジエ曲線を作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="9aef6-103">This example shows how to create a quadratic Bezier curve.</span></span>  <span data-ttu-id="9aef6-104">2 次ベジエ曲線を作成するには、使用、 <xref:System.Windows.Media.PathGeometry>、 <xref:System.Windows.Media.PathFigure>、および<xref:System.Windows.Media.QuadraticBezierSegment>クラス。</span><span class="sxs-lookup"><span data-stu-id="9aef6-104">To create a quadratic Bezier curve, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.QuadraticBezierSegment> classes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8d1db-105">例</span><span class="sxs-lookup"><span data-stu-id="8d1db-105">Example</span></span>  
- <span data-ttu-id="8d1db-106">次の例では、2 次ベジエ曲線は (300, 100) に (10,100) から描画されます。</span><span class="sxs-lookup"><span data-stu-id="8d1db-106">In the following examples, a quadratic Bezier curve is drawn from (10,100) to (300,100).</span></span> <span data-ttu-id="8d1db-107">曲線は (200, 200) の制御点。</span><span class="sxs-lookup"><span data-stu-id="8d1db-107">The curve has a control point of (200,200).</span></span>  
+## <a name="example"></a><span data-ttu-id="9aef6-105">例</span><span class="sxs-lookup"><span data-stu-id="9aef6-105">Example</span></span>  
+ <span data-ttu-id="9aef6-106">次の例では、2 次ベジエ曲線は (300, 100) に (10,100) から描画されます。</span><span class="sxs-lookup"><span data-stu-id="9aef6-106">In the following examples, a quadratic Bezier curve is drawn from (10,100) to (300,100).</span></span> <span data-ttu-id="9aef6-107">曲線は (200, 200) の制御点。</span><span class="sxs-lookup"><span data-stu-id="9aef6-107">The curve has a control point of (200,200).</span></span>  
   
- <span data-ttu-id="8d1db-108">[xaml]</span><span class="sxs-lookup"><span data-stu-id="8d1db-108">[xaml]</span></span>  
+ <span data-ttu-id="9aef6-108">[xaml]</span><span class="sxs-lookup"><span data-stu-id="9aef6-108">[xaml]</span></span>  
   
- <span data-ttu-id="8d1db-109">[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、属性構文を使用してパスを記述することができます。</span><span class="sxs-lookup"><span data-stu-id="8d1db-109">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you can use attribute syntax to describe a path.</span></span>  
+ <span data-ttu-id="9aef6-109">[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、属性構文を使用してパスを記述することができます。</span><span class="sxs-lookup"><span data-stu-id="9aef6-109">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you can use attribute syntax to describe a path.</span></span>  
   
  [!code-xaml[GeometrySample#54](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#54)]  
   
- <span data-ttu-id="8d1db-110">[xaml]</span><span class="sxs-lookup"><span data-stu-id="8d1db-110">[xaml]</span></span>  
+ <span data-ttu-id="9aef6-110">[xaml]</span><span class="sxs-lookup"><span data-stu-id="9aef6-110">[xaml]</span></span>  
   
- <span data-ttu-id="8d1db-111">(この属性の構文が実際に作成するメモを<xref:System.Windows.Media.StreamGeometry>の軽量バージョンを<xref:System.Windows.Media.PathGeometry>します。</span><span class="sxs-lookup"><span data-stu-id="8d1db-111">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="8d1db-112">詳細については、「[パス マークアップ構文](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)」のページを参照してください。)</span><span class="sxs-lookup"><span data-stu-id="8d1db-112">For more information, see the [Path Markup Syntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) page.)</span></span>  
+ <span data-ttu-id="9aef6-111">(この属性の構文が実際に作成するメモを<xref:System.Windows.Media.StreamGeometry>の軽量バージョンを<xref:System.Windows.Media.PathGeometry>します。</span><span class="sxs-lookup"><span data-stu-id="9aef6-111">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="9aef6-112">詳細については、「[パス マークアップ構文](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)」のページを参照してください。)</span><span class="sxs-lookup"><span data-stu-id="9aef6-112">For more information, see the [Path Markup Syntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) page.)</span></span>  
   
- <span data-ttu-id="8d1db-113">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、オブジェクト要素構文を使用して、2 次ベジエ曲線を描画することもできます。</span><span class="sxs-lookup"><span data-stu-id="8d1db-113">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a quadratic Bezier curve using object element syntax.</span></span> <span data-ttu-id="8d1db-114">次の例は、前の [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] の例と同じです。</span><span class="sxs-lookup"><span data-stu-id="8d1db-114">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
+ <span data-ttu-id="9aef6-113">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、オブジェクト要素構文を使用して、2 次ベジエ曲線を描画することもできます。</span><span class="sxs-lookup"><span data-stu-id="9aef6-113">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a quadratic Bezier curve using object element syntax.</span></span> <span data-ttu-id="9aef6-114">次の例は、前の [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] の例と同じです。</span><span class="sxs-lookup"><span data-stu-id="9aef6-114">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
   
  [!code-xaml[GeometrySample#34](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
   
- <span data-ttu-id="8d1db-115">この例は、より大きなサンプルの一部です。完全なサンプルについては、「[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8d1db-115">This example is part of larger sample; for the complete sample, see the [Geometries Sample](https://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
+ <span data-ttu-id="9aef6-115">この例は、より大きなサンプルの一部です。完全なサンプルについては、「[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9aef6-115">This example is part of larger sample; for the complete sample, see the [Geometries Sample](https://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d1db-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="8d1db-116">See Also</span></span>  
- [<span data-ttu-id="8d1db-117">楕円の円弧を作成する</span><span class="sxs-lookup"><span data-stu-id="8d1db-117">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [<span data-ttu-id="8d1db-118">3 次ベジエ曲線を作成する</span><span class="sxs-lookup"><span data-stu-id="8d1db-118">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
+## <a name="see-also"></a><span data-ttu-id="9aef6-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="9aef6-116">See Also</span></span>  
+ [<span data-ttu-id="9aef6-117">楕円の円弧を作成する</span><span class="sxs-lookup"><span data-stu-id="9aef6-117">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
+ [<span data-ttu-id="9aef6-118">3 次ベジエ曲線を作成する</span><span class="sxs-lookup"><span data-stu-id="9aef6-118">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
