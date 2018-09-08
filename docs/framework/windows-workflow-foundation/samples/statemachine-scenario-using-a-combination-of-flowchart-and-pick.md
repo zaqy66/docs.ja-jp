@@ -3,11 +3,11 @@ title: FlowChart と Pick の組み合わせを使用する StateMachine シナ�
 ms.date: 03/30/2017
 ms.assetid: 88d81395-f7a3-41d8-8439-20a425c538a6
 ms.openlocfilehash: b0f8e884a8a6c62c4e7edaf5cc9727bf7bfe8603
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032333"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195687"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>FlowChart と Pick の組み合わせを使用する StateMachine シナリオ
 このサンプルでは、<xref:System.Activities.Statements.Flowchart> アクティビティと <xref:System.Activities.Statements.Pick> アクティビティを組み合わせて簡単なストップウォッチ シナリオを実装する方法を示します。 このサンプルでは、Pick アクティビティ内で Receive と Send を使用して、ストップウォッチ イベントをリッスンします。  
