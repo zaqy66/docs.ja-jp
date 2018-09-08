@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135784"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193277"
 ---
-# <a name="imetadataemitapplyeditandcontinue-method"></a><span data-ttu-id="24fe2-102">IMetaDataEmit::ApplyEditAndContinue メソッド</span><span class="sxs-lookup"><span data-stu-id="24fe2-102">IMetaDataEmit::ApplyEditAndContinue Method</span></span>
-<span data-ttu-id="24fe2-103">指定したメタデータで行われた変更では、現在のアセンブリのスコープを更新します。</span><span class="sxs-lookup"><span data-stu-id="24fe2-103">Updates the current assembly scope with the changes made in the specified metadata.</span></span>  
+# <a name="imetadataemitapplyeditandcontinue-method"></a><span data-ttu-id="87296-102">IMetaDataEmit::ApplyEditAndContinue メソッド</span><span class="sxs-lookup"><span data-stu-id="87296-102">IMetaDataEmit::ApplyEditAndContinue Method</span></span>
+<span data-ttu-id="87296-103">指定したメタデータで行われた変更では、現在のアセンブリのスコープを更新します。</span><span class="sxs-lookup"><span data-stu-id="87296-103">Updates the current assembly scope with the changes made in the specified metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24fe2-104">構文</span><span class="sxs-lookup"><span data-stu-id="24fe2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87296-104">構文</span><span class="sxs-lookup"><span data-stu-id="87296-104">Syntax</span></span>  
   
 ```  
 HRESULT ApplyEditAndContinue (   
@@ -35,21 +35,21 @@ HRESULT ApplyEditAndContinue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="24fe2-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="24fe2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="87296-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="87296-105">Parameters</span></span>  
  `pImport`  
- <span data-ttu-id="24fe2-106">\[\]へのポインター、 [IUnknown](/cpp/atl/iunknown)ポータブル実行可能 (PE) ファイルからデルタ メタデータを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="24fe2-106">\[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.</span></span>
+ <span data-ttu-id="87296-106">\[\]へのポインター、 [IUnknown](/cpp/atl/iunknown)ポータブル実行可能 (PE) ファイルからデルタ メタデータを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="87296-106">\[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.</span></span>
   
- <span data-ttu-id="24fe2-107">デルタのメタデータは、モジュールの実際のメタデータのコピーに加えられた変更を含むメタデータのブロックです。</span><span class="sxs-lookup"><span data-stu-id="24fe2-107">The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.</span></span>  
+ <span data-ttu-id="87296-107">デルタのメタデータは、モジュールの実際のメタデータのコピーに加えられた変更を含むメタデータのブロックです。</span><span class="sxs-lookup"><span data-stu-id="87296-107">The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="24fe2-108">要件</span><span class="sxs-lookup"><span data-stu-id="24fe2-108">Requirements</span></span>  
- <span data-ttu-id="24fe2-109">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="24fe2-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87296-108">要件</span><span class="sxs-lookup"><span data-stu-id="87296-108">Requirements</span></span>  
+ <span data-ttu-id="87296-109">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="87296-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="24fe2-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="24fe2-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="87296-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="87296-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="24fe2-111">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="24fe2-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="87296-111">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="87296-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="24fe2-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24fe2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="87296-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87296-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24fe2-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="24fe2-113">See Also</span></span>  
- [<span data-ttu-id="24fe2-114">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="24fe2-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="24fe2-115">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="24fe2-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="87296-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="87296-113">See Also</span></span>  
+ [<span data-ttu-id="87296-114">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="87296-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [<span data-ttu-id="87296-115">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="87296-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

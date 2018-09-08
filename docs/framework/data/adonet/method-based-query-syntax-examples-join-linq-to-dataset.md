@@ -6,45 +6,45 @@ dev_langs:
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
 ms.openlocfilehash: 6ec65cad0070bdbd1d510bcc822f3b71f9cf69dc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560475"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195294"
 ---
-# <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a><span data-ttu-id="24518-102">メソッド ベースのクエリ構文例 : 結合 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="24518-102">Method-Based Query Syntax Examples: Join (LINQ to DataSet)</span></span>
-<span data-ttu-id="24518-103">結合は、リレーショナル データベース テーブルのように互いにナビゲート可能なリレーションシップを持たないデータ ソースをターゲットとするクエリにおいて重要な操作です。</span><span class="sxs-lookup"><span data-stu-id="24518-103">Joining is an important operation in queries that target data sources that have no navigable relationships to each other, such as relational database tables.</span></span> <span data-ttu-id="24518-104">2 つのデータ ソースを結合する操作とは、あるデータ ソース内のオブジェクトを、他方のデータ ソース内で共通の属性を持つオブジェクトと関連付けることです。</span><span class="sxs-lookup"><span data-stu-id="24518-104">A join of two data sources is the association of objects in one data source with objects that share a common attribute in the other data source.</span></span> <span data-ttu-id="24518-105">詳細については、次を参照してください。[標準クエリ演算子の概要](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)します。</span><span class="sxs-lookup"><span data-stu-id="24518-105">For more information, see [Standard Query Operators Overview](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
+# <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a><span data-ttu-id="e6179-102">メソッド ベースのクエリ構文例 : 結合 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="e6179-102">Method-Based Query Syntax Examples: Join (LINQ to DataSet)</span></span>
+<span data-ttu-id="e6179-103">結合は、リレーショナル データベース テーブルのように互いにナビゲート可能なリレーションシップを持たないデータ ソースをターゲットとするクエリにおいて重要な操作です。</span><span class="sxs-lookup"><span data-stu-id="e6179-103">Joining is an important operation in queries that target data sources that have no navigable relationships to each other, such as relational database tables.</span></span> <span data-ttu-id="e6179-104">2 つのデータ ソースを結合する操作とは、あるデータ ソース内のオブジェクトを、他方のデータ ソース内で共通の属性を持つオブジェクトと関連付けることです。</span><span class="sxs-lookup"><span data-stu-id="e6179-104">A join of two data sources is the association of objects in one data source with objects that share a common attribute in the other data source.</span></span> <span data-ttu-id="e6179-105">詳細については、次を参照してください。[標準クエリ演算子の概要](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)します。</span><span class="sxs-lookup"><span data-stu-id="e6179-105">For more information, see [Standard Query Operators Overview](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
   
- <span data-ttu-id="24518-106">このトピックでは、<xref:System.Linq.Enumerable.Join%2A> メソッドで、メソッド ベースのクエリ構文を使って <xref:System.Data.DataSet> に対するクエリを実行する例を紹介しています。</span><span class="sxs-lookup"><span data-stu-id="24518-106">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Join%2A> method to query a <xref:System.Data.DataSet> using the method query syntax.</span></span>  
+ <span data-ttu-id="e6179-106">このトピックでは、<xref:System.Linq.Enumerable.Join%2A> メソッドで、メソッド ベースのクエリ構文を使って <xref:System.Data.DataSet> に対するクエリを実行する例を紹介しています。</span><span class="sxs-lookup"><span data-stu-id="e6179-106">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Join%2A> method to query a <xref:System.Data.DataSet> using the method query syntax.</span></span>  
   
- <span data-ttu-id="24518-107">`FillDataSet`でこれらの例で使用されるメソッドが指定された[をデータセットにデータを読み込む](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)します。</span><span class="sxs-lookup"><span data-stu-id="24518-107">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="e6179-107">`FillDataSet`でこれらの例で使用されるメソッドが指定された[をデータセットにデータを読み込む](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)します。</span><span class="sxs-lookup"><span data-stu-id="e6179-107">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="24518-108">このトピックの例には、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルが使用されています。</span><span class="sxs-lookup"><span data-stu-id="24518-108">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="e6179-108">このトピックの例には、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルが使用されています。</span><span class="sxs-lookup"><span data-stu-id="e6179-108">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="24518-109">このトピックの例では、次を使用して`using` / `Imports`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="24518-109">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="e6179-109">このトピックの例では、次を使用して`using` / `Imports`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="e6179-109">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="24518-110">詳細については、次を参照してください。[方法: LINQ to Visual Studio でデータセット プロジェクトを作成](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)です。</span><span class="sxs-lookup"><span data-stu-id="24518-110">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="e6179-110">詳細については、次を参照してください。[方法: LINQ to Visual Studio でデータセット プロジェクトを作成](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)です。</span><span class="sxs-lookup"><span data-stu-id="e6179-110">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="join"></a><span data-ttu-id="24518-111">Join</span><span class="sxs-lookup"><span data-stu-id="24518-111">Join</span></span>  
+## <a name="join"></a><span data-ttu-id="e6179-111">Join</span><span class="sxs-lookup"><span data-stu-id="e6179-111">Join</span></span>  
   
-### <a name="example"></a><span data-ttu-id="24518-112">例</span><span class="sxs-lookup"><span data-stu-id="24518-112">Example</span></span>  
- <span data-ttu-id="24518-113">この例では、`Contact` テーブルと `SalesOrderHeader` テーブルを結合します。</span><span class="sxs-lookup"><span data-stu-id="24518-113">This example performs a join over the `Contact` and `SalesOrderHeader` tables.</span></span>  
+### <a name="example"></a><span data-ttu-id="e6179-112">例</span><span class="sxs-lookup"><span data-stu-id="e6179-112">Example</span></span>  
+ <span data-ttu-id="e6179-113">この例では、`Contact` テーブルと `SalesOrderHeader` テーブルを結合します。</span><span class="sxs-lookup"><span data-stu-id="e6179-113">This example performs a join over the `Contact` and `SalesOrderHeader` tables.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#JoinSimple_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#joinsimple_mq)]
  [!code-vb[DP LINQ to DataSet Examples#JoinSimple_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#joinsimple_mq)]  
   
-### <a name="example"></a><span data-ttu-id="24518-114">例</span><span class="sxs-lookup"><span data-stu-id="24518-114">Example</span></span>  
- <span data-ttu-id="24518-115">この例では、`Contact` テーブルと `SalesOrderHeader` テーブルを結合し、結果を連絡先 ID でグループ化します。</span><span class="sxs-lookup"><span data-stu-id="24518-115">This example performs a join over the `Contact` and `SalesOrderHeader` tables, grouping the results by contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="e6179-114">例</span><span class="sxs-lookup"><span data-stu-id="e6179-114">Example</span></span>  
+ <span data-ttu-id="e6179-115">この例では、`Contact` テーブルと `SalesOrderHeader` テーブルを結合し、結果を連絡先 ID でグループ化します。</span><span class="sxs-lookup"><span data-stu-id="e6179-115">This example performs a join over the `Contact` and `SalesOrderHeader` tables, grouping the results by contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#JoinWithGroupedResults_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#joinwithgroupedresults_mq)]
  [!code-vb[DP LINQ to DataSet Examples#JoinWithGroupedResults_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#joinwithgroupedresults_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="24518-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="24518-116">See Also</span></span>  
- [<span data-ttu-id="24518-117">DataSet へのデータの読み込み</span><span class="sxs-lookup"><span data-stu-id="24518-117">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [<span data-ttu-id="24518-118">LINQ to DataSet の例</span><span class="sxs-lookup"><span data-stu-id="24518-118">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [<span data-ttu-id="24518-119">標準クエリ演算子の概要</span><span class="sxs-lookup"><span data-stu-id="24518-119">Standard Query Operators Overview</span></span>](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [<span data-ttu-id="24518-120">Join のサンプル</span><span class="sxs-lookup"><span data-stu-id="24518-120">Join Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=187357)  
- [<span data-ttu-id="24518-121">データセットのサンプル</span><span class="sxs-lookup"><span data-stu-id="24518-121">Dataset Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=187358)
+## <a name="see-also"></a><span data-ttu-id="e6179-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="e6179-116">See Also</span></span>  
+ [<span data-ttu-id="e6179-117">DataSet へのデータの読み込み</span><span class="sxs-lookup"><span data-stu-id="e6179-117">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [<span data-ttu-id="e6179-118">LINQ to DataSet の例</span><span class="sxs-lookup"><span data-stu-id="e6179-118">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [<span data-ttu-id="e6179-119">標準クエリ演算子の概要</span><span class="sxs-lookup"><span data-stu-id="e6179-119">Standard Query Operators Overview</span></span>](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [<span data-ttu-id="e6179-120">Join のサンプル</span><span class="sxs-lookup"><span data-stu-id="e6179-120">Join Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=187357)  
+ [<span data-ttu-id="e6179-121">データセットのサンプル</span><span class="sxs-lookup"><span data-stu-id="e6179-121">Dataset Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=187358)
