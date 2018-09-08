@@ -2,12 +2,12 @@
 title: コレクション (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 510abe7d818b3a45869824bc52dc4fde38238f7b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504445"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129103"
 ---
 # <a name="collections-visual-basic"></a>コレクション (Visual Basic)
 多くのアプリケーションで、関連するオブジェクトのグループの作成および管理が必要になります。 オブジェクトをグループ化するには、オブジェクトの配列を作成する方法と、オブジェクトのコレクションを作成する方法があります。  
@@ -464,7 +464,7 @@ End Class
 ## <a name="defining-a-custom-collection"></a>カスタム コレクションを定義する  
  <xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Collections.IEnumerable> のインターフェイスを実装してコレクションを定義できます。 詳細については、次を参照してください。[コレクションを列挙する](https://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f)します。  
   
- カスタム コレクションを定義できますが、通常は、.NET Framework に含まれるコレクションを使用することが推奨されます。これについては、このトピックの[コレクションの種類](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)で既に説明されています。  
+ カスタム コレクションを定義できますが、通常は、.NET Framework に含まれるコレクションを使用することが推奨されます。これについては、このトピックの[コレクションの種類](#kinds-of-collections)で既に説明されています。  
   
  次の例は、`AllColors` という名前のカスタム コレクション クラスを定義します。 このクラスは、<xref:System.Collections.IEnumerable> メソッドの実装を必要とする <xref:System.Collections.IEnumerable.GetEnumerator%2A> インターフェイスを実装します。  
   
@@ -570,14 +570,15 @@ As IEnumerable(Of Integer)
 End Function  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [プログラミングの概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
- [コレクションとデータ構造体](../../../standard/collections/index.md)  
- [コレクションの作成と操作](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
- [コレクション クラスの選択](../../../standard/collections/selecting-a-collection-class.md)  
- [コレクション内での比較と並べ替え](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
- [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)
+## <a name="see-also"></a>関連項目
+
+- [コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+- [プログラミングの概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
+- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+- [コレクションとデータ構造体](../../../standard/collections/index.md)  
+- [コレクションの作成と操作](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+- [コレクション クラスの選択](../../../standard/collections/selecting-a-collection-class.md)  
+- [コレクション内での比較と並べ替え](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777992"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135888"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>チュートリアル : バックグラウンド操作を使用するフォームの実装
 場合は、完了に長い時間がかかる操作があると応答を停止する、ユーザー インターフェイス (UI) を設定したくない、または「ハング」しを使用できます、<xref:System.ComponentModel.BackgroundWorker>クラスを別のスレッドで操作を実行します。  
@@ -163,11 +163,12 @@ ms.locfileid: "43777992"
     > [!CAUTION]
     >  どのような種類のマルチスレッドを使用している場合でも、非常に深刻で複雑なバグを引き起こしてしまう可能性があります。 マルチスレッドを使用するソリューションを実装する前に、「[マネージド スレッド処理の実施](../../../../docs/standard/threading/managed-threading-best-practices.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ComponentModel.BackgroundWorker>  
- [マネージド スレッド処理の実施](../../../../docs/standard/threading/managed-threading-best-practices.md)  
- [コンポーネントのマルチスレッド](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [ビルド内にありません: Visual Basic でのマルチスレッド](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [方法: バックグラウンド操作を使用するフォームを実装する](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [チュートリアル: 操作をバックグラウンドで実行する](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
- [BackgroundWorker コンポーネント](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
+- [マネージド スレッド処理](../../../../docs/standard/threading/index.md)
+- [マネージド スレッド処理の実施](../../../../docs/standard/threading/managed-threading-best-practices.md)
+- [イベントベースの非同期パターンの概要](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [方法: バックグラウンド操作を使用するフォームを実装する](how-to-implement-a-form-that-uses-a-background-operation.md)  
+- [チュートリアル: 操作をバックグラウンドで実行する](walkthrough-running-an-operation-in-the-background.md)
+- [BackgroundWorker コンポーネント](backgroundworker-component.md)

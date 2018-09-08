@@ -2,17 +2,17 @@
 title: LINQ to XML 軸の概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-ms.openlocfilehash: d7d881564abfdaba6cb7efa8fb92849e48c6fa4c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 43649800869f4829d56977f1e6e62d30192b0604
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804267"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128801"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ to XML 軸の概要 (Visual Basic)
 XML ツリーを作成した後、または XML ドキュメントを XML ツリーに読み込んだ後は、クエリを実行して要素や属性を調べたり、その値を取得したりできます。 コレクションの取得には、*軸メソッド* (*軸*とも呼ぶ) を使用します。 一部の軸は、<xref:System.Xml.Linq.XElement> コレクションを返す、<xref:System.Xml.Linq.XDocument> クラスおよび <xref:System.Collections.Generic.IEnumerable%601> クラスのメソッドです。 一部の軸は、<xref:System.Xml.Linq.Extensions> クラスの拡張メソッドです。 拡張メソッドとして実装されている軸は、コレクションに対して機能し、コレクションを返します。  
   
- 「[XElement クラスの概要](https://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec)」で説明しているように、<xref:System.Xml.Linq.XElement> オブジェクトは単一の要素ノードを表します。 要素のコンテンツは、複合要素 (構造化コンテンツとも呼ばれる) または単純要素です。 単純要素は、空の場合と値を含む場合があります。 ノードに構造化コンテンツが含まれている場合、さまざまな軸メソッドを使用して子孫要素の列挙を取得できます。 最も一般的に使用される軸メソッドは、<xref:System.Xml.Linq.XContainer.Elements%2A> および <xref:System.Xml.Linq.XContainer.Descendants%2A> です。  
+ 「[XElement クラスの概要](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md)」で説明しているように、<xref:System.Xml.Linq.XElement> オブジェクトは単一の要素ノードを表します。 要素のコンテンツは、複合要素 (構造化コンテンツとも呼ばれる) または単純要素です。 単純要素は、空の場合と値を含む場合があります。 ノードに構造化コンテンツが含まれている場合、さまざまな軸メソッドを使用して子孫要素の列挙を取得できます。 最も一般的に使用される軸メソッドは、<xref:System.Xml.Linq.XContainer.Elements%2A> および <xref:System.Xml.Linq.XContainer.Descendants%2A> です。  
   
  コレクションを返す軸メソッド以外に、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリでよく使用されるメソッドが 2 つあります。 <xref:System.Xml.Linq.XContainer.Element%2A> メソッドは、1 つの <xref:System.Xml.Linq.XElement> を返します。 <xref:System.Xml.Linq.XElement.Attribute%2A> メソッドは、1 つの <xref:System.Xml.Linq.XAttribute> を返します。  
   
@@ -54,5 +54,6 @@ XML ツリーを作成した後、または XML ドキュメントを XML ツリ
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|指定された <xref:System.Xml.Linq.XAttribute> を持つ <xref:System.Xml.Linq.XName> を返します。|  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>関連項目
+
+- [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

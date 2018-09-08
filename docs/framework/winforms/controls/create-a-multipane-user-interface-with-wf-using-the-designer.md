@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
 ms.openlocfilehash: 9c8cab952fd9d0c58380a308dd360dcedb2ea8f1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387074"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131738"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>方法 : デザイナーを使用して Windows フォームでマルチペイン ユーザー インターフェイスを作成する
 Microsoft Outlook で使用される次のようなマルチペイン ユーザー インターフェイスを作成する次の手順で、**フォルダー**  ボックスの一覧を**メッセージ**ウィンドウで、および**プレビュー**ウィンドウ。 この配置は、主に、コントロールをフォームにドッキングして実現されます。  

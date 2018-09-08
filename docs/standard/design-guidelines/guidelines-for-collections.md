@@ -5,89 +5,89 @@ ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d73ff726e9ddfe1ec1d16dd020f53445f984fb9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578860"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128957"
 ---
 # <a name="guidelines-for-collections"></a>コレクションに関するガイドライン
-任意の型が共通の特性を持つオブジェクトのグループの操作を厳密には、コレクションを見なすことができます。 実装するには、このような型に適したはほぼ<xref:System.Collections.IEnumerable>または<xref:System.Collections.Generic.IEnumerable%601>、このセクションの内容おのみ考慮されるようにコレクションにそれらのインターフェイスの一方または両方を実装する型。  
+具体的には、共通の特性を持つオブジェクトのグループを操作するように設計する任意の型は、コレクションを見なすことができます。 ほとんどを実装するには、このような型に適した<xref:System.Collections.IEnumerable>または<xref:System.Collections.Generic.IEnumerable%601>ので、このセクションでは私たちだけを検討するコレクションには、それらのインターフェイスの一方または両方を実装する型。  
   
  **X DO NOT** パブリック Api で弱く型指定されたコレクションを使用します。  
   
- すべての戻り値およびパラメーターを表すコレクション アイテムの種類は、その基本型 (これは、コレクションのパブリック メンバーにのみ適用) の正確な項目の種類にする必要があります。  
+ すべての戻り値およびコレクションの項目を表すパラメーターの型 (これは、コレクションのパブリック メンバーにのみ適用) その基本型の正確な項目の種類があります。  
   
  **X DO NOT** 使用<xref:System.Collections.ArrayList>または<xref:System.Collections.Generic.List%601>パブリック Api でします。  
   
- これらの型は、パブリック Api ではなく、内部の実装で使用するためのデータ構造です。 `List<T>` パフォーマンスと電力消費 cleanness Api と柔軟性を犠牲に最適です。 返す場合など、 `List<T>`、いない続けることができますをクライアント コードは、コレクションを変更するときに通知を受信します。 また、`List<T>`など多くのメンバーを公開<xref:System.Collections.Generic.List%601.BinarySearch%2A>、いないの役に立たず、多くのシナリオに該当します。 次の 2 つのセクションでは、パブリック Api で使用する専用に設計された型 (抽象) について説明します。  
+ これらの型は、パブリック Api ではなく、内部の実装で使用するためのデータ構造です。 `List<T>` パフォーマンスと電源の Api や柔軟性 cleanness を犠牲に最適です。 たとえば、値を返す場合`List<T>`はこれまでできませんをクライアント コードは、コレクションを変更すると、通知を受信できます。 また、`List<T>`など、多くのメンバーを公開する<xref:System.Collections.Generic.List%601.BinarySearch%2A>、便利なまたは多くのシナリオで適用可能ではないです。 次の 2 つのセクションでは、具体的にはパブリック Api で使用するために設計されています (抽象化) の種類について説明します。  
   
  **X DO NOT** 使用`Hashtable`または`Dictionary<TKey,TValue>`パブリック Api でします。  
   
- これらの型は、データ構造体の内部実装に使用するよう設計されています。 パブリック Api を使用する必要があります<xref:System.Collections.IDictionary>、 `IDictionary <TKey, TValue>`、またはいずれかまたは両方のインターフェイスを実装するカスタム型です。  
+ これらの型は、データ構造の内部の実装で使用するように設計します。 パブリック Api を使用する必要があります<xref:System.Collections.IDictionary>、 `IDictionary <TKey, TValue>`、またはいずれかまたは両方のインターフェイスを実装するカスタム型。  
   
  **X DO NOT** 使用<xref:System.Collections.Generic.IEnumerator%601>、 <xref:System.Collections.IEnumerator>、またはその他の型以外の戻り値の型として実装する、これらのインターフェイスのいずれかを`GetEnumerator`メソッドです。  
   
- 以外の場合、メソッドから列挙子を返す型`GetEnumerator`では使用できません、`foreach`ステートメントです。  
+ 型以外のメソッドから列挙子を返す`GetEnumerator`では使用できません、`foreach`ステートメント。  
   
- **X DO NOT** 両方を実装する`IEnumerator<T>`と`IEnumerable<T>`と同じ型にします。 非ジェネリック インターフェイスに適用される同じ`IEnumerator`と`IEnumerable`です。  
+ **X DO NOT** 両方を実装する`IEnumerator<T>`と`IEnumerable<T>`と同じ型にします。 非ジェネリック インターフェイスに適用される同じ`IEnumerator`と`IEnumerable`します。  
   
 ## <a name="collection-parameters"></a>コレクションのパラメーター  
- **✓ DO** パラメーター型として型の最小に特化した可能性のあるを使用します。 ほとんどのメンバーを使用するパラメーターとして、コレクションを受け取る、`IEnumerable<T>`インターフェイスです。  
+ **✓ DO** パラメーター型として型の最小に特化した可能性のあるを使用します。 ほとんどのメンバーのパラメーターを使用して、コレクションを取得、`IEnumerable<T>`インターフェイス。  
   
  **X AVOID** を使用して<xref:System.Collections.Generic.ICollection%601>または<xref:System.Collections.ICollection>にアクセスするだけのパラメーターとして、`Count`プロパティです。  
   
- 代わりに、`IEnumerable<T>`または`IEnumerable`と動的にオブジェクトが実装されているかどうかをチェック`ICollection<T>`または`ICollection`です。  
+ 代わりに、`IEnumerable<T>`または`IEnumerable`と動的にオブジェクトが実装されているかどうかをチェック`ICollection<T>`または`ICollection`します。  
   
 ## <a name="collection-properties-and-return-values"></a>コレクションのプロパティと戻り値  
  **X DO NOT** 設定可能なコレクション プロパティを提供します。  
   
- ユーザーは、最初、コレクションをクリアして、新しい内容を追加し、コレクションの内容を置き換えることができます。 コレクション全体を置き換えることがある場合、一般的なシナリオを提供することを検討してください、`AddRange`コレクション メソッド。  
+ ユーザーは、最初、コレクションをクリアし、新しい内容を追加して、コレクションの内容を置き換えることができます。 コレクション全体を置き換える一般的なシナリオがある場合は、提供することを検討してください、`AddRange`コレクション メソッド。  
   
  **✓ DO** を使用して`Collection<T>`またはそのサブクラスの`Collection<T>`プロパティまたは戻り値を表す読み取り/書き込みコレクション用です。  
   
- 場合`Collection<T>`いくつかの条件を満たしていません (など、コレクションを実装する必要がありますいない<xref:System.Collections.IList>)、実装することによってカスタム コレクションを使用して`IEnumerable<T>`、 `ICollection<T>`、または<xref:System.Collections.Generic.IList%601>です。  
+ 場合`Collection<T>`いくつかの要件を満たしていません (など、コレクションを実装する必要がありますいない<xref:System.Collections.IList>)、カスタム コレクションを使用して実装することによって`IEnumerable<T>`、 `ICollection<T>`、または<xref:System.Collections.Generic.IList%601>します。  
   
  **✓ DO** 使用<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>のサブクラス`ReadOnlyCollection<T>`、まれなケースとして、または`IEnumerable<T>`プロパティまたは戻り値を表す読み取り専用のコレクションのです。  
   
- 一般に、必要に応じて`ReadOnlyCollection<T>`です。 いくつかの要件を満たしていない場合 (など、コレクションを実装する必要がありますいない`IList`)、実装することによってカスタム コレクションを使用して`IEnumerable<T>`、 `ICollection<T>`、または`IList<T>`です。 カスタムの読み取り専用コレクションを実装する場合は、実装`ICollection<T>.IsReadOnly`を返す`true`です。  
+ 一般に、必要に応じて`ReadOnlyCollection<T>`します。 いくつかの要件を満たしていない場合 (など、コレクションを実装する必要がありますいない`IList`)、カスタム コレクションを使用して実装することによって`IEnumerable<T>`、 `ICollection<T>`、または`IList<T>`します。 カスタムの読み取り専用コレクションを実装する場合は、実装`ICollection<T>.IsReadOnly`を返す`true`します。  
   
- あるか、唯一のシナリオをサポートすることがイテレーションを順方向専用であることを確認する場合、単に使用できます`IEnumerable<T>`です。  
+ 唯一のシナリオをサポートすることが順方向専用のイテレーションであることを確認する場所の場合、単に使用できます`IEnumerable<T>`します。  
   
  **✓ CONSIDER** ジェネリックの基本コレクションのサブクラスを使用して、コレクションを直接使用する代わりにします。  
   
- これにより、名前を向上し、基本コレクション型に記載されていないヘルパー メンバーを追加するためです。 これは、特に高水準の Api を適用します。  
+ これによりより良い名前と、基本コレクション型に存在しないヘルパー メンバーを追加します。 これは高レベルの Api に特に当てはまります。  
   
  **✓ CONSIDER** のサブクラスを返す`Collection<T>`または`ReadOnlyCollection<T>`から非常に一般的に使用されるメソッドとプロパティ。  
   
- これが可能になりますヘルパー メソッドを追加またはコレクション実装では、今後の変更を行うためです。  
+ これにより、ヘルパー メソッドを追加またはコレクションの実装を将来を変更することが可能。  
   
- **✓ CONSIDER** コレクションに格納されている項目が一意キーを持つ場合、キー付きコレクションを使用する (名前、Id などです。)。 キー付きコレクションは、整数値とキーの両方でインデックスを作成できる通常を継承して実装するコレクション`KeyedCollection<TKey,TItem>`です。  
+ **✓ CONSIDER** コレクションに格納されている項目が一意キーを持つ場合、キー付きコレクションを使用する (名前、Id などです。)。 キー付きコレクションは、整数値とキーの両方でインデックスを作成できるを通常実装から継承することによってコレクション`KeyedCollection<TKey,TItem>`します。  
   
- キー付きコレクション通常より大きなメモリ フット プリントとには、メモリのオーバーヘッドが、キーの利点を上回る場合、使用できません。  
+ キー付きコレクションは、通常より大きなメモリ フット プリントとには、メモリのオーバーヘッドが、キーを持つことのメリットを上回る場合、使用できません。  
   
  **X DO NOT** コレクション プロパティまたはコレクションを返すメソッドから null 値を返します。 代わりに、空のコレクションまたは空の配列を返します。  
   
- 一般的な規則は、null および空の (0 項目) のコレクションまたは配列をする必要があります同じ扱われます。  
+ 一般的な規則は、null および空の (アイテム 0) コレクションまたは配列があることと、同じ扱われます。  
   
-### <a name="snapshots-versus-live-collections"></a>ライブのコレクションとの比較のスナップショット  
- 時刻である時点の状態を表すコレクションは、スナップショットのコレクションと呼ばれます。 たとえば、データベース クエリから返される行を含むコレクションのスナップショットがあります。 常に現在の状態を表すコレクションは、ライブのコレクションと呼ばれます。 たとえば、一連の`ComboBox`項目はライブのコレクション。  
+### <a name="snapshots-versus-live-collections"></a>ライブのコレクションとスナップショット  
+ 時点の状態を表すコレクションは、スナップショットのコレクションと呼ばれます。 たとえば、データベース クエリから返される行を格納するコレクションは、スナップショットになります。 常に現在の状態を表すコレクションは、ライブのコレクションと呼ばれます。 たとえばのコレクション`ComboBox`項目は、ライブのコレクション。  
   
  **X DO NOT** プロパティからスナップショットのコレクションを返します。 プロパティは、ライブのコレクションを返す必要があります。  
   
- プロパティ get アクセス操作子は、非常に軽量の操作をする必要があります。 スナップショットを取得するには、o (n) 操作の内部コレクションのコピーを作成する必要があります。  
+ プロパティの getter の非常に軽量な操作があります。 スナップショットを返すには、o (n) 操作の内部コレクションのコピーを作成する必要があります。  
   
  **✓ DO** スナップショット コレクションまたはライブのいずれかを使用して`IEnumerable<T>`(またはそのサブタイプ) は揮発性であるコレクションを表現する (つまり、変更可能なコレクションを明示的に変更することがなく)。  
   
- 一般に、共有リソース (ディレクトリ内のファイルなど) を表すすべてのコレクションは、揮発性です。 このようなコレクションは、非常に困難か不可能実装が単に、順方向専用の列挙子でない限り、ライブのコレクションとして実装するにです。  
+ 一般に、共有リソース (ディレクトリ内のファイルなど) を表すすべてのコレクションは、揮発性です。 などのコレクションは、非常に困難か不可能な実装は単純に順方向専用の列挙しない限り、ライブのコレクションとして実装されます。  
   
-## <a name="choosing-between-arrays-and-collections"></a>配列またはコレクションの選択  
+## <a name="choosing-between-arrays-and-collections"></a>配列とコレクションの選択  
  **✓ DO** コレクションを配列よりも優先されます。  
   
- コレクションは、時間の経過とともに進化させることができます、およびがより使いやすくする内容より詳細に制御を提供します。 さらに、読み取り専用の配列の使用はお勧め、配列の複製のコストが非常に大きいためです。 使いやすさの調査によると、一部の開発者と感じるユーザー コレクション ベースの Api を使用します。  
+ コレクションの内容をより細かく制御するには、時間の経過と共に進化させることができますおよびがより使いやすくします。 さらに、読み取り専用のシナリオの配列を使用するのでお勧め、配列の複製のコストは膨大です。 使いやすさの調査によると、一部の開発者は安心コレクション ベースの Api を使用します。  
   
- ただし、低レベルの Api を開発している場合、読み取り/書き込みのシナリオの配列を使用する方がよい場合があります。 配列は、メモリの使用量、ワーキング セットを削減できるようにするには、これを持ち、ランタイムによって、最適化されているために、配列内の要素へのアクセスが高速化。  
+ ただし、低レベルの Api を開発している場合、読み取り/書き込みシナリオの配列を使用する方がよい場合があります。 配列である、小さいメモリ フット プリント、ワーキング セットを軽減して、配列内の要素へのアクセスが高速、ランタイムによって最適化されています。  
   
  **✓ CONSIDER** 低レベルの Api でのメモリ消費量を最小限に抑えるし、パフォーマンスを最大化する配列を使用します。  
   
@@ -98,18 +98,18 @@ ms.locfileid: "33578860"
 ## <a name="implementing-custom-collections"></a>カスタム コレクションを実装します。  
  **✓ CONSIDER** から継承する`Collection<T>`、 `ReadOnlyCollection<T>`、または`KeyedCollection<TKey,TItem>`新しいコレクションを設計するとき。  
   
- **✓ DO** 実装`IEnumerable<T>`新しいコレクションを設計するとき。 実装の検討`ICollection<T>`またはでも`IList<T>`理にかなっています。  
+ **✓ DO** 実装`IEnumerable<T>`新しいコレクションを設計するとき。 実装を検討`ICollection<T>`またはでも`IList<T>`適切な場所。  
   
- このようなカスタム コレクションを実装するには場合、によって確立された API のパターンに従う`Collection<T>`と`ReadOnlyCollection<T>`可能な限りです。 つまり、同じメンバーを明示的に実装する、これら 2 つのコレクションに名前を付けてなどと同様に、パラメーターの名前を付けます。  
+ このようなカスタム コレクションを実装する場合を確立する API パターンに従う`Collection<T>`と`ReadOnlyCollection<T>`可能な限りです。 つまり、同じメンバーを明示的に実装する、これら 2 つのコレクション名、およびのように、パラメーターの名前を付けます。  
   
  **✓ CONSIDER** 非ジェネリック コレクション インターフェイスを実装する (`IList`と`ICollection`) 場合は、コレクションは多くの場合する Api に渡される入力としてこれらのインターフェイスを取得します。  
   
  **X AVOID** コレクションの概念とは無関係な複雑な Api を使用した型にコレクション インターフェイスを実装します。  
   
- **X DO NOT** など非ジェネリックの基本コレクションから継承`CollectionBase`です。 使用して`Collection<T>`、 `ReadOnlyCollection<T>`、および`KeyedCollection<TKey,TItem>`代わりにします。  
+ **X DO NOT** など非ジェネリックの基本コレクションから継承`CollectionBase`です。 使用`Collection<T>`、 `ReadOnlyCollection<T>`、および`KeyedCollection<TKey,TItem>`代わりにします。  
   
-### <a name="naming-custom-collections"></a>名前付けのカスタム コレクション  
- コレクション (型を実装する`IEnumerable`) 主に 2 つの理由が作成されますパフォーマンス特性が異なる既存のデータ構造体と構造体に固有の操作と多くの場合は、新しいデータ構造を作成するには、(1) (例: <xref:System.Collections.Generic.List%601>、。<xref:System.Collections.Generic.LinkedList%601>、 <xref:System.Collections.Generic.Stack%601>)、および特定の項目のセットを保持するための特殊化されたコレクションを作成するには、(2) (例: <xref:System.Collections.Specialized.StringCollection>)。 データ構造体は、アプリケーションおよびライブラリの内部的な実装で最もよく使用されます。 専用コレクションは、(プロパティおよびパラメーターの型) として Api で公開するには、主に、します。  
+### <a name="naming-custom-collections"></a>カスタム コレクションの名前を付ける  
+ コレクション (実装する型`IEnumerable`) が主に 2 つの理由の作成: 既存のデータ構造とは別のパフォーマンス特性構造固有の操作と多くの場合は、新しいデータ構造を作成するには、(1) (例: <xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.LinkedList%601>、 <xref:System.Collections.Generic.Stack%601>)、および (2) 特定の項目セットを保持するための特殊なコレクションを作成する (例: <xref:System.Collections.Specialized.StringCollection>)。 データ構造は、アプリケーションとライブラリの内部の実装で最もよく使用されます。 特殊化されたコレクションは、(プロパティとパラメーターの型) として Api で公開するには、主にします。  
   
  **✓ DO** を実装する抽象クラスの名前に「ディクショナリ」サフィックスを使用`IDictionary`または`IDictionary<TKey,TValue>`です。  
   
@@ -119,16 +119,17 @@ ms.locfileid: "33578860"
   
  **X AVOID** コレクションの抽象化の名前に"LinkedList"または「ハッシュ テーブル、」などの特定の実装の暗黙的な任意のサフィックスを使用します。  
   
- **✓ CONSIDER** 項目の種類の名前を持つコレクションの名前を付けることです。 たとえば、型の項目を格納するコレクション`Address`(実装`IEnumerable<Address>`) という名前を付ける必要があります`AddressCollection`です。 プレフィックス"I"、項目の種類がインターフェイスの場合は、項目の種類を省略できます。 したがって、一連の<xref:System.IDisposable>項目を呼び出すことができる`DisposableCollection`です。  
+ **✓ CONSIDER** 項目の種類の名前を持つコレクションの名前を付けることです。 たとえば、型の項目を格納するコレクション`Address`(実装`IEnumerable<Address>`) 名前を指定する必要があります`AddressCollection`します。 プレフィックス"I"、項目の種類がインターフェイスである場合は、項目の型を省略できます。 コレクションではそのため、<xref:System.IDisposable>項目を呼び出すことができる`DisposableCollection`します。  
   
  **✓ CONSIDER** 対応する書き込み可能なコレクションが追加されるか、フレームワークに既に存在する場合に、読み取り専用コレクションの名前に"ReadOnly"プレフィックスを使用します。  
   
- たとえば、文字列の読み取り専用コレクションを呼び出す必要があります`ReadOnlyStringCollection`です。  
+ たとえば、文字列の読み取り専用コレクションを呼び出す必要がある`ReadOnlyStringCollection`します。  
   
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
- [使用方法のガイドライン](../../../docs/standard/design-guidelines/usage-guidelines.md)
+## <a name="see-also"></a>関連項目
+
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [使用方法のガイドライン](../../../docs/standard/design-guidelines/usage-guidelines.md)

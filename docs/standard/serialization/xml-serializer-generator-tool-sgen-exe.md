@@ -2,12 +2,12 @@
 title: XML シリアライザー ジェネレーター ツール (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 54afa99af3365c3be8a9662905467fbcaf4e8aa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0fee890f86f4e377a9372d7e4c47ef78effc9fa
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589180"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44136993"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML シリアライザー ジェネレーター ツール (Sgen.exe)
 XML シリアライザー ジェネレーターは、指定された型のオブジェクトをシリアル化または逆シリアル化するとき、<xref:System.Xml.Serialization.XmlSerializer> の起動パフォーマンスを向上させるために、指定されたアセンブリの型に対して XML シリアル化アセンブリを作成します。  
@@ -37,8 +37,8 @@ sgen [options]
 |**/v****[erbose]**|デバッグに関する詳細出力を表示します。 <xref:System.Xml.Serialization.XmlSerializer> でシリアル化できない対象アセンブリの型を一覧表示します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>コメント  
- XML シリアライザー ジェネレーターを使用しない場合、<xref:System.Xml.Serialization.XmlSerializer> はアプリケーションを実行するたびに、各型に対してシリアル化コードとシリアル化アセンブリを生成します。 XML シリアル化の起動時のパフォーマンスを向上させるには、事前にそれらのアセンブリを生成するのに Sgen.exe ツールを使用します。 生成したアセンブリは、アプリケーションで配置できます。  
+## <a name="remarks"></a>Remarks  
+ XML シリアライザー ジェネレーターを使用しない場合、<xref:System.Xml.Serialization.XmlSerializer> はアプリケーションを実行するたびに、各型に対してシリアル化コードとシリアル化アセンブリを生成します。 XML シリアル化起動のパフォーマンスを向上させるのには、Sgen.exe ツールを使用して、それらのアセンブリを事前に生成します。 生成したアセンブリは、アプリケーションで配置できます。  
   
  XML シリアライザー ジェネレーターは、サーバーとの通信に XML Web サービス プロキシを使用するクライアントのパフォーマンスも向上させますが、これは型が初めて読み込まれるとき、シリアル化プロセスによってパフォーマンスが低下しないためです。  
   
@@ -55,7 +55,8 @@ sgen Data.dll
   
  Data.XmlSerializers.dll アセンブリは、Data.dll の型をシリアル化および逆シリアル化する必要のあるコードから参照できます。  
   
-## <a name="see-also"></a>関連項目  
- [ツール](../../../docs/framework/tools/index.md)  
- [XML Web サービスの概要](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>関連項目
+
+- [ツール](../../../docs/framework/tools/index.md)  
+- [XML Web サービスの概要](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

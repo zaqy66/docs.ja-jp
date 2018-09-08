@@ -2,12 +2,12 @@
 title: 関数 (F#)
 description: 関数の f# と、f# が共通の関数型プログラミング構成要素をどのようにがサポートする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803913"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140919"
 ---
 # <a name="functions"></a>関数
 
@@ -112,7 +112,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="recursive-functions"></a>再帰関数
 
-*再帰関数*はそれらの関数自体を呼び出す関数です。 再帰関数を使用するには、**let** キーワードの後に **rec** キーワードを指定する必要があります。 関数の本体から再帰関数を呼び出す方法は、他の関数呼び出しの場合と変わりません。 次の再帰関数は、*n* 番目のフィボナッチ数を計算します。 フィボナッチ数列は、古代から知られている数列で、数例の各数値が、前の 2 つの連続する数値の和になります。
+*再帰関数*はそれらの関数自体を呼び出す関数です。 再帰関数を使用するには、**let** キーワードの後に **rec** キーワードを指定する必要があります。 関数の本体から再帰関数を呼び出す方法は、他の関数呼び出しの場合と変わりません。 次のような再帰関数を計算、 *n*<sup>th</sup>フィボナッチ数。 フィボナッチ数列は、古代から知られている数列で、数例の各数値が、前の 2 つの連続する数値の和になります。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

@@ -10,11 +10,11 @@ ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43869955"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44132643"
 ---
 # <a name="exception-throwing"></a>例外のスロー
 このセクションで説明されている例外のスローのガイドラインには、実行エラーの意味を適切な定義が必要です。 メンバーが実行できないときに、実行エラーが発生します (どのようなメンバー名を意味します) を実行するように設計します。 たとえば場合、`OpenFile`メソッドが呼び出し元に、開いているファイル ハンドルを返すことはできませんで実行エラーと思われることです。  

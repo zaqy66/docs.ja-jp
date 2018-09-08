@@ -2,18 +2,18 @@
 title: コマンド ライン ツールの f# の概要します。
 description: 任意のオペレーティング システム (Windows、macOs または Linux) で .NET Core CLI を使用した f# で簡単なマルチ プロジェクト ソリューションを構築する方法について説明します。
 ms.date: 03/26/2018
-ms.openlocfilehash: 6cdb2b42781dba6ba00c03b20e6a76d033e03063
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875015"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44134806"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI を使用した f# の概要します。
 
 この記事では、どのできますを開始する f# .NET Core CLI を使用したオペレーティング システム (Windows、macOS、または Linux) でについて説明します。 コンソール アプリケーションによって呼び出されるクラス ライブラリを使用したマルチ プロジェクト ソリューションを構築する経由になります。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 を開始するには、、の最新バージョンをインストールする必要があります[.NET Core SDK](https://www.microsoft.com/net/download/)します。
 
@@ -41,7 +41,7 @@ FSNetCore
 使用して、`dotnet new`コマンド、クラス ライブラリ プロジェクトを作成、 **src**ライブラリという名前のフォルダー。
 
 ```console
-dotnet new lib -lang F# -o src/Library
+dotnet new classlib -lang F# -o src/Library
 ```
 
 前のコマンドを実行した後は、次のディレクトリ構造が生成されます。

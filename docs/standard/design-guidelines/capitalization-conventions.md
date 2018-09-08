@@ -11,33 +11,33 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ef7913a2601c3a791cb028b4074ce37b9e9421b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 070fc69728c2cb38e465dab9f6f591a77a857531
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575285"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131936"
 ---
 # <a name="capitalization-conventions"></a>大文字の使用規則
-単純なメソッドを使用するためのこの章のレイアウトのガイドライン場合は、型、メンバー、およびパラメーターについて読みやすくする識別子を一貫して、適用されるときにします。  
+この章のレイアウトを使用するための単純なメソッドのガイドラインは、型、メンバー、およびパラメーターを読みやすくする識別子を一貫した適用されるときに場合です。  
   
 ## <a name="capitalization-rules-for-identifiers"></a>識別子の大文字と小文字の規則  
- 識別子内の単語を区別するために、識別子内の各単語の最初の文字を大文字に変換します。 アンダー スコアは、単語を区別するために使用しないでくださいまたは識別子で任意の場所に言えば、します。 これには識別子の使用によって、識別子を大文字に変換する 2 つの適切な方法があります。  
+ 識別子内の単語を区別するためには、識別子内の各単語の最初の文字を大文字に変換します。 アンダー スコアは、単語を区別するために使用しないでくださいまたはさらに言えば、識別子で任意の場所。 識別子の使用によって、識別子を大文字に変換する 2 つの適切な方法はあります。  
   
 -   Pascal 表記を使用  
   
--   camel 表記  
+-   キャメル ケース  
   
- パラメーターの名前を除いて、すべての識別子を使用する、pascal 表記を使用規則は、次の例に示すように、(2 文字の長さで経由での頭字語を含む) の各単語の最初の文字を大文字になります。  
+ Pascal 表記を使用規則は、パラメーター名を除くすべての識別子には、次の例に示すように、(2 文字の長さを頭字語を含む) の各単語の最初の文字を大文字になります。  
   
  `PropertyDescriptor`  
  `HtmlTag`  
   
- 特殊なケースは id に、次に示すように両方の文字を大文字にする、2 文字の頭字語に。  
+ 特殊なケースは、次の識別子で示すように 2 文字の頭字語が両方の文字が大文字で入力に行われます。  
   
  `IOStream`  
   
- パラメーター名専用に使用される、camel 表記規則は、次の例に示すように、最初の単語以外の各単語の最初の文字を大文字にします。 例に示すも camel 形式の識別子を開始する 2 文字の頭字語は小文字の両方になります。  
+ キャメル ケース規約、パラメーター名では、専用に使用では、次の例に示すように、最初の単語以外の各単語の最初の文字が大文字にします。 例に示すも camel 形式の識別子を開始 2 文字の頭字語は小文字の両方です。  
   
  `propertyDescriptor`  
  `ioStream`  
@@ -51,14 +51,14 @@ ms.locfileid: "33575285"
   
 |識別子|大文字小文字の区別|例|  
 |----------------|------------|-------------|  
-|名前空間|Pascal|`namespace System.Security { ... }`|  
-|型|Pascal|`public class StreamReader { ... }`|  
-|Interface|Pascal|`public interface IEnumerable { ... }`|  
-|メソッド|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
-|プロパティ|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
-|フィールド|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
-|列挙値|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
+|名前空間|Pascal 形式|`namespace System.Security { ... }`|  
+|型|Pascal 形式|`public class StreamReader { ... }`|  
+|Interface|Pascal 形式|`public interface IEnumerable { ... }`|  
+|メソッド|Pascal 形式|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
+|プロパティ|Pascal 形式|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
+|event|Pascal 形式|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|フィールド|Pascal 形式|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
+|列挙値|Pascal 形式|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |パラメーター|Camel 形式|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
 ## <a name="capitalizing-compound-words-and-common-terms"></a>複合語の大文字と一般的な用語  
@@ -66,9 +66,9 @@ ms.locfileid: "33575285"
   
  **X DO NOT** いわゆる閉じたフォームの複合語内の各単語を大文字に変換します。  
   
- これらは、エンドポイントなど、1 つの単語として書き込まれる複合語です。 大文字と小文字のガイドラインについては、目的には、1 つの単語として閉じられた形式の複合語を扱います。 現在のディクショナリを使用すると、複合語が閉じたフォームで記述されたかどうかを判断できます。  
+ これらは、複合語のエンドポイントなど、1 つの単語として書き込まれます。 大文字と小文字のガイドラインについては、目的には、1 つの単語として閉じられたフォームの複合語を処理します。 現在のディクショナリを使用すると、複合語が閉じたフォームで記述されたかどうかを判断できます。  
   
-|Pascal|Camel 形式|Not|  
+|Pascal 形式|Camel 形式|Not|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
@@ -97,14 +97,15 @@ ms.locfileid: "33575285"
 |`Writable`|`writable`|`Writeable`|  
   
 ## <a name="case-sensitivity"></a>大文字と小文字の区別  
- CLR で実行できる言語は、いくつかが、大文字小文字の区別をサポートする必要はありません。 でも使用する言語でサポートされる場合、その他の言語、フレームワークにアクセスする必要ありません。 したがって、外部からアクセス可能であるすべての Api は、場合、同じコンテキストで 2 つの名前を区別するために単独で使用できません。  
+ CLR で実行できる言語は、いくつかの操作を行いますが、大文字小文字の区別をサポートする必要はありません。 お使いの言語をサポートしている場合でも、フレームワークにアクセスする他の言語は必要ありません。 したがって、外部からアクセス可能であるすべての Api は、場合、同じコンテキストで 2 つの名前を区別するために単独で使用できません。  
   
- **X DO NOT** すべてのプログラミング言語が大文字小文字を区別があると仮定します。 しかし、そうではありません。 名前は、大文字と小文字だけでは区別できません。  
+ **X DO NOT** すべてのプログラミング言語が大文字小文字を区別があると仮定します。 しかし、そうではありません。 大文字と小文字だけ名前が異なることはできません。  
   
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
- [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>関連項目
+
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)

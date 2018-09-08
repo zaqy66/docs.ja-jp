@@ -3,11 +3,11 @@ title: 'インポート宣言: open キーワード (F#)'
 description: 完全修飾名を使用せずに参照できる要素を持つ f# インポート宣言し、モジュールまたは名前空間の指定方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883153"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44130186"
 ---
 # <a name="import-declarations-the-open-keyword"></a>インポート宣言:`open`キーワード
 

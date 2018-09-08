@@ -7,11 +7,11 @@ helpviewer_keywords:
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
 ms.openlocfilehash: 373478e8c21fca66cbfbf7a58fc7d53f65ce5d0b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724527"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44141088"
 ---
 # <a name="xaml-services"></a>XAML サービス
 このトピックでは、サービスの .NET Framework XAML と呼ばれるテクノロジ一連の機能について説明します。 サービスと記述された Api の大半がで導入された、System.Xaml アセンブリには、アセンブリ内にある、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core アセンブリのセット。 サービスには、リーダーとライターは、スキーマのクラスおよびスキーマのサポート、ファクトリ クラス、XAML 言語の組み込みサポート、およびその他の XAML 言語機能の属性を設定します。  

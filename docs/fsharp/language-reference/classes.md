@@ -3,11 +3,11 @@ title: クラス (F#)
 description: F# クラスのプロパティ、メソッド、およびイベントを保持できるオブジェクトを表す型の方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44060584"
+ms.locfileid: "44138826"
 ---
 # <a name="classes"></a>クラス
 

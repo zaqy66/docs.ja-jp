@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806151"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44132332"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView からの DataTable の作成
 データ ソースからデータを取得し、<xref:System.Data.DataTable> にデータを格納した後、再度データを取得せずに、返されたデータの並べ替え、フィルター処理、または制限の適用を行うことが必要になる場合があります。 これを行うには、<xref:System.Data.DataView> クラスを使用します。 さらに、新たに作成する必要がある場合<xref:System.Data.DataTable>から、 <xref:System.Data.DataView>、使用することができます、<xref:System.Data.DataView.ToTable%2A>メソッドは、新しいすべての行および列、またはデータのサブセットをコピーする<xref:System.Data.DataTable>します。 <xref:System.Data.DataView.ToTable%2A> メソッドには、次の操作を行うためのオーバーロード機能があります。  

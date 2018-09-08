@@ -2,12 +2,12 @@
 title: パラメーターと引数 (F#)
 description: パラメーターを定義して、関数、メソッド、およびプロパティに引数を渡すのための f# 言語サポートについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062638"
+ms.locfileid: "44131981"
 ---
 # <a name="parameters-and-arguments"></a>パラメーターと引数
 
@@ -127,15 +127,32 @@ Baud Rate: 300 Duplex: Half Parity: true
 
 ## <a name="passing-by-reference"></a>参照渡しで渡す
 
-F# の値の参照渡しでは、`byref`キーワードで、パラメーターを実際に参照によって渡される値を指すポインターを指定します。 持つメソッドに渡される任意の値を`byref`引数である必要があります、`mutable`します。
+F# の値の参照渡し[byref](byrefs.md)、マネージ ポインター型であります。 使用する型は次のようにガイダンス:
+
+* 使用`inref<'T>`のみをポインターを読み取る必要がある場合。
+* 使用`outref<'T>`のみ、ポインターを記述する必要がある場合。
+* 使用`byref<'T>`から読み取るし、ポインターへの書き込みの両方に必要な場合。
+
+```fsharp
+let example1 (x: inref<int>) = printfn "It's %d" x
+
+let example2 (x: outref<int>) = x <- x + 1
+
+let example3 (x: byref<int>) =
+    printfn "It'd %d" x
+    x <- x + 1
+
+// No need to make it mutable, since it's read-only
+let x = 1
+example1 &x
+
+// Needs to be mutable, since we write to it
+let mutable y = 2
+example2 &y
+example3 &y // Now 'y' is 3
+```
 
 パラメーターがポインター値が変更可能なため、値への変更は、関数の実行後に保持されます。
-
-これと同じ操作を行うことができます[参照セル](reference-cells.md)、重要な点が**参照セルと`byref`s が同じではない**します。 参照セルを検査しの内容を変更できますが、この値は、ヒープ上に存在し、それに含まれる変更可能な値を記録するおくと等価の値のコンテナーです。 A`byref`実際のポインターは、基になる別のセマンティクスと (これは非常に限定できます) の使用に関する規則のためです。
-
-次の例では、使用、`byref`キーワード。 参照セルをパラメーターとして使用する場合をする必要があります名前付きの値として参照セルを作成して、パラメーターとして使用するは、追加するだけでなく、`ref`演算子の最初の呼び出しに示す`Increment`次のコード。 参照セルを作成する基になる値のコピーを作成するための最初の呼び出しは、一時的な値だけインクリメントします。
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3809.fs)]
 
 戻り値として組を使用して格納できる`out`.NET ライブラリのメソッドのパラメーター。 または、扱うことができます、`out`パラメーターとして、`byref`パラメーター。 次のコード例では、両方の方法を示します。
 
@@ -155,7 +172,7 @@ F# では、パラメーター配列はのみ、メソッドで定義します�
 
 プロジェクトで実行すると、前のコードの出力のとおりです。
 
-```
+```console
 a 1 10 Hello world 1 True
 "a"
 1

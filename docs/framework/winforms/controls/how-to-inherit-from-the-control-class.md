@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
 ms.openlocfilehash: 1a0eea1930699ed85fcf0eaf184ba0aabe398d73
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44031901"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137656"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>方法 : コントロール クラスを継承する
 Windows フォームで使用する完全なカスタム コントロールを作成する場合から継承する必要があります、<xref:System.Windows.Forms.Control>クラス。 継承中に、<xref:System.Windows.Forms.Control>クラスは、多くの計画と実装を実行することは、オプションの最大範囲にも提供が必要です。 継承する場合<xref:System.Windows.Forms.Control>コントロールを動作を実現する非常に基本的な機能を継承します。 固有の機能、<xref:System.Windows.Forms.Control>クラス、キーボードとマウスによるユーザー入力の処理、コントロールのサイズと境界を定義します。、、windows ハンドルを提供しますおよびメッセージの処理とセキュリティを提供します。 描画機能 (ここではコントロールのグラフィカル インターフェイスを実際に表示する機能) や、ユーザーとやり取りするための特定の機能は含まれていません。 このような機能はすべて、カスタム コードによって提供する必要があります。  

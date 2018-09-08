@@ -8,11 +8,11 @@ ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: e44b7af6581e6c5abdcb2f82b02d152dd22d0b3b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878799"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131352"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>セキュリティで保護されていないイントラネットのクライアントとサービス
 次の図は、WCF アプリケーションをセキュリティで保護されたプライベート ネットワークに関する情報を提供するために開発の単純な Windows Communication Foundation (WCF) サービスを示しています。 重要度の低いデータは、ネットワークの本質的にセキュリティで保護されたことが必要ですか、WCF インフラストラクチャの下のレイヤーによってセキュリティが提供されるため、セキュリティは必要ありません。  

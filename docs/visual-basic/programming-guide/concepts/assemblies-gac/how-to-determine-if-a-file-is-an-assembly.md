@@ -1,20 +1,20 @@
 ---
-title: '方法: がかどうか、ファイル アセンブリ (Visual Basic)'
+title: '方法: ファイルがアセンブリ (Visual Basic) を確認します。'
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: 84d45cea4a2557350edacd5f05b12c8ffcac4df8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643241"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131621"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>方法: がかどうか、ファイル アセンブリ (Visual Basic)
+# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>方法: ファイルがアセンブリ (Visual Basic) を確認します。
 ファイルが管理されていて、ファイルのメタデータにアセンブリ エントリが含まれている場合、そのファイルはアセンブリです。 アセンブリとメタデータの詳細については、「[アセンブリ マニフェスト](../../../../framework/app-domains/assembly-manifest.md)」を参照してください。  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>ファイルがアセンブリかどうかを手動で確認する方法  
   
-1.  [Ildasm.exe (IL 逆アセンブラー)](https://msdn.microsoft.com/library/f7dy01k1) を起動します。  
+1.  [Ildasm.exe (IL 逆アセンブラー)](../../../../framework/tools/ildasm-exe-il-disassembler.md) を起動します。  
   
 2.  テストするファイルを読み込みます。  
   
@@ -52,7 +52,8 @@ End Module
   
  <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> メソッドはテスト ファイルを読み込み、情報が読み取られた時点で解放します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Reflection.AssemblyName>  
- [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)  
- [アセンブリとグローバル アセンブリ キャッシュ (Visual Basic)](index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Reflection.AssemblyName>  
+- [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)  
+- [アセンブリとグローバル アセンブリ キャッシュ (Visual Basic)](index.md)

@@ -5,11 +5,11 @@ ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 25afbb268a0ef7772585a0f3829b56f135758b61
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877964"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44127236"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>方法 : 同じ型の複数のセキュリティ トークンを使用する
 -   [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 では、クライアント メッセージには任意の型のトークンを 1 つしか含めることができませんでしたが、 現在は、同じ型の複数のトークンをクライアント メッセージに含めることができるようになりました。 このトピックでは、同じ型の複数のトークンをクライアント メッセージに含める方法について説明します。  

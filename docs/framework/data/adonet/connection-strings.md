@@ -3,11 +3,11 @@ title: ADO.NET での接続文字列
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 ms.openlocfilehash: b4e057cab4c562fc51893631c35d66409e1c3731
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748542"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131540"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET での接続文字列
 .NET Framework 2.0 では、接続文字列を扱う新しい機能が導入されました。接続文字列ビルダー クラスに追加された新しいキーワードもその 1 つであり、有効な接続文字列を実行時に簡単に作成できるようになっています。  

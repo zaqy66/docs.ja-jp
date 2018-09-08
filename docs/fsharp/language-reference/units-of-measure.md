@@ -2,17 +2,16 @@
 title: 測定単位 (F#)
 description: どの浮動小数点をについて説明しますと f# の符号付き整数値には、測定単位を長さ、ボリューム、および大容量を示すために使用される通常を関連付けることができます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6075742ec80d9510be51d4565e3397931c9f68c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517427"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131261"
 ---
 # <a name="units-of-measure"></a>測定単位
 
 F# の浮動小数点値と符号付き整数値を大量のボリュームの長さを示すために通常使用される、測定単位が関連付けられてことができます。 算術リレーションシップでは正しいユニットがあるを防ぐことができますを確認するコンパイラを有効にした数量の単位を使用してプログラミング エラーです。
-
 
 ## <a name="syntax"></a>構文
 
@@ -21,6 +20,7 @@ F# の浮動小数点値と符号付き整数値を大量のボリュームの�
 ```
 
 ## <a name="remarks"></a>Remarks
+
 前の構文を定義*単位名*メジャーの単位として。 オプションの一部を使用して、以前に定義された単位で新しいメジャーを定義します。 たとえば、次の行は、メジャーを定義します。 `cm` (センチメートル)。
 
 ```fsharp
@@ -72,7 +72,7 @@ let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 次の例では、測定単位の使用を示します。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
-    
+
 次のコード例は、無次元の浮動小数点数からディメンションが指定された浮動小数点値に変換する方法を示しています。 乗算、1.0、1.0 に次元を適用します。 ような関数を抽象化することができます`degreesFahrenheit`します。
 
 また、無次元の浮動小数点数を予想される関数にディメンションが指定された値を渡すと、ときにする必要があります単位をキャンセルまたはにキャスト`float`を使用して、`float`演算子。 除算では、この例では、`1.0<degC>`に対する引数の`printf`ため`printf`無次元の数量が必要です。
@@ -88,20 +88,23 @@ That temperature in degrees Celsius is    32.22.
 ```
 
 ## <a name="using-generic-units"></a>汎用的な単位を使用します。
+
 関連する測定単位を持つデータを操作するジェネリック関数を記述できます。 これを行う、型パラメーターとしてジェネリック単体と型を指定することで、次のコード例で示すようにします。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
-    
+
 ## <a name="creating-aggregate-types-with-generic-units"></a>汎用的な単位に集約型の作成
+
 次のコードでは、一般的なユニットがある個々 の浮動小数点値で構成される集計の種類を作成する方法を示します。 これにより、さまざまな単位で動作する 1 つの型を作成できます。 また、汎用的なユニットでは、単位の 1 つのセットを持つジェネリック型が異なる単位のセットと同じジェネリック型は異なる型であることを確認してタイプ セーフが保持されます。 この手法の基礎は、`Measure`型パラメーターに属性を適用できます。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
-    
+
 ## <a name="units-at-runtime"></a>実行時の単位
+
 測定単位は、静的な型をチェックするために使用されます。 浮動小数点値がコンパイルされると、測定単位排除されるので、実行時に単位は失われます。 そのため、実行時に単位のチェックに依存する機能を実装するあらゆる試みでは、このことはできません。 たとえば、実装、`ToString`単位を印刷する関数のことはできません。
 
-
 ## <a name="conversions"></a>変換
+
 ユニットを持つ型に変換する (たとえば、 `float<'u>`) ユニットがない型には、標準変換関数を使用することができます。 たとえば、使用することができます`float`に変換する、`float`次のコードに示すように 単位がない値。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
@@ -109,10 +112,11 @@ That temperature in degrees Celsius is    32.22.
 単位のない値をユニットの値に変換するには、適切な単位で注釈が付けられる 1 つまたは 1.0 の値で乗算できます。 ただし、相互運用性レイヤーを記述するためもユニット単位のない値を値に変換するのに使用できるいくつかの明示的な関数です。 うち、 [Microsoft.FSharp.Core.LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3)モジュール。 例では、単位から変換する、`float`を`float<cm>`を使用して、 [FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9)次のコードに示すように、します。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
-    
+
 ## <a name="units-of-measure-in-the-f-core-library"></a>F# コア ライブラリでの測定単位
+
 単体のライブラリが表示されます、`FSharp.Data.UnitSystems.SI`名前空間。 両方の形式のシンボルの SI 単位が含まれています (など`m`メーター) で、`UnitSymbols`サブ名前空間との完全名 (など`meter`メーター) で、`UnitNames`サブ名前空間。
 
-
 ## <a name="see-also"></a>関連項目
-[F# 言語リファレンス](index.md)
+
+- [F# 言語リファレンス](index.md)

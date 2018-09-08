@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 6b4d58f6b5bf23cbce2ace8fb40730d7b73994de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785493"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133283"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>方法 : XML 要素および XML 属性名を修飾する
 
@@ -171,11 +171,11 @@ public class Book
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.Xml.Serialization.XmlSerializer>
-[XML スキーマ定義ツールと XML シリアル化](the-xml-schema-definition-tool-and-xml-serialization.md)
-[XML シリアル化の概要](introducing-xml-serialization.md)
-[XmlSerializer クラス](xref:System.Xml.Serialization.XmlSerializer)
- [XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)
-[方法: XML、Stream の代替要素名を指定](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-[方法:オブジェクトをシリアル化](how-to-serialize-an-object.md)
-[方法: オブジェクトを逆シリアル化](how-to-deserialize-an-object.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [XML スキーマ定義ツールと XML シリアル化](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [XML シリアル化の概要](introducing-xml-serialization.md)
+- [XmlSerializer クラス](xref:System.Xml.Serialization.XmlSerializer)
+- [XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)
+- [方法 : XML ストリームの代替要素名を指定する](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [方法 : オブジェクトをシリアル化する](how-to-serialize-an-object.md)
+- [方法 : オブジェクトを逆シリアル化する](how-to-deserialize-an-object.md)

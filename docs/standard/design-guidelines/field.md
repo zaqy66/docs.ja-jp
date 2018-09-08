@@ -10,11 +10,11 @@ ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65c54fe9a076a219c61280a98c390b16f56b5015
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873943"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44127853"
 ---
 # <a name="field-design"></a>フィールドのデザイン
 カプセル化の原理は、最も重要な概念の 1 つをオブジェクト指向設計にです。 この原則は、データ オブジェクト内に格納されますが、そのオブジェクトのみがアクセスできるがあることを示しています。  
