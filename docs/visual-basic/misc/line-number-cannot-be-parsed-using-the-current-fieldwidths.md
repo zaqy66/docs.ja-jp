@@ -5,24 +5,24 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
 ms.openlocfilehash: d362ed594fd343c22345df9767c94a5770e5303a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129194"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195745"
 ---
-# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a><span data-ttu-id="0930f-102">行&lt;数&gt;現在の Fieldwidth を使用して解析できません</span><span class="sxs-lookup"><span data-stu-id="0930f-102">Line &lt;number&gt; cannot be parsed using the current FieldWidths</span></span>
-<span data-ttu-id="0930f-103">指定された行のフィールドの幅が指定よりも大きいため、その行を解析できません。</span><span class="sxs-lookup"><span data-stu-id="0930f-103">The specified line cannot be parsed because its fields have widths other than those specified.</span></span>  
+# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a><span data-ttu-id="407dc-102">行&lt;数&gt;現在の Fieldwidth を使用して解析できません</span><span class="sxs-lookup"><span data-stu-id="407dc-102">Line &lt;number&gt; cannot be parsed using the current FieldWidths</span></span>
+<span data-ttu-id="407dc-103">指定された行のフィールドの幅が指定よりも大きいため、その行を解析できません。</span><span class="sxs-lookup"><span data-stu-id="407dc-103">The specified line cannot be parsed because its fields have widths other than those specified.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="0930f-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="0930f-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="407dc-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="407dc-104">To correct this error</span></span>  
   
--   <span data-ttu-id="0930f-105">行が正しく解析できるように `FieldWidths` を調整するか、その行を処理するために例外処理コードを挿入します。</span><span class="sxs-lookup"><span data-stu-id="0930f-105">Adjust `FieldWidths` so the line can be parsed correctly, or insert exception-handling code in order to handle the line.</span></span>  
+-   <span data-ttu-id="407dc-105">行が正しく解析できるように `FieldWidths` を調整するか、その行を処理するために例外処理コードを挿入します。</span><span class="sxs-lookup"><span data-stu-id="407dc-105">Adjust `FieldWidths` so the line can be parsed correctly, or insert exception-handling code in order to handle the line.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0930f-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="0930f-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="407dc-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="407dc-106">See also</span></span>
 
-- [<span data-ttu-id="0930f-107">方法: 複数の書式を持つテキスト ファイルを読み取る</span><span class="sxs-lookup"><span data-stu-id="0930f-107">How to: Read From Text Files with Multiple Formats</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
-- [<span data-ttu-id="0930f-108">My.Computer.FileSystem.OpenTextFieldParser</span><span class="sxs-lookup"><span data-stu-id="0930f-108">My.Computer.FileSystem.OpenTextFieldParser</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
-- [<span data-ttu-id="0930f-109">TextFieldParser オブジェクトによるテキスト ファイルの解析</span><span class="sxs-lookup"><span data-stu-id="0930f-109">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
-- [<span data-ttu-id="0930f-110">TextFieldParser オブジェクト</span><span class="sxs-lookup"><span data-stu-id="0930f-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
-- [<span data-ttu-id="0930f-111">TextFieldParser.FieldWidths プロパティ</span><span class="sxs-lookup"><span data-stu-id="0930f-111">TextFieldParser.FieldWidths Property</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)  
-- [<span data-ttu-id="0930f-112">TextFieldParser.SetFieldWidths メソッド</span><span class="sxs-lookup"><span data-stu-id="0930f-112">TextFieldParser.SetFieldWidths Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)
+- [<span data-ttu-id="407dc-107">方法: 複数の書式を持つテキスト ファイルを読み取る</span><span class="sxs-lookup"><span data-stu-id="407dc-107">How to: Read From Text Files with Multiple Formats</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+- [<span data-ttu-id="407dc-108">My.Computer.FileSystem.OpenTextFieldParser</span><span class="sxs-lookup"><span data-stu-id="407dc-108">My.Computer.FileSystem.OpenTextFieldParser</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
+- [<span data-ttu-id="407dc-109">TextFieldParser オブジェクトによるテキスト ファイルの解析</span><span class="sxs-lookup"><span data-stu-id="407dc-109">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+- [<span data-ttu-id="407dc-110">TextFieldParser オブジェクト</span><span class="sxs-lookup"><span data-stu-id="407dc-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
+- [<span data-ttu-id="407dc-111">TextFieldParser.FieldWidths プロパティ</span><span class="sxs-lookup"><span data-stu-id="407dc-111">TextFieldParser.FieldWidths Property</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)  
+- [<span data-ttu-id="407dc-112">TextFieldParser.SetFieldWidths メソッド</span><span class="sxs-lookup"><span data-stu-id="407dc-112">TextFieldParser.SetFieldWidths Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)

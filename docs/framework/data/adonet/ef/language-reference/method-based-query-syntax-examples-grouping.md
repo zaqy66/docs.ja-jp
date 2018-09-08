@@ -6,37 +6,37 @@ dev_langs:
 - vb
 ms.assetid: cb23c25c-1075-4cc3-a8ff-4db72e536c0d
 ms.openlocfilehash: 2fd64cb16224290d76efe327978083b1e834d6cb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738548"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213226"
 ---
-# <a name="method-based-query-syntax-examples-grouping"></a><span data-ttu-id="0307b-102">メソッド ベースのクエリ構文例: グループ化</span><span class="sxs-lookup"><span data-stu-id="0307b-102">Method-Based Query Syntax Examples: Grouping</span></span>
-<span data-ttu-id="0307b-103">このトピックの例では、使用する方法を表示、`GroupBy`メソッド クエリを[AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)メソッド ベースのクエリ構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="0307b-103">The examples in this topic show you how to use the `GroupBy` method to query the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using method-based query syntax.</span></span> <span data-ttu-id="0307b-104">これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。</span><span class="sxs-lookup"><span data-stu-id="0307b-104">The AdventureWorks Sales Model that is used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+# <a name="method-based-query-syntax-examples-grouping"></a><span data-ttu-id="5b7ab-102">メソッド ベースのクエリ構文例: グループ化</span><span class="sxs-lookup"><span data-stu-id="5b7ab-102">Method-Based Query Syntax Examples: Grouping</span></span>
+<span data-ttu-id="5b7ab-103">このトピックの例では、使用する方法を表示、`GroupBy`メソッド クエリを[AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)メソッド ベースのクエリ構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="5b7ab-103">The examples in this topic show you how to use the `GroupBy` method to query the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using method-based query syntax.</span></span> <span data-ttu-id="5b7ab-104">これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。</span><span class="sxs-lookup"><span data-stu-id="5b7ab-104">The AdventureWorks Sales Model that is used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="0307b-105">このトピックの例では、次を使用して`using` / `Imports`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="0307b-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="5b7ab-105">このトピックの例では、次を使用して`using` / `Imports`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="5b7ab-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="example"></a><span data-ttu-id="0307b-106">例</span><span class="sxs-lookup"><span data-stu-id="0307b-106">Example</span></span>  
- <span data-ttu-id="0307b-107">次の例では、`GroupBy` メソッドを使用して、郵便番号でグループ化されている `Address` オブジェクトを返しています。</span><span class="sxs-lookup"><span data-stu-id="0307b-107">The following example uses the `GroupBy` method to return `Address` objects that are grouped by postal code.</span></span> <span data-ttu-id="0307b-108">結果は匿名型に射影されます。</span><span class="sxs-lookup"><span data-stu-id="0307b-108">The results are projected into an anonymous type.</span></span>  
+## <a name="example"></a><span data-ttu-id="5b7ab-106">例</span><span class="sxs-lookup"><span data-stu-id="5b7ab-106">Example</span></span>  
+ <span data-ttu-id="5b7ab-107">次の例では、`GroupBy` メソッドを使用して、郵便番号でグループ化されている `Address` オブジェクトを返しています。</span><span class="sxs-lookup"><span data-stu-id="5b7ab-107">The following example uses the `GroupBy` method to return `Address` objects that are grouped by postal code.</span></span> <span data-ttu-id="5b7ab-108">結果は匿名型に射影されます。</span><span class="sxs-lookup"><span data-stu-id="5b7ab-108">The results are projected into an anonymous type.</span></span>  
   
  [!code-csharp[DP L2E Examples#GroupBySimple3_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbysimple3_mq)]
  [!code-vb[DP L2E Examples#GroupBySimple3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbysimple3_mq)]  
   
-## <a name="example"></a><span data-ttu-id="0307b-109">例</span><span class="sxs-lookup"><span data-stu-id="0307b-109">Example</span></span>  
- <span data-ttu-id="0307b-110">次の例では、`GroupBy` メソッドを使用して、連絡先の姓の先頭文字でグループ化した `Contact` オブジェクトを返しています。</span><span class="sxs-lookup"><span data-stu-id="0307b-110">The following example uses the `GroupBy` method to return `Contact` objects that are grouped by the first letter of the contact's last name.</span></span> <span data-ttu-id="0307b-111">結果は姓の先頭文字で並べ替えられ、匿名型に投影されます。</span><span class="sxs-lookup"><span data-stu-id="0307b-111">The results are also sorted by the first letter of the last name and projected into an anonymous type.</span></span>  
+## <a name="example"></a><span data-ttu-id="5b7ab-109">例</span><span class="sxs-lookup"><span data-stu-id="5b7ab-109">Example</span></span>  
+ <span data-ttu-id="5b7ab-110">次の例では、`GroupBy` メソッドを使用して、連絡先の姓の先頭文字でグループ化した `Contact` オブジェクトを返しています。</span><span class="sxs-lookup"><span data-stu-id="5b7ab-110">The following example uses the `GroupBy` method to return `Contact` objects that are grouped by the first letter of the contact's last name.</span></span> <span data-ttu-id="5b7ab-111">結果は姓の先頭文字で並べ替えられ、匿名型に投影されます。</span><span class="sxs-lookup"><span data-stu-id="5b7ab-111">The results are also sorted by the first letter of the last name and projected into an anonymous type.</span></span>  
   
  [!code-csharp[DP L2E Examples#GroupBySimple2_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbysimple2_mq)]
  [!code-vb[DP L2E Examples#GroupBySimple2_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbysimple2_mq)]  
   
-## <a name="example"></a><span data-ttu-id="0307b-112">例</span><span class="sxs-lookup"><span data-stu-id="0307b-112">Example</span></span>  
- <span data-ttu-id="0307b-113">次の例では、`GroupBy` メソッドを使用して、顧客 ID でグループ化されている `SalesOrderHeader` オブジェクトを返しています。</span><span class="sxs-lookup"><span data-stu-id="0307b-113">The following example uses the `GroupBy` method to return `SalesOrderHeader` objects that are grouped by customer ID.</span></span> <span data-ttu-id="0307b-114">顧客ごとの販売数も返されます。</span><span class="sxs-lookup"><span data-stu-id="0307b-114">The number of sales for each customer is also returned.</span></span>  
+## <a name="example"></a><span data-ttu-id="5b7ab-112">例</span><span class="sxs-lookup"><span data-stu-id="5b7ab-112">Example</span></span>  
+ <span data-ttu-id="5b7ab-113">次の例では、`GroupBy` メソッドを使用して、顧客 ID でグループ化されている `SalesOrderHeader` オブジェクトを返しています。</span><span class="sxs-lookup"><span data-stu-id="5b7ab-113">The following example uses the `GroupBy` method to return `SalesOrderHeader` objects that are grouped by customer ID.</span></span> <span data-ttu-id="5b7ab-114">顧客ごとの販売数も返されます。</span><span class="sxs-lookup"><span data-stu-id="5b7ab-114">The number of sales for each customer is also returned.</span></span>  
   
  [!code-csharp[DP L2E Examples#GroupByCount_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbycount_mq)]
  [!code-vb[DP L2E Examples#GroupByCount_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbycount_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="0307b-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="0307b-115">See Also</span></span>  
- [<span data-ttu-id="0307b-116">LINQ to Entities でのクエリ</span><span class="sxs-lookup"><span data-stu-id="0307b-116">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="5b7ab-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="5b7ab-115">See Also</span></span>  
+ [<span data-ttu-id="5b7ab-116">LINQ to Entities でのクエリ</span><span class="sxs-lookup"><span data-stu-id="5b7ab-116">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

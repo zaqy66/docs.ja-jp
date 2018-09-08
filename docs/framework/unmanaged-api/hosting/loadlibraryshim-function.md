@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875945"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211685"
 ---
-# <a name="loadlibraryshim-function"></a><span data-ttu-id="d6724-102">LoadLibraryShim 関数</span><span class="sxs-lookup"><span data-stu-id="d6724-102">LoadLibraryShim Function</span></span>
-<span data-ttu-id="d6724-103">指定したバージョンの .NET Framework 再頒布可能パッケージに含まれている DLL を読み込みます。</span><span class="sxs-lookup"><span data-stu-id="d6724-103">Loads a specified version of a DLL that is included in the .NET Framework redistributable package.</span></span>  
+# <a name="loadlibraryshim-function"></a><span data-ttu-id="f62a1-102">LoadLibraryShim 関数</span><span class="sxs-lookup"><span data-stu-id="f62a1-102">LoadLibraryShim Function</span></span>
+<span data-ttu-id="f62a1-103">指定したバージョンの .NET Framework 再頒布可能パッケージに含まれている DLL を読み込みます。</span><span class="sxs-lookup"><span data-stu-id="f62a1-103">Loads a specified version of a DLL that is included in the .NET Framework redistributable package.</span></span>  
   
- <span data-ttu-id="d6724-104">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="d6724-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="d6724-105">使用して、 [iclrruntimeinfo::loadlibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)メソッド代わりにします。</span><span class="sxs-lookup"><span data-stu-id="d6724-105">Use the [ICLRRuntimeInfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) method instead.</span></span>  
+ <span data-ttu-id="f62a1-104">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="f62a1-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="f62a1-105">使用して、 [iclrruntimeinfo::loadlibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)メソッド代わりにします。</span><span class="sxs-lookup"><span data-stu-id="f62a1-105">Use the [ICLRRuntimeInfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d6724-106">構文</span><span class="sxs-lookup"><span data-stu-id="d6724-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f62a1-106">構文</span><span class="sxs-lookup"><span data-stu-id="f62a1-106">Syntax</span></span>  
   
 ```  
 HRESULT LoadLibraryShim (  
@@ -40,39 +40,39 @@ HRESULT LoadLibraryShim (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d6724-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d6724-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f62a1-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f62a1-107">Parameters</span></span>  
  `szDllName`  
- <span data-ttu-id="d6724-108">[in].NET Framework ライブラリから読み込まれる DLL の名前を表す、0 で終わる文字列。</span><span class="sxs-lookup"><span data-stu-id="d6724-108">[in] A zero-terminated string that represents the name of the DLL to be loaded from the .NET Framework library.</span></span>  
+ <span data-ttu-id="f62a1-108">[in].NET Framework ライブラリから読み込まれる DLL の名前を表す、0 で終わる文字列。</span><span class="sxs-lookup"><span data-stu-id="f62a1-108">[in] A zero-terminated string that represents the name of the DLL to be loaded from the .NET Framework library.</span></span>  
   
  `szVersion`  
- <span data-ttu-id="d6724-109">[in]読み込まれる DLL のバージョンを表す、0 で終わる文字列。</span><span class="sxs-lookup"><span data-stu-id="d6724-109">[in] A zero-terminated string that represents the version of the DLL to be loaded.</span></span> <span data-ttu-id="d6724-110">場合`szVersion`読み込みはバージョン 4 未満である指定された DLL の最新バージョンを選択したバージョンは null です。</span><span class="sxs-lookup"><span data-stu-id="d6724-110">If `szVersion` is null, the version selected for loading is the latest version of the specified DLL that is less than version 4.</span></span> <span data-ttu-id="d6724-111">場合は、バージョン 4 以上のすべてのバージョンは無視されます`szVersion`が null の場合と、version 4 より前のバージョンがインストールされていない場合、DLL の読み込みに失敗します。</span><span class="sxs-lookup"><span data-stu-id="d6724-111">That is, all versions equal to or greater than version 4 are ignored if `szVersion` is null, and if no version less than version 4 is installed, the DLL fails to load.</span></span> <span data-ttu-id="d6724-112">インストールを確認します。 これは、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]の既存のアプリケーションやコンポーネントには影響しません。</span><span class="sxs-lookup"><span data-stu-id="d6724-112">This is to ensure that installation of the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] does not affect pre-existing applications or components.</span></span> <span data-ttu-id="d6724-113">エントリを参照してください。[インプロセス SxS と移行のクイック スタート](https://go.microsoft.com/fwlink/?LinkId=200329)CLR チームのブログにします。</span><span class="sxs-lookup"><span data-stu-id="d6724-113">See the entry [In-Proc SxS and Migration Quick Start](https://go.microsoft.com/fwlink/?LinkId=200329) in the CLR team blog.</span></span>  
+ <span data-ttu-id="f62a1-109">[in]読み込まれる DLL のバージョンを表す、0 で終わる文字列。</span><span class="sxs-lookup"><span data-stu-id="f62a1-109">[in] A zero-terminated string that represents the version of the DLL to be loaded.</span></span> <span data-ttu-id="f62a1-110">場合`szVersion`読み込みはバージョン 4 未満である指定された DLL の最新バージョンを選択したバージョンは null です。</span><span class="sxs-lookup"><span data-stu-id="f62a1-110">If `szVersion` is null, the version selected for loading is the latest version of the specified DLL that is less than version 4.</span></span> <span data-ttu-id="f62a1-111">場合は、バージョン 4 以上のすべてのバージョンは無視されます`szVersion`が null の場合と、version 4 より前のバージョンがインストールされていない場合、DLL の読み込みに失敗します。</span><span class="sxs-lookup"><span data-stu-id="f62a1-111">That is, all versions equal to or greater than version 4 are ignored if `szVersion` is null, and if no version less than version 4 is installed, the DLL fails to load.</span></span> <span data-ttu-id="f62a1-112">インストールを確認します。 これは、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]の既存のアプリケーションやコンポーネントには影響しません。</span><span class="sxs-lookup"><span data-stu-id="f62a1-112">This is to ensure that installation of the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] does not affect pre-existing applications or components.</span></span> <span data-ttu-id="f62a1-113">エントリを参照してください。[インプロセス SxS と移行のクイック スタート](https://go.microsoft.com/fwlink/?LinkId=200329)CLR チームのブログにします。</span><span class="sxs-lookup"><span data-stu-id="f62a1-113">See the entry [In-Proc SxS and Migration Quick Start](https://go.microsoft.com/fwlink/?LinkId=200329) in the CLR team blog.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="d6724-114">将来使用するために予約されています。</span><span class="sxs-lookup"><span data-stu-id="d6724-114">Reserved for future use.</span></span>  
+ <span data-ttu-id="f62a1-114">将来使用するために予約されています。</span><span class="sxs-lookup"><span data-stu-id="f62a1-114">Reserved for future use.</span></span>  
   
  `phModDll`  
- <span data-ttu-id="d6724-115">[out]モジュールのハンドルへのポインター。</span><span class="sxs-lookup"><span data-stu-id="d6724-115">[out] A pointer to the handle of the module.</span></span>  
+ <span data-ttu-id="f62a1-115">[out]モジュールのハンドルへのポインター。</span><span class="sxs-lookup"><span data-stu-id="f62a1-115">[out] A pointer to the handle of the module.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d6724-116">戻り値</span><span class="sxs-lookup"><span data-stu-id="d6724-116">Return Value</span></span>  
- <span data-ttu-id="d6724-117">このメソッドは、次の値だけでなく、WinError.h で定義されている標準のコンポーネント オブジェクト モデル (COM) エラー コードを返します。</span><span class="sxs-lookup"><span data-stu-id="d6724-117">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f62a1-116">戻り値</span><span class="sxs-lookup"><span data-stu-id="f62a1-116">Return Value</span></span>  
+ <span data-ttu-id="f62a1-117">このメソッドは、次の値だけでなく、WinError.h で定義されている標準のコンポーネント オブジェクト モデル (COM) エラー コードを返します。</span><span class="sxs-lookup"><span data-stu-id="f62a1-117">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="d6724-118">リターン コード</span><span class="sxs-lookup"><span data-stu-id="d6724-118">Return code</span></span>|<span data-ttu-id="d6724-119">説明</span><span class="sxs-lookup"><span data-stu-id="d6724-119">Description</span></span>|  
+|<span data-ttu-id="f62a1-118">リターン コード</span><span class="sxs-lookup"><span data-stu-id="f62a1-118">Return code</span></span>|<span data-ttu-id="f62a1-119">説明</span><span class="sxs-lookup"><span data-stu-id="f62a1-119">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="d6724-120">S_OK</span><span class="sxs-lookup"><span data-stu-id="d6724-120">S_OK</span></span>|<span data-ttu-id="d6724-121">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="d6724-121">The method completed successfully.</span></span>|  
-|<span data-ttu-id="d6724-122">CLR_E_SHIM_RUNTIMELOAD</span><span class="sxs-lookup"><span data-stu-id="d6724-122">CLR_E_SHIM_RUNTIMELOAD</span></span>|<span data-ttu-id="d6724-123">読み込み`szDllName`共通言語ランタイム (CLR) と必要なバージョンの CLR を読み込めません。 読み込む必要があります。</span><span class="sxs-lookup"><span data-stu-id="d6724-123">Loading `szDllName` requires loading the common language runtime (CLR), and the necessary version of the CLR cannot be loaded.</span></span>|  
+|<span data-ttu-id="f62a1-120">S_OK</span><span class="sxs-lookup"><span data-stu-id="f62a1-120">S_OK</span></span>|<span data-ttu-id="f62a1-121">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="f62a1-121">The method completed successfully.</span></span>|  
+|<span data-ttu-id="f62a1-122">CLR_E_SHIM_RUNTIMELOAD</span><span class="sxs-lookup"><span data-stu-id="f62a1-122">CLR_E_SHIM_RUNTIMELOAD</span></span>|<span data-ttu-id="f62a1-123">読み込み`szDllName`共通言語ランタイム (CLR) と必要なバージョンの CLR を読み込めません。 読み込む必要があります。</span><span class="sxs-lookup"><span data-stu-id="f62a1-123">Loading `szDllName` requires loading the common language runtime (CLR), and the necessary version of the CLR cannot be loaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d6724-124">Remarks</span><span class="sxs-lookup"><span data-stu-id="d6724-124">Remarks</span></span>  
- <span data-ttu-id="d6724-125">この関数は、.NET Framework 再頒布可能パッケージに含まれている Dll の読み込みに使用されます。</span><span class="sxs-lookup"><span data-stu-id="d6724-125">This function is used to load DLLs that are included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="d6724-126">ユーザーが生成した Dll は読み込まれません。</span><span class="sxs-lookup"><span data-stu-id="d6724-126">It does not load user-generated DLLs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f62a1-124">Remarks</span><span class="sxs-lookup"><span data-stu-id="f62a1-124">Remarks</span></span>  
+ <span data-ttu-id="f62a1-125">この関数は、.NET Framework 再頒布可能パッケージに含まれている Dll の読み込みに使用されます。</span><span class="sxs-lookup"><span data-stu-id="f62a1-125">This function is used to load DLLs that are included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="f62a1-126">ユーザーが生成した Dll は読み込まれません。</span><span class="sxs-lookup"><span data-stu-id="f62a1-126">It does not load user-generated DLLs.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d6724-127">以降、.NET Framework version 2.0 と、読み込まれる CLR Fusion.dll を読み込むとします。</span><span class="sxs-lookup"><span data-stu-id="d6724-127">Beginning with the .NET Framework version 2.0, loading Fusion.dll causes the CLR to be loaded.</span></span> <span data-ttu-id="d6724-128">Fusion.dll で関数が、ラッパーが、この実装は、ランタイムによって提供されるためです。</span><span class="sxs-lookup"><span data-stu-id="d6724-128">This is because the functions in Fusion.dll are now wrappers whose implementations are provided by the runtime.</span></span>  
+>  <span data-ttu-id="f62a1-127">以降、.NET Framework version 2.0 と、読み込まれる CLR Fusion.dll を読み込むとします。</span><span class="sxs-lookup"><span data-stu-id="f62a1-127">Beginning with the .NET Framework version 2.0, loading Fusion.dll causes the CLR to be loaded.</span></span> <span data-ttu-id="f62a1-128">Fusion.dll で関数が、ラッパーが、この実装は、ランタイムによって提供されるためです。</span><span class="sxs-lookup"><span data-stu-id="f62a1-128">This is because the functions in Fusion.dll are now wrappers whose implementations are provided by the runtime.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d6724-129">要件</span><span class="sxs-lookup"><span data-stu-id="d6724-129">Requirements</span></span>  
- <span data-ttu-id="d6724-130">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d6724-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f62a1-129">要件</span><span class="sxs-lookup"><span data-stu-id="f62a1-129">Requirements</span></span>  
+ <span data-ttu-id="f62a1-130">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f62a1-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d6724-131">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d6724-131">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f62a1-131">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f62a1-131">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d6724-132">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6724-132">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f62a1-132">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f62a1-132">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6724-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="d6724-133">See Also</span></span>  
- [<span data-ttu-id="d6724-134">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="d6724-134">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="f62a1-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="f62a1-133">See Also</span></span>  
+ [<span data-ttu-id="f62a1-134">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="f62a1-134">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
