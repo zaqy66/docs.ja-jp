@@ -5,58 +5,49 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: d3b051c7ea152606721388ea35b6f508eada1c5d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ca495c23b30144013b8efe22b7bf6f3cf38b16cd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524366"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195715"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>方法 : 開発中に使用する一時的な証明書を作成する
-セキュリティで保護されたサービスまたは Windows Communication Foundation (WCF) を使用してクライアントを開発する場合は、資格情報として使用する X.509 証明書を指定する必要があります。 証明書は通常、単独ではなく、いくつもの証明書が信頼チェーンとしてつながった形で存在しており、その最上位に位置するルート証明機関の証明書は、各コンピューターの [信頼されたルート証明機関] の証明書ストアに格納されています。 証明書を調べて順に信頼チェーンをたどっていくと、たとえば所属する会社や事業部門が運営する、ルート証明機関に到達します。 開発時にこの過程をエミュレートするためには、セキュリティ要件を満たす 2 種類の証明書を作る必要があります。 1 つは自己署名証明書で、[信頼されたルート証明機関] の証明書ストアに配置します。もう 1 つは、先の自己署名証明書を使って署名を施した証明書で、[ローカル コンピューター] の [個人] ストア、または [現在のユーザー] の [個人] ストアに配置します。 このトピックを使用してこれら 2 つの証明書を作成する手順について説明します、[証明書作成ツール (MakeCert.exe)](https://go.microsoft.com/fwlink/?LinkId=248185)、によって指定される、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK。  
+セキュリティで保護されたサービスまたは Windows Communication Foundation (WCF) を使用してクライアントを開発する場合は、資格情報として使用する X.509 証明書を指定する必要があります。 証明書は通常、単独ではなく、いくつもの証明書が信頼チェーンとしてつながった形で存在しており、その最上位に位置するルート証明機関の証明書は、各コンピューターの [信頼されたルート証明機関] の証明書ストアに格納されています。 証明書を調べて順に信頼チェーンをたどっていくと、たとえば所属する会社や事業部門が運営する、ルート証明機関に到達します。 開発時にこの過程をエミュレートするためには、セキュリティ要件を満たす 2 種類の証明書を作る必要があります。 1 つは自己署名証明書で、[信頼されたルート証明機関] の証明書ストアに配置します。もう 1 つは、先の自己署名証明書を使って署名を施した証明書で、[ローカル コンピューター] の [個人] ストア、または [現在のユーザー] の [個人] ストアに配置します。 このトピックでは、Powershell を使用してこれら 2 つの証明書を作成する手順について説明します[New-selfsignedcertificate)](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps)コマンドレット。  
   
 > [!IMPORTANT]
->  証明書作成ツールによって作成された証明書は、テスト目的にのみ使用できます。 実際にサービスやクライアントを業務に使用する際には、証明機関から取得した、適切な証明書が必要です。 所属する会社が運営している [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 証明書サーバー、または専門の第三者機関から取得してください。  
+>  New-selfsignedcertificate コマンドレットによって生成される証明書は、テスト目的でのみ提供されます。 実際にサービスやクライアントを業務に使用する際には、証明機関から取得した、適切な証明書が必要です。 組織内の Windows Server 証明書サーバーからか、またはサード パーティ製これでした。  
 >   
->  既定で、 [Makecert.exe (Certificate Creation Tool)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)ルート証明機関と呼ばれる証明書を作成します"Root Agency **。"。** というルート証明機関の証明書を作成します。"Root Agency" は、[信頼されたルート証明機関] の証明書ストアに含まれていないため、作成された証明書はセキュリティで保護されません。 そこで自己署名証明書を作り、[信頼されたルート証明機関] の証明書ストアに置くことにより、実際の運用環境をより忠実にシミュレートする開発環境を構築できます。  
+>  既定で、 [New-selfsignedcertificate](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps)コマンドレットは自己署名証明書を作成し、これらの証明書は安全ではありません。 ストアは信頼されたルート証明機関に自己署名証明書を配置するデプロイ環境をより忠実にシミュレートする開発環境を作成できます。  
   
  作成して、証明書の使用の詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。 資格情報として証明書を使用する方法の詳細については、次を参照してください。 [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)します。 Microsoft Authenticode テクノロジの使用に関するチュートリアルについては、次を参照してください。 [Authenticode の概要とチュートリアル](https://go.microsoft.com/fwlink/?LinkId=88919)します。  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>自己署名ルート証明書を作成して秘密キーをエクスポートするには  
   
-1.  次のスイッチを指定して MakeCert.exe ツールを使用します。  
-  
-    1.  `-n` `subjectName`。 サブジェクト名を指定します。 命名規則では、サブジェクト名の前に、"Common Name" を示す "CN = " を付加します。  
-  
-    2.  `-r`。 証明書が自己署名されるように指定します。  
-  
-    3.  `-sv` `privateKeyFile`。 秘密キーを書き出すファイルを指定します。  
-  
-     たとえば次のコマンドを実行すると、サブジェクト名を "CN=TempCA" とした自己署名証明書が作成されます。  
-  
-    ```  
-    makecert -n "CN=TempCA" -r -sv TempCA.pvk TempCA.cer  
-    ```  
-  
-     秘密キーを保護するためのパスワードを入力するように求められます。 このパスワードは、このルート証明書によって署名された証明書を作成する際に必要になります。  
-  
+次のコマンドは、"ルート Ca"、現在のユーザー個人用ストアでのサブジェクト名を持つ、自己署名証明書を作成します。 
+```
+PS $rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("1.3.6.1.4.1.311.21.10={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2")
+```
+後の手順で必要な場所にインポートできるように、証明書を PFX ファイルにエクスポートする必要があります。 秘密キーで証明書をエクスポートするときに、保護するためにパスワードが必要です。 パスワードを保存、`SecureString`を使用して、 [Export-pfxcertificate](https://docs.microsoft.com/en-us/powershell/module/pkiclient/export-pfxcertificate?view=win10-ps)コマンドレットを証明書を PFX ファイルに関連付けられている秘密キーと共にエクスポートします。 パブリック証明書だけを使用して CRT ファイルに保存、[証明書のエクスポート](https://docs.microsoft.com/en-us/powershell/module/pkiclient/export-certificate?view=win10-ps)コマンドレット。
+```
+PS [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+PS [String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
+PS Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
+```
+
 ### <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>ルート証明書によって署名された新しい証明書を作成するには  
   
-1.  次のスイッチを指定して MakeCert.exe ツールを使用します。  
-  
-    1.  `-sk` `subjectKey`。 秘密キーを格納する、サブジェクトのキー コンテナーの位置を指定します。 キー コンテナーが存在しない場合は、作成されます。 -sk も -sv も指定しなかった場合、既定で JoeSoft という名前のキー コンテナーが作成されます。  
-  
-    2.  `-n` `subjectName`。 サブジェクト名を指定します。 命名規則では、サブジェクト名の前に、"Common Name" を示す "CN = " を付加します。  
-  
-    3.  `-iv` `issuerKeyFile`。 発行元の秘密キー ファイルを指定します。  
-  
-    4.  `-ic` `issuerCertFile`。 発行元の証明書の位置を指定します。  
-  
-     たとえば、次のコマンドを実行すると、サブジェクト名が `TempCA` で、発行元の秘密キーを使用する証明書が作成されます。ルート証明機関 `"CN=SignedByCA"` の証明書を使って署名されます。  
-  
-    ```  
-    makecert -sk SignedByCA -iv TempCA.pvk -n "CN=SignedByCA" -ic TempCA.cer SignedByCA.cer -sr currentuser -ss My  
-    ```  
+次のコマンドは、署名された証明書を作成、 `RootCA` "SignedByRootCA"発行元の秘密キーを使用してのサブジェクト名を使用します。
+```
+PS $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert 
+```
+同様に、署名証明書は、秘密キーを使用して、PFX ファイルと CRT ファイルに公開キーのみに保存します。
+```
+PS [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
+PS Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword 
+PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt        
+```
   
 ## <a name="installing-a-certificate-in-the-trusted-root-certification-authorities-store"></a>信頼されたルート証明機関の証明書ストアに証明書をインストールする  
  作成された自己署名証明書は、[信頼されたルート証明機関] の証明書ストアにインストールできます。 この証明書で署名された証明書は、この時点で信頼できるものと見なされるようになります。 したがって、この証明書が不要になった場合は、直ちに証明書ストアから削除してください。 この証明書を削除すると、それを使って署名した証明書は認証されなくなります。 ルート証明機関の証明書は、必要に応じて一連の証明書を有効化する手段の 1 つにすぎません。 たとえばピアツーピア アプリケーションの場合、証明書が提示されれば相手の識別情報を信頼できるので、ルート証明機関は必要ないのが普通です。  

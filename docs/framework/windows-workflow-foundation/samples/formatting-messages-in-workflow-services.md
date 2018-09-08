@@ -3,11 +3,11 @@ title: ワークフロー サービスでのメッセージの書式設定
 ms.date: 03/30/2017
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
 ms.openlocfilehash: eb9a6b3a83a28154dc968bd4c1c41d34028bdd41
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44134793"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198973"
 ---
 # <a name="formatting-messages-in-workflow-services"></a>ワークフロー サービスでのメッセージの書式設定
 このサンプルでは、メッセージング アクティビティ (WF サービス) で使用できるユーザーの種類を示します。 サンプルのサービスは、簡単な費用承認サービスで、3 つの操作を公開します。 `ApproveExpense` はデータ コントラクト型を受け取り、既知の型を使用する方法を示します。 この操作では、費用の金額に基づいて `true` または `false` を返します。 `ApprovePO` XmlSerializer 型を受け取り、返します`true`または`false`経費量に基づいています。`ApprovedVendor` メッセージ コントラクト型を受け取り、返します`true`または`false`仕入先が、承認済みのベンダーの一覧にある場合、または要求が経理部 (finance 部門は、すべてのベンダーを使用できます) に付属している場合。  

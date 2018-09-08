@@ -11,11 +11,11 @@ ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44140958"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198492"
 ---
 # <a name="design-guidelines-for-exceptions"></a>例外のデザインのガイドライン
 例外処理には戻り値ベースのエラー報告に対する多くの利点です。 適切なフレームワークの設計では、例外の利点を活用するアプリケーション開発者は役立ちます。 このセクションでは、例外の利点を説明し、それらを効果的に使用のガイドラインを示します。  

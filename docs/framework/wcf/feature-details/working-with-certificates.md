@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870212"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198934"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。  
@@ -85,12 +85,12 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
   
  カスタム認証システムを作成する場合、オーバーライドする最も重要なメソッドは <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> メソッドです。 カスタム認証の例については、「[X.509 証明書検証](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)」のサンプルを参照してください。 詳細については、「[カスタム資格情報と資格情報の検証](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)」を参照してください。  
   
-## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Makecert.exe を使用した証明書チェーンの構築  
- 証明書作成ツール (Makecert.exe) では、X.509 証明書および秘密キーと公開キーのペアを作成します。 秘密キーをディスクに保存し、新しい証明書の発行と署名に使用できるため、チェーンになった証明書の階層をシミュレートできます。 このツールは、サービスの開発時に支援ツールとして使用することだけを目的としています。実際の展開に使用する証明書の作成には使用しないでください。 WCF サービスの開発時に、Makecert.exe を使用して信頼チェーンをビルドするには、次の手順に従います。  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Powershell New-selfsignedcertificate コマンドレットを使用して、証明書チェーンを構築するには  
+ Powershell New-selfsignedcertificate コマンドレットは、X.509 証明書と秘密キーと公開キーのペアを作成します。 秘密キーをディスクに保存し、新しい証明書の発行と署名に使用できるため、チェーンになった証明書の階層をシミュレートできます。 コマンドレットが支援手段としてのみ使用で向けサービスの開発や実際の展開用の証明書の作成に使用することはありません。 WCF サービスを開発する場合は、New-selfsignedcertificate コマンドレットとの信頼関係のチェーンの構築に次の手順を使用します。  
   
-#### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>Makecert.exe を使用して証明書チェーンを構築するには  
+#### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>New-selfsignedcertificate コマンドレットとの信頼関係のチェーンを構築するには  
   
-1.  MakeCert.exe ツールを使用して、(自己発行された) 一時的なルート証明機関証明書を作成します。 秘密キーをディスクに保存します。  
+1.  New-selfsignedcertificate コマンドレットを使用して一時的なルート機関 (自己署名) 証明を作成します。 秘密キーをディスクに保存します。  
   
 2.  この新しい証明書を使用して、公開キーを含む別の証明書を発行します。  
   

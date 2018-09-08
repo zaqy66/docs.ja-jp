@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 5c01e918e1f607febc10be89c3d27c50870c401a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e682c2c23dd6fe80aee87d2a86b3df2dae66b802
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589252"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213080"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>不適切なチェックサム値です。16 進数ではないか、または奇数の 16 進数です。
 チェックサムの値に無効な 16 進数が含まれるか、桁数が奇数です。  
@@ -31,6 +31,7 @@ ms.locfileid: "33589252"
   
 3.  それでも警告が続くか、ASP.NET を使用していない場合は、状況に関する情報を収集し、マイクロソフト プロダクト サポート サービスに通知してください。  
   
-## <a name="see-also"></a>関連項目  
- [ASP.NET の概要](https://msdn.microsoft.com/library/4w3ex9c2.aspx)  
- [ご意見](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>関連項目
+
+- [ASP.NET の概要](/aspnet/overview)  
+- [ご意見](/visualstudio/ide/talk-to-us)

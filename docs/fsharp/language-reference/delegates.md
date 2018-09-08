@@ -3,11 +3,11 @@ title: デリゲート (F#)
 description: F# でデリゲートを操作する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: be58997dffe8fcd949bbc2d47d86ffccc157d43e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067819"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222462"
 ---
 # <a name="delegates"></a>デリゲート
 

@@ -1,6 +1,6 @@
 ---
 title: コード コントラクト
-ms.date: 03/30/2017
+ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080609"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222124"
 ---
 # <a name="code-contracts"></a>コード コントラクト
 コード コントラクトを使用すると、事前条件、事後条件、およびオブジェクト不変条件をコードで指定できます。 事前条件とは、メソッドやプロパティに入るときに満たされている必要がある要件です。 事後条件は、メソッドやプロパティのコードが終了するときの予測を表します。 オブジェクト不変条件は、正しい状態のクラスに対して予期される状態を表します。  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- 不変式は、CONTRACTS_FULL プリプロセッサ シンボルによって条件付きで定義され、 ランタイム チェックで各パブリック メソッドの最後にチェックされます。 不変式が同じクラスのパブリック メソッドを参照している場合は、通常ならそのパブリック メソッドの最後に実行される不変式のチェックが無効になり、 そのクラスの一番外側のメソッド呼び出しの最後にのみチェックが実行されます。 別のクラスのメソッドの呼び出しのためにクラスへの再入がなされる場合も同様です。 不変式のチェックは、オブジェクト ファイナライザーや、<xref:System.IDisposable.Dispose%2A> メソッドを実装するメソッドに対しては実行されません。  
+ 不変式は、CONTRACTS_FULL プリプロセッサ シンボルによって条件付きで定義され、 ランタイム チェックで各パブリック メソッドの最後にチェックされます。 不変式が同じクラスのパブリック メソッドを参照している場合は、通常ならそのパブリック メソッドの最後に実行される不変式のチェックが無効になり、 そのクラスの一番外側のメソッド呼び出しの最後にのみチェックが実行されます。 別のクラスのメソッドの呼び出しのためにクラスへの再入がなされる場合も同様です。 オブジェクトをファイナライザーの不変性はチェックされず、<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>実装します。  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>使用方法のガイドライン  

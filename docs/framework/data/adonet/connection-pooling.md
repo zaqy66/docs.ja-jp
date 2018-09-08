@@ -3,11 +3,11 @@ title: 接続プール
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 ms.openlocfilehash: 28a1036f377326b5f1fdfafa1eaffd8a47bc05bc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44139632"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209369"
 ---
 # <a name="connection-pooling"></a>接続プール
 データ ソースへの接続は時間のかかる処理です。 ADO.NET 接続を開くコストを最小限に抑えると呼ばれる最適化手法を使用して*接続プール*、繰り返しの接続の開閉のコストを最小限に抑えられます。 接続プールは、.NET Framework データ プロバイダーに応じて異なる処理が行われます。  

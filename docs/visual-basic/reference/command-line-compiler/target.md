@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17528bb9faf137029b35e4a9f28bab7a28ae25db
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5e3f691da48db863edd20bc6881785940a5451ef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864616"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209382"
 ---
 # <a name="-target-visual-basic"></a>-ターゲット (Visual Basic)
 コンパイラの出力形式を指定します。  
@@ -38,7 +38,7 @@ ms.locfileid: "43864616"
   
  指定しない限り`-target:module`、`-target`により、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]出力ファイルに追加するアセンブリのマニフェスト。  
   
- Vbc.exe の各インスタンスの生成は、最大で 1 つの出力ファイル。 コンパイラ オプションを指定する場合`-out`または`-target`1 つ以上の時間、最後の 1 つは、コンパイラが有効にします。 コンパイルですべてのファイルに関する情報は、マニフェストに追加されます。 すべての出力ファイルで作成されたものを除く`-target:module`マニフェストにアセンブリ メタデータが含まれます。 使用[Ildasm.exe (IL Disassembler)](https://msdn.microsoft.com/library/f7dy01k1)が出力ファイルにメタデータを表示します。  
+ Vbc.exe の各インスタンスの生成は、最大で 1 つの出力ファイル。 コンパイラ オプションを指定する場合`-out`または`-target`1 つ以上の時間、最後の 1 つは、コンパイラが有効にします。 コンパイルですべてのファイルに関する情報は、マニフェストに追加されます。 すべての出力ファイルで作成されたものを除く`-target:module`マニフェストにアセンブリ メタデータが含まれます。 使用[Ildasm.exe (IL Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md)が出力ファイルにメタデータを表示します。  
   
  `-target` の省略形は `-t` です。  
   
@@ -57,12 +57,13 @@ ms.locfileid: "43864616"
 vbc -target:library in.vb  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
- [-除外 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
- [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
+- [-除外 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
+- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
+- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
+- [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
