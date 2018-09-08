@@ -21,11 +21,11 @@ helpviewer_keywords:
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
 ms.openlocfilehash: 09d96b304ba3bcf2a9de2812ce37ae69dba73a41
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037241"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185351"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>暗黙の型変換と明示的な型変換 (Visual Basic)
 *暗黙的な変換*ソース コードに特殊な構文は必要ありません。 次の例では、Visual Basic に暗黙的に変換の値`k`に割り当てる前に単精度浮動小数点値`q`します。  

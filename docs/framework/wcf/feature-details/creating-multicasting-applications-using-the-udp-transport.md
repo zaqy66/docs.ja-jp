@@ -3,11 +3,11 @@ title: UDP トランスポートを使用するマルチキャスト アプリ�
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137008"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178040"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>UDP トランスポートを使用するマルチキャスト アプリケーションの作成
 マルチキャスト アプリケーションは、ポイント ツー ポイント接続を確立することなく多数の受信者に小さいメッセージを同時に送信します。 このようなアプリケーションの重点は、信頼性よりも速度です。 つまり、特定のメッセージが実際に受信されるということよりも、迅速にデータを送信することの方が重要です。 WCF は、<xref:System.ServiceModel.UdpBinding> を使用して、書き込みマルチキャスト アプリケーションをサポートします。 このトランスポートは、サービスが複数のクライアントに小さいメッセージを同時に送信する必要がある場合に便利です。 株価表示器のアプリケーションは、このようなサービスの例です。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871060"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183172"
 ---
 # <a name="com-interop-visual-basic"></a>COM 相互運用 (Visual Basic)
 コンポーネント オブジェクト モデル (COM) では、オブジェクトがその機能を他のコンポーネントに公開し、アプリケーションをホストすることを許可します。 今日のソフトウェアのほとんどに、COM オブジェクトが含まれています。 .NET アセンブリは新しいアプリケーションに最適ですが、時には COM オブジェクトを使用する必要があります。 このセクションでは、いくつかの作成と Visual Basic で COM オブジェクトの使用に関連する問題について説明します。  
@@ -50,10 +50,10 @@ ms.locfileid: "43871060"
  [アンマネージ コードとの相互運用](../../../framework/interop/index.md)  
  共通言語ランタイムが提供する相互運用サービスについて説明します。  
   
- [.NET Framework への COM コンポーネントの公開](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [.NET Framework への COM コンポーネントの公開](../../../framework/interop/exposing-com-components.md)  
  COM 相互運用を使って COM タイプを呼び出すプロセスについて説明します。  
   
- [COM への .NET Framework コンポーネントの公開](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [COM への .NET Framework コンポーネントの公開](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  COM からのマネージド型の準備と使用方法について説明します。  
   
  [相互運用固有の属性の適用](../../../framework/interop/applying-interop-attributes.md)  

@@ -11,11 +11,11 @@ ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a7fb9964d0e542c0937c55ae65bd88b3f7149fa8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036026"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187940"
 ---
 # <a name="type-design-guidelines"></a>型のデザインのガイドライン
 CLR の観点からは、型の 2 つのカテゴリがあります: 参照型と値の型: フレームワークの設計に関する詳細については、するために、それぞれに独自の特定のデザイン規則より論理的にグループの種類を分割しますが、します。  

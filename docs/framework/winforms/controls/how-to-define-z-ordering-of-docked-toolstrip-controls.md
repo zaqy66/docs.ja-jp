@@ -11,11 +11,11 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
 ms.openlocfilehash: 34d600454a7fa63c7ba59bebded6365cd5401cb4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44140802"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193147"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>方法 : ドッキングされた ToolStrip コントロールの Z オーダーを定義する
 ドッキングを使用して <xref:System.Windows.Forms.ToolStrip> コントロールを正しく配置するには、フォームの z オーダーでコントロールを正しく配置する必要があります。  

@@ -2,12 +2,12 @@
 title: XML (Visual Basic) の関数型変換
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
-ms.openlocfilehash: 25e5d743b983badaefa3012b8839e4b039419ee9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 06803feb0fe23ae4afe2237b64bf920f6e229060
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070564"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183289"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>XML (Visual Basic) の関数型変換
 このトピックでは、XML ドキュメントを変更するための純粋関数型変換の方法について説明し、手続き型の方法と比較します。  
@@ -32,7 +32,7 @@ ms.locfileid: "44070564"
   
  ソース ドキュメントの構造が標準的でない場合、ドキュメント中心の変換には XSLT を使用することをお勧めします。 ただし、LINQ to XML でもドキュメント中心の変換を実行できます。 詳細については、次を参照してください。[方法: LINQ to XML ツリーを XSLT スタイル (Visual Basic) に変換する注釈を使用](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [純粋関数型変換 (Visual Basic) の概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [LINQ to XML とその他の XML テクノロジ](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)  
- [LINQ to XML とその他の XML テクノロジ](https://msdn.microsoft.com/library/7ba1eecf-f09a-42de-bc80-22ca5b2e42d3)
+## <a name="see-also"></a>関連項目
+
+- [純粋関数型変換 (Visual Basic) の概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [LINQ to XML とその他の XML テクノロジ](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

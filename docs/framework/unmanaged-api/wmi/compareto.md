@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bde25ae7455dd7fe35fe1a0a43bb2a6b560c0e3e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064947"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184227"
 ---
 # <a name="compareto-function"></a>CompareTo 関数
 オブジェクトが、別の Windows 管理オブジェクトと比較されます。  

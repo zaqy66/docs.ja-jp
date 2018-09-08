@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: faa91d3e72ebd94b2f849f824ca7e47876793109
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb42c265d9057ea4fdb76e72fc9cdb2368309cae
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583267"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181577"
 ---
 # <a name="basic-serialization"></a>基本的なシリアル化
 
@@ -94,6 +94,7 @@ public class MyStuff : MyObject
   
  [Serializable](xref:System.SerializableAttribute) 属性を使用すると便利ですが、このような制限事項があります。 シリアル化するクラスをマークするタイミングについては、「[シリアル化のガイドライン](serialization-guidelines.md)」を参照してください。 クラスをコンパイルした後でシリアル化を追加することはできません。  
   
-## <a name="see-also"></a>関連項目  
- [バイナリ シリアル化](binary-serialization.md)  
- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)
+## <a name="see-also"></a>関連項目
+
+- [バイナリ シリアル化](binary-serialization.md)  
+- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)

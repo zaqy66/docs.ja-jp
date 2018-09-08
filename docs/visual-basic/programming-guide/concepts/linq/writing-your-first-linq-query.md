@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44068951"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184312"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>初めての LINQ クエリの作成 (Visual Basic)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは、専用のクエリ言語で表現されます。 時間の経過と共にさまざまな言語用に開発したさまざまな種類のデータ ソース、たとえば、SQL のリレーショナル データベースや XML 用の XQuery です。 これにより、必要なアプリケーション開発者はデータ ソースまたはサポートされているデータ形式の種類ごとに新しいクエリ言語について説明します。  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- それぞれの種類のデータ ソースを作成する方法の詳細については、対応する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーのドキュメントを参照してください。 (これらのプロバイダーの一覧は、次を参照してください[LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。)。基本的な規則は単純です。 を[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]データ ソースは、ジェネリックをサポートする任意のオブジェクト<xref:System.Collections.Generic.IEnumerable%601>インターフェイス、またはこれを継承するインターフェイス。  
+ それぞれの種類のデータ ソースを作成する方法の詳細については、対応する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーのドキュメントを参照してください。 (これらのプロバイダーの一覧は、次を参照してください[LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)。)。基本的な規則は単純です。 を[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]データ ソースは、ジェネリックをサポートする任意のオブジェクト<xref:System.Collections.Generic.IEnumerable%601>インターフェイス、またはこれを継承するインターフェイス。  
   
 > [!NOTE]
 >  などの型<xref:System.Collections.ArrayList>非ジェネリックをサポートする<xref:System.Collections.IEnumerable>としてインターフェイスを使用することができますも[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]データ ソース。 使用する例については、<xref:System.Collections.ArrayList>を参照してください[方法: LINQ (Visual Basic) の ArrayList を照会](how-to-query-an-arraylist-with-linq.md)します。  
@@ -118,10 +118,11 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  使用して実行するクエリが発生することも、`IEnumerable`などのメソッド、<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>メソッド。  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic の LINQ の概要](getting-started-with-linq.md)  
- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)  
- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic の LINQ の概要](getting-started-with-linq.md)  
+- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)  
+- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [クエリ](../../../../visual-basic/language-reference/queries/index.md)

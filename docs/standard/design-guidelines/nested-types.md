@@ -13,11 +13,11 @@ ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2593b85dd4747a3fbe365994c3e5d9beae3e3406
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891541"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188148"
 ---
 # <a name="nested-types"></a>入れ子にされた型
 入れ子になった型は、それを囲む型と呼ばれる別の型のスコープ内で定義されている型です。 入れ子にされた型が、その外側の型のすべてのメンバーにアクセスします。 たとえば、それを囲む型のすべての先祖で定義されているフィールドを保護して、外側の型で定義されてプライベート フィールドにアクセス権があります。  

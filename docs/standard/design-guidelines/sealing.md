@@ -11,11 +11,11 @@ ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d8c445de44a69f6c0cb1eaefa0e59d682288318
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885536"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199922"
 ---
 # <a name="sealing"></a>シール
 オブジェクト指向フレームワークの機能の 1 つは、開発者が拡張およびフレームワークの設計者によって予期しない方法でそれらをカスタマイズできます。 これは、両方の電源および拡張可能なデザインの危険性。 フレームワークを設計するときは、そのため、慎重に拡張機能の設計が必要なときに危険な場合は、機能拡張を制限して、非常に重要です。  

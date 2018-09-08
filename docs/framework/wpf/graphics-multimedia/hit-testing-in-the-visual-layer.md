@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875006"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44176684"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>ビジュアル層でのヒット テスト
 ここでは、ビジュアル層で提供されるヒット テスト機能の概要について説明します。 ヒット テストのサポートでは、ジオメトリまたはポイント値の表示内容内かどうかを確認できます。、 <xref:System.Windows.Media.Visual>、複数のオブジェクトを選択する四角形を描くなどのユーザー インターフェイスの動作を実装することができます。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - scrollable form [Visual Basic], printing
 ms.assetid: 1196e1cf-b77f-4928-a3e4-85b51ba3787d
 ms.openlocfilehash: 4a509b7c48f2bff705bc95e58fb88252cb8ca4b9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779420"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44182037"
 ---
 # <a name="how-to-print-a-scrollable-form-visual-basic"></a>方法: スクロール可能フォームを印刷する (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントを使用すると、 <xref:System.Drawing.Printing.PrintDocument> コンポーネントを使わなくてもフォームのイメージをすばやく印刷できます。 既定では、フォームの現在見えている部分だけが印刷されます。ユーザーが実行時にフォームのサイズを変更した場合、イメージは意図されたとおりに印刷されない可能性があります。 次の手順は、フォームのサイズが変更された場合でもスクロール可能フォームのクライアント領域全体を印刷する方法を示します。  

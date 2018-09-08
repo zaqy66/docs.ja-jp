@@ -11,44 +11,45 @@ helpviewer_keywords:
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b1e5784de277d59c7bc945cbe7b605653eec7bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27550a8fd8292029cad9c2e699374a190b1a532e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571018"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185637"
 ---
 # <a name="equality-operators"></a>等値演算子
-このセクションでは、オーバー ロードの等値演算子について説明しを指す`operator==`と`operator!=`等値演算子として。  
+このセクションでは、等値演算子のオーバー ロードをについて説明しを指す`operator==`と`operator!=`として等値演算子。  
   
  **X DO NOT** 等値演算子および以外のいずれかのオーバー ロードします。  
   
  **✓ DO** いることを確認<xref:System.Object.Equals%2A?displayProperty=nameWithType>等値演算子は、同じセマンティクスと同様のパフォーマンス特性があるとします。  
   
- 多くの場合、つまり`Object.Equals`等値演算子はオーバー ロード時に上書きする必要があります。  
+ 多くの場合、つまり`Object.Equals`等値演算子はオーバー ロード時にオーバーライドする必要があります。  
   
  **X AVOID** 等値演算子から例外をスローします。  
   
- たとえば、引数のいずれかがスローする代わりに null の場合は false を返す`NullReferenceException`です。  
+ たとえば、引数のいずれかがスローする代わりに null の場合は false を返す`NullReferenceException`します。  
   
-## <a name="equality-operators-on-value-types"></a>値型で等値演算子  
+## <a name="equality-operators-on-value-types"></a>値の型で等値演算子  
  **✓ DO** 等しいかどうかがわかりやすい場合は、値型で等値演算子をオーバー ロードします。  
   
- ほとんどのプログラミング言語での既定の実装はありません`operator==`値型です。  
+ ほとんどのプログラミング言語での既定の実装がない`operator==`値の型。  
   
 ## <a name="equality-operators-on-reference-types"></a>参照型で等値演算子  
  **X AVOID** 変更可能な参照型で等値演算子のオーバー ロードします。  
   
- 多くの言語では、参照型の組み込みの等値演算子があります。 組み込み演算子は通常の参照の等価性を実装し、値の等価性を既定の動作が変更されたときに、多くの開発者は驚くします。  
+ 多くの言語では、参照型の組み込みの等値演算子があります。 組み込みの演算子は、通常は参照の等価性を実装し、値の等価性を既定の動作が変更されたときに、多くの開発者は驚かします。  
   
- 不変より参照の等価性と値の等価性の間の違いに注意をはるかに困難になるために、変更できない参照型のこの問題が軽減されます。  
+ この問題は、不変性をより参照の等価性と値の等価性の間の違いに注意をはるかに困難になるために、変更不可の参照型の軽減されます。  
   
  **X AVOID** 実装では、参照の等価性の場合よりもはるかに低速になる場合は、参照型で等値演算子をオーバー ロードします。  
   
- *部分 © 2005、2009 Microsoft Corporation します。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *ピアソン教育, Inc. からのアクセス許可によって検出[Framework デザイン ガイドライン: 規則、表現方法、および再利用可能な .NET ライブラリを第 2 版パターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)は Cwalina と Brad Abrams、2008 年 10 月 22 日で発行されました。Microsoft Windows 開発シリーズの一部として、Addison-wesley Professional。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>関連項目  
- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
- [使用方法のガイドライン](../../../docs/standard/design-guidelines/usage-guidelines.md)
+## <a name="see-also"></a>関連項目
+
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [使用方法のガイドライン](../../../docs/standard/design-guidelines/usage-guidelines.md)

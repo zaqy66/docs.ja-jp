@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877925"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188385"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows プロセス アクティブ化サービスでのホスティング
 Windows プロセス アクティブ化サービス (WAS) では、ライセンス認証と Windows Communication Foundation (WCF) サービスをホストするアプリケーションを含むワーカー プロセスの有効期間を管理します。 WAS プロセス モデルは HTTP の依存関係を取り除くことにより、HTTP サーバーの [!INCLUDE[iis601](../../../../includes/iis601-md.md)] プロセス モデルを一般化します。 これにより、HTTP とメッセージ ベースのライセンス認証をサポートし、多数の特定のコンピューター上のアプリケーションをホストする機能を提供するホスト環境での Net.TCP などの非 HTTP プロトコルの両方を使用する WCF サービスです。  

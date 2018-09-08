@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: cdc3e42adcb2c7eae52aab0b14d0f9c6a822eeea
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881985"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192432"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows フォーム アプリケーションの基礎 (Visual Basic)
 Visual Basic の重要な部分は、ユーザーのコンピューターでローカルに実行する Windows フォーム アプリケーションを作成する機能です。 Visual Studio を使用して、Windows フォームを使用すると、アプリケーションとユーザー インターフェイスを作成することができます。 クラスを Windows フォーム アプリケーションが構築された、<xref:System.Windows.Forms>名前空間。  
@@ -67,7 +67,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
 |終了|解決方法については、|  
 |--------|---------|  
 |使用して、<xref:System.Windows.Forms.BindingSource>コンポーネント|[方法: デザイナーを使用して Windows フォーム コントロールを BindingSource コンポーネントにバインドする](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]データ ソース|[方法: Windows フォーム BindingSource コンポーネントで ADO.NET データを並べ替える/フィルター処理する](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
+|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]データ ソース|[方法: Windows フォーム BindingSource コンポーネントで ADO.NET データを並べ替える/フィルター処理する](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |データ ソース ウィンドウを使用します。|[チュートリアル: Windows フォームでのデータの表示](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>クライアント コンピューターにアプリケーションを配置する  
@@ -95,7 +95,8 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
 |フォームのコンテンツを印刷します。|[方法: Windows フォームでグラフィックスを印刷する](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [方法 : Windows フォームで複数ページのテキスト ファイルを印刷する](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Windows フォームのセキュリティについての詳細|[Windows フォームのセキュリティの概要](../../../framework/winforms/security-in-windows-forms-overview.md)|  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
- [Windows フォームの概要](../../../framework/winforms/windows-forms-overview.md)  
- [My.Forms オブジェクト](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
+- [Windows フォームの概要](../../../framework/winforms/windows-forms-overview.md)  
+- [My.Forms オブジェクト](../../../visual-basic/language-reference/objects/my-forms-object.md)

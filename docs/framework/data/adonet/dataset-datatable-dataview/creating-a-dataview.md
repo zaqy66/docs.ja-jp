@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
 ms.openlocfilehash: b88df66ef2e065d1db8d4033eb1fb0e47ebdd189
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879579"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181405"
 ---
 # <a name="creating-a-dataview"></a>DataView の作成
 <xref:System.Data.DataView> は 2 とおりの方法で作成できます。 使用することができます、 **DataView**への参照を作成できますコンス トラクター、または、<xref:System.Data.DataTable.DefaultView%2A>のプロパティ、<xref:System.Data.DataTable>します。 **DataView**コンス トラクターは空、またはいずれかがかかることができます、 **DataTable**引数を 1 つとして、または**DataTable**フィルター条件、並べ替え条件、および行と共に状態フィルター。 使用する追加の引数の詳細については、 **DataView**を参照してください[並べ替えとフィルター データ](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)します。  

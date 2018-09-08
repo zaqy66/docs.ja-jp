@@ -3,11 +3,11 @@ title: do 束縛 (F#)
 description: F# の 'do' のバインドを使用する方法、関数または値を定義することがなくコードを実行について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43882734"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192153"
 ---
 # <a name="do-bindings"></a>do 束縛
 

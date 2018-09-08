@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: c13bdc47568aa8bbd934bb2b86410e17bbc485dc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562810"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188671"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic におけるジェネリック型 (Visual Basic)
 *ジェネリック型* はさまざまなデータ型に対して同じ機能を実行するために必要な処理を行う、1 つのプログラミング要素です。 ジェネリック クラスまたはジェネリック プロシージャを定義すると、同じ機能を実行させる各データ型に対して、その機能を別々に定義する必要がありません。  
@@ -147,15 +147,16 @@ ms.locfileid: "43562810"
   
 -   *構成型*。 型パラメーターに型引数を指定してジェネリック型から宣言されるクラス、構造体、インターフェイス、プロシージャ、またはデリゲートです。  
   
-## <a name="see-also"></a>関連項目  
- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [共変性と反変性](../../concepts/covariance-contravariance/index.md)  
- [反復子](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+## <a name="see-also"></a>関連項目
+
+- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+- [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
+- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
+- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+- [共変性と反変性](../../concepts/covariance-contravariance/index.md)  
+- [反復子](../../../../visual-basic/programming-guide/concepts/iterators.md)

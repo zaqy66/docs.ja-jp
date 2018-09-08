@@ -3,11 +3,11 @@ title: 探索バインド要素のサンプル
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
 ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877600"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177537"
 ---
 # <a name="discovery-binding-element-sample"></a>探索バインド要素のサンプル
 このサンプルでは、探索クライアント バインド要素を使用してサービスを探索する方法を示します。 この機能を使用すると、開発者は、探索クライアント チャネルを既存のクライアント チャネル スタックに追加することにより、プログラミング モデルをきわめて直感的にすることができます。 関連付けられたチャネルが開いている場合、サービスのアドレスは探索を使用して解決されます。 このサンプルは、次のプロジェクトで構成されています。  

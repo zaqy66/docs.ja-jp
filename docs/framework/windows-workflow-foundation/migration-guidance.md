@@ -3,11 +3,11 @@ title: 移行のガイドライン
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: 93d523c51c45f9b6f6235a7645fa126fcb09b6e5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129302"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179823"
 ---
 # <a name="migration-guidance"></a>移行のガイドライン
 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]Microsoft は 2 つ目のメジャー バージョンの Windows Workflow Foundation (WF) をリリースします。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] は、[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (これに含まれていた System.Workflow.* 名前空間の型は現在 WF3 と呼ばれています) でリリースされ、[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] で強化されました。 WF3 はまたの一部、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]が新しいワークフロー テクノロジがありますが存在します (System.Activities。 内の型\*名前空間。 WF4 と呼ばれます)。 WF4 の導入時期を検討する場合は、最初にそのタイミングの管理を認識することが重要です。  

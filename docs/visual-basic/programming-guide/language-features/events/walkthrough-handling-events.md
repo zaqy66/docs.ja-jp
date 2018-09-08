@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 3ade8eae67d29e2f3cb42911e42ed8696623db62
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507899"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191998"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>チュートリアル: イベントの処理 (Visual Basic)
 これは、2 番目のイベントを使用する方法を示す 2 つのトピックです。 最初のトピックでは、[チュートリアル: イベントを宣言して発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)を宣言してイベントを発生させる方法を示しています。 このセクションでは、実行するときにイベントを処理するのに方法について説明フォームとそのチュートリアルからクラスを使用します。  
@@ -95,7 +95,7 @@ ms.locfileid: "43507899"
 3.  をクリックして、**キャンセル**タスクを停止するボタンをクリックします。 注意の外観、**キャンセル**ボタンがクリックするとすぐには変更されません。 `Click`イベントまで発生することはできません、`My.Application.DoEvents`ステートメントは、イベント処理を使用できます。  
   
     > [!NOTE]
-    >  `My.Application.DoEvents`フォームは、メソッドがまったく同じ方法でイベントを処理できません。 たとえば、このチュートリアルでは、する必要があります をクリックして、**キャンセル**2 回ボタンをクリックします。 使用することができます、イベントを直接処理するためのフォームは、マルチ スレッドです。 詳細については、次を参照してください。[スレッド処理](https://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)します。  
+    >  `My.Application.DoEvents`フォームは、メソッドがまったく同じ方法でイベントを処理できません。 たとえば、このチュートリアルでは、する必要があります をクリックして、**キャンセル**2 回ボタンをクリックします。 使用することができます、イベントを直接処理するためのフォームは、マルチ スレッドです。 詳細については、次を参照してください。[スレッド処理](../../../../visual-basic/programming-guide/concepts/threading/index.md)します。
   
  F11 キーを押してプログラムを実行し、コードを 1 行ずつ処理するときにあります。 実行の入力を明確に確認`LongTask`、し、簡単に再入力`Form1`たびに、`PercentDone`イベントが発生します。  
   

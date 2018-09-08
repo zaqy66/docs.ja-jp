@@ -2,12 +2,12 @@
 title: 構造体 (F#)
 description: F# 構造、多くの場合、コンパクトなオブジェクト型について説明しますと少量のデータと動作が単純な型のクラスよりも効率的です。
 ms.date: 05/16/2016
-ms.openlocfilehash: 889d493af3c9c388bdc7969c02bc7b021b82517d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799672"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181928"
 ---
 # <a name="structures"></a>構造体
 
@@ -48,9 +48,51 @@ type [accessibility-modifier] type-name =
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2501.fs)]
 
+## <a name="byreflike-structs"></a>ByRefLike 構造体
+
+従うことができます独自の構造体を定義する`byref`-などのセマンティクス: を参照してください[Byref](byrefs.md)詳細についてはします。 これは、<xref:System.Runtime.CompilerServices.IsByRefLikeAttribute>属性。
+
+```fsharp
+open System
+open System.Runtime.CompilerServices
+
+[<IsByRefLike; Struct>]
+type S(count1: Span<int>, count2: Span<int>) =
+    member x.Count1 = count1
+    member x.Count2 = count2
+```
+
+`IsByRefLike` 限りません`Struct`します。 両方は、型に存在する必要があります。
+
+A"`byref`のような"f# の構造体はスタック バインド値の型。 マネージ ヒープに割り当てられることはありません。 A `byref`-と同様に、強力な確認については、有効期間と非キャプチャのセットをそのポリシーが適用されて、構造体です、高性能なプログラミングに便利です。 規則は次のとおりです。
+
+* メソッドを返します関数パラメーター、メソッド パラメーター、ローカル変数を使用ができます。
+* 静的またはインスタンス クラスまたは構造体を通常のメンバーができません。
+* 任意のクロージャ コンストラクトをキャプチャできない (`async`メソッドまたはラムダ式)。
+* これらは、ジェネリック パラメーターとして使用できません。
+
+これらの規則は、使用状況を制限する非常に強く、それによって、安全な方法でのハイ パフォーマンス コンピューティングの約束を実行するためにします。
+
+## <a name="readonly-structs"></a>読み取り専用の構造体
+
+構造体での注釈を付けることができます、<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute>属性。 例えば:
+
+```fsharp
+[<IsReadOnly; Struct>]
+type S(count1: int, count2: int) =
+    member x.Count1 = count1
+    member x.Count2 = count2
+```
+
+`IsReadOnly` 限りません`Struct`します。 両方に追加する必要があります、`IsReadOnly`構造体。
+
+この属性の使用は、f# と c# として扱い、他人に把握できるようにすることのメタデータを出力`inref<'T>`と`in ref`、それぞれします。
+
+読み取り専用の構造体の内部で変更可能な値を定義するには、エラーが生成されます。
+
 ## <a name="struct-records-and-discriminated-unions"></a>構造体のレコード、判別共用体
 
-表現できる f# 4.1 以降、[レコード](records.md)と[判別共用体](discriminated-unions.md)と構造体として、`[<Struct>]`属性。  詳細については、各記事を参照してください。
+表すことができます[レコード](records.md)と[判別共用体](discriminated-unions.md)と構造体として、`[<Struct>]`属性。  詳細については、各記事を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

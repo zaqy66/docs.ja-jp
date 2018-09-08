@@ -7,11 +7,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
 ms.openlocfilehash: 844e38fc62fc9fb04a723c1a4a8ad834e957c8ce
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44132695"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178313"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>方法 : Windows フォームのコントロールを作成する
 コントロールは、ユーザーとプログラムの間のグラフィカルなリンクを表します。 コントロールは、データの提供または処理、ユーザー入力の受け付け、イベントへの応答、ユーザーとアプリケーションを接続する他の任意の数の関数の実行を行うことができます。 コントロールは、基本的にグラフィカル インターフェイスを持つコンポーネントであるため、ユーザーとの対話だけでなく、コンポーネントが実行するあらゆる機能を果たします。 コントロールは特定の目的に使用するために作成します。コントロールの作成は、まったく別のプログラミング タスクです。 このことを念頭に、次の手順では、コントロールの作成手順の概要を示します。 個々の手順のリンクで追加情報を提供します。  

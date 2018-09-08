@@ -2,12 +2,12 @@
 title: 1 つは、完全な (Visual Basic) 後の残りの非同期タスクのキャンセルします。
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 5dab0c4aa14710fe78d2473675aea8b8c8bb73b9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0f241d2769edf3efbba0aca3b19ef35b9cdad601
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874798"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207682"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>1 つは、完全な (Visual Basic) 後の残りの非同期タスクのキャンセルします。
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> メソッドを <xref:System.Threading.CancellationToken> と共に使用すると、1 つのタスクが完了したときに残りのすべてのタスクを取り消しできます。 `WhenAny` メソッドは、タスクのコレクションである引数を受け取ります。 このメソッドは、すべてのタスクを開始し、単一のタスクを返します。 単一のタスクは、コレクションのいずれかのタスクが完了すると完了します。  
@@ -37,7 +37,7 @@ ms.locfileid: "43874798"
  プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルを確認できます。  
   
 ## <a name="building-the-example"></a>例のビルド  
- このトピックの例で開発されたプロジェクトに追加[非同期タスクまたはタスクの一覧のキャンセル](https://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0)タスクのリストを取り消します。 この例では、**[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。  
+ このトピックの例で開発されたプロジェクトに追加[非同期タスクまたはタスクの一覧のキャンセル](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)タスクのリストを取り消します。 この例では、**[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。  
   
  この例を自分で 1 つずつビルドするには、"例をダウンロードする" セクションの手順に従います。ただし、**[スタートアップ プロジェクト]** として **CancelAListOfTasks** を選択します。 そのプロジェクトに、このトピックでの変更を追加します。  
   
@@ -232,8 +232,9 @@ End Class
 ' Download complete.  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
- [非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [非同期のサンプル: アプリケーションの微調整](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+- [非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+- [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+- [非同期のサンプル: アプリケーションの微調整](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

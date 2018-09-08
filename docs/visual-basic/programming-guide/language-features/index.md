@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879605"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185364"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 言語の機能
 次のトピックでは、紹介し、Visual Basic では、オブジェクト指向のプログラミング言語の重要なコンポーネントについて説明します。 フォームとコントロールを使用してアプリケーションのユーザー インターフェイスを作成した後、アプリケーションの動作を定義するコードを作成する必要があります。 最新のプログラミング言語と Visual Basic では、さまざまな一般的なプログラミング構成要素と言語要素がサポートされています。  
@@ -77,8 +77,9 @@ ms.locfileid: "43879605"
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Visual Basic での XML の使用方法について説明しているトピックへのリンクを示します。  
   
-## <a name="related-sections"></a>関連項目  
- [コレクション](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+## <a name="related-sections"></a>関連項目
+
+ [コレクション](../../../visual-basic/programming-guide/concepts/collections.md)  
  .NET Framework で提供されているコレクションの種類について説明します。 単純なコレクションおよびキーと値のペアのコレクションを使用する方法を示します。  
   
  [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  

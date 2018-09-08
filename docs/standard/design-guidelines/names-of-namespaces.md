@@ -11,11 +11,11 @@ ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d68966f60c5039fd67195a03facc1586b9ed154
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097010"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183263"
 ---
 # <a name="names-of-namespaces"></a>名前空間の名前
 として他の名前付けのガイドラインと名前空間の名前を付けるときの目標を作成するための十分なわかりやすくするために名前空間のコンテンツがある可能性がありますをすぐにいるフレームワークを使用するプログラマにとって。 次のテンプレートは、名前空間の名前付けに関する一般的な規則を指定します。  

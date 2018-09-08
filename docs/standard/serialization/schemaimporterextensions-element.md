@@ -6,12 +6,12 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: 8bcd8abb138c645f61bf833b49cda2631d1778dd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b5696c593fdeaabab66ea7c286c6e1309e6e8e38
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513114"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204800"
 ---
 # <a name="ltschemaimporterextensionsgt-element"></a>&lt;schemaImporterExtensions&gt; 要素
 XSD の型を .NET Framework の型にマッピングするために <xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型を含みます。 構成ファイルの詳細については、「[構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)」を参照してください。  
@@ -50,10 +50,11 @@ XSD の型を .NET Framework の型にマッピングするために <xref:Syste
 </system.xml.serialization>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Xml.Serialization.XmlSchemaImporter>  
- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
- [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<dateTimeSerialization> 要素](../../../docs/standard/serialization/datetimeserialization-element.md)  
- [\<追加 > 要素の\<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
- [\<system.xml.serialization> 要素](../../../docs/standard/serialization/system-xml-serialization-element.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Xml.Serialization.XmlSchemaImporter>  
+- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
+- [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)  
+- [\<dateTimeSerialization> 要素](../../../docs/standard/serialization/datetimeserialization-element.md)  
+- [\<追加 > 要素の\<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
+- [\<system.xml.serialization> 要素](../../../docs/standard/serialization/system-xml-serialization-element.md)
