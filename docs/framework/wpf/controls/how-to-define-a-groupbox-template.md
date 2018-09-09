@@ -6,20 +6,20 @@ helpviewer_keywords:
 - GroupBox control [WPF], creating templates
 ms.assetid: 85a4d1a7-4753-4f4a-b26d-14fa10c1ddb5
 ms.openlocfilehash: a47ce896be4d1c38147584dd80b1bc841737d526
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130657"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227023"
 ---
-# <a name="how-to-define-a-groupbox-template"></a><span data-ttu-id="a4411-102">方法 : GroupBox テンプレートを定義する</span><span class="sxs-lookup"><span data-stu-id="a4411-102">How to: Define a GroupBox Template</span></span>
-<span data-ttu-id="a4411-103">この例のテンプレートを作成する方法を示しています、<xref:System.Windows.Controls.GroupBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="a4411-103">This example shows how to create a template for a <xref:System.Windows.Controls.GroupBox> control.</span></span>  
+# <a name="how-to-define-a-groupbox-template"></a><span data-ttu-id="01830-102">方法 : GroupBox テンプレートを定義する</span><span class="sxs-lookup"><span data-stu-id="01830-102">How to: Define a GroupBox Template</span></span>
+<span data-ttu-id="01830-103">この例のテンプレートを作成する方法を示しています、<xref:System.Windows.Controls.GroupBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="01830-103">This example shows how to create a template for a <xref:System.Windows.Controls.GroupBox> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a4411-104">例</span><span class="sxs-lookup"><span data-stu-id="a4411-104">Example</span></span>  
- <span data-ttu-id="a4411-105">次の例では、定義、<xref:System.Windows.Controls.GroupBox>コントロール テンプレートを使用して、<xref:System.Windows.Controls.Grid>レイアウトを制御します。</span><span class="sxs-lookup"><span data-stu-id="a4411-105">The following example defines a <xref:System.Windows.Controls.GroupBox> control template by using a <xref:System.Windows.Controls.Grid> control for layout.</span></span> <span data-ttu-id="a4411-106">テンプレートを使用して、<xref:System.Windows.Controls.BorderGapMaskConverter>の枠線を定義する、<xref:System.Windows.Controls.GroupBox>境界線が見えにくくならないように、<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>コンテンツ。</span><span class="sxs-lookup"><span data-stu-id="a4411-106">The template uses a <xref:System.Windows.Controls.BorderGapMaskConverter> to define the border of the <xref:System.Windows.Controls.GroupBox> so that the border does not obscure the <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> content.</span></span>  
+## <a name="example"></a><span data-ttu-id="01830-104">例</span><span class="sxs-lookup"><span data-stu-id="01830-104">Example</span></span>  
+ <span data-ttu-id="01830-105">次の例では、定義、<xref:System.Windows.Controls.GroupBox>コントロール テンプレートを使用して、<xref:System.Windows.Controls.Grid>レイアウトを制御します。</span><span class="sxs-lookup"><span data-stu-id="01830-105">The following example defines a <xref:System.Windows.Controls.GroupBox> control template by using a <xref:System.Windows.Controls.Grid> control for layout.</span></span> <span data-ttu-id="01830-106">テンプレートを使用して、<xref:System.Windows.Controls.BorderGapMaskConverter>の枠線を定義する、<xref:System.Windows.Controls.GroupBox>境界線が見えにくくならないように、<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>コンテンツ。</span><span class="sxs-lookup"><span data-stu-id="01830-106">The template uses a <xref:System.Windows.Controls.BorderGapMaskConverter> to define the border of the <xref:System.Windows.Controls.GroupBox> so that the border does not obscure the <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> content.</span></span>  
   
  [!code-xaml[GroupBoxSnippet#GroupBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#groupboxtemplate)]  
   
-## <a name="see-also"></a><span data-ttu-id="a4411-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="a4411-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="01830-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="01830-107">See Also</span></span>  
  <xref:System.Windows.Controls.GroupBox>  
- [<span data-ttu-id="a4411-108">GroupBox の操作方法に関するトピック</span><span class="sxs-lookup"><span data-stu-id="a4411-108">GroupBox How-to Topics</span></span>](https://msdn.microsoft.com/library/7692e155-a4c6-428c-b7e0-64b3740daca7)
+ [<span data-ttu-id="01830-108">GroupBox の操作方法に関するトピック</span><span class="sxs-lookup"><span data-stu-id="01830-108">GroupBox How-to Topics</span></span>](https://msdn.microsoft.com/library/7692e155-a4c6-428c-b7e0-64b3740daca7)
