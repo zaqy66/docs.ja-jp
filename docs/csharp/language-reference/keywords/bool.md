@@ -8,53 +8,53 @@ helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
 ms.openlocfilehash: 2041182dffa0330ea601b30e047c0b09731618f2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929770"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042401"
 ---
-# <a name="bool-c-reference"></a><span data-ttu-id="aaa09-102">bool (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="aaa09-102">bool (C# Reference)</span></span>
+# <a name="bool-c-reference"></a><span data-ttu-id="3bf32-102">bool (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="3bf32-102">bool (C# Reference)</span></span>
 
-<span data-ttu-id="aaa09-103">`bool` キーワードは <xref:System.Boolean?displayProperty=nameWithType> の別名です。</span><span class="sxs-lookup"><span data-stu-id="aaa09-103">The `bool` keyword is an alias of <xref:System.Boolean?displayProperty=nameWithType>.</span></span> <span data-ttu-id="aaa09-104">ブール値 ([true](../../../csharp/language-reference/keywords/true.md) と [false](../../../csharp/language-reference/keywords/false.md)) を格納する変数を宣言するために使われます。</span><span class="sxs-lookup"><span data-stu-id="aaa09-104">It is used to declare variables to store the Boolean values, [true](../../../csharp/language-reference/keywords/true.md) and [false](../../../csharp/language-reference/keywords/false.md).</span></span>
+<span data-ttu-id="3bf32-103">`bool` キーワードは <xref:System.Boolean?displayProperty=nameWithType> の別名です。</span><span class="sxs-lookup"><span data-stu-id="3bf32-103">The `bool` keyword is an alias of <xref:System.Boolean?displayProperty=nameWithType>.</span></span> <span data-ttu-id="3bf32-104">ブール値 ([true](../../../csharp/language-reference/keywords/true.md) と [false](../../../csharp/language-reference/keywords/false.md)) を格納する変数を宣言するために使われます。</span><span class="sxs-lookup"><span data-stu-id="3bf32-104">It is used to declare variables to store the Boolean values, [true](../../../csharp/language-reference/keywords/true.md) and [false](../../../csharp/language-reference/keywords/false.md).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="aaa09-105">値 `null` も格納できるブール変数が必要な場合は、`bool?` を使います。</span><span class="sxs-lookup"><span data-stu-id="aaa09-105">If you require a Boolean variable that can also have a value of `null`, use `bool?`.</span></span> <span data-ttu-id="aaa09-106">詳細については、「[Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="aaa09-106">For more information, see [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md).</span></span>
+> <span data-ttu-id="3bf32-105">値 `null` も格納できるブール変数が必要な場合は、`bool?` を使います。</span><span class="sxs-lookup"><span data-stu-id="3bf32-105">If you require a Boolean variable that can also have a value of `null`, use `bool?`.</span></span> <span data-ttu-id="3bf32-106">詳細については、「[Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3bf32-106">For more information, see [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md).</span></span>
 
-## <a name="literals"></a><span data-ttu-id="aaa09-107">リテラル</span><span class="sxs-lookup"><span data-stu-id="aaa09-107">Literals</span></span>
+## <a name="literals"></a><span data-ttu-id="3bf32-107">リテラル</span><span class="sxs-lookup"><span data-stu-id="3bf32-107">Literals</span></span>
 
-<span data-ttu-id="aaa09-108">`bool` 変数にはブール値を代入できます。</span><span class="sxs-lookup"><span data-stu-id="aaa09-108">You can assign a Boolean value to a `bool` variable.</span></span> <span data-ttu-id="aaa09-109">また、`bool` として評価される式も `bool` 変数に代入できます。</span><span class="sxs-lookup"><span data-stu-id="aaa09-109">You can also assign an expression that evaluates to `bool` to a `bool` variable.</span></span>
+<span data-ttu-id="3bf32-108">`bool` 変数にはブール値を代入できます。</span><span class="sxs-lookup"><span data-stu-id="3bf32-108">You can assign a Boolean value to a `bool` variable.</span></span> <span data-ttu-id="3bf32-109">また、`bool` として評価される式も `bool` 変数に代入できます。</span><span class="sxs-lookup"><span data-stu-id="3bf32-109">You can also assign an expression that evaluates to `bool` to a `bool` variable.</span></span>
 
 [!code-csharp[csrefKeywordsTypes#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#1)]
 
-<span data-ttu-id="aaa09-110">`bool` 変数の既定値は `false` です。</span><span class="sxs-lookup"><span data-stu-id="aaa09-110">The default value of a `bool` variable is `false`.</span></span> <span data-ttu-id="aaa09-111">`bool?` 変数の既定値は `null` です。</span><span class="sxs-lookup"><span data-stu-id="aaa09-111">The default value of a `bool?` variable is `null`.</span></span>
+<span data-ttu-id="3bf32-110">`bool` 変数の既定値は `false` です。</span><span class="sxs-lookup"><span data-stu-id="3bf32-110">The default value of a `bool` variable is `false`.</span></span> <span data-ttu-id="3bf32-111">`bool?` 変数の既定値は `null` です。</span><span class="sxs-lookup"><span data-stu-id="3bf32-111">The default value of a `bool?` variable is `null`.</span></span>
 
-## <a name="conversions"></a><span data-ttu-id="aaa09-112">変換</span><span class="sxs-lookup"><span data-stu-id="aaa09-112">Conversions</span></span>
+## <a name="conversions"></a><span data-ttu-id="3bf32-112">変換</span><span class="sxs-lookup"><span data-stu-id="3bf32-112">Conversions</span></span>
 
-<span data-ttu-id="aaa09-113">C++ では、`bool` 型の値を `int` 型の値に変換できます。つまり、`false` はゼロと同等であり、`true` はゼロ以外の値と同等です。</span><span class="sxs-lookup"><span data-stu-id="aaa09-113">In C++, a value of type `bool` can be converted to a value of type `int`; in other words, `false` is equivalent to zero and `true` is equivalent to nonzero values.</span></span> <span data-ttu-id="aaa09-114">C# では、`bool` 型と他の型の間に変換はありません。</span><span class="sxs-lookup"><span data-stu-id="aaa09-114">In C#, there is no conversion between the `bool` type and other types.</span></span> <span data-ttu-id="aaa09-115">たとえば、次の `if` ステートメントは C# では無効です。</span><span class="sxs-lookup"><span data-stu-id="aaa09-115">For example, the following `if` statement is invalid in C#:</span></span>
+<span data-ttu-id="3bf32-113">C++ では、`bool` 型の値を `int` 型の値に変換できます。つまり、`false` はゼロと同等であり、`true` はゼロ以外の値と同等です。</span><span class="sxs-lookup"><span data-stu-id="3bf32-113">In C++, a value of type `bool` can be converted to a value of type `int`; in other words, `false` is equivalent to zero and `true` is equivalent to nonzero values.</span></span> <span data-ttu-id="3bf32-114">C# では、`bool` 型と他の型の間に変換はありません。</span><span class="sxs-lookup"><span data-stu-id="3bf32-114">In C#, there is no conversion between the `bool` type and other types.</span></span> <span data-ttu-id="3bf32-115">たとえば、次の `if` ステートメントは C# では無効です。</span><span class="sxs-lookup"><span data-stu-id="3bf32-115">For example, the following `if` statement is invalid in C#:</span></span>
 
 [!code-csharp[csrefKeywordsTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#2)]
 
-<span data-ttu-id="aaa09-116">`int` 型の変数をテストするには、0 などの値と明示的に比較する必要があります。次はその例です。</span><span class="sxs-lookup"><span data-stu-id="aaa09-116">To test a variable of the type `int`, you have to explicitly compare it to a value, such as zero, as follows:</span></span>
+<span data-ttu-id="3bf32-116">`int` 型の変数をテストするには、0 などの値と明示的に比較する必要があります。次はその例です。</span><span class="sxs-lookup"><span data-stu-id="3bf32-116">To test a variable of the type `int`, you have to explicitly compare it to a value, such as zero, as follows:</span></span>
 
 [!code-csharp[csrefKeywordsTypes#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#3)]
 
-## <a name="example"></a><span data-ttu-id="aaa09-117">例</span><span class="sxs-lookup"><span data-stu-id="aaa09-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="3bf32-117">例</span><span class="sxs-lookup"><span data-stu-id="3bf32-117">Example</span></span>
 
-<span data-ttu-id="aaa09-118">この例のプログラムは、キーボードから文字された文字がアルファベットかどうかを調べます。</span><span class="sxs-lookup"><span data-stu-id="aaa09-118">In this example, you enter a character from the keyboard and the program checks if the input character is a letter.</span></span> <span data-ttu-id="aaa09-119">アルファベットである場合は、小文字か大文字かを調べます。</span><span class="sxs-lookup"><span data-stu-id="aaa09-119">If it is a letter, it checks if it is lowercase or uppercase.</span></span> <span data-ttu-id="aaa09-120">こうしたチェックは <xref:System.Char.IsLetter%2A> と <xref:System.Char.IsLower%2A> で実行され、どちらも `bool` 型を返します。</span><span class="sxs-lookup"><span data-stu-id="aaa09-120">These checks are performed with the <xref:System.Char.IsLetter%2A>, and <xref:System.Char.IsLower%2A>, both of which return the `bool` type:</span></span>
+<span data-ttu-id="3bf32-118">この例のプログラムは、キーボードから文字された文字がアルファベットかどうかを調べます。</span><span class="sxs-lookup"><span data-stu-id="3bf32-118">In this example, you enter a character from the keyboard and the program checks if the input character is a letter.</span></span> <span data-ttu-id="3bf32-119">アルファベットである場合は、小文字か大文字かを調べます。</span><span class="sxs-lookup"><span data-stu-id="3bf32-119">If it is a letter, it checks if it is lowercase or uppercase.</span></span> <span data-ttu-id="3bf32-120">こうしたチェックは <xref:System.Char.IsLetter%2A> と <xref:System.Char.IsLower%2A> で実行され、どちらも `bool` 型を返します。</span><span class="sxs-lookup"><span data-stu-id="3bf32-120">These checks are performed with the <xref:System.Char.IsLetter%2A>, and <xref:System.Char.IsLower%2A>, both of which return the `bool` type:</span></span>
 
 [!code-csharp[csrefKeywordsTypes#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#4)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="aaa09-121">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="aaa09-121">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="3bf32-121">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="3bf32-121">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="aaa09-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="aaa09-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3bf32-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="3bf32-122">See also</span></span>
 
-- [<span data-ttu-id="aaa09-123">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="aaa09-123">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="aaa09-124">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="aaa09-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="aaa09-125">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="aaa09-125">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="aaa09-126">整数型の一覧表</span><span class="sxs-lookup"><span data-stu-id="aaa09-126">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [<span data-ttu-id="aaa09-127">組み込み型の一覧表</span><span class="sxs-lookup"><span data-stu-id="aaa09-127">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [<span data-ttu-id="aaa09-128">暗黙的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="aaa09-128">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [<span data-ttu-id="aaa09-129">明示的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="aaa09-129">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [<span data-ttu-id="3bf32-123">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="3bf32-123">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="3bf32-124">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="3bf32-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="3bf32-125">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="3bf32-125">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="3bf32-126">整数型の一覧表</span><span class="sxs-lookup"><span data-stu-id="3bf32-126">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [<span data-ttu-id="3bf32-127">組み込み型の一覧表</span><span class="sxs-lookup"><span data-stu-id="3bf32-127">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [<span data-ttu-id="3bf32-128">暗黙的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="3bf32-128">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [<span data-ttu-id="3bf32-129">明示的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="3bf32-129">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

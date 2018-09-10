@@ -6,38 +6,38 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: e368105c090f95435a4529470bdf1b41346d039c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 90a5a71f83a7117a7468bab0d9fe9d013685ebbe
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936751"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515240"
 ---
-# <a name="anonymous-functions-c-programming-guide"></a><span data-ttu-id="ef45b-102">匿名関数 (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="ef45b-102">Anonymous Functions (C# Programming Guide)</span></span>
-<span data-ttu-id="ef45b-103">匿名関数は、デリゲート型が必要とされる任意の場所で使用できる "インライン" のステートメントまたは式です。</span><span class="sxs-lookup"><span data-stu-id="ef45b-103">An anonymous function is an "inline" statement or expression that can be used wherever a delegate type is expected.</span></span> <span data-ttu-id="ef45b-104">名前付きデリゲートを初期化するときや、メソッドのパラメーターとして名前付きデリゲート型の代わりに渡したりするときに使用できます。</span><span class="sxs-lookup"><span data-stu-id="ef45b-104">You can use it to initialize a named delegate or pass it instead of a named delegate type as a method parameter.</span></span>  
+# <a name="anonymous-functions-c-programming-guide"></a><span data-ttu-id="5fdc5-102">匿名関数 (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="5fdc5-102">Anonymous Functions (C# Programming Guide)</span></span>
+<span data-ttu-id="5fdc5-103">匿名関数は、デリゲート型が必要とされる任意の場所で使用できる "インライン" のステートメントまたは式です。</span><span class="sxs-lookup"><span data-stu-id="5fdc5-103">An anonymous function is an "inline" statement or expression that can be used wherever a delegate type is expected.</span></span> <span data-ttu-id="5fdc5-104">名前付きデリゲートを初期化するときや、メソッドのパラメーターとして名前付きデリゲート型の代わりに渡したりするときに使用できます。</span><span class="sxs-lookup"><span data-stu-id="5fdc5-104">You can use it to initialize a named delegate or pass it instead of a named delegate type as a method parameter.</span></span>  
   
- <span data-ttu-id="ef45b-105">ここでは、2 種類ある匿名関数について説明します。</span><span class="sxs-lookup"><span data-stu-id="ef45b-105">There are two kinds of anonymous functions, which are discussed individually in the following topics:</span></span>  
+ <span data-ttu-id="5fdc5-105">ここでは、2 種類ある匿名関数について説明します。</span><span class="sxs-lookup"><span data-stu-id="5fdc5-105">There are two kinds of anonymous functions, which are discussed individually in the following topics:</span></span>  
   
--   <span data-ttu-id="ef45b-106">[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)</span><span class="sxs-lookup"><span data-stu-id="ef45b-106">[Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>  
+-   <span data-ttu-id="5fdc5-106">[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)</span><span class="sxs-lookup"><span data-stu-id="5fdc5-106">[Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>  
   
--   [<span data-ttu-id="ef45b-107">匿名メソッド</span><span class="sxs-lookup"><span data-stu-id="ef45b-107">Anonymous Methods</span></span>](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+-   [<span data-ttu-id="5fdc5-107">匿名メソッド</span><span class="sxs-lookup"><span data-stu-id="5fdc5-107">Anonymous Methods</span></span>](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
     > [!NOTE]
-    >  <span data-ttu-id="ef45b-108">ラムダ式は、式ツリーとデリゲートにバインドできます。</span><span class="sxs-lookup"><span data-stu-id="ef45b-108">Lambda expressions can be bound to expression trees and also to delegates.</span></span>  
+    >  <span data-ttu-id="5fdc5-108">ラムダ式は、式ツリーとデリゲートにバインドできます。</span><span class="sxs-lookup"><span data-stu-id="5fdc5-108">Lambda expressions can be bound to expression trees and also to delegates.</span></span>  
   
-## <a name="the-evolution-of-delegates-in-c"></a><span data-ttu-id="ef45b-109">C# のデリゲートの進化</span><span class="sxs-lookup"><span data-stu-id="ef45b-109">The Evolution of Delegates in C#</span></span>  
- <span data-ttu-id="ef45b-110">C# 1.0 では、コードのどこかで定義したメソッドを使用して明示的に初期化することで、デリゲートのインスタンスを作成していました。</span><span class="sxs-lookup"><span data-stu-id="ef45b-110">In C# 1.0, you created an instance of a delegate by explicitly initializing it with a method that was defined elsewhere in the code.</span></span> <span data-ttu-id="ef45b-111">C# 2.0 では、デリゲートの呼び出しで実行できる名前なしのインライン ステートメント ブロックを記述する方法として、匿名メソッドの概念が導入されました。</span><span class="sxs-lookup"><span data-stu-id="ef45b-111">C# 2.0 introduced the concept of anonymous methods as a way to write unnamed inline statement blocks that can be executed in a delegate invocation.</span></span> <span data-ttu-id="ef45b-112">C# 3.0 では、ラムダ式が導入されました。ラムダ式は、概念的には匿名メソッドと似ていますが、より表現力が豊かで簡潔です。</span><span class="sxs-lookup"><span data-stu-id="ef45b-112">C# 3.0 introduced lambda expressions, which are similar in concept to anonymous methods but more expressive and concise.</span></span> <span data-ttu-id="ef45b-113">これら 2 つの機能は総称として*匿名関数*と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="ef45b-113">These two features are known collectively as *anonymous functions*.</span></span> <span data-ttu-id="ef45b-114">一般的に、バージョン 3.5 以降の [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] をターゲットとするアプリケーションであれば、ラムダ式を使用することが推奨されます。</span><span class="sxs-lookup"><span data-stu-id="ef45b-114">In general, applications that target version 3.5 and later of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] should use lambda expressions.</span></span>  
+## <a name="the-evolution-of-delegates-in-c"></a><span data-ttu-id="5fdc5-109">C# のデリゲートの進化</span><span class="sxs-lookup"><span data-stu-id="5fdc5-109">The Evolution of Delegates in C#</span></span>  
+ <span data-ttu-id="5fdc5-110">C# 1.0 では、コードのどこかで定義したメソッドを使用して明示的に初期化することで、デリゲートのインスタンスを作成していました。</span><span class="sxs-lookup"><span data-stu-id="5fdc5-110">In C# 1.0, you created an instance of a delegate by explicitly initializing it with a method that was defined elsewhere in the code.</span></span> <span data-ttu-id="5fdc5-111">C# 2.0 では、デリゲートの呼び出しで実行できる名前なしのインライン ステートメント ブロックを記述する方法として、匿名メソッドの概念が導入されました。</span><span class="sxs-lookup"><span data-stu-id="5fdc5-111">C# 2.0 introduced the concept of anonymous methods as a way to write unnamed inline statement blocks that can be executed in a delegate invocation.</span></span> <span data-ttu-id="5fdc5-112">C# 3.0 では、ラムダ式が導入されました。ラムダ式は、概念的には匿名メソッドと似ていますが、より表現力が豊かで簡潔です。</span><span class="sxs-lookup"><span data-stu-id="5fdc5-112">C# 3.0 introduced lambda expressions, which are similar in concept to anonymous methods but more expressive and concise.</span></span> <span data-ttu-id="5fdc5-113">これら 2 つの機能は総称として*匿名関数*と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="5fdc5-113">These two features are known collectively as *anonymous functions*.</span></span> <span data-ttu-id="5fdc5-114">一般的に、バージョン 3.5 以降の [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] をターゲットとするアプリケーションであれば、ラムダ式を使用することが推奨されます。</span><span class="sxs-lookup"><span data-stu-id="5fdc5-114">In general, applications that target version 3.5 and later of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] should use lambda expressions.</span></span>  
   
- <span data-ttu-id="ef45b-115">次の例は、C# 1.0 から C# 3.0 のデリゲート作成の進化を示しています。</span><span class="sxs-lookup"><span data-stu-id="ef45b-115">The following example demonstrates the evolution of delegate creation from C# 1.0 to C# 3.0:</span></span>  
+ <span data-ttu-id="5fdc5-115">次の例は、C# 1.0 から C# 3.0 のデリゲート作成の進化を示しています。</span><span class="sxs-lookup"><span data-stu-id="5fdc5-115">The following example demonstrates the evolution of delegate creation from C# 1.0 to C# 3.0:</span></span>  
   
  [!code-csharp[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
   
-## <a name="c-language-specification"></a><span data-ttu-id="ef45b-116">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="ef45b-116">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="5fdc5-116">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="5fdc5-116">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ef45b-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef45b-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5fdc5-117">参照</span><span class="sxs-lookup"><span data-stu-id="5fdc5-117">See Also</span></span>
 
-[<span data-ttu-id="ef45b-118">ステートメント、式、および演算子</span><span class="sxs-lookup"><span data-stu-id="ef45b-118">Statements, Expressions, and Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
-[<span data-ttu-id="ef45b-119">ラムダ式</span><span class="sxs-lookup"><span data-stu-id="ef45b-119">Lambda Expressions</span></span>](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-[<span data-ttu-id="ef45b-120">デリゲート</span><span class="sxs-lookup"><span data-stu-id="ef45b-120">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)  
-[<span data-ttu-id="ef45b-121">式ツリー (C#)</span><span class="sxs-lookup"><span data-stu-id="ef45b-121">Expression Trees (C#)</span></span>](../concepts/expression-trees/index.md)  
+- [<span data-ttu-id="5fdc5-118">ステートメント、式、および演算子</span><span class="sxs-lookup"><span data-stu-id="5fdc5-118">Statements, Expressions, and Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
+- [<span data-ttu-id="5fdc5-119">ラムダ式</span><span class="sxs-lookup"><span data-stu-id="5fdc5-119">Lambda Expressions</span></span>](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [<span data-ttu-id="5fdc5-120">デリゲート</span><span class="sxs-lookup"><span data-stu-id="5fdc5-120">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)  
+- [<span data-ttu-id="5fdc5-121">式ツリー (C#)</span><span class="sxs-lookup"><span data-stu-id="5fdc5-121">Expression Trees (C#)</span></span>](../concepts/expression-trees/index.md)  

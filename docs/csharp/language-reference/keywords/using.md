@@ -8,26 +8,26 @@ helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
 ms.openlocfilehash: 2d96301e083b5c5340bea8b04943ca90c90e71ac
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471901"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529782"
 ---
-# <a name="using-c-reference"></a><span data-ttu-id="856b2-102">using (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="856b2-102">using (C# Reference)</span></span>
-<span data-ttu-id="856b2-103">`using` キーワードは、主に次の 2 つの場合に使用します。</span><span class="sxs-lookup"><span data-stu-id="856b2-103">The `using` keyword has two major uses:</span></span>  
+# <a name="using-c-reference"></a><span data-ttu-id="cb4b8-102">using (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="cb4b8-102">using (C# Reference)</span></span>
+<span data-ttu-id="cb4b8-103">`using` キーワードは、主に次の 2 つの場合に使用します。</span><span class="sxs-lookup"><span data-stu-id="cb4b8-103">The `using` keyword has two major uses:</span></span>  
   
--   <span data-ttu-id="856b2-104">ディレクティブとして使用: 名前空間のエイリアスを作成すとき、または他の名前空間で定義されている型をインポートするとき。</span><span class="sxs-lookup"><span data-stu-id="856b2-104">As a directive, when it is used to create an alias for a namespace or to import types defined in other namespaces.</span></span> <span data-ttu-id="856b2-105">「[using ディレクティブ](../../../csharp/language-reference/keywords/using-directive.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="856b2-105">See [using Directive](../../../csharp/language-reference/keywords/using-directive.md).</span></span>  
+-   <span data-ttu-id="cb4b8-104">ディレクティブとして使用: 名前空間のエイリアスを作成すとき、または他の名前空間で定義されている型をインポートするとき。</span><span class="sxs-lookup"><span data-stu-id="cb4b8-104">As a directive, when it is used to create an alias for a namespace or to import types defined in other namespaces.</span></span> <span data-ttu-id="cb4b8-105">「[using ディレクティブ](../../../csharp/language-reference/keywords/using-directive.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cb4b8-105">See [using Directive](../../../csharp/language-reference/keywords/using-directive.md).</span></span>  
   
--   <span data-ttu-id="856b2-106">ステートメントとして使用: 破棄されるオブジェクトの末尾でスコープを定義するとき。</span><span class="sxs-lookup"><span data-stu-id="856b2-106">As a statement, when it defines a scope at the end of which an object will be disposed.</span></span> <span data-ttu-id="856b2-107">「[using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="856b2-107">See [using Statement](../../../csharp/language-reference/keywords/using-statement.md).</span></span>  
+-   <span data-ttu-id="cb4b8-106">ステートメントとして使用: 破棄されるオブジェクトの末尾でスコープを定義するとき。</span><span class="sxs-lookup"><span data-stu-id="cb4b8-106">As a statement, when it defines a scope at the end of which an object will be disposed.</span></span> <span data-ttu-id="cb4b8-107">「[using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cb4b8-107">See [using Statement](../../../csharp/language-reference/keywords/using-statement.md).</span></span>  
   
-<span data-ttu-id="856b2-108">さらに、[using static](using-static.md) ディレクティブを使用すると、型名を指定せずにアクセスできる静的メンバーの型を指定することができます。</span><span class="sxs-lookup"><span data-stu-id="856b2-108">In addition, the [using static](using-static.md) directive lets you define a type whose static members you can access without specifying a type name.</span></span>
+<span data-ttu-id="cb4b8-108">さらに、[using static](using-static.md) ディレクティブを使用すると、型名を指定せずにアクセスできる静的メンバーの型を指定することができます。</span><span class="sxs-lookup"><span data-stu-id="cb4b8-108">In addition, the [using static](using-static.md) directive lets you define a type whose static members you can access without specifying a type name.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="856b2-109">参照</span><span class="sxs-lookup"><span data-stu-id="856b2-109">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cb4b8-109">参照</span><span class="sxs-lookup"><span data-stu-id="cb4b8-109">See Also</span></span>
 
-- [<span data-ttu-id="856b2-110">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="856b2-110">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="856b2-111">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="856b2-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="856b2-112">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="856b2-112">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="856b2-113">名前空間キーワード</span><span class="sxs-lookup"><span data-stu-id="856b2-113">Namespace Keywords</span></span>](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [<span data-ttu-id="856b2-114">名前空間</span><span class="sxs-lookup"><span data-stu-id="856b2-114">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)  
-- [<span data-ttu-id="856b2-115">extern</span><span class="sxs-lookup"><span data-stu-id="856b2-115">extern</span></span>](../../../csharp/language-reference/keywords/extern.md)
+- [<span data-ttu-id="cb4b8-110">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="cb4b8-110">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="cb4b8-111">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="cb4b8-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="cb4b8-112">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="cb4b8-112">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="cb4b8-113">名前空間キーワード</span><span class="sxs-lookup"><span data-stu-id="cb4b8-113">Namespace Keywords</span></span>](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [<span data-ttu-id="cb4b8-114">名前空間</span><span class="sxs-lookup"><span data-stu-id="cb4b8-114">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)  
+- [<span data-ttu-id="cb4b8-115">extern</span><span class="sxs-lookup"><span data-stu-id="cb4b8-115">extern</span></span>](../../../csharp/language-reference/keywords/extern.md)
