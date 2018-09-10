@@ -3,13 +3,13 @@ title: dotnet nuget push コマンド - .NET Core CLI
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
 ms.author: mairaw
-ms.date: 06/01/2018
-ms.openlocfilehash: 8a64f9cdc11d03bed82a132265c3b4e1de290807
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 09/04/2018
+ms.openlocfilehash: 23d27cef29008955850f9ed9f4a8baed9e7ad982
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728577"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186463"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -198,7 +198,3 @@ API キーを指定して、カスタム プッシュ ソース `http://customso
 既定のプッシュ ソースに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。
 
 `dotnet nuget push *.nupkg`
-
-カスタムの構成ファイル *./config/My.Config* を指定して、既定のプッシュ ソースに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。
-
-`dotnet nuget push *.nupkg --config-file ./config/My.Config`

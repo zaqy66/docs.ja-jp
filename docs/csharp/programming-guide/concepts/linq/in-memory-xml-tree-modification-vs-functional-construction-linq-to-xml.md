@@ -2,12 +2,12 @@
 title: メモリ内の XML ツリーの変更と関数型構築の比較 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-ms.openlocfilehash: 3e6d86ac11f10d7dbb3d270410415fb23acb2e01
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 836141185629683106698cc9b505c063de6c445e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43397800"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261591"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>メモリ内の XML ツリーの変更と関数型構築の比較 (LINQ to XML) (C#)
 XML ドキュメントの構造を変更する場合は、XML ツリーを直接変更するのが従来の方法です。 一般的なアプリケーションでは、ドキュメントを DOM や [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] などのデータ ストアに読み込み、プログラミング インターフェイスを使用してノードの挿入、削除、または内容変更を行い、その後に XML をファイルに保存するか、またはネットワーク上に送信します。  
@@ -73,5 +73,6 @@ Console.WriteLine(newTree);
   
  ここで示したのはごく単純な例ですが、2 つの方法に関する考え方の違いをよく表しています。 大きな XML ドキュメントを変換する場合は、関数型の方法を使用した方が生産性が高くなります。  
   
-## <a name="see-also"></a>参照  
- [XML ツリーの変更 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>参照
+
+- [XML ツリーの変更 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: d14c196babb03b7f13dde6ab5b46508a30ba26d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43394531"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208797"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>相互運用性の概要 (C# プログラミング ガイド)
 C# マネージド コードとアンマネージド コード間で相互運用を可能にする方法について説明します。  
@@ -57,10 +57,11 @@ C# マネージド コードとアンマネージド コード間で相互運用
   
  詳細については、「[COM への .NET Framework コンポーネントの公開](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)」と「[COM クラスの例](../../../csharp/programming-guide/interop/example-com-class.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [相互運用パフォーマンスの向上](https://msdn.microsoft.com/library/ms998551.aspx)  
- [COM と .NET の相互運用性の概要](https://msdn.microsoft.com/library/office/bb610378.aspx)  
- [COM 相互運用の概要 (Visual Basic)](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- [マネージド コードとアンマネージド コード間でのマーシャリング](../../../../docs/framework/interop/interop-marshaling.md)  
- [アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>参照
+
+- [相互運用パフォーマンスの向上](https://msdn.microsoft.com/library/ms998551.aspx)  
+- [COM と .NET の相互運用性の概要](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+- [COM 相互運用の概要 (Visual Basic)](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+- [マネージド コードとアンマネージド コード間でのマーシャリング](../../../../docs/framework/interop/interop-marshaling.md)  
+- [アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)

@@ -2,12 +2,12 @@
 title: 'サンプル XML ファイル: 名前空間内の顧客と注文 2'
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
-ms.openlocfilehash: 53ad3633361772dc4a9be337df7ae2e1b8a60a5a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1af227118f5c3c03d1559797d5977f5c71469678
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929717"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44217036"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>サンプル XML ファイル : 名前空間内の顧客と注文
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには顧客と注文が含まれています。 XML は名前空間に含まれています。  
@@ -430,5 +430,6 @@ ms.locfileid: "42929717"
 </Root>  
 ```  
   
-## <a name="see-also"></a>参照  
- [サンプル XML ドキュメント (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>参照
+
+- [サンプル XML ドキュメント (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

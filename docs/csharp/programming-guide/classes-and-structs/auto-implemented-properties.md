@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 756e235dacc3fcb2bf741d1d426e8dfcb53bf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d32dfd626cb8484e935dd0e8608c2e29d3ecbde
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313801"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44228079"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>自動実装するプロパティ (C# プログラミング ガイド)
 C# 3.0 以降では、自動実装プロパティを使用することで、プロパティ アクセサーに追加のロジックが必要ない場合は、プロパティをより簡潔に宣言できます。 これにより、クライアント コードでオブジェクトを作成することも可能になります。 次の例に示すようにプロパティを宣言する場合、コンパイラによって、プロパティの `get` および `set` アクセサーを介してのみアクセスできる、プライベートの匿名バッキング フィールドが作成されます。  
@@ -30,6 +30,7 @@ public string FirstName { get; set; } = "Jane";
   
  属性は、自動実装プロパティでは使用できますが、ソース コードからアクセスできないバッキング フィールドでは、当然使用できません。 プロパティのバッキング フィールドで属性を使用する必要がある場合は、標準プロパティを作成してください。  
   
-## <a name="see-also"></a>参照  
- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)
+## <a name="see-also"></a>参照
+
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)

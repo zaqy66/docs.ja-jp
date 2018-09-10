@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: 40572f1097731b330db7e061bd45436e65583ccf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc3254062e4412c2a0640e27ce4d188b83507eea
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333578"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259916"
 ---
 # <a name="ltreturnsgt-c-programming-guide"></a>&lt;returns&gt; (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -34,6 +34,7 @@ ms.locfileid: "33333578"
 ## <a name="example"></a>例  
  [!code-csharp[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

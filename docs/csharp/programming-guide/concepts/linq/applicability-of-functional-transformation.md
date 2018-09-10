@@ -2,12 +2,12 @@
 title: 関数型変換の適用範囲 (C#)
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-ms.openlocfilehash: b913c8e43c5e7a9ede6cb693ff6d3c34f3631607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: baa3866c8c2c148a3080522d7c02e28e9d0fd945
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319152"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227088"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>関数型変換の適用範囲 (C#)
 純粋関数型変換は、さまざまな状況で適用できます。  
@@ -32,7 +32,8 @@ ms.locfileid: "33319152"
   
  繰り返しになりますが、C# は命令型の方法と関数型の方法の両方をサポートしているため、両方の要素を組み込むことがアプリケーションにとって最善の設計であることを覚えておいてください。  
   
-## <a name="see-also"></a>参照  
- [純粋関数型変換の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [XML の関数型変換 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
- [純粋関数へのリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>参照
+
+- [純粋関数型変換の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [XML の関数型変換 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
+- [純粋関数へのリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

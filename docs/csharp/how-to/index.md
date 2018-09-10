@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507676"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191692"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -65,7 +65,7 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [文字列を `DateTime` に変換する](../../standard/base-types/parsing-datetime.md)。
 - [バイト配列を int に変換する](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)。
 - [文字列を数値に変換する](../programming-guide/types/how-to-convert-a-string-to-a-number.md)。
-- [`as` と `is` を使用して異なる型に安全にキャストする](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)。
+- [パターン マッチングで `as` と `is` の演算子を使用して異なる型に安全にキャストする](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。
 - [`struct` 型の変換演算子を定義する](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)。
 - [型が null 許容値型であるかを判断する](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)。
 - [null 許容値型と null 非許容値型の間で変換する](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type)。

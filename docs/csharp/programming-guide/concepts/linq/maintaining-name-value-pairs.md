@@ -2,12 +2,12 @@
 title: 名前と値のペアの保持 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-ms.openlocfilehash: ac1e6464618c00cba4ded92492fe4a687e1a25f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28c01ce17881ffe7e8fcc35e2c23dec85d50955d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325579"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216556"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>名前と値のペアの保持 (C#)
 多くのアプリケーションでは、情報を名前と値のペアとして保持するのが最適な場合があります。 このような情報には、構成情報やグローバル設定などがあります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、名前と値のペアのセットを簡単に保持できるようにするメソッドがあります。 情報を属性として保持することも、子要素のセットとして保持することもできます。  
@@ -118,7 +118,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="see-also"></a>参照  
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
- <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
- [XML ツリーの変更 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
+- <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
+- [XML ツリーの変更 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

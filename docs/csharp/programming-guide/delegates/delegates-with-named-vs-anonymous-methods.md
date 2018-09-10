@@ -5,12 +5,12 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 93e140859e44aab860577feede40df6eab4c8e00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d7dcb3c7c6fa8f1d55237504c23cf468aa0e79d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330766"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194219"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>名前付きメソッドを使用したデリゲートと匿名メソッド (C# プログラミング ガイド)
 [デリゲート](../../../csharp/language-reference/keywords/delegate.md)は、名前付きメソッドに関連付けることができます。 名前付きメソッドを使用してデリゲートをインスタンス化するときは、次のように、そのメソッドをパラメーターとして渡します。  
@@ -36,9 +36,10 @@ ms.locfileid: "33330766"
   
  [!code-csharp[csProgGuideDelegates#3](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_3.cs)]  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [デリゲート](../../../csharp/programming-guide/delegates/index.md)  
- [匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [方法: デリゲートを結合する (マルチキャスト デリゲート)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
- [イベント](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [デリゲート](../../../csharp/programming-guide/delegates/index.md)  
+- [匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [方法: デリゲートを結合する (マルチキャスト デリゲート)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [イベント](../../../csharp/programming-guide/events/index.md)

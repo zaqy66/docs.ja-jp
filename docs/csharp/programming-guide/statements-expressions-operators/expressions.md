@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3cf084102186d9e13727c36ed14e2ea72ca324f9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936955"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213807"
 ---
 # <a name="expressions-c-programming-guide"></a>式 (C# プログラミング ガイド)
 *式*とは、1 つの値、オブジェクト、メソッド、または名前空間に評価できる、1 つ以上のオペランドと 0 個以上の演算子のシーケンスです。 式には、リテラル値、メソッドの呼び出し、演算子とそのオペランド、または*簡易名*を含めることができます。 単純な名前には、変数、型メンバー、メソッド パラメーター、名前空間、または型の名前を指定できます。  
@@ -72,10 +72,11 @@ C# は*式形式のメンバー*をサポートしています。式形式のメ
 ## <a name="remarks"></a>コメント  
  変数、オブジェクト プロパティ、またはオブジェクトのインデクサー アクセスが式から識別されると、その項目の値が式の値として使用されます。 C# の式は、式が最終的に必要な型に評価される限り、値やオブジェクトが必要とされる任意の位置に配置できます。  
 
-## <a name="see-also"></a>関連項目  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [デリゲート](../../../csharp/programming-guide/delegates/index.md)  
- [演算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
- [型](../../../csharp/programming-guide/types/index.md)  
- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [デリゲート](../../../csharp/programming-guide/delegates/index.md)  
+- [演算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [型](../../../csharp/programming-guide/types/index.md)  
+- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)

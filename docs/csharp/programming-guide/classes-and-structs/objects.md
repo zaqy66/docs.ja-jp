@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 553b0a5e75364bc5c294867852265575fb9271b6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: e5e537d239bd69cb7a95ae82edbdb82144c700a1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935501"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188329"
 ---
 # <a name="objects-c-programming-guide"></a>オブジェクト (C# プログラミング ガイド)
 クラスまたは構造体の定義は、型の動作を指定する設計図に似ています。 オブジェクトは基本的に、設計図に従って割り当てられて構成されたメモリのブロックです。 プログラムでは、同じクラスのオブジェクトを多数作成できます。 オブジェクトはインスタンスとも呼ばれ、名前付きの変数または配列やコレクションに格納できます。 クライアント コードとは、これらの変数を使ってメソッドを呼び出し、オブジェクトのパブリック プロパティにアクセスするコードです。 C# などのオブジェクト指向言語では、一般的なプログラムは動的に対話する複数のオブジェクトで構成されています。  
@@ -60,11 +60,12 @@ ms.locfileid: "42935501"
   
 -   [イベント](../../../csharp/programming-guide/events/index.md)  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [object](../../../csharp/language-reference/keywords/object.md)  
- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)  
- [new 演算子](../../../csharp/language-reference/keywords/new-operator.md)  
- [共通型システム](../../../standard/base-types/common-type-system.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [object](../../../csharp/language-reference/keywords/object.md)  
+- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [new 演算子](../../../csharp/language-reference/keywords/new-operator.md)  
+- [共通型システム](../../../standard/base-types/common-type-system.md)

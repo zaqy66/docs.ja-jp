@@ -2,12 +2,12 @@
 title: LINQ to XML 軸 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
-ms.openlocfilehash: d12d35a6f9b02056946ba201a7bd5a961f64ba36
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6a27adb1c7e1dcfefda13a355700202ccda3ffab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43408656"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200842"
 ---
 # <a name="linq-to-xml-axes-c"></a>LINQ to XML 軸 (C#)
 XML ツリーを作成した後、または XML ドキュメントを XML ツリーに読み込んだ後は、クエリを実行して要素や属性を調べたり、その値を取得したりできます。  
@@ -29,6 +29,7 @@ XML ツリーを作成した後、または XML ドキュメントを XML ツリ
 |[方法: 属性の値を取得する (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|属性の値を取得する方法について説明します。|  
 |[方法: 要素の浅い値を取得する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|要素の浅い値を取得する方法について説明します。|  
   
-## <a name="see-also"></a>参照  
- [拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [プログラミング ガイド (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>参照
+
+- [拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+- [プログラミング ガイド (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

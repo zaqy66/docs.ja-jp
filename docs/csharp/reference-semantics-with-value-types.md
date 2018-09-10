@@ -4,11 +4,11 @@ description: 構造のコピーを安全に最小限に抑える言語機能を�
 ms.date: 11/10/2017
 ms.custom: mvc
 ms.openlocfilehash: f241219994d7a03192a4aea69b912bf1ac5ed29c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43422667"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209525"
 ---
 # <a name="reference-semantics-with-value-types"></a>値の型による参照セマンティクス
 

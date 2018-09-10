@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
 ms.openlocfilehash: 150149453a67d8e5319461266865cb25be180347
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43421505"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506433"
 ---
 # <a name="-operator-c-reference"></a>?: 演算子 (C# リファレンス)
 一般に三項条件演算子として知られる、条件演算子 (`?:`) では、ブール式の値に応じて 2 つの値のいずれかが返されます。 条件演算子の構文は次のとおりです。  

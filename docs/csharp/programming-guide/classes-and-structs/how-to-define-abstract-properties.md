@@ -5,12 +5,12 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: aa9006b6864b9b6b129eed323b0d6d7b29064189
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 549867cac99784ce885b8fce8a1638c40ad88cec
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172062"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180781"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>方法 : 抽象プロパティを定義する (C# プログラミング ガイド)
 次の例では、[抽象](../../../csharp/language-reference/keywords/abstract.md)プロパティを定義する方法を示します。 抽象プロパティの宣言では、プロパティ アクセサーは実装されません。クラスがプロパティをサポートしていることは宣言しますが、アクセサーの実装は派生クラスに委ねます。 基本クラスから継承された抽象プロパティを実装する方法を次の例に示します。  
@@ -52,9 +52,10 @@ ms.locfileid: "34172062"
   
  [!code-csharp[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [抽象クラスとシール クラス、およびクラス メンバー](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [方法: コマンド ラインを使用してアセンブリを作成および使用する](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [抽象クラスとシール クラス、およびクラス メンバー](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [方法: コマンド ラインを使用してアセンブリを作成および使用する](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)

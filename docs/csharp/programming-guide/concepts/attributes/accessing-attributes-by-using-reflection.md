@@ -2,12 +2,12 @@
 title: リフレクションを使用した属性へのアクセス (C#)
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: 05c051490dab5265309fd067dfb67f0ef7822541
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa8bf447fe0df81821a34b5a6d898980749921e1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318491"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216020"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>リフレクションを使用した属性へのアクセス (C#)
 カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、「<xref:System.Attribute>」を参照してください。  
@@ -113,11 +113,12 @@ class TestAuthorAttribute
 */  
 ```  
   
-## <a name="see-also"></a>参照  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)  
- [属性に格納されている情報の取得](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
- [リフレクション (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [属性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [カスタム属性の作成 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)  
+- [属性に格納されている情報の取得](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [リフレクション (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [属性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [カスタム属性の作成 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)

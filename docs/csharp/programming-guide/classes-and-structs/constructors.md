@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 40e3b73221159e191bd34c928e7513f715fa3370
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d07fe5f6164885a994838376887edccc260e291
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314035"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44185338"
 ---
 # <a name="constructors-c-programming-guide"></a>コンストラクター (C# プログラミング ガイド)
 [クラス](../../../csharp/language-reference/keywords/class.md)または[構造体](../../../csharp/language-reference/keywords/struct.md)を作成するたびに、コンストラクターが呼び出されます。 クラスまたは構造体には、異なる引数を取るコンストラクターが複数含まれていることがあります。 プログラマーはコンストラクターを利用することで、既定値を設定したり、インスタンス化を制限したり、柔軟で読みやすいコードを記述したりできます。 詳細と例については、「[コンストラクターの使用](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)」と「[インスタンス コンストラクター](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)」を参照してください。  
@@ -55,9 +55,10 @@ ms.locfileid: "33314035"
   
  [方法: コピー コンストラクターを記述する](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [static](../../../csharp/language-reference/keywords/static.md)  
- [初期化子がコンストラクターとは反対の順序で実行される理由その 1](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [static](../../../csharp/language-reference/keywords/static.md)  
+- [初期化子がコンストラクターとは反対の順序で実行される理由その 1](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

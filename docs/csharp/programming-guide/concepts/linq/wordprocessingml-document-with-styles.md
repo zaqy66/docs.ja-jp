@@ -2,12 +2,12 @@
 title: スタイルを含む WordprocessingML ドキュメント3
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 6d0d1026edf9a9dbef84eaf3d68412902749e121
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b21c9e8be957ea2b43405a96e343cea78197f68
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332223"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185114"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>スタイルを含む WordprocessingML ドキュメント
 複雑な WordprocessingML ドキュメントには、スタイルを使用して書式設定された段落が含まれています。  
@@ -21,8 +21,7 @@ ms.locfileid: "33332223"
   
  次のドキュメントでは、最初の段落にスタイル `Heading1` が設定されています。 既定のスタイルが設定されている段落が多数あります。 スタイル `Code` が設定されている段落も多数あります。 このドキュメントは比較的複雑であるため、LINQ to XML を使用した解析を行うのに適したドキュメントといえます。  
   
- 既定以外のスタイルが設定されている段落では、段落要素に `w:pPr` という名前の子要素があり、この子要素には `w:pStyle` という子要素があります。 
-          `w:val` 要素には、スタイル名を格納する  という属性があります。 段落に既定のスタイルが設定されている場合は、段落要素に `w:p.Pr` 子要素はありません。  
+ 既定以外のスタイルが設定されている段落では、段落要素に `w:pPr` という名前の子要素があり、この子要素には `w:pStyle` という子要素があります。 `w:val` 要素には、スタイル名を格納する  という属性があります。 段落に既定のスタイルが設定されている場合は、段落要素に `w:p.Pr` 子要素はありません。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -138,5 +137,6 @@ ms.locfileid: "33332223"
 </w:document>  
 ```  
   
-## <a name="see-also"></a>参照  
- [Office Open XML WordprocessingML ドキュメントの詳細 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>参照
+
+- [Office Open XML WordprocessingML ドキュメントの詳細 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

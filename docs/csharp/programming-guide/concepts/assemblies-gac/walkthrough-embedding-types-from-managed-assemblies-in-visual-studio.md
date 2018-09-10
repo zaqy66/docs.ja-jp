@@ -2,12 +2,12 @@
 title: 'チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 90bb523e3eb42cea2cd0a9d1e753e4d9b9873c0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932096"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201258"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)
 厳密な名前を持つマネージド アセンブリから型情報を埋め込むと、アプリケーション内で型を疎結合して、バージョンに依存しないプログラムを実現できます。 つまり、各バージョン用の再コンパイルを必要とすることなく、マネージド ライブラリの複数のバージョンから型を使用するプログラムを記述できます。  
@@ -232,8 +232,9 @@ ms.locfileid: "42932096"
   
 6.  ファイル エクスプローラーで、出力パスのフォルダー (たとえば、C:\TypeEquivalenceSample) を開きます。 TypeEquivalenceClient.exe をダブルクリックして、プログラムを実行します。 プログラムでは、再コンパイルを行わなくても、新バージョンの TypeEquivalenceRuntime アセンブリが反映されます。  
   
-## <a name="see-also"></a>参照  
- [/link (C# コンパイラ オプション)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)  
- [アセンブリを使用したプログラミング](../../../../framework/app-domains/programming-with-assemblies.md)  
- [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>参照
+
+- [/link (C# コンパイラ オプション)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)  
+- [アセンブリを使用したプログラミング](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

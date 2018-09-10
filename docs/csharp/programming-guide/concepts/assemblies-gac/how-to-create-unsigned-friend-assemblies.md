@@ -2,12 +2,12 @@
 title: '方法: 署名のないフレンド アセンブリを作成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 676b9d3c641f45736af50bc2290426e261b591c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340204"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44211802"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>方法: 署名のないフレンド アセンブリを作成する (C#)
 この例では、署名のないアセンブリと共にフレンド アセンブリを使用する方法を示します。  
@@ -90,9 +90,10 @@ ms.locfileid: "33340204"
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性と <xref:System.Security.Permissions.StrongNameIdentityPermission> クラスには類似点があります。 主な違いは、<xref:System.Security.Permissions.StrongNameIdentityPermission> はセキュリティ アクセス許可を要求することで特定のコード セクションを実行できますが、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性では `internal` 型とメンバーの参照可能範囲を制御することです。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [フレンド アセンブリ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [方法: 署名されたフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [フレンド アセンブリ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [方法: 署名されたフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
 ms.openlocfilehash: 49722d5dadf694e8ee3037646652b921ddda3e91
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883737"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44186072"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>チュートリアル : ステータス バー情報の実行時更新
 > [!IMPORTANT]

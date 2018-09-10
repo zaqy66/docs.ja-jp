@@ -7,12 +7,12 @@ helpviewer_keywords:
 - less than or equal to operator (<=) [C#]
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
-ms.openlocfilehash: 24bf274bfcb0a8e19a79aafb3bd7920054044be0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afbb932c1be010790236bec73a36acf0f01b97f4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271163"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180697"
 ---
 # <a name="lt-operator-c-reference"></a>&lt;= 演算子 (C# リファレンス)
 すべての数値型と列挙型で "以下" 関係演算子 (`<=`) が定義されます。これは、最初のオペランドが 2 番目のオペランドと等しいか、それより小さい場合に `true` を返し、それ以外の場合、`false` を返します。  
@@ -23,8 +23,9 @@ ms.locfileid: "33271163"
 ## <a name="example"></a>例  
  [!code-csharp[csRefOperators#32](../../../csharp/language-reference/operators/codesnippet/CSharp/less-than-equal-operator_1.cs)]  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# 演算子](../../../csharp/language-reference/operators/index.md)  
- [explicit](../../../csharp/language-reference/keywords/explicit.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# 演算子](../../../csharp/language-reference/operators/index.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)

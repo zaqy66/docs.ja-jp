@@ -2,12 +2,12 @@
 title: プログラミング ガイド (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-ms.openlocfilehash: 03742916c973f9ddac8163fe231cba45750ff080
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: acb8271ad9ea338d31516c35bae46593a5fd2f78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752155"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187914"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>プログラミング ガイド (LINQ to XML) (C#)
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用したプログラミングに関する概念と方法の情報について説明します。  
@@ -15,8 +15,7 @@ ms.locfileid: "42752155"
 ## <a name="who-should-read-this-documentation"></a>このドキュメントの対象読者  
  このドキュメントは、C# や [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] の基本的な側面について既に理解している開発者を対象としています。  
   
- このドキュメントの目的は、多数の開発者が [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を簡単に使用できるようにすることです。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] によって、XML プログラミングが容易になります。 
-           を使用するために上級開発者になる必要はありません。  
+ このドキュメントの目的は、多数の開発者が [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を簡単に使用できるようにすることです。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] によって、XML プログラミングが容易になります。 を使用するために上級開発者になる必要はありません。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、ジェネリック クラスに大きく依存しています。 そのため、ジェネリック クラスの使用について理解することが非常に重要です。 また、パラメーター化された型として宣言されるデリゲートに関する知識があると役立ちます。 C# のジェネリック クラスに慣れていない場合は、「[ジェネリック クラス](../../../../csharp/programming-guide/generics/generic-classes.md)」を参照してください。  
   
@@ -35,6 +34,7 @@ ms.locfileid: "42752155"
 |[LINQ to XML のセキュリティ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-security.md)|LINQ to XML に関連するセキュリティの問題について説明し、セキュリティ上の脆弱性を改善するためのガイダンスを紹介します。|  
 |[サンプル XML ドキュメント (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|このドキュメントの多数の例で使用されているサンプル XML ドキュメントが含まれています。|  
   
-## <a name="see-also"></a>参照  
- [はじめに (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a>参照
+
+- [はじめに (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)

@@ -4,12 +4,12 @@ description: dotnet テストおよび MSTest を使用したサンプル ソリ
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 6cfc389a1ee526d8dc4383c5efd6fb3299eb08d8
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: efeb12eb43539b0a85168b1162e0f8b94ad67e90
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105603"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213833"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest と .NET Core による単体テスト C#
 
@@ -144,7 +144,7 @@ public bool IsPrime(int candidate)
 
 テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります (0、-1)。 `[TestMethod]` 属性を使用すると新しいテストを追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の MSTest 属性があります。  `[DataTestMethod]` 属性は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。 `[DataRow]` 属性を使用して、そのような入力の値を指定することができます。
 
-新しいテストを作成するのではなく、この 2 つの属性を適用することで 1 つのデータ駆動テストを作成できます。 そのデータ駆動テストとは、複数の 2 未満の値を調べて、もっとも小さい素数を特定するという手法です。
+新しいテストを作成するのではなく、この 2 つの属性を適用することで 1 つのデータ駆動テストを作成できます。 そのデータ駆動テストとは、複数の 2 未満の値を調べて、最も小さい素数を特定するという手法です。
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 

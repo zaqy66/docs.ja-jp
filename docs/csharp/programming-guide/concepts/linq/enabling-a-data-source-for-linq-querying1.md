@@ -2,12 +2,12 @@
 title: データ ソースの LINQ クエリの有効化1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220998"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253183"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>データ ソースの LINQ クエリの有効化
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] を拡張して、データ ソースを [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] パターンでクエリできるようにする方法はいくつかあります。 データ ソースは、いくつか例を挙げると、データ構造体、Web サービス、ファイル システム、またはデータベースの場合があります。 クエリの構文とパターンは変わらないため、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] パターンを使用すると、クライアントは [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリが有効になっているデータ ソースを簡単にクエリできます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] は、次の方法によってこれらのデータ ソースに拡張することができます。  
@@ -39,9 +39,10 @@ ms.locfileid: "39220998"
   
  `IQueryable` プロバイダーなどの複雑な [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] プロバイダーは [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ一式を、SQL などの表現力が豊かなクエリ言語に変換する場合があります。 複雑なプロバイダーは、それほど複雑でないプロバイダーより一般的です。これは、より多様な質問をクエリで処理できるためです。 さらに、オープンな型システムを持つため、ユーザー定義型をマップするために広範なインフラストラクチャを含める必要があります。 複雑なプロバイダーの開発には、多大な労力を要します。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Linq.IQueryable%601>  
- <xref:System.Collections.Generic.IEnumerable%601>  
- <xref:System.Linq.Enumerable>  
- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Linq.IQueryable%601>  
+- <xref:System.Collections.Generic.IEnumerable%601>  
+- <xref:System.Linq.Enumerable>  
+- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

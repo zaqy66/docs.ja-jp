@@ -8,12 +8,12 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: d6a7083e1c0cf0dc5c076a69dee15fc39e234d53
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 77db2841d6ef9af21d38736f39e6041699ca13d5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172326"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180263"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>方法: 読み取り/書き込みのプロパティの宣言と使用 (C# プログラミング ガイド)
 プロパティは、オブジェクトのデータへの保護されていない、制御されず未確認のアクセスに伴うリスクなしにパブリック データ メンバーの利便性を提供します。 これは*アクセサー*を通じて行われます。アクセサーは、基になるデータ メンバーの値を割り当てたり、取得したりする特殊なメソッドです。 [set](../../../csharp/language-reference/keywords/set.md) アクセサーはデータ メンバーの割り当てを可能にし、[get](../../../csharp/language-reference/keywords/get.md) アクセサーはデータ メンバーの値を取得します。  
@@ -54,7 +54,8 @@ person.SetAge(person.GetAge() + 1);
   
  プログラムでは `ToString` が明示的に使用されないことに注意してください。 既定では、`WriteLine` 呼び出しによって呼び出されます。  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)

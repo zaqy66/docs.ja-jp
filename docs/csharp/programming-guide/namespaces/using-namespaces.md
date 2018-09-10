@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 773add221317a2154ac620acf766607ec22c629d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81876d1818a6e82764e4aea0ae2b6f9e091f0ba3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329548"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208648"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>名前空間の使用 (C# プログラミング ガイド)
 C# プログラム内では名前空間が 2 つの方法でよく使用されます。 最初の方法では、.NET Framework クラスで名前空間を使用して、その多くのクラスを整理します。 2 つ目の方法では、独自の名前空間を宣言します。これは、より大きなプログラミング プロジェクトでクラス名とメソッド名のスコープを制御するのに役立ちます。  
@@ -87,10 +87,11 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
   
  `global` エイリアスの詳細については、「[方法: グローバル名前空間エイリアスを使用する](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [名前空間](../../../csharp/programming-guide/namespaces/index.md)  
- [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [。演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
- [:: 演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [extern](../../../csharp/language-reference/keywords/extern.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [名前空間](../../../csharp/programming-guide/namespaces/index.md)  
+- [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [。演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [:: 演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [extern](../../../csharp/language-reference/keywords/extern.md)

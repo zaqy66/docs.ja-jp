@@ -2,12 +2,12 @@
 title: '方法: XML ファイルにオブジェクト データを書き込む (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 1c8bfd00452cee63456bc3bf64ccf4a0c61aa06e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8fb60640c9bdc0337d45b6901b1be3979dbac1f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320549"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259757"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>方法: XML ファイルにオブジェクト データを書き込む (C#)
 <xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、クラスから XML ファイルにオブジェクトを書き込む例を次に示します。  
@@ -61,7 +61,8 @@ public class XMLWrite
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  次のコード例では、ファイルが存在しない場合は新規にファイルを作成します。 アプリケーションでファイルを作成する必要がある場合、そのアプリケーションにはフォルダーに対する `Create` アクセスが必要です。 ファイルが既に存在する場合、アプリケーションに必要なのは、より低い権限である `Write` アクセスだけです。 フォルダーに対して `Read` アクセスを許可するのではなく、可能な限りアプリケーションの配置時にファイルを作成しておき、1 つのファイルに対してのみ `Create` アクセスを許可する方が安全です。  
   
-## <a name="see-also"></a>参照  
- <xref:System.IO.StreamWriter>  
- [方法: XML ファイルからオブジェクト データを読み込む (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [シリアル化 (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.IO.StreamWriter>  
+- [方法: XML ファイルからオブジェクト データを読み込む (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+- [シリアル化 (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)

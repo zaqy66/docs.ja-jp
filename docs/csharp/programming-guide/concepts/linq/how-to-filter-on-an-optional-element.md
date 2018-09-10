@@ -2,12 +2,12 @@
 title: '方法: 省略可能な要素をフィルター処理する (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: aa6eb5c9f661a27729c409edcc44b75377498925
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c781db261dbf673af7a11150971956b4c07da774
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320171"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205310"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>方法: 省略可能な要素をフィルター処理する (C#)
 要素に対するフィルター処理が、その要素が XML ドキュメント内に存在しているかどうか明確でない場合でも必要になることがあります。 特定の要素が子要素を持たない場合、その要素に対するフィルター処理によって null 参照例外が発生しないように検索を実行する必要があります。 次の例では、`Child5` 要素には `Type` 子要素はありませんが、クエリは正常に実行されます。  
@@ -95,10 +95,11 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a>参照  
- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
- [基本的なクエリ (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [射影操作 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
+- [基本的なクエリ (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [射影操作 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

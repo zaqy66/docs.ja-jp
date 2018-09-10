@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 ms.openlocfilehash: e15210d189c4a553da72b418f583e44666bac2fc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452662"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201178"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library (C# コンパイラ オプション)
 **-target:library** オプションを指定した場合、コンパイラは実行可能ファイル (EXE) ではなく、ダイナミック リンク ライブラリ (DLL) を作成します。  
@@ -41,7 +41,7 @@ ms.locfileid: "43452662"
   
 3.  **[出力の種類]** プロパティを変更します。  
   
- このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.ProjectProperties3.OutputType%2A>」をご覧ください。  
+ このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>」をご覧ください。  
   
 ## <a name="example"></a>例  
  `in.cs` をコンパイルし、`in.dll` を作成するには、次のコードを使用します。  

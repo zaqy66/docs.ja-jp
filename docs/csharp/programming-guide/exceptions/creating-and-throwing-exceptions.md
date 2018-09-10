@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 91676830d88ddee79c72211ab43b7be32fa8724e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 2e792a230ccead5d9a73f9b78a83d57738c31085
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908134"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260072"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>例外の作成とスロー (C# プログラミング ガイド)
 例外は、プログラムの実行中にエラーが発生したことを示すために使われます。 エラーを説明する例外オブジェクトが作成された後、[throw](../../../csharp/language-reference/keywords/throw.md) キーワードで "*スロー*" されます。 そのとき、ランタイムは最も互換性のある例外ハンドラーを検索します。  
@@ -64,8 +64,9 @@ ms.locfileid: "42908134"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)  
- [例外階層](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
- [例外処理](../../../csharp/programming-guide/exceptions/exception-handling.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)  
+- [例外階層](https://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+- [例外処理](../../../csharp/programming-guide/exceptions/exception-handling.md)

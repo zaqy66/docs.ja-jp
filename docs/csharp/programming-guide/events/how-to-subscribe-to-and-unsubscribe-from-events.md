@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 51b611237422ef30730850369627467c152f7579
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e27473ca34f634f4a3125a2e87e6d0ef918a6f9d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336204"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225439"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>方法 : イベント サブスクリプションとサブスクリプションの解除 (C# プログラミング ガイド)
 別のクラスによってパブリッシュされるイベントが発生したときに呼び出されるカスタム コードを作成するときは、そのイベントをサブスクライブします。 たとえば、ユーザーがボタンをクリックしたらアプリケーションで何かを行うには、ボタンの `click` イベントをサブスクライブします。  
@@ -98,9 +98,10 @@ ms.locfileid: "33336204"
   
      すべてのサブスクライバーがイベントのサブスクリプションを解除すると、パブリッシャー クラスのイベント インスタンスは `null` に設定されます。  
   
-## <a name="see-also"></a>参照  
- [イベント](../../../csharp/programming-guide/events/index.md)  
- [event](../../../csharp/language-reference/keywords/event.md)  
- [方法: .NET Framework ガイドラインに準拠したイベントを発行する](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
- [-= 演算子 (C# リファレンス)](../../language-reference/operators/subtraction-assignment-operator.md)  
- [+= 演算子](../../../csharp/language-reference/operators/addition-assignment-operator.md)
+## <a name="see-also"></a>参照
+
+- [イベント](../../../csharp/programming-guide/events/index.md)  
+- [event](../../../csharp/language-reference/keywords/event.md)  
+- [方法: .NET Framework ガイドラインに準拠したイベントを発行する](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+- [-= 演算子 (C# リファレンス)](../../language-reference/operators/subtraction-assignment-operator.md)  
+- [+= 演算子](../../../csharp/language-reference/operators/addition-assignment-operator.md)

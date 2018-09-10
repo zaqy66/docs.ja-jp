@@ -2,12 +2,12 @@
 title: '方法 : 名前空間プレフィックスを制御する (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: af864139d56bd3ebb22cca6369b82539b9d007da
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: dd2a91fde868425cadbc395d6db0f913e2be600f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417372"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44182142"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>方法 : 名前空間プレフィックスを制御する (C#) (LINQ to XML)
 このトピックでは、XML ツリーをシリアル化する場合に名前空間プレフィックスを制御する方法について説明します。  
@@ -54,5 +54,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>参照  
- [XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>参照
+
+- [XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

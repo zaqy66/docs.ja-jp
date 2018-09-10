@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: d1565e262fbd3ebcee2d1576a2a0c8ed3ba8ce38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9216cf61b6b9368112f769d952457df4aab4297
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288227"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183302"
 ---
 # <a name="gt-operator-c-reference"></a>=&gt; 演算子 (C# リファレンス)
 
@@ -110,8 +110,9 @@ public override string ToString()
 ```
 式本体の定義の詳細については、[式形式メンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)に関するページを参照してください。
 
-## <a name="see-also"></a>参照  
-[C# リファレンス](../../../csharp/language-reference/index.md)   
-[C# プログラミング ガイド](../../../csharp/programming-guide/index.md)   
-[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-[式形式のメンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)   
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)   
+- [ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
+- [式形式のメンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

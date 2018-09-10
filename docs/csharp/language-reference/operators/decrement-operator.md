@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -- operator [C#]
 - decrement operator (--) [C#]
 ms.assetid: 6b9cfe86-63c7-421f-9379-c9690fea8720
-ms.openlocfilehash: 25f301bc0b2bc9bf51b0a44f26b2efabae00e452
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 615b100447233856ab3740d075d69e3ae19285fd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288802"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210430"
 ---
 # <a name="---operator-c-reference"></a>-- 演算子 (C# リファレンス)
 デクリメント演算子 (`--`) は、オペランドを 1 ずつデクリメントします。 デクリメント演算子はそのオペランド ( `--variable` および `variable--`) の前後に指定できます。 1 番目の形式は前置デクリメント演算です。 この演算の結果は、デクリメント "後" のオペランドの値になります。 2 番目の形式は後置デクリメント演算です。 この演算の結果は、デクリメント "前" のオペランドの値になります。  
@@ -25,7 +25,8 @@ ms.locfileid: "33288802"
 ## <a name="example"></a>例  
  [!code-csharp[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/CSharp/decrement-operator_1.cs)]  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# 演算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# 演算子](../../../csharp/language-reference/operators/index.md)

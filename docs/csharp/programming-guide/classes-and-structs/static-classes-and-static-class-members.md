@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: f3e64d975d2845d8317b37f43c3811af6be03b55
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 60a75946d30b1555aea01507d846e790dd00f767
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468698"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216491"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>静的クラスと静的クラス メンバー (C# プログラミング ガイド)
 [静的](../../../csharp/language-reference/keywords/static.md)クラスは基本的には非静的クラスと同じですが、静的クラスはインスタンス化できないという点が異なります。 つまり、[new](../../../csharp/language-reference/keywords/new.md) キーワードを使用して、そのクラス型の変数を作成することはできません。 インスタンス変数がないため、静的クラスのメンバーにアクセスするには、クラス名自体を使用します。 たとえば、`UtilityClass` という静的クラスがあり、`MethodA` というパブリック メソッドが定義されている場合、このメソッドを呼び出すには次の例のようにします。  
@@ -86,10 +86,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [static](../../../csharp/language-reference/keywords/static.md)  
- [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [静的コンストラクター](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
- [インスタンス コンストラクター](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [static](../../../csharp/language-reference/keywords/static.md)  
+- [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [静的コンストラクター](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
+- [インスタンス コンストラクター](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)

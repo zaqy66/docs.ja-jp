@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: a1746a492685cf25869bd06935bfd056de257fea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 476f5940b0b93d0c28bcd2bc9ca73147bc7bf3eb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331442"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210040"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>コンパイラにより生成された例外 (C# プログラミング ガイド)
 一部の例外は、基本操作が失敗した場合に .NET Framework の共通言語ランタイム (CLR) によって自動的にスローされます。 次の表には、これらの例外とそのエラー条件が一覧で示されています。  
@@ -27,10 +27,11 @@ ms.locfileid: "33331442"
 |<xref:System.StackOverflowException>|保留中のメソッド呼び出しが多すぎることが原因で実行スタックが不足したときにスローされます。通常は、非常に深い再帰か無限再帰があることを示します。|  
 |<xref:System.TypeInitializationException>|静的コンストラクターが例外をスローし、その例外をキャッチするための対応する `catch` 句がない場合にスローされます。|  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)  
- [例外処理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)  
+- [例外処理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

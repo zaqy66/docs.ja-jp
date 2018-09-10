@@ -2,12 +2,12 @@
 title: 結合操作 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 23d1432d32b22964c333640ccd3ac8dc7a2394d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f03d5cf14525a6d23240747c2f377348bf608782
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480310"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44200855"
 ---
 # <a name="join-operations-c"></a>結合操作 (C#)
 2 つのデータ ソースの "*結合*" とは、あるデータ ソースのオブジェクトを、共通の属性を共有する別のデータ ソースのオブジェクトと関連付けることです。  
@@ -27,17 +27,18 @@ ms.locfileid: "43480310"
 |Join|キー セレクター関数に基づいて 2 つのシーケンスを結合し、値のペアを抽出します。|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|キー セレクター関数に基づいて 2 つのシーケンスを結合し、各要素について結果として得られる一致をグループ化します。|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>参照  
- <xref:System.Linq>  
- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [結合およびクロス積クエリの作成](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
- [join 句](../../../../csharp/language-reference/keywords/join-clause.md)  
- [方法: 複合キーを使用して結合する](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
- [方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
- [方法: join 句の結果の順序を指定する](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
- [方法: カスタム結合操作を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
- [方法: グループ化結合を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
- [方法: 内部結合を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
- [方法: 左外部結合を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
- [方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Linq>  
+- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [結合およびクロス積クエリの作成](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
+- [join 句](../../../../csharp/language-reference/keywords/join-clause.md)  
+- [方法: 複合キーを使用して結合する](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+- [方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+- [方法: join 句の結果の順序を指定する](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+- [方法: カスタム結合操作を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
+- [方法: グループ化結合を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+- [方法: 内部結合を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+- [方法: 左外部結合を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+- [方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 40c709e8a68f3a095672a9d4b7aacde5c62e12af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b732de508c8738de5e5e55168a6e17a1d88a3b02
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314217"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259822"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名型 (C# プログラミング ガイド)
 匿名型を使用すると、あらかじめ明示的に型を定義することなく、一連の読み取り専用プロパティを単一のオブジェクトにカプセル化できるので便利です。 型の名前はコンパイラにより生成され、ソース コード レベルでは使用できません。 各プロパティの型はコンパイラにより推測されます。  
@@ -54,8 +54,9 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  匿名型の <xref:System.Object.Equals%2A> メソッドと <xref:System.Object.GetHashCode%2A> メソッドは、プロパティの `Equals` メソッドと `GetHashCode` メソッドとして定義されています。このため、同じ匿名型の 2 つのインスタンスは、すべてのプロパティが等しい場合のみ等しいとみなされます。  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)

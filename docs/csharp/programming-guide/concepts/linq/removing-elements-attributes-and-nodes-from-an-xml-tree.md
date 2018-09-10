@@ -2,12 +2,12 @@
 title: XML ツリーからの要素、属性、およびノードの削除 (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: 85c1adc06321abf90fe478abf5375882069f11ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ce63ce6a4ef75dedc788efca11e8dd2bdb471eb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339970"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44217491"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>XML ツリーからの要素、属性、およびノードの削除 (C#)
 要素、属性、およびその他の種類のノードを削除して、XML ツリーを変更できます。  
@@ -78,5 +78,6 @@ Console.WriteLine(root);
   
  最初の孫要素が `Child1` から削除されていることがわかります。 すべての孫要素が、`Child2` と `Child3` から削除されています。  
   
-## <a name="see-also"></a>参照  
- [XML ツリーの変更 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>参照
+
+- [XML ツリーの変更 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

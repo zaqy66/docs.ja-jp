@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 82de2841a74f58905d3089bb0b320e7501a77045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e4c1f346b83cf97c57a359984bd08e075b6451b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337614"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253222"
 ---
 # <a name="using-indexers-c-programming-guide"></a>インデクサーの使用 (C# プログラミング ガイド)
 インデクサーは構文を簡略化します。これを使用すると、[クラス](../../../csharp/language-reference/keywords/class.md)、[構造体](../../../csharp/language-reference/keywords/struct.md)、または[インターフェイス](../../../csharp/language-reference/keywords/interface.md)を作成でき、クライアント アプリケーションは配列と同じようにアクセスできます。 インデクサーは、内部コレクションまたは配列をカプセル化することが主な目的である型で最も多く実装されます。 たとえば、TempRecord という名前のクラスがあるとします。これは温度を華氏で表し、24 時間のうちに 10 回、異なる時刻に温度を記録します。 クラスには float 型の "temps" という名前の配列が含まれており、これは温度を表します。また、<xref:System.DateTime> も含まれており、これは温度が記録された日付を表します。 このクラスにインデクサーを実装することで、クライアントは、`float temp = tr.temps[4]` ではなく `float temp = tr[4]` として TempRecord インスタンスの温度にアクセスできます。 インデクサーはクライアント アプリケーションの構文を簡略化するだけでなく、クラスとその目的を、他の開発者たちにとってわかりやすい、より直感的なものにします。  
@@ -71,7 +71,8 @@ public int this [int index]   // Indexer declaration
   
 -   `get` および [set](../../../csharp/language-reference/keywords/set.md) アクセサーのアクセシビリティを設定し、適切な制限を指定します。 これは、`set` アクセサーの場合、特に重要です。 詳細については、「[アクセサーのアクセシビリティの制限](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)

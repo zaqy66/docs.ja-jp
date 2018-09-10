@@ -9,12 +9,12 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: bf9ead7934630d3974657107ca38e08bbd3bed85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 66e6f0da417e62bb592fdd8654f85cdb80ccf9bc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322316"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197207"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>アクセサーのアクセシビリティの制限 (C# プログラミング ガイド)
 プロパティまたはインデクサーの [get](../../../csharp/language-reference/keywords/get.md) および [set](../../../csharp/language-reference/keywords/set.md) 部分は、*アクセサー*と呼ばれます。 既定では、これらのアクセサーは、それらが属するプロパティまたはインデクサーと同じ可視性またはアクセス レベルを持っています。 詳細については、「[アクセシビリティ レベル](../../../csharp/language-reference/keywords/accessibility-levels.md)」を参照してください。 ただし、これらのアクセサーのいずれかにアクセスを制限すると便利な場合があります。 通常、これには、`set` アクセサーのアクセシビリティを制限しながら、`get` アクセサーのパブリック アクセスを維持する操作が含まれます。 例:  
@@ -63,8 +63,9 @@ ms.locfileid: "33322316"
   
  `Name and ID in the derived class: John, John123`  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
- [アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
+- [アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)

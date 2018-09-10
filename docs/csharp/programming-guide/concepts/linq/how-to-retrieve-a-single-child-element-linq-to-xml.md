@@ -2,12 +2,12 @@
 title: '方法: 単一の子要素を取得する (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-ms.openlocfilehash: 664b9496c8411055fcd09a1ea0709cdfdae79524
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77ccd56d1d131a740bb90ef4258ef35504f5e3cb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321338"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206196"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>方法: 単一の子要素を取得する (LINQ to XML) (C#)
 このトピックでは、子要素名を指定して単一の子要素を取得する方法について説明します。 子要素の名前が既知であり、この名前を持つ要素が 1 つしか存在しない場合は、コレクションの代わりに 1 つの要素だけを取得する方が便利な場合があります。  
@@ -53,5 +53,6 @@ Console.WriteLine(e);
 <aw:DeliveryNotes xmlns:aw="http://www.adventure-works.com">Please leave packages in shed by driveway.</aw:DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>参照  
- [LINQ to XML 軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>参照
+
+- [LINQ to XML 軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

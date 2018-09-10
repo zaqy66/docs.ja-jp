@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: c4f29cd2ae65fb05a2636ae3674c7ffd1613b0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ebacff0f3a1704ec001e3570d0df136f54baf9d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338540"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44206459"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>方法 : ファイル、フォルダー、およびドライブに関する情報を取得する (C# プログラミング ガイド)
 .NET Framework では、次のクラスを使用して、ファイル システム情報にアクセスできます。  
@@ -52,7 +52,8 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  指定したファイルの読み取りに必要なアクセス許可がアプリケーションに与えられていない場合、`Exists` メソッドは目的のパスが存在するかどうかに関係なく `false` を返します。ただし、例外はスローされません。  
   
-## <a name="see-also"></a>参照  
- <xref:System.IO?displayProperty=nameWithType>  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [ファイル システムとレジストリ (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [ファイル システムとレジストリ (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/index.md)

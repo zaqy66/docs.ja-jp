@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 3bfb4028fb5efce693abd83b40636b0149962e3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fe2d61001584aa7c175500bfa754b2ae2244660
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339679"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209252"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>ジェネリックと属性 (C# プログラミング ガイド)
 属性は、非ジェネリック型の場合と同様に、ジェネリック型に適用できます。 属性の適用については、「[属性](../../../csharp/programming-guide/concepts/attributes/index.md)」を参照してください。  
@@ -43,7 +43,8 @@ ms.locfileid: "33339679"
   
  実行時にジェネリック型または型パラメーターに関する情報を取得するには、<xref:System.Reflection> のメソッドを利用できます。 詳細については、「[ジェネリックとリフレクション](../../../csharp/programming-guide/generics/generics-and-reflection.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [ジェネリック](../../../csharp/programming-guide/generics/index.md)  
- [属性](../../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [ジェネリック](../../../csharp/programming-guide/generics/index.md)  
+- [属性](../../../../docs/standard/attributes/index.md)

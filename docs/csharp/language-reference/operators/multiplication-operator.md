@@ -7,12 +7,12 @@ helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: 6c5d4de587b67e5ade158c163a87e8dea6bece5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 873cc1dc0d81425117f1784353acf08b35158133
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275842"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225361"
 ---
 # <a name="-operator-c-reference"></a>* 演算子 (C# リファレンス)
 乗算演算子 (`*`) は、そのオペランドの積を計算します。 すべての数値型には定義済みの乗算演算子があります。  
@@ -25,13 +25,14 @@ ms.locfileid: "33275842"
  ユーザー定義型は二項 `*` 演算子をオーバーロードできます (「[演算子](../../../csharp/language-reference/keywords/operator.md)」を参照)。 二項演算子をオーバーロードすると、対応する代入演算子がある場合、これも暗黙的にオーバーロードされます。  
   
 ## <a name="example"></a>例  
- [!code-csharp[csRefOperators#50](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_1.cs)]  
+ [!code-csharp-interactive[csRefOperators#50](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_1.cs)]  
   
 ## <a name="example"></a>例  
  [!code-csharp[csRefOperators#51](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_2.cs)]  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [アンセーフ コードとポインター](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [C# 演算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [アンセーフ コードとポインター](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+- [C# 演算子](../../../csharp/language-reference/operators/index.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-ms.openlocfilehash: 178d9e2f92c5c1989253a16d866052a1fc42c10e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cff85d60c1b59f4d1ca028f8fc02fee5728fa3d6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339931"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44251974"
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>方法 : 構造体間にユーザー定義の変換を実装する (C# プログラミング ガイド)
 この例では `RomanNumeral` および `BinaryNumeral` という 2 つの構造体を定義し、それらの間の変換を示します。  
@@ -31,7 +31,8 @@ ms.locfileid: "33339931"
   
      このステートメントでは `BinaryNumeral` から `RomanNumeral` への変換を実行します。 `RomanNumeral` は `BinaryNumeral` からの暗黙の型変換を定義しているため、キャストは不要です。  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [変換演算子](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [変換演算子](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 96cad879c843a7b70dc748675123b792137d290e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43463118"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213846"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 最初のプログラム (C# プログラミング ガイド)
 次の手順では、従来の "Hello World!" プログラムの C# バージョンを 作成します。 このプログラムでは `Hello World!` という文字列を表示します。  
@@ -78,7 +78,7 @@ ms.locfileid: "43463118"
   
  `Main` メソッドのパラメーターである `args` は、`string` の配列で、プログラムの実行時に使用したコマンド ライン引数を含みます。 C++ とは異なり、この配列には実行可能 (exe) ファイルの名前は含まれていません。  
   
- コマンド ライン引数の使用方法の詳細については、「[Main() とコマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)」および「[方法: コマンド ラインを使用してアセンブリを作成および使用する](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)」を参照してください。  
+ コマンド ライン引数の使用方法の詳細については、「[Main() とコマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)」および「[方法: コマンド ラインを使用してアセンブリを作成および使用する](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)」を参照してください。  
   
  <xref:System.Console.ReadKey%2A> メソッドの末尾で `Main` を呼び出すと、F5 キーを押してデバッグ モードでプログラムを実行するときに、出力を読み取る前にコンソール ウィンドウが終了することを回避できます。  
   
@@ -126,11 +126,12 @@ ms.locfileid: "43463118"
   
  C# コンパイラとそのオプションの詳細については、「[C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)」を参照してください。
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [インサイド C# プログラム](../../../csharp/programming-guide/inside-a-program/index.md)  
- [文字列](../../../csharp/programming-guide/strings/index.md)  
- [\<paveover>C# サンプル アプリケーション](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [Main() とコマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [インサイド C# プログラム](../../../csharp/programming-guide/inside-a-program/index.md)  
+- [文字列](../../../csharp/programming-guide/strings/index.md)  
+- [\<paveover>C# サンプル アプリケーション](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [Main() とコマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: 97e93230658b5d1da676b029169b63bc9006ddb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbf6a83d43a1b3a69e82a35d5d0875f62422cd3f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334715"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183315"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>変換演算子 (C# プログラミング ガイド)
 C# を使用すると、クラスまたは構造体に関する変換を宣言し、クラスまたは構造体を別のクラスまたは構造体に、または基本型に変換することができます。 変換は演算子と同様の方法で定義され、変換先の型に由来する名前が付けられます。 変換する引数の型と変換結果の型の両方ではなく一方を、含んでいる型にする必要があります。  
@@ -43,7 +43,8 @@ C# を使用すると、クラスまたは構造体に関する変換を宣言�
   
 -   [static](../../../csharp/language-reference/keywords/static.md)  
   
-## <a name="see-also"></a>参照  
- <xref:System.Convert>  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [Chained user-defined explicit conversions in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/) (C# でのユーザー定義の明示的変換の連結)
+## <a name="see-also"></a>参照
+
+- <xref:System.Convert>  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [Chained user-defined explicit conversions in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/) (C# でのユーザー定義の明示的変換の連結)

@@ -3,11 +3,11 @@ title: ADO.NET でのデータ ソースへの接続
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.openlocfilehash: f5788b9b0b19f32d03c917575db7b3f40324c0a2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44031727"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189265"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>ADO.NET でのデータ ソースへの接続
 ADO.NET で使用して、**接続**接続文字列に必要な認証情報を指定して特定のデータ ソースに接続するオブジェクト。 **接続**オブジェクトを使用するデータ ソースの種類に依存します。  

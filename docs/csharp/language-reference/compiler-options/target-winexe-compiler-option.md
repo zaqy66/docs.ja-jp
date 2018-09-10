@@ -9,11 +9,11 @@ helpviewer_keywords:
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
 ms.openlocfilehash: f77137e3cc2f734435d3b1d391a303fcd3e16332
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468840"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195034"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (C# コンパイラ オプション)
 **-target:winexe** オプションを使用すると、実行可能な (EXE) Windows プログラムがコンパイラによって作成されます。  
@@ -43,7 +43,7 @@ ms.locfileid: "43468840"
   
 3.  **[出力の種類]** プロパティを変更します。  
   
- このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.ProjectProperties3.OutputType%2A>」をご覧ください。  
+ このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>」をご覧ください。  
   
 ## <a name="example"></a>例  
  `in.cs` をコンパイルし、Windows プログラムを生成する例を次に示します。  

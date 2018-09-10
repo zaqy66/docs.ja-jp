@@ -2,12 +2,12 @@
 title: '方法: 署名されたフレンド アセンブリを作成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 34243a65f57f41c358439baac82a1ce169233259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340659"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260007"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>方法: 署名されたフレンド アセンブリを作成する (C#)
 この例では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 両方のアセンブリに厳密な名前が付けられている必要があります。 この例のアセンブリは両方とも同じキーを使用していますが、2 つのアセンブリそれぞれが別々のキーを使用することもできます。  
@@ -16,7 +16,7 @@ ms.locfileid: "33340659"
   
 1.  コマンド プロンプトを開きます。  
   
-2.  厳密な名前ツールで次のコマンド シーケンスを使用して、キー ファイルを生成し、公開鍵を表示します。 詳細については、「[Sn.exe (厳密名ツール)](https://msdn.microsoft.com/library/k5b5tt23)」を参照してください。  
+2.  厳密な名前ツールで次のコマンド シーケンスを使用して、キー ファイルを生成し、公開鍵を表示します。 詳細については、「[Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md)」を参照してください。  
   
     1.  この例で使用する厳密な名前キーを生成し、FriendAssemblies.snk ファイルに格納します。  
   
@@ -88,12 +88,13 @@ ms.locfileid: "33340659"
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性と <xref:System.Security.Permissions.StrongNameIdentityPermission> クラスには類似点があります。 主な違いは、<xref:System.Security.Permissions.StrongNameIdentityPermission> はセキュリティ アクセス許可を要求することで特定のコード セクションを実行できますが、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性では `internal` 型とメンバーの参照可能範囲を制御することです。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [フレンド アセンブリ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [方法: 署名のないフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (厳密名ツール)](https://msdn.microsoft.com/library/k5b5tt23)  
- [厳密な名前付きアセンブリの作成と使用](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [フレンド アセンブリ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [方法: 署名のないフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)  
+- [Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md)  
+- [厳密な名前付きアセンブリの作成と使用](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)

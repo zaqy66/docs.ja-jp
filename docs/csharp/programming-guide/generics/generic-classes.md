@@ -5,11 +5,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 65c5f376bce44e6120c17638076d2edfc38c734e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2568600c130847b3317aeb399541c61a050901ce
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216081"
 ---
 # <a name="generic-classes-c-programming-guide"></a>ジェネリック クラス (C# プログラミング ガイド)
 ジェネリック クラスは、特定のデータ型に固有ではない操作をカプセル化します。 ジェネリック クラスは最も一般的に、リンク リスト、ハッシュ テーブル、スタック、キュー、ツリーなどのコレクションと共に使用されます。 コレクションの項目を追加または削除するなどの操作は、保存されているデータの型に関係なく、基本的に同じように実行されます。  
@@ -64,9 +65,10 @@ ms.lasthandoff: 05/04/2018
   
  ジェネリック クラスは変化しません。 言い換えると、入力パラメーターが `List<BaseClass>` を指定するとき、`List<DerivedClass>` を指定するとコンパイル時エラーが表示されます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Collections.Generic>  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [ジェネリック](../../../csharp/programming-guide/generics/index.md)  
- [列挙子の状態を保存する](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
- [継承パズル、パート 1](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)
+## <a name="see-also"></a>参照
+
+- <xref:System.Collections.Generic>  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [ジェネリック](../../../csharp/programming-guide/generics/index.md)  
+- [列挙子の状態を保存する](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
+- [継承パズル、パート 1](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)
