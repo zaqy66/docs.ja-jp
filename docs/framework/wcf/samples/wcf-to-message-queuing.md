@@ -3,11 +3,11 @@ title: Windows Communication Foundation でのメッセージ キュー
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
 ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777523"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44069185"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation でのメッセージ キュー
 このサンプルでは、メッセージ キュー (MSMQ) アプリケーションを Windows Communication Foundation (WCF) アプリケーションがメッセージを送信する方法を示します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。 サービスとクライアントは同時に実行されていなくてもかまいません。  

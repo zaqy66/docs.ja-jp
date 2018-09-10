@@ -3,11 +3,11 @@ title: トランザクション MSMQ バインディング
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
 ms.openlocfilehash: 381304bcef40245bac882a4fe4ae18a6998665cf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875724"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085093"
 ---
 # <a name="transacted-msmq-binding"></a>トランザクション MSMQ バインディング
 このサンプルでは、メッセージ キュー (MSMQ) を使用して、トランザクション キューによる通信を実行する方法を示します。  

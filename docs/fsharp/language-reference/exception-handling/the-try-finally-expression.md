@@ -4,7 +4,7 @@ description: 学習方法、f# 'try… 最後に' 式では、コードのブロ
 ms.date: 05/16/2016
 ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
 ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/07/2018
 ms.locfileid: "44137058"

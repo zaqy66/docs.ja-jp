@@ -3,11 +3,11 @@ title: 双方向通信
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
 ms.openlocfilehash: 319b63ff1eefdab4c23932294c3f1970f204601e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786155"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076733"
 ---
 # <a name="two-way-communication"></a>双方向通信
 このサンプルでは、双方向のトランザクション化キューを MSMQ を介して実行する方法を示します。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 このサンプルのサービスは自己ホスト型コンソール アプリケーションであるので、サンプルを実行すると、キューに置かれたメッセージをサービスが受信するようすを観察できます。  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.openlocfilehash: fe820b9d2157c09428903a36427d3ff5e4c0045b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745581"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44069617"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>この呼び出しは待機されなかったため、現在のメソッドの実行は呼び出しの完了を待たずに続行されます。
 この呼び出しは待機されなかったため、現在のメソッドの実行は呼び出しの完了を待たずに続行されます。 呼び出しの結果に 'Await' 演算子を適用することを検討してください。  
@@ -117,7 +117,7 @@ ms.locfileid: "43745581"
   
      ボタンとテキスト ボックスを含むシンプルなウィンドウが、MainWindow.xaml の **[デザイン]** ビューに表示されます。  
   
-     XAML デザイナーの詳細については、「[XAML デザイナーを使用した UI の作成](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)」を参照してください。 独自の単純な UI を構築する方法については、「[チュートリアル: Async と Await を使用した Web へのアクセス](https://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042)」の WPF アプリケーションの作成に関するセクションと単純な WPF MainWindow のデザインに関するセクションを参照してください。  
+     XAML デザイナーの詳細については、「[XAML デザイナーを使用した UI の作成](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)」を参照してください。 独自の単純な UI を構築する方法については、「[チュートリアル: Async と Await を使用した Web へのアクセス](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」の WPF アプリケーションの作成に関するセクションと単純な WPF MainWindow のデザインに関するセクションを参照してください。  
   
 4.  MainWindow.xaml.vb のコードを次のコードに置き換えます。  
   
@@ -203,6 +203,7 @@ ms.locfileid: "43745581"
   
      想定される出力がコードの最後に表示されます。  
   
-## <a name="see-also"></a>関連項目  
- [Await 演算子](../../../visual-basic/language-reference/operators/await-operator.md)  
- [Async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>関連項目
+
+- [Await 演算子](../../../visual-basic/language-reference/operators/await-operator.md)  
+- [Async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)
