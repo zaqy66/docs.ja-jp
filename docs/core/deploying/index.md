@@ -3,13 +3,13 @@ title: .NET Core アプリケーション展開
 description: .NET Core アプリケーションの展開。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 09/03/2018
+ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562007"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891312"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core アプリケーションの展開
 
@@ -41,7 +41,9 @@ FDD の展開には、次のいくつかの利点があります。
 
 ## <a name="self-contained-deployments-scd"></a>自己完結型の展開 (SCD)
 
-自己完結型の展開では、アプリおよびすべての必要なサードパーティの依存関係と共に、アプリのビルドに使った .NET Core のバージョンも展開します。 SCD の作成には、さまざまなプラットフォーム上の [.NET Core のネイティブの依存関係](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)は含まれないので、アプリが実行する前にこれらが存在している必要があります。 ランタイムのバージョン バインディングの詳細については、[.NET Core のバージョン バインディング](../versions/selection.md)に関する記事を参照してください
+自己完結型の展開では、アプリおよびすべての必要なサードパーティの依存関係と共に、アプリのビルドに使った .NET Core のバージョンも展開します。 SCD の作成には、さまざまなプラットフォーム上の [.NET Core のネイティブの依存関係](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)は含まれないので、アプリが実行する前にこれらが存在している必要があります。 ランタイムのバージョン バインディングについて詳しくは、[.NET Core のバージョン バインディング](../versions/selection.md)に関する記事をご覧ください。
+
+.NET Core 2.1 SDK (バージョン 2.1.300) 以降、.NET Core では "*修正プログラムのバージョンのロール フォワード*" がサポートされます。 自己完結型の展開を作成するときに、.NET Core のツールによって、アプリケーションがターゲットとする .NET Core のバージョンの最新のサービス提供されたランタイムが含まれます。 (最新のサービス提供されたランタイムには、セキュリティに関する修正プログラムとその他のバグの修正が含まれます。)サービス提供されたランタイムがビルド システム上に存在する必要はありません。これは NuGet.org から自動的にダウンロードされます。修正プログラムのバージョンのロール フォワードを無効にする方法など、詳細については「[自己完結型展開ランタイムのロール フォワード](runtime-patch-selection.md)」をご覧ください。
 
 FDD および SCD の展開では別個のホスト実行可能ファイルを使用するため、発行元のシグネチャで SCD のホスト実行可能ファイルに署名できます。
 
@@ -58,6 +60,8 @@ FDD および SCD の展開では別個のホスト実行可能ファイルを�
 - .NET Core が展開パッケージに含まれているので、展開パッケージをビルドするターゲット プラットフォームを事前に選択する必要があります。
 
 - .NET Core だけでなくアプリおよびそのサードパーティの依存関係を含める必要があるので、展開パッケージは比較的大きくなります。
+
+  .NET Core 2.0 以降では、.NET Core の ["*グローバリゼーション インバリアント モード*"](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) を使用することで、Linux システムでの展開のサイズを約 28 MB 小さくすることができます。 通常、Linux 上の .NET Core は [ICU ライブラリ](https://github.com/dotnet/docs/issues/http%22//icu-project.org)に依存してグローバリゼーションをサポートします。 インバリアント モードでは、ライブラリは展開に含まれず、すべてのカルチャが[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)のように動作します。
 
 - 多数の自己完結型の .NET Core アプリをシステムに展開すると、各アプリが .NET Core ファイルを複製するので、非常に多くのディスク領域を使用する可能性があります。
 

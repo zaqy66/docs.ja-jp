@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39245592"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43885049"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Null 許容型 (C# プログラミング ガイド)
 
@@ -38,7 +38,7 @@ Null 許容型には次の特性があります。
   
 - Null 許容型では `==` 演算子と `!=` 演算子も使用できます。たとえば、`if (x != null) y = x.Value;` のように指定します。 `a` と `b` の両方が null の場合、`a == b` は `true` と評価されます。  
 
-- C# 7.0 以降では、`if (x is int xValue) y = xValue;` のように、パターン マッチングを使用して Null 許容型の値を調べて取得することができます。
+- C# 7.0 以降では、[パターン マッチング](../../pattern-matching.md#the-is-type-pattern-expression)を使用して Null 許容型の値を調べて取得することができます (`if (x is int valueOfX) y = valueOfX;`)。
   
 - `T?` の既定値は <xref:System.Nullable%601.HasValue%2A> プロパティが `false` を返すインスタンスです。  
 
@@ -54,12 +54,12 @@ Null 許容型には次の特性があります。
 
 詳細については、「[Null 許容型の使用 (C# プログラミング ガイド)](using-nullable-types.md)」と「[方法: Null 許容型を識別する (C# プログラミング ガイド)](how-to-identify-a-nullable-type.md)」を参照してください。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
- <xref:System.Nullable%601?displayProperty=nameWithType>  
- <xref:System.Nullable?displayProperty=nameWithType>  
- [??演算子](../../language-reference/operators/null-coalescing-operator.md)  
- [C# プログラミング ガイド](../index.md)  
- [C# のガイド](../../index.md)  
- [C# リファレンス](../../language-reference/index.md)  
- [null 許容値型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>  
+- <xref:System.Nullable?displayProperty=nameWithType>  
+- [??演算子](../../language-reference/operators/null-coalescing-operator.md)  
+- [C# プログラミング ガイド](../index.md)  
+- [C# のガイド](../../index.md)  
+- [C# リファレンス](../../language-reference/index.md)  
+- [null 許容値型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
