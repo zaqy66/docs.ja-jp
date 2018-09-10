@@ -5,14 +5,15 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: c1825e1a731c40a5945060f8085bd612b5d62008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297369"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261671"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>ジャグ配列 (C# プログラミング ガイド)
+
 ジャグ配列とは、その要素も配列である配列です。 ジャグ配列の要素には、異なるディメンションとサイズを指定できます。 ジャグ配列は、"配列の配列" と呼ばれることがあります。 次の例では、ジャグ配列の宣言、初期化、およびアクセスの方法について説明します。  
   
  次の 3 つの要素を持つ 1 次元配列の宣言では、それぞれが整数の 1 次元配列になっています。  
@@ -57,14 +58,16 @@ ms.locfileid: "33297369"
   
  この場合は値 3 が返されます。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>例
+
  この例では、要素自体が配列である配列を構築します。 配列の要素のそれぞれのサイズが異なります。  
   
  [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.Array>  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [配列](../../../csharp/programming-guide/arrays/index.md)  
- [1 次元配列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Array>  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [配列](../../../csharp/programming-guide/arrays/index.md)  
+- [1 次元配列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

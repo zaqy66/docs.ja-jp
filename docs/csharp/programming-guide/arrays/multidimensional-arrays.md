@@ -5,14 +5,15 @@ helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: 12cc7ff4f0a688145f2dee130e66dbe9a05ec7e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1d7a0a014c330682316e869f6727082fa3b31ef
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313850"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266019"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>多次元配列 (C# プログラミング ガイド)
+
 配列は 1 つ以上の配列を持つことができます。 たとえば、次の宣言は、4 行と 2 列の 2 次元の配列を作成します。  
   
  [!code-csharp[csProgGuideArrays#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_1.cs)]  
@@ -21,7 +22,8 @@ ms.locfileid: "33313850"
   
  [!code-csharp[csProgGuideArrays#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>配列の初期化  
+## <a name="array-initialization"></a>配列の初期化
+
  次の例に示すように、宣言時に配列を初期化することができます。  
   
  [!code-csharp[csProgGuideArrays#13](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_3.cs)]  
@@ -46,8 +48,9 @@ ms.locfileid: "33313850"
   
  [!code-csharp[csProgGuideArrays#17](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_8.cs)]  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [配列](../../../csharp/programming-guide/arrays/index.md)  
- [1 次元配列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [ジャグ配列](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [配列](../../../csharp/programming-guide/arrays/index.md)  
+- [1 次元配列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [ジャグ配列](../../../csharp/programming-guide/arrays/jagged-arrays.md)

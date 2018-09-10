@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: aaf57e666faf18010c7f267f96e6958c73e58bcf
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935139"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267129"
 ---
 # <a name="c-walkthroughs"></a>C# チュートリアル
 チュートリアルでは、製品や特定の機能領域について学習を開始するのに適した一般的なシナリオについて詳細な手順を示します。  
@@ -50,16 +50,16 @@ ms.locfileid: "42935139"
  [C# でのクエリの作成 (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式の記述に使用される C# 言語機能を示します。  
   
- [データの操作 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386927.aspx)  
+ [データの操作 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  データベース内のデータの追加、変更、および削除の [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] のシナリオについて説明します。  
   
- [簡単なオブジェクト モデルとクエリ (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
+ [簡単なオブジェクト モデルとクエリ (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
  エンティティ クラスとエンティティ クラスをフィルター処理する簡単なクエリを作成する方法について説明します。  
   
- [ストアド プロシージャのみを使用する (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb399407.aspx)  
+ [ストアド プロシージャのみを使用する (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
  ストアド プロシージャのみを実行してデータにアクセスする LINQ to SQL を使用する方法を示します。  
   
- [リレーションシップ間でのクエリの実行 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386951.aspx)  
+ [リレーションシップ間でのクエリの実行 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
  データベース内の外部キーのリレーションシップを表す [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] の関連付けの使用の例を示します。  
 
  [C# でビジュアライザーを記述する](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
@@ -69,6 +69,7 @@ ms.locfileid: "42935139"
  [配置のサンプルとチュートリアル](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  一般的な配置シナリオの詳細な例を示します。  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../csharp/programming-guide/index.md)  
- [Visual Studio のサンプル](/visualstudio/ide/visual-studio-samples)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../csharp/programming-guide/index.md)  
+- [Visual Studio のサンプル](/visualstudio/ide/visual-studio-samples)
