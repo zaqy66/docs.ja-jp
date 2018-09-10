@@ -1,38 +1,50 @@
 ---
 title: operator キーワード (C# リファレンス)
-ms.date: 07/20/2015
+description: 組み込みの C# 演算子をオーバー ロードする方法を学習する
+ms.date: 08/27/2018
 f1_keywords:
 - operator_CSharpKeyword
 - operator
 helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
-ms.openlocfilehash: c3bfada235993670bf158fe9803a09707b2b3251
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1e11d7767b61becc39b1158fae9cb2abe997e4bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929873"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480653"
 ---
-# <a name="operator-c-reference"></a><span data-ttu-id="a8494-102">operator (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="a8494-102">operator (C# Reference)</span></span>
+# <a name="operator-c-reference"></a><span data-ttu-id="a0fb1-103">operator (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="a0fb1-103">operator (C# Reference)</span></span>
 
-<span data-ttu-id="a8494-103">`operator` キーワードを使用して、組み込みの演算子をオーバーロードしたり、クラスまたは構造体宣言内でユーザー定義の変換を行ったりすることができます。</span><span class="sxs-lookup"><span data-stu-id="a8494-103">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>
+<span data-ttu-id="a0fb1-104">`operator` キーワードを使用して、組み込みの演算子をオーバーロードしたり、クラスまたは構造体宣言内でユーザー定義の変換を行ったりすることができます。</span><span class="sxs-lookup"><span data-stu-id="a0fb1-104">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>
 
-## <a name="example"></a><span data-ttu-id="a8494-104">例</span><span class="sxs-lookup"><span data-stu-id="a8494-104">Example</span></span>
+<span data-ttu-id="a0fb1-105">カスタム クラスまたは構造体上で演算子をオーバー ロードするには、対応する型で演算子の宣言を作成します。</span><span class="sxs-lookup"><span data-stu-id="a0fb1-105">To overload an operator on a custom class or struct, you create an operator declaration in the corresponding type.</span></span> <span data-ttu-id="a0fb1-106">組み込みの C# 演算子をオーバーロードする演算子宣言は、次の規則を満たす必要があります。</span><span class="sxs-lookup"><span data-stu-id="a0fb1-106">The operator declaration that overloads a built-in C# operator must satisfy the following rules:</span></span>
 
-<span data-ttu-id="a8494-105">小数を処理する非常に簡単なクラスを次に示します。</span><span class="sxs-lookup"><span data-stu-id="a8494-105">The following is a very simplified class for fractional numbers.</span></span> <span data-ttu-id="a8494-106">このクラスは、小数の加算および乗算を実行するために `+` 演算子および `*` 演算子をオーバーロードします。また、`Fraction` 型を `double` 型に変換する変換演算子も提供します。</span><span class="sxs-lookup"><span data-stu-id="a8494-106">It overloads the `+` and `*` operators to perform fractional addition and multiplication, and also provides a conversion operator that converts a `Fraction` type to a `double` type.</span></span>
+- <span data-ttu-id="a0fb1-107">これには、`public` と `static` 修飾子の両方が含まれています。</span><span class="sxs-lookup"><span data-stu-id="a0fb1-107">It includes both a `public` and a `static` modifier.</span></span>
+- <span data-ttu-id="a0fb1-108">これには `operator X` が含まれています。ここで、`X` は、オーバーロードされる演算子の名前またはシンボルです。</span><span class="sxs-lookup"><span data-stu-id="a0fb1-108">It includes `operator X` where `X` is the name or symbol of the operator being overloaded.</span></span>
+- <span data-ttu-id="a0fb1-109">単項演算子にはパラメーターが 1 つ、2 項演算子にはパラメーターが 2 つあります。</span><span class="sxs-lookup"><span data-stu-id="a0fb1-109">Unary operators have one parameter, and binary operators have two parameters.</span></span> <span data-ttu-id="a0fb1-110">いずれの場合も、少なくとも 1 つのパラメーターが演算子を宣言するクラスまたは構造体と同じ型である必要があります。</span><span class="sxs-lookup"><span data-stu-id="a0fb1-110">In each case, at least one parameter must be the same type as the class or struct that declares the operator.</span></span>
+
+<span data-ttu-id="a0fb1-111">変換演算子を定義する方法については、[明示的なキーワード](explicit.md)と[暗黙的なキーワード](implicit.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a0fb1-111">For information about how to define conversion operators, see the [explicit](explicit.md) and [implicit](implicit.md) keyword articles.</span></span>
+
+<span data-ttu-id="a0fb1-112">オーバーロードできる C# 演算子の概要については、[オーバーロード可能な演算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a0fb1-112">For an overview of the C# operators that can be overloaded, see the [Overloadable operators](../../programming-guide/statements-expressions-operators/overloadable-operators.md) article.</span></span>
+
+## <a name="example"></a><span data-ttu-id="a0fb1-113">例</span><span class="sxs-lookup"><span data-stu-id="a0fb1-113">Example</span></span>
+
+<span data-ttu-id="a0fb1-114">次の例では、小数部を表す `Fraction` 型が定義されています。</span><span class="sxs-lookup"><span data-stu-id="a0fb1-114">The following example defines a `Fraction` type that represents fractional numbers.</span></span> <span data-ttu-id="a0fb1-115">このクラスは、小数の加算および乗算を実行するために `+` 演算子および `*` 演算子をオーバーロードします。また、`Fraction` 型を `double` 型に変換する変換演算子も提供します。</span><span class="sxs-lookup"><span data-stu-id="a0fb1-115">It overloads the `+` and `*` operators to perform fractional addition and multiplication, and also provides a conversion operator that converts a `Fraction` type to a `double` type.</span></span>
 
 [!code-csharp[csrefKeywordsConversion#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#6)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="a8494-107">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="a8494-107">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="a0fb1-116">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="a0fb1-116">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="a8494-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="a8494-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0fb1-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="a0fb1-117">See also</span></span>
 
-- [<span data-ttu-id="a8494-109">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="a8494-109">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="a8494-110">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="a8494-110">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="a8494-111">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="a8494-111">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="a8494-112">implicit</span><span class="sxs-lookup"><span data-stu-id="a8494-112">implicit</span></span>](implicit.md)
-- [<span data-ttu-id="a8494-113">explicit</span><span class="sxs-lookup"><span data-stu-id="a8494-113">explicit</span></span>](explicit.md)
-- [<span data-ttu-id="a8494-114">方法: 構造体間にユーザー定義の変換を実装する</span><span class="sxs-lookup"><span data-stu-id="a8494-114">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [<span data-ttu-id="a0fb1-118">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="a0fb1-118">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="a0fb1-119">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="a0fb1-119">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="a0fb1-120">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="a0fb1-120">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="a0fb1-121">implicit</span><span class="sxs-lookup"><span data-stu-id="a0fb1-121">implicit</span></span>](implicit.md)
+- [<span data-ttu-id="a0fb1-122">explicit</span><span class="sxs-lookup"><span data-stu-id="a0fb1-122">explicit</span></span>](explicit.md)
+- [<span data-ttu-id="a0fb1-123">オーバーロード可能な演算子</span><span class="sxs-lookup"><span data-stu-id="a0fb1-123">Overloadable operators</span></span>](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
+- [<span data-ttu-id="a0fb1-124">方法: 構造体間にユーザー定義の変換を実装する</span><span class="sxs-lookup"><span data-stu-id="a0fb1-124">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

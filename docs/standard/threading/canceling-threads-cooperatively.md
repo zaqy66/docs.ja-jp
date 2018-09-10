@@ -10,18 +10,20 @@ helpviewer_keywords:
 ms.assetid: d2d6d5fd-e263-4fa0-847b-2fc3e0d82337
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3edd0f9c991df8d8d70b14f4439c5c477e8f1401
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24cacf0323c96f6959442dea94b0540633661bce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581343"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485600"
 ---
-# <a name="canceling-threads-cooperatively"></a><span data-ttu-id="00f20-102">スレッドの協調的な取り消し</span><span class="sxs-lookup"><span data-stu-id="00f20-102">Canceling Threads Cooperatively</span></span>
-<span data-ttu-id="00f20-103">[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]より前のバージョンの .NET Framework には、開始されたスレッドを協調的に取り消す手段は組み込まれていませんでした。</span><span class="sxs-lookup"><span data-stu-id="00f20-103">Prior to the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the .NET Framework provided no built-in way to cancel a thread cooperatively after it was started.</span></span> <span data-ttu-id="00f20-104">ただし、[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] では、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> オブジェクトや PLINQ クエリを取り消す場合と同様に、取り消しトークンを使用してスレッドを取り消すことができます。</span><span class="sxs-lookup"><span data-stu-id="00f20-104">However, in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can use cancellation tokens to cancel threads, just as you can use them to cancel <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> objects or PLINQ queries.</span></span> <span data-ttu-id="00f20-105"><xref:System.Threading.Thread?displayProperty=nameWithType> クラスには取り消しトークンのサポートは組み込まれていませんが、<xref:System.Threading.Thread> デリゲートを受け取る <xref:System.Threading.ParameterizedThreadStart> コンストラクターを使用して、トークンをスレッド プロシージャに渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="00f20-105">Although the <xref:System.Threading.Thread?displayProperty=nameWithType> class does not offer built-in support for cancellation tokens, you can pass a token to a thread procedure by using the <xref:System.Threading.Thread> constructor that takes a <xref:System.Threading.ParameterizedThreadStart> delegate.</span></span> <span data-ttu-id="00f20-106">この方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="00f20-106">The following example demonstrates how to do this.</span></span>  
+# <a name="canceling-threads-cooperatively"></a><span data-ttu-id="8cdc6-102">スレッドの協調的な取り消し</span><span class="sxs-lookup"><span data-stu-id="8cdc6-102">Canceling threads cooperatively</span></span>
+
+<span data-ttu-id="8cdc6-103">.NET Framework 4 より前のバージョンの .NET Framework には、開始されたスレッドを協調的に取り消す手段は組み込まれていませんでした。</span><span class="sxs-lookup"><span data-stu-id="8cdc6-103">Prior to the .NET Framework 4, the .NET Framework provided no built-in way to cancel a thread cooperatively after it was started.</span></span> <span data-ttu-id="8cdc6-104">ただし、.NET Framework 4 以降、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> オブジェクトや PLINQ クエリを取り消す場合と同様に、<xref:System.Threading.CancellationToken?displayProperty=nameWithType> を使用してスレッドを取り消すことができます。</span><span class="sxs-lookup"><span data-stu-id="8cdc6-104">However, starting with the .NET Framework 4, you can use a <xref:System.Threading.CancellationToken?displayProperty=nameWithType> to cancel threads, just as you can use them to cancel <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> objects or PLINQ queries.</span></span> <span data-ttu-id="8cdc6-105"><xref:System.Threading.Thread?displayProperty=nameWithType> クラスにはキャンセル トークンのサポートは組み込まれていませんが、<xref:System.Threading.ParameterizedThreadStart> デリゲートを受け取る <xref:System.Threading.Thread> コンストラクターを使用して、トークンをスレッド プロシージャに渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="8cdc6-105">Although the <xref:System.Threading.Thread?displayProperty=nameWithType> class does not offer built-in support for cancellation tokens, you can pass a token to a thread procedure by using the <xref:System.Threading.Thread> constructor that takes a <xref:System.Threading.ParameterizedThreadStart> delegate.</span></span> <span data-ttu-id="8cdc6-106">この方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="8cdc6-106">The following example demonstrates how to do this.</span></span>  
   
  [!code-csharp[Cancellation#14](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/CooperativeThreads.cs#14)]
  [!code-vb[Cancellation#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/CooperativeThreads.vb#14)]  
   
-## <a name="see-also"></a><span data-ttu-id="00f20-107">参照</span><span class="sxs-lookup"><span data-stu-id="00f20-107">See Also</span></span>  
- [<span data-ttu-id="00f20-108">スレッドの使用とスレッド処理</span><span class="sxs-lookup"><span data-stu-id="00f20-108">Using Threads and Threading</span></span>](../../../docs/standard/threading/using-threads-and-threading.md)
+## <a name="see-also"></a><span data-ttu-id="8cdc6-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="8cdc6-107">See also</span></span>
+
+ [<span data-ttu-id="8cdc6-108">スレッドの使用とスレッド処理</span><span class="sxs-lookup"><span data-stu-id="8cdc6-108">Using Threads and Threading</span></span>](using-threads-and-threading.md)  
