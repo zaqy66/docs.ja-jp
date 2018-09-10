@@ -4,12 +4,12 @@ description: Visual Studio Code を使用した、C# で初めての .NET Core �
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 8958c39ba16cadbfab95e35fa36e8e85ce0a4ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213618"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484669"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -50,7 +50,7 @@ ms.locfileid: "33213618"
 
 4. "Hello World" プログラムを実行する
 
-    * 「`dotnet run`」と入力します。 
+    * 「`dotnet run`」と入力します。
 
       ![dotnet run コマンド](media/with-visual-studio-code/dotnetrun.png)
 
@@ -62,7 +62,7 @@ ms.locfileid: "33213618"
 
     ![Program.cs ファイルを開く](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code で、アプリのビルドとデバッグに必要なアセットの追加を求められます。 **[はい]** を選択します。 
+2. Visual Studio Code で、アプリのビルドとデバッグに必要なアセットの追加を求められます。 **[はい]** を選択します。
 
     ![足りない資産の入力を求める](media/with-visual-studio-code/missing-assets.png)
 
@@ -74,7 +74,7 @@ ms.locfileid: "33213618"
 
     ![.NET Core を選択する](media/with-visual-studio-code/selectcore.png)
 
-5. 9 行目の横にある**エディター余白** (エディター内の行番号の左側の領域) をクリックして、プロジェクトにブレークポイントを追加します。
+5. 9 行目の横にある**エディター余白** (エディター内の行番号の左側の領域) をクリックして、プロジェクトにブレークポイントを追加するか、またはエディター内でテキスト カーソルを 9 行目に移動して <kbd>F9</kbd> キーを押します。
 
     ![ブレークポイントの設定](media/with-visual-studio-code/setbreakpoint.png)
 
@@ -85,9 +85,16 @@ ms.locfileid: "33213618"
 
 7. 上部にある緑色の矢印を選択してデバッグを継続するか、上部にある赤色の四角形を選択して停止します。
 
-> [!TIP] 
+> [!TIP]
 > Visual Studio Code で OmniSharp を使用した .NET Core のデバッグの詳細とトラブルシューティングのヒントについては、「[Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)」 (.NET Core デバッガーの設定に関する指示) を参照してください。
 
+## <a name="faq"></a>FAQ
+
+### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Visual Studio Code 内で C# をビルドおよびデバッグするのに必要な資産が欠落しています。 デバッガーには、"構成がありません" と表示されます。
+
+Visual Studio Code C# の拡張機能では、ビルドおよびデバッグする資産を自動的に作成することができます。 C# プロジェクトを初めて開くと、これらの資産を作成するように Visual Studio Code から求められます。 資産を作成しなかった場合でも、このコマンドを実行する方法はあります。コマンド パレットを開き (**[表示] > [コマンド パレット]**)、「>.NET: Generate Assets for Build and Debug」 と入力します。 これを選択すると、必要としている .vscode、launch.json、tasks.json の各構成ファイルが作成されます。
+
 ## <a name="see-also"></a>関連項目
-[Visual Studio Code の設定](https://code.visualstudio.com/docs/setup/setup-overview)   
-[Visual Studio Code でのデバッグ](https://code.visualstudio.com/Docs/editor/debugging)
+
+* [Visual Studio Code の設定](https://code.visualstudio.com/docs/setup/setup-overview)
+* [Visual Studio Code でのデバッグ](https://code.visualstudio.com/Docs/editor/debugging)
