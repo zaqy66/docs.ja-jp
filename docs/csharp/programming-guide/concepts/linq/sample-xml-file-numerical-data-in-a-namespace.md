@@ -2,17 +2,17 @@
 title: 'サンプル XML ファイル: 名前空間内の数値データ 3'
 ms.date: 07/20/2015
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
-ms.openlocfilehash: 5a752f477d17cee50b98bc88bd39cabda2bd3bf6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 114657087a0aee69bc9be298025eac58923294b0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43393569"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44185611"
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="f739a-102">サンプル XML ファイル : 名前空間内の数値データ</span><span class="sxs-lookup"><span data-stu-id="f739a-102">Sample XML File: Numerical Data in a Namespace</span></span>
-<span data-ttu-id="f739a-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="f739a-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f739a-104">このファイルには、集計、平均、およびグループ化用の数値データが含まれています。</span><span class="sxs-lookup"><span data-stu-id="f739a-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="f739a-105">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="f739a-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="67813-102">サンプル XML ファイル : 名前空間内の数値データ</span><span class="sxs-lookup"><span data-stu-id="67813-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="67813-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="67813-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="67813-104">このファイルには、集計、平均、およびグループ化用の数値データが含まれています。</span><span class="sxs-lookup"><span data-stu-id="67813-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="67813-105">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="67813-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a><span data-ttu-id="f739a-106">データ</span><span class="sxs-lookup"><span data-stu-id="f739a-106">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="67813-106">データ</span><span class="sxs-lookup"><span data-stu-id="67813-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -55,5 +55,6 @@ ms.locfileid: "43393569"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f739a-107">参照</span><span class="sxs-lookup"><span data-stu-id="f739a-107">See Also</span></span>  
- [<span data-ttu-id="f739a-108">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f739a-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="67813-107">参照</span><span class="sxs-lookup"><span data-stu-id="67813-107">See Also</span></span>
+
+- [<span data-ttu-id="67813-108">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="67813-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

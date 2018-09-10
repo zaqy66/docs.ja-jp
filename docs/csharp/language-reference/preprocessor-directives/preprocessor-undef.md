@@ -7,18 +7,18 @@ helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
 ms.openlocfilehash: 3957d58f61e51fab01618f5e1146be9cd0da58fd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467147"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44185968"
 ---
-# <a name="undef-c-reference"></a><span data-ttu-id="8c5eb-102">#undef (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="8c5eb-102">#undef (C# Reference)</span></span>
-<span data-ttu-id="8c5eb-103">`#undef` を使用すると、シンボルを未定義にすることができます。未定義のシンボルを [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ディレクティブで式として使用すると、その式は `false` と評価されます。</span><span class="sxs-lookup"><span data-stu-id="8c5eb-103">`#undef` lets you undefine a symbol, such that, by using the symbol as the expression in a [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `false`.</span></span>  
+# <a name="undef-c-reference"></a><span data-ttu-id="ec58a-102">#undef (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="ec58a-102">#undef (C# Reference)</span></span>
+<span data-ttu-id="ec58a-103">`#undef` を使用すると、シンボルを未定義にすることができます。未定義のシンボルを [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ディレクティブで式として使用すると、その式は `false` と評価されます。</span><span class="sxs-lookup"><span data-stu-id="ec58a-103">`#undef` lets you undefine a symbol, such that, by using the symbol as the expression in a [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `false`.</span></span>  
   
- <span data-ttu-id="8c5eb-104">シンボルは、[#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) ディレクティブまたは [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) コンパイラ オプションのいずれかで定義できます。</span><span class="sxs-lookup"><span data-stu-id="8c5eb-104">A symbol can be defined either with the [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) directive or the [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="8c5eb-105">`#undef` ディレクティブは、ファイル内で、ディレクティブではない他のステートメントよりも前に記述する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8c5eb-105">The `#undef` directive must appear in the file before you use any statements that are not also directives.</span></span>  
+ <span data-ttu-id="ec58a-104">シンボルは、[#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) ディレクティブまたは [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) コンパイラ オプションのいずれかで定義できます。</span><span class="sxs-lookup"><span data-stu-id="ec58a-104">A symbol can be defined either with the [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) directive or the [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="ec58a-105">`#undef` ディレクティブは、ファイル内で、ディレクティブではない他のステートメントよりも前に記述する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ec58a-105">The `#undef` directive must appear in the file before you use any statements that are not also directives.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8c5eb-106">例</span><span class="sxs-lookup"><span data-stu-id="8c5eb-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ec58a-106">例</span><span class="sxs-lookup"><span data-stu-id="ec58a-106">Example</span></span>  
 
 ```csharp
 // preprocessor_undef.cs  
@@ -38,10 +38,10 @@ class MyClass
 }  
 ```
 
-<span data-ttu-id="8c5eb-107">**DEBUG が定義されていません**</span><span class="sxs-lookup"><span data-stu-id="8c5eb-107">**DEBUG is not defined**</span></span>
+<span data-ttu-id="ec58a-107">**DEBUG が定義されていません**</span><span class="sxs-lookup"><span data-stu-id="ec58a-107">**DEBUG is not defined**</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8c5eb-108">参照</span><span class="sxs-lookup"><span data-stu-id="8c5eb-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ec58a-108">参照</span><span class="sxs-lookup"><span data-stu-id="ec58a-108">See Also</span></span>
 
-- [<span data-ttu-id="8c5eb-109">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="8c5eb-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="8c5eb-110">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="8c5eb-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="8c5eb-111">C# プリプロセッサ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="8c5eb-111">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [<span data-ttu-id="ec58a-109">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="ec58a-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="ec58a-110">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="ec58a-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="ec58a-111">C# プリプロセッサ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="ec58a-111">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
