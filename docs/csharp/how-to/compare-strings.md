@@ -5,18 +5,19 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: e9f4216af6073a352bef1efb59eea0ddeda5fc4b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961307"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484103"
 ---
-# <a name="how-to-compare-strings-in-c"></a>方法: C# で文字列を比較する #
+# <a name="how-to-compare-strings-in-c"></a>C\# で文字列を比較する方法
 
 文字列を比較して、次の 2 つの質問のいずれかに回答します。"これら 2 つの文字列は等しいですか" または "これらを並べ替えるときにどのような順序でこれらの文字列を配置しますか"
 
-これら 2 つの質問は、文字列比較に影響する要因によって複雑になります。 
+これら 2 つの質問は、文字列比較に影響する要因によって複雑になります。
+
 - 序数に基づく比較または言語的な比較を選択することができます。
 - 大文字小文字が重要なかどうかを選択できます。
 - カルチャに固有の比較を選択できます。
@@ -36,14 +37,15 @@ ms.locfileid: "37961307"
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>大文字と小文字を区別しない、序数に基づく比較
 
-<xref:System.String.Equals%2A?displayProperty=nameWithType> メソッドでは、<xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> の <xref:System.StringComparison> 値を指定して、大文字と小文字を区別しない比較を指定できます。 大文字と小文字を区別しない比較を指定するブール型の引数を含む静的 <xref:System.String.Compare%2A> メソッドもあります。 これを次のコードに示します。
+<xref:System.String.Equals%2A?displayProperty=nameWithType> メソッドでは、<xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> の <xref:System.StringComparison> 値を指定して、
+大文字と小文字を区別する比較を指定することができます。 大文字と小文字を区別しない比較を指定するブール型の引数を含む静的 <xref:System.String.Compare%2A> メソッドもあります。 これを次のコードに示します。
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
 
 ## <a name="linguistic-comparisons"></a>言語的な比較
 
 現在のカルチャの言語の規則を使用して文字列の順序を指定することもできます。
-これは、"単語の並べ替え順序" と呼ばれることもあります。 言語的な比較を実行するときには、一部の英数字以外の Unicode 文字に、特別な重みが割り当てられる場合があります。 たとえば、ハイフン ("-") に割り当てられる重みは非常に小さいため、並べ替え順序で "coop" と "co-op" の出現位置が隣接します。 さらに、いくつかの Unicode 文字が英数字のシーケンスと等しくなる可能性があります。 次の例では、ドイツ語で "They dance in the street" という語句を "ss" と 'ß' と共に使用します。 言語的に (Windows では)、"en-US" と "de-DE" の両方のカルチャで、"ss" はドイツ語の Essetz: 'ß' 文字と同じです。 
+これは、"単語の並べ替え順序" と呼ばれることもあります。 言語的な比較を実行するときには、一部の英数字以外の Unicode 文字に、特別な重みが割り当てられる場合があります。 たとえば、ハイフン ("-") に割り当てられる重みは非常に小さいため、並べ替え順序で "coop" と "co-op" の出現位置が隣接します。 さらに、いくつかの Unicode 文字が英数字のシーケンスと等しくなる可能性があります。 次の例では、ドイツ語で "They dance in the street" という語句を "ss" と 'ß' と共に使用します。 言語的に (Windows では)、"en-US" と "de-DE" の両方のカルチャで、"ss" はドイツ語の Essetz: 'ß' 文字と同じです。
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -86,7 +88,7 @@ Windows では、言語的な比較から序数に基づく比較に変更した
 
 次の例は、現在のカルチャに依存する言語的な比較を使用して、配列内の文字列を並べ替えおよび検索する方法を示しています。 <xref:System.StringComparer?displayProperty=nameWithType> パラメーターを取得する静的な <xref:System.Array> メソッドを使用します。
 
-この例では、現在のカルチャを使用して文字列の配列を並べ替える方法を示します。 
+この例では、現在のカルチャを使用して文字列の配列を並べ替える方法を示します。
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
@@ -104,7 +106,7 @@ Windows では、言語的な比較から序数に基づく比較に変更した
 
 [!code-csharp-interactive[csProgGuideStrings#11](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#8)]
 
-並べ替えと検索に常に同じ種類の比較を使用してください。 並べ替えと検索に異なる種類の比較を使用すると、予期しない結果になります。 
+並べ替えと検索に常に同じ種類の比較を使用してください。 並べ替えと検索に異なる種類の比較を使用すると、予期しない結果になります。
 
 <xref:System.Collections.Hashtable?displayProperty=nameWithType>、<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>、および <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> などのコレクション クラスには、要素またはキーの種類が `string` の場合、<xref:System.StringComparer?displayProperty=nameWithType> パラメーターを取るコンストラクターが用意されています。 通常は、これらのコンストラクターをできるだけ使用し、<xref:System.StringComparer.Ordinal?displayProperty=nameWithType> または <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType> を指定する必要があります。
 
@@ -118,8 +120,9 @@ Windows では、言語的な比較から序数に基づく比較に変更した
 > 文字列の等価をテストする場合、実行する比較の種類を明示的に指定するメソッドを使用する必要があります。 コードを保守しやすく、読みやすくすることができます。 <xref:System.StringComparison> 列挙パラメーターを取る <xref:System.String?displayProperty=nameWithType> および <xref:System.Array?displayProperty=nameWithType> クラスのメソッドのオーバーロードを使用します。 実行する比較の種類を指定します。 等価をテストするときには、`==` および `!=` 演算子を使用しないでください。 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> インスタンス メソッドは常に、序数に基づいた大文字小文字を区別する比較を実行します。 これらは、文字列をアルファベット順に並べ替える場合に適しています。
 
 ## <a name="see-also"></a>関連項目
- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
- <xref:System.StringComparer?displayProperty=nameWithType>  
- [文字列](../programming-guide/strings/index.md)  
- [文字列の比較](../../standard/base-types/comparing.md)  
- [アプリケーションのグローバライズとローカライズ](/visualstudio/ide/globalizing-and-localizing-applications)
+
+- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
+- <xref:System.StringComparer?displayProperty=nameWithType>  
+- [文字列](../programming-guide/strings/index.md)  
+- [文字列の比較](../../standard/base-types/comparing.md)  
+- [アプリケーションのグローバライズとローカライズ](/visualstudio/ide/globalizing-and-localizing-applications)

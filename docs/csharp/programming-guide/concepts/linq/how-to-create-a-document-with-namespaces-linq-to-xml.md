@@ -2,12 +2,12 @@
 title: '方法 : 名前空間を持つドキュメントを作成する (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5937639fc48b82ee155450a3eaa1c7715ee3f9b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330692"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478027"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>方法 : 名前空間を持つドキュメントを作成する (C#) (LINQ to XML)
 このトピックでは、名前空間を持つドキュメントを作成する方法について説明します。  
@@ -58,7 +58,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>例  
  次の例では、2 つの名前空間が含まれるドキュメントを作成します。 1 つは既定の名前空間です。 もう 1 つは、プレフィックスを持つ名前空間です。  
   
- ルート要素に名前空間属性を含めることによって名前空間がシリアル化され、http://www.adventure-works.com が既定の名前空間となり、www.fourthcoffee.com はプレフィックス "fc" でシリアル化されます。 既定の名前空間を宣言する属性を作成するには、"xmlns" という名前の属性を、名前空間を指定せずに作成します。 属性の値は、既定の名前空間 URI です。  
+ ルート要素に名前空間属性を含めることによって名前空間がシリアル化され、`http://www.adventure-works.com` が既定の名前空間となり、`www.fourthcoffee.com` はプレフィックス "fc" でシリアル化されます。 既定の名前空間を宣言する属性を作成するには、"xmlns" という名前の属性を、名前空間を指定せずに作成します。 属性の値は、既定の名前空間 URI です。  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  

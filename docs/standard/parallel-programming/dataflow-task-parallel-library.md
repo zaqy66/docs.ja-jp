@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5581f825a23104ff005f3557de26420ee45b5c27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d44ec0e0601383133e6c59e44cd81031918d4b6d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592484"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43385859"
 ---
 # <a name="dataflow-task-parallel-library"></a>データフロー (タスク並列ライブラリ)
 <a name="top"></a> タスク並列ライブラリ (TPL) はデータ フロー コンポーネントを提供し、同時実行対応アプリケーションの堅牢性を強化します。 これらのデータ フロー コンポーネントは *TPL データ フロー ライブラリ*と総称されます。 データ フロー モデルは、粒度の粗いデータ フローおよびパイプライン処理タスクのためのインプロセス メッセージ パッシングを提供し、アクター ベースのプログラミング モデルを推進します。 データ フロー コンポーネントは、TPL の種類とスケジュール インフラストラクチャの上でビルドされ、非同期プログラミングをサポートするために C#、Visual Basic、および F# 言語と統合されています。 相互に非同期通信を行う必要がある複数の操作を行う場合、またはデータが使用可能になったときにデータを処理する場合に、これらのデータ フロー コンポーネントは役立ちます。 たとえば、Web カメラからのイメージ データを処理するアプリケーションを考えてみます。 データ フロー モデルを使用すると、イメージ フレームが使用可能になったときに、それをアプリケーションで処理できます。 たとえば、アプリケーションが輝度修正や赤目補正などを実行してイメージ フレームを向上させる場合、データ フロー コンポーネントの*パイプライン*を作成できます。 パイプラインの各ステージは、イメージを変換するために、TPL が提供する機能のような、粒度の粗い並列機能を使用する場合があります。  
@@ -72,14 +72,14 @@ ms.locfileid: "33592484"
   
  この例は、例外が実行データ フロー ブロックのデリゲートで処理されない場合を示します。 そのようなブロックの本体で例外を処理することをお勧めします。 そのようにできない場合は、ブロックはそれが取り消されたように動作し、受信メッセージを処理しません。  
   
- データ フロー ブロックが明示的に取り消されると、<xref:System.AggregateException> オブジェクトには <xref:System.OperationCanceledException> プロパティの <xref:System.AggregateException.InnerExceptions%2A> が含まれます。 データ フローの取り消しの詳細については、このドキュメントの後の「取り消しの有効化」を参照してください。  
+ データ フロー ブロックが明示的に取り消されると、<xref:System.AggregateException> オブジェクトには <xref:System.OperationCanceledException> プロパティの <xref:System.AggregateException.InnerExceptions%2A> が含まれます。 データ フローの取り消しの詳細については、「[取り消しの有効化](#enabling-cancellation)」セクションを参照してください。  
   
- データ フロー ブロックの完了ステータスを決定する 2 番目の方法は、完了タスクの継続を使用するか、または C# と Visual Basic の非同期言語機能を使用して、完了したタスクを非同期的に待つことです。 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドに提供するデリゲートは、継続元タスクを表す <xref:System.Threading.Tasks.Task> オブジェクトを受け取ります。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> プロパティの場合は、継続のデリゲートは完了タスクを受け取ります。 次の例は前の例に似ていますが、<xref:System.Threading.Tasks.Task.ContinueWith%2A> メソッドを使用してデータ フロー操作全体のステータスを出力する完了タスクを作成する点が異なります。  
+ データ フロー ブロックの完了ステータスを判定する 2 番目の方法は、完了タスクの継続を使用するか、または C# と Visual Basic の非同期言語機能を使用して、完了したタスクを非同期的に待つことです。 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドに提供するデリゲートは、継続元タスクを表す <xref:System.Threading.Tasks.Task> オブジェクトを受け取ります。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> プロパティの場合は、継続のデリゲートは完了タスクを受け取ります。 次の例は前の例に似ていますが、<xref:System.Threading.Tasks.Task.ContinueWith%2A> メソッドを使用してデータ フロー操作全体のステータスを出力する継続タスクも作成している点が異なります。  
   
  [!code-csharp[TPLDataflow_Overview#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#11)]
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
- また、継続タスクの本体で <xref:System.Threading.Tasks.Task.IsCanceled%2A> などのプロパティを使用して、データ フロー ブロックの完了ステータスに関する追加情報を決定することもできます。 継続タスク、および継続タスクと取り消し処理やエラー処理との関連の詳細については、「[Chaining Tasks by Using Continuation Tasks](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)」(継続タスクを使用したタスクのチェーン作成)、「[タスクのキャンセル](../../../docs/standard/parallel-programming/task-cancellation.md)」、「[例外処理 (タスク並列ライブラリ)](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)」、および「[方法: タスクがスローした例外を処理する](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d)」を参照してください。  
+ また、継続タスクの本体で <xref:System.Threading.Tasks.Task.IsCanceled%2A> などのプロパティを使用して、データ フロー ブロックの完了ステータスに関する追加情報を決定することもできます。 継続タスク、および継続タスクと取り消し処理やエラー処理との関連の詳細については、「[継続タスクを使用したタスクの連結](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)」、「[タスクのキャンセル](../../../docs/standard/parallel-programming/task-cancellation.md)」、および[例外処理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)に関するページを参照してください。  
   
  [[ページのトップへ](#top)]  
   
@@ -124,7 +124,7 @@ ms.locfileid: "33592484"
  実行ブロックは、受け取ったデータのそれぞれに、ユーザーが指定したデリゲートを呼び出します。 TPL データ フロー ライブラリは <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> と <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> の 3 つの実行ブロックの型を提供します。  
   
 #### <a name="actionblockt"></a>ActionBlock(T)  
- <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> クラスは、データを受け取るとデリゲートを呼び出すターゲット ブロックです。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> オブジェクトは、データが使用可能になったときに非同期的に実行できるデリゲートと考えることができます。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> オブジェクトに提供するデリゲートは、<xref:System.Action> 型または`System.Func\<TInput, Task>` 型を使用できます。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> オブジェクトを <xref:System.Action> と共に使用すると、各入力要素の処理はデリゲートが返されたときに完了したと見なされます。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> オブジェクトを `System.Func\<TInput, Task>` と共に使用すると、各入力要素の処理は返された <xref:System.Threading.Tasks.Task> オブジェクトが終了した場合にのみ、完了したと見なされます。 この 2 つの方法を使って、<xref:System.Threading.Tasks.Dataflow.ActionBlock%601> を使用して各入力要素を同期的にも非同期的にも処理することができます。  
+ <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> クラスは、データを受け取るとデリゲートを呼び出すターゲット ブロックです。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> オブジェクトは、データが使用可能になったときに非同期的に実行できるデリゲートと考えることができます。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> オブジェクトに提供するデリゲートは、<xref:System.Action%601> 型または`System.Func<TInput, Task>` 型を使用できます。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> オブジェクトを <xref:System.Action%601> と共に使用すると、各入力要素の処理はデリゲートが返されたときに完了したと見なされます。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> オブジェクトを `System.Func<TInput, Task>` と共に使用すると、各入力要素の処理は返された <xref:System.Threading.Tasks.Task> オブジェクトが終了した場合にのみ、完了したと見なされます。 この 2 つの方法を使って、<xref:System.Threading.Tasks.Dataflow.ActionBlock%601> を使用して各入力要素を同期的にも非同期的にも処理することができます。  
   
  次の基本的な例では、<xref:System.Int32> オブジェクトに複数の <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> の値をポストします。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> オブジェクトは、コンソールにそれらの値を出力します。 次にこの例では、ブロックを完了した状態に設定し、すべてのデータ フロー タスクの終了を待機します。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "33592484"
  <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> クラスでデリゲートを使う方法を示す完全な例については、「[方法: データフロー ブロックでデータを受信したときにアクションを実行する](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)」をご覧ください。  
   
 #### <a name="transformblocktinput-toutput"></a>TransformBlock(TInput, TOutput)  
- <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> クラスは <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> クラスに似ていますが、ソースとしてもターゲットとしても動作する点が異なります。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトに渡すデリゲートは `TOutput` 型の値を返します。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトに提供するデリゲートは、`System.Func<TInput, TOutput>` 型または`System.Func<TInput, Task>` 型を使用できます。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトを `System.Func\<TInput, TOutput>` と共に使用すると、各入力要素の処理はデリゲートが返されたときに完了したと見なされます。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトを `System.Func<TInput, Task<TOutput>>` と共に使用すると、各入力要素の処理は返された <xref:System.Threading.Tasks.Task> オブジェクトが終了した場合にのみ、完了したと見なされます。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> と同様に、この 2 つの方法を使って、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> を使用して各入力要素を同期的にも非同期的にも処理することができます。  
+ <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> クラスは <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> クラスに似ていますが、ソースとしてもターゲットとしても動作する点が異なります。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトに渡すデリゲートは `TOutput` 型の値を返します。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトに提供するデリゲートは、`System.Func<TInput, TOutput>` 型または`System.Func<TInput, Task<TOutput>>` 型を使用できます。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトを `System.Func<TInput, TOutput>` と共に使用すると、各入力要素の処理はデリゲートが返されたときに完了したと見なされます。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトを `System.Func<TInput, Task<TOutput>>` と共に使用すると、各入力要素の処理は返された <xref:System.Threading.Tasks.Task%601> オブジェクトが終了した場合にのみ、完了したと見なされます。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> と同様に、この 2 つの方法を使って、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> を使用して各入力要素を同期的にも非同期的にも処理することができます。  
   
  次の基本的な例では、入力の平方根を計算する <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトを作成します。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトは、入力として <xref:System.Int32> の値を受け取り、出力として <xref:System.Double> の値を生成します。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "33592484"
  Windows フォーム アプリケーションでイメージ処理を実行するデータフロー ブロックのネットワークで <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> を使う例について詳しくは、「[チュートリアル: Windows フォーム アプリケーションでのデータフローの使用](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)」をご覧ください。  
   
 #### <a name="transformmanyblocktinput-toutput"></a>TransformManyBlock(TInput, TOutput)  
- <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> クラスは <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> クラスに似ていますが、各入力値に 1 つの出力値を生成するのでなく、<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> は各入力値に出力値を生成しないか、または 1 つ以上の出力値を生成する点が異なります。 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> オブジェクトに提供するデリゲートは、`System.Func<TInput, IEnumerable<TOutput>>` 型または`type System.Func<TInput, Task<IEnumerable<TOutput>>>` 型を使用できます。 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> オブジェクトを `System.Func<TInput, IEnumerable<TOutput>>` と共に使用すると、各入力要素の処理はデリゲートが返されたときに完了したと見なされます。 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> オブジェクトを `System.Func<TInput, Task<IEnumerable<TOutput>>>` と共に使用すると、各入力要素の処理は返された `System.Threading.Tasks.Task<IEnumerable<TOutput>>` オブジェクトが終了した場合にのみ、完了したと見なされます。  
+ <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> クラスは <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> クラスに似ていますが、各入力値に 1 つの出力値を生成するのでなく、<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> は各入力値に出力値を生成しないか、または 1 つ以上の出力値を生成する点が異なります。 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> オブジェクトに提供するデリゲートは、`System.Func<TInput, IEnumerable<TOutput>>` 型または`System.Func<TInput, Task<IEnumerable<TOutput>>>` 型を使用できます。 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> オブジェクトを `System.Func<TInput, IEnumerable<TOutput>>` と共に使用すると、各入力要素の処理はデリゲートが返されたときに完了したと見なされます。 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> オブジェクトを `System.Func<TInput, Task<IEnumerable<TOutput>>>` と共に使用すると、各入力要素の処理は返された `System.Threading.Tasks.Task<IEnumerable<TOutput>>` オブジェクトが終了した場合にのみ、完了したと見なされます。  
   
  次の基本的な例は、文字列を個別の文字のシーケンスに分割する <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> オブジェクトを作成します。 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> オブジェクトは、入力として <xref:System.String> の値を受け取り、出力として <xref:System.Char> の値を生成します。  
   
@@ -225,7 +225,7 @@ ms.locfileid: "33592484"
  以下のセクションでは、<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions?displayProperty=nameWithType> と <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions?displayProperty=nameWithType> クラスを通じて利用できる、重要なデータ フロー ブロックのオプションに関する追加情報を提供します。  
   
 ### <a name="specifying-the-task-scheduler"></a>タスク スケジューラの指定  
- すべての定義済みのデータ フロー ブロックは TPL タスク スケジューリング メカニズムを使って、ターゲットへのデータの伝達、ソースからのデータの受け取り、データが使用可能になったときのユーザー定義のデリゲートの実行、などのアクティビティを実行します。 <xref:System.Threading.Tasks.TaskScheduler> は、タスクをスレッドのキューに置くタスク スケジューラを表す抽象クラスです。 既定のタスク スケジューラである <xref:System.Threading.Tasks.TaskScheduler.Default%2A> は、<xref:System.Threading.ThreadPool> クラスを使用して作業をキューに置き、実行します。 データ フロー ブロック オブジェクトを構成する場合、<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> プロパティを設定して、既定のタスク スケジューラを上書きできます。  
+ すべての定義済みのデータ フロー ブロックは TPL タスク スケジューリング メカニズムを使って、ターゲットへのデータの伝達、ソースからのデータの受け取り、データが使用可能になったときのユーザー定義のデリゲートの実行、などのアクティビティを実行します。 <xref:System.Threading.Tasks.TaskScheduler> は、タスクをスレッドのキューに置くタスク スケジューラを表す抽象クラスです。 既定のタスク スケジューラである <xref:System.Threading.Tasks.TaskScheduler.Default%2A> は、<xref:System.Threading.ThreadPool> クラスを使用して作業をキューに置き、実行します。 データ フロー ブロック オブジェクトを構成する場合、<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> プロパティを設定して、既定のタスク スケジューラをオーバーライドできます。  
   
  同じタスク スケジューラが複数のデータ フロー ブロックを管理する場合、それらにポリシーを強制的に適用できます。 たとえば、複数のデータ フロー ブロックが、それぞれ同じ <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> オブジェクトの排他スケジューラを対象とするように構成されている場合、これらのブロックにわたって実行されるすべての操作がシリアル化されます。 同様に、これらのブロックが同じ <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> オブジェクトの同時スケジューラをターゲットとして構成され、そのスケジューラが最大同時実行レベルに構成されている場合、これらのブロックのすべての操作は、その同時操作の数に制限されます。 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> クラスを使って、読み取り操作は並列で実行可能とするものの、書き込み操作はすべての操作で排他的に行う例について詳しくは、「[方法: データフロー ブロックのタスク スケジューラを指定する](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)」をご覧ください。 TPL のタスク スケジューラの詳細については、<xref:System.Threading.Tasks.TaskScheduler> クラスに関するトピックを参照してください。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "33592484"
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> の既定値は 1 で、これはデータ フロー ブロックが一度に 1 つのメッセージを処理することを保証します。 このプロパティに 1 を超える値に設定すると、データ フロー ブロックは複数のメッセージを同時に処理できます。 このプロパティを <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.Unbounded?displayProperty=nameWithType> に設定すると、基になるタスク スケジューラは最大の同時実行の程度を管理することができます。  
   
 > [!IMPORTANT]
->  並列処理の最大範囲に 1 を超える数を指定すると、複数のメッセージを同時に処理するため、メッセージが受信した順序で処理されない場合があります。 ただし、ブロックからメッセージが出力される順序は正しく並べ替えられます。  
+>  並列処理の最大範囲に 1 を超える数を指定すると、複数のメッセージを同時に処理するため、メッセージが受信した順序で処理されない場合があります。 ただし、ブロックからのメッセージが出力される順序は、メッセージが受信された順序と同じです。  
   
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> プロパティは並列処理の最大範囲を表すため、データ フロー ブロックは、指定より低い並列化の度合いで実行される場合があります。 機能要件を満たすため、または使用可能なシステム リソースの不足のため、データ フロー ブロックは、より低い並列化の度合いを使う場合があります。 データ フロー ブロックは、指定より大きな並列化を選択することはありません。  
   

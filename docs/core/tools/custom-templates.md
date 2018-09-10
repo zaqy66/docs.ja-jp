@@ -4,12 +4,12 @@ description: あらゆる種類の .NET プロジェクトまたはファイル�
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: fe888d0bfeeb51d77b73ec481b93fec9b40aa6ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217322"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525968"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new のカスタム テンプレート
 
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>関連項目
 
-[dotnet new のカスタム テンプレートを作成する (チュートリアル)](../tutorials/create-custom-template.md)  
-[dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)  
-[dotnet/dotnet-template-samples GitHub リポジトリ](https://github.com/dotnet/dotnet-template-samples)  
-[dotnet new の独自のテンプレートを作成する方法](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-[JSON Schema Store の *template.json* スキーマ](http://json.schemastore.org/template)  
+* [dotnet new のカスタム テンプレートを作成する (チュートリアル)](../tutorials/create-custom-template.md)  
+* [dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)  
+* [dotnet/dotnet-template-samples GitHub リポジトリ](https://github.com/dotnet/dotnet-template-samples)  
+* [dotnet new の独自のテンプレートを作成する方法](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
+* [JSON Schema Store の *template.json* スキーマ](http://json.schemastore.org/template)  

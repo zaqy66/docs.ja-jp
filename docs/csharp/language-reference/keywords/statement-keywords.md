@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-ms.openlocfilehash: 2485a6258913b1dae04c093fa74a8acf1aaa3ca3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9f253f31a7376bf0429784a031188b91cc070df
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269662"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515828"
 ---
 # <a name="statement-keywords-c-reference"></a>ステートメントのキーワード (C# リファレンス)
 ステートメントは、プログラムの命令です。 次の表で参照されているトピックで明記されているステートメントを除いて、ステートメントは順番に実行されます。 C# ステートメントのキーワードの一覧を次の表に示します。 いずれかのキーワードで表されないステートメントの詳細については、「[ステートメント](../../../csharp/programming-guide/statements-expressions-operators/statements.md)」を参照してください。  
@@ -25,7 +25,8 @@ ms.locfileid: "33269662"
 [fixed ステートメント](../../../csharp/language-reference/keywords/fixed-statement.md)|[fixed](../../../csharp/language-reference/keywords/fixed-statement.md)|  
 |[lock ステートメント](../../../csharp/language-reference/keywords/lock-statement.md)|[lock](../../../csharp/language-reference/keywords/lock-statement.md)|  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [ステートメント](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [ステートメント](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)

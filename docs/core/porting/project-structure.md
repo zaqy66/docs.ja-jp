@@ -4,12 +4,12 @@ description: プロジェクト所有者が横並びの .NET Framework と .NET 
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: e6cd9c6d66996d9fd24fe71d48091723143e5849
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211440"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512267"
 ---
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>プロジェクトを整理し、.NET Framework と .NET Core をサポートする
 
@@ -51,6 +51,7 @@ ms.locfileid: "33211440"
 [**ソース コード**][example-csproj-code]
 
 注目するべき変更点:
+
 * *packages.config* と *\*.csproj* が新しい [.NET Core *\*.csproj*][example-csproj-netcore] に置き換わりました。 NuGet パッケージが `<PackageReference> ItemGroup` で指定されています。
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>既存のプロジェクトを保持し、.NET Core プロジェクトを作成する
@@ -62,12 +63,13 @@ ms.locfileid: "33211440"
 [**ソース コード**][example-csproj-different-code]
 
 注目するべき変更点:
+
 * .NET Core と既存のプロジェクトを別々のフォルダーに保存します。
-    * プロジェクトを別々のフォルダーに保存すれば、Visual Studio 2017 を所有する必要がありません。 古いプロジェクトだけを開く別個のソリューションを作成できます。
+  * プロジェクトを別々のフォルダーに保存すれば、Visual Studio 2017 を所有する必要がありません。 古いプロジェクトだけを開く別個のソリューションを作成できます。
 
 ## <a name="see-also"></a>参照
 
-.NET Core に移行する方法の詳細なガイダンスについては、[.NET Core の移植に関するドキュメント][porting-doc]のページを参照してください。
+* .NET Core に移行する方法の詳細なガイダンスについては、[.NET Core の移植に関するドキュメント][porting-doc]のページを参照してください。
 
 [porting-doc]: index.md
 [example-initial-project]: media/project-structure/project.png "既存のプロジェクト"

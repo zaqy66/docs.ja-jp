@@ -4,18 +4,18 @@ description: .NET Core がお使いのブログラムのランタイム バー�
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: d1b885ebbade4736d5f592d1dc1d4ba25a321a16
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874471"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395118"
 ---
 # <a name="net-core-version-selection"></a>.NET Core のバージョンの選択
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-この記事では、.NET Core ツール、SDK、ランタイムによって使用されるバージョン選択ポリシーについて説明します。 これらのポリシーでは、指定バージョンを使用してアプリケーションを実行することと、開発者のコンピューターとエンド ユーザーのコンピューターの両方を簡単にアップグレードすることを両立させています。 これらのポリシーによって次が実行されます。
+この記事では、.NET Core ツール、SDK、ランタイムによって使用されるバージョン選択ポリシーについて説明します。 これらのポリシーでは、指定バージョンを使用してアプリケーションを実行することと、開発者のコンピューターとエンド ユーザーのコンピューターの両方を簡単にアップグレードすることを両立させています。 これらのポリシーによって次のアクションが実行されます。
 
 - セキュリティと信頼性の更新プログラムを含め、.NET Core を簡単かつ効率的に展開する。
 - ターゲット ランタイムとは関係なく、最新のツールとコマンドを使用する。
@@ -31,11 +31,11 @@ ms.locfileid: "37874471"
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK はインストールされている最新バージョンを使用する
 
-SDK コマンドには、`dotnet new`、`dotnet build`、`dotnet run` が含まれています。 `dotnet` CLI の場合、どのコマンドに対しても SDK バージョンを選択する必要があります。 .NET Core CLI では既定で、コンピューターにインストールされている最新の SDK が使用されます。 使用しているプロジェクトのターゲットが .NET Core Runtime 2.0 の場合でも、.NET Core SDK v2.1.301 がインストールされているとき、.NET Core SDK v2.1.301 が使用されます。 これはリリース バージョンと同様にプレビュー バージョンにも当てはまることにご注意ください。 以前のバージョンの .NET Core ランタイムをターゲットにしているとき、SDK の最新の機能と機能改善を活用できます。 すべてのプロジェクトに同じ SDK ツールを使用し、異なるプロジェクトで複数のランタイム バージョンの .NET Core をターゲットにできます。
+SDK コマンドには `dotnet new`、.、または、`dotnet run` が含まれています。 `dotnet` CLI の場合、どのコマンドに対しても SDK バージョンを選択する必要があります。 .NET Core CLI では既定で、コンピューターにインストールされている最新の SDK が使用されます。 使用しているプロジェクトのターゲットが .NET Core Runtime 2.0 の場合でも、.NET Core SDK v2.1.301 がインストールされているとき、.NET Core SDK v2.1.301 が使用されます。 最新のプレビュー バージョンと共にリリース バージョンを使用することになります。 以前のバージョンの .NET Core ランタイムをターゲットにしているとき、SDK の最新の機能と機能改善を活用できます。 すべてのプロジェクトに同じ SDK ツールを使用し、異なるプロジェクトで複数のランタイム バージョンの .NET Core をターゲットにできます。
 
 まれに、以前のバージョンの SDK を使用する必要がある場合があります。 そのバージョンは [*global.json* ファイル](../tools/global-json.md)で指定します。 "最新版を使用する" というポリシーは、インストールされている最新版より以前のバージョンの .NET Core SDK を指定するには *global.json* を使用することを意味します。
 
-*global.json* はファイル階層のどこにでも配置できます。 CLI はプロジェクト ディレクトリから上方を検索し、最初の *global.json* を見つけます。 ファイル システム内のその場所によって、特定の *global.json* が適用されるプロジェクトを制御します。 .NET CLI は、現在の作業ディレクトリからパスを上方に移動し、*global.json* ファイルを繰り返し検索します。 見つかった最初の *global.json* ファイルによって、使用されるバージョンが指定されます。 そのバージョンがインストールされている場合、そのバージョンが使用されます。 *global.json* に指定されている SDK が見つからない場合、.NET CLI はインストールされている最新の SDK にロールフォワードします。 *global.json* ファイルが見つからないとき、これは既定の動作と同じになります。
+*global.json* はファイル階層のどこにでも配置できます。 CLI はプロジェクト ディレクトリから上方を検索し、最初の *global.json* を見つけます。 ファイル システム内のその場所によって、特定の *global.json* が適用されるプロジェクトを制御します。 .NET CLI は、現在の作業ディレクトリからパスを上方に移動し、*global.json* ファイルを繰り返し検索します。 見つかった最初の *global.json* ファイルによって、使用されるバージョンが指定されます。 そのバージョンがインストールされている場合、そのバージョンが使用されます。 *global.json* に指定されている SDK が見つからない場合、.NET CLI はインストールされている最新の SDK にロールフォワードします。 ロール フォワードは、*global.json* ファイルが見つからないとき、これは既定の動作と同じになります。
 
 次の例は *global.json* 構文を示しています。
 
@@ -53,7 +53,7 @@ SDK バージョンを選択するためのプロセス:
 1. `dotnet` は見つかった最初の *global.json* に指定されている SDK を使用します。
 1. *global.json* が見つからない場合、`dotnet` はインストールされている最新の SDK を使用します。
 
-SDK バージョンの選択に関する詳細は、*global.json* に関するトピックの「[matching rules](../tools/global-json.md)」(照合ルール) にあります。
+SDK バージョンの選択に関する詳細は、*global.json* に関する記事の「[照合ルール](../tools/global-json.md#matching-rules)」にあります。
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>ターゲット フレームワーク モニカーによりビルド時間 API を定義する
 

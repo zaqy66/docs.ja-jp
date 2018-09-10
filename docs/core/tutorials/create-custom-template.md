@@ -4,12 +4,12 @@ description: この楽しいチュートリアルで、dotnet new のカスタ�
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: fee2709f54395b9926dae904a448cb92aafb5172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218083"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516654"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>dotnet new のカスタム テンプレートを作成する
 
@@ -63,7 +63,7 @@ ms.locfileid: "33218083"
 1. NuGet パッケージのフォルダーを作成します。 このチュートリアルでは、*GarciaSoftware.ConsoleTemplate.CSharp* フォルダーが使用されます。このフォルダーは、ユーザーのプロファイルの *Documents\NuGetTemplates* フォルダーの中に作成されています。 プロジェクト ファイルを保存する目的で、新しいテンプレート フォルダー内に *content* という名前のフォルダーを作成します。
 1. 作成した *content* フォルダーに、プロジェクト フォルダーの中身を *.template.config/template.json* ファイルと共にコピーします。
 1. *content* フォルダーの隣に、[*nuspec*](/nuget/create-packages/creating-a-package) ファイルを追加します。 nuspec ファイルは XML マニフェスト ファイルであり、パッケージの中身が記述され、NuGet パッケージの作成プロセスを実行します。
-   
+
    ![NuGet パッケージのレイアウトを示すディレクトリ構造](./media/create-custom-template/nugetdirectorylayout.png)
 
 1. *nuspec* ファイルの **\<packageTypes>** 要素の中に、**\<packageType>** 要素を追加し、`name` 属性の値を `Template` にします。 *content* フォルダーと *nuspec* ファイルの両方を同じディレクトリに入れます。 下の表は、NuGet パッケージとしてテンプレートを生成するために必要な *nuspec* ファイルの最小要素をまとめたものです。
@@ -158,7 +158,7 @@ dotnet new -u GarciaSoftware.ConsoleTemplate.CSharp
 
 > [!NOTE]
 > 次の例は、デモンストレーション目的のみで提供されます。 nuget.org には `GarciaSoftware.ConsoleTemplate.CSharp` NuGet パッケージがありません。あるいは、.NET Core SDK と共にインストールされていません。 コマンドを実行すると、パッケージ/テンプレートはアンインストールされません。次の例外が表示されます。
-> 
+>
 > > Could not find something to uninstall called 'GarciaSoftware.ConsoleTemplate.CSharp'. ('GarciaSoftware.ConsoleTemplate.CSharp' という名前のアンインストール対象が見つかりませんでした。)
 
 [dotnet-new の NUnit 3 テンプレート](https://www.nuget.org/packages/NUnit3.DotNetNew.Template/)をインストールしているとき、それをアンインストールする場合、次のコマンドを利用します。
@@ -209,7 +209,7 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 
 ## <a name="see-also"></a>関連項目
 
-[dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)  
-[dotnet/dotnet-template-samples GitHub リポジトリ](https://github.com/dotnet/dotnet-template-samples)  
-[dotnet new の独自のテンプレートを作成する方法](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-[JSON Schema Store の *template.json* スキーマ](http://json.schemastore.org/template)  
+* [dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)  
+* [dotnet/dotnet-template-samples GitHub リポジトリ](https://github.com/dotnet/dotnet-template-samples)  
+* [dotnet new の独自のテンプレートを作成する方法](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+* [JSON Schema Store の *template.json* スキーマ](http://json.schemastore.org/template)  

@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752083"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43391249"
 ---
 # <a name="the-history-of-c"></a>C# の歴史 #
 
@@ -34,6 +34,10 @@ C# 1.0 の主な機能:
 - [ステートメント](../programming-guide/statements-expressions-operators/statements.md)
 - [属性](../programming-guide/concepts/attributes/index.md)
 - リテラル
+
+## <a name="c-version-12"></a>C# バージョン 1.2
+
+Visual Studio 2003 に付属の C# バージョン 1.2 言語に対する細かな機能強化がいくつか含まれています。 最も重要な点は、このバージョン以降、<xref:System.Collections.IEnumerator> によって <xref:System.IDisposable> が実装された場合、`foreach` ループ内で生成されたコードでは、その <xref:System.Collections.IEnumerator> 上で <xref:System.IDisposable.Dispose%2A> が呼び出されているということです。
 
 ## <a name="c-version-20"></a>C# バージョン 2.0
 

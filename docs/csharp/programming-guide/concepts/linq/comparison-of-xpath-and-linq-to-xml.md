@@ -1,30 +1,33 @@
 ---
-title: XPath と LINQ to XML の比較2
+title: XPath と LINQ to XML の比較
 ms.date: 07/20/2015
+dev_langs:
+- csharp
+- vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-ms.openlocfilehash: 64860ab538105e7e3826b29f83b8e713ca525e21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f41aa19c89365c9236ca0b8d385ffa6fbaf6be1c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326434"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43391737"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath と LINQ to XML の比較
-XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の機能はある程度似ています。 どちらも XML ツリーに対してクエリを実行するために使用され、結果として、要素のコレクション、属性のコレクション、ノードのコレクション、要素や属性の値などを返します。 ただし、相違点もいくつかあります。  
+XPath と LINQ to XML の機能はある程度似ています。 どちらも XML ツリーに対してクエリを実行するために使用され、結果として、要素のコレクション、属性のコレクション、ノードのコレクション、要素や属性の値などを返します。 ただし、相違点もいくつかあります。  
   
 ## <a name="differences-between-xpath-and-linq-to-xml"></a>XPath と LINQ to XML の違い  
- XPath では、新しい型を射影できません。 XPath では、ツリーからノードのコレクションが返されるだけですが、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、クエリを実行し、オブジェクト グラフまたは XML ツリーを新しい構造に射影できます。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリは、XPath 式と比べて、はるかに多機能かつ強力です。  
+ XPath では、新しい型を射影できません。 XPath では、ツリーからノードのコレクションが返されるだけですが、LINQ to XML では、クエリを実行し、オブジェクト グラフまたは XML ツリーを新しい構造に射影できます。 LINQ to XML クエリは、XPath 式と比べて、はるかに多機能かつ強力です。  
   
- XPath 式は、文字列内に独立して存在します。 C# コンパイラは、コンパイル時に XPath 式を解析できません。 一方 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリは、C# コンパイラによって解析され、コンパイルされます。 コンパイラを使用することにより、多くのクエリ エラーを検出できます。  
+ XPath 式は、文字列内に独立して存在します。 C# コンパイラは、コンパイル時に XPath 式を解析できません。 一方 LINQ to XML クエリは、C# コンパイラによって解析され、コンパイルされます。 コンパイラを使用することにより、多くのクエリ エラーを検出できます。  
   
- XPath の結果は厳密に型指定されません。 多くの場合、XPath 式を評価した結果はオブジェクトであり、開発者が適切な型を決定し、必要に応じて結果をキャストする必要があります。 一方、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリからの射影は厳密に型指定されます。  
+ XPath の結果は厳密に型指定されません。 多くの場合、XPath 式を評価した結果はオブジェクトであり、開発者が適切な型を決定し、必要に応じて結果をキャストする必要があります。 一方、LINQ to XML クエリからの射影は厳密に型指定されます。  
   
 ## <a name="result-ordering"></a>結果の順序付け  
  XPath 1.0 勧告には、XPath 式の評価結果であるコレクションは順序付けされないことが記載されています。  
   
- ただし、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の XPath 軸メソッドから返されるコレクションを反復処理すると、コレクション内のノードがドキュメント順に返されます。 これは、ドキュメントの逆順として述語が表現されている `preceding` や `preceding-sibling` などの XPath 軸にアクセスする場合でも同様です。  
+ ただし、LINQ to XML の XPath 軸メソッドから返されるコレクションを反復処理すると、コレクション内のノードがドキュメント順に返されます。 これは、ドキュメントの逆順として述語が表現されている `preceding` や `preceding-sibling` などの XPath 軸にアクセスする場合でも同様です。  
   
- 一方、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 軸のほとんどはコレクションをドキュメント順に返しますが、<xref:System.Xml.Linq.XNode.Ancestors%2A> と <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A> の 2 つは、コレクションをドキュメントの逆順に返します。 次の表では、軸を列挙し、それぞれのコレクションの順序を示します。  
+ 一方、LINQ to XML 軸のほとんどではコレクションがドキュメント順に返されますが、<xref:System.Xml.Linq.XNode.Ancestors%2A> と <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A> の 2 つでは、コレクションがドキュメントの逆順で返されます。 次の表では、軸を列挙し、それぞれのコレクションの順序を示します。  
   
 |LINQ to XML 軸|並べ替え|  
 |----------------------|--------------|  
@@ -47,32 +50,44 @@ XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の機能はあ�
 ## <a name="positional-predicates"></a>位置述語  
  XPath 式では、多くの軸で位置述語がドキュメント順として表現されますが、逆方向軸つまり `preceding`、`preceding-sibling`、`ancestor`、および `ancestor-or-self` の場合は、ドキュメントの逆順で表現されます。 たとえば、XPath 式 `preceding-sibling::*[1]` は、直前の兄弟を返します。 これは、最終的な結果セットがドキュメント順で表される場合も同様です。  
   
- 一方、LINQ to XML の位置述語は、常に軸の順序として表現されます。 たとえば、`anElement.ElementsBeforeSelf().ToList()[0]` は、直前の兄弟ではなく、クエリされる要素の親の最初の子要素を返します。 別の例として、`anElement.Ancestors().ToList()[0]` は親要素を返します。  
+ 一方、LINQ to XML の位置述語は、常に軸の順序として表現されます。 たとえば、`anElement.ElementsBeforeSelf().ElementAt(0)` は、直前の兄弟ではなく、クエリされる要素の親の最初の子要素を返します。 別の例として、`anElement.Ancestors().ElementAt(0)` は親要素を返します。  
   
- 上記の方法では、コレクション全体が具体化されます。 これは、このクエリを記述する方法としては、最も効率的な方法とはいえません。 このように記述されているのは、位置述語の動作を明らかにするためです。 同じクエリをより適切に記述するには、<xref:System.Linq.Enumerable.First%2A> メソッドを、`anElement.ElementsBeforeSelf().First()` のように使用します。  
+ LINQ to XML で直前の要素を検索する場合は、次の式を記述します。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] で直前の要素を検索する場合は、次の式を記述します。  
+```csharp
+ElementsBeforeSelf().Last()
+```
   
- `ElementsBeforeSelf().Last()`  
+```vb
+ElementsBeforeSelf().Last()
+```
   
 ## <a name="performance-differences"></a>パフォーマンスの違い  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の XPath 機能を使用する XPath クエリのパフォーマンスは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリよりも低くなります。  
+ LINQ to XML 内の XPath 機能を使用する XPath クエリのパフォーマンスは、LINQ to XML クエリよりも低くなります。  
   
 ## <a name="comparison-of-composition"></a>構成の比較  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリの構成は、XPath 式の構成に似ている部分がありますが、構文はかなり異なります。  
+ LINQ to XML クエリの構成は、XPath 式の構成に似ている部分がありますが、構文はかなり異なります。  
   
  たとえば、`customers` という変数に要素があり、`CompanyName` というすべての子要素の下で `Customer` という孫要素を検索する場合は、次のように XPath 式を記述します。  
   
 ```csharp  
-customers.XPathSelectElements("./Customer/CompanyName");  
+customers.XPathSelectElements("./Customer/CompanyName")
 ```  
   
- これと同等の [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリは次のとおりです。  
+```vb
+customers.XPathSelectElements("./Customer/CompanyName")
+```
+
+ 同等の LINQ to XML クエリは次のとおりです。  
   
 ```csharp  
-customers.Element("Customer").Elements("CompanyName");  
+customers.Elements("Customer").Elements("CompanyName")
 ```  
   
+```vb
+customers.Elements("Customer").Elements("CompanyName")
+```  
+
  同様の対応関係が XPath 軸ごとに存在します。  
   
 |XPath 軸|LINQ to XML 軸|  

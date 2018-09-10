@@ -4,12 +4,12 @@ description: dotnet テストおよび xUnit を使用したサンプル ソリ�
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 6f3b041bf690183f60b687699d878a4d5006be6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213331"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43404296"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet テストと xUnit を使用した .NET Core での単体テスト C#
 
@@ -134,7 +134,7 @@ namespace Prime.UnitTests.Services
 
 `[Fact]` 属性は、テスト ランナーによって実行されるテスト メソッドを表します。 *PrimeService.Tests* フォルダーから、[`dotnet test`](../tools/dotnet-test.md) を実行してテストとクラス ライブラリをビルドし、それからテストを実行します。 xUnit テスト ランナーには、テストを実行するためのプログラムのエントリ ポイントが含まれています。 `dotnet test` を実行すると、作成した単体テスト プロジェクトを使用してテスト ランナーが開始されます。
 
-テストが失敗します。 実装はまだ作成していません。 最も単純な動作のコードを `PrimeService` クラスに記述して、このテストを作成します。 既存の `IsPrime` メソッド実装を次のコードに置き換えます。
+テストが失敗します。 実装はまだ作成していません。 最もシンプルな動作のコードを `PrimeService` クラスに記述して、このテストが成功するようにします。 既存の `IsPrime` メソッド実装を次のコードに置き換えます。
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -171,4 +171,4 @@ if (candidate < 2)
 
 ### <a name="additional-resources"></a>その他の技術情報
 
-[ASP.NET Core のコントローラー ロジックをテストする](/aspnet/core/mvc/controllers/testing)
+- [ASP.NET Core のコントローラー ロジックをテストする](/aspnet/core/mvc/controllers/testing)

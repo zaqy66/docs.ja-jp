@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 6d70db7139d82b6e219e2c417282333f950ef402
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925803"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43417862"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成
 この記事では、イベント ログにメッセージを書き込む単純な Windows サービス アプリケーションを Visual Studio で作成する方法を示します。 サービスを作成して使用するために実行する基本的な手順は次のとおりです。  
   
 1.  [サービスの作成](#BK_CreateProject) Windows Service **プロジェクト テンプレートを使用して** を行い、構成します。 このテンプレートは、<xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> を継承するクラスを作成し、基本的なサービス コードの多く (サービスを開始するコードなど) を記述します。  
   
-2.  
-  [サービスへの機能追加](#BK_WriteCode) プロシージャと <xref:System.ServiceProcess.ServiceBase.OnStart%2A> プロシージャの <xref:System.ServiceProcess.ServiceBase.OnStop%2A> を行い、再定義する他のすべてのメソッドをオーバーライドします。  
+2.  [サービスへの機能追加](#BK_WriteCode) プロシージャと <xref:System.ServiceProcess.ServiceBase.OnStart%2A> プロシージャの <xref:System.ServiceProcess.ServiceBase.OnStop%2A> を行い、再定義する他のすべてのメソッドをオーバーライドします。  
   
 3.  [サービスの状態の設定](#BK_SetStatus)。 既定では、<xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> で作成されたサービスは、利用可能な状態フラグのサブセットだけを実装します。 サービスの開始、一時停止、または停止に時間がかかる場合は、[保留の開始] または [保留の停止] などの状態値を実装し、操作の実行中であることを示すことができます。  
   
@@ -478,7 +477,7 @@ End Sub
      サービスが正常にアンインストールされたら、サービスが正常に削除されたことが installutil.exe によって報告されます。 詳細については、「 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)」を参照してください。  
   
 ## <a name="next-steps"></a>次の手順  
- 他のユーザーが Windows サービスのインストールに使用できるスタンドアロン セットアップ プログラムを作成できますが、これには追加の手順が必要になります。 ClickOnce では Windows サービスがサポートされていないため、発行ウィザードを使用できません。 Microsoft では提供されていませんが、InstallShield のフル ライセンス版を使用できます。 InstallShield について詳しくは、「 [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition)」をご覧ください。 [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=249067) を使用して、Windows サービスのインストーラーを作成することもできます。  
+ 他のユーザーが Windows サービスのインストールに使用できるスタンドアロン セットアップ プログラムを作成できますが、これには追加の手順が必要になります。 ClickOnce では Windows サービスがサポートされていないため、発行ウィザードを使用できません。 Microsoft では提供されていませんが、InstallShield のフル ライセンス版を使用できます。 InstallShield について詳しくは、「 [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition)」をご覧ください。 [Windows インストーラー XML ツールセット](https://go.microsoft.com/fwlink/?LinkId=249067) を使用して、Windows サービスのインストーラーを作成することもできます。  
   
  インストールしたサービスにコマンドを送信するための <xref:System.ServiceProcess.ServiceController> コンポーネントの使用法を調べることもできます。  
   
@@ -488,4 +487,4 @@ End Sub
  [Windows サービス アプリケーション](../../../docs/framework/windows-services/index.md)  
  [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [方法 : Windows サービス アプリケーションをデバッグする](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [サービス (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+ [サービス (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

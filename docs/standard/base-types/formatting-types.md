@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10dd7e007ecd24ec3f127ab9c102cd758dfc7d75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579848"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484865"
 ---
 # <a name="formatting-types-in-net"></a>.NET での型の書式設定
 <a name="Introduction"></a> 書式設定とはクラス、構造体、または列挙値のインスタンスを文字列形式に変換するプロセスのことで、多くの場合、変換した文字列をユーザーに表示したり、逆シリアル化して元のデータ型を復元したりするために行います。 この変換には次のような問題がある場合があります。  
@@ -120,7 +120,7 @@ ms.locfileid: "33579848"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  [!INCLUDE[win81](../../../includes/win81-md.md)]以降、 [!INCLUDE[wrt](../../../includes/wrt-md.md)] には、既定の書式指定をサポートする単一のメソッド [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) を備えた [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx)インターフェイスが含まれています。 ただし、マネージ型では `IStringable` インターフェイスを実装しないことをお勧めします。 詳細については、[!INCLUDE[wrt](../../../includes/wrt-md.md)] リファレンス ページの「The `IStringable` and the <xref:System.Object.ToString%2A?displayProperty=nameWithType> Interface (Windows ランタイムと IStringable インターフェイス)」を参照してください。  
+>  [!INCLUDE[win81](../../../includes/win81-md.md)]以降、[!INCLUDE[wrt](../../../includes/wrt-md.md)] には、既定の書式指定をサポートする単一のメソッド [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) を備えた [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) インターフェイスが含まれています。 ただし、マネージド型では `IStringable` インターフェイスを実装しないことをお勧めします。 詳細については、[!INCLUDE[wrt](../../../includes/wrt-md.md)] リファレンス ページの「The `IStringable` and the <xref:System.Object.ToString%2A?displayProperty=nameWithType> Interface (Windows ランタイムと IStringable インターフェイス)」を参照してください。  
   
  インターフェイス以外の型はすべて <xref:System.Object>から派生するため、この機能はカスタムのクラスまたは構造体に自動的に提供されます。 ただし、既定の `ToString` メソッドによって提供される機能には制限があり、型の識別は行いますが、型のインスタンスに関する情報は提供しません。 それ自体に関する情報を提供するオブジェクトの文字列形式を提供するには、 `ToString` メソッドをオーバーライドする必要があります。  
   

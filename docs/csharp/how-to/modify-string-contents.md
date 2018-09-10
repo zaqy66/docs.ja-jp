@@ -3,14 +3,14 @@ title: '方法: 文字列の内容を変更する - C# ガイド'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 99102fe90f5f675235e2993b7dd99f59214862d2
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 23d52a52291b3d5c36fc2ed0f299ab82aa5ffabd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243750"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482281"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>方法: C# で文字列の内容を変更する #
+# <a name="how-to-modify-string-contents-in-c"></a>方法: C\# で文字列の内容を変更する
 
 この記事では、既存の `string` を変更して `string` を生成するためのいくつかの手法を示します。 紹介するすべての手法で、変更の結果が `string` オブジェクトとして返されます。 これを明確に示すため、すべての例で、新しい変数に結果を格納します。 これで、それぞれの例を実行したときに、元の `string` と、変更から生じる `string` の両方を確認できます。
 
@@ -73,5 +73,5 @@ ms.locfileid: "39243750"
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Framework 正規表現](../../standard/base-types/regular-expressions.md)  
- [正規表現言語 - クイック リファレンス](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [.NET Framework 正規表現](../../standard/base-types/regular-expressions.md)  
+- [正規表現言語 - クイック リファレンス](../../standard/base-types/regular-expression-language-quick-reference.md)  

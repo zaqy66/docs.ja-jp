@@ -8,35 +8,37 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: cca9826c658581be38866410d5f966b1c7c35772
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f99415fc9a2b728917cdf829ffb9e25823a824dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267340"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43392573"
 ---
 # <a name="reference-types-c-reference"></a>参照型 (C# リファレンス)
-C# では、参照型と値型という 2 種類の型をサポートしています。 参照型の変数はデータ (オブジェクト) への参照を格納するのに対して、値型の変数はデータを直接格納します。 参照型の場合、2 つの変数が同じオブジェクトを参照できるため、ある変数に対する演算によって、他の変数が参照しているオブジェクトが影響を受ける可能性があります。 値型の場合、各変数が独自のデータ コピーを保持し、ある変数に対する操作が別の変数に影響を与えることはありません (ref および out パラメーター変数の場合を除きます。[in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)、[ref](../../../csharp/language-reference/keywords/ref.md)、[out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) パラメーター修飾子に関するページを参照してください)。  
-  
- 次のキーワードは、参照型を宣言するときに使用します。  
-  
--   [class](../../../csharp/language-reference/keywords/class.md)  
-  
--   [interface](../../../csharp/language-reference/keywords/interface.md)  
-  
--   [delegate](../../../csharp/language-reference/keywords/delegate.md)  
-  
- C# では次の組み込みの参照型も使用できます。  
-  
--   [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
-  
--   [object](../../../csharp/language-reference/keywords/object.md)  
-  
--   [string](../../../csharp/language-reference/keywords/string.md)  
-  
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
- [型](../../../csharp/language-reference/keywords/types.md)  
- [値型](../../../csharp/language-reference/keywords/value-types.md)
+
+C# では、参照型と値型という 2 種類の型をサポートしています。 参照型の変数はデータ (オブジェクト) への参照を格納するのに対して、値型の変数はデータを直接格納します。 参照型の場合、2 つの変数が同じオブジェクトを参照できるため、ある変数に対する演算によって、他の変数が参照しているオブジェクトが影響を受ける可能性があります。 値型の場合、各変数が独自のデータ コピーを保持し、ある変数に対する操作が別の変数に影響を与えることはありません (ref および out パラメーター変数の場合を除きます。[in](in-parameter-modifier.md)、[ref](ref.md)、[out](out-parameter-modifier.md) パラメーター修飾子に関するページを参照してください)。
+
+ 次のキーワードは、参照型を宣言するときに使用します。
+
+- [class](class.md)
+
+- [interface](interface.md)
+
+- [delegate](delegate.md)
+
+ C# では次の組み込みの参照型も使用できます。
+
+- [dynamic](dynamic.md)
+
+- [object](object.md)
+
+- [string](string.md)
+
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [型](types.md)
+- [値型](value-types.md)

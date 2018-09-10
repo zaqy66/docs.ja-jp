@@ -1,6 +1,6 @@
 ---
 title: スレッド処理オブジェクトと機能
-ms.date: 03/30/2017
+ms.date: 08/16/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], features
@@ -8,70 +8,39 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 2d56d962279120a03a6e4b89154ac1429ea5479e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874788"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483659"
 ---
 # <a name="threading-objects-and-features"></a>スレッド処理オブジェクトと機能
-.NET Framework には、マルチスレッド アプリケーションの作成と管理に役立つ多くのオブジェクトが用意されています。 マネージド スレッドは、<xref:System.Threading.Thread> クラスによって表されます。 <xref:System.Threading.ThreadPool> クラスを使用すると、マルチスレッドのバックグラウンド タスクを簡単に作成し、管理できます。 <xref:System.ComponentModel.BackgroundWorker> クラスは、ユーザー インターフェイスと対話するタスクについてそれと同じことを実現します。 <xref:System.Threading.Timer> クラスは、指定された間隔でバックグラウンド タスクを実行します。  
-  
- さらに、.NET Framework Version 2.0 で導入された <xref:System.Threading.Semaphore> クラスや <xref:System.Threading.EventWaitHandle> クラスなど、スレッドの活動を同期するクラスも数多くあります。 これらのクラスの機能の比較については、「[同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)」を参照してください。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- 
-  [マネージド スレッド プール](../../../docs/standard/threading/the-managed-thread-pool.md)  
- **ThreadPool** クラスについて説明します。このクラスを利用すると、開発者はスレッド管理を意識する必要なく、スレッドにタスクの実行を要求できます。  
-  
- [タイマー](../../../docs/standard/threading/timers.md)  
- マルチスレッド環境で使用できるタイマーについて説明します。  
-  
- [モニター](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- **Monitor** クラスを使用してメンバーへのアクセスを同期したり、独自の種類のスレッド管理を構築したりする方法を説明します。  
-  
- [待機ハンドル](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- <xref:System.Threading.WaitHandle> クラスについて説明します。このクラスは、イベント待機ハンドル、ミューテックス、およびセマフォ用の抽象基底クラスで、複数の同期イベントを待機できるようにします。  
-  
- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- 通知を行ったり通知を待機したりすることによりスレッドの活動を同期するために使用するマネージド イベント待機ハンドルについて説明します。  
-  
- [ミューテックス](../../../docs/standard/threading/mutexes.md)  
- オブジェクトへのアクセスの同期、または独自の同期機構の構築を <xref:System.Threading.Mutex> を使用して行う方法を説明します。  
-  
- [インタロックされた操作](../../../docs/standard/threading/interlocked-operations.md)  
- <xref:System.Threading.Interlocked> クラスを使用して、値の増減と値の格納をアトミックな 1 回の操作で実行する方法を説明します。  
-  
- [読み取り/書き込みロック](../../../docs/standard/threading/reader-writer-locks.md)  
- 単一ライター/複数リーダーのセマンティクスを実装するロックを定義します。  
-  
- [Semaphore と SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
- <xref:System.Threading.Semaphore> オブジェクトについて説明し、このオブジェクトを使用して、制限されたリソースへのアクセスを制御する方法を示します。  
-  
- [同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- マネージド スレッドをロックおよび同期するために用意されている .NET Framework のクラスの機能を比較します。  
-  
- [バリア](../../../docs/standard/threading/barrier.md)  
- 段階的な操作におけるスレッドの調整のためのバリア パターンを実装する <xref:System.Threading.Barrier> オブジェクトについて説明します。  
-  
- [SpinLock](../../../docs/standard/threading/spinlock.md)  
- 特定の下位レベルのシナリオで Monitor クラスの代わりに軽量のプリミティブとして使用できる <xref:System.Threading.SpinLock> について説明します。  
-  
- [SpinWait](../../../docs/standard/threading/spinwait.md)  
- カーネル ベースの待機を開始する前にビジー スピンを実行する下位レベルの同期プリミティブである <xref:System.Threading.SpinWait> について説明します。  
-  
-## <a name="reference"></a>参照  
- <xref:System.Threading.Thread>  
- 
-  **Thread** クラスのリファレンス ドキュメントです。このクラスは、アンマネージド コードから作成されたか、マネージド アプリケーションで作成されたかにかかわらず、マネージド スレッドを表します。  
-  
- <xref:System.ComponentModel.BackgroundWorker>  
- ユーザー インターフェイスと対話し、ユーザー インターフェイス スレッドで生成されるイベントを介して通信するバックグラウンド タスクを有効にします。  
-  
-## <a name="related-sections"></a>関連項目  
- [非同期ファイル I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
- 入力/出力操作が完了した場合にのみ非同期 I/O 完了ポートがスレッド プールを使用して処理を要求する方法について説明します。  
-  
- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降でマルチスレッド プログラミングのための推奨される方法について説明します。
+
+.NET では、<xref:System.Threading.Thread?displayProperty=nameWithType> クラスの他に、マルチ スレッド アプリケーションを開発するのに役立つ複数のクラスが提供されます。 次の記事では、それらのクラスの概要を説明します。
+
+|Title|説明|  
+|-----------|-----------------|  
+|[マネージド スレッド プール](the-managed-thread-pool.md)|.NET によって管理されるワーカー スレッドのプールを提供する <xref:System.Threading.ThreadPool?displayProperty=nameWithType> について説明します。|  
+|[タイマー](timers.md)|マルチスレッド環境で使用できるタイマーについて説明します。|
+|[同期プリミティブの概要](overview-of-synchronization-primitives.md)|データへのアクセスを同期化する場合や、スレッドの相互作用を制御する場合に使用できるクラスについて説明します。|
+|[EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|通知を行ったり通知を待機したりすることによりスレッドの活動を同期するために使用するマネージド イベント待機ハンドルについて説明します。|
+|[ミューテックス](mutexes.md)|<xref:System.Threading.Mutex?displayProperty=nameWithType> を使用してオブジェクトへのアクセスの同期化または独自の同期機構の構築を行う方法について説明します。|
+|[インタロックされた操作](interlocked-operations.md)|複数のスレッドで共有される変数にアトミックの操作を提供する <xref:System.Threading.Interlocked?displayProperty=nameWithType> クラスについて説明します。|
+|[読み取り/書き込みロック](reader-writer-locks.md)|単一ライター/複数参照セマンティクスを提供する <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> クラスについて説明します。|
+|[Semaphore と SemaphoreSlim](semaphore-and-semaphoreslim.md)|<xref:System.Threading.Semaphore?displayProperty=nameWithType> クラスについて、さらにそのクラスを使用して制限されたリソースへのアクセスを制御する方法について説明します。|
+|[バリア](barrier.md)|段階的な操作におけるスレッドの調整のためのバリア パターンを実装する <xref:System.Threading.Barrier?displayProperty=nameWithType> クラスについて説明します。|
+|[SpinLock](spinlock.md)|特定の下位レベルのシナリオで <xref:System.Threading.Monitor?displayProperty=nameWithType> クラスの代わりに軽量クラスとして使用できる <xref:System.Threading.SpinLock?displayProperty=nameWithType> クラスについて説明します。|
+|[SpinWait](spinwait.md)|カーネル ベースの待機を開始する前にビジー スピンを実行する下位レベルの同期プリミティブである <xref:System.Threading.SpinWait?displayProperty=nameWithType> クラスについて説明します。|
+
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
+- <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- [スレッドの使用とスレッド処理](using-threads-and-threading.md)
+- [非同期ファイル I/O](../io/asynchronous-file-i-o.md)
+- [並列プログラミング](../parallel-programming/index.md)
+- [タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md)

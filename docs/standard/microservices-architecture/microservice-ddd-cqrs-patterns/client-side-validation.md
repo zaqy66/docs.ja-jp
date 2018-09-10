@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104570"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395677"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>クライアント側の検証 (プレゼンテーション層での検証)
 
@@ -23,7 +23,7 @@ ms.locfileid: "37104570"
 
 したがって、通常、クライアント側のコードでは ViewModel を検証します。 サービスに送信する前に、クライアントの出力 DTO またはコマンドを検証することもできます。
 
-クライアント側の検証の実装は、構築するクライアント アプリケーションの種類によって変わります。 実装は、検証対象のデータが、ほとんどのコードが .NET の Web MVC Web アプリケーションか、検証が JavaScript または TypeScript でコーディングされている SPA Web アプリケーションか、Xamarin と C\# でコーディングされているモバイル アプリかによって変わります。
+クライアント側の検証の実装は、構築するクライアント アプリケーションの種類によって変わります。 実装は、検証対象のデータが、ほとんどのコードが .NET による Web MVC Web アプリケーションであるのか、検証が JavaScript または TypeScript でコーディングされている SPA Web アプリケーションであるのか、または Xamarin と C# でコーディングされているモバイル アプリであるのか、によって変わります。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
@@ -42,8 +42,8 @@ ms.locfileid: "37104570"
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web アプリの検証 (Angular 2、TypeScript、JavaScript)
 
--   **Ado Kukic。Angular 2 フォームの検証** **
-    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic。Angular 2 フォームの検証** 
+    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
 -   **フォームの検証**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
@@ -53,16 +53,15 @@ ms.locfileid: "37104570"
 
 要約すると、検証に関する最も重要な概念は次のとおりです。
 
--   エンティティと集計は、独自の一貫性を強制し、"常に有効" である必要があります。 集計ルートが、同じ集計内の複数エンティティの一貫性を担います。
+- エンティティと集計は、独自の一貫性を強制し、"常に有効" である必要があります。 集計ルートが、同じ集計内の複数エンティティの一貫性を担います。
 
--   エンティティで無効な状態を入力する必要があると考えられる場合は、最終的なドメイン エンティティを作成するまで一時的な DTO を使用するなど、別のオブジェクト モデルの使用を検討してください。
+- エンティティで無効な状態を入力する必要があると考えられる場合は、最終的なドメイン エンティティを作成するまで一時的な DTO を使用するなど、別のオブジェクト モデルの使用を検討してください。
 
--   集計などの複数の関連オブジェクトを作成する必要があり、すべてのオブジェクトが作成された後にのみ有効になる場合は、ファクトリ パターンの使用を検討してください。
+- 集計などの複数の関連オブジェクトを作成する必要があり、すべてのオブジェクトが作成された後にのみ有効になる場合は、ファクトリ パターンの使用を検討してください。
 
--   検証フレームワークは、プレゼンテーション レイヤーやアプリケーション/サービス レイヤーなどの特定のレイヤーで最もよく使用されますが、インフラストラクチャ フレームワークに強く依存する必要があるため、通常はドメイン モデル レイヤーでは使用されません。
+- 検証フレームワークは、プレゼンテーション レイヤーやアプリケーション/サービス レイヤーなどの特定のレイヤーで最もよく使用されますが、インフラストラクチャ フレームワークに強く依存する必要があるため、通常はドメイン モデル レイヤーでは使用されません。
 
--   ほとんどの場合、クライアント側で冗長な検証を行うことをお勧めします。これは、アプリケーションを事前対応型にすることができるためです。
-
+- ほとんどの場合、クライアント側で冗長な検証を行うことをお勧めします。これは、アプリケーションを事前対応型にすることができるためです。
 
 >[!div class="step-by-step"]
 [前へ](domain-model-layer-validations.md)

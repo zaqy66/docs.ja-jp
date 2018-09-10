@@ -20,19 +20,19 @@ ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8702f2329b262fc5c5965ae49365d46ba34091d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29077a1c0f2b803270adb730e0d810143095e709
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391174"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484981"
 ---
 # <a name="managing-connections"></a>接続の管理
 HTTP を使用してデータ リソースに接続するアプリケーションは、.NET Framework の <xref:System.Net.ServicePoint> クラスと <xref:System.Net.ServicePointManager> クラスを使用してインターネットに対する接続を管理し、最適なスケールとパフォーマンスを達成することができます。  
   
  **ServicePoint** クラスは、アプリケーションがインターネット リソースにアクセスするときに、接続に使用できるエンドポイントを提供します。 各 **ServicePoint** には、接続間で最適化情報を共有してパフォーマンスを改善することで、インターネット サーバーとの接続を最適化できる情報が含まれています。  
   
- 各 **ServicePoint** は、Uniform Resource Identifier (URI) で識別され、URI のスキーム識別子とホスト フラグメントに従って分類されます。 たとえば、スキーム識別子 (http) とホスト フラグメント (www.contoso.com) が同じため、1 つの **ServicePoint** インスタンスから URI http://www.contoso.com/index.htm と http://www.contoso.com/news.htm?date=today に対して要求が提供されます。 サーバー www.contoso.com に対する永続的な接続が既にあるアプリケーションの場合、2 つの接続を作成する必要がないように、その接続を使用して両方の要求が取得されます。  
+ 各 **ServicePoint** は、Uniform Resource Identifier (URI) で識別され、URI のスキーム識別子とホスト フラグメントに従って分類されます。 たとえば、スキーム識別子 (http) とホスト フラグメント (`www.contoso.com`) が同じであるため、1 つの **ServicePoint** インスタンスから URI `http://www.contoso.com/index.htm` と `http://www.contoso.com/news.htm?date=today` に対して要求が提供されます。 サーバー `www.contoso.com` に対する永続的な接続が既にあるアプリケーションの場合は、その接続を使用して両方の要求が取得され、2 つの接続を作成しなくても済むようにします。  
   
  **ServicePointManager** は、**ServicePoint** インスタンスの作成と破棄を管理する静的クラスです。 既存の **ServicePoint** インスタンスのコレクション内にないインターネット リソースをアプリケーションから要求された場合、**ServicePointManager** によって **ServicePoint** が作成されます。 最大アイドル時間を超えた場合、または既存の **ServicePoint** インスタンスがアプリケーションの最大 **ServicePoint** インスタンス数を超えた場合、**ServicePoint** インスタンスは破棄されます。 既定の最大アイドル時間と最大 **ServicePoint** インスタンス数はいずれも、**ServicePointManager** で <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> プロパティと <xref:System.Net.ServicePointManager.MaxServicePoints%2A> プロパティを設定して制御できます。  
   
@@ -53,7 +53,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- **ServicePointManager.DefaultConnectionLimit** プロパティを変更しても、既に初期化されている **ServicePoint** インスタンスに影響はありません。 次のコードは、サーバー http://www.contoso.com の既存の **ServicePoint** の接続制限を、`newLimit` に保存されている値に変更する例を示しています。  
+ **ServicePointManager.DefaultConnectionLimit** プロパティを変更しても、既に初期化されている **ServicePoint** インスタンスに影響はありません。 次のコードは、サーバー `http://www.contoso.com` の既存の **ServicePoint** の接続制限を、`newLimit` に保存されている値に変更する例を示しています。  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

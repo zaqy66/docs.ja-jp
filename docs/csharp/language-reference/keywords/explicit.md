@@ -1,26 +1,28 @@
 ---
 title: explicit キーワード (C# リファレンス)
-ms.date: 07/20/2015
+ms.date: 08/24/2018
 f1_keywords:
 - explicit_CSharpKeyword
 - explicit
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 66d271fdac0bad356ee0bafc1732e2f410854da1
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 3567a2c5aa549aa3141ed59c3e93e7b07975da70
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027942"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463144"
 ---
 # <a name="explicit-c-reference"></a>explicit (C# リファレンス)
 
-`explicit` キーワードは、キャストを使用して呼び出す必要があるユーザー定義型変換演算子を宣言します。 たとえば、次の演算子は摂氏というクラスを華氏というクラスに変換します。
+`explicit` キーワードは、キャストを使用して呼び出す必要があるユーザー定義型変換演算子を宣言します。
+
+次の例では、`Fahrenheit` クラスから `Celsius` クラスに変換される演算子が定義されます。 この演算子は、`Fahrenheit`クラス内または `Celsius` クラス内のいずれかで定義する必要があります。
 
 [!code-csharp[csrefKeywordsConversion#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#2)]
 
-この変換演算子は、次のように呼び出すことができます。
+次の例に示すように、定義された変換演算子はキャストを使用して呼び出します。
 
 [!code-csharp[csrefKeywordsConversion#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#3)]
 
@@ -48,10 +50,10 @@ ms.locfileid: "37027942"
 
 ## <a name="see-also"></a>関連項目
 
-[C# リファレンス](../index.md)  
-[C# プログラミング ガイド](../../programming-guide/index.md)  
-[C# のキーワード](index.md)  
-[implicit](implicit.md)  
-[演算子 (C# リファレンス)](operator.md)  
-[方法: 構造体間にユーザー定義の変換を実装する](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
-[Chained user-defined explicit conversions in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/) (C# でのユーザー定義の明示的変換の連結)  
+- [C# リファレンス](../index.md)  
+- [C# プログラミング ガイド](../../programming-guide/index.md)  
+- [C# のキーワード](index.md)  
+- [implicit](implicit.md)  
+- [演算子 (C# リファレンス)](operator.md)  
+- [方法: 構造体間にユーザー定義の変換を実装する](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [Chained user-defined explicit conversions in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/) (C# でのユーザー定義の明示的変換の連結)  

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: fbee7e6ad0fad312e9e5524f7b3fcc7c417ad47b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b156d043f5a4b72f4cb7423708b41fdd0e475dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577428"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43385697"
 ---
 # <a name="async-in-depth"></a>非同期の詳細
 
@@ -114,7 +114,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 さらに、UI スレッドへの作業の処理依頼 (UI の更新など) は、`async` メソッドを使用すればとても簡単で、余分な作業 (スレッドセーフ デリゲートの呼び出しなど) は必要ありません。
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>CPU バインド操作の Task と Task<T> の詳細
+## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>CPU バインド操作の Task と Task&lt;T&gt; の詳細
 
 CPU バインドの `async` コードは、I/O バインドの `async` コードとは少し異なります。  作業は CPU で実行されるため、スレッドを計算専用にすることを避ける方法はありません。  `async` と `await` を使用すると、バックグラウンドのスレッドをクリーンな方法で使用でき、非同期メソッドの呼び出し元の応答性を維持できます。  これにより共有データに対する保護は提供されないことに注意してください。  共有データを使用している場合は、適切な同期戦略を適用する必要があります。
 

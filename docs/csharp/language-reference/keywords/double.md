@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 8e3a94bb79d46f2815e46b86f1aca92acc73e5c2
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027851"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401325"
 ---
 # <a name="double-c-reference"></a>double (C# リファレンス)
 
@@ -34,9 +34,9 @@ double x = 3D;
 
 整数型と浮動小数点型を 1 つの式の中の混在させることができます。 この場合、整数型が浮動小数点型に変換されます。 式の評価は、次の規則に従って実行されます。
 
-- 浮動小数点型の 1 つが `double` の場合、式は `double` または [bool](../../../csharp/language-reference/keywords/bool.md) (関係式またはブール式の場合) と評価されます。
+- 浮動小数点型の 1 つが `double` の場合、式は `double` または [bool](../../../csharp/language-reference/keywords/bool.md) (リレーショナル比較および等価比較の場合) と評価されます。
 
-- 式に `double` 型が含まれない場合は、[float](../../../csharp/language-reference/keywords/float.md) または [bool](../../../csharp/language-reference/keywords/bool.md) (関係式またはブール式の場合) と評価されます。
+- 式に `double` 型が含まれない場合は、式は [float](../../../csharp/language-reference/keywords/float.md) または [bool](../../../csharp/language-reference/keywords/bool.md) (リレーショナル比較または等価比較の場合) と評価されます。
 
  浮動小数点式は、次の値のセットを含むことができます。
 
@@ -62,11 +62,11 @@ double x = 3D;
 
 ## <a name="see-also"></a>参照
 
-[C# リファレンス](../../../csharp/language-reference/index.md)  
-[C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-[C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-[既定値の一覧表](../../../csharp/language-reference/keywords/default-values-table.md)  
-[組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[浮動小数点型の一覧表](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-[暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
+- [既定値の一覧表](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [浮動小数点型の一覧表](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

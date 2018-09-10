@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0627a61e910b1d278fd2e604dd8de7021fdb0fed
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b7115530c44321dc2a10be3996c14429591b611f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106218"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401981"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -35,7 +35,7 @@ ms.locfileid: "37106218"
 
 このガイドでは、すべての手順が詳細に記載されており、主要な各手順は、Visual Studio の環境を使用して説明しています。
 
-エディターと CLI を使用する開発手法 (例: Visual Studio Code と macOS または Windows 上の Docker CLI) を使用する場合、Visual Studio を使用する場合よりも、通常はより詳細に全手順を把握している必要があります。 CLI 環境での作業の詳細については、電子書籍、「[Containerized Docker Application lifecycle with Microsoft Platforms and Tools](http://aka.ms/dockerlifecycleebook/)」 (Microsoft のプラットフォームおよびツールとコンテナー化された Docker アプリケーションのライフサイクル) を参照してください。
+エディターと CLI を使用する開発手法 (例: Visual Studio Code と macOS または Windows 上の Docker CLI) を使用する場合、Visual Studio を使用する場合よりも、通常はより詳細に全手順を把握している必要があります。 CLI 環境での作業の詳細については、電子書籍、「[Containerized Docker Application lifecycle with Microsoft Platforms and Tools](https://aka.ms/dockerlifecycleebook/)」 (Microsoft のプラットフォームおよびツールとコンテナー化された Docker アプリケーションのライフサイクル) を参照してください。
 
 Visual Studio 2015 または Visual Studio 2017 を使用している場合、これらの手順の多くは自動処理されるので、生産性が大幅に向上します。 これは、Visual Studio 2017 で、複数のコンテナー アプリケーションを対象としているとき特にそうです。 たとえば、マウスを 1 回クリックするだけで、Visual Studio では、アプリケーションに適した構成で Dockerfile と docker-compose.yml ファイルをプロジェクトに追加できます。 そのアプリケーションを Visual Studio で実行すると、Docker イメージが構築され、Docker で直接マルチコンテナー アプリケーションが実行されます。また、一度に複数のコンテナーをデバッグすることもできます。 これらの機能により、開発の速度が向上します。
 
@@ -248,7 +248,7 @@ services:
 
 なお、この docker-compose.yml ファイルは、簡略化され、結合されたバージョンです。 これには、必ずある (カスタム イメージ名などの) 各コンテナー用の静的な構成データと、展開環境によっては異なる場合のある、接続文字列などの構成情報が含まれています。 後半のセクションでは、複数の docker-compose ファイルに docker-compose.yml 構成を分割し、環境と実行の種類 (デバッグまたはリリース) に応じて、値をオーバーライドする方法について学習します。
 
-docker-compose.yml ファイルの例では、webmvc サービス (Web アプリケーション)、2 つのマイクロサービス (catalog.api および ordering.api)、1 つのデータ ソース コンテナー、コンテナーとして実行される Linux 用 SQL Server の sql.data の 5 つのサービスが定義されています。 各サービスはコンテナーとして展開されるので、それぞれに Docker イメージが必要です。
+docker-compose.yml ファイルの例では、webmvc サービス (Web アプリケーション)、2 つのマイクロサービス (catalog.api および ordering.api)、1 つのデータ ソース コンテナー、コンテナーとして実行される Linux 用 SQL Server の sql.data の 4 つのサービスが定義されています。 各サービスはコンテナーとして展開されるので、それぞれに Docker イメージが必要です。
 
 docker-compose.yml ファイルでは、どのコンテナーが使用されているかのみでなく、それらがどのように個々に構成されるかが指定されています。 たとえば、.yml ファイルの webmvc コンテナーの定義は次のとおりです。
 

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960041"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43388144"
 ---
 # <a name="using-directive-c-reference"></a>using ディレクティブ (C# リファレンス)
 `using` ディレクティブは、次の 3 つの用途で使用します。  
@@ -20,7 +20,7 @@ ms.locfileid: "37960041"
     using System.Text;  
     ```  
   
--   アクセスを型名で修飾することなく、型の静的メンバーへのアクセスを許可する場合。 
+-   アクセスを型名で修飾することなく、型の静的メンバーおよび入れ子にされた型へのアクセスを許可する場合。 
   
     ```csharp  
     using static System.Math;  
@@ -52,13 +52,23 @@ class Program
 ```  
   
 ## <a name="remarks"></a>コメント  
- `using` ディレクティブのスコープは、このディレクティブが存在するファイルに限定されます。  
+ `using` ディレクティブのスコープは、このディレクティブが存在するファイルに限定されます。
+ 
+ `using` ディレクティブは、次のように記述することができます。
+- ソース コード ファイルの先頭、任意の名前空間または型定義の前。
+- 任意の名前空間内、ただし、この名前空間内で宣言された任意の名前空間または型の前。
+
+それ以外の場合は、コンパイラ エラー [CS1529](../../misc/cs1529.md) が生成されます。
   
- `using` エイリアスを作成すると、名前空間または型への識別子を修飾しやすくなります。 using エイリアス ディレクティブの右側は、その前にある using ディレクティブに関係なく、必ず完全修飾型である必要があります。  
+ `using` 別名ディレクティブを作成すると、名前空間または型の識別子を修飾しやすくなります。 いずれの `using` ディレクティブにおいても、前に置かれる `using` に関係なく、完全に修飾された名前空間または型を使用する必要があります。 `using` ディレクティブの宣言内では、`using` 別名を使用することができません。 たとえば、次の場合はコンパイラ エラーが生成されます。
+ ```csharp
+ using s = System.Text;
+ using s.RegularExpressions; 
+ ```
   
  `using` ディレクティブを作成すると、名前空間内の型を、名前空間を指定することなく使用できます。 `using` ディレクティブでは、指定した名前空間に入れ子になった別の名前空間へのアクセスは許可されません。  
   
- 名前空間は、ユーザー定義とシステム定義の 2 つのカテゴリに分類されます。 ユーザー定義の名前空間は、コードで定義された名前空間です。 システム定義の名前空間の一覧については、[.NET Framework クラス ライブラリの概要](../../../standard/class-library-overview.md)に関するページを参照してください。  
+ 名前空間は、ユーザー定義とシステム定義の 2 つのカテゴリに分類されます。 ユーザー定義の名前空間は、コードで定義された名前空間です。 システム定義の名前空間の一覧については、「[.NET API ブラウザー](https://docs.microsoft.com/en-us/dotnet/api/)」を参照してください。  
   
  他のアセンブリのメソッドを参照する方法の例については、[コマンド ラインでアセンブリを作成し、使用する](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)方法に関するページをご覧ください。  
   
@@ -79,11 +89,12 @@ class Program
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [名前空間の使用](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
- [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [名前空間](../../../csharp/programming-guide/namespaces/index.md)  
- [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [名前空間の使用](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
+- [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [名前空間](../../../csharp/programming-guide/namespaces/index.md)  
+- [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)

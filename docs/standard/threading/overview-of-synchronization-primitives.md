@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592016"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485535"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同期プリミティブの概要
 <a name="top"></a>.NET Framework には、スレッドの相互作用を制御したり競合状態を回避したりするためのさまざまな同期プリミティブが用意されています。 これらは、大きくは 3 つのカテゴリ (ロック、シグナリング、インタロックされた操作) に分類することができます。  
@@ -40,7 +40,7 @@ ms.locfileid: "33592016"
  ロックは、リソースの制御を一度に 1 つのスレッドに渡したり、指定された数のスレッドに渡したりします。 ロックが使用されているときに排他ロックを要求したスレッドは、ロックが使用可能になるまでブロックされます。  
   
 ### <a name="exclusive-locks"></a>排他ロック  
- ロックの最も単純な形式は、C# では `lock` ステートメントであり、Visual Basic では `SyncLock` ステートメントです。これらのステートメントは、コード ブロックへのアクセスを制御します。 このようなブロックはしばしば、クリティカル セクションと呼ばれます。 `lock` ステートメントは <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> メソッドと <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> メソッドを使用して実装され、`try…catch…finally` ブロックを使用してロックが解放されるようにします。  
+ ロックの最も単純な形式は、C# では `lock` ステートメントであり、Visual Basic では `SyncLock` ステートメントです。これらのステートメントは、コード ブロックへのアクセスを制御します。 このようなブロックはしばしば、クリティカル セクションと呼ばれます。 `lock` ステートメントは <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> メソッドと <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> メソッドを使用して実装されます。また、このステートメントでは、ロックが確実に解除されるように、`try…finally` ブロックが使用されます。  
   
  一般的に、`lock` ステートメントまたは `SyncLock` ステートメントを使用して小さいコード ブロックを保護して、1 つのメソッドより広げないようにするのが、<xref:System.Threading.Monitor> クラスを使用するための最適な方法です。 <xref:System.Threading.Monitor> クラスは強力ですが、孤立したロックやデッドロックが発生しやすくなります。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33592016"
   
  <xref:System.Threading.Monitor> クラスはインスタンス化可能ではありません。 このメソッドは静的 (Visual Basic では `Shared`) であり、インスタンス化可能ロック オブジェクトに対して作用します。  
   
- 概念的概要については、「[モニター](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)」を参照してください。  
+ 概念的概要については、「[モニター](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)」を参照してください。  
   
 #### <a name="mutex-class"></a>Mutex クラス  
  スレッドは、<xref:System.Threading.Mutex> をその <xref:System.Threading.WaitHandle.WaitOne%2A> メソッドのオーバーロードを呼び出すことによって要求します。 スレッドが待機を中止することができるように、タイムアウトを使用するオーバーロードが用意されています。 <xref:System.Threading.Monitor> クラスとは異なり、ミューテックスはローカルもグローバルも可能です。 グローバル ミューテックスは名前付きミューテックスとも呼ばれ、オペレーティング システム全体で可視です。したがって、複数のアプリケーション ドメインまたはプロセス内のスレッドの同期化に使用できます。 ローカル ミューテックスは <xref:System.MarshalByRefObject> から派生し、アプリケーション ドメインの境界を越えて使用できます。  
@@ -109,7 +109,7 @@ ms.locfileid: "33592016"
   
  インスタンス メソッド <xref:System.Threading.WaitHandle.WaitOne%2A> か、静的メソッド <xref:System.Threading.WaitHandle.WaitAll%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A>、<xref:System.Threading.WaitHandle.SignalAndWait%2A> のいずれかを呼び出すことによって、スレッドは待機ハンドルでブロックされます。 それらがどのように解放されるかは、呼び出されたメソッドと待機ハンドルの種類に応じて決まります。  
   
- 概念的概要については、「[待機ハンドル](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)」を参照してください。  
+ 概念的概要については、「[待機ハンドル](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)」を参照してください。  
   
 #### <a name="event-wait-handles"></a>イベント待機ハンドル  
  イベント待機ハンドルには、<xref:System.Threading.EventWaitHandle> クラスとその派生クラスの <xref:System.Threading.AutoResetEvent> および <xref:System.Threading.ManualResetEvent> が含まれます。 <xref:System.Threading.EventWaitHandle.Set%2A> メソッドを呼び出すか <xref:System.Threading.WaitHandle.SignalAndWait%2A> メソッドを使用してイベント待機ハンドルに通知されると、スレッドはイベント待機ハンドルから解放されます。  
@@ -167,11 +167,11 @@ ms.locfileid: "33592016"
   
 ## <a name="see-also"></a>参照  
  [マルチスレッド処理のためのデータの同期](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [モニター](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+ [モニター](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  [ミューテックス](../../../docs/standard/threading/mutexes.md)  
  [Semaphore と SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
  [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [待機ハンドル](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [待機ハンドル](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  [インタロックされた操作](../../../docs/standard/threading/interlocked-operations.md)  
  [読み取り/書き込みロック](../../../docs/standard/threading/reader-writer-locks.md)  
  [バリア](../../../docs/standard/threading/barrier.md)  

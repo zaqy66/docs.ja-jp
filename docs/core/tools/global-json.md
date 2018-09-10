@@ -3,14 +3,14 @@ title: global.json の概要
 description: .NET Core CLI コマンドを実行するときに global.json ファイルを使用して .NET Core SDK のバージョンを設定する方法について説明します。
 author: mairaw
 ms.author: mairaw
-ms.date: 07/02/2018
+ms.date: 07/30/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: a7c9301e1beea49eebace5c8f8a7d159a8c12466
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936972"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252961"
 ---
 # <a name="globaljson-overview"></a>global.json の概要
 
@@ -101,10 +101,10 @@ SDK バージョン 2.1.100 以降の番号の最後の部分 (`xyz`) の最初�
 この警告は、プレビュー バージョンの .NET Core SDK を使用してプロジェクトがコンパイルされていることを示します (「[照合ルール](#matching-rules)」セクションを参照)。 .NET Core SDK のバージョンには高品質の履歴とコミットメントがあります。 ただし、プレビュー バージョンを使用したくない場合は、*global.json* ファイルをプロジェクトの階層構造に追加して使用する SDK のバージョンを指定し、`dotnet --list-sdks` を使用してそのバージョンがコンピューターにインストールされていることを確認します。 新しいバージョンがリリースされたときに新しいバージョンを使用するには、*global.json* ファイルを削除するか、または新しいバージョンを使用するようにファイルを更新します。
 
 > [!WARNING]
-> Startup project '{startupProject}' targets framework '.NETCoreApp' version '{targetFrameworkVersion}'. This version of the Entity Framework Core .NET Command-line Tools only supports version 2.0 or higher. For information on using older versions of the tools, see https://go.microsoft.com/fwlink/?linkid=871254 (スタートアップ プロジェクト '{startupProject}' で、フレームワーク '.NETCoreApp' バージョン '{targetFrameworkVersion}' がターゲットになっています。このバージョンの Entity Framework Core .NET コマンド ライン ツールは、バージョン 2.0 以降のみをサポートします。古いバージョンのツールの使用については、https://go.microsoft.com/fwlink/?linkid=871254 をご覧ください)
+> Startup project '{startupProject}' targets framework '.NETCoreApp' version '{targetFrameworkVersion}'. This version of the Entity Framework Core .NET Command-line Tools only supports version 2.0 or higher. For information on using older versions of the tools, see https://go.microsoft.com/fwlink/?linkid=871254 (スタートアップ プロジェクト '{startupProject}' で、フレームワーク '.NETCoreApp' バージョン '{targetFrameworkVersion}' がターゲットになっています。このバージョンの Entity Framework Core .NET コマンド ライン ツールは、バージョン 2.0 以降のみをサポートします。古いバージョンのツールの使用については、 https://go.microsoft.com/fwlink/?linkid=871254 をご覧ください)
 
-.NET Core SDK 2.1 (v. 2.1.300) 以降では、`dotnet ef` コマンドが SDK に含まれます。 この警告は、プロジェクトのターゲットが EF Core 1.0 または 1.1 であり、.NET Core SDK 2.1 以降のバージョンと互換性がないことを示します。 プロジェクトをコンパイルするには、.NET Core SDK 2.0 (v. 2.1.201) 以前のバージョンをコンピューターにインストールしてください。 詳細については、「[EF Core .NET Command-line Tools](/ef/core/miscellaneous/cli/dotnet)」(EF Core .NET コマンドライン ツール) を参照してください。
+.NET Core SDK 2.1 (v. 2.1.300) 以降では、`dotnet ef` コマンドが SDK に含まれます。 この警告は、プロジェクトのターゲットが EF Core 1.0 または 1.1 であり、.NET Core SDK 2.1 以降のバージョンと互換性がないことを示します。 プロジェクトをコンパイルするには、.NET Core SDK 2.0 (v. 2.1.201) またはそれ以前のバージョンをご利用のコンピューター上にインストールし、*global.json* ファイルを使用して必要な SDK バージョンを定義します。 `dotnet ef` コマンドの詳細については、「[EF Core .NET コマンドライン ツール](/ef/core/miscellaneous/cli/dotnet)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[プロジェクト SDK の解決方法](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+* [プロジェクト SDK の解決方法](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

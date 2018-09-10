@@ -4,12 +4,12 @@ description: .NET Core で提供される、C# 言語レベルの非同期プロ
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b753b887da6f8836e0f4363a479c12c7364ea770
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312067"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484968"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
@@ -118,7 +118,7 @@ C# 側では、コンパイラはコードをステート マシンに変換し�
 
 ### <a name="extracting-data-from-a-network"></a>ネットワークからのデータの抽出
 
-このスニペットは、www.dotnetfoundation.org から HTML をダウンロードし、HTML に文字列 ".NET" が出現する回数を数えます。  ASP.NET MVC を使って定義されている Web コントローラー メソッドが、このタスクを実行して、数を返します。
+このスニペットでは、[www.dotnetfoundation.org](https://www.dotnetfoundation.org) にあるホームページから HTML がダウンロードされ、HTML に文字列 ".NET" が出現する回数が数えられます。  ASP.NET MVC を使って定義されている Web コントローラー メソッドが、このタスクを実行して、数を返します。
 
 > [!NOTE]
 > 運用コードで HTML の解析の実行を計画している場合は、正規表現を使用しないでください。 代わりに解析ライブラリを使用します。

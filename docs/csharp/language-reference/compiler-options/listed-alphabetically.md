@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: ca21aeb6ae1cf53bc3ff4edbcf575b733a52a1cf
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472491"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525686"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>アルファベット順の C# コンパイラ オプションの一覧
 
@@ -82,7 +82,7 @@ ms.locfileid: "34472491"
 
 ## <a name="see-also"></a>参照
 
- [C# コンパイラ オプション](index.md)  
- [カテゴリ別の C# コンパイラ オプションの一覧](listed-by-category.md)  
- [方法: Visual Studio のコマンドラインのための環境変数を設定する](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
- [\<compiler> 要素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [C# コンパイラ オプション](index.md)  
+- [カテゴリ別の C# コンパイラ オプションの一覧](listed-by-category.md)  
+- [方法: Visual Studio のコマンドラインのための環境変数を設定する](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [\<compiler> 要素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
