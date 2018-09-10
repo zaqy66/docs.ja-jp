@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8bb84f2e26471e004678afde99a1dd725db6832
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755107"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265079"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>方法: ConcurrentDictionary の項目を追加および削除する
 この例では、<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> の項目を追加、取得、更新、削除する方法を示します。 このコレクション クラスは、スレッド セーフな実装です。 同時に複数のスレッドが要素へのアクセスを試みる可能性がある場合は常に、このクラスを使用することをお勧めします。  
@@ -48,6 +48,7 @@ ms.locfileid: "42755107"
   
  したがって、<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> によって返されるデータが、スレッドの valueFactory によって作成された同じデータであることは保証されません。 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> を呼び出したときも、同様の一連のイベントが発生する可能性があります。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [スレッドセーフなコレクション](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [スレッドセーフなコレクション](../../../../docs/standard/collections/thread-safe/index.md)

@@ -3,11 +3,11 @@ title: XNA アプリケーションでの操作と慣性の使用
 ms.date: 03/30/2017
 ms.assetid: b7c18905-850c-4da4-8977-a074406a4263
 ms.openlocfilehash: 70b8d0c5c098089b6f16ef817ff86698f68cf7c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478144"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44248905"
 ---
 # <a name="using-manipulations-and-inertia-in-an-xna-application"></a>XNA アプリケーションでの操作と慣性の使用
 この記事では、操作と慣性の処理を Microsoft XNA アプリケーションで使用して、ゲーム ピースの動きを制御する方法について説明します。 この記事をお読みになる前に、「[操作と慣性の概要](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)」トピックの内容、および基本的な XNA のプログラミングの概念についてよく理解してください。  

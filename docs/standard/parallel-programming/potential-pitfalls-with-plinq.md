@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73ec2d2fb73ee95b39a15307d136c35542578c41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c4decd01938500fe6330c48caa33b845916aaff
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591717"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863008"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ の非利便性
 PLINQ を使用すると、多くの場合、連続した LINQ to Objects クエリのパフォーマンスが大幅に向上します。 ただし、クエリの実行を並列化すると、複雑性が増すため、シーケンシャルなコードにおいて一般的でない問題、またはめったにない問題を引き起こす場合があります。 このトピックでは、PLINQ クエリを記述するときに回避すべき点について示します。  
@@ -119,5 +119,6 @@ ManualResetEventSlim mre = new ManualResetEventSlim();
   
  具体的には、処理を適切に進めるには、並列ループの特定のイテレーションでそのループの別のイテレーションを待機するのは避ける必要があります。 並列ループで、イテレーションが逆の順序で順次スケジュールされた場合、デッドロックが発生します。  
   
-## <a name="see-also"></a>参照  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>関連項目
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

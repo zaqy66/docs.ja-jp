@@ -160,11 +160,11 @@ ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43465500"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075459"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe のエラー メッセージ
 ビルド プロセスは [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] で **[!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント** テンプレートを使うときに [Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) を呼び出すため、Winmdexp.exe のエラー メッセージは **[エラー一覧]** に表示されます。 Winmdexp.exe は `/target:winmdobj` オプションでコンパイルされるモジュールで動作します。 コンパイルされたモジュールが入力として必要となるため、コンパイルが成功した場合を除き、そのエラー メッセージは表示されません。  

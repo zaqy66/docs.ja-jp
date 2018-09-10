@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fc995843c1e2f5977acbfe2158457d30ac355ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573914"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185055"
 ---
 # <a name="localization"></a>ローカリゼーション
 ローカリゼーションはアプリケーションのリソースを翻訳するプロセスであり、そのアプリケーションで対応するカルチャ別のバージョンが作られます。 [ローカライズ化の確認](../../../docs/standard/globalization-localization/localizability-review.md)手順で世界展開するアプリケーションがローカライズ可能であることを確認してから、ローカリゼーション手順に進んでください。  
@@ -32,8 +32,9 @@ ms.locfileid: "33573914"
   
  [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] には Windows フォーム リソース エディター (Winres.exe) があります。このエディターでは、ターゲット カルチャに合わせて Windows フォームを簡単にローカライズできます。 このツールの使用方法については、「[Winres.exe (Windows フォーム リソース エディター)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)  
- [ローカライズ化の確認](../../../docs/standard/globalization-localization/localizability-review.md)  
- [グローバリゼーション](../../../docs/standard/globalization-localization/globalization.md)  
- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>関連項目
+
+- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)  
+- [ローカライズ化の確認](../../../docs/standard/globalization-localization/localizability-review.md)  
+- [グローバリゼーション](../../../docs/standard/globalization-localization/globalization.md)  
+- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)

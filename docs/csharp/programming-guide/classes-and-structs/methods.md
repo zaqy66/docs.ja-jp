@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 3c6315daf08ce9931263aa5fb27c80a0bf41ef79
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f719dd010f2910a12b22fac10ae92f1a6bfe8438
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43473987"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43741831"
 ---
 # <a name="methods-c-programming-guide"></a>メソッド (C# プログラミング ガイド)
 メソッドは、一連のステートメントが含まれているコード ブロックです。 必要なメソッド引数を指定してプログラムからメソッドを呼び出すと、メソッド内のステートメントが実行されます。 C# では、実行されるすべての命令がメソッドのコンテキストで実行されます。 Main メソッドは、すべての C# アプリケーションのエントリ ポイントです。プログラムが開始されると、このメソッドが共通言語ランタイム (CLR) によって呼び出されます。  
@@ -150,20 +150,21 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  反復子の戻り値の型には、 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>、または <xref:System.Collections.Generic.IEnumerator%601>を指定できます。  
   
- 詳細については、「 [反復子](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)」を参照してください。  
+ 詳細については、「 [反復子](../../../csharp/programming-guide/concepts/iterators.md)」を参照してください。  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [クラスと構造体](index.md)  
- [アクセス修飾子](access-modifiers.md)  
- [静的クラスと静的クラス メンバー](static-classes-and-static-class-members.md)  
- [継承](inheritance.md)  
- [抽象クラスとシール クラス、およびクラス メンバー](abstract-and-sealed-classes-and-class-members.md)  
- [params](../../../csharp/language-reference/keywords/params.md)  
- [return](../../../csharp/language-reference/keywords/return.md)  
- [out](../../../csharp/language-reference/keywords/out.md)  
- [ref](../../../csharp/language-reference/keywords/ref.md)  
- [パラメーターの引き渡し](passing-parameters.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [クラスと構造体](index.md)  
+- [アクセス修飾子](access-modifiers.md)  
+- [静的クラスと静的クラス メンバー](static-classes-and-static-class-members.md)  
+- [継承](inheritance.md)  
+- [抽象クラスとシール クラス、およびクラス メンバー](abstract-and-sealed-classes-and-class-members.md)  
+- [params](../../../csharp/language-reference/keywords/params.md)  
+- [return](../../../csharp/language-reference/keywords/return.md)  
+- [out](../../../csharp/language-reference/keywords/out.md)  
+- [ref](../../../csharp/language-reference/keywords/ref.md)  
+- [パラメーターの引き渡し](passing-parameters.md)

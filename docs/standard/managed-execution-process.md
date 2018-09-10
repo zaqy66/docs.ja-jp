@@ -1,5 +1,5 @@
 ---
-title: マネージ実行プロセス
+title: マネージド実行プロセス
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4901a81e318efe8371dc72cd9c1d511d55b0c65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33c498e8379d68287bfe4a2e781d6797fd6b4c10
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578977"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192594"
 ---
-# <a name="managed-execution-process"></a>マネージ実行プロセス
-<a name="introduction"></a> マネージ実行プロセスで実行される主な手順を次に示します。詳細については、後で説明します。  
+# <a name="managed-execution-process"></a>マネージド実行プロセス
+<a name="introduction"></a> マネージド実行プロセスで実行される主な手順を次に示します。詳細については、後で説明します。  
   
 1.  [コンパイラを選択します](#choosing_a_compiler)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33578977"
   
 <a name="compiling_to_msil"></a>   
 ## <a name="compiling-to-msil"></a>MSIL へのコンパイル  
- マネージ コードへのコンパイル時に、コンパイラはソース コードを MSIL (Microsoft Intermediate Language) に変換します。MSIL は CPU に依存しない一連の命令で、効率的にネイティブ コードに変換できます。 MSIL には、オブジェクトに対する読み込み、格納、初期化、および呼び出し用の命令の他に、算術演算と論理演算、制御フロー、DMA (Direct Memory Access)、例外処理、およびその他の操作のための命令も含まれています。 コードを実行する前に、MSIL を CPU 固有のコードに変換する必要があります。通常、この変換は [Just-In-Time (JIT) コンパイラ](#compiling_msil_to_native_code)によって行われます。 共通言語ランタイムはサポートするコンピューター アーキテクチャごとに JIT コンパイラを提供しているため、同じ MSIL セットを JIT コンパイルして、サポートされているすべてのアーキテクチャで実行できます。  
+ マネージド コードへのコンパイル時に、コンパイラはソース コードを MSIL (Microsoft Intermediate Language) に変換します。MSIL は CPU に依存しない一連の命令で、効率的にネイティブ コードに変換できます。 MSIL には、オブジェクトに対する読み込み、格納、初期化、および呼び出し用の命令の他に、算術演算と論理演算、制御フロー、DMA (Direct Memory Access)、例外処理、およびその他の操作のための命令も含まれています。 コードを実行する前に、MSIL を CPU 固有のコードに変換する必要があります。通常、この変換は [Just-In-Time (JIT) コンパイラ](#compiling_msil_to_native_code)によって行われます。 共通言語ランタイムはサポートするコンピューター アーキテクチャごとに JIT コンパイラを提供しているため、同じ MSIL セットを JIT コンパイルして、サポートされているすべてのアーキテクチャで実行できます。  
   
  コンパイラは、MSIL を生成するときにメタデータも生成します。 メタデータには、コード内の型について、それぞれの型の定義、型のメンバーのシグネチャ、コードが参照するメンバー、共通言語ランタイムが実行時に使用するその他のデータなどが記述されています。 MSIL とメタデータは、実行可能ファイルのファイル形式として使用されてきた従来の Microsoft PE と COFF (Common Object File Format) に基づき、それらを拡張した移植可能な実行可能 (PE: Portable Executable) ファイルに格納されます。 MSIL、ネイティブ コード、およびメタデータを保存できるこのファイル形式を使用すると、オペレーティング システムが共通言語ランタイムのイメージを認識できるようになります。 MSIL と共にメタデータがこのファイルに格納されるため、コードは自己記述型になります。つまり、タイプ ライブラリまたはインターフェイス定義言語 (IDL: Interface Definition Language) は必要ありません。 共通言語ランタイムは、実行時にこのファイルから必要に応じてメタデータを検出および抽出します。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33578977"
 -   .NET Framework の [Ngen.exe (ネイティブ イメージ ジェネレーター)](../../docs/framework/tools/ngen-exe-native-image-generator.md)。  
   
 ### <a name="compilation-by-the-jit-compiler"></a>JIT コンパイラによるコンパイル  
- JIT コンパイルは、アプリケーション実行時に、アセンブリの内容が読み込まれて実行される際に、オン デマンドで MSIL をネイティブ コードに変換します。 共通言語ランタイムには、サポートされる CPU アーキテクチャごとに JIT コンパイラが用意されているため、開発者は MSIL アセンブリのセットを作成し、それを JIT でコンパイルして、異なるマシン アーキテクチャを持つさまざまなコンピューター上で実行できます。 ただし、マネージ コードがプラットフォーム固有のネイティブ API またはプラットフォーム固有のクラス ライブラリを呼び出す場合、そのコードはそのオペレーティング システムでしか実行されません。  
+ JIT コンパイルは、アプリケーション実行時に、アセンブリの内容が読み込まれて実行される際に、オン デマンドで MSIL をネイティブ コードに変換します。 共通言語ランタイムには、サポートされる CPU アーキテクチャごとに JIT コンパイラが用意されているため、開発者は MSIL アセンブリのセットを作成し、それを JIT でコンパイルして、異なるマシン アーキテクチャを持つさまざまなコンピューター上で実行できます。 ただし、マネージド コードがプラットフォーム固有のネイティブ API またはプラットフォーム固有のクラス ライブラリを呼び出す場合、そのコードはそのオペレーティング システムでしか実行されません。  
   
  JIT コンパイルは、実行時に呼び出されることがないコードがある可能性を考慮しています。 つまり、PE ファイル内にあるすべての MSIL をネイディブ コードに変換するために時間とメモリを費やす代わりに、実行時に必要とされる MSIL を変換し、結果として生成されるネイティブ コードをメモリに保存することで、そのプロセスのコンテキスト内の後続の呼び出しがこれを利用できるようにします。 型が読み込まれて初期化されるとき、ローダーはスタブを作成し、その型の各メソッドにそれを結び付けます。 メソッドが初めて呼び出されるとき、スタブは JIT コンパイラに制御を渡します。JIT コンパイラはそのメソッド用の MSIL をネイティブ コードに変換して、生成されたネイティブ コードを直接指すようスタブを変更します。 このため、JIT でコンパイルされたメソッドに対する後続の呼び出しでは、ネイティブ コードが直接実行されます。  
   
@@ -93,13 +93,13 @@ ms.locfileid: "33578977"
   
 <a name="running_code"></a>   
 ## <a name="running-code"></a>コードを実行します  
- 共通言語ランタイムは、マネージ実行を可能にするインフラストラクチャと実行時に使用できるサービスを提供します。 メソッドは、実行する前にプロセッサ固有のコードにコンパイルされている必要があります。 対応する MSIL が生成されているメソッドは、初めて呼び出されたときに JIT コンパイルされてから実行されます。 次にこのメソッドが実行されるときには、JIT コンパイル済みの既存のネイティブ コードが実行されます。 JIT コンパイルからコード実行までのプロセスは、実行が完了するまで繰り返されます。  
+ 共通言語ランタイムは、マネージド実行を可能にするインフラストラクチャと実行時に使用できるサービスを提供します。 メソッドは、実行する前にプロセッサ固有のコードにコンパイルされている必要があります。 対応する MSIL が生成されているメソッドは、初めて呼び出されたときに JIT コンパイルされてから実行されます。 次にこのメソッドが実行されるときには、JIT コンパイル済みの既存のネイティブ コードが実行されます。 JIT コンパイルからコード実行までのプロセスは、実行が完了するまで繰り返されます。  
   
- 実行時に、マネージ コードは、ガベージ コレクション、セキュリティ、アンマネージ コードとの相互運用性、言語間デバッグ サポート、強化された配置とバージョン管理のサポートなどのさまざまなサービスを利用できます。  
+ 実行時に、マネージド コードは、ガベージ コレクション、セキュリティ、アンマネージド コードとの相互運用性、言語間デバッグ サポート、強化された配置とバージョン管理のサポートなどのさまざまなサービスを利用できます。  
   
- Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] および [!INCLUDE[windowsver](../../includes/windowsver-md.md)]では、オペレーティング システム ローダーが COFF ヘッダー内のビットを調べることにより、マネージ モジュールをチェックします。 設定されたビットはマネージ モジュールを意味します。 ローダーがマネージ モジュールを検出すると、mscoree.dll が読み込まれます。マネージ モジュール イメージが読み込まれるときとアンロードされるときには、 `_CorValidateImage` および `_CorImageUnloading` がローダーに通知します。 `_CorValidateImage` は、次のアクションを実行します。  
+ Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] および [!INCLUDE[windowsver](../../includes/windowsver-md.md)]では、オペレーティング システム ローダーが COFF ヘッダー内のビットを調べることにより、マネージド モジュールをチェックします。 設定されたビットはマネージド モジュールを意味します。 ローダーがマネージド モジュールを検出すると、mscoree.dll が読み込まれます。マネージド モジュール イメージが読み込まれるときとアンロードされるときには、 `_CorValidateImage` および `_CorImageUnloading` がローダーに通知します。 `_CorValidateImage` は、次のアクションを実行します。  
   
-1.  コードが有効なマネージ コードであることを確認します。  
+1.  コードが有効なマネージド コードであることを確認します。  
   
 2.  イメージのエントリ ポイントをランタイムのエントリ ポイントに変更します。  
   
@@ -107,13 +107,14 @@ ms.locfileid: "33578977"
   
  [ページのトップへ](#introduction)  
   
-## <a name="see-also"></a>参照  
- [概要](../../docs/framework/get-started/overview.md)  
- [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md)  
- [メタデータと自己言及的なコンポーネント](../../docs/standard/metadata-and-self-describing-components.md)  
- [Ilasm.exe (IL アセンブラー)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
- [セキュリティ](../../docs/standard/security/index.md)  
- [アンマネージ コードとの相互運用](../../docs/framework/interop/index.md)  
- [配置](../../docs/framework/deployment/net-framework-applications.md)  
- [共通言語ランタイムのアセンブリ](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [アプリケーション ドメイン](../../docs/framework/app-domains/application-domains.md)
+## <a name="see-also"></a>関連項目
+
+- [概要](../../docs/framework/get-started/overview.md)  
+- [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md)  
+- [メタデータと自己言及的なコンポーネント](../../docs/standard/metadata-and-self-describing-components.md)  
+- [Ilasm.exe (IL アセンブラー)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+- [セキュリティ](../../docs/standard/security/index.md)  
+- [アンマネージ コードとの相互運用](../../docs/framework/interop/index.md)  
+- [配置](../../docs/framework/deployment/net-framework-applications.md)  
+- [共通言語ランタイムのアセンブリ](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [アプリケーション ドメイン](../../docs/framework/app-domains/application-domains.md)

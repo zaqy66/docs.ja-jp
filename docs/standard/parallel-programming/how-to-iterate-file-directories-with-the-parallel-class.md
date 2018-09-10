@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43a7ac57e90b60679f29e9a5635be6ee8b8f8d93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f9208ac5007e26967c136f0599cabfd66ba2ea
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44189369"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>方法: Parallel クラスを使用してファイル ディレクトリを反復処理する
 多くの場合、ファイル反復処理は簡単に並列化できる操作です。 「[方法: PLINQ を使用してファイル ディレクトリを反復処理する](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)」のトピックは、多くのシナリオでこのタスクを実行するための簡単な方法を示しています。 ただし、ファイル システムへのアクセス時に発生する可能性のある多くの種類の例外をコードで処理する必要がある場合は、複雑さが生じることがあります。 次の例は、この問題への対処方法の 1 つを示しています。 この例では、スタック ベースの反復処理を使用して、指定されたディレクトリにあるすべてのファイルとフォルダーを走査し、コードで各種例外をキャッチして処理できるようにしています。 例外を処理する方法は開発者に委ねられています。  
@@ -31,5 +32,6 @@ ms.lasthandoff: 05/04/2018
   
  メイン スレッドで例外がスローされた場合、<xref:System.Threading.Tasks.Parallel.ForEach%2A> メソッドによって開始されたスレッドが引き続き実行されることがあります。 これらのスレッドを停止するには、例外ハンドラーで Boolean 変数を設定し、並列ループを反復処理するたびに値をチェックします。 例外がスローされたことを値が示している場合は、<xref:System.Threading.Tasks.ParallelLoopState> 変数を使用してループを停止または中断します。 詳細については、「[方法: Parallel.For ループを停止または中断する](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+## <a name="see-also"></a>関連項目
+
+- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

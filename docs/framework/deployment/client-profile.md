@@ -12,11 +12,11 @@ ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e0fbf40c6af63cfabe7b35e2bdf3e0998761b801
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420947"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505123"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile は、.NET Framework のサブセットで、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以前のバージョンに含まれ、クライアント アプリケーション用に最適化されていました。 .NET Framework は、Windows、Windows Phone、および Microsoft Azure 用の開発プラットフォームであり、マネージド アプリの実行環境と .NET Framework クラス ライブラリを提供します。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以前のバージョンでは、2 種類の配置オプション (完全な .NET Framework と Client Profile) が用意されていました。 完全な .NET Framework に比べて、Client Profile では、配置の迅速化とアプリ インストール パッケージの小型化が実現されました。  

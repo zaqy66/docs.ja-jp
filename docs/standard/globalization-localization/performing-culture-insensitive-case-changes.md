@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f560e3b080f6355d4e0c433c2a2218fbcbc6d72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 844b0edb93b93704c4886495c673dc0496f7ba71
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574661"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192978"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>カルチャを認識しない大文字と小文字の変更の実行
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>、<xref:System.String.ToLower%2A?displayProperty=nameWithType>、<xref:System.Char.ToUpper%2A?displayProperty=nameWithType>、<xref:System.Char.ToLower%2A?displayProperty=nameWithType> の各メソッドには、パラメーターを受け取らないオーバーロードが用意されています。 既定では、パラメーターを使用しないこれらのオーバーロードは、<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> の値に基づいて大文字と小文字の変更を実行します。 このため、大文字と小文字を区別する結果がカルチャによって異なる場合があります。 大文字と小文字の変更がカルチャに依存するかどうかを明確にするには、`culture` パラメーターを明示的に指定する必要があるこれらのメソッドのオーバーロードを使用する必要があります。 大文字と小文字の変更がカルチャに依存する場合は、`CultureInfo.CurrentCulture` パラメーターとして `culture` を指定します。 大文字と小文字の変更がカルチャに依存しない場合は、`CultureInfo.InvariantCulture` パラメーターとして `culture` を指定します。  
@@ -67,9 +67,10 @@ static object LookupKey(string key)
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>Char.ToUpper メソッドと Char.ToLower メソッドの使用  
  `Char.ToUpper` メソッドおよび `Char.ToLower` メソッドはそれぞれ `String.ToUpper` メソッドおよび `String.ToLower` メソッドと同じ特性を持っていますが、影響を受けるカルチャはトルコ語 (トルコ) およびアゼルバイジャン語 (ラテン、アゼルバイジャン) だけです。 単一の文字の大文字と小文字の区別が異なるのは、この 2 つのカルチャだけです。 この固有の大文字と小文字の対応の詳細については、<xref:System.String> クラスに関するトピックの「Casing (大文字と小文字の指定)」を参照してください。 コードをわかりやすくし、結果の一貫性を確保するために、`culture` パラメーターを明示的に指定できるこれらのメソッドのオーバーロードを常に使用することをお勧めします。  
   
-## <a name="see-also"></a>参照  
- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
- [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
+- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
+- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
+- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
+- [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

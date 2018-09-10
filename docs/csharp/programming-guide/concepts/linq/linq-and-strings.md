@@ -2,12 +2,12 @@
 title: LINQ と文字列 (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: da7a35f0fd66d1f7b8a72550c175b5428242fbc1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480640"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886501"
 ---
 # <a name="linq-and-strings-c"></a>LINQ と文字列 (C#)
 
@@ -72,7 +72,7 @@ ms.locfileid: "43480640"
   
   .csv ファイルでテキスト データに対して数学的計算を実行する方法が紹介されています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [統合言語クエリ (LINQ) (C#)](index.md)
 - [方法: CSV ファイルから XML を生成する](how-to-generate-xml-from-csv-files.md)

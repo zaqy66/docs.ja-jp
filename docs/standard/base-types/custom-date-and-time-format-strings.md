@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf91aa52b03f5b843a11147d8f5c28ce6f7a2e83
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 730c6abfe9d49c319d1438a0821ad47e19fc0638
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999181"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192730"
 ---
 # <a name="custom-date-and-time-format-strings"></a>カスタム日時書式指定文字列
 
@@ -47,7 +47,7 @@ ms.locfileid: "42999181"
  次の表に、カスタム日時書式指定子の説明および書式指定子ごとの書式設定後の文字列を示します。 既定では、結果の文字列は、en-US カルチャの書式指定規則を反映します。 特定の書式指定子でローカライズされた文字列が書式設定後に生成される場合、例には書式設定後の文字列が適用されるカルチャも示されます。 カスタム日時書式指定文字列の使用方法については、「メモ」を参照してください。
 
 | 書式指定子 | 説明 | 使用例 |
-|----------------------|-----------------|--------------|
+| ---------------------- | ----------------- | -------------- |
 |"d"|月の日にち (1 ～ 31)。<br /><br /> 詳細については、「["d" カスタム書式指定子](#dSpecifier)」を参照してください。|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|月の日にち (01 ～ 31)。<br /><br /> 詳細については、「["dd" カスタム書式指定子](#ddSpecifier)」を参照してください。|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"ddd"|曜日の省略名。<br /><br /> 詳細については、「["ddd" カスタム書式指定子](#dddSpecifier)」を参照してください。|2009-06-15T13:45:30 -> Mon (en-US)<br /><br /> 2009-06-15T13:45:30 -> Пн (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lun. (fr-FR)|
@@ -100,6 +100,7 @@ ms.locfileid: "42999181"
  以降では、それぞれのカスタム日時書式指定子について詳しく説明します。 特に明記されない限り、各指定子は、<xref:System.DateTime> 値で使用しても、<xref:System.DateTimeOffset> 値で使用してもまったく同じ文字列形式を生成します。
 
 <a name="dSpecifier"></a> 
+
 ## <a name="the-d-custom-format-specifier"></a>"d" カスタム書式指定子
  "d" カスタム書式指定子は、月の日にちを 1 ～ 31 の数値として表します。 1 桁の日にちは、先行ゼロなしで書式設定されます。
 
@@ -113,6 +114,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="ddSpecifier"></a> 
+
 ## <a name="the-dd-custom-format-specifier"></a>"dd" カスタム書式指定子
  "dd" カスタム書式指定文字列は、月の日にちを 01 ～ 31 の数値として表します。 1 桁の日にちは、先行ゼロ付きで書式設定されます。
 
@@ -124,6 +126,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="dddSpecifier"></a> 
+
 ## <a name="the-ddd-custom-format-specifier"></a>"ddd" カスタム書式指定子
  "ddd" カスタム書式指定子は、曜日の省略名を表します。 曜日のローカライズされた省略名は、現在のカルチャまたは特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType> プロパティから取得されます。
 
@@ -135,6 +138,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="ddddSpecifier"></a> 
+
 ## <a name="the-dddd-custom-format-specifier"></a>"dddd" カスタム書式指定子
  "dddd" カスタム書式指定子 (任意の数の "d" 指定子を追加可能) は、曜日の完全名を表します。 曜日のローカライズされた名前は、現在のカルチャまたは特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType> プロパティから取得されます。
 
@@ -146,6 +150,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="fSpecifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>"f" カスタム書式指定子
  "f" カスタム書式指定子は、秒の端数の最上位桁 (つまり、日時値の秒部分の 1/10) を表します。
 
@@ -161,6 +166,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="ffSpecifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>"ff" カスタム書式指定子
  "ff" カスタム書式指定子は、秒の端数の最上位 2 桁 (つまり、日時値の秒部分の 1/100) を表します。
 
@@ -172,6 +178,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="fffSpecifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>"fff" カスタム書式指定子
  "fff" カスタム書式指定子は、秒の端数の最上位 3 桁 (つまり、日時値の秒部分の 1/1000) を表します。
 
@@ -183,6 +190,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="ffffSpecifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>"ffff" カスタム書式指定子
  "ffff" カスタム書式指定子は、秒の端数の最上位 4 桁 (つまり、日時値の秒部分の 1/10000) を表します。
 
@@ -191,6 +199,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="fffffSpecifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>"fffff" カスタム書式指定子
  "fffff" カスタム書式指定子は、秒の端数の最上位 5 桁 (つまり、日時値の秒部分の 1/100000) を表します。
 
@@ -199,6 +208,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="ffffffSpecifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>"ffffff" カスタム書式指定子
  "ffffff" カスタム書式指定子は、秒の端数の最上位 6 桁 (つまり、日時値の秒部分の 1/1000000) を表します。
 
@@ -207,6 +217,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="fffffffSpecifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>"fffffff" カスタム書式指定子
  "fffffff" カスタム書式指定子は、秒の端数の最上位 7 桁 (つまり、日時値の秒部分の 1/10000000) を表します。
 
@@ -215,6 +226,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="F_Specifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>"F" カスタム書式指定子
  "F" カスタム書式指定子は、秒の端数の最上位桁 (つまり、日時値の秒部分の 1/10) を表します。 その桁がゼロの場合には、何も表示されません。
 
@@ -230,6 +242,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="FF_Specifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>"FF" カスタム書式指定子
  "FF" カスタム書式指定子は、秒の端数の最上位 2 桁 (つまり、日時値の秒部分の 1/100) を表します。 ただし、後続のゼロは表示されません。また、2 桁のゼロも表示されません。
 
@@ -241,6 +254,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="FFF_Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>"FFF" カスタム書式指定子
  "FFF" カスタム書式指定子は、秒の端数の最上位 3 桁 (つまり、日時値の秒部分の 1/1000) を表します。 ただし、後続のゼロは表示されません。また、3 桁のゼロも表示されません。
 
@@ -252,6 +266,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="FFFF_Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>"FFFF" カスタム書式指定子
  "FFFF" カスタム書式指定子は、秒の端数の最上位 4 桁 (つまり、日時値の秒部分の 1/10000) を表します。 ただし、後続のゼロは表示されません。また、4 桁のゼロも表示されません。
 
@@ -260,6 +275,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="FFFFF_Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>"FFFFF" カスタム書式指定子
  "FFFFF" カスタム書式指定子は、秒の端数の最上位 5 桁 (つまり、日時値の秒部分の 1/100000) を表します。 ただし、後続のゼロは表示されません。また、5 桁のゼロも表示されません。
 
@@ -268,6 +284,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="FFFFFF_Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>"FFFFFF" カスタム書式指定子
  "FFFFFF" カスタム書式指定子は、秒の端数の最上位 6 桁 (つまり、日時値の秒部分の 1/1000000) を表します。 ただし、後続のゼロは表示されません。また、6 桁のゼロも表示されません。
 
@@ -276,6 +293,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="FFFFFFF_Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>"FFFFFFF" カスタム書式指定子
  "FFFFFFF" カスタム書式指定子は、秒の端数の最上位 7 桁 (つまり、日時値の秒部分の 1/10000000) を表します。 ただし、後続のゼロは表示されません。また、7 桁のゼロも表示されません。
 
@@ -284,6 +302,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="gSpecifier"></a> 
+
 ## <a name="the-g-or-gg-custom-format-specifier"></a>"g" または "gg" カスタム書式指定子
  "g" または "gg" カスタム書式指定子 (任意の数の "g" 指定子を追加可能) は、A.D. などの時期または時代 (年号) を表します。 書式設定される日付に時期または時代 (年号) の文字列が関連付けられていない場合、この指定子は無視されます。
 
@@ -296,7 +315,8 @@ ms.locfileid: "42999181"
 
  [表のトップへ](#table)
 
-<a name="hSpecifier"></a>
+<a name="hSpecifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>"h" カスタム書式指定子
  "h" カスタム書式指定子は、時間を 1 ～ 12 の数値として表します。つまり、午前 0 時と午後 0 時から時間をカウントする 12 時間制で時間が表されます。 午前 0 時からの特定の時間を、午後 0 時からの同じ時間と区別できません。 時間は丸められず、1 桁の時間は先行ゼロなしで書式設定されます。 たとえば、午前と午後の 5:43 という時間は、このカスタム書式指定子によって "5" と表示されます。
 
@@ -310,6 +330,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="hhSpecifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>"hh" カスタム書式指定子
  "hh" カスタム書式指定子 (任意の数の "h" 指定子を追加可能) は、時間を 1 ～ 12 の数値として表します。つまり、午前 0 時と午後 0 時から時間をカウントする 12 時間制で時間が表されます。 午前 0 時からの特定の時間を、午後 0 時からの同じ時間と区別できません。 時間は丸められず、1 桁の時間は先行ゼロ付きで書式設定されます。 たとえば、午前と午後の 5:43 という時間は、この書式指定子によって "05" と表示されます。
 
@@ -321,6 +342,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="H_Specifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>"H" カスタム書式指定子
  "H" カスタム書式指定子は、時間を 0 ～ 23 の数値として表します。つまり、午前 0 時から時間をカウントする 24 時間制で時間が表されます。 1 桁の時間は、先行ゼロなしで書式設定されます。
 
@@ -334,6 +356,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="HH_Specifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>"HH" カスタム書式指定子
  "HH" カスタム書式指定子 (任意の数の "H" 指定子を追加可能) は、時間を 00 ～ 23 の数値として表します。つまり、午前 0 時から時間をカウントする 24 時間制で時間が表されます。 1 桁の時間は、先行ゼロ付きで書式設定されます。
 
@@ -345,6 +368,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="KSpecifier"></a> 
+
 ## <a name="the-k-custom-format-specifier"></a>"K" カスタム書式指定子
  "K" カスタム書式指定子は、日付と時刻の値のタイム ゾーン情報を表します。 この書式指定子を <xref:System.DateTime> 値で使用した場合、書式設定後の文字列は、<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティの値によって定義されます。
 
@@ -366,6 +390,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="mSpecifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>"m" カスタム書式指定子
  "m" カスタム書式指定子は、分を 0 ～ 59 の数値として表します。 この分は、直前の時間から経過した分数です。 1 桁の分は、先行ゼロなしで書式設定されます。
 
@@ -379,6 +404,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="mmSpecifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>"mm" カスタム書式指定子
  "mm" カスタム書式指定子 (任意の数の "m" 指定子を追加可能) は、分を 00 ～ 59 の数値として表します。 この分は、直前の時間から経過した分数です。 1 桁の分は、先行ゼロ付きで書式設定されます。
 
@@ -390,6 +416,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="M_Specifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>"M" カスタム書式指定子
  "M" カスタム書式指定子は、月を 1 ～ 12 (13 の月がある暦の場合は 1 ～ 13) の数値として表します。 1 桁の月は、先行ゼロなしで書式設定されます。
 
@@ -403,6 +430,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="MM_Specifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>"MM" カスタム書式指定子
  "MM" カスタム書式指定子は、月を 01 ～ 12 (13 の月がある暦の場合は 1 ～ 13) の数値として表します。 1 桁の月は、先行ゼロ付きで書式設定されます。
 
@@ -414,6 +442,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="MMM_Specifier"></a> 
+
 ## <a name="the-mmm-custom-format-specifier"></a>"MMM" カスタム書式指定子
  "MMM" カスタム書式指定子は、月の省略名を表します。 月のローカライズされた省略名は、現在のカルチャまたは特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType> プロパティから取得されます。
 
@@ -425,6 +454,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="MMMM_Specifier"></a> 
+
 ## <a name="the-mmmm-custom-format-specifier"></a>"MMMM" カスタム書式指定子
  "MMMM" カスタム書式指定子は、月の完全名を表します。 月のローカライズされた名前は、現在のカルチャまたは特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> プロパティから取得されます。
 
@@ -436,6 +466,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="sSpecifier"></a> 
+
 ## <a name="the-s-custom-format-specifier"></a>"s" カスタム書式指定子
  "s" カスタム書式指定子は、秒を 0 ～ 59 の数値として表します。 この秒は、直前の分から経過した秒数です。 1 桁の秒は、先行ゼロなしで書式設定されます。
 
@@ -449,6 +480,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="ssSpecifier"></a> 
+
 ## <a name="the-ss-custom-format-specifier"></a>"ss" カスタム書式指定子
  "ss" カスタム書式指定子 (任意の数の "s" 指定子を追加可能) は、秒を 00 ～ 59 の数値として表します。 この秒は、直前の分から経過した秒数です。 1 桁の秒は、先行ゼロ付きで書式設定されます。
 
@@ -460,6 +492,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="tSpecifier"></a> 
+
 ## <a name="the-t-custom-format-specifier"></a>"t" カスタム書式指定子
  "t" カスタム書式指定子は、AM/PM 指定子の最初の文字を表します。 ローカライズされた適切な指定子は、現在のカルチャまたは特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> プロパティから取得されます。 AM 指定子は、0:00:00 (午前 0 時) から 11:59:59.999 までのすべての時刻に使用されます。 PM 指定子は、12:00:00 (正午) から 23:59:59.999 までのすべての時刻に使用されます。
 
@@ -473,6 +506,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="ttSpecifier"></a> 
+
 ## <a name="the-tt-custom-format-specifier"></a>"tt" カスタム書式指定子
  "tt" カスタム書式指定子 (任意の数の "t" 指定子を追加可能) は、AM/PM 指定子全体を表します。 ローカライズされた適切な指定子は、現在のカルチャまたは特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> プロパティから取得されます。 AM 指定子は、0:00:00 (午前 0 時) から 11:59:59.999 までのすべての時刻に使用されます。 PM 指定子は、12:00:00 (正午) から 23:59:59.999 までのすべての時刻に使用されます。
 
@@ -486,6 +520,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="ySpecifier"></a> 
+
 ## <a name="the-y-custom-format-specifier"></a>"y" カスタム書式指定子
  "y" カスタム書式指定子は、年を 1 桁または 2 桁の数値として表します。 年が 2 桁を超える場合は、下 2 桁のみが結果に表示されます。 2 桁の年の 1 桁目がゼロで始まる場合 (2008 など)、先行ゼロが省略されます。
 
@@ -499,6 +534,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="yySpecifier"></a> 
+
 ## <a name="the-yy-custom-format-specifier"></a>"yy" カスタム書式指定子
  "yy" カスタム書式指定子は、年を 2 桁の数値として表します。 年が 2 桁を超える場合は、下 2 桁のみが結果に表示されます。 年が 2 桁に満たない場合は、2 桁になるまで数値が先行ゼロで埋められます。
 
@@ -515,6 +551,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="yyySpecifier"></a> 
+
 ## <a name="the-yyy-custom-format-specifier"></a>"yyy" カスタム書式指定子
  "yyy" カスタム書式指定子は、年を 3 桁以上で表します。 年が 3 桁を超える場合は、それらの数字も結果に含まれます。 年が 3 桁に満たない場合は、3 桁になるまで数値が先行ゼロで埋められます。
 
@@ -529,6 +566,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="yyyySpecifier"></a> 
+
 ## <a name="the-yyyy-custom-format-specifier"></a>"yyyy" カスタム書式指定子
  "yyyy" カスタム書式指定子は、年を 4 桁以上で表します。 年が 4 桁を超える場合は、それらの数字も結果に含まれます。 年が 4 桁に満たない場合は、4 桁になるまで数値が先行ゼロで埋められます。
 
@@ -543,6 +581,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="yyyyySpecifier"></a> 
+
 ## <a name="the-yyyyy-custom-format-specifier"></a>"yyyyy" カスタム書式指定子
  "yyyyy" カスタム書式指定子 (任意の数の "y" 指定子を追加可能) は、年を 5 桁以上で表します。 年が 5 桁を超える場合は、それらの数字も結果に含まれます。 年が 5 桁に満たない場合は、5 桁になるまで数値が先行ゼロで埋められます。
 
@@ -556,6 +595,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="zSpecifier"></a> 
+
 ## <a name="the-z-custom-format-specifier"></a>"z" カスタム書式指定子
  <xref:System.DateTime> 値で使用した場合、"z" カスタム書式指定子は、オペレーティング システムのローカル タイム ゾーンの、世界協定時刻 (UTC) を基準とした符号付きオフセット (時間単位) を表します。 インスタンスの <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティの値は反映されません。 そのため、<xref:System.DateTime> 値に対して "z" 書式指定子を使用することはお勧めできません。
 
@@ -573,6 +613,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="zzSpecifier"></a> 
+
 ## <a name="the-zz-custom-format-specifier"></a>"zz" カスタム書式指定子
  <xref:System.DateTime> 値で使用した場合、"zz" カスタム書式指定子は、オペレーティング システムのローカル タイム ゾーンの、UTC を基準とした符号付きオフセット (時間単位) を表します。 インスタンスの <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティの値は反映されません。 そのため、<xref:System.DateTime> 値に対して "zz" 書式指定子を使用することはお勧めできません。
 
@@ -588,6 +629,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="zzzSpecifier"></a> 
+
 ## <a name="the-zzz-custom-format-specifier"></a>"zzz" カスタム書式指定子
  <xref:System.DateTime> 値で使用した場合、"zzz" カスタム書式指定子は、オペレーティング システムのローカル タイム ゾーンの、UTC を基準とした符号付きオフセット (時間および分単位) を表します。 インスタンスの <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティの値は反映されません。 そのため、<xref:System.DateTime> 値に対して "zzz" 書式指定子を使用することはお勧めできません。
 
@@ -603,6 +645,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="timeSeparator"></a> 
+
 ## <a name="the--custom-format-specifier"></a>":" カスタム書式指定子
  ":" カスタム書式指定子は、時、分、および秒を区別するための時刻の区切り記号を表します。 ローカライズされた適切な時刻の区切り記号は、現在のカルチャまたは特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> プロパティから取得されます。
 
@@ -614,6 +657,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="dateSeparator"></a> 
+
 ## <a name="the--custom-format-specifier"></a>"/" カスタム書式指定子
  "/" カスタム書式指定子は、年、月、および日を区別するための日付の区切り記号を表します。 ローカライズされた適切な日付の区切り記号は、現在のカルチャまたは特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> プロパティから取得されます。
 
@@ -625,6 +669,7 @@ ms.locfileid: "42999181"
  [表のトップへ](#table)
 
 <a name="Literals"></a> 
+
 ## <a name="character-literals"></a>文字リテラル
  カスタム日時書式指定文字列の次の文字は予約済みで、常に書式設定文字として解釈されます。または "、'、/、および \\ の場合は、特殊文字として解釈されます。
 
@@ -644,22 +689,24 @@ ms.locfileid: "42999181"
 
  文字が結果の文字列に含まれるように、または入力文字列で正常に解析されるように、文字が予約文字としてではなく、リテラル文字として解釈されることを示すには、次の 2 つの方法があります。
 
--   予約済みの各文字をエスケープします。 詳細については、「[エスケープ文字の使用](#escape)」を参照してください。
+- 予約済みの各文字をエスケープします。 詳細については、「[エスケープ文字の使用](#escape)」を参照してください。
+  
+  次の例には、書式指定文字列でローカル タイム ゾーンを表すため、リテラル文字 "pst"(太平洋標準時間) が含まれています。 "s" と "t" はどちらもカスタム書式指定文字列であるため、どちらの文字も文字リテラルとして解釈されるにはエスケープする必要があります。
+  
+  [!code-csharp-interactive[Formatting.DateAndTime.Custom#21](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+  [!code-vb[Formatting.DateAndTime.Custom#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
-     次の例には、書式指定文字列でローカル タイム ゾーンを表すため、リテラル文字 "pst"(太平洋標準時間) が含まれています。 "s" と "t" はどちらもカスタム書式指定文字列であるため、どちらの文字も文字リテラルとして解釈されるにはエスケープする必要があります。
-
-     [!code-csharp-interactive[Formatting.DateAndTime.Custom#21](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
-     [!code-vb[Formatting.DateAndTime.Custom#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
-
--   リテラル文字列全体を引用符またはアポストロフィで囲みます。 次の例は、前の例と似ていますが、区切られた文字列全体が文字リテラルとして解釈されることを示すため、"pst" が引用符で囲まれている点が異なります。
-
-     [!code-csharp-interactive[Formatting.DateAndTime.Custom#22](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
-     [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
+- リテラル文字列全体を引用符またはアポストロフィで囲みます。 次の例は、前の例と似ていますが、区切られた文字列全体が文字リテラルとして解釈されることを示すため、"pst" が引用符で囲まれている点が異なります。
+  
+  [!code-csharp-interactive[Formatting.DateAndTime.Custom#22](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+  [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 <a name="Notes"></a> 
+
 ## <a name="notes"></a>メモ
 
 <a name="UsingSingleSpecifiers"></a> 
+
 ### <a name="using-single-custom-format-specifiers"></a>単一のカスタム書式指定子の使用
  カスタム日時書式指定文字列は、複数の文字で構成されます。 日時書式指定メソッドでは、1 文字の文字列が標準の日時書式指定文字列として解釈されます。 文字が有効な書式指定子として認識されない場合は <xref:System.FormatException> がスローされます。 たとえば、"h" 指定子のみで構成される書式指定文字列は、標準の日時書式指定文字列として解釈されます。 ただし、この場合では、"h" という標準の日時書式指定子が存在しないため、例外がスローされます。
 
@@ -671,6 +718,7 @@ ms.locfileid: "42999181"
  [!code-vb[Formatting.DateAndTime.Custom#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]
 
 <a name="escape"></a> 
+
 ### <a name="using-the-escape-character"></a>エスケープ文字の使用
  書式指定文字列内の "d"、"f"、"F"、"g"、"h"、"H"、"K"、"m"、"M"、"s"、"t"、"y"、"z"、":"、"/" の各文字は、リテラル文字ではなくカスタム書式指定子として解釈されます。 文字が書式指定子として解釈されないようにするには、その文字の前に、エスケープ文字の円記号 (\\) を付けます。 エスケープ文字は、その後に続く文字が、そのまま結果の文字列に含める必要がある文字リテラルであることを示します。
 
@@ -694,6 +742,10 @@ ms.locfileid: "42999181"
 
  各種のカスタム日時書式指定子によって生成される書式設定後の文字列も、現在の <xref:System.Globalization.DateTimeFormatInfo> オブジェクトのプロパティに依存します。 カスタム日時書式指定子によって生成される結果は、対応する <xref:System.Globalization.DateTimeFormatInfo> プロパティを変更することによって変えることができます。 たとえば、"ddd" 書式指定子を使用した場合、書式設定後の文字列には、<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> 文字列配列に指定されている曜日の省略名が追加されます。 同様に、"MMMM" 書式指定子を使用した場合、書式設定後の文字列には、<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> 文字列配列に指定されている月の正式名が追加されます。
 
-## <a name="see-also"></a>参照
- <xref:System.DateTime?displayProperty=nameWithType> <xref:System.IFormatProvider?displayProperty=nameWithType>
- [型の書式設定](../../../docs/standard/base-types/formatting-types.md) [標準の日時書式指定文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) [サンプル: .NET Framework 4 の書式指定ユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.IFormatProvider?displayProperty=nameWithType>
+- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [サンプル: .NET Framework 4 の書式設定ユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

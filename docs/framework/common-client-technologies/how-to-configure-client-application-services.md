@@ -5,11 +5,11 @@ helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
 ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43399239"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861625"
 ---
 # <a name="how-to-configure-client-application-services"></a>方法 : クライアント アプリケーション サービスを構成する
 このトピックでは、Visual Studio **プロジェクト デザイナー**を使用して、クライアント アプリケーション サービスを有効にし、構成する方法について説明します。 クライアント アプリケーション サービスを使用してユーザーを検証し、既存の [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスからユーザーのロールおよび設定を取得することができます。 構成した後に、「[クライアント アプリケーション サービスの概要](../../../docs/framework/common-client-technologies/client-application-services-overview.md)」に記載されているように、アプリケーション コード内で有効にされているサービスにアクセスできます。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスの詳細については、「[ASP.NET アプリケーション サービスの概要](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)」を参照してください。  

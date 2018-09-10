@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf211a35cb8864e0271032d63b5b4e9e25697e96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36a003c96e81996e304fc4347ed05bf7a255c224
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581181"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44189452"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ および TPL のラムダ式
 タスク並列ライブラリ (TPL) には、入力パラメーターとしてデリゲートの <xref:System.Func%601?displayProperty=nameWithType> または <xref:System.Action?displayProperty=nameWithType> ファミリのいずれかを受け取る多くのメソッドが含まれます。 これらのデリゲートを使用して、並列ループ、タスク、またはクエリにカスタムのプログラム ロジックを渡します。 TPL と PLINQ のコード例では、ラムダ式を使用して、インライン コード ブロックとしてこれらのデリゲートのインスタンスを作成します。 このトピックでは、Func および Action について簡単に紹介し、タスク並列ライブラリと PLINQ でラムダ式を使用する方法を示します。  
@@ -36,5 +36,6 @@ ms.locfileid: "33581181"
  [!code-csharp[System.Threading.Tasks.Parallel#02](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
  [!code-vb[System.Threading.Tasks.Parallel#02](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]  
   
-## <a name="see-also"></a>参照  
- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>関連項目
+
+- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 43ac92cefe717b4bfa64969839b289e944980b7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a299ba0bfb2d6f49b449e2f1e567a06d09da49e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591886"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500018"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>チュートリアル: My.Application.Log の出力のフィルター処理 (Visual Basic)
 このチュートリアルでは、`My.Application.Log` オブジェクトの既定のログ フィルター処理を変更して、`Log` オブジェクトからリスナーに渡される情報や、リスナーによって記述される情報を制御する方法について説明します。 構成情報はアプリケーションの構成ファイルに保存されるため、ロギングの動作はアプリケーションをビルドした後でも変更できます。  
@@ -253,4 +253,4 @@ ms.locfileid: "33591886"
  [チュートリアル : カスタム ログ リスナーの作成](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  [方法: ログ メッセージを書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
  [トレース スイッチ](../../../../framework/debug-trace-profile/trace-switches.md)  
- [アプリケーションからの情報のログ記録](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+ [アプリケーションからの情報のログ記録](../../../../visual-basic/developing-apps/programming/log-info/index.md)

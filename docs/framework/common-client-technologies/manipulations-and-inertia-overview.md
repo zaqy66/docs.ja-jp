@@ -3,11 +3,11 @@ title: 操作と慣性の概要
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
 ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401226"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521240"
 ---
 # <a name="manipulations-and-inertia-overview"></a>操作と慣性の概要
 "*操作*" では、"*マニピュレーター*" を使用して、ユーザー インターフェイス (UI) 要素の移動、回転、サイズ変更を行えます。 マニピュレーターは、マウス、または (タッチ対応のシナリオの場合) スタイラスや指を意味します。  

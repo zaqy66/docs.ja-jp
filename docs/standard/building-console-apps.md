@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79005c69e8c125e78573a44f34740632676faf59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 979989c3e1f90f3de47473aa1bd8bc5268520e57
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568811"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261971"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>.NET Framework におけるコンソール アプリケーションの構築
 .NET Framework のアプリケーションは、<xref:System.Console?displayProperty=nameWithType> クラスを使用して、コンソールから文字を読み取り、コンソールに文字を書き込みます。 コンソールからのデータは標準入力ストリームから読み取られ、コンソールへのデータは標準出力ストリームに書き込まれ、コンソールへのエラー データは標準エラー出力ストリームに書き込まれます。 これらのストリームは、アプリケーションの起動時に自動的にコンソールに関連付けられ、それぞれ <xref:System.Console.In%2A> プロパティ、<xref:System.Console.Out%2A> プロパティ、および <xref:System.Console.Error%2A> プロパティとして示されます。  
@@ -32,6 +32,7 @@ ms.locfileid: "33568811"
   
  **System.Console** クラスには、コンソールから個々の文字または行全体を読み取ることができるメソッドがあります。 その他のメソッドは、まずデータと書式指定文字列を変換してから、書式設定された文字列をコンソールに書き込みます。 書式指定文字列の詳細については、「[Formatting Types](../../docs/standard/base-types/formatting-types.md)」(型の書式設定) を参照してください。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Console?displayProperty=nameWithType>  
- [型の書式設定](../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Console?displayProperty=nameWithType>  
+- [型の書式設定](../../docs/standard/base-types/formatting-types.md)

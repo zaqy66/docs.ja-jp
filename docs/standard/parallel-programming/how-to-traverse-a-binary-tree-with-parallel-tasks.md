@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6446145d34d22503697bbca59bc2cb2cd2619cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fd937d6ce2edf0c47fce78d48a90ec1aa409eef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580365"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44196648"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>方法: 並列タスクでバイナリ ツリーを走査する
 次の例では、ツリー データ構造を走査する並列タスクを使用する 2 つの方法を示します。 ツリー自体の作成は、演習として残しておきます。  
@@ -26,5 +26,6 @@ ms.locfileid: "33580365"
   
  示した 2 つのメソッドは、機能的に同等です。 タスクを作成して実行するために、<xref:System.Threading.Tasks.TaskFactory.StartNew%2A> メソッドを使用すると、タスクで待機し、例外を処理するために使用するタスクからハンドルを戻すことができます。  
   
-## <a name="see-also"></a>参照  
- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>関連項目
+
+- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

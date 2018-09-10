@@ -2,12 +2,12 @@
 title: 非同期の戻り値の型 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 9b0ee1c2e9925a1caffca6b7fb83eff34003246b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43387580"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44212140"
 ---
 # <a name="async-return-types-c"></a>非同期の戻り値の型 (C#)
 非同期メソッドには、次の戻り値の型があります。
@@ -77,9 +77,10 @@ C# 7.0 以降、非同期メソッドで、アクセス可能な `GetAwaiter` �
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
-## <a name="see-also"></a>関連項目  
-<xref:System.Threading.Tasks.Task.FromResult%2A>   
-[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-[非同期プログラムにおける制御フロー (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
-[async](../../../../csharp/language-reference/keywords/async.md)   
-[await](../../../../csharp/language-reference/keywords/await.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Threading.Tasks.Task.FromResult%2A>   
+- [チュートリアル: async と await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [非同期プログラムにおける制御フロー (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
+- [async](../../../../csharp/language-reference/keywords/async.md)   
+- [await](../../../../csharp/language-reference/keywords/await.md)

@@ -16,11 +16,11 @@ ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84b1c10b655fefcd420a0c3cf038dba00e688d3e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461658"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084376"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>カルチャを認識しない文字列比較の実行
 既定では、<xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドはカルチャを認識し、大文字と小文字を区別する比較を実行します。 また、このメソッドには、使用するカルチャを `culture` パラメーターで指定し、使用する比較規則を `comparisonType` パラメーターで指定できる、複数のオーバーロードが含まれています。 既定のオーバーロードの代わりにこれらのメソッドを呼び出すと、特定のメソッド呼び出しで使用する規則に関するあいまいさが解消され、特定の比較がカルチャに依存するかどうかが明確になります。  

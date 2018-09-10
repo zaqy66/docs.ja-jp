@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a601c8f1fed04c839c2a413e4b0e44a75f4195b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29da081784c06d8cd467f0566f9d4db92a130b53
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586144"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087275"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>方法: 単純な Parallel.For ループを記述する
 このトピックでは、<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドを示す 2 つの例を示しています。 最初の例では <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> メソッドのオーバー ロードを使用し、2 番目の例では <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> のオーバー ロードを使用しています。これらは <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドの 2 つの最も単純なオーバーロードです。 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドのこれらの 2 つのオーバー ロードは、ループをキャンセルする必要がない場合、ループのイテレーションから抜ける場合、またはいずれかのスレッドローカル状態を維持する場合に使用します。  
@@ -63,8 +63,9 @@ ms.locfileid: "33586144"
   
 -   このコードをコピーして、Visual Studio 2010 プロジェクトに貼り付けます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Threading.Tasks.Parallel.For%2A>  
- <xref:System.Threading.Tasks.Parallel.ForEach%2A>  
- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.Tasks.Parallel.For%2A>  
+- <xref:System.Threading.Tasks.Parallel.ForEach%2A>  
+- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)

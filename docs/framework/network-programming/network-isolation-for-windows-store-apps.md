@@ -5,12 +5,12 @@ ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d3a26d6c3fc500691fa007abfe9c8fd069f9e812
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d26b6df5d26a96bb8fa41dd3a8151fcb4a08b75
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398093"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43773658"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows ストア アプリのネットワーク分離
 <xref:System.Net>、<xref:System.Net.Http>、<xref:System.Net.Http.Headers> の各名前空間のクラスは、Windows ストア アプリまたはデスクトップ アプリを開発するために使用できます。 Windows ストア アプリで使用する場合、これらの名前空間のクラスは、[!INCLUDE[win8](../../../includes/win8-md.md)]で使用されるアプリケーション セキュリティ モデルの一部であるネットワーク分離の影響を受けます。 システムでネットワーク アクセスが許可されるように、Windows ストア アプリのアプリ マニフェストで適切なネットワーク機能を有効にする必要があります。  
@@ -26,12 +26,12 @@ ms.locfileid: "33398093"
   
 4.  アプリを展開して実行し、トラブルシューティングのためのネットワーク分離ツールを使用してテストします。  
   
- ネットワーク機能の構成と、ネットワーク分離のトラブルシューティングに使用する分離ツールの詳細については、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 開発者向けドキュメントで、[ネットワーク分離の機能を構成する方法](http://go.microsoft.com/fwlink/?LinkID=228265)に関するページを参照してください。  
+ ネットワーク機能の構成と、ネットワーク分離のトラブルシューティングに使用する分離ツールの詳細については、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 開発者向けドキュメントで、[ネットワーク分離の機能を構成する方法](https://go.microsoft.com/fwlink/?LinkID=228265)に関するページを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Web サービスへの接続](http://go.microsoft.com/fwlink/?LinkID=245696)  
- [ネットワーク分離のガイドラインとチェックリスト](http://go.microsoft.com/fwlink/?LinkID=228265)  
- [クイック スタート: HttpClient を使って接続する](http://go.microsoft.com/fwlink/?LinkId=245697)  
- [HttpClient ハンドラーを使う方法](http://go.microsoft.com/fwlink/?LinkId=245699)  
- [HttpClient の接続をセキュリティで保護する方法](http://go.microsoft.com/fwlink/?LinkId=245698)  
- [HttpClient のサンプル](http://go.microsoft.com/fwlink/?LinkId=242550)
+ [Web サービスへの接続](https://go.microsoft.com/fwlink/?LinkID=245696)  
+ [ネットワーク分離のガイドラインとチェックリスト](https://go.microsoft.com/fwlink/?LinkID=228265)  
+ [クイック スタート: HttpClient を使って接続する](https://go.microsoft.com/fwlink/?LinkId=245697)  
+ [HttpClient ハンドラーを使う方法](https://go.microsoft.com/fwlink/?LinkId=245699)  
+ [HttpClient の接続をセキュリティで保護する方法](https://go.microsoft.com/fwlink/?LinkId=245698)  
+ [HttpClient のサンプル](https://go.microsoft.com/fwlink/?LinkId=242550)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0830ec4022ca789d9aac0d1ae2c10ae6f76cc75e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579822"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041601"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正規表現でのグループ化構成体
 グループ化構成体は、正規表現の部分式を表し、入力文字列の部分文字列をキャプチャします。 グループ化構成体を使用して、以下を実行できます。  
@@ -168,7 +168,7 @@ ms.locfileid: "33579822"
 |-------------|-----------------|  
 |`\D+`|1 個以上の 10 進数以外の文字と一致します。|  
 |`(?<digit>\d+)`|1 個以上の 10 進数の文字と一致します。 一致を `digit` という名前のグループに割り当てます。|  
-|\D+|1 個以上の 10 進数以外の文字と一致します。|  
+|`\D+`|1 個以上の 10 進数以外の文字と一致します。|  
 |`(?<digit>\d+)?`|1 つ以上の 10 進数の文字の 0 回または 1 回の出現と一致します。 一致を `digit` という名前のグループに割り当てます。|  
   
 <a name="balancing_group_definition"></a>   
@@ -470,6 +470,7 @@ ms.locfileid: "33579822"
   
  最初のキャプチャ グループは、文の各単語と一致します。 2 番目のキャプチャ グループは、各単語およびその単語に続く句読点や空白と一致します。 インデックスが 2 の <xref:System.Text.RegularExpressions.Group> オブジェクトは、2 番目のキャプチャ グループと一致したテキストの情報を保持します。 キャプチャ グループによってキャプチャされたすべての単語は、<xref:System.Text.RegularExpressions.CaptureCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> オブジェクトから取得できます。  
   
-## <a name="see-also"></a>参照  
- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>関連項目
+
+- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce3b59db027ffebf616a035b018629cb7aed30c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3cc6e4d96378cfd8c065a3b04aab865f9b787438
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569773"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086723"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>方法: 数値に先行するゼロを埋め込む
 整数値に先行ゼロを追加するには、精度指定子と[標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" を使用します。 整数値と浮動小数点数値の両方に先行ゼロを追加するには、[カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)を使用します。 このトピックでは、この両方の方法で数値に先行ゼロを埋め込む方法を説明します。  
@@ -74,7 +74,7 @@ ms.locfileid: "33569773"
   
 1.  数値に埋め込む先行ゼロの数を決定します。  
   
-2.  埋め込みのない数値文字列での整数部の桁数を決定します。 手順は次のとおりです。  
+2.  埋め込みのない数値文字列での整数部の桁数を決定します。 この操作を行うには、次の手順を実行します。  
   
     1.  文字列形式の数値に小数点が含まれるかどうかを決定します。  
   
@@ -93,7 +93,8 @@ ms.locfileid: "33569773"
  [!code-csharp[Formatting.HowTo.PadNumber#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#4)]
  [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]  
   
-## <a name="see-also"></a>参照  
- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [複合書式指定](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a>関連項目
+
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [複合書式指定](../../../docs/standard/base-types/composite-formatting.md)

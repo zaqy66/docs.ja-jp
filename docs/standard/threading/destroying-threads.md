@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cd6e85dca7c4c32361b964573f318b165e8d683
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9a243c95aff77a5de2b3af15542c0bcc44870333
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385020"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205972"
 ---
 # <a name="destroying-threads"></a>スレッドの破棄
 マネージド スレッドを完全に停止するには、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用します。 <xref:System.Threading.Thread.Abort%2A> を呼び出すと、共通言語ランタイムが対象スレッドで <xref:System.Threading.ThreadAbortException> をスローし、対象スレッドはそれをキャッチできます。 詳細については、「<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>」を参照してください。  
@@ -66,7 +66,8 @@ catch (ThreadAbortException ex)
   
  <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType> メソッドを呼び出して、システムが例外を再スローしないようにすることができます。 ただし、この操作は独自のコードにより <xref:System.Threading.ThreadAbortException> が発生した場合にのみ行ってください。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Threading.ThreadAbortException>  
- <xref:System.Threading.Thread>  
- [スレッドの使用とスレッド処理](../../../docs/standard/threading/using-threads-and-threading.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.ThreadAbortException>  
+- <xref:System.Threading.Thread>  
+- [スレッドの使用とスレッド処理](../../../docs/standard/threading/using-threads-and-threading.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90bf9d6dbfebf8f7c1aa22e5844cf4e30b89b8d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dca313fad896ac1c8eac37c853657bea44a8b777
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572802"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192237"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>ユーザー定義の例外を作成する方法
 
@@ -33,5 +33,6 @@ ms.locfileid: "33572802"
 > [!NOTE]
 > リモート処理を使用している場合は、任意のユーザー定義の例外のメタデータがサーバー側 (呼び出し先) とクライアント (プロキシ オブジェクトまたは呼び出し元) で使用できることを保証する必要があります。 詳細については、「[例外の推奨事項](best-practices-for-exceptions.md)」を参照してください。
 
-## <a name="see-also"></a>参照  
-[例外](index.md)
+## <a name="see-also"></a>関連項目
+
+- [例外](index.md)

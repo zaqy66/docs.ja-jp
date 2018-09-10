@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d21a3a315b7dc63a84f7b5d43d55c06eb2d5188
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579588"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262608"
 ---
 # <a name="common-type-system"></a>共通型システム
 共通型システム (CTS: Common Type System) は、共通言語ランタイムにおける型の宣言、使用、および管理の方法を定義しており、ランタイムによる言語間統合のサポートにおいても重要な役割を果たします。 共通型システムには次のような機能があります。  
@@ -320,7 +320,8 @@ ms.locfileid: "33579588"
   
 -   派生型で、継承された仮想メソッドをオーバーライドできます。 オーバーライドするメソッドでは、コンパイル時点の変数の型ではなく、実行時の値の型に基づいて呼び出される、メソッドの新しい定義を提供します。 メソッドが仮想メソッドをオーバーライドできるのは、その仮想メソッドが `final` としてマークされておらず、新しいメソッドのアクセシビリティがその仮想メソッドと少なくとも同じ場合に限られます。  
   
-## <a name="see-also"></a>参照  
- [.NET API ブラウザー](/dotnet/api)  
- [共通言語ランタイム](../../../docs/standard/clr.md)  
- [.NET での型変換](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>関連項目
+
+- [.NET API ブラウザー](/dotnet/api)  
+- [共通言語ランタイム](../../../docs/standard/clr.md)  
+- [.NET での型変換](../../../docs/standard/base-types/type-conversion.md)

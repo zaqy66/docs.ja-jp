@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-ms.openlocfilehash: f41aa19c89365c9236ca0b8d385ffa6fbaf6be1c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e27fbe2c45e331a90261da3c0c575f1a472db88f
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43391737"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087379"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath と LINQ to XML の比較
 XPath と LINQ to XML の機能はある程度似ています。 どちらも XML ツリーに対してクエリを実行するために使用され、結果として、要素のコレクション、属性のコレクション、ノードのコレクション、要素や属性の値などを返します。 ただし、相違点もいくつかあります。  
@@ -104,5 +104,6 @@ customers.Elements("Customer").Elements("CompanyName")
 |following|同等の軸はありません。|  
 |preceding|同等の軸はありません。|  
   
-## <a name="see-also"></a>参照  
- [XPath ユーザー向けの LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>参照
+
+- [XPath ユーザー向けの LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -5,16 +5,16 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: cf374f9d1fd7e343e5eba868d3f686784428a2d0
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: b7c7b8d16463cd66eb8a0a5e383dd3763af323d8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270449"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857194"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Windows 10 と Windows Server 2016 に .NET Framework をインストールする
 
-.NET Framework は、Windows でさまざまなアプリケーションを実行するために必要です。 この記事の指示は、必要なバージョンの .NET Framework をインストールする際に役立ちます。 最新版は [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) です。
+.NET Framework は、Windows でさまざまなアプリケーションを実行するために必要です。 この記事の指示は、必要なバージョンの .NET Framework をインストールする際に役立ちます。 最新版は [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) です。
 
 このページをご覧になっている理由は、アプリケーションを実行しようとして次のようなダイアログがコンピューターに表示されたからではないでしょうか。
 
@@ -29,9 +29,9 @@ ms.locfileid: "36270449"
 > [!div class="button"]
 [.NET Framework 4.7.2 のダウンロード](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) は、.NET Framework 4.0 から 4.7.1 用に構築されたアプリケーションを実行するために使用できます。
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) は、.NET Framework 4.0 から 4.7.1 用に構築されたアプリケーションを実行するために使用できます。
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) は次の Windows にインストールできます。
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) は次の Windows にインストールできます。
 
 * Windows 10 Fall Creators Update (バージョン 1709)
 * Windows 10 Creators Update (バージョン 1703)

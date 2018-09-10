@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485535"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195726"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同期プリミティブの概要
 <a name="top"></a>.NET Framework には、スレッドの相互作用を制御したり競合状態を回避したりするためのさまざまな同期プリミティブが用意されています。 これらは、大きくは 3 つのカテゴリ (ロック、シグナリング、インタロックされた操作) に分類することができます。  
@@ -165,15 +165,16 @@ ms.locfileid: "43485535"
   
  概念的概要については、「[インタロックされた操作](../../../docs/standard/threading/interlocked-operations.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [マルチスレッド処理のためのデータの同期](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [モニター](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- [ミューテックス](../../../docs/standard/threading/mutexes.md)  
- [Semaphore と SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [待機ハンドル](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- [インタロックされた操作](../../../docs/standard/threading/interlocked-operations.md)  
- [読み取り/書き込みロック](../../../docs/standard/threading/reader-writer-locks.md)  
- [バリア](../../../docs/standard/threading/barrier.md)  
- [SpinWait](../../../docs/standard/threading/spinwait.md)  
- [SpinLock](../../../docs/standard/threading/spinlock.md)
+## <a name="see-also"></a>関連項目
+
+- [マルチスレッド処理のためのデータの同期](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [モニター](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+- [ミューテックス](../../../docs/standard/threading/mutexes.md)  
+- [Semaphore と SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
+- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+- [待機ハンドル](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+- [インタロックされた操作](../../../docs/standard/threading/interlocked-operations.md)  
+- [読み取り/書き込みロック](../../../docs/standard/threading/reader-writer-locks.md)  
+- [バリア](../../../docs/standard/threading/barrier.md)  
+- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [SpinLock](../../../docs/standard/threading/spinlock.md)

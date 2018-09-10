@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3cfa371394e76aab832c3dd4b065eb811413322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568626"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209988"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>インデックスによる順序付けられたノードの取得
 W3C (World Wide Web Consortium) の XML ドキュメント オブジェクト モデル (DOM) では、**XmlNamedNodeMap** によって処理される順序付けられていないノード セットとは対照的に、順序付けられたノードのリストを処理する機能を持った NodeList も定義しています。 Microsoft .NET Framework の NodeList は **XmlNodeList** と呼ばれています。 **XmlNodeList** を返すメソッドとプロパティは次のとおりです。  
@@ -94,5 +94,6 @@ End While
   
  **XmlNodeList** で利用可能なメソッドとプロパティの詳細については、「<xref:System.Xml.XmlNodeList>」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>関連項目
+
+- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

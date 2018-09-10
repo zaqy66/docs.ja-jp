@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590773"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188268"
 ---
 # <a name="attached-and-detached-child-tasks"></a>アタッチされた子タスクとデタッチされた子タスク
 *子タスク* (または*入れ子のタスク*) は、*親タスク* と呼ばれる、別のタスクのユーザー デリゲートで作成された、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> のインスタンスです。 子タスクはデタッチまたはアタッチできます。 *デタッチされた子タスク* は、親とは独立して実行されるタスクです。 *アタッチされた子タスク* は、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> オプションで作成される入れ子のタスクです。その親は、明示的にも既定でも、子タスクがアタッチされることを禁止しません。 タスクでは、システム リソースが許す限り、任意の数のアタッチされた子タスクおよびデタッチされた子タスクを作成できます。  
@@ -78,6 +78,7 @@ ms.locfileid: "33590773"
   
  子タスクが適時に完了しない場合には、子タスクがその親にアタッチしないようにすることをお勧めします。 親タスクは、すべての子タスクが終了するまで完了しないため、長時間実行される子タスクによって、アプリケーション全体のパフォーマンスの低下を生じる場合があります。 タスクがその親タスクにアタッチしないようにすることにより、アプリケーションのパフォーマンスを向上させる方法の例については、「[方法: 子タスクがその親にアタッチしないようにする](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)  
- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+## <a name="see-also"></a>関連項目
+
+- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)  
+- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

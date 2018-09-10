@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f9b074f6-d6f4-49dd-a093-df510bf0cf7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b242556e6fb05cae5ff5f54d1b134e1db918e5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0537685a91db2c0e323b3f1bda24c6cadc264e34
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571047"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225517"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a>XslCompiledTransform クラスの使用
 <xref:System.Xml.Xsl.XslCompiledTransform> クラスは Microsoft .NET Framework XSLT プロセッサです。 このクラスは、スタイル シートをコンパイルし、XSLT 変換を実行するために使用されます。  
@@ -40,6 +40,7 @@ ms.locfileid: "33571047"
  [XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
  <xref:System.Xml.Xsl.XslTransform> クラスからコードを移行する方法について説明します。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Xml.Xsl.XsltSettings>  
- <xref:System.Xml.Xsl.XsltMessageEncounteredEventArgs>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Xml.Xsl.XsltSettings>  
+- <xref:System.Xml.Xsl.XsltMessageEncounteredEventArgs>

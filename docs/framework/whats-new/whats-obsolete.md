@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514451"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855336"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework クラス ライブラリの互換性のために残されている機能
 .NET Framework は進化しています。 バージョンが新しくなるたびに、新しい機能を提供する新しい型と新しいメンバーが追加されています。 既存の型とそのメンバーも変更されています。 たとえば、一部の型は、その型がサポートするテクノロジが新しいテクノロジに置き換えられることで重要度が下がり、一部のメソッドは、より便利な新しいメソッドまたはより多くの機能を備えた新しいメソッドに置き換えられています。  
@@ -22,8 +22,7 @@ ms.locfileid: "33514451"
  .NET Framework と共通言語ランタイムでは、下位互換性をサポートするように努めています (.NET Framework の特定のバージョンで開発したアプリケーションを、.NET Framework の次期バージョンで実行できるようにするためです)。 そのため、型または型のメンバーを単純に削除することはできません。 そこで、.NET Framework では、型または型のメンバーが使用されなくなったことを示すために、その型またはメンバーを旧式 (互換性のために残されている) または非推奨として指定しています。 型またはメンバーを非推奨とする場合は、開発者がその型またはメンバーが削除予定であることを認識してその削除に対応できるように、指定を行う必要があります。 ただし、そのような型またはメンバーを使用する既存のコードは、.NET Framework の次期バージョンで引き続き実行できます。  
   
 > [!NOTE]
->  
-  *旧式*と*非推奨*という用語は、.NET Framework の型とメンバーに対して使用する場合は同じ意味です。  
+>  *旧式*と*非推奨*という用語は、.NET Framework の型とメンバーに対して使用する場合は同じ意味です。  
   
 ## <a name="the-obsoleteattribute-attribute"></a>ObsoleteAttribute 属性  
  .NET Framework では、型または型のメンバーが旧式であることを示すために、その型またはメンバーに <xref:System.ObsoleteAttribute> 属性を指定します。 この属性が型またはメンバーに適用されている場合、その型またはメンバーは .NET Framework の将来のバージョンで削除される予定であることを意味します。ただし、そのメンバーを使用するコンパイル済みコードに影響はありません。  
@@ -74,13 +73,13 @@ ms.locfileid: "33514451"
  [互換性のために残されているメンバー](../../../docs/framework/whats-new/obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>以前のバージョンの互換性のために残されている機能の一覧  
- [.NET Framework 4 で互換性のために残されている型](http://go.microsoft.com/fwlink/?LinkId=224224)  
+ [.NET Framework 4 で互換性のために残されている型](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [.NET Framework 4 で互換性のために残されているメンバー](http://go.microsoft.com/fwlink/?LinkId=224227)  
+ [.NET Framework 4 で互換性のために残されているメンバー](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
- [.NET Framework 3.5 Obsolete List (.NET Framework 3.5 の互換性のために残されている機能の一覧)](http://go.microsoft.com/fwlink/?LinkId=163710)  
+ [.NET Framework 3.5 Obsolete List (.NET Framework 3.5 の互換性のために残されている機能の一覧)](https://go.microsoft.com/fwlink/?LinkId=163710)  
   
- [.NET Framework 2.0 Obsolete List (.NET Framework 2.0 の互換性のために残されている機能の一覧)](http://go.microsoft.com/fwlink/?LinkID=125264)  
+ [.NET Framework 2.0 Obsolete List (.NET Framework 2.0 の互換性のために残されている機能の一覧)](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>参照  
  [\<<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

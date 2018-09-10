@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c1d4674c84fad1b7ae6021c4868e7f5a053c5a4
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 49708175f8501c735a77b0f7f965a106b6e086f2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935627"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216582"
 ---
 # <a name="types-of-isolation"></a>分離のタイプ
 分離ストレージへのアクセスは、常にそのストレージを作成したユーザーに限定されます。 この種の分離を実装するために、共通言語ランタイムは、オペレーティング システムが認識するユーザー ID (ストアを開くときにコードが実行しているプロセスに関連付けられた ID) と同じ概念を使用します。 この ID は認証されたユーザーの ID ですが、偽装によって現在のユーザーの ID が動的に変更される可能性があります。  
@@ -106,6 +106,7 @@ ms.locfileid: "42935627"
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
- [分離ストレージ](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
+- [分離ストレージ](../../../docs/standard/io/isolated-storage.md)

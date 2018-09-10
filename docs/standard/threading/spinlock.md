@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7d1d95030d2bc9f9288ae134471c150a37291b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bd2468c7b68a9c79e7418a32294676fb468e1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582260"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042635"
 ---
 # <a name="spinlock"></a>SpinLock
 <xref:System.Threading.SpinLock> 構造体は低レベルで相互排他的な同期プリミティブであり、ロックの取得を待機する間にスピンします。 マルチコア コンピューターでは、待機時間が短いことが予測され、競合を最小限に抑えられる場合、パフォーマンスは他の種類のロックよりも <xref:System.Threading.SpinLock> の方が優れています。 ただし、プロファイルにより、<xref:System.Threading.Monitor?displayProperty=nameWithType> メソッドまたは <xref:System.Threading.Interlocked> メソッドがプログラムのパフォーマンスを大幅に低下させていることがわかった場合にのみ、<xref:System.Threading.SpinLock> を使用することをお勧めします。  
@@ -25,5 +25,6 @@ ms.locfileid: "33582260"
   
  <xref:System.Threading.SpinLock> では*スレッド*-*追跡* モードがサポートされ、開発フェーズ中に使用することができ、特定の時間にロックを保持しているスレッドの追跡に役立ちます。 スレッド追跡モードはデバッグに非常に役立ちますが、パフォーマンスが低下する可能性があるため、リリース バージョンのプログラムでは無効にすることをお勧めします。 詳細については、「[方法: SpinLock のスレッド追跡モードを有効にする](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>関連項目
+
+- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)

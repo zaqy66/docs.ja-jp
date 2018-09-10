@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238417"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213343"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>論理アーキテクチャと物理アーキテクチャ
 
@@ -17,7 +17,7 @@ ms.locfileid: "43238417"
 
 まず、マイクロサービスを構築するために、特定のテクノロジを使用する必要はありません。 たとえば、マイクロサービスベースのアーキテクチャを作成するために Docker コンテナーは必須ではありません。 このようなマイクロサービスは、プレーン プロセスとして実行することもできます。 マイクロサービスは論理アーキテクチャです。
 
-さらに、マイクロサービスが物理的に単一のサービス、プロセス、またはコンテナー (簡単に言うと、[eShopOnContainers](http://aka.ms/MicroservicesArchitecture) の最初のバージョンで採用されるアプローチ) として実装できる場合でも、ビジネス マイクロサービスと物理サービスまたはコンテナーとの間のこのパリティは、数十から数百のサービスで構成される大規模で複雑なアプリケーションを構築する場合は必ずしも必須ではありません。
+さらに、マイクロサービスが物理的に単一のサービス、プロセス、またはコンテナー (簡単に言うと、[eShopOnContainers](https://aka.ms/MicroservicesArchitecture) の最初のバージョンで採用されるアプローチ) として実装できる場合でも、ビジネス マイクロサービスと物理サービスまたはコンテナーとの間のこのパリティは、数十から数百のサービスで構成される大規模で複雑なアプリケーションを構築する場合は必ずしも必須ではありません。
 
 ここに、アプリケーションの論理アーキテクチャと物理アーキテクチャの違いがあります。 システムの論理アーキテクチャと論理的境界は、物理または展開アーキテクチャと 1 対 1 でマップされるとは限りません。 マップされない可能性はありますが、多くの場合はマップされます。
 

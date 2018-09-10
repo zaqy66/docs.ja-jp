@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7795b25ca8e9337a53fc67ebc6f56130237d0764
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 216480e893f6dbebbb204cbf2bfebae8dc139ec4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582757"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44190703"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>方法: 下位レベルの同期に SpinLock を使用する
 <xref:System.Threading.SpinLock> の使用例を以下に示します。  
@@ -32,5 +32,6 @@ ms.locfileid: "33582757"
   
  <xref:System.Threading.SpinLock.Exit%2A> の呼び出しに `false` (Visual Basic では `False`) が使用されていることに注目してください。 これにより、最適なパフォーマンスを得られます。 メモリ フェンスを使用するには、IA64 アーキテクチャで `true` (`True`) を指定します。これにより、書き込みバッファーがフラッシュされるので、ロックを使用して他のスレッドを終了できるようになります。  
   
-## <a name="see-also"></a>参照  
- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>関連項目
+
+- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)

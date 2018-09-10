@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 173efcf485d5eb019b22a329a9d96b5cbe6a2f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54601bc705a8684508563ecf0682d84bcac8713f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592302"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879755"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ の概要
 ## <a name="what-is-a-parallel-query"></a>並列クエリとは  
@@ -96,7 +96,7 @@ ms.locfileid: "33592302"
  ![ForAll とForEach](../../../docs/standard/parallel-programming/media/vs-isvnt-allvseach.png "VS_ISVNT_ALLvsEACH")  
   
 ## <a name="cancellation"></a>キャンセル  
- PLINQ は、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] のキャンセルの型に統合されています  詳細については、「[Cancellation in Managed Threads (マネージ スレッドのキャンセル)](../../../docs/standard/threading/cancellation-in-managed-threads.md)」を参照してください。そのため、順次的な LINQ to Objects クエリとは異なり、PLINQ クエリは取り消すことができます。 キャンセル可能な PLINQ クエリを作成するには、クエリで <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 演算子を使用し、引数として <xref:System.Threading.CancellationToken> インスタンスを指定します。 トークンの <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> プロパティが true に設定されていると、PLINQ はそれに気付き、すべてのスレッドの処理を中止して <xref:System.OperationCanceledException> をスローします。  
+ PLINQ は、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] のキャンセルの型に統合されています  詳細については、「[Cancellation in Managed Threads (マネージド スレッドのキャンセル)](../../../docs/standard/threading/cancellation-in-managed-threads.md)」を参照してください。そのため、順次的な LINQ to Objects クエリとは異なり、PLINQ クエリは取り消すことができます。 キャンセル可能な PLINQ クエリを作成するには、クエリで <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 演算子を使用し、引数として <xref:System.Threading.CancellationToken> インスタンスを指定します。 トークンの <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> プロパティが true に設定されていると、PLINQ はそれに気付き、すべてのスレッドの処理を中止して <xref:System.OperationCanceledException> をスローします。  
   
  キャンセル トークンが設定された後も、PLINQ クエリが一部の要素の処理を継続する可能性があります。  
   
@@ -120,6 +120,7 @@ ms.locfileid: "33592302"
 ## <a name="measuring-plinq-performance"></a>PLINQ のパフォーマンスの測定  
  クエリは、多くの場合並列化できますが、並列クエリの設定に伴うオーバーヘッドは、並列化によって得られるパフォーマンスの利点よりも大きくなります。 クエリが大量の計算を実行しない場合、またはデータ ソースが小さい場合、PLINQ クエリは、順次的な LINQ to Objects クエリよりも低速になります。 Visual Studio Team Server の Parallel Performance Analyzer を使用し、さまざまなクエリのパフォーマンスの比較、処理のボトルネックの場所の特定、クエリが並行処理されているか順次処理されているかの確認を行うことができます。 詳細については、「[Concurrency Visualizer (同時実行ビジュアライザー)](/visualstudio/profiling/concurrency-visualizer)」と「[How to: Measure PLINQ Query Performance (方法: PLINQ クエリのパフォーマンスを測定する)](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [PLINQ での高速化について](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)
+## <a name="see-also"></a>関連項目
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [PLINQ での高速化について](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

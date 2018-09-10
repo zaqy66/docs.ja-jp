@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2415f0c360118389bc7a3ae3aaf74ca8daf24422
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574808"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262275"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
@@ -67,12 +67,12 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 
 ## <a name="net-runtimes"></a>.NET ランタイム
 
-ランタイムは、マネージ プログラムの実行環境です。 OS は、ランタイム環境の一部ですが、.NET ランタイムの一部ではありません。 .NET ランタイムの例を次に示します。
- 
- - .NET Framework 用共通言語ランタイム (CLR)
- - .NET Core 用共通言語ランタイム (CoreCLR)
- - ユニバーサル Windows プラットフォーム用 .NET Native 
- - Xamarin.iOS、Xamarin.Android、Xamarin.Mac、Mono デスクトップ フレームワーク用ランタイム
+ランタイムは、マネージド プログラムの実行環境です。 OS は、ランタイム環境の一部ですが、.NET ランタイムの一部ではありません。 .NET ランタイムの例を次に示します。
+
+- .NET Framework 用共通言語ランタイム (CLR)
+- .NET Core 用共通言語ランタイム (CoreCLR)
+- ユニバーサル Windows プラットフォーム用 .NET Native 
+- Xamarin.iOS、Xamarin.Android、Xamarin.Mac、Mono デスクトップ フレームワーク用ランタイム
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET のツールと共通インフラストラクチャ
 
@@ -85,11 +85,11 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 - オープン ソースのビルド オーケストレーション ツール ([CAKE](https://cakebuild.net/)、[FAKE](https://fake.build/) など)
 
 ## <a name="see-also"></a>関連項目
-[サーバー アプリ用 .NET Core と .NET Framework の選択](choosing-core-framework-server.md)   
-[.NET Standard](net-standard.md)  
-[.NET Core のガイド](../core/index.md)  
-[.NET Framework ガイド](../framework/index.md)  
-[C# のガイド](../csharp/index.md)  
-[F# のガイド](../fsharp/index.md)  
-[VB.NET ガイド](../visual-basic/index.md)  
 
+- [サーバー アプリ用 .NET Core と .NET Framework の選択](choosing-core-framework-server.md)   
+- [.NET Standard](net-standard.md)  
+- [.NET Core のガイド](../core/index.md)  
+- [.NET Framework ガイド](../framework/index.md)  
+- [C# のガイド](../csharp/index.md)  
+- [F# のガイド](../fsharp/index.md)  
+- [VB.NET ガイド](../visual-basic/index.md)  

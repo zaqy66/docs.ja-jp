@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e8de7a1b5de580ca768ec0dfbcbfab2d8cb6271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b324cc391bc784ac558ed3eb634506b5eea0d63
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573488"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214564"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>方法 : 分離ストレージでファイルおよびディレクトリを削除する
 分離ストレージ ファイル内のディレクトリとファイルを削除することができます。 ストア内では、ファイル名とディレクトリ名はオペレーティング システムに依存し、仮想ファイル システムのルートに対して相対的に指定されます。 Windows オペレーティング システムでは大文字小文字は区別されません。  
@@ -40,6 +40,7 @@ ms.locfileid: "33573488"
  [!code-csharp[Conceptual.IsolatedStorage#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source4.cs#4)]
  [!code-vb[Conceptual.IsolatedStorage#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>  
- [分離ストレージ](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>  
+- [分離ストレージ](../../../docs/standard/io/isolated-storage.md)

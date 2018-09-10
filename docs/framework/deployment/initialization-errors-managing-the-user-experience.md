@@ -9,11 +9,11 @@ ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43394742"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501801"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初期化エラー: ユーザー エクスペリエンスの管理
 共通言語ランタイムの (CLR) のアクティベーション システムでは、マネージド アプリケーション コードの実行に使用する CLR のバージョンを特定します。 アクティベーション システムで、読み込む CLR のバージョンを検出できない場合もあります。 通常、この状況は、特定のコンピューターで無効になっているかインストールされていない CLR バージョンがアプリケーションで必要な場合に発生します。 要求されたバージョンが見つからない場合、CLR アクティベーション システムは、呼び出された関数またはインターフェイスから HRESULT エラー コードを返します。また、アプリケーションを実行しているユーザーにはエラー メッセージが表示されることがあります。 ここでは、HRESULT コードの一覧を示し、エラー メッセージが表示されないようにする方法について説明します。  

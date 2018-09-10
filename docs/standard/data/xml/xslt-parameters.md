@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef57d16c52100398919563205a97205be3c5dd7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570641"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191887"
 ---
 # <a name="xslt-parameters"></a>XSLT パラメーター
 XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用します。 その時点で、修飾名と名前空間 URI がそのパラメーター オブジェクトに関連付けられます。  
@@ -68,5 +68,6 @@ XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加す�
 </order>  
 ```  
   
-## <a name="see-also"></a>参照  
- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>関連項目
+
+- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)

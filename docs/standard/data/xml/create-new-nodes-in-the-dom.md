@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbc8d6c1055afc1a0799522f341551d04bab4ace
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 390ffa1dd9f2e76372b0e4fcbf2916918b64d748
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569305"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260098"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>DOM への新しいノードの作成
 <xref:System.Xml.XmlDocument> には、すべてのノード型に対応する Create メソッドがあります。 このメソッドに、名前が必要な場合は名前を渡し、コンテンツを持つノードではコンテンツやその他のパラメーターを指定すると、そのノードが作成されます。コンテンツを持つノードには、たとえばテキスト ノードがあります。 次のメソッドは、ノードを適切に作成するために、名前といくつかのパラメーターの指定が必要なメソッドです。  
@@ -51,5 +51,6 @@ ms.locfileid: "33569305"
 |<xref:System.Xml.XmlNode.PrependChild%2A>|当該ノードの子ノードのリストの先頭にノードを追加します。 追加するノードが <xref:System.Xml.XmlDocumentFragment> の場合は、ドキュメント フラグメントの内容全体がこのノードの子リストに移動されます。 詳細については、<xref:System.Xml.XmlNode.PrependChild%2A> メソッドを参照してください。|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|要素に関連付けられている属性コレクションの末尾に <xref:System.Xml.XmlAttribute> ノードを追加します。 詳細については、<xref:System.Xml.XmlAttributeCollection.Append%2A> メソッドを参照してください。|  
   
-## <a name="see-also"></a>参照  
- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>関連項目
+
+- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

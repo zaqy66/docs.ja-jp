@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06876b91c72b939768d480e40631a8e85170bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568546"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264533"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>XML データ型から CLR 型へのマッピング
 XML データ型と共通言語ランタイム (CLR) 型の既定のマッピングを次の表に示します。  
@@ -79,5 +79,6 @@ XML データ型と共通言語ランタイム (CLR) 型の既定のマッピン
 |コメント ノード|<xref:System.Xml.XPath.XPathNavigator>|  
 |処理命令ノード|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## <a name="see-also"></a>参照  
- [System.Xml クラスでの型のサポート](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a>関連項目
+
+- [System.Xml クラスでの型のサポート](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

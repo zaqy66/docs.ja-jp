@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0868ce76f82ed0575154744d9ab02814a0bd990a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592367"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267226"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ および TPL 用のカスタム パーティショナー
 データ ソース上で操作を並列化する場合の必須の手順の 1 つは、ソースを複数のスレッドによって同時にアクセスできる複数のセクションに*パーティション分割*することです。 PLINQ およびタスク並列ライブラリ (TPL: Task Parallel Library) には、並列クエリまたは <xref:System.Threading.Tasks.Parallel.ForEach%2A> ループを記述するときに透過的に機能する既定のパーティショナーが用意されています。 より高度なシナリオでは、独自のパーティショナーをプラグインできます。  
@@ -120,7 +120,8 @@ ms.locfileid: "33592367"
   
 -   どのインデックスも負数以外である必要があります。 この規則に従わないと、PLINQ または TPL が例外をスローする場合があります。  
   
-## <a name="see-also"></a>参照  
- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)  
- [方法: 動的パーティションを実装する](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
- [方法: 静的パーティション分割用にパーティショナーを実装する](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+## <a name="see-also"></a>関連項目
+
+- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)  
+- [方法: 動的パーティションを実装する](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
+- [方法: 静的パーティション分割用にパーティショナーを実装する](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519409"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する
 .NET Framework ベースのコンポーネントの登録を必要としないアクティベーションは、COM コンポーネントの場合よりも少しだけ複雑です。 セットアップには 2 つのマニフェストが必要です。  
   
--   COM アプリケーションには、マネージ コンポーネントを識別するための Win32 スタイルのアプリケーション マニフェストが必要です。  
+-   COM アプリケーションには、マネージド コンポーネントを識別するための Win32 スタイルのアプリケーション マニフェストが必要です。  
   
 -   .NET Framework ベースのコンポーネントには、実行時に必要なアクティベーション情報のコンポーネント マニフェストが必要です。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33392854"
   
 ### <a name="to-create-an-application-manifest"></a>アプリケーション マニフェストを作成するには  
   
-1.  XML エディターを使用して、1 つ以上のマネージ コンポーネントと相互運用する COM アプリケーションによって所有されるアプリケーション マニフェストを作成または編集します。  
+1.  XML エディターを使用して、1 つ以上のマネージド コンポーネントと相互運用する COM アプリケーションによって所有されるアプリケーション マニフェストを作成または編集します。  
   
 2.  ファイルの先頭に次の標準ヘッダーを挿入します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33392854"
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     マニフェストの要素とその属性については、「[Application Manifests](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx)」(アプリケーション マニフェスト) をご覧ください。  
+     マニフェストの要素とその属性については、「[Application Manifests](/windows/desktop/SbsCs/application-manifests)」(アプリケーション マニフェスト) をご覧ください。  
   
 3.  マニフェストの所有者を指定します。 次の例では、`myComApp` バージョン 1 がマニフェスト ファイルを所有しています。  
   
@@ -77,11 +77,11 @@ ms.locfileid: "33392854"
   
 5.  マニフェスト ファイルに名前を付けて保存します。 アプリケーション マニフェストの名前は、アセンブリ実行可能ファイルの名前に拡張子 .manifest が付いたものです。 たとえば、myComApp.exe のアプリケーション マニフェスト ファイル名は myComApp.exe.manifest です。  
   
- アプリケーション マニフェストは、COM アプリケーションと同じディレクトリにインストールできます。 また、アプリケーションの .exe ファイルにリソースとして追加することもできます。 詳しくは、「[About Side-by-Side Assemblies](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx)」(side-by-side アセンブリについて) をご覧ください。  
+ アプリケーション マニフェストは、COM アプリケーションと同じディレクトリにインストールできます。 また、アプリケーションの .exe ファイルにリソースとして追加することもできます。 詳しくは、「[About Side-by-Side Assemblies](/windows/desktop/SbsCs/about-side-by-side-assemblies-)」(side-by-side アセンブリについて) をご覧ください。  
   
 #### <a name="to-create-a-component-manifest"></a>コンポーネント マニフェストを作成するには  
   
-1.  XML エディターを使用して、マネージ アセンブリを記述するコンポーネント マニフェストを作成します。  
+1.  XML エディターを使用して、マネージド アセンブリを記述するコンポーネント マニフェストを作成します。  
   
 2.  ファイルの先頭に次の標準ヘッダーを挿入します。  
   
@@ -103,13 +103,13 @@ ms.locfileid: "33392854"
            />  
     ```  
   
-4.  アセンブリ内の各クラスを指定します。 マネージ アセンブリ内の各クラスを一意に識別するには `<clrClass>` 要素を使用します。 この要素は、`<assembly>` 要素のサブ要素であり、次の表に示す属性を持っています。  
+4.  アセンブリ内の各クラスを指定します。 マネージド アセンブリ内の各クラスを一意に識別するには `<clrClass>` 要素を使用します。 この要素は、`<assembly>` 要素のサブ要素であり、次の表に示す属性を持っています。  
   
     |属性|説明|必須|  
     |---------------|-----------------|--------------|  
     |`clsid`|アクティブにするクラスを指定する識別子。|[はい]|  
     |`description`|ユーザーにコンポーネントを説明する文字列。 既定では文字列は空です。|×|  
-    |`name`|マネージ クラスを表す文字列。|[はい]|  
+    |`name`|マネージド クラスを表す文字列。|[はい]|  
     |`progid`|遅延バインディングによるアクティベーションで使用される識別子。|×|  
     |`threadingModel`|COM スレッド モデル。 "Both" が既定値です。|×|  
     |`runtimeVersion`|使用する共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定します。 この属性を指定せず、CLR がまだ読み込まれていない場合は、インストールされている最新の CLR (CLR Version 4 よりも前のバージョン) でコンポーネントが読み込まれます。 v1.0.3705、v1.1.4322、または v2.0.50727 を指定すると、インストールされている最新の CLR バージョン (CLR Version 4 よりも前のバージョン。通常は v2.0.50727) に自動的にロールフォワードされます。 別のバージョンの CLR が既に読み込まれていて、指定されたバージョンをインプロセスで並行して (side-by-side で) 読み込むことができる場合は、指定されたバージョンが読み込まれます。それ以外の場合は、読み込まれた CLR が使用されます。 これにより、読み込みエラーが発生する可能性があります。|×|  
@@ -150,7 +150,7 @@ ms.locfileid: "33392854"
   
  コンポーネント マニフェストはリソースとしてアセンブリに埋め込む必要があります。  
   
-#### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>コンポーネント マニフェストをマネージ アセンブリに埋め込むには  
+#### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>コンポーネント マニフェストをマネージド アセンブリに埋め込むには  
   
 1.  次のステートメントを含むリソース スクリプトを作成します。  
   

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb1a337c2795627b82125c8c29335c52b5fb332c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570385"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071441"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>DOM の要素に対する新しい属性の作成
 属性はノードではなく、要素ノードのプロパティであり、要素に関連付けられた **XmlAttributeCollection** に格納されるため、新しい属性を作成する方法は、他のノード型を作成する方法と異なります。 属性を作成して要素に追加するには、次の 2 つの方法があります。  
@@ -124,5 +124,6 @@ doc.DocumentElement.SetAttributeNode(attr);
 ## <a name="attribute-child-nodes"></a>属性の子ノード  
  属性ノードの値は、その属性の子ノードになります。 有効な子ノードの型は **XmlText** ノードと **XmlEntityReference** ノードの 2 つだけです。 これらのノードは、**FirstChild** や **LastChild** のようなメソッドが子ノードとして処理するという意味で、子ノードと見なされます。 属性が子ノードを持つという点は、属性または属性の子ノードを削除するときに重要になります。 詳細については、「[DOM の要素ノードからの属性の削除](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>関連項目
+
+- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

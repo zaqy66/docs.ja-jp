@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f818ecf52ae1179d6d32d0b76cea3cc2a8f36ea8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2f61e614696e731a85a030e34aa4356137d9000d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43416413"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260150"
 ---
 # <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a>EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent
 イベント待機ハンドルを使用して、スレッドでお互いにシグナル通知し、それぞれのシグナルを待機することで、スレッドの動作を同期できます。 これらの同期イベントは Win32 待機ハンドルに基づいており、通知を受けると自動的にリセットされるものと、手動でリセットされるものの 2 種類があります。  
@@ -38,10 +38,11 @@ ms.locfileid: "43416413"
  [待機ハンドル](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  <xref:System.Threading.WaitHandle> クラスは、<xref:System.Threading.EventWaitHandle>、<xref:System.Threading.Semaphore>、<xref:System.Threading.Mutex> クラスの基底クラスです。 すべての種類の待機ハンドルを操作する場合に便利な <xref:System.Threading.WaitHandle.SignalAndWait%2A> や <xref:System.Threading.WaitHandle.WaitAll%2A> などの静的メソッドが含まれます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)  
- [マネージド スレッド処理の基本](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [マネージド スレッド処理の基本](../../../docs/standard/threading/managed-threading-basics.md)

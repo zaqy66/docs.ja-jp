@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca36ffdd2eb5eb3acfbacbd543eebf17cfffb5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 744c97e8728d0a65bff8e7bb7a7dbb298afe1800
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573927"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44088090"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>ドキュメント間での既存のノードのコピー
 **ImportNode** メソッドを使用すると、ある **XmlDocument** から別の XmlDocument へ、ノードまたはノードのサブツリー全体をコピーできます。 呼び出しから返されるノードは、ソース ドキュメントのノードのコピーであり、そこには属性値、ノード名、ノード型が含まれます。さらに、プレフィックス、ローカル名、名前空間 URI (Uniform Resource Identifier) など、名前空間に関連するすべての属性も含まれます。 ソース ドキュメントは変更されません。 インポートしたノードは、ノードを挿入するメソッドの 1 つを使用してツリーに追加する必要があります。  
@@ -40,5 +40,6 @@ ms.locfileid: "33573927"
 > [!NOTE]
 >  DocumentType ノードはインポートできますが、1 つのドキュメントは 1 つの DocumentType しか持てません。 したがって、ドキュメント型をインポートした場合は、それをツリーに挿入する前に、ドキュメント内にドキュメント型がないことを確認する必要があります。 ノードの削除については、「[XML ドキュメントからのノード、コンテンツ、値の削除](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>関連項目
+
+- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

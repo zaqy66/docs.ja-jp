@@ -25,15 +25,15 @@ ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ef674855d1b9d6538e08ea2bb95f1f63e602d61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aad12f48409216e8833b9cb6bffbd35b84f40091
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396391"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513773"
 ---
 # <a name="introducing-pluggable-protocols"></a>プラグ可能なプロトコルの概要
-Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージ実装を提供します。 <xref:System.Net> および <xref:System.Net.Sockets> の名前空間内のインターネット アクセス クラスは、Web ベース アプリケーションとインターネット ベース アプリケーションの両方を実装するために使用できます。  
+Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージド実装を提供します。 <xref:System.Net> および <xref:System.Net.Sockets> の名前空間内のインターネット アクセス クラスは、Web ベース アプリケーションとインターネット ベース アプリケーションの両方を実装するために使用できます。  
   
 ## <a name="internet-applications"></a>インターネット アプリケーション  
  インターネット アプリケーションは、情報を要求するクライアント アプリケーションと、クライアントからの情報の要求に応答するサーバー アプリケーションの 2 種類に大別することができます。 従来のインターネット クライアント/サーバー アプリケーションは、ユーザーがブラウザーを使用して世界中の Web サーバーに格納されているドキュメントやその他のデータにアクセスする World Wide Web です。  
@@ -67,10 +67,10 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
   
  要求/応答モデルを使用できないアプリケーションの場合、またはネットワーク上でリッスンするだけでなく、要求を送信する必要があるアプリケーションの場合、**System.Net.Sockets** 名前空間が <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener>、および <xref:System.Net.Sockets.UdpClient> クラスを提供します。 これらのクラスは、さまざまなトランスポート プロトコルを使用して接続のための詳細を処理し、ネットワーク接続をストリームとしてアプリケーションに公開します。  
   
- Windows ソケット インターフェイスに精通している開発者、またはソケット レベルでのプログラミングにより提供されるコントロールが必要な開発者は、**System.Net.Sockets** クラスにより自身のニーズを満たすことができます。 **System.Net.Sockets** クラスは、**System.Net** クラス内でのマネージ コードからネイティブ コードへの遷移ポイントです。 ほとんどの場合、**System.Net.Sockets** クラスは、Windows の 32 ビットに相当するものにデータをマーシャリングするだけでなく、必要なセキュリティ チェックをすべて処理します。  
+ Windows ソケット インターフェイスに精通している開発者、またはソケット レベルでのプログラミングにより提供されるコントロールが必要な開発者は、**System.Net.Sockets** クラスにより自身のニーズを満たすことができます。 **System.Net.Sockets** クラスは、**System.Net** クラス内でのマネージド コードからネイティブ コードへの遷移ポイントです。 ほとんどの場合、**System.Net.Sockets** クラスは、Windows の 32 ビットに相当するものにデータをマーシャリングするだけでなく、必要なセキュリティ チェックをすべて処理します。  
   
 ## <a name="see-also"></a>参照  
  [プラグ可能なプロトコルのプログラミング](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)  
  [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN Code Gallery 上の .NET 用のネットワークのサンプル](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [MSDN Code Gallery 上の .NET 用のネットワークのサンプル](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b18f33c0cbc83f955c32477a21f77b09c7546c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43396475"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180307"
 ---
 # <a name="data-structures-for-parallel-programming"></a>並列プログラミングのデータ構造
 .NET Framework バージョン 4 では、同時実行コレクション クラスのセット、軽量な同期プリミティブ、遅延初期化用の型など、並列プログラミングに役立つ複数の新しい型が導入されています。 これらの型は、タスク並列ライブラリや PLINQ などの任意のマルチスレッド アプリケーション コードで使うことができます。  
@@ -68,7 +68,8 @@ ms.locfileid: "43396475"
 ## <a name="aggregate-exceptions"></a>例外集約  
  <xref:System.AggregateException?displayProperty=nameWithType> 型を使うと、別のスレッドで同時にスローされた複数の例外をキャプチャし、1 つの例外として結合スレッドに戻すことができます。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 型、<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 型、PLINQ は、この目的に <xref:System.AggregateException> を広範に使います。 詳細については、「[例外処理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)」および「[方法: PLINQ クエリの例外を処理する](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- <xref:System.Threading?displayProperty=nameWithType>  
- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Threading?displayProperty=nameWithType>  
+- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)

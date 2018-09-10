@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 998e159cceded6da2e9c3068680c45bc1c9345a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591532"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180138"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>マルチスレッド処理のためのデータの同期
 複数のスレッドが同じオブジェクトのプロパティとメソッドを呼び出す場合は、これらの呼び出しを同期することが重要です。 同期しないと、1 つのスレッドが行っていることを別のスレッドが中断し、オブジェクトが無効な状態になってしまう可能性があります。 メンバーがこのように中断されないように保護されているクラスを、スレッドセーフと呼びます。  
@@ -67,9 +67,10 @@ ms.locfileid: "33591532"
 ## <a name="synchronized-context"></a>同期されたコンテキスト  
  任意の **ContextBoundObject** で **SynchronizationAttribute** を使用して、すべてのインスタンス メソッドとインスタンス フィールドを同期することができます。 同じコンテキスト ドメイン内のすべてのオブジェクトが同じロックを共有します。 複数のスレッドがメソッドやフィールドにアクセスできますが、これらのオブジェクトに一度にアクセスできるのは 1 つのスレッドだけです。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
- [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)  
- [同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- [SyncLock ステートメント](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
- [lock ステートメント](~/docs/csharp/language-reference/keywords/lock-statement.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
+- [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)  
+- [同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+- [SyncLock ステートメント](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- [lock ステートメント](~/docs/csharp/language-reference/keywords/lock-statement.md)

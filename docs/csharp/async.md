@@ -4,18 +4,18 @@ description: .NET Core で提供される、C# 言語レベルの非同期プロ
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 971295b85e5f2763eef87bfe9109524db2630120
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484968"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865151"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
 I/O バインドのニーズ (ネットワークからのデータの要求、データベースへのアクセスなど) がある場合、非同期プログラミングを利用することになります。  CPU バインドのコードにも、コストのかかる計算の実行など、非同期コードに適したシナリオがあります。
 
-C# は言語レベルで非同期プログラミング モデルを備えており、コールバックに苦労したり、非同期処理をサポートするライブラリに従ったりしなくても、非同期コードを簡単に記述できます。 C# は、[タスク ベースの非同期パターン (TAP)](https://msdn.microsoft.com/library/hh873175.aspx) と呼ばれるものに従います。
+C# は言語レベルで非同期プログラミング モデルを備えており、コールバックに苦労したり、非同期処理をサポートするライブラリに従ったりしなくても、非同期コードを簡単に記述できます。 C# は、[タスク ベースの非同期パターン (TAP)](../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) と呼ばれるものに従います。
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>非同期モデルの基本的な概要
 

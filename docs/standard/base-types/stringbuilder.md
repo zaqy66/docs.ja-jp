@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 099e2de40458e42c9df34e74dee8d9fc7c425dea
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072957"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44197315"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET の StringBuilder クラスを使用する
 <xref:System.String> オブジェクトは、変更できません。 <xref:System.String?displayProperty=nameWithType> クラスのメソッドのいずれかを使用するたびに、新しい文字列オブジェクトをメモリ内に作成します。その際、その新しいオブジェクトに対して領域を新たに割り当てる必要があります。 文字列に対して何度も変更を実行する必要がある場合、新しい <xref:System.String> オブジェクトの作成に関連したオーバーヘッドが高コストになる可能性があります。 新しいオブジェクトを作成せずに文字列を変更したい場合は、<xref:System.Text.StringBuilder?displayProperty=nameWithType> クラスを使用することができます。 たとえば、ループで多数の文字列を連結する場合に、<xref:System.Text.StringBuilder> クラスを使用してパフォーマンスを向上させることができます。  
@@ -111,7 +111,8 @@ ms.locfileid: "37072957"
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]
  [!code-vb[Conceptual.StringBuilder#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/tostringexample1.vb#10)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)  
- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
+- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)  
+- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)

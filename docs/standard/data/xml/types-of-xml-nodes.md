@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f62a113865a481276c371f2fce55a5d9486eb00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572211"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261958"
 ---
 # <a name="types-of-xml-nodes"></a>XML ノードの種類
 XML ドキュメントがノードのツリーとしてメモリに読み込まれると、ノードの作成時にノード型が決まります。 XML ドキュメント オブジェクト モデル (DOM) では複数のノード型が定義されています。これらのノード型は W3C (World Wide Web Consortium) で規定されているもので、セクション 1.1.1「The DOM Structure Model」に記載されています。 ノード型、ノード型に割り当てられるオブジェクト、およびそれぞれの簡単な説明を次の表に示します。  
@@ -46,5 +46,6 @@ XML ドキュメントがノードのツリーとしてメモリに読み込ま�
   
  ノード型のオブジェクト階層構造とそれぞれに対応するオブジェクト名の詳細については、「[XML ドキュメント オブジェクト モデル (DOM) の階層構造](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)」を参照してください。 ノード ツリーに作成されるオブジェクトの詳細については、「[オブジェクト階層の XML データへのマップ](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>関連項目
+
+- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

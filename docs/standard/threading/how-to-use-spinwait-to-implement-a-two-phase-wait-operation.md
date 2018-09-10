@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af6e4e8d0d754b97478788422b4dd84eeddc6491
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcb2fbf5e0a310156fdc6fac5fe736692e8ec133
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583280"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209213"
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>方法: SpinWait を使用して 2 フェーズ待機操作を実装する
 次の例では、<xref:System.Threading.SpinWait?displayProperty=nameWithType> オブジェクトを使用して、2 フェーズ待機操作を実装する方法を示します。 最初のフェーズでは、同期オブジェクトである `Latch` は、ロックが使用可能になったかどうかを確認しながら、数回のサイクルの間スピンします。 2 番目のフェーズでは、ロックが使用可能になった場合に、`Wait` メソッドは待機を実行するために <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> を使用せずに制御を返します (それ以外の場合、`Wait` は待機を実行します)。  
@@ -30,6 +30,7 @@ ms.locfileid: "33583280"
   
  ログ出力には、<xref:System.Threading.ManualResetEvent> を使用せずにロックを取得することで、ラッチでパフォーマンスを向上させることができた頻度が示されます。  
   
-## <a name="see-also"></a>参照  
- [SpinWait](../../../docs/standard/threading/spinwait.md)  
- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>関連項目
+
+- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)

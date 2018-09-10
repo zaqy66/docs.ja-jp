@@ -5,12 +5,12 @@ ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 85c190756821ee14fffad600ce7b44029c314ec1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a8230d382cfcf3709a2e4df42758470f3caea4e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397469"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187391"
 ---
 # <a name="network-programming-samples"></a>ネットワーク プログラミングのサンプル
 このセクションでは、<xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets>、および関連する名前空間のクラスを使用した、ダウンロード可能なネットワーク プログラミング サンプルの説明とリンクを示します。 
@@ -28,7 +28,7 @@ ms.locfileid: "33397469"
  [HttpListener テクノロジのサンプル](https://msdn.microsoft.com/en-us/library/y7cbb2y2(v=vs.85).aspx)  
  アプリケーション内から HTTP 要求を処理する方法を示します。  
  
- [HttpListener ASPX ホスト アプリケーションのサンプル](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
+ [HttpListener ASPX ホスト アプリケーションのサンプル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
  <xref:System.Net.HttpListener?displayProperty=nameWithType> クラスの機能を使用して、ホストされた ASP.NET アプリケーションへの呼び出しをルーティングする HTTP サーバーを作成する方法を示します。
   
  [メーラー テクノロジのサンプル](https://msdn.microsoft.com/en-us/library/whw7xbk2(v=vs.85).aspx)  

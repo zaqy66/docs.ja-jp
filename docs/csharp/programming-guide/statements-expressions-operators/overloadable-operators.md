@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-ms.openlocfilehash: 96a23e71b6b7dbfd9c7ccf99bc58366e7f99f59b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f819e94fd532c10478ac39da9485126aa4380dd5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43451676"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44098486"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>オーバーロード可能な演算子 (C# プログラミング ガイド)
 
@@ -32,7 +32,7 @@ C# では、[operator](../../language-reference/keywords/operator.md) キーワ�
 
 演算子をオーバー ロードする方法については、[演算子](../../language-reference/keywords/operator.md)キーワードに関する記事を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# プログラミング ガイド](../index.md)
 - [ステートメント、式、および演算子](index.md)

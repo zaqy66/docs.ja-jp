@@ -9,15 +9,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 527da43807a0dbba8f5365c92f566053f10d49f5
-ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.openlocfilehash: 1a0ed1d02fd40a94d4ae63deea3c09b04bfc9bd8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33848298"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183133"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>動的メソッドおよびアセンブリの出力
-ここでは、<xref:System.Reflection.Emit> 名前空間のマネージ型のセットについて説明します。これらのマネージ型を使用すると、コンパイラやツールでメタデータおよび Microsoft Intermediate Language (MSIL) を実行時に出力できます。また、ポータブル実行可能 (PE) ファイルをディスク上に生成することもできます。 この名前空間を使用する主な機能は、スクリプト エンジンとコンパイラです。 ここでは、リフレクション出力と呼ばれる <xref:System.Reflection.Emit> 名前空間の機能について説明します。  
+ここでは、<xref:System.Reflection.Emit> 名前空間のマネージド型のセットについて説明します。これらのマネージド型を使用すると、コンパイラやツールでメタデータおよび Microsoft Intermediate Language (MSIL) を実行時に出力できます。また、ポータブル実行可能 (PE) ファイルをディスク上に生成することもできます。 この名前空間を使用する主な機能は、スクリプト エンジンとコンパイラです。 ここでは、リフレクション出力と呼ばれる <xref:System.Reflection.Emit> 名前空間の機能について説明します。  
   
  リフレクション出力は、以下の機能を提供します。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "33848298"
   
 -   デバッガーまたはコード プロファイラなどのツールで使用できる、定義されたモジュールのシンボリック情報を定義します。  
   
- <xref:System.Reflection.Emit> 名前空間のマネージ型に加えて、アンマネージ メタデータ インターフェイスもあります。これについては、[メタデータ インターフェイス](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)に関するリファレンス ドキュメントを参照してください。 マネージ リフレクション出力は、アンマネージ メタデータ インターフェイスよりも強力なセマンティック エラー チェック機能、より高水準なメタデータの抽象化クラスを提供します。  
+ <xref:System.Reflection.Emit> 名前空間のマネージド型に加えて、アンマネージド メタデータ インターフェイスもあります。これについては、[メタデータ インターフェイス](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)に関するリファレンス ドキュメントを参照してください。 マネージド リフレクション出力は、アンマネージド メタデータ インターフェイスよりも強力なセマンティック エラー チェック機能、より高水準なメタデータの抽象化クラスを提供します。  
   
- メタデータと MSIL を使用する際に役立つリソースとしては、他に、共通言語基盤 (CLI: Common Language Infrastructure) のドキュメント、特に「Partition II: Metadata Definition and Semantics」と「Partition III: CIL Instruction Set」などもあります。 このドキュメントは、オンラインの [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) と [Ecma の Web サイト](http://go.microsoft.com/fwlink/?LinkId=116487)で参照できます。  
+ メタデータと MSIL を使用する際に役立つリソースとしては、他に、共通言語基盤 (CLI: Common Language Infrastructure) のドキュメント、特に「Partition II: Metadata Definition and Semantics」と「Partition III: CIL Instruction Set」などもあります。 このドキュメントは、オンラインの [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) と [Ecma の Web サイト](https://go.microsoft.com/fwlink/?LinkId=116487)で参照できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容
   
@@ -59,17 +59,17 @@ ms.locfileid: "33848298"
  メソッド本体の構築に使用できる MSIL 命令コードのカタログを作成します。  
   
  <xref:System.Reflection.Emit>  
- 動的メソッド、アセンブリ、および型の出力に使用するマネージ クラスが含まれます。  
+ 動的メソッド、アセンブリ、および型の出力に使用するマネージド クラスが含まれます。  
   
  <xref:System.Type>  
- <xref:System.Type> クラスについて説明します。このクラスは、マネージ リフレクションとリフレクション出力の型を表し、これらのテクノロジを使用するうえで重要なクラスです。  
+ <xref:System.Type> クラスについて説明します。このクラスは、マネージド リフレクションとリフレクション出力の型を表し、これらのテクノロジを使用するうえで重要なクラスです。  
   
  <xref:System.Reflection>  
- メタデータとマネージ コードの探索に使用するマネージ クラスが含まれます。  
+ メタデータとマネージド コードの探索に使用するマネージド クラスが含まれます。  
   
 ## <a name="related-sections"></a>関連項目  
  [リフレクション](../../../docs/framework/reflection-and-codedom/reflection.md)  
- メタデータとマネージ コードの探索方法について説明します。  
+ メタデータとマネージド コードの探索方法について説明します。  
   
  [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  .NET 実装のアセンブリの概要を説明します。

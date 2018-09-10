@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c542a38152a21a62208bee81e123923fb05d0e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d039e591e1f61a7be18dc224845f82b107d918f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579484"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211953"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework における型変換
 <a name="top"></a> すべての値には関連付けられた型があり、その値に割り振られる容量、可能な値の範囲、使用できるメンバーなどの属性を定義しています。 多くの値は複数の型として表現できます。 たとえば、値 4 は整数または浮動小数点数として表現できます。 型変換を実行すると、変換元の型の値と等価な値が新しい型で作成されますが、それが元のオブジェクトと同一である (値が正確に一致する) とは限りません。  
@@ -206,7 +206,8 @@ ms.locfileid: "33579484"
   
  型コンバーターを使用した変換の詳細については、<xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> を参照してください。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Convert?displayProperty=nameWithType>  
- <xref:System.IConvertible>  
- [型変換の表](../../../docs/standard/base-types/conversion-tables.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Convert?displayProperty=nameWithType>  
+- <xref:System.IConvertible>  
+- [型変換の表](../../../docs/standard/base-types/conversion-tables.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd25cf94a8a57f20b42f5e14c92b3b43e3378844
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab7f3075d46ef0e8b98af471ae3943f7500128e5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572110"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080047"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML スキーマ オブジェクト モデルの概要
 Microsoft .NET Framework のスキーマ オブジェクト モデル (SOM) は豊富な機能を備えた API で、スキーマの作成、編集、および検証をプログラムで実行できます。 SOM は、ドキュメント オブジェクト モデル (DOM) が XML ドキュメント上で機能するのと同様に、XML スキーマ ドキュメント上で機能します。 XML スキーマ ドキュメントは有効な XML ファイルで、SOM に読み込まれると、スキーマに準拠した他の XML ドキュメントの構造および有効性に関する情報を伝えます。  
@@ -38,11 +38,12 @@ Microsoft .NET Framework のスキーマ オブジェクト モデル (SOM) は�
   
  <xref:System.Xml.Schema> 名前空間の各クラスの詳細については、.NET Framework クラス ライブラリの <xref:System.Xml.Schema> 名前空間のリファレンス ドキュメントを参照してください。  
   
-## <a name="see-also"></a>参照  
- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [XML スキーマの走査](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [XML スキーマの編集](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>関連項目
+
+- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [XML スキーマの走査](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [XML スキーマの編集](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

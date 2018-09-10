@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b9a9331f62ba9655c20a2e27b3a94dac1903472
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79350178300dde2896f6b22c68d6062bbb57f700
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582689"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865632"
 ---
 # <a name="task-cancellation"></a>タスクのキャンセル
-<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラスおよび <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> クラスは、.NET Framework のキャンセル トークンを使用したキャンセルをサポートしています。 詳細については、「[マネージ スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)」を参照してください。 Task クラスのキャンセル処理では、キャンセル可能な操作を表すユーザー デリゲートと、キャンセルを要求したコードが連携します。  キャンセル処理が正常に実行されるためには、要求コードが <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> メソッドを呼び出し、ユーザー デリゲートが操作を適時に終了する必要があります。 次のオプションのいずれかを使用して操作を終了できます。  
+<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラスおよび <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> クラスは、.NET Framework のキャンセル トークンを使用したキャンセルをサポートしています。 詳細については、「[マネージド スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)」を参照してください。 Task クラスのキャンセル処理では、キャンセル可能な操作を表すユーザー デリゲートと、キャンセルを要求したコードが連携します。  キャンセル処理が正常に実行されるためには、要求コードが <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> メソッドを呼び出し、ユーザー デリゲートが操作を適時に終了する必要があります。 次のオプションのいずれかを使用して操作を終了できます。  
   
 -   デリゲートから戻ります。 多くの場合、この処理で十分ですが、この方法で取り消されたタスク インスタンスは、<xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> 状態ではなく、<xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状態に遷移します。  
   
@@ -40,6 +40,7 @@ ms.locfileid: "33582689"
   
  キャンセルが要求された後も、タスクが一部の項目の処理を継続する可能性があります。  
   
-## <a name="see-also"></a>参照  
- [マネージ スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- [方法: タスクとその子を取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+## <a name="see-also"></a>関連項目
+
+- [マネージド スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
+- [方法: タスクとその子を取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

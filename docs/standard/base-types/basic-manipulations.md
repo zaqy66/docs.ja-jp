@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e8c6c3f9b7ec418fdbf6365a3e7d90fe65e9caa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1206648c694c9f09a600e3c70f4aa27118b2d458
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567186"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44178053"
 ---
 # <a name="how-to-perform-basic-string-manipulations-in-net"></a>方法: .NET の基本的な文字列操作を実行する
 次の例では、「[基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)」のトピックで説明したいくつかの方法を使用して、実際のアプリケーションで見られる方法で文字列の操作を実行するクラスを構築します。 `MailToData` クラスは、個人の名前とアドレスを個別のプロパティに格納し、`City`、`State`、`Zip` フィールドを組み合わせて、ユーザーに表示する1 つの文字列にする方法を提供します。 さらに、このクラスを使用して、ユーザーが市区町村、都道府県、および郵便番号情報を 1 つの文字列として入力することができます。アプリケーションは自動的に 1 つの文字列を解析し、対応するプロパティに適切な情報を入力します。  
@@ -28,5 +28,6 @@ ms.locfileid: "33567186"
   
  上記のコードを実行すると、ユーザーは自分の名前とアドレスを入力するように求められます。 アプリケーションは、適切なプロパティに情報を格納し、市区町村、都道府県、および郵便番号情報を表示する 1 つの文字列を作成して、ユーザーに情報を表示します。  
   
-## <a name="see-also"></a>参照  
- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a>関連項目
+
+- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7df080185db9631e47bb7a886f6e0db894974a6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0652f5f3f3629257f8f67c6b4a0b9551ef547b62
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584634"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221897"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ のマージ オプション
 クエリが並列として実行される場合、PLINQ はソース シーケンスをパーティション分割し、複数のスレッドが同時に異なる部分 (通常は別個のスレッド) で動作できるようにします。 結果を 1 つのスレッドで、たとえば、`foreach` (Visual Basic では `For Each`) ループで使用する場合、すべてのスレッドからの結果を 1 つのシーケンスに再マージする必要があります。 PLINQ で実行されるマージの種類は、クエリに存在する演算子によって異なります。 たとえば、結果に新しい順序を適用する演算子は、すべてのスレッドのすべての要素をバッファリングする必要があります。 消費スレッド (アプリケーション ユーザーのものでもある) 観点から、完全にバッファリングされたクエリは、最初の結果が生成される前に非常に長い期間実行される可能性があります。 既定では、その他の演算子は部分的にバッファリングされ、結果はバッチ単位で生成されます。 既定では、1 つの演算子 <xref:System.Linq.ParallelEnumerable.ForAll%2A> がバッファリングされることはありません。 すべてのスレッドのすべての要素はすぐに生成されます。  
@@ -65,6 +65,7 @@ ms.locfileid: "33584634"
   
  マージ オプションを処理するいくつかの演算子の機能は、ソース シーケンスの種類と、<xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 演算子がクエリで既に使用されているかどうかによって異なります。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> は常に <xref:System.Linq.ParallelMergeOptions.NotBuffered> であり、その要素をすぐに生成します。 <xref:System.Linq.ParallelEnumerable.OrderBy%2A> は常に<xref:System.Linq.ParallelMergeOptions.FullyBuffered> であり、生成の前にリスト全体を並べ替える必要があります。  
   
-## <a name="see-also"></a>参照  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [方法: PLINQ のマージ オプションを指定する](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+## <a name="see-also"></a>関連項目
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [方法: PLINQ のマージ オプションを指定する](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

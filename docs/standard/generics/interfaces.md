@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9d1323918d42884f5e2fdf8a5905d13283c74c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575974"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198479"
 ---
 # <a name="generic-interfaces"></a>ジェネリック インターフェイス
 このトピックでは、ジェネリック型のファミリ間に共通する機能を提供するジェネリック インターフェイスについて概説します。  
@@ -42,10 +42,11 @@ ms.locfileid: "33575974"
   
  <xref:System.Collections.Generic.IEnumerable%601> ジェネリック インターフェイスは、ジェネリック列挙子の構造体を提供します。 ジェネリック列挙子によって実装される <xref:System.Collections.Generic.IEnumerator%601> ジェネリック インターフェイスは、非ジェネリック <xref:System.Collections.IEnumerator> インターフェイスを継承します。型パラメーター `T` に依存しない <xref:System.Collections.IEnumerator.MoveNext%2A> および <xref:System.Collections.IEnumerator.Reset%2A> メンバーは、非ジェネリック インターフェイスにのみ表示されます。 つまり、非ジェネリック インターフェイスのコンシューマーはすべて、ジェネリック インターフェイスも使用できます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [ジェネリック](../../../docs/standard/generics/index.md)  
- [.NET Framework のジェネリック コレクション](../../../docs/standard/generics/collections.md)  
- [配列とリストの操作に使用する汎用デリゲート](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [ジェネリック](../../../docs/standard/generics/index.md)  
+- [.NET Framework のジェネリック コレクション](../../../docs/standard/generics/collections.md)  
+- [配列とリストの操作に使用する汎用デリゲート](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)

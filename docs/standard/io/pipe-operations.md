@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e0d2747abbacf766ddeda6f41404d8701cbc273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdc12091a377a118dc533e5f299fa4833af64baf
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574367"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081870"
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>.NET Framework でのパイプ操作
 パイプは、プロセス間通信の手段となります。 パイプには、2 種類あります。  
@@ -36,7 +36,8 @@ ms.locfileid: "33574367"
   
      「[方法: ネットワークのプロセス間通信で名前付きパイプを使用する](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)  
- [方法: ローカルのプロセス間通信で匿名パイプを使用する](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
- [方法: ネットワークのプロセス間通信で名前付きパイプを使用する](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+## <a name="see-also"></a>関連項目
+
+- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)  
+- [方法: ローカルのプロセス間通信で匿名パイプを使用する](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
+- [方法: ネットワークのプロセス間通信で名前付きパイプを使用する](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

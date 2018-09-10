@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: 9193dc56a0f92daf486d95666ba820cb09d588d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745371"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43788929"
 ---
 # <a name="walkthrough-using-client-application-services"></a>チュートリアル : クライアント アプリケーション サービスの使用
 このトピックでは、ユーザーを認証し、ユーザーのロールと設定を取得するクライアント アプリケーション サービスを使用する Windows アプリケーションを作成する方法について説明します。  
@@ -69,7 +69,7 @@ ms.locfileid: "32745371"
  この時点で、アプリケーションは、同じホストの 3 つのすべてのサービスにアクセスするように構成されます。 次のセクションでは、簡単な Web サービス アプリケーションとしてホストを作成し、クライアントの構成をテストできるようにします。  
   
 ## <a name="creating-the-application-services-host"></a>アプリケーションのサービス ホストを作成する  
- このセクションでは、ローカルの SQL Server Compact データベース ファイルのユーザー データにアクセスする簡単な Web サービス アプリケーションを作成します。 次に、 [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)を使用してデータベースにデータを入力します。 この簡単な構成では、クライアント アプリケーションを短時間でテストすることができます。 あるいは、Web サービス ホストを構成して、完全な SQL Server データベースから、またはユーザー設定の <xref:System.Web.Security.MembershipProvider> クラスと <xref:System.Web.Security.RoleProvider> クラスを介してユーザー データにアクセスすることもできます。 詳細については、「 [Creating and Configuring the Application Services Database for SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)」を参照してください。  
+ このセクションでは、ローカルの SQL Server Compact データベース ファイルのユーザー データにアクセスする簡単な Web サービス アプリケーションを作成します。 次に、 [ASP.NET Web Site Administration Tool](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)を使用してデータベースにデータを入力します。 この簡単な構成では、クライアント アプリケーションを短時間でテストすることができます。 あるいは、Web サービス ホストを構成して、完全な SQL Server データベースから、またはユーザー設定の <xref:System.Web.Security.MembershipProvider> クラスと <xref:System.Web.Security.RoleProvider> クラスを介してユーザー データにアクセスすることもできます。 詳細については、「 [Creating and Configuring the Application Services Database for SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)」を参照してください。  
   
  次の手順では、AppServices の Web サービスを作成および構成します。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "32745371"
      このマークアップの `authenticationService`、 `profileService`、および `roleService` の各要素で、アプリケーション サービスの有効化と構成を行います。 テスト目的で、 `requireSSL` 要素の `authenticationService` 属性が "false" に設定されています。 `readAccessProperties` 要素の `writeAccessProperties` 属性と `profileService` 属性は、 `WebSettingsTestText` プロパティが読み取りと書き込みが可能であることを示しています。  
   
     > [!NOTE]
-    >  実稼働コードでは、HTTPS プロトコルを使用して、常に Secure Socket Layer (SSL) 上の認証サービスにアクセスする必要があります。 SSL の設定方法については、「 [SSL (Secure Sockets Layer) を構成する](http://go.microsoft.com/fwlink/?LinkId=91844)」を参照してください。  
+    >  実稼働コードでは、HTTPS プロトコルを使用して、常に Secure Socket Layer (SSL) 上の認証サービスにアクセスする必要があります。 SSL の設定方法については、「 [SSL (Secure Sockets Layer) を構成する](https://go.microsoft.com/fwlink/?LinkId=91844)」を参照してください。  
   
     ```xml  
     <system.web.extensions>  
@@ -538,6 +538,6 @@ ms.locfileid: "32745371"
  [クライアント アプリケーション サービス](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [クライアント アプリケーション サービスの概要](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [方法 : クライアント アプリケーション サービスを構成する](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [ASP.NET Web サイト管理ツール](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
- [SQL Server 向けアプリケーション サービス データベースの作成と構成](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
- [チュートリアル: ASP.NET アプリケーション サービスの使用](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
+ [ASP.NET Web サイト管理ツール](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [SQL Server 向けアプリケーション サービス データベースの作成と構成](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
+ [チュートリアル: ASP.NET アプリケーション サービスの使用](https://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

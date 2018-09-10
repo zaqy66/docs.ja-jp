@@ -14,11 +14,11 @@ ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
 manager: douge
 ms.openlocfilehash: 9d8e84280b5821f8d8df36694198bd85fb8470d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416909"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225069"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>方法: サービスをインストールおよびアンインストールする
 .NET Framework を使用して Windows サービスを開発している場合は、InstallUtil.exe というコマンド ライン ユーティリティを使用してサービス アプリケーションをすばやくインストールできます。 開発者は、ユーザーがインストールおよびアンインストールできる Windows サービスをリリースする場合、InstallShield を使用する必要があります。 「[Windows インストーラー配置](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)」をご覧ください。  

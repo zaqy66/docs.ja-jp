@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc2698a37dc77ccd8c58164ec5a34f21251b6dbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86642da8647d185d863607819bbb18de9e976e6b
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571125"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264156"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET の型変換の表
 拡大変換は、1 つの型の値が、サイズが同じかそれ以上の別の型に変換されるときに発生します。 縮小変換は、1 つの型の値が、サイズがより小さい別の型の値に変換されるときに発生します。 このトピックの表は、両方の種類の変換の動作を示しています。  
@@ -71,6 +71,7 @@ ms.locfileid: "33571125"
 |<xref:System.Single>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
 |<xref:System.Double>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
   
-## <a name="see-also"></a>参照  
- <xref:System.Convert?displayProperty=nameWithType>  
- [.NET での型変換](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Convert?displayProperty=nameWithType>  
+- [.NET での型変換](../../../docs/standard/base-types/type-conversion.md)

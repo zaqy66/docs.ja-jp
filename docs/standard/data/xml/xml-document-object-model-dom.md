@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23be7e47dbe54d95eb29ef3b3cb169caeee3eff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579367"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087193"
 ---
 # <a name="xml-document-object-model-dom"></a>XML ドキュメント オブジェクト モデル (DOM)
 XML ドキュメント オブジェクト モデル (DOM) クラスは、XML ドキュメントのメモリ内表現です。 DOM を使用すると、XML ドキュメントの読み込み、操作、および変更をプログラムから実行できます。 **XmlReader** クラスも XML を読み込めますが、非キャッシュ、前方参照専用、読み取り専用のアクセスしか実行できません。 つまり、**XmlReader** には、属性の値または要素のコンテンツを編集する機能や、ノードを挿入したり削除したりする機能はありません。 DOM の主な機能は編集です。 XML データは、通常、メモリ上では構造的に表現されますが、実際の XML データをファイルに保存したり、別のオブジェクトから取り込む場合は、直線的な形式で格納されます。 XML データの例を次に示します。  
@@ -76,6 +76,7 @@ XML ドキュメントの構造
   
  DOM が最も役に立つのは、XML データをメモリに読み込み、その構造を変更したり、ノードを追加または削除したり、要素内のテキストとしてノードが保持しているデータを変更したりする場合です。 ただし、他のクラスも用意されており、シナリオによっては DOM より高速になる場合もあります。 XML に対して高速、非キャッシュ、前方参照専用のストリーム アクセスを行うには、**XmlReader** と **XmlWriter** を使用します。 カーソル モデルと **XPath** を使用したランダム アクセスが必要な場合は、**XPathNavigator** クラスを使用します。  
   
-## <a name="see-also"></a>参照  
- [XML ノードの種類](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
- [オブジェクト階層の XML データへのマップ](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+## <a name="see-also"></a>関連項目
+
+- [XML ノードの種類](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [オブジェクト階層の XML データへのマップ](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

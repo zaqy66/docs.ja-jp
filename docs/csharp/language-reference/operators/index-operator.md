@@ -10,11 +10,11 @@ helpviewer_keywords:
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
 ms.openlocfilehash: 19283a795f8cfc444dfcb186dcecc0ea86eb27fd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467433"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500453"
 ---
 # <a name="-operator-c-reference"></a>[] 演算子 (C# リファレンス)
 角かっこ (`[]`) は、配列、インデクサー、属性に使用されます。 また、ポインターと共に使用することもできます。  

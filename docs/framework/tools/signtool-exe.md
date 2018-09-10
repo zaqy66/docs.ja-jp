@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1728dee4d0d8d90b8a1e2b2a3f92fc256c6267c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409816"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197460"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (署名ツール)
 署名ツールはコマンド ライン ツールで、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイム スタンプを付けます。  
@@ -69,7 +69,7 @@ signtool [command] [options] [file_name | ...]
   
 |Sign コマンド オプション|説明|  
 |-------------------------|-----------------|  
-|`/a`|最適な署名証明書を自動的に選択します。 署名ツールは、指定されたすべての条件を満たす有効な証明書をすべて検出し、最も長い期間有効である証明書を選択します。 このオプションが指定されていない場合、署名ツールは有効な署名証明書を 1 つだけ検出します。|  
+|`/a`|最適な署名証明書を自動的に選択します。 署名ツールは、指定されたすべての条件を満たす有効な証明書をすべて検出し、最も長い期間有効である証明書を選択します。 このオプションが指定されていない場合、署名ツールは有効な署名証明書を 1 つだけ検索することが前提とします。|  
 |`/ac`  *file*|*file* から署名ブロックに証明書を追加します。|  
 |`/as`|この署名を追加します。 プライマリ署名が存在しない場合、この署名がプライマリ署名になります。|  
 |`/c`  *CertTemplateName*|署名証明書に対して証明書テンプレート名 (Microsoft 拡張機能) を指定します。|  
@@ -97,7 +97,7 @@ signtool [command] [options] [file_name | ...]
 |`/u`  *Usage*|署名証明書に必要な拡張キー使用法 (EKU: Enhanced Key Usage) を指定します。 使用法の値は、OID または文字列によって指定できます。 既定の使用法は "Code Signing" (1.3.6.1.5.5.7.3.3) です。|  
 |`/uw`|使用法 "Windows System Component Verification" (1.3.6.1.4.1.311.10.3.6) を指定します。|  
   
- 使用例については、「[Using SignTool to Sign a File](http://msdn.microsoft.com/library/windows/desktop/aa388170.aspx)」(SignTool を使用してファイルに署名する) を参照してください。  
+ 使用例については、「[Using SignTool to Sign a File](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file)」(SignTool を使用してファイルに署名する) を参照してください。  
   
 <a name="TimeStamp"></a>   
 ## <a name="timestamp-command-options"></a>TimeStamp コマンド オプション  
@@ -111,7 +111,7 @@ signtool [command] [options] [file_name | ...]
 |`/tp` *index*|*index* で署名にタイム スタンプを付けます。|  
 |`/tr`  *URL*|RFC 3161 タイム スタンプ サーバーの URL を指定します。 タイム スタンプを付けるファイルは、事前に署名されている必要があります。 `/tr` オプションまたは `/t` オプションを指定する必要があります。|  
   
- 使用例については、「[Adding Time Stamps to Previously Signed Files](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx)」(署名済みのファイルにタイム スタンプを追加する) を参照してください。  
+ 使用例については、「[Adding Time Stamps to Previously Signed Files](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files)」(署名済みのファイルにタイム スタンプを追加する) を参照してください。  
   
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>Verify コマンド オプション  
@@ -128,7 +128,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *Index*|指定した位置の署名を検証します。|  
 |`/hash` (`SHA1`&#124;`SHA256`)|カタログ内のファイルを検索する場合に使用するオプションのハッシュ アルゴリズムを指定します。|  
 |`/kp`|カーネル モード ドライバーの署名ポリシーを使用して検証を実行するように指定します。|  
-|`/ms`|複数の検証セマンティクスを使用します。 これは、[!INCLUDE[win8](../../../includes/win8-md.md)] 以上での [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) 呼び出しの既定の動作です。|  
+|`/ms`|複数の検証セマンティクスを使用します。 これは、[!INCLUDE[win8](../../../includes/win8-md.md)] 以上での [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 呼び出しの既定の動作です。|  
 |`/o` *Version*|オペレーティング システムのバージョンでファイルを確認します。 *Version* の形式は、*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber* です。 *PlatformID* は、<xref:System.PlatformID> 列挙メンバーの基になる値を表します。 **重要:** `/o` スイッチを使用することをお勧めします。 `/o` を指定しない場合、SignTool.exe から予期しない結果が返されることがあります。 たとえば、`/o` スイッチを含めない場合、古いオペレーティング システム上で正しく検証されるシステム カタログが新しいオペレーティング システムで正しく検証されないことがあります。|  
 |`/p7`|PKCS #7 ファイルを確認します。 PKCS #7 検証で既存のポリシーは使用されません。 署名がチェックされ、署名証明書のチェーンがビルドされます。|  
 |`/pa`|既定の Authenticode 検証ポリシーを使用するように指定します。 `/pa` オプションが指定されていない場合、署名ツールは Windows ドライバー検証ポリシーを使用します。 このオプションは、`catdb` オプションと一緒に使用することはできません。|  
@@ -137,7 +137,7 @@ signtool [command] [options] [file_name | ...]
 |`/r` *RootSubjectName*|署名証明書のチェーン先とするルート証明書の件名を指定します。 この値には、ルート証明書の件名全体の部分文字列を指定できます。|  
 |`/tw`|署名にタイム スタンプが付けられていない場合に、警告を生成することを指定します。|  
   
- 使用例については、「[Using SignTool to Verify a File Signature](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx)」(SignTool を使用してファイルの署名を検証する) を参照してください。  
+ 使用例については、「[Using SignTool to Verify a File Signature](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature)」(SignTool を使用してファイルの署名を検証する) を参照してください。  
   
 ## <a name="return-value"></a>戻り値  
  署名ツールは、終了時に次のいずれかの終了コードを返します。  

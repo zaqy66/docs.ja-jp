@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c925b734c6d89bfa7240a7946c5bae4d8062a47a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577818"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264676"
 ---
 # <a name="comparing-strings-in-net"></a>.NET で文字列を比較する
 .NET は、文字列の値を比較するためのメソッドをいくつか提供します。 これらの値の比較メソッドとその説明を次の表に示します。  
@@ -150,6 +150,8 @@ ms.locfileid: "33577818"
   
  いずれのメソッドも、 **String.Remove** メソッドと組み合わせて使用すると便利です。 **IndexOf** メソッドまたは **LastIndexOf** メソッドのいずれかを使用して文字の位置を取得し、その位置を **Remove** メソッドに渡すことによって、その文字またはその文字で始まる単語を削除できます。  
   
-## <a name="see-also"></a>参照  
- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)  
- [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>関連項目
+
+- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)  
+- [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [重みのテーブルの並べ替え](https://www.microsoft.com/en-us/download/details.aspx?id=10921)

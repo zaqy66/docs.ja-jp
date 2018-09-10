@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9800f1b1ec8fbb0eaf91611895aaf9d45629fae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575825"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879037"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>方法 : カスタム数値書式プロバイダーを定義して使用する
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、数値の文字列形式を広範囲に制御できます。 数値の書式をカスタマイズするため、次の機能をサポートしています。  
@@ -91,5 +91,6 @@ ms.locfileid: "33575825"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  コマンド ラインで csc.exe または vb.exe を使用してコードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
-## <a name="see-also"></a>参照  
- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a>関連項目
+
+- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)

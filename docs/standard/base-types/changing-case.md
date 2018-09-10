@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f29a92c0d0b8961c178b7a92ea5964a1575a48db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262529"
 ---
 # <a name="changing-case-in-net"></a>.NET の大文字と小文字の変更
 ユーザーからの入力を受け付けるアプリケーションを記述する場合、ユーザーがデータ入力に使用するケースを正確に予測することはできません。 多くの場合、特にユーザー インターフェイスにそれを表示する場合には、文字列に一貫性のあるケースを使用することが求められます。 次の表は、3 つのケース変更方式を示しています。 最初の 2 つの方式は、カルチャを受け入れるオーバーロードを提供します。  
@@ -69,6 +70,7 @@ ms.lasthandoff: 05/04/2018
   
  カルチャに依存していても、<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> メソッドは言語的に正しい大文字小文字の規則を提供しないことに注意してください。 たとえば、前の例で、メソッドは "a tale of two cities" を "A Tale Of Two Cities" に変換します。 しかし、en-US カルチャで言語的に正しいタイトルの大文字小文字の表記は "A Tale of Two Cities" です。  
   
-## <a name="see-also"></a>参照  
- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)  
- [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>関連項目
+
+- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)  
+- [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

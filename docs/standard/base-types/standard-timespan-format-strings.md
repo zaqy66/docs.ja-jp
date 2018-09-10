@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82774ffaf03b7eaad6240a0361bede076053de0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52da538ba9cf348062905b66a87d13db82a214a0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578308"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085267"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 書式指定文字列
 <a name="Top"></a> 標準の <xref:System.TimeSpan> 書式指定文字列は、単一の書式指定子を使用して、書式設定操作によって生成される <xref:System.TimeSpan> 値のテキスト表現を定義します。 空白を含む複数の文字で構成される書式指定文字列は、カスタムの <xref:System.TimeSpan> 書式指定文字列として解釈されます。 詳細については、「[カスタム TimeSpan 書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)」をご覧ください。  
@@ -130,7 +130,8 @@ ms.locfileid: "33578308"
   
  [表のトップへ](#Top)  
   
-## <a name="see-also"></a>参照  
- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)  
- [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+## <a name="see-also"></a>関連項目
+
+- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)  
+- [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [文字列の解析](../../../docs/standard/base-types/parsing-strings.md)

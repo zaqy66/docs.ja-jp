@@ -12,11 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 566a2e5e8587dc6d6d2259a5f79f5c59c2e60c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8266db66abb46ffc9503bdaeaf4ec4078177760
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44174992"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>配列とリストの操作に使用する汎用デリゲート
 ここでは、配列またはコレクションの要素に対して実行される変換、検索述語、およびアクションの汎用デリゲートの概要について説明します。  
@@ -40,10 +41,11 @@ ms.lasthandoff: 05/04/2018
 ### <a name="chaining-delegates"></a>デリゲートのチェーン  
  これらのデリゲートを使用するメソッドの多くは、別のメソッドに渡すことのできる配列またはリストを返します。 たとえば、配列の特定の要素を選択して新しい型に変換し、新しい配列に保存すると、<xref:System.Array.FindAll%2A> ジェネリック メソッドによって返される配列を <xref:System.Array.ConvertAll%2A> ジェネリック メソッドに渡すことができます。 新しい要素の型にネイティブな並べ替え順序がない場合は、<xref:System.Array.ConvertAll%2A> ジェネリック メソッドによって返された配列を <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> ジェネリック メソッドに渡すことができます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [ジェネリック](../../../docs/standard/generics/index.md)  
- [.NET Framework のジェネリック コレクション](../../../docs/standard/generics/collections.md)  
- [ジェネリック インターフェイス](../../../docs/standard/generics/interfaces.md)  
- [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [ジェネリック](../../../docs/standard/generics/index.md)  
+- [.NET Framework のジェネリック コレクション](../../../docs/standard/generics/collections.md)  
+- [ジェネリック インターフェイス](../../../docs/standard/generics/interfaces.md)  
+- [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)

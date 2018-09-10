@@ -9,11 +9,11 @@ helpviewer_keywords:
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
 ms.openlocfilehash: 077d5835b372897cbe797385271effc5d00bf6e3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43473974"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525657"
 ---
 # <a name="-operator-c-reference"></a>:: 演算子 (C# リファレンス)
 名前空間エイリアス修飾子 (`::`) を使用して識別子を検索できます。 この例に示すように、常に 2 つの識別子の間に配置します。  

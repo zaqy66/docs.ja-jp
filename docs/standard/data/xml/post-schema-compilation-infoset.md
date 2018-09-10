@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db1c952003e73beb756567be74ed4eb72612c989
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e7892289248c9651b529bcc68d7228b8babb28a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569630"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083820"
 ---
 # <a name="post-schema-compilation-infoset"></a>スキーマのコンパイル後の情報セット
 W3C 勧告『[XML Schema](https://www.w3.org/XML/Schema)』では、スキーマ検証前とスキーマ コンパイル後に必ず公開する情報セットについて解説されています。 XML スキーマ オブジェクト モデル (SOM) は、<xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッドが呼び出される前と後について、この公開内容を調べます。  
@@ -40,5 +40,6 @@ W3C 勧告『[XML Schema](https://www.w3.org/XML/Schema)』では、スキーマ
  [!code-csharp[PsciSample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/PsciSample/CS/PsciSample.cs#1)]
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
-## <a name="see-also"></a>参照  
- [XML スキーマ オブジェクト モデル (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+## <a name="see-also"></a>関連項目
+
+- [XML スキーマ オブジェクト モデル (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 158a68d97a52bb5a72985d260a3dd5c6bfd0bd41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43408488"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084612"
 ---
 # <a name="using-application-protocols"></a>アプリケーション プロトコルの使用
 .NET Framework は、一般的に使用されているインターネット アプリケーション プロトコルをサポートしています。 ここでは、[HTTP](../../../docs/framework/network-programming/http.md)、"TCP"、"UDP" プロトコルの使用方法と、[Windows ソケット](../../../docs/framework/network-programming/sockets.md) インターフェイスを使用してカスタム ソケットを実装する方法について説明します。  

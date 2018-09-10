@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d4fd91eccd5e8f3fd6be7c8a63ab1c097002382
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073230"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214122"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>データとタスクの並列化における注意点
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> を使用すると、多くの場合、通常の順次ループよりもパフォーマンスが大幅に向上します。 ただし、ループを並列化すると複雑になるため、逐次コードでは一般的でない、またはまったく発生しない問題の原因になる可能性があります。 このトピックでは、並列ループを記述するときに回避すべきプラクティスをいくつか説明します。  
@@ -52,10 +52,10 @@ ms.locfileid: "37073230"
 >  これは、クエリに <xref:System.Console.WriteLine%2A> の呼び出しをいくつか挿入することで自分でテストできます。 このメソッドは、ドキュメントの例でデモのために使用されていますが、必要がない限り並列ループでは使用しないでください。  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>スレッド アフィニティの問題に注意する  
- シングル スレッド アパートメント (STA) コンポーネント向けの COM 相互運用性、Windows フォーム、Windows Presentation Foundation (WPF) などの一部のテクノロジでは、特定のスレッド上で実行するコードを必要とするスレッド アフィニティが制限される場合があります。 たとえば、Windows フォームと WPF では、コントロールへのアクセスは、そのコントロールが作成されたスレッド上でしか行うことができません。 つまり、たとえば、UI スレッドのみで処理をスケジュールするようにスレッド スケジューラを構成していない限り、並列ループからはリスト コントロールを更新できません。 詳細については、「[How to: Schedule Work on the User Interface (UI) Thread (方法: ユーザー インターフェイス (UI) スレッドで作業をスケジュールする)](http://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663)」を参照してください。  
+ シングル スレッド アパートメント (STA) コンポーネント向けの COM 相互運用性、Windows フォーム、Windows Presentation Foundation (WPF) などの一部のテクノロジでは、特定のスレッド上で実行するコードを必要とするスレッド アフィニティが制限される場合があります。 たとえば、Windows フォームと WPF では、コントロールへのアクセスは、そのコントロールが作成されたスレッド上でしか行うことができません。 つまり、たとえば、UI スレッドのみで処理をスケジュールするようにスレッド スケジューラを構成していない限り、並列ループからはリスト コントロールを更新できません。 詳細については、「[How to: Schedule Work on the User Interface (UI) Thread (方法: ユーザー インターフェイス (UI) スレッドで作業をスケジュールする)](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663)」を参照してください。  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Parallel.Invoke によって呼び出されるデリゲートで待機する場合は注意する  
- 状況によっては、タスク並列ライブラリでタスクをインライン展開します。これは、現在実行中のスレッドでタスクが実行されることを意味します  (詳細については、[タスク スケジューラ](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)に関するページを参照してください)。場合によっては、このパフォーマンスの最適化によって、デッドロックが発生する可能性があります。 たとえば、2 つのタスクで同じデリゲート コードを実行していて、そのデリゲート コードは、イベントの発生時に通知し、もう 1 つのタスクが通知するまで待機するとします。 この場合、2 番目のタスクが 1 番目のタスクと同じスレッド情にインライン展開され、1 番目のタスクが待機状態になると、2 番目のタスクではそのイベントを通知できなくなります。 このような状況を回避するために、待機操作のタイムアウトを指定するか、明示的なスレッド コンストラクターを使用して、1 つのタスクがもう 1 つのタスクをブロックしないようにすることができます。  
+ 状況によっては、タスク並列ライブラリでタスクをインライン展開します。これは、現在実行中のスレッドでタスクが実行されることを意味します  (詳細については、[タスク スケジューラ](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)に関するページを参照してください)。場合によっては、このパフォーマンスの最適化によって、デッドロックが発生する可能性があります。 たとえば、2 つのタスクで同じデリゲート コードを実行していて、そのデリゲート コードは、イベントの発生時に通知し、もう 1 つのタスクが通知するまで待機するとします。 この場合、2 番目のタスクが 1 番目のタスクと同じスレッド情にインライン展開され、1 番目のタスクが待機状態になると、2 番目のタスクではそのイベントを通知できなくなります。 このような状況を回避するために、待機操作のタイムアウトを指定するか、明示的なスレッド コンストラクターを使用して、1 つのタスクがもう 1 つのタスクをブロックしないようにすることができます。  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>ForEach、For および ForAll のイテレーションが必ず並列実行されているとは限らない  
  <xref:System.Threading.Tasks.Parallel.For%2A>、<xref:System.Threading.Tasks.Parallel.ForEach%2A>、または <xref:System.Linq.ParallelEnumerable.ForAll%2A> の各ループにおける個々の反復処理が必ずしも並列実行されるとは限らないことに注意してください。 そのため、イテレーションの並列実行の正確性、または特定の順序でのイテレーションの実行の正確性に依存するコードを記述しないでください。 たとえば、次のコードはデッドロックが起こる可能性があります。  
@@ -80,7 +80,8 @@ ms.locfileid: "37073230"
  [!code-csharp[TPL_Pitfalls#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#03)]
  [!code-vb[TPL_Pitfalls#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#03)]  
   
-## <a name="see-also"></a>参照  
- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)  
- [PLINQ の非利便性](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
- [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (並列プログラミングのパターン: .NET Framework 4 での並列パターンの理解と適用)](https://www.microsoft.com/download/details.aspx?id=19222)
+## <a name="see-also"></a>関連項目
+
+- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)  
+- [PLINQ の非利便性](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
+- [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (並列プログラミングのパターン: .NET Framework 4 での並列パターンの理解と適用)](https://www.microsoft.com/download/details.aspx?id=19222)

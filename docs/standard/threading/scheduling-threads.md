@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a382dbea239b66e60d666a0e2e7add01d6d7bd54
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 811a75c9f0350eefc98c32181e859b7583ff74ef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753592"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186293"
 ---
 # <a name="scheduling-threads"></a>スレッドのスケジューリング
 
@@ -21,7 +21,7 @@ ms.locfileid: "42753592"
   
  スレッドの実行は、優先順位に基づいてスケジュールされます。 スレッドがランタイム内で実行されている場合でも、オペレーティング システムは、すべてのスレッドにプロセッサ タイム スライスを割り当てます。 スレッドの実行順序を決定するために使用されるスケジューリング アルゴリズムの詳細は、オペレーティング システムによって異なります。 オペレーティング システムによっては、実行可能なスレッドの中で最も優先順位の高いスレッドが常に最初に実行されるようにスケジュールされます。 同じ優先順位を持つ複数のスレッドがすべて実行可能である場合、スケジューラは、その優先順位にあるスレッド間を循環することで各スレッドに一定の実行用タイム スライスを与えます。 より優先順位の高いスレッドが実行可能である限り、それよりも優先順位の低いスレッドは実行されません。 特定の優先順位を持つ実行可能なスレッドがなくなると、スケジューラは次に低い優先順位に移り、その優先順位にあるスレッドの実行をスケジュールします。 より優先順位の高いスレッドが実行可能になった場合も、それよりも優先順位の低いスレッドの代わりに優先順位の高いスレッドが実行されます。 また、オペレーティング システムは、アプリケーションのユーザー インターフェイスをフォアグラウンドとバックグラウンド間で移動させながら、スレッドの優先順位を動的に調整することもできます。 オペレーティング システムによっては、別のスケジューリング アルゴリズムが使用される場合があります。  
   
-## <a name="see-also"></a>参照  
- [スレッドの使用とスレッド処理](../../../docs/standard/threading/using-threads-and-threading.md)  
- 
-  [Windows でのマネージド スレッド処理とアンマネージド スレッド処理](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)
+## <a name="see-also"></a>関連項目
+
+- [スレッドの使用とスレッド処理](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [Windows でのマネージド スレッド処理とアンマネージド スレッド処理](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

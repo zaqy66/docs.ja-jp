@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cd7b7542e5cf9352e965717368399dcf4a9ecd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3de83395df9e8c89a92e85b96ddd15e9f0be6ad5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575851"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207695"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>方法: ディレクトリとファイルを列挙する
 名前の文字列の列挙可能なコレクションを返すメソッドを使用して、ディレクトリとファイルを列挙することができます。 <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo>、または <xref:System.IO.FileSystemInfo> オブジェクトの列挙可能なコレクションを返すメソッドを使用することもできます。 列挙可能なコレクションでは、ディレクトリとファイルの大きなコレクションを操作する際に配列よりも優れたパフォーマンスが得られます。  
@@ -65,5 +65,6 @@ ms.locfileid: "33575851"
      [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
      [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
   
-## <a name="see-also"></a>参照  
- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>関連項目
+
+- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)

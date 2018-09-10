@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38519ee90578d0bc13689216fb5674653ead4c19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc8df722acd5c9547833cb4fe3051e1590c6c627
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577216"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087674"
 ---
 # <a name="editing-xml-schemas"></a>XML スキーマの編集
 XML スキーマの編集は、スキーマ オブジェクト モデル (SOM) の最も重要な機能の 1 つです。 XML スキーマの既存の値を変更する場合、SOM のスキーマ コンパイル前のすべてのプロパティを使用できます。 その後、XML スキーマを再コンパイルすると、変更が反映されます。  
@@ -135,11 +135,12 @@ XML スキーマの編集は、スキーマ オブジェクト モデル (SOM) �
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>参照  
- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [XML スキーマの走査](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>関連項目
+
+- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [XML スキーマの走査](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

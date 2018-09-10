@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 697820b01bd629baa306d96002a98d92e44dab51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdb11b283cc008e7f4bb060d1c2cb18706c824b7
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592198"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084719"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> クラスを使用すると、スレッドは通知および通知の待機により、互いに通信できます。 イベント待機ハンドル (単にイベントとも呼ばれます) は、通知を受けて、1 つ以上の待機中のイベントを解放できる待機ハンドルです。 通知を受けると、イベント待機ハンドルは手動または自動でリセットされます。 <xref:System.Threading.EventWaitHandle> クラスは、ローカルのイベント待機ハンドル (ローカル イベント) または名前付きのシステム イベント待機ハンドル (名前付きのイベントまたはシステム イベント。すべてのプロセスから参照できます) を表すことができます。  
@@ -62,9 +62,10 @@ ms.locfileid: "33592198"
 > [!NOTE]
 >  <xref:System.Threading.EventWaitHandle> クラスとは異なり、派生したクラスである <xref:System.Threading.AutoResetEvent> および <xref:System.Threading.ManualResetEvent> は、ローカルの待機ハンドルのみを表すことができます。 名前付きのシステム イベントを表すことはできません。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)

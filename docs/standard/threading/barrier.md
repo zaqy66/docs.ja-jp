@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 864571262d1c9c060235840424542856187341df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 385e370f205851630f809b285a93c2609220efeb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584299"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212400"
 ---
 # <a name="barrier-net-framework"></a>バリア (.NET Framework)
 *バリア* とは、複数のスレッド (*参加要素* と呼ばれる) が段階的に 1 つのアルゴリズムで同時に動作できるようにするユーザー定義の同期プリミティブです。 各参加要素は、コードのバリア ポイントに到達するまで実行されます。 バリアは、作業の 1 つのフェーズの終了を表します。 参加要素は、バリアに到達すると、すべての参加要素が同じバリアに到達するまでブロックされます。 すべての参加要素がバリアに到達した後、必要に応じて、フェーズ後の処理を呼び出すことができます。 フェーズ後の処理を使用すると、他のすべてのスレッドがブロックされた状態のまま 1 つのスレッドでアクションを実行できます。 アクションが実行された後、参加要素のブロックはすべて解除されます。  
@@ -49,6 +49,7 @@ ms.locfileid: "33584299"
   
  詳細については、「[継続タスクを使用したタスクの連結](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)  
- [方法: バリアを使用して同時実行操作を同期する](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)
+## <a name="see-also"></a>関連項目
+
+- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [方法: バリアを使用して同時実行操作を同期する](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)

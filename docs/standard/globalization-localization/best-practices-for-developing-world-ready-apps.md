@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 804f92ddd564f057157598c3cf62106d1a7d5318
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35b8e062c9f207eba19bcee5593425095de2e267
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578204"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041471"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>推奨される国際対応アプリケーション開発手順
 このセクションでは、推奨される国際対応アプリケーション開発手順について説明します。  
@@ -80,7 +80,7 @@ ms.locfileid: "33578204"
   
 1.  <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> プロパティおよび <xref:System.Globalization.CultureInfo.CurrentCulture%2A> プロパティをアプリケーションで明示的に設定します。 既定値には依存しないでください。  
   
-2.  ASP.NET アプリケーションはマネージ アプリケーションであり、カルチャに基づいた情報の取得、表示、および操作では、ほかのマネージ アプリケーションと同じクラスを使用できます。  
+2.  ASP.NET アプリケーションはマネージド アプリケーションであり、カルチャに基づいた情報の取得、表示、および操作では、ほかのマネージド アプリケーションと同じクラスを使用できます。  
   
 3.  ASP.NET では次に示す 3 種類のエンコーディングを指定できる点に注意してください。  
   
@@ -100,6 +100,7 @@ ms.locfileid: "33578204"
   
 5.  uiCulture 値には、ブラウザー受け入れ言語を設定できます。  
   
-## <a name="see-also"></a>参照  
- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)  
- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>関連項目
+
+- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)  
+- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)

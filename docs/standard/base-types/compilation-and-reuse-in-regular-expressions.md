@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a9adb5d39eb420496030d85dacd95a1cccd6fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568759"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877761"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>正規表現におけるコンパイルと再利用
 正規表現エンジンが式をどのようにコンパイルするか、および正規表現がどのようにキャッシュされるかを理解することで、正規表現を幅広く使用するアプリケーションのパフォーマンスを最適化できます。 このトピックでは、コンパイルとキャッシュの両方について説明します。  
@@ -46,5 +46,6 @@ ms.locfileid: "33568759"
   
  オブジェクトのインスタンス化および正規表現のコンパイルのオーバーヘッドが原因となり、さまざまな <xref:System.Text.RegularExpressions.Regex> オブジェクトを作成してすぐに破棄するプロセスは非常にコストがかかります。 多数の異なる正規表現を使用するアプリケーションの場合は、静的 `Regex` メソッドの呼び出しを使用することで、および場合によっては正規表現キャッシュのサイズを大きくすることで、パフォーマンスを最適化できます。  
   
-## <a name="see-also"></a>参照  
- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>関連項目
+
+- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)

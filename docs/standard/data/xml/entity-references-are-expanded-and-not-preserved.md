@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa03532200a89aa164648c1278c9dbafc2aee214
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569533"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266866"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>保持されずに展開されるエンティティ参照
 エンティティ参照が展開され、それが表すテキストに置き換えられる場合には、**XmlEntityReference** ノードは作成されません。 この場合はエンティティ宣言が解析され、宣言のコンテンツから作成されたノードが **XmlEntityReference** の代わりにコピーされます。 したがって、`&publisher;` の例では、`&publisher;` は保存されず、代わりに **XmlText** ノードが作成されます。  
@@ -40,5 +40,6 @@ ms.locfileid: "33569533"
   
  エンティティを解決できないリーダーを使用すると、**Load** メソッドは、エンティティ参照を見つけたときに例外をスローします。  
   
-## <a name="see-also"></a>参照  
- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>関連項目
+
+- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03da36090c255f635036a9bd518bdacd99404ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575656"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264962"
 ---
 # <a name="weak-references"></a>弱い参照
 ガベージ コレクターでは、アプリケーションのコードがオブジェクトにアクセスできる間、そのアプリケーションで使用中のオブジェクトを収集することはできません。 アプリケーションには、オブジェクトへの強い参照があると考えられます。  
@@ -52,5 +52,6 @@ ms.locfileid: "33575656"
   
  メモリ管理の問題への自動的な解決方法として、弱い参照を使用しないでください。 代わりに、アプリケーションのオブジェクトを処理するために、効果的なキャッシュ ポリシーを開発します。  
   
-## <a name="see-also"></a>参照  
- [ガベージ コレクション](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>関連項目
+
+- [ガベージ コレクション](../../../docs/standard/garbage-collection/index.md)

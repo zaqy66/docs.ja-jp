@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf0caa0513881d5a1096478d8b29fc708ac3d3ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577656"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210222"
 ---
 # <a name="common-io-tasks"></a>共通 I/O タスク
 <xref:System.IO> 名前空間には、読み取り、書き込みなどの各種アクションをファイル、ディレクトリ、およびストリーム上で実行できるようにするいくつかのクラスが用意されています。 詳細については、「[ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)」を参照してください。  
@@ -53,7 +53,8 @@ ms.locfileid: "33577656"
 |ディレクトリのサイズの確認|<xref:System.IO.Directory?displayProperty=nameWithType> クラス|  
 |ディレクトリが存在するかどうかの確認|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType> メソッド|  
   
-## <a name="see-also"></a>参照  
- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)  
- [ストリームの構成](../../../docs/standard/io/composing-streams.md)  
- [非同期ファイル I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+## <a name="see-also"></a>関連項目
+
+- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)  
+- [ストリームの構成](../../../docs/standard/io/composing-streams.md)  
+- [非同期ファイル I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

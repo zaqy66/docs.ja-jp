@@ -6,11 +6,11 @@ helpviewer_keywords:
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
 ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43408562"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515383"
 ---
 # <a name="client-application-services-overview"></a>クライアント アプリケーション サービスの概要
 クライアント アプリケーション サービスにより、Windows フォーム アプリケーションおよび Windows Presentation Foundation (WPF) アプリケーションから [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] ログイン サービス、ロール サービス、プロファイル サービスに簡単にアクセスできます。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスは、[!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] と [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] に付属している Microsoft ASP.NET 2.0 AJAX Extensions に含まれています。 これらのサービスにより、複数の Web ベースおよび Windows ベースのアプリケーションで、単一のサーバーから提供されるユーザー情報とユーザー管理機能を共有できます。  

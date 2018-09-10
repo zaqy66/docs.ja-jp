@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c2e7d5ce170feecaf69aa5dd9785346de0375d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc36c926ba81de8a59ff3af69719bec6b7370efc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591506"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071493"
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ での高速化について
 PLINQ の主な目的は、マルチコア コンピューターでクエリ デリゲートを並列実行することで、LINQ to Objects クエリの実行を高速化することです。 PLINQ は、ソース コレクション内の各要素の処理が独立しており、個々のデリゲート間に関連する共有状態がない場合に最適です。 このような操作は LINQ to Objects および PLINQ で一般的であり、複数のスレッドでのスケジューリングに適しているため、多くの場合、"*適切な並列操作*" と呼ばれます。 ただし、すべてのクエリが適切な並列操作のみで構成されているわけではなく、ほとんど場合、クエリには、並列化できないか、並列実行速度を低下させるいくつかの演算子が含まれます。 また、完全に適切な並列操作であるクエリの場合でも、PLINQ では引き続きデータ ソースをパーティション分割し、スレッドでの作業をスケジューリングし、通常はクエリの完了時に結果をマージする必要があります。 これらすべての操作では並列処理の計算コストが追加されます。このような並列処理の追加コストを*オーバーヘッド* と呼びます。 PLINQ クエリでの最適なパフォーマンスを実現するための目標は、適切な並列処理の部分を最大化し、オーバーヘッドを必要とする部分を最小化することです。 この記事では、引き続き正しい結果を生成しながら、できる限り効率的な PLINQ クエリを記述するのに役立つ情報を提供します。  
@@ -84,5 +84,6 @@ PLINQ の主な目的は、マルチコア コンピューターでクエリ デ
   
 -   インデックス可能なデータ ソースに適用されている場合を除き、Reverse を含むクエリ。  
   
-## <a name="see-also"></a>参照  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>関連項目
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

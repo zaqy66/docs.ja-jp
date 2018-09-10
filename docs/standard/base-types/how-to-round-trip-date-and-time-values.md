@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a1cafc7ed6e497e5aab9cd33654f3aa3d4d98c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573187"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193264"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>方法 : 日付と時刻の値をラウンドトリップさせる
 ある特定の時点を明確に表すように日付と時刻の値を保つことは、多くのアプリケーションに共通する要件です。 このトピックでは、<xref:System.DateTime> 値、<xref:System.DateTimeOffset> 値、日時値と時間帯の情報を保存し、復元する方法について説明します。復元した値によって、保存した値と同じ時刻が識別されるようにします。  
@@ -99,7 +99,8 @@ ms.locfileid: "33573187"
   
 -   `DateInTimeZone` クラス以外、各コード例はクラスまたは Visual Basic モジュールに含め、メソッドでラップし、`Main` メソッドから呼び出します。  
   
-## <a name="see-also"></a>参照  
- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け](../../../docs/standard/datetime/choosing-between-datetime.md)  
- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+## <a name="see-also"></a>関連項目
+
+- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

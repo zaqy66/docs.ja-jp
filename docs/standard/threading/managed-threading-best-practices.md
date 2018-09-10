@@ -1,5 +1,5 @@
 ---
-title: マネージ スレッド処理の実施
+title: マネージド スレッド処理の実施
 ms.date: 11/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15261291f40b6a41e0d6033fb92e1b23b4042019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592471"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204982"
 ---
-# <a name="managed-threading-best-practices"></a>マネージ スレッド処理の実施
+# <a name="managed-threading-best-practices"></a>マネージド スレッド処理の実施
 マルチスレッドには慎重なプログラミングが必要です。 ほとんどのタスクでは、スレッド プールのスレッドを使って実行の要求をキューに置くことによって、処理の複雑さを軽減できます。 このトピックでは、マルチ スレッド動作の調整や、ブロックするスレッドの処理など、より難しい状況について説明します。  
   
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "33592471"
 ### <a name="deadlocks"></a>デッドロック  
  デッドロックは、2 つのスレッドのうちの一方が、もう一方によって既にロックされているリソースをロックしようとすると発生します。 こうなると、どちらのスレッドも続行できなくなります。  
   
- マネージ スレッド処理クラスの多くのメソッドには、ロックアウトを検出するためのタイムアウト機能が用意されています。 たとえば、`lockObject` というオブジェクトへのロックの取得を試みるコードを次に示します。 ロックが 300 ミリ秒の間に得られない場合は、<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> は `false` を返します。  
+ マネージド スレッド処理クラスの多くのメソッドには、ロックアウトを検出するためのタイムアウト機能が用意されています。 たとえば、`lockObject` というオブジェクトへのロックの取得を試みるコードを次に示します。 ロックが 300 ミリ秒の間に得られない場合は、<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> は `false` を返します。  
   
 ```vb  
 If Monitor.TryEnter(lockObject, 300) Then  
@@ -196,6 +196,7 @@ else {
   
 -   静的状態を変更する静的メソッドは提供しないでください。 一般的なサーバーのシナリオでは、静的状態は要求間で共有されます。つまり、複数のスレッドがそのコードを同時に実行できます。 これにより、スレッド処理のバグが発生する可能性が高くなります。 要求間で共有されないインスタンスにデータをカプセル化するデザイン パターンの使用を検討してください。 加えて、静的なデータを同期する場合は、状態を変更する呼び出しが静的メソッド間にあると、デッドロックや冗長な同期が生じる可能性があり、パフォーマンスに悪影響を及ぼします。  
   
-## <a name="see-also"></a>参照  
- [スレッド化](../../../docs/standard/threading/index.md)  
- [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)
+## <a name="see-also"></a>関連項目
+
+- [スレッド化](../../../docs/standard/threading/index.md)  
+- [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)

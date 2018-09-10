@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948606"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041617"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正規表現言語 - クイック リファレンス
 <a name="top"></a> 正規表現とは、入力テキスト内で正規表現エンジンによる照合が試行されるパターンです。 パターンは、1 個以上の文字リテラル、演算子、または構成体で構成されます。  簡単な概要については、「[.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)」を参照してください。  
@@ -216,11 +216,12 @@ ms.locfileid: "36948606"
 |`(?#` *comment* `)`|インライン コメントです。 コメントは、最初の閉じかっこで終了します。|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [to end of line]|X モード コメントです。 コメントの先頭はエスケープされない `#` で、コメントは行末まで継続します。|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## <a name="see-also"></a>参照  
- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
- <xref:System.Text.RegularExpressions.Regex>  
- [正規表現](regular-expressions.md)  
- [正規表現クラス](the-regular-expression-object-model.md)  
- [正規表現の例](regular-expression-examples.md)  
- [正規表現 - クイック リファレンス (Word 形式でダウンロード)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [正規表現 - クイック リファレンス (PDF 形式でダウンロード)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+- <xref:System.Text.RegularExpressions.Regex>  
+- [正規表現](regular-expressions.md)  
+- [正規表現クラス](the-regular-expression-object-model.md)  
+- [正規表現の例](regular-expression-examples.md)  
+- [正規表現 - クイック リファレンス (Word 形式でダウンロード)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- [正規表現 - クイック リファレンス (PDF 形式でダウンロード)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

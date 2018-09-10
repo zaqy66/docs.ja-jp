@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d708068dc0d55a1c7ec725977a4ca6d16b0f43c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591756"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225595"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL と従来の .NET Framework 非同期プログラミング
 .NET Framework の I/O バインドの非同期操作および計算主体の非同期操作には、次の 2 つの標準パターンがあります。  
@@ -119,5 +119,6 @@ ms.locfileid: "33591756"
 ## <a name="using-the-streamextensions-sample-code"></a>StreamExtensions サンプル コードの使用  
  「[Samples for Parallel Programming with the .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples)」(.NET Framework 4 での並列プログラミングの例) に示す Streamextensions.cs ファイルには、非同期ファイルおよびネットワーク I/O に対してタスク オブジェクトを使用する参照実装がいくつか含まれています。  
   
-## <a name="see-also"></a>参照  
- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>関連項目
+
+- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e9bdb9b88d51e5435609bbab8bbe21a985505a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d86c590f2d5fe6bc970c2f8ac6de43d3e8485650
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575702"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183146"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML とリレーショナル データおよび ADO.NET との統合
 **XmlDocument** の派生クラスである **XmlDataDocument** クラスには XML データが格納されます。 **XmlDataDocument** の利点は、リレーショナル データと階層データとを仲介できることです。 **DataSet** に連結できるのは **XmlDocument** であり、どちらのクラスも、それぞれが格納しているデータが変更されたときに、変更内容の同期をとることができます。 **DataSet** に連結した **XmlDocument** では XML をリレーショナル データと統合できるため、データ表現は XML でもリレーショナル形式でもかまいません。 両方の処理ができ、一方のデータ表現だけに制限されることもありません。  
@@ -47,5 +47,6 @@ ms.locfileid: "33575702"
   
  **XmlDataDocument** から **DataSet** にデータを読み込む方法については、「[Dataset と XmlDataDocument の同期](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [DataSet での XML の使用](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+## <a name="see-also"></a>関連項目
+
+- [DataSet での XML の使用](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

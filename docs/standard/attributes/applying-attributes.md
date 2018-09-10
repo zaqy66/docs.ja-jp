@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a0151f6cc3ce25ca0c52a25be328ece8cb4434
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567368"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44193719"
 ---
 # <a name="applying-attributes"></a>属性の適用
 コードの要素に属性を適用するには、次のプロセスを使用します。  
@@ -52,8 +52,9 @@ ms.locfileid: "33567368"
   
  この属性が適用されると、ファイルのメタデータ部分のアセンブリ マニフェストの中に、文字列 `"My Assembly"` が挿入されます。 この属性を表示するには、[MSIL 逆アセンブラー (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用するか、または属性を取得するためのプログラムを作成します。  
   
-## <a name="see-also"></a>参照  
- [属性](../../../docs/standard/attributes/index.md)  
- [属性に格納されている情報の取得](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
- [概念](/cpp/windows/attributed-programming-concepts)  
- [属性](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+## <a name="see-also"></a>関連項目
+
+- [属性](../../../docs/standard/attributes/index.md)  
+- [属性に格納されている情報の取得](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [概念](/cpp/windows/attributed-programming-concepts)  
+- [属性](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

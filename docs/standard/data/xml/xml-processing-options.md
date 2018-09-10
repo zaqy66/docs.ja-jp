@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 902c82f77240c957cc6070c9437b95d0c89fca53
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4e0d0a2a8d8c7fd75da7f2109619d588eac7b4a6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105350"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863021"
 ---
 # <a name="xml-processing-options"></a>XML の処理オプション
 XML データの処理に使用できる Microsoft テクノロジの一覧については、次の表を参照してください。  
@@ -33,7 +33,8 @@ XML データの処理に使用できる Microsoft テクノロジの一覧に�
 |[XmlLite](https://msdn.microsoft.com/library/ms752872.aspx)|- 高性能 XML アプリの構築に役立つ高速、安全、非キャッシュ、前方参照専用の XML パーサー。<br />- ダイナミック リンク ライブラリ (DLL) を使用できる任意の言語で動作します。C++ の使用をお勧めします。|  
 |[MSXML](https://msdn.microsoft.com/library/ms763742.aspx)|- Windows オペレーティング システムに付属する、XML 処理のための COM ベース テクノロジ。<br />- DOM をネイティブで実装し、XPath と XSLT をサポートしています。<br />- SAX2 イベントベース パーサーが含まれます。|  
   
-## <a name="see-also"></a>参照  
- [DOM モデルを使用した XML データの処理](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
- [XPath データ モデルを使用した XML データの処理](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XSLT コンパイラ (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+## <a name="see-also"></a>関連項目
+
+- [DOM モデルを使用した XML データの処理](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+- [XPath データ モデルを使用した XML データの処理](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [XSLT コンパイラ (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

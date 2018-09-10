@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43390614"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864551"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows でのマネージド スレッド処理とアンマネージド スレッド処理
 共通言語ランタイムにより作成されたスレッド、マネージド環境に入ってコードを実行するランタイム外部で作成されたスレッドなど、すべてのスレッドの管理は、 <xref:System.Threading.Thread> クラスを使用して行われます。 ランタイムは、プロセス内のスレッドのうち、マネージド実行環境内でコードを実行したすべてのスレッドを監視します。 その他のスレッドは追跡しません。 ランタイムがマネージド オブジェクトを COM オブジェクトとしてアンマネージド環境に公開するため、スレッドは COM 相互運用を使用してマネージド実行環境に入ることができます。また、COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) 関数やプラットフォーム呼び出しを介してマネージド実行環境に入ることもできます。  
@@ -63,9 +63,10 @@ ms.locfileid: "43390614"
 ## <a name="blocking-issues"></a>ブロッキングの問題  
  アンマネージ コードでスレッドをブロックしているオペレーティング システムに対し、そのスレッドがアンマネージ呼び出しを実行する場合、ランタイムは <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> または <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> に対してその呼び出しを制御しません。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>では、スレッドが再びマネージド コードに入ると、ランタイムはスレッドを **Abort** 対象としてマークし、スレッドを制御します。 アンマネージド ブロックではなくマネージド ブロックを使用することをお勧めします。 <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>、<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>、<xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> などはすべて、<xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> に応答します。 また、スレッドがシングルスレッド アパート内にある場合、これらのマネージド ブロック操作はすべて、スレッドがブロックされている間でもアパートメント内で正しくメッセージ ポンプを行います。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
- <xref:System.Threading.ThreadState>  
- <xref:System.EnterpriseServices.ServicedComponent>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.Monitor>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.ThreadState>  
+- <xref:System.EnterpriseServices.ServicedComponent>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Monitor>

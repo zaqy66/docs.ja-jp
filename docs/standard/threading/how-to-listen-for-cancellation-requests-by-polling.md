@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6e257ced27812f8383edf9eb9688e9f48cfde02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583748"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266853"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>方法: ポーリングによりキャンセル要求を待機する
 次の例は、ユーザー コードで取り消しトークンを定期的にポーリングし、呼び出し元のスレッドから取り消しが要求されているかどうかを確認する 1 つの方法を示しています。 この例では <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 型を使用しますが、<xref:System.Threading.ThreadPool?displayProperty=nameWithType> 型または <xref:System.Threading.Thread?displayProperty=nameWithType> 型で直接作成される非同期操作にも同じパターンが適用されます。  
@@ -30,5 +30,6 @@ ms.locfileid: "33583748"
   
  <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> を呼び出す場合に、例外をスローするだけではなく、取り消しに応じて他の作業を行う場合は <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> プロパティを明示的に確認するだけで済みます。 この例では、コードで実際にプロパティに 2 回アクセスするのがわかります。つまり、明示的なアクセスで 1 回、<xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> メソッドでもう 1 回です。 ただし、<xref:System.Threading.CancellationToken.IsCancellationRequested%2A> プロパティの読み取り操作ではアクセスごとに 1 つの volatile 読み取りのみが含まれるため、パフォーマンスの観点からは二重アクセスは重要ではありません。 それでも、<xref:System.OperationCanceledException> を手動でスローするよりメソッドを呼び出すことをお勧めします。  
   
-## <a name="see-also"></a>参照  
- [マネージ スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>関連項目
+
+- [マネージド スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)

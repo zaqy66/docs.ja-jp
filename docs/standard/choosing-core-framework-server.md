@@ -4,12 +4,12 @@ description: .NET でのサーバー アプリのビルド時に考慮する必�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934534"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864963"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
 
@@ -103,8 +103,10 @@ Microsoft やサードパーティ製のプラットフォームの中には、.
 
 ## <a name="see-also"></a>関連項目
 
- [ASP.NET と ASP.NET Core の選択](/aspnet/core/choose-aspnet-framework) [ターゲット フレームワーク](frameworks.md) [.NET Core のガイド](../core/index.md)  
- [.NET Framework から .NET Core への移植](../core/porting/index.md)  
- [Docker 上の .NET Framework のガイド](../framework/docker/index.md)  
- [.NET コンポーネントの概要](components.md)  
- [.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ](microservices-architecture/index.md)
+* [ASP.NET と ASP.NET Core の選択](/aspnet/core/choose-aspnet-framework)
+* [ターゲット フレームワーク](frameworks.md)
+* [.NET Core のガイド](../core/index.md)  
+* [.NET Framework から .NET Core への移植](../core/porting/index.md)  
+* [Docker 上の .NET Framework のガイド](../framework/docker/index.md)  
+* [.NET コンポーネントの概要](components.md)  
+* [.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ](microservices-architecture/index.md)

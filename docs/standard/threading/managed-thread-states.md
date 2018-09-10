@@ -1,5 +1,5 @@
 ---
-title: マネージ スレッドの状態
+title: マネージド スレッドの状態
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,22 +7,22 @@ helpviewer_keywords:
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4266aea9bf206d127e2837955dcc00cc23f4119b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587724"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207331"
 ---
-# <a name="managed-thread-states"></a>マネージ スレッドの状態
+# <a name="managed-thread-states"></a>マネージド スレッドの状態
 プロパティ <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> には、スレッドの現在の状態を示すビット マスクが用意されています。 スレッドは、 <xref:System.Threading.ThreadState> 列挙型に含まれる状態のうち、常に少なくとも 1 つの状態となり、同時に複数の状態になることもあります。  
   
 > [!IMPORTANT]
 >  スレッドの状態は、いくつかのデバッグ シナリオでのみ必要になります。 スレッドの動作を同期化する目的でコード内でスレッドの状態を使用しないでください。  
   
- マネージ スレッドを作成すると、そのスレッドは <xref:System.Threading.ThreadState.Unstarted> 状態になります。 スレッドは、オペレーティング システムによって起動状態にされるまで、 <xref:System.Threading.ThreadState.Unstarted> 状態のままです。 <xref:System.Threading.Thread.Start%2A> を呼び出すと、スレッドを開始できることをオペレーティング システムに通知できますが、スレッドの状態は変化しません。  
+ マネージド スレッドを作成すると、そのスレッドは <xref:System.Threading.ThreadState.Unstarted> 状態になります。 スレッドは、オペレーティング システムによって起動状態にされるまで、 <xref:System.Threading.ThreadState.Unstarted> 状態のままです。 <xref:System.Threading.Thread.Start%2A> を呼び出すと、スレッドを開始できることをオペレーティング システムに通知できますが、スレッドの状態は変化しません。  
   
- マネージ環境に入ってくるアンマネージ スレッドは、既に起動状態になっています。 スレッドがいったん起動状態になると、さまざまなアクションによってスレッドの状態が変更される可能性があります。 状態が変更される原因となるアクションと、対応する新しい状態を次の表に示します。  
+ マネージド環境に入ってくるアンマネージド スレッドは、既に起動状態になっています。 スレッドがいったん起動状態になると、さまざまなアクションによってスレッドの状態が変更される可能性があります。 状態が変更される原因となるアクションと、対応する新しい状態を次の表に示します。  
   
 |アクション|変更後の新しい状態|  
 |------------|-------------------------|  
@@ -48,8 +48,9 @@ if ((state & (Unstarted | Stopped)) == 0)   // implies Running
   
  スレッドは、 <xref:System.Threading.ThreadState.Unstarted> への呼び出しの結果として <xref:System.Threading.Thread.Start%2A>状態から出ると、 <xref:System.Threading.ThreadState.Unstarted> 状態に戻ることはできません。 また、スレッドは <xref:System.Threading.ThreadState.Stopped> 状態から出ることはできません。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Threading.ThreadAbortException>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadState>  
- [スレッド化](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.ThreadAbortException>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadState>  
+- [スレッド化](../../../docs/standard/threading/index.md)

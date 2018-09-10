@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: f0e0e63c6ce2e4699cc4f9c0bd0d120549b88cca
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 827d28adda90403d866e7bc13d9eae99fe47c137
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106013"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804108"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>マイクロサービス アーキテクチャでの通信
 
@@ -61,7 +61,7 @@ ms.locfileid: "37106013"
 
 最後 (およびマイクロサービスのビルド時にほとんどの問題が発生した場合) に、初期のマイクロサービスで他のマイクロサービスが最初に所有していたデータが必要になった場合、そのデータの同期要求に依存しないでください。 代わりに、最終的な整合性を使用 (通常は、以降のセクションの説明のとおり、統合イベントを使用) して、そのデータ (必要な属性のみ) を初期サービスのデータベースにレプリケートまたは伝搬します。
 
-「[マイクロサービスごとにドメイン モデルの境界を識別する](#identifying-domain-model-boundaries-for-each-microservice)」セクションの説明のとおり、複数のマイクロサービスでのデータ複製は不適切な設計ではありません。むしろ、その場合、データを追加ドメインまたは境界コンテキストの特定の言語または用語に変換できます。 たとえば、[eShopOnContainers](http://aka.ms/MicroservicesArchitecture) アプリケーションには、User という名前のエンティティを持つユーザーのほとんどのデータを担当する identity.api という名前のマイクロサービスがあります。 ただし、Ordering マイクロサービス内でユーザーに関するデータを格納する必要がある場合は、Buyer という名前の別のエンティティとして格納します。 Buyer エンティティは元の User エンティティと同じ ID を共有しますが、ユーザー プロファイル全体ではなく、Ordering ドメインで必要ないくつかの属性のみが存在する可能性があります。
+「[マイクロサービスごとにドメイン モデルの境界を識別する](#identifying-domain-model-boundaries-for-each-microservice)」セクションの説明のとおり、複数のマイクロサービスでのデータ複製は不適切な設計ではありません。むしろ、その場合、データを追加ドメインまたは境界コンテキストの特定の言語または用語に変換できます。 たとえば、[eShopOnContainers](https://aka.ms/MicroservicesArchitecture) アプリケーションには、User という名前のエンティティを持つユーザーのほとんどのデータを担当する identity.api という名前のマイクロサービスがあります。 ただし、Ordering マイクロサービス内でユーザーに関するデータを格納する必要がある場合は、Buyer という名前の別のエンティティとして格納します。 Buyer エンティティは元の User エンティティと同じ ID を共有しますが、ユーザー プロファイル全体ではなく、Ordering ドメインで必要ないくつかの属性のみが存在する可能性があります。
 
 最終的な整合性を確保するために、任意のプロトコルを使用して、マイクロサービス間でのデータ通信と伝搬を非同期に行うことができます。 前述のとおり、イベント バスまたはメッセージ ブローカーを使用する統合イベントを使用することも、他のサービスを代わりにポーリングして HTTP を使用することもできます。 どちらを使用してもかまいません。 ここで重要なのは、マイクロサービス間の同期依存関係を作成しないことです。
 

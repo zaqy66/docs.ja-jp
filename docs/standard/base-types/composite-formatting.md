@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4922470633f3dec8e2e2f898bdf544f5aa4deded
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579185"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264920"
 ---
 # <a name="composite-formatting"></a>複合書式指定
 .NET の複合書式指定機能は、オブジェクトのリストおよび複合書式指定文字列を入力として使用します。 複合書式指定文字列は、固定テキストに、書式指定項目と呼ばれるインデックス化されたプレースホルダーが混合されて構成されます。このプレースホルダーはリスト内のオブジェクトに対応します。 書式設定操作によって生成される結果の文字列は、元の固定テキストに文字列で表されたリスト内のオブジェクトが混合されて構成されます。  
@@ -156,16 +156,17 @@ ms.locfileid: "33579185"
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.Console.WriteLine%2A>  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- [文字列補間 (C#)](../../csharp/language-reference/tokens/interpolated.md)  
- [文字列補間 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)  
- [標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [標準の日時書式指定文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [標準の時間間隔書式指定文字列](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
- [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Console.WriteLine%2A>  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>  
+- [文字列補間 (C#)](../../csharp/language-reference/tokens/interpolated.md)  
+- [文字列補間 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
+- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)  
+- [標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+- [標準の日時書式指定文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [標準の時間間隔書式指定文字列](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
+- [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

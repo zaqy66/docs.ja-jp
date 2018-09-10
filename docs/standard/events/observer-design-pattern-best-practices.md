@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 030b62688ba8985a2659769fe20b6ae527471df5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579393"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195060"
 ---
 # <a name="observer-design-pattern-best-practices"></a>オブサーバー デザイン パターンのベスト プラクティス
 .NET Framework では、オブザーバー デザイン パターンは、一連のインターフェイスとして実装されます。 <xref:System.IObservable%601?displayProperty=nameWithType> インターフェイスはデータ プロバイダーを表し、データ プロバイダーはオブザーバーで通知のサブスクリプションを解除できるようにする <xref:System.IDisposable> 実装も提供します。 <xref:System.IObserver%601?displayProperty=nameWithType> インターフェイスはオブザーバーを表します。 このトピックでは、これらのインターフェイスを使用してオブザーバー デザイン パターンを実装するときに、開発者が適用することが望ましいベスト プラクティスについて説明します。  
@@ -53,7 +53,8 @@ ms.locfileid: "33579393"
   
  1 つのオブザーバーを複数のプロバイダーにアタッチすることは可能ですが、推奨パターンは、<xref:System.IObserver%601> インスタンスを 1 つの <xref:System.IObservable%601> インスタンスにのみアタッチすることです。  
   
-## <a name="see-also"></a>参照  
- [オブサーバー デザイン パターン](../../../docs/standard/events/observer-design-pattern.md)  
- [方法: オブザーバーを実装する](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [方法: プロバイダーを実装する](../../../docs/standard/events/how-to-implement-a-provider.md)
+## <a name="see-also"></a>関連項目
+
+- [オブサーバー デザイン パターン](../../../docs/standard/events/observer-design-pattern.md)  
+- [方法: オブザーバーを実装する](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [方法: プロバイダーを実装する](../../../docs/standard/events/how-to-implement-a-provider.md)

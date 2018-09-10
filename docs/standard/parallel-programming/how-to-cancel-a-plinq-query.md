@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074371a929d5dd2cf0efb763ec45395a8dfd0432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584282"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210774"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>方法: PLINQ クエリを取り消す
 次の例は、PLINQ クエリを取り消す 2 つの方法を示しています。 最初の例は、主にデータ トラバーサルで構成されるクエリを取り消す方法を示しています。 2 つ目の例は、負荷の大きいユーザー関数を含むクエリを取り消す方法を示しています。  
@@ -50,7 +50,8 @@ ms.locfileid: "33584282"
   
  列挙子が破棄された場合、たとえば、クエリ結果を反復処理している foreach (Visual Basic では For Each) ループからコードが抜け出た場合、クエリは取り消されますが、例外はスローされません。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Linq.ParallelEnumerable>  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [マネージ スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [マネージド スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)

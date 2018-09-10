@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480666"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268852"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散データ管理に関する課題と解決策
 
@@ -79,7 +79,7 @@ Products テーブルは Catalog マイクロサービスによって所有さ�
 
 したがって、マイクロサービスの自律性を適用して復元性を向上させるには、マイクロサービス間の要求/応答通信のチェーンの使用を最小限にする必要があります。 非同期メッセージとイベント ベースの通信を使うか、元の HTTP 要求/応答サイクルとは独立して HTTP ポーリングを使うことにより、マイクロサービス間の通信には非同期対話のみを使うことをお勧めします。
 
-非同期通信の使用については、「[マイクロ サービスの自律性を強制する非同期マイクロ サービスの統合](#asynchronous-microservice-integration-enforce-microservices-autonomy)」および「[Asynchronous message-based communication](#asynchronous-message-based-communication)」(非同期メッセージ ベースの通信) を参照してください。
+非同期通信の使用については、「[マイクロ サービスの自律性を強制する非同期マイクロ サービスの統合](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy)」および「[Asynchronous message-based communication](asynchronous-message-based-communication.md)」(非同期メッセージ ベースの通信) を参照してください。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

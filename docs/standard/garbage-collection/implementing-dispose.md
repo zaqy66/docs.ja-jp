@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acc661e8110892dc7daa603ef82b4bc5f167a970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 176ae3589443937331259ee4716570c66053de3c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579445"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186189"
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose メソッドの実装
 
 アプリケーションによって使用されるアンマネージ リソースを解放するための <xref:System.IDisposable.Dispose%2A> メソッドを実装します。 .NET のガベージ コレクターは、アンマネージ メモリの割り当てや解放を行いません。  
   
-[Dispose パターン](../../../docs/standard/design-guidelines/dispose-pattern.md)と呼ばれる、オブジェクトを破棄するパターンによって、オブジェクトの有効期間に順番が付けられます。 Dispose パターンは、ファイルおよびパイプ ハンドル、レジストリ ハンドル、待機ハンドル、アンマネージ メモリ ブロックのポインターなど、アンマネージ リソースにアクセスするオブジェクトでのみ使用されます。 これは、使用されていないマネージ オブジェクトの解放にはガベージ コレクターが非常に有効ですが、アンマネージ オブジェクトは解放できないためです。  
+[Dispose パターン](../../../docs/standard/design-guidelines/dispose-pattern.md)と呼ばれる、オブジェクトを破棄するパターンによって、オブジェクトの有効期間に順番が付けられます。 Dispose パターンは、ファイルおよびパイプ ハンドル、レジストリ ハンドル、待機ハンドル、アンマネージ メモリ ブロックのポインターなど、アンマネージ リソースにアクセスするオブジェクトでのみ使用されます。 これは、使用されていないマネージド オブジェクトの解放にはガベージ コレクターが非常に有効ですが、アンマネージド オブジェクトは解放できないためです。  
   
 Dispose パターンには 2 種類あります。  
   
@@ -66,13 +66,13 @@ Dispose パターンには 2 種類あります。
   
 * アンマネージ リソースを解放するブロック。 このブロックは、`disposing` パラメーターの値に関係なく実行されます。  
   
-* マネージ リソースを解放する条件付きブロック。 このブロックは、`disposing` の値が `true` の場合に実行されます。 解放するマネージ リソースには、次のオブジェクトを含めることができます。  
+* マネージド リソースを解放する条件付きブロック。 このブロックは、`disposing` の値が `true` の場合に実行されます。 解放するマネージド リソースには、次のオブジェクトを含めることができます。  
   
-  **<xref:System.IDisposable> を実装するマネージ オブジェクト。** 条件付きブロックを使用して <xref:System.IDisposable.Dispose%2A> の実装を呼び出すことができます。 セーフ ハンドルを使用してアンマネージ リソースをラップしている場合は、ここで <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> の実装を呼び出す必要があります。  
+  **<xref:System.IDisposable> を実装するマネージド オブジェクト。** 条件付きブロックを使用して <xref:System.IDisposable.Dispose%2A> の実装を呼び出すことができます。 セーフ ハンドルを使用してアンマネージ リソースをラップしている場合は、ここで <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> の実装を呼び出す必要があります。  
   
-  **大量のメモリを消費するか、不足しているリソースを消費するマネージ オブジェクト。** これらのオブジェクトを `Dispose` メソッドで明示的に解放すると、ガベージ コレクターによって非確定的に解放される場合よりも迅速に解放されます。  
+  **大量のメモリを消費するか、不足しているリソースを消費するマネージド オブジェクト。** これらのオブジェクトを `Dispose` メソッドで明示的に解放すると、ガベージ コレクターによって非確定的に解放される場合よりも迅速に解放されます。  
   
-メソッドの呼び出し元がファイナライザーの場合 (つまり、*disposing* が `false` の場合)、アンマネージ リソースを解放するコードだけが実行されます。 ガベージ コレクターが終了処理の際にマネージ オブジェクトを破棄する順序は定義されていないため、値 `Dispose` を指定した `false` オーバーロードを呼び出すことで、既に解放されている可能性のあるマネージ リソースをファイナライザーが解放しようとすることを防止できます。  
+メソッドの呼び出し元がファイナライザーの場合 (つまり、*disposing* が `false` の場合)、アンマネージ リソースを解放するコードだけが実行されます。 ガベージ コレクターが終了処理の際にマネージド オブジェクトを破棄する順序は定義されていないため、値 `Dispose` を指定した `false` オーバーロードを呼び出すことで、既に解放されている可能性のあるマネージド リソースをファイナライザーが解放しようとすることを防止できます。  
   
 ## <a name="implementing-the-dispose-pattern-for-a-base-class"></a>基底クラスでの Dispose パターンの実装
 
@@ -162,11 +162,11 @@ Dispose パターンには 2 種類あります。
   
 ## <a name="see-also"></a>関連項目
 
-<xref:System.GC.SuppressFinalize%2A>   
-<xref:System.IDisposable>   
-<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>   
-<xref:Microsoft.Win32.SafeHandles>   
-<xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
-<xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-[方法: クラスと構造体を定義および使用する (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
-[Dispose パターン](../../../docs/standard/design-guidelines/dispose-pattern.md)
+- <xref:System.GC.SuppressFinalize%2A>   
+- <xref:System.IDisposable>   
+- <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>   
+- <xref:Microsoft.Win32.SafeHandles>   
+- <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
+- <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
+- [方法: クラスと構造体を定義および使用する (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+- [Dispose パターン](../../../docs/standard/design-guidelines/dispose-pattern.md)

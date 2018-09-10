@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578158"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085226"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>方法 : ローカライズされた日付/時刻情報を Web ユーザーに表示する
 Web ページは世界中で表示されるため、ユーザーとの通信時の日時値の解析処理は、(通常は Web サーバーのローカル カルチャの形式である) 既定の形式には依存しないようにする必要があります。 代わりに、ユーザーが入力する日時文字列を処理する Web フォームで、ユーザーの優先カルチャで文字列が解析されるようにする必要があります。 同様に、日時データは、ユーザーのカルチャに準拠する形式でユーザーに表示されるようにする必要があります。 このトピックでは、その方法について説明します。  
@@ -108,8 +108,9 @@ Web ページは世界中で表示されるため、ユーザーとの通信時�
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  ユーザーが HTML ストリームにスクリプトを挿入する行為を防ぐために、サーバー応答でユーザー入力がエコーのように返されないようにしてください。 代わりに、<xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> メソッドを利用して暗号化されるようにします。  
   
-## <a name="see-also"></a>参照  
- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [日付と時刻文字列の解析](../../../docs/standard/base-types/parsing-datetime.md)
+## <a name="see-also"></a>関連項目
+
+- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [日付と時刻文字列の解析](../../../docs/standard/base-types/parsing-datetime.md)

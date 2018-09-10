@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5bb6262b32201207853ef702ae38002c2ded252
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ff8b5b75d1d69d3d8c88810de1311540a239c52
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585412"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210001"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> は軽量な同期型であり、負荷が高いコンテキスト スイッチとカーネル イベントに必要なカーネル遷移を避けるために低レベルのシナリオで使用できます。 マルチコア コンピューターでは、リソースの保持期間が長くならないと予測される場合、待機中のスレッドを数十または数百サイクルの間ユーザー モードでスピンさせてから、リソースの取得を再試行した方が効率的です。 スピン後にリソースを使用できる場合は、数千サイクルを節約したことになります。 リソースをまだ使用できない場合でも、数サイクルを消費しただけであり、カーネル ベースの待機に移行できます。 スピン後に待機というこの組み合わせは、*2 フェーズ待機操作* と呼ばれることがあります。  
@@ -29,6 +29,7 @@ ms.locfileid: "33585412"
  [!code-csharp[CDS_SpinWait#05](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait.cs#05)]
  [!code-vb[CDS_SpinWait#05](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/cds_spinwait1.vb#05)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.Threading.Thread.SpinWait%2A>  
- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.Thread.SpinWait%2A>  
+- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)

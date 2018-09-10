@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24016ea68e17aa66432928c43d1de970fc13a55b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571915"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204956"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>方法 : Web コントロールでの数値のユーザー入力を数値に変換する
 Web ページは世界中のあらゆる場所で表示され、利用者はほぼ無限の形式で <xref:System.Web.UI.WebControls.TextBox> コントロールに数値データを入力できます。 結果として、Web ページの利用者の住んでいる地域 (ロケール) や文化 (カルチャ) を判断することが非常に重要となります。 ユーザー入力を解析するとき、ユーザーのロケールとカルチャによって定義される書式設定規則を適用できます。  
@@ -71,6 +71,7 @@ Web ページは世界中のあらゆる場所で表示され、利用者はほ�
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  ユーザーが HTML ストリームにスクリプトを挿入する行為を防ぐために、サーバー応答でユーザー入力がエコーのように返されないようにしてください。 代わりに、<xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> メソッドを利用して暗号化されるようにします。  
   
-## <a name="see-also"></a>参照  
- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [数値文字列の解析](../../../docs/standard/base-types/parsing-numeric.md)
+## <a name="see-also"></a>関連項目
+
+- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [数値文字列の解析](../../../docs/standard/base-types/parsing-numeric.md)

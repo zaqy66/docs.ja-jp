@@ -18,11 +18,12 @@ helpviewer_keywords:
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66fe5dd1da148e8afd07ae69cec960438b53536a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3bbd25e40607bd316f1bbab974174fe5433770f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261867"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>方法 : 文字列から無効な文字を取り除く
 次の例では、静的 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを使用して、文字列から無効な文字を取り除いています。  
@@ -35,5 +36,6 @@ ms.lasthandoff: 05/04/2018
   
  正規表現パターン `[^\w\.@-]` は、単語に使用される文字、ピリオド、@ 記号、またはハイフンではないすべての文字に一致します。 単語に使用される文字とは、すべての英字、数字、または区切りのコネクタ文字 (アンダースコアなど) です。 このパターンに一致するすべての文字は、置換パターンで定義されている <xref:System.String.Empty?displayProperty=nameWithType> で置き換えられます。 ユーザー入力で他の文字も許可するには、正規表現パターンの文字クラスにその文字を追加します。 たとえば、正規表現パターン `[^\w\.@-\\%]` は、入力文字列にパーセント記号とバックスラッシュも許可しています。  
   
-## <a name="see-also"></a>参照  
- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>関連項目
+
+- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)

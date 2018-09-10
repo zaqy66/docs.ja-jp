@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f83e260e41acd7c8fff03cf7df0832bab229911
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74518f6f56f65668d4c7f073a79c9e7de27d7978
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568499"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44178567"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>方法: BlockingCollection の項目を個別に追加および取得する
 この例では、ブロッキングと非ブロッキングの 2 つの方法で <xref:System.Collections.Concurrent.BlockingCollection%601> の項目を追加、削除する方法を示します。 <xref:System.Collections.Concurrent.BlockingCollection%601> の詳細については、「[BlockingCollection の概要](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)」を参照してください。  
@@ -34,6 +34,7 @@ ms.locfileid: "33568499"
  [!code-csharp[CDS_BlockingCollection#02](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example02.cs#02)]
  [!code-vb[CDS_BlockingCollection#02](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/nonblockingbc.vb#02)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [BlockingCollection の概要](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [BlockingCollection の概要](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 716270450a5f0ede545ffcbd906b0a42f547c20f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571437"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208583"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>XML ドキュメントのノード、コンテンツ、値の変更
 ドキュメントのノードおよびコンテンツを変更するには、さまざまな方法があります。 次の操作を行うことができます。  
@@ -46,5 +46,6 @@ ms.locfileid: "33571437"
   
  編集可能なノードに読み取り専用の子を追加したり、削除したりするのは有効な操作です。 しかし、読み取り専用のノードそのものを変更しようとすると、<xref:System.InvalidOperationException> がスローされます。 この一例として、<xref:System.Xml.XmlEntityReference> ノードの子を変更しようとした場合が当てはまります。 このノードの子は読み取り専用であり、変更できません。 それらを変更しようとすると、<xref:System.InvalidOperationException> がスローされます。  
   
-## <a name="see-also"></a>参照  
- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>関連項目
+
+- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

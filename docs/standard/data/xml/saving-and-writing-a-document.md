@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 389ae0d95f3d612ca9c81ce69b74f8b58534d679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83aad5d45dda1784069839662486f7dbcc307542
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573595"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879517"
 ---
 # <a name="saving-and-writing-a-document"></a>ドキュメントの保存と書き込み
 <xref:System.Xml.XmlDocument> を読み込んで保存した場合、保存されたドキュメントは、元のドキュメントとは次のように異なる可能性があります。  
@@ -90,5 +90,6 @@ string xml = mydoc.DocumentElement.OuterXml;
   
  一方、子ノードの内容が必要な場合は、<xref:System.Xml.XmlNode.InnerText%2A> プロパティを使用します。  
   
-## <a name="see-also"></a>参照  
- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>関連項目
+
+- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592185"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188541"
 ---
 # <a name="threads-and-threading"></a>スレッドおよびスレッド処理
 オペレーティング システムは、実行している異なるアプリケーションを分離するために、プロセスを使います。 スレッドはオペレーティング システムがプロセッサ時間を割り当てる基本単位であり、複数のスレッドがそのプロセスの内部でコードを実行できます。 各スレッドは、例外ハンドラー、スケジューリングの優先順位、スレッドがスケジュールされるまでシステムがスレッド コンテキストを保存するために使用する構造体のセットを保持しています。 スレッド コンテキストには、スレッドがシームレスに実行を再開するために必要なすべての情報 (スレッドの CPU レジスタとスタックのセットなど) が含まれ、スレッドのホスト プロセスのアドレス空間内に保持されます。  
   
- さらに、.NET Framework では、オペレーティング システムのプロセスが、アプリケーション ドメインと呼ばれ、<xref:System.AppDomain?displayProperty=nameWithType> によって表される、軽量のマネージ サブプロセスに細分化されます。 1 つ以上のマネージ スレッド (<xref:System.Threading.Thread?displayProperty=nameWithType> によって表されます) が、同じマネージ プロセス内の任意の数のアプリケーション ドメインで実行できます。 各アプリケーション ドメインは 1 つのスレッドで開始しますが、そのアプリケーション ドメイン内のコードは、追加のアプリケーション ドメインと追加のスレッドを作成できます。 結果として、マネージ スレッドは同じマネージ プロセス内のアプリケーション ドメイン間を自由に移動できます。ただ 1 つのスレッドが複数のアプリケーション ドメイン間を移動していることもあります。  
+ さらに、.NET Framework では、オペレーティング システムのプロセスが、アプリケーション ドメインと呼ばれ、<xref:System.AppDomain?displayProperty=nameWithType> によって表される、軽量のマネージド サブプロセスに細分化されます。 1 つ以上のマネージド スレッド (<xref:System.Threading.Thread?displayProperty=nameWithType> によって表されます) が、同じマネージド プロセス内の任意の数のアプリケーション ドメインで実行できます。 各アプリケーション ドメインは 1 つのスレッドで開始しますが、そのアプリケーション ドメイン内のコードは、追加のアプリケーション ドメインと追加のスレッドを作成できます。 結果として、マネージド スレッドは同じマネージド プロセス内のアプリケーション ドメイン間を自由に移動できます。ただ 1 つのスレッドが複数のアプリケーション ドメイン間を移動していることもあります。  
   
  オペレーティング システムがプリエンプティブなマルチタスク処理をサポートしていると、複数プロセスからの複数スレッドの同時実行の効果が作り出されます。 そのためには、利用可能なプロセッサ時間がそれを必要とするスレッドの間で分割され、プロセッサ時間のスライスが各スレッドに次々に割り当てられます。 タイム スライスが経過すると現在実行中のスレッドは中断されて、別のスレッドが実行を再開します。 システムは、スレッドを切り替えるとき、割り込まれたスレッドのスレッド コンテキストを保存し、スレッド キュー内の次のスレッドの保存されているスレッド コンテキストを再度読み込みます。  
   
@@ -84,13 +84,14 @@ ms.locfileid: "33592185"
   
 -   共通言語ランタイムまたはホスト プロセスがスレッドを終了する。  
   
- 詳しくは、「[マネージ スレッドの例外](../../../docs/standard/threading/exceptions-in-managed-threads.md)」をご覧ください。  
+ 詳しくは、「[マネージド スレッドの例外](../../../docs/standard/threading/exceptions-in-managed-threads.md)」をご覧ください。  
   
 > [!NOTE]
 >  .NET Framework Version 1.0 および 1.1 では、スレッド プールのスレッドでのものなど、一部の例外は共通言語ランタイムによって通知なしにトラップされます。 このため、アプリケーション状態が破損し、最終的にアプリケーションが停止することになり、デバッグが困難になることがあります。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Threading.ThreadPool>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [マルチスレッド処理のためのデータの同期](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [マネージ スレッド プール](../../../docs/standard/threading/the-managed-thread-pool.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.ThreadPool>  
+- <xref:System.ComponentModel.BackgroundWorker>  
+- [マルチスレッド処理のためのデータの同期](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [マネージド スレッド プール](../../../docs/standard/threading/the-managed-thread-pool.md)

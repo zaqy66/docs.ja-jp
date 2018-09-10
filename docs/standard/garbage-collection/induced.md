@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 436953782049800e89298932278af4e450fc10de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575864"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192549"
 ---
 # <a name="induced-collections"></a>発生したコレクション
 ほとんどの場合、コレクションの実行に最適なタイミングはガベージ コレクターが判断できるので、ガベージ コレクターに任せるのが良い方法です。 ただし、ごくまれに、強制的にコレクションを実行するとアプリケーションのパフォーマンスが向上する場合があります。 このような場合は、<xref:System.GC.Collect%2A?displayProperty=nameWithType> メソッドを使用してガベージ コレクションを強制的に実行できます。  
@@ -36,6 +36,7 @@ ms.locfileid: "33575864"
 |<xref:System.GCCollectionMode.Forced> または <xref:System.GCCollectionMode.Default>|ブロッキング コレクションはできるだけ早く実行されます。 バックグラウンド コレクションが実行中でジェネレーションが 0 または 1 の場合、<xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> メソッドは直ちにブロッキング コレクションをトリガーし、コレクションが終了すると制御を戻します。 バックグラウンド コレクションが実行中で `generation` パラメーターが 2 の場合、メソッドはバックグラウンド コレクションの終了を待機し、ジェネレーション 2 のブロッキング コレクションをトリガーして、制御を戻します。|コレクションはできるだけ早く実行されます。 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> メソッドはバックグラウンド コレクションを要求しますが、それは保証されず、状況によってはブロッキング コレクションが実行される場合もあります。 バックグラウンド コレクションが既に実行中の場合、メソッドはすぐに制御を返します。|  
 |<xref:System.GCCollectionMode.Optimized>|ガベージ コレクターおよび `generation` パラメーターの状態によっては、ブロッキング コレクションが実行される場合があります。 ガベージ コレクターは最適なパフォーマンスを提供しようとします。|ガベージ コレクターの状態によっては、コレクションが実行される場合があります。 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> メソッドはバックグラウンド コレクションを要求しますが、それは保証されず、状況によってはブロッキング コレクションが実行される場合もあります。 ガベージ コレクターは最適なパフォーマンスを提供しようとします。 バックグラウンド コレクションが既に実行中の場合、メソッドはすぐに制御を返します。|  
   
-## <a name="see-also"></a>参照  
- [待機モード](../../../docs/standard/garbage-collection/latency.md)  
- [ガベージ コレクション](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>関連項目
+
+- [待機モード](../../../docs/standard/garbage-collection/latency.md)  
+- [ガベージ コレクション](../../../docs/standard/garbage-collection/index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2684473f82eb156bf8762c9797503324f318632d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa37909c76da804112464daacea6244f1c321516
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584906"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085200"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>方法: データフロー ブロックをキャンセルする
 このドキュメントでは、アプリケーションでキャンセルを有効にする方法を示します。 この例では、Windows フォームを使用して、データフロー パイプラインで作業項目がアクティブである場所と、キャンセルの影響を示します。  
@@ -96,5 +96,6 @@ ms.locfileid: "33584906"
   
  ![Windows フォーム アプリケーション](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
-## <a name="see-also"></a>参照  
- [データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>関連項目
+
+- [データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

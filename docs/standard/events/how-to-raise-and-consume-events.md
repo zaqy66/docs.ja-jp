@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efeed61c5748a0a6ac731cdcfce1a110982b2941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa933e0fc589d0dbfec741e9db7fb11222cfdf38
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572724"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44193225"
 ---
 # <a name="how-to-raise-and-consume-events"></a>方法 : イベントを発生させる/処理する
 このトピックの例では、イベントを使用する方法を示します。 ここでは、<xref:System.EventHandler> デリゲートと <xref:System.EventHandler%601> デリゲート、およびカスタム デリゲートの例を使用して、データを持つイベントと持たないイベントを示します。  
@@ -44,5 +44,6 @@ ms.locfileid: "33572724"
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
-## <a name="see-also"></a>参照  
- [イベント](../../../docs/standard/events/index.md)
+## <a name="see-also"></a>関連項目
+
+- [イベント](../../../docs/standard/events/index.md)

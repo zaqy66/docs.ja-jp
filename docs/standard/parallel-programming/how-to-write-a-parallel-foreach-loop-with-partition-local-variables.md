@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edcc390014cfc70f4da4f72270c7dd53f9b9423b
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37076254"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227572"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>方法: パーティション ローカル変数を使用する Parallel.ForEach ループを記述する
 パーティション ローカル変数を使用する <xref:System.Threading.Tasks.Parallel.ForEach%2A> メソッドを記述する方法を次の例に示します。 <xref:System.Threading.Tasks.Parallel.ForEach%2A> ループが実行されると、そのソース コレクションが複数のパーティションに分割されます。 各パーティションは、パーティション ローカル変数の独自のコピーを所有しています。 パーティション ローカル変数は、1 つのスレッドに対して複数のパーティションを実行できる点を除き、[スレッド ローカル変数](xref:System.Threading.ThreadLocal%601)と似ています。
@@ -48,7 +48,8 @@ ms.locfileid: "37076254"
  [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
  [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]  
   
-## <a name="see-also"></a>参照  
- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [方法: スレッド ローカル変数を使用する Parallel.For ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
- [PLINQ および TPL のラムダ式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+## <a name="see-also"></a>関連項目
+
+- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [方法: スレッド ローカル変数を使用する Parallel.For ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+- [PLINQ および TPL のラムダ式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

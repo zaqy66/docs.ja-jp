@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 2b156d043f5a4b72f4cb7423708b41fdd0e475dd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0c098d0697dff3e1e772c348597a84ac9d262104
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43385697"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085317"
 ---
 # <a name="async-in-depth"></a>非同期の詳細
 
@@ -146,7 +146,7 @@ public async Task<int> CalculateResult(InputData data)
 
 ## <a name="see-also"></a>関連項目
 
-[C# の非同期プログラミングの詳細](~/docs/csharp/async.md)   
-[Async および Await を使用した非同期プログラミング (C#)](../csharp/programming-guide/concepts/async/index.md)  
-[F# の非同期プログラミング](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
-[Async および Await を使用した非同期プログラミング (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+* [C# の非同期プログラミング](~/docs/csharp/async.md)   
+* [Async および Await を使用した非同期プログラミング (C#)](../csharp/programming-guide/concepts/async/index.md)  
+* [F# の非同期プログラミング](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+* [Async および Await を使用した非同期プログラミング (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

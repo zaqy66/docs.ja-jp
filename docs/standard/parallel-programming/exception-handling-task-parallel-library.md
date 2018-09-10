@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3deaba0c8589eaa0ba24bc66669f5a76e60467f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591297"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877808"
 ---
 # <a name="exception-handling-task-parallel-library"></a>例外処理 (タスク並列ライブラリ)
 タスク内で実行中のユーザー コードによってスローされた、ハンドルされない例外は、呼び出し元のスレッドに反映されます。ただし、このトピックの後半で説明している特定の状況を除きます。 静的な、またはインスタンスの <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドまたは <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` メソッドの 1 つを使用し、その呼び出しを `try`/`catch` ステートメント内に入れて例外を処理すると、例外が反映されます。 タスクが、アタッチされた子タスクの親である場合、または複数のタスクを待機している場合、複数の例外がスローされることがあります。  
@@ -91,5 +91,6 @@ ms.locfileid: "33591297"
 ## <a name="unobservedtaskexception-event"></a>UnobservedTaskException イベント  
  信頼関係のないプラグインをホストするときなど、シナリオによっては、問題のない例外がよく発生する場合や、難しすぎてすべてを手動で観察できなくなる場合があります。 このような場合、<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType> イベントを処理できます。 ハンドラーに渡される <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> インスタンスを使用して、観察されない例外が連結しているスレッドに反映されないようにすることができます。  
   
-## <a name="see-also"></a>参照  
- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>関連項目
+
+- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948590"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085187"
 ---
 # <a name="anchors-in-regular-expressions"></a>正規表現のアンカー
 <a name="top"></a> アンカー (アトミック ゼロ幅アサーション) は、文字列が一致する位置を指定します。 検索式でアンカーを使用した場合、正規表現エンジンは、後方の文字列を読み込んだり、文字に一致させたりすることはしません。指定された位置での一致のみが検索されます。 たとえば、 `^` は、行または文字列の先頭に一致する必要があることを指定します。 したがって、正規表現 `^http:` は、"http:" が行の先頭にある場合にのみ一致します。 次の表は、.NET の正規表現でサポートされているアンカーの一覧です。  
@@ -174,6 +174,7 @@ ms.locfileid: "36948590"
 |`qu`|部分文字列 "qu" と一致します。|  
 |`\w+`|1 つ以上の単語文字に一致します。|  
   
-## <a name="see-also"></a>参照  
- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a>関連項目
+
+- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)

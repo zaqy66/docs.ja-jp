@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3da8a524af872a724ee6cbe206912572d6338624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574749"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079462"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>方法 : グレゴリオ暦以外の暦の日付を表示する
 <xref:System.DateTime> 型と <xref:System.DateTimeOffset> 型は既定の暦としてグレゴリオ暦を使用しています。 つまり、日付と時刻値の `ToString` メソッドを呼び出すと、その日付の時刻が別の暦を使用して作成された場合でも、その日付の時刻はグレゴリオ暦の文字列形式で表示されます。 これを次の例で示します。この例では、2 つの方法を使用してペルシャ暦で日付と時刻の値を作成していますが、<xref:System.DateTime.ToString%2A> メソッドを呼び出すと、これらの日付と時刻の値はグレゴリオ暦で表示されます。 この例では、一般的に使われているものの、特定の暦で日付を表示するには正しくない 2 つの手法が反映されています。  
@@ -90,5 +90,6 @@ ms.locfileid: "33574749"
   
  コマンド ラインで csc.exe または vb.exe を使用してコードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
-## <a name="see-also"></a>参照  
- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a>関連項目
+
+- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)

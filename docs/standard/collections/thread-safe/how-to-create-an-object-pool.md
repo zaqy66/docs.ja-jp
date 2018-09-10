@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0480e7ff-b6f9-480e-a889-2ed4264d8372
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9239a38d1970a052567f111b57be2b6596f1e5f1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0bc0c6bebbab6e84c165f41300a4cb16c8746a07
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32768308"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207019"
 ---
 # <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a>方法: ConcurrentBag を使用してオブジェクト プールを作成する
 この例では、ConcurrentBag を使用してオブジェクト プールを実装する方法を示します。 オブジェクト プールは、クラスの複数のインスタンスが必要であり、クラスの作成または破棄に大きなコストがかかる状況で、アプリケーションのパフォーマンスを向上させることができます。 クライアント プログラムが新しいオブジェクトを要求すると、オブジェクト プールは最初に既に作成されてプールに返されているオブジェクトを提供しようとします。 使用できるオブジェクトがない場合にのみ、新しいオブジェクトが作成されます。  
@@ -26,5 +26,6 @@ ms.locfileid: "32768308"
  [!code-csharp[CDS#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/objectpool.cs#04)]
  [!code-vb[CDS#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/objectpool04.vb#04)]  
   
-## <a name="see-also"></a>参照  
- [スレッドセーフなコレクション](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>関連項目
+
+- [スレッドセーフなコレクション](../../../../docs/standard/collections/thread-safe/index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 212aa3f00967c04631b80305289c46d818106c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c1e1b476a1de1f0c348e264c9dc6b42ceb81eff
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574051"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869342"
 ---
 # <a name="culture-insensitive-string-operations"></a>カルチャを認識しない文字列操作
 カルチャを認識する文字列操作は、カルチャごとにユーザーに結果を表示するようデザインされたアプリケーションを作成する場合に役立ちます。 既定では、カルチャを認識するメソッドは、使用するカルチャを現在のスレッドの <xref:System.Globalization.CultureInfo.CurrentCulture%2A> プロパティから取得します。  
@@ -32,5 +32,6 @@ ms.locfileid: "33574051"
   
  開発するアプリケーションにローカリゼーションとグローバリゼーションに対応するためのコードが含まれているかどうかに関係なく、.NET Framework のメソッドは既定ではカルチャを認識する結果を取得することに注意してください。 このトピックの目的は、アプリケーションがこれらのメソッドを使用してカルチャを認識しない結果を取得するための正しい方法を示すことです。  
   
-## <a name="see-also"></a>参照  
- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a>関連項目
+
+- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)

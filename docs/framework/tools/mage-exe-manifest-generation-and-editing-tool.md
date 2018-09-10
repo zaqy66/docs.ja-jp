@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: d3922d9a81e350fd9ce95ffaa51dc3534873fb97
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754993"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856180"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (マニフェストの生成および編集ツール)
 
@@ -63,7 +63,7 @@ Mage [commands] [commandOptions]
 |**-pu,** **-ProviderURL** `url`||配置マニフェスト|ClickOnce でアプリケーションの更新プログラムのチェックを行う場合に参照する URL を指定します。|
 |**-pub, -Publisher** `publisherName`||アプリケーション マニフェスト<br /><br /> 配置マニフェスト|配置マニフェストとアプリケーション マニフェストのいずれかの description 要素に発行者名を追加します。 アプリケーション マニフェストで使用する場合、 **-UseManifestForTrust** も指定する必要があります (値は "true" または "t" に設定します)。指定しないと、エラーが発生します。|
 |**-s, -SupportURL**  `url`||アプリケーション マニフェスト<br /><br /> 配置マニフェスト|[プログラムの追加と削除] で、ClickOnce アプリケーションのエントリに表示されるリンクを指定します。|
-|**-ti, -TimestampUri** `uri`||アプリケーション マニフェスト<br /><br /> 配置マニフェスト|デジタル タイムスタンプ サービスの URL です。 マニフェストにタイムスタンプを設定すると、マニフェストに再署名することを防止できますが、アプリケーションの次のバージョンを配置する前にデジタル証明書の有効期限が切れるようにする必要があります。 詳細については、 [Windows ルート証明書プログラムのメンバー](http://go.microsoft.com/fwlink/?LinkId=159000)を参照してください。|
+|**-ti, -TimestampUri** `uri`||アプリケーション マニフェスト<br /><br /> 配置マニフェスト|デジタル タイムスタンプ サービスの URL です。 マニフェストにタイムスタンプを設定すると、マニフェストに再署名することを防止できますが、アプリケーションの次のバージョンを配置する前にデジタル証明書の有効期限が切れるようにする必要があります。 詳細については、 [Windows ルート証明書プログラムのメンバー](https://go.microsoft.com/fwlink/?LinkId=159000)を参照してください。|
 |**-t, -ToFile** `filePath`|-   New:<br />-   配置マニフェストの場合: deploy.application<br />-   アプリケーション マニフェストの場合: application.exe.manifest<br />-   Update コマンド オプション:<br />-   入力ファイル|すべてのファイルの種類|作成または変更されたファイルの出力パスを指定します。<br /><br /> **-New** を使用するときに **-ToFile**を指定しなかった場合、出力ファイルは現在の作業ディレクトリに書き込まれます。 **-Update** を使用する場合に **-ToFile** を指定しなかった場合、*Mage.exe* では、入力ファイルにファイルが書き戻されます。|
 |**-tr, -TrustLevel** `level`|アプリケーション URL が存在するゾーンに基づいて。|アプリケーション マニフェスト|クライアント コンピューター上のアプリケーションに与える信頼のレベルです。 有効な値には、"Internet"、"Intranet"、および "FullTrust" が含まれます。|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|アプリケーション マニフェスト|アプリケーションをクライアントで実行するときに、アプリケーション マニフェストのデジタル署名を信頼の決定に使用するかどうかを指定します。 "true" または "t" を指定すると、信頼の決定にアプリケーション マニフェストが使用されます。 "false" または "f" を指定すると、信頼の決定に配置マニフェストの署名が使用されます。|

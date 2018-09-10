@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f958af5859804cdeb382adab2f3772c42ac5b16
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 40a530190ee4b19d72399ab877cf26bad1090b9f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483964"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264117"
 ---
 # <a name="xslt-extension-objects"></a>XSLT 拡張オブジェクト
 拡張オブジェクトは、スタイル シートの機能を拡張する場合に使用します。 拡張オブジェクトは、<xref:System.Xml.Xsl.XsltArgumentList> クラスによって維持されます。  
@@ -38,6 +38,7 @@ ms.locfileid: "43483964"
   
 3.  <xref:System.Xml.Xsl.XsltArgumentList> オブジェクトを <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドに渡します。  
   
-## <a name="see-also"></a>参照  
- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [XSLT のセキュリティに関する考慮事項](../../../../docs/standard/data/xml/xslt-security-considerations.md)
+## <a name="see-also"></a>関連項目
+
+- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [XSLT のセキュリティに関する考慮事項](../../../../docs/standard/data/xml/xslt-security-considerations.md)

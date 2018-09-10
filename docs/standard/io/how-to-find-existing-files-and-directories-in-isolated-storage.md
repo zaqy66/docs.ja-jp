@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 866be7970c43051dd7e2bf8d45ae779aca130a45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574879"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44197813"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>方法 : 分離ストレージ内でファイルおよびディレクトリを検索する
 分離ストレージ内のディレクトリを検索するには、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> メソッドを使用します。 このメソッドは、検索パターンを表す文字列を取得します。 検索パターンでは、1 文字を表すワイルドカード文字 (?) と複数の文字を表すワイルドカード文字 (*) の両方がサポートされています。ただし、これらのワイルドカード文字は、名前の最後の部分で使用する必要があります。 たとえば、`directory1/*ect*` は有効な検索文字列ですが、`*ect*/directory2` は無効です。  
@@ -40,6 +40,7 @@ ms.locfileid: "33574879"
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]
  [!code-vb[Conceptual.IsolatedStorage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source8.vb#9)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [分離ストレージ](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- [分離ストレージ](../../../docs/standard/io/isolated-storage.md)

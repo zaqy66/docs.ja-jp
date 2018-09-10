@@ -5,12 +5,12 @@ ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 88170162e4149580d532129666348d226540aced
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a78507226b87f005798d0c4824a827a72f1d657a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398132"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43742798"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>統合 Windows 認証と拡張保護
 <xref:System.Net> 名前空間および関連名前空間の <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream>、および関連クラスによる統合 Windows 認証の処理方法に影響を与える、機能強化が行われました。 セキュリティ強化のため、拡張保護のサポートが追加されました。  
@@ -114,7 +114,7 @@ ms.locfileid: "33398132"
   
  カスタム認証の場合、クライアント アプリケーションは、<xref:System.Net.TransportContext.GetChannelBinding%2A> メソッドを使用して <xref:System.Net.TransportContext> および CBT の取得を許可する <xref:System.Net.HttpWebRequest> クラス内で <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> メソッドまたは <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> メソッドを使用できます。  
   
- <xref:System.Net.HttpWebRequest> インスタンスによって指定されたサービスに送信された統合 Windows 認証に使用する SPN は、<xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> プロパティを設定することで上書きすることができます。  
+ <xref:System.Net.HttpWebRequest> インスタンスによって指定されたサービスに送信された統合 Windows 認証に使用する SPN は、<xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> プロパティを設定することでオーバーライドすることができます。  
   
  <xref:System.Net.Mail.SmtpClient.TargetName%2A> プロパティは、SMTP 接続の統合 Windows 認証にカスタム SPN を使用するように設定するために使用できます。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "33398132"
   
 3.  クライアントは正しいチャネル バインディングを指定します。または、サーバーで拡張保護ポリシーが <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> で構成されているため、チャネル バインディングを指定せずにクライアントは接続することができます。要求は処理のためにアプリケーションに返されます。 サービス名チェックは自動的に実行されません。 アプリケーションは、<xref:System.Net.HttpListenerRequest.ServiceName%2A> プロパティを使用して独自のサービス名の検証を実行するように選択できますが、こうした状況では冗長です。  
   
- アプリケーションが独自の SSPI 呼び出しを作成して、HTTP 要求の本体内でやり取りされた BLOB に基づいて認証を実行し、チャネル バインディングをサポートする場合は、チャネル バインディングをネイティブ Win32 [AcceptSecurityContext](http://go.microsoft.com/fwlink/?LinkId=147021) 関数に渡すため、<xref:System.Net.HttpListener> を使用して、セキュリティで保護された外部チャネルから、期待されるチャネル バインディングを取得する必要があります。 これを行うには、<xref:System.Net.HttpListenerRequest.TransportContext%2A> プロパティを使用して <xref:System.Net.TransportContext.GetChannelBinding%2A> メソッドを呼び出して CBT を取得します。 エンドポイント バインディングのみがサポートされます。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> 以外のものが指定されると、<xref:System.NotSupportedException> がスローされます。 基本のオペレーティング システムがチャネル バインディングをサポートしている場合、<xref:System.Net.TransportContext.GetChannelBinding%2A> メソッドがポインターをラップする <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> を、[AcceptSecurityContext](http://go.microsoft.com/fwlink/?LinkId=147021) 関数に `pInput` パラメーターで渡される SecBuffer 構造体の pvBuffer メンバーとして渡すのに適したチャネル バインディングに返します。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> プロパティには、チャネル バインディングの長さ (バイト単位) が含まれます。 基本のオペレーティング システムがチャネル バインディングをサポートしていない場合、関数は `null` を返します。  
+ アプリケーションが独自の SSPI 呼び出しを作成して、HTTP 要求の本体内でやり取りされた BLOB に基づいて認証を実行し、チャネル バインディングをサポートする場合は、チャネル バインディングをネイティブ Win32 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 関数に渡すため、<xref:System.Net.HttpListener> を使用して、セキュリティで保護された外部チャネルから、期待されるチャネル バインディングを取得する必要があります。 これを行うには、<xref:System.Net.HttpListenerRequest.TransportContext%2A> プロパティを使用して <xref:System.Net.TransportContext.GetChannelBinding%2A> メソッドを呼び出して CBT を取得します。 エンドポイント バインディングのみがサポートされます。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> 以外のものが指定されると、<xref:System.NotSupportedException> がスローされます。 基本のオペレーティング システムがチャネル バインディングをサポートしている場合、<xref:System.Net.TransportContext.GetChannelBinding%2A> メソッドがポインターをラップする <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> を、[AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 関数に `pInput` パラメーターで渡される SecBuffer 構造体の pvBuffer メンバーとして渡すのに適したチャネル バインディングに返します。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> プロパティには、チャネル バインディングの長さ (バイト単位) が含まれます。 基本のオペレーティング システムがチャネル バインディングをサポートしていない場合、関数は `null` を返します。  
   
  もう 1 つの考えられるシナリオは、プロキシが使用されていないときに、HTTP:// プレフィックスの拡張保護を有効にすることです。 この場合、<xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> または <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> に設定された <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> を使用して <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> を <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> に設定し、<xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> を <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected> に設定します。<xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> の値は、<xref:System.Net.HttpListener> を部分的にセキュリティを強化したモードにし、同時に <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> は完全にセキュリティを強化したモードに対応します。  
   

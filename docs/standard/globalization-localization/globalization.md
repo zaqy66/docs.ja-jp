@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579575"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221910"
 ---
 # <a name="globalization"></a>グローバリゼーション
 グローバリゼーションとは、さまざまな文化圏 (カルチャ) のユーザー向けに、ローカライズされたインターフェイスと、その地域に合ったデータをサポートするような、国際対応アプリの設計と開発をいいます。 設計フェーズに着手する前に、アプリでサポートするカルチャを決定してください。 アプリは既定値として 1 つのカルチャまたは地域を対象としますが、別のカルチャまたは地域のユーザーに簡単に拡張できるようにアプリを設計および作成できます。  
@@ -184,7 +184,7 @@ ms.locfileid: "33579575"
   
 <a name="DatesAndTimes_Persist"></a>   
 ### <a name="persisting-dates-and-times"></a>日付と時刻を保持する  
- 日付と時刻のデータはカルチャによって異なる可能性がある書式で保持しないでください。 これは、データの破損または実行時例外が発生する一般的なプログラミング エラーです。 次の例では、英語 (米国) カルチャの書式指定規則を使用して文字列として 2 つの日付 (2013 年 1 月 9 日と 2013 年 8 月 18 日) をシリアル化します。 データが英語 (米国) カルチャの規則を使用して取得および解析されると、正常に復元されます。 ただし、英語 (英国) カルチャの規則を使用して取得および解析されると、最初の日付は 9 月 1 日と間違って解釈され、グレゴリオ暦には 18 番目の月がないため 2 番目の日付は解析されません。  
+ 日付と時刻のデータはカルチャによって異なる可能性がある書式で保持しないでください。 これは、データの破損または実行時例外が発生する一般的なプログラミング エラーです。 次の例では、英語 (米国) カルチャの書式指定規則を使用して文字列として 2 つの日付 (2013 年 1 月 9 日と 2013 年 8 月 18 日) をシリアル化します。 データが英語 (米国) カルチャの規則を使用して取得および解析されると、正常に復元されます。 ただし、英語 (イギリス) カルチャの規則を使用して取得および解析されると、最初の日付は 9 月 1 日と間違って解釈され、グレゴリオ暦には 18 番目の月がないため 2 番目の日付は解析されません。  
   
  [!code-csharp[Conceptual.Globalization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates2.cs#3)]
  [!code-vb[Conceptual.Globalization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates2.vb#3)]  
@@ -369,6 +369,7 @@ ms.locfileid: "33579575"
   
 -   ユーザーは、コントロール パネルの **[地域と言語]** アプリを使用してカルチャ固有の設定をカスタマイズできます。 <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化するときに、<xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> コンストラクターを呼び出すことでこのようなユーザーによるカスタマイズを反映するかどうかを決定できます。 通常は、エンド ユーザーのアプリでは、ユーザー設定を尊重して、ユーザー自身が予期する形式でデータを表示する必要があります。  
   
-## <a name="see-also"></a>参照  
- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)  
- [文字列を使用するためのベスト プラクティス](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a>関連項目
+
+- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)  
+- [文字列を使用するためのベスト プラクティス](../../../docs/standard/base-types/best-practices-strings.md)

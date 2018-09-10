@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3222c4b78367222caa4a6564109864c0fb55524e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d48f6df1e0e7680d2706c73c33dc817e1feaf1d5
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580797"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43871625"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>方法: PLINQ を使用してファイル ディレクトリを反復処理する
 この例では、ファイル ディレクトリに対する操作を簡単に並列化する 2 とおりの方法を示します。 最初のクエリでは、<xref:System.IO.Directory.GetFiles%2A> メソッドを使用して、ディレクトリとすべてのサブディレクトリ内のファイル名の配列を作成します。 配列全体の値が設定されるまでこのメソッドから制御が戻らないため、操作の開始時に待機時間が発生する可能性があります。 ただし、配列が作成されたら、PLINQ は配列を迅速に並列処理できます。  
@@ -36,5 +36,6 @@ ms.locfileid: "33580797"
   
  ネットワーク経由のファイル I/O などで I/O の待機時間が問題となる場合は、「[TPL と従来の .NET 非同期プログラミング](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)」およびこの[ブログの投稿](https://blogs.msdn.microsoft.com/pfxteam/2009/08/04/parallel-extensions-and-io/)で説明する非同期 I/O の手法のいずれかを使用することを検討してください。  
   
-## <a name="see-also"></a>参照  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>関連項目
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

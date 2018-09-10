@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79ca0b92cf79ca9be023925f064c1c7c16b3c9ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0bcab0757bc48f6a8216dd5878f0289e49a275
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567719"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208167"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>正規表現におけるスレッド セーフ
 <xref:System.Text.RegularExpressions.Regex> クラス自体はスレッド セーフであり、変更できません (読み取り専用)。 つまり、**Regex** オブジェクトは任意のスレッドで作成できます。また、スレッド間で共有できます。一致するメソッドは任意のスレッドから呼び出すことができますが、グローバルな状態を変更することはできません。  
@@ -27,5 +27,6 @@ ms.locfileid: "33567719"
   
  列挙子は唯一の例外です。 アプリケーションはコレクション列挙子に対する呼び出しをシリアル化する必要があります。 複数のスレッドでコレクションを同時に列挙できる場合、列挙子によってスキャンされるコレクションのルート オブジェクト上の列挙子メソッドを同期する必要があります。  
   
-## <a name="see-also"></a>参照  
- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>関連項目
+
+- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)

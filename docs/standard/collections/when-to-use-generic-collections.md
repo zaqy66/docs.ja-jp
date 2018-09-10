@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ea40542b235dd51bfec38aae9718b2278d7073b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572646"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264598"
 ---
 # <a name="when-to-use-generic-collections"></a>ジェネリック コレクションを使用する状況
 通常は、ジェネリック コレクションを使用することをお勧めします。これは、基本コレクション型から派生して型固有のメンバーを実装することなく、タイプ セーフの利点を即座に得ることができるためです。 また、ジェネリックでは要素をボックス化する必要がないため、コレクションの要素が値型である場合、一般的に、ジェネリック コレクション型は、対応する非ジェネリック コレクション型 (および、非ジェネリックの基本コレクション型から派生した型) よりもパフォーマンスに優れています。  
@@ -53,7 +53,8 @@ ms.locfileid: "33572646"
   
  <xref:System.Collections.Generic.List%601> クラスを使用すると、リストの並べ替えと検索を行う独自の <xref:System.Collections.Generic.IComparer%601> ジェネリック インターフェイス実装を指定できます。 <xref:System.Collections.Generic.SortedDictionary%602> クラスと <xref:System.Collections.Generic.SortedList%602> クラスにもこの機能があります。 また、これらのクラスを使用すると、コレクションの作成時に比較演算子を指定できます。 同様に、<xref:System.Collections.Generic.Dictionary%602> クラスと <xref:System.Collections.ObjectModel.KeyedCollection%602> クラスを使用すると、独自の等値比較子を指定できます。  
   
-## <a name="see-also"></a>参照  
- [コレクションとデータ構造体](../../../docs/standard/collections/index.md)  
- [ 一般的に使用されるコレクション型](../../../docs/standard/collections/commonly-used-collection-types.md)  
- [ジェネリック](../../../docs/standard/generics/index.md)
+## <a name="see-also"></a>関連項目
+
+- [コレクションとデータ構造体](../../../docs/standard/collections/index.md)  
+- [ 一般的に使用されるコレクション型](../../../docs/standard/collections/commonly-used-collection-types.md)  
+- [ジェネリック](../../../docs/standard/generics/index.md)

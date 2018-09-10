@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 913a5d6ab28d375dbfdd99dec6fd153bc94efee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573901"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883723"
 ---
 # <a name="latency-modes"></a>待機モード
 オブジェクトを再利用するには、ガベージ コレクターはアプリケーションで実行中のすべてのスレッドを停止する必要があります。 状況によっては、アプリケーションがデータの取得やコンテンツの表示を行うときなど、重要なときにフル ガベージ コレクションが発生し、パフォーマンスが低下することがあります。 ガベージ コレクターが作業に悪影響を与える度合いを調整するには、<xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> プロパティを <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 値のいずれかに設定することができます。  
@@ -37,7 +37,7 @@ ms.locfileid: "33573901"
 |<xref:System.Runtime.GCLatencyMode.Batch>|UI 操作のないアプリケーションの場合、またはサーバー側の操作の場合に使用します。<br /><br /> これは、[同時実行ガベージ コレクション](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)が無効の場合の既定モードです。|  
 |<xref:System.Runtime.GCLatencyMode.Interactive>|UI を持つほとんどのアプリケーションの場合に使用します。<br /><br /> これは、[同時実行ガベージ コレクション](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)が有効の場合の既定モードです。|  
 |<xref:System.Runtime.GCLatencyMode.LowLatency>|ガベージ コレクターからの割り込みにより重大な影響を受け、高速性を必要とする、短期間の操作を実行するアプリケーションの場合に使用します。 たとえば、アニメーションのレンダリングやデータの取得機能を実行するアプリケーションなどがあります。|  
-|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|ガベージ コレクターからの割り込みにより重大な影響を受け、高速性を必要とする、さほど処理時間を必要としないものの長時間になる可能性のある操作を実行するアプリケーションの場合に使用します。 たとえば、取引時間中に市場データの変化に応じて迅速な応答時間を必要とするアプリケーションなどがあります。<br /><br /> このモードでは、マネージ ヒープのサイズが他のモードより大きくなります。 マネージ ヒープは最適化されないため、断片化の割合が高くなる可能性があります。 十分なメモリが使用可能であることを確認してください。|  
+|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|ガベージ コレクターからの割り込みにより重大な影響を受け、高速性を必要とする、さほど処理時間を必要としないものの長時間になる可能性のある操作を実行するアプリケーションの場合に使用します。 たとえば、取引時間中に市場データの変化に応じて迅速な応答時間を必要とするアプリケーションなどがあります。<br /><br /> このモードでは、マネージド ヒープのサイズが他のモードより大きくなります。 マネージド ヒープは最適化されないため、断片化の割合が高くなる可能性があります。 十分なメモリが使用可能であることを確認してください。|  
   
 ## <a name="guidelines-for-using-low-latency"></a>待機時間の短いモードの使用に関するガイドライン  
  <xref:System.Runtime.GCLatencyMode.LowLatency> モードを使用する場合は、次のガイドラインを検討してください。  
@@ -54,7 +54,8 @@ ms.locfileid: "33573901"
   
 -   待機時間を短くする期間中でも、<xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> メソッドを呼び出せばジェネレーション 2 のガベージ コレクションを強制できます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.GC?displayProperty=nameWithType>  
- [発生したコレクション](../../../docs/standard/garbage-collection/induced.md)  
- [ガベージ コレクション](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.GC?displayProperty=nameWithType>  
+- [発生したコレクション](../../../docs/standard/garbage-collection/induced.md)  
+- [ガベージ コレクション](../../../docs/standard/garbage-collection/index.md)

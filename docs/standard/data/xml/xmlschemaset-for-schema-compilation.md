@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91835006925f9768c25ad1a984a3b189e3e4c58c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c24fe637514ba773cecc7824de276b1707a4e90c
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579081"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262510"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>スキーマをコンパイルするための XmlSchemaSet
 XML スキーマ定義言語 (XSD) スキーマの格納と検証が可能なキャッシュである <xref:System.Xml.Schema.XmlSchemaSet> について説明します。  
@@ -251,13 +251,14 @@ foreach (XmlSchema schema in schemaSet.Schemas())
   
  <xref:System.Xml.Schema.XmlSchemaSet> を利用して XML 文書を検証する方法については、「[XmlSchemaSet による XML スキーマ (XSD) 検証](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
- [スキーマ キャッシュとしての XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [XmlSchemaSet による XML スキーマ (XSD) 検証](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
+- [スキーマ キャッシュとしての XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [XmlSchemaSet による XML スキーマ (XSD) 検証](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

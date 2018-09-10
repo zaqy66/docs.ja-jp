@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1e9b22a4bc876e9b02ec0da0439682082d2d706
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59e288a756a022763bae2235964a8b25a9d72bd1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568772"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44196238"
 ---
 # <a name="converting-net-framework-types-to-strings"></a>.NET Framework 型の文字列への変換
 .NET Framework 型を文字列に変換するには、**ToString** メソッドを使用します。 **ToString** メソッドは、渡された型の文字列表現を返します。 XML スキーマ (XSD) 仕様に対応する形式で文字列を返す .NET Framework 型を、次の表に示します。  
@@ -25,6 +25,7 @@ ms.locfileid: "33568772"
 |DateTime|形式は、yyyy-MM-ddTHH:mm:sszzzzzz およびそのサブセットです。|  
 |Timespan|PnYnMnTnHnMnS の形式。たとえば、`P2Y10M15DT10H30M20S` は 2 年 10 か月 15 日 10 時間 30 分 20 秒の期間です。|  
   
-## <a name="see-also"></a>参照  
- [XML データ型の変換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
- [文字列の .NET Framework データ型への変換](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
+## <a name="see-also"></a>関連項目
+
+- [XML データ型の変換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+- [文字列の .NET Framework データ型への変換](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)

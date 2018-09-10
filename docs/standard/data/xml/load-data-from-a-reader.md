@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5156374708beb07da875d2e2a8a3b74e52e21427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569975"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207227"
 ---
 # <a name="load-data-from-a-reader"></a>リーダーからのデータの読み込み
 <xref:System.Xml.XmlDocument.Load%2A> メソッドに <xref:System.Xml.XmlReader> パラメーターを渡して XML ドキュメントを読み込むと、他の形式からデータを読み込む場合と比較して、その動作に違いがあります。 リーダーが初期状態のとき、<xref:System.Xml.XmlDocument.Load%2A> メソッドは、リーダーからのコンテンツ全体を使用して、リーダー内のすべてのデータから XML ドキュメント オブジェクト モデル (DOM) を構築します。  
@@ -29,5 +29,6 @@ ms.locfileid: "33569975"
   
  既定では、<xref:System.Xml.XmlDocument.Load%2A> は、ドキュメント型定義 (DTD) またはスキーマ検証を使用して、XML が有効かどうかを検証しません。 チェックするのは、XML が整形式かどうかだけです。 検証を行うには、<xref:System.Xml.XmlReader> クラスを使用して <xref:System.Xml.XmlReaderSettings> を作成する必要があります。 <xref:System.Xml.XmlReader> クラスは、DTD またはスキーマ定義言語 (XSD) のスキーマを使用して検証を強制できます。 <xref:System.Xml.ValidationType> クラスの <xref:System.Xml.XmlReaderSettings> プロパティによって、<xref:System.Xml.XmlReader> インスタンスが検証を強制するかどうかが決まります。 XML データの検証の詳細については、<xref:System.Xml.XmlReader> のリファレンス ページの「解説」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>関連項目
+
+- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

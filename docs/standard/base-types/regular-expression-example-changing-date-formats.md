@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d2d5bf67368e445123fce43afe07065a31b1f30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262673"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>正規表現の例: 日付形式の変更
 次のコード例では、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを使用して、*mm*/*dd*/*yy* 形式の日付を *dd*-*mm*-*yy* 形式の日付に置き換えます。  
@@ -56,5 +57,6 @@ ms.lasthandoff: 05/04/2018
 |`-`|ハイフンを追加します。|  
 |`$(year)`|`year` キャプチャ グループによってキャプチャされた文字列を追加します。|  
   
-## <a name="see-also"></a>参照  
- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>関連項目
+
+- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bac8d1496463d1224021270347c9480e7ce391e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577399"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190989"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>XslTransform クラスからの移行
 XSLT アーキテクチャは、[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] リリースで設計が変更されました。 <xref:System.Xml.Xsl.XslTransform> クラスは <xref:System.Xml.Xsl.XslCompiledTransform> クラスで置き換えられています。  
@@ -117,6 +117,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
 -   スキーマ関連の XPath 拡張関数 : これは、<xref:System.Xml.Xsl.XslCompiledTransform> ではネイティブでサポートされません。 ただし、拡張関数として実装することはできます。  
   
-## <a name="see-also"></a>参照  
- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+## <a name="see-also"></a>関連項目
+
+- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

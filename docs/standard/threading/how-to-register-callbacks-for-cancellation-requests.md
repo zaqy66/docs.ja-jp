@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8df4c73af81580d1b242ce0ede8f8bcb4cad4fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d61ba254a76235a12ca5dda23fdecb8838ae75
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583293"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863583"
 ---
 # <a name="how-to-register-callbacks-for-cancellation-requests"></a>方法: キャンセル要求のコールバックを登録する
 次の例では、トークンを作成したオブジェクトに対する <xref:System.Threading.CancellationTokenSource.Cancel%2A> の呼び出しにより <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> プロパティが true になったときに呼び出されるデリゲートを登録する方法を示します。 この方法は、統合キャンセル フレームワークをネイティブにはサポートしていない非同期操作を取り消す場合や、非同期操作の終了を待機している可能性のあるメソッドのブロックを解除する場合に使用できます。  
@@ -31,5 +31,6 @@ ms.locfileid: "33583293"
   
  コールバックを登録するときにキャンセルが既に要求されていても、コールバックは必ず呼び出されます。 このような場合、進行中の非同期操作がないと <xref:System.Net.WebClient.CancelAsync%2A> メソッドは何も実行しないので、このメソッドの呼び出しは常に安全です。  
   
-## <a name="see-also"></a>参照  
- [マネージ スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>関連項目
+
+- [マネージド スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)

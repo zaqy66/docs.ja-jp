@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e702233c90155957d1de1a5a306d44d8faa41929
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34ad5b9cc0014db05bc6e7483e389488e145beb3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576348"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087327"
 ---
 # <a name="how-to-implement-a-provider"></a>方法: プロバイダーを実装する
 オブザーバー デザイン パターンでは、データを監視して通知を送信するプロバイダーと、プロバイダーから通知 (コールバック) を受信する 1 つまたは複数のオブザーバーを分ける必要があります。 このトピックでは、プロバイダーを作成する方法について説明します。 関連トピックの「[方法: オブザーバーを実装する](../../../docs/standard/events/how-to-implement-an-observer.md)」でオブザーバーの作成方法について説明します。  
@@ -60,8 +60,9 @@ ms.locfileid: "33576348"
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#7)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.IObservable%601>  
- [オブサーバー デザイン パターン](../../../docs/standard/events/observer-design-pattern.md)  
- [方法: オブザーバーを実装する](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [オブザーバー デザイン パターンのベスト プラクティス](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IObservable%601>  
+- [オブサーバー デザイン パターン](../../../docs/standard/events/observer-design-pattern.md)  
+- [方法: オブザーバーを実装する](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [オブザーバー デザイン パターンのベスト プラクティス](../../../docs/standard/events/observer-design-pattern-best-practices.md)

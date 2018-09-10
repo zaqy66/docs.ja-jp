@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80c3a772ae4dfba53982ed28c0bd54f500c50b08
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43466055"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038745"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>ジェネリックの共変性と反変性
 <a name="top"></a> 共変性と反変性は、元の指定よりも強い派生型 (具体性が高い) と弱い派生型 (具体性が低い) を使用する能力を示す用語です。 ジェネリック型パラメーターは、ジェネリック型の代入と使用の柔軟性を向上させるために、共変性と反変性をサポートしています。 型システムにおいて、共変性、反変性、および不変性は、次のように定義されます。 各例では、基底クラスが `Base` という名前であり、派生クラスが `Derived`という名前であるとします。  
@@ -188,7 +188,8 @@ ms.locfileid: "43466055"
 |<xref:System.Linq.IOrderedQueryable%601>|[はい]||  
 |<xref:System.Linq.IQueryable%601>|[はい]||  
   
-## <a name="see-also"></a>参照  
- [共変性と反変性 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
- [共変性と反変性 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
- [デリゲートの分散](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+## <a name="see-also"></a>関連項目
+
+- [共変性と反変性 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
+- [共変性と反変性 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+- [デリゲートの分散](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

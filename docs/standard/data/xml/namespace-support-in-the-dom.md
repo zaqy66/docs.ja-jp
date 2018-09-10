@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e91ce2b36462780925dcaef701583a966c5f59b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569452"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208771"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM における名前空間のサポート
 XML ドキュメント オブジェクト モデル (DOM) は名前空間に完全に対応しています。 名前空間に対応している XML ドキュメントだけがサポートされます。 W3C (World Wide Web Consortium) の仕様によれば、DOM Level 1 を実装する DOM アプリケーションは名前空間に対応していなくてもかまいませんが、DOM Level 2 の機能は名前空間に対応しています。 ただし、メソッドが DOM 勧告の Level 1 または Level 2 のどちらに準拠しているかに関係なく、XML DOM のすべての機能は名前空間に対応しています。  
@@ -25,5 +25,6 @@ XML ドキュメント オブジェクト モデル (DOM) は名前空間に完�
   
 -   コロンが見つかると、最初のコロンの位置に基づいて名前が 2 つの部分に分割されます。 プレフィックスはコロンより前の文字列に設定され、ローカル名はコロンより後の文字列に設定されます。 名前空間 URI の値をとらないメソッドでは、名前空間 URI は解決されず、空の文字列のままになります。 それ以外の場合は、メソッドに渡された文字列が名前空間 URI として設定されます。 プレフィックスが定義されていない場合、**Save** メソッド、**InnerXml** プロパティ、**OuterXml** プロパティは失敗します。  
   
-## <a name="see-also"></a>参照  
- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>関連項目
+
+- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

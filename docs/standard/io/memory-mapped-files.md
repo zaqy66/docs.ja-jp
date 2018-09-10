@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cf2d7f36dbfffe1c86e32eec5137840837612f4
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 5c35bbc8d4223e9404371665e7666715fa357154
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208200"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865840"
 ---
 # <a name="memory-mapped-files"></a>メモリ マップト ファイル
-メモリ マップト ファイルには、仮想メモリ内のファイルの内容が含まれています。 ファイルとメモリ空間の間のこのマッピングによって、複数のプロセスを含むアプリケーションは、メモリを直接読み書きすることでファイルを変更できます。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、「[Managing Memory-Mapped Files](https://msdn.microsoft.com/library/ms810613.aspx)」 (メモリマップ ファイルの管理) で説明されているように、マネージ コードを使用して、ネイティブ Windows 関数がメモリ マップ済みファイルにアクセスする場合と同じ方法でメモリ マップ済みファイルにアクセスできます。  
+メモリ マップト ファイルには、仮想メモリ内のファイルの内容が含まれています。 ファイルとメモリ空間の間のこのマッピングによって、複数のプロセスを含むアプリケーションは、メモリを直接読み書きすることでファイルを変更できます。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、「[Managing Memory-Mapped Files](https://msdn.microsoft.com/library/ms810613.aspx)」 (メモリマップ ファイルの管理) で説明されているように、マネージド コードを使用して、ネイティブ Windows 関数がメモリ マップ済みファイルにアクセスする場合と同じ方法でメモリ マップ済みファイルにアクセスできます。  
   
  メモリ マップト ファイルには次の 2 種類があります。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36208200"
   
  次の図に、複数のプロセスがどのように同じメモリ マップト ファイルへの複数の重なるビューを同時に持つことができるかを示します。  
   
- ![メモリ マップト ファイルへのビューの表示。] (../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
+ ![メモリ マップト ファイルへのビューの表示。](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
 メモリ マップト ファイルへの複数の重なるビュー  
   
 ## <a name="programming-with-memory-mapped-files"></a>メモリ マップト ファイルのプログラミング  
@@ -144,5 +144,6 @@ Process C says: True
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
   
-## <a name="see-also"></a>参照  
- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>関連項目
+
+- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)

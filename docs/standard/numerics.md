@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2a795fb52c123840c1ba7b82f77d6745feba89b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d253e7a32d5f302b095a86ddb5c296d5fa8fa11
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588698"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209494"
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework における数値
 .NET Framework は、標準の数値整数と浮動小数点型のプリミティブをサポートしています。さらに、理論上の上限や下限のない整数型の <xref:System.Numerics.BigInteger>、複素数を表す型の <xref:System.Numerics.Complex>、<xref:System.Numerics> 名前空間の SIMD が有効なベクター型のセットもサポートしています。  
@@ -73,9 +73,10 @@ ms.locfileid: "33588698"
   
 -   <xref:System.Numerics.Plane> 型と <xref:System.Numerics.Quaternion> 型。  
   
- SimD 対応のベクター型は IL に実装されているので、これを SimD 非対応のハードウェアや JIT コンパイラで使用できます。 SIMD 命令の利点を活用するために、64 ビットのアプリはマネージ コード用の新しい 64 ビット JIT コンパイラ (.NET Framework 4.6 に含まれる) でコンパイルする必要があります。これは、x64 プロセッサがターゲットの場合に SIMD のサポートを追加します。  
+ SimD 対応のベクター型は IL に実装されているので、これを SimD 非対応のハードウェアや JIT コンパイラで使用できます。 SIMD 命令の利点を活用するために、64 ビットのアプリはマネージド コード用の新しい 64 ビット JIT コンパイラ (.NET Framework 4.6 に含まれる) でコンパイルする必要があります。これは、x64 プロセッサがターゲットの場合に SIMD のサポートを追加します。  
   
  SIMD は [NuGet パッケージ](https://www.nuget.org/packages/System.Numerics.Vectors)としてもダウンロードできます。  NuGET パッケージには、ジェネリック <xref:System.Numerics.Vector%601> 構造体も含まれています。この構造体を使用すると、任意のプリミティブな数値型のベクターを作成できます。 (プリミティブな数値型には、<xref:System.Decimal> を除く <xref:System> 名前空間のすべての数値型が含まれます。)さらに、<xref:System.Numerics.Vector%601> 構造体は、ベクターを使用しているときに呼び出すことのできる便利なメソッドのライブラリを提供します。  
   
-## <a name="see-also"></a>参照  
- [アプリケーションの基本事項](../../docs/standard/application-essentials.md)
+## <a name="see-also"></a>関連項目
+
+- [アプリケーションの基本事項](../../docs/standard/application-essentials.md)

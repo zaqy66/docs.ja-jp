@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f291bc91575ccde346f16552636d44951a0e6eac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6426e8bd138d06d3655562de6384e46a12c09279
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574856"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44202402"
 ---
 # <a name="how-to-implement-an-observer"></a>方法: オブザーバーを実装する
 オブザーバー デザイン パターンでは、通知を登録するオブザーバーと、データを監視して 1 人以上のオブザーバーに通知を送信するプロバイダーを分ける必要があります。 このトピックでは、オブザーバーを作成する方法について説明します。 プロバイダーの作成方法については、関連トピックの「[方法: プロバイダーを実装する](../../../docs/standard/events/how-to-implement-a-provider.md)」を参照してください。  
@@ -49,8 +49,9 @@ ms.locfileid: "33574856"
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#12)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.IObserver%601>  
- [オブサーバー デザイン パターン](../../../docs/standard/events/observer-design-pattern.md)  
- [方法: プロバイダーを実装する](../../../docs/standard/events/how-to-implement-a-provider.md)  
- [オブザーバー デザイン パターンのベスト プラクティス](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IObserver%601>  
+- [オブサーバー デザイン パターン](../../../docs/standard/events/observer-design-pattern.md)  
+- [方法: プロバイダーを実装する](../../../docs/standard/events/how-to-implement-a-provider.md)  
+- [オブザーバー デザイン パターンのベスト プラクティス](../../../docs/standard/events/observer-design-pattern-best-practices.md)

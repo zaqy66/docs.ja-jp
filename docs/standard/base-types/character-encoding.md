@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357f380a7103f186f7a66ea92a1a8b7930adead8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cac7e0fca4a009b7f5b6f677abed70cf2519052d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579718"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200473"
 ---
 # <a name="character-encoding-in-net"></a>.NET での文字エンコード
 文字は、さまざまな方法で表現できる抽象エンティティです。 文字エンコーディングとは、サポートされている文字セットの各文字を、その文字を表す値と組み合わせる体系です。 たとえばモールス符号は、ローマ字の各文字を、電信線での送信に適したドットとダッシュのパターンと組み合わせる文字エンコーディングです。 コンピューターの文字エンコーディングは、サポートされている文字セットの各文字を、その文字を表す数値と組み合わせます。 文字エンコーディングには、次の 2 つの異なるコンポーネントがあります。  
@@ -263,10 +263,11 @@ ms.locfileid: "33579718"
  [!code-csharp[Conceptual.Encoding#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/custom1.cs#7)]
  [!code-vb[Conceptual.Encoding#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/custom1.vb#7)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.Text.Encoder>  
- <xref:System.Text.Decoder>  
- <xref:System.Text.DecoderFallback>  
- <xref:System.Text.Encoding>  
- <xref:System.Text.EncoderFallback>  
- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Text.Encoder>  
+- <xref:System.Text.Decoder>  
+- <xref:System.Text.DecoderFallback>  
+- <xref:System.Text.Encoding>  
+- <xref:System.Text.EncoderFallback>  
+- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)

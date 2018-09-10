@@ -1,5 +1,5 @@
 ---
-title: マネージ スレッドのキャンセル
+title: マネージド スレッドのキャンセル
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a764912e46707b6f10e720f95a7d971ec4fc8e15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 088faaf454d3b188cff681fb7c41f3966b2e93fd
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592172"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44228105"
 ---
-# <a name="cancellation-in-managed-threads"></a>マネージ スレッドのキャンセル
+# <a name="cancellation-in-managed-threads"></a>マネージド スレッドのキャンセル
 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降で、非同期操作または長時間にわたる同期操作に対する連携によるキャンセルのための統一されたモデルが .NET Framework に導入されました。 このモデルは、キャンセル トークンと呼ばれる軽量のオブジェクトに基づいています。 新しいスレッドまたは新しいタスクの作成などによって 1 つ以上のキャンセル可能な操作を呼び出すオブジェクトは、各操作にトークンを渡します。 次いで、個々の操作は他の操作にトークンのコピーを渡すことができます。 その後、トークンを作成したオブジェクトは、操作が実行している処理を停止するように、そのトークンを使用してその操作に要求できます。 キャンセル要求は、要求側のオブジェクトからのみ発行できます。各リスナーは要求を確認し、適切な時に定期的にその要求に応答する必要があります。  
   
  連携によるキャンセル処理モデルを実装するための一般的なパターンは次のとおりです。  
@@ -148,5 +148,6 @@ ms.locfileid: "33592172"
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> および <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> は、これらのガイドラインに従ったクラスの例です。 詳細については、「[タスクのキャンセル](../../../docs/standard/parallel-programming/task-cancellation.md)」と「[方法: PLINQ クエリを取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [マネージ スレッド処理の基本](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>関連項目
+
+- [マネージド スレッド処理の基本](../../../docs/standard/threading/managed-threading-basics.md)

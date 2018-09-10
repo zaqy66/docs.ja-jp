@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b02fd72c705d264394b83b89fc7ec802be7e502a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575363"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198258"
 ---
 # <a name="traversing-xml-schemas"></a>XML スキーマの走査
 スキーマ オブジェクト モデル (SOM) API を使用して XML スキーマを走査すると、SOM に格納されている要素、属性、および型にアクセスできます。 また、SOM API を使用して XML スキーマを編集する際には、最初に SOM に読み込まれた XML スキーマを走査します。  
@@ -67,11 +67,12 @@ ms.locfileid: "33575363"
   
  「[XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)」のコード サンプルでは、<xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> コレクションを使用して、`Customer` 要素に属性 `CustomerId` を追加しました。 これは、スキーマのコンパイル前のプロパティです。 対応するスキーマのコンパイル後の情報セット プロパティは、<xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> コレクションで、複合型のすべての属性 (型の派生を通じて継承される属性を含む) を持っています。  
   
-## <a name="see-also"></a>参照  
- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [XML スキーマの編集](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>関連項目
+
+- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [XML スキーマの編集](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

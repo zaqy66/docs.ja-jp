@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207457"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216621"
 ---
 # <a name="net-class-library-overview"></a>.NET クラス ライブラリの概要
 
@@ -110,7 +110,8 @@ ms.locfileid: "36207457"
   
  名前空間の詳細については、「[.NET API ブラウザー](https://docs.microsoft.com/dotnet/api)」を使用して .NET クラス ライブラリを参照してください。 API リファレンス ドキュメントでは、各名前空間、その種類、および各メンバーに関するドキュメントが提供されます。  
   
-## <a name="see-also"></a>参照  
- [共通型システム](../../docs/standard/base-types/common-type-system.md)  
- [.NET API ブラウザー](https://docs.microsoft.com/dotnet/api)  
- [概要](../../docs/framework/get-started/overview.md)
+## <a name="see-also"></a>関連項目
+
+- [共通型システム](../../docs/standard/base-types/common-type-system.md)  
+- [.NET API ブラウザー](https://docs.microsoft.com/dotnet/api)  
+- [概要](../../docs/framework/get-started/overview.md)

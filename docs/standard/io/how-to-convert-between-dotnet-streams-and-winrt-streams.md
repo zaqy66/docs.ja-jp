@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3cfaf4cf22bba445d774c653ff7797d535bcde2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398966"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087480"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う
 
@@ -77,8 +77,8 @@ Windows ランタイムには、読み取り専用、書き込み専用、また
   [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#2)]
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#2)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[クイック スタート: ファイルの読み取りと書き込み (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-[Windows ストア アプリ用 .NET の概要](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-[Windows ストア アプリ用 .NET – サポートされている API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [クイック スタート: ファイルの読み取りと書き込み (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+- [Windows ストア アプリ用 .NET の概要](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+- [Windows ストア アプリ用 .NET – サポートされている API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  

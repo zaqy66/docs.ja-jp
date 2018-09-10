@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fe12f67814b2fc049ec26c745b43aa85627d555
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8cfe1f76cfe489095dfa996bce8005d2777966b7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744276"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748091"
 ---
 # <a name="64-bit-applications"></a>64 ビット アプリケーション
 アプリケーションをコンパイルするときに、Windows 64 ビット オペレーティング システム上で、ネイティブ アプリケーションとして実行するか、WOW64 (Windows 64 ビット上の Windows 32 ビット) の制御下で実行するかを指定できます。 WOW64 は互換環境であり、32 ビット アプリケーションを 64 ビット オペレーティング システム上で実行できるようにします。 WOW64 は、Windows オペレーティング システムのすべての 64 ビット バージョンに含まれています。  
@@ -26,7 +26,7 @@ ms.locfileid: "32744276"
 > [!NOTE]
 >  x86 エミュレーションと、Itanium プロセッサ ファミリ向け WOW64 サブシステムの設計のために、アプリケーションの実行は単一のプロセッサ上に制限されます。 これらの要因により、Itanium ベースのシステム上で実行する 32 ビット .NET Framework アプリケーションのパフォーマンスとスケーラビリティは低下します。 パフォーマンスおよびスケーラビリティを向上させるために、Itanium ベースのシステム用のネイティブ 64 ビット サポートを含む [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)] を使用することをお勧めします。  
   
- 既定では、64 ビット Windows オペレーティング システムで 64 ビット マネージ アプリケーションを実行するときに、最大 2 GB のオブジェクトを作成できます。 ただし、[!INCLUDE[net_v45](../../includes/net-v45-md.md)] ではこの制限を上げることができます。  詳細については、「[\<gcAllowVeryLargeObjects> 要素](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)」を参照してください。  
+ 既定では、64 ビット Windows オペレーティング システムで 64 ビット マネージド アプリケーションを実行するときに、最大 2 GB のオブジェクトを作成できます。 ただし、[!INCLUDE[net_v45](../../includes/net-v45-md.md)] ではこの制限を上げることができます。  詳細については、「[\<gcAllowVeryLargeObjects> 要素](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)」を参照してください。  
   
  多くのアセンブリは 32 ビットの CLR と 64 ビットの CLR で同じように実行します。 しかし、次の条件が当てはまる場合、一部のプログラムでは動作が CLR によって異なります。  
   
@@ -38,18 +38,18 @@ ms.locfileid: "32744276"
   
 -   `IntPtr` を `Int32` にキャストするコード  
   
- 32 ビット アプリケーションを 64 ビットの CLR に移行して実行する方法の詳細については、「[32 ビット マネージ コードを 64 ビットに移行する](https://msdn.microsoft.com/library/ms973190.aspx)」を参照してください。  
+ 32 ビット アプリケーションを 64 ビットの CLR に移行して実行する方法の詳細については、「[32 ビット マネージド コードを 64 ビットに移行する](https://msdn.microsoft.com/library/ms973190.aspx)」を参照してください。  
   
 ## <a name="general-64-bit-programming-information"></a>一般的な 64 ビット プログラミングについて  
  64 ビット プログラミングの一般的な問題については、次のドキュメントを参照してください。  
   
--   64 ビット Windows コンピューター上の 64 ビット版 CLR の詳細については、MSDN Web サイトの「[.NET Framework Developer Center (.NET Framework デベロッパー センター)](http://go.microsoft.com/fwlink/?LinkId=37079)」を参照してください。  
+-   64 ビット Windows コンピューター上の 64 ビット版 CLR の詳細については、MSDN Web サイトの「[.NET Framework Developer Center (.NET Framework デベロッパー センター)](https://go.microsoft.com/fwlink/?LinkId=37079)」を参照してください。  
   
--   [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] ドキュメントの「[64 ビット Windows プログラミング ガイド](http://go.microsoft.com/fwlink/p/?LinkId=253512)」を参照してください。  
+-   [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] ドキュメントの「[64 ビット Windows プログラミング ガイド](https://go.microsoft.com/fwlink/p/?LinkId=253512)」を参照してください。  
   
--   64 ビット版 CLR をダウンロードする方法については、MSDN Web サイトの「[.NET Framework ダウンロード](http://go.microsoft.com/fwlink/?LinkId=50953)」を参照してください。  
+-   64 ビット版 CLR をダウンロードする方法については、MSDN Web サイトの「[.NET Framework ダウンロード](https://go.microsoft.com/fwlink/?LinkId=50953)」を参照してください。  
   
--   64 ビット アプリケーションを作成するための Visual Studio のサポート機能については、「[Visual Studio 開発環境の 64 ビット サポート](http://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833)」を参照してください。  
+-   64 ビット アプリケーションを作成するための Visual Studio のサポート機能については、「[Visual Studio 開発環境の 64 ビット サポート](https://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833)」を参照してください。  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>64 ビット アプリケーションを作成するためのコンパイラのサポート  
  既定では、.NET Framework を使用して 32 ビット コンピューターまたは 64 ビット コンピューターでアプリケーションをビルドする場合、アプリケーションは 64 ビット コンピューターでネイティブ アプリケーションとして (WOW64 の制御下ではなく) 実行します。 次の表に、Visual Studio コンパイラを使用して、ネイティブなアプリケーションとして実行する 64 ビット アプリケーション、WOW64 の下で実行する 64 ビット アプリケーション、またはその両方が可能な 64 ビット アプリケーションを作成するための方法を説明するドキュメントを示します。  
@@ -58,7 +58,7 @@ ms.locfileid: "32744276"
 |--------------|---------------------|  
 |Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[-platform (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|**/clr:safe** を使用すると、プラットフォームに依存しない、Microsoft Intermediate Language (MSIL) アプリケーションを作成できます。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](/cpp/build/reference/clr-common-language-runtime-compilation)」を参照してください。<br /><br /> Visual C++ には、それぞれの 64 ビット オペレーティング システムを対象とする個別のコンパイラが含まれます。 Visual C++ を使用して 64 ビット Windows オペレーティング システム上で実行するネイティブ アプリケーションを作成する方法の詳細については、「[Visual C++ による 64 ビット プログラミング](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\))」を参照してください。|  
+|Visual C++|**/clr:safe** を使用すると、プラットフォームに依存しない、Microsoft Intermediate Language (MSIL) アプリケーションを作成できます。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](/cpp/build/reference/clr-common-language-runtime-compilation)」を参照してください。<br /><br /> Visual C++ には、それぞれの 64 ビット オペレーティング システムを対象とする個別のコンパイラが含まれます。 Visual C++ を使用して 64 ビット Windows オペレーティング システム上で実行するネイティブ アプリケーションを作成する方法の詳細については、「[Visual C++ による 64 ビット プログラミング](https://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\))」を参照してください。|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>.exe ファイルまたは .dll ファイルのステータスの特定  
  .exe ファイルまたは .dll ファイルが、特定のプラットフォーム上または WOW64 の下でのみ動作するように意図されているかどうかを確認するには、[CorFlags.exe (CorFlags Conversion Tool)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) を使用します (オプションは指定しません)。 また、CorFlags.exe を使用して、.exe ファイルまたは .dll ファイルのプラットフォームのステータスを変更することもできます。 Visual Studio アセンブリの CLR ヘッダーのメジャー ランタイム バージョン番号が 2、マイナー ランタイム バージョン番号が 5 に設定されています。 マイナー ランタイム バージョンが 0 に設定されたアプリケーションは、レガシ アプリケーションとして扱われ、常に WOW64 の下で実行されます。  

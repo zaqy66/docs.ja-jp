@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e55d902971c5cea64cf14458f09e58fb47e2d0aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b74e60daced88050413855070c880cd6c1cebfb1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591769"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214707"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>チュートリアル: データフロー パイプラインの作成
 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> の各メソッドを使用してソース ブロックからメッセージを受信できますが、メッセージ ブロックを接続して*データフロー パイプライン*を形成することもできます。 データフロー パイプラインは一連の*データフロー ブロック*で構成されます。それぞれが特定のタスクを実行し、全体として 1 つの大きな目標を達成します。 データフロー パイプラインのすべてのデータフロー ブロックは、他のデータフロー ブロックからメッセージを受け取ったときに処理を実行します。 これは、自動車製造の組み立てラインに例えることができます。 各車両が組み立てラインを通過する際、あるステーションではフレームを組み立て、次のステーションではエンジンを設置するなどです。 組み立てラインでは、複数の車両を同時に組み立てることができるため、一度に車両全体を組み立てるよりスループットが向上します。
@@ -110,5 +110,6 @@ ms.locfileid: "33591769"
   
  また、1 つのソース データフロー ブロックを複数のターゲット ブロックに接続して*データフロー ネットワーク*を作成することもできます。 オーバー ロードされたバージョンの <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> メソッドは、ターゲット ブロックがその値に基づいて各メッセージを受け入れるかどうかを定義する <xref:System.Predicate%601> オブジェクトを受け取ります。 ソースとして動作するほとんどのデータフロー ブロック型では、接続されたすべてのターゲット ブロックにメッセージを提供します。これは、いずれかのブロックがそのメッセージを受け入れるまで、ターゲット ブロックが接続された順序で行われます。 このフィルター機構を使用すると、特定のデータはあるパスを通り、その他のデータは別のパスを通るように仕向ける、接続されたデータフロー ブロックの体系を作成することができます。 フィルター処理を使用してデータフロー ネットワークを作成する例については、「[チュートリアル: Windows フォーム アプリケーションでデータ フローを使用する](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>関連項目
+
+- [データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

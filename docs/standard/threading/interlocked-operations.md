@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 361e618578e836e10cf8655f027bed42eac7affd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6478ea94b6c54272a01497ac7b1cb1b197892309
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393140"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269255"
 ---
 # <a name="interlocked-operations"></a>インタロックされた操作
 <xref:System.Threading.Interlocked> クラスでは、複数のスレッドによって共有されている変数へのアクセスを同期するメソッドが提供されます。 この変数が共有メモリにある場合、さまざまなプロセスのスレッドがこのメカニズムを使用できます。 インタロックされた操作はアトミックです。つまり、その操作全体が 1 つの単位のため、同じ変数の別のインタロックされた操作によって中断されることはありません。 これは、メモリ アドレスから値を読み込んだ後、変更して格納できるようになる前にスレッドを中断できるプリエンプティブ マルチスレッドのオペレーティング システムで重要です。  
@@ -57,8 +57,9 @@ ms.locfileid: "43393140"
  [!code-csharp[Conceptual.Interlocked#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interlocked/cs/source2.cs#2)]
  [!code-vb[Conceptual.Interlocked#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interlocked/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.Threading.Interlocked>  
- <xref:System.Threading.Monitor>  
- [スレッド化](../../../docs/standard/threading/index.md)  
- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.Interlocked>  
+- <xref:System.Threading.Monitor>  
+- [スレッド化](../../../docs/standard/threading/index.md)  
+- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)

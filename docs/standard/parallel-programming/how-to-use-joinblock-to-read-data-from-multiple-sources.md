@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd00c91daf2811ecba01b77d51a74740027ced5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c49f7ad5162c9e2759ec8afed217451b4bcf04ff
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581587"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227624"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>方法: JoinBlock を使用して複数のソースからデータを読み込む
 このドキュメントでは、複数のソースからデータを使用できるときに <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> クラスを使用して操作を実行する方法について説明します。 また、最短一致モードを使い、複数の結合ブロックを有効にして、データ ソースをより効率的に共有する方法についても説明します。
@@ -46,5 +46,6 @@ ms.locfileid: "33581587"
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  最短一致の結合を使用すると、アプリケーションのデッドロックを防ぐのにも役立ちます。 ソフトウェア アプリケーションで、2 つ以上のプロセスがそれぞれリソースを確保し、別のプロセスがリソースを解放するのをお互いに待機すると、*デッドロック*が発生します。 2 つの <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> オブジェクトを定義するアプリケーションを考えてみましょう。 両方のオブジェクトは、それぞれ 2 つの共有ソース ブロックからデータを読み取ります。 最長一致モードでは、一方の結合ブロックが最初のソースから読み取り、もう一方の結合ブロックが 2 番目のソースから読み取る場合、どちらの結合ブロックも他方がリソースを解放するまで待機するため、アプリケーションがデッドロックする可能性があります。 最短一致モードの場合、各結合ブロックは、すべてのデータを使用できる場合にのみソースから読み取ります。そのため、デッドロックのリスクはなくなります。  
   
-## <a name="see-also"></a>参照  
- [データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>関連項目
+
+- [データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

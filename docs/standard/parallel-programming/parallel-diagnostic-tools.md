@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 016229ea1b80c82ed9174e19bb08adfa67f016fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580524"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201401"
 ---
 # <a name="parallel-diagnostic-tools"></a>並列診断ツール
 Visual Studio は、マルチ スレッド アプリケーションのデバッグおよびプロファイリングを広範にサポートします。  
@@ -29,5 +29,6 @@ Visual Studio は、マルチ スレッド アプリケーションのデバッ�
 ## <a name="profiling"></a>プロファイル  
  同時実行ビジュアライザーのレポート ビューを使用すると、並列プログラム内のスレッドどうし、または同じシステム上の他のプロセスのスレッドとのやり取りを視覚化することができます。 詳細については、「[同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>関連項目
+
+- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)
