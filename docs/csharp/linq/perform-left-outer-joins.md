@@ -3,12 +3,12 @@ title: 左外部結合の実行 (C# での LINQ)
 description: C# で LINQ を使用して、左外部結合を実行する方法について説明します。
 ms.date: 12/1/2016
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
-ms.openlocfilehash: 3da144e6e3293d3a4084f7a99f77aec199f7a267
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 329fe9e17640931c5eb39b33b791a7a77a6f7b89
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506597"
 ---
 # <a name="perform-left-outer-joins"></a>左外部結合の実行
 
@@ -29,8 +29,8 @@ ms.locfileid: "37403854"
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.Linq.Enumerable.Join%2A>  
-<xref:System.Linq.Enumerable.GroupJoin%2A>  
-[内部結合の実行](perform-inner-joins.md)  
-[グループ化結合の実行](perform-grouped-joins.md)  
-[匿名型](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>  
+- <xref:System.Linq.Enumerable.GroupJoin%2A>  
+- [内部結合の実行](perform-inner-joins.md)  
+- [グループ化結合の実行](perform-grouped-joins.md)  
+- [匿名型](../programming-guide/classes-and-structs/anonymous-types.md)  

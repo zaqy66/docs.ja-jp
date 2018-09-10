@@ -5,14 +5,15 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 2f5dcb032c5dea764cdd212bbcd02e1640089d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313954"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128551"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>1 次元配列 (C# プログラミング ガイド)
+
 次の例のように、5 つの整数の 1 次元配列を宣言することができます。  
   
  [!code-csharp[csProgGuideArrays#4](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_1.cs)]  
@@ -23,7 +24,8 @@ ms.locfileid: "33313954"
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>配列の初期化  
+## <a name="array-initialization"></a>配列の初期化
+
  宣言時に配列を初期化することができます。この場合、初期化リスト内の要素の数によって次元が既に提供されているので、次元指定子は必要ありません。 例:  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
@@ -42,7 +44,8 @@ ms.locfileid: "33313954"
   
  C# 3.0 で暗黙的に型指定される配列が導入されます。 詳細については、「[暗黙的に型指定される配列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)」を参照してください。  
   
-## <a name="value-type-and-reference-type-arrays"></a>値の型と参照型の配列  
+## <a name="value-type-and-reference-type-arrays"></a>値の型と参照型の配列
+
  次の配列の宣言を検討してみます。  
   
  [!code-csharp[csProgGuideArrays#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_7.cs)]  
@@ -51,9 +54,10 @@ ms.locfileid: "33313954"
   
  値型と参照型の詳細については、「[型](../../../csharp/language-reference/keywords/types.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Array>  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [配列](../../../csharp/programming-guide/arrays/index.md)  
- [多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [ジャグ配列](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Array>  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [配列](../../../csharp/programming-guide/arrays/index.md)  
+- [多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+- [ジャグ配列](../../../csharp/programming-guide/arrays/jagged-arrays.md)

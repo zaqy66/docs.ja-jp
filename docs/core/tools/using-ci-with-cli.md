@@ -5,11 +5,11 @@ author: guardrex
 ms.author: mairaw
 ms.date: 05/18/2017
 ms.openlocfilehash: 0835ffafc6c091c311b03c90f665cbd669cccfe9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417965"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43749935"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>継続的インテグレーション (CI) で .NET Core SDK とツールを使用する
 
@@ -171,7 +171,7 @@ VSTS で手動セットアップ スクリプトを使用するには、新し�
 
 ## <a name="orchestrating-the-build"></a>ビルドの調整
 
-この文書はその大半で .NET Core ツールの取得方法とさまざまな CI サービスの構成方法について説明しています。.NET Core でコードを調整する (*実際にビルドする*) 方法に関する情報はありません。 ビルド プロセスの構造化方法の選択肢は、ここでは取り上げることができないさまざまな要因に依存します。 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/)、[VSTS](https://docs.microsoft.com/vsts/build-release/index) でビルドを調整する方法については、それぞれの文書に記載されている資料とサンプルをご覧ください。
+この文書はその大半で .NET Core ツールの取得方法とさまざまな CI サービスの構成方法について説明しています。 .NET Core でコードを調整する (*実際にビルドする*) 方法に関する情報はありません。 ビルド プロセスの構造化方法の選択肢は、ここでは取り上げることができないさまざまな要因に依存します。 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/)、[VSTS](https://docs.microsoft.com/vsts/build-release/index) でビルドを調整する方法については、それぞれの文書に記載されている資料とサンプルをご覧ください。
 
 .NET Core ツールを利用して .NET Core コードのビルド プロセスを構造化するとき、通常、2 つの手法があります。MSBuild を直接利用するか、.NET Core コマンドライン コマンドを利用します。 いずれの手法を採用するかは、手法と複雑性との兼ね合いで使いやすいものを選択してください。 MSBuild を利用すれば、タスクやターゲットとしてビルド プロセスを表現できますが、MSBuild プロジェクト ファイルの構文は複雑で、学習の難易度が上がります。 .NET Core コマンドライン ツールはおそらく、使い方がより単純です。ただし、`bash` や PowerShell のようなスクリプト記述言語でオーケストレーション ロジックを記述する必要があります。
 

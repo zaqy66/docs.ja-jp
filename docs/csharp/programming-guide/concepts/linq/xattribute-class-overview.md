@@ -2,12 +2,12 @@
 title: XAttribute クラスの概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: e0020a8cd8841ef9a35781b534c82db5e15c257f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 5619a8442fde9f4e8f612f213bde16c86ba00115
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934814"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529075"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute クラスの概要 (C#)
 属性は、要素に関連付けられている名前と値のペアです。 <xref:System.Xml.Linq.XAttribute> クラスは、XML 属性を表します。  
@@ -22,8 +22,7 @@ ms.locfileid: "42934814"
   
 |コンストラクター|説明|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|
-          <xref:System.Xml.Linq.XAttribute> オブジェクトを作成します。 `name` 引数には属性の名前を指定し、`content` には属性のコンテンツを指定します。|  
+|`XAttribute(XName name, object content)`|<xref:System.Xml.Linq.XAttribute> オブジェクトを作成します。 `name` 引数には属性の名前を指定し、`content` には属性のコンテンツを指定します。|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>属性を持つ要素の作成  
  次のコードは、属性を含む要素を作成する一般的なタスクを示しています。  
@@ -80,5 +79,6 @@ Console.WriteLine(c);
   
  属性と要素の区別は主に、ノード レベルで XML ツリーを操作するコードを記述する開発者にとってのみ重要な意味を持ちます。 多くの開発者は、この区別を考慮する必要はありません。  
   
-## <a name="see-also"></a>参照  
- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>参照
+
+- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

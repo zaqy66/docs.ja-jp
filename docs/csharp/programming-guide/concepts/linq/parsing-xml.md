@@ -2,12 +2,12 @@
 title: XML の解析 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
-ms.openlocfilehash: 876cfdf7bd5a82aba75d456d6d5cda57e080fdf0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a2dc3043c8cbf8138a164ab06d8394e4c859fa50
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933983"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523029"
 ---
 # <a name="parsing-xml-c"></a>XML の解析 (C#)
 このセクションのトピックでは、XML ドキュメントを解析する方法について説明します。  
@@ -23,5 +23,6 @@ ms.locfileid: "42933983"
 |[方法: XmlReader からツリーを作成する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|<xref:System.Xml.XmlReader> から直接 XML ツリーを作成する方法について説明します。|  
 |[方法: XmlReader から XML フラグメントをストリーム出力する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|<xref:System.Xml.XmlReader> を使用して XML フラグメントをストリーム出力する方法について説明します。<br /><br /> 非常に大きな XML ファイルを処理する必要があるとき、XML ツリー全体をメモリに読み込むことは不適切な場合があります。 その場合は、XML フラグメントをストリーム出力できます。|  
   
-## <a name="see-also"></a>参照  
- [XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>参照
+
+- [XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

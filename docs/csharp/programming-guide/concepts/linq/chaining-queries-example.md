@@ -2,12 +2,12 @@
 title: クエリの連結の例 (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: d28f5f4ed4f9e6deb5f6f3d381d310ebcef6e132
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 864d7ed34957defdedf21ccb1671d49c48913d88
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327693"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43739927"
 ---
 # <a name="chaining-queries-example-c"></a>クエリの連結の例 (C#)
 この例は前の例に基づいており、2 つのクエリ (どちらのクエリも遅延実行とレイジー評価を使用している) を連結した場合の結果について説明します。  
@@ -86,5 +86,6 @@ Main: str >GHI!!!<
   
 -   [中間結果の具体化 (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
-## <a name="see-also"></a>参照  
- [チュートリアル: クエリの連結 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a>参照
+
+- [チュートリアル: クエリの連結 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

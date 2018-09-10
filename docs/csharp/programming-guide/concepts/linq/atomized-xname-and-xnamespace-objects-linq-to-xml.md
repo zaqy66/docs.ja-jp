@@ -2,12 +2,12 @@
 title: アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: 85799741246f484bcb17a1ae7e320bd477872238
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ffeaac6d893b70c2c0d49d8d52d0372879cdf37
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323210"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526398"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (C#)
 <xref:System.Xml.Linq.XName> オブジェクトと <xref:System.Xml.Linq.XNamespace> オブジェクトは "*アトミック化*" されています。つまり、同じ修飾名を含んでいる場合は、同じオブジェクトを参照します。 これによってクエリのパフォーマンスが向上します。これは、2 つのアトミック化された名前の等価性を比べる場合に、基になる中間言語が、2 つの参照が同じオブジェクトを指しているかどうかを判別するだけで済むためです。 基になるコードは、時間のかかる文字列比較を行う必要がありません。  
@@ -74,5 +74,6 @@ foreach (var z in query)
 <C1>1</C1>  
 ```  
   
-## <a name="see-also"></a>参照  
- [パフォーマンス (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>参照
+
+- [パフォーマンス (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

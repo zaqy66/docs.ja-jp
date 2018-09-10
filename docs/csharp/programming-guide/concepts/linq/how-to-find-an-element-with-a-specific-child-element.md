@@ -2,12 +2,12 @@
 title: '方法: 特定の子要素を持つ要素を検索する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: e7528784f898f0f9ba84095b080eb82f8458424e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36a6981a26f6f75c74256369c78361ee7f129a3e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323889"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527821"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>方法: 特定の子要素を持つ要素を検索する (C#)
 このトピックでは、特定の値を含む子要素を持つ特定の要素を検索する方法について説明します。  
@@ -57,9 +57,10 @@ foreach (XElement el in tests)
 0006  
 ```  
   
-## <a name="see-also"></a>参照  
- <xref:System.Xml.Linq.XElement.Attribute%2A>  
- <xref:System.Xml.Linq.XContainer.Elements%2A>  
- [基本的なクエリ (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [射影操作 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Xml.Linq.XElement.Attribute%2A>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A>  
+- [基本的なクエリ (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [射影操作 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

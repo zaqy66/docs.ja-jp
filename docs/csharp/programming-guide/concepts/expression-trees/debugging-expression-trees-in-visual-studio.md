@@ -2,12 +2,12 @@
 title: 式ツリーのデバッグ (Visual Studio) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 0b3017f2800a2eb7332028b9cfe6ed9877222087
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd3008ffd1364eec3938053bd7d37f95b8a1ebc0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340071"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509624"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>式ツリーのデバッグ (Visual Studio) (C#)
 アプリケーションをデバッグするときに、式ツリーの構造および内容を分析できます。 式ツリーの構造を簡単に確認する場合は、`DebugView` プロパティを使用できます。このプロパティは、デバッグ モードでのみ使用できます。 デバッグの詳細については、「[Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)」を参照してください。  
@@ -103,7 +103,8 @@ ms.locfileid: "33340071"
 |`Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));`|`1 #+ 2`|  
 |`Expression expr = Expression.ConvertChecked( Expression.Constant(10.0), typeof(int));`|`#(System.Int32)10D`|  
   
-## <a name="see-also"></a>参照  
- [式ツリー (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
- [Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)  
- [カスタム ビジュアライザーを作成する](/visualstudio/debugger/create-custom-visualizers-of-data)
+## <a name="see-also"></a>参照
+
+- [式ツリー (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)  
+- [カスタム ビジュアライザーを作成する](/visualstudio/debugger/create-custom-visualizers-of-data)

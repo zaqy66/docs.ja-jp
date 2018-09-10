@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 2825b79c9638fff050522da43184a8d95a3fe02f
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 8b8237a09b36114f7100c90cee0bd753236789fd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42752100"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522621"
 ---
 # <a name="basic-linq-query-operations-c"></a>LINQ クエリの基本操作 (C#)
 このトピックでは、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式とクエリで実行する一般的な操作について、簡単に説明します。 詳細については、以下のトピックを参照してください。  
@@ -99,9 +99,10 @@ from order in Customer.Orders...
 ## <a name="selecting-projections"></a>選択 (投影)  
  `select` 句はクエリの結果を生成し、返される各要素の "シェイプ" つまり型を指定します。 たとえば、完全な `Customer` オブジェクト、１ つのメンバーのみ、メンバーのサブセット、または計算や新しいオブジェクトの作成に基づいた、まったく異なる種類の結果のいずれで結果が構成されるかを指定できます。 `select` 句でソース要素のコピー以外のものを生成する場合、その操作は*投影*と呼ばれます。 投影を使用したデータの変換は、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式の強力な機能です。 詳細については、「[LINQ によるデータ変換 (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)」と「[select 句](../../../../csharp/language-reference/keywords/select-clause.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [C# の LINQ の概要](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [チュートリアル: C# でのクエリの作成](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- [クエリ キーワード (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
- [匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+## <a name="see-also"></a>参照
+
+- [C# の LINQ の概要](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [チュートリアル: C# でのクエリの作成](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+- [クエリ キーワード (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
+- [匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

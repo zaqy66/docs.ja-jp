@@ -13,11 +13,11 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: 14656fa25ea1d01339bd63efb999e938e1243db8
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331942"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865609"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# コンパイラ オプション)
 **-warn** オプションは、コンパイラが表示する警告レベルを指定します。  
@@ -55,7 +55,7 @@ ms.locfileid: "43331942"
   
 3.  **警告レベル** プロパティを変更します。  
   
- このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>」をご覧ください。  
+ このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>」をご覧ください。  
   
 ## <a name="example"></a>例  
  `in.cs` をコンパイルして、コンパイラにレベル 1 の警告のみを表示させます。  

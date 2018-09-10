@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: c7cc0580398eeb5c70422cba3569340133107b12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5eb0ed02b1462aa126e55d688f4166aa741353a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334536"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513807"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>ランタイムのジェネリック (C# プログラミング ガイド)
 ジェネリック型またはメソッドが Microsoft 中間言語 (MSIL) にコンパイルされるとき、型パラメーターありとして識別するメタデータが追加されます。 ジェネリック型の MSIL の使われ方は、指定した型パラメーターの種類 (値型または参照型) によって異なります。  
@@ -46,8 +46,9 @@ ms.locfileid: "33334536"
   
  また、ジェネリック C# クラスが値型または参照型パラメーターの利用によりインスタンス化されるとき、ランタイム時にリフレクションがクエリを実行し、その型パラメーターを確かめることができます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Collections.Generic>  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [ジェネリック](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Collections.Generic>  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [ジェネリック](~/docs/standard/generics/index.md)

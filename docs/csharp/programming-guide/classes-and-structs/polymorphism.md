@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 8bbf93d14a16b06441ba48b9d4e19cfd249e9146
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25192d57955d15c5707816ee6c4a515893891507
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328446"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523394"
 ---
 # <a name="polymorphism-c-programming-guide"></a>ポリモーフィズム (C# プログラミング ガイド)
 ポリモーフィズムは、カプセル化と継承に次ぐ、オブジェクト指向プログラミングの第 3 の柱と言われることがよくあります。 ポリモーフィズムは、ギリシャ語で "多形" を意味し、次の 2 つの側面を持っています。  
@@ -94,13 +94,14 @@ ms.locfileid: "33328446"
   
 -   [方法: ToString メソッドをオーバーライドする](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [抽象クラスとシール クラス、およびクラス メンバー](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [イベント](../../../csharp/programming-guide/events/index.md)  
- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
- [型](../../../csharp/programming-guide/types/index.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [抽象クラスとシール クラス、およびクラス メンバー](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [イベント](../../../csharp/programming-guide/events/index.md)  
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
+- [型](../../../csharp/programming-guide/types/index.md)

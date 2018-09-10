@@ -2,12 +2,12 @@
 title: データのパーティション分割 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: 003e292979b1dc75baa298ea4bda7ef432d0f27b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e719b3a61b7c42d8ec6afe5fffe88a5bf83f82e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328582"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523462"
 ---
 # <a name="partitioning-data-c"></a>データのパーティション分割 (C#)
 LINQ におけるパーティション分割とは、要素を並べ替えずに入力シーケンスを 2 つのセクションに分割し、それらのセクションの 1 つを返す操作を指します。  
@@ -27,6 +27,7 @@ LINQ におけるパーティション分割とは、要素を並べ替えずに
 |Take|シーケンス内の指定した位置までの要素を取得します。|該当なし。|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
 |TakeWhile|述語関数に基づき、条件を満たさない要素が出現する位置までの要素を取得します。|該当なし。|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>参照  
- <xref:System.Linq>  
- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Linq>  
+- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

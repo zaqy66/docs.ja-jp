@@ -3,12 +3,12 @@ title: 構造体 - C# ガイド
 description: 構造体型と、構造体を作成する方法について説明します
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 9fe4e0278ecf46f762a93aa489030c0a9e5563b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26b7b075dbe159d43fd7f84e9599d2d8d6a8332c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349770"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513087"
 ---
 # <a name="structs"></a>構造体
 "*構造体*" は値の型です。 構造体が作成されると、構造体が割り当てられている変数にはその構造体の実際のデータが設定されます。 構造体が新しい変数に割り当てられると、そのデータがコピーされます。 したがって、新しい変数と元の変数には、同じデータのコピーが別個に含まれることになります。 一方のコピーに対して行われた変更は、もう一方のコピーには影響しません。
@@ -25,7 +25,7 @@ ms.locfileid: "33349770"
   
 [!code-csharp[Assign Values](../../samples/snippets/csharp/concepts/structs/assign-value.cs)] 
   
-値型は、"*シール*" されています。たとえば <xref:System.Int32> から値型を派生させることはできません。構造体は <xref:System.ValueType> からしか継承できないため、任意のユーザー定義型または構造体を継承する構造体を定義することはできません。 ただし、構造体は 1 つ以上のインターフェイスを実装できます。 構造体型は、インターフェイス型にキャストできます。これを行うと、"*ボックス化*" 操作によって、構造体がマネージ ヒープ上の参照型オブジェクト内にラップされます。 ボックス化操作が発生するのは、入力パラメーターとして <xref:System.Object> を受け取るメソッドに値型を渡した場合です。 詳細については、「[ボックス化とボックス化解除](./programming-guide/types/boxing-and-unboxing.md )」を参照してください。  
+値型は、"*シール*" されています。たとえば <xref:System.Int32> から値型を派生させることはできません。構造体は <xref:System.ValueType> からしか継承できないため、任意のユーザー定義型または構造体を継承する構造体を定義することはできません。 ただし、構造体は 1 つ以上のインターフェイスを実装できます。 構造体型は、インターフェイス型にキャストできます。これを行うと、"*ボックス化操作*" によって、構造体がマネージド ヒープ上の参照型オブジェクト内にラップされます。 ボックス化操作が発生するのは、入力パラメーターとして <xref:System.Object> を受け取るメソッドに値型を渡した場合です。 詳細については、「[ボックス化とボックス化解除](./programming-guide/types/boxing-and-unboxing.md )」を参照してください。  
   
 独自のカスタム値型を作成するには、[struct](./language-reference/keywords/struct.md) キーワードを使用します。 通常、構造体は、次の例に示すように、少数の関連する変数のコンテナーとして使用します。  
   
@@ -65,7 +65,7 @@ C# では、リテラル値の型がコンパイラによって決定されま�
 ## <a name="nullable-types"></a>Null 許容型  
 値型には、通常、[null](./language-reference/keywords/null.md) 値を割り当てることができません。 しかし、型の後ろに **?**  を付けることによって、null 値を設定できる値型を作成できます。 たとえば、**int?** は、[null](./language-reference/keywords/null.md) も設定できる **int** 型です。 CTS では、null 許容型は一般的な構造体型 <xref:System.Nullable%601> のインスタンスです。 Null 許容型は、数値が null になる可能性のあるデータベースとの間でデータを受け渡しする場合に、特に便利です。 詳細については、「[null 許容型 (C# プログラミング ガイド)](./programming-guide/nullable-types/index.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
-[クラス](classes.md)
+## <a name="see-also"></a>参照
 
-[基本型](basic-types.md)
+- [クラス](classes.md)
+- [基本型](basic-types.md)

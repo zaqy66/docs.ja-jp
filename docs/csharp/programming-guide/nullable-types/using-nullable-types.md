@@ -5,12 +5,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 600a18cc4dc9d3eda5577336f209c5814a7edb88
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 8ef875aee8c40f60472df52c19d1c1f2c73e95e8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417876"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515438"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Null 許容型の使用 (C# プログラミング ガイド)
 
@@ -109,8 +109,8 @@ Null 許容 `bool?` 型は、[true](../../language-reference/keywords/true-liter
 
 これら 2 つの演算子は、「[演算子](#operators)」セクションで説明されている規則に従わないことに注意してください。オペランドの 1 つが null の場合も、演算子の評価の結果は null 以外である可能性があります。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
- [Null 許容型](index.md)  
- [C# プログラミング ガイド](../../programming-guide/index.md)  
- [What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  
+- [Null 許容型](index.md)  
+- [C# プログラミング ガイド](../../programming-guide/index.md)  
+- [What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  

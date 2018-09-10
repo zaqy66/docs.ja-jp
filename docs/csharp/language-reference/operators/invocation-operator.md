@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 82dfc2e11d6a8a025aa9b7557255a13b69ffa508
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 29097dc4aa0bf712b9b2beda4450820a66472ba7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208071"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44179672"
 ---
 # <a name="-operator-c-reference"></a>() 演算子 (C# リファレンス)
 かっこは式内での演算の順序を指定することに加え、以下のタスクを実行するために使用されます。  
@@ -38,7 +38,8 @@ ms.locfileid: "36208071"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# リファレンス](../../../csharp/language-reference/index.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [C# 演算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>参照
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# 演算子](../../../csharp/language-reference/operators/index.md)

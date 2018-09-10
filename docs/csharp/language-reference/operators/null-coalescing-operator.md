@@ -9,11 +9,11 @@ helpviewer_keywords:
 - conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
 ms.openlocfilehash: 03d81d4216dabce2ea75b9fdcf6ef0971cc32490
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43388860"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530107"
 ---
 # <a name="-operator-c-reference"></a>?? 演算子 (C# リファレンス)
 `??` 演算子は、null 合体演算子と呼ばれます。  左側のオペランドが null 値でない場合には左側のオペランドを返し、null 値である場合には右側のオペランドを返します。  

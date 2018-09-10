@@ -2,12 +2,12 @@
 title: スレッドの同期 (C#)
 ms.date: 07/20/2015
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-ms.openlocfilehash: 4ed6cad647c965882a63282ce32c998cec138eec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6f0fe42c06b27369612cf586c7a93ce098822162
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463157"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509387"
 ---
 # <a name="thread-synchronization-c"></a>スレッドの同期 (C#)
 次のセクションでは、マルチスレッド アプリケーションでリソースへのアクセスを同期するために使用できる機能とクラスについて説明します。  
@@ -142,26 +142,27 @@ class ThreadingExample
 ## <a name="deadlocks"></a>デッドロック  
  スレッドの同期は、マルチスレッド アプリケーションにとって非常に大切ですが、`deadlock` を生じさせてしまう危険性が常にあります。つまり、複数のスレッドが互いに待機しあって、アプリケーションが中断してしまう状態になります。 デッドロックは、たとえるなら四方向が一時停止の交差点で停止した車どうしが、相手の車を先に行かせるよう互いに譲り合い、誰もが動けなくなっている状態に似ています。 デッドロックを防ぐことは重要です。その鍵となるのは、綿密なプランです。 コーディングを始める前にマルチスレッド アプリケーションを図式化すると、デッドロック状態を予想できることがよくあります。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.WaitHandle.WaitOne%2A>  
- <xref:System.Threading.WaitHandle.WaitAny%2A>  
- <xref:System.Threading.WaitHandle.WaitAll%2A>  
- <xref:System.Threading.Thread.Join%2A>  
- <xref:System.Threading.Thread.Start%2A>  
- <xref:System.Threading.Thread.Sleep%2A>  
- <xref:System.Threading.Monitor>  
- <xref:System.Threading.Mutex>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- <xref:System.Threading.Interlocked>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading>  
- <xref:System.Threading.EventWaitHandle.Set%2A>  
- <xref:System.Threading.Monitor>  
- [lock ステートメント](../../../../csharp/language-reference/keywords/lock-statement.md)  
- [ミューテックス](../../../../standard/threading/mutexes.md)  
- [インタロックされた操作](../../../../standard/threading/interlocked-operations.md)  
- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
- [マルチスレッド処理のためのデータの同期](../../../../standard/threading/synchronizing-data-for-multithreading.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.WaitHandle.WaitOne%2A>  
+- <xref:System.Threading.WaitHandle.WaitAny%2A>  
+- <xref:System.Threading.WaitHandle.WaitAll%2A>  
+- <xref:System.Threading.Thread.Join%2A>  
+- <xref:System.Threading.Thread.Start%2A>  
+- <xref:System.Threading.Thread.Sleep%2A>  
+- <xref:System.Threading.Monitor>  
+- <xref:System.Threading.Mutex>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- <xref:System.Threading.Interlocked>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading>  
+- <xref:System.Threading.EventWaitHandle.Set%2A>  
+- <xref:System.Threading.Monitor>  
+- [lock ステートメント](../../../../csharp/language-reference/keywords/lock-statement.md)  
+- [ミューテックス](../../../../standard/threading/mutexes.md)  
+- [インタロックされた操作](../../../../standard/threading/interlocked-operations.md)  
+- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
+- [マルチスレッド処理のためのデータの同期](../../../../standard/threading/synchronizing-data-for-multithreading.md)

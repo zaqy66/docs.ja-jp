@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
 ms.openlocfilehash: 59ca63d5089e377627a9116f24f9a0a1681bb4b2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43461684"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506348"
 ---
 # <a name="warning-c-reference"></a>#warning (C# リファレンス)
 `#warning` を使用すると、コード内の特定の場所から [CS1030](../../misc/cs1030.md) レベル 1 のコンパイラの警告を生成できます。 例:  

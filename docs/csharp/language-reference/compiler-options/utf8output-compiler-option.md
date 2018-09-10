@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -utf8output compiler option [C#]
 ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
 ms.openlocfilehash: 32c239f7563101cb1dddedbf868d298806353492
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43476262"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518173"
 ---
 # <a name="-utf8output-c-compiler-options"></a>-utf8output (C# コンパイラ オプション)
 **-utf8output** オプションは UTF-8 エンコードを使用してコンパイラ出力を表示します。  

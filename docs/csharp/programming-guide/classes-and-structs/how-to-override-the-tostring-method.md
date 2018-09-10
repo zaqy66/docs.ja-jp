@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 86394f5fed55f57df8928648548fcfca117b00d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b047efb9215675b8c3dfb75438a6dbbc4e6f92d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330708"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084174"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>方法: ToString メソッドをオーバーライドする (C# プログラミング ガイド)
 C# では、すべてのクラスまたは構造体が、暗黙的に <xref:System.Object> クラスを継承します。 そのため、C# のすべてのオブジェクトが <xref:System.Object.ToString%2A> メソッドを取得し、そのオブジェクトの文字列表現を返します。 たとえば、`int` 型の変数はすべて `ToString` メソッドを持ち、次のようにその変数の内容を文字列として返すことができます。  
@@ -42,13 +42,14 @@ C# では、すべてのクラスまたは構造体が、暗黙的に <xref:Syst
   
      [!code-csharp[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
-## <a name="see-also"></a>参照  
- <xref:System.IFormattable>  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [文字列](../../../csharp/programming-guide/strings/index.md)  
- [string](../../../csharp/language-reference/keywords/string.md)  
- [new](../../../csharp/language-reference/keywords/new.md)  
- [override](../../../csharp/language-reference/keywords/override.md)  
- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
- [型の書式設定](../../../standard/base-types/formatting-types.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.IFormattable>  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [文字列](../../../csharp/programming-guide/strings/index.md)  
+- [string](../../../csharp/language-reference/keywords/string.md)  
+- [new](../../../csharp/language-reference/keywords/new.md)  
+- [override](../../../csharp/language-reference/keywords/override.md)  
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+- [型の書式設定](../../../standard/base-types/formatting-types.md)

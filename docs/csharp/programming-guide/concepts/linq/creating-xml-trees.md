@@ -2,12 +2,12 @@
 title: XML ツリーの作成 (C#)
 ms.date: 07/20/2015
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
-ms.openlocfilehash: a9e9cfd82434de0fabc8119aa500ad9d9ef8155a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 1245c0f087bb63f12d9f17389bf752330ccc7670
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481376"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521539"
 ---
 # <a name="creating-xml-trees-c"></a>XML ツリーの作成 (C#)
 最も一般的な XML タスクの 1 つは、XML ツリーの構築です。 ここでは、XML ツリーを作成するいくつかの方法について説明します。  
@@ -23,5 +23,6 @@ ms.locfileid: "43481376"
 |[方法: XSD を使用して検証する (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|XSD を使用して XML ツリーを検証する方法について説明します。|  
 |[XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ](../../../../csharp/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md)|コンストラクターやメソッドに渡すことができる有効な引数について説明します。これらのコンストラクターやメソッドは、コンテンツを要素やドキュメントに追加するためのものです。|  
   
-## <a name="see-also"></a>参照  
- [プログラミング ガイド (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>参照
+
+- [プログラミング ガイド (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -3,12 +3,12 @@ title: C# における文字列補間
 description: C# の文字列補間を使用した結果文字列に書式設定された式の結果を含める方法について説明します。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b28890034cc0ab73f96c825b5548223e1c5cd1f4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43419100"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086704"
 ---
 # <a name="string-interpolation-in-c"></a>C# における文字列補間 #
 
@@ -106,9 +106,9 @@ ms.locfileid: "43419100"
 
 このチュートリアルでは、文字列補間の使用に関する一般的なシナリオについて説明しています。 文字列補間の詳細については、[文字列補間](../language-reference/tokens/interpolated.md)に関するトピックを参照してください。 .NET の型の書式設定の詳細については、「[.NET での型の書式設定](../../standard/base-types/formatting-types.md)」および「[複合書式設定](../../standard/base-types/composite-formatting.md)」のトピックを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-<xref:System.String.Format%2A?displayProperty=nameWithType>  
-<xref:System.FormattableString?displayProperty=nameWithType>  
-<xref:System.IFormattable?displayProperty=nameWithType>  
-[文字列](../programming-guide/strings/index.md)  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>  
+- <xref:System.FormattableString?displayProperty=nameWithType>  
+- <xref:System.IFormattable?displayProperty=nameWithType>  
+- [文字列](../programming-guide/strings/index.md)  

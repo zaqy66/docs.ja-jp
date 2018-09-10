@@ -2,12 +2,12 @@
 title: 既定の段落スタイルの検索 (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 7c81ad1aed25eea3b8363caebe0eb980ca69c557
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 77eb008ba6419e58541b60ac1ca7c1ef0344e316
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43479826"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800254"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>既定の段落スタイルの検索 (C#)
 「WordprocessingML ドキュメント内の情報の操作」チュートリアルでの最初のタスクは、ドキュメント内にある段落の既定のスタイルを検索することです。  
@@ -88,5 +88,6 @@ The default style is: Normal
   
 -   [段落とそのスタイルの取得 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a>参照  
- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作](https://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)
+## <a name="see-also"></a>参照
+
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

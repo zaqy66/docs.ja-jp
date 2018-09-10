@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 ms.openlocfilehash: 4a2d3ea2bda56caf6a16f52877ad36b3947357e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391111"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518160"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (C# コンパイラ オプション)
 **-target:exe** オプションを指定した場合、コンパイラは実行可能な (EXE) コンソール アプリケーションを作成します。  
@@ -43,7 +43,7 @@ ms.locfileid: "43391111"
   
 3.  **[出力の種類]** プロパティを変更します。  
   
- このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.ProjectProperties3.OutputType%2A>」をご覧ください。  
+ このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>」をご覧ください。  
   
 ## <a name="example"></a>例  
  次のコマンド ラインのいずれかで `in.cs` がコンパイルされ、`in.exe` が作成されます。  

@@ -2,12 +2,12 @@
 title: '方法: LINQ クエリのカスタム メソッドを追加する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: cd282b4b8ee4add759070317d9dbc3f78c07abf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e843f64a8556b110bc96126ddbbd760b6093270
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326899"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510424"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>方法: LINQ クエリのカスタム メソッドを追加する (C#)
 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスに拡張メソッドを追加することで、LINQ クエリに使用できるメソッド セットを拡張できます。 たとえば一連の値から単一の値を求めるために、平均値や最大値を求める標準的な演算に加えて、独自の集計メソッドを作成することができます。 また、一連の値を受け取って別の一連の値を返す特定のデータ変換やカスタム フィルターの働きを持ったメソッドを作成することもできます。 このようなメソッドには、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A>、<xref:System.Linq.Enumerable.Reverse%2A> があります。  
@@ -205,6 +205,7 @@ foreach (var element in query)
 */  
 ```  
   
-## <a name="see-also"></a>参照  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+## <a name="see-also"></a>参照
+
+- <xref:System.Collections.Generic.IEnumerable%601>  
+- [拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

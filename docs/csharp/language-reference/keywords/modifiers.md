@@ -6,11 +6,11 @@ helpviewer_keywords:
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
 ms.openlocfilehash: 5000f94a954994769eda2ac09404ba6a71c4639b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930365"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524829"
 ---
 # <a name="modifiers-c-reference"></a>修飾子 (C# リファレンス)
 修飾子は、型および型メンバーの宣言を修飾するために使用されます。 ここでは、C# の修飾子について説明します。  
@@ -24,8 +24,7 @@ ms.locfileid: "42930365"
 |[event](../../../csharp/language-reference/keywords/event.md)|イベントを宣言します。|  
 |[extern](../../../csharp/language-reference/keywords/extern.md)|メソッドが外部で実装されることを示します。|  
 |[new](../../../csharp/language-reference/keywords/new.md)|基底クラスから継承されたメンバーを明示的に隠ぺいします。|  
-|
-  [override](../../../csharp/language-reference/keywords/override.md)|基本クラスから継承された仮想メンバーの新しい実装を提供します。|  
+|[override](../../../csharp/language-reference/keywords/override.md)|基本クラスから継承された仮想メンバーの新しい実装を提供します。|  
 |[partial](../../../csharp/language-reference/keywords/partial-type.md)|同一アセンブリに部分クラス、部分構造体、または部分メソッドを定義します。|  
 |[readonly](../../../csharp/language-reference/keywords/readonly.md)|フィールドを宣言します。このフィールドは、宣言の一部として、または同じクラスのコンストラクター内でだけ、値の代入ができます。|  
 |[sealed](../../../csharp/language-reference/keywords/sealed.md)|クラスの継承ができないことを指定します。|  
