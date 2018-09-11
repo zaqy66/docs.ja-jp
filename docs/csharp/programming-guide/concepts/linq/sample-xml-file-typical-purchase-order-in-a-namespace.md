@@ -2,17 +2,17 @@
 title: 'サンプル XML ファイル: 名前空間内の一般的な購買発注書 1'
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-ms.openlocfilehash: 0adee32a3ee4d2347bd2e0a84024fe478346987a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: dd3b19a34aa36f4378e247e394f8dae912f13854
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43404231"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510176"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="1307a-102">サンプル XML ファイル : 名前空間内の一般的な購買発注書</span><span class="sxs-lookup"><span data-stu-id="1307a-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
-<span data-ttu-id="1307a-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="1307a-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="1307a-104">このファイルは、一般的な購買発注書です。</span><span class="sxs-lookup"><span data-stu-id="1307a-104">This file is a typical purchase order.</span></span> <span data-ttu-id="1307a-105">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="1307a-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="e32a6-102">サンプル XML ファイル : 名前空間内の一般的な購買発注書</span><span class="sxs-lookup"><span data-stu-id="e32a6-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="e32a6-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="e32a6-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="e32a6-104">このファイルは、一般的な購買発注書です。</span><span class="sxs-lookup"><span data-stu-id="e32a6-104">This file is a typical purchase order.</span></span> <span data-ttu-id="e32a6-105">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="e32a6-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="1307a-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="1307a-106">PurchaseOrderInNamespace.xml</span></span>  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="e32a6-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="e32a6-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -54,5 +54,6 @@ ms.locfileid: "43404231"
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1307a-107">参照</span><span class="sxs-lookup"><span data-stu-id="1307a-107">See Also</span></span>  
- [<span data-ttu-id="1307a-108">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="1307a-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="e32a6-107">参照</span><span class="sxs-lookup"><span data-stu-id="e32a6-107">See Also</span></span>
+
+- [<span data-ttu-id="e32a6-108">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e32a6-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
