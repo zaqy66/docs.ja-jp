@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728681"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44187469"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>正規表現の例: HREFS のスキャン
 次の例では、入力文字列を検索して、文字列中のすべての href="…" 値とその場所を表示します。  
@@ -56,5 +56,6 @@ ms.locfileid: "34728681"
   
  これらの問題に対処するために、<xref:System.Text.RegularExpressions.Regex> クラスでは指定されたスロットに一致文字列をキャプチャするための構文 `(?<name>…)` をサポートしています (スロットには、文字列または整数の名前を付けることができます。整数の名前を付けた方が、よりすばやく再呼び出しできます)。 これにより、同じ文字列に対する代替表現の一致結果をすべて同じ場所に渡すことができます。 競合が発生する場合は、スロットにキャプチャされた最後の一致文字列が、適切な一致であると見なされます。 (ただし、1 つのスロットで複数の一致文字列の完全なリストを使用することもできます。 詳細については、<xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> コレクションを参照してください。)  
   
-## <a name="see-also"></a>参照  
- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>関連項目
+
+- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 043b4ab00699062d8c1af5866fbeb3773c8ce9af
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071865"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039502"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正規表現におけるバックトラッキング
 <a name="top"></a> バックトラッキングは、正規表現パターンに省略可能な [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) または [代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)が含まれている場合に発生します。この場合、正規表現エンジンは、一致の検索を継続するために、以前に保存した状態に戻ります。 バックトラッキングは、正規表現を強力にするための中心的な機能で、これにより、非常に複雑なパターンを照合できる強力かつ柔軟な正規表現を作成できるようになります。 その一方で、バックトラッキングにはマイナス面もあり、 多くの場合、正規表現エンジンのパフォーマンスを左右する最大の要因になります。 さいわい、正規表現エンジンの動作とバックトラッキングの使用方法は開発者が制御できます。 ここでは、バックトラッキングの動作のしくみと、バックトラッキングを制御する方法について説明します。  
@@ -215,9 +215,10 @@ ms.locfileid: "37071865"
   
  [ページのトップへ](#top)  
   
-## <a name="see-also"></a>参照  
- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)  
- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
- [代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
- [グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+## <a name="see-also"></a>関連項目
+
+- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)  
+- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
+- [代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
