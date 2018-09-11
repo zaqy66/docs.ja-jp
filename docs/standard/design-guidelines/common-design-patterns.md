@@ -9,11 +9,11 @@ ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44228053"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262012"
 ---
 # <a name="common-design-patterns"></a>共通デザイン パターン
 ソフトウェア パターン、パターンの言語、およびパターンの非常に広範なサブジェクトに対処するためのアンチ パターンに多数の書籍があります。 したがって、ガイドラインと非常に限定された一連の .NET Framework Api の設計で頻繁に使用するパターンに関連するディスカッションについても説明します。  

@@ -10,11 +10,11 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 3d5d91db9256cdfb3aa0062d66333f13797ee1bb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195609"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273282"
 ---
 # <a name="net-performance-tips"></a>.NET のパフォーマンスに関するヒント
 *パフォーマンス*という用語は、プログラムの実行速度を表す一般的な用語です。 ソース コード内で特定の基本規則に従うことにより、実行速度を上げることができることもあります。 プログラムによっては、コードを綿密に調べることが重要で、プロファイラーを使用して、可能な限り速く実行しているかどうかを確認することが必要な場合もあります。 一方、記述どおりに許容可能な速度でコードが実行されているため、このような最適化が必要ないプログラムもあります。 ここでは、パフォーマンスの低下が発生する一般的な状況と、パフォーマンスを向上させるためのヒント、およびパフォーマンスに関する追加のトピックについて説明します。 パフォーマンスの計画と計測の詳細については、「[Performance](../../../docs/framework/performance/index.md)」(パフォーマンス) を参照してください。  

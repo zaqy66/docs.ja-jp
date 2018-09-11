@@ -3,11 +3,11 @@ title: トレースの拡張
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
 ms.openlocfilehash: 02dfcc099883ed1d5e97b4f7b1a1f76d49b27a20
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44182935"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268447"
 ---
 # <a name="extending-tracing"></a>トレースの拡張
 このサンプルでは、クライアントとサービスのコードでユーザー定義のアクティビティ トレースを記述することで、Windows Communication Foundation (WCF) トレース機能を拡張する方法を示します。 これにより、ユーザーはトレース アクティビティを作成し、トレースを作業の論理単位ごとにグループ化することができます。 さらに、転送 (同じエンドポイント内) や伝達 (異なるエンドポイント間) を経由してアクティビティを相互に関連付けることもできます。 このサンプルでは、トレースはクライアントとサービスの両方で有効です。 クライアントとサービス構成ファイルでトレースを有効にする方法の詳細については、次を参照してください。[トレースとメッセージ ログ](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)します。  

@@ -12,11 +12,11 @@ ms.assetid: 3eb5ce6f-f304-4f87-8e81-0f25092f5ad4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0f019c1075c119c3d814b3b7add8fe30f3e4d107
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252039"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270972"
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>Windows ランタイムへの URI の引き渡し
 Windows ランタイムのメソッドは絶対 URI だけを受け取ります。 [!INCLUDE[wrt](../../../includes/wrt-md.md)] メソッドに相対 URI を渡すと、<xref:System.ArgumentException> 例外がスローされます。 その理由を次に示します: を使用すると、 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 、.NET Framework コードで、<xref:Windows.Foundation.Uri?displayProperty=nameWithType>クラスとして表示されます<xref:System.Uri?displayProperty=nameWithType>Intellisense にします。 <xref:System.Uri?displayProperty=nameWithType>クラスは、相対 Uri を使用できますが、<xref:Windows.Foundation.Uri?displayProperty=nameWithType>クラスはありません。 [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントで公開するメソッドでも同様です。 URI を受け取るメソッドをコンポーネントで公開する場合、コードのシグネチャには <xref:System.Uri?displayProperty=nameWithType> が含まれます。 ただし、コンポーネントのユーザーに、署名は<xref:Windows.Foundation.Uri?displayProperty=nameWithType>します。 コンポーネントに渡す URI は、絶対 URI でなければなりません。  

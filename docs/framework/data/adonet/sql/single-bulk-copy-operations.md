@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
 ms.openlocfilehash: 274a6e87b272002a567fd92605c4e690c03b6e26
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190203"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271011"
 ---
 # <a name="single-bulk-copy-operations"></a>バルク コピー操作の単一実行
 SQL Server のバルク コピー操作を実行する簡単な方法は、データベースに対して単一操作を実行することです。 既定では、バルク コピー操作は分離された操作として実行されます。このコピー操作は非トランザクション方式で処理され、ロールバックできません。  

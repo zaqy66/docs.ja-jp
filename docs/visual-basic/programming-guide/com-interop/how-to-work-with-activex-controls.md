@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 ms.openlocfilehash: 8faa8fc86312df2f03ec7a70a488d0e7c12b394b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195164"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44337500"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>方法: ActiveX コントロールを操作する (Visual Basic)
 ActiveX コントロールは、COM コンポーネントまたは Web ページまたはプログラムには、他のユーザーがパッケージ化された機能を再利用するには、他のアプリケーションに挿入できるオブジェクトです。 Visual Basic 6.0 と以前のバージョン用に開発された ActiveX コントロールを使用して機能を追加することができます、**ツールボックス**Visual Studio の。  

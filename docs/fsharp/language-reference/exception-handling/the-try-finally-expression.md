@@ -3,11 +3,11 @@ title: '例外: try...finally 式 (F#)'
 description: 学習方法、f# 'try… 最後に' 式では、コードのブロックが例外をスローする場合でも、クリーンアップ コードを実行することができます。
 ms.date: 05/16/2016
 ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211594"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275146"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>例外: try...finally 式
 

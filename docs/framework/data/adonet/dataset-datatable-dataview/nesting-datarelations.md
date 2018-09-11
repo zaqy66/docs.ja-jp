@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
 ms.openlocfilehash: 9255615c7786773f1d4f453b910fdccdf191721f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183055"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268043"
 ---
 # <a name="nesting-datarelations"></a>DataRelation の入れ子化
 データのリレーショナル表現では、各テーブルに含まれている行が、列または列セットを使用して相互に関連付けられています。 ADO.NET の <xref:System.Data.DataSet> では、テーブル間のリレーションシップは <xref:System.Data.DataRelation> を使用して実装されます。 作成するときに、 **DataRelation**列の親子リレーションシップは、リレーションだけをとおして管理されます。 テーブルと列はそれぞれ別個のエンティティです。 XML のデータ階層表現では、子要素が入れ子の状態で含まれている親要素によって親子のリレーションシップが表現されます。  

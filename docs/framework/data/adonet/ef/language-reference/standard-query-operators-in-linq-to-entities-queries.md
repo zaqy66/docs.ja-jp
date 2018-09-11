@@ -3,11 +3,11 @@ title: LINQ to Entities クエリの標準クエリ演算子
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 302fa281767fc95e9a9a2192382034b3a519cd92
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217322"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262285"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities クエリの標準クエリ演算子
 クエリでは、データ ソースから取得する情報を指定できます。 また、並べ替え、グループ化、整形方法を指定して情報を取得することもできます。 LINQ には、クエリで使用できる一連の標準クエリ メソッドが用意されています。 これらのメソッドのほとんどの操作のシーケンス。シーケンスを実装する型を持つオブジェクトをこのコンテキストで、<xref:System.Collections.Generic.IEnumerable%601>インターフェイスまたは<xref:System.Linq.IQueryable%601>インターフェイス。 標準クエリ演算子のクエリ機能には、フィルター処理、投影、集計、並べ替え、グループ化、ページングなどがあります。 よく使用される標準クエリ演算子の中には、クエリ式構文を使用することで呼び出しが可能になるように、専用のキーワード構文のあるものもあります。 クエリ式はメソッド ベースの方法とは異なり、読み取りやすくクエリを表現できます。 クエリ式の句は、コンパイル時にクエリ メソッドへの呼び出しに変換されます。 同等のクエリ式の句がある標準クエリ演算子の一覧は、次を参照してください。[標準クエリ演算子の概要](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)します。  

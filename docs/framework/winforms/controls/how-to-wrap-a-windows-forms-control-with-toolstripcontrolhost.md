@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
 ms.openlocfilehash: b502890fcad051d2393bb175bb0795acee2df613
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209972"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268589"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>方法 : ToolStripControlHost を使用して Windows フォーム コントロールをラップする
 <xref:System.Windows.Forms.ToolStripControlHost> は、<xref:System.Windows.Forms.ToolStripControlHost> コンストラクターを使用するか、<xref:System.Windows.Forms.ToolStripControlHost> 自身を拡張することによって、任意の Windows フォーム コントロールをホストできるように設計されています。 より簡単にコントロールをラップするには、<xref:System.Windows.Forms.ToolStripControlHost> を拡張し、頻繁に使用するコントロールのプロパティとメソッドを公開するプロパティとメソッドを実装します。 コントロールのイベントを <xref:System.Windows.Forms.ToolStripControlHost> レベルで公開することもできます。  

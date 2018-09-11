@@ -3,11 +3,11 @@ title: オプション (F#)
 description: 名前付きの値または変数の場合、実際の値の型が存在しない f# オプションを使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187823"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262595"
 ---
 # <a name="options"></a>オプション
 

@@ -10,11 +10,11 @@ ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222124"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277667"
 ---
 # <a name="code-contracts"></a>コード コントラクト
 コード コントラクトを使用すると、事前条件、事後条件、およびオブジェクト不変条件をコードで指定できます。 事前条件とは、メソッドやプロパティに入るときに満たされている必要がある要件です。 事後条件は、メソッドやプロパティのコードが終了するときの予測を表します。 オブジェクト不変条件は、正しい状態のクラスに対して予期される状態を表します。  

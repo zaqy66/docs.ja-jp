@@ -3,11 +3,11 @@ title: クラス内の let 束縛 (F#)
 description: クラス定義で 'let' のバインドを使用して、プライベート フィールドと f# クラスのプライベート関数を定義する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186020"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274743"
 ---
 # <a name="let-bindings-in-classes"></a>クラス内の let 束縛
 

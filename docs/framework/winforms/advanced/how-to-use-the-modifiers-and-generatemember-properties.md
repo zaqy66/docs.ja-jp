@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
 ms.openlocfilehash: 9bb6e6568822f3edcabf50a4fceb7cc6386f05ef
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190190"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268550"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>方法 : Modifiers プロパティおよび GenerateMember プロパティを使用する
 2 つのプロパティが、デザイン環境によって提供される Windows フォームにコンポーネントを配置すると:`GenerateMember`と`Modifiers`します。 `GenerateMember`プロパティは、Windows フォーム デザイナーでコンポーネントのメンバー変数を生成するときを指定します。 `Modifiers`プロパティは、そのメンバー変数に割り当てられているアクセス修飾子。 場合の値、`GenerateMember`プロパティは`false`の値、`Modifiers`プロパティは影響を与えません。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
 ms.openlocfilehash: 6ec65cad0070bdbd1d510bcc822f3b71f9cf69dc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195294"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259994"
 ---
 # <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>メソッド ベースのクエリ構文例 : 結合 (LINQ to DataSet)
 結合は、リレーショナル データベース テーブルのように互いにナビゲート可能なリレーションシップを持たないデータ ソースをターゲットとするクエリにおいて重要な操作です。 2 つのデータ ソースを結合する操作とは、あるデータ ソース内のオブジェクトを、他方のデータ ソース内で共通の属性を持つオブジェクトと関連付けることです。 詳細については、次を参照してください。[標準クエリ演算子の概要](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)します。  

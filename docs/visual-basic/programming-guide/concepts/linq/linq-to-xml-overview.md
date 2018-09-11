@@ -3,11 +3,11 @@ title: LINQ to XML の概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 962fddcfec04259425c1094f07adf0e3966dfab0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185088"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338507"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML の概要 (Visual Basic)
 XML は、多くのコンテキストでデータを書式設定する方法として広く採用されてきました。 たとえば、Web、構成ファイル、Microsoft Office Word ファイル、データベースで XML が使用されています。  

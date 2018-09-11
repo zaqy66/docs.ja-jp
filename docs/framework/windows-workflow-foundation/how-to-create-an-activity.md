@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: deb1b6ca5c6fc996a015e32dd5e0c7b9bd6530fa
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137604"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269385"
 ---
 # <a name="how-to-create-an-activity"></a>アクティビティを作成する方法
 アクティビティは [!INCLUDE[wf1](../../../includes/wf1-md.md)] の動作の中心的な単位です。 アクティビティの実行ロジックはマネージ コードで実装できます。または他のアクティビティを使用して実装できます。 このトピックでは、2 つのアクティビティを作成する方法について説明します。 最初のアクティビティは、コードを使用してその実行ロジックを実装する単純なアクティビティです。 2 番目のアクティビティの実装は他のアクティビティを使用して定義されています。 これらのアクティビティは、チュートリアルの次の手順で使用します。  

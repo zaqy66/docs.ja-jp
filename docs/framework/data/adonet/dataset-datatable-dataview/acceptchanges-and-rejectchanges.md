@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
 ms.openlocfilehash: 30b2c303b1823430c480f0706500f8f7e7053c4c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207149"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272970"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChange と RejectChange
 内のデータに加えられた変更の精度を確認した後、<xref:System.Data.DataTable>を使用して変更を受け入れることができます、<xref:System.Data.DataRow.AcceptChanges%2A>のメソッド、 <xref:System.Data.DataRow>、 <xref:System.Data.DataTable>、または<xref:System.Data.DataSet>、これは、設定、**現在**行値を**元**値し、設定は、 **RowState**プロパティを**Unchanged**します。 いずれかをクリアして承認または変更を拒否する**RowError**情報と設定、 **HasErrors**プロパティを**false**します。 変更を受け入れるかまたは拒否した場合、データ ソース内で実行中の更新操作にも影響することがあります。 詳細については、次を参照してください。 [Dataadapter によるデータ ソースを更新](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)します。  

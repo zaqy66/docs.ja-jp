@@ -9,11 +9,11 @@ ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d74ce08197ac76a601202da8e35ca6f619207076
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208784"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264715"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework の暗号モデル
 .NET Framework は、多くの標準的な暗号化アルゴリズムの実装を提供します。 これらのアルゴリズムは簡単に使用でき、またできるだけ安全な既定のプロパティを提供しています。 さらに、オブジェクトの継承、ストリームの設計、および構成の .NET Framework の暗号モデルは非常に拡張性に優れています。  

@@ -17,11 +17,11 @@ ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252065"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277313"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>方法 : デジタル署名で XML ドキュメントに署名する
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用すると、XML ドキュメントまたは XML ドキュメントの一部にデジタル署名で署名することができます。  XML デジタル署名 (XMLDSIG) を使用すると、データが署名後に変更されなかったことを確認できます。  XMLDSIG 標準の詳細については、World Wide Web Consortium (W3C) の推奨事項を参照してください。 [XML 署名の構文と処理](https://www.w3.org/TR/xmldsig-core/)します。  

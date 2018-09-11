@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
 ms.openlocfilehash: 7fd111f5e885de3389b8f93002db22b48c4edd45
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191977"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261617"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic での XML の操作
 使用することができます*XML リテラル*文字列、ファイル、またはストリームなどの外部ソースから XML を読み込めません。 使用することができますし、 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 、XML を操作して、使用する[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]XML に対してクエリをします。  

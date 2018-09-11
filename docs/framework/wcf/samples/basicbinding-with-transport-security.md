@@ -5,11 +5,11 @@ ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 69257099338ae2d50c5ea184c0800d0057e020f4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185404"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264689"
 ---
 # <a name="basicbinding-with-transport-security"></a>トランスポート セキュリティ付き BasicBinding
 このサンプルでは、基本的なバインディングを使用した SSL トランスポート セキュリティを示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。  

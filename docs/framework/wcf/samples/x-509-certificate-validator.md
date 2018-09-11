@@ -3,11 +3,11 @@ title: X.509 証明書検証
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: e54f79046113e5f1a1a1cc065606fd5b706b49ac
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197077"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272528"
 ---
 # <a name="x509-certificate-validator"></a>X.509 証明書検証
 このサンプルでは、カスタム X.509 証明書検証を実装する方法を示します。 これは、アプリケーションの要件に適した組み込みの X.509 証明書検証モードがない場合に便利です。 このサンプルでは、自己発行の証明書を許可するカスタム検証を備えたサービスを示します。 クライアントはこのような証明書を使用して、このサービスに認証されます。  

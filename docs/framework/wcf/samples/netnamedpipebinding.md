@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
 ms.openlocfilehash: d69d647b4fe4c38a0b2b355ae72cedfee6894f4b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196817"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277193"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 このサンプルでは `netNamedPipeBinding` バインディングについて説明します。このバインディングは、同一コンピュータでのプロセス間通信を実現します。 名前付きパイプは、異なるコンピューター間では動作しません。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービス。  

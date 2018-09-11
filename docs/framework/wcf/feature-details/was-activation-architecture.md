@@ -3,11 +3,11 @@ title: WAS アクティベーション アーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881033"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261799"
 ---
 # <a name="was-activation-architecture"></a>WAS アクティベーション アーキテクチャ
 ここでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) の各コンポーネントについて説明します。  

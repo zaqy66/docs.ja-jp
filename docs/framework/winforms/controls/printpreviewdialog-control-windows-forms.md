@@ -8,11 +8,11 @@ helpviewer_keywords:
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
 ms.openlocfilehash: 0f35343ca06666580d744b4d6e0fa954afedbd9c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200441"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274243"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog コントロール (Windows フォーム)
 Windows フォームの `PrintPreviewDialog` コントロールは、ドキュメントを印刷時の状態で表示するために使用される事前構成済みダイアログ ボックスです。 このコントロールは、独自のダイアログ ボックスを使用しない簡易ソリューションとして、Windows ベースのアプリケーションの中で使用します。 このコントロールには、印刷を開始するボタン、ズーム イン用のボタン、1 ページまたは複数ページを表示するボタン、およびダイアログ ボックスを閉じるためのボタンが含まれています。  

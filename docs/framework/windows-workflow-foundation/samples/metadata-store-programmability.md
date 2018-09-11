@@ -3,11 +3,11 @@ title: メタデータ ストアのプログラム性
 ms.date: 03/30/2017
 ms.assetid: 5b613661-f3f9-4e07-8e88-28c9ea2fd8f8
 ms.openlocfilehash: 4ea6117686b985a9ea18ce4e5cc4ea2b5c25524c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187021"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276329"
 ---
 # <a name="metadata-store-programmability"></a>メタデータ ストアのプログラム性
 メタデータ ストアは、実行時に任意のメタデータを CLR 属性の形式で型に関連付けることができる [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]機能です。 これにより、実行時コンポーネントと対応するデザイン時コンポーネントの間の疎結合、および実行時コンポーネントに影響を与えることなくデザイン時コンポーネントを変更する機能が実現します。 このサンプルでは、属性を実行時の型に適用することで、メタデータ ストアを使用して制御できないソースをプログラミングする方法を示します。 通常使用されるこの用語は、ホスト アプリケーションによって型セットのメタデータが登録されることを示します。  

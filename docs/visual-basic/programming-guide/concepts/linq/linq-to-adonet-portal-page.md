@@ -3,11 +3,11 @@ title: LINQ to ADO.NET (ポータル ページ)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
 ms.openlocfilehash: 6e37a1ffdef3dd2299c2c534345ba7c6dc610471
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192627"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266421"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (ポータル ページ)
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] では、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] プログラミング モデルを使用して [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 内の列挙可能なオブジェクトに対してクエリを実行できます。  

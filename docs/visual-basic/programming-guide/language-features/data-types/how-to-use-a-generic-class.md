@@ -22,11 +22,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
 ms.openlocfilehash: 108532e5b765fa918fa894199ef710a9f52db4e4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207136"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264403"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>方法: ジェネリック クラスを使用する (Visual Basic)
 *型パラメーター* を受け取るクラスは、 *ジェネリック クラス*と呼ばれます。 ジェネリック クラスを使用している場合は、このパラメーターのそれぞれに *型引数* を入力することで、ジェネリック クラスから *構築済みクラス* を生成することができます。 これで、構築済みクラス型の変数を宣言し、構築済みクラスのインスタンスを作成して、その変数に割り当てることができます。  

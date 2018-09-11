@@ -10,11 +10,11 @@ helpviewer_keywords:
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
 ms.openlocfilehash: b43143fb3f27d127f93f5e8edd55b853ad604ef5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192274"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277680"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>ハイブリッド アプリケーションのトラブルシューティング
 <a name="introduction"></a> このトピックでは、両方を使用するハイブリッド アプリケーションを作成するときに発生する可能性がある一般的な問題を示します[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]と[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]テクノロジ。  

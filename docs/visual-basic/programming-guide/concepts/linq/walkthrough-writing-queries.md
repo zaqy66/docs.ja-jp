@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221936"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275354"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>チュートリアル: Visual Basic でクエリを記述する
 このチュートリアルでは、Visual Basic 言語の機能を使用して、記述する方法について説明[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]クエリ式。 このチュートリアルでは、学生オブジェクトの一覧にクエリを作成する方法、クエリを実行する方法、およびそれらを変更する方法を示します。 クエリでは、オブジェクト初期化子、ローカル型推論では、匿名型など、いくつかの機能を組み込みます。  

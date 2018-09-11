@@ -11,11 +11,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 52dcb71a033ba4c2943ccda6787bf4a4e41d53d3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798977"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272463"
 ---
 # <a name="ui-automation-control-types"></a>UI オートメーション コントロール型
 **注**このドキュメントでは、管理を使用する .NET Framework 開発者向け[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]クラスで定義されている、<xref:System.Windows.Automation>名前空間。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  

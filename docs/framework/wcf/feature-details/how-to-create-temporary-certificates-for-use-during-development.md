@@ -6,11 +6,11 @@ helpviewer_keywords:
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
 ms.openlocfilehash: ca495c23b30144013b8efe22b7bf6f3cf38b16cd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195715"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273980"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>方法 : 開発中に使用する一時的な証明書を作成する
 セキュリティで保護されたサービスまたは Windows Communication Foundation (WCF) を使用してクライアントを開発する場合は、資格情報として使用する X.509 証明書を指定する必要があります。 証明書は通常、単独ではなく、いくつもの証明書が信頼チェーンとしてつながった形で存在しており、その最上位に位置するルート証明機関の証明書は、各コンピューターの [信頼されたルート証明機関] の証明書ストアに格納されています。 証明書を調べて順に信頼チェーンをたどっていくと、たとえば所属する会社や事業部門が運営する、ルート証明機関に到達します。 開発時にこの過程をエミュレートするためには、セキュリティ要件を満たす 2 種類の証明書を作る必要があります。 1 つは自己署名証明書で、[信頼されたルート証明機関] の証明書ストアに配置します。もう 1 つは、先の自己署名証明書を使って署名を施した証明書で、[ローカル コンピューター] の [個人] ストア、または [現在のユーザー] の [個人] ストアに配置します。 このトピックでは、Powershell を使用してこれら 2 つの証明書を作成する手順について説明します[New-selfsignedcertificate)](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps)コマンドレット。  

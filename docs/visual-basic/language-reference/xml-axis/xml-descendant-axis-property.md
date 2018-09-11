@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
 ms.openlocfilehash: 6040401ce3e98c835677be3c4cc7698013348f37
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194457"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268615"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 子孫軸プロパティ (Visual Basic)
 次の子孫にアクセスできます。<xref:System.Xml.Linq.XElement>オブジェクト、<xref:System.Xml.Linq.XDocument>オブジェクト、コレクションの<xref:System.Xml.Linq.XElement>オブジェクト、または一連の<xref:System.Xml.Linq.XDocument>オブジェクト。  

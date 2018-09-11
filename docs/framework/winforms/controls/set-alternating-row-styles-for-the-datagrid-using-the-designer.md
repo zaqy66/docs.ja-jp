@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
 ms.openlocfilehash: 5807df6d11580c22f2b754faf44fb3aa63dee14e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185572"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270920"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>方法 : デザイナーを使用して Windows フォーム DataGridView コントロールに交互の行のスタイルを設定する
 表形式のデータは多くの場合、別の背景色の交互の行のある帳簿のような形式で表示されます。 この形式を使用すると、多数の列がある幅の広いテーブルで、ユーザーが各行にあるセルを簡単に識別できるようになります。  

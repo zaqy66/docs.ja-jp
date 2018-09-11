@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
 ms.openlocfilehash: a319fba43c6735cd5552dd71d1fb614a6192da97
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205745"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260945"
 ---
 # <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>方法 : データ入力用のサイズ変更可能な Windows フォームを作成する
 レイアウトが優れていると、その親フォームの寸法の変更に柔軟に対応できます。 <xref:System.Windows.Forms.TableLayoutPanel> コントロールを使用すると、フォームの寸法の変更に応じて一貫した方法でコントロールの位置とサイズが変更されるように、フォームのレイアウトを調整できます。 <xref:System.Windows.Forms.TableLayoutPanel> コントロールは、コントロールの内容の変更によってレイアウトの変更が生じる場合にも便利です。 この手順で説明するプロセスは、Visual Studio 環境内で実行できます。  「[チュートリアル: データ入力用のサイズ変更可能な Windows フォームの作成](https://msdn.microsoft.com/library/991eahec\(v=vs.110\))」も参照してください。  

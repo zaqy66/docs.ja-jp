@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
 ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194582"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44263389"
 ---
 # <a name="xaml-in-wpf"></a>WPF の XAML
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 宣言型のアプリケーション用のマークアップ言語のプログラミングです。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aXAML プロセッサの実装を実装し、XAML 言語のサポートを提供します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]バッキング XAML 表現を必要な型を提供する型が実装されます。 一般の大部分を作成することができます、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML マークアップでアプリケーションの UI。  

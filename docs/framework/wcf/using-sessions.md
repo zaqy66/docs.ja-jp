@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: 898e5688ae08a59415c8b3116665eec6cb4cf904
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877376"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260205"
 ---
 # <a name="using-sessions"></a>セッションの使用
 Windows Communication Foundation (WCF) アプリケーションで、*セッション*会話にメッセージのグループを関連付けます。 WCF のセッションとは異なる場合、セッション オブジェクトで使用できる[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーション、サポートされる動作、およびさまざまな方法で制御されます。 このトピックでは、WCF でセッションを有効にする機能を説明します。 アプリケーションとその使用方法。  

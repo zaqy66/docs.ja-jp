@@ -3,11 +3,11 @@ title: 一意の ListenUri モードのサンプルを使用したサービス�
 ms.date: 03/30/2017
 ms.assetid: 9a6d35b2-0469-43c8-a0c9-63623e3d2733
 ms.openlocfilehash: 7e1c5ae0cb1a44c72a27566035b4bc20acbf1614
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214018"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44263891"
 ---
 # <a name="discover-a-service-with-unique-listen-uri-mode-sample"></a>一意の ListenUri モードのサンプルを使用したサービスの探索
 このサンプルでは、<xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> プロパティが <xref:System.ServiceModel.Description.ListenUriMode.Unique> に設定されているサービスを探索する方法を示します。 <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> プロパティが <xref:System.ServiceModel.Description.ListenUriMode.Unique> に設定されている場合は、ポートを一意に設定するか、GUID を付加することによってパスを一意に設定して、ListenUri を一意にする必要があります。  

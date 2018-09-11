@@ -3,11 +3,11 @@ title: Expressions2
 ms.date: 03/30/2017
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
 ms.openlocfilehash: e852b62e6d0b6b4b3ddc19b197902de5325310a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214421"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275094"
 ---
 # <a name="expressions"></a>式
 このサンプルでは、基本的な式をワークフローで使用する方法を示します。 このサンプルは、架空の会社の 2 人の従業員の基本給を計算するワークフローで構成されます。 `Employee` および `SalaryStats` という 2 つのクラスが Employee.cs と SalaryStats.cs で定義されています。 これらのクラスをワークフローで使用して、複合型の変数のプロパティに対する単純な数値演算と文字列操作を実行する方法を示します。  

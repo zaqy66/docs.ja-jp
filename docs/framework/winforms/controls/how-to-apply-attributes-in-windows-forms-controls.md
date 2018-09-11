@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
 ms.openlocfilehash: 1ab54b0c6828a0648fecfc293b6a7143b012ad6a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192172"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269346"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>方法 : Windows フォーム コントロールに属性を適用する
 デザイン環境を正しく操作しを実行時に正しく実行するコンポーネントとコントロールを開発するには、クラスとメンバーに属性を正しく適用する必要があります。  

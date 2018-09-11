@@ -3,11 +3,11 @@ title: WorkflowInstanceId の取得
 ms.date: 03/30/2017
 ms.assetid: bd7eea3b-1c28-4b84-9a67-003bc553aa81
 ms.openlocfilehash: 6725ed92bf785e5b7f7d61332944fcce8427388a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204329"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264099"
 ---
 # <a name="get-workflowinstanceid"></a>WorkflowInstanceId の取得
 このサンプルでは、カスタム アクティビティ `GetWorkflowInstanceId` を使用して、ワークフロー インスタンス ID を返す方法を示します。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
 ms.openlocfilehash: 90aa1e5dceb3cac87d330837496b9dc467dc1876
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44132700"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260059"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>DataSet への既存の制約の追加
 **入力**のメソッド、 **DataAdapter**塗りつぶします、<xref:System.Data.DataSet>では、テーブルの列と、データ ソースからの行のみが制約は一般設定、データ ソースによって、 **の塗りつぶし**メソッドにこのスキーマ情報を追加できません、**データセット**既定。 設定する、**データセット**いずれかの呼び出しでは、データ ソースから既存の主キー制約情報できます、 **FillSchema**のメソッド、 **DataAdapter**、設定や、**MissingSchemaAction**のプロパティ、 **DataAdapter**に**AddWithKey**呼び出す前に**入力**します。 これにより、その主キー制約、**データセット**データ ソースに反映します。 外部キー制約情報が含まれていないのように、明示的に作成する必要があります[DataTable の制約](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)します。  

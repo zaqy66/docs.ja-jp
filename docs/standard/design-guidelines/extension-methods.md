@@ -6,11 +6,11 @@ ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180411"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265248"
 ---
 # <a name="extension-methods"></a>拡張メソッド
 拡張メソッドは、言語機能により、インスタンス メソッドの呼び出し構文を使用して呼び出される静的メソッドです。 これらのメソッドは、メソッドは、操作の対象のインスタンスを表す 1 つ以上のパラメーターを取得する必要があります。  
