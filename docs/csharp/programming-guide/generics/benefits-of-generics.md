@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: bd0a133c6ce1a9623bfe8598d1dc786c44e6eaad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2770f8bc7fc4242beb02bf9e0555b5cbb8db0180
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336831"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503795"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>ジェネリックの利点 (C# プログラミング ガイド)
 ジェネリックを使用することによって、汎用基本データ型 <xref:System.Object> との値で型をキャストして一般化を行う、共通言語ランタイムや C# 言語の以前のバージョンの制限を解決できます。 ジェネリック クラスを作成すると、コンパイル時にタイプ セーフなコレクションを作成できます。  
@@ -34,10 +34,11 @@ ms.locfileid: "33336831"
   
  クライアント コードでは、<xref:System.Collections.ArrayList> と比較される <xref:System.Collections.Generic.List%601> と共に追加される構文は、宣言とインスタンス化での型引数だけです。 このようにコーディングは若干複雑になりますが、それと引き換えに、<xref:System.Collections.ArrayList> よりも安全であるだけでなく、特にリスト項目が値型のときには処理時間が大幅に短縮されるリストを作成できます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Collections.Generic>  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
- [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)  
- [コレクションに関するガイドライン](../../../standard/design-guidelines/guidelines-for-collections.md)   
+## <a name="see-also"></a>参照
+
+- <xref:System.Collections.Generic>  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
+- [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)  
+- [コレクションに関するガイドライン](../../../standard/design-guidelines/guidelines-for-collections.md)   

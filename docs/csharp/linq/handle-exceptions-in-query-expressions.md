@@ -3,12 +3,12 @@ title: クエリ式の例外の処理 (C# での LINQ)
 description: C# で LINQ クエリ式の例外を処理する方法について説明します。
 ms.date: 12/1/2016
 ms.assetid: 2bf0c397-13fb-4f68-bc2b-531c6c88a167
-ms.openlocfilehash: 344d11129814516a5ed3dcf0eba73a5ecbb96981
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5ad98565a74a96ac18829eb87f13eb398aa72967
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403840"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528474"
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>クエリ式の例外の処理
 
@@ -32,4 +32,4 @@ ms.locfileid: "37403840"
 
 ## <a name="see-also"></a>関連項目
 
-[統合言語クエリ (LINQ)](index.md)  
+- [統合言語クエリ (LINQ)](index.md)  

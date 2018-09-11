@@ -2,12 +2,12 @@
 title: 基本的なクエリ (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-ms.openlocfilehash: b96fc6f2af7754d2403c2ccdf862e976463838a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 77ff053e3cf8589cbc44caf66a4e5b532bc54b26
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43392586"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518494"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>基本的なクエリ (LINQ to XML) (C#)
 ここでは、基本的な [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリの例について説明します。  
@@ -30,5 +30,6 @@ ms.locfileid: "43392586"
 |[方法: コンテキストに基づいて要素を検索するクエリを記述する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|ツリー内の他の要素に基づいて要素を選択する方法について説明します。|  
 |[方法: 空のクエリ結果セットをデバッグする (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|既定の名前空間の XML に対するクエリをデバッグする際の適切な修正方法について説明します。|  
   
-## <a name="see-also"></a>参照  
- [XML ツリーのクエリ (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>参照
+
+- [XML ツリーのクエリ (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

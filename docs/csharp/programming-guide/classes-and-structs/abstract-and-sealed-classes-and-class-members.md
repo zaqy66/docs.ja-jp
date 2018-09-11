@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: aa7c951acadd2e7b60f6da17cd7bf357fbd02d95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e80357a51bde270d5ed012f16f7b2e821f084c8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313915"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517343"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>抽象クラスとシール クラス、およびクラス メンバー (C# プログラミング ガイド)
 [abstract](../../../csharp/language-reference/keywords/abstract.md) キーワードを使用すると、派生クラスで実装する必要のある不完全な[クラス](../../../csharp/language-reference/keywords/class.md) メンバーを作成できます。  
@@ -47,10 +47,11 @@ ms.locfileid: "33313915"
   
  [!code-csharp[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [フィールド](../../../csharp/programming-guide/classes-and-structs/fields.md)  
- [方法: 抽象プロパティを定義する](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [フィールド](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [方法: 抽象プロパティを定義する](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

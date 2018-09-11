@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: a5b0824774dabd4e0dd26dd1753eaba658299fbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39955d86085b49ef503ea9ed531df9feafa648ac
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215772"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524589"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# コンパイラ オプション)
 このオプションを使用すると、スイッチで作成されたモジュールが現在のコンパイルに追加されます。  
@@ -45,7 +45,8 @@ csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs
 ```  
   
 ## <a name="see-also"></a>参照  
- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)  
- [マルチファイル アセンブリ](../../../framework/app-domains/multifile-assemblies.md)  
- [方法: マルチファイル アセンブリをビルドする](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)  
+- [マルチファイル アセンブリ](../../../framework/app-domains/multifile-assemblies.md)  
+- [方法: マルチファイル アセンブリをビルドする](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
