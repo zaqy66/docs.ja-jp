@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: cef2a907a8d7e6158239b88d5c8551c2c734faa0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 718be7e201788906fa0fad829922eb5b77b48aed
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43386299"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857311"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>チュートリアル: Office のプログラミング (C# および Visual Basic)
 Visual Studio には、Microsoft Office のプログラミングを改善する C# および Visual Basic の新機能が導入されています。 便利な C# の機能には、名前付き引数、省略可能な引数、型 `dynamic` の戻り値があります。 COM プログラミングでは、`ref` キーワードを省略し、インデックス付きプロパティにアクセスできます。 Visual Basic の機能には、自動実装プロパティ、ラムダ式内のステートメント、コレクション初期化子などがあります。
 
-両方の言語で、ユーザーのコンピューターにプライマリ相互運用機能アセンブリ (PIA) を配置せずに COM コンポーネントとやり取りするアセンブリを配置できる型情報を埋め込むことができます。 詳細については、「[チュートリアル: マネージド アセンブリからの型の埋め込み](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)」を参照してください。  
+両方の言語で、ユーザーのコンピューターにプライマリ相互運用機能アセンブリ (PIA) を配置せずに COM コンポーネントとやり取りするアセンブリを配置できる型情報を埋め込むことができます。 詳細については、「[チュートリアル: マネージド アセンブリからの型の埋め込み](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)」を参照してください。  
   
 このチュートリアルでは、Office プログラミングのコンテキストで機能を示しますが、これらの機能の多くは一般的なプログラミングにも便利です。 このチュートリアルでは、Excel ブックを作成する Excel アドイン アプリケーションを使用します。 次に、ブックへのリンクを含む Word 文書を作成します。 最後に、PIA 依存関係の有効/無効を切り替える方法を確認します。  
   
@@ -93,11 +93,11 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
      C# の 2 つの新しい機能は、このメソッドで使用されます。 これら両方の機能は、Visual Basic で既に存在します。  
   
-    -   [Add](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) メソッドには、特定のテンプレートを指定する*省略可能なパラメーター*があります。 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] の新機能であるオプションのパラメーターでは、パラメーターの既定値を使用する場合は、そのパラメーターの引数を省略することができます。 前の例では引数が渡されないため、`Add` は、既定のテンプレートを使用して、新しいブックを作成します。 以前のバージョンの C# では、同等のステートメントには、プレースホルダーの引数 `excelApp.Workbooks.Add(Type.Missing)` が必要です。  
+    -   [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) メソッドには、特定のテンプレートを指定する*省略可能なパラメーター*があります。 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] の新機能であるオプションのパラメーターでは、パラメーターの既定値を使用する場合は、そのパラメーターの引数を省略することができます。 前の例では引数が渡されないため、`Add` は、既定のテンプレートを使用して、新しいブックを作成します。 以前のバージョンの C# では、同等のステートメントには、プレースホルダーの引数 `excelApp.Workbooks.Add(Type.Missing)` が必要です。  
   
          詳細については、「[名前付き引数と省略可能な引数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)」を参照してください。  
   
-    -   [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) オブジェクトの `Range` および `Offset` プロパティでは*インデックス付きプロパティ*機能を使用します。 この機能では、次の一般的な C# 構文を使用して COM 型からこれらのプロパティを使用することができます。 また、インデックス付きプロパティを使用すると、`Value` プロパティを使用せずに、`Range` オブジェクトの `Value2` プロパティを使用できます。 `Value` プロパティはインデックス付きですが、インデックスはオプションです。 次の例では、省略可能な引数とインデックス付きプロパティは連携しています。  
+    -   [Range](<xref:Microsoft.Office.Interop.Excel.Range>) オブジェクトの `Range` および `Offset` プロパティでは*インデックス付きプロパティ*機能を使用します。 この機能では、次の一般的な C# 構文を使用して COM 型からこれらのプロパティを使用することができます。 また、インデックス付きプロパティを使用すると、`Value` プロパティを使用せずに、`Range` オブジェクトの `Value2` プロパティを使用できます。 `Value` プロパティはインデックス付きですが、インデックスはオプションです。 次の例では、省略可能な引数とインデックス付きプロパティは連携しています。  
   
          [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
   
@@ -117,7 +117,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
      これらの追加機能では、C# の別の機能である、[dynamic](../../../csharp/language-reference/keywords/dynamic.md) 型がある場合と同様に Office などの COM ホストから返される `Object` 値の処理を示します。 これは、**[相互運用機能型の埋め込み]** が既定値の `True` に設定されている場合、または同様に、アセンブリが [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションによって参照されている場合に発生します。 `dynamic` 型では既に Visual Basic で使用できる遅延バインディングが可能であり、Visual C# 2008 以前のバージョンの言語で必要な明示的なキャストを回避します。  
   
-     たとえば、`excelApp.Columns[1]` は `Object` を返し、`AutoFit` は Excel の [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) メソッドであるとします。 `dynamic` がない場合、`excelApp.Columns[1]` のインスタンスとして、`Range` によって返されたオブジェクトをキャストしてから、`AutoFit` メソッドを呼び出す必要があります。  
+     たとえば、`excelApp.Columns[1]` は `Object` を返し、`AutoFit` は Excel の [Range](<xref:Microsoft.Office.Interop.Excel.Range>) メソッドであるとします。 `dynamic` がない場合、`excelApp.Columns[1]` のインスタンスとして、`Range` によって返されたオブジェクトをキャストしてから、`AutoFit` メソッドを呼び出す必要があります。  
   
      [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
   
@@ -141,7 +141,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
      [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
-     このコードは、COM プログラミングで `ref` キーワードを省略する機能、名前付き引数、省略可能な引数など、C# の新機能のいくつかを示します。 Visual Basic でこれらの機能は既に存在します。 [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) メソッドには 7 つのパラメーターがあります。これらはすべて省略可能な参照パラメーターとして定義されます。 名前付き引数と省略可能な引数を使用すると、アクセスするパラメーターを名前で指定し、これらのパラメーターにのみ引数を渡すことができます。 この例では、引数は、クリップボードのブックへのリンクを作成する必要があること (`Link` パラメーター)、およびリンクがアイコンとして Word 文書に表示されること (`DisplayAsIcon` パラメーター) を示すために渡されます。 Visual C# では、これらの引数の `ref` キーワードを省略することもできます。
+     このコードは、COM プログラミングで `ref` キーワードを省略する機能、名前付き引数、省略可能な引数など、C# の新機能のいくつかを示します。 Visual Basic でこれらの機能は既に存在します。 [PasteSpecial](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) メソッドには 7 つのパラメーターがあります。これらはすべて省略可能な参照パラメーターとして定義されます。 名前付き引数と省略可能な引数を使用すると、アクセスするパラメーターを名前で指定し、これらのパラメーターにのみ引数を渡すことができます。 この例では、引数は、クリップボードのブックへのリンクを作成する必要があること (`Link` パラメーター)、およびリンクがアイコンとして Word 文書に表示されること (`DisplayAsIcon` パラメーター) を示すために渡されます。 Visual C# では、これらの引数の `ref` キーワードを省略することもできます。
   
 ### <a name="to-run-the-application"></a>アプリケーションを実行するには  
   
@@ -190,22 +190,23 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
 8.  Visual Studio で、**[ビルド]** メニューの **[ソリューションのクリーン]** をクリックして、完成したプロジェクトをクリーンアップします。  
   
-## <a name="see-also"></a>参照  
- [自動実装プロパティ (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [自動実装するプロパティ (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
- [コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [位置と名前による引数渡し](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
- [名前付き引数と省略可能な引数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [ラムダ式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [ラムダ式 (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [方法: COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- [チュートリアル: Microsoft Office アセンブリからの型情報の埋め込み](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
- [チュートリアル: マネージド アセンブリからの型の埋め込み](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [チュートリアル: 初めての Excel 用 VSTO アドインの作成](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)  
- [相互運用性](../../../csharp/programming-guide/interop/index.md)
+## <a name="see-also"></a>参照
+
+- [自動実装プロパティ (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+- [自動実装するプロパティ (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+- [位置と名前による引数渡し](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
+- [名前付き引数と省略可能な引数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- [事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- [dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [ラムダ式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+- [ラムダ式 (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [方法: COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+- [チュートリアル: Microsoft Office アセンブリからの型情報の埋め込み](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
+- [チュートリアル: マネージド アセンブリからの型の埋め込み](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [チュートリアル: 初めての Excel 用 VSTO アドインの作成](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
+- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [相互運用性](../../../csharp/programming-guide/interop/index.md)

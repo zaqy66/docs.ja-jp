@@ -10,11 +10,11 @@ ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43472047"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268995"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>方法: .NET Framework 4.5 インストーラーの進行状況を表示する
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は再頒布可能なランタイムです。 このバージョンの .NET Framework 用アプリを開発する場合は、アプリのセットアップに必要なパーツとして、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを含める (チェーンする) ことができます。 セットアップ手順をカスタマイズまたは統一するために、アプリケーションのセットアップの進行状況を表示する一方で、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップをサイレントで起動し、その進行状況を追跡できます。 サイレントな追跡を可能にするために、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップ (監視対象) ではメモリ マップ I/O (MMIO) セグメントを使用してプロトコルを定義し、セットアップ (ウォッチャーつまりチェーン元) と通信します。 このプロトコルは、チェーン元が進行状況情報や詳細な結果を取得してメッセージに応答し、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを取り消す方法を定義します。  
@@ -35,7 +35,7 @@ ms.locfileid: "43472047"
   
          これらの名前は、実際のセットアップ プログラムの固有な名前に置き換えてください。  
   
-    2.  MMIO セクションから読み取ります。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、ダウンロード操作とインストール操作は同時に行われます。.NET Framework の 1 つのパーツがインストールしている間に、別のパーツがダウンロードします。 その結果、進行状況は、0 から 255 まで増加する 2 つの値 (`m_downloadSoFar` および `m_installSoFar`) として MMIO セクションに送り返されます (書き込まれます)。 255 が書き込まれて、.NET Framework が終了すると、インストールは完了します。  
+    2.  MMIO セクションから読み取ります。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、ダウンロード操作とインストール操作は同時に行われます。 .NET Framework の 1 つのパーツがインストールしている間に、別のパーツがダウンロードします。 その結果、進行状況は、0 から 255 まで増加する 2 つの値 (`m_downloadSoFar` および `m_installSoFar`) として MMIO セクションに送り返されます (書き込まれます)。 255 が書き込まれて、.NET Framework が終了すると、インストールは完了します。  
   
 -   **終了コード**。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 再頒布可能プログラムを呼び出すためのコマンドからの以下の終了コードは、セットアップが成功または失敗したことを示します。  
   

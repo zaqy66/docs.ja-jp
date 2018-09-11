@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398275"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44198505"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework のバージョンの互換性
-下位互換とは、プラットフォームの特定のバージョンで開発されたアプリが、そのプラットフォームの新しいバージョンでも実行できることを意味します。 .NET Framework では、下位互換性が最大限に高められています。.NET Framework のあるバージョンで記述されたソース コードは、.NET Framework の新しいバージョンでコンパイルでき、.NET Framework のあるバージョンで実行されるバイナリは、新しいバージョンの .NET Framework でも同じように動作します。  
+下位互換とは、プラットフォームの特定のバージョンで開発されたアプリが、そのプラットフォームの新しいバージョンでも実行できることを意味します。 .NET Framework では、下位互換性が最大限に高められています。 .NET Framework のあるバージョンで記述されたソース コードは、.NET Framework の新しいバージョンでコンパイルでき、.NET Framework のあるバージョンで実行されるバイナリは、新しいバージョンの .NET Framework でも同じように動作します。  
   
 <a name="Apps"></a>   
 ## <a name="version-compatibility-for-apps"></a>アプリのバージョンの互換性  
@@ -52,9 +52,9 @@ ms.locfileid: "33398275"
 
 - .NET Framework 3.5 のアプリがある場合、「[.NET Framework 4 の移行に関する問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)」も参照してください。
 
-- .NET Framework 2.0 のアプリがある場合、「[.NET Framework 3.5 SP1 の変更点](http://go.microsoft.com/fwlink/?LinkId=186989)」も参照してください。
+- .NET Framework 2.0 のアプリがある場合、「[.NET Framework 3.5 SP1 の変更点](https://go.microsoft.com/fwlink/?LinkId=186989)」も参照してください。
 
-- .NET Framework 1.1 アプリがある場合、「[.NET Framework 2.0 の互換性に影響する変更点](http://go.microsoft.com/fwlink/?LinkID=125263)」も参照してください。  
+- .NET Framework 1.1 アプリがある場合、「[.NET Framework 2.0 の互換性に影響する変更点](https://go.microsoft.com/fwlink/?LinkID=125263)」も参照してください。  
   
 -   .NET Framework 4.5 またはそのポイント リリースで実行するために既存のソース コードを再コンパイルする場合、または [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] またはそのポイント リリースをターゲットとするアプリまたはコンポーネントの新しいバージョンを既存のソース コード ベースから開発する場合は、「[クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)」で廃止された型とメンバーを確認し、説明されている回避策を適用してください。 (コンパイル済みのコードは、互換性のために残されている旧式の型とメンバーに対して引き続き実行されます)。  
   
@@ -69,5 +69,5 @@ ms.locfileid: "33398275"
  [新機能](../../../docs/framework/whats-new/index.md)  
  [クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)  
  [アプリケーションの互換性](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Microsoft .NET Framework のサポート ライフサイクル ポリシー](http://go.microsoft.com/fwlink/p/?LinkId=248212)  
+ [Microsoft .NET Framework のサポート ライフサイクル ポリシー](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
  [.NET framework 4 への移行に関する問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)
