@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 1dac93145b6e11a0d149f03b43e1e0b28b770925
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276900"
+ms.locfileid: "44342278"
 ---
 # <a name="user-defined-data-type"></a>ユーザー定義型
 定義する形式でデータを保持します。 `Structure`ステートメントの形式を定義します。  
@@ -52,7 +52,7 @@ ms.locfileid: "44276900"
   
 -   **メモリ使用量。**  他のすべての複合データ型と同様に、構造体の総メモリ使用量を計算する場合、各メンバーのストレージ割り当ての公称サイズを単に合計しただけでは安全ではありません。 さらに、メモリ内に格納される順序が宣言の順序と同じであると仮定するのも安全ではありません。 構造体のストレージ レイアウトを制御する必要がある場合は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を `Structure` ステートメントに適用します。  
   
--   **相互運用の考慮事項。** オートメーションまたは COM オブジェクトなどの .NET Framework 用に作成されていないコンポーネントをやり取りする場合、他の環境でのユーザー定義型は Visual Basic 構造型と互換性がないことに注意してください。  
+-   **相互運用の考慮事項。** .NET Framework 用に作成されていないコンポーネントをやり取りする場合などのオートメーションまたは COM オブジェクト、他の環境でのユーザー定義型の Visual Basic と互換性がないことに注意してくださいには、型が構造体します。  
   
 -   **拡大します。** 任意の構造のデータ型との間の自動変換はありません。 変換演算子を定義するには構造体を使用して、 [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)、するには、各変換演算子を宣言して`Widening`または`Narrowing`します。  
   

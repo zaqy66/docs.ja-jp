@@ -3,11 +3,11 @@ title: ASP.NET キャッシュ統合
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271187"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353578"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET キャッシュ統合
 このサンプルでは、WCF WEB HTTP プログラミング モデルで ASP.NET 出力キャッシュを利用する方法を示します。 参照してください、[基本的なリソース サービス](../../../../docs/framework/wcf/samples/basic-resource-service.md)サービスの実装の詳細を説明するこのシナリオの自己ホスト型のバージョンのサンプルです。 ここでは、ASP.NET 出力キャッシュ統合機能について集中的に説明します。  
