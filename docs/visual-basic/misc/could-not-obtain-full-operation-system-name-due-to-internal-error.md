@@ -5,24 +5,24 @@ f1_keywords:
 - vbrDiagnosticInfo_FullOSName
 ms.assetid: f69da02b-eb9a-4284-bb9e-3025517ae6c1
 ms.openlocfilehash: 192033348a779591a54860505d5d707a802c415a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199051"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361723"
 ---
-# <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a><span data-ttu-id="c9bea-102">内部エラーのために完全な運用システム名を取得できませんでした</span><span class="sxs-lookup"><span data-stu-id="c9bea-102">Could not obtain full operation system name due to internal error</span></span>
-<span data-ttu-id="c9bea-103">内部エラーのために完全な運用システム名を取得できませんでした。</span><span class="sxs-lookup"><span data-stu-id="c9bea-103">Could not obtain full operation system name due to internal error.</span></span> <span data-ttu-id="c9bea-104">これは、現在のコンピューターに WMI が存在しないことが原因である場合があります。</span><span class="sxs-lookup"><span data-stu-id="c9bea-104">This might be caused by WMI not existing on the current machine.</span></span>  
+# <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a><span data-ttu-id="e2c3a-102">内部エラーのために完全な運用システム名を取得できませんでした</span><span class="sxs-lookup"><span data-stu-id="e2c3a-102">Could not obtain full operation system name due to internal error</span></span>
+<span data-ttu-id="e2c3a-103">内部エラーのために完全な運用システム名を取得できませんでした。</span><span class="sxs-lookup"><span data-stu-id="e2c3a-103">Could not obtain full operation system name due to internal error.</span></span> <span data-ttu-id="e2c3a-104">これは、現在のコンピューターに WMI が存在しないことが原因である場合があります。</span><span class="sxs-lookup"><span data-stu-id="e2c3a-104">This might be caused by WMI not existing on the current machine.</span></span>  
   
- <span data-ttu-id="c9bea-105">`My.Computer.Info.OSFullName` プロパティの呼び出しに失敗しました。</span><span class="sxs-lookup"><span data-stu-id="c9bea-105">A call to the `My.Computer.Info.OSFullName` property failed.</span></span> <span data-ttu-id="c9bea-106">このエラーの考えられる原因は、Windows Management Instrumentation (WMI) が、現在のコンピューターにインストールされていないことです。</span><span class="sxs-lookup"><span data-stu-id="c9bea-106">A possible cause for this failure is if Windows Management Instrumentation (WMI) is not installed on the current computer.</span></span>  
+ <span data-ttu-id="e2c3a-105">`My.Computer.Info.OSFullName` プロパティの呼び出しに失敗しました。</span><span class="sxs-lookup"><span data-stu-id="e2c3a-105">A call to the `My.Computer.Info.OSFullName` property failed.</span></span> <span data-ttu-id="e2c3a-106">このエラーの考えられる原因は、Windows Management Instrumentation (WMI) が、現在のコンピューターにインストールされていないことです。</span><span class="sxs-lookup"><span data-stu-id="e2c3a-106">A possible cause for this failure is if Windows Management Instrumentation (WMI) is not installed on the current computer.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="c9bea-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="c9bea-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e2c3a-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="e2c3a-107">To correct this error</span></span>  
   
-1.  <span data-ttu-id="c9bea-108">`Try...Catch` プロパティの呼び出しの周囲に `My.Computer.Info.OSFullName` ブロックを追加します。</span><span class="sxs-lookup"><span data-stu-id="c9bea-108">Add a `Try...Catch` block around the call to the `My.Computer.Info.OSFullName` property.</span></span>  
+1.  <span data-ttu-id="e2c3a-108">`Try...Catch` プロパティの呼び出しの周囲に `My.Computer.Info.OSFullName` ブロックを追加します。</span><span class="sxs-lookup"><span data-stu-id="e2c3a-108">Add a `Try...Catch` block around the call to the `My.Computer.Info.OSFullName` property.</span></span>  
   
-2.  <span data-ttu-id="c9bea-109">WMI とそのインストール方法の詳細については、「Windows Management Instrumentation Core」を検索してに移動します。</span><span class="sxs-lookup"><span data-stu-id="c9bea-109">For more information about WMI and how to install it, go to  and search for "Windows Management Instrumentation Core".</span></span>  
+2.  <span data-ttu-id="e2c3a-109">WMI とそのインストール方法の詳細については、「Windows Management Instrumentation Core」を検索してに移動します。</span><span class="sxs-lookup"><span data-stu-id="e2c3a-109">For more information about WMI and how to install it, go to  and search for "Windows Management Instrumentation Core".</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9bea-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9bea-110">See Also</span></span>  
- [<span data-ttu-id="c9bea-111">My.Computer.Info.OSFullName</span><span class="sxs-lookup"><span data-stu-id="c9bea-111">My.Computer.Info.OSFullName</span></span>](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)  
- [<span data-ttu-id="c9bea-112">例外と Visual Basic でのエラー処理</span><span class="sxs-lookup"><span data-stu-id="c9bea-112">Exception and Error Handling in Visual Basic</span></span>](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
- [<span data-ttu-id="c9bea-113">Try...Catch...Finally ステートメント</span><span class="sxs-lookup"><span data-stu-id="c9bea-113">Try...Catch...Finally Statement</span></span>](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a><span data-ttu-id="e2c3a-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="e2c3a-110">See Also</span></span>  
+ [<span data-ttu-id="e2c3a-111">My.Computer.Info.OSFullName</span><span class="sxs-lookup"><span data-stu-id="e2c3a-111">My.Computer.Info.OSFullName</span></span>](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)  
+ [<span data-ttu-id="e2c3a-112">例外と Visual Basic でのエラー処理</span><span class="sxs-lookup"><span data-stu-id="e2c3a-112">Exception and Error Handling in Visual Basic</span></span>](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
+ [<span data-ttu-id="e2c3a-113">Try...Catch...Finally ステートメント</span><span class="sxs-lookup"><span data-stu-id="e2c3a-113">Try...Catch...Finally Statement</span></span>](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
