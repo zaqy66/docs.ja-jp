@@ -10,11 +10,11 @@ ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bd5ad69cc661005d20db4c4bcdda762c6432f416
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44077094"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44706360"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>汎用性のあるクラス ライブラリを使用したプラットフォーム間の開発
 Visual Studio の .NET Framework ポータブル クラス ライブラリ プロジェクト タイプにより、Microsoft プラットフォームを対象としたクロスプラットフォーム アプリとライブラリをすばやく簡単に開発できます。  

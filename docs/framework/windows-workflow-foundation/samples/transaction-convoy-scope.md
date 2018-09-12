@@ -3,11 +3,11 @@ title: トランザクション コンボイ スコープ
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
 ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360928"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705285"
 ---
 # <a name="transaction-convoy-scope"></a>トランザクション コンボイ スコープ
 このサンプルでは、パラレルなコンボイ メッセージング アクティビティ パターンを <xref:System.ServiceModel.Activities.TransactedReceiveScope> と組み合わせて作成し、多数の操作をすべて同じトランザクションで任意の順序で行うことができるプロトコルをモデル化する方法を示します。 また、トランザクションがサーバーにフローされないためにクライアントで使用できるトランザクションがない場合に、<xref:System.ServiceModel.Activities.TransactedReceiveScope> で自動的に新しいトランザクションを作成する方法も示します。  

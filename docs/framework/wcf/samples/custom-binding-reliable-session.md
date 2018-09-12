@@ -3,11 +3,11 @@ title: カスタム バインドの信頼できるセッション
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
 ms.openlocfilehash: 55ffdd741bf26c1a906c7b09dfa05839b25f1645
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271651"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44709066"
 ---
 # <a name="custom-binding-reliable-session"></a>カスタム バインドの信頼できるセッション
 カスタム バインドは、個々のバインド要素の順序付きリストとして定義されます。 このサンプルでは、さまざまなトランスポートとメッセージ エンコーディング要素を使用し、特に信頼できるセッションを有効化することによって、カスタム バインディングを構成する方法を示します。  

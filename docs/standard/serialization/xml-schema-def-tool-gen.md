@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
 ms.openlocfilehash: 2edaf7ba540035fbf2f49ba78b41ab99f8889391
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360766"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710834"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>方法 : XML スキーマ定義ツールを使用してクラスと XML スキーマ ドキュメントを生成する
 XML スキーマ定義ツール (Xsd.exe) を使用して、クラスを説明する XML スキーマを生成したり、XML スキーマで定義されるクラスを生成したりできます。 次の手順では、これらの操作の実行方法を示します。  

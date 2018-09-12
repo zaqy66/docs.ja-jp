@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353266"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710156"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames 関数
 すべての修飾子のまたは現在のオブジェクトまたはプロパティから利用できる特定の修飾子の名前を取得します。 

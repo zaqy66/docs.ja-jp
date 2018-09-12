@@ -3,11 +3,11 @@ title: 相関関係の概要
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
 ms.openlocfilehash: 8ac5d39866b23bc134f009fdb0df6ebf56c6d234
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271038"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44708310"
 ---
 # <a name="correlation-overview"></a>相関関係の概要
 相関関係とは、ワークフロー サービス メッセージを互いに関連付ける、最初の要求への応答などのアプリケーションのインスタンス状態と関連付ける、または特定の注文 ID を注文処理ワークフローの永続化された状態に関連付けるためのしくみです。 ここでは、相関関係の概要について説明します。 このセクションの他のトピックでは、相関関係の各種類についての追加情報を提供します。  

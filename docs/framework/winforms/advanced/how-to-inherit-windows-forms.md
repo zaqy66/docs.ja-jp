@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
 ms.openlocfilehash: 275ae52a36ed9766e2569bd6c8ecdea78ea56e0b
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44507751"
+ms.locfileid: "44709400"
 ---
 # <a name="how-to-inherit-windows-forms"></a>方法 : Windows フォームを継承する
 新規の Windows フォームは、基本フォームから継承して簡単に複製できます。フォームが必要になるたびに、最初から作成し直す必要はありません。  
