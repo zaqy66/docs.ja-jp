@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d2aaeaffaf3abbe1e8efcdb57d40e6ae60f89b5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197590"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44510273"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>チュートリアル : 拡張性のあるアプリケーションの作成
 このチュートリアルでは、簡単な計算機機能を実行するアドインのパイプラインを作成する方法について説明します。 実際のシナリオは含まれていません代わりに、パイプラインとアドインを追加できるようにするホストのサービスの基本的な機能を示します。  

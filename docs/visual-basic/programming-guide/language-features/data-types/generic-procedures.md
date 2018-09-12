@@ -13,11 +13,11 @@ helpviewer_keywords:
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
 ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195021"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44509502"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Visual Basic におけるジェネリック プロシージャ
 A*ジェネリック プロシージャ*も呼ばれ、*ジェネリック メソッド*、少なくとも 1 つの型パラメーターで定義されたプロシージャは。 これにより、呼び出し元のコードでプロシージャを呼び出すたびにその要件にデータ型を調整できます。  

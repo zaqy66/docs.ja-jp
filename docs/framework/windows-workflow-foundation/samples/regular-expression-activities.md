@@ -3,11 +3,11 @@ title: 正規表現アクティビティ
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
 ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201011"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44509883"
 ---
 # <a name="regular-expression-activities"></a>正規表現アクティビティ
 このサンプルでは、<xref:System.Text.RegularExpressions> 名前空間の正規表現機能を公開する一連のアクティビティを作成する方法を示します。 このカスタム アクティビティはワークフロー アプリケーション内で使用できます。 正規表現の詳細については、次を参照してください。 [N:System.Text.RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace です。  

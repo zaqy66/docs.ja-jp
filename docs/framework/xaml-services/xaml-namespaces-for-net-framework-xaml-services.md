@@ -3,11 +3,11 @@ title: .NET Framework XAML サービス用の XAML 名前空間
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
 ms.openlocfilehash: ac6554cbdeb5bc6e0fe7fb96ea95d0143c293d22
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227325"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44510143"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML サービス用の XAML 名前空間
 XAML 名前空間は、XML 名前空間の定義を拡張する概念です。 XML 名前空間と同様に、定義できますを使用して XAML 名前空間、`xmlns`マークアップ内の属性。 XAML 名前空間は、XAML ノード ストリームでその他の XAML サービス Api も表記されます。 このトピックでは、XAML 名前空間の概念を定義し、XAML 名前空間を定義することができますおよび XAML スキーマ コンテキストやその他のさまざまな .NET Framework XAML サービスで使用する方法について説明します。  
