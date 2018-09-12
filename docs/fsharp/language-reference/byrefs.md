@@ -2,12 +2,12 @@
 title: Byref (f#)
 description: Byref と f# での低レベルのプログラミングに使用される byref のような種類について説明します。
 ms.date: 09/02/2018
-ms.openlocfilehash: 7d4138649ee39a0d342db2828ad4d32fbded978c
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338663"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699647"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -105,7 +105,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 目的は、`outref<'T>`をからポインターを読み取るだけことを示すことです。 予期せず、`outref<'T>`名前とは異なり値の読み取り、基になることができます。 これは、互換性のため。 意味としては、`outref<'T>`は変わりません`byref<'T>`します。
 
-### <a name="interop-with-c"></a>C との相互運用 #
+### <a name="interop-with-c"></a>C# との相互運用 #
 
 C# のサポート、`in ref`と`out ref`に加えて、キーワード`ref`を返します。 次の表は、f# を解釈する方法と c# は出力を示しています。
 
@@ -196,7 +196,7 @@ printfn "%d" sum // 'sum' is of type 'int'
 戻り値を割り当てることができますも直接`byref`します。 次の (非常に命令的) プログラムを検討してください。
 
 ```fsharp
-ype C() =
+type C() =
     let mutable nums = [| 1; 3; 7; 15; 31; 63; 127; 255; 511; 1023 |]
 
     override __.ToString() = String.Join(' ', nums)

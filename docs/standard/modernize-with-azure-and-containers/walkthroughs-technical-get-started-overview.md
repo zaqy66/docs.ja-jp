@@ -1,284 +1,284 @@
 ---
-title: チュートリアルと技術は、開始の概要を取得します。
-description: Azure のクラウドと Windows コンテナーの既存の .NET アプリケーションを最新化 |チュートリアルと技術は、開始の概要を取得します。
+title: チュートリアルと技術的な概要します。
+description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |チュートリアルと技術的な概要します。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 27de9d1c5475855a22f2d8a3518982605277f6d9
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 41fbeb3abc201ef03cf0c237a069e7687c98dd18
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027390"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700350"
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>チュートリアルと技術は、開始の概要を取得します。
+# <a name="walkthroughs-and-technical-get-started-overview"></a>チュートリアルと技術的な概要します。
 
-この電子書籍のサイズを制限するには、追加のテクニカル ドキュメントと完全のチュートリアルで行われた使用可能な GitHub リポジトリです。 オンラインの一連のこの章で説明されているチュートリアルでは、Windows コンテナー、および Azure へのデプロイに基づいて複数の環境の詳細な手順のセットアップについて説明します。
+この電子ブックのサイズを制限するには、その他の技術ドキュメントと完全なチュートリアルで行われた使用可能な GitHub リポジトリ。 オンラインの一連のこの章で説明したチュートリアルでは、Windows コンテナー、および Azure へのデプロイに基づいて複数の環境のステップ バイ ステップのセットアップについて説明します。
 
-次のセクションでは、各チュートリアルでは、その目標と高レベルのビジョンを通知し、関連するタスクを次の図は、について説明します。 チュートリアル自体を取得することができますに、 *eShopModernizing*でアプリの GitHub リポジトリの wiki [ https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)です。
+次のセクションでは、各チュートリアルでは、その目標と高度なビジョンを通知し、関連するタスクを次の図は、について説明します。 自体のチュートリアルを入手できますで、 *eShopModernizing*でアプリの GitHub リポジトリ wiki [ https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)します。
 
-## <a name="technical-walkthrough-list"></a>技術的なチュートリアルの一覧
+## <a name="technical-walkthrough-list"></a>技術チュートリアルの一覧
 
-はじめに-次のチュートリアルでは、リフトしコンテナーを使用して、シフトし、し、Azure で複数の展開の選択肢を使用して、移動するサンプル アプリの一貫性のあるで包括的なに関するテクニカル ガイダンスを提供します。
+次の概要チュートリアルでは、リフトとシフト、コンテナーを使用しておよび Azure で複数の展開のオプションを使用して、移動できるサンプル アプリの包括的な一貫性のあるの技術的なガイダンスを提供します。
 
-次のチュートリアルの各アプリケーションを使用して、新しいサンプル eShopLegacy と eShopModernizing で GitHub で利用可能である[ https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)です。
+次のチュートリアルの各アプリで使用して、新しいサンプル eShopLegacy と eShopModernizing、GitHub で利用できる[ https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)します。
 
-- **EShop レガシ アプリ (基準の最新化) のツアー**
+- **EShop レガシ アプリ (現代化する基準アプリ) のツアー**
 
-- **Windows コンテナーで (WebForms & MVC) 既存の ASP.NET web アプリを containerize します。**
+- **Windows コンテナーで既存 ASP.NET web アプリ (WebForms および MVC) のコンテナー格納します。**
 
-- **Windows コンテナーで既存の WCF サービス (N 層アプリケーション) を containerize します。**
+- **Windows コンテナーで既存の WCF サービス (N 層アプリ) のコンテナー格納します。**
 
-- **Azure Vm を Windows コンテナー ベースのアプリを展開します。**
+- **Azure Vm への Windows コンテナー ベース アプリをデプロイします。**
 
-- **Azure のコンテナー サービスで Kubernetes に Windows コンテナー ベースのアプリを展開します。**
+- **Windows コンテナー ベースのアプリを Azure Container Service で Kubernetes にデプロイします。**
 
-- **Azure Service Fabric に Windows コンテナー ベースのアプリを展開します。**
+- **Azure Service Fabric への Windows コンテナー ベースのアプリをデプロイします。**
 
 
-## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>EShop レガシ アプリケーションのチュートリアル 1: ツアー
+## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>チュートリアル 1: eShop レガシ アプリケーション ツアー
 
-### <a name="technical-walkthrough-availability"></a>技術的なチュートリアルの可用性
+### <a name="technical-walkthrough-availability"></a>テクニカル チュートリアルの可用性
 
-技術的なチュートリアルは、eShopModernizing GitHub リポジトリの wiki で入手できます。
+完全な技術チュートリアル、eShopModernizing GitHub リポジトリ wiki で提供されています。
 
-[eShopModernizing wiki チュートリアル](https://github.com/dotnet-architecture/eShopModernizing/wiki)
+[wiki のチュートリアルは eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing/wiki)
 
 
 ### <a name="overview"></a>概要
 
-このチュートリアルでは、次の 3 つのサンプルのレガシ アプリケーションの最初の実装を調べることができます。 最初の 2 つのサンプル web アプリケーションは、単体のアーキテクチャを持ち、従来の ASP.NET を使用して作成されました。 1 つのアプリケーションが ASP.NET に基づく 4.x MVC です。2 番目のアプリケーションは、ASP.NET 4.x Web フォームに基づいています。 3 番目のアプリはクライアント WinForms アプリケーションとサーバー側で構成される 3 層アプリ[Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md)サービス。
+このチュートリアルでは、次の 3 つのサンプルのレガシ アプリケーションの最初の実装を確認できます。 最初の 2 つのサンプル web アプリは、モノリシック アーキテクチャがあるし、従来の ASP.NET を使用して作成されました。 1 つのアプリケーション ベースは ASP.NET 4.x MVC;2 番目のアプリケーションは、ASP.NET 4.x Web フォームに基づきます。 3 番目のアプリは、WinForms アプリをクライアントとサーバー側で構成されます 3 層アプリ[Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md)サービス。
 
-これらすべてのアプリケーションは、 [GitHub リポジトリの eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)です。
+これらすべてのアプリケーションは、 [eShopModernizing GitHub リポジトリ](https://github.com/dotnet-architecture/eShopModernizing)します。
 
 ### <a name="goals"></a>目的
 
-このチュートリアルの主な目的は、これらのアプリとそのコードおよび構成について理解するだけです。 テスト目的で SQL データベースを使用せず、モック データを使用して、生成されるように、アプリを構成することができます。 このオプションの構成は、分離された方法で依存関係の挿入に基づいています。
+このチュートリアルの主な目的は、これらのアプリとそのコードと構成について詳しく理解することです。 生成およびテスト目的で、SQL database を使用せず、モックのデータを使用できるように、アプリを構成できます。 このオプションの構成は、分離された方法で依存関係の挿入に基づいています。
 
 ### <a name="scenario-1-aspnet-web-apps"></a>シナリオ 1: ASP.NET Web アプリ
 
-次の図は、元のレガシ ASP.NET web アプリケーションの簡単なシナリオを示します。
+次の図は、元の従来の ASP.NET web アプリケーションの簡単なシナリオを示します。
 
-> ![元のレガシ ASP.NET web アプリケーションのシナリオを単純なアーキテクチャ](./media/image5-1.png)
+> ![元の従来の ASP.NET web アプリケーションのアーキテクチャの単純なシナリオ](./media/image5-1.png)
 >
 
-ビジネス ドメインの観点から両方のアプリは管理機能に同じカタログを提供します。 EShop エンタープライズ チームのメンバーは表示および製品カタログを編集するアプリを使用します。 
+ビジネス ドメインの観点から両方のアプリは管理機能に同じカタログを提供します。 EShop エンタープライズ チームのメンバーでは、製品カタログの編集を表示したり、アプリを使用します。 
 
 次の図は、最初のアプリのスクリーン ショットを示します。
 
 ![ASP.NET MVC と ASP.NET Web フォーム アプリケーション (既存の/レガシ テクノロジ)](./media/image5-2.png)
 
-依存関係 ASP.NET 4.x か (いずれかの MVC または Web フォームの) 以前のバージョンは、コードが ASP.NET Core MVC を使用して、完全に記述し直すされない限り、これらのアプリケーションを .NET Core で実行されないことです。 
+依存関係 asp.net 4.x または以前のバージョン (MVC または Web フォームか) はこれらのアプリケーションは、ASP.NET Core MVC を使用してコードを書き直すが完全にしない限り、.NET Core で動作しません。 
 
-### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>シナリオ 2: WCF サービスと WinForms クライアント アプリ (アプリが 3 層)
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>シナリオ 2: WCF サービスとクライアント アプリの WinForms (3 層アプリ)
 
 次の図は、元の 3 層のレガシ アプリケーションの簡単なシナリオを示します。
 
-> ![WCF サービスと元レガシ 3 層アプリケーションおよび WinForms クライアント アプリのシナリオを単純なアーキテクチャ](./media/image5-1.5.png)
+> ![WCF サービスと、元のレガシ 3 層アプリおよび WinForms クライアント アプリのアーキテクチャの単純なシナリオ](./media/image5-1.5.png)
 >
 
 ### <a name="benefits"></a>利点
 
-このチュートリアルのメリットは、単純な: コードと最初のアプリに精通して表示します。
+このチュートリアルのメリットは、単純な: 最初のアプリとコードについて理解してみます。
 
 ### <a name="next-steps"></a>次の手順
 
-GitHub wiki 上には、このコンテンツをさらに詳しい情報を表示します。
+このコンテンツの詳細については、GitHub wiki 詳細します。
 
-  - [ASP.NET MVC のベースラインをツアーと Web フォーム「レガシ」アプリ](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
-  - [WCF サービスの基準と WinForms (3 層)「レガシ」アプリのツアー](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+  - [ASP.NET MVC、ベースラインをツアーと Web フォーム「レガシ」アプリ](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
+  - [WCF サービスの基準と WinForms (3 層) の「レガシ」アプリのツアー](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 
-## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>チュートリアル 2: Windows コンテナーで、既存の .NET アプリケーションを Containerize します。
+## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>チュートリアル 2: Windows コンテナーで既存の .NET アプリケーションのコンテナー格納します。
 
 ### <a name="overview"></a>概要
 
-Windows コンテナーの MVC、Web フォーム、または WCF、運用、開発、およびテスト環境に基づくように、既存の .NET アプリケーションの展開を向上させるために使用します。
+MVC、Web フォーム、または WCF では、運用、開発、およびテスト環境に基づくように、既存の .NET アプリケーションの展開を向上させるために Windows コンテナーを使用します。
 
 ### <a name="goals"></a>目的
 
-このチュートリアルの目的は、既存の .NET Framework アプリケーションを containerizing いくつかのオプションを表示します。 次の操作を行うことができます。
+このチュートリアルの目的では、既存の .NET Framework アプリケーションをコンテナー化のいくつかのオプションを説明します。 次の操作を行うことができます。
 
-- 使用してアプリを containerize [Docker 用の Visual Studio 2017 Tools](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 年 1 またはそれ以降のバージョン)。
+- 使用して、アプリケーションをコンテナー化[Visual Studio 2017 Tools for Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 またはそれ以降のバージョン)。
 
-- 手動で追加することによってアプリを containerize する[Dockerfile](https://docs.docker.com/engine/reference/builder/)を使用して、 [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)です。
+- 手動で追加することで、アプリケーションをコンテナー化、 [Dockerfile](https://docs.docker.com/engine/reference/builder/)、しを使用して、 [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)します。
 
-- 使用してアプリを containerize、 [Img2Docker](https://github.com/docker/communitytools-image2docker-win)ツール (Docker からオープン ソース ツール)。
+- 使用して、アプリケーションをコンテナー化、 [Img2Docker](https://github.com/docker/communitytools-image2docker-win)ツール (Docker からオープン ソース ツール)。
 
-このチュートリアルは、Docker 方法は、Visual Studio 2017 ツールに焦点を当てていますが、他の 2 つのアプローチが Dockerfile を使用してに関して類似しています。
+このチュートリアルは、Docker 方法は、Visual Studio 2017 Tools について重点的に取り上げます。 が、その他の 2 つのアプローチは Dockerfile を使用してに関して類似しています。
 
-### <a name="scenario-1-containerized-aspnet-web-apps"></a>シナリオ 1: コンテナーの ASP.NET web アプリ
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>シナリオ 1: コンテナー化された ASP.NET web アプリ
 
-次の図は、コンテナー化 eShop レガシ web アプリのアプリケーションのシナリオを示します。
+次の図は、コンテナー化された eShop 従来の web アプリのアプリケーションのシナリオを示します。
 
-> ![開発環境での ASP.NET アプリケーションのコンテナーの簡略化されたアーキテクチャ図](./media/image5-3.png)
+> ![簡素化されたアーキテクチャの図は、開発環境での ASP.NET アプリケーションをコンテナー化されました。](./media/image5-3.png)
 >
 
 
-### <a name="scenario-2-containerized-wcf-service"></a>シナリオ 2: コンテナーの WCF サービス
+### <a name="scenario-2-containerized-wcf-service"></a>シナリオ 2: コンテナー化された WCF サービス
 
-次の図は、コンテナー化の WCF サービスと 3 層アプリケーションのシナリオを示します。 
+次の図は、コンテナー化された WCF サービスと 3 層アプリケーションのシナリオを示します。 
 
-> ![開発環境でのコンテナー化の WCF サービスのアーキテクチャ図を簡素化されます。](./media/image5-3.5.png)
+> ![開発環境でコンテナー化された WCF サービスのアーキテクチャ図を簡略化](./media/image5-3.5.png)
 >
 
 ### <a name="benefits"></a>利点
 
-これには、コンテナーでモノリシックなアプリケーションを実行する利点があります。 最初に、アプリケーションのイメージを作成します。 その時点から、それぞれの配置を同じ環境で実行します。 すべてのコンテナーは、同じ OS バージョンを使用がインストールされている依存関係の同じバージョン、同じ .NET framework のバージョンを使用して、および同じ処理を使用してビルドされたをします。 基本的には、Docker イメージを使用して、アプリケーションの依存関係を制御します。 依存関係は、コンテナーを展開するときに、アプリケーションに移動します。
+これには、コンテナーで、モノリシック アプリケーションを実行する利点があります。 最初に、アプリケーションのイメージを作成します。 その時点からは、すべてのデプロイは、同じ環境内で実行されます。 すべてのコンテナーで、同じ OS バージョンを使用して、同じバージョンの依存関係のインストールが同じ .NET framework のバージョンを使用しておよびは同じプロセスを使用して構築されています。 基本的には、Docker イメージを使用して、アプリケーションの依存関係を制御します。 依存関係は、コンテナーをデプロイするときに、アプリケーションと共に移動します。
 
-その他の利点は、開発者が Windows コンテナーによって提供されている一貫した環境でアプリケーションを実行できることです。 特定のバージョンでのみ表示される問題は、ステージングまたは運用環境での表示ではなく、すぐに発見できます。 開発チームのメンバーで使用される開発環境での違いは重要アプリケーション コンテナーで実行時に小さいです。
+その他の利点は、開発者が Windows のコンテナーによって提供される一貫した環境でアプリケーションを実行できることです。 特定のバージョンでのみ表示される問題は、ステージング環境または運用環境で表示することではなく、すぐに発見できます。 開発チームのメンバーで使用される開発環境での相違点は問題のコンテナーでアプリケーションの実行時に小さいです。
 
-コンテナー化アプリケーションは、テクスチャのスケール アウト曲線を含めます。 コンテナー化アプリケーションでは、VM または物理マシンのマシンあたりの通常のアプリケーション展開と比較してで有効にすると、複数のアプリケーションとサービス インスタンス (コンテナーに基づく) があります。 これにより、高密度」および「減らすために必要なリソース、orchestrators Kubernetes など Service Fabric を使用する場合に特にです。
+コンテナー化されたアプリケーションでは、flatter スケール アウト曲線もあります。 コンテナー化されたアプリには、VM または物理マシンのマシンあたりの定期的なアプリケーション展開と比較する複数のアプリケーションとサービス インスタンスが (コンテナーに基づく) が有効にします。 これにより、高密度、および必要な少なくリソース、Kubernetes や Service Fabric などのオーケストレーターを使用する場合に特にです。
 
-コンテナリゼーション、理想的な状況では、アプリケーション コードに変更を加える必要ありません (C\#)。 ほとんどのシナリオでは、Docker の展開のメタデータ ファイル (Dockerfile と Docker Compose ファイル) だけができます。
+コンテナリゼーションは、理想的な状況では、アプリケーション コードに変更を加える必要ありません (C\#)。 ほとんどのシナリオでは、Docker の展開のメタデータ ファイル (Dockerfile と Docker Compose ファイル) だけ必要です。
 
 ### <a name="next-steps"></a>次の手順
 
-GitHub wiki 上には、このコンテンツをさらに詳しい情報を表示します。
+このコンテンツの詳細については、GitHub wiki 詳細します。
 
-  - [Windows コンテナーと Docker で .NET Framework の web アプリを containerize する方法](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
-  - [WCF サービスに Docker のサポートを追加します。](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
+  - [Windows コンテナーと Docker で .NET Framework web アプリをコンテナー化する方法](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+  - [WCF サービスへの Docker サポートの追加](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
 
 
 
-## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>チュートリアル 3: Azure Vm を Windows コンテナー ベースのアプリを展開します。
+## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>チュートリアル 3: Windows コンテナーに基づくアプリを Azure Vm をデプロイします。
 
-### <a name="technical-walkthrough-availability"></a>技術的なチュートリアルの可用性
+### <a name="technical-walkthrough-availability"></a>テクニカル チュートリアルの可用性
 
-技術的なチュートリアルは、eShopModernizing GitHub リポジトリの wiki で入手できます。 [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+完全な技術チュートリアル、eShopModernizing GitHub リポジトリ wiki で提供されています。 [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
 ### <a name="overview"></a>概要
 
-Azure の Windows Server 2016 仮想マシン (VM) 上の Docker ホストに展開するには、開発/テスト/ステージング環境をすばやくセットアップすることができます。 アプリを検証するには、テスト担当者またはビジネス ユーザー用の共通の場所も示します。 Vm は、Service (IaaS) の実稼働環境として有効なインフラストラクチャをすることもできます。
+Azure で Windows Server 2016 仮想マシン (VM) 上の Docker ホストに展開するには、開発/テスト/ステージング環境をすばやくセットアップすることができます。 アプリを検証するには、テスト担当者またはビジネス ユーザーの一般的な場所も提供します。 Vm は、サービス (IaaS) の実稼働環境として有効なインフラストラクチャをすることができます。
 
 ### <a name="goals"></a>目的
 
-このチュートリアルの目的は、Windows Server 2016、またはそれ以降のバージョンに基づいて Azure Vm を Windows コンテナーを展開する場合がある複数の代替を示すためです。
+このチュートリアルの目的では、Windows Server 2016 またはそれ以降のバージョンに基づいて Azure Vm を Windows コンテナーを展開する場合がある複数の代替手段を説明します。
 
 ### <a name="scenarios"></a>シナリオ
 
-このチュートリアルでは、いくつかのシナリオについて説明します。
+このチュートリアルでは、いくつかのシナリオがについて説明します。
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>シナリオ a: 展開は、Docker エンジン接続から開発用コンピューターから Azure VM に
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Docker エンジンの接続を介して開発用 PC から Azure VM に配置するシナリオ a:
 
-![Docker エンジン接続を介して開発用コンピューターから Azure の仮想マシンを展開します。](./media/image5-4.png)
+![Docker エンジンの接続を介して開発用 PC から Azure VM へのデプロイします。](./media/image5-4.png)
 
-> **図 5-4** Docker エンジン接続を介して開発用コンピューターから Azure の仮想マシンを展開します。
+> **図 5-4** Docker エンジンの接続を介して開発用 PC から Azure VM へのデプロイします。
 
-#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>シナリオ b: Docker のレジストリを使用する Azure VM を展開します。
+#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>シナリオ b: Docker レジストリを使用して Azure VM に展開します。
 
-![Docker レジストリを使用して Azure の仮想マシンを配置します。](./media/image5-5.png)
+![Docker レジストリを使用して Azure VM にデプロイします。](./media/image5-5.png)
 
-> **図 5-5** Docker レジストリを使用して Azure の仮想マシンを配置します。
+> **図 5-5** Docker レジストリを使用して Azure VM にデプロイします。
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-visual-studio-team-services"></a>シナリオ c: Azure の仮想マシンに Visual Studio Team Services での CI/CD パイプラインから展開します。
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>シナリオ c: Azure VM に Azure DevOps Services で CI/CD パイプラインから展開します。
 
-![Visual Studio Team Services での CI/CD パイプラインから Azure の仮想マシンを展開します。](./media/image5-6.png)
+![Azure DevOps Services で CI/CD パイプラインから Azure VM へのデプロイします。](./media/image5-6.png)
 
-> **図 5-6** Visual Studio Team Services での CI/CD パイプラインから Azure の仮想マシンを展開します。
+> **図 5-6** Azure DevOps Services で CI/CD パイプラインから Azure VM へのデプロイします。
 
-### <a name="azure-vms-for-windows-containers"></a>Windows コンテナーの azure Vm
+### <a name="azure-vms-for-windows-containers"></a>Windows コンテナー用の azure Vm
 
-Windows コンテナーの azure Vm は Vm の Windows Server 2016、Windows 10、またはそれ以降のバージョンに基づく、Docker エンジンがどちらも設定します。 ほとんどの場合は、Windows Server 2016 は Azure Vm で使用されます。
+Windows コンテナーの azure Vm は Vm の Windows Server 2016、Windows 10、またはそれ以降のバージョンに基づいて、Docker エンジンの両方を設定します。 ほとんどの場合は、Windows Server 2016 は Azure Vm で使用されます。
 
-Azure は、という名前の VM を現在提供**コンテナーと Windows Server 2016**です。 この VM を使用して、Windows Server Core または Nano Server の Windows で、新しい Windows Server コンテナー機能を試みることができます。 コンテナー OS イメージがインストールされ、その VM は Docker で使用できるようにします。
+Azure は、現在という名前の VM を提供します。 **Windows Server 2016 with Containers**します。 この VM を使用すると、Windows Server Core または Windows Nano Server のいずれかで、新しい Windows Server コンテナー機能をお試しください。 コンテナー OS イメージがインストールされている場合、および Docker を使用する準備が VM でし。
 
 ### <a name="benefits"></a>利点
 
-Windows コンテナーは、Azure にデプロイするときに、内部設置型 Windows Server 2016 の Vm を配置できますが、すぐに使用できる Windows Server コンテナーの Vm で、作業を開始する簡単な方法を取得します。 また、テスト担当者、および Azure の仮想マシン スケール セットによる自動スケーラビリティにアクセスできる一般的なオンラインの場所を取得します。
+Windows コンテナーは、Azure にデプロイするときに、オンプレミス Windows Server 2016 の Vm を展開できますが、すぐに使用できる Windows Server コンテナーの Vm を開始する簡単な方法を取得します。 テスト担当者、および自動のスケーラビリティを Azure の仮想マシン スケール セットにアクセスできる一般的なオンラインの場所も表示します。
 
 ### <a name="next-steps"></a>次の手順
 
-GitHub wiki 上には、このコンテンツをさらに詳しい情報を表示します。
+このコンテンツの詳細については、GitHub wiki 詳細します。
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
-## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>チュートリアル 4: Azure のコンテナー インスタンス (ACI) に Windows コンテナー ベースのアプリを展開します。
+## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>チュートリアル 4: Azure Container Instances (ACI) への Windows コンテナー ベースのアプリをデプロイします。
 
-### <a name="technical-walkthrough-availability"></a>技術的なチュートリアルの可用性
+### <a name="technical-walkthrough-availability"></a>テクニカル チュートリアルの可用性
 
-技術的なチュートリアルは、eShopModernizing GitHub リポジトリの wiki で入手できます。
+完全な技術チュートリアル、eShopModernizing GitHub リポジトリ wiki で提供されています。
 
-[ACI (Azure のコンテナー インスタンス) に、アプリを展開します。](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
+[ACI (Azure Container Instances) に、アプリを展開します。](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
 
 ### <a name="overview"></a>概要
 
-[Azure コンテナー インスタンス (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/)コンテナーの単一のインスタンスを展開するコンテナー開発/テスト/ステージング環境がある最も簡単な方法です。
+[Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/)はコンテナーの 1 つのインスタンスをデプロイするコンテナーの開発/テスト/ステージング環境に最も簡単な方法です。
 
 ### <a name="goals"></a>目的
 
-このチュートリアルは、主なシナリオ Azure コンテナー インスタンス (ACI) と ACI に eShopModernizing アプリを展開する方法に Windows コンテナーを展開するときにします。
+このチュートリアルでは、主なシナリオ Azure Container Instances (ACI) ACI に eShopModernizing アプリをデプロイする方法を Windows コンテナーをデプロイするときにします。
 
 ### <a name="scenarios"></a>シナリオ
 
-1 つまたはすべて (MVC アプリ、web フォーム アプリケーションまたは WCF サービス) のアプリの展開など ACI に eShopModernizing アプリの展開のバリエーションがあります。 次に示す次のシナリオでことができます、コンテナーとして ACI (Azure のコンテナー インスタンス) に ASP.NET MVC アプリケーションと、これらの両方に展開されている SQL Server のコンテナーを参照します。
+ACI に eShopModernizing アプリを展開する 1 つまたはすべてのアプリ (MVC アプリ、web フォーム アプリケーションまたは WCF サービス) の展開などについてのバリエーションがあります。 次のシナリオを次に示すことができます、コンテナーとして ACI (Azure Container Instances) に ASP.NET MVC アプリとこれらの両方に展開されている SQL Server のコンテナーを表示します。
 
-![開発環境から ACI を展開します。](./media/image5-3.5.6.png)
+![開発環境から ACI へのデプロイします。](./media/image5-3.5.6.png)
 
 ### <a name="benefits"></a>利点
 
-Azure のコンテナー インスタンスでは、簡単に作成し、仮想マシンをプロビジョニングまたは高レベルのサービスを採用することがなく、Azure では、Docker コンテナーを管理します。 ACI で直接 Azure での Windows コンテナーを展開してへの公開インターネット完全修飾ドメイン名 (FQDN) を数秒で (Docker Hub または Azure コンテナーのように Docker レジストリで準備ができて、Windows コンテナー イメージがある場合にレジストリ)。
+Azure Container Instances では、簡単に作成し、仮想マシンをプロビジョニングしたり、上位レベルのサービスを採用したりしなくても、Azure で Docker コンテナーを管理します。 、ACI で直接 Azure で Windows コンテナーのデプロイし、への公開を完全修飾ドメイン名 (FQDN) を使用してインターネットに数秒 (Docker Hub や Azure コンテナーのような Docker レジストリで準備ができて、Windows コンテナー イメージがある場合にすることができますレジストリの場合)。
 
 ### <a name="considerations"></a>注意事項
 
-いずれか完全な .NET Framework による Windows コンテナーを展開する/ASP.NET または SQL Server には、Azure コンテナー インスタンス (ACI) が Docker イメージに存在するために (Windows コンテナーでの Windows Server 2016) のような通常の Docker ホストに展開すると非常に高速ではありませんたびに (プル Docker レジストリから) ダウンロードし、SQL コンテナー イメージ (15.1 GB) と ASP.NET のコンテナーのイメージ (13.9 GB) のサイズは大幅に大きなただし、これは、独自の docker ホスト (永続的にオンラインを維持することよりはるかに低コストAzure で Windows コンテナーの VM で Windows Server 2016) であり、その一方で、運用環境の配置の優れた選択肢 (AKS/ACS) を Azure または Azure Service Fabric で Kubernetes と同様に全体の orchestrator を言うまでもありません。
+いずれかの完全な .NET Framework と Windows コンテナーのデプロイ]、[ASP.NET または SQL Server Azure Container Instances (ACI) には、Docker イメージがあるためです (Windows コンテナーでの Windows Server 2016) などの通常の Docker ホストにデプロイする場合と非常に高速ではありません(Docker レジストリからプルされた) たびにダウンロードし、これは、独自の docker ホスト (永続的にオンラインを維持するよりもよりもコストは、SQL コンテナー イメージ (15.1 GB) と ASP.NET のコンテナー イメージ (13.9 GB) のサイズが非常に大きい場合、Azure で Windows コンテナーの VM で Windows Server 2016) することで、全体のオーケストレーターは、その一方で、運用環境のデプロイ用の優れた選択肢である Kubernetes (AKS/ACS) を Azure または Azure Service Fabric でのようにします。
 
-メイン最後に、としては、Azure コンテナー インスタンスを使用して開発およびテスト シナリオの場合とパイプラインの CI/CD に非常に説得力のあるオプション。
+メインの結論としては、Azure Container Instances を使用して開発/テスト シナリオの場合と CI/CD パイプラインの非常に魅力的なオプション。
 
 ## <a name="next-steps"></a>次の手順
 
-GitHub wiki 上には、このコンテンツをさらに詳しい情報を表示します。 
+このコンテンツの詳細については、GitHub wiki 詳細します。 
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
 
 
-## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>チュートリアル 5: Azure のコンテナー サービスで Kubernetes に Windows コンテナー ベースのアプリを展開します。
+## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>チュートリアル 5: Azure Container Service で Kubernetes を Windows コンテナー ベースのアプリをデプロイします。
 
-### <a name="technical-walkthrough-availability"></a>技術的なチュートリアルの可用性
+### <a name="technical-walkthrough-availability"></a>テクニカル チュートリアルの可用性
 
-技術的なチュートリアルは、eShopModernizing GitHub リポジトリの wiki で入手できます。
+完全な技術チュートリアル、eShopModernizing GitHub リポジトリ wiki で提供されています。
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
 ### <a name="overview"></a>概要
 
-Windows コンテナーに基づいているアプリケーションはすばやく遠ざかる、さらに IaaS Vm からプラットフォームを使用する必要があります。 これを簡単に高いスケーラビリティを実現するために必要なよりスケーラビリティ、自動化され、では、大幅な向上を配置およびバージョン管理を自動化します。 これらの目標を達成するには、orchestrator を使用して、 [Kubernetes](https://kubernetes.io/)で使用できる、 [Azure コンテナー サービス](https://azure.microsoft.com/services/container-service/)です。
+Windows コンテナーに基づいているアプリケーションはすばやく離れたから IaaS Vm の移動、さらに、プラットフォームを使用する必要があります。 これを簡単に高いスケーラビリティを実現するために必要なよりスケーラビリティ、自動し、大幅に向上のデプロイとバージョン管理を自動化します。 これらの目標を達成するには、orchestrator を使用して[Kubernetes](https://kubernetes.io/)で使用できる、 [Azure Container Services](https://azure.microsoft.com/services/container-service/)します。
 
 ### <a name="goals"></a>目的
 
-Kubernetes に Windows コンテナー ベースのアプリケーションを展開する方法については、このチュートリアルの目的は、(とも呼ばれる*K8s*) Azure コンテナー サービスでします。 2 段階のプロセスは、最初から Kubernetes への展開します。
+このチュートリアルの目標は Kubernetes への Windows コンテナー ベースのアプリケーションをデプロイする方法を理解する (とも呼ばれる*K8s*) で Azure Container Service。 ゼロからの Kubernetes にデプロイすると、2 段階のプロセスです。
 
-1.  Azure コンテナー サービスに Kubernetes クラスターを展開します。
+1.  Azure Container Service に Kubernetes クラスターをデプロイします。
 
-2.  Kubernetes クラスターに関連するリソースとアプリケーションを展開します。
+2.  Kubernetes クラスターに、アプリケーションと関連リソースをデプロイします。
 
 ### <a name="scenarios"></a>シナリオ
 
 #### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>開発環境から Kubernetes クラスターに直接シナリオ a: 配置
 
-![開発環境から Kubernetes クラスターに直接展開します。](./media/image5-7.png)
+![開発環境から Kubernetes クラスターに直接デプロイします。](./media/image5-7.png)
 
-> **図 5-7** 開発環境から Kubernetes クラスターに直接展開します。
+> **図 5-7** 開発環境から Kubernetes クラスターに直接デプロイします。
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-team-services"></a>Team Services でパイプライン シナリオ b: Kubernetes クラスターに CI/CD から展開します。
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Azure DevOps サービス シナリオ b: クラスターにデプロイする Kubernetes から CI/CD パイプラインします。
 
-![Team Services での CI/CD パイプラインから Kubernetes クラスターを展開します。](./media/image5-8.png)
+![Azure DevOps Services で CI/CD パイプラインから Kubernetes クラスターにデプロイします。](./media/image5-8.png)
 
-> **図 5-8** Team Services での CI/CD パイプラインから Kubernetes クラスターを展開します。
+> **図 5-8** Azure DevOps Services で CI/CD パイプラインから Kubernetes クラスターにデプロイします。
 
 ### <a name="benefits"></a>利点
 
-Kubernetes でクラスターに展開する多くの利点があります。 最大のメリットは、運用環境で環境をスケール アウトできます (既存のノードでは内部スケーラビリティ) を使用して、クラスター (ノードまたは Vm の数に基づくコンテナーのインスタンスの数に基づいて、アプリケーションを取得します。グローバルなスケーラビリティはクラスターの)。
+Kubernetes でのクラスターにデプロイする多くの利点があります。 最大のメリットは (既存のノードでは内部スケーラビリティ) を使用して、クラスター (ノードまたは Vm の数に基づくコンテナー インスタンスの数に基づいて、アプリケーションをスケールすることができます、実稼働可能な環境を取得します。グローバルなスケーラビリティ、クラスターの)。
 
-Azure のコンテナー サービスは、具体的には Azure の一般的なオープン ソース ツールとテクノロジを最適化します。 移植性をコンテナーと、アプリケーションの構成の両方を提供する、開いているソリューションが表示されます。 ホストの数、サイズを選択し、orchestrator ツール-コンテナーのサービスが他のすべてを処理します。
+Azure Container Service では、Azure 向けに人気のあるオープン ソース ツールとテクノロジを最適化します。 移植性、コンテナーと、アプリケーションの構成の両方を提供する、開いているソリューションが表示されます。 ホストの数、サイズを選択し、orchestrator ツール-コンテナーのサービスが他のすべてを処理します。
 
-Kubernetes と開発者は他のユーザー間で、次の機能を容易にするコンテナーを中心としたインフラストラクチャの計画を考えた物理および仮想マシンに進むことができます。
+Kubernetes で開発者を他のユーザーの間で、次の機能を容易にするコンテナーを中心としたインフラストラクチャの計画に物理および仮想マシン、考えたに進むことができます。
 
 - 複数のコンテナーに基づくアプリケーション
 
-- コンテナーのインスタンスと自動スケールを水平方向にレプリケートします。
+- Container instances と水平方向の自動スケールをレプリケートします。
 
-- 名前付けと (たとえば、内部 DNS) を検出します。
+- 名前付けと (たとえば、内部 DNS) の検出
 
 - 負荷を分散
 
@@ -290,79 +290,79 @@ Kubernetes と開発者は他のユーザー間で、次の機能を容易にす
 
 ## <a name="next-steps"></a>次の手順
 
-GitHub wiki 上には、このコンテンツをさらに詳しい情報を表示します。 [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+このコンテンツの詳細については、GitHub wiki 詳細します。 [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>チュートリアル 6: Azure Service Fabric を Windows コンテナー ベースのアプリを展開します。
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>チュートリアル 6: Azure の Service Fabric への Windows コンテナー ベースのアプリをデプロイします。
 
-### <a name="technical-walkthrough-availability"></a>技術的なチュートリアルの可用性
+### <a name="technical-walkthrough-availability"></a>テクニカル チュートリアルの可用性
 
-技術的なチュートリアルは、eShopModernizing GitHub リポジトリの wiki で入手できます。
+完全な技術チュートリアル、eShopModernizing GitHub リポジトリ wiki で提供されています。
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 ### <a name="overview"></a>概要
 
-Windows コンテナーをすばやくに基づいてアプリケーションは、プラットフォームでは、遠ざかる、さらに IaaS Vm からを使用する必要があります。 これを簡単に高いスケーラビリティを実現するために必要なよりスケーラビリティ、自動化され、では、大幅な向上を配置およびバージョン管理を自動化します。 Orchestrator は、Azure クラウドで使用できますが、内部設置型の使用にも使用可能で、Azure Service Fabric を使用するか、別のパブリック クラウドであっても、これらの目標を実現できます。
+Windows コンテナーをすばやくに基づいてアプリケーションでは、IaaS Vm から離れて移動、さらに、プラットフォームを使用する必要があります。 これを簡単に高いスケーラビリティを実現するために必要なよりスケーラビリティ、自動し、大幅に向上のデプロイとバージョン管理を自動化します。 Azure Service Fabric は、Azure のクラウドで使用できますが、オンプレミスでも実行できますが、オーケストレーターを使用して、または別のパブリック クラウドであっても、これらの目標を実現できます。
 
 ### <a name="goals"></a>目的
 
-このチュートリアルの目的では、azure Service Fabric クラスターを Windows コンテナー ベースのアプリケーションを展開する方法を理解します。 Service Fabric を最初から展開するには、2 段階のプロセスです。
+このチュートリアルの目的では、Azure で Service Fabric クラスターに Windows コンテナー ベースのアプリケーションをデプロイする方法について説明します。 最初からの Service Fabric にデプロイすると、2 段階のプロセスです。
 
-1.  Azure (または、別の環境) は、Service Fabric クラスターを展開します。
+1.  Azure (または、別の環境) は、Service Fabric クラスターをデプロイします。
 
-2.  Service Fabric クラスターをアプリケーションと関連するリソースを展開します。
+2.  Service Fabric クラスターに、アプリケーションと関連リソースをデプロイします。
 
 ### <a name="scenarios"></a>シナリオ
 
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Service Fabric クラスターに直接開発環境からのシナリオ a: 配置
+#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>開発環境から Service Fabric クラスターに直接シナリオ a: 配置
 
-![開発環境から Service Fabric クラスターを直接展開します。](./media/image5-9.png)
+![開発環境から Service Fabric クラスターに直接デプロイします。](./media/image5-9.png)
 
-> **図 5-9** 開発環境から Service Fabric クラスターを直接展開します。
+> **図 5-9** 開発環境から Service Fabric クラスターに直接デプロイします。
 
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-team-services"></a>Team Services でパイプライン シナリオ b: Service Fabric クラスターを CI/CD から展開します。
+### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Azure DevOps サービスでパイプライン シナリオ b: Service Fabric クラスターに CI/CD から展開します。
 
-![Visual Studio Team Services での CI/CD パイプラインから Service Fabric クラスターを展開します。](./media/image5-10.png)
+![Azure DevOps Services で CI/CD パイプラインから Service Fabric クラスターにデプロイします。](./media/image5-10.png)
 
-> **図 5-10** Visual Studio Team Services での CI/CD パイプラインから Service Fabric クラスターを展開します。
+> **図 5-10** Azure DevOps Services で CI/CD パイプラインから Service Fabric クラスターにデプロイします。
 
 ## <a name="benefits"></a>利点
 
-Service Fabric クラスターを展開する利点は、Kubernetes を使用する利点と似ています。 1 つの違いは Service Fabric Kubernetes バージョン 1.9 で Windows コンテナーのベータ版のフェーズでは Kubernetes と比較して、Windows アプリケーションの運用環境より完成度の高い (2017 年 12 月)。 Kubernetes は、for Linux より完成度の高い環境です。
+Service fabric クラスターへのデプロイの利点は、Kubernetes を使用する利点と似ています。 1 つの違いは、Service Fabric には、さらに成熟した運用環境と比較する Kubernetes バージョン 1.9 で Windows コンテナーのベータ フェーズでは、Kubernetes と Windows アプリケーション (2017 年 12 月)。 Kubernetes は、Linux のさらに成熟した環境です。
 
-Azure Service Fabric を使用する主な利点は、運用環境で環境をスケール アウトできます (既存のノードでは内部スケーラビリティ) を使用するの数に基づいて、コンテナー インスタンスの数に基づいて、アプリケーションを取得します。ノードまたはクラスター (クラスターのグローバルな拡張性) で Vm です。
+Azure Service Fabric を使用する主な利点は、(既存のノードでは内部スケーラビリティ) を使用して数に基づいてするコンテナー インスタンスの数に基づいて、アプリケーションをスケールすることができます、実稼働可能な環境を取得します。ノードまたはクラスター (クラスターのグローバルなスケーラビリティ) 内の Vm。
 
-Azure Service Fabric は、コンテナーと、アプリケーションの構成の両方の移植性を提供します。 Azure では、クラスター、または独自のデータ センターに内部設置型インストールに Service Fabric ことができます。 同様にも別のクラウドにこの Service Fabric クラスターをインストールすることができます[Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/)です。
+Azure Service Fabric では、移植性をコンテナーと、アプリケーションの構成の両方を提供します。 Azure では、クラスター化または独自のデータ センターに、オンプレミス インストールに Service Fabric ことができます。 このようなでも別のクラウドでこの Service Fabric クラスターをインストールすることができます[Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/)します。
 
-Service Fabric で開発者は他のユーザー間で、次の機能を容易にするコンテナーを中心としたインフラストラクチャの計画を考えた物理および仮想マシンに進むことができます。
+Service Fabric を使用開発者を他のユーザーの間で、次の機能を容易にするコンテナーを中心としたインフラストラクチャの計画に考えた物理および仮想マシンに進むことができます。
 
-- 複数のコンテナーに基づくアプリケーションです。
+- 複数のコンテナーに基づくアプリケーション。
 
-- コンテナーのインスタンスおよび水平方向の自動スケーリングをレプリケートしています。
+- Container instances と水平方向の自動スケールをレプリケートします。
 
 - 名前付けと (たとえば、内部 DNS) を検出します。
 
 - 負荷を分散します。
 
-- 更新プログラムの展開です。
+- ローリング更新。
 
 - シークレットを配布します。
 
 - アプリケーションの正常性を確認します。
 
-次の機能は、(他の orchestrators と比較して)、Service Fabric で排他が。
+次の機能では、(他のオーケストレーターとの比較)、Service Fabric で排他的です。
 
-- ステートフル サービスの機能、信頼性の高いサービス アプリケーションのモデルを使用します。
+- ステートフル サービスの機能は、Reliable Services アプリケーションのモデルを使用します。
 
 - アクター パターン、Reliable Actors アプリケーション モデルを使用します。
 
-- Windows または Linux のコンテナーに加え、ベア骨のプロセスを展開します。
+- Windows または Linux のコンテナーに加え、ベア ボーン プロセスを展開します。
 
-- 高度なローリング更新プログラムとの正常性チェックします。
+- 高度なローリング アップデートと正常性チェック
 
 ### <a name="next-steps"></a>次の手順
 
-GitHub wiki 上には、このコンテンツをさらに詳しい情報を表示します。
+このコンテンツの詳細については、GitHub wiki 詳細します。
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
