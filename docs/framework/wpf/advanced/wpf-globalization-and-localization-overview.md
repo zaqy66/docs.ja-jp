@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
 ms.openlocfilehash: 54c5caaf3ade07f342e94ad0359f00c1418eace4
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368602"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44706347"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
 1 つだけの言語、製品の可用性を制限する場合は、潜在的な顧客ベースでの世界 6.5 10億人の母集団の割合を制限します。 世界中のユーザーに到達するようにアプリケーションを実行する場合に、製品のコスト効率に優れたローカリゼーションより多くのお客様に最高で最も経済的な方法のいずれか。  
