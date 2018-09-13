@@ -13,11 +13,11 @@ ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271206"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705873"
 ---
 # <a name="file-and-stream-io"></a>ファイルおよびストリーム入出力
 ファイルおよびストリーム I/O (入出力) とは、ストレージ メディアとの間のデータの転送を指します。 .NET Framework では、`System.IO` 名前空間に、データ ストリームおよびファイルで同期的および非同期的に読み取りと書き込みを有効にする型が用意されています。 これらの名前空間には、ファイルを圧縮および圧縮解除する型、パイプとシリアル ポート経由の通信を有効にする型もあります。  
