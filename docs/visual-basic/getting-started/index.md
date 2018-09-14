@@ -1,16 +1,16 @@
 ---
 title: Visual Basic 入門
-ms.date: 08/10/2017
+ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 373f5815e1ca466545da4e2368bdf55e944d28f8
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: c17b3e1849664bb1a5d56b60e8f4121fedfcdae3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367575"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45557774"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入門
 このセクションでは、Visual Basic によるアプリケーション開発を開始するための情報を提供します。  
@@ -31,12 +31,6 @@ Visual Basic .NET の各バージョンの新機能を一覧表示します。
   
 [Visual Basic プログラマのための追加リソース](additional-resources.md)  
 一般的な問題を解決するのに役立つ Web サイトおよびニュースグループの一覧を示します。  
-
-## <a name="develop-net-core-applications-with-visual-basic"></a>Visual Basic での .NET Core アプリケーションの開発
-
-[Visual Studio 2017 での .NET Core を使用した Visual Basic Hello World アプリの構築](../../core/tutorials/vb-with-visual-studio.md) 
-
-[Visual Studio 2017 で Visual Basic と .NET Core を使用したクラス ライブラリの構築](../../core/tutorials/vb-library-with-visual-studio.md) 
 
 ## <a name="see-also"></a>関連項目
  [Visual Basic の取得](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
