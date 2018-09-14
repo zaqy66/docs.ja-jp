@@ -3,11 +3,11 @@ title: モデリングとマッピング
 ms.date: 03/30/2017
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
 ms.openlocfilehash: 81080c416fd18c51be6626cb70a23073e049051d
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710451"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515186"
 ---
 # <a name="modeling-and-mapping"></a>モデリングとマッピング
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、概念モデル、ストレージ モデル、およびこの 2 つのモデル間のマッピングをアプリケーションに最適な方法で定義できます。 Visual Studio で Entity Data Model ツールは、作成することができます。[edmx ファイル](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)からデータベースまたはグラフィカルなモデルと、更新、データベースまたはモデルが変更されたときにファイルをします。  

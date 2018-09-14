@@ -1,33 +1,33 @@
 ---
 title: まとめ
-description: Azure のクラウドと Windows コンテナーの既存の .NET アプリケーションを最新化 |結論
+description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |結論
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 9c115aa09c3de2cbd71a3b7dab7e8bbedc911ce1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af6151d04622c72acdb7f27ebb220bf611418b4c
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580511"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45509745"
 ---
 # <a name="conclusions"></a>まとめ
 
-- 最終的には、コンテナー ベースのソリューションには、コスト節約の利点があります。 コンテナーは、実稼働環境での依存関係が存在しない場合の原因となった摩擦を削除するために、展開に関する問題の解決策です。 これらの問題を削除すると、その開発/テスト、DevOps、および運用操作大幅に向上します。
+- コンテナー ベースのソリューションは、最終的にはコスト削減のメリットを提供します。 コンテナーは、運用環境での依存関係の欠落によって引き起こされる不整合を削除するための展開に関する問題の解決策です。 これらの問題を削除して、開発/テスト、DevOps、および運用操作大幅に向上します。
 
 - Docker コンテナーは、サーバー ベースのアプリケーションまたはサービスの配置の標準的な単位になっています。
 
-- 運用環境でのスケーラブルな Windows コンテナー ベースのアプリケーションをホストするオーケストレーター (Service Fabric Kubernetes など) を使用してください。
+- 運用環境では、拡張性の高い Windows コンテナー ベースのアプリケーションをホストする (Service Fabric、または Kubernetes) などのオーケストレーターを使用する必要があります。
 
-- コンテナーをホストする azure Vm は、クラウドでの小規模な開発およびテスト環境の作成を高速で簡単な方法です。
+- コンテナーをホストする azure Vm は、クラウドで小規模な開発/テスト環境を作成する高速で簡単な方法です。
 
-- Azure に既存のアプリケーションから、リレーショナル データベースを移行する場合、azure SQL データベースのマネージ インスタンスが既定で勧めします。
+- 既存のアプリケーションを Azure から、リレーショナル データベースを移行する場合に、既定で azure SQL Database マネージ インスタンスがお勧めします。
 
-- Visual Studio 2017 と Image2Docker は、Windows コンテナーで、既存の .NET アプリケーションを取得中に開始された学習を向上させることにより刷新を開始するための基本的なツールです。
+- Visual Studio 2017 と Image2Docker は、作業の開始の学習曲線を向上させることにより、Windows コンテナーで既存の .NET アプリケーションを最新化を開始するための基本的なツールです。
 
-- 実稼働環境でコンテナー化アプリケーションを配置するときを常に作成または DevOps カルチャと Visual Studio Team Services や Jenkins などの CI/CD パイプライン DevOps ツールを導入します。
+- 実稼働環境でコンテナー化されたアプリケーションを配置するときに作成または DevOps の文化と CI/CD パイプラインで、Azure DevOps サービスや Jenkins などの DevOps ツールを採用するは常に。
 
-- Microsoft Azure では、Windows コンテナー、クラウド インフラストラクチャの PaaS サービスと、既存の .NET Framework アプリケーションを最新化するための最も包括的で完全な環境を提供します。
+- Microsoft Azure では、Windows コンテナー、クラウド インフラストラクチャおよび PaaS サービスで、既存の .NET Framework アプリケーションを近代化する最も包括的な完全な環境を提供します。
 
 >[!div class="step-by-step"]
 [前へ](walkthroughs-technical-get-started-overview.md)

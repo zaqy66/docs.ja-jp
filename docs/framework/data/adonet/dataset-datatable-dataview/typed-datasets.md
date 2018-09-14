@@ -3,11 +3,11 @@ title: 型指定されたデータセット
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 68721bcdbce6bf6d3279d6018ce6bc48d65c55a3
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700273"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45516121"
 ---
 # <a name="typed-datasets"></a>型指定されたデータセット
 厳密に型指定されていない変数を使用した値への遅延バインディング アクセスに加えて、<xref:System.Data.DataSet> には、厳密に型指定された変数を使用したデータへのアクセスも用意されています。 テーブルと列の一部である、**データセット**わかりやすい名前を使用してアクセスできる、厳密に型指定された変数。  

@@ -9,11 +9,11 @@ ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194878"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45519472"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>抽象化の実装用の基本クラス
 厳密に言えば、別のクラスがそこから派生する場合、クラスは、基底クラスになります。 ここでは、ただし、基本クラスは、共通の抽象化を提供または一部を再利用するには、他のクラスの既定の実装が継承する主な目的としたクラス。 通常、基底クラスは、階層のルートにある抽象化と下部にあるいくつかのカスタム実装の間の継承階層の途中で配置されています。  

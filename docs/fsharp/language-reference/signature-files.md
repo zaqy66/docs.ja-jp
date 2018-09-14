@@ -3,11 +3,11 @@ title: シグネチャ ファイル (f#)
 description: F# 署名ファイルを使用して、型、名前空間、モジュールなど f# プログラム要素、一連のパブリック シグネチャに関する情報を保持する方法について説明します。
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338062"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508422"
 ---
 # <a name="signatures"></a>シグネチャ
 

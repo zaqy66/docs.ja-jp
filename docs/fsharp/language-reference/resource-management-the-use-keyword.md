@@ -3,11 +3,11 @@ title: 'リソースの管理: use キーワード (F#)'
 description: F# キーワード 'use' と 'using' の関数は、初期化とリソースの解放を制御できますについて説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268225"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515523"
 ---
 # <a name="resource-management-the-use-keyword"></a>リソースの管理: use キーワード
 

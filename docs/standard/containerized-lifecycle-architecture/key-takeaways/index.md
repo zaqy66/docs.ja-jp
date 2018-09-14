@@ -4,12 +4,12 @@ description: Microsoft プラットフォームとツールでコンテナー化
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104639"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778423"
 ---
 # <a name="key-takeaways"></a>重要な習得事項
 
@@ -23,7 +23,7 @@ ms.locfileid: "37104639"
 
 -   実稼働環境の Docker 環境に接続する継続的インテグレーション/継続的配置をサポートするエンドツーエンドの DevOps 環境は、機敏性を提供し、最終的にアプリケーションの市場投入までの時間を短縮します。
 
-Visual Studio Team Services は、継続的配置のパイプラインから Docker 環境に指定された DevOps 環境を大幅に簡素化します。このパイプラインには、単純な Docker 環境、または Azure ベースのより高度なマイクロサービスとコンテナー オーケストレーターなどが含まれます。
+Azure DevOps サービスには、単純な Docker 環境より高度なマイクロ サービスとコンテナー オーケストレーターの Azure ベースの継続的なデプロイ パイプラインから Docker 環境に指定された DevOps 環境が大幅に簡略化します。
 
 >[!div class="step-by-step"]
 [前へ](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
