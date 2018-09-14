@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b712c6ae5978e83dab085f48dd1fd572757384a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274649"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45585687"
 ---
-# <a name="asmcacheflags-enumeration"></a><span data-ttu-id="f0ac9-102">ASM_CACHE_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="f0ac9-102">ASM_CACHE_FLAGS Enumeration</span></span>
-<span data-ttu-id="f0ac9-103">表されるアセンブリのソースを示す[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)グローバル アセンブリ キャッシュにします。</span><span class="sxs-lookup"><span data-stu-id="f0ac9-103">Indicates the source of an assembly that is represented by [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) in the global assembly cache.</span></span>  
+# <a name="asmcacheflags-enumeration"></a><span data-ttu-id="a6550-102">ASM_CACHE_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="a6550-102">ASM_CACHE_FLAGS Enumeration</span></span>
+<span data-ttu-id="a6550-103">表されるアセンブリのソースを示す[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)グローバル アセンブリ キャッシュにします。</span><span class="sxs-lookup"><span data-stu-id="a6550-103">Indicates the source of an assembly that is represented by [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f0ac9-104">構文</span><span class="sxs-lookup"><span data-stu-id="f0ac9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6550-104">構文</span><span class="sxs-lookup"><span data-stu-id="a6550-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -38,26 +38,26 @@ typedef enum {
 } ASM_CACHE_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f0ac9-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="f0ac9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a6550-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="a6550-105">Members</span></span>  
   
-|<span data-ttu-id="f0ac9-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="f0ac9-106">Member</span></span>|<span data-ttu-id="f0ac9-107">説明</span><span class="sxs-lookup"><span data-stu-id="f0ac9-107">Description</span></span>|  
+|<span data-ttu-id="a6550-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="a6550-106">Member</span></span>|<span data-ttu-id="a6550-107">説明</span><span class="sxs-lookup"><span data-stu-id="a6550-107">Description</span></span>|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|<span data-ttu-id="f0ac9-108">Ngen.exe を使用して、プリコンパイル済みアセンブリのキャッシュを列挙します。</span><span class="sxs-lookup"><span data-stu-id="f0ac9-108">Enumerates the cache of precompiled assemblies by using Ngen.exe.</span></span>|  
-|`ASM_CACHE_GAC`|<span data-ttu-id="f0ac9-109">グローバル アセンブリ キャッシュを列挙します。</span><span class="sxs-lookup"><span data-stu-id="f0ac9-109">Enumerates the global assembly cache.</span></span>|  
-|`ASM_CACHE_DOWNLOAD`|<span data-ttu-id="f0ac9-110">オンデマンドでダウンロードされたまたはシャドウ コピーされているが、アセンブリを列挙します。</span><span class="sxs-lookup"><span data-stu-id="f0ac9-110">Enumerates the assemblies that have been downloaded on demand or that have been shadow-copied.</span></span>|  
-|`ASM_CACHE_ROOT`|<span data-ttu-id="f0ac9-111">示します、 [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)関数は、共通言語ランタイム (CLR) バージョン 2.0 のグローバル アセンブリ キャッシュにパスを返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="f0ac9-111">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for the common language runtime (CLR) version 2.0.</span></span> <span data-ttu-id="f0ac9-112">呼び出しのコンテキストでのみ意味のある[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)します。</span><span class="sxs-lookup"><span data-stu-id="f0ac9-112">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
-|`ASM_CACHE_ROOT_EX`|<span data-ttu-id="f0ac9-113">示します、 [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)関数は、グローバル アセンブリ キャッシュにパスを CLR version 4 に返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="f0ac9-113">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for CLR version 4.</span></span> <span data-ttu-id="f0ac9-114">呼び出しのコンテキストでのみ意味のある[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)します。</span><span class="sxs-lookup"><span data-stu-id="f0ac9-114">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
+|`ASM_CACHE_ZAP`|<span data-ttu-id="a6550-108">Ngen.exe を使用して、プリコンパイル済みアセンブリのキャッシュを列挙します。</span><span class="sxs-lookup"><span data-stu-id="a6550-108">Enumerates the cache of precompiled assemblies by using Ngen.exe.</span></span>|  
+|`ASM_CACHE_GAC`|<span data-ttu-id="a6550-109">グローバル アセンブリ キャッシュを列挙します。</span><span class="sxs-lookup"><span data-stu-id="a6550-109">Enumerates the global assembly cache.</span></span>|  
+|`ASM_CACHE_DOWNLOAD`|<span data-ttu-id="a6550-110">オンデマンドでダウンロードされたまたはシャドウ コピーされているが、アセンブリを列挙します。</span><span class="sxs-lookup"><span data-stu-id="a6550-110">Enumerates the assemblies that have been downloaded on demand or that have been shadow-copied.</span></span>|  
+|`ASM_CACHE_ROOT`|<span data-ttu-id="a6550-111">示します、 [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)関数は、共通言語ランタイム (CLR) バージョン 2.0 のグローバル アセンブリ キャッシュにパスを返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="a6550-111">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for the common language runtime (CLR) version 2.0.</span></span> <span data-ttu-id="a6550-112">呼び出しのコンテキストでのみ意味のある[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)します。</span><span class="sxs-lookup"><span data-stu-id="a6550-112">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
+|`ASM_CACHE_ROOT_EX`|<span data-ttu-id="a6550-113">示します、 [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)関数は、グローバル アセンブリ キャッシュにパスを CLR version 4 に返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="a6550-113">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for CLR version 4.</span></span> <span data-ttu-id="a6550-114">呼び出しのコンテキストでのみ意味のある[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)します。</span><span class="sxs-lookup"><span data-stu-id="a6550-114">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f0ac9-115">要件</span><span class="sxs-lookup"><span data-stu-id="f0ac9-115">Requirements</span></span>  
- <span data-ttu-id="f0ac9-116">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f0ac9-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6550-115">要件</span><span class="sxs-lookup"><span data-stu-id="a6550-115">Requirements</span></span>  
+ <span data-ttu-id="a6550-116">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a6550-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f0ac9-117">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="f0ac9-117">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="a6550-117">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="a6550-117">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="f0ac9-118">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="f0ac9-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a6550-118">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="a6550-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f0ac9-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0ac9-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a6550-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6550-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0ac9-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="f0ac9-120">See Also</span></span>  
- [<span data-ttu-id="f0ac9-121">GetCachePath 関数</span><span class="sxs-lookup"><span data-stu-id="f0ac9-121">GetCachePath Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
- [<span data-ttu-id="f0ac9-122">IAssemblyCacheItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f0ac9-122">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
- [<span data-ttu-id="f0ac9-123">Fusion 列挙型</span><span class="sxs-lookup"><span data-stu-id="f0ac9-123">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="a6550-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="a6550-120">See Also</span></span>  
+ [<span data-ttu-id="a6550-121">GetCachePath 関数</span><span class="sxs-lookup"><span data-stu-id="a6550-121">GetCachePath Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
+ [<span data-ttu-id="a6550-122">IAssemblyCacheItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a6550-122">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
+ [<span data-ttu-id="a6550-123">Fusion 列挙型</span><span class="sxs-lookup"><span data-stu-id="a6550-123">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
