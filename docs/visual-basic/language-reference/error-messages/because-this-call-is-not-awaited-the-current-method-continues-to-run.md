@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: fe820b9d2157c09428903a36427d3ff5e4c0045b
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513730"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45619176"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>この呼び出しは待機されなかったため、現在のメソッドの実行は呼び出しの完了を待たずに続行されます。
 この呼び出しは待機されなかったため、現在のメソッドの実行は呼び出しの完了を待たずに続行されます。 呼び出しの結果に 'Await' 演算子を適用することを検討してください。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
 ms.openlocfilehash: 108411269067dc4b19b585b991dffbd78f2bb23f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515567"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45618706"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog コンポーネント (Windows フォーム)
 Windows フォームの <xref:System.Windows.Forms.OpenFileDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。 これは同じ**ファイルを開く** ダイアログ ボックスが、Windows オペレーティング システムによって公開されています。 これは、<xref:System.Windows.Forms.CommonDialog> クラスを継承しています。  

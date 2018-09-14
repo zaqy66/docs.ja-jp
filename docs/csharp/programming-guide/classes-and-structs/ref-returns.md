@@ -4,12 +4,12 @@ description: ref 戻り値と ref ローカル変数を定義して使用する�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6250d2b0c3490cce18623d6b06d5e1a352f22c09
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510566"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616141"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 戻り値と ref ローカル変数
 
@@ -58,7 +58,7 @@ ref 戻り値は、呼び出されるメソッドの範囲で、別の変数の�
 - その値を読み取るとき、それが別名を与える変数の値を読み取ることになります。
 - "*参照渡し*" で値を返す場合、その同じ変数の別名を返すことになります。
 - "*参照渡し*" で別のメソッドに値を渡す場合、それが別名を与える変数への参照を渡すことになります。
-- [ref ローカル](#ref-local)をエイリアスにすると、同じ変数に新しいエイリアスが作られます。
+- [ref ローカル](#ref-locals)をエイリアスにすると、同じ変数に新しいエイリアスが作られます。
 
 
 ## <a name="ref-locals"></a>ref ローカル変数
@@ -122,7 +122,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 この 2 番目のバージョンは、シークされる値が配列の末尾近くにあるようなシナリオのシーケンスが長い場合に、より効率的です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ref キーワード](../../language-reference/keywords/ref.md)  
 - [値の型による参照セマンティクス](../../../csharp/reference-semantics-with-value-types.md)

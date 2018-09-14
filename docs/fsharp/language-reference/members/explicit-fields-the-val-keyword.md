@@ -3,11 +3,11 @@ title: '明示的なフィールド: val キーワード (F#)'
 description: F# 'val' について、キーワード、型を初期化せず、クラスまたは構造体の型に値を格納する場所を宣言するために使用します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45570000"
+ms.locfileid: "45617371"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>明示的なフィールド: val キーワード
 

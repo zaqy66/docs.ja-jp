@@ -3,11 +3,11 @@ title: 追跡を使用したアプリケーションのトラブルシューテ�
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
 ms.openlocfilehash: f991533b61705c8d0a1a8e71b632dd53f24dd979
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569264"
+ms.locfileid: "45615951"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>追跡を使用したアプリケーションのトラブルシューティング
 Windows Workflow Foundation (WF) では、Windows Workflow Foundation のアプリケーションまたはサービスの実行の詳細を提供するワークフロー関連の情報を追跡することができます。 Windows Workflow Foundation ホストは、ワークフロー インスタンスの実行中にワークフロー イベントをキャプチャできます。 ワークフローは、エラーまたは例外を生成する場合は、追跡の詳細をその処理のトラブルシューティング、Windows Workflow Foundation を使用できます。  
