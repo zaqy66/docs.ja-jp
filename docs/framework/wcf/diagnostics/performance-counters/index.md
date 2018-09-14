@@ -5,11 +5,11 @@ helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
 ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365278"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45610088"
 ---
 # <a name="wcf-performance-counters"></a>WCF パフォーマンス カウンター
 Windows Communication Foundation (WCF) には、多数アプリケーションのパフォーマンスの測定に役立つパフォーマンス カウンターにはが含まれています。  

@@ -3,11 +3,11 @@ title: 型プロバイダーのトラブルシューティング
 description: F# 型プロバイダーを使用するときに発生する最も可能性がある問題の解決策を検出します。
 ms.date: 05/16/2016
 ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365833"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45589129"
 ---
 # <a name="troubleshooting-type-providers"></a>型プロバイダーのトラブルシューティング
 

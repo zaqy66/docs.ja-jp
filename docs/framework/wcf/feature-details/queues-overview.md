@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44756952"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45588684"
 ---
 # <a name="queues-overview"></a>キューの概要
 ここでは、キューを使った通信の概要とその基本概念を解説します。 以降のセクションでは、ここで説明したキューの概念で Windows Communication Foundation (WCF) が活かされている方法の詳細に移動します。  

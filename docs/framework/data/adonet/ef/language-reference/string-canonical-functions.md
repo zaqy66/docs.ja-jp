@@ -3,11 +3,11 @@ title: 文字列正規関数
 ms.date: 03/30/2017
 ms.assetid: 5e2cbebd-5df3-47c7-b0e2-49a17ab22bfb
 ms.openlocfilehash: d4758f8325b99bc4bd91575dd774d2dabde1f925
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272931"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45587715"
 ---
 # <a name="string-canonical-functions"></a>文字列正規関数
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、文字列正規関数が含まれています。  

@@ -3,11 +3,11 @@ title: XAMLX における永続的な遅延
 ms.date: 03/30/2017
 ms.assetid: efc38df4-2d34-453c-8e59-2c21d1307354
 ms.openlocfilehash: 1eef9211c67d190ecb5f329c481fa2e3d1763353
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521454"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594109"
 ---
 # <a name="durable-delay-in-xamlx"></a>XAMLX における永続的な遅延
 このサンプルでは、永続的な遅延を使用する方法を示します。これは、遅延の間、ワークフローを永続的なデバイスに永続化する遅延のことです。  

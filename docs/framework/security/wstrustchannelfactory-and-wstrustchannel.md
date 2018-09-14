@@ -5,11 +5,11 @@ ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517932"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597007"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory および WSTrustChannel
 Windows Communication Foundation (WCF) をよくご存じの方は、WCF クライアントが既にフェデレーションに対応していることを理解されていると思います。 <xref:System.ServiceModel.WSFederationHttpBinding> または同様のカスタム バインドを使用して WCF クライアントを構成することで、サービスに対するフェデレーション認証を有効にすることができます。  

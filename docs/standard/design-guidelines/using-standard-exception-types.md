@@ -11,11 +11,11 @@ ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ea4a61be3a76c30c564cbf98ba3318fc6c3e7d4
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511618"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591200"
 ---
 # <a name="using-standard-exception-types"></a>標準例外型の使用
 このセクションでは、フレームワークと、その使用状況の詳細によって提供される標準の例外について説明します。 一覧は完全ではではありません。 その他のフレームワーク例外の種類の使用状況の .NET Framework のリファレンス ドキュメントを参照してください。  

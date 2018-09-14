@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
 ms.openlocfilehash: 47ab3dad8dc206acb0ef272ee86fe25365d2ac83
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44709595"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45596579"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a>行&lt;数&gt;現在の区切り記号を使用して解析できません
 指定したもの以外の区切り記号を使用しているために、指定した行を解析できません。  
