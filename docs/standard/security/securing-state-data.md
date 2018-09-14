@@ -11,23 +11,23 @@ ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3c821177ca897e617885425217ac0b6659b5ea6e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44493590"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515445"
 ---
-# <a name="securing-state-data"></a><span data-ttu-id="5e4dd-102">状態データの保護</span><span class="sxs-lookup"><span data-stu-id="5e4dd-102">Securing State Data</span></span>
-<span data-ttu-id="5e4dd-103">機密データの処理または任意の種類のセキュリティ決定を行うアプリケーションは、そのデータを自らの制御下に置き、潜在的に悪意がある他のコードがそのデータに直接アクセスできないようにします。</span><span class="sxs-lookup"><span data-stu-id="5e4dd-103">Applications that handle sensitive data or make any kind of security decisions need to keep that data under their own control and cannot allow other potentially malicious code to access the data directly.</span></span> <span data-ttu-id="5e4dd-104">メモリ内でデータを保護する最善の方法は、そのデータをプライベート変数または内部変数 (同じアセンブリにスコープが限定されている) として宣言することです。</span><span class="sxs-lookup"><span data-stu-id="5e4dd-104">The best way to protect data in memory is to declare the data as private or internal (with scope limited to the same assembly) variables.</span></span> <span data-ttu-id="5e4dd-105">ただし、このようなデータでさえも、次のように注意が必要なアクセスの対象となります。</span><span class="sxs-lookup"><span data-stu-id="5e4dd-105">However, even this data is subject to access you should be aware of:</span></span>  
+# <a name="securing-state-data"></a><span data-ttu-id="22e92-102">状態データの保護</span><span class="sxs-lookup"><span data-stu-id="22e92-102">Securing State Data</span></span>
+<span data-ttu-id="22e92-103">機密データの処理または任意の種類のセキュリティ決定を行うアプリケーションは、そのデータを自らの制御下に置き、潜在的に悪意がある他のコードがそのデータに直接アクセスできないようにします。</span><span class="sxs-lookup"><span data-stu-id="22e92-103">Applications that handle sensitive data or make any kind of security decisions need to keep that data under their own control and cannot allow other potentially malicious code to access the data directly.</span></span> <span data-ttu-id="22e92-104">メモリ内でデータを保護する最善の方法は、そのデータをプライベート変数または内部変数 (同じアセンブリにスコープが限定されている) として宣言することです。</span><span class="sxs-lookup"><span data-stu-id="22e92-104">The best way to protect data in memory is to declare the data as private or internal (with scope limited to the same assembly) variables.</span></span> <span data-ttu-id="22e92-105">ただし、このようなデータでさえも、次のように注意が必要なアクセスの対象となります。</span><span class="sxs-lookup"><span data-stu-id="22e92-105">However, even this data is subject to access you should be aware of:</span></span>  
   
--   <span data-ttu-id="5e4dd-106">リフレクション メカニズムを使用すると、オブジェクトを参照できる信頼性の高いコードはプライベート メンバーを取得および設定できます。</span><span class="sxs-lookup"><span data-stu-id="5e4dd-106">Using reflection mechanisms, highly trusted code that can reference your object can get and set private members.</span></span>  
+-   <span data-ttu-id="22e92-106">リフレクション メカニズムを使用すると、オブジェクトを参照できる信頼性の高いコードはプライベート メンバーを取得および設定できます。</span><span class="sxs-lookup"><span data-stu-id="22e92-106">Using reflection mechanisms, highly trusted code that can reference your object can get and set private members.</span></span>  
   
--   <span data-ttu-id="5e4dd-107">シリアル化を使用すると、信頼性の高いコードがプライベート メンバーを効率よく取得および設定できます (シリアル化された形式のオブジェクトにおいて対応するデータにアクセスできる場合)。</span><span class="sxs-lookup"><span data-stu-id="5e4dd-107">Using serialization, highly trusted code can effectively get and set private members if it can access the corresponding data in the serialized form of the object.</span></span>  
+-   <span data-ttu-id="22e92-107">シリアル化を使用すると、信頼性の高いコードがプライベート メンバーを効率よく取得および設定できます (シリアル化された形式のオブジェクトにおいて対応するデータにアクセスできる場合)。</span><span class="sxs-lookup"><span data-stu-id="22e92-107">Using serialization, highly trusted code can effectively get and set private members if it can access the corresponding data in the serialized form of the object.</span></span>  
   
--   <span data-ttu-id="5e4dd-108">デバッギング中にはこのデータを読み取ることができます。</span><span class="sxs-lookup"><span data-stu-id="5e4dd-108">Under debugging, this data can be read.</span></span>  
+-   <span data-ttu-id="22e92-108">デバッギング中にはこのデータを読み取ることができます。</span><span class="sxs-lookup"><span data-stu-id="22e92-108">Under debugging, this data can be read.</span></span>  
   
- <span data-ttu-id="5e4dd-109">自分のメソッドやプロパティがこれらの値を意図せずに公開することのないようにしてください。</span><span class="sxs-lookup"><span data-stu-id="5e4dd-109">Make sure none of your own methods or properties exposes these values unintentionally.</span></span>  
+ <span data-ttu-id="22e92-109">自分のメソッドやプロパティがこれらの値を意図せずに公開することのないようにしてください。</span><span class="sxs-lookup"><span data-stu-id="22e92-109">Make sure none of your own methods or properties exposes these values unintentionally.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e4dd-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="5e4dd-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22e92-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="22e92-110">See also</span></span>
 
-- [<span data-ttu-id="5e4dd-111">安全なコーディングのガイドライン</span><span class="sxs-lookup"><span data-stu-id="5e4dd-111">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
+- [<span data-ttu-id="22e92-111">安全なコーディングのガイドライン</span><span class="sxs-lookup"><span data-stu-id="22e92-111">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

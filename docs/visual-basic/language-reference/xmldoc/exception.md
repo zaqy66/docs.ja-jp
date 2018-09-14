@@ -6,37 +6,37 @@ helpviewer_keywords:
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
 ms.openlocfilehash: 047805ad91d87550da80448fd10883ae58647bd6
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44337695"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45512804"
 ---
-# <a name="ltexceptiongt-visual-basic"></a><span data-ttu-id="1732a-102">&lt;例外&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1732a-102">&lt;exception&gt; (Visual Basic)</span></span>
-<span data-ttu-id="1732a-103">どの例外がスローされる可能性を指定します。</span><span class="sxs-lookup"><span data-stu-id="1732a-103">Specifies which exceptions can be thrown.</span></span>  
+# <a name="ltexceptiongt-visual-basic"></a><span data-ttu-id="1b67c-102">&lt;例外&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b67c-102">&lt;exception&gt; (Visual Basic)</span></span>
+<span data-ttu-id="1b67c-103">どの例外がスローされる可能性を指定します。</span><span class="sxs-lookup"><span data-stu-id="1b67c-103">Specifies which exceptions can be thrown.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1732a-104">構文</span><span class="sxs-lookup"><span data-stu-id="1732a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1b67c-104">構文</span><span class="sxs-lookup"><span data-stu-id="1b67c-104">Syntax</span></span>  
   
 ```xml  
 <exception cref="member">description</exception>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1732a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1732a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1b67c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1b67c-105">Parameters</span></span>  
  `member`  
- <span data-ttu-id="1732a-106">現在のコンパイル環境から使用できる例外の参照。</span><span class="sxs-lookup"><span data-stu-id="1732a-106">A reference to an exception that is available from the current compilation environment.</span></span> <span data-ttu-id="1732a-107">コンパイラは、指定された例外が存在し、出力の XML で `member` が正規要素名に変換されることを確認します。</span><span class="sxs-lookup"><span data-stu-id="1732a-107">The compiler checks that the given exception exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="1732a-108">`member` は、二重引用符 (" ") で囲む必要があります。</span><span class="sxs-lookup"><span data-stu-id="1732a-108">`member` must appear within double quotation marks (" ").</span></span>  
+ <span data-ttu-id="1b67c-106">現在のコンパイル環境から使用できる例外の参照。</span><span class="sxs-lookup"><span data-stu-id="1b67c-106">A reference to an exception that is available from the current compilation environment.</span></span> <span data-ttu-id="1b67c-107">コンパイラは、指定された例外が存在し、出力の XML で `member` が正規要素名に変換されることを確認します。</span><span class="sxs-lookup"><span data-stu-id="1b67c-107">The compiler checks that the given exception exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="1b67c-108">`member` は、二重引用符 (" ") で囲む必要があります。</span><span class="sxs-lookup"><span data-stu-id="1b67c-108">`member` must appear within double quotation marks (" ").</span></span>  
   
  `description`  
- <span data-ttu-id="1732a-109">説明です。</span><span class="sxs-lookup"><span data-stu-id="1732a-109">A description.</span></span>  
+ <span data-ttu-id="1b67c-109">説明です。</span><span class="sxs-lookup"><span data-stu-id="1b67c-109">A description.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1732a-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="1732a-110">Remarks</span></span>  
- <span data-ttu-id="1732a-111">使用して、`<exception>`タグをどの例外をスローすることができますを指定します。</span><span class="sxs-lookup"><span data-stu-id="1732a-111">Use the `<exception>` tag to specify which exceptions can be thrown.</span></span> <span data-ttu-id="1732a-112">このタグは、メソッドの定義に適用されます。</span><span class="sxs-lookup"><span data-stu-id="1732a-112">This tag is applied to a method definition.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1b67c-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="1b67c-110">Remarks</span></span>  
+ <span data-ttu-id="1b67c-111">使用して、`<exception>`タグをどの例外をスローすることができますを指定します。</span><span class="sxs-lookup"><span data-stu-id="1b67c-111">Use the `<exception>` tag to specify which exceptions can be thrown.</span></span> <span data-ttu-id="1b67c-112">このタグは、メソッドの定義に適用されます。</span><span class="sxs-lookup"><span data-stu-id="1b67c-112">This tag is applied to a method definition.</span></span>  
   
- <span data-ttu-id="1732a-113">コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="1732a-113">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="1b67c-113">コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="1b67c-113">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1732a-114">例</span><span class="sxs-lookup"><span data-stu-id="1732a-114">Example</span></span>  
- <span data-ttu-id="1732a-115">この例では、`<exception>`例外を記述するタグを`IntDivide`関数はスローできます。</span><span class="sxs-lookup"><span data-stu-id="1732a-115">This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.</span></span>  
+## <a name="example"></a><span data-ttu-id="1b67c-114">例</span><span class="sxs-lookup"><span data-stu-id="1b67c-114">Example</span></span>  
+ <span data-ttu-id="1b67c-115">この例では、`<exception>`例外を記述するタグを`IntDivide`関数はスローできます。</span><span class="sxs-lookup"><span data-stu-id="1b67c-115">This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="1732a-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="1732a-116">See Also</span></span>  
- [<span data-ttu-id="1732a-117">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="1732a-117">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="1b67c-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="1b67c-116">See Also</span></span>  
+ [<span data-ttu-id="1b67c-117">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="1b67c-117">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
