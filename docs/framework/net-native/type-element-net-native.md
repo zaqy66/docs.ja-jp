@@ -5,11 +5,11 @@ ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516106"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625647"
 ---
 # <a name="lttypegt-element-net-native"></a>&lt;Type&gt; 要素 (.NET ネイティブ)
 クラスや構造体などの特定の型に実行時ポリシーを適用します。  

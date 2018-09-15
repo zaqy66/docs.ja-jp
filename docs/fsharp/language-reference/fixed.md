@@ -3,11 +3,11 @@ title: Fixed キーワード (f#)
 description: F# を使用して、コレクションを回避するには、スタックにローカルがキーワードを 'fixed' することができます 'pin' 方法について説明します。
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45560374"
+ms.locfileid: "45624510"
 ---
 # <a name="the-fixed-keyword"></a>固定キーワード
 
