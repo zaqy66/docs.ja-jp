@@ -3,11 +3,11 @@ title: ビット処理演算子 (F#)
 description: F# プログラミング言語で使用可能なビットごとの演算子について説明します。
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508461"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45653305"
 ---
 # <a name="bitwise-operators"></a>ビット処理演算子
 
