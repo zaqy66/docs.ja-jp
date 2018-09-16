@@ -3,11 +3,11 @@ title: キャストと変換 (F#)
 description: F# プログラミング言語が提供する方法の変換演算子のさまざまなプリミティブ型間の算術変換について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508394"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677931"
 ---
 # <a name="casting-and-conversions-f"></a>キャストと変換 (F#)
 

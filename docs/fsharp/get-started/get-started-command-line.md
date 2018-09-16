@@ -3,11 +3,11 @@ title: コマンド ライン ツールの f# の概要します。
 description: 任意のオペレーティング システム (Windows、macOs または Linux) で .NET Core CLI を使用した f# で簡単なマルチ プロジェクト ソリューションを構築する方法について説明します。
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569776"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45673910"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI を使用した f# の概要します。
 

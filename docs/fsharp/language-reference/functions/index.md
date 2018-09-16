@@ -3,11 +3,11 @@ title: 関数 (F#)
 description: 関数の f# と、f# が共通の関数型プログラミング構成要素をどのようにがサポートする方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45560715"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675900"
 ---
 # <a name="functions"></a>関数
 

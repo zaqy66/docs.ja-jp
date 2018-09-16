@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: 5e31bfafdc321bb514ecdadd49b7e2c6adf53948
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45589276"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664593"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM 相互運用の概要 (Visual Basic)
 コンポーネント オブジェクト モデル (COM) は、他のコンポーネントやアプリケーションをホストする機能を公開するオブジェクトを使用できます。 COM オブジェクトは、Windows が何年ものプログラミングの基盤になっていますが、共通言語ランタイム (CLR) 用に設計されたアプリケーションは、多くの利点を提供します。  
