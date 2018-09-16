@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513298"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674723"
 ---
-# <a name="inheritsfrom-function"></a><span data-ttu-id="da89f-103">InheritsFrom 関数</span><span class="sxs-lookup"><span data-stu-id="da89f-103">InheritsFrom function</span></span>
-<span data-ttu-id="da89f-104">指定した親クラスから現在のクラスまたはインスタンスが派生しているかどうかが判定されます。</span><span class="sxs-lookup"><span data-stu-id="da89f-104">Determines whether the current class or instance derives from a specified parent class.</span></span>
+# <a name="inheritsfrom-function"></a><span data-ttu-id="ae71b-103">InheritsFrom 関数</span><span class="sxs-lookup"><span data-stu-id="ae71b-103">InheritsFrom function</span></span>
+<span data-ttu-id="ae71b-104">指定した親クラスから現在のクラスまたはインスタンスが派生しているかどうかが判定されます。</span><span class="sxs-lookup"><span data-stu-id="ae71b-104">Determines whether the current class or instance derives from a specified parent class.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="da89f-105">構文</span><span class="sxs-lookup"><span data-stu-id="da89f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae71b-105">構文</span><span class="sxs-lookup"><span data-stu-id="ae71b-105">Syntax</span></span>  
   
 ```
 HRESULT InheritsFrom (
@@ -38,37 +38,37 @@ HRESULT InheritsFrom (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="da89f-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="da89f-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="ae71b-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ae71b-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="da89f-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="da89f-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="ae71b-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="ae71b-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="da89f-108">[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="da89f-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="ae71b-108">[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="ae71b-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszAncestor`  
-<span data-ttu-id="da89f-109">[in]クラスの名前。</span><span class="sxs-lookup"><span data-stu-id="da89f-109">[in] The name of the class.</span></span> <span data-ttu-id="da89f-110">`wszAncestor` 有効なをポイントする必要があります`LPCWSTR`します。</span><span class="sxs-lookup"><span data-stu-id="da89f-110">`wszAncestor` must point to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="ae71b-109">[in]クラスの名前。</span><span class="sxs-lookup"><span data-stu-id="ae71b-109">[in] The name of the class.</span></span> <span data-ttu-id="ae71b-110">`wszAncestor` 有効なをポイントする必要があります`LPCWSTR`します。</span><span class="sxs-lookup"><span data-stu-id="ae71b-110">`wszAncestor` must point to a valid `LPCWSTR`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="da89f-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="da89f-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="ae71b-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="ae71b-111">Return value</span></span>
 
-<span data-ttu-id="da89f-112">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="da89f-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="ae71b-112">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="ae71b-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="da89f-113">定数</span><span class="sxs-lookup"><span data-stu-id="da89f-113">Constant</span></span>  |<span data-ttu-id="da89f-114">値</span><span class="sxs-lookup"><span data-stu-id="da89f-114">Value</span></span>  |<span data-ttu-id="da89f-115">説明</span><span class="sxs-lookup"><span data-stu-id="da89f-115">Description</span></span>  |
+|<span data-ttu-id="ae71b-113">定数</span><span class="sxs-lookup"><span data-stu-id="ae71b-113">Constant</span></span>  |<span data-ttu-id="ae71b-114">値</span><span class="sxs-lookup"><span data-stu-id="ae71b-114">Value</span></span>  |<span data-ttu-id="ae71b-115">説明</span><span class="sxs-lookup"><span data-stu-id="ae71b-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="da89f-116">0</span><span class="sxs-lookup"><span data-stu-id="da89f-116">0</span></span> | <span data-ttu-id="da89f-117">現在のオブジェクトが継承`wszAncestor`します。</span><span class="sxs-lookup"><span data-stu-id="da89f-117">The current object inherits from `wszAncestor`.</span></span>  |
-| `WBEM_S_FALSE` | <span data-ttu-id="da89f-118">1</span><span class="sxs-lookup"><span data-stu-id="da89f-118">1</span></span> | <span data-ttu-id="da89f-119">現在のオブジェクトを継承しない`wszAncestor`します。</span><span class="sxs-lookup"><span data-stu-id="da89f-119">The current object does not inherit from `wszAncestor`.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="da89f-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="da89f-120">0x80041008</span></span> | <span data-ttu-id="da89f-121">`wszAncestor` は `null` です。</span><span class="sxs-lookup"><span data-stu-id="da89f-121">`wszAncestor` is `null`.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="ae71b-116">0</span><span class="sxs-lookup"><span data-stu-id="ae71b-116">0</span></span> | <span data-ttu-id="ae71b-117">現在のオブジェクトが継承`wszAncestor`します。</span><span class="sxs-lookup"><span data-stu-id="ae71b-117">The current object inherits from `wszAncestor`.</span></span>  |
+| `WBEM_S_FALSE` | <span data-ttu-id="ae71b-118">1</span><span class="sxs-lookup"><span data-stu-id="ae71b-118">1</span></span> | <span data-ttu-id="ae71b-119">現在のオブジェクトを継承しない`wszAncestor`します。</span><span class="sxs-lookup"><span data-stu-id="ae71b-119">The current object does not inherit from `wszAncestor`.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="ae71b-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="ae71b-120">0x80041008</span></span> | <span data-ttu-id="ae71b-121">`wszAncestor` は `null` です。</span><span class="sxs-lookup"><span data-stu-id="ae71b-121">`wszAncestor` is `null`.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="da89f-122">Remarks</span><span class="sxs-lookup"><span data-stu-id="da89f-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="ae71b-122">Remarks</span><span class="sxs-lookup"><span data-stu-id="ae71b-122">Remarks</span></span>
 
-<span data-ttu-id="da89f-123">この関数の呼び出しをラップする、 [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)メソッド。</span><span class="sxs-lookup"><span data-stu-id="da89f-123">This function wraps a call to the [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) method.</span></span>
+<span data-ttu-id="ae71b-123">この関数の呼び出しをラップする、 [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)メソッド。</span><span class="sxs-lookup"><span data-stu-id="ae71b-123">This function wraps a call to the [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="da89f-124">要件</span><span class="sxs-lookup"><span data-stu-id="da89f-124">Requirements</span></span>  
- <span data-ttu-id="da89f-125">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="da89f-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ae71b-124">要件</span><span class="sxs-lookup"><span data-stu-id="ae71b-124">Requirements</span></span>  
+ <span data-ttu-id="ae71b-125">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ae71b-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="da89f-126">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="da89f-126">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="ae71b-126">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="ae71b-126">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="da89f-127">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="da89f-127">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="ae71b-127">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ae71b-127">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="da89f-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="da89f-128">See also</span></span>  
-[<span data-ttu-id="da89f-129">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="da89f-129">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="ae71b-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="ae71b-128">See also</span></span>  
+[<span data-ttu-id="ae71b-129">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="ae71b-129">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
