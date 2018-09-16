@@ -3,11 +3,11 @@ title: インデックス付きプロパティ (F#)
 description: F# でのインデックス付きプロパティ、される順序付けられたデータを配列に似たアクセスを提供するプロパティについて説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583425"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45686168"
 ---
 # <a name="indexed-properties"></a>インデックス付きプロパティ
 

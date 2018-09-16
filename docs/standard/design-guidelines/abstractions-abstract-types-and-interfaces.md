@@ -11,11 +11,11 @@ ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ad8b2dd3dbf2a7a75c98a3115d4351dfea4e1a0
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44698365"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45686025"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象化 (抽象型およびインターフェイス)
 抽象化は、コントラクトを記述するコントラクトの完全な実装を提供しない型です。 抽象化は通常インターフェイスまたは抽象クラスとして実装し、適切に定義された一連のコントラクトを実装する型の必要なセマンティクスを説明するリファレンス ドキュメントが付属します。 .NET Framework で最も重要な抽象化のものが<xref:System.IO.Stream>、 <xref:System.Collections.Generic.IEnumerable%601>、および<xref:System.Object>します。  
