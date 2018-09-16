@@ -82,7 +82,7 @@
 ### [Visual Studio for Mac を使用した macOS での .NET Core の概要](core/tutorials/using-on-mac-vs.md)
 ### [Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [CLI ツールを使用しての .NET Core に関する概要](core/tutorials/using-with-xplat-cli.md)
-#### [.NET Core コマンド ラインを使用したプロジェクトの整理およびテスト](core/tutorials/testing-with-cli.md)
+### [.NET Core コマンド ラインを使用したプロジェクトの整理およびテスト](core/tutorials/testing-with-cli.md)
 ### [クロス プラットフォーム ツールによるライブラリの開発](core/tutorials/libraries.md)
 ### [ASP.NET Core アプリケーションの開発](core/tutorials/aspnet-core.md)
 ### [.NET Core 1.0 のパッケージ依存関係バージョンを管理する方法](core/tutorials/managing-package-dependency-versions.md)
