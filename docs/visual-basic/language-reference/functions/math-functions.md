@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
 ms.openlocfilehash: da0b612feb5b9a479d50f52cf65e38007ab3b196
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45675718"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746524"
 ---
 # <a name="math-functions-visual-basic"></a>数値演算関数 (Visual Basic)
 メソッド、<xref:System.Math?displayProperty=nameWithType>クラスは三角関数演算、対数演算、およびその他の一般的な数学関数を提供します。  

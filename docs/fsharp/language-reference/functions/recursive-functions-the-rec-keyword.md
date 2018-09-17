@@ -3,11 +3,11 @@ title: '再帰関数: rec キーワード (F#)'
 description: 再帰関数の定義に 'let' キーワードを使用して、f# の 'rec' キーワードが使用される方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45675874"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45745972"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>再帰関数: rec キーワード
 

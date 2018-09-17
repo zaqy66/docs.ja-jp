@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 72439596ec6dc6c42024ed38116ba0026922154c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4bccd1e4655786ae24166cdc32619b420c4a54d3
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679610"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743775"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>方法: ADO.NET Entity Framework データ ソースを使用してデータ サービスを作成する (WCF Data Services)
 
@@ -34,7 +34,7 @@ WCF Data Services では、データ サービスとしてのエンティティ 
 
 6. **接続プロパティ**ダイアログ ボックスで、サーバー名を入力、認証方法を選択して、データベースの名前を入力および順にクリックします**OK**します。
 
-     **データ接続の選択** ダイアログ ボックスは、データベース接続の設定を更新します。
+     **データ接続の選択**データベース接続の設定 ダイアログ ボックスが更新されます。
 
 7. いることを確認、 **app.config にエンティティ接続設定の保存:** チェック ボックスをオンします。 その後、 **[次へ]** をクリックします。
 
