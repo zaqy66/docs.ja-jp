@@ -9,50 +9,50 @@ helpviewer_keywords:
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
 ms.openlocfilehash: f77137e3cc2f734435d3b1d391a303fcd3e16332
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273321"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45594116"
 ---
-# <a name="-targetwinexe-c-compiler-options"></a><span data-ttu-id="1a977-102">-target:winexe (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="1a977-102">-target:winexe (C# Compiler Options)</span></span>
-<span data-ttu-id="1a977-103">**-target:winexe** オプションを使用すると、実行可能な (EXE) Windows プログラムがコンパイラによって作成されます。</span><span class="sxs-lookup"><span data-stu-id="1a977-103">The **-target:winexe** option causes the compiler to create an executable (EXE), Windows program.</span></span>  
+# <a name="-targetwinexe-c-compiler-options"></a><span data-ttu-id="c5c82-102">-target:winexe (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="c5c82-102">-target:winexe (C# Compiler Options)</span></span>
+<span data-ttu-id="c5c82-103">**-target:winexe** オプションを使用すると、実行可能な (EXE) Windows プログラムがコンパイラによって作成されます。</span><span class="sxs-lookup"><span data-stu-id="c5c82-103">The **-target:winexe** option causes the compiler to create an executable (EXE), Windows program.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1a977-104">構文</span><span class="sxs-lookup"><span data-stu-id="1a977-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5c82-104">構文</span><span class="sxs-lookup"><span data-stu-id="c5c82-104">Syntax</span></span>  
   
 ```console  
 -target:winexe  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="1a977-105">コメント</span><span class="sxs-lookup"><span data-stu-id="1a977-105">Remarks</span></span>  
- <span data-ttu-id="1a977-106">実行可能ファイルは、.exe という拡張子で作成されます。</span><span class="sxs-lookup"><span data-stu-id="1a977-106">The executable file will be created with the .exe extension.</span></span> <span data-ttu-id="1a977-107">Windows プログラムは、.NET Framework ライブラリまたは Win32 API のユーザー インターフェイスを提供するプログラムです。</span><span class="sxs-lookup"><span data-stu-id="1a977-107">A Windows program is one that provides a user interface from either the .NET Framework library or with the Win32 APIs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c5c82-105">コメント</span><span class="sxs-lookup"><span data-stu-id="c5c82-105">Remarks</span></span>  
+ <span data-ttu-id="c5c82-106">実行可能ファイルは、.exe という拡張子で作成されます。</span><span class="sxs-lookup"><span data-stu-id="c5c82-106">The executable file will be created with the .exe extension.</span></span> <span data-ttu-id="c5c82-107">Windows プログラムは、.NET Framework ライブラリまたは Win32 API のユーザー インターフェイスを提供するプログラムです。</span><span class="sxs-lookup"><span data-stu-id="c5c82-107">A Windows program is one that provides a user interface from either the .NET Framework library or with the Win32 APIs.</span></span>  
   
- <span data-ttu-id="1a977-108">コンソール アプリケーションを作成するには、[-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) を使用します。</span><span class="sxs-lookup"><span data-stu-id="1a977-108">Use [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) to create a console application.</span></span>  
+ <span data-ttu-id="c5c82-108">コンソール アプリケーションを作成するには、[-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) を使用します。</span><span class="sxs-lookup"><span data-stu-id="c5c82-108">Use [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) to create a console application.</span></span>  
   
- <span data-ttu-id="1a977-109">[-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) オプションで指定しない限り、出力ファイル名は [Main](../../../csharp/programming-guide/main-and-command-args/index.md) メソッドを含む入力ファイルと同じになります。</span><span class="sxs-lookup"><span data-stu-id="1a977-109">Unless otherwise specified with the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the input file that contains the [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method.</span></span>  
+ <span data-ttu-id="c5c82-109">[-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) オプションで指定しない限り、出力ファイル名は [Main](../../../csharp/programming-guide/main-and-command-args/index.md) メソッドを含む入力ファイルと同じになります。</span><span class="sxs-lookup"><span data-stu-id="c5c82-109">Unless otherwise specified with the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the input file that contains the [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method.</span></span>  
   
- <span data-ttu-id="1a977-110">コマンド ラインで指定すると、次の **-out** オプションまたは [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) オプションまでのすべてのファイルが、Windows プログラムの作成に使用されます。</span><span class="sxs-lookup"><span data-stu-id="1a977-110">When specified at the command line, all files until the next **-out** or [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) option are used to create the Windows program.</span></span>  
+ <span data-ttu-id="c5c82-110">コマンド ラインで指定すると、次の **-out** オプションまたは [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) オプションまでのすべてのファイルが、Windows プログラムの作成に使用されます。</span><span class="sxs-lookup"><span data-stu-id="c5c82-110">When specified at the command line, all files until the next **-out** or [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) option are used to create the Windows program.</span></span>  
   
- <span data-ttu-id="1a977-111">**Main** メソッドは、.exe ファイルにコンパイルされるソース コード ファイル内に 1 つだけ必要です。</span><span class="sxs-lookup"><span data-stu-id="1a977-111">One and only one **Main** method is required in the source code files that are compiled into an .exe file.</span></span> <span data-ttu-id="1a977-112">コードに **Main** メソッドを含むクラスが複数ある場合は、[-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) オプションを使用して、**Main** メソッドを含めるクラスを指定できます。</span><span class="sxs-lookup"><span data-stu-id="1a977-112">The [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) option lets you specify which class contains the **Main** method, in cases where your code has more than one class with a **Main** method.</span></span>  
+ <span data-ttu-id="c5c82-111">**Main** メソッドは、.exe ファイルにコンパイルされるソース コード ファイル内に 1 つだけ必要です。</span><span class="sxs-lookup"><span data-stu-id="c5c82-111">One and only one **Main** method is required in the source code files that are compiled into an .exe file.</span></span> <span data-ttu-id="c5c82-112">コードに **Main** メソッドを含むクラスが複数ある場合は、[-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) オプションを使用して、**Main** メソッドを含めるクラスを指定できます。</span><span class="sxs-lookup"><span data-stu-id="c5c82-112">The [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) option lets you specify which class contains the **Main** method, in cases where your code has more than one class with a **Main** method.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="1a977-113">Visual Studio 開発環境でこのコンパイラ オプションを設定するには</span><span class="sxs-lookup"><span data-stu-id="1a977-113">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="c5c82-113">Visual Studio 開発環境でこのコンパイラ オプションを設定するには</span><span class="sxs-lookup"><span data-stu-id="c5c82-113">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="1a977-114">プロジェクトの **[プロパティ]** ページを開きます。</span><span class="sxs-lookup"><span data-stu-id="1a977-114">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="c5c82-114">プロジェクトの **[プロパティ]** ページを開きます。</span><span class="sxs-lookup"><span data-stu-id="c5c82-114">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="1a977-115">**[アプリケーション]** プロパティ ページをクリックします。</span><span class="sxs-lookup"><span data-stu-id="1a977-115">Click the **Application** property page.</span></span>  
+2.  <span data-ttu-id="c5c82-115">**[アプリケーション]** プロパティ ページをクリックします。</span><span class="sxs-lookup"><span data-stu-id="c5c82-115">Click the **Application** property page.</span></span>  
   
-3.  <span data-ttu-id="1a977-116">**[出力の種類]** プロパティを変更します。</span><span class="sxs-lookup"><span data-stu-id="1a977-116">Modify the **Output type** property.</span></span>  
+3.  <span data-ttu-id="c5c82-116">**[出力の種類]** プロパティを変更します。</span><span class="sxs-lookup"><span data-stu-id="c5c82-116">Modify the **Output type** property.</span></span>  
   
- <span data-ttu-id="1a977-117">このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="1a977-117">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
+ <span data-ttu-id="c5c82-117">このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="c5c82-117">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1a977-118">例</span><span class="sxs-lookup"><span data-stu-id="1a977-118">Example</span></span>  
- <span data-ttu-id="1a977-119">`in.cs` をコンパイルし、Windows プログラムを生成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="1a977-119">Compile `in.cs` into a Windows program:</span></span>  
+## <a name="example"></a><span data-ttu-id="c5c82-118">例</span><span class="sxs-lookup"><span data-stu-id="c5c82-118">Example</span></span>  
+ <span data-ttu-id="c5c82-119">`in.cs` をコンパイルし、Windows プログラムを生成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="c5c82-119">Compile `in.cs` into a Windows program:</span></span>  
   
 ```console  
 csc -target:winexe in.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1a977-120">参照</span><span class="sxs-lookup"><span data-stu-id="1a977-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c5c82-120">参照</span><span class="sxs-lookup"><span data-stu-id="c5c82-120">See Also</span></span>  
 
-- [<span data-ttu-id="1a977-121">-target (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="1a977-121">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
-- [<span data-ttu-id="1a977-122">C# コンパイラ オプション</span><span class="sxs-lookup"><span data-stu-id="1a977-122">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="c5c82-121">-target (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="c5c82-121">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [<span data-ttu-id="c5c82-122">C# コンパイラ オプション</span><span class="sxs-lookup"><span data-stu-id="c5c82-122">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)

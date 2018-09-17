@@ -5,34 +5,34 @@ helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
 ms.openlocfilehash: cff85d60c1b59f4d1ca028f8fc02fee5728fa3d6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251974"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45583068"
 ---
-# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a><span data-ttu-id="6628e-102">方法 : 構造体間にユーザー定義の変換を実装する (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="6628e-102">How to: Implement User-Defined Conversions Between Structs (C# Programming Guide)</span></span>
-<span data-ttu-id="6628e-103">この例では `RomanNumeral` および `BinaryNumeral` という 2 つの構造体を定義し、それらの間の変換を示します。</span><span class="sxs-lookup"><span data-stu-id="6628e-103">This example defines two structs, `RomanNumeral` and `BinaryNumeral`, and demonstrates conversions between them.</span></span>  
+# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a><span data-ttu-id="a1c4f-102">方法 : 構造体間にユーザー定義の変換を実装する (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="a1c4f-102">How to: Implement User-Defined Conversions Between Structs (C# Programming Guide)</span></span>
+<span data-ttu-id="a1c4f-103">この例では `RomanNumeral` および `BinaryNumeral` という 2 つの構造体を定義し、それらの間の変換を示します。</span><span class="sxs-lookup"><span data-stu-id="a1c4f-103">This example defines two structs, `RomanNumeral` and `BinaryNumeral`, and demonstrates conversions between them.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6628e-104">例</span><span class="sxs-lookup"><span data-stu-id="6628e-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a1c4f-104">例</span><span class="sxs-lookup"><span data-stu-id="a1c4f-104">Example</span></span>  
  [!code-csharp[csProgGuideStatements#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_1.cs)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="6628e-105">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="6628e-105">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="a1c4f-105">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="a1c4f-105">Robust Programming</span></span>  
   
--   <span data-ttu-id="6628e-106">前述の例では、次のようなステートメントがあります。</span><span class="sxs-lookup"><span data-stu-id="6628e-106">In the previous example, the statement:</span></span>  
+-   <span data-ttu-id="a1c4f-106">前述の例では、次のようなステートメントがあります。</span><span class="sxs-lookup"><span data-stu-id="a1c4f-106">In the previous example, the statement:</span></span>  
   
      [!code-csharp[csProgGuideStatements#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_2.cs)]  
   
-     <span data-ttu-id="6628e-107">このステートメントでは `RomanNumeral` から `BinaryNumeral` への変換を実行します。</span><span class="sxs-lookup"><span data-stu-id="6628e-107">performs a conversion from a `RomanNumeral` to a `BinaryNumeral`.</span></span> <span data-ttu-id="6628e-108">`RomanNumeral` から `BinaryNumeral` への直接変換はないため、`RomanNumeral` から `int` へ変換するためのキャストと、`int` から `BinaryNumeral` へ変換するためのキャストが使用されています。</span><span class="sxs-lookup"><span data-stu-id="6628e-108">Because there is no direct conversion from `RomanNumeral` to `BinaryNumeral`, a cast is used to convert from a `RomanNumeral` to an `int`, and another cast to convert from an `int` to a `BinaryNumeral`.</span></span>  
+     <span data-ttu-id="a1c4f-107">このステートメントでは `RomanNumeral` から `BinaryNumeral` への変換を実行します。</span><span class="sxs-lookup"><span data-stu-id="a1c4f-107">performs a conversion from a `RomanNumeral` to a `BinaryNumeral`.</span></span> <span data-ttu-id="a1c4f-108">`RomanNumeral` から `BinaryNumeral` への直接変換はないため、`RomanNumeral` から `int` へ変換するためのキャストと、`int` から `BinaryNumeral` へ変換するためのキャストが使用されています。</span><span class="sxs-lookup"><span data-stu-id="a1c4f-108">Because there is no direct conversion from `RomanNumeral` to `BinaryNumeral`, a cast is used to convert from a `RomanNumeral` to an `int`, and another cast to convert from an `int` to a `BinaryNumeral`.</span></span>  
   
--   <span data-ttu-id="6628e-109">次のようなステートメントもあります。</span><span class="sxs-lookup"><span data-stu-id="6628e-109">Also the statement</span></span>  
+-   <span data-ttu-id="a1c4f-109">次のようなステートメントもあります。</span><span class="sxs-lookup"><span data-stu-id="a1c4f-109">Also the statement</span></span>  
   
      [!code-csharp[csProgGuideStatements#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_3.cs)]  
   
-     <span data-ttu-id="6628e-110">このステートメントでは `BinaryNumeral` から `RomanNumeral` への変換を実行します。</span><span class="sxs-lookup"><span data-stu-id="6628e-110">performs a conversion from a `BinaryNumeral` to a `RomanNumeral`.</span></span> <span data-ttu-id="6628e-111">`RomanNumeral` は `BinaryNumeral` からの暗黙の型変換を定義しているため、キャストは不要です。</span><span class="sxs-lookup"><span data-stu-id="6628e-111">Because `RomanNumeral` defines an implicit conversion from `BinaryNumeral`, no cast is required.</span></span>  
+     <span data-ttu-id="a1c4f-110">このステートメントでは `BinaryNumeral` から `RomanNumeral` への変換を実行します。</span><span class="sxs-lookup"><span data-stu-id="a1c4f-110">performs a conversion from a `BinaryNumeral` to a `RomanNumeral`.</span></span> <span data-ttu-id="a1c4f-111">`RomanNumeral` は `BinaryNumeral` からの暗黙の型変換を定義しているため、キャストは不要です。</span><span class="sxs-lookup"><span data-stu-id="a1c4f-111">Because `RomanNumeral` defines an implicit conversion from `BinaryNumeral`, no cast is required.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6628e-112">参照</span><span class="sxs-lookup"><span data-stu-id="6628e-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a1c4f-112">参照</span><span class="sxs-lookup"><span data-stu-id="a1c4f-112">See Also</span></span>
 
-- [<span data-ttu-id="6628e-113">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="6628e-113">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="6628e-114">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="6628e-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="6628e-115">変換演算子</span><span class="sxs-lookup"><span data-stu-id="6628e-115">Conversion Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)
+- [<span data-ttu-id="a1c4f-113">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="a1c4f-113">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="a1c4f-114">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="a1c4f-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="a1c4f-115">変換演算子</span><span class="sxs-lookup"><span data-stu-id="a1c4f-115">Conversion Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)

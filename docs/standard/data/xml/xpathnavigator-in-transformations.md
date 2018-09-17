@@ -9,22 +9,22 @@ ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57290af1df8d370c928a97aba1622e41a6a33589
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196250"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45668068"
 ---
-# <a name="xpathnavigator-in-transformations"></a><span data-ttu-id="1e083-102">変換における XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="1e083-102">XPathNavigator in Transformations</span></span>
-<span data-ttu-id="1e083-103"><xref:System.Xml.XPath.XPathNavigator> クラスは、データへの読み取り専用のランダム アクセスを提供し、XSLT (Extensible Stylesheet Language for Transformations) への入力として使用することを目的に設計されています。</span><span class="sxs-lookup"><span data-stu-id="1e083-103">The <xref:System.Xml.XPath.XPathNavigator> class provides read-only random access to data and is designed for use as an input to Extensible Stylesheet Language for Transformations (XSLT).</span></span> <span data-ttu-id="1e083-104">このクラスは、<xref:System.Xml.XPath.XPathDocument>、<xref:System.Xml.XmlDataDocument>、および <xref:System.Xml.XmlDocument> に実装されます。</span><span class="sxs-lookup"><span data-stu-id="1e083-104">It is implemented on the <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, and <xref:System.Xml.XmlDocument>.</span></span> <span data-ttu-id="1e083-105"><xref:System.Xml.XPath.XPathNavigator> は、『XML Path Language (XPath)』勧告のセクション 5 で規定されている W3C (World Wide Web Consortium) データ モデルに準拠しています。</span><span class="sxs-lookup"><span data-stu-id="1e083-105">The <xref:System.Xml.XPath.XPathNavigator> is based upon the World Wide Web Consortium (W3C) Data Model as described in section 5 of the XML Path Language (XPath) recommendation.</span></span>  
+# <a name="xpathnavigator-in-transformations"></a><span data-ttu-id="b8649-102">変換における XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="b8649-102">XPathNavigator in Transformations</span></span>
+<span data-ttu-id="b8649-103"><xref:System.Xml.XPath.XPathNavigator> クラスは、データへの読み取り専用のランダム アクセスを提供し、XSLT (Extensible Stylesheet Language for Transformations) への入力として使用することを目的に設計されています。</span><span class="sxs-lookup"><span data-stu-id="b8649-103">The <xref:System.Xml.XPath.XPathNavigator> class provides read-only random access to data and is designed for use as an input to Extensible Stylesheet Language for Transformations (XSLT).</span></span> <span data-ttu-id="b8649-104">このクラスは、<xref:System.Xml.XPath.XPathDocument>、<xref:System.Xml.XmlDataDocument>、および <xref:System.Xml.XmlDocument> に実装されます。</span><span class="sxs-lookup"><span data-stu-id="b8649-104">It is implemented on the <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, and <xref:System.Xml.XmlDocument>.</span></span> <span data-ttu-id="b8649-105"><xref:System.Xml.XPath.XPathNavigator> は、『XML Path Language (XPath)』勧告のセクション 5 で規定されている W3C (World Wide Web Consortium) データ モデルに準拠しています。</span><span class="sxs-lookup"><span data-stu-id="b8649-105">The <xref:System.Xml.XPath.XPathNavigator> is based upon the World Wide Web Consortium (W3C) Data Model as described in section 5 of the XML Path Language (XPath) recommendation.</span></span>  
   
- <span data-ttu-id="1e083-106"><xref:System.Xml.XPath.XPathNavigator> は、任意のストアに対するカーソル モデルを定義し、任意のデータ ストアに対する高速で読み取り専用の XPath クエリを提供します。</span><span class="sxs-lookup"><span data-stu-id="1e083-106">The <xref:System.Xml.XPath.XPathNavigator> defines a cursor model over any store and provides fast, read-only XPath queries over any data store.</span></span> <span data-ttu-id="1e083-107"><xref:System.Xml.XPath.XPathNavigator> クラスは、結果ツリー フラグメントの反復処理でも使用されます。</span><span class="sxs-lookup"><span data-stu-id="1e083-107">The <xref:System.Xml.XPath.XPathNavigator> is also the class to use for iterating over result tree fragments.</span></span>  
+ <span data-ttu-id="b8649-106"><xref:System.Xml.XPath.XPathNavigator> は、任意のストアに対するカーソル モデルを定義し、任意のデータ ストアに対する高速で読み取り専用の XPath クエリを提供します。</span><span class="sxs-lookup"><span data-stu-id="b8649-106">The <xref:System.Xml.XPath.XPathNavigator> defines a cursor model over any store and provides fast, read-only XPath queries over any data store.</span></span> <span data-ttu-id="b8649-107"><xref:System.Xml.XPath.XPathNavigator> クラスは、結果ツリー フラグメントの反復処理でも使用されます。</span><span class="sxs-lookup"><span data-stu-id="b8649-107">The <xref:System.Xml.XPath.XPathNavigator> is also the class to use for iterating over result tree fragments.</span></span>  
   
- <span data-ttu-id="1e083-108">この API を使用すると、ストア内の現在のノードから情報を取得し、接続されているノードに移動することができます。</span><span class="sxs-lookup"><span data-stu-id="1e083-108">The API enables you to get information from the current node in the store and move to connected nodes.</span></span> <span data-ttu-id="1e083-109"><xref:System.Xml.XPath.XPathNavigator> は、一連の **Move** メソッドを使用してストアの走査を実行するカーソル スタイルのモデルです。</span><span class="sxs-lookup"><span data-stu-id="1e083-109">The <xref:System.Xml.XPath.XPathNavigator> is a cursor style model that performs traversal over a store using a set of **Move** methods.</span></span> <span data-ttu-id="1e083-110"><xref:System.Xml.XPath.XPathNavigator> は、常にノード上に配置されます。</span><span class="sxs-lookup"><span data-stu-id="1e083-110">The <xref:System.Xml.XPath.XPathNavigator> is always positioned on a node.</span></span> <span data-ttu-id="1e083-111">**Move** メソッドが失敗した場合、<xref:System.Xml.XPath.XPathNavigator> は変更されません。</span><span class="sxs-lookup"><span data-stu-id="1e083-111">Any **Move** method that fails leaves the <xref:System.Xml.XPath.XPathNavigator> unchanged.</span></span>  
+ <span data-ttu-id="b8649-108">この API を使用すると、ストア内の現在のノードから情報を取得し、接続されているノードに移動することができます。</span><span class="sxs-lookup"><span data-stu-id="b8649-108">The API enables you to get information from the current node in the store and move to connected nodes.</span></span> <span data-ttu-id="b8649-109"><xref:System.Xml.XPath.XPathNavigator> は、一連の **Move** メソッドを使用してストアの走査を実行するカーソル スタイルのモデルです。</span><span class="sxs-lookup"><span data-stu-id="b8649-109">The <xref:System.Xml.XPath.XPathNavigator> is a cursor style model that performs traversal over a store using a set of **Move** methods.</span></span> <span data-ttu-id="b8649-110"><xref:System.Xml.XPath.XPathNavigator> は、常にノード上に配置されます。</span><span class="sxs-lookup"><span data-stu-id="b8649-110">The <xref:System.Xml.XPath.XPathNavigator> is always positioned on a node.</span></span> <span data-ttu-id="b8649-111">**Move** メソッドが失敗した場合、<xref:System.Xml.XPath.XPathNavigator> は変更されません。</span><span class="sxs-lookup"><span data-stu-id="b8649-111">Any **Move** method that fails leaves the <xref:System.Xml.XPath.XPathNavigator> unchanged.</span></span>  
   
- <span data-ttu-id="1e083-112"><xref:System.Xml.XPath.XPathNavigator> クラスは、結果ツリー フラグメントの反復処理で使用されます。</span><span class="sxs-lookup"><span data-stu-id="1e083-112">The <xref:System.Xml.XPath.XPathNavigator> is the class to use for iterating over result tree fragments.</span></span> <span data-ttu-id="1e083-113">XML を含む `fragment` パラメーターを指定して関数を呼び出すことにより、スタイル シート内で結果ツリー フラグメントを作成するコード サンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="1e083-113">The following code sample creates a result tree fragment within a style sheet by calling the function with the parameter, `fragment`, which contains XML.</span></span>  
+ <span data-ttu-id="b8649-112"><xref:System.Xml.XPath.XPathNavigator> クラスは、結果ツリー フラグメントの反復処理で使用されます。</span><span class="sxs-lookup"><span data-stu-id="b8649-112">The <xref:System.Xml.XPath.XPathNavigator> is the class to use for iterating over result tree fragments.</span></span> <span data-ttu-id="b8649-113">XML を含む `fragment` パラメーターを指定して関数を呼び出すことにより、スタイル シート内で結果ツリー フラグメントを作成するコード サンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="b8649-113">The following code sample creates a result tree fragment within a style sheet by calling the function with the parameter, `fragment`, which contains XML.</span></span>  
   
-## <a name="testxsl"></a><span data-ttu-id="1e083-114">test.xsl</span><span class="sxs-lookup"><span data-stu-id="1e083-114">test.xsl</span></span>  
+## <a name="testxsl"></a><span data-ttu-id="b8649-114">test.xsl</span><span class="sxs-lookup"><span data-stu-id="b8649-114">test.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -57,13 +57,13 @@ ms.locfileid: "44196250"
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a><span data-ttu-id="1e083-115">test.xml</span><span class="sxs-lookup"><span data-stu-id="1e083-115">test.xml</span></span>  
+## <a name="testxml"></a><span data-ttu-id="b8649-115">test.xml</span><span class="sxs-lookup"><span data-stu-id="b8649-115">test.xml</span></span>  
   
 ```xml  
 <root>Some text</root>  
 ```  
   
- <span data-ttu-id="1e083-116">次の例では、**test.xsl** スタイル シートと **test.xml** 入力データを使用しています。</span><span class="sxs-lookup"><span data-stu-id="1e083-116">The following code uses the **test.xsl** style sheet and **test.xml** input data.</span></span>  
+ <span data-ttu-id="b8649-116">次の例では、**test.xsl** スタイル シートと **test.xml** 入力データを使用しています。</span><span class="sxs-lookup"><span data-stu-id="b8649-116">The following code uses the **test.xsl** style sheet and **test.xml** input data.</span></span>  
   
 ```vb  
 Imports System  
@@ -109,13 +109,13 @@ public class sample
 }  
 ```  
   
-## <a name="output"></a><span data-ttu-id="1e083-117">出力</span><span class="sxs-lookup"><span data-stu-id="1e083-117">Output</span></span>  
- <span data-ttu-id="1e083-118">変換結果はファイル **out.xml** に出力されます。</span><span class="sxs-lookup"><span data-stu-id="1e083-118">The result of the transformation is found in the file **out.xml**:</span></span>  
+## <a name="output"></a><span data-ttu-id="b8649-117">出力</span><span class="sxs-lookup"><span data-stu-id="b8649-117">Output</span></span>  
+ <span data-ttu-id="b8649-118">変換結果はファイル **out.xml** に出力されます。</span><span class="sxs-lookup"><span data-stu-id="b8649-118">The result of the transformation is found in the file **out.xml**:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1e083-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="1e083-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8649-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="b8649-119">See also</span></span>
 
-- [<span data-ttu-id="1e083-120">XslTransform クラスによる XSLT プロセッサの実装</span><span class="sxs-lookup"><span data-stu-id="1e083-120">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="b8649-120">XslTransform クラスによる XSLT プロセッサの実装</span><span class="sxs-lookup"><span data-stu-id="b8649-120">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

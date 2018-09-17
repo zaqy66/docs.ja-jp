@@ -3,21 +3,21 @@ title: 純粋関数によるリファクタリング (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266441"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45610121"
 ---
-# <a name="refactoring-using-a-pure-function-c"></a><span data-ttu-id="064c2-102">純粋関数によるリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="064c2-102">Refactoring Using a Pure Function (C#)</span></span>
-<span data-ttu-id="064c2-103">次の例では、前の例 (「[拡張メソッドを使用したリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)」) をリファクタリングして、純粋関数を使用するようにします。この例では、段落のテキストを検索するコードが純粋静的メソッド `ParagraphText` に移動されています。</span><span class="sxs-lookup"><span data-stu-id="064c2-103">The following example refactors the previous example, [Refactoring Using an Extension Method (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
+# <a name="refactoring-using-a-pure-function-c"></a><span data-ttu-id="bec47-102">純粋関数によるリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="bec47-102">Refactoring Using a Pure Function (C#)</span></span>
+<span data-ttu-id="bec47-103">次の例では、前の例 (「[拡張メソッドを使用したリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)」) をリファクタリングして、純粋関数を使用するようにします。この例では、段落のテキストを検索するコードが純粋静的メソッド `ParagraphText` に移動されています。</span><span class="sxs-lookup"><span data-stu-id="bec47-103">The following example refactors the previous example, [Refactoring Using an Extension Method (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="064c2-104">例</span><span class="sxs-lookup"><span data-stu-id="064c2-104">Example</span></span>  
- <span data-ttu-id="064c2-105">この例では、WordprocessingML ドキュメントを処理して、WordprocessingML ドキュメントから段落ノードを取得します。</span><span class="sxs-lookup"><span data-stu-id="064c2-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="064c2-106">それぞれの段落のスタイルも特定します。</span><span class="sxs-lookup"><span data-stu-id="064c2-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="064c2-107">この例は、このチュートリアルのこれまでの例に基づいています。</span><span class="sxs-lookup"><span data-stu-id="064c2-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="064c2-108">リファクタリングされたコードについては、以下のコード内にあるコメントで説明が示されています。</span><span class="sxs-lookup"><span data-stu-id="064c2-108">The refactored code is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="bec47-104">例</span><span class="sxs-lookup"><span data-stu-id="bec47-104">Example</span></span>  
+ <span data-ttu-id="bec47-105">この例では、WordprocessingML ドキュメントを処理して、WordprocessingML ドキュメントから段落ノードを取得します。</span><span class="sxs-lookup"><span data-stu-id="bec47-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="bec47-106">それぞれの段落のスタイルも特定します。</span><span class="sxs-lookup"><span data-stu-id="bec47-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="bec47-107">この例は、このチュートリアルのこれまでの例に基づいています。</span><span class="sxs-lookup"><span data-stu-id="bec47-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="bec47-108">リファクタリングされたコードについては、以下のコード内にあるコメントで説明が示されています。</span><span class="sxs-lookup"><span data-stu-id="bec47-108">The refactored code is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="064c2-109">この例のソース ドキュメントを作成する方法の詳細については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="064c2-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="bec47-109">この例のソース ドキュメントを作成する方法の詳細については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="bec47-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="064c2-110">この例では、WindowsBase アセンブリのクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="064c2-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="064c2-111">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="064c2-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="bec47-110">この例では、WindowsBase アセンブリのクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="bec47-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="bec47-111">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="bec47-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -154,7 +154,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="064c2-112">この例では、リファクタリング前と同じ出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="064c2-112">This example produces the same output as before the refactoring:</span></span>  
+ <span data-ttu-id="bec47-112">この例では、リファクタリング前と同じ出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="bec47-112">This example produces the same output as before the refactoring:</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -174,13 +174,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a><span data-ttu-id="064c2-113">次の手順</span><span class="sxs-lookup"><span data-stu-id="064c2-113">Next Steps</span></span>  
- <span data-ttu-id="064c2-114">次の例では、XML を別の形式に射影する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="064c2-114">The next example shows how to project XML into a different shape:</span></span>  
+### <a name="next-steps"></a><span data-ttu-id="bec47-113">次の手順</span><span class="sxs-lookup"><span data-stu-id="bec47-113">Next Steps</span></span>  
+ <span data-ttu-id="bec47-114">次の例では、XML を別の形式に射影する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="bec47-114">The next example shows how to project XML into a different shape:</span></span>  
   
--   [<span data-ttu-id="064c2-115">異なる構造の XML の射影 (C#)</span><span class="sxs-lookup"><span data-stu-id="064c2-115">Projecting XML in a Different Shape (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+-   [<span data-ttu-id="bec47-115">異なる構造の XML の射影 (C#)</span><span class="sxs-lookup"><span data-stu-id="bec47-115">Projecting XML in a Different Shape (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a><span data-ttu-id="064c2-116">参照</span><span class="sxs-lookup"><span data-stu-id="064c2-116">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bec47-116">参照</span><span class="sxs-lookup"><span data-stu-id="bec47-116">See Also</span></span>
 
-- [<span data-ttu-id="064c2-117">チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)</span><span class="sxs-lookup"><span data-stu-id="064c2-117">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
-- [<span data-ttu-id="064c2-118">拡張メソッドを使用したリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="064c2-118">Refactoring Using an Extension Method (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
-- [<span data-ttu-id="064c2-119">純粋関数へのリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="064c2-119">Refactoring Into Pure Functions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [<span data-ttu-id="bec47-117">チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)</span><span class="sxs-lookup"><span data-stu-id="bec47-117">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [<span data-ttu-id="bec47-118">拡張メソッドを使用したリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="bec47-118">Refactoring Using an Extension Method (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [<span data-ttu-id="bec47-119">純粋関数へのリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="bec47-119">Refactoring Into Pure Functions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

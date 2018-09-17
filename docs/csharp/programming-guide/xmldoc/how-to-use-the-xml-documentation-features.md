@@ -6,21 +6,21 @@ helpviewer_keywords:
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
 ms.openlocfilehash: 48654968e5099164874bae8a00767d12c8fe4582
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271534"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45514445"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a><span data-ttu-id="8d0ec-102">方法: XML ドキュメント機能を使用する</span><span class="sxs-lookup"><span data-stu-id="8d0ec-102">How to: Use the XML documentation features</span></span>
+# <a name="how-to-use-the-xml-documentation-features"></a><span data-ttu-id="07524-102">方法: XML ドキュメント機能を使用する</span><span class="sxs-lookup"><span data-stu-id="07524-102">How to: Use the XML documentation features</span></span>
 
-<span data-ttu-id="8d0ec-103">次の例では、ドキュメント化された型の基本的な概要について説明します。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-103">The following sample provides a basic overview of a type that has been documented.</span></span>
+<span data-ttu-id="07524-103">次の例では、ドキュメント化された型の基本的な概要について説明します。</span><span class="sxs-lookup"><span data-stu-id="07524-103">The following sample provides a basic overview of a type that has been documented.</span></span>
 
-## <a name="example"></a><span data-ttu-id="8d0ec-104">例</span><span class="sxs-lookup"><span data-stu-id="8d0ec-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="07524-104">例</span><span class="sxs-lookup"><span data-stu-id="07524-104">Example</span></span>
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-<span data-ttu-id="8d0ec-105">この例では、次の内容の .xml ファイルが生成されます。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-105">The example generates an .xml file with the following contents:</span></span>
+<span data-ttu-id="07524-105">この例では、次の内容の .xml ファイルが生成されます。</span><span class="sxs-lookup"><span data-stu-id="07524-105">The example generates an .xml file with the following contents:</span></span>
 
 ```xml
 <?xml version="1.0"?>
@@ -106,33 +106,33 @@ ms.locfileid: "44271534"
 </doc>
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="8d0ec-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="8d0ec-106">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="07524-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="07524-106">Compiling the code</span></span>
 
-<span data-ttu-id="8d0ec-107">この例をコンパイルするには、次のコマンド行を入力します。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-107">To compile the example, type the following command line:</span></span>
+<span data-ttu-id="07524-107">この例をコンパイルするには、次のコマンド行を入力します。</span><span class="sxs-lookup"><span data-stu-id="07524-107">To compile the example, type the following command line:</span></span>
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-<span data-ttu-id="8d0ec-108">このコマンドによって作成される XML ファイル *XMLsample.xml* は、ブラウザーで、または TYPE コマンドを使って、表示できます。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-108">This command creates the XML file *XMLsample.xml*, which you can view in your browser or by using the TYPE command.</span></span>
+<span data-ttu-id="07524-108">このコマンドによって作成される XML ファイル *XMLsample.xml* は、ブラウザーで、または TYPE コマンドを使って、表示できます。</span><span class="sxs-lookup"><span data-stu-id="07524-108">This command creates the XML file *XMLsample.xml*, which you can view in your browser or by using the TYPE command.</span></span>
 
-## <a name="robust-programming"></a><span data-ttu-id="8d0ec-109">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="8d0ec-109">Robust programming</span></span>
+## <a name="robust-programming"></a><span data-ttu-id="07524-109">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="07524-109">Robust programming</span></span>
 
-<span data-ttu-id="8d0ec-110">XML ドキュメントは、/// で始まります。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-110">XML documentation starts with ///.</span></span> <span data-ttu-id="8d0ec-111">新しいプロジェクトを作成すると、開始の /// 行がいくつか自動的に挿入されます。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-111">When you create a new project, the wizards put some starter /// lines in for you.</span></span> <span data-ttu-id="8d0ec-112">これらのコメントの処理にはいくつか制限があります。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-112">The processing of these comments has some restrictions:</span></span>
+<span data-ttu-id="07524-110">XML ドキュメントは、/// で始まります。</span><span class="sxs-lookup"><span data-stu-id="07524-110">XML documentation starts with ///.</span></span> <span data-ttu-id="07524-111">新しいプロジェクトを作成すると、開始の /// 行がいくつか自動的に挿入されます。</span><span class="sxs-lookup"><span data-stu-id="07524-111">When you create a new project, the wizards put some starter /// lines in for you.</span></span> <span data-ttu-id="07524-112">これらのコメントの処理にはいくつか制限があります。</span><span class="sxs-lookup"><span data-stu-id="07524-112">The processing of these comments has some restrictions:</span></span>
 
-- <span data-ttu-id="8d0ec-113">ドキュメントは整形式の XML である必要があります。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-113">The documentation must be well-formed XML.</span></span> <span data-ttu-id="8d0ec-114">XML が整形式ではない場合は、警告が生成され、エラーが発生したことを示すコメントがドキュメント ファイルに追加されます。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-114">If the XML is not well-formed, a warning is generated and the documentation file will contain a comment that says that an error was encountered.</span></span>
+- <span data-ttu-id="07524-113">ドキュメントは整形式の XML である必要があります。</span><span class="sxs-lookup"><span data-stu-id="07524-113">The documentation must be well-formed XML.</span></span> <span data-ttu-id="07524-114">XML が整形式ではない場合は、警告が生成され、エラーが発生したことを示すコメントがドキュメント ファイルに追加されます。</span><span class="sxs-lookup"><span data-stu-id="07524-114">If the XML is not well-formed, a warning is generated and the documentation file will contain a comment that says that an error was encountered.</span></span>
 
-- <span data-ttu-id="8d0ec-115">開発者は、独自のタグ セットを自由に作成できます。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-115">Developers are free to create their own set of tags.</span></span> <span data-ttu-id="8d0ec-116">推奨されるタグのセットがあります (「[ドキュメント コメントとして推奨されるタグ](recommended-tags-for-documentation-comments.md)」を参照)。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-116">There is a recommended set of tags (see [Recommended tags for documentation comments](recommended-tags-for-documentation-comments.md)).</span></span> <span data-ttu-id="8d0ec-117">推奨されるタグの一部には特別な意味があります。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-117">Some of the recommended tags have special meanings:</span></span>
+- <span data-ttu-id="07524-115">開発者は、独自のタグ セットを自由に作成できます。</span><span class="sxs-lookup"><span data-stu-id="07524-115">Developers are free to create their own set of tags.</span></span> <span data-ttu-id="07524-116">推奨されるタグのセットがあります (「[ドキュメント コメントとして推奨されるタグ](recommended-tags-for-documentation-comments.md)」を参照)。</span><span class="sxs-lookup"><span data-stu-id="07524-116">There is a recommended set of tags (see [Recommended tags for documentation comments](recommended-tags-for-documentation-comments.md)).</span></span> <span data-ttu-id="07524-117">推奨されるタグの一部には特別な意味があります。</span><span class="sxs-lookup"><span data-stu-id="07524-117">Some of the recommended tags have special meanings:</span></span>
 
-  - <span data-ttu-id="8d0ec-118">\<param> タグは、パラメーターの記述に使われます。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-118">The \<param> tag is used to describe parameters.</span></span> <span data-ttu-id="8d0ec-119">このタグがあると、コンパイラは、パラメーターが存在すること、およびすべてのパラメーターがドキュメントで記述されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-119">If used, the compiler verifies that the parameter exists and that all parameters are described in the documentation.</span></span> <span data-ttu-id="8d0ec-120">検証で問題がある場合、コンパイラは警告を生成します。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-120">If the verification failed, the compiler issues a warning.</span></span>
+  - <span data-ttu-id="07524-118">\<param> タグは、パラメーターの記述に使われます。</span><span class="sxs-lookup"><span data-stu-id="07524-118">The \<param> tag is used to describe parameters.</span></span> <span data-ttu-id="07524-119">このタグがあると、コンパイラは、パラメーターが存在すること、およびすべてのパラメーターがドキュメントで記述されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="07524-119">If used, the compiler verifies that the parameter exists and that all parameters are described in the documentation.</span></span> <span data-ttu-id="07524-120">検証で問題がある場合、コンパイラは警告を生成します。</span><span class="sxs-lookup"><span data-stu-id="07524-120">If the verification failed, the compiler issues a warning.</span></span>
 
-  - <span data-ttu-id="8d0ec-121">`cref` 属性は任意のタグにアタッチでき、コード要素への参照を提供します。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-121">The `cref` attribute can be attached to any tag to provide a reference to a code element.</span></span> <span data-ttu-id="8d0ec-122">コンパイラは、このコード要素が存在することを確認します。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-122">The compiler verifies that this code element exists.</span></span> <span data-ttu-id="8d0ec-123">検証で問題がある場合、コンパイラは警告を生成します。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-123">If the verification failed, the compiler issues a warning.</span></span> <span data-ttu-id="8d0ec-124">コンパイラは、`cref` 属性で記述されている型を探すとき、`using` ステートメントに従います。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-124">The compiler respects any `using` statements when it looks for a type described in the `cref` attribute.</span></span>
+  - <span data-ttu-id="07524-121">`cref` 属性は任意のタグにアタッチでき、コード要素への参照を提供します。</span><span class="sxs-lookup"><span data-stu-id="07524-121">The `cref` attribute can be attached to any tag to provide a reference to a code element.</span></span> <span data-ttu-id="07524-122">コンパイラは、このコード要素が存在することを確認します。</span><span class="sxs-lookup"><span data-stu-id="07524-122">The compiler verifies that this code element exists.</span></span> <span data-ttu-id="07524-123">検証で問題がある場合、コンパイラは警告を生成します。</span><span class="sxs-lookup"><span data-stu-id="07524-123">If the verification failed, the compiler issues a warning.</span></span> <span data-ttu-id="07524-124">コンパイラは、`cref` 属性で記述されている型を探すとき、`using` ステートメントに従います。</span><span class="sxs-lookup"><span data-stu-id="07524-124">The compiler respects any `using` statements when it looks for a type described in the `cref` attribute.</span></span>
 
-  - <span data-ttu-id="8d0ec-125">\<summary> タグは、型またはメンバーに関する追加情報を表示するために、Visual Studio の IntelliSense によって使われます。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-125">The \<summary> tag is used by IntelliSense inside Visual Studio to display additional information about a type or member.</span></span>
+  - <span data-ttu-id="07524-125">\<summary> タグは、型またはメンバーに関する追加情報を表示するために、Visual Studio の IntelliSense によって使われます。</span><span class="sxs-lookup"><span data-stu-id="07524-125">The \<summary> tag is used by IntelliSense inside Visual Studio to display additional information about a type or member.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="8d0ec-126">XML ファイルでは、型とメンバーに関する完全な情報は提供されません (たとえば、型の情報は含まれません)。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-126">The XML file does not provide full information about the type and members (for example, it does not contain any type information).</span></span> <span data-ttu-id="8d0ec-127">型またはメンバーの完全な情報を取得するには、ドキュメント ファイルと併せて、実際の型またはメンバーでリフレクションを使う必要があります。</span><span class="sxs-lookup"><span data-stu-id="8d0ec-127">To get full information about a type or member, the documentation file must be used together with reflection on the actual type or member.</span></span>
+    > <span data-ttu-id="07524-126">XML ファイルでは、型とメンバーに関する完全な情報は提供されません (たとえば、型の情報は含まれません)。</span><span class="sxs-lookup"><span data-stu-id="07524-126">The XML file does not provide full information about the type and members (for example, it does not contain any type information).</span></span> <span data-ttu-id="07524-127">型またはメンバーの完全な情報を取得するには、ドキュメント ファイルと併せて、実際の型またはメンバーでリフレクションを使う必要があります。</span><span class="sxs-lookup"><span data-stu-id="07524-127">To get full information about a type or member, the documentation file must be used together with reflection on the actual type or member.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8d0ec-128">参照</span><span class="sxs-lookup"><span data-stu-id="8d0ec-128">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07524-128">参照</span><span class="sxs-lookup"><span data-stu-id="07524-128">See Also</span></span>
 
-- [<span data-ttu-id="8d0ec-129">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="8d0ec-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="8d0ec-130">/doc (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="8d0ec-130">/doc (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
-- [<span data-ttu-id="8d0ec-131">XML ドキュメント コメント</span><span class="sxs-lookup"><span data-stu-id="8d0ec-131">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [<span data-ttu-id="07524-129">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="07524-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="07524-130">/doc (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="07524-130">/doc (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [<span data-ttu-id="07524-131">XML ドキュメント コメント</span><span class="sxs-lookup"><span data-stu-id="07524-131">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  

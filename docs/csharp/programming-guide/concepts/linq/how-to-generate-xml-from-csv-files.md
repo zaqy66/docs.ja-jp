@@ -3,19 +3,19 @@ title: '方法: CSV ファイルから XML を生成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 9200cfc443ae87fcbeaf87c7674f15d8a241f5dc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210881"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45609189"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="1d7b9-102">方法: CSV ファイルから XML を生成する (C#)</span><span class="sxs-lookup"><span data-stu-id="1d7b9-102">How to: Generate XML from CSV Files (C#)</span></span>
-<span data-ttu-id="1d7b9-103">この例では、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、コンマ区切り (CSV) ファイルから XML ファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="1d7b9-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="a35f6-102">方法: CSV ファイルから XML を生成する (C#)</span><span class="sxs-lookup"><span data-stu-id="a35f6-102">How to: Generate XML from CSV Files (C#)</span></span>
+<span data-ttu-id="a35f6-103">この例では、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、コンマ区切り (CSV) ファイルから XML ファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="a35f6-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1d7b9-104">例</span><span class="sxs-lookup"><span data-stu-id="1d7b9-104">Example</span></span>  
- <span data-ttu-id="1d7b9-105">次のコードは、文字列の配列に対して [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="1d7b9-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="a35f6-104">例</span><span class="sxs-lookup"><span data-stu-id="a35f6-104">Example</span></span>  
+ <span data-ttu-id="a35f6-105">次のコードは、文字列の配列に対して [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="a35f6-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
   
- <span data-ttu-id="1d7b9-106">クエリでは、`let` 句を使用して各文字列をフィールドの配列に分割します。</span><span class="sxs-lookup"><span data-stu-id="1d7b9-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
+ <span data-ttu-id="a35f6-106">クエリでは、`let` 句を使用して各文字列をフィールドの配列に分割します。</span><span class="sxs-lookup"><span data-stu-id="a35f6-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -48,7 +48,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- <span data-ttu-id="1d7b9-107">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="1d7b9-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="a35f6-107">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="a35f6-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -107,6 +107,6 @@ Console.WriteLine(cust);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1d7b9-108">参照</span><span class="sxs-lookup"><span data-stu-id="1d7b9-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a35f6-108">参照</span><span class="sxs-lookup"><span data-stu-id="a35f6-108">See Also</span></span>
 
-- [<span data-ttu-id="1d7b9-109">プロジェクションと変換 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1d7b9-109">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="a35f6-109">プロジェクションと変換 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="a35f6-109">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

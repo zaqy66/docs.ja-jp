@@ -3,19 +3,19 @@ title: '方法: XML からテキスト ファイルを生成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
 ms.openlocfilehash: 1e0c57b1fa16bb1b92cabaf4afa7ff7bf40824bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192744"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591356"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a><span data-ttu-id="001ea-102">方法: XML からテキスト ファイルを生成する (C#)</span><span class="sxs-lookup"><span data-stu-id="001ea-102">How to: Generate Text Files from XML (C#)</span></span>
-<span data-ttu-id="001ea-103">この例では、XML ファイルからコンマ区切り (CSV) ファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="001ea-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
+# <a name="how-to-generate-text-files-from-xml-c"></a><span data-ttu-id="8506d-102">方法: XML からテキスト ファイルを生成する (C#)</span><span class="sxs-lookup"><span data-stu-id="8506d-102">How to: Generate Text Files from XML (C#)</span></span>
+<span data-ttu-id="8506d-103">この例では、XML ファイルからコンマ区切り (CSV) ファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="8506d-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="001ea-104">例</span><span class="sxs-lookup"><span data-stu-id="001ea-104">Example</span></span>  
- <span data-ttu-id="001ea-105">この例の C# バージョンでは、メソッド構文と `Aggregate` 演算子を使用して、1 つの式で XML ドキュメントから CSV ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="001ea-105">The C# version of this example uses method syntax and the `Aggregate` operator to generate a CSV file from an XML document in a single expression.</span></span> <span data-ttu-id="001ea-106">詳細については、「[LINQ でのクエリ構文とメソッド構文](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="001ea-106">For more information, see [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="8506d-104">例</span><span class="sxs-lookup"><span data-stu-id="8506d-104">Example</span></span>  
+ <span data-ttu-id="8506d-105">この例の C# バージョンでは、メソッド構文と `Aggregate` 演算子を使用して、1 つの式で XML ドキュメントから CSV ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="8506d-105">The C# version of this example uses method syntax and the `Aggregate` operator to generate a CSV file from an XML document in a single expression.</span></span> <span data-ttu-id="8506d-106">詳細については、「[LINQ でのクエリ構文とメソッド構文](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8506d-106">For more information, see [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span></span>  
   
- <span data-ttu-id="001ea-107">この例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)」の XML ドキュメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="001ea-107">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
+ <span data-ttu-id="8506d-107">この例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)」の XML ドキュメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="8506d-107">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -44,7 +44,7 @@ string csv =
 Console.WriteLine(csv);  
 ```  
   
- <span data-ttu-id="001ea-108">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="001ea-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="8506d-108">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="8506d-108">This code produces the following output:</span></span>  
   
 ```  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
@@ -53,6 +53,6 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="001ea-109">参照</span><span class="sxs-lookup"><span data-stu-id="001ea-109">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8506d-109">参照</span><span class="sxs-lookup"><span data-stu-id="8506d-109">See Also</span></span>
 
-- [<span data-ttu-id="001ea-110">プロジェクションと変換 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="001ea-110">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="8506d-110">プロジェクションと変換 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8506d-110">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
