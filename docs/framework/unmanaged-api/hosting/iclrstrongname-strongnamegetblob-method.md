@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4621a7d143d401d4cb620ac17c31e4ee5f13837
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588346"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45692899"
 ---
-# <a name="iclrstrongnamestrongnamegetblob-method"></a><span data-ttu-id="f75b6-102">ICLRStrongName::StrongNameGetBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="f75b6-102">ICLRStrongName::StrongNameGetBlob Method</span></span>
-<span data-ttu-id="f75b6-103">指定したアドレスにある実行可能ファイルのバイナリ表現が、指定したバッファーに入れられます。</span><span class="sxs-lookup"><span data-stu-id="f75b6-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
+# <a name="iclrstrongnamestrongnamegetblob-method"></a><span data-ttu-id="30f2c-102">ICLRStrongName::StrongNameGetBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="30f2c-102">ICLRStrongName::StrongNameGetBlob Method</span></span>
+<span data-ttu-id="30f2c-103">指定したアドレスにある実行可能ファイルのバイナリ表現が、指定したバッファーに入れられます。</span><span class="sxs-lookup"><span data-stu-id="30f2c-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f75b6-104">構文</span><span class="sxs-lookup"><span data-stu-id="f75b6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30f2c-104">構文</span><span class="sxs-lookup"><span data-stu-id="30f2c-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameGetBlob (  
@@ -38,28 +38,28 @@ HRESULT StrongNameGetBlob (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f75b6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f75b6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="30f2c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="30f2c-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="f75b6-106">[in]読み込まれる実行可能ファイルへの有効なパス。</span><span class="sxs-lookup"><span data-stu-id="f75b6-106">[in] A valid path to the executable file to be loaded.</span></span>  
+ <span data-ttu-id="30f2c-106">[in]読み込まれる実行可能ファイルへの有効なパス。</span><span class="sxs-lookup"><span data-stu-id="30f2c-106">[in] A valid path to the executable file to be loaded.</span></span>  
   
  `pbBlob`  
- <span data-ttu-id="f75b6-107">[in]実行可能ファイルを読み込むバッファー。</span><span class="sxs-lookup"><span data-stu-id="f75b6-107">[in] The buffer into which to load the executable file.</span></span>  
+ <span data-ttu-id="30f2c-107">[in]実行可能ファイルを読み込むバッファー。</span><span class="sxs-lookup"><span data-stu-id="30f2c-107">[in] The buffer into which to load the executable file.</span></span>  
   
  `pcbBlob`  
- <span data-ttu-id="f75b6-108">[入力、出力]最大サイズ (バイト単位) を要求された`pbBlob`します。</span><span class="sxs-lookup"><span data-stu-id="f75b6-108">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="f75b6-109">関数が戻るとき、実際のサイズをバイト単位の`pbBlob`します。</span><span class="sxs-lookup"><span data-stu-id="f75b6-109">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
+ <span data-ttu-id="30f2c-108">[入力、出力]最大サイズ (バイト単位) を要求された`pbBlob`します。</span><span class="sxs-lookup"><span data-stu-id="30f2c-108">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="30f2c-109">関数が戻るとき、実際のサイズをバイト単位の`pbBlob`します。</span><span class="sxs-lookup"><span data-stu-id="30f2c-109">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f75b6-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="f75b6-110">Return Value</span></span>  
- <span data-ttu-id="f75b6-111">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="f75b6-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="30f2c-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="30f2c-110">Return Value</span></span>  
+ <span data-ttu-id="30f2c-111">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="30f2c-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f75b6-112">要件</span><span class="sxs-lookup"><span data-stu-id="f75b6-112">Requirements</span></span>  
- <span data-ttu-id="f75b6-113">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f75b6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30f2c-112">要件</span><span class="sxs-lookup"><span data-stu-id="30f2c-112">Requirements</span></span>  
+ <span data-ttu-id="30f2c-113">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="30f2c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f75b6-114">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f75b6-114">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="30f2c-114">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="30f2c-114">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="f75b6-115">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="f75b6-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="30f2c-115">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="30f2c-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f75b6-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f75b6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="30f2c-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30f2c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f75b6-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="f75b6-117">See Also</span></span>  
- [<span data-ttu-id="f75b6-118">StrongNameGetBlobFromImage メソッド</span><span class="sxs-lookup"><span data-stu-id="f75b6-118">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  
- [<span data-ttu-id="f75b6-119">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f75b6-119">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="30f2c-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="30f2c-117">See Also</span></span>  
+ [<span data-ttu-id="30f2c-118">StrongNameGetBlobFromImage メソッド</span><span class="sxs-lookup"><span data-stu-id="30f2c-118">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  
+ [<span data-ttu-id="30f2c-119">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="30f2c-119">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
