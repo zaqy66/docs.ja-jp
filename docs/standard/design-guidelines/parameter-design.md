@@ -12,11 +12,11 @@ ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea5311de8cef266af23b259d943568bfa95eaf72
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615077"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964817"
 ---
 # <a name="parameter-design"></a>パラメーターのデザイン
 このセクションでは、引数をチェックするためのガイドラインにセクションを含むパラメーターのデザインの大まかなガイドラインを提供します。 さらで説明されているガイドラインを参照する必要があります[パラメーターの名前付け](../../../docs/standard/design-guidelines/naming-parameters.md)します。  

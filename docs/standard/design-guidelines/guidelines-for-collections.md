@@ -6,11 +6,11 @@ ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45674092"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964843"
 ---
 # <a name="guidelines-for-collections"></a>コレクションに関するガイドライン
 具体的には、共通の特性を持つオブジェクトのグループを操作するように設計する任意の型は、コレクションを見なすことができます。 ほとんどを実装するには、このような型に適した<xref:System.Collections.IEnumerable>または<xref:System.Collections.Generic.IEnumerable%601>ので、このセクションでは私たちだけを検討するコレクションには、それらのインターフェイスの一方または両方を実装する型。  
