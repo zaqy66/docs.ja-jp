@@ -14,11 +14,11 @@ ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cd2fa6219f39a8506d865d85e1ce5f84d22a92f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44269034"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45658629"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同期プログラミング モデル (APM)
 <xref:System.IAsyncResult> デザイン パターンを使用する非同期操作は **Begin***OperationName* と **End***OperationName* という名前の、各 *OperationName* 非同期操作を開始および終了する 2 種類のメソッドとして実装されます。 たとえば、 <xref:System.IO.FileStream> クラスは、 <xref:System.IO.FileStream.BeginRead%2A> および <xref:System.IO.FileStream.EndRead%2A> メソッドを提供して、非同期的にファイルからバイトを読み取ります。 これらのメソッドは非同期バージョンの <xref:System.IO.FileStream.Read%2A> メソッドを実装します。  

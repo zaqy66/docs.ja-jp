@@ -3,11 +3,11 @@ title: XElement オブジェクトと XDocument オブジェクトの有効な�
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
 ms.openlocfilehash: afaeed7ba49891380982ec9c3cade43574ab8c16
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214057"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45649082"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ
 ここでは、コンストラクターやメソッドに渡すことができる有効な引数について説明します。これらのコンストラクターやメソッドは、コンテンツを要素やドキュメントに追加するためのものです。  

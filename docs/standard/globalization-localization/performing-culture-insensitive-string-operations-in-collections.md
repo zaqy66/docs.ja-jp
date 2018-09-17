@@ -18,11 +18,11 @@ ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e458f45fea8e2207ced930daebf10e653901fa7
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264988"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649199"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>カルチャを認識しないコレクションの操作の実行
 既定ではカルチャを認識する動作を提供するクラスとメンバーは <xref:System.Collections> 名前空間にあります。 <xref:System.Collections.CaseInsensitiveComparer> クラスおよび <xref:System.Collections.CaseInsensitiveHashCodeProvider> クラスの既定のコンストラクターは、<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> プロパティを使用して新しいインスタンスを初期化します。 <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> メソッドのすべてのオーバーロードは、既定で `Thread.CurrentCulture` プロパティを使用して、<xref:System.Collections.Hashtable> クラスの新しいインスタンスを作成します。 <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> メソッドのオーバーロードは、`Thread.CurrentCulture` を使用して既定でカルチャを認識した並べ替えを実行します。 <xref:System.Collections.SortedList> での並べ替えと検索は、文字列がキーとして使用されるときに、`Thread.CurrentCulture` によって影響を受けることがあります。 このセクションで説明する推奨使用方法に従うと、`Collections` 名前空間のこれらのクラスとメソッドでカルチャを認識しない結果が得られます。  

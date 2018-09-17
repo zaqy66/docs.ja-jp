@@ -16,11 +16,11 @@ ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5e52b827f337892c33ec61b9affa1cc646a759c5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44182465"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45676825"
 ---
 # <a name="composing-streams"></a>ストリームの構成
 バッキング ストアは、ディスクやメモリなどの記憶域メディアです。 さまざまなバッキング ストアが <xref:System.IO.Stream> クラスの実装としてそれぞれ独自のストリームを実装しています。 各ストリームの種類は、指定されたバッキング ストアとの間でバイトの読み取りと書き込みを行います。 バッキング ストアに接続するストリームは、基本ストリームと呼ばれます。 基本ストリームには、ストリームをバッキング ストアに接続するために必要なパラメーターを持つコンストラクターがあります。 たとえば、<xref:System.IO.FileStream> には、プロセスでファイルを共有する方法を指定する path パラメーターなどを指定するコンストラクターがあります。  

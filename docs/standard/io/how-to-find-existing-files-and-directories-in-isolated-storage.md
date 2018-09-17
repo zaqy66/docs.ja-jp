@@ -20,11 +20,11 @@ ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44197813"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45592987"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>方法 : 分離ストレージ内でファイルおよびディレクトリを検索する
 分離ストレージ内のディレクトリを検索するには、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> メソッドを使用します。 このメソッドは、検索パターンを表す文字列を取得します。 検索パターンでは、1 文字を表すワイルドカード文字 (?) と複数の文字を表すワイルドカード文字 (*) の両方がサポートされています。ただし、これらのワイルドカード文字は、名前の最後の部分で使用する必要があります。 たとえば、`directory1/*ect*` は有効な検索文字列ですが、`*ect*/directory2` は無効です。  

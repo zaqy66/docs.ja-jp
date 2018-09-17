@@ -4,12 +4,12 @@ description: 既存の csproj ファイルと .NET Core の csproj ファイル�
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 1e356d0123328fe703f672c38cb5ee7799cb574c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d868eb689af1d87ea2adb1f0069345cbb8195af7
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218233"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646377"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -20,13 +20,13 @@ ms.locfileid: "33218233"
 
 ```xml
  <PropertyGroup>
-   <TargetFramework>netcoreapp1.1</TargetFramework>
+   <TargetFramework>netcoreapp2.1</TargetFramework>
  </PropertyGroup>
  ```
  
  ```xml
  <PropertyGroup>
-   <TargetFrameworks>netcoreapp1.1;net462</TargetFrameworks>
+   <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
  </PropertyGroup>
  ```
 
@@ -168,10 +168,10 @@ csproj では、プロジェクトから既定の glob を削除し、多様な�
 </PackageTargetFallback >
 ```
 
-次の例では、`netcoreapp1.0` ターゲットにのみフォールバックを指定しています。
+次の例では、`netcoreapp2.1` ターゲットにのみフォールバックを指定しています。
 
 ```xml
-<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp1.0'">
+<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp2.1'">
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```
@@ -194,7 +194,7 @@ MSbuild への移行に伴い、*project.json* ファイルから *csproj* フ�
 ### <a name="authors"></a>Authors
 nuget.org のプロファイル名と一致するパッケージ作成者をセミコロンで区切った一覧。これらは nuget.org の NuGet ギャラリーに表示され、同じ作成者によるパッケージの相互参照に使用されます。
 
-### <a name="description"></a>Description
+### <a name="description"></a>説明
 UI 画面用のパッケージの長い説明。
 
 ### <a name="copyright"></a>Copyright

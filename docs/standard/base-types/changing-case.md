@@ -16,11 +16,11 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262529"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44514541"
 ---
 # <a name="changing-case-in-net"></a>.NET の大文字と小文字の変更
 ユーザーからの入力を受け付けるアプリケーションを記述する場合、ユーザーがデータ入力に使用するケースを正確に予測することはできません。 多くの場合、特にユーザー インターフェイスにそれを表示する場合には、文字列に一貫性のあるケースを使用することが求められます。 次の表は、3 つのケース変更方式を示しています。 最初の 2 つの方式は、カルチャを受け入れるオーバーロードを提供します。  

@@ -3,11 +3,11 @@ title: '方法 : アセンブリを他のアプリケーションと共有する
 ms.date: 07/20/2015
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
 ms.openlocfilehash: a5b20061c759fd914193f24aa123317f13d31dce
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266470"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45638397"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>方法 : アセンブリを他のアプリケーションと共有する (C#)
 アセンブリはプライベートまたは共有にすることができます。既定では、ほとんどの単純なプログラムは、他のアプリケーションによって使われることを意図されていないので、プライベート アセンブリで構成されます。  

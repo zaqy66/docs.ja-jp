@@ -14,11 +14,11 @@ ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35a7d481cf82818054a852f7c2e142f615022fcb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271716"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45592881"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>方法 : ログ ファイルを開いて情報を追加する
 <xref:System.IO.StreamWriter> および <xref:System.IO.StreamReader> は、ストリームから文字の書き込んだり、読み取りを行います。 次のコード例は、入力用に `log.txt` ファイルを開くか、まだファイルがない場合、ファイルを作成し、ファイルの末尾に情報を追加します。 ファイルの内容は、その後表示用に標準出力に書き込まれます。 この例の代わりとして、情報を 1 つの文字列または文字列の配列として格納して、<xref:System.IO.File.WriteAllText%2A> または <xref:System.IO.File.WriteAllLines%2A> メソッドを使用して、同じ機能を実現することができます。  

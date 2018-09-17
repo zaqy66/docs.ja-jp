@@ -6,11 +6,11 @@ ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264533"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45673845"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>XML データ型から CLR 型へのマッピング
 XML データ型と共通言語ランタイム (CLR) 型の既定のマッピングを次の表に示します。  

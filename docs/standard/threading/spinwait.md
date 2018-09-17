@@ -11,11 +11,11 @@ ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ff8b5b75d1d69d3d8c88810de1311540a239c52
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273412"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45625530"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> は軽量な同期型であり、負荷が高いコンテキスト スイッチとカーネル イベントに必要なカーネル遷移を避けるために低レベルのシナリオで使用できます。 マルチコア コンピューターでは、リソースの保持期間が長くならないと予測される場合、待機中のスレッドを数十または数百サイクルの間ユーザー モードでスピンさせてから、リソースの取得を再試行した方が効率的です。 スピン後にリソースを使用できる場合は、数千サイクルを節約したことになります。 リソースをまだ使用できない場合でも、数サイクルを消費しただけであり、カーネル ベースの待機に移行できます。 スピン後に待機というこの組み合わせは、*2 フェーズ待機操作* と呼ばれることがあります。  

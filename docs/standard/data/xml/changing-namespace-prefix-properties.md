@@ -9,11 +9,11 @@ ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222689"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45674300"
 ---
 # <a name="changing-namespace-prefix-properties"></a>名前空間プレフィックス プロパティの変更
 **XmlNode** クラスを使用すると、特定のノードに関連付けられた名前空間プレフィックスを変更できます。 たとえば、要素のプレフィックスを変更するコードを次に示します。  

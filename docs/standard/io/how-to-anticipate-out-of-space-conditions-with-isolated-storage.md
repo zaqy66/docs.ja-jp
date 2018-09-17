@@ -25,11 +25,11 @@ ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207721"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45649384"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>方法: 分離ストレージの領域不足状態に備える
 分離ストレージを使用するコードは、分離ストレージ ファイルとディレクトリが存在するデータ コンパートメントの最大サイズを規定する[クォータ](../../../docs/standard/io/isolated-storage.md#quotas)の制約を受けます。 クォータはセキュリティ ポリシーによって定義され、管理者が構成できます。 データの書き込み時に許容される最大サイズを超えると、<xref:System.IO.IsolatedStorage.IsolatedStorageException> 例外がスローされ、操作は失敗します。 データ ストレージを容量不足にしてアプリケーションの要求拒否を引き起こす可能性がある悪意のあるサービス拒否攻撃を、この方法で防ぐことができます。  

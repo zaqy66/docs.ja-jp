@@ -6,11 +6,11 @@ ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266866"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676981"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>保持されずに展開されるエンティティ参照
 エンティティ参照が展開され、それが表すテキストに置き換えられる場合には、**XmlEntityReference** ノードは作成されません。 この場合はエンティティ宣言が解析され、宣言のコンテンツから作成されたノードが **XmlEntityReference** の代わりにコピーされます。 したがって、`&publisher;` の例では、`&publisher;` は保存されず、代わりに **XmlText** ノードが作成されます。  

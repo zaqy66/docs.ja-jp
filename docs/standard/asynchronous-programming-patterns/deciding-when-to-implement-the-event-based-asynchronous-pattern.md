@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
 ms.openlocfilehash: af30f0d09ce772f20f342ec0936d0ca63f5465d7
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262361"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45592024"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンをいつ実装するかの決定
 イベント ベースの非同期パターンは、クラスの非同期動作を公開します。 このパターンを導入すると、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、非同期動作を公開する 2 つのパターンが定義されます。<xref:System.IAsyncResult?displayProperty=nameWithType> インターフェイスに基づく非同期パターンとイベント ベースのパターンです。 このトピックでは、両方のパターンをどのような状況で実装するべきか説明します。  

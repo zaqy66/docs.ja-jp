@@ -6,11 +6,11 @@ ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262231"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615051"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT コンパイラ (xsltc.exe)
 XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパイルしてアセンブリを生成します。 コンパイルしたスタイル シートを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。 xsltc.exe を使用して署名があるアセンブリを生成することはできません。  

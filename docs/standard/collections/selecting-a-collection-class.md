@@ -13,11 +13,11 @@ ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211815"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591588"
 ---
 # <a name="selecting-a-collection-class"></a>コレクション クラスの選択
 コレクション クラスは慎重に選択してください。 間違った型を使用すると、コレクションの使用が制限されることがあります。 一般に、.NET Framework バージョン 1.1 を特に対象としている場合を除いて、<xref:System.Collections> 名前空間にある型は使用しないでください。 タイプ セーフの強化や他の改善があるため、コレクションの汎用および同時実行バージョンをお勧めします。  

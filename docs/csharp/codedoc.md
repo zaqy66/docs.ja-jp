@@ -3,12 +3,12 @@ title: XML コメントによるコードの文書化
 description: XML ドキュメント コメントを含むコードを文書化し、コンパイル時に XML ドキュメント ファイルを生成する方法を説明します。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4c94e98478e71449a3f9cc4bf1f21462e17a371b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517482"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45683058"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML コメントによるコードの文書化
 
@@ -29,7 +29,7 @@ XML 文書化コメントは、その他すべてのコメントと同じよう�
    XML ファイルの名前と正確な絶対パスまたは相対パスを指定することもできます。 次の例では、アプリケーションのデバッグ バージョンと同じディレクトリに XML ファイルが生成されます。
 
    ```xml
-   <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
+   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - Visual Studio を使用してアプリケーションを開発する場合は、プロジェクトを右クリックして、**[プロパティ]** を選択します。 プロパティ ダイアログ ボックスで、**[ビルド]** タブをクリックし、**[XML ドキュメント ファイル]** をオンにします。 コンパイラがファイルを書き込む場所を変更することもできます。

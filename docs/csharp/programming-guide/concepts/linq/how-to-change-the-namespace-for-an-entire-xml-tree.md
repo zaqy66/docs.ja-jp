@@ -3,11 +3,11 @@ title: '方法: XML ツリー全体の名前空間を変更する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
 ms.openlocfilehash: cbb7c3d332eea83d6df71812cc18633df6fbb6d0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261854"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676682"
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>方法: XML ツリー全体の名前空間を変更する (C#)
 要素または属性の名前空間をプログラムで変更しなければならない場合があります。 LINQ to XML では、この操作を簡単に行うことができます。 <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> プロパティを設定できます。 <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> プロパティは設定できませんが、簡単に属性を <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> にコピーし、既存の属性を削除して、目的の新しい名前空間に含まれる新しい属性を追加できます。  

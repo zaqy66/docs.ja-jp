@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23961caa7b307df46b20b3811d0883d4c702a357
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4d7dee9ebaed20970f715026661c29aae701289
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577164"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45686090"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script を使用したスクリプト ブロック
 <xref:System.Xml.Xsl.XslCompiledTransform> クラスは、`msxsl:script` 要素を使用した埋め込みスクリプトをサポートしています。 スタイル シートが読み込まれると、定義されているすべての関数は Code Document Object Model (CodeDOM) によって Microsoft intermediate language (MSIL) にコンパイルされ、実行時に実行されます。 埋め込みのスクリプト ブロックから生成されたアセンブリは、スタイル シートに対して生成されるアセンブリとは区別されます。  
@@ -148,6 +148,7 @@ ms.locfileid: "33577164"
 </circles>  
 ```  
   
-## <a name="see-also"></a>参照  
- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [動的なソース コードの生成とコンパイル](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
+## <a name="see-also"></a>関連項目
+
+- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [動的なソース コードの生成とコンパイル](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

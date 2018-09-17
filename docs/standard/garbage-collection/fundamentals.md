@@ -13,11 +13,11 @@ ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192693"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45638978"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 <a name="top"></a> 共通言語ランタイム (CLR) では、自動メモリ マネージャーとしてガベージ コレクターを使用できます。 次のような利点があります。  

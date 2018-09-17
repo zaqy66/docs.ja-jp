@@ -6,11 +6,11 @@ helpviewer_keywords:
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
 ms.openlocfilehash: d6ecfc3659dcf533db0f4e7b67fdffd620a584fd
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271612"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45638111"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>方法 : コピー コンストラクターを記述する (C# プログラミング ガイド)
 C# では、オブジェクトのコピー コンストラクターが提供されていませんが、独自に作成することができます。  

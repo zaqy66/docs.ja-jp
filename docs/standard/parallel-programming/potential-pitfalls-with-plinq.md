@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c4decd01938500fe6330c48caa33b845916aaff
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863008"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638835"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ の非利便性
 PLINQ を使用すると、多くの場合、連続した LINQ to Objects クエリのパフォーマンスが大幅に向上します。 ただし、クエリの実行を並列化すると、複雑性が増すため、シーケンシャルなコードにおいて一般的でない問題、またはめったにない問題を引き起こす場合があります。 このトピックでは、PLINQ クエリを記述するときに回避すべき点について示します。  
@@ -83,36 +83,32 @@ a.Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
   
 ```vb  
 Dim mre = New ManualResetEventSlim()  
-    Enumerable.Range(0, ProcessorCount * 100).AsParallel().ForAll(Sub(j)   
-  
-                                                     If j = Environment.ProcessorCount Then  
-  
-                                                         Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
-                                                         mre.Set()  
-  
-                                                     Else  
-  
-                                                         Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
-                                                         mre.Wait()  
-                                                     End If  
-    End Sub) ' deadlocks  
+Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll(Sub(j)   
+   If j = Environment.ProcessorCount Then  
+       Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
+       mre.Set()  
+   Else  
+       Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
+       mre.Wait()  
+   End If  
+End Sub) ' deadlocks  
 ```  
   
 ```csharp  
 ManualResetEventSlim mre = new ManualResetEventSlim();  
-            Enumerable.Range(0, ProcessorCount * 100).AsParallel().ForAll((j) =>  
-            {  
-                if (j == Environment.ProcessorCount)  
-                {  
-                    Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
-                    mre.Set();  
-                }  
-                else  
-                {  
-                    Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
-                    mre.Wait();  
-                }  
-            }); //deadlocks  
+Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll((j) =>  
+{  
+    if (j == Environment.ProcessorCount)  
+    {  
+        Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
+        mre.Set();  
+    }  
+    else  
+    {  
+        Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
+        mre.Wait();  
+    }  
+}); //deadlocks  
 ```  
   
  この例では、1 つのイテレーションでイベントを設定し、その他のすべてのイテレーションでイベントを待機します。 待機のイテレーションは、イベント設定のイテレーションが完了するまで完了できません。 ただし、待機のイテレーションによって、並列ループの実行に使用されるすべてのスレッドがブロックされ、イベント設定のイテレーションがまったく実行されなくなる可能性があります。 これにより、イベント設定のイテレーションが実行されず、待機のイテレーションが開始されないままの状態になるデッドロックが発生します。  

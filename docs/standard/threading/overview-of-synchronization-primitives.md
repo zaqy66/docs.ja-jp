@@ -10,11 +10,11 @@ ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271300"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591881"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同期プリミティブの概要
 <a name="top"></a>.NET Framework には、スレッドの相互作用を制御したり競合状態を回避したりするためのさまざまな同期プリミティブが用意されています。 これらは、大きくは 3 つのカテゴリ (ロック、シグナリング、インタロックされた操作) に分類することができます。  

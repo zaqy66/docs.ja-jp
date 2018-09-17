@@ -3,11 +3,11 @@ title: 純粋関数によるリファクタリング (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266441"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45610121"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>純粋関数によるリファクタリング (C#)
 次の例では、前の例 (「[拡張メソッドを使用したリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)」) をリファクタリングして、純粋関数を使用するようにします。この例では、段落のテキストを検索するコードが純粋静的メソッド `ParagraphText` に移動されています。  

@@ -11,11 +11,11 @@ ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 385e370f205851630f809b285a93c2609220efeb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274769"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45647552"
 ---
 # <a name="barrier-net-framework"></a>バリア (.NET Framework)
 *バリア* とは、複数のスレッド (*参加要素* と呼ばれる) が段階的に 1 つのアルゴリズムで同時に動作できるようにするユーザー定義の同期プリミティブです。 各参加要素は、コードのバリア ポイントに到達するまで実行されます。 バリアは、作業の 1 つのフェーズの終了を表します。 参加要素は、バリアに到達すると、すべての参加要素が同じバリアに到達するまでブロックされます。 すべての参加要素がバリアに到達した後、必要に応じて、フェーズ後の処理を呼び出すことができます。 フェーズ後の処理を使用すると、他のすべてのスレッドがブロックされた状態のまま 1 つのスレッドでアクションを実行できます。 アクションが実行された後、参加要素のブロックはすべて解除されます。  

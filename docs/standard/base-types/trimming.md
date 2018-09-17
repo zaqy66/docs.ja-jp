@@ -18,11 +18,11 @@ ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d13d4e115caa636e5d760b65bc98e195490f911
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184094"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45616235"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>.NET の文字列からの文字のトリムと削除
 文章を個々の単語に分割すると、単語の先頭または末尾に空白が残る場合があります。 そのような場合は、**System.String** クラスのトリム メソッドのいずれかを使用して、文字列内の指定した位置から任意の数の空白またはその他の文字を削除できます。 使用できるトリム メソッドとその説明を次の表に示します。  

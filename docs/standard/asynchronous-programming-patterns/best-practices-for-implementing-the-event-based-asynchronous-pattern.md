@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267168"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45615467"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンを実装するための推奨される手順
 イベントベースの非同期パターンは、使い慣れたイベントおよびデリゲートのセマンティクスと共に、クラス内の非同期動作を公開する効果的な方法を提供します。 イベント ベースの非同期パターンを実装するには、いくつかの固有の動作要件に従う必要があります。 以降のセクションでは、イベントベースの非同期パターンに従うクラスを実装する際に検討すべき要件とガイドラインについて説明します。  

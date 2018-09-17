@@ -10,11 +10,11 @@ ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 10b2471d13d410826cec3404725117649442297b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197343"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674703"
 ---
 # <a name="building-xml-schemas"></a>XML スキーマの作成
 <xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間のクラスは、W3C (World Wide Web Consortium) 勧告『XML Schema』で定義された構造に割り当てられ、メモリ内に XML スキーマを作成する場合に使用できます。  

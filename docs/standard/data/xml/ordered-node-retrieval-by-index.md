@@ -9,11 +9,11 @@ ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276264"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676192"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>インデックスによる順序付けられたノードの取得
 W3C (World Wide Web Consortium) の XML ドキュメント オブジェクト モデル (DOM) では、**XmlNamedNodeMap** によって処理される順序付けられていないノード セットとは対照的に、順序付けられたノードのリストを処理する機能を持った NodeList も定義しています。 Microsoft .NET Framework の NodeList は **XmlNodeList** と呼ばれています。 **XmlNodeList** を返すメソッドとプロパティは次のとおりです。  

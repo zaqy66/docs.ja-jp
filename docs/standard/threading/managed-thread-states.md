@@ -8,11 +8,11 @@ ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207331"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45624568"
 ---
 # <a name="managed-thread-states"></a>マネージド スレッドの状態
 プロパティ <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> には、スレッドの現在の状態を示すビット マスクが用意されています。 スレッドは、 <xref:System.Threading.ThreadState> 列挙型に含まれる状態のうち、常に少なくとも 1 つの状態となり、同時に複数の状態になることもあります。  

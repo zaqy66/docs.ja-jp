@@ -4,11 +4,11 @@ description: 式ツリーの各ノードにアクセスし、その式ツリー�
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
 ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262335"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45678947"
 ---
 # <a name="translating-expression-trees"></a>式ツリーの変換
 

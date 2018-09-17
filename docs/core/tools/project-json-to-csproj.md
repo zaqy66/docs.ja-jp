@@ -4,12 +4,12 @@ description: 「project.json 要素と csproj 要素の間のマッピング」�
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: 369075f91c0d5ea6c7eb5d09ac2535c4e60f28f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0079164470f87df665be6f9de62bc98d3fb51696
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518558"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45647370"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json プロパティと csproj プロパティの間のマッピング
 
@@ -487,7 +487,7 @@ MSBuild では、ビルド中、すべてのプロジェクトが*移植可能*�
 ```
 
 MSBuild では、`owners` 要素に相当するものはありません。
-`summary` の場合、MSBuild の `<Description>` プロパティを利用できます (ただし、`summary` の値はそのプロパティに自動的に移行されません)。そのプロパティが [`description`](#-other-common-root-level-options) 要素にマッピングされているためです。
+`summary` の場合、MSBuild の `<Description>` プロパティを利用できます (ただし、`summary` の値はそのプロパティに自動的に移行されません)。そのプロパティが [`description`](#other-common-root-level-options) 要素にマッピングされているためです。
 
 ## <a name="scripts"></a>スクリプト
 

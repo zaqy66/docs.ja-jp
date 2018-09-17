@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7fd03a43d8722e32f64dd9cbe2936301d6bd2f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b538cb53e1cbc1fdbd8e34506710a1967e50f9d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579497"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45615548"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>タスク ベースの非同期パターンの利用
 タスク ベースの非同期パターン (TAP) を使用して非同期操作を行うと、コールバックを使用して、ブロックすることなく待機できます。  タスクの場合、これは <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> などのメソッドによって行われます。 言語ベースの非同期サポートが、通常の制御フロー内での非同期操作の待機を許可することで、コールバックを隠し、コンパイラにより生成されたコードはこの同じ API レベルのサポートを提供します。  
@@ -834,7 +834,8 @@ private static void Produce(int data)
 > [!NOTE]
 >  <xref:System.Threading.Tasks.Dataflow> 名前空間は [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] にあります。**NuGet** を利用してください。 <xref:System.Threading.Tasks.Dataflow> 名前空間が含まれるアセンブリをインストールするには、[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] でプロジェクトを開き、[プロジェクト] メニューの **[Manage NuGet Packages]** を選択し、Microsoft.Tpl.Dataflow パッケージをオンライン検索します。  
   
-## <a name="see-also"></a>参照  
- [タスク ベースの非同期パターン (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
- [タスク ベースの非同期パターンの実装](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
- [他の非同期パターンと型との相互運用](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+## <a name="see-also"></a>関連項目
+
+- [タスク ベースの非同期パターン (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+- [タスク ベースの非同期パターンの実装](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
+- [他の非同期パターンと型との相互運用](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

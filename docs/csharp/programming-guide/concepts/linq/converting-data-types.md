@@ -3,11 +3,11 @@ title: データ型の変換 (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
 ms.openlocfilehash: 54ef612ad4e92058d9af4d96b7b3cde9732b2f9c
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271076"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45648058"
 ---
 # <a name="converting-data-types-c"></a>データ型の変換 (C#)
 変換メソッドは、入力オブジェクトの型を変更します。  

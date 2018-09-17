@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
 ms.openlocfilehash: 873cc1dc0d81425117f1784353acf08b35158133
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44225361"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45596976"
 ---
 # <a name="-operator-c-reference"></a>* 演算子 (C# リファレンス)
 乗算演算子 (`*`) は、そのオペランドの積を計算します。 すべての数値型には定義済みの乗算演算子があります。  

@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 7574a28fc3e8eb3288a81fa5a7ad26f34f1a3eb9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268852"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646221"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散データ管理に関する課題と解決策
 
@@ -19,7 +19,7 @@ ms.locfileid: "44268852"
 
 最初に、アプリケーションの論理ドメイン モデルと関連するデータに注目する必要があります。 同じアプリケーション内で、切り離されて孤立したデータと異なるコンテキストの識別を試みる必要があります。 各コンテキストは、異なるビジネス言語 (異なるビジネス用語) を使っている可能性があります。 コンテキストを独立して定義し、管理する必要があります。 異なるコンテキストで使われている用語やエンティティが同じように聞こえることがあるかもしれませんが、特定のコンテキストでは、同じビジネス概念でもコンテキストによって使用目的が異なることがあり、名前が異なる場合さえあります。 たとえば、ユーザーは、ID またはメンバーシップのコンテキストではユーザー、CRM のコンテキストではお客様、注文のコンテキストでは購入者、などと呼ばれます。
 
-それぞれドメインが異なる複数のアプリケーション コンテキスト間の境界を識別する方法は、まさに、各ビジネス マイクロサービスおよびその関連するドメイン モデルとデータの境界を識別できる方法です。 常に、それらのマイクロサービス間の結び付きを最小限にすることを試みます。 この識別とドメイン モデルの設計については、「[マイクロサービスごとにドメイン モデルの境界を識別する](#identifying-domain-model-boundaries-for-each-microservice)」を参照してください。
+それぞれドメインが異なる複数のアプリケーション コンテキスト間の境界を識別する方法は、まさに、各ビジネス マイクロサービスおよびその関連するドメイン モデルとデータの境界を識別できる方法です。 常に、それらのマイクロサービス間の結び付きを最小限にすることを試みます。 この識別とドメイン モデルの設計については、「[マイクロサービスごとにドメイン モデルの境界を識別する](identify-microservice-domain-model-boundaries.md)」を参照してください。
 
 ## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>課題 \#2: 複数のマイクロサービスからデータを取得するクエリを作成する方法
 
@@ -57,7 +57,7 @@ Products テーブルは Catalog マイクロサービスによって所有さ�
 
 さらに、ACID スタイルのトランザクションや 2 フェーズ コミット トランザクションは、マイクロサービスの原則に反しているだけではありません。ほとんどの NoSQL データベース (Azure Cosmos DB、MongoDB など) は、2 フェーズ コミット トランザクションをサポートしていません。 ただし、サービス間およびデータベース間でデータの整合性を維持することは不可欠です。 この課題は、特定のデータを冗長にする必要がある場合に、複数のマイクロサービスの間で変更を反映する方法という質問にも関連します。たとえば、製品の名前や説明を Catalog マイクロサービスと Basket マイクロサービスで保持する必要があるような場合です。
 
-この問題に適した解決策は、イベント ドリブンの通信およびパブリッシュとサブスクライブ システムを通じて統合されたマイクロサービスの間の最終的整合性を使うことです。 これらのトピックについては、「[Asynchronous event-driven communication](#async_event_driven_communication)」(非同期のイベント ドリブン通信) を参照してください。
+この問題に適した解決策は、イベント ドリブンの通信およびパブリッシュとサブスクライブ システムを通じて統合されたマイクロサービスの間の最終的整合性を使うことです。 これらのトピックについては、「[Asynchronous event-driven communication](asynchronous-message-based-communication.md#asynchronous-event-driven-communication)」(非同期のイベント ドリブン通信) を参照してください。
 
 ## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>課題 \#4: マイクロサービスの境界を越える通信を設計する方法
 

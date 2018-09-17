@@ -11,11 +11,11 @@ ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 74518f6f56f65668d4c7f073a79c9e7de27d7978
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44178567"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45645763"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>方法: BlockingCollection の項目を個別に追加および取得する
 この例では、ブロッキングと非ブロッキングの 2 つの方法で <xref:System.Collections.Concurrent.BlockingCollection%601> の項目を追加、削除する方法を示します。 <xref:System.Collections.Concurrent.BlockingCollection%601> の詳細については、「[BlockingCollection の概要](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)」を参照してください。  

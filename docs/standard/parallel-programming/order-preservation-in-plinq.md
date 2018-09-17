@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b98fdcd425ae62aca0149df5136c28edc023bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1587b2c4d19833c615c5a10a2fe0d6b28e854aca
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591641"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615025"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ における順序維持
 PLINQ では、正確性を維持しながらパフォーマンスを最大にすることが重要です。 クエリをできるだけ速く実行する一方で、正確な結果を生成する必要があります。 正確性のために、ソース シーケンスの順序の維持が必要な場合がありますが、順序付けには負荷がかかります。 したがって、既定では、PLINQ はソース シーケンスの順序を維持しません。 この点で、PLINQ は [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] と似ていますが、順序を維持する LINQ to Objects とは異なります。  
@@ -122,6 +122,7 @@ PLINQ では、正確性を維持しながらパフォーマンスを最大に�
   
  順序なしの結果はアクティブにシャッフルされるわけではありません。適用される特別な順序ロジックがないだけです。 順序なしのクエリでソース シーケンスの順序が保持される場合もあります。 インデックス付きの Select 演算子を使用するクエリの場合、PLINQ ではインデックスが増加する順に出力要素が出力されることは保証しますが、どのインデックスがどの要素に割り当てられるかについては一切保証しません。  
   
-## <a name="see-also"></a>参照  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>関連項目
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)

@@ -15,11 +15,11 @@ ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e343d48b5e50fdaef3a3667f066894dea03eeb80
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275315"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45614843"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 自動メモリ管理は、[マネージド実行](../../docs/standard/managed-execution-process.md)中に共通言語ランタイムが提供するサービスの 1 つです。 共通言語ランタイムのガベージ コレクターは、アプリケーションが使用するメモリの割り当ておよび解放を管理します。 したがって、開発者がマネージド アプリケーションを開発するときに、メモリ管理タスクを実行するためのコードを記述する必要はありません。 自動メモリ管理により、オブジェクトを解放し忘れたためにメモリ リークが発生する、既に解放されているオブジェクトのメモリにアクセスしようとするなどの一般的な問題を回避できます。 ここでは、ガベージ コレクターによるメモリの割り当て方法および解放方法について説明します。  

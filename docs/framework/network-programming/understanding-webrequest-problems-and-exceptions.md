@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 4275fa574d7fc30f5416c16aaafd2a9494904128
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078790"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45648526"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>WebRequest の問題と例外について
 <xref:System.Net.WebRequest> とその派生クラス (<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>、<xref:System.Net.FileWebRequest>) は例外をスローし、異常な状態を信号で伝えます。 このような問題の解決はすぐにわからないことがあります。  

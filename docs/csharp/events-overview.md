@@ -3,12 +3,12 @@ title: イベントの概要
 description: この概要では、.NET Core のイベントと、イベントの言語上の設計目標について説明します。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 2a2230ea5fba1b0cd5b13319677965e7a776549e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213475"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45618065"
 ---
 # <a name="introduction-to-events"></a>イベントの概要
 
@@ -65,7 +65,7 @@ Progress?.Invoke(this, new FileListArgs(file));
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += OnProgress;
+lister.Progress += onProgress;
 ```
 
 上の画像のように、一般的にハンドラー メソッドはプレフィックス 'On' の後にイベント名を続けたものになります。

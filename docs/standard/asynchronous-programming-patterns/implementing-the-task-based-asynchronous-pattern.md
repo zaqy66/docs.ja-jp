@@ -14,11 +14,11 @@ ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 639a7ae4eb20cfc95f4d01dd0c7035f17656e3e1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207344"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45652980"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>タスク ベースの非同期パターンの実装
 タスク ベースの非同期パターン (TAP) は、3 つの方法 (Visual Studio の C# および Visual Basic コンパイラを使用する方法、手動で行う方法、またはコンパイラと手動による方法を組み合わせた方法) で実装できます。 以下のセクションでは、それぞれの方法について詳しく説明します。 TAP パターンを使用し、計算主体の非同期操作と I/O バインドの非同期操作の両方を実装できます。 [[ワークロード]](#workloads) セクションでは、操作の各種類を確認します。

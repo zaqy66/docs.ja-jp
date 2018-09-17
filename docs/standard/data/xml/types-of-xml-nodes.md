@@ -6,11 +6,11 @@ ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261958"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45597618"
 ---
 # <a name="types-of-xml-nodes"></a>XML ノードの種類
 XML ドキュメントがノードのツリーとしてメモリに読み込まれると、ノードの作成時にノード型が決まります。 XML ドキュメント オブジェクト モデル (DOM) では複数のノード型が定義されています。これらのノード型は W3C (World Wide Web Consortium) で規定されているもので、セクション 1.1.1「The DOM Structure Model」に記載されています。 ノード型、ノード型に割り当てられるオブジェクト、およびそれぞれの簡単な説明を次の表に示します。  
