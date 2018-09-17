@@ -15,11 +15,11 @@ ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649395"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698316"
 ---
 # <a name="application-domains"></a>アプリケーション ドメイン
 オペレーティング システムやランタイム環境では、通常、複数のアプリケーションがなんらかの形で分離されています。 たとえば、Windows ではプロセスを使用してアプリケーションが分離されています。 このような分離は、あるアプリケーションで実行されているコードが、関係のない別のアプリケーションに悪影響をもたらさないようにするために必要です。  
