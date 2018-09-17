@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
 ms.openlocfilehash: e5e537d239bd69cb7a95ae82edbdb82144c700a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188329"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45683091"
 ---
 # <a name="objects-c-programming-guide"></a>オブジェクト (C# プログラミング ガイド)
 クラスまたは構造体の定義は、型の動作を指定する設計図に似ています。 オブジェクトは基本的に、設計図に従って割り当てられて構成されたメモリのブロックです。 プログラムでは、同じクラスのオブジェクトを多数作成できます。 オブジェクトはインスタンスとも呼ばれ、名前付きの変数または配列やコレクションに格納できます。 クライアント コードとは、これらの変数を使ってメソッドを呼び出し、オブジェクトのパブリック プロパティにアクセスするコードです。 C# などのオブジェクト指向言語では、一般的なプログラムは動的に対話する複数のオブジェクトで構成されています。  

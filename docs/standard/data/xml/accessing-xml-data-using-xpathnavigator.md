@@ -6,11 +6,11 @@ ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dca266066a4e53a57789210fd61e90edfcc13b79
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44199038"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45687401"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>XPathNavigator による XML データへのアクセス
 <xref:System.Xml.XPath.XPathNavigator> クラスは、<xref:System.Xml.XPath.XPathDocument> オブジェクトまたは <xref:System.Xml.XmlDocument> オブジェクト内でのノード間の移動、XML データの抽出、および厳密に型指定された XML データにアクセスするメソッドを提供します。  

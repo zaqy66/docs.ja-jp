@@ -8,11 +8,11 @@ ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d48f6df1e0e7680d2706c73c33dc817e1feaf1d5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "43871625"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45689328"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>方法: PLINQ を使用してファイル ディレクトリを反復処理する
 この例では、ファイル ディレクトリに対する操作を簡単に並列化する 2 とおりの方法を示します。 最初のクエリでは、<xref:System.IO.Directory.GetFiles%2A> メソッドを使用して、ディレクトリとすべてのサブディレクトリ内のファイル名の配列を作成します。 配列全体の値が設定されるまでこのメソッドから制御が戻らないため、操作の開始時に待機時間が発生する可能性があります。 ただし、配列が作成されたら、PLINQ は配列を迅速に並列処理できます。  

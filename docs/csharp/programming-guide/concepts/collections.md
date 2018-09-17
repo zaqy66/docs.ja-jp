@@ -3,11 +3,11 @@ title: コレクション (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 ms.openlocfilehash: 24b2155c07b6b66820d373d6310ff6b1c6ab224f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273295"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45679175"
 ---
 # <a name="collections-c"></a>コレクション (C#)
 多くのアプリケーションで、関連するオブジェクトのグループの作成および管理が必要になります。 オブジェクトをグループ化するには、オブジェクトの配列を作成する方法と、オブジェクトのコレクションを作成する方法があります。  

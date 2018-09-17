@@ -16,11 +16,11 @@ ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44178209"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45686350"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (証明書マネージャー ツール)
 証明書マネージャー ツール (Certmgr.exe) は、証明書、証明書信頼リスト (CTL: Certificate Trust List)、および証明書失効リスト (CRL: Certificate Revocation List) を管理します。  
