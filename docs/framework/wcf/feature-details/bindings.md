@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
 ms.openlocfilehash: 1930826cf51d67ceb789e20920ca42f04d1adc1b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647383"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45973050"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation バインディング
 Windows Communication Foundation (WCF) では、その他のソフトウェアと通信する方法からアプリケーション用のソフトウェアを記述する方法を分離します。 バインディングを使用して、クライアントとサービスが相互に通信するために必要なトランスポート、エンコーディング、およびプロトコルの詳細を指定します。 WCF では、バインドを使用して、バインディングの詳細のほとんどは通信しているパーティ間で合意する必要がありますので、エンドポイントの基になるネットワーク表現を生成します。 これを実現する最も簡単な方法は、サービスのクライアントがサービスのエンドポイントと同じバインディングを使用することです。 これを行う方法の詳細については、次を参照してください。[を使用して Windows Communication Foundation サービスの構成とクライアントのバインド](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)します。  

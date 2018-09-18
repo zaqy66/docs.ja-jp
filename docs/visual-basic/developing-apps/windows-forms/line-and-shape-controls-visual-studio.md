@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Line control [Visual Basic], topic list
 ms.assetid: 29ee3a5f-920f-4677-85bc-bd7425ab57e8
 ms.openlocfilehash: 6d052af15257f00f43ad21b08765ab3c882b31bf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45648292"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46005714"
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>ライン コントロールとシェイプ コントロール (Visual Studio)
 Visual Basic Power Packs のライン コントロールとシェイプ コントロールは、フォームまたはコンテナーに、横線、縦線、斜線、長方形、正方形、楕円、円、および角の丸い長方形と正方形を描画するのに使用できるグラフィカル コントロールです。  

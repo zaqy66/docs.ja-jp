@@ -6,60 +6,65 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: e5a07e5264c715f568121403721a3c844b903d99
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 204869d0a7a7b8d56449c28cb37b18624a1701cf
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006835"
 ---
 # <a name="getting-started-tutorial"></a>チュートリアル入門
-このセクションのトピックはクイック露出を Windows Communication Foundation (WCF) プログラミングの経験を提供するためのものです。 これらは、このトピックに記載されているリストの順番どおりに完了するように設計されています。 このチュートリアルに従って作業では、WCF サービスとクライアント アプリケーションの作成に必要な手順の概要を理解するできます。 サービスは 1 つ以上のエンドポイントを公開し、それぞれのエンドポイントは 1 つ以上のサービス操作を公開します。 *エンドポイント*サービスのサービスの場所、アドレス、クライアントが、サービスと機能を定義するコントラクトと通信する必要がある方法を説明する情報を格納するバインディングを指定します。サービスのクライアントに提供します。  
-  
- このチュートリアルの一連のトピックを終了すると、サービスを実行し、クライアントからそのサービスを呼び出すことができるようになります。 最初の 3 つのトピックでは、サービス コントラクトを定義する方法、サービス コントラクトを実装する方法、およびサービスをホストする方法について説明します。 作成したサービスは、コンソール アプリケーション内で自己ホストされます。 また、サービスは、インターネット インフォメーション サービス (IIS) でホストすることもできます。 これを行う方法の詳細については、次を参照してください。[方法: IIS で WCF サービスをホスト](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)します。 サービスはコードで構成されますが、構成ファイル内で構成することもできます。 構成ファイルの使用の詳細については、次を参照してください。[構成ファイルを使用してサービスを構成する](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)します。  
-  
- 次の 3 つのトピックでは、クライアント プロキシを作成する方法、クライアント アプリケーションを構成する方法、およびサービスが公開するサービス操作をクライアント プロキシを使って呼び出す方法について説明します。 サービスは、クライアント アプリケーションがサービスと通信するために必要な情報を定義したメタデータを公開します。 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] は、このメタデータにアクセスするプロセスを自動化し、それを使って、サービスのクライアント アプリケーションを構築および構成します。 使用していない場合[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]、使用することができます、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を構築およびサービスのクライアント アプリケーションを構成します。  
-  
- このセクションのすべてのトピックでは、開発環境として Visual Studio 2011 を使用することを前提としています。 他の開発環境を使用している場合は、Visual Studio に固有の手順を無視します。  
-  
-> [!NOTE]
->  実行している場合[!INCLUDE[wv](../../../includes/wv-md.md)]以降のバージョンの Windows オペレーティング システムでは、[スタート] メニューに、Visual Studio 2011 を右クリックし、選択して Visual Studio を起動する必要がありますまたは**管理者として実行**します。 ショートカットを作成、ショートカットを右クリックして、プロパティを選択、選択を管理者として Visual Studio 2011 を常に起動する、**互換性**タブをクリックし、確認、 **管理者としてこのプログラムを実行**チェック ボックスをオンします。 このショートカットで Visual Studio 2011 を起動すると、常に管理者として実行されます。  
-  
- ハード_ディスクにダウンロードできるようにしてトピックを参照して、実行するサンプル アプリケーションの[Windows Communication Foundation サンプル](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)します。 このトピックでは、具体的を参照、 [Getting Started](../../../docs/framework/wcf/samples/getting-started-sample.md)します。  
-  
- サービスとクライアントの作成の詳細の詳細については、次を参照してください。[基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)します。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [方法: サービス コントラクトを定義する](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- ユーザー定義のインターフェイスを使用して WCF コントラクトを作成する方法について説明します。 コントラクトは、サービスが公開する機能を定義します。  
-  
- [方法: サービス コントラクトを実装する](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
- サービス コントラクトを実装する方法について説明します。 定義したコントラクトはサービスのクラスと共に実装する必要があります。  
-  
- [方法: 基本的なサービスをホストおよび実行する](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)  
- サービスのエンドポイントをコードで構成する方法と、コンソール アプリケーションでサービスをホストする方法について説明します。 サービスをアクティブにするには、サービスをランタイム環境内で構成してホストする必要があります。 この環境によってサービスが作成され、サービスのコンテキストと有効期間が制御されます。  
-  
- [方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- WCF サービスからの WCF クライアント プロキシを作成するために使用するメタデータを取得する方法について説明します。 このプロセスでは、Visual Studio 2011 の "サービス参照の追加" 機能を使用します。  
-  
- [方法: クライアントを構成する](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
- WCF クライアントの構成方法について説明します。クライアントを構成するには、クライアントがサービスへのアクセスに使用するエンドポイントを指定する必要があります。  
-  
- [方法: クライアントを使用する](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
- サービス操作を呼び出す、WCF クライアント プロキシを使用する方法について説明します。  
-  
-## <a name="reference"></a>参照  
- <xref:System.ServiceModel.ServiceContractAttribute>  
-  
- <xref:System.ServiceModel.OperationContractAttribute>  
-  
-## <a name="related-sections"></a>関連項目  
- [Windows Communication Foundation サンプル](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
-  
- [基本的なプログラミング ライフサイクル](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
-  
-## <a name="see-also"></a>関連項目  
- [概念](../../../docs/framework/wcf/conceptual-overview.md)  
- [ドキュメントのガイド](../../../docs/framework/wcf/guide-to-the-documentation.md)  
- [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)  
- [WCF 機能の詳細](../../../docs/framework/wcf/feature-details/index.md)
+
+このセクションのトピックはクイック露出を Windows Communication Foundation (WCF) プログラミングの経験を提供するためのものです。 これらは、このトピックに記載されているリストの順番どおりに完了するように設計されています。 このチュートリアルに従って作業では、WCF サービスとクライアント アプリケーションの作成に必要な手順の概要を理解するできます。 サービスは 1 つ以上のエンドポイントを公開し、それぞれのエンドポイントは 1 つ以上のサービス操作を公開します。 *エンドポイント*サービスのサービスの場所、アドレス、クライアントが、サービスと機能を定義するコントラクトと通信する必要がある方法を説明する情報を格納するバインディングを指定します。サービスのクライアントに提供します。
+
+ このチュートリアルの一連のトピックを終了すると、サービスを実行し、クライアントからそのサービスを呼び出すことができるようになります。 最初の 3 つのトピックでは、サービス コントラクトを定義する方法、サービス コントラクトを実装する方法、およびサービスをホストする方法について説明します。 作成したサービスは、コンソール アプリケーション内で自己ホストされます。 また、サービスは、インターネット インフォメーション サービス (IIS) でホストすることもできます。 これを行う方法の詳細については、次を参照してください。[方法: IIS で WCF サービスをホスト](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)します。 サービスはコードで構成されますが、構成ファイル内で構成することもできます。 構成ファイルの使用の詳細については、次を参照してください。[構成ファイルを使用してサービスを構成する](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)します。
+
+ 次の 3 つのトピックでは、クライアント プロキシを作成する方法、クライアント アプリケーションを構成する方法、およびサービスが公開するサービス操作をクライアント プロキシを使って呼び出す方法について説明します。 サービスは、クライアント アプリケーションがサービスと通信するために必要な情報を定義したメタデータを公開します。 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] は、このメタデータにアクセスするプロセスを自動化し、それを使って、サービスのクライアント アプリケーションを構築および構成します。 使用していない場合[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]、使用することができます、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を構築およびサービスのクライアント アプリケーションを構成します。
+
+このセクションのトピックでは、開発環境として Visual Studio を使用するいると仮定します。 他の開発環境を使用している場合は、Visual Studio 固有の手順を無視します。
+
+ハード_ディスクにダウンロードできるようにしてトピックを参照して、実行するサンプル アプリケーションの[Windows Communication Foundation サンプル](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)します。 このトピックでは、具体的を参照、 [Getting Started](../../../docs/framework/wcf/samples/getting-started-sample.md)します。
+
+サービスとクライアントの作成の詳細の詳細については、次を参照してください。[基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)します。
+
+## <a name="in-this-section"></a>このセクションの内容
+ [方法: サービス コントラクトを定義する](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+
+ ユーザー定義のインターフェイスを使用して WCF コントラクトを作成する方法について説明します。 コントラクトは、サービスが公開する機能を定義します。
+
+ [方法: サービス コントラクトを実装する](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+
+ サービス コントラクトを実装する方法について説明します。 定義したコントラクトはサービスのクラスと共に実装する必要があります。
+
+ [方法: 基本的なサービスをホストおよび実行する](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
+
+ サービスのエンドポイントをコードで構成する方法と、コンソール アプリケーションでサービスをホストする方法について説明します。 サービスをアクティブにするには、サービスをランタイム環境内で構成してホストする必要があります。 この環境によってサービスが作成され、サービスのコンテキストと有効期間が制御されます。
+
+ [方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+
+ WCF サービスからの WCF クライアント プロキシを作成するために使用するメタデータを取得する方法について説明します。 このプロセスは、Visual Studio 内でサービス参照の追加機能を使用します。
+
+ [方法: クライアントを構成する](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)
+
+ WCF クライアントの構成方法について説明します。クライアントを構成するには、クライアントがサービスへのアクセスに使用するエンドポイントを指定する必要があります。
+
+ [方法: クライアントを使用する](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
+
+ サービス操作を呼び出す、WCF クライアント プロキシを使用する方法について説明します。
+
+## <a name="reference"></a>参照
+
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+
+## <a name="related-sections"></a>関連項目
+
+- [Windows Communication Foundation サンプル](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [基本的なプログラミング ライフサイクル](../../../docs/framework/wcf/basic-programming-lifecycle.md)
+
+## <a name="see-also"></a>関連項目
+
+- [概念](../../../docs/framework/wcf/conceptual-overview.md)
+- [ドキュメントのガイド](../../../docs/framework/wcf/guide-to-the-documentation.md)
+- [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)
+- [WCF 機能の詳細](../../../docs/framework/wcf/feature-details/index.md)

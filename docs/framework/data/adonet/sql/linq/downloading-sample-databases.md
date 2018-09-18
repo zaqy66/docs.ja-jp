@@ -3,11 +3,11 @@ title: サンプル データベースのダウンロード
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
 ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006549"
 ---
 # <a name="downloading-sample-databases"></a>サンプル データベースのダウンロード
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のドキュメントに収録されている多数のサンプルとチュートリアルでは、Northwind サンプル データベースと SQL Server Express Edition が使用されています。 これらの製品は、Microsoft のダウンロード サイトから無料でダウンロードできます。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
 ms.openlocfilehash: e402f9835f3ca03ac0632d7202000fa3208ed6e3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45994365"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog コンポーネント (Windows フォーム)
 Windows フォームの <xref:System.Windows.Forms.SaveFileDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。 これは、Windows で使用される標準の [ファイルを保存] ダイアログ ボックスと同じです。 これは、<xref:System.Windows.Forms.CommonDialog> クラスを継承しています。  

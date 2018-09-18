@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 66412c620b8107312e5d58fef5cf1b5d9ee90107
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e1625d2cdf0be4106a43b9d40aef97ea2b5c4ec4
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615522"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45999469"
 ---
 # <a name="introducing-xml-serialization"></a>XML シリアル化の概要
 
@@ -61,7 +61,7 @@ ms.locfileid: "45615522"
 
 - 機密情報をシリアル化すると脆弱性が生じる可能性があります。
 
-  **XmlSerializer** がシリアル化したデータは、XML ファイルなどのデータ ストアとして格納されます。 このデータ ストアが他のプロセスからも利用できたり、イントラネットまたはインターネットで表示できたりする場合、データの盗用や悪用の可能性が生じます。 たとえば、クレジット カード番号を含む注文をシリアル化するアプリケーションを作成すると、データは非常に脆弱になります。 これを避けるには、データ ストアを常に保護し、機密を保つための処置が必要です。
+  後に、 **XmlSerializer**データがシリアル化やその他のデータ ストアの XML ファイルとして保存できます。 このデータ ストアが他のプロセスからも利用できたり、イントラネットまたはインターネットで表示できたりする場合、データの盗用や悪用の可能性が生じます。 たとえば、クレジット カード番号を含む注文をシリアル化するアプリケーションを作成すると、データは非常に脆弱になります。 これを避けるには、データ ストアを常に保護し、機密を保つための処置が必要です。
 
 ## <a name="serialization-of-a-simple-class"></a>単純なクラスのシリアル化
 

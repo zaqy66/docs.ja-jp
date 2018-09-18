@@ -8,55 +8,55 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 8f331c67dd22a6a9e2382ecc11d23c67cd2a5cbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97be77b6591e4b7fa3db8176222dcb1feb3481bc
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540492"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45972690"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>方法 : Windows フォーム BindingNavigator コントロールに [Load]、[Save]、[Cancel] の各ボタンを追加する
-<xref:System.Windows.Forms.BindingNavigator>コントロールは、特別な用途<xref:System.Windows.Forms.ToolStrip>コントロールを移動して、データにバインドされている、フォーム上のコントロールを操作対象とします。  
+<xref:System.Windows.Forms.BindingNavigator>コントロールが特別な用途<xref:System.Windows.Forms.ToolStrip>移動し、フォーム上のデータにバインドされているコントロールを操作することが想定されているコントロール。  
   
- なっているため、<xref:System.Windows.Forms.ToolStrip>コントロール、<xref:System.Windows.Forms.BindingNavigator>コンポーネントは、ユーザーの追加または代替のコマンドを含める簡単に変更できます。  
+ ある、<xref:System.Windows.Forms.ToolStrip>コントロール、<xref:System.Windows.Forms.BindingNavigator>コンポーネントは、ユーザーの追加のまたは別のコマンドを含めるに簡単に変更できます。  
   
- 次の手順で、<xref:System.Windows.Forms.TextBox>コントロールは、データにバインドされ、<xref:System.Windows.Forms.ToolStrip>をフォームに追加されたコントロールは、保存、負荷を含めるし、キャンセル ボタンに変更します。  
+ 次の手順で、<xref:System.Windows.Forms.TextBox>コントロールがデータにバインドされていると、<xref:System.Windows.Forms.ToolStrip>をフォームに追加するコントロールは、保存、読み込みを含めるし、キャンセル ボタンに変更されます。  
   
-### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>負荷を追加するには、保存、およびキャンセル BindingNavigator コンポーネントへのボタン  
+### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>負荷を追加するには、保存、およびキャンセル ボタンに BindingNavigator コンポーネント  
   
 1.  フォームに <xref:System.Windows.Forms.TextBox> コントロールを追加します。  
   
-2.  バインドする<xref:System.Windows.Forms.BindingSource>、これが、データ ソースにバインドします。 この例で、<xref:System.Windows.Forms.BindingSource>はデータベースにバインドします。  
+2.  バインドする<xref:System.Windows.Forms.BindingSource>、データ ソースにバインドされます。 この例で、<xref:System.Windows.Forms.BindingSource>データベースにバインドされます。  
   
-3.  データセットとテーブルのアダプターが生成されると、ドラッグ、<xref:System.Windows.Forms.BindingNavigator>をフォームにコントロールできます。  
+3.  データセットとテーブルのアダプターが生成されると、ドラッグ、<xref:System.Windows.Forms.BindingNavigator>コントロールをフォームにします。  
   
 4.  設定、<xref:System.Windows.Forms.BindingNavigator>コントロールの<xref:System.Windows.Forms.BindingNavigator.BindingSource%2A>プロパティを<xref:System.Windows.Forms.BindingSource>コントロールにバインドされている形式にします。  
   
 5.  <xref:System.Windows.Forms.BindingNavigator> コントロールを選択します。  
   
-6.  スマート タグ グリフをクリックして (![スマート タグ グリフ](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) ため、 **BindingNavigator タスク**ダイアログが表示され選択**アイテムの編集**.  
+6.  スマート タグ グリフをクリックします (![スマート タグ グリフ](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) ため、 **BindingNavigator タスク**ダイアログが表示され選択**アイテムの編集**.  
   
      **Items コレクション エディター**が表示されます。  
   
-7.  **Items コレクション エディター**次を完了します。  
+7.  **Items コレクション エディター**を次の手順します。  
   
-    1.  追加、 <xref:System.Windows.Forms.ToolStripSeparator> 3<xref:System.Windows.Forms.ToolStripButton>項目の種類の適切な選択を<xref:System.Windows.Forms.ToolStripItem> をクリックし、**追加**ボタンをクリックします。  
+    1.  追加、<xref:System.Windows.Forms.ToolStripSeparator>と 3 つ<xref:System.Windows.Forms.ToolStripButton>を適切な種類の選択項目<xref:System.Windows.Forms.ToolStripItem>クリックして、**追加**ボタン。  
   
-    2.  設定、<xref:System.Windows.Forms.ToolStripItem.Name%2A>ボタンのプロパティ**LoadButton**、**SaveButton**、および**CancelButton**、それぞれします。  
+    2.  設定、<xref:System.Windows.Forms.ToolStripItem.Name%2A>プロパティをボタンの**LoadButton**、 **SaveButton**、および**CancelButton**、それぞれします。  
   
-    3.  設定、<xref:System.Windows.Forms.ToolStripItem.Text%2A>ボタンのプロパティ**ロード**`,` **保存**、および**キャンセル**です。  
+    3.  設定、<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティをボタンの**ロード**、**保存**と**キャンセル**します。  
   
-    4.  設定、<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>するボタンの各プロパティ**テキスト**です。 このプロパティを設定する代わりに、**イメージ**または**ImageAndText**に表示されるイメージを設定し、<xref:System.Windows.Forms.ToolStripItem.Image%2A>プロパティです。  
+    4.  設定、<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>ボタンの各プロパティ**テキスト**します。 このプロパティを設定する代わりに、**イメージ**または**ImageAndText**に表示されるイメージを設定し、<xref:System.Windows.Forms.ToolStripItem.Image%2A>プロパティ。  
   
-    5.  をクリックして**OK**  ダイアログ ボックスを閉じます。ボタンに追加されて、<xref:System.Windows.Forms.ToolStrip>です。  
+    5.  クリックして**OK**ダイアログ ボックスを閉じます。ボタンに追加されて、<xref:System.Windows.Forms.ToolStrip>します。  
   
-8.  フォームを右クリックして選択**コードの表示**です。  
+8.  フォームを右クリックし **コードの表示**します。  
   
-9. コード エディターでは、テーブル アダプターにデータを読み込むコードの行を検索します。 このコードは、手順 2. でデータ バインディングを設定するときに生成されました。 コードを次のようにする必要があります:`TableAdapterName.Fill(DataSetName.TableName)`です。 ほとんどは、フォームのされる可能性が高い<xref:System.Windows.Forms.Form.Load>イベント。  
+9. コード エディターでは、テーブル アダプターにデータを読み込むコードの行を見つけます。 このコードは、手順 2 でのデータ バインディングを設定するときに生成されました。 コードは、次のようになります:`TableAdapterName.Fill(DataSetName.TableName)`します。 ほとんどは、フォームのいる可能性がある<xref:System.Windows.Forms.Form.Load>イベント。  
   
-10. イベント ハンドラーを作成、<xref:System.Windows.Forms.ToolStripItem.Click>のイベント、**ロード**<xref:System.Windows.Forms.ToolStripButton>以前に作成し、このデータの読み込みのコードを移動します。  
+10. イベント ハンドラーを作成、<xref:System.Windows.Forms.ToolStripItem.Click>のイベント、**ロード**<xref:System.Windows.Forms.ToolStripButton>以前に作成し、このデータ読み込みコードを移動します。  
   
-     コードは次のようになります。  
+     コードは、次のようになります。  
   
     ```vb  
     Private Sub LoadButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoadButton.Click  
@@ -72,7 +72,7 @@ ms.locfileid: "33540492"
     }  
     ```  
   
-11. イベント ハンドラーを作成、<xref:System.Windows.Forms.ToolStripItem.Click>のイベント、**保存**<xref:System.Windows.Forms.ToolStripButton>先ほど作成したし、テーブル コントロール内のデータを更新するコードの記述にバインドします。  
+11. イベント ハンドラーを作成、<xref:System.Windows.Forms.ToolStripItem.Click>のイベント、**保存**<xref:System.Windows.Forms.ToolStripButton>前に作成され、テーブル コントロール内のデータを更新するコードを記述にバインドします。  
   
     ```vb  
     Private Sub SaveButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveButton.Click  
@@ -89,9 +89,9 @@ ms.locfileid: "33540492"
     ```  
   
     > [!NOTE]
-    >  場合によっては、<xref:System.Windows.Forms.BindingNavigator>コンポーネントが既に与えられて、**保存**ボタン、コードではなく、によって生成された Windows フォーム デザイナー。 上記のコードを配置するこの例では、<xref:System.Windows.Forms.ToolStripItem.Click>に完全に新しいボタンを作成するのではなく、そのボタンのイベント ハンドラー、<xref:System.Windows.Forms.ToolStrip>です。 ただし、ボタンは既定では無効ため、設定する必要があります、<xref:System.Windows.Forms.ToolBarButton.Enabled%2A>するボタンのプロパティ`true`に正しくボタン関数。  
+    > 場合によってで、<xref:System.Windows.Forms.BindingNavigator>コンポーネントでは既に、**保存**コードではなく、ボタンはによって生成された、Windows フォーム デザイナー。 ここで上記のコードを配置することができます、<xref:System.Windows.Forms.ToolStripItem.Click>で、まったく新しいボタンを作成するのではなく、そのボタンのイベント ハンドラー、<xref:System.Windows.Forms.ToolStrip>します。 ボタンが既定では、無効になりますので、設定する必要があります、<xref:System.Windows.Forms.ToolBarButton.Enabled%2A>プロパティをボタンの`true`ボタンの機能を正しくが。
   
-12. イベント ハンドラーを作成、<xref:System.Windows.Forms.ToolStripItem.Click>のイベント、**キャンセル**<xref:System.Windows.Forms.ToolStripButton>以前に作成し、表示されるデータのレコードへの変更をキャンセルするコードを記述します。  
+12. イベント ハンドラーを作成、<xref:System.Windows.Forms.ToolStripItem.Click>のイベント、**キャンセル**<xref:System.Windows.Forms.ToolStripButton>以前に作成し、表示されるデータのレコードに変更をキャンセルするコードを記述します。  
   
     ```vb  
     Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelButton.Click  
@@ -107,7 +107,7 @@ ms.locfileid: "33540492"
     ```  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>メソッドのスコープは、データの行にします。 次のレコードに移動する前に個々 のレコードの表示中に加えたあらゆる変更を保存します。  
+    >  <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>メソッドのスコープは、データの行にします。 次のレコードに移動する前に個々 のレコードを表示中に加えたあらゆる変更を保存します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Forms.BindingNavigator>  

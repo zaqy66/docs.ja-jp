@@ -3,11 +3,11 @@ title: 基本的な型 (f#)
 description: F# 言語で使用される基本的な基本的な型を検出します。
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45686103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45991013"
 ---
 # <a name="basic-types"></a>基本的な型
 
