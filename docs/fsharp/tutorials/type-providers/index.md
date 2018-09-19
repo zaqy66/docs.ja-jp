@@ -3,11 +3,11 @@ title: 型プロバイダー
 description: F# 型プロバイダーの種類、プロパティ、およびプログラムで使用するためのメソッドを提供するコンポーネントの方法について説明します。
 ms.date: 04/02/2018
 ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615249"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287084"
 ---
 # <a name="type-providers"></a>型プロバイダー
 

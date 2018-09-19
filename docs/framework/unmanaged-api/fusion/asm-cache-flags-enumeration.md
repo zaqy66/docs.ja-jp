@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b712c6ae5978e83dab085f48dd1fd572757384a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990493"
+ms.locfileid: "46287768"
 ---
 # <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS 列挙型
 表されるアセンブリのソースを示す[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)グローバル アセンブリ キャッシュにします。  

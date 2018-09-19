@@ -3,11 +3,11 @@ title: 3.5 ルール セットとの相互運用
 ms.date: 03/30/2017
 ms.assetid: 969f3295-d874-428c-a9c6-623e3d578e51
 ms.openlocfilehash: 5ea5454ef80bfd83611ed20392782d99cd8c0c25
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743996"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287625"
 ---
 # <a name="interop-with-35-rule-set"></a>3.5 ルール セットとの相互運用
 このサンプルの使用、<xref:System.Activities.Statements.Interop>でカスタム アクティビティと統合するアクティビティ[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]を使用して<!--zz <xref:System.Workflow.Activities.Policy> -->`System.Workflow.Activities.Policy`とルール。 このサンプルでは、カスタム アクティビティで公開されている依存プロパティに [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 変数をバインドすることで、カスタム アクティビティにデータを渡します。  

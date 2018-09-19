@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970424"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287742"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 関数
 指定したコンピューターにある WMI 名前空間との接続が DCOM 経由で作成されます。  
