@@ -2,12 +2,12 @@
 title: 永続的な二重の相関関係
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: 5bef3e243afc0ea9a51f474bfed98320134ec043
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491489"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323783"
 ---
 # <a name="durable-duplex-correlation"></a>永続的な二重の相関関係
 永続的な二重の相関関係 (コールバック相関関係) は、ワークフロー サービスがコールバックを最初の呼び出し元に送信する必要がある場合に便利です。 WCF の二重とは異なり、コールバックは、将来のどの時点でも発生する可能性があり、同じチャネルにも同じチャネルの有効期間にも関連付けられていません。唯一の要件は、呼び出し元にコールバック メッセージをリッスンするアクティブなエンドポイントを用意することです。 このため、2 つのワークフロー サービスが長時間のメッセージ交換を使用して通信できます。 このトピックでは、永続的な二重の相関関係について概説します。  
@@ -16,7 +16,7 @@ ms.locfileid: "33491489"
  永続的な二重の相関関係を使用するには、2 つのサービスが、<xref:System.ServiceModel.NetTcpContextBinding> や <xref:System.ServiceModel.WSHttpContextBinding> など、双方向の操作をサポートするコンテキスト対応バインドを使用する必要があります。 呼び出し側サービスは、クライアントの <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> で使用するバインドを指定して <xref:System.ServiceModel.Endpoint> を登録します。 受信側サービスは、このデータを最初の呼び出しで受信し、呼び出し側サービスへのコールバックを行う <xref:System.ServiceModel.Endpoint> アクティビティにおいて、受信側サービス自体の <xref:System.ServiceModel.Activities.Send> でこのデータを使用します。 次の例では、2 つのサービスが互いに通信しています。 1 つ目のサービスは、2 つ目のサービスに対してメソッドを呼び出し、応答を待機します。 2 つ目のサービスでは、コールバック メソッドの名前が認識されていますが、このメソッドを実装するサービスのエンドポイントは、設計時には認識されていません。  
   
 > [!NOTE]
->  エンドポイントの <xref:System.ServiceModel.Channels.AddressingVersion> が <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> で構成される場合は、永続的な二重のみが使用できます。 ない場合は、 <xref:System.InvalidOperationException> 、次のメッセージで例外がスローされます。"メッセージには、AddressingVersion のエンドポイント参照を持つコールバック コンテキスト ヘッダーが含まれる 'Addressing200408 (ハイパーリンク"http://schemas.xmlsoap.org/ws/2004/08/addressing" http://schemas.xmlsoap.org/ws/2004/08/addressing)' です。 コールバック コンテキストを送信できるのは、AddressingVersion で 'WSAddressing10' が構成されている場合のみです。"  
+> エンドポイントの <xref:System.ServiceModel.Channels.AddressingVersion> が <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> で構成される場合は、永続的な二重のみが使用できます。 そうでない場合、 <xref:System.InvalidOperationException> 、次のメッセージで例外がスローされます:"メッセージのエンドポイント参照を含むコールバック コンテキスト ヘッダーに含まれる[AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing)します。 コールバック コンテキストで 'WSAddressing10'、AddressingVersion が構成されている場合にのみ送信することができます。
   
  次の例では、<xref:System.ServiceModel.Endpoint> を使用してコールバック <xref:System.ServiceModel.WSHttpContextBinding> を作成するワークフロー サービスがホストされます。  
   
@@ -201,4 +201,4 @@ WF1 - Items Received
  この例では、どちらのワークフローも <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer> を使用して相関関係を明示的に管理しています。 サンプル ワークフローには相関関係が 1 つしかないため、既定の <xref:System.ServiceModel.Activities.CorrelationHandle> で十分に管理できます。  
   
 ## <a name="see-also"></a>関連項目  
- [永続的な二重&#91;WF サンプル&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)
+ [永続的な二重&#91;WF のサンプル&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)

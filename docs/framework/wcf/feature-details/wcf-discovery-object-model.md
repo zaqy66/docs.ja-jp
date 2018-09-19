@@ -2,11 +2,12 @@
 title: WCF Discovery オブジェクト モデル
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
-ms.openlocfilehash: a325ee0fd6376f101ca8ccc6097e79c30198a011
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46324126"
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Discovery オブジェクト モデル
 WCF Discovery は、実行時に探索可能なサービスと、これらのサービスを検索して使用するクライアントの作成を可能にする統合プログラミング モデルを提供する型のセットで構成されています。  
@@ -60,9 +61,7 @@ WCF Discovery は、実行時に探索可能なサービスと、これらのサ
 -   <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
 -   <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
-  
--   <!--zz <xref:System.ServiceModel.Discovery.ServiceDiscoveryExtension> --> `ServiceDiscoveryExtension`  
-  
+ 
 -   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 -   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
@@ -79,14 +78,14 @@ WCF Discovery は、実行時に探索可能なサービスと、これらのサ
 ## <a name="discoveryclient"></a>DiscoveryClient  
  <xref:System.ServiceModel.Discovery.DiscoveryClient> クラスは、使用可能なサービスを検索および解決するために、クライアント アプリケーションによって使用されます。 指定されている <xref:System.ServiceModel.Discovery.FindCriteria> を基にサービスを検索し、<xref:System.ServiceModel.Discovery.ResolveCriteria> を基にサービスを解決するための同期メソッドと非同期メソッドを提供します。 開発者は、<xref:System.ServiceModel.Discovery.DiscoveryClient> インスタンスを作成して、<xref:System.ServiceModel.Discovery.DiscoveryEndpoint> のインスタンスをコンストラクター パラメーターとして提供します。  
   
- 開発者が同期または非同期に呼び出すサービスを検索する`Find`を提供するメソッド、 <!--zz <xref:System.ServiceModel.Discription.FindCriteria> --> `FindCriteria`を使用する検索条件を含むインスタンス。 <xref:System.ServiceModel.Discovery.DiscoveryClient> は、適切なヘッダーを設定して `Probe` メッセージを作成し、検索要求を送信します。 どの時点でも、未処理の `Find` 要求が 1 つ以上存在する可能性があるため、クライアントは、受信した応答を関連付けて、応答を検証します。 その後、`Find` を使用して、結果を <xref:System.ServiceModel.Discovery.FindResponse> 操作の呼び出し元に渡します。  
+ サービスを検索するには、同期または非同期の `Find` メソッドを呼び出し、使用する検索条件が設定された <xref:System.ServiceModel.Discovery.FindCriteria> インスタンスを提供します。 <xref:System.ServiceModel.Discovery.DiscoveryClient> は、適切なヘッダーを設定して `Probe` メッセージを作成し、検索要求を送信します。 どの時点でも、未処理の `Find` 要求が 1 つ以上存在する可能性があるため、クライアントは、受信した応答を関連付けて、応答を検証します。 その後、`Find` を使用して、結果を <xref:System.ServiceModel.Discovery.FindResponse> 操作の呼び出し元に渡します。  
   
- 開発者が同期または非同期に呼び出す既知のサービスを解決するには、`Resolve`メソッドのインスタンスを提供する<!--zz <xref:System.ServiceModel.ResolveCriteria>-->`ResolveCriteria`を格納している、<xref:System.ServiceModel.EndpointAddress>の既知のサービスです。 <xref:System.ServiceModel.Discovery.DiscoveryClient> は、適切なヘッダーを設定して `Resolve` メッセージを作成し、解決要求を送信します。 受信された応答が未処理の解決要求と関連付けられ、その結果が、`Resolve` を使用して、<xref:System.ServiceModel.Discovery.ResolveResponse> 操作の呼び出し元に渡されます。  
+ 既知のサービスを解決するには、既知のサービスの `Resolve` が設定された <xref:System.ServiceModel.Discovery.ResolveCriteria> のインスタンスを提供する同期または非同期の <xref:System.ServiceModel.EndpointAddress> メソッドを呼び出します。 <xref:System.ServiceModel.Discovery.DiscoveryClient> は、適切なヘッダーを設定して `Resolve` メッセージを作成し、解決要求を送信します。 受信された応答が未処理の解決要求と関連付けられ、その結果が、`Resolve` を使用して、<xref:System.ServiceModel.Discovery.ResolveResponse> 操作の呼び出し元に渡されます。  
   
- 探索プロキシがネットワーク上に存在する場合、 <!--zz <xref:System.ServiceModel.Discover.DiscoveryClient> --> `DiscoveryClient`検出要求が送信、マルチキャストで探索プロキシがマルチキャスト抑制こんにちはメッセージに応答できます。 <!--zz <xref:System.ServiceModel.Discover.DiscoveryClient> --> `DiscoveryClient`を生成、`ProxyAvailable`未処理への応答でこんにちはメッセージを受信したときにイベント`Find`または`Resolve`要求します。 `ProxyAvailable` イベントには、探索プロキシについての <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> が含まれています。 管理者は、この情報を使用して、アドホック モードからマネージ モードに切り替えるかどうかを制御できます。  
+ ネットワークに探索プロキシが存在し、<xref:System.ServiceModel.Discovery.DiscoveryClient> がマルチキャストで探索要求を送信する場合、探索プロキシは、マルチキャスト抑制 Hello メッセージを使用して応答できます。 <xref:System.ServiceModel.Discovery.DiscoveryClient> は、未処理の `ProxyAvailable` 要求または `Find` 要求に対する Hello 応答を受信すると、`Resolve` イベントを発生させます。 `ProxyAvailable` イベントには、探索プロキシについての <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> が含まれています。 管理者は、この情報を使用して、アドホック モードからマネージド モードに切り替えるかどうかを制御できます。  
   
 ## <a name="discoveryendpoint"></a>DiscoveryEndpoint  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> は、固定探索コントラクトが設定されている標準エンドポイントを表します。 サービスまたはクライアントによる探索メッセージの送受信に使用されます。 既定では、<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>を使用する設定<!--zz <xref:System.ServiceModel.Discovery.DiscoveryMode.Managed>-->`Managed`モードと WSDiscovery11 Ws-discovery バージョン。  
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> は、固定探索コントラクトが設定されている標準エンドポイントを表します。 サービスまたはクライアントによる探索メッセージの送受信に使用されます。 既定では、<xref:System.ServiceModel.Discovery.DiscoveryEndpoint> が、<xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Managed?displayProperty=nameWithType> モードと WSDiscovery11 WS-Discovery バージョンを使用するように設定されています。  
   
 ## <a name="discoverymessagesequencegenerator"></a>DiscoveryMessageSequenceGenerator  
  <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator> は、サービスが探索メッセージまたはアナウンス メッセージを送信するときに、<xref:System.ServiceModel.Discovery.DiscoveryMessageSequence> を生成するために使用されます。  
@@ -101,13 +100,13 @@ WCF Discovery は、実行時に探索可能なサービスと、これらのサ
  <xref:System.ServiceModel.Discovery.DiscoveryVersion> クラスは、使用する探索プロトコルのバージョンを表します。  
   
 ## <a name="endpointdiscoverybehavior"></a>EndpointDiscoveryBehavior  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> クラスは、エンドポイントを探索可能にするかどうかの制御と、拡張機能、追加のコントラクト型の名前、 およびそのエンドポイントに関連付けるスコープの指定に使用されます。 この動作は、アプリケーション エンドポイントに追加されて、そのエンドポイントの <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> を構成します。 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> がサービス ホストに追加されると、既定では、そのサービス ホストがホストしているすべてのアプリケーション エンドポイントが探索可能になります。 開発者を設定して、特定のエンドポイントの検出を無効にできます、 <!--zz <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enable%2A>--> `Enable`プロパティを`false`です。  
+ <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> クラスは、エンドポイントを探索可能にするかどうかの制御と、拡張機能、追加のコントラクト型の名前、 およびそのエンドポイントに関連付けるスコープの指定に使用されます。 この動作は、アプリケーション エンドポイントに追加されて、そのエンドポイントの <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> を構成します。 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> がサービス ホストに追加されると、既定では、そのサービス ホストがホストしているすべてのアプリケーション エンドポイントが探索可能になります。 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> プロパティを `false` に設定すると、特定のエンドポイントの探索を無効化できます。  
   
 ## <a name="endpointdiscoverymetadata"></a>EndpointDiscoveryMetadata  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> クラスは、サービスによって公開されるエンドポイントのバージョンに依存しない表現を提供します。 これには、サービスの開発者によって指定されたエンドポイントのアドレス、リッスン URI、コントラクト型名、スコープ、メタデータのバージョン、および拡張機能が含まれます。 <xref:System.ServiceModel.Discovery.FindCriteria> は、`Probe` 操作と <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> との照合中に、クライアントによって送信されます。 基準が一致した場合は、<xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> がクライアントに返されます。 <xref:System.ServiceModel.Discovery.ResolveCriteria> 内のエンドポイント アドレスが、<xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> のエンドポイント アドレスと照合されます。 基準が一致した場合は、<xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> がクライアントに返されます。  
   
 ## <a name="findcriteria"></a>FindCriteria  
- <xref:System.ServiceModel.Discovery.FindCriteria> クラスは、サービスの検索時に使用される条件の指定に使用するバージョンに依存しないクラスです。 サービスを照合するための WS-Discovery 定義の条件を完全にサポートします。 また、このクラスには、照合プロセス中に使用できるカスタム値を指定するために開発者が使用できる拡張機能もあります。 開発者は、の終了条件を提供できます、`Find`操作を指定して、 <!--zz <xref:System.ServiceModel.Discovery.FindCriteria.MaxResult%2A>--> `MaxResult`は開発者を探して、またはを指定するサービスの合計数を指定する、 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>、これは、クライアントが応答を待機する時間を指定する値。  
+ <xref:System.ServiceModel.Discovery.FindCriteria> クラスは、サービスの検索時に使用される条件の指定に使用するバージョンに依存しないクラスです。 サービスを照合するための WS-Discovery 定義の条件を完全にサポートします。 また、このクラスには、照合プロセス中に使用できるカスタム値を指定するために開発者が使用できる拡張機能もあります。 開発者は、開発者が検索するサービスの合計数を指定する `Find`、またはクライアントが応答を待機する時間を指定する値である <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> を指定して、<xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 操作の終了条件を設定できます。  
   
 ## <a name="findrequestcontext"></a>FindRequestContext  
  <xref:System.ServiceModel.Discovery.FindRequestContext> クラスは、クライアントが `Probe` 操作を開始するときに受信する `Find` メッセージに基づいて、探索サービスによってインスタンス化されます。 これには、クライアントによって指定された <xref:System.ServiceModel.Discovery.FindCriteria> のインスタンスが含まれます。  
@@ -124,11 +123,8 @@ WCF Discovery は、実行時に探索可能なサービスと、これらのサ
 ## <a name="servicediscoverybehavior"></a>ServiceDiscoveryBehavior  
  <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> クラスを使用すると、探索機能をサービスに追加できます。 この動作は <xref:System.ServiceModel.ServiceHost> に追加します。 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> クラスは、サービス ホストに追加されているアプリケーション エンドポイントに対して反復処理され、探索可能なエンドポイントに基づいて <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> のコレクションを作成します。 既定では、すべてのエンドポイントが探索可能です。 特定のエンドポイントが探索可能になるかどうかは、<xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> をその特定のエンドポイントに追加することで制御できます。 アナウンス エンドポイントが <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> に追加されると、サービス ホストが開かれるときまたは閉じられるときに、すべての探索可能なエンドポイントのアナウンスが、各アナウンス エンドポイントから送られます。  
   
-## <a name="servicediscoveryextension"></a>ServiceDiscoveryExtension  
- <!--zz <xref:System.ServiceModel.Discovery.ServiceDiscoveryExtension> --> `ServiceDiscoveryExtension`クラスを作成、<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>クラスです。 探索可能にされているエンドポイントから取得できる<!--zz <xref:System.ServiceModel.Discovery.ServiceDiscoveryExtension> -->`ServiceDiscoveryExtension`です。 このクラスは、カスタムの探索サービス実装を指定する目的でも使用されます。  
-  
 ## <a name="udpannouncementendpoint"></a>UdpAnnouncementEndpoint  
  <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> クラスは、UDP マルチキャスト バインディングを使用するアナウンス用に事前に構成しておく標準のアナウンス エンドポイントです。 既定では、<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> が WSApril2005 WS_Discovery バージョンを使用するように設定されています。  
   
 ## <a name="udpdiscoveryendpoint"></a>UdpDiscoveryEndpoint  
- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> クラスは、UDP マルチキャスト バインディングを使用する探索のために事前に構成された標準の探索エンドポイントです。 既定では、<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>は WSDiscovery11 Ws-discovery バージョンを使用する設定と<!--zz <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.Adhoc>-->`Adhoc`モード。
+ <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> クラスは、UDP マルチキャスト バインディングを使用する探索のために事前に構成された標準の探索エンドポイントです。 既定では、<xref:System.ServiceModel.Discovery.DiscoveryEndpoint> が、WSDiscovery11 WS-Discovery バージョンと <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Adhoc?displayProperty=nameWithType> モードを使用するように設定されています。

@@ -14,11 +14,11 @@ ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3879dc3f0270a56132b44882a74c50d05914ff89
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000909"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46324621"
 ---
 # <a name="struct-design"></a>構造体のデザイン
 ほとんどの場合、汎用的な値の型は構造体、c# のキーワードと呼ばれます。 このセクションでは、一般的な構造体のデザインのガイドラインを示します。  
