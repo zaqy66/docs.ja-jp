@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8d9e7d593c2a8a9cce798724b2705dee21a740e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45692724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009298"
 ---
-# <a name="iclrstrongnamegethashfromassemblyfile-method"></a><span data-ttu-id="69d0e-102">ICLRStrongName::GetHashFromAssemblyFile メソッド</span><span class="sxs-lookup"><span data-stu-id="69d0e-102">ICLRStrongName::GetHashFromAssemblyFile Method</span></span>
-<span data-ttu-id="69d0e-103">指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。</span><span class="sxs-lookup"><span data-stu-id="69d0e-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamegethashfromassemblyfile-method"></a><span data-ttu-id="7aab1-102">ICLRStrongName::GetHashFromAssemblyFile メソッド</span><span class="sxs-lookup"><span data-stu-id="7aab1-102">ICLRStrongName::GetHashFromAssemblyFile Method</span></span>
+<span data-ttu-id="7aab1-103">指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。</span><span class="sxs-lookup"><span data-stu-id="7aab1-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69d0e-104">構文</span><span class="sxs-lookup"><span data-stu-id="69d0e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7aab1-104">構文</span><span class="sxs-lookup"><span data-stu-id="7aab1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromAssemblyFile (  
@@ -39,34 +39,34 @@ HRESULT GetHashFromAssemblyFile (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="69d0e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="69d0e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7aab1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7aab1-105">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="69d0e-106">[in]ハッシュされるファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="69d0e-106">[in] The path to the file to be hashed.</span></span>  
+ <span data-ttu-id="7aab1-106">[in]ハッシュされるファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="7aab1-106">[in] The path to the file to be hashed.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="69d0e-107">[入力、出力]ハッシュ アルゴリズムを指定する定数。</span><span class="sxs-lookup"><span data-stu-id="69d0e-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="69d0e-108">既定のハッシュ アルゴリズムのゼロを使用します。</span><span class="sxs-lookup"><span data-stu-id="69d0e-108">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="7aab1-107">[入力、出力]ハッシュ アルゴリズムを指定する定数。</span><span class="sxs-lookup"><span data-stu-id="7aab1-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="7aab1-108">既定のハッシュ アルゴリズムのゼロを使用します。</span><span class="sxs-lookup"><span data-stu-id="7aab1-108">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="69d0e-109">[out]返されたハッシュ バッファー。</span><span class="sxs-lookup"><span data-stu-id="69d0e-109">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="7aab1-109">[out]返されたハッシュ バッファー。</span><span class="sxs-lookup"><span data-stu-id="7aab1-109">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="69d0e-110">[in]要求の最大サイズの`pbHash`します。</span><span class="sxs-lookup"><span data-stu-id="69d0e-110">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="7aab1-110">[in]要求の最大サイズの`pbHash`します。</span><span class="sxs-lookup"><span data-stu-id="7aab1-110">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="69d0e-111">[out]サイズ (バイト単位) が返されますの`pbHash`します。</span><span class="sxs-lookup"><span data-stu-id="69d0e-111">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="7aab1-111">[out]サイズ (バイト単位) が返されますの`pbHash`します。</span><span class="sxs-lookup"><span data-stu-id="7aab1-111">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="69d0e-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="69d0e-112">Return Value</span></span>  
- <span data-ttu-id="69d0e-113">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="69d0e-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7aab1-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="7aab1-112">Return Value</span></span>  
+ <span data-ttu-id="7aab1-113">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="7aab1-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="69d0e-114">要件</span><span class="sxs-lookup"><span data-stu-id="69d0e-114">Requirements</span></span>  
- <span data-ttu-id="69d0e-115">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="69d0e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7aab1-114">要件</span><span class="sxs-lookup"><span data-stu-id="7aab1-114">Requirements</span></span>  
+ <span data-ttu-id="7aab1-115">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7aab1-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="69d0e-116">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="69d0e-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="7aab1-116">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="7aab1-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="69d0e-117">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="69d0e-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7aab1-117">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="7aab1-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="69d0e-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69d0e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="7aab1-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7aab1-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69d0e-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="69d0e-119">See Also</span></span>  
- [<span data-ttu-id="69d0e-120">GetHashFromAssemblyFileW メソッド</span><span class="sxs-lookup"><span data-stu-id="69d0e-120">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  
- [<span data-ttu-id="69d0e-121">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="69d0e-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7aab1-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="7aab1-119">See Also</span></span>  
+ [<span data-ttu-id="7aab1-120">GetHashFromAssemblyFileW メソッド</span><span class="sxs-lookup"><span data-stu-id="7aab1-120">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  
+ [<span data-ttu-id="7aab1-121">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7aab1-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

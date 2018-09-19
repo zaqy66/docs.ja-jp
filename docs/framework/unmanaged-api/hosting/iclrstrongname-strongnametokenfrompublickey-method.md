@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 98c0dbbbe65d8f8c0b0196c82db1a8fd2b0ee3dd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46000597"
 ---
-# <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a><span data-ttu-id="70437-102">ICLRStrongName::StrongNameTokenFromPublicKey メソッド</span><span class="sxs-lookup"><span data-stu-id="70437-102">ICLRStrongName::StrongNameTokenFromPublicKey Method</span></span>
-<span data-ttu-id="70437-103">公開キーを表すトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="70437-103">Gets a token that represents a public key.</span></span> <span data-ttu-id="70437-104">厳密な名前トークンは、公開キーの短縮形です。</span><span class="sxs-lookup"><span data-stu-id="70437-104">A strong name token is the shortened form of a public key.</span></span>  
+# <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a><span data-ttu-id="98764-102">ICLRStrongName::StrongNameTokenFromPublicKey メソッド</span><span class="sxs-lookup"><span data-stu-id="98764-102">ICLRStrongName::StrongNameTokenFromPublicKey Method</span></span>
+<span data-ttu-id="98764-103">公開キーを表すトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="98764-103">Gets a token that represents a public key.</span></span> <span data-ttu-id="98764-104">厳密な名前トークンは、公開キーの短縮形です。</span><span class="sxs-lookup"><span data-stu-id="98764-104">A strong name token is the shortened form of a public key.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="70437-105">構文</span><span class="sxs-lookup"><span data-stu-id="70437-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98764-105">構文</span><span class="sxs-lookup"><span data-stu-id="98764-105">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameTokenFromPublicKey (   
@@ -38,35 +38,35 @@ HRESULT StrongNameTokenFromPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="70437-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="70437-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="98764-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="98764-106">Parameters</span></span>  
  `pbPublicKeyBlob`  
- <span data-ttu-id="70437-107">[in]型の構造体[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)厳密な名前の署名を生成するためのキー ペアの公開部分を格納しています。</span><span class="sxs-lookup"><span data-stu-id="70437-107">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
+ <span data-ttu-id="98764-107">[in]型の構造体[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)厳密な名前の署名を生成するためのキー ペアの公開部分を格納しています。</span><span class="sxs-lookup"><span data-stu-id="98764-107">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
   
  `cbPublicKeyBlob`  
- <span data-ttu-id="70437-108">[in]サイズ (バイト単位) の`pbPublicKeyBlob`します。</span><span class="sxs-lookup"><span data-stu-id="70437-108">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
+ <span data-ttu-id="98764-108">[in]サイズ (バイト単位) の`pbPublicKeyBlob`します。</span><span class="sxs-lookup"><span data-stu-id="98764-108">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
   
  `ppbStrongNameToken`  
- <span data-ttu-id="70437-109">[out]渡されたキーに対応する厳密な名前トークン`pbPublicKeyBlob`します。</span><span class="sxs-lookup"><span data-stu-id="70437-109">[out] The strong name token corresponding to the key passed in `pbPublicKeyBlob`.</span></span> <span data-ttu-id="70437-110">共通言語ランタイムでは、トークンが返されるメモリを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="70437-110">The common language runtime allocates the memory in which to return the token.</span></span> <span data-ttu-id="70437-111">呼び出し元を使用してこのメモリを解放する必要があります、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="70437-111">The caller must free this memory by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
+ <span data-ttu-id="98764-109">[out]渡されたキーに対応する厳密な名前トークン`pbPublicKeyBlob`します。</span><span class="sxs-lookup"><span data-stu-id="98764-109">[out] The strong name token corresponding to the key passed in `pbPublicKeyBlob`.</span></span> <span data-ttu-id="98764-110">共通言語ランタイムでは、トークンが返されるメモリを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="98764-110">The common language runtime allocates the memory in which to return the token.</span></span> <span data-ttu-id="98764-111">呼び出し元を使用してこのメモリを解放する必要があります、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="98764-111">The caller must free this memory by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
   
  `pcbStrongNameToken`  
- <span data-ttu-id="70437-112">[out]厳密な名前が返されたトークンのバイト単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="70437-112">[out] The size, in bytes, of the returned strong name token.</span></span>  
+ <span data-ttu-id="98764-112">[out]厳密な名前が返されたトークンのバイト単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="98764-112">[out] The size, in bytes, of the returned strong name token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="70437-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="70437-113">Return Value</span></span>  
- <span data-ttu-id="70437-114">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="70437-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="98764-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="98764-113">Return Value</span></span>  
+ <span data-ttu-id="98764-114">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="98764-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="70437-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="70437-115">Remarks</span></span>  
- <span data-ttu-id="70437-116">厳密な名前トークンは、メタデータにキー情報を格納する場合は、スペースを節約するために使用する公開キーの短縮形です。</span><span class="sxs-lookup"><span data-stu-id="70437-116">A strong name token is the shortened form of a public key that is used to save space when storing key information in metadata.</span></span> <span data-ttu-id="70437-117">具体的には、厳密な名前トークンは、依存アセンブリを参照するアセンブリ参照で使用されます。</span><span class="sxs-lookup"><span data-stu-id="70437-117">Specifically, strong name tokens are used in assembly references to refer to the dependent assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="98764-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="98764-115">Remarks</span></span>  
+ <span data-ttu-id="98764-116">厳密な名前トークンは、メタデータにキー情報を格納する場合は、スペースを節約するために使用する公開キーの短縮形です。</span><span class="sxs-lookup"><span data-stu-id="98764-116">A strong name token is the shortened form of a public key that is used to save space when storing key information in metadata.</span></span> <span data-ttu-id="98764-117">具体的には、厳密な名前トークンは、依存アセンブリを参照するアセンブリ参照で使用されます。</span><span class="sxs-lookup"><span data-stu-id="98764-117">Specifically, strong name tokens are used in assembly references to refer to the dependent assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="70437-118">要件</span><span class="sxs-lookup"><span data-stu-id="70437-118">Requirements</span></span>  
- <span data-ttu-id="70437-119">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="70437-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98764-118">要件</span><span class="sxs-lookup"><span data-stu-id="98764-118">Requirements</span></span>  
+ <span data-ttu-id="98764-119">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="98764-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="70437-120">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="70437-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="98764-120">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="98764-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="70437-121">**ライブラリ:** mscoree.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="70437-121">**Library:** Included as a resource in mscoree.dll</span></span>  
+ <span data-ttu-id="98764-121">**ライブラリ:** mscoree.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="98764-121">**Library:** Included as a resource in mscoree.dll</span></span>  
   
- <span data-ttu-id="70437-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70437-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="98764-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98764-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70437-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="70437-123">See Also</span></span>  
- [<span data-ttu-id="70437-124">StrongNameGetPublicKey メソッド</span><span class="sxs-lookup"><span data-stu-id="70437-124">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  
- [<span data-ttu-id="70437-125">PublicKeyBlob 構造体</span><span class="sxs-lookup"><span data-stu-id="70437-125">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
- [<span data-ttu-id="70437-126">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="70437-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="98764-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="98764-123">See Also</span></span>  
+ [<span data-ttu-id="98764-124">StrongNameGetPublicKey メソッド</span><span class="sxs-lookup"><span data-stu-id="98764-124">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  
+ [<span data-ttu-id="98764-125">PublicKeyBlob 構造体</span><span class="sxs-lookup"><span data-stu-id="98764-125">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
+ [<span data-ttu-id="98764-126">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="98764-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

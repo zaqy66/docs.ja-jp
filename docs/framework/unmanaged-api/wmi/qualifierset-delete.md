@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617994"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46001052"
 ---
-# <a name="qualifiersetdelete-function"></a><span data-ttu-id="b2038-103">QualifierSet_Delete 関数</span><span class="sxs-lookup"><span data-stu-id="b2038-103">QualifierSet_Delete function</span></span>
-<span data-ttu-id="b2038-104">名前によって指定した修飾子が削除されます。</span><span class="sxs-lookup"><span data-stu-id="b2038-104">Deletes a specified qualifier by name.</span></span>  
+# <a name="qualifiersetdelete-function"></a><span data-ttu-id="3bf31-103">QualifierSet_Delete 関数</span><span class="sxs-lookup"><span data-stu-id="3bf31-103">QualifierSet_Delete function</span></span>
+<span data-ttu-id="3bf31-104">名前によって指定した修飾子が削除されます。</span><span class="sxs-lookup"><span data-stu-id="3bf31-104">Deletes a specified qualifier by name.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="b2038-105">構文</span><span class="sxs-lookup"><span data-stu-id="b2038-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3bf31-105">構文</span><span class="sxs-lookup"><span data-stu-id="3bf31-105">Syntax</span></span>  
   
 ```  
 HRESULT QualifierSet_Delete (
@@ -38,41 +38,41 @@ HRESULT QualifierSet_Delete (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="b2038-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b2038-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3bf31-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3bf31-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="b2038-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="b2038-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="3bf31-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="3bf31-107">[in] This parameter is unused.</span></span>
 
 `ptr`   
-<span data-ttu-id="b2038-108">[in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="b2038-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
+<span data-ttu-id="3bf31-108">[in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="3bf31-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
 
 `wszName`   
-<span data-ttu-id="b2038-109">[in]削除する修飾子の名前。</span><span class="sxs-lookup"><span data-stu-id="b2038-109">[in] The name of the qualifier to delete.</span></span>
+<span data-ttu-id="3bf31-109">[in]削除する修飾子の名前。</span><span class="sxs-lookup"><span data-stu-id="3bf31-109">[in] The name of the qualifier to delete.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="b2038-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="b2038-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="3bf31-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="3bf31-110">Return value</span></span>
 
-<span data-ttu-id="b2038-111">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="b2038-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="3bf31-111">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="3bf31-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="b2038-112">定数</span><span class="sxs-lookup"><span data-stu-id="b2038-112">Constant</span></span>  |<span data-ttu-id="b2038-113">値</span><span class="sxs-lookup"><span data-stu-id="b2038-113">Value</span></span>  |<span data-ttu-id="b2038-114">説明</span><span class="sxs-lookup"><span data-stu-id="b2038-114">Description</span></span>  |
+|<span data-ttu-id="3bf31-112">定数</span><span class="sxs-lookup"><span data-stu-id="3bf31-112">Constant</span></span>  |<span data-ttu-id="3bf31-113">値</span><span class="sxs-lookup"><span data-stu-id="3bf31-113">Value</span></span>  |<span data-ttu-id="3bf31-114">説明</span><span class="sxs-lookup"><span data-stu-id="3bf31-114">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="b2038-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="b2038-115">0x80041008</span></span> | <span data-ttu-id="b2038-116">`wszName`パラメーターが無効です。</span><span class="sxs-lookup"><span data-stu-id="b2038-116">The `wszName` parameter is not valid.</span></span> |
-|`WBEM_E_INVALID_OPERATION` | <span data-ttu-id="b2038-117">0x80041016</span><span class="sxs-lookup"><span data-stu-id="b2038-117">0x80041016</span></span> | <span data-ttu-id="b2038-118">この修飾子を削除することはできません。</span><span class="sxs-lookup"><span data-stu-id="b2038-118">Deleting this qualifier is illegal.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="b2038-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="b2038-119">0x80041002</span></span> | <span data-ttu-id="b2038-120">指定した修飾子が見つかりませんでした。</span><span class="sxs-lookup"><span data-stu-id="b2038-120">The specified qualifier was not found.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="b2038-121">0</span><span class="sxs-lookup"><span data-stu-id="b2038-121">0</span></span> | <span data-ttu-id="b2038-122">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="b2038-122">The function call was successful.</span></span>  |
-| `WBEM_S_RESET_TO_DEFAULT` | <span data-ttu-id="b2038-123">0x40002</span><span class="sxs-lookup"><span data-stu-id="b2038-123">0x40002</span></span> | <span data-ttu-id="b2038-124">ローカルのオーバーライドが削除され、親オブジェクトから元の修飾子がスコープを再開します。</span><span class="sxs-lookup"><span data-stu-id="b2038-124">The local override was deleted and the original qualifier from the parent object has resumed scope.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="3bf31-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="3bf31-115">0x80041008</span></span> | <span data-ttu-id="3bf31-116">`wszName`パラメーターが無効です。</span><span class="sxs-lookup"><span data-stu-id="3bf31-116">The `wszName` parameter is not valid.</span></span> |
+|`WBEM_E_INVALID_OPERATION` | <span data-ttu-id="3bf31-117">0x80041016</span><span class="sxs-lookup"><span data-stu-id="3bf31-117">0x80041016</span></span> | <span data-ttu-id="3bf31-118">この修飾子を削除することはできません。</span><span class="sxs-lookup"><span data-stu-id="3bf31-118">Deleting this qualifier is illegal.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="3bf31-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="3bf31-119">0x80041002</span></span> | <span data-ttu-id="3bf31-120">指定した修飾子が見つかりませんでした。</span><span class="sxs-lookup"><span data-stu-id="3bf31-120">The specified qualifier was not found.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="3bf31-121">0</span><span class="sxs-lookup"><span data-stu-id="3bf31-121">0</span></span> | <span data-ttu-id="3bf31-122">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="3bf31-122">The function call was successful.</span></span>  |
+| `WBEM_S_RESET_TO_DEFAULT` | <span data-ttu-id="3bf31-123">0x40002</span><span class="sxs-lookup"><span data-stu-id="3bf31-123">0x40002</span></span> | <span data-ttu-id="3bf31-124">ローカルのオーバーライドが削除され、親オブジェクトから元の修飾子がスコープを再開します。</span><span class="sxs-lookup"><span data-stu-id="3bf31-124">The local override was deleted and the original qualifier from the parent object has resumed scope.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="b2038-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="b2038-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="3bf31-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="3bf31-125">Remarks</span></span>
 
-<span data-ttu-id="b2038-126">この関数の呼び出しをラップする、 [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete)メソッド。</span><span class="sxs-lookup"><span data-stu-id="b2038-126">This function wraps a call to the [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) method.</span></span>
+<span data-ttu-id="3bf31-126">この関数の呼び出しをラップする、 [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete)メソッド。</span><span class="sxs-lookup"><span data-stu-id="3bf31-126">This function wraps a call to the [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) method.</span></span>
 
-<span data-ttu-id="b2038-127">修飾子の伝達の規則により、特定の修飾子可能性があります別のオブジェクトから継承されだけでは、現在のクラスまたはインスタンスでオーバーライドされます。</span><span class="sxs-lookup"><span data-stu-id="b2038-127">Due to qualifier propagation rules, a particular qualifier may have been inherited from another object and merely overridden in the current class or instance.</span></span> <span data-ttu-id="b2038-128">ここで、`QualifierSet_Delete`メソッドは、元の継承された値に、修飾子をリセットします。</span><span class="sxs-lookup"><span data-stu-id="b2038-128">In this case, the `QualifierSet_Delete` method resets the qualifier to its original inherited value.</span></span> <span data-ttu-id="b2038-129">関数は、この場合、状態コードを返します`WBEM_S_RESET_TO_DEFAULT`します。</span><span class="sxs-lookup"><span data-stu-id="b2038-129">The function in this case returns the status code `WBEM_S_RESET_TO_DEFAULT`.</span></span>
+<span data-ttu-id="3bf31-127">修飾子の伝達の規則により、特定の修飾子可能性があります別のオブジェクトから継承されだけでは、現在のクラスまたはインスタンスでオーバーライドされます。</span><span class="sxs-lookup"><span data-stu-id="3bf31-127">Due to qualifier propagation rules, a particular qualifier may have been inherited from another object and merely overridden in the current class or instance.</span></span> <span data-ttu-id="3bf31-128">ここで、`QualifierSet_Delete`メソッドは、元の継承された値に、修飾子をリセットします。</span><span class="sxs-lookup"><span data-stu-id="3bf31-128">In this case, the `QualifierSet_Delete` method resets the qualifier to its original inherited value.</span></span> <span data-ttu-id="3bf31-129">関数は、この場合、状態コードを返します`WBEM_S_RESET_TO_DEFAULT`します。</span><span class="sxs-lookup"><span data-stu-id="3bf31-129">The function in this case returns the status code `WBEM_S_RESET_TO_DEFAULT`.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="b2038-130">要件</span><span class="sxs-lookup"><span data-stu-id="b2038-130">Requirements</span></span>  
- <span data-ttu-id="b2038-131">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b2038-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3bf31-130">要件</span><span class="sxs-lookup"><span data-stu-id="3bf31-130">Requirements</span></span>  
+ <span data-ttu-id="3bf31-131">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3bf31-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b2038-132">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="b2038-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="3bf31-132">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="3bf31-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="b2038-133">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="b2038-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="3bf31-133">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="3bf31-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2038-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="b2038-134">See also</span></span>  
-[<span data-ttu-id="b2038-135">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="b2038-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="3bf31-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="3bf31-134">See also</span></span>  
+[<span data-ttu-id="3bf31-135">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="3bf31-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
