@@ -9,22 +9,22 @@ ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990234"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323614"
 ---
-# <a name="common-design-patterns"></a><span data-ttu-id="7bf99-102">共通デザイン パターン</span><span class="sxs-lookup"><span data-stu-id="7bf99-102">Common Design Patterns</span></span>
-<span data-ttu-id="7bf99-103">ソフトウェア パターン、パターンの言語、およびパターンの非常に広範なサブジェクトに対処するためのアンチ パターンに多数の書籍があります。</span><span class="sxs-lookup"><span data-stu-id="7bf99-103">There are numerous books on software patterns, pattern languages, and antipatterns that address the very broad subject of patterns.</span></span> <span data-ttu-id="7bf99-104">したがって、ガイドラインと非常に限定された一連の .NET Framework Api の設計で頻繁に使用するパターンに関連するディスカッションについても説明します。</span><span class="sxs-lookup"><span data-stu-id="7bf99-104">Thus, this chapter provides guidelines and discussion related to a very limited set of patterns that are used frequently in the design of the .NET Framework APIs.</span></span>  
+# <a name="common-design-patterns"></a><span data-ttu-id="9224c-102">共通デザイン パターン</span><span class="sxs-lookup"><span data-stu-id="9224c-102">Common Design Patterns</span></span>
+<span data-ttu-id="9224c-103">ソフトウェア パターン、パターンの言語、およびパターンの非常に広範なサブジェクトに対処するためのアンチ パターンに多数の書籍があります。</span><span class="sxs-lookup"><span data-stu-id="9224c-103">There are numerous books on software patterns, pattern languages, and antipatterns that address the very broad subject of patterns.</span></span> <span data-ttu-id="9224c-104">したがって、ガイドラインと非常に限定された一連の .NET Framework Api の設計で頻繁に使用するパターンに関連するディスカッションについても説明します。</span><span class="sxs-lookup"><span data-stu-id="9224c-104">Thus, this chapter provides guidelines and discussion related to a very limited set of patterns that are used frequently in the design of the .NET Framework APIs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7bf99-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="7bf99-105">In This Section</span></span>  
- [<span data-ttu-id="7bf99-106">依存関係プロパティ</span><span class="sxs-lookup"><span data-stu-id="7bf99-106">Dependency Properties</span></span>](../../../docs/standard/design-guidelines/dependency-properties.md)  
- [<span data-ttu-id="7bf99-107">Dispose パターン</span><span class="sxs-lookup"><span data-stu-id="7bf99-107">Dispose Pattern</span></span>](../../../docs/standard/design-guidelines/dispose-pattern.md)  
- <span data-ttu-id="7bf99-108">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="7bf99-108">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="9224c-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9224c-105">In This Section</span></span>  
+ [<span data-ttu-id="9224c-106">依存関係プロパティ</span><span class="sxs-lookup"><span data-stu-id="9224c-106">Dependency Properties</span></span>](../../../docs/standard/design-guidelines/dependency-properties.md)  
+ [<span data-ttu-id="9224c-107">Dispose パターン</span><span class="sxs-lookup"><span data-stu-id="9224c-107">Dispose Pattern</span></span>](../../../docs/standard/design-guidelines/dispose-pattern.md)  
+ <span data-ttu-id="9224c-108">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="9224c-108">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="7bf99-109">*2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*</span><span class="sxs-lookup"><span data-stu-id="7bf99-109">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="9224c-109">*2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*</span><span class="sxs-lookup"><span data-stu-id="9224c-109">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7bf99-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="7bf99-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9224c-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="9224c-110">See also</span></span>
 
-- [<span data-ttu-id="7bf99-111">フレームワーク デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="7bf99-111">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+- [<span data-ttu-id="9224c-111">フレームワーク デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="9224c-111">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

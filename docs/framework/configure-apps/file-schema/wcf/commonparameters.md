@@ -3,23 +3,23 @@ title: '&lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
 ms.openlocfilehash: 5e4c19c48709ffd81cb00e9820e6c3cdb297ec7e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746167"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46321024"
 ---
-# <a name="ltcommonparametersgt"></a><span data-ttu-id="6a040-102">&lt;commonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="6a040-102">&lt;commonParameters&gt;</span></span>
-<span data-ttu-id="6a040-103">複数のサービスでグローバルに使用されるパラメーターのコレクションを表します。</span><span class="sxs-lookup"><span data-stu-id="6a040-103">Represents a collection of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="6a040-104">このコレクションには通常、永続性サービスによって共有されるデータベース接続文字列が格納されます。</span><span class="sxs-lookup"><span data-stu-id="6a040-104">This collection will typically include the database connection string that might be shared by durable services.</span></span>  
+# <a name="ltcommonparametersgt"></a><span data-ttu-id="f4171-102">&lt;commonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="f4171-102">&lt;commonParameters&gt;</span></span>
+<span data-ttu-id="f4171-103">複数のサービスでグローバルに使用されるパラメーターのコレクションを表します。</span><span class="sxs-lookup"><span data-stu-id="f4171-103">Represents a collection of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="f4171-104">このコレクションには通常、永続性サービスによって共有されるデータベース接続文字列が格納されます。</span><span class="sxs-lookup"><span data-stu-id="f4171-104">This collection will typically include the database connection string that might be shared by durable services.</span></span>  
   
- <span data-ttu-id="6a040-105">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="6a040-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="6a040-106">\<<behaviors></span><span class="sxs-lookup"><span data-stu-id="6a040-106">\<behaviors></span></span>  
-<span data-ttu-id="6a040-107">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="6a040-107">\<serviceBehaviors></span></span>  
-<span data-ttu-id="6a040-108">\<behavior></span><span class="sxs-lookup"><span data-stu-id="6a040-108">\<behavior></span></span>  
-<span data-ttu-id="6a040-109">\<workflowRuntime></span><span class="sxs-lookup"><span data-stu-id="6a040-109">\<workflowRuntime></span></span>  
-<span data-ttu-id="6a040-110">\<commonParameters></span><span class="sxs-lookup"><span data-stu-id="6a040-110">\<commonParameters></span></span>  
+ <span data-ttu-id="f4171-105">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="f4171-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="f4171-106">\<<behaviors></span><span class="sxs-lookup"><span data-stu-id="f4171-106">\<behaviors></span></span>  
+<span data-ttu-id="f4171-107">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="f4171-107">\<serviceBehaviors></span></span>  
+<span data-ttu-id="f4171-108">\<behavior></span><span class="sxs-lookup"><span data-stu-id="f4171-108">\<behavior></span></span>  
+<span data-ttu-id="f4171-109">\<workflowRuntime></span><span class="sxs-lookup"><span data-stu-id="f4171-109">\<workflowRuntime></span></span>  
+<span data-ttu-id="f4171-110">\<commonParameters></span><span class="sxs-lookup"><span data-stu-id="f4171-110">\<commonParameters></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a040-111">構文</span><span class="sxs-lookup"><span data-stu-id="6a040-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f4171-111">構文</span><span class="sxs-lookup"><span data-stu-id="f4171-111">Syntax</span></span>  
   
 ```xml  
 <workflowRuntime>  
@@ -29,29 +29,29 @@ ms.locfileid: "45746167"
 </workflowRuntime>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6a040-112">属性および要素</span><span class="sxs-lookup"><span data-stu-id="6a040-112">Attributes and Elements</span></span>  
- <span data-ttu-id="6a040-113">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="6a040-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f4171-112">属性および要素</span><span class="sxs-lookup"><span data-stu-id="f4171-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="f4171-113">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="f4171-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6a040-114">属性</span><span class="sxs-lookup"><span data-stu-id="6a040-114">Attributes</span></span>  
- <span data-ttu-id="6a040-115">なし。</span><span class="sxs-lookup"><span data-stu-id="6a040-115">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f4171-114">属性</span><span class="sxs-lookup"><span data-stu-id="f4171-114">Attributes</span></span>  
+ <span data-ttu-id="f4171-115">なし。</span><span class="sxs-lookup"><span data-stu-id="f4171-115">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="6a040-116">子要素</span><span class="sxs-lookup"><span data-stu-id="6a040-116">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f4171-116">子要素</span><span class="sxs-lookup"><span data-stu-id="f4171-116">Child Elements</span></span>  
   
-|<span data-ttu-id="6a040-117">要素</span><span class="sxs-lookup"><span data-stu-id="6a040-117">Element</span></span>|<span data-ttu-id="6a040-118">説明</span><span class="sxs-lookup"><span data-stu-id="6a040-118">Description</span></span>|  
+|<span data-ttu-id="f4171-117">要素</span><span class="sxs-lookup"><span data-stu-id="f4171-117">Element</span></span>|<span data-ttu-id="f4171-118">説明</span><span class="sxs-lookup"><span data-stu-id="f4171-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6a040-119">\<add></span><span class="sxs-lookup"><span data-stu-id="6a040-119">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|<span data-ttu-id="6a040-120">サービスによって使用される共通パラメーターの名前と値のペアをコレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="6a040-120">Adds a name-value pair of common parameters used by services to the collection.</span></span>|  
+|[<span data-ttu-id="f4171-119">\<add></span><span class="sxs-lookup"><span data-stu-id="f4171-119">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|<span data-ttu-id="f4171-120">サービスによって使用される共通パラメーターの名前と値のペアをコレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="f4171-120">Adds a name-value pair of common parameters used by services to the collection.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="6a040-121">親要素</span><span class="sxs-lookup"><span data-stu-id="6a040-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f4171-121">親要素</span><span class="sxs-lookup"><span data-stu-id="f4171-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="6a040-122">要素</span><span class="sxs-lookup"><span data-stu-id="6a040-122">Element</span></span>|<span data-ttu-id="6a040-123">説明</span><span class="sxs-lookup"><span data-stu-id="6a040-123">Description</span></span>|  
+|<span data-ttu-id="f4171-122">要素</span><span class="sxs-lookup"><span data-stu-id="f4171-122">Element</span></span>|<span data-ttu-id="f4171-123">説明</span><span class="sxs-lookup"><span data-stu-id="f4171-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6a040-124">\<workflowRuntime></span><span class="sxs-lookup"><span data-stu-id="6a040-124">\<workflowRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|<span data-ttu-id="6a040-125">インスタンスの設定を指定<xref:System.Workflow.Runtime.WorkflowRuntime>ワークフロー ベースの Windows Communication Foundation (WCF) サービスをホストするためです。</span><span class="sxs-lookup"><span data-stu-id="6a040-125">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based Windows Communication Foundation (WCF) services.</span></span>|  
+|[<span data-ttu-id="f4171-124">\<workflowRuntime></span><span class="sxs-lookup"><span data-stu-id="f4171-124">\<workflowRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|<span data-ttu-id="f4171-125">インスタンスの設定を指定<xref:System.Workflow.Runtime.WorkflowRuntime>ワークフロー ベースの Windows Communication Foundation (WCF) サービスをホストするためです。</span><span class="sxs-lookup"><span data-stu-id="f4171-125">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based Windows Communication Foundation (WCF) services.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6a040-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="6a040-126">Remarks</span></span>  
- <span data-ttu-id="6a040-127">最初の要素 `<commonParameters>` は、複数のサービスでグローバルに使用されるパラメーターを定義します (たとえば `ConnectionString` を使用する場合の <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>)。</span><span class="sxs-lookup"><span data-stu-id="6a040-127">The `<commonParameters>` element defines any parameters that are used globally across multiple services, for example `ConnectionString` when using the <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f4171-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="f4171-126">Remarks</span></span>  
+ <span data-ttu-id="f4171-127">最初の要素 `<commonParameters>` は、複数のサービスでグローバルに使用されるパラメーターを定義します (たとえば `ConnectionString` を使用する場合の <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>)。</span><span class="sxs-lookup"><span data-stu-id="f4171-127">The `<commonParameters>` element defines any parameters that are used globally across multiple services, for example `ConnectionString` when using the <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6a040-128">SQL 追跡サービスでは、`ConnectionString` セクションに `<commonParameters>` 値を指定しても、その値が常に使用されるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="6a040-128">SQL Tracking service does not consistently use the `ConnectionString` value if it is specified in the `<commonParameters>` section.</span></span> <span data-ttu-id="6a040-129">`StateMachineWorkflowInstance.StateHistory` プロパティの取得のように、操作によっては失敗する場合があります。</span><span class="sxs-lookup"><span data-stu-id="6a040-129">Some of its operations such as retrieving the `StateMachineWorkflowInstance.StateHistory` property may fail.</span></span> <span data-ttu-id="6a040-130">これを回避するには、次の例に示すように、追跡プロバイダーの構成セクションで `ConnectionString` 属性を指定します。</span><span class="sxs-lookup"><span data-stu-id="6a040-130">To workaround this, specify the `ConnectionString` attribute in the configuration section for tracking provider, as indicated in the following example.</span></span>  
+>  <span data-ttu-id="f4171-128">SQL 追跡サービスでは、`ConnectionString` セクションに `<commonParameters>` 値を指定しても、その値が常に使用されるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="f4171-128">SQL Tracking service does not consistently use the `ConnectionString` value if it is specified in the `<commonParameters>` section.</span></span> <span data-ttu-id="f4171-129">`StateMachineWorkflowInstance.StateHistory` プロパティの取得のように、操作によっては失敗する場合があります。</span><span class="sxs-lookup"><span data-stu-id="f4171-129">Some of its operations such as retrieving the `StateMachineWorkflowInstance.StateHistory` property may fail.</span></span> <span data-ttu-id="f4171-130">これを回避するには、次の例に示すように、追跡プロバイダーの構成セクションで `ConnectionString` 属性を指定します。</span><span class="sxs-lookup"><span data-stu-id="f4171-130">To workaround this, specify the `ConnectionString` attribute in the configuration section for tracking provider, as indicated in the following example.</span></span>  
   
  `<add`  
   
@@ -59,7 +59,7 @@ ms.locfileid: "45746167"
   
  `ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />`  
   
- <span data-ttu-id="6a040-131"><xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> や <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> など、作業バッチを永続的ストアにコミットするサービスでは、`EnableRetries` パラメーターを次の例のように使用することで、トランザクションの再試行を有効にできます。</span><span class="sxs-lookup"><span data-stu-id="6a040-131">For services that commit work batches to persistence stores, such as <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> and <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, you can enable them to retry their transaction by using the `EnableRetries` parameter as shown in the following example:</span></span>  
+ <span data-ttu-id="f4171-131"><xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> や <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> など、作業バッチを永続的ストアにコミットするサービスでは、`EnableRetries` パラメーターを次の例のように使用することで、トランザクションの再試行を有効にできます。</span><span class="sxs-lookup"><span data-stu-id="f4171-131">For services that commit work batches to persistence stores, such as <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> and <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, you can enable them to retry their transaction by using the `EnableRetries` parameter as shown in the following example:</span></span>  
   
 ```xml  
 <WorkflowRuntime Name="SampleApplication" UnloadOnIdle="false">  
@@ -73,9 +73,9 @@ ms.locfileid: "45746167"
 </WorkflowRuntime>  
 ```  
   
- <span data-ttu-id="6a040-132">注意して、`EnableRetries`グローバル レベルでパラメーターを設定することができます (ように、 *CommonParameters*セクション)、または個々 のサービスをサポートする`EnableRetries`(ように、*サービス*セクション)。</span><span class="sxs-lookup"><span data-stu-id="6a040-132">Notice that the `EnableRetries` parameter can be set either at a global level (as shown in the *CommonParameters* section) or for individual services that support `EnableRetries` (as shown in the *Services* section).</span></span>  
+ <span data-ttu-id="f4171-132">注意して、`EnableRetries`グローバル レベルでパラメーターを設定することができます (ように、 *CommonParameters*セクション)、または個々 のサービスをサポートする`EnableRetries`(ように、*サービス*セクション)。</span><span class="sxs-lookup"><span data-stu-id="f4171-132">Notice that the `EnableRetries` parameter can be set either at a global level (as shown in the *CommonParameters* section) or for individual services that support `EnableRetries` (as shown in the *Services* section).</span></span>  
   
- <span data-ttu-id="6a040-133">共通パラメーターをプログラムによって変更する方法を次のコード例に示します。</span><span class="sxs-lookup"><span data-stu-id="6a040-133">The following sample code shows how to change the common parameters programmatically.</span></span>  
+ <span data-ttu-id="f4171-133">共通パラメーターをプログラムによって変更する方法を次のコード例に示します。</span><span class="sxs-lookup"><span data-stu-id="f4171-133">The following sample code shows how to change the common parameters programmatically.</span></span>  
   
 ```  
 Configuration config=WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");  
@@ -85,9 +85,9 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- <span data-ttu-id="6a040-134">動作を制御する構成ファイルの使用の詳細については、<xref:System.Workflow.Runtime.WorkflowRuntime>オブジェクトの Windows Workflow Foundation ホスト アプリケーションでは、次を参照してください。[ワークフロー構成ファイル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))します。</span><span class="sxs-lookup"><span data-stu-id="6a040-134">For more information about using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).</span></span>  
+ <span data-ttu-id="f4171-134">動作を制御する構成ファイルの使用の詳細については、<xref:System.Workflow.Runtime.WorkflowRuntime>オブジェクトの Windows Workflow Foundation ホスト アプリケーションでは、次を参照してください。[ワークフロー構成ファイル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))します。</span><span class="sxs-lookup"><span data-stu-id="f4171-134">For more information about using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6a040-135">例</span><span class="sxs-lookup"><span data-stu-id="6a040-135">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f4171-135">例</span><span class="sxs-lookup"><span data-stu-id="f4171-135">Example</span></span>  
   
 ```xml  
 <commonParameters>  
@@ -96,11 +96,11 @@ config.Save();
 </commonParameters>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6a040-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="6a040-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f4171-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="f4171-136">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
  <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- <span data-ttu-id="6a040-137">[ワークフロー構成ファイル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="6a040-137">[Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span></span>  
- [<span data-ttu-id="6a040-138">\<add></span><span class="sxs-lookup"><span data-stu-id="6a040-138">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)
+ <span data-ttu-id="f4171-137">[ワークフロー構成ファイル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="f4171-137">[Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span></span>  
+ [<span data-ttu-id="f4171-138">\<add></span><span class="sxs-lookup"><span data-stu-id="f4171-138">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)
