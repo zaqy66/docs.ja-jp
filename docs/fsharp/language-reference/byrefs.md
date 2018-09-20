@@ -3,11 +3,11 @@ title: Byref (f#)
 description: Byref と f# での低レベルのプログラミングに使用される byref のような種類について説明します。
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: MT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699647"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45749853"
 ---
 # <a name="byrefs"></a>Byref
 

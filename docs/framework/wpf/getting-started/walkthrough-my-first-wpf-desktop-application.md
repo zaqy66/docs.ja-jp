@@ -10,12 +10,13 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8f806a1f1f7840f21e82d77d1b639b9318259e7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.custom: vs-dotnet
+ms.openlocfilehash: 1a9c82a0bca25fa1242b29393e41e6eb4ce7f3b9
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44366125"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007257"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
 
@@ -42,9 +43,9 @@ ms.locfileid: "44366125"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- Visual Studio 2012 またはそれ以降
+- Visual Studio 2012 またはそれ以降 (この記事では、Visual Studio 2017 に基づく)
 
-最新バージョンの Visual Studio のインストールの詳細については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。
+   最新バージョンの Visual Studio のインストールの詳細については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。
 
 ## <a name="create-the-application-project"></a>アプリケーション プロジェクトを作成します。
 

@@ -3,11 +3,11 @@ title: 外部関数 (F#)
 description: ネイティブ コードで関数を呼び出すための f# 言語サポートについて説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181419"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45517048"
 ---
 # <a name="external-functions"></a>外部関数
 

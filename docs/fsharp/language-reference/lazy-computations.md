@@ -3,11 +3,11 @@ title: 遅延計算 (F#)
 description: F# 遅延計算が、アプリとライブラリのパフォーマンスを向上する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508427"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45529108"
 ---
 # <a name="lazy-computations"></a>遅延計算
 
