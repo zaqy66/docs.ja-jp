@@ -2,12 +2,12 @@
 title: SQL と CLR の型マッピング
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862106"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478696"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL と CLR の型マッピング
 LINQ to SQL では、リレーショナル データベースのデータ モデルが、任意のプログラミング言語で表されるオブジェクト モデルに対応付けられています。 アプリケーションが実行されると、LINQ to SQL は、オブジェクト モデルの統合言語クエリを SQL に変換し、それをデータベースに送信して実行します。 データベースから結果が返されると、LINQ to SQL はその結果をプログラミング言語で操作できるオブジェクトに変換し直します。  
@@ -122,7 +122,7 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
  これ以外にもさまざまな数値のマッピングを選択できますが、一部のマッピングでは、データベースに対する変換操作中にオーバーフローやデータ損失の例外が発生することがあります。 詳細については、次を参照してください。、[型マッピングの実行時動作関係](#BehaviorMatrix)します。  
   
 ### <a name="decimal-and-money-types"></a>Decimal 型と Money 型  
- SQL Server の既定の有効桁数`DECIMAL`(18 桁、小数点の右側と左側) の種類が、CLR の有効桁数よりもはるかに小さい<!--zz <xref:System.Decima?displayProperty=nameWithType>l -->`Decimal`既定では対応する型。 その結果、データベースにデータを保存するときに有効桁数が少なくなることがあります。 一方、SQL Server の `DECIMAL` 型に 29 桁を超える有効桁数が設定されている場合、その逆が発生する可能性があります。 SQL Server の `DECIMAL` 型に CLR の <xref:System.Decimal?displayProperty=nameWithType> より大きい有効桁数の値が設定されていると、データベースからデータを取得するときに有効桁数が少なくなることがあります。  
+ SQL Server の既定の有効桁数`DECIMAL`(18 桁、小数点の右側と左側) の種類が、CLR の有効桁数よりもはるかに小さい<xref:System.Decimal?displayProperty=nameWithType>既定では対応する型。 その結果、データベースにデータを保存するときに有効桁数が少なくなることがあります。 一方、SQL Server の `DECIMAL` 型に 29 桁を超える有効桁数が設定されている場合、その逆が発生する可能性があります。 SQL Server の `DECIMAL` 型に CLR の <xref:System.Decimal?displayProperty=nameWithType> より大きい有効桁数の値が設定されていると、データベースからデータを取得するときに有効桁数が少なくなることがあります。  
   
  SQL Server の `MONEY` 型と `SMALLMONEY` 型も、既定で CLR の <xref:System.Decimal?displayProperty=nameWithType> 型に対応付けられます。これらの型も有効桁数がはるかに少ないため、データベースにデータを保存するときにオーバーフローやデータ損失の例外が発生する可能性があります。  
   
