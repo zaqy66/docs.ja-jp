@@ -2,15 +2,15 @@
 title: UriTemplate と UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75ef447d8c79bded99bd29292a544c72627f113e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508824"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478598"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate と UriTemplateTable
-Web 開発者は、サービスの応答先となる URI の形状とレイアウトを記述できる必要があります。 Windows Communication Foundation (WCF) では、その Uri に制御を開発者に提供する 2 つの新しいクラスを追加します。 <xref:System.UriTemplate> および<xref:System.UriTemplateTable>WCF では、URI ベースのディスパッチ エンジンの基盤を形成します。 これらのクラスは、WCF サービスを実装することがなく、独自のテンプレートと URI を利用する開発者マッピング メカニズムでも使用できます。  
+Web 開発者は、サービスの応答先となる URI の形状とレイアウトを記述できる必要があります。 Windows Communication Foundation (WCF) は、その Uri 上のコントロールを開発者に提供する 2 つの新しいクラスを追加します。 <xref:System.UriTemplate> <xref:System.UriTemplateTable> WCF では、URI ベースのディスパッチ エンジンの基盤を形成します。 これらのクラスは、WCF サービスを実装することがなく、テンプレートと URI を活用するために開発者が独自のマッピング メカニズムにも使用できます。  
   
 ## <a name="templates"></a>テンプレート  
  テンプレートとは、一連の相対 URI を記述する方法です。 次の表の URI テンプレートのセットは、各種気象情報を取得するシステムがどのように定義されているかを示しています。  
@@ -22,7 +22,7 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
 |都市の天気予報|weather/{state}/{city}|  
 |アクティビティの天気予報|weather/{state}/{city}/{activity}|  
   
- この表は、構造が似ている一連の URI を示しています。 各エントリが URI テンプレートです。 中かっこで囲まれたセグメントは変数を表します。 中かっこで囲まれていないセグメントはリテラル文字を表します。 WCF テンプレート クラスは、受信 URI、たとえば、"weather/wa/シアトル/"、および、説明するテンプレートに一致する開発者を許可する"/weather/{state}/{city}/{アクティビティ}"。  
+ この表は、構造が似ている一連の URI を示しています。 各エントリが URI テンプレートです。 中かっこで囲まれたセグメントは変数を表します。 中かっこで囲まれていないセグメントはリテラル文字を表します。 WCF のテンプレート クラスを使用すると、例については、「/気象/wa/シアトル/cycling」、受信 URI を受け取り、それを記述するテンプレートと照合するための開発者"/weather/{state}/{city}/{アクティビティ}"。  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> は、URI テンプレートをカプセル化するクラスです。 コンストラクターは、テンプレートを定義する文字列パラメーターを受け取ります。 この文字列には、次のセクションで説明する形式のテンプレートが含まれます。 <xref:System.UriTemplate> クラスには、受信 URI をテンプレートと照合するメソッド、テンプレートから URI を生成するメソッド、テンプレートで使用されている変数名のコレクションを取得するメソッド、2 つのテンプレートが等しいかどうかを判断するメソッド、およびテンプレートの文字列を返すメソッドが用意されています。  
@@ -38,19 +38,19 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> プロパティには、テンプレート文字列のパス セグメント内で使用される変数の名前のコレクションが格納されます。  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> は <xref:System.UriTemplate> をパラメーターとして受け取り、2 つのテンプレートが等しいかどうかを示すブール値を返します。 詳細については、このトピックで後述するテンプレートの等価性を参照してください。  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> は <xref:System.UriTemplate> をパラメーターとして受け取り、2 つのテンプレートが等しいかどうかを示すブール値を返します。 詳細については、このトピックの「テンプレートの等価性」セクションを参照してください。  
   
  <xref:System.UriTemplate> は、HTTP URI 文法に準じるすべての URI スキームで使用できるように設計されています。 サポートされている URI スキームの例を次に示します。  
   
--   http://  
+- http://  
   
--   https://  
+- https://  
   
--   net.tcp://  
+- net.tcp://  
   
--   net.pipe://  
+- net.pipe://  
   
--   sb://  
+- sb://  
   
  file:// や urn:// などのスキームは、HTTP URI 文法に準じていません。このため、URI テンプレートで使用すると予期せぬ結果が発生します。  
   
@@ -63,7 +63,7 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
   
  パスは "/weather/{state}/{city}"、クエリは "?forecast={length}、フラグメントは "#frag1" でそれぞれ構成されています。  
   
- パス式では、先頭と末尾のスラッシュは省略可能です。 クエリ式とフラグメント式は、いずれも式全体を省略できます。 パスは、一連のセグメントで区切られた '/'、各セグメントは、リテラル値、変数名 ({中かっこ} で書き込まれます)、またはワイルドカードを持つことができます (書き込まれる '\*')。 上記のテンプレートでは、"/weather/" セグメントがリテラル値で、"{state}" と "{city}" が変数です。 変数が中かっこの内容から名前を取得し、作成する具体的な値で置き換えられる後で、*クローズである URI*です。 ワイルドカードは省略可能では、論理的に一致する「残りのパス」、URI の末尾にのみ使用できます。  
+ パス式では、先頭と末尾のスラッシュは省略可能です。 クエリ式とフラグメント式は、いずれも式全体を省略できます。 パス セグメントで区切られた一連は、'/'、各セグメントはリテラル値、変数名 ({中かっこ} で記述)、またはワイルドカードを持つことができます (書き込まれる '\*')。 上記のテンプレートでは、"/weather/" セグメントがリテラル値で、"{state}" と "{city}" が変数です。 変数は中かっこの内容から名前を取得して、後で作成する具体的な値を交換できる、*クローズである URI*します。 ワイルドカードは、省略可能ですが、「残りのパス」を論理的に一致が、URI の末尾でだけ記述できます。  
   
  クエリ式 (存在する場合) では、'&' で区切られた順序なしの一連の名前と値のペアを指定します。 クエリ式の要素には、リテラル ペア (x=2) または変数ペア (x={var}) を指定できます。 変数を指定できるのはクエリ式の右辺のみです。 ({someName} = {someValue}) は指定できません。 対になっていない値 (?x) は使用できません。 空のクエリ式と、1 つの '?' だけで構成されたクエリ式は同じものです (いずれも "任意のクエリ" を意味します)。  
   
@@ -73,66 +73,66 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
   
  有効なテンプレート文字列の例を以下に示します。  
   
--   ""  
+- ""  
   
--   "/shoe"  
+- "/shoe"  
   
--   "/shoe/*"  
+- "/shoe/\*"  
   
--   "{shoe}/boat"  
+- "{shoe}/boat"  
   
--   "{shoe}/{boat}/bed/{quilt}"  
+- "{shoe}/{boat}/bed/{quilt}"  
   
--   「靴/{ボート}」  
+- 「靴/{ボート}」  
   
--   "靴/{ボート}/*"  
+- "靴/{ボート}/\*"  
   
--   "靴/ボート? x = 2"  
+- "靴/ボート? x = 2"  
   
--   "靴/{ボート}? x = {ベッド}"  
+- "靴/{ボート}? x = {ベッド}"  
   
--   "shoe/{boat}?x={bed}&y=band"  
+- "shoe/{boat}?x={bed}&y=band"  
   
--   "?x={shoe}"  
+- "?x={shoe}"  
   
--   "shoe?x=3&y={var}  
+- "shoe?x=3&y={var}  
   
  無効なテンプレート文字列の例を以下に示します。  
   
--   "{shoe}/}/x = 2"– 変数名と重複します。  
+- "{shoe}/{SHOE}/x = 2"– 変数名が重複しています。  
   
--   "{shoe}/boat? ベッド = {shoe}"– 変数名と重複します。  
+- "{shoe}/boat? ベッド = {shoe}"– 変数名が重複しています。  
   
--   "? x = 2 & x = 3"– リテラルにある場合でも、クエリ文字列内の名前/値ペアは一意である必要があります。  
+- "? x = 2 & x = 3"– リテラルにある場合でも、クエリ文字列内の名前/値ペアが一意である必要があります。  
   
--   "? x = 2 &"– クエリ文字列の形式が正しくありません。  
+- "? x = 2 &"– クエリ文字列形式が正しくありません。  
   
--   "? 2 & x = {shoe}"– クエリ文字列が名前/値ペアにする必要があります。  
+- "? 2 & x = {shoe}"– クエリ文字列が名前/値ペアにする必要があります。  
   
--   "しますか? y = 2 & & X = 3"– クエリ文字列が名前値のペアにする必要があります、名前に始めることはできません '&' です。  
+- "? y = 2 & & X = 3"– クエリ文字列が名前値のペアにする必要があります、名を始めることはできません '&'。  
   
 ### <a name="compound-path-segments"></a>複合パス セグメント  
  複合パス セグメントでは、単一の URI パス セグメントに複数の変数およびリテラルと組み合わせた変数を含むことができます。 有効な複合パス セグメントの例を次に示します。  
   
--   /filename.{ext}/  
+- /filename.{ext}/  
   
--   /{filename}.jpg/  
+- /{filename}.jpg/  
   
--   /{filename}.{ext}/  
+- /{filename}.{ext}/  
   
--   /{a}.{b}someLiteral{c}({d})/  
+- /{a}.{b}someLiteral{c}({d})/  
   
  無効なパス セグメントの例を次に示します。  
   
--   /{} -変数を指定する必要があります。  
+- /{} -変数を指定する必要があります。  
   
--   /{shoe}{boat} – 変数はリテラルによって分割されている必要があります。  
+- /{shoe}{boat} – 変数はリテラルによって分割されている必要があります。  
   
 ### <a name="matching-and-compound-path-segments"></a>照合と複合パス セグメント  
- 複合パス セグメントを使用すると、1 つのパス セグメント内に複数の変数を含む UriTemplate を定義できます。 たとえば、次のテンプレート文字列で:"アドレス/{state} です。{city}"2 つの変数 (state と city) が同じセグメント内で定義されています。 このテンプレートは URL と一致するように"http://example.com/Washington.Redmond「がのような URL は一致も」http://example.com/Washington.Redmond.Microsoft"です。 後者の場合、状態変数には、"Washington"が含まれ、city 変数は"Redmond.Microsoft"が含まれます。 この場合、任意のテキスト ('/' 以外) が {city} 変数と一致することになります。 テンプレートを「余分な」テキストと一致しない場合は、配置、変数セグメントでは、別のテンプレート、たとえば:"アドレス/{state}/{city} です。  
+ 複合パス セグメントを使用すると、1 つのパス セグメント内に複数の変数を含む UriTemplate を定義できます。 たとえば、次のテンプレート文字列で:"アドレス/{state} します。{city}"2 つの変数 (state と city) が同じセグメント内で定義されます。 このテンプレートは、URL をなどに一致`http://example.com/Washington.Redmond`のような URL とも一致しますが、`http://example.com/Washington.Redmond.Microsoft`します。 後者の場合、状態変数が"Washington"が含まれます、city 変数は"Redmond.Microsoft"が含まれます。 この場合、任意のテキスト ('/' 以外) が {city} 変数と一致することになります。 テンプレートを「余分な」テキストが一致しない場合は、配置、変数、別のテンプレート セグメントに例:"アドレス/{state}/{city} します。  
   
 ### <a name="named-wildcard-segments"></a>名前付きワイルドカード セグメント  
- 名前付きワイルドカード セグメントは、ワイルドカード文字 '*' で始まる変数名を持つ任意のパス変数セグメントです。 次のテンプレート文字列には、"shoe" という名前付きワイルドカード セグメントが含まれています。  
+ 名前付きワイルドカード セグメントは変数名を持つが、ワイルドカード文字で始まるパス変数のセグメント '\*'。 次のテンプレート文字列には、"shoe" という名前付きワイルドカード セグメントが含まれています。  
   
 ```  
 "literal/{*shoe}"  
@@ -140,22 +140,22 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
   
  ワイルドカード セグメントは、次の規則に従う必要があります。  
   
--   1 つのテンプレート文字列に含められる名前付きワイルドカード セグメントは 1 つのみです。  
+- 1 つのテンプレート文字列に含められる名前付きワイルドカード セグメントは 1 つのみです。  
   
--   名前付きワイルドカード セグメントは、パス内の右端のセグメントにある必要があります。  
+- 名前付きワイルドカード セグメントは、パス内の右端のセグメントにある必要があります。  
   
--   名前付きワイルドカード セグメントは、匿名ワイルドカード セグメントのあるテンプレート文字列には使用できません。  
+- 名前付きワイルドカード セグメントは、匿名ワイルドカード セグメントのあるテンプレート文字列には使用できません。  
   
--   名前付きワイルドカード セグメントの名前は一意である必要があります。  
+- 名前付きワイルドカード セグメントの名前は一意である必要があります。  
   
--   名前付きワイルドカード セグメントには既定値を指定できません。  
+- 名前付きワイルドカード セグメントには既定値を指定できません。  
   
--   名前付きワイルドカード セグメントで終わることはできません「/」です。  
+- 名前付きワイルドカード セグメントが終わることはできません「/」。  
   
 ### <a name="default-variable-values"></a>既定変数値  
  既定変数値を使用すると、テンプレート内で変数に既定値を指定できます。 既定変数は、変数を宣言する中かっこを使用して指定することも、UriTemplate コンストラクターに渡されるコレクションとして指定することもできます。 次のテンプレートに、既定値のある変数を使用して <xref:System.UriTemplate> を指定する 2 つの方法を示します。  
   
-```  
+```csharp
 UriTemplate t = new UriTemplate("/test/{a=1}/{b=5}");  
 ```  
   
@@ -166,34 +166,37 @@ UriTemplate t = new UriTemplate("/test/{a=1}/{b=5}");
   
  候補 URI との照合時に、既定値のある変数がどのように処理されるかを次のコードに示します。  
   
-```  
-Uri baseAddress = new Uri("http://localhost:800   
-Dictionary<string,string> defVals = new Dictionary<string,string> {{"a","1"}, {"b", "5"}};  
-UriTemplate t = new UriTemplate("/test/{a}/{b}", defVals);0");  
-UriTemplate t = new UriTemplate("/{state=WA}/{city=Redmond}/", true);  
-Uri candidate = new Uri("http://localhost:8000/OR");  
-  
-UriTemplateMatch m1 = t.Match(baseAddress, candidate);  
-  
-// Display contents of BoundVariables  
-foreach (string key in m1.BoundVariables.AllKeys)  
-{  
-    Console.WriteLine("\t\t{0}={1}", key, m1.BoundVariables[key]);  
-}  
+```csharp
+Uri baseAddress = new Uri("http://localhost:8000/");
+
+UriTemplate t = new UriTemplate("/{state=WA}/{city=Redmond}/", true);
+Uri candidate = new Uri("http://localhost:8000/OR");
+
+UriTemplateMatch m1 = t.Match(baseAddress, candidate);
+
+Console.WriteLine($"Template: {t}");
+Console.WriteLine($"Candidate URI: {candidate}");
+
+// Display contents of BoundVariables
+Console.WriteLine("BoundVariables:");
+foreach (string key in m1.BoundVariables.AllKeys)
+{
+    Console.WriteLine($"\t{key}={m1.BoundVariables[key]}");
+}
 // The output of the above code is  
-// Template: /{state=WA}/{city=Redmond}/  
-// Candidate URI: http://localhost:8000/OR  
-// BoundVariables:  
-//      STATE=OR  
-//       CITY=Redmond  
+// Template: /{state=WA}/{city=Redmond}/
+// Candidate URI: http://localhost:8000/OR
+// BoundVariables:
+//         STATE=OR
+//         CITY=Redmond
 ```  
   
 > [!NOTE]
->  などの URIhttp://localhost:8000///ただし、上記のコードで表示されているテンプレートに一致しないなどの URIhttp://localhost:8000/はします。  
+>  などの URI http://localhost:8000///ただし、上記のコードで表示されているテンプレートに一致しないなどの URI http://localhost:8000/は。  
   
  テンプレートを使用して URI を作成する場合に、既定値のある変数がどのように処理されるかを次のコードに示します。  
   
-```  
+```csharp
 Uri baseAddress = new Uri("http://localhost:8000/");  
 Dictionary<string,string> defVals = new Dictionary<string,string> {{"a","1"}, {"b", "5"}};  
 UriTemplate t = new UriTemplate("/test/{a}/{b}", defVals);  
@@ -219,46 +222,39 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 // Bound URI: http://localhost:8000/test/10/5  
 ```  
   
- 変数の既定値として `null` が指定されている場合、さらに追加の制約があります。 テンプレート文字列の右端のセグメントに変数を含んでいるか、その変数の右側にあるすべてのセグメントが `null` を既定値としている変数のみに既定値として `null` を指定できます。 既定値に `null` が指定されている有効なテンプレート文字列を次に示します。  
+変数の既定値として `null` が指定されている場合、さらに追加の制約があります。 テンプレート文字列の右端のセグメントに変数を含んでいるか、その変数の右側にあるすべてのセグメントが `null` を既定値としている変数のみに既定値として `null` を指定できます。 既定値に `null` が指定されている有効なテンプレート文字列を次に示します。  
   
--   ```  
-    UriTemplate t = new UriTemplate("shoe/{boat=null}");  
-    ```  
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/{boat=null}");  
-    ```  
+- `UriTemplate t = new UriTemplate("shoe/{boat=null}");`
+
+- `UriTemplate t = new UriTemplate("{shoe=null}/{boat=null}");`
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");  
-    ```  
- 既定値に `null` が指定されている無効なテンプレート文字列を次に示します。  
+- `UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");`
+
+ 次に無効なテンプレート文字列の既定値を持つ`null`:  
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment  
-    ```  
+- `UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment`
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/{boat=x}/{bed=null}"); // shoe cannot have a null default because boat does not have a default null value  
-    ```  
+- `UriTemplate t = new UriTemplate("{shoe=null}/{boat=x}/{bed=null}"); // shoe cannot have a null default because boat does not have a default null value`
+
 ### <a name="default-values-and-matching"></a>既定値と照合  
  候補 URI と既定値が指定されているテンプレートとの照合時に、候補 URI に値が指定されていない場合には、<xref:System.UriTemplateMatch.BoundVariables%2A> コレクションに既定値が配置されます。  
   
 ### <a name="template-equivalence"></a>テンプレートの等価性  
- 2 つのテンプレートと呼ばれます*構造的に同等*すべてのリテラルの一致して、同じセグメントに変数があります。 たとえば、次のテンプレートは構造的に等しいテンプレートです。  
+ 2 つのテンプレートがあると言います*構造的に等しい*とすべてのテンプレートのリテラルと一致する、同じセグメントに変数があります。 たとえば、次のテンプレートは構造的に等しいテンプレートです。  
   
--   /a/{var1}/b b/{var2}?x=1&y=2  
+- /a/{var1}/b b/{var2}?x=1&y=2  
   
--   a/{x}/b%20b/{var1}?y=2&x=1  
+- a/{x}/b%20b/{var1}?y=2&x=1  
   
--   a/{y}/B%20B/{z}/?y=2&x=1  
+- a/{y}/B%20B/{z}/?y=2&x=1  
   
  次の点に注意してください。  
   
--   テンプレートに先頭のスラッシュが含まれている場合、最初の 1 つだけが無視されます。  
+- テンプレートに先頭のスラッシュが含まれている場合、最初の 1 つだけが無視されます。  
   
--   テンプレート文字列が構造的に等しいかどうかを比較する場合、変数名とパス セグメントでは大文字小文字は無視されますが、クエリ文字列では区別されます。  
+- テンプレート文字列が構造的に等しいかどうかを比較する場合、変数名とパス セグメントでは大文字小文字は無視されますが、クエリ文字列では区別されます。  
   
--   クエリ文字列は順序なしです。  
+- クエリ文字列は順序なしです。  
   
 ## <a name="uritemplatetable"></a>UriTemplateTable  
  <xref:System.UriTemplateTable> クラスは、開発者が選択したオブジェクトにバインドされた <xref:System.UriTemplate> オブジェクトの結合テーブルを表します。 <xref:System.UriTemplateTable> を呼び出す前に、<xref:System.UriTemplate> に 1 つ以上の <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> を含めておく必要があります。 <xref:System.UriTemplateTable> が呼び出されるまでは、<xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> の内容を変更できます。 <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> が呼び出されると、検証が実行されます。 実行される検証の種類は、`allowMultiple` に対する <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> パラメーターの値によって異なります。  
@@ -277,60 +273,60 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
  クエリ文字列の次のセットにはあいまいさはありません。  
   
--   ?x=1  
+- ?x=1  
   
--   ?x=2  
+- ?x=2  
   
--   ?x=3  
+- ?x=3  
   
--   ?x=1&y={var}  
+- ?x=1&y={var}  
   
--   ?x=2&z={var}  
+- ?x=2&z={var}  
   
--   ?x=3  
+- ?x=3  
   
--   ?x=1  
+- ?x=1  
   
--   ?  
+- ?  
   
--   ? x={var}  
+- ? x={var}  
   
--   ?  
+- ?  
   
--   ?m=get&c=rss  
+- ?m=get&c=rss  
   
--   ?m=put&c=rss  
+- ?m=put&c=rss  
   
--   ?m=get&c=atom  
+- ?m=get&c=atom  
   
--   ?m=put&c=atom  
+- ?m=put&c=atom  
   
  クエリ文字列テンプレートの次のセットにはあいまいさがあります。  
   
--   ?x=1  
+- ?x=1  
   
--   ?x={var}  
+- ?x={var}  
   
  "x=1" - 両方のテンプレートに一致します。  
   
--   ?x=1  
+- ?x=1  
   
--   ?y=2  
+- ?y=2  
   
  "x=1&y=2" は両方のテンプレートに一致します。 これは、クエリ文字列に、一致するテンプレートよりも多くのクエリ文字列変数が含まれている可能性があるからです。  
   
--   ?x=1  
+- ?x=1  
   
--   ?x=1&y={var}  
+- ?x=1&y={var}  
   
  "x=1&y=3" は両方のテンプレートに一致します。  
   
--   ?x=3&y=4  
+- ?x=3&y=4  
   
--   ?x=3&z=5  
+- ?x=3&z=5  
   
 > [!NOTE]
->  文字 á と Á が URI パスまたは <xref:System.UriTemplate> のパス セグメントのリテラルの一部として出現した場合、これらは異なる文字と見なされます (ただし、a と A は同じ文字と見なされます)。 文字 á と Á が <xref:System.UriTemplate> の {variableName} またはクエリ文字列の一部として出現した場合は、これらは同じ文字と見なされます (a と A も同じ文字と見なされます)。  
+> 文字 á と Á が URI パスまたは <xref:System.UriTemplate> のパス セグメントのリテラルの一部として出現した場合、これらは異なる文字と見なされます (ただし、a と A は同じ文字と見なされます)。 文字 á と Á が <xref:System.UriTemplate> の {variableName} またはクエリ文字列の一部として出現した場合は、これらは同じ文字と見なされます (a と A も同じ文字と見なされます)。  
   
 ## <a name="see-also"></a>関連項目  
  [WCF Web HTTP プログラミング モデルの概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  

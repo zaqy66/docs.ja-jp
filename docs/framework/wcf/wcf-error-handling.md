@@ -2,12 +2,12 @@
 title: WCF エラー処理
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 90c1d5a955de10b7e65dd21bda7ebfb64f24399d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504917"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473448"
 ---
 # <a name="wcf-error-handling"></a>WCF エラー処理
 WCF アプリケーションで発生したエラーは次の 3 つのグループのいずれかに属します。  
@@ -43,8 +43,8 @@ WCF アプリケーションで発生したエラーは次の 3 つのグルー�
 ## <a name="servicehost-events"></a>ServiceHost イベント  
  <xref:System.ServiceModel.ServiceHost> クラスはサービスをホストし、エラー処理に必要になる可能性のあるいくつかのイベントを定義します。 例えば:  
   
-1.  <!--zz <xref:System.ServiceModel.ServiceHost.Faulted>-->  `System.ServiceModel.ServiceHost.Faulted`
+1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   
-2. <!--zz  <xref:System.ServiceModel.ServiceHost.UnknownMessageReceived>  --> `System.ServiceModel.ServiceHost.UnknownMessageReceived`
+2. <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>
   
  詳細については、「<xref:System.ServiceModel.ServiceHost>」を参照してください。

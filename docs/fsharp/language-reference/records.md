@@ -3,11 +3,11 @@ title: レコード (F#)
 description: F# のレコードがオプションでメンバーの名前付きの値の単純な集計を表す方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009389"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478150"
 ---
 # <a name="records"></a>レコード
 

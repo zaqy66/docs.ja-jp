@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d14fd1434cb87dc62babeabb79cb780e568aacb7
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490105"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471690"
 ---
 # <a name="how-to-configure-com-service-settings"></a>方法 : COM+ サービス設定を構成する
-COM+ サービス構成ツールを使用してアプリケーション インターフェイスを追加または削除すると、アプリケーション構成ファイル内の Web サービス構成が更新されます。 COM + ホスト モードでは、Application.config ファイルはアプリケーションのルート ディレクトリに配置されます (%PROGRAMFILES%\ComPlus アプリケーション\\%programfiles%\complus は既定値)。 いずれの Web ホスト モードでも、Web.config ファイルは指定した vroot ディレクトリに配置されます。  
+COM+ サービス構成ツールを使用してアプリケーション インターフェイスを追加または削除すると、アプリケーション構成ファイル内の Web サービス構成が更新されます。 COM + ホスト モードで、Application.config ファイルはアプリケーションのルート ディレクトリに配置 (アプリケーション %PROGRAMFILES%\ComPlus\\{appid} は既定値)。 いずれの Web ホスト モードでも、Web.config ファイルは指定した vroot ディレクトリに配置されます。  
   
 > [!NOTE]
->  クライアントとサーバー間のメッセージの改ざんを防止するには、メッセージの署名を使用する必要があります。 また、クライアントとサーバー間のメッセージから情報が漏えいするのを防止するには、メッセージまたはトランスポート層の暗号化を使用する必要があります。 同様に Windows Communication Foundation (WCF) サービスを使用してください調整の同時呼び出し、接続、インスタンス、および保留中の操作の数を制限します。 これによりリソースの過剰消費を防ぐことができます。 調整の動作は、サービス構成ファイルの設定で指定します。  
+>  クライアントとサーバー間のメッセージの改ざんを防止するには、メッセージの署名を使用する必要があります。 また、クライアントとサーバー間のメッセージから情報が漏えいするのを防止するには、メッセージまたはトランスポート層の暗号化を使用する必要があります。 Windows Communication Foundation (WCF) サービスと同様する必要がありますを使用して、調整同時呼び出し数、接続、インスタンス、および保留中の操作の数を制限します。 これによりリソースの過剰消費を防ぐことができます。 調整の動作は、サービス構成ファイルの設定で指定します。  
   
 ## <a name="example"></a>例  
  次のインターフェイスを実装するコンポーネントについて考えます。  
@@ -49,15 +49,15 @@ public interface IFinancesContract : IDisposable
   
  このサービスを使用するクライアント アプリケーションはこのコントラクトに準拠し、さらにアプリケーションの構成に指定したバインディングと互換性のあるバインディングを使用する必要があります。  
   
- 次のコード例は、既定の構成ファイルの例を示しています。 Windows Communication Foundation (WCF) Web サービスであるこの標準サービス モデル構成スキーマに準拠し、他の WCF サービス構成ファイルと同じ方法で編集できます。  
+ 次のコード例は、既定の構成ファイルの例を示しています。 Windows Communication Foundation (WCF) Web サービスであるこの標準のサービス モデル構成スキーマに準拠しているし、その他の WCF サービス構成ファイルと同じ方法で編集できます。  
   
  通常、次のような変更を行います。  
   
--   エンドポイント アドレスを既定の ApplicationName/ComponentName/InterfaceName という形式から、より利用しやすい形式に変更する。  
+- エンドポイント アドレスを既定の ApplicationName/ComponentName/InterfaceName という形式から、より利用しやすい形式に変更する。  
   
--   既定値からサービスの名前空間の変更"http://tempuri.org/InterfaceID"関連性の高いフォームをフォーム。  
+- 既定値からサービスの名前空間を変更する`http://tempuri.org/InterfaceID`フォーム関連性の高い形式にします。  
   
--   異なるトランスポート バインディングを使用するようにエンドポイントを変更する。  
+- 異なるトランスポート バインディングを使用するようにエンドポイントを変更する。  
   
      COM+ ホスト モードの場合、既定では名前付きパイプ トランスポートが使用されますが、その代わりに TCP などのコンピューターに関係のないトランスポートも使用できます。  
   

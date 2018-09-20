@@ -3,11 +3,11 @@ title: WSE 3.0 Web サービスの WCF への移行
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 ms.openlocfilehash: 21e36be178bb0dd0c52213d8c4c1387a564a0e5a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964775"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478567"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>WSE 3.0 Web サービスの WCF への移行
 WSE 3.0 Web サービスの Windows Communication Foundation (WCF) への移行の利点は、パフォーマンスが向上し、サポートの追加のトランスポート、追加のセキュリティ シナリオ、および ws-* 仕様。 WSE 3.0 から WCF に移行する Web サービスは、最大 200% ~ 400% のパフォーマンス向上に発生します。 WCF でサポートされているトランスポートの詳細については、次を参照してください。[トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)します。 WCF でサポートされるシナリオの一覧は、次を参照してください。[一般的なセキュリティ シナリオ](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)します。 WCF でサポートされている仕様の一覧は、次を参照してください。 [Web サービス プロトコルの相互運用性ガイド](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)します。  

@@ -2,12 +2,12 @@
 title: フィルターの選択
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743146"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478504"
 ---
 # <a name="choosing-a-filter"></a>フィルターの選択
 ルーティング サービスを構成する際には、適切なメッセージ フィルターを選択し、受信するメッセージと正確に一致できるように、それらのフィルターを構成することが重要です。 選択したフィルターの適合基準が幅広すぎる場合や、適切に構成されていない場合は、メッセージが正しくルーティングされません。 フィルターの適合基準が厳格すぎると、一部のメッセージの有効なルーティング先が見つからないことがあります。  
@@ -16,7 +16,7 @@ ms.locfileid: "43743146"
  ルーティング サービスで使用するフィルターを選択する際には、各フィルターのしくみと、受信メッセージの一部として使用できる情報について理解しておくことが重要です。 たとえば、すべてのメッセージが同じエンドポイントを介して受信される場合は、すべてのメッセージが Address フィルターと EndpointName フィルターに一致するため、これらのフィルターは役に立ちません。  
   
 ### <a name="action"></a>アクション  
- Action フィルターは <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> プロパティを確認します。 メッセージの Action ヘッダーの内容が、フィルター構成で指定されているフィルター データ値と一致する場合、このフィルターは `true` を返します。 次の例では、定義、`FilterElement`アクション フィルターを使用して、値を含むアクション ヘッダーを持つメッセージと一致する"http://namespace/contract/operation/"。  
+ Action フィルターは <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> プロパティを確認します。 メッセージの Action ヘッダーの内容が、フィルター構成で指定されているフィルター データ値と一致する場合、このフィルターは `true` を返します。 次の例では、定義、`FilterElement`アクション フィルターを使用して、値を含むアクション ヘッダーを持つメッセージと一致する`http://namespace/contract/operation/`します。
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -47,7 +47,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
  受信メッセージが一意のアドレス宛てである場合は、このフィルターを使用する必要があります。  
   
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix  
- EndpointAddressPrefix フィルターは、EndpointAddress フィルターに似ています。 EndpointAddressPrefix フィルターは、メッセージを受信した EndpointAddress を確認します。 ただし、EndpointAddressPrefix フィルターは、フィルター構成で指定された値で始まるアドレスを一致させることによって、ワイルドカードとして機能します。 次の例では、定義、 `FilterElement` EndpointAddressPrefix フィルターを使用して、宛てのメッセージに一致する"http://\<ホスト名 >/vdir *"。  
+ EndpointAddressPrefix フィルターは、EndpointAddress フィルターに似ています。 EndpointAddressPrefix フィルターは、メッセージを受信した EndpointAddress を確認します。 ただし、EndpointAddressPrefix フィルターは、フィルター構成で指定された値で始まるアドレスを一致させることによって、ワイルドカードとして機能します。 次の例では、定義、 `FilterElement` EndpointAddressPrefix フィルターを使用して、宛てのメッセージに一致する`http://<hostname>/vdir*`します。  
   
 ```xml  
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />  
