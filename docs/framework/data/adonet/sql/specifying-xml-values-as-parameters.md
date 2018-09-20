@@ -6,24 +6,24 @@ dev_langs:
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
 ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517986"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591148"
 ---
-# <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="f1658-102">パラメーターとしての XML 値の指定</span><span class="sxs-lookup"><span data-stu-id="f1658-102">Specifying XML Values as Parameters</span></span>
-<span data-ttu-id="f1658-103">クエリには、値を持つ XML 文字列のパラメーターが必要な場合は、開発者がのインスタンスを使用してその値を提供できます、 **SqlXml**データ型。</span><span class="sxs-lookup"><span data-stu-id="f1658-103">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="f1658-104">特別な処理はありません。SQL Server の XML 列では、他のデータ型とまったく同じ方法でパラメーター値をそのまま使用します。</span><span class="sxs-lookup"><span data-stu-id="f1658-104">There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.</span></span>  
+# <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="82207-102">パラメーターとしての XML 値の指定</span><span class="sxs-lookup"><span data-stu-id="82207-102">Specifying XML Values as Parameters</span></span>
+<span data-ttu-id="82207-103">クエリには、値を持つ XML 文字列のパラメーターが必要な場合は、開発者がのインスタンスを使用してその値を提供できます、 **SqlXml**データ型。</span><span class="sxs-lookup"><span data-stu-id="82207-103">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="82207-104">特別な処理はありません。SQL Server の XML 列では、他のデータ型とまったく同じ方法でパラメーター値をそのまま使用します。</span><span class="sxs-lookup"><span data-stu-id="82207-104">There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f1658-105">例</span><span class="sxs-lookup"><span data-stu-id="f1658-105">Example</span></span>  
- <span data-ttu-id="f1658-106">次のコンソール アプリケーションで新しいテーブルを作成し、 **AdventureWorks**データベース。</span><span class="sxs-lookup"><span data-stu-id="f1658-106">The following console application creates a new table in the **AdventureWorks** database.</span></span> <span data-ttu-id="f1658-107">新しいテーブルには、という名前の列が含まれています。 **SalesID**という名前の XML 列と**SalesInfo**します。</span><span class="sxs-lookup"><span data-stu-id="f1658-107">The new table includes a column named **SalesID** and an XML column named **SalesInfo**.</span></span>  
+## <a name="example"></a><span data-ttu-id="82207-105">例</span><span class="sxs-lookup"><span data-stu-id="82207-105">Example</span></span>  
+ <span data-ttu-id="82207-106">次のコンソール アプリケーションで新しいテーブルを作成し、 **AdventureWorks**データベース。</span><span class="sxs-lookup"><span data-stu-id="82207-106">The following console application creates a new table in the **AdventureWorks** database.</span></span> <span data-ttu-id="82207-107">新しいテーブルには、という名前の列が含まれています。 **SalesID**という名前の XML 列と**SalesInfo**します。</span><span class="sxs-lookup"><span data-stu-id="82207-107">The new table includes a column named **SalesID** and an XML column named **SalesInfo**.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f1658-108">**AdventureWorks**既定では、SQL Server をインストールするときにサンプル データベースはインストールされません。</span><span class="sxs-lookup"><span data-stu-id="f1658-108">The **AdventureWorks** sample database is not installed by default when you install SQL Server.</span></span> <span data-ttu-id="f1658-109">SQL Server Setup を実行してインストールします。</span><span class="sxs-lookup"><span data-stu-id="f1658-109">You can install it by running SQL Server Setup.</span></span>  
+>  <span data-ttu-id="82207-108">**AdventureWorks**既定では、SQL Server をインストールするときにサンプル データベースはインストールされません。</span><span class="sxs-lookup"><span data-stu-id="82207-108">The **AdventureWorks** sample database is not installed by default when you install SQL Server.</span></span> <span data-ttu-id="82207-109">SQL Server Setup を実行してインストールします。</span><span class="sxs-lookup"><span data-stu-id="82207-109">You can install it by running SQL Server Setup.</span></span>  
   
- <span data-ttu-id="f1658-110">この例では、新しいテーブルに行を挿入するために <xref:System.Data.SqlClient.SqlCommand> オブジェクトを準備します。</span><span class="sxs-lookup"><span data-stu-id="f1658-110">The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table.</span></span> <span data-ttu-id="f1658-111">保存したファイルに必要な XML データを提供する、 **SalesInfo**列。</span><span class="sxs-lookup"><span data-stu-id="f1658-111">A saved file provides the XML data needed for the **SalesInfo** column.</span></span>  
+ <span data-ttu-id="82207-110">この例では、新しいテーブルに行を挿入するために <xref:System.Data.SqlClient.SqlCommand> オブジェクトを準備します。</span><span class="sxs-lookup"><span data-stu-id="82207-110">The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table.</span></span> <span data-ttu-id="82207-111">保存したファイルに必要な XML データを提供する、 **SalesInfo**列。</span><span class="sxs-lookup"><span data-stu-id="82207-111">A saved file provides the XML data needed for the **SalesInfo** column.</span></span>  
   
- <span data-ttu-id="f1658-112">この例を実行させるために必要なファイルを作成するには、プロジェクトと同じフォルダー内に新しいテキスト ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="f1658-112">To create the file needed for the example to run, create a new text file in the same folder as your project.</span></span> <span data-ttu-id="f1658-113">ファイルに MyTestStoreData.xml という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="f1658-113">Name the file MyTestStoreData.xml.</span></span> <span data-ttu-id="f1658-114">ファイルをメモ帳で開き、次のテキストをコピーして貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="f1658-114">Open the file in Notepad and copy and paste the following text:</span></span>  
+ <span data-ttu-id="82207-112">この例を実行させるために必要なファイルを作成するには、プロジェクトと同じフォルダー内に新しいテキスト ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="82207-112">To create the file needed for the example to run, create a new text file in the same folder as your project.</span></span> <span data-ttu-id="82207-113">ファイルに MyTestStoreData.xml という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="82207-113">Name the file MyTestStoreData.xml.</span></span> <span data-ttu-id="82207-114">ファイルをメモ帳で開き、次のテキストをコピーして貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="82207-114">Open the file in Notepad and copy and paste the following text:</span></span>  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
@@ -159,7 +159,7 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f1658-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="f1658-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="82207-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="82207-115">See Also</span></span>  
  <xref:System.Data.SqlTypes.SqlXml>  
- [<span data-ttu-id="f1658-116">SQL Server における XML データ</span><span class="sxs-lookup"><span data-stu-id="f1658-116">XML Data in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
- [<span data-ttu-id="f1658-117">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="f1658-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="82207-116">SQL Server における XML データ</span><span class="sxs-lookup"><span data-stu-id="82207-116">XML Data in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [<span data-ttu-id="82207-117">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="82207-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
