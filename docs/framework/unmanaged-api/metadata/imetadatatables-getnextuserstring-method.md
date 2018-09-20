@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01b326765e792bf97658d951a2d5590d22eff546
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708998"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45528300"
 ---
-# <a name="imetadatatablesgetnextuserstring-method"></a><span data-ttu-id="9f8fb-102">IMetaDataTables::GetNextUserString メソッド</span><span class="sxs-lookup"><span data-stu-id="9f8fb-102">IMetaDataTables::GetNextUserString Method</span></span>
-<span data-ttu-id="9f8fb-103">現在のテーブル列で [次へ]、ハード コーディングされた文字列を含む行のインデックスを取得します。</span><span class="sxs-lookup"><span data-stu-id="9f8fb-103">Gets the index of the row that contains the next hard-coded string in the current table column.</span></span>  
+# <a name="imetadatatablesgetnextuserstring-method"></a><span data-ttu-id="68b94-102">IMetaDataTables::GetNextUserString メソッド</span><span class="sxs-lookup"><span data-stu-id="68b94-102">IMetaDataTables::GetNextUserString Method</span></span>
+<span data-ttu-id="68b94-103">現在のテーブル列で [次へ]、ハード コーディングされた文字列を含む行のインデックスを取得します。</span><span class="sxs-lookup"><span data-stu-id="68b94-103">Gets the index of the row that contains the next hard-coded string in the current table column.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f8fb-104">構文</span><span class="sxs-lookup"><span data-stu-id="9f8fb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68b94-104">構文</span><span class="sxs-lookup"><span data-stu-id="68b94-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNextUserString (  
@@ -36,25 +36,25 @@ HRESULT GetNextUserString (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9f8fb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9f8fb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="68b94-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="68b94-105">Parameters</span></span>  
  `ixUserString`  
- <span data-ttu-id="9f8fb-106">[in]現在の文字列の列からインデックス値。</span><span class="sxs-lookup"><span data-stu-id="9f8fb-106">[in] An index value from the current string column.</span></span>  
+ <span data-ttu-id="68b94-106">[in]現在の文字列の列からインデックス値。</span><span class="sxs-lookup"><span data-stu-id="68b94-106">[in] An index value from the current string column.</span></span>  
   
  `pNext`  
- <span data-ttu-id="9f8fb-107">[out]列には、次の文字列の行インデックスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="9f8fb-107">[out] A pointer to the row index of the next string in the column.</span></span>  
+ <span data-ttu-id="68b94-107">[out]列には、次の文字列の行インデックスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="68b94-107">[out] A pointer to the row index of the next string in the column.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9f8fb-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="9f8fb-108">Remarks</span></span>  
- <span data-ttu-id="9f8fb-109">お勧めしません、このメソッドを使用して一貫性のある結果を返さないためです。</span><span class="sxs-lookup"><span data-stu-id="9f8fb-109">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="9f8fb-110">GUID の表については、共通言語基盤 (CLI) のドキュメント、特に「Partition II:: メタデータ Definition and Semantics」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9f8fb-110">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="9f8fb-111">ドキュメントはオンラインで入手できます。MSDN の「[ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212)」 (ECMA の C# および共通言語基盤の標準規格) と、ECMA のインターナショナル Web サイトにある「[Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9f8fb-111">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="68b94-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="68b94-108">Remarks</span></span>  
+ <span data-ttu-id="68b94-109">お勧めしません、このメソッドを使用して一貫性のある結果を返さないためです。</span><span class="sxs-lookup"><span data-stu-id="68b94-109">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="68b94-110">GUID の表については、共通言語基盤 (CLI) のドキュメント、特に「Partition II:: メタデータ Definition and Semantics」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="68b94-110">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="68b94-111">ドキュメントはオンラインで入手できます。MSDN の「[ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212)」 (ECMA の C# および共通言語基盤の標準規格) と、ECMA のインターナショナル Web サイトにある「[Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="68b94-111">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9f8fb-112">要件</span><span class="sxs-lookup"><span data-stu-id="9f8fb-112">Requirements</span></span>  
- <span data-ttu-id="9f8fb-113">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9f8fb-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="68b94-112">要件</span><span class="sxs-lookup"><span data-stu-id="68b94-112">Requirements</span></span>  
+ <span data-ttu-id="68b94-113">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="68b94-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9f8fb-114">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9f8fb-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="68b94-114">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="68b94-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9f8fb-115">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="9f8fb-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="68b94-115">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="68b94-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9f8fb-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f8fb-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="68b94-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68b94-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f8fb-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="9f8fb-117">See Also</span></span>  
- [<span data-ttu-id="9f8fb-118">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9f8fb-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="9f8fb-119">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9f8fb-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="68b94-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="68b94-117">See Also</span></span>  
+ [<span data-ttu-id="68b94-118">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="68b94-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
+ [<span data-ttu-id="68b94-119">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="68b94-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
