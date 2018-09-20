@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
 ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517986"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591148"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>パラメーターとしての XML 値の指定
 クエリには、値を持つ XML 文字列のパラメーターが必要な場合は、開発者がのインスタンスを使用してその値を提供できます、 **SqlXml**データ型。 特別な処理はありません。SQL Server の XML 列では、他のデータ型とまったく同じ方法でパラメーター値をそのまま使用します。  

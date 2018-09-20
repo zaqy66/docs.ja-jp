@@ -9,11 +9,11 @@ helpviewer_keywords:
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
 ms.openlocfilehash: 271652fe9e98f9a381da5655bd313e12f8ee917d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45527138"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45988310"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>方法 : 印刷ダイアログ ボックスを呼び出す
 アプリケーションから印刷する機能を提供することが単に作成して開くと、<xref:System.Windows.Controls.PrintDialog>オブジェクト。  

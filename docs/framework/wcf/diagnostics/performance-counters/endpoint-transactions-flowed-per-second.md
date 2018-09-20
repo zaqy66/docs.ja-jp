@@ -3,11 +3,11 @@ title: 'エンドポイント : 1 秒あたりのトランザクション フロ
 ms.date: 03/30/2017
 ms.assetid: 0f370ff1-a913-450b-bccb-c279ad165b3d
 ms.openlocfilehash: 79f50b6706facd040ec2d325c676f210d5327bf8
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529552"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002048"
 ---
 # <a name="endpoint-transactions-flowed-per-second"></a>エンドポイント : 1 秒あたりのトランザクション フロー
 カウンター名 : 1 秒あたりのトランザクション フロー。  

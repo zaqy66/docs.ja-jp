@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
 ms.openlocfilehash: a35a0bf54d7850e4b10e59c259e4ee512bc93aad
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45990610"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>EntityConnection の接続文字列を作成する方法
 このトピックでは、<xref:System.Data.EntityClient.EntityConnection> を作成する方法について説明します。  
