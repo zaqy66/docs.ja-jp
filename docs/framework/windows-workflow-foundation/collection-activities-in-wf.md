@@ -2,15 +2,15 @@
 title: WF 内のコレクション アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b3a02cdd020d303519f605a206d62b42f4fe731
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516728"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538389"
 ---
 # <a name="collection-activities-in-wf"></a>WF 内のコレクション アクティビティ
-コレクション アクティビティはワークフローのコレクション オブジェクトの作業に使用します。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、コレクション内の項目の追加および削除、コレクション内の項目の存在を確認するテスト、およびコレクションの消去を行うシステム標準アクティビティがあります。 `ExistsInCollection` および`RemoveFromCollection`が、<xref:System.Activities.OutArgument%601>型の<xref:System.Boolean>結果を示します。  
+コレクション アクティビティはワークフローのコレクション オブジェクトの作業に使用します。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、コレクション内の項目の追加および削除、コレクション内の項目の存在を確認するテスト、およびコレクションの消去を行うシステム標準アクティビティがあります。 `ExistsInCollection` `RemoveFromCollection`が、<xref:System.Activities.OutArgument%601>型の<xref:System.Boolean>結果を示します。  
   
 > [!IMPORTANT]
 >  コレクション アクティビティが、基礎となるコレクション オブジェクトの設定前に実行された場合、<xref:System.InvalidOperationException> がスローされ、アクティビティは失敗します。  
@@ -25,7 +25,7 @@ ms.locfileid: "33516728"
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|指定したコレクションから項目を削除し、項目が正常に削除された場合は `true` を返します。|  
   
 ## <a name="using-collection-activities"></a>コレクション アクティビティの使用  
- 次のコードは、ワークフロー変数として宣言されたコレクションとやり取りする方法の例です。 使用するコレクションは、 <!--zz <xref:System.Collections.Generic.List%E2%80%991>--> `System.Collections.Generic.List`の<xref:System.String>という名前のオブジェクト`fruitList`です。  
+ 次のコードは、ワークフロー変数として宣言されたコレクションとやり取りする方法の例です。 使用するコレクションは、<xref:System.Collections.Generic.List%601> という <xref:System.String> オブジェクトの `fruitList` です。  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -227,7 +227,7 @@ Activity wf = new Sequence
   
  上のコード サンプルは、<xref:Microsoft.CSharp.Activities.CSharpValue%601> の代わりに <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> を使用しても作成できます。  
   
-```  
+```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
 {  
     Default = new CSharpValue<ICollection<string>>("new List<String> From {\"Apple\", \"Orange\"};"),  

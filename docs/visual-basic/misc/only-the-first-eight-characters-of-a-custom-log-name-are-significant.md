@@ -3,11 +3,11 @@ title: カスタム ログ名の最初の 8 文字が有効です
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
 ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46477900"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46519212"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>カスタム ログ名の最初の 8 文字が有効です
 イベント ログ名の一意性を調べるときには、最初の 8 文字だけが考慮されます。 最初の 8 文字に同じ文字を使用するイベント ログが複数ある場合は、競合する可能性があります。  

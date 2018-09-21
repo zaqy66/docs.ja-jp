@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
 ms.openlocfilehash: af14c92ab27885deec878dc33e7b94035f43e65b
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46488952"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46516744"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Visual Studio Tools for Docker (Windows で Visual Studio) を使用
 

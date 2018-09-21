@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46470902"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46561553"
 ---
 # <a name="delete-function"></a>関数を削除します。
 CIM クラスの定義から、指定したプロパティとその修飾子のすべてを削除します。

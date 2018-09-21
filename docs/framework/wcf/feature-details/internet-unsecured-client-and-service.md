@@ -8,11 +8,11 @@ ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: b2c71af169018f272a6ca538bba9191f9ddbc0dd
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481644"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46507990"
 ---
 # <a name="internet-unsecured-client-and-service"></a>セキュリティで保護されていないインターネット環境のクライアントとサービス
 次の図は、パブリック、セキュリティ保護されていない Windows Communication Foundation (WCF) クライアントとサービスの例を示します。  

@@ -3,11 +3,11 @@ title: SQL Server のバイナリ データと大きな値のデータ
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
 ms.openlocfilehash: 9ebbe23dfbcac7825ce449dd40f62b921d13ab4a
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46470949"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46507944"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server のバイナリ データと大きな値のデータ
 SQL Server では `max` 指定子が提供されています。これにより、`varchar`、`nvarchar`、および `varbinary` データ型の記憶容量が拡張されています。 `varchar(max)`、 `nvarchar(max)`、および`varbinary(max)`は、総称*大きな値データ型*します。 大きな値のデータ型を使用すると、最大で 2^31-1 バイトのデータを格納できます。  

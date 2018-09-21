@@ -3,11 +3,11 @@ title: SQL Workflow Instance Store のプロパティ
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972677"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538704"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>SQL Workflow Instance Store のプロパティ
 このセクションの各トピックでは、SQL Workflow Instance Store のプロパティの詳細について説明します。  

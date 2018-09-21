@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
 ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007140"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525738"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>CommandBuilder でのコマンドの生成
 `SelectCommand` プロパティが実行時に動的に指定される場合、たとえばクエリ ツールを使用してユーザーの記述したクエリ構文を解釈する場合は、適切な `InsertCommand`、`UpdateCommand`、または `DeleteCommand` をデザイン時に指定することはできません。 <xref:System.Data.DataTable> を単一データベース テーブルに割り当てたり、単一データベースから生成する場合は、<xref:System.Data.Common.DbCommandBuilder> オブジェクトを利用して自動的に `DeleteCommand` の `InsertCommand`、`UpdateCommand`、および <xref:System.Data.Common.DbDataAdapter> を生成できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "46007140"
 |`UpdateCommand`|`RowState` が <xref:System.Data.DataRowState.Modified> に設定されているテーブル内のすべての行に対して、データ ソースの行を更新します。 ID や式などの更新不可能な列を除く、すべての列の値を更新します。 データ ソースの列の値と該当行の主キー列の値が一致し、さらにデータ ソースのその他の列がその行の元の値と一致する、すべての行を更新します。 詳細については、このトピックで後述する「更新および削除のオプティミスティック同時実行制御」を参照してください。|  
 |`DeleteCommand`|`RowState` が <xref:System.Data.DataRowState.Deleted> に設定されているテーブル内のすべての行に対して、データ ソースの行を削除します。 列の値とその行の主キー列の値が一致し、さらにデータ ソースのその他の列がその行の元の値と一致する、すべての行を削除します。 詳細については、このトピックで後述する「更新および削除のオプティミスティック同時実行制御」を参照してください。|  
   
-## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>更新および削除のオプティミスティック同時実行制御  
+## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>更新および削除のオプティミスティック コンカレンシー  
  UPDATE および DELETE ステートメントを自動的にコマンドを生成するためのロジックに基づく*オプティミスティック同時実行制御*-つまり、レコードを編集するためにロックされていない、他のユーザーまたはプロセスによっていつでも変更できます。 レコードは SELECT ステートメントによって返された後、UPDATE ステートメントまたは DELETE ステートメントの実行前に変更されている可能性もあるため、自動的に生成される UPDATE ステートメントまたは DELETE ステートメントには、元のすべての値を含み、データ ソースから削除されていない行だけを更新するように指定した WHERE 句が含まれます。 これにより、新しいデータが上書きされるのを防ぎます。 自動的に生成された更新コマンドが削除済みの行、または <xref:System.Data.DataSet> にある元の値が含まれていない行を更新しようとすると、コマンドはどのレコードにも反映されずに、<xref:System.Data.DBConcurrencyException> がスローされます。  
   
  元の値とは関係なく UPDATE または DELETE を実行する場合は、`UpdateCommand` に明示的に `DataAdapter` を設定し、コマンドの自動生成は行わないでください。  

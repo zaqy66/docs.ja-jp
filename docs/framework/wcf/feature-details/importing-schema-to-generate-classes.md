@@ -8,47 +8,47 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 338daa031ac2c1b31a121908643a15449c5401a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497040"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46517702"
 ---
 # <a name="importing-schema-to-generate-classes"></a>クラスを作成するためのスキーマのインポート
-Windows Communication Foundation (WCF) で使用可能なスキーマからクラスを生成するには、使用、<xref:System.Runtime.Serialization.XsdDataContractImporter>クラスです。 ここでは、生成時に指定できる各種のオプションについて解説します。  
+Windows Communication Foundation (WCF) で使用可能なスキーマからクラスを生成するには、使用、<xref:System.Runtime.Serialization.XsdDataContractImporter>クラス。 ここでは、生成時に指定できる各種のオプションについて解説します。  
   
-## <a name="the-import-process"></a>インポート処理  
+## <a name="the-import-process"></a>インポート処理
  スキーマのインポート処理は、<xref:System.Xml.Schema.XmlSchemaSet> を用意し、<xref:System.CodeDom.CodeCompileUnit> を生成することから始まります。  
   
  `XmlSchemaSet` は、一連の XML スキーマ定義言語 (XSD) スキーマ ドキュメントを表す [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のスキーマ オブジェクト モデル (SOM) の一部です。 一連の XSD ドキュメントから `XmlSchemaSet` オブジェクトを生成する過程では、各ドキュメントを逆シリアル化して <xref:System.Xml.Schema.XmlSchema> オブジェクトにし (<xref:System.Xml.Serialization.XmlSerializer> を使用)、新規に作っておいた空の `XmlSchemaSet` に追加していきます。  
   
  `CodeCompileUnit` は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] コードを抽象化して表す、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のコード ドキュメント オブジェクト モデル (CodeDOM) の一部です。 実際のコードを `CodeCompileUnit` から生成するには、<xref:System.CodeDom.Compiler.CodeDomProvider> のサブクラスである、<xref:Microsoft.CSharp.CSharpCodeProvider> や <xref:Microsoft.VisualBasic.VBCodeProvider> を使います。  
   
-#### <a name="to-import-a-schema"></a>スキーマをインポートするには  
+### <a name="to-import-a-schema"></a>スキーマをインポートするには  
   
-1.  <xref:System.Runtime.Serialization.XsdDataContractImporter> のインスタンスを作成します。  
+1. <xref:System.Runtime.Serialization.XsdDataContractImporter> のインスタンスを作成します。  
   
-2.  省略可能です。 `CodeCompileUnit` をコンストラクターに渡します。 スキーマのインポート時に生成された型がこの `CodeCompileUnit` インスタンスに追加されるので、以降の処理は、`CodeCompileUnit` が空でない状態から始まります。  
+2. 省略可能です。 `CodeCompileUnit` をコンストラクターに渡します。 スキーマのインポート時に生成された型がこの `CodeCompileUnit` インスタンスに追加されるので、以降の処理は、`CodeCompileUnit` が空でない状態から始まります。  
   
-3.  省略可能です。 <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> メソッドのいずれかを呼び出します。 指定されたスキーマが有効なデータ コントラクト スキーマであって、インポートしても問題ないかどうかを判断するメソッドです。 `CanImport` メソッドには、次の手順に出てくる `Import` と同様に、オーバーロードがあります。  
+3. 省略可能です。 <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> メソッドのいずれかを呼び出します。 指定されたスキーマが有効なデータ コントラクト スキーマであって、インポートしても問題ないかどうかを判断するメソッドです。 `CanImport` メソッドには、次の手順に出てくる `Import` と同様に、オーバーロードがあります。  
   
-4.  オーバーロードされた `Import` メソッドのいずれか、たとえば <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29> を呼び出します。  
+4. オーバーロードされた `Import` メソッドのいずれか、たとえば <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29> を呼び出します。  
   
      これは、指定しなければならない引数が `XmlSchemaSet` だけという最も簡潔なオーバーロードであり、匿名型を含め、一連のスキーマに記述されている型をすべてインポートできます。 他に、XSD 型、あるいはインポートする型のリストを (<xref:System.Xml.XmlQualifiedName>、または `XmlQualifiedName` オブジェクトのコレクションとして) 指定できるオーバーロードもあります。 この場合は、指定した型だけがインポートされます。 また、引数として <xref:System.Xml.Schema.XmlSchemaElement> を受け取り、`XmlSchemaSet` のうち特定の要素を、対応する型 (匿名型を含む) と併せてインポートするオーバーロードもあります。 このメソッドの戻り値は `XmlQualifiedName` であり、この要素に対応して生成された型のデータ コントラクト名を表します。  
   
      `Import` メソッドを何度も呼び出すと、同じ `CodeCompileUnit` に複数の項目が追加されます。 `CodeCompileUnit` に既に存在する型は生成されません。 したがって、`Import` オブジェクトをいくつも使うのではなく、同じ `XsdDataContractImporter` の `XsdDataContractImporter` を必要な回数呼び出すようにしてください。 同じ型が重複して生成されることがないので、この方法をお勧めします。  
   
     > [!NOTE]
-    >  インポート中に障害が発生した場合の `CodeCompileUnit` の状態は不定です。 このような `CodeCompileUnit` を使うと、セキュリティ上の脆弱性につながるおそれがあります。  
+    > インポート中に障害が発生した場合の `CodeCompileUnit` の状態は不定です。 このような `CodeCompileUnit` を使うと、セキュリティ上の脆弱性につながるおそれがあります。  
   
-5.  `CodeCompileUnit` プロパティを介して、<xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> にアクセスします。  
+5. `CodeCompileUnit` プロパティを介して、<xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> にアクセスします。  
   
 ### <a name="import-options-customizing-the-generated-types"></a>インポート オプション : 生成された型のカスタマイズ  
  <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> の <xref:System.Runtime.Serialization.XsdDataContractImporter> プロパティとして <xref:System.Runtime.Serialization.ImportOptions> クラスのインスタンスを設定することにより、インポート処理の方法を制御できます。 生成される型に直接影響するオプションが多数あります。  
   
 #### <a name="controlling-the-access-level-generateinternal-or-the-internal-switch"></a>アクセス レベルの制御 (GenerateInternal または /internal スイッチ)  
- これに対応して、 **/内部**スイッチ、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)です。  
+ これに対応して、 **/内部**スイッチ、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。  
   
  通常、スキーマから生成されるのはパブリック型です。ここにプライベート フィールドや対応するパブリック データ メンバー プロパティが定義されます。 パブリック型ではなく内部型を生成したい場合は、<xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> プロパティを `true` としてください。  
   
@@ -58,21 +58,21 @@ Windows Communication Foundation (WCF) で使用可能なスキーマからク�
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
   
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>名前空間の制御 (Namespaces または /namespace スイッチ)  
- これに対応して、 **/namespace**スイッチ、`Svcutil.exe`ツールです。  
+ これに対応して、 **/namespace**スイッチ、`Svcutil.exe`ツール。  
   
- 通常、スキーマから生成された型に生成される[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]名前空間の特定に対応する各 XSD 名前空間を持つ、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]で説明するマッピングに従って名前空間[データ コントラクト スキーマの参照](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). この対応関係は、<xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> の <xref:System.Collections.Generic.Dictionary%602> プロパティでカスタマイズできます。 指定した XSD 名前空間がディクショナリに存在する場合、その XSD 名前空間に対応する [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 名前空間も、ディクショナリから取得されます。  
+ スキーマから生成された型を生成する通常、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]名前空間の特定に対応する各 XSD 名前空間を持つ、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]名前空間で説明されているマッピングに基づく[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). この対応関係は、<xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> の <xref:System.Collections.Generic.Dictionary%602> プロパティでカスタマイズできます。 指定した XSD 名前空間がディクショナリに存在する場合、その XSD 名前空間に対応する [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 名前空間も、ディクショナリから取得されます。  
   
  たとえば、次のスキーマを考えます。  
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- 次の例では、`Namespaces`プロパティ マップを"http://schemas.contoso.com/carSchema"を"Contoso.Cars"に名前空間。  
+ 次の例では、`Namespaces`プロパティにマップする、 `http://schemas.contoso.com/carSchema` "Contoso.Cars"に名前空間。  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
   
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>SerializableAttribute の追加 (GenerateSerializable または /serializable スイッチ)  
- これに対応して、 **/serializable**スイッチ、`Svcutil.exe`ツールです。  
+ これに対応して、 **/serializable**スイッチ、`Svcutil.exe`ツール。  
   
  スキーマから生成された型を、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ランタイムのシリアル化エンジン (<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> クラス、<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> クラスなど) でシリアル化しなければならないことがあります。 たとえば、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] リモート処理に使うような場合がこれに当たります。 そのためには、生成された型に対して、通常の <xref:System.SerializableAttribute> 属性に加え、<xref:System.Runtime.Serialization.DataContractAttribute> 属性も適用する必要があります。 `GenerateSerializable` オプションを `true` に設定すると、この属性が自動的に生成されます。  
   
@@ -84,7 +84,7 @@ Windows Communication Foundation (WCF) で使用可能なスキーマからク�
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>データ バインディング機能の追加 (EnableDataBinding または /enableDataBinding スイッチ)  
  これに対応して、 **/enableDataBinding** Svcutil.exe ツールをオンにします。  
   
- スキーマから生成された型を GUI コンポーネントにバインドして、この型のインスタンスを更新したとき、自動的に UI にも反映されるようにする場合があります。 `XsdDataContractImporter` は、生成する型に <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装して、プロパティが変更されるとイベントが発生するようにすることができます。 このインターフェイス (など Windows Presentation Foundation (WPF)) をサポートするクライアント側 UI プログラミング環境で使用するための型を生成する場合は、設定、<xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A>プロパティを`true`この機能を有効にします。  
+ スキーマから生成された型を GUI コンポーネントにバインドして、この型のインスタンスを更新したとき、自動的に UI にも反映されるようにする場合があります。 `XsdDataContractImporter` は、生成する型に <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装して、プロパティが変更されるとイベントが発生するようにすることができます。 このインターフェイス (など Windows Presentation Foundation (WPF)) をサポートするクライアント UI プログラミング環境で使用するための型を生成する場合は、設定、<xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A>プロパティを`true`この機能を有効にします。  
   
  `Vehicle` プロパティを <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> に設定して生成した `true` クラスの例を以下に示します。  
   
@@ -101,9 +101,9 @@ Windows Communication Foundation (WCF) で使用可能なスキーマからク�
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  関連付けもリストと見なすことができます。 たとえば、上記の関連付けは、文字列と整数の 2 つのフィールドから成る複雑な `city` オブジェクトのリストと考えることも可能です。 どちらの方法であっても、XSD スキーマで表現できます。 WCF に固有の特別な注釈がスキーマ内に存在しない限りに、このようなパターンはリストとして扱われます常に、一覧と、関連付けとを区別する方法はありません。 注釈がある場合は、関連付けを表すものとして扱われます。 詳細については、次を参照してください。[データ コントラクト スキーマの参照](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)です。  
+>  関連付けもリストと見なすことができます。 たとえば、上記の関連付けは、文字列と整数の 2 つのフィールドから成る複雑な `city` オブジェクトのリストと考えることも可能です。 どちらの方法であっても、XSD スキーマで表現できます。 WCF に固有の特殊な注釈がスキーマに存在していない場合に、このようなパターンはリストとして扱われます常に、一覧と、アソシエーションを区別する方法はありません。 注釈がある場合は、関連付けを表すものとして扱われます。 詳細については、次を参照してください。 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。  
   
- リストは通常、ジェネリック リストから派生したコレクション データ コントラクト、または [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の配列としてインポートされます。スキーマがコレクションの標準的な名前付けパターンに従っているかどうかによって切り分けます。 さらに詳しく記載されて[データ コントラクトのコレクション型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)です。 関連付けは通常、<xref:System.Collections.Generic.Dictionary%602>、または辞書オブジェクトから派生したコレクション データ コントラクトとしてインポートされます。 たとえば、次のスキーマを考えます。  
+ リストは通常、ジェネリック リストから派生したコレクション データ コントラクト、または [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の配列としてインポートされます。スキーマがコレクションの標準的な名前付けパターンに従っているかどうかによって切り分けます。 これはで詳しく説明されている[データ コントラクトのコレクション型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)します。 関連付けは通常、<xref:System.Collections.Generic.Dictionary%602>、または辞書オブジェクトから派生したコレクション データ コントラクトとしてインポートされます。 たとえば、次のスキーマを考えます。  
   
  [!code-xml[c_SchemaImportExport#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
   
@@ -127,7 +127,7 @@ Windows Communication Foundation (WCF) で使用可能なスキーマからク�
   
  参照されるコレクション型のしくみは、プリミティブ型のコレクションばかりでなく、複合型のコレクション (他のコレクションから成るコレクションを含む) にも同様に働きます。  
   
- `ReferencedCollectionTypes`プロパティに対応して、 **/collectionType** SvcUtil.exe ツールをオンにします。 複数のコレクション型を参照する、 **/collectionType**スイッチを複数回指定する必要があります。 型が MsCorLib.dll にない場合は、そのアセンブリも参照する必要を使用して、 **/reference**スイッチします。  
+ `ReferencedCollectionTypes`プロパティに対応して、 **/collectionType** SvcUtil.exe ツールをオンにします。 複数のコレクション型を参照する、 **/collectionType**スイッチを複数回指定する必要があります。 型が mscorlib.dll に含まれてない場合は、そのアセンブリも参照する必要を使用して、 **/reference**スイッチします。  
   
 #### <a name="import-options-referencing-existing-types"></a>インポート オプション : 既存の型の参照  
  スキーマ内の型が既存の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型に対応する場合は、その型を一から作成する必要はありません  (以下の説明は、非コレクション型にのみ当てはまります。 コレクション型については、前のセクションを参照してください)。  
@@ -138,21 +138,21 @@ Windows Communication Foundation (WCF) で使用可能なスキーマからク�
   
  "参照される" 型のコレクションに、データ コントラクト名と名前空間が同一である型を重複して追加しても、その名前と名前空間でスキーマ型をインポートしない限り問題ありません。 したがって、実際にはスキーマに現れることのない型については重複を気にすることなく、アセンブリ内の型をすべてコレクションに追加してしまうことができます。  
   
- `ReferencedTypes`プロパティに対応して、 **/reference** Svcutil.exe ツールの操作の特定のモードに切り替えます。  
+ `ReferencedTypes`プロパティに対応して、 **/reference** Svcutil.exe ツールの特定のモードに切り替えます。  
   
 > [!NOTE]
->  Svcutil.exe を使用する場合または (Visual Studio)、**サービス参照の追加**MsCorLib.dll に型のすべてのツールが自動的に参照します。  
+>  Svcutil.exe を使用する場合、または (Visual Studio) で、**サービス参照の追加**MsCorLib.dll に型のすべてのツールが自動的に参照します。  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>インポート オプション : 非データ コントラクト スキーマを IXmlSerializable 型としてインポート  
  <xref:System.Runtime.Serialization.XsdDataContractImporter> は、どのようなスキーマでもインポートできるわけではありません。 未対応のスキーマ構造 (たとえば XML 属性) をインポートしようとすると例外が発生します。 ただし <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> プロパティを `true` に設定すると、対応可能なスキーマの範囲が広がります。 `true` に設定すると、<xref:System.Runtime.Serialization.XsdDataContractImporter> は、<xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装した型を生成します。 そのため、これらの型の XML 表現に直接アクセスできるようになります。  
   
 ##### <a name="design-considerations"></a>設計上の考慮事項  
   
--   弱く型指定された XML 表現を直接扱うのは困難です。 データ コントラクトと互換性がないスキーマを厳密に型指定された方法で操作するには、<xref:System.Xml.Serialization.XmlSerializer> などの別のシリアル化エンジンの使用を検討します。 詳細については、次を参照してください。 [XmlSerializer クラスを使用して](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)です。  
+-   弱く型指定された XML 表現を直接扱うのは困難です。 データ コントラクトと互換性がないスキーマを厳密に型指定された方法で操作するには、<xref:System.Xml.Serialization.XmlSerializer> などの別のシリアル化エンジンの使用を検討します。 詳細については、次を参照してください。 [XmlSerializer クラスを使用して](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)します。  
   
 -   スキーマ構造によっては、<xref:System.Runtime.Serialization.XsdDataContractImporter> プロパティを <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> に設定しても、`true` でインポートできない場合があります。 このような場合も、<xref:System.Xml.Serialization.XmlSerializer> の使用を検討します。  
   
--   正確なスキーマ構造体には、両方がサポートされているときに<xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>は`true`または`false`に記載されて[データ コントラクト スキーマの参照](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)です。  
+-   正確なスキーマ構造には、両方がサポートされているときに<xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>は`true`または`false`記載されて[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。  
   
 -   生成された <xref:System.Xml.Serialization.IXmlSerializable> 型に対するスキーマには、いったんインポートしてからエクスポートした場合、忠実性が維持されません。 つまり、生成された型を基にスキーマをエクスポートし、再びこれをクラスとしてインポートした場合、元どおりのスキーマにはなりません。  
   
@@ -165,9 +165,9 @@ Windows Communication Foundation (WCF) で使用可能なスキーマからク�
   
  以上の処理は `IXmlSerializable` インターフェイスで実装されます。 生成された `IXmlSerializable` 型では、<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> の実装により、<xref:System.Runtime.Serialization.XmlSerializableServices.ReadNodes%2A> クラスの <xref:System.Runtime.Serialization.XmlSerializableServices> メソッドが呼び出されます。 これは <xref:System.Xml.XmlReader> を介して渡された XML を <xref:System.Xml.XmlNode> オブジェクトに変換するヘルパー メソッドです。 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> を実装したコードは逆に、`XmlNode` オブジェクトの配列を、一連の <xref:System.Xml.XmlWriter> の呼び出しに変換します。 それには <xref:System.Runtime.Serialization.XmlSerializableServices.WriteNodes%2A> メソッドを使います。  
   
- スキーマのエクスポート処理は、生成された `IXmlSerializable` クラスに対して実行できます。 ただし、先に述べたように、元どおりのスキーマは再現されません。 代わりに、"anyType"標準 XSD 型、これは任意の XSD 型のワイルドカードが表示されます。  
+ スキーマのエクスポート処理は、生成された `IXmlSerializable` クラスに対して実行できます。 ただし、先に述べたように、元どおりのスキーマは再現されません。 代わりに、"anyType"標準 XSD 型では任意の XSD 型のワイルドカードが表示されます。  
   
- 適用することでこれを行う、<xref:System.Xml.Serialization.XmlSchemaProviderAttribute>属性を生成された`IXmlSerializable`を呼び出すクラスとメソッドを指定する、 <xref:System.Runtime.Serialization.XmlSerializableServices.AddDefaultSchema%2A> "anyType"型を生成する方法です。  
+ 適用することでこれは、<xref:System.Xml.Serialization.XmlSchemaProviderAttribute>属性を生成された`IXmlSerializable`クラスとメソッドを指定することを呼び出す、 <xref:System.Runtime.Serialization.XmlSerializableServices.AddDefaultSchema%2A> "anyType"型を生成します。  
   
 > [!NOTE]
 >  <xref:System.Runtime.Serialization.XmlSerializableServices> 型は、この機能を提供するためだけに用意されています。 他の目的で使用することはお勧めできません。  
@@ -177,7 +177,7 @@ Windows Communication Foundation (WCF) で使用可能なスキーマからク�
   
 -   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> プロパティ。 生成されたクラスに組み込むコードを生成するために使用する、<xref:System.CodeDom.Compiler.CodeDomProvider> を指定します。 インポートの際は、<xref:System.CodeDom.Compiler.CodeDomProvider> でサポートされていない機能が回避されます。 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> を設定しない場合は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のすべての機能が制限なく使用されます。  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> プロパティ。 <xref:System.Runtime.Serialization.IDataContractSurrogate> の実装を指定するために使います。 <xref:System.Runtime.Serialization.IDataContractSurrogate> は、インポート処理をカスタマイズします。 詳細については、次を参照してください。[データ コントラクト サロゲート](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)です。 既定では、サロゲートは使用されません。  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> プロパティ。 <xref:System.Runtime.Serialization.IDataContractSurrogate> の実装を指定するために使います。 <xref:System.Runtime.Serialization.IDataContractSurrogate> は、インポート処理をカスタマイズします。 詳細については、次を参照してください。[データ コントラクト サロゲート](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)します。 既定では、サロゲートは使用されません。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

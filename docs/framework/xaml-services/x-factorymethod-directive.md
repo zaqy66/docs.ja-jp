@@ -7,11 +7,11 @@ helpviewer_keywords:
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
 ms.openlocfilehash: 436caa9b93467dcf2a0763bcc0962a2beb722315
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972021"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532380"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod ディレクティブ
 XAML プロセッサが、バッキング型を解決した後、オブジェクトを初期化するために使用するコンス トラクター以外の方法を指定します。  

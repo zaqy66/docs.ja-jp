@@ -3,11 +3,11 @@ title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
 ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750246"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46530311"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 このサンプルでは、SQL ワークフロー インスタンス ストアの昇格したプロパティの使用法と構成を示します。 SQL Workflow Instance Store は、SQL ベースのインスタンス ストアの実装です。 SQL Workflow Instance Store を使用すると、インスタンスの状態を SQL Server データベースや SQL Server Express データベースに保存したり読み込んだりすることができます。 ストア拡張機能を使用すると、ユーザーは、インスタンス ストアに格納されるプロパティを定義できます。 このようなプロパティは、ユーザーがクエリを実行できる昇格したプロパティ ビューに表示されます。  

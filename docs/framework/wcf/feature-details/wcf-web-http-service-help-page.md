@@ -2,15 +2,15 @@
 title: WCF Web HTTP サービスのヘルプ ページ
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 75babbeda7d5f0dca18c2de2e3187145164ac9a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500953"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529977"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP サービスのヘルプ ページ
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] には、WCF WEB HTTP サービスの自動的なヘルプ ページが用意されています。 このヘルプ ページには、各操作の説明、要求と応答の形式、およびスキーマが一覧表示されます。 この機能は、既定では無効になっています。 ときにユーザー WCF WEB HTTP サービスを参照し、追加"/help"例については、URL の最後にログオンhttp://localhost:8000/Customers/Help、ヘルプ ページが、次が表示されるようにします。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] には、WCF WEB HTTP サービスの自動的なヘルプ ページが用意されています。 このヘルプ ページには、各操作の説明、要求と応答の形式、およびスキーマが一覧表示されます。 この機能は、既定では無効になっています。 ときにユーザーが WCF WEB HTTP サービスを参照し、追加します"/help"例については、URL の最後に http://localhost:8000/Customers/Help、ヘルプ ページが、次が表示されるようにします。  
   
  ![WCF REST ヘルプ ページ](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
@@ -45,12 +45,12 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- コード内で WCF Web HTTP ヘルプ ページを有効にするには、サービス エンドポイントを追加し、追加、<xref:System.ServiceModel.Description.WebHttpBehavior>エンドポイントの設定に<!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>-->`EnableHelp`に`true`です。 この方法を次のコードに示します。  
+ WCF Web HTTP ヘルプ ページをコードで有効化するには、サービス エンドポイントを追加し、<xref:System.ServiceModel.Description.WebHttpBehavior> をエンドポイントに追加し、<xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> を `true` に設定します。 この方法を次のコードに示します。  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
-   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");               
+   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
    host.Description.Endpoints[0].Behaviors.Add(new WebHttpBehavior { EnableHelp = true });  
    // ...  
 }  
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- データ コントラクトのシリアル化スキーマの詳細については、次を参照してください。[データ コントラクト スキーマの参照](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)です。
+ データ コントラクトのシリアル化スキーマの詳細については、次を参照してください。 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。

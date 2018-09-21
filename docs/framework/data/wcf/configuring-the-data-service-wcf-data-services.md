@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: 0824a43cba1a21cc9ae92b1f807c6a1369fd63ed
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478522"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46530285"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>データ サービスの構成 (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]、公開するデータ サービスを作成する[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードします。 これらのフィードには、さまざまなデータ ソースからのデータが含まれることがあります。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] このデータとして公開するデータ プロバイダーを使用して、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。 これらのプロバイダーには、[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] プロバイダー、リフレクション プロバイダー、およびカスタム データ サービス プロバイダー インターフェイスのセットがあります。 プロバイダーの実装は、サービスのデータ モデルを定義します。 詳細については、次を参照してください。[データ サービス プロバイダー](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)します。  

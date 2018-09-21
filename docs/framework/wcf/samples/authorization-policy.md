@@ -2,16 +2,16 @@
 title: 承認ポリシー
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: eaf4dfc6e1f02a1cd98d9ab48af70426e8ba6151
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217296"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508792"
 ---
 # <a name="authorization-policy"></a>承認ポリシー
 
-このサンプルでは、カスタム クレーム承認ポリシーと、関連するカスタム サービス承認マネージャーを実装する方法を示します。 この方法は、サービスがクレームに基づくアクセス チェックをサービス操作に行う場合や、アクセス チェックを行う前に呼び出し元に特定の権限を与える場合に便利です。 このサンプルでは、クレームの追加プロセスと、完了したクレーム セットに対してアクセス チェックを行うプロセスの両方を示します。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 `wsHttpBinding` バインディングを使用する際の既定では、クライアントによって提供されるユーザー名とパスワードが、有効な Windows NT アカウントへのログオンに使用されます。 このサンプルでは、カスタムの利用を<!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>-->`System.IdentityModel.Selectors.UsernamePasswordValidator`クライアントを認証します。 さらにこのサンプルでは、クライアントが X.509 証明書を使用してサービスを認証する方法を示します。 また、<xref:System.IdentityModel.Policy.IAuthorizationPolicy> と <xref:System.ServiceModel.ServiceAuthorizationManager> の実装も示します。これらの間では、特定のユーザーに対するサービスの特定のメソッドへのアクセスが許可されます。 このサンプルに基づいて、[メッセージ セキュリティ ユーザー名](../../../../docs/framework/wcf/samples/message-security-user-name.md)、クレームの変換より前のバージョンを実行する方法を示しますが、<xref:System.ServiceModel.ServiceAuthorizationManager>が呼び出されます。
+このサンプルでは、カスタム クレーム承認ポリシーと、関連するカスタム サービス承認マネージャーを実装する方法を示します。 この方法は、サービスがクレームに基づくアクセス チェックをサービス操作に行う場合や、アクセス チェックを行う前に呼び出し元に特定の権限を与える場合に便利です。 このサンプルでは、クレームの追加プロセスと、完了したクレーム セットに対してアクセス チェックを行うプロセスの両方を示します。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 `wsHttpBinding` バインディングを使用する際の既定では、クライアントによって提供されるユーザー名とパスワードが、有効な Windows NT アカウントへのログオンに使用されます。 このサンプルでは、カスタム <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> を使用してクライアントを認証する方法を示します。 さらにこのサンプルでは、クライアントが X.509 証明書を使用してサービスを認証する方法を示します。 また、<xref:System.IdentityModel.Policy.IAuthorizationPolicy> と <xref:System.ServiceModel.ServiceAuthorizationManager> の実装も示します。これらの間では、特定のユーザーに対するサービスの特定のメソッドへのアクセスが許可されます。 このサンプルに基づいて、[メッセージ セキュリティ ユーザー名](../../../../docs/framework/wcf/samples/message-security-user-name.md)、クレームの変換より前のバージョンを実行する方法を示しますが、<xref:System.ServiceModel.ServiceAuthorizationManager>が呼び出されます。
 
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。

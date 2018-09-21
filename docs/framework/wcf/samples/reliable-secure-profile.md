@@ -5,11 +5,11 @@ ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: dfdafbcdc461c80192e310a86d5bff50f0885283
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471172"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540938"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
 このサンプルでは WCF を構成する方法と[Reliable Secure Profile](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP)。 このサンプルの実装を[Make Connection](https://go.microsoft.com/fwlink/?LinkId=178141) RSP 仕様に基づいて信頼性の高いセキュリティで保護されたバインディングを作成するセキュリティで保護されたチャネルをチャネルと信頼性の高いメッセージングと共に、必要に応じて構成できます。  

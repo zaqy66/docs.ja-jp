@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20c5f6bbb58b85f42ec00e356eccc5fb41ce813c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481203"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46528357"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>ICLRStrongName::GetHashFromHandle メソッド
 指定したハッシュ アルゴリズムを使用して、指定したファイル ハンドルを含むファイルのコンテンツのハッシュを生成します。  
