@@ -3,17 +3,17 @@ title: '再帰関数: rec キーワード (F#)'
 description: 再帰関数の定義に 'let' キーワードを使用して、f# の 'rec' キーワードが使用される方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45745972"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508555"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a><span data-ttu-id="289f2-103">再帰関数: rec キーワード</span><span class="sxs-lookup"><span data-stu-id="289f2-103">Recursive Functions: The rec Keyword</span></span>
+# <a name="recursive-functions-the-rec-keyword"></a><span data-ttu-id="1c3f9-103">再帰関数: rec キーワード</span><span class="sxs-lookup"><span data-stu-id="1c3f9-103">Recursive Functions: The rec Keyword</span></span>
 
-<span data-ttu-id="289f2-104">`rec`と共にキーワードが使用される、`let`再帰関数を定義するキーワード。</span><span class="sxs-lookup"><span data-stu-id="289f2-104">The `rec` keyword is used together with the `let` keyword to define a recursive function.</span></span>
+<span data-ttu-id="1c3f9-104">`rec`と共にキーワードが使用される、`let`再帰関数を定義するキーワード。</span><span class="sxs-lookup"><span data-stu-id="1c3f9-104">The `rec` keyword is used together with the `let` keyword to define a recursive function.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="289f2-105">構文</span><span class="sxs-lookup"><span data-stu-id="289f2-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1c3f9-105">構文</span><span class="sxs-lookup"><span data-stu-id="1c3f9-105">Syntax</span></span>
 
 ```fsharp
 // Recursive function:
@@ -28,27 +28,27 @@ function2-body
 ...
 ```
 
-## <a name="remarks"></a><span data-ttu-id="289f2-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="289f2-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1c3f9-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="1c3f9-106">Remarks</span></span>
 
-<span data-ttu-id="289f2-107">再帰関数は、自身を呼び出す関数は、f# 言語で明示的に識別されます。</span><span class="sxs-lookup"><span data-stu-id="289f2-107">Recursive functions, functions that call themselves, are identified explicitly in the F# language.</span></span> <span data-ttu-id="289f2-108">これにより、関数のスコープで定義されている識別子を使用可能なにします。</span><span class="sxs-lookup"><span data-stu-id="289f2-108">This makes the identifer that is being defined available in the scope of the function.</span></span>
+<span data-ttu-id="1c3f9-107">再帰関数は、自身を呼び出す関数は、f# 言語で明示的に識別されます。</span><span class="sxs-lookup"><span data-stu-id="1c3f9-107">Recursive functions, functions that call themselves, are identified explicitly in the F# language.</span></span> <span data-ttu-id="1c3f9-108">これにより、関数のスコープで定義されている識別子を使用可能なにします。</span><span class="sxs-lookup"><span data-stu-id="1c3f9-108">This makes the identifer that is being defined available in the scope of the function.</span></span>
 
-<span data-ttu-id="289f2-109">次のコードは、再帰関数を計算する、 *n*<sup>th</sup>フィボナッチ数。</span><span class="sxs-lookup"><span data-stu-id="289f2-109">The following code illustrates a recursive function that computes the *n*<sup>th</sup> Fibonacci number.</span></span>
+<span data-ttu-id="1c3f9-109">次のコードは、再帰関数を計算する、 *n*<sup>th</sup>フィボナッチ数。</span><span class="sxs-lookup"><span data-stu-id="1c3f9-109">The following code illustrates a recursive function that computes the *n*<sup>th</sup> Fibonacci number.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 >[!NOTE]
-<span data-ttu-id="289f2-110">実際には、上記のようなコードは、事前に計算された値の再計算するため、メモリとプロセッサ時間の浪費になります。</span><span class="sxs-lookup"><span data-stu-id="289f2-110">In practice, code like that above is wasteful of memory and processor time because it involves the recomputation of previously computed values.</span></span>
+<span data-ttu-id="1c3f9-110">実際には、上記のようなコードは、事前に計算された値の再計算するため、メモリとプロセッサ時間の浪費になります。</span><span class="sxs-lookup"><span data-stu-id="1c3f9-110">In practice, code like that above is wasteful of memory and processor time because it involves the recomputation of previously computed values.</span></span>
 
-<span data-ttu-id="289f2-111">メソッドは、暗黙的に型内で再帰追加する必要はありません、`rec`キーワード。</span><span class="sxs-lookup"><span data-stu-id="289f2-111">Methods are implicitly recursive within the type; there is no need to add the `rec` keyword.</span></span> <span data-ttu-id="289f2-112">クラス内の let バインドは、暗黙的に再帰的ではできません。</span><span class="sxs-lookup"><span data-stu-id="289f2-112">Let bindings within classes are not implicitly recursive.</span></span>
+<span data-ttu-id="1c3f9-111">メソッドは、暗黙的に型内で再帰追加する必要はありません、`rec`キーワード。</span><span class="sxs-lookup"><span data-stu-id="1c3f9-111">Methods are implicitly recursive within the type; there is no need to add the `rec` keyword.</span></span> <span data-ttu-id="1c3f9-112">クラス内の let バインドは、暗黙的に再帰的ではできません。</span><span class="sxs-lookup"><span data-stu-id="1c3f9-112">Let bindings within classes are not implicitly recursive.</span></span>
 
-## <a name="mutually-recursive-functions"></a><span data-ttu-id="289f2-113">相互再帰関数</span><span class="sxs-lookup"><span data-stu-id="289f2-113">Mutually Recursive Functions</span></span>
+## <a name="mutually-recursive-functions"></a><span data-ttu-id="1c3f9-113">相互再帰関数</span><span class="sxs-lookup"><span data-stu-id="1c3f9-113">Mutually Recursive Functions</span></span>
 
-<span data-ttu-id="289f2-114">関数は、場合によって*相互再帰*呼び出しが、1 つの関数呼び出しを呼び出して、最初の呼び出しの数に別間に、円を描くことを意味します。</span><span class="sxs-lookup"><span data-stu-id="289f2-114">Sometimes functions are *mutually recursive*, meaning that calls form a circle, where one function calls another which in turn calls the first, with any number of calls in between.</span></span> <span data-ttu-id="289f2-115">1 つで、このような関数をまとめて定義する必要があります`let`を使用したバインド、`and`それらをリンクするキーワード。</span><span class="sxs-lookup"><span data-stu-id="289f2-115">You must define such functions together in the one `let` binding, using the `and` keyword to link them together.</span></span>
+<span data-ttu-id="1c3f9-114">関数は、場合によって*相互再帰*呼び出しが、1 つの関数呼び出しを呼び出して、最初の呼び出しの数に別間に、円を描くことを意味します。</span><span class="sxs-lookup"><span data-stu-id="1c3f9-114">Sometimes functions are *mutually recursive*, meaning that calls form a circle, where one function calls another which in turn calls the first, with any number of calls in between.</span></span> <span data-ttu-id="1c3f9-115">1 つで、このような関数をまとめて定義する必要があります`let`を使用したバインド、`and`それらをリンクするキーワード。</span><span class="sxs-lookup"><span data-stu-id="1c3f9-115">You must define such functions together in the one `let` binding, using the `and` keyword to link them together.</span></span>
 
-<span data-ttu-id="289f2-116">次の例は、2 つを相互には再帰関数。</span><span class="sxs-lookup"><span data-stu-id="289f2-116">The following example shows two mutually recursive functions.</span></span>
+<span data-ttu-id="1c3f9-116">次の例は、2 つを相互には再帰関数。</span><span class="sxs-lookup"><span data-stu-id="1c3f9-116">The following example shows two mutually recursive functions.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
-## <a name="see-also"></a><span data-ttu-id="289f2-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="289f2-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c3f9-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="1c3f9-117">See also</span></span>
 
-- [<span data-ttu-id="289f2-118">関数</span><span class="sxs-lookup"><span data-stu-id="289f2-118">Functions</span></span>](index.md)
+- [<span data-ttu-id="1c3f9-118">関数</span><span class="sxs-lookup"><span data-stu-id="1c3f9-118">Functions</span></span>](index.md)

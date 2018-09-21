@@ -3,28 +3,28 @@ title: NetHttpBinding の使用
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
 ms.openlocfilehash: cd4a50798ff709c32db056c6aa7289993431f40e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471146"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537346"
 ---
-# <a name="using-the-nethttpbinding"></a><span data-ttu-id="ad223-102">NetHttpBinding の使用</span><span class="sxs-lookup"><span data-stu-id="ad223-102">Using the NetHttpBinding</span></span>
-<span data-ttu-id="ad223-103"><xref:System.ServiceModel.NetHttpBinding> は、HTTP や WebSocket のサービスを使用するために設計されたバインドで、既定ではバイナリ エンコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="ad223-103"><xref:System.ServiceModel.NetHttpBinding> is a binding designed for consuming HTTP or WebSocket services and uses binary encoding by default.</span></span> <span data-ttu-id="ad223-104"><xref:System.ServiceModel.NetHttpBinding> は、要求-応答コントラクトと二重のコントラクトのどちらで使用されているかを検出し、一致するように動作を変更します。要求-応答コントラクトには HTTP、二重のコントラクトには Websocket を使用します。</span><span class="sxs-lookup"><span data-stu-id="ad223-104"><xref:System.ServiceModel.NetHttpBinding> will detect whether it is used with a request-reply contract or duplex contract and change its behavior to match - it will use HTTP for request-reply contracts and WebSockets for duplex contracts.</span></span> <span data-ttu-id="ad223-105">この動作は、<xref:System.ServiceModel.Channels.WebSocketTransportUsage> 設定を使用してオーバーライドできます。</span><span class="sxs-lookup"><span data-stu-id="ad223-105">This behavior can be overridden using the <xref:System.ServiceModel.Channels.WebSocketTransportUsage> setting:</span></span>  
+# <a name="using-the-nethttpbinding"></a><span data-ttu-id="fd050-102">NetHttpBinding の使用</span><span class="sxs-lookup"><span data-stu-id="fd050-102">Using the NetHttpBinding</span></span>
+<span data-ttu-id="fd050-103"><xref:System.ServiceModel.NetHttpBinding> は、HTTP や WebSocket のサービスを使用するために設計されたバインドで、既定ではバイナリ エンコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="fd050-103"><xref:System.ServiceModel.NetHttpBinding> is a binding designed for consuming HTTP or WebSocket services and uses binary encoding by default.</span></span> <span data-ttu-id="fd050-104"><xref:System.ServiceModel.NetHttpBinding> は、要求-応答コントラクトと二重のコントラクトのどちらで使用されているかを検出し、一致するように動作を変更します。要求-応答コントラクトには HTTP、二重のコントラクトには Websocket を使用します。</span><span class="sxs-lookup"><span data-stu-id="fd050-104"><xref:System.ServiceModel.NetHttpBinding> will detect whether it is used with a request-reply contract or duplex contract and change its behavior to match - it will use HTTP for request-reply contracts and WebSockets for duplex contracts.</span></span> <span data-ttu-id="fd050-105">この動作は、<xref:System.ServiceModel.Channels.WebSocketTransportUsage> 設定を使用してオーバーライドできます。</span><span class="sxs-lookup"><span data-stu-id="fd050-105">This behavior can be overridden using the <xref:System.ServiceModel.Channels.WebSocketTransportUsage> setting:</span></span>  
   
-1. <span data-ttu-id="ad223-106">`Always` -これは、要求/応答コントラクトにも使用される websocket です。</span><span class="sxs-lookup"><span data-stu-id="ad223-106">`Always` - This forces WebSockets to be used even for request-reply contracts.</span></span>  
+1. <span data-ttu-id="fd050-106">`Always` -これは、要求/応答コントラクトにも使用される websocket です。</span><span class="sxs-lookup"><span data-stu-id="fd050-106">`Always` - This forces WebSockets to be used even for request-reply contracts.</span></span>  
   
-2. <span data-ttu-id="ad223-107">`Never` -これは Websocket が使用することを防ぎます。</span><span class="sxs-lookup"><span data-stu-id="ad223-107">`Never` - This prevents WebSockets from being used.</span></span> <span data-ttu-id="ad223-108">この設定で二重のコントラクトを使用しようとすると、例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="ad223-108">Attempting to use a duplex contract with this setting will result in an exception.</span></span>  
+2. <span data-ttu-id="fd050-107">`Never` -これは Websocket が使用することを防ぎます。</span><span class="sxs-lookup"><span data-stu-id="fd050-107">`Never` - This prevents WebSockets from being used.</span></span> <span data-ttu-id="fd050-108">この設定で二重のコントラクトを使用しようとすると、例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="fd050-108">Attempting to use a duplex contract with this setting will result in an exception.</span></span>  
   
-3. <span data-ttu-id="ad223-109">`WhenDuplex` -これにより、既定値は、し、前述のように動作します。</span><span class="sxs-lookup"><span data-stu-id="ad223-109">`WhenDuplex` - This is the default value and behaves as described above.</span></span>  
+3. <span data-ttu-id="fd050-109">`WhenDuplex` -これにより、既定値は、し、前述のように動作します。</span><span class="sxs-lookup"><span data-stu-id="fd050-109">`WhenDuplex` - This is the default value and behaves as described above.</span></span>  
   
- <span data-ttu-id="ad223-110"><xref:System.ServiceModel.NetHttpBinding> は、HTTP モードと WebSocket モードの両方で信頼できるセッションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="ad223-110"><xref:System.ServiceModel.NetHttpBinding> supports reliable sessions in both HTTP mode and WebSocket mode.</span></span> <span data-ttu-id="ad223-111">WebSocket モードでは、セッションがトランスポートによって提供されます。</span><span class="sxs-lookup"><span data-stu-id="ad223-111">In WebSocket mode sessions are provided by the transport.</span></span>  
+ <span data-ttu-id="fd050-110"><xref:System.ServiceModel.NetHttpBinding> は、HTTP モードと WebSocket モードの両方で信頼できるセッションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="fd050-110"><xref:System.ServiceModel.NetHttpBinding> supports reliable sessions in both HTTP mode and WebSocket mode.</span></span> <span data-ttu-id="fd050-111">WebSocket モードでは、セッションがトランスポートによって提供されます。</span><span class="sxs-lookup"><span data-stu-id="fd050-111">In WebSocket mode sessions are provided by the transport.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="ad223-112"><xref:System.ServiceModel.NetHttpBinding> を使用していて、バインドの TransferMode が TransferMode.Streamed に設定されている場合、大きいストリームによってデッドロックが発生する可能性があり、呼び出しがタイムアウトします。</span><span class="sxs-lookup"><span data-stu-id="ad223-112">When using the <xref:System.ServiceModel.NetHttpBinding> and the binding’s TransferMode is set to TransferMode.Streamed, large streams may cause a deadlock and the call will timeout.</span></span> <span data-ttu-id="ad223-113">この問題を回避するには、小さいメッセージを送信するか、TransferMode.Buffered を使用してください。</span><span class="sxs-lookup"><span data-stu-id="ad223-113">To work around this issue send smaller messages or use TransferMode.Buffered.</span></span>  
+>  <span data-ttu-id="fd050-112"><xref:System.ServiceModel.NetHttpBinding> を使用していて、バインドの TransferMode が TransferMode.Streamed に設定されている場合、大きいストリームによってデッドロックが発生する可能性があり、呼び出しがタイムアウトします。</span><span class="sxs-lookup"><span data-stu-id="fd050-112">When using the <xref:System.ServiceModel.NetHttpBinding> and the binding’s TransferMode is set to TransferMode.Streamed, large streams may cause a deadlock and the call will timeout.</span></span> <span data-ttu-id="fd050-113">この問題を回避するには、小さいメッセージを送信するか、TransferMode.Buffered を使用してください。</span><span class="sxs-lookup"><span data-stu-id="fd050-113">To work around this issue send smaller messages or use TransferMode.Buffered.</span></span>  
   
-## <a name="configuring-a-service-to-use-nethttpbinding"></a><span data-ttu-id="ad223-114">NetHttpBinding を使用するサービスの構成</span><span class="sxs-lookup"><span data-stu-id="ad223-114">Configuring a Service to use NetHttpBinding</span></span>  
- <span data-ttu-id="ad223-115"><xref:System.ServiceModel.NetHttpBinding> は、他のバインドと同様に構成できます。</span><span class="sxs-lookup"><span data-stu-id="ad223-115">The <xref:System.ServiceModel.NetHttpBinding> can be configured the same as any other binding.</span></span> <span data-ttu-id="ad223-116">次の構成スニペットは、<xref:System.ServiceModel.NetHttpBinding> を使用して WCF サービスを構成する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="ad223-116">The following configuration snippet illustrates how to configure a WCF service with <xref:System.ServiceModel.NetHttpBinding>.</span></span>  
+## <a name="configuring-a-service-to-use-nethttpbinding"></a><span data-ttu-id="fd050-114">NetHttpBinding を使用するサービスの構成</span><span class="sxs-lookup"><span data-stu-id="fd050-114">Configuring a Service to use NetHttpBinding</span></span>  
+ <span data-ttu-id="fd050-115"><xref:System.ServiceModel.NetHttpBinding> は、他のバインドと同様に構成できます。</span><span class="sxs-lookup"><span data-stu-id="fd050-115">The <xref:System.ServiceModel.NetHttpBinding> can be configured the same as any other binding.</span></span> <span data-ttu-id="fd050-116">次の構成スニペットは、<xref:System.ServiceModel.NetHttpBinding> を使用して WCF サービスを構成する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="fd050-116">The following configuration snippet illustrates how to configure a WCF service with <xref:System.ServiceModel.NetHttpBinding>.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -49,7 +49,7 @@ ms.locfileid: "46471146"
   </system.serviceModel>  
 ```  
   
- <span data-ttu-id="ad223-117">次のコード スニペットは、コードで <xref:System.ServiceModel.NetHttpBinding> を追加する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="ad223-117">The following code snippet shows how to add the <xref:System.ServiceModel.NetHttpBinding> in code.</span></span>  
+ <span data-ttu-id="fd050-117">次のコード スニペットは、コードで <xref:System.ServiceModel.NetHttpBinding> を追加する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="fd050-117">The following code snippet shows how to add the <xref:System.ServiceModel.NetHttpBinding> in code.</span></span>  
   
 ```csharp  
 ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);  
@@ -58,8 +58,8 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
         }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ad223-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="ad223-118">See Also</span></span>  
- [<span data-ttu-id="ad223-119">サービスのバインディングの構成</span><span class="sxs-lookup"><span data-stu-id="ad223-119">Configuring Bindings for Services</span></span>](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [<span data-ttu-id="ad223-120">バインディング</span><span class="sxs-lookup"><span data-stu-id="ad223-120">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [<span data-ttu-id="ad223-121">システム標準のバインディング</span><span class="sxs-lookup"><span data-stu-id="ad223-121">System-Provided Bindings</span></span>](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [<span data-ttu-id="ad223-122">双方向サービス</span><span class="sxs-lookup"><span data-stu-id="ad223-122">Duplex Services</span></span>](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a><span data-ttu-id="fd050-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="fd050-118">See Also</span></span>  
+ [<span data-ttu-id="fd050-119">サービスのバインディングの構成</span><span class="sxs-lookup"><span data-stu-id="fd050-119">Configuring Bindings for Services</span></span>](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
+ [<span data-ttu-id="fd050-120">バインディング</span><span class="sxs-lookup"><span data-stu-id="fd050-120">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [<span data-ttu-id="fd050-121">システム標準のバインディング</span><span class="sxs-lookup"><span data-stu-id="fd050-121">System-Provided Bindings</span></span>](../../../../docs/framework/wcf/system-provided-bindings.md)  
+ [<span data-ttu-id="fd050-122">双方向サービス</span><span class="sxs-lookup"><span data-stu-id="fd050-122">Duplex Services</span></span>](../../../../docs/framework/wcf/feature-details/duplex-services.md)
