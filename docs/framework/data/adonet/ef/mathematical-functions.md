@@ -3,389 +3,389 @@ title: 数学関数
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
 ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970137"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490362"
 ---
-# <a name="mathematical-functions"></a><span data-ttu-id="ea745-102">数学関数</span><span class="sxs-lookup"><span data-stu-id="ea745-102">Mathematical Functions</span></span>
+# <a name="mathematical-functions"></a><span data-ttu-id="0179a-102">数学関数</span><span class="sxs-lookup"><span data-stu-id="0179a-102">Mathematical Functions</span></span>
 
-<span data-ttu-id="ea745-103">.NET Framework Data Provider for SQL Server (SqlClient) には、引数として指定された入力値に対して計算を実行し、数値結果を返す数学関数が用意されています。</span><span class="sxs-lookup"><span data-stu-id="ea745-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides math functions that perform calculations on input values that are provided as arguments, and return a numeric value result.</span></span> <span data-ttu-id="ea745-104">これらの関数は、SqlClient の SqlServer 名前空間に存在します。</span><span class="sxs-lookup"><span data-stu-id="ea745-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="ea745-105">Entity Framework は、プロバイダーの名前空間プロパティを使用することにより、型や関数など、特定のコンストラクターに対してこのプロバイダーによってどのプレフィックスが使用されているかを特定できます。次の表に、SqlClient の数学関数を示します。</span><span class="sxs-lookup"><span data-stu-id="ea745-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.The following table describes the SqlClient math functions.</span></span>  
+<span data-ttu-id="0179a-103">.NET Framework Data Provider for SQL Server (SqlClient) には、引数として指定された入力値に対して計算を実行し、数値結果を返す数学関数が用意されています。</span><span class="sxs-lookup"><span data-stu-id="0179a-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides math functions that perform calculations on input values that are provided as arguments, and return a numeric value result.</span></span> <span data-ttu-id="0179a-104">これらの関数は、SqlClient の SqlServer 名前空間に存在します。</span><span class="sxs-lookup"><span data-stu-id="0179a-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="0179a-105">Entity Framework は、プロバイダーの名前空間プロパティを使用することにより、型や関数など、特定のコンストラクターに対してこのプロバイダーによってどのプレフィックスが使用されているかを特定できます。次の表に、SqlClient の数学関数を示します。</span><span class="sxs-lookup"><span data-stu-id="0179a-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.The following table describes the SqlClient math functions.</span></span>  
   
-## <a name="absexpression"></a><span data-ttu-id="ea745-106">ABS(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-106">ABS(expression)</span></span>
+## <a name="absexpression"></a><span data-ttu-id="0179a-106">ABS(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-106">ABS(expression)</span></span>
 
-<span data-ttu-id="ea745-107">絶対値を求める関数です。</span><span class="sxs-lookup"><span data-stu-id="ea745-107">Performs the absolute value function.</span></span>
+<span data-ttu-id="0179a-107">絶対値を求める関数です。</span><span class="sxs-lookup"><span data-stu-id="0179a-107">Performs the absolute value function.</span></span>
 
-<span data-ttu-id="ea745-108">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-108">**Arguments**</span></span>
+<span data-ttu-id="0179a-108">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-108">**Arguments**</span></span>
 
-<span data-ttu-id="ea745-109">`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="ea745-109">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+<span data-ttu-id="0179a-109">`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="0179a-109">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
 
-<span data-ttu-id="ea745-110">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-110">**Return Value**</span></span>
+<span data-ttu-id="0179a-110">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-110">**Return Value**</span></span>
 
-<span data-ttu-id="ea745-111">指定された式の絶対値。</span><span class="sxs-lookup"><span data-stu-id="ea745-111">The absolute value of the specified expression.</span></span>
+<span data-ttu-id="0179a-111">指定された式の絶対値。</span><span class="sxs-lookup"><span data-stu-id="0179a-111">The absolute value of the specified expression.</span></span>
 
-<span data-ttu-id="ea745-112">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-112">**Example**</span></span>
+<span data-ttu-id="0179a-112">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-112">**Example**</span></span>
 
 `SqlServer.ABS(-2)`
 
-## <a name="acosexpression"></a><span data-ttu-id="ea745-113">ACOS(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-113">ACOS(expression)</span></span>
+## <a name="acosexpression"></a><span data-ttu-id="0179a-113">ACOS(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-113">ACOS(expression)</span></span>
 
-<span data-ttu-id="ea745-114">指定された式のアークコサイン (逆余弦) 値を返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-114">Returns the arccosine value of the specified expression.</span></span>
+<span data-ttu-id="0179a-114">指定された式のアークコサイン (逆余弦) 値を返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-114">Returns the arccosine value of the specified expression.</span></span>
 
-<span data-ttu-id="ea745-115">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-115">**Arguments**</span></span>
+<span data-ttu-id="0179a-115">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-115">**Arguments**</span></span>
 
-<span data-ttu-id="ea745-116">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-116">`expression`: A `Double`.</span></span>
+<span data-ttu-id="0179a-116">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-116">`expression`: A `Double`.</span></span>
 
-<span data-ttu-id="ea745-117">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-117">**Return Value**</span></span>
+<span data-ttu-id="0179a-117">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-117">**Return Value**</span></span>
 
-<span data-ttu-id="ea745-118">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-118">A `Double`.</span></span>
+<span data-ttu-id="0179a-118">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-118">A `Double`.</span></span>
 
-<span data-ttu-id="ea745-119">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-119">**Example**</span></span>
+<span data-ttu-id="0179a-119">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-119">**Example**</span></span>
 
 `SqlServer.ACOS(.9)`
 
-## <a name="asinexpression"></a><span data-ttu-id="ea745-120">ASIN(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-120">ASIN(expression)</span></span>
+## <a name="asinexpression"></a><span data-ttu-id="0179a-120">ASIN(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-120">ASIN(expression)</span></span>
 
-<span data-ttu-id="ea745-121">指定された式のアークサイン (逆正弦) 値を返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-121">Returns the arcsine value of the specified expression.</span></span>
+<span data-ttu-id="0179a-121">指定された式のアークサイン (逆正弦) 値を返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-121">Returns the arcsine value of the specified expression.</span></span>
 
-<span data-ttu-id="ea745-122">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-122">**Arguments**</span></span>
+<span data-ttu-id="0179a-122">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-122">**Arguments**</span></span>
 
-<span data-ttu-id="ea745-123">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-123">`expression`: A `Double`.</span></span>
+<span data-ttu-id="0179a-123">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-123">`expression`: A `Double`.</span></span>
 
-<span data-ttu-id="ea745-124">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-124">**Return Value**</span></span>
+<span data-ttu-id="0179a-124">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-124">**Return Value**</span></span>
 
-<span data-ttu-id="ea745-125">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-125">A `Double`.</span></span>
+<span data-ttu-id="0179a-125">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-125">A `Double`.</span></span>
 
-<span data-ttu-id="ea745-126">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-126">**Example**</span></span>
+<span data-ttu-id="0179a-126">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-126">**Example**</span></span>
 
 `SqlServer.ASIN(.9)`
 
-## <a name="atanexpression"></a><span data-ttu-id="ea745-127">ATAN(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-127">ATAN(expression)</span></span>
+## <a name="atanexpression"></a><span data-ttu-id="0179a-127">ATAN(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-127">ATAN(expression)</span></span>
 
-<span data-ttu-id="ea745-128">指定された数値式のアークタンジェント (逆正接) 値を返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-128">Returns the arctangent value of the specified numeric expression.</span></span>
+<span data-ttu-id="0179a-128">指定された数値式のアークタンジェント (逆正接) 値を返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-128">Returns the arctangent value of the specified numeric expression.</span></span>
 
-<span data-ttu-id="ea745-129">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-129">**Arguments**</span></span>
+<span data-ttu-id="0179a-129">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-129">**Arguments**</span></span>
 
-<span data-ttu-id="ea745-130">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-130">`expression`: A `Double`.</span></span>
+<span data-ttu-id="0179a-130">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-130">`expression`: A `Double`.</span></span>
 
-<span data-ttu-id="ea745-131">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-131">**Return Value**</span></span>
+<span data-ttu-id="0179a-131">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-131">**Return Value**</span></span>
 
-<span data-ttu-id="ea745-132">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-132">A `Double`.</span></span>
+<span data-ttu-id="0179a-132">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-132">A `Double`.</span></span>
 
-<span data-ttu-id="ea745-133">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-133">**Example**</span></span>
+<span data-ttu-id="0179a-133">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-133">**Example**</span></span>
 
 `SqlServer.ATAN(9)`
 
-## <a name="atn2expression-expression"></a><span data-ttu-id="ea745-134">ATN2(expression, expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-134">ATN2(expression, expression)</span></span>
+## <a name="atn2expression-expression"></a><span data-ttu-id="0179a-134">ATN2(expression, expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-134">ATN2(expression, expression)</span></span>
 
-<span data-ttu-id="ea745-135">指定された 2 つの数値式の商がタンジェント (正接) となる角度をラジアンで返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-135">Returns the angle, in radians, whose tangent is between the two specified numeric expressions.</span></span>
+<span data-ttu-id="0179a-135">指定された 2 つの数値式の商がタンジェント (正接) となる角度をラジアンで返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-135">Returns the angle, in radians, whose tangent is between the two specified numeric expressions.</span></span>
 
-<span data-ttu-id="ea745-136">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-136">**Arguments**</span></span>
+<span data-ttu-id="0179a-136">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-136">**Arguments**</span></span>
 
-<span data-ttu-id="ea745-137">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-137">`expression`: A `Double`.</span></span>
+<span data-ttu-id="0179a-137">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-137">`expression`: A `Double`.</span></span>
 
-<span data-ttu-id="ea745-138">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-138">**Return Value**</span></span>
+<span data-ttu-id="0179a-138">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-138">**Return Value**</span></span>
 
-<span data-ttu-id="ea745-139">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-139">A `Double`.</span></span>
+<span data-ttu-id="0179a-139">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-139">A `Double`.</span></span>
 
-<span data-ttu-id="ea745-140">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-140">**Example**</span></span>
+<span data-ttu-id="0179a-140">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-140">**Example**</span></span>
 
 `SqlServer.ATN2(9, 8)`
  
-## <a name="ceilingexpression"></a><span data-ttu-id="ea745-141">CEILING(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-141">CEILING(expression)</span></span>
+## <a name="ceilingexpression"></a><span data-ttu-id="0179a-141">CEILING(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-141">CEILING(expression)</span></span>
 
-<span data-ttu-id="ea745-142">指定された式をその式以上の最小整数に変換します。</span><span class="sxs-lookup"><span data-stu-id="ea745-142">Converts the specified expression to the smallest integer that is greater than or equal to it.</span></span>
+<span data-ttu-id="0179a-142">指定された式をその式以上の最小整数に変換します。</span><span class="sxs-lookup"><span data-stu-id="0179a-142">Converts the specified expression to the smallest integer that is greater than or equal to it.</span></span>
 
-<span data-ttu-id="ea745-143">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-143">**Arguments**</span></span>
+<span data-ttu-id="0179a-143">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-143">**Arguments**</span></span>
 
-<span data-ttu-id="ea745-144">`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="ea745-144">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+<span data-ttu-id="0179a-144">`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="0179a-144">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
 
-<span data-ttu-id="ea745-145">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-145">**Return Value**</span></span>
+<span data-ttu-id="0179a-145">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-145">**Return Value**</span></span>
 
-<span data-ttu-id="ea745-146">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="ea745-146">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+<span data-ttu-id="0179a-146">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="0179a-146">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
 
-<span data-ttu-id="ea745-147">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-147">**Example**</span></span> 
+<span data-ttu-id="0179a-147">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-147">**Example**</span></span> 
 
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]
 
-## <a name="cosexpression"></a><span data-ttu-id="ea745-148">COS(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-148">COS(expression)</span></span>
+## <a name="cosexpression"></a><span data-ttu-id="0179a-148">COS(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-148">COS(expression)</span></span>
 
-<span data-ttu-id="ea745-149">ラジアンで指定された角度のコサイン (余弦) を計算します。</span><span class="sxs-lookup"><span data-stu-id="ea745-149">Calculates the trigonometric cosine of the specified angle in radians.</span></span> 
+<span data-ttu-id="0179a-149">ラジアンで指定された角度のコサイン (余弦) を計算します。</span><span class="sxs-lookup"><span data-stu-id="0179a-149">Calculates the trigonometric cosine of the specified angle in radians.</span></span> 
 
-<span data-ttu-id="ea745-150">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-150">**Arguments**</span></span> 
+<span data-ttu-id="0179a-150">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-150">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-151">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-151">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="0179a-151">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-151">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-152">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-152">**Return Value**</span></span> 
+<span data-ttu-id="0179a-152">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-152">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-153">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-153">A `Double`.</span></span> 
+<span data-ttu-id="0179a-153">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-153">A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-154">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-154">**Example**</span></span> 
+<span data-ttu-id="0179a-154">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-154">**Example**</span></span> 
 
 `SqlServer.COS(45)`
 
-## <a name="cotexpression"></a><span data-ttu-id="ea745-155">COT(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-155">COT(expression)</span></span>
+## <a name="cotexpression"></a><span data-ttu-id="0179a-155">COT(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-155">COT(expression)</span></span>
 
-<span data-ttu-id="ea745-156">ラジアンで指定された角度のコタンジェント (余接) を計算します。</span><span class="sxs-lookup"><span data-stu-id="ea745-156">Calculates the trigonometric cotangent of the specified angle in radians.</span></span> 
+<span data-ttu-id="0179a-156">ラジアンで指定された角度のコタンジェント (余接) を計算します。</span><span class="sxs-lookup"><span data-stu-id="0179a-156">Calculates the trigonometric cotangent of the specified angle in radians.</span></span> 
 
-<span data-ttu-id="ea745-157">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-157">**Arguments**</span></span> 
+<span data-ttu-id="0179a-157">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-157">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-158">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-158">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="0179a-158">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-158">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-159">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-159">**Return Value**</span></span> 
+<span data-ttu-id="0179a-159">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-159">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-160">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-160">A `Double`.</span></span> 
+<span data-ttu-id="0179a-160">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-160">A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-161">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-161">**Example**</span></span> 
+<span data-ttu-id="0179a-161">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-161">**Example**</span></span> 
 
 `SqlServer.COT(60)`
   
-## <a name="degreesradians"></a><span data-ttu-id="ea745-162">DEGREES(radians)</span><span class="sxs-lookup"><span data-stu-id="ea745-162">DEGREES(radians)</span></span>
+## <a name="degreesradians"></a><span data-ttu-id="0179a-162">DEGREES(radians)</span><span class="sxs-lookup"><span data-stu-id="0179a-162">DEGREES(radians)</span></span>
 
-<span data-ttu-id="ea745-163">対応する角度を度数で返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-163">Returns the corresponding angle in degrees.</span></span> 
+<span data-ttu-id="0179a-163">対応する角度を度数で返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-163">Returns the corresponding angle in degrees.</span></span> 
 
-<span data-ttu-id="ea745-164">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-164">**Arguments**</span></span> 
+<span data-ttu-id="0179a-164">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-164">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-165">`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="ea745-165">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+<span data-ttu-id="0179a-165">`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="0179a-165">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
 
-<span data-ttu-id="ea745-166">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-166">**Return Value**</span></span> 
+<span data-ttu-id="0179a-166">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-166">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-167">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="ea745-167">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+<span data-ttu-id="0179a-167">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="0179a-167">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
 
-<span data-ttu-id="ea745-168">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-168">**Example**</span></span> 
+<span data-ttu-id="0179a-168">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-168">**Example**</span></span> 
 
 `SqlServer.DEGREES(3.1)`
 
-## <a name="expexpression"></a><span data-ttu-id="ea745-169">EXP(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-169">EXP(expression)</span></span>
+## <a name="expexpression"></a><span data-ttu-id="0179a-169">EXP(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-169">EXP(expression)</span></span>
 
-<span data-ttu-id="ea745-170">指定された数値式の指数値を計算します。</span><span class="sxs-lookup"><span data-stu-id="ea745-170">Calculates the exponential value of a specified numeric expression.</span></span> 
+<span data-ttu-id="0179a-170">指定された数値式の指数値を計算します。</span><span class="sxs-lookup"><span data-stu-id="0179a-170">Calculates the exponential value of a specified numeric expression.</span></span> 
 
-<span data-ttu-id="ea745-171">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-171">**Arguments**</span></span> 
+<span data-ttu-id="0179a-171">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-171">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-172">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-172">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="0179a-172">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-172">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-173">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-173">**Return Value**</span></span> 
+<span data-ttu-id="0179a-173">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-173">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-174">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-174">A `Double`.</span></span> 
+<span data-ttu-id="0179a-174">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-174">A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-175">**例** `SqlServer.EXP(1)`</span><span class="sxs-lookup"><span data-stu-id="ea745-175">**Example** `SqlServer.EXP(1)`</span></span>
+<span data-ttu-id="0179a-175">**例** `SqlServer.EXP(1)`</span><span class="sxs-lookup"><span data-stu-id="0179a-175">**Example** `SqlServer.EXP(1)`</span></span>
 
-## <a name="floorexpression"></a><span data-ttu-id="ea745-176">FLOOR(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-176">FLOOR(expression)</span></span>
+## <a name="floorexpression"></a><span data-ttu-id="0179a-176">FLOOR(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-176">FLOOR(expression)</span></span>
 
-<span data-ttu-id="ea745-177">指定された式をその式以下の最大整数に変換します。</span><span class="sxs-lookup"><span data-stu-id="ea745-177">Converts the specified expression to the largest integer less than or equal to it.</span></span> 
+<span data-ttu-id="0179a-177">指定された式をその式以下の最大整数に変換します。</span><span class="sxs-lookup"><span data-stu-id="0179a-177">Converts the specified expression to the largest integer less than or equal to it.</span></span> 
 
-<span data-ttu-id="ea745-178">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-178">**Arguments**</span></span> 
+<span data-ttu-id="0179a-178">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-178">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-179">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-179">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="0179a-179">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-179">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-180">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-180">**Return Value**</span></span> 
+<span data-ttu-id="0179a-180">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-180">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-181">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-181">A `Double`.</span></span> 
+<span data-ttu-id="0179a-181">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-181">A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-182">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-182">**Example**</span></span> 
+<span data-ttu-id="0179a-182">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-182">**Example**</span></span> 
 
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)] 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]
 
-## <a name="logexpression"></a><span data-ttu-id="ea745-183">LOG(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-183">LOG(expression)</span></span>
+## <a name="logexpression"></a><span data-ttu-id="0179a-183">LOG(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-183">LOG(expression)</span></span>
 
-<span data-ttu-id="ea745-184">指定された `float` 型の式の自然対数を計算します。</span><span class="sxs-lookup"><span data-stu-id="ea745-184">Calculates the natural logarithm of the specified `float` expression.</span></span> 
+<span data-ttu-id="0179a-184">指定された `float` 型の式の自然対数を計算します。</span><span class="sxs-lookup"><span data-stu-id="0179a-184">Calculates the natural logarithm of the specified `float` expression.</span></span> 
 
-<span data-ttu-id="ea745-185">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-185">**Arguments**</span></span> 
+<span data-ttu-id="0179a-185">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-185">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-186">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-186">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="0179a-186">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-186">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-187">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-187">**Return Value**</span></span> 
+<span data-ttu-id="0179a-187">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-187">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-188">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-188">A `Double`.</span></span> 
+<span data-ttu-id="0179a-188">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-188">A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-189">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-189">**Example**</span></span> 
+<span data-ttu-id="0179a-189">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-189">**Example**</span></span> 
 
 `SqlServer.LOG(100)`
 
-## <a name="log10expression"></a><span data-ttu-id="ea745-190">LOG10(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-190">LOG10(expression)</span></span>
+## <a name="log10expression"></a><span data-ttu-id="0179a-190">LOG10(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-190">LOG10(expression)</span></span>
 
-<span data-ttu-id="ea745-191">指定された `Double` 型の式の 10 を底とした対数を返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-191">Returns the base-10 logarithm of the specified `Double` expression.</span></span> 
+<span data-ttu-id="0179a-191">指定された `Double` 型の式の 10 を底とした対数を返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-191">Returns the base-10 logarithm of the specified `Double` expression.</span></span> 
 
-<span data-ttu-id="ea745-192">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-192">**Arguments**</span></span> 
+<span data-ttu-id="0179a-192">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-192">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-193">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-193">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="0179a-193">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-193">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-194">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-194">**Return Value**</span></span> 
+<span data-ttu-id="0179a-194">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-194">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-195">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-195">A `Double`.</span></span> 
+<span data-ttu-id="0179a-195">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-195">A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-196">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-196">**Example**</span></span> 
+<span data-ttu-id="0179a-196">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-196">**Example**</span></span> 
 
 `SqlServer.LOG10(100)`
 
-## <a name="pi"></a><span data-ttu-id="ea745-197">PI()」と指定</span><span class="sxs-lookup"><span data-stu-id="ea745-197">PI()</span></span>
+## <a name="pi"></a><span data-ttu-id="0179a-197">PI()」と指定</span><span class="sxs-lookup"><span data-stu-id="0179a-197">PI()</span></span>
 
-<span data-ttu-id="ea745-198">π の定数値を `Double` として返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-198">Returns the constant value of pi as a `Double`.</span></span> 
+<span data-ttu-id="0179a-198">π の定数値を `Double` として返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-198">Returns the constant value of pi as a `Double`.</span></span> 
 
-<span data-ttu-id="ea745-199">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-199">**Return Value**</span></span> 
+<span data-ttu-id="0179a-199">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-199">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-200">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-200">A `Double`.</span></span> 
+<span data-ttu-id="0179a-200">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-200">A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-201">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-201">**Example**</span></span> 
+<span data-ttu-id="0179a-201">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-201">**Example**</span></span> 
 
 `SqlServer.PI()`
 
-## <a name="powernumericexpression-powerexpression"></a><span data-ttu-id="ea745-202">電源 (numeric_expression、power_expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-202">POWER(numeric_expression, power_expression)</span></span>
+## <a name="powernumericexpression-powerexpression"></a><span data-ttu-id="0179a-202">電源 (numeric_expression、power_expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-202">POWER(numeric_expression, power_expression)</span></span>
 
-<span data-ttu-id="ea745-203">指定された式の指定されたべき乗を計算します。</span><span class="sxs-lookup"><span data-stu-id="ea745-203">Calculates the value of a specified expression to a specified power.</span></span>
+<span data-ttu-id="0179a-203">指定された式の指定されたべき乗を計算します。</span><span class="sxs-lookup"><span data-stu-id="0179a-203">Calculates the value of a specified expression to a specified power.</span></span>
 
-<span data-ttu-id="ea745-204">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-204">**Arguments**</span></span> 
+<span data-ttu-id="0179a-204">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-204">**Arguments**</span></span> 
 
 |  |  |
 |--|--|
-|`numeric_expression`| <span data-ttu-id="ea745-205">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="ea745-205">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>|
-|`power_expression`| <span data-ttu-id="ea745-206">A`Double`のべき乗値を表す、`numeric_expression`します。</span><span class="sxs-lookup"><span data-stu-id="ea745-206">A `Double` that represents the power to which to raise the `numeric_expression`.</span></span>| 
+|`numeric_expression`| <span data-ttu-id="0179a-205">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="0179a-205">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>|
+|`power_expression`| <span data-ttu-id="0179a-206">A`Double`のべき乗値を表す、`numeric_expression`します。</span><span class="sxs-lookup"><span data-stu-id="0179a-206">A `Double` that represents the power to which to raise the `numeric_expression`.</span></span>| 
 
-<span data-ttu-id="ea745-207">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-207">**Return Value**</span></span> 
+<span data-ttu-id="0179a-207">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-207">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-208">指定された `numeric_expression` を指定された `power_expression` でべき乗した値。</span><span class="sxs-lookup"><span data-stu-id="ea745-208">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span> 
+<span data-ttu-id="0179a-208">指定された `numeric_expression` を指定された `power_expression` でべき乗した値。</span><span class="sxs-lookup"><span data-stu-id="0179a-208">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span> 
 
-<span data-ttu-id="ea745-209">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-209">**Example**</span></span> 
+<span data-ttu-id="0179a-209">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-209">**Example**</span></span> 
 
 `SqlServer.POWER(2,7)`
 
-## <a name="radiansexpression"></a><span data-ttu-id="ea745-210">RADIANS(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-210">RADIANS(expression)</span></span>
+## <a name="radiansexpression"></a><span data-ttu-id="0179a-210">RADIANS(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-210">RADIANS(expression)</span></span>
 
-<span data-ttu-id="ea745-211">角度をラジアンに変換します。</span><span class="sxs-lookup"><span data-stu-id="ea745-211">Converts degrees to radians.</span></span> 
+<span data-ttu-id="0179a-211">角度をラジアンに変換します。</span><span class="sxs-lookup"><span data-stu-id="0179a-211">Converts degrees to radians.</span></span> 
 
-<span data-ttu-id="ea745-212">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-212">**Arguments**</span></span> 
+<span data-ttu-id="0179a-212">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-212">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-213">`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="ea745-213">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+<span data-ttu-id="0179a-213">`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="0179a-213">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
 
-<span data-ttu-id="ea745-214">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-214">**Return Value**</span></span> 
+<span data-ttu-id="0179a-214">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-214">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-215">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="ea745-215">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+<span data-ttu-id="0179a-215">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="0179a-215">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
 
-<span data-ttu-id="ea745-216">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-216">**Example**</span></span> 
+<span data-ttu-id="0179a-216">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-216">**Example**</span></span> 
 
 `SqlServer.RADIANS(360.0)`
 
-## <a name="randseed"></a><span data-ttu-id="ea745-217">RAND([seed])</span><span class="sxs-lookup"><span data-stu-id="ea745-217">RAND([seed])</span></span>
+## <a name="randseed"></a><span data-ttu-id="0179a-217">RAND([seed])</span><span class="sxs-lookup"><span data-stu-id="0179a-217">RAND([seed])</span></span>
 
-<span data-ttu-id="ea745-218">0 から 1 までの範囲の乱数を返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-218">Returns a random value from 0 through 1.</span></span> 
+<span data-ttu-id="0179a-218">0 から 1 までの範囲の乱数を返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-218">Returns a random value from 0 through 1.</span></span> 
 
-<span data-ttu-id="ea745-219">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-219">**Arguments**</span></span> 
+<span data-ttu-id="0179a-219">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-219">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-220">シード値として、`Int32`します。</span><span class="sxs-lookup"><span data-stu-id="ea745-220">The seed value as an `Int32`.</span></span> <span data-ttu-id="ea745-221">シードを指定しない場合は、SQL Server データベース エンジンによってシード値がランダムに割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="ea745-221">If the seed is not specified, the SQL Server Database Engine assigns a seed value at random.</span></span> <span data-ttu-id="ea745-222">指定したシード値について、返される結果は常に同じです。</span><span class="sxs-lookup"><span data-stu-id="ea745-222">For a specified seed value, the result returned is always the same.</span></span>
+<span data-ttu-id="0179a-220">シード値として、`Int32`します。</span><span class="sxs-lookup"><span data-stu-id="0179a-220">The seed value as an `Int32`.</span></span> <span data-ttu-id="0179a-221">シードを指定しない場合は、SQL Server データベース エンジンによってシード値がランダムに割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="0179a-221">If the seed is not specified, the SQL Server Database Engine assigns a seed value at random.</span></span> <span data-ttu-id="0179a-222">指定したシード値について、返される結果は常に同じです。</span><span class="sxs-lookup"><span data-stu-id="0179a-222">For a specified seed value, the result returned is always the same.</span></span>
 
-<span data-ttu-id="ea745-223">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-223">**Return Value**</span></span> 
+<span data-ttu-id="0179a-223">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-223">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-224">0 から 1 までの範囲の `Double` 型の乱数。</span><span class="sxs-lookup"><span data-stu-id="ea745-224">A random `Double` value from 0 through 1.</span></span> 
+<span data-ttu-id="0179a-224">0 から 1 までの範囲の `Double` 型の乱数。</span><span class="sxs-lookup"><span data-stu-id="0179a-224">A random `Double` value from 0 through 1.</span></span> 
 
-<span data-ttu-id="ea745-225">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-225">**Example**</span></span> 
+<span data-ttu-id="0179a-225">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-225">**Example**</span></span> 
 
 `SqlServer.RAND()`
   
-## <a name="roundnumericexpression-lengthfunction"></a><span data-ttu-id="ea745-226">ROUND(numeric_expression, length[,function])</span><span class="sxs-lookup"><span data-stu-id="ea745-226">ROUND(numeric_expression, length[,function])</span></span>
+## <a name="roundnumericexpression-lengthfunction"></a><span data-ttu-id="0179a-226">ROUND(numeric_expression, length[,function])</span><span class="sxs-lookup"><span data-stu-id="0179a-226">ROUND(numeric_expression, length[,function])</span></span>
 
-<span data-ttu-id="ea745-227">指定された長さまたは有効桁数に丸めた数値式を返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-227">Returns a numeric expression, rounded to the specified length or precision.</span></span> 
+<span data-ttu-id="0179a-227">指定された長さまたは有効桁数に丸めた数値式を返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-227">Returns a numeric expression, rounded to the specified length or precision.</span></span> 
 
-<span data-ttu-id="ea745-228">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-228">**Arguments**</span></span> 
+<span data-ttu-id="0179a-228">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-228">**Arguments**</span></span> 
 
 |  |  |
 |--|--|
-|`numeric_expression`| <span data-ttu-id="ea745-229">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="ea745-229">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
-|`length`| <span data-ttu-id="ea745-230">`Int32` を丸めた後の有効桁数を表す `numeric_expression`。</span><span class="sxs-lookup"><span data-stu-id="ea745-230">An `Int32` that represents the precision to which `numeric_expression` is to be rounded.</span></span> <span data-ttu-id="ea745-231">`length` に正の値を指定した場合、`numeric_expression` は `length` で指定した小数点以下桁数に丸められます。</span><span class="sxs-lookup"><span data-stu-id="ea745-231">When `length` is a positive number, `numeric_expression` is rounded to the number of decimal positions specified by `length`.</span></span> <span data-ttu-id="ea745-232">`length` に負の値を指定した場合、`numeric_expression` は `length` で指定した小数点の左側の位置で丸められます。</span><span class="sxs-lookup"><span data-stu-id="ea745-232">When `length` is a negative number, `numeric_expression` is rounded on the left side of the decimal point, as specified by `length`.</span></span>|
-|`function` | <span data-ttu-id="ea745-233">任意。</span><span class="sxs-lookup"><span data-stu-id="ea745-233">Optional.</span></span> <span data-ttu-id="ea745-234">`Int32`を実行する操作の種類を表します。</span><span class="sxs-lookup"><span data-stu-id="ea745-234">An `Int32` that represents the type of operation to perform.</span></span> <span data-ttu-id="ea745-235">関数を省略するか 0 (既定値) の値を持つとき`numeric_expression`は丸められます。</span><span class="sxs-lookup"><span data-stu-id="ea745-235">When function is omitted or has a value of 0 (default), `numeric_expression` is rounded.</span></span> <span data-ttu-id="ea745-236">以外の値は 0 を指定した、`numeric_expression`は切り捨てられます。</span><span class="sxs-lookup"><span data-stu-id="ea745-236">When a value other than 0 is specified, `numeric_expression` is truncated.</span></span> |
+|`numeric_expression`| <span data-ttu-id="0179a-229">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="0179a-229">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+|`length`| <span data-ttu-id="0179a-230">`Int32` を丸めた後の有効桁数を表す `numeric_expression`。</span><span class="sxs-lookup"><span data-stu-id="0179a-230">An `Int32` that represents the precision to which `numeric_expression` is to be rounded.</span></span> <span data-ttu-id="0179a-231">`length` に正の値を指定した場合、`numeric_expression` は `length` で指定した小数点以下桁数に丸められます。</span><span class="sxs-lookup"><span data-stu-id="0179a-231">When `length` is a positive number, `numeric_expression` is rounded to the number of decimal positions specified by `length`.</span></span> <span data-ttu-id="0179a-232">`length` に負の値を指定した場合、`numeric_expression` は `length` で指定した小数点の左側の位置で丸められます。</span><span class="sxs-lookup"><span data-stu-id="0179a-232">When `length` is a negative number, `numeric_expression` is rounded on the left side of the decimal point, as specified by `length`.</span></span>|
+|`function` | <span data-ttu-id="0179a-233">任意。</span><span class="sxs-lookup"><span data-stu-id="0179a-233">Optional.</span></span> <span data-ttu-id="0179a-234">`Int32`を実行する操作の種類を表します。</span><span class="sxs-lookup"><span data-stu-id="0179a-234">An `Int32` that represents the type of operation to perform.</span></span> <span data-ttu-id="0179a-235">関数を省略するか 0 (既定値) の値を持つとき`numeric_expression`は丸められます。</span><span class="sxs-lookup"><span data-stu-id="0179a-235">When function is omitted or has a value of 0 (default), `numeric_expression` is rounded.</span></span> <span data-ttu-id="0179a-236">以外の値は 0 を指定した、`numeric_expression`は切り捨てられます。</span><span class="sxs-lookup"><span data-stu-id="0179a-236">When a value other than 0 is specified, `numeric_expression` is truncated.</span></span> |
 
-<span data-ttu-id="ea745-237">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-237">**Return Value**</span></span> 
+<span data-ttu-id="0179a-237">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-237">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-238">指定された `numeric_expression` を指定された `power_expression` でべき乗した値。</span><span class="sxs-lookup"><span data-stu-id="ea745-238">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span>
+<span data-ttu-id="0179a-238">指定された `numeric_expression` を指定された `power_expression` でべき乗した値。</span><span class="sxs-lookup"><span data-stu-id="0179a-238">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span>
 
-<span data-ttu-id="ea745-239">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-239">**Example**</span></span> 
+<span data-ttu-id="0179a-239">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-239">**Example**</span></span> 
 
 `SqlServer.ROUND(748.58, -3)`
 
-## <a name="signexpression"></a><span data-ttu-id="ea745-240">SIGN(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-240">SIGN(expression)</span></span> 
+## <a name="signexpression"></a><span data-ttu-id="0179a-240">SIGN(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-240">SIGN(expression)</span></span> 
 
-<span data-ttu-id="ea745-241">指定した式の符号として、正 (+1)、負 (-1)、ゼロ (0) のいずれかを返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-241">Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.</span></span> 
+<span data-ttu-id="0179a-241">指定した式の符号として、正 (+1)、負 (-1)、ゼロ (0) のいずれかを返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-241">Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.</span></span> 
 
-<span data-ttu-id="ea745-242">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-242">**Arguments**</span></span> 
+<span data-ttu-id="0179a-242">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-242">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-243">`expression`: `Int32`、`Int64`、`Double`、または `Decimal`</span><span class="sxs-lookup"><span data-stu-id="ea745-243">`expression`: `Int32`, `Int64`, `Double`, or `Decimal`</span></span> 
+<span data-ttu-id="0179a-243">`expression`: `Int32`、`Int64`、`Double`、または `Decimal`</span><span class="sxs-lookup"><span data-stu-id="0179a-243">`expression`: `Int32`, `Int64`, `Double`, or `Decimal`</span></span> 
 
-<span data-ttu-id="ea745-244">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-244">**Return Value**</span></span> 
+<span data-ttu-id="0179a-244">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-244">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-245">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="ea745-245">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+<span data-ttu-id="0179a-245">`Int32`、 `Int64`、 `Double`、または`Decimal`します。</span><span class="sxs-lookup"><span data-stu-id="0179a-245">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
 
-<span data-ttu-id="ea745-246">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-246">**Example**</span></span> 
+<span data-ttu-id="0179a-246">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-246">**Example**</span></span> 
 
 `SqlServer.SIGN(-10)`
 
-## <a name="sinexpression"></a><span data-ttu-id="ea745-247">SIN(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-247">SIN(expression)</span></span>
+## <a name="sinexpression"></a><span data-ttu-id="0179a-247">SIN(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-247">SIN(expression)</span></span>
 
-<span data-ttu-id="ea745-248">ラジアンで指定された角度のサイン (正弦) を計算し、`Double` 式を返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-248">Calculates the trigonometric sine of the specified angle in radians, and returns a `Double` expression.</span></span> 
+<span data-ttu-id="0179a-248">ラジアンで指定された角度のサイン (正弦) を計算し、`Double` 式を返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-248">Calculates the trigonometric sine of the specified angle in radians, and returns a `Double` expression.</span></span> 
 
-<span data-ttu-id="ea745-249">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-249">**Arguments**</span></span> 
+<span data-ttu-id="0179a-249">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-249">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-250">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-250">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="0179a-250">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-250">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-251">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-251">**Return Value**</span></span> 
+<span data-ttu-id="0179a-251">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-251">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-252">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-252">A `Double`.</span></span> 
+<span data-ttu-id="0179a-252">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-252">A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-253">**例** `SqlServer.SIN(20)`</span><span class="sxs-lookup"><span data-stu-id="ea745-253">**Example** `SqlServer.SIN(20)`</span></span>
+<span data-ttu-id="0179a-253">**例** `SqlServer.SIN(20)`</span><span class="sxs-lookup"><span data-stu-id="0179a-253">**Example** `SqlServer.SIN(20)`</span></span>
 
-## <a name="sqrtexpression"></a><span data-ttu-id="ea745-254">SQRT(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-254">SQRT(expression)</span></span>
+## <a name="sqrtexpression"></a><span data-ttu-id="0179a-254">SQRT(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-254">SQRT(expression)</span></span>
 
-<span data-ttu-id="ea745-255">指定された式の平方根を返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-255">Returns the square root of the specified expression.</span></span> 
+<span data-ttu-id="0179a-255">指定された式の平方根を返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-255">Returns the square root of the specified expression.</span></span> 
 
-<span data-ttu-id="ea745-256">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-256">**Arguments**</span></span> 
+<span data-ttu-id="0179a-256">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-256">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-257">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-257">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="0179a-257">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-257">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-258">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-258">**Return Value**</span></span> 
+<span data-ttu-id="0179a-258">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-258">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-259">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-259">A `Double`.</span></span> 
+<span data-ttu-id="0179a-259">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-259">A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-260">**例** `SqlServer.SQRT(3600)`</span><span class="sxs-lookup"><span data-stu-id="ea745-260">**Example** `SqlServer.SQRT(3600)`</span></span>
+<span data-ttu-id="0179a-260">**例** `SqlServer.SQRT(3600)`</span><span class="sxs-lookup"><span data-stu-id="0179a-260">**Example** `SqlServer.SQRT(3600)`</span></span>
 
-## <a name="squareexpression"></a><span data-ttu-id="ea745-261">SQUARE(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-261">SQUARE(expression)</span></span>
+## <a name="squareexpression"></a><span data-ttu-id="0179a-261">SQUARE(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-261">SQUARE(expression)</span></span>
 
-<span data-ttu-id="ea745-262">指定された式の 2 乗値を返します。</span><span class="sxs-lookup"><span data-stu-id="ea745-262">Returns the square of the specified expression.</span></span> 
+<span data-ttu-id="0179a-262">指定された式の 2 乗値を返します。</span><span class="sxs-lookup"><span data-stu-id="0179a-262">Returns the square of the specified expression.</span></span> 
 
-<span data-ttu-id="ea745-263">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-263">**Arguments**</span></span> 
+<span data-ttu-id="0179a-263">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-263">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-264">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-264">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="0179a-264">`expression`: `Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-264">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-265">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-265">**Return Value**</span></span> 
+<span data-ttu-id="0179a-265">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-265">**Return Value**</span></span> 
 
-<span data-ttu-id="ea745-266">`Double`。</span><span class="sxs-lookup"><span data-stu-id="ea745-266">A `Double`.</span></span> 
+<span data-ttu-id="0179a-266">`Double`。</span><span class="sxs-lookup"><span data-stu-id="0179a-266">A `Double`.</span></span> 
 
-<span data-ttu-id="ea745-267">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-267">**Example**</span></span> 
+<span data-ttu-id="0179a-267">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-267">**Example**</span></span> 
 
 `SqlServer.SQUARE(25)`
 
-## <a name="tanexpression"></a><span data-ttu-id="ea745-268">TAN(expression)</span><span class="sxs-lookup"><span data-stu-id="ea745-268">TAN(expression)</span></span>
+## <a name="tanexpression"></a><span data-ttu-id="0179a-268">TAN(expression)</span><span class="sxs-lookup"><span data-stu-id="0179a-268">TAN(expression)</span></span>
 
-<span data-ttu-id="ea745-269">指定された式のタンジェントを計算します。</span><span class="sxs-lookup"><span data-stu-id="ea745-269">Calculates the tangent of a specified expression.</span></span>
+<span data-ttu-id="0179a-269">指定された式のタンジェントを計算します。</span><span class="sxs-lookup"><span data-stu-id="0179a-269">Calculates the tangent of a specified expression.</span></span>
 
-<span data-ttu-id="ea745-270">**引数**</span><span class="sxs-lookup"><span data-stu-id="ea745-270">**Arguments**</span></span> 
+<span data-ttu-id="0179a-270">**引数**</span><span class="sxs-lookup"><span data-stu-id="0179a-270">**Arguments**</span></span> 
 
-<span data-ttu-id="ea745-271">`expression`: `Double`</span><span class="sxs-lookup"><span data-stu-id="ea745-271">`expression`: `Double`</span></span> 
+<span data-ttu-id="0179a-271">`expression`: `Double`</span><span class="sxs-lookup"><span data-stu-id="0179a-271">`expression`: `Double`</span></span> 
 
-<span data-ttu-id="ea745-272">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="ea745-272">**Return Value**</span></span> 
+<span data-ttu-id="0179a-272">**戻り値**</span><span class="sxs-lookup"><span data-stu-id="0179a-272">**Return Value**</span></span> 
 
 `Double` 
 
-<span data-ttu-id="ea745-273">**例**</span><span class="sxs-lookup"><span data-stu-id="ea745-273">**Example**</span></span> 
+<span data-ttu-id="0179a-273">**例**</span><span class="sxs-lookup"><span data-stu-id="0179a-273">**Example**</span></span> 
 
 `SqlServer.TAN(45.0)`
   
-## <a name="see-also"></a><span data-ttu-id="ea745-274">関連項目</span><span class="sxs-lookup"><span data-stu-id="ea745-274">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0179a-274">関連項目</span><span class="sxs-lookup"><span data-stu-id="0179a-274">See also</span></span>
 
-<span data-ttu-id="ea745-275">SqlClient でサポートされる数学関数の詳細については、SqlClient プロバイダー マニフェストで指定した SQL Server のバージョンのドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ea745-275">For more information about the mathematical functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
+<span data-ttu-id="0179a-275">SqlClient でサポートされる数学関数の詳細については、SqlClient プロバイダー マニフェストで指定した SQL Server のバージョンのドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0179a-275">For more information about the mathematical functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
   
-<span data-ttu-id="ea745-276">**SQL Server 2005:** [数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span><span class="sxs-lookup"><span data-stu-id="ea745-276">**SQL Server 2005:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span></span>  
-<span data-ttu-id="ea745-277">**SQL Server 2008:** [数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span><span class="sxs-lookup"><span data-stu-id="ea745-277">**SQL Server 2008:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span></span>  
-<span data-ttu-id="ea745-278">**SQL Server 2012 以降:** [数学関数 (TRANSACT-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span><span class="sxs-lookup"><span data-stu-id="ea745-278">**SQL Server 2012 and later:** [Mathematical Functions (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span></span>   
+<span data-ttu-id="0179a-276">**SQL Server 2005:** [数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span><span class="sxs-lookup"><span data-stu-id="0179a-276">**SQL Server 2005:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span></span>  
+<span data-ttu-id="0179a-277">**SQL Server 2008:** [数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span><span class="sxs-lookup"><span data-stu-id="0179a-277">**SQL Server 2008:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span></span>  
+<span data-ttu-id="0179a-278">**SQL Server 2012 以降:** [数学関数 (TRANSACT-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span><span class="sxs-lookup"><span data-stu-id="0179a-278">**SQL Server 2012 and later:** [Mathematical Functions (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span></span>   
 
- [<span data-ttu-id="ea745-279">Entity Framework 用 SqlClient 関数</span><span class="sxs-lookup"><span data-stu-id="ea745-279">SqlClient for Entity Framework Functions</span></span>](sqlclient-for-ef-functions.md)
+ [<span data-ttu-id="0179a-279">Entity Framework 用 SqlClient 関数</span><span class="sxs-lookup"><span data-stu-id="0179a-279">SqlClient for Entity Framework Functions</span></span>](sqlclient-for-ef-functions.md)

@@ -8,7 +8,7 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 2da7a304af613920449e925e3bb43b350f556e6a
 ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/20/2018
 ms.locfileid: "46478371"

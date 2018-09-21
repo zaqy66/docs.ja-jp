@@ -6,7 +6,7 @@ author: blowdart
 ms.author: mairaw
 ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
 ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/20/2018
 ms.locfileid: "46485799"

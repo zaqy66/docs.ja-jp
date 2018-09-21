@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fc4c0560c2aa0d66c1b40d78458a2d44284e232
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58bad617eb91b7e529ff3d95edd06a5c73feee64
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417916"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46472036"
 ---
-# <a name="icordebugmodule3-interface"></a><span data-ttu-id="97c46-102">ICorDebugModule3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="97c46-102">ICorDebugModule3 Interface</span></span>
-<span data-ttu-id="97c46-103">動的モジュールのシンボル リーダーを作成します。</span><span class="sxs-lookup"><span data-stu-id="97c46-103">Creates a symbol reader for a dynamic module.</span></span>  
+# <a name="icordebugmodule3-interface"></a><span data-ttu-id="a8112-102">ICorDebugModule3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a8112-102">ICorDebugModule3 Interface</span></span>
+<span data-ttu-id="a8112-103">動的モジュールのシンボル リーダーを作成します。</span><span class="sxs-lookup"><span data-stu-id="a8112-103">Creates a symbol reader for a dynamic module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="97c46-104">構文</span><span class="sxs-lookup"><span data-stu-id="97c46-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a8112-104">構文</span><span class="sxs-lookup"><span data-stu-id="a8112-104">Syntax</span></span>  
   
 ```  
 interface ICorDebugModule3 : IUnknown  
@@ -39,29 +39,29 @@ interface ICorDebugModule3 : IUnknown
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="97c46-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="97c46-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="a8112-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="a8112-105">Methods</span></span>  
   
-|<span data-ttu-id="97c46-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="97c46-106">Method</span></span>|<span data-ttu-id="97c46-107">説明</span><span class="sxs-lookup"><span data-stu-id="97c46-107">Description</span></span>|  
+|<span data-ttu-id="a8112-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="a8112-106">Method</span></span>|<span data-ttu-id="a8112-107">説明</span><span class="sxs-lookup"><span data-stu-id="a8112-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="97c46-108">ICorDebugModule3::CreateReaderForInMemorySymbols メソッド</span><span class="sxs-lookup"><span data-stu-id="97c46-108">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|<span data-ttu-id="97c46-109">シンボル リーダーの作成 (通常[ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) の動的モジュール。</span><span class="sxs-lookup"><span data-stu-id="97c46-109">Creates a symbol reader (typically [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) for a dynamic module.</span></span>|  
+|[<span data-ttu-id="a8112-108">ICorDebugModule3::CreateReaderForInMemorySymbols メソッド</span><span class="sxs-lookup"><span data-stu-id="a8112-108">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|<span data-ttu-id="a8112-109">シンボル リーダーを作成します (通常[ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) の動的モジュール。</span><span class="sxs-lookup"><span data-stu-id="a8112-109">Creates a symbol reader (typically [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) for a dynamic module.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="97c46-110">コメント</span><span class="sxs-lookup"><span data-stu-id="97c46-110">Remarks</span></span>  
- <span data-ttu-id="97c46-111">このインターフェイスは、"ICorDebugModule"および"ICorDebugModule2"インターフェイスを論理的に拡張します。</span><span class="sxs-lookup"><span data-stu-id="97c46-111">This interface logically extends the "ICorDebugModule" and "ICorDebugModule2" interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a8112-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="a8112-110">Remarks</span></span>  
+ <span data-ttu-id="a8112-111">このインターフェイスは、"ICorDebugModule"および"ICorDebugModule2"インターフェイスを論理的に拡張します。</span><span class="sxs-lookup"><span data-stu-id="a8112-111">This interface logically extends the "ICorDebugModule" and "ICorDebugModule2" interfaces.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="97c46-112">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="97c46-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="a8112-112">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="a8112-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="97c46-113">要件</span><span class="sxs-lookup"><span data-stu-id="97c46-113">Requirements</span></span>  
- <span data-ttu-id="97c46-114">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="97c46-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a8112-113">要件</span><span class="sxs-lookup"><span data-stu-id="a8112-113">Requirements</span></span>  
+ <span data-ttu-id="a8112-114">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a8112-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97c46-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="97c46-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a8112-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a8112-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="97c46-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="97c46-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a8112-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a8112-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="97c46-117">**.NET framework のバージョン:** 4.5、4、3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="97c46-117">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
+ <span data-ttu-id="a8112-117">**.NET framework のバージョン:** 4.5、4、3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="a8112-117">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="97c46-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="97c46-118">See Also</span></span>  
- [<span data-ttu-id="97c46-119">ICorDebugRemoteTarget インターフェイス</span><span class="sxs-lookup"><span data-stu-id="97c46-119">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [<span data-ttu-id="97c46-120">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="97c46-120">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
+## <a name="see-also"></a><span data-ttu-id="a8112-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="a8112-118">See Also</span></span>  
+ [<span data-ttu-id="a8112-119">ICorDebugRemoteTarget インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a8112-119">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
+ [<span data-ttu-id="a8112-120">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a8112-120">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
     
- [<span data-ttu-id="97c46-121">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="97c46-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [<span data-ttu-id="a8112-121">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a8112-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
