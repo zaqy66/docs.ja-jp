@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2efa8cfb2b196d6f5a26354161e42c1f376e43b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 880504e874d9797cf05290058b6dbf3a3daf2579
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389536"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473117"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>デバッガー表示属性によるデバッグ機能の拡張
-デバッガー表示属性は、型を指定し、その型の実行時の動作を最もよく理解している型の開発者が、デバッガーで表示されたときに、その型がどのように見えるかも指定できるようにします。 さらに、`Target` プロパティを提供するデバッガー表示属性は、ソース コードの知識がなくても、ユーザーがアセンブリ レベルで適用することができます。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 属性は、デバッガーの変数ウィンドウで型やメンバーを表示する方法を制御します。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 属性は、デバッガーの変数ウィンドウにフィールドまたはプロパティを表示するかどうか、および表示方法を決定します。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性は、型に対して代理の型 (プロキシ) を指定し、その型をデバッガー ウィンドウで表示する方法を変更します。 プロキシ (代理の型) を指定した変数を表示すると、元の型の代理としてプロキシがデバッガーの表示ウィンドウに表示されます **。** デバッガーの変数ウィンドウには、プロキシ型のパブリック メンバーのみが表示されます。 プライベート メンバーは表示されません。  
+デバッガー表示属性は、型を指定し、その型の実行時の動作を最もよく理解している型の開発者が、デバッガーで表示されたときに、その型がどのように見えるかも指定できるようにします。 さらに、`Target` プロパティを提供するデバッガー表示属性は、ソース コードの知識がなくても、ユーザーがアセンブリ レベルで適用することができます。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 属性は、デバッガーの変数ウィンドウで型やメンバーを表示する方法を制御します。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 属性は、デバッガーの変数ウィンドウにフィールドまたはプロパティを表示するかどうか、および表示方法を決定します。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性は、型に対して代理の型 (プロキシ) を指定し、その型をデバッガー ウィンドウで表示する方法を変更します。 プロキシ、または代替の型を持つ変数を表示するときに、プロキシの略、デバッガーの表示ウィンドウで、元の型です。 デバッガーの変数ウィンドウには、プロキシ型のパブリック メンバーのみが表示されます。 プライベート メンバーは表示されません。  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>DebuggerDisplayAttribute の使用  
  <xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> コンストラクターには引数が 1 つあり、それは、型のインスタンスの値列に表示される文字列です。 この文字列には、中かっこ ({ と }) を含めることができます。 かっこ内のテキストは、式として評価されます。 たとえば、次の C# コードでは、`MyHashtable` のインスタンスのデバッガー表示を展開するプラス記号 (+) が選択された場合に、"Count = 4" が表示されます。  

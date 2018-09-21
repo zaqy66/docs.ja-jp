@@ -7,7 +7,7 @@ ms.date: 09/12/2018
 ms.custom: vs-dotnet
 ms.openlocfilehash: af14c92ab27885deec878dc33e7b94035f43e65b
 ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/20/2018
 ms.locfileid: "46488952"

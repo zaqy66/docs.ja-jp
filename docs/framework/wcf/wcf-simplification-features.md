@@ -2,12 +2,12 @@
 title: WCF の単純化機能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 010f941850dedd73e9cc203ea2b180dae7d4742c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ded4fc93e5e8f33d98e58ffcb3cb98c2bff2b410
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526354"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493237"
 ---
 # <a name="wcf-simplification-features"></a>WCF の単純化機能
 ここでは、WCF アプリケーションの作成を容易にする新機能について説明します。  
@@ -106,7 +106,7 @@ ms.locfileid: "43526354"
 |----------------|-------------------|-----------------|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|許される最大配列長を取得または設定します。 このクォータは、XML リーダーが返すプリミティブ配列 (バイト配列など) の最大サイズを制限します。 このクォータは、XML リーダー自体のメモリ消費は制限しませんが、このリーダーを使用するコンポーネントのメモリ消費を制限します。 たとえば、 <xref:System.Runtime.Serialization.DataContractSerializer> が <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>でセキュリティ保護されたリーダーを使用するときは、このクォータを超えるバイト配列を逆シリアル化することはありません。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|1 回の読み取りで返すことができる最大バイト数を取得または設定します。 このクォータは、要素の開始タグとその属性を読み取るときに、1 回の読み取り操作で読み取るバイト数を制限します  (ストリーミングを使用しない場合、要素名自体がクォータに照らし合わせてカウントされることはありません)。 XML 属性が多すぎると、属性名は一意かどうかを確認する必要があるため、処理時間が大幅に増加する可能性があります。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> によってこの脅威を軽減できます。|  
-|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|128 ノードの深さ|このクォータは、XML 要素の入れ子の深さの最大値を制限します。  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> は <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> と相互に関係しています。リーダーは常に、現在の要素とそのすべての先祖に関するデータをメモリ内に維持します。このため、リーダーのメモリ消費の最大値は、この 2 つの設定値の積に比例します。 深く入れ子になったオブジェクト グラフを逆シリアル化する場合、デシリアライザーはスタック全体にアクセスし、回復不可能な <xref:System.StackOverflowException>をスローするしかありません。 XML の入れ子と両方のオブジェクトの入れ子の間に直接的な相関関係が存在する、<xref:System.Runtime.Serialization.DataContractSerializer>と<!--zz <xref:System.Runtime.Serialization.XmlSerializer>-->`System.Runtime.Serialization.XmlSerializer`します。 この脅威を軽減するには、<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> を使用します。|  
+|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|128 ノードの深さ|このクォータは、XML 要素の入れ子の深さの最大値を制限します。  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> は <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> と相互に関係しています。リーダーは常に、現在の要素とそのすべての先祖に関するデータをメモリ内に維持します。このため、リーダーのメモリ消費の最大値は、この 2 つの設定値の積に比例します。 深く入れ子になったオブジェクト グラフを逆シリアル化する場合、デシリアライザーはスタック全体にアクセスし、回復不可能な <xref:System.StackOverflowException>をスローするしかありません。 <xref:System.Runtime.Serialization.DataContractSerializer> の場合も <xref:System.Xml.Serialization.XmlSerializer>の場合も、XML の入れ子構造とオブジェクトの入れ子構造との間に直接的な相関関係が存在します。 この脅威を軽減するには、<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> を使用します。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>|Int32.MaxValue|このクォータは、nametable で使用できる最大文字数を制限します。 nametable には、XML ドキュメントを処理するときに出現する特定の文字列 (名前空間やプレフィックスなど) が入っています。 これらの文字列はメモリ内でバッファー化されるので、ストリーミングが予想されるときは、このクォータを使用して過度のバッファーを防止します。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>|Int32.MaxValue|このクォータは、XML リーダーが返す文字列の最大サイズを制限します。 このクォータは、XML リーダー自体のメモリ消費は制限しませんが、このリーダーを使用するコンポーネントのメモリ消費を制限します。 たとえば、 <xref:System.Runtime.Serialization.DataContractSerializer> が <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>でセキュリティ保護されたリーダーを使用するときは、このクォータを超える文字列を逆シリアル化することはありません。|  
   

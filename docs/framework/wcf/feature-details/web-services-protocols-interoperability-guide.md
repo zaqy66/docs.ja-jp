@@ -2,12 +2,12 @@
 title: Web サービス プロトコルの相互運用性ガイド
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: da5014292a8ebfcea48a7b6e1a0cdfd014b09961
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739046"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490377"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web サービス プロトコルの相互運用性ガイド
 Windows Communication Foundation (WCF) は、さまざまな Web サービス プロトコルを実装します。 これらのプロトコルの多くには、さまざまなオプションと拡張ポイントが用意されており、それらの実装は実装者の裁量に任されています。 このトピックでは、WCF が実装する Web サービス プロトコルの一覧を示します。 サポートされる各プロトコルの実装の詳細については、このセクションの他のトピックで説明します。  
@@ -74,7 +74,7 @@ Windows Communication Foundation (WCF) は、さまざまな Web サービス �
 |WS-Coordination|[Web サービスの調整](https://go.microsoft.com/fwlink/?LinkId=95324)|  
 |WS-AtomicTransaction|[Web サービスのアトミックのトランザクション](https://go.microsoft.com/fwlink/?LinkId=95323)|  
   
- <xref:System.ServiceModel.Description.MetadataExporter>、 <xref:System.ServiceModel.Description.MetadataImporter>、 <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`、 `System.ServiceModel.Description.WSDLImporter`、および<xref:System.ServiceModel.Description.MetadataResolver>クラスは、次のメタデータの仕様のサポートを提供します。  
+ <xref:System.ServiceModel.Description.MetadataExporter>、<xref:System.ServiceModel.Description.MetadataImporter>、<xref:System.ServiceModel.Description.WsdlExporter>、<xref:System.ServiceModel.Description.WsdlImporter>、および <xref:System.ServiceModel.Description.MetadataResolver> の各クラスは、次のメタデータ仕様をサポートします。  
   
 -   [XML Schema Part 1: Structures Second Edition](https://go.microsoft.com/fwlink/?LinkId=3536)  
   

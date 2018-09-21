@@ -3,11 +3,11 @@ title: インターネット インフォメーション サービスのホス�
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: 303fe47df987901b09cee8cc4292f12bcda2b74d
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46320923"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480696"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>インターネット インフォメーション サービスのホスティング手順
 インターネット インフォメーション サービス (IIS) によってホストされているこのサンプルを実行するには、IIS が適切にインストールされて実行されていることを確認する必要があります。  

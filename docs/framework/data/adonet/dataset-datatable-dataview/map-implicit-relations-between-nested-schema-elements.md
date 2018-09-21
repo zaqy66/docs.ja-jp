@@ -2,12 +2,12 @@
 title: 入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 3c0b5356479d31a3caad8438618e7cf7dc4e10e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 73cd8a83021934de3b8e3bf494a4f59dd32e183c
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485574"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493621"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て
 XML スキーマ言語定義 (XSD) スキーマでは、複数の複合型を入れ子にして指定できます。 この場合、割り当て処理には既定の割り当てが適用されます。その際、<xref:System.Data.DataSet> に作成される内容を次に示します。  
@@ -16,7 +16,7 @@ XML スキーマ言語定義 (XSD) スキーマでは、複数の複合型を入
   
 -   1 つ主キー列が追加テーブル定義ごとにという名前の親に unique 制約が存在しない場合*TableName*_id のデータ型、 *TableName*親テーブルの名前を指定します。  
   
--   主キーとして追加の列を識別する親テーブルに主キー制約 (設定して、 **IsPrimaryKey**プロパティを**True**)。 制約の名前は、制約*#* 場所*#* は 1、2、3、します。 たとえば、最初の制約の既定の名前は Constraint1 となります。  
+-   主キーとして追加の列を識別する親テーブルに主キー制約 (設定して、 **IsPrimaryKey**プロパティを**True**)。 制約には、Constraint\# (\# は、1、2、3 など) という名前が付けられます。 たとえば、最初の制約の既定の名前は Constraint1 となります。  
   
 -   子テーブルの外部キー制約により、追加された列が親テーブルの主キーを参照する外部キーとして認識されます。 制約名が*ParentTable_ChildTable*場所*ParentTable*親テーブルの名前を指定および*ChildTable*子テーブルの名前を指定します。  
   

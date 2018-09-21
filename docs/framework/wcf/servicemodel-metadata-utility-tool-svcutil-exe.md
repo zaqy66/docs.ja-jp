@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 4c47013ebc84c6006d65a89e57217ce1c720b45a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197567"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490167"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)
 
@@ -192,7 +192,7 @@ Svcutil.exe は、必要な C# シリアル化コードをアプリケーショ�
 |/reference:\<ファイルのパス >|指定したアセンブリを、型参照の解決に使用するアセンブリの集合に追加します。<br /><br /> 短縮形: `/r`|
 |/excludeType:\<type>|エクスポートや検証から除外する完全修飾のまたはアセンブリ修飾の型名を指定します。<br /><br /> 短縮形: `/et`|
 |/out:\<file>|生成されるコードのファイル名を指定します。 このオプションは、複数のアセンブリが入力としてツールに渡される場合は無視されます。<br /><br /> 既定 : アセンブリ名から派生します。<br /><br /> 短縮形: `/o`|
-|/UseSerializerForFaults|指定します、 <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer `の既定ではなく、エラーの読み書きに使用する必要があります<xref:System.Runtime.Serialization.DataContractSerializer>します。|
+|/UseSerializerForFaults|既定の <xref:System.Xml.Serialization.XmlSerializer> ではなく、<xref:System.Runtime.Serialization.DataContractSerializer> をエラーの読み書きに使用する必要があることを指定します。|
 
 ## <a name="examples"></a>使用例
 

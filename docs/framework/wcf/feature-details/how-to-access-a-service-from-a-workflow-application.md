@@ -2,12 +2,12 @@
 title: '方法: ワークフロー アプリケーションからサービスにアクセスする'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 5bc18b446d4bf818c874839a421793a997ddc543
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 460e5d0f1bbfdebf885176ed9fcc336b76731edd
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595465"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493315"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>方法: ワークフロー アプリケーションからサービスにアクセスする
 このトピックでは、ワークフロー コンソール アプリケーションからワークフロー サービスを呼び出す方法について説明します。 完了に依存、[方法: メッセージング アクティビティでワークフロー サービスを作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)トピック。 このトピックでは、ワークフロー アプリケーションからワークフロー サービスを呼び出す方法について説明します、ワークフロー アプリケーションから任意の Windows Communication Foundation (WCF) サービスを呼び出す場合と同じ方法を使用できます。
@@ -42,13 +42,13 @@ ms.locfileid: "45595465"
 
      ![ツールボックスにアクティビティをエコー](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
 
-7.  ドラッグ アンド ドロップ、 <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`アクティビティをデザイナー画面にします。 下、**制御フロー**ツールボックスのセクション。
+7.  <xref:System.Activities.Statements.Sequence> アクティビティをデザイナー画面にドラッグ アンド ドロップします。 下、**制御フロー**ツールボックスのセクション。
 
-8.  <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`フォーカスにアクティビティをクリックして、**変数**リンクし、という名前の文字列変数を追加`inString`します。 変数の既定値を付けます`"Hello, world"`という名前の文字列変数と`outString`次の図に示すようにします。
+8.  <xref:System.Activities.Statements.Sequence>フォーカスにアクティビティをクリックして、**変数**リンクし、という名前の文字列変数を追加`inString`します。 変数の既定値を付けます`"Hello, world"`という名前の文字列変数と`outString`次の図に示すようにします。
 
      ![変数の追加](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")
 
-9. ドラッグ アンド ドロップ、**エコー**にアクティビティ、 <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`します。 バインドのプロパティ ウィンドウで、`inMsg`への引数、`inString`変数と`outMsg`への引数、`outString`変数を次の図に示すように。 これにより、`inString` 変数の値を操作に渡し、戻り値を取得し、その戻り値を `outString` 変数に格納します。
+9. ドラッグ アンド ドロップ、**エコー**にアクティビティ、<xref:System.Activities.Statements.Sequence>します。 バインドのプロパティ ウィンドウで、`inMsg`への引数、`inString`変数と`outMsg`への引数、`outString`変数を次の図に示すように。 これにより、`inString` 変数の値を操作に渡し、戻り値を取得し、その戻り値を `outString` 変数に格納します。
 
      ![変数への引数のバインド](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")
 

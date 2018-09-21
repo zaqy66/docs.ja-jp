@@ -2,12 +2,12 @@
 title: メッセージ相関
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: e4cd5dfd6f03370a408dc6f8fb39c983db3d43df
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fd97f12f536da85619f300d36d02a10306f32aa5
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999430"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493194"
 ---
 # <a name="message-correlation"></a>メッセージ相関
 このサンプルでは、Windows Communication Foundation (WCF) サービスをメッセージ キュー (MSMQ) アプリケーションが MSMQ メッセージを送信する方法と、要求/応答シナリオでは、送信者と受信者のアプリケーション間のメッセージの関連付け方法を示します。 このサンプルでは、msmqIntegrationBinding バインディングを使用します。 この場合、サービスは自己ホスト型コンソール アプリケーションで、サービスがキュー内のメッセージを受信したかどうかを監視できます。 k  
@@ -16,7 +16,7 @@ ms.locfileid: "45999430"
   
  `IOrderProcessor` サービス コントラクトは、キューでの使用に適した一方向サービス操作を定義します。 MSMQ メッセージには Action ヘッダーがないので、さまざまな MSMQ メッセージを操作コントラクトに自動的にマッピングすることはできません。 したがってこの場合、存在する操作コントラクトは 1 つだけです。 サービス内に複数の操作コントラクトを定義する場合は、ディスパッチする操作コントラクトを決定するために使用できる、MSMQ メッセージ内のヘッダー (ラベルや correlationID など) に関する情報をアプリケーションで提供する必要があります。 これは、方法については、[カスタム Demux](../../../../docs/framework/wcf/samples/custom-demux.md)します。  
   
- さらに、MSMQ メッセージには、操作コントラクトの別のパラメータにマッピングされるヘッダーに関する情報は含まれません。 したがって、操作コントラクトに存在するパラメータは 1 つだけです。 型のパラメーターが<!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`-->、`System.ServiceModel.MSMQIntegration.MsmqMessage`基になる MSMQ メッセージが含まれています。 `MsmqMessage<T>` クラスの型 "T" は、シリアル化されて MSMQ メッセージ本文に含まれているデータを表します。 このサンプルでは、`PurchaseOrder` 型がシリアル化されて MSMQ メッセージ本文になっています。  
+ さらに、MSMQ メッセージには、操作コントラクトの別のパラメータにマッピングされるヘッダーに関する情報は含まれません。 したがって、操作コントラクトに存在するパラメータは 1 つだけです。 型のパラメーターが<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>、基になる MSMQ メッセージが含まれています。 `MsmqMessage<T>` クラスの型 "T" は、シリアル化されて MSMQ メッセージ本文に含まれているデータを表します。 このサンプルでは、`PurchaseOrder` 型がシリアル化されて MSMQ メッセージ本文になっています。  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  

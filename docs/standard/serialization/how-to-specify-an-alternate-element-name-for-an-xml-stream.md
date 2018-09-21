@@ -13,11 +13,11 @@ helpviewer_keywords:
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
 ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46288028"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490086"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>方法 : XML ストリームの代替要素名を指定する
 [コード例](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  

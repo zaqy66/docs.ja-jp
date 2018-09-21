@@ -13,15 +13,15 @@ ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 921f5f2bfda1a19d022d3f3f4131e3653fd17ea7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f3c3ea63df8d99154c42e40b359180ad1065f6c5
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742791"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481755"
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;追加&gt;webRequestModules (ネットワーク設定) の要素
-アプリケーションにカスタム Web 要求のモジュールを追加します。  
+カスタムの Web 要求モジュールをアプリケーションに追加します。  
   
  \<configuration>  
 \<system.net>  
@@ -45,7 +45,7 @@ ms.locfileid: "32742791"
 |**属性**|**説明**|  
 |-------------------|---------------------|  
 |`prefix`|この Web 要求モジュールによって処理される要求の URI プレフィックス。|  
-|`type`|完全修飾型名 (によって示される、<xref:System.Type.FullName%2A>プロパティ) とアセンブリ名 (によって示される、<xref:System.Reflection.Assembly.FullName%2A>プロパティ)、この Web 要求のモジュールを実装する、コンマで区切って指定します。|  
+|`type`|完全修飾型名 (によって示される、<xref:System.Type.FullName%2A>プロパティ) とアセンブリ名 (によって示される、<xref:System.Reflection.Assembly.FullName%2A>プロパティ)、この Web 要求モジュールを実装する、コンマで区切られました。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -56,20 +56,20 @@ ms.locfileid: "32742791"
 |-----------------|---------------------|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|使用してネットワークのホストから情報を要求するモジュールを指定します。|  
   
-## <a name="remarks"></a>コメント  
- `prefix`属性は、指定された Web 要求モジュールを使用する URI プレフィックスを定義します。 Web 要求のモジュールは、通常、HTTP、FTP などの特定のプロトコルを処理する登録しますが、特定のサーバーまたはサーバー上のパスに要求を処理する登録されていることができます。  
+## <a name="remarks"></a>Remarks  
+ `prefix`属性が指定された Web 要求モジュールを使用する URI プレフィックスを定義します。 Web 要求モジュールは通常、HTTP、FTP などの特定のプロトコルを処理するために登録しますが、特定のサーバーまたはサーバー上のパスへの要求を処理するために登録することができます。  
   
- URI の一致のプレフィックスに渡される Web 要求のモジュールが作成された、<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>メソッドです。  
+ 一致する URI のプレフィックスが渡されるときに、Web 要求モジュールが作成された、<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>メソッド。  
   
- 値、`prefix`属性が有効な URI: たとえば、"http"の先頭の文字にする必要がありますか" http://www.contoso.com "です。  
+ 値、`prefix`属性が有効な URI の先頭の文字にする必要があります。 たとえば、`http` または `http://www.contoso.com` のようにします。
   
- 値、`type`属性が有効な型名と対応するアセンブリ名、コンマで区切られたにする必要があります。  
+ 値、`type`属性が有効な型名と対応するアセンブリ名、コンマで区切られたにする必要があります。
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、HTTP のカスタム Web 要求のモジュールを登録します。 指定したモジュールの正しい値を持つバージョンおよび PublicKeyToken の値を置き換える必要があります。  
+ 次の例では、HTTP の場合、カスタムの Web 要求モジュールを登録します。 指定したモジュールの正しい値で、バージョンおよび PublicKeyToken の値を置き換える必要があります。  
   
 ```xml  
 <configuration>  

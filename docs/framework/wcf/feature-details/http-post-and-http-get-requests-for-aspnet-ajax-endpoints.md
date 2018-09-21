@@ -2,14 +2,15 @@
 title: '方法 : ASP.NET AJAX エンドポイントのために HTTP POST または HTTP GET を選択する'
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 079bbd98b3fc3d5538f87cad39a4a83a0dc1e242
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5cebdf0bae937d84ec23ed97a5d2feca24fff473
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863336"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473052"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>方法 : ASP.NET AJAX エンドポイントのために HTTP POST または HTTP GET を選択する
+
 Windows Communication Foundation (WCF) クライアントの Web サイトの JavaScript から呼び出すことができる ASP.NET AJAX 対応エンドポイントを公開するサービスを作成することができます。 このようなサービスを構築するための基本的な手順については[方法: ASP.NET AJAX エンドポイントを追加する構成を使用](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)と[方法: ASP.NET AJAX エンドポイントなしを使用して構成を追加](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)します。  
   
  ASP.NET AJAX では、HTTP POST 動詞および HTTP GET 動詞を使用する操作をサポートしており、HTTP POST が既定となっています。 副作用がなく、返されるデータがほとんど、またはまったく変更されない操作を作成する場合は、代わりに HTTP GET を使用します。 GET 操作の結果はキャッシュされます。つまり、同じ操作についての複数の呼び出し結果がサービスに対する 1 回だけの要求で済むことになります。 WCF では行われませんが、任意のレベル (ユーザーのブラウザーでプロキシ サーバーでは、その他のレベルです。) を実行できる、キャッシュキャッシュはサービス パフォーマンスの向上が望まれる場合には有効ですが、データの変更が頻繁であったり、操作によって何かのアクションが実行される場合は適していません。  
@@ -30,11 +31,11 @@ Windows Communication Foundation (WCF) クライアントの Web サイトの Ja
   
  POST を使用するサンプルを参照してください、 [AJAX サービスを使用して HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)サンプル。  
   
-### <a name="to-create-a-wcf-service-that-responds-to-http-get-or-http-post-requests"></a>HTTP GET または HTTP POST 要求に応答する WCF サービスを作成するには  
+## <a name="to-create-a-wcf-service-that-responds-to-http-get-or-http-post-requests"></a>HTTP GET または HTTP POST 要求に応答する WCF サービスを作成するには
   
-1.  マークされたインターフェイスでの基本的な WCF サービス コントラクトの定義、<xref:System.ServiceModel.ServiceContractAttribute>属性。 各操作を <xref:System.ServiceModel.OperationContractAttribute> でマークします。 <xref:System.ServiceModel.Web.WebGetAttribute> 属性を追加して、操作が HTTP GET 要求に応答するように指定します。 HTTP POST を明示的に指定するために <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性を追加することもできます。また、属性を指定しなければ、既定で HTTP POST となります。  
+1. マークされたインターフェイスでの基本的な WCF サービス コントラクトの定義、<xref:System.ServiceModel.ServiceContractAttribute>属性。 各操作を <xref:System.ServiceModel.OperationContractAttribute> でマークします。 <xref:System.ServiceModel.Web.WebGetAttribute> 属性を追加して、操作が HTTP GET 要求に応答するように指定します。 HTTP POST を明示的に指定するために <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性を追加することもできます。また、属性を指定しなければ、既定で HTTP POST となります。
   
-    ```  
+    ```csharp
     [ServiceContract]  
     public interface IMusicService  
     {  
@@ -58,9 +59,9 @@ Windows Communication Foundation (WCF) クライアントの Web サイトの Ja
     }  
     ```  
   
-2.  `IMusicService` を使用して、`MusicService` サービス コントラクトを実装します。  
+2. `IMusicService` を使用して、`MusicService` サービス コントラクトを実装します。
   
-    ```  
+    ```csharp
     public class MusicService : IMusicService  
     {  
         public void AddAlbum(string user, string album)  
@@ -72,7 +73,7 @@ Windows Communication Foundation (WCF) クライアントの Web サイトの Ja
     }  
     ```  
   
-3.  アプリケーションで、.svc という拡張子を付けて新しい service ファイルを作成します。 このファイルを追加、適切な編集[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)ディレクティブ情報をサービスします。 指定、<xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>で使用される、 [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)ディレクティブを自動的に ASP.NET AJAX エンドポイントを構成します。  
+3. アプリケーションで、.svc という拡張子を付けて新しい service ファイルを作成します。 このファイルを追加、適切な編集[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)ディレクティブ情報をサービスします。 指定、<xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>で使用される、 [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)ディレクティブを自動的に ASP.NET AJAX エンドポイントを構成します。  
   
     ```  
     <%@ServiceHost   
@@ -83,11 +84,11 @@ Windows Communication Foundation (WCF) クライアントの Web サイトの Ja
     %>  
     ```  
   
-### <a name="to-call-the-service"></a>サービスを呼び出すには  
+## <a name="to-call-the-service"></a>サービスを呼び出すには  
   
-1.  ブラウザーを使用すると、クライアントのコードなしでサービスの GET 操作をテストできます。 サービスが構成されている場合の例については、 "http://example.com/service.svc" 「アドレスを入力し、 "http://example.com/service.svc/LookUpArtist?album=SomeAlbum" のアドレス バーには、ブラウザーにサービスを呼び出すし、応答をダウンロードまたは表示します。  
+1. ブラウザーを使用すると、クライアントのコードなしでサービスの GET 操作をテストできます。 サービスが構成されている場合など、 `http://example.com/service.svc` 」と入力し、アドレス`http://example.com/service.svc/LookUpArtist?album=SomeAlbum`アドレス バーには、ブラウザーにサービスを呼び出すし、応答をダウンロードまたは表示します。
   
-2.  GET 操作によるサービスは、他の ASP.NET AJAX サービスと同様に、サービス URL を ASP.NET AJAX Script Manager コントロールのスクリプト コレクションに入力することで使用できます。 例については、次を参照してください。、[基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)します。  
+2. GET 操作によるサービスは、他の ASP.NET AJAX サービスと同様に、サービス URL を ASP.NET AJAX Script Manager コントロールのスクリプト コレクションに入力することで使用できます。 例については、次を参照してください。、[基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)します。
   
 ## <a name="see-also"></a>関連項目  
  [ASP.NET AJAX 用の WCF サービスの作成](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  

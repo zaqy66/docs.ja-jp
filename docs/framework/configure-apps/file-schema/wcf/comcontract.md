@@ -2,12 +2,12 @@
 title: '&lt;comContract&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: b15d40c5933776676c605e71c77453442ad3e339
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749063"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490453"
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 COM+ 統合サービス コントラクトを指定します。  
@@ -69,8 +69,8 @@ COM+ 統合サービス コントラクトを指定します。
 |-------------|-----------------|  
 |comContracts|`comContract` 要素のコレクションを含みます。|  
   
-## <a name="remarks"></a>コメント  
- COM + 統合サービス コントラクトは現在に制限されて、" http://tempuri.org "名前空間、およびコントラクト名がサポートする COM インターフェイスから派生します。 ただし、構成ファイルの `comContracts` セクションと `comContract` 要素を使用して代替を指定することができます。 たとえば、次の構成を使用して、名前空間、コントラクト名、組み込まれるユーザー定義型、およびサービス コントラクトのその他の設定を指定できます。  
+## <a name="remarks"></a>Remarks  
+ COM + 統合サービス コントラクトは、現在に制限されて、`http://tempuri.org`名前空間、およびコントラクト名がサポートする COM インターフェイスから派生します。 ただし、構成ファイルの `comContracts` セクションと `comContract` 要素を使用して代替を指定することができます。 たとえば、次の構成を使用して、名前空間、コントラクト名、組み込まれるユーザー定義型、およびサービス コントラクトのその他の設定を指定できます。  
   
 ```xml  
 <comContracts>  

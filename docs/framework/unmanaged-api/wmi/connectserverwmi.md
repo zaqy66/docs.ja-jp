@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: MT
+ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287742"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473539"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 関数
 指定したコンピューターにある WMI 名前空間との接続が DCOM 経由で作成されます。  
@@ -48,7 +48,7 @@ HRESULT ConnectServerWmi (
 
 `strNetworkResource` [in]有効なポインター`BSTR`正しい WMI 名前空間のオブジェクトのパスを格納しています。 参照してください、[解説](#remarks)詳細についてはします。
 
-`strUser` [in]有効なへのポインター`BSTR`ユーザー名を格納しています。 A`null`値が現在のセキュリティ コンテキストを示します。 場合、ユーザーは、現在の 1 つの異なるドメインから`strUser`円記号で区切られたドメインとユーザー名を含めることもできます。 `strUser` ユーザー プリンシパル名 (UPN) 書式指定もできます、として suhc  *userName@domainName*します。 参照してください、[解説](#remarks)詳細についてはします。
+`strUser` [in]有効なへのポインター`BSTR`ユーザー名を格納しています。 A`null`値が現在のセキュリティ コンテキストを示します。 場合、ユーザーは、現在の 1 つの異なるドメインから`strUser`円記号で区切られたドメインとユーザー名を含めることもできます。 `strUser` できるようにユーザー プリンシパル名 (UPN) 形式でも`userName@domainName`します。 参照してください、[解説](#remarks)詳細についてはします。
 
 `strPassword` [in]有効なへのポインター`BSTR`パスワードを格納しています。 A`null`現在のセキュリティ コンテキストを示します。 空の文字列 ("")、有効な長さ 0 のパスワードを示します。
 

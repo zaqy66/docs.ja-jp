@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
 ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749949"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493528"
 ---
 # <a name="mid-statement"></a>Mid ステートメント
 指定した文字数を置き換える、`String`別の文字列から文字を含む変数。  

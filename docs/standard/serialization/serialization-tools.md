@@ -3,11 +3,11 @@ title: シリアル化ツール
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
 ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46005581"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481820"
 ---
 # <a name="serialization-tools"></a>シリアル化ツール
 ここでは、シリアル化ツールについて詳しく説明します。 すべてのツールは、コマンド ラインから実行できます。  

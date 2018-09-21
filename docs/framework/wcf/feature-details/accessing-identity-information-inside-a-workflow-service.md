@@ -2,17 +2,17 @@
 title: ワークフロー サービス内部の ID 情報へのアクセス
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
-ms.openlocfilehash: a87c21215c37fefd8d9306fd0ccd0c5b2a1dfd11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491976"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480748"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>ワークフロー サービス内部の ID 情報へのアクセス
-ワークフロー サービス内の ID 情報にアクセスするには、カスタム実行プロパティに <xref:System.ServiceModel.Activities.IReceiveMessageCallback> インターフェイスを実装する必要があります。 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> メソッドで、<xref:System.ServiceModel.OperationContext.ServiceSecurityContext> にアクセスして ID 情報にアクセスできます。 このトピックでは、この実行プロパティを実装する方法に加え、実行時にこのプロパティを <xref:System.ServiceModel.Activities.Receive> アクティビティに提示するカスタム アクティビティの実装方法を順に説明します。  カスタム アクティビティと同じ動作を実装、 <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`アクティビティとその、 <xref:System.ServiceModel.Activities.Receive> 、内部に配置されますが、<xref:System.ServiceModel.Activities.IReceiveMessageCallback>が呼び出され、id 情報が取得されます。  
+ワークフロー サービス内の ID 情報にアクセスするには、カスタム実行プロパティに <xref:System.ServiceModel.Activities.IReceiveMessageCallback> インターフェイスを実装する必要があります。 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> メソッドで、<xref:System.ServiceModel.OperationContext.ServiceSecurityContext> にアクセスして ID 情報にアクセスできます。 このトピックでは、この実行プロパティを実装する方法に加え、実行時にこのプロパティを <xref:System.ServiceModel.Activities.Receive> アクティビティに提示するカスタム アクティビティの実装方法を順に説明します。 このカスタム アクティビティが行う動作は、<xref:System.Activities.Statements.Sequence> アクティビティと同じですが、<xref:System.ServiceModel.Activities.Receive> がその内部に配置される場合は、<xref:System.ServiceModel.Activities.IReceiveMessageCallback> が呼び出されて ID 情報を取得します。  
   
-### <a name="implement-ireceivemessagecallback"></a>IReceiveMessageCallback の実装  
+## <a name="implement-ireceivemessagecallback"></a>IReceiveMessageCallback の実装  
   
 1.  空の [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] ソリューションを作成します。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "33491976"
   
      このコードでは、メソッドに渡される <xref:System.ServiceModel.OperationContext> を使用して ID 情報にアクセスします。  
   
-### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>IReceiveMessageCallback 実装を NativeActivityContext に追加するためのネイティブ アクティビティの実装  
+## <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>IReceiveMessageCallback 実装を NativeActivityContext に追加するためのネイティブ アクティビティの実装  
   
 1.  <xref:System.Activities.NativeActivity> から派生した `AccessIdentityScope` という新しいクラスを追加します。  
   
 2.  子アクティビティ、変数、現在のアクティビティ インデックス、および <xref:System.Activities.CompletionCallback> コールバックを追跡するためのローカル変数を追加します。  
   
-    ```  
+    ```csharp
     public sealed class AccessIdentityScope : NativeActivity  
     {  
         Collection<Activity> children;  
@@ -68,7 +68,7 @@ ms.locfileid: "33491976"
   
 3.  コンストラクターを実装します。  
   
-    ```  
+    ```csharp
     public AccessIdentityScope() : base()  
     {  
         this.children = new Collection<Activity>();  
@@ -79,7 +79,7 @@ ms.locfileid: "33491976"
   
 4.  `Activities` プロパティと `Variables` プロパティを実装します。  
   
-    ```  
+    ```csharp
     public Collection<Activity> Activities  
     {  
          get { return this.children; }  
@@ -93,7 +93,7 @@ ms.locfileid: "33491976"
   
 5.  <xref:System.Activities.NativeActivity.CacheMetadata%2A> をオーバーライドします。  
   
-    ```  
+    ```csharp
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
     {  
         //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
@@ -105,7 +105,7 @@ ms.locfileid: "33491976"
   
 6.  <xref:System.Activities.NativeActivity.Execute%2A> をオーバーライドします。  
   
-    ```  
+    ```csharp
     protected override void Execute(NativeActivityContext context)  
     {  
        // Add the IReceiveMessageCallback implementation as an Execution property   
@@ -139,13 +139,13 @@ ms.locfileid: "33491976"
     }  
     ```  
   
-### <a name="implement-the-workflow-service"></a>ワークフロー サービスの実装  
+## <a name="implement-the-workflow-service"></a>ワークフロー サービスの実装  
   
-1.  既存を開く`Program`クラスです。  
+1.  既存の開く`Program`クラス。  
   
 2.  次の定数を定義します。  
   
-    ```  
+    ```csharp
     class Program  
     {  
        const string addr = "http://localhost:8080/Service";  
@@ -155,7 +155,7 @@ ms.locfileid: "33491976"
   
 3.  ワークフロー サービスを作成する `GetWorkflowService` という静的メソッドを追加します。  
   
-    ```  
+    ```csharp
     static Activity GetServiceWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -194,7 +194,7 @@ ms.locfileid: "33491976"
   
 4.  既存の `Main` メソッドで、ワークフロー サービスをホストします。  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        string addr = "http://localhost:8080/Service";  
@@ -213,7 +213,7 @@ ms.locfileid: "33491976"
     }  
     ```  
   
-### <a name="implement-a-workflow-client"></a>ワークフロー クライアントの実装  
+## <a name="implement-a-workflow-client"></a>ワークフロー クライアントの実装  
   
 1.  `Client` という新しいコンソール アプリケーション プロジェクトを作成します。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "33491976"
   
 3.  生成された Program.cs ファイルを開き、`GetClientWorkflow` という静的メソッドを追加してクライアント ワークフローを作成します。  
   
-    ```  
+    ```csharp
     static Activity GetClientWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -245,7 +245,7 @@ ms.locfileid: "33491976"
           OperationName = "Echo",  
           Content = new SendParametersContent()  
           {  
-             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }   
+             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }
           }  
        };  
   
@@ -253,12 +253,12 @@ ms.locfileid: "33491976"
        {  
           Variables = { echoString },  
           Activities =  
-          {                      
+          {
              new CorrelationScope  
              {  
                 Body = new Sequence  
                 {  
-                   Activities =   
+                   Activities =
                    {  
                       echoRequest,  
                       new ReceiveReply  
@@ -271,8 +271,8 @@ ms.locfileid: "33491976"
                       }  
                    }  
                 }  
-             },                      
-             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+             },
+             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
              }  
           };  
        }  
@@ -281,7 +281,7 @@ ms.locfileid: "33491976"
   
 4.  次のホスティング コードを `Main()` メソッドに追加します。  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        Activity workflow = GetClientWorkflow();  
@@ -292,10 +292,10 @@ ms.locfileid: "33491976"
     }  
     ```  
   
-## <a name="example"></a>例  
+## <a name="example"></a>例
  このトピックで使用されているソース コードの完全な一覧を次に示します。  
   
-```  
+```csharp
 // AccessIdentityCallback.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -333,9 +333,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // AccessIdentityScope.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -381,9 +381,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         {  
             //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
             base.CacheMetadata(metadata);  
-            //add the private implementation variable: currentIndex   
+            //add the private implementation variable: currentIndex
             metadata.AddImplementationVariable(this.currentIndex);  
-        }                     
+        }
   
         protected override void Execute(  
             NativeActivityContext context)  
@@ -418,9 +418,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // Service.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -493,10 +493,10 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
-// client.cs   
+```csharp
+// client.cs
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
 //----------------------------------------------------------------  
@@ -546,12 +546,12 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
             {  
                 Variables = { echoString },  
                 Activities =  
-                {                      
+                {
                     new CorrelationScope  
                     {  
                         Body = new Sequence  
                         {  
-                            Activities =   
+                            Activities =
                             {  
                                 echoRequest,  
                                 new ReceiveReply  
@@ -564,8 +564,8 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
                                 }  
                             }  
                         }  
-                    },                      
-                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+                    },
+                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
                 }  
             };  
         }  

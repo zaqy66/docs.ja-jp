@@ -6,11 +6,11 @@ helpviewer_keywords:
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
 ms.openlocfilehash: 9e2ba9f3550442602cab217fec329e6c19efd3b3
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287696"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481690"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>方法 : 署名の検証に使用する証明機関の証明書チェーンを指定する (WCF)
 Windows Communication Foundation (WCF) では、X.509 証明書を使用して署名された SOAP メッセージを受信したときに既定ではことを確認、X.509 証明書が信頼された証明機関によって発行されたことです。 これは、証明書ストアを検索し、その証明機関の証明書が信頼された証明書として指定されているかどうかを確認することによって行われます。 WCF この判断を行うためには、適切な証明書ストアに証明機関の証明書チェーンをインストールする必要があります。  
