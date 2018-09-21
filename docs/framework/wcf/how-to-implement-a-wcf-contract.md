@@ -8,21 +8,21 @@ helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
 ms.openlocfilehash: 569de6f49b56b46ccfeb22e9f0bd25bcf339b7e0
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493205"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46528789"
 ---
-# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="98ed6-102">方法 : Windows Communication Foundation サービス コントラクトを実装する</span><span class="sxs-lookup"><span data-stu-id="98ed6-102">How to: Implement a Windows Communication Foundation Service Contract</span></span>
+# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="d9542-102">方法 : Windows Communication Foundation サービス コントラクトを実装する</span><span class="sxs-lookup"><span data-stu-id="d9542-102">How to: Implement a Windows Communication Foundation Service Contract</span></span>
 
-<span data-ttu-id="98ed6-103">これは、2 番目の基本的な Windows Communication Foundation (WCF) サービスとサービスを呼び出すことができるクライアントを作成するために必要な 6 つのタスクです。</span><span class="sxs-lookup"><span data-stu-id="98ed6-103">This is the second of six tasks required to create a basic Windows Communication Foundation (WCF) service and a client that can call the service.</span></span> <span data-ttu-id="98ed6-104">6 つのすべてのタスクの概要については、次を参照してください。、[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)トピック。</span><span class="sxs-lookup"><span data-stu-id="98ed6-104">For an overview of all six tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
+<span data-ttu-id="d9542-103">これは、2 番目の基本的な Windows Communication Foundation (WCF) サービスとサービスを呼び出すことができるクライアントを作成するために必要な 6 つのタスクです。</span><span class="sxs-lookup"><span data-stu-id="d9542-103">This is the second of six tasks required to create a basic Windows Communication Foundation (WCF) service and a client that can call the service.</span></span> <span data-ttu-id="d9542-104">6 つのすべてのタスクの概要については、次を参照してください。、[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)トピック。</span><span class="sxs-lookup"><span data-stu-id="d9542-104">For an overview of all six tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
 
-<span data-ttu-id="98ed6-105">WCF アプリケーションの作成における次の手順では、サービス インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="98ed6-105">The next step in creating a WCF application is to implement the service interface.</span></span> <span data-ttu-id="98ed6-106">これには、ユーザー定義の `CalculatorService` インターフェイスを実装する `ICalculator` というクラスの作成も含まれます。</span><span class="sxs-lookup"><span data-stu-id="98ed6-106">This involves creating a class called `CalculatorService` that implements the user-defined `ICalculator` interface..</span></span>
+<span data-ttu-id="d9542-105">WCF アプリケーションの作成における次の手順では、サービス インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="d9542-105">The next step in creating a WCF application is to implement the service interface.</span></span> <span data-ttu-id="d9542-106">これには、ユーザー定義の `CalculatorService` インターフェイスを実装する `ICalculator` というクラスの作成も含まれます。</span><span class="sxs-lookup"><span data-stu-id="d9542-106">This involves creating a class called `CalculatorService` that implements the user-defined `ICalculator` interface..</span></span>
 
-## <a name="to-implement-a-wcf-service-contract"></a><span data-ttu-id="98ed6-107">WCF サービス コントラクトを実装するには</span><span class="sxs-lookup"><span data-stu-id="98ed6-107">To implement a WCF service contract</span></span>
+## <a name="to-implement-a-wcf-service-contract"></a><span data-ttu-id="d9542-107">WCF サービス コントラクトを実装するには</span><span class="sxs-lookup"><span data-stu-id="d9542-107">To implement a WCF service contract</span></span>
 
-<span data-ttu-id="98ed6-108">Service1.cs ファイルまたは Service1.vb ファイルを開き、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="98ed6-108">Open the Service1.cs or Service1.vb file and add the following code:</span></span>
+<span data-ttu-id="d9542-108">Service1.cs ファイルまたは Service1.vb ファイルを開き、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="d9542-108">Open the Service1.cs or Service1.vb file and add the following code:</span></span>
 
 ```csharp
 using System;
@@ -111,11 +111,11 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-<span data-ttu-id="98ed6-109">各メソッドは、電卓操作を実装し、テストしやすいように、いくつかのテキストをコンソールに出力します。</span><span class="sxs-lookup"><span data-stu-id="98ed6-109">Each method implements the calculator operation and writes some text to the console to make testing easier.</span></span>
+<span data-ttu-id="d9542-109">各メソッドは、電卓操作を実装し、テストしやすいように、いくつかのテキストをコンソールに出力します。</span><span class="sxs-lookup"><span data-stu-id="d9542-109">Each method implements the calculator operation and writes some text to the console to make testing easier.</span></span>
 
-## <a name="example"></a><span data-ttu-id="98ed6-110">例</span><span class="sxs-lookup"><span data-stu-id="98ed6-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d9542-110">例</span><span class="sxs-lookup"><span data-stu-id="d9542-110">Example</span></span>
 
-<span data-ttu-id="98ed6-111">コントラクトを定義するインターフェイスのコードとそのインターフェイスを実装するコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="98ed6-111">The following code shows both the interface that defines the contract and the implementation of the interface.</span></span>
+<span data-ttu-id="d9542-111">コントラクトを定義するインターフェイスのコードとそのインターフェイスを実装するコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="d9542-111">The following code shows both the interface that defines the contract and the implementation of the interface.</span></span>
 
 ```csharp
 using System;
@@ -245,20 +245,20 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-## <a name="compile-the-code"></a><span data-ttu-id="98ed6-112">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="98ed6-112">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="d9542-112">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="d9542-112">Compile the code</span></span>
 
-<span data-ttu-id="98ed6-113">コンパイル エラーがないことを確認するソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="98ed6-113">Build the solution to ensure there are no compilation errors.</span></span> <span data-ttu-id="98ed6-114">Visual Studio を使用している場合、**ビルド**メニューの **ソリューションのビルド**(またはキーを押します**Ctrl**+**Shift** + **B**)。</span><span class="sxs-lookup"><span data-stu-id="98ed6-114">If you're using Visual Studio, on the **Build** menu select **Build Solution** (or press **Ctrl**+**Shift**+**B**).</span></span>
+<span data-ttu-id="d9542-113">コンパイル エラーがないことを確認するソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="d9542-113">Build the solution to ensure there are no compilation errors.</span></span> <span data-ttu-id="d9542-114">Visual Studio を使用している場合、**ビルド**メニューの **ソリューションのビルド**(またはキーを押します**Ctrl**+**Shift** + **B**)。</span><span class="sxs-lookup"><span data-stu-id="d9542-114">If you're using Visual Studio, on the **Build** menu select **Build Solution** (or press **Ctrl**+**Shift**+**B**).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="98ed6-115">次の手順</span><span class="sxs-lookup"><span data-stu-id="98ed6-115">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="d9542-115">次の手順</span><span class="sxs-lookup"><span data-stu-id="d9542-115">Next steps</span></span>
 
-<span data-ttu-id="98ed6-116">サービス コントラクトが作成されて実装されます。</span><span class="sxs-lookup"><span data-stu-id="98ed6-116">Now the service contract is created and implemented.</span></span> <span data-ttu-id="98ed6-117">次の手順では、サービスを実行します。</span><span class="sxs-lookup"><span data-stu-id="98ed6-117">In the next step, you run the service.</span></span>
+<span data-ttu-id="d9542-116">サービス コントラクトが作成されて実装されます。</span><span class="sxs-lookup"><span data-stu-id="d9542-116">Now the service contract is created and implemented.</span></span> <span data-ttu-id="d9542-117">次の手順では、サービスを実行します。</span><span class="sxs-lookup"><span data-stu-id="d9542-117">In the next step, you run the service.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="98ed6-118">方法: 基本的なサービスをホストおよび実行する</span><span class="sxs-lookup"><span data-stu-id="98ed6-118">How to: Host and Run a Basic Service</span></span>](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
+> [<span data-ttu-id="d9542-118">方法: 基本的なサービスをホストおよび実行する</span><span class="sxs-lookup"><span data-stu-id="d9542-118">How to: Host and Run a Basic Service</span></span>](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
 
-<span data-ttu-id="98ed6-119">トラブルシューティングについては、「[Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)」 (チュートリアル入門のトラブルシューティング) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="98ed6-119">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span></span>
+<span data-ttu-id="d9542-119">トラブルシューティングについては、「[Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)」 (チュートリアル入門のトラブルシューティング) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d9542-119">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="98ed6-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="98ed6-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9542-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="d9542-120">See also</span></span>
 
-- [<span data-ttu-id="98ed6-121">はじめに</span><span class="sxs-lookup"><span data-stu-id="98ed6-121">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [<span data-ttu-id="98ed6-122">自己ホスト</span><span class="sxs-lookup"><span data-stu-id="98ed6-122">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+- [<span data-ttu-id="d9542-121">はじめに</span><span class="sxs-lookup"><span data-stu-id="d9542-121">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [<span data-ttu-id="d9542-122">自己ホスト</span><span class="sxs-lookup"><span data-stu-id="d9542-122">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
