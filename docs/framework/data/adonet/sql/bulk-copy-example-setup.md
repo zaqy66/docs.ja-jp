@@ -3,11 +3,11 @@ title: バルク コピー サンプルのセットアップ
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
 ms.openlocfilehash: 71daf489fdf5e7e12594e798bc3ac01b1c76b027
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478189"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46531391"
 ---
 # <a name="bulk-copy-example-setup"></a>バルク コピー サンプルのセットアップ
 <xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用すると、SQL Server のテーブルにのみデータを書き込むことができます。 このトピックで示すコード サンプルは、SQL Server サンプル データベースを使用して**AdventureWorks**します。 既存のテーブルの改変を防ぐため、コード サンプルでは、別途作成したテーブルにデータを書き込みます。このテーブルを最初に作成しておく必要があります。  

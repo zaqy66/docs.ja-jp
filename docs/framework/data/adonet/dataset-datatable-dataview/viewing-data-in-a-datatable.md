@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 ms.openlocfilehash: de745633060dd4f7b1610492d0ff57ec7a4f545b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615783"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46530220"
 ---
 # <a name="viewing-data-in-a-datatable"></a>DataTable 内のデータの表示
 内容にアクセスすることができます、<xref:System.Data.DataTable>を使用して、**行**と**列**のコレクション、 **DataTable**します。 使用することも、<xref:System.Data.DataTable.Select%2A>内のデータのサブセットを返すメソッドを**DataTable**検索基準などの基準に従って並べ替え順序、および行の状態。 また、使用することができます、<xref:System.Data.DataRowCollection.Find%2A>のメソッド、 **DataRowCollection**主キーの値を使用して特定の行を検索するとき。  

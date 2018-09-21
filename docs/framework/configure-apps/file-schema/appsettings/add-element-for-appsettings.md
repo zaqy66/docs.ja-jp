@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 35a9fc08033d2b9cd1dae5a1f1f3ddcd361f03eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753639"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529581"
 ---
-# <a name="add-element-for-appsettings"></a>\<追加 > 要素を\<appSettings >
+# <a name="add-element-for-appsettings"></a>\<追加 > 要素の\<appSettings >
 
 カスタム アプリケーション設定を追加します。
 
@@ -56,6 +56,15 @@ ms.locfileid: "32753639"
 ```xml
 <appSettings>
   <add key="ApplicationName" value="MyApplication" />
+</appSettings>
+```
+
+次の例では、 `<add>` ASP.NET アプリケーションで 2 つの互換性設定を定義する要素。
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
 </appSettings>
 ```
 

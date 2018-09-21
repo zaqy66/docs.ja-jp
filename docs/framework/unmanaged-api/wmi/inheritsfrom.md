@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46477784"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508868"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 関数
 指定した親クラスから現在のクラスまたはインスタンスが派生しているかどうかが判定されます。
