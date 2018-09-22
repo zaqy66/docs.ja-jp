@@ -3,11 +3,11 @@ title: SQL と CLR の型マッピング
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532442"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584436"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL と CLR の型マッピング
 LINQ to SQL では、リレーショナル データベースのデータ モデルが、任意のプログラミング言語で表されるオブジェクト モデルに対応付けられています。 アプリケーションが実行されると、LINQ to SQL は、オブジェクト モデルの統合言語クエリを SQL に変換し、それをデータベースに送信して実行します。 データベースから結果が返されると、LINQ to SQL はその結果をプログラミング言語で操作できるオブジェクトに変換し直します。  
@@ -230,7 +230,7 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
  これ以外にもさまざまなバイナリのマッピングを選択できますが、一部のマッピングでは、データベースに対する変換操作中にオーバーフローやデータ損失の例外が発生することがあります。 詳細については、次を参照してください。、[型マッピングの実行時動作関係](#BehaviorMatrix)します。  
   
 ### <a name="sql-server-filestream"></a>SQL Server の FILESTREAM  
- `FILESTREAM` 列の `VARBINARY(MAX)` 属性は、Microsoft SQL Server 2008 以降で使用できます.NET Framework version 3.5 SP1 以降の LINQ to SQL では、これらの属性にマップすることができます。  
+ `FILESTREAM` 列の `VARBINARY(MAX)` 属性は、Microsoft SQL Server 2008 以降で使用できます。 .NET Framework version 3.5 SP1 以降の LINQ to SQL では、これらの属性にマップすることができます。  
   
  `VARBINARY(MAX)` 属性を持つ `FILESTREAM` 列を <xref:System.Data.Linq.Binary> オブジェクトにマップすることはできますが、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドを使用して `FILESTREAM` 属性を持つ列を自動的に作成することはできません。 詳細については`FILESTREAM`を参照してください[FILESTREAM の概要](https://go.microsoft.com/fwlink/?LinkId=115291)で Microsoft SQL Server オンライン ブックの「します。  
   
