@@ -3,11 +3,11 @@ title: 制約 (F#)
 description: F# でジェネリック型または関数の型引数の要件を指定するジェネリック型パラメーターに適用される制約について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324059"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46531945"
 ---
 # <a name="constraints"></a>制約
 

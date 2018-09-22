@@ -3,11 +3,11 @@ title: メッセージ相関
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: fd97f12f536da85619f300d36d02a10306f32aa5
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: MT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493194"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529101"
 ---
 # <a name="message-correlation"></a>メッセージ相関
 このサンプルでは、Windows Communication Foundation (WCF) サービスをメッセージ キュー (MSMQ) アプリケーションが MSMQ メッセージを送信する方法と、要求/応答シナリオでは、送信者と受信者のアプリケーション間のメッセージの関連付け方法を示します。 このサンプルでは、msmqIntegrationBinding バインディングを使用します。 この場合、サービスは自己ホスト型コンソール アプリケーションで、サービスがキュー内のメッセージを受信したかどうかを監視できます。 k  
