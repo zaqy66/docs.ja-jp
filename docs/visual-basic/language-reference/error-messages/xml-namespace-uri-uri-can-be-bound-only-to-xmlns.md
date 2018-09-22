@@ -8,22 +8,22 @@ helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
 ms.openlocfilehash: 46a6c4896dae3951b5aedae79361f2e06d02bc04
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538074"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698111"
 ---
-# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a><span data-ttu-id="07bc7-102">XML 名前空間 URI `http://www.w3.org/XML/1998/namespace`; にのみバインドできます&#39;xmlns&#39;</span><span class="sxs-lookup"><span data-stu-id="07bc7-102">XML namespace URI `http://www.w3.org/XML/1998/namespace`; can be bound only to &#39;xmlns&#39;</span></span>
-<span data-ttu-id="07bc7-103">URI `http://www.w3.org/XML/1998/namespace` XML 名前空間の宣言に使用されます。</span><span class="sxs-lookup"><span data-stu-id="07bc7-103">The URI `http://www.w3.org/XML/1998/namespace` is used in an XML namespace declaration.</span></span> <span data-ttu-id="07bc7-104">この URI は予約された名前空間であり、XML 名前空間の宣言に含めることができません。</span><span class="sxs-lookup"><span data-stu-id="07bc7-104">This URI is a reserved namespace and cannot be included in an XML namespace declaration.</span></span>  
+# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a><span data-ttu-id="28648-102">XML 名前空間 URI `http://www.w3.org/XML/1998/namespace`; にのみバインドできます&#39;xmlns&#39;</span><span class="sxs-lookup"><span data-stu-id="28648-102">XML namespace URI `http://www.w3.org/XML/1998/namespace`; can be bound only to &#39;xmlns&#39;</span></span>
+<span data-ttu-id="28648-103">URI `http://www.w3.org/XML/1998/namespace` XML 名前空間の宣言に使用されます。</span><span class="sxs-lookup"><span data-stu-id="28648-103">The URI `http://www.w3.org/XML/1998/namespace` is used in an XML namespace declaration.</span></span> <span data-ttu-id="28648-104">この URI は予約された名前空間であり、XML 名前空間の宣言に含めることができません。</span><span class="sxs-lookup"><span data-stu-id="28648-104">This URI is a reserved namespace and cannot be included in an XML namespace declaration.</span></span>  
   
- <span data-ttu-id="07bc7-105">**エラー ID:** BC31183</span><span class="sxs-lookup"><span data-stu-id="07bc7-105">**Error ID:** BC31183</span></span>  
+ <span data-ttu-id="28648-105">**エラー ID:** BC31183</span><span class="sxs-lookup"><span data-stu-id="28648-105">**Error ID:** BC31183</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="07bc7-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="07bc7-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="28648-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="28648-106">To correct this error</span></span>  
   
--   <span data-ttu-id="07bc7-107">XML 名前空間の宣言を削除するか、URI を置き換えて http://www.w3.org/XML/1998/namespace で有効な名前空間 URI。</span><span class="sxs-lookup"><span data-stu-id="07bc7-107">Remove the XML namespace declaration or replace the URI http://www.w3.org/XML/1998/namespace with a valid namespace URI.</span></span>  
+-   <span data-ttu-id="28648-107">XML 名前空間の宣言を削除するか、URI を置き換えて http://www.w3.org/XML/1998/namespace で有効な名前空間 URI。</span><span class="sxs-lookup"><span data-stu-id="28648-107">Remove the XML namespace declaration or replace the URI http://www.w3.org/XML/1998/namespace with a valid namespace URI.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="07bc7-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="07bc7-108">See Also</span></span>  
- [<span data-ttu-id="07bc7-109">Imports ステートメント (XML 名前空間)</span><span class="sxs-lookup"><span data-stu-id="07bc7-109">Imports Statement (XML Namespace)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
- [<span data-ttu-id="07bc7-110">XML リテラル</span><span class="sxs-lookup"><span data-stu-id="07bc7-110">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
- [<span data-ttu-id="07bc7-111">XML</span><span class="sxs-lookup"><span data-stu-id="07bc7-111">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="28648-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="28648-108">See Also</span></span>  
+ [<span data-ttu-id="28648-109">Imports ステートメント (XML 名前空間)</span><span class="sxs-lookup"><span data-stu-id="28648-109">Imports Statement (XML Namespace)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
+ [<span data-ttu-id="28648-110">XML リテラル</span><span class="sxs-lookup"><span data-stu-id="28648-110">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [<span data-ttu-id="28648-111">XML</span><span class="sxs-lookup"><span data-stu-id="28648-111">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)

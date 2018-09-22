@@ -7,30 +7,30 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
 ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46531841"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699067"
 ---
-# <a name="helpprovider-component-windows-forms"></a><span data-ttu-id="128b9-102">HelpProvider コンポーネント (Windows フォーム)</span><span class="sxs-lookup"><span data-stu-id="128b9-102">HelpProvider Component (Windows Forms)</span></span>
-<span data-ttu-id="128b9-103">Windows フォーム `HelpProvider` コンポーネントは、Windows ベースのアプリケーションで HTML ヘルプ 1.x のヘルプ ファイル (HTML Help Workshop で生成された .chm ファイル、または .htm ファイル) を関連付けるために使用します。</span><span class="sxs-lookup"><span data-stu-id="128b9-103">The Windows Forms `HelpProvider` component is used to associate an HTML Help 1.x Help file (either a .chm file, produced with the HTML Help Workshop, or an .htm file) with your Windows-based application.</span></span>  
+# <a name="helpprovider-component-windows-forms"></a><span data-ttu-id="ce9e8-102">HelpProvider コンポーネント (Windows フォーム)</span><span class="sxs-lookup"><span data-stu-id="ce9e8-102">HelpProvider Component (Windows Forms)</span></span>
+<span data-ttu-id="ce9e8-103">Windows フォーム `HelpProvider` コンポーネントは、Windows ベースのアプリケーションで HTML ヘルプ 1.x のヘルプ ファイル (HTML Help Workshop で生成された .chm ファイル、または .htm ファイル) を関連付けるために使用します。</span><span class="sxs-lookup"><span data-stu-id="ce9e8-103">The Windows Forms `HelpProvider` component is used to associate an HTML Help 1.x Help file (either a .chm file, produced with the HTML Help Workshop, or an .htm file) with your Windows-based application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="128b9-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="128b9-104">In This Section</span></span>  
- [<span data-ttu-id="128b9-105">HelpProvider コンポーネントの概要</span><span class="sxs-lookup"><span data-stu-id="128b9-105">HelpProvider Component Overview</span></span>](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
- <span data-ttu-id="128b9-106">HTML ヘルプ ファイルを Windows ベースのアプリケーションに関連付けることができる、`HelpProvider` コンポーネントの一般的な概念について説明します。</span><span class="sxs-lookup"><span data-stu-id="128b9-106">Introduces the general concepts of the `HelpProvider` component, which lets you associate an HTML Help file with a Windows-based application.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ce9e8-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ce9e8-104">In This Section</span></span>  
+ [<span data-ttu-id="ce9e8-105">HelpProvider コンポーネントの概要</span><span class="sxs-lookup"><span data-stu-id="ce9e8-105">HelpProvider Component Overview</span></span>](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
+ <span data-ttu-id="ce9e8-106">HTML ヘルプ ファイルを Windows ベースのアプリケーションに関連付けることができる、`HelpProvider` コンポーネントの一般的な概念について説明します。</span><span class="sxs-lookup"><span data-stu-id="ce9e8-106">Introduces the general concepts of the `HelpProvider` component, which lets you associate an HTML Help file with a Windows-based application.</span></span>  
   
- <span data-ttu-id="128b9-107">参照してください[のヘルプ システムを Windows フォーム アプリケーションで](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)します。</span><span class="sxs-lookup"><span data-stu-id="128b9-107">See [Help Systems in Windows Forms Applications](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).</span></span>  
+ <span data-ttu-id="ce9e8-107">参照してください[のヘルプ システムを Windows フォーム アプリケーションで](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)します。</span><span class="sxs-lookup"><span data-stu-id="ce9e8-107">See [Help Systems in Windows Forms Applications](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="128b9-108">参照</span><span class="sxs-lookup"><span data-stu-id="128b9-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ce9e8-108">参照</span><span class="sxs-lookup"><span data-stu-id="ce9e8-108">Reference</span></span>  
  <xref:System.Windows.Forms.HelpProvider>  
- <span data-ttu-id="128b9-109">このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="128b9-109">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="ce9e8-109">このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="ce9e8-109">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.Help>  
- <span data-ttu-id="128b9-110">このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="128b9-110">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="ce9e8-110">このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="ce9e8-110">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="128b9-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="128b9-111">Related Sections</span></span>  
- [<span data-ttu-id="128b9-112">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="128b9-112">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="128b9-113">Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。</span><span class="sxs-lookup"><span data-stu-id="128b9-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="ce9e8-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="ce9e8-111">Related Sections</span></span>  
+ [<span data-ttu-id="ce9e8-112">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="ce9e8-112">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="ce9e8-113">Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。</span><span class="sxs-lookup"><span data-stu-id="ce9e8-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- <span data-ttu-id="128b9-114">参照してください[Windows フォーム アプリケーションのヘルプ システム](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\))します。</span><span class="sxs-lookup"><span data-stu-id="128b9-114">Also see [Help Systems in Windows Forms Applications](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).</span></span>
+ <span data-ttu-id="ce9e8-114">参照してください[Windows フォーム アプリケーションのヘルプ システム](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\))します。</span><span class="sxs-lookup"><span data-stu-id="ce9e8-114">Also see [Help Systems in Windows Forms Applications](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).</span></span>
