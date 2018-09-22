@@ -3,11 +3,11 @@ title: 動的再構成
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
 ms.openlocfilehash: a147a1d6cf61001832661376363ecc850ecad309
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537463"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699106"
 ---
 # <a name="dynamic-reconfiguration"></a>動的再構成
 このサンプルでは、Windows Communication Foundation (WCF) ルーティング サービスを使用します。 ルーティング サービスは、WCF コンポーネント、アプリケーションでコンテンツ ベースのルーターを含めるが簡単です。 このサンプルでは、ルーティング サービスを使用して通信するために標準の WCF 電卓のサンプルを適応します。 このサンプルでは、実行時にルーティング サービスを動的に再構成する方法を示します。  

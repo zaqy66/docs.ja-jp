@@ -3,11 +3,11 @@ title: シーケンス (F#)
 description: 大規模な順序付けられたデータのコレクションを持っていてもすべての要素を使用すると必ずしも期待しないときに、f# シーケンスを使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532387"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577624"
 ---
 # <a name="sequences"></a>シーケンス
 

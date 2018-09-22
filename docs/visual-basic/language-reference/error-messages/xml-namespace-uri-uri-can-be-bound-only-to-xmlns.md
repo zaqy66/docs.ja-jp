@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
 ms.openlocfilehash: 46a6c4896dae3951b5aedae79361f2e06d02bc04
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538074"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698111"
 ---
 # <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a>XML 名前空間 URI `http://www.w3.org/XML/1998/namespace`; にのみバインドできます&#39;xmlns&#39;
 URI `http://www.w3.org/XML/1998/namespace` XML 名前空間の宣言に使用されます。 この URI は予約された名前空間であり、XML 名前空間の宣言に含めることができません。  
