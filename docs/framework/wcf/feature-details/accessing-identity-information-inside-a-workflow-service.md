@@ -3,11 +3,11 @@ title: ワークフロー サービス内部の ID 情報へのアクセス
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
 ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480748"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585508"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>ワークフロー サービス内部の ID 情報へのアクセス
 ワークフロー サービス内の ID 情報にアクセスするには、カスタム実行プロパティに <xref:System.ServiceModel.Activities.IReceiveMessageCallback> インターフェイスを実装する必要があります。 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> メソッドで、<xref:System.ServiceModel.OperationContext.ServiceSecurityContext> にアクセスして ID 情報にアクセスできます。 このトピックでは、この実行プロパティを実装する方法に加え、実行時にこのプロパティを <xref:System.ServiceModel.Activities.Receive> アクティビティに提示するカスタム アクティビティの実装方法を順に説明します。 このカスタム アクティビティが行う動作は、<xref:System.Activities.Statements.Sequence> アクティビティと同じですが、<xref:System.ServiceModel.Activities.Receive> がその内部に配置される場合は、<xref:System.ServiceModel.Activities.IReceiveMessageCallback> が呼び出されて ID 情報を取得します。  

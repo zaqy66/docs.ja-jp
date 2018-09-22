@@ -3,11 +3,11 @@ title: フレキシブル型 (F#)
 description: F# で柔軟な型注釈、パラメーター、変数、または値が指定した型と互換性がある型を持つことを示します。 これを使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46326519"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576732"
 ---
 # <a name="flexible-types"></a>フレキシブル型
 
