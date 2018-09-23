@@ -5,16 +5,16 @@ author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2018
 ms.custom: mvc
-ms.openlocfilehash: ba63ef6cdc092d06e267637112070e7cd5133a45
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c64dddbe36b789a695c2603e78b29b38d8718f95
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511755"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586884"
 ---
 # <a name="net-core-additional-tools"></a>.NET Core の追加ツール
 
-このセクションでは、[.NET Core コマンドライン インターフェイス (CLI)](..\tools\index.md) ツールに加え、.NET Core 機能を支援し、拡張するツールを一覧で紹介します。
+このセクションでは、[.NET Core コマンドライン インターフェイス (CLI)](../tools/index.md) ツールに加え、.NET Core 機能を支援し、拡張するツールを一覧で紹介します。
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web Service Reference ツール](wcf-web-service-reference-guide.md)
 
