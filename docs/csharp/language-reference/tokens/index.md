@@ -13,11 +13,11 @@ ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7cc105b335069635791e9e558fe6f9a28eba8b60
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676163"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696925"
 ---
 # <a name="c-special-characters"></a>C# の特殊文字
 

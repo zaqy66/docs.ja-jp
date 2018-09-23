@@ -4,12 +4,12 @@ description: ソース コードから .NET Core と .NET Core CLI をビルド�
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618520"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577504"
 ---
 # <a name="build-net-core-from-source"></a>ソースから .NET Core をビルドする
 
@@ -93,7 +93,7 @@ OS 間でのクロス ビルドはありません (X64 にビルドされる ARM
   * Xcode
   * Openssl
 
-ビルドするには、Windows の場合は `build.cmd` を、Linux と macOS の場合は `build.sh` をルートから実行します。 テストを実行しない場合は、`build.cmd /t:Compile` または `./build.sh /t:Compile` を実行します。 macOS Sierra で CLI をビルドするには、`export DOTNET_RUNTIME_ID=osx.10.11-x64` を実行して、DOTNET_RUNTIME_ID 環境変数を設定する必要があります。
+ビルドするには、Windows の場合は `build.cmd` を、Linux と macOS の場合は `build.sh` をルートから実行します。 テストを実行しない場合は、`build.cmd -t:Compile` または `./build.sh -t:Compile` を実行します。 macOS Sierra で CLI をビルドするには、`export DOTNET_RUNTIME_ID=osx.10.11-x64` を実行して、DOTNET_RUNTIME_ID 環境変数を設定する必要があります。
 
 ### <a name="using-your-build"></a>ビルドの使用
 
