@@ -2,12 +2,12 @@
 title: サービスのバージョンを管理する方法
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: a745a35f72722003fc98ecf14d5f39027dc141f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f79382eb121472ffa32d969cfaeee0e83d3375d
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494897"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46706568"
 ---
 # <a name="how-to-service-versioning"></a>サービスのバージョンを管理する方法
 このトピックでは、メッセージを同じサービスの異なるバージョンにルーティングするルーティング構成を作成するために必要な、基本的な手順について説明します。 この例では、電卓サービスの 2 つのバージョン `roundingCalc` (v1) および `regularCalc` (v2) にメッセージがルーティングされます。 これらの実装は両方とも同じ操作をサポートしますが、古い方のサービス `roundingCalc` では、戻る前にすべての計算を最も近い整数値に丸めます。 クライアント アプリケーションは、新しい方の `regularCalc` サービスを使用するかどうかを示すことが可能である必要があります。  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2.  送信先エンドポイントにメッセージをルーティングするのに使用するフィルターを定義します。  この例では、XPath フィルターは、メッセージ ルーティング先となるバージョンを決定する CalcVer カスタム ヘッダーの値を検出するために使用されます。 XPath フィルターは、CalcVer ヘッダーを含まないメッセージの検出にも使用されます。 次の例では、必要なフィルターおよび名前空間のテーブルを定義します。  
+2.  送信先エンドポイントにメッセージをルーティングするのに使用するフィルターを定義します。  この例では、XPath フィルターを使用して、バージョンにメッセージをルーティングする必要がありますを決定するカスタム CalcVer ヘッダーの値を検出できます。 XPath フィルターは、CalcVer ヘッダーが含まれていないメッセージの検出にも使用されます。 次の例では、必要なフィルターおよび名前空間のテーブルを定義します。  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,7 +94,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  S12 の名前空間プレフィックスが既定で名前空間のテーブルによって定義され、名前空間を表す"http://www.w3.org/2003/05/soap-envelope"です。  
+    > S12 の名前空間プレフィックスは既定では、名前空間テーブルに定義されているし、名前空間を表す`http://www.w3.org/2003/05/soap-envelope`します。
   
 3.  各フィルターをクライアント エンドポイントと関連付けるフィルター テーブルを定義します。 メッセージに値 1 の CalcVer ヘッダーが含まれている場合は、regularCalc サービスに送信されます。 ヘッダーに値 2 が含まれる場合は、roundingCalc サービスに送信されます。 ヘッダーがない場合、メッセージは regularCalc にルーティングされます。  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  フィルター テーブルに含まれているフィルターと照合して受信メッセージを評価するには、ルーティング動作を使用して、フィルター テーブルをサービス エンドポイントと関連付ける必要があります。  次の例では、関連付けられた filterTable1 をサービス エンドポイントを示しています。  
+4.  フィルター テーブルに含まれているフィルターと照合して受信メッセージを評価するには、ルーティング動作を使用して、フィルター テーブルをサービス エンドポイントと関連付ける必要があります。 次の例では、関連付けることを示します`filterTable1`サービスのエンドポイントで。  
   
     ```xml  
     <behaviors>  
