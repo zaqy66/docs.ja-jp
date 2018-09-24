@@ -13,11 +13,11 @@ ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45638978"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696706"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 <a name="top"></a> 共通言語ランタイム (CLR) では、自動メモリ マネージャーとしてガベージ コレクターを使用できます。 次のような利点があります。  
@@ -228,7 +228,7 @@ ms.locfileid: "45638978"
   
      ネイティブ コードを実行しているスレッドは中断されません。  
   
--   プロセッサが 1 つしかないコンピューターでは、[\<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) の設定に関係なく、常にワークステーションのガベージ コレクションが使用されます。 サーバーのガベージ コレクションを指定した場合、CLR は、同時実行を無効にしてワークステーションのガベージ コレクションを使用します。  
+-   プロセッサが 1 つしかないコンピューターでは、[\<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) の設定に関係なく、常にワークステーションのガベージ コレクションが使用されます。 サーバーのガベージ コレクションを指定した場合、CLR は、コンカレンシーを無効にしてワークステーションのガベージ コレクションを使用します。  
   
  サーバーのガベージ コレクションにおける、スレッド処理とパフォーマンスについての注意点を次に示します。  
   

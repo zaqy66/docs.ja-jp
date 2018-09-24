@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45638676"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46580708"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正規表現でのその他の構成体
 .NET の正規表現には、次の 3 つのその他の言語コンストラクトが含まれます。 1 つは、正規表現パターンの途中で特定の一致オプションを有効または無効にすることができます。 残りの 2 つは、正規表現にコメントを含めることができます。  

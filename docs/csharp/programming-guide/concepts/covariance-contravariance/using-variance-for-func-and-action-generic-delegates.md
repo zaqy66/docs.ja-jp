@@ -3,11 +3,11 @@ title: Func および Action 汎用デリゲートでの分散の使用 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
 ms.openlocfilehash: 903926bc86b1b96cea25b91314e35ed4771bbcb9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45679133"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45970358"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Func および Action 汎用デリゲートでの分散の使用 (C#)
 以下の例では、`Func` 汎用デリゲートと `Action` 汎用デリゲートの共変性と反変性を使用して、メソッドの再利用を可能にし、コードの柔軟性を高める方法を示します。  

@@ -9,11 +9,11 @@ ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57290af1df8d370c928a97aba1622e41a6a33589
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45668068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003985"
 ---
 # <a name="xpathnavigator-in-transformations"></a>変換における XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> クラスは、データへの読み取り専用のランダム アクセスを提供し、XSLT (Extensible Stylesheet Language for Transformations) への入力として使用することを目的に設計されています。 このクラスは、<xref:System.Xml.XPath.XPathDocument>、<xref:System.Xml.XmlDataDocument>、および <xref:System.Xml.XmlDocument> に実装されます。 <xref:System.Xml.XPath.XPathNavigator> は、『XML Path Language (XPath)』勧告のセクション 5 で規定されている W3C (World Wide Web Consortium) データ モデルに準拠しています。  

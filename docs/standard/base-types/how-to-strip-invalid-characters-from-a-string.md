@@ -19,11 +19,11 @@ ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a3bbd25e40607bd316f1bbab974174fe5433770f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45686116"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46698069"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>方法 : 文字列から無効な文字を取り除く
 次の例では、静的 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを使用して、文字列から無効な文字を取り除いています。  

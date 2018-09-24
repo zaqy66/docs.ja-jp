@@ -9,11 +9,11 @@ helpviewer_keywords:
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
 ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45594599"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46470786"
 ---
 # <a name="-operator-c-reference"></a>+ 演算子 (C# リファレンス)
 `+` 演算子には、単項演算子としての働きと 2 項演算子としての働きとがあります。  

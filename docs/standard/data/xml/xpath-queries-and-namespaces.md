@@ -9,11 +9,11 @@ ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b11ac80b671c345768da23d2b51d2333c228aaeb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003734"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath クエリおよび名前空間
 XPath クエリは XML ドキュメント中の名前空間を認識し、名前空間プレフィックスを使用して要素と属性名を修飾することができます。 名前空間プレフィックスで要素や属性の名前を修飾すると、XPath クエリで返されるノードを特定の名前空間に属するノードだけに限定することができます。  

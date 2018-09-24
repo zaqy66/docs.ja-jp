@@ -2,13 +2,13 @@
 title: Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べる
 description: Syntax Visualizer は、.NET Compiler Platform SDK がコード用に生成したモデルを調べるためのビジュアル ツールを提供します。
 ms.date: 03/07/2018
-ms.custom: mvc
-ms.openlocfilehash: 3029c868ad9b0384cf11e57a00b123acd1177806
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.custom: mvc, vs-dotnet
+ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43456465"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45750207"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べる
 

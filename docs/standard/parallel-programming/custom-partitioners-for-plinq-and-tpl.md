@@ -11,11 +11,11 @@ ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45964857"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ および TPL 用のカスタム パーティショナー
 データ ソース上で操作を並列化する場合の必須の手順の 1 つは、ソースを複数のスレッドによって同時にアクセスできる複数のセクションに*パーティション分割*することです。 PLINQ およびタスク並列ライブラリ (TPL: Task Parallel Library) には、並列クエリまたは <xref:System.Threading.Tasks.Parallel.ForEach%2A> ループを記述するときに透過的に機能する既定のパーティショナーが用意されています。 より高度なシナリオでは、独自のパーティショナーをプラグインできます。  

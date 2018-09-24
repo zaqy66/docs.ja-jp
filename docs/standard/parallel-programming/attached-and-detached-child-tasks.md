@@ -11,11 +11,11 @@ ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45687674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003764"
 ---
 # <a name="attached-and-detached-child-tasks"></a>アタッチされた子タスクとデタッチされた子タスク
 *子タスク* (または*入れ子のタスク*) は、*親タスク* と呼ばれる、別のタスクのユーザー デリゲートで作成された、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> のインスタンスです。 子タスクはデタッチまたはアタッチできます。 *デタッチされた子タスク* は、親とは独立して実行されるタスクです。 *アタッチされた子タスク* は、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> オプションで作成される入れ子のタスクです。その親は、明示的にも既定でも、子タスクがアタッチされることを禁止しません。 タスクでは、システム リソースが許す限り、任意の数のアタッチされた子タスクおよびデタッチされた子タスクを作成できます。  

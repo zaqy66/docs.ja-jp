@@ -4,12 +4,12 @@ description: コマンド ライン インターフェイス (CLI) ツールを�
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: a9cfebbeddbedc329432c805c5956b382a726a77
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45592063"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46326583"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI ツールの拡張モデル
 
@@ -133,7 +133,7 @@ NuGet には、[カスタム MSBuild ターゲット ファイルとプロパテ
 
 カスタム ターゲットの利用は、拡張されているプロジェクト内部のパッケージとそのバージョンを指す `<PackageReference>` を提供することで行われます。 ツールとは異なり、カスタム ターゲットのパッケージは利用しているプロジェクトの依存関係クロージャに含まれます。
 
-カスタム ターゲットの使用はその構成方法のみに依存します。 これは MSBuild ターゲットなので、指定されたターゲットに依存しており、別のターゲットの後に実行することも、`dotnet msbuild /t:<target-name>` コマンドを使用して手動で呼び出すこともできます。
+カスタム ターゲットの使用はその構成方法のみに依存します。 これは MSBuild ターゲットなので、指定されたターゲットに依存しており、別のターゲットの後に実行することも、`dotnet msbuild -t:<target-name>` コマンドを使用して手動で呼び出すこともできます。
 
 ただし、ユーザーに優れたユーザー エクスペリエンスを提供するため、プロジェクトごとのツールとカスタム ターゲットを組み合わせることができます。 このシナリオでは、プロジェクトごとのツールは基本的に必要な任意のパラメーターのみを受け入れ、それをターゲットを実行する必要な [`dotnet msbuild`](dotnet-msbuild.md) の呼び出しに変換します。 このような相乗効果のサンプルは、[`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) プロジェクトの「[MVP Summit 2016 Hackathon samples](https://github.com/dotnet/MVPSummitHackathon2016)」 (MVP Summit 2016 ハッカソンのサンプル) レポートで参照することができます。
 

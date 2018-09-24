@@ -3,11 +3,11 @@ title: '方法: コンテキストに基づいて要素を検索するクエリ�
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
 ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45593310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45987956"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>方法: コンテキストに基づいて要素を検索するクエリを記述する (C#)
 コンテキストに基づいて要素を選択するクエリの記述が必要になる場合があります。 つまり、前の兄弟要素や次の兄弟要素に基づいてフィルターしたり、 子要素や祖先要素に基づいてフィルターすることが必要になる場合が考えられます。  

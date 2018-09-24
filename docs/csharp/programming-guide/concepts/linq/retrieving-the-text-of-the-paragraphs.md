@@ -3,11 +3,11 @@ title: 段落のテキストの取得 (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
 ms.openlocfilehash: 1d23addb4c4c1ea17343585392fbe08fef08568a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45658510"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579213"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>段落のテキストの取得 (C#)
 この例は、前の例の「[段落とそのスタイルの取得 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)」を基にしています。 この新しい例では、各段落のテキストを文字列として取得します。  

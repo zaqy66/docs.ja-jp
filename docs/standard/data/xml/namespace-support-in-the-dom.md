@@ -6,11 +6,11 @@ ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45596755"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45990961"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM における名前空間のサポート
 XML ドキュメント オブジェクト モデル (DOM) は名前空間に完全に対応しています。 名前空間に対応している XML ドキュメントだけがサポートされます。 W3C (World Wide Web Consortium) の仕様によれば、DOM Level 1 を実装する DOM アプリケーションは名前空間に対応していなくてもかまいませんが、DOM Level 2 の機能は名前空間に対応しています。 ただし、メソッドが DOM 勧告の Level 1 または Level 2 のどちらに準拠しているかに関係なく、XML DOM のすべての機能は名前空間に対応しています。  

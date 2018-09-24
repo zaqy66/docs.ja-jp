@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
 ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45593102"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580071"
 ---
 # <a name="-operator-c-reference"></a>++ 演算子 (C# リファレンス)
 インクリメント演算子 (`++`) は、オペランドを 1 ずつインクリメントします。 インクリメント演算子はそのオペランド ( `++variable` および `variable++`) の前後に指定できます。  

@@ -12,11 +12,11 @@ ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd6f14f89d143edd03f8b5d028ec84315b2f2e97
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45641444"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46578839"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>方法 : アプリケーション ドメインにアセンブリを読み込む
 アプリケーション ドメインにアセンブリを読み込むには、いくつかの方法があります。 推奨されているのは、<xref:System.Reflection.Assembly?displayProperty=nameWithType> クラスの `static` (Visual Basic では `Shared`) <xref:System.Reflection.Assembly.Load%2A> メソッドを使用する方法です。 それ以外には、以下の方法でアセンブリを読み込むことができます。  

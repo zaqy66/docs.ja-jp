@@ -3,11 +3,11 @@ title: スタイルを含む WordprocessingML ドキュメント3
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
 ms.openlocfilehash: 8b21c9e8be957ea2b43405a96e343cea78197f68
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45638783"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46526680"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>スタイルを含む WordprocessingML ドキュメント
 複雑な WordprocessingML ドキュメントには、スタイルを使用して書式設定された段落が含まれています。  

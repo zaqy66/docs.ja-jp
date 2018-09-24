@@ -6,11 +6,11 @@ ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e30b52b8cdfb4d185687d58c80f4475730031c86
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45615216"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45748682"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>エンティティ宣言とエンティティ参照の DOM への読み込み
 エンティティとは、コンテンツやマークアップの代わりに XML で使われる名前を指定する宣言です。 エンティティを使用するには、2 つの手順が必要です。 まず、エンティティ宣言を使用して、置換するコンテンツに名前を結び付ける必要があります。 エンティティ宣言は、ドキュメント型定義 (DTD) または XML スキーマの中で、`<!ENTITY name "value">` 構文を使って作成します。 次に、エンティティ宣言で定義した名前を XML で使用します。 XML で使用するときは、エンティティ参照と呼ばれます。 たとえば、次のエンティティ宣言は、`publisher` という名前のエンティティを宣言し、それを "Microsoft Press" というコンテンツに関連付けます。  
