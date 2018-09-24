@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt;要素'
 ms.custom: updateeachrelease
-ms.date: 04/19/2018
+ms.date: 09/19/2018
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16ce7f2744869c812b9988e91edd153d9cb4fd2
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "32747526"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027374"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;要素
 <xref:System.AppContext> クラスで使用される、新機能に対するオプトアウト メカニズムを指定するスイッチを 1 つまたは複数定義します。  
@@ -125,7 +125,21 @@ ms.locfileid: "32747526"
   
  ライブラリ開発者は、そのライブラリの以降のバージョンで導入された変更された機能をオプトアウトする呼び出し元を許可するカスタムのスイッチも定義できます。 詳細については、<xref:System.AppContext> クラスを参照してください。  
   
-## <a name="example"></a>例  
+## <a name="switches-in-aspnet-applications"></a>ASP.NET アプリケーションでのスイッチ
+
+追加することで互換性の設定を使用する ASP.NET アプリケーションを構成することができます、 [\<追加 >](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)要素を[ \<appSettings >](~/docs/framework/configure-apps/file-schema/appsettings/index.md) web.config ファイルのセクション。 
+
+次の例では、`<add>`に 2 つの設定を追加する要素、 `<appSettings>` web.config ファイルのセクション。
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
+</appSettings>
+```
+
+## <a name="example"></a>例
+
  次の例では、`AppContextSwitchOverrides`要素で、1 つのアプリケーションの互換性スイッチを定義する`Switch.System.Globalization.NoAsyncCurrentCulture`、カルチャから非同期メソッド呼び出し内のスレッド間を移動できません。  
   
 ```xml  
