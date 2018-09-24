@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45615467"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46581052"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンを実装するための推奨される手順
 イベントベースの非同期パターンは、使い慣れたイベントおよびデリゲートのセマンティクスと共に、クラス内の非同期動作を公開する効果的な方法を提供します。 イベント ベースの非同期パターンを実装するには、いくつかの固有の動作要件に従う必要があります。 以降のセクションでは、イベントベースの非同期パターンに従うクラスを実装する際に検討すべき要件とガイドラインについて説明します。  
@@ -73,7 +73,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   クラスで複数の同時呼び出しがサポートされている場合は、開発者が各呼び出しを個別に追跡できるようにするため、`userSuppliedState` というオブジェクト値状態パラメーター、またはタスク ID を受け取る <em>MethodName</em>**Async** オーバーライドを定義します。 このパラメーターは、常に <em>MethodName</em>**Async** メソッドのシグネチャの最終パラメーターにする必要があります。  
   
--   オブジェクト値状態パラメーターまたはタスク ID を受け取る <em>MethodName</em>**Async** オーバーロードがクラスによって定義される場合は、そのタスク ID の操作の有効期間を追跡し、完了ハンドラーに戻す必要があります。 役に立つヘルパー クラスがあります。 同時実行管理について詳しくは、「[方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)」をご覧ください。  
+-   オブジェクト値状態パラメーターまたはタスク ID を受け取る <em>MethodName</em>**Async** オーバーロードがクラスによって定義される場合は、そのタスク ID の操作の有効期間を追跡し、完了ハンドラーに戻す必要があります。 役に立つヘルパー クラスがあります。 コンカレンシー管理について詳しくは、「[方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)」をご覧ください。  
   
 -   クラスによって、状態パラメーターなしで <em>MethodName</em>**Async** メソッドが定義され、このクラスで複数の同時呼び出しがサポートされていない場合、直前の <em>MethodName</em>**Async** 呼び出しが完了する前に <em>MethodName</em>**Async** を呼び出そうとすると、<xref:System.InvalidOperationException> が発生するようにします。  
   

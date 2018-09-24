@@ -13,11 +13,11 @@ ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bc0f266169a2d82bb76355febd58b2268907fe97
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45618913"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540607"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>方法: データフロー ブロックのリンクを解除する
 このドキュメントでは、ソースからターゲット データフロー ブロックのリンクを解除する方法について説明します。

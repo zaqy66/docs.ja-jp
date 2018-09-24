@@ -3,12 +3,12 @@ title: .NET Core コマンドライン ツールのアーキテクチャ
 description: .NET Core ツール レイヤーと最近のバージョンの変更内容について説明します。
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245130"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46696335"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core ツールの変更の概要
 
@@ -63,7 +63,7 @@ ms.locfileid: "39245130"
     
 このコマンドは、"Release" 構成を使用してアプリケーションを `pub` フォルダーに発行します。 このコマンドは、内部では次の MSBuild の呼び出しに変換されます。 
 
-   `dotnet msbuild /t:Publish /p:OutputPath=pub /p:Configuration=Release`
+   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
 
 `new` と `run` のコマンドは、MSBuild のターゲットとして実装されておらず、このルールの主な例外です。
 

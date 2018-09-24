@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 80ecca30b534591ffb2633ade961425f694403f7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7ebd04665d91f599edcb4a5c07680216dfb8925a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192200"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697699"
 ---
 # <a name="extension-methods-c-programming-guide"></a>拡張メソッド (C# プログラミング ガイド)
 拡張メソッドを使用すると、新規の派生型の作成、再コンパイル、または元の型の変更を行うことなく既存の型にメソッドを "追加" できます。 拡張メソッドは特別な種類の静的メソッドですが、拡張された型のインスタンス メソッドのように呼び出します。 C#、F#、および Visual Basic で作成されたクライアント コードの場合は、拡張メソッドの呼び出しと、型で実際に定義されたメソッドの呼び出しに明確な違いはありません。  
@@ -52,9 +52,6 @@ using System.Linq;
 ```  
   
  場合によっては、System.Core.dll への参照も追加する必要があります。ほとんどの <xref:System.Collections.Generic.IEnumerable%601> 型で利用できる追加メソッドとして、標準クエリ演算子が IntelliSense により表示されるようになりました。  
-  
-> [!NOTE]
->  <xref:System.String> の場合、IntelliSense により標準クエリ演算子は表示されませんが、利用できます。  
   
 ## <a name="binding-extension-methods-at-compile-time"></a>コンパイル時の拡張メソッドのバインディング  
  拡張メソッドを使用してクラスまたはインターフェイスを拡張することはできますが、これらをオーバーライドすることはできません。 インターフェイス メソッドまたはクラス メソッドと同じ名前およびシグネチャを持つ拡張メソッドは決して呼び出されません。 コンパイル時に、型自体で定義されているインスタンス メソッドよりも低い優先順位が拡張メソッドには必ず設定されます。 つまり、型に `Process(int i)` という名前のメソッドがあり、これと同じシグネチャの拡張メソッドがある場合、コンパイラは必ずインスタンス メソッドにバインドします。 コンパイラは、メソッド呼び出しを検出すると、最初に型のインスタンス メソッドから一致するものを探します。 一致するものが見つからない場合、型に対して定義されている拡張メソッドを検索し、見つかった最初の拡張メソッドにバインドします。 次の例は、コンパイラが拡張メソッドとインスタンス メソッドのどちらにバインドするかを決定する方法を示しています。  

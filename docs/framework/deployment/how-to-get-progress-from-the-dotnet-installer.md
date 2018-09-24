@@ -10,11 +10,11 @@ ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45649589"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45991585"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>方法: .NET Framework 4.5 インストーラーの進行状況を表示する
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は再頒布可能なランタイムです。 このバージョンの .NET Framework 用アプリを開発する場合は、アプリのセットアップに必要なパーツとして、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを含める (チェーンする) ことができます。 セットアップ手順をカスタマイズまたは統一するために、アプリケーションのセットアップの進行状況を表示する一方で、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップをサイレントで起動し、その進行状況を追跡できます。 サイレントな追跡を可能にするために、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップ (監視対象) ではメモリ マップ I/O (MMIO) セグメントを使用してプロトコルを定義し、セットアップ (ウォッチャーつまりチェーン元) と通信します。 このプロトコルは、チェーン元が進行状況情報や詳細な結果を取得してメッセージに応答し、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを取り消す方法を定義します。  

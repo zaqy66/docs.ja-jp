@@ -8,11 +8,11 @@ ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45676708"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577036"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>スレッド セーフなコレクションを使用する状況
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] は、マルチ スレッドの追加および削除の操作をサポートするために特別に設計されている、5 つの新しいコレクション型です。 スレッド セーフを確保するために、これらの新しい型では、さまざまな種類の効率的なロック同期機構とロック制御の不要な同期機構が使用されます。 同期を行うと、操作にオーバーヘッドが追加されます。 オーバーヘッドの量は、使用する同期の種類、実行する操作の種類、およびその他の要因 (コレクションに同時にアクセスしようとするスレッドの数など) によって異なります。  
@@ -50,7 +50,7 @@ ms.locfileid: "45676708"
 ## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary 対 Dictionary  
  一般に、複数のスレッドから同時にキーまたは値を追加および更新するシナリオであれば、<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> を使用します。 更新を頻繁に行い、読み取りは比較的少ないシナリオでは、通常、<xref:System.Collections.Concurrent.ConcurrentDictionary%602> には大きな利点はありません。 読み取りも更新も多いシナリオでは、通常、コンピューターに任意の数のコアを備えられる場合は <xref:System.Collections.Concurrent.ConcurrentDictionary%602> の方が大幅に高速です。  
   
- 更新を頻繁に行うシナリオでは、<xref:System.Collections.Concurrent.ConcurrentDictionary%602> で同時実行の程度を上げて、コンピューターのコア数が多いほどパフォーマンスが向上するかどうかを計測できます。 同時実行レベルを変更する場合、グローバル操作はできるだけ避けてください。  
+ 更新を頻繁に行うシナリオでは、<xref:System.Collections.Concurrent.ConcurrentDictionary%602> でコンカレンシーの程度を上げて、コンピューターのコア数が多いほどパフォーマンスが向上するかどうかを計測できます。 コンカレンシー レベルを変更する場合、グローバル操作はできるだけ避けてください。  
   
  キーまたは値の読み取りのみを行う場合、ディクショナリがスレッドによって変更されないのであれば同期は不要なため、<xref:System.Collections.Generic.Dictionary%602> の方が高速です。  
   

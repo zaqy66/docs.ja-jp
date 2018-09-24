@@ -8,11 +8,11 @@ ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45638322"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586516"
 ---
 # <a name="parallel-diagnostic-tools"></a>並列診断ツール
 Visual Studio は、マルチ スレッド アプリケーションのデバッグおよびプロファイリングを広範にサポートします。  
@@ -27,7 +27,7 @@ Visual Studio は、マルチ スレッド アプリケーションのデバッ�
 -   [チュートリアル: 並行アプリケーションのデバッグ](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)  
   
 ## <a name="profiling"></a>プロファイル  
- 同時実行ビジュアライザーのレポート ビューを使用すると、並列プログラム内のスレッドどうし、または同じシステム上の他のプロセスのスレッドとのやり取りを視覚化することができます。 詳細については、「[同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)」を参照してください。  
+ コンカレンシー ビジュアライザーのレポート ビューを使用すると、並列プログラム内のスレッドどうし、または同じシステム上の他のプロセスのスレッドとのやり取りを視覚化することができます。 詳細については、「[コンカレンシー ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -10,11 +10,11 @@ ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591881"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46532741"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同期プリミティブの概要
 <a name="top"></a>.NET Framework には、スレッドの相互作用を制御したり競合状態を回避したりするためのさまざまな同期プリミティブが用意されています。 これらは、大きくは 3 つのカテゴリ (ロック、シグナリング、インタロックされた操作) に分類することができます。  
@@ -161,7 +161,7 @@ ms.locfileid: "45591881"
   
  これらの操作は、どれもロックやシグナルではありませんが、ロックやシグナルの作成に使用できます。 これらは Windows オペレーティング システムのネイティブなので、インタロックされた操作は非常に高速です。  
   
- インタロックされた操作を揮発性メモリの保証下で使用して、強力な非ブロッキング同時実行を示すアプリケーションを作成できます。 ただし、高度な低レベル プログラミングが必要になるので、ほとんどの目的では、単純ロックを選択したほうが適切です。  
+ インタロックされた操作を揮発性メモリの保証下で使用して、強力な非ブロッキングコンカレンシーを示すアプリケーションを作成できます。 ただし、高度な低レベル プログラミングが必要になるので、ほとんどの目的では、単純ロックを選択したほうが適切です。  
   
  概念的概要については、「[インタロックされた操作](../../../docs/standard/threading/interlocked-operations.md)」を参照してください。  
   

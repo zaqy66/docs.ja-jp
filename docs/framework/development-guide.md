@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c42311368bf94a2629f656b61b09cb7c2c5f68b6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44205388"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581104"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework の開発ガイド
 ここでは、.NET Framework アプリの作成、構成、デバッグ、保護、および配置を行う方法について説明します。 また、動的プログラミング、相互運用性、拡張性、メモリ管理、スレッド処理などの技術領域に関する情報も提供します。  
@@ -38,7 +38,7 @@ ms.locfileid: "44205388"
  [Windows サービス アプリケーション](../../docs/framework/windows-services/index.md)  
  Visual Studio および .NET Framework を使用して、サービスとしてインストールされるアプリを作成し、その動作を開始、停止、制御する方法について説明します。  
   
- [.NET での並列処理、同時実行、および非同期プログラミング](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [.NET での並列処理、コンカレンシー、および非同期プログラミング](../../docs/standard/parallel-processing-and-concurrency.md)  
  マネージド スレッド処理、並列プログラミング、および非同期プログラミングのデザイン パターンについて説明します。  
   
  [.NET Framework のネットワーク プログラミング](../../docs/framework/network-programming/index.md)  
@@ -64,10 +64,7 @@ ms.locfileid: "44205388"
   
  [パフォーマンス](../../docs/framework/performance/index.md)  
  キャッシュ、遅延初期化、信頼性、および ETW イベントについて説明します。  
-  
- <!--zz [Advanced Reading for the .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
- Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
-  
+ 
 ## <a name="reference"></a>参照  
  [.NET Framework クラス ライブラリ](/dotnet/api/?view=netframework-4.7)  
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の名前空間に含まれる各クラスの構文、コード例、および使用情報を示します。  
