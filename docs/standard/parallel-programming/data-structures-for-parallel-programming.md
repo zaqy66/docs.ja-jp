@@ -8,11 +8,11 @@ ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45594334"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577585"
 ---
 # <a name="data-structures-for-parallel-programming"></a>並列プログラミングのデータ構造
 .NET Framework バージョン 4 では、同時実行コレクション クラスのセット、軽量な同期プリミティブ、遅延初期化用の型など、並列プログラミングに役立つ複数の新しい型が導入されています。 これらの型は、タスク並列ライブラリや PLINQ などの任意のマルチスレッド アプリケーション コードで使うことができます。  
@@ -33,7 +33,7 @@ ms.locfileid: "45594334"
  詳しくは、「[スレッド セーフなコレクション](../../../docs/standard/collections/thread-safe/index.md)」を参照してください。  
   
 ## <a name="synchronization-primitives"></a>同期プリミティブ  
- <xref:System.Threading?displayProperty=nameWithType> 名前空間の新しい同期プリミティブを使うと、従来のマルチスレッド コードに見られるような高コストのロック メカニズムを回避することで、粒度の細かい同時実行性と高速のパフォーマンスが提供されます。 <xref:System.Threading.Barrier?displayProperty=nameWithType> や <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> などの一部の新しい型には、.NET Framework の以前のリリースに対応するものがありません。  
+ <xref:System.Threading?displayProperty=nameWithType> 名前空間の新しい同期プリミティブを使うと、従来のマルチスレッド コードに見られるような高コストのロック メカニズムを回避することで、粒度の細かいコンカレンシーと高速のパフォーマンスが提供されます。 <xref:System.Threading.Barrier?displayProperty=nameWithType> や <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> などの一部の新しい型には、.NET Framework の以前のリリースに対応するものがありません。  
   
  次の表は、新しい同期型の一覧です。  
   

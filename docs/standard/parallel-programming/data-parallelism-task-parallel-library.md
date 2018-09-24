@@ -11,11 +11,11 @@ ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2933d574b387ec0f444883bbafb41f602bc5dcc0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45614674"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46577350"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>データの並列化 (タスク並列ライブラリ)
 "*データの並列化*" とは、ソース コレクションまたは配列の要素に対して、同じ操作を同時に (つまり、並列で) 実行するシナリオを意味します。 データの並列化操作では、複数のスレッドが異なるセグメント上で同時に操作できるようにソース コレクションがパーティション分割されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "45614674"
 > [!NOTE]
 >  固有のカスタム パーティショナーまたはスケジューラを使うこともできます。 詳細については、「[PLINQ および TPL 用のカスタム パーティショナー](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)」および[TaskScheduler](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)に関するページを参照してください。  
   
- <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドの両方に、ループの実行を停止または中断させるオーバーロードが複数ある場合は、その他のスレッドのループ状態の監視、スレッド ローカルの状態の維持、スレッド ローカル オブジェクトの終了、同時実行の程度の制御などを行います。 この機能を有効にするヘルパー要素には、<xref:System.Threading.Tasks.ParallelLoopState>、<xref:System.Threading.Tasks.ParallelOptions>、<xref:System.Threading.Tasks.ParallelLoopResult>、<xref:System.Threading.CancellationToken>、および <xref:System.Threading.CancellationTokenSource> があります。  
+ <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドの両方に、ループの実行を停止または中断させるオーバーロードが複数ある場合は、その他のスレッドのループ状態の監視、スレッド ローカルの状態の維持、スレッド ローカル オブジェクトの終了、コンカレンシーの程度の制御などを行います。 この機能を有効にするヘルパー要素には、<xref:System.Threading.Tasks.ParallelLoopState>、<xref:System.Threading.Tasks.ParallelOptions>、<xref:System.Threading.Tasks.ParallelLoopResult>、<xref:System.Threading.CancellationToken>、および <xref:System.Threading.CancellationTokenSource> があります。  
   
  詳細については、「[Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)」 (並列プログラミングのパターン: .NET Framework 4 での並列パターンの理解と適用) を参照してください。  
   
