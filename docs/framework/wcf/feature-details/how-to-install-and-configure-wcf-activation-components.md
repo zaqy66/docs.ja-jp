@@ -5,45 +5,45 @@ helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
 ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586339"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088335"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a><span data-ttu-id="a87d7-102">方法 : WCF アクティブ化コンポーネントをインストールして設定する</span><span class="sxs-lookup"><span data-stu-id="a87d7-102">How to: Install and Configure WCF Activation Components</span></span>
-<span data-ttu-id="a87d7-103">このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を設定するために必要な手順を説明に[!INCLUDE[wv](../../../../includes/wv-md.md)]HTTP では通信しないサービスのネットワーク プロトコルの Windows Communication Foundation (WCF) をホストします。</span><span class="sxs-lookup"><span data-stu-id="a87d7-103">This topic describes the steps required to set up Windows Process Activation Service (also known as WAS) on [!INCLUDE[wv](../../../../includes/wv-md.md)] to host Windows Communication Foundation (WCF) services that do not communicate over HTTP network protocols.</span></span> <span data-ttu-id="a87d7-104">以降の各セクションで、この構成に関する手順について概説します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-104">The following sections outline the steps for this configuration:</span></span>  
+# <a name="how-to-install-and-configure-wcf-activation-components"></a><span data-ttu-id="fb758-102">方法 : WCF アクティブ化コンポーネントをインストールして設定する</span><span class="sxs-lookup"><span data-stu-id="fb758-102">How to: Install and Configure WCF Activation Components</span></span>
+<span data-ttu-id="fb758-103">このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を設定するために必要な手順を説明に[!INCLUDE[wv](../../../../includes/wv-md.md)]HTTP では通信しないサービスのネットワーク プロトコルの Windows Communication Foundation (WCF) をホストします。</span><span class="sxs-lookup"><span data-stu-id="fb758-103">This topic describes the steps required to set up Windows Process Activation Service (also known as WAS) on [!INCLUDE[wv](../../../../includes/wv-md.md)] to host Windows Communication Foundation (WCF) services that do not communicate over HTTP network protocols.</span></span> <span data-ttu-id="fb758-104">以降の各セクションで、この構成に関する手順について概説します。</span><span class="sxs-lookup"><span data-stu-id="fb758-104">The following sections outline the steps for this configuration:</span></span>  
   
--   <span data-ttu-id="a87d7-105">インストール (またはのインストールの確認)、WCF のアクティブ化コンポーネント。</span><span class="sxs-lookup"><span data-stu-id="a87d7-105">Install (or confirm the installation of) the WCF activation components.</span></span>  
+-   <span data-ttu-id="fb758-105">インストール (またはのインストールの確認)、WCF のアクティブ化コンポーネント。</span><span class="sxs-lookup"><span data-stu-id="fb758-105">Install (or confirm the installation of) the WCF activation components.</span></span>  
   
--   <span data-ttu-id="a87d7-106">非 HTTP プロトコルをサポートようにする WAS を構成します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-106">Configure WAS to support a non-HTTP protocol.</span></span> <span data-ttu-id="a87d7-107">次の手順では、TCP アクティベーション用に [!INCLUDE[wv](../../../../includes/wv-md.md)] を構成します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-107">The following procedure configures [!INCLUDE[wv](../../../../includes/wv-md.md)] for TCP activation.</span></span>  
+-   <span data-ttu-id="fb758-106">非 HTTP プロトコルをサポートようにする WAS を構成します。</span><span class="sxs-lookup"><span data-stu-id="fb758-106">Configure WAS to support a non-HTTP protocol.</span></span> <span data-ttu-id="fb758-107">次の手順では、TCP アクティベーション用に [!INCLUDE[wv](../../../../includes/wv-md.md)] を構成します。</span><span class="sxs-lookup"><span data-stu-id="fb758-107">The following procedure configures [!INCLUDE[wv](../../../../includes/wv-md.md)] for TCP activation.</span></span>  
   
- <span data-ttu-id="a87d7-108">インストールと構成を参照してください。 後[方法: WAS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)WAS を使用する非 HTTP エンドポイントを公開する WCF サービスを作成する手順についてはします。</span><span class="sxs-lookup"><span data-stu-id="a87d7-108">After installing and configuring WAS, see [How to: Host a WCF Service in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) for the procedures to create a WCF service that exposes an non-HTTP endpoint that employs WAS.</span></span>  
+ <span data-ttu-id="fb758-108">インストールと構成を参照してください。 後[方法: WAS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)WAS を使用する非 HTTP エンドポイントを公開する WCF サービスを作成する手順についてはします。</span><span class="sxs-lookup"><span data-stu-id="fb758-108">After installing and configuring WAS, see [How to: Host a WCF Service in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) for the procedures to create a WCF service that exposes an non-HTTP endpoint that employs WAS.</span></span>  
   
-### <a name="to-install-the-wcf-non-http-activation-components"></a><span data-ttu-id="a87d7-109">WCF 非 HTTP アクティブ化コンポーネントをインストールするには</span><span class="sxs-lookup"><span data-stu-id="a87d7-109">To install the WCF non-HTTP activation components</span></span>  
+### <a name="to-install-the-wcf-non-http-activation-components"></a><span data-ttu-id="fb758-109">WCF 非 HTTP アクティブ化コンポーネントをインストールするには</span><span class="sxs-lookup"><span data-stu-id="fb758-109">To install the WCF non-HTTP activation components</span></span>  
   
-1.  <span data-ttu-id="a87d7-110">をクリックして、**開始**ボタンをクリックし、をクリックし、\*\*コントロール パネルの \*\*します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-110">Click the **Start** button, and then click **Control Panel**.</span></span>  
+1.  <span data-ttu-id="fb758-110">をクリックして、**開始**ボタンをクリックし、をクリックし、\*\*コントロール パネルの \*\*します。</span><span class="sxs-lookup"><span data-stu-id="fb758-110">Click the **Start** button, and then click **Control Panel**.</span></span>  
   
-2.  <span data-ttu-id="a87d7-111">クリックして**プログラム**、 をクリックし、**プログラムと機能**します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-111">Click **Programs**, and then click **Programs and Features**.</span></span>  
+2.  <span data-ttu-id="fb758-111">クリックして**プログラム**、 をクリックし、**プログラムと機能**します。</span><span class="sxs-lookup"><span data-stu-id="fb758-111">Click **Programs**, and then click **Programs and Features**.</span></span>  
   
-3.  <span data-ttu-id="a87d7-112">**タスク** メニューのをクリックして**オンまたはオフにする Windows 機能**します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-112">On the **Tasks** menu, click **Turn Windows features on or off**.</span></span>  
+3.  <span data-ttu-id="fb758-112">**タスク** メニューのをクリックして**オンまたはオフにする Windows 機能**します。</span><span class="sxs-lookup"><span data-stu-id="fb758-112">On the **Tasks** menu, click **Turn Windows features on or off**.</span></span>  
   
-4.  <span data-ttu-id="a87d7-113">[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] ノードを検索し、それを選択して展開します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-113">Find the [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] node, select and then expand it.</span></span>  
+4.  <span data-ttu-id="fb758-113">[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] ノードを検索し、それを選択して展開します。</span><span class="sxs-lookup"><span data-stu-id="fb758-113">Find the [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] node, select and then expand it.</span></span>  
   
-5.  <span data-ttu-id="a87d7-114">選択、 **WCF 非 Http アクティブ化コンポーネント**ボックスし、設定を保存します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-114">Select the **WCF Non-Http Activation Components** box and save the setting.</span></span>  
+5.  <span data-ttu-id="fb758-114">選択、 **WCF 非 Http アクティブ化コンポーネント**ボックスし、設定を保存します。</span><span class="sxs-lookup"><span data-stu-id="fb758-114">Select the **WCF Non-Http Activation Components** box and save the setting.</span></span>  
   
-### <a name="to-configure-the-was-to-support-tcp-activation"></a><span data-ttu-id="a87d7-115">TCP アクティベーションをサポートするように WAS を構成するには</span><span class="sxs-lookup"><span data-stu-id="a87d7-115">To configure the WAS to support TCP activation</span></span>  
+### <a name="to-configure-the-was-to-support-tcp-activation"></a><span data-ttu-id="fb758-115">TCP アクティベーションをサポートするように WAS を構成するには</span><span class="sxs-lookup"><span data-stu-id="fb758-115">To configure the WAS to support TCP activation</span></span>  
   
-1.  <span data-ttu-id="a87d7-116">net.tcp アクティベーションをサポートするには、既定の Web サイトをあらかじめ net.tcp ポートにバインドしておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="a87d7-116">To support net.tcp activation, the default Web site must first be bound to a net.tcp port.</span></span> <span data-ttu-id="a87d7-117">これは、[!INCLUDE[iisver](../../../../includes/iisver-md.md)] 管理ツール セットと共にインストールされる Appcmd.exe を使用して行います。</span><span class="sxs-lookup"><span data-stu-id="a87d7-117">You can do this by using Appcmd.exe, which is installed with the [!INCLUDE[iisver](../../../../includes/iisver-md.md)] management toolset.</span></span> <span data-ttu-id="a87d7-118">管理者レベルのコマンド プロンプト ウィンドウで、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-118">In an administrator-level Command Prompt window, run the following command.</span></span>  
+1.  <span data-ttu-id="fb758-116">net.tcp アクティベーションをサポートするには、既定の Web サイトをあらかじめ net.tcp ポートにバインドしておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="fb758-116">To support net.tcp activation, the default Web site must first be bound to a net.tcp port.</span></span> <span data-ttu-id="fb758-117">これは、[!INCLUDE[iisver](../../../../includes/iisver-md.md)] 管理ツール セットと共にインストールされる Appcmd.exe を使用して行います。</span><span class="sxs-lookup"><span data-stu-id="fb758-117">You can do this by using Appcmd.exe, which is installed with the [!INCLUDE[iisver](../../../../includes/iisver-md.md)] management toolset.</span></span> <span data-ttu-id="fb758-118">管理者レベルのコマンド プロンプト ウィンドウで、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="fb758-118">In an administrator-level Command Prompt window, run the following command.</span></span>  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="a87d7-119">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="a87d7-119">This command is a single line of text.</span></span> <span data-ttu-id="a87d7-120">このコマンドは、net.tcp サイト バインディングを、TCP ポート 808 で任意のホスト名をリッスンする既定の Web サイトに追加します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-120">This command adds a net.tcp site binding to the default Web site listening on TCP port 808 with any host name.</span></span>  
+    >  <span data-ttu-id="fb758-119">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="fb758-119">This command is a single line of text.</span></span> <span data-ttu-id="fb758-120">このコマンドは、net.tcp サイト バインディングを、TCP ポート 808 で任意のホスト名をリッスンする既定の Web サイトに追加します。</span><span class="sxs-lookup"><span data-stu-id="fb758-120">This command adds a net.tcp site binding to the default Web site listening on TCP port 808 with any host name.</span></span>  
   
-2.  <span data-ttu-id="a87d7-121">サイト内のすべてのアプリケーションが同じ net.tcp バインディングを共有しますが、net.tcp サポートの有効化はアプリケーションごとに指定できます。</span><span class="sxs-lookup"><span data-stu-id="a87d7-121">Although all applications within a site share a common net.tcp binding, each application can enable net.tcp support individually.</span></span> <span data-ttu-id="a87d7-122">アプリケーションで net.tcp を有効にするには、管理者レベルのコマンド プロンプトから、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-122">To enable net.tcp for the application, run the following command from an administrator-level command prompt.</span></span>  
+2.  <span data-ttu-id="fb758-121">サイト内のすべてのアプリケーションが同じ net.tcp バインディングを共有しますが、net.tcp サポートの有効化はアプリケーションごとに指定できます。</span><span class="sxs-lookup"><span data-stu-id="fb758-121">Although all applications within a site share a common net.tcp binding, each application can enable net.tcp support individually.</span></span> <span data-ttu-id="fb758-122">アプリケーションで net.tcp を有効にするには、管理者レベルのコマンド プロンプトから、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="fb758-122">To enable net.tcp for the application, run the following command from an administrator-level command prompt.</span></span>  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set app   
@@ -51,13 +51,13 @@ ms.locfileid: "46586339"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="a87d7-123">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="a87d7-123">This command is a single line of text.</span></span> <span data-ttu-id="a87d7-124">このコマンドは有効、/\<*WCF アプリケーション*> アプリケーションに両方を使用してアクセスできる`http://localhost/<WCF Application>`と`net.tcp://localhost/<WCF Application>`します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-124">This command enables the /\<*WCF Application*> application to be accessed using both `http://localhost/<WCF Application>` and `net.tcp://localhost/<WCF Application>`.</span></span>
+    >  <span data-ttu-id="fb758-123">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="fb758-123">This command is a single line of text.</span></span> <span data-ttu-id="fb758-124">このコマンドは有効、/\<*WCF アプリケーション*> アプリケーションに両方を使用してアクセスできる`http://localhost/<WCF Application>`と`net.tcp://localhost/<WCF Application>`します。</span><span class="sxs-lookup"><span data-stu-id="fb758-124">This command enables the /\<*WCF Application*> application to be accessed using both `http://localhost/<WCF Application>` and `net.tcp://localhost/<WCF Application>`.</span></span>
   
-     <span data-ttu-id="a87d7-125">このサンプル用に追加した net.tcp サイト バインディングを削除します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-125">Remove the net.tcp site binding you added for this sample.</span></span>  
+     <span data-ttu-id="fb758-125">このサンプル用に追加した net.tcp サイト バインディングを削除します。</span><span class="sxs-lookup"><span data-stu-id="fb758-125">Remove the net.tcp site binding you added for this sample.</span></span>  
   
-     <span data-ttu-id="a87d7-126">便宜上次の 2 つの手順が、サンプル ディレクトリにある RemoveNetTcpSiteBinding.cmd というバッチ ファイルに実装されています。</span><span class="sxs-lookup"><span data-stu-id="a87d7-126">As a convenience, the following two steps are implemented in a batch file called RemoveNetTcpSiteBinding.cmd located in the sample directory.</span></span>  
+     <span data-ttu-id="fb758-126">便宜上次の 2 つの手順が、サンプル ディレクトリにある RemoveNetTcpSiteBinding.cmd というバッチ ファイルに実装されています。</span><span class="sxs-lookup"><span data-stu-id="fb758-126">As a convenience, the following two steps are implemented in a batch file called RemoveNetTcpSiteBinding.cmd located in the sample directory.</span></span>  
   
-    1.  <span data-ttu-id="a87d7-127">管理者レベルのコマンド プロンプト ウィンドウで次のコマンドを実行して、有効なプロトコルの一覧から net.tcp を削除します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-127">Remove net.tcp from the list of enabled protocols by running the following command in an administrator-level Command Prompt window.</span></span>  
+    1.  <span data-ttu-id="fb758-127">管理者レベルのコマンド プロンプト ウィンドウで次のコマンドを実行して、有効なプロトコルの一覧から net.tcp を削除します。</span><span class="sxs-lookup"><span data-stu-id="fb758-127">Remove net.tcp from the list of enabled protocols by running the following command in an administrator-level Command Prompt window.</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -65,9 +65,9 @@ ms.locfileid: "46586339"
         ```  
   
         > [!NOTE]
-        >  <span data-ttu-id="a87d7-128">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="a87d7-128">This command is a single line of text.</span></span>  
+        >  <span data-ttu-id="fb758-128">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="fb758-128">This command is a single line of text.</span></span>  
   
-    2.  <span data-ttu-id="a87d7-129">権限のレベルが高いコマンド プロンプト ウィンドウで次のコマンドを実行して、net.tcp サイト バインディングを削除します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-129">Remove the net.tcp site binding by running the following command in an elevated Command Prompt window:</span></span>  
+    2.  <span data-ttu-id="fb758-129">権限のレベルが高いコマンド プロンプト ウィンドウで次のコマンドを実行して、net.tcp サイト バインディングを削除します。</span><span class="sxs-lookup"><span data-stu-id="fb758-129">Remove the net.tcp site binding by running the following command in an elevated Command Prompt window:</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -75,22 +75,22 @@ ms.locfileid: "46586339"
         ```  
   
         > [!NOTE]
-        >  <span data-ttu-id="a87d7-130">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="a87d7-130">This command is a single line of text.</span></span>  
+        >  <span data-ttu-id="fb758-130">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="fb758-130">This command is a single line of text.</span></span>  
   
-### <a name="to-remove-nettcp-from-the-list-of-enabled-protocols"></a><span data-ttu-id="a87d7-131">有効なプロトコルの一覧から net.tcp を削除するには</span><span class="sxs-lookup"><span data-stu-id="a87d7-131">To remove net.tcp from the list of enabled protocols</span></span>  
+### <a name="to-remove-nettcp-from-the-list-of-enabled-protocols"></a><span data-ttu-id="fb758-131">有効なプロトコルの一覧から net.tcp を削除するには</span><span class="sxs-lookup"><span data-stu-id="fb758-131">To remove net.tcp from the list of enabled protocols</span></span>  
   
-1.  <span data-ttu-id="a87d7-132">有効なプロトコルの一覧から net.tcp を削除するには、管理者レベルのコマンド プロンプト ウィンドウで次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-132">To remove net.tcp from the list of enabled protocols, run the following command in an administrator-level Command Prompt window.</span></span>  
+1.  <span data-ttu-id="fb758-132">有効なプロトコルの一覧から net.tcp を削除するには、管理者レベルのコマンド プロンプト ウィンドウで次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="fb758-132">To remove net.tcp from the list of enabled protocols, run the following command in an administrator-level Command Prompt window.</span></span>  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http  
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="a87d7-133">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="a87d7-133">This command is a single line of text.</span></span>  
+    >  <span data-ttu-id="fb758-133">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="fb758-133">This command is a single line of text.</span></span>  
   
-### <a name="to-remove-the-nettcp-site-binding"></a><span data-ttu-id="a87d7-134">net.tcp サイト バインディングを削除するには</span><span class="sxs-lookup"><span data-stu-id="a87d7-134">To remove the net.tcp site binding</span></span>  
+### <a name="to-remove-the-nettcp-site-binding"></a><span data-ttu-id="fb758-134">net.tcp サイト バインディングを削除するには</span><span class="sxs-lookup"><span data-stu-id="fb758-134">To remove the net.tcp site binding</span></span>  
   
-1.  <span data-ttu-id="a87d7-135">net.tcp サイト バインディングを削除するには、管理者レベルのコマンド プロンプト ウィンドウで次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="a87d7-135">To remove the net.tcp site binding run the following command in an administrator-level Command Prompt window.</span></span>  
+1.  <span data-ttu-id="fb758-135">net.tcp サイト バインディングを削除するには、管理者レベルのコマンド プロンプト ウィンドウで次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="fb758-135">To remove the net.tcp site binding run the following command in an administrator-level Command Prompt window.</span></span>  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -98,10 +98,10 @@ ms.locfileid: "46586339"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="a87d7-136">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="a87d7-136">This command is a single line of text.</span></span>  
+    >  <span data-ttu-id="fb758-136">このコマンドはテキスト 1 行です。</span><span class="sxs-lookup"><span data-stu-id="fb758-136">This command is a single line of text.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a87d7-137">関連項目</span><span class="sxs-lookup"><span data-stu-id="a87d7-137">See Also</span></span>  
- [<span data-ttu-id="a87d7-138">TCP アクティベーション</span><span class="sxs-lookup"><span data-stu-id="a87d7-138">TCP Activation</span></span>](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [<span data-ttu-id="a87d7-139">MSMQ アクティベーション</span><span class="sxs-lookup"><span data-stu-id="a87d7-139">MSMQ Activation</span></span>](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- [<span data-ttu-id="a87d7-140">NamedPipe アクティベーション</span><span class="sxs-lookup"><span data-stu-id="a87d7-140">NamedPipe Activation</span></span>](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [<span data-ttu-id="a87d7-141">Windows Server App Fabric のホスティング機能</span><span class="sxs-lookup"><span data-stu-id="a87d7-141">Windows Server App Fabric Hosting Features</span></span>](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="fb758-137">関連項目</span><span class="sxs-lookup"><span data-stu-id="fb758-137">See Also</span></span>  
+ [<span data-ttu-id="fb758-138">TCP アクティベーション</span><span class="sxs-lookup"><span data-stu-id="fb758-138">TCP Activation</span></span>](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+ [<span data-ttu-id="fb758-139">MSMQ アクティベーション</span><span class="sxs-lookup"><span data-stu-id="fb758-139">MSMQ Activation</span></span>](../../../../docs/framework/wcf/samples/msmq-activation.md)  
+ [<span data-ttu-id="fb758-140">NamedPipe アクティベーション</span><span class="sxs-lookup"><span data-stu-id="fb758-140">NamedPipe Activation</span></span>](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
+ [<span data-ttu-id="fb758-141">Windows Server App Fabric のホスティング機能</span><span class="sxs-lookup"><span data-stu-id="fb758-141">Windows Server App Fabric Hosting Features</span></span>](https://go.microsoft.com/fwlink/?LinkId=201276)
