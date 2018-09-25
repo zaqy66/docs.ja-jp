@@ -23,7 +23,7 @@ ms.locfileid: "33397937"
 リフレクションを使用して、アセンブリを読み込んで実行する場合、C# の `+=` 演算子や Visual Basic の [AddHandler ステートメント](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)のような言語機能を使用してイベントをフックすることはできません。 次の手順では、必要なすべての型をリフレクションによって取得することで、既存のメソッドをイベントにフックする方法と、リフレクション出力を使用して動的メソッドを作成し、それをイベントにフックする方法を示します。  
   
 > [!NOTE]
->  イベント処理デリゲートをフックするもう 1 つの方法については、<xref:System.Reflection.EventInfo.AddEventHandler%2A> クラスの <xref:System.Reflection.EventInfo> メソッドのコード例を参照してください。  
+>  イベント処理デリゲートをフックするもう 1 つの方法については、<xref:System.Reflection.EventInfo> クラスの <xref:System.Reflection.EventInfo.AddEventHandler%2A> メソッドのコード例を参照してください。  
   
 ### <a name="to-hook-up-a-delegate-using-reflection"></a>リフレクションを使用してデリゲートをフックするには  
   
