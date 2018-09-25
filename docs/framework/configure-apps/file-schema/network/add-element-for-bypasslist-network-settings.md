@@ -12,24 +12,23 @@ helpviewer_keywords:
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d786d4fd7e6663649408b36fb518db06063ef916
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6cf22fcaff928e53c33a8eb4987acd5a7f6250e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754520"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081034"
 ---
-# <a name="ltaddgt-element-for-bypasslist-network-settings"></a><span data-ttu-id="7a674-102">&lt;追加&gt;bypasslist (ネットワーク設定) の要素</span><span class="sxs-lookup"><span data-stu-id="7a674-102">&lt;add&gt; Element for bypasslist (Network Settings)</span></span>
-<span data-ttu-id="7a674-103">プロキシ バイ パス一覧に IP アドレスまたは DNS 名を追加します。</span><span class="sxs-lookup"><span data-stu-id="7a674-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a><span data-ttu-id="644f1-102">&lt;追加&gt;bypasslist (ネットワーク設定) の要素</span><span class="sxs-lookup"><span data-stu-id="644f1-102">&lt;add&gt; Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="644f1-103">プロキシ バイ パスの一覧には、IP アドレスまたは DNS 名を追加します。</span><span class="sxs-lookup"><span data-stu-id="644f1-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  
   
- <span data-ttu-id="7a674-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7a674-104">\<configuration></span></span>  
-<span data-ttu-id="7a674-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="7a674-105">\<system.net></span></span>  
-<span data-ttu-id="7a674-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="7a674-106">\<defaultProxy></span></span>  
-<span data-ttu-id="7a674-107">\<bypasslist ></span><span class="sxs-lookup"><span data-stu-id="7a674-107">\<bypasslist></span></span>  
-<span data-ttu-id="7a674-108">\<add></span><span class="sxs-lookup"><span data-stu-id="7a674-108">\<add></span></span>  
+ <span data-ttu-id="644f1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="644f1-104">\<configuration></span></span>  
+<span data-ttu-id="644f1-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="644f1-105">\<system.net></span></span>  
+<span data-ttu-id="644f1-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="644f1-106">\<defaultProxy></span></span>  
+<span data-ttu-id="644f1-107">\<bypasslist ></span><span class="sxs-lookup"><span data-stu-id="644f1-107">\<bypasslist></span></span>  
+<span data-ttu-id="644f1-108">\<add></span><span class="sxs-lookup"><span data-stu-id="644f1-108">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7a674-109">構文</span><span class="sxs-lookup"><span data-stu-id="7a674-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="644f1-109">構文</span><span class="sxs-lookup"><span data-stu-id="644f1-109">Syntax</span></span>  
   
 ```xml  
 <add   
@@ -37,38 +36,38 @@ ms.locfileid: "32754520"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7a674-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="7a674-110">Attributes and Elements</span></span>  
- <span data-ttu-id="7a674-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="7a674-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="644f1-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="644f1-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="644f1-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="644f1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7a674-112">属性</span><span class="sxs-lookup"><span data-stu-id="7a674-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="644f1-112">属性</span><span class="sxs-lookup"><span data-stu-id="644f1-112">Attributes</span></span>  
   
-|<span data-ttu-id="7a674-113">**属性**</span><span class="sxs-lookup"><span data-stu-id="7a674-113">**Attribute**</span></span>|<span data-ttu-id="7a674-114">**説明**</span><span class="sxs-lookup"><span data-stu-id="7a674-114">**Description**</span></span>|  
+|<span data-ttu-id="644f1-113">**属性**</span><span class="sxs-lookup"><span data-stu-id="644f1-113">**Attribute**</span></span>|<span data-ttu-id="644f1-114">**説明**</span><span class="sxs-lookup"><span data-stu-id="644f1-114">**Description**</span></span>|  
 |-------------------|---------------------|  
-|<span data-ttu-id="7a674-115">**address**</span><span class="sxs-lookup"><span data-stu-id="7a674-115">**address**</span></span>|<span data-ttu-id="7a674-116">IP アドレスまたは DNS 名を記述する正規表現。</span><span class="sxs-lookup"><span data-stu-id="7a674-116">A regular expression describing an IP address or DNS name.</span></span>|  
+|<span data-ttu-id="644f1-115">**address**</span><span class="sxs-lookup"><span data-stu-id="644f1-115">**address**</span></span>|<span data-ttu-id="644f1-116">IP アドレスまたは DNS 名を記述する正規表現。</span><span class="sxs-lookup"><span data-stu-id="644f1-116">A regular expression describing an IP address or DNS name.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="7a674-117">子要素</span><span class="sxs-lookup"><span data-stu-id="7a674-117">Child Elements</span></span>  
- <span data-ttu-id="7a674-118">なし。</span><span class="sxs-lookup"><span data-stu-id="7a674-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="644f1-117">子要素</span><span class="sxs-lookup"><span data-stu-id="644f1-117">Child Elements</span></span>  
+ <span data-ttu-id="644f1-118">なし。</span><span class="sxs-lookup"><span data-stu-id="644f1-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="7a674-119">親要素</span><span class="sxs-lookup"><span data-stu-id="7a674-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="644f1-119">親要素</span><span class="sxs-lookup"><span data-stu-id="644f1-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="7a674-120">**要素**</span><span class="sxs-lookup"><span data-stu-id="7a674-120">**Element**</span></span>|<span data-ttu-id="7a674-121">**説明**</span><span class="sxs-lookup"><span data-stu-id="7a674-121">**Description**</span></span>|  
+|<span data-ttu-id="644f1-120">**要素**</span><span class="sxs-lookup"><span data-stu-id="644f1-120">**Element**</span></span>|<span data-ttu-id="644f1-121">**説明**</span><span class="sxs-lookup"><span data-stu-id="644f1-121">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="7a674-122">bypasslist</span><span class="sxs-lookup"><span data-stu-id="7a674-122">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="7a674-123">プロキシを使用しないアドレスを記述する正規表現のセットを提供します。</span><span class="sxs-lookup"><span data-stu-id="7a674-123">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
+|[<span data-ttu-id="644f1-122">bypasslist</span><span class="sxs-lookup"><span data-stu-id="644f1-122">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="644f1-123">一連のプロキシを使用しないアドレスを記述する正規表現を提供します。</span><span class="sxs-lookup"><span data-stu-id="644f1-123">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7a674-124">コメント</span><span class="sxs-lookup"><span data-stu-id="7a674-124">Remarks</span></span>  
- <span data-ttu-id="7a674-125">`add`要素は、IP アドレスやプロキシ サーバーをバイパスするアドレスのリストに DNS サーバー名を記述する正規表現を挿入します。</span><span class="sxs-lookup"><span data-stu-id="7a674-125">The `add` element inserts regular expressions describing IP addresses or DNS server names to the list of addresses that bypass a proxy server.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="644f1-124">Remarks</span><span class="sxs-lookup"><span data-stu-id="644f1-124">Remarks</span></span>  
+ <span data-ttu-id="644f1-125">`add`要素は IP アドレスまたはプロキシ サーバーをバイパスするアドレスのリストに DNS サーバー名を記述する正規表現を挿入します。</span><span class="sxs-lookup"><span data-stu-id="644f1-125">The `add` element inserts regular expressions describing IP addresses or DNS server names to the list of addresses that bypass a proxy server.</span></span>  
   
- <span data-ttu-id="7a674-126">値、`address`属性は、一連の IP アドレスまたはホスト名を記述する正規表現をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a674-126">The value of the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>  
+ <span data-ttu-id="644f1-126">値、`address`属性は、一連の IP アドレスまたはホスト名を記述する正規表現をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="644f1-126">The value of the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>  
   
- <span data-ttu-id="7a674-127">この要素に正規表現を指定する場合は、注意を使用してください。</span><span class="sxs-lookup"><span data-stu-id="7a674-127">You should use caution when specifying a regular expression for this element.</span></span> <span data-ttu-id="7a674-128">正規表現"[a ~ z] +\\.contoso\\.com"contoso.com ドメイン内の任意のホストと一致する contoso.com.cpandl.com ドメイン内のどのホストにも一致します。</span><span class="sxs-lookup"><span data-stu-id="7a674-128">The regular expression "[a-z]+\\.contoso\\.com" matches any host in the contoso.com domain, but it also matches any host in the contoso.com.cpandl.com domain.</span></span> <span data-ttu-id="7a674-129">Contoso.com ドメイン内のホストのみを一致するには、アンカー (「$」) を使用します。"[a ~ z] +\\.contoso\\.com$"です。</span><span class="sxs-lookup"><span data-stu-id="7a674-129">To match only a host in the contoso.com domain, use an anchor ("$"): "[a-z]+\\.contoso\\.com$".</span></span>  
+ <span data-ttu-id="644f1-127">この要素の正規表現を指定するときに注意を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="644f1-127">You should use caution when specifying a regular expression for this element.</span></span> <span data-ttu-id="644f1-128">正規表現"[a ~ z] +\\.contoso\\.com"contoso.com.cpandl.com ドメイン内の任意のホストと一致させる任意のホストが、contoso.com ドメインに一致します。</span><span class="sxs-lookup"><span data-stu-id="644f1-128">The regular expression "[a-z]+\\.contoso\\.com" matches any host in the contoso.com domain, but it also matches any host in the contoso.com.cpandl.com domain.</span></span> <span data-ttu-id="644f1-129">Contoso.com ドメイン内のホストのみが一致するアンカー (「$」) を使用します:"[a ~ z] +\\.contoso\\.com$"です。</span><span class="sxs-lookup"><span data-stu-id="644f1-129">To match only a host in the contoso.com domain, use an anchor ("$"): "[a-z]+\\.contoso\\.com$".</span></span>  
   
- <span data-ttu-id="7a674-130">正規表現の詳細についてを参照してください。[.NET framework 正規表現](../../../../../docs/standard/base-types/regular-expressions.md)です。</span><span class="sxs-lookup"><span data-stu-id="7a674-130">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../../docs/standard/base-types/regular-expressions.md).</span></span>  
+ <span data-ttu-id="644f1-130">正規表現の詳細についてを参照してください。[.NET framework の正規表現](../../../../../docs/standard/base-types/regular-expressions.md)します。</span><span class="sxs-lookup"><span data-stu-id="644f1-130">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../../docs/standard/base-types/regular-expressions.md).</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="7a674-131">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="7a674-131">Configuration Files</span></span>  
- <span data-ttu-id="7a674-132">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="7a674-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="644f1-131">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="644f1-131">Configuration Files</span></span>  
+ <span data-ttu-id="644f1-132">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="644f1-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7a674-133">例</span><span class="sxs-lookup"><span data-stu-id="7a674-133">Example</span></span>  
- <span data-ttu-id="7a674-134">次の例では、バイパス リストに 2 つのアドレスを追加します。</span><span class="sxs-lookup"><span data-stu-id="7a674-134">The following example adds two addresses to the bypass list.</span></span> <span data-ttu-id="7a674-135">1 つ目は、contoso.com ドメイン内のすべてのサーバーでプロキシをバイパスします。2 番目は、すべてのサーバーの IP アドレスが始まる 192.168.*.* でプロキシをバイパスします。</span><span class="sxs-lookup"><span data-stu-id="7a674-135">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
+## <a name="example"></a><span data-ttu-id="644f1-133">例</span><span class="sxs-lookup"><span data-stu-id="644f1-133">Example</span></span>  
+ <span data-ttu-id="644f1-134">次の例では、2 つのアドレスをバイパス リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="644f1-134">The following example adds two addresses to the bypass list.</span></span> <span data-ttu-id="644f1-135">1 つ目は、contoso.com ドメイン内のすべてのサーバーでプロキシをバイパスします。2 つ目は、192.168 で IP アドレスが始まるすべてのサーバーでプロキシをバイパスします。</span><span class="sxs-lookup"><span data-stu-id="644f1-135">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,6 +82,6 @@ ms.locfileid: "32754520"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7a674-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="7a674-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="644f1-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="644f1-136">See Also</span></span>  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [<span data-ttu-id="7a674-137">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="7a674-137">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="644f1-137">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="644f1-137">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
