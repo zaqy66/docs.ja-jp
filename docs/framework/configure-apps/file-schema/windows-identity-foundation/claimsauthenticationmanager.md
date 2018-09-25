@@ -3,15 +3,15 @@ title: '&lt;claimsAuthenticationManager&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 4d4a91e0ed1f437089e26e5902515f73a15d94a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0ec7e44363f87e54eae97b70352f520fe87540be
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074954"
 ---
 # <a name="ltclaimsauthenticationmanagergt"></a>&lt;claimsAuthenticationManager&gt;
-入力方向の要求の要求認証マネージャーに登録します。  
+入力方向の要求のクレーム認証マネージャーを登録します。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -36,21 +36,21 @@ ms.lasthandoff: 05/03/2018
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|派生するカスタム型を指定します、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラスです。 指定する方法について、`type`属性 [カスタム型の参照] を参照してください。|  
+|型|派生したカスタム型を指定します、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラス。 詳細を指定する方法については、`type`属性を [カスタム型の参照] を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
- ある場合ありません`type`属性、または、`type`属性参照、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラス、`<claimsAuthenticationManager>`要素が子要素を受け取らないです。 ただし、から派生したクラス<xref:System.Security.Claims.ClaimsAuthenticationManager>子の構成要素を定義できます。  
+ ある場合ありません`type`属性、または、`type`属性参照、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラス、`<claimsAuthenticationManager>`要素は子要素を取りません。 ただし、から派生したクラス<xref:System.Security.Claims.ClaimsAuthenticationManager>子構成要素を定義できます。  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id 設定を指定します。|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|  
   
-## <a name="remarks"></a>コメント  
- によって提供される既定の動作、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラスには、入力方向の要求がエコーされます。 ない場合は`type`属性が指定されて場合、または、`type`属性を指定、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラス、`<claimsAuthenticationManager>`要素は子要素を取りません。 指定することができます、`type`から派生した型を登録する属性、<xref:System.Security.Claims.ClaimsAuthenticationManager>カスタム動作を実装するクラス。 派生クラスの子要素から構成をサポートできる、`<claimsAuthenticationManager>`要素をオーバーライドすることで、<xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A>これらの要素を処理するメソッド。 子要素に定義されたスキーマは、クラスの設計者の責任です。  
+## <a name="remarks"></a>Remarks  
+ によって提供される既定の動作、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラスは、入力方向の要求をエコーします。 いない場合`type`属性が指定されて場合は、`type`属性を指定します、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラス、`<claimsAuthenticationManager>`要素は子要素を取りません。 指定することができます、`type`から派生した型を登録する属性、<xref:System.Security.Claims.ClaimsAuthenticationManager>カスタム動作を実装するクラス。 派生クラスの子要素を使用した構成をサポートできる、`<claimsAuthenticationManager>`要素をオーバーライドすることで、<xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A>これらの要素を処理するメソッド。 子要素に対して定義されているスキーマは、最大クラスのデザイナーです。  
   
- `<claimsAuthenticationManager>`要素セット、<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType>プロパティです。  
+ `<claimsAuthenticationManager>`要素セット、<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType>プロパティ。  
   
 ## <a name="example"></a>例  
   

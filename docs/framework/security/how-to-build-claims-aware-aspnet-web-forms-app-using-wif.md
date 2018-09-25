@@ -3,13 +3,12 @@ title: '方法: WIF を使用してクレーム対応 ASP.NET Web フォーム �
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 764e7fba31a7fb3fc40ec85ab4d0fb6e18e57390
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 83b5808ced1bc6243294b23d9784ec7993e3ba4a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519046"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108131"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションをビルドする
 ## <a name="applies-to"></a>対象  

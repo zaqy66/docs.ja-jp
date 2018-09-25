@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 14b510df192dcff1f005eec4f029aa0f26b967a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dc55acd7a698ef37d45e8a412db684c13a3b8b16
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751936"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156638"
 ---
 # <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt;要素
 暗号設定を含みます。  
@@ -43,17 +42,17 @@ ms.locfileid: "32751936"
 |要素|説明|  
 |-------------|-----------------|  
 |[\<cryptoNameMapping >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|表示名へのクラスのマッピングを含みます。|  
-|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|クラスに ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。|  
+|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
-|`mscorlib`|含まれています、`cryptographySettings`要素。|  
+|`mscorlib`|`cryptographySettings`要素を含んでいます。|  
   
 ## <a name="example"></a>例  
- 次の例では、  **\<cryptographySettings >** cryptography 名マッピングおよび OID のマッピングを格納する要素。 この例は、ランタイムを構成できるように<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>を返します、`MyHashClass`オブジェクトおよび`MyCryptoClass`クラスのオブジェクト識別子 1.3.36.2.1 にマップします。  
+ 次の例では、  **\<cryptographySettings >** 暗号名のマッピングおよび OID マッピングを格納する要素。 この例では、ランタイムように<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>を返します、`MyHashClass`オブジェクトと`MyCryptoClass`クラスのオブジェクト識別子 1.3.36.2.1 にマップされます。  
   
 ```xml  
 <configuration>  

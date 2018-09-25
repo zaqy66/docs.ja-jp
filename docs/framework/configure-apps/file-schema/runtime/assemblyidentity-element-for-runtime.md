@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5d985d1620b7dec324c0113bcd5652cede044950
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744968"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077344"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;要素&lt;ランタイム&gt;
 アセンブリに関する識別情報が含まれています。  
@@ -45,18 +44,18 @@ culture="assembly culture"/>
 |属性|説明|  
 |---------------|-----------------|  
 |`name`|必須の属性です。<br /><br /> アセンブリの名前|  
-|`culture`|省略可能な属性です。<br /><br /> 言語および国/地域のアセンブリを指定する文字列。|  
+|`culture`|省略可能な属性です。<br /><br /> 言語と国/地域のアセンブリを指定する文字列。|  
 |`publicKeyToken`|省略可能な属性です。<br /><br /> アセンブリの厳密な名前を指定する 16 進値。|  
-|`processorArchitecture`|省略可能な属性です。<br /><br /> 1 つの値"x86"、"amd64"、"msil"または"ia64"プロセッサ固有のコードを格納するアセンブリのプロセッサ アーキテクチャを指定します。 値小文字は区別されません。 属性でその他の値、全体が割り当てられているかどうかは`<assemblyIdentity>`要素は無視されます。 「<xref:System.Reflection.ProcessorArchitecture>」を参照してください。|  
+|`processorArchitecture`|省略可能な属性です。<br /><br /> いずれか、値"x86"、"amd64"、"msil"または"ia64"プロセッサ固有のコードを含むアセンブリのプロセッサ アーキテクチャを指定します。 値小文字は区別されません。 かどうか、属性が他の値、全体が割り当てられます`<assemblyIdentity>`要素は無視されます。 以下を参照してください。<xref:System.Reflection.ProcessorArchitecture>|  
   
-## <a name="processorarchitecture-attribute"></a>processorArchitecture 属性  
+## <a name="processorarchitecture-attribute"></a>processorArchitecture の属性  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|`amd64`|64 ビットの AMD プロセッサのみです。|  
+|`amd64`|64 ビット AMD プロセッサのみです。|  
 |`ia64`|64 ビット Intel プロセッサのみです。|  
-|`msil`|プロセッサとワードあたりのビット数に関して Neutral|  
-|`x86`|32 ビット Intel プロセッサで、ネイティブまたは Windows on Windows (WOW) 環境を 64 ビット プラットフォームでします。|  
+|`msil`|プロセッサおよびワードあたりのビット数に関して中立|  
+|`x86`|32 ビットの Intel プロセッサをネイティブまたは 64 ビット プラットフォームでの Windows (WOW) 環境での Windows でします。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -67,15 +66,15 @@ culture="assembly culture"/>
 |-------------|-----------------|  
 |`assemblyBinding`|アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
-|`dependentAssembly`|各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。 1 つを使用して`<dependentAssembly>`各アセンブリの要素。|  
+|`dependentAssembly`|各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。 1 つを使用して、`<dependentAssembly>`各アセンブリの要素。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
-## <a name="remarks"></a>コメント  
- 各 **\<dependentAssembly >** 要素が 1 つあります **\<assemblyIdentity >** 子要素です。  
+## <a name="remarks"></a>Remarks  
+ すべて **\<dependentAssembly >** 要素が 1 つの **\<assemblyIdentity >** 子要素。  
   
- 場合、`processorArchitecture`属性が含まれている、`<assemblyIdentity>`要素が、対応するプロセッサ アーキテクチャを持つアセンブリにのみ適用されます。 場合、`processorArchitecture`属性が存在しない、`<assemblyIdentity>`要素は、すべてのプロセッサ アーキテクチャを持つアセンブリに適用できます。  
+ 場合、`processorArchitecture`属性が存在する、`<assemblyIdentity>`要素は、対応するプロセッサ アーキテクチャを使用してアセンブリにのみ適用されます。 場合、`processorArchitecture`属性が存在しない、`<assemblyIdentity>`要素は、すべてのプロセッサ アーキテクチャを持つアセンブリに適用できます。  
   
- 次の例を対象とする 2 つの 2 つの異なるプロセッサ アーキテクチャ、およびバージョンのないが維持されて同期された 2 つのアセンブリと同じ名前の構成ファイルを示します。X86 でアプリケーションを実行するときに、最初のプラットフォーム`<assemblyIdentity>`要素が適用され、その他は無視されます。 アプリケーションは、x86 または ia64 以外のプラットフォームで実行する場合は両方とも無視されます。  
+ 次の例を対象に 2 つの 2 つの異なるプロセッサ アーキテクチャ、およびバージョンがない管理が同期して 2 つのアセンブリと同じ名前の構成ファイルを示しています。X86 では、アプリケーションが実行される場合、最初のプラットフォーム`<assemblyIdentity>`要素が適用され、その他は無視されます。 アプリケーションは、x86、または ia64 以外のプラットフォームで実行する場合は両方とも無視されます。  
   
 ```xml  
 <configuration>  
@@ -102,7 +101,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- 構成ファイルが含まれている場合、`<assemblyIdentity>`要素なしで`processorArchitecture`属性があり、プラットフォーム、せず、要素に一致する要素を含まない、`processorArchitecture`属性を使用します。  
+ 構成ファイルが含まれている場合、`<assemblyIdentity>`要素なしで`processorArchitecture`属性、およびプラットフォームでない要素に一致する要素が含まれていない、`processorArchitecture`属性を使用します。  
   
 ## <a name="example"></a>例  
  次の例では、アセンブリに関する情報を提供する方法を示します。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - source element
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b7c2a71b129a0ad7d1c2a72b18b8a69a111f9495
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088946"
 ---
 # <a name="ltsourcegt-element"></a>&lt;ソース&gt;要素
 トレース メッセージを開始するトレース ソースを指定します。  
@@ -40,15 +40,15 @@ ms.lasthandoff: 05/03/2018
 |属性|説明|  
 |---------------|-----------------|  
 |`name`|省略可能な属性です。<br /><br /> トレース ソースの名前を指定します。|  
-|`switchName`|省略可能な属性です。<br /><br /> アプリケーションでトレース スイッチのインスタンスの名前を指定します。 スイッチがで指定されていない場合、`<switches>`要素値が、スイッチのレベルを指定します。|  
-|`switchType`|省略可能な属性です。<br /><br /> トレース スイッチの種類を指定します。 存在する場合、型は有効なクラス名である必要がありますされ、空の文字列にすることはできません。|  
-|`extraAttribute`|省略可能な属性です。<br /><br /> によって識別されるトレース ソースに固有の属性の値を指定、<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>そのトレース ソースのメソッドです。|  
+|`switchName`|省略可能な属性です。<br /><br /> アプリケーションでは、トレース スイッチのインスタンスの名前を指定します。 スイッチで指定されていない場合、`<switches>`要素の値が、スイッチのレベルを指定します。|  
+|`switchType`|省略可能な属性です。<br /><br /> トレース スイッチの種類を指定します。 存在する場合、型はクラス名として有効にする必要があり、空の文字列にすることはできません。|  
+|`extraAttribute`|省略可能な属性です。<br /><br /> 識別されるトレース ソースに固有の属性の値を指定します、<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>トレース ソースのためのメソッド。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|収集、保管、およびメッセージをルーティングするリスナーが含まれています。|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|収集、格納、およびメッセージをルーティングするリスナーが含まれています。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -58,11 +58,11 @@ ms.lasthandoff: 05/03/2018
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |`sources`|トレース メッセージを開始するトレース ソースを保持します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、`<source>`トレース ソースを追加する要素`mySource`という名前のソース スイッチのレベルを設定して`sourceSwitch`です。 トレース情報をコンソールに出力をコンソール トレース リスナーが追加されます。  
+ 次の例は、使用する方法を示します、`<source>`トレース ソースを追加する要素`mySource`という名前のソース スイッチのレベルを設定して`sourceSwitch`します。 トレース情報をコンソールに出力する、コンソール トレース リスナーが追加されます。  
   
 ```xml  
 <configuration>  

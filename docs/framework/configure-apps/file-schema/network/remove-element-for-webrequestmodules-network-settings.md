@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073022"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112206"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;削除&gt;webRequestModules (ネットワーク設定) の要素
-アプリケーションからカスタム Web 要求のモジュールを削除します。  
+アプリケーションからカスタム Web 要求モジュールを削除します。  
   
  \<configuration>  
 \<system.net>  
@@ -55,15 +54,15 @@ ms.locfileid: "37073022"
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|使用してネットワークのホストから情報を要求するモジュールを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- `remove`要素が指定した URI プレフィックスの登録済みの Web 要求のモジュールを削除します。  
+ `remove`要素が指定された URI のプレフィックスの登録済みの Web 要求モジュールを削除します。  
   
- 値、`prefix`属性が有効な URI: たとえば、"http"の先頭の文字にする必要がありますか"`http://www.contoso.com` "です。  
+ 値、`prefix`属性が有効な URI - たとえば、"http"の先頭の文字にする必要がありますまたは"`http://www.contoso.com` "。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、HTTP の場合、既存の Web 要求のモジュールを削除し、www.contoso.com への HTTP 要求のカスタム Web 要求の新しいモジュールを登録します。  
+ 次の例では、HTTP の場合、既存の Web 要求モジュールを削除し、www.contoso.com への HTTP 要求の新しいカスタム Web 要求モジュールを登録します。  
   
 ```xml  
 <configuration>  
