@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2706d2466bd7139d8a6c20802c32dd19f64abb40
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 671302003c3a1f3a37e1773aeeae9cb09a457d13
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743005"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47107754"
 ---
 # <a name="ltcryptoclassesgt-element"></a>&lt;cryptoClasses&gt;要素
 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 要素内の表示名へのマッピングを持つ暗号化クラスのリストを含みます。  
@@ -53,10 +52,10 @@ ms.locfileid: "32743005"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`cryptographySettings`|暗号設定を含みます。|  
 |`cryptoNameMapping`|表示名へのクラスのマッピングを含みます。|  
-|`mscorlib`|含まれています、`cryptographySettings`要素。|  
+|`mscorlib`|`cryptographySettings`要素を含んでいます。|  
   
 ## <a name="example"></a>例  
- 次の例では、  **\<cryptoClass >** 暗号化クラスを参照し、ランタイムを構成する要素。 文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。  
+ 次の例では、  **\<cryptoClass >** 暗号化クラスを参照して、ランタイムを構成する要素。 文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。  
   
 ```xml  
 <configuration>  

@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db209bac487ccbb98f7f0aeb272f51169e7a0148
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746356"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082069"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt;要素
 ASN.1 オブジェクト識別子 (OID) を表示名にマップします。  
@@ -41,7 +40,7 @@ ASN.1 オブジェクト識別子 (OID) を表示名にマップします。
 |属性|説明|  
 |---------------|-----------------|  
 |**OID**|必須の属性です。<br /><br /> クラスで実装されているアルゴリズムに対応する ASN.1 OID を指定します。|  
-|**name**|必須の属性です。<br /><br /> 値を指定、**名前**属性、 [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)タグ。|  
+|**name**|必須の属性です。<br /><br /> 値を指定します、**名前**属性、 [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)タグ。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -52,14 +51,14 @@ ASN.1 オブジェクト識別子 (OID) を表示名にマップします。
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`cryptographySettings`|暗号設定を含みます。|  
-|`mscorlib`|含まれています、`cryptographySettings`要素。|  
-|`oidMap`|クラスに ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。|  
+|`mscorlib`|`cryptographySettings`要素を含んでいます。|  
+|`oidMap`|クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。|  
   
-## <a name="remarks"></a>コメント  
- ASN.1 オブジェクト識別子は、いくつかの暗号化形式でアルゴリズムを識別します。 オブジェクト識別子を特定するアルゴリズムの表示名にマップします。  
+## <a name="remarks"></a>Remarks  
+ ASN.1 オブジェクト識別子では、いくつかの暗号化形式でアルゴリズムを識別します。 オブジェクト識別子を特定するアルゴリズムの表示名にマップします。  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、  **\<oidEntry >** ripemd-160 ハッシュ アルゴリズムのオブジェクト識別子をそのハッシュ アルゴリズムの実装にマップする要素。  
+ 次の例は、使用する方法を示します、  **\<oidEntry >** ripemd-160 のハッシュ アルゴリズムのオブジェクト識別子をそのハッシュ アルゴリズムの実装にマップする要素。  
   
 ```xml  
 <configuration>  

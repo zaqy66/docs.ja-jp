@@ -3,17 +3,16 @@ title: WCF でのセキュリティ
 ms.date: 03/30/2017
 ms.assetid: 05d73638-30a9-43b4-8c86-f27f57b6eef1
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a74f915132454e3f983c8bc73c17d4842a291406
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6f005fade22df9476f5411e9a55334320300169c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803872"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089478"
 ---
 # <a name="security-in-wcf"></a>WCF でのセキュリティ
 このセクションには、Windows Communication Foundation (WCF) のセキュリティに関連するサンプルが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [WCF セキュリティの暗号化方式の指定](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)  
- WCF クライアントとサービスでの暗号化、アジャイルの実装を提供する標準またはカスタム アルゴリズムで指定する方法を示します。
+ WCF クライアントおよびサービスで迅速な暗号化実装を提供する標準またはカスタム アルゴリズムで指定する方法を示します。

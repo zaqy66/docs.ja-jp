@@ -4,16 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8e01f82a476286e27129e4b1a47fefc1ac77c2b5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3f4e3dbdc3dae425e44cd1c0890e8fef9d42a780
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744162"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072723"
 ---
 # <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;削除&gt;schemeSettings (Uri 設定) の要素
-スキーム名にスキームの設定を削除します。  
+スキーム名の構成設定を削除します。  
   
  \<configuration>  
 \<uri >  
@@ -35,7 +34,7 @@ ms.locfileid: "32744162"
   
 |属性|説明|  
 |---------------|-----------------|  
-|name|スキーム名は、この設定が適用されます。 だけでサポートされる値は名前 ="http"、name ="https"。|  
+|name|スキーム名は、この設定が適用されます。 だけでサポートされる値は名前 ="http"と名前 ="https"。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -46,26 +45,26 @@ ms.locfileid: "32744162"
 |-------------|-----------------|  
 |[\<schemeSettings> 要素 (Uri 設定)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|<xref:System.Uri> が特定のスキームに解析される方法を指定します。|  
   
-## <a name="remarks"></a>コメント  
- 既定では、<xref:System.Uri?displayProperty=nameWithType>クラス エスケープを解除 % は、パスの圧縮を実行する前にパスの区切り記号をエンコードします。 これは、次のような攻撃に対するセキュリティ機構として実装されていました。  
+## <a name="remarks"></a>Remarks  
+ 既定で、<xref:System.Uri?displayProperty=nameWithType>クラスのエスケープを解除パーセントは、パスの圧縮を実行する前にパスの区切り文字をエンコードします。 これは、次のような攻撃に対するセキュリティ メカニズムとして実装されていました。  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- この URI が渡される場合は、モジュール % は処理されません。 エンコードした文字を正しく、サーバーにより実行されている次のコマンドを可能性があります。  
+ この URI が渡される場合は、モジュール % を処理しないエンコードした文字を正しく、サーバーで実行されている次のコマンドになる可能性があります。  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- このため、<xref:System.Uri?displayProperty=nameWithType>クラスの最初のエスケープを解除パス区切り記号とパスの圧縮を適用します。 上への悪意のある URL を渡した結果<xref:System.Uri?displayProperty=nameWithType>クラスのコンス トラクターの結果で、次の URI:  
+ このため、<xref:System.Uri?displayProperty=nameWithType>クラスの最初のエスケープを解除パス区切り記号とし、パスの圧縮を適用します。 上への悪意のある URL を渡すことの結果<xref:System.Uri?displayProperty=nameWithType>クラスに次の URI のコンス トラクターの結果。  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- いないエスケープ解除パーセント エンコードされたパスの区切り記号 schemeSettings 構成オプションを使用して、特定のスキームには、この既定の動作を変更できます。  
+ SchemeSettings の構成オプションを使用して、特定のスキームのないのエスケープを解除のパーセントでエンコードされたパス区切りには、この既定の動作を変更できます。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例で使用する構成を示しています、 <xref:System.Uri> http スキームのすべての構成設定を削除するクラス。  
+ 次の例で使用する構成を示しています、 <xref:System.Uri> http スキーム、スキームの設定を削除するクラス。  
   
 ```xml  
 <configuration>  

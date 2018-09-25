@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db39d7de3566647b5171b71940c78a9a0ab6f5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350223"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073542"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt;要素
-クラスに ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。  
+クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。  
   
  \<configuration>  
 \<mscorlib >  
@@ -51,10 +50,10 @@ ms.locfileid: "33350223"
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`cryptographySettings`|暗号設定を含みます。|  
-|`mscorlib`|含まれています、`cryptographySettings`要素。|  
+|`mscorlib`|`cryptographySettings`要素を含んでいます。|  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、  **\<oidMap >** 要素をそのハッシュ アルゴリズムの実装に ripemd-160 ハッシュ アルゴリズムの OID のマッピングが含まれます。  
+ 次の例は、使用する方法を示します、  **\<oidMap >** 要素にそのハッシュ アルゴリズムの実装に ripemd-160 のハッシュ アルゴリズムの OID のマッピングが含まれます。  
   
 ```xml  
 <configuration>  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5bcd17cfe1f3bd7531453b62552a4907df5b96bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741985"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070501"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;オフ&gt;connectionManagement (ネットワーク設定) の要素
 接続の管理の一覧をクリアします。  
@@ -26,7 +25,7 @@ ms.locfileid: "32741985"
  \<configuration>  
 \<system.net>  
 \<connectionManagement >  
-\<オフ >  
+\<クリア >  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,14 +48,14 @@ ms.locfileid: "32741985"
 |-----------------|---------------------|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|ネットワーク ホストへの接続の最大数を指定します。|  
   
-## <a name="remarks"></a>コメント  
- `clear`要素の接続管理リストからすべてのエントリを削除します。  
+## <a name="remarks"></a>Remarks  
+ `clear`要素の接続管理の一覧からすべてのエントリをクリアします。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、接続管理リストから削除し、サーバー www.contoso.com とその他のすべてのネットワーク ホストの接続管理エントリを追加します。  
+ 次の例では、接続管理の一覧をクリアし、サーバー www.contoso.com とその他のすべてのネットワーク ホストの接続管理エントリを追加します。  
   
 ```xml  
 <configuration>  

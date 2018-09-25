@@ -11,27 +11,26 @@ helpviewer_keywords:
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b12d5d95a17439308d79d094e8c22206778f3128
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b9153b4525063d6c52e22d754d68ffa42e914d00
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743252"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074902"
 ---
 # <a name="configuring-cryptography-classes"></a>暗号化クラスの設定
-[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]により、既定の暗号化アルゴリズムと .NET Framework および適切に記述されたアプリケーションを使用するアルゴリズムの実装を構成するコンピューターの管理者です。  たとえば、暗号アルゴリズムの実装を持つエンタープライズは、その実装に付属して実装ではなく既定値、[!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]です。 暗号化を使用するマネージ アプリケーションは、特定の実装にバインドするように常に選択できますが、暗号化の構成システムを使用して暗号オブジェクトを作成することをお勧めします。  
+[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]コンピューターの管理者は、既定の暗号アルゴリズムと、.NET Framework と適切に記述されたアプリケーションを使用するアルゴリズムの実装を構成します。  たとえば、暗号アルゴリズムの独自の実装を持つエンタープライズは、その実装に出荷された実装ではなく既定、[!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]します。 暗号化を使用するマネージ アプリケーションは、特定の実装にバインドするように常に選択できますが、crypto の構成システムを使用して暗号化オブジェクトを作成することをお勧めします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [暗号化クラスへのアルゴリズム名の割り当て](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  
- アルゴリズム名を暗号クラスにマップする方法について説明します。  
+ 暗号化クラスに、アルゴリズム名をマップする方法について説明します。  
   
  [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)  
  暗号化アルゴリズムにオブジェクト識別子をマップする方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
- によって提供される暗号サービスの概要を示します、[!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]です。  
+ によって提供されるサービスの暗号化の概要、[!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]します。  
   
  [暗号化設定スキーマ](../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  アルゴリズムの表示名を、暗号化アルゴリズムを実装するクラスに割り当てる要素について説明します。

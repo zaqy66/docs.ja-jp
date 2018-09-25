@@ -3,13 +3,12 @@ title: カスタムのトークン ハンドラー
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 18be4babf7e9cfbfe9ebfb43da6f98a8544b2fe6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399978"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082384"
 ---
 # <a name="custom-token-handlers"></a>カスタムのトークン ハンドラー
 このトピックでは、WIF のトークン ハンドラーと、それらを使用してトークンをどのように処理するかを説明します。 また、WIF で既定ではサポートされていないトークンの種類用にカスタム トークン ハンドラーを作成するために必要なことについても説明します。  

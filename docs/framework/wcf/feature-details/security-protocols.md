@@ -5,16 +5,15 @@ helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6160f3be39bc7317b57f8f1d85bda8e61dbd80fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfb8f3b8d824c1a3324b1d01edc9a087c0cf4abd
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508720"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078215"
 ---
 # <a name="security-protocols"></a>セキュリティ プロトコル
-Web サービス セキュリティ プロトコルには、既存のエンタープライズ メッセージング セキュリティのあらゆる要件に対応する Web サービス セキュリティ機構が用意されています。 このセクションで、Windows Communication Foundation (WCF) について詳しく説明 (で実装された、 <xref:System.ServiceModel.Channels.SecurityBindingElement>) の次の Web サービス セキュリティ プロトコルです。  
+Web サービス セキュリティ プロトコルには、既存のエンタープライズ メッセージング セキュリティのあらゆる要件に対応する Web サービス セキュリティ機構が用意されています。 このセクションは、Windows Communication Foundation (WCF) の詳細を説明します (で実装された、 <xref:System.ServiceModel.Channels.SecurityBindingElement>) の次の Web サービス セキュリティ プロトコル。  
   
 |仕様/ドキュメント|Link|  
 |-|-|  
@@ -34,7 +33,7 @@ Web サービス セキュリティ プロトコルには、既存のエンタ�
 |Application Note:<br /><br /> Web Services Addressing Endpoint References And Identity|公開予定|  
 |WS-SecurityPolicy 1.2 (2007/04)|http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf|  
   
- WCF, version 1 では、Web サービス セキュリティ構成の基礎として使用できる 17 個の認証モードを提供します。 各モードは、次のような一般的な展開要件について最適化されています。  
+ WCF では、バージョン 1 では、Web サービス セキュリティの構成の基礎として使用できる 17 の認証モードを提供します。 各モードは、次のような一般的な展開要件について最適化されています。  
   
 -   クライアントとサービスの認証に使用する資格情報  
   
@@ -66,7 +65,7 @@ Web サービス セキュリティ プロトコルには、既存のエンタ�
   
  WCF では、アプリケーション間で複数のメッセージ交換を保護するセキュリティで保護されたセッションのサポートを提供するには、Ws-secureconversation を活用します。  実装の詳細については、後述の「セキュリティで保護されたセッション」を参照してください。  
   
- WCF 認証モード、に加えてには、たとえば、ほとんどのメッセージ セキュリティ ベースの認証モードに適用される一般的な保護機構を制御する設定が用意されています: 署名と暗号化操作は、アルゴリズム スイート、キー派生の順序、および署名確認します。  
+ WCF だけでなく、認証モードには、たとえば、ほとんどのメッセージ セキュリティ ベースの認証モードに適用される一般的な保護機構を制御する設定が用意されています: 署名と暗号化操作、アルゴリズム スイート、キー派生の順序、および署名の確認。  
   
  このドキュメントでは、以下のプレフィックスと名前空間を使用します。  
   
@@ -95,7 +94,7 @@ Web サービス セキュリティ プロトコルには、既存のエンタ�
   
  機能拡張を使用すると、#PasswordDigest を実装できます。 #PasswordDigest は、十分に安全性の高いパスワード保護機構であると誤解されがちであることが報告されています。 しかし、#PasswordDigest は、UsernameToken の暗号化の代替として使用できるわけではありません。 #PasswordDigest の第一の目的は、リプレイ攻撃から保護することです。 WCF 認証モードでは、リプレイ攻撃の脅威はメッセージ署名を使用して軽減されます。  
   
- B1102 WCF は、UsernameToken の Nonce と作成のサブ要素を出力することはありません。  
+ B1102 WCF は、決して UsernameToken の Nonce および作成済みのサブ要素を出力します。  
   
  これらのサブ要素は、リプレイ検出を支援するためのものです。 WCF では、代わりにメッセージの署名を使用します。  
   
@@ -106,7 +105,7 @@ Web サービス セキュリティ プロトコルには、既存のエンタ�
  理由 : パスワードは、一般に暗号化操作に使用するには脆弱すぎると見なされています。  
   
 ### <a name="12-x509-token"></a>1.2 X509 トークン  
- WCF では、資格情報の種類として X509v3 証明書をサポートしているし、以下の制約で X509TokenProfile1.0 と X509TokenProfile1.1 に従います。  
+ WCF では、資格情報の種類として X509v3 証明書をサポートしているし、以下の制約で X509TokenProfile1.0 と X509TokenProfile1.1 に依存します。  
   
  R1201 : BinarySecurityToken 要素に X509v3 証明書が含まれている場合、この要素の ValueType 属性の値は #X509v3 であることが必要です。  
   
@@ -120,37 +119,37 @@ Web サービス セキュリティ プロトコルには、既存のエンタ�
   
  R1204 : X509TokenProfile1.1 を使用している場合、X509 セキュリティ トークンへの外部参照では、WS-Security 1.1 で導入された拇印を使用する必要があります。  
   
- WCF では、X509IssuerSerial をサポートします。 ただし、X509IssuerSerial に相互運用性の問題: WCF では、文字列を使用して X509IssuerSerial の 2 つの値を比較します。 したがって、サブジェクト名の構成要素を並べ替えてを証明書への参照を WCF サービスに送信した場合、見つからない可能性があります。  
+ WCF では、X509IssuerSerial をサポートします。 ただし相互運用性の問題は X509IssuerSerial: WCF では、文字列を使用して X509IssuerSerial の 2 つの値を比較します。 そのため、サブジェクト名の構成要素を並べ替えます 1 つの WCF サービスに証明書への参照を送信すると、その見つからない可能性があります。  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos トークン  
- WCF では、以下の制約で Windows 認証の目的で KerberosTokenProfile1.1 をサポートしています。  
+ WCF では、次の制約を使用して Windows 認証の目的で KerberosTokenProfile1.1 をサポートしています。  
   
  R1301 : GSS_API と Kerberos 仕様で定義されているように、Kerberos トークンは GSS によってラップされた Kerberos v4 AP_REQ の値を伝達する必要があります。また、値 #GSS_Kerberosv5_AP_REQ が指定された ValueType 属性を持つ必要があります。  
   
- WCF は gss によってラップ Kerberos AP-REQ をできません、ベア AP の要件 これは、セキュリティのベスト プラクティスです。  
+ WCF は gss によってラップ Kerberos AP-REQ、いない、ベア AP の求人 これは、セキュリティのベスト プラクティスです。  
   
 ### <a name="14-saml-v11-token"></a>1.4 SAML v1.1 トークン  
  WCF では、SAML v1.1 トークンの WSS SAML Token profile 1.0 および 1.1 をサポートしています。 SAML トークンの形式のその他のバージョンも実装できます。  
   
 ### <a name="15-security-context-token"></a>1.5 セキュリティ コンテキスト トークン  
- WCF には、セキュリティ コンテキスト トークン (SCT) Ws-securecoversation に導入されたサポートされています。 SCT は、SecureConversation と、後述する TLS および SSPI の各バイナリ ネゴシエーション プロトコルで確立されたセキュリティ コンテキストを表すために使用されます。  
+ WCF は、セキュリティ コンテキスト トークン (SCT) Ws-securecoversation に導入されたをサポートします。 SCT は、SecureConversation と、後述する TLS および SSPI の各バイナリ ネゴシエーション プロトコルで確立されたセキュリティ コンテキストを表すために使用されます。  
   
 ## <a name="2-common-message-security-parameters"></a>2.一般的なメッセージ セキュリティ パラメーター  
   
 ### <a name="21-timestamp"></a>2.1 タイムスタンプ  
- タイムスタンプの有無は、<xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> クラスの <xref:System.ServiceModel.Channels.SecurityBindingElement> プロパティを使用して制御します。 WCF は常にと共に wsse:TimeStamp をシリアル化: 作成と wsse: フィールドの有効期限します。 署名を使用する場合、wsse:TimeStamp は必ず署名されます。  
+ タイムスタンプの有無は、<xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> クラスの <xref:System.ServiceModel.Channels.SecurityBindingElement> プロパティを使用して制御します。 WCF では、wsse:TimeStamp を常にシリアル化: 作成と wsse: フィールドの有効期限が切れます。 署名を使用する場合、wsse:TimeStamp は必ず署名されます。  
   
 ### <a name="22-protection-order"></a>2.2 保護の順序  
- WCF では、メッセージを保護する順序「署名前に暗号化」および「署名前に暗号化」(セキュリティ ポリシー 1.2) をサポートします。 WS-Security 1.1 の SignatureConfirmation 機構を使用していない場合、"署名前に暗号化" を使用して保護されたメッセージを開くと、置き換え攻撃への署名が行われます。また、暗号化された内容に署名すると監査が困難になります。これらの理由から、"暗号化前に署名" を使用することをお勧めします。  
+ WCF では、メッセージ保護の順序「署名前に暗号化」と「署名前に暗号化」(セキュリティ ポリシー 1.2) をサポートします。 WS-Security 1.1 の SignatureConfirmation 機構を使用していない場合、"署名前に暗号化" を使用して保護されたメッセージを開くと、置き換え攻撃への署名が行われます。また、暗号化された内容に署名すると監査が困難になります。これらの理由から、"暗号化前に署名" を使用することをお勧めします。  
   
 ### <a name="23-signature-protection"></a>2.3 署名の保護  
  "署名前に暗号化" を使用する場合、暗号化された内容や署名キー (特に、脆弱なキー マテリアルでカスタム トークンを使用する場合) を推測するブルート フォース攻撃を防ぐために、署名を保護することをお勧めします。  
   
 ### <a name="24-algorithm-suite"></a>2.4 アルゴリズム スイート  
- WCF では、セキュリティ ポリシー 1.2 に記載されたすべてのアルゴリズム スイートをサポートします。  
+ WCF では、セキュリティ ポリシー 1.2 で表示されているすべてのアルゴリズム スイートをサポートします。  
   
 ### <a name="25-key-derivation"></a>2.5 キー派生  
- WCF は、Ws-secureconversation」の説明に従って、「対称キーのキー派生」を使用します。  
+ WCF は、Ws-secureconversation に記載された「対称キーのキー派生」を使用します。  
   
 ### <a name="26-signature-confirmation"></a>2.6 署名確認  
  "man-in-the-middle" 攻撃への対策として署名確認を使用することによって、署名セットを保護できます。  
@@ -171,7 +170,7 @@ Web サービス セキュリティ プロトコルには、既存のエンタ�
  このセクションでは、各認証モードのポリシーの例、およびクライアントとサービスによって交換されるメッセージのセキュリティ ヘッダーの構造を示す例を紹介します。  
   
 ### <a name="31-transport-protection"></a>3.1 トランスポートの保護  
- WCF には、セキュリティで保護されたトランスポートを使用してメッセージを保護する 5 つの認証モードが用意されていますされた UserNameOverTransport、CertificateOverTransport、KerberosOverTransport、IssuedTokenOverTransport、および SspiNegotiatedOverTransport です。  
+ WCF には、セキュリティで保護されたトランスポートを使用してメッセージを保護する 5 つの認証モードが用意されていますUserNameOverTransport、CertificateOverTransport、KerberosOverTransport、IssuedTokenOverTransport、および SspiNegotiatedOverTransport します。  
   
  これらの認証モードは、SecurityPolicy に記載されたトランスポート バインディングを使用して構築されます。 UserNameOverTransport 認証モードの場合、UsernameToken は署名付きサポート トークンです。 その他の認証モードでは、トークンは署名付き保証トークンとして表示されます。 SecurityPolicy の Appendix C.1.2 および C.1.3 には、セキュリティ ヘッダーのレイアウトの詳細が記載されています。 以降のセキュリティ ヘッダーの例は、指定の認証モードの Strict レイアウトを示しています。  
   
@@ -278,7 +277,7 @@ Web サービス セキュリティ プロトコルには、既存のエンタ�
 ```  
   
 #### <a name="315-sspinegotiatedovertransport"></a>3.1.5 SspiNegotiatedOverTransport  
- このモードでは、ネゴシエーション プロトコルを使用して、クライアントとサーバーの認証を行います。 Kerberos を使用できる場合は Kerberos が使用され、それ以外の場合は NTLM が使用されます。 発行された SCT は、イニシエーターから受信者に必ず送信される保証サポート トークンとして SOAP 層に表示されます。 サービスは、トランスポート層で X.509 証明書により追加的に認証されます。 使用するバインディングは、トランスポート バインディングです。 "SPNEGO"(ネゴシエーション) は、WCF が Ws-trust で SSPI バイナリ ネゴシエーション プロトコルを使用する方法について説明します。 このセクションで示すセキュリティ ヘッダーの例は、SPNEGO ハンドシェイクによって SCT が確立された後の状態を示しています。  
+ このモードでは、ネゴシエーション プロトコルを使用して、クライアントとサーバーの認証を行います。 Kerberos を使用できる場合は Kerberos が使用され、それ以外の場合は NTLM が使用されます。 発行された SCT は、イニシエーターから受信者に必ず送信される保証サポート トークンとして SOAP 層に表示されます。 サービスは、トランスポート層で X.509 証明書により追加的に認証されます。 使用するバインディングは、トランスポート バインディングです。 "SPNEGO"(ネゴシエーション) では、WCF が Ws-trust で SSPI バイナリ ネゴシエーション プロトコルを使用する方法について説明します。 このセクションで示すセキュリティ ヘッダーの例は、SPNEGO ハンドシェイクによって SCT が確立された後の状態を示しています。  
   
  ポリシー  
   
@@ -301,7 +300,7 @@ Web サービス セキュリティ プロトコルには、既存のエンタ�
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 がサービスの認証に X.509 証明書を使用します。  
+### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 を X.509 証明書を使用してサービス認証  
  このセクションでは、MutualCertificate WSS1.0、Mutual CertificateDuplex、MutualCertificate WSS1.1、AnonymousForCertificate、UserNameForCertificate、および IssuedTokenForCertificate の各認証モードについて説明します。  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
@@ -403,7 +402,7 @@ Web サービス セキュリティ プロトコルには、既存のエンタ�
 ```  
   
 #### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a>3.2.3 X.509 サービス認証での SymmetricBinding の使用  
- "WSS10" では、X509 トークンを使用するシナリオのサポートが制限されていました。 たとえば、サービスの X509 トークンだけを使用して、メッセージの署名と暗号化を保護することはできませんでした。 "WSS11" では、EncryptedKey を共通鍵トークンとして使用する方法が導入されています。 これにより、サービスの X.509 証明書の暗号化された一時キーを使用して、要求メッセージと応答メッセージの両方を保護できるようになります。 以下のセクション 3.4 で説明する認証モードでは、このパターンを使用します。  
+ "WSS10" では、X509 トークンを使用するシナリオのサポートが制限されていました。 たとえば、サービスの X509 トークンだけを使用して、メッセージの署名と暗号化を保護することはできませんでした。 "WSS11" では、EncryptedKey を共通鍵トークンとして使用する方法が導入されています。 これにより、サービスの X.509 証明書の暗号化された一時キーを使用して、要求メッセージと応答メッセージの両方を保護できるようになります。 以下のセクション 3.4 で説明されている認証モードでは、このパターンを使用します。  
   
  WS-SecurityPolicy には、サービスの X509 トークンを保護トークンとして使用して SymmetricBinding を使用するこのパターンが記載されています。  
   

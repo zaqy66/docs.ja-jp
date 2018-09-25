@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5903174f125938923a63fc031421a8d5a020e56d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753587"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113070"
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt;要素 (ネットワーク設定)
 ネットワーク リソースへの接続を構成します。  
@@ -47,11 +46,11 @@ ms.locfileid: "32753587"
   
 |**属性**|**説明**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|システムが証明書を使用する前に、証明書の名前がサーバーのホスト名と一致することを確認する必要があるかどうかを指定します。 既定値は `true` です。|  
-|`checkCertificateRevocationList`|システムが証明書を使用する前に、証明書が失効したかどうかをチェックする必要があるかどうかを指定します。 既定値は `false` です。|  
-|`dnsRefreshTimeout`|ミリ秒単位で、DNS ラウンド ロビン オプションと組み合わせて期間ドメイン ネーム サービス (DNS) の解像度はキャッシュを指定します。 既定値は 120,000 ミリ秒 (2 分) です。|  
-|`enableDnsRoundRobin`|すべてのアドレスまたは最初の 1 つだけに、ホストの DNS 解決が戻り値の複数のインターネット プロトコル (IP) アドレスを持つ名前かどうかを指定します。 既定値は `false` です。|  
-|`encryptionPolicy`|SSL/TLS セッションに適用される暗号化ポリシーを指定します、<xref:System.Net.ServicePointManager>インスタンス。 値と同じ値には、<xref:System.Net.Security.EncryptionPolicy>列挙します。 使用<xref:System.Security.Authentication.CipherAlgorithmType.Null>は、暗号化ポリシーが に設定されている場合に必要`NoEncryption`です。 既定値は `RequireEncryption` です。|  
+|`checkCertificateName`|システムが証明書の名前、証明書を使用する前にサーバーのホスト名が一致することを確認する必要があるかどうかを指定します。 既定値は `true` です。|  
+|`checkCertificateRevocationList`|システムが、証明書を使用する前に、証明書を失効するかどうかをチェックする必要があるかどうかを指定します。 既定値は `false` です。|  
+|`dnsRefreshTimeout`|(ミリ秒単位)、DNS ラウンド ロビン オプションと共に、どのくらいの時間ドメイン ネーム サービス (DNS) 解決策はキャッシュを指定します。 既定値は 120,000 ミリ秒 (2 分) です。|  
+|`enableDnsRoundRobin`|すべてのアドレス、または最初の 1 つだけホストの DNS 解決の戻り値の複数のインターネット プロトコル (IP) アドレスを持つ名前かどうかを指定します。 既定値は `false` です。|  
+|`encryptionPolicy`|SSL や TLS セッションに適用する暗号化ポリシーを指定します、<xref:System.Net.ServicePointManager>インスタンス。 使用可能な値がの値に等しい、<xref:System.Net.Security.EncryptionPolicy>列挙体。 使用<xref:System.Security.Authentication.CipherAlgorithmType.Null>暗号化ポリシーが設定されている場合は、必要な`NoEncryption`します。 既定値は `RequireEncryption` です。|  
 |`expect100Continue`|POST メソッドが受信することが予想されるかどうかを指定します、`100-continue`サーバーからの応答。 既定値は `true` です。|  
 |`useNagleAlgorithm`|サービス ポイントのマネージャーによって制御される接続で Nagle アルゴリズムを使用するかどうかを指定します。 既定値は `true` です。|  
   
@@ -64,7 +63,7 @@ ms.locfileid: "32753587"
 |-----------------|---------------------|  
 |[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  

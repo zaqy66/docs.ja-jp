@@ -1,5 +1,5 @@
 ---
-title: '&lt;mscorlib&gt;暗号化設定の要素'
+title: '&lt;mscorlib&gt;暗号設定の要素'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 292937000eb1baca191c0960e8e496a128ee4696
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b5da49ff22cfa6bd1c3e4d574865eb5e61dc73fb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743564"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085697"
 ---
-# <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt;暗号化設定の要素
-含まれています、 [ \<cryptographySettings > 要素](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)です。  
+# <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt;暗号設定の要素
+含まれています、 [ \<cryptographySettings > 要素](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)します。  
   
  \<configuration>  
 \<mscorlib >  
@@ -50,7 +49,7 @@ ms.locfileid: "32743564"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、  **\<mscorlib >** 暗号化クラスを参照し、ランタイムを構成する要素。 文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。  
+ 次の例は、使用する方法を示します、  **\<mscorlib >** 暗号化クラスを参照して、ランタイムを構成する要素。 文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。  
   
 ```xml  
 <configuration>  

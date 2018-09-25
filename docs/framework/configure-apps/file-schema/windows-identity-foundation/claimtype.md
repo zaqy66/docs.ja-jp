@@ -3,16 +3,15 @@ title: '&lt;ClaimType&gt;'
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 94f8586a9ca63b8c1f1128cdda4a74ccfe0f5416
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 805377565b6e835fd9ffba915a003bc56529a3b6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767428"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084216"
 ---
 # <a name="ltclaimtypegt"></a>&lt;ClaimType&gt;
-受信セキュリティ トークンの 1 つの省略可能または必須のクレームを指定します。  
+受け取ったセキュリティ トークンの 1 つの省略可能または必須のクレームを指定します。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -40,7 +39,7 @@ ms.locfileid: "32767428"
 |属性|説明|  
 |---------------|-----------------|  
 |型|要求の種類。 通常は URI です。 必須。|  
-|optional|要求の種類は省略可能かどうかを指定するブール値。 任意。|  
+|optional|要求の種類が省略可能かどうかを指定するブール値。 任意。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  

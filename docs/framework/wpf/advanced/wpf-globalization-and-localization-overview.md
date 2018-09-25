@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: d8fef7965e3248d5361d866a441783bf4968460e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: fcf5b8f872e2f97497ff5387adb755da1832bf8c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478903"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111330"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
 1 つだけの言語、製品の可用性を制限する場合は、潜在的な顧客ベースでの世界 6.5 10億人の母集団の割合を制限します。 世界中のユーザーに到達するようにアプリケーションを実行する場合に、製品のコスト効率に優れたローカリゼーションより多くのお客様に最高で最も経済的な方法のいずれか。  
@@ -29,7 +29,7 @@ ms.locfileid: "46478903"
   
 -   コンテンツのレイアウト時に絶対位置および固定サイズを使用しないでください。代わりに、相対パスまたは自動サイズ設定を使用します。
   
-    -   使用<xref:System.Windows.Window.SizeToContent%2A>; 幅と高さの設定を保持および`Auto`します。  
+    -   使用<xref:System.Windows.Window.SizeToContent%2A>幅と高さの設定を保持および`Auto`します。  
   
     -   使用しないでください<xref:System.Windows.Controls.Canvas>をレイアウトする[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]秒。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "46478903"
   
 -   有効にする<xref:System.Windows.Controls.TextBlock.TextWrapping%2A>で<xref:System.Windows.Controls.TextBlock>クリッピングを回避するためにします。
   
--   設定、 **xml:lang**属性。 この属性には、特定の要素とその子要素のカルチャがについて説明します。 このプロパティの値がいくつかの機能の動作を変更[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 たとえば、ハイフネーション、スペル チェック、数値の置換、複雑なスクリプトの整形、およびフォント フォールバックの動作を変更します。 参照してください[WPF のグローバリゼーション](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)詳細設定については、 [xml:lang XAML 処理](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)します。  
+-   設定、`xml:lang`属性。 この属性には、特定の要素とその子要素のカルチャがについて説明します。 このプロパティの値がいくつかの機能の動作を変更[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 たとえば、ハイフネーション、スペル チェック、数値の置換、複雑なスクリプトの整形、およびフォント フォールバックの動作を変更します。 参照してください[WPF のグローバリゼーション](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)詳細設定については、 [xml:lang XAML 処理](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)します。  
   
 -   さまざまな言語に使用されるフォントをより適切に制御を取得する場合は、カスタマイズされた複合フォントを作成します。 既定では、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows\Fonts ディレクトリに GlobalUserInterface.composite フォントを使用します。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "46478903"
   
          省略すると、メイン アセンブリに、ソース言語を含める場合、`<UICulture>`プロジェクト ファイルにタグを付ける、設定、`UltimateResourceFallback`サテライトではなくメイン アセンブリと場所 (たとえば、 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`)。  
   
-<a name="workflow_to_localize"></a>   
+<a name="workflow_to_localize" />   
 ## <a name="localize-a-wpf-application"></a>WPF アプリケーションをローカライズします。  
  ローカライズするときに、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションでは、いくつかのオプションがあります。 アプリケーションのローカライズ可能なリソースをバインドするなど、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]ファイル、resx テーブルでローカライズ可能なテキストを格納または使用して、ローカライザー[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイル。 このセクションでは、いくつかの利点を提供する、XAML の BAML 形式を使用するローカリゼーション ワークフローについて説明します。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "46478903"
   
  ![ローカライズされていない作業フロー](../../../../docs/framework/wpf/advanced/media/localizationworkflow2.png "LocalizationWorkflow2")  
   
-<a name="examples_of_localization"></a>   
+<a name="examples_of_localization" />   
 ## <a name="examples-of-wpf-localization"></a>WPF のローカリゼーションの例  
  このセクションには、ローカライズされたアプリケーションをビルドおよびローカライズする方法を理解するための例が含まれています。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "46478903"
   
  メモの共有のサイズ変更機能を使用する例では、<xref:System.Windows.Controls.Grid>します。 最後の 3 つの列が同じ自体を配置することでこの方法の利点を実行<xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>します。 プロパティの名前の 1 つと同様に、これにより、同じサイズを共有する列。 これより長い文字列「Durchsuchen…」に「参照…」ローカライズされたとき、すべてのボタンは、小さい"OK"ボタンと過度に大規模な「Durchsuchen...」ボタンではなく幅拡張します。  
   
- **Xml:lang**  
+ **Xml:lang**
   
  `Xml:lang="en-US"`  
   
@@ -146,7 +146,9 @@ ms.locfileid: "46478903"
  **サテライト リソース アセンブリの構築**  
   
  *で .csproj:*  
-  
+
+ 編集、`.csproj`ファイルを開き、次のタグを追加するには無条件に`<PropertyGroup>`:
+ 
  `<UICulture>en-US</UICulture>`  
   
  追加に注意してください、`UICulture`値。 設定を有効な<xref:System.Globalization.CultureInfo>EN-US、プロジェクトのビルドなどの値がローカライズ可能なすべてのリソースのサテライト アセンブリを生成します。  
@@ -197,7 +199,7 @@ ms.locfileid: "46478903"
   
  **LocBaml.exe/生成 RunDialog.resources.dll/trans:RunDialog.resources.dll.CSV/out: です。/cul:de-DE**  
   
- ドイツ語で[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]、このリソースが EN-US フォルダー内ではなく自動的に負荷をこの resources.dll をメイン アセンブリの横にある DE-DE フォルダーに配置すると、場合。 ドイツ語版のない[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]これをテストするには、どのカルチャのカルチャを設定[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)](例: EN-US) を使用しているし、元の resources.dll を置換します。  
+ ドイツ語で[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]、このリソースが EN-US フォルダー内ではなく自動的に負荷をこの resources.dll をメイン アセンブリの横にある DE-DE フォルダーに配置すると、場合。 ドイツ語版があるない場合[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]これをテストするには、どのカルチャのカルチャを設定[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]を使用する (たとえば、 `en-US`)、元のリソース DLL を置き換えるとします。  
   
  **サテライト リソースの読み込み**  
   
@@ -246,7 +248,7 @@ ms.locfileid: "46478903"
   
  **パネルとコントロールの固定サイズを使用しないでください。**  
   
- Homepage.xaml を通してくださいとは別に固定幅と高さが全体で指定されていることを確認[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]上にある<xref:System.Windows.Controls.DockPanel>、他の固定サイズではありません。 ソース テキストを超える可能性のあるローカライズされたテキストをクリッピングを防ぐために、固定サイズを使用しないでください。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] パネルとコントロールが自動的に含まれている内容に基づいてサイズ変更します。 ほとんどのコントロールも詳細に制御を設定できる最小値と最大の大きさである (つまり MinWidth =「20」)。 <xref:System.Windows.Controls.Grid>を使用して、相対的な幅と高さを設定することも ' *' (つまり幅 ="0.25\*") または共有機能のセルのサイズを使用します。  
+ Homepage.xaml を通してくださいとは別に固定幅と高さが全体で指定されていることを確認[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]上にある<xref:System.Windows.Controls.DockPanel>、他の固定サイズではありません。 ソース テキストを超える可能性のあるローカライズされたテキストをクリッピングを防ぐために、固定サイズを使用しないでください。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] パネルとコントロールが自動的に含まれている内容に基づいてサイズ変更します。 ほとんどのコントロールも詳細に制御を設定できる最小値と最大の大きさである (たとえば、MinWidth =「20」)。 <xref:System.Windows.Controls.Grid>を使用して、相対的な幅と高さを設定することも '\*' (たとえば、 `Width="0.25*"`) または共有機能のセルのサイズを使用します。  
   
  **ローカリゼーション コメント**  
   
@@ -275,26 +277,20 @@ ms.locfileid: "46478903"
  [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]  
   
  既定のローカリゼーション属性を[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供カスタム コントロールの適切な既定値を正しく設定できるようにも、コードにオーバーライドできます。 例えば:  
-  
- `[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]`  
-  
- `public class CorporateLogo: TextBlock`  
-  
- `{`  
-  
- `…`  
-  
- `..`  
-  
- `.`  
-  
- `}`  
-  
+
+```csharp 
+[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)] 
+public class CorporateLogo : TextBlock
+{
+    // ...
+}
+``` 
+ 
  インスタンスの属性で設定あたり[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]カスタム コントロールのコードで設定された値より優先します。 属性とコメントの詳細については、次を参照してください。[ローカリゼーション属性とコメント](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)します。  
   
  **フォント フォールバックと複合フォント**  
   
- 指定されたコード ポイント範囲をサポートしていないフォントを指定する場合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は Windows\Fonts ディレクトリ内にあるグローバル ユーザー Interface.compositefont を使用している 1 つに自動的にフォールバックします。 複合フォントだけその他のフォントの動作し、要素の FontFamily を設定して明示的に使用されることができます (つまり FontFamily =「グローバルなユーザー インターフェイス」)。 独自の複合フォントを作成し、特定のコード ポイント範囲および言語を使用するフォントを指定して、独自のフォント フォールバック設定を指定できます。  
+ 指定されたコード ポイント範囲をサポートしていないフォントを指定する場合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は Windows\Fonts ディレクトリ内にあるグローバル ユーザー Interface.compositefont を使用している 1 つに自動的にフォールバックします。 複合フォントだけその他のフォントの動作し、要素の設定で明示的に使用できる`FontFamily`(たとえば、 `FontFamily="Global User Interface"`)。 独自の複合フォントを作成し、特定のコード ポイント範囲および言語を使用するフォントを指定して、独自のフォント フォールバック設定を指定できます。  
   
  複合フォントの詳細については、次を参照してください。<xref:System.Windows.Media.FontFamily>します。  
   

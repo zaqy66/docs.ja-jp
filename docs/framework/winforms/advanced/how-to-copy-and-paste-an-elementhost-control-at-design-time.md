@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: 43ebe50497df97511925bd2e413ab5b5988b7f57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a61a8538fb9b4245e3f3705c5d5cbb1b45ed0b72
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45624789"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089085"
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>方法 : デザイン時に ElementHost コントロールをコピーして貼り付ける
 この手順では、Windows フォーム上の Windows Presentation Foundation (WPF) コントロールをコピーする方法を示します。  
@@ -43,9 +43,9 @@ ms.locfileid: "45624789"
      新しい<xref:System.Windows.Forms.Integration.ElementHost>という名前のコントロール`elementHost2`フォーム上に作成されます。  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [チュートリアル: ElementHost コントロールの別の Windows フォームへのコピーと貼り付け](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [WPF コントロールの使用](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
+
+- <xref:System.Windows.Forms.Integration.ElementHost>  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
+- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+- [WPF コントロールの使用](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)

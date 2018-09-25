@@ -3,16 +3,15 @@ title: カスタム バインドを使用したセキュリティ機能
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 2cfe5a18dd0fc7f8a8f54559d1d5b57e52cefa8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35d2477af3dc7ce6fdd075055fff9e687bdc2a60
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497426"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110282"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>カスタム バインドを使用したセキュリティ機能
-一般的なセキュリティ タスクのほとんどは、システム指定のバインディングのいずれかを使用して実行できます。 ただし、より高度な制御が必要な場合は、以下のトピックで説明するように、<xref:System.ServiceModel.Channels.SecurityBindingElement> を使用してカスタム バインディングを作成できます。 カスタム バインドの詳細については、次を参照してください。[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)です。  
+一般的なセキュリティ タスクのほとんどは、システム指定のバインディングのいずれかを使用して実行できます。 ただし、より高度な制御が必要な場合は、以下のトピックで説明するように、<xref:System.ServiceModel.Channels.SecurityBindingElement> を使用してカスタム バインディングを作成できます。 カスタム バインドの詳細については、次を参照してください。[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SecurityBindingElement 認証モード](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)  
