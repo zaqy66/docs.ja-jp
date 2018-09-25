@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471120"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109748"
 ---
-# <a name="getpropertyhandle-function"></a><span data-ttu-id="d501a-103">GetPropertyHandle 関数</span><span class="sxs-lookup"><span data-stu-id="d501a-103">GetPropertyHandle function</span></span>
-<span data-ttu-id="d501a-104">プロパティを識別する一意のハンドルが返されます。</span><span class="sxs-lookup"><span data-stu-id="d501a-104">Returns a unique handle that identifies a property.</span></span>
+# <a name="getpropertyhandle-function"></a><span data-ttu-id="7827d-103">GetPropertyHandle 関数</span><span class="sxs-lookup"><span data-stu-id="7827d-103">GetPropertyHandle function</span></span>
+<span data-ttu-id="7827d-104">プロパティを識別する一意のハンドルが返されます。</span><span class="sxs-lookup"><span data-stu-id="7827d-104">Returns a unique handle that identifies a property.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="d501a-105">構文</span><span class="sxs-lookup"><span data-stu-id="d501a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7827d-105">構文</span><span class="sxs-lookup"><span data-stu-id="7827d-105">Syntax</span></span>  
   
 ```  
 HRESULT GetPropertyHandle (
@@ -40,48 +40,48 @@ HRESULT GetPropertyHandle (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="d501a-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d501a-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="7827d-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7827d-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="d501a-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="d501a-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="7827d-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="7827d-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="d501a-108">[in]ポインター、 [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="d501a-108">[in] A pointer to an [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instance.</span></span>
+<span data-ttu-id="7827d-108">[in]ポインター、 [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="7827d-108">[in] A pointer to an [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instance.</span></span>
 
 `wszPropertyName`  
-<span data-ttu-id="d501a-109">[in]プロパティ名を含む UTF16 でエンコードされた characaters の null で終わる文字列。</span><span class="sxs-lookup"><span data-stu-id="d501a-109">[in] A null-terminated string of UTF16-encoded characaters that contains the property name.</span></span>   
+<span data-ttu-id="7827d-109">[in]プロパティ名を含む UTF16 でエンコードされた characaters の null で終わる文字列。</span><span class="sxs-lookup"><span data-stu-id="7827d-109">[in] A null-terminated string of UTF16-encoded characaters that contains the property name.</span></span>   
 
 `pType`  
-<span data-ttu-id="d501a-110">[out]ポインターを[ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)プロパティの CIM 型を表す列挙型メンバー。</span><span class="sxs-lookup"><span data-stu-id="d501a-110">[out] A pointer to a [`CIMTYPE`](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) enumeration member that represents the CIM type of the property.</span></span>
+<span data-ttu-id="7827d-110">[out]ポインターを[ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)プロパティの CIM 型を表す列挙型メンバー。</span><span class="sxs-lookup"><span data-stu-id="7827d-110">[out] A pointer to a [`CIMTYPE`](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) enumeration member that represents the CIM type of the property.</span></span>
 
 `pHandle`   
-<span data-ttu-id="d501a-111">[out]プロパティのハンドルを格納する整数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="d501a-111">[out] A pointer to an integer that contains the property handle.</span></span>
+<span data-ttu-id="7827d-111">[out]プロパティのハンドルを格納する整数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="7827d-111">[out] A pointer to an integer that contains the property handle.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="d501a-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="d501a-112">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="7827d-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="7827d-112">Return value</span></span>
 
-<span data-ttu-id="d501a-113">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="d501a-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="7827d-113">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="7827d-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="d501a-114">定数</span><span class="sxs-lookup"><span data-stu-id="d501a-114">Constant</span></span>  |<span data-ttu-id="d501a-115">値</span><span class="sxs-lookup"><span data-stu-id="d501a-115">Value</span></span>  |<span data-ttu-id="d501a-116">説明</span><span class="sxs-lookup"><span data-stu-id="d501a-116">Description</span></span>  |
+|<span data-ttu-id="7827d-114">定数</span><span class="sxs-lookup"><span data-stu-id="7827d-114">Constant</span></span>  |<span data-ttu-id="7827d-115">値</span><span class="sxs-lookup"><span data-stu-id="7827d-115">Value</span></span>  |<span data-ttu-id="7827d-116">説明</span><span class="sxs-lookup"><span data-stu-id="7827d-116">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="d501a-117">0x80041002</span><span class="sxs-lookup"><span data-stu-id="d501a-117">0x80041002</span></span> | <span data-ttu-id="d501a-118">指定したプロパティ名が見つかりませんでした。</span><span class="sxs-lookup"><span data-stu-id="d501a-118">The specified property name was not found.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="d501a-119">0x80041008</span><span class="sxs-lookup"><span data-stu-id="d501a-119">0x80041008</span></span> | <span data-ttu-id="d501a-120">パラメーターが無効です。</span><span class="sxs-lookup"><span data-stu-id="d501a-120">A parameter is not valid.</span></span> |
-|`WBEM_E_NOT_SUPPORTED` | <span data-ttu-id="d501a-121">0x8004100c</span><span class="sxs-lookup"><span data-stu-id="d501a-121">0x8004100c</span></span> | <span data-ttu-id="d501a-122">要求されたプロパティの型は、`CIM_OBJECT`または`CIM_ARRAY`します。</span><span class="sxs-lookup"><span data-stu-id="d501a-122">The requested property is of type are `CIM_OBJECT` or `CIM_ARRAY`.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="d501a-123">0</span><span class="sxs-lookup"><span data-stu-id="d501a-123">0</span></span> | <span data-ttu-id="d501a-124">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="d501a-124">The function call was successful.</span></span>  |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="7827d-117">0x80041002</span><span class="sxs-lookup"><span data-stu-id="7827d-117">0x80041002</span></span> | <span data-ttu-id="7827d-118">指定したプロパティ名が見つかりませんでした。</span><span class="sxs-lookup"><span data-stu-id="7827d-118">The specified property name was not found.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="7827d-119">0x80041008</span><span class="sxs-lookup"><span data-stu-id="7827d-119">0x80041008</span></span> | <span data-ttu-id="7827d-120">パラメーターが無効です。</span><span class="sxs-lookup"><span data-stu-id="7827d-120">A parameter is not valid.</span></span> |
+|`WBEM_E_NOT_SUPPORTED` | <span data-ttu-id="7827d-121">0x8004100c</span><span class="sxs-lookup"><span data-stu-id="7827d-121">0x8004100c</span></span> | <span data-ttu-id="7827d-122">要求されたプロパティの型は、`CIM_OBJECT`または`CIM_ARRAY`します。</span><span class="sxs-lookup"><span data-stu-id="7827d-122">The requested property is of type are `CIM_OBJECT` or `CIM_ARRAY`.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="7827d-123">0</span><span class="sxs-lookup"><span data-stu-id="7827d-123">0</span></span> | <span data-ttu-id="7827d-124">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="7827d-124">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="d501a-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="d501a-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="7827d-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="7827d-125">Remarks</span></span>
 
-<span data-ttu-id="d501a-126">この関数の呼び出しをラップする、 [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)メソッド。</span><span class="sxs-lookup"><span data-stu-id="d501a-126">This function wraps a call to the [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) method.</span></span>
+<span data-ttu-id="7827d-126">この関数の呼び出しをラップする、 [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)メソッド。</span><span class="sxs-lookup"><span data-stu-id="7827d-126">This function wraps a call to the [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) method.</span></span>
 
-<span data-ttu-id="d501a-127">使用する場合は、プロパティを識別するために、このハンドルを使用することができます[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)読み取りまたは書き込みのプロパティの値をメソッド。</span><span class="sxs-lookup"><span data-stu-id="d501a-127">You can use this handle to identify properties when using  [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) methods to read or write property values.</span></span>
+<span data-ttu-id="7827d-127">使用する場合は、プロパティを識別するために、このハンドルを使用することができます[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)読み取りまたは書き込みのプロパティの値をメソッド。</span><span class="sxs-lookup"><span data-stu-id="7827d-127">You can use this handle to identify properties when using  [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) methods to read or write property values.</span></span>
 
-<span data-ttu-id="d501a-128">ハンドルを以外のすべてのデータ型のプロパティを取得できる`CIM_OBJECT`と`CIM_ARRAY`します。</span><span class="sxs-lookup"><span data-stu-id="d501a-128">Handles can be retrieved for properties of all data types other than `CIM_OBJECT` and `CIM_ARRAY`.</span></span> <span data-ttu-id="d501a-129">クラスのすべてのインスタンス ハンドルの作業が返されます。</span><span class="sxs-lookup"><span data-stu-id="d501a-129">Returned handles work across all instances of a class.</span></span>
+<span data-ttu-id="7827d-128">ハンドルを以外のすべてのデータ型のプロパティを取得できる`CIM_OBJECT`と`CIM_ARRAY`します。</span><span class="sxs-lookup"><span data-stu-id="7827d-128">Handles can be retrieved for properties of all data types other than `CIM_OBJECT` and `CIM_ARRAY`.</span></span> <span data-ttu-id="7827d-129">クラスのすべてのインスタンス ハンドルの作業が返されます。</span><span class="sxs-lookup"><span data-stu-id="7827d-129">Returned handles work across all instances of a class.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="d501a-130">要件</span><span class="sxs-lookup"><span data-stu-id="d501a-130">Requirements</span></span>  
-<span data-ttu-id="d501a-131">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d501a-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7827d-130">要件</span><span class="sxs-lookup"><span data-stu-id="7827d-130">Requirements</span></span>  
+<span data-ttu-id="7827d-131">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7827d-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d501a-132">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="d501a-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="7827d-132">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="7827d-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="d501a-133">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d501a-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="7827d-133">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="7827d-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d501a-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="d501a-134">See also</span></span>  
-[<span data-ttu-id="d501a-135">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="d501a-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="7827d-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="7827d-134">See also</span></span>  
+[<span data-ttu-id="7827d-135">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="7827d-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

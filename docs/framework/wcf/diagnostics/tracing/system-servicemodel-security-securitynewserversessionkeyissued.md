@@ -1,32 +1,22 @@
 ---
 title: System.ServiceModel.Security.SecurityNewServerSessionKeyIssued
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2fccc492-61ea-45a8-8f1b-be65dedc5e46
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
-manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bdb5f7f9ac8ed00570b8f62c670cdbf0a0739b0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8d69df947ca97c1dc1e6601cb27c8b777d701eef
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072905"
 ---
-# <a name="systemservicemodelsecuritysecuritynewserversessionkeyissued"></a><span data-ttu-id="b0988-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="b0988-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>
-<span data-ttu-id="b0988-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="b0988-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>  
+# <a name="systemservicemodelsecuritysecuritynewserversessionkeyissued"></a><span data-ttu-id="d137c-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="d137c-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>
+<span data-ttu-id="d137c-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="d137c-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>  
   
-## <a name="description"></a><span data-ttu-id="b0988-104">説明</span><span class="sxs-lookup"><span data-stu-id="b0988-104">Description</span></span>  
- <span data-ttu-id="b0988-105">新しいセキュリティのセッション キーがサーバーによって発行されました。</span><span class="sxs-lookup"><span data-stu-id="b0988-105">A new security session key was issued by the server.</span></span>  
+## <a name="description"></a><span data-ttu-id="d137c-104">説明</span><span class="sxs-lookup"><span data-stu-id="d137c-104">Description</span></span>  
+ <span data-ttu-id="d137c-105">新しいセキュリティのセッション キーがサーバーによって発行されました。</span><span class="sxs-lookup"><span data-stu-id="d137c-105">A new security session key was issued by the server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0988-106">参照</span><span class="sxs-lookup"><span data-stu-id="b0988-106">See Also</span></span>  
- [<span data-ttu-id="b0988-107">トレース</span><span class="sxs-lookup"><span data-stu-id="b0988-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="b0988-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="b0988-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="b0988-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="b0988-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d137c-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="d137c-106">See Also</span></span>  
+ [<span data-ttu-id="d137c-107">トレース</span><span class="sxs-lookup"><span data-stu-id="d137c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d137c-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="d137c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d137c-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="d137c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

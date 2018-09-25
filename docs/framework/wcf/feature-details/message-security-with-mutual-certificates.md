@@ -6,49 +6,48 @@ dev_langs:
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ad5862064966ccae4c313e7fa3d982ec9abbbcd2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7f694b25d992832aabe63d3e7f06dc5d0d9ed86b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522131"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077520"
 ---
-# <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="1b2f7-102">メッセージ セキュリティと相互の証明書</span><span class="sxs-lookup"><span data-stu-id="1b2f7-102">Message Security with Mutual Certificates</span></span>
-<span data-ttu-id="1b2f7-103">次のシナリオでは、Windows Communication Foundation (WCF) サービスとクライアントのメッセージ セキュリティ モードを使用して保護を示しています。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-103">The following scenario shows a Windows Communication Foundation (WCF) service and client secured using message security mode.</span></span> <span data-ttu-id="1b2f7-104">クライアントとサービスは、証明書を使用して認証されます。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-104">The client and the service are authenticated with certificates.</span></span>  
+# <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="ec2f9-102">メッセージ セキュリティと相互の証明書</span><span class="sxs-lookup"><span data-stu-id="ec2f9-102">Message Security with Mutual Certificates</span></span>
+<span data-ttu-id="ec2f9-103">次のシナリオでは、Windows Communication Foundation (WCF) サービスとクライアントのメッセージ セキュリティ モードを使用して保護を示しています。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-103">The following scenario shows a Windows Communication Foundation (WCF) service and client secured using message security mode.</span></span> <span data-ttu-id="ec2f9-104">クライアントとサービスは、証明書を使用して認証されます。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-104">The client and the service are authenticated with certificates.</span></span>  
   
- <span data-ttu-id="1b2f7-105">このシナリオは、X.509 証明書トークン プロファイルと共に WS-Security を使用するため、相互運用性があります。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-105">This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.</span></span>  
+ <span data-ttu-id="ec2f9-105">このシナリオは、X.509 証明書トークン プロファイルと共に WS-Security を使用するため、相互運用性があります。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-105">This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1b2f7-106">このシナリオでは、サービス証明書のネゴシエーションは実行されません。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-106">This scenario does not perform negotiation of the service certificate.</span></span> <span data-ttu-id="1b2f7-107">通信を開始する前に、サービス証明書をクライアントに提供しておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-107">The service certificate must be provided to the client in advance of any communication.</span></span> <span data-ttu-id="1b2f7-108">サーバー証明書は、アプリケーションと共に配布したり、帯域外通信で提供できます。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-108">The server certificate can be distributed with the application or provided in an out-of-band communication.</span></span>  
+>  <span data-ttu-id="ec2f9-106">このシナリオでは、サービス証明書のネゴシエーションは実行されません。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-106">This scenario does not perform negotiation of the service certificate.</span></span> <span data-ttu-id="ec2f9-107">通信を開始する前に、サービス証明書をクライアントに提供しておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-107">The service certificate must be provided to the client in advance of any communication.</span></span> <span data-ttu-id="ec2f9-108">サーバー証明書は、アプリケーションと共に配布したり、帯域外通信で提供できます。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-108">The server certificate can be distributed with the application or provided in an out-of-band communication.</span></span>  
   
- <span data-ttu-id="1b2f7-109">![メッセージ セキュリティと相互の証明書](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span><span class="sxs-lookup"><span data-stu-id="1b2f7-109">![Message security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span></span>  
+ <span data-ttu-id="ec2f9-109">![メッセージ セキュリティと相互の証明書](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span><span class="sxs-lookup"><span data-stu-id="ec2f9-109">![Message security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span></span>  
   
-|<span data-ttu-id="1b2f7-110">特徴</span><span class="sxs-lookup"><span data-stu-id="1b2f7-110">Characteristic</span></span>|<span data-ttu-id="1b2f7-111">説明</span><span class="sxs-lookup"><span data-stu-id="1b2f7-111">Description</span></span>|  
+|<span data-ttu-id="ec2f9-110">特徴</span><span class="sxs-lookup"><span data-stu-id="ec2f9-110">Characteristic</span></span>|<span data-ttu-id="ec2f9-111">説明</span><span class="sxs-lookup"><span data-stu-id="ec2f9-111">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="1b2f7-112">セキュリティ モード</span><span class="sxs-lookup"><span data-stu-id="1b2f7-112">Security Mode</span></span>|<span data-ttu-id="1b2f7-113">メッセージ</span><span class="sxs-lookup"><span data-stu-id="1b2f7-113">Message</span></span>|  
-|<span data-ttu-id="1b2f7-114">相互運用性</span><span class="sxs-lookup"><span data-stu-id="1b2f7-114">Interoperability</span></span>|<span data-ttu-id="1b2f7-115">○ WS-Security および X.509 証明書トークン プロファイルと互換性があるクライアントとサービスで相互運用性があります。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-115">Yes, with WS-Security and X.509 certificate token profile compatible clients and services.</span></span>|  
-|<span data-ttu-id="1b2f7-116">認証</span><span class="sxs-lookup"><span data-stu-id="1b2f7-116">Authentication</span></span>|<span data-ttu-id="1b2f7-117">サーバーとクライアントの相互認証</span><span class="sxs-lookup"><span data-stu-id="1b2f7-117">Mutual authentication of the server and client.</span></span>|  
-|<span data-ttu-id="1b2f7-118">整合性</span><span class="sxs-lookup"><span data-stu-id="1b2f7-118">Integrity</span></span>|<span data-ttu-id="1b2f7-119">はい</span><span class="sxs-lookup"><span data-stu-id="1b2f7-119">Yes</span></span>|  
-|<span data-ttu-id="1b2f7-120">機密性</span><span class="sxs-lookup"><span data-stu-id="1b2f7-120">Confidentiality</span></span>|<span data-ttu-id="1b2f7-121">はい</span><span class="sxs-lookup"><span data-stu-id="1b2f7-121">Yes</span></span>|  
-|<span data-ttu-id="1b2f7-122">Transport</span><span class="sxs-lookup"><span data-stu-id="1b2f7-122">Transport</span></span>|<span data-ttu-id="1b2f7-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="1b2f7-123">HTTP</span></span>|  
-|<span data-ttu-id="1b2f7-124">バインディング</span><span class="sxs-lookup"><span data-stu-id="1b2f7-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="ec2f9-112">セキュリティ モード</span><span class="sxs-lookup"><span data-stu-id="ec2f9-112">Security Mode</span></span>|<span data-ttu-id="ec2f9-113">メッセージ</span><span class="sxs-lookup"><span data-stu-id="ec2f9-113">Message</span></span>|  
+|<span data-ttu-id="ec2f9-114">相互運用性</span><span class="sxs-lookup"><span data-stu-id="ec2f9-114">Interoperability</span></span>|<span data-ttu-id="ec2f9-115">○ WS-Security および X.509 証明書トークン プロファイルと互換性があるクライアントとサービスで相互運用性があります。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-115">Yes, with WS-Security and X.509 certificate token profile compatible clients and services.</span></span>|  
+|<span data-ttu-id="ec2f9-116">認証</span><span class="sxs-lookup"><span data-stu-id="ec2f9-116">Authentication</span></span>|<span data-ttu-id="ec2f9-117">サーバーとクライアントの相互認証</span><span class="sxs-lookup"><span data-stu-id="ec2f9-117">Mutual authentication of the server and client.</span></span>|  
+|<span data-ttu-id="ec2f9-118">整合性</span><span class="sxs-lookup"><span data-stu-id="ec2f9-118">Integrity</span></span>|<span data-ttu-id="ec2f9-119">はい</span><span class="sxs-lookup"><span data-stu-id="ec2f9-119">Yes</span></span>|  
+|<span data-ttu-id="ec2f9-120">機密性</span><span class="sxs-lookup"><span data-stu-id="ec2f9-120">Confidentiality</span></span>|<span data-ttu-id="ec2f9-121">はい</span><span class="sxs-lookup"><span data-stu-id="ec2f9-121">Yes</span></span>|  
+|<span data-ttu-id="ec2f9-122">Transport</span><span class="sxs-lookup"><span data-stu-id="ec2f9-122">Transport</span></span>|<span data-ttu-id="ec2f9-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="ec2f9-123">HTTP</span></span>|  
+|<span data-ttu-id="ec2f9-124">バインディング</span><span class="sxs-lookup"><span data-stu-id="ec2f9-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="1b2f7-125">サービス</span><span class="sxs-lookup"><span data-stu-id="1b2f7-125">Service</span></span>  
- <span data-ttu-id="1b2f7-126">次のコードと構成は、別々に実行します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="1b2f7-127">次のいずれかの操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-127">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="ec2f9-125">サービス</span><span class="sxs-lookup"><span data-stu-id="ec2f9-125">Service</span></span>  
+ <span data-ttu-id="ec2f9-126">次のコードと構成は、別々に実行します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="ec2f9-127">次のいずれかの操作を行います。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-127">Do one of the following:</span></span>  
   
--   <span data-ttu-id="1b2f7-128">構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-128">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="ec2f9-128">構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="1b2f7-129">提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="ec2f9-129">提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="1b2f7-130">コード</span><span class="sxs-lookup"><span data-stu-id="1b2f7-130">Code</span></span>  
- <span data-ttu-id="1b2f7-131">次のコードでは、メッセージ セキュリティを使用するサービス エンドポイントを作成します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-131">The following code shows creates a service endpoint that uses message security.</span></span> <span data-ttu-id="1b2f7-132">サービスには、自身を認証するための証明書が必要です。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-132">The service requires a certificate to authenticate itself.</span></span>  
+### <a name="code"></a><span data-ttu-id="ec2f9-130">コード</span><span class="sxs-lookup"><span data-stu-id="ec2f9-130">Code</span></span>  
+ <span data-ttu-id="ec2f9-131">次のコードでは、メッセージ セキュリティを使用するサービス エンドポイントを作成します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-131">The following code shows creates a service endpoint that uses message security.</span></span> <span data-ttu-id="ec2f9-132">サービスには、自身を認証するための証明書が必要です。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-132">The service requires a certificate to authenticate itself.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### <a name="configuration"></a><span data-ttu-id="1b2f7-133">構成</span><span class="sxs-lookup"><span data-stu-id="1b2f7-133">Configuration</span></span>  
- <span data-ttu-id="1b2f7-134">コードの代わりに次の構成を使用して、同じサービスを作成できます。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-134">The following configuration can be used instead of the code to create the same service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="ec2f9-133">構成</span><span class="sxs-lookup"><span data-stu-id="ec2f9-133">Configuration</span></span>  
+ <span data-ttu-id="ec2f9-134">コードの代わりに次の構成を使用して、同じサービスを作成できます。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-134">The following configuration can be used instead of the code to create the same service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -92,24 +91,24 @@ ms.locfileid: "43522131"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="1b2f7-135">クライアント</span><span class="sxs-lookup"><span data-stu-id="1b2f7-135">Client</span></span>  
- <span data-ttu-id="1b2f7-136">次のコードと構成は、別々に実行します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="1b2f7-137">次のいずれかの操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-137">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="ec2f9-135">クライアント</span><span class="sxs-lookup"><span data-stu-id="ec2f9-135">Client</span></span>  
+ <span data-ttu-id="ec2f9-136">次のコードと構成は、別々に実行します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="ec2f9-137">次のいずれかの操作を行います。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-137">Do one of the following:</span></span>  
   
--   <span data-ttu-id="1b2f7-138">コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-138">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="ec2f9-138">コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-138">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="1b2f7-139">エンドポイント アドレスを定義しないクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="1b2f7-140">代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="1b2f7-141">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-141">For example:</span></span>  
+-   <span data-ttu-id="ec2f9-139">エンドポイント アドレスを定義しないクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="ec2f9-140">代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="ec2f9-141">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-141">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="1b2f7-142">コード</span><span class="sxs-lookup"><span data-stu-id="1b2f7-142">Code</span></span>  
- <span data-ttu-id="1b2f7-143">クライアントを作成する場合のコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-143">The following code creates the client.</span></span> <span data-ttu-id="1b2f7-144">セキュリティ モードは Message に設定され、クライアント資格情報の種類は Certificate に設定されています。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-144">The security mode is set to Message, and the client credential type is set to Certificate.</span></span>  
+### <a name="code"></a><span data-ttu-id="ec2f9-142">コード</span><span class="sxs-lookup"><span data-stu-id="ec2f9-142">Code</span></span>  
+ <span data-ttu-id="ec2f9-143">クライアントを作成する場合のコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-143">The following code creates the client.</span></span> <span data-ttu-id="ec2f9-144">セキュリティ モードは Message に設定され、クライアント資格情報の種類は Certificate に設定されています。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-144">The security mode is set to Message, and the client credential type is set to Certificate.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### <a name="configuration"></a><span data-ttu-id="1b2f7-145">構成</span><span class="sxs-lookup"><span data-stu-id="1b2f7-145">Configuration</span></span>  
- <span data-ttu-id="1b2f7-146">次のコードは、クライアントを構成します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-146">The following configures the client.</span></span> <span data-ttu-id="1b2f7-147">使用してクライアント証明書を指定する必要があります、 [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-147">A client certificate must be specified using the [\<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span> <span data-ttu-id="1b2f7-148">また、サービス証明書が指定されてを使用して、 [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)します。</span><span class="sxs-lookup"><span data-stu-id="1b2f7-148">Also, the service certificate is specified using the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span></span>  
+### <a name="configuration"></a><span data-ttu-id="ec2f9-145">構成</span><span class="sxs-lookup"><span data-stu-id="ec2f9-145">Configuration</span></span>  
+ <span data-ttu-id="ec2f9-146">次のコードは、クライアントを構成します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-146">The following configures the client.</span></span> <span data-ttu-id="ec2f9-147">使用してクライアント証明書を指定する必要があります、 [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-147">A client certificate must be specified using the [\<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span> <span data-ttu-id="ec2f9-148">また、サービス証明書が指定されてを使用して、 [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)します。</span><span class="sxs-lookup"><span data-stu-id="ec2f9-148">Also, the service certificate is specified using the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -160,7 +159,7 @@ ms.locfileid: "43522131"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1b2f7-149">関連項目</span><span class="sxs-lookup"><span data-stu-id="1b2f7-149">See Also</span></span>  
- [<span data-ttu-id="1b2f7-150">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="1b2f7-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="1b2f7-151">Windows Server App Fabric のセキュリティ モデル</span><span class="sxs-lookup"><span data-stu-id="1b2f7-151">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [<span data-ttu-id="1b2f7-152">方法: を作成し、開発中にトランスポート セキュリティのための WCF で一時的な証明書をインストール</span><span class="sxs-lookup"><span data-stu-id="1b2f7-152">How to: Create and Install Temporary Certificates in WCF for Transport Security During Development</span></span>](https://go.microsoft.com/fwlink/?LinkId=244264)
+## <a name="see-also"></a><span data-ttu-id="ec2f9-149">関連項目</span><span class="sxs-lookup"><span data-stu-id="ec2f9-149">See Also</span></span>  
+ [<span data-ttu-id="ec2f9-150">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="ec2f9-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="ec2f9-151">Windows Server App Fabric のセキュリティ モデル</span><span class="sxs-lookup"><span data-stu-id="ec2f9-151">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [<span data-ttu-id="ec2f9-152">方法: を作成し、開発中にトランスポート セキュリティのための WCF で一時的な証明書をインストール</span><span class="sxs-lookup"><span data-stu-id="ec2f9-152">How to: Create and Install Temporary Certificates in WCF for Transport Security During Development</span></span>](https://go.microsoft.com/fwlink/?LinkId=244264)

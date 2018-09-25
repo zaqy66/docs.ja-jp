@@ -9,43 +9,43 @@ helpviewer_keywords:
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
 ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586169"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079520"
 ---
-# <a name="guidelines-and-best-practices"></a><span data-ttu-id="ae7f4-102">ガイドラインと最適な使用方法</span><span class="sxs-lookup"><span data-stu-id="ae7f4-102">Guidelines and Best Practices</span></span>
-<span data-ttu-id="ae7f4-103">このセクションには、Windows Communication Foundation (WCF) アプリケーションを作成するためのガイドラインを提供するトピックが含まれています。</span><span class="sxs-lookup"><span data-stu-id="ae7f4-103">This section contains topics that provide guidelines for creating Windows Communication Foundation (WCF) applications.</span></span>  
+# <a name="guidelines-and-best-practices"></a><span data-ttu-id="84b35-102">ガイドラインと最適な使用方法</span><span class="sxs-lookup"><span data-stu-id="84b35-102">Guidelines and Best Practices</span></span>
+<span data-ttu-id="84b35-103">このセクションには、Windows Communication Foundation (WCF) アプリケーションを作成するためのガイドラインを提供するトピックが含まれています。</span><span class="sxs-lookup"><span data-stu-id="84b35-103">This section contains topics that provide guidelines for creating Windows Communication Foundation (WCF) applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ae7f4-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ae7f4-104">In This Section</span></span>  
- [<span data-ttu-id="ae7f4-105">ベスト プラクティス: データ コントラクトのバージョン管理</span><span class="sxs-lookup"><span data-stu-id="ae7f4-105">Best Practices: Data Contract Versioning</span></span>](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- <span data-ttu-id="ae7f4-106">将来のバージョンが作成されても影響を受けることのないデータ コントラクトを作成する方法と、そのタイミングについて説明します。</span><span class="sxs-lookup"><span data-stu-id="ae7f4-106">Explains how and when to create data contracts that do not break when future versions are created.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="84b35-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="84b35-104">In This Section</span></span>  
+ [<span data-ttu-id="84b35-105">ベスト プラクティス: データ コントラクトのバージョン管理</span><span class="sxs-lookup"><span data-stu-id="84b35-105">Best Practices: Data Contract Versioning</span></span>](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ <span data-ttu-id="84b35-106">将来のバージョンが作成されても影響を受けることのないデータ コントラクトを作成する方法と、そのタイミングについて説明します。</span><span class="sxs-lookup"><span data-stu-id="84b35-106">Explains how and when to create data contracts that do not break when future versions are created.</span></span>  
   
- [<span data-ttu-id="ae7f4-107">サービスのバージョン管理</span><span class="sxs-lookup"><span data-stu-id="ae7f4-107">Service Versioning</span></span>](../../../docs/framework/wcf/service-versioning.md)  
- <span data-ttu-id="ae7f4-108">WCF でのバージョン管理を考慮する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ae7f4-108">Explains how to consider versioning in WCF.</span></span> <span data-ttu-id="ae7f4-109">たとえば、変化するビジネス要件や IT 要件を満たしたり、問題を修復したりするために、展開後にサービス (およびサービスによって公開されるエンドポイント) を変更しなければならない場合があります。</span><span class="sxs-lookup"><span data-stu-id="ae7f4-109">After deployment, services (and the endpoints they expose) might need to be changed, for example, to satisfy changing business requirements or IT requirements, or to fix issues.</span></span> <span data-ttu-id="ae7f4-110">変更が発生するたびに、新しいバージョンのサービスが導入されます。</span><span class="sxs-lookup"><span data-stu-id="ae7f4-110">Each change introduces a new version of the service.</span></span>  
+ [<span data-ttu-id="84b35-107">サービスのバージョン管理</span><span class="sxs-lookup"><span data-stu-id="84b35-107">Service Versioning</span></span>](../../../docs/framework/wcf/service-versioning.md)  
+ <span data-ttu-id="84b35-108">WCF でのバージョン管理を考慮する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="84b35-108">Explains how to consider versioning in WCF.</span></span> <span data-ttu-id="84b35-109">たとえば、変化するビジネス要件や IT 要件を満たしたり、問題を修復したりするために、展開後にサービス (およびサービスによって公開されるエンドポイント) を変更しなければならない場合があります。</span><span class="sxs-lookup"><span data-stu-id="84b35-109">After deployment, services (and the endpoints they expose) might need to be changed, for example, to satisfy changing business requirements or IT requirements, or to fix issues.</span></span> <span data-ttu-id="84b35-110">変更が発生するたびに、新しいバージョンのサービスが導入されます。</span><span class="sxs-lookup"><span data-stu-id="84b35-110">Each change introduces a new version of the service.</span></span>  
   
- [<span data-ttu-id="ae7f4-111">負荷分散</span><span class="sxs-lookup"><span data-stu-id="ae7f4-111">Load Balancing</span></span>](../../../docs/framework/wcf/load-balancing.md)  
- <span data-ttu-id="ae7f4-112">Web ファームでの負荷分散のガイドラインを示します。</span><span class="sxs-lookup"><span data-stu-id="ae7f4-112">Lists guidelines for load balancing with a Web farm.</span></span>  
+ [<span data-ttu-id="84b35-111">負荷分散</span><span class="sxs-lookup"><span data-stu-id="84b35-111">Load Balancing</span></span>](../../../docs/framework/wcf/load-balancing.md)  
+ <span data-ttu-id="84b35-112">Web ファームでの負荷分散のガイドラインを示します。</span><span class="sxs-lookup"><span data-stu-id="84b35-112">Lists guidelines for load balancing with a Web farm.</span></span>  
   
- [<span data-ttu-id="ae7f4-113">リソース消費の制御とパフォーマンスの向上</span><span class="sxs-lookup"><span data-stu-id="ae7f4-113">Controlling Resource Consumption and Improving Performance</span></span>](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
- <span data-ttu-id="ae7f4-114">過度のリソース消費を抑え、セキュリティを向上するために用意されているプロパティについて説明し、その使用方法の詳細情報を示します。</span><span class="sxs-lookup"><span data-stu-id="ae7f4-114">Describes the properties that are designed to help prevent undue resource consumption and improve security and points to more complete information about their use.</span></span>  
+ [<span data-ttu-id="84b35-113">リソース消費の制御とパフォーマンスの向上</span><span class="sxs-lookup"><span data-stu-id="84b35-113">Controlling Resource Consumption and Improving Performance</span></span>](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
+ <span data-ttu-id="84b35-114">過度のリソース消費を抑え、セキュリティを向上するために用意されているプロパティについて説明し、その使用方法の詳細情報を示します。</span><span class="sxs-lookup"><span data-stu-id="84b35-114">Describes the properties that are designed to help prevent undue resource consumption and improve security and points to more complete information about their use.</span></span>  
   
- [<span data-ttu-id="ae7f4-115">ClickOnce を使用して WCF アプリケーションを展開する</span><span class="sxs-lookup"><span data-stu-id="ae7f4-115">Deploying WCF Applications with ClickOnce</span></span>](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
- <span data-ttu-id="ae7f4-116">ClickOnce 機能を使用する際の考慮事項について説明します。</span><span class="sxs-lookup"><span data-stu-id="ae7f4-116">Describes the considerations to be made when using the ClickOnce feature.</span></span>  
+ [<span data-ttu-id="84b35-115">ClickOnce を使用して WCF アプリケーションを展開する</span><span class="sxs-lookup"><span data-stu-id="84b35-115">Deploying WCF Applications with ClickOnce</span></span>](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
+ <span data-ttu-id="84b35-116">ClickOnce 機能を使用する際の考慮事項について説明します。</span><span class="sxs-lookup"><span data-stu-id="84b35-116">Describes the considerations to be made when using the ClickOnce feature.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="ae7f4-117">参照</span><span class="sxs-lookup"><span data-stu-id="ae7f4-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="84b35-117">参照</span><span class="sxs-lookup"><span data-stu-id="84b35-117">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization>  
   
-## <a name="related-sections"></a><span data-ttu-id="ae7f4-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="ae7f4-118">Related Sections</span></span>  
- [<span data-ttu-id="ae7f4-119">概念</span><span class="sxs-lookup"><span data-stu-id="ae7f4-119">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="84b35-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="84b35-118">Related Sections</span></span>  
+ [<span data-ttu-id="84b35-119">概念</span><span class="sxs-lookup"><span data-stu-id="84b35-119">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
   
- [<span data-ttu-id="ae7f4-120">基本的な WCF プログラミング</span><span class="sxs-lookup"><span data-stu-id="ae7f4-120">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="84b35-120">基本的な WCF プログラミング</span><span class="sxs-lookup"><span data-stu-id="84b35-120">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ae7f4-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="ae7f4-121">See Also</span></span>  
- [<span data-ttu-id="ae7f4-122">Windows Communication Foundation とは</span><span class="sxs-lookup"><span data-stu-id="ae7f4-122">What Is Windows Communication Foundation</span></span>](../../../docs/framework/wcf/whats-wcf.md)  
- [<span data-ttu-id="ae7f4-123">Windows Communication Foundation サンプル</span><span class="sxs-lookup"><span data-stu-id="ae7f4-123">Windows Communication Foundation Samples</span></span>](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
- [<span data-ttu-id="ae7f4-124">概念</span><span class="sxs-lookup"><span data-stu-id="ae7f4-124">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
- [<span data-ttu-id="ae7f4-125">クライアントを構築する</span><span class="sxs-lookup"><span data-stu-id="ae7f4-125">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a><span data-ttu-id="84b35-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="84b35-121">See Also</span></span>  
+ [<span data-ttu-id="84b35-122">Windows Communication Foundation とは</span><span class="sxs-lookup"><span data-stu-id="84b35-122">What Is Windows Communication Foundation</span></span>](../../../docs/framework/wcf/whats-wcf.md)  
+ [<span data-ttu-id="84b35-123">Windows Communication Foundation サンプル</span><span class="sxs-lookup"><span data-stu-id="84b35-123">Windows Communication Foundation Samples</span></span>](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [<span data-ttu-id="84b35-124">概念</span><span class="sxs-lookup"><span data-stu-id="84b35-124">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="84b35-125">クライアントを構築する</span><span class="sxs-lookup"><span data-stu-id="84b35-125">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)
