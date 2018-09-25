@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1705ed7cc847d60ecf8b42f4615d77f2cc569e21
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 91b4b4f132138fa6752c1da9b28e7a3ab7fad006
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748660"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082891"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;オフ&gt;要素&lt;リスナー&gt;の&lt;トレース&gt;
 トレースの `Listeners` コレクションを削除します。  
@@ -24,7 +23,7 @@ ms.locfileid: "32748660"
 \<system.diagnostics >  
 \<トレース >  
 \<リスナー >  
-\<オフ >  
+\<クリア >  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,20 +47,20 @@ ms.locfileid: "32748660"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |`trace`|トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。|  
-|`listeners`|収集、保管、およびメッセージをルーティングするリスナーが含まれています。 リスナーでは、適切なターゲットのトレースを出力します。|  
+|`listeners`|収集、格納、およびメッセージをルーティングするリスナーが含まれています。 リスナーでは、適切なターゲットのトレースを出力します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `<clear>`要素からすべてのリスナーを削除して、`Listeners`トレースのコレクション。 使用することができます、`<clear>`要素を使用する前に、`<add>`要素をコレクション内の他のアクティブなリスナーが存在しないことを特定します。  
   
- オフにすることができます、`Listeners`呼び出すことによってプログラムでコレクション、<xref:System.Diagnostics.TraceListenerCollection.Clear%2A>メソッドを<xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>プロパティ (`System.Diagnostics.Trace.Listeners.Clear()`)。  
+ オフにすることができます、`Listeners`呼び出すことによってプログラムでのコレクション、<xref:System.Diagnostics.TraceListenerCollection.Clear%2A>メソッドを<xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>プロパティ (`System.Diagnostics.Trace.Listeners.Clear()`)。  
   
  この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
   
 > [!NOTE]
->  `<clear>`要素は、削除、<xref:System.Diagnostics.DefaultTraceListener>から、`Listeners`の動作を変更する、コレクション、 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>、 <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>、 <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>、および<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>メソッドです。 呼び出す、`Assert`または`Fail`メソッドは、通常、メッセージ ボックスの表示になります。 ただし、メッセージ ボックスが表示されない場合、<xref:System.Diagnostics.DefaultTraceListener>に含まれていない、`Listeners`コレクション。  
+>  `<clear>`要素は、削除、<xref:System.Diagnostics.DefaultTraceListener>から、`Listeners`の動作を変更するコレクション、 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>、 <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>、 <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>、および<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>メソッド。 呼び出す、`Assert`または`Fail`メソッドは、通常、メッセージ ボックスの表示になります。 場合、メッセージ ボックスが表示されません、<xref:System.Diagnostics.DefaultTraceListener>内にない、`Listeners`コレクション。  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、`<clear>`要素を使用する前に、`<add>`リスナーを追加する要素`console`を`Listeners`トレースのコレクション。  
+ 次の例は、使用する方法を示します、`<clear>`要素を使用する前に、`<add>`リスナーを追加する要素`console`を`Listeners`トレースのコレクション。  
   
 ```xml  
 <configuration>  

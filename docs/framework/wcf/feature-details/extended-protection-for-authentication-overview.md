@@ -3,13 +3,12 @@ title: 認証の拡張保護の概要
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 5b4abd570f8bb40f2faa72f2debf2dee563d3a23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 77ebaeaeb82d931a24d35fc1b5c2034fce03a032
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526602"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090449"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>認証の拡張保護の概要
 認証時の拡張保護によって、攻撃者がクライアントの資格情報をインターセプトして特定のサーバーに転送する man-in-the-middle (MITM) 攻撃を防ぐことができます。  

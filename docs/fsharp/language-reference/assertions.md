@@ -3,11 +3,11 @@ title: アサーション (F#)
 description: F# プログラミング言語で式をテストするためのデバッグ機能として 'アサート' 式を使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: HT
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710974"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079715"
 ---
 # <a name="assertions"></a>アサーション
 

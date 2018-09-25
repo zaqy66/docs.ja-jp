@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e0dc425327f6577606e1205a23fdaffcc39f6e01
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747455"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109525"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;追加&gt;要素&lt;スイッチ&gt;
 トレース スイッチを設定するレベルを指定します。  
@@ -53,11 +52,11 @@ ms.locfileid: "32747455"
 |`switches`|トレース スイッチと、トレース スイッチを設定するレベルを保持します。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
-## <a name="remarks"></a>コメント  
- トレース スイッチのレベルを変更するには、構成ファイルに配置します。 スイッチの場合、 <xref:System.Diagnostics.BooleanSwitch>、オンまたはオフにすることができます。 スイッチの場合、<xref:System.Diagnostics.TraceSwitch>トレースの種類を指定するためにさまざまなレベルを割り当てることができます、またはデバッグ メッセージをアプリケーションが出力されます。  
+## <a name="remarks"></a>Remarks  
+ 構成ファイル内に配置して、トレース スイッチのレベルを変更できます。 スイッチの場合、 <xref:System.Diagnostics.BooleanSwitch>、オンとオフにすることができます。 スイッチの場合、<xref:System.Diagnostics.TraceSwitch>デバッグ メッセージをアプリケーションの出力やトレースの種類を指定するためにさまざまなレベルを割り当てることができます。  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、 **\<を追加 >** を設定する要素、`General`トレース スイッチを<xref:System.Diagnostics.TraceLevel>レベル、および有効にする、`Data`ブール トレース スイッチ。  
+ 次の例は、使用する方法を示します、 **\<追加 >** を設定する要素、`General`トレース スイッチを<xref:System.Diagnostics.TraceLevel>レベル、および有効にする、`Data`ブール トレース スイッチ。  
   
 ```xml  
 <configuration>  

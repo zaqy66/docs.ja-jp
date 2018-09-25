@@ -2,12 +2,12 @@
 title: .NET Framework のシリアル化のサンプル
 ms.date: 03/30/2017
 ms.assetid: 6a56f66d-c80a-43e9-8e50-fb9b61120222
-ms.openlocfilehash: 67fef0855cbe33a32d4a3838e88a246cdc884dd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5deae766b2b05fcb14c51666fa9fb988832a9a2d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581470"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087305"
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>.NET Framework のシリアル化のサンプル
 ここでは、.NET Framework でのオブジェクトのシリアル化について説明します。  
@@ -20,10 +20,7 @@ ms.locfileid: "33581470"
  .NET シリアル化の複数バージョンに対応する機能について説明します。  
   
  [Web サービス ジェネリック シリアル化の技術サンプル](../../../docs/standard/serialization/web-services-generics-serialization-technology-sample.md)  
- ASP.NET Web サービスで、ジェネリックのシリアル化を使用および制御する方法について説明します。  
-  
- [Web サービス IXmlSerializable の技術サンプル](../../../docs/standard/serialization/web-services-ixmlserializable-technology-sample.md)  
- ASP.NET Web サービスで、<xref:System.Xml.Serialization.IXmlSerializable> を使用してカスタム型のシリアル化を制御する方法について説明します。  
+ ASP.NET Web サービスで、ジェネリックのシリアル化を使用および制御する方法について説明します。 
   
  [SchemaImporterExtension の技術サンプル](../../../docs/standard/serialization/schemaimporterextension-technology-sample.md)  
  カスタムの <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> について説明します。  

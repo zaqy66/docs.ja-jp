@@ -3,13 +3,12 @@ title: '&lt;userNameSecurityTokenHandlerRequirement&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 5d725cc0d16457f2bdfb404baf4758e3431ce6b7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dfcaad8b150321fda2a86e601bf57204cbdc1a0e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756658"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075034"
 ---
 # <a name="ltusernamesecuritytokenhandlerrequirementgt"></a>&lt;userNameSecurityTokenHandlerRequirement&gt;
 構成を提供、<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>クラスまたは派生クラス。  
@@ -42,7 +41,7 @@ ms.locfileid: "32756658"
   
 |属性|説明|  
 |---------------|-----------------|  
-|membershipProviderName|指定します、<xref:System.Web.Security.MembershipProvider>セキュリティ トークン ハンドラーを使用する必要があります。|  
+|membershipProviderName|指定します、<xref:System.Web.Security.MembershipProvider>でセキュリティ トークン ハンドラーを使用する必要があります。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -51,9 +50,9 @@ ms.locfileid: "32756658"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|トークン ハンドラー コレクションに指定されたセキュリティ トークン ハンドラーを追加します。|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|トークン ハンドラー コレクションには、指定したセキュリティ トークン ハンドラーを追加します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `<userNameSecurityTokenHandlerRequirement>`要素セット、<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A>プロパティと、<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>構成からオブジェクトを初期化します。  
   
 ## <a name="example"></a>例  

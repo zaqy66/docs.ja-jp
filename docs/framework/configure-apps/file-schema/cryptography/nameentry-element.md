@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1bffb72e7c68d10e2c0edd5ec3cb9bcff10cbc0a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9f8176ca3ee2340100978aef044140dafdeb179b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743054"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082371"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt;要素
 アルゴリズムの表示名にクラス名をマップして、1 つのクラスが多くの表示名を持つことを許可します。  
@@ -41,7 +40,7 @@ ms.locfileid: "32743054"
 |属性|説明|  
 |---------------|-----------------|  
 |**name**|必須の属性です。<br /><br /> 暗号化クラスを実装するアルゴリズムのフレンドリ名を指定します。|  
-|**class**|必須の属性です。<br /><br /> 値を指定、**名前**属性、 [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)要素。|  
+|**class**|必須の属性です。<br /><br /> 値を指定します、**名前**属性、 [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)要素。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -53,11 +52,11 @@ ms.locfileid: "32743054"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.web`|ASP.NET 構成セクションのルート要素を指定します。|  
   
-## <a name="remarks"></a>コメント  
- **名前**属性である抽象クラスのいずれかの名前を指定できます、<xref:System.Security.Cryptography>名前空間。 呼び出すと、**作成**抽象暗号化クラスのメソッド、抽象クラス名に渡される、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>メソッドです。 **CreateFromName**によって示される型のインスタンスを返します、**クラス**属性。 場合、**名前**属性は、短い名前では、RSA などを呼び出すときに、その名前を使用できます、 **CreateFromName**メソッドです。  
+## <a name="remarks"></a>Remarks  
+ **名前**属性は、抽象クラスのいずれかの名前を指定できます、<xref:System.Security.Cryptography>名前空間。 呼び出すと、**作成**抽象暗号化クラスのメソッドは、抽象クラスの名前に渡される、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>メソッド。 **CreateFromName**で示される型のインスタンスを返します、**クラス**属性。 場合、**名前**属性は、短い名前では、RSA などを呼び出すときに、その名前を使用できます、 **CreateFromName**メソッド。  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、  **\<nameEntry >** 暗号化クラスを参照し、ランタイムを構成する要素。 文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。  
+ 次の例は、使用する方法を示します、  **\<nameEntry >** 暗号化クラスを参照して、ランタイムを構成する要素。 文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。  
   
 ```xml  
 <configuration>  

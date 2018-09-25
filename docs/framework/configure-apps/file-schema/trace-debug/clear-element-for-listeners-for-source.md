@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8c6ef51dae36e94fa4a4fdc5ad8983380e78bde3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746853"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071754"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;オフ&gt;要素&lt;リスナー&gt;の&lt;ソース&gt;
 トレース ソースの `Listeners` コレクションを消去します。  
@@ -25,7 +24,7 @@ ms.locfileid: "32746853"
 \<ソース >  
 \<ソース >  
 \<リスナー >  
-\<オフ >  
+\<クリア >  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,16 +49,16 @@ ms.locfileid: "32746853"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |`sources`|トレース メッセージを開始するトレース ソースを保持します。|  
 |`source`|トレース メッセージを開始するトレース ソースを指定します。|  
-|`listeners`|収集、保管、およびメッセージをルーティングするリスナーを指定します。|  
+|`listeners`|収集、格納、およびメッセージをルーティングするリスナーを指定します。|  
   
-## <a name="remarks"></a>コメント  
- `<clear>`要素からすべてのリスナーを削除して、`Listeners`トレース ソースのコレクションを含む、<xref:System.Diagnostics.DefaultTraceListener>です。 使用することができます、`<clear>`要素を使用する前に、`<add>`要素をコレクション内の他のアクティブなリスナーが存在しないことを特定します。  
+## <a name="remarks"></a>Remarks  
+ `<clear>`要素からすべてのリスナーを削除して、`Listeners`トレース ソースのコレクションを含む、 <xref:System.Diagnostics.DefaultTraceListener>。 使用することができます、`<clear>`要素を使用する前に、`<add>`要素をコレクション内の他のアクティブなリスナーが存在しないことを特定します。  
   
 ## <a name="configuration-file"></a>構成ファイル  
  この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、`<clear>`要素を使用する前に、`<add>`リスナーを追加する要素`console`と`textListener`を`Listeners`トレース ソースのコレクション`TraceSourceApp`です。  
+ 次の例は、使用する方法を示します、`<clear>`要素を使用する前に、`<add>`リスナーを追加する要素`console`と`textListener`を`Listeners`トレース ソースのコレクション`TraceSourceApp`します。  
   
 ```xml  
 <configuration>  

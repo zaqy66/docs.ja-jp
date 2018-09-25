@@ -3,16 +3,15 @@ title: '&lt;sessionSecurityTokenCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 0b0d3c01a81f110f79f64d75aa2ab2ff2873fedd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b812673ac1c015adde357d3c0707d85643aad3e9
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755046"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084333"
 ---
 # <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
-サービスまたはセキュリティ トークン ハンドラーはコレクションのセッション トークンのキャッシュに登録します。  
+サービスまたはセキュリティ トークン ハンドラー コレクションのセッション トークン キャッシュに登録します。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -39,7 +38,7 @@ ms.locfileid: "32755046"
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|派生する型、<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>クラスです。|  
+|型|派生した型、<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>クラス。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -48,10 +47,10 @@ ms.locfileid: "32755046"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<キャッシュ >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|サービスまたはセキュリティ トークン ハンドラーのコレクションによって使用されるキャッシュに登録します。|  
+|[\<キャッシュ >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|サービスまたはセキュリティ トークン ハンドラー コレクションで使用されるキャッシュを登録します。|  
   
 ## <a name="example"></a>例  
- 次の XML は、セッション セキュリティ トークンを保持するためのカスタム キャッシュの構成を示します (<xref:System.IdentityModel.Tokens.SessionSecurityToken>)。 構成がから取得した、`ClaimsAwareWebFarm`サンプルです。 このサンプルの詳細については、次を参照してください。 [WIF コード サンプル インデックス](../../../../../docs/framework/security/wif-code-sample-index.md)です。  
+ 次の XML はセッション セキュリティ トークンを保持するためのカスタム キャッシュの構成 (<xref:System.IdentityModel.Tokens.SessionSecurityToken>)。 構成から取得されますが、`ClaimsAwareWebFarm`サンプル。 このサンプルの詳細については、次を参照してください。 [WIF コード サンプル インデックス](../../../../../docs/framework/security/wif-code-sample-index.md)します。  
   
 ```xml  
 <caches>  

@@ -3,18 +3,17 @@ title: 拡張保護認証のサンプルの ReadMe
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d45271180b7f00ba78d106f2a93d5860375da5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495081"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110323"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>拡張保護認証のサンプルの ReadMe
-拡張保護を攻撃者 (、「- 内の中間」) がクライアントの資格情報をインターセプトし、クライアントの目的のサーバーのセキュリティで保護されたリソースにアクセスするために使用、中間の (MITM) 攻撃を防ぐためにセキュリティ イニシアチブです。  
+拡張保護を攻撃者 (、「- the-中間」) がクライアントの資格情報をインターセプトし、クライアントの目的のサーバー上のセキュリティで保護されたリソースにアクセスする、中間の (MITM) 攻撃から保護するためのセキュリティ イニシアチブです。  
   
- 詳細については、次を参照してください。[認証の概要の拡張保護](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md)です。  
+ 詳細については、次を参照してください。[認証の概要の拡張保護](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md)します。  
   
 > [!NOTE]
 >  このサンプルは、IIS でホストされた場合にのみ機能します。 このサンプルは HTTPS をサポートしないので、Visual Studio Development Server 上では機能しません。  
@@ -45,6 +44,6 @@ ms.locfileid: "33495081"
   
 10. ブラウザー ウィンドウから URL にアクセスして、サービスをテストできます。 コンピューター間でこの URL にアクセスする場合は、すべての受信 HTTP および HTTPS 通信に対してファイアウォールが開かれていることを確認してください。  
   
-11. クライアント構成ファイルを開きのフル コンピューター名を指定、\<クライアント >-\<エンドポイント >-アドレスの属性、<< full_machine_name >> を置換します。  
+11. クライアントの構成ファイルを開き、完全なマシンの名前を指定、\<クライアント >-\<エンドポイント >-アドレス属性、<< full_machine_name >> を置換します。  
   
 12. クライアントを実行します。 クライアントがセキュリティで保護されたチャネルを確立し、エンドポイント保護を使用してサービスと通信します。

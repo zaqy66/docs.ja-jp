@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a711b8d6bfd5b6d73d3240cb84810841bdc5a2b6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746840"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085682"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;リスナー&gt;要素&lt;ソース&gt;
-追加または内のリスナーを削除、<xref:System.Diagnostics.TraceSource.Listeners%2A>のコレクション、<xref:System.Diagnostics.TraceSource>です。 リスナーは、ログ、ウィンドウ、またはテキスト ファイルなどの適切なターゲットにトレース出力を出力します。  
+追加または内のリスナーを削除します、<xref:System.Diagnostics.TraceSource.Listeners%2A>のコレクションを<xref:System.Diagnostics.TraceSource>します。 ログ、ウィンドウ、またはテキスト ファイルなど、適切なターゲットへのトレース出力をリスナーに指示します。  
   
  \<configuration>  
 \<system.diagnostics >  
@@ -59,13 +58,13 @@ ms.locfileid: "32746840"
 |`sources`|トレース メッセージを開始するトレース ソースを保持します。|  
 |`source`|トレース メッセージを開始するトレース ソースを指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="configuration-file"></a>構成ファイル  
  この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、`<listeners>`コンソール トレース リスナーを追加する要素、`mySource`ソースおよび既定のトレース リスナーを削除します。  
+ 次の例は、使用する方法を示します、`<listeners>`コンソール トレース リスナーを追加する要素、`mySource`ソースおよび既定のトレース リスナーを削除します。  
   
 ```xml  
 <configuration>  

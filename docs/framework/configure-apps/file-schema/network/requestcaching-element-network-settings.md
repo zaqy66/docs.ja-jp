@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9c0c8d80182931f9ac14e687a337b7be55a5a9a5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3e014c7a47a53a424bbaef51c9acb28e59b43078
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743434"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083190"
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt;要素 (ネットワーク設定)
 ネットワーク要求のキャッシュ メカニズムを制御します。  
@@ -45,30 +44,30 @@ ms.locfileid: "32743434"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`isPrivateCache`|キャッシュはさまざまなユーザーの情報との間の分離を提供するかどうかを指定します。 既定値は `true` です。 この値は、`false`中間層アプリケーションです。|  
-|`disableAllCaching`|キャッシュとが無効にすべての Web 応答のプログラムではオーバーライドできませんを指定します。|  
+|`isPrivateCache`|キャッシュが別のユーザーの情報との間の分離を提供するかどうかを指定します。 既定値は `true` です。 この値は`false`中間層アプリケーション。|  
+|`disableAllCaching`|キャッシュは、すべての Web 応答の無効になり、プログラムでオーバーライドされることはできませんを指定します。|  
 |`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> 列挙値の値の 1 つ。 既定値は `BypassCache` です。|  
-|`unspecifiedMaximumAge`|その後、コンテンツを期限切れとマークは、既定の時間を指定します。|  
+|`unspecifiedMaximumAge`|その後、コンテンツを期限切れとマークが既定の時間を指定します。|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 属性  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|`Default`|リソースが新しい場合は、コンテンツの長さが、精度は有効期限、変更、およびコンテンツの長さの属性が存在は、キャッシュされたリソースを返します。|  
+|`Default`|リソースに新しいもコンテンツの長さは正確では、有効期限、変更、およびコンテンツの長さの属性が存在する場合は、キャッシュされたリソースを返します。|  
 |`BypassCache`|サーバーからリソースを返します。|  
 |`CacheOnly`|コンテンツの長さが存在し、エントリのサイズと一致する場合は、キャッシュされたリソースを返します。|  
-|`CacheIfAvailable`|コンテンツの長さが指定されたエントリのサイズと一致する場合は、キャッシュされたリソースを返しますそれ以外の場合、リソースは、サーバーからダウンロードされ、呼び出し元に返されます。|  
-|`Revalidate`|キャッシュされたリソースのタイムスタンプは、サーバー上のリソースのタイムスタンプと同じ場合は、キャッシュされたリソースを返しますそれ以外の場合、リソースは、キャッシュに格納されている、サーバーからダウンロードされ、呼び出し元に返されます。|  
-|`Reload`|サーバーからリソースをダウンロード、キャッシュに格納し、呼び出し元にリソースを返します。|  
-|`NoCacheNoStore`|キャッシュされたリソースが存在する場合は削除されます。 リソースは、サーバーからダウンロードされ、呼び出し元に返されます。|  
-|`Revalidate`|タイムスタンプは、サーバー上のリソースのタイムスタンプと同じ場合は、キャッシュされたリソースのコピーを使用して、要求に応じます。それ以外の場合、リソースは、呼び出し元に表示される、サーバーからダウンロードされ、キャッシュに格納されます。|  
+|`CacheIfAvailable`|コンテンツの長さが指定されたエントリのサイズと一致する場合、キャッシュされたリソースを返しますそれ以外の場合、リソースはサーバーからダウンロードされ、呼び出し元に返されます。|  
+|`Revalidate`|キャッシュされたリソースのタイムスタンプが、サーバー上のリソースのタイムスタンプと同じである場合、キャッシュされたリソースを返しますそれ以外の場合、リソースは、キャッシュに格納されているサーバーからダウンロードされ、呼び出し元に返されます。|  
+|`Reload`|サーバーからリソースをダウンロード、キャッシュに格納およびリソースを呼び出し元に返します。|  
+|`NoCacheNoStore`|キャッシュされたリソースが存在する場合は削除されます。 リソースは、サーバーからがダウンロードされ、呼び出し元に返されます。|  
+|`Revalidate`|タイムスタンプが、サーバー上のリソースのタイムスタンプと同じである場合は、リソースのキャッシュされたコピーを使用して、要求に応じます。それ以外の場合、リソースの呼び出し元に表示される、サーバーからダウンロードし、キャッシュに格納されます。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> かどうか HTTP キャッシュがアクティブであり、既定のキャッシュ ポリシーの説明について説明します。|  
-|[\<defaultFtpCachePolicy > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> かどうか FTP キャッシュがアクティブであり、既定のキャッシュ ポリシーの説明について説明します。|  
+|[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> HTTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーの記述について説明します。|  
+|[\<defaultFtpCachePolicy > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> FTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーを記述について説明します。|  
   
 ### <a name="parent-elements"></a>親要素  
   

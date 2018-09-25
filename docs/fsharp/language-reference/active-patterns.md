@@ -3,11 +3,11 @@ title: アクティブ パターン (F#)
 description: アクティブ パターンを使用して、f# プログラミング言語で入力データを分割する名前付きのパーティションを定義する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027727"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108963"
 ---
 # <a name="active-patterns"></a>アクティブ パターン
 

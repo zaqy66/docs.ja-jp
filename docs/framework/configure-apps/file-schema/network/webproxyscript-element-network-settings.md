@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6843662b73f6b7d45dd12616f5118569a2d19975
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e1450d2df424b32aacc5c113b5936001f65915a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754507"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085651"
 ---
 # <a name="ltwebproxyscriptgt-element-network-settings"></a>&lt;webProxyScript&gt;要素 (ネットワーク設定)
-Web プロキシを検出するためのスクリプトの特性を構成します。  
+Web プロキシを検出するために使用するスクリプトの特性を構成します。  
   
  \<configuration>  
 \<system.net>  
@@ -52,7 +51,7 @@ Web プロキシを検出するためのスクリプトの特性を構成しま�
 |-------------|-----------------|  
 |[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  

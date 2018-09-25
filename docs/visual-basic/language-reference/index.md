@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
 ms.openlocfilehash: 2c0372e0176ea54a975e787631ba2849f79e5493
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525397"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083739"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic の言語リファレンス
 このセクションでは、Visual Basic 言語のさまざまな側面に関するリファレンス情報を提供します。  

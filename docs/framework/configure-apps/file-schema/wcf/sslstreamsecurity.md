@@ -3,13 +3,12 @@ title: '&lt;sslStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a86e1aae7ddd5389f098e532ae2c2cc67f4085e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6eacf1833ecf980696d75c5dbcaaba3ba6403d92
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752404"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087451"
 ---
 # <a name="ltsslstreamsecuritygt"></a>&lt;sslStreamSecurity&gt;
 SSL ストリームを使用してチャネル セキュリティをサポートするカスタム バインド要素を表します。  
@@ -33,8 +32,8 @@ SSL ストリームを使用してチャネル セキュリティをサポート
   
 |属性|説明|  
 |---------------|-----------------|  
-|requireClientCertificate|クライアント証明書がこのバインディングに必要かどうかを指定するブール値。 既定値は、`false` です。|  
-|sslProtocols|どの SslProtocols がサポートされているのかを指定する SslProtocols 列挙型フラグの値。 既定値は Ssl3&#124;Tls&#124;Tls11&#124;Tls12 です。|  
+|requireClientCertificate|クライアント証明書がこのバインディングに必要かどうかを指定するブール値。 既定値は `false` です。|  
+|sslProtocols|どの SslProtocols がサポートされているのかを指定する SslProtocols 列挙型フラグの値。 既定値は Ssl3&#124;Tls&#124;Tls11&#124;tls12 です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  

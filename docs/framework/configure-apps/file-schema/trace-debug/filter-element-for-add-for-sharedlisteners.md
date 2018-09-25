@@ -1,5 +1,5 @@
 ---
-title: '&lt;フィルター&gt;要素&lt;追加&gt;の&lt;sharedListeners&gt;'
+title: '&lt;フィルター&gt;要素&lt;追加&gt;の&lt;リスナー&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3bbba1c805c6b300f7cf7b3d9112cde9df7607a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5172a2be163e178b9c7115825fa5dba4ff073a96
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745056"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47115140"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;フィルター&gt;要素&lt;追加&gt;の&lt;sharedListeners&gt;
+# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;フィルター&gt;要素&lt;追加&gt;の&lt;リスナー&gt;
 `sharedListeners` コレクションのリスナーにフィルターを追加します。  
   
  \<configuration>  
 \<system.diagnostics >  
-\<sharedListeners > 要素  
+\<上の sharedListeners > 要素  
 \<add>  
 \<フィルター >  
   
@@ -43,7 +42,7 @@ ms.locfileid: "32745056"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**type**|必須の属性です。<br /><br /> フィルターの種類を指定します。 型の完全名のみを使用することができます (の形式で、<xref:System.Type.FullName%2A?displayProperty=nameWithType>プロパティ)、アセンブリ情報を含め、完全修飾型名を使用することもできます (の形式で、<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>プロパティ)。 完全修飾型名を作成する方法については、次を参照してください。[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)です。|  
+|**type**|必須の属性です。<br /><br /> フィルターの種類を指定します。 型の完全な名前のみを使用することができます (の形式で、<xref:System.Type.FullName%2A?displayProperty=nameWithType>プロパティ)、アセンブリ情報を含む完全修飾型名を使用することも (の形式で、<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>プロパティ)。 完全修飾型名を作成する方法の詳細については、次を参照してください。[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
 |**initializeData**|省略可能な属性です。<br /><br /> 指定したクラスのコンス トラクターに渡された文字列。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -55,16 +54,16 @@ ms.locfileid: "32745056"
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
-|`sharedListeners`|任意のソースまたはトレース要素を参照できるリスナーのコレクション。|  
-|`add`|リスナーを追加、 **sharedListeners**コレクション。|  
+|`sharedListeners`|任意のソースまたは trace 要素を参照できるリスナーのコレクション。|  
+|`add`|リスナーを追加、**上 sharedListeners**コレクション。|  
   
-## <a name="remarks"></a>コメント  
- リスナーがで定義されている場合、`<add>`の要素、`<sharedListeners>`要素、そのリスナーのフィルターで定義する必要があります、`<filter>`はの子要素、`<add>`要素。  
+## <a name="remarks"></a>Remarks  
+ リスナーがで定義されている場合、`<add>`の要素、`<sharedListeners>`要素、リスナーのフィルターで定義する必要があります、`<filter>`要素の子である、`<add>`要素。  
   
  この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、`<filter>`トレース リスナーにフィルターを追加する要素`console`で、`sharedListeners`コレクション。  
+ 次の例は、使用する方法を示します、`<filter>`トレース リスナーにフィルターを追加する要素`console`で、`sharedListeners`コレクション。  
   
 ```xml  
 <configuration>  

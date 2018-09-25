@@ -4,16 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a327f757f26c815d5b2cffe179af68bbe3d152eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7a8fbf172548ea68874f3e6c6c6c7a04bf17be19
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744877"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078605"
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt;要素 (ネットワーク設定)
-によって使用されるパラメーターをカスタマイズ、<xref:System.Net.HttpListener>クラスです。  
+によって使用されるパラメーターのカスタマイズ、<xref:System.Net.HttpListener>クラス。  
   
  \<configuration>  
 \<system.net>  
@@ -37,7 +36,7 @@ ms.locfileid: "32744877"
   
 |属性|説明|  
 |---------------|-----------------|  
-|unescapeRequestUrl|どうかを示すブール値、<xref:System.Net.HttpListener>インスタンスは、変換された URI ではなく生のエスケープ解除された URI を使用します。|  
+|unescapeRequestUrl|場合を示すブール値、<xref:System.Net.HttpListener>インスタンスは、変換された URI ではなく生のエスケープ解除された URI を使用します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -48,61 +47,61 @@ ms.locfileid: "32744877"
 |-----------------|---------------------|  
 |[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
-## <a name="remarks"></a>コメント  
- **UnescapeRequestUrl**場合に属性が示す<xref:System.Net.HttpListener>変換された URI でパーセント エンコード値を変換し、その他の正規化手順は実行ではなく生のエスケープ解除された URI を使用します。  
+## <a name="remarks"></a>Remarks  
+ **UnescapeRequestUrl**属性を示す場合<xref:System.Net.HttpListener>をパーセントでエンコードされた値は変換され、その他の正規化の手順を実行、変換された URI ではなく生のエスケープ解除された URI を使用します。  
   
- ときに、<xref:System.Net.HttpListener>インスタンスを介して要求を受け取ると、`http.sys`サービスによって提供される URI 文字列のインスタンス作成`http.sys`、として公開して、<xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType>プロパティです。  
+ ときに、<xref:System.Net.HttpListener>インスタンスを介して要求を受け取ると、`http.sys`により指定された URI 文字列のインスタンスを作成しますが、サービス`http.sys`、としてそれを公開、<xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType>プロパティ。  
   
- `http.sys`サービスは 2 つの要求の URI 文字列を公開します。  
+ `http.sys`サービスは 2 つの要求 URI の文字列を公開します。  
   
 -   生の URI  
   
 -   変換された URI  
   
- 生の URI は、<xref:System.Uri?displayProperty=nameWithType>の HTTP 要求の要求行で提供されます。  
+ 生の URI は、 <xref:System.Uri?displayProperty=nameWithType> HTTP 要求の要求行で提供されます。  
   
  `GET /path/`  
   
  `Host: www.contoso.com`  
   
- によって提供される生の URI `http.sys` 、上記で説明した要求は「/path/」です。 これは、ネットワーク経由で送信された HTTP 動詞の後に、文字列を表します。  
+ によって提供された生の URI`http.sys`上記のように、要求は"パス"/です。 これは、次の HTTP 動詞がネットワーク経由で送信した文字列を表します。  
   
- `http.sys`サービスが HTTP 要求の行で指定された URI を使用して、要求で提供される情報から変換された URI を作成しに、元のサーバー要求を決定するホスト ヘッダーを転送する必要があります。 これは、一連の登録済み URI プレフィックスの要求からの情報を比較することによって行います。 HTTP サーバー SDK のドキュメントでは、この変換された URI を HTTP_COOKED_URL 構造と呼びます。  
+ `http.sys`サービスは、HTTP 要求行で指定された URI を使用して、要求で提供される情報から変換された URI を作成しに、要求の配信元サーバーを決定する、ホスト ヘッダーを転送する必要があります。 これは、一連の登録済みの URI プレフィックスを使用して要求からの情報を比較することによって行います。 この変換された URI は、HTTP Server SDK ドキュメントでは HTTP_COOKED_URL 構造と呼びます。  
   
- 登録されている URI プレフィックスを持つ要求を比較できるようにするには、するために、要求に正規化をいくつか行う必要があります。 変換された URI 上のサンプルではようになります。  
+ 登録済みの URI プレフィックスを持つ要求を比較できるようにするには、するには、要求の正規化をいくつかを実行する必要があります。 変換された URI 上のサンプルであるように。  
   
  `http://www.contoso.com/path/`  
   
- `http.sys`を組み合わせたものをサービス、<xref:System.Uri.Host%2A?displayProperty=nameWithType>変換された URI を作成する要求行の文字列とプロパティの値。 さらに、`http.sys`と<xref:System.Uri?displayProperty=nameWithType>クラスは次も実行します。  
+ `http.sys`サービスの結合、<xref:System.Uri.Host%2A?displayProperty=nameWithType>プロパティの値と、変換された URI を作成する要求の行の文字列。 さらに、`http.sys`と<xref:System.Uri?displayProperty=nameWithType>クラスも、次を行います。  
   
--   エスケープを解除すべてパーセント エンコードされた値。  
+-   すべてのパーセントでエンコードされた値エスケープ解除します。  
   
--   Utf-16 文字表記に非 ASCII 文字をパーセント エンコードに変換します。 Unicode 文字 (Unicode エンコーディング %uxxxx 形式を使用して) だけでなく utf-8 と ANSI や DBCS 文字はサポートされていることに注意してください。  
+-   Utf-16 文字表現に非 ASCII 文字をパーセントでエンコードに変換します。 Unicode の文字 (Unicode のエンコード %uxxxx 形式を使用) と、utf-8 と ANSI や DBCS 文字がサポートされていることに注意してください。  
   
 -   パスの圧縮など、他の正規化の手順を実行します。  
   
- 要求には、パーセントでエンコードされた値に使用されるエンコーディングに関する情報が含まれていない、ためには、パーセント エンコード値を解析するだけ、正しいエンコーディングを決定することはできません。  
+ 要求には、パーセントでエンコードされた値に使用されるエンコーディングに関する情報が含まれていない、以降は、パーセントでエンコードされた値を解析するだけで正しいエンコーディングを判断することはできません。  
   
- したがって`http.sys`プロセスを変更するための 2 つのレジストリ キーを提供します。  
+ そのため`http.sys`プロセスを変更するための 2 つのレジストリ キーを提供します。  
   
 |レジストリ キー|既定値|説明|  
 |------------------|-------------------|-----------------|  
-|EnableNonUTF8|1|0 の場合、 `http.sys` UTF で 8 でエンコードされた Url のみを受け入れます。<br /><br /> 0 以外の場合`http.sys`も要求で ANSI でエンコードされたまたは DBCS でエンコードされた Url を受け取ります。|  
-|FavorUTF8|1|0 以外の場合`http.sys`し、変換に失敗したし、EnableNonUTF8 が 0 でない場合に utf-8 として URL を先にデコードすると常に、Http.sys を ANSI または DBCS としてデコードしようとします。<br /><br /> 0 の場合 (そして EnableNonUTF8 0 ではない)、`http.sys`場合は、その ANSI または DBCS; としてデコードする試行が成功しない、utf-8 の変換を試みます。|  
+|EnableNonUTF8|1|0 の場合、 `http.sys` UTF エンコードの Url のみを受け入れます。<br /><br /> 0 以外の場合`http.sys`も要求で ANSI でエンコードされたまたは DBCS でエンコードされた Url を受け取ります。|  
+|FavorUTF8|1|0 以外の場合`http.sys`最初をデコードする URL を utf-8 として; 変換に失敗したし、EnableNonUTF8 が 0 以外の場合と常に、Http.sys、ANSI または DBCS とデコードを試みます。<br /><br /> 0 の場合 (および EnableNonUTF8 が 0 以外)、`http.sys`を ANSI または DBCS; としてデコードする試行が成功しなかった、utf-8 変換を試みます。|  
   
- ときに<xref:System.Net.HttpListener>要求を受信して変換された URI を使用して`http.sys`への入力として、<xref:System.Net.HttpListenerRequest.Url%2A>プロパティです。  
+ ときに<xref:System.Net.HttpListener>要求を受信から変換された URI を使用して`http.sys`への入力として、<xref:System.Net.HttpListenerRequest.Url%2A>プロパティ。  
   
- Uri の文字と数字以外の文字をサポートする必要があります。 例としては次の URI は、顧客の顧客情報の取得に使用される「1/3812」番号します。  
+ Uri の文字と数字以外の文字をサポートする必要があります。 例としては、次の URI は、お客様の顧客情報を取得するために使用番号「1/3812」。  
   
  `http://www.contoso.com/Customer('1%2F3812')/`  
   
- Uri (%2f) で、パーセント エンコードのスラッシュを注意してください。 これは、ここでは、スラッシュ文字を表し、データはパス区切り記号ではないため、必要に応じて。  
+ Uri (%2f) でパーセント エンコード スラッシュに注意してください。 これは、スラッシュ文字を表すデータとパス区切り記号ではなくこのケースであるため、必要に応じて。  
   
- Uri のコンス トラクターに文字列を渡すことは、次の URI になります。  
+ Uri のコンス トラクターに文字列を渡すことは、次の URI につながります。  
   
  `http://www.contoso.com/Customer('1/3812')/`  
   
- 分割して、パスのセグメントに、次の要素の結果になります。  
+ パスはセグメントに分割することで、次の要素になります。  
   
  `Customer('1`  
   
@@ -110,14 +109,14 @@ ms.locfileid: "32744877"
   
  これは、要求の送信元の目的ではありません。  
   
- 場合、 **unescapeRequestUrl**属性に設定されている**false**、<xref:System.Net.HttpListener>要求を受信から変換された URI ではなく生の URI を使用して、 `http.sys` への入力として<xref:System.Net.HttpListenerRequest.Url%2A>プロパティです。  
+ 場合、 **unescapeRequestUrl**属性に設定されて**false**、その後、<xref:System.Net.HttpListener>要求を受信から変換された URI ではなく生の URI を使用して`http.sys`への入力として<xref:System.Net.HttpListenerRequest.Url%2A>プロパティ。  
   
- 既定値、 **unescapeRequestUrl**属性は**true**です。  
+ 既定値、 **unescapeRequestUrl**属性が**true**します。  
   
- <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A>プロパティを使用しての現在の値を取得すること、 **unescapeRequestUrl**該当する構成ファイルからの属性です。  
+ <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A>プロパティを使用しての現在の値を取得すること、 **unescapeRequestUrl**該当する構成ファイルからの属性。  
   
 ## <a name="example"></a>例  
- 次の例は、構成する方法を示します、<xref:System.Net.HttpListener>から変換された URI ではなく生の URI を使用する要求を受信時`http.sys`への入力として、<xref:System.Net.HttpListenerRequest.Url%2A>プロパティです。  
+ 次の例は、構成する方法を示します、<xref:System.Net.HttpListener>から変換された URI ではなく生の URI を使用して要求を受信時`http.sys`への入力として、<xref:System.Net.HttpListenerRequest.Url%2A>プロパティ。  
   
 ```xml  
 <configuration>  

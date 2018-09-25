@@ -3,13 +3,12 @@ title: '&lt;system.identityModel.services&gt;'
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ca108d7dd0498b0d7c08bb632ab45c7229ff58c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c7261d20ae2379ad33679cadecdef484f2afdecf
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757048"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075220"
 ---
 # <a name="ltsystemidentitymodelservicesgt"></a>&lt;system.identityModel.services&gt;
 Ws-federation プロトコルを使用して認証用の構成セクション。  
@@ -35,21 +34,21 @@ Ws-federation プロトコルを使用して認証用の構成セクション。
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|構成設定が含まれています、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) および<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) HTTP モジュールです。|  
+|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|構成設定が含まれています、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) と<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) HTTP モジュールです。|  
   
 ### <a name="parent-elements"></a>親要素  
  なし  
   
-## <a name="remarks"></a>コメント  
- 追加、 `<system.identityModel.services>` SAM と WSFAM 用の設定を提供するアプリケーションの構成ファイルにセクションです。  
+## <a name="remarks"></a>Remarks  
+ 追加、 `<system.identityModel.services>` SAM と WSFAM の設定を提供するアプリケーションの構成ファイルにセクション。  
   
 > [!IMPORTANT]
->  使用する場合、<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>または<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>、コードでは、要求の承認マネージャー内のクレーム ベースのアクセス制御を提供するクラス (<xref:System.Security.Claims.ClaimsAuthorizationManager>) を通じて承認決定を行うために使用するポリシーが構成されていると、 `<identityConfiguration>`暗黙的または明示的に参照される要素、`<federationConfiguration>`このセクションの要素。 詳細については、次を参照してください。、**解説**下にある、 [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)要素。  
+>  使用する場合、<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>または<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>、コードでは、クレーム承認マネージャーでのクレームに基づくアクセス制御を提供するクラス (<xref:System.Security.Claims.ClaimsAuthorizationManager>) を通じて承認決定を行うために使用するポリシーが構成されていると、 `<identityConfiguration>`暗黙的または明示的に参照される要素を`<federationConfiguration>`このセクションの要素。 詳細については、次を参照してください。、**解説**下、 [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)要素。  
   
- `<system.identityModel.services>`セクションで表される、<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>クラスです。 子のコレクション`<federationConfiguration>`セクションで構成されている要素がによって表される、<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection>クラスです。  
+ `<system.identityModel.services>`セクションがによって表される、<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>クラス。 子のコレクション`<federationConfiguration>`のセクションの構成要素として表されます、<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection>クラス。  
   
 ## <a name="example"></a>例  
- 次の XML を追加する方法を示しています、`<system.identityModel.services>`構成ファイルにセクションです。 最初に、両方のセクションの宣言を追加する必要があります、`<system.identityModel.services>`セクションおよび`<system.identityModel>`セクションです。 (追加すると、 `<system.identityModel.services>`  セクションの宣言も追加する必要があります、`<system.identityModel>`セクションで、既定値を確実に`<identityConfiguration>`セクションは、必要な場合、ランタイムによって作成できます)。セクション宣言が追加した後は、下にあるフェデレーション認証設定を構成することができます、`<system.identityModel.services>`要素。  
+ 次の XML を追加する方法を示しています、`<system.identityModel.services>`構成ファイルにセクション。 両方のセクションの宣言を追加する必要があります最初、`<system.identityModel.services>`セクションおよび`<system.identityModel>`セクション。 (追加すると、`<system.identityModel.services>`セクションの宣言も追加する必要があります、`<system.identityModel>`ことに、既定値を確認するセクション`<identityConfiguration>`セクションは、必要な場合、ランタイムによって作成できます)。フェデレーション認証設定を構成できますセクション宣言を追加した後、`<system.identityModel.services>`要素。  
   
 ```xml  
 <configuration>  

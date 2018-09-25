@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f05f7e35d69f789d3ebb371689aafbc84004b732
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 446447f0d279755dbc06e0e3a25d50ad86ad555b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743304"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075227"
 ---
 # <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt;要素 (Uri 設定)
 International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用されるかどうか、および IRI の解析規則が適用されるどうかを指定します。  
@@ -37,7 +36,7 @@ International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用�
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|`enabled`|IRI 解析が有効になっているかどうかを指定します。 既定値は `false` です。|  
+|`enabled`|解析する IRI が有効になっているかどうかを指定します。 既定値は `false` です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -46,22 +45,22 @@ International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用�
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[Uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|.NET Framework での web アドレスの uniform resource identifier (Uri) を使用して表現の処理方法を指定する設定が含まれています。|  
+|[Uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|.NET Framework での uniform resource identifier (Uri) を使用して表現された web アドレスの処理方法を指定する設定が含まれています。|  
   
-## <a name="remarks"></a>コメント  
- 既存の<xref:System.Uri>クラスが .NET Framework 3.5 で拡張されています。 3.0 SP1、および 2.0 SP1 国際リソース識別子 (IRI) および国際化ドメイン名 (IDN) のサポートを提供します。 ユーザーは、IDN を明確にする場合を除きは、現在のユーザーには、.NET Framework 2.0 の動作から変更は表示されませんをサポートします。 これにより、.NET Framework の以前のバージョンとのアプリケーションの互換性を保証します。  
+## <a name="remarks"></a>Remarks  
+ 既存の<xref:System.Uri>クラスは、.NET Framework 3.5 で拡張されています。 3.0 SP1、および 2.0 SP1 国際リソース識別子 (IRI) および国際化ドメイン名 (IDN) のサポートを提供します。 IRI と IDN 明確には、現在のユーザーに、.NET Framework 2.0 の動作から変更は表示されないをサポートします。 これにより、.NET Framework の以前のバージョンとのアプリケーションの互換性を保証します。  
   
  IRI のサポートを有効にするのには、次の 2 つの変更が必要です。  
   
-1.  .NET Framework 2.0 ディレクトリ下にある machine.config ファイルに次の行を追加します。  
+1.  .NET Framework 2.0 のディレクトリの machine.config ファイルに次の行を追加します。  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  IRI 解析規則を適用するかどうかを指定します。 これは、machine.config ファイルまたは app.config ファイルで指定できます。  
+2.  IRI 解析規則を適用する必要があるかどうかを指定します。 これは、machine.config ファイルまたは app.config ファイルで指定できます。  
   
- IRI 解析を有効にする (有効になっている iriParsing = `true`) 正規化を行うし、RFC 3987 ルールに従って最新 IRI チェック文字です。 既定値は`false`が正規化を行うし、(IPv6 のリテラル) の RFC 2396 に従ってチェックおよび RFC 3986 の文字です。  
+ IRI 解析を有効にする (iriParsing を有効になっている = `true`) 正規化を行うし、RFC 3987 ルール文字に従って最新の IRI チェックします。 既定値は`false`とは正規化を実行し、チェックに従って RFC 2396 および RFC 3986 を (IPv6 のリテラル) の文字します。  
   
 ### <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
@@ -69,7 +68,7 @@ International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用�
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 次の例で使用する構成を示しています、 <xref:System.Uri> IRI 解析と IDN 名をサポートするクラス。  
+ 次の例で使用する構成を示しています、<xref:System.Uri>解析する IRI と IDN 名をサポートするクラス。  
   
 ### <a name="code"></a>コード  
   

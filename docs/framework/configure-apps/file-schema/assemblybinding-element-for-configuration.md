@@ -9,15 +9,14 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6a3358b2d64ade65e641caa203e2e760dcc4be2c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743122"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073464"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > 要素を\<構成 >
+# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > 要素の\<構成 >
 
 構成レベルでのアセンブリ バインディング ポリシーを指定します。
 
@@ -50,16 +49,16 @@ ms.locfileid: "32743122"
 | --- | ----------- |
 | [**\<linkedConfiguration >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | インクルードする構成ファイルを指定します。 |
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)要素内の構成ファイルにアセンブリを含めるアプリケーション構成ファイルを許可することで、コンポーネントのアセンブリの管理を簡略化既知の場所ではなくアセンブリ構成設定を複製します。
+[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)要素は、構成ファイルをアプリケーション構成ファイルにアセンブリを含めるようにすることでコンポーネントのアセンブリの管理を簡略化既知の場所ではなく複製アセンブリの構成設定。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** Windows サイド バイ サイド マニフェストと共にアプリケーションに要素がサポートされていません。
+> **\<LinkedConfiguration >** Windows サイド バイ サイドでマニフェストを使用するアプリケーションの要素がサポートされていません。
 
 ## <a name="example"></a>例
 
-次の例では、ローカル ハード_ディスク上の構成ファイルをインクルードする方法を示します。
+次の例では、ローカルのハード ディスク上の構成ファイルを含める方法を示します。
 
 ```xml
 <configuration>

@@ -8,13 +8,12 @@ helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 2c1588fa48631aec4e185fd8362a02505aa15e58
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: a45ec6b5cdd241cb92069e8097bc94baa65b2166
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753462"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075629"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF のセキュリティのベスト プラクティス
 以下のセクションでは、Windows Communication Foundation (WCF) を使用してセキュリティで保護されたアプリケーションを作成する場合に考慮する必要のあるベスト プラクティスを示します。 セキュリティの詳細については、[セキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)に関するページ、「[セキュリティに関するデータの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)」、「[メタデータを使用する場合のセキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)」を参照してください。  
@@ -58,7 +57,7 @@ ms.locfileid: "34753462"
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>カスタム バインドで SecurityBindingElement.IncludeTimestamp を true に設定する  
  カスタム バインディングを作成するときは、<xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> を `true` に設定する必要があります。 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> が `false` に設定されている場合に、クライアントが、X509 証明書などの非対称キーに基づくトークンを使用すると、メッセージは署名されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [セキュリティに関するデータの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
  [メタデータを使用する場合のセキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
