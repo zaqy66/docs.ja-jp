@@ -3,23 +3,22 @@ title: トランスポート セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e7f804d34a47c5508839636a6fe5045ebce3972e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a52ac584abe766a7517436e697aff89333c9833
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498216"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171427"
 ---
 # <a name="transport-security"></a>トランスポート セキュリティ
-Windows Communication Foundation (WCF) でのトランスポート セキュリティは、選択したバインディングによって異なります。 バインディングが実装するトランスポートによって実際のセキュリティ機構が決まります。 このセクションの各トピックでは、実装される機構とそのオプションについて説明します。  
+Windows Communication Foundation (WCF) でのトランスポート セキュリティは、選択したバインドに依存します。 バインディングが実装するトランスポートによって実際のセキュリティ機構が決まります。 このセクションの各トピックでは、実装される機構とそのオプションについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- WCF でのトランスポート セキュリティの基礎を説明します。  
+ WCF でのトランスポート セキュリティの基本について説明します。  
   
  [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)  
- WCF が、SSL (HTTPS) の Secure Sockets Layer を実装する方法について説明します。  
+ WCF が (、SSL または HTTPS) の Secure Sockets Layer を実装する方法について説明します。  
   
  [HTTP 認証の理解](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
  HTTP 認証方式 (基本、ダイジェスト、NTLM (NT LAN Manager) など) について説明します。  

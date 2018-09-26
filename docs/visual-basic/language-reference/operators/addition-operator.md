@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
 ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580662"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172207"
 ---
 # <a name="-operator-visual-basic"></a>+ 演算子 (Visual Basic)
 2 つの数値を追加します。 または、数値式の正の値を取得します。 2 つの文字列式を連結することも使用できます。  

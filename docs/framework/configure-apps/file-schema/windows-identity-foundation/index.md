@@ -3,13 +3,12 @@ title: Windows Identity Foundation 構成スキーマ
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 8881339a5dcf21df17e7200847fc46854ead17e3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c081e582f4c509843c04c292ecf13b2bff2fef06
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468444"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47173136"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation 構成スキーマ
 このセクションのトピックでは、Windows Identity Foundation (WIF) の構成スキーマに関する情報を提供します。 フレームワークによって公開されたクラスを介して WIF を使用するようにアプリケーションを構成することもできます。 これらのクラスは、スキーマ内の関連要素を処理するセクションに記載されています。 次に示すのは、WIF 構成スキーマによって公開された基本的な XML タグ構造です。 属性は省略されています。 強調表示したコメントは、スキーマの主要なコンポーネントを示しています。  

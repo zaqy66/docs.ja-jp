@@ -3,13 +3,12 @@ title: '方法: 入力方向の要求の変換'
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: cb71e320116c3af73139f1a8083fa62e8a7e21a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8673b4520d9727ae1aa78ef0bc9f435defb02598
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400173"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171323"
 ---
 # <a name="how-to-transform-incoming-claims"></a>方法: 入力方向の要求の変換
 ## <a name="applies-to"></a>対象  
@@ -110,7 +109,7 @@ ms.locfileid: "33400173"
     ```  
   
 ## <a name="step-2--implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>手順 2 – カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装する  
- この手順では、<xref:System.Security.Claims.ClaimsAuthenticationManager> クラスの既定の機能を上書きし、受信プリンシパルに管理者ロールを追加します。  
+ この手順では、<xref:System.Security.Claims.ClaimsAuthenticationManager> クラスの既定の機能をオーバーライドし、受信プリンシパルに管理者ロールを追加します。  
   
 #### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装するには  
   

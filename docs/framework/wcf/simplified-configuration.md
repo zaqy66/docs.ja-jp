@@ -3,11 +3,11 @@ title: 簡略化された構成
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 ms.openlocfilehash: 7df686188099aea45cac81ea94a49b98e5c65f89
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583877"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172220"
 ---
 # <a name="simplified-configuration"></a>簡略化された構成
 Windows Communication Foundation (WCF) サービスを構成すると、複雑な作業ができる場合があります。 さまざまなオプションがあり、どの設定が必要であるかをいつでも簡単に判断できるとは限りません。 構成ファイルは、WCF サービスの柔軟性を向上させ、多くの問題を見つけるためにハードのソースもができます。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] では、このような問題に対応し、サービス構成の規模と複雑さを軽減する手段を提供しています。  
