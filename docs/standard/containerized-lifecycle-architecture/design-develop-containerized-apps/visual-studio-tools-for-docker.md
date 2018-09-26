@@ -1,66 +1,68 @@
 ---
-title: Visual Studio Tools for Docker (Windows で Visual Studio) を使用
+title: Visual Studio Tools for Windows 上の Docker
 description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: af14c92ab27885deec878dc33e7b94035f43e65b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: cd140c12ef4a0187cce096e013937d5c98cd4b39
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581221"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170796"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Visual Studio Tools for Docker (Windows で Visual Studio) を使用
 
-Visual Studio Code と Docker CLI を使用する場合は、Docker を Visual Studio Tools を使用する場合は、開発ワークフローをワークフローに似ています。 実際には、同じの Docker CLI に基づきますが容易に開始、プロセスを簡略化、および生産性の向上を提供します、ビルドの実行、およびタスクを構成します。 実行し、f5 キーを押して、Visual Studio から ctrl キーを押しながら f5 キーなどの単純なアクションを使用してコンテナーをデバッグすることもできます。 実行し、1 つのコンテナーをデバッグできることに加え、省略可能なコンテナー オーケストレーションのサポートは、実行し、コンテナー (ソリューション全体) のグループを同時にデバッグできます。 同じコンテナーを定義するだけ*docker compose.yml*ソリューション レベルでのファイル。
+Visual Studio Tools for Docker 開発者のワークフローは、Visual Studio Code と Docker CLI を (同じ Docker CLI に基づきます) を使用してに似ています。 Visual Studio Tools の Docker を開始するのにはいっそう簡単に、プロセスを簡略化され、ビルドで生産性の向上が提供、実行、およびタスクを構成します。 実行し、デバッグのような単純なアクションを使用して、コンテナー **F5**と**Ctrl**+**F5**します。
 
-## <a name="configuring-your-local-environment"></a>ローカル環境を構成します。
+> [!NOTE]
+> この記事は、Windows 上の Visual Studio と Visual Studio for mac。
 
-Docker のサポートは、インストールされている .NET と .NET Core のワークロードのいずれかで Visual Studio 2017 に含まれます。 Docker for Windows を個別にインストールします。
+## <a name="configure-your-local-environment"></a>ローカル環境を構成します。
 
-Docker for Windows の最新バージョンでは、これまでにアプリケーションを開発 Docker、次の参照で説明したように、セットアップは簡単なためより簡単になります。
+Docker for Windows の最新バージョン ([https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/))、簡単なセットアップでは、Docker アプリケーションの開発が容易にします。
 
-**詳細情報:** Docker for Windows をインストールする方法の詳細については、するには<https://docs.docker.com/docker-for-windows/>します。
+Visual Studio 2017 では、docker のサポートが含まれます。 ここで Visual Studio 2017 をダウンロードします。 [https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**詳細情報:** Visual Studio をインストールする方法の詳細についてを参照してください[ https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/)します。
+## <a name="use-docker-tools-in-visual-studio-2017"></a>Visual Studio 2017 での Docker ツールを使用します。
 
-Visual Studio Tools for Docker をインストールする詳細を表示するには<http://aka.ms/vstoolsfordocker>と<https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>します。
+Docker のサポートをプロジェクトに追加することの 2 つのレベルがあります。 .NET Core web アプリのプロジェクトに追加できます、 *Dockerfile*に Docker サポートを有効にすると、プロジェクト ファイル。 次のレベルはコンテナー オーケストレーター サポートは、追加、 *Dockerfile* (まだ存在しない) 場合は、プロジェクトに、 *docker compose.yml*ソリューション レベルでのファイル。
 
-## <a name="using-docker-tools-in-visual-studio-2017"></a>Visual Studio 2017 での Docker ツールの使用
+**追加** > **Docker サポート**と**追加** > **コンテナー オーケストレーター サポート**コマンドは、web アプリ プロジェクトのプロジェクト ノードの右クリック メニュー (またはコンテキスト メニュー) にある**ソリューション エクスプ ローラー**図 4-26 に示すようにします。
 
-プロジェクトに Docker サポートを追加するときに (図 4-26 参照)、Visual Studio の追加、 *Dockerfile*をプロジェクトのルート。
+![Visual Studio での Docker サポート メニュー オプションを追加します。](media/add-docker-support-menu.png)
 
-![Visual Studio 2017 プロジェクトでの Docker ソリューションのサポートの有効化](./media/image32.png)
+図 4-26: Visual Studio 2017 のプロジェクトに Docker サポートを追加します。
 
-図 4-26: Visual Studio 2017 プロジェクトでの Docker ソリューションのサポートの有効化
+### <a name="add-docker-support"></a>Docker サポートを追加します。
 
- 既定では Visual Studio 2017 バージョン 15.7 またはそれ以前で、Docker Compose を使用して、コンテナー オーケストレーションのサポートが追加されます。 コンテナー オーケストレーションのサポートは、Visual Studio 2017 バージョン 15.8 オプトイン機能または後で、どの場合 Docker Compose と Service Fabric がサポートされます。
+選択して、既存の .NET Core web アプリ プロジェクトに Docker サポートを追加する**追加** > **Docker サポート**で**ソリューション エクスプ ローラー**します。 選択して、プロジェクトの作成時に Docker サポートを有効することも**Docker サポートを有効にする**で、**新しい ASP.NET Core Web アプリケーション**クリックした後に表示されたダイアログ ボックス**ok**で、**新しいプロジェクト** ダイアログ ボックスで、図 4-27 に示すようにします。
 
-Visual Studio 15.8 およびそれ以降のバージョンを使用して、関連するコンテナーがあるソリューションで複数のプロジェクトのサポートを追加できます。 ソリューションまたはプロジェクト ノードを右クリックして**ソリューション エクスプ ローラー**、選択**追加** > **コンテナー オーケストレーション サポート**します。  クリックして**Docker Compose**または**Service Fabric**コンテナーを管理します。
+![Visual Studio での新しい ASP.NET Core web アプリの Docker サポートを有効にします。](./media/enable-docker-support-visual-studio.png)
 
-選択すると**Docker Compose**、Visual Studio でソリューションのサービス セクションを追加する*docker compose.yml*ファイル (または存在していない場合、ファイルが作成されます)。 マルチ コンテナー ソリューションの作成を開始する簡単な方法開くことができます、 *docker compose.yml*ファイルし、その他の機能を更新します。
+図 4-27: Visual Studio 2017 でプロジェクトの作成時に Docker サポートを有効にします。
 
-この操作は、必要な構成をコード行を追加します、 *docker compose.yml*ソリューション レベルで設定します。
+Docker サポートを有効にすると、Visual Studio の追加、 *Dockerfile*ファイルをプロジェクトにします。
 
-できます Docker サポートの Visual Studio 2017 では、ASP.NET Core プロジェクトを作成するときに図 4-27 に示すようにします。
+> [!NOTE]
+> 図 4-28 に示すように .NET Framework web アプリ プロジェクト (いない .NET Core web アプリのプロジェクト) のプロジェクトの作成時に Docker Compose のサポートが有効、コンテナー オーケストレーター サポートも追加されます。
+>
+> ![Docker を有効にする .NET Framework web アプリ プロジェクトのサポートの構成](media/enable-docker-compose-support.png)
 
-![プロジェクトを作成するときに Docker サポートの有効化](./media/image33.png)
+> 図 4-28: Visual Studio 2017 で .NET Framework web アプリ プロジェクトでの Docker Compose のサポートを有効にします。
 
-図 4-27: Docker のサポート、プロジェクトを作成するときにオン
+### <a name="add-container-orchestrator-support"></a>コンテナー オーケストレーター サポートを追加します。
 
-Visual Studio でソリューションに Docker サポートを追加した後も表示されますに新しいノード ツリー**ソリューション エクスプ ローラー**と、 *docker compose.yml*ファイル、図 4-28 に示すようにします。
+複数のコンテナー ソリューションを作成する場合は、コンテナー オーケストレーター サポートをプロジェクトに追加します。 コンテナー オーケストレーター サポートを追加すると Visual Studio が追加されます、 *Dockerfile* (まだ存在しない) 場合は、プロジェクトと、グローバルに*docker compose.yml*ソリューション レベルでのファイル。 これにより、実行およびで同じ定義している場合、コンテナー (ソリューション全体) のグループを同時にデバッグ*docker compose.yml*ファイル。 場合*docker compose.yml*が既に存在する Visual Studio に必要な構成コードの行を追加するだけです。
 
-![docker compose.yml ファイルがソリューション エクスプ ローラーで表示されます。](./media/image34.PNG)
+プロジェクトに追加の Dockerfile を参照してくださいコンテナー オーケストレーションのサポートをプロジェクトに追加した後、 **docker compose**でソリューションに追加されたフォルダー**ソリューション エクスプ ローラー**図 4-29 に示すように。
 
-図 4-28: docker compose.yml ファイルに表示されます**ソリューション エクスプ ローラー**
+![Visual Studio でソリューション エクスプ ローラーでの docker ファイル](media/docker-support-solution-explorer.png)
 
-1 つを使用して複数コンテナー アプリを展開する可能性があります*docker compose.yml*ファイルを実行する場合に`docker-compose up`ただし、Visual Studio 環境 (開発対によっての値をオーバーライドするために、それらのグループを追加します。運用環境) と実行 (リリース対デバッグ) を入力します。 この機能は以降の章で強化について説明します。
+Visual Studio 2017 でのソリューション エクスプ ローラーで、図 4-29: Docker ファイル
 
-複数のコンテナーを管理するのに Docker Compose ではなく Service Fabric を使用することもできます。 参照してください[チュートリアル: Azure Service Fabric への Windows コンテナーで .NET アプリケーションのデプロイ](https://docs.microsoft.com/azure/service-fabric/service-fabric-host-app-in-a-container)します。
-
-**詳細情報:** サービスの実装と Visual Studio tools for Docker の使用の詳細については、次の記事を参照します。
+**詳細については:** サービスの実装と Visual Studio tools for Docker の使用の詳細については、次の記事を参照します。
 
 ビルド、デバッグ、更新、およびローカル Docker コンテナーでアプリを更新します。 [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 

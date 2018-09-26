@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: 30b84f05898f823227415c410dc7ba5f89d58664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504706"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170471"
 ---
 # <a name="using-wpf-controls"></a>WPF コントロールの使用
 Windows フォーム ベースのアプリケーションでは、Windows Presentation Foundation (WPF) コントロールを使用できます。 これらは、2 つの異なるビュー テクノロジが円滑に相互運用します。  
@@ -24,16 +24,10 @@ Windows フォーム ベースのアプリケーションでは、Windows Presen
  Windows フォーム上の Windows Presentation Foundation コントロールをコピーする方法を示します。  
   
  [チュートリアル: デザイン時の Windows フォームでの WPF コンテンツの配置](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
- 固定やスナップ線をなど、Windows フォームのレイアウト機能を使用して、Windows Presentation Foundation コントロールを配置する方法を示しています。  
-  
- [チュートリアル: デザイン時のホストされている WPF 要素のプロパティの変更](../../../../docs/framework/winforms/advanced/walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time.md)  
- Windows フォーム デザイナー間のワークフローを示しています、 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] WPF コントロールのプロパティを変更するためです。  
+ 固定やスナップ線をなど、Windows フォームのレイアウト機能を使用して、Windows Presentation Foundation コントロールを配置する方法を示しています。
   
  [チュートリアル: デザイン時の Windows フォームでの新しい WPF コンテンツの作成](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
- Windows フォーム ベースのアプリケーションで使用するための Windows Presentation Foundation コントロールを作成する方法を示します。  
-  
- [チュートリアル: ElementHost コントロールの別の Windows フォームへのコピーと貼り付け](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- Windows Presentation Foundation コントロールを別の 1 つの Windows フォームにコピーする方法を示します。  
+ Windows フォーム ベースのアプリケーションで使用するための Windows Presentation Foundation コントロールを作成する方法を示します。
   
  [チュートリアル: デザイン時の Windows フォームでの WPF コンテンツの割り当て](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
  フォームに表示する Windows Presentation Foundation コントロールの種類を選択する方法を示します。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9297b68a31117aabfa45328954ccb9c7cdac66c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca6c8e9334bdfcdf4d79c5a91612ee117445d9cb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742193"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170640"
 ---
 # <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;オフ&gt;bypasslist (ネットワーク設定) の要素
 プロキシ バイ パスの一覧をクリアします。  
@@ -27,7 +26,7 @@ ms.locfileid: "32742193"
 \<system.net>  
 \<defaultProxy >  
 \<bypasslist >  
-\<オフ >  
+\<クリア >  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,16 +47,16 @@ ms.locfileid: "32742193"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|プロキシを使用しないアドレスを記述する正規表現のセットを提供します。|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|一連のプロキシを使用しないアドレスを記述する正規表現を提供します。|  
   
-## <a name="remarks"></a>コメント  
- `clear`要素は、バイパス リストからすべてのエントリをクリアします。  
+## <a name="remarks"></a>Remarks  
+ `clear`要素がバイパス リストからすべてのエントリをクリアします。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、バイパス リストをクリアし、バイパス リストに 2 つのアドレスが追加されます。 1 つ目は、contoso.com ドメイン内のすべてのサーバーでプロキシをバイパスします。2 番目は、すべてのサーバーの IP アドレスが始まる 192.168.*.* でプロキシをバイパスします。  
+ 次の例では、バイパス一覧をクリアし、バイパス リストに 2 つのアドレスを追加します。 1 つ目は、contoso.com ドメイン内のすべてのサーバーでプロキシをバイパスします。2 つ目は、192.168 で IP アドレスが始まるすべてのサーバーでプロキシをバイパスします。  
   
 ```xml  
 <configuration>  
