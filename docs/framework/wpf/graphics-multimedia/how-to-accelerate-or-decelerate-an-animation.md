@@ -8,16 +8,16 @@ helpviewer_keywords:
 - animation [WPF], decelerating
 ms.assetid: 4f383b2c-f94d-4a4e-9a06-f56f5dae95f9
 ms.openlocfilehash: b1649f27fc8ff850516eef2086dbce732915406b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698001"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171203"
 ---
-# <a name="how-to-accelerate-or-decelerate-an-animation"></a><span data-ttu-id="ff254-102">方法 : アニメーションを加速または減速させる</span><span class="sxs-lookup"><span data-stu-id="ff254-102">How to: Accelerate or Decelerate an Animation</span></span>
-<span data-ttu-id="ff254-103">この例では、高速化し、時間の経過と共に/減速のアニメーションを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="ff254-103">This example demonstrates how to make an animation accelerate and decelerate over time.</span></span> <span data-ttu-id="ff254-104">次の例では、いくつかの四角形を使用してさまざまなアニメーションによってアニメーション化します。<xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>と<xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>設定します。</span><span class="sxs-lookup"><span data-stu-id="ff254-104">In the following example, several rectangles are animated by animations with different <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> and <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> settings.</span></span>  
+# <a name="how-to-accelerate-or-decelerate-an-animation"></a><span data-ttu-id="e661a-102">方法 : アニメーションを加速または減速させる</span><span class="sxs-lookup"><span data-stu-id="e661a-102">How to: Accelerate or Decelerate an Animation</span></span>
+<span data-ttu-id="e661a-103">この例では、高速化し、時間の経過と共に/減速のアニメーションを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e661a-103">This example demonstrates how to make an animation accelerate and decelerate over time.</span></span> <span data-ttu-id="e661a-104">次の例では、いくつかの四角形を使用してさまざまなアニメーションによってアニメーション化します。<xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>と<xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>設定します。</span><span class="sxs-lookup"><span data-stu-id="e661a-104">In the following example, several rectangles are animated by animations with different <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> and <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> settings.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ff254-105">例</span><span class="sxs-lookup"><span data-stu-id="ff254-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e661a-105">例</span><span class="sxs-lookup"><span data-stu-id="e661a-105">Example</span></span>  
  [!code-xaml[timingbehaviors_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AccelDecelExample.xaml#1)]  
   
- <span data-ttu-id="ff254-106">コードは、この例から省略されています。</span><span class="sxs-lookup"><span data-stu-id="ff254-106">Code has been omitted from this example.</span></span> <span data-ttu-id="ff254-107">完全なコードでは、次を参照してください。、[アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)します。</span><span class="sxs-lookup"><span data-stu-id="ff254-107">For the complete code, see the [Animation Timing Behavior Sample](https://go.microsoft.com/fwlink/?LinkID=159970).</span></span>
+ <span data-ttu-id="e661a-106">コードは、この例から省略されています。</span><span class="sxs-lookup"><span data-stu-id="e661a-106">Code has been omitted from this example.</span></span> <span data-ttu-id="e661a-107">完全なコードでは、次を参照してください。、[アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)します。</span><span class="sxs-lookup"><span data-stu-id="e661a-107">For the complete code, see the [Animation Timing Behavior Sample](https://go.microsoft.com/fwlink/?LinkID=159970).</span></span>

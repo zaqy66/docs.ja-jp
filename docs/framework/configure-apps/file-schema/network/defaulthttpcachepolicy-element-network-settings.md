@@ -10,23 +10,22 @@ helpviewer_keywords:
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 0425711687a2f8b40f2c645e1c478d52b56ad979
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e1b27cb8c0df4450c1a08151af19913b65fc2b3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741842"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172921"
 ---
-# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a><span data-ttu-id="811d6-102">&lt;defaultHttpCachePolicy&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="811d6-102">&lt;defaultHttpCachePolicy&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="811d6-103">かどうか HTTP キャッシュがアクティブであり、既定のキャッシュ ポリシーの説明について説明します。</span><span class="sxs-lookup"><span data-stu-id="811d6-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  
+# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a><span data-ttu-id="024ea-102">&lt;defaultHttpCachePolicy&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="024ea-102">&lt;defaultHttpCachePolicy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="024ea-103">HTTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーの記述について説明します。</span><span class="sxs-lookup"><span data-stu-id="024ea-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  
   
- <span data-ttu-id="811d6-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="811d6-104">\<configuration></span></span>  
-<span data-ttu-id="811d6-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="811d6-105">\<system.net></span></span>  
-<span data-ttu-id="811d6-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="811d6-106">\<requestCaching></span></span>  
-<span data-ttu-id="811d6-107">\<defaultHttpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="811d6-107">\<defaultHttpCachePolicy></span></span>  
+ <span data-ttu-id="024ea-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="024ea-104">\<configuration></span></span>  
+<span data-ttu-id="024ea-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="024ea-105">\<system.net></span></span>  
+<span data-ttu-id="024ea-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="024ea-106">\<requestCaching></span></span>  
+<span data-ttu-id="024ea-107">\<defaultHttpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="024ea-107">\<defaultHttpCachePolicy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="811d6-108">構文</span><span class="sxs-lookup"><span data-stu-id="811d6-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="024ea-108">構文</span><span class="sxs-lookup"><span data-stu-id="024ea-108">Syntax</span></span>  
   
 ```xml  
 <defaultHttpCachePolicy  
@@ -37,37 +36,37 @@ ms.locfileid: "32741842"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="811d6-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="811d6-109">Attributes and Elements</span></span>  
- <span data-ttu-id="811d6-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="811d6-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="024ea-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="024ea-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="024ea-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="024ea-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="811d6-111">属性</span><span class="sxs-lookup"><span data-stu-id="811d6-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="024ea-111">属性</span><span class="sxs-lookup"><span data-stu-id="024ea-111">Attributes</span></span>  
   
-|<span data-ttu-id="811d6-112">属性</span><span class="sxs-lookup"><span data-stu-id="811d6-112">Attribute</span></span>|<span data-ttu-id="811d6-113">説明</span><span class="sxs-lookup"><span data-stu-id="811d6-113">Description</span></span>|  
+|<span data-ttu-id="024ea-112">属性</span><span class="sxs-lookup"><span data-stu-id="024ea-112">Attribute</span></span>|<span data-ttu-id="024ea-113">説明</span><span class="sxs-lookup"><span data-stu-id="024ea-113">Description</span></span>|  
 |---------------|-----------------|  
-|`maximumAge`|<span data-ttu-id="811d6-114">期限切れとしてキャッシュされたオブジェクトがマークされるまで、最大の時間間隔を指定します。</span><span class="sxs-lookup"><span data-stu-id="811d6-114">Specifies the maximum time interval before a cached object is marked as expired.</span></span>|  
-|`maximumStale`|<span data-ttu-id="811d6-115">期限切れとしてキャッシュされたオブジェクトがマークされるまでの鮮度の計算時間を経過時間の最大値を指定します。</span><span class="sxs-lookup"><span data-stu-id="811d6-115">Specifies the maximum time past the computed freshness time before a cached object is marked as expired.</span></span>|  
-|`minimumFresh`|<span data-ttu-id="811d6-116">最新と見なされるには、キャッシュされたオブジェクトの最短時間を指定します。</span><span class="sxs-lookup"><span data-stu-id="811d6-116">Specifies the minimum time for a cached object to be considered fresh.</span></span>|  
-|`policyLevel`|<span data-ttu-id="811d6-117">キャッシュ ポリシーが自動かどうかや、キャッシュをバイパスするかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="811d6-117">Specifies whether the caching policy is automatic, or whether the cache is bypassed.</span></span> <span data-ttu-id="811d6-118">既定値は `BypassCache` です。</span><span class="sxs-lookup"><span data-stu-id="811d6-118">The default value is `BypassCache`.</span></span>|  
+|`maximumAge`|<span data-ttu-id="024ea-114">キャッシュされたオブジェクトが期限切れとしてマークされている前に、最大時間間隔を指定します。</span><span class="sxs-lookup"><span data-stu-id="024ea-114">Specifies the maximum time interval before a cached object is marked as expired.</span></span>|  
+|`maximumStale`|<span data-ttu-id="024ea-115">過去の鮮度の計算時間前に、キャッシュされたオブジェクトが期限切れとしてマークされている最大の時間を指定します。</span><span class="sxs-lookup"><span data-stu-id="024ea-115">Specifies the maximum time past the computed freshness time before a cached object is marked as expired.</span></span>|  
+|`minimumFresh`|<span data-ttu-id="024ea-116">フレッシュと見なすには、キャッシュされたオブジェクトの時間の最小値を指定します。</span><span class="sxs-lookup"><span data-stu-id="024ea-116">Specifies the minimum time for a cached object to be considered fresh.</span></span>|  
+|`policyLevel`|<span data-ttu-id="024ea-117">キャッシュ ポリシーは自動にするかどうか、またはキャッシュをバイパスするかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="024ea-117">Specifies whether the caching policy is automatic, or whether the cache is bypassed.</span></span> <span data-ttu-id="024ea-118">既定値は `BypassCache` です。</span><span class="sxs-lookup"><span data-stu-id="024ea-118">The default value is `BypassCache`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="811d6-119">子要素</span><span class="sxs-lookup"><span data-stu-id="811d6-119">Child Elements</span></span>  
- <span data-ttu-id="811d6-120">なし</span><span class="sxs-lookup"><span data-stu-id="811d6-120">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="024ea-119">子要素</span><span class="sxs-lookup"><span data-stu-id="024ea-119">Child Elements</span></span>  
+ <span data-ttu-id="024ea-120">なし</span><span class="sxs-lookup"><span data-stu-id="024ea-120">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="811d6-121">親要素</span><span class="sxs-lookup"><span data-stu-id="811d6-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="024ea-121">親要素</span><span class="sxs-lookup"><span data-stu-id="024ea-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="811d6-122">要素</span><span class="sxs-lookup"><span data-stu-id="811d6-122">Element</span></span>|<span data-ttu-id="811d6-123">説明</span><span class="sxs-lookup"><span data-stu-id="811d6-123">Description</span></span>|  
+|<span data-ttu-id="024ea-122">要素</span><span class="sxs-lookup"><span data-stu-id="024ea-122">Element</span></span>|<span data-ttu-id="024ea-123">説明</span><span class="sxs-lookup"><span data-stu-id="024ea-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="811d6-124">requestCaching</span><span class="sxs-lookup"><span data-stu-id="811d6-124">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="811d6-125">ネットワーク要求のキャッシュ メカニズムを制御します。</span><span class="sxs-lookup"><span data-stu-id="811d6-125">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="024ea-124">requestCaching</span><span class="sxs-lookup"><span data-stu-id="024ea-124">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="024ea-125">ネットワーク要求のキャッシュ メカニズムを制御します。</span><span class="sxs-lookup"><span data-stu-id="024ea-125">Controls the caching mechanism for network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="811d6-126">コメント</span><span class="sxs-lookup"><span data-stu-id="811d6-126">Remarks</span></span>  
- <span data-ttu-id="811d6-127">値、`policyLevel`属性があるか、`BypassCache`または`Default`です。</span><span class="sxs-lookup"><span data-stu-id="811d6-127">The value for the `policyLevel` attribute is either `BypassCache` or `Default`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="024ea-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="024ea-126">Remarks</span></span>  
+ <span data-ttu-id="024ea-127">値、`policyLevel`属性があるか、`BypassCache`または`Default`します。</span><span class="sxs-lookup"><span data-stu-id="024ea-127">The value for the `policyLevel` attribute is either `BypassCache` or `Default`.</span></span>  
   
- <span data-ttu-id="811d6-128">値を`maximumAge`、 `maximumStale`、および`minimumFresh`要素の形式のいずれか、明示的な時間間隔は、 *d*.*hh*:*mm*:*ss* (日、時間、分、および秒) または定数`minValue`または`maxValue` をクリックします。</span><span class="sxs-lookup"><span data-stu-id="811d6-128">Values for the `maximumAge`, `maximumStale`, and `minimumFresh` elements are either an explicit time interval with a format of *d*.*hh*:*mm*:*ss* (days, hours, minutes, and seconds), or the constants `minValue` or `maxValue`, as appropriate.</span></span>  
+ <span data-ttu-id="024ea-128">値を`maximumAge`、 `maximumStale`、および`minimumFresh`要素の形式のいずれか、明示的な時間間隔は、 *d*.*hh*:*mm*:*ss* (日、時間、分、および秒)、または定数`minValue`または`maxValue`必要に応じて、します。</span><span class="sxs-lookup"><span data-stu-id="024ea-128">Values for the `maximumAge`, `maximumStale`, and `minimumFresh` elements are either an explicit time interval with a format of *d*.*hh*:*mm*:*ss* (days, hours, minutes, and seconds), or the constants `minValue` or `maxValue`, as appropriate.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="811d6-129">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="811d6-129">Configuration Files</span></span>  
- <span data-ttu-id="811d6-130">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="811d6-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="024ea-129">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="024ea-129">Configuration Files</span></span>  
+ <span data-ttu-id="024ea-130">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="024ea-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="811d6-131">例</span><span class="sxs-lookup"><span data-stu-id="811d6-131">Example</span></span>  
- <span data-ttu-id="811d6-132">次の例では、6 時間、2 日間の最大有効期間の時間と 4 時間の最大古い時間の最小の新しい時間を指定する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="811d6-132">The following example shows how to specify a minimum fresh time of six hours, a maximum age time of two days, and a maximum stale time of four hours.</span></span>  
+## <a name="example"></a><span data-ttu-id="024ea-131">例</span><span class="sxs-lookup"><span data-stu-id="024ea-131">Example</span></span>  
+ <span data-ttu-id="024ea-132">次の例では、6 時間、2 日間の最大の有効期間と 4 時間の最大の古い時刻の最小の新しい時刻を指定する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="024ea-132">The following example shows how to specify a minimum fresh time of six hours, a maximum age time of two days, and a maximum stale time of four hours.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,8 +82,8 @@ ms.locfileid: "32741842"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="811d6-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="811d6-133">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="024ea-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="024ea-133">See Also</span></span>  
  <xref:System.Net.Cache>  
  <xref:System.Net.WebRequest>  
  <xref:System.Net.Cache.RequestCacheLevel>  
- [<span data-ttu-id="811d6-134">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="811d6-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="024ea-134">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="024ea-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
