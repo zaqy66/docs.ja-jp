@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082147"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192301"
 ---
-# <a name="deletemethod-function"></a><span data-ttu-id="8746b-103">DeleteMethod 関数</span><span class="sxs-lookup"><span data-stu-id="8746b-103">DeleteMethod function</span></span>
-<span data-ttu-id="8746b-104">CIM クラスの定義から、指定されたメソッドを削除します。</span><span class="sxs-lookup"><span data-stu-id="8746b-104">Deletes the specified method from a CIM class definition.</span></span>
+# <a name="deletemethod-function"></a><span data-ttu-id="8207f-103">DeleteMethod 関数</span><span class="sxs-lookup"><span data-stu-id="8207f-103">DeleteMethod function</span></span>
+<span data-ttu-id="8207f-104">CIM クラスの定義から、指定されたメソッドを削除します。</span><span class="sxs-lookup"><span data-stu-id="8207f-104">Deletes the specified method from a CIM class definition.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="8746b-105">構文</span><span class="sxs-lookup"><span data-stu-id="8746b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8207f-105">構文</span><span class="sxs-lookup"><span data-stu-id="8207f-105">Syntax</span></span>  
   
 ```  
 HRESULT Delete (
@@ -38,39 +38,39 @@ HRESULT Delete (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="8746b-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8746b-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="8207f-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8207f-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="8746b-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="8746b-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="8207f-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="8207f-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="8746b-108">[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="8746b-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="8207f-108">[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="8207f-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszName`  
-<span data-ttu-id="8746b-109">[in]クラス テーブルから削除するメソッドの名前。</span><span class="sxs-lookup"><span data-stu-id="8746b-109">[in] The name of the method to remove from the class table.</span></span> <span data-ttu-id="8746b-110">`wszName` 有効なポインターである必要があります`LPCWSTR`します。</span><span class="sxs-lookup"><span data-stu-id="8746b-110">`wszName` must be a pointer to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="8207f-109">[in]クラス テーブルから削除するメソッドの名前。</span><span class="sxs-lookup"><span data-stu-id="8207f-109">[in] The name of the method to remove from the class table.</span></span> <span data-ttu-id="8207f-110">`wszName` 有効なポインターである必要があります`LPCWSTR`します。</span><span class="sxs-lookup"><span data-stu-id="8207f-110">`wszName` must be a pointer to a valid `LPCWSTR`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="8746b-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="8746b-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="8207f-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="8207f-111">Return value</span></span>
 
-<span data-ttu-id="8746b-112">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="8746b-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="8207f-112">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="8207f-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="8746b-113">定数</span><span class="sxs-lookup"><span data-stu-id="8746b-113">Constant</span></span>  |<span data-ttu-id="8746b-114">値</span><span class="sxs-lookup"><span data-stu-id="8746b-114">Value</span></span>  |<span data-ttu-id="8746b-115">説明</span><span class="sxs-lookup"><span data-stu-id="8746b-115">Description</span></span>  |
+|<span data-ttu-id="8207f-113">定数</span><span class="sxs-lookup"><span data-stu-id="8207f-113">Constant</span></span>  |<span data-ttu-id="8207f-114">値</span><span class="sxs-lookup"><span data-stu-id="8207f-114">Value</span></span>  |<span data-ttu-id="8207f-115">説明</span><span class="sxs-lookup"><span data-stu-id="8207f-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_NOT_FOUND` | <span data-ttu-id="8746b-116">0x80041002</span><span class="sxs-lookup"><span data-stu-id="8746b-116">0x80041002</span></span> | <span data-ttu-id="8746b-117">指定されたメソッドが存在しません。</span><span class="sxs-lookup"><span data-stu-id="8746b-117">The specified method does not exist.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="8746b-118">0x80041006</span><span class="sxs-lookup"><span data-stu-id="8746b-118">0x80041006</span></span> | <span data-ttu-id="8746b-119">操作を完了するのに十分なメモリがありません。</span><span class="sxs-lookup"><span data-stu-id="8746b-119">There is not enough memory to complete the operation.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="8746b-120">0</span><span class="sxs-lookup"><span data-stu-id="8746b-120">0</span></span> | <span data-ttu-id="8746b-121">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="8746b-121">The function call was successful.</span></span>  |
+| `WBEM_E_NOT_FOUND` | <span data-ttu-id="8207f-116">0x80041002</span><span class="sxs-lookup"><span data-stu-id="8207f-116">0x80041002</span></span> | <span data-ttu-id="8207f-117">指定されたメソッドが存在しません。</span><span class="sxs-lookup"><span data-stu-id="8207f-117">The specified method does not exist.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="8207f-118">0x80041006</span><span class="sxs-lookup"><span data-stu-id="8207f-118">0x80041006</span></span> | <span data-ttu-id="8207f-119">操作を完了するのに十分なメモリがありません。</span><span class="sxs-lookup"><span data-stu-id="8207f-119">There is not enough memory to complete the operation.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="8207f-120">0</span><span class="sxs-lookup"><span data-stu-id="8207f-120">0</span></span> | <span data-ttu-id="8207f-121">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="8207f-121">The function call was successful.</span></span>  |
 
-## <a name="remarks"></a><span data-ttu-id="8746b-122">Remarks</span><span class="sxs-lookup"><span data-stu-id="8746b-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8207f-122">Remarks</span><span class="sxs-lookup"><span data-stu-id="8207f-122">Remarks</span></span>
 
-<span data-ttu-id="8746b-123">この関数の呼び出しをラップする、 [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod)メソッド。</span><span class="sxs-lookup"><span data-stu-id="8746b-123">This function wraps a call to the [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) method.</span></span>
+<span data-ttu-id="8207f-123">この関数の呼び出しをラップする、 [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod)メソッド。</span><span class="sxs-lookup"><span data-stu-id="8207f-123">This function wraps a call to the [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) method.</span></span>
 
-<span data-ttu-id="8746b-124">メソッドの削除はサポートされていません[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) CIM インスタンスを指すポインター。</span><span class="sxs-lookup"><span data-stu-id="8746b-124">Method deletion is not supported for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to CIM instances.</span></span>
+<span data-ttu-id="8207f-124">メソッドの削除はサポートされていません[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) CIM インスタンスを指すポインター。</span><span class="sxs-lookup"><span data-stu-id="8207f-124">Method deletion is not supported for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to CIM instances.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="8746b-125">要件</span><span class="sxs-lookup"><span data-stu-id="8746b-125">Requirements</span></span>  
- <span data-ttu-id="8746b-126">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8746b-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8207f-125">要件</span><span class="sxs-lookup"><span data-stu-id="8207f-125">Requirements</span></span>  
+ <span data-ttu-id="8207f-126">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8207f-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8746b-127">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="8746b-127">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="8207f-127">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="8207f-127">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="8746b-128">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="8746b-128">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="8207f-128">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="8207f-128">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8746b-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="8746b-129">See also</span></span>  
-[<span data-ttu-id="8746b-130">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="8746b-130">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="8207f-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="8207f-129">See also</span></span>  
+[<span data-ttu-id="8207f-130">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="8207f-130">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

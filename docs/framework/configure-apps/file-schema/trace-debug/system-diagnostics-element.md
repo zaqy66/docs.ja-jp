@@ -11,53 +11,53 @@ ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 35fe167beb53c27aa511e08507415a26b1749ca2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47156979"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193227"
 ---
-# <a name="ltsystemdiagnosticsgt-element"></a><span data-ttu-id="76970-102">&lt;system.diagnostics&gt;要素</span><span class="sxs-lookup"><span data-stu-id="76970-102">&lt;system.diagnostics&gt; Element</span></span>
-<span data-ttu-id="76970-103">メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。</span><span class="sxs-lookup"><span data-stu-id="76970-103">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>  
+# <a name="ltsystemdiagnosticsgt-element"></a><span data-ttu-id="6ee5d-102">&lt;system.diagnostics&gt;要素</span><span class="sxs-lookup"><span data-stu-id="6ee5d-102">&lt;system.diagnostics&gt; Element</span></span>
+<span data-ttu-id="6ee5d-103">メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-103">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>  
   
- <span data-ttu-id="76970-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="76970-104">\<configuration></span></span>  
-<span data-ttu-id="76970-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="76970-105">\<system.diagnostics></span></span>  
+ <span data-ttu-id="6ee5d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="6ee5d-104">\<configuration></span></span>  
+<span data-ttu-id="6ee5d-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="6ee5d-105">\<system.diagnostics></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="76970-106">構文</span><span class="sxs-lookup"><span data-stu-id="76970-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6ee5d-106">構文</span><span class="sxs-lookup"><span data-stu-id="6ee5d-106">Syntax</span></span>  
   
 ```xml  
 <system.diagnostics>   
 </system.diagnostics>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="76970-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="76970-107">Attributes and Elements</span></span>  
- <span data-ttu-id="76970-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="76970-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6ee5d-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="6ee5d-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="6ee5d-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="76970-109">属性</span><span class="sxs-lookup"><span data-stu-id="76970-109">Attributes</span></span>  
- <span data-ttu-id="76970-110">なし。</span><span class="sxs-lookup"><span data-stu-id="76970-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6ee5d-109">属性</span><span class="sxs-lookup"><span data-stu-id="6ee5d-109">Attributes</span></span>  
+ <span data-ttu-id="6ee5d-110">なし。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="76970-111">子要素</span><span class="sxs-lookup"><span data-stu-id="76970-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6ee5d-111">子要素</span><span class="sxs-lookup"><span data-stu-id="6ee5d-111">Child Elements</span></span>  
   
-|<span data-ttu-id="76970-112">要素</span><span class="sxs-lookup"><span data-stu-id="76970-112">Element</span></span>|<span data-ttu-id="76970-113">説明</span><span class="sxs-lookup"><span data-stu-id="76970-113">Description</span></span>|  
+|<span data-ttu-id="6ee5d-112">要素</span><span class="sxs-lookup"><span data-stu-id="6ee5d-112">Element</span></span>|<span data-ttu-id="6ee5d-113">説明</span><span class="sxs-lookup"><span data-stu-id="6ee5d-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="76970-114">\<assert></span><span class="sxs-lookup"><span data-stu-id="76970-114">\<assert></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|<span data-ttu-id="76970-115"><xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> メソッドの呼び出し時にメッセージ ボックスを表示するかどうかを指定し、メッセージの書き込み先のファイルの名前も指定します。</span><span class="sxs-lookup"><span data-stu-id="76970-115">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>|  
-|[<span data-ttu-id="76970-116">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="76970-116">\<performanceCounters></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|<span data-ttu-id="76970-117">パフォーマンス カウンターが共有するグローバル メモリのサイズを指定します。</span><span class="sxs-lookup"><span data-stu-id="76970-117">Specifies the size of the global memory shared by performance counters.</span></span>|  
-|[<span data-ttu-id="76970-118">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="76970-118">\<sharedListeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|<span data-ttu-id="76970-119">任意の source 要素または trace 要素が参照できるリスナーを含みます。</span><span class="sxs-lookup"><span data-stu-id="76970-119">Contains listeners that any source or trace element can reference.</span></span> <span data-ttu-id="76970-120">共有リスナーとして識別されたリスナーは、名前によってソースまたはトレースに追加できます。</span><span class="sxs-lookup"><span data-stu-id="76970-120">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>|  
-|[<span data-ttu-id="76970-121">\<sources></span><span class="sxs-lookup"><span data-stu-id="76970-121">\<sources></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|<span data-ttu-id="76970-122">トレース メッセージを開始するトレース ソースを指定します。</span><span class="sxs-lookup"><span data-stu-id="76970-122">Specifies trace sources that initiate tracing messages.</span></span>|  
-|[<span data-ttu-id="76970-123">\<switches></span><span class="sxs-lookup"><span data-stu-id="76970-123">\<switches></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|<span data-ttu-id="76970-124">トレース スイッチとトレース スイッチを設定するレベルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="76970-124">Contains trace switches and the levels where the trace switches are set.</span></span>|  
-|[<span data-ttu-id="76970-125">\<trace></span><span class="sxs-lookup"><span data-stu-id="76970-125">\<trace></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|<span data-ttu-id="76970-126">トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。</span><span class="sxs-lookup"><span data-stu-id="76970-126">Contains listeners that collect, store, and route tracing messages.</span></span>|  
+|[<span data-ttu-id="6ee5d-114">\<assert></span><span class="sxs-lookup"><span data-stu-id="6ee5d-114">\<assert></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|<span data-ttu-id="6ee5d-115"><xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> メソッドの呼び出し時にメッセージ ボックスを表示するかどうかを指定し、メッセージの書き込み先のファイルの名前も指定します。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-115">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>|  
+|[<span data-ttu-id="6ee5d-116">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="6ee5d-116">\<performanceCounters></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|<span data-ttu-id="6ee5d-117">パフォーマンス カウンターが共有するグローバル メモリのサイズを指定します。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-117">Specifies the size of the global memory shared by performance counters.</span></span>|  
+|[<span data-ttu-id="6ee5d-118">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="6ee5d-118">\<sharedListeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|<span data-ttu-id="6ee5d-119">任意の source 要素または trace 要素が参照できるリスナーを含みます。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-119">Contains listeners that any source or trace element can reference.</span></span> <span data-ttu-id="6ee5d-120">共有リスナーとして識別されたリスナーは、名前によってソースまたはトレースに追加できます。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-120">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>|  
+|[<span data-ttu-id="6ee5d-121">\<sources></span><span class="sxs-lookup"><span data-stu-id="6ee5d-121">\<sources></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|<span data-ttu-id="6ee5d-122">トレース メッセージを開始するトレース ソースを指定します。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-122">Specifies trace sources that initiate tracing messages.</span></span>|  
+|[<span data-ttu-id="6ee5d-123">\<switches></span><span class="sxs-lookup"><span data-stu-id="6ee5d-123">\<switches></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|<span data-ttu-id="6ee5d-124">トレース スイッチとトレース スイッチを設定するレベルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-124">Contains trace switches and the levels where the trace switches are set.</span></span>|  
+|[<span data-ttu-id="6ee5d-125">\<trace></span><span class="sxs-lookup"><span data-stu-id="6ee5d-125">\<trace></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|<span data-ttu-id="6ee5d-126">トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-126">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="76970-127">親要素</span><span class="sxs-lookup"><span data-stu-id="76970-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6ee5d-127">親要素</span><span class="sxs-lookup"><span data-stu-id="6ee5d-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="76970-128">要素</span><span class="sxs-lookup"><span data-stu-id="76970-128">Element</span></span>|<span data-ttu-id="76970-129">説明</span><span class="sxs-lookup"><span data-stu-id="76970-129">Description</span></span>|  
+|<span data-ttu-id="6ee5d-128">要素</span><span class="sxs-lookup"><span data-stu-id="6ee5d-128">Element</span></span>|<span data-ttu-id="6ee5d-129">説明</span><span class="sxs-lookup"><span data-stu-id="6ee5d-129">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="76970-130">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="76970-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`configuration`|<span data-ttu-id="6ee5d-130">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="76970-131">例</span><span class="sxs-lookup"><span data-stu-id="76970-131">Example</span></span>  
- <span data-ttu-id="76970-132">次の例では、トレース スイッチおよびトレース リスナーを埋め込む方法を示しています、  **\<system.diagnostics >** 要素。</span><span class="sxs-lookup"><span data-stu-id="76970-132">The following example shows how to embed a trace switch and a trace listener inside the **\<system.diagnostics>** element.</span></span> <span data-ttu-id="76970-133">`General`トレース スイッチに設定されている、<xref:System.Diagnostics.TraceLevel>レベル。</span><span class="sxs-lookup"><span data-stu-id="76970-133">The `General` trace switch is set to the <xref:System.Diagnostics.TraceLevel> level.</span></span> <span data-ttu-id="76970-134">トレース リスナー`myListener`という名前のファイルを作成します。`MyListener.log`し、ファイルに出力を書き込みます。</span><span class="sxs-lookup"><span data-stu-id="76970-134">The trace listener `myListener` creates a file called `MyListener.log` and writes the output to the file.</span></span>  
+## <a name="example"></a><span data-ttu-id="6ee5d-131">例</span><span class="sxs-lookup"><span data-stu-id="6ee5d-131">Example</span></span>  
+ <span data-ttu-id="6ee5d-132">次の例では、トレース スイッチおよびトレース リスナーを埋め込む方法を示しています、  **\<system.diagnostics >** 要素。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-132">The following example shows how to embed a trace switch and a trace listener inside the **\<system.diagnostics>** element.</span></span> <span data-ttu-id="6ee5d-133">`General`トレース スイッチに設定されている、<xref:System.Diagnostics.TraceLevel>レベル。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-133">The `General` trace switch is set to the <xref:System.Diagnostics.TraceLevel> level.</span></span> <span data-ttu-id="6ee5d-134">トレース リスナー`myListener`という名前のファイルを作成します。`MyListener.log`し、ファイルに出力を書き込みます。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-134">The trace listener `myListener` creates a file called `MyListener.log` and writes the output to the file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="76970-135">.NET Framework バージョン 2.0 では、スイッチの値を指定するためにテキストを使用できます。</span><span class="sxs-lookup"><span data-stu-id="76970-135">In the .NET Framework version 2.0, you can use text to specify the value for a switch.</span></span> <span data-ttu-id="76970-136">たとえば、指定`true`の<xref:System.Diagnostics.BooleanSwitch>などの列挙値を表すテキストを使用または`Error`の<xref:System.Diagnostics.TraceSwitch>します。</span><span class="sxs-lookup"><span data-stu-id="76970-136">For example, you can specify `true` for a <xref:System.Diagnostics.BooleanSwitch> or use the text representing an enumeration value such as `Error` for a <xref:System.Diagnostics.TraceSwitch>.</span></span> <span data-ttu-id="76970-137">`<add name="myTraceSwitch" value="Error" />` という行は、`<add name="myTraceSwitch" value="1" />` と同じです。</span><span class="sxs-lookup"><span data-stu-id="76970-137">The line `<add name="myTraceSwitch" value="Error" />` is equivalent to `<add name="myTraceSwitch" value="1" />`.</span></span>  
+>  <span data-ttu-id="6ee5d-135">.NET Framework バージョン 2.0 では、スイッチの値を指定するためにテキストを使用できます。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-135">In the .NET Framework version 2.0, you can use text to specify the value for a switch.</span></span> <span data-ttu-id="6ee5d-136">たとえば、指定`true`の<xref:System.Diagnostics.BooleanSwitch>などの列挙値を表すテキストを使用または`Error`の<xref:System.Diagnostics.TraceSwitch>します。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-136">For example, you can specify `true` for a <xref:System.Diagnostics.BooleanSwitch> or use the text representing an enumeration value such as `Error` for a <xref:System.Diagnostics.TraceSwitch>.</span></span> <span data-ttu-id="6ee5d-137">`<add name="myTraceSwitch" value="Error" />` という行は、`<add name="myTraceSwitch" value="1" />` と同じです。</span><span class="sxs-lookup"><span data-stu-id="6ee5d-137">The line `<add name="myTraceSwitch" value="Error" />` is equivalent to `<add name="myTraceSwitch" value="1" />`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -74,7 +74,7 @@ ms.locfileid: "47156979"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="76970-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="76970-138">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6ee5d-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="6ee5d-138">See Also</span></span>  
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.Debug>  
- [<span data-ttu-id="76970-139">トレースおよびデバッグ設定のスキーマ</span><span class="sxs-lookup"><span data-stu-id="76970-139">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [<span data-ttu-id="6ee5d-139">トレースおよびデバッグ設定のスキーマ</span><span class="sxs-lookup"><span data-stu-id="6ee5d-139">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

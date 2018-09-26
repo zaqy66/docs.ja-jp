@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 31b8cd3b-3be5-4b6c-93f0-69d7aaf791d0
 author: BrucePerlerMS
 ms.openlocfilehash: 8cde88433b7d9a32a1822c6f723b349739a450a8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073490"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47202552"
 ---
-# <a name="transportsecuritybindingelement"></a><span data-ttu-id="6da0a-102">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="6da0a-102">TransportSecurityBindingElement</span></span>
-<span data-ttu-id="6da0a-103">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="6da0a-103">TransportSecurityBindingElement</span></span>  
+# <a name="transportsecuritybindingelement"></a><span data-ttu-id="455aa-102">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="455aa-102">TransportSecurityBindingElement</span></span>
+<span data-ttu-id="455aa-103">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="455aa-103">TransportSecurityBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6da0a-104">構文</span><span class="sxs-lookup"><span data-stu-id="6da0a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="455aa-104">構文</span><span class="sxs-lookup"><span data-stu-id="455aa-104">Syntax</span></span>  
   
 ```  
 class TransportSecurityBindingElement : SecurityBindingElement  
@@ -21,14 +21,14 @@ class TransportSecurityBindingElement : SecurityBindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="6da0a-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="6da0a-105">Methods</span></span>  
- <span data-ttu-id="6da0a-106">TransportSecurityBindingElement クラスは、SecurityBindingElement を継承しますが、追加のメソッドやプロパティを定義しません。</span><span class="sxs-lookup"><span data-stu-id="6da0a-106">The TransportSecurityBindingElement class inherits from SecurityBindingElement but does not define additional methods or properties.</span></span>  
+## <a name="methods"></a><span data-ttu-id="455aa-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="455aa-105">Methods</span></span>  
+ <span data-ttu-id="455aa-106">TransportSecurityBindingElement クラスは、SecurityBindingElement を継承しますが、追加のメソッドやプロパティを定義しません。</span><span class="sxs-lookup"><span data-stu-id="455aa-106">The TransportSecurityBindingElement class inherits from SecurityBindingElement but does not define additional methods or properties.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6da0a-107">要件</span><span class="sxs-lookup"><span data-stu-id="6da0a-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="455aa-107">要件</span><span class="sxs-lookup"><span data-stu-id="455aa-107">Requirements</span></span>  
   
-|<span data-ttu-id="6da0a-108">MOF</span><span class="sxs-lookup"><span data-stu-id="6da0a-108">MOF</span></span>|<span data-ttu-id="6da0a-109">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="6da0a-109">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="455aa-108">MOF</span><span class="sxs-lookup"><span data-stu-id="455aa-108">MOF</span></span>|<span data-ttu-id="455aa-109">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="455aa-109">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="6da0a-110">Namespace</span><span class="sxs-lookup"><span data-stu-id="6da0a-110">Namespace</span></span>|<span data-ttu-id="6da0a-111">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="6da0a-111">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="455aa-110">Namespace</span><span class="sxs-lookup"><span data-stu-id="455aa-110">Namespace</span></span>|<span data-ttu-id="455aa-111">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="455aa-111">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="6da0a-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="6da0a-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="455aa-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="455aa-112">See Also</span></span>  
  <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>

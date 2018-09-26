@@ -3,34 +3,33 @@ title: 1 秒あたりのセキュリティ検証と認証エラー
 ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 4836a5076401de2f7c3112b298cdadc0e0307962
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 01fb7afd363e85e9c9ac5625175f350c00f66f26
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45641060"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204493"
 ---
-# <a name="security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="10acc-102">1 秒あたりのセキュリティ検証と認証エラー</span><span class="sxs-lookup"><span data-stu-id="10acc-102">Security Validation and Authentication Failures Per Second</span></span>
-<span data-ttu-id="10acc-103">カウンター名 : 1 秒あたりのセキュリティ検証と認証エラー</span><span class="sxs-lookup"><span data-stu-id="10acc-103">Counter name: Security Validation and Authentication Failures Per Second.</span></span>  
+# <a name="security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="15203-102">1 秒あたりのセキュリティ検証と認証エラー</span><span class="sxs-lookup"><span data-stu-id="15203-102">Security Validation and Authentication Failures Per Second</span></span>
+<span data-ttu-id="15203-103">カウンター名 : 1 秒あたりのセキュリティ検証と認証エラー</span><span class="sxs-lookup"><span data-stu-id="15203-103">Counter name: Security Validation and Authentication Failures Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="10acc-104">説明</span><span class="sxs-lookup"><span data-stu-id="10acc-104">Description</span></span>  
- <span data-ttu-id="10acc-105">このカウンターは、"承認されていないセキュリティ呼び出し" カウンターでカウントの対象とならないセキュリティ上の問題が原因でメッセージが拒否されるたびにインクリメントされます。</span><span class="sxs-lookup"><span data-stu-id="10acc-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="10acc-106">この問題には、次のようなものがあります。</span><span class="sxs-lookup"><span data-stu-id="10acc-106">Such problems include:</span></span>  
+## <a name="description"></a><span data-ttu-id="15203-104">説明</span><span class="sxs-lookup"><span data-stu-id="15203-104">Description</span></span>  
+ <span data-ttu-id="15203-105">このカウンターは、"承認されていないセキュリティ呼び出し" カウンターでカウントの対象とならないセキュリティ上の問題が原因でメッセージが拒否されるたびにインクリメントされます。</span><span class="sxs-lookup"><span data-stu-id="15203-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="15203-106">この問題には、次のようなものがあります。</span><span class="sxs-lookup"><span data-stu-id="15203-106">Such problems include:</span></span>  
   
--   <span data-ttu-id="10acc-107">メッセージからクライアント トークンを読み取ることができない。</span><span class="sxs-lookup"><span data-stu-id="10acc-107">Client token cannot be read from the message.</span></span>  
+-   <span data-ttu-id="15203-107">メッセージからクライアント トークンを読み取ることができない。</span><span class="sxs-lookup"><span data-stu-id="15203-107">Client token cannot be read from the message.</span></span>  
   
--   <span data-ttu-id="10acc-108">クライアント トークンが認証に失敗した (例 : 無効なパスワード)。</span><span class="sxs-lookup"><span data-stu-id="10acc-108">Client token has failed authentication (for example, bad password).</span></span>  
+-   <span data-ttu-id="15203-108">クライアント トークンが認証に失敗した (例 : 無効なパスワード)。</span><span class="sxs-lookup"><span data-stu-id="15203-108">Client token has failed authentication (for example, bad password).</span></span>  
   
--   <span data-ttu-id="10acc-109">署名の検証に失敗した (例 : メッセージが改ざんされた)。</span><span class="sxs-lookup"><span data-stu-id="10acc-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
+-   <span data-ttu-id="15203-109">署名の検証に失敗した (例 : メッセージが改ざんされた)。</span><span class="sxs-lookup"><span data-stu-id="15203-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
   
--   <span data-ttu-id="10acc-110">メッセージが以前のメッセージと重複する。この現象はリプレイ攻撃中に発生することがあります。</span><span class="sxs-lookup"><span data-stu-id="10acc-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
+-   <span data-ttu-id="15203-110">メッセージが以前のメッセージと重複する。この現象はリプレイ攻撃中に発生することがあります。</span><span class="sxs-lookup"><span data-stu-id="15203-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
--   <span data-ttu-id="10acc-111">復号化に失敗した。</span><span class="sxs-lookup"><span data-stu-id="10acc-111">A decryption failure has occurred.</span></span>  
+-   <span data-ttu-id="15203-111">復号化に失敗した。</span><span class="sxs-lookup"><span data-stu-id="15203-111">A decryption failure has occurred.</span></span>  
   
--   <span data-ttu-id="10acc-112">一部の必須要素 (タイムスタンプ、暗号化データ ブロックなど) がメッセージにない。</span><span class="sxs-lookup"><span data-stu-id="10acc-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
+-   <span data-ttu-id="15203-112">一部の必須要素 (タイムスタンプ、暗号化データ ブロックなど) がメッセージにない。</span><span class="sxs-lookup"><span data-stu-id="15203-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
--   <span data-ttu-id="10acc-113">TLSNEGO/SPNEGO ハンドシェイク中にエラーが発生した。</span><span class="sxs-lookup"><span data-stu-id="10acc-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>  
+-   <span data-ttu-id="15203-113">TLSNEGO/SPNEGO ハンドシェイク中にエラーが発生した。</span><span class="sxs-lookup"><span data-stu-id="15203-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>  
   
- <span data-ttu-id="10acc-114">このカウンターは、パフォーマンス カウンター型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)、次の数式を使用して、その値が計算されます。</span><span class="sxs-lookup"><span data-stu-id="10acc-114">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula:</span></span>  
+ <span data-ttu-id="15203-114">このカウンターは、パフォーマンス カウンター型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)、次の数式を使用して、その値が計算されます。</span><span class="sxs-lookup"><span data-stu-id="15203-114">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula:</span></span>  
   
- <span data-ttu-id="10acc-115">(N1-N0)/((D1-D0)/F)</span><span class="sxs-lookup"><span data-stu-id="10acc-115">(N1-N0)/((D1-D0)/F)</span></span>
+ <span data-ttu-id="15203-115">(N1-N0)/((D1-D0)/F)</span><span class="sxs-lookup"><span data-stu-id="15203-115">(N1-N0)/((D1-D0)/F)</span></span>

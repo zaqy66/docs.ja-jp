@@ -11,54 +11,54 @@ ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 25663774c639e9fea13ced54a9aa7f456922fa1a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085707"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209939"
 ---
-# <a name="ltsystemnetgt-element-network-settings"></a><span data-ttu-id="039d9-102">&lt;system.Net&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="039d9-102">&lt;system.Net&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="039d9-103">.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="039d9-103">Contains settings that specify how the .NET Framework connects to the network.</span></span>  
+# <a name="ltsystemnetgt-element-network-settings"></a><span data-ttu-id="0e253-102">&lt;system.Net&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="0e253-102">&lt;system.Net&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="0e253-103">.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="0e253-103">Contains settings that specify how the .NET Framework connects to the network.</span></span>  
   
- <span data-ttu-id="039d9-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="039d9-104">\<configuration></span></span>  
-<span data-ttu-id="039d9-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="039d9-105">\<system.net></span></span>  
+ <span data-ttu-id="0e253-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0e253-104">\<configuration></span></span>  
+<span data-ttu-id="0e253-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="0e253-105">\<system.net></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="039d9-106">構文</span><span class="sxs-lookup"><span data-stu-id="039d9-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0e253-106">構文</span><span class="sxs-lookup"><span data-stu-id="0e253-106">Syntax</span></span>  
   
 ```xml  
 <system.net>   
 </system.net>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="039d9-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="039d9-107">Attributes and Elements</span></span>  
- <span data-ttu-id="039d9-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="039d9-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0e253-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="0e253-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="0e253-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="0e253-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="039d9-109">属性</span><span class="sxs-lookup"><span data-stu-id="039d9-109">Attributes</span></span>  
- <span data-ttu-id="039d9-110">なし。</span><span class="sxs-lookup"><span data-stu-id="039d9-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0e253-109">属性</span><span class="sxs-lookup"><span data-stu-id="0e253-109">Attributes</span></span>  
+ <span data-ttu-id="0e253-110">なし。</span><span class="sxs-lookup"><span data-stu-id="0e253-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="039d9-111">子要素</span><span class="sxs-lookup"><span data-stu-id="039d9-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0e253-111">子要素</span><span class="sxs-lookup"><span data-stu-id="0e253-111">Child Elements</span></span>  
   
-|<span data-ttu-id="039d9-112">**要素**</span><span class="sxs-lookup"><span data-stu-id="039d9-112">**Element**</span></span>|<span data-ttu-id="039d9-113">**説明**</span><span class="sxs-lookup"><span data-stu-id="039d9-113">**Description**</span></span>|  
+|<span data-ttu-id="0e253-112">**要素**</span><span class="sxs-lookup"><span data-stu-id="0e253-112">**Element**</span></span>|<span data-ttu-id="0e253-113">**説明**</span><span class="sxs-lookup"><span data-stu-id="0e253-113">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="039d9-114">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="039d9-114">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="039d9-115">インターネット要求の認証に使用されるモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="039d9-115">Specifies modules used to authenticate Internet requests.</span></span>|  
-|[<span data-ttu-id="039d9-116">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="039d9-116">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="039d9-117">インターネット ホストへの接続の最大数を指定します。</span><span class="sxs-lookup"><span data-stu-id="039d9-117">Specifies the maximum number of connections to an Internet host.</span></span>|  
-|[<span data-ttu-id="039d9-118">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="039d9-118">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="039d9-119">ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。</span><span class="sxs-lookup"><span data-stu-id="039d9-119">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
-|[<span data-ttu-id="039d9-120">mailSettings</span><span class="sxs-lookup"><span data-stu-id="039d9-120">mailSettings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="039d9-121">簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。</span><span class="sxs-lookup"><span data-stu-id="039d9-121">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
-|[<span data-ttu-id="039d9-122">requestCaching</span><span class="sxs-lookup"><span data-stu-id="039d9-122">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="039d9-123">ネットワーク要求のキャッシュ メカニズムを制御します。</span><span class="sxs-lookup"><span data-stu-id="039d9-123">Controls the caching mechanism for network requests.</span></span>|  
-|[<span data-ttu-id="039d9-124">settings</span><span class="sxs-lookup"><span data-stu-id="039d9-124">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="039d9-125">クラスの基本的なネットワーク オプションを構成、<xref:System.Net>および関連子名前空間。</span><span class="sxs-lookup"><span data-stu-id="039d9-125">Configures basic network options for classes in the <xref:System.Net> and related child namespaces.</span></span>|  
-|[<span data-ttu-id="039d9-126">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="039d9-126">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="039d9-127">使用してインターネット ホストから情報を要求するモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="039d9-127">Specifies modules to use to request information from Internet hosts.</span></span>|  
+|[<span data-ttu-id="0e253-114">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="0e253-114">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="0e253-115">インターネット要求の認証に使用されるモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="0e253-115">Specifies modules used to authenticate Internet requests.</span></span>|  
+|[<span data-ttu-id="0e253-116">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="0e253-116">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="0e253-117">インターネット ホストへの接続の最大数を指定します。</span><span class="sxs-lookup"><span data-stu-id="0e253-117">Specifies the maximum number of connections to an Internet host.</span></span>|  
+|[<span data-ttu-id="0e253-118">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="0e253-118">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="0e253-119">ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。</span><span class="sxs-lookup"><span data-stu-id="0e253-119">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
+|[<span data-ttu-id="0e253-120">mailSettings</span><span class="sxs-lookup"><span data-stu-id="0e253-120">mailSettings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="0e253-121">簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。</span><span class="sxs-lookup"><span data-stu-id="0e253-121">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
+|[<span data-ttu-id="0e253-122">requestCaching</span><span class="sxs-lookup"><span data-stu-id="0e253-122">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="0e253-123">ネットワーク要求のキャッシュ メカニズムを制御します。</span><span class="sxs-lookup"><span data-stu-id="0e253-123">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="0e253-124">settings</span><span class="sxs-lookup"><span data-stu-id="0e253-124">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="0e253-125">クラスの基本的なネットワーク オプションを構成、<xref:System.Net>および関連子名前空間。</span><span class="sxs-lookup"><span data-stu-id="0e253-125">Configures basic network options for classes in the <xref:System.Net> and related child namespaces.</span></span>|  
+|[<span data-ttu-id="0e253-126">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="0e253-126">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="0e253-127">使用してインターネット ホストから情報を要求するモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="0e253-127">Specifies modules to use to request information from Internet hosts.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="039d9-128">親要素</span><span class="sxs-lookup"><span data-stu-id="039d9-128">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0e253-128">親要素</span><span class="sxs-lookup"><span data-stu-id="0e253-128">Parent Elements</span></span>  
   
-|<span data-ttu-id="039d9-129">**要素**</span><span class="sxs-lookup"><span data-stu-id="039d9-129">**Element**</span></span>|<span data-ttu-id="039d9-130">**説明**</span><span class="sxs-lookup"><span data-stu-id="039d9-130">**Description**</span></span>|  
+|<span data-ttu-id="0e253-129">**要素**</span><span class="sxs-lookup"><span data-stu-id="0e253-129">**Element**</span></span>|<span data-ttu-id="0e253-130">**説明**</span><span class="sxs-lookup"><span data-stu-id="0e253-130">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="039d9-131">構成</span><span class="sxs-lookup"><span data-stu-id="039d9-131">configuration</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="039d9-132">すべての名前空間の設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="039d9-132">Contains settings for all namespaces.</span></span>|  
+|[<span data-ttu-id="0e253-131">構成</span><span class="sxs-lookup"><span data-stu-id="0e253-131">configuration</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="0e253-132">すべての名前空間の設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="0e253-132">Contains settings for all namespaces.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="039d9-133">Remarks</span><span class="sxs-lookup"><span data-stu-id="039d9-133">Remarks</span></span>  
- <span data-ttu-id="039d9-134">[ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)要素には内のクラスの設定が含まれています、<xref:System.Net>および関連子名前空間。</span><span class="sxs-lookup"><span data-stu-id="039d9-134">The [\<system.net>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element contains settings for classes in the <xref:System.Net> and related child namespaces.</span></span> <span data-ttu-id="039d9-135">設定は、認証モジュール、接続の管理、メールの設定、プロキシ サーバー、およびインターネット ホストから情報を受け取るためのインターネット要求モジュールを構成します。</span><span class="sxs-lookup"><span data-stu-id="039d9-135">The settings configure authentication modules, connection management, mail settings, the proxy server, and Internet request modules for receiving information from Internet hosts.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0e253-133">Remarks</span><span class="sxs-lookup"><span data-stu-id="0e253-133">Remarks</span></span>  
+ <span data-ttu-id="0e253-134">[ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)要素には内のクラスの設定が含まれています、<xref:System.Net>および関連子名前空間。</span><span class="sxs-lookup"><span data-stu-id="0e253-134">The [\<system.net>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element contains settings for classes in the <xref:System.Net> and related child namespaces.</span></span> <span data-ttu-id="0e253-135">設定は、認証モジュール、接続の管理、メールの設定、プロキシ サーバー、およびインターネット ホストから情報を受け取るためのインターネット要求モジュールを構成します。</span><span class="sxs-lookup"><span data-stu-id="0e253-135">The settings configure authentication modules, connection management, mail settings, the proxy server, and Internet request modules for receiving information from Internet hosts.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="039d9-136">例</span><span class="sxs-lookup"><span data-stu-id="039d9-136">Example</span></span>  
- <span data-ttu-id="039d9-137">次の例で使用される一般的な構成を示しています。<xref:System.Net>クラス。</span><span class="sxs-lookup"><span data-stu-id="039d9-137">The following example shows a typical configuration used by <xref:System.Net> classes.</span></span>  
+## <a name="example"></a><span data-ttu-id="0e253-136">例</span><span class="sxs-lookup"><span data-stu-id="0e253-136">Example</span></span>  
+ <span data-ttu-id="0e253-137">次の例で使用される一般的な構成を示しています。<xref:System.Net>クラス。</span><span class="sxs-lookup"><span data-stu-id="0e253-137">The following example shows a typical configuration used by <xref:System.Net> classes.</span></span>  
   
 ```xml  
 <configuration>  
@@ -94,5 +94,5 @@ ms.locfileid: "47085707"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="039d9-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="039d9-138">See Also</span></span>  
- [<span data-ttu-id="039d9-139">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="039d9-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="0e253-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="0e253-138">See Also</span></span>  
+ [<span data-ttu-id="0e253-139">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="0e253-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

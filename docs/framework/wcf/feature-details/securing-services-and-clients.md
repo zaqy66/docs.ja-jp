@@ -6,53 +6,53 @@ helpviewer_keywords:
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 author: BrucePerlerMS
 ms.openlocfilehash: 111a0dd003b0427490b498f895a7e526bafb52b7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157598"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198235"
 ---
-# <a name="securing-services-and-clients"></a><span data-ttu-id="dcde8-102">サービスおよびクライアントのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="dcde8-102">Securing Services and Clients</span></span>
-<span data-ttu-id="dcde8-103">このセクションの情報は、Windows Communication Foundation (WCF) のセキュリティのプログラミングについて説明します。</span><span class="sxs-lookup"><span data-stu-id="dcde8-103">The information in this section focuses on programming security in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="dcde8-104">一般に、これには、システムが提供する適切なバインディングを選択すること、セキュリティ要素のプロパティを適切に設定すること、サービス側/クライアント側で使う資格情報の検索方法にまつわる、サービスの動作に関するプロパティを適切に設定することなどが含まれます。</span><span class="sxs-lookup"><span data-stu-id="dcde8-104">Generally, this includes selecting an appropriate system-provided binding, setting the properties of the security element, and then setting properties of the service behaviors that govern how credentials are retrieved for use by either the service or the client.</span></span> <span data-ttu-id="dcde8-105">ように、これらの手法はほとんどのシナリオでは、ほとんどのユーザーのセキュリティ要件をカバー[一般的なセキュリティ シナリオ](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)します。</span><span class="sxs-lookup"><span data-stu-id="dcde8-105">These techniques cover the security requirements of most users for most scenarios, as shown in [Common Security Scenarios](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md).</span></span> <span data-ttu-id="dcde8-106">実際のシナリオでは、多くの機能が必要とする場合が初めて表示[カスタム バインドを使用したセキュリティ機能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); ソリューションは、明らかなかどうかは、次を参照してください。[拡張セキュリティ](../../../../docs/framework/wcf/extending/extending-security.md)。</span><span class="sxs-lookup"><span data-stu-id="dcde8-106">If your scenario requires more capabilities, first see [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); if a solution is not apparent, see [Extending Security](../../../../docs/framework/wcf/extending/extending-security.md).</span></span> <span data-ttu-id="dcde8-107">作成 (またはとの相互運用) に多様なクレームを使用するシステムでは、トピックを参照して[承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)します。</span><span class="sxs-lookup"><span data-stu-id="dcde8-107">If you are creating (or interoperating with) a system that uses rich claims, see the topics in [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).</span></span>  
+# <a name="securing-services-and-clients"></a><span data-ttu-id="cbc5a-102">サービスおよびクライアントのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="cbc5a-102">Securing Services and Clients</span></span>
+<span data-ttu-id="cbc5a-103">このセクションの情報は、Windows Communication Foundation (WCF) のセキュリティのプログラミングについて説明します。</span><span class="sxs-lookup"><span data-stu-id="cbc5a-103">The information in this section focuses on programming security in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="cbc5a-104">一般に、これには、システムが提供する適切なバインディングを選択すること、セキュリティ要素のプロパティを適切に設定すること、サービス側/クライアント側で使う資格情報の検索方法にまつわる、サービスの動作に関するプロパティを適切に設定することなどが含まれます。</span><span class="sxs-lookup"><span data-stu-id="cbc5a-104">Generally, this includes selecting an appropriate system-provided binding, setting the properties of the security element, and then setting properties of the service behaviors that govern how credentials are retrieved for use by either the service or the client.</span></span> <span data-ttu-id="cbc5a-105">ように、これらの手法はほとんどのシナリオでは、ほとんどのユーザーのセキュリティ要件をカバー[一般的なセキュリティ シナリオ](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)します。</span><span class="sxs-lookup"><span data-stu-id="cbc5a-105">These techniques cover the security requirements of most users for most scenarios, as shown in [Common Security Scenarios](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md).</span></span> <span data-ttu-id="cbc5a-106">実際のシナリオでは、多くの機能が必要とする場合が初めて表示[カスタム バインドを使用したセキュリティ機能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); ソリューションは、明らかなかどうかは、次を参照してください。[拡張セキュリティ](../../../../docs/framework/wcf/extending/extending-security.md)。</span><span class="sxs-lookup"><span data-stu-id="cbc5a-106">If your scenario requires more capabilities, first see [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); if a solution is not apparent, see [Extending Security](../../../../docs/framework/wcf/extending/extending-security.md).</span></span> <span data-ttu-id="cbc5a-107">作成 (またはとの相互運用) に多様なクレームを使用するシステムでは、トピックを参照して[承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)します。</span><span class="sxs-lookup"><span data-stu-id="cbc5a-107">If you are creating (or interoperating with) a system that uses rich claims, see the topics in [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dcde8-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="dcde8-108">In This Section</span></span>  
- [<span data-ttu-id="dcde8-109">WCF セキュリティのプログラミング</span><span class="sxs-lookup"><span data-stu-id="dcde8-109">Programming WCF Security</span></span>](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- <span data-ttu-id="dcde8-110">メッセージを保護するために使うプログラミング モデルの概要</span><span class="sxs-lookup"><span data-stu-id="dcde8-110">An overview of the programming model used to secure messages.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="cbc5a-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="cbc5a-108">In This Section</span></span>  
+ [<span data-ttu-id="cbc5a-109">WCF セキュリティのプログラミング</span><span class="sxs-lookup"><span data-stu-id="cbc5a-109">Programming WCF Security</span></span>](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
+ <span data-ttu-id="cbc5a-110">メッセージを保護するために使うプログラミング モデルの概要</span><span class="sxs-lookup"><span data-stu-id="cbc5a-110">An overview of the programming model used to secure messages.</span></span>  
   
- [<span data-ttu-id="dcde8-111">トランスポート セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="dcde8-111">Transport Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- <span data-ttu-id="dcde8-112">トランスポート層を介してやり取りするメッセージを保護する方法の概要</span><span class="sxs-lookup"><span data-stu-id="dcde8-112">An overview of how to secure messages through the transport layer.</span></span>  
+ [<span data-ttu-id="cbc5a-111">トランスポート セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="cbc5a-111">Transport Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ <span data-ttu-id="cbc5a-112">トランスポート層を介してやり取りするメッセージを保護する方法の概要</span><span class="sxs-lookup"><span data-stu-id="cbc5a-112">An overview of how to secure messages through the transport layer.</span></span>  
   
- [<span data-ttu-id="dcde8-113">メッセージのセキュリティ</span><span class="sxs-lookup"><span data-stu-id="dcde8-113">Message Security</span></span>](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- <span data-ttu-id="dcde8-114">Windows Communication Foundation (WCF) メッセージ レベルのセキュリティを使用する理由をまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="dcde8-114">Summarizes reasons for using message-level security in Windows Communication Foundation (WCF).</span></span>  
+ [<span data-ttu-id="cbc5a-113">メッセージのセキュリティ</span><span class="sxs-lookup"><span data-stu-id="cbc5a-113">Message Security</span></span>](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ <span data-ttu-id="cbc5a-114">Windows Communication Foundation (WCF) メッセージ レベルのセキュリティを使用する理由をまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="cbc5a-114">Summarizes reasons for using message-level security in Windows Communication Foundation (WCF).</span></span>  
   
- [<span data-ttu-id="dcde8-115">セキュリティで保護されたセッション</span><span class="sxs-lookup"><span data-stu-id="dcde8-115">Secure Sessions</span></span>](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
- <span data-ttu-id="dcde8-116">WCF のセッションをセキュリティで保護するときに必要な考慮事項について説明します。</span><span class="sxs-lookup"><span data-stu-id="dcde8-116">A discussion of the considerations required when securing a WCF session.</span></span>  
+ [<span data-ttu-id="cbc5a-115">セキュリティで保護されたセッション</span><span class="sxs-lookup"><span data-stu-id="cbc5a-115">Secure Sessions</span></span>](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
+ <span data-ttu-id="cbc5a-116">WCF のセッションをセキュリティで保護するときに必要な考慮事項について説明します。</span><span class="sxs-lookup"><span data-stu-id="cbc5a-116">A discussion of the considerations required when securing a WCF session.</span></span>  
   
- [<span data-ttu-id="dcde8-117">証明書の使用</span><span class="sxs-lookup"><span data-stu-id="dcde8-117">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- <span data-ttu-id="dcde8-118">X.509 証明書を使用する際に必要となる主なタスクの解説</span><span class="sxs-lookup"><span data-stu-id="dcde8-118">An explanation of some of the common tasks required when using X.509 certificates.</span></span>  
+ [<span data-ttu-id="cbc5a-117">証明書の使用</span><span class="sxs-lookup"><span data-stu-id="cbc5a-117">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ <span data-ttu-id="cbc5a-118">X.509 証明書を使用する際に必要となる主なタスクの解説</span><span class="sxs-lookup"><span data-stu-id="cbc5a-118">An explanation of some of the common tasks required when using X.509 certificates.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="dcde8-119">参照</span><span class="sxs-lookup"><span data-stu-id="dcde8-119">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cbc5a-119">参照</span><span class="sxs-lookup"><span data-stu-id="cbc5a-119">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Security>  
   
-## <a name="related-sections"></a><span data-ttu-id="dcde8-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="dcde8-120">Related Sections</span></span>  
- [<span data-ttu-id="dcde8-121">セキュリティの概念</span><span class="sxs-lookup"><span data-stu-id="dcde8-121">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+## <a name="related-sections"></a><span data-ttu-id="cbc5a-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="cbc5a-120">Related Sections</span></span>  
+ [<span data-ttu-id="cbc5a-121">セキュリティの概念</span><span class="sxs-lookup"><span data-stu-id="cbc5a-121">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
   
- [<span data-ttu-id="dcde8-122">セキュリティの拡張</span><span class="sxs-lookup"><span data-stu-id="dcde8-122">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [<span data-ttu-id="cbc5a-122">セキュリティの拡張</span><span class="sxs-lookup"><span data-stu-id="cbc5a-122">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
   
- [<span data-ttu-id="dcde8-123">一般的なセキュリティ シナリオ</span><span class="sxs-lookup"><span data-stu-id="dcde8-123">Common Security Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ [<span data-ttu-id="cbc5a-123">一般的なセキュリティ シナリオ</span><span class="sxs-lookup"><span data-stu-id="cbc5a-123">Common Security Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
   
- [<span data-ttu-id="dcde8-124">バインディングとセキュリティ</span><span class="sxs-lookup"><span data-stu-id="dcde8-124">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [<span data-ttu-id="cbc5a-124">バインディングとセキュリティ</span><span class="sxs-lookup"><span data-stu-id="cbc5a-124">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
- [<span data-ttu-id="dcde8-125">カスタム バインドを使用したセキュリティ機能</span><span class="sxs-lookup"><span data-stu-id="dcde8-125">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="cbc5a-125">カスタム バインドを使用したセキュリティ機能</span><span class="sxs-lookup"><span data-stu-id="cbc5a-125">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
   
- [<span data-ttu-id="dcde8-126">セキュリティの拡張</span><span class="sxs-lookup"><span data-stu-id="dcde8-126">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [<span data-ttu-id="cbc5a-126">セキュリティの拡張</span><span class="sxs-lookup"><span data-stu-id="cbc5a-126">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
   
- [<span data-ttu-id="dcde8-127">承認</span><span class="sxs-lookup"><span data-stu-id="dcde8-127">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [<span data-ttu-id="cbc5a-127">承認</span><span class="sxs-lookup"><span data-stu-id="cbc5a-127">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a><span data-ttu-id="dcde8-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="dcde8-128">See Also</span></span>  
- [<span data-ttu-id="dcde8-129">基本的な WCF プログラミング</span><span class="sxs-lookup"><span data-stu-id="dcde8-129">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [<span data-ttu-id="dcde8-130">Windows Server App Fabric のセキュリティ モデル</span><span class="sxs-lookup"><span data-stu-id="dcde8-130">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="cbc5a-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="cbc5a-128">See Also</span></span>  
+ [<span data-ttu-id="cbc5a-129">基本的な WCF プログラミング</span><span class="sxs-lookup"><span data-stu-id="cbc5a-129">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="cbc5a-130">Windows Server App Fabric のセキュリティ モデル</span><span class="sxs-lookup"><span data-stu-id="cbc5a-130">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

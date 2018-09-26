@@ -5,26 +5,26 @@ helpviewer_keywords:
 - IEnumRAWINPUTDEVICE interface [WPF]
 ms.assetid: 88c8b389-a48b-46b9-b895-8ed7b1e26fea
 ms.openlocfilehash: e0e5a112b7444872dd74cb70bb044ae233334d2a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47076903"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204678"
 ---
-# <a name="ienumrawinputdevice"></a><span data-ttu-id="b61e1-102">IEnumRAWINPUTDEVICE</span><span class="sxs-lookup"><span data-stu-id="b61e1-102">IEnumRAWINPUTDEVICE</span></span>
-<span data-ttu-id="b61e1-103">このインターフェイスは、未加工入力デバイスを列挙し、 PresentationHost.exe でのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="b61e1-103">This interface enumerates the raw input devices, and is only used by PresentationHost.exe.</span></span>  
+# <a name="ienumrawinputdevice"></a><span data-ttu-id="563be-102">IEnumRAWINPUTDEVICE</span><span class="sxs-lookup"><span data-stu-id="563be-102">IEnumRAWINPUTDEVICE</span></span>
+<span data-ttu-id="563be-103">このインターフェイスは、未加工入力デバイスを列挙し、 PresentationHost.exe でのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="563be-103">This interface enumerates the raw input devices, and is only used by PresentationHost.exe.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b61e1-104">この API は、ローカル クライアント コンピューターでの使用のみを目的とし、サポートされています。</span><span class="sxs-lookup"><span data-stu-id="b61e1-104">This API is only intended and supported for use on the local client machine</span></span>  
+>  <span data-ttu-id="563be-104">この API は、ローカル クライアント コンピューターでの使用のみを目的とし、サポートされています。</span><span class="sxs-lookup"><span data-stu-id="563be-104">This API is only intended and supported for use on the local client machine</span></span>  
   
-## <a name="members"></a><span data-ttu-id="b61e1-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="b61e1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="563be-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="563be-105">Members</span></span>  
   
-|<span data-ttu-id="b61e1-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="b61e1-106">Member</span></span>|<span data-ttu-id="b61e1-107">説明</span><span class="sxs-lookup"><span data-stu-id="b61e1-107">Description</span></span>|  
+|<span data-ttu-id="563be-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="563be-106">Member</span></span>|<span data-ttu-id="563be-107">説明</span><span class="sxs-lookup"><span data-stu-id="563be-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b61e1-108">IEnumRAWINPUTDEVIC:Next</span><span class="sxs-lookup"><span data-stu-id="b61e1-108">IEnumRAWINPUTDEVIC:Next</span></span>](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-next.md)|<span data-ttu-id="b61e1-109">次の `celt` 要素 (つまり RAWINPUTDEVICE 構造体) を、列挙子の一覧で列挙するとともに、それを `rgelt` で列挙された要素の実際の数とともに `pceltFetched` で返します。</span><span class="sxs-lookup"><span data-stu-id="b61e1-109">Enumerates the next `celt` elements (that is, RAWINPUTDEVICE structures) in the enumerator's list, returning them in `rgelt` along with the actual number of enumerated elements in `pceltFetched`.</span></span>|  
-|[<span data-ttu-id="b61e1-110">IEnumRAWINPUTDEVIC:Skip</span><span class="sxs-lookup"><span data-stu-id="b61e1-110">IEnumRAWINPUTDEVIC:Skip</span></span>](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-skip.md)|<span data-ttu-id="b61e1-111">列挙子は、[次へ] をスキップするように指示します`celt`列挙体の要素に、[次へ] を呼び出せるように[IEnumRAWINPUTDEVIC:Next](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-next.md)それらの要素は返されません。</span><span class="sxs-lookup"><span data-stu-id="b61e1-111">Instructs the enumerator to skip the next `celt` elements in the enumeration so that the next call to [IEnumRAWINPUTDEVIC:Next](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-next.md) will not return those elements.</span></span>|  
-|[<span data-ttu-id="b61e1-112">IEnumRAWINPUTDEVIC:Reset</span><span class="sxs-lookup"><span data-stu-id="b61e1-112">IEnumRAWINPUTDEVIC:Reset</span></span>](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-reset.md)|<span data-ttu-id="b61e1-113">列挙のシーケンスを最初にリセットします。</span><span class="sxs-lookup"><span data-stu-id="b61e1-113">Resets the enumeration sequence to the beginning.</span></span>|  
-|[<span data-ttu-id="b61e1-114">IEnumRAWINPUTDEVIC:Clone</span><span class="sxs-lookup"><span data-stu-id="b61e1-114">IEnumRAWINPUTDEVIC:Clone</span></span>](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-clone.md)|<span data-ttu-id="b61e1-115">同じリストを反復処理するため、現在の列挙子と同じ状態の別の未加工入力デバイスの列挙子を作成します。</span><span class="sxs-lookup"><span data-stu-id="b61e1-115">Creates another raw input device enumerator with the same state as the current enumerator to iterate over the same list.</span></span>|  
+|[<span data-ttu-id="563be-108">IEnumRAWINPUTDEVIC:Next</span><span class="sxs-lookup"><span data-stu-id="563be-108">IEnumRAWINPUTDEVIC:Next</span></span>](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-next.md)|<span data-ttu-id="563be-109">次の `celt` 要素 (つまり RAWINPUTDEVICE 構造体) を、列挙子の一覧で列挙するとともに、それを `rgelt` で列挙された要素の実際の数とともに `pceltFetched` で返します。</span><span class="sxs-lookup"><span data-stu-id="563be-109">Enumerates the next `celt` elements (that is, RAWINPUTDEVICE structures) in the enumerator's list, returning them in `rgelt` along with the actual number of enumerated elements in `pceltFetched`.</span></span>|  
+|[<span data-ttu-id="563be-110">IEnumRAWINPUTDEVIC:Skip</span><span class="sxs-lookup"><span data-stu-id="563be-110">IEnumRAWINPUTDEVIC:Skip</span></span>](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-skip.md)|<span data-ttu-id="563be-111">列挙子は、[次へ] をスキップするように指示します`celt`列挙体の要素に、[次へ] を呼び出せるように[IEnumRAWINPUTDEVIC:Next](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-next.md)それらの要素は返されません。</span><span class="sxs-lookup"><span data-stu-id="563be-111">Instructs the enumerator to skip the next `celt` elements in the enumeration so that the next call to [IEnumRAWINPUTDEVIC:Next](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-next.md) will not return those elements.</span></span>|  
+|[<span data-ttu-id="563be-112">IEnumRAWINPUTDEVIC:Reset</span><span class="sxs-lookup"><span data-stu-id="563be-112">IEnumRAWINPUTDEVIC:Reset</span></span>](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-reset.md)|<span data-ttu-id="563be-113">列挙のシーケンスを最初にリセットします。</span><span class="sxs-lookup"><span data-stu-id="563be-113">Resets the enumeration sequence to the beginning.</span></span>|  
+|[<span data-ttu-id="563be-114">IEnumRAWINPUTDEVIC:Clone</span><span class="sxs-lookup"><span data-stu-id="563be-114">IEnumRAWINPUTDEVIC:Clone</span></span>](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-clone.md)|<span data-ttu-id="563be-115">同じリストを反復処理するため、現在の列挙子と同じ状態の別の未加工入力デバイスの列挙子を作成します。</span><span class="sxs-lookup"><span data-stu-id="563be-115">Creates another raw input device enumerator with the same state as the current enumerator to iterate over the same list.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="b61e1-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="b61e1-116">See Also</span></span>  
- [<span data-ttu-id="b61e1-117">未加工入力について</span><span class="sxs-lookup"><span data-stu-id="b61e1-117">About Raw Input</span></span>](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/aboutrawinput.asp)
+## <a name="see-also"></a><span data-ttu-id="563be-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="563be-116">See Also</span></span>  
+ [<span data-ttu-id="563be-117">未加工入力について</span><span class="sxs-lookup"><span data-stu-id="563be-117">About Raw Input</span></span>](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/aboutrawinput.asp)
