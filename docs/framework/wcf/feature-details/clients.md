@@ -3,11 +3,11 @@ title: クライアント
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
 ms.openlocfilehash: 844412b211fe6187e3475fc71b9c3ccca8dd178f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108157"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206810"
 ---
 # <a name="clients"></a>クライアント
 このセクションのトピックでは方法、クライアント アーキテクチャをカバーにアクセスする Windows Communication Foundation (WCF) サービス、WCF クライアントと WCF クライアントのセキュリティに関する考慮事項を構成する方法。  

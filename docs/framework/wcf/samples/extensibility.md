@@ -2,12 +2,12 @@
 title: 機能拡張
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: af6bbb5ea703c83ec38b97fae5a6f4bd266479b3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805383"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196872"
 ---
 # <a name="extensibility"></a>機能拡張
 このセクションには、カスタム拡張機能と Windows Communication Foundation (WCF) の他の機能を処理するサンプルが含まれています。  
@@ -38,10 +38,7 @@ ms.locfileid: "33805383"
  カスタム配信の例を示します。  
   
  [トランスポート拡張](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
- カスタム トランスポートの例を示します。  
-  
- [Web 拡張](../../../../docs/framework/wcf/samples/web-extensibility.md)  
- カスタム Web 機能の例を示します。  
+ カスタム トランスポートの例を示します。
   
  [操作フォーマッタと操作セレクター](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
  拡張ポイントでカスタムのメッセージのデータ形式を使用する方法を示します。  
@@ -56,7 +53,7 @@ ms.locfileid: "33805383"
  シリアル化、逆シリアル化、スキーマのエクスポート、スキーマのインポートなどのプロセスを、データ コントラクト サロゲート クラスを使用してカスタマイズする方法を示します。  
   
  [エラー処理およびレポートに対する制御の拡張](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- エラー処理とレポートを使用して WCF サービスのエラーに対する制御を拡張する方法を示します、<xref:System.ServiceModel.Dispatcher.IErrorHandler>インターフェイスです。  
+ エラー処理およびを使用して WCF サービスのエラー報告に対する制御を拡張する方法を示します、<xref:System.ServiceModel.Dispatcher.IErrorHandler>インターフェイス。  
   
  [メッセージ インスペクター](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  クライアントとサービスのメッセージ インスペクターを実装して構成する方法を示します。  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 author: BrucePerlerMS
 ms.openlocfilehash: 830339682f86d3882ff2cfc2d07d14145b987dde
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157520"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47194101"
 ---
 # <a name="activity-tracing-in-message-security"></a>メッセージ セキュリティにおけるアクティビティ トレース
 ここでは、次の 3 つの段階で発生するセキュリティ処理のアクティビティ トレースについて説明します。  

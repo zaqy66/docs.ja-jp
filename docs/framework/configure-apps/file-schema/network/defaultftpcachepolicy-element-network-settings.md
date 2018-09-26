@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e4ea16c925114d4ad4054af5f340c764ed6fe4fd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e03fb02bd351058c1fcdedb8367d03318418a12c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743148"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209427"
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt;要素 (ネットワーク設定)
-かどうか FTP キャッシュがアクティブであり、既定のキャッシュ ポリシーの説明について説明します。  
+FTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーを記述について説明します。  
   
  \<configuration>  
 \<system.net>  
@@ -41,20 +40,20 @@ ms.locfileid: "32743148"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`policyLevel`|FTP のキャッシュ ポリシーを指定します。 既定値は `Default` です。|  
+|`policyLevel`|FTP キャッシュ ポリシーを指定します。 既定値は `Default` です。|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 属性  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|`Default`|リソースが新しい場合は、コンテンツの長さが、精度は有効期限、変更、およびコンテンツの長さの属性が存在は、キャッシュされたリソースを返します。|  
+|`Default`|リソースに新しいもコンテンツの長さは正確では、有効期限、変更、およびコンテンツの長さの属性が存在する場合は、キャッシュされたリソースを返します。|  
 |`BypassCache`|サーバーからリソースを返します。|  
 |`CacheOnly`|コンテンツの長さが存在し、エントリのサイズと一致する場合は、キャッシュされたリソースを返します。|  
-|`CacheIfAvailable`|コンテンツの長さが指定されたエントリのサイズと一致する場合は、キャッシュされたリソースを返しますそれ以外の場合、リソースは、サーバーからダウンロードされ、呼び出し元に返されます。|  
-|`Revalidate`|キャッシュされたリソースのタイムスタンプは、サーバー上のリソースのタイムスタンプと同じ場合は、キャッシュされたリソースを返しますそれ以外の場合、リソース サーバーからダウンロード、キャッシュに格納されているを呼び出し元に返されます。|  
-|`Reload`|サーバーからリソースをダウンロード、キャッシュに格納し、呼び出し元にリソースを返します。|  
-|`NoCacheNoStore`|キャッシュされたリソースが存在する場合は削除されます。 リソースは、サーバーからダウンロードされ、呼び出し元に返されます。|  
-|`Revalidate`|タイムスタンプは、サーバー上のリソースのタイムスタンプと同じ場合は、キャッシュされたリソースのコピーを使用して、要求に応じます。それ以外の場合、リソースはサーバーからダウンロード、呼び出し元に表示される、キャッシュに格納されています。|  
+|`CacheIfAvailable`|コンテンツの長さが指定されたエントリのサイズと一致する場合、キャッシュされたリソースを返しますそれ以外の場合、リソースはサーバーからダウンロードされ、呼び出し元に返されます。|  
+|`Revalidate`|キャッシュされたリソースのタイムスタンプが、サーバー上のリソースのタイムスタンプと同じである場合、キャッシュされたリソースを返しますそれ以外の場合、リソースに、サーバーからダウンロード、キャッシュに格納されている、呼び出し元に返されます。|  
+|`Reload`|サーバーからリソースをダウンロード、キャッシュに格納およびリソースを呼び出し元に返します。|  
+|`NoCacheNoStore`|キャッシュされたリソースが存在する場合は削除されます。 リソースは、サーバーからがダウンロードされ、呼び出し元に返されます。|  
+|`Revalidate`|タイムスタンプが、サーバー上のリソースのタイムスタンプと同じである場合は、リソースのキャッシュされたコピーを使用して、要求に応じます。それ以外の場合、リソースにサーバーからダウンロード、呼び出し元に表示される、キャッシュに格納します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -65,10 +64,10 @@ ms.locfileid: "32743148"
 |-------------|-----------------|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュ メカニズムを制御します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>例  
- 次の例は、FTP キャッシュのポリシーを指定する方法を示しています。`NoCacheNoStore`です。  
+ 次の例は、FTP キャッシュのポリシーを指定する方法を示します`NoCacheNoStore`します。  
   
 ```xml  
 <configuration>  

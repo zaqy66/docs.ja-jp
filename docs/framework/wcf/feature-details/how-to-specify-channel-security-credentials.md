@@ -3,21 +3,20 @@ title: '方法 : チャネルのセキュリティ資格情報を指定する'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e730e3deaccb581b1722b62ce6282d8fde7180e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496852"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196185"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>方法 : チャネルのセキュリティ資格情報を指定する
-Windows Communication Foundation (WCF) サービス モニカーでは、COM アプリケーションで WCF サービスを呼び出すができます。 ほとんどの WCF サービスでは、クライアント認証と承認のための資格情報を指定する必要があります。 WCF クライアントから WCF サービスを呼び出すときに、マネージ コードで、またはアプリケーション構成ファイルで、これらの資格情報を指定できます。 COM アプリケーションから WCF サービスを呼び出すときに行うこともできます、<xref:System.ServiceModel.ComIntegration.IChannelCredentials>資格情報を指定するインターフェイスです。 ここでは、<xref:System.ServiceModel.ComIntegration.IChannelCredentials> インターフェイスを使用して資格情報を指定するさまざまな方法を説明します。  
+Windows Communication Foundation (WCF) サービス モニカーでは、COM アプリケーションで WCF サービスを呼び出すができます。 ほとんどの WCF サービスでは、クライアント認証と承認のための資格情報を指定する必要があります。 WCF クライアントから WCF サービスを呼び出すときに、マネージ コードで、またはアプリケーション構成ファイルで、これらの資格情報を指定できます。 COM アプリケーションから WCF サービスを呼び出すときに使用できます、<xref:System.ServiceModel.ComIntegration.IChannelCredentials>資格情報を指定するインターフェイス。 ここでは、<xref:System.ServiceModel.ComIntegration.IChannelCredentials> インターフェイスを使用して資格情報を指定するさまざまな方法を説明します。  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> は IDispatch ベースのインターフェイスです。Visual Studio 環境で IntelliSense 機能を取得することはできません。  
   
- この記事の内容がで定義された WCF サービスを使用して、[メッセージ セキュリティ サンプル](../../../../docs/framework/wcf/samples/message-security-sample.md)です。  
+ この記事で定義されている WCF サービスを使用する、[メッセージ セキュリティ サンプル](../../../../docs/framework/wcf/samples/message-security-sample.md)します。  
   
 ### <a name="to-specify-a-client-certificate"></a>クライアント証明書を指定するには  
   
@@ -27,7 +26,7 @@ Windows Communication Foundation (WCF) サービス モニカーでは、COM ア
   
 3.  追加`[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]`を`ICalculator`インターフェイス定義です。  
   
-4.  追加`bindingNamespace=``http://Microsoft.ServiceModel.Samples`サービス用の App.config 内のエンドポイント タグにします。  
+4.  追加`bindingNamespace=``http://Microsoft.ServiceModel.Samples`サービスの App.config にエンドポイント タグにします。  
   
 5.  メッセージ セキュリティ サンプルをビルドし、Service.exe を実行します。 Internet Explorer を使用し、サービスの URI を参照 (http://localhost:8000/ServiceModelSamples/Service)サービスが動作していることを確認します。  
   
@@ -123,7 +122,7 @@ Windows Communication Foundation (WCF) サービス モニカーでは、COM ア
   
 ### <a name="to-specify-an-issue-token"></a>発行トークンを指定するには  
   
-1.  発行トークンは、フェデレーション セキュリティを使用するアプリケーションのみが使用します。 フェデレーション セキュリティの詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)と[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)です。  
+1.  発行トークンは、フェデレーション セキュリティを使用するアプリケーションのみが使用します。 フェデレーション セキュリティの詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)と[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)します。  
   
      <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> メソッドを呼び出す方法を次の Visual Basic コード例に示します。  
   

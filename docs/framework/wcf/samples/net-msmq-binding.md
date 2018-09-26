@@ -2,12 +2,12 @@
 title: ネット MSMQ バインディング
 ms.date: 03/30/2017
 ms.assetid: fe4bb696-f57c-4cb3-9b7e-9d95fe6b8323
-ms.openlocfilehash: c54e8b661e011eb6b8add39dc7484f39ddc9b7c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee32ea09eed28c1c7cd5df2df2d13fd5f41f4b22
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500881"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200972"
 ---
 # <a name="net-msmq-binding"></a>ネット MSMQ バインディング
 このセクションには、エンドポイント要素の MSMQ バインディング属性の使用方法を示すサンプルが含まれています。  
@@ -29,16 +29,10 @@ ms.locfileid: "33500881"
  メッセージ キュー (MSMQ) トランスポートを介して、キュー通信で一連の関連メッセージを送受信する方法を示します。  
   
  [双方向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)  
- MSMQ を介して、トランザクション キューによる双方向通信を実行する方法を示します。  
-  
- [トランザクション バッチ](../../../../docs/framework/wcf/samples/transacted-batching.md)  
- メッセージ キュー (MSMQ) を使用して、トランザクション読み取りをバッチ処理する方法を示します。  
+ MSMQ を介して、トランザクション キューによる双方向通信を実行する方法を示します。
   
  [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
  HTTP 経由でメッセージ キュー (MSMQ) を使用して、トランザクション キューによる通信を実行する方法を示します。  
   
  [メッセージ キューを介したメッセージ セキュリティ](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- クライアントの認証で X.509v3 証明書による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、MSMQ 経由でサーバーの X.509v3 証明書を使用するサーバー認証が必要です。  
-  
- [ReceiveContext 製品ジェネレーター](../../../../docs/framework/wcf/samples/receivecontext-enabled-wcf-channels.md)  
- <xref:System.ServiceModel.Channels.ReceiveContext> を有効にした WCF チャネルの有用性を示します。
+ クライアントの認証で X.509v3 証明書による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、MSMQ 経由でサーバーの X.509v3 証明書を使用するサーバー認証が必要です。

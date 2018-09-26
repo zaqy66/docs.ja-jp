@@ -3,11 +3,11 @@ title: インターフェイス (F#)
 description: F# インターフェイスが関連するその他のクラスが実装するメンバーのセットを指定する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47115114"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231441"
 ---
 # <a name="interfaces"></a>インターフェイス
 

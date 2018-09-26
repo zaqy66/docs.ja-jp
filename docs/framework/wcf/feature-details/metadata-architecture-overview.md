@@ -5,11 +5,11 @@ helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
 ms.openlocfilehash: d0fc45b5ccabedb127061090eed1f6b63fd7acba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108391"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199152"
 ---
 # <a name="metadata-architecture-overview"></a>メタデータ アーキテクチャの概要
 Windows Communication Foundation (WCF) は、エクスポート、公開、取得、およびサービスのメタデータをインポートするためのさまざまなインフラストラクチャを提供します。 WCF サービスでは、メタデータを使用して、Svcutil.exe などのツールが、サービスにアクセスするためのクライアント コードを自動的に生成されるように、サービスのエンドポイントと対話する方法について説明します。  

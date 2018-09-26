@@ -3,11 +3,11 @@ title: 属性 (F#)
 description: F# の属性が、プログラミング コンストラクトに適用されるメタデータを有効にする方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027883"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216488"
 ---
 # <a name="attributes"></a>属性
 

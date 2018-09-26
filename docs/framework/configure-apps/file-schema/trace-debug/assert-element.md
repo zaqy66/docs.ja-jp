@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ab1644d23e4d6d78b62e701902e5ec39e134b38b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745121"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193513"
 ---
 # <a name="ltassertgt-element"></a>&lt;アサート&gt;要素
 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> メソッドの呼び出し時にメッセージ ボックスを表示するかどうかを指定し、メッセージの書き込み先のファイルの名前も指定します。  
@@ -38,8 +37,8 @@ ms.locfileid: "32745121"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`assertuienabled`|省略可能な属性です。<br /><br /> かどうかを表示する際にメッセージ ボックスを指定します、 **Debug.Assert**メソッドを評価する**false**です。|  
-|`logfilename`|省略可能な属性です。<br /><br /> 場合に、メッセージを書き込むファイルの名前を指定**Debug.Assert**に評価される**false**です。|  
+|`assertuienabled`|省略可能な属性です。<br /><br /> かどうかを表示する際にメッセージ ボックスを指定します、 **Debug.Assert**メソッドを評価する**false**します。|  
+|`logfilename`|省略可能な属性です。<br /><br /> 場合に、メッセージを書き込むファイルの名前を示す**Debug.Assert**に評価される**false**します。|  
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled 属性  
   
@@ -58,11 +57,11 @@ ms.locfileid: "32745121"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
-## <a name="remarks"></a>コメント  
- 両方の属性で、 **\<アサート >** 要素は省略可能です。 メッセージを書き込むファイルを指定せずメッセージ ボックスを無効にできますか、メッセージ ボックスが有効なのままにしてメッセージを書き込むファイルを指定することができます。  
+## <a name="remarks"></a>Remarks  
+ 両方の属性で、 **\<アサート >** 要素は省略可能です。 メッセージ ボックスに、メッセージを書き込むファイルを指定せず無効にできますか、メッセージ ボックスが有効のままにしてメッセージを記述するファイルを指定することができます。  
   
 ## <a name="example"></a>例  
- 次の例を呼び出すときに表示するメッセージ ボックスを無効にする方法を示しています。 **Debug.Assert**にメッセージを書き込むと`c:\log.txt`です。  
+ 次の例は、呼び出すときに表示するメッセージ ボックスを無効にする方法を示しています。 **Debug.Assert**にメッセージを書き込むと`c:\log.txt`します。  
   
 ```xml  
 <configuration>  

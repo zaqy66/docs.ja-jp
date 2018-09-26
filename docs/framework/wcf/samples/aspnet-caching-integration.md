@@ -2,15 +2,15 @@
 title: ASP.NET キャッシュ統合
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002789"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197449"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET キャッシュ統合
-このサンプルでは、WCF WEB HTTP プログラミング モデルで ASP.NET 出力キャッシュを利用する方法を示します。 参照してください、[基本的なリソース サービス](../../../../docs/framework/wcf/samples/basic-resource-service.md)サービスの実装の詳細を説明するこのシナリオの自己ホスト型のバージョンのサンプルです。 ここでは、ASP.NET 出力キャッシュ統合機能について集中的に説明します。  
+このサンプルでは、WCF WEB HTTP プログラミング モデルで ASP.NET 出力キャッシュを利用する方法を示します。 ここでは、ASP.NET 出力キャッシュ統合機能について集中的に説明します。  
   
 ## <a name="demonstrates"></a>使用例  
  ASP.NET 出力キャッシュとの統合  
@@ -29,7 +29,7 @@ ms.locfileid: "46002789"
   
  サービスのサンプル プロジェクトの Service.cs ファイルの両方、`GetCustomer`と`GetCustomers`とマークされた操作は、 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>、"CacheFor60Seconds"キャッシュ プロファイル名を提供します。 キャッシュ プロファイル"CacheFor60Seconds"は提供サービス プロジェクトの Web.config ファイルで、<`caching`> 要素の <`system.web`>。 このキャッシュ プロファイルでの値、`duration`属性には「60」があるため、このプロファイルに関連付けられた応答は、ASP.NET 出力キャッシュに 60 秒間キャッシュされます。 また、このキャッシュ プロファイルの`varmByParam`属性の値が異なるため要求を"format"に設定されて、`format`クエリ文字列パラメーターの応答は別々 にキャッシュします。 最後に、キャッシュ プロファイルの`varyByHeader`Accept ヘッダー値が異なる要求の応答は別々 にキャッシュがあるために、属性が"Accept"に設定します。  
   
- Client プロジェクトの Program.cs では、<xref:System.Net.HttpWebRequest> を使用してこのようなクライアントを作成する方法を示します。 これは、WCF サービスにアクセスする 1 つの方法にすぎません。 WCF のチャネル ファクトリのような他の .NET Framework クラスを使用してサービスにアクセスすることも、<xref:System.Net.WebClient>します。 SDK 内の他のサンプル (など、[基本 HTTP サービス](../../../../docs/framework/wcf/samples/basic-http-service.md)サンプルと[形式の自動選択](../../../../docs/framework/wcf/samples/automatic-format-selection.md)サンプル) WCF サービスとの通信にこれらのクラスを使用する方法を説明します。  
+ Client プロジェクトの Program.cs では、<xref:System.Net.HttpWebRequest> を使用してこのようなクライアントを作成する方法を示します。 これは、WCF サービスにアクセスする 1 つの方法にすぎません。 WCF のチャネル ファクトリのような他の .NET Framework クラスを使用してサービスにアクセスすることも、<xref:System.Net.WebClient>します。 SDK 内の他のサンプル (など、[基本 HTTP サービス](../../../../docs/framework/wcf/samples/basic-http-service.md)サンプル) WCF サービスとの通信にこれらのクラスを使用する方法を説明します。  
   
 ## <a name="to-run-the-sample"></a>サンプルを実行するには  
  このサンプルは、3 つのプロジェクトで構成されます。  
