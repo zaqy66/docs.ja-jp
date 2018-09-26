@@ -32,11 +32,11 @@ ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b745fa6a78ab2a7ab0b3a94c9921883d3c56c1b7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873170"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750285"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>マネージ デバッグ アシスタントによるエラーを診断します。
 
