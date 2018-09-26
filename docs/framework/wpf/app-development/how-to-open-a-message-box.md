@@ -9,20 +9,20 @@ helpviewer_keywords:
 - opening message boxes [WPF]
 ms.assetid: acaad17f-af43-4eca-a004-f1c9e7c6f292
 ms.openlocfilehash: f05190030ed6324917348fa1926abd5385e30f7e
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46507779"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47173396"
 ---
-# <a name="how-to-open-a-message-box"></a><span data-ttu-id="42007-102">方法: メッセージ ボックスを開く</span><span class="sxs-lookup"><span data-stu-id="42007-102">How to: Open a Message Box</span></span>
-<span data-ttu-id="42007-103">この例では、メッセージ ボックスを開く方法を示します。</span><span class="sxs-lookup"><span data-stu-id="42007-103">This example shows how to open a message box.</span></span>  
+# <a name="how-to-open-a-message-box"></a><span data-ttu-id="fc5b2-102">方法: メッセージ ボックスを開く</span><span class="sxs-lookup"><span data-stu-id="fc5b2-102">How to: Open a Message Box</span></span>
+<span data-ttu-id="fc5b2-103">この例では、メッセージ ボックスを開く方法を示します。</span><span class="sxs-lookup"><span data-stu-id="fc5b2-103">This example shows how to open a message box.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="42007-104">例</span><span class="sxs-lookup"><span data-stu-id="42007-104">Example</span></span>  
- <span data-ttu-id="42007-105">メッセージ ボックスは、ユーザーに情報を表示する作成済みのモーダル ダイアログ ボックスです。</span><span class="sxs-lookup"><span data-stu-id="42007-105">A message box is a prefabricated modal dialog box for displaying information to users.</span></span> <span data-ttu-id="42007-106">静的なを呼び出すことによって、メッセージ ボックスが開かれる<xref:System.Windows.MessageBox.Show%2A>のメソッド、<xref:System.Windows.MessageBox>クラス。</span><span class="sxs-lookup"><span data-stu-id="42007-106">A message box is opened by calling the static <xref:System.Windows.MessageBox.Show%2A> method of the <xref:System.Windows.MessageBox> class.</span></span> <span data-ttu-id="42007-107">ときに<xref:System.Windows.MessageBox.Show%2A>が呼び出されると、メッセージが渡される文字列パラメーターを使用します。</span><span class="sxs-lookup"><span data-stu-id="42007-107">When <xref:System.Windows.MessageBox.Show%2A> is called, the message is passed using a string parameter.</span></span> <span data-ttu-id="42007-108">複数のオーバー ロード<xref:System.Windows.MessageBox.Show%2A>メッセージ ボックスの表示方法を構成することを許可する (を参照してください<xref:System.Windows.MessageBox>)。</span><span class="sxs-lookup"><span data-stu-id="42007-108">Several overloads of <xref:System.Windows.MessageBox.Show%2A> allow you to configure how a message box will appear (see <xref:System.Windows.MessageBox>).</span></span>  
+## <a name="example"></a><span data-ttu-id="fc5b2-104">例</span><span class="sxs-lookup"><span data-stu-id="fc5b2-104">Example</span></span>  
+ <span data-ttu-id="fc5b2-105">メッセージ ボックスは、ユーザーに情報を表示する作成済みのモーダル ダイアログ ボックスです。</span><span class="sxs-lookup"><span data-stu-id="fc5b2-105">A message box is a prefabricated modal dialog box for displaying information to users.</span></span> <span data-ttu-id="fc5b2-106">静的なを呼び出すことによって、メッセージ ボックスが開かれる<xref:System.Windows.MessageBox.Show%2A>のメソッド、<xref:System.Windows.MessageBox>クラス。</span><span class="sxs-lookup"><span data-stu-id="fc5b2-106">A message box is opened by calling the static <xref:System.Windows.MessageBox.Show%2A> method of the <xref:System.Windows.MessageBox> class.</span></span> <span data-ttu-id="fc5b2-107">ときに<xref:System.Windows.MessageBox.Show%2A>が呼び出されると、メッセージが渡される文字列パラメーターを使用します。</span><span class="sxs-lookup"><span data-stu-id="fc5b2-107">When <xref:System.Windows.MessageBox.Show%2A> is called, the message is passed using a string parameter.</span></span> <span data-ttu-id="fc5b2-108">複数のオーバー ロード<xref:System.Windows.MessageBox.Show%2A>メッセージ ボックスの表示方法を構成することを許可する (を参照してください<xref:System.Windows.MessageBox>)。</span><span class="sxs-lookup"><span data-stu-id="fc5b2-108">Several overloads of <xref:System.Windows.MessageBox.Show%2A> allow you to configure how a message box will appear (see <xref:System.Windows.MessageBox>).</span></span>  
   
  [!code-csharp[MessageBoxSnippets#MessageBoxShow1CODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show1Window.xaml.cs#messageboxshow1code)]
  [!code-vb[MessageBoxSnippets#MessageBoxShow1CODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show1window.xaml.vb#messageboxshow1code)]  
   
-## <a name="see-also"></a><span data-ttu-id="42007-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="42007-109">See Also</span></span>  
- [<span data-ttu-id="42007-110">メッセージ ボックスのサンプル</span><span class="sxs-lookup"><span data-stu-id="42007-110">MessageBox Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160023)
+## <a name="see-also"></a><span data-ttu-id="fc5b2-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="fc5b2-109">See Also</span></span>  
+ [<span data-ttu-id="fc5b2-110">メッセージ ボックスのサンプル</span><span class="sxs-lookup"><span data-stu-id="fc5b2-110">MessageBox Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160023)

@@ -10,22 +10,21 @@ helpviewer_keywords:
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a9afd992a12392ae0ad1c27eea305cb7e367686d
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f3a706edaeba551139368568a7467e0cdab3524c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874417"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171609"
 ---
-# <a name="ltmailsettingsgt-element-network-settings"></a><span data-ttu-id="f3b1f-102">&lt;mailSettings&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="f3b1f-102">&lt;mailSettings&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="f3b1f-103">電子メールの送信オプションを設定します。</span><span class="sxs-lookup"><span data-stu-id="f3b1f-103">Configures mail sending options.</span></span>  
+# <a name="ltmailsettingsgt-element-network-settings"></a><span data-ttu-id="b66ea-102">&lt;mailSettings&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="b66ea-102">&lt;mailSettings&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="b66ea-103">電子メールの送信オプションを設定します。</span><span class="sxs-lookup"><span data-stu-id="b66ea-103">Configures mail sending options.</span></span>  
 
-<span data-ttu-id="f3b1f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f3b1f-104">\<configuration></span></span>  
-<span data-ttu-id="f3b1f-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="f3b1f-105">\<system.net></span></span>  
-<span data-ttu-id="f3b1f-106">\<mailSettings></span><span class="sxs-lookup"><span data-stu-id="f3b1f-106">\<mailSettings></span></span>  
+<span data-ttu-id="b66ea-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b66ea-104">\<configuration></span></span>  
+<span data-ttu-id="b66ea-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="b66ea-105">\<system.net></span></span>  
+<span data-ttu-id="b66ea-106">\<mailSettings></span><span class="sxs-lookup"><span data-stu-id="b66ea-106">\<mailSettings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f3b1f-107">構文</span><span class="sxs-lookup"><span data-stu-id="f3b1f-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b66ea-107">構文</span><span class="sxs-lookup"><span data-stu-id="b66ea-107">Syntax</span></span>  
   
 ```xml  
 <mailSettings>
@@ -33,26 +32,26 @@ ms.locfileid: "37874417"
 </mailSettings>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f3b1f-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="f3b1f-108">Attributes and Elements</span></span>  
- <span data-ttu-id="f3b1f-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="f3b1f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b66ea-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="b66ea-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="b66ea-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="b66ea-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f3b1f-110">属性</span><span class="sxs-lookup"><span data-stu-id="f3b1f-110">Attributes</span></span>  
- <span data-ttu-id="f3b1f-111">なし。</span><span class="sxs-lookup"><span data-stu-id="f3b1f-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b66ea-110">属性</span><span class="sxs-lookup"><span data-stu-id="b66ea-110">Attributes</span></span>  
+ <span data-ttu-id="b66ea-111">なし。</span><span class="sxs-lookup"><span data-stu-id="b66ea-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="f3b1f-112">子要素</span><span class="sxs-lookup"><span data-stu-id="f3b1f-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b66ea-112">子要素</span><span class="sxs-lookup"><span data-stu-id="b66ea-112">Child Elements</span></span>  
   
-|<span data-ttu-id="f3b1f-113">属性</span><span class="sxs-lookup"><span data-stu-id="f3b1f-113">Attribute</span></span>|<span data-ttu-id="f3b1f-114">説明</span><span class="sxs-lookup"><span data-stu-id="f3b1f-114">Description</span></span>|  
+|<span data-ttu-id="b66ea-113">属性</span><span class="sxs-lookup"><span data-stu-id="b66ea-113">Attribute</span></span>|<span data-ttu-id="b66ea-114">説明</span><span class="sxs-lookup"><span data-stu-id="b66ea-114">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="f3b1f-115">\<smtp > 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="f3b1f-115">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="f3b1f-116">簡易メール転送プロトコル オプションを構成します。</span><span class="sxs-lookup"><span data-stu-id="f3b1f-116">Configures Simple Mail Transport Protocol options.</span></span>|  
+|[<span data-ttu-id="b66ea-115">\<smtp > 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="b66ea-115">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="b66ea-116">簡易メール転送プロトコル オプションを構成します。</span><span class="sxs-lookup"><span data-stu-id="b66ea-116">Configures Simple Mail Transport Protocol options.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="f3b1f-117">親要素</span><span class="sxs-lookup"><span data-stu-id="f3b1f-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b66ea-117">親要素</span><span class="sxs-lookup"><span data-stu-id="b66ea-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="f3b1f-118">**要素**</span><span class="sxs-lookup"><span data-stu-id="f3b1f-118">**Element**</span></span>|<span data-ttu-id="f3b1f-119">**説明**</span><span class="sxs-lookup"><span data-stu-id="f3b1f-119">**Description**</span></span>|  
+|<span data-ttu-id="b66ea-118">**要素**</span><span class="sxs-lookup"><span data-stu-id="b66ea-118">**Element**</span></span>|<span data-ttu-id="b66ea-119">**説明**</span><span class="sxs-lookup"><span data-stu-id="b66ea-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="f3b1f-120">\<system.Net> 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="f3b1f-120">\<system.Net> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="f3b1f-121">.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="f3b1f-121">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="b66ea-120">\<system.Net> 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="b66ea-120">\<system.Net> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="b66ea-121">.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="b66ea-121">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="f3b1f-122">例</span><span class="sxs-lookup"><span data-stu-id="f3b1f-122">Example</span></span>  
- <span data-ttu-id="f3b1f-123">次の例では、既定のネットワーク資格情報を使用して電子メールを送信する適切な SMTP パラメーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="f3b1f-123">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
+## <a name="example"></a><span data-ttu-id="b66ea-122">例</span><span class="sxs-lookup"><span data-stu-id="b66ea-122">Example</span></span>  
+ <span data-ttu-id="b66ea-123">次の例では、既定のネットワーク資格情報を使用して電子メールを送信する適切な SMTP パラメーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="b66ea-123">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,6 +69,6 @@ ms.locfileid: "37874417"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f3b1f-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="f3b1f-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b66ea-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="b66ea-124">See Also</span></span>  
  <xref:System.Net.Mail.SmtpClient>  
- [<span data-ttu-id="f3b1f-125">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="f3b1f-125">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="b66ea-125">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="b66ea-125">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
