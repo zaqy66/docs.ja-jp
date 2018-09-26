@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 59d5083632630513d2afc1f8d78400310451e46f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746060"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176348"
 ---
 # <a name="lttracegt-element"></a>&lt;トレース&gt;要素
 トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。  
@@ -53,18 +52,18 @@ ms.locfileid: "32746060"
 |`false`|出力バッファーを自動的にフラッシュしません。 既定値です。|  
 |`true`|自動的に出力バッファーをフラッシュします。|  
   
-## <a name="usegloballock-attribute"></a>属性を用意されました  
+## <a name="usegloballock-attribute"></a>useGlobalLock 属性  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|`false`|リスナーがスレッド セーフである場合、グローバル ロックを使用しません。それ以外の場合、グローバル ロックを使用します。|  
-|`true`|リスナーは、スレッド セーフであるかどうかに関係なくグローバル ロックを使用します。 既定値です。|  
+|`false`|リスナーがスレッド セーフである場合は、グローバル ロックを使用しませんそれ以外の場合、グローバル ロックを使用します。|  
+|`true`|リスナーは、スレッド セーフであるかどうかに関係なく、グローバル ロックを使用します。 既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|リスナーを収集すると、ストアを指定し、メッセージをルーティングします。|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|収集、するリスナーをストアを指定し、メッセージをルーティングします。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -74,7 +73,7 @@ ms.locfileid: "32746060"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、`<trace>`リスナーを追加する要素`MyListener`を`Listeners`コレクション。 `MyListener` という名前のファイルを作成`MyListener.log`し、ファイルに出力を書き込みます。 `useGlobalLock`属性に設定されている`false`、それが原因で、グローバル ロック トレース リスナーがスレッド セーフである場合に使用することはできません。 `autoflush`属性に設定されている`true`、それが原因かどうかに関係なく、ファイルに書き込むトレース リスナー、<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>メソッドが呼び出されます。 `indentsize`属性が 0 (ゼロ)。 これにより、0 個のスペースのインデントを設定するリスナーに設定されているときに、<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>メソッドが呼び出されます。  
+ 次の例は、使用する方法を示します、`<trace>`リスナーを追加する要素`MyListener`を`Listeners`コレクション。 `MyListener` という名前のファイルを作成します。`MyListener.log`し、ファイルに出力を書き込みます。 `useGlobalLock`属性に設定されて`false`、それが原因で、グローバル ロック トレース リスナーがスレッド セーフである場合に使用することはできません。 `autoflush`属性に設定されて`true`、それが原因かどうかにかかわらず、ファイルに書き込むトレース リスナー、<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>メソッドが呼び出されます。 `indentsize`属性が 0 個のスペースのインデントを設定するリスナーと、0 (ゼロ) に設定と、<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>メソッドが呼び出されます。  
   
 ```xml  
 <configuration>  

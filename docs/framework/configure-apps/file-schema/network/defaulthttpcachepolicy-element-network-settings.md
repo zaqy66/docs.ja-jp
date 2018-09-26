@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 0425711687a2f8b40f2c645e1c478d52b56ad979
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e1b27cb8c0df4450c1a08151af19913b65fc2b3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741842"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172921"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt;要素 (ネットワーク設定)
-かどうか HTTP キャッシュがアクティブであり、既定のキャッシュ ポリシーの説明について説明します。  
+HTTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーの記述について説明します。  
   
  \<configuration>  
 \<system.net>  
@@ -44,10 +43,10 @@ ms.locfileid: "32741842"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`maximumAge`|期限切れとしてキャッシュされたオブジェクトがマークされるまで、最大の時間間隔を指定します。|  
-|`maximumStale`|期限切れとしてキャッシュされたオブジェクトがマークされるまでの鮮度の計算時間を経過時間の最大値を指定します。|  
-|`minimumFresh`|最新と見なされるには、キャッシュされたオブジェクトの最短時間を指定します。|  
-|`policyLevel`|キャッシュ ポリシーが自動かどうかや、キャッシュをバイパスするかどうかを指定します。 既定値は `BypassCache` です。|  
+|`maximumAge`|キャッシュされたオブジェクトが期限切れとしてマークされている前に、最大時間間隔を指定します。|  
+|`maximumStale`|過去の鮮度の計算時間前に、キャッシュされたオブジェクトが期限切れとしてマークされている最大の時間を指定します。|  
+|`minimumFresh`|フレッシュと見なすには、キャッシュされたオブジェクトの時間の最小値を指定します。|  
+|`policyLevel`|キャッシュ ポリシーは自動にするかどうか、またはキャッシュをバイパスするかどうかを指定します。 既定値は `BypassCache` です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -58,16 +57,16 @@ ms.locfileid: "32741842"
 |-------------|-----------------|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュ メカニズムを制御します。|  
   
-## <a name="remarks"></a>コメント  
- 値、`policyLevel`属性があるか、`BypassCache`または`Default`です。  
+## <a name="remarks"></a>Remarks  
+ 値、`policyLevel`属性があるか、`BypassCache`または`Default`します。  
   
- 値を`maximumAge`、 `maximumStale`、および`minimumFresh`要素の形式のいずれか、明示的な時間間隔は、 *d*.*hh*:*mm*:*ss* (日、時間、分、および秒) または定数`minValue`または`maxValue` をクリックします。  
+ 値を`maximumAge`、 `maximumStale`、および`minimumFresh`要素の形式のいずれか、明示的な時間間隔は、 *d*.*hh*:*mm*:*ss* (日、時間、分、および秒)、または定数`minValue`または`maxValue`必要に応じて、します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、6 時間、2 日間の最大有効期間の時間と 4 時間の最大古い時間の最小の新しい時間を指定する方法を示します。  
+ 次の例では、6 時間、2 日間の最大の有効期間と 4 時間の最大の古い時刻の最小の新しい時刻を指定する方法を示します。  
   
 ```xml  
 <configuration>  
