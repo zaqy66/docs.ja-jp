@@ -3,11 +3,11 @@ title: 揮発性キューによる通信
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
 ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171817"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204050"
 ---
 # <a name="volatile-queued-communication"></a>揮発性キューによる通信
 このサンプルでは、メッセージ キュー (MSMQ) トランスポートで揮発性キューによる通信を実行する方法を示します。 このサンプルでは、<xref:System.ServiceModel.NetMsmqBinding> を使用しています。 この場合、サービスは自己ホスト型コンソール アプリケーションで、サービスがキュー内のメッセージを受信したかどうかを監視できます。  

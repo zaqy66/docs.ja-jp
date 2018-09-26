@@ -2,35 +2,35 @@
 title: WCF でのキュー
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: 7f0a6700dba8eb844cc471704095b29c2a2c7937
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f04055df2c6d4b0a51b36040a5b377bb8738c534
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496485"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204158"
 ---
 # <a name="queuing-in-wcf"></a>WCF でのキュー
-このセクションでは、Windows Communication Foundation (WCF) でキューに置かれた通信を使用する方法について説明します。  
+このセクションでは、Windows Communication Foundation (WCF) をキューに置かれた通信に使用する方法について説明します。  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>WCF トランスポート バインディングとしてのキュー  
- Wcf では、コントラクトは、交換する内容を指定します。 コントラクトは、ビジネスによって異なるまたはアプリケーション固有のメッセージ交換です。 メッセージ交換に使用する機構 (または "方法") は、バインディングで指定します。 WCF でのバインドは、メッセージ交換の詳細をカプセル化します。 バインディングは、そのバインディングが表すトランスポートまたはプロトコルのさまざまな部分をユーザーが制御するための構成調整情報を公開します。 WCF でのキューは、その他のトランスポート バインディングは、多くのキュー アプリケーションにとって大きな利点と同様に扱われます。 現在、多くのキュー アプリケーションは、他のリモート プロシージャ コール (RPC) スタイルの分散アプリケーションとは異なる方法で記述されており、これが原因でフォローと管理が難しくなっています。 Wcf を分散アプリケーションを記述するスタイルほぼ同じです、フォローし、管理しやすきます。 さらに、交換の機構をビジネス ロジックから切り離すことによって、アプリケーション固有のコードに影響を与えることなく、簡単にトランスポートを構成したり、そのトランスポートに変更を加えたりできます。 次の図は、MSMQ をトランスポートとして使用する WCF サービスとクライアントの構造を示しています。  
+ WCF では、コントラクトは、交換する内容を指定します。 コントラクトは、ビジネスによって異なるまたはアプリケーション固有のメッセージ交換です。 メッセージ交換に使用する機構 (または "方法") は、バインディングで指定します。 WCF のバインディングは、メッセージ交換の詳細をカプセル化します。 バインディングは、そのバインディングが表すトランスポートまたはプロトコルのさまざまな部分をユーザーが制御するための構成調整情報を公開します。 WCF でのキューは、他のトランスポート バインド、多くのキュー アプリケーションにとって大きな利点であるように扱われます。 現在、多くのキュー アプリケーションは、他のリモート プロシージャ コール (RPC) スタイルの分散アプリケーションとは異なる方法で記述されており、これが原因でフォローと管理が難しくなっています。 Wcf では、分散アプリケーションを記述するスタイルほぼ同じです、フォローし、管理しやすきます。 さらに、交換の機構をビジネス ロジックから切り離すことによって、アプリケーション固有のコードに影響を与えることなく、簡単にトランスポートを構成したり、そのトランスポートに変更を加えたりできます。 次の図は、MSMQ をトランスポートとして使用する WCF サービスとクライアントの構造を示しています。  
   
  ![アプリケーション ダイアグラムをキューに置かれた](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散キュー図")  
   
- 上の図からわかるように、クライアントとサービスは、アプリケーションのセマンティクス、つまりコントラクトと実装だけを定義する必要があります。 サービスは、優先設定を使用してキューに置かれたバインディングを構成します。 クライアントを使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)をサービスに WCF クライアントを生成しを使用して、サービスにメッセージを送信するバインディングについて説明する構成ファイルを生成します。 したがって、キューに置かれたメッセージを送信する、クライアントは、WCF クライアントをインスタンス化し、操作を呼び出します。 これによって、メッセージは転送キューに送信され、次にターゲット キューに転送されます。 キュー通信の複雑さはすべて、メッセージを送受信するアプリケーションからは見えません。  
+ 上の図からわかるように、クライアントとサービスは、アプリケーションのセマンティクス、つまりコントラクトと実装だけを定義する必要があります。 サービスは、優先設定を使用してキューに置かれたバインディングを構成します。 クライアントを使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)をサービスに WCF クライアントを生成しを使用して、サービスにメッセージを送信するバインディングを記述した構成ファイルを生成します。 したがって、キューに置かれたメッセージを送信する、クライアントは、WCF クライアントをインスタンス化し、操作を呼び出します。 これによって、メッセージは転送キューに送信され、次にターゲット キューに転送されます。 キュー通信の複雑さはすべて、メッセージを送受信するアプリケーションからは見えません。  
   
- WCF でのキューに置かれたバインディングに関する注意事項は次のとおりです。  
+ WCF のキューに置かれたバインディングについての注意事項は次のとおりです。  
   
--   既定値は、WCF のバインドをキューに登録するために、操作が一方向にする必要がありますすべてのサービスは、キューを使用して双方向通信をサポートしていません。 双方向通信のサンプル ([双方向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)) 2 つの一方向コントラクトを使用してキューを使用して双方向通信を実装する方法を示しています。  
+-   既定値は、WCF バインドをキューに登録するために、操作が一方向にする必要がありますすべてのサービスは、キューを使用して双方向通信をサポートしていません。 双方向通信のサンプル ([双方向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)) 2 つの一方向コントラクトを使用してキューを使用して双方向通信を実装する方法を示しています。  
   
--   WCF を生成するには、メタデータ交換を使用してクライアントでは、WCF クライアントを生成し、バインディング情報を適切にキューに置かれた通信の構成を取得する直接問い合わせることができるようにに、サービス上の他の HTTP エンドポイントが必要です。  
+-   WCF を生成するには、メタデータ交換を使用してクライアントでは、WCF クライアントを生成し、キューによる通信を適切に構成するバインド情報を取得する直接クエリできるようににサービスに追加の HTTP エンドポイントが必要です。  
   
--   キューに置かれたバインディングに基づき、WCF 外部で追加の構成が必要です。 たとえば、<xref:System.ServiceModel.NetMsmqBinding>は WCF に付属しているクラスでは、バインディングを構成して、メッセージ キュー (MSMQ) を最小限構成する必要があります。  
+-   キューに置かれたバインディングに基づき、WCF の外部で追加の構成が必要です。 たとえば、 <xref:System.ServiceModel.NetMsmqBinding> WCF に含まれるクラスでは、バインディングを構成して、最低限のメッセージ キュー (MSMQ) を構成する必要があります。  
   
- 次のセクションでは、MSMQ に基づく特定のキューに置かれたバインディングを WCF に付属してについて説明します。  
+ 次のセクションでは、MSMQ に基づく特定のキューに置かれたバインド wcf では、出荷について説明します。  
   
 ### <a name="msmq"></a>MSMQ  
- WCF でキューに置かれたトランスポートは、そのキューに置かれた通信に MSMQ を使用します。  
+ WCF のキューに置かれたトランスポートでは、そのキューに置かれた通信に MSMQ を使用します。  
   
  MSMQ は Windows のオプション コンポーネントとして付属し、NT サービスの 1 つとして実行されます。 MSMQ サービスは、転送するメッセージを転送キューから取り込み、配信するメッセージをターゲット キューから取り込みます。 MSMQ キュー マネージャーは信頼できるメッセージ転送プロトコルを実装して、送信中にメッセージが失われないようにします。 このプロトコルは、ネイティブまたは SOAP リライアブル メッセージ プロトコル (SRMP) などの SOAP ベースのプロトコルです。  
   
@@ -38,12 +38,12 @@ ms.locfileid: "33496485"
   
  MSMQ キューも、Active Directory ディレクトリ サービスに登録された Windows ID を使用してセキュリティで保護できます。 MSMQ をインストールするとき、Active Directory 統合をインストールできます。Active Directory 統合では、コンピューターを Windows ドメイン ネットワークに含める必要があります。  
   
- MSMQ の詳細については、次を参照してください。[をインストールするメッセージ キュー (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)です。  
+ MSMQ の詳細については、次を参照してください。[インストール メッセージ キュー (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)します。  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) WCF で MSMQ を使用して通信するために 2 つの WCF エンドポイントは、キューに置かれたバインディングです。 したがって、このバインディングは、MSMQ 固有のプロパティを公開します。 ただし、すべての MSMQ 機能とプロパティが `NetMsmqBinding` で公開されるわけではありません。 コンパクトな `NetMsmqBinding` は、大部分のユーザーが満足できる最適な機能セットを考慮して設計されています。  
+ [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) WCF で MSMQ を使用して通信する 2 つの WCF エンドポイントは、キューに置かれたバインディングです。 したがって、このバインディングは、MSMQ 固有のプロパティを公開します。 ただし、すべての MSMQ 機能とプロパティが `NetMsmqBinding` で公開されるわけではありません。 コンパクトな `NetMsmqBinding` は、大部分のユーザーが満足できる最適な機能セットを考慮して設計されています。  
   
- `NetMsmqBinding` は、これまでに説明した基本的なキューの概念をバインディングのプロパティという形で明確に示しています。 このプロパティは、メッセージの転送方法と配信方法を MSMQ に伝達します。 プロパティのカテゴリの詳細については、後のセクションを参照してください。 詳細については、特定のプロパティをより的確に説明する概念説明のトピックを参照してください。  
+ `NetMsmqBinding` は、これまでに説明した基本的なキューの概念をバインディングのプロパティという形で明確に示しています。 このプロパティは、メッセージの転送方法と配信方法を MSMQ に伝達します。 プロパティのカテゴリの詳細については、後のセクションを参照してください。 詳細については、特定のプロパティをより完全に説明する概念説明のトピックを参照してください。  
   
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce プロパティと Durable プロパティ  
  `ExactlyOnce` プロパティと `Durable` プロパティは、キュー間のメッセージの転送方法を制御します。  
@@ -62,21 +62,21 @@ ms.locfileid: "33496485"
   
  多くのキュー システムは、システム全体の配信不能キューを提供します。 MSMQ は、非トランザクション キューへの配信が失敗したメッセージに対してシステム全体の非トランザクション配信不能キューを提供し、トランザクション キューへの配信が失敗したメッセージに対してシステム全体のトランザクション配信不能キューを提供します。  
   
- 異なるターゲット キューにメッセージを送信する複数のクライアントによって MSMQ サービスが共有される場合、クライアントが送信したすべてのメッセージが同じ配信不能キューに集まります。 これが適さない状況もあります。 で WCF サービスと MSMQ の向上の分離の[!INCLUDE[wv](../../../../includes/wv-md.md)]カスタム配信不能キュー (またはアプリケーション固有の配信不能キュー) を提供、ユーザーが、配信に失敗したメッセージを格納するを指定できます。 したがって、異なるクライアントが同じ配信不能キューを共有することがありません。  
+ 異なるターゲット キューにメッセージを送信する複数のクライアントによって MSMQ サービスが共有される場合、クライアントが送信したすべてのメッセージが同じ配信不能キューに集まります。 これが適さない状況もあります。 優れた分離、WCF と MSMQ[!INCLUDE[wv](../../../../includes/wv-md.md)]カスタム配信不能キュー (またはアプリケーション固有の配信不能キュー)、ユーザーは、配信に失敗したメッセージを格納する指定できます。 したがって、異なるクライアントが同じ配信不能キューを共有することがありません。  
   
  バインディングには、2 つの該当するプロパティがあります。  
   
--   `DeadLetterQueue`: このプロパティは、配信不能キューが要求されるかどうかを示す列挙体です。 この列挙体では、配信不能キューが要求される場合、そのキューの種類も指定します。 値は、`None`、`System`、および `Custom` です。 これらのプロパティの解釈の詳細については、次を参照してください[メッセージ転送エラーの処理を配信不能メッセージ キューを使用する。](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: このプロパティは、配信不能キューが要求されるかどうかを示す列挙体です。 この列挙体では、配信不能キューが要求される場合、そのキューの種類も指定します。 値は、`None`、`System`、および `Custom` です。 これらのプロパティの解釈の詳細については、次を参照してください[メッセージ転送エラーの処理を配信不能キューを使用する。](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
--   `CustomDeadLetterQueue`: このプロパティは、アプリケーション固有の配信不能キューの URI (Uniform Resource Identifier) アドレスです。 これは、必要な場合`DeadLetterQueue`です。`Custom` 選択されます。  
+-   `CustomDeadLetterQueue`: このプロパティは、アプリケーション固有の配信不能キューの URI (Uniform Resource Identifier) アドレスです。 これは、必要な場合`DeadLetterQueue`します。`Custom` 選択されます。  
   
 #### <a name="poison-message-handling-properties"></a>有害メッセージ処理プロパティ  
- サービスがトランザクションでターゲット キューからメッセージを読み取るとき、サービスはさまざまな原因でメッセージの処理に失敗する可能性があります。 失敗したメッセージは、再度読み取るためにキューに戻されます。 繰り返し失敗するメッセージを処理するために、有害メッセージ処理プロパティをバインディングで構成できます。 `ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay`、および `ReceiveErrorHandling` という 4 つのプロパティがあります。 これらのプロパティの詳細については、次を参照してください。[有害メッセージ処理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)です。  
+ サービスがトランザクションでターゲット キューからメッセージを読み取るとき、サービスはさまざまな原因でメッセージの処理に失敗する可能性があります。 失敗したメッセージは、再度読み取るためにキューに戻されます。 繰り返し失敗するメッセージを処理するために、有害メッセージ処理プロパティをバインディングで構成できます。 `ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay`、および `ReceiveErrorHandling` という 4 つのプロパティがあります。 これらのプロパティの詳細については、次を参照してください。[の有害メッセージ処理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)します。  
   
 #### <a name="security-properties"></a>セキュリティ プロパティ  
- MSMQ では、キューのアクセス制御リスト (ACL)、認証されたメッセージの送信など、独自のセキュリティ モデルを公開します。 `NetMsmqBinding` は、このセキュリティ プロパティをそのトランスポート セキュリティ設定の一部として公開します。 トランスポート セキュリティのバインディングには、`MsmqAuthenticationMode` プロパティおよび `MsmqProtectionLevel` プロパティという 2 つのプロパティがあります。 このプロパティの設定は、MSMQ の構成方法によって異なります。 詳細については、次を参照してください。[トランスポート セキュリティを使用するメッセージをセキュリティで保護する](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)です。  
+ MSMQ では、キューのアクセス制御リスト (ACL)、認証されたメッセージの送信など、独自のセキュリティ モデルを公開します。 `NetMsmqBinding` は、このセキュリティ プロパティをそのトランスポート セキュリティ設定の一部として公開します。 トランスポート セキュリティのバインディングには、`MsmqAuthenticationMode` プロパティおよび `MsmqProtectionLevel` プロパティという 2 つのプロパティがあります。 このプロパティの設定は、MSMQ の構成方法によって異なります。 詳細については、次を参照してください。[トランスポート セキュリティを使用してメッセージをセキュリティで保護する](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)します。  
   
- トランスポート セキュリティに加えて、実際の SOAP メッセージはメッセージ セキュリティでも保護できます。 詳細については、次を参照してください。[メッセージ セキュリティを使用するメッセージをセキュリティで保護する](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)です。  
+ トランスポート セキュリティに加えて、実際の SOAP メッセージはメッセージ セキュリティでも保護できます。 詳細については、次を参照してください。[メッセージ セキュリティを使用してメッセージをセキュリティで保護する](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)します。  
   
  また、`MsmqTransportSecurity` は、2 つのプロパティ `MsmqEncryptionAlgorithm` と `MsmqHashAlgorithm` を公開します。 このプロパティは、キュー間の転送でメッセージを暗号化するために、または署名をハッシュするために選択できる異なるアルゴリズムの列挙体です。  
   
@@ -89,10 +89,10 @@ ms.locfileid: "33496485"
   
 -   `QueueTransferProtocol`: キュー間のメッセージ転送に使用するプロトコルの列挙体です。 MSMQ では、ネイティブのキュー間転送プロトコルおよび SOAP リライアブル メッセージ プロトコル (SRMP) と呼ばれる SOAP ベースのプロトコルを実装しています。 SRMP は、キュー間の転送に HTTP トランスポートを使用している場合に使用します。 SRMP Secure は、キュー間の転送に HTTPS を使用している場合に使用します。  
   
--   `UseActiveDirectory`: キューのアドレス解決に Active Directory を使用する必要があるかどうかを示すブール値です。 既定ではオフになっています。 詳細については、次を参照してください。[サービス エンドポイントとキューのアドレス指定](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)です。  
+-   `UseActiveDirectory`: キューのアドレス解決に Active Directory を使用する必要があるかどうかを示すブール値です。 既定ではオフになっています。 詳細については、次を参照してください。[サービス エンドポイントとキューのアドレス指定](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)します。  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- `MsmqIntegrationBinding` C、C++、COM、または System.Messaging Api で記述された既存の MSMQ アプリケーションと通信する WCF エンドポイントをするときに使用します。  
+ `MsmqIntegrationBinding` C、C++、COM、または System.Messaging Api で記述された既存の MSMQ アプリケーションとの通信に WCF エンドポイントが必要なときに使用されます。  
   
  このバインディングのプロパティは、`NetMsmqBinding` のプロパティと同じです。 ただし、次のような違いがあります。  
   
@@ -119,9 +119,7 @@ ms.locfileid: "33496485"
   
 -   [セッションとキュー](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
--   [双方向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)  
-  
--   [トランザクション バッチ](../../../../docs/framework/wcf/samples/transacted-batching.md)  
+-   [双方向通信](../../../../docs/framework/wcf/samples/two-way-communication.md) 
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   

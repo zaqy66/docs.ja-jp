@@ -3,11 +3,11 @@ title: サービス エンドポイントとキューのアドレス指定
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47156586"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196305"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>サービス エンドポイントとキューのアドレス指定
 ここでは、キューから読み取るサービスをクライアントがアドレス指定するしくみと、サービス エンドポイントがキューにマップされるしくみについて説明します。 アラームとしては、次の図は、Windows Communication Foundation (WCF) アプリケーションの配置をキューに登録をクラシックに示します。  

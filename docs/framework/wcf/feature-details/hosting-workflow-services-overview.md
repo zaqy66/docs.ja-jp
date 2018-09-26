@@ -2,15 +2,15 @@
 title: ワークフロー サービスのホストの概要
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
-ms.openlocfilehash: 7b5de31b5931af13b41b11af6e48a52b5628e27c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbe271e30e9c4e98a52c01ffaa21de25c127c7ff
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489561"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208454"
 ---
 # <a name="hosting-workflow-services-overview"></a>ワークフロー サービスのホストの概要
-ワークフロー サービスを実行するには、ホストされている必要があります。 <xref:System.ServiceModel.WorkflowServiceHost> は、複数のインスタンス、構成、および WCF メッセージングをサポートする標準ワークフロー ホストです (ワークフローはホストされるためにメッセージングを使用する必要はありません)。  また、一連のサービス動作を介して永続性、追跡、およびインスタンス コントロールを統合します。  WCF の <xref:System.ServiceModel.ServiceHost> と同様に、<xref:System.ServiceModel.WorkflowServiceHost> は任意のマネージ .NET アプリケーションでの自己ホスト、または IIS/WAS での Web ホスト (.xamlx ファイルとして) が可能です。  このセクションのトピックでは、ワークフロー サービスをホストする方法について説明します。  
+ワークフロー サービスを実行するには、ホストされている必要があります。 <xref:System.ServiceModel.WorkflowServiceHost> は、複数のインスタンス、構成、および WCF メッセージングをサポートする標準ワークフロー ホストです (ワークフローはホストされるためにメッセージングを使用する必要はありません)。  また、一連のサービス動作を介して永続性、追跡、およびインスタンス コントロールを統合します。  WCF の <xref:System.ServiceModel.ServiceHost> と同様に、<xref:System.ServiceModel.WorkflowServiceHost> は任意のマネージド .NET アプリケーションでの自己ホスト、または IIS/WAS での Web ホスト (.xamlx ファイルとして) が可能です。  このセクションのトピックでは、ワークフロー サービスをホストする方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ワークフロー サービスのホスティング](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
@@ -23,10 +23,7 @@ ms.locfileid: "33489561"
  ワークフロー サービス ホストの機能を拡張する方法について説明します。  
   
  [ワークフロー コントロール エンドポイント](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
- ワークフロー インスタンスを作成できるエンドポイントを定義する方法について説明します。  
-  
- [方法 : IIS でサービス以外のワークフローをホストする](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)  
- IIS のワークフロー サービスではないワークフローのホスティングについて説明します。  
+ ワークフロー インスタンスを作成できるエンドポイントを定義する方法について説明します。
   
  [方法 : Windows Server AppFabric を使用してワークフロー サービスをホストする](../../../../docs/framework/wcf/feature-details/how-to-host-a-workflow-service-with-windows-server-app-fabric.md)  
  Windows Server AppFabric の既存のワークフロー サービスをホストする方法について説明します。  
