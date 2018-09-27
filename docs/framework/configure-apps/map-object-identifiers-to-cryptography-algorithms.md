@@ -11,11 +11,11 @@ ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: d23fc48a53ee47aacfc290b52887b800ce37477f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083612"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232808"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>暗号化アルゴリズムへのオブジェクト ID の割り当て
 データが 1 つのプログラムから別の送信時いない改ざんデジタル署名を確認します。 通常、デジタル署名がハッシュに署名するデータの数学関数を適用することによって計算されます。 署名のハッシュ値を書式設定時に、一部のデジタル署名アルゴリズムは、書式設定操作の一部として ASN.1 オブジェクト識別子 (OID) を追加します。 OID は、ハッシュを計算に使用されたアルゴリズムを識別します。 アルゴリズムは、カスタム アルゴリズムを使用する暗号化メカニズムを拡張するオブジェクトの識別子にマップできます。 次の例では、新しいハッシュ アルゴリズムにオブジェクト識別子をマップする方法を示します。  
