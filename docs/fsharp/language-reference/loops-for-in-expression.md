@@ -3,11 +3,11 @@ title: 'ループ: for...in 式 (F#)'
 description: 参照してください方法 f# for….. 式で列挙可能なコレクション内のパターンの一致を反復処理するループ コンストラクトが使用されます。
 ms.date: 05/16/2016
 ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087185"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400713"
 ---
 # <a name="loops-forin-expression"></a>ループ: for...in 式
 

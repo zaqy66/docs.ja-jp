@@ -3,11 +3,11 @@ title: コード クォート (F#)
 description: 言語機能を生成し、プログラムで f# コード式を処理することができますが、f# コード クォートについて説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077669"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397203"
 ---
 # <a name="code-quotations"></a>コード クォート
 

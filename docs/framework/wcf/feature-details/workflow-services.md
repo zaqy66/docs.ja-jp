@@ -2,12 +2,12 @@
 title: ワークフロー サービス
 ms.date: 03/30/2017
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
-ms.openlocfilehash: a8871685007cdb81848848da5c6b3483d014bb20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7295041fe4b17e7e2b1560704badf20992d4b92
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499194"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397242"
 ---
 # <a name="workflow-services"></a>ワークフロー サービス
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] では、ワークフロー ベースのサービスを XAML で宣言によって記述できます。 サービスを実装するワークフローの定義、およびサービスが公開するエンドポイントの説明を、すべて XAML で実行できます。 このセクションの各トピックでは、宣言によるサービスの記述をサポートするプログラミング モデルについて詳しく説明します。  
@@ -30,9 +30,6 @@ ms.locfileid: "33499194"
   
  [順番を無視したメッセージの処理](../../../../docs/framework/wcf/feature-details/out-of-order-message-processing.md)  
  順番を無視したメッセージを受け入れるようにサービスを構成する方法について説明します。  
-  
- [方法 : 別のワークフロー サービスを呼び出すワークフロー サービスを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
- 別のワークフロー サービス内からワークフロー サービスを同期的に呼び出す方法について説明します。  
   
  [コントラクト優先ワークフロー サービスの開発](../../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)  
  既存のサービス コントラクトに基づいてワークフロー サービスを作成する方法について説明します。  

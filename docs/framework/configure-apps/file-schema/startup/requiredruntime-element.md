@@ -12,11 +12,11 @@ ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 7cb5e29f3d7fc1faffdba01a5322f1883fca8af0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47069706"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47237086"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt;要素
 バージョン 1.0 の共通言語ランタイムのみがアプリケーションでサポートされることを指定します。 この要素は非推奨し、使用できなくする必要があります。 [ `supportedRuntime` ](supportedruntime-element.md)要素を代わりに使用する必要があります。

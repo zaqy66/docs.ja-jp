@@ -2,17 +2,17 @@
 title: ワークフロー管理エンドポイントのサンプル
 ms.date: 03/30/2017
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
-ms.openlocfilehash: 3d99cbef20895381f5e40ee939e1d94a409f1391
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 398ace1c198f0db0268c44083ccc98c5ba2d2c7f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078393"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399126"
 ---
 # <a name="workflow-management-endpoint-sample"></a>ワークフロー管理エンドポイントのサンプル
 このサンプルでは、ワークフロー コントロール エンドポイントを使用して、ローカルとリモートの両方でワークフローを作成および実行する方法を示します。 このサンプルでは、コントロール エンドポイントをホストし、そのコントロール エンドポイントを呼び出すクライアントを記述して、ワークフローのインスタンスを作成および実行する方法を示します。 このワークフローはサービスではありません。  
   
- サンプルのサービス側では、ワークフローが WorkflowServiceHost を使用してホストされており、クライアントが管理操作 (保留、開始など) を実行できるように WorkflowControlEndpoint が追加されています。 ワークフローを作成できるように、ユーザー定義 CreationEndpoint も追加されています。 次に、サービスは、中断状態のワークフローを開始するこれらのエンドポイントを使用して、ワークフローを再開します。 クライアントはクライアント コードから同じ操作を実行します。 これらの詳細については、「インターフェイスの[ワークフロー コントロール エンドポイント](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)と[方法: IIS でサービス以外ワークフローのホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)  
+ サンプルのサービス側では、ワークフローが WorkflowServiceHost を使用してホストされており、クライアントが管理操作 (保留、開始など) を実行できるように WorkflowControlEndpoint が追加されています。 ワークフローを作成できるように、ユーザー定義 CreationEndpoint も追加されています。 次に、サービスは、中断状態のワークフローを開始するこれらのエンドポイントを使用して、ワークフローを再開します。 クライアントはクライアント コードから同じ操作を実行します。 これらの詳細については、「インターフェイスの[ワークフロー コントロール エンドポイント](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)します。  
   
 #### <a name="to-run-the-sample"></a>サンプルを実行するには  
   

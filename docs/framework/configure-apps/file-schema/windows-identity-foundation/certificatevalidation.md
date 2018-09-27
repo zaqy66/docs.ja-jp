@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
 ms.openlocfilehash: 29881be43f02d275ad135efd97dc8b25a7409beb
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47074789"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235456"
 ---
 # <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
 トークン ハンドラーを使用して証明書の検証の設定を制御します。 特定のハンドラーが、独自の検証ツールで構成されている場合、これらの設定が上書きされます。  
