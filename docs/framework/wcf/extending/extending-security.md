@@ -6,41 +6,41 @@ helpviewer_keywords:
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 ms.openlocfilehash: 3ae41e10a51ba0e4c27bcfbb1eb812e0015e5178
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077812"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397159"
 ---
-# <a name="extending-security"></a><span data-ttu-id="f6d0e-102">セキュリティの拡張</span><span class="sxs-lookup"><span data-stu-id="f6d0e-102">Extending Security</span></span>
-<span data-ttu-id="f6d0e-103">新しいクレームの種類とカスタム トークンに対応するためには、Windows Communication Foundation (WCF) のセキュリティ インフラストラクチャを拡張できます。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="f6d0e-104">このセクションの各トピックでは、この方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-104">The topics in this section show you how this is done.</span></span>  
+# <a name="extending-security"></a><span data-ttu-id="519a5-102">セキュリティの拡張</span><span class="sxs-lookup"><span data-stu-id="519a5-102">Extending Security</span></span>
+<span data-ttu-id="519a5-103">新しいクレームの種類とカスタム トークンに対応するためには、Windows Communication Foundation (WCF) のセキュリティ インフラストラクチャを拡張できます。</span><span class="sxs-lookup"><span data-stu-id="519a5-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="519a5-104">このセクションの各トピックでは、この方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="519a5-104">The topics in this section show you how this is done.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f6d0e-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="f6d0e-105">In This Section</span></span>  
- [<span data-ttu-id="f6d0e-106">セキュリティ アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="f6d0e-106">Security Architecture</span></span>](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- <span data-ttu-id="f6d0e-107">WCF セキュリティ システムのアーキテクチャについて説明します。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-107">Walks through the architecture of the WCF security system.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="519a5-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="519a5-105">In This Section</span></span>  
+ [<span data-ttu-id="519a5-106">セキュリティ アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="519a5-106">Security Architecture</span></span>](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
+ <span data-ttu-id="519a5-107">WCF セキュリティ システムのアーキテクチャについて説明します。</span><span class="sxs-lookup"><span data-stu-id="519a5-107">Walks through the architecture of the WCF security system.</span></span>  
   
- [<span data-ttu-id="f6d0e-108">カスタム資格情報と資格情報の検証</span><span class="sxs-lookup"><span data-stu-id="f6d0e-108">Custom Credential and Credential Validation</span></span>](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
- <span data-ttu-id="f6d0e-109">カスタム資格情報の検証中に ID モデルを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-109">Explains how the Identity Model is used when validating custom credentials.</span></span>  
+ [<span data-ttu-id="519a5-108">カスタム資格情報と資格情報の検証</span><span class="sxs-lookup"><span data-stu-id="519a5-108">Custom Credential and Credential Validation</span></span>](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
+ <span data-ttu-id="519a5-109">カスタム資格情報の検証中に ID モデルを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="519a5-109">Explains how the Identity Model is used when validating custom credentials.</span></span>  
   
- [<span data-ttu-id="f6d0e-110">カスタム トークン</span><span class="sxs-lookup"><span data-stu-id="f6d0e-110">Custom Tokens</span></span>](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- <span data-ttu-id="f6d0e-111">通常、セキュリティ トークン サービス (STS) から発行されるトークンは SAML トークンです。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-111">Issued tokens from a Security Token Service (STS) are typically SAML tokens.</span></span> <span data-ttu-id="f6d0e-112">ここでは、カスタムのトークンの種類を作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-112">This topic explains how to create a custom token type.</span></span>  
+ [<span data-ttu-id="519a5-110">カスタム トークン</span><span class="sxs-lookup"><span data-stu-id="519a5-110">Custom Tokens</span></span>](../../../../docs/framework/wcf/extending/custom-tokens.md)  
+ <span data-ttu-id="519a5-111">通常、セキュリティ トークン サービス (STS) から発行されるトークンは SAML トークンです。</span><span class="sxs-lookup"><span data-stu-id="519a5-111">Issued tokens from a Security Token Service (STS) are typically SAML tokens.</span></span> <span data-ttu-id="519a5-112">ここでは、カスタムのトークンの種類を作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="519a5-112">This topic explains how to create a custom token type.</span></span>  
   
- [<span data-ttu-id="f6d0e-113">カスタム承認</span><span class="sxs-lookup"><span data-stu-id="f6d0e-113">Custom Authorization</span></span>](../../../../docs/framework/wcf/extending/custom-authorization.md)  
- <span data-ttu-id="f6d0e-114">カスタム承認を実装する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-114">Explains how to implement custom authorization.</span></span>  
+ [<span data-ttu-id="519a5-113">カスタム承認</span><span class="sxs-lookup"><span data-stu-id="519a5-113">Custom Authorization</span></span>](../../../../docs/framework/wcf/extending/custom-authorization.md)  
+ <span data-ttu-id="519a5-114">カスタム承認を実装する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="519a5-114">Explains how to implement custom authorization.</span></span>  
   
- [<span data-ttu-id="f6d0e-115">認証のためのサービスの ID のオーバーライド</span><span class="sxs-lookup"><span data-stu-id="f6d0e-115">Overriding the Identity of a Service for Authentication</span></span>](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
- <span data-ttu-id="f6d0e-116">認証のためにサービスの ID をオーバーライドする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-116">Describes how to override the identity of a service for authentication.</span></span>  
+ [<span data-ttu-id="519a5-115">認証のためのサービスの ID のオーバーライド</span><span class="sxs-lookup"><span data-stu-id="519a5-115">Overriding the Identity of a Service for Authentication</span></span>](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
+ <span data-ttu-id="519a5-116">認証のためにサービスの ID をオーバーライドする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="519a5-116">Describes how to override the identity of a service for authentication.</span></span>  
   
- [<span data-ttu-id="f6d0e-117">方法 : カスタム クライアント ID 検証機能を作成する</span><span class="sxs-lookup"><span data-stu-id="f6d0e-117">How to: Create a Custom Client Identity Verifier</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- <span data-ttu-id="f6d0e-118">カスタム エンドポイント ID を検証する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-118">Demonstrates how to validate a custom endpoint identity.</span></span>  
+ [<span data-ttu-id="519a5-117">方法 : カスタム クライアント ID 検証機能を作成する</span><span class="sxs-lookup"><span data-stu-id="519a5-117">How to: Create a Custom Client Identity Verifier</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ <span data-ttu-id="519a5-118">カスタム エンドポイント ID を検証する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="519a5-118">Demonstrates how to validate a custom endpoint identity.</span></span>  
   
- [<span data-ttu-id="f6d0e-119">方法 : 署名および暗号化に個別の X.509 証明書を使用する</span><span class="sxs-lookup"><span data-stu-id="f6d0e-119">How to: Use Separate X.509 Certificates for Signing and Encryption</span></span>](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
- <span data-ttu-id="f6d0e-120">通常、メッセージの署名および暗号化は 1 つの証明書を使用して行われます。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-120">Messages are typically signed and encrypted with a single certificate.</span></span> <span data-ttu-id="f6d0e-121">ここでは、必要に応じて 2 つの証明書を使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-121">This topic explains how two certificates can be used, when required.</span></span>  
+ [<span data-ttu-id="519a5-119">方法 : 署名および暗号化に個別の X.509 証明書を使用する</span><span class="sxs-lookup"><span data-stu-id="519a5-119">How to: Use Separate X.509 Certificates for Signing and Encryption</span></span>](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
+ <span data-ttu-id="519a5-120">通常、メッセージの署名および暗号化は 1 つの証明書を使用して行われます。</span><span class="sxs-lookup"><span data-stu-id="519a5-120">Messages are typically signed and encrypted with a single certificate.</span></span> <span data-ttu-id="519a5-121">ここでは、必要に応じて 2 つの証明書を使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="519a5-121">This topic explains how two certificates can be used, when required.</span></span>  
   
- [<span data-ttu-id="f6d0e-122">方法 : X.509 証明書の秘密キーの暗号化プロバイダーを変更する</span><span class="sxs-lookup"><span data-stu-id="f6d0e-122">How to: Change the Cryptographic Provider for an X.509 Certificate's Private Key</span></span>](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- <span data-ttu-id="f6d0e-123">X.509 証明書の秘密キーを提供するために使用する暗号化サービス プロバイダーを変更する方法と、Windows Communication Foundation (WCF) フレームワークにプロバイダーを統合する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f6d0e-123">Explains how to change the cryptographic provider used to provide an X.509 certificate's private key and how to integrate the provider into the Windows Communication Foundation (WCF) framework.</span></span>  
+ [<span data-ttu-id="519a5-122">方法 : X.509 証明書の秘密キーの暗号化プロバイダーを変更する</span><span class="sxs-lookup"><span data-stu-id="519a5-122">How to: Change the Cryptographic Provider for an X.509 Certificate's Private Key</span></span>](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
+ <span data-ttu-id="519a5-123">X.509 証明書の秘密キーを提供するために使用する暗号化サービス プロバイダーを変更する方法と、Windows Communication Foundation (WCF) フレームワークにプロバイダーを統合する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="519a5-123">Explains how to change the cryptographic provider used to provide an X.509 certificate's private key and how to integrate the provider into the Windows Communication Foundation (WCF) framework.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="f6d0e-124">参照</span><span class="sxs-lookup"><span data-stu-id="f6d0e-124">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="519a5-124">参照</span><span class="sxs-lookup"><span data-stu-id="519a5-124">Reference</span></span>  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
   
  <xref:System.ServiceModel.Security>  
@@ -53,10 +53,10 @@ ms.locfileid: "47077812"
   
  <xref:System.IdentityModel.Selectors>  
   
-## <a name="related-sections"></a><span data-ttu-id="f6d0e-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="f6d0e-125">Related Sections</span></span>  
- [<span data-ttu-id="f6d0e-126">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="f6d0e-126">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)  
+## <a name="related-sections"></a><span data-ttu-id="519a5-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="519a5-125">Related Sections</span></span>  
+ [<span data-ttu-id="519a5-126">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="519a5-126">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)  
   
- [<span data-ttu-id="f6d0e-127">基本的な WCF プログラミング</span><span class="sxs-lookup"><span data-stu-id="f6d0e-127">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="519a5-127">基本的な WCF プログラミング</span><span class="sxs-lookup"><span data-stu-id="519a5-127">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f6d0e-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="f6d0e-128">See Also</span></span>  
- [<span data-ttu-id="f6d0e-129">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="f6d0e-129">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a><span data-ttu-id="519a5-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="519a5-128">See Also</span></span>  
+ [<span data-ttu-id="519a5-129">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="519a5-129">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
