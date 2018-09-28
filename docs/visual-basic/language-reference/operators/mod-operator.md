@@ -15,11 +15,11 @@ ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079767"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424403"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 演算子 (Visual Basic)
 2 つの数値を除算し、残りの部分のみを返します。  
