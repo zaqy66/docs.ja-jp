@@ -2,12 +2,12 @@
 title: 基本的な HTTP サービス
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516630"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47455724"
 ---
 # <a name="basic-http-service"></a>基本的な HTTP サービス
 このサンプルでは、"POX"(Plain Old XML) サービス-Windows Communication Foundation (WCF) REST プログラミング モデルを使用するとよく呼ばれる、HTTP ベース、RPC ベース サービスを実装する方法を示します。 このサンプルは、2 つのコンポーネントで構成されています。 自己ホスト型 WCF HTTP サービス (Service.cs) と、サービスを作成し、への呼び出しを、コンソール アプリケーション (Program.cs)。  
@@ -21,7 +21,7 @@ ms.locfileid: "43516630"
   
  App.config ファイルでは、<xref:System.ServiceModel.Description.WebHttpEndpoint> に設定されている <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> プロパティを持つ既定の `true` を使用して、WCF サービスを構成します。 WCF インフラストラクチャに自動のベース HTML ヘルプ ページを作成するため、`http://localhost:8000/Customers/help`サービスへの HTTP 要求を作成する方法と、サービスの HTTP 応答を使用する方法に関する情報を提供します。  
   
- Program.cs では、WCF チャネル ファクトリを使用して、サービスとプロセスの応答を呼び出す方法を示します。 これは、WCF サービスにアクセスする 1 つの方法にすぎません。 <xref:System.Net.HttpWebRequest> や <xref:System.Net.WebClient> などの他の .NET Framework クラスを使用して、サービスにアクセスすることも可能です。 SDK 内の他のサンプル (など、[形式の自動選択](../../../../docs/framework/wcf/samples/automatic-format-selection.md)サンプルと[基本的なリソース サービス](../../../../docs/framework/wcf/samples/basic-resource-service.md)サンプル) WCF サービスとの通信にこれらのクラスを使用する方法について説明します。  
+ Program.cs では、WCF チャネル ファクトリを使用して、サービスとプロセスの応答を呼び出す方法を示します。 これは、WCF サービスにアクセスする 1 つの方法にすぎません。 <xref:System.Net.HttpWebRequest> や <xref:System.Net.WebClient> などの他の .NET Framework クラスを使用して、サービスにアクセスすることも可能です。
   
  このサンプルは、コンソール アプリケーション内で実行される自己ホスト型サービスとクライアントで構成されています。 コンソール アプリケーションが実行されると、クライアントはサービスに要求を発行し、応答からの適切な情報をコンソール ウィンドウに書き込みます。  
   
@@ -41,7 +41,3 @@ ms.locfileid: "43516630"
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
-  
-## <a name="see-also"></a>関連項目  
- [形式の自動選択](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- [基本的なリソース サービス](../../../../docs/framework/wcf/samples/basic-resource-service.md)
