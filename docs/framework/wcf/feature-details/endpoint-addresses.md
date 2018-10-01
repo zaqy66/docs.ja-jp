@@ -17,7 +17,7 @@ ms.locfileid: "43855716"
 すべてのエンドポイントにはこれと関連するアドレスがあり、エンドポイントの検索と識別に使用されます。 このアドレスは主にエンドポイントの位置を指定する URI (Uniform Resource Identifier) で構成されます。 エンドポイント アドレスが、Windows Communication Foundation (WCF) のプログラミング モデルで表される、<xref:System.ServiceModel.EndpointAddress>クラスを含む、省略可能な<xref:System.ServiceModel.EndpointAddress.Identity%2A>他のエンドポイントによるエンドポイントの認証を有効にするプロパティをメッセージをおよび一連の省略可能な交換<xref:System.ServiceModel.EndpointAddress.Headers%2A>プロパティで、サービスに到達するために必要な SOAP ヘッダーを定義します。 オプションのヘッダーは、サービス エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 エンドポイントのアドレスは、ネットワーク上では WS-Addressing エンドポイント参照 (EPR) として表されます。  
   
 ## <a name="uri-structure-of-an-address"></a>アドレスの URI 構造  
- ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 URI の 4 つの部分ではたとえば、 http://www.fabrikam.com:322/mathservice.svc/secureEndpoint次のように取り上げることができます。  
+ ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 URI の 4 つの部分ではたとえば、 http://www.fabrikam.com:322/mathservice.svc/secureEndpoint 次のように取り上げることができます。  
   
 -   スキーム : http:  
   
