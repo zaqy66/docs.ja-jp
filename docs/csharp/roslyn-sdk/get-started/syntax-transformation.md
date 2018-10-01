@@ -3,12 +3,12 @@ title: 構文変換の概要 (Roslyn API)
 description: 構文ツリーの走査、クエリおよびウォークに関する概要。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c372b1ba1e08a7d3b57ceea0d4449d03e55a39cf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45618023"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47400791"
 ---
 # <a name="get-started-with-syntax-transformation"></a>構文変換の概要
 
@@ -20,7 +20,7 @@ ms.locfileid: "45618023"
 
 ## <a name="immutability-and-the-net-compiler-platform"></a>不変性と .NET コンパイラ プラットフォーム
 
-**不変性**は、.NET コンパイラ プラットフォームの基本原則です。 不変データ構造は、作成後には変更できません。 不変データ構造は、複数のコンシューマーから安全かつ同時に共有、分析できます。 コンシューマーが、予期できない方法で別のコンシューマーに影響を及ぼす危険はありません。 アナライザーには、ロックやその他の同時実行手段は不要です。 この規則は、構文ツリー、コンパイル、記号、セマンティック モデルなど、出現するすべてのデータ構造に当てはまります。 既存の構造体を変更するのではなく、API は古いオブジェクトに対して指定された相違点に基づいて、新しいオブジェクトを作成します。 この概念を構文ツリーに適用して、変換を使用して新しいツリーを作成します。
+**不変性**は、.NET コンパイラ プラットフォームの基本原則です。 不変データ構造は、作成後には変更できません。 不変データ構造は、複数のコンシューマーから安全かつ同時に共有、分析できます。 コンシューマーが、予期できない方法で別のコンシューマーに影響を及ぼす危険はありません。 アナライザーには、ロックやその他のコンカレンシー手段は不要です。 この規則は、構文ツリー、コンパイル、記号、セマンティック モデルなど、出現するすべてのデータ構造に当てはまります。 既存の構造体を変更するのではなく、API は古いオブジェクトに対して指定された相違点に基づいて、新しいオブジェクトを作成します。 この概念を構文ツリーに適用して、変換を使用して新しいツリーを作成します。
 
 ## <a name="create-and-transform-trees"></a>ツリーの作成と変換
 
@@ -30,7 +30,7 @@ ms.locfileid: "45618023"
 
 最初の構文変換では、ファクトリ メソッドを使用します。 `using System.Collections;` ステートメントを `using System.Collections.Generic;` ステートメントで置き換えます。 この例は、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> ファクトリ メソッドを使用して <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> オブジェクトを作成する方法を示しています。 **ノード**、**トークン**、**トリビア**の各種類に対して、その種類のインスタンスを作成するファクトリ メソッドが用意されています。 ボトムアップ方式でノードを階層的に構成して、構文ツリーを作成します。 次に、既存のプログラムを変換して、既存のノードを作成した新しいツリーで置き換えます。
 
-Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。 Visual Studio で、**[ファイル]** > **[新規]* > **[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。 **[Visual C#]** > **[機能拡張]** で、**[Stand-Alone Code Analysis Tool]** を選択します。 このクイック スタートには 2 つのサンプル プロジェクトがあるため、ソリューションに「**SyntaxTransformationQuickStart**」、プロジェクトに「**ConstructionCS**」という名前を付けます。 **[OK]** をクリックします。
+Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。 Visual Studio で、**[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。 **[Visual C#]** > **[機能拡張]** で、**[Stand-Alone Code Analysis Tool]** を選択します。 このクイック スタートには 2 つのサンプル プロジェクトがあるため、ソリューションに「**SyntaxTransformationQuickStart**」、プロジェクトに「**ConstructionCS**」という名前を付けます。 **[OK]** をクリックします。
 
 このプロジェクトでは、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> クラスのメソッドを使用して、`System.Collections.Generic` 名前空間を表す <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> を構築します。
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8ebe861fc2de8b21ee766e52dada1eec10169f16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 201bc5e92aeedcbfe2f710681cf3bbc773a11424
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395766"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193383"
 ---
 # <a name="creating-internet-requests"></a>インターネット要求の作成
 アプリケーションは、<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> メソッドを使用して <xref:System.Net.WebRequest> のインスタンスを作成します。 これは、渡された URI スキームに基づいて **WebRequest** から派生するクラスを作成する静的メソッドです。  

@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 98cd64aaab66d69c29c022d770b34bb0efdb4bef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03ddcbacf7de3753ca74c398e585447b2d769cd6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395428"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47210628"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>方法: 要求のキャッシュ ポリシーを設定する
-次の例では、要求のキャッシュ ポリシーの設定方法を示します。 入力の例は、http://www.contoso.com/ などの URI です。  
+次の例では、要求のキャッシュ ポリシーの設定方法を示します。 入力の例は、 http://www.contoso.com/ などの URI です。  
   
 ## <a name="example"></a>例  
  次のコード例では、リソースがキャッシュ内にある時間が 1 日より短い場合に、要求されたリソースの使用を許可するキャッシュ ポリシーを作成します。 この例では、リソースがキャッシュから使用されたかどうかを示すメッセージ ( たとえば、`"The response was retrieved from the cache : False."`) が表示され、リソースが表示されます。 要求は、クライアントとサーバー間にある任意のキャッシュによって満たすことができます。  

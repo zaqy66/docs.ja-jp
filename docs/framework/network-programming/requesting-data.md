@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 166a076eae69b351248bc67570cdaf50b43ab95c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a163374810cbc06ca048c1bdd304de9519db140c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396299"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195707"
 ---
 # <a name="requesting-data"></a>データの要求
 今日のインターネットの分散操作環境で動作するアプリケーションを開発するには、あらゆる種類のリソースからデータを取得するための効率的で使いやすい方法が必要です。 プラグ可能なプロトコルを使うと、単一のインターフェイスを使って複数のインターネット プロトコルからデータを取得するアプリケーションを開発できます。  

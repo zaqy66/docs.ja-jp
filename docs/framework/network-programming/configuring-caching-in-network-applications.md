@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2213b5401c7b82771dcf7a1c982f1b3d0f347832
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7fe54911755863adc6a9b2bd91eff5cad9f9d4e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395259"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193045"
 ---
 # <a name="configuring-caching-in-network-applications"></a>ネットワーク アプリケーションでのキャッシュの構成
 キャッシュを構成するには、アプリケーションまたは <xref:System.Net.WebRequest> レベルでキャッシュ ポリシーを指定する必要があります。 以下のトピックでは、キャッシュを使用するようにアプリケーションと要求を構成するコード例が提供されています。  

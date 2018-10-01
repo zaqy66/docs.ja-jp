@@ -6,11 +6,11 @@ ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 960d69e7db4d06956bfff8fb849f1d085e4cb1c0
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46583368"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399684"
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>XML ドキュメントからのノード、コンテンツ、値の削除
 XML ドキュメント オブジェクト モデル (DOM) がメモリに読み込まれたら、ツリーからノードを削除したり、特定のノード型からコンテンツや値を削除したりできます。 ドキュメントから葉ノードまたはノード サブツリー全体を削除する方法については、「[DOM からのノードの削除](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md)」を参照してください。 要素の属性を削除する方法については、「[DOM の要素ノードからの属性の削除](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)」を参照してください。 ノードのコンテンツだけを削除してツリーにノードを残す方法については、「[DOM のノード コンテンツの削除](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md)」を参照してください。  

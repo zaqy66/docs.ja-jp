@@ -5,11 +5,11 @@ helpviewer_keywords:
 - access keywords [C#]
 ms.assetid: 3b680d9c-0998-42df-8ba7-5783f7abda75
 ms.openlocfilehash: 7700c49a609a90faf9b3b8b90719a223952d7e9e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703727"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47233003"
 ---
 # <a name="access-keywords-c-reference"></a>アクセス キーワード (C# リファレンス)
 このセクションでは、以下のアクセス キーワードについて説明します。  
