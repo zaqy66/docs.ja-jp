@@ -21,11 +21,11 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1fe0ead93d1ff2b7867a52d80cf812e2850ea7b3
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46703558"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47210126"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>方法 : 文字列が有効な電子メール形式であるかどうかを検証する
 正規表現を使用して文字列の形式が有効な電子メール形式であるかどうかを検証する例を次に示します。  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ba30129389d048f35916536ba119d4e4e06e0b3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1157fd8772546a1e34343bcf05ac40ca8ad592a5
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397547"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47194024"
 ---
 # <a name="using-streams-on-the-network"></a>ネットワーク上でストリームを使用する
 .NET Framework では、ネットワーク リソースはストリームとして表されます。 .NET Framework は、ストリームを汎用的に扱うことで、次の機能を提供しています。  

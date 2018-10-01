@@ -17,11 +17,11 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583851"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47232782"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正規表現での文字のエスケープ
 正規表現の円記号 (\\) は、次のいずれかを示します。  

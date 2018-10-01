@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 458e67861bfd40b69f7a6f756ddee8be433e9e2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395948"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195551"
 ---
 # <a name="using-client-sockets"></a>クライアント ソケットの使用
 <xref:System.Net.Sockets.Socket> を使用して会話を開始するには、まずアプリケーションとリモート デバイス間にデータ パイプを作成する必要があります。 他のネットワーク アドレス ファミリとプロトコルもありますが、この例では、リモート サービスとの TCP/IP 接続を作成する方法を説明します。  
