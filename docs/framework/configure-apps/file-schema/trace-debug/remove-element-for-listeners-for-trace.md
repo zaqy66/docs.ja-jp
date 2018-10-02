@@ -10,55 +10,55 @@ ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 54fd529c571c8e8cf43c5dabe2398ae4a6cf4f11
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47230983"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030537"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="4c4ed-102">&lt;削除&gt;要素&lt;リスナー&gt;の&lt;トレース&gt;</span><span class="sxs-lookup"><span data-stu-id="4c4ed-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
-<span data-ttu-id="4c4ed-103">リスナーを削除、**リスナー**コレクション。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-103">Removes a listener from the **Listeners** collection.</span></span>  
+# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="915b5-102">&lt;削除&gt;要素&lt;リスナー&gt;の&lt;トレース&gt;</span><span class="sxs-lookup"><span data-stu-id="915b5-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
+<span data-ttu-id="915b5-103">リスナーを削除、**リスナー**コレクション。</span><span class="sxs-lookup"><span data-stu-id="915b5-103">Removes a listener from the **Listeners** collection.</span></span>  
   
- <span data-ttu-id="4c4ed-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="4c4ed-104">\<configuration></span></span>  
-<span data-ttu-id="4c4ed-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="4c4ed-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="4c4ed-106">\<トレース ></span><span class="sxs-lookup"><span data-stu-id="4c4ed-106">\<trace></span></span>  
-<span data-ttu-id="4c4ed-107">\<リスナー ></span><span class="sxs-lookup"><span data-stu-id="4c4ed-107">\<listeners></span></span>  
-<span data-ttu-id="4c4ed-108">\<remove></span><span class="sxs-lookup"><span data-stu-id="4c4ed-108">\<remove></span></span>  
+ <span data-ttu-id="915b5-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="915b5-104">\<configuration></span></span>  
+<span data-ttu-id="915b5-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="915b5-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="915b5-106">\<トレース ></span><span class="sxs-lookup"><span data-stu-id="915b5-106">\<trace></span></span>  
+<span data-ttu-id="915b5-107">\<リスナー ></span><span class="sxs-lookup"><span data-stu-id="915b5-107">\<listeners></span></span>  
+<span data-ttu-id="915b5-108">\<remove></span><span class="sxs-lookup"><span data-stu-id="915b5-108">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c4ed-109">構文</span><span class="sxs-lookup"><span data-stu-id="4c4ed-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="915b5-109">構文</span><span class="sxs-lookup"><span data-stu-id="915b5-109">Syntax</span></span>  
   
 ```xml  
 <remove name="listener name" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4c4ed-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="4c4ed-110">Attributes and Elements</span></span>  
- <span data-ttu-id="4c4ed-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="915b5-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="915b5-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="915b5-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="915b5-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4c4ed-112">属性</span><span class="sxs-lookup"><span data-stu-id="4c4ed-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="915b5-112">属性</span><span class="sxs-lookup"><span data-stu-id="915b5-112">Attributes</span></span>  
   
-|<span data-ttu-id="4c4ed-113">属性</span><span class="sxs-lookup"><span data-stu-id="4c4ed-113">Attribute</span></span>|<span data-ttu-id="4c4ed-114">説明</span><span class="sxs-lookup"><span data-stu-id="4c4ed-114">Description</span></span>|  
+|<span data-ttu-id="915b5-113">属性</span><span class="sxs-lookup"><span data-stu-id="915b5-113">Attribute</span></span>|<span data-ttu-id="915b5-114">説明</span><span class="sxs-lookup"><span data-stu-id="915b5-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="4c4ed-115">**name**</span><span class="sxs-lookup"><span data-stu-id="4c4ed-115">**name**</span></span>|<span data-ttu-id="4c4ed-116">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="4c4ed-117">削除するリスナーの名前、**リスナー**コレクション。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-117">The name of the listener to remove from the **Listeners** collection.</span></span>|  
+|<span data-ttu-id="915b5-115">**name**</span><span class="sxs-lookup"><span data-stu-id="915b5-115">**name**</span></span>|<span data-ttu-id="915b5-116">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="915b5-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="915b5-117">削除するリスナーの名前、**リスナー**コレクション。</span><span class="sxs-lookup"><span data-stu-id="915b5-117">The name of the listener to remove from the **Listeners** collection.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="4c4ed-118">子要素</span><span class="sxs-lookup"><span data-stu-id="4c4ed-118">Child Elements</span></span>  
- <span data-ttu-id="4c4ed-119">なし。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="915b5-118">子要素</span><span class="sxs-lookup"><span data-stu-id="915b5-118">Child Elements</span></span>  
+ <span data-ttu-id="915b5-119">なし。</span><span class="sxs-lookup"><span data-stu-id="915b5-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="4c4ed-120">親要素</span><span class="sxs-lookup"><span data-stu-id="4c4ed-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="915b5-120">親要素</span><span class="sxs-lookup"><span data-stu-id="915b5-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="4c4ed-121">要素</span><span class="sxs-lookup"><span data-stu-id="4c4ed-121">Element</span></span>|<span data-ttu-id="4c4ed-122">説明</span><span class="sxs-lookup"><span data-stu-id="4c4ed-122">Description</span></span>|  
+|<span data-ttu-id="915b5-121">要素</span><span class="sxs-lookup"><span data-stu-id="915b5-121">Element</span></span>|<span data-ttu-id="915b5-122">説明</span><span class="sxs-lookup"><span data-stu-id="915b5-122">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="4c4ed-123">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`listeners`|<span data-ttu-id="4c4ed-124">収集、するリスナーをストアを指定し、メッセージをルーティングします。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-124">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="4c4ed-125">リスナーでは、適切なターゲットのトレースを出力します。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-125">Listeners direct the tracing output to an appropriate target.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="4c4ed-126">メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-126">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`trace`|<span data-ttu-id="4c4ed-127">ASP.NET トレース サービスを構成します。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-127">Configures the ASP.NET trace service.</span></span>|  
+|`configuration`|<span data-ttu-id="915b5-123">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="915b5-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`listeners`|<span data-ttu-id="915b5-124">収集、するリスナーをストアを指定し、メッセージをルーティングします。</span><span class="sxs-lookup"><span data-stu-id="915b5-124">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="915b5-125">リスナーでは、適切なターゲットのトレースを出力します。</span><span class="sxs-lookup"><span data-stu-id="915b5-125">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="915b5-126">メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。</span><span class="sxs-lookup"><span data-stu-id="915b5-126">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`trace`|<span data-ttu-id="915b5-127">ASP.NET トレース サービスを構成します。</span><span class="sxs-lookup"><span data-stu-id="915b5-127">Configures the ASP.NET trace service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4c4ed-128">Remarks</span><span class="sxs-lookup"><span data-stu-id="4c4ed-128">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="915b5-128">Remarks</span><span class="sxs-lookup"><span data-stu-id="915b5-128">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4c4ed-129">削除、<xref:System.Diagnostics.DefaultTraceListener>から、`Listeners`コレクションの動作を変更する、 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>、 <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>、 <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>、および<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>メソッド。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-129">Removing the <xref:System.Diagnostics.DefaultTraceListener> from the `Listeners` collection alters the behavior of the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, and <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="4c4ed-130">呼び出す、`Assert`または`Fail`メソッド結果は、通常、メッセージ ボックスの表示の場合、メッセージ ボックスは表示されませんが、<xref:System.Diagnostics.DefaultTraceListener>内にない、`Listeners`コレクション。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-130">Calling an `Assert` or `Fail` method normally results in the display of a message box, however the message box is not displayed if the <xref:System.Diagnostics.DefaultTraceListener> is not in the `Listeners` collection.</span></span>  
+>  <span data-ttu-id="915b5-129">削除、<xref:System.Diagnostics.DefaultTraceListener>から、`Listeners`コレクションの動作を変更する、 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>、 <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>、 <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>、および<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>メソッド。</span><span class="sxs-lookup"><span data-stu-id="915b5-129">Removing the <xref:System.Diagnostics.DefaultTraceListener> from the `Listeners` collection alters the behavior of the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, and <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="915b5-130">呼び出す、`Assert`または`Fail`メソッド結果は、通常、メッセージ ボックスの表示の場合、メッセージ ボックスは表示されませんが、<xref:System.Diagnostics.DefaultTraceListener>内にない、`Listeners`コレクション。</span><span class="sxs-lookup"><span data-stu-id="915b5-130">Calling an `Assert` or `Fail` method normally results in the display of a message box, however the message box is not displayed if the <xref:System.Diagnostics.DefaultTraceListener> is not in the `Listeners` collection.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4c4ed-131">例</span><span class="sxs-lookup"><span data-stu-id="4c4ed-131">Example</span></span>  
- <span data-ttu-id="4c4ed-132">次の例は、トレースから既定のトレース リスナーを削除する方法を示しています。**リスナー**コレクション。</span><span class="sxs-lookup"><span data-stu-id="4c4ed-132">The following example shows how to remove the default trace listener from the trace **Listeners** collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="915b5-131">例</span><span class="sxs-lookup"><span data-stu-id="915b5-131">Example</span></span>  
+ <span data-ttu-id="915b5-132">次の例は、トレースから既定のトレース リスナーを削除する方法を示しています。**リスナー**コレクション。</span><span class="sxs-lookup"><span data-stu-id="915b5-132">The following example shows how to remove the default trace listener from the trace **Listeners** collection.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,9 +72,9 @@ ms.locfileid: "47230983"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4c4ed-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="4c4ed-133">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="915b5-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="915b5-133">See Also</span></span>  
  <xref:System.Diagnostics.TraceListener>  
  <xref:System.Diagnostics.DefaultTraceListener>  
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.EventLogTraceListener>  
- [<span data-ttu-id="4c4ed-134">トレースおよびデバッグ設定のスキーマ</span><span class="sxs-lookup"><span data-stu-id="4c4ed-134">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [<span data-ttu-id="915b5-134">トレースおよびデバッグ設定のスキーマ</span><span class="sxs-lookup"><span data-stu-id="915b5-134">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

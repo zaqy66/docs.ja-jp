@@ -1,35 +1,27 @@
 ---
-title: Windows Workflow (WF) のサンプル
-ms.date: 03/30/2017
+title: Windows Workflow (WF) のサンプル ドキュメント
+ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: b6f614bd8543070ee69636344376b058988c2306
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 64153e885cd4203134d429d2d8b8e246628de5fb
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195265"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48026998"
 ---
-# <a name="windows-workflow-wf-samples"></a><span data-ttu-id="b89ac-102">Windows Workflow (WF) のサンプル</span><span class="sxs-lookup"><span data-stu-id="b89ac-102">Windows Workflow (WF) Samples</span></span>
+# <a name="windows-workflow-wf-samples"></a><span data-ttu-id="665f5-102">Windows Workflow (WF) のサンプル</span><span class="sxs-lookup"><span data-stu-id="665f5-102">Windows Workflow (WF) Samples</span></span>
 
-<span data-ttu-id="b89ac-103">これらのサンプルでは、さまざまな側面の Windows Workflow Foundation (WF) の命令を提供します。</span><span class="sxs-lookup"><span data-stu-id="b89ac-103">These samples provide instruction on various aspects of Windows Workflow Foundation (WF).</span></span>
+<span data-ttu-id="665f5-103">できます[Windows Workflow のサンプルをダウンロード](https://go.microsoft.com/fwlink/?LinkId=150780)に関するさまざまな Windows Workflow Foundation (WF) の命令を提供します。</span><span class="sxs-lookup"><span data-stu-id="665f5-103">You can [download Windows Workflow samples](https://go.microsoft.com/fwlink/?LinkId=150780) that provide instruction on various aspects of Windows Workflow Foundation (WF).</span></span>
 
-<span data-ttu-id="b89ac-104">このサンプルは、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=150780) からダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="b89ac-104">The samples can be downloaded from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span>
+<span data-ttu-id="665f5-104">このセクションの記事では、サンプル、ダウンロード パッケージでは、一部について説明します。</span><span class="sxs-lookup"><span data-stu-id="665f5-104">The articles in this section describe some of the samples in the download package.</span></span> <span data-ttu-id="665f5-105">すべてのサンプルを網羅する完全なドキュメント セットで確認、 [.NET Framework 4 の WF のサンプル](/previous-versions/dotnet/netframework-4.0/dd483375(v%3dvs.100))セクション。</span><span class="sxs-lookup"><span data-stu-id="665f5-105">For a complete documentation set that covers all of the samples, check the [.NET Framework 4 WF samples](/previous-versions/dotnet/netframework-4.0/dd483375(v%3dvs.100)) section.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b89ac-105">これらのサンプルは、Visual Studio 2010 で作成されたと[!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]、以降のバージョンの Visual Studio および .NET Framework と互換性があるがします。</span><span class="sxs-lookup"><span data-stu-id="b89ac-105">These samples were created with Visual Studio 2010 and [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], but are compatible with later versions of Visual Studio and the .NET Framework.</span></span> <span data-ttu-id="b89ac-106">その他の Windows Workflow Foundation 用サンプル[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]ご覧[MSDN コード サンプル](https://aka.ms/WF45Samples)します。</span><span class="sxs-lookup"><span data-stu-id="b89ac-106">Additional samples for Windows Workflow Foundation in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] can be found on [MSDN code samples](https://aka.ms/WF45Samples).</span></span>
+> <span data-ttu-id="665f5-106">ダウンロード可能なサンプルは、Visual Studio 2010 で作成されたと[!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]、以降のバージョンの Visual Studio および .NET Framework と互換性があるがします。</span><span class="sxs-lookup"><span data-stu-id="665f5-106">The downloadable samples were created with Visual Studio 2010 and [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], but are compatible with later versions of Visual Studio and the .NET Framework.</span></span> <span data-ttu-id="665f5-107">その他の Windows Workflow Foundation 用サンプル[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]ご覧[MSDN コード サンプル](https://aka.ms/WF45Samples)します。</span><span class="sxs-lookup"><span data-stu-id="665f5-107">Additional samples for Windows Workflow Foundation in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] can be found on [MSDN code samples](https://aka.ms/WF45Samples).</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="b89ac-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="b89ac-107">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="665f5-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="665f5-108">In this section</span></span>
 
-[<span data-ttu-id="b89ac-108">アプリケーション</span><span class="sxs-lookup"><span data-stu-id="b89ac-108">Application</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/application.md)
+<span data-ttu-id="665f5-109">[アプリケーション](../../../../docs/framework/windows-workflow-foundation/samples/application.md)-ワークフロー アプリケーションに関連するサンプルを提供します。</span><span class="sxs-lookup"><span data-stu-id="665f5-109">[Application](../../../../docs/framework/windows-workflow-foundation/samples/application.md) - Provides samples that are related to workflow applications.</span></span>
 
-<span data-ttu-id="b89ac-109">ワークフロー アプリケーションに関連するサンプルが用意されています。</span><span class="sxs-lookup"><span data-stu-id="b89ac-109">Provides samples that are related to workflow applications.</span></span>
+<span data-ttu-id="665f5-110">[基本的な](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)-基本的な Windows Workflow Foundation (WF) 機能を示すサンプルを提供します。</span><span class="sxs-lookup"><span data-stu-id="665f5-110">[Basic](../../../../docs/framework/windows-workflow-foundation/samples/basic.md) - Provides samples that demonstrate basic Windows Workflow Foundation (WF) functionality.</span></span>
 
-[<span data-ttu-id="b89ac-110">基本</span><span class="sxs-lookup"><span data-stu-id="b89ac-110">Basic</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)
-
-<span data-ttu-id="b89ac-111">Windows Workflow Foundation (WF) の基本的な機能を示すサンプルを提供します。</span><span class="sxs-lookup"><span data-stu-id="b89ac-111">Provides samples that demonstrate basic Windows Workflow Foundation (WF) functionality.</span></span>
-
-[<span data-ttu-id="b89ac-112">シナリオ</span><span class="sxs-lookup"><span data-stu-id="b89ac-112">Scenario</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)
-
-<span data-ttu-id="b89ac-113">Windows Workflow Foundation (WF) のシナリオの例を示します。</span><span class="sxs-lookup"><span data-stu-id="b89ac-113">Provides examples of Windows Workflow Foundation (WF) scenarios.</span></span>
-
-<span data-ttu-id="b89ac-114">このサンプルは、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=150780) からダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="b89ac-114">The samples can be downloaded from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span>
+<span data-ttu-id="665f5-111">[シナリオ](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)-Windows Workflow Foundation (WF) のシナリオの例を示します。</span><span class="sxs-lookup"><span data-stu-id="665f5-111">[Scenario](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md) - Provides examples of Windows Workflow Foundation (WF) scenarios.</span></span>

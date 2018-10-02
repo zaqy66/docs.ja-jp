@@ -4,73 +4,73 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 4a003acbf4e182a0493368b586a3add229d8b526
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863027"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036002"
 ---
-# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a><span data-ttu-id="f6484-102">方法: WIF を使用してクレーム対応 ASP.NET MVC Web アプリケーションをビルドする</span><span class="sxs-lookup"><span data-stu-id="f6484-102">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>
-## <a name="applies-to"></a><span data-ttu-id="f6484-103">対象</span><span class="sxs-lookup"><span data-stu-id="f6484-103">Applies To</span></span>  
+# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a><span data-ttu-id="8fb4d-102">方法: WIF を使用してクレーム対応 ASP.NET MVC Web アプリケーションをビルドする</span><span class="sxs-lookup"><span data-stu-id="8fb4d-102">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>
+## <a name="applies-to"></a><span data-ttu-id="8fb4d-103">対象</span><span class="sxs-lookup"><span data-stu-id="8fb4d-103">Applies To</span></span>  
   
--   <span data-ttu-id="f6484-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="f6484-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
+-   <span data-ttu-id="8fb4d-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="8fb4d-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   <span data-ttu-id="f6484-105">ASP.NET® MVC</span><span class="sxs-lookup"><span data-stu-id="f6484-105">ASP.NET® MVC</span></span>  
+-   <span data-ttu-id="8fb4d-105">ASP.NET® MVC</span><span class="sxs-lookup"><span data-stu-id="8fb4d-105">ASP.NET® MVC</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="f6484-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="f6484-106">Summary</span></span>  
- <span data-ttu-id="f6484-107">この操作方法では、簡単なクレーム対応 ASP.NET MVC Web アプリケーションを作成するための詳細な手順を示します。</span><span class="sxs-lookup"><span data-stu-id="f6484-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET MVC web application.</span></span> <span data-ttu-id="f6484-108">また、クレーム ベースの認証を正常に実装するために簡単なクレーム対応 ASP.NET MVC Web アプリケーションをテストする方法も示します。</span><span class="sxs-lookup"><span data-stu-id="f6484-108">It also provides instructions how to test the simple claims-aware ASP.NET MVC web application for successful implementation of claims-based authentication.</span></span> <span data-ttu-id="f6484-109">この操作方法には、セキュリティ トークン サービス (STS) の詳細な作成手順は含まれていません。既に STS が構成済みであると想定します。</span><span class="sxs-lookup"><span data-stu-id="f6484-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
+## <a name="summary"></a><span data-ttu-id="8fb4d-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="8fb4d-106">Summary</span></span>  
+ <span data-ttu-id="8fb4d-107">この操作方法では、簡単なクレーム対応 ASP.NET MVC Web アプリケーションを作成するための詳細な手順を示します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET MVC web application.</span></span> <span data-ttu-id="8fb4d-108">また、クレーム ベースの認証を正常に実装するために簡単なクレーム対応 ASP.NET MVC Web アプリケーションをテストする方法も示します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-108">It also provides instructions how to test the simple claims-aware ASP.NET MVC web application for successful implementation of claims-based authentication.</span></span> <span data-ttu-id="8fb4d-109">この操作方法には、セキュリティ トークン サービス (STS) の詳細な作成手順は含まれていません。既に STS が構成済みであると想定します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="f6484-110">目次</span><span class="sxs-lookup"><span data-stu-id="f6484-110">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="8fb4d-110">目次</span><span class="sxs-lookup"><span data-stu-id="8fb4d-110">Contents</span></span>  
   
--   <span data-ttu-id="f6484-111">目的</span><span class="sxs-lookup"><span data-stu-id="f6484-111">Objectives</span></span>  
+-   <span data-ttu-id="8fb4d-111">目的</span><span class="sxs-lookup"><span data-stu-id="8fb4d-111">Objectives</span></span>  
   
--   <span data-ttu-id="f6484-112">手順の要約</span><span class="sxs-lookup"><span data-stu-id="f6484-112">Summary of Steps</span></span>  
+-   <span data-ttu-id="8fb4d-112">手順の要約</span><span class="sxs-lookup"><span data-stu-id="8fb4d-112">Summary of Steps</span></span>  
   
--   <span data-ttu-id="f6484-113">手順 1 – 簡単な ASP.NET MVC アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="f6484-113">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
+-   <span data-ttu-id="8fb4d-113">手順 1 – 簡単な ASP.NET MVC アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="8fb4d-113">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
   
--   <span data-ttu-id="f6484-114">手順 2 – クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="f6484-114">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
+-   <span data-ttu-id="8fb4d-114">手順 2 – クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="8fb4d-114">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
   
--   <span data-ttu-id="f6484-115">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="f6484-115">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="8fb4d-115">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="8fb4d-115">Step 3 – Test Your Solution</span></span>  
   
--   <span data-ttu-id="f6484-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="f6484-116">Related Items</span></span>  
+-   <span data-ttu-id="8fb4d-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="8fb4d-116">Related Items</span></span>  
   
-## <a name="objectives"></a><span data-ttu-id="f6484-117">目的</span><span class="sxs-lookup"><span data-stu-id="f6484-117">Objectives</span></span>  
+## <a name="objectives"></a><span data-ttu-id="8fb4d-117">目的</span><span class="sxs-lookup"><span data-stu-id="8fb4d-117">Objectives</span></span>  
   
--   <span data-ttu-id="f6484-118">クレーム ベースの認証用の ASP.NET MVC Web アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="f6484-118">Configure ASP.NET MVC web application for claims-based authentication</span></span>  
+-   <span data-ttu-id="8fb4d-118">クレーム ベースの認証用の ASP.NET MVC Web アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="8fb4d-118">Configure ASP.NET MVC web application for claims-based authentication</span></span>  
   
--   <span data-ttu-id="f6484-119">クレーム対応 ASP.NET MVC Web アプリケーションが正常であることをテストする</span><span class="sxs-lookup"><span data-stu-id="f6484-119">Test successful claims-aware ASP.NET MVC web application</span></span>  
+-   <span data-ttu-id="8fb4d-119">クレーム対応 ASP.NET MVC Web アプリケーションが正常であることをテストする</span><span class="sxs-lookup"><span data-stu-id="8fb4d-119">Test successful claims-aware ASP.NET MVC web application</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="f6484-120">手順の要約</span><span class="sxs-lookup"><span data-stu-id="f6484-120">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="8fb4d-120">手順の要約</span><span class="sxs-lookup"><span data-stu-id="8fb4d-120">Summary of Steps</span></span>  
   
--   <span data-ttu-id="f6484-121">手順 1 – 簡単な ASP.NET MVC アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="f6484-121">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
+-   <span data-ttu-id="8fb4d-121">手順 1 – 簡単な ASP.NET MVC アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="8fb4d-121">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
   
--   <span data-ttu-id="f6484-122">手順 2 – クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="f6484-122">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
+-   <span data-ttu-id="8fb4d-122">手順 2 – クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="8fb4d-122">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
   
--   <span data-ttu-id="f6484-123">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="f6484-123">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="8fb4d-123">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="8fb4d-123">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-simple-aspnet-mvc-application"></a><span data-ttu-id="f6484-124">手順 1 – 簡単な ASP.NET MVC アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="f6484-124">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
- <span data-ttu-id="f6484-125">この手順では、新しい ASP.NET MVC アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="f6484-125">In this step, you will create a new ASP.NET MVC application.</span></span>  
+## <a name="step-1--create-simple-aspnet-mvc-application"></a><span data-ttu-id="8fb4d-124">手順 1 – 簡単な ASP.NET MVC アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="8fb4d-124">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
+ <span data-ttu-id="8fb4d-125">この手順では、新しい ASP.NET MVC アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-125">In this step, you will create a new ASP.NET MVC application.</span></span>  
   
-#### <a name="to-create-simple-aspnet-mvc-application"></a><span data-ttu-id="f6484-126">簡単な ASP.NET MVC アプリケーションを作成するには</span><span class="sxs-lookup"><span data-stu-id="f6484-126">To create simple ASP.NET MVC application</span></span>  
+#### <a name="to-create-simple-aspnet-mvc-application"></a><span data-ttu-id="8fb4d-126">簡単な ASP.NET MVC アプリケーションを作成するには</span><span class="sxs-lookup"><span data-stu-id="8fb4d-126">To create simple ASP.NET MVC application</span></span>  
   
-1.  <span data-ttu-id="f6484-127">Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="f6484-127">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
+1.  <span data-ttu-id="8fb4d-127">Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-127">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  <span data-ttu-id="f6484-128">**[新しいプロジェクト]** ウィンドウで、**[ASP.NET MVC 3 Web アプリケーション]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="f6484-128">In the **New Project** window, click **ASP.NET MVC 3 Web Application**.</span></span>  
+2.  <span data-ttu-id="8fb4d-128">**[新しいプロジェクト]** ウィンドウで、**[ASP.NET MVC 3 Web アプリケーション]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-128">In the **New Project** window, click **ASP.NET MVC 3 Web Application**.</span></span>  
   
-3.  <span data-ttu-id="f6484-129">**[名前]** で、「`TestApp`」と入力して **[OK]** を押します。</span><span class="sxs-lookup"><span data-stu-id="f6484-129">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3.  <span data-ttu-id="8fb4d-129">**[名前]** で、「`TestApp`」と入力して **[OK]** を押します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-129">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-4.  <span data-ttu-id="f6484-130">**[新しい ASP.NET MVC 3 プロジェクト]** ダイアログで、使用可能なテンプレートから **[インターネット アプリケーション]** を選択し、**[ビュー エンジン]** が **[Razor]** に設定されていることを確認して **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="f6484-130">In the **New ASP.NET MVC 3 Project** dialog, select **Internet Application** from the available templates, ensure **View Engine** is set to **Razor**, and then click **OK**.</span></span>  
+4.  <span data-ttu-id="8fb4d-130">**[新しい ASP.NET MVC 3 プロジェクト]** ダイアログで、使用可能なテンプレートから **[インターネット アプリケーション]** を選択し、**[ビュー エンジン]** が **[Razor]** に設定されていることを確認して **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-130">In the **New ASP.NET MVC 3 Project** dialog, select **Internet Application** from the available templates, ensure **View Engine** is set to **Razor**, and then click **OK**.</span></span>  
   
-5.  <span data-ttu-id="f6484-131">新しいプロジェクトが開いたら、**ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックして **[プロパティ]** オプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="f6484-131">When the new project opens, right-click the **TestApp** project in **Solution Explorer** and select the **Properties** option.</span></span>  
+5.  <span data-ttu-id="8fb4d-131">新しいプロジェクトが開いたら、**ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックして **[プロパティ]** オプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-131">When the new project opens, right-click the **TestApp** project in **Solution Explorer** and select the **Properties** option.</span></span>  
   
-6.  <span data-ttu-id="f6484-132">プロジェクトのプロパティ ページで、左側の **[Web]** タブをクリックし、**[ローカル IIS Web サーバーを使用する]** オプションが選択されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="f6484-132">On the project’s properties page, click on the **Web** tab on the left and ensure that the **Use Local IIS Web Server** option is selected.</span></span>  
+6.  <span data-ttu-id="8fb4d-132">プロジェクトのプロパティ ページで、左側の **[Web]** タブをクリックし、**[ローカル IIS Web サーバーを使用する]** オプションが選択されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-132">On the project’s properties page, click on the **Web** tab on the left and ensure that the **Use Local IIS Web Server** option is selected.</span></span>  
   
-## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="f6484-133">手順 2 – クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="f6484-133">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
- <span data-ttu-id="f6484-134">この手順では、構成エントリを ASP.NET MVC Web アプリケーションの *Web.config* 構成ファイルに追加して、クレーム対応にします。</span><span class="sxs-lookup"><span data-stu-id="f6484-134">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET MVC web application to make it claims-aware.</span></span>  
+## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="8fb4d-133">手順 2 – クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成する</span><span class="sxs-lookup"><span data-stu-id="8fb4d-133">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
+ <span data-ttu-id="8fb4d-134">この手順では、構成エントリを ASP.NET MVC Web アプリケーションの *Web.config* 構成ファイルに追加して、クレーム対応にします。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-134">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET MVC web application to make it claims-aware.</span></span>  
   
-#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="f6484-135">クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成するには</span><span class="sxs-lookup"><span data-stu-id="f6484-135">To configure ASP.NET MVC application for claims-based authentication</span></span>  
+#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="8fb4d-135">クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成するには</span><span class="sxs-lookup"><span data-stu-id="8fb4d-135">To configure ASP.NET MVC application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="f6484-136">次の構成セクションの定義を *Web.config* 構成ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="f6484-136">Add the following configuration section definitions to the *Web.config* configuration file.</span></span> <span data-ttu-id="f6484-137">これで、Windows Identity Foundation に必要な構成セクションが定義されます。</span><span class="sxs-lookup"><span data-stu-id="f6484-137">These define configuration sections required by Windows Identity Foundation.</span></span> <span data-ttu-id="f6484-138">**\<configuration>** 開始要素のすぐ後に定義を追加します。</span><span class="sxs-lookup"><span data-stu-id="f6484-138">Add the definitions immediately after the **\<configuration>** opening element:</span></span>  
+1.  <span data-ttu-id="8fb4d-136">次の構成セクションの定義を *Web.config* 構成ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-136">Add the following configuration section definitions to the *Web.config* configuration file.</span></span> <span data-ttu-id="8fb4d-137">これで、Windows Identity Foundation に必要な構成セクションが定義されます。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-137">These define configuration sections required by Windows Identity Foundation.</span></span> <span data-ttu-id="8fb4d-138">**\<configuration>** 開始要素のすぐ後に定義を追加します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-138">Add the definitions immediately after the **\<configuration>** opening element:</span></span>  
   
     ```xml  
     <configSections>  
@@ -79,7 +79,7 @@ ms.locfileid: "47863027"
     </configSections>  
     ```  
   
-2.  <span data-ttu-id="f6484-139">次のように、アプリケーションのフェデレーション メタデータへのアクセスを有効にする **\<location>** 要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="f6484-139">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
+2.  <span data-ttu-id="8fb4d-139">次のように、アプリケーションのフェデレーション メタデータへのアクセスを有効にする **\<location>** 要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-139">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -91,7 +91,7 @@ ms.locfileid: "47863027"
     </location>  
     ```  
   
-3.  <span data-ttu-id="f6484-140">**\<system.web>** 要素内で以下の構成エントリを追加して、ユーザーを拒否し、ネイティブ認証を無効にし、認証を管理するために WIF を有効にします。</span><span class="sxs-lookup"><span data-stu-id="f6484-140">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
+3.  <span data-ttu-id="8fb4d-140">**\<system.web>** 要素内で以下の構成エントリを追加して、ユーザーを拒否し、ネイティブ認証を無効にし、認証を管理するために WIF を有効にします。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-140">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
   
     ```xml  
     <authorization>  
@@ -100,7 +100,7 @@ ms.locfileid: "47863027"
     <authentication mode="None" />  
     ```  
   
-4.  <span data-ttu-id="f6484-141">以下の Windows Identity Foundation 関連の構成エントリを追加し、ASP.NET アプリケーションの URL とポート番号が、**\<audienceUris>** エントリ、**\<wsFederation>** 要素の **realm** 属性、および **\<wsFederation>** 要素の **reply** 属性の値と一致することを確認します。</span><span class="sxs-lookup"><span data-stu-id="f6484-141">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="f6484-142">また、**issuer** の値がセキュリティ トークン サービス (STS) URL に適したものであることを確認します。</span><span class="sxs-lookup"><span data-stu-id="f6484-142">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
+4.  <span data-ttu-id="8fb4d-141">以下の Windows Identity Foundation 関連の構成エントリを追加し、ASP.NET アプリケーションの URL とポート番号が、**\<audienceUris>** エントリ、**\<wsFederation>** 要素の **realm** 属性、および **\<wsFederation>** 要素の **reply** 属性の値と一致することを確認します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-141">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="8fb4d-142">また、**issuer** の値がセキュリティ トークン サービス (STS) URL に適したものであることを確認します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-142">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -124,16 +124,16 @@ ms.locfileid: "47863027"
     </system.identityModel.services>  
     ```  
   
-5.  <span data-ttu-id="f6484-143"><xref:System.IdentityModel> アセンブリに参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="f6484-143">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
+5.  <span data-ttu-id="8fb4d-143"><xref:System.IdentityModel> アセンブリに参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-143">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
   
-6.  <span data-ttu-id="f6484-144">ソリューションをコンパイルして、エラーがあるかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="f6484-144">Compile the solution to make sure there are errors.</span></span>  
+6.  <span data-ttu-id="8fb4d-144">ソリューションをコンパイルして、エラーがあるかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-144">Compile the solution to make sure there are errors.</span></span>  
   
-## <a name="step-3--test-your-solution"></a><span data-ttu-id="f6484-145">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="f6484-145">Step 3 – Test Your Solution</span></span>  
- <span data-ttu-id="f6484-146">この手順では、クレーム ベースの認証用に構成された ASP.NET MVC Web アプリケーションをテストします。</span><span class="sxs-lookup"><span data-stu-id="f6484-146">In this step you will test your ASP.NET MVC web application configured for claims-based authentication.</span></span> <span data-ttu-id="f6484-147">基本テストを実行するには、セキュリティ トークン サービス (STS) で発行されたトークンでクレームを表示する簡単なコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="f6484-147">To perform basic test you will add simple code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="8fb4d-145">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="8fb4d-145">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="8fb4d-146">この手順では、クレーム ベースの認証用に構成された ASP.NET MVC Web アプリケーションをテストします。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-146">In this step you will test your ASP.NET MVC web application configured for claims-based authentication.</span></span> <span data-ttu-id="8fb4d-147">基本テストを実行するには、セキュリティ トークン サービス (STS) で発行されたトークンでクレームを表示する簡単なコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-147">To perform basic test you will add simple code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
   
-#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="f6484-148">クレーム ベースの認証用の ASP.NET MVC アプリケーションをテストするには</span><span class="sxs-lookup"><span data-stu-id="f6484-148">To test your ASP.NET MVC application for claims-based authentication</span></span>  
+#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="8fb4d-148">クレーム ベースの認証用の ASP.NET MVC アプリケーションをテストするには</span><span class="sxs-lookup"><span data-stu-id="8fb4d-148">To test your ASP.NET MVC application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="f6484-149">**ソリューション エクスプローラー**で、**Controllers** フォルダーを展開し、エディターで *HomeController.cs* ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="f6484-149">In the **Solution Explorer**, expand the **Controllers** folder and open *HomeController.cs* file in the editor.</span></span> <span data-ttu-id="f6484-150">**Index** メソッドに次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="f6484-150">Add the following code to the **Index** method:</span></span>  
+1.  <span data-ttu-id="8fb4d-149">**ソリューション エクスプローラー**で、**Controllers** フォルダーを展開し、エディターで *HomeController.cs* ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-149">In the **Solution Explorer**, expand the **Controllers** folder and open *HomeController.cs* file in the editor.</span></span> <span data-ttu-id="8fb4d-150">**Index** メソッドに次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-150">Add the following code to the **Index** method:</span></span>  
   
     ```csharp  
     public ActionResult Index()  
@@ -144,7 +144,7 @@ ms.locfileid: "47863027"
     }  
     ```  
   
-2.  <span data-ttu-id="f6484-151">**ソリューション エクスプローラー**で、**Views** フォルダーを展開してから **Home** フォルダーを展開し、エディターで *Index.cshtml* ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="f6484-151">In the **Solution Explorer** expand **Views** and then **Home** folders and open *Index.cshtml* file in the editor.</span></span> <span data-ttu-id="f6484-152">その内容を削除し、次のマークアップを追加します。</span><span class="sxs-lookup"><span data-stu-id="f6484-152">Delete its contents and add the following markup:</span></span>  
+2.  <span data-ttu-id="8fb4d-151">**ソリューション エクスプローラー**で、**Views** フォルダーを展開してから **Home** フォルダーを展開し、エディターで *Index.cshtml* ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-151">In the **Solution Explorer** expand **Views** and then **Home** folders and open *Index.cshtml* file in the editor.</span></span> <span data-ttu-id="8fb4d-152">その内容を削除し、次のマークアップを追加します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-152">Delete its contents and add the following markup:</span></span>  
   
     ```html  
     @{  
@@ -212,10 +212,10 @@ ms.locfileid: "47863027"
     </table>  
     ```  
   
-3.  <span data-ttu-id="f6484-153">**F5** キーを押して、ソリューションを実行します。</span><span class="sxs-lookup"><span data-stu-id="f6484-153">Run the solution by pressing the **F5** key.</span></span>  
+3.  <span data-ttu-id="8fb4d-153">**F5** キーを押して、ソリューションを実行します。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-153">Run the solution by pressing the **F5** key.</span></span>  
   
-4.  <span data-ttu-id="f6484-154">セキュリティ トークン サービスで発行されたトークンでクレームを表示するページが表示されます。</span><span class="sxs-lookup"><span data-stu-id="f6484-154">You should be presented with the page that displays the claims in the token that was issued to you by Security Token Service.</span></span>  
+4.  <span data-ttu-id="8fb4d-154">セキュリティ トークン サービスで発行されたトークンでクレームを表示するページが表示されます。</span><span class="sxs-lookup"><span data-stu-id="8fb4d-154">You should be presented with the page that displays the claims in the token that was issued to you by Security Token Service.</span></span>  
   
-## <a name="related-items"></a><span data-ttu-id="f6484-155">関連項目</span><span class="sxs-lookup"><span data-stu-id="f6484-155">Related Items</span></span>  
+## <a name="related-items"></a><span data-ttu-id="8fb4d-155">関連項目</span><span class="sxs-lookup"><span data-stu-id="8fb4d-155">Related Items</span></span>  
   
--   [<span data-ttu-id="f6484-156">方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションをビルドする</span><span class="sxs-lookup"><span data-stu-id="f6484-156">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+-   [<span data-ttu-id="8fb4d-156">方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションをビルドする</span><span class="sxs-lookup"><span data-stu-id="8fb4d-156">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

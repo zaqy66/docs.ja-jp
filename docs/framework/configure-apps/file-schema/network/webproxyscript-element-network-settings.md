@@ -11,21 +11,21 @@ ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 1e1450d2df424b32aacc5c113b5936001f65915a
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031774"
 ---
-# <a name="ltwebproxyscriptgt-element-network-settings"></a><span data-ttu-id="a0644-102">&lt;webProxyScript&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="a0644-102">&lt;webProxyScript&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="a0644-103">Web プロキシを検出するために使用するスクリプトの特性を構成します。</span><span class="sxs-lookup"><span data-stu-id="a0644-103">Configures the characteristics of the script used to discover Web proxies.</span></span>  
+# <a name="ltwebproxyscriptgt-element-network-settings"></a><span data-ttu-id="b7fcf-102">&lt;webProxyScript&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="b7fcf-102">&lt;webProxyScript&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="b7fcf-103">Web プロキシを検出するために使用するスクリプトの特性を構成します。</span><span class="sxs-lookup"><span data-stu-id="b7fcf-103">Configures the characteristics of the script used to discover Web proxies.</span></span>  
   
- <span data-ttu-id="a0644-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="a0644-104">\<configuration></span></span>  
-<span data-ttu-id="a0644-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="a0644-105">\<system.net></span></span>  
-<span data-ttu-id="a0644-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="a0644-106">\<settings></span></span>  
-<span data-ttu-id="a0644-107">\<webProxyScript ></span><span class="sxs-lookup"><span data-stu-id="a0644-107">\<webProxyScript></span></span>  
+ <span data-ttu-id="b7fcf-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b7fcf-104">\<configuration></span></span>  
+<span data-ttu-id="b7fcf-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="b7fcf-105">\<system.net></span></span>  
+<span data-ttu-id="b7fcf-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="b7fcf-106">\<settings></span></span>  
+<span data-ttu-id="b7fcf-107">\<webProxyScript ></span><span class="sxs-lookup"><span data-stu-id="b7fcf-107">\<webProxyScript></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0644-108">構文</span><span class="sxs-lookup"><span data-stu-id="a0644-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b7fcf-108">構文</span><span class="sxs-lookup"><span data-stu-id="b7fcf-108">Syntax</span></span>  
   
 ```xml  
 <webProxyScript  
@@ -33,28 +33,28 @@ ms.locfileid: "47862738"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a0644-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="a0644-109">Attributes and Elements</span></span>  
- <span data-ttu-id="a0644-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="a0644-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b7fcf-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="b7fcf-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="b7fcf-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="b7fcf-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a0644-111">属性</span><span class="sxs-lookup"><span data-stu-id="a0644-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b7fcf-111">属性</span><span class="sxs-lookup"><span data-stu-id="b7fcf-111">Attributes</span></span>  
   
-|<span data-ttu-id="a0644-112">属性</span><span class="sxs-lookup"><span data-stu-id="a0644-112">Attribute</span></span>|<span data-ttu-id="a0644-113">説明</span><span class="sxs-lookup"><span data-stu-id="a0644-113">Description</span></span>|  
+|<span data-ttu-id="b7fcf-112">属性</span><span class="sxs-lookup"><span data-stu-id="b7fcf-112">Attribute</span></span>|<span data-ttu-id="b7fcf-113">説明</span><span class="sxs-lookup"><span data-stu-id="b7fcf-113">Description</span></span>|  
 |---------------|-----------------|  
-|`downloadTimeout`|<span data-ttu-id="a0644-114">時間、分、および秒でスクリプトをダウンロードする最大時間を指定します。</span><span class="sxs-lookup"><span data-stu-id="a0644-114">Specifies the maximum time to download the script in hours, minutes, and seconds.</span></span> <span data-ttu-id="a0644-115">既定値は、1 分です。</span><span class="sxs-lookup"><span data-stu-id="a0644-115">The default value is one minute.</span></span>|  
+|`downloadTimeout`|<span data-ttu-id="b7fcf-114">時間、分、および秒でスクリプトをダウンロードする最大時間を指定します。</span><span class="sxs-lookup"><span data-stu-id="b7fcf-114">Specifies the maximum time to download the script in hours, minutes, and seconds.</span></span> <span data-ttu-id="b7fcf-115">既定値は、1 分です。</span><span class="sxs-lookup"><span data-stu-id="b7fcf-115">The default value is one minute.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a0644-116">子要素</span><span class="sxs-lookup"><span data-stu-id="a0644-116">Child Elements</span></span>  
- <span data-ttu-id="a0644-117">なし。</span><span class="sxs-lookup"><span data-stu-id="a0644-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b7fcf-116">子要素</span><span class="sxs-lookup"><span data-stu-id="b7fcf-116">Child Elements</span></span>  
+ <span data-ttu-id="b7fcf-117">なし。</span><span class="sxs-lookup"><span data-stu-id="b7fcf-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="a0644-118">親要素</span><span class="sxs-lookup"><span data-stu-id="a0644-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b7fcf-118">親要素</span><span class="sxs-lookup"><span data-stu-id="b7fcf-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="a0644-119">要素</span><span class="sxs-lookup"><span data-stu-id="a0644-119">Element</span></span>|<span data-ttu-id="a0644-120">説明</span><span class="sxs-lookup"><span data-stu-id="a0644-120">Description</span></span>|  
+|<span data-ttu-id="b7fcf-119">要素</span><span class="sxs-lookup"><span data-stu-id="b7fcf-119">Element</span></span>|<span data-ttu-id="b7fcf-120">説明</span><span class="sxs-lookup"><span data-stu-id="b7fcf-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a0644-121">settings</span><span class="sxs-lookup"><span data-stu-id="a0644-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="a0644-122"><xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。</span><span class="sxs-lookup"><span data-stu-id="a0644-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="b7fcf-121">settings</span><span class="sxs-lookup"><span data-stu-id="b7fcf-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="b7fcf-122"><xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。</span><span class="sxs-lookup"><span data-stu-id="b7fcf-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a0644-123">Remarks</span><span class="sxs-lookup"><span data-stu-id="a0644-123">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b7fcf-123">Remarks</span><span class="sxs-lookup"><span data-stu-id="b7fcf-123">Remarks</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="a0644-124">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="a0644-124">Configuration Files</span></span>  
- <span data-ttu-id="a0644-125">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="a0644-125">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="b7fcf-124">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="b7fcf-124">Configuration Files</span></span>  
+ <span data-ttu-id="b7fcf-125">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="b7fcf-125">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0644-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="a0644-126">See Also</span></span>  
- [<span data-ttu-id="a0644-127">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="a0644-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="b7fcf-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="b7fcf-126">See Also</span></span>  
+ [<span data-ttu-id="b7fcf-127">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="b7fcf-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

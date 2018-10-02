@@ -4,73 +4,73 @@ ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
 ms.openlocfilehash: 8673b4520d9727ae1aa78ef0bc9f435defb02598
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032336"
 ---
-# <a name="how-to-transform-incoming-claims"></a><span data-ttu-id="fe10d-102">方法: 入力方向の要求の変換</span><span class="sxs-lookup"><span data-stu-id="fe10d-102">How To: Transform Incoming Claims</span></span>
-## <a name="applies-to"></a><span data-ttu-id="fe10d-103">対象</span><span class="sxs-lookup"><span data-stu-id="fe10d-103">Applies To</span></span>  
+# <a name="how-to-transform-incoming-claims"></a><span data-ttu-id="4c8f0-102">方法: 入力方向の要求の変換</span><span class="sxs-lookup"><span data-stu-id="4c8f0-102">How To: Transform Incoming Claims</span></span>
+## <a name="applies-to"></a><span data-ttu-id="4c8f0-103">対象</span><span class="sxs-lookup"><span data-stu-id="4c8f0-103">Applies To</span></span>  
   
--   <span data-ttu-id="fe10d-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="fe10d-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
+-   <span data-ttu-id="4c8f0-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="4c8f0-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   <span data-ttu-id="fe10d-105">ASP.NET® Web フォーム</span><span class="sxs-lookup"><span data-stu-id="fe10d-105">ASP.NET® Web Forms</span></span>  
+-   <span data-ttu-id="4c8f0-105">ASP.NET® Web フォーム</span><span class="sxs-lookup"><span data-stu-id="4c8f0-105">ASP.NET® Web Forms</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="fe10d-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="fe10d-106">Summary</span></span>  
- <span data-ttu-id="fe10d-107">この操作方法では、単純なクレーム対応 ASP.NET Web フォーム アプリケーションを作成、受信した要求を変換する詳細な手順を示します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-107">This How-To provides detailed step-by-step procedures for creating a simple claims-aware ASP.NET Web Forms application and transforming incoming claims.</span></span> <span data-ttu-id="fe10d-108">また、アプリケーションの実行中に変換されたクレームが表示されることを確認するためにアプリケーションをテストする方法についても説明します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-108">It also provides instructions for how to test the application to verify that transformed claims are presented when the application is run.</span></span>  
+## <a name="summary"></a><span data-ttu-id="4c8f0-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="4c8f0-106">Summary</span></span>  
+ <span data-ttu-id="4c8f0-107">この操作方法では、単純なクレーム対応 ASP.NET Web フォーム アプリケーションを作成、受信した要求を変換する詳細な手順を示します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-107">This How-To provides detailed step-by-step procedures for creating a simple claims-aware ASP.NET Web Forms application and transforming incoming claims.</span></span> <span data-ttu-id="4c8f0-108">また、アプリケーションの実行中に変換されたクレームが表示されることを確認するためにアプリケーションをテストする方法についても説明します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-108">It also provides instructions for how to test the application to verify that transformed claims are presented when the application is run.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="fe10d-109">目次</span><span class="sxs-lookup"><span data-stu-id="fe10d-109">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="4c8f0-109">目次</span><span class="sxs-lookup"><span data-stu-id="4c8f0-109">Contents</span></span>  
   
--   <span data-ttu-id="fe10d-110">目的</span><span class="sxs-lookup"><span data-stu-id="fe10d-110">Objectives</span></span>  
+-   <span data-ttu-id="4c8f0-110">目的</span><span class="sxs-lookup"><span data-stu-id="4c8f0-110">Objectives</span></span>  
   
--   <span data-ttu-id="fe10d-111">概要</span><span class="sxs-lookup"><span data-stu-id="fe10d-111">Overview</span></span>  
+-   <span data-ttu-id="4c8f0-111">概要</span><span class="sxs-lookup"><span data-stu-id="4c8f0-111">Overview</span></span>  
   
--   <span data-ttu-id="fe10d-112">手順の要約</span><span class="sxs-lookup"><span data-stu-id="fe10d-112">Summary of Steps</span></span>  
+-   <span data-ttu-id="4c8f0-112">手順の要約</span><span class="sxs-lookup"><span data-stu-id="4c8f0-112">Summary of Steps</span></span>  
   
--   <span data-ttu-id="fe10d-113">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="fe10d-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="4c8f0-113">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="4c8f0-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="fe10d-114">手順 2 – カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装する</span><span class="sxs-lookup"><span data-stu-id="fe10d-114">Step 2 – Implement Claims Transformation Using a Custom ClaimsAuthenticationManager</span></span>  
+-   <span data-ttu-id="4c8f0-114">手順 2 – カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装する</span><span class="sxs-lookup"><span data-stu-id="4c8f0-114">Step 2 – Implement Claims Transformation Using a Custom ClaimsAuthenticationManager</span></span>  
   
--   <span data-ttu-id="fe10d-115">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="fe10d-115">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="4c8f0-115">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="4c8f0-115">Step 3 – Test Your Solution</span></span>  
   
-## <a name="objectives"></a><span data-ttu-id="fe10d-116">目的</span><span class="sxs-lookup"><span data-stu-id="fe10d-116">Objectives</span></span>  
+## <a name="objectives"></a><span data-ttu-id="4c8f0-116">目的</span><span class="sxs-lookup"><span data-stu-id="4c8f0-116">Objectives</span></span>  
   
--   <span data-ttu-id="fe10d-117">クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションを構成します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-117">Configure an ASP.NET Web Forms application for claims-based authentication</span></span>  
+-   <span data-ttu-id="4c8f0-117">クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションを構成します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-117">Configure an ASP.NET Web Forms application for claims-based authentication</span></span>  
   
--   <span data-ttu-id="fe10d-118">管理者ロールのクレームを追加することによって、受信したクレームを変換します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-118">Transform incoming claims by adding an Administrator role claim</span></span>  
+-   <span data-ttu-id="4c8f0-118">管理者ロールのクレームを追加することによって、受信したクレームを変換します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-118">Transform incoming claims by adding an Administrator role claim</span></span>  
   
--   <span data-ttu-id="fe10d-119">ASP.NET Web フォーム アプリケーションをテストして正しく機能することを確認する</span><span class="sxs-lookup"><span data-stu-id="fe10d-119">Test the ASP.NET Web Forms application to see if it is working properly</span></span>  
+-   <span data-ttu-id="4c8f0-119">ASP.NET Web フォーム アプリケーションをテストして正しく機能することを確認する</span><span class="sxs-lookup"><span data-stu-id="4c8f0-119">Test the ASP.NET Web Forms application to see if it is working properly</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="fe10d-120">概要</span><span class="sxs-lookup"><span data-stu-id="fe10d-120">Overview</span></span>  
- <span data-ttu-id="fe10d-121">WIF が <xref:System.Security.Claims.ClaimsAuthenticationManager> という名前のクラスを公開し、これを使用してユーザーは、クレームが利用者 (RP) アプリケーションに表示される前に、クレームを変更できます。</span><span class="sxs-lookup"><span data-stu-id="fe10d-121">WIF exposes a class named <xref:System.Security.Claims.ClaimsAuthenticationManager> that enables users to modify claims before they are presented to a relying party (RP) application.</span></span> <span data-ttu-id="fe10d-122"><xref:System.Security.Claims.ClaimsAuthenticationManager> は、認証と基になるアプリケーション コードの間での問題の分離に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="fe10d-122">The <xref:System.Security.Claims.ClaimsAuthenticationManager> is useful for separation of concerns between authentication and the underlying application code.</span></span> <span data-ttu-id="fe10d-123">次の例は、RP で必要になる場合がある着信 <xref:System.Security.Claims.ClaimsPrincipal> 内のクレームにロールを追加する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="fe10d-123">The example below demonstrates how to add a role to the claims in the incoming <xref:System.Security.Claims.ClaimsPrincipal> that may be required by the RP.</span></span>  
+## <a name="overview"></a><span data-ttu-id="4c8f0-120">概要</span><span class="sxs-lookup"><span data-stu-id="4c8f0-120">Overview</span></span>  
+ <span data-ttu-id="4c8f0-121">WIF が <xref:System.Security.Claims.ClaimsAuthenticationManager> という名前のクラスを公開し、これを使用してユーザーは、クレームが利用者 (RP) アプリケーションに表示される前に、クレームを変更できます。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-121">WIF exposes a class named <xref:System.Security.Claims.ClaimsAuthenticationManager> that enables users to modify claims before they are presented to a relying party (RP) application.</span></span> <span data-ttu-id="4c8f0-122"><xref:System.Security.Claims.ClaimsAuthenticationManager> は、認証と基になるアプリケーション コードの間での問題の分離に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-122">The <xref:System.Security.Claims.ClaimsAuthenticationManager> is useful for separation of concerns between authentication and the underlying application code.</span></span> <span data-ttu-id="4c8f0-123">次の例は、RP で必要になる場合がある着信 <xref:System.Security.Claims.ClaimsPrincipal> 内のクレームにロールを追加する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-123">The example below demonstrates how to add a role to the claims in the incoming <xref:System.Security.Claims.ClaimsPrincipal> that may be required by the RP.</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="fe10d-124">手順の要約</span><span class="sxs-lookup"><span data-stu-id="fe10d-124">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="4c8f0-124">手順の要約</span><span class="sxs-lookup"><span data-stu-id="4c8f0-124">Summary of Steps</span></span>  
   
--   <span data-ttu-id="fe10d-125">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="fe10d-125">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="4c8f0-125">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="4c8f0-125">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="fe10d-126">手順 2 – カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装する</span><span class="sxs-lookup"><span data-stu-id="fe10d-126">Step 2 – Implement Claims Transformation Using a Custom ClaimsAuthenticationManager</span></span>  
+-   <span data-ttu-id="4c8f0-126">手順 2 – カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装する</span><span class="sxs-lookup"><span data-stu-id="4c8f0-126">Step 2 – Implement Claims Transformation Using a Custom ClaimsAuthenticationManager</span></span>  
   
--   <span data-ttu-id="fe10d-127">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="fe10d-127">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="4c8f0-127">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="4c8f0-127">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="fe10d-128">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="fe10d-128">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
- <span data-ttu-id="fe10d-129">この手順では、新しい ASP.NET Web フォーム アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-129">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="4c8f0-128">手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="4c8f0-128">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+ <span data-ttu-id="4c8f0-129">この手順では、新しい ASP.NET Web フォーム アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-129">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
   
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="fe10d-130">簡単な ASP.NET アプリケーションを作成するには</span><span class="sxs-lookup"><span data-stu-id="fe10d-130">To create a simple ASP.NET application</span></span>  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="4c8f0-130">簡単な ASP.NET アプリケーションを作成するには</span><span class="sxs-lookup"><span data-stu-id="4c8f0-130">To create a simple ASP.NET application</span></span>  
   
-1.  <span data-ttu-id="fe10d-131">システム特権のあるモードで管理者として Visual Studio を起動します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-131">Start Visual Studio in elevated mode as administrator.</span></span>  
+1.  <span data-ttu-id="4c8f0-131">システム特権のあるモードで管理者として Visual Studio を起動します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-131">Start Visual Studio in elevated mode as administrator.</span></span>  
   
-2.  <span data-ttu-id="fe10d-132">Visual Studio で、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe10d-132">In Visual Studio, click **File**, click **New**, and then click **Project**.</span></span>  
+2.  <span data-ttu-id="4c8f0-132">Visual Studio で、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-132">In Visual Studio, click **File**, click **New**, and then click **Project**.</span></span>  
   
-3.  <span data-ttu-id="fe10d-133">**[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe10d-133">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
+3.  <span data-ttu-id="4c8f0-133">**[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-133">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-4.  <span data-ttu-id="fe10d-134">**[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-134">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+4.  <span data-ttu-id="4c8f0-134">**[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-134">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-5.  <span data-ttu-id="fe10d-135">**ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックし、**[Identity and Access]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-135">Right-click the **TestApp** project under **Solution Explorer**, then select **Identity and Access**.</span></span>  
+5.  <span data-ttu-id="4c8f0-135">**ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックし、**[Identity and Access]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-135">Right-click the **TestApp** project under **Solution Explorer**, then select **Identity and Access**.</span></span>  
   
-6.  <span data-ttu-id="fe10d-136">**[Identity and Access]** ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="fe10d-136">The **Identity and Access** window appears.</span></span> <span data-ttu-id="fe10d-137">**[Providers]** で **[Test your application with the Local Development STS]** を選択し、**[Apply]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe10d-137">Under **Providers**, select **Test your application with the Local Development STS**, then click **Apply**.</span></span>  
+6.  <span data-ttu-id="4c8f0-136">**[Identity and Access]** ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-136">The **Identity and Access** window appears.</span></span> <span data-ttu-id="4c8f0-137">**[Providers]** で **[Test your application with the Local Development STS]** を選択し、**[Apply]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-137">Under **Providers**, select **Test your application with the Local Development STS**, then click **Apply**.</span></span>  
   
-7.  <span data-ttu-id="fe10d-138">*Default.aspx* ファイルの既存のマークアップを次のものに置き換え、ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-138">In the *Default.aspx* file, replace the existing markup with the following, then save the file:</span></span>  
+7.  <span data-ttu-id="4c8f0-138">*Default.aspx* ファイルの既存のマークアップを次のものに置き換え、ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-138">In the *Default.aspx* file, replace the existing markup with the following, then save the file:</span></span>  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -87,7 +87,7 @@ ms.locfileid: "47235966"
     </asp:Content>  
     ```  
   
-8.  <span data-ttu-id="fe10d-139">*Default.aspx.cs* という名前の分離コード ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="fe10d-139">Open the code-behind file named *Default.aspx.cs*.</span></span> <span data-ttu-id="fe10d-140">既存のコードを次のコードに置き換え、ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-140">Replace the existing code with the following, then save the file:</span></span>  
+8.  <span data-ttu-id="4c8f0-139">*Default.aspx.cs* という名前の分離コード ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-139">Open the code-behind file named *Default.aspx.cs*.</span></span> <span data-ttu-id="4c8f0-140">既存のコードを次のコードに置き換え、ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-140">Replace the existing code with the following, then save the file:</span></span>  
   
     ```csharp  
     using System;  
@@ -108,32 +108,32 @@ ms.locfileid: "47235966"
     }  
     ```  
   
-## <a name="step-2--implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a><span data-ttu-id="fe10d-141">手順 2 – カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装する</span><span class="sxs-lookup"><span data-stu-id="fe10d-141">Step 2 – Implement Claims Transformation Using a Custom ClaimsAuthenticationManager</span></span>  
- <span data-ttu-id="fe10d-142">この手順では、<xref:System.Security.Claims.ClaimsAuthenticationManager> クラスの既定の機能をオーバーライドし、受信プリンシパルに管理者ロールを追加します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-142">In this step you will override default functionality in the <xref:System.Security.Claims.ClaimsAuthenticationManager> class to add an Administrator role to the incoming Principal.</span></span>  
+## <a name="step-2--implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a><span data-ttu-id="4c8f0-141">手順 2 – カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装する</span><span class="sxs-lookup"><span data-stu-id="4c8f0-141">Step 2 – Implement Claims Transformation Using a Custom ClaimsAuthenticationManager</span></span>  
+ <span data-ttu-id="4c8f0-142">この手順では、<xref:System.Security.Claims.ClaimsAuthenticationManager> クラスの既定の機能をオーバーライドし、受信プリンシパルに管理者ロールを追加します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-142">In this step you will override default functionality in the <xref:System.Security.Claims.ClaimsAuthenticationManager> class to add an Administrator role to the incoming Principal.</span></span>  
   
-#### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a><span data-ttu-id="fe10d-143">カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装するには</span><span class="sxs-lookup"><span data-stu-id="fe10d-143">To implement claims transformation using a custom ClaimsAuthenticationManager</span></span>  
+#### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a><span data-ttu-id="4c8f0-143">カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装するには</span><span class="sxs-lookup"><span data-stu-id="4c8f0-143">To implement claims transformation using a custom ClaimsAuthenticationManager</span></span>  
   
-1.  <span data-ttu-id="fe10d-144">Visual Studio でソリューションを右クリックし、**[追加]** をクリックして **[新しいプロジェクト]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe10d-144">In Visual Studio, right-click the on the solution, click **Add**, and then click **New Project**.</span></span>  
+1.  <span data-ttu-id="4c8f0-144">Visual Studio でソリューションを右クリックし、**[追加]** をクリックして **[新しいプロジェクト]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-144">In Visual Studio, right-click the on the solution, click **Add**, and then click **New Project**.</span></span>  
   
-2.  <span data-ttu-id="fe10d-145">**[新しいプロジェクトの追加]** ウィンドウで、**[Visual C#]** テンプレート一覧から **[クラス ライブラリ]** を選択し、「`ClaimsTransformation`」と入力して **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe10d-145">In the **Add New Project** window, select **Class Library** from the **Visual C#** templates list, enter `ClaimsTransformation`, and then press **OK**.</span></span> <span data-ttu-id="fe10d-146">新しいプロジェクトがソリューション フォルダーに作成されます。</span><span class="sxs-lookup"><span data-stu-id="fe10d-146">The new project will be created in your solution folder.</span></span>  
+2.  <span data-ttu-id="4c8f0-145">**[新しいプロジェクトの追加]** ウィンドウで、**[Visual C#]** テンプレート一覧から **[クラス ライブラリ]** を選択し、「`ClaimsTransformation`」と入力して **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-145">In the **Add New Project** window, select **Class Library** from the **Visual C#** templates list, enter `ClaimsTransformation`, and then press **OK**.</span></span> <span data-ttu-id="4c8f0-146">新しいプロジェクトがソリューション フォルダーに作成されます。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-146">The new project will be created in your solution folder.</span></span>  
   
-3.  <span data-ttu-id="fe10d-147">**[ClaimsTransformation]** プロジェクトの下の **[参照]** を右クリックし、**[参照の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe10d-147">Right-click on **References** under the **ClaimsTransformation** project, and then click **Add Reference**.</span></span>  
+3.  <span data-ttu-id="4c8f0-147">**[ClaimsTransformation]** プロジェクトの下の **[参照]** を右クリックし、**[参照の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-147">Right-click on **References** under the **ClaimsTransformation** project, and then click **Add Reference**.</span></span>  
   
-4.  <span data-ttu-id="fe10d-148">**参照マネージャー** ウィンドウで、**System.IdentityModel** を選択し、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe10d-148">In the **Reference Manager** window, select **System.IdentityModel**, and then click **OK**.</span></span>  
+4.  <span data-ttu-id="4c8f0-148">**参照マネージャー** ウィンドウで、**System.IdentityModel** を選択し、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-148">In the **Reference Manager** window, select **System.IdentityModel**, and then click **OK**.</span></span>  
   
-5.  <span data-ttu-id="fe10d-149">**Class1.cs** を開くか、存在しない場合は **ClaimsTransformation** を右クリックして、**[追加]** をクリックし、**[クラス]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe10d-149">Open **Class1.cs**, or if it doesn’t exist, right-click **ClaimsTransformation**, click **Add**, then click **Class…**</span></span>  
+5.  <span data-ttu-id="4c8f0-149">**Class1.cs** を開くか、存在しない場合は **ClaimsTransformation** を右クリックして、**[追加]** をクリックし、**[クラス]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-149">Open **Class1.cs**, or if it doesn’t exist, right-click **ClaimsTransformation**, click **Add**, then click **Class…**</span></span>  
   
-6.  <span data-ttu-id="fe10d-150">ディレクティブを使用して以下をコード ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-150">Add the following using directives to the code file:</span></span>  
+6.  <span data-ttu-id="4c8f0-150">ディレクティブを使用して以下をコード ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-150">Add the following using directives to the code file:</span></span>  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  <span data-ttu-id="fe10d-151">次のクラスとメソッドをコード ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-151">Add the following class and method in the code file.</span></span>  
+7.  <span data-ttu-id="4c8f0-151">次のクラスとメソッドをコード ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-151">Add the following class and method in the code file.</span></span>  
   
     > [!WARNING]
-    >  <span data-ttu-id="fe10d-152">次のコードは、デモの目的でのみ使用します。実稼働コードで、目的のアクセス許可を確認してください。</span><span class="sxs-lookup"><span data-stu-id="fe10d-152">The following code is for demonstration purposes only; make sure that you verify your intended permissions in production code.</span></span>  
+    >  <span data-ttu-id="4c8f0-152">次のコードは、デモの目的でのみ使用します。実稼働コードで、目的のアクセス許可を確認してください。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-152">The following code is for demonstration purposes only; make sure that you verify your intended permissions in production code.</span></span>  
   
     ```csharp  
     public class ClaimsTransformationModule : ClaimsAuthenticationManager  
@@ -150,27 +150,27 @@ ms.locfileid: "47235966"
     }  
     ```  
   
-8.  <span data-ttu-id="fe10d-153">ファイルを保存し、**ClaimsTransformation** プロジェクトをビルドします。</span><span class="sxs-lookup"><span data-stu-id="fe10d-153">Save the file and build the **ClaimsTransformation** project.</span></span>  
+8.  <span data-ttu-id="4c8f0-153">ファイルを保存し、**ClaimsTransformation** プロジェクトをビルドします。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-153">Save the file and build the **ClaimsTransformation** project.</span></span>  
   
-9. <span data-ttu-id="fe10d-154">**TestApp** ASP.NET プロジェクトで、[参照] を右クリックし、**[参照の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe10d-154">In your **TestApp** ASP.NET project, right-click on References, and then click **Add Reference**.</span></span>  
+9. <span data-ttu-id="4c8f0-154">**TestApp** ASP.NET プロジェクトで、[参照] を右クリックし、**[参照の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-154">In your **TestApp** ASP.NET project, right-click on References, and then click **Add Reference**.</span></span>  
   
-10. <span data-ttu-id="fe10d-155">**参照マネージャー** ウィンドウで、左側のメニューから **[ソリューション]** を選択し、設定されたオプションから **ClaimsTransformation** を選択し、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe10d-155">In the **Reference Manager** window, select **Solution** from the left menu, select **ClaimsTransformation** from the populated options, and then click **OK**.</span></span>  
+10. <span data-ttu-id="4c8f0-155">**参照マネージャー** ウィンドウで、左側のメニューから **[ソリューション]** を選択し、設定されたオプションから **ClaimsTransformation** を選択し、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-155">In the **Reference Manager** window, select **Solution** from the left menu, select **ClaimsTransformation** from the populated options, and then click **OK**.</span></span>  
   
-11. <span data-ttu-id="fe10d-156">ルートの **Web.config**ファイルで、**\<system.identityMode >** エントリに移動します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-156">In the root **Web.config** file, navigate to the **\<system.identityModel>** entry.</span></span> <span data-ttu-id="fe10d-157">**\<identityConfiguration >** 要素内で、次の行を追加し、ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-157">Within the **\<identityConfiguration>** elements, add the following line and save the file:</span></span>  
+11. <span data-ttu-id="4c8f0-156">ルートの **Web.config**ファイルで、**\<system.identityMode >** エントリに移動します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-156">In the root **Web.config** file, navigate to the **\<system.identityModel>** entry.</span></span> <span data-ttu-id="4c8f0-157">**\<identityConfiguration >** 要素内で、次の行を追加し、ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-157">Within the **\<identityConfiguration>** elements, add the following line and save the file:</span></span>  
   
     ```xml  
     <claimsAuthenticationManager type="ClaimsTransformation.ClaimsTransformationModule, ClaimsTransformation" />  
     ```  
   
-## <a name="step-3--test-your-solution"></a><span data-ttu-id="fe10d-158">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="fe10d-158">Step 3 – Test Your Solution</span></span>  
- <span data-ttu-id="fe10d-159">この手順では、ASP.NET Web フォーム アプリケーションをテストし、ユーザーがフォーム認証を使用してサインインするときに、クレームが表示されることを確認します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-159">In this step you will test your ASP.NET Web Forms application, and verify that claims are presented when a user signs in with Forms authentication.</span></span>  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="4c8f0-158">手順 3 – ソリューションをテストする</span><span class="sxs-lookup"><span data-stu-id="4c8f0-158">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="4c8f0-159">この手順では、ASP.NET Web フォーム アプリケーションをテストし、ユーザーがフォーム認証を使用してサインインするときに、クレームが表示されることを確認します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-159">In this step you will test your ASP.NET Web Forms application, and verify that claims are presented when a user signs in with Forms authentication.</span></span>  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="fe10d-160">フォーム認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションをテストするには</span><span class="sxs-lookup"><span data-stu-id="fe10d-160">To test your ASP.NET Web Forms application for claims using Forms authentication</span></span>  
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="4c8f0-160">フォーム認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションをテストするには</span><span class="sxs-lookup"><span data-stu-id="4c8f0-160">To test your ASP.NET Web Forms application for claims using Forms authentication</span></span>  
   
-1.  <span data-ttu-id="fe10d-161">**F5** キーを押してアプリケーションをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="fe10d-161">Press **F5** to build and run the application.</span></span> <span data-ttu-id="fe10d-162">*Default.aspx* が表示されます。</span><span class="sxs-lookup"><span data-stu-id="fe10d-162">You should be presented with *Default.aspx*.</span></span>  
+1.  <span data-ttu-id="4c8f0-161">**F5** キーを押してアプリケーションをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-161">Press **F5** to build and run the application.</span></span> <span data-ttu-id="4c8f0-162">*Default.aspx* が表示されます。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-162">You should be presented with *Default.aspx*.</span></span>  
   
-2.  <span data-ttu-id="fe10d-163">*Default.aspx* ページで、**Your Claims** 見出しの下の表に、アカウントに関する **Issuer**、**OriginalIssuer**、**Type**、**Value**、および**ValueType** クレーム情報が表示されます。</span><span class="sxs-lookup"><span data-stu-id="fe10d-163">On the *Default.aspx* page, you should see a table beneath the **Your Claims** heading that includes the **Issuer**, **OriginalIssuer**, **Type**, **Value**, and **ValueType** claims information about your account.</span></span> <span data-ttu-id="fe10d-164">最後の行は、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="fe10d-164">The last row should be presented in the following way:</span></span>  
+2.  <span data-ttu-id="4c8f0-163">*Default.aspx* ページで、**Your Claims** 見出しの下の表に、アカウントに関する **Issuer**、**OriginalIssuer**、**Type**、**Value**、および**ValueType** クレーム情報が表示されます。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-163">On the *Default.aspx* page, you should see a table beneath the **Your Claims** heading that includes the **Issuer**, **OriginalIssuer**, **Type**, **Value**, and **ValueType** claims information about your account.</span></span> <span data-ttu-id="4c8f0-164">最後の行は、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="4c8f0-164">The last row should be presented in the following way:</span></span>  
   
     ||||||  
     |-|-|-|-|-|  
-    |<span data-ttu-id="fe10d-165">LOCAL AUTHORITY</span><span class="sxs-lookup"><span data-stu-id="fe10d-165">LOCAL AUTHORITY</span></span>|<span data-ttu-id="fe10d-166">LOCAL AUTHORITY</span><span class="sxs-lookup"><span data-stu-id="fe10d-166">LOCAL AUTHORITY</span></span>|http://schemas.microsoft.com/ws/2008/06/identity/claims/role|<span data-ttu-id="fe10d-167">管理</span><span class="sxs-lookup"><span data-stu-id="fe10d-167">Admin</span></span>|http://www.w3.org/2001/XMLSchema#string|
+    |<span data-ttu-id="4c8f0-165">LOCAL AUTHORITY</span><span class="sxs-lookup"><span data-stu-id="4c8f0-165">LOCAL AUTHORITY</span></span>|<span data-ttu-id="4c8f0-166">LOCAL AUTHORITY</span><span class="sxs-lookup"><span data-stu-id="4c8f0-166">LOCAL AUTHORITY</span></span>|http://schemas.microsoft.com/ws/2008/06/identity/claims/role|<span data-ttu-id="4c8f0-167">管理</span><span class="sxs-lookup"><span data-stu-id="4c8f0-167">Admin</span></span>|http://www.w3.org/2001/XMLSchema#string|
