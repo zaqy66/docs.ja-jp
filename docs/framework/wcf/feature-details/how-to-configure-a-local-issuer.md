@@ -20,10 +20,10 @@ ms.locfileid: "33495094"
   
  クライアントがフェデレーション サービスと通信する場合、クライアントが自分をフェデレーション サービスに対して認証するときに使用するトークンの発行元となるセキュリティ トークン サービスのアドレスが、サービスによって指定されることがよくあります。 特定の状況で使用するクライアントを構成することがあります、*ローカル発行者*です。  
   
- Windows Communication Foundation (WCF) フェデレーション バインディングの発行者アドレスがある場合はローカル発行者を使用してhttp://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymousまたは`null`です。 そのような場合は、ローカルの発行者およびバインディングのアドレスと共に <xref:System.ServiceModel.Description.ClientCredentials> を構成し、その発行者との通信に使用する必要があります。  
+ Windows Communication Foundation (WCF) フェデレーション バインディングの発行者アドレスがある場合はローカル発行者を使用して http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymousまたは`null`です。 そのような場合は、ローカルの発行者およびバインディングのアドレスと共に <xref:System.ServiceModel.Description.ClientCredentials> を構成し、その発行者との通信に使用する必要があります。  
   
 > [!NOTE]
->  場合、<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>のプロパティ、`ClientCredentials`クラスに設定されている`true`、ローカル発行者のアドレスが指定されていない、および発行者のアドレスを指定して、 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)またはその他のフェデレーション バインディングはhttp://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self、 http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous、または`null`、Windows では、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]発行者を使用します。  
+>  場合、<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>のプロパティ、`ClientCredentials`クラスに設定されている`true`、ローカル発行者のアドレスが指定されていない、および発行者のアドレスを指定して、 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)またはその他のフェデレーション バインディングは http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self、 http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous 、または`null`、Windows では、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]発行者を使用します。  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>コードでローカル発行者を構成するには  
   
