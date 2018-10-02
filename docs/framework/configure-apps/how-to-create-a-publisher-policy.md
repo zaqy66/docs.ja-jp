@@ -10,11 +10,11 @@ ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399636"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028015"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成する
 アセンブリの販売できる状態の監視アプリケーションがアップグレード済みのアセンブリに発行者ポリシー ファイルを含めることによって、新しいバージョンのアセンブリを使用する必要があります。 発行者ポリシー ファイルは、アセンブリのリダイレクトとコードの基本設定を指定し、アプリケーション構成ファイルと同じ形式を使用します。 発行者ポリシー ファイルがアセンブリにコンパイルし、グローバル アセンブリ キャッシュに配置します。  

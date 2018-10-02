@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
 ms.openlocfilehash: f488d2e840ec2524f0cde8dc4b3e6c1cd10c554e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400362"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030299"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>メッセージ セキュリティと匿名クライアント
 次のシナリオでは、クライアントと Windows Communication Foundation (WCF) メッセージ セキュリティで保護されたサービスを説明します。 設計目標は、トランスポート セキュリティではなくメッセージ セキュリティを使用することです。これによって将来、多様なクレームに基づくモデルをサポートできます。 承認に多様なクレームの使用に関する詳細については、次を参照してください。[管理クレームと Id モデルでの承認](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)します。  

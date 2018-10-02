@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 55869c3c8a957de98962378cc1a93e7058e24e38
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d79c8fc364d13c00049523f7788ada258af6ec98
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524871"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028347"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>ワークフローとワークフロー サービスの SQL 永続性を有効にする方法
 
@@ -72,7 +72,7 @@ SQL Workflow Instance Store 機能を使用する前に、この機能におい�
    ```
 
 > [!NOTE]
-> 参照してください、[ワークフロー アプリケーションの永続化](../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)にあるサンプル[永続化](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)を使用してワークフローの永続化を有効にする例については、 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>、および[方法: 作成し、実行に時間ワークフローを実行して](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)の手順、[チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)ステップ バイ ステップの指示します。  
+> 参照してください、[方法: を作成および実行 a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)の手順、[チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)ステップ バイ ステップの指示します。  
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>WorkflowServiceHost を使用する自己ホスト型ワークフロー サービスの永続化の有効化
 
@@ -82,7 +82,7 @@ SQL Workflow Instance Store 機能を使用する前に、この機能におい�
 
 <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> クラスを使用して、自己ホスト型ワークフロー サービスの永続化を有効にする手順を次に示します。  
 
-##### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a>SqlWorkflowInstanceStoreBehavior を使用して永続化を有効にするには
+#### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a>SqlWorkflowInstanceStoreBehavior を使用して永続化を有効にするには
 
 1.  System.ServiceModel.dll への参照を追加します。  
   
@@ -116,9 +116,6 @@ SQL Workflow Instance Store 機能を使用する前に、この機能におい�
     ```csharp
     host.Open();
     ```
-
-> [!IMPORTANT]
-> 参照してください、[組み込み構成](../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md)にあるサンプル[永続化](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)を使用してワークフロー サービスの永続化を有効にする例については、`SqlWorkflowInstanceStoreBehavior`クラス。  
 
 ### <a name="using-the-durableinstancingoptions-property"></a>DurableInstancingOptions プロパティの使用
 

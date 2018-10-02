@@ -3,11 +3,11 @@ title: EventLogSource で指定したソース名は、EventLogName で指定し
 ms.date: 07/20/2015
 ms.assetid: 7317e100-098b-408d-86e5-7c74cf8558c7
 ms.openlocfilehash: 03fcc41b0fbb84233aa037d7af17d168050a98b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208465"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046141"
 ---
 # <a name="source-name-specified-in-eventlogsource-is-registered-to-a-log-other-than-that-specified-in-eventlogname"></a>EventLogSource で指定したソース名は、EventLogName で指定したログ以外のログに登録されています
 `EventLog` が、別のログに登録されているソースを参照しようとしています。 イベント ログにエントリを書き込んでいる場合は、 <xref:System.Diagnostics.EventLog.Source%2A> プロパティを指定する必要があります。 <xref:System.Diagnostics.EventLog.Source%2A> プロパティはコンポーネントを有効なエントリのソースとしてイベント ログに登録します。 1 つのソースは一度に 1 つのイベント ログにのみ関連付ける (つまり、エントリを書き込む) ことができます。  

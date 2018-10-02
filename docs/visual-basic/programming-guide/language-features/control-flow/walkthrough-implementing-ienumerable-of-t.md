@@ -8,11 +8,11 @@ helpviewer_keywords:
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
 ms.openlocfilehash: be2eefdc52d38df3071d457b7a71dbac6eaa2657
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235729"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48034783"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>チュートリアル: Visual Basic での IEnumerable(Of T) の実装
 <xref:System.Collections.Generic.IEnumerable%601>インターフェイスは、一度に 1 つの項目の値のシーケンスを返すことができるクラスによって実装されます。 一度に 1 つの項目がメモリに読み込むデータの完全なセットを扱うことがないことをデータを返すことの利点です。 のみ、データから 1 つの項目を読み込むに十分なメモリを使用する必要があるとします。 実装するクラス、`IEnumerable(T)`インターフェイスで使用できる`For Each`ループまたは LINQ クエリ。  

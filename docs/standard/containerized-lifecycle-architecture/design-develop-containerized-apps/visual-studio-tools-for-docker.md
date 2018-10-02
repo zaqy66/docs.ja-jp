@@ -5,16 +5,16 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: cd140c12ef4a0187cce096e013937d5c98cd4b39
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7daac744238feb38358e4cc0ab185e90257aa98d
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235716"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027456"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Visual Studio Tools for Docker (Windows で Visual Studio) を使用
 
-Visual Studio Tools for Docker 開発者のワークフローは、Visual Studio Code と Docker CLI を (同じ Docker CLI に基づきます) を使用してに似ています。 Visual Studio Tools の Docker を開始するのにはいっそう簡単に、プロセスを簡略化され、ビルドで生産性の向上が提供、実行、およびタスクを構成します。 実行し、デバッグのような単純なアクションを使用して、コンテナー **F5**と**Ctrl**+**F5**します。
+Visual Studio Code と Docker CLI を使用する場合は、Visual Studio Tools for Docker 開発ワークフローをワークフローに似ています。 実際には、同じの Docker CLI に基づきますが容易に開始、プロセスを簡略化、および生産性の向上を提供します、ビルドの実行、およびタスクを構成します。 実行し、デバッグのような単純なアクションを使用して、コンテナー **F5**と**Ctrl**+**F5**します。 実行し、1 つのコンテナーをデバッグできることに加え、省略可能なコンテナー オーケストレーションのサポートは、実行し、コンテナー (ソリューション全体) のグループを同時にデバッグできます。
 
 > [!NOTE]
 > この記事は、Windows 上の Visual Studio と Visual Studio for mac。
@@ -27,9 +27,9 @@ Visual Studio 2017 では、docker のサポートが含まれます。 ここ�
 
 ## <a name="use-docker-tools-in-visual-studio-2017"></a>Visual Studio 2017 での Docker ツールを使用します。
 
-Docker のサポートをプロジェクトに追加することの 2 つのレベルがあります。 .NET Core web アプリのプロジェクトに追加できます、 *Dockerfile*に Docker サポートを有効にすると、プロジェクト ファイル。 次のレベルはコンテナー オーケストレーター サポートは、追加、 *Dockerfile* (まだ存在しない) 場合は、プロジェクトに、 *docker compose.yml*ソリューション レベルでのファイル。
+Docker のサポートをプロジェクトに追加することの 2 つのレベルがあります。 .NET Core web アプリのプロジェクトに追加できます、 *Dockerfile*に Docker サポートを有効にすると、プロジェクト ファイル。 次のレベルは、追加コンテナー オーケストレーションのサポート、 *Dockerfile* (まだ存在しない) 場合は、プロジェクトに、 *docker compose.yml*ソリューション レベルでのファイル。 既定では Visual Studio 2017 バージョン 15.7 またはそれ以前で、Docker Compose を使用して、コンテナー オーケストレーションのサポートが追加されます。 コンテナー オーケストレーションのサポートは、Visual Studio 2017 バージョン 15.8 オプトイン機能または後で、どの場合 Docker Compose と Service Fabric がサポートされます。
 
-**追加** > **Docker サポート**と**追加** > **コンテナー オーケストレーター サポート**コマンドは、web アプリ プロジェクトのプロジェクト ノードの右クリック メニュー (またはコンテキスト メニュー) にある**ソリューション エクスプ ローラー**図 4-26 に示すようにします。
+**追加** > **Docker サポート**と**追加** > **コンテナー オーケストレーション サポート**コマンドは、web アプリ プロジェクトのプロジェクト ノードの右クリック メニュー (またはコンテキスト メニュー) にある**ソリューション エクスプ ローラー**図 4-26 に示すようにします。
 
 ![Visual Studio での Docker サポート メニュー オプションを追加します。](media/add-docker-support-menu.png)
 
@@ -46,21 +46,25 @@ Docker のサポートをプロジェクトに追加することの 2 つのレ�
 Docker サポートを有効にすると、Visual Studio の追加、 *Dockerfile*ファイルをプロジェクトにします。
 
 > [!NOTE]
-> 図 4-28 に示すように .NET Framework web アプリ プロジェクト (いない .NET Core web アプリのプロジェクト) のプロジェクトの作成時に Docker Compose のサポートが有効、コンテナー オーケストレーター サポートも追加されます。
+> 図 4-28 に示すように .NET Framework web アプリ プロジェクト (いない .NET Core web アプリのプロジェクト) のプロジェクトの作成時に Docker Compose のサポートが有効、コンテナー オーケストレーションのサポートも追加されます。
 >
 > ![Docker を有効にする .NET Framework web アプリ プロジェクトのサポートの構成](media/enable-docker-compose-support.png)
 
 > 図 4-28: Visual Studio 2017 で .NET Framework web アプリ プロジェクトでの Docker Compose のサポートを有効にします。
 
-### <a name="add-container-orchestrator-support"></a>コンテナー オーケストレーター サポートを追加します。
+### <a name="add-container-orchestration-support"></a>コンテナー オーケストレーションのサポートを追加します。
 
-複数のコンテナー ソリューションを作成する場合は、コンテナー オーケストレーター サポートをプロジェクトに追加します。 コンテナー オーケストレーター サポートを追加すると Visual Studio が追加されます、 *Dockerfile* (まだ存在しない) 場合は、プロジェクトと、グローバルに*docker compose.yml*ソリューション レベルでのファイル。 これにより、実行およびで同じ定義している場合、コンテナー (ソリューション全体) のグループを同時にデバッグ*docker compose.yml*ファイル。 場合*docker compose.yml*が既に存在する Visual Studio に必要な構成コードの行を追加するだけです。
+複数のコンテナー ソリューションを作成する場合は、コンテナー オーケストレーションのサポートをプロジェクトに追加します。 これにより、実行およびで同じ定義している場合、コンテナー (ソリューション全体) のグループを同時にデバッグ*docker compose.yml*ファイル。
+
+コンテナー オーケストレーションのサポートを追加するには、ソリューションまたはプロジェクトのノードを右クリックし**ソリューション エクスプ ローラー**、選択**追加** > **コンテナー オーケストレーション サポート**. クリックして**Docker Compose**または**Service Fabric**コンテナーを管理します。
 
 プロジェクトに追加の Dockerfile を参照してくださいコンテナー オーケストレーションのサポートをプロジェクトに追加した後、 **docker compose**でソリューションに追加されたフォルダー**ソリューション エクスプ ローラー**図 4-29 に示すように。
 
 ![Visual Studio でソリューション エクスプ ローラーでの docker ファイル](media/docker-support-solution-explorer.png)
 
 Visual Studio 2017 でのソリューション エクスプ ローラーで、図 4-29: Docker ファイル
+
+場合*docker compose.yml*が既に存在する Visual Studio に必要な構成コードの行を追加するだけです。
 
 **詳細については:** サービスの実装と Visual Studio tools for Docker の使用の詳細については、次の記事を参照します。
 

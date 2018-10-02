@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
 ms.openlocfilehash: 9b16aad6138d79d3dbff4994250f05d617d54140
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216566"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035897"
 ---
 # <a name="ltbehaviorgt-of-ltservicebehaviorsgt-of-workflow"></a>ワークフローの &lt;serviceBehaviors&gt; の &lt;behavior&gt;
 **動作**要素には、サービスの動作の設定のコレクションが含まれています。 各動作のインデックスを作成してその**名前**します。 サービスを使用してこの名前で各動作にリンクできる、 **behaviorConfiguration**の属性、 [\<エンドポイント >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)要素。 これにより、設定を再定義することなく、エンドポイント間で共通の動作構成を共有できます。  

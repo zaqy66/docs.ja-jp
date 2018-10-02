@@ -13,11 +13,11 @@ ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3a0a51fc6055190f9a0189de2e17d98f88036ea
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031761"
 ---
 # <a name="static-class-design"></a>静的クラスのデザイン
 静的クラスは、静的メンバーのみを含んでいるクラスとして定義されます (から継承されたインスタンス メンバーだけでなくもちろん<xref:System.Object?displayProperty=nameWithType>とコンス トラクターはプライベート可能性があります)。 一部の言語では、静的クラスの組み込みサポートを提供します。 C# 2.0 以降では、クラスが静的に宣言されると、これはシール、抽象クラスで、インスタンス メンバーをオーバーライドまたは宣言されていることができます。  

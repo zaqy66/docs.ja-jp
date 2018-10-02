@@ -5,11 +5,11 @@ ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: a58c27500c0258415c12a5fd8e552b3ee43f50e8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235846"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033208"
 ---
 # <a name="lturigt-element-uri-settings"></a>&lt;Uri&gt;要素 (Uri 設定)
 .NET Framework での uniform resource identifier (Uri) を使用して表現された web アドレスの処理方法を指定する設定が含まれています。  

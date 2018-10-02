@@ -11,11 +11,11 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 61110413f43e95060aa2cfecb4acdb3ebaae14df
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027586"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;要素 (ネットワーク設定)
 構成の配信形式、配信方法、および送信者の電子メールを送信するためのアドレス。  

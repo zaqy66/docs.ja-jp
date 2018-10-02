@@ -2,25 +2,17 @@
 title: 実行
 ms.date: 03/30/2017
 ms.assetid: a9dcedcc-9f4c-45c2-8222-6bcbf48f3534
-ms.openlocfilehash: de3f6929be89b5e2d869275020bd3ac0ade8b1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5773391bf9cfe8e28724e5a79f901a8e78a62ceb
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513774"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031821"
 ---
 # <a name="execution"></a>実行
 このセクションには、Windows Workflow Foundation (WF) ワークフローの実行を示すサンプルが含まれています。  
   
-## <a name="in-this-section"></a>このセクションの内容  
- [ワークフロー管理エンドポイントのサンプル](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
- ワークフロー コントロール エンドポイントを使用して、ローカルとリモートの両方でワークフローを作成および実行する方法を示します。  
-  
- [WorkflowInvoker クラスの使用](../../../../docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md)  
- <xref:System.Activities.WorkflowInvoker> クラスを使用して、メソッドのようにアクティビティを呼び出す方法を示します。  
-  
- [WorkflowApplication ReadLine ホスト](../../../../docs/framework/windows-workflow-foundation/samples/workflowapplication-readline-host.md)  
- 汎用 ReadLine ホストを作成する方法を示します。  
+## <a name="in-this-section"></a>このセクションの内容
   
  [ワークフロー インスタンスの作成と実行](../../../../docs/framework/windows-workflow-foundation/samples/creating-and-running-a-workflow-instance.md)  
  ワークフロー インスタンスを実行する方法を示します。 ここでは、ワークフロー インスタンスを同期的または非同期的に実行する方法を示します。  

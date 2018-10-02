@@ -2,25 +2,22 @@
 title: カスタム アクティビティ デザイナー
 ms.date: 03/30/2017
 ms.assetid: dcf14dca-ce6d-4278-96ba-062f0a679075
-ms.openlocfilehash: 3356a15e5da72e1d112bb10e0218feccc5b97cf3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c27ad19121f4faa0a3fca7b13b197a88a95c6d15
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514289"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031904"
 ---
 # <a name="custom-activity-designers"></a>カスタム アクティビティ デザイナー
 このセクションでは、ワークフロー デザイナーに表示するカスタム デザイナーを使用するアクティビティ サンプルを示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [カスタム複合デザイナー - Workflow Item Presenter](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)  
- このサンプルでは、そのこのような「ドロップ ゾーン」を表示しますアクティビティ デザイナーの構築  
+ このサンプルは、このような「ドロップ ゾーンです。」を表示するアクティビティ デザイナーを構築する方法を示しています。  
   
  [カスタム複合デザイナー - Workflow Items Presenter](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)  
  このサンプルでは、このような編集可能なコレクションを表示するアクティビティ デザイナーの構築方法を示します。  
-  
- [メタデータ ストアのプログラム性](../../../../docs/framework/windows-workflow-foundation/samples/metadata-store-programmability.md)  
- このサンプルでは、属性を実行時の型に適用することで、メタデータ ストアを使用して制御できないソースをプログラミングする方法を示します。  
   
  [カスタム アクティビティ デザイナーでの ExpressionTextBox の使用](../../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)  
  このサンプルでは、カスタム アクティビティ デザイナーで <xref:System.Activities.Presentation.View.ExpressionTextBox> を使用する方法を示します。  

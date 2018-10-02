@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 78d9e27299c9d7ed7d6cb9b09dd659ba081c5fde
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204970"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030786"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 メソッド
 コンパイラが行情報が要件を満たしている限り、プログラム データベース (PDB) のストリームから変更されていない関数を省略できるようにします。 PDB の行の古い情報と、関数のすべての行の 1 つのデルタは正しい行情報を確認できます。  

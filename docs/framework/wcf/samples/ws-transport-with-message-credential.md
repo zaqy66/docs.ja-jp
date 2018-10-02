@@ -2,26 +2,26 @@
 title: メッセージ資格情報付き WS トランスポート
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 708869f2350f01e75b949f4817fcf8aac35ea018
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 44f37e3576b508e679d45a3cbafacfb5a68a7838
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810149"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030182"
 ---
 # <a name="ws-transport-with-message-credential"></a>メッセージ資格情報付き WS トランスポート
 このサンプルでは、メッセージに含まれるクライアント資格情報と組み合わせて SSL トランスポート セキュリティを使用する例を示します。 このサンプルでは、`wsHttpBinding` バインディングを使用します。  
   
- 既定で、`wsHttpBinding` バインディングは HTTP 通信を実現します。 トランスポート セキュリティ用に構成すると、バインディングは HTTPS 通信をサポートします。 HTTPS により、通信回線を介して送信されるメッセージについての機密性および整合性の保護が実現します。 ただし、サービスに対するクライアントの認証に使用できる一連の認証機構は、HTTPS トランスポートのサポート範囲に限定されます。 Windows Communication Foundation (WCF) の提供、`TransportWithMessageCredential`この制限を克服するものではセキュリティ モード。 このセキュリティ モードが構成されると、送信メッセージの機密性および整合性を実現してサービス認証を実行する、トランスポート セキュリティが使用されます。 ただし、クライアント認証は、メッセージ内で直接クライアント資格情報を記述することによって実行します。 これにより、トランスポート セキュリティ モードのパフォーマンスの利点を維持しながら、クライアント認証用のメッセージ セキュリティ モードでサポートされている資格情報の種類を使用することができます。  
+ 既定で、`wsHttpBinding` バインディングは HTTP 通信を実現します。 トランスポート セキュリティ用に構成すると、バインディングは HTTPS 通信をサポートします。 HTTPS により、通信回線を介して送信されるメッセージについての機密性および整合性の保護が実現します。 ただし、サービスに対するクライアントの認証に使用できる一連の認証機構は、HTTPS トランスポートのサポート範囲に限定されます。 Windows Communication Foundation (WCF) の提供、`TransportWithMessageCredential`セキュリティ モードは、この制限を克服するために設計されています。 このセキュリティ モードが構成されると、送信メッセージの機密性および整合性を実現してサービス認証を実行する、トランスポート セキュリティが使用されます。 ただし、クライアント認証は、クライアント資格情報をメッセージに直接配置することによって実行されます。 これにより、トランスポート セキュリティ モードのパフォーマンスの利点を維持しながら、クライアント認証のメッセージ セキュリティ モードでサポートされている資格情報の種類を使用することができます。  
   
  このサンプルでは、サービスに対するクライアントの認証に `UserName` 資格情報が使用されます。  
   
- このサンプルがに基づいて、[作業の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。 `wsHttpBinding` バインディングは、クライアントとサービスのアプリケーション構成ファイルに指定され、構成されます。  
+ このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。 `wsHttpBinding` バインディングは、クライアントとサービスのアプリケーション構成ファイルに指定され、構成されます。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
- プログラム コード サンプルではほとんどの場合と同じ、[作業の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)サービス。 `GetCallerIdentity` サービス コントラクトによって追加された操作が 1 つあります。 この操作は、呼び出し元の ID の名前を呼び出し元に返します。  
+ プログラム コード サンプルではのとほぼ同じ、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)サービス。 `GetCallerIdentity` サービス コントラクトによって追加された操作が 1 つあります。 この操作は、呼び出し元の ID の名前を呼び出し元に返します。  
 
 ```csharp
 public string GetCallerIdentity()  
@@ -61,7 +61,7 @@ public string GetCallerIdentity()
   
  アドレス指定では https:// スキームを使用しています。 このバインディング構成により、セキュリティ モードが `TransportWithMessageCredential` に設定されます。 同じセキュリティ モードが、サービスの Web.config ファイルで指定される必要があります。  
   
- Https にアクセスしようとしたときにこのサンプルで使用する証明書は Makecert.exe で作成されたテスト証明書であるため、セキュリティ警告が表示されます: で対応するhttps://localhost/servicemodelsamples/service.svc、お使いのブラウザーからです。 テスト証明書を使用する WCF クライアントを許可するには、セキュリティの警告を抑制するため、クライアント コードが追加されました。 そのためのコードとそれに必要なクラスは、本運用の証明書を使用するときには不要です。  
+ Https にアクセスしようとするときにこのサンプルで使用される証明書は Makecert.exe で作成されたテスト証明書であるためセキュリティの警告が表示されます。 など、対処`https://localhost/servicemodelsamples/service.svc `、お使いのブラウザーから。 インプレース テスト証明書を使用する WCF クライアントを許可するには、クライアントのセキュリティの警告を非表示に追加のコードが追加されました。 そのためのコードとそれに必要なクラスは、本運用の証明書を使用するときには不要です。  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
@@ -89,12 +89,12 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認してください、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)です。  
+1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  実行したことを確認してください、[インターネット インフォメーション サービス (IIS) サーバー証明書のインストール手順](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)です。  
+2.  実行したことを確認、[インターネット インフォメーション サービス (IIS) サーバー証明書のインストール手順](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)します。  
   
 3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-4.  1 つまたは複数コンピューター構成でサンプルを実行する手順についてで[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)です。  
+4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 ## <a name="see-also"></a>関連項目

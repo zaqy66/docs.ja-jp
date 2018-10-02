@@ -2,12 +2,12 @@
 title: .NET Framework 4.5 の外部化されたポリシー アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 4d107188bbcb46006ba6a6eab491ccb97aa4a83d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046639"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 の外部化されたポリシー アクティビティ
 
@@ -56,7 +56,7 @@ ExternalizedPolicy4 デザイナーを使用すると、コードを記述せず
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 と ExternalPolicy4
 
-[.NET Framework 4.5 のポリシー アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)を作成して、WF 4.5 ワークフローでの .NET Framework 3.5 RuleSet を実行するアクティビティを使用できます。 <xref:System.Workflow.Activities.Rules.RuleSet> は、Policy4 アクティビティの XAML 定義でインラインでシリアル化されます。 ExternalizedPolicy4 サンプルでは、既存の外部 <xref:System.Workflow.Activities.Rules.RuleSet> (.rules ファイル内に格納) を使用する方法を示します。
+ポリシー アクティビティを作成して、WF 4.5 ワークフローでの .NET Framework 3.5 RuleSet を実行できます。 <xref:System.Workflow.Activities.Rules.RuleSet> は、Policy4 アクティビティの XAML 定義でインラインでシリアル化されます。 ExternalizedPolicy4 サンプルでは、既存の外部 <xref:System.Workflow.Activities.Rules.RuleSet> (.rules ファイル内に格納) を使用する方法を示します。
 
 ## <a name="use-this-sample"></a>このサンプルを使用します。
 

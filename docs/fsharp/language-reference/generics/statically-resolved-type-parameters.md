@@ -3,11 +3,11 @@ title: 静的に解決された型パラメーター (F#)
 description: F# を使用する方法を説明します。 静的に解決される型パラメーターは、実行時ではなく、コンパイル時に実際の型が置き換えられます。
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208264"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032778"
 ---
 # <a name="statically-resolved-type-parameters"></a>静的に解決される型パラメーター
 

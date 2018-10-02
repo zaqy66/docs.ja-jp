@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 author: BrucePerlerMS
 ms.openlocfilehash: c24ced1a3f19297f06404403f1196b8a9139a919
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030578"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows クライアントとのメッセージ セキュリティ
 このシナリオでは、Windows Communication Foundation (WCF) クライアントとメッセージ セキュリティ モードによって保護されたサーバーを示します。 クライアントとサービスは、Windows 資格情報を使用して認証します。  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
 ms.openlocfilehash: a745339cffdada56a9b7f27f3f879b9d437c2da2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032102"
 ---
 # <a name="ltclaimsauthorizationmanagergt"></a>&lt;claimsAuthorizationManager&gt;
 入力方向の要求のクレーム承認マネージャーを登録します。  

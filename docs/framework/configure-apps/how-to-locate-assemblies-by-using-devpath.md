@@ -12,11 +12,11 @@ ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 3a9ae9c60ad7de80d04f16984b3b2fb048421cc2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206509"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037327"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>方法 : DEVPATH を使用してアセンブリを指定する
 開発者は、複数のアプリケーションの構築、共有アセンブリが正常に動作するかどうかを確認することがあります。 継続的に開発サイクル中にグローバル アセンブリ キャッシュにアセンブリを配置ではなく、開発者は、アセンブリのビルド出力ディレクトリを指す DEVPATH 環境変数を作成できます。  

@@ -2,40 +2,57 @@
 title: ADO.NET での接続文字列
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: b4e057cab4c562fc51893631c35d66409e1c3731
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 1e6e2b6870195c99279639e1f4576a30b7126d4d
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46579421"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029398"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET での接続文字列
 .NET Framework 2.0 では、接続文字列を扱う新しい機能が導入されました。接続文字列ビルダー クラスに追加された新しいキーワードもその 1 つであり、有効な接続文字列を実行時に簡単に作成できるようになっています。  
   
- 接続文字列には、データ プロバイダーからデータ ソースにパラメーターとして渡す初期化情報が含まれています。 接続文字列は接続を開くときに解析され、その構文はデータ プロバイダーによって異なります。 構文エラーの場合はランタイム例外が生成されますが、その他のエラーは、データ ソースが接続情報を受け取った後でのみ発生します。 いったん接続文字列が検証されると、接続文字列に指定されたオプションがデータ ソースによって適用されて接続が開かれます。  
+接続文字列には、データ プロバイダーからデータ ソースにパラメーターとして渡す初期化情報が含まれています。 接続文字列は接続を開くときに解析され、その構文はデータ プロバイダーによって異なります。 構文エラーの場合はランタイム例外が生成されますが、その他のエラーは、データ ソースが接続情報を受け取った後でのみ発生します。 いったん接続文字列が検証されると、接続文字列に指定されたオプションがデータ ソースによって適用されて接続が開かれます。
   
- 接続文字列の形式は、キーと値パラメーターのペアをセミコロンで区切ったリストです。  
+接続文字列の形式は、キーと値パラメーターのペアをセミコロンで区切ったリストです。
   
- `keyword1=value; keyword2=value;`  
+    keyword1=value; keyword2=value;
   
- キーワードの大文字と小文字は区別されません。また、キーと値のペア間のスペースは無視されます。 ただし、値の大文字と小文字を区別するかどうかはデータ ソースにより異なる場合があります。 値にセミコロン、単一引用符、または二重引用符が含まれている場合は、必ず二重引用符で囲む必要があります。  
+キーワードは区別されません。 値、ただし、可能性があります、データ ソースによって、大文字小文字が区別されます。 キーワードと値の両方を含めることができます[空白文字](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)先頭および末尾の空白はキーワードで無視され、引用符は、値。
+
+値には、セミコロンが含まれている場合[Unicode コントロール文字](https://en.wikipedia.org/wiki/Unicode_control_characters)、先頭または末尾の空白を囲む必要があります単一引用符または二重引用符でなど。
+
+    Keyword=" whitespace  ";
+    Keyword='special;character';
+
+それを囲む文字を囲む値内で発生しません。 そのため、単一引用符を含む値を囲む二重引用符でのみ、またはその逆ことができます。
+
+    Keyword='double"quotation;mark';
+    Keyword="single'quotation;mark";
+
+、等号と同様に、引用符は不要、エスケープため、次の接続文字列が無効です。
+
+    Keyword=no "escaping" 'required';
+    Keyword=a=b=c
+
+後者の例の値は、各値は、[次へ] のセミコロンまたは文字列の末尾まで読み取ることが、ため`a=b=c`、最後のセミコロンは省略可能です。
+
+有効な接続文字列の構文はプロバイダーによって異なり、ODBC のような初期の API から長年にわたって進化しています。 .NET Framework Data Provider for SQL Server (SqlClient) には、古い構文の要素が多数組み込まれており、一般的に、共通の接続文字列の構文に対しては柔軟性があります。 多くの場合、接続文字列の構文要素には同等として扱われる有効なシノニムが存在しますが、構文やスペルの誤りによって問題が生じる場合もあります。 たとえば、"`Integrated Security=true`" は有効ですが、"`IntegratedSecurity=true`" ではエラーが発生します。 また、ユーザー入力を基にして接続文字列を実行時に構築する場合、入力された文字列を検証しないと、文字列のインジェクション攻撃を招き、データ ソースのセキュリティが脅かされる可能性があります。
   
- 有効な接続文字列の構文はプロバイダーによって異なり、ODBC のような初期の API から長年にわたって進化しています。 .NET Framework Data Provider for SQL Server (SqlClient) には、古い構文の要素が多数組み込まれており、一般的に、共通の接続文字列の構文に対しては柔軟性があります。 多くの場合、接続文字列の構文要素には同等として扱われる有効なシノニムが存在しますが、構文やスペルの誤りによって問題が生じる場合もあります。 たとえば、"`Integrated Security=true`" は有効ですが、"`IntegratedSecurity=true`" ではエラーが発生します。 また、ユーザー入力を基にして接続文字列を実行時に構築する場合、入力された文字列を検証しないと、文字列のインジェクション攻撃を招き、データ ソースのセキュリティが脅かされる可能性があります。  
-  
- こうした問題に対処するため、ADO.NET 2.0 では、各 .NET Framework データ プロバイダー用の新しい接続文字列ビルダーが導入されました。 キーワードがプロパティとして公開され、接続文字列をデータ ソースに送信する前に、その構文を検証できます。  
+こうした問題に対処するため、ADO.NET 2.0 では、各 .NET Framework データ プロバイダー用の新しい接続文字列ビルダーが導入されました。 キーワードがプロパティとして公開され、接続文字列をデータ ソースに送信する前に、その構文を検証できます。
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- `ConnectionStringBuilder` クラスを使用して、有効な接続文字列を実行時に作成する方法について説明します。  
+ `ConnectionStringBuilder` クラスを使用して、有効な接続文字列を実行時に作成する方法について説明します。
   
  [接続文字列と構成ファイル](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
- 構成ファイルを使用した接続文字列の格納と取得の方法について説明します。  
+ 構成ファイルを使用した接続文字列の格納と取得の方法について説明します。
   
  [接続文字列の構文](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
- `SqlClient`、`OracleClient`、`OleDb`、`Odbc` の各プロバイダーに固有の接続文字列を構成する方法について説明します。  
+ `SqlClient`、`OracleClient`、`OleDb`、`Odbc` の各プロバイダーに固有の接続文字列を構成する方法について説明します。
   
  [接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- データ ソースへの接続に使用する情報を保護する方法を示します。  
+ データ ソースへの接続に使用する情報を保護する方法を示します。
   
 ## <a name="see-also"></a>関連項目  
  [データ ソースへの接続](/cpp/data/odbc/connecting-to-a-data-source)  

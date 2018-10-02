@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: ebce4daf433647179a0bce5751f66cdfab7a4d80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 726e41e8cde028fb86004ff06e2ad0663a042287
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195720"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030273"
 ---
 # <a name="workflow-security"></a>ワークフローのセキュリティ
 Windows Workflow Foundation (WF) は、Microsoft SQL Server や Windows Communication Foundation (WCF) など、いくつかのテクノロジと統合されます。 これらのテクノロジと相互作用するうえで、不適切に実行された場合にワークフローでセキュリティの問題が発生することがあります。
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) は、Microsoft SQL Server や Windows Communic
 
 -   ワークフローで使用される Windows Communication Foundation (WCF) エンドポイントをセキュリティで保護する必要があります。 詳細については、次を参照してください。 [WCF セキュリティの概要](https://go.microsoft.com/fwlink/?LinkID=164975)します。
 
--   <xref:System.ServiceModel.ServiceAuthorizationManager> を使用して、ホスト レベルの認証を実装できます。 参照してください[How To: サービスのカスタム承認マネージャーを作成する](https://go.microsoft.com/fwlink/?LinkId=192228)詳細についてはします。 これは次の例に示します。 また:[ワークフロー サービスのセキュリティで保護する](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)します。
+-   <xref:System.ServiceModel.ServiceAuthorizationManager> を使用して、ホスト レベルの認証を実装できます。 参照してください[How To: サービスのカスタム承認マネージャーを作成する](https://go.microsoft.com/fwlink/?LinkId=192228)詳細についてはします。
 
 -   受信メッセージの ServiceSecurityContext は、OperationContext へのアクセスによって、ワーク フロー内からも使用できます。
 

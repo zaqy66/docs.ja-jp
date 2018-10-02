@@ -2,12 +2,12 @@
 title: Interop アクティビティと .NET Framework 4 内の .NET Framework 3.0 WF アクティビティの使用
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467506"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029263"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Interop アクティビティと .NET Framework 4 内の .NET Framework 3.0 WF アクティビティの使用
 <xref:System.Activities.Statements.Interop> アクティビティは、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ワークフロー内に [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) アクティビティをラップする [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) アクティビティです。 WF 3 アクティビティは、単一のリーフ アクティビティまたはツリー全体のアクティビティです。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] アクティビティの実行 (取り消しおよび例外処理を含む) および保持は、実行中の [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ワークフロー インスタンスのコンテキスト内で発生します。  
@@ -52,7 +52,4 @@ ms.locfileid: "43467506"
   
 3.  <xref:System.Activities.Statements.Interop> アクティビティ内のアクティビティに関する WF 3 追跡レコードは、WF 4.5 の追跡参加要素に <xref:System.Activities.Tracking.InteropTrackingRecord> オブジェクトとして提供されます。 <xref:System.Activities.Tracking.InteropTrackingRecord> は <xref:System.Activities.Tracking.CustomTrackingRecord> の派生物です。  
   
-4.  WF 3 カスタム アクティビティからは、WF 3 ワークフロー ランタイム内とまったく同じ方法で、相互運用環境内でワークフロー キューを使用してデータにアクセスできます。 カスタム アクティビティ コードの変更は必要ありません。 ホストでは、<xref:System.Activities.Bookmark> を再開することで WF 3 ワークフロー キューにデータが追加されます。 ブックマークの名前は、<xref:System.IComparable> ワークフロー キュー名の文字列の形式です。  
-  
-## <a name="see-also"></a>関連項目  
- [.NET Framework 4.5 ワークフローでの .NET Framework 3.0 または .NET Framework 3.5 アクティビティの使用](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+4.  WF 3 カスタム アクティビティからは、WF 3 ワークフロー ランタイム内とまったく同じ方法で、相互運用環境内でワークフロー キューを使用してデータにアクセスできます。 カスタム アクティビティ コードの変更は必要ありません。 ホストでは、<xref:System.Activities.Bookmark> を再開することで WF 3 ワークフロー キューにデータが追加されます。 ブックマークの名前は、<xref:System.IComparable> ワークフロー キュー名の文字列の形式です。

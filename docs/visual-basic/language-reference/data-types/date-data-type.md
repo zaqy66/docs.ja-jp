@@ -16,11 +16,11 @@ helpviewer_keywords:
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
 ms.openlocfilehash: 32bd0912b0bae3340cffed010fc67431d0efb376
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033533"
 ---
 # <a name="date-data-type-visual-basic"></a>日付型 (Date) (Visual Basic)
 IEEE 64 ビット (8 バイト) の値として格納され、西暦 0001 年 1 月 1 日から西暦 9999 年 12 月 31 日までの日付と、午前 12:00:00 (深夜) から午後 11:59:59.9999999 までの時刻を表します。 各インクリメントはグレゴリオ暦の西暦 1 年 1 月 1 日からの経過時間を 100 ナノ秒で表します。 最大値は、西暦 10000 年 1 月 1 日の 100 ナノ秒前です。  

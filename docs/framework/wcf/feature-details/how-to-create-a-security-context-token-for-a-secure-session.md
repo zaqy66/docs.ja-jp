@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 author: BrucePerlerMS
 ms.openlocfilehash: 85954dd89bdb576b68d234a364a406a6e0d2145b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030351"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>方法 : セキュリティで保護されたセッションに対しセキュリティ コンテキスト トークンを作成する
 セキュリティで保護されたセッションでステートフルなセキュリティ コンテキスト トークン (SCT: Security Context Token) を使用すると、そのセッションでサービスを再利用できます。 たとえば、セキュリティで保護されたセッションでステートレスな SCT を使用しているときにインターネット インフォメーション サービス (IIS) をリセットすると、サービスに関連付けられているセッション データが失われます。 このセッション データには、SCT キャッシュが含まれています。 このため、クライアントが次回ステートレスな SCT をサービスに送信すると、エラーが返されます。これは、SCT に関連付けられているキーを取得できないためです。 しかし、ステートフルな SCT を使用した場合、SCT に関連付けられているキーは、その SCT 内に格納されます。 キーが SCT 内、つまりメッセージ内に格納されているため、セキュリティで保護されたセッションは、サービスの再使用の影響を受けません。 既定では、Windows Communication Foundation (WCF) は、セキュリティで保護されたセッションでステートレスな Sct を使用します。 ここでは、セキュリティで保護されたセッションでステートフルな SCT を使用する方法について詳しく説明します。  

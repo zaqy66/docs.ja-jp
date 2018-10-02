@@ -14,11 +14,11 @@ ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 79b5e05fe9133eb2282eedefa001e64ece5e0f57
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028760"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>方法 : GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成する
 使用することができます、<xref:System.Security.Principal.GenericIdentity>クラスと組み合わせて、 <xref:System.Security.Principal.GenericPrincipal> Windows ドメインの独立した存在する承認スキームを作成するクラス。  

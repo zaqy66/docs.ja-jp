@@ -6,11 +6,11 @@ helpviewer_keywords:
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
 author: BrucePerlerMS
 ms.openlocfilehash: bfb8f3b8d824c1a3324b1d01edc9a087c0cf4abd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204665"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035215"
 ---
 # <a name="security-protocols"></a>セキュリティ プロトコル
 Web サービス セキュリティ プロトコルには、既存のエンタープライズ メッセージング セキュリティのあらゆる要件に対応する Web サービス セキュリティ機構が用意されています。 このセクションは、Windows Communication Foundation (WCF) の詳細を説明します (で実装された、 <xref:System.ServiceModel.Channels.SecurityBindingElement>) の次の Web サービス セキュリティ プロトコル。  

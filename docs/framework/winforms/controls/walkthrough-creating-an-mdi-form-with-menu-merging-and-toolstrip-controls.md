@@ -15,11 +15,11 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
 ms.openlocfilehash: 6236190340833e3f8810387e51ad53e1cb10d37b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232873"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046722"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>チュートリアル : メニューのマージと ToolStrip コントロールのある MDI フォームを作成する
 <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間は、マルチ ドキュメント インターフェイス (MDI) アプリケーションをサポートし、<xref:System.Windows.Forms.MenuStrip> コントロールはメニューの結合をサポートします。 MDI フォームは、<xref:System.Windows.Forms.ToolStrip> コントロールもサポートします。  

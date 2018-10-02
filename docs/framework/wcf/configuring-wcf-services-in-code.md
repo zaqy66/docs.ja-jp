@@ -3,11 +3,11 @@ title: コード内での WCF サービスの構成
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: abd75e514d698e73c2297a5dc2e511f89f0534b1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216515"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037457"
 ---
 # <a name="configuring-wcf-services-in-code"></a>コード内での WCF サービスの構成
 Windows Communication Foundation (WCF) では、構成ファイルまたはコードを使用してサービスを構成できます。  構成ファイルは、サービスを配置した後に構成する必要がある場合に便利です。 構成ファイルを使用する場合、IT 専門家は構成ファイルを更新するだけで、再コンパイルの必要はありません。 ただし、構成ファイルの管理は複雑で難しくなる場合があります。 構成ファイルのデバッグはサポートされていません。また、構成要素は名前で参照されるため、構成ファイルの作成時にエラーが発生しやすく、構成ファイルの作成が困難になります。 WCF では、コードでサービスを構成することもできます。 以前のバージョンのコードで WCF (4.0 およびそれ以前) 構成サービスが自己ホスト型のシナリオで簡単、<xref:System.ServiceModel.ServiceHost>クラスを使用すると、エンドポイント、ServiceHost.Open を呼び出す前に動作を構成します。 ただし、Web ホストのシナリオでは、<xref:System.ServiceModel.ServiceHost> クラスに直接アクセスできません。 Web ホスト サービスを構成するには、`System.ServiceModel.ServiceHostFactory` を作成して必要な構成を実行する <xref:System.ServiceModel.Activation.ServiceHostFactory> を作成する必要がありました。 .NET 4.5 以降、WCF では、両方を構成する簡単な方法は自己ホスト型し、web ホスト コードでサービスを提供します。  

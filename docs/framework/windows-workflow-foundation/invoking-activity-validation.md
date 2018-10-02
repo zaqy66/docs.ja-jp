@@ -2,15 +2,15 @@
 title: アクティビティ検証の呼び出し
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 7e8be762e6c5c67687864727dcd4ca1cde9a8e42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61491e906bfc58bbd19cf43a5980b2781493411b
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520176"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035137"
 ---
 # <a name="invoking-activity-validation"></a>アクティビティ検証の呼び出し
-アクティビティの検証は、アクティビティを実行する前にアクティビティの構成エラーを特定および報告する手段です。 検証が発生するのは、ワークフローがワークフロー デザイナーで修正され、検証エラーまたは警告がワークフロー デザイナーに表示されたときです。 ワーク フローの呼び出し時に検証も行われます。検証エラーが発生すると、既定の検証ロジックによって <xref:System.Activities.InvalidWorkflowException> がスローされます。 Windows Workflow Foundation (WF) の提供、<xref:System.Activities.Validation.ActivityValidationServices>ワークフロー アプリケーションやツールの開発者が明示的にアクティビティを検証するために使用するクラス。 このトピックでは、<xref:System.Activities.Validation.ActivityValidationServices> を使用してアクティビティの検証を実行する方法を説明します。  
+アクティビティの検証は、アクティビティを実行する前にアクティビティの構成エラーを特定および報告する手段です。 検証が発生するのは、ワークフローがワークフロー デザイナーで修正され、検証エラーまたは警告がワークフロー デザイナーに表示されたときです。 ワーク フローの呼び出し時に検証も行われます。検証エラーが発生すると、既定の検証ロジックによって <xref:System.Activities.InvalidWorkflowException> がスローされます。 Windows Workflow Foundation (WF) の提供、<xref:System.Activities.Validation.ActivityValidationServices>ワークフロー アプリケーションやツールの開発者によって明示的にアクティビティの検証に使用できるクラス。 このトピックでは、<xref:System.Activities.Validation.ActivityValidationServices> を使用してアクティビティの検証を実行する方法を説明します。  
   
 ## <a name="using-activityvalidationservices"></a>ActivityValidationServices の使用  
  <xref:System.Activities.Validation.ActivityValidationServices> には、アクティビティの検証ロジックの呼び出しに使用される 2 つの <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> オーバーロードがあります。 1 つ目のオーバーロードは、検証されるルート アクティビティを受け取り、一連の検証エラーと警告を返します。 次の例では、2 つの必須引数を持つカスタムの `Add` アクティビティが使用されています。  
@@ -90,10 +90,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.Activities.InvalidWorkflowException:**  
+ **System.activities.invalidworkflowexception:**  
 **ワークフロー ツリーの処理中に、次のエラーが発生しました。**   
-**'Add': 必須のアクティビティ引数 'Operand2' が指定されませんでしたの値します。**   
-**'Add': 必須のアクティビティ引数 'Operand1' が指定されませんでしたの値します。**  このサンプル ワークフローを有効にするには、`Add` アクティビティの 2 つの必須変数をバインドする必要があります。 次の例では、2 つの必須変数と結果値がワークフロー変数にバインドされています。 この例では、2 つの必須変数に加え、<xref:System.Activities.Activity%601.Result%2A> 引数がバインドされています。 <xref:System.Activities.Activity%601.Result%2A> 引数はバインドする必要がなく、バインドされていなくても検証エラーは発生しません。 <xref:System.Activities.Activity%601.Result%2A> の値がワークフローの別の場所で使用される場合、この引数のバインドはワークフローの作成者が行う必要があります。  
+**'Add': の値、必須のアクティビティ引数 'Operand2' が指定されません。**   
+**'Add': の値、必須のアクティビティ引数 'Operand1' が指定されませんでした。**  このサンプル ワークフローを有効にするには、`Add` アクティビティの 2 つの必須変数をバインドする必要があります。 次の例では、2 つの必須変数と結果値がワークフロー変数にバインドされています。 この例では、2 つの必須変数に加え、<xref:System.Activities.Activity%601.Result%2A> 引数がバインドされています。 <xref:System.Activities.Activity%601.Result%2A> 引数はバインドする必要がなく、バインドされていなくても検証エラーは発生しません。 <xref:System.Activities.Activity%601.Result%2A> の値がワークフローの別の場所で使用される場合、この引数のバインドはワークフローの作成者が行う必要があります。  
   
 ```csharp  
 new Add  
@@ -124,9 +124,9 @@ catch (Exception ex)
 ```  
   
  **System.argumentexception: ルート アクティビティの引数の設定が正しくありません。**  
-**ワークフロー定義を修正するか、これらのエラーを修正する入力値を指定します。**   
-**'Add': 必須のアクティビティ引数 'Operand2' が指定されませんでしたの値します。**   
-**'Add': 必須のアクティビティ引数 'Operand1' が指定されませんでしたの値します。**  正しい引数が渡された後、次の例に示すように、ワークフローは正常に完了します。  
+**ワークフロー定義を修正するか、エラーを修正する入力値を指定します。**   
+**'Add': の値、必須のアクティビティ引数 'Operand2' が指定されません。**   
+**'Add': の値、必須のアクティビティ引数 'Operand1' が指定されませんでした。**  正しい引数が渡された後、次の例に示すように、ワークフローは正常に完了します。  
   
 ```csharp  
 Add wf = new Add();  
@@ -152,12 +152,13 @@ catch (Exception ex)
 ```  
   
 > [!NOTE]
->  この例では、前の例の `Add` とは異なり、ルート アクティビティは `Activity` として宣言されています。 このため、`WorkflowInvoker.Invoke` メソッドは、`Add` 引数のディクショナリではなく、`out` アクティビティの結果を表す 1 つの整数を返すことができます。 また、変数 `wf` は `Activity<int>` として宣言することも可能です。  
+> この例では、前の例の `Add` とは異なり、ルート アクティビティは `Activity` として宣言されています。 このため、`WorkflowInvoker.Invoke` メソッドは、`Add` 引数のディクショナリではなく、`out` アクティビティの結果を表す 1 つの整数を返すことができます。 また、変数 `wf` は `Activity<int>` として宣言することも可能です。  
   
  ルート引数を検証する場合、ワークフローが呼び出されたときにすべての必須変数が渡されたことを確認するのはホスト アプリケーションが担当します。  
   
-### <a name="invoking-imperative-code-based-validation"></a>命令型コードに基づく検証の呼び出し  
- 命令型コードに基づく検証は、アクティビティでアクティビティ自身に関する検証を可能にする簡単な方法を提供し、<xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity>、および <xref:System.Activities.NativeActivity> から派生するアクティビティで使用できます。 検証のエラーまたは警告を判断する検証コードがアクティビティに追加されます。 検証がアクティビティで呼び出されると、これらの警告またはエラーは、<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> への呼び出しで返されるコレクションに格納されます。 取得された次の例で、[基本的な検証](../../../docs/framework/windows-workflow-foundation/samples/basic-validation.md)サンプルについては、`CreateProduct`アクティビティを定義します。 `Cost` が `Price` よりも高い場合、検証エラーが <xref:System.Activities.CodeActivity.CacheMetadata%2A> オーバーライドのメタデータに追加されます。  
+### <a name="invoking-imperative-code-based-validation"></a>命令型コードに基づく検証の呼び出し
+
+命令型コードに基づく検証は、アクティビティでアクティビティ自身に関する検証を可能にする簡単な方法を提供し、<xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity>、および <xref:System.Activities.NativeActivity> から派生するアクティビティで使用できます。 検証のエラーまたは警告を判断する検証コードがアクティビティに追加されます。 検証がアクティビティで呼び出されると、これらの警告またはエラーは、<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> への呼び出しで返されるコレクションに格納されます。 次の例では、`CreateProduct` アクティビティを定義します。 `Cost` が `Price` よりも高い場合、検証エラーが <xref:System.Activities.CodeActivity.CacheMetadata%2A> オーバーライドのメタデータに追加されます。  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -233,7 +234,7 @@ else
 >  カスタム アクティビティの作成者は、アクティビティの <xref:System.Activities.CodeActivity.CacheMetadata%2A> オーバーライドに検証ロジックを指定できます。 <xref:System.Activities.CodeActivity.CacheMetadata%2A> からスローされる例外は、検証エラーとして処理されません。 これらの例外は、<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> への呼び出しからエスケープされ、呼び出し元によって処理される必要があります。  
   
 ## <a name="using-validationsettings"></a>ValidationSettings の使用  
- 既定では、アクティビティ ツリー内のすべてのアクティビティは、検証が <xref:System.Activities.Validation.ActivityValidationServices> に呼び出されたときに評価されます。 <xref:System.Activities.Validation.ValidationSettings> を使用すると、その 3 つのプロパティを構成することによって、さまざまな方法で検証をカスタマイズできます。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> は、バリデーターがアクティビティ ツリー全体を調べるか、指定したアクティビティにのみ検証ロジックを適用するかを指定します。 この値の既定値は、`false` です。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> は、型から制約のリストへの追加の制約マッピングを指定します。 検証されているアクティビティ ツリーの各アクティビティの基本型について、<xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> への参照が行われます。 一致する制約リストが見つかると、アクティビティについて、リストのすべての制約が評価されます。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> は、バリデーターがすべての制約を評価するか、<xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> で指定された制約のみを評価するかを指定します。 既定値は `false` です。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> および <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> は、FxCop のようなツールのポリシーの制約など、ワークフローの検証をワークフロー ホストの作成者がさらに追加する場合に便利です。 制約の詳細については、次を参照してください。[宣言の制約](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md)です。  
+ 既定では、アクティビティ ツリー内のすべてのアクティビティは、検証が <xref:System.Activities.Validation.ActivityValidationServices> に呼び出されたときに評価されます。 <xref:System.Activities.Validation.ValidationSettings> を使用すると、その 3 つのプロパティを構成することによって、さまざまな方法で検証をカスタマイズできます。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> は、バリデーターがアクティビティ ツリー全体を調べるか、指定したアクティビティにのみ検証ロジックを適用するかを指定します。 この値の既定値は、`false` です。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> は、型から制約のリストへの追加の制約マッピングを指定します。 検証されているアクティビティ ツリーの各アクティビティの基本型について、<xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> への参照が行われます。 一致する制約リストが見つかると、アクティビティについて、リストのすべての制約が評価されます。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> は、バリデーターがすべての制約を評価するか、<xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> で指定された制約のみを評価するかを指定します。 既定値は `false` です。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> および <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> は、FxCop のようなツールのポリシーの制約など、ワークフローの検証をワークフロー ホストの作成者がさらに追加する場合に便利です。 制約の詳細については、次を参照してください。[宣言の制約](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md)します。  
   
  <xref:System.Activities.Validation.ValidationSettings> を使用するには、必要なプロパティを構成し、<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> の呼び出しで渡します。 この例では、カスタムの <xref:System.Activities.Statements.Sequence> アクティビティを持つ `Add` で構成されるワークフローが検証されます。 この `Add` アクティビティには必須引数が 2 つあります。  
   
@@ -303,4 +304,4 @@ else
   
  このコードを実行すると、次の出力が表示されます。  
   
- **警告もエラーも**場合でも、`Add`バインドされていない引数のために必要なアクティビティ、ルート アクティビティのみが評価されるため、検証は成功します。 このタイプの検証は、デザイナーで 1 つのアクティビティのプロパティの変更を検証するなど、アクティビティ ツリーの特定の要素のみを検証する場合に便利です。 このワークフローが呼び出された場合、ワークフローで構成された完全な検証が評価され、<xref:System.Activities.InvalidWorkflowException> がスローされます。 <xref:System.Activities.Validation.ActivityValidationServices> および <xref:System.Activities.Validation.ValidationSettings> で構成されるのは、ホストによって明示的に呼び出される検証だけであり、ワークフローが呼び出されたときに発生する検証ではありません。
+ **警告もエラーも**場合でも、`Add`アクティビティにバインドされていない引数が必要ですが、ルート アクティビティのみが評価されるため、検証が成功しました。 このタイプの検証は、デザイナーで 1 つのアクティビティのプロパティの変更を検証するなど、アクティビティ ツリーの特定の要素のみを検証する場合に便利です。 このワークフローが呼び出された場合、ワークフローで構成された完全な検証が評価され、<xref:System.Activities.InvalidWorkflowException> がスローされます。 <xref:System.Activities.Validation.ActivityValidationServices> および <xref:System.Activities.Validation.ValidationSettings> で構成されるのは、ホストによって明示的に呼び出される検証だけであり、ワークフローが呼び出されたときに発生する検証ではありません。
