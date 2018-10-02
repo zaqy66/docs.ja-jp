@@ -13,11 +13,11 @@ ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425798"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48024585"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;削除&gt;connectionManagement (ネットワーク設定) の要素
 接続管理リストから IP アドレスまたは DNS 名を削除します。  
