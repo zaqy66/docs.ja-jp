@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 author: BrucePerlerMS
 ms.openlocfilehash: be915a0b619c800c79ef1acbec9b71812c749cf7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863729"
 ---
 # <a name="discovery-security-sample"></a>探索のセキュリティのサンプル
 Discovery 仕様では、探索プロセスに参加するエンドポイントをセキュリティで保護する必要はありません。 探索メッセージをセキュリティで強化することで、さまざまな種類の攻撃 (メッセージの改ざん、サービス拒否、リプレイ、なりすまし) が軽減されます。 このサンプルでは、コンパクトな署名形式 (WS-Discovery 仕様のセクション 8.2 を参照) を使用してメッセージ署名の計算と検証を行うカスタム チャネルの実装方法を示します。 このサンプルでは、両方をサポート、 [2005 Discovery 仕様](https://go.microsoft.com/fwlink/?LinkId=177912)と[バージョン 1.1](https://go.microsoft.com/fwlink/?LinkId=179677)します。  

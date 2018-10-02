@@ -3,11 +3,11 @@ title: '&lt;commonParameters&gt; の &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
 ms.openlocfilehash: 93e82aa3bd44a747d1e85986c51c21522d709bd0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863380"
 ---
 # <a name="ltaddgt-of-ltcommonparametersgt"></a>&lt;commonParameters&gt; の &lt;add&gt;
 複数のサービスでグローバルに使用されるパラメーターの名前と値のペアを指定します。 このパラメーターには通常、永続性サービスによって共有されるデータベース接続文字列が格納されます。  

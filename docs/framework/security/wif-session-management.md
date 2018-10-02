@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 author: BrucePerlerMS
 ms.openlocfilehash: 980d0c6dca9b0b5fadf2d4a841e4c95a9acaff52
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863131"
 ---
 # <a name="wif-session-management"></a>WIF セッション管理
 証明書利用者によりホストされている保護リソースにクライアントが初めてアクセスしようとするとき、クライアントは最初に、証明書利用者が信頼しているセキュリティ トークン サービス (STS) に身元を証明する必要があります。 認証後、STS はセキュリティ トークンをクライアントに発行します。 クライアントは証明書利用者にこのトークンを提示します。証明書利用者は保護リソースへのアクセスをクライアントに許可します。 ただし、要求のたびにクライアントが STS に再認証するということは望ましくありません。コンピューターやドメインが証明書利用者のものと同じではないことがあるためです。 代わりに、Windows Identity Foundation (WIF) はクライアントと証明書利用者にセッションを確立させ、そのセッションで、最初の要求後のすべての要求に関して、クライアントはセッション セキュリティ トークンを利用して証明書利用者に身元を証明します。 証明書利用者は Cookie 内に保存されるこのセッション セキュリティ トークンを利用し、クライアントの <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> を再構築できます。  

@@ -5,11 +5,11 @@ ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2603c29fe9108a32f3c3ba86a5aba9fae5042b17
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205370"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863432"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET ネイティブによる起動時間の改善の測定
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]によって、アプリの起動時間が大幅に改善されます。 この改善は、ポータブルの低電力デバイスや複雑なアプリで特に顕著です。 このトピックでは、この起動時間の改善を測定するために必要となる基本的なインストルメンテーションの概要を示します。  
