@@ -3,11 +3,11 @@ title: 構造体 (F#)
 description: F# 構造、多くの場合、コンパクトなオブジェクト型について説明しますと少量のデータと動作が単純な型のクラスよりも効率的です。
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086789"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47459857"
 ---
 # <a name="structures"></a>構造体
 
