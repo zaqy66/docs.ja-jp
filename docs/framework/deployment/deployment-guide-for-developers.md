@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - 言語パックがユーザーのコンピューターに既にインストールされているかどうかの[検出](#detecting-the-language-packs) 。
 
-- 配置を制御する場合は、.NET Framework セットアップ プロセスをサイレントに起動および追跡 (「 [How to: Get Progress from the .NET Framework 4.5 Installer](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)」をご覧ください)。
+- 配置を制御する場合は、.NET Framework セットアップ プロセスをサイレントに起動および追跡 (「 [方法: .NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
 
 - オフライン インストーラーを配置する場合は、 [言語パックを個別にチェーンします](#chain_langpack)。
 

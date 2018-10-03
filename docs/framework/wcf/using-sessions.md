@@ -129,7 +129,7 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
 -   WCF クライアント オブジェクトのいずれかの型の終了操作 (既定では、操作が終了していません。 コントラクトは、終了操作を明示的に指定する必要があります)。 最初の操作が呼び出されると、WCF クライアント オブジェクトは自動的にチャネルを開き、セッションを開始します。  
   
- 例については、「 [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 」、および「 [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 」や「 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 」のサンプルを参照してください。  
+ 例については、「 [方法 : セッションを必要とするサービスを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 」、および「 [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 」や「 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 」のサンプルを参照してください。  
   
  クライアントとセッションに関する詳細については、次を参照してください。[にアクセスするサービスの WCF クライアントを使用して](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)します。  
   
