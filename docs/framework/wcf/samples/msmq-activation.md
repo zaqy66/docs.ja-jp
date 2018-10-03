@@ -20,7 +20,7 @@ ms.locfileid: "43779313"
 >   
 >  \<InstallDrive >: \WF_WCF_Samples  
 >   
->  このディレクトリが存在しない場合は、Windows Communication Foundation (WCF) ハイパーリンクを参照してください "https://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"および Windows Workflow Foundation (WF) のサンプル[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] すべての WCF をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合は、Windows Communication Foundation (WCF) ハイパーリンクを参照してください "https://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank"および Windows Workflow Foundation (WF) のサンプル[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] すべての WCF をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation します。  
   
