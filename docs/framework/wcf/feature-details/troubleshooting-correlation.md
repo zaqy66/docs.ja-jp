@@ -2,12 +2,12 @@
 title: 相関関係のトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: 56b17d0a865d1a6c1afaa2844878c82b755afdc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397158"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027924"
 ---
 # <a name="troubleshooting-correlation"></a>相関関係のトラブルシューティング
 相関関係は、ワークフロー サービス メッセージを互いに関連付けたり、正しいワークフロー インスタンスに関連付けたりするために使用されますが、正しく構成されていないと、メッセージが受信されず、アプリケーションが正しく機能しなくなります。 ここでは、相関関係のトラブルシューティングのいくつかの方法の概要と、相関関係を使用するときに発生する一般的な問題について説明します。
@@ -76,7 +76,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- ConsoleTrackingParticipant などの追跡参加要素は、コンソール ウィンドウを持つ自己ホスト型ワークフロー サービスで使用できます。 Web ホスト サービスでは、永続的ストアへの追跡情報を記録する追跡参加要素に使用するかなど、組み込み<xref:System.Activities.Tracking.EtwTrackingParticipant>、やなどの情報をファイルにログ記録、カスタム追跡参加要素、 `TextWriterTrackingParticpant` から[テキスト ファイルを使用した追跡](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md)サンプル。
+ ConsoleTrackingParticipant などの追跡参加要素は、コンソール ウィンドウを持つ自己ホスト型ワークフロー サービスで使用できます。 Web ホスト サービスでは、永続的ストアへの追跡情報を記録する追跡参加要素に使用するかなど、組み込み<xref:System.Activities.Tracking.EtwTrackingParticipant>、または情報をファイルにログに記録するカスタム追跡参加要素。
 
  追跡と追跡、Web でホストされるワークフロー サービスの構成の詳細については、次を参照してください[ワークフロー追跡とトレース](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)、[ワークフローの追跡を構成する](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)、および[。追跡&#91;WF のサンプル&#93;](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)サンプル。
 
@@ -214,7 +214,7 @@ sm:body()/xg0:AddItemMessage/xg0:CartId
 sm:header()/tempuri:CartId
 ```
 
- これはメッセージの本文を調べて確認することができます。
+これはメッセージの本文を調べて確認することができます。
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ sm:header()/tempuri:CartId
 </s:Envelope>
 ```
 
- 次の例では、データを受信するために前のメッセージ コントラクトを使用する <xref:System.ServiceModel.Activities.Receive> 操作のために構成された `AddItem` アクティビティを示します。 XPath クエリは正しく構成されています。
+次の例では、データを受信するために前のメッセージ コントラクトを使用する <xref:System.ServiceModel.Activities.Receive> 操作のために構成された `AddItem` アクティビティを示します。 XPath クエリは正しく構成されています。
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">
@@ -247,5 +247,3 @@ sm:header()/tempuri:CartId
   </ReceiveMessageContent>
 </Receive>
 ```
-
-コンテンツ ベースの相関関係の詳細については、次を参照してください。、[相関電卓](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)サンプル。
