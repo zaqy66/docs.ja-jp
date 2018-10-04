@@ -2,12 +2,12 @@
 title: WF 内での非同期アクティビティの作成
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520069"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266560"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>WF 内での非同期アクティビティの作成
 <xref:System.Activities.AsyncCodeActivity> は使用する基本クラスをアクティビティ作成者に提供します。その結果、派生アクティビティが非同期実行ロジックを実装できるようになります。 これは、ワークフローのスケジューラ スレッドを保持したり、並行して実行される可能性があるすべてのアクティビティをブロックしたりすることなく、非同期作業を実行する必要があるカスタム アクティビティに役立ちます。 ここでは、<xref:System.Activities.AsyncCodeActivity> を使用してカスタムの非同期アクティビティを作成する方法の概要を説明します。  
@@ -16,7 +16,7 @@ ms.locfileid: "33520069"
  <xref:System.Activities?displayProperty=nameWithType> は、カスタム アクティビティ作成者に、アクティビティの作成要件に応じてさまざまな基本クラスを提供します。 それぞれが特定のセマンティックを持ち、ワークフロー作成者 (およびアクティビティ ランタイム) に対応するコントラクトを提供します。 <xref:System.Activities.AsyncCodeActivity> ベースのアクティビティは、スケジューラ スレッド、およびマネージ コードで表される実行ロジックに関連して、非同期に作業を実行するアクティビティです。 非同期作業になると、<xref:System.Activities.AsyncCodeActivity> によって実行中にアイドル ポイントが発生する可能性があります。 非同期作業には揮発的な性質があるため、<xref:System.Activities.AsyncCodeActivity> はアクティビティの実行期間に対して常に非永続的なブロックを作成します。 こうすることで、ワークフロー ランタイムによって、非同期作業中にワークフロー インスタンスが永続化されることを回避できます。また、非同期コードの実行中にワークフロー インスタンスがアンロードされることを回避できます。  
   
 ### <a name="asynccodeactivity-methods"></a>AsyncCodeActivity メソッド  
- <xref:System.Activities.AsyncCodeActivity> から派生するアクティビティでは、<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> メソッドと <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> メソッドをカスタム コードでオーバーライドすることで、非同期実行ロジックを作成できます。 ランタイムによって呼び出されるとき、これらのメソッドには <xref:System.Activities.AsyncCodeActivityContext> が渡されます。 <xref:System.Activities.AsyncCodeActivityContext> により、アクティビティの作成者で共有の状態を<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>のコンテキスト内<xref:System.Activities.AsyncCodeActivityContext.UserState%2A>プロパティです。 次の例では、`GenerateRandom` アクティビティによって非同期に乱数を生成します。  
+ <xref:System.Activities.AsyncCodeActivity> から派生するアクティビティでは、<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> メソッドと <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> メソッドをカスタム コードでオーバーライドすることで、非同期実行ロジックを作成できます。 ランタイムによって呼び出されるとき、これらのメソッドには <xref:System.Activities.AsyncCodeActivityContext> が渡されます。 <xref:System.Activities.AsyncCodeActivityContext> により、アクティビティ作成者はにわたる共有状態を提供する<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>のコンテキスト内<xref:System.Activities.AsyncCodeActivityContext.UserState%2A>プロパティ。 次の例では、`GenerateRandom` アクティビティによって非同期に乱数を生成します。  
   
  [!code-csharp[CFX_ActivityExample#8](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#8)]  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33520069"
  [!code-csharp[CFX_ActivityExample#10](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>クラスでの非同期メソッドの呼び出し  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の多くのクラスには、非同期機能が用意されています。この非同期機能は、<xref:System.Activities.AsyncCodeActivity> ベースのアクティビティを使用して非同期に呼び出すことができます。 次の例で、[アクティビティでの AsyncOperationContext の使用](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)を使用して非同期的にファイルを作成するアクティビティが作成された、<xref:System.IO.FileStream>クラスです。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の多くのクラスには、非同期機能が用意されています。この非同期機能は、<xref:System.Activities.AsyncCodeActivity> ベースのアクティビティを使用して非同期に呼び出すことができます。 次の例では、アクティビティが作成を使用して非同期的にファイルを作成する、<xref:System.IO.FileStream>クラス。  
   
  [!code-csharp[CFX_ActivityExample#12](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   
@@ -44,9 +44,9 @@ ms.locfileid: "33520069"
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>AsyncCodeActivity を使用した、アクションまたは子アクティビティのスケジュール設定  
- <xref:System.Activities.AsyncCodeActivity> 派生カスタム アクティビティはワークフローのスレッドに関する作業を非同期に実行するメソッドを提供しますが、子アクティビティやアクションをスケジュールする機能はありません。 ただし、非同期動作は、コンポジションを介して子アクティビティのスケジュール設定と組み合わせることができます。 非同期アクティビティを作成してから、<xref:System.Activities.Activity> または <xref:System.Activities.NativeActivity> の派生アクティビティと共に構成すると、子アクティビティまたはアクションの非同期動作とスケジュール機能を提供できます。 たとえば、アクティビティを <xref:System.Activities.Activity> から派生するように作成し、その実装時に <xref:System.Activities.Statements.Sequence> に非同期アクティビティと共にアクティビティのロジックを実装する他のアクティビティを含めることができます。 使用してアクティビティの作成の例について<xref:System.Activities.Activity>と<xref:System.Activities.NativeActivity>を参照してください[する方法: アクティビティを作成する](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)、[アクティビティ作成オプション](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)、および[複合](../../../docs/framework/windows-workflow-foundation/samples/composite.md)アクティビティのサンプルです。  
+ <xref:System.Activities.AsyncCodeActivity> 派生カスタム アクティビティはワークフローのスレッドに関する作業を非同期に実行するメソッドを提供しますが、子アクティビティやアクションをスケジュールする機能はありません。 ただし、非同期動作は、コンポジションを介して子アクティビティのスケジュール設定と組み合わせることができます。 非同期アクティビティを作成してから、<xref:System.Activities.Activity> または <xref:System.Activities.NativeActivity> の派生アクティビティと共に構成すると、子アクティビティまたはアクションの非同期動作とスケジュール機能を提供できます。 たとえば、アクティビティを <xref:System.Activities.Activity> から派生するように作成し、その実装時に <xref:System.Activities.Statements.Sequence> に非同期アクティビティと共にアクティビティのロジックを実装する他のアクティビティを含めることができます。 使用してアクティビティの作成の例について<xref:System.Activities.Activity>と<xref:System.Activities.NativeActivity>を参照してください[方法: アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)と[アクティビティ作成オプション](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.Action>  
- <xref:System.Func%602>  
- [アクティビティでの AsyncOperationContext の使用](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)
+
+- <xref:System.Action>  
+- <xref:System.Func%602>  

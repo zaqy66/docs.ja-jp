@@ -8,17 +8,16 @@ helpviewer_keywords:
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 40656fb2617b4863994c1dafd8f0f4b3c46ef427
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 04abb999ae232d2dd49b1fad8887a596530ea369
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502272"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782117"
 ---
 # <a name="ui-automation-overview"></a>UI オートメーションの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] は、 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]をサポートするすべてのオペレーティング システムで利用可能な、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]の新しいアクセシビリティ フレームワークです。  
   

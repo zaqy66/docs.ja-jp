@@ -2,12 +2,12 @@
 title: '方法 : WSDL コントラクトと共にサービス モニカーを使用する'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 838e7affcf47742c8f372879fcb33946d53ba43f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc8e5d80ec0b1df699ebe9112f364dd69ca3faf6
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491044"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266532"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>方法 : WSDL コントラクトと共にサービス モニカーを使用する
 完全に自己完結型である COM Interop クライアントの構築が必要になる場合があります。 呼び出そうとするサービスで MEX エンドポイントが公開されておらず、WCF クライアントの DLL が COM interop に登録されていないこともあります。 このような場合、サービスを記述した WSDL ファイルを作成し、そのファイルを WCF サービス モニカーに渡すことができます。 ここでは、WCF WSDL モニカーを使用して、WCF の入門サンプルを呼び出す方法を説明します。  
@@ -16,7 +16,7 @@ ms.locfileid: "33491044"
   
 1.  入門サンプル ソリューションを開き、ビルドします。  
   
-2.  Internet Explorer を開きを参照http://localhost/ServiceModelSamples/Service.svcサービスが動作しているかどうかを確認します。  
+2.  Internet Explorer を開きを参照する`http://localhost/ServiceModelSamples/Service.svc`サービスが動作しているかどうかを確認します。  
   
 3.  Service.cs ファイルで、次の属性を CalculatorService クラスに追加します。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33491044"
   
   
   
-5.  アプリケーションが読み取る WSDL ファイルを作成します。 名前空間は、手順 3. および 4. で追加された、ためにを参照して、サービスの WSDL 記述全体を照会する IE を使用してhttp://localhost/ServiceModelSamples/Service.svc?wsdlです。 次に、そのファイルをサービスの WSDL.xml として Internet Explorer で保存できます。 手順 3. と 4. で名前空間を指定しなかった場合、上記の URL を照会したときに返される WSDL ドキュメントは、完全な WSDL ではありません。 返される WSDL ドキュメントには、他の WSDL ドキュメントをインポートするためのインポート ステートメントが追加されています。 各インポート ステートメントを実行し、サービスから返された WSDL とインポートした WSDL を組み合わせることによって、完全な WSDL ドキュメントを作成する必要があります。  
+5.  アプリケーションが読み取る WSDL ファイルを作成します。 参照して、サービスの WSDL 記述全体を照会する IE を使用するには、名前空間は、手順 3 と 4 で追加された、ため、`http://localhost/ServiceModelSamples/Service.svc?wsdl`します。 次に、そのファイルをサービスの WSDL.xml として Internet Explorer で保存できます。 手順 3. と 4. で名前空間を指定しなかった場合、上記の URL を照会したときに返される WSDL ドキュメントは、完全な WSDL ではありません。 返される WSDL ドキュメントには、他の WSDL ドキュメントをインポートするためのインポート ステートメントが追加されています。 各インポート ステートメントを実行し、サービスから返された WSDL とインポートした WSDL を組み合わせることによって、完全な WSDL ドキュメントを作成する必要があります。  
   
 6.  Visual Basic 6.0 を開き、新しい標準 .exe ファイルを作成します。 フォームにボタンを追加し、追加したボタンをダブルクリックして次のコードをクリック ハンドラーに追加します。  
   

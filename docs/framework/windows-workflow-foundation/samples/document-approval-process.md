@@ -2,16 +2,16 @@
 title: ドキュメント承認プロセス
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508931"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582711"
 ---
 # <a name="document-approval-process"></a>ドキュメント承認プロセス
-このサンプルでは、多くの Windows Workflow Foundation (WF) や Windows Communication Foundation (WCF) 機能の使用をまとめて示します。 ドキュメント承認プロセスのシナリオを実装する方法を示します。 クライアント アプリケーションでは、承認の必要なドキュメントを送信したり、ドキュメントを承認したりすることができます。 クライアント間の通信を促進したり承認プロセスのルールを適用したりするための承認マネージャー アプリケーションも用意されています。 この承認プロセスは、複数の種類の承認を実行できるワークフローで、 単一承認、定足数承認 (承認者全体のパーセンテージ)、および複合承認 (定足数承認と単一承認のシーケンスから成る承認) を得るためのアクティビティが用意されています。  
-  
+このサンプルでは、多くの Windows Workflow Foundation (WF) や Windows Communication Foundation (WCF) 機能の使用をまとめて示します。 ドキュメント承認プロセスのシナリオを実装する方法を示します。 クライアント アプリケーションでは、承認の必要なドキュメントを送信したり、ドキュメントを承認したりすることができます。 クライアント間の通信を促進したり承認プロセスのルールを適用したりするための承認マネージャー アプリケーションも用意されています。 この承認プロセスは、複数の種類の承認を実行できるワークフローで、 単一承認、定足数承認 (承認者全体のパーセンテージ)、および複合承認 (定足数承認と単一承認のシーケンスから成る承認) を得るためのアクティビティが用意されています。
+
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
@@ -80,11 +80,11 @@ ms.locfileid: "43508931"
   
 ##### <a name="to-set-up-the-database"></a>データベースを設定するには  
   
-1.  管理者特権で開いた [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] コマンド プロンプトから、この DocumentApprovalProcess フォルダーへ移動して、Setup.cmd を実行します。  
+1.  管理者特権で開いた Visual Studio 2010 コマンド プロンプトでこの DocumentApprovalProcess フォルダーに移動し、Setup.cmd を実行します。  
   
 ##### <a name="to-set-up-the-application"></a>アプリケーションを設定するには  
   
-1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] を使用して、DocumentApprovalProcess.sln ソリューション ファイルを開きます。  
+1.  Visual Studio 2010 を使用して、DocumentApprovalProcess.sln ソリューション ファイルを開きます。  
   
 2.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
   
@@ -146,4 +146,4 @@ ms.locfileid: "43508931"
   
 ##### <a name="to-clean-up"></a>クリーンアップするには  
   
-1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] コマンド プロンプトで、DocumentApprovalProcess フォルダーに移動して Cleanup.cmd を実行します。
+1.  Visual Studio 2010 コマンド プロンプトから DocumentApprovalProcess フォルダーに移動し、Cleanup.cmd を実行します。

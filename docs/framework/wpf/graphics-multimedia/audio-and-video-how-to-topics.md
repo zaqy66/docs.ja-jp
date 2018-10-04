@@ -8,11 +8,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
 ms.openlocfilehash: d7c3a6b01591dd1c7fc7554a6e660f1ca7b12de1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031657"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582214"
 ---
 # <a name="audio-and-video-how-to-topics"></a>オーディオとビデオに関する「方法」トピック
 次のトピックを使用する方法について説明、<xref:System.Windows.Controls.MediaElement>アプリケーションでのオーディオおよびビデオ コンテンツを統合します。  

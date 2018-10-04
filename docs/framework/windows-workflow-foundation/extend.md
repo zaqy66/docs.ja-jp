@@ -6,19 +6,18 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], extending
 - extending [WF]
 ms.assetid: d6861f28-9c8c-4225-872d-9a80e2e59034
-ms.openlocfilehash: b8fcdfdee442afe5a8fc354f4fb484f3a947d293
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 667be700a5b7bafe80d20e6f899cd63529ea9b82
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511892"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48581808"
 ---
 # <a name="extending-windows-workflow-foundation"></a>Windows Workflow Foundation の拡張
-次のセクションでは、外部の再ホストされた環境でカスタム アクティビティとデザイナーを使用して Windows Workflow Foundation (WF) を拡張する方法をについて説明します[!INCLUDE[vs2010](../../../includes/vs2010-md.md)]です。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [ワークフローのデザイン エクスペリエンスのカスタマイズ](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)  
- [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] で、カスタム アクティビティを設計するシナリオや [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] のホストを変更するシナリオが大幅に簡略化されたことを示します。 開発も配置も簡単になりより柔軟な新しいアクティビティ デザイナー プログラミング モデルは Windows Presentation Foundation (WPF) に組み込まれているためです。  
+次のセクションでは、カスタム アクティビティと Visual Studio 2010 の外部の再ホストされた環境でのデザイナーを使用して Windows Workflow Foundation (WF) を拡張する方法について説明します。
+
+## <a name="in-this-section"></a>このセクションの内容
+ [ワークフロー デザイン操作のカスタマイズ](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)ことを示しますどのカスタム アクティビティを設計し、再ホスト シナリオ、[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]で大幅に簡略化[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]します。 開発と展開が容易にしより柔軟な Windows Presentation Foundation (WPF) に新しいアクティビティ デザイナー プログラミング モデルが構築されるため。
 
 ## <a name="see-also"></a>関連項目
  [Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/index.md)

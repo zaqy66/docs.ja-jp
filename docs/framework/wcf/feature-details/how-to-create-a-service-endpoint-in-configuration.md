@@ -2,12 +2,12 @@
 title: '方法 : 構成にサービス エンドポイントを作成する'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: f1a2696e2aeb8d0c704d008b064a8f8c8b0745d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490228"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266274"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>方法 : 構成にサービス エンドポイントを作成する
 エンドポイントは、Windows Communication Foundation (WCF) サービスを提供する機能へのアクセスを持つクライアントを提供します。 エンドポイントの相対アドレスと絶対アドレスを組み合わせてサービスのエンドポイントを 1 つ以上定義できます。または、サービス エンドポイントを定義しない場合、ランタイムは既定で一部を提供します。 このトピックでは、相対アドレスと絶対アドレスの両方を含んでいる構成ファイルを使用したエンドポイントの使用方法について説明します。  
@@ -83,7 +83,7 @@ ms.locfileid: "33490228"
 ```  
   
 ## <a name="example"></a>例  
- 次のサンプルの最初のエンドポイント定義では、相対アドレスを指定します。つまり、エンドポイント アドレスは、ベース アドレスと URI (Uniform Resource Identifier) 構造の規則に従った相対アドレスの組み合わせということを意味します。 相対アドレスが空 ("") のため、エンドポイント アドレスはベース アドレスと同じになります。 実際のエンドポイント アドレスがhttp://localhost:8000/servicemodelsamples/serviceです。  
+ 次のサンプルの最初のエンドポイント定義では、相対アドレスを指定します。つまり、エンドポイント アドレスは、ベース アドレスと URI (Uniform Resource Identifier) 構造の規則に従った相対アドレスの組み合わせということを意味します。 相対アドレスが空 ("") のため、エンドポイント アドレスはベース アドレスと同じになります。 実際のエンドポイント アドレスが`http://localhost:8000/servicemodelsamples/service`します。  
   
 ```xml  
 <endpoint address=""   
@@ -92,7 +92,7 @@ ms.locfileid: "33490228"
 ```  
   
 ## <a name="example"></a>例  
- 2 番目のエンドポイント定義でも、相対アドレスを指定します。次のサンプル構成を参照してください。 相対アドレス "test" がベース アドレスの末尾に追加されています。 実際のエンドポイント アドレスがhttp://localhost:8000/servicemodelsamples/service/testです。  
+ 2 番目のエンドポイント定義でも、相対アドレスを指定します。次のサンプル構成を参照してください。 相対アドレス "test" がベース アドレスの末尾に追加されています。 実際のエンドポイント アドレスが`http://localhost:8000/servicemodelsamples/service/test`します。  
   
 ```xml  
 <endpoint address="/test"  
@@ -101,7 +101,7 @@ ms.locfileid: "33490228"
 ```  
   
 ## <a name="example"></a>例  
- 3 番目のエンドポイント定義では、絶対アドレスを指定します。次のサンプル構成を参照してください。 このアドレスでは、ベース アドレスは使用されていません。 実際のエンドポイント アドレスがhttp://localhost:8001/hello/servicemodelsamplesです。  
+ 3 番目のエンドポイント定義では、絶対アドレスを指定します。次のサンプル構成を参照してください。 このアドレスでは、ベース アドレスは使用されていません。 実際のエンドポイント アドレスが`http://localhost:8001/hello/servicemodelsamples`します。  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -119,7 +119,7 @@ ms.locfileid: "33490228"
 ```  
   
 ## <a name="example"></a>例  
- ランタイムによって提供された既定のエンドポイントを使用するには、コードまたは構成ファイルでサービス エンドポイントを指定しないでください。 次の例では、サービスを開くときに、ランタイムは既定のエンドポイントを作成します。 既定のエンドポイント、バインディング、および動作の詳細については、次を参照してください。[簡略化された構成](../../../../docs/framework/wcf/simplified-configuration.md)と[WCF サービスの構成を簡略化](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)です。  
+ ランタイムによって提供された既定のエンドポイントを使用するには、コードまたは構成ファイルでサービス エンドポイントを指定しないでください。 次の例では、サービスを開くときに、ランタイムは既定のエンドポイントを作成します。 既定のエンドポイントについては、「[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。  
   
 ```xml  
 <configuration>  

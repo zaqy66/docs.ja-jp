@@ -2,12 +2,12 @@
 title: ワークフロー実行プロパティ
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 2681152ba89baa2f65d5402a8c8c9d872cadb65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b72782b4b9fef127e61bb22b7800740af1d8d2b
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518645"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582071"
 ---
 # <a name="workflow-execution-properties"></a>ワークフロー実行プロパティ
 CLR は、スレッド ローカル ストレージ (TLS) を介して各スレッドの実行コンテキストを維持します。 この実行コンテキストは、スレッド ID、アンビエント トランザクション、現在のアクセス許可セットなど、既知のスレッド プロパティに加えて、名前付きスロットのようなユーザー定義のスレッド プロパティを制御します。  
@@ -18,9 +18,6 @@ CLR は、スレッド ローカル ストレージ (TLS) を介して各スレ�
   
 ## <a name="creating-and-using-workflow-execution-properties"></a>ワークフロー実行プロパティの作成と使用  
  ワークフロー実行プロパティは、通常、<xref:System.Activities.IExecutionProperty> インターフェイスを実装します。ただし、メッセージングに重点を置いたプロパティが代わりに <xref:System.ServiceModel.Activities.ISendMessageCallback> と <xref:System.ServiceModel.Activities.IReceiveMessageCallback> を実装することもあります。 ワークフロー実行プロパティを作成するには、<xref:System.Activities.IExecutionProperty> インターフェイスを実装するクラスを作成し、メンバーの <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> および <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A> を実装します。 これらのメンバーには、プロパティを含むアクティビティ (すべての子アクティビティを含む) の作業の各パルス中に、スレッド ローカル ストレージを適切に設定および設定解除できる実行プロパティがあります。 この例では、`ConsoleColorProperty` を設定する `Console.ForegroundColor` を作成します。  
-  
-> [!NOTE]
->  このトピックの次のコード例がに基づいて、[実行プロパティ](../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md)サンプルです。  
   
 ```csharp  
 class ConsoleColorProperty : IExecutionProperty  

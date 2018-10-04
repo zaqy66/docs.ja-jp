@@ -2,106 +2,106 @@
 title: 再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: f0afc9f0a6254b0df1e0c6e724ec5b3cfd1f86d0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c6f6c6baedba0c932472a087d378ccce90b60db7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800636"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266733"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
-Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]ワークフロー デザイナー エクスペリエンスのいくつかの機能強化を含め、多くの新しい機能が導入されました。 このトピックでは、このような新機能のうち、再ホストされたデザイナーでサポートされている機能と現時点ではサポートされていない機能について詳しく説明します。  
-  
+Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]ワークフロー デザイナー エクスペリエンスのいくつかの機能強化を含め、多くの新しい機能が導入されました。 このトピックでは、このような新機能のうち、再ホストされたデザイナーでサポートされている機能と現時点ではサポートされていない機能について詳しく説明します。
+
 > [!NOTE]
->  導入された新しい Windows Workflow Foundation (WF) 機能のすべての一覧については[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、デザイナーのホスト変更関連のないものを含む、次を参照してください。 [.NET 4.5 での Windows Workflow Foundation の新](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)します。  
-  
-## <a name="activities"></a>アクティビティ  
- 組み込みのアクティビティ ライブラリには、既存のアクティビティ用の新しいアクティビティと新しい機能が含まれています。 これらの新しいアクティビティはすべて、再ホストされたデザイナーでサポートされています。 これらの新しいアクティビティの詳細については、次を参照してください。、[アクティビティ](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)の[.NET 4.5 での Windows Workflow Foundation の新](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)します。  
-  
-## <a name="c-expressions"></a>C# の式  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] より前のバージョンでは、ワークフロー内のすべての式を Visual Basic のみで記述できました。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、Visual Basic の式は Visual Basic で作成されたプロジェクトでのみ使用されます。 Visual C# プロジェクトでは、式に C# が使用されるようになりました。 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] でワークフローを作成する場合、文法強調表示や Intellisense などの機能を備えた、フル機能の C# 式エディターが用意されています。 以前のバージョンで作成された、Visual Basic の式を使用する C# ワークフロー プロジェクトは引き続き動作します。  
-  
+>  導入された新しい Windows Workflow Foundation (WF) 機能のすべての一覧については[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、デザイナーのホスト変更関連のないものを含む、次を参照してください。 [.NET 4.5 での Windows Workflow Foundation の新](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)します。
+
+## <a name="activities"></a>アクティビティ
+ 組み込みのアクティビティ ライブラリには、既存のアクティビティ用の新しいアクティビティと新しい機能が含まれています。 これらの新しいアクティビティはすべて、再ホストされたデザイナーでサポートされています。 これらの新しいアクティビティの詳細については、次を参照してください。、[アクティビティ](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)の[.NET 4.5 での Windows Workflow Foundation の新](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)します。
+
+## <a name="c-expressions"></a>C# の式
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] より前のバージョンでは、ワークフロー内のすべての式を Visual Basic のみで記述できました。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、Visual Basic の式は Visual Basic で作成されたプロジェクトでのみ使用されます。 Visual C# プロジェクトでは、式に C# が使用されるようになりました。 Visual Studio 2012 でワークフローを作成するには、フル機能の c# 式エディターに文法強調表示や intellisense などの機能が提供されます。 以前のバージョンで作成された、Visual Basic の式を使用する C# ワークフロー プロジェクトは引き続き動作します。
+
 > [!WARNING]
->  C# の式は、再ホストされたデザイナーではサポートされていません。  
-  
-## <a name="new-designer-capabilities"></a>デザイナーの新機能  
-  
-### <a name="designer-search"></a>デザイナーでの検索  
- [クイック検索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)で導入された機能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]再ホストされたデザイナーでサポートされていません。 `Toolbox` による検索は、再ホストされたデザイナーでもサポートされています。 これらの機能の詳細については、次を参照してください。[デザイナーでの検索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)します。  
-  
+>  C# の式は、再ホストされたデザイナーではサポートされていません。
+
+## <a name="new-designer-capabilities"></a>デザイナーの新機能
+
+### <a name="designer-search"></a>デザイナーでの検索
+ [クイック検索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)で導入された機能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]再ホストされたデザイナーでサポートされていません。 `Toolbox` による検索は、再ホストされたデザイナーでもサポートされています。 これらの機能の詳細については、次を参照してください。[デザイナーでの検索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)します。
+
 > [!WARNING]
->  [クイック検索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)再ホストされたデザイナーでサポートされていません。  
-  
-### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>変数デザイナーと引数デザイナーのコンテキスト メニューの [削除]  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、変数および引数を削除できるのは、デザイナーでキーボードを使用した場合のみでした。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、コンテキスト メニューを使用して変数および引数を削除できます。 この機能は、再ホストされたデザイナーでサポートされています。  
-  
- 変数デザイナーと引数デザイナーのコンテキスト メニューを次のスクリーンショットに示しています。  
-  
- ![変数と引数デザイナーのコンテキスト メニュー](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")  
-  
-### <a name="auto-surround-with-sequence"></a>ブロックの自動挿入シーケンス  
- ワークフローまたは特定のコンテナー アクティビティ (<xref:System.Activities.Statements.NoPersistScope> など) には Body アクティビティを 1 つしか含めることができないため、2 つ目のアクティビティを追加するには、開発者が最初のアクティビティを削除し、<xref:System.Activities.Statements.Sequence> アクティビティを追加してから、シーケンス アクティビティに両方のアクティビティを追加する必要がありました。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、デザイナー画面に 2 つ目のアクティビティを追加すると、`Sequence` アクティビティが自動的に作成され、両方のアクティビティがラップされます。 この機能は、再ホストされたデザイナーでサポートされています。  
-  
- 次のスクリーンショットは、`WriteLine` の `Body` 内の `NoPersistScope` アクティビティを示しています。  
-  
- ![自動&#45;格納場所を囲む](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
-  
- 次のスクリーンショットは、2 つ目の `Sequence` を 1 つ目の下にドロップしたときに `Body` 内に自動的に作成された `WriteLine` アクティビティを示しています。  
-  
- ![自動的に作成された sequence アクティビティ](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
-  
-### <a name="pan-mode"></a>パン モード  
- デザイナーで大規模なワークフロー内をより簡単に移動するには、パン モードを有効にすると、開発者は、スクロール バーを使用する必要なく、ワークフローの表示される部分をクリックおよびドラッグして移動できるようになります。 パン モードをアクティブ化するボタンは、デザイナーの右下隅にあります。 この機能は、再ホストされたデザイナーでサポートされています。  
-  
- 次のスクリーンショットは、ワークフロー デザイナーの右下隅にあるパン ボタンを示しています。  
-  
- ![ワークフロー デザイナーでのパン ボタン](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")  
-  
- マウスの中央ボタンまたは Space キーを使用して、ワークフロー デザイナーをパンすることもできます。  
-  
-### <a name="multi-select"></a>複数選択  
- 複数のアクティビティを同時に選択できます。これを行うには、複数のアクティビティを囲むようにドラッグするか (パン モードが無効な場合)、Ctrl キーを押したまま目的のアクティビティを 1 つずつクリックします。 この機能は、再ホストされたデザイナーでサポートされています。  
-  
- 選択した複数のアクティビティは、デザイナー内でドラッグ アンド ドロップすることも、コンテキスト メニューを使用して操作することもできます。  
-  
-### <a name="outline-view-of-workflow-items"></a>ワークフロー項目のアウトライン表示  
- 階層ワークフローを移動しやすくするため、ワークフローのコンポーネントはツリー スタイルのアウトライン表示で示されます。 アウトライン ビューに表示されます、**ドキュメント アウトライン**ビュー。 Visual Studio で、上部のメニューからこのビューを開き、選択**ビュー**、**その他の Windows**、**ドキュメント アウトライン**、または Ctrl W キーと u ですキーを押します。 アウトライン表示でノードをクリックすると、ワークフロー デザイナーの対応するアクティビティに移動し、アウトライン表示が更新されて、デザイナーで選択されているアクティビティが表示されます。 この機能は、再ホストされたデザイナーでサポートされています。  
-  
- 完成したワークフローの次のスクリーン ショット、[チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)シーケンシャル ワークフローでのアウトライン ビューを示しています。  
-  
- ![ワークフロー デザイナーでビューをアウトライン](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")  
-  
-### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>シェル バーおよびヘッダー項目の可視性の詳細な制御  
- 再ホストされたデザイナーでは、標準 UI コントロールの中に、特定のワークフローにとって意味がないものもあれば、無効になっているものもあります。 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、このカスタマイズがデザイナーの下部のシェル バーのみでサポートされています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、デザイナーの上部にあるシェルのヘッダー項目の表示は、適切な <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 値で <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> を設定することにより調整できます。  
-  
-### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>フローチャートおよびステート マシンのワークフローの自動接続と自動挿入  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、フローチャート ワークフロー内のノード間の接続は手動で追加する必要がありました。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、フローチャート ノードとステート マシン ノードに自動接続ポイントがあり、これらのポイントは、アクティビティをツールボックスからデザイナー画面上にドラッグすると表示されます。 アクティビティをこれらのポイントのうち 1 つにドロップすると、アクティビティが必要な接続と共に自動的に追加されます。  
-  
- 次のスクリーンショットは、アクティビティがツールボックスからドラッグされるときに表示されるアタッチ ポイントを示します。  
-  
- ![自動接続ポイントを示すフローチャートの開始ノード](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")  
-  
- アクティビティは、フローチャート ノードと状態の間の接続にドラッグすることで、その他 2 つのノード間にノードを自動挿入することもできます。 次のスクリーンショットは、アクティビティをツールボックスからドラッグ アンド ドロップできる、強調表示された接続線を示しています。  
-  
- ![自動&#45;アクティビティをドロップするためのハンドルを挿入](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "自動")  
-  
- 自動接続と自動挿入は、再ホストされたデザイナーでサポートされています。  
-  
-### <a name="designer-annotations"></a>デザイナー注釈  
- より大規模なワークフローの開発を容易にするため、デザイン プロセスを追跡できるよう注釈の追加がサポートされるようになりました。 注釈は、アクティビティ、状態、フローチャート ノード、変数、および引数に追加できます。 次のスクリーンショットは、デザイナーに注釈を追加するためのコンテキスト メニューを示しています。  
-  
- ![注釈コンテキスト メニュー](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")  
-  
- デザイナー注釈は、再ホストされたデザイナーでサポートされています。  
-  
-### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>デザイナーでの ActivityDelegate オブジェクトの定義と使用  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] のアクティビティでは、<xref:System.Activities.ActivityDelegate> オブジェクトを使用して、ワークフローの他の部分がワークフローの実行と対話できる実行ポイントを公開していましたが、通常、これらの実行ポイントを使用するには相当な量のコードが必要でした。 このリリースでは、開発者はワークフロー デザイナーを使用してアクティビティ デリゲートを定義および使用できます。 詳細については、次を参照してください。[方法: 定義およびワークフロー デザイナーでアクティビティ デリゲートを使用する](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)します。  
-  
- アクティビティ デリゲートは、再ホストされたデザイナーでサポートされています。  
-  
-### <a name="build-time-validation"></a>ビルド時の検証  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、ワークフローの検証エラーが、ワークフロー プロジェクトのビルド中のビルド エラーとして数えられていませんでした。 つまり、ワークフローの検証エラーが発生した場合でも、ワークフロー プロジェクトのビルドは成功している可能性があります。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、ワークフローの検証エラーが発生するとビルドは失敗します。  
-  
+>  [クイック検索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)再ホストされたデザイナーでサポートされていません。
+
+### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>変数デザイナーと引数デザイナーのコンテキスト メニューの [削除]
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、変数および引数を削除できるのは、デザイナーでキーボードを使用した場合のみでした。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、コンテキスト メニューを使用して変数および引数を削除できます。 この機能は、再ホストされたデザイナーでサポートされています。
+
+ 変数デザイナーと引数デザイナーのコンテキスト メニューを次のスクリーンショットに示しています。
+
+ ![変数と引数デザイナーのコンテキスト メニュー](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+
+### <a name="auto-surround-with-sequence"></a>ブロックの自動挿入シーケンス
+ ワークフローまたは特定のコンテナー アクティビティ (<xref:System.Activities.Statements.NoPersistScope> など) には Body アクティビティを 1 つしか含めることができないため、2 つ目のアクティビティを追加するには、開発者が最初のアクティビティを削除し、<xref:System.Activities.Statements.Sequence> アクティビティを追加してから、シーケンス アクティビティに両方のアクティビティを追加する必要がありました。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、デザイナー画面に 2 つ目のアクティビティを追加すると、`Sequence` アクティビティが自動的に作成され、両方のアクティビティがラップされます。 この機能は、再ホストされたデザイナーでサポートされています。
+
+ 次のスクリーンショットは、`WriteLine` の `Body` 内の `NoPersistScope` アクティビティを示しています。
+
+ ![自動&#45;格納場所を囲む](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+
+ 次のスクリーンショットは、2 つ目の `Sequence` を 1 つ目の下にドロップしたときに `Body` 内に自動的に作成された `WriteLine` アクティビティを示しています。
+
+ ![自動的に作成された sequence アクティビティ](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+
+### <a name="pan-mode"></a>パン モード
+ デザイナーで大規模なワークフロー内をより簡単に移動するには、パン モードを有効にすると、開発者は、スクロール バーを使用する必要なく、ワークフローの表示される部分をクリックおよびドラッグして移動できるようになります。 パン モードをアクティブ化するボタンは、デザイナーの右下隅にあります。 この機能は、再ホストされたデザイナーでサポートされています。
+
+ 次のスクリーンショットは、ワークフロー デザイナーの右下隅にあるパン ボタンを示しています。
+
+ ![ワークフロー デザイナーでのパン ボタン](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+
+ マウスの中央ボタンまたは Space キーを使用して、ワークフロー デザイナーをパンすることもできます。
+
+### <a name="multi-select"></a>複数選択
+ 複数のアクティビティを同時に選択できます。これを行うには、複数のアクティビティを囲むようにドラッグするか (パン モードが無効な場合)、Ctrl キーを押したまま目的のアクティビティを 1 つずつクリックします。 この機能は、再ホストされたデザイナーでサポートされています。
+
+ 選択した複数のアクティビティは、デザイナー内でドラッグ アンド ドロップすることも、コンテキスト メニューを使用して操作することもできます。
+
+### <a name="outline-view-of-workflow-items"></a>ワークフロー項目のアウトライン表示
+ 階層ワークフローを移動しやすくするため、ワークフローのコンポーネントはツリー スタイルのアウトライン表示で示されます。 アウトライン ビューに表示されます、**ドキュメント アウトライン**ビュー。 Visual Studio で、上部のメニューからこのビューを開き、選択**ビュー**、**その他の Windows**、**ドキュメント アウトライン**、または Ctrl W キーと u ですキーを押します。 アウトライン表示でノードをクリックすると、ワークフロー デザイナーの対応するアクティビティに移動し、アウトライン表示が更新されて、デザイナーで選択されているアクティビティが表示されます。 この機能は、再ホストされたデザイナーでサポートされています。
+
+ 完成したワークフローの次のスクリーン ショット、[チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)シーケンシャル ワークフローでのアウトライン ビューを示しています。
+
+ ![ワークフロー デザイナーでビューをアウトライン](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+
+### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>シェル バーおよびヘッダー項目の可視性の詳細な制御
+ 再ホストされたデザイナーでは、標準 UI コントロールの中に、特定のワークフローにとって意味がないものもあれば、無効になっているものもあります。 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、このカスタマイズがデザイナーの下部のシェル バーのみでサポートされています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、デザイナーの上部にあるシェルのヘッダー項目の表示は、適切な <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 値で <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> を設定することにより調整できます。
+
+### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>フローチャートおよびステート マシンのワークフローの自動接続と自動挿入
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、フローチャート ワークフロー内のノード間の接続は手動で追加する必要がありました。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、フローチャート ノードとステート マシン ノードに自動接続ポイントがあり、これらのポイントは、アクティビティをツールボックスからデザイナー画面上にドラッグすると表示されます。 アクティビティをこれらのポイントのうち 1 つにドロップすると、アクティビティが必要な接続と共に自動的に追加されます。
+
+ 次のスクリーンショットは、アクティビティがツールボックスからドラッグされるときに表示されるアタッチ ポイントを示します。
+
+ ![自動接続ポイントを示すフローチャートの開始ノード](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+
+ アクティビティは、フローチャート ノードと状態の間の接続にドラッグすることで、その他 2 つのノード間にノードを自動挿入することもできます。 次のスクリーンショットは、アクティビティをツールボックスからドラッグ アンド ドロップできる、強調表示された接続線を示しています。
+
+ ![自動&#45;アクティビティをドロップするためのハンドルを挿入](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "自動")
+
+ 自動接続と自動挿入は、再ホストされたデザイナーでサポートされています。
+
+### <a name="designer-annotations"></a>デザイナー注釈
+ より大規模なワークフローの開発を容易にするため、デザイン プロセスを追跡できるよう注釈の追加がサポートされるようになりました。 注釈は、アクティビティ、状態、フローチャート ノード、変数、および引数に追加できます。 次のスクリーンショットは、デザイナーに注釈を追加するためのコンテキスト メニューを示しています。
+
+ ![注釈コンテキスト メニュー](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+
+ デザイナー注釈は、再ホストされたデザイナーでサポートされています。
+
+### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>デザイナーでの ActivityDelegate オブジェクトの定義と使用
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] のアクティビティでは、<xref:System.Activities.ActivityDelegate> オブジェクトを使用して、ワークフローの他の部分がワークフローの実行と対話できる実行ポイントを公開していましたが、通常、これらの実行ポイントを使用するには相当な量のコードが必要でした。 このリリースでは、開発者はワークフロー デザイナーを使用してアクティビティ デリゲートを定義および使用できます。 詳細については、次を参照してください。[方法: 定義およびワークフロー デザイナーでアクティビティ デリゲートを使用する](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)します。
+
+ アクティビティ デリゲートは、再ホストされたデザイナーでサポートされています。
+
+### <a name="build-time-validation"></a>ビルド時の検証
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、ワークフローの検証エラーが、ワークフロー プロジェクトのビルド中のビルド エラーとして数えられていませんでした。 つまり、ワークフローの検証エラーが発生した場合でも、ワークフロー プロジェクトのビルドは成功している可能性があります。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、ワークフローの検証エラーが発生するとビルドは失敗します。
+
 > [!WARNING]
 >  ビルド時の検証は、再ホストされたデザイナーではサポートされていません。  
   

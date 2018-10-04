@@ -13,11 +13,11 @@ ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863300"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261369"
 ---
 # <a name="event-design"></a>イベントのデザイン
 イベントは、コールバック (ユーザー コードを呼び出すために、フレームワークを許可するコンストラクト) の最もよく使用される形式です。 その他のコールバック メカニズムには、デリゲート、仮想メンバー、およびインターフェイス ベースのプラグインを取得するメンバーが含まれます。ユーザビリティ調査からのデータは、開発者の大部分が快適よりも、その他のコールバック メカニズムを使用しているイベントを使用することを示します。 イベントは、Visual Studio と多くの言語で適切に統合されています。  

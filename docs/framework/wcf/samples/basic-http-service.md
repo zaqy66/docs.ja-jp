@@ -2,12 +2,12 @@
 title: 基本的な HTTP サービス
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028264"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48262391"
 ---
 # <a name="basic-http-service"></a>基本的な HTTP サービス
 このサンプルでは、"POX"(Plain Old XML) サービス-Windows Communication Foundation (WCF) REST プログラミング モデルを使用するとよく呼ばれる、HTTP ベース、RPC ベース サービスを実装する方法を示します。 このサンプルは、2 つのコンポーネントで構成されています。 自己ホスト型 WCF HTTP サービス (Service.cs) と、サービスを作成し、への呼び出しを、コンソール アプリケーション (Program.cs)。  
@@ -27,7 +27,7 @@ ms.locfileid: "48028264"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  基本的な HTTP サービス サンプルのソリューションを開きます。 サンプルを正しく実行するには、[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] を起動するときに、管理者として実行する必要があります。 これには、右クリックし、[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]アイコンを**管理者として実行**コンテキスト メニューから。  
+1.  基本的な HTTP サービス サンプルのソリューションを開きます。 Visual Studio 2012 を起動するときに、正常に実行するには、サンプルの管理者として実行する必要があります。 これは、Visual Studio 2012 のアイコンを右クリックして選択**管理者として実行**コンテキスト メニュー。  
   
 2.  Ctrl キーと Shift キーを押しながら B キーを押してソリューションをビルドし、Ctrl キーを押しながら F5 キーを押してコンソール アプリケーションを、デバッグを行わずに実行します。 コンソール ウィンドウが表示されて、実行中のサービスの URI および実行中のサービスの HTML ヘルプ ページの URI が示されます。 ブラウザーでヘルプ ページの URI を入力することで、いつでも HTML ヘルプ ページを表示することができます。 サンプルが実行されると、クライアントは現在のアクティビティのステータスを書き込みます。  
   

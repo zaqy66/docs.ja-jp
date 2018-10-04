@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
 ms.openlocfilehash: 51db352913999d5527ead5273e6488cd09d88670
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032699"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582477"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>トレースに関するセキュリティの考慮事項と役立つヒント
 ここでは、機密情報を漏洩の危険から守る方法と共に、WebHost を使用する場合の便利なヒントについて説明します。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 97b878621d5aa1860cd955755d9bbc344b95b993
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032570"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261262"
 ---
 # <a name="bitmap-effects-overview"></a>ビットマップ効果の概要
 ビットマップ効果は、デザイナーを有効にして、視覚効果を適用する開発者が Windows Presentation Foundation (WPF) をコンテンツのレンダリングします。 ビットマップ効果を簡単に適用することを許可するなど、<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>効果またはぼかし効果をイメージやボタン。  

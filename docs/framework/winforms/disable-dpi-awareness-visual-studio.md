@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037042"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263506"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio では、DPI の認識を無効にします。
 
@@ -68,6 +68,10 @@ Visual Studio は、レジストリを変更して DPI 対応としてマーク�
 100% に設定を Windows 10 にスケールイン ディスプレイを設定する入力**表示設定**タスク バー、クリックして [検索] ボックスに**表示設定を変更**します。 **設定**ウィンドウで、設定**テキスト、アプリ、およびその他のアイテムのサイズを変更**に**100%** します。
 
 100% に拡大縮小、表示を設定できない可能性があります、ため、使用するのには小さすぎてユーザー インターフェイスをことができます。
+
+## <a name="troubleshoot"></a>トラブルシューティング
+
+DPI 対応の移行は、Visual Studio で期待どおりに動作していないの場合があるかどうかを確認、`dpiAwareness`値、 **hkey_local_machine \software\microsoft\windows nt \currentversion\image ファイル実行 Options\devenv.exe**サブキーのレジストリ エディターでします。 存在する場合は、値を削除します。
 
 ## <a name="see-also"></a>関連項目
 

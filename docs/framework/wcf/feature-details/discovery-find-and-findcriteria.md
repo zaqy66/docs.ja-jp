@@ -3,11 +3,11 @@ title: 探索検索と FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: bd54a7bc896870035972daf1ea6f56d84dc5414e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035085"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583931"
 ---
 # <a name="discovery-find-and-findcriteria"></a>探索検索と FindCriteria
 探索検索操作は、1 つ以上のサービスを探索するためにクライアントによって開始される操作であり、探索における主要なアクションの 1 つです。 検索を実行すると、WS-Discovery Probe メッセージがネットワークを介して送信されます。 指定された条件に一致するサービスは、WS-Discovery ProbeMatch メッセージを使用して応答します。 探索メッセージの詳細については、次を参照してください。、 [Ws-discovery 仕様](https://go.microsoft.com/fwlink/?LinkID=122347)します。  

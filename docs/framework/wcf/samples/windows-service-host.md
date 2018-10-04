@@ -5,19 +5,19 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 0283fd8b3fd275be9787bb75763e9395091426a3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 65797863fc8187ffebbcb660e9fb285bfa1aabd0
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513672"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583855"
 ---
 # <a name="windows-service-host"></a>Windows サービス ホスト
-このサンプルでは、マネージ Windows サービスでホストされる Windows Communication Foundation (WCF) サービスを使用します。 Windows サービスのサービス アプレットを使用して、制御**コントロール パネルの **システムの再起動後に自動的に起動するように構成できます。 このサンプルは、クライアント プログラムと Windows サービス プログラムで構成されています。 サービスは .exe プログラムとして実装され、独自のホスティング コードが指定されます。 Windows プロセス アクティブ化サービス (WAS) やインターネット インフォメーション サービス (IIS) などの他のホスト環境では、ホスティング コードを記述する必要はありません。  
-  
+このサンプルでは、マネージ Windows サービスでホストされる Windows Communication Foundation (WCF) サービスを使用します。 Windows サービスのサービス アプレットを使用して、制御**コントロール パネルの **システムの再起動後に自動的に起動するように構成できます。 このサンプルは、クライアント プログラムと Windows サービス プログラムで構成されています。 サービスは .exe プログラムとして実装され、独自のホスティング コードが指定されます。 Windows プロセス アクティブ化サービス (WAS) やインターネット インフォメーション サービス (IIS) などの他のホスト環境では、ホスティング コードを記述する必要はありません。
+
 > [!NOTE]
->  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
-  
+>  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
+
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
@@ -59,7 +59,7 @@ ms.locfileid: "43513672"
   
 2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  ソリューションがビルドされたら、権限のレベルが高い [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] コマンド プロンプトから Setup.bat を実行し、Installutil.exe ツールを使用して Windows サービスをインストールしてください。 このサービスは、[サービス] に表示されます。  
+3.  ソリューションがビルドされたら、Installutil.exe ツールを使用して Windows サービスをインストールする管理者特権での Visual Studio 2012 コマンド プロンプトから Setup.bat を実行します。 このサービスは、[サービス] に表示されます。  
   
 4.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   

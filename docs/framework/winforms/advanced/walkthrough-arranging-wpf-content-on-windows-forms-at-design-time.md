@@ -9,35 +9,35 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 1466591a06e9e7ca61f94683e037566f8d0cb31a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509776"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266677"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時の Windows フォームでの WPF コンテンツの配置
-このチュートリアルでは、固定やスナップ線などの Windows フォームのレイアウト機能を使用して、Windows Presentation Foundation (WPF) コントロールを配置する方法を説明します。  
-  
- このチュートリアルでは次のタスクを実行します。  
-  
--   プロジェクトを作成する。  
-  
--   WPF コントロールを作成する。  
-  
--   レイアウト パネルで WPF コントロールをホストする。  
-  
--   WPF コントロールを配置するスナップ線を使用する。  
-  
--   WPF コントロールを固定してドッキングする。  
-  
+このチュートリアルでは、固定やスナップ線などの Windows フォームのレイアウト機能を使用して、Windows Presentation Foundation (WPF) コントロールを配置する方法を説明します。
+
+ このチュートリアルでは次のタスクを実行します。
+
+-   プロジェクトを作成する。
+
+-   WPF コントロールを作成する。
+
+-   レイアウト パネルで WPF コントロールをホストする。
+
+-   WPF コントロールを配置するスナップ線を使用する。
+
+-   WPF コントロールを固定してドッキングする。
+
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)]。  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>プロジェクトの作成  
  まず、Windows フォーム プロジェクトを作成します。  

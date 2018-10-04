@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 93cc0cf34d2bba23ff0938c8c13d7343d665192d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649225"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580745"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET のコード例
 このトピックにリストされたコードは、次の ADO.NET テクノロジを使用してデータベースからデータを取得する方法を示しています。
@@ -66,7 +66,7 @@ ms.locfileid: "45649225"
 以下に示した各コードは、エンティティ データ モデル (EDM) のエンティティを照会して、データ ソースからデータを取得する方法を示しています。 これらの例を使用して、 [Northwind モデル](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638)します。 詳細については、次を参照してください。 [Entity Framework の概要](../../../../docs/framework/data/adonet/ef/overview.md)します。
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
-この例のコードは LINQ クエリを使用してデータをカテゴリ オブジェクトとして返します。これは、CategoryID および CategoryName プロパティのみを含んでいる匿名型として射影されます。 詳細については、次を参照してください。 [LINQ to Entities の概要](https://msdn.microsoft.com/86d87a27-c17a-45ac-b28d-72c8500333c6)します。
+この例のコードは LINQ クエリを使用してデータをカテゴリ オブジェクトとして返します。これは、CategoryID および CategoryName プロパティのみを含んでいる匿名型として射影されます。 詳細については、次を参照してください。 [LINQ to Entities の概要](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)します。
 
 ```csharp
 using System;

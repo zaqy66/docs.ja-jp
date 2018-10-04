@@ -2,22 +2,22 @@
 title: External RuleSet Toolkit
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f545d083bb6caf9daca3ce553d0a1ee6711b0062
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803357"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584261"
 ---
 # <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
-通常、ワークフロー アプリケーション内でルールが使用される場合は、そのルールはアセンブリの一部です。 場合によっては、ワークフロー アセンブリのリビルドや配置を行わずに RuleSet を更新できるように、RuleSet をアセンブリとは別に管理することもあります。 このサンプルでは、RuleSet をデータベース内で管理および編集し、実行時にそれらの RuleSet にワークフローからアクセスできるようにしています。 その結果、実行中のワークフロー インスタンスに、RuleSet への変更を自動的に組み込むことができます。  
-  
- この External RuleSet Toolkit サンプルには、RuleSet のバージョンをデータベース内で管理および編集するために使用できる Windows フォーム ベースのツールが含まれています。 また、このようなルールを実行するためのアクティビティとホスト サービスも含まれます。  
-  
+通常、ワークフロー アプリケーション内でルールが使用される場合は、そのルールはアセンブリの一部です。 場合によっては、ワークフロー アセンブリのリビルドや配置を行わずに RuleSet を更新できるように、RuleSet をアセンブリとは別に管理することもあります。 このサンプルでは、RuleSet をデータベース内で管理および編集し、実行時にそれらの RuleSet にワークフローからアクセスできるようにしています。 その結果、実行中のワークフロー インスタンスに、RuleSet への変更を自動的に組み込むことができます。
+
+ この External RuleSet Toolkit サンプルには、RuleSet のバージョンをデータベース内で管理および編集するために使用できる Windows フォーム ベースのツールが含まれています。 また、このようなルールを実行するためのアクティビティとホスト サービスも含まれます。
+
 > [!NOTE]
 >  このサンプルが必要です[Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181)します。  
   
- [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] には、Windows WF (Workflow Foundation) の一部として RuleSet エディタが用意されています。 このエディタは、ワークフロー内の `Policy` アクティビティをダブルクリックすると起動できます。これにより、定義済みの RuleSet オブジェクトが、ワークフローに関連付けられている .rules ファイルにシリアル化されます (`Policy` アクティビティにより、ワークフローに対して RuleSet インスタンスが実行されます)。 .rules ファイルは、ワークフロー プロジェクトをビルドするときに、リソースとしてアセンブリにコンパイルされます。  
+ Visual Studio には、Windows Workflow Foundation (WF) の一部として RuleSet エディタが用意されています。 このエディタは、ワークフロー内の `Policy` アクティビティをダブルクリックすると起動できます。これにより、定義済みの RuleSet オブジェクトが、ワークフローに関連付けられている .rules ファイルにシリアル化されます (`Policy` アクティビティにより、ワークフローに対して RuleSet インスタンスが実行されます)。 .rules ファイルは、ワークフロー プロジェクトをビルドするときに、リソースとしてアセンブリにコンパイルされます。  
   
  このサンプルは、次のコンポーネントで構成されています。  
   

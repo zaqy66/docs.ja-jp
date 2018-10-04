@@ -6,20 +6,19 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 204869d0a7a7b8d56449c28cb37b18624a1701cf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5947e70b0dc4ef5838322722f2ee2a55034bae96
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207128"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582175"
 ---
 # <a name="getting-started-tutorial"></a>チュートリアル入門
-
 このセクションのトピックはクイック露出を Windows Communication Foundation (WCF) プログラミングの経験を提供するためのものです。 これらは、このトピックに記載されているリストの順番どおりに完了するように設計されています。 このチュートリアルに従って作業では、WCF サービスとクライアント アプリケーションの作成に必要な手順の概要を理解するできます。 サービスは 1 つ以上のエンドポイントを公開し、それぞれのエンドポイントは 1 つ以上のサービス操作を公開します。 *エンドポイント*サービスのサービスの場所、アドレス、クライアントが、サービスと機能を定義するコントラクトと通信する必要がある方法を説明する情報を格納するバインディングを指定します。サービスのクライアントに提供します。
 
  このチュートリアルの一連のトピックを終了すると、サービスを実行し、クライアントからそのサービスを呼び出すことができるようになります。 最初の 3 つのトピックでは、サービス コントラクトを定義する方法、サービス コントラクトを実装する方法、およびサービスをホストする方法について説明します。 作成したサービスは、コンソール アプリケーション内で自己ホストされます。 また、サービスは、インターネット インフォメーション サービス (IIS) でホストすることもできます。 これを行う方法の詳細については、次を参照してください。[方法: IIS で WCF サービスをホスト](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)します。 サービスはコードで構成されますが、構成ファイル内で構成することもできます。 構成ファイルの使用の詳細については、次を参照してください。[構成ファイルを使用してサービスを構成する](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)します。
 
- 次の 3 つのトピックでは、クライアント プロキシを作成する方法、クライアント アプリケーションを構成する方法、およびサービスが公開するサービス操作をクライアント プロキシを使って呼び出す方法について説明します。 サービスは、クライアント アプリケーションがサービスと通信するために必要な情報を定義したメタデータを公開します。 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] は、このメタデータにアクセスするプロセスを自動化し、それを使って、サービスのクライアント アプリケーションを構築および構成します。 使用していない場合[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]、使用することができます、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を構築およびサービスのクライアント アプリケーションを構成します。
+ 次の 3 つのトピックでは、クライアント プロキシを作成する方法、クライアント アプリケーションを構成する方法、およびサービスが公開するサービス操作をクライアント プロキシを使って呼び出す方法について説明します。 サービスは、クライアント アプリケーションがサービスと通信するために必要な情報を定義したメタデータを公開します。 Visual Studio 2012 では、このメタデータにアクセスするプロセスを自動化し、構築して、サービスのクライアント アプリケーションを構成することを使用します。 Visual Studio 2012 を使用していない場合は使用できます、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を構築およびサービスのクライアント アプリケーションを構成します。
 
 このセクションのトピックでは、開発環境として Visual Studio を使用するいると仮定します。 他の開発環境を使用している場合は、Visual Studio 固有の手順を無視します。
 

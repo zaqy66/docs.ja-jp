@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028775"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582724"
 ---
 # <a name="single-data-type-visual-basic"></a>単精度浮動小数点型 (Single) (Visual Basic)
 IEEE 32 ビット (4 バイト) の単精度浮動小数点数が 3.4028235 e + 38 までの値の範囲の符号付き - 1.401298E を通じて-負の値と 1.401298E から 45-45 から 3.4028235 e + 38 までの正の値。 単精度の数値では、実数の概算値を格納します。  

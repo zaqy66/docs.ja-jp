@@ -79,7 +79,7 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
 ## <a name="diffgram-annotations"></a>DiffGram 注釈  
  DiffGram では、<xref:System.Data.DataSet> の行バージョンやエラー情報を表すさまざまな DiffGram ブロックの要素を関連付けるため、いくつかの注釈が使用されます。  
   
- 次の表では、DiffGram 名前空間で定義されている DiffGram 注釈**urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-diffgram-v1**します。  
+ 次の表では、DiffGram 名前空間で定義されている DiffGram 注釈**urn:スキーマ-microsoft-com:xml-diffgram-v1**します。  
   
 |注釈|説明|  
 |----------------|-----------------|  
@@ -89,7 +89,7 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
 |**hasErrors**|行を識別、 **\<** ***DataInstance*** **>** ブロックと一緒に、 **RowError**します。 エラー要素は内に、  **\<diffgr:errors >** ブロックします。|  
 |**エラー**|テキストを含む、 **RowError**で特定の要素に対して、  **\<diffgr:errors >** ブロックします。|  
   
- <xref:System.Data.DataSet> の内容が DiffGram として読み取られる、または書き込まれるときには、上記以外の注釈も含まれます。 次の表に、名前空間で定義されている追加の注釈を**urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-msdata**します。  
+ <xref:System.Data.DataSet> の内容が DiffGram として読み取られる、または書き込まれるときには、上記以外の注釈も含まれます。 次の表に、名前空間で定義されている追加の注釈を**urn:スキーマ-microsoft-com:xml-msdata**します。  
   
 |注釈|説明|  
 |----------------|-----------------|  
