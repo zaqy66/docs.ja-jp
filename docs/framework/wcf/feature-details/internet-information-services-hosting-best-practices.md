@@ -33,7 +33,7 @@ ms.locfileid: "47073594"
  また、中間層シナリオでは、`svcutil /a` オプションによって生成された非同期 API を使用してパフォーマンスを向上させます。 `/a`オプションにより、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を生成する`BeginXXX/EndXXX`リモート サービスで行われる可能性のある実行の時間の長い呼び出しは、サービス操作ごとにメソッドバック グラウンド スレッドです。  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>マルチホーム シナリオまたはマルチネーム シナリオでの WCF  
- 一連のコンピューターが共通の外部名を共有する、IIS Web ファーム内の WCF サービスをデプロイすることができます (など http://www.contoso.com)は異なるホスト名によって個別にアドレス指定が、(たとえば、 http://www.contoso.com 2 台のコンピューターにトラフィックを送る可能性があります名前付き http://machine1.internal.contoso.comと http://machine2.internal.contoso.com)します。 この展開シナリオは、WCF によって完全にサポートされますが、サービスのメタデータ (Web Services Description Language) に正しい (外部) ホスト名を表示する WCF サービスをホストする IIS Web サイトの特別な構成が必要です。  
+ 一連のコンピューターが共通の外部名を共有する、IIS Web ファーム内の WCF サービスをデプロイすることができます (など http://www.contoso.com) は異なるホスト名によって個別にアドレス指定が、(たとえば、 http://www.contoso.com 2 台のコンピューターにトラフィックを送る可能性があります名前付き http://machine1.internal.contoso.com と http://machine2.internal.contoso.com) します。 この展開シナリオは、WCF によって完全にサポートされますが、サービスのメタデータ (Web Services Description Language) に正しい (外部) ホスト名を表示する WCF サービスをホストする IIS Web サイトの特別な構成が必要です。  
   
  生成 WCF サービス メタデータに正しいホスト名が表示されていることを確認するのには、明示的なホスト名を使用する WCF サービスをホストする IIS Web サイトの既定の id を構成します。 Www.contoso.com ファームの内部に存在するコンピューターでの IIS サイト バインディングを使用して、* http:80:www.contoso.com と\*: https 443:www.contoso.com します。  
   
