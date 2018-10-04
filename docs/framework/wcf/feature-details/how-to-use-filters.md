@@ -3,11 +3,11 @@ title: フィルターを使用する方法
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421730"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245193"
 ---
 # <a name="how-to-use-filters"></a>フィルターを使用する方法
 ここでは、複数のフィルターを使用したルーティング構成を作成するために必要な基本手順について説明します。 この例では、メッセージが、電卓サービスの 2 つの実装である regularCalc および roundingCalc にルーティングされます。 これらの実装は両方とも同じ操作をサポートしますが、片方のサービスでは、値を返す前にすべての計算を最も近い整数値に丸めます。 クライアント アプリケーションが、丸め処理を行うバージョンのサービスを使用するかどうかを表示可能である必要がありますが、優先するサービスが示されていない場合は、メッセージが 2 つのサービス間で負荷分散されます。 次の操作が両方のサービスによって公開されます。  

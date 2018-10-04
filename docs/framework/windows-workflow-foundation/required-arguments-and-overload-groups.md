@@ -2,12 +2,12 @@
 title: 必須の引数とオーバーロード グループ
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 794a0a531fbd26d9e4242d40be5147ab41547192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517561"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244868"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必須の引数とオーバーロード グループ
 アクティビティは、アクティビティの実行を有効にするためには特定の引数をバインドする必要があるように構成できます。 `RequiredArgument` 属性は、アクティビティの特定の引数が必須であることを示す場合に使用します。また、`OverloadGroup` 属性は、必須の引数のカテゴリをグループ化する場合に使用します。 これらの属性を使用することで、アクティビティ作成者は、単純なアクティビティ検証の構成も複雑な構成も適用できます。  
@@ -61,12 +61,13 @@ public sealed class Add : CodeActivity<int>
   
  アクティビティが使用され、いずれかの必須引数がバインドされていない場合は、次の検証エラーが返されます。  
   
- **必須のアクティビティ引数 'Operand1' の値が指定されませんでした。**  
+ **必要なアクティビティ引数 'Operand1' の値が指定されませんでした。**  
 > [!NOTE]
->  チェックと検証エラーおよび警告の処理に関する詳細については、次を参照してください。[アクティビティの検証を呼び出す](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)です。  
+> 確認し、検証エラーおよび警告の処理に関する詳細については、次を参照してください。[アクティビティの検証を呼び出す](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)します。  
   
-## <a name="using-overload-groups"></a>オーバーロード グループの使用  
- オーバーロード グループには、あるアクティビティ内で有効である引数の組み合わせを示すメソッドが用意されています。 引数は <xref:System.Activities.OverloadGroupAttribute> を使用してグループ化されます。 各グループには、<xref:System.Activities.OverloadGroupAttribute> によって指定される名前が与えられます。アクティビティが有効なのは、オーバーロード グループに含まれる 1 つの引数セットのみがバインドされる場合です。 取得された次の例で、 [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md)サンプルについては、`CreateLocation`クラスが定義されています。  
+## <a name="using-overload-groups"></a>オーバーロード グループの使用
+
+オーバーロード グループには、あるアクティビティ内で有効である引数の組み合わせを示すメソッドが用意されています。 引数は <xref:System.Activities.OverloadGroupAttribute> を使用してグループ化されます。 各グループで指定された名前が付けられます、<xref:System.Activities.OverloadGroupAttribute>します。 アクティビティは、1 つだけの一連のオーバー ロード グループの引数がバインドされているときに有効です。 次の例では、`CreateLocation` クラスを定義します。  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -105,7 +106,7 @@ class CreateLocation: Activity
   
  このアクティビティの目的は、米国内の場所を指定することです。 これを行うために、アクティビティのユーザーは、3 つある引数グループの 1 つを使用して場所を指定できます。 有効な組み合わせで引数を指定するために、3 種類のオーバーロード グループを定義しています。 `G1` には `Latitude` および `Longitude` の引数が含まれます。 `G2` には `Street`、`City`、および `State` が含まれます。 `G3` には `Street` および `Zip` が含まれます。 `Name` も必要な引数ですが、オーバーロード グループの一部ではありません。 このアクティビティが有効であるためには、`Name` が、1 つのオーバーロード グループのみに含まれるすべての引数とバインドされている必要があります。  
   
- 次の例から取得、[データベース アクセス アクティビティ](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)サンプルを 2 つのオーバー ロード グループがある:`ConnectionString`と`ConfigFileSectionName`です。 このアクティビティが有効であるためには、引数 `ProviderName` および `ConnectionString` がバインドされているか、または引数 `ConfigName` がバインドされている必要があります。両方がバインドされている場合は無効です。  
+ 取得した次の例では、[データベース アクセス アクティビティ](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)サンプルでは、2 つのオーバー ロード グループがある:`ConnectionString`と`ConfigFileSectionName`します。 このアクティビティが有効であるためには、引数 `ProviderName` および `ConnectionString` がバインドされているか、または引数 `ConfigName` がバインドされている必要があります。両方がバインドされている場合は無効です。  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  
