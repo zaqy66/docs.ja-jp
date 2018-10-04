@@ -2,12 +2,12 @@
 title: セットアップに関する問題のトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 0270bd8c1006b39805e3486c4fef0cb379089ea8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805131"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780129"
 ---
 # <a name="troubleshooting-setup-issues"></a>セットアップに関する問題のトラブルシューティング
 このトピックでは、Windows Communication Foundation (WCF) がセットアップ問題のトラブルシューティングを行う方法について説明します。  
@@ -67,7 +67,7 @@ ms.locfileid: "43805131"
  回避策を使用して、この問題、[ワークフロー サービス登録ツール (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)で、`/c`スイッチをコンピューターの IIS スクリプト マップを適切に構成します。 [ワークフロー サービス登録ツール (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) %windir%\Microsoft.NET\framework\v3.5\ または %windir%\Microsoft.NET\framework64\v3.5\ にあります  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>アセンブリ 'System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' から型 'System.ServiceModel.Activation.HttpModule' を読み込むことができない  
- このエラーが発生します[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]がインストールされているし、WCF HTTP アクティブ化が有効になっているとします。 この問題を解決するには、[!INCLUDE[vs2010](../../../includes/vs2010-md.md)] コマンド プロンプト内から次のコマンドを実行します。  
+ このエラーが発生します[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]がインストールされているし、WCF HTTP アクティブ化が有効になっているとします。 Visual Studio の次のコマンド ラインから開発者コマンド プロンプト内で実行の問題を解決するには。  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

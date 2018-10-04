@@ -10,11 +10,11 @@ ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92b648e7886fb0214238e32eacae2870b470340
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
-ms.translationtype: HT
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48263388"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793085"
 ---
 # <a name="virtual-members"></a>仮想メンバー
 そのため、サブクラスの動作を変更する仮想メンバーをオーバーライドできます。 それらは、それらのもたらす拡張性の観点からのコールバックとよく似ていますが、実行のパフォーマンスとメモリ消費量の観点からは優れています。 また、仮想メンバー自然に感じられる特殊な既存の型 (特殊化) の種類を作成する必要のあるシナリオでします。  

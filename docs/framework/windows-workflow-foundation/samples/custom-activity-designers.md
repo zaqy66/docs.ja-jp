@@ -3,11 +3,11 @@ title: カスタム アクティビティ デザイナー
 ms.date: 03/30/2017
 ms.assetid: dcf14dca-ce6d-4278-96ba-062f0a679075
 ms.openlocfilehash: c27ad19121f4faa0a3fca7b13b197a88a95c6d15
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031904"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781259"
 ---
 # <a name="custom-activity-designers"></a>カスタム アクティビティ デザイナー
 このセクションでは、ワークフロー デザイナーに表示するカスタム デザイナーを使用するアクティビティ サンプルを示します。  

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], bindings
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-ms.openlocfilehash: 1930826cf51d67ceb789e20920ca42f04d1adc1b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e69cd500c50e9d76824d0e438a1af86f3a722c52
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199334"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780698"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation バインディング
-Windows Communication Foundation (WCF) では、その他のソフトウェアと通信する方法からアプリケーション用のソフトウェアを記述する方法を分離します。 バインディングを使用して、クライアントとサービスが相互に通信するために必要なトランスポート、エンコーディング、およびプロトコルの詳細を指定します。 WCF では、バインドを使用して、バインディングの詳細のほとんどは通信しているパーティ間で合意する必要がありますので、エンドポイントの基になるネットワーク表現を生成します。 これを実現する最も簡単な方法は、サービスのクライアントがサービスのエンドポイントと同じバインディングを使用することです。 これを行う方法の詳細については、次を参照してください。[を使用して Windows Communication Foundation サービスの構成とクライアントのバインド](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)します。  
+Windows Communication Foundation (WCF) では、その他のソフトウェアと通信する方法からアプリケーション用のソフトウェアを記述する方法を分離します。 バインディングを使用して、クライアントとサービスが相互に通信するために必要なトランスポート、エンコーディング、およびプロトコルの詳細を指定します。 WCF では、バインドを使用して、バインディングの詳細のほとんどは通信しているパーティ間で合意する必要がありますので、エンドポイントの基になるネットワーク表現を生成します。 これを実現する最も簡単な方法は、サービスのクライアントがサービスのエンドポイントと同じバインディングを使用することです。 これを行う方法の詳細については、次を参照してください。[サービスを構成してクライアントを使用してバインド](~/docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)します。  
   
  バインディングは、バインド要素のコレクションで構成されます。 各要素は、エンドポイントがクライアントと通信する方法の一部分を記述します。 バインディングには、1 つ以上のトランスポート バインド要素、1 つ以上のメッセージ エンコーディング バインド要素 (既定では、トランスポート バインド要素によって提供されます)、および任意の数の他のプロトコル バインド要素が含まれている必要があります。 このように、ランタイムをビルドするプロセスでは、各バインド要素からランタイムにコードを提供できます。  
   
@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) では、その他のソフトウェア�
  [システムが提供するバインディングの構成](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  使用して、一般的なシナリオをサポートするために WCF が提供するバインドを変更する方法について説明します。  
   
- [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [サービスとクライアントを構成するためのバインディングの使用](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  コードと構成を使用して宣言で強制的にサービスとクライアントの Windows Communication Foundation (WCF) バインドを定義する方法について説明します。  
   
  [カスタム バインディング](../../../../docs/framework/wcf/extending/custom-bindings.md)  

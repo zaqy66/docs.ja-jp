@@ -2,42 +2,42 @@
 title: 企業の購買プロセス
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802912"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781662"
 ---
 # <a name="corporate-purchase-process"></a>企業の購買プロセス
-このサンプルは、Request for Proposals (RFP: 提案依頼書) に基づくごく基本的な購買プロセスを作成する方法を示しています。この購買プロセスでは最良の提案が自動的に選択されます。 このサンプルでは、<xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、および <xref:System.Activities.Statements.ForEach%601> と、プロセスを表すワークフローを作成するカスタム アクティビティが組み合わされています。  
-  
- このサンプルには、異なる参加者として (元の要求者や特定のベンダーとして) プロセスとやり取りできる [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] クライアント アプリケーションが含まれています。  
-  
-## <a name="requirements"></a>要件  
-  
--   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
-  
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
-  
-## <a name="demonstrates"></a>使用例  
-  
--   カスタム アクティビティ。  
-  
--   アクティビティの構成。  
-  
--   ブックマーク。  
-  
--   永続性。  
-  
--   スキーマ化された永続化。  
-  
--   トレース。  
-  
--   追跡。  
-  
--   さまざまなクライアントでの [!INCLUDE[wf1](../../../../includes/wf1-md.md)] のホスティング ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web アプリケーションおよび WinForms アプリケーション)。  
-  
+このサンプルは、Request for Proposals (RFP: 提案依頼書) に基づくごく基本的な購買プロセスを作成する方法を示しています。この購買プロセスでは最良の提案が自動的に選択されます。 このサンプルでは、<xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、および <xref:System.Activities.Statements.ForEach%601> と、プロセスを表すワークフローを作成するカスタム アクティビティが組み合わされています。
+
+ このサンプルには、異なる参加者として (元の要求者や特定のベンダーとして) プロセスとやり取りできる [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] クライアント アプリケーションが含まれています。
+
+## <a name="requirements"></a>要件
+
+-   Visual Studio 2012.
+
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。
+
+## <a name="demonstrates"></a>使用例
+
+-   カスタム アクティビティ。
+
+-   アクティビティの構成。
+
+-   ブックマーク。
+
+-   永続性。
+
+-   スキーマ化された永続化。
+
+-   トレース。
+
+-   追跡。
+
+-   さまざまなクライアントでの [!INCLUDE[wf1](../../../../includes/wf1-md.md)] のホスティング ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web アプリケーションおよび WinForms アプリケーション)。
+
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
@@ -143,7 +143,7 @@ ms.locfileid: "43802912"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] を使用して、PurchaseProcess.sln ソリューション ファイルを開きます。  
+1.  Visual Studio 2010 を使用して、PurchaseProcess.sln ソリューション ファイルを開きます。  
   
 2.  Web Client プロジェクトを実行するには、開く**ソリューション エクスプ ローラー**を右クリックし、 **Web クライアント**プロジェクト。 選択**スタートアップ プロジェクトとして設定**します。  
   

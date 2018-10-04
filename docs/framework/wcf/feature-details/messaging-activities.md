@@ -2,12 +2,12 @@
 title: メッセージング アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 5ccace3ebea42957e1cc66602579d85cd8634435
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3391f7442ef4922a847a58b6316eb177cbcfbd5e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502714"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780467"
 ---
 # <a name="messaging-activities"></a>メッセージング アクティビティ
 アクティビティを管理することで、ワークフローが WCF メッセージを送受信できるようになります。 メッセージング アクティビティをワークフローに追加することで、任意に複雑なメッセージ交換パターン (MEP) をモデル化できます。
@@ -95,10 +95,10 @@ Request = rcv
 ```
 
 ## <a name="add-service-reference"></a>サービス参照の追加
- ワークフロー アプリケーションからワークフロー サービスを呼び出すと、[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] では、要求/応答 MEP で使用される通常の <xref:System.ServiceModel.Activities.Send> アクティビティと <xref:System.ServiceModel.Activities.ReceiveReply> アクティビティをカプセル化したカスタムのメッセージング アクティビティが生成されます。 この機能を使用するには、Visual Studio でクライアント プロジェクトを右クリックして**追加** > **サービス参照の**します。 アドレス ボックスにサービスのベース アドレスを入力し、[移動] をクリックします。 使用可能なサービスが表示されます、**サービス:** ボックス。 サービス ノードを展開して、サポートされるコントラクトを表示します。 呼び出そうとコントラクトを選択し、使用可能な操作の一覧に表示されます、**操作**ボックス。 生成されたアクティビティの名前空間を指定し、をクリックして**OK**します。 操作が正常に完了したことを示すダイアログが表示され、プロジェクトを再度ビルドすると、生成されたカスタム アクティビティがツールボックスに表示されます。 サービス コントラクトに定義されている操作ごとに 1 つのアクティビティがあります。 プロジェクトを再度ビルドしたら、カスタム アクティビティをワークフローにドラッグ アンド ドロップして、必要なプロパティをプロパティ ウィンドウで設定できます。
+ Visual Studio 2012 が、通常をカプセル化するカスタムのメッセージング アクティビティを生成するワークフロー アプリケーションからワークフロー サービスを呼び出すときに<xref:System.ServiceModel.Activities.Send>と<xref:System.ServiceModel.Activities.ReceiveReply>要求/応答 MEP で使用されるアクティビティ。 この機能を使用するには、Visual Studio でクライアント プロジェクトを右クリックして**追加** > **サービス参照の**します。 アドレス ボックスにサービスのベース アドレスを入力し、[移動] をクリックします。 使用可能なサービスが表示されます、**サービス:** ボックス。 サービス ノードを展開して、サポートされるコントラクトを表示します。 呼び出そうとコントラクトを選択し、使用可能な操作の一覧に表示されます、**操作**ボックス。 生成されたアクティビティの名前空間を指定し、をクリックして**OK**します。 操作が正常に完了したことを示すダイアログが表示され、プロジェクトを再度ビルドすると、生成されたカスタム アクティビティがツールボックスに表示されます。 サービス コントラクトに定義されている操作ごとに 1 つのアクティビティがあります。 プロジェクトを再度ビルドしたら、カスタム アクティビティをワークフローにドラッグ アンド ドロップして、必要なプロパティをプロパティ ウィンドウで設定できます。
 
 <!--## Messaging Activity Templates
- To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.
+ To make setting up a request/response MEP on the client and service easier, Visual Studio 2012 provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.
 -->
 ## <a name="messaging-activities-and-transactions"></a>メッセージング アクティビティとトランザクション
  ワークフロー サービスが呼び出されるときに、サービス操作にトランザクションをフローする必要がある場合があります。 それには、<xref:System.ServiceModel.Activities.Receive> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティ内に配置します。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティには、`Receive` アクティビティと本体が含まれます。 サービスにフローされるトランザクションは、<xref:System.ServiceModel.Activities.TransactedReceiveScope> の本体の実行の開始から終了まで、アンビエント トランザクションのままです。 トランザクションは、本体の実行が終了した時点で完了します。 ワークフローとトランザクションの詳細については、次を参照してください。[ワークフロー トランザクション](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)です。

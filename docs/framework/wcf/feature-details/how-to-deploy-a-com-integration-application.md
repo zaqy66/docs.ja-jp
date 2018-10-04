@@ -2,12 +2,12 @@
 title: '方法 : COM+ 統合アプリケーションを展開する'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 872d0f0c84c1ac0ea96a87ed24a386bb9bedcf85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e338641b801113c5cd6ff4ec380f60f9ef900fc2
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490140"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793072"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>方法 : COM+ 統合アプリケーションを展開する
 COM+ 統合アプリケーションを作成した後、これを別のコンピューターに展開する必要が生じる場合があります。 ここでは、COM+ 統合アプリケーションをコンピューター間で移動する方法を説明します。  
@@ -24,7 +24,7 @@ COM+ 統合アプリケーションを作成した後、これを別のコンピ
   
 5.  コンピューター A のアプリケーション ルート ディレクトリにある Application.config ファイルおよび Application.manifest ファイルを、コンピューター B のアプリケーション ルート ディレクトリにコピーします。  
   
-6.  コンピューター B の Application.config ファイルのサービス エンドポイント アドレスを編集して、コンピューター B が識別されるようにします。 たとえば、http://machineA/MyService を http://machineB/MyService に変更します。  
+6.  コンピューター B の Application.config ファイルのサービス エンドポイント アドレスを編集して、コンピューター B が識別されるようにします。 たとえば、`http://machineA/MyService` を `http://machineB/MyService` に変更します。  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>Web ホスト統合アプリケーションの移動  
   
