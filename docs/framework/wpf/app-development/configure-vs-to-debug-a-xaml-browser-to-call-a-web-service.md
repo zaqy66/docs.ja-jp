@@ -8,59 +8,59 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 948a730185650cb3449202503a049e9caff7c4bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 182ceb96385bdca74d1d5c20079f78fe589982cf
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547500"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779193"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>方法 : Visual Studio を構成して Web サービスを呼び出す XAML ブラウザー アプリケーションをデバッグする
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] インターネット ゾーン アクセス許可セットに制限されている部分的に信頼されたセキュリティ サンド ボックス内で実行します。 このアクセス許可セットは、Web で配置されているサービスのみを Web サービス呼び出しを制限、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]元のアプリケーションのサイトです。 ときに、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]からデバッグ[!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]も、Web サービスに参照としては、元の同じサイトがないと見なされます。 この原因セキュリティ例外を発生させると、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出すしようとしています。 ただし、 [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクトは、デバッグ中に呼び出し、Web サービスと同じサイトに元のシミュレートするように構成できます。 これにより、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]を安全にセキュリティ例外を発生させることがなく、Web サービスを呼び出します。  
-  
-## <a name="configuring-visual-studio"></a>Visual Studio の構成  
- 構成する[!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]をデバッグする、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出します。  
-  
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
-  
-2.  **プロジェクト デザイナー**をクリックして、**デバッグ**タブです。  
-  
-3.  **開始動作**セクションで、**外部プログラムの開始**」と入力します。  
-  
-     `C:\WINDOWS\System32\PresentationHost.exe`  
-  
-4.  **開始オプション**セクションで、次の点を入力してください、**コマンドライン引数**テキスト ボックス。  
-  
-     `-debug`  *ファイル名*  
-  
-     *ファイル名*値を **-デバッグ**パラメーターは、.xbap ファイル名。 例。  
-  
-     `-debug c:\example.xbap`  
-  
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] インターネット ゾーン アクセス許可のセットに制限されている部分信頼セキュリティ サンド ボックス内で実行します。 このアクセス許可セットのみであるサービスを Web に Web サービス呼び出しを制限する、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]アプリケーションの起点サイト。 ときに、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]は、デバッグ、Visual Studio 2005 とは見なされません起点のサイトと同じように、Web サービスが参照にします。 ときに発生します。 このエラーの原因のセキュリティ例外、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出すしようとしています。 ただし、Visual Studio 2005[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクトは、デバッグ中に呼び出す Web サービスと同じサイトの配信元をシミュレートするように構成できます。 これにより、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]を安全にセキュリティ例外を発生させることがなく、Web サービスを呼び出します。
+
+## <a name="configuring-visual-studio"></a>Visual Studio を構成します。
+ デバッグを Visual Studio 2005 を構成する、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出します。
+
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
+
+2.  **プロジェクト デザイナー**、クリックして、**デバッグ**タブ。
+
+3.  **開始動作**セクションで、**外部プログラムの開始**」と入力します。
+
+     `C:\WINDOWS\System32\PresentationHost.exe`
+
+4.  **開始オプション**セクションで、次の点を入力してください、**コマンドライン引数**テキスト ボックス。
+
+     `-debug`  *ファイル名*
+
+     *ファイル名*の値、 **-デバッグ**パラメーターが .xbap ファイル名。 例。
+
+     `-debug c:\example.xbap`
+
 > [!NOTE]
->  これは、既定の構成で作成したソリューションは、 [!INCLUDE[TLA2#tla_visualstu2005](../../../../includes/tla2sharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクト テンプレート。  
-  
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
-  
-2.  **プロジェクト デザイナー**をクリックして、**デバッグ**タブです。  
-  
-3.  **開始オプション**セクションで、次のコマンド ライン パラメーターを追加、**コマンドライン引数**テキスト ボックス。  
-  
-     `-debugSecurityZoneURL`  *URL*  
-  
-     *URL*値を **- debugSecurityZoneURL**パラメーターは、[!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)]として、アプリケーションの元のサイトをシミュレートする場所です。  
-  
- たとえば、次のように検討します、[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]に次の Web サービスを使用する[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:。  
-  
- `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`  
-  
- 元のサイト[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]この Web サービスは。  
-  
- `http://services.msdn.microsoft.com`  
-  
- その結果、完全な **- debugSecurityZoneURL**コマンド ライン パラメーターと値は。  
-  
- `-debugSecurityZoneURL http://services.msdn.microsoft.com`  
-  
-## <a name="see-also"></a>関連項目  
+>  これは、Visual Studio 2005 で作成したソリューションの既定の構成は、[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクト テンプレート。
+
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
+
+2.  **プロジェクト デザイナー**、クリックして、**デバッグ**タブ。
+
+3.  **開始オプション**セクションで、次のコマンド ライン パラメーターを追加、**コマンドライン引数**テキスト ボックス。
+
+     `-debugSecurityZoneURL`  *URL*
+
+     *URL*値、 **- debugSecurityZoneURL**パラメーターは、[!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)]の場所として、アプリケーションの起点のサイトをシミュレートします。
+
+ たとえばを検討してください、[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]に次の Web サービスを使用する[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:
+
+ `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
+
+ 起点サイト[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]この Web サービスは。
+
+ `http://services.msdn.microsoft.com`
+
+ その結果、完全な **- debugSecurityZoneURL**コマンド ライン パラメーターと値には。
+
+ `-debugSecurityZoneURL http://services.msdn.microsoft.com`
+
+## <a name="see-also"></a>関連項目
  [WPF ホスト (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)

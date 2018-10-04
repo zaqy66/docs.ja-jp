@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation で非推奨の型
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-ms.openlocfilehash: b25be26d4c0ad6c423b011cd7cad24a8728333f5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d41bf147cd079a3d6d3714da5595732de3dcb7de
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857643"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778313"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Windows Workflow Foundation で非推奨の型
 .NET 4 の段階で、ワークフロー チームは、<xref:System.Activities> 名前空間のまったく新しいワークフロー エンジンをリリースしました。 ほとんどの"WF 3"で型をマークする .NET 4.5 ベータ版のリリースでは<xref:System.Workflow.Activities>、 <xref:System.Workflow.ComponentModel>、および<xref:System.Workflow.Runtime>不使用と名前空間。  
@@ -31,7 +31,7 @@ ms.locfileid: "43857643"
   
  その結果、非推奨とされた WF 3 API を今後使用すると、ビルド時に警告が発生し、次のようなメッセージが表示されます：  
   
- **警告 bc 40000: X は廃止されています: WF 3 の型が非推奨とされます。代わりに WF 4 を使用してください。** WF 3 の型は .NET Framework の将来のリリースで削除されますが、実際の削除時期はまだ未定です (4.5 では行われません)。 この段階的な変更は、今後の方向性を示し、お客様が WF 4 モデルに余裕をもって移行するための期間を確保するためのものです。 WF 3 の型をサポートするためにいく予定、もちろん、[マイクロソフト サポート ライフ サイクル ポリシー](https://aka.ms/MicrosoftSupportLifecycle)します。 既存の WF 3 アプリケーションは .NET 4.5 でも問題なく動作します。また、WF 3 ベースの新規および既存ソリューションは [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] でもサポートされます。  
+ **警告 bc 40000: X は廃止されています: WF 3 の型が非推奨とされます。代わりに WF 4 を使用してください。** WF 3 の型は .NET Framework の将来のリリースで削除されますが、実際の削除時期はまだ未定です (4.5 では行われません)。 この段階的な変更は、今後の方向性を示し、お客様が WF 4 モデルに余裕をもって移行するための期間を確保するためのものです。 WF 3 の型をサポートするためにいく予定、もちろん、[マイクロソフト サポート ライフ サイクル ポリシー](https://aka.ms/MicrosoftSupportLifecycle)します。 既存の WF3 のアプリケーションでは、.NET 4.5 では、上で問題なく実行され、Visual Studio 2012 が新規および既存の wf 3 ベースのソリューションをサポートします。  
   
  <xref:System.Workflow.Activities.Rules> 名前空間に含まれるルール関連の型については、WF 4.5 には相当する型がないため、非推奨扱いにはなりません。  
   

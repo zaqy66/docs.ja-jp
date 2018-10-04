@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 5bcd29531858f9cf014042db7ee447cecfdd89b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525745"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777410"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>方法 : [継承ピッカー] ダイアログ ボックスを使用してフォームを継承する
 フォームまたは他のオブジェクトを継承する最も簡単な方法は、**[継承ピッカー]** ダイアログ ボックスを使用することです。 これを使用して、その他のソリューションで作成済みのコードまたはユーザー インターフェイス (UI) を利用できます。  
@@ -27,7 +27,7 @@ ms.locfileid: "43525745"
   
      **[新しい項目の追加]** ダイアログ ボックスが開きます。  
   
-2.  **[継承されたフォーム]** テンプレートを選択し、**[名前]** ボックスに名前を入力します。 **[追加]** をクリックして続行します。  
+2.  検索、**継承されたフォーム**searchbox に対応するかをクリックして、テンプレート、 **Windows フォーム**カテゴリを選択しとで名前を付けます、**名前**ボックス。 **[追加]** をクリックして続行します。  
   
      **[継承ピッカー]** ダイアログ ボックスが開きます。 現在のプロジェクトに既にフォームが含まれている場合は、**[継承ピッカー]** ダイアログ ボックスに表示されます。  
   

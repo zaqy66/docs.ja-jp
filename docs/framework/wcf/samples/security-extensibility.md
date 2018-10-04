@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
 author: BrucePerlerMS
 ms.openlocfilehash: 09872b5422d9d66dd4f54753815067954be6c0bb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48026414"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779791"
 ---
 # <a name="security-extensibility"></a>セキュリティ拡張
 このセクションには、Windows Communication Foundation (WCF) でカスタムのセキュリティを示すサンプルが含まれています。  
