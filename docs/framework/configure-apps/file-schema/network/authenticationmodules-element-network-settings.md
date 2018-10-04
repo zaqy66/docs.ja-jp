@@ -11,54 +11,54 @@ ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 394a686fe07036d6c3ac2bc51fb3503e1ee4a9e6
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028447"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777566"
 ---
-# <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="0cb98-102">&lt;authenticationModules&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="0cb98-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="0cb98-103">ネットワーク要求の認証に使用されるモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="0cb98-103">Specifies modules used to authenticate network requests.</span></span>  
+# <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="69919-102">&lt;authenticationModules&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="69919-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="69919-103">ネットワーク要求の認証に使用されるモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="69919-103">Specifies modules used to authenticate network requests.</span></span>  
   
- <span data-ttu-id="0cb98-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0cb98-104">\<configuration></span></span>  
-<span data-ttu-id="0cb98-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="0cb98-105">\<system.net></span></span>  
-<span data-ttu-id="0cb98-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="0cb98-106">\<authenticationModules></span></span>  
+ <span data-ttu-id="69919-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="69919-104">\<configuration></span></span>  
+<span data-ttu-id="69919-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="69919-105">\<system.net></span></span>  
+<span data-ttu-id="69919-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="69919-106">\<authenticationModules></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0cb98-107">構文</span><span class="sxs-lookup"><span data-stu-id="0cb98-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="69919-107">構文</span><span class="sxs-lookup"><span data-stu-id="69919-107">Syntax</span></span>  
   
 ```xml  
 <authenticationModules>   
 </authenticationModules>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0cb98-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="0cb98-108">Attributes and Elements</span></span>  
- <span data-ttu-id="0cb98-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="0cb98-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="69919-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="69919-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="69919-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="69919-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0cb98-110">属性</span><span class="sxs-lookup"><span data-stu-id="0cb98-110">Attributes</span></span>  
- <span data-ttu-id="0cb98-111">なし。</span><span class="sxs-lookup"><span data-stu-id="0cb98-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="69919-110">属性</span><span class="sxs-lookup"><span data-stu-id="69919-110">Attributes</span></span>  
+ <span data-ttu-id="69919-111">なし。</span><span class="sxs-lookup"><span data-stu-id="69919-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="0cb98-112">子要素</span><span class="sxs-lookup"><span data-stu-id="0cb98-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="69919-112">子要素</span><span class="sxs-lookup"><span data-stu-id="69919-112">Child Elements</span></span>  
   
-|<span data-ttu-id="0cb98-113">**要素**</span><span class="sxs-lookup"><span data-stu-id="0cb98-113">**Element**</span></span>|<span data-ttu-id="0cb98-114">**説明**</span><span class="sxs-lookup"><span data-stu-id="0cb98-114">**Description**</span></span>|  
+|<span data-ttu-id="69919-113">**要素**</span><span class="sxs-lookup"><span data-stu-id="69919-113">**Element**</span></span>|<span data-ttu-id="69919-114">**説明**</span><span class="sxs-lookup"><span data-stu-id="69919-114">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="0cb98-115">add</span><span class="sxs-lookup"><span data-stu-id="0cb98-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="0cb98-116">アプリケーションに認証モジュールを追加します。</span><span class="sxs-lookup"><span data-stu-id="0cb98-116">Adds an authentication module to the application.</span></span>|  
-|[<span data-ttu-id="0cb98-117">clear</span><span class="sxs-lookup"><span data-stu-id="0cb98-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="0cb98-118">アプリケーションからのすべての認証モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="0cb98-118">Clears all authentication modules from the application.</span></span>|  
-|[<span data-ttu-id="0cb98-119">remove</span><span class="sxs-lookup"><span data-stu-id="0cb98-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="0cb98-120">アプリケーションから認証モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="0cb98-120">Removes an authentication module from the application.</span></span>|  
+|[<span data-ttu-id="69919-115">add</span><span class="sxs-lookup"><span data-stu-id="69919-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="69919-116">アプリケーションに認証モジュールを追加します。</span><span class="sxs-lookup"><span data-stu-id="69919-116">Adds an authentication module to the application.</span></span>|  
+|[<span data-ttu-id="69919-117">clear</span><span class="sxs-lookup"><span data-stu-id="69919-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="69919-118">アプリケーションからのすべての認証モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="69919-118">Clears all authentication modules from the application.</span></span>|  
+|[<span data-ttu-id="69919-119">remove</span><span class="sxs-lookup"><span data-stu-id="69919-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="69919-120">アプリケーションから認証モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="69919-120">Removes an authentication module from the application.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="0cb98-121">親要素</span><span class="sxs-lookup"><span data-stu-id="0cb98-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="69919-121">親要素</span><span class="sxs-lookup"><span data-stu-id="69919-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="0cb98-122">**要素**</span><span class="sxs-lookup"><span data-stu-id="0cb98-122">**Element**</span></span>|<span data-ttu-id="0cb98-123">**説明**</span><span class="sxs-lookup"><span data-stu-id="0cb98-123">**Description**</span></span>|  
+|<span data-ttu-id="69919-122">**要素**</span><span class="sxs-lookup"><span data-stu-id="69919-122">**Element**</span></span>|<span data-ttu-id="69919-123">**説明**</span><span class="sxs-lookup"><span data-stu-id="69919-123">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="0cb98-124">system.net</span><span class="sxs-lookup"><span data-stu-id="0cb98-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="0cb98-125">.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="0cb98-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="69919-124">system.net</span><span class="sxs-lookup"><span data-stu-id="69919-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="69919-125">.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="69919-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0cb98-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="0cb98-126">Remarks</span></span>  
- <span data-ttu-id="0cb98-127">`authenticationModule`要素は、サーバーと認証プロセスを実行する認証モジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="0cb98-127">The `authenticationModule` element specifies the authentication modules that conduct the authentication process with a server.</span></span> <span data-ttu-id="0cb98-128">認証モジュールを実装する必要があります、<xref:System.Net.IAuthenticationModule>インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="0cb98-128">An authentication module must implement the <xref:System.Net.IAuthenticationModule> interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="69919-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="69919-126">Remarks</span></span>  
+ <span data-ttu-id="69919-127">`authenticationModule`要素は、サーバーと認証プロセスを実行する認証モジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="69919-127">The `authenticationModule` element specifies the authentication modules that conduct the authentication process with a server.</span></span> <span data-ttu-id="69919-128">認証モジュールを実装する必要があります、<xref:System.Net.IAuthenticationModule>インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="69919-128">An authentication module must implement the <xref:System.Net.IAuthenticationModule> interface.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="0cb98-129">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="0cb98-129">Configuration Files</span></span>  
- <span data-ttu-id="0cb98-130">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="0cb98-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="69919-129">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="69919-129">Configuration Files</span></span>  
+ <span data-ttu-id="69919-130">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="69919-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0cb98-131">例</span><span class="sxs-lookup"><span data-stu-id="0cb98-131">Example</span></span>  
- <span data-ttu-id="0cb98-132">次の例では、認証モジュールを有効します。</span><span class="sxs-lookup"><span data-stu-id="0cb98-132">The following example enables an authentication module.</span></span> <span data-ttu-id="0cb98-133">指定したモジュールの正しい値で、バージョンおよび PublicKeyToken の値を置き換える必要があります。</span><span class="sxs-lookup"><span data-stu-id="0cb98-133">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="69919-131">例</span><span class="sxs-lookup"><span data-stu-id="69919-131">Example</span></span>  
+ <span data-ttu-id="69919-132">次の例では、認証モジュールを有効します。</span><span class="sxs-lookup"><span data-stu-id="69919-132">The following example enables an authentication module.</span></span> <span data-ttu-id="69919-133">指定したモジュールの正しい値で、バージョンおよび PublicKeyToken の値を置き換える必要があります。</span><span class="sxs-lookup"><span data-stu-id="69919-133">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,7 +71,7 @@ ms.locfileid: "48028447"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0cb98-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="0cb98-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="69919-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="69919-134">See Also</span></span>  
  <xref:System.Net.IAuthenticationModule>  
  <xref:System.Net.AuthenticationManager>  
- [<span data-ttu-id="0cb98-135">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="0cb98-135">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="69919-135">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="69919-135">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -8,59 +8,59 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 948a730185650cb3449202503a049e9caff7c4bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 182ceb96385bdca74d1d5c20079f78fe589982cf
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547500"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779193"
 ---
-# <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a><span data-ttu-id="9d842-102">方法 : Visual Studio を構成して Web サービスを呼び出す XAML ブラウザー アプリケーションをデバッグする</span><span class="sxs-lookup"><span data-stu-id="9d842-102">How to: Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]<span data-ttu-id="9d842-103"> インターネット ゾーン アクセス許可セットに制限されている部分的に信頼されたセキュリティ サンド ボックス内で実行します。</span><span class="sxs-lookup"><span data-stu-id="9d842-103"> run within a partial-trust security sandbox that is restricted to the Internet zone set of permissions.</span></span> <span data-ttu-id="9d842-104">このアクセス許可セットは、Web で配置されているサービスのみを Web サービス呼び出しを制限、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]元のアプリケーションのサイトです。</span><span class="sxs-lookup"><span data-stu-id="9d842-104">This permission set restricts Web service calls to only Web services that are located at the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] application's site of origin.</span></span> <span data-ttu-id="9d842-105">ときに、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]からデバッグ[!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]も、Web サービスに参照としては、元の同じサイトがないと見なされます。</span><span class="sxs-lookup"><span data-stu-id="9d842-105">When an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] is debugged from [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)], though, it is not considered to have the same site of origin as the Web service it references.</span></span> <span data-ttu-id="9d842-106">この原因セキュリティ例外を発生させると、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出すしようとしています。</span><span class="sxs-lookup"><span data-stu-id="9d842-106">This causes security exceptions to be raised when the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] attempts to call the Web service.</span></span> <span data-ttu-id="9d842-107">ただし、 [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクトは、デバッグ中に呼び出し、Web サービスと同じサイトに元のシミュレートするように構成できます。</span><span class="sxs-lookup"><span data-stu-id="9d842-107">However, a [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] project can be configured to simulate having the same site of origin as the Web service it calls while debugging.</span></span> <span data-ttu-id="9d842-108">これにより、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]を安全にセキュリティ例外を発生させることがなく、Web サービスを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="9d842-108">This allows the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] to safely call the Web service without causing security exceptions.</span></span>  
-  
-## <a name="configuring-visual-studio"></a><span data-ttu-id="9d842-109">Visual Studio の構成</span><span class="sxs-lookup"><span data-stu-id="9d842-109">Configuring Visual Studio</span></span>  
- <span data-ttu-id="9d842-110">構成する[!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]をデバッグする、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="9d842-110">To configure [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] to debug an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] that calls a Web service:</span></span>  
-  
-1.  <span data-ttu-id="9d842-111">**ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="9d842-111">With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**.</span></span>  
-  
-2.  <span data-ttu-id="9d842-112">**プロジェクト デザイナー**をクリックして、**デバッグ**タブです。</span><span class="sxs-lookup"><span data-stu-id="9d842-112">In the **Project Designer**, click the **Debug** tab.</span></span>  
-  
-3.  <span data-ttu-id="9d842-113">**開始動作**セクションで、**外部プログラムの開始**」と入力します。</span><span class="sxs-lookup"><span data-stu-id="9d842-113">In the **Start Action** section, select **Start external program** and enter the following:</span></span>  
-  
-     `C:\WINDOWS\System32\PresentationHost.exe`  
-  
-4.  <span data-ttu-id="9d842-114">**開始オプション**セクションで、次の点を入力してください、**コマンドライン引数**テキスト ボックス。</span><span class="sxs-lookup"><span data-stu-id="9d842-114">In the **Start Options** section, enter the following into the **Command line arguments** text box:</span></span>  
-  
-     <span data-ttu-id="9d842-115">`-debug`  *ファイル名*</span><span class="sxs-lookup"><span data-stu-id="9d842-115">`-debug`  *filename*</span></span>  
-  
-     <span data-ttu-id="9d842-116">*ファイル名*値を **-デバッグ**パラメーターは、.xbap ファイル名。 例。</span><span class="sxs-lookup"><span data-stu-id="9d842-116">The *filename* value for the **-debug** parameter is the .xbap filename; for example:</span></span>  
-  
-     `-debug c:\example.xbap`  
-  
+# <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a><span data-ttu-id="131a5-102">方法 : Visual Studio を構成して Web サービスを呼び出す XAML ブラウザー アプリケーションをデバッグする</span><span class="sxs-lookup"><span data-stu-id="131a5-102">How to: Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] <span data-ttu-id="131a5-103">インターネット ゾーン アクセス許可のセットに制限されている部分信頼セキュリティ サンド ボックス内で実行します。</span><span class="sxs-lookup"><span data-stu-id="131a5-103"> run within a partial-trust security sandbox that is restricted to the Internet zone set of permissions.</span></span> <span data-ttu-id="131a5-104">このアクセス許可セットのみであるサービスを Web に Web サービス呼び出しを制限する、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]アプリケーションの起点サイト。</span><span class="sxs-lookup"><span data-stu-id="131a5-104">This permission set restricts Web service calls to only Web services that are located at the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] application's site of origin.</span></span> <span data-ttu-id="131a5-105">ときに、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]は、デバッグ、Visual Studio 2005 とは見なされません起点のサイトと同じように、Web サービスが参照にします。</span><span class="sxs-lookup"><span data-stu-id="131a5-105">When an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] is debugged from Visual Studio 2005, though, it is not considered to have the same site of origin as the Web service it references.</span></span> <span data-ttu-id="131a5-106">ときに発生します。 このエラーの原因のセキュリティ例外、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出すしようとしています。</span><span class="sxs-lookup"><span data-stu-id="131a5-106">This causes security exceptions to be raised when the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] attempts to call the Web service.</span></span> <span data-ttu-id="131a5-107">ただし、Visual Studio 2005[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクトは、デバッグ中に呼び出す Web サービスと同じサイトの配信元をシミュレートするように構成できます。</span><span class="sxs-lookup"><span data-stu-id="131a5-107">However, a Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] project can be configured to simulate having the same site of origin as the Web service it calls while debugging.</span></span> <span data-ttu-id="131a5-108">これにより、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]を安全にセキュリティ例外を発生させることがなく、Web サービスを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="131a5-108">This allows the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] to safely call the Web service without causing security exceptions.</span></span>
+
+## <a name="configuring-visual-studio"></a><span data-ttu-id="131a5-109">Visual Studio を構成します。</span><span class="sxs-lookup"><span data-stu-id="131a5-109">Configuring Visual Studio</span></span>
+ <span data-ttu-id="131a5-110">デバッグを Visual Studio 2005 を構成する、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="131a5-110">To configure Visual Studio 2005 to debug an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] that calls a Web service:</span></span>
+
+1.  <span data-ttu-id="131a5-111">**ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="131a5-111">With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**.</span></span>
+
+2.  <span data-ttu-id="131a5-112">**プロジェクト デザイナー**、クリックして、**デバッグ**タブ。</span><span class="sxs-lookup"><span data-stu-id="131a5-112">In the **Project Designer**, click the **Debug** tab.</span></span>
+
+3.  <span data-ttu-id="131a5-113">**開始動作**セクションで、**外部プログラムの開始**」と入力します。</span><span class="sxs-lookup"><span data-stu-id="131a5-113">In the **Start Action** section, select **Start external program** and enter the following:</span></span>
+
+     `C:\WINDOWS\System32\PresentationHost.exe`
+
+4.  <span data-ttu-id="131a5-114">**開始オプション**セクションで、次の点を入力してください、**コマンドライン引数**テキスト ボックス。</span><span class="sxs-lookup"><span data-stu-id="131a5-114">In the **Start Options** section, enter the following into the **Command line arguments** text box:</span></span>
+
+     <span data-ttu-id="131a5-115">`-debug`  *ファイル名*</span><span class="sxs-lookup"><span data-stu-id="131a5-115">`-debug`  *filename*</span></span>
+
+     <span data-ttu-id="131a5-116">*ファイル名*の値、 **-デバッグ**パラメーターが .xbap ファイル名。 例。</span><span class="sxs-lookup"><span data-stu-id="131a5-116">The *filename* value for the **-debug** parameter is the .xbap filename; for example:</span></span>
+
+     `-debug c:\example.xbap`
+
 > [!NOTE]
->  <span data-ttu-id="9d842-117">これは、既定の構成で作成したソリューションは、 [!INCLUDE[TLA2#tla_visualstu2005](../../../../includes/tla2sharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクト テンプレート。</span><span class="sxs-lookup"><span data-stu-id="9d842-117">This is the default configuration for solutions that are created with the [!INCLUDE[TLA2#tla_visualstu2005](../../../../includes/tla2sharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] project template.</span></span>  
-  
-1.  <span data-ttu-id="9d842-118">**ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="9d842-118">With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**.</span></span>  
-  
-2.  <span data-ttu-id="9d842-119">**プロジェクト デザイナー**をクリックして、**デバッグ**タブです。</span><span class="sxs-lookup"><span data-stu-id="9d842-119">In the **Project Designer**, click the **Debug** tab.</span></span>  
-  
-3.  <span data-ttu-id="9d842-120">**開始オプション**セクションで、次のコマンド ライン パラメーターを追加、**コマンドライン引数**テキスト ボックス。</span><span class="sxs-lookup"><span data-stu-id="9d842-120">In the **Start Options** section, add the following command-line parameter to the **Command line arguments** text box:</span></span>  
-  
-     <span data-ttu-id="9d842-121">`-debugSecurityZoneURL`  *URL*</span><span class="sxs-lookup"><span data-stu-id="9d842-121">`-debugSecurityZoneURL`  *URL*</span></span>  
-  
-     <span data-ttu-id="9d842-122">*URL*値を **- debugSecurityZoneURL**パラメーターは、[!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)]として、アプリケーションの元のサイトをシミュレートする場所です。</span><span class="sxs-lookup"><span data-stu-id="9d842-122">The *URL* value for the **-debugSecurityZoneURL** parameter is the [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] for the location that you want to simulate as being the site of origin of your application.</span></span>  
-  
- <span data-ttu-id="9d842-123">たとえば、次のように検討します、[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]に次の Web サービスを使用する[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:。</span><span class="sxs-lookup"><span data-stu-id="9d842-123">As an example, consider a [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] that uses a Web service with the following [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:</span></span>  
-  
- `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`  
-  
- <span data-ttu-id="9d842-124">元のサイト[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]この Web サービスは。</span><span class="sxs-lookup"><span data-stu-id="9d842-124">The site of origin [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] for this Web service is:</span></span>  
-  
- `http://services.msdn.microsoft.com`  
-  
- <span data-ttu-id="9d842-125">その結果、完全な **- debugSecurityZoneURL**コマンド ライン パラメーターと値は。</span><span class="sxs-lookup"><span data-stu-id="9d842-125">Consequently, the complete **-debugSecurityZoneURL** command-line parameter and value is:</span></span>  
-  
- `-debugSecurityZoneURL http://services.msdn.microsoft.com`  
-  
-## <a name="see-also"></a><span data-ttu-id="9d842-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="9d842-126">See Also</span></span>  
- [<span data-ttu-id="9d842-127">WPF ホスト (PresentationHost.exe)</span><span class="sxs-lookup"><span data-stu-id="9d842-127">WPF Host (PresentationHost.exe)</span></span>](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)
+>  <span data-ttu-id="131a5-117">これは、Visual Studio 2005 で作成したソリューションの既定の構成は、[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクト テンプレート。</span><span class="sxs-lookup"><span data-stu-id="131a5-117">This is the default configuration for solutions that are created with the Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] project template.</span></span>
+
+1.  <span data-ttu-id="131a5-118">**ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="131a5-118">With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**.</span></span>
+
+2.  <span data-ttu-id="131a5-119">**プロジェクト デザイナー**、クリックして、**デバッグ**タブ。</span><span class="sxs-lookup"><span data-stu-id="131a5-119">In the **Project Designer**, click the **Debug** tab.</span></span>
+
+3.  <span data-ttu-id="131a5-120">**開始オプション**セクションで、次のコマンド ライン パラメーターを追加、**コマンドライン引数**テキスト ボックス。</span><span class="sxs-lookup"><span data-stu-id="131a5-120">In the **Start Options** section, add the following command-line parameter to the **Command line arguments** text box:</span></span>
+
+     <span data-ttu-id="131a5-121">`-debugSecurityZoneURL`  *URL*</span><span class="sxs-lookup"><span data-stu-id="131a5-121">`-debugSecurityZoneURL`  *URL*</span></span>
+
+     <span data-ttu-id="131a5-122">*URL*値、 **- debugSecurityZoneURL**パラメーターは、[!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)]の場所として、アプリケーションの起点のサイトをシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="131a5-122">The *URL* value for the **-debugSecurityZoneURL** parameter is the [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] for the location that you want to simulate as being the site of origin of your application.</span></span>
+
+ <span data-ttu-id="131a5-123">たとえばを検討してください、[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]に次の Web サービスを使用する[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="131a5-123">As an example, consider a [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] that uses a Web service with the following [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:</span></span>
+
+ `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
+
+ <span data-ttu-id="131a5-124">起点サイト[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]この Web サービスは。</span><span class="sxs-lookup"><span data-stu-id="131a5-124">The site of origin [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] for this Web service is:</span></span>
+
+ `http://services.msdn.microsoft.com`
+
+ <span data-ttu-id="131a5-125">その結果、完全な **- debugSecurityZoneURL**コマンド ライン パラメーターと値には。</span><span class="sxs-lookup"><span data-stu-id="131a5-125">Consequently, the complete **-debugSecurityZoneURL** command-line parameter and value is:</span></span>
+
+ `-debugSecurityZoneURL http://services.msdn.microsoft.com`
+
+## <a name="see-also"></a><span data-ttu-id="131a5-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="131a5-126">See Also</span></span>
+ [<span data-ttu-id="131a5-127">WPF ホスト (PresentationHost.exe)</span><span class="sxs-lookup"><span data-stu-id="131a5-127">WPF Host (PresentationHost.exe)</span></span>](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)

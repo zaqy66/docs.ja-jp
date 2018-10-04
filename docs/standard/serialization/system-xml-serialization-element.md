@@ -7,46 +7,46 @@ helpviewer_keywords:
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
 ms.openlocfilehash: b67c1ec1ec737976e4e50b80b42f34e508dc0224
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425928"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48776807"
 ---
-# <a name="ltsystemxmlserializationgt-element"></a><span data-ttu-id="b79d7-102">&lt;system.xml.serialization&gt; 要素</span><span class="sxs-lookup"><span data-stu-id="b79d7-102">&lt;system.xml.serialization&gt; Element</span></span>
-<span data-ttu-id="b79d7-103">XML シリアル化を制御する最上位の要素です。</span><span class="sxs-lookup"><span data-stu-id="b79d7-103">The top-level element for controlling XML serialization.</span></span> <span data-ttu-id="b79d7-104">構成ファイルの詳細については、「[構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b79d7-104">For more information about configuration files, see [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
+# <a name="ltsystemxmlserializationgt-element"></a><span data-ttu-id="cf5f7-102">&lt;system.xml.serialization&gt; 要素</span><span class="sxs-lookup"><span data-stu-id="cf5f7-102">&lt;system.xml.serialization&gt; Element</span></span>
+<span data-ttu-id="cf5f7-103">XML シリアル化を制御する最上位の要素です。</span><span class="sxs-lookup"><span data-stu-id="cf5f7-103">The top-level element for controlling XML serialization.</span></span> <span data-ttu-id="cf5f7-104">構成ファイルの詳細については、「[構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cf5f7-104">For more information about configuration files, see [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
   
- <span data-ttu-id="b79d7-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b79d7-105">\<configuration></span></span>  
-<span data-ttu-id="b79d7-106">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="b79d7-106">\<system.xml.serialization></span></span>  
+ <span data-ttu-id="cf5f7-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="cf5f7-105">\<configuration></span></span>  
+<span data-ttu-id="cf5f7-106">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="cf5f7-106">\<system.xml.serialization></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b79d7-107">構文</span><span class="sxs-lookup"><span data-stu-id="b79d7-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cf5f7-107">構文</span><span class="sxs-lookup"><span data-stu-id="cf5f7-107">Syntax</span></span>  
   
 ```xml  
 <system.xml.serialization>  
 </system.xml.serialization>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b79d7-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="b79d7-108">Attributes and Elements</span></span>  
- <span data-ttu-id="b79d7-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="b79d7-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="cf5f7-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="cf5f7-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="cf5f7-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="cf5f7-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b79d7-110">属性</span><span class="sxs-lookup"><span data-stu-id="b79d7-110">Attributes</span></span>  
- <span data-ttu-id="b79d7-111">なし。</span><span class="sxs-lookup"><span data-stu-id="b79d7-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="cf5f7-110">属性</span><span class="sxs-lookup"><span data-stu-id="cf5f7-110">Attributes</span></span>  
+ <span data-ttu-id="cf5f7-111">なし。</span><span class="sxs-lookup"><span data-stu-id="cf5f7-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="b79d7-112">子要素</span><span class="sxs-lookup"><span data-stu-id="b79d7-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="cf5f7-112">子要素</span><span class="sxs-lookup"><span data-stu-id="cf5f7-112">Child Elements</span></span>  
   
-|<span data-ttu-id="b79d7-113">要素</span><span class="sxs-lookup"><span data-stu-id="b79d7-113">Element</span></span>|<span data-ttu-id="b79d7-114">説明</span><span class="sxs-lookup"><span data-stu-id="b79d7-114">Description</span></span>|  
+|<span data-ttu-id="cf5f7-113">要素</span><span class="sxs-lookup"><span data-stu-id="cf5f7-113">Element</span></span>|<span data-ttu-id="cf5f7-114">説明</span><span class="sxs-lookup"><span data-stu-id="cf5f7-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b79d7-115">\<dateTimeSerialization> 要素</span><span class="sxs-lookup"><span data-stu-id="b79d7-115">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)|<span data-ttu-id="b79d7-116"><xref:System.DateTime> オブジェクトのシリアル化モードを決定します。</span><span class="sxs-lookup"><span data-stu-id="b79d7-116">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>|  
-|[<span data-ttu-id="b79d7-117">\<schemaImporterExtensions> 要素</span><span class="sxs-lookup"><span data-stu-id="b79d7-117">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)|<span data-ttu-id="b79d7-118">XSD の型を .NET Framework の型にマッピングするために <xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型を含みます。</span><span class="sxs-lookup"><span data-stu-id="b79d7-118">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET Framework types.</span></span>|  
+|[<span data-ttu-id="cf5f7-115">\<dateTimeSerialization> 要素</span><span class="sxs-lookup"><span data-stu-id="cf5f7-115">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)|<span data-ttu-id="cf5f7-116"><xref:System.DateTime> オブジェクトのシリアル化モードを決定します。</span><span class="sxs-lookup"><span data-stu-id="cf5f7-116">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>|  
+|[<span data-ttu-id="cf5f7-117">\<schemaImporterExtensions> 要素</span><span class="sxs-lookup"><span data-stu-id="cf5f7-117">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)|<span data-ttu-id="cf5f7-118">XSD の型を .NET Framework の型にマッピングするために <xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型を含みます。</span><span class="sxs-lookup"><span data-stu-id="cf5f7-118">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET Framework types.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="b79d7-119">親要素</span><span class="sxs-lookup"><span data-stu-id="b79d7-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="cf5f7-119">親要素</span><span class="sxs-lookup"><span data-stu-id="cf5f7-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="b79d7-120">要素</span><span class="sxs-lookup"><span data-stu-id="b79d7-120">Element</span></span>|<span data-ttu-id="b79d7-121">説明</span><span class="sxs-lookup"><span data-stu-id="b79d7-121">Description</span></span>|  
+|<span data-ttu-id="cf5f7-120">要素</span><span class="sxs-lookup"><span data-stu-id="cf5f7-120">Element</span></span>|<span data-ttu-id="cf5f7-121">説明</span><span class="sxs-lookup"><span data-stu-id="cf5f7-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b79d7-122">\<configuration> 要素</span><span class="sxs-lookup"><span data-stu-id="b79d7-122">\<configuration> Element</span></span>](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="b79d7-123">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="b79d7-123">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|  
+|[<span data-ttu-id="cf5f7-122">\<configuration> 要素</span><span class="sxs-lookup"><span data-stu-id="cf5f7-122">\<configuration> Element</span></span>](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="cf5f7-123">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="cf5f7-123">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="b79d7-124">例</span><span class="sxs-lookup"><span data-stu-id="b79d7-124">Example</span></span>  
- <span data-ttu-id="b79d7-125">次のコード例は、<xref:System.DateTime> オブジェクトのシリアル化モードを指定し、XSD の型を .NET Framework の型にマッピングするために <xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型を追加する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="b79d7-125">The following code example illustrates how to specify the serialization mode of a <xref:System.DateTime> object, and the addition of types used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET Framework types.</span></span>  
+## <a name="example"></a><span data-ttu-id="cf5f7-124">例</span><span class="sxs-lookup"><span data-stu-id="cf5f7-124">Example</span></span>  
+ <span data-ttu-id="cf5f7-125">次のコード例は、<xref:System.DateTime> オブジェクトのシリアル化モードを指定し、XSD の型を .NET Framework の型にマッピングするために <xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型を追加する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="cf5f7-125">The following code example illustrates how to specify the serialization mode of a <xref:System.DateTime> object, and the addition of types used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET Framework types.</span></span>  
   
 ```xml  
 <system.xml.serialization>  
@@ -62,11 +62,11 @@ ms.locfileid: "47425928"
 </system.sxml.serialization>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b79d7-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="b79d7-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf5f7-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="cf5f7-126">See also</span></span>
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>  
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
-- [<span data-ttu-id="b79d7-127">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="b79d7-127">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
-- [<span data-ttu-id="b79d7-128">\<dateTimeSerialization> 要素</span><span class="sxs-lookup"><span data-stu-id="b79d7-128">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)  
-- [<span data-ttu-id="b79d7-129">\<schemaImporterExtensions> 要素</span><span class="sxs-lookup"><span data-stu-id="b79d7-129">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
-- [<span data-ttu-id="b79d7-130">\<追加 > 要素の\<schemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="b79d7-130">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [<span data-ttu-id="cf5f7-127">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="cf5f7-127">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
+- [<span data-ttu-id="cf5f7-128">\<dateTimeSerialization> 要素</span><span class="sxs-lookup"><span data-stu-id="cf5f7-128">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)  
+- [<span data-ttu-id="cf5f7-129">\<schemaImporterExtensions> 要素</span><span class="sxs-lookup"><span data-stu-id="cf5f7-129">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
+- [<span data-ttu-id="cf5f7-130">\<追加 > 要素の\<schemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="cf5f7-130">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
