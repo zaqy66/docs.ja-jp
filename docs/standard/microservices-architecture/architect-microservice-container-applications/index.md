@@ -4,17 +4,16 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 185279cb4df70d9896d7e11c995170e7cd214f73
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: f7933cc25a5fde13113d0c9c278e9bd1730d4f9d
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106815"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48264151"
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>コンテナーとマイクロサービス ベースのアプリケーションの設計
 
-
-  *マイクロサービスは大きな利点がありますが、大きな新しい課題を発生させます。マイクロ サービス アーキテクチャ パターンは、マイクロサービス ベースのアプリケーションを作成するときの基本的な柱です。*
+*マイクロサービスは大きな利点がありますが、大きな新しい課題を発生させます。マイクロ サービス アーキテクチャ パターンは、マイクロサービス ベースのアプリケーションを作成するときの基本的な柱です。*
 
 このガイドの前半では、コンテナーと Docker の基本的な概念を学習しました。 これはコンテナーの使用を開始するために必要な最小限の情報です。 コンテナーがマイクロサービスの実現要素であり、マイクロサービスに最適な場合であっても、マイクロサービス アーキテクチャに必須ではなく、このアーキテクチャ セクションの多くのアーキテクチャの概念はコンテナーなしでも適用できます。 ただし、このガイドでは、既に導入されたコンテナーの重要性のための、両方の共通部分に焦点を当てます。
 
