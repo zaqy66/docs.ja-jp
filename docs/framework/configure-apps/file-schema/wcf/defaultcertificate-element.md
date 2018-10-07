@@ -2,18 +2,18 @@
 title: '&lt;defaultCertificate&gt; 要素'
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b99ee36fdb924ea12f3023984a3aa4b590937e8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751013"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847855"
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt; 要素
 ネゴシエーション プロトコル経由でサービスまたは STS が証明書を提供しないときに使用される X.509 証明書を指定します。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 endpointBehaviors セクション  
 \<behavior>  
 \<clientCredentials>  
@@ -74,11 +74,11 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 |-------------|-----------------|  
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|クライアントに対してサービスを認証する際に使用される証明書を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  証明書ベースのメッセージ セキュリティを使用するバインディングでは、この構成要素で指定された証明書を使用して、サービスへのメッセージが暗号化されます。この証明書は、サービスがクライアントへの応答に署名するためにも使用されます。 この要素には、サービスで証明書が指定されていないときに使用する証明書を 1 つ格納できます。  
   
 ## <a name="example"></a>例  
- 次の例の URI がで始まるエンドポイントを使用する証明書を指定するhttp://www.contoso.comと、証明書を証明書ネゴシエーションを実行しないその他のすべてのエンドポイントを使用します。  
+ 次の例の URI が始まるエンドポイントに対して使用する証明書を指定する`http://www.contoso.com`と証明書ネゴシエーションを実行しない他のすべてのエンドポイントに使用する証明書。  
   
 ```xml  
 <serviceCertificate>  

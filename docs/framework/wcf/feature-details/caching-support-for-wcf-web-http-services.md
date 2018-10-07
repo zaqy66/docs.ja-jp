@@ -2,12 +2,12 @@
 title: WCF WEB HTTP サービスのキャッシュ サポート
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 25b564235b5d2b3b26b5d657f3e5f0bd5d594125
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972989"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847641"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF WEB HTTP サービスのキャッシュ サポート
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ASP.NET、WCF Web HTTP サービスで既に提供宣言によるキャッシュ機構を使用できます。 これにより、WCF Web HTTP サービス操作からの応答をキャッシュできます。 キャッシュ用に構成されているサービスに対してユーザーが HTTP GET を送信すると、ASP.NET は、キャッシュされた応答を送り返し、サービス メソッドは呼び出されません。 キャッシュの有効期限が切れると、ユーザーが次回に HTTP GET を送信したときに、サービス メソッドが呼び出され、応答が再度キャッシュされます。 ASP.NET のキャッシュの詳細については、次を参照してください[ASP.NET のキャッシュの概要。](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -58,7 +58,7 @@ public class Service
 </system.web>  
 ```  
   
- これは、ASP.NET アプリケーションで使用できる構成要素と同じです。 ASP.NET キャッシュ プロファイルの詳細については、次を参照してください。<xref:System.Web.Configuration.OutputCacheProfile>します。 Web HTTP サービスの場合、キャッシュ プロファイルで最も重要な属性は `cacheDuration` と `varyByParam` です。 この 2 つの属性はどちらも必要です。 `cacheDuration` は、応答がキャッシュに保持される時間 (秒数) を設定します。 `varyByParam` では、応答のキャッシュに使用されるクエリ文字列パラメーターを指定できます。 異なるクエリ文字列パラメーターの値を使用する要求は、すべて個別にキャッシュされます。 たとえば、最初の要求に確立されると http://MyServer/MyHttpService/MyOperation?param=10同じ URI を使用したすべての後続の要求が返されます、キャッシュされた応答 (限りキャッシュの存続期間が経過していない)。 クエリ文字列パラメーターの値が異なることを除いて同じである同様の要求に対する応答は、個別にキャッシュされます。 このような個別のキャッシングを行わない場合は、`varyByParam` を "none" に設定します。  
+ これは、ASP.NET アプリケーションで使用できる構成要素と同じです。 ASP.NET キャッシュ プロファイルの詳細については、次を参照してください。<xref:System.Web.Configuration.OutputCacheProfile>します。 Web HTTP サービスの場合、キャッシュ プロファイルで最も重要な属性は `cacheDuration` と `varyByParam` です。 この 2 つの属性はどちらも必要です。 `cacheDuration` は、応答がキャッシュに保持される時間 (秒数) を設定します。 `varyByParam` では、応答のキャッシュに使用されるクエリ文字列パラメーターを指定できます。 異なるクエリ文字列パラメーターの値を使用する要求は、すべて個別にキャッシュされます。 たとえば、最初の要求に確立されると`http://MyServer/MyHttpService/MyOperation?param=10`、同じ URI を使用したすべての後続の要求が返されます、キャッシュされた応答 (限りキャッシュの存続期間が経過していない)。 クエリ文字列パラメーターの値が異なることを除いて同じである同様の要求に対する応答は、個別にキャッシュされます。 このような個別のキャッシングを行わない場合は、`varyByParam` を "none" に設定します。  
   
 ## <a name="sql-cache-dependency"></a>SQL キャッシュ依存関係  
  Web HTTP サービスの応答も、SQL キャッシュ依存関係と併せてキャッシュできます。 SQL データベースに格納されているデータに応じて WCF Web HTTP サービスが異なる場合は、サービスの応答をキャッシュして、キャッシュした応答を、SQL データベース テーブル内のデータの変更時に無効にすることもできます。 この動作は、すべて Web.config ファイル内で構成します。 内の接続文字列を定義する必要があります最初に、<`connectionStrings`> 要素。  

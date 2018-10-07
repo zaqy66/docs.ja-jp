@@ -19,11 +19,11 @@ ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236764"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848167"
 ---
 # <a name="how-to-use-data-protection"></a>方法 : データ保護を使用する
 .NET Framework では、データ保護 API (DPAPI) へのアクセスを提供しています。DPAPI を使用すると、現在のユーザー アカウントまたはコンピューターからの情報を使用してデータを暗号化できます。  DPAPI を使用すると、暗号化キーを明示的に生成および格納するという困難な問題を軽減できます。  

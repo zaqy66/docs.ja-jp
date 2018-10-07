@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation の機能仕様
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6929150f786f0d6b4a5887eb5c0758ebcfdd411c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205076"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846007"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation の機能仕様
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] は、Windows Workflow Foundation にいくつかの機能を追加します。 このドキュメントでは、いくつかの新機能について説明し、役に立つ可能性のあるシナリオの詳細を示します。  
@@ -17,19 +17,11 @@ ms.locfileid: "44205076"
   
 ### <a name="getting-started-with-messaging-activities"></a>メッセージング アクティビティの概要  
   
--   [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] で、WCF ワークフロー サービス アプリケーション プロジェクトを作成します。 <xref:System.ServiceModel.Activities.Receive> と <xref:System.ServiceModel.Activities.SendReply> のペアがキャンバスに配置されます。  
+-   Visual Studio 2012 では、WCF ワークフロー サービス アプリケーション プロジェクトを作成します。 <xref:System.ServiceModel.Activities.Receive> と <xref:System.ServiceModel.Activities.SendReply> のペアがキャンバスに配置されます。  
   
--   クリックし、プロジェクトを右クリックして**サービス参照の追加**します。  既存の web サービス WSDL をポイントしてクリックして**OK**します。  生成されたアクティビティを表示するプロジェクトをビルド (を使用して実装<xref:System.ServiceModel.Activities.Send>と<xref:System.ServiceModel.Activities.ReceiveReply>)、ツールボックスにします。  
+-   クリックし、プロジェクトを右クリックして**サービス参照の追加**します。  既存の web サービス WSDL をポイントしてクリックして**OK**します。  生成されたアクティビティを表示するプロジェクトをビルド (を使用して実装<xref:System.ServiceModel.Activities.Send>と<xref:System.ServiceModel.Activities.ReceiveReply>)、ツールボックスにします。
   
--   これらのアクティビティのサンプルは次のセクションにあります。  
-  
-    -   Basic:[サービス](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   シナリオ:[サービス](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
--   [概念説明のドキュメント](https://go.microsoft.com/fwlink/?LinkId=204801)  
-  
--   [メッセージング アクティビティ デザイナーのドキュメント](https://go.microsoft.com/fwlink/?LinkId=204802)  
+-   [ワークフロー サービスのドキュメント](../wcf/feature-details/workflow-services.md)
   
 ### <a name="messaging-activities-example-scenario"></a>メッセージング アクティビティのシナリオ例  
  A`BestPriceFinder`サービスは、複数の航空会社サービスを特定のルートの最良チケット価格を検索します。  このシナリオを実装するには、メッセージ アクティビティを使用して、価格要求を受信、バックエンド サービスから価格を取得し、価格要求に最良価格で応答することが必要ですが。  最適な価格を計算するためのビジネス ロジックを作成する他の既定のアクティビティを使用する必要も出ています。  
@@ -47,15 +39,11 @@ ms.locfileid: "44205076"
   
 -   <xref:System.ServiceModel.WorkflowServiceHost> のサンプルは次のセクションにあります。  
   
-    -   [実行](../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
+    -   [実行](samples/execution.md)
   
-    -   Basic:[サービス](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+    -   アプリケーション:[中断インスタンスの管理](samples/suspended-instance-management.md)  
   
-    -   シナリオ:[サービス](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   アプリケーション:[中断インスタンスの管理](../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
-  
--   [WorkflowServiceHost の概念に関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=204807)  
+-   [ワークフロー サービスのホストの概要](../wcf/feature-details/hosting-workflow-services-overview.md)  
   
 ### <a name="workflowservicehost-scenario"></a>WorkflowServiceHost のシナリオ  
  BestPriceFinder サービスは、複数の航空会社サービスを特定のルートの最良チケット価格を検索します。  このシナリオを実装する必要にワークフローをホスト<xref:System.ServiceModel.WorkflowServiceHost>します。  メッセージ アクティビティを使用しても、価格要求を受信、バックエンド サービスから価格を取得および価格要求に最良価格で応答するには。  
@@ -79,15 +67,9 @@ ms.locfileid: "44205076"
   
 -   データの一部をサービス インスタンスにマッピングする例は、データの一部 (オーダー ID など) を特定のワークフロー インスタンスにマップするコンテンツ ベースの相関関係です。  
   
-    -   任意のメッセージング アクティビティで、`CorrelationInitializers` プロパティをクリックし、上記で作成した <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 変数を使用して <xref:System.ServiceModel.Activities.CorrelationHandle> を追加します。 ドロップダウン メニューで、メッセージ上の目的のプロパティ (OrderID など) をダブルクリックします。 `CorrelatesWith` プロパティを上記で使用した <xref:System.ServiceModel.Activities.CorrelationHandle> 変数に設定します。  
+    -   任意のメッセージング アクティビティで、`CorrelationInitializers` プロパティをクリックし、上記で作成した <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 変数を使用して <xref:System.ServiceModel.Activities.CorrelationHandle> を追加します。 ドロップダウン メニューで、メッセージ上の目的のプロパティ (OrderID など) をダブルクリックします。 `CorrelatesWith` プロパティを上記で使用した <xref:System.ServiceModel.Activities.CorrelationHandle> 変数に設定します。 
   
--   サンプル:  
-  
-    -   Basic:[サービス](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   シナリオ:[サービス](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   [相関関係の概念に関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=204939)  
+-   [相関関係の概念に関するドキュメント](../wcf/feature-details/correlation.md)  
   
 ### <a name="correlation-scenario"></a>相関関係のシナリオ  
  注文処理ワークフローを使用して、新規注文の作成とプロセス内にある既存の注文の更新を処理します。  このシナリオを実装する必要にワークフローをホスト<xref:System.ServiceModel.WorkflowServiceHost>とメッセージング アクティビティを使用します。  基づく相関関係が必要になることも、`orderId`に適切なワークフローに更新が行われることを確認します。  
@@ -155,7 +137,7 @@ ms.locfileid: "44205076"
   
 ### <a name="getting-started"></a>作業の開始  
   
--   [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] で、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーにフローチャートを追加します。  
+-   Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーにフローチャートを追加します。  
   
 -   フローチャート機能では、次のクラスを使用します。  
   
@@ -171,9 +153,7 @@ ms.locfileid: "44205076"
   
 -   サンプル:  
   
-    -   [TryCatch を使用した Flowchart アクティビティでのエラー処理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    -   [FlowChart と Pick の組み合わせを使用する StateMachine シナリオ](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [TryCatch を使用した Flowchart アクティビティでのエラー処理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) 
   
     -   [雇用プロセス](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
@@ -201,7 +181,7 @@ ms.locfileid: "44205076"
   
 ### <a name="getting-started"></a>作業の開始  
   
--   [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] で、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーで、手続き型アクティビティを追加します。  
+-   Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーで、手続き型アクティビティを追加します。  
   
 -   サンプル:  
   
@@ -226,11 +206,7 @@ ms.locfileid: "44205076"
   
 ### <a name="getting-started"></a>作業の開始  
   
--   [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] で、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーに <xref:System.Activities.Statements.InvokeMethod> アクティビティを追加し、そこに静的メソッドとインスタンス メソッドを構成します。  
-  
--   サンプル:  
-  
-    -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+-   Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーに <xref:System.Activities.Statements.InvokeMethod> アクティビティを追加し、そこに静的メソッドとインスタンス メソッドを構成します。  
   
 -   デザイナー ドキュメント: [InvokeMethod アクティビティ デザイナー](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   
@@ -245,13 +221,9 @@ ms.locfileid: "44205076"
   
 ### <a name="getting-started"></a>作業の開始  
   
--   [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] で、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーで <xref:System.Activities.Statements.TryCatch> アクティビティを追加します。  
+-   Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーで <xref:System.Activities.Statements.TryCatch> アクティビティを追加します。  
   
--   サンプル:  
-  
-    1.  [TryCatch を使用した Flowchart アクティビティでのエラー処理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    2.  [手続き型アクティビティの使用](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+-   サンプル: [TryCatch を使用した Flowchart アクティビティで処理エラー](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
 -   デザイナー ドキュメント:[エラー処理アクティビティ デザイナー](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
@@ -263,7 +235,7 @@ ms.locfileid: "44205076"
   
 ### <a name="getting-started"></a>作業の開始  
   
--   [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] で、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーで <xref:System.Activities.Statements.Pick> アクティビティを追加します。  
+-   Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーで <xref:System.Activities.Statements.Pick> アクティビティを追加します。  
   
 -   サンプル: [Pick アクティビティの使用](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)  
   
@@ -337,7 +309,7 @@ ms.locfileid: "44205076"
   
 ### <a name="getting-started"></a>作業の開始  
   
-1.  [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] で、WCF ワークフロー サービス アプリケーション プロジェクトを作成します。 開始するキャンバスに <xref:System.ServiceModel.Activities.Receive> と <xref:System.ServiceModel.Activities.SendReply> のペアが配置されます。  
+1.  Visual Studio 2010 で、WCF ワークフロー サービス アプリケーション プロジェクトを作成します。 開始するキャンバスに <xref:System.ServiceModel.Activities.Receive> と <xref:System.ServiceModel.Activities.SendReply> のペアが配置されます。  
   
 2.  web.config を開き、プロファイルなしで ETW 追跡動作を追加します。  
   
@@ -358,7 +330,7 @@ ms.locfileid: "44205076"
   
 ### <a name="getting-started"></a>作業の開始  
   
-1.  [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] で、暗黙的または明示的な <xref:System.Activities.Statements.Persist> アクティビティを含むワークフローを作成します。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 動作をワークフロー サービス ホストに追加します。 これはコードまたはアプリケーション構成ファイルで行うことができます。  
+1.  Visual Studio 2012 で、暗黙的または明示的なを含むワークフロー作成<xref:System.Activities.Statements.Persist>アクティビティ。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 動作をワークフロー サービス ホストに追加します。 これはコードまたはアプリケーション構成ファイルで行うことができます。  
   
 2.  サンプル:[永続化](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   

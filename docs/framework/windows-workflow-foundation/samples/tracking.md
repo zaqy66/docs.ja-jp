@@ -2,12 +2,12 @@
 title: 追跡
 ms.date: 03/30/2017
 ms.assetid: afdcd9bd-b462-4b2a-aac7-bebf9c80be81
-ms.openlocfilehash: 9683256585b3076a4bad0398e859d9d5a156f56f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 329dcaab093a4cb177fcba64e4bacbe9c9af4710
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515148"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48845903"
 ---
 # <a name="tracking"></a>追跡
 このセクションには、Windows Workflow Foundation (WF) を追跡するワークフローを示すサンプルが含まれています。  
@@ -20,10 +20,4 @@ ms.locfileid: "33515148"
  ワークフロー サービスで [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 追跡を有効にし、Event Tracing for Windows (ETW) で追跡イベントを出力する方法を示します。  
   
  [SQL 追跡](../../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
- カスタム SQL 追跡参加要素を作成し、追跡レコードを SQL データベースに書き込む方法を示します。  
-  
- [追跡を使用した WF データの抽出](../../../../docs/framework/windows-workflow-foundation/samples/extract-wf-data-using-tracking.md)  
- ワークフロー追跡を使用して、アクティビティからワークフロー変数と引数を抽出する方法を示します。  
-  
- [テキスト ファイルを使用した追跡](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md)  
- カスタムの追跡参加要素を作成して [!INCLUDE[wf1](../../../../includes/wf1-md.md)] で追跡を拡張する方法を示します。
+ カスタム SQL 追跡参加要素を作成し、追跡レコードを SQL データベースに書き込む方法を示します。

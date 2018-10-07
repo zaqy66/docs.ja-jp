@@ -2,12 +2,12 @@
 title: WebContentTypeMapper のサンプル
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 91e5cca478521a343f7528f878f114b85eff2d08
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 572bea9fc38668d554ef467be7689ac01b652fb8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618533"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847604"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper のサンプル
 このサンプルでは、Windows Communication Foundation (WCF) メッセージの本文の形式を新しいコンテンツ タイプをマップする方法を示します。  
@@ -58,7 +58,7 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2.  」の説明に従って、ソリューション WebContentTypeMapperSample.sln をビルド[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-3.  移動します http://localhost/ServiceModelSamples/JCTMClientPage.htm(はプロジェクト ディレクトリ内からブラウザーで JCTMClientPage.htm を開くしない操作を行います)。  
+3.  移動します`http://localhost/ServiceModelSamples/JCTMClientPage.htm`(はプロジェクト ディレクトリ内からブラウザーで JCTMClientPage.htm を開くしない操作を行います)。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

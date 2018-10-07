@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
-ms.openlocfilehash: bf88073c25351aac0e421d69a947605de3e37759
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b9b7d78601790cfcd7cf54688db1750df96a19f9
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200699"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848232"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>方法 : Windows 資格情報でサービスをセキュリティで保護する
 このトピックでは、Windows ドメインに存在し、同じドメイン内のクライアントによって呼び出される、Windows Communication Foundation (WCF) サービスのトランスポート セキュリティを有効にする方法を示します。 このシナリオの詳細については、次を参照してください。[トランスポート セキュリティと Windows 認証](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)します。 サンプル アプリケーションでは、次を参照してください。、 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)サンプル。  
@@ -55,7 +55,7 @@ ms.locfileid: "47200699"
   
 3.  `Type` という名前の 2 つ目の `serviceType` 変数を作成し、その変数に実装されたコントラクトの型 (`Calculator`) を割り当てます。  
   
-4.  <xref:System.Uri> という名前で、サービスのベース アドレスが指定された `baseAddress` クラスのインスタンスを作成します。 ベース アドレスには、トランスポートに一致するスキームを指定する必要があります。 ここでは、トランスポート スキームは HTTP であり、特殊なを含むアドレスおよびベース エンドポイント アドレス Uniform Resource Identifier (URI)"localhost"、ポート番号 (8036) ("serviceModelSamples/):http://localhost:8036/serviceModelSamples/します。  
+4.  <xref:System.Uri> という名前で、サービスのベース アドレスが指定された `baseAddress` クラスのインスタンスを作成します。 ベース アドレスには、トランスポートに一致するスキームを指定する必要があります。 ここでは、トランスポート スキームは HTTP であり、特殊なを含むアドレスおよびベース エンドポイント アドレス Uniform Resource Identifier (URI)"localhost"、ポート番号 (8036) ("serviceModelSamples/):`http://localhost:8036/serviceModelSamples/`します。  
   
 5.  <xref:System.ServiceModel.ServiceHost> 変数と `serviceType` 変数を指定して、`baseAddress` クラスのインスタンスを作成します。  
   

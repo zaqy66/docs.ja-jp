@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855716"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847411"
 ---
 # <a name="endpoint-addresses"></a>エンドポイント アドレス
 すべてのエンドポイントにはこれと関連するアドレスがあり、エンドポイントの検索と識別に使用されます。 このアドレスは主にエンドポイントの位置を指定する URI (Uniform Resource Identifier) で構成されます。 エンドポイント アドレスが、Windows Communication Foundation (WCF) のプログラミング モデルで表される、<xref:System.ServiceModel.EndpointAddress>クラスを含む、省略可能な<xref:System.ServiceModel.EndpointAddress.Identity%2A>他のエンドポイントによるエンドポイントの認証を有効にするプロパティをメッセージをおよび一連の省略可能な交換<xref:System.ServiceModel.EndpointAddress.Headers%2A>プロパティで、サービスに到達するために必要な SOAP ヘッダーを定義します。 オプションのヘッダーは、サービス エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 エンドポイントのアドレスは、ネットワーク上では WS-Addressing エンドポイント参照 (EPR) として表されます。  
   
 ## <a name="uri-structure-of-an-address"></a>アドレスの URI 構造  
- ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 URI の 4 つの部分ではたとえば、 http://www.fabrikam.com:322/mathservice.svc/secureEndpoint 次のように取り上げることができます。  
+ ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 URI の 4 つの部分ではたとえば、 `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` 次のように取り上げることができます。  
   
--   スキーム : http:  
+-   スキーム: `http:`
   
 -   マシンの場合: `www.fabrikam.com`  
   
@@ -56,9 +56,9 @@ ms.locfileid: "43855716"
   
  たとえば、サイトで次のベース アドレスを使用できます。  
   
--   http://payroll.myorg.com/Service.svc  
+- `http://payroll.myorg.com/Service.svc`
   
--   http://shipping.myorg.com/Service.svc  
+- `http://shipping.myorg.com/Service.svc`
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] では、構成ファイルの AppDomain レベルでプレフィックス フィルターを指定できます。 これには、 [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)要素で、プレフィックスの一覧が含まれています。 IIS によって指定される受信ベース アドレスは、オプションのプレフィックス一覧に基づいてフィルター処理されます。 既定では、プレフィックスを指定しない場合、すべてのアドレスが渡されます。 プレフィックスを指定すると、そのスキームに一致するベース アドレスだけが渡されます。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "43855716"
 </system.serviceModel>  
 ```  
   
- 前の例では、net.tcp://payroll.myorg.com: 8000 および http://shipping.myorg.com:8000経由で渡される、それぞれのスキーム、唯一のベース アドレスします。  
+ 前の例では、`net.tcp://payroll.myorg.com:8000`と`http://shipping.myorg.com:8000`経由で渡される、それぞれのスキーム、唯一のベース アドレスします。  
   
  `baseAddressPrefixFilter` では、ワイルカードはサポートされません。  
   

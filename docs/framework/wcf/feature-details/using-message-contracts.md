@@ -7,22 +7,22 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: ea0a107a67753e919439a6be2035ab77001641ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84640387e6d77e02d3b0d19b73c0d2b20d8d8831
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508580"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848310"
 ---
 # <a name="using-message-contracts"></a>メッセージ コントラクトの使用
-通常 Windows Communication Foundation (WCF) アプリケーションを構築するときに、データ構造とシリアル化の問題に注目して開発者や、データが持ち込まれるメッセージの構造を意識する必要はありません。 このようなアプリケーションでは、パラメーターまたは戻り値用にデータ コントラクトを作成するのは簡単です  (詳細については、次を参照してください[サービス コントラクトのデータ転送を指定する](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)。  
+通常 Windows Communication Foundation (WCF) アプリケーションを構築するときに、開発者はデータ構造とシリアル化の問題に細心の注意し、データを送信するメッセージの構造を意識する必要はありません。 このようなアプリケーションでは、パラメーターまたは戻り値用にデータ コントラクトを作成するのは簡単です  (詳細については、次を参照してください[Data Transfer in Service Contracts にを指定する](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)。  
   
- ただし、SOAP メッセージの構造を完全に制御することがメッセージの内容の制御と同様に重要となる場合があります。 これが特に当てはまるのは、相互運用性が重要である場合、具体的にはメッセージまたはメッセージ部分のレベルでセキュリティの問題を制御する場合です。 このような場合は、作成することができます、*メッセージ コントラクト*必要正確な SOAP メッセージの構造を指定することができます。  
+ ただし、SOAP メッセージの構造を完全に制御することがメッセージの内容の制御と同様に重要となる場合があります。 これが特に当てはまるのは、相互運用性が重要である場合、具体的にはメッセージまたはメッセージ部分のレベルでセキュリティの問題を制御する場合です。 このような場合は、作成することができます、*メッセージ コントラクト*のために必要な正確な SOAP メッセージの構造を指定することができます。  
   
  ここでは、メッセージ コントラクトの各種属性を使用して、ユーザー操作に専用のメッセージ コントラクトを作成する方法について説明します。  
   
 ## <a name="using-message-contracts-in-operations"></a>処理におけるメッセージ コントラクトの使用  
- WCF 操作のいずれかでモデル化をサポートする、*リモート プロシージャ コール (RPC) スタイル*または*メッセージング スタイル*です。 RPC スタイルの操作では、シリアル化可能な任意の型を使用できます。複数のパラメーター、`ref` パラメーターと `out` パラメーターなど、ローカル呼び出しで使用できる機能を利用できます。 このスタイルでは、選択したシリアル化の形式は、基になるメッセージ内のデータの構造を制御し、WCF ランタイムは、操作をサポートするためにメッセージを作成します。 これにより、SOAP や SOAP メッセージに不慣れな開発者でも、サービス アプリケーションを迅速かつ容易に作成し、使用できます。  
+ WCF は、どちらのモデル化された操作をサポートしている、*リモート プロシージャ コール (RPC) スタイル*または*メッセージング スタイル*します。 RPC スタイルの操作では、シリアル化可能な任意の型を使用できます。複数のパラメーター、`ref` パラメーターと `out` パラメーターなど、ローカル呼び出しで使用できる機能を利用できます。 このスタイルでは、選択したシリアル化の形式は、基になるメッセージ内のデータの構造を制御し、WCF ランタイムは、操作をサポートするためにメッセージを作成します。 これにより、SOAP や SOAP メッセージに不慣れな開発者でも、サービス アプリケーションを迅速かつ容易に作成し、使用できます。  
   
  RPC スタイルでモデル化されたサービス操作のコード例を次に示します。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33508580"
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 通常は、データ コントラクトだけでメッセージのスキーマを定義することができます。 たとえば、前の例では、`BankingTransaction` と `BankingTransactionResponse` にデータ コントラクトがあれば、ほとんどのアプリケーションで基になる SOAP メッセージの内容を定義できます。 データ コントラクトの詳細については、次を参照してください。[を使用してデータ コントラクト](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)です。  
+ 通常は、データ コントラクトだけでメッセージのスキーマを定義することができます。 たとえば、前の例では、`BankingTransaction` と `BankingTransactionResponse` にデータ コントラクトがあれば、ほとんどのアプリケーションで基になる SOAP メッセージの内容を定義できます。 データ コントラクトの詳細については、次を参照してください。 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)します。  
   
  ただし、場合によっては、SOAP メッセージの構造がネットワーク経由でどのように転送されるかを厳密に制御する必要があります。 最も一般的なシナリオは、カスタム SOAP ヘッダーの挿入です。 もう 1 つの一般的なシナリオは、メッセージのヘッダーと本文のセキュリティ プロパティを定義すること、つまり、これらの要素にデジタル署名し、要素を暗号化するかどうかを決定することです。 最後に、一部のサードパーティの SOAP スタックでは、メッセージが特定の形式である必要があります。 この制御は、メッセージング スタイルの操作によって行うことができます。  
   
@@ -102,7 +102,7 @@ public class BankingTransaction
   
  パブリック、プライベート、保護、または内部のいずれであるかに関係なく、<xref:System.ServiceModel.MessageHeaderAttribute> と <xref:System.ServiceModel.MessageBodyMemberAttribute> は、すべてのフィールド、プロパティ、およびイベントに適用できます。  
   
- <xref:System.ServiceModel.MessageContractAttribute> を使用すると、SOAP メッセージの本文のラッパー要素の名前を制御する WrapperName および WrapperNamespace 属性を指定できます。 ラッパーと、メッセージ コントラクトが定義されている名前空間の既定のメッセージ コントラクトの名前で型が使用される`HYPERLINK "http://tempuri.org/" http://tempuri.org/`は既定の名前空間として使用します。  
+ <xref:System.ServiceModel.MessageContractAttribute> を使用すると、SOAP メッセージの本文のラッパー要素の名前を制御する WrapperName および WrapperNamespace 属性を指定できます。 既定では、メッセージ コントラクト型の名前はラッパー用に使用され、メッセージ コントラクトが定義されている名前空間 (`http://tempuri.org/`) は既定の名前空間として使用されます。  
   
 > [!NOTE]
 >  <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性は、メッセージ コントラクトでは無視されます。 <xref:System.Runtime.Serialization.KnownTypeAttribute> が必要な場合は、対象のメッセージ コントラクトを使用している処理でそれを設定します。  
@@ -154,7 +154,7 @@ public class BankingTransaction
 >  ラップされていないメッセージにメッセージ本文の複数の部分を含めることは、WS-I Basic Profile 1.1 規格に反するため、新しいメッセージ コントラクトを設計する場合はお勧めできません。 ただし、特定の相互運用シナリオでは、複数のラップされていないメッセージ本文が必要な場合もあります。 1 つのメッセージ本文で複数のデータを転送する場合は、既定の (ラップされた) モードを使用することをお勧めします。 ラップされていないメッセージで複数のメッセージ ヘッダーを使用しても、何の問題もありません。  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>メッセージ コントラクト内部でのカスタム型の使用  
- メッセージが使用されるサービス コントラクト用に選択されたシリアル化エンジンを使用して、個々のメッセージ ヘッダーとメッセージ本文がシリアル化されます (XML に変換されます)。 既定のシリアル化エンジンである `XmlFormatter` は、データ コントラクトを持つ任意の型を (<xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> を持つことによって) 明示的に処理することも、(プリミティブ型にしたり、<xref:System.SerializableAttribute?displayProperty=nameWithType> を持ったりすることなどによって) 暗黙的に処理することもできます。 詳細については、次を参照してください。[を使用してデータ コントラクト](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)です。  
+ メッセージが使用されるサービス コントラクト用に選択されたシリアル化エンジンを使用して、個々のメッセージ ヘッダーとメッセージ本文がシリアル化されます (XML に変換されます)。 既定のシリアル化エンジンである `XmlFormatter` は、データ コントラクトを持つ任意の型を (<xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> を持つことによって) 明示的に処理することも、(プリミティブ型にしたり、<xref:System.SerializableAttribute?displayProperty=nameWithType> を持ったりすることなどによって) 暗黙的に処理することもできます。 詳細については、次を参照してください。 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)します。  
   
  前の例では、`Operation` 型と `BankingTransactionData` 型は、データ コントラクトを持つ必要があります。また、`transactionDate` がプリミティブである (したがって、暗黙のデータ コントラクトを持つ) ため、<xref:System.DateTime> はシリアル化可能です。  
   
@@ -213,7 +213,7 @@ public class BankingDepositLog
 ## <a name="signing-and-encrypting-parts-of-the-message"></a>メッセージの一部の署名と暗号化  
  メッセージ コントラクトでは、メッセージのヘッダーまたは本文にデジタル署名し、暗号化するかどうかを示すことができます。  
   
- この操作は、<xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> 属性と <xref:System.ServiceModel.MessageHeaderAttribute> 属性の <xref:System.ServiceModel.MessageBodyMemberAttribute> プロパティを設定することによって実行されます。 このプロパティは、<xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> 型の列挙体であり、<xref:System.Net.Security.ProtectionLevel.None> (暗号化と署名を行わない)、<xref:System.Net.Security.ProtectionLevel.Sign> (デジタル署名だけを行う)、または <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (暗号化とデジタル署名の両方を行う) に設定できます。 既定値は、<xref:System.Net.Security.ProtectionLevel.EncryptAndSign> です。  
+ この操作は、<xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> 属性と <xref:System.ServiceModel.MessageHeaderAttribute> 属性の <xref:System.ServiceModel.MessageBodyMemberAttribute> プロパティを設定することによって実行されます。 このプロパティは、<xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> 型の列挙体であり、<xref:System.Net.Security.ProtectionLevel.None> (暗号化と署名を行わない)、<xref:System.Net.Security.ProtectionLevel.Sign> (デジタル署名だけを行う)、または <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (暗号化とデジタル署名の両方を行う) に設定できます。 既定値は <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> です。  
   
  これらのセキュリティ機能を使用するには、バインディングと動作を適切に構成する必要があります。 適切な構成を行わずにこれらのセキュリティ機能を使用した場合 (資格情報を指定せずにメッセージに署名しようとした場合など)、検証時に例外がスローされます。  
   
@@ -250,7 +250,7 @@ public class PatientRecord
   
 -   `Relay`  
   
- `Actor` 属性または `Role` 属性は、指定のヘッダーが対象とするノードの URI (Uniform Resource Identifier) を指定します。 `MustUnderstand` 属性は、ヘッダー処理ノードがヘッダーを認識する必要があるかどうかを指定します。 `Relay` 属性は、ダウンストリーム ノードにヘッダーを中継する必要があるかどうかを指定します。 WCF がを除き、受信メッセージに対するこれらの属性の処理を実行しません、`MustUnderstand`属性に、このトピックの「メッセージ コントラクトのバージョン管理」セクションで指定されています。 ただし、後述するように、必要に応じてこれらの属性を読み書きすることができます。  
+ `Actor` 属性または `Role` 属性は、指定のヘッダーが対象とするノードの URI (Uniform Resource Identifier) を指定します。 `MustUnderstand` 属性は、ヘッダー処理ノードがヘッダーを認識する必要があるかどうかを指定します。 `Relay` 属性は、ダウンストリーム ノードにヘッダーを中継する必要があるかどうかを指定します。 WCF は除いて、受信メッセージに対してこれらの属性の処理を実行しません、`MustUnderstand`属性に、このトピックの後半の「メッセージ コントラクトのバージョン管理」セクションで指定されています。 ただし、後述するように、必要に応じてこれらの属性を読み書きすることができます。  
   
  既定では、メッセージの送信時にこれらの属性は出力されません。 これは、2 とおりの方法で変更できます。 1 つ目の方法として、次のコード例に示すように、<xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>、<xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>、および <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> の各プロパティを変更することによって、属性を必要な値に静的に設定できます  (`Role` プロパティが存在しないことに注意してください。SOAP 1.2 を使用している場合は、<xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> プロパティを設定すると `Role` 属性が出力されます)。  
   
@@ -303,7 +303,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  メッセージを受信して返信するときに、これらの SOAP 属性設定は <xref:System.ServiceModel.MessageHeader%601> 型のヘッダーとして往復するだけです。  
   
 ## <a name="order-of-soap-body-parts"></a>SOAP 本文の順序  
- 状況によっては、本文の各部分の順序を制御する必要があります。 本文要素の既定の順序はアルファベット順ですが、<xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティで制御できます。 このプロパティのセマンティクスは、継承シナリオにおける動作を除き、<xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティのセマンティクスと同じです (メッセージ コントラクトでは、派生型の本文メンバーの前に基本型の本文メンバーが並べ替えられることはありません)。 詳細については、次を参照してください。[データ メンバーの順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)です。  
+ 状況によっては、本文の各部分の順序を制御する必要があります。 本文要素の既定の順序はアルファベット順ですが、<xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティで制御できます。 このプロパティのセマンティクスは、継承シナリオにおける動作を除き、<xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティのセマンティクスと同じです (メッセージ コントラクトでは、派生型の本文メンバーの前に基本型の本文メンバーが並べ替えられることはありません)。 詳細については、次を参照してください。[データ メンバーの順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)します。  
   
  次の例では、通常はアルファベット順で最初である `amount` が先頭にきますが、 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> プロパティによって 3 番目の位置に挿入されます。  
   
@@ -323,7 +323,7 @@ public class BankingTransaction
   
  ヘッダーのバージョン管理には、次のルールが適用されます。  
   
--   WCF が不足しているヘッダーをオブジェクトいません-対応するメンバーは、既定値のままにします。  
+-   WCF が不足しているヘッダーをオブジェクトできません-対応するメンバーは、既定値のままにします。  
   
 -   WCF には、予期しない余分なヘッダーも無視されます。 このルールの 1 つの例外は、入力 SOAP メッセージ内の余分なヘッダーの `MustUnderstand` 属性が `true` に設定されている場合です。この場合、認識する必要のあるヘッダーを処理できないため、例外がスローされます。  
   
@@ -370,7 +370,7 @@ public class PatientRecord : PersonRecord
 -   複数の処理で同じメッセージ コントラクトを使用すると、WSDL ドキュメント内に複数のメッセージ型が生成されます。 以降も使用できるように、"2"、"3" などの番号を付加することで名前を一意にします。 WSDL をインポートし直すと、名前以外は同一の複数のメッセージ コントラクト型が作成されます。  
   
 ## <a name="soap-encoding-considerations"></a>SOAP エンコードに関する留意点  
- WCF では、レガシー SOAP エンコード、XML のスタイルを使用できます。 ただし、その使用は推奨されません。 (サービス コントラクトに適用されている `Use` で、`Encoded` プロパティを <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> に設定して) このスタイルを使用する場合、次の追加の考慮事項が適用されます。  
+ WCF では、レガシー SOAP エンコード スタイルの XML を使用できます。 ただし、その使用は推奨されません。 (サービス コントラクトに適用されている `Use` で、`Encoded` プロパティを <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> に設定して) このスタイルを使用する場合、次の追加の考慮事項が適用されます。  
   
 -   メッセージ ヘッダーはサポートされません。つまり、<xref:System.ServiceModel.MessageHeaderAttribute> 属性と <xref:System.ServiceModel.MessageHeaderArrayAttribute> 配列属性は、SOAP エンコーディングと互換性がありません。  
   

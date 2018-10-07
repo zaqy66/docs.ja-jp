@@ -3,11 +3,11 @@ title: WF のアクティビティ作成オプション
 ms.date: 03/30/2017
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
 ms.openlocfilehash: 219d759cd1390a83abfb90af509b21047085f6e9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580875"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848206"
 ---
 # <a name="activity-authoring-options-in-wf"></a>WF のアクティビティ作成オプション
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、カスタム アクティビティを作成するオプションがいくつか用意されています。 特定のアクティビティを作成するために使用する適切な方法は、実行時に必要な機能によって異なります。  
