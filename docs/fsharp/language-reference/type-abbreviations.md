@@ -3,11 +3,11 @@ title: 型略称 (F#)
 description: コードを読みやすくためにわかりやすい名前の型を提供する f# 型略称について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778556"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842426"
 ---
 # <a name="type-abbreviations"></a>型略称
 

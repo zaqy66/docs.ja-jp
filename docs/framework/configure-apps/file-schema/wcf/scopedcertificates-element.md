@@ -2,24 +2,24 @@
 title: '&lt;scopedCertificates&gt; 要素'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b9bf4d25e23c8bdc4e3d01c2dfa61d059166117
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748865"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838281"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 要素
 認証用の (範囲指定された) 特定のサービスにより提供される X.509 証明書のコレクションを表します。 このコレクションは一般に、フェデレーション シナリオでセキュリティ トークン サービスのサービス証明書を指定するために使用されます。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 endpointBehaviors セクション  
 \<behavior>  
 \<clientCredentials>  
 \<serviceCertificate >  
 \<scopedCertificates > 要素  
-\<追加 > 要素を\<scopedCertificates >  
+\<追加 > 要素の\<scopedCertificates >  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,15 +51,15 @@ endpointBehaviors セクション
 |-------------|-----------------|  
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|クライアントに対してサービスを認証する際に使用される証明書を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このコレクションを使用すると、クライアントは、通信するサービスの URL に基づいて、使用するサービス証明書を構成できます。 これは、クライアントが複数のサービス (エンド サービスと中間セキュリティ トークン サービス) と通信している可能性がある発行済みトークンのシナリオで特に便利です。 証明書に基づくメッセージ セキュリティを使用したバインドにおいて、この証明書を使用してサービスへのメッセージを暗号化します。サービスがクライアントへの応答に署名する際には、この証明書を使用することが要求されます。  
   
  バインディングにサービスの証明書が必要で、サービスの URL に対する特定の証明書が ScopedCertificates 内に存在しない場合は、既定の証明書が使用されます。  
   
- 詳細についてを参照してください「証明書のスコープ」の[する方法: フェデレーション クライアントを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)です。  
+ 詳細については、の スコープの証明書"セクションを参照してください。[方法: フェデレーション クライアントを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)します。  
   
 ## <a name="example"></a>例  
- 次の例は、ドメインの名前のエンドポイントと通信するときに使用するクライアントのサービス証明書を指定する http://www.contoso.com HTTP プロトコル経由します。  
+ 次の例は、ドメインの名前のエンドポイントと通信するときに使用するクライアントのサービス証明書を指定する `http://www.contoso.com` HTTP プロトコル経由します。  
   
 ```xml  
 <serviceCertificate>  

@@ -15,11 +15,11 @@ ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 5783e63d81c8951afb6b1646b595fc619d51549c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780980"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837483"
 ---
 # <a name="network-settings-schema"></a>ネットワーク設定スキーマ
 ネットワーク設定は、.NET Framework がインターネットに接続する方法を指定します。 次の表では、[\<system.Net > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) の下にある各子構成要素の関数について説明します。  

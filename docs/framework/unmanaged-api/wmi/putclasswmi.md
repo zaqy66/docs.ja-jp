@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: de08662a825a84f19a40863cf73481d89364ebd0
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580343"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836207"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 関数
 新しいクラスが作成されるか、既存のクラスが更新されます。  

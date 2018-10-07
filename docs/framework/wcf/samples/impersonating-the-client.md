@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 5a13ab73e48616b38e583b1c9948fc1bf5eb8a64
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29ed1f988819a47d8ac8845a379aeda5e15c655e
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522289"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844294"
 ---
 # <a name="impersonating-the-client"></a>クライアントの偽装
 偽装のサンプルでは、サービスで呼び出し元のアプリケーションを偽装し、サービスが呼び出し元の代わりにシステム リソースにアクセスできるようにする方法を示します。  
@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  このサンプルを実行すると、操作要求と応答がサービスとクライアントの両方のコンソール ウィンドウに表示されます。 どちらかのコンソールで Enter キーを押すと、サービスとクライアントがどちらもシャットダウンされます。  
   
 > [!NOTE]
->  サービスの管理者アカウントで実行する必要がありますまたはそれを実行するアカウントに登録する権限を付与する必要があります、 http://localhost:8000/ServiceModelSamples HTTP 層を持つ URI です。 設定することによってこのような権限を付与する、 [Namespace 予約](https://go.microsoft.com/fwlink/?LinkId=95012)を使用して、 [Httpcfg.exe ツール](https://go.microsoft.com/fwlink/?LinkId=95010)します。  
+>  サービスの管理者アカウントで実行する必要がありますまたはそれを実行するアカウントに登録する権限を付与する必要があります、 `http://localhost:8000/ServiceModelSamples` HTTP 層を持つ URI です。 設定することによってこのような権限を付与する、 [Namespace 予約](https://go.microsoft.com/fwlink/?LinkId=95012)を使用して、 [Httpcfg.exe ツール](https://go.microsoft.com/fwlink/?LinkId=95010)します。  
   
 > [!NOTE]
 >  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] を実行しているコンピューターでは、Host.exe アプリケーションに偽装特権がある場合にのみ偽装がサポートされます  (既定では、管理者のみがこれを許可できます)。として、サービスが実行されているアカウントにこの特権を追加するには**管理ツール**、オープン**ローカル セキュリティ ポリシー**オープン**ローカル ポリシー** をクリックして**ユーザー権利の割り当て**、選択と**認証後にクライアントを偽装** をダブルクリックします**プロパティ**ユーザーまたはグループに追加します。  

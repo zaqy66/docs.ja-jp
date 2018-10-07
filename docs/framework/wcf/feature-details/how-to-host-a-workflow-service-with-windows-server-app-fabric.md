@@ -2,19 +2,19 @@
 title: '方法 : Windows Server AppFabric を使用してワークフロー サービスをホストする'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: d71052edaccd34bab7354c93431a260f41647f2b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2c1e4e8763ad9bd65099173c75d272965ac8caa8
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500031"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840629"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>方法 : Windows Server AppFabric を使用してワークフロー サービスをホストする
 AppFabric でのワークフロー サービスのホスティングは IIS/WAS でのホスティングに似ています。 唯一の違いは、ワークフロー サービスの投入、監視、および管理のために AppFabric に用意されているツールです。 このトピックで作成したワークフロー サービスを使用して、[実行時間の長いワークフロー サービスを作成する](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)します。 ワークフロー サービスの作成方法はそちらのトピックで説明されています。 このトピックでは、AppFabric を使用したワークフロー サービスのホスティング方法を説明します。 Windows Server App Fabric の詳細については、次を参照してください。 [Windows Server Appfabric のドキュメント](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)します。 下の手順を完了する前に、Windows Server AppFabric がインストールされていることを確認してください。  インターネット インフォメーション サービス (inetmgr.exe) を開いてでサーバー名をクリックします。、**接続**表示、サイト、 をクリックおよびクリック**既定の Web サイト**します。 画面の右側にあるという名前のセクションを参照する必要があります**App Fabric**します。 (右側のペインの一番上に表示される) このセクションが表示されない場合は、AppFabric がインストールされていません。 Windows Server Appfabric のインストールの詳細については、次を参照してください。[インストールの Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136)します。  
   
 ### <a name="creating-a-simple-workflow-service"></a>単純なワークフロー サービスの作成  
   
-1.  開いている[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]で作成した OrderProcessing ソリューションを読み込むと、[実行時間の長いワークフロー サービスを作成する](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)トピック。  
+1.  Visual Studio 2012 を開きで作成した OrderProcessing ソリューションを読み込み、[実行時間の長いワークフロー サービスを作成する](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)トピック。  
   
 2.  右クリックして、 **OrderService**順に選択して**プロパティ**を選択し、 **Web**タブ。  
   

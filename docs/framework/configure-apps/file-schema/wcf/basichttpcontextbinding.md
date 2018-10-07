@@ -3,11 +3,11 @@ title: '&lt;basicHttpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
 ms.openlocfilehash: 065371a86f8ed82b09f81a9f57682a93c14fa1c9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777735"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840603"
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;basicHttpContextBinding&gt;
 HTTP クッキーを交換機構として有効にすることにより、交換する <xref:System.ServiceModel.BasicHttpBinding> のコンテキストを提供するバインディングを指定します。  

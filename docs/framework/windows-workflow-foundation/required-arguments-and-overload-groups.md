@@ -3,11 +3,11 @@ title: 必須の引数とオーバーロード グループ
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580236"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842074"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必須の引数とオーバーロード グループ
 アクティビティは、アクティビティの実行を有効にするためには特定の引数をバインドする必要があるように構成できます。 `RequiredArgument` 属性は、アクティビティの特定の引数が必須であることを示す場合に使用します。また、`OverloadGroup` 属性は、必須の引数のカテゴリをグループ化する場合に使用します。 これらの属性を使用することで、アクティビティ作成者は、単純なアクティビティ検証の構成も複雑な構成も適用できます。  

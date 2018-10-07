@@ -2,12 +2,12 @@
 title: F# のインストールします。
 description: お客様の環境に基づいて、f# をインストールする方法について説明します。
 ms.date: 08/28/2018
-ms.openlocfilehash: 6c10b958e35bf7925965d076a48839b0ce19d2c0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515898"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844008"
 ---
 # <a name="install-f"></a>F# のインストールします。 #
 
@@ -17,13 +17,13 @@ ms.locfileid: "43515898"
 
 ダウンロードしている場合[Visual Studio](https://visualstudio.microsoft.com/)最初に、これは最初にインストール、Visual Studio インストーラー。 インストーラーから、適切な SKU の Visual Studio をインストールします。 既にインストールされていること、クリックして**変更**します。
 
-次のワークロードの一覧を確認します。 選択**ASP.NET および web 開発**、のど f# サポート、.NET Core のサポートをインストールして、プロジェクトの f# ASP.NET Core のサポート。
+次のワークロードの一覧を確認します。 選択**ASP.NET および web 開発**f# サポートおよび ASP.NET Core プロジェクトの .NET Core のサポートがインストールされます。
 
 次に、クリックして**変更**下部右側にあります。  これは、選択したすべてのものにインストールされます。 クリックして、f# 言語サポートと Visual Studio 2017 を開くことができますし、**起動**します。
 
 ## <a name="install-f-with-visual-studio-for-mac"></a>F# で Visual Studio for Mac をインストールします。
 
-既定で f# がインストールされている[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)、選択したどのような構成です。
+既定で f# がインストールされている[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)、選択した構成に関係なく。
 
 インストールが完了した後は、"Visual Studio を起動する"を選択します。 起動してもかまいませんが Finder を macOS でします。
 

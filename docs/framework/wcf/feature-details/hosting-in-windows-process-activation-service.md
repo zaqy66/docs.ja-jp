@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d51cd3bcef44c32c24630c1a3a332b2144a41469
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188385"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839431"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows プロセス アクティブ化サービスでのホスティング
 Windows プロセス アクティブ化サービス (WAS) では、ライセンス認証と Windows Communication Foundation (WCF) サービスをホストするアプリケーションを含むワーカー プロセスの有効期間を管理します。 WAS プロセス モデルは HTTP の依存関係を取り除くことにより、HTTP サーバーの [!INCLUDE[iis601](../../../../includes/iis601-md.md)] プロセス モデルを一般化します。 これにより、HTTP とメッセージ ベースのライセンス認証をサポートし、多数の特定のコンピューター上のアプリケーションをホストする機能を提供するホスト環境での Net.TCP などの非 HTTP プロトコルの両方を使用する WCF サービスです。  
@@ -45,8 +45,8 @@ Windows プロセス アクティブ化サービス (WAS) では、ライセン�
   
  アプリケーション内のサービスとリソースにもアドレスを指定できます。 アプリケーション内では、アプリケーション リソースにベース アプリケーション パスに対する相対アドレスが指定されます。 たとえば、コンピューター名 contoso.com のサイトに HTTP と Net.TCP プロトコルの両方のサイト バインドがあるとします。 さらに、そのサイトには 1 つのアプリケーションが /Billing に格納されており、GetOrders.svc でサービスを公開しているとします。 このとき、GetOrders.svc サービスで SecureEndpoint の相対アドレスを持つエンドポイントが公開されている場合、サービスのエンドポイントは次の 2 つの URI で公開されることになります。  
   
- http://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
-net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
+- `http://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
+- `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>WAS ランタイム  
  アプリケーションは、アドレス指定と管理の目的でサイトに編成されます。 実行時にもアプリケーションはアプリケーション プールにグループ化されます。 アプリケーション プールには、多数の異なるサイトからの多数の異なるアプリケーションを格納できます。 アプリケーション プール内のすべてのアプリケーションで、一連の共通の実行時特性を共有します。 たとえば、すべてのアプリケーションは同じバージョンの共通言語ランタイム (CLR) 下で実行され、またすべてのアプリケーションで共通のプロセス ID を共有します。 各アプリケーション プールはワーカー プロセス (w3wp.exe) のインスタンスに対応します。 共有アプリケーション プール内で実行される各マネージド アプリケーションは、CLR AppDomain により他のアプリケーションから分離されます。  

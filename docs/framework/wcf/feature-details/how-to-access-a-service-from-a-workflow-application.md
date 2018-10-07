@@ -2,19 +2,19 @@
 title: '方法: ワークフロー アプリケーションからサービスにアクセスする'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 460e5d0f1bbfdebf885176ed9fcc336b76731edd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e9158f91d8df74cc9fd871567d854d32353d16e1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421834"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840590"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>方法: ワークフロー アプリケーションからサービスにアクセスする
 このトピックでは、ワークフロー コンソール アプリケーションからワークフロー サービスを呼び出す方法について説明します。 完了に依存、[方法: メッセージング アクティビティでワークフロー サービスを作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)トピック。 このトピックでは、ワークフロー アプリケーションからワークフロー サービスを呼び出す方法について説明します、ワークフロー アプリケーションから任意の Windows Communication Foundation (WCF) サービスを呼び出す場合と同じ方法を使用できます。
 
 ### <a name="create-a-workflow-console-application-project"></a>ワークフロー コンソール アプリケーション プロジェクトの作成
 
-1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] を起動します。
+1.  Visual Studio 2012 を起動します。
 
 2.  作成した MyWFService プロジェクトを読み込む、[方法: メッセージング アクティビティでワークフロー サービスを作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)トピック。
 

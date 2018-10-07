@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 author: BrucePerlerMS
-ms.openlocfilehash: 32fd1ebede841488d1bfabd2f92bd3fb1ffb55e8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 0efa9ecbe384009cc8fc4735ec9fc3db8ed3ce59
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035657"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841457"
 ---
 # <a name="how-to-set-the-security-mode"></a>方法 : セキュリティ モードを設定する
 Windows Communication Foundation (WCF) のセキュリティは、ほとんどの定義済みバインド上にある 3 つの一般的なセキュリティ モード: トランスポート、メッセージ、および「メッセージ資格情報付きトランスポート」。 これ以外に、2 つのバインディングに固有の 2 つのモードがあります。<xref:System.ServiceModel.BasicHttpBinding> の "トランスポート資格情報専用" モードと、<xref:System.ServiceModel.NetMsmqBinding> の "両方" モードです。 ここでは、3 つの共通のセキュリティモードである <xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message>、および <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> に重点を置いて説明します。  
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF) のセキュリティは、ほとんど�
     ```xml  
     <wsHttpBinding>  
     <binding name="TransportSecurity">  
-        <security mode="Transport" />  
+        <security mode="Transport" >  
            <transport clientCredentialType = "Windows" />  
         </security>  
     </binding>  
@@ -100,7 +100,7 @@ Windows Communication Foundation (WCF) のセキュリティは、ほとんど�
     ```xml  
     <wsHttpBinding>  
     <binding name="MessageSecurity">  
-        <security mode="Message" />  
+        <security mode="Message" >  
            <message clientCredentialType = "Certificate" />  
         </security>  
     </binding>  

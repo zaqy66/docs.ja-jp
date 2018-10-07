@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781753"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844859"
 ---
 # <a name="xtype-markup-extension"></a>x:Type マークアップ拡張機能
 CLR の提供<xref:System.Type>指定の XAML 型の基になる型であるオブジェクト。  

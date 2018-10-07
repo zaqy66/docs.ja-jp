@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 ms.openlocfilehash: 4064ef26ee550c02ac8825ac4c1a417472b64de6
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777920"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836181"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>方法 : データを Windows フォーム DataGridView コントロールにバインドする
 <xref:System.Windows.Forms.DataGridView> コントロールは標準 Windows フォームのデータ バインディング モデルをサポートするため、各種のデータ ソースにバインドします。 ただし、ほとんどの状況では、データ ソースとの対話の詳細を管理する <xref:System.Windows.Forms.BindingSource> コンポーネントにバインドします。 <xref:System.Windows.Forms.BindingSource> コンポーネントは Windows フォームのデータ ソースを表すことができ、データの場所を選択または変更するときに、優れた柔軟性を提供します。 サポートされるデータ ソースの詳細については、<xref:System.Windows.Forms.DataGridView>コントロールを参照してください[DataGridView コントロールの概要](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)します。  

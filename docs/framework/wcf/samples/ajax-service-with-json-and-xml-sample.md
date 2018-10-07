@@ -2,24 +2,24 @@
 title: JSON および XML 形式の AJAX サービスのサンプル
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 1beb89c11fccefec24ccbebc3fe30033a646718d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 17b0fd362ac84c7fbc0c9e88fb3d318966356bc6
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520075"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836194"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON および XML 形式の AJAX サービスのサンプル
 このサンプルでは、Windows Communication Foundation (WCF) を使用して、JavaScript Object Notation (JSON) または XML データを返す Asynchronous JavaScript and XML (AJAX) サービスを作成する方法を示します。 AJAX サービスには、Web ブラウザー クライアントから JavaScript コードを使用してアクセスできます。 このサンプルでビルド、[基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)サンプル。  
   
- 他の AJAX サンプルとは異なり、このサンプルでは ASP.NET AJAX および <xref:System.Web.UI.ScriptManager> コントロールを使用しません。 いくつか追加の構成では、WCF AJAX サービスは、JavaScript を使用して HTML ページからアクセスでき、このシナリオを次に示します。 WCF を使用して ASP.NET AJAX での例は、次を参照してください。 [AJAX のサンプル](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)します。  
+ 他の AJAX サンプルとは異なり、このサンプルでは ASP.NET AJAX および <xref:System.Web.UI.ScriptManager> コントロールを使用しません。 いくつか追加の構成では、WCF AJAX サービスは、JavaScript を使用して HTML ページからアクセスでき、このシナリオを次に示します。 WCF を使用して ASP.NET AJAX での例は、次を参照してください。 [AJAX のサンプル](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)します。
   
  このサンプルでは、JSON と XML 間で操作の応答のタイプを切り替える方法を示します。 この機能は、サービスが ASP.NET AJAX または HTML/JavaScript クライアント ページでアクセスできるように構成されているかどうかにかかわらず使用できます。  
   
 > [!NOTE]
->  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
+> このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
   
- ASP.NET AJAX 以外のクライアントを使用するには、.svc ファイルで <xref:System.ServiceModel.Activation.WebServiceHostFactory> (<xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> ではありません) を使用します。 <xref:System.ServiceModel.Activation.WebServiceHostFactory> によって、<xref:System.ServiceModel.Description.WebHttpEndpoint> 標準エンドポイントがサービスに追加されます。 エンドポイントは; .svc ファイルに相対する空のアドレスで構成されます。つまり、サービスのアドレスは http://localhost/ServiceModelSamples/service.svc操作名以外にない追加のサフィックス。  
+ASP.NET AJAX 以外のクライアントを使用するには、.svc ファイルで <xref:System.ServiceModel.Activation.WebServiceHostFactory> (<xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> ではありません) を使用します。 <xref:System.ServiceModel.Activation.WebServiceHostFactory> によって、<xref:System.ServiceModel.Description.WebHttpEndpoint> 標準エンドポイントがサービスに追加されます。 エンドポイントは; .svc ファイルに相対する空のアドレスで構成されます。つまり、サービスのアドレスは`http://localhost/ServiceModelSamples/service.svc`操作名以外にない追加のサフィックス。  
   
 ```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
@@ -109,7 +109,7 @@ xmlHttp.onreadystatechange=function(){
   
 2.  」の説明に従って、ソリューション XmlAjaxService.sln をビルド[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-3.  移動します http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm(開かないで XmlAjaxClientPage.htm プロジェクト ディレクトリからブラウザーで)。  
+3.  移動します`http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm`(開かないで XmlAjaxClientPage.htm プロジェクト ディレクトリからブラウザーで)。  
   
 ## <a name="see-also"></a>関連項目  
  [HTTP POST を使用する AJAX サービス](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

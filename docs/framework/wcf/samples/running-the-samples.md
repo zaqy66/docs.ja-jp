@@ -2,12 +2,12 @@
 title: Windows Communication Foundation サンプルの実行
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: d6fc93af217bfc282ce7030973be32baf7d864cd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3e49a88fa5369cc2ad2251e48f3eca74fa7c4445
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618693"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836915"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの実行
 1 台のコンピューターまたはコンピューター間の構成では、Windows Communication Foundation (WCF) サンプルを実行できます。 サンプルは、単一コンピューターでそのまま実行できます。 複数コンピューター構成で実行するには、サンプルの構成ファイルの設定を変更する必要があります。 単一コンピューターおよび複数コンピューターの構成でサンプルを実行する手順を、次に示します。 インターネット インフォメーション サービス (IIS) でホストされるサービスと自己ホスト型のサービスのサンプルとでは、手順が異なります。 ほとんどのサンプルは IIS でホストされます。サンプルのホスト方法を判断するには、サンプルの Readme 情報を参照してください。  
@@ -19,7 +19,7 @@ ms.locfileid: "45618693"
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>サンプルを同じコンピューターで実行するには  
   
-1.  場合は、サービスが IIS によってホストされている、次のアドレスを入力して、ブラウザーを使用して、サービスにアクセスできることを確認します:http://localhost/servicemodelsamples/service.svcします。 これに応答して、確認ページが表示されます。 [確認] ページが表示されない場合は、次を参照してください。[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
+1.  場合は、サービスが IIS によってホストされている、次のアドレスを入力して、ブラウザーを使用して、サービスにアクセスできることを確認します:`http://localhost/servicemodelsamples/service.svc`します。 これに応答して、確認ページが表示されます。 [確認] ページが表示されない場合は、次を参照してください。[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
   
 2.  サービスが自己ホスト型の場合は、言語固有のフォルダーの下の \service\bin にある Service.exe を実行します。 サービス アクティビティがサービス コンソール ウィンドウに表示されます。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "45618693"
   
 2.  サービスが IIS でホストされている場合 :  
   
-    1.  アドレスを入力して、ブラウザーを使用して、サービスをアクティブ化 http://localhost/servicemodelsamples/service.svcします。  
+    1.  アドレスを入力して、ブラウザーを使用して、サービスをアクティブ化`http://localhost/servicemodelsamples/service.svc`します。  
   
     2.  ソリューションでは、選択、**デバッグ**メニューおよび**プロセスにアタッチ**メニュー項目。  
   

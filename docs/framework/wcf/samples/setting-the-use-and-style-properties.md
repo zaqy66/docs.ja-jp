@@ -2,12 +2,12 @@
 title: Use および Style プロパティの設定
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: d5e6409e3921d40b14b940786f6344aea657b84b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c4cee5fac84d8fb47565cc4ebde47f04365b989e
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865541"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836851"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Use および Style プロパティの設定
 このサンプルでは、<xref:System.ServiceModel.XmlSerializerFormatAttribute> と <xref:System.ServiceModel.DataContractFormatAttribute> で Use および Style プロパティを使用する方法を示します。 これらのプロパティは、メッセージの書式設定の方法を制御します。 既定では、メッセージの本文は、<xref:System.ServiceModel.OperationFormatStyle.Document> に設定されたスタイルを使用して書式設定されます。 こうした設定は、サービス コントラクト レベルと操作コントラクト レベルのどちらのレベルでも指定できます。  
@@ -73,7 +73,7 @@ public interface IUseAndStyleCalculator
 }  
 ```  
   
- それぞれの <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 設定と <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 設定との違いを示すには、これらの設定をサービス内で変更してクライアントを再生成し、サンプルを実行します。その後、サービス ビューア ツールを使用して c:\logs\message.logs ファイルを調べます。 表示しても、メタデータへの影響を観察 http://localhost/ServiceModelSamples/service.svc?wsdl です。 通常、サービスのメタデータは複数のページに分割されます。 メインの wsdl ページには、WSDL バインディングが含まれていますが、表示 http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 メッセージの定義を確認します。  
+ それぞれの <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 設定と <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 設定との違いを示すには、これらの設定をサービス内で変更してクライアントを再生成し、サンプルを実行します。その後、サービス ビューア ツールを使用して c:\logs\message.logs ファイルを調べます。 表示しても、メタデータへの影響を観察 `http://localhost/ServiceModelSamples/service.svc?wsdl` です。 通常、サービスのメタデータは複数のページに分割されます。 メインの wsdl ページには、WSDL バインディングが含まれていますが、表示 `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` メッセージの定義を確認します。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   

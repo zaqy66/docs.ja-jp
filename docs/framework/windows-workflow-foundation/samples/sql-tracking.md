@@ -2,12 +2,12 @@
 title: SQL 追跡
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 84d3fb994c790301ceb55b945bf972c21ed2a971
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 741df337187b2a5fffe63052c9fafbd430f7c2fc
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584326"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836382"
 ---
 # <a name="sql-tracking"></a>SQL 追跡
 このサンプルでは、カスタム SQL 追跡参加要素を作成し、追跡レコードを SQL データベースに書き込む方法を示します。 Windows Workflow Foundation (WF) は、ワークフロー インスタンスの実行時に可視性を示すワークフロー追跡を提供します。 追跡ランタイムでは、ワークフローの実行中にワークフロー追跡レコードが出力されます。 ワークフロー追跡の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)します。
@@ -33,7 +33,7 @@ ms.locfileid: "48584326"
   
 7.  ブラウザーに、[StockPriceService] ページが表示され、ローカル サービスの WSDL アドレスが示されます。 このアドレスをコピーします。  
   
-     ローカル サービスの WSDL アドレスの例は http://localhost:65193/StockPriceService.xamlx?wsdlします。  
+     ローカル サービスの WSDL アドレスの例は`http://localhost:65193/StockPriceService.xamlx?wsdl`します。  
   
 8.  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] を使用して、WCF テスト クライアント (WcfTestClient.exe) を実行します。 このテスト クライアントは Microsoft Visual Studio 10.0\Common7\IDE ディレクトリにあります。  
   

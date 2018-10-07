@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービス (IIS) サーバー証明書インストール手順
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502606"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838248"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>インターネット インフォメーション サービス (IIS) サーバー証明書インストール手順
 インターネット インフォメーション サービス (IIS) と安全に通信するこのサンプルを実行するには、サーバー証明書を作成してインストールする必要があります。  
@@ -26,17 +26,17 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 1.  インターネット インフォメーション サービス マネージャー MMC スナップインを開きます。  
   
-2.  既定の Web サイトを右クリックし **プロパティ**です。  
+2.  既定の Web サイトを右クリックして**プロパティ**します。  
   
-3.  選択、**ディレクトリ セキュリティ**タブです。  
+3.  選択、**ディレクトリ セキュリティ**タブ。  
   
-4.  クリックして、**サーバー証明書**ボタンをクリックします。 Web サーバー証明書ウィザードが起動します。  
+4.  をクリックして、**サーバー証明書**ボタンをクリックします。 Web サーバー証明書ウィザードが起動します。  
   
 5.  ウィザードを完了します。 証明書を割り当てるオプションを選択します。 表示される証明書の一覧から ServiceModelSamples-HTTPS-Server 証明書を選択します。  
   
      ![証明書ウィザードの IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  HTTPS アドレスを使用して、ブラウザーでサービスへのアクセスをテストhttps://localhost/servicemodelsamples/service.svcです。  
+6.  HTTPS アドレスを使用して、ブラウザーでサービスへのアクセスをテスト`https://localhost/servicemodelsamples/service.svc`します。  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Httpcfg.exe であらかじめ SSL が構成されている場合  
   
@@ -55,17 +55,17 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 #### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>IIS 7.0 (Windows Vista および Windows Server 2008) に証明書をインストールするには  
   
-1.  **開始** メニューのをクリックして**実行**、入力**inetmgr**を開くには、インターネット インフォメーション サービス (IIS) MMC スナップイン。  
+1.  **開始** メニューのをクリックして**実行**、入力**inetmgr**インターネット インフォメーション サービス (IIS) MMC スナップインを開きます。  
   
 2.  右クリックし、**既定の Web サイト**選択**バインドを編集しています.**  
   
-3.  クリックして、**追加**のボタン、**サイト バインド** ダイアログ ボックス。  
+3.  をクリックして、**追加**のボタン、**サイト バインド** ダイアログ ボックス。  
   
 4.  選択**HTTPS**から、**型**ドロップダウン リスト。  
   
-5.  選択、 **ServiceModelSamples HTTPS サーバー**から、 **SSL 証明書**ドロップダウン リストをクリック**OK**です。  
+5.  選択、 **ServiceModelSamples-HTTPS サーバー**から、 **SSL 証明書**ドロップダウン リストをクリックします**OK**します。  
   
-6.  HTTPS アドレスを使用して、ブラウザーでサービスへのアクセスをテストhttps://localhost/servicemodelsamples/service.svcです。  
+6.  HTTPS アドレスを使用して、ブラウザーでサービスへのアクセスをテスト`https://localhost/servicemodelsamples/service.svc`します。  
   
 > [!NOTE]
 >  先ほどインストールしたテスト証明書は信頼された証明書ではないので、この証明書でセキュリティ保護されたローカル Web アドレスを参照した場合、Internet Explorer のセキュリティ警告がさらに発生する場合があります。  

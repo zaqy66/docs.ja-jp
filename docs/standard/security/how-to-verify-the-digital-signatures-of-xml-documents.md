@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ec813e50bb4dca33c8dda8b41914cfa5d5596c2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 8ef87e2c1625ebdf88dc1d21444fbbf185d486c3
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111855"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840363"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>方法 : XML ドキュメントのデジタル署名を検証する
-<xref:System.Security.Cryptography.Xml> 名前空間にあるクラスを使用すると、デジタル署名で署名された XML データを検証できます。  XML デジタル署名 (XMLDSIG) を使用すると、データが署名後に変更されなかったことを確認できます。  XMLDSIG 標準の詳細についてにある World Wide Web Consortium (W3C) 仕様を参照して http://www.w3.org/TR/xmldsig-core/ です。  
+<xref:System.Security.Cryptography.Xml> 名前空間にあるクラスを使用すると、デジタル署名で署名された XML データを検証できます。 XML デジタル署名 (XMLDSIG) を使用すると、データが署名後に変更されなかったことを確認できます。 XMLDSIG 標準の詳細についてにある World Wide Web Consortium (W3C) 仕様を参照して <https://www.w3.org/TR/xmldsig-core/> です。
   
  この手順のコード例では、<`Signature`> 要素に格納されている XML デジタル署名の検証方法を示します。  この例では、キー コンテナーから RSA 公開キーを取得してから、キーを使用して署名を確認します。  
   

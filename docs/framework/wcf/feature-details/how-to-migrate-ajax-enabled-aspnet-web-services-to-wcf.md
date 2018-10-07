@@ -3,11 +3,11 @@ title: '方法 : AJAX 対応 ASP.NET Web サービスを WCF に移行する'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793346"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840915"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>方法 : AJAX 対応 ASP.NET Web サービスを WCF に移行する
 このトピックでは、基本的な ASP.NET AJAX サービスを同等の AJAX 対応の Windows Communication Foundation (WCF) サービスに移行する手順について説明します。 同等の WCF が ASP.NET AJAX サービスのバージョンを作成する方法を示します。 並行して 2 つのサービスは使用して、または WCF サービスが ASP.NET AJAX サービスを置き換えることができます。

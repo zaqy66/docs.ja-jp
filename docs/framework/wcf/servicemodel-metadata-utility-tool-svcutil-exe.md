@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 01a30ac6cb252eba51cfff8a221c28425f347b0a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200764"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837265"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)
 
@@ -236,7 +236,7 @@ Svcutil.exe は、必要な C# シリアル化コードをアプリケーショ�
 
 svcutil を使用してサービスのメタデータを生成する場合、次のメッセージが表示されます。
 
-エラー: からメタデータを取得できません http://localhost:8000/somesservice/mexXML データの読み取り中には、最大 nametable 文字数のクォータ (16384) を超えました。 nametable は、XML 処理時に検出された文字列を格納するためのデータ構造です。反復されない要素名、属性名、および属性値が含まれた長い XML ドキュメントによってこのクォータがトリガーされることがあります。 このクォータを増やすには、XML リーダーの作成時に使用される XmlDictionaryReaderQuotas オブジェクトの MaxNameTableCharCount プロパティを変更してください。
+エラー: からメタデータを取得できません`http://localhost:8000/somesservice/mex`XML データの読み取り中には、最大 nametable 文字数のクォータ (16384) を超えました。 nametable は、XML 処理時に検出された文字列を格納するためのデータ構造です。反復されない要素名、属性名、および属性値が含まれた長い XML ドキュメントによってこのクォータがトリガーされることがあります。 このクォータを増やすには、XML リーダーの作成時に使用される XmlDictionaryReaderQuotas オブジェクトの MaxNameTableCharCount プロパティを変更してください。
 
 このエラーの原因は、メタデータの要求時に大きな WSDL ファイルを返すサービスである可能性があります。 その結果、svcutil.exe ツールの文字のクォータを超えることになります。 この値は、サービス拒否 (dos) 攻撃を防止するために設定されています。 このクォータは、次の svcutil の構成ファイルを指定して増やすことができます。
 

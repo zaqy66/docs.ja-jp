@@ -2,12 +2,12 @@
 title: ASMX Web サービスとの相互運用性
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: ff1b497dde615e5c14417bd0ad14f1dbfd80d5e2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 58e0a527e853436acf4ab6420d2dd28cbdfbd1fa
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864538"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842453"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>ASMX Web サービスとの相互運用性
 このサンプルでは、既存の ASMX Web サービスと Windows Communication Foundation (WCF) クライアント アプリケーションを統合する方法を示します。  
@@ -46,7 +46,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- サービスにアクセスできるように構成されている、 http://localhost/servicemodelsamples/service.asmx同じマシン上のクライアントによって。 リモート コンピューター上のクライアントがサービスにアクセスするには、localhost の代わりに修飾ドメイン名を指定する必要があります。  
+ サービスにアクセスできるように構成されている、`http://localhost/servicemodelsamples/service.asmx`同じマシン上のクライアントによって。 リモート コンピューター上のクライアントがサービスにアクセスするには、localhost の代わりに修飾ドメイン名を指定する必要があります。  
   
  によって生成されたクライアントからの通信が行われます、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 このクライアントは、ファイル generatedClient.cs に含まれています。 プロキシ コードを生成するには、ASMX サービスを利用できる必要があります。このサービスは、更新されたメタデータの取得に使用されるためです。 次のコマンドをクライアント ディレクトリでコマンド プロンプトから実行して、型指定のあるプロキシを生成します。  
   

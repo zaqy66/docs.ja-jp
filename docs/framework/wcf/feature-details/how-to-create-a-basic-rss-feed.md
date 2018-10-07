@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: d5b62d968c38401a19fc9009954450bef210e5a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf8f719a47fda8b592165368234a2db0467c59ce
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493283"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835796"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>方法 : 基本的な RSS フィードを作成する
-Windows Communication Foundation (WCF) では、配信フィードを公開するサービスを作成することができます。 ここでは、RSS 配信フィードを公開する配信サービスを作成する方法について説明します。  
+Windows Communication Foundation (WCF) では、配信フィードを公開するサービスを作成できます。 ここでは、RSS 配信フィードを公開する配信サービスを作成する方法について説明します。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>基本的な配信サービスを作成するには  
   
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) では、配信フィードを公開す�
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  <xref:System.ServiceModel.Web.WebGetAttribute> 属性を適用するすべてのサービス操作は、HTTP GET 要求にマッピングされます。 他の HTTP メソッドに操作をマッピングするには、代わりに <xref:System.ServiceModel.Web.WebInvokeAttribute> を使用します。 詳細については、次を参照してください。[する方法: 基本的な WCF Web HTTP サービスを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)です。  
+    >  <xref:System.ServiceModel.Web.WebGetAttribute> 属性を適用するすべてのサービス操作は、HTTP GET 要求にマッピングされます。 他の HTTP メソッドに操作をマッピングするには、代わりに <xref:System.ServiceModel.Web.WebInvokeAttribute> を使用します。 詳細については、次を参照してください。[方法: 基本的な WCF Web HTTP サービス作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)です。  
   
 2.  サービス コントラクトを実装します。  
   
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) では、配信フィードを公開す�
   
 ### <a name="to-call-getblog-with-an-http-get"></a>HTTP GET で GetBlog() を呼び出すには  
   
-1.  Internet Explorer を開き、次の URL を入力して ENTER キーを押します。http://localhost:8000/BlogService/GetBlogです。 URL には、サービスのベース アドレスが含まれています (http://localhost:8000/BlogService)エンドポイント、およびを呼び出すサービス操作の相対アドレス。  
+1.  Internet Explorer を開き、次の URL を入力して ENTER キーを押します。`http://localhost:8000/BlogService/GetBlog`します。 URL には、サービスのベース アドレスが含まれています (`http://localhost:8000/BlogService`)、エンドポイント、および呼び出すサービス操作の相対アドレス。  
   
 ### <a name="to-call-getblog-from-code"></a>コードから GetBlog() を呼び出すには  
   

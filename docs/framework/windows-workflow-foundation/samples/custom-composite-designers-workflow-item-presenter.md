@@ -3,11 +3,11 @@ title: カスタム複合デザイナー - Workflow Item Presenter
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
 ms.openlocfilehash: 7a3089f1b96cfc766143dd62d9f917fb014af636
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48776927"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836697"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>カスタム複合デザイナー - Workflow Item Presenter
 <xref:System.Activities.Presentation.WorkflowItemPresenter>任意のアクティビティを配置できる場所の「ドロップ ゾーン」を作成するため、WF デザイナー プログラミング モデル内の主要な型です。 このサンプルは、このような「ドロップ ゾーンです。」を表示するアクティビティ デザイナーを構築する方法を示しています。

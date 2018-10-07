@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 34173812f4f6fac940632e23e6641e458250a4ee
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7cd25b980afa067ac78fc081c0a7a8e65a23258b
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028188"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838261"
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt;要素 (ネットワーク設定)
 使用してネットワークのホストから情報を要求するモジュールを指定します。  
@@ -54,7 +54,7 @@ ms.locfileid: "48028188"
 ## <a name="remarks"></a>Remarks  
  `webRequestModules`要素の子孫を登録する、<xref:System.Net.WebRequest>ネットワーク ホストへの情報要求を処理するクラス。 Web 要求モジュールを実装する必要があります、<xref:System.Net.IWebRequestCreate>インターフェイス。  
   
- .NET Framework には、 http://、 https://、 および file://  で始まる Uri の Web 要求のモジュールが含まれています。 既定のモジュールは、構成ファイルでカスタム モジュールを登録することによってのみオーバーライドできます。  
+ .NET Framework には、Web 要求モジュールにはで始まる uri が含まれています`http://`、 `https://`、および`file://`します。 既定のモジュールは、構成ファイルでカスタム モジュールを登録することによってのみオーバーライドできます。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  

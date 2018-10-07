@@ -3,12 +3,12 @@ title: Windows Communication Foundation のセキュリティ動作
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 author: BrucePerlerMS
-ms.openlocfilehash: a4727b98d98caadef5cd7ae61cddd92d6d8408b9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d995ce4c37084cb8641199ec7dfa826b65e02b65
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397975"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841405"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
 Windows Communication Foundation (WCF) での動作は、サービス レベルまたはエンドポイント レベルでの実行時の動作を変更します。 (一般に、表示動作の詳細については[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md))。*セキュリティ動作*および監査ログの資格情報、認証、承認、制御できるようにします。 動作は、プログラムまたは構成を通じて使用できます。 ここでは、セキュリティ機能に関連する以下の動作の構成について説明します。  
@@ -125,7 +125,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
  [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)トークン、またはセキュリティ トークン サービスで使用する動作のローカル発行者の構成に使用する要素が含まれています。 ローカル発行者を使用するクライアントの構成については、次を参照してください。[方法: ローカル発行者を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)します。  
   
 #### <a name="localissueraddress"></a>\<localissueraddress プロパティ >  
- 既定のセキュリティ トークン サービス アドレスを指定します。 これは、使用時に、<xref:System.ServiceModel.WSFederationHttpBinding>またはフェデレーション バインディングの発行者アドレスが、セキュリティ トークン サービスの URL を指定していません http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous または`null`です。 そのような場合、<xref:System.ServiceModel.Description.ClientCredentials> は、ローカルの発行者およびバインディングのアドレスと共に構成し、その発行者と通信するために使用する必要があります。  
+ 既定のセキュリティ トークン サービス アドレスを指定します。 これは、使用時に、<xref:System.ServiceModel.WSFederationHttpBinding>またはフェデレーション バインディングの発行者アドレスが、セキュリティ トークン サービスの URL を指定していません `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` または`null`です。 そのような場合、<xref:System.ServiceModel.Description.ClientCredentials> は、ローカルの発行者およびバインディングのアドレスと共に構成し、その発行者と通信するために使用する必要があります。  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
  使用して、 [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)セキュリティ トークン サービスと通信するときに使用される WCF クライアントの動作を追加します。 クライアント動作を定義、 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)セクション。 定義された動作を使用するには追加、<`add`> 要素を`<issuerChannelBehaviors>`2 つの属性を持つ要素。 次の例に示すように、`issuerAddress` をセキュリティ トークン サービスの URL に設定し、`behaviorConfiguration` 属性を定義済みのエンドポイントの動作の名前に設定します。  

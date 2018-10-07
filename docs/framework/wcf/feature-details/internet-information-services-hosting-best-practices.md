@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービス ホスティングのベスト プラクティス
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073594"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840746"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>インターネット インフォメーション サービス ホスティングのベスト プラクティス
 このトピックでは、Windows Communication Foundation (WCF) サービスをホストするためのベスト プラクティスについて説明します。  
@@ -33,7 +33,7 @@ ms.locfileid: "47073594"
  また、中間層シナリオでは、`svcutil /a` オプションによって生成された非同期 API を使用してパフォーマンスを向上させます。 `/a`オプションにより、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を生成する`BeginXXX/EndXXX`リモート サービスで行われる可能性のある実行の時間の長い呼び出しは、サービス操作ごとにメソッドバック グラウンド スレッドです。  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>マルチホーム シナリオまたはマルチネーム シナリオでの WCF  
- 一連のコンピューターが共通の外部名を共有する、IIS Web ファーム内の WCF サービスをデプロイすることができます (など http://www.contoso.com) は異なるホスト名によって個別にアドレス指定が、(たとえば、 http://www.contoso.com 2 台のコンピューターにトラフィックを送る可能性があります名前付き http://machine1.internal.contoso.com と http://machine2.internal.contoso.com) します。 この展開シナリオは、WCF によって完全にサポートされますが、サービスのメタデータ (Web Services Description Language) に正しい (外部) ホスト名を表示する WCF サービスをホストする IIS Web サイトの特別な構成が必要です。  
+ 一連のコンピューターが共通の外部名を共有する、IIS Web ファーム内の WCF サービスをデプロイすることができます (など`http://www.contoso.com`) は、異なるホスト名によって個別にアドレス指定が、(たとえば、 `http://www.contoso.com` 2 台のコンピューターにトラフィックを送る可能性があります名前付き`http://machine1.internal.contoso.com`と`http://machine2.internal.contoso.com`)。 この展開シナリオは、WCF によって完全にサポートされますが、サービスのメタデータ (Web Services Description Language) に正しい (外部) ホスト名を表示する WCF サービスをホストする IIS Web サイトの特別な構成が必要です。  
   
  生成 WCF サービス メタデータに正しいホスト名が表示されていることを確認するのには、明示的なホスト名を使用する WCF サービスをホストする IIS Web サイトの既定の id を構成します。 Www.contoso.com ファームの内部に存在するコンピューターでの IIS サイト バインディングを使用して、* http:80:www.contoso.com と\*: https 443:www.contoso.com します。  
   

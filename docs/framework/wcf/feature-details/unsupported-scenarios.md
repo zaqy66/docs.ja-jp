@@ -2,12 +2,12 @@
 title: サポートされていないシナリオ
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 6c0ee061f754e85244bffdc06cbe23aee68d2222
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858067"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845685"
 ---
 # <a name="unsupported-scenarios"></a>サポートされていないシナリオ
 さまざまな理由は、Windows Communication Foundation (WCF) は一部の特定のセキュリティ シナリオをサポートしていません。 たとえば、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition は SSPI または Kerberos 認証プロトコルを実装していないため WCF サポートしていないプラットフォームで Windows 認証を使用したサービスを実行します。 ユーザー名/パスワードや HTTP/HTTPS 統合認証などの他の認証メカニズムは、Windows XP Home Edition で WCF を実行している場合にサポートされます。  
@@ -93,11 +93,11 @@ ms.locfileid: "43858067"
   
  そのような状況の例は次の 3 つのエンドポイント アドレスを使うサービスです。  
   
--   http://localhost/CalculatorService/service (サービス)  
+- `http://localhost/CalculatorService/service` (サービス)  
   
--   http://localhost/CalculatorService/issue_ticket (STS)  
+- `http://localhost/CalculatorService/issue_ticket` (STS)  
   
--   http://localhost/CalculatorService/mex (メタデータ エンドポイント)  
+- `http://localhost/CalculatorService/mex` (メタデータ エンドポイント)  
   
  これによって例外がスローされます。  
   

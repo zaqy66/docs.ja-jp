@@ -3,11 +3,11 @@ title: '&lt;netHttpBinding&gt; の &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
 ms.openlocfilehash: 092072df2b88c59c7744a694175ce5ddf39cf79b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580533"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842646"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; の &lt;transport&gt;
 HTTP トランスポートの認証パラメーターを制御するプロパティを定義します。  

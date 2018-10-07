@@ -3,11 +3,11 @@ title: 宣言の制約
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
 ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580492"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842373"
 ---
 # <a name="declarative-constraints"></a>宣言の制約
 宣言の制約には、アクティビティ、およびそのアクティビティと他のアクティビティとの関係に関する検証の強力なメソッドが用意されています。 アクティビティに関する制約はプロセスの作成中に構成されますが、ワークフロー ホストによって追加の制約を指定することもできます。 ここでは、宣言の制約を使用してアクティビティを検証する方法の概要について説明します。  

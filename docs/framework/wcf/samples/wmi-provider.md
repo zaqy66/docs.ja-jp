@@ -2,12 +2,12 @@
 title: WMI プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: c3eb97537706282491de1863224e1502d6b56fda
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7947d9a1bedfe7a2a550a7b4d52b3cf5a8f40126
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617942"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839399"
 ---
 # <a name="wmi-provider"></a>WMI プロバイダー
 このサンプルでは、WCF に組み込まれている Windows Management Instrumentation (WMI) プロバイダーを使用して、実行時に Windows Communication Foundation (WCF) サービスからデータを収集する方法を示します。 また、このサンプルでは、ユーザー定義の WMI オブジェクトをサービスに追加する方法も示します。 サンプルの WMI プロバイダーをアクティブ化、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)からデータを収集する方法について説明し、`ICalculator`実行時にサービス。  
@@ -125,7 +125,7 @@ cscript EnumerateCustomObjects.js
   
 2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  サービス スキーマを WMI に公開します。これを行うには、ホスト ディレクトリ内の service.dll ファイルに対して、InstallUtil.exe (既定の場所は "%WINDIR%\Microsoft.NET\Framework\v4.0.30319") を実行します。 この手順を実行する必要があるのは、service.dll ファイルを変更した場合のみです。 詳細については、アプリケーションのインストルメント化による管理情報の提供を参照してください: http://msdn2.microsoft.com/library/ms186147.aspx 「方法: アプリケーション公開する、スキームに WMI のインストルメント化された」セクションでします。  
+3.  サービス スキーマを WMI に公開します。これを行うには、ホスト ディレクトリ内の service.dll ファイルに対して、InstallUtil.exe (既定の場所は "%WINDIR%\Microsoft.NET\Framework\v4.0.30319") を実行します。 この手順を実行する必要があるのは、service.dll ファイルを変更した場合のみです。
   
 4.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   

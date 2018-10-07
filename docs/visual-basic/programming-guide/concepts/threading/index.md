@@ -2,12 +2,12 @@
 title: スレッド処理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
-ms.openlocfilehash: f477a36c6ffa0b5a809c8ba899b21d19a8c9a2d8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 366c88db5d229120b1e626f275b4eeb8ecd42dba
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861947"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844996"
 ---
 # <a name="threading-visual-basic"></a>スレッド処理 (Visual Basic)
 スレッド処理により、Visual Basic プログラムが同時処理を実行できるようになり、一度に複数の操作を行うことが可能になります。 たとえば、スレッド処理を使用してユーザーの入力を監視したり、バックグラウンド タスクを実行したり、入力の同時ストリームを処理したりできます。  
@@ -35,7 +35,6 @@ ms.locfileid: "43861947"
   
 ## <a name="related-topics"></a>関連トピック  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
-|[スレッドの同期 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)|スレッドの相互作用を制御する方法について説明します。|  
 |[スレッド化](../../../../standard/threading/index.md)|.NET Framework でのスレッドの実装方法について説明します。|

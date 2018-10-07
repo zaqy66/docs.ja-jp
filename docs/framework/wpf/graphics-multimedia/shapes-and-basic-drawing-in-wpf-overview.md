@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 47df352c3b001f088f34ea057b34698efc4f4b53
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778102"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845799"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF での図形と基本描画の概要
 このトピックを使用して描画する方法の概要を示します<xref:System.Windows.Shapes.Shape>オブジェクト。 A<xref:System.Windows.Shapes.Shape>の種類は、<xref:System.Windows.UIElement>画面に図形を描画することができます。 UI 要素であるため<xref:System.Windows.Shapes.Shape>オブジェクトは内で使用できる<xref:System.Windows.Controls.Panel>要素とほとんどのコントロール。  

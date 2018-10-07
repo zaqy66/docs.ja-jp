@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7daac744238feb38358e4cc0ab185e90257aa98d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: faae4b3e3ef96d1d8dd73b7ac313b0a5deffec34
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027456"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838235"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Visual Studio Tools for Docker (Windows で Visual Studio) を使用
 
@@ -65,6 +65,23 @@ Docker サポートを有効にすると、Visual Studio の追加、 *Dockerfil
 Visual Studio 2017 でのソリューション エクスプ ローラーで、図 4-29: Docker ファイル
 
 場合*docker compose.yml*が既に存在する Visual Studio に必要な構成コードの行を追加するだけです。
+
+## <a name="configure-docker-tools"></a>Docker ツールを構成します。
+
+メイン メニューで、次のように選択します。**ツール** > **オプション**、展開と**コンテナー ツール** > **設定**します。 コンテナーのツールの設定が表示されます。
+
+![](./media/visual-studio-docker-tools-options.png)
+
+図 4-30: Docker Tools のオプション
+
+次の表は、これらのオプションを設定する方法を決定するのに役立ちます。
+
+| 名前 | 既定の設定 | 説明 |
+| -----|:---------------:| ----------- |
+| プロジェクトの読み込みで必要な Docker イメージを自動的にプルします。 | オン | パフォーマンス向上のためのプロジェクトを読み込むときに、Visual Studio は、イメージが既にダウンロードしてコードを実行する準備ができたら、ダウンロード処理中にまたは、バック グラウンドで Docker プルの操作が開始されます。 プロジェクトをロードする場合だけ、コードを参照するには、これをオフにできます必要はありません、コンテナー イメージをダウンロードしないようにする場合。 |
+| コンテナーをバック グラウンドで自動的に開始します。 | オン | もう一度パフォーマンスを向上させる Visual Studio によりコンテナーとボリューム マウント ビルドおよびコンテナーを実行する場合に対応。 コンテナーが作成されたときを制御するには、これをオフにします。 |
+| 自動的に強制終了のコンテナー ソリューションを閉じる | オン | コンテナー ソリューションを閉じるか、Visual Studio の終了後も引き続き実行に、ソリューションが希望される場合は、これをオフにします。 |
+| Localhost SSL 証明書を信頼する側は表示しません | オフ | Visual Studio は、新しいプロジェクトの SSL 証明書が以前のプロジェクトに対して信頼されている後にも入力を求めるし続けます。 他のプロジェクトを開くと、プロンプトを回避するには、このチェック ボックスをオンに設定することができます。 |
 
 **詳細については:** サービスの実装と Visual Studio tools for Docker の使用の詳細については、次の記事を参照します。
 

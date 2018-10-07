@@ -2,12 +2,12 @@
 title: デザイナーのホスト変更
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: f8dbe89ec605f3e957b5178eafd2e034e8159dc3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028915"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837359"
 ---
 # <a name="designer-rehosting"></a>デザイナーのホスト変更
 デザイナーのホスト変更は、カスタム アプリケーション内でワークフロー デザイン キャンバスをホストすることを示す一般的なシナリオです。 多くのユーザーにとって、使い慣れたホスト アプリケーションは Visual Studio ですが、アプリケーションでワークフロー デザイナーを表示すると役立つ場合があるシナリオも数多くあります。  
@@ -114,7 +114,7 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>サンプルの使用  
   
-1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] で DesignerRehosting.sln ソリューションを開きます。  
+1.  Visual Studio 2010 で DesignerRehosting.sln ソリューションを開きます。  
   
 2.  F5 キーを押してアプリケーションをコンパイルし、実行します。  
   

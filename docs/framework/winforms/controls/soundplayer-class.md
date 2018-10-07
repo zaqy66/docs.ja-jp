@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 57d9affa76a5f24e8a3ab6b3d13516396a82eb92
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 29399beebef3de3e7b4ae8ce7f3611e3d158296f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002874"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835582"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer クラス
 `SoundPlayer` クラスを使用すると、アプリケーションにサウンドを簡単に組み込むことができます。  
@@ -51,4 +51,6 @@ ms.locfileid: "46002874"
  [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   
- 参照してください[HYPERLINK"http://msdn.microsoft.com/library/11bxex12(v=vs.110)"My.Computer オブジェクト](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\))または[My.Computer オブジェクト](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\))します。
+## <a name="see-also"></a>関連項目 
+
+- [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)

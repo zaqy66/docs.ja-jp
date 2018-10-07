@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
 author: BrucePerlerMS
 ms.openlocfilehash: 25e48125cff5a9761d0b880bf755a94463d42f19
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580577"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839226"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 認証モード
 Windows Communication Foundation (WCF) は、クライアントとサービスを相互に認証されるいくつかのモードを提供します。 <xref:System.ServiceModel.Channels.SecurityBindingElement> クラスの静的メソッドまたは構成を使用して、この認証モード用のセキュリティ バインド要素を作成できます。 このトピックでは、18 の認証モードについて簡単に説明します。  

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 087deeef91367210db936f2976a3846d0279dcba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f640372504658c8f7935d3d219cd373f19ebf31f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491856"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837535"
 ---
 # <a name="claims-and-tokens"></a>クレームとトークン
-このトピックでは、Windows Communication Foundation (WCF) をサポートしている既定のトークンから作成するさまざまなクレームの種類について説明します。  
+このトピックでは、サポートされている既定のトークンから Windows Communication Foundation (WCF) を作成するさまざまな要求の種類について説明します。  
   
  クライアント資格情報のクレームは、<xref:System.IdentityModel.Claims.ClaimSet> クラスと <xref:System.IdentityModel.Claims.Claim> クラスを使用して確認できます。 `ClaimSet` には、`Claim` オブジェクトのコレクションが格納されます。 各 `Claim` には、次の重要なメンバーがあります。  
   
--   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> プロパティは、作成されるクレームの種類を指定する URI (Uniform Resource Identifier) を返します。 たとえば、クレームの種類が証明書の拇印の場合、その URI は http:schemas.microsoft.com/ws/20005/05/identity/claims/thumprint です。  
+-   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> プロパティは、作成されるクレームの種類を指定する URI (Uniform Resource Identifier) を返します。 たとえば、要求の種類は、URI の場合は、証明書の拇印を可能性があります`http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint`します。  
   
 -   <xref:System.IdentityModel.Claims.Claim.Right%2A> プロパティは、クレームの権限を指定する URI を返します。 定義済みの権限は、<xref:System.IdentityModel.Claims.Rights> クラスにあります (<xref:System.IdentityModel.Claims.Rights.Identity%2A>、<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>)。  
   
@@ -50,19 +50,19 @@ ms.locfileid: "33491856"
   
     -   `Claim` が Thumbprint、`ClaimType` が PossessProperty で、`Right` が証明書の拇印を含んだバイト配列である `Resource`。  
   
-    -   証明書のさまざまなプロパティを表す X500DistinguishedName、Dns、Name、Upn、Rsa などの複数の種類の追加の PossessProperty クレーム。 Rsa クレームのリソースは、証明書に関連付けられている公開キーです。**注**クライアント資格情報の種類が Windows をサービスにマップする証明書をアカウント、2 つ`ClaimSet`オブジェクトが生成されます。 最初のオブジェクトには、Windows アカウントに関するすべてのクレームが入り、2 番目のオブジェクトには、証明書に関するすべてのクレームが入ります。  
+    -   証明書のさまざまなプロパティを表す X500DistinguishedName、Dns、Name、Upn、Rsa などの複数の種類の追加の PossessProperty クレーム。 Rsa クレームのリソースは、証明書に関連付けられている公開キーです。**注**クライアント資格情報の種類が、サービスは、Windows をマップする証明書をアカウント、2 つ`ClaimSet`オブジェクトが生成されます。 最初のオブジェクトには、Windows アカウントに関するすべてのクレームが入り、2 番目のオブジェクトには、証明書に関するすべてのクレームが入ります。  
   
 ## <a name="user-namepassword"></a>ユーザー名/パスワード  
- クライアント資格情報が、Windows アカウントにマップされないユーザー名とパスワード (または同等のもの) の場合、`ClaimSet` は、<xref:System.IdentityModel.Claims.ClaimSet.System%2A> クラスの静的 `ClaimSet` プロパティによって発行されます。 `ClaimSet`が含まれています、`Identity`要求の種類の<xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>リソースがクライアントのユーザー名を提供します。 対応するクレームには、`Right` の`PossessProperty` があります。  
+ クライアント資格情報が、Windows アカウントにマップされないユーザー名とパスワード (または同等のもの) の場合、`ClaimSet` は、<xref:System.IdentityModel.Claims.ClaimSet.System%2A> クラスの静的 `ClaimSet` プロパティによって発行されます。 `ClaimSet`が含まれています、`Identity`要求の種類の<xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>リソースがあるユーザー名クライアントを提供します。 対応するクレームには、`Right` の`PossessProperty` があります。  
   
 ## <a name="rsa-keys"></a>RSA キー  
- 証明書に関連付けられていない RSA キーを使用すると、場所、結果として得られる`ClaimSet`は、自己発行し、が含まれています、`Identity`要求の種類の<xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>リソースが RSA キーです。 対応するクレームには、`Right` の`PossessProperty` があります。  
+ 証明書に関連付けられていない RSA キーが使用される場合、結果の`ClaimSet`は、自己発行し、が含まれています、`Identity`要求の種類の<xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>のリソースが RSA キー。 対応するクレームには、`Right` の`PossessProperty` があります。  
   
 ## <a name="saml"></a>SAML  
  クライアントが SAML (Security Assertions Markup Language) トークンを使用して認証する場合、`ClaimSet` は、SAML トークンを署名したエンティティ (通常は、SAML トークンを発行したセキュリティ トークン サービス (STS) の証明書) によって発行されます。 `ClaimSet` は、SAML トークンに含まれているとおりのさまざまなクレームを格納します。 SAML トークンが、名前が `SamlSubject` 以外の `null` を含んでいる場合、型が `Identity` で、リソース型が <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A> の <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> クレームが作成されます。  
   
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Identity クレームと ServiceSecurityContext.IsAnonymous  
- None の場合、`ClaimSet`クライアントの資格情報の結果オブジェクトはクレームを格納、`Right`の`Identity,`、<xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>プロパティから返される`true`です。 このようなクレームが 1 つ以上ある場合、`IsAnonymous` プロパティは `false` を返します。  
+ None の場合、`ClaimSet`クライアントの資格情報の結果オブジェクトはクレームを格納、`Right`の`Identity,`、<xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>プロパティが返す`true`します。 このようなクレームが 1 つ以上ある場合、`IsAnonymous` プロパティは `false` を返します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.IdentityModel.Claims.ClaimSet>  
