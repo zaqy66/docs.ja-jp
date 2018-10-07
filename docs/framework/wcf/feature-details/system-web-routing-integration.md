@@ -2,18 +2,18 @@
 title: System.Web.Routing 統合
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 2df1ff8230cd79f61fdee971d783544054bd8196
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 3b95b3117941ce7d019b87b00181b2cbac652f43
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782104"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48843852"
 ---
-# <a name="systemwebrouting-integration"></a><span data-ttu-id="c0f88-102">System.Web.Routing 統合</span><span class="sxs-lookup"><span data-stu-id="c0f88-102">System.Web.Routing Integration</span></span>
-<span data-ttu-id="c0f88-103">Windows Communication Foundation (WCF) サービスでは、インターネット インフォメーション サービス (IIS) をホストする場合は、仮想ディレクトリで、.svc ファイルを配置します。</span><span class="sxs-lookup"><span data-stu-id="c0f88-103">When hosting a Windows Communication Foundation (WCF) service in Internet Information Service (IIS) you place a .svc file in the virtual directory.</span></span> <span data-ttu-id="c0f88-104">この .svc ファイルは、使用するサービス ホスト ファクトリと、サービスを実装するクラスを指定します。</span><span class="sxs-lookup"><span data-stu-id="c0f88-104">This .svc file specifies the service host factory to use as well as the class that implements the service.</span></span> <span data-ttu-id="c0f88-105">たとえば、URI で .svc ファイルを指定する、サービスに要求を行うときに:http://contoso.com/EmployeeServce.svcします。</span><span class="sxs-lookup"><span data-stu-id="c0f88-105">When making requests to the service you specify the .svc file in the URI, for example: http://contoso.com/EmployeeServce.svc.</span></span> <span data-ttu-id="c0f88-106">REST サービスを記述するプログラマにとっては、この種類の URI は最適とは言えません。</span><span class="sxs-lookup"><span data-stu-id="c0f88-106">For programmers writing REST services this type of URI is not optimal.</span></span> <span data-ttu-id="c0f88-107">REST サービス用の URI は、特定のリソースを指定しており、拡張子がないのが普通です。</span><span class="sxs-lookup"><span data-stu-id="c0f88-107">URIs for REST services specify a specific resource and normally do not have any extensions.</span></span> <span data-ttu-id="c0f88-108"><xref:System.Web.Routing>統合機能では、拡張子のない Uri に応答する WCF REST サービスをホストすることができます。</span><span class="sxs-lookup"><span data-stu-id="c0f88-108">The <xref:System.Web.Routing> integration feature allows you to host a WCF REST service that responds to URIs without an extension.</span></span> <span data-ttu-id="c0f88-109">ルーティングの参照の詳細については[ASP.NET ルーティング](https://go.microsoft.com/fwlink/?LinkId=184660)します。</span><span class="sxs-lookup"><span data-stu-id="c0f88-109">For more information about routing see [ASP.NET Routing](https://go.microsoft.com/fwlink/?LinkId=184660).</span></span>  
+# <a name="systemwebrouting-integration"></a><span data-ttu-id="e46d4-102">System.Web.Routing 統合</span><span class="sxs-lookup"><span data-stu-id="e46d4-102">System.Web.Routing Integration</span></span>
+<span data-ttu-id="e46d4-103">Windows Communication Foundation (WCF) サービスでは、インターネット インフォメーション サービス (IIS) をホストする場合は、仮想ディレクトリで、.svc ファイルを配置します。</span><span class="sxs-lookup"><span data-stu-id="e46d4-103">When hosting a Windows Communication Foundation (WCF) service in Internet Information Service (IIS) you place a .svc file in the virtual directory.</span></span> <span data-ttu-id="e46d4-104">この .svc ファイルは、使用するサービス ホスト ファクトリと、サービスを実装するクラスを指定します。</span><span class="sxs-lookup"><span data-stu-id="e46d4-104">This .svc file specifies the service host factory to use as well as the class that implements the service.</span></span> <span data-ttu-id="e46d4-105">たとえば、URI で .svc ファイルを指定する、サービスに要求を行うときに:`http://contoso.com/EmployeeServce.svc`します。</span><span class="sxs-lookup"><span data-stu-id="e46d4-105">When making requests to the service you specify the .svc file in the URI, for example: `http://contoso.com/EmployeeServce.svc`.</span></span> <span data-ttu-id="e46d4-106">REST サービスを記述するプログラマにとっては、この種類の URI は最適とは言えません。</span><span class="sxs-lookup"><span data-stu-id="e46d4-106">For programmers writing REST services this type of URI is not optimal.</span></span> <span data-ttu-id="e46d4-107">REST サービス用の URI は、特定のリソースを指定しており、拡張子がないのが普通です。</span><span class="sxs-lookup"><span data-stu-id="e46d4-107">URIs for REST services specify a specific resource and normally do not have any extensions.</span></span> <span data-ttu-id="e46d4-108"><xref:System.Web.Routing>統合機能では、拡張子のない Uri に応答する WCF REST サービスをホストすることができます。</span><span class="sxs-lookup"><span data-stu-id="e46d4-108">The <xref:System.Web.Routing> integration feature allows you to host a WCF REST service that responds to URIs without an extension.</span></span> <span data-ttu-id="e46d4-109">ルーティングの参照の詳細については[ASP.NET ルーティング](https://go.microsoft.com/fwlink/?LinkId=184660)します。</span><span class="sxs-lookup"><span data-stu-id="e46d4-109">For more information about routing see [ASP.NET Routing](https://go.microsoft.com/fwlink/?LinkId=184660).</span></span>  
   
-## <a name="using-systemwebrouting-integration"></a><span data-ttu-id="c0f88-110">System.Web.Routing 統合の使用</span><span class="sxs-lookup"><span data-stu-id="c0f88-110">Using System.Web.Routing Integration</span></span>  
- <span data-ttu-id="c0f88-111"><xref:System.Web.Routing> 統合機能を使用するには、<xref:System.ServiceModel.Activation.ServiceRoute> クラスを使用して 1 つ以上のルートを作成し、Global.asax ファイルでそれらを <xref:System.Web.Routing.RouteTable> に追加します。</span><span class="sxs-lookup"><span data-stu-id="c0f88-111">To use the <xref:System.Web.Routing> integration feature, you use the <xref:System.ServiceModel.Activation.ServiceRoute> class to create one or more routes and add them to the <xref:System.Web.Routing.RouteTable> in a Global.asax file.</span></span> <span data-ttu-id="c0f88-112">これらのルートは、サービスが応答する相対 URI を指定します。</span><span class="sxs-lookup"><span data-stu-id="c0f88-112">These routes specify the relative URIs that the service responds to.</span></span> <span data-ttu-id="c0f88-113">その方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="c0f88-113">The following example shows how to do this.</span></span>  
+## <a name="using-systemwebrouting-integration"></a><span data-ttu-id="e46d4-110">System.Web.Routing 統合の使用</span><span class="sxs-lookup"><span data-stu-id="e46d4-110">Using System.Web.Routing Integration</span></span>  
+ <span data-ttu-id="e46d4-111"><xref:System.Web.Routing> 統合機能を使用するには、<xref:System.ServiceModel.Activation.ServiceRoute> クラスを使用して 1 つ以上のルートを作成し、Global.asax ファイルでそれらを <xref:System.Web.Routing.RouteTable> に追加します。</span><span class="sxs-lookup"><span data-stu-id="e46d4-111">To use the <xref:System.Web.Routing> integration feature, you use the <xref:System.ServiceModel.Activation.ServiceRoute> class to create one or more routes and add them to the <xref:System.Web.Routing.RouteTable> in a Global.asax file.</span></span> <span data-ttu-id="e46d4-112">これらのルートは、サービスが応答する相対 URI を指定します。</span><span class="sxs-lookup"><span data-stu-id="e46d4-112">These routes specify the relative URIs that the service responds to.</span></span> <span data-ttu-id="e46d4-113">その方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="e46d4-113">The following example shows how to do this.</span></span>  
   
 ```  
 <%@ Application Language="C#" %>  
@@ -34,9 +34,9 @@ ms.locfileid: "48782104"
 </script>  
 ```  
   
- <span data-ttu-id="c0f88-114">これは、Customers で始まる相対 URI が指定されたすべての要求を `Service` サービスにルーティングします。</span><span class="sxs-lookup"><span data-stu-id="c0f88-114">This routes all requests with a relative URI that begins with Customers to the `Service` service.</span></span>  
+ <span data-ttu-id="e46d4-114">これは、Customers で始まる相対 URI が指定されたすべての要求を `Service` サービスにルーティングします。</span><span class="sxs-lookup"><span data-stu-id="e46d4-114">This routes all requests with a relative URI that begins with Customers to the `Service` service.</span></span>  
   
- <span data-ttu-id="c0f88-115">Web.config ファイルでは、次の例に示すように、`System.Web.Routing.UrlRoutingModule` モジュールを追加し、`runAllManagedModulesForAllRequests` 属性を `true` に設定し、`UrlRoutingHandler` ハンドラーを `<system.webServer>` 要素に追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c0f88-115">In your Web.config file you must add the `System.Web.Routing.UrlRoutingModule` module, set the `runAllManagedModulesForAllRequests` attribute to `true`, and add the `UrlRoutingHandler` handler to the `<system.webServer>` element as shown in the following example.</span></span>  
+ <span data-ttu-id="e46d4-115">Web.config ファイルでは、次の例に示すように、`System.Web.Routing.UrlRoutingModule` モジュールを追加し、`runAllManagedModulesForAllRequests` 属性を `true` に設定し、`UrlRoutingHandler` ハンドラーを `<system.webServer>` 要素に追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e46d4-115">In your Web.config file you must add the `System.Web.Routing.UrlRoutingModule` module, set the `runAllManagedModulesForAllRequests` attribute to `true`, and add the `UrlRoutingHandler` handler to the `<system.webServer>` element as shown in the following example.</span></span>  
   
 ```xml  
 <system.webServer>  
@@ -49,7 +49,7 @@ ms.locfileid: "48782104"
     </system.webServer>  
 ```  
   
- <span data-ttu-id="c0f88-116">これで、ルーティングに必要なモジュールとハンドラーが読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="c0f88-116">This loads a module and handler required for routing.</span></span> <span data-ttu-id="c0f88-117">詳細については、[ルーティング](../../../../docs/framework/wcf/feature-details/routing.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c0f88-117">For more information, see [Routing](../../../../docs/framework/wcf/feature-details/routing.md).</span></span> <span data-ttu-id="c0f88-118">また、次の例に示すように、`aspNetCompatibilityEnabled` 要素で `true` 属性を `<serviceHostingEnvironment>` に設定する必要もあります。</span><span class="sxs-lookup"><span data-stu-id="c0f88-118">You must also set the `aspNetCompatibilityEnabled` attribute to `true` in the `<serviceHostingEnvironment>` element as shown in the following example.</span></span>  
+ <span data-ttu-id="e46d4-116">これで、ルーティングに必要なモジュールとハンドラーが読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="e46d4-116">This loads a module and handler required for routing.</span></span> <span data-ttu-id="e46d4-117">詳細については、[ルーティング](../../../../docs/framework/wcf/feature-details/routing.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e46d4-117">For more information, see [Routing](../../../../docs/framework/wcf/feature-details/routing.md).</span></span> <span data-ttu-id="e46d4-118">また、次の例に示すように、`aspNetCompatibilityEnabled` 要素で `true` 属性を `<serviceHostingEnvironment>` に設定する必要もあります。</span><span class="sxs-lookup"><span data-stu-id="e46d4-118">You must also set the `aspNetCompatibilityEnabled` attribute to `true` in the `<serviceHostingEnvironment>` element as shown in the following example.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -58,7 +58,7 @@ ms.locfileid: "48782104"
     </system.serviceModel>  
 ```  
   
- <span data-ttu-id="c0f88-119">次の例に示すように、このサービスを実装するクラスでは、ASP.NET 互換要件を有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="c0f88-119">The class that implements the service must enable ASP.NET compatibility requirements as shown in the following example.</span></span>  
+ <span data-ttu-id="e46d4-119">次の例に示すように、このサービスを実装するクラスでは、ASP.NET 互換要件を有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="e46d4-119">The class that implements the service must enable ASP.NET compatibility requirements as shown in the following example.</span></span>  
   
 ```  
 [ServiceContract]  
@@ -69,6 +69,6 @@ ms.locfileid: "48782104"
     }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c0f88-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="c0f88-120">See Also</span></span>  
- [<span data-ttu-id="c0f88-121">WCF Web HTTP プログラミング モデル</span><span class="sxs-lookup"><span data-stu-id="c0f88-121">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [<span data-ttu-id="c0f88-122">ASP.NET ルーティング</span><span class="sxs-lookup"><span data-stu-id="c0f88-122">ASP.NET Routing</span></span>](https://go.microsoft.com/fwlink/?LinkId=184660)
+## <a name="see-also"></a><span data-ttu-id="e46d4-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="e46d4-120">See Also</span></span>  
+ [<span data-ttu-id="e46d4-121">WCF Web HTTP プログラミング モデル</span><span class="sxs-lookup"><span data-stu-id="e46d4-121">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [<span data-ttu-id="e46d4-122">ASP.NET ルーティング</span><span class="sxs-lookup"><span data-stu-id="e46d4-122">ASP.NET Routing</span></span>](https://go.microsoft.com/fwlink/?LinkId=184660)

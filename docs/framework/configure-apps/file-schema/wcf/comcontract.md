@@ -3,19 +3,19 @@ title: '&lt;comContract&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
 ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779206"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839538"
 ---
-# <a name="ltcomcontractgt"></a><span data-ttu-id="ff92d-102">&lt;comContract&gt;</span><span class="sxs-lookup"><span data-stu-id="ff92d-102">&lt;comContract&gt;</span></span>
-<span data-ttu-id="ff92d-103">COM+ 統合サービス コントラクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="ff92d-103">Specifies a COM+ integration service contract.</span></span>  
+# <a name="ltcomcontractgt"></a><span data-ttu-id="05c9c-102">&lt;comContract&gt;</span><span class="sxs-lookup"><span data-stu-id="05c9c-102">&lt;comContract&gt;</span></span>
+<span data-ttu-id="05c9c-103">COM+ 統合サービス コントラクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="05c9c-103">Specifies a COM+ integration service contract.</span></span>  
   
- <span data-ttu-id="ff92d-104">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="ff92d-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="ff92d-105">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="ff92d-105">\<comContracts></span></span>  
+ <span data-ttu-id="05c9c-104">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="05c9c-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="05c9c-105">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="05c9c-105">\<comContracts></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff92d-106">構文</span><span class="sxs-lookup"><span data-stu-id="ff92d-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05c9c-106">構文</span><span class="sxs-lookup"><span data-stu-id="05c9c-106">Syntax</span></span>  
   
 ```xml  
 <comContracts>  
@@ -43,34 +43,34 @@ ms.locfileid: "48779206"
 </comContracts>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ff92d-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="ff92d-107">Attributes and Elements</span></span>  
- <span data-ttu-id="ff92d-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="ff92d-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="05c9c-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="05c9c-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="05c9c-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="05c9c-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ff92d-109">属性</span><span class="sxs-lookup"><span data-stu-id="ff92d-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="05c9c-109">属性</span><span class="sxs-lookup"><span data-stu-id="05c9c-109">Attributes</span></span>  
   
-|<span data-ttu-id="ff92d-110">属性</span><span class="sxs-lookup"><span data-stu-id="ff92d-110">Attribute</span></span>|<span data-ttu-id="ff92d-111">説明</span><span class="sxs-lookup"><span data-stu-id="ff92d-111">Description</span></span>|  
+|<span data-ttu-id="05c9c-110">属性</span><span class="sxs-lookup"><span data-stu-id="05c9c-110">Attribute</span></span>|<span data-ttu-id="05c9c-111">説明</span><span class="sxs-lookup"><span data-stu-id="05c9c-111">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="ff92d-112">コントラクト</span><span class="sxs-lookup"><span data-stu-id="ff92d-112">contract</span></span>|<span data-ttu-id="ff92d-113">コントラクトの種類を含む文字列。</span><span class="sxs-lookup"><span data-stu-id="ff92d-113">A string that contains the contract type.</span></span>|  
-|<span data-ttu-id="ff92d-114">name</span><span class="sxs-lookup"><span data-stu-id="ff92d-114">name</span></span>|<span data-ttu-id="ff92d-115">コントラクト名を含む文字列。</span><span class="sxs-lookup"><span data-stu-id="ff92d-115">A string that contains the contract name.</span></span>|  
-|<span data-ttu-id="ff92d-116">namespace</span><span class="sxs-lookup"><span data-stu-id="ff92d-116">namespace</span></span>|<span data-ttu-id="ff92d-117">コントラクトの名前空間を含む文字列。</span><span class="sxs-lookup"><span data-stu-id="ff92d-117">A string that contains the contract namespace.</span></span>|  
-|<span data-ttu-id="ff92d-118">requiresSession</span><span class="sxs-lookup"><span data-stu-id="ff92d-118">requiresSession</span></span>|<span data-ttu-id="ff92d-119">コントラクトをセッションの多いバインディングでのみ使用できるかどうかを指定するブール値。</span><span class="sxs-lookup"><span data-stu-id="ff92d-119">A Boolean value that specifies whether the contract can only be used on sessionful bindings.</span></span> <span data-ttu-id="ff92d-120">サービスが初期化される場合、統合ランタイムは、この設定が、使用されるバインディングの種類と一貫していることを保証します。</span><span class="sxs-lookup"><span data-stu-id="ff92d-120">When the service is initialized, the integration runtime ensures that this setting is consistent with the type of binding to be used.</span></span> <span data-ttu-id="ff92d-121">コントラクト内の 1 つ以上のバインディングが競合する場合は、例外が生成されます。</span><span class="sxs-lookup"><span data-stu-id="ff92d-121">An exception is generated if one or more of the bindings for the contract are in conflict.</span></span> <span data-ttu-id="ff92d-122">このプロパティが `false` で、一方向のチャネルを使用し、いずれかの [out] パラメーターが存在する場合は、例外も発生します。</span><span class="sxs-lookup"><span data-stu-id="ff92d-122">If this property is `false`, and a one-way channel is in use and there are any [out] parameters, an exception is also generated.</span></span>|  
+|<span data-ttu-id="05c9c-112">コントラクト</span><span class="sxs-lookup"><span data-stu-id="05c9c-112">contract</span></span>|<span data-ttu-id="05c9c-113">コントラクトの種類を含む文字列。</span><span class="sxs-lookup"><span data-stu-id="05c9c-113">A string that contains the contract type.</span></span>|  
+|<span data-ttu-id="05c9c-114">name</span><span class="sxs-lookup"><span data-stu-id="05c9c-114">name</span></span>|<span data-ttu-id="05c9c-115">コントラクト名を含む文字列。</span><span class="sxs-lookup"><span data-stu-id="05c9c-115">A string that contains the contract name.</span></span>|  
+|<span data-ttu-id="05c9c-116">namespace</span><span class="sxs-lookup"><span data-stu-id="05c9c-116">namespace</span></span>|<span data-ttu-id="05c9c-117">コントラクトの名前空間を含む文字列。</span><span class="sxs-lookup"><span data-stu-id="05c9c-117">A string that contains the contract namespace.</span></span>|  
+|<span data-ttu-id="05c9c-118">requiresSession</span><span class="sxs-lookup"><span data-stu-id="05c9c-118">requiresSession</span></span>|<span data-ttu-id="05c9c-119">コントラクトをセッションの多いバインディングでのみ使用できるかどうかを指定するブール値。</span><span class="sxs-lookup"><span data-stu-id="05c9c-119">A Boolean value that specifies whether the contract can only be used on sessionful bindings.</span></span> <span data-ttu-id="05c9c-120">サービスが初期化される場合、統合ランタイムは、この設定が、使用されるバインディングの種類と一貫していることを保証します。</span><span class="sxs-lookup"><span data-stu-id="05c9c-120">When the service is initialized, the integration runtime ensures that this setting is consistent with the type of binding to be used.</span></span> <span data-ttu-id="05c9c-121">コントラクト内の 1 つ以上のバインディングが競合する場合は、例外が生成されます。</span><span class="sxs-lookup"><span data-stu-id="05c9c-121">An exception is generated if one or more of the bindings for the contract are in conflict.</span></span> <span data-ttu-id="05c9c-122">このプロパティが `false` で、一方向のチャネルを使用し、いずれかの [out] パラメーターが存在する場合は、例外も発生します。</span><span class="sxs-lookup"><span data-stu-id="05c9c-122">If this property is `false`, and a one-way channel is in use and there are any [out] parameters, an exception is also generated.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="ff92d-123">子要素</span><span class="sxs-lookup"><span data-stu-id="ff92d-123">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="05c9c-123">子要素</span><span class="sxs-lookup"><span data-stu-id="05c9c-123">Child Elements</span></span>  
   
-|<span data-ttu-id="ff92d-124">要素</span><span class="sxs-lookup"><span data-stu-id="ff92d-124">Element</span></span>|<span data-ttu-id="ff92d-125">説明</span><span class="sxs-lookup"><span data-stu-id="ff92d-125">Description</span></span>|  
+|<span data-ttu-id="05c9c-124">要素</span><span class="sxs-lookup"><span data-stu-id="05c9c-124">Element</span></span>|<span data-ttu-id="05c9c-125">説明</span><span class="sxs-lookup"><span data-stu-id="05c9c-125">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ff92d-126">persistableTypes</span><span class="sxs-lookup"><span data-stu-id="ff92d-126">persistableTypes</span></span>|<span data-ttu-id="ff92d-127">すべての永続型。</span><span class="sxs-lookup"><span data-stu-id="ff92d-127">All the persistable types.</span></span>|  
-|<span data-ttu-id="ff92d-128">userDefinedTypes</span><span class="sxs-lookup"><span data-stu-id="ff92d-128">userDefinedTypes</span></span>|<span data-ttu-id="ff92d-129">サービス コントラクトに含まれるユーザー定義型 (UDT) のコレクション。</span><span class="sxs-lookup"><span data-stu-id="ff92d-129">A collection of User Defined Types (UDT) that is to be included in the service contract.</span></span>|  
-|<span data-ttu-id="ff92d-130">exposedMethods</span><span class="sxs-lookup"><span data-stu-id="ff92d-130">exposedMethods</span></span>|<span data-ttu-id="ff92d-131">COM+ コンポーネントのインターフェイスが Web サービスとして公開されるときに公開される COM+ メソッドのコレクション。</span><span class="sxs-lookup"><span data-stu-id="ff92d-131">A collection of COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span>|  
+|<span data-ttu-id="05c9c-126">persistableTypes</span><span class="sxs-lookup"><span data-stu-id="05c9c-126">persistableTypes</span></span>|<span data-ttu-id="05c9c-127">すべての永続型。</span><span class="sxs-lookup"><span data-stu-id="05c9c-127">All the persistable types.</span></span>|  
+|<span data-ttu-id="05c9c-128">userDefinedTypes</span><span class="sxs-lookup"><span data-stu-id="05c9c-128">userDefinedTypes</span></span>|<span data-ttu-id="05c9c-129">サービス コントラクトに含まれるユーザー定義型 (UDT) のコレクション。</span><span class="sxs-lookup"><span data-stu-id="05c9c-129">A collection of User Defined Types (UDT) that is to be included in the service contract.</span></span>|  
+|<span data-ttu-id="05c9c-130">exposedMethods</span><span class="sxs-lookup"><span data-stu-id="05c9c-130">exposedMethods</span></span>|<span data-ttu-id="05c9c-131">COM+ コンポーネントのインターフェイスが Web サービスとして公開されるときに公開される COM+ メソッドのコレクション。</span><span class="sxs-lookup"><span data-stu-id="05c9c-131">A collection of COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="ff92d-132">親要素</span><span class="sxs-lookup"><span data-stu-id="ff92d-132">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="05c9c-132">親要素</span><span class="sxs-lookup"><span data-stu-id="05c9c-132">Parent Elements</span></span>  
   
-|<span data-ttu-id="ff92d-133">要素</span><span class="sxs-lookup"><span data-stu-id="ff92d-133">Element</span></span>|<span data-ttu-id="ff92d-134">説明</span><span class="sxs-lookup"><span data-stu-id="ff92d-134">Description</span></span>|  
+|<span data-ttu-id="05c9c-133">要素</span><span class="sxs-lookup"><span data-stu-id="05c9c-133">Element</span></span>|<span data-ttu-id="05c9c-134">説明</span><span class="sxs-lookup"><span data-stu-id="05c9c-134">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ff92d-135">comContracts</span><span class="sxs-lookup"><span data-stu-id="ff92d-135">comContracts</span></span>|<span data-ttu-id="ff92d-136">`comContract` 要素のコレクションを含みます。</span><span class="sxs-lookup"><span data-stu-id="ff92d-136">Contains a collection of `comContract` elements.</span></span>|  
+|<span data-ttu-id="05c9c-135">comContracts</span><span class="sxs-lookup"><span data-stu-id="05c9c-135">comContracts</span></span>|<span data-ttu-id="05c9c-136">`comContract` 要素のコレクションを含みます。</span><span class="sxs-lookup"><span data-stu-id="05c9c-136">Contains a collection of `comContract` elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ff92d-137">Remarks</span><span class="sxs-lookup"><span data-stu-id="ff92d-137">Remarks</span></span>  
- <span data-ttu-id="ff92d-138">COM + 統合サービス コントラクトは、現在に制限されて、`http://tempuri.org`名前空間、およびコントラクト名がサポートする COM インターフェイスから派生します。</span><span class="sxs-lookup"><span data-stu-id="ff92d-138">COM+ integration service contracts are currently restricted to the `http://tempuri.org` namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="ff92d-139">ただし、構成ファイルの `comContracts` セクションと `comContract` 要素を使用して代替を指定することができます。</span><span class="sxs-lookup"><span data-stu-id="ff92d-139">You can, however, specify alternatives by using the `comContracts` section, as well as the `comContract` element in the configuration file.</span></span> <span data-ttu-id="ff92d-140">たとえば、次の構成を使用して、名前空間、コントラクト名、組み込まれるユーザー定義型、およびサービス コントラクトのその他の設定を指定できます。</span><span class="sxs-lookup"><span data-stu-id="ff92d-140">For example, you can use the following configuration to specify the namespace, contract name, and user defined types to be included, as well as other settings for a service contract.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="05c9c-137">Remarks</span><span class="sxs-lookup"><span data-stu-id="05c9c-137">Remarks</span></span>  
+ <span data-ttu-id="05c9c-138">COM + 統合サービス コントラクトは、現在に制限されて、`http://tempuri.org`名前空間、およびコントラクト名がサポートする COM インターフェイスから派生します。</span><span class="sxs-lookup"><span data-stu-id="05c9c-138">COM+ integration service contracts are currently restricted to the `http://tempuri.org` namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="05c9c-139">ただし、構成ファイルの `comContracts` セクションと `comContract` 要素を使用して代替を指定することができます。</span><span class="sxs-lookup"><span data-stu-id="05c9c-139">You can, however, specify alternatives by using the `comContracts` section, as well as the `comContract` element in the configuration file.</span></span> <span data-ttu-id="05c9c-140">たとえば、次の構成を使用して、名前空間、コントラクト名、組み込まれるユーザー定義型、およびサービス コントラクトのその他の設定を指定できます。</span><span class="sxs-lookup"><span data-stu-id="05c9c-140">For example, you can use the following configuration to specify the namespace, contract name, and user defined types to be included, as well as other settings for a service contract.</span></span>  
   
 ```xml  
 <comContracts>  
@@ -88,12 +88,12 @@ ms.locfileid: "48779206"
 </comContracts>  
 ```  
   
- <span data-ttu-id="ff92d-141">サービスが初期化される場合、指定した名前空間およびコントラクト名が、生成されるサービスの説明に適用されます。</span><span class="sxs-lookup"><span data-stu-id="ff92d-141">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
+ <span data-ttu-id="05c9c-141">サービスが初期化される場合、指定した名前空間およびコントラクト名が、生成されるサービスの説明に適用されます。</span><span class="sxs-lookup"><span data-stu-id="05c9c-141">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff92d-142">関連項目</span><span class="sxs-lookup"><span data-stu-id="ff92d-142">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="05c9c-142">関連項目</span><span class="sxs-lookup"><span data-stu-id="05c9c-142">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
  <xref:System.ServiceModel.Configuration.ComContractElement>  
- [<span data-ttu-id="ff92d-143">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="ff92d-143">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [<span data-ttu-id="ff92d-144">COM+ アプリケーションとの統合</span><span class="sxs-lookup"><span data-stu-id="ff92d-144">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [<span data-ttu-id="ff92d-145">方法 : COM+ サービス設定を構成する</span><span class="sxs-lookup"><span data-stu-id="ff92d-145">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+ [<span data-ttu-id="05c9c-143">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="05c9c-143">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [<span data-ttu-id="05c9c-144">COM+ アプリケーションとの統合</span><span class="sxs-lookup"><span data-stu-id="05c9c-144">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [<span data-ttu-id="05c9c-145">方法 : COM+ サービス設定を構成する</span><span class="sxs-lookup"><span data-stu-id="05c9c-145">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
