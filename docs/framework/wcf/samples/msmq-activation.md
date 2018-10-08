@@ -2,12 +2,12 @@
 title: MSMQ アクティベーション
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: a03f5783e732c4a0f3f13cf6abd7ec4803c07c8f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.openlocfilehash: a179fca70a97b4fd9c7b21bdf548afdda59dda91
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779313"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780155"
 ---
 # <a name="msmq-activation"></a>MSMQ アクティベーション
 このサンプルでは、メッセージ キューから読み取ったアプリケーションを、Windows プロセス アクティブ化サービス (WAS) でホストする方法を示します。 このサンプルでは、`netMsmqBinding`に基づく、[双方向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)サンプル。 この場合、サービスは Web ホスト アプリケーションの 1 つであり、クライアントは自己ホスト型です。クライアントはコンソールに出力して、送信された発注書のステータスを確認します。  
@@ -20,7 +20,7 @@ ms.locfileid: "43779313"
 >   
 >  \<InstallDrive >: \WF_WCF_Samples  
 >   
->  このディレクトリが存在しない場合は、Windows Communication Foundation (WCF) ハイパーリンクを参照してください "https://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank"および Windows Workflow Foundation (WF) のサンプル[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] すべての WCF をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合は、Windows Communication Foundation (WCF) ハイパーリンクを参照してください"https://go.microsoft.com/fwlink/?LinkId=150780"\t"\_空白"および Windows Workflow Foundation (WF) のサンプルの[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]すべての WCF をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation します。  
   
@@ -76,7 +76,8 @@ public class OrderProcessorService : IOrderProcessor
             client.OrderStatus(po.PONumber, po.Status);  
             scope.Complete();  
         }  
-    }  
+    }
+}
 ```  
   
  使用するクライアント バインディングの指定には、構成ファイルを使用します。  
@@ -173,7 +174,7 @@ public class OrderStatusService : IOrderStatus
   
  注文ステータス キューは `Main` メソッド内で作成します。 クライアント構成には、注文ステータス サービスをホストするための注文ステータス サービス構成が含まれています。次のサンプル構成を参照してください。  
   
-```csharp  
+```xml  
 <appSettings>  
     <!-- use appSetting to configure MSMQ queue name -->  
     <add key="targetQueueName" value=".\private$\ServiceModelSamples/service.svc" />  
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  このコマンドはテキスト 1 行です。  
   
-         このコマンドにより、/servicemodelsamples アプリケーションにアクセスを使用して http://localhost/servicemodelsamplesと net.msmq://localhost/servicemodelsamples します。  
+         このコマンドにより、/servicemodelsamples アプリケーションを使用してアクセスする`http://localhost/servicemodelsamples`と`net.msmq://localhost/servicemodelsamples`します。
   
 7.  まだ確認していない場合は、MSMQ アクティベーション サービスが有効になっていることを確認します。 **開始** メニューのをクリックして**実行**、および種類`Services.msc`します。 サービスの一覧を検索、 **Net.Msmq リスナ アダプタ**します。 右クリックして**プロパティ**します。 設定、**スタートアップの種類**に**自動**、 をクリックして**適用** をクリックし、**開始**ボタンをクリックします。 この手順は、Net.Msmq リスナー アダプター サービスを初めて使用する前に 1 回だけ実行する必要があります。  
   

@@ -2,64 +2,29 @@
 title: アクティビティ ライブラリ
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-ms.openlocfilehash: 29b3efd648ac103526f572a2cac5b8b67c4b220a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.openlocfilehash: 7e8777d0068e6cca9c9324a6fd2668e6ff9e9da7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698472"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778963"
 ---
 # <a name="activity-library"></a>アクティビティ ライブラリ
 このセクションには、高度なカスタム アクティビティでは、Windows Workflow Foundation (WF) を示すサンプルが含まれています。  
   
-## <a name="in-this-section"></a>このセクションの内容  
- [.NET Framework 4.5 のポリシー アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
- Policy4 アクティビティでの Windows Workflow Foundation を使用する方法について示します[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクトでの Windows Workflow Foundation で使用される[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) WF 3.5 に付属しているルール エンジンを使用して直接します。  
-  
- [値の範囲で切り替えを行うカスタム アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
- <xref:System.Activities.Statements.Switch%601> の使用を拡張するカスタム アクティビティを作成する方法を示します。  
-  
- [LINQ to Objects アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/linq-to-objects-activity.md)  
- LINQ to Objects を使用してコレクション内の要素に対してクエリを実行するアクティビティを作成する方法を示します。  
-  
- [LINQ to SQL のサンプル](../../../../docs/framework/windows-workflow-foundation/samples/linq-to-sql-sample.md)  
- SQL Server データベース内のテーブルの LINQ to SQL クエリ エンティティを使用するアクティビティを作成する方法を示します。  
-  
- [InvokePowerShell アクティビティの使用](../../../../docs/framework/windows-workflow-foundation/samples/using-the-invokepowershell-activity.md)  
- InvokePowerShell アクティビティを使用して Windows PowerShell コマンドを呼び出す方法を示します。  
-  
- [RangeEnumeration アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/rangeenumeration-activity.md)  
- 数値のコレクションを反復処理するカスタム アクティビティを作成する方法を示します。  
-  
- [正規表現アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/regular-expression-activities.md)  
- <xref:System.Text.RegularExpressions> 名前空間の正規表現機能を公開する一連のアクティビティを作成する方法を示します。  
-  
+## <a name="in-this-section"></a>このセクションの内容
+
  [SendMail カスタム アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/sendmail-custom-activity.md)  
  <xref:System.Activities.AsyncCodeActivity> から派生するカスタム アクティビティを作成して、SMTP を使用して電子メールを送信し、ワークフロー アプリケーション内で使用する方法を示します。  
   
- [For アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/for-activity.md)  
- <xref:System.Activities.NativeActivity> から継承するカスタム アクティビティを構築し、そのアクティビティをワークフローで使用して値の範囲を反復処理する方法を示します。  
-  
- [入力アクティビティの待機](../../../../docs/framework/windows-workflow-foundation/samples/wait-for-input-activity.md)  
- ワークフローに名前付きブックマークを作成する方法を示します。  
-  
  [制限された並列 ForEach](../../../../docs/framework/windows-workflow-foundation/samples/throttled-parallel-foreach.md)  
- `ThrottleParallelForEach` アクティビティは、実行する同時分岐の数を制限するための同時実行要因を設定できるという 1 つの例外を除き、<xref:System.Activities.Statements.ParallelForEach%601> アクティビティと似ていることについて示します。  
-  
- [エンティティ アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/entity-activities.md)  
- Windows Workflow Foundation と ADO.NET Entity Framework を使用して、データ アクセスを簡略化する方法を示します。  
+ ph x="1" /&gt; アクティビティは、実行するコンカレンシー分岐の数を制限するためのコンカレンシー要因を設定できるという 1 つの例外を除き、<xref:System.Activities.Statements.ParallelForEach%601> アクティビティと似ていることについて示します。
   
  [データベース アクセス アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
  取得、情報を変更または使用するデータベースへのアクセスを許可するアクティビティを作成する方法を示します[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)データベースにアクセスします。  
   
- [CommentOut アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/commentout-activity.md)  
- 実行のパスから他のアクティビティを削除し、それらを有効にコメント化するカスタム アクティビティを記述する方法を示します。  
-  
  [.NET Framework 4.5 の外部化されたポリシー アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
- ExternalizedPolicy4 アクティビティにより、既存の Windows Workflow Foundation での実行方法を示します[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクトの Windows Workflow Foundation の[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接を使用して、ルール エンジンはWF 3.5 に付属しています。  
-  
- [NoPersistScope アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  
- ワークフローでシリアル化不可能で破棄可能な状態を処理する方法を示します。  
+ ExternalizedPolicy4 アクティビティにより、既存の Windows Workflow Foundation での実行方法を示します[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクトの Windows Workflow Foundation の[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接を使用して、ルール エンジンはWF 3.5 に付属しています。 
   
  [非ジェネリックの ForEach](../../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md)  
  <xref:System.Activities.Statements.ForEach%601> アクティビティの非ジェネリック バージョンを作成する方法を示します。  
