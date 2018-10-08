@@ -3,11 +3,11 @@ title: アクティビティ ライブラリ
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
 ms.openlocfilehash: 7e8777d0068e6cca9c9324a6fd2668e6ff9e9da7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
-ms.translationtype: HT
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778963"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844021"
 ---
 # <a name="activity-library"></a>アクティビティ ライブラリ
 このセクションには、高度なカスタム アクティビティでは、Windows Workflow Foundation (WF) を示すサンプルが含まれています。  
@@ -18,7 +18,7 @@ ms.locfileid: "48778963"
  <xref:System.Activities.AsyncCodeActivity> から派生するカスタム アクティビティを作成して、SMTP を使用して電子メールを送信し、ワークフロー アプリケーション内で使用する方法を示します。  
   
  [制限された並列 ForEach](../../../../docs/framework/windows-workflow-foundation/samples/throttled-parallel-foreach.md)  
- ph x="1" /&gt; アクティビティは、実行するコンカレンシー分岐の数を制限するためのコンカレンシー要因を設定できるという 1 つの例外を除き、<xref:System.Activities.Statements.ParallelForEach%601> アクティビティと似ていることについて示します。
+ `ThrottleParallelForEach` アクティビティは、実行するコンカレンシー分岐の数を制限するためのコンカレンシー要因を設定できるという 1 つの例外を除き、<xref:System.Activities.Statements.ParallelForEach%601> アクティビティと似ていることについて示します。
   
  [データベース アクセス アクティビティ](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
  取得、情報を変更または使用するデータベースへのアクセスを許可するアクティビティを作成する方法を示します[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)データベースにアクセスします。  
