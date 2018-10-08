@@ -2,12 +2,12 @@
 title: 共変性と反変性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 322cb452e0a3391812e58b68406657651f7a430f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241b8f5864b6e9b3e1caddde25d032a24e4d0bb7
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644044"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850453"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>共変性と反変性 (Visual Basic)
 Visual Basic では、共変性と反変性により、配列型、デリゲート型、およびジェネリック型引数の暗黙の参照変換が可能になります。 共変性は代入互換性を維持し、反変性はこれを反転させます。  
@@ -78,7 +78,7 @@ Shared Sub Test()
 End Sub  
 ```  
   
- .NET Framework 4 以降では、Visual Basic でジェネリック インターフェイスと汎用デリゲートでの共変性と反変性がサポートされ、ジェネリック型パラメーターの暗黙の型変換が可能になっています。 詳細については、「[Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)」(ジェネリック インターフェイスの分散 (Visual Basic)) および「[Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)」(デリゲートの分散 (Visual Basic)) を参照してください。  
+ .NET Framework 4 以降では、Visual Basic はジェネリック インターフェイスおよびデリゲートの共変性と反変性をサポートしているし、ジェネリック型パラメーターの暗黙の型に変換できます。 詳細については、「[Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)」(ジェネリック インターフェイスの分散 (Visual Basic)) および「[Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)」(デリゲートの分散 (Visual Basic)) を参照してください。  
   
  次のコード例は、ジェネリック インターフェイスの暗黙の参照変換を示しています。  
   
@@ -91,7 +91,7 @@ Dim objects As IEnumerable(Of Object) = strings
   
 ## <a name="related-topics"></a>関連トピック  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[ジェネリック インターフェイスの分散 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|ジェネリック インターフェイスでの共変性と反変性について説明し、.NET Framework でのバリアント ジェネリック インターフェイスの一覧を示します。|  
 |[バリアント ジェネリック インターフェイスの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|カスタムのバリアント インターフェイスを作成する方法を示します。|  

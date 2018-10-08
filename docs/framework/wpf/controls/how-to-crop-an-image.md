@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
 ms.openlocfilehash: 189cb92d581ccc9209ebdb4de18487951d17818a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47234930"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849621"
 ---
 # <a name="how-to-crop-an-image"></a>方法 : イメージをトリミングする
 この例を使用して、イメージをトリミングする方法を示しています。<xref:System.Windows.Media.Imaging.CroppedBitmap>します。  

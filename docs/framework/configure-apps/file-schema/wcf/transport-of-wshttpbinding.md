@@ -2,12 +2,12 @@
 title: '&lt;wsHttpBinding&gt; の &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 771866a83d54ca9e4fc7f3ed6d351b4a6c755b4c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5a62eefa6865a6908caecef87b0e457040df0b21
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890955"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850154"
 ---
 # <a name="lttransportgt-of-ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt; の &lt;transport&gt;
 HTTP トランスポートの認証設定を定義します。  
@@ -92,5 +92,5 @@ HTTP トランスポートの認証設定を定義します。
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  
  [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [バインドを使用して、Windows Communication Foundation サービスとクライアントを構成するには](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

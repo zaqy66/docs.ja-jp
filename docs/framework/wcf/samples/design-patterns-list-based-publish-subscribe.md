@@ -2,12 +2,12 @@
 title: 'デザイン パターン: リストに基づく公開/定期受信'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 2807cc8cc197ff39417e3b6375ebbd595cf73c54
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: caec9a9aa6de267cb5407ad4a7166701740f9a63
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664697"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850128"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>デザイン パターン: リストに基づく公開/定期受信
 このサンプルでは、Windows Communication Foundation (WCF) プログラムとして実装されたリストに基づく公開/定期受信パターンを示します。  
@@ -118,7 +118,7 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>サンプルを同じコンピューターで実行するには  
   
-1.  次のアドレスを入力して、ブラウザーを使用して、サービスにアクセスできることのテスト:http://localhost/servicemodelsamples/service.svcします。 これに応答して、確認ページが表示されます。  
+1.  次のアドレスを入力して、ブラウザーを使用して、サービスにアクセスできることのテスト:`http://localhost/servicemodelsamples/service.svc`します。 これに応答して、確認ページが表示されます。  
   
 2.  Client.exe を \client\bin 実行\\、言語固有のフォルダーの下。 クライアント アクティビティがクライアント コンソール ウィンドウに表示されます。 複数のクライアントを起動します。  
   

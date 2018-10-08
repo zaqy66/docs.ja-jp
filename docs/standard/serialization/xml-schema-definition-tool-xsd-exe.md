@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: a3a16e92dab6994de6bfa99c248ff0b13658e22d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 23dea344b123b377224aad5816137aa246b8f596
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615444"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850864"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML スキーマ定義ツール (Xsd.exe) は、XDR、XML、および XSD ファイル、またはランタイム アセンブリ内のクラスから XML スキーマ クラスまたは共通言語ランタイム クラスを生成します。  
@@ -86,7 +86,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  クラスから XSD へ  
  ランタイム アセンブリ ファイルに含まれる 1 つ以上の型から XML スキーマを生成します。 生成されたスキーマは、`System.Xml.Serialization.XmlSerializer` で使用される XML 形式を定義します。  
   
- Xsd.exe によって操作できるのは、W3C (World Wide Web Consortium) が提唱する XSD (XML スキーマ定義) に準拠した XML スキーマだけです。 XML スキーマ定義の提案や XML 標準の詳細については、次を参照してください。 http://w3.orgします。  
+ Xsd.exe によって操作できるのは、W3C (World Wide Web Consortium) が提唱する XSD (XML スキーマ定義) に準拠した XML スキーマだけです。 XML スキーマ定義の提案や XML 標準の詳細については、次を参照してください。<https://w3.org>します。  
   
 ## <a name="setting-options-with-an-xml-file"></a>XML ファイルによるオプションの設定  
  `/parameters` スイッチを使用すると、各種のオプションを設定する単一の XML ファイルを指定できます。 設定できるオプションは、XSD.exe ツールの使用方法によって異なります。 選択肢には、スキーマの生成、コード ファイルの生成、または `DataSet` 機能を含むコード ファイルの生成があります。 たとえば、コード ファイルではなくスキーマを生成する場合、実行可能ファイル (.exe) またはタイプ ライブラリ (.dll) ファイルの名前に `<assembly\>` 要素を設定できます。 次の XML に、指定された実行可能ファイルで `<generateSchemas\>` 要素を使用する方法を示します。  

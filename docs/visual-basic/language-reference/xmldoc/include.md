@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 0f143f8c023102f44b41e3898f29d18be0083128
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778706"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849491"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;含める&gt;(Visual Basic)
 型と、ソース コード内のメンバーを記述する別のファイルを参照します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48778706"
 ## <a name="remarks"></a>Remarks  
  使用して、`<include>`タグをソース コード内のメンバーと型を記述する別のファイル内のコメントを参照してください。 これは文書化のコメントをソース コード ファイル内に直接配置する方法の代替です。  
   
- `<include>`タグは、W3C XML Path Language (XPath) Version 1.0 』 を使用します。 カスタマイズする方法の詳細については、`<include>`使用については、「 http://www.w3.org/TR/xpathします。  
+ `<include>`タグは、W3C XML Path Language (XPath) Version 1.0 』 を使用します。 カスタマイズする方法の詳細については、`<include>`を使用して、参照してください<https://www.w3.org/TR/xpath>します。  
   
 ## <a name="example"></a>例  
  この例では、`<include>`メンバー ドキュメントのコメントをという名前のファイルからインポートするタグ`commentFile.xml`します。  

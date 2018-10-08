@@ -3,11 +3,11 @@ title: 永続的な二重の相関関係
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
 ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862897"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850799"
 ---
 # <a name="durable-duplex-correlation"></a>永続的な二重の相関関係
 永続的な二重の相関関係 (コールバック相関関係) は、ワークフロー サービスがコールバックを最初の呼び出し元に送信する必要がある場合に便利です。 WCF の二重とは異なり、コールバックは、将来のどの時点でも発生する可能性があり、同じチャネルにも同じチャネルの有効期間にも関連付けられていません。唯一の要件は、呼び出し元にコールバック メッセージをリッスンするアクティブなエンドポイントを用意することです。 このため、2 つのワークフロー サービスが長時間のメッセージ交換を使用して通信できます。 このトピックでは、永続的な二重の相関関係について概説します。  

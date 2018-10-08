@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 549f3dcfd7225937fd04ad2116e2be311687861b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 259d8e0297025d496b3a10c3ef3ec2b3c96cffaa
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399451"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849790"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt;要素 (ネットワーク設定)
 有効または、ネットワーク パフォーマンス カウンターを無効にします。  
@@ -54,7 +54,7 @@ ms.locfileid: "47399451"
 ## <a name="remarks"></a>Remarks  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
- ネットワーク パフォーマンス カウンターは、使用される構成ファイルで有効になっている必要があります。 すべてのネットワーク パフォーマンス カウンターは、構成ファイル内の 1 つの設定で有効または無効にされます。 ネットワーク パフォーマンス カウンターを個別に有効または無効にすることはできません。 特定のネットワーク パフォーマンス カウンターの詳細については、次を参照してください。[ネットワーク パフォーマンス カウンター](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)します。  
+ ネットワーク パフォーマンス カウンターは、使用される構成ファイルで有効になっている必要があります。 すべてのネットワーク パフォーマンス カウンターは、構成ファイル内の 1 つの設定で有効または無効にされます。 ネットワーク パフォーマンス カウンターを個別に有効または無効にすることはできません。 特定のネットワーク パフォーマンス カウンターの詳細については、次を参照してください。[ネットワーク パフォーマンス カウンター](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)します。  
   
  既定値は、そのネットワークのパフォーマンス カウンターが無効です。  
   
@@ -79,4 +79,4 @@ ms.locfileid: "47399451"
  <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
  [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [ネットワーク パフォーマンス カウンター](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+ [ネットワーク パフォーマンス カウンター](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
