@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779908"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872958"
 ---
 # <a name="how-to-create-an-activity"></a>アクティビティを作成する方法
 
 アクティビティは [!INCLUDE[wf1](../../../includes/wf1-md.md)] の動作の中心的な単位です。 アクティビティの実行ロジックはマネージ コードで実装できます。または他のアクティビティを使用して実装できます。 このトピックでは、2 つのアクティビティを作成する方法について説明します。 最初のアクティビティは、コードを使用してその実行ロジックを実装する単純なアクティビティです。 2 番目のアクティビティの実装は他のアクティビティを使用して定義されています。 これらのアクティビティは、チュートリアルの次の手順で使用します。
 
 > [!NOTE]
-> このチュートリアルの完成版をダウンロードするを参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。
+> チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。
 
 ## <a name="create-the-activity-library-project"></a>アクティビティ ライブラリ プロジェクトを作成します。
 
@@ -74,7 +74,7 @@ ms.locfileid: "48779908"
 
 12. 型`Text`に、**名前**ボックスで、**で**から、**方向**ドロップダウン リストで、**文字列**から**引数の型**ドロップダウン リスト、およびキーを押します**Enter**引数を保存します。
 
-     これら 3 つの引数は、次の手順で、<xref:System.Activities.Statements.WriteLine> アクティビティに追加される `ReadInt` アクティビティと `Prompt` アクティビティの対応する引数にバインドされます。
+     これら 3 つの引数は、次の手順で、`Prompt` アクティビティに追加される <xref:System.Activities.Statements.WriteLine> アクティビティと `ReadInt` アクティビティの対応する引数にバインドされます。
 
 13. クリックして**引数**を閉じるアクティビティ デザイナーの左下で、**引数**ウィンドウ。
 

@@ -4,12 +4,12 @@ description: リフト アンド シフトし、Azure クラウドとこの電�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 4/28/2018
-ms.openlocfilehash: 07e1a1e2ef145dce1b292d9425f33fcd99ffd1ae
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b22ddd8a63d183571f9ca3a63fb7ae84ebb88510
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747005"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873502"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 (2 nd edition)
 
@@ -25,7 +25,7 @@ Copyright © 2018 by Microsoft Corporation
 
 All rights reserved. 本書のいかなる部分も、書面による発行者の許可なしに、いかなる形式または方法によっても、複製することを禁じます。
 
-このブックはなど、電子書籍の (電子書籍) マイクロソフトの複数のチャネルを通じて使用可能な形式で無料で利用できる http://dot.net/architecture です。
+このブックはなど、電子書籍の (電子書籍) マイクロソフトの複数のチャネルを通じて使用可能な形式で無料で利用できる <http://dot.net/architecture> です。
 
 この書籍で電子メールに関連する質問がある場合は、[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book) に電子メールをお送りください。
 
@@ -33,7 +33,7 @@ All rights reserved. 本書のいかなる部分も、書面による発行者�
 
 ここに記載したいくつかの例は、説明のためだけに提供された架空のものです。 実在のものとの関連性または関係性は一切ありません。
 
-Microsoft およびに記載されている商標 http://www.microsoft.com 「商標」web ページには、Microsoft グループ企業各社の商標です。 その他のすべてのマークは、該当する各社が所有しています。
+Microsoft およびに記載されている商標 <https://www.microsoft.com> 「商標」web ページには、Microsoft グループ企業各社の商標です。 その他のすべてのマークは、該当する各社が所有しています。
 
 作成者:
 > **Cesar de la Torre**、Microsoft corp.、.NET 製品チーム、シニア PM

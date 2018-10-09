@@ -3,12 +3,12 @@ title: WIF を使用したクレーム ベースの承認
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: c13ea5c9f2f62c9c01139741d06de35dd2ff4be1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236057"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872927"
 ---
 # <a name="claims-based-authorization-using-wif"></a>WIF を使用したクレーム ベースの承認
 証明書利用者アプリケーションでは、承認によって、認証済み ID がアクセスできるリソースと、そのリソースで実行できる操作が決まります。 承認が不適切だったり弱かったりすると、それは情報漏えいとデータの改ざんにつながります。 ここでは、Windows Identity Foundation (WIF) とセキュリティ トークン サービス (STS)、たとえば Microsoft Azure のアクセス制御サービス (ACS) を使用して、クレーム対応 ASP.NET の Web アプリケーションとサービスの承認を実装する方法の概要を説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "47236057"
 ### <a name="expressing-roles-as-claims"></a>クレームとしてのロールの表現  
  **IsInRole()** メソッドが呼び出されると、現在のユーザーにそのロールがあるかどうかがチェックされます。 クレーム対応アプリケーションでは、ロールは、トークンで使用できるロール クレームの種類によって表されます。 ロール クレームの種類は、次の URI を使用して表されます。  
   
- http://schemas.microsoft.com/ws/2008/06/identity/claims/role  
+ `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`
   
  ロール クレームの種類でトークンを強化する方法は複数あります。  
   

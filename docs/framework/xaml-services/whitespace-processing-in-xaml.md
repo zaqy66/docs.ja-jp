@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777748"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873441"
 ---
 # <a name="white-space-processing-in-xaml"></a>空白 XAML での処理
 XAML の言語規則の状態によってその有意の空白を処理する必要があります、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装。 ここでは、それらの XAML 言語規則について説明します。 定義されている追加の空白文字の処理が文書化も、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML プロセッサとシリアル化のための XAML ライターの実装。  

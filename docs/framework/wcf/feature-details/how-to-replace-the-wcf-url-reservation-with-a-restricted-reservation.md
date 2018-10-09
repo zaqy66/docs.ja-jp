@@ -3,11 +3,11 @@ title: '方法: WCF URL 予約を制限付きの予約に置き換える'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
 ms.openlocfilehash: b53596d7ac4e7e7c3748f6a98130492a96c0b48c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037230"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873324"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>方法: WCF URL 予約を制限付きの予約に置き換える
 URL 予約を使用すると、特定の URL または URL セットからメッセージを受信するユーザーを制限できます。 予約は、URL テンプレート、アクセス制御リスト (ACL)、およびフラグのセットで構成されます。 URL テンプレートは、予約の対象となる URL を定義します。 URL テンプレートが処理される方法の詳細については、次を参照してください。[受信要求のルーティング](https://go.microsoft.com/fwlink/?LinkId=136764)します。 ACL は、指定された URL からメッセージを受信できるユーザーまたはユーザー グループを制御します。 フラグは、その予約で、ユーザーまたはグループに URL を直接リッスンする権限を与えるか、リッスンを他のプロセスに委任する権限を与えるかを指定します。  

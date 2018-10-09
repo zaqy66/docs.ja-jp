@@ -2,12 +2,12 @@
 title: 承認ポリシー
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198320"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873480"
 ---
 # <a name="authorization-policy"></a>承認ポリシー
 
@@ -284,7 +284,7 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 
 Windows Communication Foundation (WCF) は、アクセス チェックを実行するための豊富なクレームに基づくモデルを提供します。 <xref:System.ServiceModel.ServiceAuthorizationManager> オブジェクトを使用するとアクセス チェックが実行され、クライアントに関連付けられたクレームがサービス メソッドへのアクセスに必要な要件を満たすかどうかが判断されます。
 
-デモンストレーションの目的で、このサンプルの実装を示します<xref:System.ServiceModel.ServiceAuthorizationManager>を実装する、<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>メソッドへのユーザーのアクセスを許可するメソッドが型のクレームに基づく http://example.com/claims/allowedoperation値がある操作のアクション URI呼び出しできます。
+デモンストレーションの目的で、このサンプルの実装を示します<xref:System.ServiceModel.ServiceAuthorizationManager>を実装する、<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>メソッドへのユーザーのアクセスを許可するメソッドが型のクレームに基づく`http://example.com/claims/allowedoperation`値がある操作のアクション URI呼び出しできます。
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -460,7 +460,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. Client.exe を起動します*\client\bin*します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
 
-  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。
+  クライアントとサービス間で通信できない場合は、「 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)」を参照してください。
 
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには
 
@@ -500,7 +500,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 14. クライアント コンピューターで、コマンド プロンプト ウィンドウから Client.exe を起動します。
 
-   クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。
+   クライアントとサービス間で通信できない場合は、「 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)」を参照してください。
 
 ### <a name="clean-up-after-the-sample"></a>サンプルの実行後のクリーンアップします。
 

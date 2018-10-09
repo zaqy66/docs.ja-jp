@@ -2,12 +2,12 @@
 title: NamedPipe アクティベーション
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5f277d2c72822d8828355d3d728864bedb6dc4f4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504273"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873363"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe アクティベーション
 このサンプルでは、名前付きパイプを介して通信するサービスをアクティブ化するために、Windows プロセス アクティブ化サービス (WAS: Windows Process Activation Service) を使用してサービスをホストする方法を示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)必要があります[!INCLUDE[wv](../../../../includes/wv-md.md)]を実行します。  
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  このコマンドはテキスト 1 行です。  
   
-         このコマンドにより、/servicemodelsamples アプリケーションに両方を使用してアクセスして http://localhost/servicemodelsamples と net.tcp://localhost/servicemodelsamples です。  
+         このコマンドにより、/servicemodelsamples アプリケーションに両方を使用してアクセスできる`http://localhost/servicemodelsamples`と`net.tcp://localhost/servicemodelsamples`します。  
   
 4.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   

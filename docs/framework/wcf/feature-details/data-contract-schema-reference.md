@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088038"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873720"
 ---
 # <a name="data-contract-schema-reference"></a>データ コントラクト スキーマの参照
 ここでは、XML シリアル化用の共通言語ランタイム (CLR) 型を表すために <xref:System.Runtime.Serialization.DataContractSerializer> が使用する XML スキーマ (XSD) のサブセットについて説明します。  
@@ -32,7 +32,7 @@ ms.locfileid: "44088038"
   
 ## <a name="general-information"></a>一般情報  
   
--   スキーマの名前空間が説明されている[XML スキーマ](https://go.microsoft.com/fwlink/?LinkId=95475)します。 このドキュメントでは、プレフィックス "xs" を使用しています。  
+-   スキーマ名前空間については、「 [XML Schema (XML スキーマ)](https://go.microsoft.com/fwlink/?LinkId=95475)」を参照してください。 このドキュメントでは、プレフィックス "xs" を使用しています。  
   
 -   スキーマ以外の名前空間を含む属性は無視されます。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "44088038"
 |`elementFormDefault`|修飾する必要があります。 `DataContractSerializer`でスキーマをサポートするには、すべての要素を修飾する必要があります。 これは、いずれかの設定によって実現できますxs:schema/@elementFormDefaultを"qualified"かを設定してxs:element/@formごとの個々 の要素の宣言を"qualified"にします。|  
 |`finalDefault`|無視されます。|  
 |`Id`|無視されます。|  
-|`targetNamespace`|サポートされます。データ コントラクト名前空間にマッピングされます。 この属性を指定しなかった場合は、空の名前空間が使用されます。 予約された名前空間をすることはできません http://schemas.microsoft.com/2003/10/Serialization/ です。|  
+|`targetNamespace`|サポートされます。データ コントラクト名前空間にマッピングされます。 この属性を指定しなかった場合は、空の名前空間が使用されます。 予約された名前空間をすることはできません `http://schemas.microsoft.com/2003/10/Serialization/` です。|  
 |`version`|無視されます。|  
   
 ### <a name="xsschema-contents"></a>\<xs:schema >: コンテンツ  
@@ -56,13 +56,13 @@ ms.locfileid: "44088038"
 |--------------|------------|  
 |`include`|サポートされています。 `DataContractSerializer` では xs:include と xs:import がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|  
 |`redefine`|禁止。 セキュリティ上の理由により、 `xs:redefine` では、 `DataContractSerializer` の使用が禁止されています。 `x:redefine` では、 `schemaLocation` を後続させる必要があります。 状況によっては、DataContract を使用する Svcutil.exe では、 `schemaLocation`の使用が制限されます。|  
-|`import`|サポートされています。 `DataContractSerializer` では、 `xs:include` と `xs:import`がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|  
+|`import`|サポートされています。 `DataContractSerializer` では、 `xs:include` と `xs:import`がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、`include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。`include` されたスキーマ ドキュメントは無視されます。|  
 |`simpleType`|サポートされています。 `xs:simpleType` のセクションを参照してください。|  
 |`complexType`|サポートされます。データ コントラクトにマッピングされます。 `xs:complexType` のセクションを参照してください。|  
-|`group`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
+|`group`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema` の子として無視され、`complexType` やその他のサポートされている構文内から参照できません。|  
 |`attributeGroup`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
 |`element`|サポートされています。 グローバル要素宣言 (GED) を参照してください。|  
-|`attribute`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
+|`attribute`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema` の子として無視され、`complexType` やその他のサポートされている構文内から参照できません。|  
 |`notation`|無視されます。|  
   
 ## <a name="complex-types--xscomplextype"></a>複合型 – \<xs:complexType >  
@@ -524,7 +524,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>。|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 型のマッピング  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 では、永続性の確保やデータ転送のためにオブジェクトをシリアル化する一般的な機構として `ISerializable` が導入されました。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を実装したり、アプリケーション間で受け渡したりできる、さまざまな `ISerializable` 型があります。 `DataContractSerializer` は、当然ながら `ISerializable` クラスをサポートします。 `DataContractSerializer` は、型の QName (修飾名) のみが異なり、事実上プロパティ コレクションである `ISerializable` 実装スキーマ型をマッピングします。 たとえば、`DataContractSerializer`マップ<xref:System.Exception>で次の XSD 型を http://schemas.datacontract.org/2004/07/System 名前空間。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 では、永続性の確保やデータ転送のためにオブジェクトをシリアル化する一般的な機構として `ISerializable` が導入されました。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を実装したり、アプリケーション間で受け渡したりできる、さまざまな `ISerializable` 型があります。 `DataContractSerializer` は、当然ながら `ISerializable` クラスをサポートします。 `DataContractSerializer` は、型の QName (修飾名) のみが異なり、事実上プロパティ コレクションである `ISerializable` 実装スキーマ型をマッピングします。 たとえば、`DataContractSerializer`マップ<xref:System.Exception>で次の XSD 型を `http://schemas.datacontract.org/2004/07/System` 名前空間。  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -541,7 +541,7 @@ public class Employee : Person
 ## <a name="datacontract-serialization-schema"></a>DataContract のシリアル化スキーマ  
  `DataContractSerializer` によってエクスポートされたいくつかのスキーマでは、次の特別なデータ コントラクト シリアル化名前空間の型、要素、および属性を使用します。  
   
- http://schemas.microsoft.com/2003/10/Serialization  
+ `http://schemas.microsoft.com/2003/10/Serialization`
   
  データ コントラクト シリアル化スキーマの完全な宣言を次に示します。  
   
