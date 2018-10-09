@@ -13,21 +13,21 @@ ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 332f8eb4fb1a5a02df76c5745522037b029a2407
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780649"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873269"
 ---
-# <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="db77f-102">&lt;削除&gt;authenticationModules (ネットワーク設定) の要素</span><span class="sxs-lookup"><span data-stu-id="db77f-102">&lt;remove&gt; Element for authenticationModules (Network Settings)</span></span>
-<span data-ttu-id="db77f-103">アプリケーションから認証モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="db77f-103">Removes an authentication module from the application.</span></span>  
+# <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="92ce2-102">&lt;削除&gt;authenticationModules (ネットワーク設定) の要素</span><span class="sxs-lookup"><span data-stu-id="92ce2-102">&lt;remove&gt; Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="92ce2-103">アプリケーションから認証モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="92ce2-103">Removes an authentication module from the application.</span></span>  
   
- <span data-ttu-id="db77f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="db77f-104">\<configuration></span></span>  
-<span data-ttu-id="db77f-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="db77f-105">\<system.net></span></span>  
-<span data-ttu-id="db77f-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="db77f-106">\<authenticationModules></span></span>  
-<span data-ttu-id="db77f-107">\<remove></span><span class="sxs-lookup"><span data-stu-id="db77f-107">\<remove></span></span>  
+ <span data-ttu-id="92ce2-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="92ce2-104">\<configuration></span></span>  
+<span data-ttu-id="92ce2-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="92ce2-105">\<system.net></span></span>  
+<span data-ttu-id="92ce2-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="92ce2-106">\<authenticationModules></span></span>  
+<span data-ttu-id="92ce2-107">\<remove></span><span class="sxs-lookup"><span data-stu-id="92ce2-107">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db77f-108">構文</span><span class="sxs-lookup"><span data-stu-id="db77f-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92ce2-108">構文</span><span class="sxs-lookup"><span data-stu-id="92ce2-108">Syntax</span></span>  
   
 ```xml  
 <remove   
@@ -35,34 +35,34 @@ ms.locfileid: "48780649"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="db77f-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="db77f-109">Attributes and Elements</span></span>  
- <span data-ttu-id="db77f-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="db77f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="92ce2-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="92ce2-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="92ce2-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="92ce2-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="db77f-111">属性</span><span class="sxs-lookup"><span data-stu-id="db77f-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="92ce2-111">属性</span><span class="sxs-lookup"><span data-stu-id="92ce2-111">Attributes</span></span>  
   
-|<span data-ttu-id="db77f-112">**属性**</span><span class="sxs-lookup"><span data-stu-id="db77f-112">**Attribute**</span></span>|<span data-ttu-id="db77f-113">**説明**</span><span class="sxs-lookup"><span data-stu-id="db77f-113">**Description**</span></span>|  
+|<span data-ttu-id="92ce2-112">**属性**</span><span class="sxs-lookup"><span data-stu-id="92ce2-112">**Attribute**</span></span>|<span data-ttu-id="92ce2-113">**説明**</span><span class="sxs-lookup"><span data-stu-id="92ce2-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|<span data-ttu-id="db77f-114">**type**</span><span class="sxs-lookup"><span data-stu-id="db77f-114">**type**</span></span>|<span data-ttu-id="db77f-115">削除する認証モジュールの名前。</span><span class="sxs-lookup"><span data-stu-id="db77f-115">The name of the authentication module to remove.</span></span>|  
+|<span data-ttu-id="92ce2-114">**type**</span><span class="sxs-lookup"><span data-stu-id="92ce2-114">**type**</span></span>|<span data-ttu-id="92ce2-115">削除する認証モジュールの名前。</span><span class="sxs-lookup"><span data-stu-id="92ce2-115">The name of the authentication module to remove.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="db77f-116">子要素</span><span class="sxs-lookup"><span data-stu-id="db77f-116">Child Elements</span></span>  
- <span data-ttu-id="db77f-117">なし。</span><span class="sxs-lookup"><span data-stu-id="db77f-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="92ce2-116">子要素</span><span class="sxs-lookup"><span data-stu-id="92ce2-116">Child Elements</span></span>  
+ <span data-ttu-id="92ce2-117">なし。</span><span class="sxs-lookup"><span data-stu-id="92ce2-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="db77f-118">親要素</span><span class="sxs-lookup"><span data-stu-id="db77f-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="92ce2-118">親要素</span><span class="sxs-lookup"><span data-stu-id="92ce2-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="db77f-119">**要素**</span><span class="sxs-lookup"><span data-stu-id="db77f-119">**Element**</span></span>|<span data-ttu-id="db77f-120">**説明**</span><span class="sxs-lookup"><span data-stu-id="db77f-120">**Description**</span></span>|  
+|<span data-ttu-id="92ce2-119">**要素**</span><span class="sxs-lookup"><span data-stu-id="92ce2-119">**Element**</span></span>|<span data-ttu-id="92ce2-120">**説明**</span><span class="sxs-lookup"><span data-stu-id="92ce2-120">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="db77f-121">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="db77f-121">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="db77f-122">ネットワーク要求の認証に使用されるモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="db77f-122">Specifies modules used to authenticate network requests.</span></span>|  
+|[<span data-ttu-id="92ce2-121">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="92ce2-121">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="92ce2-122">ネットワーク要求の認証に使用されるモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="92ce2-122">Specifies modules used to authenticate network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="db77f-123">Remarks</span><span class="sxs-lookup"><span data-stu-id="db77f-123">Remarks</span></span>  
- <span data-ttu-id="db77f-124">`remove`要素は、構成ファイルで、または構成階層のより高いレベルで既に定義されている認証モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="db77f-124">The `remove` element removes authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="92ce2-123">Remarks</span><span class="sxs-lookup"><span data-stu-id="92ce2-123">Remarks</span></span>  
+ <span data-ttu-id="92ce2-124">`remove`要素は、構成ファイルで、または構成階層のより高いレベルで既に定義されている認証モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="92ce2-124">The `remove` element removes authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
- <span data-ttu-id="db77f-125">値、`type`属性が有効なクラス名にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="db77f-125">The value for the `type` attribute should be a valid class name.</span></span>  
+ <span data-ttu-id="92ce2-125">値、`type`属性が有効なクラス名にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="92ce2-125">The value for the `type` attribute should be a valid class name.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="db77f-126">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="db77f-126">Configuration Files</span></span>  
- <span data-ttu-id="db77f-127">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="db77f-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="92ce2-126">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="92ce2-126">Configuration Files</span></span>  
+ <span data-ttu-id="92ce2-127">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="92ce2-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="db77f-128">例</span><span class="sxs-lookup"><span data-stu-id="db77f-128">Example</span></span>  
- <span data-ttu-id="db77f-129">次の例では、認証モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="db77f-129">The following example removes an authentication module.</span></span>  
+## <a name="example"></a><span data-ttu-id="92ce2-128">例</span><span class="sxs-lookup"><span data-stu-id="92ce2-128">Example</span></span>  
+ <span data-ttu-id="92ce2-129">次の例では、認証モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="92ce2-129">The following example removes an authentication module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -74,7 +74,7 @@ ms.locfileid: "48780649"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="db77f-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="db77f-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="92ce2-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="92ce2-130">See Also</span></span>  
  <xref:System.Net.IAuthenticationModule>  
  <xref:System.Net.AuthenticationManager>  
- [<span data-ttu-id="db77f-131">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="db77f-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="92ce2-131">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="92ce2-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
