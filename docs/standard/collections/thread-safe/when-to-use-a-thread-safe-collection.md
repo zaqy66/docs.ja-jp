@@ -34,7 +34,7 @@ ms.locfileid: "47109983"
  コンピューターのコア数に比例したパフォーマンスの向上。 スケーリングするアルゴリズムのパフォーマンスは、コア数が 2 の場合よりも 8 の場合の方が向上します。  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) 対 Queue(T)  
- 純粋プロデューサー/コンシューマー シナリオで、各要素の処理時間がとても短い (命令が少ない) 場合には、外部ロックを使用する <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> よりも <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> の方が若干優れたパフォーマンスを得られます。 このシナリオでは、キューへの配置とキューからの取り出しをそれぞれ専用のスレッドが実行している場合に、<xref:System.Collections.Concurrent.ConcurrentQueue%601> のパフォーマンスが最大限に引き出されます。 この規則を強制していない場合、<xref:System.Collections.Generic.Queue%601> は、複数のコアを持つコンピューター上の <xref:System.Collections.Concurrent.ConcurrentQueue%601> よりも若干向上する場合があります。  
+ 純粋プロデューサー/コンシューマー シナリオで、各要素の処理時間がとても短い (命令が少ない) 場合には、外部ロックを使用する<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> よりも  <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> の方が若干優れたパフォーマンスを得られます。 このシナリオでは、キューへの配置とキューからの取り出しをそれぞれ専用のスレッドが実行している場合に、<xref:System.Collections.Concurrent.ConcurrentQueue%601> のパフォーマンスが最大限に引き出されます。 この規則を強制していない場合、<xref:System.Collections.Generic.Queue%601> は、複数のコアを持つコンピューター上の <xref:System.Collections.Concurrent.ConcurrentQueue%601> よりも若干向上する場合があります。  
   
  処理時間が 500 FLOPS (浮動小数点演算) 以上の場合、2 つのスレッドを使用する規則は <xref:System.Collections.Concurrent.ConcurrentQueue%601> に適用されません。この型でとても優れたスケーラビリティが実現します。 <xref:System.Collections.Generic.Queue%601> は、このシナリオではスケーラビリティの点で劣ります。  
   

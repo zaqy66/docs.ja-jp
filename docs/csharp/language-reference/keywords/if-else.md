@@ -49,7 +49,7 @@ if (condition)
 
 `if-else` ステートメントで、 `condition` が true に評価されると、 `then-statement` が実行されます。 `condition` が false の場合は、 `else-statement` が実行されます。 `condition` が同時に true と false に評価されることはないため、 `then-statement` ステートメントの `else-statement` と `if-else` の両方が実行されることは決してありません。 `then-statement` または `else-statement` が実行された後、制御は `if` ステートメントの後のステートメントに移ります。
 
-`if` ステートメントが含まれない `else` ステートメントで `condition` が true に評価された場合は、 `then-statement` が実行されます。 `condition` が false の場合、制御は `if` ステートメントの後のステートメントに移ります。
+`else` ステートメントが含まれない `if` ステートメントで `condition` が true に評価された場合は、 `then-statement` が実行されます。 `condition` が false の場合、制御は `if` ステートメントの後のステートメントに移ります。
 
 `then-statement` と `else-statement` はどちらも、中かっこ (`{}`) で囲まれた 1 つのステートメントまたは複数のステートメントで構成できます。 ステートメントが 1 つの場合、中かっこは省略可能ですが、使用することが推奨されます。
 
