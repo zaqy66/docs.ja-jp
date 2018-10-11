@@ -2,12 +2,12 @@
 title: WCF サービスと Event Tracing for Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 26ce5fcb07b06a52f69ad8655adea563c177b055
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266872"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086584"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF サービスと Event Tracing for Windows
 このサンプルでは、Event Tracing for Windows (ETW で) を出力する Windows Communication Foundation (WCF) での分析トレースを使用する方法を示します。 分析トレースは、運用環境で WCF サービスのトラブルシューティングできるように、WCF スタックのキー_ポイントで出力されるイベントです。
@@ -34,7 +34,7 @@ ms.locfileid: "48266872"
 
 5.  選択して、サービスを追加、WCF テスト クライアント内で**ファイル**、し**サービスの追加**します。
 
-     入力ボックスにエンドポイントのアドレスを追加します。 既定値は http://localhost:1378/Calculator.svc です。
+     入力ボックスにエンドポイントのアドレスを追加します。 既定値は `http://localhost:1378/Calculator.svc` です。
 
 6.  イベント ビューアー アプリケーションを開きます。
 

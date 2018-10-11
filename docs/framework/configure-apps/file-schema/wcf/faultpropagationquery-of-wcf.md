@@ -2,17 +2,17 @@
 title: WCF の &lt;faultPropagationQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: fe3dd90a5c6b26537ab461b4bf4993df5be625a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: df7119363e94a070bb898c984c12cf82755c3407
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747360"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087701"
 ---
 # <a name="ltfaultpropagationquerygt-of-wcf"></a>WCF の &lt;faultPropagationQuery&gt;
 1 つのアクティビティ内で発生するエラーの処理を追跡するために使用するクエリを表します。  このイベントは、FaultHandler がエラーを処理するたびに発生します。 1 つのアクティビティ内で発生したエラーの処理は、このようなクエリを使用して追跡する必要があります。 追跡参加要素がエラー伝達レコードを定期受信するには、このクエリが必要です。  
   
- 追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)です。  
+ 追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。  
   
  \<system.serviceModel>  
 \<追跡 >  
@@ -24,7 +24,16 @@ ms.locfileid: "32747360"
 ## <a name="syntax"></a>構文  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <faultPropagationQueries>             <faultPropagationQuery activityName="String"                 faultHandlerActivityName="String"/>          </faultPropagationQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <faultPropagationQueries>
+        <faultPropagationQuery activityName="String"
+                               faultHandlerActivityName="String"/>
+      </faultPropagationQueries>
+    </workflow>
+  </trackingProfile>
+</tracking>  
 ```
   
 ## <a name="attributes-and-elements"></a>属性および要素  

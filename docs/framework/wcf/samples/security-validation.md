@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 author: BrucePerlerMS
 ms.openlocfilehash: 4b80457fb551c2ee99f910710c5f30fa59c53a01
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844542"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087740"
 ---
 # <a name="security-validation"></a>セキュリティ検証
 このサンプルでは、サービスが特定の条件を満たしていることを確認するカスタム動作を使用して、コンピューター上のサービスを検証する方法を示します。 このサンプルでは、サービス上の各エンドポイントをスキャンし、セキュリティ保護されたバインド要素が含まれているかどうかを確認するカスタム動作を使用して、サービスを検証します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
 ms.openlocfilehash: b72c3959b2a42c6a5abc8ef31975d5bdb9ce220e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781610"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086844"
 ---
 # <a name="endpoint-creation-overview"></a>エンドポイントの作成の概要
 を介して Windows Communication Foundation (WCF) サービスとすべての通信が行われます、*エンドポイント*サービス。 エンドポイントは、WCF サービスを提供する機能へのアクセスをクライアントに提供します。 このセクションでは、エンドポイントの構造およびエンドポイントの設定またはコードによる定義の方法の概要を説明します。  

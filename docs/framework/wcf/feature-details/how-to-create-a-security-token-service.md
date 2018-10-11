@@ -9,29 +9,29 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6dbf0e2be0a75fccd84a82fe2b3c8ab41762de83
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046736"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087727"
 ---
 # <a name="how-to-create-a-security-token-service"></a>方法 : セキュリティ トークン サービスを作成する
 セキュリティ トークン サービスは、WS-Trust 仕様に定義されているプロトコルを実装します。 このプロトコルでは、セキュリティ トークンの発行、更新、キャンセル、および検証を行うためのメッセージ形式とメッセージ交換パターンが定義されています。 セキュリティ トークン サービスでは、これらの機能が 1 つ以上提供されます。 ここでは、最も一般的なシナリオであるトークンの発行の実装について説明します。  
   
 ## <a name="issuing-tokens"></a>トークンの発行  
- WS-Trust は、トークンを発行するための `RequestSecurityToken` XML スキーマ定義言語 (XSD: XML Schema Definition Language) スキーマ要素および `RequestSecurityTokenResponse` XSD スキーマ要素に基づいたメッセージ形式を定義しています。 また、関連するアクション URI (Uniform Resource Identifier) も定義しています。 URI に関連付けられたアクション、`RequestSecurityToken`メッセージは http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue します。 URI に関連付けられたアクション、`RequestSecurityTokenResponse`メッセージは http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue します。  
+ WS-Trust は、トークンを発行するための `RequestSecurityToken` XML スキーマ定義言語 (XSD: XML Schema Definition Language) スキーマ要素および `RequestSecurityTokenResponse` XSD スキーマ要素に基づいたメッセージ形式を定義しています。 また、関連するアクション URI (Uniform Resource Identifier) も定義しています。 URI に関連付けられたアクション、`RequestSecurityToken`メッセージは `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` します。 URI に関連付けられたアクション、`RequestSecurityTokenResponse`メッセージは `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` します。  
   
 ### <a name="request-message-structure"></a>要求メッセージの構造  
  発行要求メッセージの構造は、通常、次の項目で構成されます。  
   
--   要求の値を持つ URI を入力する http://schemas.xmlsoap.org/ws/2005/02/trust/Issue です。  
+-   要求の値は、URI を入力する`http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`します。
   
--   "トークンの種類" URI。 この URI の値は、Security Assertions Markup Language (SAML) 1.1 トークンの http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1 します。  
+-   "トークンの種類" URI。 この URI の値は、Security Assertions Markup Language (SAML) 1.1 トークンの `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1` します。  
   
 -   発行済みトークンに関連付けられるキーのビット数を示すキー サイズの値。  
   
--   "キーの種類" URI。 対称キーは、この URI の値は http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey します。  
+-   "キーの種類" URI。 対称キーは、この URI の値は `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey` します。  
   
  さらに、2 つの項目が含まれている必要があります。  
   

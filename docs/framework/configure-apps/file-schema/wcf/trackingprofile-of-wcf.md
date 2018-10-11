@@ -1,13 +1,13 @@
 ---
 title: WCF の &lt;trackingProfile&gt;
-ms.date: 03/30/2017
+ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
-ms.openlocfilehash: 7f1b6836dc8d9d4e56a0a6831a373e50bbae920c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a11086ef07a2a605f3889bc4077d25e0b7748e5e
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839710"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087662"
 ---
 # <a name="lttrackingprofilegt-of-wcf"></a>WCF の &lt;trackingProfile&gt;
 ワークフロー追跡参加要素内のレコードを追跡するサブスクリプションを作成するための構成セクションを表します。 追跡プロファイルには、実行時にワークフロー インスタンスの状態が変化したときに生成されるワークフロー イベントを追跡参加要素が定期受信できるようにする、追跡クエリが含まれています。 追跡プロファイル セクション内で定義されたクエリでは、サブスクリプションによって返されるイベントの種類が定義されます。  
@@ -21,11 +21,63 @@ ms.locfileid: "48839710"
 ## <a name="syntax"></a>構文  
   
 ```xml
-   <system.serviceModel>  <tracking>      <trackingProfile name="String">      <workflow activityDefinitionId="String">          <activityScheduledQueries>             <activityScheduledQuery activityName="String"                 childActivityName="String"/>          </activityScheduledQueries>             <activityStateQuery activityName="String" />                <arguments>                   <argument name="String"/>                </arguments>                <states>                   <state name="String"/>                </states>                <variables>                   <variable name="String"/>                </variables>          </activityStateQueries>          <bookmarkResumptionQueries>             <bookmarkResumptionQuery name="String" />          </bookmarkResumptionQueries>          <cancelRequestQueries>             <cancelRequestQuery activityName="String"                 childActivityName="String"/>          </cancelRequestQueries>          <customTrackingQueries>             <customTrackingQuery activityName="String"                 name="String"/>          </customTrackingQueries>          <faultPropagationQueries>             <faultPropagationQuery activityName="String"                 faultHandlerActivityName="String"/>          </faultPropagationQueries>         <workflowInstanceQueries>            <workflowInstanceQuery>              <states>                 <state name="String"/>              </states>          </workflowInstanceQuery>        </workflowInstanceQueries>      </workflow>    </trackingProfile>           </profiles>  </tracking></system.serviceModel>    
+<system.serviceModel>
+  <tracking>
+    <profiles>
+      <trackingProfile name="String">
+        <workflow activityDefinitionId="String">
+          <activityScheduledQueries>
+            <activityScheduledQuery activityName="String" 
+                                    childActivityName="String" />
+          </activityScheduledQueries>
+          <activityStateQueries>
+            <activityStateQuery activityName="String">
+              <arguments>
+                <argument name="String"/>
+              </arguments>
+              <states>
+                <state name="String"/>
+              </states>
+              <variables>
+                <variable name="String"/>
+              </variables>
+            </activityStateQuery>
+          </activityStateQueries>
+          <bookmarkResumptionQueries>
+            <bookmarkResumptionQuery name="String" />
+          </bookmarkResumptionQueries>
+          <cancelRequestedQueries>
+            <cancelRequestedQuery activityName="String" 
+                                childActivityName="String"/>
+          </cancelRequestedQueries>
+          <customTrackingQueries>
+            <customTrackingQuery activityName="String" 
+                                 name="String"/>
+          </customTrackingQueries>
+          <faultPropagationQueries>
+            <faultPropagationQuery faultSourceActivityName="String" 
+                                   faultHandlerActivityName="String"/>
+          </faultPropagationQueries>
+          <stateMachineStateQueries>
+            <stateMachineStateQuery activityName="String" />
+          </stateMachineStateQueries>
+          <workflowInstanceQueries>
+            <workflowInstanceQuery>
+              <states>
+                <state name="String"/>
+              </states>
+            </workflowInstanceQuery>
+          </workflowInstanceQueries>
+        </workflow>
+      </trackingProfile>
+    </profiles>
+  </tracking>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
- 以降のセクションでは、属性、子要素、および親要素について説明します。  
+
+以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
@@ -48,32 +100,34 @@ ms.locfileid: "48839710"
 ## <a name="remarks"></a>Remarks  
  追跡プロファイルには、実行時にワークフロー インスタンスの状態が変化したときに生成されるワークフロー イベントを追跡参加要素が定期受信できるようにする、追跡クエリが含まれています。 監視の要件に応じて、ワークフローの主な状態変化の少数のセットを定期受信する、大まかなプロファイルを作成できます。 それとは反対に、結果として得られるイベントが、後で詳細な実行フローを十分に再構築できるほど豊富な、詳細なプロファイルを作成することもできます。  
   
- 追跡プロファイルは、特定の追跡レコードを対象としてワークフロー ランタイムを照会できる、追跡レコード用の宣言型のサブスクリプションとして構築されます。 いくつかのクエリの種類のさまざまなクラスを定期受信できる<xref:System.Activities.Tracking.TrackingRecord>オブジェクト。 クエリの完全な一覧を参照してください[\<参加者 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)と[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).。  
+ 追跡プロファイルは、特定の追跡レコードを対象としてワークフロー ランタイムを照会できる、追跡レコード用の宣言型のサブスクリプションとして構築されます。 いくつかのクエリの種類のさまざまなクラスを定期受信できる<xref:System.Activities.Tracking.TrackingRecord>オブジェクト。 クエリの完全な一覧を参照してください。 [\<参加者 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)と[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。
   
- 次の例は、追跡参加要素をサブスクライブできるようにする構成ファイルで追跡プロファイルを示します、`Started`と`Completed`ワークフロー イベント。  
+次の例は、追跡参加要素をサブスクライブできるようにする構成ファイルで追跡プロファイルを示します、`Started`と`Completed`ワークフロー イベント。  
   
-```xml  
-<system.serviceModel>  
-  <tracking>    
-    <trackingProfile name="Sample Tracking Profile">  
-      <workflow activityDefinitionId="*">  
-         <workflowInstanceQueries>  
-            <workflowInstanceQuery>  
-            <states>  
-              <state name="Started"/>  
-              <state name="Completed"/>  
-            </states>  
-          </workflowInstanceQuery>  
-        </workflowInstanceQueries>  
-      </workflow>  
-    </trackingProfile>          
-   </profiles>  
-  </tracking>  
-</system.serviceModel>  
+```xml
+<system.serviceModel>
+  <tracking>
+    <profiles>
+      <trackingProfile name="Sample Tracking Profile">
+        <workflow activityDefinitionId="*">
+          <workflowInstanceQueries>
+            <workflowInstanceQuery>
+              <states>
+                <state name="Started"/>
+                <state name="Completed"/>
+              </states>
+            </workflowInstanceQuery>
+          </workflowInstanceQueries>
+        </workflow>
+      </trackingProfile>
+    </profiles>
+  </tracking>
+</system.serviceModel>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>  
- <xref:System.Activities.Tracking.TrackingProfile>  
- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>  
+- <xref:System.Activities.Tracking.TrackingProfile>  
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

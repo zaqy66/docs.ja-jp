@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: ab96e8f3395a78c88184872a2c78b71fb2bf7b9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e43d423109ea39a725a4bfa8b9d2b22a25cfb5c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522112"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087337"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web サービスからの DataSet の使用
 <xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **データセット**への入力として指定できますまたはコードを追加せず、XML Web サービスからの出力のコンテンツをストリームするために必要という点では、「シリアル化可能な」、**データセット**XML Web サービスからクライアントとバックエンド。 **データセット**DiffGram 形式を使用して XML ストリームに暗黙的に変換は、ネットワーク経由で送信およびとして XML ストリームから再構築し、**データセット**受信側でします。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、次を参照してください。 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)します。  
@@ -163,7 +163,7 @@ ms.locfileid: "43522112"
   
      XML Web サービスのクライアントは、公開されたメソッドを使用するために SOAP プロキシを必要とします。 このプロキシは、Visual Studio を使用して生成することができます。 Visual Studio から既存の Web サービスへの Web 参照を設定することにより、この手順で説明されているすべての動作が自動的に実行されます。 プロキシ クラスを手動で作成する場合は、後述の手順を参照してください。 ほとんどの場合、Visual Studio による、クライアント アプリケーションのプロキシ クラスの作成で十分です。  
   
-     プロキシは、Web サービス記述言語ツールを使用して作成できます。 たとえば、XML Web サービスが、URL で公開されている http://myserver/data/DataSetSample.asmxの名前空間と Visual Basic .NET プロキシを作成する、次のコマンドを発行**WebData.DSSample**ファイル sample.vb に格納します。  
+     プロキシは、Web サービス記述言語ツールを使用して作成できます。 たとえば、XML Web サービスが、URL で公開されている`http://myserver/data/DataSetSample.asmx`の名前空間と Visual Basic .NET プロキシを作成する、次のコマンドを発行**WebData.DSSample**ファイル sample.vb に格納します。  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  

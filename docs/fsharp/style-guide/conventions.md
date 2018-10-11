@@ -2,12 +2,12 @@
 title: F# でのコーディング規則
 description: F# コードを記述する場合は、一般的なガイドラインと表現方法を説明します。
 ms.date: 05/14/2018
-ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237409"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087389"
 ---
 # <a name="f-coding-conventions"></a>F# でのコーディング規則
 
@@ -420,7 +420,7 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
 
 F# は、複数のオプション[アクセス制御](../language-reference/access-control.md)、.NET ランタイムで使用できる新から継承します。 これらは型の使用可能なだけではありません - 関数の場合もに使用できます。
 
-* 必要に応じて非`public`型とメンバーに公開する必要があるまでです。 これをどのようなコンシューマーのいくつか最小限に抑えられます
+* 必要に応じて非`public`型とメンバーに公開する必要があるまでです。 これには、どのようなコンシューマー結合するも最小限に抑えます。
 * すべてのヘルパー機能を保持するよう努める`private`します。
 * 使用を検討`[<AutoOpen>]`プライベート ヘルパー関数の場合、多数のモジュールにします。
 

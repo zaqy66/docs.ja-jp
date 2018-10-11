@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 7f698a517fbf72ceafde4a117b4d92dd9d352834
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 689b06e8fbebe490f79ab6c12f144546472a95ff
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964405"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087220"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>方法 : デザイン時に Windows フォームのコントロールにツールヒントを設定する
 設定することができます、<xref:System.Windows.Forms.ToolTip>コードや、Windows フォーム デザイナーでの文字列。 詳細については、<xref:System.Windows.Forms.ToolTip>コンポーネントを参照してください[ToolTip コンポーネントの概要](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)します。  
@@ -50,8 +50,33 @@ ms.locfileid: "45964405"
 2.  ツールヒントを表示または、フォームに追加されるコントロールを選択します。  
   
 3.  **プロパティ**ウィンドウで、設定、 **ToolTip1 のツールヒント**テキストの適切な文字列値。  
+
+### <a name="to-remove-a-tooltip-programmatically"></a>ツールヒントをプログラムで削除するには  
   
+1.  使用して、<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>のメソッド、<xref:System.Windows.Forms.ToolTip>コンポーネント。  
+  
+    ```vb  
+    ' In this example, Button1 is the control displaying the ToolTip.  
+    ToolTip1.SetToolTip(Button1, Nothing)  
+    ```  
+  
+    ```csharp  
+    // In this example, button1 is the control displaying the ToolTip.  
+    toolTip1.SetToolTip(button1, null);  
+    ```  
+  
+    ```cpp  
+    // In this example, button1 is the control displaying the ToolTip.  
+    toolTip1->SetToolTip(button1, NULL);  
+    ```  
+  
+### <a name="to-remove-a-tooltip-in-the-designer"></a>デザイナーでツールヒントを削除するには  
+  
+1.  ツールヒントが表示されているコントロールを選択します。  
+  
+2.  **プロパティ**ウィンドウ内のテキストを削除、 **ToolTip1 のツールヒント**します。  
+
 ## <a name="see-also"></a>関連項目  
- [ToolTip コンポーネントの概要](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
- [方法: Windows フォームの ToolTip コンポーネントの遅延時間を変更する](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
- [ToolTip コンポーネント](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
+- [ToolTip コンポーネントの概要](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
+- [方法: Windows フォームの ToolTip コンポーネントの遅延時間を変更する](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+- [ToolTip コンポーネント](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)

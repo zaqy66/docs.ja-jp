@@ -3,11 +3,11 @@ title: コレクション (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847465"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087376"
 ---
 # <a name="collections-visual-basic"></a>コレクション (Visual Basic)
 多くのアプリケーションで、関連するオブジェクトのグループの作成および管理が必要になります。 オブジェクトをグループ化するには、オブジェクトの配列を作成する方法と、オブジェクトのコレクションを作成する方法があります。  
@@ -234,9 +234,9 @@ End Class
   
  Visual Basic の `Collection` クラスを使用すると、コレクション内の最初の項目はインデックス 1 となります。 これは、インデックスが 0 から開始される .NET Framework のコレクション クラスとは異なります。  
   
- できる限り、Visual Basic の <xref:System.Collections.Generic?displayProperty=nameWithType> クラスの代わりに、<xref:System.Collections.Concurrent> 名前空間または `Collection` 名前空間のジェネリック コレクションを使用します。  
+ できる限り、Visual Basic の `Collection` クラスの代わりに、<xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間または <xref:System.Collections.Concurrent> 名前空間のジェネリック コレクションを使用してください。  
   
- 詳細については、「<xref:Microsoft.VisualBasic.Collection>」を参照してください。  
+ 詳細については、「 <xref:Microsoft.VisualBasic.Collection> 」を参照してください。  
   
 <a name="BKMK_KeyValuePairs"></a>
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>キーと値のペアのコレクションを実装する   

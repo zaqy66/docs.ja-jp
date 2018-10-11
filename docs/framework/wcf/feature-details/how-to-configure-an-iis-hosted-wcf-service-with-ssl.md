@@ -2,12 +2,12 @@
 title: IIS でホストされる WCF サービスに SSL を構成する方法
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: e739eb47611e5b73e7f1d62191a5aa61ad77abe2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d6e367748222d7401bec6dc919815399b63b1d9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493498"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086220"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>IIS でホストされる WCF サービスに SSL を構成する方法
 ここでは、HTTP トランスポート セキュリティを使用するように IIS でホストされる WCF サービスをセットアップする方法について説明します。 HTTP トランスポート セキュリティを使用するには、SSL 証明書が IIS に登録されている必要があります。 SSL 証明書がない場合は、IIS を使用してテスト証明書を生成できます。 次に、Web サイトに SSL バインディングを追加し、Web サイトの認証プロパティを構成する必要があります。 最後に、HTTPS を使用するように WCF サービスを構成する必要があります。  
@@ -18,15 +18,15 @@ ms.locfileid: "33493498"
   
      ![IIS マネージャーのホーム画面](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2.  サーバー証明書 ウィンドウでをクリックして、**自己署名証明書を作成しています.** リンクをクリックします。  
+2.  サーバー証明書 ウィンドウで、**自己署名証明書を作成しています.** リンクをクリックします。  
   
-     ![自己を作成する&#45;署名入り証明書を IIS に](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
+     ![自動作成&#45;署名入り証明書を IIS に](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
-3.  自己署名証明書のフレンドリ名を入力し、クリックして**OK**です。  
+3.  自己署名証明書のフレンドリ名を入力し、クリックして**OK**します。  
   
-     ![自動作成&#45;署名証明書ダイアログ](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
+     ![作成自己&#45;署名証明書ダイアログ](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
   
-     新しく作成された自己署名証明書の詳細が示されています、**サーバー証明書**ウィンドウです。  
+     新しく作成された自己署名証明書の詳細はここで示した、**サーバー証明書**ウィンドウ。  
   
      ![サーバー証明書 ウィンドウ](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
   
@@ -34,29 +34,29 @@ ms.locfileid: "33493498"
   
 ### <a name="add-ssl-binding"></a>SSL バインドの追加  
   
-1.  インターネット インフォメーション サービス マネージャーでも、展開、**サイト**フォルダーし、**既定の Web サイト**画面の左側にあるツリー ビューでフォルダーです。  
+1.  インターネット インフォメーション サービス マネージャーでも、展開、**サイト**フォルダーをクリックし、**既定の Web サイト**画面の左側にあるツリー ビュー内のフォルダー。  
   
-2.  クリックして、**バインドしています.** 内のリンク、**アクション**セクションで、ウィンドウの右上の部分にします。  
+2.  をクリックして、**バインドしています.** 内のリンク、**アクション**ウィンドウの右上部分でセクション。  
   
-     ![SSL バインディングの追加](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
+     ![SSL バインドの追加](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
   
 3.  サイト バインド ウィンドウで、**追加**ボタンをクリックします。  
   
-     ![サイトのバインド ダイアログ ボックス](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
+     ![サイト バインド ダイアログ ボックス](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
   
-4.  **サイト バインドの追加**作成ダイアログ ボックスで、型とした自己署名証明書のフレンドリ名 (https) を選択します。  
+4.  **サイト バインドの追加**ダイアログ ボックスで、型とした自己署名証明書のフレンドリ名に対する https の選択を作成します。  
   
-     ![サイト バインディングの例](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")  
+     ![サイト バインドの例](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")  
   
 ### <a name="configure-virtual-directory-for-ssl"></a>SSL の仮想ディレクトリの構成  
   
 1.  インターネット インフォメーション サービス マネージャーで、WCF のセキュリティで保護されたサービスが含まれている仮想ディレクトリを選択します。  
   
-2.  ウィンドウの中央のウィンドウで選択**SSL 設定**IIS セクションでします。  
+2.  ウィンドウの中央のウィンドウで次のように選択します。 **SSL 設定**IIS セクションでします。  
   
      ![仮想ディレクトリの SSL 設定](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")  
   
-3.  SSL 設定 ウィンドウで、選択、 **SSL が必要** チェック ボックス をクリック、**適用**内のリンク、**アクション**画面の右側にあるセクション。  
+3.  SSL 設定 ウィンドウで、選択、 **SSL が必要**チェック ボックスをオン をクリックし、**適用**のリンクを**アクション**画面の右側にあるセクション。  
   
      ![仮想ディレクトリの SSL 設定](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")  
   
@@ -145,7 +145,7 @@ ms.locfileid: "33493498"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [インターネット インフォメーション サービスでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [インターネット インフォメーション サービスのホスティング手順](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [インターネット インフォメーション サービス ホスティングのベスト プラクティス](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [インライン コードを使用した IIS ホスティング](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+* [インターネット インフォメーション サービスでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+* [インターネット インフォメーション サービスのホスティング手順](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+* [インターネット インフォメーション サービス ホスティングのベスト プラクティス](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+* [インライン コードを使用した IIS ホスティング](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

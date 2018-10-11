@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 author: BrucePerlerMS
 ms.openlocfilehash: 4a6ad2746bea9dfea1999e272796d44f0341e64d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777280"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086610"
 ---
 # <a name="transport-security-with-basic-authentication"></a>基本認証でのトランスポート セキュリティ
 次の図は、Windows Communication Foundation (WCF) サービスとクライアントを示します。 サーバーには、SSL (Secure Sockets Layer) に使用できる有効な X509 証明書が必要であり、クライアントはサーバーの証明書を信頼する必要があります。 さらに、Web サービスには使用可能な SSL が既に実装されています。 詳細については基本認証を有効にするインターネット インフォメーション サービス (IIS) で、次を参照してください。 [ https://go.microsoft.com/fwlink/?LinkId=83822](https://go.microsoft.com/fwlink/?LinkId=83822)します。  
