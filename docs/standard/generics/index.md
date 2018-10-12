@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e5aea783640a2aa2c9f4fa7754b9a3a435d1f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579068"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584144"
 ---
 # <a name="generics-in-net"></a>.NET のジェネリック
 
@@ -115,7 +115,7 @@ ms.locfileid: "33579068"
   
 -   汎用デリゲートによって、複数のデリゲート クラスを作成せずにタイプ セーフなコールバックを使用できます。 たとえば、 <xref:System.Predicate%601> 汎用デリゲートを使用すると、特定の型を対象とした独自の検索条件を実装するメソッドを作成し、 <xref:System.Array> 、 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>などの <xref:System.Array.FindAll%2A>型のメソッドと共に自分のメソッドを使用することができます。  
   
--   ジェネリックによって、動的に生成されるコードが簡略化されます。 動的に生成されるコードでジェネリックを使用する場合、型を生成する必要がありません。 これにより、アセンブリ全体を生成する代わりに軽量の動的メソッドを使用できるシナリオの数が増えます。 詳細については、「方法: 動的メソッドを定義および実行する」および DynamicMethod を参照してください。  
+-   ジェネリックによって、動的に生成されるコードが簡略化されます。 動的に生成されるコードでジェネリックを使用する場合、型を生成する必要がありません。 これにより、アセンブリ全体を生成する代わりに軽量の動的メソッドを使用できるシナリオの数が増えます。 詳細については、「[How to: Define and Execute Dynamic Methods](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)」 (方法: 動的メソッドを定義および実行する) および 「<xref:System.Reflection.Emit.DynamicMethod>」 を参照してください。  
   
  ジェネリックの制限事項を次に示します。  
   
