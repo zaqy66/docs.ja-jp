@@ -36,7 +36,7 @@
 ## [デリゲートとラムダ](standard/delegates-lambdas.md)
 ## [LINQ](standard/using-linq.md)
 ## [共通型システムと共通言語仕様](standard/common-type-system.md)
-## [並列処理、同時実行、および非同期](standard/parallel-processing-and-concurrency.md)
+## [並列処理、コンカレンシー、および非同期](standard/parallel-processing-and-concurrency.md)
 ### [非同期プログラミング](standard/async.md)
 #### [非同期プログラミングの詳細](standard/async-in-depth.md)
 #### [非同期プログラミングのパターン](standard/asynchronous-programming-patterns/)
@@ -241,6 +241,7 @@
 ### [C# 6](csharp/whats-new/csharp-6.md)
 ### [C# バージョン履歴](csharp/whats-new/csharp-version-history.md)
 ### [言語とフレームワークの関係](csharp/whats-new/relationships-between-language-and-library.md)
+### [バージョンと更新に関する考慮事項](csharp/whats-new/version-update-considerations.md)
 <!-- End What's New -->
 ## C# の概念
 ### [C# の型システム](csharp/programming-guide/types/index.md)

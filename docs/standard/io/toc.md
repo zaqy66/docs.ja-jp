@@ -14,6 +14,7 @@
 ### [ストリームの構成](composing-streams.md)
 ### [方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う](how-to-convert-between-dotnet-streams-and-winrt-streams.md)
 ## [非同期ファイル I/O](asynchronous-file-i-o.md)
+## [I/O エラーの処理](handling-io-errors.md)
 ## [分離ストレージ](isolated-storage.md)
 ### [分離のタイプ](types-of-isolation.md)
 ### [方法: 分離ストレージでストアを取得する](how-to-obtain-stores-for-isolated-storage.md)
