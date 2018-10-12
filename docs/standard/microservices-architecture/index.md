@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 0f401f89b0a568b8dc7c3734b2f06fa3a14de110
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 38f638b76a38c470daf51cb7be8566feb4b6362f
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088498"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121364"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Microservices: Architecture for Containerized .NET Applications (.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ)
 
@@ -47,7 +47,7 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 このガイドで学習したら、次の段階は Microsoft Azure での実稼働可能なマイクロサービスについて学習することです。
 
-## <a name="version"></a>バージョン
+## <a name="version"></a>Version
 
 このガイドは、**.NET Core 2.1** に加え、.NET Core 2.1 と同時期に起こっているテクノロジーの "波" (つまり  Azure とサードパーティのテクノロジー) に関連する多数の最新情報も扱うように改訂されています。 本書がバージョン **2.1** に更新されているのはそれが理由です。 
 
@@ -171,7 +171,7 @@ All rights reserved. 本書のいかなる部分も、書面による発行者�
 
 ここに記載したいくつかの例は、説明のためだけに提供された架空のものです。 実在のものとの関連性または関係性は一切ありません。
 
-http://www.microsoft.com の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。
+<https://www.microsoft.com> の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。
 
 Mac および macOS は Apple Inc. の商標です。
 
