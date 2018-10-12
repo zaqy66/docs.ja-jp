@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5825f0425947f109ed834879684357fef7b70959
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426937"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123775"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints メソッド
-現在のメソッド内のシーケンス ポイントのグループを定義します。 各開始行と開始列は、メソッド内のステートメントの開始を定義します。 それぞれの終了行と列の終了は、メソッド内のステートメントの末尾を定義します。 配列は、オフセットの昇順に並べ替える必要があります。 オフセットは常に、(バイト単位)、メソッドの先頭から測定されます。  
+現在のメソッド内のシーケンス ポイントのグループを定義します。 各開始行と開始列は、メソッド内のステートメントの先頭を定義します。 それぞれの終了行と列の終了は、メソッド内のステートメントの末尾を定義します。 配列は、オフセットの昇順に並べ替える必要があります。 オフセットは常に (バイト単位)、メソッドの先頭から測定されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +45,7 @@ HRESULT DefineSequencePoints(
  [in]シーケンス ポイントが定義されているドキュメント オブジェクト。  
   
  `spCount`  
- [in]A`ULONG32`をそれぞれのサイズを示す、 `offsets`、 `lines`、 `columns`、 `endLines`、および`endColumns`バッファー。  
+ [in]A`ULONG32`のそれぞれのサイズを示す、 `offsets`、 `lines`、 `columns`、 `endLines`、および`endColumns`バッファー。  
   
  `offsets`  
  [in]シーケンス ポイントのオフセットは、メソッドの先頭から計測されます。  
@@ -63,7 +63,7 @@ HRESULT DefineSequencePoints(
  [in]シーケンス ポイントの終了列番号。 このパラメーターは省略できます。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** CorSym.idl、CorSym.h  

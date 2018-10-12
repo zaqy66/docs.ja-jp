@@ -5,11 +5,11 @@ helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
 ms.openlocfilehash: 45c245b886c8b113ed49972f1ba94caa01330eb2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847972"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121854"
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
 ASMX ベースの Web サービスやクライアント、および WS-I Basic Profile 1.1 に準拠するその他のサービスとの通信が可能なエンドポイントを構成および公開するために、Windows Communication Foundation (WCF) サービスが使用できるバインドを表します。  
@@ -100,7 +100,7 @@ ASMX ベースの Web サービスやクライアント、および WS-I Basic P
  セキュリティが既定でオフにしの mode 属性を設定する追加することが、 [\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)以外の値を子要素`None`します。 サービスは、"Text" メッセージ エンコードおよび UTF-8 テキスト エンコードを既定で使用します。  
   
 ## <a name="example"></a>例  
- 第 1 世代と第 2 世代の Web サービスで HTTP 通信と最大限の相互運用性を実現する、<xref:System.ServiceModel.BasicHttpBinding> の使用例を次に示します。 バインディングは、クライアントとサービスの構成ファイルに指定されます。 バインディングの種類は、`binding` 要素の `<endpoint>` 属性を使用して指定します。 基本的なバインディングを構成してその設定の一部を変更する場合は、バインディング構成を定義する必要があります。 エンドポイントは、`bindingConfiguration` 要素の `<endpoint>` 属性を使用して、名前でバインディング構成を参照する必要があります。次のサービスの構成コードを参照してください。  
+ 第 1 世代と第 2 世代の Web サービスで HTTP 通信と最大限の相互運用性を実現する、<xref:System.ServiceModel.BasicHttpBinding> の使用例を次に示します。 バインディングは、クライアントとサービスの構成ファイルに指定されます。 バインディングの種類は、`binding` 要素の `<endpoint>` 属性を使用して指定します。 基本的なバインディングを構成してその設定の一部を変更する場合は、バインディング構成を定義する必要があります。 エンドポイントは、`bindingConfiguration` 要素の `<endpoint>` 属性を使用して、名前でバインド構成を参照する必要があります。次のサービスの構成コードを参照してください。  
   
 ```xml  
 <system.serviceModel>   

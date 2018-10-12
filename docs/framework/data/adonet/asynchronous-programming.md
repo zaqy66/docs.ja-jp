@@ -1,13 +1,13 @@
 ---
 title: 非同期プログラミング
-ms.date: 03/30/2017
+ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c16fecc9e79f36c122c13909be0eeba848b7c20
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504976"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123658"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
@@ -23,15 +23,16 @@ ms.locfileid: "43504976"
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
  この機能は [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] の SqlClient に残っています。  
-  
- [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 以降、これらのメソッドでは、接続文字列に `Asynchronous Processing=true` が必要なくなりました。  
+
+> [!TIP]
+> 以降では、 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]、これらのレガシ メソッドが不要になった`Asynchronous Processing=true`接続文字列にします。  
   
 ## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] で追加された非同期プログラミング機能  
  新しい非同期プログラミング機能を使用すると、コードを簡単に非同期にすることができます。  
   
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] で導入された非同期プログラミング機能の詳細については、次の Web サイトを参照してください。  
   
-- [非同期プログラミング (C#)](../../../csharp/async.md)
+- [C# の非同期プログラミング](../../../csharp/async.md)
 
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
@@ -87,6 +88,9 @@ ms.locfileid: "43504976"
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
  その他の非同期メンバーがサポートするために追加された[SqlClient ストリーミング サポート](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)します。  
+
+> [!TIP]
+> 新しい非同期メソッドを必要としない`Asynchronous Processing=true`接続文字列にします。  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>同期から非同期接続を開く  
  既存のアプリケーションをアップグレードして、新しい非同期機能を使用できます。 たとえば、同期接続アルゴリズムを使用したアプリケーションで、データベースに接続するたびに UI スレッドをブロックし、接続すると、ユーザーがサインインしたことを他のユーザーに通知するストアド プロシージャが呼び出されるとします。  

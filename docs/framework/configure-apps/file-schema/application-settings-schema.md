@@ -10,11 +10,11 @@ ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844235"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123339"
 ---
 # <a name="application-settings-schema"></a>アプリケーション設定のスキーマ
 
@@ -46,7 +46,7 @@ ms.locfileid: "48844235"
 | 属性        | 説明 |
 | ---------------- | ----------- |
 | **name**         | 必須。 設定の一意の ID。 Visual Studio で作成した設定は、名前で保存は`ProjectName.Properties.Settings`します。 |
-| **serializedAs** | 必須。 テキスト値をシリアル化するために使用する形式。 次の値を指定できます。<br><br>- `string`. 使用して文字列として値をシリアル化、<xref:System.ComponentModel.TypeConverter>します。<br>- `xml`. 値は、XML シリアル化を使用してシリアル化されます。<br>- `binary`. 値は、バイナリ シリアル化を使用して、テキスト エンコードされたバイナリとしてシリアル化されます。<br />- `custom`. 設定プロバイダーは、この設定の固有の情報しシリアル化し、逆シリアル化します。 |
+| **serializedAs** | 必須。 テキスト値をシリアル化するために使用する形式。 次の値を指定できます。<br><br>- `string`。 使用して文字列として値をシリアル化、<xref:System.ComponentModel.TypeConverter>します。<br>- `xml`。 値は、XML シリアル化を使用してシリアル化されます。<br>- `binary`。 値は、バイナリ シリアル化を使用して、テキスト エンコードされたバイナリとしてシリアル化されます。<br />- `custom`。 設定プロバイダーは、この設定の固有の情報しシリアル化し、逆シリアル化します。 |
 
 ## <a name="value-element"></a>\<値 > 要素
 

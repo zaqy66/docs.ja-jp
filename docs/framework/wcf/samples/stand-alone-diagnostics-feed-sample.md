@@ -2,12 +2,12 @@
 title: スタンドアロン診断フィードのサンプル
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 64222297373f194a33b5520ecd71b0acc7755359
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6def1d02ed46675d98db115f77ac36bb9f9401de
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418298"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123554"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>スタンドアロン診断フィードのサンプル
 このサンプルでは、RSS および Atom フィードを Windows Communication Foundation (WCF) を使用して配信用に作成する方法を示します。 オブジェクト モデルの基本と Windows Communication Foundation (WCF) サービスを設定する方法を示す基本的な"Hello World"プログラムです。  
@@ -49,7 +49,7 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- このサービスは標準の HTTP GET を使用して要求を受け取るので、サービスへのアクセスには、RSS または ATOM に対応している任意のクライアントを使用できます。 たとえば、このサービスの出力を表示に移動して http://localhost:8000/diagnostics/feed/?format=atomまたは http://localhost:8000/diagnostics/feed/?format=rssInternet Explorer 7 などの RSS 対応のブラウザーでします。  
+ このサービスは標準の HTTP GET を使用して要求を受け取るので、サービスへのアクセスには、RSS または ATOM に対応している任意のクライアントを使用できます。 たとえば、このサービスの出力を表示に移動して`http://localhost:8000/diagnostics/feed/?format=atom`または`http://localhost:8000/diagnostics/feed/?format=rss`RSS 対応のブラウザーでします。
   
  使用することも、[方法、WCF 配信オブジェクト モデルのマップを Atom や RSS に](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)シンジケート データを読み取り、命令型コードを使用してそれを処理します。  
   
@@ -82,7 +82,7 @@ foreach (SyndicationItem i in feed.Items)
   
 3.  コンソール アプリケーションを実行します。  
   
-4.  移動し、コンソール アプリケーションの実行中に http://localhost:8000/diagnostics/feed/?format=atomまたは http://localhost:8000/diagnostics/feed/?format=rssRSS 対応のブラウザーを使用します。  
+4.  移動し、コンソール アプリケーションの実行中に`http://localhost:8000/diagnostics/feed/?format=atom`または`http://localhost:8000/diagnostics/feed/?format=rss`RSS 対応のブラウザーを使用します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

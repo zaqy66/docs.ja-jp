@@ -3,11 +3,11 @@ title: WCF の &lt;trackingProfile&gt;
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
 ms.openlocfilehash: a11086ef07a2a605f3889bc4077d25e0b7748e5e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087662"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120922"
 ---
 # <a name="lttrackingprofilegt-of-wcf"></a>WCF の &lt;trackingProfile&gt;
 ワークフロー追跡参加要素内のレコードを追跡するサブスクリプションを作成するための構成セクションを表します。 追跡プロファイルには、実行時にワークフロー インスタンスの状態が変化したときに生成されるワークフロー イベントを追跡参加要素が定期受信できるようにする、追跡クエリが含まれています。 追跡プロファイル セクション内で定義されたクエリでは、サブスクリプションによって返されるイベントの種類が定義されます。  

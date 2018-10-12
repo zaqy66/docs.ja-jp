@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
 ms.openlocfilehash: da8b6adeede1fddf39c818568cfd884c3add317f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779934"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123840"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>実行中のワークフロー インスタンスの定義を更新する方法
 動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。 必要な変更には、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。 チュートリアルでは、この手順は、動的更新を使用して、永続化されたインスタンスを変更する方法を示します、`v1`で導入された新しい機能と一致する数値推測ワークフロー[方法: 複数のバージョンをワークフロー サイド バイ サイドのホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).

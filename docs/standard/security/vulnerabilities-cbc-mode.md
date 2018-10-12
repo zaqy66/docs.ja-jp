@@ -4,12 +4,12 @@ description: 検出および暗号ブロック チェーン (CBC) モードで�
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840533"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123645"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>パディングを使用して、CBC モード対称暗号化解除とタイミングの脆弱性
 
@@ -65,7 +65,7 @@ Research は ISO 10126 等価では、メッセージのよく知られている
 
 10 年以上にわたって存在に呼ばれる「パディング oracle 攻撃」と呼ばれる脆弱性のクラスです。 これらの脆弱性を許可すると、攻撃者がデータのブロックあたり 4,096 個以下の試行を使用して、AES および 3 des などの対称ブロック アルゴリズムで暗号化されたデータを復号化します。 これらの脆弱性のため暗号をブロックするファクトの使用は、最後に検証可能な埋め込みデータを最も頻繁に使用します。 場合は、攻撃者は、暗号化テキストを改ざんし、末尾の余白の形式でエラーが発生改ざんが行われたかどうかを検出、攻撃者は、データを解読することができます、それが見つかりました。
 
-埋め込みが ASP.NET の脆弱性など、有効かどうかに基づいて別のエラー コードを返すようサービスに実用的な攻撃されたに基づいて最初に、 [MS10 070](https://technet.microsoft.com/library/security/ms10-070.aspx)します。 ただし、Microsoft ようになりましたものであるが有効および無効な余白の処理間のタイミングでは、差分のみを使用して類似の攻撃を実施するは実用的であります。
+埋め込みが ASP.NET の脆弱性など、有効かどうかに基づいて別のエラー コードを返すようサービスに実用的な攻撃されたに基づいて最初に、 [MS10 070](/security-updates/SecurityBulletins/2010/ms10-070)します。 ただし、Microsoft ようになりましたものであるが有効および無効な余白の処理間のタイミングでは、差分のみを使用して類似の攻撃を実施するは実用的であります。
 
 すべての情報を生成せず、データの整合性を確認できます暗号化スキームは、署名を使用し、(内容) に関係なくデータの指定された長さの固定のランタイムと、署名の検証が実行されること、使用して攻撃者、[側チャネル](https://en.wikipedia.org/wiki/Side-channel_attack)します。 整合性チェックは、改ざんされたメッセージを拒否するため、埋め込み oracle 脅威が軽減されます。
 

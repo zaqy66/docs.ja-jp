@@ -2,20 +2,22 @@
 title: WCF の  &lt;activityScheduledQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 9a53d72316dad0178f24e05656a4fb4531b88aec
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: a3c4c8b338921c9d949edd83deb4d6073eb26b55
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087766"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123372"
 ---
 # <a name="ltactivityscheduledquerygt-of-wcf"></a>WCF の  &lt;activityScheduledQuery&gt;
+
 親アクティビティによる実行がスケジュールされているアクティビティを追跡するために使用する、クエリのコレクションを表します。 アクティビティがスケジュールされたレコードを追跡参加要素が定期受信するには、このクエリが必要です。  
   
- 追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<system.serviceModel>  
+\<system.serviceModel>  
 \<追跡 >  
+\<プロファイル >  
 \<trackingProfile>  
 \<ワークフロー >  
 \<activityScheduledQueries >  
@@ -25,38 +27,43 @@ ms.locfileid: "49087766"
   
 ```xml
 <tracking>
-  <trackingProfile name="Name">
-    <workflow>
-      <activityScheduledQueries>
-        <activityScheduledQuery activityName="String"   
-                                childActivityName="String"/>
-      </activityScheduledQueries>
-    </workflow>
-  </trackingProfile>
+  <profiles>
+    <trackingProfile name="Name">
+      <workflow>
+        <activityScheduledQueries>
+          <activityScheduledQuery activityName="String"   
+                                  childActivityName="String"/>
+        </activityScheduledQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
 </tracking> 
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
- 以降のセクションでは、属性、子要素、および親要素について説明します。  
+## <a name="attributes-and-elements"></a>属性と要素  
+
+以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|activityName|キャンセルを要求しているアクティビティの名前を指定する文字列。|  
-|childActivityName|キャンセルが要求された子アクティビティの名前を指定する文字列。|  
+|`activityName`|キャンセルを要求しているアクティビティの名前を指定する文字列。|  
+|`childActivityName`|キャンセルが要求された子アクティビティの名前を指定する文字列。|  
   
-### <a name="child-elements"></a>子要素  
- なし。  
+### <a name="child-elements"></a>子要素
+
+なし。
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<activityScheduledQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|親アクティビティによる実行がスケジュールされているアクティビティを追跡するために使用するクエリ。|  
+|[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|親アクティビティによる実行のスケジュールされたアクティビティを追跡するために使用されるクエリのコレクション。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>     
- <xref:System.Activities.Tracking.ActivityScheduledQuery>     
- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>
+- <xref:System.Activities.Tracking.ActivityScheduledQuery>
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

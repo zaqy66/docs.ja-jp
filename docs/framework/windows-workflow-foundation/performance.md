@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 のパフォーマンス
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873694"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123814"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 のパフォーマンス
 Dustin Metzgar
@@ -287,7 +287,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  アクティビティの深さと数が多い複合ワークフローの場合でも、パフォーマンス結果は前述した他のスループット数値と整合しています。  WF4 のスループットは桁違いに高速なため、対数スケールで比較する必要があります。
 
 ### <a name="memory"></a>メモリ
- Windows Workflow Foundation のメモリ オーバーヘッドは、2 つの重要な要素であるワークフローの複雑さとワークフロー定義の数で測定されます。  メモリの測定は Windows 7 の 64 ビット ワークステーションで行われました。  ワーキング セット パフォーマンス カウンターを監視する、Environment.WorkingSet をポーリングから VMMap などのツールを使用してなどの測定値を取得する方法はたくさんあります[VMMap](https://technet.microsoft.com/sysinternals/dd535533.aspx)します。 ここでは複数の方法を組み合わせて各テストの結果を取得し、検証しました。
+ Windows Workflow Foundation のメモリ オーバーヘッドは、2 つの重要な要素であるワークフローの複雑さとワークフロー定義の数で測定されます。  メモリの測定は Windows 7 の 64 ビット ワークステーションで行われました。  ワーキング セット パフォーマンス カウンターを監視する、Environment.WorkingSet をポーリングから VMMap などのツールを使用してなどの測定値を取得する方法はたくさんあります[VMMap](/sysinternals/downloads/vmmap)します。 ここでは複数の方法を組み合わせて各テストの結果を取得し、検証しました。
 
 ### <a name="workflow-complexity-test"></a>ワークフローの複雑さテスト
  ワークフローの複雑さテストでは、ワークフローの複雑さに基づいてワーキング セットの違いを測定します。  前のセクションで使用した複合ワークフローの他に、1 つのアクティビティ ワークフローと 1,000 のアクティビティがあるシーケンスという 2 つの基本ケースを取り入れるための新しいバリエーションを追加します。  これらのテストでは、ワークフローを初期化し、1 分間の単一シリアル ループ内で完了するまで実行します。  各テスト バリエーションを 3 回実行し、その平均データを記録しました。

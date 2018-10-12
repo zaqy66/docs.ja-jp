@@ -2,12 +2,12 @@
 title: アドレス指定
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e18039db51a1060661b435640c356fd0610a68a
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468366"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123203"
 ---
 # <a name="addressing"></a>アドレス指定
 アドレス指定のサンプルでは、エンドポイント アドレスのさまざまな特性と機能を示します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。 このサンプルでは、サービスは自己ホスト型です。 サービスとクライアントは両方ともコンソール アプリケーションです。 サービスでは、エンドポイントの相対アドレスと絶対アドレスを組み合わせて複数のエンドポイントを定義します。  
@@ -40,7 +40,7 @@ ms.locfileid: "43468366"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- この場合、相対アドレスが空 ("") のため、エンドポイント アドレスはベース アドレスと同じになります。 実際のエンドポイント アドレスが http://localhost:8000/servicemodelsamples/serviceします。  
+ この場合、相対アドレスが空 ("") のため、エンドポイント アドレスはベース アドレスと同じになります。 実際のエンドポイント アドレスが`http://localhost:8000/servicemodelsamples/service`します。
   
  2 番目のエンドポイント定義でも、相対アドレスを指定します。次のサンプル構成を参照してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "43468366"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 相対アドレス "test" がベース アドレスの末尾に追加されています。 実際のエンドポイント アドレスが http://localhost:8000/servicemodelsamples/service/testします。  
+ 相対アドレス "test" がベース アドレスの末尾に追加されています。 実際のエンドポイント アドレスが`http://localhost:8000/servicemodelsamples/service/test`します。
   
  3 番目のエンドポイント定義では、絶対アドレスを指定します。次のサンプル構成を参照してください。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "43468366"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- このアドレスでは、ベース アドレスは使用されていません。 実際のエンドポイント アドレスが http://localhost:8001/hello/servicemodelsamplesします。  
+ このアドレスでは、ベース アドレスは使用されていません。 実際のエンドポイント アドレスが`http://localhost:8001/hello/servicemodelsamples`します。
   
- 4 番目のエンドポイント アドレスは、絶対アドレスと別のトランスポート (ここでは TCP) を指定しています。 このアドレスでは、ベース アドレスは使用されていません。 具体的には net.tcp://localhost:9000/servicemodelsamples/service です。  
+ 4 番目のエンドポイント アドレスは、絶対アドレスと別のトランスポート (ここでは TCP) を指定しています。 このアドレスでは、ベース アドレスは使用されていません。 実際のエンドポイント アドレスが`net.tcp://localhost:9000/servicemodelsamples/service`します。
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
