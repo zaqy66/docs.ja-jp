@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404390"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47231246"
 ---
 # <a name="development-process-for-azure"></a>Azure の開発プロセス
 
@@ -44,15 +44,15 @@ ms.locfileid: "37404390"
 
 アプリケーション開発のライフサイクルは、各開発者のコンピューターで開始されます。その場合、アプリは開発者の好みの言語でコーディングされ、ローカルでテストされます。 開発者は好みのソース管理システムを選択できます。また、ビルド サーバーを使用するか、組み込みの Azure 機能に基づいて、継続的インテグレーション (CI) および/または継続的デリバリー/デプロイ (CD) を構成できます。
 
-CI/CD を使用して ASP.NET Core アプリケーションの開発を開始する場合は、Visual Studio Team Services または組織独自の Team Foundation Server (TFS) を使用することができます。
+CI/CD を使用して ASP.NET Core アプリケーションの開発を開始する場合は、Azure DevOps Services または組織独自の Team Foundation Server (TFS) を使用することができます。
 
 ### <a name="initial-setup"></a>初期セットアップ
 
 アプリのリリース パイプラインを作成するには、ソース管理でアプリケーション コードを使用する必要があります。 ローカル リポジトリをセットアップし、それをチーム プロジェクトのリモート リポジトリに接続します。 次の手順に従ってください。
 
-- [Git と Visual Studio でコードを共有する](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)、または
+- [Git と Visual Studio でコードを共有する](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs)、または
 
-- [TFVC と Visual Studio でコードを共有する](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [TFVC と Visual Studio でコードを共有する](https://docs.microsoft.com/azure/devops/tfvc/share-your-code-in-tfvc-vs)
 
 アプリケーションをデプロイする Azure App Service を作成します。 Azure Portal の App Services ブレードに移動して、Web アプリを作成します。 [+追加] をクリックして Web アプリ テンプレートを選択し、[作成] をクリックして名前とその他の詳細を入力します。 Web アプリは {name}.azurewebsites.net からアクセス可能になります。
 
@@ -62,13 +62,13 @@ CI/CD を使用して ASP.NET Core アプリケーションの開発を開始す
 
 CI ビルド プロセスでは、新しいコードがプロジェクトのソース管理リポジトリにコミットされるたびに自動ビルドが実行されます。 これにより、コードがビルドし (理想的には、自動テストに合格し)、デプロイされる可能性のあるフィードバックがすぐに返されます。 この CI ビルドでは Web デプロイ パッケージ成果物が生成され、CD プロセスで使用するために公開されます。
 
-[CI ビルド プロセスを定義する](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
+[CI ビルド プロセスを定義する](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
 
 自分のチームのメンバーが新しいコードをコミットするたびにシステムによってビルドがキューに入れられるように、必ず、継続的インテグレーションを有効にしてください。 ビルドをテストし、成果物の 1 つとして Web デプロイ パッケージが生成されることを確認します。
 
 ビルドに成功すると、CD プロセスでは CI ビルドの結果が Azure Web アプリにデプロイされます。 これを構成するには、*リリース*を作成して構成します。これは、Azure App Service にデプロイされます。
 
-[CD リリース プロセスを定義する](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
+[CD リリース プロセスを定義する](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
 
 CI/CD パイプラインが構成されたら、Web アプリを更新して、それをソース管理にコミットしてデプロイするだけです。
 
@@ -86,7 +86,7 @@ Azure にデプロイする場合の ASP.NET Core アプリケーションの開
 
 #### <a name="step-2-application-code-repository"></a>手順 2. アプリケーション コード リポジトリ
 
-チームでコードを共有できるようになった場合は、常にローカル ソース リポジトリからチームの共有ソース リポジトリに変更をプッシュする必要があります。 カスタム ブランチで作業をしていた場合、この手順では通常、(たとえば、[プル要求](https://docs.microsoft.com/vsts/git/pull-requests)を使用して) コードを共有ブランチにマージします。
+チームでコードを共有できるようになった場合は、常にローカル ソース リポジトリからチームの共有ソース リポジトリに変更をプッシュする必要があります。 カスタム ブランチで作業をしていた場合、この手順では通常、(たとえば、[プル要求](https://docs.microsoft.com/azure/devops/git/pull-requests)を使用して) コードを共有ブランチにマージします。
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>手順 3. ビルド サーバー: 継続的インテグレーション。 ビルド、テスト、パッケージ
 
@@ -107,7 +107,7 @@ Web アプリの実行中に、アプリケーションの正常性を監視し�
 ## <a name="references"></a>参照
 
 **ASP.NET Core アプリを構築して Azure にデプロイする**  
-<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
+<https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
 [前へ](test-asp-net-core-mvc-apps.md)

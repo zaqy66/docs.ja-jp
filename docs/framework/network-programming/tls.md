@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798913"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424481"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -179,7 +179,10 @@ TLS プロトコルについて詳しくは、「[軽減策: TLS プロトコル
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Windows レジストリによるセキュリティの構成
 
-`AppContext` スイッチの一方または両方を設定できない場合は、このセクションで説明する Windows レジストリ キーにより、アプリが使うセキュリティ プロトコルを制御することができます。 4.6 より前のバージョンの .NET Framework を対象にしている場合、または構成ファイルを編集できない場合は、一方または両方の `AppContext` スイッチを使用できないことがあります。 レジストリでセキュリティを構成する場合は、コードでセキュリティ プロトコルの値を指定しないでください。指定すると、レジストリの設定はオーバーライドされます。
+> [!WARNING]
+> レジストリ キーを設定すると、システム上のすべてのアプリケーションに影響します。 この方法は、マシンを完全に制御していて、レジストリの変更を制御できる場合にのみ使用します。
+
+`AppContext` スイッチの一方または両方を設定できない場合は、このセクションで説明する Windows レジストリ キーにより、アプリが使うセキュリティ プロトコルを制御することができます。 .NET Framework 4.5.2 以前のバージョンでアプリを実行している場合、または構成ファイルを編集できない場合は、一方または両方の `AppContext` スイッチを使用できないことがあります。 レジストリでセキュリティを構成する場合は、コードでセキュリティ プロトコルの値を指定しないでください。指定すると、レジストリ設定はオーバーライドされます。
 
 レジストリ キーの名前は対応する `AppContext` スイッチの名前に似ていますが、名前の前に `DontEnable` が付いていません。 たとえば、`AppContext` スイッチ `DontEnableSchUseStrongCrypto` に対応するレジストリ キーの名前は [SchUseStrongCrypto](#schusestrongcrypto) です。
 

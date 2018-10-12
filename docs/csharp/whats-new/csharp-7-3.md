@@ -2,12 +2,12 @@
 title: C# 7.3 の新機能
 description: C# 7.3 の新機能の概要
 ms.date: 05/16/2018
-ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511612"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47235232"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 の新機能
 
@@ -36,7 +36,7 @@ C# 7.3 リリースには 2 つの主要なテーマがあります。 1 つ目�
 
 この記事の残りの部分では、それぞれの機能強化の詳細とリンクを示します。
 
-## <a name="enabling-more-performant-safe-code"></a>パフォーマンスに優れたセーフ コードの実現
+## <a name="enabling-more-efficient-safe-code"></a>セーフ コードをより効率的にする
 
 アンセーフ コードと同様のパフォーマンスを確保した C# コードを安全に記述できるようにする必要があります。 セーフ コードは、バッファー オーバーラン、ストレイ ポインター、その他のメモリ アクセス エラーなどのエラーを回避します。 ここで説明する新機能は、検証可能なセーフ コードの機能を拡張します。 安全なコンストラクトを使用してより多くのコードを記述するようにしてください。 以下に示す機能によって、コードの記述が容易になります。
 
@@ -82,7 +82,7 @@ class C
 }
 ```
 
-詳しくは、[`fixed` ステートメント](../language-reference/keywords/fixed-statement.md)に関する記事を参照してください。
+詳細については、[`fixed` ステートメント](../language-reference/keywords/fixed-statement.md)に関する記事を参照してください。
 
 ### <a name="ref-local-variables-may-be-reassigned"></a>再割り当て可能な `ref` ローカル変数
 
@@ -128,13 +128,15 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 詳しくは、[`where` ジェネリック制約](../language-reference/keywords/where-generic-type-constraint.md)および[型パラメーターの制約](../programming-guide/generics/constraints-on-type-parameters.md)に関する記事を参照してください。
 
+これらの制約を既存の型に追加することは、[互換性のない変更](version-update-considerations.md#incompatible-changes)です。 クローズ ジェネリック型は、これらの新しい制約を満たさなくなります。
+
 ## <a name="make-existing-features-better"></a>既存の機能の改善
 
 2 つ目のテーマは、言語の機能の改善の提供です。 以下に示す機能によって、C# を記述する際の生産性が向上します。
 
 ### <a name="tuples-support--and-"></a>タプルによる `==` と `!=` のサポート
 
-C# のタプル型で `==` と `!=` がサポートされるようになりました。 詳しくは、[タプル](../tuples.md)に関する記事の[等値](../tuples.md#equality-and-tuples)について説明したセクションを参照してください。
+C# のタプル型で `==` と `!=` がサポートされるようになりました。 詳細については、[タプル](../tuples.md)に関する記事の[等値](../tuples.md#equality-and-tuples)について説明したセクションを参照してください。
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>自動実装プロパティのバッキング フィールドへの属性のアタッチ
 

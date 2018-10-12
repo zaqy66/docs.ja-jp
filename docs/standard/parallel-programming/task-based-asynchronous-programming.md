@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3dad3e33968b72d199b412c65f04a4079020f78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592590"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171375"
 ---
 # <a name="task-based-asynchronous-programming"></a>タスク ベースの非同期プログラミング
 タスク並列ライブラリ (TPL) は、非同期操作を表す*タスク*の概念に基づいています。 いくつかの点で、タスクはスレッドまたは <xref:System.Threading.ThreadPool> 作業項目に似ていますが、高いレベルで抽象化しています。 *タスクの並列化*とは、1 つ以上の独立したタスクを同時に実行することです。 タスクが提供する主な利点は次の 2 つです。  
@@ -59,10 +59,10 @@ ms.locfileid: "33592590"
  [!code-csharp[TPL_TaskIntro#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/run1.cs#2)]
  [!code-vb[TPL_TaskIntro#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/run1.vb#2)]  
   
- <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> メソッドを使用して、一度の操作でタスクを作成および開始することもできます。 次の例に示すように、作成とスケジュール設定を分ける必要がない場合、追加のタスク作成オプションまたは特定のスケジューラを使う必要がある場合、または <xref:System.Threading.Tasks.Task.AsyncState%2A> のプロパティを使用して、タスクに追加の状態を渡す必要がある場合は、このメソッドを使用します。  
+ <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> メソッドを使用して、一度の操作でタスクを作成および開始することもできます。 次の例に示すように、作成とスケジュール設定を分ける必要がない場合、追加のタスク作成オプションまたは特定のスケジューラを使う必要がある場合、または <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> プロパティを使用して取得できるタスクに追加の状態を渡す必要がある場合は、このメソッドを使用します。  
   
- [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
- [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
+ [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
+ [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]  
   
  <xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> はそれぞれ、<xref:System.Threading.Tasks.Task.Factory%2A> の既定のインスタンスを返す、静的な <xref:System.Threading.Tasks.TaskFactory> プロパティを公開するので、メソッドを `Task.Factory.StartNew()` として呼び出すことができます。 また、次の例のタスクは <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 型であるため、それぞれのタスクは計算の結果を格納するパブリックな <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティを持ちます。 タスクは非同期に実行され、任意の順序で完了されることがあります。 計算が終了する前に <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティにアクセスした場合、このプロパティは値が使用可能な状態になるまで呼び出しスレッドをブロックします。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "33592590"
   
 ## <a name="related-topics"></a>関連トピック  
   
-|Title|説明|  
+|タイトル|説明|  
 |-|-|  
 |[継続タスクを使用したタスクの連結](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|継続の機能について説明します。|  
 |[アタッチされた子タスクとデタッチされた子タスク](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|アタッチされた子タスクとデタッチされた子タスクの違いについて説明します。|  
@@ -267,6 +267,7 @@ ms.locfileid: "33592590"
 |[データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|<xref:System.Threading.Tasks.Parallel.For%2A> および <xref:System.Threading.Tasks.Parallel.ForEach%2A> を使用してデータを対象に並列ループを作成する方法について説明しています。|  
 |[並列プログラミング](../../../docs/standard/parallel-programming/index.md)|.NET Framework 並列プログラミングのトップ レベル ノード。|  
   
-## <a name="see-also"></a>参照  
- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)  
- [.NET Framework による並列プログラミングのサンプル](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+## <a name="see-also"></a>関連項目
+
+- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)  
+- [.NET Framework による並列プログラミングのサンプル](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

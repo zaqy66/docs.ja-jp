@@ -3,17 +3,17 @@ title: Docker コンテナー用 .NET Core と .NET Framework の選択
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Docker コンテナー用 .NET Core と .NET Framework の選択'
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 0f6689468eda1dd1b12c24927e650b2b01381274
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 9abff2614e4022408a069be25440196111db19ab
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104443"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562110"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Docker コンテナー用 .NET Core と .NET Framework の選択
 
-.NET を使用してサーバー側のコンテナー化された Docker アプリケーションをビルドする場合に選択できるサポート対象の実装には、[.NET Framework](https://www.microsoft.com/net/download/framework) と [.NET Core](https://www.microsoft.com/net/download/core) の 2 つがあります。 この 2 つは多数の .NET Standard コンポーネントを共有しているため、両者でコードを共有できます。 ただし、これらには基本的な違いがあり、どちらの実装を使用するかは実行内容によって決まります。 このセクションでは、それぞれの実装を選択する場合のガイダンスを提供します。
+.NET を使用してサーバー側のコンテナー化された Docker アプリケーションをビルドする場合に選択できるサポート対象のフレームワークには、[.NET Framework と .NET Core](https://www.microsoft.com/net/download) の 2 つがあります。 それらは多数の .NET プラットフォームのコンポーネントを共有しているため、両者でコードを共有できます。 ただし、それらには基本的な違いがあり、どちらのフレームワークを使用するかは実行内容によって決まります。 このセクションでは、それぞれのフレームワークを選択する場合のガイダンスを提供します。
 
 
 >[!div class="step-by-step"]

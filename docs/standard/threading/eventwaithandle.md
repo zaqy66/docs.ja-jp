@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdb11b283cc008e7f4bb060d1c2cb18706c824b7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084719"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702778"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> クラスを使用すると、スレッドは通知および通知の待機により、互いに通信できます。 イベント待機ハンドル (単にイベントとも呼ばれます) は、通知を受けて、1 つ以上の待機中のイベントを解放できる待機ハンドルです。 通知を受けると、イベント待機ハンドルは手動または自動でリセットされます。 <xref:System.Threading.EventWaitHandle> クラスは、ローカルのイベント待機ハンドル (ローカル イベント) または名前付きのシステム イベント待機ハンドル (名前付きのイベントまたはシステム イベント。すべてのプロセスから参照できます) を表すことができます。  
   
 > [!NOTE]
->  イベント待機ハンドルは、通常 .NET Framework でイベントと呼ばれるものとは異なります。 デリゲートやイベント ハンドラーは関連していません。 "イベント" という言葉で説明されているのは、それらがこれまでオペレーティング システム イベントと呼ばれており、待機ハンドルの通知はイベントが発生した待機中のスレッドを示すためです。  
+>  イベント待機ハンドルは、.NET の[イベント](../events/index.md)ではありません。 デリゲートやイベント ハンドラーは関連していません。 "イベント" という言葉で説明されているのは、それらがこれまでオペレーティング システム イベントと呼ばれており、待機ハンドルの通知はイベントが発生した待機中のスレッドを示すためです。  
   
  ローカル イベント待機ハンドルと名前付きイベント待機ハンドルはどちらも、システム同期オブジェクトを使用します。これは <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> ラッパーによって保護されており、リソースが確実に解放されるようにします。 <xref:System.Threading.WaitHandle.Dispose%2A> メソッドを使用すると、オブジェクトを使い終わったらすぐにリソースを解放できます。  
   

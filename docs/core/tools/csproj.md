@@ -4,12 +4,12 @@ description: 既存の csproj ファイルと .NET Core の csproj ファイル�
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: d868eb689af1d87ea2adb1f0069345cbb8195af7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1fd264da2863fbeb88900be0f6fe000acac08a09
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45646377"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47216917"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -83,11 +83,11 @@ csproj では、プロジェクトから既定の glob を削除し、多様な�
 
 これらの csproj 変更でプロジェクト ファイルが大幅に簡素化されますが、SDK とそのターゲットが追加されたとき、MSBuild と同様にプロジェクト全体を表示すると便利なことがあります。 [`dotnet msbuild`](dotnet-msbuild.md) コマンドの [`/pp` スイッチ](/visualstudio/msbuild/msbuild-command-line-reference#preprocess)でプロジェクトを事前処理します。インポートされるファイル、そのソース、ビルドに対するその貢献が、実際にプロジェクトをビルドすることなく、表示されます。
 
-`dotnet msbuild /pp:fullproject.xml`
+`dotnet msbuild -pp:fullproject.xml`
 
 プロジェクトにターゲット フレームワークが複数存在する場合、MSBuild プロパティとして指定し、1 つだけにコマンドの結果を集中させてください。
 
-`dotnet msbuild /p:TargetFramework=netcoreapp2.0 /pp:fullproject.xml`
+`dotnet msbuild -p:TargetFramework=netcoreapp2.0 -pp:fullproject.xml`
 
 ## <a name="additions"></a>追加
 
@@ -265,3 +265,37 @@ nuget.exe および Visual Studio パッケージ マネージャーで強制す
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 キー=値ペアのセミコロン区切りの一覧。
+
+## <a name="assemblyinfo-properties"></a>AssemblyInfo プロパティ
+通常、*AssemblyInfo* ファイル内に存在していた[アセンブリ属性](../../framework/app-domains/set-assembly-attributes.md)は、プロパティから自動的に生成されるようになりました。
+
+### <a name="properties-per-attribute"></a>属性ごとのプロパティ
+
+次の表に示すように、各属性にはコンテンツを制御するプロパティと生成を無効にするプロパティがあります。
+
+| 属性                                                      | プロパティ               | 無効にするプロパティ                             |
+|----------------------------------------------------------------|------------------------|-------------------------------------------------|
+| <xref:System.Reflection.AssemblyCompanyAttribute>              | `Company`              | `GenerateAssemblyCompanyAttribute`              |
+| <xref:System.Reflection.AssemblyConfigurationAttribute>        | `Configuration`        | `GenerateAssemblyConfigurationAttribute`        |
+| <xref:System.Reflection.AssemblyCopyrightAttribute>            | `Copyright`            | `GenerateAssemblyCopyrightAttribute`            |
+| <xref:System.Reflection.AssemblyDescriptionAttribute>          | `Description`          | `GenerateAssemblyDescriptionAttribute`          |
+| <xref:System.Reflection.AssemblyFileVersionAttribute>          | `FileVersion`          | `GenerateAssemblyFileVersionAttribute`          |
+| <xref:System.Reflection.AssemblyInformationalVersionAttribute> | `InformationalVersion` | `GenerateAssemblyInformationalVersionAttribute` |
+| <xref:System.Reflection.AssemblyProductAttribute>              | `Product`              | `GenerateAssemblyProductAttribute`              |
+| <xref:System.Reflection.AssemblyTitleAttribute>                | `AssemblyTitle`        | `GenerateAssemblyTitleAttribute`                |
+| <xref:System.Reflection.AssemblyVersionAttribute>              | `AssemblyVersion`      | `GenerateAssemblyVersionAttribute`              |
+| <xref:System.Resources.NeutralResourcesLanguageAttribute>      | `NeutralLanguage`      | `GenerateNeutralResourcesLanguageAttribute`     |
+
+メモ:
+
+* `AssemblyVersion` と `FileVersion` の既定値は、サフィックスなしで `$(Version)` の値を受け取ることです。 たとえば、`$(Version)` が `1.2.3-beta.4` の場合、値は `1.2.3` です。
+* `InformationalVersion` の既定値は、`$(Version)` の値です。
+* プロパティが存在する場合、`InformationalVersion` の末尾には `$(SourceRevisionId)` が付加されます。 `IncludeSourceRevisionInInformationalVersion` を使用して無効にすることができます。
+* NuGet メタデータには、`Copyright` および `Description` プロパティも使用されます。
+* `Configuration` はすべてのビルド プロセスで共有され、設定には `dotnet` コマンドの`--configuration` パラメーターを使用します。
+
+### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo 
+すべての AssemblyInfo 生成を有効または無効にするブール値。 既定値は `true` です。 
+
+### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile 
+生成されたアセンブリ情報ファイルのパス。 既定値は `$(IntermediateOutputPath)` (obj) ディレクトリ内のファイルです。

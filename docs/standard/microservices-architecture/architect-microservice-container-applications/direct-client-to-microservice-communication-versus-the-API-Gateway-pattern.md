@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: f820b0ed866c539beda641164ef42631263490d3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739683"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198684"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信
 
@@ -176,6 +176,8 @@ Azure API Management では、キー、トークン、および IP フィルタ�
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 - **Clemens Vasters。GOTO 2016 でのメッセージングとマイクロサービス** (ビデオ) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+
+- **Nutshell の API ゲートウェイ** (ASP.net Core API ゲートウェイのチュートリアル シリーズ)    [*http://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](http://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
 
 >[!div class="step-by-step"]
 [前へ](identify-microservice-domain-model-boundaries.md)

@@ -1,20 +1,20 @@
 ---
 title: '方法: Null 許容型を識別する (C# プログラミング ガイド)'
 description: 型が Null 許容型か、インスタンスが Null 許容型であるかどうかを判断する方法について学習します。
-ms.date: 08/06/2018
+ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45624947"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47400544"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>方法: Null 許容型を識別する (C# プログラミング ガイド)
 
-次の例では、<xref:System.Type?displayProperty=nameWithType> インスタンスが Null 許容型を表しているかどうかを判別する方法を示します。
+次の例は、<xref:System.Type?displayProperty=nameWithType> インスタンスがクローズ ジェネリック null 許容型 (つまり、指定された型パラメーター `T` を使用する <xref:System.Nullable%601?displayProperty=nameWithType> 型) を表すかどうかを判断する方法を示しています。
 
 [!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "45624947"
 
 [!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Null 許容型](index.md)  
 - [Null 許容型の使用](using-nullable-types.md)  

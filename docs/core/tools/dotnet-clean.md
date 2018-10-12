@@ -4,18 +4,18 @@ description: dotnet clean コマンドは現在のディレクトリを消去し
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: 9e68781fe00590f3c8d429631a3f72d525d29fa9
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 5553e4b4423a2d824c05caf7114c47b5f1c20477
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697032"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45988336"
 ---
-# <a name="dotnet-clean"></a>dotnet-clean
+# <a name="dotnet-clean"></a>dotnet clean
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet clean` - プロジェクトの出力を消去します。
 

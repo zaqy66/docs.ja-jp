@@ -3,25 +3,25 @@ title: .NET コンテナーで対象とする OS
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | .NET コンテナーで対象とする OS'
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: fca5cf280d5abb85da78413a6eed463a2ffe6a88
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: b2ae1d2e732f152133dd8a8757b955e05cdd88eb
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104880"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45970826"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET コンテナーで対象とする OS
 
-Docker でサポートされているオペレーティング システムの多様性と、.NET Framework と .NET Core の違いを考慮し、使用しているフレームワークに応じて特定の OS と特定のバージョンを対象にする必要があります。 
+Docker でサポートされているオペレーティング システムの多様性と、.NET Framework と .NET Core の違いを考慮し、使用しているフレームワークに応じて特定の OS と特定のバージョンを対象にする必要があります。
 
-Windows の場合、Windows Server Core または Windows Nano Server を使用できます。 これらの Windows バージョンには、.NET Framework または .NET Core で必要になる可能性がある異なる特性 (Windows Server Core の IIS と Nest Server の Kestrel のような自己ホスト型 Web サーバー) があります。 
+Windows の場合、Windows Server Core または Windows Nano Server を使用できます。 これらの Windows バージョンには、.NET Framework または .NET Core で必要になる可能性がある異なる特性 (Windows Server Core の IIS と Nest Server の Kestrel のような自己ホスト型 Web サーバー) があります。
 
 Linux の場合、複数のディストリビューションを利用できます。また、Linux は公式の .NET Docker イメージ (Debian など) でサポートされています。
 
 使用している .NET Framework に応じて使用できる OS のバージョンについては、図 3-1 を参照してください。
 
-![](./media/image1.png)
+![.NET Framework のレガシー アプリケーションをデプロイする場合は、レガシー アプリと IIS と互換性があり、大きなイメージを持っている Windows Server Core をターゲットにする必要があります。 .NET Core アプリケーションをデプロイする場合は、クラウドに最適化され、Kestrel を使用し、小型で起動が速い Windows Nano Server をターゲットにすることができます。 Debian や Alpine などをサポートしている Linux もターゲットにすることができます。 同様に、Kestrel を使用し、小型で起動が速くなります。](./media/image1.png)
 
 **図 3-1.** .NET Framework のバージョンに応じて対象にすることができるオペレーティング システム
 
@@ -29,25 +29,33 @@ Linux の場合、複数のディストリビューションを利用できま�
 
 Dockerfile ファイルにイメージ名を追加すると、次の例のように、使用するタグに応じてオペレーティング システムとバージョンを選択できます。
 
--   microsoft/**dotnet:2.1-runtime**
-
-        .NET Core 2.1 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
-
--   microsoft/**dotnet:2.1-aspnetcore-runtime**
-    
-        ASP.NET Core 2.1 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
-        The aspnetcore image has a few optimizations for ASP.NET Core. 
-
--   microsoft/**dotnet:2.1-aspnetcore-runtime-alpine** 
-
-        .NET Core 2.1 runtime-only on Linux Alpine distro
-
--   microsoft/**dotnet:2.1-aspnetcore-runtime-nanoserver-1803** 
-
-        .NET Core 2.1 runtime-only on Windows Nano Server (Windows Server version 1803)
-
-
-
+<table>
+<thead>
+<tr class="header">
+<th>イメージ</th>
+<th>コメント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>microsoft/dotnet:2.1-runtime</td>
+<td>.NET Core 2.1 マルチアーキテクチャ: Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</td>
+</tr>
+<tr class="odd">
+<td>microsoft/dotnet:2.1-aspnetcore-runtime</td>
+<td><p>ASP.NET Core 2.1 マルチアーキテクチャ: Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</p>
+<p>aspnetcore イメージでは、ASP.NET Core 用に 少しの最適化が行われています。</p></td>
+</tr>
+<tr class="even">
+<td>microsoft/dotnet:2.1-aspnetcore-runtime-alpine</td>
+<td>Linux Alpine ディストリビューションでの .NET Core 2.1 ランタイムのみ</td>
+</tr>
+<tr class="odd">
+<td>microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1803</td>
+<td>Windows Nano Server (Windows Server バージョン 1803) では .NET Core 2.1 ランタイムのみ</td>
+</tr>
+</tbody>
+</table>
 
 >[!div class="step-by-step"]
 [前へ](container-framework-choice-factors.md)

@@ -3,12 +3,12 @@ title: コンソール アプリケーション
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: bae03c9ae02f2888b1b70617ca712ef7927e9dce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961418"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937593"
 ---
 # <a name="console-application"></a>コンソール アプリケーション
 
@@ -20,7 +20,7 @@ ms.locfileid: "37961418"
 - .NET でのファイル入出力 API の基本
 - .NET でのタスクベースの非同期プログラミングの基本
 
-テキスト ファイルを読み取って、そのテキスト ファイルの内容をコンソールにエコーするアプリケーションをビルドします。 コンソールへの出力は、内容を読み上げる速度に一致します。 ‘<’ または ‘>’ キーを押して、速度を速めたり遅めたりできます。
+テキスト ファイルを読み取って、そのテキスト ファイルの内容をコンソールにエコーするアプリケーションをビルドします。 コンソールへの出力は、内容を読み上げる速度に一致します。 ‘<’ (未満) または ‘>’ (大なり) キーを押して、速度を速めたり遅めたりできます。
 
 このチュートリアルには、多くの機能が含まれています。 それらを 1 つずつビルドしてみましょう。
 
@@ -190,7 +190,7 @@ ShowTeleprompter().Wait();
 > [!NOTE]
 > C# 7.1 以降を使用している場合は、[`async` `Main` メソッド](../whats-new/csharp-7-1.md#async-main)でコンソール アプリケーションを作成できます。
 
-次に、2 つ目の非同期メソッドを記述して、コンソールを読み取り、‘<’ キーおよび ‘>’ キーを監視する必要があります。 そのタスクに追加するメソッドは次の通りです。
+次に、2 つ目の非同期メソッドを記述して、コンソールを読み取り、‘<’ (未満) キーと ‘>’ (大なり) ’ キーを監視する必要があります。 そのタスクに追加するメソッドは次の通りです。
 
 ```csharp
 private static async Task GetInput()
@@ -214,7 +214,7 @@ private static async Task GetInput()
 }
 ```
 
-ここでは、ラムダ式を作成して、コンソールからキーを読み取り、ユーザーが ‘<’ または ‘>’ キーを押したときの遅延を表すローカル変数を変更する <xref:System.Action> デリゲートを表します。 このメソッドは <xref:System.Console.ReadKey> を使用してブロックし、ユーザーがキーを押すまで待機します。
+ここでは、ラムダ式を作成して、コンソールからキーを読み取り、ユーザーが ‘<’ (未満) キーまたは ‘>’ (大なり) ’ キー キーを押したときの遅延を表すローカル変数を変更する <xref:System.Action> デリゲートを表します。 このメソッドは <xref:System.Console.ReadKey> を使用してブロックし、ユーザーがキーを押すまで待機します。
 
 この機能を完成させるには、これら両方のタスク (`GetInput` と `ShowTeleprompter`) を開始し、これら 2 つのタスク間で共有データを管理する、`async Task` を返す新しいメソッドを作成する必要があります。
 
@@ -277,10 +277,10 @@ private static async Task RunTeleprompter()
 private static async Task ShowTeleprompter(TelePrompterConfig config)
 {
     var words = ReadFrom("sampleQuotes.txt");
-    foreach (var line in words)
+    foreach (var word in words)
     {
-        Console.Write(line);
-        if (!string.IsNullOrWhiteSpace(line))
+        Console.Write(word);
+        if (!string.IsNullOrWhiteSpace(word))
         {
             await Task.Delay(config.DelayInMilliseconds);
         }

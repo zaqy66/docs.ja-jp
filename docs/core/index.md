@@ -5,12 +5,12 @@ author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: cfa7c27871204b808c9d753a970d5abb907a183e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b302b6fc7e097a811c718d2244f603246cb5c259
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512842"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121039"
 ---
 # <a name="net-core-guide"></a>.NET Core のガイド
 
@@ -18,7 +18,7 @@ ms.locfileid: "43512842"
 
 特徴、サポートされる言語とフレームワーク、キー API など、.NET Core について詳しくは、「[About .NET Core](about.md)」(.NET Core について) をご覧ください。
 
-「[.NET Core チュートリアル](tutorials/index.md)」では、単純な .NET Core アプリケーションを作成する方法を学習できます。 最初のアプリを、ほんの数分で起動および実行できます。 ブラウザーで .NET Core を使用してみたい場合は、[C# における数値](https://docs.microsoft.com/dotnet/csharp/quick-starts/hello-world)に関するクイックスタートをご覧ください。
+「[.NET Core チュートリアル](tutorials/index.md)」では、単純な .NET Core アプリケーションを作成する方法を学習できます。 最初のアプリを、ほんの数分で起動および実行できます。 ブラウザーで .NET Core を使用してみたい場合は、[C# における数値](https://docs.microsoft.com/dotnet/csharp/quick-starts/numbers-in-csharp)に関するクイックスタートをご覧ください。
 
 ## <a name="download-net-core-21"></a>NET Core 2.1 のダウンロード
 

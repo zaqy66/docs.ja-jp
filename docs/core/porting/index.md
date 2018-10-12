@@ -4,12 +4,12 @@ description: 移植プロセスを理解し、.NET Framework プロジェクト�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: bf4f50ca915f21cdda6b99ae6bdf9e837eca3ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210083"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835393"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>.NET Framework から .NET Core への移植
 
@@ -27,7 +27,7 @@ ms.locfileid: "33210083"
 
    これにより、.NET Core が特定の API をサポートできない場合に、.NET Framework 固有のターゲットに対して API の代替を確実に使用できます。
    
-3. [API Portability Analyzer ツール](https://github.com/Microsoft/dotnet-apiport/)使用して、アセンブリを分析し、その結果に基づいて移植を行う計画を作成します。
+3. [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)使用して、アセンブリを分析し、その結果に基づいて移植を行う計画を作成します。
 
    API Portability Analyzer ツールは、コンパイル済みアセンブリを分析し、レポートを生成します。このレポートには、移植性の概要と、.NET Core ではサポートされていない使用中の各 API の内訳が示されます。  このレポートをコードベースの分析と共に使用して、コードを移植する方法の計画を作成します。
    

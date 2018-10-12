@@ -3,14 +3,14 @@ title: CLI を使用する .NET Core に関する概要
 description: Windows、Linux、または macOS の .NET Core での、.NET Core コマンド ライン インターフェイス (CLI) の使用方法を段階的に説明するチュートリアル。
 author: cartermp
 ms.author: mairaw
-ms.date: 03/08/2017
+ms.date: 09/10/2018
 ms.technology: dotnet-cli
-ms.openlocfilehash: 5ec7168ebc2ee4fc428d1ab520e986842f111ca7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b31a0324c0d762e9898c681cc6581b3860d41f89
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200318"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47203762"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linux/macOS の .NET Core でのコマンド ラインの使用に関する概要
 
@@ -20,7 +20,7 @@ ms.locfileid: "44200318"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [.NET Core SDK 1.0](https://www.microsoft.com/net/download/core)。
+- [.NET Core SDK 2.1](https://www.microsoft.com/net/download/core).
 - ユーザーが選んだテキスト エディターまたはコード エディター。
 
 ## <a name="hello-console-app"></a>Hello コンソール アプリ
@@ -31,7 +31,6 @@ GitHub の dotnet/samples レポジトリから、[サンプル コードを表�
 
 ```console
 $ dotnet new console
-$ dotnet restore
 $ dotnet run
 ```
 
@@ -60,13 +59,12 @@ $ dotnet run
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-2. `$ dotnet restore`
+   `dotnet new` は [`dotnet restore`](../tools/dotnet-restore.md) を暗黙的に呼び出します。 `dotnet restore` は、[NuGet](https://www.nuget.org/) (.NET パッケージ マネージャー) を呼び出して依存関係ツリーを復元します。 NuGet は、*Hello.csproj* ファイルを分析し、ファイルに記載されている依存関係をダウンロードし (またはコンピューターのキャッシュから取得し)、サンプルをコンパイルして実行するために必要な *obj/project.assets.json* ファイルを記述します。 
+   
+   > [!IMPORTANT]
+   > .NET Core 1.x バージョンの SDK を使用している場合は、`dotnet new` の呼び出し後に `dotnet restore` を自分で呼び出す必要があります。
 
-   [`dotnet restore`](../tools/dotnet-restore.md) は、[NuGet](https://www.nuget.org/) (.NET パッケージ マネージャー) を参照して依存関係のツリーを復元します。 NuGet は、*Hello.csproj* ファイルを分析し、ファイルに記載されている依存関係をダウンロードして (またはコンピューターのキャッシュから取得して)、*obj/project.assets.json* ファイルを書き込みます。  *project.assets.json* ファイルをコンパイルして実行できる必要があります。
-
-   *project.assets.json* ファイルは、NuGet の依存関係およびアプリについて記述するその他の情報のグラフの永続的で完全なセットです。  このファイルは、[`dotnet build`](../tools/dotnet-build.md) や [`dotnet run`](../tools/dotnet-run.md) などの他のツールによって読み取られ、これらのツールが NuGet の依存関係とバインド解決の正しいセットでソース コードを処理できるようにします。
-
-3. `$ dotnet run`
+2. `$ dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) は、[`dotnet build`](../tools/dotnet-build.md) を呼び出してビルド ターゲットがビルドされていることを確認した後、`dotnet <assembly.dll>` を呼び出してターゲット アプリケーションを実行します。
 
@@ -75,10 +73,9 @@ $ dotnet run
     Hello World!
     ```
 
-    [`dotnet build`](../tools/dotnet-build.md) を実行し、ビルド コンソール アプリケーションを実行しないでコードをコンパイルすることもできます。 これで、Windows で `dotnet bin\Debug\netcoreapp1.0\Hello.dll` を使用して (Windows 以外のシステムの場合は `/` を使用して) 実行できる DLL ファイルとしてアプリケーションがコンパイルされます。 アプリケーションには引数を指定することもできます。それについてはこのトピックの後半で説明します。
-
+    [`dotnet build`](../tools/dotnet-build.md) を実行し、ビルド コンソール アプリケーションを実行しないでコードをコンパイルすることもできます。 これで、Windows で `dotnet bin\Debug\netcoreapp2.1\Hello.dll` を使用して (Windows 以外のシステムの場合は `/` を使用して) 実行できる DLL ファイルとしてアプリケーションがコンパイルされます。 アプリケーションには引数を指定することもできます。それについてはこのトピックの後半で説明します。
     ```console
-    $ dotnet bin\Debug\netcoreapp1.0\Hello.dll
+    $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!
     ```
 

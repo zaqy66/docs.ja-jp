@@ -13,26 +13,35 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3650de934cb3d2940d0e8e971d03aff856bddfd7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4142c3f12cc5a0e2277cc8dba28a281d5cf0ba55
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515480"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198216"
 ---
-# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>方法 : グローバル アセンブリ キャッシュの内容を表示する
-[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) を使用すると、グローバル アセンブリ キャッシュの内容を表示できます。  
-  
-### <a name="to-view-a-list-of-the-assemblies-in-the-global-assembly-cache"></a>グローバル アセンブリ キャッシュ内のアセンブリの一覧を表示するには、次のようにします。  
-  
-1.  [Visual Studio コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)で次のコマンドを入力します。  
-  
-     **gacutil -l**   
-     - または -  
-    **gacutil /l**  
-  
- 以前のバージョンの .NET Framework では、Windows のシェル拡張機能である [Shfusion.dll](https://msdn.microsoft.com/library/0d9464cf-ddba-4ca9-bbec-f678fb58f380) により、エクスプローラーでグローバル アセンブリ キャッシュを表示することができました。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、Shfusion.dll は廃止されましたが、互換性のために残されています。  
-  
-## <a name="see-also"></a>参照  
- [アセンブリとグローバル アセンブリ キャッシュの使用](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>方法: グローバル アセンブリ キャッシュの内容を表示する
+
+[グローバル アセンブリ キャッシュ ツール (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) を使用して、グローバル アセンブリ キャッシュ (GAC) の内容を表示できます。
+
+## <a name="view-the-assemblies-in-the-gac"></a>GAC 内のアセンブリを表示する
+
+グローバル アセンブリ キャッシュ内のアセンブリの一覧を表示するには、[Visual Studio 用開発者コマンド プロンプト](../tools/developer-command-prompt-for-vs.md)を開いて次のコマンドを入力します。
+
+```shell
+gacutil -l
+```
+
+- または -
+
+```shell
+gacutil /l
+```
+
+> [!NOTE]
+> 以前のバージョンの .NET Framework では、Windows のシェル拡張機能である [Shfusion.dll](/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) により、エクスプローラーでグローバル アセンブリ キャッシュを表示することができました。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、Shfusion.dll は廃止されましたが、互換性のために残されています。
+
+## <a name="see-also"></a>関連項目
+
+- [アセンブリとグローバル アセンブリ キャッシュの使用](working-with-assemblies-and-the-gac.md)
+- [Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../tools/gacutil-exe-gac-tool.md)

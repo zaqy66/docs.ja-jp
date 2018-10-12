@@ -3,12 +3,12 @@ title: C# 7.0 の新機能 - C# ガイド
 description: C# 言語の次期バージョン 7 で導入される新機能の概要を示します。
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956410"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237385"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 の新機能
 
@@ -159,7 +159,7 @@ C# には、設計の意図を説明するために使用される、クラス�
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 詳細については、[破棄](../discards.md)に関するページを参照してください。
- 
+
 ## <a name="pattern-matching"></a>パターン マッチング
 
 "*パターン マッチング*" は、オブジェクトの型以外のプロパティでメソッドのディスパッチを実装できるようにする機能です。 オブジェクトの型に基づいたメソッドのディスパッチに慣れている方も多いはずです。 オブジェクト指向プログラミングでは、仮想メソッドとオーバーライド メソッドには、オブジェクトの型に基づくメソッドのディスパッチを実装するための言語構文が用意されています。 基底クラスと派生クラスは異なる実装を提供します。 パターン マッチング式により、この概念が拡張されたため、継承階層を介して関連していない型やデータ要素に同様のディスパッチ パターンを簡単に実装できるようになります。 
@@ -277,7 +277,9 @@ C# 言語には、これ以外に、`ref` ローカル変数と戻り値の誤�
 * `ref` ローカル変数と戻り値は、非同期メソッドと共に使用することはできません。
     - コンパイラは、非同期メソッドが戻るときに、参照先の変数が、最終的な値に設定されているかどうかを認識できません。
 
-ref ローカル変数および ref 戻り値の追加により、値のコピーを回避したり、逆参照操作を複数回実行したりすることで、より効率的なアルゴリズムを実現できます。 
+ref ローカル変数および ref 戻り値の追加により、値のコピーを回避したり、逆参照操作を複数回実行したりすることで、より効率的なアルゴリズムを実現できます。
+
+戻り値に `ref` を追加することは、[ソース互換性がある変更](version-update-considerations.md#source-compatible-changes)です。 既存のコードはコンパイルされますが、参照戻り値は割り当て時にコピーされます。 呼び出し元は、戻り値を参照として格納するために、戻り値の記憶域を `ref` ローカル変数に更新する必要があります。
 
 ## <a name="local-functions"></a>ローカル関数
 
@@ -327,6 +329,8 @@ C# 6 では、メンバー関数の[式形式のメンバー](csharp-6.md#expres
 
 式形式のメンバーに関するこのような新しい場所は、C# 言語にとって重要なマイルストーンを表します。これらの機能は、オープンソースの [Roslyn](https://github.com/dotnet/Roslyn) プロジェクトに従事しているコミュニティ メンバーによって実装されました。
 
+メソッドを式のようなメンバーに変更することは、[バイナリ互換性がある変更](version-update-considerations.md#binary-compatible-changes)です。
+
 ## <a name="throw-expressions"></a>throw 式
 
 C# では、`throw` は常にステートメントでした。 `throw` は式ではなくステートメントであるため、使用できない C# コンストラクトがありました。 これには、条件式、null 結合式、および一部のラムダ式が含まれます。 式形式のメンバーが追加されたことにより、さらに多くの場所で `throw` 式が役に立つようになりました。 C# 7.0 では、このようなコンストラクトを記述できるように、"*throw 式*" が導入されています。
@@ -362,8 +366,10 @@ C# では、`throw` は常にステートメントでした。 `throw` は式で
 単純な最適化では、これまで `Task` が使用されていた場所に `ValueTask` を使用します。 ただし、手動で追加の最適化を実行する場合は、非同期処理の結果をキャッシュし、その結果を以降の呼び出しで再利用できます。 `ValueTask` 構造体には `Task` パラメーターを持つコンストラクターがあるため、既存の非同期メソッドの戻り値から `ValueTask` を構築できます。
 
 [!code-csharp[AsyncOptimizedValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#31_AsyncOptimizedValueTask "Return async result or cached value")]
- 
+
 すべてのパフォーマンスに関する推奨事項と同様に、コードに大規模な変更を加える前に、両方のバージョンのベンチマークを計測する必要があります。
+
+戻り値が `await` ステートメントのターゲットである場合、<xref:System.Threading.Tasks.Task%601> から <xref:System.Threading.Tasks.ValueTask%601> への API の変更は[ソース互換性がある変更](version-update-considerations.md#source-compatible-changes)です。 一般的に、`ValueTask` への互換はそうではありません。
 
 ## <a name="numeric-literal-syntax-improvements"></a>数値リテラルの構文の改善
 

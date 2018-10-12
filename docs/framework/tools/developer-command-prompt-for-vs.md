@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c95074190419dd3e984c7659ede917b83b97f08
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 20dc7caa9e4c3e023bf2848b1dd8c63a9b94a01b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524717"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170010"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 用開発者コマンド プロンプト
 
-Visual Studio の開発者コマンド プロンプトでは、.NET Framework ツールを使いやすくするための環境変数が自動的に設定されます。
+Visual Studio 用開発者コマンド プロンプトでは、.NET Framework ツールをもっと簡単に使用できます。 それは、特定の環境変数を自動的に設定するコマンド プロンプトです。
 
 > [!div class="button"]
 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
-## <a name="searching-for-the-command-prompt-on-your-machine"></a>コンピューター上でのコマンド プロンプトの検索
+## <a name="search-for-the-command-prompt-on-your-machine"></a>コンピューター上でのコマンド プロンプトの検索
 
-Visual Studio のバージョンと、インストールした追加の SDK に応じて、複数のコマンド プロンプトがある場合があります。 たとえば、Visual Studio の 64 ビット バージョンには、32 ビットと 64 ビットのコマンド プロンプトが用意されています (ほとんどのツールでは、32 ビット バージョンと 64 ビット バージョンに違いはありませんが、一部のツールでは、32 ビット環境と 64 ビット環境に固有の変更が加えられています)。次の手順でうまくいかない場合は、「[コンピューター上のファイルを手動で探す](#manually-locating-the-files-on-your-machine)」または「[Visual Studio 内からコマンド プロンプトを実行する](#running-command-prompt-from-inside-visual-studio)」を試してください。
+Visual Studio のバージョンと、インストールした追加の SDK に応じて、複数のコマンド プロンプトがある場合があります。 たとえば、Visual Studio の 64 ビット バージョンには、32 ビットと 64 ビットのコマンド プロンプトが用意されています (ほとんどのツールでは、32 ビット バージョンと 64 ビット バージョンに違いはありませんが、一部のツールでは、32 ビット環境と 64 ビット環境に固有の変更が加えられています)。次の手順でうまくいかない場合は、「[コンピューター上のファイルを手動で探す](#manually-locate-the-files-on-your-machine)」または「[Visual Studio 内からコマンド プロンプトを実行する](#run-the-command-prompt-from-inside-visual-studio)」を試してください。
 
 ### <a name="in-windows-10"></a>Windows 10 の場合
 
@@ -40,7 +40,7 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 1. キーボードの Windows ロゴ キー ![Windows ロゴ](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") を押すなどして、**[スタート]** 画面に移動します。
 
-2. **[スタート]** 画面で、`CTRL + TAB` キーを押して **[アプリ]** 一覧を開き、「`V`」と入力します。 インストールされているすべての Visual Studio コマンド プロンプトが含まれた一覧が表示されます。
+2. **[スタート]** 画面で、**Ctrl**+**Tab** キーを押して **[アプリ]** の一覧を開き、`V`.と入力します。 インストールされているすべての Visual Studio コマンド プロンプトが含まれた一覧が表示されます。
 
 3. **[開発者コマンド プロンプト]** (または、使用するコマンド プロンプト) を選択します。
 
@@ -66,7 +66,7 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 インストール済みのコマンド プロンプトのショートカットは、通常 Visual Studio の **[スタート] メニュー**用のフォルダー (C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools 内など) にあります。 ただし、コマンド プロンプトを探しても、何らかの理由によって期待した結果を得られない場合は、コンピューター上でそのショートカットを手動で探すことができます。 *VsDevCmd.bat* などのコマンド プロンプトのファイル名を検索するか、または Tools フォルダー (C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools など) に移動します (パスは、Visual Studio のバージョン、エディション、およびインストール先に応じて変わります)。
 
-## <a name="run-command-prompt-from-inside-visual-studio"></a>Visual Studio 内からコマンド プロンプトを実行する
+## <a name="run-the-command-prompt-from-inside-visual-studio"></a>Visual Studio 内からコマンド プロンプトを実行する
 
 簡単にアクセスできるように、Visual Studio の開発者コマンド プロンプトまたは他のコマンド プロンプトを Visual Studio の **[ツール]** メニューに追加することができます。 ツールを使用できるようにするには、外部ツール一覧にそれを追加します。 次に手順を示します。
 
@@ -87,6 +87,8 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 8. **[OK]** を選択します。
 
    新しいメニュー項目が追加され、このコマンド プロンプトに **[ツール]** メニューからアクセスできるようになります。
+
+   ![Visual Studio でのコマンド プロンプト メニュー項目](media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>関連項目
 

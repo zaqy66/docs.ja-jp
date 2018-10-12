@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3eb1c665067d08a86fd4128381139c6829ebfd89
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856180"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46009778"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (マニフェストの生成および編集ツール)
 
@@ -30,7 +30,7 @@ Mage [commands] [commandOptions]
 
 ### <a name="parameters"></a>パラメーター
 
-次の表に、*Mage.exe* でサポートされているコマンドを示します。 これらのコマンドでサポートされるオプションの詳細については、「 [New コマンド オプションと Update コマンド オプション](#NewUpdate) 」および「 [Sign コマンド オプション](#Sign)」を参照してください。
+次の表に、*Mage.exe* でサポートされているコマンドを示します。 これらのコマンドでサポートされるオプションの詳細については、「[New コマンド オプションと Update コマンド オプション](#new-and-update-command-options)」および「[Sign コマンド オプション](#sign-command-options)」を参照してください。
 
 |コマンド|説明|
 |-------------|-----------------|
@@ -40,7 +40,6 @@ Mage [commands] [commandOptions]
 |**-s, -Sign** `[signOptions]`|キー ペアまたは X509 証明書を使用してファイルに署名します。 署名は、XML 要素としてファイルに挿入されます。<br /><br /> **-TimestampUri** 値を指定するマニフェストに署名するときには、インターネットに接続している必要があります。|
 |**-h, -?, -Help** *[verbose]*|使用可能なすべてのコマンドおよびそのオプションの説明が表示されます。 `verbose` を指定して、詳細なヘルプを表示します。|
 
-<a name="NewUpdate"></a>
 ## <a name="new-and-update-command-options"></a>New コマンド オプションと Update コマンド オプション
 
 次の表は、`-New` コマンドおよび `-Update` コマンドでサポートされているオプションを示しています。
@@ -70,9 +69,9 @@ Mage [commands] [commandOptions]
 |**-v, -Version** `versionNumber`|1.0.0.0|アプリケーション マニフェスト<br /><br /> 配置マニフェスト|配置のバージョンです。 引数は "*N.N.N.N*" という形式の有効なバージョン文字列である必要があります。ここで "*N*" は、32 ビット符号なし整数です。|
 |**-wpf, -WPFBrowserApp**  `isWPFApp`|False|アプリケーション マニフェスト<br /><br /> 配置マニフェスト|このフラグは、アプリケーションが Internet Explorer の内部でホストされ、スタンドアロンの実行可能ファイルではない Windows Presentation Foundation (WPF) アプリケーションである場合にのみ使用します。 有効な値は、"true" または "t"、および "false" または "f" です。<br /><br /> アプリケーション マニフェストの場合、そのアプリケーション マニフェストの `hostInBrowser` 要素に `entryPoint` 属性を追加します。<br /><br /> 配置マニフェストの場合、 `install` 要素の `deployment` 属性に false を設定し、.xbap 拡張子を指定して配置マニフェストを保存します。 この引数を **-Install** 引数と共に指定すると、ブラウザーによってホストされるアプリケーションをインストールできず、アプリケーションがオフラインになるため、エラーが発生します。|
 
-<a name="Sign"></a>
 ## <a name="sign-command-options"></a>Sign コマンド オプション
- 次の表は、 `-Sign` コマンドでサポートされているオプションを示しています。このコマンドは、すべての種類のファイルに適用されます。
+
+次の表は、 `-Sign` コマンドでサポートされているオプションを示しています。このコマンドは、すべての種類のファイルに適用されます。
 
 |オプション|説明|
 |-------------|-----------------|
@@ -105,7 +104,11 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  アプリケーション マニフェストでは、カスタム信頼セクションもサポートされています。 この機能では、アプリケーションの実行に必要な特定のアクセス許可だけを要求するマニフェストを構成できるため、最低限のアクセス許可を要求するセキュリティ プリンシパルにアプリケーションを従わせることができます。 *Mage.exe* では、カスタム信頼セクションの追加は直接サポートされていません。 これを追加するには、テキスト エディター、XML パーサー、またはグラフィカルなツールである *MageUI.exe* を使用してください。 *MageUI.exe* を使用してカスタム信頼セクションを追加する方法の詳細については、「[MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)」を参照してください。
 
- Visual Studio 2010 に含まれているバージョン 4 の *Mage.exe* で作成される新しいマニフェストは、[!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] を対象とします。 旧バージョンの .NET Framework を対象にするには、旧バージョンの *Mage.exe* を使用する必要があります。 既存のマニフェストに対してアセンブリの追加または削除を実行しても、既存のマニフェストに再署名しても、*Mage.exe* は [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] を対象にするようにマニフェストを更新しません。 これらの機能および制限事項を次の表に示します。
+Visual Studio 2017 には *Mage.exe* のバージョン 4.6.1 が含まれています。 このバージョンの *Mage.exe* で作成されたマニフェストは、.NET Framework 4 をターゲットにします。 旧バージョンの .NET Framework を対象にする場合は、旧バージョンの *Mage.exe* を使用してください。
+
+既存のマニフェストに対してアセンブリの追加または削除を実行しても、既存のマニフェストに再署名しても、*Mage.exe* は .NET Framework 4 を対象にするようにマニフェストを更新しません。
+
+これらの機能および制限事項を次の表に示します。
 
 |マニフェストのバージョン|操作|Mage v2.0|Mage v4.0|
 |----------------------|---------------|---------------|---------------|
@@ -131,7 +134,9 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ||アセンブリの追加|サポートなし|OK|
 ||アセンブリの削除|サポートなし|OK|
 
- Mage.exe は、 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]を対象とする新しいマニフェストを作成します。 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] を対象とする ClickOnce アプリケーションは、 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] と完全版の [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]の両方で実行できます。 アプリケーションが完全版の [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] を対象としていて、 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]で実行できない場合は、テキスト エディターを使用してクライアントの `<framework>` 要素を削除し、マニフェストに再署名します。 `<framework>` を対象とする [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]要素の例を次に示します。
+ Mage.exe は、 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]を対象とする新しいマニフェストを作成します。 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] を対象とする ClickOnce アプリケーションは、 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] と完全版の .NET Framework 4 の両方で実行できます。 アプリケーションが完全版の .NET Framework 4 を対象としていて、[!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] で実行できない場合は、テキスト エディターを使用してクライアントの `<framework>` 要素を削除し、マニフェストに再署名します。
+
+`<framework>` を対象とする [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 要素の例を次に示します。
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />
@@ -195,7 +200,7 @@ mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)
 - [チュートリアル : ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 176ae3589443937331259ee4716570c66053de3c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 36526da1fc678e933a75e19bac9c8e1d0a40909c
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44186189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45743389"
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose メソッドの実装
 
@@ -107,7 +107,7 @@ Dispose パターンには 2 種類あります。
 
 <xref:System.IDisposable> インターフェイスを実装するクラスから派生したクラスは、<xref:System.IDisposable> の基底クラスでの実装が派生クラスに継承されるため、<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> を実装しないでください。 代わりに、派生クラスで Dispose パターンを実装するには、以下の項目を用意します。  
   
-* 基底クラスのメソッドをオーバーライドして、派生クラスのリソースを解放する実際の作業を実行する `protected Dispose(Boolean)` メソッド。 このメソッドは、基底クラスの `Dispose(Boolean)` メソッドも呼び出して、それに *disposing* 引数の値として `true` を渡す必要があります。  
+* 基底クラスのメソッドをオーバーライドして、派生クラスのリソースを解放する実際の作業を実行する `protected Dispose(Boolean)` メソッド。 このメソッドは、基底クラスの `Dispose(Boolean)` メソッドも呼び出して、引数の破棄状態を渡す必要があります。  
   
 * アンマネージ リソースをラップする <xref:System.Runtime.InteropServices.SafeHandle> から派生したクラス (推奨)、または、<xref:System.Object.Finalize%2A?displayProperty=nameWithType> メソッドのオーバーライド。 <xref:System.Runtime.InteropServices.SafeHandle> クラスには、コーディングが不要なファイナライザーが用意されています。 ファイナライザーを用意する場合は、*disposing* 引数を `false` として `Dispose(Boolean)` オーバーロードを呼び出す必要があります。  
   

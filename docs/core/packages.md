@@ -4,12 +4,12 @@ description: パッケージ、メタパッケージ、フレームワークの�
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: e68c63d26133ac76b718bb3696d16c81bd943dc2
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472803"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45597689"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>パッケージ、メタパッケージ、フレームワーク
 
@@ -56,7 +56,7 @@ ms.locfileid: "34472803"
 
 メタパッケージは、統合して意味をなすパッケージ セットを記述するための NuGet パッケージの規則です。 メタパッケージでは、パッケージ間に依存関係を設定して、パッケージ セットを表現します。 メタパッケージでは必要に応じて、フレームワークを指定して、このパッケージ セットのフレームワークを確立することができます。 
 
-.NET Core ツールの以前のバージョンは (project.json ツールと csproj-based ツールの両方)、既定では、フレームワークとメタパッケージの両方を指定していました。 ただし、現時点では、各メタパッケージがターゲット フレームワークに関連付けられるように、ターゲット フレームワークによってメタパッケージが暗黙的に参照されます。 たとえば、`netstandard1.6` フレームワークは NetStandard.Library バージョン 1.6.0 メタパッケージを参照します。 同様に、`netcoreapp1.1` フレームワークは Microsoft.NETCore.App バージョン 1.1.0 メタパッケージを参照します。 詳細については、「[Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md)」 (.NET Core SDK のメタパッケージの暗黙的パッケージ参照) を参照してください。
+.NET Core ツールの以前のバージョンは (project.json ツールと csproj-based ツールの両方)、既定では、フレームワークとメタパッケージの両方を指定していました。 ただし、現時点では、各メタパッケージがターゲット フレームワークに関連付けられるように、ターゲット フレームワークによってメタパッケージが暗黙的に参照されます。 たとえば、`netstandard1.6` フレームワークは NetStandard.Library バージョン 1.6.0 メタパッケージを参照します。 同様に、`netcoreapp2.1` フレームワークは Microsoft.NETCore.App バージョン 2.1.0 メタパッケージを参照します。 詳細については、「[Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md)」 (.NET Core SDK のメタパッケージの暗黙的パッケージ参照) を参照してください。
 
 フレームワークをターゲットにし、メタパッケージを暗黙的に参照することは、各依存パッケージの参照を 1 つのジェスチャとして追加することを実質的に意味します。 これらのパッケージのライブラリはすべて、IntelliSense (または同様のエクスペリエンス) とアプリの公開で利用できます。  
 

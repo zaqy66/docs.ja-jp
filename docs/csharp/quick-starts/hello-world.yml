@@ -12,12 +12,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 17264f96676b5c81c8a70a6606de698406c076fb
-  ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+  ms.openlocfilehash: 26aeb125a69b210bee96fe32818304cc72e3da17
+  ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/04/2018
-  ms.locfileid: "43508033"
+  ms.lasthandoff: 10/01/2018
+  ms.locfileid: "47421847"
 items:
 - durationInMinutes: 1
   content: >
@@ -27,14 +27,14 @@ items:
   content: "対話型ウィンドウで次のコードを実行します。 そのためには、対話型ウィンドウで次のコード ブロックを入力し、**[実行]** をクリックします。\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\nおめでとうございます!  最初の C# プログラムを実行しました。 これは \"Hello World!\" というメッセージを出力する単純なプログラムです。 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドを使用してこのメッセージを出力しました。 `Console` は、コンソール ウィンドウを表す型です。 `WriteLine` は、そのテキスト コンソールに 1 行のテキストを出力する `Console` 型の 1 つのメソッドです。\n\n次に進んで、さらに詳しく見てみましょう。 このレッスンの残りの部分では、C# においてテキストを表す `string` 型の機能を確認します。 `Console` 型と同じように、`string` 型にもメソッドがあります。 `string` メソッドはテキストを処理します。 \n\n> [!NOTE]\n> このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。\n"
 - title: 変数の宣言と使用
   durationInMinutes: 3
-  content: "最初のプログラムでは、`string` の \"Hello World!\" を 画面に出力しました。 \n\n> [!TIP]\n> C# (または何らかのプログラミング言語) について詳しく学習するに従い、コードを記述する際にミスをすることもあるでしょう。 **コンパイラ**は、そうしたエラーを発見して報告します。 エラー メッセージが出力された場合は、例のコードをよく確認して、対話型ウィンドウで修正すべきコードを見つけます。\n> こうした実習が C# コードの構造を理解するのに役立ちます。 \n\n最初のプログラムは、1 つのメッセージしか出力できません。 **変数**を使用すると、もっと役立つプログラムを記述できます。 **変数**は、同じコードを別の値で実行するのに使用できる記号です。 試してみましょう。 対話型ウィンドウで記述したコードを次のコードに置き換えます。\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n最初の行で変数 `aFriend` を宣言し、その変数に \"Bill\" という値を代入しています。 2 番目の行でその名前を出力しています。\n\n宣言した変数に別の値を代入できます。 この名前を友人の名前に変更できます。 対話型ウィンドウで、先ほど追加したコードのあとに次の 2 行を追加します。\n\n```csharp\naFriend = \"Maira\";\nConsole.WriteLine(aFriend);\n```\n\n`aFriend` 変数に格納された値に基づいて、コードの同じ行に 2 つの異なるメッセージが表示されていることに注目してください。\n\nお気付きかと思いますが、最後の 2 つのメッセージから \"Hello\" という言葉がなくなっています。 修正しましょう。  メッセージを出力する行を次のように変更します。\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\nもう一度 **[実行]** をクリックして結果を確認します。\n\nさらに進めると、`+` を利用して出力する文字列の作成が難しくなります。 [文字列補間](../language-reference/tokens/interpolated.md)を利用すれば、より簡潔で読みやすい方法で文字列をつなぎ合わせることができます。\n\n文字列の開始引用符の前に `$` を追加する場合、中かっこの文字列の内部に、`aFriend` 変数など、式を含めることができます。\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\nもう一度 **[実行]** をクリックして結果を確認します。\n\n> [!NOTE]\n> このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。\n"
+  content: "最初のプログラムでは、`string` の \"Hello World!\" を 画面に出力しました。 \n\n> [!TIP]\n> C# (または何らかのプログラミング言語) について詳しく学習するに従い、コードを記述する際にミスをすることもあるでしょう。 **コンパイラ**は、そうしたエラーを発見して報告します。 エラー メッセージが出力された場合は、例のコードをよく確認して、対話型ウィンドウで修正すべきコードを見つけます。\n> こうした実習が C# コードの構造を理解するのに役立ちます。 \n\n最初のプログラムは、1 つのメッセージしか出力できません。 **変数**を使用すると、もっと役立つプログラムを記述できます。 **変数**は、同じコードを別の値で実行するのに使用できる記号です。 試してみましょう。 対話型ウィンドウで記述したコードを次のコードに置き換えます。\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n最初の行で変数 `aFriend` を宣言し、その変数に \"Bill\" という値を代入しています。 2 番目の行でその名前を出力しています。\n\n宣言した変数に別の値を代入できます。 この名前を友人の名前に変更できます。 対話型ウィンドウで、先ほど追加したコードのあとに次の 2 行を追加します。\n\n```csharp\naFriend = \"Maira\";\nConsole.WriteLine(aFriend);\n```\n\n`aFriend` 変数に格納された値に基づいて、コードの同じ行に 2 つの異なるメッセージが表示されていることに注目してください。\n\nお気付きかと思いますが、最後の 2 つのメッセージから \"Hello\" という言葉がなくなっています。 修正しましょう。  メッセージを出力する行を次のように変更します。\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\nもう一度 **[実行]** をクリックして結果を確認します。\n\n**変数**と**定数**の文字列から文字列を作成するには、`+` を使用していました。 もっと良い方法があります。\n変数を `{` と `}` の文字間に配置して、そのテキストを変数の値で置き換えるように C# に指示することができます。\n\nこれは、[文字列補間](../language-reference/tokens/interpolated.md)と呼ばれます。\n\n文字列の開始引用符の前に `$` を追加する場合、中かっこの間にある文字列内に、`aFriend` などの変数を含めることができます。 ぜひ試してみてください。\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\nもう一度 **[実行]** をクリックして結果を確認します。 メッセージは \"Hello {aFriend}\" ではなく、\"Hello Maira\" であるはずです。\n\n> [!NOTE]\n> このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。\n"
 - title: 文字列の処理
   durationInMinutes: 5
   content: >
     先ほどの編集を通して、文字列を使って何ができるかを初めて確認しました。 さらに詳しく見てみましょう。
 
 
-    `+` は C# において演算子と呼ばれるものの 1 つです。 `firstString + secondString` のように文字列に適用すると、1 つ目のテキストに 2 つ目のテキストが続く新しいテキストが作成されます。 これを*文字列の連結*と言います。 文字列変数も含めて、文字列をいくつでも連結できます。  これを試してみます。
+    中かっこの間の変数は 1 つに制限されません。 これを試してみます。
 
 
     ```csharp
@@ -48,7 +48,7 @@ items:
     ```
 
 
-    文字列についてさらに詳しく見ていきます。`Length` を使用して文字列の長さを知ることができます。 `Length` は文字列の**プロパティ**であり、その文字列の文字数を返します。 対話型ウィンドウの下部に次のコードを追加します。
+    文字列についてさらに調べると、文字列は単なる文字のコレクションではないことがわかります。 文字列の長さを確認するには、`Length` を使用します。 `Length` は文字列の**プロパティ**であり、その文字列の文字数を返します。 対話型ウィンドウの下部に次のコードを追加します。
 
 
     ```csharp
@@ -62,7 +62,7 @@ items:
 
     > [!TIP]
 
-    > このあたりで、自分で試してみるといいでしょう。 `Console.WriteLine()` を使用して画面にテキストを出力できることを学習しました。 変数を宣言して文字列同士を連結する方法についても学習しました。 対話型ウィンドウで実際に確認してみてください。 自分でより多くのメッセージを記述してみるとよいでしょう。 `+` 演算子を使用して文字列を作成してください。
+    > このあたりで、自分で試してみるといいでしょう。 `Console.WriteLine()` を使用して画面にテキストを出力できることを学習しました。 変数を宣言して文字列同士を連結する方法についても学習しました。 対話型ウィンドウで実際に確認してみてください。 このウィンドウには、実行できることの候補を作成する **IntelliSense** という機能があります。 `firstFriend` で `d` の後に `.` を入力します。 使用できるプロパティとメソッドの候補の一覧が表示されます。
 
 
     > [!NOTE]
@@ -70,7 +70,7 @@ items:
     > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 文字列の追加操作
   durationInMinutes: 5
-  content: "メッセージを出力するのに <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> **メソッド**を使用してきました。 **メソッド**は、何らかのアクションを実装したコードのブロックです。 メソッドに名前があることで、それにアクセスできます。 \n\n`string` 型には多くの便利なメソッドがあります。 <xref:System.String.Trim%2A> メソッドと、それに関連した <xref:System.String.TrimStart%2A> と <xref:System.String.TrimEnd%2A> メソッドを使ってみましょう。 これらのメソッドは、先頭と末尾にあるスペースを削除します。\n\n```csharp\nstring greeting = \"      Hello World!       \";\nConsole.WriteLine($\"[{greeting}]\");\n\nstring trimmedGreeting = greeting.TrimStart();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n\ntrimmedGreeting = greeting.TrimEnd();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n\ntrimmedGreeting = greeting.Trim();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n```\n\nこのサンプルでは、文字列を処理するための重要な概念のいくつかを説明しています。 文字列を操作するメソッドは、定位置に変更を加えるのではなく、新しい文字列オブジェクトを返します。 `Trim` メソッドのいずれかに対する各呼び出しは新しい文字列を返すが元のメッセージを変更しない、ということが確認できます。\n\n文字列を処理するメソッドは他にもあります。 たとえば、エディターやワード プロセッサで検索と置換のコマンドを使用したことがあるかもしれません。 <xref:System.String.Replace%2A> メソッドはそれと似た処理を `string` で行います。 このメソッドは部分文字列を検索し、それを別のテキストに置き換えます。 <xref:System.String.Replace%2A> メソッドは、2 つの**パラメーター**を受け取ります。 パラメーターは丸かっこ内の文字列です。 最初の文字列は、検索対象のテキストです。 2 つ目の文字列は、置換後のテキストです。 ご自分で試してみてください。 このコードを追加します。\n\n```csharp\nstring sayHello = \"Hello World!\";\nConsole.WriteLine(sayHello);\nsayHello = sayHello.Replace(\"Hello\", \"Greetings\");\nConsole.WriteLine(sayHello);\n```\n\nその他にも役立つメソッドが 2 つあり、1 つは文字列のすべてを大文字にし、もう 1 つは文字列のすべてを小文字にします。 次のコードを試してみてください。\n\n```csharp\nConsole.WriteLine(sayHello.ToUpper());\nConsole.WriteLine(sayHello.ToLower());\n```\n\n> [!NOTE]\n> このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。\n"
+  content: "メッセージを出力するのに <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> **メソッド**を使用してきました。 **メソッド**は、何らかのアクションを実装したコードのブロックです。 メソッドに名前があることで、それにアクセスできます。 \n\n文字列の先頭または末尾に表示したくないスペースがあるとします。 それらのスペースを文字列から**トリミング**したいと考えています。\nこの処理には、<xref:System.String.Trim%2A> メソッドと、それに関連した <xref:System.String.TrimStart%2A> と <xref:System.String.TrimEnd%2A> メソッドを使用します。 これらのメソッドを使用するだけで、先頭と末尾のスペースを削除できます。 次のコードを試してみてください。\n\n```csharp\nstring greeting = \"      Hello World!       \";\nConsole.WriteLine($\"[{greeting}]\");\n\nstring trimmedGreeting = greeting.TrimStart();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n\ntrimmedGreeting = greeting.TrimEnd();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n\ntrimmedGreeting = greeting.Trim();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n```\n\nこのサンプルでは、文字列を処理するための重要な概念のいくつかを説明しています。 文字列を操作するメソッドは、定位置に変更を加えるのではなく、新しい文字列オブジェクトを返します。 `Trim` メソッドのいずれかに対する各呼び出しは新しい文字列を返すが元のメッセージを変更しない、ということが確認できます。\n\n文字列を処理するメソッドは他にもあります。 たとえば、エディターやワード プロセッサで検索と置換のコマンドを以前使用したことがあるかもしれません。 <xref:System.String.Replace%2A> メソッドはそれと似た処理を文字列で行います。 このメソッドは部分文字列を検索し、それを別のテキストに置き換えます。 <xref:System.String.Replace%2A> メソッドは、2 つの**パラメーター**を受け取ります。 パラメーターは丸かっこ内の文字列です。 最初の文字列は、検索対象のテキストです。 2 つ目の文字列は、置換後のテキストです。 ご自分で試してみてください。 このコードを追加します。 `sayHello` 変数の後ろに `.Re` と入力するとヒントが表示されます。\n\n```csharp\nstring sayHello = \"Hello World!\";\nConsole.WriteLine(sayHello);\nsayHello = sayHello.Replace(\"Hello\", \"Greetings\");\nConsole.WriteLine(sayHello);\n```\n\nその他にも役立つメソッドが 2 つあり、1 つは文字列のすべてを大文字にし、もう 1 つは文字列のすべてを小文字にします。 次のコードを試してみてください。 入力して、`To` と入力し始めると **IntelliSense** でどのようにヒントが表示されるかを確認します。\n\n```csharp\nConsole.WriteLine(sayHello.ToUpper());\nConsole.WriteLine(sayHello.ToLower());\n```\n\n> [!NOTE]\n> このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。\n"
 - title: 検索文字列
   durationInMinutes: 10
   content: "*検索と置換*の演算子は他にも、文字列内のテキストを検索できます。 検索には <xref:System.String.Contains%2A> メソッドを使用できます。 これにより、文字列内に部分文字列が含まれているかどうかを確認できます。 次のコードを試してみて、<xref:System.String.Contains%2A> を確認してください。\n\n```csharp\nstring songLyrics = \"You say goodbye, and I say hello\";\nConsole.WriteLine(songLyrics.Contains(\"goodbye\"));\nConsole.WriteLine(songLyrics.Contains(\"greetings\"));\n```\n\n<xref:System.String.Contains%2A> メソッドは**ブール値**を返し、検索した文字列が見つかったかどうかを知らせます。 **ブール値**は `true` か `false` どちらかの値を格納します。 **ブール値**については、この後のレッスンで詳しく学習します。\n\n***課題***\n\n似たような 2 つのメソッドがあり、<xref:System.String.StartsWith%2A> と <xref:System.String.EndsWith%2A> も文字列内の部分文字列を検索します。 これらは文字列の先頭または末尾の部分文字列を検索します。 先述のサンプルを変更して、<xref:System.String.Contains%2A> の代わりに <xref:System.String.StartsWith%2A> と <xref:System.String.EndsWith%2A> を使用してみてください。 文字列の先頭にある \"You\" または \"goodbye\" を検索します。 文字列の末尾にある \"hello\" または \"goodbye\" を検索します。\n\n> [!Note]\n> 文字列の末尾にあるテキストをテストするときは、句読点に注意します。 文字列が句点で終わる場合は、末尾に句点を含めた文字列を検索する必要があります。\n\n先頭が \"You\" で末尾が \"hello\" の場合は `true`、先頭または末尾が \"goodbye\" の場合は false になります。 \n\n> [!NOTE]\n> このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。\n"

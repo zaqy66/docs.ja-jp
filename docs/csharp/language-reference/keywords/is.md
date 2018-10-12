@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 974e0c3ab29da582e7b22c909650a61d179ec3f7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8e4103f8e71858ec74c348ee1f675828e6468eb2
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523940"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170588"
 ---
 # <a name="is-c-reference"></a>is (C# リファレンス) #
 
@@ -128,6 +128,16 @@ C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference
 次の例では、型パターンと定数パターンを組み合わせてオブジェクトが `Dice` インスタンスであるかどうかをテストし、そうである場合はサイコロ振り操作の値が 6 であるかどうかをテストします。
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
+
+定数パターンを使用して、`null` のチェックを実行できます。 `is` ステートメントで `null` キーワードがサポートされています。 構文は次のとおりです。
+
+```csharp 
+   expr is null
+```
+
+`null` チェックの比較を示す例を次に示します。
+
+[!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
  
 ### <a name="var" /> var パターン</a>
 

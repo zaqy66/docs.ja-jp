@@ -1,6 +1,6 @@
 ---
 title: .NET の文字列を使用するためのベスト プラクティス
-ms.date: 08/22/2018
+ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000152"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080339"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET の文字列を使用するためのベスト プラクティス
 <a name="top"></a> .NET には、ローカライズされたアプリケーションやグローバル化されたアプリケーションを開発するための広範なサポートが用意されており、文字列の並べ替えや表示などの一般的な操作を実行するときに、現在のカルチャの規則や特定のカルチャの規則を簡単に適用できるようになっています。 しかし、文字列の並べ替えや比較の操作は、必ずしもカルチャに依存するとは限りません。 たとえば、アプリケーションが内部で使用する文字列は、通常、すべてのカルチャで同じように処理される必要があります。 XML タグ、HTML タグ、ユーザー名、ファイル パス、システム オブジェクトの名前などのカルチャに依存しない文字列データがカルチャに依存するかのように解釈されると、アプリケーション コードで軽度のバグが発生したり、パフォーマンスが低下したり、場合によってはセキュリティの問題を引き起こしたりする可能性があります。  
@@ -123,10 +123,12 @@ ms.locfileid: "43000152"
  文字列比較は、多くの文字列関連操作 (特に並べ替えおよび等価性テスト) の中核です。 文字列は、決まった順序で並べられています。たとえば、文字列の並べ替え済みリストで "my" が "string" の前にある場合は、比較で "my" が "string" 以下になる必要があります。 また、比較は等価性を暗黙的に定義します。 比較演算では、等価と見なされた文字列に対して 0 が返されます。 これは、どちらの文字列ももう一方の文字列より小さくないという意味に解釈するとわかりやすくなります。 文字列に関係する、意味のある操作のほとんどには、他の文字列との比較か、正しく定義された並べ替え操作の実行のいずれかまたは両方の処理が含まれています。  
 
 > [!NOTE]
-> [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921) をダウンロードできます。これは、Windows オペレーティング システムの並べ替えおよび比較操作で使用される文字の重みに関する情報を含む一連のテキスト ファイルです。
+> Windows オペレーティング システムの並べ替え操作と比較操作で使用される文字の重みに関する情報を含む一連のテキスト ファイルである[並べ替え重みテーブル](https://www.microsoft.com/en-us/download/details.aspx?id=10921) と、Linux と macOS 用の並べ替え重みテーブルの最新バージョンである [デフォルト Unicode 照合基本テーブル](https://www.unicode.org/Public/UCA/latest/allkeys.txt)をダウンロードできます。 Linux と macOS での並べ替え重みのテーブルの特定のバージョンは、システムにインストールされている [International Components for Unicode](http://site.icu-project.org/) ライブラリのバージョンによって異なります。 実装される ICU のバージョンと Unicode のバージョンに関する情報は、[ICU のダウンロード](http://site.icu-project.org/download)に関する記事を参照してください。
 
  しかし、2 つの文字列の等価性や並べ替え順序を評価する場合、正しい結果は 1 つではありません。結果は、文字列の比較に使用される基準に依存するためです。 特に、序数に基づく文字列比較や、現在のカルチャまたはインバリアント カルチャ (英語をベースとする、ロケールに依存しないカルチャ) の大文字と小文字の規則や並べ替えの規則に基づく文字列比較では、さまざまな結果が返される可能性があります。  
-  
+
+さらに、文字列比較を、異なるバージョンの .NET を使用したり、異なるオペレーティング システムまたはバージョンが異なるオペレーティング システム上の .NET で実行したりすると、異なる結果が返る可能性があります。 詳細については、「[Strings and The Unicode Standard](xref:System.String#Unicode)」(文字列と Unicode 標準) を参照してください。 
+
 <a name="current_culture"></a>   
 ### <a name="string-comparisons-that-use-the-current-culture"></a>現在のカルチャを使用する文字列比較  
  文字列を比較するときの基準として現在のカルチャの規則が使用される場合があります。 現在のカルチャに基づく比較では、スレッドの現在のカルチャ (ロケール) が使用されます。 ユーザーがカルチャを設定していない場合は、コントロール パネルの **[地域のオプション]** ウィンドウの設定が既定で使用されます。 言語的な意味を持つデータや、カルチャに依存したユーザー操作を反映するデータに対しては、常に現在のカルチャに基づく比較を使用する必要があります。  
@@ -370,5 +372,6 @@ ms.locfileid: "43000152"
 18.02.1905 15:12  
 ```  
   
-## <a name="see-also"></a>参照  
- [文字列の操作](../../../docs/standard/base-types/manipulating-strings.md)
+## <a name="see-also"></a>関連項目
+
+- [文字列の操作](../../../docs/standard/base-types/manipulating-strings.md)

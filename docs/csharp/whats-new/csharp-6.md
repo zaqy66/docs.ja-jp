@@ -3,12 +3,12 @@ title: C# 6 の新機能 - C# ガイド
 description: C# バージョン 6 の新機能について説明します
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565879"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208186"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 の新機能
 
@@ -45,7 +45,7 @@ C# の 6.0 リリースには、開発者の生産性を向上させる多くの
 
 このトピックでは、これらの各機能について詳しく説明していきます。
 
-## <a name="auto-property-enhancements"></a>自動プロパティの機能強化 
+## <a name="auto-property-enhancements"></a>自動プロパティの機能強化
 
 自動的に実装されるプロパティ (通常、"自動プロパティ" と呼ばれる) の構文は、get と set のシンプルなアクセサーを使ったプロパティの作成を簡単にしました。
 
@@ -88,6 +88,8 @@ public class Student
 
 この機能を使用すれば、不変型を作成したり、より簡潔で便利な自動プロパティ構文を使用するための、本格的な言語サポートを実現できます。
 
+この構文を追加してもアクセス可能なメソッドが削除されない場合は、[バイナリ互換性がある変更](version-update-considerations.md#binary-compatible-changes)です。
+
 ### <a name="auto-property-initializers"></a>自動プロパティ初期化子
 
 *自動プロパティ初期化子*を使用すると、プロパティ宣言の一部として自動プロパティの初期値を宣言できます。  以前のバージョンでは、これらのプロパティにはセッターが必要でした。そのセッターを使用して、バッキング フィールドによって使用されるデータ ストレージを初期化する必要がありました。 たとえば、生徒の名前と成績を含んだ、生徒用のクラスがあるとします。
@@ -115,6 +117,9 @@ C# 6 では、自動プロパティ宣言で自動プロパティによって使
 式形式のメンバーは、読み取り専用のプロパティにも使用できます。
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
+
+既存のメンバーを式のようなメンバーに変更することは、[バイナリ互換性がある変更](version-update-considerations.md#binary-compatible-changes)です。
+
 
 ## <a name="using-static"></a>using static
 
@@ -398,4 +403,3 @@ C# 6 の コンパイラは、`Task.Run(Func<Task>())` のほうが適切であ�
 既定では、すべてのコンパイルでは、コンパイルごとに一意な出力が生成されます。 コンパイラは、タイムスタンプを追加し、ランダムな数から生成された GUID を追加します。 ビルド間の一貫性を確保するために、バイト単位で出力を比較する場合は、このオプションを使用します。
 
 詳細については、[-deterministic コンパイラ オプション](../language-reference/compiler-options/deterministic-compiler-option.md)の記事を参照してください。
-

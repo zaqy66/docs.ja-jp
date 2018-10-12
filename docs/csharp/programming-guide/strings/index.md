@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961470"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170653"
 ---
 # <a name="strings-c-programming-guide"></a>文字列 (C# プログラミング ガイド)
 文字列は、値がテキストの <xref:System.String> 型のオブジェクトです。 内部では、テキストは <xref:System.Char> オブジェクトの順次読み取り専用コレクションとして格納されます。 C# の文字列の末尾には null 終端文字はありません。したがって、C# の文字列には任意の数の null 文字 ('\0') を埋め込むことができます。 文字列の <xref:System.String.Length%2A> プロパティは、Unicode 文字の数ではなく、文字列に含まれている `Char` オブジェクトの数を表します。 文字列内の個別の Unicode コード ポイントにアクセスするには、<xref:System.Globalization.StringInfo> オブジェクトを使用します。  
@@ -64,7 +64,7 @@ ms.locfileid: "37961470"
 |\U|サロゲート ペアの Unicode エスケープ シーケンス|\Unnnnnnnn|  
 |\u|Unicode エスケープ シーケンス|\u0041 = "A"|  
 |\v|垂直タブ|0x000B|  
-|\x|Unicode エスケープ シーケンス (可変長である点を除き "\u" に類似)|\x0041 = "A"|  
+|\x|Unicode エスケープ シーケンス (可変長である点を除き "\u" に類似)|\x0041 または \x41 = "A"|  
   
 > [!NOTE]
 >  コンパイル時に、逐語的文字列はエスケープ シーケンスと同様に通常の文字列に変換されます。 したがって、逐語的文字列をデバッガーのウォッチ ウィンドウで表示すると、ソース コードの逐語的バージョンではなく、コンパイラが追加したエスケープ文字が表示されます。 たとえば、逐語的文字列 @"C:\files.txt" は、ウォッチ ウィンドウでは "C:\\\files.txt" と表示されます。  

@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 0c4eda54fbb1f48095d52fa798ea839eb509a636
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: d1c4166129716ccbbc86855e38d631f493b82290
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754730"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937606"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する 
 
@@ -126,7 +126,7 @@ services:
 
 -   SQL Server 名は sql.data で、Linux の SQL Server インスタンスが実行されているコンテナーで使用されているのと同じ名前です。 これは便利な方法です。この名前解決 (内部から Docker ホストへ) を使用できることで、ネットワーク アドレスが解決されるため、他のコンテナーからアクセスするコンテナーの内部 IP アドレスを知る必要はありません。
 
-接続文字列は環境変数によって定義されるため、異なる時点で別のメカニズムを使用して、その変数を設定することができます。 たとえば、最後のホストで運用に展開するときに、または VSTS の CI/CD パイプラインから、または優先する DevOps システムから、別の接続文字列を設定できます。
+接続文字列は環境変数によって定義されるため、異なる時点で別のメカニズムを使用して、その変数を設定することができます。 たとえば、最後のホストで運用に展開するときに、または Azure DevOps Services の CI/CD パイプラインから、または優先する DevOps システムから、別の接続文字列を設定できます。
 
 -   Docker ホスト内で catalog.api サービスへの内部アクセス用に、ポート 80 を公開します。 ホストは、Linux の Docker イメージに基づいているため、現在は Linux VM ですが、代わりに Windows イメージ上で実行するようにコンテナーを構成することもできます。
 
@@ -180,7 +180,7 @@ Compose を使用してリモート Docker エンジンに展開することも�
 
 前のセクションで示した簡略化された例のように、1 つの docker-compose.yml ファイルを使用できます。 ただし、これはほとんどのアプリケーションにはお勧めできません。
 
-既定では、Compose は docker-compose.yml と省略可能な docker-compose.override.yml の 2 つのファイルを読み取ります。 図 8-11 に示すように、Visual Studio を使用して Docker サポートを有効にしている場合、VSTS と同じように CI/CD パイプラインから使用するため、Visual Studio によって追加の docker-compose.ci.build.yml ファイルも作成されます。
+既定では、Compose は docker-compose.yml と省略可能な docker-compose.override.yml の 2 つのファイルを読み取ります。 図 8-11 に示すように、Visual Studio を使用して Docker サポートを有効にしている場合、Azure DevOps Services と同じように CI/CD パイプラインから使用するため、Visual Studio によって追加の docker-compose.ci.build.yml ファイルも作成されます。
 
 ![](./media/image12.png)
 
