@@ -1,21 +1,18 @@
 ---
-title: "非同期の概要"
-description: "非同期の概要"
-keywords: .NET, .NET Core
+title: 非同期の概要
+description: ブロッキング I/O と複数コアでの同時操作の処理を容易にする鍵となる手法である非同期プログラミングについて説明します。
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-translationtype: Human Translation
-ms.sourcegitcommit: 9abc4879533074e6830a7343123b139e912d239b
-ms.openlocfilehash: 033d5e8eb317a17a8f121ff37c2731c3d24999f0
-
+ms.openlocfilehash: b9084da80ff400bf99fc8641c69bc38c805d039a
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071431"
 ---
-
 # <a name="async-overview"></a>非同期の概要
 
 少し前まで、アプリの高速化は、より新しい PC やサーバーを購入することによって単純に実現されていましたが、その傾向は終わりました。 実際には、逆転しました。 1 GHz のシングル コア ARM チップを搭載した携帯電話が登場し、サーバーのワークロードは VM に移行されました。 ユーザーは引き続き応答速度の速い UI を望み、ビジネス オーナーは業務の拡大に合わせて拡張できるサーバーを必要としています。 モバイルおよびクラウドへの移行が進み、インターネット接続ユーザーが 30 億人を超えた結果、新しいソフトウェア パターンが生まれました。 
@@ -27,7 +24,7 @@ ms.openlocfilehash: 033d5e8eb317a17a8f121ff37c2731c3d24999f0
 
 ## <a name="why-write-async-code"></a>非同期コードを記述する理由
 
-最新アプリでは、ファイルおよびネットワーク I/O を広範囲に使用します。 従来の I/O API は既定によりブロックし、困難なパターンを学習して使用しない限り、結果的にユーザー エクスペリエンスとハードウェア使用率が不適切になっていました。 このモデルを逆転させたのが非同期 API と言語レベルの非同期プログラミング モデルであり、非同期実行が既定になりました。これに関して新たに学習する必要がある概念はほとんどありません。
+最新アプリでは、ファイルおよびネットワーク I/O を広範囲に使用します。 従来の I/O API は既定によりブロックし、困難なパターンを学習して使用しない限り、結果的にユーザー エクスペリエンスとハードウェア使用率が不適切になっていました。 このモデルを逆転させたのがタスクベースの非同期 API と言語レベルの非同期プログラミング モデルであり、非同期実行が既定になりました。これに関して新たに学習する必要がある概念はほとんどありません。
 
 非同期コードの特性は次のとおりです。
 
@@ -38,11 +35,14 @@ ms.openlocfilehash: 033d5e8eb317a17a8f121ff37c2731c3d24999f0
 
 ## <a name="whats-next"></a>次の内容
 
-非同期の概念とプログラミングの詳細については、「[非同期の詳細](async-in-depth.md)」を参照してください。
+詳しくは、「[非同期の詳細](async-in-depth.md)」トピックをご覧ください。
 
+「[非同期プログラミングのパターン](asynchronous-programming-patterns/index.md)」トピックでは、.NET でサポートされている 3 種類の非同期プログラミング パターンの概要が説明されています。  
+  
+-   [非同期プログラミング モデル (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (レガシ)  
+  
+-   [イベント ベースの非同期パターン (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (レガシ)  
+  
+-   [タスク ベースの非同期パターン (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (新規の開発に推奨)  
 
-
-
-<!--HONumber=Nov16_HO3-->
-
-
+推奨されるタスク ベースのプログラミング モデルについて詳しくは、「[タスク ベースの非同期プログラミング](parallel-programming/task-based-asynchronous-programming.md)」トピックをご覧ください。

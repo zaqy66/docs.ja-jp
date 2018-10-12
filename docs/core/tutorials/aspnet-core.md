@@ -1,25 +1,16 @@
 ---
-title: "ASP.NET Core の概要"
-description: "ASP.NET Core の概要"
-keywords: .NET, .NET Core
+title: ASP.NET Core の概要
+description: ASP.NET Core のドキュメントのチュートリアルでは、ASP.NET Core の詳細を説明します。
 author: tdykstra
-ms.author: tdykstra
+ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: aspnet-core
-ms.devlang: dotnet
-ms.assetid: 4172512e-b93d-4169-abdb-bd0b0b2d657e
-translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 7ea67d2b85db454ccecc9c6601f86be28e94931c
-
+ms.openlocfilehash: db2134cb88b088233ae4ff3562d99bef26fa6d90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33209499"
 ---
+# <a name="getting-started-with-aspnet-core"></a>ASP.NET Core の概要
 
-# <a name="getting-started-with-aspnet-core"></a>ASP.NET Core の概要    
-    
-ASP.NET Core Web アプリケーションの開発に関するチュートリアルについては、「[ASP.NET Core documentation](https://docs.microsoft.com/aspnet/core/)」 (ASP.NET Core のドキュメント) を参照することをお勧めしています。
-
-
-<!--HONumber=Jan17_HO3-->
-
-
+ASP.NET Core Web アプリケーションの開発に関するチュートリアルについては、「[ASP.NET Core documentation](/aspnet/core/)」 (ASP.NET Core のドキュメント) を参照することをお勧めしています。

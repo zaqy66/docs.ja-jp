@@ -1,124 +1,62 @@
 ---
-title: "方法: 定義済みの UTC オブジェクトおよびローカル タイム ゾーン オブジェクトにアクセスする"
-description: "方法: 定義済みの UTC オブジェクトおよびローカル タイム ゾーン オブジェクトにアクセスする"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 08/11/2016
-ms.topic: article
-ms.prod: .net
+title: '方法: 定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセス'
+ms.date: 04/10/2017
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 13454d47-d957-421b-9ecd-940058b8835e
-translationtype: Human Translation
-ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: ab419cf365b61399ea41e99c15e276584ad0db31
-
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- time zones [.NET Framework], local
+- predefined time zones
+- UTC times, predefined
+- local time zone access
+- time zones [.NET Framework], retrieving
+- time zones [.NET Framework], UTC
+ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: f074e6f6d9b11cc7d7405adced3a4523a31676fa
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086914"
 ---
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>方法: 定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセス
 
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>方法: 定義済みの UTC オブジェクトおよびローカル タイム ゾーン オブジェクトにアクセスする
+<xref:System.TimeZoneInfo>クラスは、2 つのプロパティを提供します。<xref:System.TimeZoneInfo.Utc%2A>と<xref:System.TimeZoneInfo.Local%2A>、定義済みのタイム ゾーン オブジェクトへのコード アクセス権を付与します。 このトピックでは、これらのプロパティから返される <xref:System.TimeZoneInfo> オブジェクトにアクセスする方法について説明します。
 
-[System.TimeZoneInfo](xref:System.TimeZoneInfo) クラスに用意されている 2 つのプロパティ、`Utc` および `Local` を使用すると、コードから定義済みのタイム ゾーン オブジェクトにアクセスできます。 このトピックでは、これらのプロパティから返される `TimeZoneInfo` オブジェクトにアクセスする方法について説明します。
+### <a name="to-access-the-coordinated-universal-time-utc-timezoneinfo-object"></a>世界協定時刻 (UTC) の TimeZoneInfo オブジェクトにアクセスするには
 
-## <a name="to-access-the-coordinated-universal-time-utc-timezoneinfo-object"></a>世界協定時刻 (UTC) の TimeZoneInfo オブジェクトにアクセスするには
+1. 使用して、 `static` (`Shared` Visual Basic で)<xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType>世界協定時刻にアクセスするプロパティ。
 
-1. **static** (Visual Basic では **Shared**) [TimeZoneInfo.Utc](xref:System.TimeZoneInfo.Utc) プロパティを使用して、世界協定時刻にアクセスします。
+2. 割り当てではなく、<xref:System.TimeZoneInfo>引き続きを世界協定時刻にアクセスするオブジェクトが、オブジェクト変数に、プロパティによって返される、<xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType>プロパティ。
 
-2. プロパティから返された [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトをオブジェクト変数に割り当てるのではなく、そのまま [TimeZoneInfo.Utc](xref:System.TimeZoneInfo.Utc) プロパティを使用して世界協定時刻にアクセスします。
+### <a name="to-access-the-local-time-zone"></a>ローカル タイム ゾーンにアクセスするには
 
+1. 使用して、 `static` (`Shared` Visual Basic で)<xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType>ローカル システムのタイム ゾーンにアクセスするプロパティ。
 
-## <a name="to-access-the-local-time-zone"></a>ローカル タイム ゾーンにアクセスするには
-
-1. **static** (Visual Basic では **Shared**) [TimeZoneInfo.Local](xref:System.TimeZoneInfo.Local) プロパティを使用して、ローカル タイム ゾーンにアクセスします。
-
-2. プロパティから返された [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトをオブジェクト変数に割り当てるのではなく、そのまま [TimeZoneInfo.Local](xref:System.TimeZoneInfo.Local) プロパティを使用してローカル タイム ゾーンにアクセスします。
+2. 割り当てではなく、<xref:System.TimeZoneInfo>引き続きを通じて、ローカル タイム ゾーンにアクセスするオブジェクトが、オブジェクト変数に、プロパティによって返される、<xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType>プロパティ。
 
 ## <a name="example"></a>例
 
-次のコードでは、[TimeZoneInfo.Local](xref:System.TimeZoneInfo.Local) プロパティと [TimeZoneInfo.Utc](xref:System.TimeZoneInfo.Utc) プロパティを使用して、米国およびカナダ東部標準時タイム ゾーンの時刻を変換し、コンソールにタイム ゾーンの名前を表示します。
+次のコードでは、<xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType>と<xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType>米国およびカナダ東部標準時ゾーンの時刻を変換するだけでなく、タイム ゾーン名をコンソールに表示するプロパティ。
 
-```csharp
-// Create Eastern Standard Time value and TimeZoneInfo object      
-DateTime estTime = new DateTime(2007, 1, 1, 00, 00, 00);
-string timeZoneName = "Eastern Standard Time";
-try
-{
-   TimeZoneInfo est = TimeZoneInfo.FindSystemTimeZoneById(timeZoneName);
+[!code-csharp[System.TimeZone2.Concepts#13](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#13)]
+[!code-vb[System.TimeZone2.Concepts#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#13)]
 
-   // Convert EST to local time
-   DateTime localTime = TimeZoneInfo.ConvertTime(estTime, est, TimeZoneInfo.Local);
-   Console.WriteLine("At {0} {1}, the local time is {2} {3}.", 
-           estTime, 
-           est, 
-           localTime, 
-           TimeZoneInfo.Local.IsDaylightSavingTime(localTime) ?
-                     TimeZoneInfo.Local.DaylightName : 
-                     TimeZoneInfo.Local.StandardName);
+使用してローカル タイム ゾーンを常にアクセスする必要があります、<xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType>にゾーンのローカル時刻を割り当てるのではなく、プロパティ、<xref:System.TimeZoneInfo>オブジェクト変数です。 同様に、アクセスするには常に協定世界時で、<xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType>にゾーンの UTC を割り当てるのではなく、プロパティ、<xref:System.TimeZoneInfo>オブジェクト変数です。 これにより、<xref:System.TimeZoneInfo>オブジェクト変数への呼び出しによって無効になることから、<xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType>メソッド。
 
-   // Convert EST to UTC
-   DateTime utcTime = TimeZoneInfo.ConvertTime(estTime, est, TimeZoneInfo.Utc);
-   Console.WriteLine("At {0} {1}, the time is {2} {3}.", 
-           estTime, 
-           est, 
-           utcTime, 
-           TimeZoneInfo.Utc.StandardName);
-}
-catch (TimeZoneNotFoundException)
-{
-   Console.WriteLine("The {0} zone cannot be found in the registry.", 
-                     timeZoneName);
-}
-catch (InvalidTimeZoneException)
-{
-   Console.WriteLine("The registry contains invalid data for the {0} zone.", 
-                     timeZoneName);
-}
-```
+## <a name="compiling-the-code"></a>コードのコンパイル
 
-```vb
-' Create Eastern Standard Time value and TimeZoneInfo object      
-Dim estTime As Date = #01/01/2007 00:00:00#
-Dim timeZoneName As String = "Eastern Standard Time"
-Try
-   Dim est As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById(timeZoneName)
+この例で必要な要素は次のとおりです。
 
-   ' Convert EST to local time
-   Dim localTime As Date = TimeZoneInfo.ConvertTime(estTime, est, TimeZoneInfo.Local)
-   Console.WriteLine("At {0} {1}, the local time is {2} {3}.", _
-           estTime, _
-           est, _
-           localTime, _
-           IIf(TimeZoneInfo.Local.IsDaylightSavingTime(localTime), _
-               TimeZoneInfo.Local.DaylightName, _
-               TimeZoneInfo.Local.StandardName))
+* System.Core.dll への参照をプロジェクトに追加します。
 
-   ' Convert EST to UTC
-   Dim utcTime As Date = TimeZoneInfo.ConvertTime(estTime, est, TimeZoneInfo.Utc)
-   Console.WriteLine("At {0} {1}, the time is {2} {3}.", _
-           estTime, _
-           est, _
-           utcTime, _
-           TimeZoneInfo.Utc.StandardName)
-Catch e As TimeZoneNotFoundException
-   Console.WriteLine("The {0} zone cannot be found in the registry.", _
-                     timeZoneName)
-Catch e As InvalidTimeZoneException
-   Console.WriteLine("The registry contains invalid data for the {0} zone.", _
-                     timeZoneName)
-End Try
-```
-
-ローカル タイム ゾーンにアクセスする場合は、ローカル タイム ゾーンを [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクト変数に割り当てることはせず、常に [TimeZoneInfo.Local](xref:System.TimeZoneInfo.Local) プロパティを使用してください。 同様に、世界協定時刻にアクセスする場合は、UTC ゾーンを [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクト変数に割り当てることはせず、常に [TimeZoneInfo.Utc](xref:System.TimeZoneInfo.Utc) プロパティを使用してください。 これにより、[TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクト変数が外部メソッドによって無効になるのを防ぐことができます。
-
+* <xref:System>と共に名前空間をインポートする、`using`ステートメント (c# コードで必要)。
 
 ## <a name="see-also"></a>関連項目
 
-[日付、時刻およびタイム ゾーン](index.md)
-
-[ローカル システムで定義されているタイム ゾーンの検索](finding-the-time-zones-on-local-system.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-
+* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+* [ローカル システムで定義されているタイム ゾーンの検索](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+* [方法: TimeZoneInfo オブジェクトをインスタンス化する](../../../docs/standard/datetime/instantiate-time-zone-info.md)

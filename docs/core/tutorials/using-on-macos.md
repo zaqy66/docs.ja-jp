@@ -1,113 +1,88 @@
 ---
-title: "macOS での .NET Core の概要"
-description: "Visual Studio Code を使用した macOS での .NET Core の概要"
-keywords: .NET, .NET Core
+title: macOS での .NET Core の概要
+description: このドキュメントでは、Visual Studio Code を使用して .NET Core ソリューションを作成する手順とワークフローを説明します。
 author: bleroy
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
-ms.devlang: dotnet
-ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-translationtype: Human Translation
-ms.sourcegitcommit: 7ac95fa4b2aac81b2e8d33cedf2faf36a0bbf210
-ms.openlocfilehash: 33d87c3236e5f592cd59eab77df1059ac089b88c
-
+ms.date: 03/23/2017
+ms.openlocfilehash: 5a4b2734137f59b29535f302dd17fb94329d676f
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245591"
 ---
+# <a name="getting-started-with-net-core-on-macos"></a>macOS での .NET Core の概要
 
-# <a name="getting-started-with-net-core-on-macos-using-visual-studio-code"></a>Visual Studio Code を使用した macOS での .NET Core の概要
+このドキュメントでは、macOS 用の .NET Core ソリューションを作成する手順とワークフローを説明します。 プロジェクトと単体テストを作成し、デバッグ ツールを使用して、[NuGet](https://www.nuget.org/) からサードパーティ製ライブラリを組み込む方法について説明します。
 
-著者: [Bertrand Le Roy](https://github.com/bleroy)、[Phillip Carter](https://github.com/cartermp)、[Bill Wagner](https://github.com/billwagner)
-
-協力: [Toni Solarin-Sodara](https://github.com/tsolarin)
-
-このドキュメントでは、[Visual Studio Code](http://code.visualstudio.com) を使用して .NET Core ソリューションを作成する手順とワークフローを説明します。
-プロジェクトを作成し、単体テストを作成し、デバッグ ツールを使用し、[NuGet](http://nuget.org) からサードパーティ製ライブラリを組み込む方法について説明します。
-
-この記事では、Mac OS で Visual Studio Code を使用します。 Windows プラットフォームと違う場合は指摘します。
+> [!NOTE]
+> この記事では、macOS で [Visual Studio Code](http://code.visualstudio.com) を使用します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-始める前に、現在はプレビュー リリースである [.NET Core SDK](https://www.microsoft.com/net/core) をインストールする必要があります。 .NET Core SDK には、.NET Core のフレームワークとランタイムの最新リリースが含まれています。
+[.NET Core SDK](https://www.microsoft.com/net/core) のインストール。 .NET Core SDK には、.NET Core のフレームワークとランタイムの最新リリースが含まれています。
 
-[Visual Studio Code](http://code.visualstudio.com) のインストールも必要です。
-この記事の中では、.NET Core の開発エクスペリエンスが向上する拡張機能もインストールします。
+[Visual Studio Code](http://code.visualstudio.com) のインストール。 この記事の中では、.NET Core の開発エクスペリエンスが向上する Visual Studio Code 拡張機能もインストールします。
 
-これらへのリンクはすべて、[.NET のホーム ページ](http://dot.net)にあります。
+Visual Studio Code C# 拡張機能をインストールするには、Visual Studio Code を開き、<kbd>F1</kbd> を押して Visual Studio Code パレットを開きます。 「**ext install**」と入力して、拡張機能の一覧を表示します。 C# 拡張機能を選択します。 Visual Studio Code を再起動して、拡張機能をアクティブにします。 詳細については、[Visual Studio Code C# 拡張機能のドキュメント](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)を参照してください。
 
 ## <a name="getting-started"></a>作業の開始
 
-このチュートリアルのソースは、[GitHub](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden) で提供されています。
+このチュートリアルでは 3 つのプロジェクト (ライブラリ プロジェクト、そのライブラリ プロジェクトのテスト、およびライブラリを使用するコンソール アプリケーション) を作成します。 GitHub の dotnet/samples レポジトリで、このトピックの[ソースを表示またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)することができます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
-Visual Studio Code を開始します。 Ctrl + \` (逆引用符) キーを押して、VS Code で埋め込みターミナルを開きます (または、その方がよければ別のターミナル ウィンドウを使うこともできます)。
+Visual Studio Code を開始します。 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (バッククォートまたはアクサン グラーブ) キーを押すか、メニューから **[表示]、[統合ターミナル]** の順に選択し、Visual Studio Code で埋め込みターミナルを開きます。 Visual Studio Code の外部で作業を行う場合は、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (Ma または Linux の場合は **[ターミナルで開く]**) を使用して外部シェルを開くこともできます。
 
-このガイドでは 3 つのプロジェクトを作成します。ライブラリ プロジェクト、そのライブラリ プロジェクトのテスト、ライブラリを使用するコンソール アプリケーションです。 これら 3 つのプロジェクトには標準的なフォルダー構造を使用します。 この標準フォルダー構造に従うことで、.NET Core SDK のツールは、運用コード プロジェクトとテスト コード プロジェクトの間の関係を理解できます。 これにより、開発環境の生産性が向上します。
+1 つ以上の .NET Core プロジェクトのコンテナーとして機能する、ソリューション ファイルの作成を開始します。 ターミナルで、*golden* フォルダーを作成し、そのフォルダーを開きます。 このフォルダーはソリューションのルートです。 以下のように、[`dotnet new`](../tools/dotnet-new.md) コマンドを実行して新しいソリューション *golden.sln* を作成します。
 
-最初にこれらのフォルダーを作成します。 ターミナルで、"golden" ディレクトリを作成します。 そのディレクトリの下に、`src` ディレクトリと `test` ディレクトリを作成します。 `src` の下に、`app` ディレクトリと `library` ディレクトリを作成します。 `test` に、`test-library` ディレクトリを作成します。 これは、VS Code のターミナルを使用して、または VS Code で親フォルダーをクリックして [新しいフォルダー] アイコンをクリックすることにより、行うことができます。
-
-VS Code で、"golden" ディレクトリを開きます。 このディレクトリはソリューションのルートです。
-
-次に、ソリューションのルート ディレクトリに `global.json` ファイルを作成します。
-`global.json` の内容は次のとおりです。
-
-```json
-{
-    "projects": [
-        "src",
-        "test"
-    ]
-}
+```console
+dotnet new sln
 ```
 
-この時点で、ディレクトリ ツリーは次のようになります。
+*golden* フォルダーから以下のコマンドを実行して、ライブラリ プロジェクトを作成します。*library* フォルダーには、*library.csproj* と *Class1.cs* という 2 つのファイルが生成されます。
 
-
-```
-/golden
-|__global.json
-|__/src
-   |__/app
-   |__/library
-|__/test
-   |__/test-library
+```console
+dotnet new classlib -o library
 ```
 
-### <a name="writing-the-library"></a>ライブラリの作成
+以下のように、[`dotnet sln`](../tools/dotnet-sln.md) コマンドを実行し、新しく作成された *library.csproj* プロジェクトをソリューションに追加します。
 
-次にライブラリを作成します。 ターミナル ウィンドウ (VS Code の埋め込みターミナルまたは別のターミナル) で、ディレクトリを `golden/src/library` に移動し、`dotnet new -t lib` コマンドを入力します。
-2 つのファイル `project.json` と `Library.cs` を含むライブラリ プロジェクトが作成されます。
-
-`project.json`には次の情報が含まれます。
-
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable"
-  },
-  "dependencies": {},
-  "frameworks": {
-    "netstandard1.6": {
-      "dependencies": {
-        "NETStandard.Library": "1.6.0"
-      }
-    }
-  }
-}
+```console
+dotnet sln add library/library.csproj
 ```
 
+*library.csproj* ファイルには、次の情報が含まれています。
 
-このライブラリ プロジェクトはオブジェクトの JSON 表現を使用するので、`Newtonsoft.Json` NuGet パッケージへの参照を追加します。 `project.json` に、パッケージの最新プレリリース バージョンを依存関係として追加します。
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-```json
-"dependencies": {
-    "Newtonsoft.Json": "9.0.1-beta1"
-},
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+
+</Project>
 ```
 
-これらの依存関係の追加が完了した後、ワークスペースにこれらのパッケージをインストールする必要があります。 `dotnet restore` コマンドを実行してすべての依存関係を更新し、`project.lock.json` ファイルをプロジェクト ディレクトリに書き込みます。 このファイルには、プロジェクト内のすべての依存関係の完全な依存関係ツリーが含まれています。 このファイルを読む必要はありません。.NET Core SDK のツールによって使用されます。
+このライブラリ メソッドでは、JSON 形式でオブジェクトのシリアル化と逆シリアル化を行います。 JSON のシリアル化および逆シリアル化をサポートするには、`Newtonsoft.Json` NuGet パッケージへの参照を追加します。 `dotnet add` コマンドにより、新しい項目がプロジェクトに追加されます。 NuGet パッケージへの参照を追加するには、[`dotnet add package`](../tools/dotnet-add-package.md) コマンドを使用して、パッケージの名前を指定します。
 
-次に、C# のコードを更新します。 パブリック メソッドを 1 つ含む `Thing` クラスを作成します。 このメソッドは 2 つの数値の合計を返しますが、そのためには、値を JSON 文字列に変換した後、それを逆シリアル化します。 ファイルの名前を `Library.cs` から `Thing.cs` に変更します。 次に、既存のコード (テンプレートによって生成された Class1) を次のように置き換えます。
+```console
+dotnet add library package Newtonsoft.Json
+```
+
+これにより、`Newtonsoft.Json` とその依存関係がライブラリ プロジェクトに追加されます。 あるいは、*library.csproj* ファイルを手動で編集し、次のノードを追加します。
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
+</ItemGroup>
+```
+
+[`dotnet restore`](../tools/dotnet-restore.md) を実行します ([注記参照](#dotnet-restore-note))。これにより、依存関係が復元され、*project.assets.json* ファイルなどの 3 つのファイルを含む *obj* フォルダーが *library* 内に作成されます。
+
+```console
+dotnet restore
+```
+
+*library* フォルダーで、ファイル *Class1.cs* の名前を *Thing.cs* に変更します。 このコードを次のコードを使って置き換えます。
 
 ```csharp
 using static Newtonsoft.Json.JsonConvert;
@@ -122,32 +97,43 @@ namespace Library
 }
 ```
 
-このコードでは、静的な using、式本体のメンバー、補間文字列など、C# の最新の機能を利用しています。これらについては、[C# の詳細](../../csharp/index.md)に関するセクションを参照してください。
+`Thing` クラスには、`Get` という 1 つのパブリック メソッドが含まれます。このメソッドは 2 つの数値の合計を返しますが、そのためには合計値を文字列に変換した後、それを整数に逆シリアル化します。 このコードでは、[`using static` ディレクティブ](../../csharp/language-reference/keywords/using-static.md)、[式本体のメンバー](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members)、および[文字列補間](../../csharp/language-reference/tokens/interpolated.md)など、C# の最新の機能をいくつか利用しています。
 
-コードを更新したので、`dotnet build` を使用してライブラリをビルドできます。
+[`dotnet build`](../tools/dotnet-build.md) コマンドを使用して、ライブラリをビルドします。 これにより、*golden/library/bin/Debug/netstandard1.4* に *library.dll* ファイルが生成されます。
 
-ビルドされた `library.dll` ファイルは `golden/src/library/bin/Debug/netstandard1.6` にあります。
-
-### <a name="writing-the-test-project"></a>テスト プロジェクトの作成
-
-ビルドしたライブラリのテスト プロジェクトを作成します。 `test/test-library` ディレクトリに移動します。 `dotnet new -t xunittest` を実行して新しいテスト プロジェクトを作成します。 
-
-前の手順で作成したライブラリの依存関係ノードを追加する必要があります。 `project.json` を開き、dependencies セクションを次のように更新します (最後の `library` ノードも含みます)。
-
-```json
-"dependencies": {
-  "System.Runtime.Serialization.Primitives": "4.1.1",
-  "xunit": "2.1.0",
-  "dotnet-test-xunit": "1.0.0-rc2-192208-24",
-  "library": {
-    "target": "project"
-  }
-}
+```console
+dotnet build
 ```
 
-`library` ノードでは、この依存関係を現在のワークスペースのプロジェクトに解決する必要があることが指定されています。 これを明示的に指定しないと、同じ名前の NuGet パッケージに対してテスト プロジェクトがビルドされる可能性があります。
+## <a name="create-the-test-project"></a>テスト プロジェクトの作成
 
-依存関係を正しく構成したので、ライブラリのテストを作成します。 `Tests.cs` を開き、内容を次のコードに置き換えます。
+ライブラリのテスト プロジェクトをビルドします。 *golden* フォルダーから、次のようにして新しいテスト プロジェクトを作成します。
+
+```console
+dotnet new xunit -o test-library
+```
+
+次のようにしてテスト プロジェクトをソリューションに追加します。
+
+```console
+dotnet sln add test-library/test-library.csproj
+```
+
+コンパイラがライブラリ プロジェクトを見つけて使用できるように、前のセクションで作成したライブラリにプロジェクト参照を追加します。 次の [`dotnet add reference`](../tools/dotnet-add-reference.md) コマンドを使用します。
+
+```console
+dotnet add test-library/test-library.csproj reference library/library.csproj
+```
+
+あるいは、*test-library.csproj* ファイルを手動で編集し、次のノードを追加します。
+
+```xml
+<ItemGroup>
+  <ProjectReference Include="..\library\library.csproj" />
+</ItemGroup>
+```
+
+これで依存関係が正しく構成されました。次は、ライブラリのテストを作成します。 *UnitTest1.cs* を開き、内容を次のコードに置き換えます。
 
 ```csharp
 using Library;
@@ -159,94 +145,79 @@ namespace TestApp
     {
         [Fact]
         public void TestThing() {
-            Assert.Equal(42, new Thing().Get(19, 23));
+            Assert.NotEqual(42, new Thing().Get(19, 23));
         }
     }
 }
 ```
 
-次に、`dotnet restore`、`dotnet build`、`dotnet test` を実行します。
-XUnit コンソールのテスト ランナーは、1 つのテストを実行して合格したことをレポートします。 
+最初に失敗する単体テスト (`Assert.NotEqual`) を作成する場合、値 42 は 19+23 (つまり、42) と等しくないことをアサートすることに注意してください。 単体テストのビルドにおける重要な手順は、最初に一度失敗するテストを作成して、そのロジックを確認することです。
 
-### <a name="writing-the-console-app"></a>コンソール アプリの作成
+*golden* フォルダーから、次のコマンドを実行します。
 
-ターミナルで、`golden/src/app` ディレクトリに移動します。 `dotnet new` を実行して新しいコンソール アプリケーションを作成します。
-
-コンソール アプリケーションは、前の手順でビルドしてテストしたライブラリに依存します。 `project.json` を編集してこの依存関係を追加することにより、そのことを示す必要があります。  `dependencies` ノードで、次のように `library` ノードを追加します。
-
-```json
-"dependencies": {
-  "library": {
-    "target": "project"
-  }
-}
+```console
+dotnet restore 
+dotnet test test-library/test-library.csproj
 ```
 
-テスト ライブラリのときと同じように、ここでも `project` ノードが重要です。 これが現在のソリューションのプロジェクトであり、NuGet パッケージのプロジェクトではないことを示します。
+これらのコマンドは、再帰的にすべてのプロジェクトを検出し、依存関係を復元してビルドし、xUnit テスト ランナーをアクティブにしてテストを実行します。 予期したとおり、1 つのテストに失敗します。
 
-`dotnet restore` を実行してすべての依存関係を復元します。 `program.cs` を開き、`Main` メソッドの内容を次の行に置き換えます。
+*UnitTest1.cs* ファイルを編集し、アサーションを `Assert.NotEqual` から `Assert.Equal` に変更します。 *golden* フォルダーから次のコマンドを実行し、テストを再実行します。今回は成功します。
+
+```console
+dotnet test test-library/test-library.csproj
+```
+
+## <a name="create-the-console-app"></a>コンソール アプリの作成
+
+次の手順で作成するコンソール アプリは、前の手順で作成したライブラリ プロジェクトに対する依存関係を認識し、実行時にそのライブラリ メソッドを呼び出します。 この開発パターンを使用して、複数のプロジェクトで再利用可能なライブラリの作成方法を確認します。
+
+次のように、*golden* フォルダーから新しいコンソール アプリケーションを作成します。
+
+```console
+dotnet new console -o app
+```
+
+次のように、コンソール アプリ プロジェクトをソリューションに追加します。
+
+```console
+dotnet sln add app/app.csproj
+```
+
+次のように `dotnet add reference` コマンドを実行して、ライブラリに対する依存関係を作成します。
+
+```console
+dotnet add app/app.csproj reference library/library.csproj
+```
+
+`dotnet restore` を実行し、ソリューションの 3 つのプロジェクトの依存関係を復元します ([注記参照](#dotnet-restore-note))。 *Program.cs* を開き、`Main` メソッドの内容を次の行に置き換えます。
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");
 ```
 
-2 つの `using` ディレクティブをファイルの先頭に追加する必要があります。
+次のように、2 つの `using` ディレクティブを *Program.cs* ファイルの先頭に追加します。
 
 ```csharp
 using static System.Console;
 using Library;
 ```
 
-その後、`dotnet build` を実行します。 アセンブリが作成されるので、「`dotnet run`」と入力して実行可能ファイルを実行できます。
+次の `dotnet run` コマンドを実行して、実行可能ファイルを実行します。`dotnet run` の `-p` オプションは、メイン アプリケーションのプロジェクトを指定します。 アプリは "The answer is 42" という文字列を生成します。
 
-### <a name="debugging-your-application"></a>アプリケーションのデバッグ
-
-C# の拡張機能を使用して VS Code でコードをデバッグできます。
-この拡張機能をインストールするには、`F1` キーを押して VS Code パレットを開きます。 「`ext install`」と入力して、拡張機能の一覧を表示します。 C# 拡張機能を選択します。 詳細については、[Visual Studio Code C# 拡張機能のドキュメント](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)を参照してください。
-
-拡張機能をインストールした後、VS Code でアプリケーションを再起動して新しい拡張機能を読み込むように求められます。 拡張機能のインストールが済むと、デバッガー タブを開くことができます (図を参照)。
-
-![VS Code のデバッガー](./media/using-on-macos/vscodedebugger.png)
-
-
-デバッガーを起動すると、デバッガーを構成するように指示されます。 構成を行うと、`.vscode` ディレクトリと 2 つのファイル `tasks.json` および `launch.json` が作成されます。 これら 2 つのファイルはデバッガーの構成を制御します。 ほとんどのプロジェクトでは、このディレクトリはソース管理に含まれません。
-このチュートリアルに関連付けられているサンプルに含まれるので、必要な編集を確認できます。
-
-ソリューションには複数のプロジェクトが含まれているので、正しいコマンドを実行するには各ファイルを変更する必要があります。 最初に、`tasks.json` を開きます。 既定のビルド タスクは、ワークスペースのソース ディレクトリの `dotnet build` を実行します。 代わりに、`src/app` ディレクトリのものを実行する必要があります。 `options` ノードを追加し、現在の作業ディレクトリをそれに設定します。
-
-```json
-"options": {
-    "cwd": "${workspaceRoot}/src/app"
-}
+```console
+dotnet run -p app/app.csproj
 ```
 
-次に、`launch.json` を開き、プログラムのパスを更新します。 "configurations" の下にプログラムを記述しているノードがあります。 次のように表示されます。
+## <a name="debug-the-application"></a>アプリケーションのデバッグ
 
-```json
-"program": "${workspaceRoot}/bin/Debug/<target-framework>/<project-name.dll>",
-```
+`Main` メソッドの `WriteLine` ステートメントにブレークポイントを設定します。 そのためには、カーソルが `WriteLine` 行にある状態で <kbd>F9</kbd> キーを押すか、ブレークポイントを設定する行の左余白でマウスをクリックします。 コード行の横の余白に赤い丸が表示されます。 ブレークポイントに達した場合、ブレークポイント行が実行される*前*にコードの実行が停止します。
 
-これを次のように変更します。
+Visual Studio Code ツール バーでデバッグ アイコンを選択するか、メニュー バーから **[表示]、[デバッグ]** の順に選択するか、あるいはキーボード ショートカットの <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> を使用して、デバッガー タブを開きます。
 
-```json
-"program": "${workspaceRoot}/src/app/bin/Debug/netcoreapp1.0/app.dll",
-```
+![Visual Studio Code デバッガー](./media/using-on-macos/vscodedebugger.png)
 
-Windows で実行している場合は、アプリケーションの `project.json` (`src/app` ディレクトリにあります) を更新し、ポータブル PDB ファイルを生成する必要があります (Mac OSX と Linux では既定でこのようになります)。
-`buildOptions` に `debugType` ノードを追加します。 `src/app` フォルダーと `src/library` フォルダー両方の `project.json` に `debugType` ノードを追加します。
+[再生] ボタンを押して、デバッガーでアプリケーションを開始します。 アプリは実行を開始し、ブレークポイントに達した時点で停止します。 `Get` メソッドにステップ インし、正しい引数を渡したことを確認します。 答えが 42 であることを確認してください。
 
-```json
-  "buildOptions": {
-    "debugType": "portable"
-  },
-```
-
-`Main` の `WriteLine` ステートメントにブレークポイントを設定します。 そのためには、`F9` キーを押すか、ブレークポイントを設定する行の左側の余白をクリックします。 VS Code 画面左側のデバッグ アイコンをクリックしてデバッガーを開きます (図を参照)。 その後、[再生] ボタンをクリックしてデバッガーでアプリケーションを開始します。
-
-ブレークポイントがヒットします。 `Get` メソッドにステップ インし、正しい引数を渡したことを確認します。 答えが実際に 42 であることを確認してください。
-
-
-
-<!--HONumber=Jan17_HO3-->
-
-
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

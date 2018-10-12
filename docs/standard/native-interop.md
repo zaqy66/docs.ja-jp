@@ -1,29 +1,26 @@
 ---
-title: "ネイティブ相互運用性"
-description: "ネイティブ相互運用性"
-keywords: .NET, .NET Core
+title: ネイティブ相互運用性
+description: .Net のネイティブ コンポーネントとやり取りする方法を説明します。
 author: blackdwarf
 ms.author: ronpet
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-translationtype: Human Translation
-ms.sourcegitcommit: 3aeaba5c8cf800c652941b5e6c2bc9f072849893
-ms.openlocfilehash: 36041eda54290484741c375ae776b7bf1a74d7a1
-
+ms.openlocfilehash: 7da86cfe483a2355c53206f4c491fbd07e4c3046
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591925"
 ---
-
 # <a name="native-interoperability"></a>ネイティブ相互運用性
 
-このドキュメントでは、.NET プラットフォームで使用可能な "ネイティブ相互運用性" を実行する 3 つのすべての方法についてもう少し深く掘り下げます。
+このドキュメントでは、.NET で使用可能な "ネイティブ相互運用性" を実行する 3 つのすべての方法についてもう少し深く掘り下げます。
 
 ネイティブ コードを呼び出す理由はいくつかあります。
 
 *   オペレーティング システムには、マネージ クラス ライブラリに存在しない大量の API が付属しています。 この主な例には、ハードウェアまたはオペレーティング システム管理機能へのアクセスがあります。
-*   C スタイル ABI (ネイティブ ABI) があるか、または生成できるその他のコンポーネントと通信します。 これはたとえば、[Java ネイティブ インターフェイス (JNI)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) によって公開されている Java コードまたはネイティブ コンポーネントを生成できる他のマネージ言語を対象とします。
+*   C スタイル ABI (ネイティブ ABI) があるか、または生成できるその他のコンポーネントと通信します。 これはたとえば、[Java ネイティブ インターフェイス (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) によって公開されている Java コードまたはネイティブ コンポーネントを生成できる他のマネージ言語を対象とします。
 *   Windows では、Microsoft Office スイートなどのインストールされるソフトウェアのほとんどが、それらのプログラムを表し、開発者が自動化したり、使用したりできる COM コンポーネントを登録します。 これも、ネイティブ相互運用性を必要とします。
 
 もちろん、上の一覧は、開発者がネイティブ コンポーネントとやり取りしたいと考える、またはその必要があるすべての可能性のある状況やシナリオを取り上げていません。 たとえば、.NET クラス ライブラリは、ネイティブ相互運用性サポートを使用して、コンソールのサポートと操作、ファイル システムのアクセスなど、そのかなりの数の API を実装しています。 ただし、それを必要とする場合に、オプションがあることに注意することが重要です。
@@ -37,7 +34,7 @@ P/invoke は、アンマネージ ライブラリ内の構造体、コールバ�
 
 最も一般的な例から始めましょう。これはマネージ コードでアンマネージ関数を呼び出します。 コマンドライン アプリケーションからメッセージ ボックスを表示してみましょう。
 
-```cs
+```csharp
 using System.Runtime.InteropServices;
 
 public class Program {
@@ -52,7 +49,6 @@ public class Program {
         MessageBox(IntPtr.Zero, "Command-line message box", "Attention!", 0);
     }
 }
-
 ```
 
 上の例はとても簡単ですが、マネージ コードからアンマネージ関数を呼び出すために必要なことを示しています。 この例の手順を説明します。
@@ -65,14 +61,14 @@ public class Program {
 
 サンプルは、macOS の場合も似ています。 変更する必要がある唯一の点が、当然ながら、`DllImport` 属性内のライブラリの名前です。macOS のダイナミック ライブラリの名前付けのスキームが異なるからです。 下のサンプルでは、`getpid(2)` 関数を使用して、アプリケーションのプロセス ID を取得し、それをコンソールに出力しています。
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libSystem shared library and define the method corresponding to the native function.
         [DllImport("libSystem.dylib")]
         private static extern int getpid();
 
@@ -83,19 +79,18 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
-これはもちろん Linux でも似ています。 `getpid(2)` は [POSIX](https://en.wikipedia.org/wiki/POSIX) システム コールであるため、関数名が同じです。
+これは Linux でも同様です。 `getpid(2)` は標準的な [POSIX](https://en.wikipedia.org/wiki/POSIX) システム コールであるため、関数名が同じです。
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libc shared library and define the method corresponding to the native function.
         [DllImport("libc.so.6")]
         private static extern int getpid();
 
@@ -106,7 +101,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 ### <a name="invoking-managed-code-from-unmanaged-code"></a>アンマネージ コードからのマネージ コードの呼び出し
@@ -115,7 +109,7 @@ namespace PInvokeSamples {
 
 この機能を使用する方法は、先述のマネージからネイティブへのプロセスに似ています。 指定されたコールバックに対し、ユーザーがシグネチャと一致するデリゲートを定義し、それを外部メソッドに渡します。 ランタイムは、他のすべてのことを処理します。
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -129,7 +123,7 @@ namespace ConsoleApplication1 {
         // Import user32.dll (containing the function we need) and define
         // the method corresponding to the native function.
         [DllImport("user32.dll")]
-        static extern int EnumWindows(EnumWC hWnd, IntPtr lParam);
+        static extern int EnumWindows(EnumWC lpEnumFunc, IntPtr lParam);
 
         // Define the implementation of the delegate; here, we simply output the window handle.
         static bool OutputWindow(IntPtr hwnd, IntPtr lParam) {
@@ -143,7 +137,6 @@ namespace ConsoleApplication1 {
         }
     }
 }
-
 ```
 
 例の手順に従う前に、使用する必要があるアンマネージ関数のシグネチャについて見直しておくのはよいことです。 すべてのウィンドウを列挙するために呼び出す関数は、次のシグネチャを持ちます。`BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
@@ -159,7 +152,7 @@ namespace ConsoleApplication1 {
 
 Linux と macOS の例を、以下に示します。 それらの場合、`libc` C ライブラリに見つかる `ftw` 関数を使用します。 この関数は、ディレクトリ階層をスキャンするために使用し、そのパラメーターの 1 つとして、関数へのポインターを受け取ります。 上記のメソッドのシグネチャは次のとおりです。`int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -207,12 +200,11 @@ namespace PInvokeSamples {
             public long TimeLastStatusChange;
     }
 }
-
 ```
 
 macOS の例では、同じ関数を使用していますが、唯一の違いは `DllImport` 属性への引数です。macOS は `libc` を別の場所で保持しているためです。
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -260,7 +252,6 @@ namespace PInvokeSamples {
                 public long TimeLastStatusChange;
         }
 }
-
 ```
 
 上記の例のどちらも、パラメーターに依存し、どちらの場合もパラメーターは、マネージ型として指定されています。 ランタイムは、"正しいこと" を実行し、これらを他方の側で同等のものに処理します。 このプロセスでは、高品質なネイティブ相互運用コードを記述することがきわめて重要であるため、ランタイムが型を_マーシャリング_する際に何が起こるかを見てみましょう。
@@ -269,19 +260,18 @@ namespace PInvokeSamples {
 
 **マーシャ リング**はマネージの境界を越えてネイティブに、またはその逆の必要がある場合に、型を変換するプロセスです。
 
-マーシャリングが必要な理由は、マネージ コードとアンマネージ コード内の型が異なるためです。 マネージ コードで、たとえば、`String` があるとします。アンマネージ環境では、文字列は Unicode ("ワイド")、Unicode 以外、Null 終了、ASCII などです。既定で、P/Invoke サブシステムは既定の動作に基づいて "正しいこと" をしようと試みますが、それらについては [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx) で確認できます。 ただし、特別な制御が必要な場合、`MarshalAs` 属性を採用して、アンマネージ側で期待する型を指定します。 たとえば、文字列を NULL で終わる ANSI 文字列として送信させる場合は、次のように指定できます。
+マーシャリングが必要な理由は、マネージ コードとアンマネージ コード内の型が異なるためです。 マネージ コードで、たとえば、`String` があるとします。アンマネージ環境では、文字列は Unicode ("ワイド")、Unicode 以外、Null 終了、ASCII などです。既定で、P/Invoke サブシステムは既定の動作に基づいて "正しいこと" をしようと試みますが、それらについては [MSDN](../../docs/framework/interop/default-marshaling-behavior.md) で確認できます。 ただし、特別な制御が必要な場合、`MarshalAs` 属性を採用して、アンマネージ側で期待する型を指定します。 たとえば、文字列を NULL で終わる ANSI 文字列として送信させる場合は、次のように指定できます。
 
-```cs
-[DllImport("somenativelibrary.dll"]
-static extern int MethodA([MarshalAs(UnmanagedType.LPStr) string parameter);
-
+```csharp
+[DllImport("somenativelibrary.dll")]
+static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 ```
 
 ### <a name="marshalling-classes-and-structs"></a>クラスと構造体のマーシャリング
 
 型のマーシャリングの別の側面は、構造体をアンマネージ メソッドに渡す方法です。 たとえば、一部のアンマネージ メソッドでは、パラメーターとして構造体が必要です。 このような場合、環境のマネージ部分に対応する構造体またはクラスを作成し、それをパラメーターとして使用する必要があります。 ただし、クラスを定義するだけでは不十分で、マーシャラーに、クラス内のフィールドをアンマネージ構造体にマップする方法を指示する必要もあります。 これは、`StructLayout` 属性が関与する箇所です。
 
-```cs
+```csharp
 [DllImport("kernel32.dll")]
 static extern void GetSystemTime(SystemTime systemTime);
 
@@ -302,10 +292,9 @@ public static void Main(string[] args) {
     GetSystemTime(st);
     Console.WriteLine(st.Year);
 }
-
 ```
 
-上の例は、`GetSystemTime()` 関数を呼び出す簡単な例を示しています。 興味深い部分は 4 行目にあります。\.この属性は、他方 (アンマネージ) の側でクラスのフィールドを構造体に順番にマップする必要があることを指定します。 このことは、下に示すアンマネージ構造体に対応する必要があるため、フィールドの名前付けは重要でなく、それらの順番だけが重要であることを意味します。
+上の例は、`GetSystemTime()` 関数を呼び出す簡単な例を示しています。 興味深いビットは 4 行目にあります。 この属性は、他方 (アンマネージ) の側でクラスのフィールドを構造体に順番にマップする必要があることを指定します。 このことは、下に示すアンマネージ構造体に対応する必要があるため、フィールドの名前付けは重要でなく、それらの順番だけが重要であることを意味します。
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -318,12 +307,11 @@ typedef struct _SYSTEMTIME {
   WORD wSecond;
   WORD wMilliseconds;
 } SYSTEMTIME, *PSYSTEMTIME*;
-
 ```
 
 前の例で、これの Linux と macOS の例について既に説明しました。 下にもう一度示します。
 
-```cs
+```csharp
 [StructLayout(LayoutKind.Sequential)]
 public class StatClass {
         public uint DeviceID;
@@ -340,19 +328,12 @@ public class StatClass {
         public long TimeLastModification;
         public long TimeLastStatusChange;
 }
-
 ```
 
 `StatClass` クラスは、UNIX システムで `stat` システム コールによって返される構造体を表します。 これは、指定したファイルに関する情報を表します。 上のクラスは、マネージ コードでの stat 構造体表現です。 ここでも、クラス内のフィールドはネイティブ構造体と同じ順番である必要があり (これらについては、任意の UNIX 実装の man ページを調べて参照できます)、基になる型が同じである必要があります。
 
 ## <a name="more-resources"></a>その他のリソース
 
-*   [PInvoke.net wiki](http://www.pinvoke.net) は、一般的な Win32 API とそれらを呼び出す方法に関する情報を記載した優れた Wiki です。
+*   [PInvoke.net wiki](https://www.pinvoke.net/) は、一般的な Win32 API とそれらを呼び出す方法に関する情報を記載した優れた Wiki です。
 *   [MSDN の P/Invoke](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [P/invoke に関する Mono のドキュメント](http://www.mono-project.com/docs/advanced/pinvoke/)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-
+*   [P/invoke に関する Mono のドキュメント](https://www.mono-project.com/docs/advanced/pinvoke/)

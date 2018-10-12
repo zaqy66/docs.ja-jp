@@ -1,24 +1,21 @@
 ---
-title: "非同期の詳細"
-description: ".NET での非同期コードの動作についての詳細な説明"
-keywords: ".NET, .NET Core, .NET の標準"
+title: 非同期の詳細
+description: .NET のタスクベース非同期モデルを使用して、I/O バインドおよび CPU バインドの非同期コードを簡単に記述する方法について説明します。
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-translationtype: Human Translation
-ms.sourcegitcommit: de0dab146fc811e895dc32f98f877db5e757f82b
-ms.openlocfilehash: c8ff0f81054feddb4ee7042926c817de525034f9
-
+ms.openlocfilehash: 0c098d0697dff3e1e772c348597a84ac9d262104
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085317"
 ---
-
 # <a name="async-in-depth"></a>非同期の詳細
 
-I/O および CPU バインドの非同期コードは、.NET のタスクベース非同期モデルを使用して簡単に記述できます。 このモデルは、`Task` および `Task<T>` 型と、`async` および `await` 言語キーワードによって公開されます。 この記事では、.NET 非同期を使用する方法について説明し、背後で使用される非同期フレームワークを把握するための情報を示します。
+I/O および CPU バインドの非同期コードは、.NET のタスクベース非同期モデルを使用して簡単に記述できます。 C# と Visual Basic では、このモデルは `Task` および `Task<T>` 型と、`async` および `await` キーワードによって公開されます (言語固有のリソースについては、「[関連項目](#see-also)」セクションを参照してください)。この記事では、.NET 非同期を使用する方法について説明し、背後で使用される非同期フレームワークを把握するための情報を示します。
 
 ## <a name="task-and-tasklttgt"></a>Task と Task&lt;T&gt;
 
@@ -33,7 +30,7 @@ Task は、[Promise Model of Concurrency](https://en.wikipedia.org/wiki/Futures_
 
 `await` を使用すると、アプリケーションまたはサービスで、タスク完了まで呼び出し元に制御を渡すことによって、タスクの実行中に有用な作業を実行できます。 コードは、タスク完了後に実行を続けるために、コールバックまたはイベントに依存する必要はありません。 言語とタスクの API 統合によって処理されます。 `Task<T>` を使用する場合、`await` キーワードはさらに、タスク完了時に返された値を "ラップ解除" します。  この動作の詳細について次に詳しく説明します。
 
-タスクと、タスクを処理するさまざまな方法について詳しく知るには、[タスクベースの非同期パターン (TAP) に関する記事](https://msdn.microsoft.com/library/hh873175.aspx)を参照してください。
+タスクと、タスクを処理するさまざまな方法については、[タスクベースの非同期パターン (TAP) に関するトピック](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)を参照してください。
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>I/O バインド操作に関するタスクの詳細
 
@@ -117,7 +114,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 さらに、UI スレッドへの作業の処理依頼 (UI の更新など) は、`async` メソッドを使用すればとても簡単で、余分な作業 (スレッドセーフ デリゲートの呼び出しなど) は必要ありません。
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>CPU バインド操作の Task と Task<T> の詳細
+## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>CPU バインド操作の Task と Task&lt;T&gt; の詳細
 
 CPU バインドの `async` コードは、I/O バインドの `async` コードとは少し異なります。  作業は CPU で実行されるため、スレッドを計算専用にすることを避ける方法はありません。  `async` と `await` を使用すると、バックグラウンドのスレッドをクリーンな方法で使用でき、非同期メソッドの呼び出し元の応答性を維持できます。  これにより共有データに対する保護は提供されないことに注意してください。  共有データを使用している場合は、適切な同期戦略を適用する必要があります。
 
@@ -147,7 +144,9 @@ public async Task<int> CalculateResult(InputData data)
 
 `async`と `await` は、応答性を必要とする場合に CPU バインドの作業を管理する際のベスト プラクティスです。 CPU バインドの作業で async を使用するには、複数のパターンがあります。 async を使用すると小さいながらも負荷がかかるため、厳密なループ処理にはお勧めしません。  この新しい機能を利用してコードを記述するかどうかは、ユーザーの判断に任されます。
 
+## <a name="see-also"></a>関連項目
 
-<!--HONumber=Nov16_HO3-->
-
-
+* [C# の非同期プログラミング](~/docs/csharp/async.md)   
+* [Async および Await を使用した非同期プログラミング (C#)](../csharp/programming-guide/concepts/async/index.md)  
+* [F# の非同期プログラミング](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+* [Async および Await を使用した非同期プログラミング (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

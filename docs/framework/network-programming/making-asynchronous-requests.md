@@ -1,0 +1,340 @@
+---
+title: 非同期要求を行う
+ms.date: 03/30/2017
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Internet, asynchronous access
+- Networking
+- asynchronous requests, Internet resources
+- Network Resources
+- WebRequest class, asynchronous access
+ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
+author: mcleblanc
+ms.author: markl
+ms.openlocfilehash: 1770ba69be537ccbe1c5ec26150428a3618b21a9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47209978"
+---
+# <a name="making-asynchronous-requests"></a>非同期要求を行う
+<xref:System.Net> クラスは、インターネット リソースへの非同期アクセスに .NET Framework の標準非同期プログラミング モデルを使用します。 <xref:System.Net.WebRequest> クラスの <xref:System.Net.WebRequest.BeginGetResponse%2A> および <xref:System.Net.WebRequest.EndGetResponse%2A> メソッドは、インターネット リソースの非同期要求の開始と完了を行います。  
+  
+> [!NOTE]
+>  非同期コールバック メソッドで同期呼び出しを使用すると、パフォーマンスが大幅に低下する可能性があります。 **WebRequest** とその子孫を使用して作成されたインターネット要求で、<xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> メソッドで返されたストリームを読み取るには、<xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> を使用する必要があります。  
+  
+ 次のサンプル コードは、**WebRequest** クラスで非同期呼び出しを使用する方法の例です。 このサンプルは、コマンド ラインから URI を取得し、その URI のリソースを要求し、インターネットから受信したデータをコンソールに出力するコンソール プログラムです。  
+  
+ このプログラムでは、独自の用途がある 2 つのクラスを定義しています。非同期呼び出し全体にデータを渡す **RequestState** クラスと、インターネット リソースに対する非同期要求を実装する **ClientGetAsync** クラスです。  
+  
+ **RequestState** クラスは、要求を処理する非同期メソッドの呼び出し全体について要求の状態を保持します。 たとえば、リソースに対する現在の要求と応答で受信したストリームを含む **WebRequest** および <xref:System.IO.Stream> インスタンス、インターネット リソースから現在受信しているデータを含むバッファー、完全な応答を含む <xref:System.Text.StringBuilder> があります。 <xref:System.AsyncCallback> メソッドが **WebRequest.BeginGetResponse** に登録されている場合、**RequestState** は *state* パラメーターとして渡されます。  
+  
+ **ClientGetAsync** クラスは、インターネット リソースに対する非同期要求を実装し、結果の応答をコンソールに出力します。 次の一覧で説明するメソッドとプロパティがあります。  
+  
+-   `allDone` プロパティには、要求の完了を通知する <xref:System.Threading.ManualResetEvent> クラスのインスタンスが含まれています。  
+  
+-   `Main()` メソッドは、コマンド ラインを読み取り、指定されたインターネット リソースの要求を開始します。 **WebRequest** `wreq` および **RequestState** `rs` を作成し、**BeginGetResponse** を呼び出して要求の処理を開始し、`allDone.WaitOne()` メソッドを呼び出して、コールバックが完了するまでアプリケーションが終了しないようにします。 インターネット リソースから応答を読み取ると、`Main()` はその応答をコンソールに出力し、アプリケーションは終了します。  
+  
+-   `showusage()` メソッドは、コンソールにコマンド ライン例を出力します。 これは、コマンド ラインに URI が指定されていない場合に `Main()` から呼び出されます。  
+  
+-   `RespCallBack()` メソッドは、インターネット要求の非同期コールバック メソッドを実装します。 インターネット リソースからの応答を含む **WebResponse** インスタンスを作成し、応答ストリームを取得し、非同期にストリームからデータの読み取りを開始します。  
+  
+-   `ReadCallBack()` メソッドは、応答ストリームを読み取るための非同期コールバック メソッドを実装します。 インターネット リソースから受信したデータを **RequestState** インスタンスの **ResponseData** プロパティに転送し、データが返されなくなるまで、応答ストリームの非同期読み取りを再び開始します。 すべてのデータが読み取られたら、`ReadCallBack()` は応答ストリームを終了し、`allDone.Set()` メソッドを呼び出して、応答全体が **ResponseData** 内にあることを示します。  
+  
+    > [!NOTE]
+    >  すべてのネットワーク ストリームが終了していることが重要です。 各要求と応答ストリームが終了していない場合、アプリケーションからサーバーへの接続が不足し、追加の要求を処理できなくなります。  
+  
+```csharp  
+using System;  
+using System.Net;  
+using System.Threading;  
+using System.Text;  
+using System.IO;  
+  
+// The RequestState class passes data across async calls.  
+public class RequestState  
+{  
+   const int BufferSize = 1024;  
+   public StringBuilder RequestData;  
+   public byte[] BufferRead;  
+   public WebRequest Request;  
+   public Stream ResponseStream;  
+   // Create Decoder for appropriate enconding type.  
+   public Decoder StreamDecode = Encoding.UTF8.GetDecoder();  
+  
+   public RequestState()  
+   {  
+      BufferRead = new byte[BufferSize];  
+      RequestData = new StringBuilder(String.Empty);  
+      Request = null;  
+      ResponseStream = null;  
+   }       
+}  
+  
+// ClientGetAsync issues the async request.  
+class ClientGetAsync   
+{  
+   public static ManualResetEvent allDone = new ManualResetEvent(false);  
+   const int BUFFER_SIZE = 1024;  
+  
+   public static void Main(string[] args)   
+   {  
+      if (args.Length < 1)   
+      {  
+         showusage();  
+         return;  
+      }  
+  
+      // Get the URI from the command line.  
+      Uri httpSite = new Uri(args[0]);  
+  
+      // Create the request object.  
+      WebRequest wreq = WebRequest.Create(httpSite);  
+  
+      // Create the state object.  
+      RequestState rs = new RequestState();  
+  
+      // Put the request into the state object so it can be passed around.  
+      rs.Request = wreq;  
+  
+      // Issue the async request.  
+      IAsyncResult r = (IAsyncResult) wreq.BeginGetResponse(  
+         new AsyncCallback(RespCallback), rs);  
+  
+      // Wait until the ManualResetEvent is set so that the application   
+      // does not exit until after the callback is called.  
+      allDone.WaitOne();  
+  
+      Console.WriteLine(rs.RequestData.ToString());  
+   }  
+  
+   public static void showusage() {  
+      Console.WriteLine("Attempts to GET a URL");  
+      Console.WriteLine("\r\nUsage:");  
+      Console.WriteLine("   ClientGetAsync URL");  
+      Console.WriteLine("   Example:");  
+      Console.WriteLine("      ClientGetAsync http://www.contoso.com/");  
+   }  
+  
+   private static void RespCallback(IAsyncResult ar)  
+   {  
+      // Get the RequestState object from the async result.  
+      RequestState rs = (RequestState) ar.AsyncState;  
+  
+      // Get the WebRequest from RequestState.  
+      WebRequest req = rs.Request;  
+  
+      // Call EndGetResponse, which produces the WebResponse object  
+      //  that came from the request issued above.  
+      WebResponse resp = req.EndGetResponse(ar);           
+  
+      //  Start reading data from the response stream.  
+      Stream ResponseStream = resp.GetResponseStream();  
+  
+      // Store the response stream in RequestState to read   
+      // the stream asynchronously.  
+      rs.ResponseStream = ResponseStream;  
+  
+      //  Pass rs.BufferRead to BeginRead. Read data into rs.BufferRead  
+      IAsyncResult iarRead = ResponseStream.BeginRead(rs.BufferRead, 0,   
+         BUFFER_SIZE, new AsyncCallback(ReadCallBack), rs);   
+   }  
+  
+   private static void ReadCallBack(IAsyncResult asyncResult)  
+   {  
+      // Get the RequestState object from AsyncResult.  
+      RequestState rs = (RequestState)asyncResult.AsyncState;  
+  
+      // Retrieve the ResponseStream that was set in RespCallback.   
+      Stream responseStream = rs.ResponseStream;  
+  
+      // Read rs.BufferRead to verify that it contains data.   
+      int read = responseStream.EndRead( asyncResult );  
+      if (read > 0)  
+      {  
+         // Prepare a Char array buffer for converting to Unicode.  
+         Char[] charBuffer = new Char[BUFFER_SIZE];  
+  
+         // Convert byte stream to Char array and then to String.  
+         // len contains the number of characters converted to Unicode.  
+      int len =   
+         rs.StreamDecode.GetChars(rs.BufferRead, 0, read, charBuffer, 0);  
+  
+         String str = new String(charBuffer, 0, len);  
+  
+         // Append the recently read data to the RequestData stringbuilder  
+         // object contained in RequestState.  
+         rs.RequestData.Append(  
+            Encoding.ASCII.GetString(rs.BufferRead, 0, read));           
+  
+         // Continue reading data until   
+         // responseStream.EndRead returns –1.  
+         IAsyncResult ar = responseStream.BeginRead(   
+            rs.BufferRead, 0, BUFFER_SIZE,   
+            new AsyncCallback(ReadCallBack), rs);  
+      }  
+      else  
+      {  
+         if(rs.RequestData.Length>0)  
+         {  
+            //  Display data to the console.  
+            string strContent;                    
+            strContent = rs.RequestData.ToString();  
+         }  
+         // Close down the response stream.  
+         responseStream.Close();           
+         // Set the ManualResetEvent so the main thread can exit.  
+         allDone.Set();                             
+      }  
+      return;  
+   }      
+}  
+```  
+  
+```vb  
+Imports System  
+Imports System.Net  
+Imports System.Threading  
+Imports System.Text  
+Imports System.IO  
+  
+' The RequestState class passes data across async calls.  
+Public Class RequestState  
+  
+      Public RequestData As New StringBuilder("")  
+      Public BufferRead(1024) As Byte  
+      Public Request As HttpWebRequest  
+      Public ResponseStream As Stream  
+      ' Create Decoder for appropriate encoding type.  
+      Public StreamDecode As Decoder = Encoding.UTF8.GetDecoder()  
+  
+      Public Sub New  
+         Request = Nothing  
+         ResponseStream = Nothing  
+      End Sub  
+End Class  
+  
+' ClientGetAsync issues the async request.  
+Class ClientGetAsync  
+   Shared allDone As New ManualResetEvent(False)  
+      Const BUFFER_SIZE As Integer = 1024  
+  
+    Shared Sub Main()  
+        Dim Args As String() = Environment.GetCommandLineArgs()  
+  
+        If Args.Length < 2 Then  
+            ShowUsage()  
+            Return  
+        End If  
+  
+      ' Get the URI from the command line.  
+        Dim HttpSite As Uri = New Uri(Args(1))  
+  
+      ' Create the request object.  
+        Dim wreq As HttpWebRequest = _  
+           CType(WebRequest.Create(HttpSite), HttpWebRequest)  
+  
+      ' Create the state object.  
+      Dim rs As RequestState = New RequestState()  
+  
+      ' Put the request into the state so it can be passed around.  
+      rs.Request = wreq  
+  
+      ' Issue the async request.  
+        Dim r As IAsyncResult = _  
+           CType(wreq.BeginGetResponse( _  
+           New AsyncCallback(AddressOf RespCallback), rs), IAsyncResult)  
+  
+      ' Wait until the ManualResetEvent is set so that the application  
+      ' does not exit until after the callback is called.  
+        allDone.WaitOne()  
+    End Sub  
+  
+    Shared Sub ShowUsage()  
+        Console.WriteLine("Attempts to GET a URI")  
+        Console.WriteLine()  
+        Console.WriteLine("Usage:")  
+        Console.WriteLine("ClientGetAsync URI")  
+        Console.WriteLine("Examples:")  
+        Console.WriteLine("ClientGetAsync http://www.contoso.com/")  
+    End Sub  
+  
+    Shared Sub RespCallback(ar As IAsyncResult)  
+       ' Get the RequestState object from the async result.  
+       Dim rs As RequestState = CType(ar.AsyncState, RequestState)  
+  
+       ' Get the HttpWebRequest from RequestState.  
+       Dim req As HttpWebRequest= rs.Request  
+  
+       ' Call EndGetResponse, which returns the HttpWebResponse object  
+       ' that came from the request issued above.  
+       Dim resp As HttpWebResponse = _  
+           CType(req.EndGetResponse(ar), HttpWebResponse)  
+  
+       ' Start reading data from the respons stream.  
+       Dim ResponseStream As Stream = resp.GetResponseStream()  
+  
+       ' Store the reponse stream in RequestState to read  
+       ' the stream asynchronously.  
+       rs.ResponseStream = ResponseStream  
+  
+       ' Pass rs.BufferRead to BeginRead. Read data into rs.BufferRead.  
+       Dim iarRead As IAsyncResult = _  
+          ResponseStream.BeginRead(rs.BufferRead, 0, BUFFER_SIZE, _  
+          New AsyncCallback(AddressOf ReadCallBack), rs)  
+    End Sub  
+  
+   Shared Sub ReadCallBack(asyncResult As IAsyncResult)  
+      ' Get the RequestState object from the AsyncResult.  
+      Dim rs As RequestState = CType(asyncResult.AsyncState, RequestState)  
+  
+      ' Retrieve the ResponseStream that was set in RespCallback.  
+      Dim responseStream As Stream = rs.ResponseStream  
+  
+      ' Read rs.BufferRead to verify that it contains data.  
+      Dim read As Integer = responseStream.EndRead( asyncResult )  
+      If read > 0 Then  
+         ' Prepare a Char array buffer for converting to Unicode.  
+         Dim charBuffer(1024) As Char  
+  
+         ' Convert byte stream to Char array and then String.  
+         ' len contains the number of characters converted to Unicode.  
+         Dim len As Integer = _  
+           rs.StreamDecode.GetChars(rs.BufferRead, 0, read, charBuffer, 0)  
+         Dim str As String = new String(charBuffer, 0, len)      
+  
+         ' Append the recently read data to the RequestData stringbuilder   
+         ' object contained in RequestState.  
+         rs.RequestData.Append( _  
+            Encoding.ASCII.GetString(rs.BufferRead, 0, read))  
+  
+         ' Continue reading data until responseStream.EndRead  
+         ' returns –1.  
+         Dim ar As IAsyncResult = _  
+            responseStream.BeginRead(rs.BufferRead, 0, BUFFER_SIZE, _  
+            New AsyncCallback(AddressOf ReadCallBack), rs)  
+      Else  
+          If rs.RequestData.Length > 1 Then  
+            ' Display data to the console.  
+            Dim strContent As String  
+            strContent = rs.RequestData.ToString()  
+            Console.WriteLine(strContent)  
+         End If  
+  
+         ' Close down the response stream.  
+         responseStream.Close()  
+  
+         ' Set the ManualResetEvent so the main thread can exit.  
+         allDone.Set()  
+      End If  
+  
+      Return  
+   End Sub  
+End Class  
+```  
+  
+## <a name="see-also"></a>参照  
+ [データの要求](../../../docs/framework/network-programming/requesting-data.md)

@@ -1,0 +1,73 @@
+---
+title: '&lt;追加&gt;要素&lt;appSettings&gt;'
+ms.date: 05/01/2017
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
+helpviewer_keywords:
+- add Element
+- <add> Element
+ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
+author: guardrex
+ms.author: mairaw
+ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086324"
+---
+# <a name="add-element-for-appsettings"></a>\<追加 > 要素の\<appSettings >
+
+カスタム アプリケーション設定を追加します。
+
+[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<追加 >**
+
+## <a name="syntax"></a>構文
+
+```xml
+<appSettings>
+  <add key="Key of custom setting" value="Value of custom setting" />
+</appSettings>
+```
+
+## <a name="attributes"></a>属性
+
+|           | 説明 |
+| --------- | ----------- |
+| **key**   | 必須の属性です。<br><br>追加するキーの名前を指定します。 |
+| **値** | 必須の属性です。<br><br>追加するキーの値を指定します。 |
+
+## <a name="parent-element"></a>親要素
+
+|     | 説明 |
+| --- | ----------- |
+| [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | ファイル パス、XML Web サービス URL、またはアプリケーションのその他のカスタム構成情報など、カスタム アプリケーションの設定が含まれています。 |
+
+## <a name="child-elements"></a>子要素
+
+なし
+
+## <a name="example"></a>例
+
+次の例では、アプリケーションの名前のカスタム構成設定を追加する方法を示します。
+
+```xml
+<appSettings>
+  <add key="ApplicationName" value="MyApplication" />
+</appSettings>
+```
+
+次の例では、 `<add>` ASP.NET アプリケーションで 2 つの互換性設定を定義する要素。
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
+</appSettings>
+```
+
+## <a name="see-also"></a>関連項目
+
+[.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)

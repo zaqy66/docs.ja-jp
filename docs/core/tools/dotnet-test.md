@@ -1,137 +1,294 @@
 ---
-title: "dotnet-test コマンド | .NET Core SDK"
-description: "`dotnet test` コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。"
-keywords: "dotnet-test, CLI, CLI コマンド, .NET Core"
+title: dotnet test コマンド - .NET Core CLI
+description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 author: mairaw
-manager: wpickett
-ms.date: 10/07/2016
-ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
-ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
-translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: b12861f0ce3c40bf4db51994ea5d4a92b8ef0162
-
+ms.author: mairaw
+ms.date: 05/29/2018
+ms.openlocfilehash: 2bee78ca44026f28c51fac3bcf87d976b53e48a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390691"
 ---
+# <a name="dotnet-test"></a>dotnet test
 
-#<a name="dotnettest"></a>dotnet-test
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
-`dotnet-test`- 構成済みのテスト ランナーを使用して、単体テストを実行します。
+`dotnet test` - 単体テストを実行するために使用される .NET テスト ドライバー。
 
 ## <a name="synopsis"></a>構文
 
-`dotnet test [project] [--help] 
-    [--parentProcessId] [--port] [--configuration]   
-    [--output] [--build-base-path] [--framework] [--runtime]
-    [--no-build]`  
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+```console
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+dotnet test [-h|--help]
+```
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+```console
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+dotnet test [-h|--help]
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+```console
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
+dotnet test [-h|--help]
+```
+
+---
 
 ## <a name="description"></a>説明
 
-`dotnet test` コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。 単体テストは、単体テスト フレームワーク (NUnit や xUnit など) およびその単体テスト フレームワークの dotnet テスト ランナーに対する依存関係があるクラス ライブラリ プロジェクトです。 これらは NuGet パッケージとしてパッケージ化され、プロジェクトの通常の依存関係として復元されます。
+`dotnet test` コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。 `dotnet test` コマンドは、プロジェクト用に指定されたテスト ランナーのコンソール アプリケーションを起動します。 テスト ランナーでは、単体テスト フレームワーク (MSTest、NUnit、xUnit など) 用に定義されたテストを実行し、各テストの成功または失敗をレポートします。 テスト ランナーと単体テスト ライブラリは、NuGet パッケージとしてパッケージ化され、プロジェクトの通常の依存関係として復元されます。
 
-テスト プロジェクトでは、"testRunner" ノードを使用して project.json にテスト ランナー プロパティを指定する必要もあります。 この値には、単体テスト フレームワークの名前を含める必要があります。
+テスト プロジェクトでは、通常の `<PackageReference>` 要素を使用してテスト ランナーを指定します。次のサンプル プロジェクト ファイルのようになります。
 
-次のサンプルの project.json では必要なプロパティが示されています。
+[!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable"
-  },
-  "dependencies": {
-    "System.Runtime.Serialization.Primitives": "4.1.1",
-    "xunit": "2.1.0",
-    "dotnet-test-xunit": "1.0.0-rc2-192208-24"
-  },
-  "testRunner": "xunit",
-  "frameworks": {
-    "netcoreapp1.0": {
-      "dependencies": {
-        "Microsoft.NETCore.App": {
-          "type": "platform",
-          "version": "1.0.0"
-        }
-      },
-      "imports": [
-        "dotnet5.4",
-        "portable-net451+win8"
-      ]
-    }
-  }
-}
-```
+## <a name="arguments"></a>引数
 
-`dotnet test`では、以下の 2 つの実行モードがサポートされます。
+`PROJECT`
 
-1. コンソール: コンソール モードでは、`dotnet test` は単に渡されたコマンドを完全に実行し、結果を出力します。 --port を渡さずに `dotnet test` を呼び出すと、常にコンソール モードで実行されるため、ランナーはコンソール モードで実行されます。
-2. デザイン時: エディターや統合開発環境 (IDE) などの他のツールのコンテキストで使用されます。 このモードの詳細については、[dotnet-test プロトコル](test-protocol.md) のドキュメントを参照してください。 
+テスト プロジェクトへのパス。 指定しない場合は、既定で現在のディレクトリに設定されます。
 
 ## <a name="options"></a>オプション
 
-`[project]`
-    
-テスト プロジェクトへのパスを指定します。 省略すると、既定で現在のディレクトリに設定されます。
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-`-?|-h|--help`
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+
+テスト実行で指定されたパスからカスタムのテスト アダプターを使用します。
+
+`--blame`
+
+変更履歴モードでテストを実行します。 このオプションは、テスト ホストのクラッシュを引き起こす問題のあるテストを分離するのに役立ちます。 これは、現在のディレクトリ内に出力ファイルを *Sequence.xml* として作成します。このファイルは、クラッシュ前にテストの実行順序をキャプチャします。
+
+`-c|--configuration {Debug|Release}`
+
+ビルド構成を定義します。 既定値は `Debug` ですが、プロジェクトの構成がこの既定の SDK 設定をオーバーライドする可能性があります。
+
+`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+
+テストの実行のためのデータ コレクターを有効にします。 詳細については、[「Monitor and analyze test run」](https://aka.ms/vstest-collect) (テストの実行のモニターと分析) を参照してください。
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+テスト プラットフォームの診断モードを有効にし、指定したファイルに診断メッセージを出力します。
+
+`-f|--framework <FRAMEWORK>`
+
+特定の[フレームワーク](../../standard/frameworks.md)のテスト バイナリを検索します。
+
+`--filter <EXPRESSION>`
+
+指定された式を使用して、現在のプロジェクト内のテストを除外します。 詳細については、「[フィルター オプションの詳細](#filter-option-details)」セクションをご覧ください。 選択的単体テストのフィルター処理の使用方法に関する詳細と例については、「[選択的単体テストの実行](../testing/selective-unit-tests.md)」をご覧ください。
+
+`-h|--help`
 
 コマンドの短いヘルプを印刷します。
 
-`--parentProcessId`
+`-l|--logger <LoggerUri/FriendlyName>`
 
-IDE でプロセス ID を指定するために使用されます。 親プロセスが終了すると、テストは終了します。
+テスト結果のロガーを指定します。
 
-`--port`
+`--no-build`
 
-IDE で接続をリッスンするポートの番号を指定するために使用されます。
+実行前にテスト プロジェクトをビルドしません。 また、`--no-restore` フラグを暗黙的に設定します。
 
-`-c|--configuration <Debug|Release>`
+`--no-restore`
 
-ビルドに使用する構成です。 既定値は `Release` です。 
+コマンドを実行するときに、暗黙的な復元を実行しません。
 
-`-o|--output [OUTPUT_DIRECTORY]`
+`-o|--output <OUTPUT_DIRECTORY>`
 
 実行するバイナリを検索するディレクトリです。
 
-`-b|--build-base-path <OUTPUT_DIRECTORY>`
+`-r|--results-directory <PATH>`
 
-一時出力を配置するディレクトリ。
+テスト結果が配置されるディレクトリです。 指定されたディレクトリが存在しない場合は、作成されます。
 
-`-f|--framework [FRAMEWORK]`
+`-s|--settings <SETTINGS_FILE>`
 
-特定のフレームワークのテスト バイナリを検索します。
+テストの実行時に使用される設定です。
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-t|--list-tests`
 
-指定されたランタイムのテスト バイナリを検索します。
+現在のプロジェクトで検出されたすべてのテストを一覧表示します。
 
-`--no-build` 
+`-v|--verbosity <LEVEL>`
 
-実行の前にテスト プロジェクトをビルドしません。 
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
 
-## <a name="examples"></a>例
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+
+テスト実行で指定されたパスからカスタムのテスト アダプターを使用します。
+
+`-c|--configuration {Debug|Release}`
+
+ビルド構成を定義します。 既定値は `Debug` ですが、プロジェクトの構成がこの既定の SDK 設定をオーバーライドする可能性があります。
+
+`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+
+テストの実行のためのデータ コレクターを有効にします。 詳細については、[「Monitor and analyze test run」](https://aka.ms/vstest-collect) (テストの実行のモニターと分析) を参照してください。
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+テスト プラットフォームの診断モードを有効にし、指定したファイルに診断メッセージを出力します。
+
+`-f|--framework <FRAMEWORK>`
+
+特定の[フレームワーク](../../standard/frameworks.md)のテスト バイナリを検索します。
+
+`--filter <EXPRESSION>`
+
+指定された式を使用して、現在のプロジェクト内のテストを除外します。 詳細については、「[フィルター オプションの詳細](#filter-option-details)」セクションをご覧ください。 選択的単体テストのフィルター処理の使用方法に関する詳細と例については、「[選択的単体テストの実行](../testing/selective-unit-tests.md)」をご覧ください。
+
+`-h|--help`
+
+コマンドの短いヘルプを印刷します。
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+テスト結果のロガーを指定します。
+
+`--no-build`
+
+実行前にテスト プロジェクトをビルドしません。 また、`--no-restore` フラグを暗黙的に設定します。
+
+`--no-restore`
+
+コマンドを実行するときに、暗黙的な復元を実行しません。
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+実行するバイナリを検索するディレクトリです。
+
+`-r|--results-directory <PATH>`
+
+テスト結果が配置されるディレクトリです。 指定されたディレクトリが存在しない場合は、作成されます。
+
+`-s|--settings <SETTINGS_FILE>`
+
+テストの実行時に使用される設定です。
+
+`-t|--list-tests`
+
+現在のプロジェクトで検出されたすべてのテストを一覧表示します。
+
+`-v|--verbosity <LEVEL>`
+
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+
+テスト実行で指定されたパスからカスタムのテスト アダプターを使用します。
+
+`-c|--configuration {Debug|Release}`
+
+ビルド構成を定義します。 既定値は `Debug` ですが、プロジェクトの構成がこの既定の SDK 設定をオーバーライドする可能性があります。
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+テスト プラットフォームの診断モードを有効にし、指定したファイルに診断メッセージを出力します。
+
+`-f|--framework <FRAMEWORK>`
+
+特定の[フレームワーク](../../standard/frameworks.md)のテスト バイナリを検索します。
+
+`--filter <EXPRESSION>`
+
+指定された式を使用して、現在のプロジェクト内のテストを除外します。 詳細については、「[フィルター オプションの詳細](#filter-option-details)」セクションをご覧ください。 選択的単体テストのフィルター処理の使用方法に関する詳細と例については、「[選択的単体テストの実行](../testing/selective-unit-tests.md)」をご覧ください。
+
+`-h|--help`
+
+コマンドの短いヘルプを印刷します。
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+テスト結果のロガーを指定します。
+
+`--no-build`
+
+実行前にテスト プロジェクトをビルドしません。
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+実行するバイナリを検索するディレクトリです。
+
+`-s|--settings <SETTINGS_FILE>`
+
+テストの実行時に使用される設定です。
+
+`-t|--list-tests`
+
+現在のプロジェクトで検出されたすべてのテストを一覧表示します。
+
+`-v|--verbosity <LEVEL>`
+
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+
+---
+
+## <a name="examples"></a>使用例
 
 現在のディレクトリのプロジェクトでテストを実行します。
 
-`dotnet test` 
+`dotnet test`
 
-test1 プロジェクトでテストを実行します。
+`test1` プロジェクトでテストを実行します。
 
-`dotnet test /projects/test1/project.json` 
+`dotnet test ~/projects/test1/test1.csproj`
+
+## <a name="filter-option-details"></a>フィルター オプションの詳細
+
+`--filter <EXPRESSION>`
+
+`<Expression>` の形式は `<property><operator><value>[|&<Expression>]` です。
+
+`<property>` は `Test Case` の属性です。 よく利用される単体テスト フレームワークでサポートされるプロパティは以下の通りです。
+
+| テスト フレームワーク | サポートされるプロパティ                                                                                      |
+| -------------- | --------------------------------------------------------------------------------------------------------- |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>name</li><li>ClassName</li><li>優先度</li><li>TestCategory</li></ul> |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Traits</li></ul>                                   |
+
+`<operator>` は、プロパティと値の関係を示します。
+
+| 演算子 | 関数        |
+| :------: | --------------- |
+| `=`      | 完全一致     |
+| `!=`     | 完全一致ではない |
+| `~`      | 内容        |
+
+`<value>` は文字列です。 すべての参照で大文字と小文字が区別されます。
+
+`<operator>` を含まない式は、自動的に `FullyQualifiedName` プロパティの `contains` とみなされます (たとえば、`dotnet test --filter xyz` は `dotnet test --filter FullyQualifiedName~xyz` と同じです)。
+
+式は条件演算子を使用して結合できます。
+
+| 演算子            | 関数 |
+| ------------------- | -------- |
+| <code>&#124;</code> | OR       |
+| `&`                 | AND      |
+
+条件演算子を使用する場合は、式をかっこで囲みます (例: `(Name~TestMethod1) | (Name~TestMethod2)`)。
+
+選択的単体テストのフィルター処理の使用方法に関する詳細と例については、「[選択的単体テストの実行](../testing/selective-unit-tests.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[dotnet-test 通信プロトコル](test-protocol.md)
-
-[フレームワーク](../../standard/frameworks.md)
-
-[ランタイム識別子 (RID) のカタログ](../rid-catalog.md)
-
-
-<!--HONumber=Nov16_HO1-->
-
-
+* [フレームワークとターゲット](../../standard/frameworks.md)  
+* [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)

@@ -1,102 +1,159 @@
 ---
-title: "dotnet-build コマンド | .NET Core SDK"
-description: "dotnet-build コマンドは、プロジェクトとそのすべての依存関係をします。"
-keywords: "dotnet-build, CLI, CLI コマンド, .NET Core"
+title: dotnet build コマンド - .NET Core CLI
+description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 author: mairaw
-manager: wpickett
-ms.date: 10/13/2016
-ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
-ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
-translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 344f8154c63bbb3c5ce6840bc7c7b1659950c223
-
+ms.author: mairaw
+ms.date: 05/25/2018
+ms.openlocfilehash: da33647e583af8441218f64fb8ac76d5de3cee38
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46580110"
 ---
+# <a name="dotnet-build"></a>dotnet build
 
-#<a name="dotnetbuild"></a>dotnet-build
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名前 
-dotnet-build -- プロジェクトとそのすべての依存関係をビルドします。 
+## <a name="name"></a>name
+
+`dotnet build` - プロジェクトとそのすべての依存関係をビルドします。
 
 ## <a name="synopsis"></a>構文
 
-`dotnet build [--help] [--output]  
-    [--build-base-path] [--framework]  
-    [--configuration]  [--runtime] [--version-suffix]
-    [--build-profile]  [--no-incremental] [--no-dependencies]
-    [<project>]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+```
+dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
+    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
+    [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [-h|--help]
+```
+---
 
 ## <a name="description"></a>説明
 
-`dotnet build` コマンドは、ソース プロジェクトとその依存関係から複数のソース ファイルをバイナリにビルドします。 既定では、結果のバイナリは中間言語 (IL) になり、拡張子は DLL になります。 
-`dotnet build` は、ホストがアプリケーションを実行するために必要なものの概要を示す `\*.deps` ファイルのドロップも行います。  
+`dotnet build` コマンドは、プロジェクトとその依存関係をバイナリ セットにビルドします。 バイナリには、拡張子が *.dll* である中間言語 (IL) ファイルのプロジェクトのコードと、拡張子が *.pdb* でありデバッグに使われるシンボル ファイルが含まれます。 アプリケーションの依存関係を一覧表示する依存関係 JSON ファイル (*\*.deps.json*) が生成されます。 共有ランタイムと、そのアプリケーションのバージョンを指定する、*\*.runtimeconfig.json* ファイルが生成されます。
 
-ビルドにはロック ファイルが必要です。つまり、コードをビルドする前に [`dotnet restore`](dotnet-restore.md) を実行する必要があります。
+サードパーティ (NuGet のライブラリなど) との依存関係があるプロジェクトの場合、NuGet キャッシュから解決され、プロジェクトのビルドの出力では使うことができません。 この点を考慮すると、`dotnet build` の生成物は別のコンピューターに転送して実行することはできません。 これは .NET Framework の動作とは対照的です。 .NET Framework の場合、実行可能なプロジェクト (アプリケーション) をビルドすると、.NET Framework がインストールされている任意のコンピューター上で実行できる出力が生成されます。 .NET Core でも同様の動作にするには、[dotnet publish](dotnet-publish.md) コマンドを使用する必要があります。 詳しくは、「[.NET Core アプリケーション展開](../deploying/index.md)」をご覧ください。
 
-すべてのコンパイルが始まる前に、`build` 動詞で安全性のインクリメンタル チェックのためにプロジェクトとその依存関係が分析されます。
-すべてのチェックをパスした場合、ビルドはプロジェクトとその依存関係のインクリメンタル コンパイルに進みます。それ以外の場合は、非インクリメンタル コンパイルに戻ります。 プロファイル フラグを使用することで、ユーザーはビルド時間を向上させる方法に関する追加情報を受信するように選択できます。
+ビルドには *project.assets.json* ファイルが必要です。このファイルには、アプリケーションの依存関係が一覧表示されています。 このファイルは、[`dotnet restore`](dotnet-restore.md) を実行すると作成されます。 アセット ファイルがないと、ツールは参照アセンブリを解決できないため、エラーになります。 .NET Core 1.x SDK の場合、`dotnet build` を実行する前に `dotnet restore` を明示的に実行する必要がありました。 .NET Core 2.0 SDK 以降では、`dotnet build` を実行すると、`dotnet restore` が暗黙的に実行されます。 ビルド コマンドの実行時に暗黙的な復元を無効にする場合は、`--no-restore` オプションを渡します。
 
-コンパイル プロセスをインクリメンタルに行うには、コンパイルを必要とする依存関係グラフのすべてのプロジェクトが以下の安全性チェックをパスする必要があります。
-- プリコンパイル/ポストコンパイル スクリプトを使用しない
-- パスからコンパイル ツール (resgen、コンパイラなど) を読み込まない
-- 既知のコンパイラ (csc、vbc、fsc) のみを使用する
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-ライブラリではなく、実行可能なアプリケーションをビルドするには、project.json ファイルに[特別な構成](project-json.md#emitentrypoint)セクションが必要です。
+`dotnet build` では MSBuild を使用してプロジェクトをビルドするため、並列ビルドとインクリメンタル ビルドの両方がサポートされます。 詳しくは、「[インクリメンタル ビルド](/visualstudio/msbuild/incremental-builds)」を参照してください。
 
-```json
-{ 
-    "buildOptions": {
-      "emitEntryPoint": true
-    }
-}
+このオプションに加え、`dotnet build` コマンドは、プロパティを設定する `-p` やロガーを定義する `-l` などの MSBuild オプションも受け入れます。 これらのオプションの詳細については、「[MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)」を参照してください。
+
+プロジェクトを実行できるかどうかは、プロジェクト ファイルの `<OutputType>` プロパティで決まります。 次の例は、実行可能なコードを生成するプロジェクトを示しています。
+
+```xml
+<PropertyGroup>
+  <OutputType>Exe</OutputType>
+</PropertyGroup>
 ```
+
+ライブラリを生成するには、`<OutputType>` プロパティを省略してください。 ビルドされる出力の主な違いは、ライブラリの IL DLL にはエントリ ポイントが含まれず、実行できないことです。
+
+## <a name="arguments"></a>引数
+
+`PROJECT`
+
+ビルドするプロジェクト ファイル。 プロジェクト ファイルを指定しない場合、MSBuild は、現在の作業ディレクトリから *proj* で終わるファイル名拡張子を検索し、そのファイルを使います。
 
 ## <a name="options"></a>オプション
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+`-c|--configuration {Debug|Release}`
+
+ビルド構成を定義します。 既定値は `Debug` です。
+
+`-f|--framework <FRAMEWORK>`
+
+特定の[フレームワーク](../../standard/frameworks.md)用にコンパイルします。 フレームワークは、[プロジェクト ファイル](csproj.md)で定義する必要があります。
+
+`--force`
+
+最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。
+
 `-h|--help`
 
-コマンドの短いヘルプを印刷します。  
+コマンドの短いヘルプを印刷します。
+
+`--no-dependencies`
+
+プロジェクト間 (P2P) 参照を無視し、指定されたルート プロジェクトのみをビルドします。
+
+`--no-incremental`
+
+インクリメンタル ビルドとして安全でないビルドをマークします。 このフラグにより、インクリメンタル コンパイルは無効になり、プロジェクトの依存関係グラフのクリーン再ビルドが強制的に行われます。
+
+`--no-restore`
+
+ビルド時に暗黙的な復元は実行されません。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 ビルド済みバイナリを配置するディレクトリ。 このオプションを指定する場合は、`--framework` を定義する必要もあります。
 
-`-b|--build-base-path <OUTPUT_DIRECTORY>`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
-一時出力を配置するディレクトリ。
+ターゲットのランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。
+
+`-v|--verbosity <LEVEL>`
+
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+
+`--version-suffix <VERSION_SUFFIX>`
+
+プロジェクト ファイルのバージョン フィールドでアスタリスク (`*`) のバージョン サフィックスを定義します。 形式は NuGet のバージョン ガイドラインに従います。
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-c|--configuration {Debug|Release}`
+
+ビルド構成を定義します。 既定値は `Debug` です。
 
 `-f|--framework <FRAMEWORK>`
 
-特定のフレームワーク用にコンパイルします。 フレームワークは [project.json](project-json.md#frameworks) ファイルに定義する必要があります。
+特定の[フレームワーク](../../standard/frameworks.md)用にコンパイルします。 フレームワークは、[プロジェクト ファイル](csproj.md)で定義する必要があります。
 
-`-c|--configuration [Debug|Release]`
+`-h|--help`
 
-ビルドに使用する構成を定義します。  省略した場合は、既定で `Debug` に設定されます。
-
-`-r|--runtime [RUNTIME_IDENTIFIER]`
-
-ビルドのターゲット ランタイムです。 使用できるランタイム ID (RID) については、[RID カタログ](../rid-catalog.md)に関するページを参照してください。 
-
-`--version-suffix [VERSION_SUFFIX]`
-
-[project.json](project-json.md#version) ファイルのバージョン フィールドで `*` を置き換える必要がある値を定義します。 形式は NuGet のバージョン ガイドラインに従います。 
-
-`--build-profile`
-
-インクリメンタル コンパイルを自動的に有効にするために、ユーザーが行う必要のある安全性のインクリメンタル チェックを印刷します。
-
-`--no-incremental`
-
-インクリメンタル ビルドとして安全でないビルドをマークします。 これにより、インクリメンタル コンパイルは無効になり、プロジェクトの依存関係グラフのクリーン再ビルドが強制的に行われます。
+コマンドの短いヘルプを印刷します。
 
 `--no-dependencies`
 
-プロジェクト間参照を無視し、ビルド対象として指定されたルート プロジェクトのみをビルドします。
+プロジェクト間 (P2P) 参照を無視し、指定されたルート プロジェクトのみをビルドします。
 
-## <a name="examples"></a>例
+`--no-incremental`
+
+インクリメンタル ビルドとして安全でないビルドをマークします。 このフラグにより、インクリメンタル コンパイルは無効になり、プロジェクトの依存関係グラフのクリーン再ビルドが強制的に行われます。
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+ビルド済みバイナリを配置するディレクトリ。 このオプションを指定する場合は、`--framework` を定義する必要もあります。
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+ターゲットのランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。
+
+`-v|--verbosity <LEVEL>`
+
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+
+`--version-suffix <VERSION_SUFFIX>`
+
+プロジェクト ファイルのバージョン フィールドでアスタリスク (`*`) のバージョン サフィックスを定義します。 形式は NuGet のバージョン ガイドラインに従います。
+
+---
+
+## <a name="examples"></a>使用例
 
 プロジェクトとその依存関係をビルドします。
 
@@ -110,7 +167,6 @@ dotnet-build -- プロジェクトとそのすべての依存関係をビルド�
 
 `dotnet build --runtime ubuntu.16.04-x64`
 
+プロジェクトをビルドし、復元操作中に指定された NuGet パッケージ ソースを使用します (.NET Core SDK 2.0 以降のバージョン)。
 
-<!--HONumber=Nov16_HO1-->
-
-
+`dotnet build --source c:\packages\mypackages`

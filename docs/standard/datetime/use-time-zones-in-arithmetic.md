@@ -1,178 +1,70 @@
 ---
-title: "方法 : 日付と時刻の演算でタイム ゾーンを使用する"
-description: "方法 : 日付と時刻の演算でタイム ゾーンを使用する"
-keywords: .NET, .NET Core
-author: stevehoag
-manager: wpickett
-ms.date: 08/16/2016
-ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
-ms.assetid: 26870cdc-1709-4978-831b-ff2a2f24856f
-translationtype: Human Translation
-ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: 735ae2f1d11ddf6b88b40c7b89083a45d1f07523
-
+title: '方法: 日付と時刻の演算でタイム ゾーンを使用'
+ms.date: 04/10/2017
+ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- time zones [.NET Framework], arithmetic operations
+- arithmetic operations [.NET Framework], dates and times
+- dates [.NET Framework], adding and subtracting
+ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 9c9f7b2623b4ed766fb44b46c3f54caa962c07eb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041523"
 ---
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>方法: 日付と時刻の演算でタイム ゾーンを使用
 
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>方法 : 日付と時刻の演算でタイム ゾーンを使用する
+通常とを実行して日付時刻の算術演算を使用して<xref:System.DateTime>または<xref:System.DateTimeOffset>結果の値は、タイム ゾーン調整規則が反映されません。 日付と時刻の値のタイム ゾーンが明確に識別できる場合でもこれが true (場合など、<xref:System.DateTime.Kind%2A>プロパティに設定されて<xref:System.DateTimeKind.Local>)。 このトピックでは、特定のタイム ゾーンに属している日付と時刻の値に対する算術演算を実行する方法を示します。 算術演算の結果には、タイム ゾーンの調整規則が反映されます。
 
-通常、[System.DateTimeOffset](xref:System.DateTimeOffset) の値を使用して日付と時刻の演算を実行するときに、結果にはタイム ゾーンの調整規則が反映されません。 これは、日時の値のタイム ゾーンを明確に識別できる場合でも同じです。 この記事では、特定のタイム ゾーンに属する日時の値の算術演算を実行する方法について説明します。 算術演算の結果には、タイム ゾーンの調整規則が反映されます。
+### <a name="to-apply-adjustment-rules-to-date-and-time-arithmetic"></a>日付と時刻の演算に調整規則を適用するには
 
-## <a name="to-apply-adjustment-rules-to-date-and-time-arithmetic"></a>日付と時刻の演算に調整規則を適用するには
+1. なんらかの方法を実装して、日付と時刻の値と、その値が属するタイム ゾーンを密接に結び付けます。 たとえば、日付と時刻の値とそのタイム ゾーンの両方を含む構造体を宣言します。 次の例では、このアプローチを使用してリンクする、<xref:System.DateTime>とそのタイム ゾーンの値。
 
-1. なんらかの方法を実装して、日付と時刻の値と、その値が属するタイム ゾーンを密接に結び付けます。 たとえば、日付と時刻の値とそのタイム ゾーンの両方を含む構造体を宣言します。 次の例では、この方法を使用して [DateTimeOffset](xref:System.DateTimeOffset) の値とそのタイム ゾーンをリンクします。
+   [!code-csharp[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#6)]
+   [!code-vb[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#6)]
 
-    ```csharp
-    // Define a structure for DateTime values for internal use only
-    internal struct TimeWithTimeZone
-    {
-    TimeZoneInfo TimeZone;
-    DateTimeOffset Time;
-    }
-    ```
-
-    ```vb
-    ' Define a structure for DateTime values for internal use only
-    Friend Structure TimeWithTimeZone
-       Dim TimeZone As TimeZoneInfo
-       Dim Time As Date
-    End Structure
-    ```
-    
-2. [TimeZoneInfo.ConvertTime(DateTime, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo)) メソッドを呼び出して、時刻を世界協定時刻 (UTC) に変換します。
+2. いずれかを呼び出すことによって、時刻を世界協定時刻 (UTC) を変換、<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>メソッドまたは<xref:System.TimeZoneInfo.ConvertTime%2A>メソッド。
 
 3. UTC 時刻で算術演算を実行します。
 
-4. [TimeZoneInfo.ConvertTime(DateTime, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo)) メソッドを呼び出して、時刻を UTC から元の時刻に関連付けられているタイム ゾーンに変換します。 
+4. 呼び出すことによって時間を UTC から元の時刻のタイム ゾーンに変換、<xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType>メソッド。
 
 ## <a name="example"></a>例
 
-次の例では、中部標準時の 2008 年 3 月 9 日午前 1 時 30 分に、2 時間 30 分を 加えます。 夏時間へのタイム ゾーンの切り替えは、30 分後の 2008 年 3 月 9 日午前 2 時に 発生します。 この例は前に示した 4 つの手順に従うため、結果は正しい時刻である 2008 年 3 月 9 日午前 5 時に なります。 
+次の例では、中部標準時の 2008 年 3 月 9 日午前 1 時 30 分に、2 時間 30 分を 加えます。 夏時間へのタイム ゾーンの切り替えは、30 分後の 2008 年 3 月 9 日午前 2 時に 発生します。 この例は前に示した 4 つの手順に従うため、結果は正しい時刻である 2008 年 3 月 9 日午前 5 時に 前のコードと似ています。
 
-```csharp
-using System;
+[!code-csharp[System.DateTimeOffset.Conceptual#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual8.cs#8)]
+[!code-vb[System.DateTimeOffset.Conceptual#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual8.vb#8)]
 
-public struct TimeZoneTime
-{
-   public TimeZoneInfo TimeZone;
-   public DateTimeOffset Time;
-
-   public TimeZoneTime(TimeZoneInfo tz, DateTimeOffset time)
-   {
-      if (tz == null) 
-         throw new ArgumentNullException("The time zone cannot be a null reference.");
-
-      this.TimeZone = tz;
-      this.Time = time;   
-   }
-
-   public TimeZoneTime AddTime(TimeSpan interval)
-   {
-      // Convert time to UTC
-      DateTimeOffset utcTime = TimeZoneInfo.ConvertTime(this.Time, TimeZoneInfo.Utc);      
-      // Add time interval to time
-      utcTime = utcTime.Add(interval);
-      // Convert time back to time in time zone
-      return new TimeZoneTime(this.TimeZone, TimeZoneInfo.ConvertTime(utcTime, this.TimeZone));
-   }
-}
-
-public class TimeArithmetic
-{
-   public const string tzName = "Central Standard Time";
-
-   public static void Main()
-   {
-      try
-      {
-         TimeZoneTime cstTime1, cstTime2;
-
-         TimeZoneInfo cst = TimeZoneInfo.FindSystemTimeZoneById(tzName);
-         DateTime time1 = new DateTime(2008, 3, 9, 1, 30, 0);          
-         TimeSpan twoAndAHalfHours = new TimeSpan(2, 30, 0);
-
-         cstTime1 = new TimeZoneTime(cst, 
-                        new DateTimeOffset(time1, cst.GetUtcOffset(time1)));
-         cstTime2 = cstTime1.AddTime(twoAndAHalfHours);
-         Console.WriteLine("{0} + {1} hours = {2}", cstTime1.Time, 
-                                                    twoAndAHalfHours.ToString(),  
-                                                    cstTime2.Time);
-      }
-      catch
-      {
-         Console.WriteLine("Unable to find {0}.", tzName);
-      }
-   }
-}
-```
-
-```vb
-Public Structure TimeZoneTime
-   Public TimeZone As TimeZoneInfo
-   Public Time As Date
-
-   Public Sub New(tz As TimeZoneInfo, time As Date)
-      If tz Is Nothing Then _
-         Throw New ArgumentNullException("The time zone cannot be a null reference.")
-
-      Me.TimeZone = tz
-      Me.Time = time
-   End Sub
-
-   Public Function AddTime(interval As TimeSpan) As TimeZoneTime
-      ' Convert time to UTC
-      Dim utcTime As DateTime = TimeZoneInfo.ConvertTimeToUtc(Me.Time, _
-                                                              Me.TimeZone)      
-      ' Add time interval to time
-      utcTime = utcTime.Add(interval)
-      ' Convert time back to time in time zone
-      Return New TimeZoneTime(Me.TimeZone, TimeZoneInfo.ConvertTime(utcTime, _
-                              TimeZoneInfo.Utc, Me.TimeZone))
-   End Function
-End Structure
-
-Module TimeArithmetic
-   Public Const tzName As String = "Central Standard Time"
-
-   Public Sub Main()
-      Try
-         Dim cstTime1, cstTime2 As TimeZoneTime
-
-         Dim cst As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById(tzName)
-         Dim time1 As Date = #03/09/2008 1:30AM#
-         Dim twoAndAHalfHours As New TimeSpan(2, 30, 0)
-
-         cstTime1 = New TimeZoneTime(cst, time1)
-         cstTime2 = cstTime1.AddTime(twoAndAHalfHours)
-
-         Console.WriteLine("{0} + {1} hours = {2}", cstTime1.Time, _
-                                                    twoAndAHalfHours.ToString(), _ 
-                                                    cstTime2.Time)  
-      Catch
-         Console.WriteLine("Unable to find {0}.", tzName)
-      End Try   
-   End Sub   
-End Module
-```
-
-最初に UTC に変換せず、単に [DateTimeOffset](xref:System.DateTimeOffset) 値に対してこの加算を実行すると、結果には正しい時刻が反映されますが、その時刻に対して指定されたタイム ゾーンのオフセットは反映されません。 
-
-[DateTimeOffset](xref:System.DateTimeOffset) 値は、属している可能性のあるどのタイム ゾーンとも関連付けられていません。 タイム ゾーンの調整規則が自動的に適用されるような方法で日付と時刻の演算を実行するには、日付と時刻の値の属するタイム ゾーンがすぐに識別できる状態でなければなりません。 つまり、日時と関連付けられているタイム ゾーンを密に結合する必要があります。 これは、次のようないくつかの方法で行うことができます。
+両方<xref:System.DateTime>と<xref:System.DateTimeOffset>が属している任意のタイム ゾーンからの値は関連付けを解除します。 タイム ゾーンの調整規則が自動的に適用されるような方法で日付と時刻の演算を実行するには、日付と時刻の値の属するタイム ゾーンがすぐに識別できる状態でなければなりません。 つまり、日時と関連付けられているタイム ゾーンを密に結合する必要があります。 これは、次のようないくつかの方法で行うことができます。
 
 * アプリケーションで使用されるすべての時刻が、特定のタイム ゾーンに属するものと仮定します。 この方法は、適切な場合もありますが、柔軟性が限られ、移植性が制限される可能性もあります。
 
 * 日時と関連付けられているタイム ゾーンを型のフィールドとして組み込むことで、両者を密に結合する型を定義します。 コード例ではこの方法を使用して、日時とタイム ゾーンを 2 つのメンバー フィールドに格納する構造体を定義しています。
 
+例では、算術演算を実行する方法を示しています。<xref:System.DateTime>結果にタイム ゾーン調整規則が適用されるように値。 ただし、<xref:System.DateTimeOffset>値は同じくらい簡単に使用できます。 次の例を示す方法で元の例では、コードが使用する可能性があります<xref:System.DateTimeOffset>の代わりに<xref:System.DateTime>値。
+
+[!code-csharp[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#7)]
+[!code-vb[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#7)]
+
+この加算処理は単に実行する場合、<xref:System.DateTimeOffset>最初 UTC に変換すること、結果、適切な時点の反映が、そのオフセットは反映されませんする指定されたタイム ゾーンの時点のなしの値します。
+
+## <a name="compiling-the-code"></a>コードのコンパイル
+
+この例で必要な要素は次のとおりです。
+
+* System.Core.dll への参照をプロジェクトに追加します。
+
+* <xref:System>と共に名前空間をインポートする、`using`ステートメント (c# コードで必要)。
+
 ## <a name="see-also"></a>関連項目
 
-[日付、時刻およびタイム ゾーン](index.md)
-
-[日付と時刻を使用した算術演算の実行](performing-arithmetic-operations.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
-
+* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+* [日付と時刻を使用した算術演算の実行](../../../docs/standard/datetime/performing-arithmetic-operations.md)

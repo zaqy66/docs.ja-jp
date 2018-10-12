@@ -1,0 +1,68 @@
+---
+title: '方法: XML ファイルにオブジェクト データを書き込む (C#)'
+ms.date: 07/20/2015
+ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
+ms.openlocfilehash: b8fb60640c9bdc0337d45b6901b1be3979dbac1f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259757"
+---
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a>方法: XML ファイルにオブジェクト データを書き込む (C#)
+<xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、クラスから XML ファイルにオブジェクトを書き込む例を次に示します。  
+  
+## <a name="example"></a>例  
+  
+```csharp  
+public class XMLWrite  
+{  
+  
+   static void Main(string[] args)  
+    {  
+        WriteXML();  
+    }  
+  
+    public class Book  
+    {  
+        public String title;   
+    }  
+  
+    public static void WriteXML()  
+    {  
+        Book overview = new Book();  
+        overview.title = "Serialization Overview";  
+        System.Xml.Serialization.XmlSerializer writer =   
+            new System.Xml.Serialization.XmlSerializer(typeof(Book));  
+  
+        var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//SerializationOverview.xml";  
+        System.IO.FileStream file = System.IO.File.Create(path);  
+  
+        writer.Serialize(file, overview);  
+        file.Close();  
+    }  
+}  
+```  
+  
+## <a name="compiling-the-code"></a>コードのコンパイル  
+ クラスには、パラメーターのないパブリック コンストラクターが必要です。  
+  
+## <a name="robust-programming"></a>信頼性の高いプログラミング  
+ 次の条件を満たす場合は、例外が発生する可能性があります。  
+  
+-   シリアル化されるクラスにパブリックなパラメーターなしのコンストラクターがない場合  
+  
+-   ファイルが存在するものの、読み取り専用の場合 (<xref:System.IO.IOException>)  
+  
+-   パスが長すぎる (<xref:System.IO.PathTooLongException>)。  
+  
+-   ディスクの空き領域がない場合 (<xref:System.IO.IOException>)  
+  
+## <a name="net-framework-security"></a>.NET Framework セキュリティ  
+ 次のコード例では、ファイルが存在しない場合は新規にファイルを作成します。 アプリケーションでファイルを作成する必要がある場合、そのアプリケーションにはフォルダーに対する `Create` アクセスが必要です。 ファイルが既に存在する場合、アプリケーションに必要なのは、より低い権限である `Write` アクセスだけです。 フォルダーに対して `Read` アクセスを許可するのではなく、可能な限りアプリケーションの配置時にファイルを作成しておき、1 つのファイルに対してのみ `Create` アクセスを許可する方が安全です。  
+  
+## <a name="see-also"></a>参照
+
+- <xref:System.IO.StreamWriter>  
+- [方法: XML ファイルからオブジェクト データを読み込む (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+- [シリアル化 (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)

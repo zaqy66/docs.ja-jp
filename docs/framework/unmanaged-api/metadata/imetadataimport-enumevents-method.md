@@ -1,0 +1,76 @@
+---
+title: IMetaDataImport::EnumEvents メソッド
+ms.date: 03/30/2017
+api_name:
+- IMetaDataImport.EnumEvents
+api_location:
+- mscoree.dll
+api_type:
+- COM
+f1_keywords:
+- IMetaDataImport::EnumEvents
+helpviewer_keywords:
+- IMetaDataImport::EnumEvents method [.NET Framework metadata]
+- EnumEvents method [.NET Framework metadata]
+ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
+topic_type:
+- apiref
+author: mairaw
+ms.author: mairaw
+ms.openlocfilehash: 608b4a7d147124ede60e9d81f91600dfdaad0a65
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446497"
+---
+# <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents メソッド
+指定した TypeDef トークンのイベント定義トークンを列挙します。  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+HRESULT EnumEvents (   
+   [in, out] HCORENUM    *phEnum,   
+   [in]      mdTypeDef   td,   
+   [out]     mdEvent     rEvents[],   
+   [in]      ULONG       cMax,  
+   [out]    ULONG        *pcEvents  
+);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ `phEnum`  
+ [入力、出力].列挙子へのポインター。  
+  
+ `td`  
+ [in]イベント定義を持つが列挙されるまでは TypeDef トークンです。  
+  
+ `rEvents`  
+ [out]返されるイベントの配列。  
+  
+ `cMax`  
+ [in] `rEvents` 配列の最大サイズ。  
+  
+ `pcEvents`  
+ [out]実際に返されるイベントの数`rEvents`です。  
+  
+## <a name="return-value"></a>戻り値  
+  
+|HRESULT|説明|  
+|-------------|-----------------|  
+|`S_OK`|`EnumEvents` 正常に返されます。|  
+|`S_FALSE`|列挙するイベントがありません。 その場合は、`pcEvents`ゼロです。|  
+  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+  
+ **ヘッダー:** Cor.h  
+  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+  
+ **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+  
+## <a name="see-also"></a>関連項目  
+ [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
+ [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

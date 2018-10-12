@@ -1,95 +1,192 @@
 ---
-title: "dotnet-pack コマンド | .NET Core SDK"
-description: "dotnet-pack コマンドでは、.NET Core プロジェクトの NuGet パッケージを作成します。"
-keywords: "dotnet-pack, CLI, CLI コマンド, .NET Core"
+title: dotnet pack コマンド - .NET Core CLI
+description: dotnet pack コマンドでは、.NET Core プロジェクトの NuGet パッケージを作成します。
 author: mairaw
-manager: wpickett
-ms.date: 10/12/2016
-ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
-ms.assetid: 8b4b8cef-f56c-4a10-aa01-fde8bfaae53e
-translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: e83c8ad302590bcd77129c3ff325e498da751e69
-
+ms.author: mairaw
+ms.date: 05/29/2018
+ms.openlocfilehash: 434f1c97af24d1417cd79edd52b63814fd4c6512
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47231184"
 ---
+# <a name="dotnet-pack"></a>dotnet pack
 
-#<a name="dotnetpack"></a>dotnet-pack
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
-`dotnet-pack`- NuGet パッケージにコードをパックします。
+`dotnet pack` - NuGet パッケージにコードをパックします。
 
 ## <a name="synopsis"></a>構文
 
-`dotnet pack [--help] [--output]  
-    [--no-build] [--build-base-path]  
-    [--configuration]  [--version-suffix]
-    [project]`  
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+```
+dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
+    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
+    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [-h|--help]
+```
+---
 
 ## <a name="description"></a>説明
 
-`dotnet pack` コマンドはプロジェクトをビルドし、NuGet パッケージを作成します。 この操作の結果として、拡張子が `nupkg` の 2 つのパッケージが生成されます。 1 つのパッケージにコードが含まれ、もう 1 つにはデバッグ シンボルが含まれます。 
+`dotnet pack` コマンドはプロジェクトをビルドし、NuGet パッケージを作成します。 このコマンドの結果が NuGet パッケージです。 `--include-symbols` オプションが存在する場合、デバッグ シンボルを含む別のパッケージが作成されます。
 
-パックされるプロジェクトの NuGet 依存関係が nuspec ファイルに追加されるため、パッケージのインストール時に解決できます。 プロジェクト間参照はプロジェクト内にはパッケージ化されません。 現時点では、プロジェクト間の依存関係がある場合は、プロジェクトごとにパッケージが必要になります。
+パックされるプロジェクトの NuGet 依存関係が *.nuspec* ファイルに追加されるため、パッケージのインストール時に適切に解決されます。 プロジェクト間参照はプロジェクト内にはパッケージ化されません。 現時点では、プロジェクト間の依存関係がある場合は、プロジェクトごとにパッケージが必要になります。
 
-`dotnet pack`では、既定で最初にプロジェクトがビルドされます。 これを避けたい場合は、`--no-build` オプションを渡します。 これは、コードが既にビルドされていることがわかっている場合などの継続的インテグレーション (CI) ビルド シナリオで役立ちます。 
+既定では、`dotnet pack` は最初にプロジェクトをビルドします。 この動作を避けたい場合は、`--no-build` オプションを渡します。 このオプションは、コードが既にビルドされていることがわかっている場合の継続的インテグレーション (CI) ビルド シナリオで役立つことがよくあります。
+
+パッキング プロセスのために `dotnet pack` コマンドに MSBuild のプロパティを使用できます。 詳細については、「[NuGet メタデータ プロパティ](csproj.md#nuget-metadata-properties)」と「[MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)」を参照してください。 「[例](#examples)」のセクションでは、MSBuild の -p スイッチを使用する方法について、2 つの異なるシナリオで説明します。
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+
+## <a name="arguments"></a>引数
+
+`PROJECT`
+
+パックするプロジェクトです。 [csproj ファイル](csproj.md)またはディレクトリのいずれかへのパスです。 指定しない場合は、既定で現在のディレクトリに設定されます。
 
 ## <a name="options"></a>オプション
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+`-c|--configuration {Debug|Release}`
+
+ビルド構成を定義します。 既定値は `Debug` です。
+
+`--force`
+
+最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。
+
 `-h|--help`
 
-コマンドの短いヘルプを印刷します。  
+コマンドの短いヘルプを印刷します。
 
-`[project]` 
-    
-パックするプロジェクトです。 [project.json](project-json.md) ファイルまたはディレクトリのパスを指定できます。 省略すると、既定で現在のディレクトリに設定されます。 
+`--include-source`
 
-`-o|--output <OUTPUT_DIRECTORY>`
+NuGet パッケージにソース ファイルを含めます。 ソース ファイルは、`nupkg` 内の `src` フォルダーに含まれます。
 
-指定したディレクトリにビルド済みパッケージを配置します。 
+`--include-symbols`
+
+シンボルの `nupkg` を生成します。
 
 `--no-build`
 
-パッキングの前にプロジェクトをビルドしません。 
+パッキングの前にプロジェクトをビルドしません。 また、`--no-restore` フラグが暗黙的に設定されます。
 
-`--build-base-path`
+`--no-dependencies`
 
-指定したディレクトリに一時的なビルド成果物を配置します。 既定では、現在のディレクトリの `obj` ディレクトリに配置されます。 
+プロジェクト間参照を無視し、ルート プロジェクトのみを復元します。
 
-`-c|--configuration <Debug|Release>`
+`--no-restore`
 
-プロジェクトのビルド時に使用する構成です。 指定しない場合、既定で `Debug` に設定されます。
+コマンドを実行するときに、暗黙的な復元を実行しません。
 
-`--version-suffix`
+`-o|--output <OUTPUT_DIRECTORY>`
 
-指定された文字列で `-*` パッケージ バージョン サフィックスのアスタリスクを更新します。
+指定したディレクトリにビルド済みパッケージを配置します。
 
-## <a name="examples"></a>例
+`--runtime <RUNTIME_IDENTIFIER>`
+
+パッケージを復元するターゲット ランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。
+
+`-s|--serviceable`
+
+パッケージに処理可能フラグを設定します。 詳しくは、「[.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing)」(.NET ブログ: .NET 4.5.1 は .NET NuGet ライブラリに対する Microsoft セキュリティ更新プログラムをサポートする) をご覧ください。
+
+`--version-suffix <VERSION_SUFFIX>`
+
+プロジェクトの `$(VersionSuffix)` MSBuild プロパティの値を定義します。
+
+`-v|--verbosity <LEVEL>`
+
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+
+> [!NOTE]
+> Web プロジェクトは既定でパッケージ化可能ではありません。 既定の動作をオーバーライドするには、*.csproj* ファイルに次のプロパティを追加します。
+> ```xml
+> <PropertyGroup>
+>    <IsPackable>true</IsPackable>
+> </PropertyGroup>
+> ```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-c|--configuration {Debug|Release}`
+
+ビルド構成を定義します。 既定値は `Debug` です。
+
+`-h|--help`
+
+コマンドの短いヘルプを印刷します。
+
+`--include-source`
+
+NuGet パッケージにソース ファイルを含めます。 ソース ファイルは、`nupkg` 内の `src` フォルダーに含まれます。
+
+`--include-symbols`
+
+シンボルの `nupkg` を生成します。
+
+`--no-build`
+
+パッキングの前にプロジェクトをビルドしません。
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+指定したディレクトリにビルド済みパッケージを配置します。
+
+`-s|--serviceable`
+
+パッケージに処理可能フラグを設定します。 詳しくは、「[.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing)」(.NET ブログ: .NET 4.5.1 は .NET NuGet ライブラリに対する Microsoft セキュリティ更新プログラムをサポートする) をご覧ください。
+
+`--version-suffix <VERSION_SUFFIX>`
+
+プロジェクトの `$(VersionSuffix)` MSBuild プロパティの値を定義します。
+
+`-v|--verbosity <LEVEL>`
+
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+
+---
+
+## <a name="examples"></a>使用例
 
 現在のディレクトリのプロジェクトをパックします。
 
 `dotnet pack`
 
-app1 プロジェクトをパックします。
+`app1` プロジェクトをパックします。
 
-`dotnet pack ~/projects/app1/project.json`
-    
-プロジェクトを現在のディレクトリにパックし、指定したフォルダーに生成されたパッケージを配置します。
+`dotnet pack ~/projects/app1/project.csproj`
+
+プロジェクトを現在のディレクトリにパックし、`nupkgs` フォルダーに生成されたパッケージを配置します。
 
 `dotnet pack --output nupkgs`
 
-現在のディレクトリのプロジェクトを指定したフォルダーにパックし、ビルド ステップをスキップします。
+現在のディレクトリのプロジェクトを `nupkgs` フォルダーにパックし、ビルド ステップをスキップします。
 
 `dotnet pack --no-build --output nupkgs`
 
-現在のプロジェクトをパックし、結果のパッケージ バージョンを指定されたサフィックスで更新します。 たとえば、バージョン `1.0.0-*` は `1.0.0-ci-1234` に更新されます。
+*.csproj* ファイルで `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` として構成されているプロジェクトのバージョン サフィックスで、現在のプロジェクトをパックし、結果のパッケージ バージョンを指定されたサフィックスで更新します。
 
 `dotnet pack --version-suffix "ci-1234"`
 
+`PackageVersion` MSBuild プロパティで `2.1.0` にパッケージ バージョンを設定します。
 
-<!--HONumber=Nov16_HO1-->
+`dotnet pack -p:PackageVersion=2.1.0`
 
+プロジェクトを特定の[ターゲット フレームワーク](../../standard/frameworks.md)用にパックします。
 
+`dotnet pack -p:TargetFrameworks=net45`
+
+プロジェクトをパックして、復元操作の特定のランタイム (Windows 10) を使用します(.NET Core SDK 2.0 以降のバージョン)。
+
+`dotnet pack --runtime win10-x64`

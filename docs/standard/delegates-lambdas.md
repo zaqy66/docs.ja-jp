@@ -1,26 +1,23 @@
 ---
-title: "デリゲートとラムダ"
-description: "デリゲートとラムダ"
-keywords: .NET, .NET Core
+title: デリゲートとラムダ
+description: 特定のメソッド シグネチャを指定する型をデリゲートで定義する方法について説明します。このようなメソッドは、直接呼び出すか、別のメソッドに渡して呼び出すことができます。
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-translationtype: Human Translation
-ms.sourcegitcommit: 9cf6022fc910bc5418c03c0fa81d9432d85be3b0
-ms.openlocfilehash: 7e9bb11db4b3586639a0447737db9cd376898325
-
+ms.openlocfilehash: f8184b87fc62f378fe72138733f87de924da60f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574563"
 ---
-
 # <a name="delegates-and-lambdas"></a>デリゲートとラムダ
 
 デリゲートは、特定のメソッド シグネチャを指定する型を定義します。 このシグネチャを満たすメソッド (静的またはインスタンス) は、その型の変数に代入し、(適切な引数を使用して) 直接呼び出したり、別のメソッドに引数そのものとして渡してから呼び出すことができます。 次の例は、デリゲートの使い方を示しています。
 
-```cs
+```csharp
 public class Program
 {
 
@@ -38,7 +35,6 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
 *   4 行目で特定のシグネチャのデリゲート型を作成しています。この場合、文字列パラメーターを取ってから文字列パラメーターを返すメソッドです。
@@ -54,7 +50,7 @@ public class Program
 
 ここで、上記の例を使用して、カスタム型の代わりに `Func<>` デリゲートを使用して書き換えることができます。 プログラムは引き続きまったく同じに実行されます。
 
-```cs
+```csharp
 public class Program
 {
 
@@ -70,14 +66,13 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
 この簡単な例では、Main() メソッドの外部で定義されているメソッドは、少し余分なようです。 これは、.NET Framework 2.0 で**匿名デリゲート**の概念が導入されたためです。 そのサポートにより、追加の型やメソッドを指定せずに、"インライン" デリゲートを作成することができます。 必要に応じて、デリゲートの定義を単純にインライン化します。
 
 たとえば、デリゲートを切り替え、この匿名デリゲートを使用して、偶数だけをリストから除外し、コンソールに表示します。
 
-```cs
+```csharp
 public class Program
 {
 
@@ -103,18 +98,17 @@ public class Program
     }
   }
 }
-
 ```
 
 強調表示された行に注目してください。 ご覧のように、デリゲートの本体は、他のデリゲートと同じく、単なる式のセットです。 しかし、それを別の定義にする代わりに、`List<T>` 型の `FindAll()` メソッドへの呼び出しでそれを_アド ホック_で導入しました。
 
 ただし、この方法でも、破棄できる多くのコードがまだ残ります。 このような場合に**ラムダ式**が機能します。
 
-ラムダ式 (または略して単に「ラムダ」) は、最初に C# 3.0 で統合言語クエリ (LINQ) のコア ビルディング ブロックの 1 つとして導入されました。 これらは、デリゲートの使用の利便性を高める構文です。 これらは、シグネチャとメソッド本体を宣言しますが、デリゲートに割り当てられない限り、独自の正式な ID を持ちません。 デリゲートの場合とは異なり、これらはイベント登録の左側として、またはさまざまな Linq 句およびメソッドで、直接割り当てることができます。
+ラムダ式 (または略して単に "ラムダ") は、最初に C# 3.0 で統合言語クエリ (LINQ) のコア ビルディング ブロックの 1 つとして導入されました。 これらは、デリゲートの使用の利便性を高める構文です。 これらは、シグネチャとメソッド本体を宣言しますが、デリゲートに割り当てられない限り、独自の正式な ID を持ちません。 デリゲートの場合とは異なり、これらはイベント登録の左側として、またはさまざまな Linq 句およびメソッドで、直接割り当てることができます。
 
 ラムダ式はデリゲートを指定するもう 1 つの方法であるため、上記のサンプルを匿名デリゲートの代わりにラムダ式を使用するように書き換えることができるようになる必要があります。
 
-```cs
+```csharp
 public class Program
 {
 
@@ -135,14 +129,13 @@ public class Program
     }
   }
 }
-
 ```
 
 強調表示された行を見ると、ラムダ式がどのようなものかがわかります。 繰り返しますが、これは、匿名デリゲートの使用に**非常に**便利な構文であるため、内部での動作は匿名デリゲートの動作と似ています。
 
 ここでも、ラムダは単なるデリゲートです。つまり、次のコード スニペットに示すように、ラムダは問題なくイベント ハンドラーとして使用することができます。
 
-```cs
+```csharp
 public MainWindow()
 {
     InitializeComponent();
@@ -152,17 +145,10 @@ public MainWindow()
         this.Title = "Loaded";
     };
 }
-
 ```
 
 ## <a name="further-reading-and-resources"></a>参考資料とリソース
 
-*   [デリゲート](https://msdn.microsoft.com/library/ms173171.aspx)
-*   [匿名関数](https://msdn.microsoft.com/library/bb882516.aspx)
-*   [ラムダ式](https://msdn.microsoft.com/library/bb397687.aspx)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-
+*   [デリゲート](../../docs/csharp/programming-guide/delegates/index.md)
+*   [匿名関数](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+*   [ラムダ式](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

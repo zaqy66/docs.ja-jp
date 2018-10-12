@@ -1,102 +1,137 @@
 ---
-title: "Windows における .NET Core の前提条件 | Microsoft Docs"
-description: "Windows コンピューターで .NET Core アプリケーションを開発および実行する場合に必要な依存関係について説明します。"
-keywords: ".NET Core, Windows, 前提条件, 依存関係, Visual Studio"
+title: Windows における .NET Core の前提条件
+description: Windows コンピューターで .NET Core アプリケーションを開発および実行する場合に必要な依存関係について説明します。
 author: mairaw
 ms.author: mairaw
-ms.date: 01/05/2017
-ms.topic: article
-ms.prod: .net-core
-ms.devlang: dotnet
-ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-translationtype: Human Translation
-ms.sourcegitcommit: a8019c9fc25ef458aa555743e61cd83a3beb11ed
-ms.openlocfilehash: b5c088da7d1155414a08995ae0d72154af891190
-
+ms.date: 08/31/2018
+ms.openlocfilehash: bbf54c8d215783656830f0fa035708be82a7c39c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482611"
 ---
-
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows における .NET Core の前提条件
 
-この記事では、.NET Core アプリケーションを Windows コンピューターで展開および実行、ならびに Visual Studio を使用して開発するのに必要となる依存関係について説明します。
+この記事では、Windows で .NET Core アプリケーションを開発するために必要な依存関係を示します。 後述のサポート対象 OS のバージョンと依存関係は、Windows で .NET Core アプリを開発する次の 3 つの方法に適用されます。
 
-## <a name="supported-windows-versions"></a>サポートされている Windows バージョン
+* [コマンド ライン](tutorials/using-with-xplat-cli.md)
+* [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
-.NET Core は、Windows の次のバージョンでサポートされています。
+## <a name="net-core-supported-windows-versions"></a>.NET Core がサポートされている Windows バージョン
+
+.NET Core は、次のバージョンでサポートされています。
 
 * Windows 7 SP1
 * Windows 8.1
-* Windows 10
+* Windows 10 Anniversary Update (バージョン 1607) 以降のバージョン
 * Windows Server 2008 R2 SP1 (フル サーバーまたは Server Core)
 * Windows Server 2012 SP1 (フル サーバーまたは Server Core)
-* Windows Server 2012 R2 SP1 (フル サーバーまたは Server Core)
-* Windows Server 2016 (フル サーバー、Server Core または Nano Server)
+* Windows Server 2012 R2 (フル サーバーまたは Server Core)
+* Windows Server 2016 以降のバージョン (フル サーバー、Server Core、または Nano Server)
 
-[サポートされるすべてのオペレーティング システム](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md#rtm-platform-support)については、[.NET Core 1.0.0 のリリース ノート](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md)でご確認ください。
+次の記事では、.NET Core がサポートされたオペレーティング システム (バージョンごと) の完全な一覧を示します。
+
+* [.NET Core 2.1 - サポートされている OS バージョン](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
+* [.NET Core 2.0 - サポートされている OS バージョン](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)
+* [.NET Core 1.x - サポートされている OS バージョン](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 ## <a name="net-core-dependencies"></a>.NET Core の依存関係
 
-.NET Core を Windows 10 および Windows Server 2016 よりも前の Windows バージョンで実行する場合、Visual C++ 再頒布可能パッケージが必要です。 この依存関係は、.NET Core インストーラーを使用する場合は自動でインストールされます。 ただし、.NET Core を[インストーラー スクリプト](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/dotnet-install-script)でインストールしたか、自己完結型の .NET Core アプリケーションをデプロイする場合は、[Visual Studio 2015 の Visual C++ 再頒布可能パッケージ](https://www.microsoft.com/en-us/download/details.aspx?id=48145)を手動でインストールする必要があります。
+.NET Core 1.1 以前のバージョンを Windows 10 と Windows Server 2016 よりも前の Windows バージョンで実行する場合、Visual C++ 再頒布可能パッケージが必要です。 この依存関係は、.NET Core インストーラーにより自動でインストールされます。
+
+次の場合には、[Microsoft Visual C++ 2015 再頒布可能パッケージ Update 3](https://www.microsoft.com/download/details.aspx?id=52685) を手動でインストールする必要があります。
+
+* [インストーラー スクリプト](./tools/dotnet-install-script.md)を使用して .NET Core をインストールする。
+* 自己完結型の .NET Core アプリケーションを展開する。
+* ソースから製品をビルドする。
+* *.zip* ファイルを使用して .NET Core をインストールする。 これにはビルド/CI/CD サーバーを含めることができます。
 
 > [!NOTE]
-> <em>Windows 7 および Windows Server 2008 コンピューターのみ:</em><br>
-> Windows のインストールが最新であり、Windows Update から修正プログラム [KB2533623](https://support.microsoft.com/en-us/kb/2533623) をインストールしていることを確認してください。
+> **Windows 8.1 以前のバージョン、または Windows Server 2012 R2 以前のバージョンの場合:**
+>
+> Windows のインストールが最新であり、Windows Update から修正プログラム [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) をインストールしていることを確認してください。 この更新プログラムがインストールされていない場合は、.NET Core アプリケーションを起動するときに、次のようなエラーが表示されます。`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+>
+> **Windows 7 または Windows Server 2008 R2 の場合:**
+>
+> KB2999226 に加え、[KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) もインストールされていることを確認します。 この更新プログラムがインストールされていない場合は、.NET Core アプリケーションを起動するときに、次のようなエラーが表示されます。`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`
 
-## <a name="prerequisites-with-visual-studio"></a>Visual Studio の前提条件
+## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 の前提条件
 
-.NET Core SDK を使用して .NET Core アプリケーションを開発する場合は、好きなエディターを使用できます。 一方、Windows 上で Visual Studio を使用して .NET Core アプリケーションを開発する場合、使用可能なバージョンは次の 2 つです。
+.NET Core SDK を使用して .NET Core アプリケーションを開発する場合は、好きなエディターを使用できます。 [Visual Studio 2017](#visual-studio-2017) では、Windows 上に .NET Core アプリ用の統合開発環境が提供されます。
 
-* [Visual Studio 2015](#visual-studio-2015)
-* [Visual Studio 2017 RC](#visual-studio-2017-rc)
+Visual Studio 2017 での変更の詳細については、[リリース ノート](/visualstudio/releasenotes/vs2017-relnotes)を参照してください。
 
-プロジェクトのベースは、Visual Studio 2015 を使用して作成した場合は既定で project.json になりますが、Visual Studio 2017 RC を使用した場合は常に MSBuild です。 この形式変更の詳細については、[変更点の大まかな概要](./preview3/tools/layering.md)に関するページをご覧ください。
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-### <a name="visual-studio-2015"></a>Visual Studio 2015
+Visual Studio 2017 内で .NET Core 2.1 アプリを開発するには、次の手順を行います。
 
-Visual Studio 2015 を使用して .NET Core アプリを開発する場合は、次のものが必要です。
+ 1. (**[その他のツールセット]** セクションで) **[.NET Core クロスプラットフォームの開発]** ワークロードを選択して、[Visual Studio 2017 バージョン 15.7.0 以降をダウンロードしてインストール](/visualstudio/install/install-visual-studio)します。
 
-* Visual Studio 2015 更新プログラム 3.3 以降
+![".NET Core クロスプラットフォームの開発" ワークロードが選択された状態の Visual Studio 2017 インストールのスクリーン ショット](./media/windows-prerequisites/vs-15-8-workloads.jpg)
 
-   Visual Studio 2015 には複数の[エディション](https://www.visualstudio.com/vs/compare)があります。 [Visual Studio Community 2015](https://www.visualstudio.com/downloads/) を無料でダウンロードして始められます。 
+**.NET Core クロスプラットフォームの開発**ツールセットがインストールされると、既定で Visual Studio 2017 15.7 では .NET Core 2.0 SDK が使用され、Visual Studio 2017 15.8 では 2.1 SDK が使用されます。
 
-   [Visual Studio 2015 更新プログラム 3.3](https://msdn.microsoft.com/library/mt752379.aspx) を実行していることを確認するには、以下を実行します。
+ 2. Visual Studio 2017 15.7 を使用している場合は、[.NET Core 2.1 SDK](https://www.microsoft.com/net/download/core) をインストールするか、または Visual Studio 2017 15.8 にアップグレードします。
 
-   * [**ヘルプ**] メニューの [**About Microsoft Visual Studio**] (Microsoft Visual Studio のバージョン情報) を選択します。
-   * **「About Microsoft Visual Studio」** (Microsoft Visual Studio のバージョン情報) ダイアログ ボックスのバージョン番号が 14.0.25424.00 以上であり、"更新プログラム 3" が含まれている必要があります。
-   * 更新プログラム 3 が含まれていない場合、まず [Visual Studio 2015 の更新プログラム 3](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs) をダウンロードしてインストールする必要があります。
-   * 更新プログラム 3 がインストールされているが、バージョン番号が 14.0.25424.00 よりも小さい場合、[Visual Studio 2015 更新プログラム 3.3](https://msdn.microsoft.com/library/mt752379.aspx) をダウンロードしてインストールする必要があります。
+ 3. 次の手順を使用して、既存または新規の .NET Core プロジェクトを .NET Core 2.1 に再ターゲットします。
+    * **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
+    * **[ターゲット フレームワーク]** 選択メニューで、値を **[.NET Core 2.1]** に設定します。
 
-   更新プログラム 3 での変更の詳細については、[リリース ノート](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs)を参照してください。
+![[ターゲット フレームワーク] メニュー項目で [.NET Core 2.0] が選択された Visual Studio 2017 のアプリケーション プロジェクト プロパティのスクリーンショット](./media/windows-prerequisites/Targeting-dotnetCore2.png)
 
-* Visual Studio 向け NuGet マネージャーの拡張機能
+Visual Studio が .NET Core 2.1 SDK で構成されている場合は、次の操作を行うことができます。
 
-   NuGet は、.NET Core などの Microsoft 開発プラットフォーム用のパッケージ マネージャーです。 .NET Core アプリを構築するには、[NuGet 3.5.0-beta](https://dist.nuget.org/visualstudio-2015-vsix/v3.5.0-beta/NuGet.Tools.vsix) 以上が必要です。
+* 既存の .NET Core 1.x および 2.x プロジェクトを開き、ビルドし、実行する。
+* .NET Core 1.x および 2.0 プロジェクトを .NET Core 2.1 に再ターゲットし、ビルドし、実行する。
+* .NET Core 2.1 の新しいプロジェクトを作成する。
 
-* .NET Core Tooling Preview 2
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-   [.NET Core 1.0.1 - VS 2015 Tooling Preview 2][sdk] をダウンロードし、インストールします。 
+Visual Studio 2017 で .NET Core 2.0 アプリを開発するには、次の手順を行います。
 
-   .NET Core ツール パッケージにより、Visual Studio 2015 用の .NET Core、プロジェクト テンプレートおよびその他のツールがインストールされます。
+ 1. (**[その他のツールセット]** セクションで) **[.NET Core クロスプラットフォームの開発]** ワークロードを選択して、[Visual Studio 2017 バージョン 15.3.0 以降をダウンロードしてインストール](/visualstudio/install/install-visual-studio)します。
 
-   > [!NOTE]
-   > 現時点では、[.NET Core 1.0.1 - VS 2015 Tooling Preview 2][sdk] のオフライン インストーラーはダウンロードできません。 代わりに、[正規のブートストラップ][sdk]をダウンロードし、コマンドライン オプション (`/layout c:\path` など) を使用してオフラインのレイアウトを取得する必要があります。 その後、実行可能ファイルをローカル パスから実行し、オフラインのインストーラーとして使用します。 なお、これは完全なレイアウトであるため、この手順によって、約 1 GB のサポート対象のすべての言語のすべてのパッケージがダウンロードされます。
+![".NET Core クロスプラットフォームの開発" ワークロードが選択された状態の Visual Studio 2017 インストールのスクリーン ショット](./media/windows-prerequisites/vs-15-3-workloads.jpg)
 
-### <a name="visual-studio-2017-rc"></a>Visual Studio 2017 RC
+**.NET Core クロスプラットフォームの開発**ツールセットがインストールされると、Visual Studio 2017 で .NET Core 1.x が既定で使用されます。 Visual Studio 2017 で .NET Core 2.0 がサポートされるように、.NET Core 2.0 SDK をインストールします。
 
-Visual Studio 2017 RC を使用して .NET Core アプリを開発する場合は、Visual Studio RC の最新バージョンをインストールし、".NET Core および Docker (プレビュー)" ワークロードを選択する必要があります。 
+ 2. [.NET Core 2.0 SDK](https://www.microsoft.com/net/download/dotnet-core/2.0) をインストールします。
+ 3. 次の手順を使用して、既存または新規の .NET Core 1.x プロジェクトを .NET Core 2.0 に再ターゲットします。
+    * **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
+    * **[ターゲット フレームワーク]** 選択メニューで、値を **[.NET Core 2.0]** に設定します。
 
-Visual Studio 2017 RC には複数のエディションがあります。 [Visual Studio Community 2017 RC](https://www.visualstudio.com/vs/visual-studio-2017-rc/#downloadvs) を無料でダウンロードして始められます。  Visual Studio のインストール プロセスの詳細については、「[Install Visual Studio 2017 RC](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)」(Visual Studio のインストール) を参照してください。
+![[ターゲット フレームワーク] メニュー項目で [.NET Core 2.0] が選択された Visual Studio 2017 のアプリケーション プロジェクト プロパティのスクリーンショット](./media/windows-prerequisites/Targeting-dotnetCore2.png)
 
-Visual Studio 2017 RC の最新バージョンを実行していることを確認するには、次の操作を行います。
+.NET Core 2.0 SDK がインストールされると、Visual Studio 2017 では .NET Core SDK 2.0 が既定で使用され、次のアクションがサポートされます。
 
-* [**ヘルプ**] メニューの [**About Microsoft Visual Studio**] (Microsoft Visual Studio のバージョン情報) を選択します。
-* **[Microsoft Visual Studio のバージョン情報]** ダイアログ ボックスのバージョン番号が 15.0.26020.0 以上である必要があります。
+* 既存の .NET Core 1.x プロジェクトを開き、ビルドし、実行する。
+* .NET Core 1.x プロジェクトを .NET Core 2.0 に再ターゲットし、ビルドし、実行する。
+* .NET Core 2.0 の新しいプロジェクトを作成する。
 
-Visual Studio 2017 RC での変更の詳細については、[リリース ノート](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)を参照してください。
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-[sdk]: https://go.microsoft.com/fwlink/?LinkID=827546
+Visual Studio で .NET Core 1.x アプリを開発するには、(**[その他のツールセット]** セクションで) **[.NET Core クロスプラットフォームの開発]** ワークロードを選択して、[Visual Studio 2017 をダウンロードしてインストール](/visualstudio/install/install-visual-studio)します。
 
+![".NET Core クロスプラットフォームの開発" ワークロードが選択された状態の Visual Studio 2017 インストールのスクリーン ショット](./media/windows-prerequisites/vs_workloads.jpg)
 
+> [!IMPORTANT]
+> .NET Core 1.x の開発に Visual Studio 2015 を使用することはできますが、次の理由からお勧めできません。
+  > * .NET Core Tooling は、サポートされていないプレビュー バージョンです。
+  > * プロジェクトは、非推奨の project.json ベースです。
+>
+> プロジェクト形式の変更の詳細については、[変更点の概要](./tools/cli-msbuild-architecture.md)に関するページをご覧ください。
+---
 
-<!--HONumber=Jan17_HO4-->
+<a name="vs-mapping"></a>
 
-
+> [!TIP]
+> お使いの Visual Studio 2017 バージョンを確認するには、次の手順を実行します。
+>
+> * **[ヘルプ]** メニューの **[About Microsoft Visual Studio]** (Microsoft Visual Studio のバージョン情報) を選択します。
+> * **[Microsoft Visual Studio のバージョン情報]** ダイアログで、バージョン番号を確認します。
+>   * .NET Core 2.2 Preview 1 アプリの場合は、Visual Studio 2017 バージョン 15.9 (現在 Preview 中) 以降です。
+>   * .NET Core 2.1 アプリの場合は、Visual Studio 2017 バージョン 15.7 以降です。
+>   * .NET Core 2.0 アプリの場合は、Visual Studio 2017 バージョン 15.3 以降です。
+>   * .NET Core 1.x アプリの場合は、Visual Studio 2017 バージョン 15.0 以降です。

@@ -1,28 +1,23 @@
 ---
-title: "project.json によるパッケージ依存関係の縮小"
-description: "project.json によるパッケージ依存関係の縮小"
-keywords: .NET, .NET Core
+title: project.json によるパッケージ依存関係の縮小
+description: project.json ベースのライブラリ作成時にパッケージの依存関係を減らします。
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
-ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-translationtype: Human Translation
-ms.sourcegitcommit: 62fdb3e60b206728d86220076867eb8fd68af82e
-ms.openlocfilehash: caae9f0a32c4378488329fd6d88c1dc7bf96ae9a
-
+ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44193615"
 ---
-
 # <a name="reducing-package-dependencies-with-projectjson"></a>project.json によるパッケージ依存関係の縮小
 
 この記事では、`project.json` ライブラリの作成時にパッケージ依存関係を減らすために知っておくべきことについて紹介します。 この記事を最後までお読みいただくと、必要な依存関係だけが使用されるようにライブラリを構築する方法を理解できます。 
 
 ## <a name="why-its-important"></a>これが重要な理由
 
-.NET Core は NuGet パッケージで構成される製品です。  必要不可欠なパッケージが [.NET Standard Library メタパッケージ](https://www.nuget.org/packages/NETStandard.Library)です。これは他のパッケージから構成される NuGet パッケージです。  一連のパッケージが提供されますが、それらは .NET Framework、.NET Core、Xamarin/Mono など、複数の .NET 実装で動作することが確認されています。
+.NET Core は NuGet パッケージで構成される製品です。  必要不可欠なパッケージが [.NETStandard.Library メタパッケージ](https://www.nuget.org/packages/NETStandard.Library)です。これは他のパッケージから構成される NuGet パッケージです。  一連のパッケージが提供されますが、それらは .NET Framework、.NET Core、Xamarin/Mono など、複数の .NET 実装で動作することが確認されています。
 
 しかしながら、お使いのライブラリではすべてのパッケージが使用されるとは限りません。  ライブラリを作成し、NuGet 経由で配信するときは、実際に使用するパッケージにのみ依存関係を "減らす" ことが推奨されます。  結果的に、NuGet パッケージの全体的フットプリントが少なくなります。
 
@@ -31,11 +26,12 @@ ms.openlocfilehash: caae9f0a32c4378488329fd6d88c1dc7bf96ae9a
 現在のところ、パッケージ参照を減らす正式な `dotnet` コマンドはありません。  代わりに、手動で行う必要があります。  一般的なプロセスは次のようになります。
 
 1. お使いの `project.json` の `dependencies` セクションにある `NETStandard.Library` バージョン `1.6.0` を参照します。
-2. コマンド ラインから `dotnet restore` でパッケージを復元します。
+2. コマンド ラインから `dotnet restore` でパッケージを復元します ([注記参照](#dotnet-restore-note))。
 3. `project.lock.json` ファイルを調べ、`NETSTandard.Library` というセクションを探します。  ファイルの始まりの近くにあります。
 4. `dependencies` の下にあるパッケージをすべてコピーします。
 5. `.NETStandard.Library` 参照を削除し、コピーしたパッケージで置き換えます。
 6. 不要なパッケージ参照を削除します。
+
 
 不要なパッケージは次の方法で確認できます。
 
@@ -60,7 +56,7 @@ ms.openlocfilehash: caae9f0a32c4378488329fd6d88c1dc7bf96ae9a
 }
 ```
 
-次に、`dotnet restore` でパッケージを復元し、`project.lock.json` ファイルを調べ、`NETSTandard.Library` に対して復元されたすべてのパッケージを探します。
+次に、`dotnet restore` でパッケージを復元し ([注記参照](#dotnet-restore-note))、`project.lock.json` ファイルを調べ、`NETSTandard.Library` に対して復元されたすべてのパッケージを探します。
 
 `netstandard1.0` をターゲットにするとき、`project.lock.json` ファイルの関連セクションは次のようになります。
 
@@ -157,8 +153,5 @@ ms.openlocfilehash: caae9f0a32c4378488329fd6d88c1dc7bf96ae9a
 
 これで、`NETStandard.Library` メタパッケージに依存する場合より、フットプリントが少なくなります。
 
-
-
-<!--HONumber=Nov16_HO1-->
-
-
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

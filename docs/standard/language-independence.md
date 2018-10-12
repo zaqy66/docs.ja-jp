@@ -1,29 +1,27 @@
 ---
-title: "言語への非依存性、および言語非依存コンポーネント"
-description: "言語への非依存性、および言語非依存コンポーネント"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+title: 言語への非依存性、および言語非依存コンポーネント
+description: C#、C++/CLI、F#、IronPython、VB、Visual COBOL、PowerShell など、.NET でサポートされる多くの言語の中のいずれかで開発する方法を説明します。
 ms.date: 07/22/2016
-ms.topic: article
-ms.prod: .net
+dev_langs:
+- csharp
+- vb
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 1458cfdb81c53b7eab384c1b7f3e65c7ad7d8098
-
+ms.openlocfilehash: 2e54f49f111c545a329a64ede400dc1354020f43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579510"
 ---
-
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
-.NET プラットフォームは言語に依存しません。 つまり、開発者は、C#、F#、および Visual Basic などの .NET プラットフォームを対象とする多くの言語のいずれかで開発できることを意味します。 .NET プラットフォーム用に開発されたクラス ライブラリの型とメンバーには、最初に記述された言語を知らなくてもアクセスできます。元の言語の規則に従う必要もありません。 コンポーネントを開発しているのであれば、コンポーネントの言語にかかわらず、すべての .NET アプリからそのコンポーネントにアクセスできます。
+.NET は言語に依存しません。 つまり、開発者は、C#、F#、および Visual Basic などの .NET 実装を対象とする多くの言語の中のいずれかで開発できることを意味します。 .NET 実装用に開発されたクラス ライブラリの型とメンバーには、最初に記述された言語を知らなくてもアクセスできます。元の言語の規則に従う必要もありません。 コンポーネントを開発しているのであれば、コンポーネントの言語にかかわらず、すべての .NET アプリからそのコンポーネントにアクセスできます。
 
 > [!NOTE]
 > この記事の最初の部分では、言語に依存しないコンポーネント、つまり、どの言語で記述されたアプリからでも使用できるコンポーネントの作成について説明します。 また、複数の言語で記述されたソース コードから 1 つのコンポーネントまたはアプリを作成することもできます。この記事の 2 番目のパートにある「[言語間の相互運用性](#cross-language-interoperability)」を参照してください。 
 
-任意の言語で記述された他のオブジェクトと完全に対話するには、すべての言語に共通の機能だけを呼び出し側に公開するようにオブジェクトを実装する必要があります。 この共通の機能セットは、生成されたアセンブリに適用される規則のセットである、共通言語仕様 (CLS: Common Language Specification) によって定義されます。 共通言語仕様は、「[Standard ECMA-335: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 7 ～ 11 項で定義されています。 
+任意の言語で記述された他のオブジェクトと完全に対話するには、すべての言語に共通の機能だけを呼び出し側に公開するようにオブジェクトを実装する必要があります。 この共通の機能セットは、生成されたアセンブリに適用される規則のセットである、共通言語仕様 (CLS: Common Language Specification) によって定義されます。 共通言語仕様は、「[Standard ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 7 ～ 11 項で定義されています。 
 
 コンポーネントが共通言語仕様に準拠している場合は、CLS に準拠することが保証され、CLS をサポートするすべてのプログラミング言語で記述されたアセンブリのコードからアクセスできます。 コンパイル時にコンポーネントが共通言語仕様に準拠しているかどうかを確認するには、[CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 属性をソース コードに適用します。 詳細については、「[CLSCompliantAttribute 属性](#the-clscompliantattribute-attribute)」を参照してください。
 
@@ -67,7 +65,7 @@ ms.openlocfilehash: 1458cfdb81c53b7eab384c1b7f3e65c7ad7d8098
 
 ## <a name="cls-compliance-rules"></a>CLS 準拠の規則
 
-ここでは、CLS に準拠したコンポーネントを作成するための規則について説明します。 規則の一覧については、「[ECMA-335 Standard: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 11 項を参照してください。
+ここでは、CLS に準拠したコンポーネントを作成するための規則について説明します。 規則の一覧については、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 11 項を参照してください。
 
 > [!NOTE]
 > 共通言語仕様では、コンシューマー (プログラムによって CLS 準拠のコンポーネントにアクセスする開発者)、フレームワーク (言語コンパイラを使用して CLS 準拠のライブラリを作成する開発者)、およびエクステンダー (CLS 準拠のコンポーネントを作成する言語コンパイラ、コード パーサーなどのツールを作成する開発者) に適用する、CLS 準拠の各規則について説明します。 ここでは、フレームワークに適用するときの規則に焦点を当てます。 エクステンダーに適用する一部の規則は、[Reflection.Emit](xref:System.Reflection.Emit) を使用して作成されたアセンブリに適用されることもあります。 
@@ -152,9 +150,9 @@ End Class
 
 * パブリック クラスのパブリック メソッドのパラメーターおよび戻り値の型、派生クラスからアクセスできるメソッドのパラメーターおよび戻り値の型。 
 
-CLS 準拠の規則を次の表に示します。 この規則は、「[ECMA-335 Standard: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) からの引用で、Ecma International が 2012 年の著作権を保有しています。 これらの規則の詳細については、以降のセクションを参照してください。 
+CLS 準拠の規則を次の表に示します。 この規則は、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) からの引用で、Ecma International が 2012 年の著作権を保有しています。 これらの規則の詳細については、以降のセクションを参照してください。 
 
-カテゴリ | 参照トピック | ルール | 規則番号
+カテゴリ | 解決方法については、 | ルール | 規則番号
 -------- | --- | ---- | -----------
 ユーザー補助 | [メンバーのアクセシビリティ](#member-accessibility) | 継承されたメソッドをオーバーライドする場合、アクセシビリティは変更してはいけない。ただし、別のアセンブリから継承されたメソッドをアクセシビリティ `family-or-assembly` でオーバーライドする場合は除く。 この場合、アクセシビリティは `family` にすること。 | 10
 ユーザー補助 | [メンバーのアクセシビリティ](#member-accessibility) | 型およびメンバーの可視性およびアクセシビリティについて、メンバーのシグネチャに指定されている型は、そのメンバーが可視でアクセス可能な場合、必ず可視でアクセス可能でなければいけない。 たとえば、アセンブリ外部から参照できるパブリックなメソッドには、アセンブリ内部でだけ可視である型が引数として含まれていてはいけない。 メンバーのシグネチャに使用されているジェネリック型のインスタンスを構成する型の可視性およびアクセシビリティは、メンバーが可視でアクセス可能の場合、必ず可視でアクセス可能でなければいけない。 たとえば、アセンブリ外部から参照できるメンバーのシグネチャに指定されているジェネリック型のインスタンスに、アセンブリ内部でだけ可視である型の汎用引数が含まれていてはいけない。 | 12
@@ -164,9 +162,9 @@ CLS 準拠の規則を次の表に示します。 この規則は、「[ECMA-335
 属性 | [属性](#attributes) | CLS では、公開参照される必須の修飾子 (`modreq`、第 2 部を参照) は使用できない。ただし、認識しないオプションの修飾子 (`modopt`、第 2 部を参照) は使用できる。 | 35
 コンストラクター | [コンストラクター](#constructors) | オブジェクト コンストラクターでは、継承しているインスタンス データへのアクセスが発生する前に、基底クラスのインスタンス コンストラクターを呼び出さなければいけない (コンストラクターが不要である値型は除く)。  | 21
 コンストラクター | [コンストラクター](#constructors) | オブジェクト コンストラクターがオブジェクトの作成時以外で呼び出されてはならず、またオブジェクトが 2 度初期化されてもいけない。 | 22
-列挙型 | [列挙型](#enumerations) | enum の基になる型は組み込みの CLS 整数型、フィールド名は "value__" であり、そのフィールドには `RTSpecialName` のマークが付けられる。 |  7
-列挙型 | [列挙型](#enumerations) | enum には 2 種類あり、[System.FlagsAttribute](xref:System.FlagsAttribute) カスタム属性 (第 4 部のライブラリを参照) の有無で区別する。 片方は名前付き整数値を表し、もう片方は名前付きビット フラグを表す。名前付きビット フラグは、それを組み合わせて名前のない値を生成できる。 `enum` の値は、指定した値に限定されない。 |  9
-列挙型 | [列挙型](#enumerations) | enum のリテラルな静的フィールドの型は、その enum 自体の型である。 |  9
+列挙 | [列挙型](#enumerations) | enum の基になる型は組み込みの CLS 整数型、フィールド名は "value__" であり、そのフィールドには `RTSpecialName` のマークが付けられる。 |  7
+列挙型 | [列挙型](#enumerations) | enum には 2 種類あり、[System.FlagsAttribute](xref:System.FlagsAttribute) カスタム属性 (第 4 部のライブラリを参照) の有無で区別する。 片方は名前付き整数値を表し、もう片方は名前付きビット フラグを表す。名前付きビット フラグは、それを組み合わせて名前のない値を生成できる。 `enum` の値は、指定した値に限定されない。 |  8
+列挙 | [列挙型](#enumerations) | enum のリテラルな静的フィールドの型は、その enum 自体の型である。 |  9
 イベント | [イベント](#events) | イベントを実装するメソッドは、メタデータ内で `SpecialName` のマークが付けられる。 |29
 イベント | [イベント](#events) | イベントとイベントのアクセサーのアクセシビリティは同一である。 |30
 イベント | [イベント](#events) | イベントの `add` メソッドおよび `remove` メソッドは、どちらもあってもなくてもよい。 |31
@@ -194,7 +192,7 @@ CLS 準拠の規則を次の表に示します。 この規則は、「[ECMA-335
 オーバーロード | -- | 型で宣言された複数の CLS 準拠のメソッドに同じ名前が指定されている場合、特定の一連の型のインスタンス化において、これらのメソッドのパラメーターと戻り値の型は同じである。また、これらの型のインスタンス化で、すべてのメソッドをセマンティクス レベルで等価にする必要がある。 | 48
 プロパティ | [プロパティ](#properties) | プロパティの getter メソッドおよび setter メソッドを実装するメソッドは、メタデータで `SpecialName` とマークする。 | 24
 プロパティ | [プロパティ](#properties) | プロパティ アクセサーはすべて静的、すべて仮想、またはすべてインスタンスになる。 | 26
-プロパティ | [プロパティ](#properties) | プロパティの型は、getter の戻り値の型であり、かつ setter の最後の引数の型でなければいけない。 プロパティのパラメーターの型は、getter へのパラメーターの型であり、かつ setter の最後のパラメーター以外のすべての型でなければいけない。 すべての型は CLS 準拠でなければならない。また、マネージ ポインターであってはいけない。つまり、参照渡しではいけない。 | 27
+プロパティ | [プロパティ](#properties) | プロパティの型は、getter の戻り値の型であり、かつ setter の最後の引数の型でなければいけない。 プロパティのパラメーターの型は、getter へのパラメーターの型であり、かつ setter の最後のパラメーター以外のすべての型でなければいけない。 すべての型は CLS 準拠でなければならない。また、マネージ ポインターであってはいけない (つまり、参照渡しではいけない)。 | 27
 プロパティ | [プロパティ](#properties) | プロパティは、特定の名前付けパターンに従わなくてはいけない。 CLS 規則 24 で触れられている `SpecialName` 属性は、適切な名前比較で無視され、識別子規則に従わなければいけない。 プロパティには getter メソッド、setter メソッド、またはこの両方が必ずなければいけない。 | 28
 型変換 | [型変換](#type-conversion) | op_Implicit または op_Explicit が指定されている場合は、強制変換のための別の方法を用意する必要がある。 | 39
 種類 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | ボックス化された値型は CLS 準拠ではない。 | 3
@@ -345,7 +343,7 @@ CLS 準拠型 | 説明
  
  .NET Framework のクラス ライブラリまたはその他のクラス ライブラリには、CLS に準拠していない他の型が含まれる場合があります。次に例を示します。 
  
- * ボックス化された値型。 次の C# コード例では、`Value` という名前の型 `int`* のパブリック プロパティを持つクラスを作成します。`int`* はボックス化された値型であるため、コンパイラは CLS 非準拠としてフラグを設定します。
+ * ボックス化された値型。 次の C# コード例では、`Value` という名前の型 `int`* のパブリック プロパティを持つクラスを作成します。 `int`* はボックス化された値型であるため、コンパイラは CLS 非準拠としてフラグを設定します。
 
   ```csharp
   using System;
@@ -611,7 +609,7 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-名前空間、型、メンバーの名前など、プログラミング言語の識別子は [Unicode Standard 3.0 の Technical Report 15 の Annex 7](http://www.unicode.org/reports/tr15/tr15-18.html) に準拠する必要があります。 これによって、次のことが起こります。
+名前空間、型、メンバーの名前など、プログラミング言語の識別子は [Unicode Standard 3.0 の Technical Report 15 の Annex 7](https://www.unicode.org/reports/tr15/tr15-18.html) に準拠する必要があります。 これによって、次のことが起こります。
 
 * 識別子の最初の文字は Unicode の大文字と小文字、大文字と小文字の組み合わせ、修飾子文字、その他の文字、または文字数の番号を指定できます。 Unicode 文字のカテゴリの詳細については、「[System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory) 列挙体」を参照してください。 
 
@@ -781,7 +779,7 @@ Public Class [case]
 End Class
 ```
 
-次の C# コード例では、`case` シンボルを使用して @ クラスをインスタンス化することで、識別子と言語キーワードを区別できます。 これがないと、C# コンパイラによって 2 つのエラー メッセージ "型が必要です" および "'case' は無効です" が表示されます。 
+次の C# コード例では、@ シンボルを使用して `case` クラスをインスタンス化することで、識別子と言語キーワードを区別できます。 これがないと、C# コンパイラによって 2 つのエラー メッセージ "型が必要です" および "'case' は無効です" が表示されます。 
 
 ```csharp
 using System;
@@ -1108,7 +1106,7 @@ CLS 準拠の配列は、次の規則に従います。
          Return numbersOut
      End Function
   End Module
-```
+  ```
 
 ### <a name="interfaces"></a>インターフェイス
 
@@ -1251,7 +1249,7 @@ End Module
 '       Temperature in Fahrenheit: 212.0 degrees
 ```
 
-### <a name="enumerations"></a>列挙体
+### <a name="enumerations"></a>列挙
 
 CLS 準拠の列挙型は、次の規則に従う必要があります。 
 
@@ -1658,7 +1656,6 @@ End Class
 '    
 '    Public Class BaseCollection(Of T As BaseClass)
 '                                        ~~~~~~~~~
-
 ```
 
 ジェネリック型がジェネリック基本型から派生している場合、そのジェネリック型は、基本型に対する制約も必ず満たすように制約を再宣言する必要があります。 次の例では、任意の数値型を表すことができる `Number<T>` を定義します。 また、浮動小数点値を表す `FloatingPoint<T>` クラスも定義します。 ただし、ソース コードはコンパイルされません。`Number<T>` (T は値型) の制約は `FloatingPoint<T>` に適用されないからです。
@@ -1936,7 +1933,7 @@ CLS 準拠のクラスと構造体のコンストラクターは、次の規則�
 
 * 派生クラスのコンストラクターは、継承されたインスタンス データにアクセスする前に、基底クラスのインスタンス コンストラクターを呼び出す必要があります。 これは、基底クラスのコンストラクターは派生クラスには継承されないからです。 この規則は、直接継承をサポートしない構造体に適用されません。 
 
-  次の例に示すように、コンパイラは、通常、CLS 準拠とは別にこの規則を適用します。 これにより、`Person` クラスから派生した `Doctor` クラスが作成されますが、`Doctor` クラスでは、継承されたインスタンス フィールドを初期化するための `Person` クラス コンストラクターは呼び出されません。 
+  次の例に示すように、コンパイラは、通常、CLS 準拠とは別にこの規則を適用します。 これにより、`Doctor` クラスから派生した `Person` クラスが作成されますが、`Doctor` クラスでは、継承されたインスタンス フィールドを初期化するための `Person` クラス コンストラクターは呼び出されません。 
 
     ```csharp
     using System;
@@ -2951,10 +2948,4 @@ C# でコンパイルするには、コンパイラの名前を vbc から csc �
 ```
 csc example.cs /r:UtilityLib.dll
 ```
-
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

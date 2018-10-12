@@ -1,21 +1,17 @@
 ---
-title: "クロス プラットフォーム ツールによる NuGet パッケージの作成"
-description: "クロス プラットフォーム ツールによる NuGet パッケージの作成"
-keywords: .NET, .NET Core, NuGet
+title: クロス プラットフォーム ツールによる NuGet パッケージの作成
+description: ’dotnet pack’ コマンドを使用して NuGet パッケージを作成する方法を説明します。
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
-translationtype: Human Translation
-ms.sourcegitcommit: 300a0304e316cfa265634a3faf74c81c7a8a5e08
-ms.openlocfilehash: d863587fbfee2bf713f8566a3e5b294d49ae50e9
-
+ms.openlocfilehash: 6be94c2e2cef443f69b2d6df7c2d490cb1fb629d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205063"
 ---
-
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>クロスプラットフォーム ツールを使用して NuGet パッケージを作成する方法
 
 > [!NOTE]
@@ -26,6 +22,9 @@ ms.openlocfilehash: d863587fbfee2bf713f8566a3e5b294d49ae50e9
 たとえば、NuGet 経由で配布する新しい優れたライブラリを作成したとします。  クロス プラットフォーム ツールを使用して NuGet パッケージを作成すれば、正確に実行できます。  次の例では、`netstandard1.0` をターゲットとする **SuperAwesomeLibrary** というライブラリを想定します。
 
 推移的依存関係がある (つまり、別のプロジェクトに依存するプロジェクトがある) 場合、NuGet パッケージを作成する前に `dotnet restore` コマンドでソリューション全体のパッケージを復元する必要があります。  そうしないと、`dotnet pack` コマンドが正しく機能しません。
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 
 パッケージが復元されたことを確認したら、以下のコマンドを実行してライブラリがあるディレクトリに移動できます。
 
@@ -64,9 +63,3 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>`dotnet pack`と `dotnet publish` を混同しないようにしてください
 
 ここで `dotnet publish` コマンドを使用しても意味がありません。  `dotnet publish` コマンドは、同じバンドルにすべての依存関係があるアプリケーションを配置するためのものであり、NuGet 経由で配布して使用する NuGet パッケージを生成するためのものではありません。
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-

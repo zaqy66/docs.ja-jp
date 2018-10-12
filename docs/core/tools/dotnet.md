@@ -1,96 +1,303 @@
 ---
-title: "dotnet コマンド | .NET Core SDK"
-description: "dotnet コマンド (.NET Core CLI ツールの一般的なドライバー) とその使用法について説明します。"
-keywords: "dotnet, CLI, CLI コマンド, .NET Core"
+title: dotnet コマンド - .NET Core CLI
+description: dotnet コマンド (.NET Core CLI ツールの一般的なドライバー) とその使用法について説明します。
 author: mairaw
-manager: wpickett
-ms.date: 10/07/2016
-ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
-ms.assetid: 93015521-2127-4fe9-8fce-ca79bcc4ff49
-translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 77c37ac3d4d0ba9ad1feac539debe40b0ee31161
-
+ms.author: mairaw
+ms.date: 06/04/2018
+ms.openlocfilehash: 788dc746705f9328683019ab3ad9836204a1ea63
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805660"
 ---
+# <a name="dotnet-command"></a>dotnet コマンド
 
-#<a name="dotnet-command"></a>dotnet コマンド
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
-dotnet -- コマンドラインのコマンドを実行するための一般的なドライバーです。
+`dotnet` - コマンドラインのコマンドを実行するための一般的なドライバーです。
 
 ## <a name="synopsis"></a>構文
 
-`dotnet [--version] [--verbose] [--info] [command] [arguments] [--help]`
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
+    [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
+    [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
+    [-h|--help] [--info] [-v|--verbosity] [--version]
+```
+---
 
 ## <a name="description"></a>説明
-`dotnet` は、コマンド ライン インターフェイス (CLI) ツールチェーンの一般的なドライバーです。 単独で呼び出され、簡単な使用方法を説明します。 
 
-特定の機能がそれぞれコマンドとして実装されます。 機能を使用するには、[`dotnet build`](dotnet-build.md) のように、`dotnet` の後にコマンドを指定します。 コマンドに続く引数はすべて独自の引数です。 
+`dotnet` は、コマンド ライン インターフェイス (CLI) ツールチェーンの一般的なドライバーです。 単独で呼び出され、簡単な使用方法を提供します。
 
-`dotnet` が単独でコマンドとして使用されるのは、ポータブル アプリを実行する場合にのみです。 アプリケーションを実行する場合は、`dotnet` の動詞の後にポータブル アプリケーション DLL を指定するだけです。    
+特定の機能がそれぞれコマンドとして実装されます。 機能を使用するには、[`dotnet build`](dotnet-build.md) のように、`dotnet` の後にコマンドを指定します。 コマンドに続く引数はすべて独自の引数です。
+
+`dotnet` が単独でコマンドとして使用されるのは、[フレームワークに依存するアプリ](../deploying/index.md)を実行する場合のみです。 アプリケーションを実行する場合は、`dotnet` の動詞の後にアプリケーション DLL を指定します (`dotnet myapp.dll` など)。
 
 ## <a name="options"></a>オプション
 
-`-v|--verbose`
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-詳細出力を有効にします。
+`--additional-deps <PATH>`
 
-`--version`
+追加の *deps.json* ファイルへのパスです。
 
-CLI ツールのバージョンを印刷します。
+`--additionalprobingpath <PATH>`
 
-`--info`
+プローブ ポリシーとプローブするアセンブリを含むパスです。
 
-現在のオペレーティング システム、バージョンのコミット SHA など、CLI ツールの詳細情報を印刷します。 
+`-d|--diagnostics`
+
+診断出力を有効にします。
+
+`--fx-version <VERSION>`
+
+アプリケーションを実行するために使用するインストール済み .NET Core ランタイムのバージョンです。
 
 `-h|--help`
 
-コマンドの短いヘルプを印刷します。 `dotnet` のみで使用すると、使用可能なコマンドのリストも印刷されます。  
+コマンドの短いヘルプを印刷します。 `dotnet` で使用すると、使用可能なコマンドのリストも印刷されます。
+
+`--info`
+
+現在のオペレーティング システム、バージョンのコミット SHA、およびその他の情報など、CLI ツールと環境の詳細情報を印刷します。
+
+`--list-runtimes`
+
+インストールされている .NET Core ランタイムを表示します。
+
+`--list-sdks`
+
+インストールされている .NET Core SDK を表示します。
+
+`--roll-forward-on-no-candidate-fx`
+
+ 共有フレームワークの候補なしでロールフォワードします。
+
+`-v|--verbosity <LEVEL>`
+
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。
+
+`--version`
+
+使用中の .NET Core SDK のバージョンを印刷します。
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`--additional-deps <PATH>`
+
+追加の *deps.json* ファイルへのパスです。
+
+`--additionalprobingpath <PATH>`
+
+プローブ ポリシーとプローブするアセンブリを含むパスです。
+
+`-d|--diagnostics`
+
+診断出力を有効にします。
+
+`--fx-version <VERSION>`
+
+アプリケーションを実行するために使用するインストール済み .NET Core ランタイムのバージョンです。
+
+`-h|--help`
+
+コマンドの短いヘルプを印刷します。 `dotnet` で使用すると、使用可能なコマンドのリストも印刷されます。
+
+`--info`
+
+現在のオペレーティング システム、バージョンのコミット SHA、およびその他の情報など、CLI ツールと環境の詳細情報を印刷します。
+
+`--roll-forward-on-no-candidate-fx`
+
+ 共有フレームワークの候補なしでロールフォワードします。
+
+`-v|--verbosity <LEVEL>`
+
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。
+
+`--version`
+
+使用中の .NET Core SDK のバージョンを印刷します。
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`--additionalprobingpath <PATH>`
+
+プローブ ポリシーとプローブするアセンブリを含むパスです。
+
+`-d|--diagnostics`
+
+診断出力を有効にします。
+
+`--fx-version <VERSION>`
+
+アプリケーションを実行するために使用するインストール済み .NET Core ランタイムのバージョンです。
+
+`-h|--help`
+
+コマンドの短いヘルプを印刷します。 `dotnet` で使用すると、使用可能なコマンドのリストも印刷されます。
+
+`--info`
+
+現在のオペレーティング システム、バージョンのコミット SHA、およびその他の情報など、CLI ツールと環境の詳細情報を印刷します。
+
+`-v|--verbosity <LEVEL>`
+
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。
+
+`--version`
+
+使用中の .NET Core SDK のバージョンを印刷します。
+
+---
 
 ## <a name="dotnet-commands"></a>dotnet コマンド
 
-次のコマンドは dotnet のために存在します。
+### <a name="general"></a>全般
 
-* [dotnet-new](dotnet-new.md)
-   * C# または F# コンソール アプリケーション プロジェクトを初期化します。
-* [dotnet-restore](dotnet-restore.md)
-  * 指定されたアプリケーションの依存関係を復元します。 
-* [dotnet-build](dotnet-build.md)
-  * .NET Core アプリケーションをビルドします。
-* [dotnet-publish](dotnet-publish.md)
-   * .NET ポータブルまたは自己完結型アプリケーションを発行します。
-* [dotnet-run](dotnet-run.md)
-   * ソースからアプリケーションを実行します。
-* [dotnet-test](dotnet-test.md)
-   * project.json で指定されたテスト ランナーを使用してテストを実行します。
-* [dotnet-pack](dotnet-pack.md)
-   * コードの NuGet パッケージを作成します。
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-## <a name="examples"></a>例
+| コマンド                                       | 関数                                                            |
+| --------------------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)               | .NET Core アプリケーションをビルドします。                                     |
+| [dotnet build-server](dotnet-build-server.md) | ビルドによって起動されたサーバーとやり取りします。                          |
+| [dotnet clean](dotnet-clean.md)               | クリーン ビルド出力です。                                                |
+| [dotnet help](dotnet-help.md)                 | コマンドのより詳細なドキュメントをオンラインで表示します。           |
+| [dotnet migrate](dotnet-migrate.md)           | 有効な Preview 2 プロジェクトを .NET Core SDK 1.0 プロジェクトに移行します。  |
+| [dotnet msbuild](dotnet-msbuild.md)           | MSBuild コマンド ラインへのアクセスを提供します。                        |
+| [dotnet new](dotnet-new.md)                   | 指定されたテンプレートの C# または F# プロジェクトを初期化します。                |
+| [dotnet pack](dotnet-pack.md)                 | コードの NuGet パッケージを作成します。                               |
+| [dotnet publish](dotnet-publish.md)           | .NET Framework に依存するアプリケーションまたは自己完結型アプリケーションを発行します。 |
+| [dotnet restore](dotnet-restore.md)           | 指定されたアプリケーションの依存関係を復元します。                  |
+| [dotnet run](dotnet-run.md)                   | ソースからアプリケーションを実行します。                                   |
+| [dotnet sln](dotnet-sln.md)                   | ソリューション ファイルのプロジェクトを追加、削除、一覧表示するオプション。       |
+| [dotnet store](dotnet-store.md)               | ランタイム パッケージ ストアにアセンブリを格納します。                     |
+| [dotnet test](dotnet-test.md)                 | テスト ランナーを使用してテストを実行します。                                     |
 
-コンパイルして実行できるサンプルの .NET Core コンソール アプリケーションを初期化します。
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-`dotnet new`
+| コマンド                             | 関数                                                            |
+| ----------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)     | .NET Core アプリケーションをビルドします。                                     |
+| [dotnet clean](dotnet-clean.md)     | クリーン ビルド出力です。                                              |
+| [dotnet help](dotnet-help.md)       | コマンドのより詳細なドキュメントをオンラインで表示します。           |
+| [dotnet migrate](dotnet-migrate.md) | 有効な Preview 2 プロジェクトを .NET Core SDK 1.0 プロジェクトに移行します。  |
+| [dotnet msbuild](dotnet-msbuild.md) | MSBuild コマンド ラインへのアクセスを提供します。                        |
+| [dotnet new](dotnet-new.md)         | 指定されたテンプレートの C# または F# プロジェクトを初期化します。                |
+| [dotnet pack](dotnet-pack.md)       | コードの NuGet パッケージを作成します。                               |
+| [dotnet publish](dotnet-publish.md) | .NET Framework に依存するアプリケーションまたは自己完結型アプリケーションを発行します。 |
+| [dotnet restore](dotnet-restore.md) | 指定されたアプリケーションの依存関係を復元します。                  |
+| [dotnet run](dotnet-run.md)         | ソースからアプリケーションを実行します。                                   |
+| [dotnet sln](dotnet-sln.md)         | ソリューション ファイルのプロジェクトを追加、削除、一覧表示するオプション。       |
+| [dotnet store](dotnet-store.md)     | ランタイム パッケージ ストアにアセンブリを格納します。                     |
+| [dotnet test](dotnet-test.md)       | テスト ランナーを使用してテストを実行します。                                     |
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+| コマンド                             | 関数                                                            |
+| ----------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)     | .NET Core アプリケーションをビルドします。                                     |
+| [dotnet clean](dotnet-clean.md)     | クリーン ビルド出力です。                                              |
+| [dotnet migrate](dotnet-migrate.md) | 有効な Preview 2 プロジェクトを .NET Core SDK 1.0 プロジェクトに移行します。  |
+| [dotnet msbuild](dotnet-msbuild.md) | MSBuild コマンド ラインへのアクセスを提供します。                        |
+| [dotnet new](dotnet-new.md)         | 指定されたテンプレートの C# または F# プロジェクトを初期化します。                |
+| [dotnet pack](dotnet-pack.md)       | コードの NuGet パッケージを作成します。                               |
+| [dotnet publish](dotnet-publish.md) | .NET Framework に依存するアプリケーションまたは自己完結型アプリケーションを発行します。 |
+| [dotnet restore](dotnet-restore.md) | 指定されたアプリケーションの依存関係を復元します。                  |
+| [dotnet run](dotnet-run.md)         | ソースからアプリケーションを実行します。                                   |
+| [dotnet sln](dotnet-sln.md)         | ソリューション ファイルのプロジェクトを追加、削除、一覧表示するオプション。       |
+| [dotnet test](dotnet-test.md)       | テスト ランナーを使用してテストを実行します。                                     |
+
+---
+
+### <a name="project-references"></a>プロジェクト参照
+
+コマンド | 関数
+--- | ---
+[dotnet add reference](dotnet-add-reference.md) | プロジェクト参照を追加します。
+[dotnet list reference](dotnet-list-reference.md) | プロジェクト参照をリストします。
+[dotnet remove reference](dotnet-remove-reference.md) | プロジェクト参照を削除します。
+
+### <a name="nuget-packages"></a>NuGet パッケージ
+
+コマンド | 関数
+--- | ---
+[dotnet add package](dotnet-add-package.md) | NuGet パッケージを追加します。
+[dotnet remove package](dotnet-remove-package.md) | NuGet パッケージを削除します。
+
+### <a name="nuget-commands"></a>NuGet コマンド
+
+コマンド | 関数
+--- | ---
+[dotnet nuget delete](dotnet-nuget-delete.md) | サーバーからパッケージを削除または一覧から削除します。
+[dotnet nuget locals](dotnet-nuget-locals.md) | HTTP 要求キャッシュ、一時的なキャッシュ、コンピューター全体のグローバル パッケージ フォルダーなどのローカルの NuGet リソースをクリアまたは一覧表示します。
+[dotnet nuget push](dotnet-nuget-push.md) | パッケージをサーバーにプッシュして発行します。
+
+### <a name="global-tools-commands"></a>グローバル ツール コマンド
+
+[.NET Core グローバル ツール](global-tools.md)は .NET Core SDK 2.1.300 以降で使用できます。
+
+コマンド | 関数
+--- | ---
+[dotnet tool install](dotnet-tool-install.md) | グローバル ツールをマシンにインストールします。
+[dotnet tool list](dotnet-tool-list.md) | マシン上の既定のディレクトリまたは指定したパスに現在インストールされているすべてのグローバル ツールを一覧表示します。
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | グローバル ツールをマシンからアンインストールします。
+[dotnet tool update](dotnet-tool-update.md) | マシン上のグローバル ツールを更新します。
+
+### <a name="additional-tools"></a>その他のツール
+
+.NET Core SDK 2.1.300 以降では、`DotnetCliToolReference` を使用してプロジェクト単位でのみ入手可能であった複数のツールを .NET Core SDK の一部として入手できるようになりました。 それらのツールを以下に示します。
+
+| ツール                                              | 関数                                                     |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| dev-certs                                         | 開発証明書を作成および管理します。                |
+| [ef](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core コマンドライン ツールです。                    |
+| sql-cache                                         | SQL Server キャッシュ コマンドライン ツールです。                         |
+| [user-secrets](/aspnet/core/security/app-secrets) | 開発ユーザーのシークレットを管理します。                            |
+| [watch](/aspnet/core/tutorials/dotnet-watch)      | ファイルが変化するとコマンドを実行するファイル ウォッチャーを起動します。 |
+
+各ツールの詳細については、`dotnet <tool-name> --help` を実行してください。
+
+## <a name="examples"></a>使用例
+
+新しい .NET Core コンソール アプリケーションを作成します。
+
+`dotnet new console`
 
 指定されたアプリケーションの依存関係を復元します。
 
 `dotnet restore`
 
-指定されたディレクトリにプロジェクトとその依存関係をビルドします。 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
+指定されたディレクトリにプロジェクトとその依存関係をビルドします。
 
 `dotnet build`
 
-`myapp.dll` という名前のポータブル アプリを実行する: `dotnet myapp.dll`
+`myapp.dll` という名前のフレームワークに依存するアプリを実行します。
 
-## <a name="environment"></a>環境 
+`dotnet myapp.dll`
+
+## <a name="environment-variables"></a>環境変数
+
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 
-プライマリ パッケージのキャッシュです。 設定されていない場合は、既定で $HOME/.nuget/packages (Unix の場合) または %HOME%\NuGet\Packages (Windows の場合) になります。
+プライマリ パッケージのキャッシュです。 設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%HOME%\NuGet\Packages` (Windows の場合) になります。
 
 `DOTNET_SERVICING`
 
@@ -98,9 +305,46 @@ CLI ツールのバージョンを印刷します。
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-.NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。 `true` の場合は、テレメトリ機能が無効になります (指定できる値は true、1、yes です)。それ以外の場合は `false` です (指定できる値は false、0、no です)。 設定されていない場合、既定で `false` (つまり、テレメトリ機能が有効) になります。
+.NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。 `true` に設定するとテレメトリ機能が無効になります (指定できる値は `true`、`1`、または `yes` です)。 それ以外の場合は `false` に設定します。この場合、テレメトリ機能が有効になります (指定できる値は `false`、`0`、または `no` です)。 設定されていない場合、既定で `false` になり、テレメトリ機能はアクティブになります。
 
+`DOTNET_MULTILEVEL_LOOKUP`
 
-<!--HONumber=Nov16_HO1-->
+.NET Core ランタイム、共有フレームワーク、または SDK がグローバルな場所から解決されるかどうかを指定します。 設定されていない場合は、既定で `true` になります。 `false` に設定すると、グローバルな場所から解決されず、.NET Core インストールが分離されます (値 `0` または `false` が受け入れられます)。 複数レベルのルックアップの詳細については、「[Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)」 (複数レベルの SharedFX ルックアップ) を参照してください。
 
+`DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
+マイナー バージョンのロールフォワードを無効にします。 詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`DOTNET_PACKAGES`
+
+プライマリ パッケージのキャッシュです。 設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%HOME%\NuGet\Packages` (Windows の場合) になります。
+
+`DOTNET_SERVICING`
+
+ランタイムの読み込み時に共有ホストで使用するサービス インデックスの場所を指定します。
+
+`DOTNET_CLI_TELEMETRY_OPTOUT`
+
+.NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。 `true` に設定するとテレメトリ機能が無効になります (指定できる値は `true`、`1`、または `yes` です)。 それ以外の場合は `false` に設定します。この場合、テレメトリ機能が有効になります (指定できる値は `false`、`0`、または `no` です)。 設定されていない場合、既定で `false` になり、テレメトリ機能はアクティブになります。
+
+`DOTNET_MULTILEVEL_LOOKUP`
+
+.NET Core ランタイム、共有フレームワーク、または SDK がグローバルな場所から解決されるかどうかを指定します。 設定されていない場合は、既定で `true` になります。 `false` に設定すると、グローバルな場所から解決されず、.NET Core インストールが分離されます (値 `0` または `false` が受け入れられます)。 複数レベルのルックアップの詳細については、「[Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)」 (複数レベルの SharedFX ルックアップ) を参照してください。
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`DOTNET_PACKAGES`
+
+プライマリ パッケージのキャッシュです。 設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%HOME%\NuGet\Packages` (Windows の場合) になります。
+
+`DOTNET_SERVICING`
+
+ランタイムの読み込み時に共有ホストで使用するサービス インデックスの場所を指定します。
+
+`DOTNET_CLI_TELEMETRY_OPTOUT`
+
+.NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。 `true` に設定するとテレメトリ機能が無効になります (指定できる値は `true`、`1`、または `yes` です)。 それ以外の場合は `false` に設定します。この場合、テレメトリ機能が有効になります (指定できる値は `false`、`0`、または `no` です)。 設定されていない場合、既定で `false` になり、テレメトリ機能はアクティブになります。
+
+---

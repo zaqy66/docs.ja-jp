@@ -1,116 +1,50 @@
 ---
-title: "方法 : TimeZoneInfo オブジェクトをインスタンス化する"
-description: "方法 : TimeZoneInfo オブジェクトをインスタンス化する"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 08/15/2016
-ms.topic: article
-ms.prod: .net
+title: '方法: TimeZoneInfo オブジェクトをインスタンス化'
+ms.date: 04/10/2017
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: bff137e5-d550-44c3-b460-b3f2dabd4035
-translationtype: Human Translation
-ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: 1c619cf6bd150e009367b43d1d83fa1713ec2690
-
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- instantiating time zone objects
+- time zone objects [.NET Framework], instantiation
+ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 8c8ff38325e26dd1bc946f6f12c365b6dea3e228
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070613"
 ---
+# <a name="how-to-instantiate-a-timezoneinfo-object"></a>方法: TimeZoneInfo オブジェクトをインスタンス化
 
-# <a name="how-to-instantiate-a-timezoneinfo-object"></a>方法 : TimeZoneInfo オブジェクトをインスタンス化する
+<xref:System.TimeZoneInfo> オブジェクトをインスタンス化する最も一般的な方法は、レジストリからオブジェクトに関する情報を取得することです。 このトピックでは、ローカル システムのレジストリから <xref:System.TimeZoneInfo> オブジェクトをインスタンス化する方法について説明します。
 
-[TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトをインスタンス化する最も一般的な方法は、オペレーティング システムからオブジェクトに関する情報を取得することです。 このトピックでは、ローカル システムから [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトをインスタンス化する方法について説明します。
+### <a name="to-instantiate-a-timezoneinfo-object"></a>TimeZoneInfo オブジェクトをインスタンス化するには
 
-## <a name="to-instantiate-a-timezoneinfo-object"></a>TimeZoneInfo オブジェクトをインスタンス化するには
+1. <xref:System.TimeZoneInfo> オブジェクトを宣言します。
 
-1. [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトを宣言します。
+2. 呼び出す、 `static` (`Shared` Visual Basic で)<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType>メソッド。
 
-2. `static` (Visual Basic の場合は `Shared`) [TimeZoneInfo.FindSystemTimeZoneById](xref:System.TimeZoneInfo.FindSystemTimeZoneById(System.String)) メソッドを呼び出します。
-
-3. メソッドによってスローされた例外を処理します。
+3. メソッドによってスローされる例外 (特に、タイム ゾーンがレジストリで定義されていない場合にスローされる <xref:System.TimeZoneNotFoundException> ) を処理します。
 
 ## <a name="example"></a>例
 
-次のコードでは、東部標準時のタイム ゾーンを表す [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトを取得し、現地時刻に対応する東部標準時の時刻を表示します。
+次のコードでは、東部標準時のタイム ゾーンを表す <xref:System.TimeZoneInfo> オブジェクトを取得し、現地時刻に対応する東部標準時の時刻を表示します。
 
-```csharp
-DateTime timeNow = DateTime.Now;
-try
-{
-   TimeZoneInfo easternZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
-   DateTime easternTimeNow = TimeZoneInfo.ConvertTime(timeNow, TimeZoneInfo.Local, 
-                                                   easternZone);
-   Console.WriteLine("{0} {1} corresponds to {2} {3}.",
-                     timeNow, 
-                     TimeZoneInfo.Local.IsDaylightSavingTime(timeNow) ?
-                               TimeZoneInfo.Local.DaylightName : 
-                               TimeZoneInfo.Local.StandardName,
-                     easternTimeNow, 
-                     easternZone.IsDaylightSavingTime(easternTimeNow) ?
-                                 easternZone.DaylightName : 
-                                 easternZone.StandardName);
-}
-// Handle exception
-//
-// As an alternative to simply displaying an error message, an alternate Eastern
-// Standard Time TimeZoneInfo object could be instantiated here either by restoring
-// it from a serialized string or by providing the necessary data to the
-// CreateCustomTimeZone method.
-catch (InvalidTimeZoneException)
-{
-   Console.WriteLine("The Eastern Standard Time Zone contains invalid or missing data.");
-}
-catch (SecurityException)
-{
-   Console.WriteLine("The application lacks permission to read time zone information from the registry.");
-}
-catch (OutOfMemoryException)
-{
-   Console.WriteLine("Not enough memory is available to load information on the Eastern Standard Time zone.");
-}
-// If we weren't passing FindSystemTimeZoneById a literal string, we also 
-// would handle an ArgumentNullException.
-```
+[!code-csharp[System.TimeZone2.Concepts#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#5)]
+[!code-vb[System.TimeZone2.Concepts#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#5)]
 
-```vb
-Dim timeNow As Date = Date.Now
-Try
-   Dim easternZone As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time")
-   Dim easternTimeNow As Date = TimeZoneInfo.ConvertTime(timeNow, TimeZoneInfo.Local, easternZone)
-   Console.WriteLine("{0} {1} corresponds to {2} {3}.", _
-                     timeNow, _
-                     IIf(TimeZoneInfo.Local.IsDaylightSavingTime(timeNow), _
-                         TimeZoneInfo.Local.DaylightName, TimeZoneInfo.Local.StandardName), _
-                     easternTimeNow, _
-                     IIf(easternZone.IsDaylightSavingTime(easternTimeNow), _
-                         easternZone.DaylightName, easternZone.StandardName))
-' Handle exception
-'
-' As an alternative to simply displaying an error message, an alternate Eastern
-' Standard Time TimeZoneInfo object could be instantiated here either by restoring
-' it from a serialized string or by providing the necessary data to the
-' CreateCustomTimeZone method.
-Catch e As InvalidTimeZoneException
-   Console.WriteLine("The Eastern Standard Time Zone contains invalid or missing data.")   
-Catch e As SecurityException
-   Console.WriteLine("The application lacks permission to read time zone information from the registry.")
-Catch e As OutOfMemoryException
-   Console.WriteLine("Not enough memory is available to load information on the Eastern Standard Time zone.")
-' If we weren't passing FindSystemTimeZoneById a literal string, we also 
-' would handle an ArgumentNullException.
-End
-``` 
+<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType>メソッドの 1 つのパラメーターは、オブジェクトの対応するを取得するタイム ゾーンの id<xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType>プロパティ。 タイム ゾーン ID は、タイム ゾーンを一意に識別するキー フィールドです。 ほとんどのキーは比較的短いですが、タイム ゾーン ID はいくぶん長めです。 ほとんどの場合、ID の値は、タイム ゾーンの標準時刻の名前を表すために使用される <xref:System.TimeZoneInfo.StandardName%2A> オブジェクトの <xref:System.TimeZoneInfo> プロパティに対応します。 ただし、例外もあります。 有効な識別子を確実に指定する最良の方法は、システムで使用できるタイム ゾーンを列挙し、対応するタイム ゾーン識別子を記録しておくことです。 この具体例については、「 [方法: コンピューター上に存在するタイム ゾーンを列挙する](../../../docs/standard/datetime/enumerate-time-zones.md)」を参照してください。 「[ローカル システムで定義されているタイム ゾーンの検索](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)」のトピックには、選択したタイム ゾーン ID の一覧も掲載されています。
 
-[TimeZoneInfo.FindSystemTimeZoneById](xref:System.TimeZoneInfo.FindSystemTimeZoneById(System.String)) メソッドの唯一のパラメーターは、取得するタイム ゾーンの識別子です。これは、オブジェクトの [TimeZoneInfo.Id](xref:System.TimeZoneInfo.Id) プロパティに対応します。 タイム ゾーン ID は、タイム ゾーンを一意に識別するキー フィールドです。 ほとんどのキーは比較的短いですが、タイム ゾーン ID はいくぶん長めです。 ほとんどの場合、ID の値は、タイム ゾーンの標準時刻の名前を表すために使用される [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトの [StandardName](xref:System.TimeZoneInfo.StandardName) プロパティに対応します。 ただし、例外もあります。 有効な識別子を確実に指定する最良の方法は、システムで使用できるタイム ゾーンを列挙し、対応するタイム ゾーン識別子を記録しておくことです。 例については、「[方法 : コンピューター上に存在するタイム ゾーンを列挙する](enumerate-time-zones.md)」を参照してください。 「[ローカル システムで定義されているタイム ゾーンの検索](finding-the-time-zones-on-local-system.md)」のトピックには、選択したタイム ゾーン ID の一覧も掲載されています。
+タイム ゾーンが見つかると、メソッドは <xref:System.TimeZoneInfo> オブジェクトを返します。 タイム ゾーンが見つからない場合、メソッドから <xref:System.TimeZoneNotFoundException>がスローされます。 タイム ゾーンが見つかっても、そのデータが破損しているか不完全な場合には、メソッドから <xref:System.InvalidTimeZoneException>がスローされます。
 
-タイム ゾーンが見つかると、メソッドは [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトを返します。 タイム ゾーンが見つかっても、そのデータが破損しているか不完全な場合には、メソッドから [InvalidTimeZoneException](xref:System.InvalidTimeZoneException) がスローされます。 
+アプリケーションが依存するタイム ゾーンが必ず存在していなければならない場合は、最初に <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> メソッドを呼び出して、レジストリからタイム ゾーンの情報を取得する必要があります。 メソッドの呼び出しが失敗した場合は、例外ハンドラーで、タイム ゾーンの新しいインスタンスを作成するか、シリアル化された <xref:System.TimeZoneInfo> オブジェクトを逆シリアル化してインスタンスを作成し直す必要があります。 参照してください[方法: 埋め込みリソースからタイム ゾーンを復元](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)例についてはします。
 
 ## <a name="see-also"></a>関連項目
 
-[日付、時刻およびタイム ゾーン](index.md)
-
-[ローカル システムで定義されているタイム ゾーンの検索](finding-the-time-zones-on-local-system.md)
-
-
-<!--HONumber=Nov16_HO3-->
-
-
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [ローカル システムで定義されているタイム ゾーンの検索](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- [方法: 定義済みの UTC オブジェクトおよびローカル タイム ゾーン オブジェクトにアクセスする](../../../docs/standard/datetime/access-utc-and-local.md)

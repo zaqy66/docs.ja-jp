@@ -1,0 +1,21 @@
+---
+title: System.ServiceModel.TxCompletionStatusCompletedForTACOSC
+ms.date: 03/30/2017
+ms.assetid: 089b982d-63a1-4ef2-8ef2-ad83758c9ec4
+ms.openlocfilehash: 832538ff5d3618c240f04ec4964c20a86b868aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485096"
+---
+# <a name="systemservicemodeltxcompletionstatuscompletedfortacosc"></a>System.ServiceModel.TxCompletionStatusCompletedForTACOSC
+そのトランザクションは、セッションが終了した際に完了になりました。  
+  
+## <a name="description"></a>説明  
+ 現在のアクティブなセッションが終了して、`TransactionAutoCompleteOnSessionClose` が `true` に設定されると、トレースされます。  
+  
+## <a name="see-also"></a>関連項目  
+ [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

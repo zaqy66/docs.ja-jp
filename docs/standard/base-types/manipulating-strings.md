@@ -1,44 +1,39 @@
 ---
-title: "文字列の操作"
-description: "文字列の操作"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/22/2016
-ms.topic: article
-ms.prod: .net
+title: .NET Framework における文字列の操作
+ms.date: 03/30/2017
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: da3c277e-b06e-48bd-ae1f-1e7e4240b93e
-translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 8a01a4406ce45faa18504c7995ddca47117cc825
-
+helpviewer_keywords:
+- strings [.NET Framework], manipulating
+- manipulating strings
+ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: ca4e24cb882daf7efd14da83011d50d05a85232b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567589"
 ---
-
-# <a name="manipulating-strings"></a>文字列の操作
-
-.NET では、文字列を効率的に作成、比較、変更できるだけでなく、検索、削除、およびテキスト パターンを置換するために、大量のテキストとデータをすばやく解析できる広範囲のルーチンのセットを提供しています。
-
-## <a name="in-this-section"></a>このセクションの内容
-
-[文字列の使用のベスト プラクティス](best-practices-strings.md) - .NET での文字列の並べ替え、比較、および大文字小文字の区別の方法を調査し、文字列処理方法を選択する場合の推奨事項を示します。 
-
-[正規表現](regular-expressions.md) -言語要素、正規表現の動作、例などの .NET の正規表現の詳細について説明します。
-
-[基本的な文字列操作](basic-string-operations.md) - バイト配列からの新しい文字列の作成、文字列値の比較、既存の文字列の変更など、@System.String および @System.Text.StringBuilder クラスによって提供される文字列の操作について説明します。
-
-[.NET での文字エンコード](character-encoding.md) - Unicode などの文字形式をエンコードおよびデコードする方法について説明します。
-
-[型変換](type-conversion.md) - 型を変換する方法について説明します。
-
-[型の書式設定](formatting-types.md) - 文字列の書式指定子を使用して文字列の書式を設定する方法について説明します。
-
-[文字列の解析](parsing-strings.md) - 文字列を型に変換する方法について説明します。
-
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-
+# <a name="manipulating-strings-in-net"></a>.NET における文字列の操作
+.NET では、文字列を効率的に作成、比較、変更できるだけでなく、検索、削除、およびテキスト パターンを置換するために、大量のテキストとデータをすばやく解析できる広範囲のルーチンのセットを提供しています。  
+  
+## <a name="in-this-section"></a>このセクションの内容  
+ [文字列を使用するためのベスト プラクティス](../../../docs/standard/base-types/best-practices-strings.md)  
+ .NET での文字列の並べ替え、比較、および大文字小文字の区別の方法を調査し、文字列処理方法を選択する場合の推奨事項を示します。  
+  
+ [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)  
+ 言語要素、正規表現の動作、例などの .NET の正規表現の詳細について説明します。  
+  
+ [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)  
+ バイト配列からの新しい文字列の作成、文字列値の比較、既存の文字列の変更など、<xref:System.String?displayProperty=nameWithType> および <xref:System.Text.StringBuilder?displayProperty=nameWithType> クラスによって提供される文字列の操作について説明します。  
+  
+## <a name="related-sections"></a>関連項目  
+ [.NET での型変換](../../../docs/standard/base-types/type-conversion.md)  
+ .NET を使用して型を変換するための手法とルールについて説明します。  
+  
+ [型の書式設定](../../../docs/standard/base-types/formatting-types.md)  
+ 基本クラス ライブラリを使用して書式設定を実装する方法、数値型を書式設定する方法、文字列型を書式設定する方法、特定のカルチャに対して書式設定する方法を提供します。  
+  
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+ オブジェクトの文字列表現によって指定された値にオブジェクトを初期化する方法について説明します。 解析は書式設定の逆の操作です。

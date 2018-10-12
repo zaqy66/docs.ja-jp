@@ -1,385 +1,127 @@
 ---
-title: "タイム ゾーン間での時刻の変換"
-description: "タイム ゾーン間での時刻の変換"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.date: 08/15/2016
-ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
-ms.assetid: bf8f74e6-e7f2-4c2a-a04c-57db0e28dd36
-translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: c2baa48c3b79dfbc5d39652cc57fe015a2313d6e
-
+title: タイム ゾーン間での時刻の変換
+ms.date: 04/10/2017
+ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- times [.NET Framework], converting
+- time zones [.NET Framework], conversions
+- UTC times, converting
+- converting times
+- local time conversions
+ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 0f5a70a01937c52197978db776b90028e1fcb7c6
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580158"
 ---
-
 # <a name="converting-times-between-time-zones"></a>タイム ゾーン間での時刻の変換
 
-日時を使用するすべてのアプリケーションで、タイム ゾーン間の違いを処理することの重要性が高まっています。 アプリケーションでは、すべての時刻を現地時刻で表現できることを前提とはしていません。現地時刻は、[System.DateTime](xref:System.DateTime) 構造体から取得できる時刻です。 たとえば、米国東部の現在の時刻を表示する Web ページには、東アジアの顧客に対する信頼性を欠いています。 このトピックでは、時刻をあるタイム ゾーンから別のタイム ゾーンに変換する方法、およびタイム ゾーン対応に制限のある [System.DateTimeOffset](xref:System.DateTimeOffset) 値を変換する方法について説明します。
+日時を使用するすべてのアプリケーションで、タイム ゾーン間の違いを処理することの重要性が高まっています。 アプリケーションは、するすべての時刻で表現できるローカル時刻を不要になった想定できますが、時間がから利用可能な<xref:System.DateTime>構造体。 たとえば、米国東部の現在の時刻を表示する Web ページには、東アジアの顧客に対する信頼性を欠いています。 このトピックでは、時間を別の 1 つのタイム ゾーンに変換する方法と、変換する方法について説明します。<xref:System.DateTimeOffset>タイム ゾーンに対応が限られている値。
 
 ## <a name="converting-to-coordinated-universal-time"></a>世界協定時刻への変換
 
-世界協定時刻 (UTC) は、高精度の原子時標準です。 世界のタイム ゾーンは、UTC からの正または負のオフセットとして表現されます。 したがって、UTC はタイム ゾーンの影響を受けない、またはタイム ゾーンに依存しない種類の時刻を提供します。 コンピューター間の日時の移植性が重要となる場合には、UTC 時刻の使用が推奨されます。 個別のタイム ゾーンを UTC に変換すると、時間の比較が容易になります。
+世界協定時刻 (UTC) は、高精度の原子時標準です。 世界のタイム ゾーンは、UTC からの正または負のオフセットとして表現されます。 したがって、UTC はタイム ゾーンの影響を受けない、またはタイム ゾーンに依存しない種類の時刻を提供します。 コンピューター間の日時の移植性が重要となる場合には、UTC 時刻の使用が推奨されます。 (詳細および日付と時刻を使用して他のベスト プラクティスでは、次を参照してください[コーディングのベスト プラクティスが .NET Framework で DateTime を使用した](https://msdn.microsoft.com/library/ms973825.aspx)。)。個別のタイム ゾーンを UTC に変換すると、時間の比較が容易になります。
 
 > [!NOTE]
-> また、ある時点を明確に表すように [DateTimeOffset](xref:System.DateTimeOffset) 構造体をシリアル化することもできます。 [DateTimeOffset](xref:System.DateTimeOffset) オブジェクトは日時値を UTC からのオフセットと共に格納するので、特定の時点を常に UTC と関連付けて表します。
+> シリアル化することも、<xref:System.DateTimeOffset>を明確に単一ポイントを表す構造体。 <xref:System.DateTimeOffset> UTC からのオフセットと共に日付と時刻の値を格納するオブジェクトを常に、特定の時点を表してリレーションシップで UTC にします。
 
-時刻を UTC に変換する最も簡単な方法としては、`static` (Visual Basic では `Shared`) [TimeZoneInfo.ConvertTimeToUtc(DateTime)](https://msdn.microsoft.com/en-us/library/bb381744(v=vs.110).aspx) メソッドを呼び出します。 
+時刻を UTC に変換する最も簡単な方法を呼び出す、 `static` (`Shared` Visual Basic で)<xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType>メソッド。 メソッドによって実行される正確な変換の値によって異なります、`dateTime`パラメーターの<xref:System.DateTime.Kind%2A>プロパティとして、次の表に示します。
 
-> [!IMPORTANT]
-> `TimeZoneInfo.ConvertTimeToUtc(DateTime)` メソッドは現在 .NET Core で使用できません。 
-
-次の表に示すように、このメソッドによって実行される実際の変換は、`DateTime` パラメーターの [Kind](xref:System.DateTime.Kind) プロパティの値によって異なります。
-
-[DateTime.Kind](xref:System.DateTimeKind) プロパティ | 変換
----------------------------------------------------------------------------------------------- | ----------
-[DateTimeKind.Local](xref:System.DateTimeKind.Local) | 現地時刻を UTC に変換します。
-[DateTimeKind.Unspecified](xref:System.DateTimeKind.Unspecified) | `DateTime` パラメーターが現地時刻であることを前提とし、現地時刻を UTC に変換します。
-[DateTimeKind.Utc](xref:System.DateTimeKind.Utc) | `DateTime` パラメーターを変更せずに返します。
+| `DateTime.Kind`            | 変換                                                                     |
+| -------------------------- | ------------------------------------------------------------------------------ |
+| `DateTimeKind.Local`       | 現地時刻を UTC に変換します。                                                    |
+| `DateTimeKind.Unspecified` | `dateTime` パラメーターが現地時刻であることを前提とし、現地時刻を UTC に変換します。 |
+| `DateTimeKind.Utc`         | `dateTime` パラメーターを変更せずに返します。                                    |
 
 次のコードは、現在の現地時刻を UTC に変換し、コンソールに結果を表示します。
 
-```csharp
-DateTime dateNow = DateTime.Now;
-Console.WriteLine("The date and time are {0} UTC.", 
-                   TimeZoneInfo.ConvertTimeToUtc(dateNow));
-```
+[!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
+[!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]
 
-```vb
-Dim dateNow As Date = Date.Now      
-Console.WriteLine("The date and time are {0} UTC.", _
-                  TimeZoneInfo.ConvertTimeToUtc(dateNow))
-```
+日付と時刻の値が現地時刻と utc のどちらのいずれかを表していない場合、<xref:System.DateTime.ToUniversalTime%2A>メソッドは、誤った結果を返す可能性があります。 ただし、使用することができます、<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType>指定されたタイム ゾーンから日付と時刻に変換します。 (詳細を取得する方法について、<xref:System.TimeZoneInfo>変換先タイム ゾーンを表すオブジェクトを参照してください[ローカル システムで定義されているタイム ゾーンの検索](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md))。次のコードでは、<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType>東部標準時を UTC に変換します。
 
-> [!NOTE]
->[TimeZoneInfo.ConvertTimeToUtc(DateTime)](https://msdn.microsoft.com/en-us/library/bb381744(v=vs.110).aspx) メソッドは、[TimeZone.ToUniversalTime](https://msdn.microsoft.com/en-us/library/System.TimeZone.ToUniversalTime(v=vs.110).aspx) メソッドおよび [DateTime.ToUniversalTime](xref:System.DateTime.ToUniversalTime) メソッドと同じ結果を必ずしも生成するとは限りません。 ホスト システムのローカル タイム ゾーンに複数の調整規則が含まれる場合、[TimeZoneInfo.ConvertTimeToUtc(DateTime)](https://msdn.microsoft.com/en-us/library/System.TimeZone.ConvertTimeToUtc(v=vs.110).aspx) は特定の日時に適切な規則を適用します。 他の 2 つのメソッドは、常に最新の調整規則を適用します。
+[!code-csharp[System.TimeZone2.Concepts#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#7)]
+[!code-vb[System.TimeZone2.Concepts#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#7)]
 
-日時値が現地時刻と UTC のどちらかを表さない場合、[ToUniversalTime](https://msdn.microsoft.com/en-us/library/System.TimeZone.ToUniversalTime(v=vs.110).aspx) メソッドは不正な結果を返す可能性があります。 ただし、[TimeZoneInfo.ConvertTimeToUtc](https://msdn.microsoft.com/en-us/library/bb381744(v=vs.110).aspx) メソッドを使用して、指定したタイム ゾーンから日時を変換できます (変換先のタイム ゾーンを表す TimeZoneInfo オブジェクトを取得する方法の詳細については、「[ローカル システムで定義されているタイム ゾーンの検索](finding-the-time-zones-on-local-system.md)」を参照してください)。 次のコードは、[TimeZoneInfo.ConvertTimeToUtc](https://msdn.microsoft.com/en-us/library/bb381744(v=vs.110).aspx) メソッドを使用して東部標準時を UTC に変換します。
+このメソッドがスローされますが、<xref:System.ArgumentException>場合、<xref:System.DateTime>オブジェクトの<xref:System.DateTime.Kind%2A>プロパティとタイム ゾーンが一致しません。 場合に、不一致が発生、<xref:System.DateTime.Kind%2A>プロパティは<xref:System.DateTimeKind.Local?displayProperty=nameWithType>が、<xref:System.TimeZoneInfo>オブジェクトは、ローカル タイム ゾーンを表していません場合は、<xref:System.DateTime.Kind%2A>プロパティは<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>が、<xref:System.TimeZoneInfo>オブジェクトが等しくない<xref:System.TimeZoneInfo.Utc?displayProperty=nameWithType>します。
 
-```csharp
-DateTime easternTime = new DateTime(2007, 01, 02, 12, 16, 00);
-string easternZoneId = "Eastern Standard Time";
-try
-{
-   TimeZoneInfo easternZone = TimeZoneInfo.FindSystemTimeZoneById(easternZoneId);
-   Console.WriteLine("The date and time are {0} UTC.", 
-                     TimeZoneInfo.ConvertTimeToUtc(easternTime, easternZone));
-}
-catch (TimeZoneNotFoundException)
-{
-   Console.WriteLine("Unable to find the {0} zone in the registry.", 
-                     easternZoneId);
-}                           
-catch (InvalidTimeZoneException)
-{
-   Console.WriteLine("Registry data on the {0} zone has been corrupted.", 
-                     easternZoneId);
-}
-```
+これらのメソッドのすべてにかかる<xref:System.DateTime>パラメーターと戻り値として値を<xref:System.DateTime>値。 <xref:System.DateTimeOffset>値、<xref:System.DateTimeOffset>構造体が、<xref:System.DateTimeOffset.ToUniversalTime%2A>インスタンスの現在のインスタンスの日時を UTC に変換するメソッド。 次の例では、<xref:System.DateTimeOffset.ToUniversalTime%2A>現地時刻と他のいくつかの時刻を世界協定時刻 (UTC) に変換します。
 
-```vb
-Dim easternTime As New Date(2007, 01, 02, 12, 16, 00)
-Dim easternZoneId As String = "Eastern Standard Time"
-Try
-   Dim easternZone As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById(easternZoneId)
-   Console.WriteLine("The date and time are {0} UTC.", _ 
-                     TimeZoneInfo.ConvertTimeToUtc(easternTime, easternZone))
-Catch e As TimeZoneNotFoundException
-   Console.WriteLine("Unable to find the {0} zone in the registry.", _
-                     easternZoneId)
-Catch e As InvalidTimeZoneException
-   Console.WriteLine("Registry data on the {0} zone has been corrupted.", _ 
-                     easternZoneId)
-End Try    
-```
-
-[DateTime](xref:System.DateTime) オブジェクトの [Kind](xref:System.DateTimeKind) プロパティとタイム ゾーンが一致しない場合、このメソッドは [ArgumentException](xref:System.ArgumentException) をスローします。 Kind プロパティが [DateTimeKind.Local](xref:System.DateTimeKind.Local) であるが [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトがローカル タイム ゾーンを表さない場合、または Kind プロパティが [DateTimeKind.Utc](xref:System.DateTimeKind.Utc) であるが [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトが [DateTimeKind.Utc](xref:System.DateTimeKind.Utc) と等しくない場合に、不一致が発生します。
-
-これらすべてのメソッドは、パラメーターとして [DateTime](xref:System.DateTime) 値を受け取り、[DateTime](xref:System.DateTime) 値を返します。 [DateTimeOffset](xref:System.DateTimeOffset) 値について、[DateTimeOffset](xref:System.DateTimeOffset) 構造体には、現在のインスタンスの日時を UTC に変換する [ToUniversalTime](xref:System.DateTimeOffset.ToUniversalTime) インスタンス メソッドが含まれます。 次の例では、[ToUniversalTime](xref:System.DateTimeOffset.ToUniversalTime) メソッドを呼び出して、現地時刻およびその他のいくつかの時刻を世界協定時刻 (UTC) に変換します。
-
-```csharp
-DateTimeOffset localTime, otherTime, universalTime;
-
-// Define local time in local time zone
-localTime = new DateTimeOffset(new DateTime(2007, 6, 15, 12, 0, 0));
-Console.WriteLine("Local time: {0}", localTime);
-Console.WriteLine();
-
-// Convert local time to offset 0 and assign to otherTime
-otherTime = localTime.ToOffset(TimeSpan.Zero);
-Console.WriteLine("Other time: {0}", otherTime);
-Console.WriteLine("{0} = {1}: {2}", 
-                  localTime, otherTime, 
-                  localTime.Equals(otherTime));
-Console.WriteLine("{0} exactly equals {1}: {2}", 
-                  localTime, otherTime, 
-                  localTime.EqualsExact(otherTime));
-Console.WriteLine();
-
-// Convert other time to UTC
-universalTime = localTime.ToUniversalTime(); 
-Console.WriteLine("Universal time: {0}", universalTime);
-Console.WriteLine("{0} = {1}: {2}", 
-                  otherTime, universalTime, 
-                  universalTime.Equals(otherTime));
-Console.WriteLine("{0} exactly equals {1}: {2}", 
-                  otherTime, universalTime, 
-                  universalTime.EqualsExact(otherTime));
-Console.WriteLine();
-// The example produces the following output to the console:
-//    Local time: 6/15/2007 12:00:00 PM -07:00
-//    
-//    Other time: 6/15/2007 7:00:00 PM +00:00
-//    6/15/2007 12:00:00 PM -07:00 = 6/15/2007 7:00:00 PM +00:00: True
-//    6/15/2007 12:00:00 PM -07:00 exactly equals 6/15/2007 7:00:00 PM +00:00: False
-//    
-//    Universal time: 6/15/2007 7:00:00 PM +00:00
-//    6/15/2007 7:00:00 PM +00:00 = 6/15/2007 7:00:00 PM +00:00: True
-//    6/15/2007 7:00:00 PM +00:00 exactly equals 6/15/2007 7:00:00 PM +00:00: True 
-```
-
-```vb
-Dim localTime, otherTime, universalTime As DateTimeOffset
-
-' Define local time in local time zone
-localTime = New DateTimeOffset(#6/15/2007 12:00:00PM#)
-Console.WriteLine("Local time: {0}", localTime)
-Console.WriteLine()
-
-' Convert local time to offset 0 and assign to otherTime
-otherTime = localTime.ToOffset(TimeSpan.Zero)
-Console.WriteLine("Other time: {0}", otherTime)
-Console.WriteLine("{0} = {1}: {2}", _
-                  localTime, otherTime, _
-                  localTime.Equals(otherTime))
-Console.WriteLine("{0} exactly equals {1}: {2}", _ 
-                  localTime, otherTime, _
-                  localTime.EqualsExact(otherTime))
-Console.WriteLine()
-
-' Convert other time to UTC
-universalTime = localTime.ToUniversalTime() 
-Console.WriteLine("Universal time: {0}", universalTime)
-Console.WriteLine("{0} = {1}: {2}", _
-                  otherTime, universalTime, _ 
-                  universalTime.Equals(otherTime))
-Console.WriteLine("{0} exactly equals {1}: {2}", _ 
-                  otherTime, universalTime, _
-                  universalTime.EqualsExact(otherTime))
-Console.WriteLine()
-' The example produces the following output to the console:
-'    Local time: 6/15/2007 12:00:00 PM -07:00
-'    
-'    Other time: 6/15/2007 7:00:00 PM +00:00
-'    6/15/2007 12:00:00 PM -07:00 = 6/15/2007 7:00:00 PM +00:00: True
-'    6/15/2007 12:00:00 PM -07:00 exactly equals 6/15/2007 7:00:00 PM +00:00: False
-'    
-'    Universal time: 6/15/2007 7:00:00 PM +00:00
-'    6/15/2007 7:00:00 PM +00:00 = 6/15/2007 7:00:00 PM +00:00: True
-'    6/15/2007 7:00:00 PM +00:00 exactly equals 6/15/2007 7:00:00 PM +00:00: True 
-```
+[!code-csharp[System.DateTimeOffset.Methods#16](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/cs/Methods.cs#16)]
+[!code-vb[System.DateTimeOffset.Methods#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/vb/Methods.vb#16)]
 
 ## <a name="converting-utc-to-a-designated-time-zone"></a>UTC から指定したタイム ゾーンへの変換
 
-UTC を現地時刻に変換するには、後の「[UTC から現地時刻への変換](#converting-utc-to-local-time)」セクションを参照してください。 
+UTC を現地時刻に変換するには、次の「に変換する UTC から現地時刻」セクションを参照してください。 UTC に変換することを指定している任意のタイム ゾーンの時刻に呼び出し、<xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>メソッド。 このメソッドは、次の 2 つのパラメーターを受け取ります。
 
-UTC を、指定した任意のタイム ゾーンの時刻に変換するには、[ConvertTimeFromUtc](https://msdn.microsoft.com/en-us/library/System.TimeZoneInfo.converttimefromutc(v=vs.110).aspx) メソッドを呼び出します。 
+* 変換対象の UTC。 これは、必要があります、<xref:System.DateTime>値<xref:System.DateTime.Kind%2A>プロパティに設定されて`Unspecified`または`Utc`します。
 
-> [!IMPORTANT]
-> .NET Core では、`TimeZoneInfo.ConvertTimeFromUtc' メソッドは現在使用できません。 
-
-このメソッドは、次の 2 つのパラメーターを受け取ります。
-
-* 変換対象の UTC。 これは、[Kind](xref:System.DateTime.Kind) にプロパティが [DateTimeKind.Utc](xref:System.DateTimeKind.Utc) または [DateTimeKind.Unspecified](xref:System.DateTimeKind.Unspecified) に設定されている [DateTime](xref:System.DateTime) 値でなければなりません。 
-
-* UTC の変換先のタイム ゾーン。 
+* UTC の変換先のタイム ゾーン。
 
 次のコードは、UTC を中部標準時に変換します。
 
-```csharp
-DateTime timeUtc = DateTime.UtcNow;
-try
-{
-   TimeZoneInfo cstZone = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time");
-   DateTime cstTime = TimeZoneInfo.ConvertTimeFromUtc(timeUtc, cstZone);
-   Console.WriteLine("The date and time are {0} {1}.", 
-                     cstTime, 
-                     cstZone.IsDaylightSavingTime(cstTime) ?
-                             cstZone.DaylightName : cstZone.StandardName);
-}
-catch (TimeZoneNotFoundException)
-{
-   Console.WriteLine("The registry does not define the Central Standard Time zone.");
-}                           
-catch (InvalidTimeZoneException)
-{
-   Console.WriteLine("Registry data on the Central Standard Time zone has been corrupted.");
-}
-```
-
-```vb
-Dim timeUtc As Date = Date.UtcNow
-Try
-   Dim cstZone As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time")
-   Dim cstTime As Date = TimeZoneInfo.ConvertTimeFromUtc(timeUtc, cstZone)
-   Console.WriteLine("The date and time are {0} {1}.", _
-                     cstTime, _
-                     IIf(cstZone.IsDaylightSavingTime(cstTime), _
-                         cstZone.DaylightName, cstZone.StandardName))
-Catch e As TimeZoneNotFoundException
-   Console.WriteLine("The registry does not define the Central Standard Time zone.")
-Catch e As InvalidTimeZoneException
-   Console.WriteLine("Registry data on the Central Standard Time zone has been corrupted.")
-End Try
-``` 
+[!code-csharp[System.TimeZone2.Concepts#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#8)]
+[!code-vb[System.TimeZone2.Concepts#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#8)]
 
 ## <a name="converting-utc-to-local-time"></a>UTC から現地時刻への変換
 
-UTC を現地時刻に変換するには、時刻を変換する対象の [DateTime](xref:System.DateTime) オブジェクトの [DateTime.ToLocalTime](xref:System.DateTime) メソッドを呼び出します。 次の表に示すように、このメソッドの実際の動作は、オブジェクトの [Kind](xref:System.DateTime.Kind) プロパティの値によって異なります。
+UTC を現地時刻に変換するには、呼び出し、<xref:System.DateTime.ToLocalTime%2A>のメソッド、<xref:System.DateTime>オブジェクトに変換する時刻。 メソッドの正確な動作は、オブジェクトの値によって異なります。<xref:System.DateTime.Kind%2A>プロパティとして、次の表に示します。
 
-[DateTime.Kind](xref:System.DateTimeKind) プロパティ | 変換
----------------------------------------------------------------------------------------------- | ----------
-[DateTimeKind.Local](xref:System.DateTimeKind.Local) | [DateTime](xref:System.DateTime) 値を変更せずに返します。
-[DateTimeKind.Unspecified](xref:System.DateTimeKind.Unspecified) | [DateTime](xref:System.DateTime) 値が UTC であることを前提とし、UTC を現地時刻に変換します。
-[DateTimeKind.Utc](xref:System.DateTimeKind.Utc) | [DateTime](xref:System.DateTime) 値を現地時刻に変換します。
+| `DateTime.Kind`            | 変換                                                                               |
+| -------------------------- | ---------------------------------------------------------------------------------------- |
+| `DateTimeKind.Local`       | 返します、<xref:System.DateTime>値は変更されません。                                      |
+| `DateTimeKind.Unspecified` | 前提としています、<xref:System.DateTime>値は UTC であり、UTC を現地時刻に変換します。 |
+| `DateTimeKind.Utc`         | 変換、<xref:System.DateTime>を現地時刻の値。                                 |
+
+> [!NOTE]
+> <xref:System.TimeZone.ToLocalTime%2A?displayProperty=nameWithType>メソッドの動作、`DateTime.ToLocalTime`メソッド。 これは、これは、日付と時刻の値に変換する 1 つのパラメーター。
+
+使用して、ローカル時刻では、指定されたタイム ゾーンの時刻を変換することも、 `static` (`Shared` Visual Basic で)<xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=nameWithType>メソッド。 この手法は、次のセクションで説明します。
 
 ## <a name="converting-between-any-two-time-zones"></a>任意の 2 つのタイム ゾーン間での変換
 
-静的な [TimeZoneInfo.ConvertTime](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo)) メソッドを使用すると、任意の 2 つのタイム ゾーン間で変換を行うことができます。 このメソッドのパラメーターは、変換対象の [DateTime](xref:System.DateTime) 値、日時値のタイム ゾーンを表す [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクト、および日時値の変換先のタイム ゾーンを表す [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトです。
+次の 2 つのいずれかを使用して、2 つのタイム ゾーン間で変換できる`static`(`Shared` Visual basic) のメソッド、<xref:System.TimeZoneInfo>クラス。
 
-このメソッドでは、変換対象の日時値の [Kind](xref:System.DateTime.Kind) プロパティと、タイム ゾーンを表す [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトまたはタイム ゾーン識別子とが、相互に対応する必要があります。 それ以外の場合は、[ArgumentException](xref:System.ArgumentException) がスローされます。 たとえば、日時値の [Kind](xref:System.DateTime.Kind) プロパティが [DateTimeKind.Local](xref:System.DateTimeKind.Local) である場合に、このメソッドにパラメーターとして渡された [TimeZoneInfo](xref:System.TimeZoneInfo) オブジェクトが [TimeZoneInfo.Local](xref:System.TimeZoneInfo.Local) と等しくなければ、例外がスローされます。 また、このメソッドにパラメーターとして渡された識別子が [TimeZoneInfo.Id](xref:System.TimeZoneInfo.Id) と等しくない場合にも、例外がスローされます。
+* <xref:System.TimeZoneInfo.ConvertTime%2A>
 
-次の例では、[ConvertTime](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo)) メソッドを使用してハワイ標準時を現地時刻に変換します。
+  このメソッドのパラメーターは、変換する日付と時刻の値を`TimeZoneInfo`日付と時刻の値のタイム ゾーンを表すオブジェクトを`TimeZoneInfo`に日付と時刻の値を変換先タイム ゾーンを表すオブジェクト。
 
-```csharp
-DateTime hwTime = new DateTime(2007, 02, 01, 08, 00, 00);
-try
-{
-   TimeZoneInfo hwZone = TimeZoneInfo.FindSystemTimeZoneById("Hawaiian Standard Time");
-   Console.WriteLine("{0} {1} is {2} local time.", 
-           hwTime, 
-           hwZone.IsDaylightSavingTime(hwTime) ? hwZone.DaylightName : hwZone.StandardName, 
-           TimeZoneInfo.ConvertTime(hwTime, hwZone, TimeZoneInfo.Local));
-}
-catch (TimeZoneNotFoundException)
-{
-   Console.WriteLine("The registry does not define the Hawaiian Standard Time zone.");
-}                           
-catch (InvalidTimeZoneException)
-{
-   Console.WriteLine("Registry data on the Hawaiian STandard Time zone has been corrupted.");
-}
-```
+* <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>
 
-```vb
-Dim hwTime As Date = #2/01/2007 8:00:00 AM#
-Try
-   Dim hwZone As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Hawaiian Standard Time")
-   Console.WriteLine("{0} {1} is {2} local time.", _
-                     hwTime, _
-                     IIf(hwZone.IsDaylightSavingTime(hwTime), hwZone.DaylightName, hwZone.StandardName), _
-                     TimeZoneInfo.ConvertTime(hwTime, hwZone, TimeZoneInfo.Local))
-Catch e As TimeZoneNotFoundException
-   Console.WriteLine("The registry does not define the Hawaiian Standard Time zone.")
-Catch e As InvalidTimeZoneException
-   Console.WriteLine("Registry data on the Hawaiian Standard Time zone has been corrupted.")
-End Try
-```
+  このメソッドのパラメーターに日付と時刻の値に変換する日付と時刻値に変換するの日付と時刻の値のタイム ゾーンの識別子およびタイム ゾーンの識別子。
+
+どちらの方法では、する必要があります、<xref:System.DateTime.Kind%2A>に変換する日付と時刻の値のプロパティと<xref:System.TimeZoneInfo>そのタイム ゾーンを表すオブジェクトまたはタイム ゾーンの識別子が相互に対応します。 それ以外の場合は、<xref:System.ArgumentException> がスローされます。 たとえば場合、`Kind`日付と時刻の値のプロパティが`DateTimeKind.Local`場合に、例外がスローされます、`TimeZoneInfo`メソッドにパラメーターとして渡されたオブジェクトが等しくない`TimeZoneInfo.Local`します。 メソッドにパラメーターとして渡された識別子が等しくない場合にも、例外がスロー`TimeZoneInfo.Local.Id`します。
+
+次の例では、<xref:System.TimeZoneInfo.ConvertTime%2A>ハワイ標準時を現地時刻に変換します。
+
+[!code-csharp[System.TimeZone2.Concepts#9](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#9)]
+[!code-vb[System.TimeZone2.Concepts#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#9)]
 
 ## <a name="converting-datetimeoffset-values"></a>DateTimeOffset 値の変換
 
-[System.DateTimeOffset](xref:System.DateTimeOffset) オブジェクトによって表される日時値は、完全にはタイム ゾーン対応ではありません。これは、オブジェクトがインスタンス化された時点でそのタイム ゾーンとの関連付けが解除されるためです。 ただし、アプリケーションでは多くの場合、特定のタイム ゾーンの時刻ではなく、単に UTC からの 2 つの異なるオフセットに基づいて日時を変換する必要があります。 この変換を実行するには、現在のインスタンスの [ToOffset](xref:System.DateTimeOffset.ToOffset(System.TimeSpan)) メソッドを呼び出します。 このメソッドの単一のパラメーターは、メソッドが返す新しい日時値のオフセットを表す [TimeSpan](xref:System.TimeSpan) です。  
+によって表された日付と時刻の値<xref:System.DateTimeOffset>オブジェクトが完全にタイム ゾーン オブジェクトが、時にそのタイム ゾーンから切り離されるため、注意してください。 インスタンス化されます。 ただし、アプリケーションでは多くの場合、特定のタイム ゾーンの時刻ではなく、単に UTC からの 2 つの異なるオフセットに基づいて日時を変換する必要があります。 この変換を実行するには、現在のインスタンスを呼び出すことができます<xref:System.DateTimeOffset.ToOffset%2A>メソッド。 メソッドの 1 つのパラメーターは、新しい日付と時刻の値を返すメソッドのオフセットです。
 
 たとえば、Web ページに対するユーザー要求の日時が既知であり、MM/dd/yyyy hh:mm:ss zzzz の形式で文字列としてシリアル化される場合、次の `ReturnTimeOnServer` メソッドは、この日時値を Web サーバー上の日時に変換します。
 
-```csharp
-public DateTimeOffset ReturnTimeOnServer(string clientString)
-{
-   string format = @"M/d/yyyy H:m:s zzz";
-   TimeSpan serverOffset = TimeZoneInfo.Local.GetUtcOffset(DateTimeOffset.Now);
+[!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)] 
 
-   try
-   {      
-      DateTimeOffset clientTime = DateTimeOffset.ParseExact(clientString, format, CultureInfo.InvariantCulture);
-      DateTimeOffset serverTime = clientTime.ToOffset(serverOffset);
-      return serverTime;
-   }
-   catch (FormatException)
-   {
-      return DateTimeOffset.MinValue;
-   }
-}
-```
+このメソッドが、UTC よりも 5 時間遅いタイム ゾーンの日時を表す文字列 "9/1/2007 5:32:07 -05:00" を渡された場合、米国の太平洋標準時ゾーンにあるサーバー用に 9/1/2007 3:32:07 AM -07:00 を太平洋標準時ゾーンでの実行例を次に示します。
 
-```vb
-Public Function ReturnTimeOnServer(clientString As String) As DateTimeOffset
-   Dim format As String = "M/d/yyyy H:m:s zzz"
-   Dim serverOffset As TimeSpan = TimeZoneInfo.Local.GetUtcOffset(DateTimeOffset.Now)
+<xref:System.TimeZoneInfo>クラスには、オーバー ロードも含まれています、<xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType>メソッドを使用するタイム ゾーン変換を実行する<xref:System.DateTimeOffset.ToOffset(System.TimeSpan)>値。 メソッドのパラメーターは、<xref:System.DateTimeOffset>値と時刻の変換先タイム ゾーンへの参照。 メソッド呼び出しが返されます、<xref:System.DateTimeOffset>値。 たとえば、`ReturnTimeOnServer`を呼び出す前の例のメソッドを次のように書き換えることができます、<xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29>メソッド。
 
-   Try      
-      Dim clientTime As DateTimeOffset = DateTimeOffset.ParseExact(clientString, format, CultureInfo.InvariantCulture)
-      Dim serverTime As DateTimeOffset = clientTime.ToOffset(serverOffset)
-      Return serverTime
-   Catch e As FormatException
-      Return DateTimeOffset.MinValue
-   End Try    
-End Function
-```
-
-このメソッドが、UTC よりも 5 時間遅いタイム ゾーンの日時を表す文字列 "9/1/2007 5:32:07 -05:00" を渡された場合、米国の太平洋標準時ゾーンにあるサーバー用に 9/1/2007 3:32:07 AM -07:00 を返します。
-
-[TimeZoneInfo](xref:System.TimeZoneInfo) クラスには、[System.DateTimeOffset](xref:System.DateTimeOffset) 値によるタイム ゾーン変換を実行する、オーバーロードされた [TimeZoneInfo.ConvertTime (DateTimeOffset、TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTimeOffset,System.TimeZoneInfo)) メソッドも含まれます。 このメソッドのパラメーターは、[System.DateTimeOffset](xref:System.DateTimeOffset) 値と、時刻の変換先となるタイム ゾーンへの参照です。 このメソッド呼び出しは、[System.DateTimeOffset](xref:System.DateTimeOffset) 値を返します。 たとえば、前の例の `ReturnTimeOnServer` メソッドを次のように書き換えて、[ConvertTime(DateTimeOffset, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTimeOffset,System.TimeZoneInfo)) メソッドを呼び出すことができます。
-
-```csharp
-public DateTimeOffset ReturnTimeOnServer(string clientString)
-{
-   string format = @"M/d/yyyy H:m:s zzz";
-
-   try
-   {      
-      DateTimeOffset clientTime = DateTimeOffset.ParseExact(clientString, format, 
-                                  CultureInfo.InvariantCulture);
-      DateTimeOffset serverTime = TimeZoneInfo.ConvertTime(clientTime, 
-                                  TimeZoneInfo.Local);
-      return serverTime;
-   }
-   catch (FormatException)
-   {
-      return DateTimeOffset.MinValue;
-   }
-}
-```
-
-```vb
-Public Function ReturnTimeOnServer(clientString As String) As DateTimeOffset
-   Dim format As String = "M/d/yyyy H:m:s zzz"
-
-   Try      
-      Dim clientTime As DateTimeOffset = DateTimeOffset.ParseExact(clientString, format, CultureInfo.InvariantCulture)
-      Dim serverTime As DateTimeOffset = TimeZoneInfo.ConvertTime(clientTime, TimeZoneInfo.Local)
-      Return serverTime
-   Catch e As FormatException
-      Return DateTimeOffset.MinValue
-   End Try    
-End Function
-```
+[!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]
 
 ## <a name="see-also"></a>関連項目
 
-[TimeZoneInfo](xref:System.TimeZoneInfo)
-
-[日付、時刻およびタイム ゾーン](index.md)
-
-[ローカル システムで定義されているタイム ゾーンの検索](finding-the-time-zones-on-local-system.md)
-
-
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-
+* <xref:System.TimeZoneInfo>
+* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+* [ローカル システムで定義されているタイム ゾーンの検索](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)

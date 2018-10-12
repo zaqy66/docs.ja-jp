@@ -1,107 +1,233 @@
 ---
-title: "dotnet-publish コマンド | .NET Core SDK"
-description: "dotnet-publish コマンドは、.NET Core プロジェクトをディレクトリに発行します。"
-keywords: "dotnet-publish, CLI, CLI コマンド, .NET Core"
+title: dotnet publish コマンド - .NET Core CLI
+description: dotnet publish コマンドは、.NET Core プロジェクトをディレクトリに発行します。
 author: mairaw
-manager: wpickett
-ms.date: 10/07/2016
-ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
-ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
-translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 2b00a2c6da73c2252997b63aca8fc475cac8999f
-
+ms.author: mairaw
+ms.date: 05/29/2018
+ms.openlocfilehash: a60777d613573076f41fba3e5ed610b236884063
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511425"
 ---
+# <a name="dotnet-publish"></a>dotnet publish
 
-#<a name="dotnetpublish"></a>dotnet-publish
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
-`dotnet-publish` - アプリケーションとそのすべての依存関係をフォルダーにパックし、発行できるようにします。
+`dotnet publish` - ホスティング システムへの展開のため、アプリケーションとその依存関係をフォルダーにパックします。
 
 ## <a name="synopsis"></a>構文
 
-`dotnet publish [project] 
-    [--help] [--framework]  
-    [--runtime] [--build-base-path] [--output]  
-    [--version-suffix] [--configuration] [--native-subdirectory] [--no-build]`
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
+    [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [-h|--help]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
+    [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+    [--version-suffix]
+dotnet publish [-h|--help]
+```
+---
 
 ## <a name="description"></a>説明
 
-`dotnet publish` はアプリケーションをコンパイルし、[project.json](project-json.md) ファイルに指定されたその依存関係を読み取り、結果のファイル セットをディレクトリに発行します。 
+`dotnet publish` はアプリケーションをコンパイルし、プロジェクト ファイルに指定されたその依存関係を読み取り、結果のファイル セットをディレクトリに発行します。 出力には次のアセットが含まれます。
 
-ポータブル アプリの種類に応じて、結果のディレクトリには以下のものが含まれます。
+* アセンブリの中間言語 (IL) コード (*dll* 拡張子)。
+* *.deps.json* ファイル。プロジェクトのすべての依存関係が含まれます。
+* *.runtime.config.json* ファイル。アプリケーションが想定する共有ランタイムと、ランタイムの他の構成オプション (ガベージ コレクションの種類など) を指定します。
+* アプリケーションの依存関係。NuGet キャッシュから出力フォルダーにコピーされます。
 
-1. *ポータブル アプリケーション* - アプリケーションの中間言語 (IL) コードとアプリケーションの管理対象となるすべての依存関係です。
-    * *ネイティブの依存関係を持つポータブル アプリケーション* - 上記と同じ。ネイティブの各依存関係のサポートされるプラットフォームのサブディレクトリがあります。 
-2. *自己完結型アプリケーション* - 上記と同じですが、対象となるプラットフォームのランタイム全体が含まれます。
+`dotnet publish` コマンドの出力は、実行のためにホスト システム (サーバー、PC、Mac、ラップトップなど) にすぐに展開できます。 これは、アプリケーションの展開を準備するための正式にサポートされている唯一の方法です。 プロジェクトに指定されている展開の種類によっては、ホスティング システムに .NET Core 共有ランタイムがインストールされている場合とされていない場合があります。 詳しくは、「[.NET Core アプリケーション展開](../deploying/index.md)」をご覧ください。 発行されるアプリケーションのディレクトリ構造については、「[Directory structure](/aspnet/core/hosting/directory-structure)」 (ディレクトリ構造) をご覧ください。
 
-詳細については、「[.NET Core Application Deployment](../deploying/index.md)」 (.NET Core アプリケーションの配置) を参照してください。
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+
+## <a name="arguments"></a>引数
+
+`PROJECT`
+
+発行するプロジェクト。 指定しない場合は、既定で現在のディレクトリに設定されます。
 
 ## <a name="options"></a>オプション
 
-`[project]` 
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-発行するプロジェクトです。`[project]` が指定されていない場合は、既定で現在のディレクトリに設定されます。 この値として、[project.json](project-json.md) ファイルへのパス、または [project.json](project-json.md) ファイルを含むプロジェクト ディレクトリへのパスを指定できます。 [project.json](project-json.md) ファイルが見つからない場合、`dotnet publish` はエラーをスローします。 
+`-c|--configuration {Debug|Release}`
 
-`-h|--help`
-
-コマンドの短いヘルプを印刷します。  
+ビルド構成を定義します。 既定値は `Debug` です。
 
 `-f|--framework <FRAMEWORK>`
 
-指定されたフレームワーク識別子 (FID) のアプリケーションを発行します。 指定しない場合、FID は [project.json](project-json.md#frameworks) から読み取られます。 有効なフレームワークが見つからない場合、コマンドはエラーをスローします。 複数の有効なフレームワークが見つかった場合、コマンドはすべての有効なフレームワークに対して発行します。 
+指定した[ターゲット フレームワーク](../../standard/frameworks.md)のアプリケーションを発行します。 ターゲット フレームワークはプロジェクト ファイルで指定する必要があります。
+
+`--force`
+
+最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。
+
+`-h|--help`
+
+コマンドの短いヘルプを印刷します。
+
+`--manifest <PATH_TO_MANIFEST_FILE>`
+
+アプリによって公開された一連のパッケージをトリミングするために使用する[ターゲット マニフェスト](../deploying/runtime-store.md)を 1 つまたは複数指定します。 マニフェスト ファイルは、[`dotnet store` コマンド](dotnet-store.md)の出力の一部です。 複数のマニフェストを指定するには、マニフェストごとに `--manifest` を追加します。 このオプションは、.NET Core 2.0 SDK 以降で使用できます。
+
+`--no-build`
+
+発行の前にプロジェクトをビルドしません。 また、`--no-restore` フラグが暗黙的に設定されます。
+
+`--no-dependencies`
+
+プロジェクト間参照を無視し、ルート プロジェクトのみを復元します。
+
+`--no-restore`
+
+コマンドを実行するときに、暗黙的な復元を実行しません。
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+出力ディレクトリのパスを指定します。 指定しないと、既定で、フレームワークに依存する展開の場合は *./bin/[configuration]/[framework]/publish/* に、自己完結型の展開の場合は *./bin/[configuration]/[framework]/[runtime]/publish/* に設定されます。
+パスが相対的である場合、生成された出力ディレクトリは、現在の作業ディレクトリではなく、プロジェクト ファイルの場所に相対的なパスとなります。
+
+`--self-contained`
+
+アプリケーションと一緒に .NET Core ランタイムを発行します。これにより、ランタイムをターゲット コンピューターにインストールする必要がなくなります。 ランタイム識別子を指定した場合、その既定値は `true` となります。 さまざまな展開方法の詳細については、「[.NET Core アプリケーションの展開](../deploying/index.md)」を参照してください。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-指定されたランタイムのアプリケーションを発行します。 使用できるランタイム ID (RID) については、[RID カタログ](../rid-catalog.md)に関するページを参照してください。
+指定されたランタイムのアプリケーションを発行します。 これは、[自己完結型の展開 (SCD)](../deploying/index.md#self-contained-deployments-scd) を作成するときに使われます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 既定では、[フレームワークに依存する展開 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd) が発行されます。
 
-`-b|--build-base-path <OUTPUT_DIRECTORY>`
+`-v|--verbosity <LEVEL>`
 
-一時出力を配置するディレクトリ。
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
 
-`-o|--output <OUTPUT_PATH>`
+`--version-suffix <VERSION_SUFFIX>`
 
-ディレクトリを配置する場所のパスを指定します。 指定しない場合、既定で *_./bin/[configuration]/[framework]/_* (ポータブル アプリケーションの場合) または *_./bin/[configuration]/[framework]/[runtime]_* (自己完結型の配置の場合) に設定されます。
+プロジェクト ファイルのバージョン フィールドでアスタリスク (`*`) を置き換えるバージョン サフィックスを定義します。
 
-`--version-suffix [VERSION_SUFFIX]`
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-project.json ファイルのバージョン フィールドで `*` を置き換える必要がある値を定義します。
+`-c|--configuration {Debug|Release}`
 
-`-c|--configuration [Debug|Release]`
+ビルド構成を定義します。 既定値は `Debug` です。
 
-発行時に使用する構成です。 既定値は `Debug` です。
+`-f|--framework <FRAMEWORK>`
 
-`[--native-subdirectory]`: 出力に依存関係パッケージのネイティブ資産からのサブディレクトリを含めるための一時的なメカニズムです。 
+指定した[ターゲット フレームワーク](../../standard/frameworks.md)のアプリケーションを発行します。 ターゲット フレームワークはプロジェクト ファイルで指定する必要があります。
 
-`[--no-build]`: 発行前にプロジェクトをビルドしません。
+`--force`
 
-## <a name="examples"></a>例
+最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。
 
-`project.json` で見つかったフレームワークを使用して、アプリケーションを発行します。 `project.json` に [runtimes](project-json.md#runtimes) ノードが含まれている場合は、現在のプラットフォームの RID を発行します。
+`-h|--help`
+
+コマンドの短いヘルプを印刷します。
+
+`--manifest <PATH_TO_MANIFEST_FILE>`
+
+アプリによって公開された一連のパッケージをトリミングするために使用する[ターゲット マニフェスト](../deploying/runtime-store.md)を 1 つまたは複数指定します。 マニフェスト ファイルは、[`dotnet store` コマンド](dotnet-store.md)の出力の一部です。 複数のマニフェストを指定するには、マニフェストごとに `--manifest` を追加します。 このオプションは、.NET Core 2.0 SDK 以降で使用できます。
+
+`--no-dependencies`
+
+プロジェクト間参照を無視し、ルート プロジェクトのみを復元します。
+
+`--no-restore`
+
+コマンドを実行するときに、暗黙的な復元を実行しません。
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+出力ディレクトリのパスを指定します。 指定しないと、既定で、フレームワークに依存する展開の場合は *./bin/[configuration]/[framework]/publish/* に、自己完結型の展開の場合は *./bin/[configuration]/[framework]/[runtime]/publish/* に設定されます。
+パスが相対的である場合、生成された出力ディレクトリは、現在の作業ディレクトリではなく、プロジェクト ファイルの場所に相対的なパスとなります。
+
+`--self-contained`
+
+アプリケーションと一緒に .NET Core ランタイムを発行します。これにより、ランタイムをターゲット コンピューターにインストールする必要がなくなります。 ランタイム識別子を指定した場合、その既定値は `true` となります。 さまざまな展開方法の詳細については、「[.NET Core アプリケーションの展開](../deploying/index.md)」を参照してください。
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+指定されたランタイムのアプリケーションを発行します。 これは、[自己完結型の展開 (SCD)](../deploying/index.md#self-contained-deployments-scd) を作成するときに使われます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 既定では、[フレームワークに依存する展開 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd) が発行されます。
+
+`-v|--verbosity <LEVEL>`
+
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+
+`--version-suffix <VERSION_SUFFIX>`
+
+プロジェクト ファイルのバージョン フィールドでアスタリスク (`*`) を置き換えるバージョン サフィックスを定義します。
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-c|--configuration {Debug|Release}`
+
+ビルド構成を定義します。 既定値は `Debug` です。
+
+`-f|--framework <FRAMEWORK>`
+
+指定した[ターゲット フレームワーク](../../standard/frameworks.md)のアプリケーションを発行します。 ターゲット フレームワークはプロジェクト ファイルで指定する必要があります。
+
+`-h|--help`
+
+コマンドの短いヘルプを印刷します。
+
+`--manifest <PATH_TO_MANIFEST_FILE>`
+
+アプリによって公開された一連のパッケージをトリミングするために使用する[ターゲット マニフェスト](../deploying/runtime-store.md)を 1 つまたは複数指定します。 マニフェスト ファイルは、[`dotnet store` コマンド](dotnet-store.md)の出力の一部です。 複数のマニフェストを指定するには、マニフェストごとに `--manifest` を追加します。 このオプションは、.NET Core 2.0 SDK 以降で使用できます。
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+出力ディレクトリのパスを指定します。 指定しないと、既定で、フレームワークに依存する展開の場合は *./bin/[configuration]/[framework]/publish/* に、自己完結型の展開の場合は *./bin/[configuration]/[framework]/[runtime]/publish/* に設定されます。
+パスが相対的である場合、生成された出力ディレクトリは、現在の作業ディレクトリではなく、プロジェクト ファイルの場所に相対的なパスとなります。
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+指定されたランタイムのアプリケーションを発行します。 これは、[自己完結型の展開 (SCD)](../deploying/index.md#self-contained-deployments-scd) を作成するときに使われます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 既定では、[フレームワークに依存する展開 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd) が発行されます。
+
+`-v|--verbosity <LEVEL>`
+
+コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+
+`--version-suffix <VERSION_SUFFIX>`
+
+プロジェクト ファイルのバージョン フィールドでアスタリスク (`*`) を置き換えるバージョン サフィックスを定義します。
+
+---
+
+## <a name="examples"></a>使用例
+
+現在のディレクトリのプロジェクトを発行します。
 
 `dotnet publish`
 
-指定された [project.json](project-json.md) を使用して、アプリケーションを発行します。
+指定されたプロジェクト ファイルを使用して、アプリケーションを発行します。
 
-`dotnet publish ~/projects/app1/project.json`
-    
-`netcoreapp1.0` フレームワークを使用して、現在のアプリケーションを発行します。
+`dotnet publish ~/projects/app1/app1.csproj`
 
-`dotnet publish --framework netcoreapp1.0`
-    
-`netcoreapp1.0` フレームワークと `OS X 10.10` のランタイム (この RID は `project.json` [runtimes](project-json.md#runtimes) ノードに存在している必要があります) を使用して、現在のアプリケーションを発行します。
+`netcoreapp1.1` フレームワークを使って現在のディレクトリ内のプロジェクトを発行します。
 
-`dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
+`dotnet publish --framework netcoreapp1.1`
+
+`netcoreapp1.1` フレームワークと `OS X 10.10` のランタイム (この RID はプロジェクト ファイルに列挙しておく必要があります) を使って、現在のアプリケーションを発行します。
+
+`dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
+
+現在のアプリケーションを発行します。ただし、復元操作中はルート プロジェクトのみを復元し、プロジェクト間 (P2P) 参照は復元しないでください (.NET Core SDK 2.0 以降のバージョン)。
+
+`dotnet publish --no-dependencies`
 
 ## <a name="see-also"></a>関連項目
-* [フレームワーク](../../standard/frameworks.md)
+
+* [ターゲット フレームワーク](../../standard/frameworks.md)
 * [ランタイム識別子 (RID) のカタログ](../rid-catalog.md)
-
-
-<!--HONumber=Nov16_HO1-->
-
-
