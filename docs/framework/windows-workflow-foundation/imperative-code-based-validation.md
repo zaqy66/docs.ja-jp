@@ -3,11 +3,11 @@ title: 命令型コードに基づく検証
 ms.date: 03/30/2017
 ms.assetid: ae12537c-455e-42b1-82f4-cea4c46c023e
 ms.openlocfilehash: ac77132e3469bdffa6f88f8c6d617c6faa1c9323
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779674"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308293"
 ---
 # <a name="imperative-code-based-validation"></a>命令型コードに基づく検証
 
@@ -18,7 +18,7 @@ ms.locfileid: "48779674"
 コードに基づく検証は、<xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity>、および <xref:System.Activities.NativeActivity> から派生するアクティビティでサポートされています。 検証コードは <xref:System.Activities.CodeActivity.CacheMetadata%2A> オーバーライドに配置できます。また、検証エラーまたは警告はメタデータ引数に追加できます。 次の例では、`Cost` が `Price` よりも高い場合、検証エラーがメタデータに追加されます。  
   
 > [!NOTE]
-> `Cost` と `Price` はこのアクティビティの引数ではありませんが、デザイン時に設定されるプロパティです。 その理由は、これらの値は <xref:System.Activities.CodeActivity.CacheMetadata%2A> オーバーライドで検証できるためです。 引数に流入するデータの値は、データが実行時まで流れないのでデザイン時には検証できません。しかし、`RequiredArgument` 属性とオーバーロード グループを使用してアクティビティの引数を検証すると、それらの引数にバインドされていることが確認できます。 このコード例では、`RequiredArgument` 引数の `Description` 属性を確認します。これがバインドされていなければ、検証エラーが生成されます。 必須の引数は、「[ために必要な引数とオーバー ロード グループ](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)します。  
+> `Cost` と `Price` はこのアクティビティの引数ではありませんが、デザイン時に設定されるプロパティです。 その理由は、これらの値は <xref:System.Activities.CodeActivity.CacheMetadata%2A> オーバーライドで検証できるためです。 引数に流入するデータの値は、データが実行時まで流れないのでデザイン時には検証できません。しかし、`RequiredArgument` 属性とオーバーロード グループを使用してアクティビティの引数を検証すると、それらの引数にバインドされていることが確認できます。 このコード例では、`Description` 引数の `RequiredArgument` 属性を確認します。これがバインドされていなければ、検証エラーが生成されます。 必須の引数は、「[ために必要な引数とオーバー ロード グループ](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)します。  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  

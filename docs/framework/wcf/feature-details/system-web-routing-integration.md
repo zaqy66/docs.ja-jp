@@ -3,11 +3,11 @@ title: System.Web.Routing 統合
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
 ms.openlocfilehash: 3b95b3117941ce7d019b87b00181b2cbac652f43
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48843852"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308209"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 統合
 Windows Communication Foundation (WCF) サービスでは、インターネット インフォメーション サービス (IIS) をホストする場合は、仮想ディレクトリで、.svc ファイルを配置します。 この .svc ファイルは、使用するサービス ホスト ファクトリと、サービスを実装するクラスを指定します。 たとえば、URI で .svc ファイルを指定する、サービスに要求を行うときに:`http://contoso.com/EmployeeServce.svc`します。 REST サービスを記述するプログラマにとっては、この種類の URI は最適とは言えません。 REST サービス用の URI は、特定のリソースを指定しており、拡張子がないのが普通です。 <xref:System.Web.Routing>統合機能では、拡張子のない Uri に応答する WCF REST サービスをホストすることができます。 ルーティングの参照の詳細については[ASP.NET ルーティング](https://go.microsoft.com/fwlink/?LinkId=184660)します。  

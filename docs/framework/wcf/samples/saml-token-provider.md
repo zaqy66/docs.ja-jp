@@ -3,11 +3,11 @@ title: SAML トークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: dfd693e262e7566c865d5b9faed5b9e00a8cfec9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845321"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308527"
 ---
 # <a name="saml-token-provider"></a>SAML トークン プロバイダー
 このサンプルでは、カスタム クライアントの SAML トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider で出荷されます。 WCF にも付属、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。
@@ -371,7 +371,7 @@ ms.locfileid: "48845321"
   
 3.  Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
+4.  クライアントとサービス間で通信できない場合は、「 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)」を参照してください。  
   
 #### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -393,7 +393,7 @@ ms.locfileid: "48845321"
   
 9. クライアント コンピューターで、コマンド プロンプト ウィンドウから `Client.exe` を起動します。  
   
-10. クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
+10. クライアントとサービス間で通信できない場合は、「 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)」を参照してください。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
