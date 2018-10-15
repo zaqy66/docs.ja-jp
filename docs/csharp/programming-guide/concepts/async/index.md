@@ -2,12 +2,12 @@
 title: Async および Await を使用した非同期プログラミング (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bd1493319dd7f742158fe7d3e1b286a4900b05b5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e95010f966119db72a32c21408852d6c3bd6521
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529164"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122839"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Async および Await を使用した非同期プログラミング (C#)
 パフォーマンスのボトルネックを回避しアプリケーション全体の応答性を向上させるために、非同期プログラミングを使用できます。 ただ、非同期アプリケーションを作成する従来の方法は複雑で、プログラムの作成、デバッグ、保守が困難な場合があります。  
@@ -24,8 +24,8 @@ ms.locfileid: "43529164"
 | アプリケーション領域    | 非同期メソッドがある .NET 型     | 非同期メソッドがある Windows ランタイム型  |
 |---------------------|-----------------------------------|-------------------------------------------|
 |Web アクセス|<xref:System.Net.Http.HttpClient>|<xref:Windows.Web.Syndication.SyndicationClient>|
-|ファイルの処理|<xref:System.IO.StreamWriter>、<xref:System.IO.StreamReader>、<xref:System.Xml.XmlReader>|<xref:Windows.Storage.StorageFile>|  
-|イメージの処理||<xref:Windows.Media.Capture.MediaCapture>、<xref:Windows.Graphics.Imaging.BitmapEncoder>、<xref:Windows.Graphics.Imaging.BitmapDecoder>|  
+|ファイルの処理|<xref:System.IO.StreamWriter>、 <xref:System.IO.StreamReader>、 <xref:System.Xml.XmlReader>|<xref:Windows.Storage.StorageFile>|  
+|イメージの処理||<xref:Windows.Media.Capture.MediaCapture>、 <xref:Windows.Graphics.Imaging.BitmapEncoder>、 <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
 |WCF プログラミング|[同期操作と非同期操作](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)||  
   
 非同期性は、UI スレッドにアクセスするアプリケーションに対して特に有効です。これは、すべての UI 関連のアクティビティが一般的に 1 つのスレッドを共有するためです。 同期アプリケーションでは、1 つのプロセスがブロックされるとすべてがブロックされます。 アプリケーションが応答を停止するため、待機状態であるとは考えずに失敗したと結論付けることもあります。  
