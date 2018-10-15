@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933606"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861303"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 
@@ -117,7 +117,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 - 相対ディレクトリ コンポーネントを評価します (現在のディレクトリの場合は `.`、親ディレクトリの場合は `..`)。
 - 特定の文字をトリミングします。
 
-この正規化は暗黙的に行われますが、<xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> メソッドを呼び出すことで明示的に行うことができます。このメソッドは [GetFullPathName() 関数](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)の呼び出しをラップします。 Windows [GetFullPathName() 関数](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) を P/Invoke で直接呼び出すこともできます。 を呼び出すこともできます。 
+この正規化は暗黙的に行われますが、<xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> メソッドを呼び出すことで明示的に行うことができます。このメソッドは [GetFullPathName() 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx の呼び出しをラップします。 Windows [GetFullPathName() 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)を P/Invoke で直接呼び出すこともできます。 を呼び出すこともできます。 
 
 ### <a name="identifying-the-path"></a>パスの識別
 

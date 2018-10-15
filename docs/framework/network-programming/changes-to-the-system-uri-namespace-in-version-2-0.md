@@ -5,12 +5,12 @@ ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 169454edd04bfdb55affcc2be12140f42dd2f7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbd12b3e08b6e21d26e2cb688a591cd4e03574dc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392449"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205985"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>バージョン 2.0 での System.Uri 名前空間の変更
 <xref:System.Uri?displayProperty=nameWithType> クラスには、いくつかの変更が加えられました。 これらの変更は、不適切な動作を修正し、利便性とセキュリティを強化するものです。  
@@ -42,7 +42,7 @@ ms.locfileid: "33392449"
   
 -   クエリ部分 (ファイル、FTP など) がないとわかっている URI スキーマの場合、'?' 文字は常にエスケープされ、<xref:System.Uri.Query%2A> 部分の先頭とは見なされません。  
   
--   暗黙的なファイル URI の場合 ("c:\directory\file@name.txt" の形式)、完全なエスケープ解除が要求されている場合、または <xref:System.Uri.LocalPath%2A> が `true` の場合を除き、フラグメント文字 ('#') は常にエスケープされます。  
+-   暗黙的なファイル URI の場合 (`c:\directory\file@name.txt` の形式)、完全なエスケープ解除が要求されている場合、または <xref:System.Uri.LocalPath%2A> が `true` の場合を除き、フラグメント文字 ('#') は常にエスケープされます。  
   
 -   UNC ホスト名のサポートは削除されました。国際対応のホスト名を表す IDN 仕様が採用されました。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "33392449"
   
 -   <xref:System.Uri.IsLoopback%2A> から、一貫性のある結果が生成されるようになりました。  
   
--   URI "`file:///path`" は、"file://path" に変換されなくなりました。  
+-   URI "`file:///path`" は、`file://path` に変換されなくなりました。  
   
--   "#" は、ホスト名終端文字として認識されるようになりました。 つまり、"http://consoto.com#fragment" が "http://contoso.com/#fragment" になりました。  
+-   "#" は、ホスト名終端文字として認識されるようになりました。 つまり、`http://consoto.com#fragment` が `http://contoso.com/#fragment` になりました。  
   
 -   基本 URI とフラグメントを結合するときのバグが修正されました。  
   

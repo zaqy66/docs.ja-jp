@@ -5,12 +5,12 @@ ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bdeb0e92dca723b64ee82b70f58fe910fd0c2edb
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: fe3b10e17c3cdf181f0b33b4305008655047fb0f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931051"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269398"
 ---
 # <a name="certificate-selection-and-validation"></a>証明書の選択と検証
 <xref:System.Net> クラスは、Secure Socket Layer (SSL) 接続の <xref:System.Security.Cryptography.X509Certificates> を選択および検証する方法を複数サポートしています。 クライアントは、サーバーに対する認証に 1 つまたは複数の証明書を選択できます。 サーバーは、クライアント証明書の認証に固有の属性が 1 つまたは複数あることを必須にすることができます。  
@@ -41,13 +41,13 @@ ms.locfileid: "42931051"
 ## <a name="tools-for-certificate-configuration"></a>証明書構成のツール  
  クライアントとサーバーの証明書構成には複数のツールを使用できます。  
   
- *Winhttpcertcfg.exe* ツールは、クライアント証明書の構成に使用できます。 *Winhttpcertcfg.exe* ツールは、Windows Server 2003 リソース キットに付属するツールの 1 つとして提供されています。 このツールは、Windows Server 2003 リソース キット ツールの一部として www.microsoft.com からダウンロードすることもできます。  
+ *Winhttpcertcfg.exe* ツールは、クライアント証明書の構成に使用できます。 *Winhttpcertcfg.exe* ツールは、Windows Server 2003 リソース キットに付属するツールの 1 つとして提供されています。 このツールは、Windows Server 2003 リソース キット ツールの一部として [www.microsoft.com](https://www.microsoft.com) からダウンロードすることもできます。  
   
 *HttpCfg.exe* ツールは、<xref:System.Net.HttpListener> クラスのサーバー証明書の構成に使用できます。 *HttpCfg.exe* ツールは、Windows Server 2003 および Windows XP Service Pack 2 のサポート ツールの 1 つとして提供されています。 *HttpCfg.exe* とその他のサポート ツールは、Windows Server 2003 または Windows XP の既定ではインストールされません。 Windows Server 2003 の場合、 サポート ツールは、Windows Server 2003 CD-ROM 上の次のフォルダーとファイルとは別にインストールされます。  
   
  \Support\Tools\Suptools.msi  
   
- Windows XP Service Pack 2 で使用する場合、Windows XP サポート ツールは、www.microsoft.com からのダウンロードとして使用できます。  
+ Windows XP Service Pack 2 で使用する場合、Windows XP サポート ツールは、[www.microsoft.com](https://www.microsoft.com) からのダウンロードとして使用できます。  
   
  *HttpCfg.exe* ツールのバージョンのソース コードは、Windows Server SDK にサンプルとしても付属しています。 *HttpCfg.exe* サンプルのソース コードは、Windows SDK の一部としてネットワーク サンプルの既定で次のフォルダーにインストールされます。  
   

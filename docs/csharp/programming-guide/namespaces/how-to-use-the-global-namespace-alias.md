@@ -6,12 +6,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 74f51d18ddda1ae4706b78aaf713683d2e505d2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327243"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195179"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>方法: グローバル名前空間エイリアスを使用する (C# プログラミング ガイド)
 グローバル[名前空間](../../../csharp/language-reference/keywords/namespace.md)のメンバーにアクセスできると、そのメンバーが同名の別のエンティティによって隠される可能性がある場合に役立ちます。  
@@ -41,12 +41,14 @@ ms.locfileid: "33327243"
   
  [!code-csharp[csProgGuideNamespaces#5](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-global-namespace-alias_6.cs)]  
   
- **A 1**  
-**B 2**  
-**C 3**   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [名前空間](../../../csharp/programming-guide/namespaces/index.md)  
- [。演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
- [:: 演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [extern](../../../csharp/language-reference/keywords/extern.md)
+**A 1**
+**B 2**
+**C 3**
+
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [名前空間](../../../csharp/programming-guide/namespaces/index.md)  
+- [。演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [:: 演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [extern](../../../csharp/language-reference/keywords/extern.md)

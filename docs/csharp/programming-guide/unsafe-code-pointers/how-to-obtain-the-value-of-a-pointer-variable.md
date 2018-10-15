@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [C#], pointers
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
-ms.openlocfilehash: c53026149837681235c6d1001707a25b9c8b40b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 66f341e193a0f018adb76a40617f85266519e602
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322953"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267217"
 ---
 # <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>方法 : ポインター変数の値を取得する (C# プログラミング ガイド)
 ポインターが指す位置にある変数を取得するには、ポインター間接演算子を使用します。 この式は次の形式になります。`p` はポインター型です。  
@@ -32,15 +32,17 @@ ms.locfileid: "33322953"
   
  [!code-csharp[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_2.cs)]  
   
- **theChar の値 = Z**  
-**theChar のアドレス = 12F718**  
-**pChar の値 = Z**   
-**pInt の値 = 90**    
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [ポインター式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [ポインター型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [型](../../../csharp/language-reference/keywords/types.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed ステートメント](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+**theChar の値 = Z**
+**theChar のアドレス = 12F718**
+**pChar の値 = Z**
+**pInt の値 = 90**
+
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [ポインター式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [ポインター型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [型](../../../csharp/language-reference/keywords/types.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed ステートメント](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

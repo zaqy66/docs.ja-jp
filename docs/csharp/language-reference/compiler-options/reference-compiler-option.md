@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 76a53d6adcf4c55faa57c25f851e46dd4c2c6c22
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393212"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213716"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# コンパイラ オプション)
 **-reference** オプションを指定すると、コンパイラは指定されたファイルの [public](../../../csharp/language-reference/keywords/public.md) 型の情報を現在のプロジェクトにインポートし、指定されたアセンブリ ファイルからメタデータを参照できるようにします。  
@@ -67,10 +67,12 @@ ms.locfileid: "43393212"
  この例では、[extern alias](../../../csharp/language-reference/keywords/extern-alias.md) 機能を使う方法を示します。  
   
  ソース ファイルをコンパイルし、`grid.dll` と `grid20.dll` からメタデータをインポートします。これらは事前にコンパイルしておきます。 2 つの DLL には同じコンポーネントの異なるバージョンが含まれており、ソース ファイルをコンパイルするには 2 つの **-reference** と別名オプションを使います。 オプションは次のようになります。  
+
+```console
+-reference:GridV1=grid.dll -reference:GridV2=grid20.dll  
+```
   
- -reference:GridV1=grid.dll と -reference:GridV2=grid20.dll  
-  
- これは、外部別名 "GridV1" と "GridV2" を設定します。プログラムではこれらを extern ステートメントで使います。  
+ これは、外部別名 `GridV1` と `GridV2` を設定します。プログラムではこれらを `extern` ステートメントで使います。  
   
 ```csharp  
 extern alias GridV1;  
@@ -78,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- このようにすると、コントロール名にプレフィックス GridV1 を付けることで、grid.dll のグリッド コントロールを参照できます。次に示すのはその例です。  
+ このようにすると、コントロール名にプレフィックス `GridV1` を付けることで、`grid.dll` のグリッド コントロールを参照できます。次に示すのはその例です。  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- さらに、コントロール名にプレフィックス GridV2 を付けると、grid20.dll のグリッド コントロールを参照できます。次に示すのはその例です。  
+ さらに、コントロール名にプレフィックス `GridV2` を付けることで、`grid20.dll` のグリッド コントロールを参照できます。次に示すのはその例です。  
   
 ```csharp  
 GridV2::Grid   

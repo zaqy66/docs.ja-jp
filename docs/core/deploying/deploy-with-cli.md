@@ -4,12 +4,12 @@ description: コマンド ライン インターフェイス (CLI) ツールを�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244752"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855023"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>コマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを展開する
 
@@ -26,7 +26,7 @@ ms.locfileid: "39244752"
 
 ## <a name="framework-dependent-deployment"></a>フレームワークに依存する展開
 
-サードパーティの依存関係を含まない、フレームワークに依存する展開を展開するプロセスには、アプリのビルド、テスト、および発行が含まれます。 C# で記述された次の単純な例は、このプロセスを示しています。 
+サードパーティの依存関係を含まない、フレームワークに依存する展開を展開するプロセスには、アプリのビルド、テスト、および発行が含まれます。 C# で記述された次の単純な例は、このプロセスを示しています。
 
 1. プロジェクトのディレクトリを作成します。
 
@@ -43,7 +43,7 @@ ms.locfileid: "39244752"
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. プロジェクトの依存関係とツールを更新します。
- 
+
    [dotnet restore](../tools/dotnet-restore.md) コマンドを実行して、プロジェクトで指定された依存関係を復元します ([注記参照](#dotnet-restore-note))。
 
 1. アプリのデバッグ ビルドを作成します。
@@ -105,7 +105,7 @@ ms.locfileid: "39244752"
 
 1. アプリの対象プラットフォームを定義します。
 
-   *csproj* ファイルで、アプリが対象とするプラットフォームを定義する `<RuntimeIdentifiers>` タグを `<PropertyGroup>` セクションに作成し、対象とする各プラットフォームのランタイム識別子 (RID) を指定します。 なお、RID の分離にはセミコロンを追加する必要があることに注意してください。 ランタイム識別子の一覧については、「[Runtime IDentifier catalog](../rid-catalog.md)」 (ランタイム識別子のカタログ) を参照してください。 
+   *csproj* ファイルで、アプリが対象とするプラットフォームを定義する `<RuntimeIdentifiers>` タグを `<PropertyGroup>` セクションに作成し、対象とする各プラットフォームのランタイム識別子 (RID) を指定します。 なお、RID の分離にはセミコロンを追加する必要があることに注意してください。 ランタイム識別子の一覧については、「[Runtime IDentifier catalog](../rid-catalog.md)」 (ランタイム識別子のカタログ) を参照してください。
 
    たとえば、次の `<PropertyGroup>` セクションは、アプリが 64 ビット Windows 10 オペレーティング システムおよび 64 ビット OS X バージョン 10.11 オペレーティング システムで実行されることを示します。
 
@@ -188,8 +188,7 @@ ms.locfileid: "39244752"
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
-[.NET Core アプリケーションの展開](index.md)   
-[.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)   
-
+* [.NET Core アプリケーションの配置](index.md)
+* [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)

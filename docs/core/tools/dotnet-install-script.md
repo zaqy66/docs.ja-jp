@@ -4,12 +4,12 @@ description: .NET Core CLI ツールと共有ランタイムをインストー�
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: acdf49950ebb49751c55ae72b3f623e590489202
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214381"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180044"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト参照
 
@@ -36,11 +36,11 @@ macOS/Linux の場合:
 * https://dot.net/v1/dotnet-install.sh (Bash、UNIX)
 * https://dot.net/v1/dotnet-install.ps1 (PowerShell、Windows)
 
-これらのスクリプトの主な有用性は、オートメーションのシナリオと管理者以外のインストールにおいてです。 2 つのスクリプトがあります。1 つは、Windows で動作する PowerShell スクリプトです。 その他のスクリプトは、Linux/macOS で動作する bash スクリプトです。 スクリプトの動作は両方とも同じです。 bash スクリプトは PowerShell のスイッチも読み取るので、Linux/macOS システムのスクリプトで PowerShell のスイッチを使うことができます。 
+これらのスクリプトの主な有用性は、オートメーションのシナリオと管理者以外のインストールにおいてです。 2 つのスクリプトがあります。1 つは、Windows で動作する PowerShell スクリプトです。 その他のスクリプトは、Linux/macOS で動作する bash スクリプトです。 スクリプトの動作は両方とも同じです。 bash スクリプトは PowerShell のスイッチも読み取るので、Linux/macOS システムのスクリプトで PowerShell のスイッチを使うことができます。
 
-インストール スクリプトは CLI ビルド ドロップから ZIP/tarball ファイルをダウンロードし、既定の場所または `-InstallDir|--install-dir` で指定された場所へのインストールに進みます。 既定では、インストール スクリプトは SDK をダウンロードしてインストールします。 共有ランタイムの取得だけを行いたい場合は、`--shared-runtime` 引数を指定します。 
+インストール スクリプトは CLI ビルド ドロップから ZIP/tarball ファイルをダウンロードし、既定の場所または `-InstallDir|--install-dir` で指定された場所へのインストールに進みます。 既定では、インストール スクリプトは SDK をダウンロードしてインストールします。 共有ランタイムの取得だけを行いたい場合は、`--shared-runtime` 引数を指定します。
 
-既定では、スクリプトはインストールの場所を現在のセッションの $PATH に追加します。 `--no-path` 引数を指定することによってこの既定の動作をオーバーライドします。 
+既定では、スクリプトはインストールの場所を現在のセッションの $PATH に追加します。 `--no-path` 引数を指定することによってこの既定の動作をオーバーライドします。
 
 スクリプトを実行する前に、必要な[依存関係](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)をすべてインストールします。
 
@@ -141,7 +141,7 @@ macOS/Linux の場合:
 
 Windows の場合:
 
-`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
 
 macOS/Linux の場合:
 
@@ -149,5 +149,5 @@ macOS/Linux の場合:
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Core のリリース](https://github.com/dotnet/core/releases)   
-[.NET Core ランタイムと SDK ダウンロード アーカイブ](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+* [.NET Core のリリース](https://github.com/dotnet/core/releases)
+* [.NET Core ランタイムと SDK ダウンロード アーカイブ](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

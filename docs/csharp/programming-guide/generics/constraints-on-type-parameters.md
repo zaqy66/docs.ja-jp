@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457370"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208661"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型パラメーターの制約 (C# プログラミング ガイド)
 
@@ -19,7 +19,7 @@ ms.locfileid: "34457370"
 
 |制約|説明|
 |----------------|-----------------|
-|`where T : struct`|この型引数は値の型である必要があります。 <xref:System.Nullable> を除く任意の値の型を指定できます。 詳細については、「[Null 許容型の使用](../nullable-types/using-nullable-types.md)」を参照してください。|
+|`where T : struct`|この型引数は値の型である必要があります。 <xref:System.Nullable%601> を除く任意の値の型を指定できます。 null 許容型の詳細については、「[null 許容型](../nullable-types/index.md)」をご覧ください。|
 |`where T : class`|この型引数は参照型である必要があります。 この制約は、任意のクラス、インターフェイス、デリゲート、または配列型にも適用されます。|
 |`where T : unmanaged`|この型引数は、参照型である必要はなく、任意の入れ子のレベルに参照型メンバーを含める必要はありません。|
 |`where T : new()`|この型引数には、パラメーターなしのパブリック コンストラクターが必要です。 `new()` 制約を別の制約と併用する場合、この制約を最後に指定する必要があります。|
@@ -109,9 +109,10 @@ C# 7.3 以降、基底クラスの制約として <xref:System.Enum?displayPrope
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
- <xref:System.Collections.Generic> [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [ジェネリック クラス](../../../csharp/programming-guide/generics/generic-classes.md)  
- [new 制約](../../../csharp/language-reference/keywords/new-constraint.md)  
+- <xref:System.Collections.Generic>
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [ジェネリック クラス](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [new 制約](../../../csharp/language-reference/keywords/new-constraint.md)  

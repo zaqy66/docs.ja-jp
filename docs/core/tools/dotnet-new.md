@@ -3,13 +3,13 @@ title: dotnet new コマンド - .NET Core CLI
 description: dotnet new コマンドは、指定されたテンプレートに基づいて新しい .NET Core プロジェクトを作成します。
 author: mairaw
 ms.author: mairaw
-ms.date: 06/12/2018
-ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.date: 07/31/2018
+ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207783"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512556"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -22,25 +22,31 @@ ms.locfileid: "36207783"
 ## <a name="synopsis"></a>構文
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
     [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```console
 dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
 dotnet new <TEMPLATE> [-l|--list]
 dotnet new [-all|--show-all]
 dotnet new [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>説明
@@ -284,9 +290,11 @@ dotnet new [-h|--help]
 
 **web**
 
-`--use-launch-settings` - 生成されたテンプレート出力に *launchSettings.json* を含めます。
+`--exclude-launch-settings` - 生成されたテンプレートから *launchSettings.json* を除外します。
 
 `--no-restore` - プロジェクトの作成中には暗黙的な復元を実行しません。
+
+`--no-https` - プロジェクトは HTTPS を必要としません。 このオプションは、`IndividualAuth` または `OrganizationalAuth` が使用されない場合にのみ適用されます。
 
 **webapi**
 
@@ -311,11 +319,13 @@ dotnet new [-h|--help]
 
 `-r|--org-read-access` - このアプリケーションにディレクトリへの読み取りアクセスを許可します。 `SingleOrg` 認証または `MultiOrg` 認証にのみ適用されます。
 
-`--use-launch-settings` - 生成されたテンプレート出力に *launchSettings.json* を含めます。
+`--exclude-launch-settings` - 生成されたテンプレートから *launchSettings.json* を除外します。
 
 `-uld|--use-local-db` - SQLite ではなく LocalDB が使用されるように指定します。 `Individual` 認証または `IndividualB2C` 認証にのみ適用されます。
 
 `--no-restore` - プロジェクトの作成中には暗黙的な復元を実行しません。
+
+`--no-https` - プロジェクトは HTTPS を必要としません。 `app.UseHsts` と `app.UseHttpsRedirection` は `Startup.Configure` に追加されません。 このオプションは、`Individual`、`IndividualB2C`、`SingleOrg`、または `MultiOrg` が使用されない場合にのみ適用されます。
 
 **mvc, razor**
 
@@ -348,13 +358,15 @@ dotnet new [-h|--help]
 
 `-r|--org-read-access` - このアプリケーションにディレクトリへの読み取りアクセスを許可します。 `SingleOrg` 認証または `MultiOrg` 認証にのみ適用されます。
 
-`--use-launch-settings` - 生成されたテンプレート出力に *launchSettings.json* を含めます。
+`--exclude-launch-settings` - 生成されたテンプレートから *launchSettings.json* を除外します。
 
 `--use-browserlink` - プロジェクトに BrowserLink を含めます。
 
 `-uld|--use-local-db` - SQLite ではなく LocalDB が使用されるように指定します。 `Individual` 認証または `IndividualB2C` 認証にのみ適用されます。
 
 `--no-restore` - プロジェクトの作成中には暗黙的な復元を実行しません。
+
+`--no-https` - プロジェクトは HTTPS を必要としません。 `app.UseHsts` と `app.UseHttpsRedirection` は `Startup.Configure` に追加されません。 このオプションは、`Individual`、`IndividualB2C`、`SingleOrg`、または `MultiOrg` が使用されない場合にのみ適用されます。
 
 **page**
 
@@ -524,7 +536,7 @@ SDK バージョン 2.0.0 (.NET Core SDK 2.0 以降のバージョンでのみ�
 
 ## <a name="see-also"></a>関連項目
 
-[dotnet new のカスタム テンプレート](custom-templates.md)  
-[dotnet new のカスタム テンプレートを作成する](~/docs/core/tutorials/create-custom-template.md)  
-[dotnet/dotnet-template-samples GitHub リポジトリ](https://github.com/dotnet/dotnet-template-samples)  
-[dotnet new で使用できるテンプレート](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+* [dotnet new のカスタム テンプレート](custom-templates.md)  
+* [dotnet new のカスタム テンプレートを作成する](~/docs/core/tutorials/create-custom-template.md)  
+* [dotnet/dotnet-template-samples GitHub リポジトリ](https://github.com/dotnet/dotnet-template-samples)  
+* [dotnet new で使用できるテンプレート](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: f1c045ffe311dfad851c7cace37966d8d42a22cc
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: c617b2d7b56618867fe92cbe1d9ee04aa4c3ab64
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220738"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207240"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ をサポートする C# の機能
 このセクションでは、C# 3.0 で導入された新しい言語構成要素について説明します。 これらの新機能はすべてある程度まで [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリで使用されていますが、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] だけでなく、これらの機能が役立つと思われるあらゆる状況で使用できます。  
@@ -17,7 +17,7 @@ ms.locfileid: "39220738"
 ## <a name="query-expressions"></a>クエリ式  
  クエリ式は、SQL や XQuery に似た宣言型構文を使用して、IEnumerable コレクションを照会します。 クエリ構文は、コンパイル時に、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーの標準クエリ演算子拡張メソッドの実装に対するメソッド呼び出しに変換されます。 アプリケーションは、`using` ディレクティブを使用して適切な名前空間を指定することにより、スコープ内の標準クエリ演算子を制御します。 次のクエリ式では、文字列の配列を受け取り、文字列の最初の文字を基に文字列をグループ化し、グループを並び替えています。  
   
-```  
+```csharp  
 var query = from str in stringArray  
             group str by str[0] into stringGroup  
             orderby stringGroup.Key  
@@ -29,7 +29,7 @@ var query = from str in stringArray
 ## <a name="implicitly-typed-variables-var"></a>暗黙的に型指定された変数 (var)  
  変数を宣言して初期化するときに、型を明示的に指定する代わりに、次に示すように [var](../../../../csharp/language-reference/keywords/var.md) 修飾子を使用すると、コンパイラが型を推論して代入するように指示できます。  
   
-```  
+```csharp  
 var number = 5;  
 var name = "Virginia";  
 var query = from str in stringArray  
@@ -37,14 +37,14 @@ var query = from str in stringArray
             select str;  
 ```  
   
- `var` として宣言された変数は、明示的に型を指定した変数とまったく同じように厳密に型指定されます。 `var` を使用すると匿名型を作成できますが、任意のローカル変数にも使用できます。 また、暗黙的な型指定を使用して、配列を宣言することもできます。  
+ `var` として宣言された変数は、明示的に型を指定した変数とまったく同じように厳密に型指定されます。 `var` を使用すると匿名型を作成できますが、ローカル変数にのみ使用できます。 また、暗黙的な型指定を使用して、配列を宣言することもできます。  
   
  詳細については、「[暗黙的に型指定されるローカル変数](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。  
   
 ## <a name="object-and-collection-initializers"></a>オブジェクト初期化子とコレクション初期化子  
  オブジェクト初期化子とコレクション初期化子を使用すると、オブジェクトのコンストラクターを明示的に呼び出さなくても、オブジェクトを初期化できます。 通常、初期化子は、ソース データを新しいデータ型に投影するクエリ式で使用されます。 パブリックな `Name` プロパティと `Phone` プロパティを持つ `Customer` という名前のクラスがある場合、オブジェクト初期化子は次のコードのように使用できます。  
   
-```  
+```csharp  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
   
@@ -78,11 +78,12 @@ select new {name = cust.Name, phone = cust.Phone};
 ## <a name="auto-implemented-properties"></a>自動実装プロパティ  
  自動実装プロパティによって、プロパティの宣言が簡略化されます。 次の例に示すようなプロパティを宣言すると、コンパイラによってプライベートの匿名バッキング フィールドが作成されます。このフィールドには、プロパティ getter およびプロパティ setter でしかアクセスできません。  
   
-```  
+```csharp  
 public string Name {get; set;}  
 ```  
   
  詳細については、「[自動実装プロパティ](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [統合言語クエリ (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>参照
+
+- [統合言語クエリ (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

@@ -3,12 +3,12 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: bc3c23b277b233efba9f32cc49b29ac905f3abc8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480157"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227260"
 ---
 # <a name="rest-client"></a>REST クライアント
 
@@ -37,7 +37,7 @@ GitHub 上の REST サービスに対して HTTP 要求を発行するアプリ�
 パッケージを復元したら、`dotnet build` を実行します。 これにより、ビルド エンジンが実行され、アプリケーションが作成されます。 最後に、`dotnet run` を実行してアプリケーションを実行します。
 
 ## <a name="adding-new-dependencies"></a>新しい依存関係を追加する
-.NET Core の重要な設計目標の 1 つは、.NET Framework のインストール サイズを最小限に抑えることです。 .NET Core アプリケーション フレームワークには、.NET Framework の最も一般的な要素だけが含まれています。 その一部の機能のための追加ライブラリがアプリケーションで必要な場合は、C# プロジェクト (\*.csproj) ファイルにそれらの依存関係を追加します。 ここで示す例の場合は、`System.Runtime.Serialization.Json` パッケージを追加して、アプリケーションが JSON 応答を処理できるようにする必要があります。
+.NET Core の重要な設計目標の 1 つは、.NET インストール サイズを最小限に抑えることです。 その一部の機能のための追加ライブラリがアプリケーションで必要な場合は、C# プロジェクト (\*.csproj) ファイルにそれらの依存関係を追加します。 ここで示す例の場合は、`System.Runtime.Serialization.Json` パッケージを追加して、アプリケーションが JSON 応答を処理できるようにする必要があります。
 
 `csproj` プロジェクト ファイルを開きます。 ファイルの最初の行は次のように表示されます。
 

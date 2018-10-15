@@ -3,13 +3,16 @@ title: Visual Studio で .NET Core アプリを展開する
 description: Visual Studio で .NET Core アプリを展開する方法を説明します。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.date: 09/03/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407450"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227741"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Visual Studio で .NET Core アプリを展開する
 
@@ -30,13 +33,14 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
 1. プロジェクトを作成します。
 
-   **[ファイル]** > **[新規作成]** > **[プロジェクト]** を順に選択します。 **[新しいプロジェクト]** ダイアログの **[インストール済み]** プロジェクトの種類ウィンドウで、**[.NET Core]** を選択し、中央のウィンドウで **[コンソール アプリケーション (.NET Core)]** テンプレートを選択します。 **[名前]** テキスト ボックスに、"FDD" などのプロジェクト名を入力します。 **[OK]** ボタンを選択します。
+   **[ファイル]** > **[新規作成]** > **[プロジェクト]** を順に選択します。 **[新しいプロジェクト]** ダイアログの **[インストール]** プロジェクトの種類ウィンドウでお使いの言語 (C# または Visual Basic) のプロジェクト カテゴリを展開し、**[.NET Core]** を選択し、中央のウィンドウで **[コンソール アプリケーション (.NET Core)]** テンプレートを選択します。 **[名前]** テキスト ボックスに、"FDD" などのプロジェクト名を入力します。 **[OK]** ボタンを選択します。
 
 1. アプリケーションのソース コードを追加します。
 
-   エディターで *Program.cs* ファイルを開き、自動生成されたコードを次のコードに置き換えます。 テキストの入力を求めるプロンプトが表示されてから、ユーザーが入力した個々の単語が表示されます。 正規表現 `\w+` を使用して、入力テキストの単語を分離します。
+   エディターで *Program.cs* または *Program.vb* ファイルを開き、自動生成されたコードを次のコードに置き換えます。 テキストの入力を求めるプロンプトが表示されてから、ユーザーが入力した個々の単語が表示されます。 正規表現 `\w+` を使用して、入力テキストの単語を分離します。
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. アプリのデバッグ ビルドを作成します。
 
@@ -54,7 +58,7 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
       1. これで **[発行]** タブには、**[FolderProfile]** という 1 つのプロファイルが表示されます。 プロファイルの構成設定が、タブの **[概要]** セクションに表示されます。
 
-   作成されたファイルは、プロジェクトの *.\bin\release* サブディレクトリのサブディレクトリ内にある、`PublishOutput` という名前のディレクトリに配置されます。
+   作成されたファイルは、ご自分のプロジェクトの *.\bin\release\netcoreapp2.1* サブディレクトリのサブディレクトリ内にある、`Publish` (Windows の場合) または `publish` (Unix システムの場合) という名前のディレクトリに配置されます。
 
 アプリケーションのファイルと共に、発行プロセスは、アプリに関するデバッグ情報を含むプログラム データベース (.pdb) ファイルを出力します。 このファイルは、主に例外のデバッグに役立ちます。 これを、アプリケーションのファイルにはパッケージ化しないよう選択できます。 ただし、アプリのリリース ビルドをデバッグする場合のために、保存しておくことをお勧めします。
 
@@ -76,37 +80,56 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
 ## <a name="simpleSelf"></a> サードパーティの依存関係を含まない、自己完結型の展開
 
-サードパーティの依存関係を含まない自己完結型の展開を展開するプロセスには、プロジェクトの作成、*csproj*ファイルの変更、アプリのビルド、テスト、および発行が含まれます。 C# で記述された次の単純な例は、このプロセスを示しています。
+サードパーティの依存関係を含まない自己完結型の展開を展開するプロセスには、プロジェクトの作成、*csproj*ファイルの変更、アプリのビルド、テスト、および発行が含まれます。 C# で記述された次の単純な例は、このプロセスを示しています。 フレームワーク依存の展開の場合と同じように、ご自分のプロジェクトの作成、コーディング、テストを開始します。
 
 1. プロジェクトを作成します。
 
-   **[ファイル]** > **[新規作成]** > **[プロジェクト]** を順に選択します。 **[新しいプロジェクトの追加]** ダイアログの **[インストール済み]** プロジェクトの種類ウィンドウで、**[.NET Core]** を選択し、中央のウィンドウで **[コンソール アプリケーション (.NET Core)]** テンプレートを選択します。 **[名前]** テキスト ボックスに、"SCD" などのプロジェクト名を入力し、**[OK]** ボタンを選択します。
+   **[ファイル]** > **[新規作成]** > **[プロジェクト]** を順に選択します。 **[新しいプロジェクト]** ダイアログの **[インストール]** プロジェクトの種類ウィンドウでお使いの言語 (C# または Visual Basic) のプロジェクト カテゴリを展開し、**[.NET Core]** を選択し、中央のウィンドウで **[コンソール アプリケーション (.NET Core)]** テンプレートを選択します。 **[名前]** テキスト ボックスに、"SCD" などのプロジェクト名を入力し、**[OK]** ボタンを選択します。
 
 1. アプリケーションのソース コードを追加します。
 
-   エディターで *Program.cs* ファイルを開き、自動生成されたコードを次のコードに置き換えます。 テキストの入力を求めるプロンプトが表示されてから、ユーザーが入力した個々の単語が表示されます。 正規表現 `\w+` を使用して、入力テキストの単語を分離します。
+   エディターで *Program.cs* またはファイルを開き、自動生成されたコードを次のコードに置き換えます。 テキストの入力を求めるプロンプトが表示されてから、ユーザーが入力した個々の単語が表示されます。 正規表現 `\w+` を使用して、入力テキストの単語を分離します。
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+
+1. グローバリゼーション インバリアント モードを使用するかどうかを決定します。
+
+   特にアプリの対象が Linux の場合、[グローバリゼーション インバリアント モード](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)を活用することで展開の合計サイズを減らすことができます。 グローバリゼーション インバリアント モードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。
+
+   インバリアント モードを有効にするには、**ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、**[SCD.csproj の編集]** または **[SCD.vbproj の編集]** を選択します。 次の強調表示された行をファイルに追加します。
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
+1. アプリケーションのデバッグ ビルドを作成します。
+
+   **[ビルド]** > **[ソリューションのビルド]** を順に選択します。 **[デバッグ]** > **[デバッグ開始]** を選択して、アプリケーションのデバッグ ビルドをコンパイルして、実行することも可能です。 このデバッグ手順では、ホスト プラットフォームで実行するときのアプリケーションの問題を特定できます。 引き続き、それぞれのターゲット プラットフォームでテストする必要があります。
+
+   グローバリゼーション インバリアント モードを有効にした場合、カルチャ感度の高いデータの欠如が自分のアプリケーションに適しているのかどうかを特にテストしてください。
+
+デバッグが終了したら、自己完結型の展開を発行できます。
+
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 以前](#tab/vs156)
+
+プログラムをデバッグしてテストしたら、アプリと共に展開するファイルをアプリの対象のプラットフォームごとに作成します。
+
+Visual Studio でアプリを発行するには、次の操作を行います。
 
 1. アプリの対象プラットフォームを定義します。
 
-   1. **ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、**[編集]** を選択します。
+   1. **ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、**[Edit SCD.csproj]\(SCD.csproj の編集\)** を選択します。
 
    1. *csproj* ファイルの `<PropertyGroup>` セクションに、アプリの対象のプラットフォームを定義する `<RuntimeIdentifiers>` タグを作成し、対象とするプラットフォームごとにランタイム識別子 (RID) を指定します。 なお、RID の分離にはセミコロンを追加する必要があることに注意してください。 ランタイム識別子の一覧については、「[Runtime IDentifier catalog](../rid-catalog.md)」 (ランタイム識別子のカタログ) を参照してください。
 
    たとえば、次の例は、アプリが 64 ビット Windows 10 オペレーティング システムおよび 64 ビット OS X バージョン 10.11 オペレーティング システムで実行されることを示します。
 
-```xml
-<PropertyGroup>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-</PropertyGroup>
-```
+   ```xml
+   <PropertyGroup>
+      <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+   </PropertyGroup>
+   ```
 
    なお、`<RuntimeIdentifiers>` 要素は、*csproj* ファイルの任意の `<PropertyGroup>` に入れることが可能です。 *csproj* ファイルの完全なサンプルは、このセクションの後の部分で示しています。
-
-1. アプリのデバッグ ビルドを作成します。
-
-   **[ビルド]** > **[ソリューションのビルド]** を順に選択します。 **[デバッグ]** > **[デバッグ開始]** を選択して、アプリケーションのデバッグ ビルドをコンパイルして、実行することも可能です。
 
 1. アプリケーションを発行します。
 
@@ -146,11 +169,97 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
 ```
+
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 以降](#tab/vs157)
+
+プログラムをデバッグしてテストしたら、アプリと共に展開するファイルをアプリの対象のプラットフォームごとに作成します。 これを行う場合、対象のプラットフォームごとに別のプロファイルも作成します。
+
+アプリケーションの対象となるプラットフォームごとに次を行います。
+
+1. ターゲット プラットフォーム用のプロファイルを作成します。
+
+   これが自分で作成した最初のプロファイルの場合、**ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、**[発行]** を選択します。
+
+   プロファイルを既に作成している場合、そのプロファイルを右クリックし、**[発行]** ダイアログを開きます (まだ開いていない場合)。 **[新しいプロファイル]** を選択します。
+
+   **[発行先を選択]** ダイアログ ボックスが開きます。
+  
+1. Visual Studio によってアプリケーションが発行される場所を選択します。
+
+   発行先のプラットフォームが 1 つだけの場合、**[フォルダーを選択してください]** テキスト ボックスで既定値をそのまま選択しても問題ありません。これでアプリケーションのフレームワーク依存展開が *\<project-directory>\bin\Release\netcoreapp2.1\publish\* ディクショナリに発行されます。
+
+   発行先のプラットフォームが複数になる場合、ターゲット プラットフォームを識別する文字列を追加します。 たとえば、文字列 "linux" をファイル パスに追加する場合、Visual Studio によって、アプリケーションのフレームワーク依存展開が *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux* ディクショナリに発行されます。
+
+1. **[発行]** ボタンの隣にあるドロップダウン リスト アイコンを選択し、**[プロファイルの作成]** を選択してプロファイルを作成します。 次に、**[プロファイルの作成]** ボタンを選択し、プロファイルを作成します。
+
+1. 自己完結型の展開を発行することを示し、アプリの対象となるプラットフォームを定義します。
+
+   1. **[発行]** ダイアログで **[構成]** リンクを選択し、**[プロファイル設定]** ダイアログを開きます。
+
+   1. **[配置モード]** リスト ボックスで **[自己完結]** を選択します。
+
+   1. **[ターゲット ランタイム]** リスト ボックスで、アプリケーションのターゲットとなるプラットフォームを 1 つ選択します。
+
+   1. **[保存]** を選択して変更を適用し、ダイアログを閉じます。
+
+1. プロファイルに名前を付けます。
+
+   1. **[アクション]**、**[プロファイル名の変更]** の順に選択し、プロファイルに名前を付けます。
+
+   2. ターゲット プラットフォームを識別する名前をプロファイルに割り当て、**[保存]* を選択します。
+
+以上の手順を繰り返し、アプリケーションの対象となる追加ターゲット プラットフォームを定義します。
+
+これでプロファイルが構成されたので、アプリを発行できます。 この操作を行うには、次の手順を実行します。
+
+   1. この時点で **[発行]** ウィンドウが開いていない場合、**ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、**[発行]** を選択します。
+
+   2. 発行するプロファイルを選択し、**[発行]** を選択します。 発行するプロファイルごとにこれを行います。
+
+   それぞれの対象の場所 (今回の例では、bin\release\netcoreapp2.1\publish\\*profile-name*) には、アプリの起動に必要なファイルの完全なセット (アプリ ファイルとすべての .NET Core ファイルの両方) が含まれています。
+
+アプリケーションのファイルと共に、発行プロセスは、アプリに関するデバッグ情報を含むプログラム データベース (.pdb) ファイルを出力します。 このファイルは、主に例外のデバッグに役立ちます。 これを、アプリケーションのファイルにはパッケージ化しないよう選択できます。 ただし、アプリのリリース ビルドをデバッグする場合のために、保存しておくことをお勧めします。
+
+発行したファイルは、任意の方法で展開できます。 たとえば、Zip ファイルにパッケージ化したり、単純な `copy` コマンドを使用したり、任意のインストール パッケージで展開したりできます。
+
+このプロジェクトの完全な *csproj* ファイルを次に示します。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
+
+また、Visual Studio によって、対象とするプラットフォームごとに別個の発行プロファイル (\*.pubxml) が作成されます。 たとえば、linux プロファイルのファイル (linux.pubxml) は次のように表示されます。
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishProtocol>FileSystem</PublishProtocol>
+    <Configuration>Release</Configuration>
+    <Platform>Any CPU</Platform>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PublishDir>bin\Release\netcoreapp2.1\publish\linux</PublishDir>
+    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <_IsPortable>false</_IsPortable>
+  </PropertyGroup>
+</Project>
+```
+
+---
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>サードパーティの依存関係を含む、自己完結型の展開
 
@@ -164,11 +273,13 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
 このプロジェクトの完全な *csproj* ファイルを次に示します。
 
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 以前](#tab/vs156)
+
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
@@ -176,6 +287,22 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
   </ItemGroup>
 </Project>
 ```
+
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 以降](#tab/vs157)
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+</Project>
+```
+
+---
 
 アプリケーションを展開すると、アプリで使用されるすべてのサードパーティの依存関係も、アプリケーション ファイルに含まれています。 アプリが実行されているシステムには、サードパーティ ライブラリは必要ありません。
 

@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: f7bd75ecdd85e49524ccdf67f3e59aa4be46bdce
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792414"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195622"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core サービスと Web アプリのテスト
 
@@ -31,9 +31,9 @@ ms.locfileid: "37792414"
 
 コントローラーのアクションの単体テストでは、その動作にだけ注目するようにします。 コントローラーの単体テストからは、フィルター、ルーティング、モデル バインドなどに関することは除外します。 1 つの事柄だけに注目してテストするため、一般に、単体テストは簡単に記述してすばやく実行できます。 適切に記述された一連の単体テストは、大きなオーバーヘッドなしに頻繁に実行できます。
 
-単体テストは、xUnit.net、MSTest、Moq、NUnit などのテスト フレームワークに基づいて実装されます。 eShopOnContainers サンプル アプリケーションでは、XUnit を使用します。
+単体テストは、xUnit.net、MSTest、Moq、NUnit などのテスト フレームワークに基づいて実装されます。 eShopOnContainers サンプル アプリケーションでは、xUnit を使用します。
 
-Web API コントローラーの単体テストを記述する際には、C\# で new キーワードを直接使用してコントローラー クラスをインスタンス化することにより、できるだけ速くテストを実行します。 次の例では、[XUnit](https://xunit.github.io/) をテスト フレームワークとして使用し、これを行う方法を示します。
+Web API コントローラーの単体テストを記述する際には、C\# で new キーワードを直接使用してコントローラー クラスをインスタンス化することにより、できるだけ速くテストを実行します。 次の例では、[xUnit](https://xunit.github.io/) をテスト フレームワークとして使用し、これを行う方法を示します。
 
 ```csharp
 [Fact]

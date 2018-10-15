@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3677ff7cc27847d56802206c793a574d61b1464c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1874d5512f04f22b9c53bdc9e92d0c96e45d21c8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391639"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44222741"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>方法: インストールされている .NET Framework バージョンを確認する
 
@@ -94,7 +94,7 @@ ms.locfileid: "33391639"
     |379893|.NET Framework 4.5.2|
     |Windows 10 システムのみ: 393295<br /><br /> その他すべての OS バージョン上: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
     |Windows 10 の 11 月更新版のシステムのみ: 394254<br /><br /> 他のすべての OS バージョンの場合: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |Windows 10 Anniversary Update のみ: 394802<br /><br /> 他のすべての OS バージョンの場合: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |Windows 10 Anniversary Update および Windows Server 2016 の場合: 394802<br /><br /> 他のすべての OS バージョンの場合: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |Windows 10 Creators Update のみ: 460798<br/><br/> その他すべての OS バージョン上: 460805 | .NET Framework 4.7 |
     |Windows 10 Fall Creators Update のみ: 461308<br/><br/> その他のすべての OS バージョン: 461310 | .NET Framework 4.7.1 |
     |Windows 10 April 2018 Update のみ: 461808<br/><br/> その他のすべての OS バージョン: 461814| .NET Framework 4.7.2 |
@@ -142,7 +142,7 @@ ms.locfileid: "33391639"
     |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.6|393297|
     |Windows 10 にインストールされた .NET Framework 4.6.1|394254|
     |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.6.1|394271|
-    |Windows 10 Anniversary Update にインストールされた .NET Framework 4.6.2|394802|
+    |Windows 10 Anniversary Update および Windows Server 2016 にインストールされた .NET Framework 4.6.2|394802|
     |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.6.2|394806|
     |Windows 10 Creators Update にインストールされた .NET Framework 4.7|460798|
     |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.7|460805|

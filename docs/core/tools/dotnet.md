@@ -4,12 +4,12 @@ description: dotnet コマンド (.NET Core CLI ツールの一般的なドラ�
 author: mairaw
 ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 788dc746705f9328683019ab3ad9836204a1ea63
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805660"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44079817"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
@@ -17,7 +17,7 @@ ms.locfileid: "34805660"
 
 ## <a name="name"></a>name
 
-`dotnet` - コマンドラインのコマンドを実行するための一般的なドライバーです。
+`dotnet` - .NET のソース コードとバイナリを管理するためのツール。
 
 ## <a name="synopsis"></a>構文
 
@@ -40,11 +40,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="description"></a>説明
 
-`dotnet` は、コマンド ライン インターフェイス (CLI) ツールチェーンの一般的なドライバーです。 単独で呼び出され、簡単な使用方法を提供します。
+`dotnet` は .NET のソース コードとバイナリを管理するためのツールです。 [`dotnet build`](dotnet-build.md) や [`dotnet run`](dotnet-run.md) のような特定のタスクを実行するコマンドを公開します。 各コマンドによって、それ自体の引数が定義されます。 各コマンドの後ろに `--help` と入力すると、短いヘルプ ドキュメントにアクセスできます。
 
-特定の機能がそれぞれコマンドとして実装されます。 機能を使用するには、[`dotnet build`](dotnet-build.md) のように、`dotnet` の後にコマンドを指定します。 コマンドに続く引数はすべて独自の引数です。
-
-`dotnet` が単独でコマンドとして使用されるのは、[フレームワークに依存するアプリ](../deploying/index.md)を実行する場合のみです。 アプリケーションを実行する場合は、`dotnet` の動詞の後にアプリケーション DLL を指定します (`dotnet myapp.dll` など)。
+`dotnet` は、`dotnet myapp.dll` など、アプリケーション DLL を指定することで、アプリケーションを実行するために使用できます。 展開オプションについては、「[.NET Core アプリケーションの展開](../deploying/index.md)」を参照してください。
 
 ## <a name="options"></a>オプション
 
@@ -64,15 +62,15 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--fx-version <VERSION>`
 
-アプリケーションを実行するために使用するインストール済み .NET Core ランタイムのバージョンです。
+アプリケーションを実行するために使用する .NET Core ランタイムのバージョン。
 
 `-h|--help`
 
-コマンドの短いヘルプを印刷します。 `dotnet` で使用すると、使用可能なコマンドのリストも印刷されます。
+`dotnet build --help` など、特定のコマンドのドキュメントを出力します。 `dotnet --help` では、使用できるコマンドの一覧が出力されます。
 
 `--info`
 
-現在のオペレーティング システム、バージョンのコミット SHA、およびその他の情報など、CLI ツールと環境の詳細情報を印刷します。
+現在のオペレーティング システムや .NET Core バージョンのコミット SHA など、.NET Core インストールとコンピューター環境に関する詳細を出力します。
 
 `--list-runtimes`
 
@@ -84,7 +82,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--roll-forward-on-no-candidate-fx`
 
- 共有フレームワークの候補なしでロールフォワードします。
+ `0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。 詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
 
 `-v|--verbosity <LEVEL>`
 
@@ -110,19 +108,19 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--fx-version <VERSION>`
 
-アプリケーションを実行するために使用するインストール済み .NET Core ランタイムのバージョンです。
+アプリケーションを実行するために使用する .NET Core ランタイムのバージョン。
 
 `-h|--help`
 
-コマンドの短いヘルプを印刷します。 `dotnet` で使用すると、使用可能なコマンドのリストも印刷されます。
+`dotnet build --help` など、特定のコマンドのドキュメントを出力します。 `dotnet --help` では、使用できるコマンドの一覧が出力されます。
 
 `--info`
 
-現在のオペレーティング システム、バージョンのコミット SHA、およびその他の情報など、CLI ツールと環境の詳細情報を印刷します。
+現在のオペレーティング システムや .NET Core バージョンのコミット SHA など、.NET Core インストールとコンピューター環境に関する詳細を出力します。
 
 `--roll-forward-on-no-candidate-fx`
 
- 共有フレームワークの候補なしでロールフォワードします。
+ `0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。 詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
 
 `-v|--verbosity <LEVEL>`
 
@@ -144,15 +142,15 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--fx-version <VERSION>`
 
-アプリケーションを実行するために使用するインストール済み .NET Core ランタイムのバージョンです。
+アプリケーションを実行するために使用する .NET Core ランタイムのバージョン。
 
 `-h|--help`
 
-コマンドの短いヘルプを印刷します。 `dotnet` で使用すると、使用可能なコマンドのリストも印刷されます。
+`dotnet build --help` など、特定のコマンドのドキュメントを出力します。 `dotnet --help` では、使用できるコマンドの一覧が出力されます。
 
 `--info`
 
-現在のオペレーティング システム、バージョンのコミット SHA、およびその他の情報など、CLI ツールと環境の詳細情報を印刷します。
+現在のオペレーティング システムや .NET Core バージョンのコミット SHA など、.NET Core インストールとコンピューター環境に関する詳細を出力します。
 
 `-v|--verbosity <LEVEL>`
 
@@ -259,7 +257,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ### <a name="additional-tools"></a>その他のツール
 
-.NET Core SDK 2.1.300 以降では、`DotnetCliToolReference` を使用してプロジェクト単位でのみ入手可能であった複数のツールを .NET Core SDK の一部として入手できるようになりました。 それらのツールを以下に示します。
+.NET Core SDK 2.1.300 以降では、`DotnetCliToolReference` を使用してプロジェクト単位でのみ入手可能であった複数のツールを .NET Core SDK の一部として入手できるようになりました。 これらのツールを次の表に示します。
 
 | ツール                                              | 関数                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -269,7 +267,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 | [user-secrets](/aspnet/core/security/app-secrets) | 開発ユーザーのシークレットを管理します。                            |
 | [watch](/aspnet/core/tutorials/dotnet-watch)      | ファイルが変化するとコマンドを実行するファイル ウォッチャーを起動します。 |
 
-各ツールの詳細については、`dotnet <tool-name> --help` を実行してください。
+各ツールの詳細については、`dotnet <tool-name> --help` と入力してください。
 
 ## <a name="examples"></a>使用例
 
@@ -287,7 +285,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `dotnet build`
 
-`myapp.dll` という名前のフレームワークに依存するアプリを実行します。
+`myapp.dll` など、アプリケーション DLL を実行します。
 
 `dotnet myapp.dll`
 
@@ -313,7 +311,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
-マイナー バージョンのロールフォワードを無効にします。 詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
+`0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。 詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

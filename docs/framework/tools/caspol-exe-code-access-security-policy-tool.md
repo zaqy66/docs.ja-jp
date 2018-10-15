@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2306d51d88ab2d3b74ed6381a6de0acebf1e62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410099"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748432"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (コード アクセス セキュリティ ポリシー ツール)
 ユーザーと管理者は、コード アクセス セキュリティ (CAS) ポリシー ツール (Caspol.exe) を使用して、コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを変更できます。  
@@ -83,29 +83,29 @@ caspol [options]
   
 |引数|説明|  
 |--------------|-----------------|  
-|**-allcode**|すべてのコードを指定します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.AllMembershipCondition>」を参照してください。|  
-|**-appdir**|アプリケーション ディレクトリを指定します。 メンバーシップ条件として **–appdir** を指定する場合は、コードの URL 証拠が、そのコードのアプリケーション ディレクトリ証拠と比較されます。 両方の証拠の値が同じである場合は、このメンバーシップ条件が成立します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.ApplicationDirectoryMembershipCondition>」を参照してください。|  
+|**-allcode**|すべてのコードを指定します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
+|**-appdir**|アプリケーション ディレクトリを指定します。 メンバーシップ条件として **–appdir** を指定する場合は、コードの URL 証拠が、そのコードのアプリケーション ディレクトリ証拠と比較されます。 両方の証拠の値が同じである場合は、このメンバーシップ条件が成立します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-custom**  *xmlfile*|カスタム メンバーシップ条件を追加します。 必須引数の *xmlfile* は、XML シリアル化したカスタム メンバーシップ条件を含む .xml ファイルを指定します。|  
-|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file*}|指定されたアセンブリ ハッシュを持つコードを指定します。 コード グループのメンバーシップ条件としてハッシュを使用するには、ハッシュ値またはアセンブリ ファイルを指定する必要があります。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.HashMembershipCondition>」を参照してください。|  
-|**-pub** {**-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string*}|指定されたソフトウェア発行者を持つコードを、証明書ファイル、ファイル上の署名、または X509 証明書の 16 進表示で指定します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.PublisherMembershipCondition>」を参照してください。|  
-|**-site** *website*|指定されたサイトがソースであるコードを指定します。 例:<br /><br /> **-site** www.proseware.com<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.SiteMembershipCondition>」を参照してください。|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|特定の厳密な名前を持つコードを、ファイル名、文字列としてのアセンブリ名、および *major*.*minor*.*build*.*revision* 形式のアセンブリ バージョンで指定します。 例:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.StrongNameMembershipCondition>」を参照してください。|  
-|**-url** *URL*|指定された URL をソースとするコードを指定します。 URL には、http:// や ftp:// などのプロトコルを含める必要があります。 さらに、ワイルドカード文字 (\*) を使用して、特定の URL から複数のアセンブリを指定できます。 **メモ:** 複数の名前を使用して 1 つの URL を識別できるため、URL をメンバーシップ条件として使用する方法は、コードの識別情報を安全に確認できる方法ではありません。 できるだけ厳密な名前メンバーシップ条件、発行元メンバーシップ条件、またはハッシュ メンバーシップ条件を使用してください。 <br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.UrlMembershipCondition>」を参照してください。|  
+|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file*}|指定されたアセンブリ ハッシュを持つコードを指定します。 コード グループのメンバーシップ条件としてハッシュを使用するには、ハッシュ値またはアセンブリ ファイルを指定する必要があります。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
+|**-pub** {**-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string*}|指定されたソフトウェア発行者を持つコードを、証明書ファイル、ファイル上の署名、または X509 証明書の 16 進表示で指定します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
+|**-site** *website*|指定されたサイトがソースであるコードを指定します。 例:<br /><br /> `-site** www.proseware.com`<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|特定の厳密な名前を持つコードを、ファイル名、文字列としてのアセンブリ名、および *major*.*minor*.*build*.*revision* 形式のアセンブリ バージョンで指定します。 例:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
+|**-url** *URL*|指定された URL をソースとするコードを指定します。 URL には、 http:// や ftp:// などのプロトコルを含める必要があります。 さらに、ワイルドカード文字 (\*) を使用して、特定の URL から複数のアセンブリを指定できます。 **メモ:** 複数の名前を使用して 1 つの URL を識別できるため、URL をメンバーシップ条件として使用する方法は、コードの識別情報を安全に確認できる方法ではありません。 できるだけ厳密な名前メンバーシップ条件、発行元メンバーシップ条件、またはハッシュ メンバーシップ条件を使用してください。 <br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-zone** *zonename*|指定されたゾーンがソースであるコードを指定します。 引数 *zonename* として、**MyComputer**、**Intranet**、**Trusted**、**Internet**、または **Untrusted** のいずれかの値を指定できます。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.ZoneMembershipCondition> クラス」を参照してください。|  
   
  **–addgroup** オプションまたは **–chggroup** オプションと併用できる引数 *flags* は、次のいずれかの方法で指定します。  
   
 |引数|説明|  
 |--------------|-----------------|  
-|**-description "** *description* **"**|**–addgroup** オプションと共に使用した場合、追加するコード グループの説明を指定します。 **–chggroup** オプションと共に使用した場合、編集するコード グループの説明を指定します。 引数 *description* を二重引用符で囲む必要があります。|  
+|**-description** "*description*"|**–addgroup** オプションと共に使用した場合、追加するコード グループの説明を指定します。 **–chggroup** オプションと共に使用した場合、編集するコード グループの説明を指定します。 引数 *description* を二重引用符で囲む必要があります。|  
 |**-exclusive** {**on**&#124;**off**}|**on** に設定すると、コード グループのメンバーシップ条件に適合するコードがある場合、追加または修正しているコード グループと関連付けられたアクセス許可セットだけが考慮されます。 このオプションを **off** に設定すると、ポリシー レベルの中で適合するすべてのコード グループのアクセス許可セットが Caspol.exe で考慮されます。|  
 |**-levelfinal** {**on**&#124;**off**}|**on** に設定すると、追加または変更するコード グループが出現するレベルよりも下にあるポリシー レベルは考慮されなくなります。 通常、このオプションはコンピューター ポリシー レベルで使用されます。 たとえば、このフラグをコンピューター レベルでコード グループに設定し、なんらかのコードがこのコード グループのメンバーシップ条件に適合した場合、Caspol.exe はそのコードのユーザー レベル ポリシーの計算または適用を行いません。|  
-|**-name "** *name* **"**|**–addgroup** オプションと共に使用した場合、追加するコード グループのスクリプト名を指定します。 **-chggroup** オプションと共に使用した場合、編集するコード グループのスクリプト名を指定します。 引数 *name* を二重引用符で囲む必要があります。 引数 *name* には A-Z、0-9、およびアンダースコア文字だけを含めることができます。また、先頭には数字を使用できません。 コード グループは、数値のラベルではなくこの *name* によって参照できます。 *name* は、スクリプト目的で使用する場合にも便利です。|  
+|**-name** "*name*"|**–addgroup** オプションと共に使用した場合、追加するコード グループのスクリプト名を指定します。 **-chggroup** オプションと共に使用した場合、編集するコード グループのスクリプト名を指定します。 引数 *name* を二重引用符で囲む必要があります。 引数 *name* には A-Z、0-9、およびアンダースコア文字だけを含めることができます。また、先頭には数字を使用できません。 コード グループは、数値のラベルではなくこの *name* によって参照できます。 *name* は、スクリプト目的で使用する場合にも便利です。|  
   
 ## <a name="remarks"></a>コメント  
  セキュリティ ポリシーは 3 種類のポリシー レベル、つまりコンピューター ポリシー、ユーザー ポリシー、エンタープライズ ポリシーによって表現されます。 アセンブリが受信するアクセス許可のセットは、これらの 3 種類のポリシー レベルで許可されるアクセス許可セットの積集合によって決定されます。 それぞれのポリシー レベルは、コード グループの階層で表現されます。 すべてのコード グループは、どのコードをそのグループのメンバーとするのかを決定するためのメンバーシップ条件を持ちます。 名前付きアクセス許可セットも、各コード グループと関連付けられます。 このアクセス許可セットは、メンバーシップ条件を満たすコードに対してランタイムから与えられるアクセス許可を指定します。 コード グループの階層、および関連する名前付きアクセス許可セットによって、各レベルのセキュリティ ポリシーの定義と保守が行われます。 **–user**、**-customuser**、**–machine**、**-enterprise** の各オプションを使用して、セキュリティ ポリシーのレベルを設定できます。  
   
- セキュリティ ポリシーの詳細、およびランタイムがコードに与えるアクセス許可を決定する方法については、「[セキュリティ ポリシーの管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)」を参照してください。  
+ セキュリティ ポリシーの詳細、およびランタイムがコードに与えるアクセス許可を決定する方法については、「[セキュリティ ポリシーの管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)」を参照してください。  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>コード グループとアクセス許可セットの参照  
  **-list** オプションを使用すると、階層に属するコード グループを簡単に参照できるように、インデントされたコード グループの一覧とその数値ラベル (1、1.1、1.1.1 など) が表示されます。 コード グループを対象とするその他のコマンド ライン操作でも、特定のコード グループを参照するために数値ラベルが使用されます。  
@@ -115,7 +115,7 @@ caspol [options]
 ## <a name="caspolexe-behavior"></a>Caspol.exe の動作  
  **-s****[ecurity]** {**on** &#124; **off**} を除くすべてのオプションが、Caspol.exe と共にインストールされたバージョンの .NET Framework を使用します。 あるバージョンのランタイムと共にインストールされた Caspol.exe を実行する場合、変更内容はそのバージョンだけに適用されます *。* その他のランタイムが共存する場合、それらのランタイムは影響を受けません。 特定のランタイム バージョンのディレクトリに切り替えずに Caspol.exe をコマンド ラインで実行する場合、Caspol.exe はパスに含まれる最初のランタイム バージョン (通常は最後にインストールされたランタイム バージョン) のディレクトリから実行されます。  
   
- **-s****[ecurity]** {**on** &#124; **off**} オプションは、コンピューター全体に対する操作です。 コード アクセス セキュリティをオフにすると、すべてのマネージ コードおよびコンピューター上のすべてのユーザーに対するセキュリティ チェックが中止されます。 side-by-side 実行バージョンの .NET Framework がインストールされている場合は、このコマンドによってコンピューターにインストールされているすべてのバージョンのセキュリティがオフになります。 **-list** オプションを使用するとセキュリティがオフになっていることが示されますが、他のユーザーに対してセキュリティがオフになっていることが明確に示されることはありません。  
+ **-s****[ecurity]** {**on** &#124; **off**} オプションは、コンピューター全体に対する操作です。 コード アクセス セキュリティをオフにすると、すべてのマネージド コードおよびコンピューター上のすべてのユーザーに対するセキュリティ チェックが中止されます。 side-by-side 実行バージョンの .NET Framework がインストールされている場合は、このコマンドによってコンピューターにインストールされているすべてのバージョンのセキュリティがオフになります。 **-list** オプションを使用するとセキュリティがオフになっていることが示されますが、他のユーザーに対してセキュリティがオフになっていることが明確に示されることはありません。  
   
  管理者の権限を持たないユーザーが Caspol.exe を実行する場合、**–machine** オプションが指定されていない限り、すべてのオプションはユーザー レベル ポリシーを参照します。 管理者が Caspol.exe を実行する場合、**–user** オプションが指定されていない限り、すべてのオプションはコンピューター ポリシーを参照します。  
   
@@ -132,13 +132,13 @@ caspol [options]
   
  カスタム アクセス許可を含むアクセス許可セットがコンピューター ポリシーに追加されたものと見なします。 このカスタム アクセス許可は、`MyPerm.exe` と、`MyPerm.exe` の `MyOther.exe` 参照クラスに実装されます。 両方のアセンブリとも、完全信頼アセンブリ一覧に追加する必要があります。 `MyPerm.exe` アセンブリをコンピューター ポリシーの完全信頼一覧に追加するコマンドを次に示します。  
   
-```  
+```console  
 caspol -machine -addfulltrust MyPerm.exe  
 ```  
   
  `MyOther.exe` アセンブリをコンピューター ポリシーの完全信頼一覧に追加するコマンドを次に示します。  
   
-```  
+```console  
 caspol -machine -addfulltrust MyOther.exe  
 ```  
   
@@ -146,13 +146,13 @@ caspol -machine -addfulltrust MyOther.exe
   
  子コード グループをコンピューター ポリシー コード グループ階層のルートに追加するコマンドを次に示します。 新しいコード グループは **Internet** ゾーンのメンバーであり、**Execution** アクセス許可セットと関連付けられます。  
   
-```  
+```console  
 caspol -machine -addgroup 1.  -zone Internet Execution  
 ```  
   
  共有 \\\netserver\netshare にローカル イントラネット アクセス許可を与える子コード グループを追加するコマンドを次に示します。  
   
-```  
+```console  
 caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet  
 ```  
   
@@ -160,7 +160,7 @@ caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet
   
  `Mypset` アクセス許可セットをユーザー ポリシーに追加するコマンドを次に示します。  
   
-```  
+```console  
 caspol -user -addpset Mypset.xml Mypset  
 ```  
   
@@ -168,13 +168,13 @@ caspol -user -addpset Mypset.xml Mypset
   
  1.2 というラベルの付いたコード グループのユーザー ポリシーに含まれるアクセス許可セットを、 **Execution** アクセス許可セットに変更するコマンドを、次に示します。  
   
-```  
+```console  
 caspol -user -chggroup 1.2. Execution  
 ```  
   
  1.2.1 というラベルの付いたコード グループの既定のポリシーに含まれるメンバーシップ条件を変更し、 **exclusive**フラグの設定を変更するコマンドを次に示します。 メンバーシップ条件は、**Internet** ゾーンをソースとするコードとなるように定義され、**exclusive** フラグはオンになります。  
   
-```  
+```console  
 caspol -chggroup 1.2.1. -zone Internet -exclusive on  
 ```  
   
@@ -182,7 +182,7 @@ caspol -chggroup 1.2.1. -zone Internet -exclusive on
   
  `Mypset` という名前のアクセス許可セットを `newpset.xml` に含まれるアクセス許可セットに変更するコマンドを次に示します。 現在のリリースでは、コード グループ階層で使用されているアクセス許可の変更はサポートしていません。  
   
-```  
+```console  
 caspol -chgpset Mypset newpset.xml  
 ```  
   
@@ -190,7 +190,7 @@ caspol -chgpset Mypset newpset.xml
   
  ユーザー ポリシーのルート コード グループ (ラベル 1) を名前付きアクセス許可セット **Nothing** と関連付けるコマンドを次に示します。 このコマンドにより Caspol.exe は動作できなくなります。  
   
-```  
+```console  
 caspol -force -user -chggroup 1 Nothing  
 ```  
   
@@ -198,7 +198,7 @@ caspol -force -user -chggroup 1 Nothing
   
  最後に保存されたコンピューター ポリシーを復元するコマンドを次に示します。  
   
-```  
+```console  
 caspol -machine -recover  
 ```  
   
@@ -206,7 +206,7 @@ caspol -machine -recover
   
  1.1 というラベルの付いたコード グループを削除するコマンドを次に示します。 このコード グループが子コード グループを持つ場合は、子グループも削除されます。  
   
-```  
+```console  
 caspol -remgroup 1.1.  
 ```  
   
@@ -214,13 +214,13 @@ caspol -remgroup 1.1.
   
  ユーザー ポリシーから **Execution** アクセス許可セットを削除するコマンドを次に示します。  
   
-```  
+```console  
 caspol -user -rempset Execution  
 ```  
   
  `Mypset` をユーザー ポリシー レベルから削除するコマンドを次に示します。  
   
-```  
+```console  
 caspol -rempset MyPset  
 ```  
   
@@ -228,13 +228,13 @@ caspol -rempset MyPset
   
  `myassembly` が所属するコンピューター ポリシーのすべてのコード グループを表示するコマンドを次に示します。  
   
-```  
+```console  
 caspol -machine -resolvegroup myassembly  
 ```  
   
  `myassembly` が所属するコンピューター ポリシー、エンタープライズ ポリシー、および指定されたカスタム ユーザー ポリシーのすべてのコード グループを表示するコマンドを次に示します。  
   
-```  
+```console  
 caspol -customall "c:\config_test\security.config" -resolvegroup myassembly  
 ```  
   
@@ -242,10 +242,10 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
   
  コンピューター ポリシー レベルとユーザー ポリシー レベルに基づいて `testassembly` のアクセス許可を計算するコマンドを次に示します。  
   
-```  
+```console  
 caspol -all -resolveperm testassembly  
 ```  
   
 ## <a name="see-also"></a>参照  
- [ツール](../../../docs/framework/tools/index.md)  
- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [ツール](index.md)  
+ [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)
