@@ -10,55 +10,55 @@ helpviewer_keywords:
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1736dd8fcb308bceee5f100149919ff9ec45510d
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028421"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316325"
 ---
-# <a name="ltconnectionmanagementgt-element-network-settings"></a><span data-ttu-id="9277a-102">&lt;connectionManagement&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="9277a-102">&lt;connectionManagement&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="9277a-103">ネットワーク ホストへの接続の最大数を指定します。</span><span class="sxs-lookup"><span data-stu-id="9277a-103">Specifies the maximum number of connections to a network host.</span></span>  
+# <a name="ltconnectionmanagementgt-element-network-settings"></a><span data-ttu-id="e73a1-102">&lt;connectionManagement&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="e73a1-102">&lt;connectionManagement&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="e73a1-103">ネットワーク ホストへの接続の最大数を指定します。</span><span class="sxs-lookup"><span data-stu-id="e73a1-103">Specifies the maximum number of connections to a network host.</span></span>  
   
- <span data-ttu-id="9277a-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="9277a-104">\<configuration></span></span>  
-<span data-ttu-id="9277a-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="9277a-105">\<system.net></span></span>  
-<span data-ttu-id="9277a-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="9277a-106">\<connectionManagement></span></span>  
+ <span data-ttu-id="e73a1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e73a1-104">\<configuration></span></span>  
+<span data-ttu-id="e73a1-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="e73a1-105">\<system.net></span></span>  
+<span data-ttu-id="e73a1-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="e73a1-106">\<connectionManagement></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9277a-107">構文</span><span class="sxs-lookup"><span data-stu-id="9277a-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e73a1-107">構文</span><span class="sxs-lookup"><span data-stu-id="e73a1-107">Syntax</span></span>  
   
 ```xml  
 <connectionManagement>   
 </connectionManagement>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9277a-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="9277a-108">Attributes and Elements</span></span>  
- <span data-ttu-id="9277a-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="9277a-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e73a1-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="e73a1-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e73a1-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="e73a1-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9277a-110">属性</span><span class="sxs-lookup"><span data-stu-id="9277a-110">Attributes</span></span>  
- <span data-ttu-id="9277a-111">なし。</span><span class="sxs-lookup"><span data-stu-id="9277a-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e73a1-110">属性</span><span class="sxs-lookup"><span data-stu-id="e73a1-110">Attributes</span></span>  
+ <span data-ttu-id="e73a1-111">なし。</span><span class="sxs-lookup"><span data-stu-id="e73a1-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="9277a-112">子要素</span><span class="sxs-lookup"><span data-stu-id="9277a-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e73a1-112">子要素</span><span class="sxs-lookup"><span data-stu-id="e73a1-112">Child Elements</span></span>  
   
-|<span data-ttu-id="9277a-113">**要素**</span><span class="sxs-lookup"><span data-stu-id="9277a-113">**Element**</span></span>|<span data-ttu-id="9277a-114">**説明**</span><span class="sxs-lookup"><span data-stu-id="9277a-114">**Description**</span></span>|  
+|<span data-ttu-id="e73a1-113">**要素**</span><span class="sxs-lookup"><span data-stu-id="e73a1-113">**Element**</span></span>|<span data-ttu-id="e73a1-114">**説明**</span><span class="sxs-lookup"><span data-stu-id="e73a1-114">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="9277a-115">add</span><span class="sxs-lookup"><span data-stu-id="9277a-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="9277a-116">IP アドレスまたは DNS 名を接続管理リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="9277a-116">Adds an IP address or DNS name to the connection management list.</span></span>|  
-|[<span data-ttu-id="9277a-117">clear</span><span class="sxs-lookup"><span data-stu-id="9277a-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="9277a-118">接続の管理の一覧をクリアします。</span><span class="sxs-lookup"><span data-stu-id="9277a-118">Clears the connection management list.</span></span>|  
-|[<span data-ttu-id="9277a-119">remove</span><span class="sxs-lookup"><span data-stu-id="9277a-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="9277a-120">接続管理リストから IP アドレスまたは DNS 名を削除します。</span><span class="sxs-lookup"><span data-stu-id="9277a-120">Removes an IP address or DNS name from the connection management list.</span></span>|  
+|[<span data-ttu-id="e73a1-115">add</span><span class="sxs-lookup"><span data-stu-id="e73a1-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="e73a1-116">IP アドレスまたは DNS 名を接続管理リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="e73a1-116">Adds an IP address or DNS name to the connection management list.</span></span>|  
+|[<span data-ttu-id="e73a1-117">clear</span><span class="sxs-lookup"><span data-stu-id="e73a1-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="e73a1-118">接続の管理の一覧をクリアします。</span><span class="sxs-lookup"><span data-stu-id="e73a1-118">Clears the connection management list.</span></span>|  
+|[<span data-ttu-id="e73a1-119">remove</span><span class="sxs-lookup"><span data-stu-id="e73a1-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="e73a1-120">接続管理リストから IP アドレスまたは DNS 名を削除します。</span><span class="sxs-lookup"><span data-stu-id="e73a1-120">Removes an IP address or DNS name from the connection management list.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="9277a-121">親要素</span><span class="sxs-lookup"><span data-stu-id="9277a-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e73a1-121">親要素</span><span class="sxs-lookup"><span data-stu-id="e73a1-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="9277a-122">**要素**</span><span class="sxs-lookup"><span data-stu-id="9277a-122">**Element**</span></span>|<span data-ttu-id="9277a-123">**説明**</span><span class="sxs-lookup"><span data-stu-id="9277a-123">**Description**</span></span>|  
+|<span data-ttu-id="e73a1-122">**要素**</span><span class="sxs-lookup"><span data-stu-id="e73a1-122">**Element**</span></span>|<span data-ttu-id="e73a1-123">**説明**</span><span class="sxs-lookup"><span data-stu-id="e73a1-123">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="9277a-124">system.net</span><span class="sxs-lookup"><span data-stu-id="9277a-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="9277a-125">.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="9277a-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="e73a1-124">system.net</span><span class="sxs-lookup"><span data-stu-id="e73a1-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="e73a1-125">.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="e73a1-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9277a-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="9277a-126">Remarks</span></span>  
- <span data-ttu-id="9277a-127">`connectionManagement`要素は、サーバーまたはサーバーのグループに接続の最大数を定義します。</span><span class="sxs-lookup"><span data-stu-id="9277a-127">The `connectionManagement` element defines the maximum number of connections to a server or group of servers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e73a1-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="e73a1-126">Remarks</span></span>  
+ <span data-ttu-id="e73a1-127">`connectionManagement`要素は、サーバーまたはサーバーのグループに接続の最大数を定義します。</span><span class="sxs-lookup"><span data-stu-id="e73a1-127">The `connectionManagement` element defines the maximum number of connections to a server or group of servers.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="9277a-128">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="9277a-128">Configuration Files</span></span>  
- <span data-ttu-id="9277a-129">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="9277a-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="e73a1-128">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="e73a1-128">Configuration Files</span></span>  
+ <span data-ttu-id="e73a1-129">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="e73a1-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9277a-130">例</span><span class="sxs-lookup"><span data-stu-id="9277a-130">Example</span></span>  
- <span data-ttu-id="9277a-131">次の例では、サーバー www.contoso.com への 4 つの接続とその他のすべてのサーバーに 2 つの接続を使用するアプリケーションを構成します。</span><span class="sxs-lookup"><span data-stu-id="9277a-131">The following example configures an application to use four connections to the server www.contoso.com and two connections to all other servers.</span></span>  
+## <a name="example"></a><span data-ttu-id="e73a1-130">例</span><span class="sxs-lookup"><span data-stu-id="e73a1-130">Example</span></span>  
+ <span data-ttu-id="e73a1-131">次の例では、サーバーに 4 つの接続を使用するアプリケーションの構成で`www.contoso.com`とその他のすべてのサーバーに 2 つの接続。</span><span class="sxs-lookup"><span data-stu-id="e73a1-131">The following example configures an application to use four connections to the server `www.contoso.com` and two connections to all other servers.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,7 +71,7 @@ ms.locfileid: "48028421"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9277a-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="9277a-132">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e73a1-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="e73a1-132">See Also</span></span>  
  <xref:System.Net.ServicePoint>  
  <xref:System.Net.ServicePointManager>  
- [<span data-ttu-id="9277a-133">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="9277a-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="e73a1-133">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="e73a1-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

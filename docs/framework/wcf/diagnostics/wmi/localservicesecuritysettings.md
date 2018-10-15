@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
 author: BrucePerlerMS
 ms.openlocfilehash: c79eb11fcc1973a3ef25a78afb8b141443d865c3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777462"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316221"
 ---
-# <a name="localservicesecuritysettings"></a><span data-ttu-id="71a37-102">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="71a37-102">LocalServiceSecuritySettings</span></span>
-<span data-ttu-id="71a37-103">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="71a37-103">LocalServiceSecuritySettings</span></span>  
+# <a name="localservicesecuritysettings"></a><span data-ttu-id="394d8-102">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="394d8-102">LocalServiceSecuritySettings</span></span>
+<span data-ttu-id="394d8-103">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="394d8-103">LocalServiceSecuritySettings</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="71a37-104">構文</span><span class="sxs-lookup"><span data-stu-id="71a37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="394d8-104">構文</span><span class="sxs-lookup"><span data-stu-id="394d8-104">Syntax</span></span>  
   
 ```  
 class LocalServiceSecuritySettings  
@@ -35,115 +35,115 @@ class LocalServiceSecuritySettings
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="71a37-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="71a37-105">Methods</span></span>  
- <span data-ttu-id="71a37-106">LocalServiceSecuritySettings クラスで定義されるメソッドはありません。</span><span class="sxs-lookup"><span data-stu-id="71a37-106">The LocalServiceSecuritySettings class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="394d8-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="394d8-105">Methods</span></span>  
+ <span data-ttu-id="394d8-106">LocalServiceSecuritySettings クラスで定義されるメソッドはありません。</span><span class="sxs-lookup"><span data-stu-id="394d8-106">The LocalServiceSecuritySettings class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="71a37-107">プロパティ</span><span class="sxs-lookup"><span data-stu-id="71a37-107">Properties</span></span>  
- <span data-ttu-id="71a37-108">LocalServiceSecuritySettings クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="71a37-108">The LocalServiceSecuritySettings class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="394d8-107">プロパティ</span><span class="sxs-lookup"><span data-stu-id="394d8-107">Properties</span></span>  
+ <span data-ttu-id="394d8-108">LocalServiceSecuritySettings クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="394d8-108">The LocalServiceSecuritySettings class has the following properties:</span></span>  
   
-### <a name="detectreplays"></a><span data-ttu-id="71a37-109">DetectReplays</span><span class="sxs-lookup"><span data-stu-id="71a37-109">DetectReplays</span></span>  
- <span data-ttu-id="71a37-110">データ型 : boolean</span><span class="sxs-lookup"><span data-stu-id="71a37-110">Data type: boolean</span></span>  
+### <a name="detectreplays"></a><span data-ttu-id="394d8-109">DetectReplays</span><span class="sxs-lookup"><span data-stu-id="394d8-109">DetectReplays</span></span>  
+ <span data-ttu-id="394d8-110">データ型 : boolean</span><span class="sxs-lookup"><span data-stu-id="394d8-110">Data type: boolean</span></span>  
   
- <span data-ttu-id="71a37-111">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-111">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-112">チャネルに対するリプレイ攻撃を検出し、自動的に処理するかどうかを指定するブール値です。</span><span class="sxs-lookup"><span data-stu-id="71a37-112">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span>  
+ <span data-ttu-id="394d8-112">チャネルに対するリプレイ攻撃を検出し、自動的に処理するかどうかを指定するブール値です。</span><span class="sxs-lookup"><span data-stu-id="394d8-112">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span>  
   
-### <a name="inactivitytimeout"></a><span data-ttu-id="71a37-113">InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="71a37-113">InactivityTimeout</span></span>  
- <span data-ttu-id="71a37-114">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="71a37-114">Data type: datetime</span></span>  
+### <a name="inactivitytimeout"></a><span data-ttu-id="394d8-113">InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="394d8-113">InactivityTimeout</span></span>  
+ <span data-ttu-id="394d8-114">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="394d8-114">Data type: datetime</span></span>  
   
- <span data-ttu-id="71a37-115">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-115">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-116">サービスがサポートする保留状態のセキュリティ セッションの最大数。</span><span class="sxs-lookup"><span data-stu-id="71a37-116">The maximum number of pending security sessions that the service supports.</span></span>  
+ <span data-ttu-id="394d8-116">サービスがサポートする保留状態のセキュリティ セッションの最大数。</span><span class="sxs-lookup"><span data-stu-id="394d8-116">The maximum number of pending security sessions that the service supports.</span></span>  
   
-### <a name="issuedcookielifetime"></a><span data-ttu-id="71a37-117">IssuedCookieLifetime</span><span class="sxs-lookup"><span data-stu-id="71a37-117">IssuedCookieLifetime</span></span>  
- <span data-ttu-id="71a37-118">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="71a37-118">Data type: datetime</span></span>  
+### <a name="issuedcookielifetime"></a><span data-ttu-id="394d8-117">IssuedCookieLifetime</span><span class="sxs-lookup"><span data-stu-id="394d8-117">IssuedCookieLifetime</span></span>  
+ <span data-ttu-id="394d8-118">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="394d8-118">Data type: datetime</span></span>  
   
- <span data-ttu-id="71a37-119">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-119">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-120">すべての新しいセキュリティ クッキーに対して発行する有効期間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="71a37-120">A TimeSpan that specifies the lifetime issued to all new security cookies.</span></span>  
+ <span data-ttu-id="394d8-120">すべての新しいセキュリティ クッキーに対して発行する有効期間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="394d8-120">A TimeSpan that specifies the lifetime issued to all new security cookies.</span></span>  
   
-### <a name="maxcachedcookies"></a><span data-ttu-id="71a37-121">MaxCachedCookies</span><span class="sxs-lookup"><span data-stu-id="71a37-121">MaxCachedCookies</span></span>  
- <span data-ttu-id="71a37-122">データ型 : sint32</span><span class="sxs-lookup"><span data-stu-id="71a37-122">Data type: sint32</span></span>  
+### <a name="maxcachedcookies"></a><span data-ttu-id="394d8-121">MaxCachedCookies</span><span class="sxs-lookup"><span data-stu-id="394d8-121">MaxCachedCookies</span></span>  
+ <span data-ttu-id="394d8-122">データ型 : sint32</span><span class="sxs-lookup"><span data-stu-id="394d8-122">Data type: sint32</span></span>  
   
- <span data-ttu-id="71a37-123">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-123">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-124">キャッシュできるクッキーの最大数。</span><span class="sxs-lookup"><span data-stu-id="71a37-124">The maximum number of cookies that can be cached.</span></span>  
+ <span data-ttu-id="394d8-124">キャッシュできるクッキーの最大数。</span><span class="sxs-lookup"><span data-stu-id="394d8-124">The maximum number of cookies that can be cached.</span></span>  
   
-### <a name="maxclockskew"></a><span data-ttu-id="71a37-125">MaxClockSkew</span><span class="sxs-lookup"><span data-stu-id="71a37-125">MaxClockSkew</span></span>  
- <span data-ttu-id="71a37-126">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="71a37-126">Data type: datetime</span></span>  
+### <a name="maxclockskew"></a><span data-ttu-id="394d8-125">MaxClockSkew</span><span class="sxs-lookup"><span data-stu-id="394d8-125">MaxClockSkew</span></span>  
+ <span data-ttu-id="394d8-126">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="394d8-126">Data type: datetime</span></span>  
   
- <span data-ttu-id="71a37-127">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-127">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-128">通信している双方の 2 つのシステム クロックのずれの最長時間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="71a37-128">A TimeSpan that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span>  
+ <span data-ttu-id="394d8-128">通信している双方の 2 つのシステム クロックのずれの最長時間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="394d8-128">A TimeSpan that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span>  
   
-### <a name="maxpendingsessions"></a><span data-ttu-id="71a37-129">MaxPendingSessions</span><span class="sxs-lookup"><span data-stu-id="71a37-129">MaxPendingSessions</span></span>  
- <span data-ttu-id="71a37-130">データ型 : sint32</span><span class="sxs-lookup"><span data-stu-id="71a37-130">Data type: sint32</span></span>  
+### <a name="maxpendingsessions"></a><span data-ttu-id="394d8-129">MaxPendingSessions</span><span class="sxs-lookup"><span data-stu-id="394d8-129">MaxPendingSessions</span></span>  
+ <span data-ttu-id="394d8-130">データ型 : sint32</span><span class="sxs-lookup"><span data-stu-id="394d8-130">Data type: sint32</span></span>  
   
- <span data-ttu-id="71a37-131">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-131">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-132">サービスにおける保留状態の接続の最大数です。</span><span class="sxs-lookup"><span data-stu-id="71a37-132">The maximum number of pending connections on the service.</span></span>  
+ <span data-ttu-id="394d8-132">サービスにおける保留状態の接続の最大数です。</span><span class="sxs-lookup"><span data-stu-id="394d8-132">The maximum number of pending connections on the service.</span></span>  
   
-### <a name="maxstatefulnegotiations"></a><span data-ttu-id="71a37-133">MaxStatefulNegotiations</span><span class="sxs-lookup"><span data-stu-id="71a37-133">MaxStatefulNegotiations</span></span>  
- <span data-ttu-id="71a37-134">データ型 : sint32</span><span class="sxs-lookup"><span data-stu-id="71a37-134">Data type: sint32</span></span>  
+### <a name="maxstatefulnegotiations"></a><span data-ttu-id="394d8-133">MaxStatefulNegotiations</span><span class="sxs-lookup"><span data-stu-id="394d8-133">MaxStatefulNegotiations</span></span>  
+ <span data-ttu-id="394d8-134">データ型 : sint32</span><span class="sxs-lookup"><span data-stu-id="394d8-134">Data type: sint32</span></span>  
   
- <span data-ttu-id="71a37-135">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-135">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-136">同時にアクティブにできるセキュリティ ネゴシエーションの数。</span><span class="sxs-lookup"><span data-stu-id="71a37-136">The number of security negotiations that can be active concurrently.</span></span>  
+ <span data-ttu-id="394d8-136">同時にアクティブにできるセキュリティ ネゴシエーションの数。</span><span class="sxs-lookup"><span data-stu-id="394d8-136">The number of security negotiations that can be active concurrently.</span></span>  
   
-### <a name="negotiationtimeout"></a><span data-ttu-id="71a37-137">NegotiationTimeout</span><span class="sxs-lookup"><span data-stu-id="71a37-137">NegotiationTimeout</span></span>  
- <span data-ttu-id="71a37-138">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="71a37-138">Data type: datetime</span></span>  
+### <a name="negotiationtimeout"></a><span data-ttu-id="394d8-137">NegotiationTimeout</span><span class="sxs-lookup"><span data-stu-id="394d8-137">NegotiationTimeout</span></span>  
+ <span data-ttu-id="394d8-138">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="394d8-138">Data type: datetime</span></span>  
   
- <span data-ttu-id="71a37-139">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-139">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-140">サーバーとクライアント間のセキュリティ ネゴシエーション フェーズの最大継続時間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="71a37-140">A TimeSpan that specifies the maximum duration for the security negotiation phase between server and client.</span></span>  
+ <span data-ttu-id="394d8-140">サーバーとクライアント間のセキュリティ ネゴシエーション フェーズの最大継続時間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="394d8-140">A TimeSpan that specifies the maximum duration for the security negotiation phase between server and client.</span></span>  
   
-### <a name="reconnecttransportonfailure"></a><span data-ttu-id="71a37-141">ReconnectTransportOnFailure</span><span class="sxs-lookup"><span data-stu-id="71a37-141">ReconnectTransportOnFailure</span></span>  
- <span data-ttu-id="71a37-142">データ型 : boolean</span><span class="sxs-lookup"><span data-stu-id="71a37-142">Data type: boolean</span></span>  
+### <a name="reconnecttransportonfailure"></a><span data-ttu-id="394d8-141">ReconnectTransportOnFailure</span><span class="sxs-lookup"><span data-stu-id="394d8-141">ReconnectTransportOnFailure</span></span>  
+ <span data-ttu-id="394d8-142">データ型 : boolean</span><span class="sxs-lookup"><span data-stu-id="394d8-142">Data type: boolean</span></span>  
   
- <span data-ttu-id="71a37-143">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-143">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-143">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-143">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-144">WS-ReliableMessaging を使用した接続が、トランスポート エラーの後再接続を試みるかどうかを指定するブール値です。</span><span class="sxs-lookup"><span data-stu-id="71a37-144">A Boolean value that specifies whether connections using WS-Reliable messaging attempt to reconnect after transport failures.</span></span>  
+ <span data-ttu-id="394d8-144">WS-ReliableMessaging を使用した接続が、トランスポート エラーの後再接続を試みるかどうかを指定するブール値です。</span><span class="sxs-lookup"><span data-stu-id="394d8-144">A Boolean value that specifies whether connections using WS-Reliable messaging attempt to reconnect after transport failures.</span></span>  
   
-### <a name="replaycachesize"></a><span data-ttu-id="71a37-145">ReplayCacheSize</span><span class="sxs-lookup"><span data-stu-id="71a37-145">ReplayCacheSize</span></span>  
- <span data-ttu-id="71a37-146">データ型 : sint32</span><span class="sxs-lookup"><span data-stu-id="71a37-146">Data type: sint32</span></span>  
+### <a name="replaycachesize"></a><span data-ttu-id="394d8-145">ReplayCacheSize</span><span class="sxs-lookup"><span data-stu-id="394d8-145">ReplayCacheSize</span></span>  
+ <span data-ttu-id="394d8-146">データ型 : sint32</span><span class="sxs-lookup"><span data-stu-id="394d8-146">Data type: sint32</span></span>  
   
- <span data-ttu-id="71a37-147">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-147">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-147">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-147">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-148">リプレイ検証で使用されるキャッシュ済みの nonce の数。</span><span class="sxs-lookup"><span data-stu-id="71a37-148">The number of cached nonces used for replay detection.</span></span>  
+ <span data-ttu-id="394d8-148">リプレイ検証で使用されるキャッシュ済みの nonce の数。</span><span class="sxs-lookup"><span data-stu-id="394d8-148">The number of cached nonces used for replay detection.</span></span>  
   
-### <a name="replaywindow"></a><span data-ttu-id="71a37-149">ReplayWindow</span><span class="sxs-lookup"><span data-stu-id="71a37-149">ReplayWindow</span></span>  
- <span data-ttu-id="71a37-150">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="71a37-150">Data type: datetime</span></span>  
+### <a name="replaywindow"></a><span data-ttu-id="394d8-149">ReplayWindow</span><span class="sxs-lookup"><span data-stu-id="394d8-149">ReplayWindow</span></span>  
+ <span data-ttu-id="394d8-150">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="394d8-150">Data type: datetime</span></span>  
   
- <span data-ttu-id="71a37-151">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-151">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-151">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-151">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-152">個別のメッセージの nonce の有効期間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="71a37-152">A TimeSpan that specifies the duration in which individual message nonces are valid.</span></span>  
+ <span data-ttu-id="394d8-152">個別のメッセージの nonce の有効期間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="394d8-152">A TimeSpan that specifies the duration in which individual message nonces are valid.</span></span>  
   
-### <a name="sessionkeyrenewalinterval"></a><span data-ttu-id="71a37-153">SessionKeyRenewalInterval</span><span class="sxs-lookup"><span data-stu-id="71a37-153">SessionKeyRenewalInterval</span></span>  
- <span data-ttu-id="71a37-154">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="71a37-154">Data type: datetime</span></span>  
+### <a name="sessionkeyrenewalinterval"></a><span data-ttu-id="394d8-153">SessionKeyRenewalInterval</span><span class="sxs-lookup"><span data-stu-id="394d8-153">SessionKeyRenewalInterval</span></span>  
+ <span data-ttu-id="394d8-154">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="394d8-154">Data type: datetime</span></span>  
   
- <span data-ttu-id="71a37-155">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-155">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-155">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-155">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-156">イニシエーターがセキュリティ セッションのキーを更新するまでの期間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="71a37-156">A TimeSpan that specifies the duration after which the initiator renews the key for the security session.</span></span>  
+ <span data-ttu-id="394d8-156">イニシエーターがセキュリティ セッションのキーを更新するまでの期間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="394d8-156">A TimeSpan that specifies the duration after which the initiator renews the key for the security session.</span></span>  
   
-### <a name="sessionkeyrolloverinterval"></a><span data-ttu-id="71a37-157">SessionKeyRolloverInterval</span><span class="sxs-lookup"><span data-stu-id="71a37-157">SessionKeyRolloverInterval</span></span>  
- <span data-ttu-id="71a37-158">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="71a37-158">Data type: datetime</span></span>  
+### <a name="sessionkeyrolloverinterval"></a><span data-ttu-id="394d8-157">SessionKeyRolloverInterval</span><span class="sxs-lookup"><span data-stu-id="394d8-157">SessionKeyRolloverInterval</span></span>  
+ <span data-ttu-id="394d8-158">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="394d8-158">Data type: datetime</span></span>  
   
- <span data-ttu-id="71a37-159">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-159">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-159">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-159">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-160">キーの更新中に、前のセッション キーが受信メッセージで有効な時間間隔を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="71a37-160">A TimeSpan that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span>  
+ <span data-ttu-id="394d8-160">キーの更新中に、前のセッション キーが受信メッセージで有効な時間間隔を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="394d8-160">A TimeSpan that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span>  
   
-### <a name="timestampvalidityduration"></a><span data-ttu-id="71a37-161">TimestampValidityDuration</span><span class="sxs-lookup"><span data-stu-id="71a37-161">TimestampValidityDuration</span></span>  
- <span data-ttu-id="71a37-162">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="71a37-162">Data type: datetime</span></span>  
+### <a name="timestampvalidityduration"></a><span data-ttu-id="394d8-161">TimestampValidityDuration</span><span class="sxs-lookup"><span data-stu-id="394d8-161">TimestampValidityDuration</span></span>  
+ <span data-ttu-id="394d8-162">データ型 : datetime</span><span class="sxs-lookup"><span data-stu-id="394d8-162">Data type: datetime</span></span>  
   
- <span data-ttu-id="71a37-163">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="71a37-163">Access type: Read-only</span></span>  
+ <span data-ttu-id="394d8-163">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="394d8-163">Access type: Read-only</span></span>  
   
- <span data-ttu-id="71a37-164">タイムスタンプの有効期間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="71a37-164">A TimeSpan that specifies the duration in which a time stamp is valid.</span></span>  
+ <span data-ttu-id="394d8-164">タイムスタンプの有効期間を指定する TimeSpan です。</span><span class="sxs-lookup"><span data-stu-id="394d8-164">A TimeSpan that specifies the duration in which a time stamp is valid.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="71a37-165">要件</span><span class="sxs-lookup"><span data-stu-id="71a37-165">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="394d8-165">要件</span><span class="sxs-lookup"><span data-stu-id="394d8-165">Requirements</span></span>  
   
-|<span data-ttu-id="71a37-166">MOF</span><span class="sxs-lookup"><span data-stu-id="71a37-166">MOF</span></span>|<span data-ttu-id="71a37-167">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="71a37-167">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="394d8-166">MOF</span><span class="sxs-lookup"><span data-stu-id="394d8-166">MOF</span></span>|<span data-ttu-id="394d8-167">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="394d8-167">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="71a37-168">Namespace</span><span class="sxs-lookup"><span data-stu-id="71a37-168">Namespace</span></span>|<span data-ttu-id="71a37-169">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="71a37-169">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="394d8-168">Namespace</span><span class="sxs-lookup"><span data-stu-id="394d8-168">Namespace</span></span>|<span data-ttu-id="394d8-169">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="394d8-169">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="71a37-170">関連項目</span><span class="sxs-lookup"><span data-stu-id="71a37-170">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="394d8-170">関連項目</span><span class="sxs-lookup"><span data-stu-id="394d8-170">See Also</span></span>  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
