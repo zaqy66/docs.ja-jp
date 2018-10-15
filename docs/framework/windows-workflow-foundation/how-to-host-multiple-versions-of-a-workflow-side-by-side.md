@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
 ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780311"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316468"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>ワークフローの複数のバージョンを同時にホストする方法
 `WorkflowIdentity` を使用すると、ワークフロー アプリケーションの開発者は、名前とバージョンをワークフロー定義に関連付け、永続化されたワークフロー インスタンスにこの情報を関連付けることができます。 この ID 情報は、ワークフロー アプリケーションの開発者がワークフロー定義の複数のバージョンの side-by-side 実行などのシナリオを有効にするために使用できます。また、動的更新などの他の機能の基礎となります。 チュートリアルのこの手順では、`WorkflowIdentity` を使用してワークフローの複数のバージョンを同時にホストする方法について説明します。
@@ -549,7 +549,7 @@ ms.locfileid: "48780311"
     }
     ```
 
-###  <a name="BKMK_BuildAndRun"></a> ビルドして、アプリケーションの実行
+###  <a name="BKMK_BuildAndRun"></a> アプリケーションをビルドして実行するには
 
 1.  Ctrl キーと Shift キーを押しながら B キーを押してアプリケーションをビルドし、Ctrl キーを押しながら F5 キーを押して起動します。
 

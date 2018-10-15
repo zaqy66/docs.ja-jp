@@ -3,12 +3,12 @@ title: WIF 要求プログラミング モデル
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 95df026684f536a64ffe15f65264c470dff164da
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197566"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316507"
 ---
 # <a name="wif-claims-programming-model"></a>WIF 要求プログラミング モデル
 ASP.NET と Windows Communication Foundation (WCF) の開発者は、通常、IIdentity インターフェイスや IPrincipal インターフェイスを利用し、ユーザーの ID 情報を処理します。 .NET 4.5 では、Windows Identity Foundation (WIF) が統合され、あらゆるプリンシパルに対して常に要求が表示されるようになりました。次の図をご覧ください。
@@ -23,7 +23,7 @@ ASP.NET と Windows Communication Foundation (WCF) の開発者は、通常、II
 
 - <xref:System.Security.Claims.Claim.Value%2A> には要求の値が含まれ、文字列として表されます。 たとえば、として電子メール アドレスを表すことができます"someone@contoso.com"。
 
-- <xref:System.Security.Claims.Claim.ValueType%2A> は要求値の種類を表し、通常は URI です。 たとえば、文字列型は `http://www.w3.org/2001/XMLSchema#string` として表されます。 値の型は、XML スキーマに基づく QName になります。 WIF で有効な QName 値を出力するには、値の形式を `namespace#format` にする必要があります。 名前空間が適切に定義された名前空間ではない場合、生成された XML がスキーマ検証できない場合があります。その名前空間には XSD ファイルが発行されないためです。 既定の値の型は `http://www.w3.org/2001/XMLSchema#string` です。 参照してください[ http://www.w3.org/2001/XMLSchema ](https://go.microsoft.com/fwlink/?LinkId=209155)安全に使用できるよく知られている値の型のです。
+- <xref:System.Security.Claims.Claim.ValueType%2A> は要求値の種類を表し、通常は URI です。 たとえば、文字列型は `http://www.w3.org/2001/XMLSchema#string` として表されます。 値の型は、XML スキーマに基づく QName になります。 WIF で有効な QName 値を出力するには、値の形式を `namespace#format` にする必要があります。 名前空間が適切に定義された名前空間ではない場合、生成された XML がスキーマ検証できない場合があります。その名前空間には XSD ファイルが発行されないためです。 既定の値の型は `http://www.w3.org/2001/XMLSchema#string` です。 安全に使用できる既知の値の型については、次を参照してください。、 [W3C XML スキーマ](https://www.w3.org/2001/XMLSchema)ページ。
 
 - <xref:System.Security.Claims.Claim.Issuer%2A> は、要求を発行したセキュリティ トークン サービス (STS) の識別子です。 これは STS の URL か、STS を表す名前として表されます。たとえば、`https://sts1.contoso.com/sts` のようになります。
 
@@ -45,7 +45,7 @@ RP アプリケーションで現在のユーザーの要求セットにアク�
 ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;
 ```
 
-詳細については、「<xref:System.Security.Claims>」を参照してください。
+詳細については、「 <xref:System.Security.Claims> 」を参照してください。
 
 ### <a name="role-claim-type"></a>役割という要求の種類
 RP アプリケーションの構成の一環として、役割という要求の種類を決定します。 この種類の要求は、System.Security.Claims.ClaimsPrincipal.IsInRole(System.String) で利用されます。 既定の要求の種類は `http://schemas.microsoft.com/ws/2008/06/identity/claims/role` です。

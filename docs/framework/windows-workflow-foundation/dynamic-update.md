@@ -2,12 +2,12 @@
 title: 動的な更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076720"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323124"
 ---
 # <a name="dynamic-update"></a>動的な更新
 動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。 これには、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。 このトピックでは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された動的更新機能の概要について説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "44076720"
 4.  [目的の永続化されたワークフロー インスタンスに更新マップを適用します。](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
   
 > [!NOTE]
->  更新マップの作成に対応する手順 1. ～ 3. は、更新の適用とは関係なく実行できます。 一般的には、ワークフローの開発者が更新マップをオフラインで作成し、管理者が後でその更新を適用します。  
+>  更新マップの作成に対応する手順 1. ～ 3. は、更新の適用とは関係なく実行できます。 マップをオフラインで、ワークフロー開発者が、更新プログラムを作成する一般的なシナリオと、管理者が後で更新プログラムを適用します。  
   
  このトピックでは、コンパイルされた XAML ワークフローの永続インスタンスに新しいアクティビティを追加するという動的更新プロセスの概要について説明します。  
   
