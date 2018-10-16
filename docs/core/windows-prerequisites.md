@@ -4,12 +4,12 @@ description: Windows コンピューターで .NET Core アプリケーション
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 63c0de2b413f38458dba89506f4070760b3f53f8
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44179495"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45747469"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows における .NET Core の前提条件
 
@@ -61,7 +61,7 @@ ms.locfileid: "44179495"
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 の前提条件
 
-.NET Core SDK を使用して .NET Core アプリケーションを開発する場合は、好きなエディターを使用できます。 [Visual Studio 2017](#visual-studio-2017) では、Windows 上に .NET Core アプリ用の統合開発環境が提供されます。
+.NET Core SDK を使用して .NET Core アプリケーションを開発する場合は、好きなエディターを使用できます。 Visual Studio 2017 では、Windows 上に .NET Core アプリ用の統合開発環境が提供されます。
 
 Visual Studio 2017 での変更の詳細については、[リリース ノート](/visualstudio/releasenotes/vs2017-relnotes)を参照してください。
 

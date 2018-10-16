@@ -5,12 +5,12 @@ author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.custom: mvc
-ms.openlocfilehash: 0fe3fcdee1c508f5c8165b7709ca08e42d0b1d55
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d578ec5a25dbb5de3c88386e212e68cf3b267749
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251772"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45970644"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET および Docker の概要
 
@@ -147,11 +147,11 @@ Docker コンテナー開発に .NET Core と .NET Framework のどちらを使�
 
 * [DockerHub の Windows コンテナー用 Microsoft SQL Server Developer Edition イメージ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)
 
-#### <a name="visual-studio-team-services-vsts-agent"></a>Visual Studio Team Services (VSTS) エージェント
+#### <a name="azure-devops-services-agent"></a>Azure DevOps Services エージェント
 
-* [DockerHub の Visual Studio Team Services (VSTS) エージェント イメージ](https://hub.docker.com/r/microsoft/vsts-agent/)
+* [DockerHub の Azure DevOps Services エージェント イメージ](https://hub.docker.com/r/microsoft/vsts-agent/)
 
-* [GitHub の Visual Studio Team Services (VSTS) エージェント イメージ](https://github.com/Microsoft/vsts-agent-docker)
+* [GitHub の Azure DevOps Services エージェント イメージ](https://github.com/Microsoft/vsts-agent-docker)
 
 #### <a name="operations-management-suite-oms-linux-agent"></a>Operations Management Suite (OMS) Linux エージェント
 

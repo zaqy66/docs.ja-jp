@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 5587708a6ce7218498e5e695466887c6146c75a4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6b691939d2592cc72a232a09ab2a7e950b810281
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43389967"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086778"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>キャストと型変換 (C# プログラミング ガイド)
 
@@ -79,18 +79,19 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
- C# では、キャストの実行前に互換性をテストできるよう、[is](../../../csharp/language-reference/keywords/is.md) 演算子と [as](../../../csharp/language-reference/keywords/as.md) 演算子が提供されています。 詳しくは、「[方法: as 演算子と is 演算子を使用して安全にキャストする](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)」をご覧ください。  
+ C# では、キャストの実行前に互換性をテストできるよう、[is](../../../csharp/language-reference/keywords/is.md) 演算子と [as](../../../csharp/language-reference/keywords/as.md) 演算子が提供されています。 詳細については、「[How to: Safely cast using pattern matching, as and is Operators](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)」(方法: パターン マッチング、as 演算子、is 演算子を使用して安全にキャストする) をご覧ください。  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [型](../../../csharp/programming-guide/types/index.md)  
- [() 演算子](../../../csharp/language-reference/operators/invocation-operator.md)  
- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
- [変換演算子](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
- [一般的な型変換](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
- [エクスポート時の型の変換](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
- [方法: 文字列を数値に変換する](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [型](../../../csharp/programming-guide/types/index.md)  
+- [() 演算子](../../../csharp/language-reference/operators/invocation-operator.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+- [変換演算子](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
+- [一般的な型変換](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
+- [エクスポート時の型の変換](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
+- [方法: 文字列を数値に変換する](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 55ff87ef51f00a803276083052d4d86960e702e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f11ba3981b219d3b3a7817afd75fa78f2ccf78a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332856"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521754"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>方法: 文字列を数値に変換する (C# プログラミング ガイド)
 <xref:System.Convert> クラスのメソッドを使用するか、さまざまな数値型 (int、long、float など) にある `TryParse` メソッドを使用して、[文字列](../../../csharp/language-reference/keywords/string.md)を数値に変換できます。  
   
- 文字列では、`TryParse` メソッド (たとえば `int.TryParse("11")`) を呼び出すのがいくらか効率的で簡単です。  <xref:System.IConvertible> を実装している一般的なオブジェクトでは、`Convert` メソッドを使用するのがより便利です。  
+ 文字列では、`TryParse` メソッド (たとえば [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) を呼び出すのがいくらか効率的で簡単です。  <xref:System.IConvertible> を実装している一般的なオブジェクトでは、<xref:System.Convert> メソッドを使用するのがより便利です。  
   
  文字列に含まれていると思われる数値型 (<xref:System.Int32?displayProperty=nameWithType> 型など) の `Parse` または `TryParse` メソッドを使用できます。  <xref:System.Convert.ToUInt32%2A?displayProperty=nameWithType> メソッドは、<xref:System.Int32.Parse%2A> を内部的に使用します。  文字列の形式が無効である場合、`Parse` が例外をスローするのに対し、`TryParse` は [false](../../../csharp/language-reference/keywords/false.md) を返します。  
   
@@ -53,7 +53,8 @@ ms.locfileid: "33332856"
  [!code-csharp[csProgGuideTypes#5555](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_1.cs)]  
 [!code-csharp[csProgGuideTypes#24](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_7.cs)]  
   
-## <a name="see-also"></a>参照  
- [型](../../../csharp/programming-guide/types/index.md)  
- [方法: 文字列が数値を表しているかどうかを確認する](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
- [.NET Framework 4 の書式指定ユーティリティ](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>参照
+
+- [型](../../../csharp/programming-guide/types/index.md)  
+- [方法: 文字列が数値を表しているかどうかを確認する](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+- [.NET Framework 4 の書式指定ユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

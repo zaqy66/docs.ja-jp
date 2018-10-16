@@ -3,13 +3,16 @@ title: CLI ツールで .NET Core アプリを展開する
 description: コマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを展開する方法を説明します。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.date: 09/05/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855023"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47208251"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>コマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを展開する
 
@@ -34,13 +37,14 @@ ms.locfileid: "43855023"
 
 1. プロジェクトを作成します。
 
-   コマンド ラインに [dotnet new console](../tools/dotnet-new.md) と入力して、そのディレクトリに新しい C# コンソール プロジェクトを作成します。
+   コマンドラインから「[dotnet new console](../tools/dotnet-new.md)」と入力すると新しい C# コンソール プロジェクトが作成され、「[dotnet new console -lang vb](../tools/dotnet-new.md)」と入力するとこのディレクトリに新しい Visual Basic コンソール プロジェクトが作成されます。
 
 1. アプリケーションのソース コードを追加します。
 
-   エディターで *Program.cs* ファイルを開き、自動生成されたコードを次のコードに置き換えます。 テキストの入力を求めるプロンプトが表示されてから、ユーザーが入力した個々の単語が表示されます。 正規表現 `\w+` を使用して、入力テキストの単語を分離します。
+   エディターで *Program.cs* または *Program.vb* ファイルを開き、自動生成されたコードを次のコードに置き換えます。 テキストの入力を求めるプロンプトが表示されてから、ユーザーが入力した個々の単語が表示されます。 正規表現 `\w+` を使用して、入力テキストの単語を分離します。
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. プロジェクトの依存関係とツールを更新します。
 
@@ -55,7 +59,7 @@ ms.locfileid: "43855023"
    プログラムをテストし、デバッグした後は、次のコマンドを使用して、展開を作成します。
 
       ```console
-      dotnet publish -f netcoreapp1.1 -c Release
+      dotnet publish -f netcoreapp2.1 -c Release
       ```
    これにより、リリース (デバッグではなく) バージョンのアプリが作成されます。 作成されたファイルは、プロジェクトの *bin* ディレクトリのサブディレクトリ内にある *publish* という名前のディレクトリに配置されます。
 
@@ -101,8 +105,8 @@ ms.locfileid: "43855023"
 
    エディターで *Program.cs* ファイルを開き、自動生成されたコードを次のコードに置き換えます。 テキストの入力を求めるプロンプトが表示されてから、ユーザーが入力した個々の単語が表示されます。 正規表現 `\w+` を使用して、入力テキストの単語を分離します。
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
-
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 1. アプリの対象プラットフォームを定義します。
 
    *csproj* ファイルで、アプリが対象とするプラットフォームを定義する `<RuntimeIdentifiers>` タグを `<PropertyGroup>` セクションに作成し、対象とする各プラットフォームのランタイム識別子 (RID) を指定します。 なお、RID の分離にはセミコロンを追加する必要があることに注意してください。 ランタイム識別子の一覧については、「[Runtime IDentifier catalog](../rid-catalog.md)」 (ランタイム識別子のカタログ) を参照してください。
@@ -121,6 +125,14 @@ ms.locfileid: "43855023"
 
    [dotnet restore](../tools/dotnet-restore.md) コマンドを実行して、プロジェクトで指定された依存関係を復元します ([注記参照](#dotnet-restore-note))。
 
+1. グローバリゼーション インバリアント モードを使用するかどうかを決定します。
+
+   特にアプリの対象が Linux の場合、[グローバリゼーション インバリアント モード](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)を活用することで展開の合計サイズを減らすことができます。 グローバリゼーション インバリアント モードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。
+
+   インバリアント モードを有効にするには、**ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、**[SCD.csproj の編集]** または **[SCD.vbproj の編集]** を選択します。 次の強調表示された行をファイルに追加します。
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
 1. アプリのデバッグ ビルドを作成します。
 
    コマンド ラインから、[dotnet build](../tools/dotnet-build.md) コマンドを使用します。
@@ -134,7 +146,7 @@ ms.locfileid: "43855023"
       dotnet publish -c Release -r osx.10.11-x64
       ```
 
-   これにより、各ターゲット プラットフォームに対してアプリのリリース (デバッグではなく) バージョンが作成されます。 作成されたファイルは、プロジェクトの *.\bin\Release\netcoreapp1.1\<runtime_identifier>* サブディレクトリにある *publish* という名前のサブディレクトリに配置されます。 各サブディレクトリには、アプリの起動に必要なファイルの完全なセット (アプリ ファイルとすべての .NET Core ファイルの両方) が含まれています。
+   これにより、各ターゲット プラットフォームに対してアプリのリリース (デバッグではなく) バージョンが作成されます。 作成されたファイルは、プロジェクトの *.\bin\Release\netcoreapp2.1\<runtime_identifier>* サブディレクトリにある *publish* という名前のサブディレクトリに配置されます。 各サブディレクトリには、アプリの起動に必要なファイルの完全なセット (アプリ ファイルとすべての .NET Core ファイルの両方) が含まれています。
 
 アプリケーションのファイルと共に、発行プロセスは、アプリに関するデバッグ情報を含むプログラム データベース (.pdb) ファイルを出力します。 このファイルは、主に例外のデバッグに役立ちます。 これを、アプリケーションのファイルにはパッケージ化しないよう選択できます。 ただし、アプリのリリース ビルドをデバッグする場合のために、保存しておくことをお勧めします。
 
@@ -146,7 +158,7 @@ ms.locfileid: "43855023"
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -172,7 +184,7 @@ ms.locfileid: "43855023"
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>

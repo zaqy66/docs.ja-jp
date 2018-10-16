@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: e043903647075587d1e7eec21c9a7b04f596dbf6
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 47e066f8eb7402fedabc70cf1e3b4a1bb974ff62
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937050"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504693"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>ラムダ式 (C# プログラミング ガイド)
 
@@ -78,6 +78,7 @@ namespace ConsoleApplication1
 ```csharp
 (int x, string s) => s.Length > x
 ```
+ 入力パラメーターの種類は、すべて明示的またはすべて暗黙的である必要があります。それ以外の場合、C# は [CS0748](../../misc/cs0748.md) コンパイラ エラーを生成します。
 
  入力パラメーターがないことを指定するには、次のように空のかっこを使用します。  
   
@@ -273,11 +274,12 @@ class Test
 ## <a name="featured-book-chapter"></a>参考書籍の該当する章  
  『[C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers (C# 3.0 クックブック (第 3 版): C# 3.0 プログラマ向けの 250 以上のソリューション)](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)』の「[Delegates, Events, and Lambda Expressions (デリゲート、イベント、およびラムダ式)](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx)」  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [統合言語クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)  
- [匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [is](../../../csharp/language-reference/keywords/is.md)  
- [式ツリー](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
- [Visual Studio 2008 C# Samples (Visual Studio 2008 の C# サンプル) (LINQ サンプル クエリ ファイルと XQuery プログラムを参照してください)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
- [Recursive lambda expressions (再帰的なラムダ式)](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [統合言語クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)  
+- [匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)  
+- [式ツリー](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [Visual Studio 2008 C# Samples (Visual Studio 2008 の C# サンプル) (LINQ サンプル クエリ ファイルと XQuery プログラムを参照してください)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+- [Recursive lambda expressions (再帰的なラムダ式)](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

@@ -1,77 +1,68 @@
 ---
 title: lock ステートメント (C# リファレンス)
-description: 'lock キーワードはスレッド処理で使用されます。 '
-ms.date: 07/20/2015
+description: C# lock ステートメントを使用し、共有リソースへのスレッド アクセスを同期します
+ms.date: 08/28/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6ed46837482642dfd7e1a96cd120fc18023c5e9f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931194"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858357"
 ---
 # <a name="lock-statement-c-reference"></a>lock ステートメント (C# リファレンス)
 
-`lock` キーワードは、ステートメント ブロックをクリティカル セクションとして指定します。このためには、特定のオブジェクトの相互排他ロックを取得し、ステートメントを実行して、ロックを解放します。 次の例では、`lock` ステートメントが使用されています。
+`lock` ステートメントは、指定のオブジェクトに対する相互排他ロックを取得し、ステートメント ブロックを実行してからロックを解放します。 ロックが保持されている間、ロックを保持するスレッドはロックを再度取得し、解放できます。 他のスレッドはブロックされてロックを取得できず、ロックが解放されるまで待機します。
+
+`lock` ステートメントの形式は次のようになります。
 
 ```csharp
-class Account
+lock (x)
 {
-    decimal balance;
-    private Object thisLock = new Object();
-
-    public void Withdraw(decimal amount)
-    {
-        lock (thisLock)
-        {
-            if (amount > balance)
-            {
-                throw new Exception("Insufficient funds");
-            }
-            balance -= amount;
-        }
-    }
+    // Your code...
 }
 ```
 
-詳細については、「[スレッドの同期](../../programming-guide/concepts/threading/thread-synchronization.md)」を参照してください。
+`x` は[参照型](reference-types.md)の式です。 これは次にまったく等しくなります。
 
-## <a name="remarks"></a>コメント
+```csharp
+object __lockObj = x;
+bool __lockWasTaken = false;
+try
+{
+    System.Threading.Monitor.Enter(__lockObj, ref __lockWasTaken);
+    // Your code...
+}
+finally
+{
+    if (__lockWasTaken) System.Threading.Monitor.Exit(__lockObj);
+}
+```
 
-`lock` キーワードは、コードのクリティカル セクションに複数のスレッドが同時に進入することを防ぐ働きをします。 これから実行しようとしているコードがロックされている場合、別のスレッドは、そのオブジェクトが解放されるまで待機 (ブロック) 状態になります。
-
-スレッド処理については、「[スレッド処理](../../programming-guide/concepts/threading/index.md)」を参照してください。
-
-`lock` キーワードは、ブロックの先頭で <xref:System.Threading.Monitor.Enter%2A> を呼び出し、ブロックの末尾で <xref:System.Threading.Monitor.Exit%2A> を呼び出します。 `lock` ステートメントの実行を待っているスレッドを <xref:System.Threading.Thread.Interrupt%2A> で中断すると、<xref:System.Threading.ThreadInterruptedException> がスローされます。
-
-一般に、`public` 型 (つまり、コードの制御が及ばないインスタンス) をロックすることは避けてください。 `lock (this)`、`lock (typeof (MyType))`、`lock ("myLock")` は、このガイドラインに違反する代表的なコンストラクトです。
-
-- `lock (this)` は、このインスタンスにパブリックにアクセスできる場合に問題となります。
-
-- `lock (typeof (MyType))` は、`MyType` にパブリックにアクセスできる場合に問題となります。
-
-- `lock("myLock")` が問題となる理由は、同じ文字列を使用するコードがプロセス内に他にも存在した場合、そのコードも同じロックを共有するためです。
-
-`private` オブジェクトを定義してロックの適用対象を限定するか、`private static` オブジェクト変数を定義して、すべてのインスタンスに共通するデータを保護することをお勧めします。
+このコードでは [try...finally](try-finally.md) ブロックが使用されているため、`lock` ステートメントの本文内で例外がスローされた場合でもロックは解放されます。
 
 `lock` ステートメントの本体で [await](await.md) キーワードを使用することはできません。
 
-## <a name="example---threads-without-locking"></a>例: ロックを使用しないスレッド
+## <a name="remarks"></a>コメント
 
-次のサンプルでは、C# でロックされていないスレッドの簡単な使用例を示しています。
+共有リソースへのスレッド アクセスを同期する場合、専用オブジェクト インスタンス (`private readonly object balanceLock = new object();` など) またはコードの関連のない部分によってロック オブジェクトとして使用される可能性がない別のインスタンスをロックします。 異なる共有リソースに対して同じロック オブジェクト インスタンスを使用することは避けてください。デッドロックやロックの競合が発生する可能性があります。 特に以下の使用は避けてください。
 
-[!code-csharp[csrefKeywordsFixedLock#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#5)]
+- `this` (ロックとして呼び出し元に使用される可能性があります)。
+- <xref:System.Type> インスタンス ([typeof](typeof.md) 演算子またはリフレクションによって取得される可能性があります)。
+- ロック オブジェクトとしての
 
-## <a name="example---threads-using-locking"></a>例: ロックを使用するスレッド
+文字列インスタンス (文字列リテラルなど)。
 
-次のサンプルでは、スレッドと `lock` を使用しています。 `lock` ステートメントが存在する限り、このステートメント ブロックはクリティカル セクションとなり、`balance` が負の数になることはありません。
+## <a name="example"></a>例
 
-[!code-csharp[csrefKeywordsFixedLock#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#6)]
+次の例では、専用 `balanceLock` インスタンスをロックすることでそのプライベート `balance` フィールドへのアクセスを同期する `Account` クラスが定義されます。 ロッキングに同じインスタンスを使用すると、2 つのスレッドが `Debit` または `Credit` メソッドを同時に呼び出すことによって `balance` フィールドを同時に更新することができなくなります。
+
+[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -79,14 +70,11 @@ class Account
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Reflection.MethodImplAttributes>
-- <xref:System.Threading.Mutex>
-- <xref:System.Threading.Monitor>
-- [C# リファレンス](../../language-reference/index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [スレッド化](../../programming-guide/concepts/threading/index.md)
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.SpinLock?displayProperty=nameWithType>
+- <xref:System.Threading.Interlocked?displayProperty=nameWithType>
+- [C# リファレンス](../index.md)
 - [C# のキーワード](index.md)
 - [ステートメントのキーワード](statement-keywords.md)
 - [インタロックされた操作](../../../standard/threading/interlocked-operations.md)
-- [AutoResetEvent](../../../standard/threading/autoresetevent.md)
-- [スレッドの同期](../../programming-guide/concepts/threading/thread-synchronization.md)
+- [同期プリミティブの概要](../../../standard/threading/overview-of-synchronization-primitives.md)

@@ -1,53 +1,61 @@
 ---
 title: 暗黙的な数値変換の一覧表 (C# リファレンス)
-ms.date: 07/20/2015
+ms.date: 09/05/2018
 helpviewer_keywords:
 - conversions [C#], implicit numeric
 - implicit numeric conversions [C#]
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 4bbc6086dc5fd3838ef9361762c3068ca44efd0e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e46816fc8f3a6ff71dcba3561098d3cfce1e1054
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43417597"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213265"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>暗黙的な数値変換の一覧表 (C# リファレンス)
-定義済みの暗黙的な数値変換を次の表に示します。 暗黙的な変換は、メソッドの呼び出しや代入ステートメントなど、多くの状況で発生することがあります。  
+
+.NET 数値型間の定義済みの暗黙的な変換を次の表に示します。
   
 |From|終了|  
 |----------|--------|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`short`、`int`、`long`、`float`、`double`、または `decimal`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
-|[short](../../../csharp/language-reference/keywords/short.md)|`int`、`long`、`float`、`double`、または `decimal`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`long`、`float`、`double`、または `decimal`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`long`、`ulong`、`float`、`double`、または `decimal`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`float`、 `double`、または `decimal`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`double`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`float`、 `double`、または `decimal`|  
+|[sbyte](sbyte.md)|`short`、`int`、`long`、`float`、`double`、または `decimal`|  
+|[byte](byte.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
+|[short](short.md)|`int`、`long`、`float`、`double`、または `decimal`|  
+|[ushort](ushort.md)|`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
+|[int](int.md)|`long`、`float`、`double`、または `decimal`|  
+|[uint](uint.md)|`long`、`ulong`、`float`、`double`、または `decimal`|  
+|[long](long.md)|`float`、 `double`、または `decimal`|  
+|[char](char.md)|`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
+|[float](float.md)|`double`|  
+|[ulong](ulong.md)|`float`、 `double`、または `decimal`|  
   
 ## <a name="remarks"></a>コメント  
-  
--   `int`、`uint`、`long`、または `ulong` から `float` への変換と `long` から `ulong` または `double` への変換では、有効桁数が失われる場合があります (絶対値ではありません)。  
-  
--   `char` 型への暗黙的な変換はありません。  
-  
--   浮動小数点型と `decimal` 型の間に、暗黙的な変換はありません。  
-  
--   `int` 型の定数式は、定数式の値が変換後の型の範囲内にある場合、`sbyte`、`byte`、`short`、`ushort`、`uint`、または `ulong` に変換できます。  
-  
-## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>参照  
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [キャストと型変換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- [整数型](integral-types-table.md)はすべて、あらゆる[浮動小数点型](floating-point-types-table.md)に暗黙的に変換できます。
+
+- `int`、`uint`、`long`、または `ulong` から `float` への変換と `long` から `ulong` または `double` への変換では、有効桁数が失われる場合があります (絶対値ではありません)。  
+  
+- `char` 型への暗黙的な変換はありません。  
+  
+- `float` 型、`double` 型、`decimal` 型の間に暗黙的な変換はありません。  
+  
+- 型 `int` の定数式の値 (整数リテラルで表される値など) は、それが変換先の型の範囲内にある場合、`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong` に変換できます。
+
+  ```csharp
+  byte a = 13;    // Compiles
+  byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
+  ```
+
+明示的な変換に関する詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの「[Implicit conversions](/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions)」 (明示的な変換) セクションをご覧ください。
+  
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [整数型の一覧表](integral-types-table.md)
+- [浮動小数点型の一覧表](floating-point-types-table.md)
+- [組み込み型の一覧表](built-in-types-table.md)
+- [明示的な数値変換の一覧表](explicit-numeric-conversions-table.md)
+- [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)

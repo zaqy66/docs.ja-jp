@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: b0963457e22bf0c3fc92d33c5ed0eb699be27cf7
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f536499e95611bad6ac1766e117d4a2f1463e53d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932043"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857983"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>名前付き引数と省略可能な引数 (C# プログラミング ガイド)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] では、名前付き引数と省略可能な引数が導入されています。 *名前付き引数*を使用すると、パラメーター リストのパラメーターの位置ではなく、パラメーター名に引数を関連付けることによって、特定のパラメーターの引数を指定できます。 *省略可能な引数*を使用すると、一部のパラメーターの引数を省略できます。 両方の手法をメソッド、インデクサー、コンストラクター、デリゲートで使用できます。  
@@ -101,7 +101,7 @@ ExampleMethod の省略可能なパラメーター
 ## <a name="com-interfaces"></a>COM インターフェイス  
  名前付き引数と省略可能な引数を動的オブジェクトやその他の拡張機能のサポートと併用すると、Office オートメーション API などの COM API との相互運用性が大幅に向上します。  
   
- たとえば、Microsoft Office Excel [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) インターフェイスの [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) メソッドには 7 つのパラメーターがあります。それらはすべて省略可能です。 これらのパラメーターを次の例に示します。  
+ たとえば、Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range> インターフェイスの <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> メソッドには 7 つのパラメーターがあります。それらはすべて省略可能です。 これらのパラメーターを次の例に示します。  
   
  ![AutoFormat メソッドについての IntelliSense によるクイック ヒント](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 AutoFormat パラメーター  
@@ -128,8 +128,9 @@ AutoFormat パラメーター
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [方法: Office プログラミングで名前付き引数と省略可能な引数を使用する](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
- [dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [コンストラクターの使用](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
- [インデクサーの使用](../../../csharp/programming-guide/indexers/using-indexers.md)
+## <a name="see-also"></a>参照
+
+- [方法: Office プログラミングで名前付き引数と省略可能な引数を使用する](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+- [dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [コンストラクターの使用](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [インデクサーの使用](../../../csharp/programming-guide/indexers/using-indexers.md)

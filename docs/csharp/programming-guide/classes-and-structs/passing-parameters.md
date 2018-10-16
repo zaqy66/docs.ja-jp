@@ -8,15 +8,15 @@ helpviewer_keywords:
 - methods [C#], passing parameters
 - C# language, method parameters
 ms.assetid: a5c3003f-7441-4710-b8b1-c79de77e0b77
-ms.openlocfilehash: a1ccfff8081d101eee46360009653b0591dfb3ff
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a9538ee9f5f49554e9fe1822367404ab1d1e858d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43404127"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194854"
 ---
 # <a name="passing-parameters-c-programming-guide"></a>パラメーターの引き渡し (C# プログラミング ガイド)
-C# では、引数を値または参照によってパラメーターに渡すことができます。 参照渡しでは、関数メンバー、メソッド、プロパティ、インデクサー、演算子、およびコンストラクターは、パラメーターの値を変更でき、その変更を呼び出し元の環境で永続化できます。 値を変更する目的でパラメーターを参照で渡すには、`ref` または `out` キーワードを使用します。 値を変更せずにコピーを回避する目的で参照で渡すには、`in` 修飾子を使用します。 ここでは、説明を簡単にするために、例に `ref` キーワードだけを使用しています。 `in`、`ref`、`out` の違いの詳細については、[in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)、[ref](../../../csharp/language-reference/keywords/ref.md)、[out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) に関するページと「[ref と out を使用した配列の引き渡し](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)」を参照してください。  
+C# では、引数を値または参照によってパラメーターに渡すことができます。 参照渡しでは、関数メンバー、メソッド、プロパティ、インデクサー、演算子、およびコンストラクターは、パラメーターの値を変更でき、その変更を呼び出し元の環境で永続化できます。 値を変更する目的でパラメーターを参照で渡すには、`ref` または `out` キーワードを使用します。 値を変更せずにコピーを回避する目的で参照で渡すには、`in` 修飾子を使用します。 ここでは、説明を簡単にするために、例に `ref` キーワードだけを使用しています。 `in`、`ref`、`out` の違いの詳細については、[in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)、[ref](../../../csharp/language-reference/keywords/ref.md)、[out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) に関するページを参照してください。  
   
  次の例は、値パラメーターと参照パラメーターの違いを示しています。  
   
@@ -31,6 +31,7 @@ C# では、引数を値または参照によってパラメーターに渡す�
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)

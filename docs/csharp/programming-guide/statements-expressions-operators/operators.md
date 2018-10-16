@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457931"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514186"
 ---
 # <a name="operators-c-programming-guide"></a>演算子 (C# プログラミング ガイド)
 C# では、 *演算子* は式またはステートメントの中で 1 つ以上の *オペランド* に適用されるプログラム要素です。 インクリメント演算子 (`++`) や `new`など、1 つのオペランドを受け取る演算子を *単項* 演算子と言います。 算術演算子 (`+`、`-`、`*`、`/`) など、2 つのオペランドを受け取る演算子を *二項* 演算子と言います。 条件演算子 (`?:`) は、3 つのオペランドを受け取る、C# でただ 1 つの三項演算子です。  
@@ -123,7 +123,7 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
 |正規表現|説明|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|代入|  
-|x op= y|複合代入。 サポートされる演算子: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[!=](../../../csharp/language-reference/operators/not-equal-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
+|x op= y|複合代入。 サポートされる演算子: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[^=](../../../csharp/language-reference/operators/xor-assignment-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|匿名関数 (ラムダ式)|  
   
 ## <a name="associativity"></a>結合規則  
@@ -163,11 +163,12 @@ a = (b = c);
 |`a = (b + c) * (d - e)`|a、b、c、+、d、e、-、*、=|  
   
 ## <a name="operator-overloading"></a>演算子のオーバーロード  
- カスタム クラスやカスタム構造体では、演算子の動作を変更できます。 このプロセスは *演算子のオーバーロード*と呼ばれます。 詳細については、「[オーバーロードされた演算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)」を参照してください。  
+ カスタム クラスやカスタム構造体では、演算子の動作を変更できます。 このプロセスは *演算子のオーバーロード*と呼ばれます。 詳細については、[オーバーロード可能な演算子](../../../csharp/language-reference/keywords/operator.md)に関する記事および [operator](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) キーワードに関する記事を参照してください。  
   
 ## <a name="related-sections"></a>関連項目  
  詳細については、「[演算子のキーワード](../../../csharp/language-reference/keywords/operator-keywords.md)」および「[C# 演算子](../../../csharp/language-reference/operators/index.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
- [ステートメント、式、および演算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+## <a name="see-also"></a>参照
+
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [ステートメント、式、および演算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)

@@ -4,12 +4,12 @@ description: dotnet test コマンドは、指定されたプロジェクトで�
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 7946196b27489870da1c16b15cbf5f078ae89c61
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e80ba874ec8d0fbc49858719dc3b9b6e02254c78
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44137201"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46696457"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -48,7 +48,7 @@ dotnet test [-h|--help]
 
 ## <a name="description"></a>説明
 
-`dotnet test` コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。 `dotnet test` コマンドは、プロジェクト用に指定されたテスト ランナーのコンソール アプリケーションを起動します。 テスト ランナーでは、単体テスト フレームワーク (MSTest、NUnit、xUnit など) 用に定義されたテストを実行し、各テストの成功または失敗をレポートします。 テスト ランナーと単体テスト ライブラリは、NuGet パッケージとしてパッケージ化され、プロジェクトの通常の依存関係として復元されます。
+`dotnet test` コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。 `dotnet test` コマンドは、プロジェクト用に指定されたテスト ランナーのコンソール アプリケーションを起動します。 テスト ランナーでは、単体テスト フレームワーク (MSTest、NUnit、xUnit など) 用に定義されたテストを実行し、各テストの成功または失敗をレポートします。 すべてのテストが成功した場合、テスト ランナーは 0 の終了コードを返します。それ以外の、いずれかのテストに失敗した場合は、1 を返します。 テスト ランナーと単体テスト ライブラリは、NuGet パッケージとしてパッケージ化され、プロジェクトの通常の依存関係として復元されます。
 
 テスト プロジェクトでは、通常の `<PackageReference>` 要素を使用してテスト ランナーを指定します。次のサンプル プロジェクト ファイルのようになります。
 

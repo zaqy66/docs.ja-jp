@@ -3,12 +3,12 @@ title: 式の解釈
 description: 式ツリーの構造を調べるためのコードの記述方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 04622c0aa7323ac4cf16af94e31f1ef6987f87c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219311"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506420"
 ---
 # <a name="interpreting-expressions"></a>式の解釈
 
@@ -514,7 +514,7 @@ The expression body is:
 
 最後のサンプルでも、想定されるノード型のサブセットを認識できます。
 コードの処理が失敗する式をさらに読み込ませることもできます。
-完全な実装は、[ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) という名前で .NET Standard に含まれていて、想定されるすべてのノード型を処理できます。
+完全な実装は、<xref:System.Linq.Expressions.ExpressionVisitor> という名前で .NET Standard に含まれていて、想定されるすべてのノード型を処理できます。
 
 最後に、この記事で使用したライブラリはデモ用および学習用として構築しました。 ライブラリの最適化は行っていません。 ライブラリを記述したのは、使用した構造体を明確にし、ノードのアクセスに使用した手法を浮き彫りにして、その内容を分析するためです。 運用環境への実装では、今回試みたよりもさらにパフォーマンスに注意を払うことになります。
 

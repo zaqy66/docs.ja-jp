@@ -4,12 +4,12 @@ description: このトピックでは、.NET Core で使用されるランタイ
 author: bleroy
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: aba1939cda8459d8b0d9438a97545c19d3c1926d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df2776ac2e4a2eed7f54b3031f13ab41fc714aae
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218704"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511585"
 ---
 # <a name="runtime-package-store"></a>ランタイム パッケージ ストア
 
@@ -17,18 +17,20 @@ NET Core 2.0 以降、ターゲット環境に存在する既知のパッケー�
 
 この機能は、パッケージが保存されているディスク上のディレクトリ (通常は、macOS/Linux では */usr/local/share/dotnet/store*、Windows では *C:/Program Files/dotnet/store*) である、*ランタイム パッケージ ストア*として実装されます。 このディレクトリには、アーキテクチャと[ターゲット フレームワーク](../../standard/frameworks.md)のサブディレクトリがあります。 ファイル レイアウトは、[NuGet アセットがディスク上に配置される](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure)方法と同様です。
 
-\dotnet   
-&nbsp;&nbsp;\store   
-&nbsp;&nbsp;&nbsp;&nbsp;\x64   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
-&nbsp;&nbsp;&nbsp;&nbsp;\x86   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
+```
+\dotnet
+    \store
+        \x64
+            \netcoreapp2.0
+                \microsoft.applicationinsights
+                \microsoft.aspnetcore
+                ...
+        \x86
+            \netcoreapp2.0
+                \microsoft.applicationinsights
+                \microsoft.aspnetcore
+                ...
+```
 
 *ターゲット マニフェスト* ファイルには、ランタイム パッケージ ストアのパッケージが一覧されます。 開発者は、自社のアプリを発行するときに、このマニフェストをターゲットにすることができます。 ターゲット マニフェストは通常、対象となる運用環境の所有者によって提供されます。
 
@@ -120,6 +122,8 @@ dotnet publish --manifest manifest.xml
 
 ## <a name="aspnet-core-implicit-store"></a>ASP.NET Core の暗黙的なストア
 
+ASP.NET Core の暗黙的なストアは、ASP.NET Core 2.0 にのみ適用されます。 暗黙的なストアを使用**しない** ASP.NET Core 2.1 以降を、アプリケーションで使用することを強くお勧めします。 ASP.NET Core 2.1 以降では、共有フレームワークを使用します。
+
 このランタイム パッケージ ストア機能は、アプリが[フレームワークに依存する展開 (FDD)](index.md#framework-dependent-deployments-fdd) のアプリとして展開されるときに、ASP.NET Core アプリによって暗黙的に使用されます。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) のターゲットには、ターゲット システムの暗黙的なパッケージ ストアを参照しているマニフェストが含まれます。 さらに、`Microsoft.AspNetCore.All` パッケージによって異なる FDD アプリは、アプリとそのアセットのみを含み、`Microsoft.AspNetCore.All` メタパッケージに一覧されるパッケージは含まないアプリとして発行されます。 それらのパッケージは、ターゲット システムに存在すると想定されます。
 
 ランタイム パッケージ ストアは、.NET Core SDK がインストールされるときに、ホストにインストールされます。 その他のインストーラーでは、Zip/tarball インストールの .NET Core SDK、`apt-get`、Red Hat Yum、.NET Core Windows Server Hosting バンドル、および手動のランタイム パッケージ ストアのインストールなど、ランタイム パッケージ ストアを提供する場合があります。
@@ -132,7 +136,7 @@ dotnet publish --manifest manifest.xml
 </PropertyGroup>
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > [自己完結型の展開 (SCD)](index.md#self-contained-deployments-scd) アプリの場合、ターゲット システムには必ずしも必要なマニフェスト パッケージを含んでいないと想定されます。 そのため、SCD アプリの場合、**\<PublishWithAspNetCoreTargetManifest>** を `true` に設定することはできません。
 
 展開に存在するマニフェストの依存関係を持つアプリケーションを展開する場合は (アセンブリは *bin* フォルダーに存在します)、ランタイム パッケージ ストアはそのアセンブリ用のホスト上では*使用されません*。 ホスト上のランタイム パッケージ ストアに存在するかに関係なく、*bin* フォルダーのアセンブリが使用されます。
@@ -142,5 +146,6 @@ dotnet publish --manifest manifest.xml
 展開が発行時に*トリミング*されると、指定した特定のバージョンのマニフェスト パッケージのみが、発行された出力から引かれます。 アプリを開始するには、指定されたバージョンのパッケージがホスト上に存在する必要があります。
 
 ## <a name="see-also"></a>関連項目
- [dotnet-publish](../tools/dotnet-publish.md)  
- [dotnet-store](../tools/dotnet-store.md)  
+
+* [dotnet-publish](../tools/dotnet-publish.md)  
+* [dotnet-store](../tools/dotnet-store.md)  

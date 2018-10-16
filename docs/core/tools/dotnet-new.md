@@ -4,12 +4,12 @@ description: dotnet new コマンドは、指定されたテンプレートに�
 author: mairaw
 ms.author: mairaw
 ms.date: 07/31/2018
-ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512556"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47208634"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -228,8 +228,9 @@ dotnet new [-h|--help]
 指定された `PATH` または `NUGET_ID` で、ソース パックまたはテンプレート パックをアンインストールします。
 
 > [!NOTE]
-> `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<ユーザー>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、*./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
-> また、テンプレートのパスの最後にある終端ディレクトリのスラッシュは含めないでください。
+> ソース `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<ユーザー>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、*./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。 また、テンプレートのパスの最後にある終端ディレクトリのスラッシュは含めないでください。
+> 
+> テンプレートのアンインストールに必要な `PATH` または `NUGET_ID` 引数を決定できない場合、引数なしで `dotnet new --uninstall` を実行するとインストールされているすべてのテンプレートと、それをアンインストールするために必要な引数が一覧表示されます。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

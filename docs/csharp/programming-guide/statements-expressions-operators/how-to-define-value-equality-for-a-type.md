@@ -8,25 +8,25 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: c0105371bd39c3999aafca867a7bb7a59fd367c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 365aa5a71eb3d07a79920f565a66fcac67de0b42
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339606"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042622"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>方法: 型の値の等価性を定義する (C# プログラミング ガイド)
 クラスまたは構造体を定義する場合は、型に値の等価性 (同値) のカスタム定義を作成することが有用かどうかを判断します。 通常、値の等価性を実装するのは、その型のオブジェクトがある種のコレクションに追加されることが想定されている場合、または、そのオブジェクトの主な目的が一連のフィールドまたはプロパティを格納することである場合です。 値の等価性は、型のすべてのフィールドおよびプロパティの比較に基づいて定義できます。また、サブセットに基づいて定義することもできます。 ただし、いずれの場合も、クラスおよび構造体の両方について、等価性を保証する 5 つの条件に従って実装する必要があります。  
   
-1.  x.`Equals`(x) は `true.` を返します。これは再帰プロパティと呼ばれます。  
+1.  `x.Equals(x)` は、`true` を返します。 これは再帰プロパティと呼ばれます。  
   
-2.  x.`Equals`(y) は、y.`Equals`(x) と同じ値を返します。 これは対照プロパティと呼ばれます。  
+2.  `x.Equals(y)` からは `y.Equals(x)` と同じ値が返されます。 これは対照プロパティと呼ばれます。  
   
-3.  (x.`Equals`(y) && y.`Equals`(z)) が `true` を返す場合は、x.`Equals`(z) も `true` を返します。 これは推移的プロパティと呼ばれます。  
+3.  `(x.Equals(y) && y.Equals(z))` で `true` が返される場合、`x.Equals(z)` で `true` が返されます。 これは推移的プロパティと呼ばれます。  
   
-4.  x.`Equals`(y) が連続して呼び出された場合は、x および y によって参照されるオブジェクトが変更されていない限り、同じ値を返します。  
+4.  `x.Equals(y)` が連続して呼び出された場合は、x と y によって参照されるオブジェクトが変更されていない限り、同じ値を返します。  
   
-5.  x.`Equals`(null) は `false` を返します。 ただし、null.Equals(null) は例外をスローするため、上の 2 番目の規則には従っていません。  
+5.  `x.Equals(null)` は、`false` を返します。 ただし、`null.Equals(null)` は例外をスローするため、上の 2 番目の規則には従っていません。  
   
  構造体を定義すると、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドの <xref:System.ValueType?displayProperty=nameWithType> オーバーライドから継承された値の等価性が既定で実装されます。 この実装では、リフレクションを使用して、型のフィールドとプロパティをすべて調べます。 この実装によって正しい結果が生成されますが、その型専用に記述したカスタム実装と比較すると、処理にかなり時間がかかります。  
   
@@ -62,6 +62,7 @@ ms.locfileid: "33339606"
   
  [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 演算子および [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 演算子は、構造体が明示的にその演算子をオーバーロードしない限り、その構造体を操作できません。  
   
-## <a name="see-also"></a>参照  
- [等価比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>参照
+
+- [等価比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)

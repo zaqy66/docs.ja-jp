@@ -3,20 +3,20 @@ title: ML.NET を使用してニューヨークのタクシー運賃を予測す
 description: 回帰のシナリオで ML.NET を使用する方法について説明します。
 author: aditidugar
 ms.author: johalex
-ms.date: 06/18/2018
+ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e3ff2124a43cf42ce26cf94cfd5384387eef0ed9
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 133b7ad17a98e4eea510f1704555b690b98e9091
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937073"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252845"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>チュートリアル: ML.NET を使用してニューヨークのタクシー運賃を予測する (回帰)
 
 > [!NOTE]
-> このトピックでは現在プレビュー段階である ML.NET を参照しており、資料が変更される可能性があります。 詳しくは、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)を参照してください。
+> このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳しくは、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページをご覧ください。
 
 このチュートリアルでは、ML.NET を使用して、ニューヨーク市のタクシー運賃を予測する[回帰モデル](../resources/glossary.md#regression)を構築する方法を示します。
 
@@ -38,21 +38,21 @@ ms.locfileid: "37937073"
 
 ## <a name="understand-the-problem"></a>問題を把握する
 
-この問題の中心となるのは、**ニューヨーク市のタクシー旅行の運賃の予測**です。 一見すると、単に乗車距離に依存すると思われるかもしれません。 しかし、ニューヨークのタクシー会社は追加の乗客数や現金でなくクレジット カードによる支払いなど、その他の要因によって請求額を変えます。
+この問題の中心となるのは、ニューヨーク市のタクシー旅行の運賃の予測です。 一見すると、単に乗車距離に依存すると思われるかもしれません。 しかし、ニューヨークのタクシー会社は追加の乗客数や現金でなくクレジット カードによる支払いなど、その他の要因によって請求額を変えます。
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>適切な機械学習タスクを選択する
 
-タクシー運賃を予測するには、最初に適切な機械学習タスクを選択します。 ここでは、データ セット内のその他の要因に基づいて実際の値 (価格を表す倍精度値) を予測しようとしています。 そのため、[**回帰**](../resources/glossary.md#regression)タスクを選択します。
+データ セットの他の要因に基づき、実際の値である、価格値を予測します。 それを行うには、[回帰](../resources/glossary.md#regression)機械学習タスクを選択します。
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
 1. Visual Studio 2017 を開きます。 **[ファイル]** > **[新規作成]** > **[プロジェクト]** をメニュー バーから選択します。 **[新しいプロジェクト]** ダイアログで、**[Visual C#]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「TaxiFarePrediction」と入力し、**[OK]** を選択します。
 
-2. プロジェクトに *Data* という名前のディレクトリを作成して、データ セット ファイルを保存します。
+1. プロジェクトに *Data* という名前のディレクトリを作成して、データ セットとモデルのファイルを保存します。
 
     **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しいフォルダー]** を選択します。 「Data」と入力して Enter キーを押します。
 
-3. **Microsoft.ML NuGet パッケージ**をインストールします。
+1. **Microsoft.ML** NuGet パッケージをインストールします。
 
     **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として "nuget.org" を選択し、**[参照]** タブを選択して「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、**[インストール]** を選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
 
@@ -60,9 +60,9 @@ ms.locfileid: "37937073"
 
 1. [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) データ セットと [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) データ セットをダウンロードして、前の手順で作成済みの *Data* フォルダーに保存します。 これらのデータ セットを使用して、機械学習モデルをトレーニングし、モデルの正確度を評価します。 これらのデータ セットは、[NYC TLC Taxi Trip データ セット](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)から取得したものです。
 
-2. **ソリューション エクスプローラー**で、各 \*.csv ファイルを右クリックし、**[プロパティ]** を選択します。 **[詳細設定]** で、**[出力ディレクトリにコピー]** の値を **[常時]** に変更します。
+1. **ソリューション エクスプローラー**で、各 \*.csv ファイルを右クリックし、**[プロパティ]** を選択します。 **[詳細設定]** で、**[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
 
-3. **taxi-fare-train.csv** データ セットを開き、最初の行の列ヘッダーを確認します。 各列を確認してください。 データについて把握し、どの列が**特徴**で、どの列が**ラベル**であるかを確認します。
+1. **taxi-fare-train.csv** データ セットを開き、最初の行の列ヘッダーを確認します。 各列を確認してください。 データについて把握し、どの列が**特徴**で、どの列が**ラベル**であるかを確認します。
 
 **ラベル**は、予測する列の識別子です。 識別された**特徴**は、ラベルを予測するために使用します。
 
@@ -92,7 +92,10 @@ ms.locfileid: "37937073"
 
 `TaxiTrip` は入力データ クラスであり、各データ セット列の定義が含まれています。 [Column](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) 属性を使用して、データ セット内のソース列のインデックスを指定します。
 
-`TaxiTripFarePrediction` クラスは、予測結果を表すために使用します。 このクラスには、`Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) 属性が適用された 1 つの浮動小数点型 (`FareAmount`) フィールドが含まれています。 **Score** 列は ML.NET 内で特別な列です。 モデルは、この列に予測値を出力します。
+`TaxiTripFarePrediction` クラスは予測結果を表します。 このクラスには、`Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) 属性が適用された 1 つの浮動小数点型フィールド `FareAmount` が含まれています。 回帰タスクの場合、**Score** 列には、予測ラベル値が含まれます。
+
+> [!NOTE]
+> 入力データと予測データのクラス内の浮動小数点値を表すには、`float` 型を使います。
 
 ## <a name="define-data-and-model-paths"></a>データおよびモデルのパスを定義する
 
@@ -116,7 +119,7 @@ ms.locfileid: "37937073"
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
-`Main` で、`Console.WriteLine("Hello World!")` を次のコードに置き換えます。
+`Main` メソッドで、`Console.WriteLine("Hello World!")` を次のコードに置き換えます。
 
 ```csharp
 PredictionModel<TaxiTrip, TaxiTripFarePrediction> model = Train();
@@ -139,7 +142,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>データを読み込んで変換する
 
-学習パイプラインが実行する最初の手順は、トレーニング データ セットからデータを読み込むことです。 ここでは、トレーニング データ セットは、`_datapath` フィールドによってパスが定義されるテキスト ファイルに格納されます。 そのファイルには列名を含んだヘッダーがあるので、データの読み込み中に最初の行は無視されます。 ファイル内の列はコンマ (",") で区切られます。 `Train` メソッドに次のコードを追加します。
+実行する最初のステップでは、トレーニング データ セットからデータを読み込みます。 ここでは、トレーニング データ セットは、`_datapath` フィールドによってパスが定義されるテキスト ファイルに格納されます。 そのファイルには列名を含んだヘッダーがあるので、データの読み込み中に最初の行は無視されます。 ファイル内の列はコンマ (",") で区切られます。 `Train` メソッドに次のコードを追加します。
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -147,7 +150,7 @@ pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, sep
 
 次の手順では、`TaxiTrip` クラス内で定義された名前によって列を参照します。
 
-モデルのトレーニングおよび評価が行われる場合、**Label** 列内の値が予測される適切な値と見なされます。 タクシー旅行の運賃を予測したいので、`FareAmount` 列を **Label** 列にコピーします。 そのためには、<xref:Microsoft.ML.Transforms.ColumnCopier> を使用して、次のコードを追加します。
+モデルのトレーニングと評価が行われるとき、既定では、**Label** 列内の値が予測される適切な値と見なされます。 タクシー旅行の運賃を予測したいので、`FareAmount` 列を **Label** 列にコピーします。 そのためには、<xref:Microsoft.ML.Transforms.ColumnCopier> を使用して、次のコードを追加します。
 
 ```csharp
 pipeline.Add(new ColumnCopier(("FareAmount", "Label")));
@@ -161,7 +164,7 @@ pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
                                              "PaymentType"));
 ```
 
-データの準備の最後の手順では、<xref:Microsoft.ML.Transforms.ColumnConcatenator> 変換クラスを使用して、すべての特徴列を **Features** 列に結合します。 この手順は、ラーナーが **Features** 列からの特徴のみを処理する場合に必要です。 次のコードを追加します。
+データの準備の最後の手順では、<xref:Microsoft.ML.Transforms.ColumnConcatenator> 変換クラスを使用して、すべての特徴列を **Features** 列に結合します。 既定では、学習アルゴリズムは **Features** 列の特徴のみを処理します。 次のコードを追加します。
 
 ```csharp
 pipeline.Add(new ColumnConcatenator("Features",
@@ -179,7 +182,7 @@ pipeline.Add(new ColumnConcatenator("Features",
 
 ## <a name="choose-a-learning-algorithm"></a>学習アルゴリズムを選択する
 
-データをパイプラインに追加して正しい入力形式に変換したら、学習アルゴリズム (**ラーナー**) を選択します。 ラーナーはモデルをトレーニングします。 この問題に対しては**回帰タスク**を選択するので、<xref:Microsoft.ML.Trainers.FastTreeRegressor> ラーナー (ML.NET によって提供される回帰ラーナーの 1 つ) を追加します。
+データをパイプラインに追加して正しい入力形式に変換したら、学習アルゴリズム (**ラーナー**) を選択します。 ラーナーはモデルをトレーニングします。 この問題に対しては**回帰タスク**を選択するので、<xref:Microsoft.ML.Trainers.FastTreeRegressor> ラーナー (ML.NET によって提供される回帰ラーナーの 1 つ) を使用します。
 
 <xref:Microsoft.ML.Trainers.FastTreeRegressor> ラーナーは、勾配ブースティングを利用します。 勾配ブースティングは、回帰問題に対応する機械学習の手法です。 この手法では、それぞれの回帰ツリーを段階的に構築します。 また、定義済みの損失関数を使用して、各ステップの誤差を測定し、次の段階で修正します。 結果は予測モデルですが、実際は弱い予測モデルの集合です。 勾配ブースティングについて詳しくは、「[Boosted Decision Tree Regression](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression)」(ブーストされたデシジョン ツリー回帰) を参照してください。
 
@@ -203,7 +206,7 @@ pipeline.Add(new FastTreeRegressor());
 
 ### <a name="save-the-model"></a>モデルを保存する
 
-次の手順に進む前に、`Train` メソッドの末尾に次のコードを追加して、モデルを .zip ファイルに保存します。
+この時点で、既存または新規のどの .NET アプリケーションにも統合できるモデルができました。 モデルを .zip ファイルに保存するには、`Train` メソッドの終わりに次のコードを追加します。
 
 [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#5 "Save the model asynchronously and return the model")]
 
@@ -260,7 +263,7 @@ private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> m
 
 ## <a name="use-the-model-for-predictions"></a>モデルを使用して予測を行う
 
-次に、モデルが正しく機能しているかどうかを確認するためのテスト シナリオを格納するクラスを作成します。
+テスト データのインスタンスを格納するためのクラスを作成します。
 
 1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。
 1. **[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを *TestTrips.cs* に変更します。 次に、**[追加]** を選択します。
@@ -280,7 +283,7 @@ private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> m
 
 プログラムを実行し、テスト ケースに対して予測されたタクシー運賃を確認します。
 
-おめでとうございます!  これで、タクシー旅行運賃を予測する機械学習モデルが正常に構築され、その正確度が評価され、このモデルを使用した予測が行われました。 このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) リポジトリで確認できます。
+おめでとうございます!  これで、タクシー旅行運賃を予測する機械学習モデルが正常に構築され、その正確度が評価され、このモデルを使用した予測が行われました。 このチュートリアルのソース コードは、[dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) GitHub リポジトリで確認できます。
 
 ## <a name="next-steps"></a>次の手順
 

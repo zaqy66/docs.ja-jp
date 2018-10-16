@@ -4,12 +4,12 @@ description: C# の破棄のサポートについて説明します。破棄は�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
-ms.openlocfilehash: 9688ea596fa3d534c6c48d5874b04bb257d0dbce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d70067194ea9921f8af31fe436d04e2b780e1a73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219233"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524204"
 ---
 # <a name="discards---c-guide"></a>破棄 - C# ガイド
 
@@ -54,7 +54,7 @@ C# 7.0 では、破棄は次のコンテキストの割り当てでサポート�
 
 ## <a name="calls-to-methods-with-out-parameters"></a>out パラメーターを使用したメソッドの呼び出し
 
-`Deconstruct` メソッドを呼び出してユーザー定義型 (クラス、構造体、またはインターフェイスのインスタンス) を分解する場合、個々の `out` 引数の値を破棄できます。 また、out パラメーターを指定して任意のメソッドを呼び出すときに、`out` 引数の値を破棄することもできます。 
+`Deconstruct` メソッドを呼び出してユーザー定義型 (クラス、構造体、またはインターフェイスのインスタンス) を分解する場合、個々の `out` 引数の値を破棄できます。 また、out パラメーターを指定して任意のメソッドを呼び出すときに、`out` 引数の値を破棄することもできます。
 
 次の例では、[DateTime.TryParse(String, out DateTime)](<xref:System.DateTime.TryParse(System.String,System.DateTime@)>) メソッドを呼び出して、現在のカルチャで日付の文字列表現が有効かどうかを判断します。 この例では、日付文字列の検証のみが目的で、解析して日付を抽出する処理は行わないため、メソッドの `out` 引数は破棄されます。
 
@@ -71,16 +71,17 @@ C# 7.0 では、破棄は次のコンテキストの割り当てでサポート�
 - 意図した破棄の値を割り当てることで、スコープ内の `_` 変数の値が誤って変更される。 例:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
- 
+
 - タイプ セーフに違反するコンパイラ エラーが発生する。 例:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
- 
-- コンパイラ エラー CS0136 "ローカルまたはパラメーター '_' は、その名前が外側のローカルのスコープでローカルやパラメーターの定義に使用されているため、このスコープでは宣言できません" が発生する。 例:
+
+- コンパイラ エラー CS0136 "ローカルまたはパラメーター '\_' は、その名前が外側のローカルのスコープでローカルやパラメーターの定義に使用されているため、このスコープでは宣言できません" が発生する。 例:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
 ## <a name="see-also"></a>関連項目
-[タプルとその他の型の分解](deconstruct.md)   
-[`is` キーワード](language-reference/keywords/is.md)   
-[`switch` キーワード](language-reference/keywords/switch.md)   
+
+- [タプルおよびその他の型の分解](deconstruct.md)
+- [`is` キーワード](language-reference/keywords/is.md)
+- [`switch` キーワード](language-reference/keywords/switch.md)

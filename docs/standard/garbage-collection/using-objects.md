@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c586c725a385029db80763ba13915be79c6cd7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70955d496f5cf9e3bf44b9bc03a054d1c96efe98
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576325"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260020"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>IDisposable を実装するオブジェクトの使用
 
-共通言語ランタイムのガベージ コレクターは、アンマネージ オブジェクトによって使用されているメモリを解放しますが、アンマネージ リソースを使用する型は、これらのアンマネージ リソースに割り当てられたメモリが解放されるように <xref:System.IDisposable> インターフェイスを実装しています。 <xref:System.IDisposable> を実装するオブジェクトを使い終わったら、オブジェクトの <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> の実装を呼び出す必要があります。 2 つの方法のいずれかでこれを行うことができます。  
+共通言語ランタイムのガベージ コレクターは、アンマネージド オブジェクトによって使用されているメモリを解放しますが、アンマネージド リソースを使用する型は、これらのアンマネージド リソースに割り当てられたメモリが解放されるように <xref:System.IDisposable> インターフェイスを実装しています。 <xref:System.IDisposable> を実装するオブジェクトを使い終わったら、オブジェクトの <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> の実装を呼び出す必要があります。 2 つの方法のいずれかでこれを行うことができます。  
   
 * C# の `using` ステートメントまたは Visual Basic の `Using` ステートメントを使用します。  
   
@@ -62,6 +62,6 @@ C# の `using` ステートメントおよび Visual Basic の `Using` ステー
   
 ## <a name="see-also"></a>関連項目
 
-[アンマネージ リソースのクリーンアップ](../../../docs/standard/garbage-collection/unmanaged.md)   
-[using ステートメント (C# リファレンス)](~/docs/csharp/language-reference/keywords/using-statement.md)   
-[Using ステートメント (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+* [アンマネージ リソースのクリーンアップ](../../../docs/standard/garbage-collection/unmanaged.md)   
+* [using ステートメント (C# リファレンス)](~/docs/csharp/language-reference/keywords/using-statement.md)   
+* [Using ステートメント (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
