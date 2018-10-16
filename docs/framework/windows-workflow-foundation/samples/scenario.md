@@ -1,35 +1,24 @@
 ---
-title: Scenario1
+title: Windows ワークフロー シナリオ
 ms.date: 03/30/2017
 ms.assetid: cb678fda-79aa-4495-833b-ef570539d4c3
-ms.openlocfilehash: a73069c236e743b9790908a2877040efd6388337
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e4d4023ee18305b843c62785fa454bb1cbe2787
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514609"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49337637"
 ---
 # <a name="scenario"></a>シナリオ
-このセクションには、Windows Workflow Foundation (WF) シナリオの例が含まれています。  
+
+このセクションでは、Windows Workflow Foundation (WF) のシナリオの例を示します。  
   
-## <a name="in-this-section"></a>このセクションの内容  
- [アクティビティ ライブラリ](../../../../docs/framework/windows-workflow-foundation/samples/activity-library.md)  
- ビルトイン アクティビティ ライブラリを使用するシナリオを示すサンプルが含まれています。  
+## <a name="in-this-section"></a>このセクションの内容
+
+[アクティビティ ライブラリ](activity-library.md)のビルトイン アクティビティ ライブラリを使用してシナリオを示すサンプルが含まれています。  
   
- [サービス](../../../../docs/framework/windows-workflow-foundation/samples/services.md)  
- ワークフロー サービスを使用するシナリオを示すサンプルが含まれています。  
+[サービス](accessing-operationcontext.md)-ワークフロー サービスのアクティビティを使用してシナリオを示すサンプルが含まれています。  
   
- [トランザクション](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
- トランザクションを使用するシナリオを示すサンプルが含まれています。  
+[WPF と WF の統合を XAML で](wpf-and-wf-integration-in-xaml.md)-単一の XAML ドキュメントで Windows Presentation Foundation (WPF) および Windows Workflow Foundation (WF) の機能を使用するアプリケーションを作成する方法を示します。 これを行うには、サンプルは、Windows Workflow Foundation (WF) と XAML 機能拡張を使用します。  
   
- [自動確認パターン](../../../../docs/framework/windows-workflow-foundation/samples/auto-confirm-pattern.md)  
- カスタム `AutoConfirmScope` アクティビティを示す 3 つのシナリオで構成されます。  
-  
- [FlowChart と Pick の組み合わせを使用する StateMachine シナリオ](../../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
- <xref:System.Activities.Statements.Flowchart> アクティビティと <xref:System.Activities.Statements.Pick> アクティビティを組み合わせて簡単なストップウォッチ シナリオを実装する方法を示します。  
-  
- [XAML での WPF と WF の統合](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- 1 つの XAML ドキュメントで Windows Presentation Foundation (WPF) および Windows Workflow Foundation (WF) 機能を使用するアプリケーションを作成する方法を示します。 これを行うには、サンプルは、Windows Workflow Foundation (WF) および XAML 機能拡張を使用します。  
-  
- [External RuleSet Toolkit](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
- データベースで RuleSet を管理および編集し、実行時にそれらの RuleSet にワークフローからアクセスする方法を示します。
+[External Ruleset Toolkit](external-ruleset-toolkit.md) - 管理およびデータベースで Ruleset を編集する方法について説明し、それらの Ruleset を実行時にワークフローからアクセスします。

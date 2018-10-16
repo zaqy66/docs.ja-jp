@@ -1,26 +1,27 @@
 ---
 title: ADO.NET での接続文字列
-ms.date: 03/30/2017
+ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1e6e2b6870195c99279639e1f4576a30b7126d4d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583696"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347943"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET での接続文字列
-.NET Framework 2.0 では、接続文字列を扱う新しい機能が導入されました。接続文字列ビルダー クラスに追加された新しいキーワードもその 1 つであり、有効な接続文字列を実行時に簡単に作成できるようになっています。  
-  
-接続文字列には、データ プロバイダーからデータ ソースにパラメーターとして渡す初期化情報が含まれています。 接続文字列は接続を開くときに解析され、その構文はデータ プロバイダーによって異なります。 構文エラーの場合はランタイム例外が生成されますが、その他のエラーは、データ ソースが接続情報を受け取った後でのみ発生します。 いったん接続文字列が検証されると、接続文字列に指定されたオプションがデータ ソースによって適用されて接続が開かれます。
-  
-接続文字列の形式は、キーと値パラメーターのペアをセミコロンで区切ったリストです。
+
+接続文字列には、データ プロバイダーからデータ ソースにパラメーターとして渡す初期化情報が含まれています。 データ プロバイダーの値として、接続文字列を受け取る、<xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType>プロパティ。 プロバイダーは、接続文字列を解析し、により、構文が正しいことと、キーワードがサポートされていること。 次に、<xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType>メソッドは、データ ソースに解析された接続パラメーターを渡します。 データ ソースは、さらに検証を実行し、接続を確立します。
+
+## <a name="connection-string-syntax"></a>接続文字列の構文
+
+接続文字列は、パラメーターのキー/値ペアのセミコロンで区切られた一覧を示します。
   
     keyword1=value; keyword2=value;
   
-キーワードは区別されません。 値、ただし、可能性があります、データ ソースによって、大文字小文字が区別されます。 キーワードと値の両方を含めることができます[空白文字](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)先頭および末尾の空白はキーワードで無視され、引用符は、値。
+キーワードは区別されません。 値、ただし、可能性があります、データ ソースによって、大文字小文字が区別されます。 キーワードと値の両方を含めることができます[空白文字](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)します。 先頭と末尾の空白がキーワードで無視され、引用符の値。
 
-値には、セミコロンが含まれている場合[Unicode コントロール文字](https://en.wikipedia.org/wiki/Unicode_control_characters)、先頭または末尾の空白を囲む必要があります単一引用符または二重引用符でなど。
+値には、セミコロンが含まれている場合[Unicode コントロール文字](https://en.wikipedia.org/wiki/Unicode_control_characters)、先頭または末尾の空白、単一引用符または二重引用符で囲む必要がありますか。 例えば:
 
     Keyword=" whitespace  ";
     Keyword='special;character';
@@ -37,10 +38,12 @@ ms.locfileid: "48583696"
 
 後者の例の値は、各値は、[次へ] のセミコロンまたは文字列の末尾まで読み取ることが、ため`a=b=c`、最後のセミコロンは省略可能です。
 
-有効な接続文字列の構文はプロバイダーによって異なり、ODBC のような初期の API から長年にわたって進化しています。 .NET Framework Data Provider for SQL Server (SqlClient) には、古い構文の要素が多数組み込まれており、一般的に、共通の接続文字列の構文に対しては柔軟性があります。 多くの場合、接続文字列の構文要素には同等として扱われる有効なシノニムが存在しますが、構文やスペルの誤りによって問題が生じる場合もあります。 たとえば、"`Integrated Security=true`" は有効ですが、"`IntegratedSecurity=true`" ではエラーが発生します。 また、ユーザー入力を基にして接続文字列を実行時に構築する場合、入力された文字列を検証しないと、文字列のインジェクション攻撃を招き、データ ソースのセキュリティが脅かされる可能性があります。
-  
-こうした問題に対処するため、ADO.NET 2.0 では、各 .NET Framework データ プロバイダー用の新しい接続文字列ビルダーが導入されました。 キーワードがプロパティとして公開され、接続文字列をデータ ソースに送信する前に、その構文を検証できます。
-  
+すべての接続文字列は、上記で説明した同じ基本的な構文を共有します。 認識されているキーワードのセットは、ただしは、プロバイダーに依存しなど、以前の Api から長年にわたって進化してきた*ODBC*します。 *.NET Framework*用データ プロバイダーの*SQL Server* (`SqlClient`) 従来の Api から多くのキーワードをサポートしていますが、一般より柔軟な一般的な接続文字列の多くのシノニムを受け入れる、キーワード。
+
+入力ミス エラーが発生することができます。 たとえば、`Integrated Security=true`が有効では`IntegratedSecurity=true`エラーが発生します。
+
+未検証のユーザー入力からの実行時に手動で構築された接続文字列は、文字列のインジェクション攻撃に対して脆弱なし、データ ソースでセキュリティを損ないます。 これらの問題に対処する*ADO.NET* 2.0 で[接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)各 *.NET Framework*データ プロバイダー。 これらの接続文字列ビルダーは、厳密に型指定されたプロパティとしてパラメーターを公開し、データ ソースに送信される前に、接続文字列を検証すること。
+
 ## <a name="in-this-section"></a>このセクションの内容  
  [接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  `ConnectionStringBuilder` クラスを使用して、有効な接続文字列を実行時に作成する方法について説明します。

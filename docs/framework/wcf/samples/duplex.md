@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 54b941541ae0da4900608e61f08f4ed99c9ea472
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 45a5584a082c4b274614b8fd55be8be4b87945b3
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969981"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347787"
 ---
 # <a name="duplex"></a>二重
 双方向サンプルでは、双方向コントラクトを定義して実装する方法を示します。 双方向通信は、クライアントがサービスとのセッションを確立し、サービスからクライアントにメッセージを返信できるチャネルがサービスに提供されると発生します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。 双方向コントラクトは、クライアントからサービスへのプライマリ インターフェイスとサービスからクライアントへのコールバック インターフェイスという 2 つのインターフェイスのペアとして定義されます。 このサンプルでは、`ICalculatorDuplex` インターフェイスを使用することにより、クライアントは算術演算を実行し、セッション経由で結果を計算できます。 サービスは、`ICalculatorDuplexCallback` インターフェイスで結果を返します。 コンテキストを確立して、クライアントとサービスの間で送信される一連のメッセージを相互に関連付ける必要があるため、二重のコントラクトにはセッションが必要です。  
@@ -19,7 +19,7 @@ ms.locfileid: "45969981"
   
  この例では、クライアントはコンソール アプリケーション (.exe) であり、サービスはインターネット インフォメーション サービス (IIS) によってホストされます。 双方向コントラクトは、次のように定義されます。  
   
-```  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required,  
                  CallbackContract=typeof(ICalculatorDuplexCallback))]  
 public interface ICalculatorDuplex  
@@ -47,7 +47,7 @@ public interface ICalculatorDuplexCallback
   
  `CalculatorService` クラスは、プライマリ `ICalculatorDuplex` インターフェイスを実装します。 このサービスは <xref:System.ServiceModel.InstanceContextMode.PerSession> インスタンス モードを使用して、各セッションの結果を保持します。 クライアントへのコールバック チャネルへのアクセスには、`Callback` というプライベート プロパティを使用します。 サービスはこのコールバックを使用し、コールバック インターフェイスを介してメッセージをクライアントに返信します。  
   
-```  
+```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
 public class CalculatorService : ICalculatorDuplex  
 {  
@@ -71,7 +71,9 @@ public class CalculatorService : ICalculatorDuplex
         equation += " + " + n.ToString();  
         Callback.Result(result);  
     }  
-    ...  
+    
+    //...  
+    
     ICalculatorDuplexCallback Callback  
     {  
         get  
@@ -84,7 +86,7 @@ public class CalculatorService : ICalculatorDuplex
   
  クライアントは、サービスからのメッセージを受信するために、双方向コントラクトのコールバック インターフェイスを実装するクラスを提供する必要があります。 このサンプルでは、`CallbackHandler` クラスは `ICalculatorDuplexCallback` インターフェイスを実装するように定義されています。  
   
-```  
+```csharp 
 public class CallbackHandler : ICalculatorDuplexCallback  
 {  
    public void Result(double result)  
@@ -101,7 +103,7 @@ public class CallbackHandler : ICalculatorDuplexCallback
   
  双方向コントラクト用に生成されるプロキシは、コンストラクト時に <xref:System.ServiceModel.InstanceContext> が提供される必要があります。 この <xref:System.ServiceModel.InstanceContext> がコールバック インターフェイスを実装するオブジェクトのサイトとして使用され、サービスから返信されるメッセージを処理します。 <xref:System.ServiceModel.InstanceContext> は、`CallbackHandler` クラスのインスタンスを使用して構築されます。 このオブジェクトは、コールバック インターフェイスでサービスからクライアントに送信されるメッセージを処理します。  
   
-```  
+```csharp
 // Construct InstanceContext to handle messages on callback interface.  
 InstanceContext instanceContext = new InstanceContext(new CallbackHandler());  
   
@@ -172,14 +174,14 @@ client.Close();
   
     ```xml  
     <client>  
-    <endpoint name = ""  
-    address="http://service_machine_name/servicemodelsamples/service.svc"  
-    ... />  
+        <endpoint name = ""  
+        address="http://service_machine_name/servicemodelsamples/service.svc"  
+        ... />  
     </client>  
     ...  
     <wsDualHttpBinding>  
-    <binding name="DuplexBinding" clientBaseAddress="http://client_machine_name:8000/myClient/">  
-    </binding>  
+        <binding name="DuplexBinding" clientBaseAddress="http://client_machine_name:8000/myClient/">  
+        </binding>  
     </wsDualHttpBinding>  
     ```  
   

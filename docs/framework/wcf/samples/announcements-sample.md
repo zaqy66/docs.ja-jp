@@ -2,12 +2,12 @@
 title: アナウンスのサンプル
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d03f22b7dd4d9886151e61a2a846f2dc64e661c3
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865723"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347516"
 ---
 # <a name="announcements-sample"></a>アナウンスのサンプル
 このサンプルでは、探索機能のアナウンス機能を使用する方法を示します。 アナウンス機能を使用すると、サービスに関するメタデータを含むアナウンス メッセージをサービスから送信できます。 既定では、サービスが開始されたときに Hello アナウンスが送信され、サービスがシャットダウンされたときに Bye アナウンスが送信されます。 これらのアナウンスは、マルチキャストすることも、Point-to-Point 送信することもできます。 このサンプルは、2 つのプロジェクト (サービスとクライアント) で構成されます。  
@@ -15,7 +15,7 @@ ms.locfileid: "43865723"
 ## <a name="service"></a>サービス  
  このプロジェクトには、自己ホスト型の電卓サービスが含まれています。 `Main` メソッドでは、サービス ホストが作成され、それにサービス エンドポイントが追加されます。 次に、<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> が作成されます。 アナウンスを有効にする場合は、アナウンス エンドポイントを <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> に追加する必要があります。 この場合、UDP マルチキャストを使用して、標準エンドポイントをアナウンス エンドポイントとして追加します。 これにより、既知の UDP アドレスからアナウンスがブロードキャストされます。  
   
-```  
+```csharp
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());  
   
 // Create a ServiceHost for the CalculatorService type.  
@@ -39,7 +39,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 ## <a name="client"></a>クライアント  
  このプロジェクトでは、クライアントが <xref:System.ServiceModel.Discovery.AnnouncementService> をホストすることに注意してください。 また、2 つのデリゲートがイベントに登録されます。 これらのイベントにより、オンラインおよびオフラインのアナウンスを受信したときのクライアントの処理が決定されます。  
   
-```  
+```csharp
 // Create an AnnouncementService instance  
 AnnouncementService announcementService = new AnnouncementService();  
   
@@ -50,7 +50,7 @@ announcementService.OfflineAnnouncementReceived += OnOfflineEvent;
   
  `OnOnlineEvent` メソッドと `OnOfflineEvent` メソッドはそれぞれ、Hello アナウンス メッセージと Bye アナウンス メッセージを処理します。  
   
-```  
+```csharp
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)  
 {  
     Console.WriteLine();              

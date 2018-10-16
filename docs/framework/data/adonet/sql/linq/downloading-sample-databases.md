@@ -1,56 +1,56 @@
 ---
-title: サンプル データベースのダウンロード
-ms.date: 03/30/2017
+title: ADO.NET コード サンプルについては、サンプル データベースを取得します。
+description: ADO.NET のドキュメントと SQL Server および管理ツールのコード サンプルで使用されるサンプル データベースをダウンロードします。
+ms.date: 10/12/2018
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 75ae1895d683b669f51b33130fc2f47010e39814
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585455"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347517"
 ---
-# <a name="downloading-sample-databases"></a>サンプル データベースのダウンロード
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のドキュメントに収録されている多数のサンプルとチュートリアルでは、Northwind サンプル データベースと SQL Server Express Edition が使用されています。 これらの製品は、Microsoft のダウンロード サイトから無料でダウンロードできます。  
+# <a name="get-the-sample-databases-for-adonet-code-samples"></a>ADO.NET コード サンプルについては、サンプル データベースを取得します。
+
+さまざまなサンプルおよびチュートリアルで、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメントは、サンプル データベースと SQL Server Express を使用します。 これらの製品を無料では、Microsoft からダウンロードできます。
+
+## <a name="get-the-adventureworks-sample-database"></a>AdventureWorks サンプル データベースします。
+
+次の GitHub リポジトリから AdventureWorks サンプル データベースをダウンロードします。
+
+[AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+
+データベースのバックアップのいずれかをダウンロードした後 (\*.bak) ファイル、SQL Server のインスタンスに SQL Server Management Studio (SSMS) を使用して、バックアップを復元します。 参照してください[SQL Server Management Studio を入手する](#get_ssms)します。
+
+## <a name="get-the-northwind-sample-database"></a>Northwind サンプル データベースします。
+
+Microsoft ダウンロード センターの次のページからは、Northwind サンプル データベースをダウンロードします。
+
+[Northwind および Pubs サンプル データベース](https://go.microsoft.com/fwlink?linkid=64296)
+
+ファイルがダウンロードされた後は、データベースとスクリプトを抽出するファイルをダブルクリックします。 フォルダーに既定では、ファイルがインストールされている`<drive>:\SQL Server 2000 Sample Databases`します。
+
+Northwind データベースを使用するには、次のいずれかを行う必要があります。
+
+- SQL Server のインスタンス上のデータベースを再作成を実行して、`instnwnd.sql`インストール フォルダーにスクリプト ファイル。
+
+- アタッチ、 `northwnd.mdf` 、対応するファイル`*.ldf`SQL Server のインスタンスにログ ファイル。
+
+## <a name="get_sql"></a> SQL Server Express の入手します。
+
+SQL Server Express は、アプリケーションで再配布する SQL Server の無料のエントリー エディションです。 次のページから SQL Server Express をダウンロードします。
   
-## <a name="downloading-the-northwind-database"></a>Northwind データベースのダウンロード  
+[SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
+
+使用している場合[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)、Community edition と Professional 以上のエディションに SQL Server Express LocalDB が含まれます。  
+
+## <a name="get_ssms"></a> SQL Server Management Studio を入手します。
+表示またはダウンロードしたデータベースを変更する場合は、SQL Server Management Studio (SSMS) を使用することができます。 次のページから SSMS をダウンロードします。
+
+[SQL Server Management Studio (SSMS) のダウンロードします。](/sql/ssms/download-sql-server-management-studio-ssms) 
+
+また、表示、Visual Studio 統合開発環境 (IDE) でデータベースを管理およびできます。 [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)からデータベースに接続する**SQL Server オブジェクト エクスプ ローラー**、データベースにデータ接続を作成または**サーバー エクスプ ローラー**します。 これらのエクスプ ローラー ウィンドウを開き、**ビュー**メニュー。
   
-#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a>SQL Server 用の Northwind サンプル データベースをダウンロードしてインストールするには  
-  
-1.  Internet Explorer を開始します。  
-  
-2.  移動して、 [Northwind および Pubs サンプル データベース](https://go.microsoft.com/fwlink?linkid=64296)Web サイト。  
-  
-3.  **[ダウンロード]** をクリックします。  
-  
-4.  **ファイルのダウンロード**ダイアログ ボックスで、**保存**します。  
-  
-5.  ファイルがダウンロードされたら、ダブルクリック、 **Nwind.exe**データベースをインストールするファイル。  
-  
-     既定では、データベースがインストールされている*ドライブ*: \SQL Server 2000 Sample Databases します。  
-  
-## <a name="downloading-sql-server-express-edition"></a>SQL Server Express Edition のダウンロード  
- SQL Server Express Edition は無料で入手でき、アプリケーションと共に再配布できます。 Visual Studio を使用している場合は、Pro 以上のエディションの SQL Server Express Edition が含まれます。  
-  
-#### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express Edition をダウンロードおよびインストールするには  
-  
-1.  Internet Explorer を開始します。  
-  
-2.  移動して、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink?linkid=74602) Web サイト。  
-  
-3.  キーワード ボックスに「 **SQL Server Express**します。  
-  
-4.  **[検索]** をクリックします。  
-  
-5.  [結果] ページで、リンクをクリックして、 **Microsoft SQL Server 2005 Express Edition**ページをダウンロードします。  
-  
-6.  Web サイトに記載されているインストールの指示に従います。  
-  
-## <a name="downloading-management-studio-express"></a>Management Studio Express のダウンロード  
- データベースにアクセスするにはダウンロードしたデータベースを変更する場合は、**サーバー エクスプ ローラー** Visual studio 統合開発環境 (IDE)、または Microsoft SQL Server Management Studio Express (SSMSE) を使用して、.  
-  
-#### <a name="to-download-management-studio-express"></a>Management Studio Express をダウンロードするには  
-  
--   ある手順に従って、 [SSMSE サイト](https://go.microsoft.com/fwlink/?LinkId=95933)します。  
-  
-## <a name="see-also"></a>関連項目  
- [はじめに](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a>関連項目
+
+- [はじめに](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

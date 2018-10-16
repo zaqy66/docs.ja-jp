@@ -2,12 +2,12 @@
 title: WCF サービス付き ASMX クライアント
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 3465954cc937e1611634c8cd13a9264173e71817
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8b8ebebbcb2c95555605ebd1d8e164b8babb7e3e
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507200"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347839"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF サービス付き ASMX クライアント
 このサンプルでは、Windows Communication Foundation (WCF) を使用してサービスを作成し、ASMX クライアントなど、WCF 以外のクライアントからサービスにアクセスする方法を示します。  
@@ -19,7 +19,7 @@ ms.locfileid: "43507200"
   
  サービスは、次に示すコードで定義される `ICalculator` コントラクトを実装します。  
   
-```  
+```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
 public interface ICalculator  
 {  
@@ -83,7 +83,7 @@ wsdl /n:Microsoft.ServiceModel.Samples /o:generatedClient.cs /urlkey:CalculatorS
   
  クライアント実装は型指定のあるプロキシのインスタンスを構築し、サービスとの通信を開始します。  
   
-```  
+```csharp
 // Create a client to the CalculatorService.  
 using (CalculatorService client = new CalculatorService())  
 {  
@@ -120,7 +120,7 @@ Console.ReadLine();
   
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
-```  
+```console 
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

@@ -2,15 +2,15 @@
 title: WorkflowInvoker と WorkflowApplication の使用
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-ms.openlocfilehash: 6cbfca14eddeb82fc2d88b70703cae0fe59d63ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc315013ce50539eb4b72d26848a99164bb6b2d0
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519627"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347982"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>WorkflowInvoker と WorkflowApplication の使用
-Windows Workflow Foundation (WF) は、ワークフローのホスティングのいくつかのメソッドを提供します。 <xref:System.Activities.WorkflowInvoker> は、メソッド呼び出しのようにワークフローを呼び出す簡単な方法を提供し、永続化を使用しないワークフローのみに使用できます。 <xref:System.Activities.WorkflowApplication> は、ライフサイクル イベントの通知、実行制御、ブックマークの再開、および永続化を含むワークフローを実行するための豊富なモデルを提供します。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> は、メッセージング アクティビティをサポートし、主にワーク フロー サービスと一緒に使用されます。 このトピックでは、<xref:System.Activities.WorkflowInvoker> と <xref:System.Activities.WorkflowApplication> を使用したワークフロー ホスティングついて説明します。 ワークフローのホスティングの詳細については<xref:System.ServiceModel.Activities.WorkflowServiceHost>を参照してください[ワークフロー サービス](../../../docs/framework/wcf/feature-details/workflow-services.md)と[ワークフロー サービスの概要をホストしている](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)です。  
+Windows Workflow Foundation (WF) ワークフローのホスティングのいくつかのメソッドを提供します。 <xref:System.Activities.WorkflowInvoker> は、メソッド呼び出しのようにワークフローを呼び出す簡単な方法を提供し、永続化を使用しないワークフローのみに使用できます。 <xref:System.Activities.WorkflowApplication> は、ライフサイクル イベントの通知、実行制御、ブックマークの再開、および永続化を含むワークフローを実行するための豊富なモデルを提供します。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> は、メッセージング アクティビティをサポートし、主にワーク フロー サービスと一緒に使用されます。 このトピックでは、<xref:System.Activities.WorkflowInvoker> と <xref:System.Activities.WorkflowApplication> を使用したワークフロー ホスティングついて説明します。 使用したワークフロー ホスティングの詳細については<xref:System.ServiceModel.Activities.WorkflowServiceHost>を参照してください[ワークフロー サービス](../../../docs/framework/wcf/feature-details/workflow-services.md)と[ホスト ワークフロー サービスの概要](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)します。  
   
 ## <a name="using-workflowinvoker"></a>WorkflowInvoker の使用  
  <xref:System.Activities.WorkflowInvoker> は、メソッドを呼び出すようにワークフローを実行するモデルを提供します。 <xref:System.Activities.WorkflowInvoker> を使用してワークフローを呼び出すには、<xref:System.Activities.WorkflowInvoker.Invoke%2A> メソッドを呼び出し、呼び出すワークフローのワークフロー定義を渡します。 次の例では、<xref:System.Activities.Statements.WriteLine> を使用して <xref:System.Activities.WorkflowInvoker> アクティビティを呼び出します。  
@@ -24,7 +24,7 @@ Windows Workflow Foundation (WF) は、ワークフローのホスティング�
 > [!NOTE]
 >  <xref:System.TimeoutException> がスローされるのは、タイムアウト期間が経過してワークフローが実行中にアイドル状態になった場合だけです。 指定されたタイムアウト時間内には完了しないワークフローが正常に完了するのは、アイドル状態にならない場合です。  
   
- <xref:System.Activities.WorkflowInvoker> も非同期バージョンのメソッド呼び出しを提供します。 詳細については、<xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> および <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> を参照してください。  
+ <xref:System.Activities.WorkflowInvoker> も非同期バージョンのメソッド呼び出しを提供します。 詳細については、次のトピックを参照してください。 <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> および <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>ワークフローの入力引数の設定  
  ワークフローの入力引数にマップされ、引数名によってキー指定されている入力パラメーターの辞書を使用して、データをワークフローに渡すことができます。 次の例では、<xref:System.Activities.Statements.WriteLine> が呼び出され、その <xref:System.Activities.Statements.WriteLine.Text%2A> 引数の値は入力パラメーターの辞書を使用して指定されています。  
@@ -60,14 +60,14 @@ Windows Workflow Foundation (WF) は、ワークフローのホスティング�
  [!code-csharp[CFX_WorkflowApplicationExample#30](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>ワークフローの出力引数の取得  
- ワークフローが完了したら、<xref:System.Activities.WorkflowApplication.Completed%2A> 辞書にアクセスして、<xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> ハンドラーの出力引数を取得できます。 次の例では、<xref:System.Activities.WorkflowApplication> を使用してワークフローをホストしています。 1 つの <xref:System.Activities.WorkflowApplication> アクティビティで構成されるワークフロー定義を使用して `DiceRoll` インスタンスが構築されます。 `DiceRoll` アクティビティには、サイコロ振り操作の結果を表す 2 つの出力引数があります。 ワークフローが完了すると、この出力が <xref:System.Activities.WorkflowApplication.Completed%2A> ハンドラーで取得されます。  
+ ワークフローが完了したら、<xref:System.Activities.WorkflowApplication.Completed%2A> 辞書にアクセスして、<xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> ハンドラーの出力引数を取得できます。 次の例では、<xref:System.Activities.WorkflowApplication> を使用してワークフローをホストしています。 A<xref:System.Activities.WorkflowApplication>インスタンスは、1 つから成るワークフロー定義を使用して構築された`DiceRoll`アクティビティ。 `DiceRoll` アクティビティには、サイコロ振り操作の結果を表す 2 つの出力引数があります。 ワークフローが完了すると、この出力が <xref:System.Activities.WorkflowApplication.Completed%2A> ハンドラーで取得されます。  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
   
  [!code-csharp[CFX_WorkflowApplicationExample#21](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
->  <xref:System.Activities.WorkflowApplication> と <xref:System.Activities.WorkflowInvoker> は入力引数の辞書を取得し、`out` 引数の辞書を返します。 これらの辞書のパラメーター、プロパティ、および戻り値は `IDictionary<string, object>` 型です。 渡される辞書クラスの実際のインスタンスには、`IDictionary<string, object>` を実装した任意のクラスを使用できます。 これらの例では、`Dictionary<string, object>` が使用されています。 ディクショナリの詳細については、次を参照してください。<xref:System.Collections.Generic.IDictionary%602>と<xref:System.Collections.Generic.Dictionary%602>です。  
+>  <xref:System.Activities.WorkflowApplication> と <xref:System.Activities.WorkflowInvoker> は入力引数の辞書を取得し、`out` 引数の辞書を返します。 これらの辞書のパラメーター、プロパティ、および戻り値は `IDictionary<string, object>` 型です。 渡される辞書クラスの実際のインスタンスには、`IDictionary<string, object>` を実装した任意のクラスを使用できます。 これらの例では、`Dictionary<string, object>` が使用されています。 ディクショナリの詳細については、次を参照してください。<xref:System.Collections.Generic.IDictionary%602>と<xref:System.Collections.Generic.Dictionary%602>します。  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>ブックマークを使用した実行中のワークフローへのデータの受け渡し  
  ブックマークは、アクティビティが再開されるのを受動的に待機するメカニズムです。また、実行中のワークフロー インスタンスにデータを渡すメカニズムでもあります。 次の例に示すように、アクティビティがデータを待機している場合、<xref:System.Activities.Bookmark> を作成し、<xref:System.Activities.Bookmark> が再開されたときに呼び出されるコールバック メソッドを登録します。  
@@ -91,7 +91,7 @@ Windows Workflow Foundation (WF) は、ワークフローのホスティング�
 
 [!code-csharp[CFX_WorkflowApplicationExample#14](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#14)]  
   
- <xref:System.Activities.WorkflowApplicationIdleEventArgs> インスタンスの <xref:System.Activities.WorkflowApplication.Idle%2A> ハンドラーに渡される <xref:System.Activities.WorkflowApplication> を調べるコード サンプルを次に示します。 この例では、アイドル状態になるワークフローに、<xref:System.Activities.Bookmark> という名前で `EnterGuess` というアクティビティによって所有されている 1 つの `ReadInt` があります。 このコード例は、ログオフ ベース[する方法: ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)の一部では、[チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)です。 この例のコードを含めるようにこの手順の <xref:System.Activities.WorkflowApplication.Idle%2A> ハンドラーを変更すると、次の出力が表示されます。  
+ <xref:System.Activities.WorkflowApplicationIdleEventArgs> インスタンスの <xref:System.Activities.WorkflowApplication.Idle%2A> ハンドラーに渡される <xref:System.Activities.WorkflowApplication> を調べるコード サンプルを次に示します。 この例では、アイドル状態になるワークフローに、<xref:System.Activities.Bookmark> という名前で `EnterGuess` というアクティビティによって所有されている 1 つの `ReadInt` があります。 このコード例は、オフのベース[方法: ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)の一部では、[チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)します。 この例のコードを含めるようにこの手順の <xref:System.Activities.WorkflowApplication.Idle%2A> ハンドラーを変更すると、次の出力が表示されます。  
   
  **BookmarkName: EnterGuess - OwnerDisplayName: ReadInt**
  

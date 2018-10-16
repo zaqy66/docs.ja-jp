@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: cdc7e8501f7cf3f5cff4c29ca5b2d004ce7cd5c6
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 9f9b1b13c0a45d7a2e34a04b44f13be12947993f
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086181"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349031"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;追加&gt;connectionManagement (ネットワーク設定) の要素
 IP アドレスまたは DNS 名を接続管理リストに追加します。  
@@ -64,7 +64,7 @@ IP アドレスまたは DNS 名を接続管理リストに追加します。
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、サーバー www.contoso.com への 4 つの接続とその他のすべてのサーバーに 2 つの接続を使用するアプリケーションを構成します。  
+ 次の例では、サーバーに 4 つの接続を使用するアプリケーションの構成で`www.contoso.com`とその他のすべてのサーバーに 2 つの接続。  
   
 ```xml  
 <configuration>  

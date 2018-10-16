@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6a05abec36f97094adaac7572f6015b10874442
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862220"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347891"
 ---
 # <a name="option-infer-statement"></a>Option Infer ステートメント
 変数の宣言でローカル型推論を使用できるようにします。  
@@ -50,7 +50,7 @@ Option Infer がオンのときの IntelliSense
 Option Infer がオフのときの IntelliSense  
   
 > [!NOTE]
->  変数を `Object` として宣言すると、プログラムの実行中にランタイム型が変更される場合があります。 Visual Basic と呼ばれる操作を実行する*ボックス化*と*ボックス化解除*間の変換を`Object`と実行速度が低下は、値の型。 ボックス化とボックス化解除については、次を参照してください。、 [Visual Basic 言語仕様](../../../visual-basic/reference/language-specification/index.md)します。
+>  変数を `Object` として宣言すると、プログラムの実行中にランタイム型が変更される場合があります。 Visual Basic と呼ばれる操作を実行する*ボックス化*と*ボックス化解除*間の変換を`Object`と実行速度が低下は、値の型。 ボックス化とボックス化解除については、次を参照してください。、 [Visual Basic 言語仕様](~/_vblang/spec/conversions.md#value-type-conversions)します。
   
  型の推定は、プロシージャ レベルで適用され、クラス、構造体、モジュール、またはインターフェイスのプロシージャの外側には適用されません。  
   

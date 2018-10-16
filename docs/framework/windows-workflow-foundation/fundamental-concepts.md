@@ -2,12 +2,12 @@
 title: Windows Workflow の基本概念
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: c5306f8616086835373bc52bdd8195564441b8b7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ef2f327bdf2641648d266cecd0c6674762a95c18
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805994"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347826"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Windows Workflow の基本概念
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] のワークフロー開発で使用される概念は、一部の開発者には不慣れなことも考えられます。 ここでは、そのいくつかの概念について、内容と実装方法を説明します。  
@@ -52,7 +52,7 @@ ms.locfileid: "33805994"
  アクティビティは、<xref:System.Activities.ActivityContext> または <xref:System.Activities.NativeActivityContext> などの、適切な <xref:System.Activities.CodeActivityContext> 派生クラスを使用してワーク フローのランタイム環境にアクセスできます。 これらの要素がこのクラスを使用する目的は、引数や変数の解決や子アクティビティのスケジュール設定など、多岐にわたります。  
   
 ## <a name="services"></a>サービス  
- ワークフローは、メッセージング アクティビティを使用して疎結合サービスの実装およびアクセスを行う、無理のない方法です。 メッセージング アクティビティは WCF で構築された、ワークフローに出入りするデータを取得するために使用する主要なメカニズムです。 任意の種類のメッセージ交換パターンをモデル化するため、複数のメッセージング アクティビティを共に作成できます。 詳細については、次を参照してください。 を参照してください[メッセージング アクティビティ](../../../docs/framework/wcf/feature-details/messaging-activities.md)です。 ワークフロー サービスは <xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスを使用してホストされます。 詳細については、次を参照してください。[ワークフロー サービスの概要をホストしている](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)です。 ワークフロー サービスの詳細については、次を参照してください[ワークフロー サービス。](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ ワークフローは、メッセージング アクティビティを使用して疎結合サービスの実装およびアクセスを行う、無理のない方法です。 メッセージング アクティビティは WCF で構築された、ワークフローの内外にデータを取得するために使用する主要なメカニズムです。 任意の種類のメッセージ交換パターンをモデル化するため、複数のメッセージング アクティビティを共に作成できます。 詳細については、次を参照してください。[メッセージング アクティビティ](../../../docs/framework/wcf/feature-details/messaging-activities.md)します。 ワークフロー サービスは <xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスを使用してホストされます。 詳細については、次を参照してください。[ホスト ワークフロー サービスの概要](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)します。 ワークフロー サービスの詳細については、次を参照してください[ワークフロー サービス。](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>永続性、アンロード、実行時間の長いワークフロー  
  Windows Workflow は次の機能により、実行時間の長いリアクティブなプログラムの作成を簡素化しています。  

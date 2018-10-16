@@ -2,12 +2,12 @@
 title: WCF モニカーの COM クライアントと組み合わせての使用
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: f052504648d381d6fb19fb6db0ebb1dd1086ed3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1deeb125b94bcbab52db522b7304b972c05a28ed
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515720"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348784"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF モニカーの COM クライアントと組み合わせての使用
 このサンプルでは、Windows Communication Foundation (WCF) サービス モニカーを使用して、Web サービス アプリケーション (Office VBA) の Microsoft Office Visual Basic または Visual Basic 6.0 などの COM ベースの開発環境を統合する方法を示します。 このサンプルは、Windows スクリプト ホストのクライアント (.vbs)、サポート クライアント ライブラリ (.dll)、およびインターネット インフォメーション サービス (IIS) でホストされるサービス ライブラリ (.dll) で構成されています。 このサービスは電卓サービスの 1 つであり、COM クライアントはサービスの算術演算 (Add、Subtract、Multiply、および Divide) を呼び出します。 クライアント アクティビティは、メッセージ ボックス ウィンドウに表示されます。  
@@ -26,7 +26,7 @@ ms.locfileid: "43515720"
   
  サービスは、次に示すコード例で定義される `ICalculator` コントラクトを実装します。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -52,19 +52,19 @@ public interface ICalculator
 ## <a name="typed-contract"></a>型指定のあるコントラクト  
  型指定のあるコントラクトと共にモニカーを使用するには、属性が適切に設定されているサービス コントラクトの型を COM に登録する必要があります。 最初に、クライアントを使用して生成する必要があります、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 次のコマンドをクライアント ディレクトリでコマンド プロンプトから実行して、型指定のあるプロキシを生成します。  
   
-```  
+```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc /out:generatedClient.cs  
 ```  
   
  このクラスはプロジェクトに含まれている必要があり、そのプロジェクトは、COM から参照できる署名付きのアセンブリをコンパイル時に生成するように構成されている必要があります。 AssemblyInfo.cs ファイルには次の属性を含める必要があります。  
   
-```  
+```csharp
 [assembly: ComVisible(true)]  
 ```  
   
  プロジェクトをビルドしたら、次の例で示すように `regasm` を使用して、COM から参照できる型を登録します。  
   
-```  
+```console  
 regasm.exe /tlb:CalcProxy.tlb client.dll  
 ```  
   
@@ -79,7 +79,7 @@ gacutil.exe /i client.dll
   
  ComCalcClient.vbs クライアント アプリケーションは、サービス モニカーの構文を使用してサービスのアドレス、バインディング、およびコントラクトを指定し、`GetObject` 関数を使用してサービスのプロキシを構築します。  
   
-```  
+```vbscript
 Set typedServiceMoniker = GetObject(  
 "service4:address=http://localhost/ServiceModelSamples/service.svc, binding=wsHttpBinding,   
 contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")  
@@ -95,7 +95,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  サービス モニカーを使用してプロキシ インスタンスを構築しておくと、クライアント アプリケーションはプロキシでメソッドを呼び出すことができます。これにより、対応するサービス操作を呼び出すサービス モニカー インフラストラクチャは次のようになります。  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
@@ -107,7 +107,7 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
   
  ComCalcClient.vbs クライアント アプリケーションは、次のように `FileSystemObject` を使用してローカルに保存されている WSDL ファイルにアクセスし、その後 `GetObject` 関数を再度使用してサービスのプロキシを構築します。  
   
-```  
+```vbscript  
 ' Open the WSDL contract file and read it all into the wsdlContract string  
 Const ForReading = 1  
 Set objFSO = CreateObject("Scripting.FileSystemObject")  
@@ -140,7 +140,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  サービス モニカーを使用してプロキシ インスタンスを構築しておくと、クライアント アプリケーションはプロキシでメソッドを呼び出すことができます。これにより、対応するサービス操作を呼び出すサービス モニカー インフラストラクチャは次のようになります。  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
@@ -152,7 +152,7 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
   
  ComCalcClient.vbs クライアント アプリケーションは次のように `GetObject` 関数を再度使用して、サービスのプロキシを構築します。  
   
-```  
+```vbscript  
 ' Create a string for the service moniker specifying the address to retrieve the service metadata from  
 mexMonikerString = "service4:mexAddress='http://localhost/servicemodelsamples/service.svc/mex'"  
 mexMonikerString = mexMonikerString + ", address='http://localhost/ServiceModelSamples/service.svc'"  
@@ -175,7 +175,7 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  サービス モニカーを使用してプロキシ インスタンスを構築しておくと、クライアント アプリケーションはプロキシでメソッドを呼び出すことができます。これにより、対応するサービス操作を呼び出すサービス モニカー インフラストラクチャは次のようになります。  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
@@ -205,7 +205,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 2.  言語固有のフォルダーの下の \client にある ComCalcClient.vbs を実行します。 クライアント アクティビティがメッセージ ボックス ウィンドウに表示されます。  
   
-3.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
+3.  クライアントとサービス間で通信できない場合は、「 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)」を参照してください。  
   
 #### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
