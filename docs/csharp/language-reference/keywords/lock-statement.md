@@ -1,92 +1,80 @@
 ---
 title: lock ステートメント (C# リファレンス)
-description: 'lock キーワードはスレッド処理で使用されます。 '
-ms.date: 07/20/2015
+description: C# lock ステートメントを使用し、共有リソースへのスレッド アクセスを同期します
+ms.date: 08/28/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6ed46837482642dfd7e1a96cd120fc18023c5e9f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931194"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858357"
 ---
-# <a name="lock-statement-c-reference"></a><span data-ttu-id="346d8-103">lock ステートメント (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="346d8-103">lock statement (C# Reference)</span></span>
+# <a name="lock-statement-c-reference"></a><span data-ttu-id="681d6-103">lock ステートメント (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="681d6-103">lock statement (C# Reference)</span></span>
 
-<span data-ttu-id="346d8-104">`lock` キーワードは、ステートメント ブロックをクリティカル セクションとして指定します。このためには、特定のオブジェクトの相互排他ロックを取得し、ステートメントを実行して、ロックを解放します。</span><span class="sxs-lookup"><span data-stu-id="346d8-104">The `lock` keyword marks a statement block as a critical section by obtaining the mutual-exclusion lock for a given object, executing a statement, and then releasing the lock.</span></span> <span data-ttu-id="346d8-105">次の例では、`lock` ステートメントが使用されています。</span><span class="sxs-lookup"><span data-stu-id="346d8-105">The following example includes a `lock` statement.</span></span>
+<span data-ttu-id="681d6-104">`lock` ステートメントは、指定のオブジェクトに対する相互排他ロックを取得し、ステートメント ブロックを実行してからロックを解放します。</span><span class="sxs-lookup"><span data-stu-id="681d6-104">The `lock` statement obtains the mutual-exclusion lock for a given object, executes a statement block, and then releases the lock.</span></span> <span data-ttu-id="681d6-105">ロックが保持されている間、ロックを保持するスレッドはロックを再度取得し、解放できます。</span><span class="sxs-lookup"><span data-stu-id="681d6-105">While a lock is held, the thread that holds the lock can again obtain and release the lock.</span></span> <span data-ttu-id="681d6-106">他のスレッドはブロックされてロックを取得できず、ロックが解放されるまで待機します。</span><span class="sxs-lookup"><span data-stu-id="681d6-106">Any other thread is blocked from obtaining the lock and waits until the lock is released.</span></span>
+
+<span data-ttu-id="681d6-107">`lock` ステートメントの形式は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="681d6-107">The `lock` statement is of the form</span></span>
 
 ```csharp
-class Account
+lock (x)
 {
-    decimal balance;
-    private Object thisLock = new Object();
-
-    public void Withdraw(decimal amount)
-    {
-        lock (thisLock)
-        {
-            if (amount > balance)
-            {
-                throw new Exception("Insufficient funds");
-            }
-            balance -= amount;
-        }
-    }
+    // Your code...
 }
 ```
 
-<span data-ttu-id="346d8-106">詳細については、「[スレッドの同期](../../programming-guide/concepts/threading/thread-synchronization.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="346d8-106">For more information, see [Thread Synchronization](../../programming-guide/concepts/threading/thread-synchronization.md).</span></span>
+<span data-ttu-id="681d6-108">`x` は[参照型](reference-types.md)の式です。</span><span class="sxs-lookup"><span data-stu-id="681d6-108">where `x` is an expression of a [reference type](reference-types.md).</span></span> <span data-ttu-id="681d6-109">これは次にまったく等しくなります。</span><span class="sxs-lookup"><span data-stu-id="681d6-109">It's precisely equivalent to</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="346d8-107">コメント</span><span class="sxs-lookup"><span data-stu-id="346d8-107">Remarks</span></span>
+```csharp
+object __lockObj = x;
+bool __lockWasTaken = false;
+try
+{
+    System.Threading.Monitor.Enter(__lockObj, ref __lockWasTaken);
+    // Your code...
+}
+finally
+{
+    if (__lockWasTaken) System.Threading.Monitor.Exit(__lockObj);
+}
+```
 
-<span data-ttu-id="346d8-108">`lock` キーワードは、コードのクリティカル セクションに複数のスレッドが同時に進入することを防ぐ働きをします。</span><span class="sxs-lookup"><span data-stu-id="346d8-108">The `lock` keyword ensures that one thread does not enter a critical section of code while another thread is in the critical section.</span></span> <span data-ttu-id="346d8-109">これから実行しようとしているコードがロックされている場合、別のスレッドは、そのオブジェクトが解放されるまで待機 (ブロック) 状態になります。</span><span class="sxs-lookup"><span data-stu-id="346d8-109">If another thread tries to enter a locked code, it will wait, block, until the object is released.</span></span>
+<span data-ttu-id="681d6-110">このコードでは [try...finally](try-finally.md) ブロックが使用されているため、`lock` ステートメントの本文内で例外がスローされた場合でもロックは解放されます。</span><span class="sxs-lookup"><span data-stu-id="681d6-110">Since the code uses a [try...finally](try-finally.md) block, the lock is released even if an exception is thrown within the body of a `lock` statement.</span></span>
 
-<span data-ttu-id="346d8-110">スレッド処理については、「[スレッド処理](../../programming-guide/concepts/threading/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="346d8-110">The section [Threading](../../programming-guide/concepts/threading/index.md) discusses threading.</span></span>
+<span data-ttu-id="681d6-111">`lock` ステートメントの本体で [await](await.md) キーワードを使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="681d6-111">You can't use the [await](await.md) keyword in the body of a `lock` statement.</span></span>
 
-<span data-ttu-id="346d8-111">`lock` キーワードは、ブロックの先頭で <xref:System.Threading.Monitor.Enter%2A> を呼び出し、ブロックの末尾で <xref:System.Threading.Monitor.Exit%2A> を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="346d8-111">The `lock` keyword calls <xref:System.Threading.Monitor.Enter%2A> at the start of the block and <xref:System.Threading.Monitor.Exit%2A> at the end of the block.</span></span> <span data-ttu-id="346d8-112">`lock` ステートメントの実行を待っているスレッドを <xref:System.Threading.Thread.Interrupt%2A> で中断すると、<xref:System.Threading.ThreadInterruptedException> がスローされます。</span><span class="sxs-lookup"><span data-stu-id="346d8-112">A <xref:System.Threading.ThreadInterruptedException> is thrown if <xref:System.Threading.Thread.Interrupt%2A> interrupts a thread that is waiting to enter a `lock` statement.</span></span>
+## <a name="remarks"></a><span data-ttu-id="681d6-112">コメント</span><span class="sxs-lookup"><span data-stu-id="681d6-112">Remarks</span></span>
 
-<span data-ttu-id="346d8-113">一般に、`public` 型 (つまり、コードの制御が及ばないインスタンス) をロックすることは避けてください。</span><span class="sxs-lookup"><span data-stu-id="346d8-113">In general, avoid locking on a `public` type, or instances beyond your code's control.</span></span> <span data-ttu-id="346d8-114">`lock (this)`、`lock (typeof (MyType))`、`lock ("myLock")` は、このガイドラインに違反する代表的なコンストラクトです。</span><span class="sxs-lookup"><span data-stu-id="346d8-114">The common constructs `lock (this)`, `lock (typeof (MyType))`, and `lock ("myLock")` violate this guideline:</span></span>
+<span data-ttu-id="681d6-113">共有リソースへのスレッド アクセスを同期する場合、専用オブジェクト インスタンス (`private readonly object balanceLock = new object();` など) またはコードの関連のない部分によってロック オブジェクトとして使用される可能性がない別のインスタンスをロックします。</span><span class="sxs-lookup"><span data-stu-id="681d6-113">When you synchronize thread access to shared resource, lock on a dedicated object instance (for example, `private readonly object balanceLock = new object();`) or another instance that is unlikely to be used as a lock object by unrelated parts of the code.</span></span> <span data-ttu-id="681d6-114">異なる共有リソースに対して同じロック オブジェクト インスタンスを使用することは避けてください。デッドロックやロックの競合が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="681d6-114">Avoid using the same lock object instance for different shared resources, as it might result in deadlock or lock contention.</span></span> <span data-ttu-id="681d6-115">特に以下の使用は避けてください。</span><span class="sxs-lookup"><span data-stu-id="681d6-115">In particular, avoid using</span></span>
 
-- <span data-ttu-id="346d8-115">`lock (this)` は、このインスタンスにパブリックにアクセスできる場合に問題となります。</span><span class="sxs-lookup"><span data-stu-id="346d8-115">`lock (this)` is a problem if the instance can be accessed publicly.</span></span>
+- <span data-ttu-id="681d6-116">`this` (ロックとして呼び出し元に使用される可能性があります)。</span><span class="sxs-lookup"><span data-stu-id="681d6-116">`this` (might be used by the callers as a lock),</span></span>
+- <span data-ttu-id="681d6-117"><xref:System.Type> インスタンス ([typeof](typeof.md) 演算子またはリフレクションによって取得される可能性があります)。</span><span class="sxs-lookup"><span data-stu-id="681d6-117"><xref:System.Type> instances (might be obtained by the [typeof](typeof.md) operator or reflection),</span></span>
+- <span data-ttu-id="681d6-118">ロック オブジェクトとしての</span><span class="sxs-lookup"><span data-stu-id="681d6-118">string instances, including string literals,</span></span>
 
-- <span data-ttu-id="346d8-116">`lock (typeof (MyType))` は、`MyType` にパブリックにアクセスできる場合に問題となります。</span><span class="sxs-lookup"><span data-stu-id="346d8-116">`lock (typeof (MyType))` is a problem if `MyType` is publicly accessible.</span></span>
+<span data-ttu-id="681d6-119">文字列インスタンス (文字列リテラルなど)。</span><span class="sxs-lookup"><span data-stu-id="681d6-119">as lock objects.</span></span>
 
-- <span data-ttu-id="346d8-117">`lock("myLock")` が問題となる理由は、同じ文字列を使用するコードがプロセス内に他にも存在した場合、そのコードも同じロックを共有するためです。</span><span class="sxs-lookup"><span data-stu-id="346d8-117">`lock("myLock")` is a problem because any other code in the process using the same string, will share the same lock.</span></span>
+## <a name="example"></a><span data-ttu-id="681d6-120">例</span><span class="sxs-lookup"><span data-stu-id="681d6-120">Example</span></span>
 
-<span data-ttu-id="346d8-118">`private` オブジェクトを定義してロックの適用対象を限定するか、`private static` オブジェクト変数を定義して、すべてのインスタンスに共通するデータを保護することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="346d8-118">Best practice is to define a `private` object to lock on, or a `private static` object variable to protect data common to all instances.</span></span>
+<span data-ttu-id="681d6-121">次の例では、専用 `balanceLock` インスタンスをロックすることでそのプライベート `balance` フィールドへのアクセスを同期する `Account` クラスが定義されます。</span><span class="sxs-lookup"><span data-stu-id="681d6-121">The following example defines an `Account` class that synchronizes access to its private `balance` field by locking on a dedicated `balanceLock` instance.</span></span> <span data-ttu-id="681d6-122">ロッキングに同じインスタンスを使用すると、2 つのスレッドが `Debit` または `Credit` メソッドを同時に呼び出すことによって `balance` フィールドを同時に更新することができなくなります。</span><span class="sxs-lookup"><span data-stu-id="681d6-122">Using the same instance for locking ensures that the `balance` field cannot be updated simultaneously by two threads attempting to call the `Debit` or `Credit` methods simultaneously.</span></span>
 
-<span data-ttu-id="346d8-119">`lock` ステートメントの本体で [await](await.md) キーワードを使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="346d8-119">You can't use the [await](await.md) keyword in the body of a `lock` statement.</span></span>
+[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
-## <a name="example---threads-without-locking"></a><span data-ttu-id="346d8-120">例: ロックを使用しないスレッド</span><span class="sxs-lookup"><span data-stu-id="346d8-120">Example - Threads without locking</span></span>
-
-<span data-ttu-id="346d8-121">次のサンプルでは、C# でロックされていないスレッドの簡単な使用例を示しています。</span><span class="sxs-lookup"><span data-stu-id="346d8-121">The following sample shows a simple use of threads without locking in C#:</span></span>
-
-[!code-csharp[csrefKeywordsFixedLock#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#5)]
-
-## <a name="example---threads-using-locking"></a><span data-ttu-id="346d8-122">例: ロックを使用するスレッド</span><span class="sxs-lookup"><span data-stu-id="346d8-122">Example - Threads using locking</span></span>
-
-<span data-ttu-id="346d8-123">次のサンプルでは、スレッドと `lock` を使用しています。</span><span class="sxs-lookup"><span data-stu-id="346d8-123">The following sample uses threads and `lock`.</span></span> <span data-ttu-id="346d8-124">`lock` ステートメントが存在する限り、このステートメント ブロックはクリティカル セクションとなり、`balance` が負の数になることはありません。</span><span class="sxs-lookup"><span data-stu-id="346d8-124">As long as the `lock` statement is present, the statement block is a critical section and `balance` will never become a negative number:</span></span>
-
-[!code-csharp[csrefKeywordsFixedLock#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#6)]
-
-## <a name="c-language-specification"></a><span data-ttu-id="346d8-125">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="346d8-125">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="681d6-123">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="681d6-123">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="346d8-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="346d8-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="681d6-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="681d6-124">See also</span></span>
 
-- <xref:System.Reflection.MethodImplAttributes>
-- <xref:System.Threading.Mutex>
-- <xref:System.Threading.Monitor>
-- [<span data-ttu-id="346d8-127">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="346d8-127">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="346d8-128">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="346d8-128">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="346d8-129">スレッド化</span><span class="sxs-lookup"><span data-stu-id="346d8-129">Threading</span></span>](../../programming-guide/concepts/threading/index.md)
-- [<span data-ttu-id="346d8-130">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="346d8-130">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="346d8-131">ステートメントのキーワード</span><span class="sxs-lookup"><span data-stu-id="346d8-131">Statement Keywords</span></span>](statement-keywords.md)
-- [<span data-ttu-id="346d8-132">インタロックされた操作</span><span class="sxs-lookup"><span data-stu-id="346d8-132">Interlocked Operations</span></span>](../../../standard/threading/interlocked-operations.md)
-- [<span data-ttu-id="346d8-133">AutoResetEvent</span><span class="sxs-lookup"><span data-stu-id="346d8-133">AutoResetEvent</span></span>](../../../standard/threading/autoresetevent.md)
-- [<span data-ttu-id="346d8-134">スレッドの同期</span><span class="sxs-lookup"><span data-stu-id="346d8-134">Thread Synchronization</span></span>](../../programming-guide/concepts/threading/thread-synchronization.md)
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.SpinLock?displayProperty=nameWithType>
+- <xref:System.Threading.Interlocked?displayProperty=nameWithType>
+- [<span data-ttu-id="681d6-125">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="681d6-125">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="681d6-126">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="681d6-126">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="681d6-127">ステートメントのキーワード</span><span class="sxs-lookup"><span data-stu-id="681d6-127">Statement Keywords</span></span>](statement-keywords.md)
+- [<span data-ttu-id="681d6-128">インタロックされた操作</span><span class="sxs-lookup"><span data-stu-id="681d6-128">Interlocked operations</span></span>](../../../standard/threading/interlocked-operations.md)
+- [<span data-ttu-id="681d6-129">同期プリミティブの概要</span><span class="sxs-lookup"><span data-stu-id="681d6-129">Overview of synchronization primitives</span></span>](../../../standard/threading/overview-of-synchronization-primitives.md)
