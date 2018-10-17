@@ -1,56 +1,56 @@
 ---
-title: サンプル データベースのダウンロード
-ms.date: 03/30/2017
+title: ADO.NET コード サンプルについては、サンプル データベースを取得します。
+description: ADO.NET のドキュメントと SQL Server および管理ツールのコード サンプルで使用されるサンプル データベースをダウンロードします。
+ms.date: 10/12/2018
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 75ae1895d683b669f51b33130fc2f47010e39814
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585455"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347517"
 ---
-# <a name="downloading-sample-databases"></a><span data-ttu-id="c776d-102">サンプル データベースのダウンロード</span><span class="sxs-lookup"><span data-stu-id="c776d-102">Downloading Sample Databases</span></span>
-<span data-ttu-id="c776d-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のドキュメントに収録されている多数のサンプルとチュートリアルでは、Northwind サンプル データベースと SQL Server Express Edition が使用されています。</span><span class="sxs-lookup"><span data-stu-id="c776d-103">A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use the Northwind sample database and SQL Server Express Edition.</span></span> <span data-ttu-id="c776d-104">これらの製品は、Microsoft のダウンロード サイトから無料でダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="c776d-104">You can download these products free of charge from the Microsoft download site.</span></span>  
+# <a name="get-the-sample-databases-for-adonet-code-samples"></a><span data-ttu-id="a60dd-103">ADO.NET コード サンプルについては、サンプル データベースを取得します。</span><span class="sxs-lookup"><span data-stu-id="a60dd-103">Get the sample databases for ADO.NET code samples</span></span>
+
+<span data-ttu-id="a60dd-104">さまざまなサンプルおよびチュートリアルで、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメントは、サンプル データベースと SQL Server Express を使用します。</span><span class="sxs-lookup"><span data-stu-id="a60dd-104">A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use sample databases and SQL Server Express.</span></span> <span data-ttu-id="a60dd-105">これらの製品を無料では、Microsoft からダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="a60dd-105">You can download these products free of charge from Microsoft.</span></span>
+
+## <a name="get-the-adventureworks-sample-database"></a><span data-ttu-id="a60dd-106">AdventureWorks サンプル データベースします。</span><span class="sxs-lookup"><span data-stu-id="a60dd-106">Get the AdventureWorks sample database</span></span>
+
+<span data-ttu-id="a60dd-107">次の GitHub リポジトリから AdventureWorks サンプル データベースをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="a60dd-107">Download the AdventureWorks sample database from the following GitHub repository:</span></span>
+
+[<span data-ttu-id="a60dd-108">AdventureWorks サンプル データベース</span><span class="sxs-lookup"><span data-stu-id="a60dd-108">AdventureWorks sample databases</span></span>](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+
+<span data-ttu-id="a60dd-109">データベースのバックアップのいずれかをダウンロードした後 (\*.bak) ファイル、SQL Server のインスタンスに SQL Server Management Studio (SSMS) を使用して、バックアップを復元します。</span><span class="sxs-lookup"><span data-stu-id="a60dd-109">After you download one of the database backup (\*.bak) files, restore the backup to an instance of SQL Server by using SQL Server Management Studio (SSMS).</span></span> <span data-ttu-id="a60dd-110">参照してください[SQL Server Management Studio を入手する](#get_ssms)します。</span><span class="sxs-lookup"><span data-stu-id="a60dd-110">See [Get SQL Server Management Studio](#get_ssms).</span></span>
+
+## <a name="get-the-northwind-sample-database"></a><span data-ttu-id="a60dd-111">Northwind サンプル データベースします。</span><span class="sxs-lookup"><span data-stu-id="a60dd-111">Get the Northwind sample database</span></span>
+
+<span data-ttu-id="a60dd-112">Microsoft ダウンロード センターの次のページからは、Northwind サンプル データベースをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="a60dd-112">Download the Northwind sample database from the following page in the Microsoft Download Center:</span></span>
+
+[<span data-ttu-id="a60dd-113">Northwind および Pubs サンプル データベース</span><span class="sxs-lookup"><span data-stu-id="a60dd-113">Northwind and Pubs Sample Databases</span></span>](https://go.microsoft.com/fwlink?linkid=64296)
+
+<span data-ttu-id="a60dd-114">ファイルがダウンロードされた後は、データベースとスクリプトを抽出するファイルをダブルクリックします。</span><span class="sxs-lookup"><span data-stu-id="a60dd-114">After the file has downloaded, double-click the file to extract the databases and scripts.</span></span> <span data-ttu-id="a60dd-115">フォルダーに既定では、ファイルがインストールされている`<drive>:\SQL Server 2000 Sample Databases`します。</span><span class="sxs-lookup"><span data-stu-id="a60dd-115">By default, the files are installed in the folder `<drive>:\SQL Server 2000 Sample Databases`.</span></span>
+
+<span data-ttu-id="a60dd-116">Northwind データベースを使用するには、次のいずれかを行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="a60dd-116">Before you can use the Northwind database, you have to do one of the following things:</span></span>
+
+- <span data-ttu-id="a60dd-117">SQL Server のインスタンス上のデータベースを再作成を実行して、`instnwnd.sql`インストール フォルダーにスクリプト ファイル。</span><span class="sxs-lookup"><span data-stu-id="a60dd-117">Recreate the database on an instance of SQL Server by running the `instnwnd.sql` script file in the installation folder.</span></span>
+
+- <span data-ttu-id="a60dd-118">アタッチ、 `northwnd.mdf` 、対応するファイル`*.ldf`SQL Server のインスタンスにログ ファイル。</span><span class="sxs-lookup"><span data-stu-id="a60dd-118">Attach the `northwnd.mdf` file with its corresponding `*.ldf` log file to an instance of SQL Server.</span></span>
+
+## <a name="get_sql"></a> <span data-ttu-id="a60dd-119">SQL Server Express の入手します。</span><span class="sxs-lookup"><span data-stu-id="a60dd-119">Get SQL Server Express</span></span>
+
+<span data-ttu-id="a60dd-120">SQL Server Express は、アプリケーションで再配布する SQL Server の無料のエントリー エディションです。</span><span class="sxs-lookup"><span data-stu-id="a60dd-120">SQL Server Express is a free, entry-level edition of SQL Server that you can redistribute with applications.</span></span> <span data-ttu-id="a60dd-121">次のページから SQL Server Express をダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="a60dd-121">Download SQL Server Express from the following page:</span></span>
   
-## <a name="downloading-the-northwind-database"></a><span data-ttu-id="c776d-105">Northwind データベースのダウンロード</span><span class="sxs-lookup"><span data-stu-id="c776d-105">Downloading the Northwind Database</span></span>  
+[<span data-ttu-id="a60dd-122">SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="a60dd-122">SQL Server Express Editions</span></span>](https://www.microsoft.com/sql-server/sql-server-editions-express)
+
+<span data-ttu-id="a60dd-123">使用している場合[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)、Community edition と Professional 以上のエディションに SQL Server Express LocalDB が含まれます。</span><span class="sxs-lookup"><span data-stu-id="a60dd-123">If you're using [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB is included in the Community edition as well as the Professional and higher editions.</span></span>  
+
+## <a name="get_ssms"></a> <span data-ttu-id="a60dd-124">SQL Server Management Studio を入手します。</span><span class="sxs-lookup"><span data-stu-id="a60dd-124">Get SQL Server Management Studio</span></span>
+<span data-ttu-id="a60dd-125">表示またはダウンロードしたデータベースを変更する場合は、SQL Server Management Studio (SSMS) を使用することができます。</span><span class="sxs-lookup"><span data-stu-id="a60dd-125">If you want to view or modify a database that you've downloaded, you can use SQL Server Management Studio (SSMS).</span></span> <span data-ttu-id="a60dd-126">次のページから SSMS をダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="a60dd-126">Download SSMS from the following page:</span></span>
+
+[<span data-ttu-id="a60dd-127">SQL Server Management Studio (SSMS) のダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="a60dd-127">Download SQL Server Management Studio (SSMS)</span></span>](/sql/ssms/download-sql-server-management-studio-ssms) 
+
+<span data-ttu-id="a60dd-128">また、表示、Visual Studio 統合開発環境 (IDE) でデータベースを管理およびできます。</span><span class="sxs-lookup"><span data-stu-id="a60dd-128">You can also view and manage databases in the Visual Studio integrated development environment (IDE).</span></span> <span data-ttu-id="a60dd-129">[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)からデータベースに接続する**SQL Server オブジェクト エクスプ ローラー**、データベースにデータ接続を作成または**サーバー エクスプ ローラー**します。</span><span class="sxs-lookup"><span data-stu-id="a60dd-129">In [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), connect to the database from **SQL Server Object Explorer**, or create a Data Connection to the database in **Server Explorer**.</span></span> <span data-ttu-id="a60dd-130">これらのエクスプ ローラー ウィンドウを開き、**ビュー**メニュー。</span><span class="sxs-lookup"><span data-stu-id="a60dd-130">Open these explorer panes from the **View** menu.</span></span>
   
-#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a><span data-ttu-id="c776d-106">SQL Server 用の Northwind サンプル データベースをダウンロードしてインストールするには</span><span class="sxs-lookup"><span data-stu-id="c776d-106">To download and install the Northwind sample database for SQL Server</span></span>  
-  
-1.  <span data-ttu-id="c776d-107">Internet Explorer を開始します。</span><span class="sxs-lookup"><span data-stu-id="c776d-107">Start Internet Explorer.</span></span>  
-  
-2.  <span data-ttu-id="c776d-108">移動して、 [Northwind および Pubs サンプル データベース](https://go.microsoft.com/fwlink?linkid=64296)Web サイト。</span><span class="sxs-lookup"><span data-stu-id="c776d-108">Go to the [Northwind and Pubs Sample Databases](https://go.microsoft.com/fwlink?linkid=64296) Web site.</span></span>  
-  
-3.  <span data-ttu-id="c776d-109">**[ダウンロード]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="c776d-109">Click **Download**.</span></span>  
-  
-4.  <span data-ttu-id="c776d-110">**ファイルのダウンロード**ダイアログ ボックスで、**保存**します。</span><span class="sxs-lookup"><span data-stu-id="c776d-110">In the **File Download** dialog box, select **Save**.</span></span>  
-  
-5.  <span data-ttu-id="c776d-111">ファイルがダウンロードされたら、ダブルクリック、 **Nwind.exe**データベースをインストールするファイル。</span><span class="sxs-lookup"><span data-stu-id="c776d-111">After the file has downloaded, double-click the **Nwind.exe** file to install the database.</span></span>  
-  
-     <span data-ttu-id="c776d-112">既定では、データベースがインストールされている*ドライブ*: \SQL Server 2000 Sample Databases します。</span><span class="sxs-lookup"><span data-stu-id="c776d-112">By default, the database is installed at *drive*:\SQL Server 2000 Sample Databases.</span></span>  
-  
-## <a name="downloading-sql-server-express-edition"></a><span data-ttu-id="c776d-113">SQL Server Express Edition のダウンロード</span><span class="sxs-lookup"><span data-stu-id="c776d-113">Downloading SQL Server Express Edition</span></span>  
- <span data-ttu-id="c776d-114">SQL Server Express Edition は無料で入手でき、アプリケーションと共に再配布できます。</span><span class="sxs-lookup"><span data-stu-id="c776d-114">SQL Server Express Edition is available without charge, and you can redistribute it with applications.</span></span> <span data-ttu-id="c776d-115">Visual Studio を使用している場合は、Pro 以上のエディションの SQL Server Express Edition が含まれます。</span><span class="sxs-lookup"><span data-stu-id="c776d-115">If you are using Visual Studio, SQL Server Express Edition is included in the Pro and greater editions.</span></span>  
-  
-#### <a name="to-download-and-install-sql-server-express-edition"></a><span data-ttu-id="c776d-116">SQL Server Express Edition をダウンロードおよびインストールするには</span><span class="sxs-lookup"><span data-stu-id="c776d-116">To download and install SQL Server Express Edition</span></span>  
-  
-1.  <span data-ttu-id="c776d-117">Internet Explorer を開始します。</span><span class="sxs-lookup"><span data-stu-id="c776d-117">Start Internet Explorer.</span></span>  
-  
-2.  <span data-ttu-id="c776d-118">移動して、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink?linkid=74602) Web サイト。</span><span class="sxs-lookup"><span data-stu-id="c776d-118">Go to the [Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web site.</span></span>  
-  
-3.  <span data-ttu-id="c776d-119">キーワード ボックスに「 **SQL Server Express**します。</span><span class="sxs-lookup"><span data-stu-id="c776d-119">In the keywords box, type **SQL Server Express**.</span></span>  
-  
-4.  <span data-ttu-id="c776d-120">**[検索]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="c776d-120">Click **Go**.</span></span>  
-  
-5.  <span data-ttu-id="c776d-121">[結果] ページで、リンクをクリックして、 **Microsoft SQL Server 2005 Express Edition**ページをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="c776d-121">On the results page, click the link to the **Microsoft SQL Server 2005 Express Edition** download page.</span></span>  
-  
-6.  <span data-ttu-id="c776d-122">Web サイトに記載されているインストールの指示に従います。</span><span class="sxs-lookup"><span data-stu-id="c776d-122">Follow the installation instructions on the Web site.</span></span>  
-  
-## <a name="downloading-management-studio-express"></a><span data-ttu-id="c776d-123">Management Studio Express のダウンロード</span><span class="sxs-lookup"><span data-stu-id="c776d-123">Downloading Management Studio Express</span></span>  
- <span data-ttu-id="c776d-124">データベースにアクセスするにはダウンロードしたデータベースを変更する場合は、**サーバー エクスプ ローラー** Visual studio 統合開発環境 (IDE)、または Microsoft SQL Server Management Studio Express (SSMSE) を使用して、.</span><span class="sxs-lookup"><span data-stu-id="c776d-124">If you want to modify a database that you have downloaded, you can access the database from **Server Explorer** in the Visual Studio integrated development environment (IDE), or use Microsoft SQL Server Management Studio Express (SSMSE).</span></span>  
-  
-#### <a name="to-download-management-studio-express"></a><span data-ttu-id="c776d-125">Management Studio Express をダウンロードするには</span><span class="sxs-lookup"><span data-stu-id="c776d-125">To download Management Studio Express</span></span>  
-  
--   <span data-ttu-id="c776d-126">ある手順に従って、 [SSMSE サイト](https://go.microsoft.com/fwlink/?LinkId=95933)します。</span><span class="sxs-lookup"><span data-stu-id="c776d-126">Follow the instructions at the [SSMSE site](https://go.microsoft.com/fwlink/?LinkId=95933).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="c776d-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="c776d-127">See Also</span></span>  
- [<span data-ttu-id="c776d-128">はじめに</span><span class="sxs-lookup"><span data-stu-id="c776d-128">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a><span data-ttu-id="a60dd-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="a60dd-131">See also</span></span>
+
+- [<span data-ttu-id="a60dd-132">はじめに</span><span class="sxs-lookup"><span data-stu-id="a60dd-132">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
