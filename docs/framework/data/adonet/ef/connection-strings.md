@@ -1,32 +1,33 @@
 ---
-title: 接続文字列
-ms.date: 03/30/2017
+title: ADO.NET Entity Framework 内の接続文字列
+ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842179"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372487"
 ---
-# <a name="connection-strings"></a>接続文字列
+# <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET Entity Framework 内の接続文字列
 接続文字列には、データ プロバイダーからデータ ソースにパラメーターとして渡す初期化情報が含まれています。 接続文字列は接続を開くときに解析され、その構文はデータ プロバイダーによって異なります。 Entity Framework で使用される接続文字列には、Entity Framework のサポート基盤である ADO.NET データ プロバイダーへの接続に使用される情報が含まれています。 また、必要なモデル ファイルおよびマッピング ファイルに関する情報も含まれています。  
   
  接続文字列は、モデル メタデータおよびマッピング メタデータにアクセスしてデータ ソースに接続する際に EntityClient プロバイダーによって使用されます。 接続文字列へのアクセスや接続文字列の設定は、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> の <xref:System.Data.EntityClient.EntityConnection> プロパティを使用して行います。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用すると、接続文字列内のパラメーターの構築やこれらへのアクセスをプログラムで行えます。 詳細については、次を参照してください。[方法: EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。  
   
  [Entity Data Model ツール](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)アプリケーションの構成ファイルに格納されている接続文字列を生成します。 <xref:System.Data.Objects.ObjectContext> は、オブジェクト クエリの作成時に自動的にこの接続情報を取得します。 <xref:System.Data.EntityClient.EntityConnection> インスタンスで使用される <xref:System.Data.Objects.ObjectContext> には、<xref:System.Data.Objects.ObjectContext.Connection%2A> プロパティからアクセスできます。 詳細については、次を参照してください。[接続の管理とトランザクション](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)です。  
-  
+
+## <a name="connection-string-syntax"></a>接続文字列の構文
+
+接続文字列の一般的な構文については、次を参照してください[接続文字列の構文 |。ADO.NET の接続文字列](../connection-strings.md#connection-string-syntax)します。
+
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター  
- 接続文字列の形式は、キーと値パラメーターのペアをセミコロンで区切ったリストです。  
-  
- `keyword1=value; keyword2=value;`  
-  
- それぞれのキーワードと値の関連付けには、等号 (=) が使用されます。 キーワードの大文字と小文字は区別されません。また、キーと値のペア間のスペースは無視されます。 ただし、値の大文字と小文字を区別するかどうかはデータ ソースにより異なる場合があります。 値にセミコロン、単一引用符、または二重引用符が含まれている場合は、必ず二重引用符で囲む必要があります。 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> のキーワード値に有効な名前を次の表に示します。  
+
+<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> のキーワード値に有効な名前を次の表に示します。  
   
 |キーワード|説明|  
 |-------------|-----------------|  
 |`Provider`|`Name` キーワードが指定されていない場合に必要です。 基になるプロバイダーの <xref:System.Data.Common.DbProviderFactory> オブジェクトを取得するために使用されるプロバイダー名です。 この値は定数です。<br /><br /> `Name` キーワードがエンティティ接続文字列に含まれていない場合、`Provider` キーワードの空でない値が必要になります。 このキーワードは `Name` キーワードと同時に指定できません。|  
-|`Provider Connection String`|省略可能です。 基になるデータ ソースに渡される、プロバイダー固有の接続文字列を指定します。 この接続文字列は、データ プロバイダーの有効なキーワード/値ペアを使用して表されます。 無効な `Provider Connection String` がデータ ソースによって評価されると、ランタイム エラーが発生します。<br /><br /> このキーワードは `Name` キーワードと同時に指定できません。<br /><br /> `Provider Connection String` の値は、引用符で囲む必要があります。 次に例を示します。<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> 次に誤った例を示します。<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
+|`Provider Connection String`|省略可能です。 基になるデータ ソースに渡される、プロバイダー固有の接続文字列を指定します。 この接続文字列には、データ プロバイダーの有効なキーワード/値ペアが含まれています。 無効な `Provider Connection String` がデータ ソースによって評価されると、ランタイム エラーが発生します。<br /><br /> このキーワードは `Name` キーワードと同時に指定できません。<br /><br /> 一般的な構文に従って値をエスケープすることを確認[ADO.NET 接続文字列](../../../../../docs/framework/data/adonet/connection-strings.md)します。 次の接続文字列の例を検討してください:`Server=serverName; User ID = userID`します。 セミコロンが含まれているため、エスケープする必要があります。 二重引用符を含まないためには、エスケープを使用できます。<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|  
 |`Metadata`|`Name` キーワードが指定されていない場合に必要です。 メタデータとマッピング情報の検索対象となるディレクトリ、ファイル、およびリソースの場所をパイプで区切って指定したリストです。 次に例を示します。<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> パイプ区切り記号の両側の空白は無視されます。<br /><br /> このキーワードは `Name` キーワードと同時に指定できません。|  
 |`Name`|アプリケーションは、オプションで、必要なキーワード/値接続文字列値を提供する接続名をアプリケーション構成ファイル内で指定できます。 その場合は、接続文字列内に値を直接記述することはできません。 `Name` キーワードは、構成ファイル内で使用できません。<br /><br /> `Name` キーワードが接続文字列に含まれていない場合、Provider キーワードの空でない値が必要になります。<br /><br /> このキーワードは他のすべての接続文字列キーワードと同時に指定できません。|  
   

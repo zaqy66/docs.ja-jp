@@ -2,12 +2,12 @@
 title: '方法 : 企業内のエンドポイントをロックダウンする'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836920"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374158"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>方法 : 企業内のエンドポイントをロックダウンする
 大規模な企業では、多くの場合、企業のセキュリティ ポリシーに準拠してアプリケーションを開発する必要があります。 次のトピックでは、開発し、コンピューターにインストールされているすべての Windows Communication Foundation (WCF) クライアント アプリケーションの検証に使用できるクライアント エンドポイント検証コントロールをインストールする方法について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "48836920"
   
 1.  適切な機構を使用してエンドポイント検証をインストールします。 企業では、グループ ポリシーと Systems Management Server (SMS) を使用してインストールします。  
   
-2.  厳密な名前付きアセンブリを使用してグローバル アセンブリ キャッシュにインストール、 [Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](https://msdn.microsoft.com/library/ex0ss12c\(v=vs.110\).aspx)します。  
+2.  厳密な名前付きアセンブリを使用してグローバル アセンブリ キャッシュにインストール、 [Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)します。  
   
 3.  <xref:System.Configuration?displayProperty=nameWithType> 名前空間の型を使用して、次の処理を行います。  
   

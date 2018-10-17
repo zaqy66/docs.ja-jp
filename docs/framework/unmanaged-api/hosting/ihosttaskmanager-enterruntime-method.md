@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8625f893c30700a47cc2db7b960715f748ccb299
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 6de9c7ee6fb03917e9405193f27739f3f903012f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038729"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372136"
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>IHostTaskManager::EnterRuntime メソッド
 非管理対象のメソッドの呼び出しなど、プラットフォーム呼び出しメソッド、制御を返す実行共通言語ランタイム (CLR) をホストに通知します。  
@@ -61,7 +61,7 @@ HRESULT EnterRuntime ();
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
- [高度な COM 相互運用性](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [高度な COM 相互運用性](/previous-versions/dotnet/netframework-4.0/bd9cdfyx)  
  [方法: PInvoke を使用してマネージド コードからネイティブ DLL を呼び出す](/cpp/dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke)  
  [ICLRTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
  [ICLRTaskManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  

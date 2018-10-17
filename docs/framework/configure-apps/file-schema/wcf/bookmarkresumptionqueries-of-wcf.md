@@ -2,20 +2,22 @@
 title: WCF の &lt;bookmarkResumptionQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: 8a83f521e444838b6495221c00211710dd99ab6b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d2b3365f3793c114003bbd9b9da664448bbac243
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753041"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374450"
 ---
 # <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>WCF の &lt;bookmarkResumptionQueries&gt;
+
 ワークフロー インスタンス内のブックマークの再開を追跡するために使用する、クエリのコレクションを表します。 追跡参加要素がブックマーク再開レコードを定期受信するには、このクエリが必要です。  
   
- 追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。
   
- \<system.serviceModel>  
+\<system.serviceModel>  
 \<追跡 >  
+\<プロファイル >  
 \<trackingProfile>  
 \<ワークフロー >  
 \<bookmarkResumptionQueries >  
@@ -24,20 +26,32 @@ ms.locfileid: "32753041"
 ## <a name="syntax"></a>構文  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <bookmarkResumptionQueries>             <bookmarkResumptionQuery name="String" />          </bookmarkResumptionQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <profiles>
+    <trackingProfile name="Name">
+      <workflow>
+        <bookmarkResumptionQueries>
+          <bookmarkResumptionQuery name="String" />
+        </bookmarkResumptionQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
+</tracking>  
 ```
 
-## <a name="attributes-and-elements"></a>属性および要素  
- 以降のセクションでは、属性、子要素、および親要素について説明します。  
+## <a name="attributes-and-elements"></a>属性と要素
+
+以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### <a name="attributes"></a>属性  
- なし。  
+### <a name="attributes"></a>属性
+
+なし。  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<bookmarkResumptionQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/bookmarkresumptionquery.md)|ワークフロー インスタンス内のブックマークの再開を追跡するために使用されるクエリ。 追跡参加要素がブックマーク再開レコードを定期受信するには、このクエリが必要です。|  
+|[\<bookmarkResumptionQuery >](bookmarkresumptionquery-of-wcf.md)|ワークフロー インスタンス内のブックマークの再開を追跡するために使用されるクエリ。 追跡参加要素がブックマーク再開レコードを定期受信するには、このクエリが必要です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -45,8 +59,9 @@ ms.locfileid: "32753041"
 |-------------|-----------------|  
 |[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|`activityDefinitionId` プロパティによって識別される特定のワークフローのすべてのクエリを格納する構成要素。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>       
- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType> 
+- <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>       
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

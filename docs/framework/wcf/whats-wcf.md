@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 0aaa72741a1bb75862a1e3a4c5569ea53919a7f3
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1046f80ee094fa1c65c9f0f69febff84ccd36db0
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845581"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372059"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation とは
 Windows Communication Foundation (WCF) は、サービス指向アプリケーションを構築するためのフレームワークです。 WCF を使用して、できるデータを送信する非同期メッセージとして 1 つのサービス エンドポイントから別です。 サービス エンドポイントには、IIS でホストされている、継続的に使用可能なサービスの一部を使用したり、アプリケーションでホストされているサービスを使用できます。 エンドポイントには、サービス エンドポイントからデータを要求するサービスのクライアントを使用できます。 メッセージは XML として送信された 1 文字または 1 語の簡単なものでも、バイナリ データのストリームのような複雑なものでも構いません。 サンプル シナリオをいくつか挙げます。
@@ -103,4 +103,4 @@ Microsoft Silverlight は開発者がストリーミング ビデオなどメデ
 - [チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)
 - [ドキュメントのガイド](../../../docs/framework/wcf/guide-to-the-documentation.md)
 - [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Windows Communication Foundation サンプル](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Windows Communication Foundation サンプル](/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

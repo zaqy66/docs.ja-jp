@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 02d151ee322cb2793df6f31e5e4b72dfb1027aec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d17ded99e08fa4fb99fd87e220045c2869a35805
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522857"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372409"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractResolver> クラスを使用して、シリアル化プロセスおよび逆シリアル化プロセスをカスタマイズする方法を示します。 このサンプルで示すのは、シリアル化および逆シリアル化時に既知の型を動的に追加する方法です。  
@@ -15,7 +15,7 @@ ms.locfileid: "43522857"
 ## <a name="sample-details"></a>サンプルの詳細  
  このサンプルは、4 つのプロジェクトで構成されます。 そのうちの 1 つは、IIS でホストされ、次のサービス コントラクトを定義するサービスに対応します。  
   
-```  
+```csharp
 // Definition of a service contract.  
 [ServiceContract(Namespace = "http://Microsoft.Samples.KAA")]  
 [KnownAssembly("Types")]  
@@ -40,7 +40,7 @@ public interface IDataContractCalculator
   
  サービス コントラクトの実装を次の例に示します。  
   
-```  
+```csharp
 // Service class that implements the service contract.  
  public class DataContractCalculatorService : IDataContractCalculator  
  {  
@@ -86,7 +86,7 @@ public interface IDataContractCalculator
   
  もう 1 つのプロジェクトは、サーバーと通信し、サーバーが公開しているメソッドを呼び出すクライアントに対応します。 クライアントの定義を次の例に示します。  
   
-```  
+```csharp  
  // Client implementation code.  
  class Client  
  {  
@@ -193,7 +193,7 @@ public interface IDataContractCalculator
   
  このサンプルでの `DataContractResolver` の定義を次の例に示します。  
   
-```  
+```csharp
 public class MyDataContractResolver : DataContractResolver  
     {  
        Dictionary<string, XmlDictionaryString> dictionary = new Dictionary<string, XmlDictionaryString>();  
@@ -277,7 +277,7 @@ public class MyDataContractResolver : DataContractResolver
   
  このサンプルで使用する型のライブラリを次の例に示します。  
   
-```  
+```csharp 
  [DataContract]  
  public class ComplexNumber  
  {  
@@ -324,7 +324,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
   
  このサンプルをビルドして実行した場合、クライアントでは次のような出力が取得されます。  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Magnitude: 7.21110255092798  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521355"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373885"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData メソッド
 デバッガーが要求した操作を完了するために必要となるメタデータが含まれているモジュールの完全パスを返すように、デバッガーに求めます。  
@@ -46,7 +46,7 @@ HRESULT GetMetaData(
  [in] ファイルの完全パスを表す null で終わる文字列。 完全なパスが使用できない場合、名前とファイルの拡張子 (*filename*.*拡張機能*)。  
   
  `dwImageTimeStamp`  
- [in] イメージの PE ファイル ヘッダーのタイムスタンプ。 このパラメーターは、シンボル サーバーの使用可能性があることができます ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) 参照。  
+ [in] イメージの PE ファイル ヘッダーのタイムスタンプ。 このパラメーターは、シンボル サーバーの使用可能性があることができます ([SymSrv](/windows/desktop/debug/using-symsrv)) 参照。  
   
  `dwImageSize`  
  [in] PE ファイル ヘッダーのイメージ サイズ。 このパラメーターは、SymSrv の検索に使用される可能性があります。  

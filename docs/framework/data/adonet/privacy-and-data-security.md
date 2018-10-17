@@ -2,18 +2,18 @@
 title: プライバシーとデータ セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: dd74abcd95faf27485efcefa1a0a76e830df60fe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 078b5e09e800511c3edfa78596b5bdb67ebcc6d7
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508865"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372518"
 ---
 # <a name="privacy-and-data-security"></a>プライバシーとデータ セキュリティ
 ADO.NET アプリケーションにおける機密情報の保護と管理は、基になる製品および作成に使用されたテクノロジに依存します。 ADO.NET そのものは、データを保護したり暗号化したりするためのサービスを提供しません。  
   
 ## <a name="cryptography-and-hash-codes"></a>暗号化とハッシュ コード  
- ADO.NET アプリケーションから .NET Framework <xref:System.Security.Cryptography> 名前空間のクラスを使用すると、認証されていない第三者によるデータの読み取りや変更を防止できます。 クラスには、アンマネージド Microsoft CryptoAPI 用のラッパーもあれば、マネージド実装もあります。 [Cryptographic Services](https://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781)トピックでは、.NET Framework の暗号化の概要を説明します、暗号の実装方法と、特定の暗号タスクを実行する方法について説明します。  
+ ADO.NET アプリケーションから .NET Framework <xref:System.Security.Cryptography> 名前空間のクラスを使用すると、認証されていない第三者によるデータの読み取りや変更を防止できます。 クラスには、アンマネージド Microsoft CryptoAPI 用のラッパーもあれば、マネージド実装もあります。 [Cryptographic Services](../../../../docs/standard/security/cryptographic-services.md)トピックでは、.NET Framework の暗号化の概要を説明します、暗号の実装方法と、特定の暗号タスクを実行する方法について説明します。  
   
  暗号化ではデータを暗号化した後に復号化を行いますが、データのハッシュは不可逆性の処理です。 データのハッシュは、データが変更されていないことを確認することによって改ざんを防止する場合に役立ちます。ハッシュ アルゴリズムは、同一内容の入力文字列に対して、容易に比較できる同一内容の短い値を出力します。 [ハッシュ コードによるデータの整合性の保証](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md)を生成し、ハッシュ値を検証する方法について説明します。  
   

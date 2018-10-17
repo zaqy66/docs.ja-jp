@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 5f8eb4afe53292b2589964f1a745f00d761ee019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a0d2b99368dc985c11951089adbabf8e1cdc8b9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542965"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372149"
 ---
 # <a name="documents"></a>ドキュメント
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] には、多彩なアプリケーション開発コンポーネントが用意されており、開発者は、こうしたコンポーネントを使って、高度なドキュメント機能を備えた読みやすいアプリケーションを構築できます。 また、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、機能と品質の向上を実現するだけでなく、ドキュメントのパッケージ化、セキュリティ、および保存を対象としたシンプルな管理サービスも提供します。  
@@ -28,4 +28,4 @@ ms.locfileid: "33542965"
  <xref:System.Windows.Controls.DocumentViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps>  
- [isXPS.exe (isXPS 適合性ツール)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))
+ [isXPS.exe (isXPS 適合性ツール)](/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))

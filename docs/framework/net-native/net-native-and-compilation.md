@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 046b71a8f1d948a785a15cfc148b93292bf673f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395529"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372391"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native とコンパイル
 .NET Framework を対象にした Windows 8.1 アプリケーションと Windows デスクトップ アプリケーションは特定のプログラミング言語で記述し、中間言語 (IL: Intermediate Language) にコンパイルされます。 実行時には、メソッドが初めて実行される直前に JIT (Just-In-Time) コンパイラによって IL がローカル コンピューターのネイティブ コードにコンパイルされます。 それとは対照的に、.NET ネイティブ ツール チェーンでは、コンパイル時にソース コードをネイティブ コードに変換します。 このトピックでは、.NET ネイティブを、.NET Framework アプリをコンパイルする他のテクノロジと比較します。また、.NET ネイティブがネイティブ コードをどのように生成するのかについて実践的な概要を説明しますので、.NET ネイティブでコンパイルしたコードで発生する例外が JIT でコンパイルしたコードでは発生しない理由を理解するために役立ちます。  
@@ -35,13 +35,13 @@ ms.locfileid: "33395529"
  .NET ネイティブ ツール チェーンへの入力は、C# または Visual Basic コンパイラでビルドされた Windows ストア アプリです。 したがって、.NET ネイティブ ツール チェーンの実行が開始されるのは、言語コンパイラが Windows ストア アプリのコンパイルを終了した時点です。  
   
 > [!TIP]
->  .NET ネイティブへの入力は、マネージ アセンブリ向けに記述された IL とメタデータであるため、ビルド前またはビルド後のイベントを使用するか、または MSBuild プロジェクト ファイルを変更することにより、カスタム コードの生成やその他のカスタム操作を実行する余地があります。  
+>  .NET ネイティブへの入力は、マネージド アセンブリ向けに記述された IL とメタデータであるため、ビルド前またはビルド後のイベントを使用するか、または MSBuild プロジェクト ファイルを変更することにより、カスタム コードの生成やその他のカスタム操作を実行する余地があります。  
 >   
 >  ただし、IL を変更する種類のツール、つまり .NET ツール チェーンがアプリの IL を解析することを妨げるツールはサポートされません。 難読化ツールは、この種類のツールとして代表的なものです。  
   
  アプリを IL からネイティブ コードに変換する過程で、.NET ネイティブ ツール チェーンは次のような操作を実行します。  
   
--   特定のコード パスについて、リフレクションやメタデータに依存するコードを、静的なネイティブ コードで置き換えます。 たとえば、値型が <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> メソッドを上書きしない場合、等しいかどうかの既定のテストは、リフレクションを使用して値型のフィールドを表す <xref:System.Reflection.FieldInfo> オブジェクトを取得することによって行われるため、2 つのインスタンスのフィールド値の比較になります。 ネイティブ コードにコンパイルするとき、.NET ネイティブ ツール チェーンは、このリフレクションのコードとメタデータをフィールド値の静的な比較に置き換えます。  
+-   特定のコード パスについて、リフレクションやメタデータに依存するコードを、静的なネイティブ コードで置き換えます。 たとえば、値型が <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> メソッドをオーバーライドしない場合、等しいかどうかの既定のテストは、リフレクションを使用して値型のフィールドを表す <xref:System.Reflection.FieldInfo> オブジェクトを取得することによって行われるため、2 つのインスタンスのフィールド値の比較になります。 ネイティブ コードにコンパイルするとき、.NET ネイティブ ツール チェーンは、このリフレクションのコードとメタデータをフィールド値の静的な比較に置き換えます。  
   
 -   可能であれば、すべてのメタデータを削除しようとします。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33395529"
     >  .NET ネイティブでは、標準の共通言語ランタイムと同じガベージ コレクターが使用されます。 .NET ネイティブのガベージ コレクターでは、既定でバックグラウンド ガベージ コレクションが既定で有効になります。 ガベージ コレクションの詳細については、「[ガベージ コレクションの基礎](../../../docs/standard/garbage-collection/fundamentals.md)」を参照してください。  
   
 > [!IMPORTANT]
->  .NET ネイティブは、アプリケーション全体をネイティブ アプリケーションにコンパイルします。 ネイティブ コードに対するクラス ライブラリを含む 1 つのアセンブリをコンパイルして、マネージ コードから独立して呼び出せるようにすることはできません。  
+>  .NET ネイティブは、アプリケーション全体をネイティブ アプリケーションにコンパイルします。 ネイティブ コードに対するクラス ライブラリを含む 1 つのアセンブリをコンパイルして、マネージド コードから独立して呼び出せるようにすることはできません。  
   
  .NET ネイティブ ツール チェーンによって生成される結果のアプリは、プロジェクト ディレクトリの Debug または Release ディレクトリ内の ilc.out という名前のディレクトリに出力されます。 これは次のようなファイルで構成されます。  
   
@@ -102,6 +102,6 @@ ms.locfileid: "33395529"
   
 ## <a name="see-also"></a>関連項目  
  [メタデータと自己言及的なコンポーネント](../../../docs/standard/metadata-and-self-describing-components.md)  
- [内側の .NET ネイティブ (Channel 9 ビデオ)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [インサイド .NET ネイティブ (Channel 9 ビデオ)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
  [リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [.NET ネイティブの一般的なトラブルシューティング](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

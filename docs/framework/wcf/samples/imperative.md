@@ -2,12 +2,12 @@
 title: 強制
 ms.date: 03/30/2017
 ms.assetid: 4f7ce807-c0e4-407a-92a6-22abafb40b51
-ms.openlocfilehash: 9039e2f0d13baefb8b0c2abcfb63dd11ce15ffd7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7547e3ed3d573cccce068aec239710e76d29bf38
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510727"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370940"
 ---
 # <a name="imperative"></a>強制
 このサンプルを定義する方法を示します、<<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> を定義するのではなく、コードを使用してサービスの`wsHttpBinding`構成でバインディングします。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。  
@@ -17,7 +17,7 @@ ms.locfileid: "43510727"
   
  次のコードは、バインディングをコードで強制的に定義する方法を示します。  
   
-```  
+```csharp
 public static void Main()  
 {  
     WSHttpBinding binding = new WSHttpBinding();  
@@ -52,7 +52,7 @@ public static void Main()
   
  クライアントは、チャネルを作成してサービスと通信します。次のサンプル コードを参照してください。  
   
-```  
+```csharp
 WSHttpBinding binding = new WSHttpBinding();  
 binding.Name = "binding1";  
 binding.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;  
@@ -68,7 +68,7 @@ ICalculator channel = channelFactory.CreateChannel();
   
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

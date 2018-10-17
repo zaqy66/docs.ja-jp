@@ -2,12 +2,12 @@
 title: HTTP POST を使用する AJAX サービス
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: c102d9d403cefb1bf3d4ab75859a81172895c2e0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041110"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372058"
 ---
 # <a name="ajax-service-using-http-post"></a>HTTP POST を使用する AJAX サービス
 このサンプルでは Windows Communication Foundation (WCF) を使用して作成する方法、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Asynchronous JavaScript and XML (AJAX) サービス HTTP POST を使用します。 AJAX サービスには、Web ブラウザー クライアントから基本的な JavaScript コードを使用してアクセスできます。 このサンプルでビルド、[基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)サンプル; 2 つのサンプルの唯一の違いは、HTTP GET の代わりに HTTP POST を使用します。  
@@ -33,7 +33,7 @@ public interface ICalculator
 
  基本的な AJAX サービスのサンプルの場合と同様に、<xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> を使用してサービスに AJAX エンドポイントを作成します。  
   
- GET 要求とは異なり、POST サービスはブラウザーから呼び出すことができません。 移動など、 http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 POST サービスで想定されるので、エラーになります、`n1`と`n2`メッセージの本文で送信されるパラメーター-JSON 形式で — URL ではなく、します。  
+ GET 要求とは異なり、POST サービスはブラウザーから呼び出すことができません。 たとえばに移動`http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`POST サービスが想定するため、エラーが発生、`n1`と`n2`JSON 形式では、URL ではなく、メッセージ本文で送信されるパラメーターをします。  
   
  クライアントの Web ページの PostAjaxClientPage.aspx には、ユーザーがページ上のいずれかの操作ボタンをクリックするとサービスを呼び出す ASP.NET コードが含まれています。 サービスの応答と同じ方法で、[基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)GET 要求では、サンプル。  
   
@@ -52,6 +52,4 @@ public interface ICalculator
   
 2.  」の説明に従って、ソリューション PostAjaxService.sln をビルド[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-3.  移動 http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx (開かないで PostAjaxClientPage.aspx プロジェクト ディレクトリからブラウザーで)。  
-  
-## <a name="see-also"></a>関連項目
+3.  移動 `http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx` (開かないで PostAjaxClientPage.aspx プロジェクト ディレクトリからブラウザーで)。

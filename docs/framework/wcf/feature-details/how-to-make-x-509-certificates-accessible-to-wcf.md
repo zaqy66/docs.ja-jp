@@ -10,11 +10,11 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0917569b556c31413b715d75c83a96f3a4b015d7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579973"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371954"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>方法 : X.509 証明書を WCF からアクセス可能にする
 アプリケーション コードには、X.509 証明書を Windows Communication Foundation (WCF) にアクセスすることができるようにするには、証明書ストアの名前と場所を指定する必要があります。 特定の状況では、X.509 証明書に関連付けられた秘密キーを格納しているファイルにプロセス ID がアクセスできる必要があります。 証明書ストアに X.509 証明書に関連付けられている秘密キーを取得するには、WCF は、そのアクセス許可が必要です。 既定では、所有者と System アカウントだけが証明書の秘密キーにアクセスできます。  

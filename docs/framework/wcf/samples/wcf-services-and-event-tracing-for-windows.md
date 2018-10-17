@@ -2,12 +2,12 @@
 title: WCF サービスと Event Tracing for Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 100f9c0ce71eedaa4061fc894521597074b21b00
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086584"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372474"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF サービスと Event Tracing for Windows
 このサンプルでは、Event Tracing for Windows (ETW で) を出力する Windows Communication Foundation (WCF) での分析トレースを使用する方法を示します。 分析トレースは、運用環境で WCF サービスのトラブルシューティングできるように、WCF スタックのキー_ポイントで出力されるイベントです。
@@ -26,11 +26,11 @@ ms.locfileid: "49086584"
 
      Web ブラウザーで次のようにクリックします。 **[calculator.svc]** します。 サービスの WSDL ドキュメントの URI がブラウザーに表示されます。 その URI をコピーします。
 
-     既定では、サービスの開始ポート 1378 で要求のリッスン (http://localhost:1378/Calculator.svc)します。
+     既定では、サービスの開始ポート 1378 で要求のリッスン`http://localhost:1378/Calculator.svc`します。
 
 4.  WCF テスト クライアント (WcfTestClient.exe) を実行します。
 
-     WCF テスト クライアント (WcfTestClient.exe) にある、 \<Visual Studio 2012 のインストール ディレクトリ > \Common7\IDE\ WcfTestClient.exe (既定の Visual Studio 2012 のインストール ディレクトリは C:\Program files \microsoft Visual Studio 10.0)。
+     WCF テスト クライアント (WcfTestClient.exe) は`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`します。  既定の Visual Studio 2012 のインストール ディレクトリは`C:\Program Files\Microsoft Visual Studio 10.0`します。
 
 5.  選択して、サービスを追加、WCF テスト クライアント内で**ファイル**、し**サービスの追加**します。
 

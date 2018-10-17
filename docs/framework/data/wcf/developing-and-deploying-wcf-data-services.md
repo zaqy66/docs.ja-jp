@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: cf1782eaf54701f0cf93576325b3d46e8bc4d3f1
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d4b4c776db542b6326fcceb8f2fd057d9caabf94
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261512"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372437"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開発し、WCF Data Services のデプロイ
 
@@ -80,9 +80,9 @@ ms.locfileid: "48261512"
 
 -   データ サービスをデバッグするときは、HTTP 検査プログラムを使用すると、要求メッセージおよび応答メッセージの内容を検査できるので非常に便利です。 生のパケットを表示できるネットワーク パケット アナライザーを使用すると、データ サービスの HTTP 要求および HTTP 応答を検査できます。
 
--   データ サービスのデバッグ時は、通常の操作時以上に、データ サービスの詳細なエラー情報が必要になることがあります。 データ サービスから詳細なエラー情報を取得するには、 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> の <xref:System.Data.Services.DataServiceConfiguration> プロパティを `true` に設定し、データ サービス クラスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性の <xref:System.ServiceModel.Description.ServiceDebugBehavior> プロパティを `true`に設定します。 詳細については、投稿をご覧ください。 [WCF Data Services のデバッグ](https://go.microsoft.com/fwlink/?LinkId=201868)します。 また、HTTP メッセージング レイヤーで発生する例外を表示するのには WCF でのトレースを有効にできます。 詳細については、「 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。
+-   データ サービスをデバッグするときに通常の操作中よりも、データ サービスからエラーの詳細についてを取得したい場合があります。 データ サービスから詳細なエラー情報を取得するには、 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> の <xref:System.Data.Services.DataServiceConfiguration> プロパティを `true` に設定し、データ サービス クラスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性の <xref:System.ServiceModel.Description.ServiceDebugBehavior> プロパティを `true`に設定します。 詳細については、投稿をご覧ください。 [WCF Data Services のデバッグ](https://go.microsoft.com/fwlink/?LinkId=201868)します。 また、HTTP メッセージング レイヤーで発生する例外を表示するのには WCF でのトレースを有効にできます。 詳細については、「 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。
 
--   データ サービスとして開発は、通常、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーション プロジェクトができますもサービスを作成するデータとして、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Visual Studio で Web サイト プロジェクト。 2 つの種類のプロジェクト間の違いについては、次を参照してください。 [NIB: Web アプリケーション プロジェクトと Visual Studio での Web サイト プロジェクト](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5)します。
+-   データ サービスとして開発は、通常、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーション プロジェクトができますもサービスを作成するデータとして、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Visual Studio で Web サイト プロジェクト。 この 2 種類のプロジェクトの違いについては、「 [Web Application Projects versus Web Site Projects in Visual Studio (Visual Studio での Web アプリケーション プロジェクトと Web サイト プロジェクト)](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5)」を参照してください。
 
 -   使用してデータ サービスを作成すると、**新しい項目の追加**Visual studio で、データ サービス ダイアログ ボックスがによってホストされている[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]IIS でします。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] と IIS がデータ サービスの既定のホストですが、その他のホスト オプションもサポートされています。 詳細については、次を参照してください。[データ サービスのホスティング](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)します。
 
@@ -98,7 +98,7 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
         -   [Web 配置パッケージ](https://msdn.microsoft.com/library/1f9713c8-9540-494c-b80d-9893b970ad6f)
 
-        -   [ワンクリック発行](https://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)
+        -   [ワンクリック発行機能](https://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)
 
     -   **ASP.NET Web サイト用の配置テクノロジ**
 
@@ -121,7 +121,7 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
 データ サービスを配置する際は、次の点を考慮してください。
 
--   [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] プロバイダーを使用して SQL Server データベースにアクセスするデータ サービスを配置する場合、データ サービスの配置でのデータ構造、データ、またはその両方の反映も必要になることがあります。 Visual Studio が先のデータベースでこれを行うスクリプト (.sql ファイル) を自動的に作成し、これらのスクリプトは、の Web 配置パッケージに含めることができます、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーション。 詳細については、次を参照してください。[方法: Web アプリケーション プロジェクトでのデータベース配置](https://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)します。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web サイトでは、これを行うを使用して、 **Database Publishing Wizard** Visual Studio でします。 詳細については、次を参照してください。[データベース公開ウィザードを使用してデータベースを展開する](https://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)します。
+-   [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] プロバイダーを使用して SQL Server データベースにアクセスするデータ サービスを配置する場合、データ サービスの配置でのデータ構造、データ、またはその両方の反映も必要になることがあります。 Visual Studio が先のデータベースでこれを行うスクリプト (.sql ファイル) を自動的に作成し、これらのスクリプトは、の Web 配置パッケージに含めることができます、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーション。 詳細については、次を参照してください。[方法: Web アプリケーション プロジェクトでのデータベース配置](https://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)します。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web サイトでは、これを行うを使用して、 **Database Publishing Wizard** Visual Studio でします。 詳細については、「 [Deploying a Database by Using the Database Publishing Wizard](https://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)」を参照してください。
 
 -   WCF Data Services には、基本的な WCF 実装が含まれているために、Windows Server で実行されている IIS に配置されたデータ サービスを監視するのに Windows Server AppFabric を使用できます。 Windows Server AppFabric を使用してデータ サービスを監視する方法の詳細については、投稿をご覧ください。 [Windows Server AppFabric による WCF Data Services の追跡](https://go.microsoft.com/fwlink/?LinkID=202005)します。
 

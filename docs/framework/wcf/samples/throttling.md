@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, throttling sample
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
-ms.openlocfilehash: f214e3a5230d6cf16b3bde5d89078160ed95f96f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1337b5d1c4c18700f0722bbb6912e934b2170b01
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519167"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374041"
 ---
 # <a name="throttling"></a>調整
 調整のサンプルでは、調整コントロールの使用方法を示します。 調整コントロールは、同時呼び出し、同時インスタンス、または同時セッションの数を制限して、リソースの過剰消費を防ぎます。 調整の動作は、サービス構成ファイルの設定で指定されます。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。  
@@ -40,7 +40,7 @@ ms.locfileid: "43519167"
   
  調整の例を示すため、サービス メソッド上でスリープ時間を次のように定義しています。  
   
-```  
+```csharp
 public double Add(double n1, double n2)  
 {  
     System.Threading.Thread.Sleep(2000);  
@@ -50,7 +50,7 @@ public double Add(double n1, double n2)
   
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 Add メソッドと Subtract メソッドは同時に実行され、Multiply メソッドと Divide メソッドは同時に実行されます。このようにして、同時実行できるメソッドは 2 つ以下であることが証明され、調整の例が示されます。  
   
-```  
+```console  
 Press <ENTER> to terminate client.  
 Add(100,15.99)  
 Subtract(145,76.54)  

@@ -2,12 +2,12 @@
 title: 基本的なサンプル
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 29edc8acb0293210e66e31660e3215220440fbae
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: c16ad22a63958bd7c7b2b3d94f2c82b5b7db6f65
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580317"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373951"
 ---
 # <a name="basic-sample"></a>基本的なサンプル
 このサンプルでは、サービスを探索可能にする方法と、探索可能なサービスの検索方法および呼び出し方法を示します。 このサンプルは、2 つのプロジェクト (サービスとクライアント) で構成されます。
@@ -18,7 +18,7 @@ ms.locfileid: "48580317"
 ## <a name="service"></a>サービス  
  これは簡単な電卓サービスの実装です。 探索関連のコードは `Main` にあります。ここでは、次のコードに示すように、 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> がサービス ホストに追加され、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> が追加されます。  
   
-```  
+```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))  
 {  
     serviceHost.AddServiceEndpoint(typeof(ICalculatorService), new   

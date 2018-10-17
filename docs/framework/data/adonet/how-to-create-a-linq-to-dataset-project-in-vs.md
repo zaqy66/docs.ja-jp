@@ -2,12 +2,12 @@
 title: LINQ to DataSet プロジェクトで Visual Studio を作成します。
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 12544c6b5153a5f6300072d1646f2c119fb255a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515747"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372448"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>方法: LINQ to DataSet プロジェクトで Visual Studio を作成
 
@@ -22,7 +22,7 @@ LINQ to DataSet を 2 つの他の参照を必要と*System.Data.dll*と*System.
 
 ## <a name="to-enable-linq-to-dataset-functionality"></a>LINQ to DataSet 機能を有効にするには
 
-既存のプロジェクトで DataSet 機能を LINQ を有効にするには次の手順に従います。
+LINQ を既存のプロジェクトで DataSet 機能を有効にする次の手順に従います。
 
 1. 参照を追加**System.Core**、 **System.Data**、および**System.Data.DataSetExtensions**します。
 

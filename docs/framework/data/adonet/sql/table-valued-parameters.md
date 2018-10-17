@@ -1,16 +1,16 @@
 ---
 title: テーブル値パラメーター
-ms.date: 03/30/2017
+ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8654a415ee0701680064aec2ee45f975086ec2c0
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042583"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374652"
 ---
 # <a name="table-valued-parameters"></a>テーブル値パラメーター
 テーブル値パラメーターを使用すると、ラウンド トリップを何度も繰り返したり、サーバー側にデータを処理するための特殊なロジックを組み込んだりすることなく、複数行のデータをクライアント アプリケーションから SQL Server へと簡単にマーシャリングできます。 テーブル値パラメーターを使用すると、クライアント アプリケーションのデータ行をカプセル化して単一のパラメーター化コマンドでサーバーに送ることができます。 受信データ行はテーブル変数に格納され、[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] によって操作できるようになります。  
@@ -87,7 +87,9 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter の構成例  
  <xref:System.Data.SqlClient> では、テーブル値パラメーターからのデータ<xref:System.Data.DataTable>、<xref:System.Data.Common.DbDataReader>または<xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord>オブジェクト。 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> の <xref:System.Data.SqlClient.SqlParameter> プロパティを使用して、テーブル値パラメーターの型名を指定する必要があります。 `TypeName` は、既にサーバー上に作成されている、互換性のある型の名前と一致していることが必要です。 次のコード フラグメントは、データを挿入するための <xref:System.Data.SqlClient.SqlParameter> の構成方法を示しています。  
-  
+ 
+次の例では、`addedCategories`変数が含まれる、<xref:System.Data.DataTable>します。 変数を設定する方法を表示するには、次のセクションで例を参照してください。[ストアド プロシージャにテーブル値パラメーターを渡す](#passing)します。
+
 ```csharp  
 // Configure the command and parameter.  
 SqlCommand insertCommand = new SqlCommand(sqlInsert, connection);  
@@ -126,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a>ストアド プロシージャへのテーブル値パラメーターの受け渡し  
+## <a name="passing"></a> ストアド プロシージャに、テーブル値パラメーターを渡す  
  この例は、テーブル値パラメーターのデータをストアド プロシージャに渡す方法を示しています。 このコードは、<xref:System.Data.DataTable> メソッドを使用して、追加された行を新しい <xref:System.Data.DataTable.GetChanges%2A> に抽出します。 次に <xref:System.Data.SqlClient.SqlCommand> を定義し、<xref:System.Data.SqlClient.SqlCommand.CommandType%2A> プロパティを <xref:System.Data.CommandType.StoredProcedure> に設定します。 <xref:System.Data.SqlClient.SqlParameter> へのデータ入力には <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> メソッドが使用され、<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> は `Structured` に設定されます。 次に <xref:System.Data.SqlClient.SqlCommand> メソッドを使用して <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> が実行されます。  
   
 ```csharp  

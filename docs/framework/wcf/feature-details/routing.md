@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-ms.openlocfilehash: 065bbb5e20ddf1b26e98934d94c764e83969cc8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518905"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370831"
 ---
 # <a name="routing"></a>ルーティング
 このセクションのトピックでは、ルーティング サービスについて説明します。 ルーティング サービスは、構成可能な汎用の SOAP 中継局です。ルーティング サービスを使用すると、コンテンツ ベースのルーティングの構成、プロトコル ブリッジの設定、通信エラーの処理、および実行時のルーティング ロジックの動的な更新が可能となります。  
@@ -20,7 +20,7 @@ ms.locfileid: "43518905"
  [ルーティング サービス](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  ルーティング サービスの機能について概説します。  
   
- [ルーティング サービス](https://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [ルーティング サービス](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  ルーティング サービスの機能について説明します。  
   
  [ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

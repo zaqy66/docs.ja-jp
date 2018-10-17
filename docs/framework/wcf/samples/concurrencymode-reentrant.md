@@ -2,19 +2,19 @@
 title: ConcurrencyMode 再入
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: c5fa690ca3b8ffe14eb9f19f0bb096b867ab992f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 94ea62d18fec202a099c2797602224eab43299b4
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740530"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372175"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode 再入
 このサンプルでは、サービス実装で ConcurrencyMode.Reentrant を使用する必要性と影響を示します。 ConcurrencyMode.Reentrant は、サービス (またはコールバック) が指定された時間で処理するメッセージが 1 つだけであることを示します (`ConcurencyMode.Single` に似ています)。 Windows Communication Foundation (WCF) のロックをスレッド セーフを確保する、`InstanceContext`他のメッセージを処理しないようにメッセージを処理します。 再入モードの場合、サービスが呼び出しの送信を行う直前に `InstanceContext` のロックが解除されます。これによりその後の呼び出しが可能になり (サンプルに示すように再入可能になり)、次回サービスに呼び出しが届いたときにロックされます。 この動作を示すために、サンプルでは、クライアントとサービスが双方向コントラクトを使用してメッセージを相互に送信する方法を示します。  
   
  定義されているコントラクトは双方向コントラクトで、サービスによって実装される `Ping` メソッドと、クライアントによって実装されるコールバック メソッド `Pong` を含みます。 クライアントは、サーバーの `Ping` メソッドを呼び出します。このメソッドには、呼び出しを初期化するチック カウントが含まれています。 サービスはチック カウントが 0 でないことを確認し、チック カウントをデクリメントしながらコールバックの `Pong` メソッドを呼び出します。 これは、サンプルの次のコードによって行います。  
   
-```  
+```csharp
 public void Ping(int ticks)  
 {  
      Console.WriteLine("Ping: Ticks = " + ticks);  
@@ -28,7 +28,7 @@ public void Ping(int ticks)
   
  コールバックの `Pong` 実装のロジックは、`Ping` 実装のロジックと同じです。 つまり、このメソッドはチック カウントが 0 でないことを確認し、その後コールバック チャネル (この場合は、元の `Ping` メッセージの送信に使用されたチャネル) の `Ping` メソッドを呼び出し、チック カウントを 1 だけデクリメントします。 チック カウントが 0 になると、このメソッドは返されます。これによってすべての応答のラップが解除され、クライアントが呼び出して初期化した最初の呼び出しに戻されます。 これを、コールバック実装で示します。  
   
-```  
+```csharp
 public void Pong(int ticks)  
 {  
     Console.WriteLine("Pong: Ticks = " + ticks);  
@@ -55,7 +55,7 @@ public void Pong(int ticks)
 ## <a name="demonstrates"></a>使用例  
  サンプルを実行するには、クライアント プロジェクトとサーバー プロジェクトをビルドします。 2 つのコマンド ウィンドウを開き、ディレクトリに移動、\<サンプル > \CS\Service\bin\debug と\<サンプル > \CS\Client\bin\debug ディレクトリ。 」と入力して、サービスを開始`service.exe`し、入力引数として渡されたタイマー刻みの初期値で Client.exe を呼び出します。 サンプルでは、チックとして 10 が出力されます。  
   
-```  
+```console  
 Prompt>Service.exe  
 ServiceHost Started. Press Enter to terminate service.  
 Ping: Ticks = 10  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9fefa302a269e08300f0393434b66ca8738a27b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5277b056c11de4c3e32d33c72bafc8f64ee17d05
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777783"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374559"
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt; 要素 (.NET ネイティブ)
 構築されたジェネリック型にランタイム リフレクション ポリシーを適用します。  
@@ -99,7 +99,7 @@ ms.locfileid: "43777783"
  `<TypeInstantiation>` 要素が [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)、[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)、[\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 要素の子である場合、親要素により定義されたポリシー設定をオーバーライドします。 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 要素が対応するジェネリック型定義を定義している場合、`<TypeInstantiation>` 要素は、指定の構築されたジェネリック型のインスタンス化についてのみランタイム リフレクション ポリシーをオーバーライドします。  
   
 ## <a name="example"></a>例  
- 次の例では、リフレクションを使用して、構築された <xref:System.Collections.Generic.Dictionary%602> オブジェクトからジェネリック型定義を取得します。 また、リフレクションを使用して、構築されたジェネリック型とジェネリック型定義を表す <xref:System.Type> オブジェクトに関する情報も表示します。 例の変数 `b` は [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) コントロールです。  
+ 次の例では、リフレクションを使用して、構築された <xref:System.Collections.Generic.Dictionary%602> オブジェクトからジェネリック型定義を取得します。 また、リフレクションを使用して、構築されたジェネリック型とジェネリック型定義を表す <xref:System.Type> オブジェクトに関する情報も表示します。 変数`b`の例では、<xref:Windows.UI.Xaml.Controls.TextBlock>コントロール。  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   

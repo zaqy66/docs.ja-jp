@@ -2,12 +2,12 @@
 title: メッセージ ログを参照する
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 025d4020002a56deb9d5b8a2fe628f50cabad4d3
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5d007efc9667ee5380b69349d6a960554ab0d4fe
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912089"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374834"
 ---
 # <a name="viewing-message-logs"></a>メッセージ ログを参照する
 ここでは、メッセージ ログの表示方法について説明します。  
@@ -33,7 +33,7 @@ ms.locfileid: "42912089"
   
 -   場合内のすべての 3 つのログを表示する必要があります、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)新しいを作成して、リレー サービスを変更すると同時に、<xref:System.ServiceModel.Channels.Message>インスタンス。 このインスタンスは、受信メッセージの本文のコピーであり、また、`ActivityId` ヘッダーおよび `Action` ヘッダーを除くすべてのヘッダーのコピーであることが必要です。 これを実行する方法を次のコード例に示します。  
   
-```  
+```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
   
 for (int i = 0; i < incomingMessage.Headers.Count; i++)  

@@ -2,12 +2,12 @@
 title: エラー処理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 64b1af4b557d7792c7285866edc9aed08a0ef667
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486155"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372235"
 ---
 # <a name="error-handling"></a>エラー処理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation でのエラー処理  
@@ -30,7 +30,7 @@ ms.locfileid: "43486155"
 ### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>IErrorHandler を使用した予期しない例外の処理  
  予期しない例外を処理するには、推奨される一連の措置は、IErrorHandler を「フック」です。 エラー ハンドラーは、チャネル層ではなく WCF ランタイム レベル (「サービス モデル」層) でのみ例外をキャッチします。 チャネル レベルで IErrorHandler をフックする唯一の方法は、カスタム チャネルを作成することです。ただし、これはほとんどのシナリオで推奨されていません。  
   
- 「予期しない例外」は、一般に、回復不可能な例外も処理例外です。代わりに、予期しないユーザー例外。 回復不可能な例外 (メモリ不足の例外など) – 1 つ一般的にによって処理される、[サービス モデル例外ハンドラー](https://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) – 自動的に一般に処理できない正常にし、このような例外を処理する唯一の理由追加のログ記録がすべての可能性がありますまたは標準の例外をクライアントに戻ります。 処理例外は、シリアル化、エンコーダー、フォーマッタ レベルなどのメッセージの処理中に発生します。通常、この例外は IErrorHandler では処理できません。これは、一般的に、このような例外が発生するまでにエラー ハンドラーの介入が早すぎるか、遅すぎることが原因です。 同様に、トランスポート例外も IErrorHandler では処理できません。  
+ 「予期しない例外」は、一般に、回復不可能な例外も処理例外です。代わりに、予期しないユーザー例外。 回復不可能な例外 (メモリ不足の例外など) – 1 つ一般的にによって処理される、[サービス モデル例外ハンドラー](xref:System.ServiceModel.Dispatcher.ExceptionHandler) – 自動的に一般に処理できない正常にし、このような例外を処理する唯一の理由追加のログ記録がすべての可能性がありますまたは標準の例外をクライアントに戻ります。 処理例外は、シリアル化、エンコーダー、フォーマッタ レベルなどのメッセージの処理中に発生します。通常、この例外は IErrorHandler では処理できません。これは、一般的に、このような例外が発生するまでにエラー ハンドラーの介入が早すぎるか、遅すぎることが原因です。 同様に、トランスポート例外も IErrorHandler では処理できません。  
   
  IErrorHandler を使用すると、例外がスローされたときのアプリケーションの動作を明示的に制御できます。 次のような操作が可能です。  
   

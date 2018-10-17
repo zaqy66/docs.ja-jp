@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d06f1c93275cb6adf4f1da02ccd5d889cb06c5d0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b934816073a48936afca119895488ddf2f0e37d2
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203671"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371694"
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>IHostSyncManager::CreateMonitorEvent メソッド
 監視対象の自動リセット イベント オブジェクトを作成します。  
@@ -73,4 +73,4 @@ HRESULT CreateMonitorEvent (
  [ICLRSyncManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
  [IHostAutoEvent インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
  [IHostSyncManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [モニター](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)
+ <xref:System.Threading.Monitor>

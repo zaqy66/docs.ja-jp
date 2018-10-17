@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: ef1b01ff59fc32546dca8ed9c95f3a981ed408e3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0086bdd41b9f87c14b3a9d0653a8f8982235b1ad
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743879"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371517"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer サンプル
 DataContractSerializer サンプルでは、<xref:System.Runtime.Serialization.DataContractSerializer> を示して、データ コントラクト クラスに対応した一般的なシリアル化および逆シリアル化の各サービスを実行します。 サンプルを作成、`Record`をメモリ ストリームにシリアル化して、メモリ ストリームを別の逆シリアル化オブジェクト`Record`オブジェクトの使用を示すために、<xref:System.Runtime.Serialization.DataContractSerializer>します。 サンプルではその後、バイナリ ライタを使用して `Record` オブジェクトをシリアル化し、バイナリ ライタがシリアル化にどのように影響するかを示します。  
@@ -19,7 +19,7 @@ DataContractSerializer サンプルでは、<xref:System.Runtime.Serialization.D
   
  `Record` のデータ コントラクトを次のサンプル コードに示します。  
   
-```  
+```csharp  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 internal class Record  
 {  
@@ -74,14 +74,14 @@ internal class Record
   
  このサンプル コードは `Record` という `record1` オブジェクトを作成し、これを表示します。  
   
-```  
+```csharp
 Record record1 = new Record(1, 2, "+", 3);  
 Console.WriteLine("Original record: {0}", record1.ToString());  
 ```  
   
  次に、<xref:System.Runtime.Serialization.DataContractSerializer> を使用して `record1` をメモリ ストリームにシリアル化します。  
   
-```  
+```csharp  
 MemoryStream stream1 = new MemoryStream();  
   
 //Serialize the Record object to a memory stream using DataContractSerializer.  
@@ -91,7 +91,7 @@ serializer.WriteObject(stream1, record1);
   
  さらに、<xref:System.Runtime.Serialization.DataContractSerializer> を使用してメモリ ストリームを新しい `Record` オブジェクトに逆シリアル化し、これを表示します。  
   
-```  
+```csharp  
 stream1.Position = 0;  
   
 //Deserialize the Record object back into a new record object.  
@@ -102,7 +102,7 @@ Console.WriteLine("Deserialized record: {0}", record2.ToString());
   
  既定では、`DataContractSerializer` は XML のテキスト表現を使用して、オブジェクトをストリームにエンコードします。 ただし、別のライタを渡すことによって XML のエンコーディングを制御できます。 このサンプルでは、<xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A> を呼び出してバイナリ ライタを作成します。 その後、<xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A> を呼び出す際に、このライタと Record オブジェクトをシリアライザに渡します。 最後に、ライタをフラッシュしてストリームの長さを報告します。  
   
-```  
+```csharp  
 MemoryStream stream2 = new MemoryStream();  
   
 XmlDictionaryWriter binaryDictionaryWriter = XmlDictionaryWriter.CreateBinaryWriter(stream2);  
@@ -116,7 +116,7 @@ Console.WriteLine("Binary Stream is {0} bytes long", stream2.Length);
   
  このサンプルを実行すると、元の Record オブジェクトと逆シリアル化された Record オブジェクトが表示され、続いてテキスト エンコーディングの長さとバイナリ エンコーディングの長さとが比較されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
-```  
+```console  
 Original record: Record: 1 + 2 = 3  
 Deserialized record: Record: 1 + 2 = 3  
 Text Stream is 233 bytes long  

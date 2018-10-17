@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837441"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371005"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 関数
 プロパティを識別する一意のハンドルが返されます。
@@ -52,7 +52,7 @@ HRESULT GetPropertyHandle (
 [in]プロパティ名を含む UTF16 でエンコードされた characaters の null で終わる文字列。   
 
 `pType`  
-[out]ポインターを[ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)プロパティの CIM 型を表す列挙型メンバー。
+[out]ポインターを[ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)プロパティの CIM 型を表す列挙型メンバー。
 
 `pHandle`   
 [out]プロパティのハンドルを格納する整数へのポインター。

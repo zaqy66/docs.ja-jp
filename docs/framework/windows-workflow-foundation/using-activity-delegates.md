@@ -3,11 +3,11 @@ title: アクティビティ デリゲートの使用
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580885"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374236"
 ---
 # <a name="using-activity-delegates"></a>アクティビティ デリゲートの使用
 アクティビティ デリゲートを使用すると、アクティビティの作成者は、特定の署名を持つコールバックを公開できます。アクティビティのユーザーは、この署名用のアクティビティベースのハンドラーを提供できます。 2 種類のアクティビティ デリゲートを使用できます。<xref:System.Activities.ActivityAction%601> は、戻り値を持たないアクティビティ デリゲートを定義する場合に使用され、<xref:System.Activities.ActivityFunc%601> は戻り値を持つアクティビティ デリゲートを定義する場合に使用されます。  
@@ -44,7 +44,7 @@ ms.locfileid: "48580885"
  1 つ以上の引数を渡すために <xref:System.Activities.Statements.InvokeAction%601> および <xref:System.Activities.ActivityAction%601> のジェネリック バージョンが複数用意されています。  
   
 ## <a name="using-activityfunc"></a>ActivityFunc の使用  
- <xref:System.Activities.ActivityAction%601> はアクティビティから結果値が返されない場合に役立ち、<xref:System.Activities.ActivityFunc%601> は結果値が返される場合に使用されます。 <xref:System.Activities.ActivityFunc%601> を定義するカスタム アクティビティを作成する場合は、<xref:System.Activities.Expressions.InvokeFunc%601> を使用して <xref:System.Activities.ActivityFunc%601> の呼び出しをモデル化します。 次の例では、`WriteFillerText` アクティビティを定義します。 充てんテキストを提供するために、整数の引数を取って文字列の結果を持つ <xref:System.Activities.Expressions.InvokeFunc%601> を指定します。 充てんテキストが取得されると、<xref:System.Activities.Statements.WriteLine> アクティビティを使用してコンソールに表示されます。  
+ <xref:System.Activities.ActivityAction%601> はアクティビティから結果値が返されない場合に役立ち、<xref:System.Activities.ActivityFunc%601> は結果値が返される場合に使用されます。 <xref:System.Activities.ActivityFunc%601> を定義するカスタム アクティビティを作成する場合は、<xref:System.Activities.Expressions.InvokeFunc%601> を使用して <xref:System.Activities.ActivityFunc%601> の呼び出しをモデル化します。 次の例では、 `WriteFillerText` アクティビティを定義します。 充てんテキストを提供するために、整数の引数を取って文字列の結果を持つ <xref:System.Activities.Expressions.InvokeFunc%601> を指定します。 充てんテキストが取得されると、<xref:System.Activities.Statements.WriteLine> アクティビティを使用してコンソールに表示されます。  
   
  [!code-csharp[CFX_ActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
   

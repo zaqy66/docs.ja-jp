@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 12fc92c716cf0ff1ab15786a067ad955caee0d20
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a99d42b4d61f3270b50e0c4698683cf89458ec9c
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205305"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372266"
 ---
 # <a name="accessibility"></a>ユーザー補助
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "47205305"
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] は [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] の新しいアクセシビリティ フレームワークです。 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] に関する情報へのプログラムによるアクセスを提供することで、ユーザー補助技術製品および自動テスト フレームワークに対するニーズに応えます。 さらに、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] を使用することで、コントロールとアプリケーション開発者は自社製品をアクセス可能にすることができます。  
   
- このドキュメントでは、マネージド コードの [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)][!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] について説明します。 C++ での [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプログラミングの詳細については、「[UI Automation for Win32 Applications](https://msdn.microsoft.com/library/ms726294.aspx)」 (Win32 アプリケーションの UI オートメーション) を参照してください。  
+ このドキュメントでは、マネージド コードの [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)][!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] について説明します。 C++ での [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプログラミングの詳細については、「[UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal)」 (Win32 アプリケーションの UI オートメーション) を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ユーザー補助のベスト プラクティス](../../../docs/framework/ui-automation/accessibility-best-practices.md)  

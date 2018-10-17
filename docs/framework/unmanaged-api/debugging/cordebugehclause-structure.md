@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40820a805310786eeb0effd7c5284c1a70a6e70b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407601"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373696"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 構造体
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -52,10 +52,10 @@ typedef struct _CorDebugEHClause {
 |`ClassToken`|型に基づく例外ハンドラーのメタデータ トークン。|  
 |`FilterOffset`|フィルターに基づく例外ハンドラーのメソッド本体の先頭からのオフセット (バイト単位)。|  
   
-## <a name="remarks"></a>コメント  
- 配列`CoreDebugEHClause`によって値が返される、 [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 配列の`CoreDebugEHClause`によって値が返される、 [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)メソッド。  
   
- EH 句の情報は CLI 仕様によって定義されます。 詳細については、次を参照してください。[標準の ECMA-355: 共通言語基盤 (CLI), 6 Edition](http://www.ecma-international.org/publications/standards/Ecma-335.htm)です。  
+ EH 句の情報は CLI 仕様によって定義されます。 詳細については、次を参照してください。[標準 ECMA 355: 共通言語基盤 (CLI)、6 th Edition](https://www.ecma-international.org/publications/standards/Ecma-335.htm)します。  
   
  `flags` フィールドには、次のフラグを含めることができます。 これらは、CorDebug.idl または CorDebug.h に定義されていないことに注意してください。  
   
@@ -67,13 +67,13 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|fault 句 (例外がスローされた場合にのみ `finally` 句が呼び出される)。|  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [GetEHClauses メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  

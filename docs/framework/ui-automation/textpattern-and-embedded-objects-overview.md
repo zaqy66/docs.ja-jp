@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: c3904ad60df3d9d7ce2b58d5911e4e19a2ebb7e3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78c511555065528d1ab34ee3ec9f8859a15bbc61
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193906"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372390"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern および埋め込みオブジェクトの概要
 > [!NOTE]
@@ -45,7 +45,7 @@ ms.locfileid: "47193906"
   
  テキスト範囲の内容を走査する必要がある場合、 <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> メソッドを正常に実行するために、一連の手順がその背後で関係しています。  
   
-1.  テキスト範囲は正規化されます。つまり、テキスト範囲は <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> エンドポイントで低次元テキスト範囲に縮小されるため、 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> エンドポイントは不要になります。 この手順は、テキスト範囲にまたがる状況であいまいさをなくすために必要<xref:System.Windows.Automation.Text.TextUnit>境界: たとえば、"{U} RL [ http://www.microsoft.com ](https://www.microsoft.com)テキストに埋め込まれて"場所"{0}"と"}"がテキスト範囲エンドポイント。  
+1.  テキスト範囲は正規化されます。つまり、テキスト範囲は <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> エンドポイントで低次元テキスト範囲に縮小されるため、 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> エンドポイントは不要になります。 この手順は、テキスト範囲にまたがる状況であいまいさをなくすために必要<xref:System.Windows.Automation.Text.TextUnit>境界: たとえば、`{The URL https://www.microsoft.com is embedded in text`場所"{0}"と"}"がテキスト範囲エンドポイント。  
   
 2.  結果として得られる範囲は、 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 内で、要求された <xref:System.Windows.Automation.Text.TextUnit> 境界の先頭に向かって後方に移動されます。  
   
@@ -66,22 +66,22 @@ ms.locfileid: "47193906"
   
  } = <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>  
   
-<a name="Hyperlink"></a>   
 ### <a name="hyperlink"></a>ハイパーリンク  
- **例 1: 埋め込みテキスト ハイパーリンクを含むテキスト範囲**  
+
+**例 1: 埋め込みテキスト ハイパーリンクを含むテキスト範囲**
   
- {URL [ http://www.microsoft.com ](https://www.microsoft.com)テキストに埋め込まれています。  
+`{The URL https://www.microsoft.com is embedded in text}.`
   
 |呼び出されるメソッド|結果|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|文字列を返します"URL http://www.microsoft.comテキストに埋め込まれて"います。|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|文字列 `The URL https://www.microsoft.com is embedded in text` を返します。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|テキスト範囲を囲む最も内側の <xref:System.Windows.Automation.AutomationElement> を返します。この場合は、テキスト プロバイダー自体を表す <xref:System.Windows.Automation.AutomationElement> を返します。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|ハイパーリンク コントロールを表す <xref:System.Windows.Automation.AutomationElement> を返します。|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ( <xref:System.Windows.Automation.AutomationElement> は、前の `GetChildren` メソッドから返されるオブジェクト)|範囲を表すを返します"http://www.microsoft.com"。|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ( <xref:System.Windows.Automation.AutomationElement> は、前の `GetChildren` メソッドから返されるオブジェクト)|範囲を表すを返します"https://www.microsoft.com"。|  
   
  **例 2: 埋め込みテキスト ハイパーリンクに部分的にかかるテキスト範囲**  
   
- URL`http://{[www]}`はテキストに埋め込まれます。  
+ URL`https://{[www]}`はテキストに埋め込まれます。  
   
 |呼び出されるメソッド|結果|  
 |-------------------|------------|  
@@ -89,9 +89,9 @@ ms.locfileid: "47193906"
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|テキスト範囲を囲む最も内側の <xref:System.Windows.Automation.AutomationElement> を返します。この場合は、ハイパーリンク コントロールです。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|テキスト範囲が URL 文字列全体をカバーしていないため、 `null` を返します。|  
   
- **例 3 - テキスト コンテナーのコンテンツを部分的にまたがるテキスト範囲。テキスト コンテナーには、テキスト範囲の一部ではない埋め込みテキスト ハイパーリンクがあります。**  
+**例 3 - テキスト コンテナーのコンテンツを部分的にまたがるテキスト範囲。テキスト コンテナーには、テキスト範囲の一部ではない埋め込みテキスト ハイパーリンクがあります。**  
   
- {URL}[ http://www.microsoft.com ](https://www.microsoft.com)はテキストに埋め込まれます。  
+`{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
 |呼び出されるメソッド|結果|  
 |-------------------|------------|  
@@ -140,7 +140,7 @@ ms.locfileid: "47193906"
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> (パラメーターは (0, 0))|セルのコンテンツを表す <xref:System.Windows.Automation.AutomationElement> を返します。この場合、要素はテキスト コントロールです。|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ( <xref:System.Windows.Automation.AutomationElement> は、前の `GetItem` メソッドから返されるオブジェクト)|イメージをカバーする範囲を返します![埋め込みイメージ例](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")します。|  
 |前の<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> メソッドから返されるオブジェクトの `RangeFromChild` |セルを表す <xref:System.Windows.Automation.AutomationElement> を返します。この場合、要素は TableItemPattern をサポートするテキスト コントロールです。|  
-|前の<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> メソッドから返されるオブジェクトの `GetEnclosingElement` |テーブルを表す <xref:System.Windows.Automation.AutomationElement> を返します。|  
+|前の `GetEnclosingElement` メソッドから返されるオブジェクトの <xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|テーブルを表す <xref:System.Windows.Automation.AutomationElement> を返します。|  
 |前の<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> メソッドから返されるオブジェクトの `GetEnclosingElement` |テキスト プロバイダー自体を表す <xref:System.Windows.Automation.AutomationElement> を返します。|  
   
  **例 2: セルのテキスト コンテンツを取得する**  
@@ -148,7 +148,7 @@ ms.locfileid: "47193906"
 |呼び出されるメソッド|結果|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> (パラメーターは (1, 1))|セルのコンテンツを表す <xref:System.Windows.Automation.AutomationElement> を返します。この場合、要素はテキスト コントロールです。|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ( <xref:System.Windows.Automation.AutomationElement> は、前の `GetItem` メソッドから返されるオブジェクト)|"Y" を返します。|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> (<xref:System.Windows.Automation.AutomationElement> は、前の `GetItem` メソッドから返されるオブジェクト)|"Y" を返します。|  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Automation.TextPattern>  
