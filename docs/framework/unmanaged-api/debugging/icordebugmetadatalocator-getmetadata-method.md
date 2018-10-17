@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521355"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373885"
 ---
-# <a name="icordebugmetadatalocatorgetmetadata-method"></a><span data-ttu-id="ec8bd-102">ICorDebugMetaDataLocator::GetMetaData メソッド</span><span class="sxs-lookup"><span data-stu-id="ec8bd-102">ICorDebugMetaDataLocator::GetMetaData Method</span></span>
-<span data-ttu-id="ec8bd-103">デバッガーが要求した操作を完了するために必要となるメタデータが含まれているモジュールの完全パスを返すように、デバッガーに求めます。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-103">Asks the debugger to return the full path to a module whose metadata is needed to complete an operation the debugger requested.</span></span>  
+# <a name="icordebugmetadatalocatorgetmetadata-method"></a><span data-ttu-id="bfe26-102">ICorDebugMetaDataLocator::GetMetaData メソッド</span><span class="sxs-lookup"><span data-stu-id="bfe26-102">ICorDebugMetaDataLocator::GetMetaData Method</span></span>
+<span data-ttu-id="bfe26-103">デバッガーが要求した操作を完了するために必要となるメタデータが含まれているモジュールの完全パスを返すように、デバッガーに求めます。</span><span class="sxs-lookup"><span data-stu-id="bfe26-103">Asks the debugger to return the full path to a module whose metadata is needed to complete an operation the debugger requested.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec8bd-104">構文</span><span class="sxs-lookup"><span data-stu-id="ec8bd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bfe26-104">構文</span><span class="sxs-lookup"><span data-stu-id="bfe26-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMetaData(  
@@ -41,50 +41,50 @@ HRESULT GetMetaData(
       );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ec8bd-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ec8bd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bfe26-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="bfe26-105">Parameters</span></span>  
  `wszImagePath`  
- <span data-ttu-id="ec8bd-106">[in] ファイルの完全パスを表す null で終わる文字列。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-106">[in] A null-terminated string that represents the full path to the file.</span></span> <span data-ttu-id="ec8bd-107">完全なパスが使用できない場合、名前とファイルの拡張子 (*filename*.*拡張機能*)。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-107">If the full path is not available, the name and extension of the file (*filename*.*extension*).</span></span>  
+ <span data-ttu-id="bfe26-106">[in] ファイルの完全パスを表す null で終わる文字列。</span><span class="sxs-lookup"><span data-stu-id="bfe26-106">[in] A null-terminated string that represents the full path to the file.</span></span> <span data-ttu-id="bfe26-107">完全なパスが使用できない場合、名前とファイルの拡張子 (*filename*.*拡張機能*)。</span><span class="sxs-lookup"><span data-stu-id="bfe26-107">If the full path is not available, the name and extension of the file (*filename*.*extension*).</span></span>  
   
  `dwImageTimeStamp`  
- <span data-ttu-id="ec8bd-108">[in] イメージの PE ファイル ヘッダーのタイムスタンプ。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-108">[in] The time stamp from the image's PE file headers.</span></span> <span data-ttu-id="ec8bd-109">このパラメーターは、シンボル サーバーの使用可能性があることができます ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) 参照。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-109">This parameter can potentially be used for a symbol server ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) lookup.</span></span>  
+ <span data-ttu-id="bfe26-108">[in] イメージの PE ファイル ヘッダーのタイムスタンプ。</span><span class="sxs-lookup"><span data-stu-id="bfe26-108">[in] The time stamp from the image's PE file headers.</span></span> <span data-ttu-id="bfe26-109">このパラメーターは、シンボル サーバーの使用可能性があることができます ([SymSrv](/windows/desktop/debug/using-symsrv)) 参照。</span><span class="sxs-lookup"><span data-stu-id="bfe26-109">This parameter can potentially be used for a symbol server ([SymSrv](/windows/desktop/debug/using-symsrv)) lookup.</span></span>  
   
  `dwImageSize`  
- <span data-ttu-id="ec8bd-110">[in] PE ファイル ヘッダーのイメージ サイズ。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-110">[in] The image size from PE file headers.</span></span> <span data-ttu-id="ec8bd-111">このパラメーターは、SymSrv の検索に使用される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-111">This parameter can potentially be used for a SymSrv lookup.</span></span>  
+ <span data-ttu-id="bfe26-110">[in] PE ファイル ヘッダーのイメージ サイズ。</span><span class="sxs-lookup"><span data-stu-id="bfe26-110">[in] The image size from PE file headers.</span></span> <span data-ttu-id="bfe26-111">このパラメーターは、SymSrv の検索に使用される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="bfe26-111">This parameter can potentially be used for a SymSrv lookup.</span></span>  
   
  `cchPathBuffer`  
- <span data-ttu-id="ec8bd-112">[in] `wszPathBuffer` の文字数。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-112">[in] The character count in `wszPathBuffer`.</span></span>  
+ <span data-ttu-id="bfe26-112">[in] `wszPathBuffer` の文字数。</span><span class="sxs-lookup"><span data-stu-id="bfe26-112">[in] The character count in `wszPathBuffer`.</span></span>  
   
  `pcchPathBuffer`  
- <span data-ttu-id="ec8bd-113">[out] `wszPathBuffer` に書き込まれる `WCHAR` の数。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-113">[out] The count of `WCHAR`s written to `wszPathBuffer`.</span></span>  
+ <span data-ttu-id="bfe26-113">[out] `wszPathBuffer` に書き込まれる `WCHAR` の数。</span><span class="sxs-lookup"><span data-stu-id="bfe26-113">[out] The count of `WCHAR`s written to `wszPathBuffer`.</span></span>  
   
- <span data-ttu-id="ec8bd-114">メソッドが E_NOT_SUFFICIENT_BUFFER を返す場合は、パスを格納するために必要な `WCHAR` の数。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-114">If the method returns E_NOT_SUFFICIENT_BUFFER, contains the count of `WCHAR`s needed to store the path.</span></span>  
+ <span data-ttu-id="bfe26-114">メソッドが E_NOT_SUFFICIENT_BUFFER を返す場合は、パスを格納するために必要な `WCHAR` の数。</span><span class="sxs-lookup"><span data-stu-id="bfe26-114">If the method returns E_NOT_SUFFICIENT_BUFFER, contains the count of `WCHAR`s needed to store the path.</span></span>  
   
  `wszPathBuffer`  
- <span data-ttu-id="ec8bd-115">[out] 要求されたメタデータを格納するファイルの完全パスが、デバッガーによりコピーされるバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-115">[out] Pointer to a buffer into which the debugger will copy the full path of the file that contains the requested metadata.</span></span>  
+ <span data-ttu-id="bfe26-115">[out] 要求されたメタデータを格納するファイルの完全パスが、デバッガーによりコピーされるバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="bfe26-115">[out] Pointer to a buffer into which the debugger will copy the full path of the file that contains the requested metadata.</span></span>  
   
- <span data-ttu-id="ec8bd-116">`ofReadOnly`からフラグ、 [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列挙体を使用して、このファイル内のメタデータへの読み取り専用アクセスを要求します。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-116">The `ofReadOnly` flag from the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration is used to request read-only access to the metadata in this file.</span></span>  
+ <span data-ttu-id="bfe26-116">`ofReadOnly`からフラグ、 [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列挙体を使用して、このファイル内のメタデータへの読み取り専用アクセスを要求します。</span><span class="sxs-lookup"><span data-stu-id="bfe26-116">The `ofReadOnly` flag from the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration is used to request read-only access to the metadata in this file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ec8bd-117">戻り値</span><span class="sxs-lookup"><span data-stu-id="ec8bd-117">Return Value</span></span>  
- <span data-ttu-id="ec8bd-118">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-118">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span> <span data-ttu-id="ec8bd-119">これ以外のエラー HRESULT はすべて、ファイルを取得できないことを示します。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-119">All other failure HRESULTs indicate that the file is not retrievable.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bfe26-117">戻り値</span><span class="sxs-lookup"><span data-stu-id="bfe26-117">Return Value</span></span>  
+ <span data-ttu-id="bfe26-118">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="bfe26-118">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span> <span data-ttu-id="bfe26-119">これ以外のエラー HRESULT はすべて、ファイルを取得できないことを示します。</span><span class="sxs-lookup"><span data-stu-id="bfe26-119">All other failure HRESULTs indicate that the file is not retrievable.</span></span>  
   
-|<span data-ttu-id="ec8bd-120">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ec8bd-120">HRESULT</span></span>|<span data-ttu-id="ec8bd-121">説明</span><span class="sxs-lookup"><span data-stu-id="ec8bd-121">Description</span></span>|  
+|<span data-ttu-id="bfe26-120">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bfe26-120">HRESULT</span></span>|<span data-ttu-id="bfe26-121">説明</span><span class="sxs-lookup"><span data-stu-id="bfe26-121">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ec8bd-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="ec8bd-122">S_OK</span></span>|<span data-ttu-id="ec8bd-123">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-123">The method completed successfully.</span></span> <span data-ttu-id="ec8bd-124">`wszPathBuffer` にはファイルの完全パスが含まれます。また終端は null です。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-124">`wszPathBuffer` contains the full path to the file and is null-terminated.</span></span>|  
-|<span data-ttu-id="ec8bd-125">E_NOT_SUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="ec8bd-125">E_NOT_SUFFICIENT_BUFFER</span></span>|<span data-ttu-id="ec8bd-126">`wszPathBuffer` の現在のサイズが十分ではないため、完全パスを保持できません。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-126">The current size of `wszPathBuffer` is not sufficient to hold the full path.</span></span> <span data-ttu-id="ec8bd-127">この場合、`pcchPathBuffer` に必要な `WCHAR` の数 (終端の null 文字も含む) が格納され、要求されたバッファー サイズで `GetMetaData` がもう一度呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-127">In this case, `pcchPathBuffer` contains the needed count of `WCHAR`s, including the terminating null character, and `GetMetaData` is called a second time with the requested buffer size.</span></span>|  
+|<span data-ttu-id="bfe26-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="bfe26-122">S_OK</span></span>|<span data-ttu-id="bfe26-123">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="bfe26-123">The method completed successfully.</span></span> <span data-ttu-id="bfe26-124">`wszPathBuffer` にはファイルの完全パスが含まれます。また終端は null です。</span><span class="sxs-lookup"><span data-stu-id="bfe26-124">`wszPathBuffer` contains the full path to the file and is null-terminated.</span></span>|  
+|<span data-ttu-id="bfe26-125">E_NOT_SUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="bfe26-125">E_NOT_SUFFICIENT_BUFFER</span></span>|<span data-ttu-id="bfe26-126">`wszPathBuffer` の現在のサイズが十分ではないため、完全パスを保持できません。</span><span class="sxs-lookup"><span data-stu-id="bfe26-126">The current size of `wszPathBuffer` is not sufficient to hold the full path.</span></span> <span data-ttu-id="bfe26-127">この場合、`pcchPathBuffer` に必要な `WCHAR` の数 (終端の null 文字も含む) が格納され、要求されたバッファー サイズで `GetMetaData` がもう一度呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="bfe26-127">In this case, `pcchPathBuffer` contains the needed count of `WCHAR`s, including the terminating null character, and `GetMetaData` is called a second time with the requested buffer size.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ec8bd-128">Remarks</span><span class="sxs-lookup"><span data-stu-id="ec8bd-128">Remarks</span></span>  
- <span data-ttu-id="ec8bd-129">`wszImagePath` にダンプのモジュールの完全パスが格納されている場合は、ダンプが収集されたコンピューターからのパスを示しています。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-129">If `wszImagePath` contains a full path for a module from a dump, it specifies the path from the computer where the dump was collected.</span></span> <span data-ttu-id="ec8bd-130">この場所にはファイルが存在しない、または同じ名前の正しくないファイルがパス上に格納されている可能性があります。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-130">The file may not exist at this location, or an incorrect file with the same name may be stored on the path.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bfe26-128">Remarks</span><span class="sxs-lookup"><span data-stu-id="bfe26-128">Remarks</span></span>  
+ <span data-ttu-id="bfe26-129">`wszImagePath` にダンプのモジュールの完全パスが格納されている場合は、ダンプが収集されたコンピューターからのパスを示しています。</span><span class="sxs-lookup"><span data-stu-id="bfe26-129">If `wszImagePath` contains a full path for a module from a dump, it specifies the path from the computer where the dump was collected.</span></span> <span data-ttu-id="bfe26-130">この場所にはファイルが存在しない、または同じ名前の正しくないファイルがパス上に格納されている可能性があります。</span><span class="sxs-lookup"><span data-stu-id="bfe26-130">The file may not exist at this location, or an incorrect file with the same name may be stored on the path.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ec8bd-131">要件</span><span class="sxs-lookup"><span data-stu-id="ec8bd-131">Requirements</span></span>  
- <span data-ttu-id="ec8bd-132">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ec8bd-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bfe26-131">要件</span><span class="sxs-lookup"><span data-stu-id="bfe26-131">Requirements</span></span>  
+ <span data-ttu-id="bfe26-132">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="bfe26-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec8bd-133">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ec8bd-133">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bfe26-133">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bfe26-133">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ec8bd-134">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ec8bd-134">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bfe26-134">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bfe26-134">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ec8bd-135">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec8bd-135">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="bfe26-135">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bfe26-135">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec8bd-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="ec8bd-136">See Also</span></span>  
- [<span data-ttu-id="ec8bd-137">ICorDebugThread4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ec8bd-137">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [<span data-ttu-id="ec8bd-138">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ec8bd-138">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="ec8bd-139">デバッグ</span><span class="sxs-lookup"><span data-stu-id="ec8bd-139">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="bfe26-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="bfe26-136">See Also</span></span>  
+ [<span data-ttu-id="bfe26-137">ICorDebugThread4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="bfe26-137">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
+ [<span data-ttu-id="bfe26-138">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="bfe26-138">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="bfe26-139">デバッグ</span><span class="sxs-lookup"><span data-stu-id="bfe26-139">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

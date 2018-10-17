@@ -3,19 +3,19 @@ title: PeerSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 24ae0d35-f3a3-419b-afd6-686e22aae27b
 author: BrucePerlerMS
-ms.openlocfilehash: c74ee82d7aa3a23f0ee6a69185ad45857c31bb0b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 18caaf2750fa3a263c09176e975204258330752c
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087880"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371629"
 ---
-# <a name="peersecuritysettings"></a><span data-ttu-id="c0f24-102">PeerSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="c0f24-102">PeerSecuritySettings</span></span>
-<span data-ttu-id="c0f24-103">PeerSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="c0f24-103">PeerSecuritySettings</span></span>  
+# <a name="peersecuritysettings"></a><span data-ttu-id="be5f1-102">PeerSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="be5f1-102">PeerSecuritySettings</span></span>
+<span data-ttu-id="be5f1-103">PeerSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="be5f1-103">PeerSecuritySettings</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c0f24-104">構文</span><span class="sxs-lookup"><span data-stu-id="c0f24-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be5f1-104">構文</span><span class="sxs-lookup"><span data-stu-id="be5f1-104">Syntax</span></span>  
   
-```  
+```csharp
 class PeerSecuritySettings  
 {  
   string Mode;  
@@ -23,31 +23,31 @@ class PeerSecuritySettings
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="c0f24-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="c0f24-105">Methods</span></span>  
- <span data-ttu-id="c0f24-106">PeerSecuritySettings クラスは、メソッドを一切定義しません。</span><span class="sxs-lookup"><span data-stu-id="c0f24-106">The PeerSecuritySettings class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="be5f1-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="be5f1-105">Methods</span></span>  
+ <span data-ttu-id="be5f1-106">PeerSecuritySettings クラスは、メソッドを一切定義しません。</span><span class="sxs-lookup"><span data-stu-id="be5f1-106">The PeerSecuritySettings class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="c0f24-107">プロパティ</span><span class="sxs-lookup"><span data-stu-id="c0f24-107">Properties</span></span>  
- <span data-ttu-id="c0f24-108">PeerSecuritySettings クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="c0f24-108">The PeerSecuritySettings class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="be5f1-107">プロパティ</span><span class="sxs-lookup"><span data-stu-id="be5f1-107">Properties</span></span>  
+ <span data-ttu-id="be5f1-108">PeerSecuritySettings クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="be5f1-108">The PeerSecuritySettings class has the following properties:</span></span>  
   
-### <a name="mode"></a><span data-ttu-id="c0f24-109">モード</span><span class="sxs-lookup"><span data-stu-id="c0f24-109">Mode</span></span>  
- <span data-ttu-id="c0f24-110">データ型: string</span><span class="sxs-lookup"><span data-stu-id="c0f24-110">Data type: string</span></span>  
+### <a name="mode"></a><span data-ttu-id="be5f1-109">モード</span><span class="sxs-lookup"><span data-stu-id="be5f1-109">Mode</span></span>  
+ <span data-ttu-id="be5f1-110">データ型: string</span><span class="sxs-lookup"><span data-stu-id="be5f1-110">Data type: string</span></span>  
   
- <span data-ttu-id="c0f24-111">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="c0f24-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="be5f1-111">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="be5f1-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c0f24-112">このバインディングで構成されたエンドポイントによって、メッセージ レベルおよびトランスポート レベルのセキュリティが使用されているかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="c0f24-112">Whether message-level and transport-level security are used by an endpoint configured with the binding.</span></span>  
+ <span data-ttu-id="be5f1-112">このバインディングで構成されたエンドポイントによって、メッセージ レベルおよびトランスポート レベルのセキュリティが使用されているかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="be5f1-112">Whether message-level and transport-level security are used by an endpoint configured with the binding.</span></span>  
   
-### <a name="transport"></a><span data-ttu-id="c0f24-113">Transport</span><span class="sxs-lookup"><span data-stu-id="c0f24-113">Transport</span></span>  
- <span data-ttu-id="c0f24-114">データ型 : PeerTransportSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="c0f24-114">Data type: PeerTransportSecuritySettings</span></span>  
+### <a name="transport"></a><span data-ttu-id="be5f1-113">Transport</span><span class="sxs-lookup"><span data-stu-id="be5f1-113">Transport</span></span>  
+ <span data-ttu-id="be5f1-114">データ型 : PeerTransportSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="be5f1-114">Data type: PeerTransportSecuritySettings</span></span>  
   
- <span data-ttu-id="c0f24-115">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="c0f24-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="be5f1-115">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="be5f1-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c0f24-116">トランスポートのセキュリティ設定です。</span><span class="sxs-lookup"><span data-stu-id="c0f24-116">Transport security settings.</span></span>  
+ <span data-ttu-id="be5f1-116">トランスポートのセキュリティ設定です。</span><span class="sxs-lookup"><span data-stu-id="be5f1-116">Transport security settings.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c0f24-117">要件</span><span class="sxs-lookup"><span data-stu-id="c0f24-117">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be5f1-117">要件</span><span class="sxs-lookup"><span data-stu-id="be5f1-117">Requirements</span></span>  
   
-|<span data-ttu-id="c0f24-118">MOF</span><span class="sxs-lookup"><span data-stu-id="c0f24-118">MOF</span></span>|<span data-ttu-id="c0f24-119">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="c0f24-119">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="be5f1-118">MOF</span><span class="sxs-lookup"><span data-stu-id="be5f1-118">MOF</span></span>|<span data-ttu-id="be5f1-119">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="be5f1-119">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="c0f24-120">Namespace</span><span class="sxs-lookup"><span data-stu-id="c0f24-120">Namespace</span></span>|<span data-ttu-id="c0f24-121">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="c0f24-121">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="be5f1-120">Namespace</span><span class="sxs-lookup"><span data-stu-id="be5f1-120">Namespace</span></span>|<span data-ttu-id="be5f1-121">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="be5f1-121">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="c0f24-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="c0f24-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="be5f1-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="be5f1-122">See Also</span></span>  
  <xref:System.ServiceModel.PeerSecuritySettings>

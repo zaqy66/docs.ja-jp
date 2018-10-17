@@ -2,19 +2,19 @@
 title: ServiceMetadataBehavior
 ms.date: 03/30/2017
 ms.assetid: 0f194476-72f1-467e-bdce-674306316e64
-ms.openlocfilehash: e96a732f8b3b4d78d597429905cc7dd290dcc606
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19a04b6432f1ecc38a3b906b7e677175863134db
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486001"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374821"
 ---
-# <a name="servicemetadatabehavior"></a><span data-ttu-id="4d4d5-102">ServiceMetadataBehavior</span><span class="sxs-lookup"><span data-stu-id="4d4d5-102">ServiceMetadataBehavior</span></span>
-<span data-ttu-id="4d4d5-103">ServiceMetadataBehavior</span><span class="sxs-lookup"><span data-stu-id="4d4d5-103">ServiceMetadataBehavior</span></span>  
+# <a name="servicemetadatabehavior"></a><span data-ttu-id="b4880-102">ServiceMetadataBehavior</span><span class="sxs-lookup"><span data-stu-id="b4880-102">ServiceMetadataBehavior</span></span>
+<span data-ttu-id="b4880-103">ServiceMetadataBehavior</span><span class="sxs-lookup"><span data-stu-id="b4880-103">ServiceMetadataBehavior</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4d4d5-104">構文</span><span class="sxs-lookup"><span data-stu-id="4d4d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4880-104">構文</span><span class="sxs-lookup"><span data-stu-id="b4880-104">Syntax</span></span>  
   
-```  
+```csharp
 class ServiceMetadataBehavior : Behavior  
 {  
   string ExternalMetadataLocation;  
@@ -25,52 +25,52 @@ class ServiceMetadataBehavior : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="4d4d5-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="4d4d5-105">Methods</span></span>  
- <span data-ttu-id="4d4d5-106">ServiceMetadataBehavior クラスは、メソッドを一切定義しません。</span><span class="sxs-lookup"><span data-stu-id="4d4d5-106">The ServiceMetadataBehavior class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="b4880-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="b4880-105">Methods</span></span>  
+ <span data-ttu-id="b4880-106">ServiceMetadataBehavior クラスは、メソッドを一切定義しません。</span><span class="sxs-lookup"><span data-stu-id="b4880-106">The ServiceMetadataBehavior class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="4d4d5-107">プロパティ</span><span class="sxs-lookup"><span data-stu-id="4d4d5-107">Properties</span></span>  
- <span data-ttu-id="4d4d5-108">ServiceMetadataBehavior クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="4d4d5-108">The ServiceMetadataBehavior class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="b4880-107">プロパティ</span><span class="sxs-lookup"><span data-stu-id="b4880-107">Properties</span></span>  
+ <span data-ttu-id="b4880-108">ServiceMetadataBehavior クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="b4880-108">The ServiceMetadataBehavior class has the following properties:</span></span>  
   
-### <a name="externalmetadatalocation"></a><span data-ttu-id="4d4d5-109">ExternalMetadataLocation</span><span class="sxs-lookup"><span data-stu-id="4d4d5-109">ExternalMetadataLocation</span></span>  
- <span data-ttu-id="4d4d5-110">データ型: string</span><span class="sxs-lookup"><span data-stu-id="4d4d5-110">Data type: string</span></span>  
+### <a name="externalmetadatalocation"></a><span data-ttu-id="b4880-109">ExternalMetadataLocation</span><span class="sxs-lookup"><span data-stu-id="b4880-109">ExternalMetadataLocation</span></span>  
+ <span data-ttu-id="b4880-110">データ型: string</span><span class="sxs-lookup"><span data-stu-id="b4880-110">Data type: string</span></span>  
   
- <span data-ttu-id="4d4d5-111">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="4d4d5-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="b4880-111">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="b4880-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="4d4d5-112">サービスがメタデータ要求をリダイレクトする場所を設定します。</span><span class="sxs-lookup"><span data-stu-id="4d4d5-112">Sets the location to which the service redirects metadata requests.</span></span>  
+ <span data-ttu-id="b4880-112">サービスがメタデータ要求をリダイレクトする場所を設定します。</span><span class="sxs-lookup"><span data-stu-id="b4880-112">Sets the location to which the service redirects metadata requests.</span></span>  
   
-### <a name="httpgetenabled"></a><span data-ttu-id="4d4d5-113">HttpGetEnabled</span><span class="sxs-lookup"><span data-stu-id="4d4d5-113">HttpGetEnabled</span></span>  
- <span data-ttu-id="4d4d5-114">データ型 : boolean</span><span class="sxs-lookup"><span data-stu-id="4d4d5-114">Data type: boolean</span></span>  
+### <a name="httpgetenabled"></a><span data-ttu-id="b4880-113">HttpGetEnabled</span><span class="sxs-lookup"><span data-stu-id="b4880-113">HttpGetEnabled</span></span>  
+ <span data-ttu-id="b4880-114">データ型 : boolean</span><span class="sxs-lookup"><span data-stu-id="b4880-114">Data type: boolean</span></span>  
   
- <span data-ttu-id="4d4d5-115">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="4d4d5-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="b4880-115">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="b4880-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="4d4d5-116">`HttpGetUrl` 属性によって制御されるアドレスで、サービスが WSDL を公開するかどうかを制御します。</span><span class="sxs-lookup"><span data-stu-id="4d4d5-116">Controls whether the service publishes its WSDL at the address controlled by the `HttpGetUrl` attribute.</span></span>  
+ <span data-ttu-id="b4880-116">`HttpGetUrl` 属性によって制御されるアドレスで、サービスが WSDL を公開するかどうかを制御します。</span><span class="sxs-lookup"><span data-stu-id="b4880-116">Controls whether the service publishes its WSDL at the address controlled by the `HttpGetUrl` attribute.</span></span>  
   
-### <a name="httpgeturl"></a><span data-ttu-id="4d4d5-117">HttpGetUrl</span><span class="sxs-lookup"><span data-stu-id="4d4d5-117">HttpGetUrl</span></span>  
- <span data-ttu-id="4d4d5-118">データ型: string</span><span class="sxs-lookup"><span data-stu-id="4d4d5-118">Data type: string</span></span>  
+### <a name="httpgeturl"></a><span data-ttu-id="b4880-117">HttpGetUrl</span><span class="sxs-lookup"><span data-stu-id="b4880-117">HttpGetUrl</span></span>  
+ <span data-ttu-id="b4880-118">データ型: string</span><span class="sxs-lookup"><span data-stu-id="b4880-118">Data type: string</span></span>  
   
- <span data-ttu-id="4d4d5-119">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="4d4d5-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="b4880-119">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="b4880-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="4d4d5-120">HTTP を使用した取得のために、サービス WSDL が公開される場所を設定します。</span><span class="sxs-lookup"><span data-stu-id="4d4d5-120">Sets the location at which the service WSDL is published for retrieval using HTTP.</span></span>  
+ <span data-ttu-id="b4880-120">HTTP を使用した取得のために、サービス WSDL が公開される場所を設定します。</span><span class="sxs-lookup"><span data-stu-id="b4880-120">Sets the location at which the service WSDL is published for retrieval using HTTP.</span></span>  
   
-### <a name="httpsgetenabled"></a><span data-ttu-id="4d4d5-121">HttpsGetEnabled</span><span class="sxs-lookup"><span data-stu-id="4d4d5-121">HttpsGetEnabled</span></span>  
- <span data-ttu-id="4d4d5-122">データ型 : boolean</span><span class="sxs-lookup"><span data-stu-id="4d4d5-122">Data type: boolean</span></span>  
+### <a name="httpsgetenabled"></a><span data-ttu-id="b4880-121">HttpsGetEnabled</span><span class="sxs-lookup"><span data-stu-id="b4880-121">HttpsGetEnabled</span></span>  
+ <span data-ttu-id="b4880-122">データ型 : boolean</span><span class="sxs-lookup"><span data-stu-id="b4880-122">Data type: boolean</span></span>  
   
- <span data-ttu-id="4d4d5-123">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="4d4d5-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="b4880-123">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="b4880-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="4d4d5-124">`HttpsGetUrl` 属性によって制御されるアドレスで、サービスが HTTPS を介して WSDL を公開するかどうかを制御します。</span><span class="sxs-lookup"><span data-stu-id="4d4d5-124">Controls whether the service publishes its WSDL over HTTPS at the address controlled by the `HttpsGetUrl` attribute.</span></span>  
+ <span data-ttu-id="b4880-124">`HttpsGetUrl` 属性によって制御されるアドレスで、サービスが HTTPS を介して WSDL を公開するかどうかを制御します。</span><span class="sxs-lookup"><span data-stu-id="b4880-124">Controls whether the service publishes its WSDL over HTTPS at the address controlled by the `HttpsGetUrl` attribute.</span></span>  
   
-### <a name="httpsgeturl"></a><span data-ttu-id="4d4d5-125">HttpsGetUrl</span><span class="sxs-lookup"><span data-stu-id="4d4d5-125">HttpsGetUrl</span></span>  
- <span data-ttu-id="4d4d5-126">データ型: string</span><span class="sxs-lookup"><span data-stu-id="4d4d5-126">Data type: string</span></span>  
+### <a name="httpsgeturl"></a><span data-ttu-id="b4880-125">HttpsGetUrl</span><span class="sxs-lookup"><span data-stu-id="b4880-125">HttpsGetUrl</span></span>  
+ <span data-ttu-id="b4880-126">データ型: string</span><span class="sxs-lookup"><span data-stu-id="b4880-126">Data type: string</span></span>  
   
- <span data-ttu-id="4d4d5-127">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="4d4d5-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="b4880-127">アクセスの種類 : 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="b4880-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="4d4d5-128">HTTPS を使用した取得のために、サービス WSDL が公開される場所を設定します。</span><span class="sxs-lookup"><span data-stu-id="4d4d5-128">Sets the location at which the service WSDL is published for retrieval using HTTPS.</span></span>  
+ <span data-ttu-id="b4880-128">HTTPS を使用した取得のために、サービス WSDL が公開される場所を設定します。</span><span class="sxs-lookup"><span data-stu-id="b4880-128">Sets the location at which the service WSDL is published for retrieval using HTTPS.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4d4d5-129">要件</span><span class="sxs-lookup"><span data-stu-id="4d4d5-129">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b4880-129">要件</span><span class="sxs-lookup"><span data-stu-id="b4880-129">Requirements</span></span>  
   
-|<span data-ttu-id="4d4d5-130">MOF</span><span class="sxs-lookup"><span data-stu-id="4d4d5-130">MOF</span></span>|<span data-ttu-id="4d4d5-131">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="4d4d5-131">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="b4880-130">MOF</span><span class="sxs-lookup"><span data-stu-id="b4880-130">MOF</span></span>|<span data-ttu-id="b4880-131">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="b4880-131">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="4d4d5-132">Namespace</span><span class="sxs-lookup"><span data-stu-id="4d4d5-132">Namespace</span></span>|<span data-ttu-id="4d4d5-133">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="4d4d5-133">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="b4880-132">Namespace</span><span class="sxs-lookup"><span data-stu-id="b4880-132">Namespace</span></span>|<span data-ttu-id="b4880-133">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="b4880-133">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="4d4d5-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="4d4d5-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b4880-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="b4880-134">See Also</span></span>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
