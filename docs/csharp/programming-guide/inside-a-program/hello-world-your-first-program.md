@@ -1,5 +1,5 @@
 ---
-title: Hello World -- 最初のプログラム (C# プログラミング ガイド)
+title: Hello World -- 最初のプログラム (C# プログラミングガイド)
 ms.date: 07/20/2015
 f1_keywords:
 - cs.program
@@ -15,14 +15,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/16/2018
 ms.locfileid: "45593050"
 ---
-# <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 最初のプログラム (C# プログラミング ガイド)
+# <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 最初のプログラム (C# プログラミングガイド)
 次の手順では、従来の "Hello World!" プログラムの C# バージョンを 作成します。 このプログラムでは `Hello World!` という文字列を表示します。  
   
  基本概念の例については、「[Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)」を参照してください。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-and-run-a-console-application"></a>コンソール アプリケーションを作成し、実行するには  
+### <a name="to-create-and-run-a-console-application"></a>コンソールアプリケーションを作成し、実行するには  
   
 1.  Visual Studio を起動します。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "45593050"
   
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。  
   
-5.  **コード エディター**で Program.cs が開いていない場合は、**ソリューション エクスプローラー**で **Program.cs** のショートカット メニューを開き、**[コードの表示]** をクリックします。  
+5.  **コード エディター**で Program.cs が開いていない場合は、**ソリューション エクスプローラー**で **Program.cs** のショートカットメニューを開き、**[コードの表示]** をクリックします。  
   
 6.  Program.cs の内容を次のコードで置き換えます。  
   
      [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
-7.  F5 キーを押してプロジェクトを実行します。 `Hello World!` という行を含むコマンド プロンプト ウィンドウが表示されます。  
+7.  F5 キーを押してプロジェクトを実行します。 `Hello World!` という行を含むコマンドプロンプトウィンドウが表示されます。  
   
  次に、このプログラムの重要な部分を調べます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "45593050"
  [!code-csharp[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
 ## <a name="main-method"></a>Main メソッド  
- C# コンソール アプリケーションには、`Main` メソッドが必要です。このメソッドの中で制御を開始して終了します。 `Main` メソッドでは、オブジェクトを作成し、ほかのメソッドを実行します。  
+ C# コンソールアプリケーションには、`Main` メソッドが必要です。このメソッドの中で制御を開始して終了します。 `Main` メソッドでは、オブジェクトを作成し、ほかのメソッドを実行します。  
   
  `Main` メソッドはクラスまたは構造体の中に存在する [static](../../../csharp/language-reference/keywords/static.md) メソッドです。 前の "Hello World!" の 例では、`Hello` という名前のクラスに存在していました。 次の方法のいずれかで `Main` メソッドを宣言できます。  
   
@@ -76,14 +76,14 @@ ms.locfileid: "45593050"
   
      [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
- `Main` メソッドのパラメーターである `args` は、`string` の配列で、プログラムの実行時に使用したコマンド ライン引数を含みます。 C++ とは異なり、この配列には実行可能 (exe) ファイルの名前は含まれていません。  
+ `Main` メソッドのパラメーターである `args` は、`string` の配列で、プログラムの実行時に使用したコマンドライン引数を含みます。 C++ とは異なり、この配列には実行可能 (exe) ファイルの名前は含まれていません。  
   
- コマンド ライン引数の使用方法の詳細については、「[Main() とコマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)」および「[方法: コマンド ラインを使用してアセンブリを作成および使用する](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)」を参照してください。  
+ コマンドライン引数の使用方法の詳細については、「[Main() とコマンドライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)」および「[方法: コマンドラインを使用してアセンブリを作成および使用する](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)」を参照してください。  
   
- <xref:System.Console.ReadKey%2A> メソッドの末尾で `Main` を呼び出すと、F5 キーを押してデバッグ モードでプログラムを実行するときに、出力を読み取る前にコンソール ウィンドウが終了することを回避できます。  
+ <xref:System.Console.ReadKey%2A> メソッドの末尾で `Main` を呼び出すと、F5 キーを押してデバッグモードでプログラムを実行するときに、出力を読み取る前にコンソールウィンドウが終了することを回避できます。  
   
 ## <a name="input-and-output"></a>入出力  
- C# プログラムは、普通、.NET Framework のランタイム ライブラリが提供する入出力サービスを使用します。 ステートメント `System.Console.WriteLine("Hello World!");` では、<xref:System.Console.WriteLine%2A> メソッドを使用しています。 これは、ランタイム ライブラリの <xref:System.Console> クラスの出力メソッドの 1 つです。 文字列パラメーターを標準出力ストリームに出力し、最後に改行を付け加えます。 別の入出力操作には、他の <xref:System.Console> メソッドを使用できます。 `using System;` ディレクティブをプログラムの開始時にインクルードした場合は、完全に修飾せずに <xref:System> クラスおよびメソッドを直接使用できます。 たとえば、`Console.WriteLine` の代わりに `System.Console.WriteLine` を呼び出すことができます。  
+ C# プログラムは、普通、.NET Framework のランタイムライブラリが提供する入出力サービスを使用します。 `System.Console.WriteLine("Hello World!");` 命令文では、<xref:System.Console.WriteLine%2A> メソッドを使用しています。 これは、ランタイムライブラリの <xref:System.Console> クラスの出力メソッドの 1 つです。 文字列パラメーターを標準出力ストリームに出力し、最後に改行を付け加えます。 別の入出力操作には、他の <xref:System.Console> メソッドを使用できます。 `using System;` ディレクティブをプログラムの開始時にインクルードした場合は、完全に修飾せずに <xref:System> クラスおよびメソッドを直接使用できます。 たとえば、`Console.WriteLine` の代わりに `System.Console.WriteLine` を呼び出すことができます。  
   
  [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   
@@ -91,14 +91,14 @@ ms.locfileid: "45593050"
   
  入出力メソッドの詳細については、「<xref:System.IO>」を参照してください。  
   
-## <a name="command-line-compilation-and-execution"></a>コマンド ライン コンパイルと実行  
- "Hello World!" プログラムは、 Visual Studio 統合開発環境 (IDE) の代わりに、コマンド ラインを使用してコンパイルできます。  
+## <a name="command-line-compilation-and-execution"></a>コマンドラインコンパイルと実行  
+ "Hello World!" プログラムは、 Visual Studio 統合開発環境 (IDE) の代わりに、コマンドラインを使用してコンパイルできます。  
   
-#### <a name="to-compile-and-run-from-a-command-prompt"></a>コマンド プロンプトからコンパイルおよび実行するには  
+#### <a name="to-compile-and-run-from-a-command-prompt"></a>コマンドプロンプトからコンパイルおよび実行するには  
   
-1.  前の手順のコードをテキスト エディターに貼り付け、テキスト ファイルとして保存します。 そのファイルに `Hello.cs` という名前を付けます。 C# のソース コード ファイルでは、`.cs` という拡張子を使います。  
+1.  前の手順のコードをテキストエディターに貼り付け、テキストファイルとして保存します。 そのファイルに `Hello.cs` という名前を付けます。 C# のソース コード ファイルでは、`.cs` という拡張子を使います。  
   
-2.  次のいずれかの手順を実行してコマンド プロンプト ウィンドウを開きます。  
+2.  次のいずれかの手順を実行してコマンドプロンプトウィンドウを開きます。  
   
     -   Windows 10 の場合、**[スタート]** メニューで `Developer Command Prompt` を検索し、**[開発者コマンド プロンプト for VS 2017]** をタップまたは選択します。  
   
@@ -108,19 +108,19 @@ ms.locfileid: "45593050"
   
          [開発者コマンド プロンプト] ウィンドウが表示されます。  
   
-    -   標準のコマンド プロンプト ウィンドウからコマンド ライン ビルドを有効にします。  
+    -   標準のコマンドプロンプトウィンドウからコマンド ライン ビルドを有効にします。  
   
          「[方法: Visual Studio のコマンドラインのための環境変数を設定する](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)」を参照してください。  
   
-3.  コマンド プロンプト ウィンドウで、`Hello.cs` ファイルが格納されているフォルダーに移動します。  
+3.  コマンドプロンプトウィンドウで、`Hello.cs` ファイルが格納されているフォルダーに移動します。  
   
 4.  `Hello.cs` をコンパイルするには、次のコマンドを入力します。  
   
      `csc Hello.cs`  
   
-     プログラムにコンパイル エラーがない場合、`Hello.exe` という名前の実行可能ファイルが作成されます。  
+     プログラムにコンパイルエラーがない場合、`Hello.exe` という名前の実行可能ファイルが作成されます。  
   
-5.  コマンド プロンプトで、次のコマンドを入力してプログラムを実行します。  
+5.  コマンドプロンプトで、次のコマンドを入力してプログラムを実行します。  
   
      `Hello`  
   
@@ -128,10 +128,10 @@ ms.locfileid: "45593050"
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [インサイド C# プログラム](../../../csharp/programming-guide/inside-a-program/index.md)  
 - [文字列](../../../csharp/programming-guide/strings/index.md)  
-- [\<paveover>C# サンプル アプリケーション](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+- [\<paveover>C# サンプルアプリケーション](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [Main() とコマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Main() とコマンドライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)  
 - [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
