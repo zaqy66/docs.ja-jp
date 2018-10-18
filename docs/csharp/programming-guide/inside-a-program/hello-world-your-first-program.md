@@ -36,7 +36,7 @@ ms.locfileid: "45593050"
   
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。  
   
-5.  **コード エディター**で Program.cs が開いていない場合は、**ソリューション エクスプローラー**で **Program.cs** のショートカットメニューを開き、**[コードの表示]** をクリックします。  
+5.  **コード エディター**で Program.cs が開いていない場合は、**ソリューション エクスプローラー**で **Program.cs** のショートカット メニューを開き、**[コードの表示]** をクリックします。  
   
 6.  Program.cs の内容を次のコードで置き換えます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "45593050"
  [!code-csharp[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
 ## <a name="main-method"></a>Main メソッド  
- C# コンソールアプリケーションには、`Main` メソッドが必要です。このメソッドの中で制御を開始して終了します。 `Main` メソッドでは、オブジェクトを作成し、ほかのメソッドを実行します。  
+ C# コンソール アプリケーションには、`Main` メソッドが必要です。このメソッドの中で制御を開始して終了します。 `Main` メソッドでは、オブジェクトを作成し、ほかのメソッドを実行します。  
   
  `Main` メソッドはクラスまたは構造体の中に存在する [static](../../../csharp/language-reference/keywords/static.md) メソッドです。 前の "Hello World!" の 例では、`Hello` という名前のクラスに存在していました。 次の方法のいずれかで `Main` メソッドを宣言できます。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "45593050"
  入出力メソッドの詳細については、「<xref:System.IO>」を参照してください。  
   
 ## <a name="command-line-compilation-and-execution"></a>コマンドラインコンパイルと実行  
- "Hello World!" プログラムは、 Visual Studio 統合開発環境 (IDE) の代わりに、コマンドラインを使用してコンパイルできます。  
+ "Hello World!" プログラムは、 Visual Studio 統合開発環境 (IDE) の代わりに、コマンド ラインを使用してコンパイルできます。  
   
 #### <a name="to-compile-and-run-from-a-command-prompt"></a>コマンドプロンプトからコンパイルおよび実行するには  
   
@@ -131,7 +131,7 @@ ms.locfileid: "45593050"
 - [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [インサイド C# プログラム](../../../csharp/programming-guide/inside-a-program/index.md)  
 - [文字列](../../../csharp/programming-guide/strings/index.md)  
-- [\<paveover>C# サンプルアプリケーション](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+- [\<paveover>C# サンプル アプリケーション](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
 - [Main() とコマンドライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)  
 - [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
