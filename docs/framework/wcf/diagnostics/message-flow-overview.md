@@ -2,12 +2,12 @@
 title: メッセージ フローの概要
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 73ad66389d8458c0508c7a8cae28f54ca38ed574
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841983"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372786"
 ---
 # <a name="message-flow-overview"></a>メッセージ フローの概要
 相互接続されたサービスを持つ分散システムでは、サービス間の因果関係を調べる必要があります。 状態監視、トラブルシューティング、原因分析などの重要なシナリオをサポートするには、要求フローに含まれるさまざまなコンポーネントを理解することが重要です。 .NET Framework 4 では、多様なサービス間でトレースを関連付けることができるように、次の機能のサポートが追加されています。
@@ -52,13 +52,13 @@ ms.locfileid: "48841983"
 
 8.  クライアントの Program.cs に、次の Using ステートメントを追加します。
 
-    ```
+    ```csharp
     using System.Diagnostics;
     ```
 
 9. Client プロジェクトの program.cs ファイルにある Main メソッドで、トレース GUID をイベント ログに伝達するように設定します。
 
-    ```
+    ```csharp
     Guid guid = Guid.NewGuid();
     Trace.CorrelationManager.ActivityId = guid;
     ```

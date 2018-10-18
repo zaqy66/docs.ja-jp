@@ -2,12 +2,12 @@
 title: FILESTREAM データ
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176800"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374197"
 ---
 # <a name="filestream-data"></a>FILESTREAM データ
 FILESTREAM ストレージ属性は、varbinary(max) 列に格納されるバイナリ (BLOB) データに対応しています。 FILESTREAM の導入前は、バイナリ データの格納するために特別な処理が必要でした。 テキスト ドキュメント、イメージ、ビデオなどの非構造化データはデータベース外に保存されることが多く、そのために管理が困難でした。  
@@ -167,17 +167,15 @@ namespace FileStreamTest
 }
 ```  
   
- 別のサンプルを参照してください。[保存し、ファイル ストリーム列にバイナリ データをフェッチする方法](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)します。  
+ 別のサンプルを参照してください。[保存し、ファイル ストリーム列にバイナリ データをフェッチする方法](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)します。  
   
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server オンライン ブックの関連トピック  
  FILESTREAM の詳細なドキュメントについては、SQL Server オンライン ブックの次のセクションにあります。  
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[設計と実装の FILESTREAM ストレージ](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|FILESTREAM ドキュメントと関連項目へのリンクを示します。|  
-|[FILESTREAM の概要](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|FILESTREAM ストレージを使用するタイミング、および SQL Server データベース エンジンと NTFS ファイル システムを統合する方法について説明します。|  
-|[FILESTREAM ストレージの概要](https://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|FILESTREAM を SQL Server のインスタンス上で有効にする方法、データベースと FILESTREAM データを格納するテーブルの作成方法、および FILESTREAM データを含んでいる行の操作方法について説明します。|  
-|[クライアント アプリケーションでの FILESTREAM ストレージの使用](https://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|FILESTREAM データを操作するための Win32 API 関数について説明します。|  
+|[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|FILESTREAM ストレージを使用するタイミング、および SQL Server データベース エンジンと NTFS ファイル システムを統合する方法について説明します。|  
+|[FILESTREAM データ用のクライアント アプリケーションを作成します。](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|FILESTREAM データを操作するための Win32 API 関数について説明します。|  
 |[FILESTREAM と他の SQL Server 機能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|FILESTREAM データを SQL Server の他の機能と共に使用する際の注意事項、ガイドライン、および制限事項について説明します。|  
   
 ## <a name="see-also"></a>関連項目  
@@ -185,4 +183,4 @@ namespace FileStreamTest
  [ADO.NET でのデータの取得および変更](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [コード アクセス セキュリティと ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
  [SQL Server のバイナリ データと大きな値のデータ](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET の概要](../../../../../docs/framework/data/adonet/ado-net-overview.md)
