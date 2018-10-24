@@ -19,4 +19,4 @@ F# で作業を開始する複数の方法はあります。  記述を各主要
 | macOS | [Mac 用 VS を概要します。](get-started-with-visual-studio-for-mac.md) | [VSCode と Ionide を概要します。](get-started-vscode.md) | [.NET Core CLI を使用して作業を開始します。](get-started-command-line.md) |
 | Linux | N/A | [VSCode と Ionide を概要します。](get-started-vscode.md) | [.NET Core CLI を使用して作業を開始します。](get-started-command-line.md) |
 
-一般に、残りの部分よりも優れている作業を開始する特定の方法はありません。  すべての方法で f# を使用してコンピューターに気を表示しようとしていることをお勧めします最適な!。
+一般に、残りの部分よりも優れている作業を開始する特定の方法はありません。  すべての方法で F# を使用してコンピューターに気を表示しようとしていることをお勧めします最適な!。

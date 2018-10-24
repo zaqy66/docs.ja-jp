@@ -1,6 +1,6 @@
 ---
 title: F# Interactive (fsi.exe) のリファレンス
-description: 使用方法を学習 f# Interactive (fsi.exe) は、コンソールで f# コードを対話的に実行する、または f# スクリプトを実行します。
+description: 使用方法を学習 F# Interactive (fsi.exe) は、コンソールで F# コードを対話的に実行する、または F# スクリプトを実行します。
 ms.date: 05/16/2016
 ms.openlocfilehash: b16ebcfe361ef50c7c7ba8510f01f6704e62ce3b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
