@@ -16,29 +16,29 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29501eeb6085dbc235112d98e8099fcfa4565000
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 52b0f6b9d3e0ea3d6fe5f14badb8401b1a0c2c63
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427796"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187493"
 ---
-# <a name="isymunmanagedbinder2-interface"></a><span data-ttu-id="b49d1-102">ISymUnmanagedBinder2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b49d1-102">ISymUnmanagedBinder2 Interface</span></span>
-<span data-ttu-id="b49d1-103">アンマネージ コードのシンボル バインダーを表し、拡張、 [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="b49d1-103">Represents a symbol binder for unmanaged code, and extends the [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) interface.</span></span>  
+# <a name="isymunmanagedbinder2-interface"></a><span data-ttu-id="f8a70-102">ISymUnmanagedBinder2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f8a70-102">ISymUnmanagedBinder2 Interface</span></span>
+<span data-ttu-id="f8a70-103">アンマネージ コードのシンボル バインダーを表し、拡張、 [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="f8a70-103">Represents a symbol binder for unmanaged code, and extends the [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) interface.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="b49d1-104">信頼できないソースからプログラム データベース (PDB) ファイルを開く、セキュリティ上のリスクを勧めします。</span><span class="sxs-lookup"><span data-stu-id="b49d1-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+>  <span data-ttu-id="f8a70-104">信頼できないソースからプログラム データベース (PDB) ファイルをセキュリティ リスクになります。</span><span class="sxs-lookup"><span data-stu-id="f8a70-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b49d1-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="b49d1-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f8a70-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="f8a70-105">Methods</span></span>  
   
-|<span data-ttu-id="b49d1-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="b49d1-106">Method</span></span>|<span data-ttu-id="b49d1-107">説明</span><span class="sxs-lookup"><span data-stu-id="b49d1-107">Description</span></span>|  
+|<span data-ttu-id="f8a70-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="f8a70-106">Method</span></span>|<span data-ttu-id="f8a70-107">説明</span><span class="sxs-lookup"><span data-stu-id="f8a70-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b49d1-108">GetReaderForFile2 メソッド</span><span class="sxs-lookup"><span data-stu-id="b49d1-108">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|<span data-ttu-id="b49d1-109">メタデータ インターフェイスおよびファイル名を指定して、正しい返します <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> をモジュールに関連付けられているデバッグ シンボルを読み取る。</span><span class="sxs-lookup"><span data-stu-id="b49d1-109">Given a metadata interface and a file name, returns the correct <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> interface that will read the debugging symbols associated with the module.</span></span> <span data-ttu-id="b49d1-110">もより広範な検索の提供、 [isymunmanagedbinder::getreaderforfile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)メソッドです。</span><span class="sxs-lookup"><span data-stu-id="b49d1-110">Provides a more extensive search than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>|  
+|[<span data-ttu-id="f8a70-108">GetReaderForFile2 メソッド</span><span class="sxs-lookup"><span data-stu-id="f8a70-108">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|<span data-ttu-id="f8a70-109">メタデータ インターフェイスおよびファイル名を指定されたを返します、正しい[ISymUnmanagedReader](isymunmanagedreader-interface.md)をモジュールに関連付けられているデバッグ シンボルを読み取る。</span><span class="sxs-lookup"><span data-stu-id="f8a70-109">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span> <span data-ttu-id="f8a70-110">広範な検索の提供、 [isymunmanagedbinder::getreaderforfile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="f8a70-110">Provides a more extensive search than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b49d1-111">要件</span><span class="sxs-lookup"><span data-stu-id="b49d1-111">Requirements</span></span>  
- <span data-ttu-id="b49d1-112">**ヘッダー:** CorSym.idl、CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b49d1-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8a70-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="f8a70-111">Requirements</span></span>  
+ <span data-ttu-id="f8a70-112">**ヘッダー:** CorSym.idl、CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f8a70-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b49d1-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="b49d1-113">See Also</span></span>  
- [<span data-ttu-id="b49d1-114">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b49d1-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [<span data-ttu-id="b49d1-115">ISymUnmanagedBinder インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b49d1-115">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
- [<span data-ttu-id="b49d1-116">ISymUnmanagedBinder3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b49d1-116">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f8a70-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="f8a70-113">See Also</span></span>  
+ [<span data-ttu-id="f8a70-114">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f8a70-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ [<span data-ttu-id="f8a70-115">ISymUnmanagedBinder インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f8a70-115">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
+ [<span data-ttu-id="f8a70-116">ISymUnmanagedBinder3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f8a70-116">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
