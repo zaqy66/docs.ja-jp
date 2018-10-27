@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05c8ad4436cbbe5659c66f16692119fac6593b7f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 4452ad2445f81659d04bca3d64885148895aeb88
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372034"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50046750"
 ---
 # <a name="file-and-stream-io"></a>ファイルおよびストリーム入出力
 ファイルおよびストリーム I/O (入出力) とは、ストレージ メディアとの間のデータの転送を指します。 .NET Framework では、`System.IO` 名前空間に、データ ストリームおよびファイルで同期的および非同期的に読み取りと書き込みを有効にする型が用意されています。 これらの名前空間には、ファイルを圧縮および圧縮解除する型、パイプとシリアル ポート経由の通信を有効にする型もあります。  
@@ -122,7 +122,7 @@ ms.locfileid: "49372034"
 ## <a name="isolated-storage"></a>分離ストレージ  
  分離ストレージは、コードと保存データを関連付ける標準化された方法を定義することにより、分離性と安全性を提供するデータ ストレージ機構です。 ストレージは、ユーザー、アセンブリ、および (必要に応じて) ドメイン別に分離された仮想ファイル システムを提供します。 分離ストレージは、アプリケーションにユーザー ファイルへのアクセス許可がない場合に特に便利です。 コンピューターのセキュリティ ポリシーによって制御される方法でアプリケーションの設定またはファイルを保存できます。  
   
- 分離ストレージは [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリには使用できません。代わりに、<xref:Windows.Storage?displayProperty=nameWithType> 名前空間のアプリケーション データ クラスを使用します。 詳細については、[アプリケーション データ](/previous-versions/windows/apps/hh464917%28v=win.10%29)に関するページをご覧ください。  
+ 分離ストレージは [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリには使用できません。代わりに、<xref:Windows.Storage?displayProperty=nameWithType> 名前空間のアプリケーション データ クラスを使用します。 詳細については、[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)に関するページをご覧ください。  
   
  次のクラスは、分離ストレージを実装するときによく使用します。  
   

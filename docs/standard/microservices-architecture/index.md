@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 38f638b76a38c470daf51cb7be8566feb4b6362f
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121364"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047703"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Microservices: Architecture for Containerized .NET Applications (.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ)
 
@@ -27,9 +27,9 @@ ms.locfileid: "49121364"
 
 * 参照アプリケーションを複製/フォーク[ on GitHub の eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
  
-* [Channel 9 で入門ビデオ](http://aka.ms/microservices-video)を視聴
+* [Channel 9 で入門ビデオ](https://aka.ms/microservices-video)を視聴
 
-* [マイクロ サービス アーキテクチャ](http://aka.ms/MicroservicesArchitecture)を今すぐ理解する
+* [マイクロ サービス アーキテクチャ](https://aka.ms/MicroservicesArchitecture)を今すぐ理解する
 
 ## <a name="introduction"></a>はじめに
 

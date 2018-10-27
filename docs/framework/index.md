@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85bb386f2adbf02a8fde891c65c78b8e8d4537b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce84cf888145c85361d82e9b4c1d2c8c2db4fd5b
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391278"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49995049"
 ---
 # <a name="net-framework-guide"></a>.NET Framework ガイド
 
@@ -28,7 +28,7 @@ ms.locfileid: "33391278"
 
 ユーザーと開発者のための .NET Framework の概要については、「[.NET Framework の概要](../../docs/framework/get-started/index.md)」を参照してください。 .NET Framework のアーキテクチャおよび主要機能の概要については、[「.NET Framework overview の概要」](../../docs/framework/get-started/overview.md) を参照してください。  
 
-.NET Framework は、Docker との併用および [Windows コンテナー](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)との併用が可能です。 Docker コンテナーでアプリケーションを実行する方法については、「[Deploying .NET Framework applications with Docker](./docker/index.md)」 (Docker を使用して .NET Framework アプリケーションを配置する) を参照してください。
+.NET Framework は、Docker との併用および [Windows コンテナー](/virtualization/windowscontainers/about/)との併用が可能です。 Docker コンテナーでアプリケーションを実行する方法については、「[Deploying .NET Framework applications with Docker](./docker/index.md)」 (Docker を使用して .NET Framework アプリケーションを配置する) を参照してください。
 
 ## <a name="installation"></a>インストール
 
