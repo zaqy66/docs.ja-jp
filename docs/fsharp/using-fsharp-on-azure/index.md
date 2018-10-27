@@ -3,12 +3,12 @@ title: Azure での F# の使用
 description: F# での Azure サービスを使用するガイドします。
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: b0efa919e846086e2dee131fb5791abc409b5bcb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033546"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033962"
 ---
 # <a name="using-f-on-azure"></a>Azure での F# の使用
 
@@ -23,7 +23,7 @@ F# は卓越したクラウド プログラミング言語であり、Web アプ
 
 Azure では、さまざまな仮想マシン (VM) の構成をサポートします。[Linux および Windows の仮想マシン](https://azure.microsoft.com/services/virtual-machines/)に関するページを参照してください。
 
-実行、コンパイル、スクリプト作成のために F# をインストールするには、「[Using F# on Linux](http://fsharp.org/use/linux)」(Linux での F# の使用) および「[Using F# on Windows](http://fsharp.org/use/windows)」(Windows での F# の使用) を参照してください。
+実行、コンパイル、スクリプト作成のために F# をインストールするには、「[Using F# on Linux](https://fsharp.org/use/linux)」(Linux での F# の使用) および「[Using F# on Windows](https://fsharp.org/use/windows)」(Windows での F# の使用) を参照してください。
 
 
 ## <a name="using-azure-functions-with-f"></a>F# Azure Functions の使用 #
@@ -67,7 +67,7 @@ Azure Storage は、明示的な API 呼び出しではなく、宣言型の構�
 
 [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db)は高可用性、グローバルに分散されたアプリの NoSQL サービスです。
 
-Azure Cosmos DB は、2 つの方法で F# を使用できます。
+Azure Cosmos DB は、2 つの方法で f# を使用できます。
 
 1. F# Azure Functions の作成に使用するに対応または Azure Cosmos DB コレクションへの変更が発生します。 参照してください[Azure Functions の Azure Cosmos DB バインド](/azure/azure-functions/functions-bindings-cosmosdb)、または
 2. 使用して、 [SQL API 用の Azure Cosmos DB .NET SDK](/azure/cosmos-db/sql-api-sdk-dotnet)します。 関連のサンプルは c# です。
@@ -113,7 +113,7 @@ Azure Notification Hubs は、2 つの方法で F# で使用できます。
 
 Azure VM はプログラムで展開し、Microsoft.Azure.Management パッケージと API を使用して、F# スクリプトから管理します。 例については、「[.NET の管理ライブラリの概要](https://msdn.microsoft.com/library/dn722415.aspx)」と[Azure Resource Manager の使用](/azure/azure-resource-manager/resource-manager-deployment-model)に関するページを参照してください。
 
-同様に、他の Azure リソースも同じコンポーネントを使用して、F# スクリプトから展開および管理できます。 たとえば、ストレージ アカウントを作成、Azure Cloud Services のデプロイ Azure Cosmos DB インスタンスを作成し、F# スクリプトから、Azure Notifcation Hubs をプログラムで管理します。
+同様に、他の Azure リソースも同じコンポーネントを使用して、F# スクリプトから展開および管理できます。 たとえば、ストレージ アカウントを作成、Azure Cloud Services のデプロイ Azure Cosmos DB インスタンスを作成し、f# スクリプトから、Azure Notifcation Hubs をプログラムで管理します。
 
 F# スクリプトを使用したリソースの展開および管理は、通常必要はありません。 たとえば、Azure リソースは JSON テンプレートの説明から直接展開することもでき、これをパラメーター化できます。 [Azure クイック スタート テンプレート](https://azure.microsoft.com/resources/templates/)などの例を含む[Azure Resource Manager テンプレート](/azure/azure-resource-manager/resource-manager-template-best-practices)を参照してください。
 

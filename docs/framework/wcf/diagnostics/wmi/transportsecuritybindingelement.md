@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 31b8cd3b-3be5-4b6c-93f0-69d7aaf791d0
 author: BrucePerlerMS
 ms.openlocfilehash: ff06502702497360ed4627ecae311a9ae06d727b
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: dfc8aa44246a97f4611cc441d9ef71b03cc31260
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371648"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49412322"
 ---
 # <a name="transportsecuritybindingelement"></a>TransportSecurityBindingElement
 TransportSecurityBindingElement  
@@ -24,7 +24,7 @@ class TransportSecurityBindingElement : SecurityBindingElement
 ## <a name="methods"></a>メソッド  
  TransportSecurityBindingElement クラスは、SecurityBindingElement を継承しますが、追加のメソッドやプロパティを定義しません。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

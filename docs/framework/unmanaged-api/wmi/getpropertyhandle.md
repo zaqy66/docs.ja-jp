@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371005"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036685"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 関数
 プロパティを識別する一意のハンドルが返されます。
@@ -76,7 +76,7 @@ HRESULT GetPropertyHandle (
 
 ハンドルを以外のすべてのデータ型のプロパティを取得できる`CIM_OBJECT`と`CIM_ARRAY`します。 クラスのすべてのインスタンス ハンドルの作業が返されます。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  

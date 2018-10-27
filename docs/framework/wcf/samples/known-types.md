@@ -2,12 +2,12 @@
 title: 既知の型
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 76e0dadd372df4bc2755db0c3ff7cce5cc31ba20
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192497"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454409"
 ---
 # <a name="known-types"></a>既知の型
 このサンプルでは、データ コントラクト内の派生型に関する情報を指定する方法を示します。 データ コントラクトを使用すると、サービスと構造化データをやり取りできます。 オブジェクト指向プログラミングでは、別の型から継承される型を元の型の代わりに使用できます。 サービス指向プログラミングでは、型ではなくスキーマが伝達されるので、型と型との関係は保持されません。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性を使用すると、派生型に関する情報をデータ コントラクトに含めることができます。 この機構を使用しない場合は、基本型が予期される箇所では派生型を送受信できません。  
@@ -17,7 +17,7 @@ ms.locfileid: "44192497"
   
  サービスのサービス コントラクトでは複素数を使用します。次のサンプル コードを参照してください。  
   
-```  
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
@@ -35,7 +35,7 @@ public interface ICalculator
   
  <xref:System.Runtime.Serialization.DataContractAttribute> と <xref:System.Runtime.Serialization.DataMemberAttribute> は `ComplexNumber` クラスに適用され、クライアントとサービスの間で渡されるクラスのフィールドを示します。 `ComplexNumberWithMagnitude` 派生クラスは、`ComplexNumber` の代わりに使用できます。 これは、<xref:System.Runtime.Serialization.KnownTypeAttribute> 型の `ComplexNumber` 属性で指定します。  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 [KnownType(typeof(ComplexNumberWithMagnitude))]  
 public class ComplexNumber  
@@ -55,7 +55,7 @@ public class ComplexNumber
   
  `ComplexNumberWithMagnitude` 型は `ComplexNumber` から派生しますが、追加のデータ メンバ `Magnitude` が追加されます。  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class ComplexNumberWithMagnitude : ComplexNumber  
 {  
@@ -73,7 +73,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
   
  既知の型の機能を示すためには、サービスが実装されてから返される方法、`ComplexNumberWithMagnitude`加算と減算に対してのみです。 (コントラクトで `ComplexNumber` を指定している場合でも、コントラクトの `KnownTypeAttribute` 属性によりこの実装は許可されます)。 乗算と除算返しますベース`ComplexNumber`型。  
   
-```  
+```csharp
 public class DataContractCalculatorService : IDataContractCalculator  
 {  
     public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
@@ -116,14 +116,14 @@ public class DataContractCalculatorService : IDataContractCalculator
   
  クライアントでは、サービス コントラクトとデータ コントラクトの両方がによって生成されるソース ファイル generatedClient.cs で定義されて、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)サービス メタデータから。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性はサービスのデータ コントラクト内で指定されるので、クライアントはサービスを使用する際に `ComplexNumber` クラスと `ComplexNumberWithMagnitude` クラスの両方を受け取ることができます。 クライアントは、`ComplexNumberWithMagnitude` を取得したかどうかを検出し、適切な出力を生成します。  
   
-```  
+```csharp
 // Create a client  
 DataContractCalculatorClient client =   
     new DataContractCalculatorClient();  
   
 // Call the Add service operation.  
-ComplexNumber value1 = new ComplexNumber(); value1.real = 1; value1.imaginary = 2;  
-ComplexNumber value2 = new ComplexNumber(); value2.real = 3; value2.imaginary = 4;  
+ComplexNumber value1 = new ComplexNumber() { real = 1, imaginary = 2 };  
+ComplexNumber value2 = new ComplexNumber() { real = 3, imaginary = 4 };  
 ComplexNumber result = client.Add(value1, value2);  
 Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",  
     value1.real, value1.imaginary, value2.real, value2.imaginary,  
@@ -141,7 +141,7 @@ else
   
  このサンプルを実行する場合は、操作の要求や応答はクライアントのコンソール ウィンドウに表示されます。 サービスの実装方法により、加算と減算に対しては大きさが出力されますが、乗算と除算に対しては出力されません。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Magnitude: 7.21110255092798  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  

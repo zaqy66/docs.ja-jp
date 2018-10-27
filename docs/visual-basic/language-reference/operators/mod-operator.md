@@ -12,14 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a04a294d5505180a41edeba4643d25667a301c1d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424403"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170810"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 演算子 (Visual Basic)
 2 つの数値を除算し、残りの部分のみを返します。  
@@ -90,7 +88,7 @@ End Module
  浮動小数点数を使用するときに、常がない正確な 10 進表記メモリに注意してください。 これは、値の比較などの特定の操作から予期しない結果につながりますできますと`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
   
 ## <a name="overloading"></a>オーバーロード  
- `Mod`演算子は、*オーバー ロードされた*、つまり、クラスまたは構造体がその動作を再定義できます。 コードが適用される場合`Mod`クラスまたはそのようなオーバー ロードを含む構造体のインスタンスに再定義された動作を理解することを確認します。 詳細については、次を参照してください。[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)します。  
+ `Mod`演算子は、*オーバー ロードされた*、つまり、クラスまたは構造体がその動作を再定義できます。 コードが適用される場合`Mod`クラスまたはそのようなオーバー ロードを含む構造体のインスタンスに再定義された動作を理解することを確認します。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`Mod`演算子を 2 つの数値を除算し、残りの部分のみを返します。 どちらかの数値が浮動小数点数の場合は、残りの部分を表す浮動小数点数になります。  

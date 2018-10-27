@@ -3,11 +3,11 @@ title: アクティビティ デリゲートの使用
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374236"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184885"
 ---
 # <a name="using-activity-delegates"></a>アクティビティ デリゲートの使用
 アクティビティ デリゲートを使用すると、アクティビティの作成者は、特定の署名を持つコールバックを公開できます。アクティビティのユーザーは、この署名用のアクティビティベースのハンドラーを提供できます。 2 種類のアクティビティ デリゲートを使用できます。<xref:System.Activities.ActivityAction%601> は、戻り値を持たないアクティビティ デリゲートを定義する場合に使用され、<xref:System.Activities.ActivityFunc%601> は戻り値を持つアクティビティ デリゲートを定義する場合に使用されます。  

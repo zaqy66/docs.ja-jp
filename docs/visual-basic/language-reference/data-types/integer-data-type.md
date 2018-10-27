@@ -21,14 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc780cc845bfa6ef52fc9973ef3617d621167af1
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: MT
+ms.openlocfilehash: 989ce803849aa2dff9fc5c38a38bb356c937a945
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "44177524"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045445"
 ---
 # <a name="integer-data-type-visual-basic"></a>整数データ型 (Visual Basic)
 -2,147,483,648 から 2,147,483,647 までの符号付き 32 ビット (4 バイト) の整数を保持します。  
@@ -69,7 +67,7 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
--   **相互運用の考慮事項。** オートメーションまたは COM オブジェクトなど、.NET Framework 用に作成されていないコンポーネントとやり取りする場合に注意している`Integer`に他の環境は別のデータ幅 (16 ビット)。 そのようなコンポーネントに 16 ビットの引数を渡す場合は、新しい Visual Basic のコードで、整数型 (`Short`) ではなく短整数型 (`Integer`) として宣言します。  
+-   **相互運用の考慮事項。** オートメーションまたは COM オブジェクトなど、.NET Framework 用に作成されていないコンポーネントとやり取りする場合に注意している`Integer`に他の環境は別のデータ幅 (16 ビット)。 そのようなコンポーネントに 16 ビットの引数を渡す場合は、新しい Visual Basic のコードで、整数型 (`Integer`) ではなく短整数型 (`Short`) として宣言します。  
   
 -   **拡大します。** `Integer` データ型は、`Long`、`Decimal`、`Single`、または `Double` に拡大変換されます。 これは、`Integer` エラーを発生させることなく、これらの型のいずれかに <xref:System.OverflowException?displayProperty=nameWithType> を変換できることを意味します。  
   

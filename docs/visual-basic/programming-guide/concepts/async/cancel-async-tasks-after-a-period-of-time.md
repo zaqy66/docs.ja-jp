@@ -1,21 +1,21 @@
 ---
-title: 非同期タスクのキャンセル後一定の時間 (Visual Basic)
+title: 非同期タスクのキャンセル後、一定期間 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: f91fffd9bfcd66833ca3233251914868bf3b84de
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: MT
+ms.openlocfilehash: b1c56cb6d894dbcd9e70f06d7e5cd44b559b8cd4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728694"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50033702"
 ---
-# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>非同期タスクのキャンセル後一定の時間 (Visual Basic)
+# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>非同期タスクのキャンセル後、一定期間 (Visual Basic)
 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> メソッドを使用すると、一定の時間が過ぎた後に非同期操作が完了するまで待たない場合に、その操作を取り消しできます。 このメソッドは、`CancelAfter` 式によって指定された時間内に完了しない、関連付けられたタスクの取り消しをスケジュールします。  
   
- この例で開発されたコードに追加[非同期タスクまたは一覧のタスク (Visual Basic) をキャンセル](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)web サイトの一覧をダウンロードし、1 つずつのコンテンツの長さを表示します。  
+ この例で開発されたコードに追加[非同期タスクまたはタスクの一覧 (Visual Basic) をキャンセル](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)web サイトの一覧をダウンロードして、それぞれのコンテンツの長さを表示します。  
   
 > [!NOTE]
->  例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 が必要または後で、コンピューターにインストールします。  
+>  例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 が必要または後でコンピューターにインストールされています。  
   
 ## <a name="downloading-the-example"></a>例をダウンロードする  
  完全な Windows Presentation Foundation (WPF) プロジェクトは「[Async Sample: Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」からダウンロードできます。ダウンロード後、次の手順に従います。  
@@ -24,7 +24,7 @@ ms.locfileid: "34728694"
   
 2.  メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
   
-3.  **プロジェクトを開く** ダイアログ ボックスでは、圧縮解除したサンプル コードが含まれるフォルダーを開き、AsyncFineTuningVB のソリューション (.sln) ファイルを開きます。  
+3.  **プロジェクトを開く** ダイアログ ボックスでは、圧縮を解除するには、サンプル コードを保持するフォルダーを開き、AsyncFineTuningVB のソリューション (.sln) ファイルを開きます。  
   
 4.  **ソリューション エクスプローラー**で、**CancelAfterTime** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34728694"
  プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルを確認できます。  
   
 ## <a name="building-the-example"></a>例のビルド  
- このトピックの例で開発したプロジェクトに追加[非同期タスクまたは一覧のタスク (Visual Basic) をキャンセル](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)タスクの一覧をキャンセルします。 この例では、**[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。  
+ このトピックの例で開発されたプロジェクトに追加します[非同期タスクまたはタスクの一覧 (Visual Basic) をキャンセル](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)タスクの一覧をキャンセルします。 この例では、**[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。  
   
  この例を自分で 1 つずつビルドするには、"例をダウンロードする" セクションの手順に従います。ただし、**[スタートアップ プロジェクト]** として **CancelAListOfTasks** を選択します。 そのプロジェクトに、このトピックでの変更を追加します。  
   
@@ -165,13 +165,13 @@ Class MainWindow
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  

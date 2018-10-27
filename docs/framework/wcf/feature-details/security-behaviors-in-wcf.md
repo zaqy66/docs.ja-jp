@@ -2,13 +2,12 @@
 title: Windows Communication Foundation のセキュリティ動作
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-author: BrucePerlerMS
-ms.openlocfilehash: d995ce4c37084cb8641199ec7dfa826b65e02b65
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: MT
+ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841405"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041558"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
 Windows Communication Foundation (WCF) での動作は、サービス レベルまたはエンドポイント レベルでの実行時の動作を変更します。 (一般に、表示動作の詳細については[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md))。*セキュリティ動作*および監査ログの資格情報、認証、承認、制御できるようにします。 動作は、プログラムまたは構成を通じて使用できます。 ここでは、セキュリティ機能に関連する以下の動作の構成について説明します。  
@@ -83,7 +82,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
   
 -   このコレクションに URI を追加して、有効な URI のセットを指定します。 これを行うには、挿入、 [\<追加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)の各 URI に対して  
   
- 詳細については、「<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>」を参照してください。  
+ 詳細については、「 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 」を参照してください。  
   
  詳細については、この構成要素を使用して、次を参照してください。[方法: フェデレーション サービスで資格情報の構成](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)します。  
   

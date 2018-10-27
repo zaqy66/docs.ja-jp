@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024585"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181554"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;削除&gt;connectionManagement (ネットワーク設定) の要素
 接続管理リストから IP アドレスまたは DNS 名を削除します。  
@@ -62,7 +60,7 @@ ms.locfileid: "48024585"
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、server www.adventure-works.com の任意の接続管理リストのエントリを削除し、サーバー www.contoso.com への 4 つの接続とその他のすべてのサーバーに 2 つの接続を使用するアプリケーションを構成します。  
+ 次の例は、サーバーの接続管理リスト エントリを削除します。`www.adventure-works.com`され、サーバーに 4 つの接続を使用するアプリケーションを構成して、`www.contoso.com`とその他のすべてのサーバーに 2 つの接続。  
   
 ```xml  
 <configuration>  
@@ -77,6 +75,6 @@ ms.locfileid: "48024585"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 2e01d3de6ee7b415c7b3f18a20e840b8ec4ab9b6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.openlocfilehash: 3de4bb4546d3ee20e961ecf5a9d130e8e6c713a8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698446"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50037153"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>方法 : WCF クライアントで WSE 3.0 サービスにアクセスする
 Windows Communication Foundation (WCF) クライアントは、Ws-addressing 仕様の 2004 年 8 月バージョンを使用する WCF クライアントが構成されている場合、Microsoft .NET services のワイヤレベルの互換性のある Web Services Enhancements (WSE) 3.0 が。 ただし、WSE 3.0 サービスは、メタデータ交換 (MEX) プロトコルをサポートしないので使用すると、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF クライアント クラスを作成するセキュリティ設定は適用されませんを生成されました。WCF クライアントです。 そのため、セキュリティの設定を指定する必要があります、WCF クライアントが生成された後に、WSE 3.0 サービスが必要であります。  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) クライアントは、Ws-addressing 仕
   
 2.  WSE 3.0 Web サービスと通信できるバインディングを表すクラスを作成します。  
   
-     次のクラスの一部である、 [WSE との相互運用](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)サンプル。  
+     次のクラスの一部である、 [WSE との相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)サンプル。  
   
     1.  <xref:System.ServiceModel.Channels.Binding> クラスから派生するクラスを作成します。  
   
@@ -64,4 +64,4 @@ Windows Communication Foundation (WCF) クライアントは、Ws-addressing 仕
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.Channels.Binding>  
- [WSE との相互運用](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [WSE との相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

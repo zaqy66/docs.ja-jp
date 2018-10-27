@@ -2,19 +2,19 @@
 title: ServiceDebugBehavior
 ms.date: 03/30/2017
 ms.assetid: a5ec9061-1e95-43fb-b0d9-dbd0a7bc3c44
-ms.openlocfilehash: 76c4992c5364ed9800e58d120c099aceedb2799c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68b2350f257bc95d8e17f4b9049d67c7f67becae
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485682"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452863"
 ---
 # <a name="servicedebugbehavior"></a>ServiceDebugBehavior
 ServiceDebugBehavior  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp
 class ServiceDebugBehavior : Behavior  
 {  
   boolean HttpHelpPageEnabled;  
@@ -64,9 +64,9 @@ class ServiceDebugBehavior : Behavior
   
  アクセスの種類 : 読み取り専用  
   
- デバッグの目的でクライアントに返される SOAP エラーの詳細に、マネージ例外情報を含めるかどうかを指定します。  
+ デバッグの目的でクライアントに返される SOAP エラーの詳細に、マネージド例外情報を含めるかどうかを指定します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

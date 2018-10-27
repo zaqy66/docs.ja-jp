@@ -3,11 +3,11 @@ title: MsmqTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 1c89f073-9ed3-4025-a8c5-13535a0f526b
 ms.openlocfilehash: 33cd9c427ed5ad04eaf9e9889f60f091f335d1e7
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374010"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045989"
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
 MsmqTransportBindingElement  
@@ -50,7 +50,7 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
   
  キューのアドレスを Active Directory を使用して変換する必要があるかどうかを示すブール値を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

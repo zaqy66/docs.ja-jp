@@ -2,14 +2,12 @@
 title: '方法: を作成し、コマンドライン (Visual Basic) を使用してアセンブリを使用します。'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c02f694da4e03b666fa88ea6db8ddb2db4c9637d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 3b9d3c45168020f22f7e263fdf59454e3789dd9e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643290"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036932"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>方法: を作成し、コマンドライン (Visual Basic) を使用してアセンブリを使用します。
 アセンブリとは、ダイナミック リンク ライブラリ (DLL) のことで、実行時にプログラムにリンクされます。 DLL のビルド例および使用例として、次に示すシナリオを考えてみます。  
@@ -83,7 +81,7 @@ End Module
   
  このファイルには、DLL のメソッド `Add` と `Multiply` を使用するアルゴリズムが格納されています。 最初に、コマンド ラインから入力された引数 `num1` と `num2` を解析します。 次に、`AddClass` クラスの `Add` メソッドを使用して和を計算し、`MultiplyClass` クラスの `Multiply` メソッドを使って積を計算します。  
   
- 注意して、`Imports`ファイルの先頭のステートメントでは、メソッドを参照、DLL、コンパイル時に次のように、非修飾クラス名を使用することができます。  
+ なお、`Imports`ファイルの先頭にあるステートメントでは、非修飾クラス名を使用して、次のように、コンパイル時に、DLL のメソッドを参照することができます。  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
@@ -107,7 +105,7 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [-ターゲット (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)コンパイラ オプション、EXE ファイルではなく、DLL を出力するようにコンパイラに指示します。 [-(Visual Basic) アウト](../../../../visual-basic/reference/command-line-compiler/out.md)DLL ファイル名を指定するファイル名を続けてコンパイラ オプションを使用します。 このオプションを指定しないと、コンパイラは最初のファイル (`Add.vb`) を DLL の名前として使用します。  
+ [-ターゲット (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)コンパイラ オプション、EXE ファイルではなく、DLL を出力するようにコンパイラに指示します。 [-(Visual Basic) を](../../../../visual-basic/reference/command-line-compiler/out.md)コンパイラ オプションの後にファイル名は DLL のファイル名を指定するために使用します。 このオプションを指定しないと、コンパイラは最初のファイル (`Add.vb`) を DLL の名前として使用します。  
   
  実行可能ファイル `TestCode.exe` をビルドするには、次のコマンド ラインを使用します。  
   
@@ -115,9 +113,9 @@ vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb
 vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- **-アウト**コンパイラ オプションは EXE ファイルを出力するようにコンパイラに指示し、出力ファイルの名前を指定 (`TestCode.exe`)。 このコンパイラ オプションは省略できます。 [-参照 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)コンパイラ オプションは、DLL ファイルをこのプログラムを使用するファイルを指定します。  
+ **-アウト**コンパイラ オプションは、コンパイラは EXE ファイルを出力して、出力ファイルの名前を指定します (`TestCode.exe`)。 このコンパイラ オプションは省略できます。 [-参照 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)コンパイラ オプションは、このプログラムで使用される DLL ファイルを指定します。  
   
- コマンドラインからのビルドの詳細については、次を参照してください。 および[コマンドラインからのビルド](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)です。  
+ コマンドラインからのビルドの詳細については、次を参照してください。 および[、コマンドラインからビルドする](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)  

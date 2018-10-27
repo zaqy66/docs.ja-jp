@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ade78154e9911dfe8c837c8667eaca7d3a366431
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742050"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50046091"
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor クラス
 
-データ バインドされたオブジェクトのプロパティを編集するためのドロップダウンのユーザー インターフェイスを提供 (null 以外のオブジェクト`DataSource`プロパティ) のすべてのプロパティを一覧表示して、`DataSource`から値のソースを選択するオブジェクト。  
+データ バインド オブジェクトのプロパティを編集するためのドロップダウン リストのユーザー インターフェイスを提供します (null 以外のオブジェクト`DataSource`プロパティ) のすべてのプロパティを一覧表示して、`DataSource`から値のソースを選択するオブジェクト。  
   
 ## <a name="syntax"></a>構文
   
@@ -32,18 +32,18 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberListEditor`クラスは内部と、コード内で直接使用します。
+> `DataMemberListEditor`クラスは、内部およびコード内で直接使用することはしません。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのクラスの使用をサポートしていません。
+> Microsoft はいかなる運用アプリケーションでこのクラスの使用をサポートしていません。
   
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**名前空間:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**アセンブリ:** System.Design.dll) の「System.Design  
+**アセンブリ:** System.Design (で System.Design.dll)  
   
-**.NET framework のバージョン:** 2.0 から利用可能です。  
+**.NET framework のバージョン:** 2.0 以降。  
   
 ## <a name="see-also"></a>関連項目
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

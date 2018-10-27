@@ -2,13 +2,12 @@
 title: WS トランスポート セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-author: BrucePerlerMS
-ms.openlocfilehash: 99f8e038657a620de56d1d759a95bbbdf93b1ed4
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3bc9cf3700e79b62c54c335f838c7fa660d9e780
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845795"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180914"
 ---
 # <a name="ws-transport-security"></a>WS トランスポート セキュリティ
 このサンプルでは、<xref:System.ServiceModel.WSHttpBinding> バインディングを使用した SSL トランスポート セキュリティを示します。 既定で、`wsHttpBinding` バインディングは HTTP 通信を実現します。 トランスポート セキュリティ用に構成すると、バインディングは HTTPS 通信をサポートします。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。 `wsHttpBinding` は、クライアントとサービスのアプリケーション構成ファイルに指定され、構成されます。  
@@ -50,7 +49,7 @@ ms.locfileid: "48845795"
   </system.serviceModel>  
 ```  
   
- アドレス指定では https:// スキームを使用しています。 このバインディング構成により、セキュリティ モードが `Transport` に設定されます。 同じセキュリティ モードが、サービスの Web.config ファイルで指定される必要があります。  
+ アドレス指定では https:// スキームを使用しています。 このバインド構成により、セキュリティ モードが `Transport` に設定されます。 同じセキュリティ モードが、サービスの Web.config ファイルで指定される必要があります。  
   
  Https にアクセスしようとするときにこのサンプルで使用される証明書は Makecert.exe で作成されたテスト証明書であるためセキュリティの警告が表示されます。 など、対処 https://localhost/servicemodelsamples/service.svc、お使いのブラウザーから。 インプレース テスト証明書を使用する Windows Communication Foundation (WCF) クライアントを許可するには、クライアントのセキュリティの警告を非表示に追加のコードが追加されました。 そのためのコードとそれに必要なクラスは、本運用の証明書を使用するときには不要です。  
 

@@ -2,12 +2,12 @@
 title: .NET リモート処理から WCF への移行
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: e260ecaf422b5654364143b1fc529112b5ea0656
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91cbfa33c6645fbc0a8d9b513e3a59799114a710
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857389"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50039596"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET リモート処理から WCF への移行
 この記事では、.NET リモート処理を使用するアプリケーションを、Windows Communication Foundation (WCF) を使用するように移行する方法について説明します。 これらの製品間で類似する概念を比較した後、WCF で一般的なリモート処理のシナリオを実現する方法を説明します。  
@@ -292,7 +292,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>リモート処理から WCF に移行する理由  
   
--   **.NET リモート処理はレガシー製品です。** 」の説明に従って[.NET リモート処理](https://msdn.microsoft.com/library/vstudio/72x4h507\(v=vs.100\).aspx)、これはレガシー製品と見なされます、新規の開発は推奨されません。 新規および既存のアプリケーションには、WCF または ASP.NET Web API をお勧めします。  
+-   **.NET リモート処理はレガシー製品です。** 」の説明に従って[.NET リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)、これはレガシー製品と見なされます、新規の開発は推奨されません。 新規および既存のアプリケーションには、WCF または ASP.NET Web API をお勧めします。  
   
 -   **WCF では、クロス プラットフォームの標準を使用します。** WCF は、クロスプラットフォームの相互運用性を考慮して設計されており、さまざまな業界標準 (SOAP、WS-Security、WS-Trust など) をサポートしています。 WCF サービスでは、Windows 以外のオペレーション システムで動作中のクライアントとの相互運用ができます。 リモート処理は、主に、サーバーおよびクライアント アプリケーションの両方が Windows オペレーティング システムで .NET Framework を使用して実行される環境向けに設計されました。  
   

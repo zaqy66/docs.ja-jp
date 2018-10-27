@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca28c0c440ea67716244670e2b636a3099987e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741881"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452954"
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor クラス
 
-すべてのプロパティを一覧表示してデータ バインドされたオブジェクトのプロパティを編集するためのユーザー インターフェイスを提供、`DataSource`から値のソースを選択するオブジェクト。  
+すべてのプロパティを一覧表示してデータ バインド オブジェクトのプロパティを編集するためのユーザー インターフェイスを提供、`DataSource`から値のソースを選択するオブジェクト。  
   
 ## <a name="syntax"></a>構文
   
@@ -32,18 +32,18 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberFieldEditor`クラスは内部と、コード内で直接使用します。
+> `DataMemberFieldEditor`クラスは、内部およびコード内で直接使用することはしません。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのクラスの使用をサポートしていません。
+> Microsoft はいかなる運用アプリケーションでこのクラスの使用をサポートしていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**名前空間:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**アセンブリ:** System.Design.dll) の「System.Design  
+**アセンブリ:** System.Design (で System.Design.dll)  
   
-**.NET framework のバージョン:** 2.0 から利用可能です。  
+**.NET framework のバージョン:** 2.0 以降。  
   
 ## <a name="see-also"></a>関連項目
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

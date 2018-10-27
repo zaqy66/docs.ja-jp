@@ -3,11 +3,11 @@ title: MsmqBindingElementBase
 ms.date: 03/30/2017
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
 ms.openlocfilehash: e7f4cf41168bd1e5483524195e20541d896a6569
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49370914"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183192"
 ---
 # <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
@@ -114,7 +114,7 @@ class MsmqBindingElementBase : TransportBindingElement
   
  このバインディングにより処理されるメッセージのコピーをソース ジャーナル キューに保存するかどうかを示すブール値です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

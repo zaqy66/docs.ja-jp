@@ -2,12 +2,12 @@
 title: サービス ID サンプル
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 913795f9d9e35b4ecce5998320cc64c0c0b46ba7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 341e4922089634c3e46929d6cdb474b2dfbd0666
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582625"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49633912"
 ---
 # <a name="service-identity-sample"></a>サービス ID サンプル
 このサービス ID サンプルでは、サービスの ID を設定する方法を示します。 クライアントは、デザイン時にサービスのメタデータを使用して ID を取得し、実行時にそのサービス ID を認証することができます。 サービス ID の概念は、クライアントがサービス操作を呼び出す前にそのサービスを認証できるようにし、それによって認証されていない呼び出しからクライアントを保護することにあります。 セキュリティ保護されている接続では、サービスがクライアントの資格情報を認証した後にクライアントのアクセスを許可できますが、このサンプルではこのことを主眼とはしていません。 サンプルを参照してください。[クライアント](../../../../docs/framework/wcf/samples/client.md)サーバー認証を表示します。
@@ -28,7 +28,7 @@ ms.locfileid: "48582625"
 
  次のサンプル コードでは、WSHttpBinding を使用して、証明書のドメイン ネーム サーバー (DNS) によってサービス エンドポイントの ID を構成する方法を示します。
 
-```
+```csharp
 //Create a service endpoint and set its identity to the certificate's DNS
 WSHttpBinding wsAnonbinding = new WSHttpBinding (SecurityMode.Message);
 // Client are Anonymous to the service
@@ -56,7 +56,7 @@ ep.Address = epa;
 
  カスタム ID は、<xref:System.ServiceModel.EndpointIdentity> クラスと <xref:System.ServiceModel.Security.IdentityVerifier> クラスから派生させることによって、クライアント上で設定できます。 概念上、<xref:System.ServiceModel.Security.IdentityVerifier> クラスは、サービスの `AuthorizationManager` クラスと同等のクライアントと見なすことができます。 `OrgEndpointIdentity` の実装のコード例を次に示します。この実装では、サーバーの証明書のサブジェクト名と一致する組織名が格納されます。 この組織名の承認チェックは、`CheckAccess` クラスの `CustomIdentityVerifier` メソッドで発生します。
 
-```
+```csharp
 // This custom EndpointIdentity stores an organization name
 public class OrgEndpointIdentity : EndpointIdentity
 {
@@ -126,7 +126,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 4.  Client.exe を \client\bin ディレクトリで起動するか、または Visual Studio で F5 を押して起動し、ビルドして実行します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-5.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
+5.  クライアントとサービス間で通信できない場合は、「 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)」を参照してください。  
   
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -150,7 +150,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 10. サービス コンピューターで、コマンド プロンプトから Service.exe を起動します。  
   
-11. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
+11. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービス間で通信できない場合は、「 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)」を参照してください。  
   
 ### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   

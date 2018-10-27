@@ -2,22 +2,22 @@
 title: ユーザー コード トレースの出力
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807122"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049166"
 ---
 # <a name="emitting-user-code-traces"></a>ユーザー コード トレースの出力
-Windows Communication Foundation (WCF) によって生成されるインストルメンテーション データを収集するための構成でのトレースを有効にするだけでなくもユーザー コードでプログラムからトレースを出力することができます。 この方法では、インストルメンテーション データを能動的に作成でき、後でそのデータを診断目的で詳細に調べることができます。 ここでは、この方法について説明します。  
+Windows Communication Foundation (WCF) によって生成されるインストルメンテーション データを収集する構成内でトレースを有効にするだけでなく、ユーザー コードでプログラムによってトレースも出力できます。 この方法では、インストルメンテーション データを能動的に作成でき、後でそのデータを診断目的で詳細に調べることができます。 ここでは、この方法について説明します。  
   
- さらに、[トレースを拡張する](../../../../../docs/framework/wcf/samples/extending-tracing.md)サンプルには、次のセクションに示されているすべてのコードが含まれています。  
+ さらに、[トレース拡張](../../../../../docs/framework/wcf/samples/extending-tracing.md)サンプルには、次のセクションで取り上げるすべてのコードが含まれています。  
   
 ## <a name="creating-a-trace-source"></a>トレース ソースの作成  
  ユーザー トレース ソースを作成するには、次のコードを使用できます。  
   
-```  
+```csharp
 TraceSource ts = new TraceSource("myUserTraceSource");  
 ```  
   
@@ -32,7 +32,7 @@ TraceSource ts = new TraceSource("myUserTraceSource");
   
  次のコードでは、この設定方法について説明します。  
   
-```  
+```csharp
 Guid oldID = Trace.CorrelationManager.ActivityId;  
 Guid traceID = Guid.NewGuid();  
 ts.TraceTransfer(0, "transfer", traceID);  
@@ -43,7 +43,7 @@ ts.TraceEvent(TraceEventType.Start, 0, "Add request");
 ## <a name="emitting-traces-within-a-user-activity"></a>ユーザー アクティビティ内でのトレースの出力  
  ユーザー アクティビティ内でトレースを出力するコードを次に示します。  
   
-```  
+```csharp
 double value1 = 100.00D;  
 double value2 = 15.99D;  
 ts.TraceInformation("Client sends message to Add " + value1 + ", " + value2);  
@@ -56,7 +56,7 @@ ts.TraceInformation("Client receives Add response '" + result + "'");
   
  次のコードでは、この設定方法について説明します。  
   
-```  
+```csharp
 ts.TraceTransfer(0, "transfer", oldID);  
 ts.TraceEvent(TraceEventType.Stop, 0, "Add request");  
 Trace.CorrelationManager.ActivityId = oldID;  
@@ -66,11 +66,11 @@ Trace.CorrelationManager.ActivityId = oldID;
  クライアントとサービスの両方の構成ファイルで、`propagateActivity` トレース ソースの `true` 属性を `System.ServiceModel` に設定した場合、Add 要求に対するサービス処理は、クライアントに定義されたものと同じアクティビティで発生します。 サービスに独自のアクティビティと転送が定義されている場合、そのサービス トレースは、クライアントにより伝達されたアクティビティには表示されません。 その代わり、クライアントから ID が伝達されたアクティビティに、転送トレースにより、関連付けられたアクティビティにサービス トレースが表示されます。  
   
 > [!NOTE]
->  場合、`propagateActivity`属性に設定されている`true`両方のクライアントとサービスで、WCF によってサービスの操作スコープ内のアンビエント アクティビティが設定されます。  
+>  場合、`propagateActivity`属性に設定されて`true`でクライアントとサービスの両方で、サービスの操作のスコープでアンビエント アクティビティは、WCF によって設定されます。  
   
- 次のコードを使用すると、アクティビティは、WCF によってスコープで設定されたかどうかを確認します。  
+ 次のコードを使用すると、WCF によって、アクティビティがスコープ内で設定されたかどうかを確認します。  
   
-```  
+```csharp
 // Check if an activity was set in scope by WCF, if it was   
 // propagated from the client. If not, ( ambient activity is   
 // equal to Guid.Empty), create a new one.  
@@ -96,18 +96,18 @@ ts.TraceEvent(TraceEventType.Stop, 0, "Add Activity");
 ## <a name="tracing-exceptions-thrown-in-code"></a>コード内でスローされる例外のトレース  
  コード内で例外をスローする場合、次のコードを使用して警告以上のレベルでその例外をトレースすることもできます。  
   
-```  
+```csharp
 ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessage");  
 ```  
   
 ## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>サービス トレース ビューアー ツールでのユーザー トレースの表示  
- このセクションを実行して生成されたトレースのスクリーン ショットが含まれています、[トレースを拡張する](../../../../../docs/framework/wcf/samples/extending-tracing.md)を使用して表示するときに、サンプリング、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)です。  
+ このセクションを実行して生成されたトレースのスクリーン ショットが含まれています、[トレース拡張](../../../../../docs/framework/wcf/samples/extending-tracing.md)を使用して表示するときに、サンプリング、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)します。  
   
- 次の図では、以前作成した「Add 要求」アクティビティが左側のパネルで選択されます。 アプリケーション クライアント プログラムを構成する他の 3 つの算術演算アクティビティ (Divide、Subtract、Multiply) も表示されています。 どの要求でどのようなエラーが発生したかを明確にするため、ユーザー コードでは、操作ごとに新しいアクティビティが 1 つ定義されています。  
+ 次の図では、以前に作成した「Add 要求」アクティビティが左側のパネルで選択されます。 アプリケーション クライアント プログラムを構成する他の 3 つの算術演算アクティビティ (Divide、Subtract、Multiply) も表示されています。 どの要求でどのようなエラーが発生したかを明確にするため、ユーザー コードでは、操作ごとに新しいアクティビティが 1 つ定義されています。  
   
- 転送の使用を示すために、[トレースを拡張する](../../../../../docs/framework/wcf/samples/extending-tracing.md)サンプルについては、次の 4 つの操作要求をカプセル化する Calculator アクティビティも作成します。 要求があるたびに、Calculator アクティビティから該当する要求のアクティビティへ、または該当する要求のアクティビティから Calculator アクティビティへ移転します (図の右上のパネルにトレースが表示されています)。  
+ 転送の使用を示すために、[トレース拡張](../../../../../docs/framework/wcf/samples/extending-tracing.md)サンプルでは、4 つの操作要求をカプセル化する Calculator アクティビティも作成されます。 要求があるたびに、Calculator アクティビティから該当する要求のアクティビティへ、または該当する要求のアクティビティから Calculator アクティビティへ移転します (図の右上のパネルにトレースが表示されています)。  
   
- 左のパネルでアクティビティを選択すると、そのアクティビティによって追加されたトレースが右上のパネルに表示されます。 場合`propagateActivity`は`true`要求に参加しているすべてのプロセスからトレースの要求アクティビティでは、要求パス内の各エンドポイントでします。 このサンプルでは、クライアントおよびサービスからのトレースをパネルの 4 番目の列で参照できます。  
+ 左のパネルでアクティビティを選択すると、そのアクティビティによって追加されたトレースが右上のパネルに表示されます。 場合`propagateActivity`は`true`request アクティビティ トレースは、要求に参加しているすべてのプロセスからの要求パス内のすべてのエンドポイントにします。 このサンプルでは、クライアントおよびサービスからのトレースをパネルの 4 番目の列で参照できます。  
   
  このアクティビティは次の順序で処理を行います。  
   
@@ -126,7 +126,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![トレース ビューアー: ユーザーを出力する&#45;トレース コード](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 作成時刻によるアクティビティのリスト (左のパネル)、および入れ子にされたアクティビティ (右上のパネル)  
   
- クライアントがスローする原因となる例外を、サービス コードがスローする場合 (たとえば、クライアントが要求に対する応答を取得できなかった場合など)、直接的な相関関係を示すために、サービスとクライアントの両方の警告メッセージまたはエラー メッセージは、同じアクティビティ内に発生します。 次の図で、サービスは「サービスの退出をユーザー コードでは、この要求を処理します」という例外をスローします。 クライアントは、「サーバーでした内部エラーのため要求を処理できません。」という例外もがスローされます。  
+ クライアントがスローする原因となる例外を、サービス コードがスローする場合 (たとえば、クライアントが要求に対する応答を取得できなかった場合など)、直接的な相関関係を示すために、サービスとクライアントの両方の警告メッセージまたはエラー メッセージは、同じアクティビティ内に発生します。 次の図に、サービスは、「サービスはユーザー コードでは、この要求の処理には拒否します」という例外をスローします クライアントでは、「サーバーでした内部エラーのための要求を処理できません」という例外もスローされます。  
   
  ![ユーザーを出力するトレース ビューアーを使用した&#45;トレース コード](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 要求アクティビティ ID が伝達された場合、どのエンドポイントで発生したかにかかわらず、その要求に関するすべてのエラーが同じアクティビティに表示されます。  
@@ -136,7 +136,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![ユーザーを出力するトレース ビューアーを使用した&#45;トレース コード](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 エラーの相関関係のグラフ表示  
   
- 以前のトレースを取得するには、ユーザー トレース ソースに対して `ActivityTracing` を設定し、`propagateActivity=true` トレース ソースに対して `System.ServiceModel` を設定します。 ユーザー コード間のアクティビティの伝達を有効にするため、`ActivityTracing` トレース ソースの `System.ServiceModel` は設定されていません  (ServiceModel アクティビティ トレースが on の場合、クライアントに定義されたアクティビティ ID は反映されませんにサービスのユーザー コードです。転送では、ただし、関連しているクライアントとサービスのユーザー コード アクティビティの中間の WCF 活動。)  
+ 以前のトレースを取得するには、ユーザー トレース ソースに対して `ActivityTracing` を設定し、`propagateActivity=true` トレース ソースに対して `System.ServiceModel` を設定します。 ユーザー コード間のアクティビティの伝達を有効にするため、`ActivityTracing` トレース ソースの `System.ServiceModel` は設定されていません。 (ServiceModel アクティビティ トレースが on の場合、クライアントで定義されているアクティビティ ID は反映されませんにサービスのユーザー コードです。転送では、ただし、アクティビティの関連付け、クライアントとサービスのユーザー コードに中間の WCF アクティビティ。)  
   
  アクティビティを定義してアクティビティ ID を伝達することにより、エンドポイント間でエラーの直接相関関係を実行できます。 このようにして、エラーの根本原因をよりすばやく見つけることができるようになります。  
   

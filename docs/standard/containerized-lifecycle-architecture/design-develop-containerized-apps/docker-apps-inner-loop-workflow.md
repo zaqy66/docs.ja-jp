@@ -1,102 +1,102 @@
 ---
-title: Docker アプリ用の内部ループ開発ワークフロー
+title: Docker アプリの内部ループ開発ワークフロー
 description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9e578599c61053704202946772c43bdb5ef895c2
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: be9c3fe165be32df43073919904b85120c52d595
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105590"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50034462"
 ---
-# <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリ用の内部ループ開発ワークフロー
+# <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 
-サイクル全体の DevOps のまたがりメモリ割り当て、外側のループ ワークフローをトリガーする前に、各開発者のコンピューターで、アプリ自体をコーディング、言語またはプラットフォームを使用して、およびそれをローカルでのテスト (図 4-14) はすべて開始します。 すべてのケースでする必要が非常に重要なポイント共通に、選択した言語、フレームワーク、またはプラットフォームに関係なく。 この特定のワークフローで常に開発およびテストして、Docker コンテナーなくローカルです。
+サイクル全体の DevOps のまたがりメモリ割り当て、外側のループのワークフローをトリガーする前に、各開発者のコンピューターで、アプリ自体のコーディングや、好みの言語またはプラットフォームを使用してローカルでテストして (図 4-14) すべてが開始されます。 すべてのケースでは非常に重要なポイントに共通どのような言語、フレームワーク、またはプラットフォームを選んでも。 この特定のワークフローで常に開発およびがローカルで Docker コンテナーをテストします。
 
 ![](./media/image18.png)
 
 図 4-14: 内部ループ開発コンテキスト
 
-これらのコンポーネントは、コンテナーまたは Docker イメージのインスタンスが含まれます。
+コンテナーまたは Docker イメージのインスタンスは、これらのコンポーネントが含まれます。
 
--   たとえば、Linux ディストリビューション (Windows) オペレーティング システムの選択
+-   (たとえば、Linux ディストリビューションまたは Windows)、オペレーティング システムの選択
 
--   Developer (アプリのバイナリなど) によって追加されたファイル
+-   (たとえば、アプリ バイナリ) の開発者によって追加されたファイル
 
--   (たとえば、環境の設定と依存関係) の構成
+-   構成 (たとえば、環境の設定との依存関係)
 
--   Docker によって実行するどのようなプロセスの手順
+-   Docker で実行するどのようなプロセスの手順
 
-(次のセクションで説明) のプロセスとして Docker を使用する内部ループ開発ワークフローを設定することができます。 考慮する、環境をセットアップする最初の手順は含まれず、1 回だけを行う必要があるため。
+(次のセクションで説明されている) プロセスとして Docker を使用する内部ループ開発ワークフローを設定することができます。 環境を設定するには、最初の手順が含まれているがないことを考慮に入れてを 1 回だけ実行する必要があるためです。
 
 ## <a name="building-a-single-app-within-a-docker-container-using-visual-studio-code-and-docker-cli"></a>Visual Studio Code と Docker CLI を使用して、Docker コンテナー内の 1 つのアプリの構築
 
-アプリは、独自のサービスと追加のライブラリ (依存関係) から構成されています。
+アプリは、独自のサービスとその他のライブラリ (依存関係) から構成されます。
 
-図 4-15 では、通常、各ステップの詳細な説明を続けて、Docker アプリを構築するときに実行するために必要な基本手順を示します。
+図 4-15 では、通常は各手順の詳細な説明の後に、Docker アプリを構築するときに実行するために必要な基本手順を示します。
 
 ![](./media/image19.png)
 
-Docker CLI を使用する Docker コンテナー詰めアプリケーション ライフ サイクルの図 4-15: 高度なワークフロー
+Docker CLI を使用してコンテナー化された Docker アプリケーションのライフ サイクルの高度なワークフローを図 4-15:
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>手順 1: Visual Studio のコードでコーディングを開始し、初期アプリケーション/サービスの基準を作成します。
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>手順 1: Visual Studio Code でコーディングを開始し、アプリやサービスの初期ベースラインを作成します。
 
-アプリケーションを開発する方法は、Docker なく行う方法に非常に似ています。 違いは、開発中に展開しているアプリケーションまたは (Linux VM または Windows) など、ローカル環境に配置している Docker コンテナー内で実行されているサービスをテストします。
+アプリケーションを開発する方法は、Docker を使用しないことを行う方法とよく似ています。 違いは、開発中に、展開しているアプリケーションまたは (Windows や Linux VM) など、ローカル環境で配置された Docker コンテナー内で実行されているサービスをテストします。
 
 **ローカル環境の設定**
 
-Mac および Windows 向けの Docker の最新のバージョンがこれまでに、Docker のアプリケーションの開発よりも簡単と、セットアップは簡単です。
+Mac および Windows 用 Docker の最新バージョンでは、これまでに、Docker アプリケーションの開発よりも簡単ですし、セットアップは簡単です。
 
-**詳細については** Docker for Windows の設定手順についてを参照してください[ https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)です。
+**詳細については** Docker for Windows の設定手順についてを参照してください[ https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)します。
 
-Mac の Docker を設定する方法についてを参照してください<https://docs.docker.com/docker-for-mac/>です。
+Docker for Mac の設定手順については、<https://docs.docker.com/docker-for-mac/>します。
 
 さらに、実際に Docker CLI を使用しているときにアプリケーションを開発することができるように、コード エディターが必要があります。
 
-Microsoft は、軽量なコード エディターで IntelliSense を示し、Mac、Windows、および Linux ではサポートされているは、Visual Studio のコードを提供[の多数の言語サポート](https://code.visualstudio.com/docs/languages/overview)(JavaScript、.NET、移動、Java、Ruby、Python、およびほとんど最新の言語)、[デバッグ](https://code.visualstudio.com/Docs/editor/debugging)、 [Git と統合](https://code.visualstudio.com/Docs/editor/versioncontrol)と[拡張機能のサポート](https://code.visualstudio.com/docs/extensions/overview)です。 このエディターは、Mac および Linux の開発者にとって最適です。 Windows もに、完全な Visual Studio アプリケーションを使用できます。
+Microsoft は、Visual Studio Code では、軽量なコード エディターは、Mac、Windows、および Linux でサポートされ、IntelliSense を提供しますです[多くの言語サポート](https://code.visualstudio.com/docs/languages/overview)(JavaScript、.NET、Go、Java、Ruby、Python、およびほとんど最新の言語の)[デバッグ](https://code.visualstudio.com/Docs/editor/debugging)、 [Git との統合](https://code.visualstudio.com/Docs/editor/versioncontrol)と[拡張機能のサポート](https://code.visualstudio.com/docs/extensions/overview)します。 このエディターは、Mac および Linux の開発者に最適です。 Windows でもに完全な Visual Studio アプリケーションを使用できます。
 
-**詳細については** か、Visual Studio for Windows、Mac、Linux をインストールする方法の詳細についてを参照してください[ http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/)です。
+**詳細については** Visual Studio for Windows、Mac、または Linux をインストールする方法の詳細についてを参照してください<https://code.visualstudio.com/docs/setup/setup-overview/>します。
 
-Docker CLI を使用して、コード エディターを使用して、コードの記述が Visual Studio のコードを使用する場合、作成者 Dockerfile を容易に行えます、docker compose.yml ファイル ワークスペースにします。 さらに、下に Docker CLI を使用して詳細な操作を実行できるスクリプトを要求する IDE から Visual Studio のコードのタスクを実行できます。
+Docker CLI を使用して、コード エディターを使用してコードを記述が Visual Studio Code を使用する場合、Dockerfile を作成することが容易と docker compose.yml ファイル ワークスペースでします。 さらに、メッセージの下に、Docker CLI を使用して、詳細な操作を実行できるスクリプトを表示する IDE から Visual Studio Code のタスクを実行できます。
 
-Visual Studio のコードは、インストールする必要があります拡張機能によって提供されます。 そのためには、キーを押して Ctrl + Shift + P、次のように入力します。 **ext インストール**、拡張機能を実行し: Marketplace 拡張機能の一覧を表示する拡張機能のインストール コマンド。 次に、入力**docker**結果をフィルター処理し、図 4-16 の図のように、Dockerfile と Docker 構成ファイル (yml) サポートの拡張機能を選択します。
+Visual Studio Code は、インストールする必要があります拡張機能によって提供されます。 キーを押して Ctrl + Shift + P、これを行うには、入力**ext インストール**、拡張機能を実行および: Marketplace 拡張機能の一覧を表示する拡張機能のインストール コマンド。 次に、入力**docker**結果をフィルター処理し、図 4-16 に示すように、Dockerfile と Docker Compose ファイル (yml) サポートの拡張機能を選択します。
 
 ![](./media/image20.png)
 
-図 4-16: Visual Studio のコードに Docker 拡張機能をインストールします。
+図 4-16: Visual Studio Code での Docker 拡張機能のインストール
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>手順 2: 既存のイメージ (plain OS または開発環境を .NET Core、Node.js、および Ruby など) に関連する DockerFile を作成します。
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>手順 2: 既存のイメージ (プレーンな OS または .NET Core、Node.js、Ruby などの開発環境) に関連する DockerFile を作成します。
 
-カスタム イメージを構築および配置するコンテナーごとに、DockerFile は必要があります、したがって、1 つのカスタム サービスのアプリが構成されている場合する必要があります単一 DockerFile です。 しかし、アプリが複数のサービス (microservices アーキテクチャ) のように構成されている場合は、サービスごとの 1 つの Dockerfile を必要があります。
+カスタム イメージを構築およびデプロイするコンテナーごとに DockerFile が必要になります、そのため、1 つのカスタム サービスのアプリが構成されている場合は、DockerFile が 1 つを必要があります。 アプリが (マイクロ サービス アーキテクチャ) のように複数のサービスで構成される場合、サービスごとの 1 つの Dockerfile が必要があります。
 
-DockerFile は通常、アプリやサービスのルート フォルダー内に配置しているし、その Docker を設定し、そのアプリやサービスを実行する方法を認識するために必要なコマンドが含まれています。 DockerFile を作成し、コードと共にプロジェクトに追加することができます (node.js、.NET Core など)、または、環境に新しい場合は、次のヒントを確認します。
+DockerFile では、通常は、アプリまたはサービスのルート フォルダー内に配置され、Docker を設定して、そのアプリやサービスを実行する方法を認識できるように、必要なコマンドが含まれています。 DockerFile を作成し、コードと共にプロジェクトに追加 (.NET Core、node.js など)、または、環境に慣れていない場合、次のヒントを参照してください。
 
 > [!TIP]
-> というコマンド ライン ツールを使用する[yo docker](https://github.com/Microsoft/generator-docker)を選択して、必要な Docker 構成ファイルに追加の言語のプロジェクトからファイルをスキャフォールディングします。 基本的には、開発者が作業の開始を支援するために作成、適切な DockerFile で docker compose.yml、およびその他の関連付けられているスクリプトをビルドして、Docker コンテナーを実行します。 この yeoman ジェネレーターに、選択した開発言語と移行先コンテナーのホストを確認するいくつかの質問を求められます。
+> というコマンド ライン ツールを使用する[yo docker](https://github.com/Microsoft/generator-docker)言語を選択して、必要な Docker 構成ファイルを追加で、プロジェクトからファイルをスキャフォールディングします。 基本的には、開発者の作業の開始を支援するために作成、適切な DockerFile、docker-compose.yml とその他の関連のスクリプトをビルドして Docker コンテナーを実行します。 選択した開発言語と移行先コンテナーのホストを確認するいくつかの質問はこの yeoman ジェネレーターから求められます。
 
 ![yo docker](./media/image21.png)
 
-たとえば、図 4-17 を示しています、端末から 2 つのスクリーン ショット windows と Mac では、どちらの場合も、実行されている yo、docker で動作するよう既に構成サンプルのコード プロジェクト (.NET Core では現在、Golang、および Node.js としてサポートされている言語) を生成します。Docker の上部に表示。
+たとえば、図 4-17 を示しています、端末からの 2 つのスクリーン ショットでは、Windows と Mac では、どちらの場合も、実行されている yo docker で作業を既に構成されているサンプル コード プロジェクト (.NET Core では現在、Golang、およびサポートされている言語として Node.js を使用) が生成されます。Docker の先頭。
 
 ![](./media/image22.PNG)  ![](./media/image23.png)
 
-図 4-17: yo docker コマンド ツール ウィンドウ (左) と、Mac 上
+図 4-17: yo docker コマンド ツール (左) の Windows と Mac
 
-図 4-18 では、docker を使用した yo を作成したら、既存の .NET Core プロジェクトをスキャフォールディングする例を示します。
+図 4-18 では、docker を使用して yo をスキャフォールディングする場所に既存の .NET Core プロジェクトを用意した後例を示します。
 
 ![](./media/image24.PNG)
 
-図 4 ~ 18: yo 既存の .NET Core の docker でプロジェクトを配置
+図 4-18: yo の既存の .NET Core の docker プロジェクト実施中
 
-DockerFile からは、(microsoft/dotnet:1.0.0-core"から"を使用して) などが使用されるどのような基本の Docker イメージを指定します。 任意の正式なリポジトリから取得できる基本イメージの上にカスタム イメージ ビルドは通常、 [Docker Hub レジストリ](https://hub.docker.com/)(と同様に、 [.NET Core のイメージ](https://hub.docker.com/r/microsoft/dotnet/)または 1 個[for Node.js](https://hub.docker.com/_/node/)).
+DockerFile からは、(microsoft/dotnet:1.0.0-core"から"を使用して) などに使用する基本の Docker イメージを指定します。 通常、公式のリポジトリでから取得できる基本イメージ上にカスタム イメージをビルドは、 [Docker Hub レジストリ](https://hub.docker.com/)(など、 [.NET Core のイメージ](https://hub.docker.com/r/microsoft/dotnet/)1 つまたは[for Node.js](https://hub.docker.com/_/node/)).
 
-***オプション a: を使用する既存の正式な Docker イメージ***
+***オプション a: 既存公式 Docker イメージを使用します。***
 
-バージョン番号を持つ言語スタックの公式のリポジトリを使うと、同じ言語の機能が (開発、テスト、および実稼働環境を含む) すべてのマシンで使用できることができます。
+バージョン番号を持つ言語のスタックの公式のリポジトリを使用してにより、同じ言語機能が (開発、テスト、および運用環境を含む) すべてのコンピューターで使用できます。
 
-.NET Core コンテナー用 DockerFile のサンプルを次に示します。
+.NET Core コンテナーのサンプル DockerFile を次に示します。
 
 ```
 # Base Docker image to use
@@ -114,56 +114,56 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-この場合、使用されている公式の ASP.NET Core Docker イメージのバージョン 1.0.1 for Linux microsoft/aspnetcore:1.0.1 をという名前です。 詳細についてを参照してください、 [ASP.NET Core Docker イメージ ページ](https://hub.docker.com/r/microsoft/aspnetcore/)と[.NET Core Docker イメージ ページ](https://hub.docker.com/r/microsoft/dotnet/)です。 でした使用するノード: 4 などの別の比較可能なイメージ-Node.js、または開発言語で提供されているその他の多くの事前構成済みイメージの onbuild [Docker Hub](https://hub.docker.com/explore/)です。
+この場合は、Linux microsoft/aspnetcore:1.0.1 という名前の公式の ASP.NET Core Docker イメージのバージョン 1.0.1 以降を使用しては。 詳細についてを参照してください、 [ASP.NET Core Docker イメージ ページ](https://hub.docker.com/r/microsoft/aspnetcore/)と[.NET Core Docker イメージ ページ](https://hub.docker.com/r/microsoft/dotnet/)します。 でしたするイメージを使用するもう 1 つ比較可能なノード: 4 のように、Node.js、またはその他の多くの事前構成済みイメージで提供されている開発言語の onbuild [Docker Hub](https://hub.docker.com/explore/)。
 
-DockerFile で (ポート 80) などの実行時に使用する TCP ポートをリッスンするように Docker に指示する必要があります。
+DockerFile では、(ポート 80) などの実行時に使用する TCP ポートをリッスンするように Docker に指示する必要があります。
 
-Docker は、アプリを実行する方法を認識しているように、dockerfile を使用している言語/フレームワークによって追加できる構成の他の行があります。 インスタンスでは、ENTRYPOINT 行が必要な\["dotnet"、"MyCustomMicroservice.dll"\]をビルドして、サービスを実行する方法に応じて複数のバリアントを持つことができますが、.NET Core のアプリを実行します。 .NET アプリをビルドして、実行、SDK と dotnet CLI を使用している場合は、若干異なるがなります。 一番下の行が、ENTRYPOINT 行と追加の行になりますアプリケーション用に選択した言語またはプラットフォームによって異なります。
+Docker は、アプリを実行する方法を認識できるように、DockerFile を使用している言語/フレームワークに応じてで追加できる構成の他の行があります。 たとえば、必要があるのでは、ENTRYPOINT 行\["dotnet"、"MyCustomMicroservice.dll"\]をビルドして、サービスの実行方法によっては、複数のバリアントを設定できますが、.NET Core アプリを実行します。 SDK と dotnet CLI をビルドして、.NET アプリの実行を使用している場合は、若干異なるがなります。 一番下の行は、ENTRYPOINT 行と行が追加されるアプリケーション用に選択した言語とプラットフォームによって異なります。
 
-**詳細については** .NET Core アプリケーションの Docker イメージを構築する方法についてを参照してください<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>です。
+**詳細については** .NET Core アプリケーション用の Docker イメージを構築する方法の詳細についてを参照してください<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>します。
 
-独自のイメージの構築に関する詳細については、するには[ https://docs.docker.com/engine/\ チュートリアル/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)です。
+詳細については、独自のイメージを構築するには[ https://docs.docker.com/engine/\ チュートリアル/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)します。
 
 **マルチプラット フォームのイメージ リポジトリ**
 
-Windows コンテナーより多く使用されているになると、1 つのリポジトリは Linux と Windows イメージなどのプラットフォームのバリエーションを含めることができます。 これは、新しい機能により、複数のプラットフォームを対象に 1 つのリポジトリを使用する仕入先の Docker が受け取った[microsoft/aspdotnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) dockerhub を使用してレジストリで利用可能なリポジトリ。 機能が有効になると、このイメージを Windows ホストからプルすると、Linux バリアントがプルする Linux ホストから同じイメージの名前をプルする一方には Windows バリアントが除去されます。
+Windows コンテナーより一般的になると、1 つのリポジトリは、Linux および Windows のイメージなどのプラットフォーム バリアントを含めることができます。 これにより、複数のプラットフォームを対象に 1 つのリポジトリを使用する仕入先の Docker で新機能は、 [microsoft/aspdotnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) DockerHub レジストリでは使用できるリポジトリ。 ように、この機能は、アライブに関しては、Windows ホストからのこのイメージのプルをプルする、Windows バリアントは、Linux バリアントがプルは Linux ホストから同じイメージ名を取得します。
 
-***基本イメージを最初からオプション b: を作成***
+***一から基本イメージをオプション b: 作成***
 
-これで説明したよう、最初から独自 Docker の基本イメージを作成することができます[記事](https://docs.docker.com/engine/userguide/eng-image/baseimages/)Docker からです。 これは、シナリオ Docker、によって起動した場合に、最適な可能性がありますが、独自の基本イメージの特定のビットを設定する場合は、行うことができます。
+これで説明したように、最初から、独自の Docker 基本イメージを作成することができます[記事](https://docs.docker.com/engine/userguide/eng-image/baseimages/)Docker から。 これはシナリオですが、Docker を使い始めたばかりの場合に適していない可能性がありますが、基本イメージの特定のビットを設定する場合は、行うことができます。
 
-### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>手順 3: 埋め込みことで、サービス、カスタム Docker イメージを作成します。
+### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>手順 3: ことで、サービスを埋め込み、カスタム Docker イメージを作成します。
 
 サービスごとにカスタム アプリを構成するには、関連するイメージを作成する必要があります。 1 つのサービスまたは web アプリのアプリが構成されている場合は、1 つのイメージを必要があります。
 
 > [!NOTE]
-> "外側のループ DevOps workflow"を考慮に入れて、イメージから作成されます自動ビルド プロセスによって、ソース コードをリポジトリにプッシュ Git (継続的インテグレーション) ため、イメージはグローバル環境で作成されるたびに、ソース コードです。
+> 「外側のループ DevOps ワークフロー」を考慮に入れて、イメージから作成されるビルド プロセスを自動化して、イメージはグローバル環境で作成できるように、Git リポジトリ (継続的インテグレーション) に、ソース コードをプッシュするたびに、ソース コードです。
 
-しかし、その外側のループのルートに、考慮する前に、Docker アプリケーションが実際には正しく動作するソース管理システム (Git など) が正しく動作しないコードをプッシュしないようにすることを確認する必要があります。
+ただし、その外側のループのルートに、検討する前に、Docker アプリケーションが実際に正しく動作するソース管理システム (Git など) が正しく動作しないコードをプッシュしないようにすることを確認する必要があります。
 
-そのため、各開発者が最初にために必要な内部ループ プロセス全体をローカルでテストし、完全な機能をプッシュまたはソース管理システムを変更するまでの開発を続行します。
+したがって、各開発者をローカルでテストし、完全な機能をプッシュするか、ソース管理システムに変更するまでの開発を続ける全体の内側のループ処理を行う最初が必要です。
 
-図 4-19 に示すように、ローカル環境と、DockerFile を使用してイメージを作成するに docker ビルド コマンドを使用することができます (実行することもできます docker 構成設定によっていくつかのコンテナー/サービスで構成されたアプリケーションの構築) します。
+図 4-19 に示すよう、ローカル環境と DockerFile を使用して、イメージを作成する docker ビルド コマンドを使用することができます (を実行することも、docker-compose up をいくつかのコンテナー/サービスによって構成されたアプリケーションのビルド)。
 
 ![](./media/image25.png)
 
 図 4-19: docker のビルドの実行
 
-必要に応じて、docker を直接実行する代わりに、プロジェクトのフォルダーからビルド最初できますを生成して、配置可能なフォルダー実行 dotnet を使用してコマンドを発行し、docker ビルドを実行に必要な .NET ライブラリとします。
+まずを作成して展開可能なフォルダー実行 dotnet を使用して、コマンドを発行し、docker のビルドを実行に必要な .NET ライブラリと、必要に応じて、docker を直接実行する代わりに、プロジェクトのフォルダーから構築できます。
 
-この例では、名前 cesardl/netcore-webapi-マイクロ サービスを Docker イメージを作成これ-docker: 最初 (: 1 つ目は、特定のバージョンと同様に、タグ)。 複数のコンテナーを使用して構成済みの Docker アプリケーションを作成する必要がカスタム イメージごとにこの手順を実行できます。
+この例で、名前 cesardl/netcore から web api マイクロ サービスで Docker イメージを作成これ-docker: 最初 (: 特定のバージョンのように、タグを 1 つ目は)。 複数のコンテナーで、構成した Docker アプリケーションを作成する必要がある各カスタム イメージでは、この手順を実行できます。
 
-既存のイメージ、ローカル リポジトリ (開発用コンピューター) に、docker を使用してイメージ コマンドは検索できます、図 4-20 を示すようにします。
+既存のイメージで見つかりますローカル リポジトリ (開発用コンピューター)、docker を使用してイメージのコマンドを図 4-20 に示すようにします。
 
 ![](./media/image26.png)
 
-図 4-20: docker のイメージを使用して既存のイメージを表示します。
+図 4-20: docker イメージを使用して既存のイメージを表示します。
 
-### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>手順 4: (省略可能) を定義する docker compose.yml の複数のサービスで構成される Docker アプリを構築するときに、サービス
+### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>手順 4: (省略可能) を定義するには、docker-compose.yml で複数のサービスで構成される Docker アプリのビルド時にサービス
 
-Docker compose.yml ファイルでは、次の手順」セクションで説明する展開コマンドを使用して構築されたアプリケーションとして展開に関連するサービスのセットを定義できます。
+Docker compose.yml ファイルを使用して、次のセクションの手順で説明されている展開コマンドを使用して、構成されたアプリケーションとしてデプロイに関連するサービスのセットを定義できます。
 
-その、main でファイルまたはソリューションのルート フォルダー; を作成する必要があります。類似のコンテンツは、次の docker compose.yml ファイルにこれが必要です。
+そのファイルでメインまたはルート ソリューション フォルダーを作成する必要があります。次の docker compose.yml ファイルに類似のコンテンツになります。
 
 ```yml
 version: '2'
@@ -180,21 +180,21 @@ services:
     image: redis
 ```
 
-この特定のケースでは、このファイルは 2 つのサービスを定義します。 web サービス (カスタム サービス) と redis サービス (一般的なキャッシュ サービス)。 各サービスには、コンテナーとしてデプロイため、各具象 Docker イメージを使用する必要があります。 この特定の web サービスのイメージは、以下を行う必要があります。
+このケースでこのファイルは 2 つのサービスを定義します。 web サービス (カスタム サービス) と、redis サービス (一般的なキャッシュ サービス)。 各サービスは、各具象の Docker イメージを使用する必要があります、コンテナーとしてデプロイされます。 この特定の web サービスのイメージは、以下を行う必要があります。
 
--   現在のディレクトリに、DockerFile をビルドします。
+-   現在のディレクトリに DockerFile からビルドします。
 
--   公開されているポート 80 をコンテナー ホスト マシン上のポート 81 上を転送します。
+-   公開されているポート 80 をコンテナー ホスト コンピューター上でポート 81 上での転送します。
 
--   /Code、コンテナー内にイメージを再作成しなくても、コードを変更できるようにするホスト上のプロジェクト ディレクトリをマウントします。
+-   イメージを再構築することがなく、コードを変更することができるので、コンテナー内で指定するホスト上のプロジェクト ディレクトリをマウントします。
 
--   Redis サービスへの web サービスをリンクします。
+-   Redis サービスに web サービスをリンクします。
 
-Redis サービスが使用、[最新公開 redis イメージ](https://hub.docker.com/_/redis/)Docker Hub レジストリから取得します。 [redis](https://redis.io/)はサーバー側アプリケーション用のキャッシュが非常に一般的なシステムです。
+Redis サービスの使用、[最新のパブリック redis イメージ](https://hub.docker.com/_/redis/)Docker Hub レジストリからプルします。 [redis](https://redis.io/)はサーバー側アプリケーションでの非常に人気のあるキャッシュ システムです。
 
-### <a name="step-5-build-and-run-your-docker-app"></a>手順 5: ビルドし、Docker のアプリの実行
+### <a name="step-5-build-and-run-your-docker-app"></a>手順 5: ビルドして Docker アプリの実行
 
-アプリに 1 つのコンテナーのみがある場合だけ、(VM または物理サーバー) は Docker ホストに展開することで実行する必要があります。 ただし、複数のサービス、アプリが構成されている場合必要*組み立てる*、すぎます。 さまざまなオプションを確認してみましょう。
+アプリに 1 つのコンテナーのみがある場合だけ、Docker ホスト (VM または物理サーバー) にデプロイして実行する必要があります。 ただし、複数のサービス、アプリが構成されている場合をする必要があります*組み立てること*もします。 さまざまなオプションを見てみましょう。
 
 ***A: 実行の 1 つのコンテナーまたはサービスをオプションします。***
 
@@ -205,57 +205,57 @@ docker run -t -d -p 80:5000
 cesardl/netcore-webapi-microservice-docker:first
 ```
 
-この特定の展開のおありますリダイレクト 5000 内部ポートにポート 80 に送信された要求に注意してください。 ここで、外部ポート 80、ホスト レベルで、アプリケーションがリッスンしています。
+この配置のいます 要求をリダイレクトする内部ポート 5000 をポート 80 に送信されるに注意してください。 ここで、アプリケーションは外部ポート、ホスト レベル 80 でリッスンします。
 
-***オプション b: 作成と実行、複数のコンテナー アプリケーション***
+***オプション b: Compose とマルチ コンテナー アプリケーションを実行***
 
-ほとんどのエンタープライズ シナリオでは、Docker アプリケーションを複数のサービスはから構成されます。 このような場合は、コマンドを実行して docker 構成を (図 4-21)、以前作成した可能性があります、docker compose.yml ファイルを使用します。 このコマンドを実行するいると、そのすべての関連するコンテナーで構成されるアプリケーションが展開します。
+ほとんどのエンタープライズ シナリオでは、Docker アプリケーションを複数のサービスはから構成します。 コマンドを実行するような場合、docker compose を (図 4-21)、以前作成した可能性があります、docker-compose.yml ファイルを使用します。 このコマンドを実行するには、すべての関連するコンテナーの構成済みのアプリケーションはデプロイします。
 
 ![](./media/image27.png)
 
-図 4-21:「docker の構成を」コマンドの実行結果
+図 4-21:"、docker-compose up"コマンドの実行結果
 
-Docker を実行した後に作成、展開するアプリケーションとその関連するコンテナー、Docker ホストに VM 形式を図 4-22 を示すようにします。
+Docker を実行した後、compose をデプロイする必要が、アプリケーションとその関連コンテナー、Docker ホストに VM の表記で図 4-22 に示すようにします。
 
 ![](./media/image28.png)
 
-図 4-22: VM 展開されている Docker コンテナーを
+図 4-22: VM にデプロイされた Docker コンテナー
 
-注 docker の構成と docker の実行は、開発環境で、コンテナーのテストに対して十分である可能性がありますがいないそれらを使用するすべての場合は Docker クラスターの操作を必要として、orchestrators などの Docker Swarm 続き DC/OS、Kubernetesためにスケール アップします。 ようにクラスターを使用している場合[Docker Swarm モード](https://docs.docker.com/engine/swarm/)(以降で使用可能では、Docker for Windows と Mac バージョン 1.12)、する必要がある配置した場合など、docker サービスを 1 つのサービスの作成やその他のコマンドをテストするにはバンドルを作成 docker を使用して複数のコンテナーで構成したアプリの配置、および docker が記事で説明したように、スタックとして構成済みのアプリを展開することで myBundleFile を展開[アプリケーション バンドルの分散](https://blog.docker.com/2016/06/docker-app-bundle/)Docker からです。
+注、docker-compose up および docker の実行は、開発環境で、コンテナーをテストするための十分に可能性がありますがないそれらを使用するすべての場合は、Docker クラスターの操作を想定しているし、Docker Swarm、Mesosphere DC/OS、または Kubernetes などのオーケストレータースケール アップできるようにするには。 などのクラスターを使用している場合[Docker Swarm mode](https://docs.docker.com/engine/swarm/)デプロイし、した場合など、docker サービスを 1 つのサービスの作成やその他のコマンドでテストに必要な (可能で、Docker for Windows と Mac バージョン 1.12 以降)、複数のコンテナーから成るアプリを展開するには、docker を使用してバンドルの作成し、docker は、情報の記事で説明したように、スタックとして構成済みのアプリを展開することで、myBundleFile をデプロイ[分散アプリケーション バンドル](https://blog.docker.com/2016/06/docker-app-bundle/)Docker から。
 
-[DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/)と[Kubernetes](http://kubernetes.io/docs/user-guide/deployments/#creating-a-deployment)は、さまざまな展開コマンドと、スクリプトを使用します。
+[DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/)と[Kubernetes](https://kubernetes.io/docs/user-guide/deployments/#creating-a-deployment)さまざまな展開コマンドと、スクリプトを使用します。
 
 ### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>手順 6: (ローカル CD VM) では、ローカルで Docker アプリケーションをテストします。
 
-この手順は、アプリが何によって異なります。
+この手順は、アプリの実行内容によって異なります。
 
-非常に単純な .NET Core Web API"Hello World"が 1 つのコンテナーまたはサービスとしてデプロイされている、DockerFile で指定された TCP ポートを提供することにより、サービスにアクセスするはだけです。
+非常に単純な .NET Core Web API の"Hello World"を 1 つのコンテナーまたはサービスとしてデプロイされている場合、DockerFile で指定された TCP ポートを提供することで、サービスにアクセスするとだけです。
 
-サービスに移動する localhost が有効でない場合は、このコマンドを使用して、マシンの IP アドレスを検出します。
+サービスに移動する localhost が有効でない場合は、このコマンドを使用して、マシンの IP アドレスを検索します。
 
 docker-machine ip *your-container-name*
 
-Docker ホストのブラウザーを開き、およびそのサイトに移動図 4-23 に示すようにを実行しているアプリ/サービスが表示されます。
+Docker ホストでは、ブラウザーを開いて、そのサイトに移動します図 4-23 に示すようにアプリ/サービスを実行して、参照してください必要があります。
 
 ![](./media/image29.png)
 
 図 4-23: localhost を使用してローカルで Docker アプリケーションのテスト
 
-上の説明に従って、実行、docker を使用した展開された方法であるためにはポート 80 が使用が内部的に 5000 のポートにリダイレクトされましたされていることに注意してください。
+前に説明したように、実行するには、docker で展開された方法であるためですはポート 80 が使用が内部的にはポート 5000 にリダイレクトされましたされていることに注意してください。
 
-端末から CURL を使用して、これをテストすることができます。 図 4 ~ 24 の図のよう、Windows で Docker のインストールでは、既定の IP、10.0.75.1、です。
+これは、CURL を使用して、ターミナルから、テストできます。 図 4-24 に示すように、Windows で Docker のインストールでは、既定の IP、10.0.75.1、です。
 
 ![](./media/image30.png)
 
-図 4 ~ 24: CURL を使用してローカルでの Docker アプリケーションのテスト
+図 4-24: CURL を使用してローカルの Docker アプリケーションのテスト
 
 **Docker で実行されているコンテナーのデバッグ**
 
-Visual Studio のコードは、Node.js と .NET Core コンテナーのようなその他のプラットフォームを使用している場合に、Docker のデバッグをサポートします。
+Visual Studio Code は、Node.js と .NET Core コンテナーなどの他のプラットフォームを使用している場合に、Docker のデバッグをサポートします。
 
-デバッグすることもできます Docker でコンテナーを .NET Core、Visual Studio を使用する場合、次のセクションで説明されているようです。
+デバッグすることもできます Docker で .NET Core コンテナー、Visual Studio を使用する場合、次のセクションで説明されているとします。
 
-**詳細情報:** Node.js Docker コンテナーのデバッグに関する詳細については、するには<https://blog.docker.com/2016/07/live-debugging-docker/>と[https://blogs.msdn.microsoft.com/\ユーザー\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)です。
+**詳細情報:** Node.js の Docker コンテナーのデバッグに関する詳細については、するには<https://blog.docker.com/2016/07/live-debugging-docker/>と[https://blogs.msdn.microsoft.com/\ユーザー\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)します。
 
 
 >[!div class="step-by-step"]

@@ -1,13 +1,13 @@
 ---
 title: F# Interactive (fsi.exe) のリファレンス
-description: 使用方法を学習 F# Interactive (fsi.exe) は、コンソールで F# コードを対話的に実行する、または F# スクリプトを実行します。
+description: 学習方法F#Interactive (fsi.exe) は、実行に使用されるF#対話的に、コンソールで、またはを実行するコードF#スクリプト。
 ms.date: 05/16/2016
-ms.openlocfilehash: b16ebcfe361ef50c7c7ba8510f01f6704e62ce3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564886"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170719"
 ---
 # <a name="interactive-programming-with-f"></a>F# による対話型プログラミング #
 
@@ -19,7 +19,15 @@ API リファレンスのリンクをクリックすると MSDN に移動しま�
 
 F# Interactive (fsi.exe) は、コンソールで F# コードを対話形式で実行したり、F# スクリプトを実行したりするために使用します。 つまり、F# Interactive は、F# 言語の REPL (Read、Evaluate、Print Loop) を実行します。
 
-コンソールから F# Interactive を実行するには、fsi.exe を実行します。  Fsi.exe が表示されます"c:\Program Files (x86) \Microsoft SDKs\F#\<バージョン > \Framework\<バージョン >\"です。 使用できるコマンド ライン オプションについては、「[F# Interactive Options](../../language-reference/fsharp-interactive-options.md)」 (F# Interactive オプション) を参照してください。
+コンソールから F# Interactive を実行するには、fsi.exe を実行します。  Fsi.exe で表示されます。
+
+```console
+C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
+```
+
+場所`sku`か`Community`、 `Professional`、または`Enterprise`します。
+
+使用できるコマンド ライン オプションについては、「[F# Interactive Options](../../language-reference/fsharp-interactive-options.md)」 (F# Interactive オプション) を参照してください。
 
 Visual Studio で F# Interactive を実行するには、ツール バーの **[F# Interactive]** というボタンをクリックするか、**Ctrl + Alt + F** キーを使用します。 この操作により、対話形式のウィンドウが開きます。このウィンドウは、F# Interactive セッションを実行するツール ウィンドウです 対話形式のウィンドウで実行するコードを選択し、**Alt + Enter** キーの組み合わせを押す方法もあります。 F# インタラクティブが **[F# Interactive]** というツール ウィンドウで開始されます。 このショートカット キーを使用するときは、エディター ウィンドウにフォーカスがあることを確認します。
 
@@ -89,7 +97,7 @@ test
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----|-----------|
-|[F# Interactive オプション](../../language-reference/fsharp-interactive-options.md)|F# Interactive のコマンドライン構文とオプションについて説明します fsi.exe です。|
+|[F# Interactive オプション](../../language-reference/fsharp-interactive-options.md)|コマンドライン構文について説明し、オプション、F#対話形式で、fsi.exe します。|
 |[F# Interactive ライブラリ リファレンス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|F# Interactive でコードを実行するときに使用できるライブラリ機能について説明します。|

@@ -15,11 +15,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49373696"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452915"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 構造体
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -66,7 +66,7 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FINALLY`|0x00000002|`finally` 句。|  
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|fault 句 (例外がスローされた場合にのみ `finally` 句が呼び出される)。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

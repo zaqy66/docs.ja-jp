@@ -2,12 +2,12 @@
 title: WCF 分析トレース
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 9464f2a4c9bc52134e439c98b06ae50c828a14f6
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850258"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181658"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析トレース
 このサンプルは、Windows Communication Foundation (WCF) が ETW に書き込む分析トレースのストリームに独自のトレース イベントを追加する方法を示します[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。 分析トレースは、パフォーマンスを低下させずに簡単にサービスを確認できるようにするためのものです。 このサンプルは、使用する方法を示します、 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api を WCF サービスと統合されるイベントを記述します。  
@@ -53,7 +53,7 @@ ms.locfileid: "48850258"
   
 4.  WCF テスト クライアント (WcfTestClient.exe) を実行します。  
   
-     WCF テスト クライアント (WcfTestClient.exe) にある、 \<Visual Studio 2012 のインストール ディレクトリ > \Common7\IDE\ WcfTestClient.exe (既定の Visual Studio 2012 のインストール ディレクトリは C:\Program files \microsoft Visual Studio 10.0)。  
+     WCF テスト クライアント (WcfTestClient.exe) は`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`します。 既定の Visual Studio 2012 のインストール ディレクトリは`C:\Program Files\Microsoft Visual Studio 10.0`します。  
   
 5.  選択して、サービスを追加、WCF テスト クライアント内で**ファイル**、し**サービスの追加**します。  
   

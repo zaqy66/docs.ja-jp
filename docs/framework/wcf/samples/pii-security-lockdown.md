@@ -2,13 +2,12 @@
 title: PII セキュリティ ロックダウン
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-author: BrucePerlerMS
-ms.openlocfilehash: df8dd9617ad7b12b298b82d2fa8909c2680f599a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: 48b62ed5c27463b863ff585520a4b42fc4c83f88
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397635"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50037088"
 ---
 # <a name="pii-security-lockdown"></a>PII セキュリティ ロックダウン
 このサンプルでは、によって、Windows Communication Foundation (WCF) サービスの複数のセキュリティ関連機能を制御する方法を示しています。  
@@ -46,7 +45,7 @@ ms.locfileid: "47397635"
   
 2.  コマンド「`cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`」を実行して、現在の .NET Framework ディレクトリに移動します。  
   
-3.  コマンド「`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`」を実行して、Web.config フォルダの appSettings 構成設定を暗号化します。  
+3.  コマンド「`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`」を実行して、Web.config フォルダーの appSettings 構成設定を暗号化します。  
   
  構成ファイルのセクションを暗号化する方法についての詳細については、ASP.NET 構成では DPAPI でに関する記事を参照して見つかんだことができます ([Building Secure ASP.NET Applications: 認証、承認、およびセキュリティで保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)) と ASP.NET の構成で RSA の使い方 ([How To: ASP.NET 2.0 を使用して RSA 暗号化の構成セクション](https://go.microsoft.com/fwlink/?LinkId=95138))。  
   

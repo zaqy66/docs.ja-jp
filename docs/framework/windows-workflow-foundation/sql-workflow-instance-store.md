@@ -2,12 +2,12 @@
 title: SQL Workflow Instance Store
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 680a233ca721cd8a0c620b797832419f460b13b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: d35cf6e94b010291276b5a543df1038715a0d50c
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594286"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453019"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL Workflow Instance Store
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] には SQL Workflow Instance Store が含まれます。これを使用すると、ワークフロー インスタンスに関する状態情報を SQL Server 2005 または SQL Server 2008 のデータベースに永続化できます。 この機能は主に <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> クラスの形式で実装されます。このクラスは永続化フレームワークの <xref:System.Runtime.DurableInstancing.InstanceStore> 抽象クラスから派生します。 SQL Workflow Instance Store 機能によって SQL 永続性プロバイダーを構成します。このプロバイダーは、ホストが永続化コマンドをストアに送信するときに使用する永続化 API の具象実装です。  
@@ -18,7 +18,7 @@ ms.locfileid: "45594286"
   
  このセクションのトピックでは、SQL Workflow Instance Store のプロパティと機能、およびストアの構成方法の詳細を説明します。  
   
- Windows Server App Fabric には、インスタンス ストアを簡単に構成および使用できる独自のインスタンス ストアとツールが用意されています。 詳細については、次を参照してください。 を参照してください[Windows Server App Fabric のインスタンス ストア](https://go.microsoft.com/fwlink/?LinkId=201201)します。 App Fabric SQL Server 永続性データベース参照の詳細については[App Fabric SQL Server 永続性データベース](https://go.microsoft.com/fwlink/?LinkId=201202)  
+ Windows Server App Fabric には、インスタンス ストアを簡単に構成および使用できる独自のインスタンス ストアとツールが用意されています。 詳細については、次を参照してください。 [Windows Server App Fabric のインスタンス ストア](https://go.microsoft.com/fwlink/?LinkId=201201)します。 App Fabric SQL Server 永続性データベース参照の詳細については[App Fabric SQL Server 永続性データベース](https://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

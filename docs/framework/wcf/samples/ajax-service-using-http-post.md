@@ -3,11 +3,11 @@ title: HTTP POST を使用する AJAX サービス
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
 ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372058"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50036334"
 ---
 # <a name="ajax-service-using-http-post"></a>HTTP POST を使用する AJAX サービス
 このサンプルでは Windows Communication Foundation (WCF) を使用して作成する方法、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Asynchronous JavaScript and XML (AJAX) サービス HTTP POST を使用します。 AJAX サービスには、Web ブラウザー クライアントから基本的な JavaScript コードを使用してアクセスできます。 このサンプルでビルド、[基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)サンプル; 2 つのサンプルの唯一の違いは、HTTP GET の代わりに HTTP POST を使用します。  

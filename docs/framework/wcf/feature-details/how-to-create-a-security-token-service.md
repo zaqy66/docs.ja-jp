@@ -8,13 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-author: BrucePerlerMS
-ms.openlocfilehash: 6dbf0e2be0a75fccd84a82fe2b3c8ab41762de83
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 5926216135429d235593aaf77ee0d29b0bacd8fa
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374423"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036503"
 ---
 # <a name="how-to-create-a-security-token-service"></a>方法 : セキュリティ トークン サービスを作成する
 セキュリティ トークン サービスは、WS-Trust 仕様に定義されているプロトコルを実装します。 このプロトコルでは、セキュリティ トークンの発行、更新、キャンセル、および検証を行うためのメッセージ形式とメッセージ交換パターンが定義されています。 セキュリティ トークン サービスでは、これらの機能が 1 つ以上提供されます。 ここでは、最も一般的なシナリオであるトークンの発行の実装について説明します。  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21295268ba5c230062fadddc9c61217f3574551b
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49370990"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041831"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager インターフェイス
 要求されたタスクに関する情報を取得し、その同期実装でデッドロックを検出するためにホストできるようにするメソッドを定義します。  
@@ -35,7 +35,7 @@ ms.locfileid: "49370990"
 |[GetMonitorOwner メソッド](iclrsyncmanager-getmonitorowner-method.md)|指定したモニターを所有するタスクを取得します。|  
 |[GetRWLockOwnerNext メソッド](iclrsyncmanager-getrwlockownernext-method.md)|現在のリーダー/ライター ロックを待機している次のタスクを取得します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** MSCorEE.h  
@@ -47,5 +47,5 @@ ms.locfileid: "49370990"
 ## <a name="see-also"></a>関連項目  
  <xref:System.Threading.Thread>  
  [IHostSyncManager インターフェイス](ihostsyncmanager-interface.md)  
- [マネージ コードとアンマネージ スレッド処理](/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
+ [マネージ コードとアンマネージ スレッド処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
  [ホスト インターフェイス](hosting-interfaces.md)

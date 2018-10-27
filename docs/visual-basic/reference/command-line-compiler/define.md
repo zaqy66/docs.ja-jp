@@ -9,14 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4de37c58543aed9ed13be8b0d2bcec9830ca9082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656101"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50044815"
 ---
 # <a name="-define-visual-basic"></a>-定義 (Visual Basic)
 条件付きコンパイル定数を定義します。  
@@ -34,10 +32,10 @@ ms.locfileid: "33656101"
 |用語|定義|  
 |---|---|  
 |`symbol`|必ず指定します。 定義する記号。|  
-|`value`|省略可能です。 `symbol` に代入する値。 場合`value`文字列で、バック スラッシュ/引用符のシーケンスで囲む必要があります (\\") 引用符の代わりにします。 値が指定されていない場合は、True として処理されます。|  
+|`value`|省略可能です。 `symbol` に代入する値。 場合`value`文字列で、シーケンスのバック スラッシュ/引用符で囲みます (\\") 引用符の代わりにします。 値が指定されていない場合は、True として処理されます。|  
   
-## <a name="remarks"></a>コメント  
- `-define`オプションを使用すると同様の効果を持つ、`#Const`プリプロセッサ ディレクティブで定義されているその定数を除く、ソース ファイルで`-define`は public であり、プロジェクト内のすべてのファイルに適用します。  
+## <a name="remarks"></a>Remarks  
+ `-define`オプションを使用すると同様の効果には、`#Const`プリプロセッサ ディレクティブで定義された定数を除く、ソース ファイル内`-define`をパブリックにして、プロジェクト内のすべてのファイルに適用されます。  
   
  このオプションで作成される記号を `#If`...`Then`...`#Else` ディレクティブで使用すると、ソース ファイルを条件付きでコンパイルできます。  
   

@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-author: BrucePerlerMS
-ms.openlocfilehash: bf3276353473f07f58740a5819226994123efdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201154"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50037296"
 ---
 # <a name="security-considerations-for-data"></a>セキュリティに関するデータの考慮事項
 Windows Communication Foundation (WCF) でのデータを扱う場合、さまざまな脅威のカテゴリを考慮する必要があります。 データ処理に関連する最も重要な脅威の種類を次の表に示します。 WCF には、これらの脅威を軽減するためにツールが用意されています。  
@@ -202,7 +201,7 @@ Windows Communication Foundation (WCF) でのデータを扱う場合、さま�
   
  <xref:System.Runtime.Serialization.DataContractSerializer> は常に、コントラクトに基づいて現在予期される型を読み込むことができます。 たとえば、データ コントラクトに `Customer`型のデータ メンバーが含まれている場合、 <xref:System.Runtime.Serialization.DataContractSerializer> は、このデータ メンバーを逆シリアル化するときに `Customer` 型を読み込むことができます。  
   
- また、 <xref:System.Runtime.Serialization.DataContractSerializer> はポリモーフィズムをサポートします。 データ メンバーを <xref:System.Object>として宣言しておき、受信データに `Customer` インスタンスを含めることができます。 これが可能なのは、次のいずれかのメカニズムにより、 `Customer` 型がデシリアライザーに対して既知の型になっている場合だけです。  
+ また、 <xref:System.Runtime.Serialization.DataContractSerializer> はポリモーフィズムをサポートします。 データ メンバーを <xref:System.Object>として宣言しておき、受信データに `Customer` インスタンスを含めることができます。 これが可能なのは、次のいずれかのメカニズムにより、`Customer` 型がデシリアライザーに対して既知の型になっている場合だけです。  
   
 -   型に<xref:System.Runtime.Serialization.KnownTypeAttribute> 属性を適用する。  
   

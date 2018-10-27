@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: f4967a29b28f1862f5799f6935083ed12cb81ead
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 0539f2144c85fe20a440f8b99425936025a186c0
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504339"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045419"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>システム標準の相互運用性バインディングがサポートしている Web サービス プロトコル
 Windows Communication Foundation (WCF) は、一連の Web サービスの仕様と呼ばれる仕様をサポートする Web サービスと相互に構築されています。 WCF の相互運用性のベスト プラクティスのサービス構成を簡素化するには次の 3 つの相互運用可能なシステム指定のバインディングが導入されています: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>、 <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>、および<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>します。 WCF には Advancement of Structured Information Standards (OASIS) 標準の組織と相互運用性には 1 つの相互運用可能なシステム指定のバインディングが含まれています:<xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>します。 WCF にはメタデータの公開には 2 つの相互運用可能なシステム指定のバインディングが含まれています: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)と[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)します。 このトピックでは、システム指定の相互運用可能なバインディングがサポートする仕様を示します。  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) は、一連の Web サービスの仕様
 |--------------|--------------|-----------------------------|  
 |メッセージング|SOAP 1.2|[入門](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [メッセージング フレームワーク](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP バインディングを含む)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
 |メッセージング|Ws-addressing 2005/08|[Web Services Addressing 1.0 - コア](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`、`ws2007HttpBinding`、および `wsDualHttpBinding` は、非同期メッセージング、メッセージ相関、およびトランスポート中立のアドレス指定機構を有効にするために、W3C (World Wide Web Consortium) WS-Addressing 勧告を実装しています。<br /><br /> WCF は WS-Addressing ヘッダーの暗号化をサポートしていませんが、これは WS-* 仕様によって許可されています。|  
-|メッセージング|WS-Addressing 1.0 - メタデータ|[Ws-addressing 1.0 メタデータ](http://www.w3.org/2007/05/addressing/metadata)1.2 (既定値) に設定されています ServiceMetadata 動作のポリシーのバージョンを設定してこのプロトコルのサポートが有効になっている、wsdl 記述は Ws-addressing の wsdl に準拠しての1.5 に設定されています、wsdl 記述は ws-addressing メタデータに準拠しています。<br /><br /> WCF は WS-Addressing ヘッダーの暗号化をサポートしていませんが、これは WS-* 仕様によって許可されています。|  
+|メッセージング|WS-Addressing 1.0 - メタデータ|[Ws-addressing 1.0 メタデータ](https://www.w3.org/2007/05/addressing/metadata)1.2 (既定値) に設定されています ServiceMetadata 動作のポリシーのバージョンを設定してこのプロトコルのサポートが有効になっている、wsdl 記述は Ws-addressing の wsdl に準拠しての1.5 に設定されています、wsdl 記述は ws-addressing メタデータに準拠しています。<br /><br /> WCF は WS-Addressing ヘッダーの暗号化をサポートしていませんが、これは WS-* 仕様によって許可されています。|  
 |セキュリティ|WSS SOAP Message Security 1.0|[WSS SOAP Message Security 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> `securityMode` 属性が "wsSecurityOverHttp" (既定) に設定され、`wsSecurity` 子要素を使用してパラメーターが構成されている場合に使用します。<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
 |セキュリティ|WSS SOAP メッセージ セキュリティ UsernameToken Profile 1.1|[WSS SOAP メッセージ Security UsernameToken Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> `wsSecurity` 要素の `authenticationMode` 属性が "Username" に設定されている場合に使用します。<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
 |セキュリティ|WSS SOAP Message Security X.509 Certificate Token Profile 1.1|[WSS SOAP メッセージ セキュリティ X.509 証明書トークン プロファイル 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)<br /><br /> `wsSecurity` 要素の `authenticationMode` 属性が "Username"、"Certificate"、または "None" に設定されている場合に、メッセージを保護するために使用します。 また、`wsSecurity` 要素の `authenticationMode` 属性が "Certificate" に設定されている場合は、クライアント認証に使用します。<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  

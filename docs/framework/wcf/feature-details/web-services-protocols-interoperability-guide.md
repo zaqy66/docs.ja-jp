@@ -2,12 +2,12 @@
 title: Web サービス プロトコルの相互運用性ガイド
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842156"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49995400"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web サービス プロトコルの相互運用性ガイド
 Windows Communication Foundation (WCF) は、さまざまな Web サービス プロトコルを実装します。 これらのプロトコルの多くには、さまざまなオプションと拡張ポイントが用意されており、それらの実装は実装者の裁量に任されています。 このトピックでは、WCF が実装する Web サービス プロトコルの一覧を示します。 サポートされる各プロトコルの実装の詳細については、このセクションの他のトピックで説明します。  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) は、さまざまな Web サービス �
 |W3C Web Services Addressing 1.0 - コア|[Web Services Addressing 1.0 - コア](https://go.microsoft.com/fwlink/?LinkId=96688)|  
 |W3C Web Services Addressing 1.0 - SOAP バインディング|[Web Services Addressing 1.0 - SOAP バインディング](https://go.microsoft.com/fwlink/?LinkId=96689)|  
 |W3C Web Services Addressing 1.0 - WSDL バインディング*|[Web Services Addressing 1.0 - WSDL バインディング](https://go.microsoft.com/fwlink/?LinkId=96690)|  
-|W3C Web Services Addressing 1.0 - メタデータ|[Web Services Addressing 1.0 - メタデータ](http://www.w3.org/TR/ws-addr-metadata/)|  
+|W3C Web Services Addressing 1.0 - メタデータ|[Web Services Addressing 1.0 - メタデータ](https://www.w3.org/TR/ws-addr-metadata/)|  
 |WSDL SOAP1.1 バインディング|[Web サービス記述言語 (WSDL) 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)|  
 |WSDL SOAP1.2 バインディング|[SOAP 1.2 の WSDL 1.1 バインディング拡張機能](https://go.microsoft.com/fwlink/?LinkId=96691)|  
   

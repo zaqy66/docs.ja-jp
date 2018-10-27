@@ -2,12 +2,12 @@
 title: コンパイラ ディレクティブ (F#)
 description: F# の言語プリプロセッサ ディレクティブ、条件付きコンパイル ディレクティブ、行のディレクティブとコンパイラ ディレクティブについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: eeb33cd3b1d6a228555724a307bf2e2407c6b4c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042460"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181369"
 ---
 # <a name="compiler-directives"></a>コンパイラ ディレクティブ
 
@@ -33,7 +33,7 @@ ms.locfileid: "44042460"
 
 ## <a name="conditional-compilation-directives"></a>条件付きコンパイル ディレクティブ
 
-これらのディレクティブのいずれかで無効化されているコードでは、Visual StudioCode エディターで使用できなくなります。
+これらのディレクティブのいずれかで無効化されているコードでは、Visual Studio コード エディターで使用できなくなります。
 
 >[!NOTE]
 条件付きコンパイル ディレクティブの動作は、他の言語と同じではありません。 たとえば、シンボルを含むブール式を使用することはできません。また、`true` および `false` には特別な意味はありません。 `if` ディレクティブで使用するシンボルは、コマンド ラインまたはプロジェクト設定で定義する必要があります。`define` プリプロセッサ ディレクティブは存在しません。

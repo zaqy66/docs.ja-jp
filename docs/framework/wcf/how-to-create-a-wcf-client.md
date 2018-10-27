@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 1eadb5008575a1a53d685db14d68e42d0dce1360
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9572f3e2c0cddf75daf343f250b16e94bc2b0dbf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197527"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181671"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>方法 : Windows Communication Foundation クライアントを作成する
 
@@ -38,7 +38,7 @@ ms.locfileid: "47197527"
 
    2. ホストが実行されている場合を右クリックし、**参照**で GettingStartedClient プロジェクトの下のフォルダー**ソリューション エクスプ ローラー**選択**追加** >  **サービス参照**します。
 
-   3. [アドレス] ボックスの次の URL を入力、**サービス参照の追加**ダイアログ。 [http://localhost:8000/GettingStartedClient/Service](http://localhost:8000/GettingStartedClient/Service)
+   3. [アドレス] ボックスの次の URL を入力、**サービス参照の追加**ダイアログ。 [http://localhost:8000/GettingStarted/CalculatorService](http://localhost:8000/GettingStarted/CalculatorService)
 
    4. 選択**移動**します。
 
@@ -49,11 +49,11 @@ ms.locfileid: "47197527"
     コマンド ライン ツールを使用することもできます。 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)クライアント コードを作成するスイッチを適切な使用。 次の例では、サービスのコード ファイルと構成ファイルを生成しています。 最初の例は、VB でプロキシを生成する方法と、2 つ目は、c# でプロキシを生成する方法を示します。
 
     ```shell
-    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStartedClient/service
+    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStarted/CalculatorService
     ```
 
     ```shell
-    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStartedClient/service
+    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStarted/CalculatorService
     ```
 
 ## <a name="next-steps"></a>次の手順

@@ -3,11 +3,11 @@ title: WSAT_TraceRecord
 ms.date: 03/30/2017
 ms.assetid: 99bc7f66-1335-40d8-aa68-e754d569dc0d
 ms.openlocfilehash: 907e764cf032e595c7aba455fd4808a640f68016
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49373997"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50046280"
 ---
 # <a name="wsattracerecord"></a>WSAT_TraceRecord
 WSAT_TraceRecord  
@@ -47,7 +47,7 @@ class WSAT_TraceRecord : WSAT_TraceEvent
   
  トレース レコード  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

@@ -9,13 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-author: BrucePerlerMS
-ms.openlocfilehash: 0efa9ecbe384009cc8fc4735ec9fc3db8ed3ce59
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9f4f83502016fb749c75776dd6c2dc2bd01476e6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841457"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183348"
 ---
 # <a name="how-to-set-the-security-mode"></a>方法 : セキュリティ モードを設定する
 Windows Communication Foundation (WCF) のセキュリティは、ほとんどの定義済みバインド上にある 3 つの一般的なセキュリティ モード: トランスポート、メッセージ、および「メッセージ資格情報付きトランスポート」。 これ以外に、2 つのバインディングに固有の 2 つのモードがあります。<xref:System.ServiceModel.BasicHttpBinding> の "トランスポート資格情報専用" モードと、<xref:System.ServiceModel.NetMsmqBinding> の "両方" モードです。 ここでは、3 つの共通のセキュリティモードである <xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message>、および <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> に重点を置いて説明します。  
@@ -55,7 +54,7 @@ Windows Communication Foundation (WCF) のセキュリティは、ほとんど�
   
 1.  バインディングのインスタンスを作成します。  
   
-2.  `Mode` プロパティを `Transport` に設定します。  
+2.  `Mode` プロパティを `Transport`に設定します。  
   
 3.  `ClientCredential` プロパティに適切な値を設定します。 プロパティを `Windows` に設定するコードを次に示します。  
   
@@ -66,7 +65,7 @@ Windows Communication Foundation (WCF) のセキュリティは、ほとんど�
   
 1.  バインディングのインスタンスを作成します。  
   
-2.  `Mode` プロパティを `Message` に設定します。  
+2.  `Mode` プロパティを `Message`に設定します。  
   
 3.  `ClientCredential` プロパティに適切な値を設定します。 プロパティを `Certificate` に設定するコードを次に示します。  
   

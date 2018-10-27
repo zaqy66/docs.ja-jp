@@ -3,11 +3,11 @@ title: MustUnderstandBehavior
 ms.date: 03/30/2017
 ms.assetid: 911ed04a-c4b8-4c72-a5c3-fc7b4e3b4348
 ms.openlocfilehash: 0f3efc446104a1afff507f6e7d2cd8c01c4ed417
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371797"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452600"
 ---
 # <a name="mustunderstandbehavior"></a>MustUnderstandBehavior
 MustUnderstandBehavior  
@@ -34,7 +34,7 @@ class MustUnderstandBehavior : Behavior
   
  `true` の場合、未処理の `MustUnderstand` 属性を持つすべての SOAP ヘッダーは、動作が例外をスローする原因となります。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

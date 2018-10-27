@@ -19,18 +19,18 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 9257a6b725839d8f433988ab76c4ce9ae349d950
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208608"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183114"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>エンコード方式および Windows フォームのグローバリゼーション
-Windows フォーム アプリケーションは、Unicode に完全対応しているため、プラットフォーム、プログラム、または言語に関係なく、文字がそれぞれ一意の数字で表されます。 Unicode の詳細については、次を参照してください。、 [Unicode コンソーシアムの Web サイト](http://www.unicode.org)です。  
+Windows フォーム アプリケーションは、Unicode に完全対応しているため、プラットフォーム、プログラム、または言語に関係なく、文字がそれぞれ一意の数字で表されます。 Unicode の詳細については、次を参照してください。、 [Unicode consortium Web サイト](https://www.unicode.org)します。  
   
 ## <a name="benefits-of-unicode"></a>Unicode の利点  
- Unicode 対応フォームの利点として、ヒンディー語などの Unicode 専用のスクリプトを操作できる点も含まれます。 さらに、1 つのフォームで複数の言語を使用できます。 Unicode では、すべての文字が 2 バイト長なので、2 バイト文字を表すために特別な作業は必要ありません。 また、すべてのプラットフォームで動作する 1 つのコードのセットを作成することもできます。 これは、以前のバージョンの Visual Basic では、さまざまなプラットフォームでは、Windows NT などの別のコードを記述する必要があるから変更および[!INCLUDE[win98](../../../../includes/win98-md.md)]です。  
+ Unicode 対応フォームの利点として、ヒンディー語などの Unicode 専用のスクリプトを操作できる点も含まれます。 さらに、1 つのフォームで複数の言語を使用できます。 Unicode では、すべての文字が 2 バイト長なので、2 バイト文字を表すために特別な作業は必要ありません。 また、すべてのプラットフォームで動作する 1 つのコードのセットを作成することもできます。 これは以前のバージョンの Visual Basic では、Windows NT などのさまざまなプラットフォーム向けのさまざまなコードを記述する必要があるからの変更と[!INCLUDE[win98](../../../../includes/win98-md.md)]します。  
   
  ただし、[!INCLUDE[win98](../../../../includes/win98-md.md)] および Windows Millennium Edition では、特定のコントロールが Unicode をサポートしません。 これらのコントロールはすべてコモン コントロールから継承されていて、Windows コード ページで [!INCLUDE[vcpransi](../../../../includes/vcpransi-md.md)] としてデータを処理します。 これらのコントロールは、<xref:System.Windows.Forms.TabControl>、<xref:System.Windows.Forms.ListView>、<xref:System.Windows.Forms.TreeView>、<xref:System.Windows.Forms.DateTimePicker>、<xref:System.Windows.Forms.MonthCalendar>、<xref:System.Windows.Forms.TrackBar>、<xref:System.Windows.Forms.ProgressBar>、<xref:System.Windows.Forms.ImageList>、<xref:System.Windows.Forms.ToolBar>、および <xref:System.Windows.Forms.StatusBar> です。 その結果、前述のプラットフォーム上のこれらのコントロールで Unicode データを表示することはできません。 たとえば、日本語の文字を英語の [!INCLUDE[win98](../../../../includes/win98-md.md)] オペレーティング システムで表示することはできません。  
   

@@ -1,16 +1,16 @@
 ---
-title: '方法: 並列で非同期を使用して、複数の Web 要求を実行して、Await (Visual Basic)'
+title: '方法: 並列で非同期を使用して複数の Web 要求を行うし、Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: MT
+ms.openlocfilehash: 44531ef643df6402ad318957c0a2bdc058c5bcb0
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728444"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049257"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>方法: 並列で非同期を使用して、複数の Web 要求を実行して、Await (Visual Basic)
-非同期メソッドでは、タスクは作成されると開始されます。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)演算子は、メソッドのポイントで、タスクが終了するまで処理を続行できない場所で、タスクに適用します。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>方法: 並列で非同期を使用して複数の Web 要求を行うし、Await (Visual Basic)
+非同期メソッドでは、タスクは作成されると開始されます。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)演算子は、処理できませんが、タスクが完了するまで続行メソッド内の位置にタスクに適用されます。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
@@ -38,25 +38,25 @@ Dim result = Await myTask
 > [!NOTE]
 >  このプロジェクトを完成させるには、Visual Studio 2012 以降および .NET Framework 4.5 以降がコンピューターにインストールされている必要があります。  
   
- 同時に複数のタスクを起動する別の例では、次を参照してください。[する方法: Task.WhenAll (Visual Basic) にを使用して Asyncwalkthrough を拡張](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)です。  
+ 同時に複数のタスクを開始する別の例では、次を参照してください。[方法: Task.WhenAll を使用する」(Visual Basic) して Async Walkthrough を拡張](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)します。  
   
  この例のコードは、[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)のページからダウンロードできます。  
   
 ### <a name="to-set-up-the-project"></a>プロジェクトを設定するには  
   
-1.  WPF アプリケーションを設定するには、次の手順を実行します。 これらの手順の詳細な手順を参照して[チュートリアル: を使用して Async および Await (Visual Basic) で Web へのアクセス](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)です。  
+1.  WPF アプリケーションを設定するには、次の手順を実行します。 これらの手順の詳細な手順を検索する[チュートリアル: を使用して Async と Await (Visual Basic) した Web へのアクセス](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。  
   
     -   テキスト ボックスとボタンを含む WPF アプリケーションを作成します。 ボタンに `startButton` という名前を付け、テキスト ボックスに `resultsTextBox` という名前を付けます。  
   
     -   <xref:System.Net.Http> への参照を追加します。  
   
-    -   MainWindow.xaml.vb ファイルで追加、`Imports`の声明`System.Net.Http`です。  
+    -   MainWindow.xaml.vb ファイルで、追加、`Imports`ステートメント`System.Net.Http`します。  
   
 ### <a name="to-add-the-code"></a>コードを追加するには  
   
-1.  デザイン ウィンドウで、MainWindow.xaml を作成するボタンをダブルクリックして、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
+1.  デザイン ウィンドウの MainWindow.xaml で作成するボタンをダブルクリックして、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
   
-2.  次のコードをコピーしの本体に貼り付けます`startButton_Click`MainWindow.xaml.vb にします。  
+2.  次のコードをコピーしの本文に貼り付けます`startButton_Click`MainWindow.xaml.vb でします。  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -88,8 +88,8 @@ Dim result = Await myTask
         ' is designed to be used with a monospaced font, such as  
         ' Lucida Console or Global Monospace.  
         Dim bytes = content.Length  
-        ' Strip off the "http://".  
-        Dim displayURL = url.Replace("http://", "")  
+        ' Strip off the "https://".  
+        Dim displayURL = url.Replace("https://", "")  
         resultsTextBox.Text &= String.Format(vbCrLf & "{0,-58} {1,8}", displayURL, bytes)  
     End Sub  
     ```  
@@ -117,11 +117,11 @@ Dim result = Await myTask
         ' Create and start the tasks. As each task finishes, DisplayResults   
         ' displays its length.  
         Dim download1 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com", client)  
+            ProcessURLAsync("https://msdn.microsoft.com", client)  
         Dim download2 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
         Dim download3 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/67w7t67f.aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client)  
   
         ' Await each task.  
         Dim length1 As Integer = Await download1  
@@ -165,11 +165,11 @@ Class MainWindow
         ' Create and start the tasks. As each task finishes, DisplayResults   
         ' displays its length.  
         Dim download1 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com", client)  
+            ProcessURLAsync("https://msdn.microsoft.com", client)  
         Dim download2 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
         Dim download3 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/67w7t67f.aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client)  
   
         ' Await each task.  
         Dim length1 As Integer = Await download1  
@@ -196,8 +196,8 @@ Class MainWindow
         ' is designed to be used with a monospaced font, such as  
         ' Lucida Console or Global Monospace.  
         Dim bytes = content.Length  
-        ' Strip off the "http://".  
-        Dim displayURL = url.Replace("http://", "")  
+        ' Strip off the "https://".  
+        Dim displayURL = url.Replace("https://", "")  
         resultsTextBox.Text &= String.Format(vbCrLf & "{0,-58} {1,8}", displayURL, bytes)  
     End Sub  
 End Class  

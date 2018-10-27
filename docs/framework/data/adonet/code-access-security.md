@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 45c838fbac5e6f576a242c8839f849dc9529ef7d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779273"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453178"
 ---
 # <a name="code-access-security-and-adonet"></a>コード アクセス セキュリティと ADO.NET
 .NET Framework はコード アクセス セキュリティ (CAS) に加えてロール ベースのセキュリティを備えています。どちらも、共通言語ランタイム (CLR) が提供する共通のインフラストラクチャを使って実装されています。 アンマネージ コードの場合、ほとんどのアプリケーションはユーザーまたはプリンシパルの権限で実行されます。 そのため、悪意のあるソフトウェアやエラーを含むソフトウェアが、システム特権を持つユーザーによって実行された場合、コンピューター システムが被害を受けたり、機密データが改ざんされる可能性があります。  
@@ -192,11 +192,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>アンマネージ コードとの相互運用性  
  CLR の外部で実行されるコードはアンマネージ コードと呼ばれます。 したがって、CAS などのセキュリティ メカニズムをアンマネージ コードに適用することはできません。 アンマネージ コードの例としては、COM コンポーネント、ActiveX インターフェイス、Win32 API 関数があります。 アンマネージ コードを実行する場合は、アプリケーションの全体的なセキュリティが損なわれないよう特別な考慮をする必要があります。 詳細については、「[アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)」を参照してください。  
   
- .NET Framework は、COM 相互運用機能を介したアクセスを提供することによって、既存の COM コンポーネントとの下位互換性をサポートしています。 COM 相互運用ツールを使って適切な COM 型をインポートすることにより、.NET Framework アプリケーションに COM コンポーネントを組み込むことができます。 インポートが完了すると、COM 型を使用できるようになります。 アセンブリのメタデータをタイプ ライブラリにエクスポートし、マネージド コンポーネントを COM コンポーネントとして登録することで、COM クライアントからマネージド コードにアクセスすることもできます。 詳細については、次を参照してください。[高度な COM 相互運用性](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)します。  
+ .NET Framework は、COM 相互運用機能を介したアクセスを提供することによって、既存の COM コンポーネントとの下位互換性をサポートしています。 COM 相互運用ツールを使って適切な COM 型をインポートすることにより、.NET Framework アプリケーションに COM コンポーネントを組み込むことができます。 インポートが完了すると、COM 型を使用できるようになります。 アセンブリのメタデータをタイプ ライブラリにエクスポートし、マネージド コンポーネントを COM コンポーネントとして登録することで、COM クライアントからマネージド コードにアクセスすることもできます。 詳細については、次を参照してください。[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)します。  
   
 ## <a name="see-also"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [ネイティブ コードと .NET Framework コードのセキュリティ](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [コード アクセス セキュリティ](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)  
- [ロール ベースのセキュリティ](https://msdn.microsoft.com/library/239442e3-5be4-4203-b7fd-793baffea803)  
+ [コード アクセス セキュリティ](../../../../docs/framework/misc/code-access-security.md)  
+ [ロール ベースのセキュリティ](../../../../docs/standard/security/role-based-security.md)  
  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

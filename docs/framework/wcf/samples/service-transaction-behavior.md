@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bfdf0c9ddb8654bf7a6736bcccb0d9350e9a12a6
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858110"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50042494"
 ---
 # <a name="service-transaction-behavior"></a>サービス トランザクションの動作
 このサンプルでは、クライアント調整トランザクションの使用方法と、サービス トランザクションの動作を制御する ServiceBehaviorAttribute と OperationBehaviorAttribute の設定方法について説明します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスの実装が、データベース テーブルと合計電卓操作を実行しているステートフルに実行された操作のサーバー ログを保持するように拡張します。 サーバー ログ テーブルへの書き込みを保存するかどうかは、クライアント調整トランザクションの結果によって異なります。クライアント トランザクションが完了しない場合は、Web サービス トランザクションにより、データベースへの更新はコミットされません。  
@@ -19,7 +19,7 @@ ms.locfileid: "43858110"
   
  サービスのコントラクトでは、すべての操作でトランザクションを要求に応じてフローする必要があることを、次のように定義します。  
   
-```  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples",  
                     SessionMode = SessionMode.Required)]  
 public interface ICalculator  
@@ -51,7 +51,7 @@ public interface ICalculator
   
  サービスへの接続とトランザクションの起動後、クライアントは次のようにそのトランザクションのスコープに含まれるいくつかのサービス処理にアクセスして、そのトランザクションを完了して接続を終了します。  
   
-```  
+```csharp
 // Create a client  
 CalculatorClient client = new CalculatorClient();  
   
@@ -114,7 +114,7 @@ client.Close();
   
  属性サービスの実装は、次のとおりです。  
   
-```  
+```csharp
 [ServiceBehavior(  
     TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable,  
     TransactionTimeout = "00:00:30",  
@@ -168,7 +168,7 @@ public class CalculatorService : ICalculator
   
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
-```  
+```console  
 Starting transaction  
 Performing calculations...  
   Adding 100, running total=100  
@@ -182,7 +182,7 @@ Press <ENTER> to terminate client.
   
  サービス操作要求のログ記録は、サービスのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
-```  
+```console  
 Press <ENTER> to terminate service.  
 Creating new service instance...  
   Writing row 1 to database: Adding 100 to 0  

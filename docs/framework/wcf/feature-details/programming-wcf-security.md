@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-author: BrucePerlerMS
-ms.openlocfilehash: a32c49aebaf1ec856dd464ec4526ae744fa34013
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
+ms.openlocfilehash: 1cb18f1be8e418ace4c9f9f71b7f97ac37ff8074
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847790"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038514"
 ---
 # <a name="programming-wcf-security"></a>WCF セキュリティのプログラミング
 このトピックでは、セキュリティで保護された Windows Communication Foundation (WCF) アプリケーションを作成するために使用する基本的なプログラミング タスクについて説明します。 このトピックでは、認証、機密性、整合性、総称とのみについて説明します。*転送セキュリティ*します。 このトピックでは承認 (リソースまたはサービスへのアクセス制御); については説明しません承認方法については、次を参照してください。[承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)します。  

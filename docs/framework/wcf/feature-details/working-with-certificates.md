@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201115"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453464"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
   
 -   **個人**:  このストアは、コンピューターのユーザーに関連付けられた証明書に使用されます。 通常、このストアは、信頼されたルート証明機関ストアにある証明機関証明書のいずれかによって発行された証明書に使用されます。 また、自己発行され、アプリケーションから信頼された証明書が格納されている場合もあります。  
   
- 証明書ストアの詳細については、「[Certificate Stores](https://go.microsoft.com/fwlink/?LinkId=88912)」(証明書ストア) を参照してください。  
+ 証明書ストアの詳細については、「[Certificate Stores](/windows/desktop/secauthn/certificate-stores)」(証明書ストア) を参照してください。  
   
 ### <a name="selecting-a-store"></a>ストアの選択  
  証明書を格納する場所の選択は、サービスまたはクライアントの実行方法や実行する状況によって異なります。 次の一般規則が適用されます。  

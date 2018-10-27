@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-author: BrucePerlerMS
-ms.openlocfilehash: e0adbe9d1689e840d940dd22fcfe05f54e2131fa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203083"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181135"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>方法 : SecurityBindingElement を使用してカスタム バインドを作成する
 Windows Communication Foundation (WCF) には、複数のシステムで指定されたバインド構成できますが、WCF がサポートするすべてのセキュリティ オプションを構成するときに完全な柔軟性を提供しないにはが含まれています。 ここでは、個別のバインド要素からカスタム バインドを直接作成する方法を説明し、このようなバインディングを作成する場合に指定できるセキュリティ設定のいくつかに焦点を当てます。 カスタム バインディングの作成の詳細については、次を参照してください。[バインディングの拡張](../../../../docs/framework/wcf/extending/extending-bindings.md)します。  
@@ -24,7 +23,7 @@ Windows Communication Foundation (WCF) には、複数のシステムで指定�
 ## <a name="creating-a-custom-binding"></a>カスタム バインドの作成  
  WCF ですべてのバインドで構成されて*バインド要素*します。 各バインド要素は <xref:System.ServiceModel.Channels.BindingElement> クラスから派生します。 標準のシステム指定のバインディングの場合、バインド要素は自動的に作成および構成されます。ただし、プロパティ設定の一部はカスタマイズが可能です。  
   
- これに対し、カスタム バインディングを作成する場合は、バインド要素が作成および構成され、そのバインド要素から <xref:System.ServiceModel.Channels.CustomBinding> が作成されます。  
+ これに対し、カスタム バインドを作成する場合は、バインド要素が作成および構成され、そのバインド要素から <xref:System.ServiceModel.Channels.CustomBinding> が作成されます。  
   
  これを行うには、<xref:System.ServiceModel.Channels.BindingElementCollection> クラスのインスタンスによって表されるコレクションに個別のバインド要素を追加し、`Elements` の `CustomBinding` プロパティをそのオブジェクトと同じにします。 バインド要素は、トランザクション フロー、信頼できるセッション、セキュリティ、複合二重、一方向、ストリーム セキュリティ、メッセージ エンコーディング、トランスポートの順に追加する必要があります。 どのバインディングでも、これらすべてのバインド要素が必要になるとは限りません。  
   
@@ -94,14 +93,14 @@ Windows Communication Foundation (WCF) には、複数のシステムで指定�
   
 5.  <xref:System.ServiceModel.Channels.HttpTransportBindingElement> を作成し、これをコレクション (`outputBec`) に追加します。 これにより、バインディングが HTTP トランスポートを使用することが指定されます。  
   
-6.  <xref:System.ServiceModel.Channels.CustomBinding> クラスのインスタンスを作成し、コレクション `outputBec` をコンストラクターに渡して、新規のカスタム バインディングを作成します。  
+6.  <xref:System.ServiceModel.Channels.CustomBinding> クラスのインスタンスを作成し、コレクション `outputBec` をコンストラクターに渡して、新規のカスタム バインドを作成します。  
   
-7.  作成されたカスタム バインディングは、標準の <xref:System.ServiceModel.WSHttpBinding> と同じ特性を数多く共有しています。 カスタム バインディングではメッセージ レベルのセキュリティと Windows 資格情報が指定されていますが、セキュリティで保護されたセッションは無効になっているため、サービス資格情報が帯域外で指定される必要があり、また署名も暗号化されません。 署名の暗号化は、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> プロパティを手順 4. で示したように設定することでのみ制御できます。 他の 2 つについては、標準バインディングの設定を使用することで制御できます。  
+7.  作成されたカスタム バインドは、標準の <xref:System.ServiceModel.WSHttpBinding> と同じ特性を数多く共有しています。 カスタム バインディングではメッセージ レベルのセキュリティと Windows 資格情報が指定されていますが、セキュリティで保護されたセッションは無効になっているため、サービス資格情報が帯域外で指定される必要があり、また署名も暗号化されません。 署名の暗号化は、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> プロパティを手順 4. で示したように設定することでのみ制御できます。 他の 2 つについては、標準バインディングの設定を使用することで制御できます。  
   
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 次の例では、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> を使用するカスタム バインディングを作成する関数全体を示します。  
+ 次の例では、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> を使用するカスタム バインドを作成する関数全体を示します。  
   
 ### <a name="code"></a>コード  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]

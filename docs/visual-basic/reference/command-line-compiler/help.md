@@ -9,14 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 822b1925d2b8a672229dcda8e5b725aa5fd9de86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff13be6f2ec2e66bd3ff5f7c4b2c3e1a24e699db
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651454"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182126"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 コンパイラ オプションを出力します。  
@@ -29,14 +27,14 @@ ms.locfileid: "33651454"
 -?  
 ```  
   
-## <a name="remarks"></a>コメント  
- コンパイル時にこのオプションを追加する場合は、出力ファイルは作成されませんされ、コンパイルは行われません。  
+## <a name="remarks"></a>Remarks  
+ コンパイル時にこのオプションを指定する場合は、出力ファイルは作成されませんし、コンパイルは行われません。  
   
 > [!NOTE]
->  `-help`オプションは、Visual Studio 開発環境からは利用できません; は、コマンドラインからコンパイルするときにのみ使用します。  
+>  `-help`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
   
 ## <a name="example"></a>例  
- 次のコードでは、コマンドラインからヘルプを表示します。  
+ 次のコードは、コマンドラインからヘルプを表示します。  
   
 ```  
 vbc -help  

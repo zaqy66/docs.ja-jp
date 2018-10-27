@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970074"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034300"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server でのスナップショット分離
-スナップショット分離により、OLTP アプリケーションの同時実行が向上しています。  
+スナップショット分離により、OLTP アプリケーションのコンカレンシーが向上しています。  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>スナップショット分離と行バージョン管理について  
  トランザクションごとに更新された行バージョンが保持されるスナップショット分離を有効にすると**tempdb**します。 一意のトランザクション シーケンス番号が各トランザクションを識別し、これらの一意の番号がそれぞれの行バージョン用に記録されます。 トランザクションは、シーケンス番号がトランザクションのシーケンス番号よりも前にある、最新の行バージョンを処理します。 トランザクションが開始された後で作成された最新の行バーションは、トランザクションにより無視されます。  
@@ -24,7 +24,7 @@ ms.locfileid: "45970074"
   
  スナップショット分離は、トランザクション内で使用する前に、ALLOW_SNAPSHOT_ISOLATION ON データベース オプションを設定して有効にする必要があります。 一時データベースに行バージョンを格納するためのメカニズムがアクティブになります (**tempdb**)。 Transact-SQL ALTER DATABASE ステートメントで使用する、各データベース内のスナップショット分離を有効にする必要があります。 この点では、スナップショット分離は、構成を必要としない READ COMMITTED、REPEATABLE READ、SERIALIZABLE、および READ UNCOMMITTED の従来の分離レベルとは異なります。 次のステートメントは、スナップショット分離をアクティブにして、既定の READ COMMITTED 動作を SNAPSHOT で置き換えます。  
   
-```  
+```sql  
 ALTER DATABASE MyDatabase  
 SET ALLOW_SNAPSHOT_ISOLATION ON  
   
@@ -49,7 +49,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 -   SERIALIZABLE は、最も限定度の高い分離レベルで、トランザクションが完了するまで全範囲のキーをロックし、そのロックを保持します。 この分離レベルは、REPEATABLE READ を含みます。また、トランザクションが完了するまでは、トランザクションにより読み取られる範囲内に、他のトランザクションによって新しい行が挿入されないようにする制限を追加します。  
   
- 詳細については、SQL Server オンライン ブックの「分離レベル」を参照してください。  
+ 詳細についてを参照してください、[トランザクション ロックおよび行のバージョン管理ガイド](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)します。  
   
 ### <a name="snapshot-isolation-level-extensions"></a>スナップショット分離レベルの拡張機能  
  SQL Server では、SNAPSHOT 分離レベルの導入および READ COMMITTED の追加実装と共に、SQL-92 分離レベルの拡張機能が導入されました。 READ_COMMITTED_SNAPSHOT 分離レベルは、すべてのトランザクションの READ COMMITTED を自動的に置き換えることができます。  
@@ -73,7 +73,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
  スナップショット分離の適用により、トランザクションは、基になるテーブル上でロックを受け付けたり配置したりすることなく、トランザクションの開始時に存在したすべてのデータを確認します。 その結果、競合がある状況でパフォーマンスが向上することになります。  
   
- スナップショット トランザクションでは、他のトランザクションによって行が更新されないようにするロックは使用せずに、常にオプティミスティック同時実行制御を使用します。 スナップショット トランザクションは、トランザクションの開始後に変更された行への更新をコミットしようとすると、このトランザクションがロールバックし、エラーになります。  
+ スナップショット トランザクションでは、他のトランザクションによって行が更新されないようにするロックは使用せずに、常にオプティミスティック コンカレンシーを使用します。 スナップショット トランザクションは、トランザクションの開始後に変更された行への更新をコミットしようとすると、このトランザクションがロールバックし、エラーになります。  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>ADO.NET でのスナップショット分離の使用  
  スナップショット分離は、<xref:System.Data.SqlClient.SqlTransaction> クラスによって ADO.NET 内でサポートされます。 開始する必要があります、データベースがスナップショット分離が有効になって READ_COMMITTED_SNAPSHOT ON が構成されていない場合、<xref:System.Data.SqlClient.SqlTransaction>を使用して、 **IsolationLevel.Snapshot**列挙値を呼び出すときに、 <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>メソッド。 このコード フラグメントでは、接続は開かれている <xref:System.Data.SqlClient.SqlConnection> オブジェクトであることを前提としています。  
@@ -132,7 +132,7 @@ SqlTransaction sqlTran =
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>スナップショット分離でのロック ヒントの使用  
  前の例では、最初のトランザクションがデータを選択し、このトランザクションが完了する前に 2 つ目のトランザクションがデータを更新しています。その結果、最初のトランザクションが同じ行を更新しようとすると、競合が発生します。 トランザクションの先頭にロック ヒントを指定することにより、長時間にわたるスナップショット トランザクションにおいて更新競合が発生する可能性を軽減できます。 次の SELECT ステートメントでは、選択した行をロックするために、UPDLOCK ヒントが使用されています。  
   
-```  
+```sql  
 SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
@@ -143,4 +143,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET マネージ プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)      
+ [トランザクションのロックおよび行のバージョン管理ガイド](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82e657e91e586d7fe409646ea4fb8946c026e84c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a53493d666cb16fcc9b407ca3a46072afa306b97
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182477"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables メソッド
 ローカル変数を取得します。  
@@ -37,7 +38,7 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mdMethodToken`  
  [in]メソッドのメタデータ トークンです。  
   
@@ -45,15 +46,15 @@ HRESULT GetLocalVariables(
  [in]A`ULONG`のサイズを示す、`rgLocals`パラメーター。  
   
  `rgLocals`  
- [out]返される配列の<!--zz<xref:ISymUnmanagedVariable>-->`ISymUnmanagedVariable`インスタンス。  
+ [out]返される配列の[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)インスタンス。  
   
  `pceltFetched`  
- [out]ポインター、`ULONG`のサイズを受け取る、`rgLocals`バッファーは、ローカル変数を含めるために必要です。  
+ [out]ポインターを`ULONG`のサイズを受け取る、`rgLocals`にローカル変数を含めることが必要なバッファー。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** CorSym.idl、CorSym.h  
   
 ## <a name="see-also"></a>関連項目  

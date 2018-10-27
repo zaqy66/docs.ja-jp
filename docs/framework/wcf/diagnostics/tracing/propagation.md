@@ -2,15 +2,15 @@
 title: 伝達
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1d5ac743e94edd845650a1b550b3e982929d1b32
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803238"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50033637"
 ---
 # <a name="propagation"></a>伝達
-このトピックでは、Windows Communication Foundation (WCF) のトレース モデルでのアクティビティ伝達について説明します。  
+このトピックでは、Windows Communication Foundation (WCF) トレース モデルでのアクティビティ伝達について説明します。  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>伝達を使用したエンドポイント間でのアクティビティの関連付け  
  伝達を使用することで、複数のアプリケーション エンドポイントについて、同じ処理単位 (要求など) のエラー トレースを直接関連付けることができます。 さまざまなエンドポイントで発生した同じ処理単位のエラーは、アプリケーション ドメインが異なる場合でも同じアクティビティとしてグループ化されます。 これは、メッセージ ヘッダーで特定のアクティビティ ID を伝達することによって実現されます。 したがって、サーバーの内部エラーによってクライアントがタイムアウトした場合、これらのエラーは直接関係しているので、どちらも同じアクティビティに表示されます。  
@@ -21,7 +21,7 @@ ms.locfileid: "33803238"
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- アクティビティの伝達は、TLS のアクティビティ ID が含まれた、送信メッセージにヘッダーを追加する WCF の原因となる構成可能な機能です。 サーバー側の以降のトレースでこの ID を含めることにより、クライアントとサーバーのアクティビティを相互に関連付けることができます。  
+ アクティビティの伝達は、TLS のアクティビティ ID が含まれていますが、送信メッセージにヘッダーを追加する WCF の原因となる構成可能な機能です。 サーバー側の以降のトレースでこの ID を含めることにより、クライアントとサーバーのアクティビティを相互に関連付けることができます。  
   
 ## <a name="propagation-definition"></a>伝達の定義  
  次のすべての条件に該当する場合に、アクティビティ M の gAId がアクティビティ N に伝達されます。  
@@ -44,21 +44,19 @@ ms.locfileid: "33803238"
   
 ```xml  
 <MessageLogTraceRecord>  
-  <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"     
+  <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"
                       xmlns:a="http://www.w3.org/2005/08/addressing">  
     <s:Header>  
       <a:Action s:mustUnderstand="1">http://Microsoft.ServiceModel.Samples/ICalculator/Subtract  
       </a:Action>  
       <a:MessageID>urn:uuid:f0091eae-d339-4c7e-9408-ece34602f1ce  
       </a:MessageID>  
-      <ActivityId CorrelationId="f94c6af1-7d5d-4295-b693-4670a8a0ce34"   
-  
+      <ActivityId CorrelationId="f94c6af1-7d5d-4295-b693-4670a8a0ce34"
                xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">  
         17f59a29-b435-4a15-bf7b-642ffc40eac8  
       </ActivityId>  
       <a:ReplyTo>  
-          <a:Address>http://www.w3.org/2005/08/addressing/anonymous  
-          </a:Address>  
+          <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>  
       </a:ReplyTo>  
       <a:To s:mustUnderstand="1">net.tcp://localhost/servicemodelsamples/service</a:To>  
    </s:Header>  

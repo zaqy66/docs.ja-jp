@@ -2,12 +2,12 @@
 title: WCF サービス発行
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: b62b2616233eb81e64945e997a2efe17973dedd2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 515885658612cf11ecff8e084c466a70ba698625
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781506"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452999"
 ---
 # <a name="wcf-service-publishing"></a>WCF サービス発行
 
@@ -21,7 +21,7 @@ WCF サービス発行は、WCF サービス ライブラリ テンプレート�
 
 -   配信サービス ライブラリ
 
-これらのサービス テンプレートを選択して検索できます**ファイル** > **新しいプロジェクト**> [**Visual Basic**または**Visual c#**] >**WCF**します。 (WCF ワークフロー サービス アプリケーションと WCF サービス アプリケーションを含む)、この場所での他の WCF テンプレートを使用してを公開できる[ワンクリック web アプリケーションの発行](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx)します。
+これらのサービス テンプレートを選択して検索できます**ファイル** > **新しいプロジェクト**> [**Visual Basic**または**Visual C#** ] > **WCF**します。 (WCF ワークフロー サービス アプリケーションと WCF サービス アプリケーションを含む)、この場所での他の WCF テンプレートを使用してを公開できる[ワンクリック web アプリケーションの発行](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx)します。
 
 サービスは、次のターゲットの場所に発行できます。
 
@@ -41,9 +41,9 @@ WCF サービス発行は、WCF サービス ライブラリ テンプレート�
 
 3.  **発行**ウィンドウが表示されます。 をクリックして、 **...**. サービスの配置先にするターゲットの場所を指定します。 ローカルの IIS、ファイル システム、または FTP サイトにアプリケーションをデプロイするを選択できます。 ローカル IIS にアプリケーションを配置する場合は、web サイトを選択およびクリックして、その下にある web アプリケーションを作成、 **Web アプリケーションの新規作成**右上隅にあるアイコンです。
 
-4.  クリックした後**発行**Visual Studio のメイン ウィンドウで、指定されたターゲットの場所にアプリケーションをデプロイし、ターゲット ディレクトリに Web.config、.svc、およびアセンブリのファイルをコピーします。 . .Svc ファイルの名前は"projectname.servicename.svc"。 サービスが正常に発行されると、「ハイパーリンクへの接続」のような Visual Studio の出力 ウィンドウで、ホットリンクを見つけることができます http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName ..."です。 Ctrl キーを押しながらリンクをクリックすると、Visual Studio の内側にブラウザー ページが開き、サービス ディレクトリ構造が表示されます。
+4.  クリックした後**発行**Visual Studio のメイン ウィンドウで、指定されたターゲットの場所にアプリケーションをデプロイし、ターゲット ディレクトリに Web.config、.svc、およびアセンブリのファイルをコピーします。 . .Svc ファイルの名前は"projectname.servicename.svc"。 サービスが正常に発行されると、次のような [Visual Studio の出力] ウィンドウで、ホットリンクを見つけることができます"に接続する`http://localhost/WebApplicationFolderName...`"。 Ctrl キーを押しながらリンクをクリックすると、Visual Studio の内側にブラウザー ページが開き、サービス ディレクトリ構造が表示されます。
 
-     サイトを参照できない場合、IIS でディレクトリ ブラウザーが有効になっていない可能性があります。 有効にする「モ ノ利用できます」セクションではヒントに従ってください。 または、直接入力できます"ハイパーリンク"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svcサービス ページを表示するには"
+     サイトを参照できない場合、IIS でディレクトリ ブラウザーが有効になっていない可能性があります。 有効にする「モ ノ利用できます」セクションではヒントに従ってください。 または、直接入力できます`http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc`サービス ページを表示します。
 
 使用することができます**発行**アセンブリ、構成、およびターゲットの場所にプロジェクトで定義されているすべてのサービスの .svc ファイルをコピーするかどうかを指定し、転送先に既存のファイルを上書きします。
 

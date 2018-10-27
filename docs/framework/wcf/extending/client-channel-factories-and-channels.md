@@ -2,12 +2,12 @@
 title: 'クライアント : チャネル ファクトリとチャネル'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: a42042eaf9a8bc5461f680e3cf8dc5fcc78cebb5
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 3f045f56f7b73c5416e7a21a3afde29d22212d68
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483555"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182438"
 ---
 # <a name="client-channel-factories-and-channels"></a>クライアント : チャネル ファクトリとチャネル
 ここでは、チャネル ファクトリとチャネルの作成について説明します。  
@@ -20,17 +20,17 @@ ms.locfileid: "34483555"
   
  終了時に、チャネル ファクトリは、作成したチャネルのうちまだ閉じていないチャネルを閉じる必要があります。 チャネル リスナーを閉じたとき、新しいチャネルの受け入れだけが停止され、既存のチャネルは開いたままで、メッセージの受信を続行できるので、ここに示すモデルは非対称です。  
   
- WCF では、このプロセスの基本クラス ヘルパーが用意されています。 (このトピックで説明するチャネルのヘルパー クラスのダイアグラムの場合、次を参照してください[チャネル モデルの概要](../../../../docs/framework/wcf/extending/channel-model-overview.md)。)。  
+ WCF では、このプロセスの基本クラス ヘルパーを提供します。 (このトピックで説明するチャネル ヘルパー クラスの図では、次を参照してください[チャネル モデルの概要](../../../../docs/framework/wcf/extending/channel-model-overview.md)。)。  
   
--   <xref:System.ServiceModel.Channels.CommunicationObject>クラスが実装する<xref:System.ServiceModel.ICommunicationObject>し、適用のステップ 2 で説明されているステート マシン[開発チャネル](../../../../docs/framework/wcf/extending/developing-channels.md)です。  
+-   <xref:System.ServiceModel.Channels.CommunicationObject>クラスが実装する<xref:System.ServiceModel.ICommunicationObject>および適用のステップ 2 で説明されているステート マシン[開発チャネル](../../../../docs/framework/wcf/extending/developing-channels.md)します。  
   
 -   <xref:System.ServiceModel.Channels.ChannelManagerBase> クラスには <xref:System.ServiceModel.Channels.CommunicationObject> が実装され、<xref:System.ServiceModel.Channels.ChannelFactoryBase?displayProperty=nameWithType> と <xref:System.ServiceModel.Channels.ChannelListenerBase?displayProperty=nameWithType> の統合基本クラスが提供されます。 <xref:System.ServiceModel.Channels.ChannelManagerBase> クラスは、<xref:System.ServiceModel.Channels.ChannelBase> を実装する基本クラスである <xref:System.ServiceModel.Channels.IChannel> との組み合わせによって動作します。
   
--   <xref:System.ServiceModel.Channels.ChannelFactoryBase>クラスが実装する<xref:System.ServiceModel.Channels.ChannelManagerBase>と<xref:System.ServiceModel.Channels.IChannelFactory>し、統合、`CreateChannel`を 1 つにオーバー ロード`OnCreateChannel`抽象メソッドです。
+-   <xref:System.ServiceModel.Channels.ChannelFactoryBase>クラスが実装する<xref:System.ServiceModel.Channels.ChannelManagerBase>と<xref:System.ServiceModel.Channels.IChannelFactory>し、統合、`CreateChannel`を 1 つにオーバー ロード`OnCreateChannel`抽象メソッド。
   
 -   <xref:System.ServiceModel.Channels.ChannelListenerBase> クラスは、<xref:System.ServiceModel.Channels.IChannelListener> を実装しています。 基本状態管理を行います。 
   
- 次の説明がに基づいて、[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプルです。  
+ 次の説明がに基づいて、[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。  
   
 ### <a name="creating-a-channel-factory"></a>チャネル ファクトリの作成  
  `UdpChannelFactory` は <xref:System.ServiceModel.Channels.ChannelFactoryBase> から派生します。 サンプルでは、<xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> をオーバーライドして、メッセージ エンコーダーのメッセージ バージョンにアクセスできるようにします。 さらに、<xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> をオーバーライドして、ステート マシンの移行時に <xref:System.ServiceModel.Channels.BufferManager> のインスタンスを破棄します。  
@@ -40,32 +40,30 @@ ms.locfileid: "34483555"
   
  <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A> のオーバーライドによって、この <xref:System.Net.EndPoint> にメッセージを送信するために使用されるソケットが作成されます。  
   
- `this.socket = new Socket(`  
-  
- `this.remoteEndPoint.AddressFamily,`  
-  
- `SocketType.Dgram,`  
-  
- `ProtocolType.Udp`  
-  
- `);`  
-  
+ ```csharp 
+this.socket = new Socket(  
+this.remoteEndPoint.AddressFamily,
+   SocketType.Dgram,
+   ProtocolType.Udp
+);  
+```  
+
  チャネルが閉じる際には、正常終了することも異常終了することもあります。 チャネルが正常に閉じた場合はソケットも終了し、基本クラスの `OnClose` メソッドが呼び出されます。 このときに例外がスローされると、インフラストラクチャによって `Abort` が呼び出され、チャネルがクリーンアップされます。  
   
-```  
+```csharp  
 this.socket.Close();  
 base.OnClose(timeout);  
 ```  
   
- 実装`Send()`と`BeginSend()` /`EndSend()`です。 この実装は、2 つの主要セクションに分かれます。 最初に、メッセージを次のようにシリアル化してバイト配列で表します。  
+ 実装`Send()`と`BeginSend()` /`EndSend()`します。 この実装は、2 つの主要セクションに分かれます。 最初に、メッセージを次のようにシリアル化してバイト配列で表します。  
   
-```  
+```csharp  
 ArraySegment<byte> messageBuffer = EncodeMessage(message);  
 ```  
   
  次に、結果として生成されたデータを次のようにネットワークに送信します。  
   
-```  
+```csharp  
 this.socket.SendTo(  
   messageBuffer.Array,   
   messageBuffer.Offset,   

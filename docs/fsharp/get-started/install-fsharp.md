@@ -2,12 +2,12 @@
 title: F# のインストールします。
 description: お客様の環境に基づいて、f# をインストールする方法について説明します。
 ms.date: 08/28/2018
-ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
-ms.translationtype: MT
+ms.openlocfilehash: d53ecdcba5411db62208cb683a0fad795711b77c
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120935"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50044646"
 ---
 # <a name="install-f"></a>F# のインストールします。 #
 
@@ -33,7 +33,7 @@ ms.locfileid: "49120935"
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-[Mono](http://www.mono-project.com)使用[f# Interactive](../tutorials/fsharp-interactive/index.md)をサポートします。 MacOS で Mono をインストールする最も簡単な方法は、Homebrew を使用してです。 単に、ターミナルに、次を入力します。
+[Mono](https://www.mono-project.com)使用[f# Interactive](../tutorials/fsharp-interactive/index.md)をサポートします。 MacOS で Mono をインストールする最も簡単な方法は、Homebrew を使用してです。 単に、ターミナルに、次を入力します。
 
 ```console
 brew install mono

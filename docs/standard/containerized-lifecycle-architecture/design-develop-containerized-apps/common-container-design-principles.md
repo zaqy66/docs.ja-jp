@@ -1,25 +1,25 @@
 ---
-title: 共通のコンテナー デザインの原則
+title: 一般的なコンテナー設計の原則
 description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d3ae0c05a7e94d739a3442ecdb11564a70567963
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071176"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049088"
 ---
-# <a name="common-container-design-principles"></a>共通のコンテナー デザインの原則
+# <a name="common-container-design-principles"></a>一般的なコンテナー設計の原則
 
-事前に、開発プロセスを取得するはすコンテナーを使用する方法に関していくつかの基本的な概念です。
+今後、開発プロセスには、コンテナーを使用する方法に関して触れていくつかの基本的な概念があります。
 
-## <a name="container-equals-a-process"></a>コンテナーには、プロセスと等しい
+## <a name="container-equals-a-process"></a>コンテナー プロセスに等しい
 
-コンテナー モデルでは、コンテナーは、1 つのプロセスを表します。 コンテナーを定義すると、プロセス境界として、スケール、またはバッチ オフ、プロセスに使用されるプリミティブの作成を開始します。 Docker コンテナーを実行すると表示されます、 [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint)定義します。 これは、プロセス、およびコンテナーの有効期間を定義します。 プロセスが完了したら、コンテナーのライフ サイクルが終了します。 Web サーバー、および Microsoft Azure として実装されていますが、バッチ ジョブなどの有効期間が短いプロセスなどの実行時間の長いプロセスが[WebJobs](https://azure.microsoft.com/en-us/documentation/articles/websites-webjobs-resources/)です。 プロセスが失敗した場合、コンテナーが終了し、Orchestrator が引き継ぎます。 Orchestrator が実行されている 5 つのインスタンスを保持するように指示しました、1 つが失敗した場合は、orchestrator は、失敗した処理を置換する別のコンテナーを作成します。 バッチ ジョブで、プロセスはパラメーターを指定して開始されます。 プロセスが完了すると、作業が完了します。
+コンテナー モデルでは、コンテナーは、1 つのプロセスを表します。 コンテナー プロセス境界として定義すると、スケール、またはバッチから、プロセスに使用するプリミティブの作成を開始します。 Docker コンテナーを実行すると表示されます、 [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint)定義します。 これは、プロセスとコンテナーの有効期間を定義します。 プロセスが完了したら、コンテナーのライフ サイクルが終了します。 Web サーバー、およびバッチ ジョブは、Microsoft Azure として実装される可能性がありますなどの有効期間が短いプロセスなどの実行時間の長いプロセスがある[WebJobs](https://azure.microsoft.com/documentation/articles/websites-webjobs-resources/)します。 プロセスが失敗した場合、コンテナーが終了し、Orchestrator が引き継ぎます。 オーケストレーターが実行されている 5 つのインスタンスを保持するように指示し、1 つが失敗した場合、オーケストレーターは、失敗した処理を置換する別のコンテナーを作成します。 バッチ ジョブで、プロセスはパラメーターを指定して開始されます。 プロセスが完了すると、作業が完了します。
 
-複数のプロセスが 1 つのコンテナーで実行するシナリオがあります。 任意のアーキテクチャのドキュメントではありません、"never、"は常にも、「常にします」。 複数のプロセスを必要とするシナリオで一般的なパターンでは、使用する[スーパーバイザー](http://supervisord.org/)です。
+複数のプロセスを 1 つのコンテナーで実行されている必要があるシナリオがあります。 任意のアーキテクチャのドキュメントはありません、"never、"は常にも、「常時」。 一般的なパターンは複数のプロセスを必要とするシナリオでは、使用する[スーパーバイザー](http://supervisord.org/)します。
 
 
 >[!div class="step-by-step"]

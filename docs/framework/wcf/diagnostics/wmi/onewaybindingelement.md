@@ -2,19 +2,19 @@
 title: OneWayBindingElement
 ms.date: 03/30/2017
 ms.assetid: 5c7e17c3-39b9-4214-ae08-9e6141734305
-ms.openlocfilehash: ee7cfed20234175ba54dd25dbbbab4615c1ed7af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 34220a3651819978f5f597fdc67d54630ec5e059
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485758"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049296"
 ---
 # <a name="onewaybindingelement"></a>OneWayBindingElement
 OneWayBindingElement  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp
 class OneWayBindingElement : BindingElement  
 {  
   ChannelPoolSettings ChannelPoolSettings;  
@@ -50,7 +50,7 @@ class OneWayBindingElement : BindingElement
   
  パケットがルーティング可能かどうかを示す値。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

@@ -2,12 +2,12 @@
 title: (Visual Basic) の非同期プログラムにおける制御フロー
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: a6783373f4b556694fd79401546665b09f55919d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: MT
+ms.openlocfilehash: 368422338f6452bf5dbe968d4798bc0d5e937c92
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728506"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50041584"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>(Visual Basic) の非同期プログラムにおける制御フロー
 `Async` キーワードと `Await` キーワードを使用すると、非同期のプログラムの作成と保守をより簡単に行えます。 ただし、プログラムがどのように動作するかを理解しないと、その結果は予想に反するものになる場合があります。 このトピックでは、簡単な非同期プログラムによる制御フローをトレースして、制御があるメソッドから別のメソッドに移るタイミングと、その都度転送される情報について説明します。  
@@ -15,7 +15,7 @@ ms.locfileid: "34728506"
 > [!NOTE]
 >  `Async` キーワードおよび `Await` キーワードは、Visual Studio 2012 で導入されました。  
   
- 一般に、メソッドを非同期コードを含むをマークする、 [Async](../../../../visual-basic/language-reference/modifiers/async.md)修飾子です。 Async 修飾子でマークされているメソッドで使用することができます、 [Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md)演算子メソッドが呼び出された非同期プロセスが完了するまで待機する一時停止を指定します。 詳細については、次を参照してください。 [Async および Await (Visual Basic) を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)です。  
+ 一般を使用した非同期コードを含むメソッドをマークする、 [Async](../../../../visual-basic/language-reference/modifiers/async.md)修飾子。 Async 修飾子でマークされているメソッドで使用することができます、 [Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md)メソッドが呼び出された非同期プロセスが完了するまで待機する一時停止を指定する演算子。 詳細については、次を参照してください。 [Async および Await (Visual Basic) を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)します。  
   
  次の例では、非同期メソッドを使用して、指定した Web サイトのコンテンツを文字列としてダウンロードし、その文字列の長さを表示します。 この例には、次の 2 つのメソッドが含まれています。  
   
@@ -49,7 +49,7 @@ Class MainWindow
         ' TWO  
         Dim client As HttpClient = New HttpClient()   
         Dim getStringTask As Task(Of String) =   
-            client.GetStringAsync("http://msdn.microsoft.com")  
+            client.GetStringAsync("https://msdn.microsoft.com")  
   
         ' THREE  
         Dim urlContents As String = Await getStringTask  
@@ -95,7 +95,7 @@ Length of the downloaded string: 33946.
  このトピックで使用するコードは、MSDN からダウンロードするか、または自分でビルドできます。  
   
 > [!NOTE]
->  例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 が必要か、以降、コンピューターにインストールします。  
+>  例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 をいる必要があります。 またはコンピューターにインストールされています。  
   
 ### <a name="download-the-program"></a>プログラムをダウンロードする  
  このトピックのアプリケーションは、「[非同期のサンプル: 非同期プログラムにおける制御フロー](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)」からダウンロードできます。 次の手順でプログラムを開いて実行します。  
@@ -117,7 +117,7 @@ Length of the downloaded string: 33946.
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3.  **インストールされたテンプレート** ウィンドウで、選択**Visual Basic**を選択し**WPF アプリケーション**プロジェクトの種類の一覧からです。  
+3.  **インストールされたテンプレート**ウィンドウで、選択**Visual Basic**を選び、 **WPF アプリケーション**プロジェクトの種類の一覧から。  
   
 4.  プロジェクトの名前として「`AsyncTracer`」と入力し、**[OK]** をクリックします。  
   
@@ -147,7 +147,7 @@ Length of the downloaded string: 33946.
   
 7.  <xref:System.Net.Http> への参照を追加します。  
   
-8.  **ソリューション エクスプ ローラー**MainWindow.xaml.vb のショートカット メニューを開き、クリックして**コードの表示**です。  
+8.  **ソリューション エクスプ ローラー**MainWindow.xaml.vb のショートカット メニューを開き、選択し、**コードの表示**します。  
   
 9. MainWindow.xaml.vb でのコードを次のコードに置き換えます。  
   
@@ -190,7 +190,7 @@ Length of the downloaded string: 33946.
             ResultsTextBox.Text &= vbCrLf & "           Calling HttpClient.GetStringAsync." & vbCrLf  
   
             ' GetStringAsync returns a Task(Of String).   
-            Dim getStringTask As Task(Of String) = client.GetStringAsync("http://msdn.microsoft.com")  
+            Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")  
   
             ResultsTextBox.Text &= vbCrLf & "THREE: Back in AccessTheWebAsync." & vbCrLf &  
                 "           Task getStringTask is started."  
@@ -253,7 +253,7 @@ Length of the downloaded string: 33946.
   
  ![手順 1. と 2.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")  
   
- `AccessTheWebAsync` と `client.GetStringAsync` の戻り値の型はどちらも <xref:System.Threading.Tasks.Task%601> です。 `AccessTheWebAsync` では、TResult は整数です。 `GetStringAsync` では、TResult は文字列です。 非同期メソッドの戻り値の型の詳細については、次を参照してください。 [Async 戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)です。  
+ `AccessTheWebAsync` と `client.GetStringAsync` の戻り値の型はどちらも <xref:System.Threading.Tasks.Task%601> です。 `AccessTheWebAsync` では、TResult は整数です。 `GetStringAsync` では、TResult は文字列です。 非同期メソッドの戻り値の型の詳細については、次を参照してください。 [Async 戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)します。  
   
  タスクを返す非同期のメソッドは、制御が呼び出し元に戻ると、タスク インスタンスを返します。 `Await` 演算子が呼び出されたメソッドで実行されるか、または呼び出されたメソッドが終了すると、非同期メソッドから呼び出し元に制御が戻ります。 「3」から「6」のラベルの付いた表示行はこのプロセスの部分をトレースします。  
   
@@ -263,7 +263,7 @@ Length of the downloaded string: 33946.
  `client.GetStringAsync` メソッドは、`getStringTask` の `AccessTheWebAsync` 変数に割り当てる文字列のタスクを返します。 プログラム例の次の行は、`client.GetStringAsync` の呼び出しと割り当てを示しています。  
   
 ```vb  
-Dim getStringTask As Task(Of String) = client.GetStringAsync("http://msdn.microsoft.com")  
+Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")  
 ```  
   
  このタスクは `client.GetStringAsync` により実際の文字列が最終的に生成される約束と見なすことができます。 `AccessTheWebAsync` には `client.GetStringAsync` から約束された文字列に依存しない処理がある場合、その処理は `client.GetStringAsync` を待機している間は、続行できます。 この例では、"THREE" のラベルの付いた行の出力は、独立した処理を行う機会を表します。  
@@ -280,14 +280,14 @@ THREE: Back in AccessTheWebAsync.
 Dim urlContents As String = Await getStringTask  
 ```  
   
- 次の図は、制御フローから`client.GetStringAsync`への代入`getStringTask`およびの作成から`getStringTask`Await 演算子のアプリケーションにします。  
+ 次の図は、コントロールからのフローを示しています。`client.GetStringAsync`への割り当てへ`getStringTask`との作成から`getStringTask`、Await 演算子のアプリケーションにします。  
   
  ![手順 3.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")  
   
  await 式は `AccessTheWebAsync` が制御を返すまで `client.GetStringAsync` を中断します。 その間、コントロールは `AccessTheWebAsync` の呼び出し元である `startButton_Click` に戻されます。  
   
 > [!NOTE]
->  通常、直ちに非同期メソッドへの呼び出しの待機状態となります。 たとえば、次の割り当てで、`getStringTask` を作成してそれを待機する前のコードを置き換えることができます: `Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`  
+>  通常、直ちに非同期メソッドへの呼び出しの待機状態となります。 たとえば、次の割り当てで、`getStringTask` を作成してそれを待機する前のコードを置き換えることができます: `Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`  
 >   
 >  このトピックでは、await 演算子が後で適用され、プログラムでの制御フローを示す出力行を格納します。  
   

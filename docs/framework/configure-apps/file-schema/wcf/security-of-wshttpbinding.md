@@ -2,13 +2,12 @@
 title: '&lt;wsHttpBinding&gt; の &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-author: BrucePerlerMS
-ms.openlocfilehash: cee14a1ed8aa9f11aa77006ee2ed4e205ceedbe3
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
-ms.translationtype: MT
+ms.openlocfilehash: f552e12e98e1fd760a9b36f6984a41a32f96533f
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086376"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045205"
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt; の &lt;security&gt;
 セキュリティ機能を表す、 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)します。  

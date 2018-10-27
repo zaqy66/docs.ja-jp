@@ -2,19 +2,19 @@
 title: Binding2
 ms.date: 03/30/2017
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
-ms.openlocfilehash: 0260b75a0f49e0f6f72d7d1eda642d0a494d2892
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84e304f3dedcbd785d6238e6cb5eb142c288b995
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487008"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50033834"
 ---
 # <a name="binding"></a>バインド
 wmi バインディング  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp
 class Binding  
 {  
   BindingElement BindingElements[];  
@@ -90,7 +90,7 @@ class Binding
   
  送信操作が完了するまで待機する時間です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

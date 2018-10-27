@@ -3,11 +3,11 @@ title: WCF WEB HTTP サービスのキャッシュ サポート
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
 ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847641"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453295"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF WEB HTTP サービスのキャッシュ サポート
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ASP.NET、WCF Web HTTP サービスで既に提供宣言によるキャッシュ機構を使用できます。 これにより、WCF Web HTTP サービス操作からの応答をキャッシュできます。 キャッシュ用に構成されているサービスに対してユーザーが HTTP GET を送信すると、ASP.NET は、キャッシュされた応答を送り返し、サービス メソッドは呼び出されません。 キャッシュの有効期限が切れると、ユーザーが次回に HTTP GET を送信したときに、サービス メソッドが呼び出され、応答が再度キャッシュされます。 ASP.NET のキャッシュの詳細については、次を参照してください[ASP.NET のキャッシュの概要。](https://go.microsoft.com/fwlink/?LinkId=152534)  

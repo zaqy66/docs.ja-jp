@@ -7,15 +7,15 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: ee8cb91fd2fae9637a0d0e33fca63a4cdb9d2fce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ce2e061c5f523fae3020b08034875422a0062a7
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651571"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170173"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>方法: Visual Basic で配列変数を初期化する
-配列リテラルを `New` 句に含めること、および配列の初期値を指定することで、配列変数を初期化します。 型を指定するか、配列リテラル内の値から推論することを許可できます。 型を推論する方法の詳細についてを参照してください「を設定する、配列に初期値」[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)です。  
+配列リテラルを `New` 句に含めること、および配列の初期値を指定することで、配列変数を初期化します。 型を指定するか、配列リテラル内の値から推論することを許可できます。 型の推論方法の詳細についてを参照してください「を設定する配列の初期値の」[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>配列リテラルを使用して配列変数を初期化するには  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33651571"
   
 ### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>配列リテラルを使用してジャグ配列変数を初期化するには  
   
--   中かっこ (`{}`) で囲んだオブジェクトの値を入れ子にします。 ジャグ配列の場合、長さが異なる配列を指定する配列リテラルを入れ子にすることもできますが、入れ子になった配列リテラルがかっこ (`()`) で囲まれていることを確認してください。 かっこで囲むことで、入れ子になった配列リテラルが強制的に評価され、結果の配列がジャグ配列の初期値として使用されるようになります。 ジャグ配列を初期化する 2 つの例を次に示します。  
+-   中かっこ (`{}`) で囲んだオブジェクトの値を入れ子にします。 また、ジャグ配列の場合、異なる長さの配列を指定する配列リテラルを入れ子にすることもできます。 ただし、入れ子になった配列リテラルがかっこで囲まれた確認 (`()`)。 かっこで囲むことで、入れ子になった配列リテラルが強制的に評価され、結果の配列がジャグ配列の初期値として使用されるようになります。 ジャグ配列を初期化する 2 つの例を次に示します。  
   
      [!code-vb[VbVbalrArrays#19](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_5.vb)]  
   

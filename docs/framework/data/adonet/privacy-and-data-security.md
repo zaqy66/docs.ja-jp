@@ -3,11 +3,11 @@ title: プライバシーとデータ セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
 ms.openlocfilehash: 078b5e09e800511c3edfa78596b5bdb67ebcc6d7
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372518"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50042836"
 ---
 # <a name="privacy-and-data-security"></a>プライバシーとデータ セキュリティ
 ADO.NET アプリケーションにおける機密情報の保護と管理は、基になる製品および作成に使用されたテクノロジに依存します。 ADO.NET そのものは、データを保護したり暗号化したりするためのサービスを提供しません。  

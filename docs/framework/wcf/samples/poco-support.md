@@ -2,12 +2,12 @@
 title: POCO サポート
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: beba1469d5d9575a5b2ef76a4db3747dfcc35d0c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bb4f8b0a5eb20be50a2d3ba9a15d66fd7fc573f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857603"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452811"
 ---
 # <a name="poco-support"></a>POCO サポート
 このサンプルでは、マークされていない型 (シリアル化属性が適用されていない型で、POCO (Plain Old CLR Object) 型と呼ばれる場合もあります) のシリアル化のサポートについて説明します。 <xref:System.Runtime.Serialization.DataContractSerializer> では、既定のコンストラクタを持つすべてのマークされていないパブリック型について、データ コントラクトを推測します。 データ コントラクトを使用すると、サービスと構造化データをやり取りできます。 マークされていない種類の詳細については、次を参照してください。[シリアル化できる型](../../../../docs/framework/wcf/feature-details/serializable-types.md)します。  
@@ -21,7 +21,7 @@ ms.locfileid: "43857603"
   
  `ComplexNumber` クラスは、`ServiceContract` で使用されます。 次のサンプル コードに示すように、`ComplexNumber` 型には、<xref:System.Runtime.Serialization.DataContractAttribute> 属性と <xref:System.Runtime.Serialization.DataMemberAttribute> 属性がありません。 既定では、パブリック プロパティとパブリック フィールドはすべてシリアル化されます。  
   
-```  
+```csharp
 public class ComplexNumber  
 {  
     public double Real;  

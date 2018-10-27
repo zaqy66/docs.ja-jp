@@ -7,13 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-author: BrucePerlerMS
-ms.openlocfilehash: 904ea64bd6e76e7bf99aa4a31ef752bfb2760c23
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: 9cd180c5e1bd8afff462c380ad3389a78027eb48
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198463"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170368"
 ---
 # <a name="bindings-and-security"></a>バインディングとセキュリティ
 Windows Communication Foundation (WCF) に含まれるシステム指定のバインディングは、WCF アプリケーションをプログラムする簡単な方法を提供します。 1 つの例外を除き、すべてのバインディングにはセキュリティ スキームが含まれており、既定で有効になっています。 ここでは、セキュリティ ニーズに適した正しいバインディングの選択方法について説明します。  
@@ -90,7 +89,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
     -   チャネル セットアップの一部としてサービスからネゴシエートされるサービス資格情報の提供  
   
- 詳細については、<xref:System.ServiceModel.WSDualHttpSecurity> および <xref:System.ServiceModel.WSDualHttpSecurityMode> を参照してください。  
+ 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.WSDualHttpSecurity> および <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  コードでは、使用、<xref:System.ServiceModel.NetTcpBinding>クラスは、構成を使用して、 [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)します。  
@@ -145,7 +144,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
 -   MSMQ トランスポート セキュリティ (トランスポート)。  
   
- 詳細については、<xref:System.ServiceModel.NetMsmqSecurity> および <xref:System.ServiceModel.NetMsmqSecurityMode> を参照してください。  
+ 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.NetMsmqSecurity> および <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  コードでは、使用、<xref:System.ServiceModel.NetMsmqBinding>クラスは、構成を使用して、 [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)します。  
@@ -166,7 +165,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
  <xref:System.ServiceModel.MessageCredentialType.Certificate> 資格情報は、セキュリティ モードが <xref:System.ServiceModel.NetMsmqSecurityMode.Both> または <xref:System.ServiceModel.NetMsmqSecurityMode.Message> に設定されている場合にのみサポートされます。  
   
- 詳細については、<xref:System.ServiceModel.MessageSecurityOverMsmq> および <xref:System.ServiceModel.MsmqTransportSecurity> を参照してください。  
+ 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.MessageSecurityOverMsmq> および <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  コードでは、使用、<xref:System.ServiceModel.WSFederationHttpBinding>クラスは、構成を使用して、 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)します。  

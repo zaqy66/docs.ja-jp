@@ -2,17 +2,17 @@
 title: XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: fd5c41272d3b050427804f08f7387328012065f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 76fd0126f32eb2b22a12ee0b67e1f81794ff9445
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504948"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033624"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
 ここでは、XML スキーマ定義言語 (XSD) スキーマ ドキュメントから `DataSet` のリレーショナル スキーマを生成する方法についての概要を説明します。 一般の各`complexType`スキーマ要素の子要素で、テーブルが生成、`DataSet`します。 テーブル構造は、複合型の定義に基づいて決定されます。 作成されるテーブル、`DataSet`のスキーマの最上位の要素。 ただし、テーブルを最上位レベルの作成のみ`complexType`要素と、`complexType`要素が別の内部で入れ子になった`complexType`を要素は、入れ子になった場合`complexType`要素にマップされます、`DataTable`内、`DataSet`します。  
   
- について、XSD の詳細については、World Wide Web Consortium (W3C) XML Schema Part 0: Primer Recommendation、XML スキーマのパート 1: Structures Recommendation、および、XML Schema Part 2: Datatypes Recommendation 』 にある[ http://www.w3.org/](http://www.w3.org/TR/).  
+ XSD の詳細については、World Wide Web Consortium (W3C) を参照してください[XML Schema Part 0: Primer Recommendation](https://www.w3.org/TR/xmlschema-0/)、 [XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/)、および[XML。Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)します。  
   
  次の例では、XML スキーマ、`customers`の子要素です、`MyDataSet`要素、**データセット**要素。  
   
