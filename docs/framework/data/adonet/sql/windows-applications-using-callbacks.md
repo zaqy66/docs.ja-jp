@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c80f65ad2a4c7c48e32615c3cfdf754996f91bc1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664515"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187872"
 ---
 # <a name="windows-applications-using-callbacks"></a>コールバックを使用した Windows アプリケーション
 非同期処理は多くの場合、データベース操作を開始し、データベース操作が完了するまで待つことなく、他のプロセスの実行を継続できるようにします。 ただし、ほとんどの場合、データベース操作の完了時に何らかの処理を行う必要があります。 たとえば、Windows アプリケーションでは、ユーザー インターフェイス スレッドの応答性を維持しながら、時間のかかる操作をバックグラウンド スレッドに委任することができます。 また一方、データベース操作の完了時に、この結果を使用してフォームを表示することができます。 このような場合、コールバックによって最適に実行されます。  
@@ -248,7 +248,7 @@ private void Form1_FormClosing(object sender, System.Windows.Forms.FormClosingEv
     {  
         MessageBox.Show(this, "Can't close the form until " +  
         "the pending asynchronous command has completed. Please " +  
-        wait...");  
+        "wait...");
         e.Cancel = true;  
     }  
 }  

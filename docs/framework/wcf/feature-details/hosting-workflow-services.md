@@ -2,18 +2,18 @@
 title: ワークフロー サービスのホスティング
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d51157863984314583c5d225bc9d8d0b6cf74874
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505547"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186097"
 ---
 # <a name="hosting-workflow-services"></a>ワークフロー サービスのホスティング
 ワークフロー サービスが受信メッセージに応答するには、ワークフロー サービスがホストされている必要があります。 ワークフロー サービスは WCF メッセージング インフラストラクチャを使用するため、これと似た方法でホストされます。 WCF のサービスと同様に、インターネット インフォメーション サービス (IIS)、または Windows プロセス アクティブ化サービス (WAS) の下で、任意の管理対象のアプリケーションでワークフロー サービスをホストできます。 さらに、ワークフロー サービスは、Windows Server Appfabric でホストできます。 Windows Server App Fabric の詳細については、次を参照してください。 [Windows Server App Fabric のドキュメント](https://go.microsoft.com/fwlink/?LinkId=193037)、 [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=196494)、および[AppFabric ホスティングの概念](https://go.microsoft.com/fwlink/?LinkId=196495)します。 WCF をホストするさまざまな方法の詳細については、「」を参照をサービスの[ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)します。
 
 ## <a name="hosting-in-a-managed-application"></a>マネージド アプリケーションでのホスト
- マネージド アプリケーションでワークフロー サービスをホストするには、<xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスを使用します。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> コンストラクターにより、シングルトン ワークフロー サービス インスタンス、ワークフロー サービス定義、またはワークフロー メッセージング アクティビティを使用するアクティビティを指定できます。 呼び出す <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> サービスが受信メッセージのリッスンを開始します。
+ マネージド アプリケーションでワークフロー サービスをホストするには、<xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスを使用します。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> コンストラクターにより、シングルトン ワークフロー サービス インスタンス、ワークフロー サービス定義、またはワークフロー メッセージング アクティビティを使用するアクティビティを指定できます。 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> の呼び出しによって、サービスが受信メッセージのリッスンを開始します。
 
 ## <a name="hosting-under-iis-or-was"></a>IIS または WAS の下でのホスト
  IIS または WAS の下でワークフロー サービスをホストする場合は、仮想ディレクトリを作成し、サービスとその動作を定義するファイルをその仮想ディレクトリ内に配置します。 IIS または WAS の下でワークフローをホストする場合は、いくつかの方法が考えられます。

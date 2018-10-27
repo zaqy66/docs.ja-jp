@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f4ab3d4e7ce6686a43e4c5258a56e72203c38ebd
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3a6d5b080c74fbd3f6ebca9882c1667951cfcb91
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033390"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183674"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;プロキシ&gt;要素 (ネットワーク設定)
 プロキシ サーバーを定義します。  
@@ -70,7 +68,7 @@ ms.locfileid: "48033390"
   
  使用して、`usesystemdefault`バージョン 2.0 に移行しようとする .NET Framework version 1.1 アプリケーション用の属性。  
   
- 場合、例外がスローされます、`proxyaddress`属性が、無効な既定のプロキシを指定します。 例外の <xref:System.Exception.InnerException%2A> プロパティに、このエラーの根本的な原因に関する詳細情報が含まれています。  
+ 場合、例外がスローされます、`proxyaddress`属性が、無効な既定のプロキシを指定します。 例外の <xref:System.Exception.InnerException%2A> プロパティに、このエラーの根本原因に関する詳細情報が含まれています。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
@@ -93,5 +91,5 @@ ms.locfileid: "48033390"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

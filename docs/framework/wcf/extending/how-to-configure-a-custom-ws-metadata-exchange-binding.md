@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 0596e91204a2a9dbaed2fdbe85387ec3785fd3db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d6f74d88dc9db775718c0098eccced4750d3b75
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488700"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184505"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>方法 : カスタム WS-Metadata Exchange バインディングを構成する
-ここでは、カスタム WS-Metadata Exchange バインディングを構成する方法について説明します。 Windows Communication Foundation (WCF) には、4 つのシステム定義のメタデータ バインディングが含まれていますが、どのバインディングでもを使用してメタデータを公開することができます。 ここでは、`wsHttpBinding` を使用してメタデータを公開する方法を示します。 このバインディングでは、メタデータをセキュリティで保護して公開することができます。 この記事でコードがに基づいて、[作業の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)です。  
+ここでは、カスタム WS-Metadata Exchange バインディングを構成する方法について説明します。 Windows Communication Foundation (WCF) には、4 つのシステム定義のメタデータ バインディングが含まれていますが、どのバインディングを使用してメタデータを公開することができます。 ここでは、`wsHttpBinding` を使用してメタデータを公開する方法を示します。 このバインディングでは、メタデータをセキュリティで保護して公開することができます。 この記事のコードがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。  
   
 ### <a name="using-a-configuration-file"></a>構成ファイルの使用  
   
@@ -66,7 +66,7 @@ ms.locfileid: "33488700"
   
 ### <a name="configuring-by-code"></a>コードによる構成  
   
-1.  作成、<<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> バインディング インスタンス。  
+1.  <xref:System.ServiceModel.WSHttpBinding> バインディングのインスタンスを作成します。  
   
     ```  
     WSHttpBinding binding = new WSHttpBinding();  
@@ -87,7 +87,7 @@ ms.locfileid: "33488700"
     serviceHost.Description.Behaviors.Add(smb);  
     ```  
   
-4.  メタデータ交換エンドポイントを追加を指定する、<<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 以前に作成します。  
+4.  前に作成した <xref:System.ServiceModel.WSHttpBinding> を指定する Metadata Exchange エンドポイントを追加します。  
   
     ```  
     serviceHost.AddServiceEndpoint(typeof(IMetadataExchange), binding, mexAddress);  

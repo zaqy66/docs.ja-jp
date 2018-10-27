@@ -2,14 +2,12 @@
 title: '&lt;削除&gt;schemeSettings (Uri 設定) の要素'
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3f4e3dbdc3dae425e44cd1c0890e8fef9d42a780
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: d444e2eeeace2dc59a53467316507d0bc38970d5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028401"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186045"
 ---
 # <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;削除&gt;schemeSettings (Uri 設定) の要素
 スキーム名の構成設定を削除します。  
@@ -77,10 +75,10 @@ ms.locfileid: "48028401"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
- <xref:System.Uri?displayProperty=nameWithType>  
- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+- <xref:System.Uri?displayProperty=nameWithType>  
+- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

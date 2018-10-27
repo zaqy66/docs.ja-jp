@@ -10,14 +10,12 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2b313aa2481b1257715ac4dbc6d452e2120f4726
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 39d4a184972036677aaa9fdb33e672521033d35f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838332"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190529"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;オフ&gt;webRequestModules (ネットワーク設定) の要素
 アプリケーションから登録済みのすべての Web 要求モジュールを削除します。  
@@ -72,5 +70,5 @@ ms.locfileid: "48838332"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.Net.WebRequest>  
- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebRequest>  
+- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

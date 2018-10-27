@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-author: BrucePerlerMS
-ms.openlocfilehash: 01ad849090bd66ba7e0b4e062f78ad7a04ad059d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c0e5281d227d343d8734809b27b57d8a2bead627
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200231"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185805"
 ---
 # <a name="how-to-create-a-secure-session"></a>方法 : セキュリティで保護されたセッションを作成する
 例外として、 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)バインドするには、システム指定のバインディングでは、Windows Communication Foundation (WCF) に自動的を使用して、メッセージ セキュリティが有効な場合、セキュリティで保護されたセッションです。  
@@ -79,7 +78,7 @@ ms.locfileid: "47200231"
     </bindings>  
     ```  
   
-     セキュリティで保護されたセッションをブートストラップするための <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> 認証モードを使用する、カスタム バインディングを作成するコード例を次に示します。  
+     セキュリティで保護されたセッションをブートストラップするための <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> 認証モードを使用する、カスタム バインドを作成するコード例を次に示します。  
   
      [!code-csharp[c_CreateSecureSession#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#2)]
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  

@@ -2,12 +2,12 @@
 title: メッセージング プロトコル
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 7d94b917f3d8d2fd7faed28b9320edc240724e0b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703012"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183855"
 ---
 # <a name="messaging-protocols"></a>メッセージング プロトコル
 
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) チャネル スタックには、内部�
 
 このトピックでは、次の XML 名前空間と関連付けられたプレフィックスが使用されます。
 
-|プレフィックス |Namespace Uniform Resource Identifier (URI) |[---|---| | s11 |`http://schemas.xmlsoap.org/soap/envelope`| | s12 |`http://www.w3.org/2003/05/soap-envelope`| | wsa |`http://www.w3.org/2004/08/addressing`| | wsam |`http://www.w3.org/2007/05/addressing/metadata`| | wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing`| | wsa10 |`http://www.w3.org/2005/08/addressing`| | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl`| | xop |`http://www.w3.org/2004/08/xop/include`| | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime`| | dp |`http://schemas.microsoft.com/net/2006/06/duplex`|
+|プレフィックス |Namespace Uniform Resource Identifier (URI) |[---|---| | s11 |`http://schemas.xmlsoap.org/soap/envelope` | | s12 |`http://www.w3.org/2003/05/soap-envelope` | | wsa |`http://www.w3.org/2004/08/addressing` | | wsam |`http://www.w3.org/2007/05/addressing/metadata` | | wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` | | wsa10 |`http://www.w3.org/2005/08/addressing` | | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` | | xop |`http://www.w3.org/2004/08/xop/include` | | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | |配布ポイント |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 と SOAP 1.2
 
@@ -190,20 +190,20 @@ Web サービス操作の呼び出しに関連するメッセージのシーケ�
 ### <a name="web-services-addressing-faults"></a>Web Services Addressing エラー
 R3411: WCF では、Ws-addressing 2004/08 で定義された次のエラーを生成します。
 
-|コード|原因|
+| コード | 原因 |
 |----------|-----------|
-|`wsa:DestinationUnreachable`|このチャネル用に確立された応答アドレスとは異なる `ReplyTo` を使用してメッセージが到着しました。To ヘッダーに指定されたアドレスをリッスンしているエンドポイントはありません。|
-|`wsa:ActionNotSupported`|`Action` ヘッダーに指定されたアクションは、エンドポイントに関連付けられたインフラストラクチャ チャネルまたはディスパッチャーによって認識されません。|
+| `wsa:DestinationUnreachable` | このチャネル用に確立された応答アドレスとは異なる `ReplyTo` を使用してメッセージが到着しました。To ヘッダーに指定されたアドレスをリッスンしているエンドポイントはありません。 |
+| `wsa:ActionNotSupported` | `Action` ヘッダーに指定されたアクションは、エンドポイントに関連付けられたインフラストラクチャ チャネルまたはディスパッチャーによって認識されません。 |
 
 R3412: WCF では、Ws-addressing 1.0 で定義された次のエラーを生成します。
 
-|コード|原因|
+| コード | 原因 |
 |----------|-----------|
-|`wsa10:InvalidAddressingHeader`|重複する`wsa:To`、 `wsa:ReplyTo`、`wsa:From`または`wsa:MessageID`します。 重複する`wsa:RelatesTo`同じ`RelationshipType`します。|
-|`wsa10:MessageAddressingHeaderRequired`|必須の Addressing ヘッダーがありません。|
-|`wsa10:DestinationUnreachable`|このチャネル用に確立された応答アドレスとは異なる `ReplyTo` を使用してメッセージが到着しました。 To ヘッダーに指定されたアドレスをリッスンしているエンドポイントはありません。|
-|`wsa10:ActionNotSupported`|`Action` ヘッダーに指定されたアクションは、エンドポイントに関連付けられたインフラストラクチャ チャネルまたはディスパッチャーによって認識されません。|
-|`wsa10:EndpointUnavailable`|RM チャネルは、`CreateSequence` メッセージのアドレス指定ヘッダーの検査に基づいて、エンドポイントでシーケンスが処理されないことを示すために、このエラーを返しました。|
+| `wsa10:InvalidAddressingHeader` | 重複する`wsa:To`、 `wsa:ReplyTo`、`wsa:From`または`wsa:MessageID`します。 重複する`wsa:RelatesTo`同じ`RelationshipType`します。 |
+| `wsa10:MessageAddressingHeaderRequired` | 必須の Addressing ヘッダーがありません。 |
+| `wsa10:DestinationUnreachable` | このチャネル用に確立された応答アドレスとは異なる `ReplyTo` を使用してメッセージが到着しました。 To ヘッダーに指定されたアドレスをリッスンしているエンドポイントはありません。 |
+| `wsa10:ActionNotSupported` | `Action` ヘッダーに指定されたアクションは、エンドポイントに関連付けられたインフラストラクチャ チャネルまたはディスパッチャーによって認識されません。 |
+| `wsa10:EndpointUnavailable` | RM チャネルは、`CreateSequence` メッセージのアドレス指定ヘッダーの検査に基づいて、エンドポイントでシーケンスが処理されないことを示すために、このエラーを返しました。 |
 
 上記の 2 つの表に示すコードは、SOAP 1.1 の `FaultCode`、および SOAP 1.2 の `SubCode` (Code=Sender) に対応付けられています。
 

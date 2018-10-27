@@ -5,13 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-author: BrucePerlerMS
-ms.openlocfilehash: dfefa94db2bd286cb92a7fe09e5c4addb52ba8c8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090543"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189629"
 ---
 # <a name="distributed-application-security"></a>分散アプリケーションのセキュリティ
 Windows Communication Foundation (WCF) のセキュリティは、次の 3 つの主要な機能領域に分割されます。 転送セキュリティ、アクセス制御、および監査します。 転送セキュリティは、整合性、機密性、および認証を実現します。 転送セキュリティは、トランスポート セキュリティ、メッセージ セキュリティ、または `TransportWithMessageCredential` のいずれかによって提供されます。  

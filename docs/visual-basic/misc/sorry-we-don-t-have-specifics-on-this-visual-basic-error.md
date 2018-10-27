@@ -1,5 +1,5 @@
 ---
-title: 申し訳ありません&#39;t この Visual Basic エラーに関する詳細があります。
+title: 申し訳ありません&#39;t ありません、Visual Basic エラーに関する特定の情報
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30234
@@ -3044,30 +3044,30 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: e3d3ac14c51ef5665aba0879a85e03e662174e68
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231464"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192786"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>申し訳ありません&#39;t この Visual Basic エラーに関する詳細があります。
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>申し訳ありません&#39;t ありません、Visual Basic エラーに関する特定の情報
 申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のフォーラムのいずれかを使用して他の開発者に尋ねることができます。  
   
  [Visual Basic 言語](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
- 質問や議論の Visual Basic 言語の構文およびコンパイラのフォーラムを提供します。  
+ 質問の Visual Basic 言語の構文やコンパイラや議論のフォーラムを提供します。  
   
  [Visual Basic の相互運用とアップグレード](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
- に関する質問については、フォーラムを提供し、Visual Basic にアップグレードして、相互運用性機能の使用を発行します。  
+ に関する質問フォーラムを提供し、Visual Basic にアップグレードして、相互運用機能の操作を発行します。  
   
  [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Visual Studio 環境で作業する方法に関する質問をフォーラムを提供します。  
   
  [Visual Basic 全般](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
- に関する質問については、フォーラムを提供し、その他のフォーラムで取り上げていない Visual Basic を使用して発行します。  
+ に関する質問フォーラムを提供し、その他のフォーラムで議論されていない Visual Basic を使用して発行します。  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- に関する質問については、フォーラムを提供し、Visual Basic を使用して発行します。  
+ [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
+ に関する質問フォーラムを提供し、Visual Basic を使用して発行します。  
   
  関連項目:  
  [Visual Basic プログラマのための追加リソース](../../visual-basic/getting-started/additional-resources.md)  

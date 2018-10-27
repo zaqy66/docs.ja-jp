@@ -2,12 +2,12 @@
 title: 相関関係の概要
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: d831452c384e5aede6ede37af7de6e86b6772342
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: cc165bb4b74c70b740632c5cb873ed200b2283bb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372643"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185865"
 ---
 # <a name="correlation-overview"></a>相関関係の概要
 相関関係とは、ワークフロー サービス メッセージを互いに関連付ける、最初の要求への応答などのアプリケーションのインスタンス状態と関連付ける、または特定の注文 ID を注文処理ワークフローの永続化された状態に関連付けるためのしくみです。 ここでは、相関関係の概要について説明します。 このセクションの他のトピックでは、相関関係の各種類についての追加情報を提供します。  
@@ -21,7 +21,7 @@ ms.locfileid: "49372643"
 
 プロトコル ベースの相関関係では、メッセージを相互に関連付け、該当するインスタンスと関連付けるために、トランスポート機構が使用されます。 システムで提供される一部のプロトコル相関関係には、要求/応答の相関関係とコンテキスト ベースの相関関係が含まれます。 要求/応答の相関関係を使用して、メッセージング アクティビティの 1 つのペアが関連付けられ、<xref:System.ServiceModel.Activities.Send> と <xref:System.ServiceModel.Activities.ReceiveReply> のペアや、<xref:System.ServiceModel.Activities.Receive> と <xref:System.ServiceModel.Activities.SendReply> のペアなどの双方向の操作が形成されます。 Visual Studio ワークフロー デザイナーには、このパターンを簡単に実装するアクティビティ テンプレートのセットも提供します。 コンテキスト ベースの相関関係がで説明されているコンテキスト交換メカニズムに基づく、 [.NET コンテキスト交換プロトコルの仕様](https://go.microsoft.com/fwlink/?LinkID=166059)します。 コンテキスト ベースの相関関係を使用するには、<xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding>、または <xref:System.ServiceModel.NetTcpContextBinding> などのコンテキスト ベースのバインディングがエンドポイントで使用される必要があります。  
   
-プロトコルの相関関係の詳細については、次を参照してください。[永続的な二重](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)と[要求/応答](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)します。 Visual Studio ワークフロー デザイナーのアクティビティ テンプレートの使用に関する詳細については、次を参照してください。[メッセージング アクティビティ](../../../../docs/framework/wcf/feature-details/messaging-activities.md)します。 サンプル コードについては、 [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)サンプル。  
+プロトコルの相関関係の詳細については、次を参照してください。[永続的な二重](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)と[要求/応答](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)します。 Visual Studio ワークフロー デザイナーのアクティビティ テンプレートの使用に関する詳細については、次を参照してください。[メッセージング アクティビティ](../../../../docs/framework/wcf/feature-details/messaging-activities.md)します。 サンプル コードについては、 [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)サンプル。  
   
 ## <a name="content-based-correlation"></a>コンテンツ ベースの相関関係
 
@@ -29,4 +29,4 @@ ms.locfileid: "49372643"
   
 ## <a name="see-also"></a>関連項目  
 
-- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)
+- [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

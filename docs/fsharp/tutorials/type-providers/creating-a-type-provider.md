@@ -2,12 +2,12 @@
 title: 'チュートリアル: 型プロバイダー (f#) を作成します。'
 description: F# 3.0 で基本的な概念を説明するためにいくつかの単純型プロバイダーを調べることで、独自の f# 型プロバイダーを作成する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397960"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183920"
 ---
 # <a name="tutorial-create-a-type-provider"></a>チュートリアル: 型プロバイダーを作成します。
 
@@ -353,7 +353,7 @@ t.AddMembersDelayed(fun () ->
           p.AddXmlDocDelayed(fun () -> 
               sprintf "This is StaticProperty%d on NestedType" i)
 
-          yield p ]
+          yield p ]
 
     staticPropsInNestedType)
 
@@ -748,7 +748,7 @@ do ()
 
 - ヘッダー名は、いずれかの単位のない、または形式は"Name (ユニット)"とコンマが含まれていません。
 
-- 単位としてすべて国際単位系 (SI) ユニット、 [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames Module (f#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b)モジュールを定義します。
+- 単位は、すべてのシステム (SI) ユニットとして、 [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames Module (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b)モジュールを定義します。
 
 - 単位はすべて単純な単位 (たとえば、メートル) で、複合単位 (メートル/秒など) ではありません。
 
@@ -1110,7 +1110,7 @@ F# の型プロバイダー メカニズムには、次の制約があります�
 
 ## <a name="development-tips"></a>開発のヒント
 
-開発過程では次のヒントが役立つことがあります。
+役に立つヒントを次に示します、開発プロセス中に。
 
 ### <a name="run-two-instances-of-visual-studio"></a>Visual Studio の 2 つのインスタンスを実行します。
 

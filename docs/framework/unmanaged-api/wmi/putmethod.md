@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cdf34ff6ae506ba209300685da3752820b250a2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 98ef688c1136a81a5b57c3fdfee73c53024186e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516751"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191043"
 ---
 # <a name="putmethod-function"></a>PutMethod 関数
 メソッドが作成されます。
@@ -53,7 +53,7 @@ HRESULT PutMethod (
 [in]作成するメソッドの名前。 
 
 `lFlags`  
-[in]予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
 
 `pSignatureIn`  
 [in]コピーへのポインター、 [_parameters システム クラス](/windows/desktop/WmiSdk/--parameters)を格納している、`in`メソッドのパラメーター。 場合、このパラメーターは無視されます設定`null`します。  
@@ -80,11 +80,11 @@ HRESULT PutMethod (
 
 この関数の呼び出しをラップする、 [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod)メソッド。
 
-場合にのみ、このメソッドの呼び出しがサポート`ptr`CIM クラスの定義を示します。 メソッドの操作をからご利用いただけません[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) CIM インスタンスを指すポインター。
+場合にのみ、このメソッドの呼び出しがサポート`ptr`CIM クラスの定義を示します。 メソッドの操作をからご利用いただけません[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) CIM インスタンスを指すポインター。
 
 ユーザーは、アンダー スコアで開始または終了する名前を持つメソッドを作成することはできません。 これはシステム クラスとプロパティの予約されています。
 
-メソッドで、`in`と`out`パラメーターはプロパティとして説明[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)オブジェクト。
+メソッドで、`in`と`out`パラメーターはプロパティとして説明[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)オブジェクト。
 
 `[in/out]`によって示される両方のオブジェクトへの同じプロパティを追加することでパラメーターを定義することができます、`pInSignature`と`pOutSignature`パラメーター。 この場合、プロパティが同じ共有**ID**修飾子の値。
 
@@ -94,7 +94,7 @@ HRESULT PutMethod (
 
 例については、次を参照してください。、 [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod)メソッド。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  

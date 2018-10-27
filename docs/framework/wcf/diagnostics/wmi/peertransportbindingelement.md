@@ -2,19 +2,19 @@
 title: PeerTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 40bf6be2-8087-4cb3-a66c-408d53eb9269
-ms.openlocfilehash: 68e6a25e4e3f47c556363e2fd5aa8d3bb9946449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58bf07b0429ca2435b5aae3683ef69951a10003e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485646"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185184"
 ---
 # <a name="peertransportbindingelement"></a>PeerTransportBindingElement
 PeerTransportBindingElement  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp
 class PeerTransportBindingElement : TransportBindingElement  
 {  
   string ListenIPAddress;  
@@ -50,7 +50,7 @@ class PeerTransportBindingElement : TransportBindingElement
   
  ピア トランスポートのセキュリティ設定です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

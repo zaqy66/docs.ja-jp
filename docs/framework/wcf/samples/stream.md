@@ -2,12 +2,12 @@
 title: ストリーム
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed77d8231df8a2272e398f5b1a126c6ed8cab354
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861115"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191182"
 ---
 # <a name="stream"></a>ストリーム
 このストリーム サンプルでは、ストリーミング転送モードの通信を使用する方法を示します。 サービスは、ストリームを送受信する複数の操作を公開します。 このサンプルは自己ホスト型です。 クライアントとサービスはどちらもコンソール プログラムです。  
@@ -20,7 +20,7 @@ ms.locfileid: "43861115"
 ## <a name="streaming-and-service-contracts"></a>ストリーミングとサービス コントラクト  
  サービス コントラクトを設計する際は、ストリーミングを考慮します。 操作により大量のデータが受信されたり返されたりする場合、このデータをストリーミングして、入力または出力メッセージのバッファによりメモリの使用率が高くなるのを回避することを検討してください。 データをストリーミングするには、メッセージ内のパラメータが、データを保持するパラメータだけになるようにします。 たとえば、入力メッセージをストリーミングする場合、厳密に 1 つの入力パラメーターが操作に含まれている必要があります。 同様に、出力メッセージをストリーミングする場合、厳密に 1 つの出力パラメーターまたは戻り値が操作に含まれている必要があります。 いずれの場合も、パラメータまたは戻り値の型は `Stream`、`Message`、または `IXmlSerializable` のいずれかである必要があります。 このストリーミングのサンプルに使用されているサービス コントラクトを次に示します。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamingSample  
 {  
@@ -39,7 +39,7 @@ public interface IStreamingSample
  `GetStream` 操作は、一部の入力データを文字列として受信 (バッファ) し、`Stream` (ストリーミング) を返します。 逆に言えば、`UploadStream` は `Stream` (ストリーミング) を取り込んで、`bool` (バッファー) を返します。 `EchoStream` は `Stream` を出し入れします。これは、入力および出力メッセージがどちらもストリーミングされる操作の例です。 最後に、`GetReversedStream` は入力を行わずに `Stream` (ストリーミング) を返します。  
   
 ## <a name="enabling-streamed-transfers"></a>ストリーミング転送の有効化  
- 前述のように操作コントラクトを定義することにより、プログラミング モデル レベルでのストリーミングが実現します。 ここで作業を終えても、トランスポートはメッセージ全体の内容をバッファします。 トランスポートのストリーミングを有効にするには、トランスポートのバインディング要素で転送モードを選択します。 バインディング要素には、`TransferMode` プロパティがあり、`Buffered`、`Streamed`、`StreamedRequest`、または `StreamedResponse` に設定できます。 転送モードを `Streamed` に設定すると、両方向のストリーミング通信が可能になります。 転送モードを `StreamedRequest` または `StreamedResponse` に設定すると、それぞれ要求または応答のみでのストリーミング通信が可能になります。  
+ 前述のように操作コントラクトを定義することにより、プログラミング モデル レベルでのストリーミングが実現します。 ここで作業を終えても、トランスポートはメッセージ全体の内容をバッファします。 トランスポートのストリーミングを有効にするには、トランスポートのバインディング要素で転送モードを選択します。 バインド要素には、`TransferMode` プロパティがあり、`Buffered`、`Streamed`、`StreamedRequest`、または `StreamedResponse` に設定できます。 転送モードを `Streamed` に設定すると、両方向のストリーミング通信が可能になります。 転送モードを `StreamedRequest` または `StreamedResponse` に設定すると、それぞれ要求または応答のみでのストリーミング通信が可能になります。  
   
  `basicHttpBinding` は、`TransferMode` および `NetTcpBinding` と同様に、バインディングで `NetNamedPipeBinding` プロパティを開示します。 他のトランスポートの場合、転送モードを設定するにはカスタム バインドを作成する必要があります。  
   
@@ -68,7 +68,7 @@ public interface IStreamingSample
   
  `GetReversedStream` では、`ReverseStream` の新しいインスタンスを作成して返します。 実際の処理は、システムが `ReverseStream` オブジェクトの読み取りを行うときに発生します。 `ReverseStream.Read` の実装により、基になるファイルからバイトのチャンクが読み取られ、バイトが反転され、その反転されたバイトが返されます。 この処理ではファイル全体の内容は反転されません。一度に 1 つのバイトのチャンクが反転されます。 これは、ストリームの内容を読み取ったりストリームに内容を書き込んだりするときに、ストリーミング処理を実行する方法を示す例です。  
   
-```  
+```csharp
 class ReverseStream : Stream  
 {  
   
@@ -117,7 +117,7 @@ class ReverseStream : Stream
   
  サービスからの出力 :  
   
-```  
+```console  
 The streaming service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -131,7 +131,7 @@ File D:\...\uploadedfile saved
   
  クライアントからの出力 :  
   
-```  
+```console  
 Press <ENTER> when service is ready  
 ------ Using HTTP ------   
 Calling GetStream()  

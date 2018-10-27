@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 671302003c3a1f3a37e1773aeeae9cb09a457d13
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8363351efd0b6cbcfee5b137cf9f222e16dcc425
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033364"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188743"
 ---
 # <a name="ltcryptoclassesgt-element"></a>&lt;cryptoClasses&gt;要素
 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 要素内の表示名へのマッピングを持つ暗号化クラスのリストを含みます。  
@@ -79,9 +79,9 @@ ms.locfileid: "48033364"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.Security.Cryptography>  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [暗号サービス](../../../../../docs/standard/security/cryptographic-services.md)  
- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)  
- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- <xref:System.Security.Cryptography>  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)  
+- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

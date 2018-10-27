@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3909855db109938794fad3e0afc99d492009b81c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 126276840ee12bdba99f5ce1c164762340bb580c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461788"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183933"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows ストア アプリの .NET ネイティブへの移行
-.NET ネイティブ アプリ、Windows ストアまたは開発者のコンピューター上の静的なコンパイルを提供します。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いは、.NET ネイティブ試行との互換性を維持するために、 [Windows ストア アプリ用 .NET](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)します。 ほとんどの場合、Windows ストア アプリ用 .NET で機能する機能は、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、次の領域で、標準的な Windows ストア アプリ用 .NET と .NET ネイティブのこれらの違いについて説明します。  
+.NET ネイティブ アプリ、Windows ストアまたは開発者のコンピューター上の静的なコンパイルを提供します。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いは、.NET ネイティブ試行との互換性を維持するために、 [Windows ストア アプリ用 .NET](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)します。 ほとんどの場合、Windows ストア アプリ用 .NET で機能する機能は、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、次の領域で、標準的な Windows ストア アプリ用 .NET と .NET ネイティブのこれらの違いについて説明します。  
   
 -   [全般的なランタイムの違い](#Runtime)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "43461788"
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   
--   場合によっては、.NET ネイティブは、.NET Framework クラス ライブラリのさまざまな実装を提供します。 メソッドから返されるオブジェクトは、常に、返される型のメンバーを実装します。 ただし、その補助的な実装が異なるため、その他の .NET Framework プラットフォームの場合と同じ型セットへのオブジェクトのキャストを行うことができない場合があります。 たとえば、<xref:System.Collections.Generic.IEnumerable%601> や <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> などのメソッドにより返される <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> インターフェイス オブジェクトを `T[]` にキャストできない場合があります。  
+-   場合によっては、.NET ネイティブは、.NET Framework クラス ライブラリのさまざまな実装を提供します。 メソッドから返されるオブジェクトは、常に、返される型のメンバーを実装します。 ただし、その補助的な実装が異なるため、その他の .NET Framework プラットフォームの場合と同じ型セットへのオブジェクトのキャストを行うことができない場合があります。 たとえば、 <xref:System.Collections.Generic.IEnumerable%601> や <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> などのメソッドにより返される <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> インターフェイス オブジェクトを `T[]`にキャストできない場合があります。  
   
 -   WinInet キャッシュは既定では、Windows Store 用の .NET アプリで有効になっていないが、.NET ネイティブで実行されます。 これによりパフォーマンスが向上しますが、作業セットへの影響があります。 開発者のアクションは必要ありません。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "43461788"
   
 -   <xref:System.RuntimeFieldHandle> 構造体と <xref:System.RuntimeMethodHandle> 構造体のパブリック メンバーはサポートされません。 これらの型は、LINQ、式ツリー、および静的な配列の初期化でのみサポートされます。  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> と <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> の基底クラスには隠ぺいされたメンバーが含まれるため、明示的なオーバーライドなしでオーバーライドできます。 これは、他の場合は true。 も[RuntimeReflectionExtensions.GetRuntime*](https://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx)メソッド。  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> と <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> の基底クラスには隠ぺいされたメンバーが含まれるため、明示的なオーバーライドなしでオーバーライドできます。 これは、その他の [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) メソッドの場合も同様です。  
   
 -   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> と <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> は、特定の組み合わせ (たとえば、byref の配列) を作成しようとしたときに失敗しません。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "43461788"
   
 -   多次元配列の動的作成はサポートされません。 そのような配列は通常、<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> パラメーターを含む `lengths` メソッドのオーバーロードを呼び出すか、<xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> メソッドを呼び出すことで作成されます。  
   
--   4 つ以上の次元を持つ多次元配列 (つまり、<xref:System.Array.Rank%2A?displayProperty=nameWithType> プロパティ値が 4 以上のもの) はサポートされません。 代わりに [ジャグ配列](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (配列の配列) を使用してください。 たとえば、 `array[x,y,z]` は無効ですが、 `array[x][y][z]` は有効です。  
+-   4 つ以上の次元を持つ多次元配列 (つまり、 <xref:System.Array.Rank%2A?displayProperty=nameWithType> プロパティ値が 4 以上のもの) はサポートされません。 代わりに [ジャグ配列](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (配列の配列) を使用してください。 たとえば、 `array[x,y,z]` は無効ですが、 `array[x][y][z]` は有効です。  
   
 -   多次元配列の共変性はサポートされず、実行時に <xref:System.InvalidCastException> 例外を発生させます。  
   
@@ -149,15 +149,15 @@ ms.locfileid: "43461788"
   
  **その他の API**  
   
--   <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> 属性が型に適用されない場合、<xref:System.PlatformNotSupportedException> プロパティは <xref:System.Runtime.InteropServices.GuidAttribute> 例外をスローします。 GUID は主に COM サポートで使用されます。  
+-   <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> 属性が型に適用されない場合、 <xref:System.PlatformNotSupportedException> プロパティは <xref:System.Runtime.InteropServices.GuidAttribute> 例外をスローします。 GUID は主に COM サポートで使用されます。  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>メソッドは、.NET ネイティブで、短い日付を含む文字列を正しく解析します。 ただし、日付の変更に対する互換性は保持されませんし、マイクロソフト サポート技術情報の記事で説明されている時刻の解析[KB2803771](https://support.microsoft.com/kb/2803771)と[KB2803755](https://support.microsoft.com/kb/2803755)します。  
+-   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>メソッドは、.NET ネイティブで、短い日付を含む文字列を正しく解析します。 ただし、Microsoft サポート技術情報の記事 [KB2803771](https://support.microsoft.com/kb/2803771) と [KB2803755](https://support.microsoft.com/kb/2803755)で説明されている日付と時刻の解析の変更に対する互換性は保持されません。  
   
 -   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` .NET ネイティブで正しく丸められます。 CLR の一部のバージョンでは、結果の文字列が丸められるのではなく、切り捨てられます。  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient の違い  
- .NET ネイティブで、<xref:System.Net.Http.HttpClientHandler>クラス WinINet を内部的に使用する (を通じて、 [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)クラス) の代わりに、<xref:System.Net.WebRequest>と<xref:System.Net.WebResponse>標準的な Windows ストア アプリ用 .NET で使用されるクラス。  WinINet では、 <xref:System.Net.Http.HttpClientHandler> クラスでサポートされる構成オプションがすべてサポートされるわけではありません。  結果は次のようになります。  
+ .NET ネイティブで、<xref:System.Net.Http.HttpClientHandler>クラス WinINet を内部的に使用する (を通じて、<xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter>クラス) の代わりに、<xref:System.Net.WebRequest>と<xref:System.Net.WebResponse>標準的な Windows ストア アプリ用 .NET で使用されるクラス。  WinINet では、 <xref:System.Net.Http.HttpClientHandler> クラスでサポートされる構成オプションがすべてサポートされるわけではありません。  結果は次のようになります。  
   
 -   機能プロパティの一部<xref:System.Net.Http.HttpClientHandler>返す`false`.NET ネイティブで返す一方`true`標準的な Windows ストア アプリ用 .NET でします。  
   
@@ -167,29 +167,29 @@ ms.locfileid: "43461788"
   
  **プロキシ**  
   
- [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)クラスは、構成と、要求ごとに、プロキシのオーバーライドをサポートしていません。  つまり、.NET ネイティブのすべての要求使用システムに構成されたプロキシ サーバーまたはプロキシ サーバーなしの値に応じて、<xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType>プロパティ。  Windows ストア アプリ用 .NET では、プロキシ サーバーは <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> プロパティにより定義されます。  .NET ネイティブでの設定で、<xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>以外の値を`null`スロー、<xref:System.PlatformNotSupportedException>例外。  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType>プロパティが返す`false`で .NET ネイティブが返されますが、`true`標準の .NET Framework の Windows ストア アプリで。  
+ <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter>クラスは、構成と、要求ごとに、プロキシのオーバーライドをサポートしていません。  つまり、.NET ネイティブのすべての要求使用システムに構成されたプロキシ サーバーまたはプロキシ サーバーなしの値に応じて、<xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType>プロパティ。  Windows ストア アプリ用 .NET では、プロキシ サーバーは <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> プロパティにより定義されます。  .NET ネイティブでの設定で、<xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>以外の値を`null`スロー、<xref:System.PlatformNotSupportedException>例外。  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType>プロパティが返す`false`で .NET ネイティブが返されますが、`true`標準の .NET Framework の Windows ストア アプリで。  
   
  **自動リダイレクト**  
   
- [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)クラスを構成する自動リダイレクトの最大数が許可されません。  標準の Windows ストア アプリ用 .NET での <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> プロパティの値は既定で 50 で、変更できません。 このプロパティの値は 10 がスローされますを変更しようと .NET ネイティブの<xref:System.PlatformNotSupportedException>例外。  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType>プロパティが返す`false`で .NET ネイティブが返されますが、 `true` Windows ストア アプリ用 .NET で。  
+ <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter>クラスを構成する自動リダイレクトの最大数が許可されません。  標準の Windows ストア アプリ用 .NET での <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> プロパティの値は既定で 50 で、変更できません。 このプロパティの値は 10 がスローされますを変更しようと .NET ネイティブの<xref:System.PlatformNotSupportedException>例外。  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType>プロパティが返す`false`で .NET ネイティブが返されますが、 `true` Windows ストア アプリ用 .NET で。  
   
  **自動展開**  
   
- Windows ストア アプリ用 .NET では、<xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> プロパティを <xref:System.Net.DecompressionMethods.Deflate>、<xref:System.Net.DecompressionMethods.GZip>、<xref:System.Net.DecompressionMethods.Deflate> と <xref:System.Net.DecompressionMethods.GZip> の両方、または <xref:System.Net.DecompressionMethods.None> に設定できます。  .NET ネイティブのみをサポート<xref:System.Net.DecompressionMethods.Deflate>と共に<xref:System.Net.DecompressionMethods.GZip>、または<xref:System.Net.DecompressionMethods.None>します。  <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> プロパティを <xref:System.Net.DecompressionMethods.Deflate> のみまたは <xref:System.Net.DecompressionMethods.GZip> のみに設定しようとすると、 <xref:System.Net.DecompressionMethods.Deflate> と <xref:System.Net.DecompressionMethods.GZip>の両方に自動的に設定されます。  
+ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> プロパティを <xref:System.Net.DecompressionMethods.Deflate>、 <xref:System.Net.DecompressionMethods.GZip>、 <xref:System.Net.DecompressionMethods.Deflate> と <xref:System.Net.DecompressionMethods.GZip>の両方、または <xref:System.Net.DecompressionMethods.None>に設定できます。  .NET ネイティブのみをサポート<xref:System.Net.DecompressionMethods.Deflate>と共に<xref:System.Net.DecompressionMethods.GZip>、または<xref:System.Net.DecompressionMethods.None>します。  <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> プロパティを <xref:System.Net.DecompressionMethods.Deflate> のみまたは <xref:System.Net.DecompressionMethods.GZip> のみに設定しようとすると、 <xref:System.Net.DecompressionMethods.Deflate> と <xref:System.Net.DecompressionMethods.GZip>の両方に自動的に設定されます。  
   
  **クッキー**  
   
- クッキーの処理は、 <xref:System.Net.Http.HttpClient> と WinINet により同時に行われます。  <xref:System.Net.CookieContainer> のクッキーは、WinINet クッキー キャッシュのクッキーと組み合わされます。  <xref:System.Net.CookieContainer> のクッキーを削除すると <xref:System.Net.Http.HttpClient> からクッキーが送信されませんが、クッキーが既に WinINet に示されており、ユーザーによって削除されない場合、WinINet がクッキーを送信します。  <xref:System.Net.Http.HttpClient>、 <xref:System.Net.Http.HttpClientHandler>、または <xref:System.Net.CookieContainer> API を使用して、プログラムにより WinINet からクッキーを削除することはできません。  <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> プロパティを `false` に設定しても、<xref:System.Net.Http.HttpClient> からクッキーが送信されなくなるのみで、WinINet の要求にはまだそのクッキーが含まれている可能性があります。  
+ クッキーの処理は、 <xref:System.Net.Http.HttpClient> と WinINet により同時に行われます。  <xref:System.Net.CookieContainer> のクッキーは、WinINet クッキー キャッシュのクッキーと組み合わされます。  <xref:System.Net.CookieContainer> のクッキーを削除すると <xref:System.Net.Http.HttpClient> からクッキーが送信されませんが、クッキーが既に WinINet に示されており、ユーザーによって削除されない場合、WinINet がクッキーを送信します。  <xref:System.Net.Http.HttpClient>、 <xref:System.Net.Http.HttpClientHandler>、または <xref:System.Net.CookieContainer> API を使用して、プログラムにより WinINet からクッキーを削除することはできません。  <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> プロパティを `false` に設定しても、 <xref:System.Net.Http.HttpClient> からクッキーが送信されなくなるのみで、WinINet の要求にはまだそのクッキーが含まれている可能性があります。  
   
  **資格情報**  
   
- Windows ストア アプリ用 .NET では、<xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> プロパティと <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> プロパティは独立して動作します。  また、 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティは <xref:System.Net.ICredentials> インターフェイスを実装するオブジェクトをすべて受け入れます。  .NET ネイティブでの設定で、<xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A>プロパティを`true`により、<xref:System.Net.Http.HttpClientHandler.Credentials%2A>になるプロパティ`null`します。  さらに、 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティは、 `null`、 <xref:System.Net.CredentialCache.DefaultCredentials%2A>、または <xref:System.Net.NetworkCredential>型のオブジェクトにしか設定できません。  その他の <xref:System.Net.ICredentials> オブジェクト (最も一般的なものは <xref:System.Net.CredentialCache>) を <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティに割り当てると、 <xref:System.PlatformNotSupportedException>がスローされます。  
+ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> プロパティと <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> プロパティは独立して動作します。  また、 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティは <xref:System.Net.ICredentials> インターフェイスを実装するオブジェクトをすべて受け入れます。  .NET ネイティブでの設定で、<xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A>プロパティを`true`により、<xref:System.Net.Http.HttpClientHandler.Credentials%2A>になるプロパティ`null`します。  さらに、 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティは、 `null`、 <xref:System.Net.CredentialCache.DefaultCredentials%2A>、または <xref:System.Net.NetworkCredential>型のオブジェクトにしか設定できません。  その他の <xref:System.Net.ICredentials> オブジェクト (最も一般的なものは <xref:System.Net.CredentialCache>) を <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティに割り当てると、 <xref:System.PlatformNotSupportedException>がスローされます。  
   
  **その他のサポートされていない機能または構成できない機能**  
   
  .NET ネイティブ。  
   
--   <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> プロパティの値は常に <xref:System.Net.Http.ClientCertificateOption.Automatic> です。  Windows ストア アプリ用 .NET での既定値は <xref:System.Net.Http.ClientCertificateOption.Manual>です。  
+-   <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> プロパティの値は常に <xref:System.Net.Http.ClientCertificateOption.Automatic>です。  Windows ストア アプリ用 .NET での既定値は <xref:System.Net.Http.ClientCertificateOption.Manual>です。  
   
 -   <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> プロパティは構成できません。  
   
@@ -203,72 +203,60 @@ ms.locfileid: "43461788"
   
  マネージド コードで相互運用性のために使用される頻度が低い API のいくつかが、非推奨にされました。 これらの Api がスローされる .NET ネイティブと共に使用すると、<xref:System.NotImplementedException>または<xref:System.PlatformNotSupportedException>例外、またはコンパイラ エラーが発生します。 Windows ストア アプリ用 .NET では、これらの API は廃止としてマークされていますが、これらの API を呼び出すとコンパイラ エラーではなくコンパイラの警告が生成されます。  
   
- 非推奨の `VARIANT` マーシャリング用 API:  
+ 非推奨の Api の`VARIANT`マーシャ リングが含まれます。  
+
+- <xref:System.Runtime.InteropServices.BStrWrapper?displayProperty=nameWithType>
+- <xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>  
+- <xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=nameWithType>
+- <xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=nameWithType>
+- <xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=nameWithType>
+- <xref:System.Runtime.InteropServices.VariantWrapper?displayProperty=nameWithType>
+- <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType>
+- <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>  
+- <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
   
-||  
-|-|  
-|<xref:System.Runtime.InteropServices.BStrWrapper?displayProperty=nameWithType>|  
-|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>|  
-|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=nameWithType>|  
-|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=nameWithType>|  
-|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=nameWithType>|  
-|<xref:System.Runtime.InteropServices.VariantWrapper?displayProperty=nameWithType>|  
-|<xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType>|  
-|<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
-|<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> はサポートされていますが、 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) や byref バリアントと共に使用された場合など、一部のシナリオでは例外がスローされます。  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> サポートされてと共に使用した場合など、いくつかのシナリオでの例外をスローしますが、 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)や byref バリアント。  
+ 非推奨の Api の[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)サポートが含まれます。  
   
- 非推奨の Api の[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)サポートします。  
+- <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual?displayProperty=fullName> 
+- <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>  
+
+クラシック COM イベント用の非推奨の Api は次のとおりです。
+
+- <xref:System.Runtime.InteropServices.ComEventsHelper?displayProperty=nameWithType>
+- <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>
   
-|型|メンバー|  
-|----------|------------|  
-|<xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch>|  
-|<xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual>|  
-|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>|属性はサポートされません。|  
+非推奨の Api で、<xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType>インターフェイスでは、.NET ネイティブでサポートされていないが含まれます。  
   
- 非推奨のクラシック COM イベント用 API:  
+- <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> (すべてのメンバー)  
+- <xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType> (すべてのメンバー)  
+- <xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType> (すべてのメンバー)  
+- <xref:System.Runtime.InteropServices.Marshal.GetComInterfaceForObject%28System.Object%2CSystem.Type%2CSystem.Runtime.InteropServices.CustomQueryInterfaceMode%29?displayProperty=fullName>  
   
-||  
-|-|  
-|<xref:System.Runtime.InteropServices.ComEventsHelper?displayProperty=nameWithType>|  
-|<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>|  
+サポートされていないその他の相互運用機能は次のとおりです。  
   
- 非推奨の Api で、<xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType>インターフェイスでは、.NET ネイティブではサポートされていません。  
-  
-|型|メンバー|  
-|----------|------------|  
-|<xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType>|すべてのメンバー。|  
-|<xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType>|すべてのメンバー。|  
-|<xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType>|すべてのメンバー。|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetComInterfaceForObject%28System.Object%2CSystem.Type%2CSystem.Runtime.InteropServices.CustomQueryInterfaceMode%29?displayProperty=nameWithType>|  
-  
- その他のサポートされない相互運用機能:  
-  
-|種類|メンバー|  
-|----------|------------|  
-|<xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType>|すべてのメンバー。|  
-|<xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType>|すべてのメンバー。|  
-|<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.UnmanagedType.Currency>|  
-|<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.UnmanagedType.VBByRefStr>|  
-|<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.UnmanagedType.AnsiBStr>|  
-|<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.UnmanagedType.AsAny>|  
-|<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.UnmanagedType.CustomMarshaler>|  
+- <xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType> (すべてのメンバー)  
+- <xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType> (すべてのメンバー)  
+- <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.UnmanagedType.VBByRefStr?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.UnmanagedType.AnsiBStr?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.UnmanagedType.AsAny?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.UnmanagedType.CustomMarshaler?displayProperty=fullName>  
   
  ほとんど使用されないマーシャリング API:  
   
-|種類|メンバー|  
-|----------|------------|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.ReadByte%28System.Object%2CSystem.Int32%29>|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.ReadInt16%28System.Object%2CSystem.Int32%29>|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.ReadInt32%28System.Object%2CSystem.Int32%29>|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.ReadInt64%28System.Object%2CSystem.Int32%29>|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.ReadIntPtr%28System.Object%2CSystem.Int32%29>|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.WriteByte%28System.Object%2CSystem.Int32%2CSystem.Byte%29>|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.WriteInt16%28System.Object%2CSystem.Int32%2CSystem.Int16%29>|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.WriteInt32%28System.Object%2CSystem.Int32%2CSystem.Int32%29>|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.WriteInt64%28System.Object%2CSystem.Int32%2CSystem.Int64%29>|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.WriteIntPtr%28System.Object%2CSystem.Int32%2CSystem.IntPtr%29>|  
+- <xref:System.Runtime.InteropServices.Marshal.ReadByte%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.Marshal.ReadInt16%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.Marshal.ReadInt32%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.Marshal.ReadInt64%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.Marshal.ReadIntPtr%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.Marshal.WriteByte%28System.Object%2CSystem.Int32%2CSystem.Byte%29?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.Marshal.WriteInt16%28System.Object%2CSystem.Int32%2CSystem.Int16%29?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.Marshal.WriteInt32%28System.Object%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.Marshal.WriteInt64%28System.Object%2CSystem.Int32%2CSystem.Int64%29?displayProperty=fullName>  
+- <xref:System.Runtime.InteropServices.Marshal.WriteIntPtr%28System.Object%2CSystem.Int32%2CSystem.IntPtr%29?displayProperty=fullName>  
   
  **プラットフォーム呼び出しと COM 相互運用の互換性**  
   
@@ -326,7 +314,7 @@ ms.locfileid: "43461788"
   
 -   マネージド型での <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> インターフェイスの実装  
   
--   実装する、 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)インターフェイスを使用したマネージ型で、<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>属性。 ただし、 `IDispatch`から COM オブジェクトを呼び出すことはできず、マネージド オブジェクトは `IDispatch`を実装できないことに注意してください。  
+-   [属性を使用したマネージド型での](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> インターフェイスの実装。 ただし、 `IDispatch`から COM オブジェクトを呼び出すことはできず、マネージド オブジェクトは `IDispatch`を実装できないことに注意してください。  
   
  リフレクションを使用したプラットフォーム呼び出しメソッドの呼び出しはサポートされません。 この制限を回避するには、別のメソッドでメソッド呼び出しをラップし、リフレクションを使用してラッパーを代わりに呼び出します。  
   
@@ -336,59 +324,55 @@ ms.locfileid: "43461788"
   
  **DataAnnotations (System.ComponentModel.DataAnnotations)**  
   
- 内の型、<xref:System.ComponentModel.DataAnnotations>と<xref:System.ComponentModel.DataAnnotations.Schema>名前空間は .NET ネイティブでサポートされていません。 これらには、Windows 8 の Windows ストア アプリ用 .NET に存在する次の型が含まれます。  
+ 内の型、<xref:System.ComponentModel.DataAnnotations>と<xref:System.ComponentModel.DataAnnotations.Schema>名前空間は .NET ネイティブでサポートされていません。 Windows 8 用 .NET の Windows ストア アプリに存在する次の種類が含まれます。  
   
-||  
-|-|  
-|<xref:System.ComponentModel.DataAnnotations.AssociationAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.ConcurrencyCheckAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.CustomValidationAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.DataType?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.DataTypeAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.DisplayAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.DisplayColumnAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute>|  
-|<xref:System.ComponentModel.DataAnnotations.EditableAttribute>|  
-|<xref:System.ComponentModel.DataAnnotations.EnumDataTypeAttribute>|  
-|<xref:System.ComponentModel.DataAnnotations.FilterUIHintAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.KeyAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.RangeAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.RegularExpressionAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.RequiredAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.StringLengthAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.TimestampAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.UIHintAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.ValidationAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.ValidationContext?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.ValidationException?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.ValidationResult?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.Validator?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute?displayProperty=nameWithType>|  
-|<xref:System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption?displayProperty=nameWithType>|  
+- <xref:System.ComponentModel.DataAnnotations.AssociationAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.ConcurrencyCheckAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.CustomValidationAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.DataType?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.DisplayAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.DisplayColumnAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute>
+- <xref:System.ComponentModel.DataAnnotations.EditableAttribute>  
+- <xref:System.ComponentModel.DataAnnotations.EnumDataTypeAttribute>  
+- <xref:System.ComponentModel.DataAnnotations.FilterUIHintAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.KeyAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.RangeAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.RegularExpressionAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.RequiredAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.StringLengthAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.TimestampAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.UIHintAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.ValidationAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.ValidationContext?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.ValidationException?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.ValidationResult?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.Validator?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute?displayProperty=nameWithType>  
+- <xref:System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption?displayProperty=nameWithType>  
   
  **Visual Basic**  
   
  現在の .NET ネイティブでは、Visual Basic がサポートされていません。 次の型は、<xref:Microsoft.VisualBasic>と<xref:Microsoft.VisualBasic.CompilerServices>名前空間は .NET ネイティブでは使用できません。  
-  
-||  
-|-|  
-|<xref:Microsoft.VisualBasic.CallType?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.Constants?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.Conversions?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.IncompleteInitialization?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.NewLateBinding?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl.ForLoopControl?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.OptionCompareAttribute?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.OptionTextAttribute?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.ProjectData?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.StandardModuleAttribute?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.StaticLocalInitFlag?displayProperty=nameWithType>|  
-|<xref:Microsoft.VisualBasic.CompilerServices.Utils?displayProperty=nameWithType>|  
+
+- <xref:Microsoft.VisualBasic.CallType?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.Constants?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.HideModuleNameAttribute?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.Conversions?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.IncompleteInitialization?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.NewLateBinding?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl.ForLoopControl?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.OptionCompareAttribute?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.OptionTextAttribute?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.ProjectData?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.StandardModuleAttribute?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.StaticLocalInitFlag?displayProperty=nameWithType>  
+- <xref:Microsoft.VisualBasic.CompilerServices.Utils?displayProperty=nameWithType>  
   
  **リフレクション コンテキスト (System.Reflection.Context 名前空間)**  
   
@@ -400,188 +384,186 @@ ms.locfileid: "43461788"
   
  **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**  
   
- 内の型、 [System.ServiceModel.* 名前空間](https://msdn.microsoft.com/library/gg145010.aspx)は .NET ネイティブでサポートされていません。 そうした型には、次のようなものがあります。  
+ 内の型、 [System.ServiceModel.* 名前空間](xref:System.ServiceModel)は .NET ネイティブでサポートされていません。 そうした型には、次のようなものがあります。  
   
-||  
-|-|  
-|<xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.BasicHttpMessageCredentialType?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.BasicHttpSecurity?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.BasicHttpSecurityMode?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ClientBase%601.BeginOperationDelegate?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ClientBase%601.ChannelBase%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ClientBase%601.EndOperationDelegate?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ClientBase%601.InvokeAsyncCompletedEventArgs?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.CommunicationState?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.DataContractFormatAttribute?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.DnsEndpointIdentity?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.EndpointAddress?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.EndpointAddressBuilder?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.EndpointIdentity?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.EnvelopeVersion?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ExceptionDetail?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.FaultCode?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.FaultException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.FaultReason?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.FaultReasonText?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.HttpBindingBase?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.HttpClientCredentialType?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.HttpTransportSecurity?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.IDefaultCommunicationTimeouts?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.IExtensibleObject%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.IExtension%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.IExtensionCollection%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.InvalidMessageContractException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.MessageBodyMemberAttribute?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.MessageContractMemberAttribute?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.MessageCredentialType?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.MessageHeader%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.MessageHeaderException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.MessageSecurityOverTcp?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.MessageSecurityVersion?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.NetHttpBinding?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.NetHttpMessageEncoding?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.NetTcpSecurity?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.OperationContext?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.OperationContextScope?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.OperationFormatStyle?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ProtocolException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.QuotaExceededException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ServerTooBusyException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ServiceActivationException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.ServiceKnownTypeAttribute?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.SpnEndpointIdentity?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.TcpClientCredentialType?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.TcpTransportSecurity?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.TransferMode?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.UnknownMessageReceivedEventArgs?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.UpnEndpointIdentity?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.AddressHeader?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.AddressHeaderCollection?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.AddressingVersion?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.ChannelManagerBase?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.ChannelParameterCollection?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.CommunicationObject?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.FaultConverter?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.HttpRequestMessageProperty?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.HttpResponseMessageProperty?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.HttpsTransportBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IChannel?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IChannelFactory?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IChannelFactory%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IDuplexChannel?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IDuplexSession?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IDuplexSessionChannel?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IHttpCookieContainerManager?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IInputChannel?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IInputSession?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IInputSessionChannel?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IMessageProperty?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IOutputChannel?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IOutputSession?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IOutputSessionChannel?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.IRequestSessionChannel?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.LocalClientSecuritySettings?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.MessageBuffer?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.MessageEncoder?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.MessageEncoderFactory?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.MessageHeader?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.MessageHeaderInfo?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.MessageHeaders?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.MessageProperties?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.MessageState?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.RequestContext?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.SecurityHeaderLayout?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.TcpConnectionPoolSettings?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.TransportBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.TransportSecurityBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.WebSocketTransportSettings?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.WebSocketTransportUsage?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.ClientCredentials?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.FaultDescription?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.FaultDescriptionCollection?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.MessageBodyDescription?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.MessageDescription?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.MessageDescriptionCollection?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.MessageDirection?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.MessageHeaderDescription?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.MessageHeaderDescriptionCollection?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.MessagePartDescription?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.MessagePartDescriptionCollection?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.MessagePropertyDescription?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.MessagePropertyDescriptionCollection?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.OperationDescription?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.OperationDescriptionCollection?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Dispatcher.ClientOperation?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Dispatcher.ClientRuntime?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Dispatcher.EndpointDispatcher?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Dispatcher.IClientOperationSelector?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.BasicSecurityProfileVersion?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.HttpDigestClientCredential?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.SecureConversationVersion?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.SecurityAccessDeniedException?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.SecurityPolicyVersion?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.SecurityVersion?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.TrustVersion?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.UserNamePasswordClientCredential?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters?displayProperty=nameWithType>|  
-|<xref:System.ServiceModel.Security.Tokens.UserNameSecurityTokenParameters?displayProperty=nameWithType>|  
+- <xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.BasicHttpMessageCredentialType?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.BasicHttpSecurity?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.BasicHttpSecurityMode?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ClientBase%601.BeginOperationDelegate?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ClientBase%601.ChannelBase%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ClientBase%601.EndOperationDelegate?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ClientBase%601.InvokeAsyncCompletedEventArgs?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.CommunicationState?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.DataContractFormatAttribute?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.DnsEndpointIdentity?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.EndpointAddress?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.EndpointAddressBuilder?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.EndpointIdentity?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.EnvelopeVersion?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ExceptionDetail?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.FaultCode?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.FaultReason?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.FaultReasonText?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.HttpBindingBase?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.HttpClientCredentialType?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.HttpTransportSecurity?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.IDefaultCommunicationTimeouts?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.IExtensibleObject%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.IExtension%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.IExtensionCollection%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.InvalidMessageContractException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.MessageBodyMemberAttribute?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.MessageContractMemberAttribute?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.MessageCredentialType?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.MessageHeader%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.MessageHeaderException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.MessageSecurityOverTcp?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.MessageSecurityVersion?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.NetHttpBinding?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.NetHttpMessageEncoding?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.NetTcpSecurity?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.OperationContext?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.OperationContextScope?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.OperationFormatStyle?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ProtocolException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.QuotaExceededException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ServerTooBusyException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ServiceActivationException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ServiceKnownTypeAttribute?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.SpnEndpointIdentity?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.TcpClientCredentialType?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.TcpTransportSecurity?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.TransferMode?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.UnknownMessageReceivedEventArgs?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.UpnEndpointIdentity?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.AddressHeader?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.AddressHeaderCollection?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.AddressingVersion?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.ChannelManagerBase?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.ChannelParameterCollection?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.CommunicationObject?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.FaultConverter?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.HttpRequestMessageProperty?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.HttpResponseMessageProperty?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IChannel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IChannelFactory?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IChannelFactory%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IDuplexChannel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IDuplexSession?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IDuplexSessionChannel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IHttpCookieContainerManager?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IInputChannel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IInputSession?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IInputSessionChannel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IMessageProperty?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IOutputChannel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IOutputSession?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IOutputSessionChannel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.IRequestSessionChannel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.MessageBuffer?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.MessageEncoder?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.MessageHeader?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.MessageHeaderInfo?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.MessageHeaders?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.MessageProperties?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.MessageState?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.RequestContext?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.SecurityHeaderLayout?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.TransportBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.WebSocketTransportSettings?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.WebSocketTransportUsage?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.ClientCredentials?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.FaultDescription?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.FaultDescriptionCollection?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.MessageBodyDescription?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.MessageDescription?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.MessageDescriptionCollection?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.MessageDirection?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.MessageHeaderDescription?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.MessageHeaderDescriptionCollection?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.MessagePartDescription?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.MessagePartDescriptionCollection?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.MessagePropertyDescription?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.MessagePropertyDescriptionCollection?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.OperationDescription?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.OperationDescriptionCollection?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Dispatcher.EndpointDispatcher?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Dispatcher.IClientOperationSelector?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.BasicSecurityProfileVersion?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.HttpDigestClientCredential?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.SecureConversationVersion?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.SecurityAccessDeniedException?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.SecurityPolicyVersion?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.SecurityVersion?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.TrustVersion?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Security.Tokens.UserNameSecurityTokenParameters?displayProperty=nameWithType>  
   
 ### <a name="differences-in-serializers"></a>シリアライザーの違い  
  <xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>、および <xref:System.Xml.Serialization.XmlSerializer> クラスによるシリアル化と逆シリアル化に関する違いを次に示します。  
@@ -602,7 +584,7 @@ ms.locfileid: "43461788"
   
 -   <xref:System.Xml.Serialization.XmlSerializer> は、シリアル化されるオブジェクトの型が <xref:System.Xml.XmlQualifiedName>の場合、シリアル化と逆シリアル化に失敗します。  
   
--   すべてのシリアライザー (<xref:System.Runtime.Serialization.DataContractSerializer>、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>、および <xref:System.Xml.Serialization.XmlSerializer>) は、<xref:System.Xml.Linq.XElement?displayProperty=nameWithType> 型または <xref:System.Xml.Linq.XElement> を含む型のシリアル化コードを生成できません。 代わりに、ビルド時エラーが表示されます。  
+-   すべてのシリアライザー (<xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>、および <xref:System.Xml.Serialization.XmlSerializer>) は、 <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> 型または <xref:System.Xml.Linq.XElement>を含む型のシリアル化コードを生成できません。 代わりに、ビルド時エラーが表示されます。  
   
 -   次のシリアル化型のコンストラクターが、期待どおりに動作する保証はありません。  
   
@@ -673,5 +655,5 @@ ms.locfileid: "43461788"
 ## <a name="see-also"></a>関連項目  
  [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [.NET Windows ストア アプリの概要](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+ [.NET Windows ストア アプリの概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)  
  [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

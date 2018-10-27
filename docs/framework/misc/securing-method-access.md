@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdec49d077a41ea0b578aaff9ce7fcf9e0c7dc8c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 51a7969821cb4c2367ac298c8452daf1f2a8ceab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505833"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185902"
 ---
 # <a name="securing-method-access"></a>メソッド アクセスの保護
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -30,7 +30,7 @@ ms.locfileid: "43505833"
   
 -   クラス、アセンブリ、派生クラスが信頼されている場合は、これらへのアクセシビリティのスコープを制限します。 これが、メソッド アクセスを制限する最も簡単な方法です。 派生クラスが親クラスの ID を共有することがありますが、一般的に、派生クラスは派生元のクラスよりも信頼度が低くなる可能性があります。 具体的には、キーワードの信頼を推測できません**保護**、必ずしもセキュリティ コンテキストで使用するされません。  
   
--   指定した id の基本的には、特定の呼び出し元にメソッド アクセスを制限[証拠](https://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da)(厳密な名前、発行者、ゾーン、およびなど) を選択します。  
+-   指定した id の基本的には、特定の呼び出し元にメソッド アクセスを制限[証拠](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)(厳密な名前、発行者、ゾーン、およびなど) を選択します。  
   
 -   選択したアクセス許可を持つ呼び出し元だけにメソッド アクセスを制限します。  
   

@@ -2,12 +2,12 @@
 title: WCF サービスからの REST スタイル サービスの呼び出し
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: 8f520b1f77b9ca41b9fd2b8d51c1b935ab1e0a87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be9f15d35ec00ba91a06abf5a0a413b59452270b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488512"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184245"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>WCF サービスからの REST スタイル サービスの呼び出し
 標準の (SOAP ベース) WCF サービスから REST スタイルのサービスを呼び出すとき、受信要求に関する情報を含んでいるサービス メソッドの操作コンテキストは、送信要求が使用するコンテキストをオーバーライドします。 これにより、HTTP GET 要求は HTTP POST 要求に変更されます。 WCF サービスが正しいコンテキストを使用して REST スタイルのサービスを呼び出すには、新しい <xref:System.ServiceModel.OperationContextScope> を作成し、操作コンテキスト スコープ内から REST スタイルのサービスを呼び出します。 このトピックでは、この手法を説明する簡単なサンプルを作成する方法について説明します。  
@@ -80,7 +80,7 @@ public class NormalService : INormalInterface
 ```  
   
 ## <a name="create-the-client-proxy-for-the-rest-style-service"></a>REST スタイルのサービスのクライアント プロキシを作成する  
- 使用して<!--zz<xref:System.ServiceModel.ClientBase%60>-->`System.ServiceModel.ClientBase`クライアント プロキシを実装します。 呼び出される各メソッドで、新しい <xref:System.ServiceModel.OperationContextScope> が作成され、操作の呼び出しに使用されます。  
+ 使用して<xref:System.ServiceModel.ClientBase%601>クライアント プロキシの実装。 呼び出される各メソッドで、新しい <xref:System.ServiceModel.OperationContextScope> が作成され、操作の呼び出しに使用されます。  
   
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cc704bbf8631936dbbeb3539ea5ed0d8499f378
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dfdc2d434b61d1c1e16ebfdcc2ea423f96254be5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752274"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187833"
 ---
 # <a name="ltalwaysflowimpersonationpolicygt-element"></a>&lt;alwaysFlowImpersonationPolicy&gt;要素
 偽装の実行方法に関係なく、Windows ID が常に非同期ポイント間でフローすることを指定します。  
@@ -38,14 +38,14 @@ ms.locfileid: "32752274"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> Windows id が非同期ポイント間をフローするかどうかを示します。|  
+|`enabled`|必須の属性です。<br /><br /> Windows id が非同期ポイント間でフローするかどうかを示します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|`false`|管理されているメソッドをなど、Windows のユーザーでは、使用して、権限の借用が実行しない限り、非同期ポイント間フローしません<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>です。 既定値です。|  
-|`true`|権限借用の実行方法に関係なく、非同期ポイント間では、Windows id が常にフローします。|  
+|`false`|管理されているメソッドをなどで、権限の借用を実行しない限り、id が、非同期ポイント間でフローしない Windows<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>します。 既定値です。|  
+|`true`|Windows id は、偽装の実行方法に関係なく、非同期ポイント間で常にフローします。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -57,25 +57,25 @@ ms.locfileid: "32752274"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
-## <a name="remarks"></a>コメント  
- .NET Framework バージョン 1.0 および 1.1 では、Windows id は非同期ポイント間をフローしません。 .NET Framework version 2.0 では、<xref:System.Threading.ExecutionContext>オブジェクトを現在実行中のスレッドに関する情報を格納し、アプリケーション ドメイン内での非同期ポイント間をフローします。 <xref:System.Security.Principal.WindowsIdentity>またメソッドの管理ポイント間をフロー、非同期を使用して、権限の借用が達成された提供情報の一部としてフローなど<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>プラットフォームなどの他の方法ではなく、ネイティブ メソッドを呼び出すとします。 この要素を使用してを Windows id 偽装の実行方法に関係なく、非同期ポイント間をフローするを指定します。  
+## <a name="remarks"></a>Remarks  
+ .NET Framework バージョン 1.0 および 1.1 では、Windows id が非同期ポイント間をフローしません。 .NET Framework version 2.0 では、<xref:System.Threading.ExecutionContext>オブジェクトを現在実行中のスレッドに関する情報を含み、アプリケーション ドメイン内での非同期ポイント間でフローします。 <xref:System.Security.Principal.WindowsIdentity>またメソッドの管理を使用して、権限の借用が行われた指定された、非同期ポイント間をフロー情報の一部としてフローなど<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>platform などの他の方法ではなくネイティブ メソッドを呼び出すとします。 この要素を使用して、Windows id は、権限借用の実現方法に関係なく、非同期ポイント間でフローことを指定します。  
   
  他の 2 つの方法でこの既定の動作を変更することができます。  
   
-1.  スレッドごとにマネージ コード。  
+1.  スレッドごとにマネージ コードは。  
   
-     スレッドごとのフローを抑制するには変更することによって、<xref:System.Threading.ExecutionContext>と<xref:System.Security.SecurityContext>設定を使用して、 <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>、 <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>、または<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>メソッドです。  
+     スレッドごとのフローを抑制するには変更することによって、<xref:System.Threading.ExecutionContext>と<xref:System.Security.SecurityContext>設定を使用して、 <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>、 <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>、または<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>メソッド。  
   
-2.  呼び出しで、アンマネージ ホスト インターフェイスを共通言語ランタイム (CLR) を読み込めません。  
+2.  で、共通言語ランタイム (CLR) を読み込むアンマネージ ホスト インターフェイスへの呼び出し。  
   
-     呼び出しで特別なフラグを指定できます (単純なマネージ実行可能ファイル) ではなく、アンマネージ ホスト インターフェイスが、CLR の読み込みに使用されている場合、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)関数。 プロセス全体の互換モードを有効にするには設定、`flags`パラメーター [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)に`STARTUP_ALWAYSFLOW_IMPERSONATION`です。  
+     呼び出しで特別なフラグを指定するには、CLR を読み込めません (単純なマネージ実行可能ファイル) ではなく、アンマネージ ホスト インターフェイスを使用する場合、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)関数。 プロセス全体の互換モードを有効にするには設定、`flags`パラメーター [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)に`STARTUP_ALWAYSFLOW_IMPERSONATION`します。  
   
 ## <a name="configuration-file"></a>構成ファイル  
- .NET Framework アプリケーションでこの要素は、アプリケーション構成ファイルでのみ使用できます。  
+ .NET Framework アプリケーションでは、この要素は、アプリケーション構成ファイルでのみ使用できます。  
   
- 内で見つかった aspnet.config ファイルで、ASP.NET アプリケーションの権限借用のフローを構成できます、 \<Windows フォルダー > \Microsoft.NET\Framework\vx.x.xxxx ディレクトリ。  
+ 見つかった aspnet.config ファイルで、ASP.NET アプリケーションの権限借用のフローを構成できます、 \<Windows フォルダー > \Microsoft.NET\Framework\vx.x.xxxx ディレクトリ。  
   
- 既定では ASP.NET には、次の構成設定を使用して、aspnet.config ファイルで、権限借用フローが無効にします。  
+ 既定では ASP.NET では、次の構成設定を使用して、aspnet.config ファイルで権限借用のフローを無効にします。  
   
 ```xml
 <configuration>  
@@ -86,7 +86,7 @@ ms.locfileid: "32752274"
 </configuration>  
 ```  
   
- ASP.NET では、代わりに、権限借用のフローを許可したい場合必要があります明示的に使用する次の構成設定。  
+ ASP.NET では、代わりに、権限借用のフローを許可する場合は、する必要があります明示的に使用する次の構成設定。  
   
 ```xml  
 <configuration>  
@@ -98,7 +98,7 @@ ms.locfileid: "32752274"
 ```  
   
 ## <a name="example"></a>例  
- 次の例では、Windows id は、マネージ メソッド以外の方法で、権限の借用を実現する場合でも、非同期ポイント間でフローを指定する方法を示します。  
+ 次の例では、Windows id を権限の借用は、マネージ メソッド以外の方法によって実現している場合でも、非同期ポイント間でフローするかを指定する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -109,6 +109,6 @@ ms.locfileid: "32752274"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<legacyImpersonationPolicy > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [\<legacyImpersonationPolicy > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)

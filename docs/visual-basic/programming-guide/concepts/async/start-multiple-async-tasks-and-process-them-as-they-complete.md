@@ -2,12 +2,12 @@
 title: 複数の非同期タスクし、プロセスの完了 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 8f20688e981165c8b2328556e979ad5d5126d5ba
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 5213162c24660a54de39c119c5ab67a601a77566
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753371"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191221"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>複数の非同期タスクし、プロセスの完了 (Visual Basic)
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> を使用すると、複数のタスクを、開始された順番に処理するのでなく、同時に開始して完了するごとに 1 つずつ処理できます。  
@@ -24,7 +24,7 @@ ms.locfileid: "34753371"
   
 2.  メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
   
-3.  **プロジェクトを開く** ダイアログ ボックスでは、圧縮解除したサンプル コードが含まれるフォルダーを開き、AsyncFineTuningVB のソリューション (.sln) ファイルを開きます。  
+3.  **プロジェクトを開く** ダイアログ ボックスでは、圧縮を解除するには、サンプル コードを保持するフォルダーを開き、AsyncFineTuningVB のソリューション (.sln) ファイルを開きます。  
   
 4.  **ソリューション エクスプローラー**で、**ProcessTasksAsTheyFinish** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34753371"
  プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルを確認できます。  
   
 ## <a name="building-the-example"></a>例のビルド  
- この例で開発されたコードに追加[1 つは、完了 (Visual Basic) の後に残りの非同期タスクのキャンセル](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)し、同じ UI を使用します。  
+ この例で開発されたコードに追加[Cancel Remaining Async Tasks 完了後 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)し、同じ UI を使用します。  
   
  この例を自分でビルドするには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、**[スタートアップ プロジェクト]** では **CancelAfterOneTask** を選択します。 そのプロジェクトの `AccessTheWebAsync` メソッドに、このトピックでの変更を追加します。 変更部分にはアスタリスクが付いています。  
   
@@ -48,7 +48,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- プロジェクトの MainWindow.xaml.vb ファイルで次の変更を`AccessTheWebAsync`メソッドです。  
+ プロジェクトの MainWindow.xaml.vb ファイルで、次に変更を`AccessTheWebAsync`メソッド。  
   
 -   <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> の代わりに <xref:System.Linq.Enumerable.ToArray%2A> を適用して、クエリを実行します。  
   
@@ -180,13 +180,13 @@ Class MainWindow
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  

@@ -2,14 +2,12 @@
 title: '方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b31a359167307a58d8393e9c29e7dab1575cfdc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a9dcc65e7e496a436d81ad2d311a4174f111104
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643667"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188442"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。
 この例では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 両方のアセンブリに厳密な名前が付けられている必要があります。 この例のアセンブリは両方とも同じキーを使用していますが、2 つのアセンブリそれぞれが別々のキーを使用することもできます。  
@@ -57,7 +55,7 @@ ms.locfileid: "33643667"
     Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
-5.  という名前の Visual Basic ファイルを作成する`friend_signed_B`し、次のコードが含まれています。 friend_signed_A が friend_signed_B をフレンド アセンブリとして指定しているため、friend_signed_B 内のコードは、friend_signed_A の `Friend` 型とメンバーにアクセスできます。 このファイルには、次のコードが含まれています。  
+5.  という名前の Visual Basic ファイルを作成する`friend_signed_B`次のコードが含まれています。 friend_signed_A が friend_signed_B をフレンド アセンブリとして指定しているため、friend_signed_B 内のコードは、friend_signed_A の `Friend` 型とメンバーにアクセスできます。 このファイルには、次のコードが含まれています。  
   
     ```vb  
     ' friend_signed_B.vb  
@@ -77,11 +75,11 @@ ms.locfileid: "33643667"
     vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     ```  
   
-     コンパイラによって生成されたアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されたフレンド アセンブリ名と一致している必要があります。 使用してアセンブリを明示的に設定することができます、`-out`コンパイラ オプション。 詳細については、次を参照してください。 [-(Visual Basic) アウト](../../../../visual-basic/reference/command-line-compiler/out.md)です。  
+     コンパイラによって生成されたアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されたフレンド アセンブリ名と一致している必要があります。 使用して、アセンブリを明示的に設定することができます、`-out`コンパイラ オプション。 詳細については、次を参照してください。 [-(Visual Basic) を](../../../../visual-basic/reference/command-line-compiler/out.md)します。  
   
 7.  friend_signed_B.exe ファイルを実行します。  
   
-     プログラムでは、文字列"Class1.Test"を表示します。  
+     プログラムには、文字列"Class1.Test"が表示されます。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性と <xref:System.Security.Permissions.StrongNameIdentityPermission> クラスには類似点があります。 主な違いは、<xref:System.Security.Permissions.StrongNameIdentityPermission> はセキュリティ アクセス許可を要求することで特定のコード セクションを実行できますが、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性では `Friend` 型とメンバーの参照可能範囲を制御することです。  

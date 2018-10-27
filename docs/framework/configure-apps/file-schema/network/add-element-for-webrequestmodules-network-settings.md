@@ -10,14 +10,12 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 64df186be7d9e503ac22e177bca8da31e165f240
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4c823f366baf51b35c15a87c2a9f6c9c4d3102d0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837012"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188540"
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;追加&gt;webRequestModules (ネットワーク設定) の要素
 カスタムの Web 要求モジュールをアプリケーションに追加します。  
@@ -84,5 +82,5 @@ ms.locfileid: "48837012"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.Net.WebRequest>  
- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebRequest>  
+- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

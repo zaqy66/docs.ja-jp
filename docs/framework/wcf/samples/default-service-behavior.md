@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 8583c74f85d9638313db1779610c0f6dac9cfbe5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2c49c28d99bb3d300fd4589a088b2f086bdfd45d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857759"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184479"
 ---
 # <a name="default-service-behavior"></a>既定のサービスの動作
 このサンプルでは、サービスの動作設定を構成する方法を示します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、実装、`ICalculator`サービス コントラクト。 このサンプルは、<xref:System.ServiceModel.ServiceBehaviorAttribute> 属性と <xref:System.ServiceModel.OperationBehaviorAttribute> 属性を使用して、サービスの動作と操作の動作を明示的に定義しています。 動作の構成は、このサンプルに示すように、構成ファイルで行うことも、コード内で強制的に行うこともできます。  
@@ -22,7 +22,7 @@ ms.locfileid: "43857759"
   
  サービス クラスは、<xref:System.ServiceModel.ServiceBehaviorAttribute> と <xref:System.ServiceModel.OperationBehaviorAttribute> を使用して動作を指定します。次のサンプル コードを参照してください。 指定されたすべての値は、既定値です。  
   
-```  
+```csharp
 [ServiceBehavior(  
     AutomaticSessionShutdown=true,  
     ConcurrencyMode=ConcurrencyMode.Single,  
@@ -50,7 +50,7 @@ public class CalculatorService : ICalculator
 |サービスの動作|説明|  
 |----------------------|-----------------|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|セッションをクライアントの要求で自動的にシャットダウンします。|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|各サービス インスタンスの同時実行モードを指定します。|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|各サービス インスタンスのコンカレンシー モードを指定します。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|インスタンス コンテキスト モードを指定します。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|同期コンテキストが設定されている場合、その同期コンテキストを使用するかどうかを判断します。 Windows フォーム アプリケーションで `WindowsFormsSynchronizationContext` を使用するかどうかを制御する場合に、これを使用します。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|一般的な未処理の実行例外を `Fault<string>` に変換してエラー メッセージとして送信するかどうかを判断します。|  
@@ -68,7 +68,7 @@ public class CalculatorService : ICalculator
   
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 呼び出し間の遅延は、サービス操作で `System.Threading.Thread.Sleep()` が呼び出されることによるものです。 以降の動作サンプルでは、これらの動作の詳細について説明します。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

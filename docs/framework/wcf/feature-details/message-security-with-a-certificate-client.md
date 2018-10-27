@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-author: BrucePerlerMS
-ms.openlocfilehash: 9100d3d16c39ca53e9afe3721c9d6f1027ba2048
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f435136bb08876b759087b9cdd258f6ae7881be5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193867"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191117"
 ---
 # <a name="message-security-with-a-certificate-client"></a>メッセージ セキュリティと証明書クライアント
 次のシナリオでは、Windows Communication Foundation (WCF) クライアントとメッセージ セキュリティ モードを使用して保護されたサービスを説明します。 クライアントとサービスは、どちらも証明書を使用して認証されます。 詳細については、次を参照してください。[分散アプリケーションのセキュリティ](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)します。  

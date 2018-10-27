@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d2aaeaffaf3abbe1e8efcdb57d40e6ae60f89b5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591955"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183894"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>チュートリアル : 拡張性のあるアプリケーションの作成
 このチュートリアルでは、簡単な計算機機能を実行するアドインのパイプラインを作成する方法について説明します。 実際のシナリオは含まれていません代わりに、パイプラインとアドインを追加できるようにするホストのサービスの基本的な機能を示します。  
@@ -61,7 +61,7 @@ ms.locfileid: "45591955"
   
 1.  Visual Studio で、という名前の新しいプロジェクトを作成`Calc1Contract`です。 基に、**クラス ライブラリ**テンプレート。  
   
-2.  ソリューションの名前を`CalculatorV1`します。  
+2.  ソリューション `CalculatorV1`の名前を指定します。  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>パイプライン ディレクトリ構造を作成します。  
  アドイン モデルでは、指定したディレクトリ構造に配置するパイプライン セグメントのアセンブリが必要です。 パイプラインの構造の詳細については、次を参照してください。[パイプライン開発の必要条件](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)します。  
@@ -195,7 +195,7 @@ ms.locfileid: "45591955"
   
  このパイプラインでは、アドインのホストと型フローにサービスをホストにアドインから提供します。 ホストからアドインへの種類がフローしないために、ビューからコントラクトへのアダプターを含める必要はありません。  
   
- 有効期間管理を実装するには、使用、<xref:System.AddIn.Pipeline.ContractHandle>コントラクトに有効期間トークンをアタッチするオブジェクト。 有効期間管理を機能させるために、このハンドルへの参照を維持する必要があります。 トークンが適用されると、追加のプログラミングは必要ありませんのでは使用しなくなったとガベージ コレクションで利用できるように、アドイン システムがオブジェクトの破棄できます。 詳細については、次を参照してください。[有効期間管理](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)します。  
+ 有効期間管理を実装するには、使用、<xref:System.AddIn.Pipeline.ContractHandle>コントラクトに有効期間トークンをアタッチするオブジェクト。 有効期間管理を機能させるために、このハンドルへの参照を維持する必要があります。 トークンが適用されると、追加のプログラミングは必要ありませんのでは使用しなくなったとガベージ コレクションで利用できるように、アドイン システムがオブジェクトの破棄できます。 詳細については、「 [有効期間管理](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)」を参照してください。  
   
 #### <a name="to-create-the-host-side-adapter"></a>ホスト側アダプターを作成するには  
   
@@ -355,8 +355,8 @@ ms.locfileid: "45591955"
 4.  型**終了**キーを押すと、 **」と入力**キー アプリケーションを終了します。  
   
 ## <a name="see-also"></a>関連項目  
- [チュートリアル: ホスト変更時の下位互換性を有効にします。](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [チュートリアル: アドインとホスト間でコレクションの引き渡し](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [パイプライン開発の必要条件](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [コントラクト、ビュー、およびアダプター](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [パイプライン開発](../../../docs/framework/add-ins/pipeline-development.md)
+- [チュートリアル: ホスト変更時の下位互換性を有効にします。](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-  [チュートリアル: アドインとホスト間でコレクションの引き渡し](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-  [パイプライン開発の必要条件](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+-  [コントラクト、ビュー、およびアダプター](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
+-  [パイプライン開発](../../../docs/framework/add-ins/pipeline-development.md)

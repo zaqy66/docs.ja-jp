@@ -2,14 +2,12 @@
 title: '方法: 署名のないフレンド アセンブリ (Visual Basic) を作成します。'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 873a5bf235b43b4460a1489a964539c4e4c18de3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643066"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188330"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>方法: 署名のないフレンド アセンブリ (Visual Basic) を作成します。
 この例では、署名のないアセンブリと共にフレンド アセンブリを使用する方法を示します。  
@@ -77,11 +75,11 @@ ms.locfileid: "33643066"
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
     ```  
   
-     コンパイラによって生成されるアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されるフレンド アセンブリ名と一致している必要があります。 使用してアセンブリを明示的に設定することができます、`/out`コンパイラ オプション。  
+     コンパイラによって生成されるアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されるフレンド アセンブリ名と一致している必要があります。 使用して、アセンブリを明示的に設定することができます、`/out`コンパイラ オプション。  
   
 6.  friend_signed_B.exe ファイルを実行します。  
   
-     2 つの文字列が表示されます:"Class1.Test"と"Class2.Test"です。  
+     2 つの文字列が表示されます:"Class1.Test"と"Class2.Test"。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性と <xref:System.Security.Permissions.StrongNameIdentityPermission> クラスには類似点があります。 主な違いは、<xref:System.Security.Permissions.StrongNameIdentityPermission> はセキュリティ アクセス許可を要求することで特定のコード セクションを実行できますが、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性では `Friend` 型とメンバーの参照可能範囲を制御することです。  
@@ -91,4 +89,4 @@ ms.locfileid: "33643066"
  [アセンブリとグローバル アセンブリ キャッシュ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [フレンド アセンブリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [ガイドのプログラミング概念](../../../../visual-basic/programming-guide/concepts/index.md)
+ [プログラミング ガイドの概念](../../../../visual-basic/programming-guide/concepts/index.md)

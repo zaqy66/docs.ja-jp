@@ -2,17 +2,17 @@
 title: SqlClient ストリーミング サポート
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: f881318677949f5507c3e1c4a4b5606dd880c396
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364737"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191045"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient ストリーミング サポート
-SQL Server とアプリケーション間のストリーミング サポート (で新しい[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) サーバー (ドキュメント、画像、およびメディア ファイル) の非構造化データをサポートしています。 SQL Server データベースはバイナリ ラージ オブジェクト (Blob) を格納できますが、大量のメモリを使用して BLOB を取得することができます。  
+SQL Server とアプリケーション間のストリーミング サポート (で新しい[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) (ドキュメント、画像、およびメディア ファイル)、サーバー上の非構造化データをサポートしています。 SQL Server データベースは、バイナリ ラージ オブジェクト (Blob) を格納できますが、多くのメモリを使用して BLOB を取得することができます。  
   
- ストリーミングをサポートして、SQL Server からすると、アプリケーションの作成を完全にデータをメモリに読み込むより少ないメモリのオーバーフロー例外の結果として得られることがなくに簡略化、そのデータをストリームされます。  
+ ストリーミングと SQL Server の間のサポートを簡略化アプリケーションの作成、そのデータをストリームに完全にデータをより少ないメモリのオーバーフロー例外結果として、メモリに読み込む必要はありません。  
   
  また、ストリーミング サポートにより、特にビジネス オブジェクトが大きな BLOB を送信、取得、操作するために SQL Azure に接続するシナリオでは、中間層アプリケーションが適切に拡張できるようになります。  
   
@@ -22,9 +22,9 @@ SQL Server とアプリケーション間のストリーミング サポート (
 >  ストリーミング サポートに追加されたメンバーは、クエリからデータを取得し、クエリおよびストアド プロシージャにパラメーターを渡すために使用されます。 ストリーミング機能は、基本的な OLTP およびデータ移行のシナリオに対処し、社内および社外のデータ移行環境に適用できます。  
   
 ## <a name="streaming-support-from-sql-server"></a>SQL Server からのストリーミング サポート  
- SQL Server からのストリーミング サポートでの新機能が導入されています、<xref:System.Data.Common.DbDataReader>し、、<xref:System.Data.SqlClient.SqlDataReader>を取得するためにクラス<xref:System.IO.Stream>、 <xref:System.Xml.XmlReader>、および<xref:System.IO.TextReader>オブジェクトし、それらに対応します。  これらのクラスはクエリからデータを取得するために使用されます。 その結果、SQL Server からのストリーミング サポートでは、OLTP シナリオに対処し、オンプレミスおよびオフプレミス環境に適用されます。  
+ SQL Server からのストリーミング サポートでの新機能が導入されています、<xref:System.Data.Common.DbDataReader>し、<xref:System.Data.SqlClient.SqlDataReader>クラスを取得するために<xref:System.IO.Stream>、 <xref:System.Xml.XmlReader>、および<xref:System.IO.TextReader>オブジェクトし、それに対応します。  これらのクラスはクエリからデータを取得するために使用されます。 その結果、SQL Server からのストリーミング サポートでは、OLTP シナリオに対処し、オンプレミスとオフプレミス環境に適用されます。  
   
- 次のメンバーが追加された<xref:System.Data.SqlClient.SqlDataReader>を SQL Server からのストリーミング サポートを有効にします。  
+ 次のメンバーが追加された<xref:System.Data.SqlClient.SqlDataReader>SQL Server からのストリーミング サポートを有効にします。  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
@@ -38,7 +38,7 @@ SQL Server とアプリケーション間のストリーミング サポート (
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- 次のメンバーが追加された<xref:System.Data.Common.DbDataReader>を SQL Server からのストリーミング サポートを有効にします。  
+ 次のメンバーが追加された<xref:System.Data.Common.DbDataReader>SQL Server からのストリーミング サポートを有効にします。  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -47,7 +47,7 @@ SQL Server とアプリケーション間のストリーミング サポート (
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
 ## <a name="streaming-support-to-sql-server"></a>SQL Server へのストリーミング サポート  
- SQL Server へのストリーミング サポートでの新機能が導入されています、<xref:System.Data.SqlClient.SqlParameter>に同意しに対応するためにできるようにクラス<xref:System.Xml.XmlReader>、 <xref:System.IO.Stream>、および<xref:System.IO.TextReader>オブジェクト。 <xref:System.Data.SqlClient.SqlParameter> はクエリおよびストアド プロシージャにパラメーターを渡すために使用されます。  
+ SQL Server へのストリーミング サポートでの新機能が導入されています、<xref:System.Data.SqlClient.SqlParameter>を受け取って対応するためのクラス<xref:System.Xml.XmlReader>、 <xref:System.IO.Stream>、および<xref:System.IO.TextReader>オブジェクト。 <xref:System.Data.SqlClient.SqlParameter> はクエリおよびストアド プロシージャにパラメーターを渡すために使用されます。  
   
  <xref:System.Data.SqlClient.SqlCommand> オブジェクトの破棄または <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> の呼び出しでは、ストリーミング操作を取り消す必要があります。 アプリケーションが <xref:System.Threading.CancellationToken> を送信すると、取り消しは保証されません。  
   
@@ -73,7 +73,7 @@ SQL Server とアプリケーション間のストリーミング サポート (
   
  <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader>、および <xref:System.IO.Stream> の各オブジェクトは、<xref:System.Data.SqlClient.SqlParameter.Size%2A> によって定義された値まで転送されます。  
   
-## <a name="sample----streaming-from-sql-server"></a>サンプル--SQL Server からのストリーミング  
+## <a name="sample----streaming-from-sql-server"></a>SQL Server からのストリーミングをサンプル--  
  次の [!INCLUDE[tsql](../../../../includes/tsql-md.md)] を使用して、サンプル データベースを作成します。  
   
 ```  
@@ -97,9 +97,9 @@ GO
   
 -   大きなファイルを非同期に取得できるようにして、ユーザー インターフェイス スレッドのブロックを回避する。  
   
--   内の SQL Server から大きなテキスト ファイルを転送[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]です。  
+-   SQL Server から大きなテキスト ファイルを転送[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。  
   
--   大きな XML ファイルを転送に SQL Server から[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]です。  
+-   SQL Server から大きな XML ファイルを転送[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。  
   
 -   SQL Server からデータを取得します。  
   
@@ -241,7 +241,7 @@ namespace StreamingFromServer {
             Async = true,  
             // Since we will immediately wrap the TextReader we are creating in an XmlReader, we will permit the XmlReader to take care of closing\disposing it  
             CloseInput = true,  
-            // If the Xml you are reading is not a valid document (as per http://msdn.microsoft.com/library/6bts1x50.aspx) you will need to set the conformance level to Fragment  
+            // If the Xml you are reading is not a valid document (as per <https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6bts1x50(v=vs.100)>) you will need to set the conformance level to Fragment  
             ConformanceLevel = ConformanceLevel.Fragment  
          };  
   
@@ -294,7 +294,7 @@ namespace StreamingFromServer {
 }  
 ```  
   
-## <a name="sample----streaming-to-sql-server"></a>サンプル--SQL Server へのストリーミング  
+## <a name="sample----streaming-to-sql-server"></a>SQL Server へのストリーミングをサンプル--  
  次の [!INCLUDE[tsql](../../../../includes/tsql-md.md)] を使用して、サンプル データベースを作成します。  
   
 ```  
@@ -318,9 +318,9 @@ GO
   
  このサンプルでは、次の処理の実行方法を示します。  
   
--   SQL server に大きな BLOB を転送する[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]です。  
+-   SQL Server に大きな BLOB を転送する[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。  
   
--   SQL server に大きなテキスト ファイルを転送する[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]です。  
+-   SQL Server に大きなテキスト ファイルを転送する[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。  
   
 -   新しい非同期機能を使用して大きな BLOB を転送する。  
   
@@ -451,7 +451,7 @@ namespace StreamingToServer {
 ```  
   
 ## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>サンプル--が 1 つの SQL Server から別の SQL Server にストリーミング  
- このサンプルでは、キャンセルのサポートにより、別の 1 つの SQL Server から大きな BLOB を非同期にストリーミングする方法を示します。  
+ このサンプルでは、キャンセルのサポートを使用した異なる 1 つの SQL Server からの大きな BLOB を非同期にストリーミングする方法を示します。  
   
 ```  
 using System;  

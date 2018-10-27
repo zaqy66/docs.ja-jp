@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e1433415bdc6303555ab9ae04a20e097248535
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937619"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188821"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR プロファイラと Windows ストア アプリ
 
@@ -100,7 +100,7 @@ Windows では、Profiler DLL をロードしようとして、Profiler DLL が�
 
 - Profiler DLL が署名されていることを確認します。
 
-- インストール必要となる開発者用ライセンス Windows 8 コンピューターに、ツールを使用する前に、ユーザーに伝えます。 これは行えます自動的に Visual Studio から、またはコマンド プロンプトから手動でします。 詳細については、次を参照してください。[開発者用ライセンスを取得](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)します。
+- インストール必要となる開発者用ライセンス Windows 8 コンピューターに、ツールを使用する前に、ユーザーに伝えます。 これは行えます自動的に Visual Studio から、またはコマンド プロンプトから手動でします。 詳細については、次を参照してください。[開発者用ライセンスを取得](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10))します。
 
 **ファイル システム権限**
 
@@ -124,7 +124,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 最初を起動するには、どの Windows ストア アプリ、profiler のユーザーを確認します。 デスクトップ アプリの場合、ファイルの [参照] ダイアログを表示するなどと、ユーザーが検索して、.exe ファイルを選択します。 Windows ストア アプリは、さまざまな意味をなさない [参照] ダイアログを使用して、します。 代わりに、ユーザーから選択するには、そのユーザー用にインストールされた Windows ストア アプリの一覧を表示することをお勧めします。
 
-使用することができます、 [PackageManager クラス](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx)この一覧を生成します。 `PackageManager` デスクトップ アプリは、使用可能な Windows ランタイム クラスは、実際には*のみ*デスクトップ アプリを利用できます。
+使用することができます、<xref:Windows.Management.Deployment.PackageManager>クラスをこの一覧を生成します。 `PackageManager` デスクトップ アプリは、使用可能な Windows ランタイム クラスは、実際には*のみ*デスクトップ アプリを利用できます。
 
 C# yses でデスクトップ アプリとして記述された仮定 Profiler UI から次のコード例、 `PackageManager` Windows アプリの一覧を生成します。
 
@@ -137,9 +137,9 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **カスタムの環境ブロックを指定します。**
 
-新しい COM インターフェイス、 [IPackageDebugSettings](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)、いくつかの形式の診断を簡単に Windows ストア アプリの実行動作をカスタマイズすることができます。 そのメソッドでは、いずれかの[EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=vs.85\).aspx)を起動すると、環境ブロックを Windows ストア アプリに渡すことができますと自動のプロセスの中断を無効にするように他の便利な効果。 環境変数を指定する必要があるために、環境のブロックが重要です (`COR_PROFILER`、 `COR_ENABLE_PROFILING`、および`COR_PROFILER_PATH)`)、CLR によって、Profiler の DLL を読み込むために使用します。
+新しい COM インターフェイス、 [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)、いくつかの形式の診断を簡単に Windows ストア アプリの実行動作をカスタマイズすることができます。 そのメソッドでは、いずれかの[EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)を起動すると、環境ブロックを Windows ストア アプリに渡すことができますと自動のプロセスの中断を無効にするように他の便利な効果。 環境変数を指定する必要があるために、環境のブロックが重要です (`COR_PROFILER`、 `COR_ENABLE_PROFILING`、および`COR_PROFILER_PATH)`)、CLR によって、Profiler の DLL を読み込むために使用します。
 
-次のコード スニペットを検討してください。
+次のコード スニペットを考えてみます。
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
@@ -180,7 +180,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
 
 **Windows ストア アプリを起動します。**
 
-Windows ストア アプリを起動する時点が最後に到着しました。 既に既に自分で行うをしようとした場合があることに気付きます[CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)は Windows ストア アプリのプロセスを作成する方法にありません。 代わりに、使用する必要があります、 [IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)メソッド。 そのためには、起動している Windows ストア アプリのアプリ ユーザー モデル ID を取得する必要があります。 また、マニフェストでドメインを実行する必要がありますを意味します。
+Windows ストア アプリを起動する時点が最後に到着しました。 既に自分で行うをしようとした場合があることに気付きます[CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)は Windows ストア アプリのプロセスを作成する方法にありません。 代わりに、使用する必要があります、 [IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)メソッド。 そのためには、起動している Windows ストア アプリのアプリ ユーザー モデル ID を取得する必要があります。 また、マニフェストでドメインを実行する必要がありますを意味します。
 
 パッケージを反復処理中に (「を選択する、Windows ストア アプリをプロファイル」を参照してください、[スタートアップ ロード](#startup-load)前セクション)、現在のパッケージのマニフェストに含まれているアプリケーションのセットを取得します。
 
@@ -221,7 +221,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 **呼び出す DisableDebugging**
 
-呼び出した場合[IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx)、呼び出すことによって手動でクリーンアップする約束を作成した、 [IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx)メソッドであるため、操作を実行しますプロファイリング セッションが上にします。
+呼び出した場合[IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)、呼び出すことによって手動でクリーンアップする約束を作成した、 [IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging)メソッドであるため、操作を実行しますプロファイリング セッションが上にします。
 
 ### <a name="attach-load"></a>負荷をアタッチします。
 
@@ -229,7 +229,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 **EnableDebugging**
 
-呼び出すスタートアップのロードと同様、 [IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx)メソッド。 環境ブロックに渡す必要はありませんが、その他の機能の 1 つ必要があります。 自動のプロセスの中断を無効にするとします。 それ以外の場合、Profiler UI を呼び出すと[AttachProfiler](iclrprofiling-attachprofiler-method.md)対象の Windows ストア アプリを中断する可能性があります。 実際には、これは、可能性の高い、Profiler の UI を使用した、ユーザーが対話するようになりましたし、Windows ストア アプリがユーザーの画面のいずれかでアクティブでない場合。 かどうか、Windows ストア アプリが中断されたことができなくへの応答には、CLR を送信することに、Profiler の DLL をアタッチすることを通知します。
+呼び出すスタートアップのロードと同様、 [IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)メソッド。 環境ブロックに渡す必要はありませんが、その他の機能の 1 つ必要があります。 自動のプロセスの中断を無効にするとします。 それ以外の場合、Profiler UI を呼び出すと[AttachProfiler](iclrprofiling-attachprofiler-method.md)対象の Windows ストア アプリを中断する可能性があります。 実際には、これは、可能性の高い、Profiler の UI を使用した、ユーザーが対話するようになりましたし、Windows ストア アプリがユーザーの画面のいずれかでアクティブでない場合。 かどうか、Windows ストア アプリが中断されたことができなくへの応答には、CLR を送信することに、Profiler の DLL をアタッチすることを通知します。
 
 したがってこのような作業を行う必要があります。
 
@@ -243,7 +243,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */,
 
 **DisableDebugging**
 
-いつものように忘れずに呼び出す[IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx)プロファイリング セッションが完了するとします。
+いつものように忘れずに呼び出す[IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging)プロファイリング セッションが完了するとします。
 
 ## <a name="running-inside-the-windows-store-app"></a>Windows ストア アプリ内で実行されています。
 
@@ -273,7 +273,7 @@ Profiler DLL は、デスクトップ アプリのみに適用されるいくつ
 
 ### <a name="reduced-permissions"></a>権限が制限されました。
 
-デスクトップ アプリと Windows ストア アプリのアクセス許可は異なる方法をすべて一覧に、このトピックの範囲外になります。 確実に動作は、Profiler の DLL (デスクトップ アプリと比較して、Windows ストア アプリに読み込まれる) とすべてのリソースにアクセスしようとするたびに異なるなります。 ファイル システムは、最も一般的な例です。 ありますが、いくつかが特定の Windows ストア アプリのアクセスが許可されているディスク上に配置 (を参照してください[アクセスとアクセス許可をファイル (Windows ランタイム アプリ](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx))、Profiler DLL は、同じ制限の下になります。 コードを徹底的にテストします。
+デスクトップ アプリと Windows ストア アプリのアクセス許可は異なる方法をすべて一覧に、このトピックの範囲外になります。 確実に動作は、Profiler の DLL (デスクトップ アプリと比較して、Windows ストア アプリに読み込まれる) とすべてのリソースにアクセスしようとするたびに異なるなります。 ファイル システムは、最も一般的な例です。 ありますが、いくつかが特定の Windows ストア アプリのアクセスが許可されているディスク上に配置 (を参照してください[アクセスとアクセス許可をファイル (Windows ランタイム アプリ](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10)))、Profiler DLL は、同じ制限の下になります。 コードを徹底的にテストします。
 
 ### <a name="inter-process-communication"></a>プロセス間通信
 
@@ -298,7 +298,7 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-その一方で、Profiler DLL が基本的に同じことで行うことができますより簡単に取得できるか、 [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx)クラスを使用して、 [ApplicationData.Current](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.current.aspx)プロパティ。
+その一方で、Profiler DLL が基本的に同じことで行うことができますより簡単に取得できるか、<xref:Windows.Storage.ApplicationData>クラスを使用して、 [ApplicationData.Current](xref:Windows.Storage.ApplicationData.Current%2A)プロパティ。
 
 **イベントを介して通信します。**
 
@@ -412,8 +412,8 @@ CLR のプロファイル API を使用して Windows ストア アプリ内で�
 
 **Windows ストア アプリ**
 
-- [ファイル アクセスとアクセス許可 (Windows ランタイム アプリ](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)
+- [ファイル アクセスとアクセス許可 (Windows ランタイム アプリ](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
 
-- [開発者ライセンスを取得](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)
+- [開発者ライセンスを取得](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
 
-- [IPackageDebugSettings インターフェイス](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)
+- [IPackageDebugSettings インターフェイス](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

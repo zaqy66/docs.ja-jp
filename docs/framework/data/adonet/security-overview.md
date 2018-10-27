@@ -2,12 +2,12 @@
 title: セキュリティ Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db7b45fef28b0b28e7da550c24d510da73c02aa9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861859"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183530"
 ---
 # <a name="security-overview"></a>セキュリティの概要
 アプリケーションのセキュリティ保護は継続的なプロセスとして行う必要があります。 開発者は、アプリケーションがあらゆる攻撃に対して安全であることを常に保証できるわけではありません。これは、新しい技術がもたらす未知の攻撃を予測することが不可能なためです。 反対に、システムに欠陥が発見 (または公開) されていない場合も、そのシステムに欠陥がないとは限りません。 プロジェクトの設計フェーズでセキュリティを考慮することはもちろんのこと、アプリケーションの使用期間を通じてセキュリティをいかに確保してゆくかを計画しておく必要があります。  
@@ -67,7 +67,7 @@ ms.locfileid: "43861859"
 |リソース|説明|  
 |--------------|-----------------|  
 |[コード アクセス セキュリティと ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|ADO.NET アプリケーションの観点から、コード アクセス セキュリティ、ロール ベース セキュリティ、および部分信頼環境間の相互作用について説明します。|  
-|[コード アクセス セキュリティ](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|.NET Framework の CAS について説明する追加のトピックへのリンクが含まれています。|  
+|[コード アクセス セキュリティ](../../../../docs/framework/misc/code-access-security.md)|.NET Framework の CAS について説明する追加のトピックへのリンクが含まれています。|  
   
 ## <a name="database-security"></a>データベース セキュリティ  
  最小特権の原則はデータ ソースにも適用されます。 データベース セキュリティの一般的なガイドラインは次のとおりです。  

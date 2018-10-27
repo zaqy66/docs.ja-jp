@@ -6,15 +6,13 @@ f1_keywords:
 - vbc30451
 helpviewer_keywords:
 - BC30451
-author: rpetrusha
-ms.author: ronpet
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: 3f950bd5604fae7c7d48f6898a4514053061fe10
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0b76b3001b01829ce0bd91cb692a6b518d97577e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122808"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189603"
 ---
 # <a name="name-39ltnamegt39-is-not-declared"></a>名前&#39;&lt;名前&gt;&#39;が宣言されていません
 ステートメントがプログラミング要素の場合を参照しますが、コンパイラは、正確な名前を持つ要素を見つけることができません。  

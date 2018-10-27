@@ -6,17 +6,15 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd5dde46cdea67825b14a6f5fa96a82c8bab8d3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1edb648ec574c0052b7b8314f4ada710c8b0fe01
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652423"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183335"
 ---
 # <a name="-recurse"></a>-recurse
-指定されたディレクトリまたはプロジェクト ディレクトリのすべての子ディレクトリ内のソース コード ファイルをコンパイルします。  
+指定されたディレクトリまたはプロジェクト ディレクトリのいずれかのすべての子ディレクトリ内のソース コード ファイルをコンパイルします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,16 +24,16 @@ ms.locfileid: "33652423"
   
 ## <a name="arguments"></a>引数  
  `dir`  
- 任意。 検索を開始するディレクトリ。 指定しない場合、プロジェクト ディレクトリ内で検索を開始します。  
+ 任意。 検索を開始するディレクトリ。 指定しない場合、プロジェクト ディレクトリで検索を開始します。  
   
  `file`  
  必須。 検索するファイル。 ワイルドカード文字を使用できます。  
   
-## <a name="remarks"></a>コメント  
- ファイル名にワイルドカードを使用して、プロジェクト ディレクトリ内のすべての一致するファイルを使用せずにコンパイルできます`-recurse`です。 出力ファイル名が指定されていない場合、コンパイラは処理される最初の入力ファイルに出力ファイル名に基づいて行います。 これは、一般に、アルファベット順に表示されるときにコンパイルされたファイルの一覧の最初のファイルです。 この理由は、使用して出力ファイルを指定することをお、`-out`オプション。  
+## <a name="remarks"></a>Remarks  
+ 使用せず、プロジェクト ディレクトリ内のすべての一致するファイルをコンパイルするファイル名にワイルドカードを使用する`-recurse`します。 出力ファイル名が指定されていない場合、コンパイラは、処理された最初の入力ファイルに出力ファイル名を行います。 これは、一般に、アルファベット順に表示したときにコンパイルされたファイルの一覧の最初のファイルです。 このためは、使用して出力ファイルを指定することをお、`-out`オプション。  
   
 > [!NOTE]
->  `-recurse`オプションは、Visual Studio 開発環境からは利用できません; は、コマンドラインからコンパイルするときにのみ使用します。  
+>  `-recurse`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
   
 ## <a name="example"></a>例  
  次のコマンドは、現在のディレクトリ内のすべての Visual Basic ファイルをコンパイルします。  
@@ -44,7 +42,7 @@ ms.locfileid: "33652423"
 vbc *.vb  
 ```  
   
- 次のコマンドですべての Visual Basic ファイルのコンパイル、`Test\ABC`ディレクトリと、その下には、そのディレクトリを生成し、`Test.ABC.dll`です。  
+ 次のコマンドですべての Visual Basic ファイルのコンパイル、`Test\ABC`ディレクトリと、その下には、そのディレクトリし、生成`Test.ABC.dll`します。  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

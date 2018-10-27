@@ -8,17 +8,17 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 25c0b34bd33bee626df14c8dbedce0b82e895b58
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a42f9b2101266857e56dee6836f4c3b27b3c6f96
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857340"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188339"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>方法 : XPS ファイルをプログラムにより印刷する
 1 つのオーバー ロードを使用することができます、<xref:System.Printing.PrintQueue.AddJob%2A>メソッドを印刷する[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]ファイルを開くことがなく、<xref:System.Windows.Controls.PrintDialog>や、原則として、任意[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]まったくです。  
   
- 印刷することも[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]多くを使用してファイルを<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>と<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>のメソッド、<xref:System.Windows.Xps.XpsDocumentWriter>します。 この詳細については、「[XPS ドキュメントの印刷](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))」を参照してください。  
+ 印刷することも[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]多くを使用してファイルを<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>と<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>のメソッド、<xref:System.Windows.Xps.XpsDocumentWriter>します。 この詳細については、「[XPS ドキュメントの印刷](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))」を参照してください。  
   
  印刷[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]を使用して、<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>または<xref:System.Windows.Controls.PrintDialog.PrintVisual%2A>のメソッド、<xref:System.Windows.Controls.PrintDialog>コントロール。 [印刷ダイアログ ボックスの呼び出し](how-to-invoke-a-print-dialog.md)に関するページをご覧ください。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "43857340"
   
  このに渡すことにより`true`の最後のパラメーターとして<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>が例外を発生させることがなく *\<PseudoXPSPrinter >* XPSDrv プリンターではありません印刷されません。  
   
- **注**わかりやすくするため、上記の例ではのプレゼンスを使用して、 \*.xps 拡張機能は、ファイルのテストとして[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]します。 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイルには、この拡張子を付ける必要はありません。 [isXPS.exe (isXPS 適合性ツール)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100)) は、ファイルが [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] かどうかをテストする 1 つの手段です。  
+ **注**わかりやすくするため、上記の例ではのプレゼンスを使用して、 \*.xps 拡張機能は、ファイルのテストとして[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]します。 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイルには、この拡張子を付ける必要はありません。 [isXPS.exe (isXPS 適合性ツール)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) は、ファイルが [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] かどうかをテストする 1 つの手段です。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Printing.PrintQueue>  
@@ -64,8 +64,8 @@ ms.locfileid: "43857340"
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
  [XPS](https://www.microsoft.com/xps)  
- [XPS ドキュメントの印刷](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))  
- [マネージ コードとアンマネージ スレッド処理](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  
- [isXPS.exe (isXPS 適合性ツール)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))  
+ [XPS ドキュメントの印刷](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))  
+ [マネージ コードとアンマネージ スレッド処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
+ [isXPS.exe (isXPS 適合性ツール)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))  
  [WPF のドキュメント](documents-in-wpf.md)  
  [印刷の概要](printing-overview.md)

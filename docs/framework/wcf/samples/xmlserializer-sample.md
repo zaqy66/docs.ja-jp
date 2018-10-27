@@ -2,12 +2,12 @@
 title: XMLSerializer サンプル
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 7b43af08758de1d33bcc6ab8f477885c7ecc0825
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 46f3d10305a244d23be19c87566edacfaf7bff46
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503091"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188405"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer サンプル
 このサンプルでは、<xref:System.Xml.Serialization.XmlSerializer> と互換性のある型をシリアル化および逆シリアル化する方法を示します。 Windows Communication Foundation (WCF) の既定のフォーマッタは、<xref:System.Runtime.Serialization.DataContractSerializer>クラス。 <xref:System.Xml.Serialization.XmlSerializer> クラスを使用すると、<xref:System.Runtime.Serialization.DataContractSerializer> クラスを使用できない場合に、型をシリアル化および逆シリアル化できます。 これは、XML を厳密に制御する必要がある場合、たとえば、データの一部が XML 属性であるが XML 要素ではない、などと制御する必要がある場合に多く該当します。 また、<xref:System.Xml.Serialization.XmlSerializer>多くの場合、自動的に選択されます WCF 以外のサービス用のクライアントを作成するときにします。  
@@ -108,7 +108,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
   
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  
 Multiply(2 + 3i, 4 + 7i) = -13 + 26i  

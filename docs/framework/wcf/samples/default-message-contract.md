@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 23ab534ef31773efc69b6a68e73ec30bde4f6e61
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f5a7eff25fb202ba84f0bd49893748b507326fd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502660"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188171"
 ---
 # <a name="default-message-contract"></a>既定のメッセージ コントラクト
 既定のメッセージ コントラクトのサンプルでは、ユーザー定義のカスタム メッセージをサービス操作に渡したり、サービス操作から渡されたりするサービスを示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)型指定されたサービスとしての電卓インターフェイスを実装します。 加算、減算、乗算、および除算で使用されるため、個々 のサービス操作ではなく、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、このサンプルには、オペランドと演算子の両方が含まれていますを返すカスタム メッセージが渡されます。算術計算の結果。  
@@ -21,7 +21,7 @@ ms.locfileid: "43502660"
   
  このサービスでは、型 `MyMessage` のカスタム メッセージを受け入れて返す、1 つのサービス操作が定義されます。 このサンプルでは要求および応答のメッセージの型は同じですが、もちろん、メッセージ コントラクトは必要に応じて変えることができます。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -31,9 +31,9 @@ public interface ICalculator
 }  
 ```  
   
- カスタム メッセージ `MyMessage` は、<xref:System.ServiceModel.MessageContractAttribute>、<xref:System.ServiceModel.MessageHeaderAttribute>、および <xref:System.ServiceModel.MessageBodyMemberAttribute> 属性が付いたクラスで定義されます。 このサンプルで使用するのは 3 番目のコンストラクタだけです。 メッセージ コントラクトを使用すると、SOAP メッセージを完全に制御できます。 このサンプルでは、<xref:System.ServiceModel.MessageHeaderAttribute> 属性を使用して SOAP ヘッダーに `Operation` を格納します。 オペランド `N1`、`N2`、および `Result` は SOAP 本文内に示されます。これらのオペランドには <xref:System.ServiceModel.MessageBodyMemberAttribute> 属性が適用されているためです。  
+ カスタム メッセージ `MyMessage` は、<xref:System.ServiceModel.MessageContractAttribute>、<xref:System.ServiceModel.MessageHeaderAttribute>、および <xref:System.ServiceModel.MessageBodyMemberAttribute> 属性で注釈が付いたクラスで定義されます。 このサンプルで使用するのは 3 番目のコンストラクタだけです。 メッセージ コントラクトを使用すると、SOAP メッセージを完全に制御できます。 このサンプルでは、<xref:System.ServiceModel.MessageHeaderAttribute> 属性を使用して SOAP ヘッダーに `Operation` を格納します。 オペランド `N1`、`N2`、および `Result` は SOAP 本文内に示されます。これらのオペランドには <xref:System.ServiceModel.MessageBodyMemberAttribute> 属性が適用されているためです。  
   
-```  
+```csharp
 [MessageContract]  
 public class MyMessage  
 {  
@@ -99,7 +99,7 @@ public class MyMessage
   
  実装クラスには、`Calculate` サービス処理用のコードが含まれています。 `CalculateService` クラスは、オペランドと演算子を要求メッセージから取得し、要求された計算結果が含まれる応答メッセージを作成します。次のサンプル コードを参照してください。  
   
-```  
+```csharp
 // Service class which implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -133,29 +133,31 @@ public class CalculatorService : ICalculator
   
  クライアントの生成されたクライアント コードで作成された、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ツール。 このツールでは、必要に応じて、生成済みのクライアント コード内にメッセージ コントラクト型が自動的に作成されます。 `/messageContract` コマンド オプションを指定すると、メッセージ コントラクトを強制的に生成できます。  
   
-```  
+```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
  `MyMessage` メッセージを使用するクライアントを次のサンプル コードに示します。  
   
-```  
+```csharp
 // Create a client with given client endpoint configuration  
 CalculatorClient client = new CalculatorClient();  
   
 // Perform addition using a typed message.  
   
-MyMessage request = new MyMessage();  
-request.N1 = 100D;  
-request.N2 = 15.99D;  
-request.Operation = "+";  
+MyMessage request = new MyMessage() 
+                    {  
+                        N1 = 100D,  
+                        N2 = 15.99D,  
+                        Operation = "+"  
+                    };
 MyMessage response = ((ICalculator)client).Calculate(request);  
 Console.WriteLine("Add({0},{1}) = {2}", request.N1, request.N2, response.Result);  
 ```  
   
  サンプルを実行すると、クライアント コンソール ウィンドウに計算が表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

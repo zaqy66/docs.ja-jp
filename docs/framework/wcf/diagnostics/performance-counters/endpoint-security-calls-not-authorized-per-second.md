@@ -2,13 +2,12 @@
 title: 'エンドポイント : 1 秒あたりの承認されていないセキュリティ呼び出し'
 ms.date: 03/30/2017
 ms.assetid: c8a1547b-986b-45c1-b302-dea0cd4b516d
-author: BrucePerlerMS
-ms.openlocfilehash: 4abea795eb196d339beec17fa7a171927aa85324
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c62bec570daf8b107ca0540871eb6eac43ca2d7e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47194062"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188353"
 ---
 # <a name="endpoint-security-calls-not-authorized-per-second"></a>エンドポイント : 1 秒あたりの承認されていないセキュリティ呼び出し
 カウンター名 : 1 秒あたりの承認されていないセキュリティ呼び出し。  

@@ -2,12 +2,12 @@
 title: 非同期タスクまたはタスク (Visual Basic) の一覧をキャンセルします。
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2823514bc462f198a43316b40eb05bc1ffed0e72
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 0024cb1bf4ac7c27d64edcd695b4782dfbcd16af
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728668"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183218"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>非同期タスクまたはタスク (Visual Basic) の一覧をキャンセルします。
 非同期のアプリケーションが終了するまで待機しない場合、それを取り消すために使用できるボタンを設定できます。 このトピックの例に従うと、1 つの Web サイトのコンテンツまたは Web サイトのリストをダウンロードするアプリケーションにキャンセル ボタンを追加できます。  
@@ -27,7 +27,7 @@ ms.locfileid: "34728668"
   
 2.  メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
   
-3.  **プロジェクトを開く** ダイアログ ボックスでは、圧縮解除したサンプル コードが含まれるフォルダーを開き、AsyncFineTuningVB のソリューション (.sln) ファイルを開きます。  
+3.  **プロジェクトを開く** ダイアログ ボックスでは、圧縮を解除するには、サンプル コードを保持するフォルダーを開き、AsyncFineTuningVB のソリューション (.sln) ファイルを開きます。  
   
 4.  **ソリューション エクスプローラー**で、**CancelATask** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。  
   
@@ -35,14 +35,14 @@ ms.locfileid: "34728668"
   
      Ctrl + F5 キーを押して、デバッグを行わずにプロジェクトを実行します。  
   
- プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルを確認することができます。  
+ プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルを確認できます。  
   
 ### <a name="building-the-example"></a>例のビルド  
  次の変更は、Web サイトをダウンロードするアプリケーションに**キャンセル** ボタンを追加します。 この例のダウンロードまたはビルドをしない場合は、このトピックの最後にある「コード例全体」のセクションで最終製品をレビューできます。 アスタリスクはコードの変更点を示しています。  
   
  この例を自分でビルドするには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、**[スタートアップ プロジェクト]** として、**[CancelATask]** の代わりに **[StarterCode]** を選択します。  
   
- そのプロジェクトの MainWindow.xaml.vb ファイルに次の変更を追加します。  
+ 次の変更をそのプロジェクトの MainWindow.xaml.vb ファイルに追加します。  
   
 1.  アクセスするすべてのメソッドのスコープである `CancellationTokenSource` 変数、`cts` を宣言します。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "34728668"
   
         ' GetAsync returns a Task(Of HttpResponseMessage).   
         ' ***The ct argument carries the message if the Cancel button is chosen.  
-        Dim response As HttpResponseMessage = Await client.GetAsync("http://msdn.microsoft.com/library/dd470362.aspx", ct)  
+        Dim response As HttpResponseMessage = Await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct)  
   
         ' Retrieve the website contents from the HttpResponseMessage.  
         Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()  
@@ -145,7 +145,7 @@ ms.locfileid: "34728668"
   
 2.  メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
   
-3.  **プロジェクトを開く** ダイアログ ボックスでは、圧縮解除したサンプル コードが含まれるフォルダーを開き、AsyncFineTuningVB のソリューション (.sln) ファイルを開きます。  
+3.  **プロジェクトを開く** ダイアログ ボックスでは、圧縮を解除するには、サンプル コードを保持するフォルダーを開き、AsyncFineTuningVB のソリューション (.sln) ファイルを開きます。  
   
 4.  **ソリューション エクスプローラー**で、**CancelAListOfTasks** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "34728668"
   
      Ctrl + F5 キーを押して、デバッグを行わずにプロジェクトを実行します。  
   
- プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルを確認することができます。  
+ プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルを確認できます。  
   
 ### <a name="building-the-example"></a>例のビルド  
  この例を自分で拡張するには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、**[スタートアップ プロジェクト]** として **CancelATask** を選択します。 次の変更点をプロジェクトに追加します。 アスタリスクはプログラムの変更点を示しています。  
@@ -166,13 +166,13 @@ ms.locfileid: "34728668"
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  
@@ -253,7 +253,7 @@ ms.locfileid: "34728668"
  このプロジェクトは「[Async Sample: Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」からダウンロードできます。  
   
 ### <a name="cancel-a-task-example"></a>タスクを取り消す例  
- 次のコードは、完全な MainWindow.xaml.vb ファイルを 1 つのタスクを取り消す例です。  
+ 次のコードは、1 つのタスクをキャンセルする例については完全な MainWindow.xaml.vb ファイルです。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -313,7 +313,7 @@ Class MainWindow
   
         ' GetAsync returns a Task(Of HttpResponseMessage).   
         ' ***The ct argument carries the message if the Cancel button is chosen.  
-        Dim response As HttpResponseMessage = Await client.GetAsync("http://msdn.microsoft.com/library/dd470362.aspx", ct)  
+        Dim response As HttpResponseMessage = Await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct)  
   
         ' Retrieve the website contents from the HttpResponseMessage.  
         Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()  
@@ -337,7 +337,7 @@ End Class
 ```  
   
 ### <a name="cancel-a-list-of-tasks-example"></a>タスクの一覧を取り消す例  
- 次のコードは、タスクのリストを取り消す例の完全な MainWindow.xaml.vb ファイルです。  
+ 次のコードは、タスクの一覧を取り消す例では、完全な MainWindow.xaml.vb ファイルです。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -412,13 +412,13 @@ Class MainWindow
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  

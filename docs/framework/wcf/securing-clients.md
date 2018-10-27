@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-author: BrucePerlerMS
-ms.openlocfilehash: 4ddf6f4ac5decd2637299c54a31a7a96eaab0648
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7090d5e9cd4b44a6f894cc92ad69b34761356118
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198879"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188205"
 ---
 # <a name="securing-clients"></a>クライアントのセキュリティ保護
 Windows Communication Foundation (WCF) サービスは、クライアントのセキュリティ要件を決定します。 つまり、使用するセキュリティ モード、およびクライアントが資格情報を提供するかどうかは、サービスによって指定されます。 そのため、クライアントをセキュリティで保護するプロセスは、サービスから取得したメタデータ (公開されている場合) を使用してクライアントを構築するという簡単なものになります。 クライアントを構成する方法は、メタデータによって指定されます。 クライアントが資格情報を提供することをサービスが要求する場合、要件に適した資格情報を取得する必要があります。 ここでは、このプロセスについて詳しく説明します。 セキュリティで保護されたサービスを作成する方法の詳細については、次を参照してください。 [Securing Services](../../../docs/framework/wcf/securing-services.md)します。  

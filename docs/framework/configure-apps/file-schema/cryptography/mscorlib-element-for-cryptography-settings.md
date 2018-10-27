@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b5da49ff22cfa6bd1c3e4d574865eb5e61dc73fb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6a8a589077aba413fa89518e560373df816f8943
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028363"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187846"
 ---
 # <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt;暗号設定の要素
 含まれています、 [ \<cryptographySettings > 要素](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)します。  
@@ -71,9 +71,9 @@ ms.locfileid: "48028363"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>  
- <xref:System.Security.Cryptography>  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [暗号サービス](../../../../../docs/standard/security/cryptographic-services.md)  
- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>  
+- <xref:System.Security.Cryptography>  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

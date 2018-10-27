@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2e454f968bbb80f0e59142dc623fde5d455a78d1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8e2140d02b39a181f55da2c0bed4826dc893f068
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200434"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185807"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>UI オートメーションによる Hyperlink コントロール型のサポート
 > [!NOTE]
@@ -59,7 +59,7 @@ ms.locfileid: "47200434"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|はい|すべてのハイパーリンク コントロールは、Invoke パターンをサポートする必要があります。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|状況に依存|ユーザーにとって有効で意味のある情報がリンクに含まれている場合、ハイパーリンク コントロールは Value コントロール パターンをサポートする必要があります。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|たとえば、`"http://www...."`|インターネット アドレスまたはイントラネット アドレスの URL は、ユーザーにとって意味のある情報が含まれるハイパーリンクの例です。 一方、プログラム リンクはアプリケーションにしか意味がないため、Value プロパティには使用しないことをお勧めします。|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|たとえば、`"https://www...."`|インターネット アドレスまたはイントラネット アドレスの URL は、ユーザーにとって意味のある情報が含まれるハイパーリンクの例です。 一方、プログラム リンクはアプリケーションにしか意味がないため、Value プロパティには使用しないことをお勧めします。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
