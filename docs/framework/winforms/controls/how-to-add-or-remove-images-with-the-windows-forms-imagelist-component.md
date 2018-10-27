@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: e5c563c4f46924a95936bc5a51862230f2cbdb99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28dce033064517a427750ef99b1cd4f8bccaaf09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527639"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182971"
 ---
-# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a><span data-ttu-id="91ecd-102">方法 : Windows フォームの ImageList コンポーネントにイメージを追加または削除する</span><span class="sxs-lookup"><span data-stu-id="91ecd-102">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>
-<span data-ttu-id="91ecd-103">Windows フォーム<xref:System.Windows.Forms.ImageList>コンポーネントには通常、イメージ コントロールに関連付けられている前にします。</span><span class="sxs-lookup"><span data-stu-id="91ecd-103">The Windows Forms <xref:System.Windows.Forms.ImageList> component is typically populated with images before it is associated with a control.</span></span> <span data-ttu-id="91ecd-104">ただし、追加し、イメージ リスト コントロールとの関連付けの後イメージを削除します。</span><span class="sxs-lookup"><span data-stu-id="91ecd-104">However, you can add and remove images after associating the image list with a control.</span></span>  
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a><span data-ttu-id="6203f-102">方法 : Windows フォームの ImageList コンポーネントにイメージを追加または削除する</span><span class="sxs-lookup"><span data-stu-id="6203f-102">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>
+<span data-ttu-id="6203f-103">Windows フォーム<xref:System.Windows.Forms.ImageList>コンポーネントには通常、イメージ前に、コントロールに関連付けられています。</span><span class="sxs-lookup"><span data-stu-id="6203f-103">The Windows Forms <xref:System.Windows.Forms.ImageList> component is typically populated with images before it is associated with a control.</span></span> <span data-ttu-id="6203f-104">ただし、追加し、イメージ リスト コントロールとの関連付けの後イメージを削除することができます。</span><span class="sxs-lookup"><span data-stu-id="6203f-104">However, you can add and remove images after associating the image list with a control.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="91ecd-105">イメージを削除するときにいることを確認、<xref:System.Windows.Forms.ButtonBase.ImageIndex%2A>の関連付けられたコントロールのプロパティは現在も有効です。</span><span class="sxs-lookup"><span data-stu-id="91ecd-105">When you remove images, verify that the <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> property of any associated controls is still valid.</span></span>  
+>  <span data-ttu-id="6203f-105">イメージを削除するとことを確認します。、<xref:System.Windows.Forms.ButtonBase.ImageIndex%2A>の関連付けられたコントロールのプロパティは引き続き有効です。</span><span class="sxs-lookup"><span data-stu-id="6203f-105">When you remove images, verify that the <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> property of any associated controls is still valid.</span></span>  
   
-### <a name="to-add-images-programmatically"></a><span data-ttu-id="91ecd-106">プログラムからイメージを追加するには</span><span class="sxs-lookup"><span data-stu-id="91ecd-106">To add images programmatically</span></span>  
+### <a name="to-add-images-programmatically"></a><span data-ttu-id="6203f-106">プログラムでイメージを追加するには</span><span class="sxs-lookup"><span data-stu-id="6203f-106">To add images programmatically</span></span>  
   
--   <span data-ttu-id="91ecd-107">使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>メソッドのイメージ リストの<xref:System.Windows.Forms.ImageList.Images%2A>プロパティです。</span><span class="sxs-lookup"><span data-stu-id="91ecd-107">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> method of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property.</span></span>  
+-   <span data-ttu-id="6203f-107">使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>メソッドのイメージ リストの<xref:System.Windows.Forms.ImageList.Images%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="6203f-107">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> method of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property.</span></span>  
   
-     <span data-ttu-id="91ecd-108">イメージの場所は次のコード例では、パスが設定、**マイ ドキュメント**フォルダーです。</span><span class="sxs-lookup"><span data-stu-id="91ecd-108">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="91ecd-109">この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターがこのフォルダーを含めることを想定するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="91ecd-109">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="91ecd-110">この場所を選択すると、最小限のシステム アクセス レベル、アプリケーションを安全に実行を持つユーザーもできます。</span><span class="sxs-lookup"><span data-stu-id="91ecd-110">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="91ecd-111">次のコード例では、フォームがあることが必要です、<xref:System.Windows.Forms.ImageList>コントロールが既に追加されています。</span><span class="sxs-lookup"><span data-stu-id="91ecd-111">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
+     <span data-ttu-id="6203f-108">イメージの場所は次のコード例で、パスが設定、 **My Documents**フォルダー。</span><span class="sxs-lookup"><span data-stu-id="6203f-108">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="6203f-109">この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。</span><span class="sxs-lookup"><span data-stu-id="6203f-109">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="6203f-110">この場所を選択すると、最小限のシステム アクセス レベル、アプリケーションを安全に実行を持つユーザーもできます。</span><span class="sxs-lookup"><span data-stu-id="6203f-110">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="6203f-111">次のコード例では、使用して、フォームが必要です、<xref:System.Windows.Forms.ImageList>コントロールが既に追加されています。</span><span class="sxs-lookup"><span data-stu-id="6203f-111">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
   
     ```vb  
     Public Sub LoadImage()  
@@ -74,11 +74,11 @@ ms.locfileid: "33527639"
        }  
     ```  
   
-### <a name="to-add-images-with-a-key-value"></a><span data-ttu-id="91ecd-112">イメージを追加するキー値を持つ。</span><span class="sxs-lookup"><span data-stu-id="91ecd-112">To add images with a key value.</span></span>  
+### <a name="to-add-images-with-a-key-value"></a><span data-ttu-id="6203f-112">キー値を持つイメージを追加します。</span><span class="sxs-lookup"><span data-stu-id="6203f-112">To add images with a key value.</span></span>  
   
--   <span data-ttu-id="91ecd-113">いずれかを使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>のイメージ リストのメソッド<xref:System.Windows.Forms.ImageList.Images%2A>キー値を取得するプロパティです。</span><span class="sxs-lookup"><span data-stu-id="91ecd-113">Use one of the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> methods of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property that takes a key value.</span></span>  
+-   <span data-ttu-id="6203f-113">いずれかを使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>メソッドのイメージ リストの<xref:System.Windows.Forms.ImageList.Images%2A>キーの値を受け取るプロパティです。</span><span class="sxs-lookup"><span data-stu-id="6203f-113">Use one of the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> methods of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property that takes a key value.</span></span>  
   
-     <span data-ttu-id="91ecd-114">イメージの場所は次のコード例では、パスが設定、**マイ ドキュメント**フォルダーです。</span><span class="sxs-lookup"><span data-stu-id="91ecd-114">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="91ecd-115">この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターがこのフォルダーを含めることを想定するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="91ecd-115">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="91ecd-116">この場所を選択すると、最小限のシステム アクセス レベル、アプリケーションを安全に実行を持つユーザーもできます。</span><span class="sxs-lookup"><span data-stu-id="91ecd-116">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="91ecd-117">次のコード例では、フォームがあることが必要です、<xref:System.Windows.Forms.ImageList>コントロールが既に追加されています。</span><span class="sxs-lookup"><span data-stu-id="91ecd-117">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
+     <span data-ttu-id="6203f-114">イメージの場所は次のコード例で、パスが設定、 **My Documents**フォルダー。</span><span class="sxs-lookup"><span data-stu-id="6203f-114">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="6203f-115">この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。</span><span class="sxs-lookup"><span data-stu-id="6203f-115">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="6203f-116">この場所を選択すると、最小限のシステム アクセス レベル、アプリケーションを安全に実行を持つユーザーもできます。</span><span class="sxs-lookup"><span data-stu-id="6203f-116">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="6203f-117">次のコード例では、使用して、フォームが必要です、<xref:System.Windows.Forms.ImageList>コントロールが既に追加されています。</span><span class="sxs-lookup"><span data-stu-id="6203f-117">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
   
     ```vb  
     Public Sub LoadImage()  
@@ -105,15 +105,13 @@ public void addImage()
 }  
 ```  
   
-1.  
+### <a name="to-remove-all-images-programmatically"></a><span data-ttu-id="6203f-118">すべてのイメージをプログラムで削除するには</span><span class="sxs-lookup"><span data-stu-id="6203f-118">To remove all images programmatically</span></span>  
   
-### <a name="to-remove-all-images-programmatically"></a><span data-ttu-id="91ecd-118">すべてのイメージをプログラムで削除するには</span><span class="sxs-lookup"><span data-stu-id="91ecd-118">To remove all images programmatically</span></span>  
+-   <span data-ttu-id="6203f-119">使用して、 <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> 1 つのイメージを削除する方法</span><span class="sxs-lookup"><span data-stu-id="6203f-119">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> method to remove a single image</span></span>  
   
--   <span data-ttu-id="91ecd-119">使用して、 <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> 1 つのイメージを削除する方法</span><span class="sxs-lookup"><span data-stu-id="91ecd-119">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> method to remove a single image</span></span>  
+     <span data-ttu-id="6203f-120">、または、</span><span class="sxs-lookup"><span data-stu-id="6203f-120">,-or-</span></span>  
   
-     <span data-ttu-id="91ecd-120">、- または -</span><span class="sxs-lookup"><span data-stu-id="91ecd-120">,-or-</span></span>  
-  
-     <span data-ttu-id="91ecd-121">使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A>イメージ リスト内のすべてのイメージをクリアします。</span><span class="sxs-lookup"><span data-stu-id="91ecd-121">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> method to clear all images in the image list.</span></span>  
+     <span data-ttu-id="6203f-121">使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A>イメージ リスト内のすべてのイメージをクリアします。</span><span class="sxs-lookup"><span data-stu-id="6203f-121">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> method to clear all images in the image list.</span></span>  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -129,9 +127,9 @@ imageList1.Images.Remove(myImage);
 imageList1.Images.Clear();  
 ```  
   
-### <a name="to-remove-images-by-key"></a><span data-ttu-id="91ecd-122">キーにイメージを削除するには</span><span class="sxs-lookup"><span data-stu-id="91ecd-122">To remove images by key</span></span>  
+### <a name="to-remove-images-by-key"></a><span data-ttu-id="6203f-122">キーによるイメージを削除するには</span><span class="sxs-lookup"><span data-stu-id="6203f-122">To remove images by key</span></span>  
   
--   <span data-ttu-id="91ecd-123">使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>キーを使用して 1 つのイメージを削除する方法です。</span><span class="sxs-lookup"><span data-stu-id="91ecd-123">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> method to remove a single image by its key.</span></span>  
+-   <span data-ttu-id="6203f-123">使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>キーで 1 つのイメージを削除する方法。</span><span class="sxs-lookup"><span data-stu-id="6203f-123">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> method to remove a single image by its key.</span></span>  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  
@@ -143,7 +141,7 @@ imageList1.Images.Clear();
 imageList1.Images.RemoveByKey("myPhoto");  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="91ecd-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="91ecd-124">See Also</span></span>  
- [<span data-ttu-id="91ecd-125">ImageList コンポーネント</span><span class="sxs-lookup"><span data-stu-id="91ecd-125">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- [<span data-ttu-id="91ecd-126">ImageList コンポーネントの概要</span><span class="sxs-lookup"><span data-stu-id="91ecd-126">ImageList Component Overview</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
- [<span data-ttu-id="91ecd-127">イメージ、ビットマップ、メタファイル</span><span class="sxs-lookup"><span data-stu-id="91ecd-127">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="6203f-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="6203f-124">See Also</span></span>  
+- [<span data-ttu-id="6203f-125">ImageList コンポーネント</span><span class="sxs-lookup"><span data-stu-id="6203f-125">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+- [<span data-ttu-id="6203f-126">ImageList コンポーネントの概要</span><span class="sxs-lookup"><span data-stu-id="6203f-126">ImageList Component Overview</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)
+- [<span data-ttu-id="6203f-127">イメージ、ビットマップ、メタファイル</span><span class="sxs-lookup"><span data-stu-id="6203f-127">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

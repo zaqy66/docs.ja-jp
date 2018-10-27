@@ -7,38 +7,36 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e8f6c15084ac9b1a07aef8a0311edfcc4a93337c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: b22fb9ae24a04d9fe530811bf764352199c31813
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932664"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036061"
 ---
-# <a name="-refonly-visual-basic"></a><span data-ttu-id="2b8f9-102">-refonly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2b8f9-102">-refonly (Visual Basic)</span></span>
+# <a name="-refonly-visual-basic"></a><span data-ttu-id="5490b-102">-refonly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5490b-102">-refonly (Visual Basic)</span></span>
 
-<span data-ttu-id="2b8f9-103">**-Refonly**オプションでは、コンパイルのプライマリ出力で実装アセンブリではなく、参照アセンブリがあることを示します。</span><span class="sxs-lookup"><span data-stu-id="2b8f9-103">The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly.</span></span> <span data-ttu-id="2b8f9-104">`-refonly` パラメーターは、参照アセンブリを実行できない場合に、PDB の出力を暗黙的に無効にします。</span><span class="sxs-lookup"><span data-stu-id="2b8f9-104">The `-refonly` parameter silently disables outputting PDBs, as reference assemblies cannot be executed.</span></span>
+<span data-ttu-id="5490b-103">**-Refonly**オプションでは、コンパイルのプライマリ出力で実装アセンブリではなく、参照アセンブリがあることを示します。</span><span class="sxs-lookup"><span data-stu-id="5490b-103">The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly.</span></span> <span data-ttu-id="5490b-104">`-refonly` パラメーターは、参照アセンブリを実行できない場合に、PDB の出力を暗黙的に無効にします。</span><span class="sxs-lookup"><span data-stu-id="5490b-104">The `-refonly` parameter silently disables outputting PDBs, as reference assemblies cannot be executed.</span></span>
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
-## <a name="syntax"></a><span data-ttu-id="2b8f9-105">構文</span><span class="sxs-lookup"><span data-stu-id="2b8f9-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="5490b-105">構文</span><span class="sxs-lookup"><span data-stu-id="5490b-105">Syntax</span></span>
 
 ```console
 -refonly
 ```
 
-## <a name="remarks"></a><span data-ttu-id="2b8f9-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="2b8f9-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="5490b-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="5490b-106">Remarks</span></span>
 
-<span data-ttu-id="2b8f9-107">Visual Basic は、`-refout`バージョン 15.3 以降を切り替えます。</span><span class="sxs-lookup"><span data-stu-id="2b8f9-107">Visual Basic supports the `-refout` switch starting with version 15.3.</span></span>
+<span data-ttu-id="5490b-107">Visual Basic は、`-refout`バージョン 15.3 以降を切り替えます。</span><span class="sxs-lookup"><span data-stu-id="5490b-107">Visual Basic supports the `-refout` switch starting with version 15.3.</span></span>
 
-<span data-ttu-id="2b8f9-108">参照アセンブリは、実装コードではなくメタデータが含まれているメタデータのみアセンブリです。</span><span class="sxs-lookup"><span data-stu-id="2b8f9-108">Reference assemblies are metadata-only assemblies that contain metadata but no implementation code.</span></span> <span data-ttu-id="2b8f9-109">匿名型を除くすべての型およびメンバーの情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="2b8f9-109">They include type and member information for everything except anonymous types.</span></span> <span data-ttu-id="2b8f9-110">(本体なしではなく) `throw null` 本体を使用する理由は、PEVerify を実行して渡せるようにするためです (そのためにメタデータの完全性を検証します)。</span><span class="sxs-lookup"><span data-stu-id="2b8f9-110">The reason for using `throw null` bodies (as opposed to no bodies) is so that PEVerify could run and pass (thus validating the completeness of the metadata).</span></span>
+<span data-ttu-id="5490b-108">参照アセンブリは、実装コードではなくメタデータが含まれているメタデータのみアセンブリです。</span><span class="sxs-lookup"><span data-stu-id="5490b-108">Reference assemblies are metadata-only assemblies that contain metadata but no implementation code.</span></span> <span data-ttu-id="5490b-109">匿名型を除くすべての型およびメンバーの情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="5490b-109">They include type and member information for everything except anonymous types.</span></span> <span data-ttu-id="5490b-110">(本体なしではなく) `throw null` 本体を使用する理由は、PEVerify を実行して渡せるようにするためです (そのためにメタデータの完全性を検証します)。</span><span class="sxs-lookup"><span data-stu-id="5490b-110">The reason for using `throw null` bodies (as opposed to no bodies) is so that PEVerify could run and pass (thus validating the completeness of the metadata).</span></span>
 
-<span data-ttu-id="2b8f9-111">参照アセンブリは、アセンブリ レベル[ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute)属性。</span><span class="sxs-lookup"><span data-stu-id="2b8f9-111">Reference assemblies include an assembly-level [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) attribute.</span></span> <span data-ttu-id="2b8f9-112">この属性は、ソースで指定できます (指定すると、コンパイラではこれを合成する必要がなくなります)。</span><span class="sxs-lookup"><span data-stu-id="2b8f9-112">This attribute may be specified in source (then the compiler won't need to synthesize it).</span></span> <span data-ttu-id="2b8f9-113">この属性により、ランタイムは、実行の参照アセンブリの読み込みが拒否されます (ただしリフレクション専用コンテキストに読み込まれていることがあります)。</span><span class="sxs-lookup"><span data-stu-id="2b8f9-113">Because of this attribute, runtimes will refuse to load reference assemblies for execution (but they can still be loaded in a reflection-only context).</span></span> <span data-ttu-id="2b8f9-114">アセンブリにリフレクションするツールは、リフレクション専用として参照アセンブリが読み込まれることを確認する必要があります。それ以外の場合、ランタイム、<xref:System.BadImageFormatException>します。</span><span class="sxs-lookup"><span data-stu-id="2b8f9-114">Tools that reflect on assemblies need to ensure they load reference assemblies as reflection-only; otherwise, the runtime throws a <xref:System.BadImageFormatException>.</span></span>
+<span data-ttu-id="5490b-111">参照アセンブリは、アセンブリ レベル[ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute)属性。</span><span class="sxs-lookup"><span data-stu-id="5490b-111">Reference assemblies include an assembly-level [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) attribute.</span></span> <span data-ttu-id="5490b-112">この属性は、ソースで指定できます (指定すると、コンパイラではこれを合成する必要がなくなります)。</span><span class="sxs-lookup"><span data-stu-id="5490b-112">This attribute may be specified in source (then the compiler won't need to synthesize it).</span></span> <span data-ttu-id="5490b-113">この属性により、ランタイムは、実行の参照アセンブリの読み込みが拒否されます (ただしリフレクション専用コンテキストに読み込まれていることがあります)。</span><span class="sxs-lookup"><span data-stu-id="5490b-113">Because of this attribute, runtimes will refuse to load reference assemblies for execution (but they can still be loaded in a reflection-only context).</span></span> <span data-ttu-id="5490b-114">アセンブリにリフレクションするツールは、リフレクション専用として参照アセンブリが読み込まれることを確認する必要があります。それ以外の場合、ランタイム、<xref:System.BadImageFormatException>します。</span><span class="sxs-lookup"><span data-stu-id="5490b-114">Tools that reflect on assemblies need to ensure they load reference assemblies as reflection-only; otherwise, the runtime throws a <xref:System.BadImageFormatException>.</span></span>
 
-<span data-ttu-id="2b8f9-115">`-refonly` オプションと [`-refout`](refout-compiler-option.md) オプションは同時に指定できません。</span><span class="sxs-lookup"><span data-stu-id="2b8f9-115">The `-refonly` and [`-refout`](refout-compiler-option.md) options are mutually exclusive.</span></span>
+<span data-ttu-id="5490b-115">`-refonly` オプションと [`-refout`](refout-compiler-option.md) オプションは同時に指定できません。</span><span class="sxs-lookup"><span data-stu-id="5490b-115">The `-refonly` and [`-refout`](refout-compiler-option.md) options are mutually exclusive.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2b8f9-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="2b8f9-116">See also</span></span>
-<span data-ttu-id="2b8f9-117">[-refout](refout-compiler-option.md) </span><span class="sxs-lookup"><span data-stu-id="2b8f9-117">[-refout](refout-compiler-option.md) </span></span>  
-[<span data-ttu-id="2b8f9-118">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="2b8f9-118">Visual Basic Command-Line Compiler</span></span>](index.md)  
-[<span data-ttu-id="2b8f9-119">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="2b8f9-119">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)   
+## <a name="see-also"></a><span data-ttu-id="5490b-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="5490b-116">See also</span></span>
+<span data-ttu-id="5490b-117">[-refout](refout-compiler-option.md) </span><span class="sxs-lookup"><span data-stu-id="5490b-117">[-refout](refout-compiler-option.md) </span></span>  
+[<span data-ttu-id="5490b-118">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="5490b-118">Visual Basic Command-Line Compiler</span></span>](index.md)  
+[<span data-ttu-id="5490b-119">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="5490b-119">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)   

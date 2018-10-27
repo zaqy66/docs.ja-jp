@@ -10,24 +10,22 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4a9bcc6cd5d2bbf30f463da0a51e1bccbcd5a3f1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0d7be1d525ff0f4d1e23155f350155837394297a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873061"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181083"
 ---
-# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="1f45b-102">&lt;追加&gt;authenticationModules (ネットワーク設定) の要素</span><span class="sxs-lookup"><span data-stu-id="1f45b-102">&lt;add&gt; Element for authenticationModules (Network Settings)</span></span>
-<span data-ttu-id="1f45b-103">アプリケーションに認証モジュールを追加します。</span><span class="sxs-lookup"><span data-stu-id="1f45b-103">Adds an authentication module to the application.</span></span>  
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="bd4fc-102">&lt;追加&gt;authenticationModules (ネットワーク設定) の要素</span><span class="sxs-lookup"><span data-stu-id="bd4fc-102">&lt;add&gt; Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="bd4fc-103">アプリケーションに認証モジュールを追加します。</span><span class="sxs-lookup"><span data-stu-id="bd4fc-103">Adds an authentication module to the application.</span></span>  
   
- <span data-ttu-id="1f45b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="1f45b-104">\<configuration></span></span>  
-<span data-ttu-id="1f45b-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="1f45b-105">\<system.net></span></span>  
-<span data-ttu-id="1f45b-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="1f45b-106">\<authenticationModules></span></span>  
-<span data-ttu-id="1f45b-107">\<add></span><span class="sxs-lookup"><span data-stu-id="1f45b-107">\<add></span></span>  
+ <span data-ttu-id="bd4fc-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="bd4fc-104">\<configuration></span></span>  
+<span data-ttu-id="bd4fc-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="bd4fc-105">\<system.net></span></span>  
+<span data-ttu-id="bd4fc-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="bd4fc-106">\<authenticationModules></span></span>  
+<span data-ttu-id="bd4fc-107">\<add></span><span class="sxs-lookup"><span data-stu-id="bd4fc-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1f45b-108">構文</span><span class="sxs-lookup"><span data-stu-id="1f45b-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd4fc-108">構文</span><span class="sxs-lookup"><span data-stu-id="bd4fc-108">Syntax</span></span>  
   
 ```xml  
 <add
@@ -35,34 +33,34 @@ ms.locfileid: "48873061"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1f45b-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="1f45b-109">Attributes and Elements</span></span>  
- <span data-ttu-id="1f45b-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="1f45b-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bd4fc-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="bd4fc-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="bd4fc-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="bd4fc-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1f45b-111">属性</span><span class="sxs-lookup"><span data-stu-id="1f45b-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="bd4fc-111">属性</span><span class="sxs-lookup"><span data-stu-id="bd4fc-111">Attributes</span></span>  
   
-|<span data-ttu-id="1f45b-112">**属性**</span><span class="sxs-lookup"><span data-stu-id="1f45b-112">**Attribute**</span></span>|<span data-ttu-id="1f45b-113">**説明**</span><span class="sxs-lookup"><span data-stu-id="1f45b-113">**Description**</span></span>|  
+|<span data-ttu-id="bd4fc-112">**属性**</span><span class="sxs-lookup"><span data-stu-id="bd4fc-112">**Attribute**</span></span>|<span data-ttu-id="bd4fc-113">**説明**</span><span class="sxs-lookup"><span data-stu-id="bd4fc-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`type`|<span data-ttu-id="1f45b-114">完全修飾型名 (によって示される、<xref:System.Type.FullName%2A>プロパティ) とアセンブリ名 (によって示される、<xref:System.Reflection.Assembly.FullName%2A>プロパティ)、コンマで区切られました。</span><span class="sxs-lookup"><span data-stu-id="1f45b-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma.</span></span>|  
+|`type`|<span data-ttu-id="bd4fc-114">完全修飾型名 (によって示される、<xref:System.Type.FullName%2A>プロパティ) とアセンブリ名 (によって示される、<xref:System.Reflection.Assembly.FullName%2A>プロパティ)、コンマで区切られました。</span><span class="sxs-lookup"><span data-stu-id="bd4fc-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="1f45b-115">子要素</span><span class="sxs-lookup"><span data-stu-id="1f45b-115">Child Elements</span></span>  
- <span data-ttu-id="1f45b-116">なし。</span><span class="sxs-lookup"><span data-stu-id="1f45b-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="bd4fc-115">子要素</span><span class="sxs-lookup"><span data-stu-id="bd4fc-115">Child Elements</span></span>  
+ <span data-ttu-id="bd4fc-116">なし。</span><span class="sxs-lookup"><span data-stu-id="bd4fc-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="1f45b-117">親要素</span><span class="sxs-lookup"><span data-stu-id="1f45b-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="bd4fc-117">親要素</span><span class="sxs-lookup"><span data-stu-id="bd4fc-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="1f45b-118">**要素**</span><span class="sxs-lookup"><span data-stu-id="1f45b-118">**Element**</span></span>|<span data-ttu-id="1f45b-119">**説明**</span><span class="sxs-lookup"><span data-stu-id="1f45b-119">**Description**</span></span>|  
+|<span data-ttu-id="bd4fc-118">**要素**</span><span class="sxs-lookup"><span data-stu-id="bd4fc-118">**Element**</span></span>|<span data-ttu-id="bd4fc-119">**説明**</span><span class="sxs-lookup"><span data-stu-id="bd4fc-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="1f45b-120">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="1f45b-120">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="1f45b-121">ネットワーク要求の認証に使用されるモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="1f45b-121">Specifies modules used to authenticate network requests.</span></span>|  
+|[<span data-ttu-id="bd4fc-120">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="bd4fc-120">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="bd4fc-121">ネットワーク要求の認証に使用されるモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="bd4fc-121">Specifies modules used to authenticate network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1f45b-122">Remarks</span><span class="sxs-lookup"><span data-stu-id="1f45b-122">Remarks</span></span>  
- <span data-ttu-id="1f45b-123">`add`要素認証モジュールを登録済み認証モジュールの一覧の末尾に追加します。</span><span class="sxs-lookup"><span data-stu-id="1f45b-123">The `add` element adds an authentication module to the end of the list of registered authentication modules.</span></span> <span data-ttu-id="1f45b-124">認証モジュールは、一覧に追加された順序で呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="1f45b-124">Authentication modules are called in the order in which they were added to the list.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bd4fc-122">Remarks</span><span class="sxs-lookup"><span data-stu-id="bd4fc-122">Remarks</span></span>  
+ <span data-ttu-id="bd4fc-123">`add`要素認証モジュールを登録済み認証モジュールの一覧の末尾に追加します。</span><span class="sxs-lookup"><span data-stu-id="bd4fc-123">The `add` element adds an authentication module to the end of the list of registered authentication modules.</span></span> <span data-ttu-id="bd4fc-124">認証モジュールは、一覧に追加された順序で呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="bd4fc-124">Authentication modules are called in the order in which they were added to the list.</span></span>  
   
- <span data-ttu-id="1f45b-125">値、`type`属性が有効な型名と対応するアセンブリ名、コンマで区切られたにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="1f45b-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>  
+ <span data-ttu-id="bd4fc-125">値、`type`属性が有効な型名と対応するアセンブリ名、コンマで区切られたにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="bd4fc-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="1f45b-126">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="1f45b-126">Configuration Files</span></span>  
- <span data-ttu-id="1f45b-127">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="1f45b-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="bd4fc-126">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="bd4fc-126">Configuration Files</span></span>  
+ <span data-ttu-id="bd4fc-127">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="bd4fc-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1f45b-128">例</span><span class="sxs-lookup"><span data-stu-id="1f45b-128">Example</span></span>  
- <span data-ttu-id="1f45b-129">次の例で、既定の認証モジュール。</span><span class="sxs-lookup"><span data-stu-id="1f45b-129">The following example enables the default authentication modules.</span></span> <span data-ttu-id="1f45b-130">指定したモジュールの正しい値で、バージョンおよび PublicKeyToken の値を置き換える必要があります。</span><span class="sxs-lookup"><span data-stu-id="1f45b-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="bd4fc-128">例</span><span class="sxs-lookup"><span data-stu-id="bd4fc-128">Example</span></span>  
+ <span data-ttu-id="bd4fc-129">次の例で、既定の認証モジュール。</span><span class="sxs-lookup"><span data-stu-id="bd4fc-129">The following example enables the default authentication modules.</span></span> <span data-ttu-id="bd4fc-130">指定したモジュールの正しい値で、バージョンおよび PublicKeyToken の値を置き換える必要があります。</span><span class="sxs-lookup"><span data-stu-id="bd4fc-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,7 +81,7 @@ ms.locfileid: "48873061"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1f45b-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f45b-131">See Also</span></span>  
- <xref:System.Net.IAuthenticationModule>  
- <xref:System.Net.AuthenticationManager>  
- [<span data-ttu-id="1f45b-132">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="1f45b-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="bd4fc-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="bd4fc-131">See Also</span></span>  
+- <xref:System.Net.IAuthenticationModule>  
+- <xref:System.Net.AuthenticationManager>  
+- [<span data-ttu-id="bd4fc-132">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="bd4fc-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

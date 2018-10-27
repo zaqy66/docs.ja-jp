@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82e657e91e586d7fe409646ea4fb8946c026e84c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a53493d666cb16fcc9b407ca3a46072afa306b97
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424340"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182477"
 ---
-# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="20c27-102">ISymUnmanagedENCUpdate::GetLocalVariables メソッド</span><span class="sxs-lookup"><span data-stu-id="20c27-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
-<span data-ttu-id="20c27-103">ローカル変数を取得します。</span><span class="sxs-lookup"><span data-stu-id="20c27-103">Gets the local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="a6bb1-102">ISymUnmanagedENCUpdate::GetLocalVariables メソッド</span><span class="sxs-lookup"><span data-stu-id="a6bb1-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
+<span data-ttu-id="a6bb1-103">ローカル変数を取得します。</span><span class="sxs-lookup"><span data-stu-id="a6bb1-103">Gets the local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20c27-104">構文</span><span class="sxs-lookup"><span data-stu-id="20c27-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6bb1-104">構文</span><span class="sxs-lookup"><span data-stu-id="a6bb1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalVariables(  
@@ -38,24 +38,24 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="20c27-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="20c27-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a6bb1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a6bb1-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="20c27-106">[in]メソッドのメタデータ トークンです。</span><span class="sxs-lookup"><span data-stu-id="20c27-106">[in] The metadata token of the method.</span></span>  
+ <span data-ttu-id="a6bb1-106">[in]メソッドのメタデータ トークンです。</span><span class="sxs-lookup"><span data-stu-id="a6bb1-106">[in] The metadata token of the method.</span></span>  
   
  `cLocals`  
- <span data-ttu-id="20c27-107">[in]A`ULONG`のサイズを示す、`rgLocals`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="20c27-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
+ <span data-ttu-id="a6bb1-107">[in]A`ULONG`のサイズを示す、`rgLocals`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="a6bb1-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
   
  `rgLocals`  
- <span data-ttu-id="20c27-108">[out]返される配列の<!--zz<xref:ISymUnmanagedVariable>-->`ISymUnmanagedVariable`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="20c27-108">[out] The returned array of <!--zz<xref:ISymUnmanagedVariable>--> `ISymUnmanagedVariable`  instances.</span></span>  
+ <span data-ttu-id="a6bb1-108">[out]返される配列の[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="a6bb1-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="20c27-109">[out]ポインター、`ULONG`のサイズを受け取る、`rgLocals`バッファーは、ローカル変数を含めるために必要です。</span><span class="sxs-lookup"><span data-stu-id="20c27-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
+ <span data-ttu-id="a6bb1-109">[out]ポインターを`ULONG`のサイズを受け取る、`rgLocals`にローカル変数を含めることが必要なバッファー。</span><span class="sxs-lookup"><span data-stu-id="a6bb1-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="20c27-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="20c27-110">Return Value</span></span>  
- <span data-ttu-id="20c27-111">メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="20c27-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a6bb1-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="a6bb1-110">Return Value</span></span>  
+ <span data-ttu-id="a6bb1-111">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="a6bb1-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20c27-112">要件</span><span class="sxs-lookup"><span data-stu-id="20c27-112">Requirements</span></span>  
- <span data-ttu-id="20c27-113">**ヘッダー:** CorSym.idl、CorSym.h</span><span class="sxs-lookup"><span data-stu-id="20c27-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6bb1-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="a6bb1-112">Requirements</span></span>  
+ <span data-ttu-id="a6bb1-113">**ヘッダー:** CorSym.idl、CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a6bb1-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20c27-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="20c27-114">See Also</span></span>  
- [<span data-ttu-id="20c27-115">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="20c27-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a6bb1-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="a6bb1-114">See Also</span></span>  
+ [<span data-ttu-id="a6bb1-115">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a6bb1-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

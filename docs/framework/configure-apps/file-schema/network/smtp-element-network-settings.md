@@ -8,24 +8,22 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 61110413f43e95060aa2cfecb4acdb3ebaae14df
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: f095883ef32e57937c61a025b67f0cad2c8b096b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027586"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50044855"
 ---
-# <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="51de7-102">&lt;smtp&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="51de7-102">&lt;smtp&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="51de7-103">構成の配信形式、配信方法、および送信者の電子メールを送信するためのアドレス。</span><span class="sxs-lookup"><span data-stu-id="51de7-103">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  
+# <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="46ff2-102">&lt;smtp&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="46ff2-102">&lt;smtp&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="46ff2-103">構成の配信形式、配信方法、および送信者の電子メールを送信するためのアドレス。</span><span class="sxs-lookup"><span data-stu-id="46ff2-103">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  
   
- <span data-ttu-id="51de7-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="51de7-104">\<configuration></span></span>  
-<span data-ttu-id="51de7-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="51de7-105">\<system.net></span></span>  
-<span data-ttu-id="51de7-106">\<mailSettings></span><span class="sxs-lookup"><span data-stu-id="51de7-106">\<mailSettings></span></span>  
-<span data-ttu-id="51de7-107">\<smtp></span><span class="sxs-lookup"><span data-stu-id="51de7-107">\<smtp></span></span>  
+ <span data-ttu-id="46ff2-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="46ff2-104">\<configuration></span></span>  
+<span data-ttu-id="46ff2-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="46ff2-105">\<system.net></span></span>  
+<span data-ttu-id="46ff2-106">\<mailSettings></span><span class="sxs-lookup"><span data-stu-id="46ff2-106">\<mailSettings></span></span>  
+<span data-ttu-id="46ff2-107">\<smtp></span><span class="sxs-lookup"><span data-stu-id="46ff2-107">\<smtp></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51de7-108">構文</span><span class="sxs-lookup"><span data-stu-id="51de7-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46ff2-108">構文</span><span class="sxs-lookup"><span data-stu-id="46ff2-108">Syntax</span></span>  
   
 ```xml  
       <smtp  
@@ -37,32 +35,32 @@ ms.locfileid: "48027586"
       </smtp>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="51de7-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="51de7-109">Attributes and Elements</span></span>  
- <span data-ttu-id="51de7-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="51de7-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="46ff2-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="46ff2-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="46ff2-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="46ff2-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="51de7-111">属性</span><span class="sxs-lookup"><span data-stu-id="51de7-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="46ff2-111">属性</span><span class="sxs-lookup"><span data-stu-id="46ff2-111">Attributes</span></span>  
   
-|<span data-ttu-id="51de7-112">属性</span><span class="sxs-lookup"><span data-stu-id="51de7-112">Attribute</span></span>|<span data-ttu-id="51de7-113">説明</span><span class="sxs-lookup"><span data-stu-id="51de7-113">Description</span></span>|  
+|<span data-ttu-id="46ff2-112">属性</span><span class="sxs-lookup"><span data-stu-id="46ff2-112">Attribute</span></span>|<span data-ttu-id="46ff2-113">説明</span><span class="sxs-lookup"><span data-stu-id="46ff2-113">Description</span></span>|  
 |---------------|-----------------|  
-|`deliveryFormat`|<span data-ttu-id="51de7-114">送信電子メールの配信形式を指定します。</span><span class="sxs-lookup"><span data-stu-id="51de7-114">Specifies the delivery format for outgoing emails.</span></span> <span data-ttu-id="51de7-115">指定できる値は SevenBit および International です。</span><span class="sxs-lookup"><span data-stu-id="51de7-115">Acceptable values are SevenBit and International.</span></span>|  
-|`deliveryMethod`|<span data-ttu-id="51de7-116">電子メールの配信方法を指定します。</span><span class="sxs-lookup"><span data-stu-id="51de7-116">Specifies the delivery method for emails.</span></span> <span data-ttu-id="51de7-117">使用可能な値は、Network、PickupDirectoryFromIis、および specifiedpickupdirectory です。</span><span class="sxs-lookup"><span data-stu-id="51de7-117">Acceptable values are Network, PickupDirectoryFromIis, and SpecifiedPickupDirectory.</span></span>|  
-|`from`|<span data-ttu-id="51de7-118">指定します、送信電子メールの差出人アドレス。</span><span class="sxs-lookup"><span data-stu-id="51de7-118">Specifies the from address for outgoing emails.</span></span>|  
+|`deliveryFormat`|<span data-ttu-id="46ff2-114">送信電子メールの配信形式を指定します。</span><span class="sxs-lookup"><span data-stu-id="46ff2-114">Specifies the delivery format for outgoing emails.</span></span> <span data-ttu-id="46ff2-115">指定できる値は SevenBit および International です。</span><span class="sxs-lookup"><span data-stu-id="46ff2-115">Acceptable values are SevenBit and International.</span></span>|  
+|`deliveryMethod`|<span data-ttu-id="46ff2-116">電子メールの配信方法を指定します。</span><span class="sxs-lookup"><span data-stu-id="46ff2-116">Specifies the delivery method for emails.</span></span> <span data-ttu-id="46ff2-117">使用可能な値は、Network、PickupDirectoryFromIis、および specifiedpickupdirectory です。</span><span class="sxs-lookup"><span data-stu-id="46ff2-117">Acceptable values are Network, PickupDirectoryFromIis, and SpecifiedPickupDirectory.</span></span>|  
+|`from`|<span data-ttu-id="46ff2-118">指定します、送信電子メールの差出人アドレス。</span><span class="sxs-lookup"><span data-stu-id="46ff2-118">Specifies the from address for outgoing emails.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="51de7-119">子要素</span><span class="sxs-lookup"><span data-stu-id="51de7-119">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="46ff2-119">子要素</span><span class="sxs-lookup"><span data-stu-id="46ff2-119">Child Elements</span></span>  
   
-|<span data-ttu-id="51de7-120">属性</span><span class="sxs-lookup"><span data-stu-id="51de7-120">Attribute</span></span>|<span data-ttu-id="51de7-121">説明</span><span class="sxs-lookup"><span data-stu-id="51de7-121">Description</span></span>|  
+|<span data-ttu-id="46ff2-120">属性</span><span class="sxs-lookup"><span data-stu-id="46ff2-120">Attribute</span></span>|<span data-ttu-id="46ff2-121">説明</span><span class="sxs-lookup"><span data-stu-id="46ff2-121">Description</span></span>|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|<span data-ttu-id="51de7-122">SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレクトリを設定します。</span><span class="sxs-lookup"><span data-stu-id="51de7-122">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>|  
-|`network`|<span data-ttu-id="51de7-123">外部 SMTP サーバー用のネットワーク オプションを設定します。</span><span class="sxs-lookup"><span data-stu-id="51de7-123">Configures the network options for an external SMTP server.</span></span>|  
+|`specifiedPickupDirectory`|<span data-ttu-id="46ff2-122">SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレクトリを設定します。</span><span class="sxs-lookup"><span data-stu-id="46ff2-122">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>|  
+|`network`|<span data-ttu-id="46ff2-123">外部 SMTP サーバー用のネットワーク オプションを設定します。</span><span class="sxs-lookup"><span data-stu-id="46ff2-123">Configures the network options for an external SMTP server.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="51de7-124">親要素</span><span class="sxs-lookup"><span data-stu-id="51de7-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="46ff2-124">親要素</span><span class="sxs-lookup"><span data-stu-id="46ff2-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="51de7-125">**要素**</span><span class="sxs-lookup"><span data-stu-id="51de7-125">**Element**</span></span>|<span data-ttu-id="51de7-126">**説明**</span><span class="sxs-lookup"><span data-stu-id="51de7-126">**Description**</span></span>|  
+|<span data-ttu-id="46ff2-125">**要素**</span><span class="sxs-lookup"><span data-stu-id="46ff2-125">**Element**</span></span>|<span data-ttu-id="46ff2-126">**説明**</span><span class="sxs-lookup"><span data-stu-id="46ff2-126">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="51de7-127">\<mailSettings> 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="51de7-127">\<mailSettings> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="51de7-128">電子メールの送信オプションを設定します。</span><span class="sxs-lookup"><span data-stu-id="51de7-128">Configures mail sending options.</span></span>|  
+|[<span data-ttu-id="46ff2-127">\<mailSettings> 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="46ff2-127">\<mailSettings> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="46ff2-128">電子メールの送信オプションを設定します。</span><span class="sxs-lookup"><span data-stu-id="46ff2-128">Configures mail sending options.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="51de7-129">例</span><span class="sxs-lookup"><span data-stu-id="51de7-129">Example</span></span>  
- <span data-ttu-id="51de7-130">次の例では、既定のネットワーク資格情報を使用して電子メールを送信する適切な SMTP パラメーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="51de7-130">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
+## <a name="example"></a><span data-ttu-id="46ff2-129">例</span><span class="sxs-lookup"><span data-stu-id="46ff2-129">Example</span></span>  
+ <span data-ttu-id="46ff2-130">次の例では、既定のネットワーク資格情報を使用して電子メールを送信する適切な SMTP パラメーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="46ff2-130">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -80,9 +78,9 @@ ms.locfileid: "48027586"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="51de7-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="51de7-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="46ff2-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="46ff2-131">See Also</span></span>  
  <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpDeliveryFormat>  
  <xref:System.Net.Mail.SmtpDeliveryMethod>  
- [<span data-ttu-id="51de7-132">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="51de7-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="46ff2-132">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="46ff2-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -2,30 +2,30 @@
 title: 冗語構文 (F#)
 description: F# プログラミング言語の詳細であり、軽量構文の違いについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e697c6fe619df7ffe12f7d4e2a234a5a5cb401ff
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50044764"
 ---
-# <a name="verbose-syntax"></a><span data-ttu-id="e9b9a-103">冗語構文</span><span class="sxs-lookup"><span data-stu-id="e9b9a-103">Verbose Syntax</span></span>
+# <a name="verbose-syntax"></a><span data-ttu-id="c657f-103">冗語構文</span><span class="sxs-lookup"><span data-stu-id="c657f-103">Verbose Syntax</span></span>
 
-<span data-ttu-id="e9b9a-104">F# 言語で多くの構成要素に使用できる 2 つの形式の構文は:*冗語構文*と*軽量構文*します。</span><span class="sxs-lookup"><span data-stu-id="e9b9a-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="e9b9a-105">冗語構文は、一般的に使用されませんが、インデントを受けにくくなるという利点があります。</span><span class="sxs-lookup"><span data-stu-id="e9b9a-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="e9b9a-106">などの他のキーワード、軽量構文が短いとインデントを先頭と末尾、コンストラクトの使用ではなく`begin`、 `end`、`in`など。</span><span class="sxs-lookup"><span data-stu-id="e9b9a-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="e9b9a-107">既定の構文は、軽量構文です。</span><span class="sxs-lookup"><span data-stu-id="e9b9a-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="e9b9a-108">このトピックでは、軽量構文が有効でない場合、f# の構成要素の構文をについて説明します。</span><span class="sxs-lookup"><span data-stu-id="e9b9a-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="e9b9a-109">冗語構文はのでまま一部のコンストラクトの冗語構文を使用することができる場合でも、軽量構文を有効にすると、常に有効です。</span><span class="sxs-lookup"><span data-stu-id="e9b9a-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="e9b9a-110">使用して軽量構文を無効にすることができます、`#light "off"`ディレクティブ。</span><span class="sxs-lookup"><span data-stu-id="e9b9a-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
+<span data-ttu-id="c657f-104">F# 言語で多くの構成要素に使用できる 2 つの形式の構文は:*冗語構文*と*軽量構文*します。</span><span class="sxs-lookup"><span data-stu-id="c657f-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="c657f-105">冗語構文は、一般的に使用されませんが、インデントを受けにくくなるという利点があります。</span><span class="sxs-lookup"><span data-stu-id="c657f-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="c657f-106">などの他のキーワード、軽量構文が短いとインデントを先頭と末尾、コンストラクトの使用ではなく`begin`、 `end`、`in`など。</span><span class="sxs-lookup"><span data-stu-id="c657f-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="c657f-107">既定の構文は、軽量構文です。</span><span class="sxs-lookup"><span data-stu-id="c657f-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="c657f-108">このトピックでは、軽量構文が有効でない場合、f# の構成要素の構文をについて説明します。</span><span class="sxs-lookup"><span data-stu-id="c657f-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="c657f-109">冗語構文はのでまま一部のコンストラクトの冗語構文を使用することができる場合でも、軽量構文を有効にすると、常に有効です。</span><span class="sxs-lookup"><span data-stu-id="c657f-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="c657f-110">使用して軽量構文を無効にすることができます、`#light "off"`ディレクティブ。</span><span class="sxs-lookup"><span data-stu-id="c657f-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
 
-## <a name="table-of-constructs"></a><span data-ttu-id="e9b9a-111">テーブルの構成体</span><span class="sxs-lookup"><span data-stu-id="e9b9a-111">Table of Constructs</span></span>
+## <a name="table-of-constructs"></a><span data-ttu-id="c657f-111">テーブルの構成体</span><span class="sxs-lookup"><span data-stu-id="c657f-111">Table of Constructs</span></span>
 
-<span data-ttu-id="e9b9a-112">次の表では、f# 言語コンストラクトの軽量と詳細な構文を示しますのコンテキストで 2 つの形式の違いがあります。</span><span class="sxs-lookup"><span data-stu-id="e9b9a-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="e9b9a-113">この表では、角度を角かっこ (&lt;&gt;) 構文のユーザーが指定した要素で囲みます。</span><span class="sxs-lookup"><span data-stu-id="e9b9a-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="e9b9a-114">これらのコンストラクト内で使用される構文の詳細情報の各言語構成要素は、ドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e9b9a-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
+<span data-ttu-id="c657f-112">次の表では、f# 言語コンストラクトの軽量と詳細な構文を示しますのコンテキストで 2 つの形式の違いがあります。</span><span class="sxs-lookup"><span data-stu-id="c657f-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="c657f-113">この表では、角度を角かっこ (&lt;&gt;) 構文のユーザーが指定した要素で囲みます。</span><span class="sxs-lookup"><span data-stu-id="c657f-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="c657f-114">これらのコンストラクト内で使用される構文の詳細情報の各言語構成要素は、ドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c657f-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="e9b9a-115">言語構成要素</span><span class="sxs-lookup"><span data-stu-id="e9b9a-115">Language construct</span></span></th>
-<th><span data-ttu-id="e9b9a-116">軽量構文</span><span class="sxs-lookup"><span data-stu-id="e9b9a-116">Lightweight syntax</span></span></th>
-<th><span data-ttu-id="e9b9a-117">冗語構文</span><span class="sxs-lookup"><span data-stu-id="e9b9a-117">Verbose syntax</span></span></th>
+<th><span data-ttu-id="c657f-115">言語構成要素</span><span class="sxs-lookup"><span data-stu-id="c657f-115">Language construct</span></span></th>
+<th><span data-ttu-id="c657f-116">軽量構文</span><span class="sxs-lookup"><span data-stu-id="c657f-116">Lightweight syntax</span></span></th>
+<th><span data-ttu-id="c657f-117">冗語構文</span><span class="sxs-lookup"><span data-stu-id="c657f-117">Verbose syntax</span></span></th>
 </tr>
 <tr>
 <td>
-<span data-ttu-id="e9b9a-118">複合式</span><span class="sxs-lookup"><span data-stu-id="e9b9a-118">compound expressions</span></span>
+<span data-ttu-id="c657f-118">複合式</span><span class="sxs-lookup"><span data-stu-id="c657f-118">compound expressions</span></span>
 </td>
 <td>
 
@@ -35,7 +35,7 @@ ms.locfileid: "45972320"
 ```
 </td><td>
 
-```
+```fsharp
 <expression1>; <expression2>
 ```
 
@@ -43,11 +43,11 @@ ms.locfileid: "45972320"
 </tr>
 <tr><td>
 
-
-<span data-ttu-id="e9b9a-119">入れ子になった`let`バインド</span><span class="sxs-lookup"><span data-stu-id="e9b9a-119">nested `let` bindings</span></span>
+<span data-ttu-id="c657f-119">入れ子になった`let`バインド</span><span class="sxs-lookup"><span data-stu-id="c657f-119">nested `let` bindings</span></span>
 
 </td><td>
-```
+
+```fsharp
 let f x =
     let a = 1
     let b = 2
@@ -56,7 +56,7 @@ let f x =
 
 </td><td>
 
-```
+```fsharp
 let f x =
     let a = 1 in
     let b = 2 in
@@ -66,10 +66,10 @@ let f x =
 </td>
 </tr>
 <tr><td>
-<span data-ttu-id="e9b9a-120">コード ブロック</span><span class="sxs-lookup"><span data-stu-id="e9b9a-120">code block</span></span>
+<span data-ttu-id="c657f-120">コード ブロック</span><span class="sxs-lookup"><span data-stu-id="c657f-120">code block</span></span>
 </td><td>
 
-```
+```fsharp
 (
     <expression1>
     <expression2>
@@ -78,7 +78,7 @@ let f x =
 
 </td><td>
 
-```
+```fsharp
 begin
     <expression1>;
     <expression2>;
@@ -90,7 +90,7 @@ end
 `for...do`
 </td><td>
 
-```
+```fsharp
 for counter = start to finish do
     ...
 ```
@@ -109,14 +109,14 @@ done
 `while...do`
 </td><td>
 
-```
+```fsharp
 while <condition> do
     ...
 ```
 
 </td><td>
 
-```
+```fsharp
 while <condition> do
     ...
 done
@@ -128,14 +128,14 @@ done
 `for...in`
 </td><td>
 
-```
+```fsharp
 for var in start .. finish do
     ...
 ```
 
 </td><td>
 
-```
+```fsharp
 for var in start .. finish do
     ...
 done
@@ -147,14 +147,14 @@ done
 `do`
 </td><td>
 
-```
+```fsharp
 do
     ...
 ```
 
 </td><td>
 
-```
+```fsharp
 do
     ...
 in
@@ -162,10 +162,10 @@ in
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="e9b9a-121">レコード</span><span class="sxs-lookup"><span data-stu-id="e9b9a-121">record</span></span>
+<tr><td><span data-ttu-id="c657f-121">レコード</span><span class="sxs-lookup"><span data-stu-id="c657f-121">record</span></span>
 </td><td>
 
-```
+```fsharp
 type <record-name> =
     {
         <field-declarations>
@@ -175,7 +175,7 @@ type <record-name> =
 
 </td><td>
 
-```
+```fsharp
 type <record-name> =
     {
         <field-declarations>
@@ -187,35 +187,36 @@ type <record-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="e9b9a-122">class</span><span class="sxs-lookup"><span data-stu-id="e9b9a-122">class</span></span>
-</td><td><span data-ttu-id="e9b9a-123">
-```
-type <class-name>(<params>) = ... ```
+<tr><td><span data-ttu-id="c657f-122">クラス</span><span class="sxs-lookup"><span data-stu-id="c657f-122">class</span></span>
+</td><td>
 
-</span><span class="sxs-lookup"><span data-stu-id="e9b9a-123">
+```fsharp
+type <class-name>(<params>) =
+    ...
 ```
-type <class-name>(<params>) = ... ```
 
-</span></span></td><td>
+</td><td>
 
-```
+```fsharp
 type <class-name>(<params>) =
     class
         ...
     end
 ```
+
 </td>
 </tr>
-<tr><td><span data-ttu-id="e9b9a-124">構造体</span><span class="sxs-lookup"><span data-stu-id="e9b9a-124">structure</span></span></td><td>
+<tr><td><span data-ttu-id="c657f-123">構造体</span><span class="sxs-lookup"><span data-stu-id="c657f-123">structure</span></span></td><td>
 
-```
+```fsharp
 [<StructAttribute>]
 type <structure-name> =
     ...
 ```
+
 </td><td>
 
-```
+```fsharp
 type <structure-name> =
     struct
         ...
@@ -224,18 +225,19 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="e9b9a-125">判別共用体</span><span class="sxs-lookup"><span data-stu-id="e9b9a-125">discriminated union</span></span></td><td>
+<tr><td><span data-ttu-id="c657f-124">判別共用体</span><span class="sxs-lookup"><span data-stu-id="c657f-124">discriminated union</span></span></td><td>
 
-```
+```fsharp
 type <union-name> =
     | ...
     | ...
     ...
     <value-or-member definitions>
 ```
+
 </td><td>
 
-```
+```fsharp
 type <union-name> =
     | ...
     | ...
@@ -247,15 +249,15 @@ type <union-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="e9b9a-126">interface</span><span class="sxs-lookup"><span data-stu-id="e9b9a-126">interface</span></span></td><td>
+<tr><td><span data-ttu-id="c657f-125">interface</span><span class="sxs-lookup"><span data-stu-id="c657f-125">interface</span></span></td><td>
 
-```
+```fsharp
 type <interface-name> =
     ...
 ```
 </td><td>
 
-```
+```fsharp
 type <interface-name> =
     interface
         ...
@@ -264,9 +266,9 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="e9b9a-127">オブジェクト式</span><span class="sxs-lookup"><span data-stu-id="e9b9a-127">object expression</span></span></td><td>
+<tr><td><span data-ttu-id="c657f-126">オブジェクト式</span><span class="sxs-lookup"><span data-stu-id="c657f-126">object expression</span></span></td><td>
 
-```
+```fsharp
 { new <type-name>
     with
         <value-or-member-definitions>
@@ -276,7 +278,7 @@ type <interface-name> =
 
 </td><td>
 
-```
+```fsharp
 { new <type-name>
     with
         <value-or-member-definitions>
@@ -287,9 +289,9 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="e9b9a-128">インターフェイスの実装</span><span class="sxs-lookup"><span data-stu-id="e9b9a-128">interface implementation</span></span></td><td>
+<tr><td><span data-ttu-id="c657f-127">インターフェイスの実装</span><span class="sxs-lookup"><span data-stu-id="c657f-127">interface implementation</span></span></td><td>
 
-```
+```fsharp
 interface <interface-name>
     with
         <value-or-member-definitions>
@@ -297,7 +299,7 @@ interface <interface-name>
 
 </td><td>
 
-```
+```fsharp
 interface <interface-name>
     with
         <value-or-member-definitions>
@@ -306,9 +308,9 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="e9b9a-129">型の拡張機能</span><span class="sxs-lookup"><span data-stu-id="e9b9a-129">type extension</span></span></td><td>
+<tr><td><span data-ttu-id="c657f-128">型の拡張機能</span><span class="sxs-lookup"><span data-stu-id="c657f-128">type extension</span></span></td><td>
 
-```
+```fsharp
 type <type-name>
     with
         <value-or-member-definitions>
@@ -316,7 +318,7 @@ type <type-name>
 
 </td><td>
 
-```
+```fsharp
 type <type-name>
     with
         <value-or-member-definitions>
@@ -325,16 +327,16 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="e9b9a-130">name</span><span class="sxs-lookup"><span data-stu-id="e9b9a-130">module</span></span></td><td>
+<tr><td><span data-ttu-id="c657f-129">name</span><span class="sxs-lookup"><span data-stu-id="c657f-129">module</span></span></td><td>
 
-```
+```fsharp
 module <module-name> =
     ...
 ```
 
 </td><td>
 
-```
+```fsharp
 module <module-name> =
     begin
         ...
@@ -345,8 +347,8 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a><span data-ttu-id="e9b9a-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="e9b9a-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c657f-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="c657f-130">See also</span></span>
 
-- [<span data-ttu-id="e9b9a-132">F# 言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="e9b9a-132">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="e9b9a-133">コンパイラ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="e9b9a-133">Compiler Directives</span></span>](compiler-directives.md)
-- [<span data-ttu-id="e9b9a-134">コードのフォーマットに関するガイドライン</span><span class="sxs-lookup"><span data-stu-id="e9b9a-134">Code Formatting Guidelines</span></span>](code-formatting-guidelines.md)
+- [<span data-ttu-id="c657f-131">F# 言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="c657f-131">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="c657f-132">コンパイラ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="c657f-132">Compiler Directives</span></span>](compiler-directives.md)
+- [<span data-ttu-id="c657f-133">コードのフォーマットに関するガイドライン</span><span class="sxs-lookup"><span data-stu-id="c657f-133">Code Formatting Guidelines</span></span>](code-formatting-guidelines.md)

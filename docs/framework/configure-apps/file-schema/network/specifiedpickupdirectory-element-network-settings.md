@@ -8,25 +8,23 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b62dc1a9118f7d4f1f693ade36626deaecd23999
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: MT
+ms.openlocfilehash: eec7c5b41fabcb5ee4566f8b96f67322c1d6c47b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863651"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170758"
 ---
-# <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a><span data-ttu-id="0bb37-102">&lt;specifiedPickupDirectory&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="0bb37-102">&lt;specifiedPickupDirectory&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="0bb37-103">SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレクトリを設定します。</span><span class="sxs-lookup"><span data-stu-id="0bb37-103">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>  
+# <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a><span data-ttu-id="7e41d-102">&lt;specifiedPickupDirectory&gt;要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="7e41d-102">&lt;specifiedPickupDirectory&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="7e41d-103">SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレクトリを設定します。</span><span class="sxs-lookup"><span data-stu-id="7e41d-103">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>  
   
- <span data-ttu-id="0bb37-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0bb37-104">\<configuration></span></span>  
-<span data-ttu-id="0bb37-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="0bb37-105">\<system.net></span></span>  
-<span data-ttu-id="0bb37-106">\<mailSettings></span><span class="sxs-lookup"><span data-stu-id="0bb37-106">\<mailSettings></span></span>  
-<span data-ttu-id="0bb37-107">\<smtp></span><span class="sxs-lookup"><span data-stu-id="0bb37-107">\<smtp></span></span>  
-<span data-ttu-id="0bb37-108">\<specifiedPickupDirectory></span><span class="sxs-lookup"><span data-stu-id="0bb37-108">\<specifiedPickupDirectory></span></span>  
+ <span data-ttu-id="7e41d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7e41d-104">\<configuration></span></span>  
+<span data-ttu-id="7e41d-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="7e41d-105">\<system.net></span></span>  
+<span data-ttu-id="7e41d-106">\<mailSettings></span><span class="sxs-lookup"><span data-stu-id="7e41d-106">\<mailSettings></span></span>  
+<span data-ttu-id="7e41d-107">\<smtp></span><span class="sxs-lookup"><span data-stu-id="7e41d-107">\<smtp></span></span>  
+<span data-ttu-id="7e41d-108">\<specifiedPickupDirectory></span><span class="sxs-lookup"><span data-stu-id="7e41d-108">\<specifiedPickupDirectory></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0bb37-109">構文</span><span class="sxs-lookup"><span data-stu-id="0bb37-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e41d-109">構文</span><span class="sxs-lookup"><span data-stu-id="7e41d-109">Syntax</span></span>  
   
 ```xml  
 <specifiedPickupDirectory  
@@ -34,29 +32,29 @@ ms.locfileid: "47863651"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0bb37-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="0bb37-110">Attributes and Elements</span></span>  
- <span data-ttu-id="0bb37-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="0bb37-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7e41d-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="7e41d-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="7e41d-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="7e41d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0bb37-112">属性</span><span class="sxs-lookup"><span data-stu-id="0bb37-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7e41d-112">属性</span><span class="sxs-lookup"><span data-stu-id="7e41d-112">Attributes</span></span>  
   
-|<span data-ttu-id="0bb37-113">属性</span><span class="sxs-lookup"><span data-stu-id="0bb37-113">Attribute</span></span>|<span data-ttu-id="0bb37-114">説明</span><span class="sxs-lookup"><span data-stu-id="0bb37-114">Description</span></span>|  
+|<span data-ttu-id="7e41d-113">属性</span><span class="sxs-lookup"><span data-stu-id="7e41d-113">Attribute</span></span>|<span data-ttu-id="7e41d-114">説明</span><span class="sxs-lookup"><span data-stu-id="7e41d-114">Description</span></span>|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|<span data-ttu-id="0bb37-115">アプリケーションが後で、SMTP サーバーで処理するための電子メールを保存するディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="0bb37-115">The directory where applications save email for later processing by the SMTP server.</span></span>|  
+|`pickupDirectoryLocation`|<span data-ttu-id="7e41d-115">アプリケーションが後で、SMTP サーバーで処理するための電子メールを保存するディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="7e41d-115">The directory where applications save email for later processing by the SMTP server.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0bb37-116">子要素</span><span class="sxs-lookup"><span data-stu-id="0bb37-116">Child Elements</span></span>  
- <span data-ttu-id="0bb37-117">なし。</span><span class="sxs-lookup"><span data-stu-id="0bb37-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7e41d-116">子要素</span><span class="sxs-lookup"><span data-stu-id="7e41d-116">Child Elements</span></span>  
+ <span data-ttu-id="7e41d-117">なし。</span><span class="sxs-lookup"><span data-stu-id="7e41d-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="0bb37-118">親要素</span><span class="sxs-lookup"><span data-stu-id="0bb37-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7e41d-118">親要素</span><span class="sxs-lookup"><span data-stu-id="7e41d-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="0bb37-119">要素</span><span class="sxs-lookup"><span data-stu-id="0bb37-119">Element</span></span>|<span data-ttu-id="0bb37-120">説明</span><span class="sxs-lookup"><span data-stu-id="0bb37-120">Description</span></span>|  
+|<span data-ttu-id="7e41d-119">要素</span><span class="sxs-lookup"><span data-stu-id="7e41d-119">Element</span></span>|<span data-ttu-id="7e41d-120">説明</span><span class="sxs-lookup"><span data-stu-id="7e41d-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0bb37-121">\<smtp > 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="0bb37-121">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="0bb37-122">簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。</span><span class="sxs-lookup"><span data-stu-id="0bb37-122">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
+|[<span data-ttu-id="7e41d-121">\<smtp > 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="7e41d-121">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="7e41d-122">簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。</span><span class="sxs-lookup"><span data-stu-id="7e41d-122">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0bb37-123">Remarks</span><span class="sxs-lookup"><span data-stu-id="0bb37-123">Remarks</span></span>  
- <span data-ttu-id="0bb37-124">`specifiedPickupDirectory`属性はアプリケーションが SMTP サーバーによって処理されるメッセージを保存するディレクトリを設定します。</span><span class="sxs-lookup"><span data-stu-id="0bb37-124">The `specifiedPickupDirectory` attribute sets the directory where applications save mail messages to be processed by the SMTP server.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7e41d-123">Remarks</span><span class="sxs-lookup"><span data-stu-id="7e41d-123">Remarks</span></span>  
+ <span data-ttu-id="7e41d-124">`specifiedPickupDirectory`属性はアプリケーションが SMTP サーバーによって処理されるメッセージを保存するディレクトリを設定します。</span><span class="sxs-lookup"><span data-stu-id="7e41d-124">The `specifiedPickupDirectory` attribute sets the directory where applications save mail messages to be processed by the SMTP server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0bb37-125">例</span><span class="sxs-lookup"><span data-stu-id="0bb37-125">Example</span></span>  
- <span data-ttu-id="0bb37-126">次の例では、メール ピックアップ ディレクトリとして c:\maildrop を指定します。</span><span class="sxs-lookup"><span data-stu-id="0bb37-126">The following example specifies c:\maildrop as the mail pickup directory.</span></span>  
+## <a name="example"></a><span data-ttu-id="7e41d-125">例</span><span class="sxs-lookup"><span data-stu-id="7e41d-125">Example</span></span>  
+ <span data-ttu-id="7e41d-126">次の例では、メール ピックアップ ディレクトリとして c:\maildrop を指定します。</span><span class="sxs-lookup"><span data-stu-id="7e41d-126">The following example specifies c:\maildrop as the mail pickup directory.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,8 +70,8 @@ ms.locfileid: "47863651"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0bb37-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="0bb37-127">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7e41d-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="7e41d-127">See Also</span></span>  
  <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>  
- [<span data-ttu-id="0bb37-128">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="0bb37-128">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="7e41d-128">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="7e41d-128">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
