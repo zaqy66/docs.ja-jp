@@ -3,11 +3,11 @@ title: 非同期のプログラミングF#
 description: 学習方法F#非同期プログラミングが言語レベルのプログラミング モデルを簡単に使用し、自然言語を使用して実現されます。
 ms.date: 06/20/2016
 ms.openlocfilehash: de07f1252df56e3dfec5ea7a34a283b1c9508523
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50034424"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195061"
 ---
 # <a name="async-programming-in-f"></a>非同期のプログラミングF# #
 

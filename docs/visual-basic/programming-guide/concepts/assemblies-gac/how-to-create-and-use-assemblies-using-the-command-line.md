@@ -3,11 +3,11 @@ title: '方法: を作成し、コマンドライン (Visual Basic) を使用し
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
 ms.openlocfilehash: 3b9d3c45168020f22f7e263fdf59454e3789dd9e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036932"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194658"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>方法: を作成し、コマンドライン (Visual Basic) を使用してアセンブリを使用します。
 アセンブリとは、ダイナミック リンク ライブラリ (DLL) のことで、実行時にプログラムにリンクされます。 DLL のビルド例および使用例として、次に示すシナリオを考えてみます。  
