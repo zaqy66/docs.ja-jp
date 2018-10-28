@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 84640387e6d77e02d3b0d19b73c0d2b20d8d8831
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848310"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194086"
 ---
 # <a name="using-message-contracts"></a>メッセージ コントラクトの使用
 通常 Windows Communication Foundation (WCF) アプリケーションを構築するときに、開発者はデータ構造とシリアル化の問題に細心の注意し、データを送信するメッセージの構造を意識する必要はありません。 このようなアプリケーションでは、パラメーターまたは戻り値用にデータ コントラクトを作成するのは簡単です  (詳細については、次を参照してください[Data Transfer in Service Contracts にを指定する](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)。  
@@ -145,8 +145,8 @@ public class BankingTransaction
 ## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>SOAP 本文の各部分のラップの制御  
  SOAP 本文は、既定で、ラップされた要素内にシリアル化されます。 たとえば、`HelloGreetingMessage` メッセージのメッセージ コントラクトに含まれる <xref:System.ServiceModel.MessageContractAttribute> 型の名前から生成される `HelloGreetingMessage` ラッパー要素を次のコードに示します。  
   
- [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
- [!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
+[!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
+[!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
   
  ラッパー要素を抑制するには、<xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> プロパティを `false` に設定します。 ラッパー要素の名前と名前空間を制御するには、<xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> プロパティと <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A> プロパティを使用します。  
   

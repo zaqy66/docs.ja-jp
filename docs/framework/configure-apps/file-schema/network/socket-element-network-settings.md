@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 0e36b7c72631406293e76b185c9836ed9ffec328
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.openlocfilehash: ff06fd6518e67020b4d67d4e081307b8e54bae85
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044880"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194697"
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;ソケット&gt;要素 (ネットワーク設定)
 ソケット操作が完了ポートを使用するかどうかを指定します。  
@@ -104,9 +104,9 @@ ms.locfileid: "50044880"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.Net?displayProperty=nameWithType>  
- <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>  
- <xref:System.Net.Sockets?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>  
- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net?displayProperty=nameWithType>  
+- <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>  
+- <xref:System.Net.Sockets?displayProperty=nameWithType>  
+- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>  
+- <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>  
+- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

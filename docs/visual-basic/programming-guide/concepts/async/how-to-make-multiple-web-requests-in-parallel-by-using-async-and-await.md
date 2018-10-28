@@ -3,11 +3,11 @@ title: '方法: 並列で非同期を使用して複数の Web 要求を行う�
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
 ms.openlocfilehash: 44531ef643df6402ad318957c0a2bdc058c5bcb0
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049257"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195036"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>方法: 並列で非同期を使用して複数の Web 要求を行うし、Await (Visual Basic)
 非同期メソッドでは、タスクは作成されると開始されます。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)演算子は、処理できませんが、タスクが完了するまで続行メソッド内の位置にタスクに適用されます。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  
