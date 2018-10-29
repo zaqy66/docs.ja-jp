@@ -3,11 +3,11 @@ title: 純粋関数型変換の概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
 ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193854"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087262"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>純粋関数型変換の概要 (C#)
 ここでは、関数型変換の概要について、その基になる概念や、それをサポートする言語構成要素も含めて説明します。 また、オブジェクト指向変換と関数型変換という 2 つのプログラミング方法を対比させて、関数型変換に移行するためのアドバイスを紹介します。 関数型変換はさまざまなプログラミング シナリオで使用できますが、ここでは XML 変換を具体例として取り上げます。  

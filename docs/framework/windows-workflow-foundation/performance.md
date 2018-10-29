@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 のパフォーマンス
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ba6120284b3ab189b0f34e2d3ef25f6967f04e5d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123814"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202290"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 のパフォーマンス
 Dustin Metzgar
@@ -424,7 +424,7 @@ public class Workflow1 : Activity
 
  WF4 には SQL 追跡プロバイダーはありませんが、AppFabric に SQL 追跡プロバイダーがあります。  AppFabric の SQL 追跡では、クイック挿入用にイベントをバッチ処理して SQL テーブルに書き込む Windows サービスを使用して、ETW イベントに定期受信します。  別のジョブでこのテーブルからデータを排出し、形式を変更して AppFabric ダッシュボードに表示可能なレポート テーブルに格納します。  追跡イベントのバッチは元になるワークフローとは独立して処理されるため、永続化ポイントを待機せずに記録されます。
 
- ETW イベントの記録には logman や xperf などのツールを使用できます。  小規模な ETL ファイルは xperfview などのツールで表示できます。または、tracerpt を使用して XML などのわかりやすい形式に変換することもできます。  WF3 では、SQL データベースなしで追跡イベントを取得する唯一の方法は、カスタム追跡サービスを作成することです。 ETW の詳細については、次を参照してください。 [WCF サービスと Windows のイベント トレース](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)と[Windows のイベント トレース](https://msdn.microsoft.com/library/ff190903.aspx\))します。
+ ETW イベントの記録には logman や xperf などのツールを使用できます。  小規模な ETL ファイルは xperfview などのツールで表示できます。または、tracerpt を使用して XML などのわかりやすい形式に変換することもできます。  WF3 では、SQL データベースなしで追跡イベントを取得する唯一の方法は、カスタム追跡サービスを作成することです。 ETW の詳細については、次を参照してください。 [WCF サービスと Windows のイベント トレース](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)と[Windows のイベント トレース](https://msdn.microsoft.com/library/ff190903.aspx)します。
 
  ワークフロー追跡を有効にした場合のパフォーマンスへの影響の程度はさまざまです。  次のベンチマークでは、logman ツールを使用し、ETW 追跡イベントを使用してそのイベントを ETL ファイルに記録します。  AppFabric の SQL 追跡のコストについてはこの記事の対象外です。  このベンチマークには AppFabric でも使用される基本的な追跡プロファイルが示されています。  状態監視イベントのみを追跡した場合のコストも含まれています。  これらのイベントは問題をトラブルシューティングし、システムの平均スループットを確認するために役立ちます。
 

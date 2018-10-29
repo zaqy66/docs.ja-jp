@@ -11,11 +11,11 @@ ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d6da87159e3ec9184eaa76ad069102204e2fcfc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192231"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841570"
 ---
 # <a name="-c-reference"></a>@ (C# リファレンス)
 
@@ -40,5 +40,5 @@ ms.locfileid: "47192231"
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [C# 特殊文字](../../../csharp/language-reference/tokens/index.md)

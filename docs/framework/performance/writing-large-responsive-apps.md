@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.openlocfilehash: 947e443fc1561e86cf9c5fe7c19d4290cc364bd5
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041656"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170381"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
 この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージ コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。  
@@ -23,8 +23,7 @@ ms.locfileid: "44041656"
   
  エンド ユーザはアプリを操作するときに、アプリが応答するものであると期待します。  入力またはコマンドの処理がブロックされることがあってはなりません。  ヘルプはすぐにポップアップ表示され、またユーザーが入力を続けるときには閉じる必要があります。  処理時間がかかっている UI スレッドがあり、これが原因でアプリの動作が遅くなっていると判断される場合でも、アプリがその UI スレッドをブロックしないようにする必要があります。  
   
- Roslyn コンパイラの詳細については、次を参照してください。、 [dotnet/roslyn](https://github.com/dotnet/roslyn) GitHub のリポジトリ。
- <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
+ Roslyn コンパイラの詳細については、次を参照してください。 [.NET コンパイラ プラットフォーム SDK](../../csharp/roslyn-sdk/index.md)します。
   
 ## <a name="just-the-facts"></a>.NET Framework についての事実  
  パフォーマンスを調整し、応答性のある .NET Framework アプリを作成する際には、次に説明する事実を考慮してください。  
@@ -40,7 +39,7 @@ ms.locfileid: "44041656"
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事実 3: 優れたツールには大きな効果がある  
  優れたツールを使用すれば、最も大きなパフォーマンスの問題 (CPU、メモリ、またはディスク) の詳細を迅速に確認し、このようなボトルネックを引き起こしているコードを特定できます。  Microsoft は、[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone Analysis Tool](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)、[PerfView](https://www.microsoft.com/download/details.aspx?id=28567) など、さまざまなパフォーマンス ツールを提供しています。  
   
- PerfView は、ディスク I/O、GC イベント、メモリなどの深刻な問題に取り組む際に役立つ極めて強力な無償のツールです。  パフォーマンスに関連する [Windows イベント トレーシング](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) イベントをキャプチャし、アプリ別、プロセス別、スタック別、およびスレッド別に情報を容易に確認できます。  PerfView は、アプリによって割り当てられるメモリの種類と量、そしてメモリの割り当てにどの関数またはコール スタックがどの程度関与しているのかを示します。 詳細については、ツールに付属している詳しいヘルプ トピック、デモ、ビデオ (Channel 9 の [PerfView チュートリアル](http://channel9.msdn.com/Series/PerfView-Tutorial) など) を参照してください。  
+ PerfView は、ディスク I/O、GC イベント、メモリなどの深刻な問題に取り組む際に役立つ極めて強力な無償のツールです。  パフォーマンスに関連する [Windows イベント トレーシング](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) イベントをキャプチャし、アプリ別、プロセス別、スタック別、およびスレッド別に情報を容易に確認できます。  PerfView は、アプリによって割り当てられるメモリの種類と量、そしてメモリの割り当てにどの関数またはコール スタックがどの程度関与しているのかを示します。 詳細については、ツールに付属している詳しいヘルプ トピック、デモ、ビデオ (Channel 9 の [PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial) など) を参照してください。  
   
 ### <a name="fact-4-its-all-about-allocations"></a>事実 4: すべては割り当てで決まる  
  応答性の高い .NET Framework アプリ開発の要となるのはアルゴリズム (例: バブル ソートの代わりにクイック ソートを使用) であると思うかもしれませんが、それは正しくありません。  応答性の高いアプリを開発する上で最も重要なのは、メモリの割り当てです。これは特に、アプリが非常に大規模であり大量データを処理する場合に該当します。  
@@ -461,13 +460,14 @@ class Compilation { /*...*/
   
 -   すべては割り当てで決まる - コンパイラ プラットフォーム チームは、新しいコンパイラのパフォーマンスの向上のため、この分野に最も多くの時間をかけました。  
   
-## <a name="see-also"></a>関連項目  
- [このトピックのプレゼンテーションのビデオ](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
- [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
- [パフォーマンス](../../../docs/framework/performance/index.md)  
- [.NET のパフォーマンスに関するヒント](https://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone パフォーマンス分析ツール](https://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Visual Studio Profiler でアプリケーションのボトルネックを見つける](https://msdn.microsoft.com/magazine/cc337887.aspx)  
- [Channel 9 PerfView チュートリアル](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [高レベルのパフォーマンスのヒント](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [GitHub の dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn)
+## <a name="see-also"></a>関連項目
+
+- [このトピックのプレゼンテーションのビデオ](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+- [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
+- [パフォーマンス](../../../docs/framework/performance/index.md)  
+- [.NET のパフォーマンスに関するヒント](https://msdn.microsoft.com/library/ms973839.aspx)  
+- [Windows Phone パフォーマンス分析ツール](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+- [Visual Studio Profiler でアプリケーションのボトルネックを見つける](https://msdn.microsoft.com/magazine/cc337887.aspx)  
+- [Channel 9 PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
+- [GitHub の dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn)

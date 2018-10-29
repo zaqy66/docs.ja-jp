@@ -4,12 +4,12 @@ description: ライブラリ プロジェクトを .NET Framework から .NET Co
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: eb6b8506d8df218a053242cd0b8d3097fa6d9fd3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028046"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199852"
 ---
 # <a name="porting-to-net-core---libraries"></a>.NET Core への移植 - ライブラリ
 
@@ -162,11 +162,11 @@ Visual Studio 2017 でライブラリを読み込み、次の手順を行うこ�
 コードを移植したときにすべての機能が動作することを確認するには、コードを .NET Core に移植してテストすることをお勧めします。 このテストを行うには、.NET Core 用のテストを構築して実行するためのテスト フレームワークを使用する必要があります。 現在のところ、次の 3 つの選択肢があります。
 
 - [xUnit](https://xunit.github.io/)
-  * [はじめに](http://xunit.github.io/docs/getting-started-dotnet-core.html)
+  * [はじめに](https://xunit.github.io/docs/getting-started-dotnet-core.html)
   * [MSTest プロジェクトを xUnit に変換するツール](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
-- [NUnit](http://www.nunit.org/)
+- [NUnit](https://nunit.org/)
   * [はじめに](https://github.com/nunit/docs/wiki/Installation)
-  * [MSTest から NUnit への移行に関するブログ投稿](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+  * [MSTest から NUnit への移行に関するブログ投稿](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>移植について推奨されるアプローチ

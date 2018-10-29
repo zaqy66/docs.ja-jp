@@ -4,12 +4,12 @@ description: リフト アンド シフトし、Azure クラウドとこの電�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b8c293730b0921924584359ffad32efd2b83a19b
-ms.sourcegitcommit: dfc8aa44246a97f4611cc441d9ef71b03cc31260
+ms.openlocfilehash: 0cfb052daa41264ae00d48906477eae99ea159d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49413940"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200086"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 (2 nd edition)
 
@@ -25,7 +25,7 @@ Copyright © 2018 by Microsoft Corporation
 
 All rights reserved. 本書のいかなる部分も、書面による発行者の許可なしに、いかなる形式または方法によっても、複製することを禁じます。
 
-このブックはなど、電子書籍の (電子書籍) マイクロソフトの複数のチャネルを通じて使用可能な形式で無料で利用できる <http://dot.net/architecture> です。
+このブックはなど、電子書籍の (電子書籍) マイクロソフトの複数のチャネルを通じて使用可能な形式で無料で利用できる <https://dot.net/architecture> です。
 
 この書籍で電子メールに関連する質問がある場合は、[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book) に電子メールをお送りください。
 
@@ -72,7 +72,7 @@ Web アプリケーションやサービスを最新化し、クラウドに移�
 
 図 1-1 は、既存の .NET アプリケーションを段階的なフェーズでクラウドに移動する場合に実行できる可能性のあるパスを示しています。
 
- ![既存の .NET アプリケーションとサービスの最新化パス](./media/image1-1.png)
+ ![既存の .NET アプリケーションとサービスの最新化パス](./media/image1-1.png)
 
 > **(図 1-1)**。 既存の .NET アプリケーションとサービスの最新化パス
 

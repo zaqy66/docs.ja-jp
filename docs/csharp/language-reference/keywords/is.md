@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 8e4103f8e71858ec74c348ee1f675828e6468eb2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 037144c47a97a44cad504882fdf8c88caf4918d7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170588"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121309"
 ---
 # <a name="is-c-reference"></a>is (C# リファレンス) #
 
@@ -153,7 +153,7 @@ var パターンによるパターン マッチは常に成功します。 構�
 
 *expr* が `null` である場合も `is` 式は true となり、`null` が *varname* に代入される点に注意してください。 
 
-# <a name="c-language-specification"></a>C# 言語仕様
+## <a name="c-language-specification"></a>C# 言語仕様
   
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   

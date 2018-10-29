@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9f8176ca3ee2340100978aef044140dafdeb179b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f5d53debd746ba031e39215354c391d288016b6b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028434"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201359"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt;要素
 アルゴリズムの表示名にクラス名をマップして、1 つのクラスが多くの表示名を持つことを許可します。  
@@ -78,7 +78,7 @@ ms.locfileid: "48028434"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [暗号サービス](../../../../../docs/standard/security/cryptographic-services.md)  
- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

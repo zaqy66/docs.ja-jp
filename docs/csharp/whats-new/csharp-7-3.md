@@ -3,11 +3,11 @@ title: C# 7.3 の新機能
 description: C# 7.3 の新機能の概要
 ms.date: 05/16/2018
 ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47235232"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873801"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 の新機能
 

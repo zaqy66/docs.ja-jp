@@ -7,12 +7,12 @@ ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208251"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454450"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>コマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを展開する
 
@@ -77,7 +77,7 @@ ms.locfileid: "47208251"
 
 1 つ以上のサードパーティの依存関係を備えたフレームワークに依存する展開を展開するには、それらの依存関係がプロジェクトで使用できる必要があります。 `dotnet restore` コマンドを実行する前に、次の 2 つの追加手順を実行する必要があります([注記参照](#dotnet-restore-note))。
 
-1. *csproj* ファイルの `<ItemGroup>` セクションに、必要なサードパーティ ライブラリへの参照を追加します。 次の `<ItemGroup>` セクションには、サードパーティ ライブラリとして [Json.NET](http://www.newtonsoft.com/json) への依存関係があります。
+1. *csproj* ファイルの `<ItemGroup>` セクションに、必要なサードパーティ ライブラリへの参照を追加します。 次の `<ItemGroup>` セクションには、サードパーティ ライブラリとして [Json.NET](https://www.newtonsoft.com/json) への依存関係があります。
 
       ```xml
       <ItemGroup>

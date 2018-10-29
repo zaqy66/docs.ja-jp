@@ -3,12 +3,12 @@ title: Azure での F# の使用
 description: F# での Azure サービスを使用するガイドします。
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 1fbb85a07fc057c1b89a4c4a1ad356066cebf2b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033962"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201505"
 ---
 # <a name="using-f-on-azure"></a>Azure での F# の使用
 
@@ -40,7 +40,7 @@ Azure Functions と F# の使用に関する他のリソース:
 
 ## <a name="using-azure-storage-with-f"></a>F# で Azure Storage の使用 #
 
-Azure Storage は、顧客のニーズに合う耐久性、可用性、スケーラビリティを必要とする最新のアプリケーション向けのストレージ サービスの基本階層です。 F# プログラムは、次の記事で説明されている方法を使用して、Azure Storage サービスと直接やり取りできます。
+Azure Storage は、顧客のニーズに合う耐久性、可用性、スケーラビリティを必要とする最新のアプリケーション向けのストレージ サービスの基本階層です。 F#プログラムは、次の記事で説明する手法を使用して、Azure ストレージ サービスと直接やり取りできます。
 
 * [F# を使用した Azure Blob Storage の概要](blob-storage.md)
 * [F# を使用した Azure File Storage の概要](file-storage.md)

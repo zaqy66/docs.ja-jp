@@ -5,24 +5,27 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: fcf5b8f872e2f97497ff5387adb755da1832bf8c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e9a9e9295425efaadff4ac1f0b796b2c9a889543
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424468"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200954"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
+
 1 つだけの言語、製品の可用性を制限する場合は、潜在的な顧客ベースでの世界 6.5 10億人の母集団の割合を制限します。 世界中のユーザーに到達するようにアプリケーションを実行する場合に、製品のコスト効率に優れたローカリゼーションより多くのお客様に最高で最も経済的な方法のいずれか。  
   
  この概要紹介のグローバリゼーションおよびローカリゼーション[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。 グローバリゼーションとは、設計と複数の場所で実行するアプリケーションの開発です。 たとえば、グローバリゼーション ローカライズされたユーザー インターフェイスとサポート リージョンのデータの異なるカルチャ内のユーザーの。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グローバル化されたデザイン機能、自動レイアウト、サテライト アセンブリ、およびローカライズされた属性を含む、コメントを提供します。
   
- ローカリゼーションとは、アプリケーションがサポートする特定のカルチャのローカライズ バージョンへのアプリケーション リソースを変換します。 ローカライズするときに[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で Api を使用する、<xref:System.Windows.Markup.Localizer>名前空間。 これらの Api の電源、 [LocBaml ツール サンプル](https://go.microsoft.com/fwlink/?LinkID=160016)コマンド ライン ツール。 ビルドして、LocBaml を使用する方法については、次を参照してください。[アプリケーションをローカライズする](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)します。    
+ ローカリゼーションとは、アプリケーションがサポートする特定のカルチャのローカライズ バージョンへのアプリケーション リソースを変換します。 ローカライズするときに[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で Api を使用する、<xref:System.Windows.Markup.Localizer>名前空間。 これらの Api の電源、 [LocBaml ツール サンプル](https://go.microsoft.com/fwlink/?LinkID=160016)コマンド ライン ツール。 ビルドして、LocBaml を使用する方法については、次を参照してください。[アプリケーションをローカライズする](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)します。
   
-## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>WPF のグローバリゼーションおよびローカリゼーションのためのベスト プラクティス  
+## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>WPF のグローバリゼーションおよびローカリゼーションのためのベスト プラクティス
+
  組み込まれているグローバリゼーションおよびローカリゼーションの機能を最大限に活用できる[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]に従って、UI の設計とこのセクションではローカライズに関するヒント。  
   
-### <a name="best-practices-for-wpf-ui-design"></a>WPF の UI デザインのベスト プラクティス  
+### <a name="best-practices-for-wpf-ui-design"></a>WPF の UI デザインのベスト プラクティス
+
  デザインするとき、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– ベース[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、これらのベスト プラクティスの実装を検討します。  
   
 -   書き込み、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; を作成しないように[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]コード。 作成するときに、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]を使用して[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、組み込まれているローカリゼーション Api を介して公開します。  
@@ -39,7 +42,7 @@ ms.locfileid: "47424468"
   
 -   有効にする<xref:System.Windows.Controls.TextBlock.TextWrapping%2A>で<xref:System.Windows.Controls.TextBlock>クリッピングを回避するためにします。
   
--   設定、`xml:lang`属性。 この属性には、特定の要素とその子要素のカルチャがについて説明します。 このプロパティの値がいくつかの機能の動作を変更[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 たとえば、ハイフネーション、スペル チェック、数値の置換、複雑なスクリプトの整形、およびフォント フォールバックの動作を変更します。 参照してください[WPF のグローバリゼーション](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)詳細設定については、 [xml:lang XAML 処理](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)します。  
+-   `xml:lang` 属性を設定します。 この属性には、特定の要素とその子要素のカルチャがについて説明します。 このプロパティの値がいくつかの機能の動作を変更[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 たとえば、ハイフネーション、スペル チェック、数値の置換、複雑なスクリプトの整形、およびフォント フォールバックの動作を変更します。 参照してください[WPF のグローバリゼーション](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)詳細設定については、 [xml:lang XAML 処理](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)します。  
   
 -   さまざまな言語に使用されるフォントをより適切に制御を取得する場合は、カスタマイズされた複合フォントを作成します。 既定では、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows\Fonts ディレクトリに GlobalUserInterface.composite フォントを使用します。  
   
@@ -47,7 +50,8 @@ ms.locfileid: "47424468"
   
 -   ブラウザー外でホストされているスタンドアロン ナビゲーション アプリケーションを作成するときに設定、<xref:System.Windows.Application.StartupUri%2A>初期アプリケーションに、<xref:System.Windows.Navigation.NavigationWindow>の代わりにページに (たとえば、 `<Application StartupUri="NavigationWindow.xaml">`)。 この設計では、変更することができます、<xref:System.Windows.FlowDirection>ウィンドウとナビゲーション バー。 詳細と例では、次を参照してください。[グローバリゼーション ホームページ サンプル](https://go.microsoft.com/fwlink/?LinkID=159990)します。  
   
-### <a name="best-practices-for-wpf-localization"></a>WPF のローカリゼーションのためのベスト プラクティス  
+### <a name="best-practices-for-wpf-localization"></a>WPF のローカリゼーションのためのベスト プラクティス
+
  ローカライズする[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– ベースのアプリケーションは、これらのベスト プラクティスの実装を検討してください。  
   
 -   ローカリゼーション コメントを使用して、ローカライザーに余分なコンテキストを提供します。  
@@ -64,9 +68,9 @@ ms.locfileid: "47424468"
   
          省略すると、メイン アセンブリに、ソース言語を含める場合、`<UICulture>`プロジェクト ファイルにタグを付ける、設定、`UltimateResourceFallback`サテライトではなくメイン アセンブリと場所 (たとえば、 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`)。  
   
-<a name="workflow_to_localize" />   
-## <a name="localize-a-wpf-application"></a>WPF アプリケーションをローカライズします。  
- ローカライズするときに、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションでは、いくつかのオプションがあります。 アプリケーションのローカライズ可能なリソースをバインドするなど、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]ファイル、resx テーブルでローカライズ可能なテキストを格納または使用して、ローカライザー[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイル。 このセクションでは、いくつかの利点を提供する、XAML の BAML 形式を使用するローカリゼーション ワークフローについて説明します。  
+## <a name="localize-a-wpf-application"></a>WPF アプリケーションをローカライズします。
+
+ローカライズするときに、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションでは、いくつかのオプションがあります。 アプリケーションのローカライズ可能なリソースをバインドするなど、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]ファイル、resx テーブルでローカライズ可能なテキストを格納または使用して、ローカライザー[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイル。 このセクションでは、いくつかの利点を提供する、XAML の BAML 形式を使用するローカリゼーション ワークフローについて説明します。  
   
 -   ビルドした後はローカライズできます。  
   
@@ -75,14 +79,16 @@ ms.locfileid: "47424468"
 -   検証する元のソース要素とセマンティクス コンパイル時に XAML の BAML 形式は、コンパイル済みの形式のため、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。  
   
 ### <a name="localization-build-process"></a>ローカリゼーションのビルド プロセス  
- 開発する際に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション、ローカライズのビルド プロセスは次のようにします。  
+
+開発する際に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション、ローカライズのビルド プロセスは次のようにします。  
   
 -   開発者を作成し、グローバル化、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。 プロジェクト ファイル開発者セット`<UICulture>en-US</UICulture>`言語中立のメイン アセンブリを生成できるように、アプリケーションがコンパイルされたとき。 このアセンブリのサテライト。 ローカライズ可能なすべてのリソースを含む.resources.dll ファイル。 必要に応じて、ソース言語に保存、メイン アセンブリのためローカリゼーション[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]メイン アセンブリからの抽出をサポートします。  
   
 -   ファイルは、ビルドにコンパイルされるときに、 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] XAML の BAML 形式に変換されます。 カルチャ的にニュートラル`MyDialog.exe`とカルチャに依存 (英語)`MyDialog.resources.dll`ファイルは、英語圏の顧客にリリースします。  
   
-### <a name="localization-workflow"></a>ローカリゼーション ワークフロー  
- ローカライズ プロセスを開始した後、ローカライズされていない`MyDialog.resources.dll`ファイルをビルドします。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要素と、元のプロパティ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、キーと値のペアに XAML の BAML 形式から抽出された、 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] <xref:System.Windows.Markup.Localizer>します。 ローカライザーは、キー/値ペアを使用して、アプリケーションをローカライズします。 新しいを生成することができます。 ローカライズが完了したら、新しい値から resource.dll します。  
+### <a name="localization-workflow"></a>ローカリゼーション ワークフロー
+
+ローカライズ プロセスを開始した後、ローカライズされていない`MyDialog.resources.dll`ファイルをビルドします。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要素と、元のプロパティ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、キーと値のペアに XAML の BAML 形式から抽出された、 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] <xref:System.Windows.Markup.Localizer>します。 ローカライザーは、キー/値ペアを使用して、アプリケーションをローカライズします。 新しいを生成することができます。 ローカライズが完了したら、新しい値から resource.dll します。
   
  キー/値ペアのキーは、`x:Uid`開発者が、元に配置されている値[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 これら`x:Uid`値が有効にする、[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]を追跡し、ローカライズ中に、開発者と、ローカライザー間に行われる変更をマージします。 たとえば、開発者が変更された場合、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ローカライザーは、ローカライズを開始した後の最小限の翻訳作業が失われたようにローカライズを既に完了した作業と開発の変更をマージできます。  
   
@@ -92,11 +98,12 @@ ms.locfileid: "47424468"
   
  ![ローカライズされていない作業フロー](../../../../docs/framework/wpf/advanced/media/localizationworkflow2.png "LocalizationWorkflow2")  
   
-<a name="examples_of_localization" />   
-## <a name="examples-of-wpf-localization"></a>WPF のローカリゼーションの例  
+## <a name="examples-of-wpf-localization"></a>WPF のローカリゼーションの例
+
  このセクションには、ローカライズされたアプリケーションをビルドおよびローカライズする方法を理解するための例が含まれています。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
   
-#### <a name="run-dialog-box-example"></a>ダイアログ ボックスの例を実行します。  
+#### <a name="run-dialog-box-example"></a>ダイアログ ボックスの例を実行します。
+
  次の図の出力を表示する、**実行**ダイアログ ボックスのサンプルです。  
   
  **英語：**  
@@ -268,7 +275,7 @@ ms.locfileid: "47424468"
   
  **ローカリゼーション属性**  
   
- 多くの場合、開発者またはローカライズ マネージャーには、どのようなローカライザーを読み取り、変更の制御が必要があります。 たとえば、ローカライザーに、会社や法的な表現の名前を変換しない可能性があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 読みやすさ、変更可能性、および要素のコンテンツや、ローカリゼーション ツールは、ロック、非表示、または要素の並べ替えに使用できるプロパティのカテゴリを設定するための属性を提供します。 詳細については、「<xref:System.Windows.Localization.Attributes%2A>」を参照してください。 このサンプルの目的で、LocBaml ツールはこれらの属性の値を出力するだけです。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] すべてのコントロールは、これらの属性の既定値がそれらをオーバーライドするには。 たとえば、次の例がの既定のローカリゼーション属性をオーバーライド`TextBlock_1`およびローカライザーの判読できるコンテンツが変更不可能な状態を設定します。  
+ 多くの場合、開発者またはローカライズ マネージャーには、どのようなローカライザーを読み取り、変更の制御が必要があります。 たとえば、ローカライザーに、会社や法的な表現の名前を変換しない可能性があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 読みやすさ、変更可能性、および要素のコンテンツや、ローカリゼーション ツールは、ロック、非表示、または要素の並べ替えに使用できるプロパティのカテゴリを設定するための属性を提供します。 詳細については、「 <xref:System.Windows.Localization.Attributes%2A> 」を参照してください。 このサンプルの目的で、LocBaml ツールはこれらの属性の値を出力するだけです。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] すべてのコントロールは、これらの属性の既定値がそれらをオーバーライドするには。 たとえば、次の例がの既定のローカリゼーション属性をオーバーライド`TextBlock_1`およびローカライザーの判読できるコンテンツが変更不可能な状態を設定します。  
   
  [!code-xaml[LocalizationComAtt#LocalizationAttributes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: fe1110968511273fa7d33fb255df62a3bd187a15
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: a3b8de254c28aedc21df5baf54bd67527e35b7f9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50046668"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201294"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;追加&gt;connectionManagement (ネットワーク設定) の要素
 IP アドレスまたは DNS 名を接続管理リストに追加します。  
@@ -76,6 +76,6 @@ IP アドレスまたは DNS 名を接続管理リストに追加します。
 ```  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

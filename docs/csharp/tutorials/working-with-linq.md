@@ -3,12 +3,12 @@ title: LINQ の使用
 description: このチュートリアルでは、LINQ を使用してシーケンスを生成し、LINQ クエリで使用するためのメソッドを作成し、先行評価と遅延評価を区別する方法を説明します。
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: dc5f6cc4fd38b32f54a576a3947187cbed4e70e8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172426"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086753"
 ---
 # <a name="working-with-linq"></a>LINQ の使用
 
@@ -87,6 +87,14 @@ static IEnumerable<string> Ranks()
 ```
 
 これら 2 つのメソッドは両方とも、`yield return` 構文を使用して実行中にシーケンスを生成します。 コンパイラは `IEnumerable<T>` を実装するオブジェクトをビルドし、要求に応じて文字列のシーケンスを生成します。
+
+これをコンパイルするには、ファイルの先頭に次の 2 行を追加する必要があります。
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+```
 
 この時点で、作成したサンプルを実行してみてください。 デッキにある 52 枚のカードがすべて表示されます。 デバッガ―でこのサンプルを実行すると、`Suits()` メソッドと `Values()` メソッドがどのように実行されるか理解するのに役立ちます。 各シーケンス内の各文字列が必要な場合にのみ生成されることがよくわかります。
 

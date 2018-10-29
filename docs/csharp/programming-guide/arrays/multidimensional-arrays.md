@@ -6,11 +6,11 @@ helpviewer_keywords:
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
 ms.openlocfilehash: a1d7a0a014c330682316e869f6727082fa3b31ef
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47421480"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841087"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>多次元配列 (C# プログラミング ガイド)
 
@@ -50,7 +50,7 @@ ms.locfileid: "47421480"
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [配列](../../../csharp/programming-guide/arrays/index.md)  
 - [1 次元配列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
 - [ジャグ配列](../../../csharp/programming-guide/arrays/jagged-arrays.md)

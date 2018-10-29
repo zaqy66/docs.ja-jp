@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 707b365a0f64055497e6b8814633acf7f4d7097c
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041194"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200060"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>動作を使用したランタイムの構成と拡張
 ビヘイビアーを使用すると、既定の動作を変更し、検査またはサービス構成を検証および Windows Communication Foundation (WCF) クライアントとサービス アプリケーションのランタイム動作を変更するカスタム拡張機能を追加できます。 ここでは、動作インターフェイスとその実装方法について説明します。また、動作インターフェイスをサービスの説明 (サービス アプリケーションの場合) またはエンドポイント (クライアント アプリケーションの場合) にプログラムによって追加する方法と、構成ファイル内で追加する方法についても説明します。 詳細については、システム指定の動作を使用して、次を参照してください。[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)と[クライアントの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)します。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 4b390ea0ffc6551d57a99a54985632135964fb7a
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374808"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200863"
 ---
 # <a name="configuring-services-using-configuration-files"></a>構成ファイルを使用してサービスを構成する方法
 構成ファイルで Windows Communication Foundation (WCF) サービスを構成することで、設計時ではなく配置の時点で、エンドポイントとサービス動作のデータの提供に柔軟性をもたらします。 ここでは使用可能な主要な技術について説明します。  
@@ -186,9 +186,9 @@ ms.locfileid: "49374808"
 ## <a name="behavior-merge"></a>動作のマージ  
  動作のマージ機能を使用すると、共通動作のセットを常に使用する場合に動作の管理が容易になります。 この機能では、さまざまなレベルの構成階層で動作を指定し、サービスが複数レベルの構成階層から動作を継承することができます。 このしくみを説明するため、IIS に次の仮想ディレクトリ レイアウトが存在するとします。  
   
- ~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc  
+ `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- また ~\Web.config ファイルに次の内容が含まれているとします。  
+ `~\Web.config`ファイルは、次の内容。  
   
 ```xml  
 <configuration>  

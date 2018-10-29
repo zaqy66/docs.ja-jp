@@ -5,28 +5,28 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: a43b3c0e008025171e3b1fdeba3bc514d01e28c8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6ed0da9be32a4a4de4111acfb2d347b7bd5096d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856038"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201557"
 ---
 # <a name="use-automatic-layout-overview"></a>自動レイアウトの使用の概要
-このトピックで作成する方法に関する開発者向けのガイドラインは[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ローカライズ可能なアプリケーション[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]します。 以前は、ローカライズ、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]が時間のかかるプロセスです。 各言語を[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]記載されているピクセル単位で調整が必要なのです。 今日は、適切な設計とコーディング標準、[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]ローカライザーがあるサイズ変更や、実行する位置を変更できるように構築できます。 簡単にサイズ変更や位置が変更された可能性のあるアプリケーションを作成する方法は、自動レイアウトをという名前を使用して実現できます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションの設計。  
-  
+このトピックで作成する方法に関する開発者向けのガイドラインは[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ローカライズ可能なアプリケーション[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]します。 以前は、UI のローカライズは時間のかかるプロセスでした。 各言語 UI が変更するには、ピクセル単位で調整が必要です。 今日は、適切な設計とコーディング標準、[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]ローカライザーがあるサイズ変更や、実行する位置を変更できるように構築できます。 簡単にサイズ変更や位置が変更された可能性のあるアプリケーションを作成する方法は、自動レイアウトをという名前を使用して実現できます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションの設計。  
+
 <a name="advantages_of_autolayout"></a>   
 ## <a name="advantages-of-using-automatic-layout"></a>自動レイアウトを使用する利点  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プレゼンテーション システムは強力で柔軟なさまざまな言語の要件に合わせて調整できるアプリケーションの要素をレイアウトする機能を提供します。 次の一覧は、自動レイアウトの利点の一部を示しています。  
-  
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 任意の言語にも表示されます。  
-  
+
+-   任意の言語で UI を表示します。  
+
 -   テキストの翻訳後のコントロールの位置とサイズを再調整する必要性が軽減されます。  
   
 -   ウィンドウのサイズを再調整する必要性を軽減します。  
-  
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] レイアウトは、任意の言語で正しく表示します。  
-  
+
+-   UI のレイアウトは、任意の言語で正しく表示します。  
+
 -   ローカリゼーションは、文字列の翻訳より若干高であるポイントに削減できます。  
   
 <a name="autolayout_controls"></a>   
@@ -35,7 +35,7 @@ ms.locfileid: "43856038"
   
  [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
- 例をスペイン語のボタンのために実行する必要がある、テキストを変更します。 たとえば、オブジェクトに適用された  
+ 例をスペイン語のボタンのために実行する必要がある、テキストを変更します。 例えば以下のようにします。  
   
  [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
@@ -46,20 +46,52 @@ ms.locfileid: "43856038"
   
 <a name="autolayout_coding"></a>   
 ## <a name="automatic-layout-and-coding-standards"></a>自動レイアウトとコーディング標準  
- コーディングと設計の標準と完全にローカライズ可能なを生成するルールのセットが必要です、自動レイアウトの方法を使用して[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]します。 次のガイドライン、自動レイアウトのコーディングが容易になります。  
-  
-| コーディング標準 | 説明 |
-| ---------------------- | ----------------- |
-| 絶対位置を使用しないでください。 | <ul><li>使用しない<xref:System.Windows.Controls.Canvas>のため、絶対に要素を配置します。</li><li>使用<xref:System.Windows.Controls.DockPanel>、 <xref:System.Windows.Controls.StackPanel>、および<xref:System.Windows.Controls.Grid>コントロールを配置します。</li><li>パネルのさまざまな種類の詳細については、次を参照してください。[パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)します。</li></ul> |
-| ウィンドウの固定サイズを設定しないでください。 | -使用<xref:System.Windows.Window.SizeToContent%2A>します。<br />例えば:<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)] |
-| <xref:System.Windows.FrameworkElement.FlowDirection%2A> を追加します。 | <ul><li>追加、<xref:System.Windows.FrameworkElement.FlowDirection%2A>アプリケーションのルート要素にします。</li><li>WPF には、水平方向をサポートする便利な方法、双方向、および垂直方向のレイアウトが用意されています。 プレゼンテーションのフレームワークで、<xref:System.Windows.FrameworkElement.FlowDirection%2A>レイアウトを定義するプロパティを使用できます。 フロー方向パターンは次のとおりです。<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb)-ラテン語や東アジア言語などのための横書きレイアウト。</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb)-アラビア語やヘブライ語などの双方向。</li></ul></li></ul> |
-| 物理フォントではなく複合フォントを使用します。 | <ul><li>複合のフォントを含む、<xref:System.Windows.Controls.Control.FontFamily%2A>プロパティはローカライズする必要はありません。</li><li>開発者では、次のフォントのいずれかを使用したり、独自に作成することができます。<br /><br /> <ul><li>グローバル ユーザー インターフェイス</li><li>グローバル San Serif</li><li>グローバル Serif</li></ul></li></ul> |
-| Xml:lang を追加します。 | <ul><li>追加、`xml:lang`ルート要素の属性、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]など`xml:lang="en-US"`英語版のアプリケーション。</li><li>複合フォントを使用しているため`xml:lang`を使用するフォントを確認するには、多言語シナリオをサポートするには、このプロパティを設定します。</li></ul> |
-  
+ 自動レイアウトのアプローチを使用するには、一連のコーディングし設計標準と完全にローカライズ可能な UI を生成するために規則が必要です。 次のガイドライン、自動レイアウトのコーディングが容易になります。  
+
+**絶対位置を使用しないでください。**
+
+- 使用しない<xref:System.Windows.Controls.Canvas>のため、絶対に要素を配置します。
+
+- 使用<xref:System.Windows.Controls.DockPanel>、 <xref:System.Windows.Controls.StackPanel>、および<xref:System.Windows.Controls.Grid>コントロールを配置します。
+
+パネルのさまざまな種類の詳細については、次を参照してください。[パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)します。
+
+**ウィンドウの固定サイズを設定しないでください。**
+
+- <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType> を使用してください。 例えば:
+
+   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+
+**追加します。 <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
+
+- 追加、<xref:System.Windows.FrameworkElement.FlowDirection%2A>アプリケーションのルート要素にします。
+
+   WPF には、水平方向をサポートする便利な方法、双方向、および垂直方向のレイアウトが用意されています。 プレゼンテーションのフレームワークで、<xref:System.Windows.FrameworkElement.FlowDirection%2A>レイアウトを定義するプロパティを使用できます。 フロー方向パターンは次のとおりです。
+   
+     - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb)-ラテン語や東アジア言語などのための横書きレイアウト。
+     
+     - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb)-アラビア語やヘブライ語などの双方向。
+
+**物理フォントではなく複合フォントを使用します。**
+
+- 複合のフォントを含む、<xref:System.Windows.Controls.Control.FontFamily%2A>プロパティはローカライズする必要はありません。
+
+- 開発者では、次のフォントのいずれかを使用したり、独自に作成することができます。
+
+   - グローバル ユーザー インターフェイス
+   - グローバル San Serif
+   - グローバル Serif
+
+**Xml:lang を追加します。**
+
+- 追加、`xml:lang`など、UI のルート要素に属性`xml:lang="en-US"`英語版のアプリケーション。
+
+- 複合フォントを使用しているため`xml:lang`を使用するフォントを確認するには、多言語シナリオをサポートするには、このプロパティを設定します。
+
 <a name="autolay_grids"></a>   
 ## <a name="automatic-layout-and-grids"></a>自動レイアウトとグリッド  
- <xref:System.Windows.Controls.Grid>要素は、開発者が要素を配置するため、自動レイアウト用に便利です。 A<xref:System.Windows.Controls.Grid>コントロールの列と行の並べ替え方法を使用して、その子要素間で使用可能な領域を配布します。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要素が複数のセルにまたがることができすると、グリッド内にグリッドがあることができます。 グリッドを作成し、複雑な配置することができるため便利です[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]します。 次の例では、グリッドを使用したいくつかのボタンとテキストの位置を示します。 セルの幅と高さに設定されている通知<xref:System.Windows.GridUnitType.Auto>。 したがって、イメージ付きのボタンを含むセルを画像に合わせて調整します。  
-  
+ <xref:System.Windows.Controls.Grid>要素は、開発者が要素を配置するため、自動レイアウト用に便利です。 A<xref:System.Windows.Controls.Grid>コントロールの列と行の並べ替え方法を使用して、その子要素間で使用可能な領域を配布します。 UI 要素が複数のセルにまたがることができます、グリッド内にグリッドを作成できます。 グリッドを作成し、複雑な UI を配置することができるため便利です。 次の例では、グリッドを使用したいくつかのボタンとテキストの位置を示します。 セルの幅と高さに設定されている通知<xref:System.Windows.GridUnitType.Auto>。 したがって、イメージ付きのボタンを含むセルを画像に合わせて調整します。  
+
  [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  次の図は、前のコードによって生成されるグリッドを示します。  

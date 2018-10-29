@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4336978825fbf7844b3ceaf179954f28660f08c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04b28dec0f016d44692665fb0ce95a7e496f103c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409408"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200523"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next メソッド
 指定した数を取得[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)列挙体の現在位置からのオブジェクト。  
@@ -54,24 +54,22 @@ HRESULT Next([in] ULONG  celt,
 |S_OK|メソッドは正常に完了しました。|  
 |S_FALSE|`pceltFetched` は `celt` と一致しません。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドの機能などの一般的な COM 列挙子。  
+## <a name="remarks"></a>Remarks  
+ このメソッドが機能などの一般的な COM の列挙子。  
   
- 入力配列の値以上でなければなりませんサイズの`celt`します。 配列が入力されます。 いずれか、次へ`celt`値よりも少ない場合は列挙体で、または残りのすべての値を持つ`celt`ままにします。 このメソッドが戻るとき`pceltFetched`取得された値の数が格納されます。 場合`values`無効なポインターが格納または未満であるバッファーを指す`celt`、または`pceltFetched`に無効なポインターが、結果は未定義です。  
+ 入力配列の値は以上である必要がありますサイズの`celt`します。 配列で塗りつぶされますか、[次へ]`celt`値よりも少ない場合は列挙体で、または残りのすべての値を持つ`celt`ままにします。 このメソッドが戻るとき`pceltFetched`取得された値の数で塗りつぶされます。 場合`values`無効なポインターが格納または未満であるバッファーを指す`celt`、または`pceltFetched`無効なポインターが、結果は未定義です。  
   
 > [!NOTE]
->  ただし、 [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)構造体を解放する必要はありません、その内部"ICorDebugValue"インターフェイスが解放される必要があります。  
+>  ただし、 [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)構造体を解放する必要はありません、その内部に"ICorDebugValue"インターフェイスが解放する必要があります。  
   
--  
-  
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [ICorDebugDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  

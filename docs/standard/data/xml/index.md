@@ -5,11 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f286d0f64478bfc46ca207086e4a6b918ee47b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202960"
 ---
 # <a name="xml-documents-and-data"></a>XML ドキュメントと XML データ
 .NET Framework には、XML 対応アプリを容易に構築するための、包括的で統合された一連のクラスが用意されています。 次の名前空間のクラスでは、XML の解析と書き込み、メモリ内での XML データの編集、データの検証、および XSLT 変換がサポートされます。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   
 -   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> クラスのスキーマは、W3C 勧告『[XML Schema Part 1: Structures](https://www.w3.org/TR/xmlschema-1/)』および『[XML Schema Part 2: DataTypes](https://www.w3.org/TR/xmlschema-2/)』をサポートしています。  
   
--   <xref:System.Xml.Xsl?displayProperty=nameWithType> 名前空間のクラスは、W3C 勧告『[XSLT version 1.0](http://www.w3.org/TR/xslt)』に準拠する XSLT 変換をサポートしています。  
+-   <xref:System.Xml.Xsl?displayProperty=nameWithType> 名前空間のクラスは、W3C 勧告『[XSLT version 1.0](https://www.w3.org/TR/xslt)』に準拠する XSLT 変換をサポートしています。  
   
  .NET Framework の XML クラスの利点を次に示します。  
   

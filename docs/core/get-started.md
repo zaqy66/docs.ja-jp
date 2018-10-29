@@ -4,18 +4,18 @@ description: Windows、Linux、macOS で .NET Core アプリケーションを�
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: fa5deb46b64e1a09c9ad6582486a993a24336b42
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 3fff7884082c46477d37b08560a2c71e7ee345e5
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792401"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121255"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core の概要
 
 この記事では、.NET Core の概要について説明します。 .NET Core は、Windows、Linux、および macOS にインストールすることができます。 任意のテキスト エディターでコーディングし、クロスプラットフォーム ライブラリとアプリケーションを作成できます。 
 
-.NET Core が何であるかや、他の .NET テクノロジとどのように関連しているのかがわからない場合は、まず、[.NET の概要](https://www.microsoft.com/net/learn/what-is-dotnet)を確認してください。 簡単に言うと、.NET Core は .NET のオープンソースのクロスプラットフォーム実装です。
+.NET Core が何であるかや、他の .NET テクノロジとどのように関連しているのかがわからない場合は、まず、[.NET の概要](https://www.microsoft.com/net/learn/dotnet/what-is-dotnet)を確認してください。 簡単に言うと、.NET Core は .NET のオープンソースのクロスプラットフォーム実装です。
 
 ## <a name="create-an-application"></a>アプリケーションの作成
 

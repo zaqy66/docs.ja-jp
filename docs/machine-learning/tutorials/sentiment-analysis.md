@@ -4,12 +4,12 @@ description: バイナリ分類のシナリオで ML.NET を使用する方法�
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fd0a1ad246c6d50db35e3d0f0332a82b256902c1
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47436142"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453165"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>チュートリアル: センチメント分析のバイナリ分類のシナリオで ML.NET を使用する
 
@@ -175,11 +175,11 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="ingest-the-data"></a>データを取り込む
 
-<xref:Microsoft.ML.LearningPipeline> の新しいインスタンスを初期化します。ここに、データの読み込み、データの処理/特徴付け、およびモデルを含めます。 `Train` メソッドの最初の行として、次のコードを追加します。
+<xref:Microsoft.ML.Legacy.LearningPipeline> の新しいインスタンスを初期化します。ここに、データの読み込み、データの処理/特徴付け、およびモデルを含めます。 `Train` メソッドの最初の行として、次のコードを追加します。
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-<xref:Microsoft.ML.Data.TextLoader> オブジェクトはパイプラインの最初の部分であり、トレーニング ファイルのデータを読み込みます。
+<xref:Microsoft.ML.Legacy.Data.TextLoader> オブジェクトはパイプラインの最初の部分であり、トレーニング ファイルのデータを読み込みます。
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -187,13 +187,13 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 データの前処理とクリーニングは、機械学習でデータ セットを効果的に使用する前に発生する重要なタスクです。 多くの場合、生データはノイズが多くて信頼性が低く、値が欠落している可能性もあります。 これらのモデル化タスクを行わずにデータを使用すると、誤解を招く結果が生じるおそれがあります。 ML.NET の変換パイプラインを使用すると、トレーニングまたはテストの前にデータに適用するカスタム変換セットを作成できます。 この変換の主な目的は、データの特徴付けです。 変換パイプラインの利点は、変換パイプラインの定義後に、パイプラインを保存してテスト データに適用できることです。
 
-`SentimentText` 列を機械学習アルゴリズムで使用される `Features` という[数値ベクトル](../resources/glossary.md#numerical-feature-vector)に変換するために、<xref:Microsoft.ML.Transforms.TextFeaturizer> を適用します。 これが前処理/特徴付けのステップです。 ML.NET に用意されているその他のコンポーネントを使用すると、モデルでより良い結果が得られます。 パイプラインに、次のコード行として `TextFeaturizer` を追加します。
+`SentimentText` 列を機械学習アルゴリズムで使用される `Features` という[数値ベクトル](../resources/glossary.md#numerical-feature-vector)に変換するために、<xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer> を適用します。 これが前処理/特徴付けのステップです。 ML.NET に用意されているその他のコンポーネントを使用すると、モデルでより良い結果が得られます。 パイプラインに、次のコード行として `TextFeaturizer` を追加します。
 
 [!code-csharp[TextFeaturizer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizer to the pipeline")]
 
 ## <a name="choose-a-learning-algorithm"></a>学習アルゴリズムを選択する
 
-<xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier> オブジェクトは、このパイプラインで使用するデシジョン ツリーの学習器です。 特徴付けのステップと同様に、ML.NET に用意されているさまざまな学習器を試してパラメーターを変更すると、異なる結果が生成されます。 チューニングのために、<xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumTrees>、<xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumLeaves>、<xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs> などの[ハイパーパラメーター](../resources/glossary.md#hyperparameter)を設定できます。 これらのハイパーパラメーターは、モデルが何らかの影響を受ける前に設定され、モデルに固有です。 これはパフォーマンスのためにデシジョン ツリーのチューニングに使用されるため、値を大きくするとパフォーマンスに悪影響を及ぼす可能性があります。
+<xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier> オブジェクトは、このパイプラインで使用するデシジョン ツリーの学習器です。 特徴付けのステップと同様に、ML.NET に用意されているさまざまな学習器を試してパラメーターを変更すると、異なる結果が生成されます。 チューニングのために、<xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumTrees>、<xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumLeaves>、<xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs> などの[ハイパーパラメーター](../resources/glossary.md#hyperparameter)を設定できます。 これらのハイパーパラメーターは、モデルが何らかの影響を受ける前に設定され、モデルに固有です。 これはパフォーマンスのためにデシジョン ツリーのチューニングに使用されるため、値を大きくするとパフォーマンスに悪影響を及ぼす可能性があります。
 
 `Train` メソッドに次のコードを追加します。
 
@@ -201,7 +201,7 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="train-the-model"></a>モデルをトレーニングする
 
-読み込まれて変換されたデータ セットに基づいて、モデル <xref:Microsoft.ML.PredictionModel%602> をトレーニングします。 `pipeline.Train<SentimentData, SentimentPrediction>()` は、パイプラインをトレーニングします (データを読み込み、特徴付け器と学習器をトレーニングします)。 これが行われるまで、実験は実行されません。
+読み込まれて変換されたデータ セットに基づいて、モデル <xref:Microsoft.ML.Legacy.PredictionModel%602> をトレーニングします。 `pipeline.Train<SentimentData, SentimentPrediction>()` は、パイプラインをトレーニングします (データを読み込み、特徴付け器と学習器をトレーニングします)。 これが行われるまで、実験は実行されません。
 
 `Train` メソッドに次のコードを追加します。
 
@@ -239,15 +239,15 @@ public static void Evaluate(PredictionModel<SentimentData, SentimentPrediction> 
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-<xref:Microsoft.ML.Data.TextLoader> クラスは、同じスキーマを持つ新しいテスト データ セットを読み込みます。 このデータ セットを品質チェックとして使用して、モデルを評価できます。 `Evaluate` メソッドに次のコードを追加します。
+<xref:Microsoft.ML.Legacy.Data.TextLoader> クラスは、同じスキーマを持つ新しいテスト データ セットを読み込みます。 このデータ セットを品質チェックとして使用して、モデルを評価できます。 `Evaluate` メソッドに次のコードを追加します。
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationEvaluator> オブジェクトは、指定されたデータ セットを使用して `PredictionModel` の品質メトリックを計算します。 それらのメトリックを表示するには、次のコードを使用して、評価器を `Evaluate` メソッド内の次の行として追加します。
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationEvaluator> オブジェクトは、指定されたデータ セットを使用して `PredictionModel` の品質メトリックを計算します。 それらのメトリックを表示するには、次のコードを使用して、評価器を `Evaluate` メソッド内の次の行として追加します。
 
 [!code-csharp[BinaryEvaluator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#14 "Create the binary evaluator")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationMetrics> には、バイナリ分類評価器によって計算されるメトリック全体が含まれます。 これらを表示してモデルの品質を判定するには、最初にメトリックを取得する必要があります。 次のコードを追加します。
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics> には、バイナリ分類評価器によって計算されるメトリック全体が含まれます。 これらを表示してモデルの品質を判定するには、最初にメトリックを取得する必要があります。 次のコードを追加します。
 
 [!code-csharp[CreateMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Evaluate the model and create metrics")]
 
@@ -283,7 +283,7 @@ public static void Predict(PredictionModel<SentimentData, SentimentPrediction> m
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for predictions")]
 
-モデルは既にあるので、それを利用して、<xref:Microsoft.ML.PredictionModel.Predict%2A?displayProperty=nameWithType> メソッドでコメント データのセンチメントが肯定的か否定的かを予測できます。 予測を取得するには、新しいデータに対して `Predict` を使用します。 入力データは文字列であり、モデルには、特徴付けが含まれることに注意してください。 トレーニングと予測の間は、パイプラインが同期されます。 予測のために前処理/特徴付けのコードを特別に記述する必要はなく、同じ API によってバッチと 1 回限りの予測の両方が処理されます。
+モデルは既にあるので、それを利用して、<xref:Microsoft.ML.Legacy.PredictionModel.Predict%2A?displayProperty=nameWithType> メソッドでコメント データのセンチメントが肯定的か否定的かを予測できます。 予測を取得するには、新しいデータに対して `Predict` を使用します。 入力データは文字列であり、モデルには、特徴付けが含まれることに注意してください。 トレーニングと予測の間は、パイプラインが同期されます。 予測のために前処理/特徴付けのコードを特別に記述する必要はなく、同じ API によってバッチと 1 回限りの予測の両方が処理されます。
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create predictions of sentiments")]
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
 ms.openlocfilehash: e974ffb1b25944e24fca23864dc7e932ec1876d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47455475"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837829"
 ---
 # <a name="-operator-c-reference"></a>!= 演算子 (C# リファレンス)
 非等値演算子 (`!=`) は、そのオペランドが等しい場合には false を返し、それ以外の場合は true を返します。 非等値演算子は、文字列とオブジェクトを含むすべての型に対して事前に定義されています。 ユーザー定義型は `!=` 演算子をオーバーロードできます。  
@@ -29,5 +29,5 @@ ms.locfileid: "47455475"
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [C# 演算子](../../../csharp/language-reference/operators/index.md)

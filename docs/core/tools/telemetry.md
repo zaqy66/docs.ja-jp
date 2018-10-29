@@ -4,12 +4,12 @@ description: 利用情報を収集して分析する .NET Core SDK の製品利�
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: b60fc9d9d619334269343fd858a782cdfeb09ba4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513341"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841626"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 製品利用統計情報
 
@@ -106,7 +106,7 @@ Microsoft による .NET Core の配信は、[MICROSOFT .NET LIBRARY EULA](https
 
 [.NET NuGet パッケージ](https://www.nuget.org/profiles/dotnetframework)は同じライセンスを使用しますが、製品利用統計情報を有効にしません (「[スコープ](#scope)」を参照)。
 
-> 2. データ。 このソフトウェアはユーザーとユーザーによるソフトウェアの使用状況に関するデータを収集し、Microsoft に送信する場合があります。 Microsoft は製品とサービスの向上のために情報を利用することがあります。 データの収集と使用状況に関する詳細はヘルプ文書やプライバシーに関する声明 (http://go.microsoft.com/fwlink/?LinkId=528096) で確認できます。 ソフトウェアはこのような慣行に同意した上での利用になります。
+> 2. データ。 このソフトウェアはユーザーとユーザーによるソフトウェアの使用状況に関するデータを収集し、Microsoft に送信する場合があります。 Microsoft は製品とサービスの向上のために情報を利用することがあります。 データの収集と使用状況に関する詳細はヘルプ文書やプライバシーに関する声明 (<http://go.microsoft.com/fwlink/?LinkId=528096>) で確認できます。 ソフトウェアはこのような慣行に同意した上での利用になります。
 
 ## <a name="disclosure"></a>開示
 

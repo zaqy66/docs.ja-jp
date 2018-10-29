@@ -1,16 +1,14 @@
 ---
 title: 機械学習の用語集
 description: 機械学習の用語集。
-author: jralexander
-ms.author: johalex
 ms.date: 05/31/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6b175a8e89479dae81a7e5769e8d10c09a193898
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47081099"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453204"
 ---
 # <a name="machine-learning-glossary"></a>機械学習の用語集
 
@@ -20,13 +18,13 @@ ms.locfileid: "47081099"
 
 [分類](#classification)における正確度は、正しく分類された項目の数をテスト セット内の項目の総数で割ったものです。 0 (正確度が最も低い) ～ 1 (正確度が最も高い) の値になります。 正確度は、モデルのパフォーマンスの評価メトリックの 1 つです。 [精度](#precision)、[再現率](#recall)、および [F 値](#f-score)と併せて考慮してください。
 
-関連する ML.NET API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>
+関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>
 
 ## <a name="area-under-the-curve-auc"></a>曲線下面積 (AUC)
 
 [二項分類](#binary-classification)における評価メトリックであり、偽陽性率 (x 軸上) に対する真陽性率 (y 軸上) を描画する曲線下面積の値です。 0.5 (最低) ～ 1 (最高) の値になります。 ROC 曲線 (受信者操作特性曲線) 下面積とも呼ばれます。 詳しくは、Wikipedia の[受信者操作特性](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)の記事を参照してください。
 
-関連する ML.NET API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>
+関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>
 
 ## <a name="binary-classification"></a>二項分類
 
@@ -40,7 +38,7 @@ ms.locfileid: "47081099"
 
 [回帰](#regression)における評価メトリックであり、データがモデルにどの程度適合するかを示します。 0 ～ 1 の値になります。 値 0 は、データがランダムであるか、モデルに適合できないことを意味します。 値 1 は、モデルがデータと完全に一致していることを意味します。 多くの場合、これは r<sup>2</sup>、R<sup>2</sup>、または r の 2 乗と呼ばれます。
 
-関連する ML.NET API: <xref:Microsoft.ML.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>
+関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>
 
 ## <a name="feature"></a>機能
 
@@ -54,7 +52,7 @@ ms.locfileid: "47081099"
 
 [分類](#classification)における評価メトリックであり、[精度](#precision)と[再現率](#recall)の調和平均を取ります。
 
-関連する ML.NET API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>
+関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>
 
 ## <a name="hyperparameter"></a>ハイパーパラメーター
 
@@ -68,13 +66,13 @@ ms.locfileid: "47081099"
 
 [分類](#classification)における評価メトリックであり、分類子の正確度を示します。 対数損失が小さいほど、分類子の正確度が高くなります。
 
-関連する ML.NET API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>
+関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>
 
 ## <a name="mean-absolute-error-mae"></a>平均絶対誤差 (MAE)
 
 [回帰](#regression)における評価メトリックであり、すべてのモデルの誤差の平均です。モデルの誤差とは、予測された[ラベル](#label)値と正確なラベル値の間の距離です。
 
-関連する ML.NET API: <xref:Microsoft.ML.Models.RegressionMetrics.L1?displayProperty=nameWithType>
+関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>
 
 ## <a name="model"></a>モデル
 
@@ -100,13 +98,13 @@ ms.locfileid: "47081099"
 
 [分類](#classification)におけるクラスの精度は、そのクラスに属していると正確に予測された項目の数を、クラスに属していると予測された項目の総数で割ったものです。
 
-関連する ML.NET API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>、<xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>
+関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>
 
 ## <a name="recall"></a>再現率
 
 [分類](#classification)におけるクラスの再現率は、そのクラスに属していると正確に予測された項目の数を、実際にクラスに属している項目の総数で割ったものです。
 
-関連する ML.NET API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>、<xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>
+関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>
 
 ## <a name="regression"></a>回帰
 
@@ -124,7 +122,7 @@ ms.locfileid: "47081099"
 
 [回帰](#regression)における評価メトリックであり、誤差を 2 乗した値の平均値の平方根です。
 
-関連する ML.NET API: <xref:Microsoft.ML.Models.RegressionMetrics.Rms?displayProperty=nameWithType>
+関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>
 
 ## <a name="supervised-machine-learning"></a>教師あり機械学習
 

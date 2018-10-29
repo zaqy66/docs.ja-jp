@@ -3,13 +3,13 @@ title: dotnet new コマンド - .NET Core CLI
 description: dotnet new コマンドは、指定されたテンプレートに基づいて新しい .NET Core プロジェクトを作成します。
 author: mairaw
 ms.author: mairaw
-ms.date: 07/31/2018
-ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/24/2018
+ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208634"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188204"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -65,27 +65,27 @@ dotnet new [-h|--help]
 
 このコマンドには、テンプレートの既定の一覧が含まれています。 使用可能なテンプレートの一覧を取得するには、`dotnet new -l` を使います。 次の表は、.NET Core SDK 2.1.300 にプレインストールされているテンプレートの一覧です。 テンプレートの既定の言語は、角かっこで示されます。
 
-|テンプレートの説明                          | テンプレート名   | 言語     |
-|----------------------------------------------|-----------------|---------------|
-| コンソール アプリケーション                          | `console`       | [C#], F#, VB  |
-| クラス ライブラリ                                | `classlib`      | [C#], F#, VB  |
-| 単体テスト プロジェクト                            | `mstest`        | [C#], F#, VB  |
-| xUnit テスト プロジェクト                           | `xunit`         | [C#], F#, VB  |
-| Razor ページ                                   | `page`          | [C#]          |
-| MVC ViewImports                              | `viewimports`   | [C#]          |
-| MVC ViewStart                                | `viewstart`     | [C#]          |
-| ASP.NET Core 空                           | `web`           | [C#], F#      |
-| ASP.NET Core Web アプリ (モデル ビュー コントローラー) | `mvc`           | [C#], F#      |
-| ASP.NET Core Web アプリ                         | `razor`         | [C#]          |
-| Angular 付きの ASP.NET Core                    | `angular`       | [C#]          |
-| React.js 付きの ASP.NET Core                   | `react`         | [C#]          |
-| React.js および Redux 付きの ASP.NET Core         | `reactredux`    | [C#]          |
-| ASP.NET Core Web API                         | `webapi`        | [C#], F#      |
-| Razor クラス ライブラリ                          | `razorclasslib` | [C#]          |
-| global.json file                             | `globaljson`    |               |
-| NuGet 構成                                 | `nugetconfig`   |               |
-| Web 構成                                   | `webconfig`     |               |
-| ソリューション ファイル                                | `sln`           |               |
+|テンプレートの説明                          | テンプレート名    | 言語     |
+|----------------------------------------------|------------------|---------------|
+| コンソール アプリケーション                          | `console`        | [C#], F#, VB  |
+| クラス ライブラリ                                | `classlib`       | [C#], F#, VB  |
+| 単体テスト プロジェクト                            | `mstest`         | [C#], F#, VB  |
+| xUnit テスト プロジェクト                           | `xunit`          | [C#], F#, VB  |
+| Razor ページ                                   | `page`           | [C#]          |
+| MVC ViewImports                              | `viewimports`    | [C#]          |
+| MVC ViewStart                                | `viewstart`      | [C#]          |
+| ASP.NET Core 空                           | `web`            | [C#], F#      |
+| ASP.NET Core Web アプリ (モデル ビュー コントローラー) | `mvc`            | [C#], F#      |
+| ASP.NET Core Web アプリ                         | `razor`、 `webapp`| [C#]          |
+| Angular 付きの ASP.NET Core                    | `angular`        | [C#]          |
+| React.js 付きの ASP.NET Core                   | `react`          | [C#]          |
+| React.js および Redux 付きの ASP.NET Core         | `reactredux`     | [C#]          |
+| ASP.NET Core Web API                         | `webapi`         | [C#], F#      |
+| Razor クラス ライブラリ                          | `razorclasslib`  | [C#]          |
+| global.json file                             | `globaljson`     |               |
+| NuGet 構成                                 | `nugetconfig`    |               |
+| Web 構成                                   | `webconfig`      |               |
+| ソリューション ファイル                                | `sln`            |               |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
