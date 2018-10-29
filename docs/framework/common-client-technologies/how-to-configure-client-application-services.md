@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6f754a2a66187ac94d31d0d5a3a665c969652d26
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861625"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846514"
 ---
 # <a name="how-to-configure-client-application-services"></a>方法 : クライアント アプリケーション サービスを構成する
 このトピックでは、Visual Studio **プロジェクト デザイナー**を使用して、クライアント アプリケーション サービスを有効にし、構成する方法について説明します。 クライアント アプリケーション サービスを使用してユーザーを検証し、既存の [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスからユーザーのロールおよび設定を取得することができます。 構成した後に、「[クライアント アプリケーション サービスの概要](../../../docs/framework/common-client-technologies/client-application-services-overview.md)」に記載されているように、アプリケーション コード内で有効にされているサービスにアクセスできます。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] アプリケーション サービスの詳細については、「[ASP.NET アプリケーション サービスの概要](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)」を参照してください。  
   
- クライアント アプリケーション サービスは、**プロジェクト デザイナー**の **[サービス]** ページで有効にし、構成することができます。 **[サービス]** ページは、プロジェクトの App.config ファイル内の値を更新します。 **プロジェクト デザイナー**にアクセスするには、**[プロジェクト]** メニューの **[プロパティ]** を使用します。 **[サービス]** ページの詳細については、「[Services Page, Project Designer](https://msdn.microsoft.com/library/bb398109)」([サービス] ページ (プロジェクト デザイナー)) を参照してください。  
+ クライアント アプリケーション サービスは、**プロジェクト デザイナー**の **[サービス]** ページで有効にし、構成することができます。 **[サービス]** ページは、プロジェクトの App.config ファイル内の値を更新します。 **プロジェクト デザイナー**にアクセスするには、**[プロジェクト]** メニューの **[プロパティ]** を使用します。 **[サービス]** ページの詳細については、「[Services Page, Project Designer](/visualstudio/ide/reference/services-page-project-designer)」([サービス] ページ (プロジェクト デザイナー)) を参照してください。  
   
  次の手順では、クライアント アプリケーション サービスの基本構成を実行する方法について説明します。 高度な構成オプションについては、以降のセクションで説明します。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "43861625"
 ## <a name="see-also"></a>参照  
  [クライアント アプリケーション サービス](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [クライアント アプリケーション サービスの概要](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [[サービス] ページ (プロジェクト デザイナー)](https://msdn.microsoft.com/library/bb398109)  
+ [[サービス] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/services-page-project-designer)  
  [[サービスの詳細設定] ダイアログ ボックス](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [方法: クライアント アプリケーション サービスでユーザーのログインを実装する](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [チュートリアル : クライアント アプリケーション サービスの使用](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  

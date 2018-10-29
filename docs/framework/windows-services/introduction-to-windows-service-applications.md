@@ -23,11 +23,11 @@ helpviewer_keywords:
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
 ms.openlocfilehash: d0a16ee6f627ecc062fcad5f5216dda9855e430e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47436285"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036066"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows サービス アプリケーションの概要
 Microsoft Windows サービス (旧 NT サービス) を使用すると、Microsoft Windows サービス自体の Windows セッションで長時間にわたって実行されるアプリケーションを作成できます。 作成したサービスは、コンピューターのブート時に自動的に起動させることができます。また、サービスを一時停止したり、再起動したりすることもできます。このサービスはユーザー インターフェイスを表示しません。 このような特徴があるため、サービスはサーバー上で使用するのに適しており、コンピューターを共用する他のユーザーの邪魔をせずに長時間稼動させる機能を実現するのに最適です。 また、ログオン ユーザーや既定のコンピューター アカウントとは異なる、特定のユーザー アカウントのセキュリティ コンテキストでサービスを実行することもできます。 サービスと Windows セッションの詳細については、Windows SDK ドキュメントを参照してください。  

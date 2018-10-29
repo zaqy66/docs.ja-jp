@@ -2,12 +2,12 @@
 title: C# でのコレクションの反復処理
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: d8a39569df517dffa8ff4b2f638f089f420e44c7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47436265"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191195"
 ---
 # <a name="iterators-c"></a>反復子 (C#)
 
@@ -342,7 +342,7 @@ C# の場合、"yield" は予約語ではなく、`return` または `break` キ
 
 反復子は、<xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> メソッドをサポートしません。 反復処理を最初から再度行う場合は、新しい反復子を取得する必要があります。 反復子メソッドによって返される反復子に対して <xref:System.Collections.IEnumerator.Reset%2A> を呼び出すと、<xref:System.NotSupportedException> がスローされます。
 
-詳細については、「[C# 言語の仕様](../../../csharp/language-reference/language-specification/index.md)」を参照してください。
+詳細については、「[C# 言語の仕様](~/_csharplang/spec/classes.md#iterators)」を参照してください。
 
 ## <a name="use-of-iterators"></a>反復子の使用
 

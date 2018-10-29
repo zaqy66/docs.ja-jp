@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae29c8fbe8d5d87ccee4d6a43a3c9285f0c41ee1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47202237"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192565"
 ---
 # <a name="c-walkthroughs"></a>C# チュートリアル
 チュートリアルでは、製品や特定の機能領域について学習を開始するのに適した一般的なシナリオについて詳細な手順を示します。  
@@ -23,7 +23,7 @@ ms.locfileid: "47202237"
  [Async と Await を使用した Web へのアクセス](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [async](../csharp/language-reference/keywords/async.md) と [await](../csharp/language-reference/keywords/await.md) を使用して非同期ソリューションを作成する方法を示します。  
   
- [Creating a Windows Runtime Component in C# or Visual Basic and Calling it from JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx) (C# および Visual Basic での Windows ランタイム コンポーネントの作成および JavaScript による呼び出し)  
+ [Creating a Windows Runtime Component in C# or Visual Basic and Calling it from JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript) (C# および Visual Basic での Windows ランタイム コンポーネントの作成および JavaScript による呼び出し)  
  [!INCLUDE[wrt](~/includes/wrt-md.md)] 型を作成し、[!INCLUDE[wrt](~/includes/wrt-md.md)] コンポーネントにパッケージ化して、その後、JavaScript を使用して Windows 用に作成された [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] アプリからコンポーネントを呼び出す方法を示します。  
   
  [Office のプログラミング (C# および Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
@@ -71,5 +71,5 @@ ms.locfileid: "47202237"
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../csharp/programming-guide/index.md)  
 - [Visual Studio のサンプル](/visualstudio/ide/visual-studio-samples)

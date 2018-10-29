@@ -2,14 +2,12 @@
 title: IPv6 のルーティング
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4ff5f131cfd9fac48e653b98e05d5e46dcfb0bec
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 19277f05d2feffd52f81cb5f0b70cb401579eb1a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47399022"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195347"
 ---
 # <a name="ipv6-routing"></a>IPv6 のルーティング
 柔軟なルーティング メカニズムは、IPv6 の利点です。 IPv4 ネットワーク ID が割り当てられた方法のために、インターネット バックボーン上にあるルーターは大規模なルーティング テーブルを保持する必要があります。 これらのルーターは、インターネット上の任意のノードに送られる可能性のあるパケットを転送するために、すべてのルートを知る必要があります。 アドレスを集計する機能により、IPv6 では、柔軟なアドレス指定が可能であり、ルーティング テーブルのサイズを大幅に縮小することができます。 この新しいアドレス指定アーキテクチャでは、中間のルーターは、ネットワークのローカル部分だけを追跡すれば、メッセージを適切に転送できます。  

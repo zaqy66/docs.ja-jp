@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 659f9ffa8ebb10b34300167e9183f60568279513
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b33bb37758236c0dcce1fced2e7e7c6cf493ab34
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44187171"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192591"
 ---
 # <a name="enhanced-strong-naming"></a>拡張された厳密な名前付け
 厳密な名前の署名は、アセンブリを識別するための .NET Framework の識別機構です。 これは通常、発行元 (署名者) から受取人 (検証者) に対して渡されるデータの整合性を検証するために使用される、公開キーによるデジタル署名です。 この署名はアセンブリに対する一意の ID として使用され、これによりアセンブリへの参照のあいまいさをなくします。 アセンブリはビルド プロセスの一部として署名され、読み込まれるときに検証されます。  
@@ -134,4 +134,4 @@ ms.locfileid: "44187171"
     ```  
   
 ## <a name="see-also"></a>参照  
- [厳密な名前付きアセンブリの作成と使用](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [厳密な名前付きアセンブリの作成と使用](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

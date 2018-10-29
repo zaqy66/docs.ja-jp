@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47456026"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189694"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
@@ -63,7 +63,7 @@ Mono について詳しくは、[Mono のドキュメント](https://www.mono-pr
 
 UWP は、モノのインターネット (IoT) 用に最新のタッチ対応の Windows アプリケーションとソフトウェアを構築するために使われる .NET 実装です。 PC、タブレット、ファブレット、携帯電話、Xbox など、ターゲットにする可能性があるさまざまな種類のデバイスを統一するように設計されています。 UWP は、一元的なアプリ ストア、実行環境 (AppContainer)、Win32 の代わりに使う Windows API のセット (WinRT) など、多くのサービスを提供します。 アプリは、C++、C#、VB.NET、および JavaScript で記述することができます。 C# と VB.NET を使うときは、.NET Core によって .NET API が提供されます。
 
-UWP の詳細については、「[ユニバーサル Windows プラットフォームの紹介](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)」を参照してください。
+UWP の詳細については、「[ユニバーサル Windows プラットフォームの紹介](/windows/uwp/get-started/universal-application-platform-guide)」を参照してください。
 
 ## <a name="net-runtimes"></a>.NET ランタイム
 

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d3fa8a1a1b378fe1e18a63fec1c0d2f9eb40ecb3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47231545"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181057"
 ---
 # <a name="using-directive-c-reference"></a>using ディレクティブ (C# リファレンス)
 `using` ディレクティブは、次の 3 つの用途で使用します。  
@@ -68,7 +68,7 @@ class Program
   
  `using` ディレクティブを作成すると、名前空間内の型を、名前空間を指定することなく使用できます。 `using` ディレクティブでは、指定した名前空間に入れ子になった別の名前空間へのアクセスは許可されません。  
   
- 名前空間は、ユーザー定義とシステム定義の 2 つのカテゴリに分類されます。 ユーザー定義の名前空間は、コードで定義された名前空間です。 システム定義の名前空間の一覧については、「[.NET API ブラウザー](https://docs.microsoft.com/en-us/dotnet/api/)」を参照してください。  
+ 名前空間は、ユーザー定義とシステム定義の 2 つのカテゴリに分類されます。 ユーザー定義の名前空間は、コードで定義された名前空間です。 システム定義の名前空間の一覧については、「[.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/)」を参照してください。  
   
  他のアセンブリのメソッドを参照する方法の例については、[コマンド ラインでアセンブリを作成し、使用する](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)方法に関するページをご覧ください。  
   
@@ -92,7 +92,7 @@ class Program
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [名前空間の使用](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
 - [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
 - [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)  

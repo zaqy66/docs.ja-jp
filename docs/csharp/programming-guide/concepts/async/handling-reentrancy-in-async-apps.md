@@ -2,12 +2,12 @@
 title: 非同期アプリにおける再入の処理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: ef0d3da41fdabaf8745dff083d37fcd89e3a2700
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c641c217b01e820e9a68065b0a56277a656ccc25
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521629"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50034469"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>非同期アプリにおける再入の処理 (C#)
 非同期コードをアプリに含める場合は、再入を考慮し、場合によっては回避することをお勧めします。これは、完了前に非同期操作の再入力を参照します。 再入の可能性を特定して処理しないと、予期しない結果が発生する可能性があります。  
@@ -679,14 +679,14 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
             {  
                 List<string> urls = new List<string>   
                 {   
-                    "http://msdn.microsoft.com/library/hh191443.aspx",  
-                    "http://msdn.microsoft.com/library/aa578028.aspx",  
-                    "http://msdn.microsoft.com/library/jj155761.aspx",  
-                    "http://msdn.microsoft.com/library/hh290140.aspx",  
-                    "http://msdn.microsoft.com/library/hh524395.aspx",  
-                    "http://msdn.microsoft.com/library/ms404677.aspx",  
-                    "http://msdn.microsoft.com",  
-                    "http://msdn.microsoft.com/library/ff730837.aspx"  
+                    "https://msdn.microsoft.com/library/hh191443.aspx",  
+                    "https://msdn.microsoft.com/library/aa578028.aspx",  
+                    "https://msdn.microsoft.com/library/jj155761.aspx",  
+                    "https://msdn.microsoft.com/library/hh290140.aspx",  
+                    "https://msdn.microsoft.com/library/hh524395.aspx",  
+                    "https://msdn.microsoft.com/library/ms404677.aspx",  
+                    "https://msdn.microsoft.com",  
+                    "https://msdn.microsoft.com/library/ff730837.aspx"  
                 };  
                 return urls;  
             }  
@@ -697,8 +697,8 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
                 // to be used with a monospaced font, such as Lucida Console or   
                 // Global Monospace.  
   
-                // Strip off the "http://".  
-                var displayURL = url.Replace("http://", "");  
+                // Strip off the "https://".  
+                var displayURL = url.Replace("https://", "");  
                 // Display position in the URL list, the URL, and the number of bytes.  
                 ResultsTextBox.Text += string.Format("\n{0}. {1,-58} {2,8}", pos, displayURL, content.Length);  
             }  

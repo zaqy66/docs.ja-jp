@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b555ad88b90e48da39624686a37898f47d90c1e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bed7c6c856c55662b46ff581f007f9df6b67149d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743096"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190997"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>アプリケーション ドメインとアセンブリに関する方法のトピック
 次のセクションには、アプリケーション ドメインとアセンブリを使用したプログラミングの概念に関するドキュメントに用意されているすべての方法トピックへのリンクが含まれています。  
@@ -54,4 +54,4 @@ ms.locfileid: "32743096"
 -   [方法: アセンブリの内容を表示する](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
 ## <a name="see-also"></a>参照  
- [アプリケーション ドメインとアセンブリ](../../../docs/framework/app-domains/index.md)
+- [アプリケーション ドメインとアセンブリ](../../../docs/framework/app-domains/index.md)

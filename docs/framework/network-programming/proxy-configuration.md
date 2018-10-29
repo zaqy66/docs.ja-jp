@@ -11,14 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f4ae905b7500a8555691557b264985acf538d075
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: eaabb382a7bbb2cdd19c884fcd8499e626f70d4a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47401252"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180992"
 ---
 # <a name="proxy-configuration"></a>プロキシの構成
 プロキシ サーバーは、リソースに対するクライアント要求を処理します。 プロキシは、要求されたリソースをキャッシュから返したり、リソースが存在するサーバーに要求を転送したりできます。 プロキシは、リモート サーバーに送信された要求の数を減らすことで、ネットワークのパフォーマンスを向上できます。 プロキシを使用して、リソースへのアクセスを制限することもできます。  

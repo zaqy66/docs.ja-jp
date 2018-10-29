@@ -2,14 +2,12 @@
 title: System.Uri での International Resource Identifier のサポート
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ef44453dce2f59a2b481d0533b8bd28de516c630
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 742ea03a62426506f068a9b9e669278d0d4663ec
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199165"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047151"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri での International Resource Identifier のサポート
 <xref:System.Uri?displayProperty=nameWithType> クラスは、International Resource Identifier (IRI) および国際化ドメイン名 (IDN) のサポートにより拡張されました。 これらの機能拡張は、.NET Framework 3.5、3.0 SP1、および 2.0 SP1 で使用できます。  

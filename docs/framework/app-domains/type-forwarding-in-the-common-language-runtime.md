@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d25bac953ff68422a1dddc54bdb01b4b4f241cbb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7ad6c87dcec55a332bced00370fe6ea888508793
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664528"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50134921"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>共通言語ランタイムでの型の転送
 型の転送を使用すると、別のアセンブリに型を移動する際に、元のアセンブリを使用するアプリケーションを再コンパイルする必要がありません。  
@@ -44,9 +44,9 @@ ms.locfileid: "45664528"
   
 3.  型の現在の場所であるアセンブリをコンパイルします。  
   
-4.  型の現在の場所であるアセンブリへの参照を指定して、型の元の場所であるアセンブリを再コンパイルします。 たとえば、C# ファイルをコマンド ラインからコンパイルする場合は、[/reference (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) オプションを使用して、型の現在の場所であるアセンブリを指定します。 C++ では、ソース ファイルで [#using](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) ディレクティブを使用して、型の現在の場所であるアセンブリを指定します。  
+4.  型の現在の場所であるアセンブリへの参照を指定して、型の元の場所であるアセンブリを再コンパイルします。 たとえば、C# ファイルをコマンド ラインからコンパイルする場合は、[/reference (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) オプションを使用して、型の現在の場所であるアセンブリを指定します。 C++ では、ソース ファイルで [#using](/cpp/preprocessor/hash-using-directive-cpp) ディレクティブを使用して、型の現在の場所であるアセンブリを指定します。  
   
 ## <a name="see-also"></a>参照  
- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
- [型の転送 (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
- [#using ディレクティブ](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
+- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
+- [型の転送 (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
+- [#using ディレクティブ](/cpp/preprocessor/hash-using-directive-cpp)

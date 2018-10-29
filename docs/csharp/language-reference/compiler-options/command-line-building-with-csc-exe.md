@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 ms.openlocfilehash: 4b6dfdbce131371553fc729206de29794266bfbe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47216358"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584327"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe を使用したコマンド ラインからのビルド
 C# コンパイラは、その実行可能ファイルの名前 (*csc.exe*) をコマンド プロンプトに入力することによって呼び出します。
@@ -100,7 +100,7 @@ C# コンパイラを起動してもオブジェクト (*.obj*) ファイルは�
 - [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
 - [アルファベット順の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
 - [カテゴリ別の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
-- [Main() とコマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Main() とコマンドライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)  
 - [コマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
 - [方法: コマンド ライン引数を表示する](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
 - [方法: foreach を使用してコマンド ライン引数にアクセスする](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  

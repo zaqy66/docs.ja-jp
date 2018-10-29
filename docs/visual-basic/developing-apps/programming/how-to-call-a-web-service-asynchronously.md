@@ -5,15 +5,15 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 8968eaa8edd8dee177906a6c801f2f46c2a740d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf109780f26ce2fa4d5dbaa63832e765970b5cb4
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589040"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842698"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>方法: Web サービスを非同期で呼び出す (Visual Basic)
-この例では、Web サービスの非同期ハンドラー イベントにハンドラーをアタッチして、非同期メソッド呼び出しの結果を取得できるようにします。 この例では、http://www.xmethods.net にある DemoTemperatureService Web サービスを使用しています。  
+この例では、Web サービスの非同期ハンドラー イベントにハンドラーをアタッチして、非同期メソッド呼び出しの結果を取得できるようにします。 この例では、`http://www.xmethods.net` にある DemoTemperatureService Web サービスを使用しています。  
   
  Visual Studio 統合開発環境 (IDE) でプロジェクトの Web サービスを参照すると、この Web サービスが `My.WebServices` オブジェクトに追加され、指定された Web サービスにアクセスするためのクライアント プロキシ クラスが IDE によって生成されます。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "33589040"
   
 ### <a name="to-call-a-web-service-asynchronously"></a>Web サービスを非同期的に呼び出すには  
   
-1.  http://www.xmethods.net にある DemoTemperatureService Web サービスを参照します。 アドレスは次のとおりです。  
+1.  `http://www.xmethods.net` にある DemoTemperatureService Web サービスを参照します。 アドレスは次のとおりです。  
   
     ```  
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl  

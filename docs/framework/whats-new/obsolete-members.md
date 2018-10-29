@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a36e08c9b54dd6b47b11b36fd20993bff8c805e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678588"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185249"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework で互換性のために残されているメンバー
 この記事の表には、.NET Framework 4.5 以降のバージョンで互換性のために残されている型メンバーがアセンブリ別にまとめられています。 各アセンブリで互換性のために残されているメンバーと推奨される代替メンバーの一覧を表示するには、以下のリンクを使用してください。 このトピックでは、廃止された型のメンバーの一覧は表示されていません。 廃止された型の一覧については、[互換性のために残されている型](../../../docs/framework/whats-new/obsolete-types.md)に関するページをご覧ください。  
@@ -251,7 +251,7 @@ ms.locfileid: "45678588"
 |<xref:System.Threading.Thread?displayProperty=nameWithType>|<xref:System.Threading.Thread.GetCompressedStack%2A>|<xref:System.Threading.Thread.GetCompressedStack%2A> はサポート対象から除外されました。 <xref:System.Threading.CompressedStack?displayProperty=nameWithType> クラスを使用してください。|  
 |<xref:System.Threading.Thread?displayProperty=nameWithType>|<xref:System.Threading.Thread.Resume%2A>|<xref:System.Threading.Thread.Resume%2A> の使用は非推奨とされました。 スレッドを同期させる場合やリソースを保護する場合は、<xref:System.Threading.Monitor>、<xref:System.Threading.Mutex>、<xref:System.Threading.EventWaitHandle>、<xref:System.Threading.Semaphore> など、<xref:System.Threading?displayProperty=nameWithType> の他のクラスを使用してください。|  
 |<xref:System.Threading.Thread?displayProperty=nameWithType>|<xref:System.Threading.Thread.SetCompressedStack%2A>|<xref:System.Threading.Thread.SetCompressedStack%2A> はサポート対象から除外されました。 <xref:System.Threading.CompressedStack?displayProperty=nameWithType> クラスを使用してください。|  
-|<xref:System.Threading.Thread?displayProperty=nameWithType>|<xref:System.Threading.Thread.Suspend%2A>|<xref:System.Threading.Thread.Suspend%2A> の使用は非推奨とされました。 スレッドを同期させる場合やリソースを保護する場合は、<xref:System.Threading?displayProperty=nameWithType>、<xref:System.Threading.Monitor>、<xref:System.Threading.Mutex>、<xref:System.Threading.EventWaitHandle> など、<xref:System.Threading.Semaphore> の他のクラスを使用してください。|  
+|<xref:System.Threading.Thread?displayProperty=nameWithType>|<xref:System.Threading.Thread.Suspend%2A>|<xref:System.Threading.Thread.Suspend%2A> の使用は非推奨とされました。 スレッドを同期させる場合やリソースを保護する場合は、<xref:System.Threading.Monitor>、<xref:System.Threading.Mutex>、<xref:System.Threading.EventWaitHandle>、<xref:System.Threading.Semaphore> など、<xref:System.Threading?displayProperty=nameWithType> の他のクラスを使用してください。|  
 |<xref:System.Threading.ThreadPool?displayProperty=nameWithType>|<xref:System.Threading.ThreadPool.BindHandle%28System.IntPtr%29>|<xref:System.Threading.ThreadPool.BindHandle%28System.IntPtr%29> の使用は非推奨とされました。 代わりに、<xref:System.Threading.ThreadPool.BindHandle%28System.Runtime.InteropServices.SafeHandle%29?displayProperty=nameWithType> を使用してください。|  
 |<xref:System.Threading.WaitHandle?displayProperty=nameWithType>|<xref:System.Threading.WaitHandle.Handle%2A>|代わりに、<xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=nameWithType> プロパティを使用してください。|  
   
@@ -485,8 +485,8 @@ ms.locfileid: "45678588"
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A>|呼び出し元では、<xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> インターフェイスを使用する代わりに、<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> クラスのメソッドを直接使用してください。 <xref:System.CodeDom.Compiler.CodeDomProvider> から継承した内容でインターフェイスが実装されることには変わりがないので、この警告を除外するか、このメソッドを互換性のために残してください。|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A>|呼び出し元では、<xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType> インターフェイスを使用する代わりに、<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> クラスのメソッドを直接使用してください。 <xref:System.CodeDom.Compiler.CodeDomProvider> から継承した内容でインターフェイスが実装されることには変わりがないので、この警告を除外するか、このメソッドを互換性のために残してください。|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A>|呼び出し元では、<xref:System.CodeDom.Compiler.ICodeParser?displayProperty=nameWithType> インターフェイスを使用する代わりに、<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> クラスのメソッドを直接使用してください。 <xref:System.CodeDom.Compiler.CodeDomProvider> から継承した内容でインターフェイスが実装されることには変わりがないので、この警告を除外するか、このメソッドを互換性のために残してください。|  
-|<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS ポリシーは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。 詳細については、[.NET Framework 4 におけるセキュリティの変更点](http://go2.microsoft.com/fwlink/?LinkId=131738)に関するページを参照してください。|  
-|<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS ポリシーは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。 詳細については、[.NET Framework 4 におけるセキュリティの変更点](http://go2.microsoft.com/fwlink/?LinkId=131738)に関するページを参照してください。|  
+|<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS ポリシーは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。 詳細については、[.NET Framework 4 におけるセキュリティの変更点](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29)に関するページを参照してください。|  
+|<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS ポリシーは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。 詳細については、[.NET Framework 4 におけるセキュリティの変更点](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29)に関するページを参照してください。|  
 |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|代わりに、<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IEqualityComparer%29> を使用してください。|  
 |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|代わりに、<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IEqualityComparer%29> を使用してください。|  
 |<xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|代わりに、<xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IEqualityComparer%29> を使用してください。|  

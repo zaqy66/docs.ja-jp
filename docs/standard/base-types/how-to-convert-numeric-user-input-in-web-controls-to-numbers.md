@@ -16,11 +16,11 @@ ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47204731"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349138"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>方法 : Web コントロールでの数値のユーザー入力を数値に変換する
 Web ページは世界中のあらゆる場所で表示され、利用者はほぼ無限の形式で <xref:System.Web.UI.WebControls.TextBox> コントロールに数値データを入力できます。 結果として、Web ページの利用者の住んでいる地域 (ロケール) や文化 (カルチャ) を判断することが非常に重要となります。 ユーザー入力を解析するとき、ユーザーのロケールとカルチャによって定義される書式設定規則を適用できます。  

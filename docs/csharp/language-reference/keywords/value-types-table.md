@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: bc7143b9f006af20b0bb91203d3093410d4ac0bf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aa37e2237ca0cffe7ff2e64aa53739b6ffafd24a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609724"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182751"
 ---
 # <a name="value-types-table-c-reference"></a>値型の一覧表 (C# リファレンス)
 
@@ -43,14 +43,14 @@ C# の値型を次の表に示します。
 decimal a = 0.1M;
 ```
 
-[整数リテラル](/dotnet/csharp/language-reference/language-specification/lexical-structure#integer-literals)にサフィックスがない場合、以下の型のうちその値を表すことができる最初のものが使用されます: `int`、`uint`、`long`、`ulong`。
+[整数リテラル](~/_csharplang/spec/lexical-structure.md#integer-literals)にサフィックスがない場合、以下の型のうちその値を表すことができる最初のものが使用されます: `int`、`uint`、`long`、`ulong`。
 
-[実数値リテラル](/dotnet/csharp/language-reference/language-specification/lexical-structure#real-literals)にサフィックスがない場合、その型は `double` になります。
+[実数値リテラル](~/_csharplang/spec/lexical-structure.md#real-literals)にサフィックスがない場合、その型は `double` になります。
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [型のリファレンス表](reference-tables-for-types.md)
 - [既定値の一覧表](default-values-table.md)
 - [値型](value-types.md)

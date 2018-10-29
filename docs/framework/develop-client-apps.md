@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 987f8e25014e8ce6413c998f6eb78d821558ecec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 27bd71d4caf59a44a45c70217aa351cf43a5c1c7
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518665"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349122"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>.NET Framework を使用したクライアント アプリケーションの開発
 
@@ -55,7 +55,7 @@ Windows Phone Silverlight を使用したアプリを構築するために利用
 [複数のプラットフォームの開発](../../docs/standard/cross-platform/index.md)  
 複数の種類のクライアント アプリを対象にするために .NET Framework を使用できるさまざまな方法について説明します。
 
-[ASP.NET Web サイト入門](http://www.asp.net/get-started/websites)  
+[ASP.NET Web サイト入門](https://www.asp.net/get-started/websites)  
 ASP.NET を使用して Web アプリを開発する方法について説明します。
 
 ## <a name="see-also"></a>関連項目

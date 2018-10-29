@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 255c7e068cc83b7dcb9489eeeda5ce33be983c81
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a8519f7ecfc430aaa9b888f9239f669e6e54eb02
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522092"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192747"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework の概要
 
@@ -93,9 +93,9 @@ Windows フォーム クラスは、Windows GUI の開発を非常に簡単に�
 
 ## <a name="see-also"></a>関連項目
 
-[システム要件](../../../docs/framework/get-started/system-requirements.md)   
-[インストール ガイド](../../../docs/framework/install/index.md)   
-[開発ガイド](../../../docs/framework/development-guide.md)   
-[ツール](../../../docs/framework/tools/index.md)   
-[.NET Framework のサンプル](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
-[.NET Framework クラス ライブラリ](https://go.microsoft.com/fwlink/?LinkID=227195)
+- [システム要件](../../../docs/framework/get-started/system-requirements.md)   
+- [インストール ガイド](../../../docs/framework/install/index.md)   
+- [開発ガイド](../../../docs/framework/development-guide.md)   
+- [ツール](../../../docs/framework/tools/index.md)   
+- [.NET Framework のサンプル](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+- [.NET Framework クラス ライブラリ](https://go.microsoft.com/fwlink/?LinkID=227195)

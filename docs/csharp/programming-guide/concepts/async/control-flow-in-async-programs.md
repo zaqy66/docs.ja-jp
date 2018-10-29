@@ -2,12 +2,12 @@
 title: 非同期プログラムにおける制御フロー (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 49123dde51acaa82a2d8fa7d27fdf27087675034
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c4f1213eb9162985170c8eb1176fe01d8c721d2e
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586780"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347956"
 ---
 # <a name="control-flow-in-async-programs-c"></a>非同期プログラムにおける制御フロー (C#)
 
@@ -47,7 +47,7 @@ public partial class MainWindow : Window
         // TWO
         HttpClient client = new HttpClient();
         Task<string> getStringTask =
-            client.GetStringAsync("http://msdn.microsoft.com");
+            client.GetStringAsync("https://msdn.microsoft.com");
 
         // THREE
         string urlContents = await getStringTask;
@@ -212,7 +212,7 @@ Length of the downloaded string: 33946.
                 resultsTextBox.Text += "\r\n           Calling HttpClient.GetStringAsync.\r\n";
 
                 // GetStringAsync returns a Task<string>.
-                Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");
+                Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");
 
                 resultsTextBox.Text += "\r\nTHREE: Back in AccessTheWebAsync.\r\n" +
                     "           Task getStringTask is started.";
@@ -236,7 +236,7 @@ Length of the downloaded string: 33946.
     }
     ```
 
-10. **F5** キーを押してプログラムを実行し、**[開始]** を選択します。
+10. **F5** キーを押してプログラムを実行し、**[スタート]** を複数回クリックします。
 
     次の出力が表示されます。
 
@@ -287,7 +287,7 @@ Length of the downloaded string: 33946.
  `client.GetStringAsync` メソッドは、`getStringTask` の `AccessTheWebAsync` 変数に割り当てる文字列のタスクを返します。 プログラム例の次の行は、`client.GetStringAsync` の呼び出しと割り当てを示しています。
 
 ```csharp
-Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");
+Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");
 ```
 
  このタスクは `client.GetStringAsync` により実際の文字列が最終的に生成される約束と見なすことができます。 `AccessTheWebAsync` には `client.GetStringAsync` から約束された文字列に依存しない処理がある場合、その処理は `client.GetStringAsync` を待機している間は、続行できます。 この例では、"THREE" のラベルの付いた行の出力は、独立した処理を行う機会を表します。
@@ -311,7 +311,7 @@ string urlContents = await getStringTask;
  await 式は `AccessTheWebAsync` が制御を返すまで `client.GetStringAsync` を中断します。 その間、コントロールは `AccessTheWebAsync` の呼び出し元である `startButton_Click` に戻されます。
 
 > [!NOTE]
-> 通常、直ちに非同期メソッドへの呼び出しの待機状態となります。 たとえば、次の割り当てで、`getStringTask` を作成してそれを待機する前のコードを置き換えることができます: `string urlContents = await client.GetStringAsync("http://msdn.microsoft.com");`
+> 通常、直ちに非同期メソッドへの呼び出しの待機状態となります。 たとえば、次の割り当てで、`getStringTask` を作成してそれを待機する前のコードを置き換えることができます: `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
 >
 > このトピックでは、await 演算子が後で適用され、プログラムでの制御フローを示す出力行を格納します。
 

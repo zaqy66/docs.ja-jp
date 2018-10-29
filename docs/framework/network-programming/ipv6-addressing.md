@@ -26,14 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 8c992a96f2fa8d55d1fe16c03922cc8dbb39451c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47194010"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183413"
 ---
 # <a name="ipv6-addressing"></a>IPv6 アドレス指定
 インターネット プロトコル バージョン 6 (IPv6) では、アドレスの長さは 128 ビットです。 このような大きいアドレス空間の 1 つの理由は、インターネットのトポロジを反映したルーティング ドメインの階層構造に利用可能なアドレスを細分化するためです。 別の理由は、ネットワークにデバイスを接続するネットワーク アダプター (インターフェイス) のアドレスをマップするためです。 IPv6 は、ネットワーク インターフェイス レベルである最下位レベルでアドレスを解決する固有の機能、および自動構成機能を備えています。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 383d47413078359d7491bf5f7f61dc5e70d842a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a3a6af8eb493ce17ac73769decd1f60b903ae165
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526739"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49337611"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>方法: レジストリにキーを作成する (Visual C#)
 現在のユーザーのレジストリに存在する "Names" というキーの下に "Name" と "Isabella" という値のペアを追加する例を次に示します。  
@@ -58,6 +58,6 @@ key.Close();
 ## <a name="see-also"></a>参照
 
 - <xref:System.IO?displayProperty=nameWithType>  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [ファイル システムとレジストリ (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/index.md)  
-- [C# によるレジストリからの読み取り、書き込み、および削除](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
+- [C# によるレジストリからの読み取り、書き込み、および削除](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

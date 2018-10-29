@@ -17,11 +17,11 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425993"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839752"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正規表現での代替構成体
 <a name="top"></a> 代替構成体は、択一条件または条件一致を有効にするように正規表現を変更します。 .NET では、次の 3 つの代替構成体がサポートされています。  
@@ -127,7 +127,7 @@ ms.locfileid: "47425993"
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|`n2` が一致しなかった場合は、「3 桁の 10 進数、ハイフン、2 桁の 10 進数、もう 1 つのハイフン、および 4 桁の 10 進数」を照合します。|  
 |`\b`|ワード境界に一致します。|  
   
- この例を少し変更して、名前付きグループではなく番号付きグループを使用する例を次に示します。 正規表現パターンは `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b` です。  
+ この例を少し変更して、名前付きグループではなく番号付きグループを使用する例を次に示します。 正規表現パターンは `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`です。  
   
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  

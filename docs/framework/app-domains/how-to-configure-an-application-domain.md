@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab5a4c5f06e7b1789b9252820374ab1b0aca75be
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 012f0220afa0e444d68af5998fb2492a03a371d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743408"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183166"
 ---
 # <a name="how-to-configure-an-application-domain"></a>方法 : アプリケーション ドメインを構成する
 <xref:System.AppDomainSetup> クラスを利用し、新しいアプリケーション ドメインの構成情報を共通言語ランタイムに提供できます。 独自のアプリケーション ドメインを作成するとき、最も重要なプロパティが <xref:System.AppDomainSetup.ApplicationBase%2A> です。 その他の **AppDomainSetup** プロパティは、特定のアプリケーション ドメインを構成する目的で主にランタイム ホストにより使用されます。  
@@ -34,5 +34,5 @@ ms.locfileid: "32743408"
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>参照  
- [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)  
- [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)
+- [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)  
+- [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)

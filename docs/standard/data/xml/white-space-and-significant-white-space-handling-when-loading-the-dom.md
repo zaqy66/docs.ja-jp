@@ -6,11 +6,11 @@ ms.assetid: 1b141a0a-50d8-4ebd-83cd-a84449bb22b2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d9bbb14320b84a6d417c5c28026b169092de219
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47230776"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120987"
 ---
 # <a name="white-space-and-significant-white-space-handling-when-loading-the-dom"></a>DOM を読み込むときの空白および有意の空白の処理
 ドキュメントを読み込むときには、空白を保持するオプションを設定して、ドキュメント ツリーに **XmlWhitespace** ノードを作成できます。 空白ノードを作成するには、**PreserveWhitespace** プロパティを true に設定します。 このプロパティが既定の **false** に設定されている場合、空白ノードは作成されません。 **PreserveWhitespace** フラグの設定に関係なく、有意の空白ノードは常に保持され、そのデータを表す **XmlSignificantWhitespace** ノードが常にメモリ内に作成されます。  

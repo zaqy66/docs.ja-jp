@@ -9,14 +9,12 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 55fd8c33f80ecf3b31fdbacec1abd73ebab92396
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1720d0a476d3eb5586ed8742c377324bc1950cd5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47230672"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192513"
 ---
 # <a name="synchronous-client-socket-example"></a>同期クライアント ソケットの例
 次のプログラム例では、サーバーに接続するクライアントを作成します。 このクライアントは同期ソケットで構築されます。そのため、クライアント アプリケーションの実行は、サーバーが応答を返すまで一時停止となります。 このアプリケーションは文字列をサーバーに送信し、サーバーが返した文字列をコンソールに表示します。  

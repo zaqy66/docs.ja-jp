@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-author: BrucePerlerMS
-ms.openlocfilehash: a45ec6b5cdd241cb92069e8097bc94baa65b2166
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 25cc1a1e4c6e7e7d3f695c06eade8be546ee6c05
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193724"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205257"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF のセキュリティのベスト プラクティス
 以下のセクションでは、Windows Communication Foundation (WCF) を使用してセキュリティで保護されたアプリケーションを作成する場合に考慮する必要のあるベスト プラクティスを示します。 セキュリティの詳細については、[セキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)に関するページ、「[セキュリティに関するデータの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)」、「[メタデータを使用する場合のセキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)」を参照してください。  

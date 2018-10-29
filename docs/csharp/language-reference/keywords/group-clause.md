@@ -8,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 157bd07f3332883f010ef26ba920dae88276051b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084678"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584352"
 ---
 # <a name="group-clause-c-reference"></a>group 句 (C# リファレンス)
 
@@ -53,7 +53,7 @@ ms.locfileid: "44084678"
 
 ### <a name="grouping-by-numeric-range"></a>数値の範囲でグループ化する
 
-次の例では、パーセンタイルの範囲を示す数値のグループ キーを作成する式を使用しています。 `group` 句でメソッドを 2 度呼び出さなくて済むように、メソッド呼び出しの結果を格納する便利な場所として [let](let-clause.md) を使用できます。 また、"0 除算" の例外を避けるために、受講者の平均が 0 でないことがコードの `group` 句で確認されています。 クエリ式でメソッドを安全に使用する方法の詳細については、「[方法: クエリ式の例外を処理する](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)」を参照してください。
+次の例では、パーセンタイルの範囲を示す数値のグループ キーを作成する式を使用しています。 `group` 句でメソッドを 2 度呼び出さなくて済むように、メソッド呼び出しの結果を格納する便利な場所として [let](let-clause.md) を使用できます。 クエリ式でメソッドを安全に使用する方法の詳細については、「[方法: クエリ式の例外を処理する](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)」を参照してください。
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 

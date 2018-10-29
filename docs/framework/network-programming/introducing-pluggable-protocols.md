@@ -22,14 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 7fcc3c78192866ecbcefe03573d3e253ac6b6138
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a0a50af2d773a9489d9e908b751ba2035b9ba626
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198424"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194021"
 ---
 # <a name="introducing-pluggable-protocols"></a>プラグ可能なプロトコルの概要
 Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージド実装を提供します。 <xref:System.Net> および <xref:System.Net.Sockets> の名前空間内のインターネット アクセス クラスは、Web ベース アプリケーションとインターネット ベース アプリケーションの両方を実装するために使用できます。  

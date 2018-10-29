@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 8d83da6e995c35de650c496c5792e55b05dd9095
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270423"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50088794"
 ---
 # <a name="assembly-security-considerations"></a>アセンブリのセキュリティに関する考慮事項
 <a name="top"></a> アセンブリを作成する場合は、アセンブリの実行に必要となるアクセス許可セットを指定できます。 アセンブリに対して特定のアクセス許可を付与するかどうかは、証拠に基づいて決定されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36270423"
     > [!NOTE]
     >  セキュリティは複雑な分野で、選択できるオプションも数多くあります。 詳細については、「[セキュリティの基本概念](../../../docs/standard/security/key-security-concepts.md)」を参照してください。  
   
- アセンブリの読み込み時に、セキュリティ ポリシーへの追加情報としてアセンブリの証拠が使用されます。 セキュリティ ポリシーは、エンタープライズとコンピューターの管理者、およびユーザー ポリシー設定によって確立され、すべてのマネージ コードが実行されるときに与えられるアクセス許可セットを決定します。 セキュリティ ポリシーは、アセンブリの発行者 (署名ツールで生成されたシグネチャがある場合)、アセンブリのダウンロード元の Web サイトおよびゾーン (Internet Explorer の用語)、またはアセンブリの厳密な名前に対して設定できます。 たとえば、コンピューター管理者は、Web サイトからダウンロードされ、所定のソフトウェア企業の署名のあるすべてのコードについて、コンピューター上のデータベースへのアクセスは許可するが、ディスクへの書き込みは許可しない、というセキュリティ ポリシーを設定できます。  
+ アセンブリの読み込み時に、セキュリティ ポリシーへの追加情報としてアセンブリの証拠が使用されます。 セキュリティ ポリシーは、エンタープライズとコンピューターの管理者、およびユーザー ポリシー設定によって確立され、すべてのマネージド コードが実行されるときに与えられるアクセス許可セットを決定します。 セキュリティ ポリシーは、アセンブリの発行者 (署名ツールで生成されたシグネチャがある場合)、アセンブリのダウンロード元の Web サイトおよびゾーン (Internet Explorer の用語)、またはアセンブリの厳密な名前に対して設定できます。 たとえば、コンピューター管理者は、Web サイトからダウンロードされ、所定のソフトウェア企業の署名のあるすべてのコードについて、コンピューター上のデータベースへのアクセスは許可するが、ディスクへの書き込みは許可しない、というセキュリティ ポリシーを設定できます。  
   
 ## <a name="strong-named-assemblies-and-signing-tools"></a>厳密な名前付きアセンブリと署名ツール  
 
@@ -63,6 +63,6 @@ ms.locfileid: "36270423"
  厳密な名前と [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md) を使用する署名によって整合性が保証されるため、これら 2 種類のアセンブリ証拠に基づいてコード アクセス セキュリティ ポリシーを設定できます。 厳密な名前と [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md) を使用する署名では、デジタル署名と証明書によって整合性が保証されます。 以上で述べた技術 (ハッシュ検査、厳密な名前、[SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md) を使用する署名) をすべて組み合わせて使用することで、アセンブリがどのような方法によっても変更されていないことが保証されます。  
   
 ## <a name="see-also"></a>参照  
- [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md)
+- [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md)

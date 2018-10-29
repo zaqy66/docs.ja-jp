@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47203464"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453153"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>サーキット ブレーカー パターンを実装する
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-上記のコード例では、HTTP 要求の再試行時、エラーが連続して 5 つ発生したとき、サーキットを中断する (またはオープン状態にする) ようにサーキット ブレーカー ポリシーが構成されています。 それが発生すると、サーキットは 30 秒間中断されます。その間、呼び出しは実際に配置されるのではなく、サーキット ブレーカーが働いてすぐに失敗します。  [関連する例外および HTTP 状態コード](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) は、ポリシーによって自動的にエラーとして解釈されます。  
+上記のコード例では、HTTP 要求の再試行時、エラーが連続して 5 つ発生したとき、サーキットを中断する (またはオープン状態にする) ようにサーキット ブレーカー ポリシーが構成されています。 それが発生すると、サーキットは 30 秒間中断されます。その間、呼び出しは実際に配置されるのではなく、サーキット ブレーカーが働いてすぐに失敗します。  [関連する例外および HTTP 状態コード](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) は、ポリシーによって自動的にエラーとして解釈されます。  
 
 サーキット ブレーカーは、HTTP 呼び出しを実行しているクライアント アプリケーションまたはサービスとは別の環境に展開されている特定のリソースに問題がある場合に、要求をフォールバック インフラストラクチャにリダイレクトするために使用する必要もあります。 こうすれば、バックエンドのマイクロサービスのみに影響を与え、クライアント アプリケーションには影響を与えないデータセンターの停止が生じた場合に、クライアント アプリケーションはフォールバック サービスにリダイレクトできます。 Polly では、この[フェールオーバー ポリシー](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) シナリオを自動化するための新しいポリシーが計画されています。 
 
@@ -96,7 +96,7 @@ Docker ホスト内で eShopOnContainers ソリューションを起動する場
 
 `http://localhost:5103/failing?enable` 
 
-その後、図 10-4 に示されているように、URI http://localhost:5103/failing を使用して状態を確認できます。
+その後、図 10-4 に示されているように、URI `http://localhost:5103/failing` を使用して状態を確認できます。
 
 ![](./media/image4.png)
 

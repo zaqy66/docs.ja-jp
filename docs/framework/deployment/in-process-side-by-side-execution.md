@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee9eb30d6966d8162b29286140c068d854f7911c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee5f223d5e92d9a60776df6bf2108a4fd14b9e0f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397456"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195204"
 ---
 # <a name="in-process-side-by-side-execution"></a>インプロセスの side-by-side 実行
-[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスで複数のバージョンの共通言語ランタイム (CLR) を実行できます。 既定では、マネージ COM コンポーネントは、プロセスに読み込まれている .NET Framework のバージョンに関係なく、コンポーネントがビルドされた .NET Framework のバージョンで実行されます。  
+[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスで複数のバージョンの共通言語ランタイム (CLR) を実行できます。 既定では、マネージド COM コンポーネントは、プロセスに読み込まれている .NET Framework のバージョンに関係なく、コンポーネントがビルドされた .NET Framework のバージョンで実行されます。  
   
 ## <a name="background"></a>背景  
- .NET Framework ではマネージ コード アプリケーションに対して常に side-by-side ホスティングが提供されてきましたが、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] より前のバージョンでは、マネージ COM コンポーネントについてはこの機能は提供されませんでした。 以前は、プロセスに読み込まれたマネージ COM コンポーネントは、既に読み込まれているランタイムのバージョン、またはインストールされている .NET Framework の最新バージョンで実行されました。 このバージョンが COM コンポーネントと互換性がない場合、コンポーネントは実行できませんでした。  
+ .NET Framework ではマネージド コード アプリケーションに対して常に side-by-side ホスティングが提供されてきましたが、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] より前のバージョンでは、マネージド COM コンポーネントについてはこの機能は提供されませんでした。 以前は、プロセスに読み込まれたマネージド COM コンポーネントは、既に読み込まれているランタイムのバージョン、またはインストールされている .NET Framework の最新バージョンで実行されました。 このバージョンが COM コンポーネントと互換性がない場合、コンポーネントは実行できませんでした。  
   
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] が備える side-by-side ホスティングの新しいアプローチでは、次のことが保証されます。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33397456"
   
 -   **ライブラリ開発者とコンシューマー**。 ライブラリ開発者が直面する互換性の問題は、side-by-side ホスティングでは解決されません。 アプリケーションによって (直接参照または <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> の呼び出しにより) 直接読み込まれるライブラリは、それが読み込まれる <xref:System.AppDomain> のランタイムを引き続き使います。 サポートする .NET Framework のすべてのバージョンについて、ライブラリをテストする必要があります。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ランタイムを使ってコンパイルされているアプリケーションに、それより前のランタイムを使ってビルドされたライブラリが含まれる場合は、そのライブラリも [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ランタイムを使います。 一方、ランタイムを使ってビルドされたアプリケーションに、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] を使ってビルドされたライブラリが含まれる場合は、アプリケーションも [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] を使うように強制する必要があります ([シナリオ 3](#scenarios) をご覧ください)。  
   
--   **マネージ COM コンポーネントの開発者**。 以前は、マネージ COM コンポーネントはコンピューターにインストールされている最新バージョンのランタイムを使って自動的に実行しました。 現在は、ビルドされたバージョンのランタイムに対して COM コンポーネントを実行できるようになりました。  
+-   **マネージド COM コンポーネントの開発者**。 以前は、マネージド COM コンポーネントはコンピューターにインストールされている最新バージョンのランタイムを使って自動的に実行しました。 現在は、ビルドされたバージョンのランタイムに対して COM コンポーネントを実行できるようになりました。  
   
      次の表で示すように、.NET Framework バージョン 1.1 でビルドされたコンポーネントは、バージョン 4 のコンポーネントとであれば side-by-side で実行できますが、バージョン 2.0、3.0、3.5 のコンポーネントとは、これらのバージョンでは side-by-side ホスティングを使用できないために side-by-side では実行できません。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33397456"
   
      対処方法: このシナリオの場合は、何も行いません。 COM コンポーネントは、登録された .NET Framework のバージョンで実行されます。  
   
--   **シナリオ 2**: [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] でビルドされたマネージ アプリケーションを、できれば [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] で実行したいが、バージョン 2.0 が存在しない場合は [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] で実行したい場合。  
+-   **シナリオ 2**: [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] でビルドされたマネージド アプリケーションを、できれば [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] で実行したいが、バージョン 2.0 が存在しない場合は [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] で実行したい場合。  
   
      インストールされている .NET Framework のバージョン: 以前のバージョンの .NET Framework と [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "33397456"
     ```  
   
 ## <a name="example"></a>例  
- 次の例では、コンポーネントがコンパイルされた .NET Framework のバージョンを使うことでマネージ COM コンポーネントを実行しているアンマネージ COM ホストを示します。  
+ 次の例では、コンポーネントがコンパイルされた .NET Framework のバージョンを使うことでマネージド COM コンポーネントを実行しているアンマネージド COM ホストを示します。  
   
- 次の例を実行するには、[!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] を使って次のマネージ COM コンポーネントをコンパイルして登録します。 コンポーネントを登録するには、**[プロジェクト]** メニューの **[プロパティ]** をクリックし、**[ビルド]** タブをクリックして、**[COM の相互運用機能に登録]** チェック ボックスをオンにします。  
+ 次の例を実行するには、[!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] を使って次のマネージド COM コンポーネントをコンパイルして登録します。 コンポーネントを登録するには、**[プロジェクト]** メニューの **[プロパティ]** をクリックし、**[ビルド]** タブをクリックして、**[COM の相互運用機能に登録]** チェック ボックスをオンにします。  
   
 ```  
 using System;  
@@ -174,5 +174,5 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>参照  
- [\<startup> 要素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
- [\<<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<startup> 要素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+- [\<<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

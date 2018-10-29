@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c999b6c391294a05eb7fae1d1f076f1d52b8c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9536b53531d3ee7575a51b8702b34b57338b4f8b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391652"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50040908"
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework アプリケーションの配置
 .NET Framework ドキュメントの本セクションでは、アセンブリの読み込み、アセンブリ参照の解決、およびネイティブ イメージの生成を使用したアプリケーションのパフォーマンス向上のためのガイドラインなど、.NET Framework アプリケーションを配置するための重要な情報を提供します。  
@@ -25,4 +25,4 @@ ms.locfileid: "33391652"
  <xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [開発ガイド](../../../docs/framework/development-guide.md)
+- [開発ガイド](../../../docs/framework/development-guide.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c579c97e273e7d3e149e04f7aa7670313663b617
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 95e5bdbeda4f6faff33467233e28d9dd6bc01d1c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751779"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186934"
 ---
 # <a name="how-to-create-an-application-domain"></a>方法 : アプリケーション ドメインを作成する
 共通言語ランタイム ホストにより、必要なときに、アプリケーション ドメインが自動的に作成されます。 ただし、独自のアプリケーション ドメインを作成し、個人的に管理するアセンブリにそれを読み込むことができます。 アプリケーション ドメインを作成し、そこからコードを実行することもできます。  
@@ -30,5 +30,5 @@ ms.locfileid: "32751779"
  [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>参照  
- [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)  
- [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)
+- [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)  
+- [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)

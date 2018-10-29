@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dab1474454f8169d8d0d80413c6fb95677fb4bf
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392510"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453395"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>属性付きプログラミング モデルの概要 (MEF)
 MEF (Managed Extensibility Framework) における *プログラミング モデル* とは、MEF で操作する一連の概念オブジェクトを定義するための特定の方法です。 これらの概念オブジェクトには、パート、インポート、およびエクスポートが含まれます。 MEF では、これらのオブジェクトが使用されますが、その表現方法は指定されていません。 そのため、カスタマイズしたプログラミング モデルを含むさまざまなプログラミング モデルを使用できます。  
@@ -144,7 +144,7 @@ End Class
 public class MyAddin  
 {  
     //Explicitly specifying a generic type.  
-    [Export(typeof(Func<int, string>)]  
+    [Export(typeof(Func<int, string>))]  
     public string DoSomething(int TheParam);  
 }  
 ```  
@@ -729,7 +729,7 @@ public class MegaLogger : Logger        {
 }  
 ```  
   
- `InheritedExport` 属性を再宣言してメタデータをオーバーライドする際は、コントラクト型が同じであることを確認してください (上の例では、`IPlugin` がコントラクト型です)。コントラクト型が違っていると、メタデータがオーバーライドされる代わりに、2 つ目の属性によって別の 2 つ目のエクスポートが作成されます。 したがって、`InheritedExport` 属性をオーバーライドする際は、一般に、上の例のようにコントラクト型を明示的に指定する必要があります。  
+ `InheritedExport` 属性を再宣言してメタデータをオーバーライドする際は、コントラクト型が同じであることを確認してください  (上の例では、`IPlugin` がコントラクト型です)。コントラクト型が違っていると、メタデータがオーバーライドされる代わりに、2 つ目の属性によって別の 2 つ目のエクスポートが作成されます。 したがって、`InheritedExport` 属性をオーバーライドする際は、一般に、上の例のようにコントラクト型を明示的に指定する必要があります。  
   
  インターフェイスは直接インスタンス化できないため、通常は `Export` 属性や `Import` 属性で装飾できませんが、 インターフェイス レベルで `InheritedExport` 属性を使用すると、インターフェイスを装飾できます。この場合、そのエクスポートは、関連付けられているメタデータと共に、そのインターフェイスを実装するすべてのクラスに継承されます。 ただし、そのインターフェイス自体をパートとして使用できるようにはなりません。  
   
@@ -957,5 +957,5 @@ public class PartSeven
  `IPartImportsSatisfiedNotification` には、 `OnImportsSatisfied`という 1 つのメソッドが含まれています。 このメソッドは、合成コンテナーにより、このインターフェイスを実装するパートに対して、合成が完了してそのパートのインポートを使用できるようになったときに呼び出されます。 パートは、他のパートのインポートを満たすために合成エンジンによって作成されます。 パートのインポートが設定されるまでは、パートのコンストラクターで、インポートされる値に依存する初期化や、インポートされる値を操作する初期化を実行できません。初期化を実行できるようにするには、 `ImportingConstructor` 属性を使用して、それらの値を必須として指定します。 通常はこの方法が推奨されますが、コンストラクター インジェクションを使用できない場合もあります。 そのような場合は、 `OnImportsSatisfied`で初期化を実行できます。この場合は、パートに `IPartImportsSatisfiedNotification`を実装する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [Channel 9 ビデオ: Managed Extensibility Framework を使用してアプリケーションを開く](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Channel 9 ビデオ: Managed Extensibility Framework (MEF) 2.0](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+ [Channel 9 ビデオ: Managed Extensibility Framework を使用してアプリケーションを開く](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [Channel 9 ビデオ: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

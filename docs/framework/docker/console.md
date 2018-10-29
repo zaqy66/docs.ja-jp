@@ -4,12 +4,12 @@ description: 既存の .NET Framework コンソール アプリケーション�
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: f5a38ac63db969a58e920ea79bf4bf10bcfcf64f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193331"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200575"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Windows コンテナーでのコンソール アプリケーションの実行
 
@@ -46,7 +46,7 @@ Docker アーキテクチャの詳細については、Docker サイトの「[Do
 Windows コンテナーは、[Windows 10 Anniversary Update](https://www.microsoft.com/en-us/software-download/windows10/) または [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) でサポートされています。
 
 > [!NOTE]
->Windows Server 2016 を使用している場合、Docker for Windows インストーラーによってこの機能は有効にならないので、コンテナーを手動で有効にする必要があります。 OS に対してすべての更新プログラムが実行されていることを確認してから、「[Container Host Deployment](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment)」 (コンテナー ホストの展開) の記事にある説明に従って、コンテナーおよび Docker 機能をインストールします。
+>Windows Server 2016 を使用している場合、Docker for Windows インストーラーによってこの機能は有効にならないので、コンテナーを手動で有効にする必要があります。 OS に対してすべての更新プログラムが実行されていることを確認してから、「[Container Host Deployment](/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server)」 (コンテナー ホストの展開) の記事にある説明に従って、コンテナーおよび Docker 機能をインストールします。
 
 Windows コンテナーをサポートするには、Docker for Windows バージョン 1.12 Beta 26 以降が必要になります。 既定では、Docker は Linux ベースのコンテナーを有効にします。Windows コンテナーに切り替えるには、システム トレイで Docker アイコンを右クリックし、**[Switch to Windows containers]** (Windows コンテナーに切り替え) を選択します。 Docker は変更プロセスを実行します。この際、再起動が必要になる場合があります。
 

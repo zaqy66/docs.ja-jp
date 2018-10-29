@@ -11,11 +11,11 @@ ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400700"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48266651"
 ---
 # <a name="application-domain-resource-monitoring"></a>アプリケーション ドメインのリソース監視
 アプリケーション ドメインのリソース監視 (ARM) を使用して、ホストでアプリケーション ドメインによる CPU とメモリの使用状況を監視できます。 これは、実行時間の長いプロセスで多数のアプリケーション ドメインを使用する ASP.NET などのホストに役立ちます。 問題のあるアプリケーションを特定できる場合に限り、ホストは、プロセス全体のパフォーマンスに悪影響を与えるアプリケーションのアプリケーション ドメインをアンロードできます。 ARM は、このような意思決定を支援するために使用できる情報を提供します。  

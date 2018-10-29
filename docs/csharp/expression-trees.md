@@ -3,12 +3,12 @@ title: Expression Trees
 description: .NET Core の式ツリーについて、また、それを利用し、検査、変更、実行が可能な構造体としてコードを表す方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: db35dd99dadc4e49aaaebd5d3782409a206cafc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214914"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190737"
 ---
 # <a name="expression-trees"></a>Expression Trees
 
@@ -20,7 +20,7 @@ LINQ クエリを作成するときに関数の引数を作成するには、通
 式ツリーは、確認、変更、または実行が可能な構造としてコードを表します。 このようなツールを使用すると、実行時にコードを操作できるようになります。 実行中のアルゴリズムを確認するコードや、新しい機能を挿入するコードを作成できます。 より高度なシナリオの場合、実行中のアルゴリズムを変更し、別の環境で実行できるように C# 式を別の形式に変換することもできます。
 
 式ツリーを使用するコードは既に作成してきました。 Entity Framework の LINQ API では、LINQ クエリ式パターンの引数として式ツリーを使用できます。
-そのため、[Entity Framework](http://docs.efproject.net/en/latest/) では、C# で作成したクエリをデータベース エンジンで実行される SQL に変換することができます。 もう 1 つの例として [Moq](https://github.com/Moq/moq) があります。Moq は、.NET でよく使われるモック作成フレームワークです。
+そのため、[Entity Framework](/ef/) では、C# で作成したクエリをデータベース エンジンで実行される SQL に変換することができます。 もう 1 つの例として [Moq](https://github.com/Moq/moq) があります。Moq は、.NET でよく使われるモック作成フレームワークです。
 
 以降、このチュートリアルでは、式ツリーの概要、式ツリーをサポートするフレームワーク クラス、式ツリーの使用方法について説明します。 式ツリーの読み方、式ツリーの作成方法、変更を加えた式ツリーの作成方法、式ツリーで表されるコードの実行方法を学びます。 チュートリアルを読み終わると、これらの構造を使用し、高度な適合アルゴリズムを作成できるようになります。
 

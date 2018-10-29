@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed2a4b91608306021ce510098eaf044520cbb089
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0c71284fbc925aa9bb10a8bf68cef581f78d7f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391457"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50088755"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>さまざまな型の配列のマーシャリング
-配列は、同じ型の 1 つ以上の要素を含むマネージ コード内の参照型です。 配列は参照型ですが、アンマネージ関数には In パラメーターとして渡されます。 この動作は、マネージ配列がマネージ オブジェクトに渡される方法 (In/Out パラメーターとして渡される) と一致しません。 詳しくは、「[コピーと固定](copying-and-pinning.md)」をご覧ください。  
+配列は、同じ型の 1 つ以上の要素を含むマネージド コード内の参照型です。 配列は参照型ですが、アンマネージ関数には In パラメーターとして渡されます。 この動作は、マネージド配列がマネージド オブジェクトに渡される方法 (In/Out パラメーターとして渡される) と一致しません。 詳細については、「 [コピーと固定](copying-and-pinning.md)」を参照してください。  
   
  次の表では、配列のマーシャリング オプションをリストして、それらの使用方法を説明します。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "33391457"
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) はカスタム アンマネージド ライブラリであり、上記の関数および 2 つの構造体変数 **MYPOINT** および **MYPERSON** に関する実装を含んでいます。 構造体には次の要素が含まれます。  
+ [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) はカスタム アンマネージ ライブラリであり、上記の関数および 2 つの構造体変数 **MYPOINT** および **MYPERSON**に関する実装を含んでいます。 構造体には次の要素が含まれます。  
   
 ```  
 typedef struct _MYPOINT  
@@ -117,4 +117,4 @@ typedef struct _MYPERSON
 ## <a name="see-also"></a>参照  
  [型の配列のマーシャリング](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))  
  [プラットフォーム呼び出しのデータ型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [マネージ コードでのプロトタイプの作成](creating-prototypes-in-managed-code.md)
+ [マネージド コードでのプロトタイプの作成](creating-prototypes-in-managed-code.md)

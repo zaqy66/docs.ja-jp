@@ -2,14 +2,12 @@
 title: 統合 Windows 認証と拡張保護
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 1ab211a45b5a3cb835d051c53d321dc39cac2f9f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e07bc903a60dfff5e9caaf93f9c2bfd579541a96
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193837"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189707"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>統合 Windows 認証と拡張保護
 <xref:System.Net> 名前空間および関連名前空間の <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream>、および関連クラスによる統合 Windows 認証の処理方法に影響を与える、機能強化が行われました。 セキュリティ強化のため、拡張保護のサポートが追加されました。  

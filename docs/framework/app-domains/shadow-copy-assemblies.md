@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea7c85e956828e918e3cfe205b980e543e257eb4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 572291fa5674c541136e587bc40818da85f71a65
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743954"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192734"
 ---
 # <a name="shadow-copying-assemblies"></a>アセンブリのシャドウ コピー
 シャドウ コピーにより、アプリケーション ドメインをアンロードしなくても、アプリケーション ドメインで使用されるアセンブリを更新できます。 これは、ASP.NET サイトなど、継続的に使用可能であることが必要なアプリケーションで特に役立ちます。  
@@ -78,8 +78,8 @@ ms.locfileid: "32743954"
  <xref:System.AppDomain> クラスには、アプリケーション ドメインでシャドウ コピーを制御するために使用できる <xref:System.AppDomain.SetShadowCopyFiles%2A> や <xref:System.AppDomain.ClearShadowCopyPath%2A> などのいくつかのメソッドがありますが、これらは .NET Framework version 2.0 では廃止された機能としてマークされています。 シャドウ コピー用にアプリケーション ドメインを構成するには、<xref:System.AppDomainSetup> クラスのプロパティを使用することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>  
- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>  
- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>  
- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>  
- [\<shadowCopyVerifyByTimestamp> 要素](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>  
+- [\<shadowCopyVerifyByTimestamp> 要素](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

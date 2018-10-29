@@ -9,13 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-manager: douge
-ms.openlocfilehash: 27acdac5d34b96dd04fec1bb763edec9077ff928
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46493608"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123671"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>チュートリアル: Windows サービス アプリケーションを作成する
 
@@ -87,7 +86,7 @@ ms.locfileid: "46493608"
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-サービス アプリケーションは長期間実行するように設計されているため、通常は、システム内の何かをポーリングまたは監視しています。 この監視は、 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドで設定します。 ただし、 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> は実際には監視を行いません。 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドは、サービスの操作が開始された後にオペレーティング システムに戻る必要があります。 永久的に続くループやブロックは実行できません。 単純なポーリング機構を設定するには、<xref:System.Timers.Timer?displayProperty=nameWithType> コンポーネントを次のように使用します。<xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドで、コンポーネントのパラメーターを設定してから、<xref:System.Timers.Timer.Enabled%2A> プロパティを `true` に設定します。 このタイマーによって、コード内で定期的にイベントが発生します。サービスは、イベントが発生するごとに監視を実行できます。 このためには、次のコードを使用できます。
+サービス アプリケーションは長期間実行するように設計されているため、通常は、システム内の何かをポーリングまたは監視しています。 この監視は、 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドで設定します。 ただし、 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> は実際には監視を行いません。 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドは、サービスの操作が開始された後にオペレーティング システムに戻る必要があります。 永久的に続くループやブロックは実行できません。 単純なポーリング機構を設定するには、 <xref:System.Timers.Timer?displayProperty=nameWithType> コンポーネントを次のように使用します。 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドで、コンポーネントのパラメーターを設定してから、 <xref:System.Timers.Timer.Enabled%2A> プロパティを `true`。 このタイマーによって、コード内で定期的にイベントが発生します。サービスは、イベントが発生するごとに監視を実行できます。 このためには、次のコードを使用できます。
 
 ```csharp
 // Set up a timer that triggers every minute.
@@ -288,14 +287,14 @@ Windows サービスを実行するには、まず、サービスをインスト
 
 7. <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> プロパティに、[サービス] ウィンドウの **[名前]** 列に表示するテキストを設定します。 たとえば、「MyNewService Display Name」と入力できます。 この名前は、システムによって使用される (たとえば、 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> コマンドを使用してサービスを開始する場合) 名前である `net start` プロパティとは異なる名前にすることができます。
 
-8. <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> プロパティを <xref:System.ServiceProcess.ServiceStartMode.Automatic> に設定します。
+8. <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> プロパティを <xref:System.ServiceProcess.ServiceStartMode.Automatic>に設定します。
 
      ![Windows サービスのインストーラー プロパティ](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")
 
-9. デザイナーで、 **[serviceProcessInstaller1]** (Visual C# プロジェクトの場合) または **[ServiceProcessInstaller1]** (Visual Basic プロジェクトの場合) を選択します。 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> プロパティを <xref:System.ServiceProcess.ServiceAccount.LocalSystem> に設定します。 これにより、サービスがインストールされ、ローカル システム アカウントを使用して実行されます。
+9. デザイナーで、 **[serviceProcessInstaller1]** (Visual C# プロジェクトの場合) または **[ServiceProcessInstaller1]** (Visual Basic プロジェクトの場合) を選択します。 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> プロパティを <xref:System.ServiceProcess.ServiceAccount.LocalSystem>に設定します。 これにより、サービスがインストールされ、ローカル システム アカウントを使用して実行されます。
 
     > [!IMPORTANT]
-    > <xref:System.ServiceProcess.ServiceAccount.LocalSystem> アカウントには、イベント ログへの書き込みを含む、幅広いアクセス許可が設定されています。 このアカウントは悪意のあるソフトウェアから攻撃されるリスクが高いため、使用する場合は注意が必要です。 その他のタスクについては、ローカル コンピューターで非特権ユーザーとして機能し、リモート サーバーには匿名の資格情報を渡す <xref:System.ServiceProcess.ServiceAccount.LocalService> アカウントの使用を検討してください。 この例は、<xref:System.ServiceProcess.ServiceAccount.LocalService> アカウントを使用しようとすると失敗します。これは、イベント ログに書き込むアクセス許可が必要になるためです。
+    > <xref:System.ServiceProcess.ServiceAccount.LocalSystem> アカウントには、イベント ログへの書き込みを含む、幅広いアクセス許可が設定されています。 このアカウントは悪意のあるソフトウェアから攻撃されるリスクが高いため、使用する場合は注意が必要です。 その他のタスクについては、ローカル コンピューターで非特権ユーザーとして機能し、リモート サーバーには匿名の資格情報を渡す <xref:System.ServiceProcess.ServiceAccount.LocalService> アカウントの使用を検討してください。 この例は、 <xref:System.ServiceProcess.ServiceAccount.LocalService> アカウントを使用しようとすると失敗します。これは、イベント ログに書き込むアクセス許可が必要になるためです。
 
 インストーラーについて詳しくは、「[How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」(方法: サービス アプリケーションにインストーラーを追加する) をご覧ください。
 

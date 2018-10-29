@@ -2,12 +2,12 @@
 title: 操作と慣性の概要
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6396c174b341b5ae937fa931488ee1bd3a5fcbd5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521240"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187820"
 ---
 # <a name="manipulations-and-inertia-overview"></a>操作と慣性の概要
 "*操作*" では、"*マニピュレーター*" を使用して、ユーザー インターフェイス (UI) 要素の移動、回転、サイズ変更を行えます。 マニピュレーターは、マウス、または (タッチ対応のシナリオの場合) スタイラスや指を意味します。  
@@ -25,7 +25,7 @@ ms.locfileid: "43521240"
   
  2 つのマニピュレーターによって操作されている画像  
   
- 操作の処理には、マニピュレーターのサブセットを監視し、個別にではなく一緒に動作するかのように解釈するフレームワークがあります。 複数の操作プロセッサのオブジェクトを同時に作成することができ、アプリケーションで UI 要素ごとに 1 つのオブジェクトが操作されます。 操作プロセッサには、[.NET イベント](https://msdn.microsoft.com/library/17sde2xt.aspx)を通じて、どの入力デバイスを観察するかが通知され、それは操作を報告します。  
+ 操作の処理には、マニピュレーターのサブセットを監視し、個別にではなく一緒に動作するかのように解釈するフレームワークがあります。 複数の操作プロセッサのオブジェクトを同時に作成することができ、アプリケーションで UI 要素ごとに 1 つのオブジェクトが操作されます。 操作プロセッサには、[.NET イベント](../../../docs/standard/events/index.md)を通じて、どの入力デバイスを観察するかが通知され、それは操作を報告します。  
   
  操作プロセッサには、操作する特定の要素に関する情報はありません。 アプリケーションは、アプリケーション固有の要素への変更を個別に適用します。 たとえば、アプリケーションは画像に変換を適用したり、新しい場所に、または新しいサイズや向きに再描画して表示したりします。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "43521240"
  マニピュレーターは UI 要素に対して追加、移動、または削除を行い、アプリケーションは <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> メソッドを呼び出して <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> オブジェクトを更新します。 最初に操作が開始するとき、 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> イベントが発生します。  
   
 > [!NOTE]
->  操作の処理は、フレームベースの環境の更新で使用すると、より効率的です。 Microsoft XNA アプリケーションで操作の処理を使用する場合は問題ありません。これは、XNA フレームワークが [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) メソッドを使用してフレームベースの更新を行っているためです。 別の環境 (WinForms など) では、操作を収集し、定期的にバッチとして <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> メソッドに送信するために、独自のフレームベースのロジックを用意する必要がある場合があります。  
+> 操作の処理は、フレームベースの環境の更新で使用すると、より効率的です。 Microsoft XNA アプリケーションで操作の処理を使用する場合は問題ありません。これは、XNA フレームワークが [Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) メソッドを使用してフレームベースの更新を行っているためです。 別の環境 (WinForms など) では、操作を収集し、定期的にバッチとして <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> メソッドに送信するために、独自のフレームベースのロジックを用意する必要がある場合があります。  
   
  マニピュレーターの数またはその場所が変化すると、<xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> イベントが発生します。 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> イベント ハンドラーに渡される <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs> オブジェクトのプロパティでは、始点、スケール、回転、および最後のイベント以降に発生した変換の変化を指定します。 マニピュレーターが移動したときや、マニピュレーターが追加または削除されたときには、操作の始点が変化します。 変換値では、操作での X 方向および Y 方向の移動量を指定します。  
   

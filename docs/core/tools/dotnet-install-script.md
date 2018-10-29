@@ -4,12 +4,12 @@ description: .NET Core CLI ツールと共有ランタイムをインストー�
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004011"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837077"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト参照
 
@@ -33,8 +33,8 @@ macOS/Linux の場合:
 
 [.NET Core のメインの Web サイト](https://dot.net)でホストされる安定したバージョンを使用することをお勧めします。 スクリプトへの直接パスは次のとおりです。
 
-* https://dot.net/v1/dotnet-install.sh (Bash、UNIX)
-* https://dot.net/v1/dotnet-install.ps1 (PowerShell、Windows)
+* <https://dot.net/v1/dotnet-install.sh> (Bash、UNIX)
+* <https://dot.net/v1/dotnet-install.ps1> (PowerShell、Windows)
 
 これらのスクリプトの主な有用性は、オートメーションのシナリオと管理者以外のインストールにおいてです。 2 つのスクリプトがあります。1 つは、Windows で動作する PowerShell スクリプトです。 その他のスクリプトは、Linux/macOS で動作する bash スクリプトです。 スクリプトの動作は両方とも同じです。 bash スクリプトは PowerShell のスイッチも読み取るので、Linux/macOS システムのスクリプトで PowerShell のスイッチを使うことができます。
 

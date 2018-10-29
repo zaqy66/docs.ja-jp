@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105772"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183504"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>DDD 指向マイクロサービスの設計
 
@@ -57,7 +57,7 @@ Eric Evans の名著「[Domain Driven Design](https://domainlanguage.com/ddd/)�
 
 ドメイン モデル レイヤーは、ビジネスを表現する場です。 マイクロサービスのドメイン モデル レイヤーを .NET で実装する場合、そのレイヤーはデータと動作をキャプチャするドメイン エンティティを持つクラス ライブラリとしてコード化されます (ロジックを持つメソッド)。
 
-[永続化非依存](http://deviq.com/persistence-ignorance/)の原則と[インフラストラクチャ非依存](https://ayende.com/blog/3137/infrastructure-ignorance)の原則に従って、このレイヤーではデータ永続化の詳細を完全に無視する必要があります。 これらの永続化タスクは、インフラストラクチャ レイヤーによって実行する必要があります。 このため、このレイヤーはインフラストラクチャへの直接的な依存関係を持ってはなりません。つまり、重要なルールは、ドメイン モデルのエンティティ クラスは [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) にする必要があるということです。
+[永続化非依存](https://deviq.com/persistence-ignorance/)の原則と[インフラストラクチャ非依存](https://ayende.com/blog/3137/infrastructure-ignorance)の原則に従って、このレイヤーではデータ永続化の詳細を完全に無視する必要があります。 これらの永続化タスクは、インフラストラクチャ レイヤーによって実行する必要があります。 このため、このレイヤーはインフラストラクチャへの直接的な依存関係を持ってはなりません。つまり、重要なルールは、ドメイン モデルのエンティティ クラスは [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) にする必要があるということです。
 
 ドメイン エンティティには、Entity Framework や NHibernate などのデータ アクセス インフラストラクチャ フレームワークへの直接的な依存関係 (たとえば、基底クラスからの派生) があってはなりません。 ドメイン エンティティが、どのインフラストラクチャ フレームワークで定義されたどの型から派生したものでもなく、それを実装したものでもないことが理想的です。
 
@@ -83,7 +83,7 @@ Entity Framework Core などの最新の ORM フレームワークのほとん�
 
 インフラストラクチャ レイヤーは、最初にドメイン エンティティ (メモリ内) に保持されているデータを、データベースまたは別の永続ストアに永続化する方法を表します。 一例は、Entity Framework Core コードを使用して、DbContext でリレーショナル データベースにデータを永続化するリポジトリ パターン クラスを実装することです。
 
-上で説明した[永続化非依存](http://deviq.com/persistence-ignorance/)の原則と[インフラストラクチャ非依存](https://ayende.com/blog/3137/infrastructure-ignorance)の原則に従って、インフラストラクチャ レイヤーはドメイン モデル レイヤーを "汚染" してはなりません。 ドメイン モデル エンティティ クラスは、データの保存に使用するインフラストラクチャ (EF または他のフレームワーク) にとらわれないようにしておく必要があります。そのために、フレームワークに対する強い依存関係を持たせないようにします。 ドメイン モデル レイヤー クラス ライブラリには、ソフトウェアの中核部分を実装するドメイン コード、つまり [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) エンティティ クラスだけを含め、インフラストラクチャ テクノロジからは完全に分離させる必要があります。
+上で説明した[永続化非依存](https://deviq.com/persistence-ignorance/)の原則と[インフラストラクチャ非依存](https://ayende.com/blog/3137/infrastructure-ignorance)の原則に従って、インフラストラクチャ レイヤーはドメイン モデル レイヤーを "汚染" してはなりません。 ドメイン モデル エンティティ クラスは、データの保存に使用するインフラストラクチャ (EF または他のフレームワーク) にとらわれないようにしておく必要があります。そのために、フレームワークに対する強い依存関係を持たせないようにします。 ドメイン モデル レイヤー クラス ライブラリには、ソフトウェアの中核部分を実装するドメイン コード、つまり [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) エンティティ クラスだけを含め、インフラストラクチャ テクノロジからは完全に分離させる必要があります。
 
 したがって、図 9-7 に示すように、レイヤーまたはクラス ライブラリとプロジェクトは、最終的にドメイン モデル レイヤー (ライブラリ) に依存するはずで、逆方向の依存はありません。
 
@@ -96,7 +96,7 @@ Entity Framework Core などの最新の ORM フレームワークのほとん�
 #### <a name="additional-resources"></a>その他の技術情報
 
 -   **DevIQ。永続性無視の原則**
-    [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
+    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
 -   **Oren Eini。インフラストラクチャの無視**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)

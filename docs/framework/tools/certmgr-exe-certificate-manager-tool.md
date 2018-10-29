@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47231558"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198485"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (証明書マネージャー ツール)
 証明書マネージャー ツール (Certmgr.exe) は、証明書、証明書信頼リスト (CTL: Certificate Trust List)、および証明書失効リスト (CRL: Certificate Revocation List) を管理します。  
@@ -54,7 +54,7 @@ ms.locfileid: "47231558"
 |オプション|説明|  
 |------------|-----------------|  
 |**/add**|証明書、CTL、および CRL を証明書ストアに追加します。|  
-|**/all**|**/add** を指定して使用した場合は、すべてのエントリを追加します。 **/del** を指定して使用した場合は、すべてのエントリを削除します。**/add**、**/del** のいずれのオプションも指定せずに使用した場合は、すべてのエントリを表示します。 **/all** オプションは、**/put** オプションと共に指定できません。|  
+|**/all**|**/add** を指定して使用した場合は、すべてのエントリを追加します。 **/del** を指定して使用した場合は、すべてのエントリを削除します。/add、**/del** のいずれのオプションも指定せずに使用した場合は、すべてのエントリを表示します。 **/all** オプションは、**/put** オプションと共に指定できません。|  
 |**/c**|**/add** を指定して使用した場合は、証明書を追加します。 **/del** を指定して使用した場合は、証明書を削除します。**/put** を指定して使用した場合は、証明書を保存します。 **/add**、**/del**、**/put** のいずれのオプションも指定せずに使用した場合は、証明書を表示します。|  
 |**/CRL**|**/add** を指定して使用した場合は、CRL を追加します。 **/del** を指定して使用した場合は、CRL を削除します。**/put** を指定して使用した場合は、CRL を保存します。 **/add**、**/del**、**/put** のいずれのオプションも指定せずに使用した場合は、CRL を表示します。|  
 |**/CTL**|**/add** を指定して使用した場合は、CTL を追加します。 **/del** を指定して使用した場合は、CTL を削除します。**/put** を指定して使用した場合は、CTL を保存します。 **/add**、**/del**、**/put** のいずれのオプションも指定せずに使用した場合は、CTL を表示します。|  
@@ -139,5 +139,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>参照  
  [ツール](../../../docs/framework/tools/index.md)  
- [Makecert.exe (証明書作成ツール)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe (証明書作成ツール)](/windows/desktop/SecCrypto/makecert)  
  [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

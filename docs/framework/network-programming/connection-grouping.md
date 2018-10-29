@@ -8,14 +8,12 @@ helpviewer_keywords:
 - network resources, connections
 - connection pooling
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 5d7a13172c32d7ae47cbe290587ff7620e6060da
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9dc2e656bdaa49bf1a94904ed7806b740eed2252
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200868"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180735"
 ---
 # <a name="connection-grouping"></a>接続のグループ化
 接続のグループ化では、1 つのアプリケーション内の特定の要求を定義済みの接続プールに関連付けます。 これは、ユーザーの代わりにバック エンド サーバーに接続し、デリゲートをサポートする認証プロトコル (Kerberos など) を使用する中間層アプリケーションや、以下の例のように、独自の資格情報を指定する中間層アプリケーションで必要になる場合があります。 たとえば、Joe というユーザーが、自分の給与情報を表示する内部 Web サイトにアクセスするとします。 Joe の認証後、中間層アプリケーション サーバーは、Joe の資格情報を使用してバック エンド サーバーに接続し、Joe の給与情報を取得します。 次に、Susan がサイトにアクセスし、自分の給与情報を要求します。 中間層アプリケーションが Joe の資格情報を使用して既に接続しているため、バック エンド サーバーは Joe の情報で応答します。 ただし、アプリケーションがバック エンド サーバーに送信される各要求をユーザー名から形成される接続グループに割り当てると、各ユーザーは個別の接続プールに属すことになり、誤って他のユーザーと認証情報を共有することがなくなります。  

@@ -2,14 +2,12 @@
 title: アプリケーション開発での PNRP
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0f86b2569b9d4864586a0a7daea0ae5d3b901fd4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b19138c43185f4d31bef4fe67af48f89dc03eba4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205266"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50180434"
 ---
 # <a name="pnrp-in-application-development"></a>アプリケーション開発での PNRP
 Windows Vista では、ネットワーク アプリケーションは、簡単な PNRP アプリケーション プログラミング インターフェイス (API) を通して名前発行および名前解決機能にアクセスできます。  

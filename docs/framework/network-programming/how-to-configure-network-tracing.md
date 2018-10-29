@@ -11,14 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4b8fa55375de5057eca92591cbf4d9da628a3f85
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 257f417fa573577ca8e8ceb4edc9c4f481af1f72
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193804"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50192448"
 ---
 # <a name="how-to-configure-network-tracing"></a>方法: ネットワークのトレースを構成する
 アプリケーションまたはコンピューターの構成ファイルには、ネットワークのトレースの形式と内容を決定する設定が保持されます。 この手順に従う前に、トレースが有効になっていることを確認します。 トレースの有効化については、「[ネットワークのトレースの有効化](../../../docs/framework/network-programming/enabling-network-tracing.md)」を参照してください。  
@@ -102,4 +100,4 @@ ms.locfileid: "47193804"
  [ネットワークのトレースの解釈](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [.NET Framework のネットワークのトレース](../../../docs/framework/network-programming/network-tracing.md)  
  [ネットワークのトレースの有効化](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [実装とトレースの概要](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

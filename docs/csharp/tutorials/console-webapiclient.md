@@ -3,12 +3,12 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 521c6edfa7163219ea86c6fb8444bc95859c9aa1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397921"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199917"
 ---
 # <a name="rest-client"></a>REST クライアント
 
@@ -57,7 +57,7 @@ GitHub 上の REST サービスに対して HTTP 要求を発行するアプリ�
 これらの変更を加えた後で、`dotnet restore` ([注記を参照](#dotnet-restore-note)) をもう一度実行して、システムにパッケージがインストールされるようにします。
 
 ## <a name="making-web-requests"></a>Web 要求を作成する
-Web サイトからデータの取得を開始する準備ができました。 このアプリケーションでは、[GitHub API](https://developer.github.com/v3/) から情報を読み取ります。 [.NET Foundation](http://www.dotnetfoundation.org/) にあるプロジェクトに関する情報を読み取ります。 最初に、プロジェクトに関する情報を取得する GitHub API に対する要求を作成します。 使用するエンドポイントは [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos) です。 HTTP GET 要求を使用して、これらのプロジェクトに関する情報をすべて取得します。
+Web サイトからデータの取得を開始する準備ができました。 このアプリケーションでは、[GitHub API](https://developer.github.com/v3/) から情報を読み取ります。 [.NET Foundation](https://www.dotnetfoundation.org/) にあるプロジェクトに関する情報を読み取ります。 最初に、プロジェクトに関する情報を取得する GitHub API に対する要求を作成します。 使用するエンドポイントは [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos) です。 HTTP GET 要求を使用して、これらのプロジェクトに関する情報をすべて取得します。
 HTTP GET 要求はブラウザーでも使用されるので、ブラウザーに URL を貼り付けて、取得および処理する情報を確認できます。
 
 <xref:System.Net.Http.HttpClient> クラスを使用して Web 要求を作成します。 最新のすべての .NET API と同様に、<xref:System.Net.Http.HttpClient> は実行時間の長い API の非同期メソッドだけをサポートします。

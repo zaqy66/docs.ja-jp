@@ -3,12 +3,12 @@ title: Docker でホストされているマイクロサービス - C
 description: Docker コンテナーで実行される ASP.NET Core サービスを作成する方法を学ぶ
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b1f7159a222ab4d68715844e9997ca922676bc80
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106351"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454487"
 ---
 # <a name="microservices-hosted-in-docker"></a>Docker でホストされているマイクロサービス
 
@@ -41,7 +41,7 @@ Docker インストールの追加タスクは、ASP.NET Core アプリケーシ
 このアプリケーションは、Windows、Linux、macOS または Docker コンテナーで実行できます。
 お好みのコード エディターをインストールしてください。 次の説明では、オープン ソースのクロス プラットフォーム エディターである [Visual Studio Code](https://code.visualstudio.com/) を使用しています。 しかし、他の使い慣れたツールを使用しても構いません。
 
-Docker エンジンをインストールする必要もあります。 お使いのプラットフォームに関する手順については、[Docker インストールのページ](http://www.docker.com/products/docker)を参照してください。
+Docker エンジンをインストールする必要もあります。 お使いのプラットフォームに関する手順については、[Docker インストールのページ](https://docs.docker.com/install/overview/)を参照してください。
 Docker は、多くの Linux ディストリビューション、macOS、または Windows にインストールすることができます。 上記のページには、インストールが可能なものについてそれぞれ説明が含まれています。
 
 ## <a name="create-the-application"></a>アプリケーションを作成する

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4457bd6d5efd7404cdba6c5fbdbffa9f9eb62141
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 87346b28ff98c453949fe31aea4d0ef1880b0095
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743990"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192632"
 ---
 # <a name="delay-signing-an-assembly"></a>アセンブリへの遅延署名
 組織には、開発者が日常的にアクセスしない厳重に保護されたキーのペアがある場合があります。 公開キーは広く使用可能ですが、秘密キーへのアクセスは少数のユーザーに限定されます。 厳密な名前のアセンブリを開発すると、厳密な名前のターゲット アセンブリを参照する各アセンブリに、そのターゲット アセンブリに厳密な名前を指定するために使用する公開キーのトークンが含まれています。 この場合、開発プロセスで、公開キーを使用できる必要があります。  
@@ -73,7 +73,7 @@ ms.locfileid: "32743990"
     ```  
   
 ## <a name="see-also"></a>参照  
- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
- [方法: 公開キーと秘密キーのキー ペアを作成する](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [Sn.exe (厳密名ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
+- [方法: 公開キーと秘密キーのキー ペアを作成する](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Sn.exe (厳密名ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+- [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd6f14f89d143edd03f8b5d028ec84315b2f2e97
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5e91441f593b7533026d5980f8cf39fb5a3d5b71
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47203291"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193072"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>方法 : アプリケーション ドメインにアセンブリを読み込む
 アプリケーション ドメインにアセンブリを読み込むには、いくつかの方法があります。 推奨されているのは、<xref:System.Reflection.Assembly?displayProperty=nameWithType> クラスの `static` (Visual Basic では `Shared`) <xref:System.Reflection.Assembly.Load%2A> メソッドを使用する方法です。 それ以外には、以下の方法でアセンブリを読み込むことができます。  
@@ -47,9 +47,9 @@ ms.locfileid: "47203291"
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
 ## <a name="see-also"></a>参照  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)  
- [リフレクション](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)  
- [方法: リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
- [アプリケーション ドメインとアセンブリ](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
+- [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)  
+- [リフレクション](../../../docs/framework/reflection-and-codedom/reflection.md)  
+- [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)  
+- [方法: リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
+- [アプリケーション ドメインとアセンブリ](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

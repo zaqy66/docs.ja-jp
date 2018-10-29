@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3166d6c95532706781188da0c56ebf9022038a50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f2dc9fccf6718c4edebc26efcdda71b41873a3a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388379"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195243"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>アンマネージ DLL 関数の処理
-プラットフォーム呼び出しは、マネージ コードがダイナミック リンク ライブラリ (DLL) に実装されたアンマネージ関数 (Win32 API に含まれているものなど) を呼び出すことを可能にするサービスです。 これはエクスポートされた関数を見つけて呼び出し、必要に応じて相互運用の境界を越えて、その引数 (整数、文字列、配列、構造体、その他) をマーシャリングします。  
+プラットフォーム呼び出しは、マネージド コードがダイナミック リンク ライブラリ (DLL) に実装されたアンマネージド 関数 (Win32 API に含まれているものなど) を呼び出すことを可能にするサービスです。 これはエクスポートされた関数を見つけて呼び出し、必要に応じて相互運用の境界を越えて、その引数 (整数、文字列、配列、構造体、その他) をマーシャリングします。  
   
  このセクションでは、アンマネージド DLL 関数の使用に関連するタスクを紹介し、プラットフォーム呼び出しについての詳しい情報を提供します。 以下のタスクに加えて、一般的な考慮事項、および追加情報や例を提供するリンクがあります。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33388379"
   
      既存のクラスを使用して、アンマネージ関数ごとに個別のクラスを作成するか、または関連するアンマネージ関数のセットを格納する 1 つのクラスを作成できます。  
   
-3.  [マネージ コードでプロトタイプを作成します](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。  
+3.  [マネージド コードでプロトタイプを作成します](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。  
   
      [Visual Basic] **Declare** ステートメントを **Function** および **Lib** キーワードと共に使用します。 いくつかのまれなケースでは、**DllImportAttribute** を **Shared Function** キーワードと共に使用できます。 それらのケースについては、このセクションで後述します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33388379"
   
 4.  [DLL 関数を呼び出します](../../../docs/framework/interop/calling-a-dll-function.md)。  
   
-     他のマネージ メソッドと同様の方法で、マネージ クラスのメソッドを呼び出します。 [構造体の受け渡し](../../../docs/framework/interop/passing-structures.md)および[コールバック関数の実装](../../../docs/framework/interop/callback-functions.md)は、特殊なケースです。  
+     他のマネージド メソッドと同様の方法で、マネージド クラスのメソッドを呼び出します。 [構造体の受け渡し](../../../docs/framework/interop/passing-structures.md)および[コールバック関数の実装](../../../docs/framework/interop/callback-functions.md)は、特殊なケースです。  
   
  プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)」を参照してください。  
   
@@ -70,8 +70,8 @@ ms.locfileid: "33388379"
   
 4.  アンマネージ関数に制御を移します。  
   
- プラットフォーム呼び出しは、アンマネージ関数によって生成された例外を、マネージ呼び出し元にスローします。  
-  
+ プラットフォーム呼び出しは、アンマネージド 関数によって生成された例外を、マネージド呼び出し元にスローします。
+
 ## <a name="see-also"></a>参照  
  [アンマネージ コードとの相互運用](../../../docs/framework/interop/index.md)  
  [プラットフォーム呼び出しの例](../../../docs/framework/interop/platform-invoke-examples.md)  

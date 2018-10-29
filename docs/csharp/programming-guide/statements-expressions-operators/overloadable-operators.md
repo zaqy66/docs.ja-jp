@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
 ms.openlocfilehash: f819e94fd532c10478ac39da9485126aa4380dd5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47203802"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583101"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>オーバーロード可能な演算子 (C# プログラミング ガイド)
 
@@ -34,7 +34,7 @@ C# では、[operator](../../language-reference/keywords/operator.md) キーワ�
 
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [ステートメント、式、および演算子](index.md)
 - [演算子](operators.md)
 - [C# 演算子](../../language-reference/operators/index.md)  

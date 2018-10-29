@@ -9,14 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2edfeb85ee21b5d398938bc9500f463cd78a6c07
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 51fe16b3e0859a9ab39dcd34a55e51bd4bcad86d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198996"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201991"
 ---
 # <a name="synchronous-server-socket-example"></a>同期サーバー ソケットの例
 次のプログラム例では、クライアントからの接続要求を受け取るサーバーを作成します。 このサーバーは同期ソケットで構築されます。そのため、サーバー アプリケーションの実行は、クライアントからの接続を待っている間、一時停止となります。 このアプリケーションはクライアントから文字列を受信し、それをコンソールに表示し、クライアントにエコー バックします。 クライアントからの文字列には、文字列 "\<EOF>" が含まれている必要があります。これは、メッセージの終わりを伝えるためのものです。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
 ms.openlocfilehash: 9a17aaec20b03325abadfcc168f7ac4653f300df
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47401512"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030605"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>方法: .NET Framework ガイドラインに準拠したイベントを発行する (C# プログラミング ガイド)
 ここでは、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] の標準のパターンに従うイベントをクラスおよび構造体に追加する方法について説明します。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] クラス ライブラリ内のすべてのイベントは、次のように定義されている <xref:System.EventHandler> デリゲートに基づいています。  
@@ -76,6 +76,6 @@ public delegate void EventHandler(object sender, EventArgs e);
 ## <a name="see-also"></a>参照
 
 - <xref:System.Delegate>  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [イベント](../../../csharp/programming-guide/events/index.md)  
 - [デリゲート](../../../csharp/programming-guide/delegates/index.md)

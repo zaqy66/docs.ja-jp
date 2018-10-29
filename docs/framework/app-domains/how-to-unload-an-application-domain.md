@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a9e5ee865b5e0ac9ec0214a4a0b5194bbcd9f30
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b8b4cbdff72167cfc063254cf5370d22fb729b0a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742089"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50088573"
 ---
 # <a name="how-to-unload-an-application-domain"></a>方法 : アプリケーション ドメインをアンロードする
 アプリケーション ドメインの使用が完了したら、<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> メソッドを使用してアプリケーション ドメインをアンロードします。 **Unload** メソッドは、指定したアプリケーション ドメインを正常にシャットダウンします。 アンロード プロセス中は、新たなスレッドがアプリケーション ドメインにアクセスすることはできません。また、アプリケーション ドメイン固有のデータ構造はすべて解放されます。  
@@ -32,6 +32,6 @@ ms.locfileid: "32742089"
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
 ## <a name="see-also"></a>参照  
- [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)  
- [方法: アプリケーション ドメインを作成する](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
- [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)
+- [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)  
+- [方法: アプリケーション ドメインを作成する](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+- [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)

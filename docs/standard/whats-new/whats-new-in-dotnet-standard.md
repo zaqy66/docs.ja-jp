@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c99f59478b61bd382d6bf9529d2921407cc70bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 19353bd068e3b04bc3d852c1e22db9c97ebef628
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253157"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583166"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard の新機能
 
@@ -55,7 +55,7 @@ ms.locfileid: "44253157"
 
 ### <a name="support-for-net-framework-libraries"></a>.NET Framework ライブラリのサポート
 
-大部分のライブラリは、.NET Standard ではなく .NET Framework をターゲットとしています。 ただし、このようなライブラリの呼び出しのほとんどは、.NET Standard 2.0 に含まれている API に対する呼び出しです。 .NET Standard 2.0 以降、[互換性 shim](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-20/README.md#assembly-unification) を使用して .NET Standard ライブラリから .NET Framework ライブラリにアクセスできるようになりました。 この互換レイヤーは開発者に対して透過的です。 .NET Framework ライブラリを利用するために必要なことはありません。
+大部分のライブラリは、.NET Standard ではなく .NET Framework をターゲットとしています。 ただし、このようなライブラリの呼び出しのほとんどは、.NET Standard 2.0 に含まれている API に対する呼び出しです。 .NET Standard 2.0 以降、[互換性 shim](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification) を使用して .NET Standard ライブラリから .NET Framework ライブラリにアクセスできるようになりました。 この互換レイヤーは開発者に対して透過的です。 .NET Framework ライブラリを利用するために必要なことはありません。
 
 唯一の要件は、.NET Framework クラス ライブラリから呼び出される API が .NET Standard 2.0 に含まれている必要があることです。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b78d917b95e06a14b74c812bf92107476ad17212
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89724e9a322f2f28dbe5d18ae697acbdd0a32d8e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390365"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041623"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>方法: CLR のアクティブ化に関する問題をデバッグする
 正しいバージョンの共通言語ランタイム (CLR) でアプリケーションを実行して問題が発生した場合、CLR アクティベーション ログを表示し、デバッグできます。 アプリケーションで予想とは異なる CLR バージョンが読み込まれるときでも、CLR がまったく読み込まれないときでも、アクティベーション問題の根本原因を突き止めるときにこのログが大変役立ちます。 [.NET Framework 初期化エラー: ユーザー エクスペリエンスの管理](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)では、アプリケーションに対して CLR が見つからない場合について説明されています。  
@@ -92,7 +92,7 @@ ms.locfileid: "33390365"
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0  
 ```  
   
--   **CLR Loading log** には、マネージ コードを読み込んだプロセスを開始した実行可能ファイルのパスがあります。 ネイティブ ホストの可能性があることに注意してください。  
+-   **CLR Loading log** には、マネージド コードを読み込んだプロセスを開始した実行可能ファイルのパスがあります。 ネイティブ ホストの可能性があることに注意してください。  
   
     ```  
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe  
@@ -117,5 +117,5 @@ ms.locfileid: "33390365"
     ```  
   
 ## <a name="see-also"></a>参照  
- [配置](../../../docs/framework/deployment/index.md)  
- [方法: .NET Framework 4 または 4.5 をサポートするアプリを構成する](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [配置](../../../docs/framework/deployment/index.md)  
+- [方法: .NET Framework 4 または 4.5 をサポートするアプリを構成する](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

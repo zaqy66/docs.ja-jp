@@ -6,11 +6,11 @@ f1_keywords:
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
 ms.openlocfilehash: 726abfd903f37826a247e6e98c0d11f230447550
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204977"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035254"
 ---
 # <a name="nameof-c-reference"></a>nameof (C# リファレンス)
 
@@ -136,5 +136,5 @@ class C {
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)  

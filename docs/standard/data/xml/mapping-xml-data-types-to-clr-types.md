@@ -5,20 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a88d5bf99e2d9bb6465413cb5419058014d113a1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004050"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839040"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>XML データ型から CLR 型へのマッピング
-XML データ型と共通言語ランタイム (CLR) 型の既定のマッピングを次の表に示します。  
-  
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a>次の表は、XML データ型から CLR 型への既定のマッピングを示しています。  
+
+XML データ型と共通言語ランタイム (CLR) 型の既定のマッピングを次の表に示します。
   
 > [!NOTE]
->  `xs` および `xdt` のプレフィックスは、それぞれ http://www.w3.org/2001/XMLSchema および http://www.w3.org/2003/05/xpath-datatypes 名前空間 URI にマッピングされます。  
+> `xs` および `xdt` のプレフィックスは、それぞれ <https://www.w3.org/2001/XMLSchema> および <https://www.w3.org/2003/05/xpath-datatypes> 名前空間 URI にマッピングされます。
   
 |XML 型|CLR 型|  
 |--------------|--------------|  

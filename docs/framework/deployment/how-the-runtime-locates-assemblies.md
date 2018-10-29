@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f8ed5cce3e0c9e22679f54b13c84ea422f2100d
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251065"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453451"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>ランタイムがアセンブリを検索する方法
 .NET Framework アプリケーションを正しく配置するには、アプリケーションを構成するアセンブリを共通言語ランタイムがどのように検索し、バインドするかを理解している必要があります。 既定では、ランタイムはアプリケーションを構成するアセンブリの正しいバージョンをバインドしようとします。 この既定の動作は、構成ファイルの設定によってオーバーライドできます。  
@@ -178,7 +178,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   名前 (参照先アセンブリの名前)。  
   
--   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素の `privatePath` 属性 (ルート位置の下にあるサブディレクトリのユーザー定義の一覧)。 この場所は、アプリケーション ドメインの <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> プロパティを使用して、アプリケーション構成ファイルとマネージ コード内に指定できます。 マネージ コード内に指定した場合は、マネージ コード `privatePath` が先にプローブされ、その後でアプリケーション構成ファイルに指定したパスがプローブされます。  
+-   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素の `privatePath` 属性 (ルート位置の下にあるサブディレクトリのユーザー定義の一覧)。 この場所は、アプリケーション ドメインの <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> プロパティを使用して、アプリケーション構成ファイルとマネージド コード内に指定できます。 マネージド コード内に指定した場合は、マネージド コード `privatePath` が先にプローブされ、その後でアプリケーション構成ファイルに指定したパスがプローブされます。  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>アプリケーション ベース ディレクトリとカルチャ ディレクトリのプローブ  
  ランタイムは、常に、アプリケーションのベース (URL またはコンピューター上のアプリケーションのルート ディレクトリのいずれか) からプローブを開始します。 アプリケーション ベースで参照先アセンブリが見つからず、カルチャ情報が提供されていない場合、ランタイムはそのアセンブリ名を持つすべてのサブディレクトリ内を検索します。 プローブされるディレクトリは、次のとおりです。  
@@ -215,7 +215,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   参照先アセンブリの名前: myAssembly  
   
--   アプリケーション ルート ディレクトリ: http://www.code.microsoft.com  
+-   アプリケーション ルート ディレクトリ: `http://www.code.microsoft.com`  
   
 -   構成ファイルの [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素による指定: bin  
   
@@ -223,13 +223,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  ランタイムは、次の URL をプローブします。  
   
- http://www.code.microsoft.com/de/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly.dll`
   
- http://www.code.microsoft.com/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll`
   
 ##### <a name="multiple-assemblies-with-the-same-name"></a>同じ名前の複数のアセンブリ  
  同じ名前を持つ複数のアセンブリを設定する方法を次の例に示します。  
@@ -243,10 +243,10 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ```  
   
 #### <a name="other-locations-probed"></a>プローブされるその他の場所  
- 現在のバインディング コンテキストを使用して、アセンブリの場所を特定することもできます。 この方法が最もよく使用されるのは、 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> メソッドが使用されている場合と、COM 相互運用のシナリオの場合です。 アセンブリが <xref:System.Reflection.Assembly.LoadFrom%2A> メソッドを使用して別のアセンブリを参照している場合は、呼び出し元アセンブリの場所が、参照先アセンブリを検索する場所についてのヒントと見なされます。 一致するものが見つかった場合は、そのアセンブリが読み込まれます。 一致するものが見つからない場合は、ランタイムは、その検索セマンティクスを続行した後、Windows Installer に問い合わせて、アセンブリを提供するように求めます。 バインド要求と一致するアセンブリが提供されない場合は、例外がスローされます。 この例外は、型を参照していた場合はマネージ コード内の <xref:System.TypeLoadException> であり、読み込もうとするアセンブリが見つからなかった場合は、 <xref:System.IO.FileNotFoundException> です。  
+ 現在のバインディング コンテキストを使用して、アセンブリの場所を特定することもできます。 この方法が最もよく使用されるのは、 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> メソッドが使用されている場合と、COM 相互運用のシナリオの場合です。 アセンブリが <xref:System.Reflection.Assembly.LoadFrom%2A> メソッドを使用して別のアセンブリを参照している場合は、呼び出し元アセンブリの場所が、参照先アセンブリを検索する場所についてのヒントと見なされます。 一致するものが見つかった場合は、そのアセンブリが読み込まれます。 一致するものが見つからない場合は、ランタイムは、その検索セマンティクスを続行した後、Windows Installer に問い合わせて、アセンブリを提供するように求めます。 バインド要求と一致するアセンブリが提供されない場合は、例外がスローされます。 この例外は、型を参照していた場合はマネージド コード内の <xref:System.TypeLoadException> であり、読み込もうとするアセンブリが見つからなかった場合は、 <xref:System.IO.FileNotFoundException> です。  
   
- たとえば、Assembly1 が Assembly2 を参照し、Assembly1 が http://www.code.microsoft.com/utils からダウンロードされていた場合、この場所が、Assembly2.dll を検索する場所についてのヒントと見なされます。 次に、ランタイムは http://www.code.microsoft.com/utils/Assembly2.dll と http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll のアセンブリをプローブします。 どちらの場所でも Assembly2 が見つからなかった場合は、ランタイムは Windows Installer に問い合わせます。  
+ たとえば、Assembly1 が Assembly2 を参照し、Assembly1 が `http://www.code.microsoft.com/utils` からダウンロードされていた場合、この場所が、Assembly2.dll を検索する場所についてのヒントと見なされます。 次に、ランタイムは `http://www.code.microsoft.com/utils/Assembly2.dll` と `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` のアセンブリをプローブします。 どちらの場所でも Assembly2 が見つからなかった場合は、ランタイムは Windows Installer に問い合わせます。  
   
 ## <a name="see-also"></a>参照  
- [アセンブリの読み込みのベスト プラクティス](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [配置](../../../docs/framework/deployment/index.md)
+- [アセンブリの読み込みのベスト プラクティス](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+- [配置](../../../docs/framework/deployment/index.md)

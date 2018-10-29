@@ -13,14 +13,12 @@ helpviewer_keywords:
 - receiving data, application protocols
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 9f979b6d065e23b6d448a14d9545327de254dc70
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 191a13d83c77c3c5a13da8b4b4c177046c4e9e77
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47216475"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201978"
 ---
 # <a name="using-application-protocols"></a>アプリケーション プロトコルの使用
 .NET Framework は、一般的に使用されているインターネット アプリケーション プロトコルをサポートしています。 ここでは、[HTTP](../../../docs/framework/network-programming/http.md)、"TCP"、"UDP" プロトコルの使用方法と、[Windows ソケット](../../../docs/framework/network-programming/sockets.md) インターフェイスを使用してカスタム ソケットを実装する方法について説明します。  

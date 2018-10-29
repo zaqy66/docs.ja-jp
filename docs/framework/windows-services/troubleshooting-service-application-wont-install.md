@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
 ms.openlocfilehash: 0912ff0909ffa5b22bed07543a2e514de4fb1ff5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47207993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035832"
 ---
 # <a name="troubleshooting-service-application-won39t-install"></a>トラブルシューティング: サービス アプリケーションをインストールできない場合
 サービス アプリケーションが正しくインストールされない場合は、サービス クラスの <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティが、そのサービスのインストーラーで示されているのと同じ値に設定されていることを確認します。 サービスが正しくインストールされるためには、両方のインスタンスで同じ値になっている必要があります。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
 ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47203892"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "47863703"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>数値結果テーブルの書式設定 (C# リファレンス)
 
@@ -52,7 +52,7 @@ ms.locfileid: "47203892"
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [型のリファレンス表](reference-tables-for-types.md)
 - [型の書式設定](../../../standard/base-types/formatting-types.md)
 - [複合書式指定](../../../standard/base-types/composite-formatting.md)

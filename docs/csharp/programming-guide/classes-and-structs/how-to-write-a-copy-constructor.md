@@ -6,11 +6,11 @@ helpviewer_keywords:
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
 ms.openlocfilehash: d6ecfc3659dcf533db0f4e7b67fdffd620a584fd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232704"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582334"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>方法 : コピー コンストラクターを記述する (C# プログラミング ガイド)
 C# では、オブジェクトのコピー コンストラクターが提供されていませんが、独自に作成することができます。  
@@ -23,7 +23,7 @@ C# では、オブジェクトのコピー コンストラクターが提供さ�
 ## <a name="see-also"></a>参照
 
 - <xref:System.ICloneable>  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
 - [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
 - [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)

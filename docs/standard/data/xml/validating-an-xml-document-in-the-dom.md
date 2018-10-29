@@ -10,11 +10,11 @@ ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0f5ae64eb1017570a56efab59a4bf1a66d5e02b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47398918"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846241"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM における XML ドキュメントの検証
 既定では、<xref:System.Xml.XmlDocument> クラスは、ドキュメント オブジェクト モデル (DOM) 内の XML ドキュメントを XML スキーマ定義言語 (XSD) スキーマまたはドキュメント型定義 (DTD) に対して検証しません。XML が整形式であることだけが検証されます。  

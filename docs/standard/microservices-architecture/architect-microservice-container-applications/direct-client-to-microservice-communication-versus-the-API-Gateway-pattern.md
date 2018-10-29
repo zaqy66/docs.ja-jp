@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00763a806c18b45b366068f865f4ecb4c5cd743b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198684"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183608"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信
 
@@ -84,13 +84,13 @@ API ゲートウェイ パターンを実装するときには注意が必要で
 
 そのため、API ゲートウェイはビジネス境界とクライアント アプリに基づいて分離する必要があり、すべての内部マイクロサービスに対する単一のアグリゲーターとして機能しないようにする必要があります。
 
-API ゲートウェイ層を複数の API ゲートウェイに分割するとき、アプリケーションに複数のクライアント アプリがある場合は、それを複数の API ゲートウェイの種類を区別する際の第一の軸とすることで、各クライアント アプリのニーズに合わせた異なるファサードを用意できます。 このケースは "Backend for Frontend" ([BFF](http://samnewman.io/patterns/architectural/bff/)) と呼ばれるパターンです。次の図に示すように、このパターンでは、複数の内部マイクロサービスを裏で呼び出す特定のアダプター コードを実装することにより、各 API ゲートウェイが (クライアント フォーム ファクター ベースであっても) クライアント アプリの種類ごとに調整された異なる API を提供できます。
+API ゲートウェイ層を複数の API ゲートウェイに分割するとき、アプリケーションに複数のクライアント アプリがある場合は、それを複数の API ゲートウェイの種類を区別する際の第一の軸とすることで、各クライアント アプリのニーズに合わせた異なるファサードを用意できます。 このケースは "Backend for Frontend" ([BFF](https://samnewman.io/patterns/architectural/bff/)) と呼ばれるパターンです。次の図に示すように、このパターンでは、複数の内部マイクロサービスを裏で呼び出す特定のアダプター コードを実装することにより、各 API ゲートウェイが (クライアント フォーム ファクター ベースであっても) クライアント アプリの種類ごとに調整された異なる API を提供できます。
 
 ![複数のカスタム API ゲートウェイを示す図](./media/image13.1.png)
 
 **図 4-13.1**. 複数のカスタム API ゲートウェイの使用
 
-前の図は、複数の細かい API ゲートウェイを使用する単純化されたアーキテクチャを示しています。 このケースでは、各 API ゲートウェイに対して指定された境界は純粋に "Backend for Frontend" ([BFF](http://samnewman.io/patterns/architectural/bff/)) パターンに基づくものであり、したがって、各クライアント アプリで必要とされる API にのみ基づいています。 しかし、より大規模なアプリケーションではさらに、設計の第二の軸としてビジネス境界に基づく追加の API ゲートウェイを作成する必要があります。
+前の図は、複数の細かい API ゲートウェイを使用する単純化されたアーキテクチャを示しています。 このケースでは、各 API ゲートウェイに対して指定された境界は純粋に "Backend for Frontend" ([BFF](https://samnewman.io/patterns/architectural/bff/)) パターンに基づくものであり、したがって、各クライアント アプリで必要とされる API にのみ基づいています。 しかし、より大規模なアプリケーションではさらに、設計の第二の軸としてビジネス境界に基づく追加の API ゲートウェイを作成する必要があります。
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>API ゲートウェイ パターンの主な機能
 
@@ -168,7 +168,7 @@ Azure API Management では、キー、トークン、および IP フィルタ�
 
 - **API ゲートウェイ パターン** [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
-- **集約とコンポジションのパターン** [*http://microservices.io/patterns/data/api-composition.html*](http://microservices.io/patterns/data/api-composition.html)
+- **集約とコンポジションのパターン** [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
 
 - **Azure API Management** [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 

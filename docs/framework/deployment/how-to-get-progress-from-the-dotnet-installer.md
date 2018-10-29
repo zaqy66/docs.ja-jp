@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: bec27165d1bfd6a501ba8b96a1eb133276fe7269
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991585"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197952"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>方法: .NET Framework 4.5 インストーラーの進行状況を表示する
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は再頒布可能なランタイムです。 このバージョンの .NET Framework 用アプリを開発する場合は、アプリのセットアップに必要なパーツとして、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを含める (チェーンする) ことができます。 セットアップ手順をカスタマイズまたは統一するために、アプリケーションのセットアップの進行状況を表示する一方で、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップをサイレントで起動し、その進行状況を追跡できます。 サイレントな追跡を可能にするために、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップ (監視対象) ではメモリ マップ I/O (MMIO) セグメントを使用してプロトコルを定義し、セットアップ (ウォッチャーつまりチェーン元) と通信します。 このプロトコルは、チェーン元が進行状況情報や詳細な結果を取得してメッセージに応答し、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを取り消す方法を定義します。  
@@ -310,5 +310,5 @@ ms.locfileid: "45991585"
  標準的なサーバーは、ランダムな MMIO ファイル名を作成し、ファイル (前のコード例の `Server::CreateSection` で示されているファイル) を作成した後、`CreateProcess` メソッドを使用して `-pipe someFileSectionName` オプションでパイプ名を渡すことによって、再頒布可能プログラムを起動します。 サーバーは、アプリケーションの UI 固有のコードを使用して `OnProgress`、`Send`、および `Finished` の各メソッドを実装する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [配置](../../../docs/framework/deployment/index.md)
+- [配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [配置](../../../docs/framework/deployment/index.md)

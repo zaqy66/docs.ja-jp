@@ -9,11 +9,11 @@ helpviewer_keywords:
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
 ms.openlocfilehash: 854c8b61fa8164bccfc9451f2f163dab4a56388f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47192993"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48035189"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -91,5 +91,5 @@ The summary for this other type.
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

@@ -3,12 +3,12 @@ title: タプル型 - C# ガイド
 description: C# の名前のないタプルと名前付きタプルについて
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509447"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186032"
 ---
 # <a name="c-tuple-types"></a>C# のタプル型 #
 
@@ -92,7 +92,7 @@ C# 7.3 以降では、タプル型で `==` および `!=` 演算子がサポー�
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-タプルの等値テストをより簡単にするルールがいくつかあります。 次のコードに示すように、いずれかのタプルが null 許容タプルの場合、タプルの等値性によって[リフト変換](language-reference/language-specification/index.md)が実行されます。
+タプルの等値テストをより簡単にするルールがいくつかあります。 次のコードに示すように、いずれかのタプルが null 許容タプルの場合、タプルの等値性によって[リフト変換](~/_csharplang/spec/conversions.md#lifted-conversion-operators)が実行されます。
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

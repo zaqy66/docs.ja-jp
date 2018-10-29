@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa204b9ac604cd4e0f2c1ae75e872f6bb5cdaf22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac17993a4980e96cbd05fc2523567138e7b56262
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391408"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196443"
 ---
 # <a name="deploying-the-net-framework"></a>.NET Framework の配置
 .NET Framework ドキュメントのこのセクションでは、アプリケーションとともに .NET Framework をインストールする開発者、およびネットワーク上で .NET Framework を展開する管理者に対して情報を提供します。 また、アクティベーション、配置に伴う再起動の問題、.NET Framework のインストールの進捗を監視する方法についても説明します。  
@@ -37,4 +37,4 @@ ms.locfileid: "33391408"
  正しいバージョンの CLR でアプリケーションを実行して発生した問題を解決するために、どのようにして CLR アクティベーション ログを表示し、デバッグするかを説明します。  
   
 ## <a name="see-also"></a>参照  
- [開発ガイド](../../../docs/framework/development-guide.md)
+- [開発ガイド](../../../docs/framework/development-guide.md)

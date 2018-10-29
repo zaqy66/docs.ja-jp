@@ -11,14 +11,12 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 61eb598ff2ca228e76b2a3633fe4d2bf37f2a476
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e47b7de00941a8da24052c21f28e91391cff390d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47209809"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193683"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>方法: アプリケーションの場所ベースのキャッシュ ポリシーを設定します。
 場所ベースのキャッシュ ポリシーを使用すると、要求されたリソースの場所を基にしてアプリケーションでキャッシュの動作を明示的に定義することができます。 このトピックでは、キャッシュ ポリシーをプログラムで設定する方法を示します。 構成ファイルを使用してアプリケーションのポリシーを設定する方法については、「[\<requestCaching> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)」を参照してください。  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be4c15f1093f359eeb9e742464b9d9e1dd5c756e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f3e67fe49fb6d8a4d56b3d36d78d86c6c517d2a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393394"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50181606"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>クラス、構造体、および共用体のマーシャリング
 クラスと構造体は、.NET Framework では類似しています。 どちらもフィールド、プロパティ、およびイベントを持つことができます。 静的メソッドと非静的メソッドを持つこともできます。 1 つの重要な違いは、構造体は値型でクラスは参照型であることです。  
@@ -37,7 +37,7 @@ ms.locfileid: "33393394"
 |値によるクラス。|整数のメンバーを含むクラスは、管理対象クラスと同じように、In/Out パラメーターとして渡します。|SysTime サンプル|  
 |値による構造体。|In パラメーターとして構造体を渡します。|構造体のサンプル|  
 |参照による構造体|In/Out パラメーターとして構造体を渡します。|OSInfo サンプル|  
-|入れ子になった構造体を含む構造体 (フラット化)。|アンマネージ関数で入れ子になった構造体を含む構造体を表すクラスを渡します。 マネージ プロトタイプで構造体は 1 つの大きな構造体にフラット化されます。|FindFile サンプル|  
+|入れ子になった構造体を含む構造体 (フラット化)。|アンマネージ関数で入れ子になった構造体を含む構造体を表すクラスを渡します。 マネージド プロトタイプで構造体は 1 つの大きな構造体にフラット化されます。|FindFile サンプル|  
 |別の構造体へのポインターを持つ構造体。|2 番目の構造体へのポインターをメンバーとして含む構造体を渡します。|構造体のサンプル|  
 |値による整数のある構造体の配列。|In/Out パラメーターとして整数のみを含む構造体の配列を渡します。 配列のメンバーを変更することができます。|配列のサンプル|  
 |参照による整数と文字列のある構造体の配列。|Out パラメーターとして整数と文字列を含む構造体の配列を渡します。 呼び出された関数は、配列のメモリを割り当てます。|OutArrayOfStructs のサンプル|  
@@ -68,7 +68,7 @@ ms.locfileid: "33393394"
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) はカスタム アンマネージ ライブラリであり、上記の関数および 4 つの構造体 **MYPERSON**、**MYPERSON2**、**MYPERSON3**、および **MYARRAYSTRUCT** に関する実装を含んでいます。 これらの構造体には次の要素が含まれます。  
+ [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) はカスタム アンマネージ ライブラリであり、上記の関数および 4 つの構造体 **MYPERSON**、**MYPERSON2**、**MYPERSON3**、および **MYARRAYSTRUCT** に関する実装を含んでいます。 これらの構造体には次の要素が含まれます。  
   
 ```  
 typedef struct _MYPERSON  
@@ -96,7 +96,7 @@ typedef struct _MYARRAYSTRUCT
 } MYARRAYSTRUCT;  
 ```  
   
- マネージ `MyPerson`、`MyPerson2`、`MyPerson3`、および `MyArrayStruct` 構造体には、以下の特性があります。  
+ マネージド `MyPerson`、`MyPerson2`、`MyPerson3`、および `MyArrayStruct` 構造体には、以下の特性があります。  
   
 -   `MyPerson` には文字列メンバーだけが含まれます。 [CharSet](specifying-a-character-set.md) フィールドは、アンマネージ関数に渡されるとき、文字列を ANSI 形式に設定します。  
   
@@ -108,7 +108,7 @@ typedef struct _MYARRAYSTRUCT
   
  このサンプル内のすべての構造体で、各メンバーが出現する順番でメモリ内に順次配列されることを保証するために、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性が適用されています。  
   
- `LibWrap` クラスには、`App` クラスによって呼び出される `TestStructInStruct`、`TestStructInStruct3`、および `TestArrayInStruct` メソッドのマネージ プロトタイプが含まれます。 各プロトタイプは、1 つのパラメーターを以下のように宣言します。  
+ `LibWrap` クラスには、`App` クラスによって呼び出される `TestStructInStruct`、`TestStructInStruct3`、および `TestArrayInStruct` メソッドのマネージド プロトタイプが含まれます。 各プロトタイプは、1 つのパラメーターを以下のように宣言します。  
   
 -   `TestStructInStruct` は型 `MyPerson2` への参照をそのパラメーターとして宣言します。  
   
@@ -116,7 +116,7 @@ typedef struct _MYARRAYSTRUCT
   
 -   `TestArrayInStruct` は型 `MyArrayStruct` への参照をそのパラメーターとして宣言します。  
   
- メソッドへの引数としての構造体は、パラメーターに **ref** (Visual Basic では **ByRef**) キーワードが含まれない限り、値によって渡されます。 たとえば、`TestStructInStruct` メソッドは型 `MyPerson2` のオブジェクトへの参照 (アドレスの値) をアンマネージ コードに渡します。 `MyPerson2` が指定する構造体を操作するために、サンプルは指定したサイズのバッファーを作成し、<xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> と <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> のメソッドを結合することでそのアドレスを返します。 次に、サンプルはマネージ構造体の内容をアンマネージ バッファーにコピーします。 最後に、サンプルは <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> メソッドを使用してアンマネージ バッファーからマネージ オブジェクトにデータをマーシャリングし、<xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> メソッドを使用してメモリのアンマネージ ブロックを解放します。  
+ メソッドへの引数としての構造体は、パラメーターに **ref** (Visual Basic では **ByRef**) キーワードが含まれない限り、値によって渡されます。 たとえば、`TestStructInStruct` メソッドは型 `MyPerson2` のオブジェクトへの参照 (アドレスの値) をアンマネージ コードに渡します。 `MyPerson2` が指定する構造体を操作するために、サンプルは指定したサイズのバッファーを作成し、<xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> と <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> のメソッドを結合することでそのアドレスを返します。 次に、サンプルはマネージド構造体の内容をアンマネージド バッファーにコピーします。 最後に、サンプルは <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> メソッドを使用してアンマネージド バッファーからマネージド オブジェクトにデータをマーシャリングし、<xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> メソッドを使用してメモリのアンマネージド ブロックを解放します。  
   
 ### <a name="declaring-prototypes"></a>プロトタイプの宣言  
  [!code-cpp[Conceptual.Interop.Marshaling#23](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/structures.cpp#23)]
@@ -159,7 +159,7 @@ typedef struct _WIN32_FIND_DATA
   
  このサンプルでは、`FindData` クラスに、元の構造体と埋め込み構造体の各要素に対応するデータ メンバーが含まれています。 このクラスは、元の 2 つの文字バッファーを文字列に置き換えます。 **MarshalAsAttribute** は <xref:System.Runtime.InteropServices.UnmanagedType> 列挙を **ByValTStr** に設定します。これは、アンマネージ構造体に出現するインラインの固定長文字配列を識別するために使用されます。  
   
- `LibWrap` クラスには `FindFirstFile` メソッドのマネージ プロトタイプが含まれます。このメソッドは `FindData` クラスをパラメーターとして渡します。 参照型のクラスは既定では In パラメーターとして渡されるため、パラメーターは <xref:System.Runtime.InteropServices.InAttribute> と <xref:System.Runtime.InteropServices.OutAttribute> の属性で宣言する必要があります。  
+ `LibWrap` クラスには `FindFirstFile` メソッドのマネージド プロトタイプが含まれます。このメソッドは `FindData` クラスをパラメーターとして渡します。 参照型のクラスは既定では In パラメーターとして渡されるため、パラメーターは <xref:System.Runtime.InteropServices.InAttribute> と <xref:System.Runtime.InteropServices.OutAttribute> の属性で宣言する必要があります。  
   
 ### <a name="declaring-prototypes"></a>プロトタイプの宣言  
  [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)]
@@ -182,7 +182,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) はカスタム アンマネージ ライブラリであり、上記の関数および 2 つの共用体 **MYUNION** および **MYUNION2** に関する実装を含んでいます。 共用体には以下の要素が含まれます。  
+ [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) はカスタム アンマネージ ライブラリであり、上記の関数および 2 つの共用体 **MYUNION** および **MYUNION2** に関する実装を含んでいます。 共用体には以下の要素が含まれます。  
   
 ```  
 union MYUNION  
@@ -198,9 +198,9 @@ union MYUNION2
 };  
 ```  
   
- マネージ コードでは、共用体は構造体として定義されます。 `MyUnion` 構造体には、メンバーとして整数と倍精度の 2 つの値型が含まれます。 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性は、各データ メンバーの正確な位置を制御するために設定されます。 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 属性は、共用体のアンマネージ表現内に、フィールドの物理的な位置を指定します。 両方のメンバーに同じオフセット値があるので、メンバーはメモリの同じ部分を定義できることに注意してください。  
+ マネージド コードでは、共用体は構造体として定義されます。 `MyUnion` 構造体には、メンバーとして整数と倍精度の 2 つの値型が含まれます。 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性は、各データ メンバーの正確な位置を制御するために設定されます。 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 属性は、共用体のアンマネージ表現内に、フィールドの物理的な位置を指定します。 両方のメンバーに同じオフセット値があるので、メンバーはメモリの同じ部分を定義できることに注意してください。  
   
- `MyUnion2_1` と `MyUnion2_2` には、それぞれ値型 (整数) と文字列が含まれています。 マネージ コードでは、値型と参照型が重複することは許可されません。 このサンプルでは、同じアンマネージ関数を呼び出すときに呼び出し元が両方の型を使用できるようにするため、メソッドのオーバーロードを使用します。 `MyUnion2_1` のレイアウトは明示的で、正確なオフセット値を持っています。 これに対し、`MyUnion2_2` にはシーケンシャル レイアウトがあります。参照型では明示的なレイアウトが許可されていないためです。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は <xref:System.Runtime.InteropServices.UnmanagedType> 列挙を **ByValTStr** に設定します。これは、共用体のアンマネージ表現に出現するインラインの固定長文字配列を識別するために使用されます。  
+ `MyUnion2_1` と `MyUnion2_2` には、それぞれ値型 (整数) と文字列が含まれています。 マネージド コードでは、値型と参照型が重複することは許可されません。 このサンプルでは、同じアンマネージ関数を呼び出すときに呼び出し元が両方の型を使用できるようにするため、メソッドのオーバーロードを使用します。 `MyUnion2_1` のレイアウトは明示的で、正確なオフセット値を持っています。 これに対し、`MyUnion2_2` にはシーケンシャル レイアウトがあります。参照型では明示的なレイアウトが許可されていないためです。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は <xref:System.Runtime.InteropServices.UnmanagedType> 列挙を **ByValTStr** に設定します。これは、共用体のアンマネージ表現に出現するインラインの固定長文字配列を識別するために使用されます。  
   
  `LibWrap` クラスには、`TestUnion` と `TestUnion2` メソッドのプロトタイプが含まれます。 `TestUnion2` は `MyUnion2_1` または `MyUnion2_2` をパラメーターとして宣言するためにオーバーロードされています。  
   
@@ -242,7 +242,7 @@ typedef struct _SYSTEMTIME {
   
  このサンプルでは、`SystemTime` クラスの中には、クラス メンバーとして表される、元の構造体の要素が含まれます。 各メンバーが出現する順番でメモリ内に順次配列されることを保証するために、 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を設定します。  
   
- `LibWrap` クラスには `GetSystemTime` メソッドのマネージ プロトタイプが含まれます。このメソッドは既定では `SystemTime` クラスを In/Out パラメーターとして渡します。 参照型のクラスは既定では In パラメーターとして渡されるため、パラメーターは <xref:System.Runtime.InteropServices.InAttribute> と <xref:System.Runtime.InteropServices.OutAttribute> の属性で宣言する必要があります。 呼び出し元が結果を受け取るには、これらの[方向属性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))を明示的に適用する必要があります。 `App` クラスは、`SystemTime` クラスの新しいインスタンスを作成して、そのデータ フィールドにアクセスします。  
+ `LibWrap` クラスには `GetSystemTime` メソッドのマネージド プロトタイプが含まれます。このメソッドは既定では `SystemTime` クラスを In/Out パラメーターとして渡します。 参照型のクラスは既定では In パラメーターとして渡されるため、パラメーターは <xref:System.Runtime.InteropServices.InAttribute> と <xref:System.Runtime.InteropServices.OutAttribute> の属性で宣言する必要があります。 呼び出し元が結果を受け取るには、これらの[方向属性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))を明示的に適用する必要があります。 `App` クラスは、`SystemTime` クラスの新しいインスタンスを作成して、そのデータ フィールドにアクセスします。  
   
 ### <a name="code-samples"></a>コード サンプル  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -254,7 +254,7 @@ typedef struct _SYSTEMTIME {
   
  このサンプルでは、<xref:System.Runtime.InteropServices.Marshal> クラスを使用することにより、およびアンセーフ コードを使用することにより、ネイティブ関数を呼び出す方法を例示します。  
   
- このサンプルでは、[PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) で定義されていて、ソース ファイルにも含まれている、ラッパー関数とプラットフォーム呼び出しを使用します。 これは `TestOutArrayOfStructs` 関数および `MYSTRSTRUCT2` 構造を使用します。 構造体には次の要素が含まれます。  
+ このサンプルでは、[PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) で定義されていて、ソース ファイルにも含まれている、ラッパー関数とプラットフォーム呼び出しを使用します。 これは `TestOutArrayOfStructs` 関数および `MYSTRSTRUCT2` 構造を使用します。 構造体には次の要素が含まれます。  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -270,7 +270,7 @@ typedef struct _MYSTRSTRUCT2
   
  `App` クラスは、配列を渡すために必要なすべてのタスクを実行する、`UsingMarshaling` メソッドを実装します。 配列には、データが呼び出し先から呼び出し元に渡されることを示すため、`out` (Visual Basic では `ByRef`) キーワードでマークが付けられます。 実装は、以下の <xref:System.Runtime.InteropServices.Marshal> クラス メソッドを使用します。  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> は、アンマネージ バッファーからマネージ オブジェクトにデータをマーシャリングします。  
+-   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> は、アンマネージド バッファーからマネージド オブジェクトにデータをマーシャリングします。  
   
 -   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> は、構造体で文字列用に予約されていたメモリを解放します。  
   

@@ -2,12 +2,12 @@
 title: 指定した時間の経過後の非同期タスクのキャンセル (C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: b95b87e1e93a9c8f8c74680a917a128d45172ed5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 157b1de664254e9bdf9e4a5a381f8f35eeb10e9a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397346"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453321"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>指定した時間の経過後の非同期タスクのキャンセル (C#)
 
@@ -30,7 +30,7 @@ ms.locfileid: "47397346"
 
 4.  **ソリューション エクスプローラー**で、**CancelAfterTime** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。
 
-5.  **F5** キーを押してプロジェクトを実行します (デバッグを実行せずにプロジェクトを実行するには、**Ctrl**+**F5** キーを押します)。
+5.  **F5** キーを押してプロジェクトを実行します。 (デバッグを実行せずにプロジェクトを実行するには、**Ctrl**+**F5** キーを押します)。
 
 6.  プログラムを複数回実行して、出力がすべての Web サイトの出力を示したり、どの Web サイトの出力も示さなかったり、一部の Web サイトの出力を示したりすることを確認します。
 
@@ -192,12 +192,12 @@ namespace CancelAfterTime
         {
             List<string> urls = new List<string>
             {
-                "http://msdn.microsoft.com",
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",
-                "http://msdn.microsoft.com/library/hh290136.aspx",
-                "http://msdn.microsoft.com/library/ee256749.aspx",
-                "http://msdn.microsoft.com/library/ms404677.aspx",
-                "http://msdn.microsoft.com/library/ff730837.aspx"
+                "https://msdn.microsoft.com",
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",
+                "https://msdn.microsoft.com/library/hh290136.aspx",
+                "https://msdn.microsoft.com/library/ee256749.aspx",
+                "https://msdn.microsoft.com/library/ms404677.aspx",
+                "https://msdn.microsoft.com/library/ff730837.aspx"
             };
             return urls;
         }

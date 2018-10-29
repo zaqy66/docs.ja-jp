@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7cbef005c913d818dba23d85404fe0382fe79f4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741946"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190906"
 ---
 # <a name="strong-named-assemblies"></a>厳密な名前付きアセンブリ
 アセンブリの厳格な名前付けにより、アセンブリに対して一意の ID を作成し、アセンブリの競合を防ぐことができます。  
@@ -43,7 +43,7 @@ ms.locfileid: "32741946"
  オープン ソースの開発者が厳密な名前付きのアセンブリによる ID の利点を必要とする場合、アセンブリに関連付けられた秘密キーをソース コントロール システムにチェックインすることを検討してください。  
   
 ## <a name="see-also"></a>参照  
- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)  
- [方法: 厳密な名前でアセンブリに署名する](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Sn.exe (厳密名ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [厳密な名前付きアセンブリの作成と使用](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)  
+- [方法: 厳密な名前でアセンブリに署名する](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+- [Sn.exe (厳密名ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+- [厳密な名前付きアセンブリの作成と使用](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

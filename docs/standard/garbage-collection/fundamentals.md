@@ -13,11 +13,11 @@ ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47216982"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582750"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 <a name="top"></a> 共通言語ランタイム (CLR) では、自動メモリ マネージャーとしてガベージ コレクターを使用できます。 次のような利点があります。  
@@ -168,7 +168,7 @@ ms.locfileid: "47216982"
   
      ジェネレーション 2 のコレクションでは複数のセグメントを占有できるため、ジェネレーション 2 に昇格されたオブジェクトはより古いセグメントに移動できます。 ジェネレーション 1 とジェネレーション 2 の残存オブジェクトは、どちらもジェネレーション 2 に昇格されるため、別のセグメントに移動できます。  
   
-     通常、大きなオブジェクト ヒープは圧縮されません。これは、大きなオブジェクトをコピーするとパフォーマンスが低下するためです。 ただし [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 以降では、<xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> プロパティを使用して、大きなオブジェクト ヒープを必要に応じて圧縮できます。  
+     通常、大きなオブジェクト ヒープは圧縮されません。これは、大きなオブジェクトをコピーするとパフォーマンスが低下するためです。 ただし [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]以降では、 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> プロパティを使用して、大きなオブジェクト ヒープを必要に応じて圧縮できます。  
   
  ガベージ コレクターは、次の情報に基づいてオブジェクトが有効かどうかを判断します。  
   

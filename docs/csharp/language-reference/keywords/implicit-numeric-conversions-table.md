@@ -7,12 +7,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: e46816fc8f3a6ff71dcba3561098d3cfce1e1054
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c3c0153a0ae3e07839822c8bb978b1a09277bd53
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44213265"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188704"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>暗黙的な数値変換の一覧表 (C# リファレンス)
 
@@ -48,12 +48,12 @@ ms.locfileid: "44213265"
   byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
   ```
 
-明示的な変換に関する詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの「[Implicit conversions](/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions)」 (明示的な変換) セクションをご覧ください。
+明示的な変換に関する詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの「[Implicit conversions](~/_csharplang/spec/conversions.md#implicit-conversions)」 (明示的な変換) セクションをご覧ください。
   
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [整数型の一覧表](integral-types-table.md)
 - [浮動小数点型の一覧表](floating-point-types-table.md)
 - [組み込み型の一覧表](built-in-types-table.md)

@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: a5fce347193921305c264df34be99063920af715
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: bb119d62691a714a0c7dbc99079dfc1a1fac3aae
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45747109"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188561"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>永続インフラストラクチャとして NoSQL データベースを使用する
 
@@ -54,7 +54,7 @@ NoSQL データベースを使用する場合の利点は、エンティティ�
 
 ## <a name="introduction-to-azure-cosmos-db-and-the-native-cosmos-db-api"></a>Azure Cosmos DB とネイティブ Cosmos DB API の概要
 
-[Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction) は、ミッション クリティカルなアプリケーションのために、世界各地に分散された Microsoft のデータベース サービスです。 Azure Cosmos DB では、[ターン キー グローバル配布](https://docs.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally)、世界規模での[スループットとストレージのエラスティック スケーリング](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data)、99 パーセンタイルで 10 ミリ秒未満の待機時間、[5 つの明確に定義された整合性レベル](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels)、および保証された高可用性を提供しており、これらすべてが[業界トップの SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/) でサポートされています。 Azure Cosmos DB により、[データが自動的にインデックス付けされる](http://www.vldb.org/pvldb/vol8/p1668-shukla.pdf)ため、スキーマとインデックスの管理に対処する必要がなくなります。 これはマルチモデルで、ドキュメント、キー値、グラフ、および列指向データ モデルをサポートします。
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) は、ミッション クリティカルなアプリケーションのために、世界各地に分散された Microsoft のデータベース サービスです。 Azure Cosmos DB では、[ターン キー グローバル配布](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)、世界規模での[スループットとストレージのエラスティック スケーリング](https://docs.microsoft.com/azure/cosmos-db/partition-data)、99 パーセンタイルで 10 ミリ秒未満の待機時間、[5 つの明確に定義された整合性レベル](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)、および保証された高可用性を提供しており、これらすべてが[業界トップの SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/) でサポートされています。 Azure Cosmos DB により、[データが自動的にインデックス付けされる](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf)ため、スキーマとインデックスの管理に対処する必要がなくなります。 これはマルチモデルで、ドキュメント、キー値、グラフ、および列指向データ モデルをサポートします。
 
 ![](./media/image19.1.png)図 9-19 Azure Cosmos DB のグローバル配布
 
@@ -123,7 +123,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 他の .NET アプリケーションからアクセスする場合と同じように、コンテナーで実行されている .NET コードから Azure Cosmos DB データベースにアクセスできます。 たとえば、eShopOnContainers の Locations.API と Marketing.API のマイクロサービスは、Azure Cosmos DB データベースを使用できるように実装されています。
 
-ただし、Docker 開発環境の観点から、Azure Cosmos DB には制限があります。 2017 年末時点では、ローカルの開発マシン (PC など) で実行できるオンプレミスの [Azure Cosmos DB エミュレーター](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)がある場合でも、Linux ではなく、Windows がサポートされます。 
+ただし、Docker 開発環境の観点から、Azure Cosmos DB には制限があります。 2017 年末時点では、ローカルの開発マシン (PC など) で実行できるオンプレミスの [Azure Cosmos DB エミュレーター](https://docs.microsoft.com/azure/cosmos-db/local-emulator)がある場合でも、Linux ではなく、Windows がサポートされます。 
 
 また、このエミュレーターを Docker で実行する可能性がありますが、Windows コンテナーのみでり、Linux コンテナーではありません。 現在、Docker for Windows に Linux コンテナーと Windows コンテナーを同時に展開することはできないため、アプリケーションを Linux コンテナーとして展開する場合、これが開発環境にとって最初のハンディキャップとなります。 展開されるすべてのコンテナーは、Linux または Windows 用のどちらかにする必要があります。  
 
@@ -137,7 +137,7 @@ Cosmos DB データベースでは、.NET とネイティブ MongoDB ワイヤ �
 
 [MongoDB Docker イメージ](https://hub.docker.com/r/_/mongo/)は、Docker Linux コンテナーと Docker Windows コンテナーをサポートするマルチアーキテクチャ イメージなので、これは Linux コンテナーを使用する Docker 環境での概念実証にとって非常に便利な方法です。
 
-図 9-21 に示すように、MongoDB API を使用することで、eShopOnContainers でローカル開発環境に対して MongoDB Linux コンテナーと Windows コンテナーの両方がサポートされますが、その後、[MongoDB の接続文字列を Azure Cosmos DB をポイントするように変更](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)するだけで、Azure Cosmos DB と同じようなスケーラブルな PaaS クラウド ソリューションに移行できます。 
+図 9-21 に示すように、MongoDB API を使用することで、eShopOnContainers でローカル開発環境に対して MongoDB Linux コンテナーと Windows コンテナーの両方がサポートされますが、その後、[MongoDB の接続文字列を Azure Cosmos DB をポイントするように変更](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)するだけで、Azure Cosmos DB と同じようなスケーラブルな PaaS クラウド ソリューションに移行できます。 
 
 ![](./media/image20-bis.png) 図 9-21 開発環境に MongoDB コンテナーまたは運用に Azure Cosmos DB を使用する eShopOnContainers
 
@@ -147,7 +147,7 @@ Cosmos DB データベースでは、.NET とネイティブ MongoDB ワイヤ �
 
 MongoDB API を使用することの明らかな利点は、MongoDB と Azure Cosmos DB の両方のデータベース エンジンでソリューションを実行できるため、異なる環境への移行が容易になることです。 ただし、特定のデータベース エンジンの機能をフル活用するために、ネイティブ API (ネイティブ Cosmos DB API) を使用することには意義がある場合があります。
 
-単純に MongoDB を使用することとクラウドでの Cosmos DB との詳しい比較については、[Azure Cosmos DB を使用する利点に関するページ](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)を参照してください。 
+単純に MongoDB を使用することとクラウドでの Cosmos DB との詳しい比較については、[Azure Cosmos DB を使用する利点に関するページ](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)を参照してください。 
 
 
 ### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>実稼働アプリケーションのアプローチを分析する: MongoDB API とCosmos DB API
@@ -295,29 +295,29 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 #ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
 ```
 
-「[Azure Cosmos DB への MongoDB アプリケーションの接続](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)」で説明したように、ESHOP_AZURE_COSMOSDB 行をコメント解除し、Azure Portal から取得した Azure Cosmos DB 接続文字列を使用してそれを更新する必要があります。
+「[Azure Cosmos DB への MongoDB アプリケーションの接続](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)」で説明したように、ESHOP_AZURE_COSMOSDB 行をコメント解除し、Azure Portal から取得した Azure Cosmos DB 接続文字列を使用してそれを更新する必要があります。
 
 `ESHOP_AZURE_COSMOSDB` グローバル変数が空、つまり、`.env` ファイル内でコメント アウトされている場合、次の .yml コードに示されているように、`nosql.data` という名前の eShopOnContainers で展開されているローカルの MongoDB コンテナーをポイントする既定の MongoDB 接続文字列がコンテナーで使用されます。 
 
 #### <a name="additional-resources"></a>その他の技術情報
 
 -   **NoSQL データベースのドキュメント データのモデリング**
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
+    [*https://docs.microsoft.com/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
 
 -   **Vaughn Vernon。理想的なドメイン駆動設計集約ストアとは?**
     [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
 
 -   **Azure Cosmos DB の概要: MongoDB の API** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
+    [*https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 
 -   **Azure Cosmos DB: .NET および Azure Portal を使用して MongoDB API の Web アプリを構築する** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
+    [*https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
 
 -   **ローカルの開発とテストでの Azure Cosmos DB Emulator の使用** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
+    [*https://docs.microsoft.com/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/azure/cosmos-db/local-emulator)
 
 -   **Azure Cosmos DB への MongoDB アプリケーションの接続** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)
+    [*https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)
 
 -   **Cosmos DB エミュレーターの Docker イメージ (Windows コンテナー)** 
     [*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
@@ -326,7 +326,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
     [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
 -   **Azure Cosmos DB: MongoDB API アカウントでの Studio 3T の使用** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)
+    [*https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
 
 
 >[!div class="step-by-step"]

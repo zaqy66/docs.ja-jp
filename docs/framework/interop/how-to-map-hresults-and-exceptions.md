@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d9825deae22e856cf520e6173d53278539c576c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d5728de1140df51b9c725db0c8c80d21ace6deb
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393550"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454474"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>方法: HRESULT に例外を割り当てる
 COM メソッドでは、HRESULT を返してエラーを報告します。 .NET メソッドでは、例外をスローしてエラーを報告します。 ランタイムは、この 2 つの間の遷移を処理します。 .NET Framework の例外クラスはそれぞれ HRESULT に割り当てられます。  
@@ -46,7 +46,7 @@ COM メソッドでは、HRESULT を返してエラーを報告します。 .NET
     }  
     ```  
   
- マネージ コードとアンマネージ コードの両方を同時に使用する (任意のプログラミング言語の) プログラムもあります。 たとえば、次のコード例のカスタム マーシャラーは、**Marshal.ThrowExceptionForHR(int HResult)** メソッドを使用して、特定の HRESULT 値を持つ例外をスローします。 このメソッドは、HRESULT を調べ、適切な例外型を生成します。 たとえば、次のコード フラグメントの HRESULT では、**ArgumentException** が生成されます。  
+ マネージド コードとアンマネージド コードの両方を同時に使用する (任意のプログラミング言語の) プログラムもあります。 たとえば、次のコード例のカスタム マーシャラーは、**Marshal.ThrowExceptionForHR(int HResult)** メソッドを使用して、特定の HRESULT 値を持つ例外をスローします。 このメソッドは、HRESULT を調べ、適切な例外型を生成します。 たとえば、次のコード フラグメントの HRESULT では、**ArgumentException** が生成されます。  
   
 ```cpp  
 CMyClass::MethodThatThrows  
@@ -124,7 +124,7 @@ CMyClass::MethodThatThrows
 |**COR_E_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
 |**その他のすべての HRESULT**|**COMException**|  
   
- 拡張エラー情報を取得するために、マネージ クライアントは、生成された例外オブジェクトのフィールドを調べる必要があります。 例外オブジェクトでエラーについての有益な情報を提供できるようにするには、COM オブジェクトは、**IErrorInfo** インターフェイスを実装している必要があります。 ランタイムは、**IErrorInfo** で提供される情報を使用して例外オブジェクトを初期化します。  
+ 拡張エラー情報を取得するために、マネージド クライアントは、生成された例外オブジェクトのフィールドを調べる必要があります。 例外オブジェクトでエラーについての有益な情報を提供できるようにするには、COM オブジェクトは、**IErrorInfo** インターフェイスを実装している必要があります。 ランタイムは、**IErrorInfo** で提供される情報を使用して例外オブジェクトを初期化します。  
   
  COM オブジェクトで **IErrorInfo** がサポートされていない場合、ランタイムは既定値で例外オブジェクトを初期化します。 次の表で、例外オブジェクトに関連付けられた各フィールドをリストし、COM オブジェクトが **IErrorInfo** をサポートしている場合の既定の情報ソースを示します。  
   
@@ -135,7 +135,7 @@ CMyClass::MethodThatThrows
 |**ErrorCode**|呼び出しから返された HRESULT。|  
 |**HelpLink**|**IErrorInfo->HelpContext** が 0 以外の場合、文字列は **IErrorInfo->GetHelpFile**、"#"、および **IErrorInfo->GetHelpContext** を連結して形成されます。 それ以外の場合、文字列は **IErrorInfo->GetHelpFile** から返されます。|  
 |**InnerException**|常に null 参照 (Visual Basic では **Nothing**)。|  
-|**[メッセージ]**|**IErrorInfo->GetDescription** から返された文字列。|  
+|**メッセージ**|**IErrorInfo->GetDescription** から返された文字列。|  
 |**ソース**|**IErrorInfo->GetSource** から返された文字列。|  
 |**StackTrace**|スタック トレース。|  
 |**TargetSite**|失敗を示す HRESULT を返したメソッドの名前。|  
@@ -143,5 +143,5 @@ CMyClass::MethodThatThrows
  **Message**、**Source**、および **StackTrace** などの例外フィールドは、**StackOverflowException** では使用できません。  
   
 ## <a name="see-also"></a>参照  
- [高度な COM 相互運用性](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
+ [高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
  [例外](../../standard/exceptions/index.md)

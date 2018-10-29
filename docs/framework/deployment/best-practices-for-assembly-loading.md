@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b05ec604f8493ba773d9de9af19acc70c023b8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394154"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201583"
 ---
 # <a name="best-practices-for-assembly-loading"></a>アセンブリの読み込みのベスト プラクティス
 ここでは、<xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。 また、次の推奨事項について説明します。  
@@ -164,9 +164,10 @@ ms.locfileid: "33394154"
   
  これらのアセンブリは、<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> メソッドを使用して読み込むことができます。 これらはプローブ パスに存在することになるので、読み込み元コンテキストからではなく、既定の読み込みコンテキストに読み込まれるようになります。 ただし、<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> メソッドに切り替えて、常に最新のバージョンが使用されるようにアセンブリの完全な表示名を指定することをお勧めします。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>  
- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>  
- [アドインおよび拡張機能](../../../docs/framework/add-ins/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
+- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
+- [アドインおよび拡張機能](../../../docs/framework/add-ins/index.md)

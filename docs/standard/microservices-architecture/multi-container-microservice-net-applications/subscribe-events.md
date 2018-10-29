@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 5e53e0a3578c19b09f5327f444d1a5c013ad4cd9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106578"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194073"
 ---
 # <a name="subscribing-to-events"></a>イベントへのサブスクライブ
 
@@ -152,7 +152,7 @@ CQRS アプローチを使用する場合など、より高度なマイクロサ
 
 次のコードは、複数の DbContext オブジェクト (更新される元のデータに関連する 1 つのコンテキストと、IntegrationEventLog テーブルに関連するもう 1 つのコンテキスト) を含む単一のトランザクションを作成する方法を示しています。
 
-下のサンプル コードに示したトランザクションは、コードの実行時にデータベースへの接続に問題が発生した場合の回復性を備えていないことに注意してください。 これは、サーバー間でデータベースを移動する可能性がある Azure SQL DB のようなクラウドベースのシステムで発生する可能性があります。 複数のコンテキストにわたる回復性を備えたトランザクションの実装については、このガイドの後のセクション「[回復性の高い Entity Framework Core SQL 接続の実装](#implementing_resilient_EFCore_SQL_conns)」をご覧ください。
+下のサンプル コードに示したトランザクションは、コードの実行時にデータベースへの接続に問題が発生した場合の回復性を備えていないことに注意してください。 これは、サーバー間でデータベースを移動する可能性がある Azure SQL DB のようなクラウドベースのシステムで発生する可能性があります。 複数のコンテキストにわたる回復性を備えたトランザクションの実装については、このガイドの後のセクション「[回復性の高い Entity Framework Core SQL 接続の実装](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md)」をご覧ください。
 
 わかりやすくするために、次の例では、プロセス全体を 1 つのコード片で示しています。 ただし、eShopOnContainers の実装は実際にはリファクターされ、このロジックは管理しやすいように複数のクラスに分割されます。
 
@@ -183,7 +183,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
   catalogItem = productToUpdate; 
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if !(raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent) 
   {
       await _catalogContext.SaveChangesAsync();
   }
@@ -317,7 +317,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 ### <a name="additional-resources"></a>その他の技術情報
 
 -   **NServiceBus を使用するフォークされた eShopOnContainers (Particular Software)**
-    [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
+    [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
 -   **イベント駆動型メッセージング**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
@@ -326,7 +326,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 -   **発行-サブスクライブ チャンネル**
-    [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **境界コンテキスト間の通信**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)

@@ -4,12 +4,12 @@ description: .NET Core で提供される、C# 言語レベルの非同期プロ
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 971295b85e5f2763eef87bfe9109524db2630120
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e562ef9fffa5bf77fd5dee1cb19cee0a2492b986
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865151"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349096"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
@@ -108,7 +108,7 @@ C# 側では、コンパイラはコードをステート マシンに変換し�
     
 処理が **I/O バインド**の場合は、`async` と `await` を使いますが、`Task.Run` は "*使いません*"。  タスク並列ライブラリは "*使わないでください*"。  その理由について詳しくは、「[非同期の詳細](../standard/async-in-depth.md)」をご覧ください。
 
-処理が **CPU バインド**であり、応答性が重要な場合は、`async` と `await` を使い、`Task.Run` を "*使って*" 別のスレッドで処理を実行します。  処理が同時実行と並列処理に適している場合は、タスク並列ライブラリを使うことも考慮する必要があります。
+処理が **CPU バインド**であり、応答性が重要な場合は、`async` と `await` を使い、`Task.Run` を "*使って*" 別のスレッドで処理を実行します。  処理がコンカレンシーと並列処理に適している場合は、タスク並列ライブラリを使うことも考慮する必要があります。
 
 さらに、常にコードの実行を測定する必要があります。  たとえば、マルチスレッドでのコンテキスト切り替えのオーバーヘッドと比較して、CPU バインドの処理の負荷がそれほど大きくないことがわかる場合があります。  すべての選択肢にはトレードオフがあり、状況に合った適切なトレードオフを選ぶ必要があります。
 
@@ -132,7 +132,7 @@ public async Task<int> GetDotNetCountAsync()
 {
     // Suspends GetDotNetCountAsync() to allow the caller (the web server)
     // to accept another request, rather than blocking on this one.
-    var html = await _httpClient.GetStringAsync("http://dotnetfoundation.org");
+    var html = await _httpClient.GetStringAsync("https://dotnetfoundation.org");
 
     return Regex.Matches(html, @"\.NET").Count;
 }
@@ -146,7 +146,7 @@ private readonly HttpClient _httpClient = new HttpClient();
 private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
 {
     // Capture the task handle here so we can await the background task later.
-    var getDotNetFoundationHtmlTask = _httpClient.GetStringAsync("http://www.dotnetfoundation.org");
+    var getDotNetFoundationHtmlTask = _httpClient.GetStringAsync("https://www.dotnetfoundation.org");
 
     // Any other work on the UI thread can be done here, such as enabling a Progress Bar.
     // This is important to do here, before the "await" call, so that the user
