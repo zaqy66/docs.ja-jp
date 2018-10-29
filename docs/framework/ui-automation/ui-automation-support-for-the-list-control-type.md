@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1ca4e0f0e0d88004d6c2059af4c774c916efd5ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1ae62cca72831b0319243acd9c5bf7a2b86138c3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035072"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205270"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>UI オートメーションによる List コントロール型のサポート
 > [!NOTE]
@@ -36,21 +36,19 @@ ms.locfileid: "48035072"
   
  List コントロール型 (リスト コントロールなど) を実装するコントロールのコントロール ビューは以下で構成されます。  
   
--   リスト コントロール内の 0 個以上の項目 (項目は List Item または Data Item のコントロール型に基づきます)  
+- (項目はリスト アイテムまたはデータ項目コントロール型に基づくことができます) のリスト コントロール内の 0 個以上の項目。
   
--   リスト コントロール内の 0 個以上のグループ コントロール  
+- リスト コントロール内のグループ コントロール 0 個以上。
   
--   0、1、または 2 個のスクロール バー コントロール。  
+- 0、1、または 2 つのスクロール バー コントロール。
   
--  
+List コントロール型 (リスト コントロールなど) を実装するコントロールのコンテンツ ビューは以下で構成されます。  
   
- List コントロール型 (リスト コントロールなど) を実装するコントロールのコンテンツ ビューは以下で構成されます。  
+- (項目はリスト アイテムまたはデータ項目コントロール型に基づくことができます) のリスト コントロール内の 0 個以上の項目。
   
--   リスト コントロール内の 0 個以上の項目 (項目は List Item または Data Item のコントロール型に基づきます)  
-  
--   リスト コントロール内の 0 個以上のグループ  
-  
- リスト コントロールには、一緒にグループ化されていない階層リレーションシップを持つ項目を含めることはできません。 項目が [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内に子を持つ場合、リスト コンテナーは Tree コントロール型に基づく必要があります。  
+- リスト コントロール内の 0 個以上のグループ。
+
+リスト コントロールには、一緒にグループ化されていない階層リレーションシップを持つ項目を含めることはできません。 項目が [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内に子を持つ場合、リスト コンテナーは Tree コントロール型に基づく必要があります。  
   
  リスト コントロール内の選択可能項目は、リスト コントロールの [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーの子孫から取得できます。 リスト コントロール内のすべての項目は、同じ選択グループに属している必要があります。 リスト内の選択可能項目は ListItem (DataItem ではなく) コントロール型として公開する必要があります。  
   
