@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18bd35495d1cb7cfffe39efa8f7313b75c7f5378
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 0476fe7ed731dbb2c6b86cff3255673ecee6f98d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261564"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198459"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は [!INCLUDE[wrt](../../../includes/wrt-md.md)]のさまざまなソフトウェア開発シナリオをサポートします。 これらのシナリオは次の 3 つのカテゴリに分類されます。
@@ -25,7 +25,7 @@ ms.locfileid: "48261564"
 
 -   .NET Framework で作成する [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリで使用するクラス ライブラリを開発する。
 
--   .WinMD ファイルにパッケージ化され、[!INCLUDE[wrt](../../../includes/wrt-md.md)]をサポートするすべてのプログラミング言語で使用できる、[!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントを開発する。 たとえばを参照してください[c# および Visual Basic での Windows ランタイム コンポーネントの作成](https://msdn.microsoft.com/library/windows/apps/br230301(v=VS.110).aspx)です。
+-   .WinMD ファイルにパッケージ化され、[!INCLUDE[wrt](../../../includes/wrt-md.md)]をサポートするすべてのプログラミング言語で使用できる、[!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントを開発する。 たとえばを参照してください[c# および Visual Basic での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)です。
 
  このトピックでは、3 つのカテゴリすべてに対して .NET Framework が提供するサポートの概略と、[!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント用シナリオについて説明します。 最初のセクションでは、.NET Framework と [!INCLUDE[wrt](../../../includes/wrt-md.md)]の関係についての基本情報と、ヘルプ システムや IDE で見られる可能性がある特異な状況について説明します。 [2 番目のセクション](#WindowsRuntimeComponents)を開発するためのシナリオについて説明します[!INCLUDE[wrt](../../../includes/wrt-md.md)]コンポーネント。
 
@@ -82,14 +82,14 @@ ms.locfileid: "48261564"
 
  [!INCLUDE[wrt](../../../includes/wrt-md.md)]では、`IMap<K, V>` と `IMapView<K, V>` は `IKeyValuePair` を使用して反復されます。 これらをマネージド コードに渡すと、`IDictionary<TKey, TValue>` および `IReadOnlyDictionary<TKey, TValue>` として表示されるため、これを列挙するには必然的に `System.Collections.Generic.KeyValuePair<TKey, TValue>` を使用します。
 
- インターフェイスがマネージド コード内に表示される方法によって、これらのインターフェイスを実装する型の表示方法が決まります。 たとえば、`PropertySet` クラスは `IMap<K, V>` を実装しますが、これはマネージド コードでは `IDictionary<TKey, TValue>` として表示されます。 `PropertySet` では、`IMap<K, V>` ではなく `IDictionary<TKey, TValue>` が実装されたように見えるため、マネージド コードでは .NET Framework ディクショナリの `Add` メソッドのように動作する `Add` メソッドがあるように表示されます。 `Insert` メソッドが含まれているようには表示されません。
+ インターフェイスがマネージド コード内に表示される方法によって、これらのインターフェイスを実装する型の表示方法が決まります。 たとえば、`PropertySet` クラスは `IMap<K, V>` を実装しますが、これはマネージド コードでは `IDictionary<TKey, TValue>` として表示されます。 `PropertySet` では、`IMap<K, V>` ではなく `IDictionary<TKey, TValue>` が実装されたように見えるため、マネージド コードでは .NET Framework ディクショナリの `Add` メソッドのように動作する `Add` メソッドがあるように表示されます。 `Insert` メソッドがないように見えます。
 
- 詳細については、.NET Framework を使用して作成する方法、[!INCLUDE[wrt](../../../includes/wrt-md.md)]コンポーネント、および JavaScript で、このようなコンポーネントを使用する方法を示すチュートリアルを参照してください。 [c# および Visual Basic での Windows ランタイム コンポーネントの作成](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx)です。
+ 詳細については、.NET Framework を使用して作成する方法、[!INCLUDE[wrt](../../../includes/wrt-md.md)]コンポーネント、および JavaScript で、このようなコンポーネントを使用する方法を示すチュートリアルを参照してください。 [c# および Visual Basic での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)です。
 
 ### <a name="primitive-types"></a>プリミティブ型
  マネージド コードで [!INCLUDE[wrt](../../../includes/wrt-md.md)]のナチュラルな使用を有効にすると、[!INCLUDE[wrt](../../../includes/wrt-md.md)]のプリミティブ型ではなく .NET Framework のプリミティブ型がコードに表示されます。 .NET Framework では、`Int32` 構造体などのプリミティブ型には、`Int32.TryParse` メソッドなどの便利なプロパティとメソッドが多くあります。 一方、[!INCLUDE[wrt](../../../includes/wrt-md.md)]のプリミティブ型と構造体にはフィールドしかありません。 マネージド コードでプリミティブを使用すると、.NET Framework の型のように表示され、通常どおりに .NET Framework 型のプロパティとメソッドを使用できます。 要約すると、次のようになります。
 
--   [!INCLUDE[wrt](../../../includes/wrt-md.md)] のプリミティブ `Int32`、`Int64`、`Single`、`Double`、`Boolean`、`String` (Unicode 文字の変更できないコレクション)、`Enum`、`UInt32`、`UInt64`、および `Guid` については、`System` 名前空間と同じ名前の型を使用します。
+-   [!INCLUDE[wrt](../../../includes/wrt-md.md)]のプリミティブ `Int32`、`Int64`、`Single`、`Double`、`Boolean`、`String` (Unicode 文字の変更できないコレクション)、`Enum`、`UInt32`、`UInt64`、および `Guid` では、`System` 名前空間内の同じ名前の型を使用します。
 
 -   `UInt8` では、`System.Byte` を使用します。
 
@@ -149,6 +149,6 @@ ms.locfileid: "48261564"
 |[Windows ストア アプリ用 .NET の概要](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx)|[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリと [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントの作成に使用できる .NET Framework の型およびメンバーについて説明します  (Windows デベロッパー センター内)。|
 |[C# または Visual Basic を使った Windows ストア アプリのロードマップ](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|C# または Visual Basic を使用して [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリの開発を開始するときに役立つ主要リソース (各種のクイック スタート トピック、ガイドライン、ベスト プラクティスなど) が用意されています  (Windows デベロッパー センター内)。|
 |[どのように操作方法 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|C# または Visual Basic を使用して [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリの開発を開始するときに役立つ主要リソース (各種のクイック スタート トピック、ガイドライン、ベスト プラクティスなど) が用意されています  (Windows デベロッパー センター内)。|
-|[C# および Visual Basic での Windows ランタイム コンポーネントの作成](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx)|.NET Framework を使用して [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントを作成する方法、JavaScript を使用して Windows 用にビルドされた [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリの一部としてそのコンポーネントを使用する方法、Visual Studio との組み合わせをデバッグする方法について説明します  (Windows デベロッパー センター内)。|
+|[C# および Visual Basic での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|.NET Framework を使用して [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントを作成する方法、JavaScript を使用して Windows 用にビルドされた [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリの一部としてそのコンポーネントを使用する方法、Visual Studio との組み合わせをデバッグする方法について説明します  (Windows デベロッパー センター内)。|
 |[Windows ランタイム リファレンス](/uwp/api/)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]のリファレンス ドキュメント  (Windows デベロッパー センター内)。|
 |[Windows ランタイムへの URI の引き渡し](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|マネージド コードから [!INCLUDE[wrt](../../../includes/wrt-md.md)]に URI を渡すときに発生する可能性がある問題と、その回避方法について説明します。|
