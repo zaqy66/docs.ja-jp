@@ -4,12 +4,12 @@ description: .NET Core でのバージョン管理のしくみについて説明
 author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 0ce64aa266f8e1de2c2cefd366bcbfa3f5cfc8f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518603"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047437"
 ---
 # <a name="net-core-versioning"></a>.NET Core バージョン管理
 
@@ -32,7 +32,7 @@ SDK バージョン番号の 3 番目の位置には、マイナー番号とパ�
 | ランタイムおよび SDK パッチ | 2.2.1             | 2.2.102           |
 | SDK 機能変更    | 2.2.1             | 2.2.200           |
 
-(\*) 上記の表では、今後リリースされる 2.2 .NET Core Runtime が例として使用されています。 .NET Core 2.1 に対する最初の SDK が 2.1.300 であることが、履歴アーティファクトで示されていたからです。 詳細については、[.NET Core バージョン管理の履歴](version-history.md)に関する記事を参照してください。
+(\*) 上記の表では、今後リリースされる 2.2 .NET Core Runtime が例として使用されています。.NET Core 2.1 に対する最初の SDK が 2.1.300 であることが、履歴アーティファクトで示されていたからです。 詳細については、[.NET Core バージョン管理の履歴](version-history.md)に関する記事を参照してください。
 
 注: 
 
@@ -43,7 +43,7 @@ SDK バージョン番号の 3 番目の位置には、マイナー番号とパ�
 
 ## <a name="semantic-versioning"></a>セマンティック バージョン管理
 
-.NET Core *ランタイム*は、[セマンティック バージョニング (SemVer)](http://semver.org/) にほぼ準拠しています。`MAJOR.MINOR.PATCH` バージョン管理の使用が採用され、バージョン番号のさまざまな部分を使用して変更の程度と種類が記述されています。
+.NET Core *ランタイム*は、[セマンティック バージョニング (SemVer)](https://semver.org/) にほぼ準拠しています。`MAJOR.MINOR.PATCH` バージョン管理の使用が採用され、バージョン番号のさまざまな部分を使用して変更の程度と種類が記述されています。
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
@@ -92,7 +92,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 .NET Standard は、.NET 参照アセンブリで構成されています。 各プラットフォームに固有の複数の実装があります。 参照アセンブリには、指定された .NET Standard バージョンの一部である .NET API の定義が含まれています。 各実装では、特定のプラットフォームに対する .NET Standard コントラクトが満たされます。 .NET Standard の詳細については、.NET ガイド内の [.NET Standard](../../standard/net-standard.md) に関する記事を参照してください。
 
-.NET Standard 参照アセンブリでは、`MAJOR.MINOR` バージョン管理スキームが使用されます。 .NET Standard の場合、`PATCH` レベルは有用ではありません。 .NET Standard では、API 仕様しか公開されず (実装は対象外)、定義上、API に対する変更はいずれも機能セット内の変更を示すものであり、`MINOR` バージョンとなるためです。
+.NET Standard 参照アセンブリでは、`MAJOR.MINOR` バージョン管理スキームが使用されます。 .NET Standard の場合、`PATCH` レベルは有用ではありません。.NET Standard では、API 仕様しか公開されず (実装は対象外)、定義上、API に対する変更はいずれも機能セット内の変更を示すものであり、`MINOR` バージョンとなるためです。
 
 各プラットフォーム上の実装の場合は、通常、プラットフォーム リリースの一部として更新されるので、そのプラットフォーム上で .NET Standard を使用しているプログラマには明らかにされません。
 

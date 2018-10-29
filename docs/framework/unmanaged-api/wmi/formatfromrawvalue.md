@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 90af7d01d78cf74cbb304e3b987d5fe58e23f76e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086138"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196701"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 関数
 1 つの生のパフォーマンス データ値が指定した形式に変換されます。この形式変換が時間ベースである場合は、2 つの生のパフォーマンス データ値が変換されます。   
@@ -65,11 +65,11 @@ int FormatFromRawValue (
 `pTimeBase`  
 [in]形式の変換に必要な場合、時間ベースへのポインター。 時間ベースの情報は、形式変換の必要はありません、このパラメーターの値は無視されます。
 
-`pRawValue1` [in]ポインターを[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)生のパフォーマンス値を表す構造体です。
+`pRawValue1` [in]ポインターを[ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter)生のパフォーマンス値を表す構造体です。
 
-`pRawValue2` [in]ポインターを[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) 2 番目の生のパフォーマンス値を表す構造体です。 2 番目の生のパフォーマンス値が必要でない場合、このパラメーターがあります`null`します。
+`pRawValue2` [in]ポインターを[ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) 2 番目の生のパフォーマンス値を表す構造体です。 2 番目の生のパフォーマンス値が必要でない場合、このパラメーターがあります`null`します。
 
-`pFmtValue` [out]ポインターを[ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx)を書式設定されたパフォーマンスの値を受け取る構造体。
+`pFmtValue` [out]ポインターを[ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue)を書式設定されたパフォーマンスの値を受け取る構造体。
 
 ## <a name="return-value"></a>戻り値
 
@@ -83,9 +83,9 @@ int FormatFromRawValue (
   
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx)関数。
+この関数の呼び出しをラップする、 [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29)関数。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ライブラリ:** どちら  

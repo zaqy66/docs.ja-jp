@@ -5,11 +5,11 @@ ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036009"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199709"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native とコンパイル
 .NET Framework を対象にした Windows 8.1 アプリケーションと Windows デスクトップ アプリケーションは特定のプログラミング言語で記述し、中間言語 (IL: Intermediate Language) にコンパイルされます。 実行時には、メソッドが初めて実行される直前に JIT (Just-In-Time) コンパイラによって IL がローカル コンピューターのネイティブ コードにコンパイルされます。 それとは対照的に、.NET ネイティブ ツール チェーンでは、コンパイル時にソース コードをネイティブ コードに変換します。 このトピックでは、.NET ネイティブを、.NET Framework アプリをコンパイルする他のテクノロジと比較します。また、.NET ネイティブがネイティブ コードをどのように生成するのかについて実践的な概要を説明しますので、.NET ネイティブでコンパイルしたコードで発生する例外が JIT でコンパイルしたコードでは発生しない理由を理解するために役立ちます。  

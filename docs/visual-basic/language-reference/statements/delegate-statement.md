@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50046891"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199774"
 ---
 # <a name="delegate-statement"></a>Delegate ステートメント
 デリゲートを宣言するために使用します。 デリゲートを参照する参照型、`Shared`メソッド、型またはオブジェクトのインスタンス メソッドにします。 このデリゲート クラスのインスタンスを作成するパラメーターと戻り値の型が一致するプロシージャを使用できます。 プロシージャし、後で呼び出せるデリゲート インスタンスの作成。  

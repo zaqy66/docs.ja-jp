@@ -2,13 +2,12 @@
 title: '&lt;peerTransport&gt; の &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-author: BrucePerlerMS
-ms.openlocfilehash: 152087550d3fa881a7a88271d9c91dfcc5c894c8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c7a2a2cde58dac87b1b378fe2ac8148493c1cf09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176761"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200458"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;peerTransport&gt; の &lt;security&gt;
 ピア チャネルに関連付けられたセキュリティ設定を格納します。使用される認証の種類とメッセージ トランスポートで使用されるセキュリティを含みます。  

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805861"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197198"
 ---
 # <a name="service-channel-level-programming"></a>サービス チャネル レベルのプログラミング
-このトピックを使用せずに Windows Communication Foundation (WCF) サービス アプリケーションを記述する方法について説明、<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>とその関連付けられたオブジェクト モデルです。  
+このトピックを使用せずに Windows Communication Foundation (WCF) サービスのアプリケーションを記述する方法を説明します、<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>とその関連付けられたオブジェクト モデルです。  
   
 ## <a name="receiving-messages"></a>メッセージの受信  
  メッセージの受信と処理の準備を整えるには、次の手順に従う必要があります。  
@@ -29,12 +29,12 @@ ms.locfileid: "33805861"
 5.  すべてのチャネル オブジェクトを閉じます。  
   
 #### <a name="creating-a-binding"></a>バインディングの作成  
- メッセージのリッスンと受信の最初の手順として、バインディングを作成します。 WCF は、組み込みまたはシステム提供バインディングがいくつかうちの 1 つのインスタンス化が直接使用することができますに付属します。 また、CustomBinding クラスをインスタンス化することにより、独自のバインディングを作成することもできます。手順 1. のコードは、この処理を実行します。  
+ メッセージのリッスンと受信の最初の手順として、バインディングを作成します。 WCF のうち 1 つのインスタンス化で直接使用できるいくつかの組み込みまたはシステム提供のバインディングに同梱されています。 また、CustomBinding クラスをインスタンス化することにより、独自のバインディングを作成することもできます。手順 1. のコードは、この処理を実行します。  
   
  後のコード例は、<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> のインスタンスを作成し、その Elements コレクションに <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> を追加します。Elements コレクションは、チャネル スタックを作成するために使用されるバインド要素のコレクションです。 この例では、Elements コレクションには <xref:System.ServiceModel.Channels.HttpTransportBindingElement> しか含まれないため、チャネル スタックは HTTP トランスポート チャネルだけを持ちます。  
   
 #### <a name="building-a-channellistener"></a>ChannelListener のビルド  
- バインディングを作成した後で呼び出して<!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>-->`System.ServiceModel.Channels.Binding.BuildChannelListener`型パラメーターは、チャネル形状を作成するチャネル リスナーを作成します。 この例では、要求/応答メッセージ交換パターンで受信メッセージをリッスンする必要があるため、<xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> を使用します。  
+ バインディングを作成したら、<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> を呼び出してチャネル リスナーをビルドします。型パラメーターは、作成するチャネル形状です。 この例では、要求/応答メッセージ交換パターンで受信メッセージをリッスンする必要があるため、<xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> を使用します。  
   
  <xref:System.ServiceModel.Channels.IReplyChannel> は、要求メッセージを受信し、応答メッセージを返信するために使用されます。 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> を呼び出すと、要求メッセージの受信と応答メッセージの返信に使用できる <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> が返されます。  
   
