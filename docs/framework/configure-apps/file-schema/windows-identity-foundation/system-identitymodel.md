@@ -4,47 +4,47 @@ ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
 ms.openlocfilehash: 1b3121a6e7e036ec268cf83ffbf545c0e669a9b9
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50041878"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199397"
 ---
-# <a name="ltsystemidentitymodelgt"></a><span data-ttu-id="7f703-102">&lt;system.identityModel&gt;</span><span class="sxs-lookup"><span data-stu-id="7f703-102">&lt;system.identityModel&gt;</span></span>
-<span data-ttu-id="7f703-103">アプリケーションの Windows Identity Foundation (WIF) オプションを有効にするための構成を提供します。</span><span class="sxs-lookup"><span data-stu-id="7f703-103">Provides configuration for enabling Windows Identity Foundation (WIF) options in applications.</span></span>  
+# <a name="ltsystemidentitymodelgt"></a><span data-ttu-id="00ce7-102">&lt;system.identityModel&gt;</span><span class="sxs-lookup"><span data-stu-id="00ce7-102">&lt;system.identityModel&gt;</span></span>
+<span data-ttu-id="00ce7-103">アプリケーションの Windows Identity Foundation (WIF) オプションを有効にするための構成を提供します。</span><span class="sxs-lookup"><span data-stu-id="00ce7-103">Provides configuration for enabling Windows Identity Foundation (WIF) options in applications.</span></span>  
   
- <span data-ttu-id="7f703-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="7f703-104">\<system.identityModel></span></span>  
+ <span data-ttu-id="00ce7-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="00ce7-104">\<system.identityModel></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f703-105">構文</span><span class="sxs-lookup"><span data-stu-id="7f703-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="00ce7-105">構文</span><span class="sxs-lookup"><span data-stu-id="00ce7-105">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7f703-106">属性および要素</span><span class="sxs-lookup"><span data-stu-id="7f703-106">Attributes and Elements</span></span>  
- <span data-ttu-id="7f703-107">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="7f703-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="00ce7-106">属性および要素</span><span class="sxs-lookup"><span data-stu-id="00ce7-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="00ce7-107">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="00ce7-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7f703-108">属性</span><span class="sxs-lookup"><span data-stu-id="7f703-108">Attributes</span></span>  
- <span data-ttu-id="7f703-109">なし</span><span class="sxs-lookup"><span data-stu-id="7f703-109">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="00ce7-108">属性</span><span class="sxs-lookup"><span data-stu-id="00ce7-108">Attributes</span></span>  
+ <span data-ttu-id="00ce7-109">なし</span><span class="sxs-lookup"><span data-stu-id="00ce7-109">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="7f703-110">子要素</span><span class="sxs-lookup"><span data-stu-id="7f703-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="00ce7-110">子要素</span><span class="sxs-lookup"><span data-stu-id="00ce7-110">Child Elements</span></span>  
   
-|<span data-ttu-id="7f703-111">要素</span><span class="sxs-lookup"><span data-stu-id="7f703-111">Element</span></span>|<span data-ttu-id="7f703-112">説明</span><span class="sxs-lookup"><span data-stu-id="7f703-112">Description</span></span>|  
+|<span data-ttu-id="00ce7-111">要素</span><span class="sxs-lookup"><span data-stu-id="00ce7-111">Element</span></span>|<span data-ttu-id="00ce7-112">説明</span><span class="sxs-lookup"><span data-stu-id="00ce7-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="7f703-113">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="7f703-113">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="7f703-114">サービス レベルの id の設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="7f703-114">Specifies service-level identity settings.</span></span>|  
+|[<span data-ttu-id="00ce7-113">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="00ce7-113">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="00ce7-114">サービス レベルの id の設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="00ce7-114">Specifies service-level identity settings.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="7f703-115">親要素</span><span class="sxs-lookup"><span data-stu-id="7f703-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="00ce7-115">親要素</span><span class="sxs-lookup"><span data-stu-id="00ce7-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="7f703-116">要素</span><span class="sxs-lookup"><span data-stu-id="7f703-116">Element</span></span>|<span data-ttu-id="7f703-117">説明</span><span class="sxs-lookup"><span data-stu-id="7f703-117">Description</span></span>|  
+|<span data-ttu-id="00ce7-116">要素</span><span class="sxs-lookup"><span data-stu-id="00ce7-116">Element</span></span>|<span data-ttu-id="00ce7-117">説明</span><span class="sxs-lookup"><span data-stu-id="00ce7-117">Description</span></span>|  
 |-------------|-----------------|  
-|`<configuration>`|<span data-ttu-id="7f703-118">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="7f703-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`<configuration>`|<span data-ttu-id="00ce7-118">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="00ce7-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7f703-119">Remarks</span><span class="sxs-lookup"><span data-stu-id="7f703-119">Remarks</span></span>  
- <span data-ttu-id="7f703-120">追加、`<system.identityModel>`サービスまたは Windows Identity Foundation (WIF) を使用するアプリケーションを構成する構成ファイルにセクション。</span><span class="sxs-lookup"><span data-stu-id="7f703-120">Add a `<system.identityModel>` section to the configuration file to configure a service or application to use Windows Identity Foundation (WIF).</span></span> <span data-ttu-id="7f703-121">`<system.identityModel>`要素が表される、<xref:System.IdentityModel.Configuration.SystemIdentityModelSection>クラス。</span><span class="sxs-lookup"><span data-stu-id="7f703-121">The `<system.identityModel>` element is represented by the <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="00ce7-119">Remarks</span><span class="sxs-lookup"><span data-stu-id="00ce7-119">Remarks</span></span>  
+ <span data-ttu-id="00ce7-120">追加、`<system.identityModel>`サービスまたは Windows Identity Foundation (WIF) を使用するアプリケーションを構成する構成ファイルにセクション。</span><span class="sxs-lookup"><span data-stu-id="00ce7-120">Add a `<system.identityModel>` section to the configuration file to configure a service or application to use Windows Identity Foundation (WIF).</span></span> <span data-ttu-id="00ce7-121">`<system.identityModel>`要素が表される、<xref:System.IdentityModel.Configuration.SystemIdentityModelSection>クラス。</span><span class="sxs-lookup"><span data-stu-id="00ce7-121">The `<system.identityModel>` element is represented by the <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7f703-122">例</span><span class="sxs-lookup"><span data-stu-id="7f703-122">Example</span></span>  
- <span data-ttu-id="7f703-123">次の例は、追加する方法を示します、`<system.identityModel>`構成ファイルにセクション。</span><span class="sxs-lookup"><span data-stu-id="7f703-123">The following example shows how to add a `<system.identityModel>` section to a configuration file.</span></span> <span data-ttu-id="7f703-124">構成セクションと名前空間宣言を追加する必要があります最初、`<configSections>`要素。</span><span class="sxs-lookup"><span data-stu-id="7f703-124">You must first add the configuration section and namespace declaration under the `<configSections>` element.</span></span> <span data-ttu-id="7f703-125">追加することができ、`<system.IdentityModel>`要素を 1 つまたは複数の id 構成を指定する構成ファイル。</span><span class="sxs-lookup"><span data-stu-id="7f703-125">Then you can add the `<system.IdentityModel>` element to your configuration file to specify one or more identity configurations.</span></span>  
+## <a name="example"></a><span data-ttu-id="00ce7-122">例</span><span class="sxs-lookup"><span data-stu-id="00ce7-122">Example</span></span>  
+ <span data-ttu-id="00ce7-123">次の例は、追加する方法を示します、`<system.identityModel>`構成ファイルにセクション。</span><span class="sxs-lookup"><span data-stu-id="00ce7-123">The following example shows how to add a `<system.identityModel>` section to a configuration file.</span></span> <span data-ttu-id="00ce7-124">構成セクションと名前空間宣言を追加する必要があります最初、`<configSections>`要素。</span><span class="sxs-lookup"><span data-stu-id="00ce7-124">You must first add the configuration section and namespace declaration under the `<configSections>` element.</span></span> <span data-ttu-id="00ce7-125">追加することができ、`<system.IdentityModel>`要素を 1 つまたは複数の id 構成を指定する構成ファイル。</span><span class="sxs-lookup"><span data-stu-id="00ce7-125">Then you can add the `<system.IdentityModel>` element to your configuration file to specify one or more identity configurations.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,5 +75,5 @@ ms.locfileid: "50041878"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7f703-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="7f703-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="00ce7-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="00ce7-126">See Also</span></span>  
  <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>
