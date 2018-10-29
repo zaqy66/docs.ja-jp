@@ -7,41 +7,41 @@ helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 ms.openlocfilehash: 28a9ccfb9d36e648304a177294904ab1b7f18892
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079099"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48024546"
 ---
-# <a name="pragma-checksum-c-reference"></a><span data-ttu-id="5c273-102">#pragma checksum (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="5c273-102">#pragma checksum (C# Reference)</span></span>
-<span data-ttu-id="5c273-103">[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ページのデバッグに使用するソース ファイルのチェックサムを生成します。</span><span class="sxs-lookup"><span data-stu-id="5c273-103">Generates checksums for source files to aid with debugging [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
+# <a name="pragma-checksum-c-reference"></a><span data-ttu-id="85c93-102">#pragma checksum (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="85c93-102">#pragma checksum (C# Reference)</span></span>
+<span data-ttu-id="85c93-103">[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ページのデバッグに使用するソース ファイルのチェックサムを生成します。</span><span class="sxs-lookup"><span data-stu-id="85c93-103">Generates checksums for source files to aid with debugging [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5c273-104">構文</span><span class="sxs-lookup"><span data-stu-id="5c273-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="85c93-104">構文</span><span class="sxs-lookup"><span data-stu-id="85c93-104">Syntax</span></span>  
   
 ```csharp
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5c273-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5c273-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="85c93-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="85c93-105">Parameters</span></span>  
  `"filename"`  
- <span data-ttu-id="5c273-106">変更または更新を監視する必要があるファイルの名前。</span><span class="sxs-lookup"><span data-stu-id="5c273-106">The name of the file that requires monitoring for changes or updates.</span></span>  
+ <span data-ttu-id="85c93-106">変更または更新を監視する必要があるファイルの名前。</span><span class="sxs-lookup"><span data-stu-id="85c93-106">The name of the file that requires monitoring for changes or updates.</span></span>  
   
  `"{guid}"`  
- <span data-ttu-id="5c273-107">ハッシュ アルゴリズムのグローバル一意識別子 (GUID)。</span><span class="sxs-lookup"><span data-stu-id="5c273-107">The Globally Unique Identifier (GUID) for the hash algorithm.</span></span>  
+ <span data-ttu-id="85c93-107">ハッシュ アルゴリズムのグローバル一意識別子 (GUID)。</span><span class="sxs-lookup"><span data-stu-id="85c93-107">The Globally Unique Identifier (GUID) for the hash algorithm.</span></span>  
   
  `"checksum_bytes"`  
- <span data-ttu-id="5c273-108">チェックサムのバイト数を表す 16 進数の文字列。</span><span class="sxs-lookup"><span data-stu-id="5c273-108">The string of hexadecimal digits representing the bytes of the checksum.</span></span> <span data-ttu-id="5c273-109">偶数の 16 進数である必要があります。</span><span class="sxs-lookup"><span data-stu-id="5c273-109">Must be an even number of hexadecimal digits.</span></span> <span data-ttu-id="5c273-110">奇数の数値を指定すると、コンパイル時に警告が出力され、ディレクティブが無視されます。</span><span class="sxs-lookup"><span data-stu-id="5c273-110">An odd number of digits results in a compile-time warning, and the directive are ignored.</span></span>  
+ <span data-ttu-id="85c93-108">チェックサムのバイト数を表す 16 進数の文字列。</span><span class="sxs-lookup"><span data-stu-id="85c93-108">The string of hexadecimal digits representing the bytes of the checksum.</span></span> <span data-ttu-id="85c93-109">偶数の 16 進数である必要があります。</span><span class="sxs-lookup"><span data-stu-id="85c93-109">Must be an even number of hexadecimal digits.</span></span> <span data-ttu-id="85c93-110">奇数の数値を指定すると、コンパイル時に警告が出力され、ディレクティブが無視されます。</span><span class="sxs-lookup"><span data-stu-id="85c93-110">An odd number of digits results in a compile-time warning, and the directive are ignored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5c273-111">コメント</span><span class="sxs-lookup"><span data-stu-id="5c273-111">Remarks</span></span>  
- <span data-ttu-id="5c273-112">Visual Studio デバッガーは、常に正しいソースを検出するために、チェックサムを使用します。</span><span class="sxs-lookup"><span data-stu-id="5c273-112">The Visual Studio debugger uses a checksum to make sure  that it always finds the right source.</span></span> <span data-ttu-id="5c273-113">コンパイラはソース ファイルのチェックサムを計算し、プログラム データベース (PDB) ファイルに結果を出力します。</span><span class="sxs-lookup"><span data-stu-id="5c273-113">The compiler computes the checksum for a source file, and then emits the output to the program database (PDB) file.</span></span> <span data-ttu-id="5c273-114">デバッガーは、その PDB ファイルを使用して、ソース ファイルについて計算したチェックサムと比較します。</span><span class="sxs-lookup"><span data-stu-id="5c273-114">The debugger then uses the PDB to compare against the checksum that it computes for the source file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="85c93-111">コメント</span><span class="sxs-lookup"><span data-stu-id="85c93-111">Remarks</span></span>  
+ <span data-ttu-id="85c93-112">Visual Studio デバッガーは、常に正しいソースを検出するために、チェックサムを使用します。</span><span class="sxs-lookup"><span data-stu-id="85c93-112">The Visual Studio debugger uses a checksum to make sure  that it always finds the right source.</span></span> <span data-ttu-id="85c93-113">コンパイラはソース ファイルのチェックサムを計算し、プログラム データベース (PDB) ファイルに結果を出力します。</span><span class="sxs-lookup"><span data-stu-id="85c93-113">The compiler computes the checksum for a source file, and then emits the output to the program database (PDB) file.</span></span> <span data-ttu-id="85c93-114">デバッガーは、その PDB ファイルを使用して、ソース ファイルについて計算したチェックサムと比較します。</span><span class="sxs-lookup"><span data-stu-id="85c93-114">The debugger then uses the PDB to compare against the checksum that it computes for the source file.</span></span>  
   
- <span data-ttu-id="5c273-115">このソリューションは [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] プロジェクトには使用できません。それは計算されたチェックサムは、.aspx ファイルではなく、生成されたソース ファイルを対象としているためです。</span><span class="sxs-lookup"><span data-stu-id="5c273-115">This solution does not work for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projects, because the computed checksum is for the generated source file, rather than the .aspx file.</span></span> <span data-ttu-id="5c273-116">この問題に対応するため、`#pragma checksum` によって [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ページのチェックサムがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="5c273-116">To address this problem, `#pragma checksum` provides checksum support for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
+ <span data-ttu-id="85c93-115">このソリューションは [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] プロジェクトには使用できません。それは計算されたチェックサムは、.aspx ファイルではなく、生成されたソース ファイルを対象としているためです。</span><span class="sxs-lookup"><span data-stu-id="85c93-115">This solution does not work for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projects, because the computed checksum is for the generated source file, rather than the .aspx file.</span></span> <span data-ttu-id="85c93-116">この問題に対応するため、`#pragma checksum` によって [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ページのチェックサムがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="85c93-116">To address this problem, `#pragma checksum` provides checksum support for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
   
- <span data-ttu-id="5c273-117">Visual C# で [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] プロジェクトを作成すると、生成されるソース ファイルにソースの生成元である .aspx ファイルのチェックサムが含められます。</span><span class="sxs-lookup"><span data-stu-id="5c273-117">When you create an [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] project in Visual C#, the generated source file contains a checksum for the .aspx file, from which the source is generated.</span></span> <span data-ttu-id="5c273-118">コンパイラは、この情報を PDB ファイルに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="5c273-118">The compiler then writes this information into the PDB file.</span></span>  
+ <span data-ttu-id="85c93-117">Visual C# で [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] プロジェクトを作成すると、生成されるソース ファイルにソースの生成元である .aspx ファイルのチェックサムが含められます。</span><span class="sxs-lookup"><span data-stu-id="85c93-117">When you create an [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] project in Visual C#, the generated source file contains a checksum for the .aspx file, from which the source is generated.</span></span> <span data-ttu-id="85c93-118">コンパイラは、この情報を PDB ファイルに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="85c93-118">The compiler then writes this information into the PDB file.</span></span>  
   
- <span data-ttu-id="5c273-119">ファイルに `#pragma checksum` ディレクティブが見つからない場合、コンパイラはチェックサムを計算し、PDB ファイルにその値を書き込みます。</span><span class="sxs-lookup"><span data-stu-id="5c273-119">If the compiler encounters no `#pragma checksum` directive in the file, it computes the checksum and writes the value to the PDB file.</span></span>  
+ <span data-ttu-id="85c93-119">ファイルに `#pragma checksum` ディレクティブが見つからない場合、コンパイラはチェックサムを計算し、PDB ファイルにその値を書き込みます。</span><span class="sxs-lookup"><span data-stu-id="85c93-119">If the compiler encounters no `#pragma checksum` directive in the file, it computes the checksum and writes the value to the PDB file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5c273-120">例</span><span class="sxs-lookup"><span data-stu-id="5c273-120">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="85c93-120">例</span><span class="sxs-lookup"><span data-stu-id="85c93-120">Example</span></span>  
   
 ```csharp
 class TestClass  
@@ -53,8 +53,8 @@ class TestClass
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5c273-121">参照</span><span class="sxs-lookup"><span data-stu-id="5c273-121">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="85c93-121">参照</span><span class="sxs-lookup"><span data-stu-id="85c93-121">See Also</span></span>
 
-- [<span data-ttu-id="5c273-122">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="5c273-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="5c273-123">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="5c273-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="5c273-124">C# プリプロセッサ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="5c273-124">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [<span data-ttu-id="85c93-122">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="85c93-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="85c93-123">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="85c93-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="85c93-124">C# プリプロセッサ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="85c93-124">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

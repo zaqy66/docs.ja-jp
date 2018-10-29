@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
 ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
-ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49995367"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201939"
 ---
-# <a name="object-variable-assignment-visual-basic"></a><span data-ttu-id="c7c5c-102">オブジェクト変数への代入 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7c5c-102">Object Variable Assignment (Visual Basic)</span></span>
-<span data-ttu-id="c7c5c-103">オブジェクトをオブジェクト変数に代入するのにには、通常代入ステートメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-103">You use a normal assignment statement to assign an object to an object variable.</span></span> <span data-ttu-id="c7c5c-104">オブジェクト式を割り当てることができます、または[Nothing](../../../../visual-basic/language-reference/nothing.md)キーワードでは、次の例として示します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-104">You can assign an object expression or the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, as the following example illustrates.</span></span>  
+# <a name="object-variable-assignment-visual-basic"></a><span data-ttu-id="89361-102">オブジェクト変数への代入 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89361-102">Object Variable Assignment (Visual Basic)</span></span>
+<span data-ttu-id="89361-103">オブジェクトをオブジェクト変数に代入するのにには、通常代入ステートメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="89361-103">You use a normal assignment statement to assign an object to an object variable.</span></span> <span data-ttu-id="89361-104">オブジェクト式を割り当てることができます、または[Nothing](../../../../visual-basic/language-reference/nothing.md)キーワードでは、次の例として示します。</span><span class="sxs-lookup"><span data-stu-id="89361-104">You can assign an object expression or the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, as the following example illustrates.</span></span>  
   
 ```  
 Dim thisObject As Object  
@@ -31,20 +31,20 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- <span data-ttu-id="c7c5c-105">`Nothing` 変数に現在割り当てられているオブジェクトが存在しないことを意味します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-105">`Nothing` means there is no object currently assigned to the variable.</span></span>  
+ <span data-ttu-id="89361-105">`Nothing` 変数に現在割り当てられているオブジェクトが存在しないことを意味します。</span><span class="sxs-lookup"><span data-stu-id="89361-105">`Nothing` means there is no object currently assigned to the variable.</span></span>  
   
-## <a name="initialization"></a><span data-ttu-id="c7c5c-106">初期化</span><span class="sxs-lookup"><span data-stu-id="c7c5c-106">Initialization</span></span>  
- <span data-ttu-id="c7c5c-107">コードが実行されている変数に初期化されるオブジェクトが開始すると`Nothing`します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-107">When your code begins running, your object variables are initialized to `Nothing`.</span></span> <span data-ttu-id="c7c5c-108">宣言には初期化が含まれているが、宣言ステートメントの実行時に指定する値を再初期化されます。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-108">Those whose declarations include initialization are reinitialized to the values you specify when the declaration statements are executed.</span></span>  
+## <a name="initialization"></a><span data-ttu-id="89361-106">初期化</span><span class="sxs-lookup"><span data-stu-id="89361-106">Initialization</span></span>  
+ <span data-ttu-id="89361-107">コードが実行されている変数に初期化されるオブジェクトが開始すると`Nothing`します。</span><span class="sxs-lookup"><span data-stu-id="89361-107">When your code begins running, your object variables are initialized to `Nothing`.</span></span> <span data-ttu-id="89361-108">宣言には初期化が含まれているが、宣言ステートメントの実行時に指定する値を再初期化されます。</span><span class="sxs-lookup"><span data-stu-id="89361-108">Those whose declarations include initialization are reinitialized to the values you specify when the declaration statements are executed.</span></span>  
   
- <span data-ttu-id="c7c5c-109">使用して、宣言で初期化を含めることができます、[新規](../../../../visual-basic/language-reference/operators/new-operator.md)キーワード。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-109">You can include initialization in your declaration by using the [New](../../../../visual-basic/language-reference/operators/new-operator.md) keyword.</span></span> <span data-ttu-id="c7c5c-110">次の宣言ステートメントは、オブジェクト変数を宣言`testUri`と`ver`し、特定のオブジェクトを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-110">The following declaration statements declare object variables `testUri` and `ver` and assign specific objects to them.</span></span> <span data-ttu-id="c7c5c-111">それぞれは、オブジェクトを初期化するために、適切なクラスのオーバー ロードされたコンス トラクターのいずれかを使用します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-111">Each uses one of the overloaded constructors of the appropriate class to initialize the object.</span></span>  
+ <span data-ttu-id="89361-109">使用して、宣言で初期化を含めることができます、[新規](../../../../visual-basic/language-reference/operators/new-operator.md)キーワード。</span><span class="sxs-lookup"><span data-stu-id="89361-109">You can include initialization in your declaration by using the [New](../../../../visual-basic/language-reference/operators/new-operator.md) keyword.</span></span> <span data-ttu-id="89361-110">次の宣言ステートメントは、オブジェクト変数を宣言`testUri`と`ver`し、特定のオブジェクトを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="89361-110">The following declaration statements declare object variables `testUri` and `ver` and assign specific objects to them.</span></span> <span data-ttu-id="89361-111">それぞれは、オブジェクトを初期化するために、適切なクラスのオーバー ロードされたコンス トラクターのいずれかを使用します。</span><span class="sxs-lookup"><span data-stu-id="89361-111">Each uses one of the overloaded constructors of the appropriate class to initialize the object.</span></span>  
   
 ```  
 Dim testUri As New System.Uri("https://www.microsoft.com")  
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
-## <a name="disassociation"></a><span data-ttu-id="c7c5c-112">関連付けの解除</span><span class="sxs-lookup"><span data-stu-id="c7c5c-112">Disassociation</span></span>  
- <span data-ttu-id="c7c5c-113">オブジェクト変数を設定`Nothing`と特定のオブジェクト変数の関連付けは失われます。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-113">Setting an object variable to `Nothing` discontinues the association of the variable with any specific object.</span></span> <span data-ttu-id="c7c5c-114">こうと、誤って、変数を変更することで、オブジェクトを変更します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-114">This prevents you from accidentally changing the object by changing the variable.</span></span> <span data-ttu-id="c7c5c-115">オブジェクト変数は、次の例として有効なオブジェクトをポイントするかどうかをテストすることもできます。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-115">It also allows you to test whether the object variable points to a valid object, as the following example shows.</span></span>  
+## <a name="disassociation"></a><span data-ttu-id="89361-112">関連付けの解除</span><span class="sxs-lookup"><span data-stu-id="89361-112">Disassociation</span></span>  
+ <span data-ttu-id="89361-113">オブジェクト変数を設定`Nothing`と特定のオブジェクト変数の関連付けは失われます。</span><span class="sxs-lookup"><span data-stu-id="89361-113">Setting an object variable to `Nothing` discontinues the association of the variable with any specific object.</span></span> <span data-ttu-id="89361-114">こうと、誤って、変数を変更することで、オブジェクトを変更します。</span><span class="sxs-lookup"><span data-stu-id="89361-114">This prevents you from accidentally changing the object by changing the variable.</span></span> <span data-ttu-id="89361-115">オブジェクト変数は、次の例として有効なオブジェクトをポイントするかどうかをテストすることもできます。</span><span class="sxs-lookup"><span data-stu-id="89361-115">It also allows you to test whether the object variable points to a valid object, as the following example shows.</span></span>  
   
 ```  
 If otherObject IsNot Nothing Then  
@@ -52,16 +52,16 @@ If otherObject IsNot Nothing Then
 End If  
 ```  
   
- <span data-ttu-id="c7c5c-116">変数が参照するオブジェクトが別のアプリケーションの場合は、このテストはそのアプリケーションが終了またはだけオブジェクトを無効にするかどうかを判断できません。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-116">If the object your variable refers to is in another application, this test cannot determine whether that application has terminated or just invalidated the object.</span></span>  
+ <span data-ttu-id="89361-116">変数が参照するオブジェクトが別のアプリケーションの場合は、このテストはそのアプリケーションが終了またはだけオブジェクトを無効にするかどうかを判断できません。</span><span class="sxs-lookup"><span data-stu-id="89361-116">If the object your variable refers to is in another application, this test cannot determine whether that application has terminated or just invalidated the object.</span></span>  
   
- <span data-ttu-id="c7c5c-117">オブジェクト変数の値を持つ`Nothing`ともいいます、 *null 参照*します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-117">An object variable with a value of `Nothing` is also called a *null reference*.</span></span>  
+ <span data-ttu-id="89361-117">オブジェクト変数の値を持つ`Nothing`ともいいます、 *null 参照*します。</span><span class="sxs-lookup"><span data-stu-id="89361-117">An object variable with a value of `Nothing` is also called a *null reference*.</span></span>  
   
-## <a name="current-instance"></a><span data-ttu-id="c7c5c-118">現在のインスタンス</span><span class="sxs-lookup"><span data-stu-id="c7c5c-118">Current Instance</span></span>  
- <span data-ttu-id="c7c5c-119">*現在インスタンス*オブジェクトが現在のコードが実行されている 1 つ。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-119">The *current instance* of an object is the one in which the code is currently executing.</span></span> <span data-ttu-id="c7c5c-120">プロシージャ内にある、すべてのコードの実行後、現在のインスタンスは、プロシージャが呼び出された 1 つが。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-120">Since all code executes inside a procedure, the current instance is the one in which the procedure was invoked.</span></span>  
+## <a name="current-instance"></a><span data-ttu-id="89361-118">現在のインスタンス</span><span class="sxs-lookup"><span data-stu-id="89361-118">Current Instance</span></span>  
+ <span data-ttu-id="89361-119">*現在インスタンス*オブジェクトが現在のコードが実行されている 1 つ。</span><span class="sxs-lookup"><span data-stu-id="89361-119">The *current instance* of an object is the one in which the code is currently executing.</span></span> <span data-ttu-id="89361-120">プロシージャ内にある、すべてのコードの実行後、現在のインスタンスは、プロシージャが呼び出された 1 つが。</span><span class="sxs-lookup"><span data-stu-id="89361-120">Since all code executes inside a procedure, the current instance is the one in which the procedure was invoked.</span></span>  
   
- <span data-ttu-id="c7c5c-121">`Me`キーワードは、現在のインスタンスを参照するオブジェクト変数として機能します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-121">The `Me` keyword acts as an object variable referring to the current instance.</span></span> <span data-ttu-id="c7c5c-122">プロシージャがない場合[Shared](../../../../visual-basic/language-reference/modifiers/shared.md)、使用できる、`Me`キーワードを現在のインスタンスへのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-122">If a procedure is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), it can use the `Me` keyword to obtain a pointer to the current instance.</span></span> <span data-ttu-id="c7c5c-123">共有プロシージャは、クラスの特定のインスタンスに関連付けすることはできません。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-123">Shared procedures cannot be associated with a specific instance of a class.</span></span>  
+ <span data-ttu-id="89361-121">`Me`キーワードは、現在のインスタンスを参照するオブジェクト変数として機能します。</span><span class="sxs-lookup"><span data-stu-id="89361-121">The `Me` keyword acts as an object variable referring to the current instance.</span></span> <span data-ttu-id="89361-122">プロシージャがない場合[Shared](../../../../visual-basic/language-reference/modifiers/shared.md)、使用できる、`Me`キーワードを現在のインスタンスへのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="89361-122">If a procedure is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), it can use the `Me` keyword to obtain a pointer to the current instance.</span></span> <span data-ttu-id="89361-123">共有プロシージャは、クラスの特定のインスタンスに関連付けすることはできません。</span><span class="sxs-lookup"><span data-stu-id="89361-123">Shared procedures cannot be associated with a specific instance of a class.</span></span>  
   
- <span data-ttu-id="c7c5c-124">使用して`Me`は現在のインスタンスを別のモジュール内のプロシージャに渡すために特に便利です。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-124">Using `Me` is particularly useful for passing the current instance to a procedure in another module.</span></span> <span data-ttu-id="c7c5c-125">たとえば、さまざまな XML ドキュメントがあり、それらすべてにいくつかの標準のテキストを追加することです。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-125">For example, suppose you have a number of XML documents and wish to add some standard text to all of them.</span></span> <span data-ttu-id="c7c5c-126">次の例では、これを実行するプロシージャを定義します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-126">The following example defines a procedure to do this.</span></span>  
+ <span data-ttu-id="89361-124">使用して`Me`は現在のインスタンスを別のモジュール内のプロシージャに渡すために特に便利です。</span><span class="sxs-lookup"><span data-stu-id="89361-124">Using `Me` is particularly useful for passing the current instance to a procedure in another module.</span></span> <span data-ttu-id="89361-125">たとえば、さまざまな XML ドキュメントがあり、それらすべてにいくつかの標準のテキストを追加することです。</span><span class="sxs-lookup"><span data-stu-id="89361-125">For example, suppose you have a number of XML documents and wish to add some standard text to all of them.</span></span> <span data-ttu-id="89361-126">次の例では、これを実行するプロシージャを定義します。</span><span class="sxs-lookup"><span data-stu-id="89361-126">The following example defines a procedure to do this.</span></span>  
   
 ```  
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
@@ -69,16 +69,16 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub  
 ```  
   
- <span data-ttu-id="c7c5c-127">すべての XML ドキュメント オブジェクトでしたし、プロシージャを呼び出すし、現在のインスタンスを引数として渡します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-127">Every XML document object could then call the procedure and pass its current instance as an argument.</span></span> <span data-ttu-id="c7c5c-128">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="c7c5c-128">The following example demonstrates this.</span></span>  
+ <span data-ttu-id="89361-127">すべての XML ドキュメント オブジェクトでしたし、プロシージャを呼び出すし、現在のインスタンスを引数として渡します。</span><span class="sxs-lookup"><span data-stu-id="89361-127">Every XML document object could then call the procedure and pass its current instance as an argument.</span></span> <span data-ttu-id="89361-128">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="89361-128">The following example demonstrates this.</span></span>  
   
 ```  
 addStandardText(Me)  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c7c5c-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="c7c5c-129">See Also</span></span>  
- [<span data-ttu-id="c7c5c-130">オブジェクト変数</span><span class="sxs-lookup"><span data-stu-id="c7c5c-130">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [<span data-ttu-id="c7c5c-131">オブジェクト変数の宣言</span><span class="sxs-lookup"><span data-stu-id="c7c5c-131">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [<span data-ttu-id="c7c5c-132">オブジェクト変数の値</span><span class="sxs-lookup"><span data-stu-id="c7c5c-132">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [<span data-ttu-id="c7c5c-133">方法: オブジェクト変数を宣言し、Visual Basic でオブジェクトを割り当てる</span><span class="sxs-lookup"><span data-stu-id="c7c5c-133">How to: Declare an Object Variable and Assign an Object to It in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
- [<span data-ttu-id="c7c5c-134">方法: オブジェクト変数がインスタンスを参照しないようにする</span><span class="sxs-lookup"><span data-stu-id="c7c5c-134">How to: Make an Object Variable Not Refer to Any Instance</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
- [<span data-ttu-id="c7c5c-135">Me、My、MyBase、および MyClass</span><span class="sxs-lookup"><span data-stu-id="c7c5c-135">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a><span data-ttu-id="89361-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="89361-129">See Also</span></span>  
+ [<span data-ttu-id="89361-130">オブジェクト変数</span><span class="sxs-lookup"><span data-stu-id="89361-130">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [<span data-ttu-id="89361-131">オブジェクト変数の宣言</span><span class="sxs-lookup"><span data-stu-id="89361-131">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
+ [<span data-ttu-id="89361-132">オブジェクト変数の値</span><span class="sxs-lookup"><span data-stu-id="89361-132">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [<span data-ttu-id="89361-133">方法: オブジェクト変数を宣言し、Visual Basic でオブジェクトを割り当てる</span><span class="sxs-lookup"><span data-stu-id="89361-133">How to: Declare an Object Variable and Assign an Object to It in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
+ [<span data-ttu-id="89361-134">方法: オブジェクト変数がインスタンスを参照しないようにする</span><span class="sxs-lookup"><span data-stu-id="89361-134">How to: Make an Object Variable Not Refer to Any Instance</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
+ [<span data-ttu-id="89361-135">Me、My、MyBase、および MyClass</span><span class="sxs-lookup"><span data-stu-id="89361-135">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

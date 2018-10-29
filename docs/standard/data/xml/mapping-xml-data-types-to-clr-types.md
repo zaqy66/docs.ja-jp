@@ -5,22 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a88d5bf99e2d9bb6465413cb5419058014d113a1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004050"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839040"
 ---
-# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="99e69-102">XML データ型から CLR 型へのマッピング</span><span class="sxs-lookup"><span data-stu-id="99e69-102">Mapping XML Data Types to CLR Types</span></span>
-<span data-ttu-id="99e69-103">XML データ型と共通言語ランタイム (CLR) 型の既定のマッピングを次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="99e69-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  
-  
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a><span data-ttu-id="99e69-104">次の表は、XML データ型から CLR 型への既定のマッピングを示しています。</span><span class="sxs-lookup"><span data-stu-id="99e69-104">The following table describes the default mappings of an XML data type to a CLR type.</span></span>  
+# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="c65a1-102">XML データ型から CLR 型へのマッピング</span><span class="sxs-lookup"><span data-stu-id="c65a1-102">Mapping XML Data Types to CLR Types</span></span>
+
+<span data-ttu-id="c65a1-103">XML データ型と共通言語ランタイム (CLR) 型の既定のマッピングを次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="c65a1-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>
   
 > [!NOTE]
->  <span data-ttu-id="99e69-105">`xs` および `xdt` のプレフィックスは、それぞれ http://www.w3.org/2001/XMLSchema および http://www.w3.org/2003/05/xpath-datatypes 名前空間 URI にマッピングされます。</span><span class="sxs-lookup"><span data-stu-id="99e69-105">The `xs` and the `xdt` prefixes are mapped to the http://www.w3.org/2001/XMLSchema and the http://www.w3.org/2003/05/xpath-datatypes namespace URIs respectively.</span></span>  
+> <span data-ttu-id="c65a1-104">`xs` および `xdt` のプレフィックスは、それぞれ <https://www.w3.org/2001/XMLSchema> および <https://www.w3.org/2003/05/xpath-datatypes> 名前空間 URI にマッピングされます。</span><span class="sxs-lookup"><span data-stu-id="c65a1-104">The `xs` and the `xdt` prefixes are mapped to the <https://www.w3.org/2001/XMLSchema> and the <https://www.w3.org/2003/05/xpath-datatypes> namespace URIs respectively.</span></span>
   
-|<span data-ttu-id="99e69-106">XML 型</span><span class="sxs-lookup"><span data-stu-id="99e69-106">XML Type</span></span>|<span data-ttu-id="99e69-107">CLR 型</span><span class="sxs-lookup"><span data-stu-id="99e69-107">CLR Type</span></span>|  
+|<span data-ttu-id="c65a1-105">XML 型</span><span class="sxs-lookup"><span data-stu-id="c65a1-105">XML Type</span></span>|<span data-ttu-id="c65a1-106">CLR 型</span><span class="sxs-lookup"><span data-stu-id="c65a1-106">CLR Type</span></span>|  
 |--------------|--------------|  
 |`xs:anyURI`|<xref:System.Uri>|  
 |`xs:base64Binary`|`Byte[]`|  
@@ -71,14 +70,14 @@ ms.locfileid: "46004050"
 |`xdt:untypedAtomic`|<xref:System.String>|  
 |`xdt:anyAtomicType`|<xref:System.Object>|  
 |`xs:anySimpleType`|<xref:System.String>|  
-|<span data-ttu-id="99e69-108">[ドキュメント] ノード</span><span class="sxs-lookup"><span data-stu-id="99e69-108">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="99e69-109">要素ノード</span><span class="sxs-lookup"><span data-stu-id="99e69-109">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="99e69-110">属性ノード</span><span class="sxs-lookup"><span data-stu-id="99e69-110">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="99e69-111">名前空間ノード</span><span class="sxs-lookup"><span data-stu-id="99e69-111">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="99e69-112">テキスト ノード</span><span class="sxs-lookup"><span data-stu-id="99e69-112">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="99e69-113">コメント ノード</span><span class="sxs-lookup"><span data-stu-id="99e69-113">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="99e69-114">処理命令ノード</span><span class="sxs-lookup"><span data-stu-id="99e69-114">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="c65a1-107">[ドキュメント] ノード</span><span class="sxs-lookup"><span data-stu-id="c65a1-107">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="c65a1-108">要素ノード</span><span class="sxs-lookup"><span data-stu-id="c65a1-108">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="c65a1-109">属性ノード</span><span class="sxs-lookup"><span data-stu-id="c65a1-109">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="c65a1-110">名前空間ノード</span><span class="sxs-lookup"><span data-stu-id="c65a1-110">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="c65a1-111">テキスト ノード</span><span class="sxs-lookup"><span data-stu-id="c65a1-111">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="c65a1-112">コメント ノード</span><span class="sxs-lookup"><span data-stu-id="c65a1-112">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="c65a1-113">処理命令ノード</span><span class="sxs-lookup"><span data-stu-id="c65a1-113">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## <a name="see-also"></a><span data-ttu-id="99e69-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="99e69-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c65a1-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="c65a1-114">See also</span></span>
 
-- [<span data-ttu-id="99e69-116">System.Xml クラスでの型のサポート</span><span class="sxs-lookup"><span data-stu-id="99e69-116">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+- [<span data-ttu-id="c65a1-115">System.Xml クラスでの型のサポート</span><span class="sxs-lookup"><span data-stu-id="c65a1-115">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
