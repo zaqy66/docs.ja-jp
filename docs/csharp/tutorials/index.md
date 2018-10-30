@@ -1,16 +1,53 @@
 ---
 title: C# のチュートリアル
 description: 以下の C# のチュートリアルでは、C# プログラムをビルドする方法と C# 言語機能について説明します。
-ms.date: 09/07/2017
-ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
-ms.openlocfilehash: 1809e9237429bccdc5c2b384cd247c4dd64e47ab
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.date: 10/25/2018
+ms.openlocfilehash: 2e7981c0b958e6ff4682dc502b83766f56d6c528
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33955993"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195126"
 ---
 # <a name="c-tutorials"></a>C# のチュートリアル
+
+C# のチュートリアルへようこそ。 まずは、お使いのブラウザーで実行できる、対話形式のレッスンを開始します。 後のチュートリアルやより高度なチュートリアルでは、.NET の開発ツールを操作してコンピューター上で C# プログラムを作成する方法について説明します。
+
+## <a name="introduction-to-c-interactive-tutorials"></a>C# の概要に関する対話型チュートリアル #
+
+最初のレッスンでは、小規模なコード スニペットを使用して C# の概念を説明します。 C# 構文の基礎や、文字列、数値、ブール値などのデータ型の使用方法を学習します。 すべて対話形式で、数分のうちにコードを記述して実行することになります。 この最初のレッスンでは、プログラミングや C# 言語について事前の知識をお持ちでないことを前提としています。
+
+## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello World](intro-to-csharp/hello-world.yml)
+
+「[Hello World](intro-to-csharp/hello-world.yml)」チュートリアルでは、最も基本的な C# プログラムを作成します。 `string` 型とテキストの操作方法について学習します。
+
+## <a name="numbers-in-cintro-to-csharpnumbers-in-csharpyml"></a>[C# における数値](intro-to-csharp/numbers-in-csharp.yml)
+
+「[C# における数値](intro-to-csharp/numbers-in-csharp.yml)」チュートリアルでは、コンピューターが数値を格納する方法と、異なる数値型で計算を実行する方法について説明します。 丸め処理の基礎と、C# で算術演算を実行する方法を学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](intro-to-csharp/numbers-in-csharp-local.md)使用できます。
+
+このチュートリアルでは、「[Hello World](intro-to-csharp/hello-world.yml)」レッスンが終了していることを前提としています。
+
+## <a name="branches-and-loopsintro-to-csharpbranches-and-loopsyml"></a>[分岐とループ](intro-to-csharp/branches-and-loops.yml)
+
+「[分岐とループ](intro-to-csharp/branches-and-loops.yml)」のチュートリアルでは、変数に格納された値に基づいて、さまざまなパスでコードを実行するための基礎について説明します。 プログラムが決定して異なる操作を選択する上で基本となる、制御フローの基礎を学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](intro-to-csharp/branches-and-loops-local.md)使用できます。
+
+このチュートリアルでは、「[Hello World](intro-to-csharp/hello-world.yml)」レッスンと「[C# における数値](intro-to-csharp/numbers-in-csharp.yml)」レッスンを終了していることを前提としています。
+
+## <a name="string-interpolationintro-to-csharpinterpolated-stringsyml"></a>[文字列補間](intro-to-csharp/interpolated-strings.yml)
+
+[文字列補間](intro-to-csharp/interpolated-strings.yml)のチュートリアルでは、値を文字列に挿入する方法を示します。 埋め込みの C# 式が含まれる挿入文字列の作成方法と、結果の文字列が生じる式の結果のテキスト表示の制御方法を学ぶことになります。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](intro-to-csharp/interpolated-strings-local.md)使用できます。
+
+## <a name="list-collectionintro-to-csharplist-collectionyml"></a>[リスト コレクション](intro-to-csharp/list-collection.yml)
+
+「[リスト コレクション](intro-to-csharp/list-collection.yml)」レッスンでは、データのシーケンスを格納するリスト コレクション型について説明します。 項目の追加方法や削除方法、項目の検索方法、リストを並べ替える方法を学習します。 さまざまな種類のリストを紹介します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](intro-to-csharp/arrays-and-collections.md)使用できます。
+
+このチュートリアルでは、上に挙げたレッスンを終了していることを前提としています。
+
+## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[C# の概要 -- ローカルで作業する](intro-to-csharp/local-environment.md)
+
+Hello World レッスンに続くすべての入門用チュートリアルは、自分のローカル開発環境で利用できます。 各チュートリアルの最後に、次のレッスンをオンラインまたは自分のコンピューターのどちらで続行するかを決定します。 環境を設定し、ご利用のコンピューターで次のチュートリアルを続行するためのリンクがあります。
+
+## <a name="general-tutorials"></a>全般的なチュートリアル
 
 次のチュートリアルで、[.NET Core](../../core/index.md) を使用して C# プログラムをビルドできます。
 

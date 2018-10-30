@@ -5,20 +5,20 @@ author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 692d49cc940925f629e55cf5cc103522bd3cbb38
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 448edabf624f04311695e8b8c224f653b9939966
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348978"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199462"
 ---
 # <a name="net-core-guide"></a>.NET Core のガイド
 
-[.NET Core](about.md) は、[GitHub](https://github.com/dotnet/core) で Microsoft および .NET コミュニティによって管理される[オープンソース](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT)の一般的な開発プラットフォームです。 クロスプラットフォームであり、Windows、macOS、Linux をサポートし、デバイス、クラウド、および IoT アプリケーションで使用できます。
+[.NET Core](about.md) は、Microsoft および .NET コミュニティによって [GitHub](https://github.com/dotnet/core) 上で管理されている、[オープンソース](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT)の汎用的な開発プラットフォームです。 クロスプラットフォーム (Windows、macOS、Linux をサポート) であり、デバイス、クラウド、および IoT アプリケーションを構築するために使用できます。
 
 特徴、サポートされる言語とフレームワーク、キー API など、.NET Core について詳しくは、「[About .NET Core](about.md)」(.NET Core について) をご覧ください。
 
-「[.NET Core チュートリアル](tutorials/index.md)」では、単純な .NET Core アプリケーションを作成する方法を学習できます。 最初のアプリを、ほんの数分で起動および実行できます。 ブラウザーで .NET Core を使用してみたい場合は、[C# における数値](../csharp/quick-starts/numbers-in-csharp.yml)に関するクイックスタートをご覧ください。
+「[.NET Core チュートリアル](tutorials/index.md)」では、単純な .NET Core アプリケーションを作成する方法を学習できます。 最初のアプリを、ほんの数分で起動および実行できます。 ブラウザーで .NET Core を使用してみる場合は、[C# における数値](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml)に関するオンライン チュートリアルをご覧ください。
 
 ## <a name="download-net-core-21"></a>NET Core 2.1 のダウンロード
 

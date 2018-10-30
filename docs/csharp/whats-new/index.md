@@ -3,16 +3,16 @@ title: C# の新機能 - C# ガイド
 description: C# 言語がどのように進化しているか
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 399550178a12ff520dff033f0f1dc4a7cdfb9591
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314673"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047255"
 ---
 # <a name="whats-new-in-c"></a>C# の新機能 #
 
-このページでは、C# 言語の各メジャー リリースの新機能に関するロードマップを示しています。 以下のリンクで、各リリースで追加された主な機能の詳細情報を確認できます。
+このページでは、C# 言語の各メジャー リリースの新機能に関するロードマップを示しています。 リンク先の記事では、各リリースで追加された主要な機能について詳しく説明します。 一般リリースまたはパブリック プレビューでリリースされた新機能に関する情報を確認できます。 今後のリリースに向けて検討される機能を含め、言語機能ステータスについての詳細は GitHub の [dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md)で見つけられます。
 
 > [!IMPORTANT]
 > C# 言語のこれらの機能のいくつかは、*標準ライブラリ*の型とメソッドに依存します。 一例として、例外処理があります。 すべての `throw` ステートメントまたは式は、スローされたオブジェクトが <xref:System.Exception> から派生していることを確認するために、チェックされます。 同様に、すべての `catch` は、キャッチされた型が <xref:System.Exception> から派生していることを確認するために、チェックされます。 バージョンごとに新しい要件が追加されている場合があります。 古い環境で言語の最新機能を使用するには、特定のライブラリをインストールする必要がある場合があります。 これらの依存関係については、特定のバージョンごとに用意されたページに記載されています。 この依存関係の経緯と詳細については、[言語とライブラリ間の関係](relationships-between-language-and-library.md)に関する記事をご覧ください。  

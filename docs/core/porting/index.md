@@ -3,17 +3,17 @@ title: .NET Framework から .NET Core への移植
 description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 10/23/2018
+ms.openlocfilehash: 0c0ec3d8ab09e34e8dae24623903ca571f2cca6c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835393"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192773"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>.NET Framework から .NET Core への移植
 
-.NET Framework で実行されているコードがある場合は、.NET Core 1.0 でコードを実行することに関心があるかもしれません。  この記事では、移植プロセスの概要と、.NET Core に移植するときに役立つツールの一覧を示します。
+.NET Framework で実行されているコードがある場合は、.NET Core でコードを実行することに関心があるかもしれません。  この記事では、移植プロセスの概要と、.NET Core に移植するときに役立つツールの一覧を示します。
 
 ## <a name="overview-of-the-porting-process"></a>移植プロセスの概要
 
@@ -23,7 +23,7 @@ ms.locfileid: "48835393"
 
    このプロセスでは、サードパーティの依存関係がどのようなものか、それらにどのように依存しているか、それらが .NET Core でも実行されるかどうかを確認する方法、および実行されない場合に従う手順について理解します。
    
-2. ターゲットの .NET Framework 4.6.2 に移植するすべてのプロジェクトをターゲットとして再指定します。
+2. 最新バージョンの .NET Framework に移植するすべてのプロジェクトをターゲットとして再指定します。
 
    これにより、.NET Core が特定の API をサポートできない場合に、.NET Framework 固有のターゲットに対して API の代替を確実に使用できます。
    
@@ -33,7 +33,7 @@ ms.locfileid: "48835393"
    
 4. テスト コードを移植します。
 
-   .NET Core への移植はコードベースにとって大きな変更となるため、コードの移植時にテストを実行できるように、テスト コードを移植することが推奨されます。  現在、MSTest、xUnit、および NUnit は .NET Core 1.0 をサポートしています。
+   .NET Core への移植はコードベースにとって大きな変更となるため、コードの移植時にテストを実行できるように、テスト コードを移植することが推奨されます。  現在、MSTest、xUnit、NUnit はすべて .NET Core をサポートしています。
    
 6. 移植の計画を実行します。
 
