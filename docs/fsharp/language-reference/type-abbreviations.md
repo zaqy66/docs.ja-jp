@@ -1,6 +1,6 @@
 ---
 title: 型略称 (F#)
-description: コードを読みやすくためにわかりやすい名前の型を提供する f# 型略称について説明します。
+description: コードを読みやすくためにわかりやすい名前の型を提供する F# 型略称について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -33,7 +33,7 @@ type [accessibility-modifier] type-abbreviation = type-name
 
 上記のコードで`Transform`を任意の型の 1 つの引数を受け取る関数を表す型の省略形は、同じ型の 1 つの値を返します。
 
-型の省略形は、.NET Framework の MSIL コードでは保持されません。 したがって、f# アセンブリ .NET Framework の別の言語からを使用する場合は、型の省略形の基になる種類の名前を使用する必要があります。
+型の省略形は、.NET Framework の MSIL コードでは保持されません。 したがって、F# アセンブリ .NET Framework の別の言語からを使用する場合は、型の省略形の基になる種類の名前を使用する必要があります。
 
 型の省略形は、測定単位にも使用できます。 詳細については、次を参照してください。[単位](units-of-measure.md)します。
 

@@ -1,5 +1,5 @@
 ---
-title: 呼び出し元情報 (f#)
+title: 呼び出し元情報 (F#)
 description: 呼び出し元情報の引数属性を使用して、メソッドから呼び出し元情報を取得する方法について説明します。
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556

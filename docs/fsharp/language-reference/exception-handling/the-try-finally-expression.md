@@ -1,6 +1,6 @@
 ---
 title: '例外: try...finally 式 (F#)'
-description: 学習方法、f# 'try… 最後に' 式では、コードのブロックが例外をスローする場合でも、クリーンアップ コードを実行することができます。
+description: 学習方法、F# 'try… 最後に' 式では、コードのブロックが例外をスローする場合でも、クリーンアップ コードを実行することができます。
 ms.date: 05/16/2016
 ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

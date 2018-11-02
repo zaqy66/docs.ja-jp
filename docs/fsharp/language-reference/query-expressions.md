@@ -14,7 +14,7 @@ ms.locfileid: "48033494"
 > [!NOTE]
 この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
-クエリ式を使用すると、データ ソースをクエリし、目的のフォームにデータを格納できます。 クエリ式では、f# での LINQ のサポートを提供します。
+クエリ式を使用すると、データ ソースをクエリし、目的のフォームにデータを格納できます。 クエリ式では、F# での LINQ のサポートを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>Remarks
 
-クエリ式は、シーケンス式に似たコンピュテーション式の種類です。 シーケンス式のコードを提供することで、シーケンスを指定すると同様、クエリ式内のコードを提供することでデータのセットを指定します。 シーケンスの式で、`yield`キーワードは、結果のシーケンスの一部として返されるデータを識別します。 クエリ式で、`select`キーワードは、同じ機能を実行します。 加え、`select`キーワード、f# も、多くのサポートは SQL SELECT ステートメントの部分と同様のクエリ演算子。 Northwind OData ソースに接続するコードとの簡単なクエリ式の例を次に示します。
+クエリ式は、シーケンス式に似たコンピュテーション式の種類です。 シーケンス式のコードを提供することで、シーケンスを指定すると同様、クエリ式内のコードを提供することでデータのセットを指定します。 シーケンスの式で、`yield`キーワードは、結果のシーケンスの一部として返されるデータを識別します。 クエリ式で、`select`キーワードは、同じ機能を実行します。 加え、`select`キーワード、F# も、多くのサポートは SQL SELECT ステートメントの部分と同様のクエリ演算子。 Northwind OData ソースに接続するコードとの簡単なクエリ式の例を次に示します。
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -56,7 +56,7 @@ query1
 
 クエリ式では、SQL に変換できる式のみが許可されます。 たとえば、関数呼び出しは許可されません、式で使用すると、`where`クエリ演算子。
 
-表 1 は、使用できるクエリ演算子を示します。 さらに、Table2、SQL クエリと、同等 f# クエリ式では、このトピックで後述の比較を参照してください。 一部のクエリ演算子は、いくつかの型プロバイダーによってサポートされていません。 具体的には、OData 型プロバイダーは、OData の制限によりサポートされるクエリ演算子に制限されます。 詳細については、次を参照してください。 [ODataService 型プロバイダー (f#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)します。
+表 1 は、使用できるクエリ演算子を示します。 さらに、Table2、SQL クエリと、同等 F# クエリ式では、このトピックで後述の比較を参照してください。 一部のクエリ演算子は、いくつかの型プロバイダーによってサポートされていません。 具体的には、OData 型プロバイダーは、OData の制限によりサポートされるクエリ演算子に制限されます。 詳細については、次を参照してください。 [ODataService 型プロバイダー (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)します。
 
 このテーブルには、次の形式でデータベース前提としています。
 
@@ -499,7 +499,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL と F# のクエリ式の比較
-次の表は、f# でいくつかの一般的な TRANSACT-SQL クエリと、対応を示します。 このテーブル内のコードでは、前の表と、型プロバイダーを設定する同じ最初のコードと同じデータベースも前提としています。
+次の表は、F# でいくつかの一般的な TRANSACT-SQL クエリと、対応を示します。 このテーブル内のコードでは、前の表と、型プロバイダーを設定する同じ最初のコードと同じデータベースも前提としています。
 
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>表 2。 Transact-SQL と F# のクエリ式
@@ -1864,7 +1864,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-このコードを f# Interactive で実行すると、完全な出力を次に示します。
+このコードを F# Interactive で実行すると、完全な出力を次に示します。
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'

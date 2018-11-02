@@ -47,7 +47,7 @@ let class-name (argument-list) =
 
 インターフェイスの既定のアクセシビリティが`public`します。
 
-各メソッドのパラメーターに通常の f# 構文を使用して名前を付けることができます必要に応じて。
+各メソッドのパラメーターに通常の F# 構文を使用して名前を付けることができます必要に応じて。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 

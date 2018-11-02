@@ -14,7 +14,7 @@ ms.locfileid: "44037283"
 
 Azure BLOB Storage は、非構造化データをオブジェクト/BLOB としてクラウドに格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキストまたはバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
 
-この記事では、Blob storage を使用して一般的なタスクを実行する方法を示します。 サンプルは、.NET 用 Azure Storage クライアント ライブラリを使用した f# を使用して記述します。 対象タスクには、アップロード、一覧表示、ダウンロード、および blob を削除する方法が含まれます。
+この記事では、Blob storage を使用して一般的なタスクを実行する方法を示します。 サンプルは、.NET 用 Azure Storage クライアント ライブラリを使用した F# を使用して記述します。 対象タスクには、アップロード、一覧表示、ダウンロード、および blob を削除する方法が含まれます。
 
 Blob storage の概念的概要については、次を参照してください。 [blob ストレージ用の .NET ガイド](/azure/storage/storage-dotnet-how-to-use-blobs)します。
 
@@ -22,9 +22,9 @@ Blob storage の概念的概要については、次を参照してください�
 
 このガイドを使用するのにはまず[Azure ストレージ アカウントを作成](/azure/storage/storage-create-storage-account)です。 このアカウントのストレージ アクセス キーも必要があります。
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>作成して、f# スクリプトと開始 f# 対話型
+## <a name="create-an-f-script-and-start-f-interactive"></a>作成して、F# スクリプトと開始 F# 対話型
 
-この記事のサンプルは、f# アプリケーションまたは f# スクリプトのいずれかで使用できます。 F# スクリプトを作成するには、ファイルを作成、`.fsx`拡張機能の例では、 `blobs.fsx`、f# 開発環境にします。
+この記事のサンプルは、F# アプリケーションまたは F# スクリプトのいずれかで使用できます。 F# スクリプトを作成するには、ファイルを作成、`.fsx`拡張機能の例では、 `blobs.fsx`、F# 開発環境にします。
 
 次に、使用、[パッケージ マネージャー](package-management.md)など[パケット](https://fsprojects.github.io/Paket/)または[NuGet](https://www.nuget.org/)をインストールする、`WindowsAzure.Storage`と`Microsoft.WindowsAzure.ConfigurationManager`パッケージと参照`WindowsAzure.Storage.dll`と`Microsoft.WindowsAzure.Configuration.dll`を使用して、スクリプト、`#r`ディレクティブ。
 
@@ -230,8 +230,8 @@ Blob データの暗号化について詳しくは、次を参照してくださ
 これで、Blob storage の基本を学習するは詳細については、これらのリンクに従います。
 
 ### <a name="tools"></a>ツール
-- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)の f# 型プロバイダー Blob、Table、および Azure Storage のキューの資産を探索し、それらに対する CRUD 操作を簡単に適用するために使用できます。
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) f# の API を Microsoft Azure Table Storage サービスを使用します。
+- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)の F# 型プロバイダー Blob、Table、および Azure Storage のキューの資産を探索し、それらに対する CRUD 操作を簡単に適用するために使用できます。
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F# の API を Microsoft Azure Table Storage サービスを使用します。
 - [Microsoft Azure ストレージ エクスプ ローラー (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)から Microsoft Windows、OS X、Linux で Azure Storage のデータを視覚的に作業することができますが、無料のスタンドアロン アプリです。
 
 ### <a name="blob-storage-reference"></a>Blob ストレージのリファレンス

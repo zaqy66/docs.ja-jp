@@ -1,5 +1,5 @@
 ---
-title: 結果 (f#)
+title: 結果 (F#)
 description: F# の '発生' 型を使用して、エラー トレラントなコードを作成できるようにする方法について説明します。
 ms.date: 04/24/2017
 ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
@@ -27,9 +27,9 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Remarks
 
-結果型は、[構造体の判別共用体](discriminated-unions.md#struct-discriminated-unions)、f# 4.1 で導入されたもう 1 つの機能であります。  構造の等値セマンティクスがここに適用されます。
+結果型は、[構造体の判別共用体](discriminated-unions.md#struct-discriminated-unions)、F# 4.1 で導入されたもう 1 つの機能であります。  構造の等値セマンティクスがここに適用されます。
 
-`Result`モナディック エラー処理と呼ばれるに多くの場合で、型が通常使用される[鉄道指向プログラミング](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)f# コミュニティ内で。  次の単純な例では、この方法を示します。
+`Result`モナディック エラー処理と呼ばれるに多くの場合で、型が通常使用される[鉄道指向プログラミング](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)F# コミュニティ内で。  次の単純な例では、この方法を示します。
 
 ```fsharp
 // Define a simple type which has fields that can be validated

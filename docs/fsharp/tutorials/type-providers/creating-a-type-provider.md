@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: 型プロバイダー (f#) を作成します。'
-description: F# 3.0 で基本的な概念を説明するためにいくつかの単純型プロバイダーを調べることで、独自の f# 型プロバイダーを作成する方法について説明します。
+title: 'チュートリアル: 型プロバイダー (F#) を作成します。'
+description: F# 3.0 で基本的な概念を説明するためにいくつかの単純型プロバイダーを調べることで、独自の F# 型プロバイダーを作成する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -17,9 +17,9 @@ F# エコシステムには、一般的に使用されるインターネット�
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/) JSON、XML、CSV、および HTML ドキュメントの形式の型プロバイダーが含まれています。
 
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/)オブジェクトのマッピングと f# LINQ を通じて SQL データベースへのアクセスを厳密に型指定されたこれらのデータ ソースに対するクエリを提供します。
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/)オブジェクトのマッピングと F# LINQ を通じて SQL データベースへのアクセスを厳密に型指定されたこれらのデータ ソースに対するクエリを提供します。
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)一連の型プロバイダーがコンパイル時チェックが f# では、T-SQL の埋め込み。
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)一連の型プロバイダーがコンパイル時チェックが F# では、T-SQL の埋め込み。
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/)は SQL、Entity Framework、OData および WSDL データ サービスにアクセスするための .NET Framework プログラミングでのみ使用するための型プロバイダーの以前のセットです。
 
@@ -53,7 +53,7 @@ F# エコシステムには、一般的に使用されるインターネット�
 
 ## <a name="a-simple-type-provider"></a>単純な型プロバイダー
 
-このサンプルは、ある Samples.HelloWorldTypeProvider、サンプルでは、ような`examples`のディレクトリ、 [f# 型プロバイダーの SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)します。 このプロバイダーは、次のコードが示すように、F# シグネチャ構文を使用して `Type1` 以外の詳細を省略することで、消去型 100 個を含む "型空間" を使用可能にします。 消去型の詳細については、次を参照してください。[の詳細については消去指定された型が](#details-about-erased-provided-types)このトピックで後述します。
+このサンプルは、ある Samples.HelloWorldTypeProvider、サンプルでは、ような`examples`のディレクトリ、 [F# 型プロバイダーの SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)します。 このプロバイダーは、次のコードが示すように、F# シグネチャ構文を使用して `Type1` 以外の詳細を省略することで、消去型 100 個を含む "型空間" を使用可能にします。 消去型の詳細については、次を参照してください。[の詳細については消去指定された型が](#details-about-erased-provided-types)このトピックで後述します。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-このプロバイダーを使用するには、Visual Studio の別のインスタンスを開き、f# スクリプトを作成して #r を次のコードに示すようを使用して、スクリプトからプロバイダーへの参照を追加します。
+このプロバイダーを使用するには、Visual Studio の別のインスタンスを開き、F# スクリプトを作成して #r を次のコードに示すようを使用して、スクリプトからプロバイダーへの参照を追加します。
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -175,7 +175,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-この型は、パブリックである必要があり、使用してマークする必要があります、 [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947)属性の個別の f# プロジェクト型を含むアセンブリを参照する際に、コンパイラは、型プロバイダーを識別するようにします。 *Config*パラメーターはオプションですが、および、存在する場合は、f# コンパイラを作成する型プロバイダーのインスタンスに関するコンテキスト構成情報が含まれています。
+この型は、パブリックである必要があり、使用してマークする必要があります、 [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947)属性の個別の F# プロジェクト型を含むアセンブリを参照する際に、コンパイラは、型プロバイダーを識別するようにします。 *Config*パラメーターはオプションですが、および、存在する場合は、F# コンパイラを作成する型プロバイダーのインスタンスに関するコンテキスト構成情報が含まれています。
 
 次に、実装、 [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f)インターフェイス。 この場合、基本型として `TypeProviderForNamespaces` API の `ProvidedTypes` 型を使用します。 このヘルパー型は、集中的に指定された名前空間の有限のコレクションを指定できます。個々の名前空間には、集中的に指定された固定の型 (有限数) が直接含まれています。 このコンテキストでは、プロバイダーで*集中的*場合でも、使用、必要のない型を生成します。
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-このプロパティを取得すると、常に文字列 "Hello!" に評価されます。 プロパティの `GetterCode` は F# クォートを使用しますが、これはホスト コンパイラがプロパティを取得するために生成するコードを表します。 クォートの詳細については、次を参照してください。[コード クォート (f#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)します。
+このプロパティを取得すると、常に文字列 "Hello!" に評価されます。 プロパティの `GetterCode` は F# クォートを使用しますが、これはホスト コンパイラがプロパティを取得するために生成するコードを表します。 クォートの詳細については、次を参照してください。[コード クォート (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)します。
 
 XML ドキュメントをプロパティに追加します。
 
@@ -469,7 +469,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 - 各名前付きグループは指定されたプロパティになり、プロパティにアクセスすると、パターン一致の `Groups` コレクションでインデクサーが使用されます。
 
-次のコードはこのようなプロバイダーの実装におけるコア ロジックです。この例では指定された型へのすべてのメンバーの追加は省略されています。 それぞれの追加されたメンバーについては、このトピックの後半の該当するセクションを参照してください。 完全なコードからサンプルをダウンロード、 [f# 3.0 サンプル パック](https://fsharp3sample.codeplex.com)Codeplex web サイト。
+次のコードはこのようなプロバイダーの実装におけるコア ロジックです。この例では指定された型へのすべてのメンバーの追加は省略されています。 それぞれの追加されたメンバーについては、このトピックの後半の該当するセクションを参照してください。 完全なコードからサンプルをダウンロード、 [F# 3.0 サンプル パック](https://fsharp3sample.codeplex.com)Codeplex web サイト。
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider

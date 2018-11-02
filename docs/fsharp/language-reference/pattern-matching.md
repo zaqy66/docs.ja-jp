@@ -1,6 +1,6 @@
 ---
 title: パターン マッチ (F#)
-description: 論理構造体を使用してデータを比較または構成要素にデータを分解したり、データから情報を抽出するパターンが f# の使用方法について説明します。
+description: 論理構造体を使用してデータを比較または構成要素にデータを分解したり、データから情報を抽出するパターンが F# の使用方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

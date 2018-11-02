@@ -25,9 +25,9 @@ Queue storage の概念的概要についてを参照してください[queue st
 このガイドを使用するのにはまず[Azure ストレージ アカウントを作成](/azure/storage/storage-create-storage-account)です。
 このアカウントのストレージ アクセス キーも必要になります。
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>作成して、f# スクリプトと開始 f# 対話型
+## <a name="create-an-f-script-and-start-f-interactive"></a>作成して、F# スクリプトと開始 F# 対話型
 
-この記事のサンプルは、f# アプリケーションまたは f# スクリプトのいずれかで使用できます。 F# スクリプトを作成するには、ファイルを作成、`.fsx`拡張機能の例では、 `queues.fsx`、f# 開発環境にします。
+この記事のサンプルは、F# アプリケーションまたは F# スクリプトのいずれかで使用できます。 F# スクリプトを作成するには、ファイルを作成、`.fsx`拡張機能の例では、 `queues.fsx`、F# 開発環境にします。
 
 次に、使用、[パッケージ マネージャー](package-management.md)など[パケット](https://fsprojects.github.io/Paket/)または[NuGet](https://www.nuget.org/)をインストールする、`WindowsAzure.Storage`パッケージと参照`WindowsAzure.Storage.dll`を使用して、スクリプトで`#r`ディレクティブ。
 

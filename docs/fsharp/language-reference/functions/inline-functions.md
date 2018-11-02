@@ -1,6 +1,6 @@
 ---
 title: インライン関数 (F#)
-description: 呼び出し元のコードに直接統合される f# インライン関数を使用する方法について説明します。
+description: 呼び出し元のコードに直接統合される F# インライン関数を使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fca0fe34630792aeb0908b0cee02a927e2567d
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

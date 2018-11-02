@@ -19,7 +19,7 @@ ms.locfileid: "45616070"
 
 ## <a name="managing-resources"></a>リソースの管理
 
-をアプリケーション内のリソースを効率的に責任を持って管理するには、を予測可能な方法で迅速にリソースを解放する必要があります。 .NET Framework では、このことで実行できます。、`System.IDisposable`インターフェイス。 実装する型`System.IDisposable`が、`System.IDisposable.Dispose`メソッドで、誤ってリソースを解放します。 適切に記述されたアプリケーションを保証する`System.IDisposable.Dispose`限られたリソースを保持する任意のオブジェクトが不要になったときに迅速に呼び出されます。 さいわい、ほとんどの .NET 言語が、簡単に確認するサポートを提供し、f# には例外はありません。 Dispose パターンをサポートする 2 つの便利な言語構造がある:`use`バインドと`using`関数。
+をアプリケーション内のリソースを効率的に責任を持って管理するには、を予測可能な方法で迅速にリソースを解放する必要があります。 .NET Framework では、このことで実行できます。、`System.IDisposable`インターフェイス。 実装する型`System.IDisposable`が、`System.IDisposable.Dispose`メソッドで、誤ってリソースを解放します。 適切に記述されたアプリケーションを保証する`System.IDisposable.Dispose`限られたリソースを保持する任意のオブジェクトが不要になったときに迅速に呼び出されます。 さいわい、ほとんどの .NET 言語が、簡単に確認するサポートを提供し、F# には例外はありません。 Dispose パターンをサポートする 2 つの便利な言語構造がある:`use`バインドと`using`関数。
 
 ## <a name="use-binding"></a>バインディングを使用します。
 

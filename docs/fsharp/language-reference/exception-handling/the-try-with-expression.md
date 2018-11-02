@@ -1,6 +1,6 @@
 ---
 title: '例外: try...with 式 (F#)'
-description: 例外処理の f# の 'try...with' 式を使用する方法について説明します。
+description: 例外処理の F# の 'try...with' 式を使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 588960c0f8ccedb431c37d0f1314bf1a293b638c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "44042167"
 ---
 # <a name="exceptions-the-trywith-expression"></a>例外: try...with 式
 
-このトピックで説明します、`try...with`式、f# 言語での例外処理に使用される式。
+このトピックで説明します、`try...with`式、F# 言語での例外処理に使用される式。
 
 ## <a name="syntax"></a>構文
 
@@ -32,7 +32,7 @@ with
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5601.fs)]
 
-例外は、.NET 例外か f# の例外になることができます。 F# の例外を使用して定義することができます、`exception`キーワード。
+例外は、.NET 例外か F# の例外になることができます。 F# の例外を使用して定義することができます、`exception`キーワード。
 
 例外の種類とその他の条件でフィルター処理するさまざまなパターンを使用することができます。オプションは、次の表にまとめたものです。
 

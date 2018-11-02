@@ -1,6 +1,6 @@
 ---
 title: 演算子のオーバーロード (F#)
-description: クラスまたはレコードの種類と f# でのグローバル レベルで算術演算子をオーバー ロードする方法について説明します。
+description: クラスまたはレコードの種類と F# でのグローバル レベルで算術演算子をオーバー ロードする方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

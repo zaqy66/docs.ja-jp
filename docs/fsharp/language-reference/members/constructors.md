@@ -1,6 +1,6 @@
 ---
 title: コンストラクター (F#)
-description: 定義および f# で作成し、クラスと構造のオブジェクトを初期化するコンス トラクターを使用する方法について説明します。
+description: 定義および F# で作成し、クラスと構造のオブジェクトを初期化するコンス トラクターを使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

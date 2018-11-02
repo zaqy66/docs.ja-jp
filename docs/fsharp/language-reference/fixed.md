@@ -1,5 +1,5 @@
 ---
-title: Fixed キーワード (f#)
+title: Fixed キーワード (F#)
 description: F# を使用して、コレクションを回避するには、スタックにローカルがキーワードを 'fixed' することができます 'pin' 方法について説明します。
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c

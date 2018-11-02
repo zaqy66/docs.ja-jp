@@ -1,6 +1,6 @@
 ---
 title: '例外: raise 関数 (F#)'
-description: エラーまたは例外条件が発生したことを示す f# の 'raise' 関数を使用する方法について説明します。
+description: エラーまたは例外条件が発生したことを示す F# の 'raise' 関数を使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

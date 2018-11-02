@@ -115,9 +115,9 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-なお、例外`DontSqueezeTheBananaException`とクラス`Banana`両方には、互いを参照してください。  モジュールではさらに、`BananaHelpers`とクラス`Banana`も互いに参照してください。  これは、削除した場合、f# で表現できませんが、`rec`からキーワード、`MutualReferences`名前空間。
+なお、例外`DontSqueezeTheBananaException`とクラス`Banana`両方には、互いを参照してください。  モジュールではさらに、`BananaHelpers`とクラス`Banana`も互いに参照してください。  これは、削除した場合、F# で表現できませんが、`rec`からキーワード、`MutualReferences`名前空間。
 
-この機能は使用できる最上位[モジュール](modules.md)f# 4.1 またはそれ以降。
+この機能は使用できる最上位[モジュール](modules.md)F# 4.1 またはそれ以降。
 
 ## <a name="see-also"></a>関連項目
 

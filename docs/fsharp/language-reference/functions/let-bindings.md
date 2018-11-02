@@ -110,7 +110,7 @@ let function3 x =
     function1 x
 ```
 
-一部のモジュールは、属性を持つ[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)、つまり、モジュールの名前で公開されている関数を修飾する必要があります。 たとえば、f# List モジュールには、この属性があります。
+一部のモジュールは、属性を持つ[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)、つまり、モジュールの名前で公開されている関数を修飾する必要があります。 たとえば、F# List モジュールには、この属性があります。
 
 モジュールとアクセス制御の詳細については、次を参照してください。[モジュール](../modules.md)と[アクセス制御](../access-control.md)します。
 

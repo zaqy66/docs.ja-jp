@@ -1,5 +1,5 @@
 ---
-title: Match 式 (f#)
+title: Match 式 (F#)
 description: F# match 式が式のパターンのセットとの比較に基づいている分岐を制御を提供する方法について説明します。
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59

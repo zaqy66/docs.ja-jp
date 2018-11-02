@@ -1,6 +1,6 @@
 ---
 title: 非同期ワークフロー (F#)
-description: サポートについて f# プログラミング言語、非同期的に計算を実行するための他の作業の実行をブロックせずに実行します。
+description: サポートについて F# プログラミング言語、非同期的に計算を実行するための他の作業の実行をブロックせずに実行します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,7 +14,7 @@ ms.locfileid: "43861563"
 > [!NOTE]
 API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
-このトピックでは、計算を実行する、非同期的には、他の作業の実行をブロックすることがなく f# でのサポートについて説明します。 たとえば、アプリケーションで他の作業を実行するようユーザーに応答性を維持するための Ui があるアプリケーションを作成する非同期計算を使用できます。
+このトピックでは、計算を実行する、非同期的には、他の作業の実行をブロックすることがなく F# でのサポートについて説明します。 たとえば、アプリケーションで他の作業を実行するようユーザーに応答性を維持するための Ui があるアプリケーションを作成する非同期計算を使用できます。
 
 ## <a name="syntax"></a>構文
 
@@ -45,13 +45,13 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 ## <a name="asynchronous-primitives"></a>非同期プリミティブ
 
-1 つの非同期タスクを実行し、結果を返すメソッドが呼び出された、*非同期プリミティブ*で使用するために設計されていますがこれらと`let!`します。 複数の非同期プリミティブは、f# コア ライブラリで定義されます。 Web アプリケーションのような 2 つのメソッドは、モジュールで定義されて[ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c)と[ `WebClient.AsyncDownloadString`](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a)します。 両方のプリミティブは、Web ページで、指定された URL からデータをダウンロードします。 `AsyncGetResponse` 生成、`System.Net.WebResponse`オブジェクト、および`AsyncDownloadString`Web ページの HTML を表す文字列を生成します。
+1 つの非同期タスクを実行し、結果を返すメソッドが呼び出された、*非同期プリミティブ*で使用するために設計されていますがこれらと`let!`します。 複数の非同期プリミティブは、F# コア ライブラリで定義されます。 Web アプリケーションのような 2 つのメソッドは、モジュールで定義されて[ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c)と[ `WebClient.AsyncDownloadString`](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a)します。 両方のプリミティブは、Web ページで、指定された URL からデータをダウンロードします。 `AsyncGetResponse` 生成、`System.Net.WebResponse`オブジェクト、および`AsyncDownloadString`Web ページの HTML を表す文字列を生成します。
 
 非同期 I/O 操作の複数のプリミティブに含まれる、 [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396)モジュール。 これらの拡張メソッドの`System.IO.Stream`クラスは、 [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e)と[ `Stream.AsyncWrite`](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618)します。
 
 完成した body が非同期ブロックで囲まれている関数を定義することで、独自の非同期プリミティブを記述することもできます。
 
-返す、f# の関数を作成する f# 非同期プログラミング モデルとその他の非同期モデルのように設計された .NET Framework の非同期のメソッドを使用する`Async`オブジェクト。 F# ライブラリには、簡単に実行する関数があります。
+返す、F# の関数を作成する F# 非同期プログラミング モデルとその他の非同期モデルのように設計された .NET Framework の非同期のメソッドを使用する`Async`オブジェクト。 F# ライブラリには、簡単に実行する関数があります。
 
 非同期ワークフローを使用する 1 つの例は、ここでは含まれていますメソッドのドキュメントにあるその他の多く、 [Async クラス](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)します。
 

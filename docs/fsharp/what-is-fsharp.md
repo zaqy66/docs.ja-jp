@@ -1,6 +1,6 @@
 ---
 title: F# とは
-description: どのような f# プログラミング言語とはなどの f# プログラミングについて説明します。 豊富なデータ型、関数、およびそれらをまとめる方法について説明します。
+description: どのような F# プログラミング言語とはなどの F# プログラミングについて説明します。 豊富なデータ型、関数、およびそれらをまとめる方法について説明します。
 ms.date: 08/03/2018
 ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -45,7 +45,7 @@ F# など、多数の機能があります。
 * パターン マッチング
 * 非同期プログラミング
 
-機能の完全なセットが記載されて、 [f# 言語リファレンス](language-reference/index.md)します。
+機能の完全なセットが記載されて、 [F# 言語リファレンス](language-reference/index.md)します。
 
 ## <a name="rich-data-types"></a>豊富なデータ型
 
@@ -119,8 +119,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-F# でのオブジェクト指向コードを記述するのではなく多くの場合、コードを記述するオブジェクトを操作する関数として別のデータ型を扱います。 などの機能[ジェネリック インターフェイス](language-reference/interfaces.md)、[オブジェクト式](language-reference/object-expressions.md)とを賢く利用[メンバー](language-reference/members/index.md)は大規模な f# プログラムでは一般的です。
+F# でのオブジェクト指向コードを記述するのではなく多くの場合、コードを記述するオブジェクトを操作する関数として別のデータ型を扱います。 などの機能[ジェネリック インターフェイス](language-reference/interfaces.md)、[オブジェクト式](language-reference/object-expressions.md)とを賢く利用[メンバー](language-reference/members/index.md)は大規模な F# プログラムでは一般的です。
 
 ## <a name="next-steps"></a>次の手順
 
-多数の F# の機能の詳細については、チェック アウト、 [f# のツアー](tour.md)します。
+多数の F# の機能の詳細については、チェック アウト、 [F# のツアー](tour.md)します。

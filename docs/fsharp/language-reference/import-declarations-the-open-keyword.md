@@ -1,6 +1,6 @@
 ---
 title: 'インポート宣言: open キーワード (F#)'
-description: 完全修飾名を使用せずに参照できる要素を持つ f# インポート宣言し、モジュールまたは名前空間の指定方法について説明します。
+description: 完全修飾名を使用せずに参照できる要素を持つ F# インポート宣言し、モジュールまたは名前空間の指定方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -36,7 +36,7 @@ open module-or-namespace-name
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-F# コンパイラは生成されませんエラーまたは警告が同じ名前が 1 つ以上の開いているモジュールまたは名前空間で発生すると、あいまいさが発生したとき。 あいまいさが発生すると、f# より最近開いたモジュールまたは名前空間を設定できます。 たとえば、次のコードで`empty`意味`Seq.empty`場合でも、`empty`両方である、`List`と`Seq`モジュール。
+F# コンパイラは生成されませんエラーまたは警告が同じ名前が 1 つ以上の開いているモジュールまたは名前空間で発生すると、あいまいさが発生したとき。 あいまいさが発生すると、F# より最近開いたモジュールまたは名前空間を設定できます。 たとえば、次のコードで`empty`意味`Seq.empty`場合でも、`empty`両方である、`List`と`Seq`モジュール。
 
 ```fsharp
 open List
@@ -48,11 +48,11 @@ printfn "%A" empty
 
 ## <a name="namespaces-that-are-open-by-default"></a>既定で開かれている名前空間
 
-一部の名前空間は、これらの明示的なインポート宣言は必要ありませんが暗黙的に開かれた f# コードで頻繁に使用されます。 次の表では、既定で開かれている名前空間を示します。
+一部の名前空間は、これらの明示的なインポート宣言は必要ありませんが暗黙的に開かれた F# コードで頻繁に使用されます。 次の表では、既定で開かれている名前空間を示します。
 
 |名前空間|説明|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|基本的な f# の型定義の組み込み型を含む`int`と`float`します。|
+|`Microsoft.FSharp.Core`|基本的な F# の型定義の組み込み型を含む`int`と`float`します。|
 |`Microsoft.FSharp.Core.Operators`|基本的な算術演算を含む`+`と`*`します。|
 |`Microsoft.FSharp.Collections`|変更できないコレクション クラスを含む`List`と`Array`します。|
 |`Microsoft.FSharp.Control`|レイジー評価と非同期ワークフローなどのコントロール構成要素の型が含まれています。|

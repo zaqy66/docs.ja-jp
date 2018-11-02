@@ -10,7 +10,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43519536"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure Table storage と f# を使用して Azure Cosmos DB Table API の概要します。 # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure Table storage と F# を使用して Azure Cosmos DB Table API の概要します。 # 
 
 Azure Table storage とは、クラウドで構造化 NoSQL データを格納するサービスです。 テーブル ストレージは、スキーマレス設計のキー/属性ストアです。 Table storage は、スキーマなしであるために、簡単に、アプリケーションの進化のニーズに合わせてデータを調整できますが。 データへのアクセスとは、高速でコスト効率に優れたアプリケーションのすべての種類です。 テーブル ストレージは、大幅に従来の SQL と同様、大量のデータよりも低コストでは通常です。
 
@@ -30,16 +30,16 @@ Azure Table storage 用に記述されたアプリケーションでは、コー
 
 ## <a name="about-this-tutorial"></a>このチュートリアルについて
 
-このチュートリアルでは、Azure Table storage またはなど、Azure Cosmos DB テーブル API、作成しテーブルの削除し挿入、更新、削除、およびテーブル データのクエリを使用していくつかの一般的なタスクを実行する f# コードを記述する方法を示します。
+このチュートリアルでは、Azure Table storage またはなど、Azure Cosmos DB テーブル API、作成しテーブルの削除し挿入、更新、削除、およびテーブル データのクエリを使用していくつかの一般的なタスクを実行する F# コードを記述する方法を示します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 このガイドを使用するのにはまず[Azure ストレージ アカウントを作成](/azure/storage/storage-create-storage-account)または[Azure Cosmos DB アカウント](https://azure.microsoft.com/try/cosmosdb/)します。
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>作成して、f# スクリプトと開始 f# 対話型
+## <a name="create-an-f-script-and-start-f-interactive"></a>作成して、F# スクリプトと開始 F# 対話型
 
-この記事のサンプルは、f# アプリケーションまたは f# スクリプトのいずれかで使用できます。 F# スクリプトを作成するには、ファイルを作成、`.fsx`拡張機能の例では、 `tables.fsx`、f# 開発環境にします。
+この記事のサンプルは、F# アプリケーションまたは F# スクリプトのいずれかで使用できます。 F# スクリプトを作成するには、ファイルを作成、`.fsx`拡張機能の例では、 `tables.fsx`、F# 開発環境にします。
 
 次に、使用、[パッケージ マネージャー](package-management.md)など[パケット](https://fsprojects.github.io/Paket/)または[NuGet](https://www.nuget.org/)をインストールする、`WindowsAzure.Storage`パッケージと参照`WindowsAzure.Storage.dll`を使用して、スクリプトで`#r`ディレクティブ。 用にもう一度やって`Microsoft.WindowsAzure.ConfigurationManager`Microsoft.Azure 名前空間を取得するためにします。
 

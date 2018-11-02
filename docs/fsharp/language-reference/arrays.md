@@ -1,6 +1,6 @@
 ---
 title: 配列 (F#)
-description: 作成し、f# プログラミング言語で配列を使用する方法について説明します。
+description: 作成し、F# プログラミング言語で配列を使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
