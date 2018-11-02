@@ -7,14 +7,14 @@ helpviewer_keywords:
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 ms.openlocfilehash: 89f6566bd733ff92d464c026102429d3fc5cf0c1
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50047853"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192227"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
-コンパイラで最初に発生した警告をエラーとして扱います。  
+コンパイラで、最初に発生した警告がエラーとして扱われます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,42 +26,42 @@ ms.locfileid: "50047853"
   
 |用語|定義|  
 |---|---|  
-|+ &#124; -|任意。 既定では、`-warnaserror-`が有効にします。 警告が妨げられないコンパイラ出力ファイルを生成します。 `-warnaserror`オプションは、同じとして`-warnaserror+`、警告をエラーとして扱うことです。|  
-|`numberList`|任意。 警告 ID のコンマ区切りの一覧の番号を`-warnaserror`オプションが適用されます。 警告 ID が指定されていない場合、`-warnaserror`オプションは、すべての警告に適用されます。|  
+|+ &#124; -|任意。 既定では `-warnaserror-` は有効です。警告が発生しても、コンパイラは出力ファイルを生成します。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。|  
+|`numberList`|任意。 `-warnaserror` オプションを適用する、警告 ID 番号のコンマ区切りのリスト。 警告 ID が指定されていない場合、`-warnaserror`オプションはすべての警告に適用されます。|  
   
-## <a name="remarks"></a>Remarks  
- `-warnaserror`オプションは、すべての警告をエラーとして扱います。 警告をエラーとしてレポートされる代わりに、報告される通常メッセージ。 コンパイラは警告として同じ警告の後続の出現箇所を報告します。  
+## <a name="remarks"></a>コメント  
+ `-warnaserror` オプションで、すべての警告がエラーとして扱われます。 通常は警告として報告されるすべてのメッセージが、代わりにエラーとして報告されます。 コンパイラは、後続の同じ警告の発生を警告として報告します。  
   
- 既定では、`-warnaserror-`情報のみを指定するには、警告により、有効です。 `-warnaserror`オプションは、同じとして`-warnaserror+`、警告をエラーとして扱うことです。  
+ 既定では `-warnaserror-` が有効であり、警告は情報提供のみになります。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。  
   
- いくつかの特定の警告のみを実行する場合に、エラーとして扱う警告番号のコンマ区切りの一覧を指定することがあります。  
+ いくつかの特定の警告のみをエラーとして扱う場合は、エラーとして扱う警告番号のコンマ区切りのリストを指定できます。  
   
 > [!NOTE]
->  `-warnaserror`オプションでは、警告を表示する方法は制御しません。 使用して、 [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)警告を無効にするオプション。  
+>  `-warnaserror` オプションでは、警告の表示方法は制御されません。 [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) オプションを使用して警告を無効にします。  
   
-|すべての警告を Visual Studio IDE のエラーとして扱う-warnaserror を設定するには|  
+|-warnaserror を設定し、Visual Studio IDE ですべての警告をエラーとして扱う|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.**[コンパイル]** タブをクリックします。<br />3.確認、**すべての警告を無効にする** チェック ボックスがオフになっています。<br />4.チェック、**すべての警告をエラーとして扱う**チェック ボックスをオンします。|  
+|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.**[コンパイル]** タブをクリックします。<br />3.**[すべての警告を表示しない]** チェック ボックスがオフになっていることを確認します。<br />4.**[すべての警告をエラーとして扱う]** チェック ボックスをオンにします。|  
   
-|特定の警告を Visual Studio IDE のエラーとして扱う-warnaserror を設定するには|  
+|-warnaserror を設定し、Visual Studio IDE で特定の警告をエラーとして扱う|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。<br />2.**[コンパイル]** タブをクリックします。<br />3.確認、**すべての警告を無効にする** チェック ボックスがオフになっています。<br />4.確認、**すべての警告をエラーとして扱う** チェック ボックスがオフになっています。<br />5.選択**エラー**から、**通知**列隣に警告をエラーとして扱う必要があります。|  
+|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。<br />2.**[コンパイル]** タブをクリックします。<br />3.**[すべての警告を表示しない]** チェック ボックスがオフになっていることを確認します。<br />4.**[すべての警告をエラーとして扱う]** チェック ボックスがオフになっていることを確認します。<br />5.エラーとして扱う警告の隣にある **[通知]** 列から、**[エラー]** を選択します。|  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`In.vb`し、最初に見つかった位置が見つかるすべての警告をエラーとして表示することをコンパイラに指示します。  
+ 次のコードは `In.vb` をコンパイルし、最初に見つけたすべての警告をエラーとして表示するようにコンパイラに指示します。  
   
 ```console
 vbc -warnaserror in.vb  
 ```  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`T2.vb`未使用のローカル変数 (42024) の警告のみをエラーとして扱います。  
+ 次のコードは `T2.vb` をコンパイルし、使用されていないローカル変数 (42024) に向けた警告のみをエラーとして扱います。  
   
 ```console
 vbc -warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
  [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)
