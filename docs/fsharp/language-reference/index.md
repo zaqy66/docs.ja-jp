@@ -1,17 +1,17 @@
 ---
 title: F# 言語リファレンス
-description: トークンの言語、概念、型、式、およびコンストラクトのコンパイラでサポートされているトピックへの参照をこのから F# 言語機能情報を検索します。
+description: トークンの言語、概念、型、式、およびコンストラクトのコンパイラでサポートされているトピックへの参照をこのから f# 言語機能情報を検索します。
 ms.date: 05/16/2016
 ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45646416"
 ---
 # <a name="f-language-reference"></a>F# 言語リファレンス
 
-このセクションでは、F# 言語、.NET を対象とするマルチ パラダイム プログラミング言語への参照です。 F# 言語は、関数型プログラミング、オブジェクト指向プログラミング、および命令型プログラミングのモデルをサポートします。
+このセクションでは、f# 言語、.NET を対象とするマルチ パラダイム プログラミング言語への参照です。 F# 言語は、関数型プログラミング、オブジェクト指向プログラミング、および命令型プログラミングのモデルをサポートします。
 
 ## <a name="f-tokens"></a>F# トークン
 

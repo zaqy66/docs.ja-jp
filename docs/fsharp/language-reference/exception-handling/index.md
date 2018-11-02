@@ -1,12 +1,12 @@
 ---
 title: 例外処理 (F#)
-description: F# の例外処理の基礎を学習し、例外処理の式と関数へのリンクを見つけてください。
+description: 例外処理の基礎を習得F#例外処理の式と関数へのリンクを検索します。
 ms.date: 05/16/2016
 ms.openlocfilehash: fc89feb0d21bc823cb105e435413f8309cd6174c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33564327"
 ---
 # <a name="exception-handling"></a>例外処理
@@ -22,7 +22,7 @@ ms.locfileid: "33564327"
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----|-----------|
 |[例外の種類](exception-types.md)|例外の種類を宣言する方法について説明します。|
 |[例外: `try...with` 式](the-try-with-expression.md)|例外処理をサポートする言語構成要素について説明します。|

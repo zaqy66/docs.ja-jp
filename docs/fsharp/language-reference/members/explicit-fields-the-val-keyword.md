@@ -3,10 +3,10 @@ title: '明示的なフィールド: val キーワード (F#)'
 description: F# 'val' について、キーワード、型を初期化せず、クラスまたは構造体の型に値を格納する場所を宣言するために使用します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45746385"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>明示的なフィールド: val キーワード
@@ -65,12 +65,12 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 出力は `11 xyz`になります。
 
-明示的なフィールドは日常的に使用するためのものではありません。 通常、可能な場合は、明示的なフィールドでなく、クラスで `let` 束縛を使用してください。 明示的なフィールドは、特定の相互運用のシナリオ (ネイティブ API に対するプラットフォーム呼び出しで使用される構造体を定義する必要がある場合など) や COM 相互運用のシナリオで役立ちます。 詳細については、次を参照してください。[外部関数](../functions/external-functions.md)します。 また、プライマリ コンストラクターを持たないクラスを生成する F# コード ジェネレーターを使用している場合にも、明示的なフィールドが必要になることがあります。 明示的なフィールドは、thread-static 変数や同様のコンストラクターでも役立ちます。 詳細については、「`System.ThreadStaticAttribute`」を参照してください。
+明示的なフィールドは日常的に使用するためのものではありません。 通常、可能な場合は、明示的なフィールドでなく、クラスで `let` 束縛を使用してください。 明示的なフィールドは、特定の相互運用のシナリオ (ネイティブ API に対するプラットフォーム呼び出しで使用される構造体を定義する必要がある場合など) や COM 相互運用のシナリオで役立ちます。 詳細については、次を参照してください。[外部関数](../functions/external-functions.md)します。 また、プライマリ コンストラクターを持たないクラスを生成する F# コード ジェネレーターを使用している場合にも、明示的なフィールドが必要になることがあります。 明示的なフィールドは、thread-static 変数や同様のコンストラクターでも役立ちます。 詳細については、「 `System.ThreadStaticAttribute` 」を参照してください。
 
-キーワード `member val` が型定義にまとめて表示された場合は、自動的に実装されたプロパティの定義です。 詳細については、次を参照してください。[プロパティ](properties.md)します。
+キーワード `member val` が型定義にまとめて表示された場合は、自動的に実装されたプロパティの定義です。 詳細については、「 [プロパティ](properties.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
 ## <a name="see-also"></a>関連項目
 
-- [プロパティ](properties.md)
+- [Properties](properties.md)
 - [メンバー](index.md)
 - [クラス内の `let` バインド](let-bindings-in-classes.md)

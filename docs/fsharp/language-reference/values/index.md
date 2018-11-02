@@ -3,10 +3,10 @@ title: 値 (F#)
 description: F# の値は、特定の種類を持つ数量ですする方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: f645481ce8395c11ae920aee06cbf07955aeb684
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45991169"
 ---
 # <a name="values"></a>値
@@ -43,7 +43,7 @@ F# は、純粋な関数型言語ではありませんが、関数型プログ�
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----|-----------|
 |[let バインド](../functions/let-bindings.md)|使用に関する情報、`let`キーワード値および関数に名前をバインドします。|
 |[関数](../functions/index.md)|F# の関数の概要を説明します。|

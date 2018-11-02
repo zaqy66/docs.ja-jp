@@ -2,12 +2,12 @@
 title: パラメーターと引数 (F#)
 description: パラメーターを定義して、関数、メソッド、およびプロパティに引数を渡すのための f# 言語サポートについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123359"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50744458"
 ---
 # <a name="parameters-and-arguments"></a>パラメーターと引数
 
@@ -111,6 +111,8 @@ let angle (Polar(_, theta)) = theta
 
 パラメーター名の前に疑問符を使用して、メソッドのオプションのパラメーターを指定できます。 使用して、オプションの種類がクエリを通常の方法でそのクエリを実行できるように、省略可能なパラメーターは f# オプションの種類として解釈されます、`match`式`Some`と`None`します。 省略可能なパラメーターを使用して作成した関数ではなく、メンバーでのみ許可`let`バインドします。
 
+既存の省略可能な値に渡せるメソッドをパラメーター名のなど`?arg=None`または`?arg=Some(3)`または`?arg=arg`します。 これは、別のメソッドに省略可能な引数を渡すメソッドを構築するときに役立ちます。
+
 関数を使用することもできます。 `defaultArg`、省略可能な引数の既定値を設定します。 `defaultArg`関数は、最初の引数と省略可能なパラメーターと、2 つ目として、既定値を受け取ります。
 
 次の例では、省略可能なパラメーターの使用を示します。
@@ -123,7 +125,29 @@ let angle (Polar(_, theta)) = theta
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 4800 Duplex: Half Parity: false
 ```
+
+目的でC#および属性を使用する Visual Basic の相互運用`[<Optional; DefaultParameterValue<(...)>]`でF#、呼び出し元がオプションとして、引数を参照してください。 オプションとして、引数を定義するのと同じC#うに`MyMethod(int i = 3)`します。
+
+```fsharp
+open System
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
+        printfn "%s" message
+```
+
+引数として指定された値`DefaultParameterValue`型と一致する必要がありますのパラメーター、つまり、次は許可されていません。
+
+```fsharp
+type C =
+    static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
+```
+
+この場合、コンパイラは警告が生成され、両方の属性を完全に無視されます。 なお、既定値`null`型の注釈がある必要がありますそれ以外の場合、問題の型の推測コンパイラつまり`[<Optional; DefaultParameterValue(null:obj)>] o:obj`します。
 
 ## <a name="passing-by-reference"></a>参照渡しで渡す
 

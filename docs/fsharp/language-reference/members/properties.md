@@ -3,10 +3,10 @@ title: プロパティ (F#)
 description: オブジェクトに関連付けられている値を表すメンバーである f# プロパティ、について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "50197926"
 ---
 # <a name="properties"></a>プロパティ

@@ -3,10 +3,10 @@ title: 測定単位 (F#)
 description: どの浮動小数点をについて説明しますと f# の符号付き整数値には、測定単位を長さ、ボリューム、および大容量を示すために使用される通常を関連付けることができます。
 ms.date: 05/16/2016
 ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45972518"
 ---
 # <a name="units-of-measure"></a>測定単位

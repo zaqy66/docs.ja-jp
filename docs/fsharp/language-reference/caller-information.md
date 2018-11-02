@@ -3,10 +3,10 @@ title: 呼び出し元情報 (f#)
 description: 呼び出し元情報の引数属性を使用して、メソッドから呼び出し元情報を取得する方法について説明します。
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "47216371"
 ---
 # <a name="caller-information"></a>呼び出し元情報

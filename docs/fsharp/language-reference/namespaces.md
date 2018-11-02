@@ -3,10 +3,10 @@ title: 名前空間 (F#)
 description: F# 名前空間を使用すると、プログラム要素のグループに名前を追加することによって関連する機能の領域にコードを整理する方法について説明します。
 ms.date: 04/24/2017
 ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "44178257"
 ---
 # <a name="namespaces"></a>名前空間

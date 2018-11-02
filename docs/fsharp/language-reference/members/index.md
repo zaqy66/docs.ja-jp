@@ -1,12 +1,12 @@
 ---
 title: メンバー (F#)
-description: F# のプログラミング言語でオブジェクトのメンバーについて説明します。
+description: オブジェクトのメンバーについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6dcdb1d7fa061fb838d4aa8f7a2912fd168c3781
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33562208"
 ---
 # <a name="members"></a>メンバー
@@ -14,7 +14,7 @@ ms.locfileid: "33562208"
 このセクションでは、F# オブジェクト型のメンバーについて説明します。
 
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 *メンバー*は、型定義の一部の機能であり、`member`キーワードを使用して宣言されます。 レコード、クラス、判別共用体、インターフェイス、構造体などの F# オブジェクト型がメンバーをサポートします。 詳細については、「[レコード](../records.md)」、「[クラス](../classes.md)」、「[判別共用体](../discriminated-Unions.md)」、「[インターフェイス](../interfaces.md)」、および「[構造体](../structures.md)」を参照してください。
 
 メンバーは通常、型のパブリック インターフェイスを構成するので、特に指定しない限りパブリックになります。 プライベートまたは内部としてメンバーを宣言することもできます。 詳細については、「[Access Control](../access-Control.md)」(アクセス制御) を参照してください。 型のシグネチャを使用して、型の特定のメンバーを公開するか公開しないこともできます。 詳細については、「[シグネチャ](../signatures.md)」を参照してください。
@@ -29,7 +29,7 @@ ms.locfileid: "33562208"
 |-----|-----------|
 |[クラス内の `let` バインド](let-bindings-in-classes.md)|クラス内のプライベート フィールドと関数の定義について説明します。|
 |[クラス内の `do` バインド](do-bindings-in-classes.md)|オブジェクトの初期化コードの仕様について説明します。|
-|[プロパティ](properties.md)|クラスのプロパティ メンバーとその他の型について説明します。|
+|[Properties](properties.md)|クラスのプロパティ メンバーとその他の型について説明します。|
 |[インデックス付きプロパティ](indexed-properties.md)|クラスの配列に似たプロパティとその他の型について説明します。|
 |[メソッド](methods.md)|型のメンバーである関数について説明します。|
 |[コンストラクター](constructors.md)|型のオブジェクトを初期化する特別な関数について説明します。|

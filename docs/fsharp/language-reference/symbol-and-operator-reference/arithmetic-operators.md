@@ -3,10 +3,10 @@ title: 算術演算子 (F#)
 description: F# プログラミング言語で利用できる算術演算子について説明します。
 ms.date: 04/04/2018
 ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45597440"
 ---
 # <a name="arithmetic-operators"></a>算術演算子

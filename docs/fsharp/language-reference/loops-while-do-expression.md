@@ -3,10 +3,10 @@ title: 'ループ: while...do 式 (F#)'
 description: 参照してください、... 中は式を使用して、指定したテスト条件が true の場合は、反復実行 (ループ) を実行します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45664710"
 ---
 # <a name="loops-whiledo-expression"></a>ループ: while...do 式

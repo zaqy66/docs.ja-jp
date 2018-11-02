@@ -2,12 +2,12 @@
 title: F# のツアー
 description: F# のプログラミング言語のコード サンプルを使ってこのツアーでの主な機能のいくつかを確認します。
 ms.date: 02/28/2018
-ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924522"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50235714"
 ---
 # <a name="tour-of-f"></a>F# のツアー #
 
@@ -193,6 +193,6 @@ F# もが、.NET クラスの完全なサポート[インターフェイス](lan
 
 言語の主な機能のいくつかを確認したらには、最初の F# プログラムを作成できるようにする必要があります。  チェック アウト[Getting Started](tutorials/getting-started/index.md)に開発環境を設定して、コードを記述する方法について説明します。
 
-詳しくは、次の手順は好き、できますが、お勧めします[ファースト クラスの値として機能](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)-->コア関数型プログラミングの概念に慣れるにします。  これらは、F# で堅牢なアプリケーションの構築に不可欠になります。
+詳細は次の手順は任意できますが、お勧めします[で関数型プログラミングの概要F#](introduction-to-functional-programming/index.md)コア関数型プログラミングの概念に慣れるにします。  これらは、F# で堅牢なアプリケーションの構築に不可欠になります。
 
 また、チェック アウト、 [F# 言語リファレンス](language-reference/index.md)を F# の概念的なコンテンツの包括的なコレクションを参照してください。

@@ -3,10 +3,10 @@ title: オプション (F#)
 description: 名前付きの値または変数の場合、実際の値の型が存在しない f# オプションを使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "46479521"
 ---
 # <a name="options"></a>オプション
@@ -51,7 +51,7 @@ F# のオプションの種類は、名前付きの値または変数の実際�
 |[IsNone](https://msdn.microsoft.com/library/f08532ca-1716-4f60-ae59-8ef6256df234)|`bool`|返します`true`オプションの場合、`None`値。|
 |[IsSome](https://msdn.microsoft.com/library/c5088d51-c5d7-425f-a77f-12c379bb356f)|`bool`|返します`true`オプションがない値を持つ場合`None`します。|
 |[いくつか](https://msdn.microsoft.com/library/12f048d2-e293-4596-accb-de036ecd63fc)|`'T option`|オプションを作成する静的メンバーがない値を持つ`None`します。|
-|[値](https://msdn.microsoft.com/library/c79f68e8-11fd-45b1-a053-e8fc38b56df7)|`'T`|基になる値を返しますまたはがスローされます、`System.NullReferenceException`値が場合`None`します。|
+|[[値]](https://msdn.microsoft.com/library/c79f68e8-11fd-45b1-a053-e8fc38b56df7)|`'T`|基になる値を返しますまたはがスローされます、`System.NullReferenceException`値が場合`None`します。|
 
 ## <a name="option-module"></a>オプション モジュール
 
