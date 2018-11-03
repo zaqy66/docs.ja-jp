@@ -1,6 +1,6 @@
 ---
 title: 'ループ: for...to 式 (F#)'
-description: 参照してください方法 f# for….. ループ変数の値の範囲をループで反復処理する式に使用されます。
+description: 参照してください方法 F# for….. ループ変数の値の範囲をループで反復処理する式に使用されます。
 ms.date: 05/16/2016
 ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
