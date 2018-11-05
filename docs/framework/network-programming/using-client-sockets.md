@@ -16,14 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec789bcc5b675f3cde468f9464531a225e8c33db
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195551"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198968"
 ---
 # <a name="using-client-sockets"></a>クライアント ソケットの使用
 <xref:System.Net.Sockets.Socket> を使用して会話を開始するには、まずアプリケーションとリモート デバイス間にデータ パイプを作成する必要があります。 他のネットワーク アドレス ファミリとプロトコルもありますが、この例では、リモート サービスとの TCP/IP 接続を作成する方法を説明します。  
@@ -42,7 +40,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- Internet Assigned Numbers Authority (IANA) は、一般的なサービスのポート番号を定義しています (詳細については、www.iana.org/assignments/port-numbers を参照してください)。 他のサービスが、1,024 から 65,535 の範囲内でポート番号を登録している可能性があります。 次のコードでは、host.contoso.com の IP アドレスとポート番号を組み合わせて、接続のリモート エンドポイントを作成します。  
+ Internet Assigned Numbers Authority (IANA) では、一般的なサービスのポート番号が定義されています (詳細については、「[Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)」 (サービス名および転送プロトコル ポート番号レジストリ) を参照してください)。 他のサービスが、1,024 から 65,535 の範囲内でポート番号を登録している可能性があります。 次のコードでは、host.contoso.com の IP アドレスとポート番号を組み合わせて、接続のリモート エンドポイントを作成します。  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  

@@ -2,12 +2,12 @@
 title: Word 文書内のテキストの検索 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3213855716ebcfc581f213a34417e579c133e385
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235599"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200502"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Word 文書内のテキストの検索 (C#)
 このトピックでは、以前のクエリを拡張して、ドキュメント内で特定の文字列の出現箇所をすべて検索します。  

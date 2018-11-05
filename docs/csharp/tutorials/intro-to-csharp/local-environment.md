@@ -1,0 +1,56 @@
+---
+title: C# の概要 - 開発ツールに対する理解を深める
+description: この記事では、コンピューターで C# アプリケーションと .NET アプリケーションを開発するためのツールの基礎を提供します。
+ms.date: 10/23/2018
+ms.openlocfilehash: ec7e55fbf2a89a8ec45db956fc575edeb2283f56
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200163"
+---
+# <a name="become-familiar-with-the-net-development-tools"></a>.NET 開発ツールに対する理解を深める
+
+コンピューターでチュートリアルを実行する最初の手順は、開発環境を設定することです。
+Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。
+
+または、[.NET Core SDK](https://www.microsoft.com/net/download) と [Visual Studio Code](https://code.visualstudio.com/) をインストールすることもできます。
+
+## <a name="basic-application-development-flow"></a>アプリケーション開発の基本フロー
+
+[`dotnet new`](../../../core/tools/dotnet-new.md) コマンドを使用してアプリケーションを作成します。 このコマンドによってアプリケーションに必要なファイルとアセットが生成されます。 C# の概要チュートリアルではすべて、アプリケーションの種類 `console` が使用されます。 基本を習得したら、他の種類のアプリケーションに応用できます。
+
+その他には、実行可能ファイルをビルドする [`dotnet build`](../../../core/tools/dotnet-build.md) コマンド、実行可能ファイルを実行する [`dotnet run`](../../../core/tools/dotnet-run.md) コマンドを使用します。
+
+## <a name="pick-your-turorial"></a>チュートリアルを選択する
+
+最初に次のいずれかのチュートリアルを選択します。
+
+## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[C# における数値](numbers-in-csharp-local.md)
+
+[C# における数値](numbers-in-csharp-local.md)チュートリアルでは、コンピューターに数値が格納されるしくみとさまざまな数値型で計算するしくみが紹介されます。 丸めの基本と C# を使用した数学計算方法を学習します。
+
+このチュートリアルでは、[Hello world](hello-world.yml) レッスンを修了していることが前提条件となります。
+
+## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[分岐とループ](branches-and-loops-local.md)
+
+[分岐とループ](branches-and-loops-local.md) チュートリアルでは、変数に格納されている値に基づき、コード実行のさまざまなパスを選択することの基本を説明します。 プログラムが決定して異なる操作を選択する上で基本となる、制御フローの基礎を学習します。
+
+このチュートリアルでは、[Hello world](hello-world.yml) レッスンと [C# における数値](numbers-in-csharp-local.md)レッスンを修了していることが前提条件となります。
+
+## <a name="string-interpolationinterpolated-strings-localmd"></a>[文字列補間](interpolated-strings-local.md)
+
+[文字列補間](interpolated-strings-local.md)チュートリアルでは、文字列に値を挿入する方法について説明します。 C# の埋め込み式を使用して挿入文字列を作成する方法と、結果文字列の書式設定を制御する方法について学習します。
+
+このチュートリアルでは、「[Hello World](hello-world.yml)」、「[C# における数値](numbers-in-csharp-local.md)」、「[分岐とループ](branches-and-loops-local.md)」の各レッスンを完了していることを前提としています。
+
+## <a name="list-collectionarrays-and-collectionsmd"></a>[リスト コレクション](arrays-and-collections.md)
+
+「[リスト コレクション](arrays-and-collections.md)」レッスンでは、データのシーケンスを格納するリスト コレクション型について説明します。 項目の追加方法や削除方法、項目の検索方法、リストを並べ替える方法を学習します。 さまざまな種類のリストを紹介します。 
+
+このチュートリアルでは、上に挙げたレッスンを修了していることを前提としています。
+
+## <a name="introduction-to-classesintroduction-to-classesmd"></a>[クラスの概要](introduction-to-classes.md)
+
+この C# 概要の最後のチュートリアルはお使いのコンピューターでのみ実行できます。自分のローカル開発環境と .NET Core を使用する必要があります。
+コンソール アプリケーションを構築し、C# 言語に含まれるオブジェクト指向の基本的な機能について学習します。

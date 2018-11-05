@@ -3,12 +3,12 @@ title: C# 6 の新機能 - C# ガイド
 description: C# バージョン 6 の新機能について説明します
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208186"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194034"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 の新機能
 
@@ -16,19 +16,19 @@ C# の 6.0 リリースには、開発者の生産性を向上させる多くの
 
 * [読み取り専用の自動プロパティ](#read-only-auto-properties):
     - コンス トラクターでのみ設定できる、読み取り専用の自動プロパティ を作成できます。
-* [自動プロパティの初期化子](#auto-property-initializers):
+* [自動プロパティ初期化子](#auto-property-initializers):
     - 自動プロパティの初期値を設定する初期化式を記述できます。
 * [式形式の関数メンバー](#expression-bodied-function-members):
     - ラムダ式を使用して、1 行のメソッドを作成できます。
 * [using static](#using-static):
     - 1 つのクラスのすべてのメソッドを、現在の名前空間にインポートできます。
-* [null 条件演算子](#null-conditional-operators):
+* [Null 条件演算子](#null-conditional-operators):
     - null 条件演算子で null をチェックしながら、オブジェクトのメンバーに簡潔かつ安全にアクセスできます。
 * [文字列補間](#string-interpolation):
     - 位置指定引数の代わりに、インライン式を使用して書式設定文字列式をを記述できます。
 * [例外フィルター](#exception-filters):
     - 例外のプロパティやその他のプログラム状態に基づいて、式をキャッチできます。 
-* [nameof 式](#nameof-expressions):
+* [`nameof` 式](#the-nameof-expression):
     - コンパイラで記号の文字列表現を生成できます。
 * [Catch ブロックと Finally ブロックでの Await](#await-in-catch-and-finally-blocks):
     - 以前は許可されなかった場所で `await` 式を使用できます。
@@ -211,34 +211,34 @@ this.SomethingHappened?.Invoke(this, eventArgs);
 
 ## <a name="string-interpolation"></a>文字列補間
 
-C# 6 で導入された新しい構文では、書式文字列と、その他の文字列値を生成するために評価される式から、文字列を作成することができます。
+C# 6 で導入された新しい構文では、文字列と、その他の文字列値を生成するために評価される埋め込み式から、文字列を作成することができます。
 
-これまでは、`string.Format` などのメソッドで位置指定パラメーターを使用する必要がありました。
+これまでは、<xref:System.String.Format%2A?displayProperty=nameWithType> などのメソッドで位置指定パラメーターを使用する必要がありました。
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-C# 6 では、新しい[文字列補間](../language-reference/tokens/interpolated.md)機能を使用して、書式文字列に式を埋め込むことができます。 方法は、文字列の前に `$` を付けるだけです。
+C# 6 では、新しい[文字列補間](../language-reference/tokens/interpolated.md)機能を使用し、文字列に式を埋め込むことができます。 方法は、文字列の前に `$` を付けるだけです。
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-この最初の例では、置換される式にプロパティ式を使用しています。 この構文を拡張することで、任意の式を使用することができます。 たとえば、補間の一部として生徒の評価点の平均を計算することもできます。
+この例では、置換される式にプロパティ式を使用しています。 この構文を拡張することで、任意の式を使用することができます。 たとえば、補間の一部として生徒の評価点の平均を計算することもできます。
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
-上記の例を実行すると、`Grades.Average()` の出力に含まれる小数点以下の桁数が、開発者の意図よりも多くなる場合があることに気付くでしょう。 文字列補間の構文では、これまでの書式設定メソッドを通じて利用できるすべての書式がサポートされます。 中かっこ内に書式文字列を追加し、 書式設定する式 の後に、`:` を追加します。
+上記の例を実行すると、`Grades.Average()` の出力に含まれる小数点以下の桁数が、開発者の意図よりも多くなる場合があることに気付くでしょう。 文字列補間の構文では、これまでの書式設定メソッドを通じて利用できるすべての書式がサポートされます。 中かっこ内に書式文字列を指定します。 書式設定する式 の後に、`:` を追加します。
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
 上記のコード行では、`Grades.Average()` の値が、小数点以下 2 桁の浮動小数点数として書式設定されます。
 
-`:` は常に、書式設定される式と書式文字列との間の区切り記号として解釈されます。 そのため、`:` が式内で別の目的 (条件演算子など) に使用されている場合には、問題が生じる可能性があります。
+`:` は常に、書式設定される式と書式文字列との間の区切り記号として解釈されます。 そのため、`:` が式内で別の目的 ([条件演算子](../language-reference/operators/conditional-operator.md)など) に使用されている場合には、問題が生じる可能性があります。
 
 ```csharp
 public string GetGradePointPercentages() =>
     $"Name: {LastName}, {FirstName}. G.P.A: {Grades.Any() ? Grades.Average() : double.NaN:F2}";
 ```
 
-上記の例では、`:` は条件演算子の一部ではなく、書式文字列の開始点として解析されます。 このような場合には、式を中かっこで囲むことで、コンパイラに正しく式を解釈させることができます。
+上記の例では、`:` は条件演算子の一部ではなく、書式文字列の開始点として解析されます。 このような場合には、式を中かっこで囲むことで、コンパイラに正しく式を解釈させます。
 
 [!code-csharp[stringInterpolationConditional](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationConditional)]
 
@@ -249,19 +249,21 @@ public string GetGradePointPercentages() =>
 この例のように、文字列補間式の内部で、別の文字列補間式を入れ子にすることもできます。 この例は開発者が運用コードで使用するものよりも複雑である可能性が高いですが、
 この機能の対応範囲を説明するためにあえて示しました。 補間文字列の中かっこの間には、任意の C# 式を配置できます。
 
+文字列補間を始めるには、「[C# における文字列補間](../tutorials/intro-to-csharp/interpolated-strings.yml)」というインタラクティブ チュートリアルをご覧ください。
+
 ### <a name="string-interpolation-and-specific-cultures"></a>文字列補間と特定のカルチャ
 
-前のセクションで示した例はいずれも、コードが実行されるマシンの現在のカルチャと言語を使用して文字列を書式設定するものでした。 しかし場合によっては、生成された文字列を特定のカルチャで書式設定する必要が生じる場合もあるでしょう。
-これを行うには、文字列補間によって生成されたオブジェクトは暗黙的に <xref:System.FormattableString> に変換できることを利用します。
+前のセクションで示した例はいずれも、コードが実行されるマシンの現在のカルチャを使用して文字列を書式設定するものでした。 しかし場合によっては、生成された文字列を特定のカルチャで書式設定する必要が生じる場合もあるでしょう。
+これを行うには、文字列補間によって生成されたオブジェクトは暗黙的に <xref:System.FormattableString?displayProperty=nameWithType> に変換できることを利用します。
 
-<xref:System.FormattableString> インスタンスには、書式文字列と、それらを文字列に変換する前の式評価の結果が含まれます。 <xref:System.FormattableString> のパブリック メソッドを使用すれば、文字列の書式設定時にカルチャを指定することができます。 たとえば、次の例は、ドイツのカルチャを使用して文字列を生成します。 (小数点区切り文字に ',' 文字が使用され、桁区切り記号に '.' 文字が使用されます。)
+<xref:System.FormattableString> インスタンスには、複合書式文字列と、それらを文字列に変換する前の式評価の結果が含まれます。 <xref:System.FormattableString.ToString(System.IFormatProvider)> メソッドを使用し、文字列の書式設定時にカルチャを指定します。 たとえば、次の例は、ドイツのカルチャを使用して文字列を生成します。 (小数点区切り文字に ',' 文字が使用され、桁区切り記号に '.' 文字が使用されます。)
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-詳細については、[文字列補間](../language-reference/tokens/interpolated.md)に関するトピックを参照してください。
+詳細については、[文字列補間](../language-reference/tokens/interpolated.md)に関するページ、および[C# における文字列補間](../tutorials/string-interpolation.md)に関するチュートリアルを参照してください。
 
 ## <a name="exception-filters"></a>例外フィルター
 
@@ -311,7 +313,7 @@ C# 6 では、*例外フィルター*という新機能も追加されていま�
 この記述をコードに追加した後、すべての未処理例外に対して処理を中断するようにデバッガーを設定します。 その後デバッガーを使用してプログラムを実行すると、デバッガーは `PerformFailingOperation()` が `RecoverableException` をスローするたびに処理を中断します。
 false を返す例外フィルターがあるため catch 句は実行されず、デバッガーがプログラムを中断します。
 
-## <a name="nameof-expressions"></a>`nameof` 式
+## <a name="the-nameof-expression"></a>`nameof` 式
 
 `nameof` 式はシンボルの名前を評価します。 この式は、変数、プロパティ、またはメンバー フィールドの名前が必要なときに便利です。
 

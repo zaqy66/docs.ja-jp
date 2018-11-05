@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: aab939af29849ceeef76d6f61b3d4f59d701094c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 25175e2a4409d53be412ae72be5af1c07c3ec68d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105463"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199664"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -39,7 +39,7 @@ ms.locfileid: "37105463"
 
 Kubernetes
 
-![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image24.png)
+![Kubernetes ロゴ](./media/image24.png)
 
 > Kubernetes はオープンソースの製品であり、クラスターのインフラストラクチャとコンテナーのスケジューリングからオーケストレーション機能までの機能を提供します。 ホストのクラスター全体のアプリケーション コンテナーの展開、スケーリング、操作を自動化できます。
 >
@@ -49,7 +49,7 @@ Kubernetes
 
 Docker Swarm
 
-![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image25.png)
+![Docker Swarm ロゴ](./media/image25.png)
 
 > Docker Swarm では Docker コンテナーのクラスタリングとスケジューリングを行うことができます。 Swarm を使用することで、Docker ホストのプールを単一の仮想 Docker ホストにすることができます。 クライアントは、ホストの場合と同じ方法で Swarm に対して API 要求を行うことができます。これは、Swarm を使用することで、複数のホストへのアプリケーションのスケーリングが容易になることを意味します。
 >
@@ -59,7 +59,7 @@ Docker Swarm
 
 Mesosphere DC/OS
 
-![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image26.png)
+![Mesosphere DC/OS ロゴ](./media/image26.png)
 
 > Mesosphere Enterprise DC/OS (Apache Mesos に基づく) は、コンテナーと分散アプリケーションを実行するための運用可能なプラットフォームです。
 >
@@ -69,11 +69,11 @@ Mesosphere DC/OS
 
 Azure Service Fabric
 
-![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image27.png)
+![Azure Service Fabric ロゴ](./media/image27.png)
 
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) は、アプリケーションを構築するための Microsoft マイクロサービス プラットフォームです。 サービスの[オーケストレーター](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)であり、マシンのクラスターを作成します。 Service Fabric は、サービスをコンテナーまたはプレーン プロセスとして展開できます。 同じアプリケーションとクラスター内にコンテナーのサービスとプロセスのサービスを混在させることもできます。
+> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) は、アプリケーションを構築するための Microsoft マイクロサービス プラットフォームです。 サービスの [オーケストレーター](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) であり、マシンのクラスターを作成します。 Service Fabric は、サービスをコンテナーまたはプレーン プロセスとして展開できます。 同じアプリケーションとクラスター内にコンテナーのサービスとプロセスのサービスを混在させることもできます。
 >
-> Service Fabric は、[Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) や[ステートフル サービス](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)などの追加の省略可能な規範的な [Service Fabric プログラミング モデル](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework)を提供します。
+> Service Fabric は、[Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) や[ステートフル サービス](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)などの追加の省略可能な規範的な  [Service Fabric プログラミング モデル ](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework)を提供します。
 >
 > Service Fabric は Windows (年々進化している Windows) では完成されていますが、Linux では未完成です。 
 > Linux と Windows の両方のコンテナーは、2017 年以降の Service Fabric でサポートされています。

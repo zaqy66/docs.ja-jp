@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 8ac0d70458d7c3762ae9dc5fc90058f0caafc4ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ea63bedd207a9904a5f6aa656ed19469394290fa
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44184929"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205214"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
@@ -25,7 +25,7 @@ ms.locfileid: "44184929"
 
 ## <a name="example"></a>例
 
-この例では、[.NET Core](../../../core/index.md) コマンド ライン ツールを使用します。 .NET Core コマンド ライン ツールをよく理解していない場合は、この[概要のトピック](../../../core/tutorials/using-with-xplat-cli.md)を参照してください。
+この例では、[.NET Core](../../../core/index.md) コマンド ライン ツールを使用します。 .NET Core コマンド ライン ツールに慣れていない場合は、この[概要のトピック](../../../core/tutorials/using-with-xplat-cli.md)を参照してください。
 
 *program.cs* の `Main` メソッドを次のように変更します。
 
@@ -93,8 +93,8 @@ private static async Task<int> AsyncConsoleWork()
 >この例の `Main` メソッドで `async` 修飾子を使用した場合、同じコードが生成されます。
 
 ## <a name="see-also"></a>参照
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# リファレンス](../index.md)
-- [Main() とコマンド ライン引数](index.md)
+- [Main() とコマンドライン引数](index.md)
 - [方法: コマンド ライン引数を表示する](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [方法: foreach を使用してコマンド ライン引数にアクセスする](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)

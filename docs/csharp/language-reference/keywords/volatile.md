@@ -1,56 +1,58 @@
 ---
 title: volatile (C# リファレンス)
-ms.date: 07/20/2015
+ms.date: 10/24/2018
 f1_keywords:
 - volatile_CSharpKeyword
 - volatile
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: be7e081b18702710c00b5b86a9bc152800f0cf3d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526220"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199969"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# リファレンス)
-`volatile` キーワードは、同時に実行されている複数のスレッドによって、フィールドが変更される可能性があることを示します。 `volatile` と宣言されているフィールドは、シングル スレッドによるアクセスを前提とする、コンパイラの最適化の対象にはなりません。 これらの制限により、すべてのスレッドが、他のスレッドによって実行された volatile の書き込みを、実行された順序で観察することが保証されます。 volatile 書き込みの単一の全体的順序がすべての実行スレッドから認識される保証はありません。  
+
+`volatile` キーワードは、同時に実行されている複数のスレッドによって、フィールドが変更される可能性があることを示します。 コンパイラ、ランタイム システム、さらにはハードウェアで、パフォーマンスを上げる目的でメモリの場所との読み書きを再整理できます。 `volatile` が宣言されているフィールドはこのような最適化の対象になりません。 `volatile` 修飾子を追加することで、すべてのスレッドによって、他のスレッドにより実行される volatile 書き込みがその実行順序どおりに観察されます。 volatile 書き込みの単一の全体的順序がすべての実行スレッドから認識される保証はありません。
   
- `volatile` 修飾子は、通常、アクセスをシリアル化する [lock](../../../csharp/language-reference/keywords/lock-statement.md) ステートメントが使用されない場合に、複数のスレッドからアクセスされるフィールドに対して使用します。  
+`volatile` キーワードは次の型のフィールドに使用できます。  
   
- `volatile` キーワードは次の型のフィールドに使用できます。  
+- 参照型。  
+- ポインター型 (unsafe コンテキスト内)。 ポインター自体は volatile にできますが、ポインターが指しているオブジェクトは volatile にできません。 つまり、"volatile を指すポインター" は宣言できません。  
+- `sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`char`、`float`、`bool` など、単純型。  
+- 基本型が `byte`、`sbyte`、`short`、`ushort`、`int`、`uint` のいずれかの `enum` 型。  
+- 参照型であることが判明しているジェネリック型パラメーター。
+- <xref:System.IntPtr> および <xref:System.UIntPtr>。  
+
+`double` や `long` など、その他の型には `volatile` を指定できません。そのような型のフィールドに対する読み書きはアトミックになるとは限らないためです。 そのような型のフィールドへのマルチスレッド アクセスを保護するために、<xref:System.Threading.Interlocked> クラス メンバーを使用するか、[`lock`](lock-statement.md) ステートメントでアクセスを保護します。
+
+volatile キーワードは `class` または `struct` のフィールドにのみ適用できます。 ローカル変数を `volatile` として宣言することはできません。
   
--   参照型。  
+## <a name="example"></a>例
+
+次の例は、public のフィールド変数を `volatile` として宣言する方法を示しています。  
   
--   ポインター型 (unsafe コンテキスト内)。 ポインター自体は volatile にできますが、ポインターが指しているオブジェクトは volatile にできません。 つまり、"volatile を指すポインター" は宣言できません。  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
+
+次の例は、補助スレッドつまりワーカー スレッドを作成および使用して、プライマリ スレッドとの並行処理を実行する方法を示しています。 マルチスレッドの背景情報については、「[マネージド スレッド処理](../../../standard/threading/index.md)」および「[スレッド処理 (C#)](../../programming-guide/concepts/threading/index.md)」をご覧ください。  
   
--   sbyte、byte、short、ushort、int、uint、char、float、bool などの型。  
-  
--   基本データ型 byte、sbyte、short、ushort、int、または uint のいずれかが含まれる列挙型。  
-  
--   参照型であることが判明しているジェネリック型パラメーター。  
-  
--   <xref:System.IntPtr> および <xref:System.UIntPtr>。  
-  
- volatile キーワードは、クラスまたは構造体のフィールドにのみ適用できます。 ローカル変数を `volatile` として宣言することはできません。  
-  
-## <a name="example"></a>例  
- 次の例は、public のフィールド変数を `volatile` として宣言する方法を示しています。  
-  
- [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
-  
-## <a name="example"></a>例  
- 次の例は、補助スレッドつまりワーカー スレッドを作成および使用して、プライマリ スレッドとの並行処理を実行する方法を示しています。 マルチスレッドの背景情報については、「[マネージド スレッド処理](../../../standard/threading/index.md)」および「[スレッド処理 (C#)](../../programming-guide/concepts/threading/index.md)」をご覧ください。  
-  
- [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
-  
-## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
+
+`volatile` 修飾子を `_shouldStop` の宣言に追加することで、(前述のコードにある抜粋に似た) 同じ結果が常に得られます。 しかしながら、この修飾子が `_shouldStop` メンバーになければ、動作は予測できません。 `DoWork` メソッドでメンバー アクセスが最適化されることがありますが、古いデータが読み取られます。 マルチスレッド プログラミングの性質上、古い読み取りの数は予測できません。 プログラムを実行するたびに若干異なる結果が得られます。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>参照
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)
+- [C# 言語仕様: volatile キーワード](../../../../_csharplang/spec/classes.md#volatile-fields)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [修飾子](modifiers.md)
+- [lock ステートメント](lock-statement.md)
+- <xref:System.Threading.Interlocked> クラス

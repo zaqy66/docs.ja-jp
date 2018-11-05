@@ -19,15 +19,16 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9fd5bc2a8db8d98791cdd1a75b007555226c050b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47398957"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202095"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>方法 : 分離ストレージ内でファイルおよびディレクトリを検索する
-分離ストレージ内のディレクトリを検索するには、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> メソッドを使用します。 このメソッドは、検索パターンを表す文字列を取得します。 検索パターンでは、1 文字を表すワイルドカード文字 (?) と複数の文字を表すワイルドカード文字 (*) の両方がサポートされています。ただし、これらのワイルドカード文字は、名前の最後の部分で使用する必要があります。 たとえば、`directory1/*ect*` は有効な検索文字列ですが、`*ect*/directory2` は無効です。  
+
+分離ストレージ内のディレクトリを検索するには、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> メソッドを使用します。 このメソッドは、検索パターンを表す文字列を取得します。 検索パターンでは、1 文字を表すワイルドカード文字 (?) と複数の文字を表すワイルドカード文字 (\*) の両方を使用できます。しかし、これらのワイルドカード文字は、名前の最後の部分で使用する必要があります。 たとえば、`directory1/*ect*` は有効な検索文字列ですが、`*ect*/directory2` は無効です。  
   
  ファイルを検索するには、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType> メソッドを使用します。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> に適用される、検索文字列内のワイルドカード文字の制約と同じ制約が <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> にも適用されます。  
   

@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 6dafc118d9c5c68446a5c2ba4e14614396f301eb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: eb62bfe992e5b3774c4a8123eb9ca3f790eaf0b9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43744901"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192877"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Windows XP と Windows Server 2003 に .NET Framework をインストールする
 
@@ -21,7 +21,7 @@ ms.locfileid: "43744901"
 
 ![このアプリケーションを開始できませんでした。](./media/this-application-could-not-be-started.png)
 
-これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 Windows XP と Windows Server 2003 ではサポートされていません。 [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に付属しています。
+これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 Windows XP と Windows Server 2003 ではサポートされていません。 [Windows 10 October 2018 Update](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) と [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に含まれています。
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 

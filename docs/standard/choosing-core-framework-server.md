@@ -4,12 +4,12 @@ description: .NET でのサーバー アプリのビルド時に考慮する必�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864963"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202238"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
 
@@ -87,7 +87,7 @@ Docker コンテナーは、オンプレミスの Linux または Windows イン
 
 * ASP.NET Web フォーム アプリケーション: ASP.NET Web フォームは、.NET Framework でのみ使用できます。 ASP.NET Core は、ASP.NET Web フォームに使用できません。 ASP.NET Web フォームが .NET Core で使用できるようになる予定はありません。
 
-* ASP.NET Web ページ アプリケーション: ASP.NET Web ページは、ASP.NET Core に含まれていません。 ASP.NET Core [Razor ページ](/aspnet/core/mvc/razor-pages/)には、Web ページとの類似点が多数あります。
+* ASP.NET Web ページ アプリケーション: ASP.NET Web ページは、ASP.NET Core に含まれていません。 
 
 * WCF サービスの実装。 現在のところ、.NET Core から WCF サービスを利用する [WCF クライアント ライブラリ](https://github.com/dotnet/wcf)がある場合でも、WCF サーバーの実装は .NET Framework でのみ可能です。 このシナリオは .NET Core の現在の計画に含まれていませんが、将来に向けて検討中です。
 
@@ -104,6 +104,7 @@ Microsoft やサードパーティ製のプラットフォームの中には、.
 ## <a name="see-also"></a>関連項目
 
 * [ASP.NET と ASP.NET Core の選択](/aspnet/core/choose-aspnet-framework)
+* [.NET Framework を対象とする ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
 * [ターゲット フレームワーク](frameworks.md)
 * [.NET Core のガイド](../core/index.md)  
 * [.NET Framework から .NET Core への移植](../core/porting/index.md)  

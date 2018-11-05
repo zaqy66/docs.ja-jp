@@ -1,27 +1,28 @@
 ---
 title: ref キーワード (C# リファレンス)
-ms.date: 03/06/2018
+ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: e0b82de125246e95d8dce2a7afc20119a8a1fe4f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47207991"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195971"
 ---
 # <a name="ref-c-reference"></a>ref (C# リファレンス)
 
 `ref` キーワードは、参照渡しで渡される値を示します。 このキーワードは、4 つの異なるコンテキストで使用されます。
 
 - メソッド シグネチャとメソッドの呼び出しで、参照によってメソッドに引数を渡します。 詳細については、「[参照渡しで引数を渡す](#passing-an-argument-by-reference)」を参照してください。
-- メソッド シグネチャで、参照渡しで呼び出し元に値を返します。 詳細については、「[参照戻り値](#reference-return-values)」を参照してください。
+- メソッド シグネチャで、参照渡しで呼び出し元に値を返します。 詳細については、[参照戻り値](#reference-return-values)に関するページを参照してください。
 - メンバーの本文で、参照戻り値が、呼び出し元によって変更される参照としてローカルに格納されること、または、通常はローカル変数が参照渡しによって別の値にアクセスすることを示します。 詳細については、「[ref ローカル変数](#ref-locals)」を参照してください。
-- `struct` の宣言で、`ref struct` または `ref readonly struct` を宣言します。 詳細については、「[値の型による参照セマンティクス](../../reference-semantics-with-value-types.md)」を参照してください。
+- `struct` の宣言で、`ref struct` または `ref readonly struct` を宣言します。 詳細については、「[ref 構造体型](#ref-struct-types)」を参照してください。
+
 
 ## <a name="passing-an-argument-by-reference"></a>参照渡しで引数を渡す
 
@@ -89,6 +90,8 @@ return ref DecimalArray[0];
 
 呼び出し元がオブジェクトの状態を変更するには、[ref ローカル変数](#ref-locals)として明示的に定義した変数に参照戻り値を格納する必要があります。
 
+呼び出されたメソッドによって、戻り値が `ref readonly` として宣言されて参照渡しで値が返されることもあり、返された値が呼び出し元のコードで変更できないように強制されることもあります。 呼び出し元のメソッドでは、ローカルの [ref readonly](#ref-readonly-locals) 変数に値を格納することで、返された値のコピーを回避できます。
+
 例については、「[ref 戻り値と ref ローカル変数](#a-ref-returns-and-ref-locals-example)」を参照してください。
 
 ## <a name="ref-locals"></a>ref ローカル変数
@@ -111,6 +114,10 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 どちらの例も、`ref` キーワードは両方の位置で使用する必要があります。そうしないと、コンパイラ エラー CS8172 "値を使用して参照渡し変数を初期化することはできません" が生成されます。
 
+## <a name="ref-readonly-locals"></a>ref readonly ローカル
+
+ref readonly ローカルは、その署名に `ref readonly` があり、`return ref` を使用するメソッドまたはプロパティにより返される値の参照に使用されます。 `ref readonly` 変数は `ref` ローカル変数のプロパティと `readonly` 変数の組み合わせです。それに割り当てられたストレージのエイリアスであり、変更できません。 
+
 ## <a name="a-ref-returns-and-ref-locals-example"></a>ref 戻り値と ref ローカル変数の使用例
 
 次の例は、`Title` と `Author` という 2 つの <xref:System.String> フィールドを持つ `Book` クラスを定義しています。 また、`Book` オブジェクトのプライベート配列を含む `BookCollection` クラスも定義しています。 個々のブック オブジェクトは、`GetBookByTitle` メソッドを呼び出すことによって参照渡しで返されます。
@@ -121,13 +128,30 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
+## <a name="ref-struct-types"></a>ref 構造体型
+
+`ref` 修飾子を `struct` 宣言に追加すると、その型のインスタンスにはスタック割り当てが必須になるように定義されます。 言い換えると、そのような型のインスタンスを別のクラスのメンバーとしてヒープ上で作成することはできません。 この機能の第一の動機は <xref:System.Span%601> と関連構造でした。
+
+スタック割り当て変数として `ref struct` 型を維持する目的の下、すべての `ref struct` 型にコンパイラが適用する規則がいくつか導入されます。
+
+- `ref struct` はボックス化できません。 `object` 型、`dynamic` 型、またはあらゆるインターフェイス型の変数には、`ref struct` 型を割り当てることができません。
+- `ref struct` 型では、インターフェイスを実装できません。
+- クラスまたは通常構造体のメンバーとして `ref struct` を宣言することはできません。
+- 非同期メソッドでは、`ref struct` 型のローカル変数を宣言できません。 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、`Task` のような型を返す同期メソッドで宣言できます。
+- 反復子で `ref struct` ローカル変数を宣言することはできません。
+- ラムダ式またはローカル関数で `ref struct` 変数をキャプチャすることはできません。
+
+これらの制約によって、誤って、マネージド ヒープに昇格させるような方法で `ref struct` を使用することが確実になくなります。
+
+修飾子を組み合わせ、構造体を `readonly ref` として宣言できます。 `readonly ref struct` では、`ref struct` 宣言と `readonly struct` 宣言の利点と制限が組み合わされます。
+
 ## <a name="c-language-specification"></a>C# 言語仕様
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [値の型による参照セマンティクス](../../reference-semantics-with-value-types.md)  
+- [安全で効率的なコードを記述する](../../write-safe-efficient-code.md)  
 - [パラメーターの引き渡し](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [メソッド パラメーター](method-parameters.md)  
 - [C# リファレンス](../index.md)  

@@ -1,6 +1,6 @@
 ---
 title: Visual Basic の新機能
-ms.date: 02/15/2018
+ms.date: 10/04/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,14 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925612"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194060"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -69,6 +67,10 @@ Visual Basic 15.3 以前のバージョンでは、位置と名前の両方に�
 ```vb
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
+
+[`Private Protected` メンバー アクセス修飾子](../language-reference/modifiers/private-protected.md)
+
+この新しいキーワードの組み合わせでは、その親クラスのすべてのメンバーと、親クラスから派生した型でアクセスできるメンバーが定義されます。ただし、ここで言うアクセスする側が親アセンブリにも存在する場合に限られます。 構造体は継承できないため、`Private Protected` はクラスのメンバーにのみ適用できます。
 
 **先頭の 16 進数/2 進数/8 進数の区切り記号**
 
@@ -153,7 +155,7 @@ C# 7.0 以降の C# は参照戻り値に対応しています。 つまり、�
 [文字列補間](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  文字列補間式を使用して、文字列を構築することができます。  補間文字列式は、式が含まれているテンプレート文字列のように見えます。  引数に関しては、補間文字列は[複合書式指定](../../standard/base-types/composite-format.md)より理解しやすくなっています。  
   
-[Null 条件メンバー アクセスとインデックス作成](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[Null 条件メンバー アクセスとインデックス作成](../language-reference/operators/null-conditional-operators.md)  
 メンバー アクセス (`?.`) またはインデックス (`?[]`) 操作を実行する前に、構文的に非常に簡単な方法で null をテストできます。  これらの演算子を使用すると、null チェックの処理のために記述するコードを少なくすることができます (特に、データ構造を下っていく場合)。  左のオペランドまたはオブジェクト参照が null の場合、操作は null を返します。  
   
 [複数行の文字列リテラル](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  

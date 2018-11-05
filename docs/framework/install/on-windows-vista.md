@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: c54679292fb8bce16ec572e5a2fee12c1b47292a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e848b079d2c665052d8a5b5cfcd8fe379333b4b9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44197103"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192383"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Windows Vista と Windows Server 2008 に .NET Framework をインストールする
 
@@ -18,7 +18,7 @@ ms.locfileid: "44197103"
 
 ![このアプリケーションを開始できませんでした。](./media/this-application-could-not-be-started.png)
 
-これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 Windows Vista と Windows Server 2008 ではサポートされていません。 [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に付属しています。
+これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 Windows Vista と Windows Server 2008 ではサポートされていません。 [Windows 10 October 2018 Update](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) と [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に含まれています。
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 

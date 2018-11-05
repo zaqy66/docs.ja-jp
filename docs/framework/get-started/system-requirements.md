@@ -2,7 +2,7 @@
 title: .NET Framework のシステム要件
 description: .NET Framework 4.5 以降のバージョンをインストールするためのハードウェア、オペレーティング システム、ソフトウェアの要件を示します。
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 10/01/2018
 helpviewer_keywords:
 - software requirements
 - .NET Framework, system requirements
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 909b9369aba6b22899ae3fe7ac15eb470c5c2697
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e9d1c6dff4a1a8722a2ca196763756336d512631
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509179"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203944"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework のシステム要件
 
@@ -26,6 +26,8 @@ ms.locfileid: "43509179"
 * .NET Framework 4.5 とそのポイント リリース (4.5.1 と 4.5.2)。
 * .NET Framework 4.6 とそのポイント リリース (4.6.1 と 4.6.2)。
 * .NET Framework 4.7 とそのポイント リリース (4.7.1 と 4.7.2)。
+
+.NET Framework 4.5 より前の .NET Framework のバージョンについては、「[.NET Framework のバージョンおよび依存関係](../migration-guide/versions-and-dependencies.md)」を参照してください。
 
 .NET Framework 用のアプリケーションを開発するための開発環境では、要件セットが異なります。
 
@@ -53,6 +55,7 @@ ms.locfileid: "43509179"
 
 | オペレーティング システム | サポートされているエディション | OS と共にプレインストール済み | 個別にインストール可能 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows 10 October 2018 Update | 32 ビットおよび 64 ビット | .NET Framework 4.7.2 |--|
 | Windows 10 April 2018 Update | 32 ビットおよび 64 ビット | .NET Framework 4.7.2 |--|
 | Windows 10 Fall Creators Update | 32 ビットおよび 64 ビット | .NET Framework 4.7.1 | .NET Framework 4.7.2 |
 | Windows 10 Creators Update | 32 ビットおよび 64 ビット | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 | 
@@ -105,6 +108,6 @@ ms.locfileid: "43509179"
 
 ## <a name="see-also"></a>関連項目
 
-[インストール ガイド](../../../docs/framework/install/index.md)   
-[はじめに](../../../docs/framework/get-started/index.md)   
-[.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [インストール ガイド](../../../docs/framework/install/index.md)   
+- [はじめに](../../../docs/framework/get-started/index.md)   
+- [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

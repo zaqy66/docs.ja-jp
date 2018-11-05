@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d09ad4b1f518ac6f4c42dffd4b3ca17249b95700
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43788929"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194320"
 ---
 # <a name="walkthrough-using-client-application-services"></a>チュートリアル : クライアント アプリケーション サービスの使用
 このトピックでは、ユーザーを認証し、ユーザーのロールと設定を取得するクライアント アプリケーション サービスを使用する Windows アプリケーションを作成する方法について説明します。  
@@ -35,9 +35,8 @@ ms.locfileid: "43788929"
 -   オフライン モードを有効にします。 ユーザーが接続状態を指定できるように、チェック ボックスを用意します。 次に、この値を使用して、クライアント アプリケーション サービス プロバイダーが Web サービスにアクセスするのではなく、ローカルにキャッシュされたデータを使用するかどうかを指定します。 最後に、アプリケーションがオンライン モードに戻るときに、現在のユーザーを再認証します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
-  
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)]。  
+
+このチュートリアルを完了するには Visual Studio が必要です。
   
 ## <a name="creating-the-client-application"></a>クライアント アプリケーションの作成  
  最初に、Windows フォーム プロジェクトを作成します。 このチュートリアルでは Windows フォームを使用します。これはより多くの人が使い慣れているためです。しかし、プロセスは Windows Presentation Foundation (WPF) プロジェクトと類似しています。  
@@ -328,7 +327,7 @@ ms.locfileid: "43788929"
   
      [!code-vb[ClientApplicationServices#110](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#110)]  
   
-9. カーソルが `IClientformsAuthenticationCredentialsProvider`の後にあることを確認してから、Enter キーを押して `GetCredentials` メソッドを生成します。  
+9. カーソルが `IClientformsAuthenticationCredentialsProvider` の後にあることを確認してから、Enter キーを押して `GetCredentials` メソッドを生成します。  
   
 10. <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> の実装を見つけて、次のコードに置き換えます。  
   

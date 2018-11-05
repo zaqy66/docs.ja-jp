@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be32659a270cd7c6b7e3551594934926eabf0d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399770"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202921"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework コマンド ライン デバッガー)
-.NET Framework コマンド ライン デバッガーは、.NET Framework 共通言語ランタイムを対象としたプログラムに含まれるバグの検索と修復について、ツールの販売元とアプリケーション開発者を支援するツールです。 このツールは、ランタイムのデバッグ API を使用してデバッグ サービスを提供します。 MDbg.exe を使用してもマネージ コードのデバッグしか実行できません。アンマネージ コードのデバッグはサポートされていません。  
+.NET Framework コマンド ライン デバッガーは、.NET Framework 共通言語ランタイムを対象としたプログラムに含まれるバグの検索と修復について、ツールの販売元とアプリケーション開発者を支援するツールです。 このツールは、ランタイムのデバッグ API を使用してデバッグ サービスを提供します。 MDbg.exe を使用してもマネージド コードのデバッグしか実行できません。アンマネージド コードのデバッグはサポートされていません。  
   
- このツールは NuGet からは入手できません。 インストールについては、「[MDbg 0.1.0](http://www.nuget.org/packages/MDbg/0.1.0)」をご覧ください。 このツールを実行するには、パッケージ マネージャー コンソールを使用します。 パッケージ マネージャー コンソールの使用方法について詳しくは、「[Using the Package Manager Console](http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console)」 (パッケージ マネージャー コンソールの使用法) をご覧ください。  
+このツールは NuGet からは入手できません。 インストールについては、「[MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0)」をご覧ください。 このツールを実行するには、パッケージ マネージャー コンソールを使用します。 パッケージ マネージャー コンソールの使用方法について詳しくは、「[パッケージ マネージャー コンソール](/nuget/tools/package-manager-console)」を参照してください。
   
- パッケージ マネージャー プロンプトに次のように入力します。  
+パッケージ マネージャー プロンプトに次のように入力します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -78,7 +78,7 @@ MDbg [ProgramName[arguments]] [options]
 |**s****[tep]**|現在の行の次の関数の実行に移ります。実行する関数がない場合は、次の行に移動します。|  
 |**su****[spend]** [\* &#124; [~]*threadNumber*]|現在のスレッドまたは *threadNumber* パラメーターで指定したスレッドを中断します。  *threadNumber* に `*` を指定した場合、コマンドはすべてのスレッドに適用されます。 スレッド番号が `~` で始まる場合、コマンドは *threadNumber* で指定したスレッドを除くすべてのスレッドに適用されます。 プロセスが **go** コマンドまたは **step** コマンドによって実行されている場合、中断されたスレッドは実行から除外されます。 プロセス内に中断されているスレッドがない場合に **go** コマンドを実行しても、プロセスは続行されません。 この場合、Ctrl キーを押しながら C キーを押してプロセスを中止する必要があります。|  
 |**sy****[mbol]** *commandName* [*commandValue*]|次のコマンドのいずれかを指定します。<br /><br /> -   `symbol path` [`"``value``"`] - 現在のシンボル パスを表示または設定します。<br />-   `symbol addpath` `"` `value` `"` - 現在のシンボル パスに追加します。<br />-   `symbol reload` [`"``module``"`]- すべてのシンボルまたは指定したモジュールのシンボルを再読み込みします。<br />-   `symbol list` [`module`] - すべてのモジュールまたは指定したモジュールの現在読み込まれているシンボルを表示します。|  
-|**t****[hread]** [*newThread*] [-*nick nickname*`]`|パラメーターを指定しないで thread コマンドを実行すると、現在のプロセス内のすべてのマネージ スレッドが表示されます。 通常、スレッドはスレッド番号で識別されますが、スレッドにニックネームが割り当てられている場合は、スレッド番号ではなくニックネームが表示されます。 `-nick` パラメーターを使用すると、スレッドにニックネームを割り当てることができます。<br /><br /> -   **thread** `-nick` *threadName* は、現在実行中のスレッドにニックネームを割り当てます。<br /><br /> ニックネームを数字にすることはできません。 現在のスレッドにニックネームが既に割り当てられている場合、古いニックネームは新しいニックネームに置き換えられます。 新しいニックネームが空の文字列 ("") の場合は、現在のスレッドのニックネームが削除され、新しいニックネームはスレッドに割り当てられません。|  
+|**t****[hread]** [*newThread*] [-*nick nickname*`]`|パラメーターを指定しないで thread コマンドを実行すると、現在のプロセス内のすべてのマネージド スレッドが表示されます。 通常、スレッドはスレッド番号で識別されますが、スレッドにニックネームが割り当てられている場合は、スレッド番号ではなくニックネームが表示されます。 `-nick` パラメーターを使用すると、スレッドにニックネームを割り当てることができます。<br /><br /> -   **thread** `-nick` *threadName* は、現在実行中のスレッドにニックネームを割り当てます。<br /><br /> ニックネームを数字にすることはできません。 現在のスレッドにニックネームが既に割り当てられている場合、古いニックネームは新しいニックネームに置き換えられます。 新しいニックネームが空の文字列 ("") の場合は、現在のスレッドのニックネームが削除され、新しいニックネームはスレッドに割り当てられません。|  
 |**u****[p]**|アクティブなスタック フレームを上へ移動します。|  
 |**uwgc****[handle]** [*var*] &#124; [*address*]|ハンドルによって追跡された変数を出力します。 ハンドルは、名前またはアドレスで指定できます。|  
 |**when**|現在アクティブな `when` ステートメントを表示します。<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]] - 番号で指定された `when` ステートメントを削除します。`all` が指定されている場合は、すべての `when` ステートメントを削除します。<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ] - *stopReason* パラメーターには、次のいずれかの値を指定できます。<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition* には、次のいずれかの値を指定できます。<br /><br /> -   *number* - `ThreadCreated` および `BreakpointHit` の場合、同じ値を持つスレッド ID 番号とブレークポイント番号によって停止した場合にだけアクションを発生させます。<br />-   [`!`]*name* - `ModuleLoaded`、`ClassLoaded`、`AssemblyLoaded`、`AssemblyUnloaded`、`ExceptionThrown`、`UnhandledExceptionThrown` の場合、名前が *stopReason* の名前と一致する場合にだけアクションを発生させます。<br /><br /> *specific_condition* は、*stopReason* の他の値に対しては空であることが必要です。|  

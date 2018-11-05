@@ -17,21 +17,19 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 8aabd71a841af2b01c644d52806f213ca9c92ec2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8f0c34b2226863bc04800ac4558c07e969f02154
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47209360"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50191130"
 ---
 # <a name="using-udp-services"></a>UDP サービスの使用
 <xref:System.Net.Sockets.UdpClient> クラスは、UDP を使用してネットワーク サービスと通信します。 <xref:System.Net.Sockets.UdpClient> クラスのプロパティとメソッドは、UDP を使用したデータの要求と受信用に <xref:System.Net.Sockets.Socket> を作成する詳細を抽象化します。  
   
  ユーザー データグラム プロトコル (UDP) は、ベスト エフォートでリモート ホストにデータを配信する簡易プロトコルです。 ただし、UDP プロトコルは接続プロトコルなので、リモート エンドポイントに送信された UDP データグラムの到達は保証されていません。また、送信されたときと同じ順序で到達することも保証されていません。 UDP を使用するアプリケーションには、データグラムの欠落、重複、順序の変更を処理する準備が必要です。  
   
- UDP を使用してデータグラムを送信するには、必要なサービスをホストするネットワーク デバイスのネットワーク アドレスと、サービスが通信に使用する UDP ポート番号を知っている必要があります。 Internet Assigned Numbers Authority (IANA) は、一般的なサービスのポート番号を定義しています (www.iana.org/assignments/port-numbers を参照してください)。 IANA の一覧に掲載されていないサービスが、1,024 から 65,535 の範囲のポート番号を使用している可能性があります。  
+ UDP を使用してデータグラムを送信するには、必要なサービスをホストするネットワーク デバイスのネットワーク アドレスと、サービスが通信に使用する UDP ポート番号を知っている必要があります。 Internet Assigned Numbers Authority (IANA) では、一般的なサービスのポート番号が定義されています (「[Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)」 (サービス名および転送プロトコル ポート番号レジストリ) を参照してください)。 IANA の一覧に掲載されていないサービスが、1,024 から 65,535 の範囲のポート番号を使用している可能性があります。  
   
  IP ベースのネットワークで UDP ブロードキャスト メッセージをサポートするために、特殊なネットワーク アドレスが使用されています。 次の説明では、例としてインターネット上で使用される IPv4 アドレスを使用しています。  
   

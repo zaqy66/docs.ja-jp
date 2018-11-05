@@ -1,7 +1,7 @@
 ---
 title: .NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 description: .NET Framework でトランスポート層セキュリティ (TLS) を使うときのベスト プラクティスについて説明します
-ms.date: 03/15/2018
+ms.date: 10/22/2018
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-author: blowdart
-ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424481"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194138"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
-トランスポート層セキュリティ (TLS) プロトコルは、インターネット経由でやり取りされる情報のプライバシーを保護することを目的として策定された業界標準です。 [TLS 1.2](https://tools.ietf.org/html/rfc5246) はこの標準の最新リリースであり、以前のバージョンよりセキュリティが強化されています。 TLS 1.2 は最終的に [TLS 1.3](https://tools.ietf.org/html/draft-ietf-tls-tls13-22) に置き換えられる予定です。 この記事では、TLS プロトコルを使う .NET Framework アプリケーションのセキュリティ保護に関する推奨事項を示します。
+トランスポート層セキュリティ (TLS) プロトコルは、インターネット経由でやり取りされる情報のプライバシーを保護することを目的として策定された業界標準です。 [TLS 1.2](https://tools.ietf.org/html/rfc5246) は、以前のバージョンよりセキュリティが強化された標準です。 TLS 1.2 はいずれ、最新リリースの標準 [TLS 1.3](https://tools.ietf.org/html/rfc8446) に取って代わられます。最新版は前のより速く、セキュリティが改善されています。 この記事では、TLS プロトコルを使う .NET Framework アプリケーションのセキュリティ保護に関する推奨事項を示します。
 
 .NET Framework アプリケーションのセキュリティ保護を維持するため、TLS のバージョンをハードコーディング**しない**でください。 .NET Framework アプリケーションでは、オペレーティング システム (OS) がサポートしている TLS のバージョンを使う必要があります。
 
@@ -278,7 +277,7 @@ TLS 1.2 と TLS 1.1 の一方または両方をサポートするシステムで
 | Windows Server 2008 | TLS 1.2 および TLS 1.1 のサポートには、更新プログラムが必要。 「[Windows Server 2008 SP2 に TLS 1.1 および TLS 1.2 のサポートを追加する更新プログラム](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s)」をご覧ください。 |
 | Windows Vista | サポートされていません。 |
 
-Windows の各バージョンにおいて既定で有効にされる TLS/SSL プロトコルについては、「[Protocols in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159)」(TLS/SSL でのプロトコル (Schannel SSP)) をご覧ください。
+Windows の各バージョンにおいて既定で有効にされる TLS/SSL プロトコルについては、「[Protocols in TLS/SSL (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-)」(TLS/SSL でのプロトコル (Schannel SSP)) をご覧ください。
 
 **.NET Framework 3.5 で TLS 1.2 をサポートするための要件**
 
@@ -305,6 +304,6 @@ Windows の各バージョンにおいて既定で有効にされる TLS/SSL プ
 
 ### <a name="azure-guest-os-registry-settings"></a>Azure ゲスト OS のレジストリ設定
 
-[Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) 用の Azure ゲスト OS イメージでは既に、`SchUseStrongCrypto` レジストリ キーの値が 1 に設定されています。 詳しくは、「[SchUseStrongCrypto](#schusestrongcrypto)」をご覧ください。
+[Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) 用の Azure ゲスト OS Family 5 イメージでは既に、`SchUseStrongCrypto` レジストリ キーの値が 1 に設定されています。 詳しくは、「[SchUseStrongCrypto](#schusestrongcrypto)」をご覧ください。
 
 [SystemDefaultTlsVersions](#systemdefaulttlsversions) レジストリ キーを 1 に設定します。 「[Windows レジストリによるセキュリティの構成](#configuring-security-via-the-windows-registry)」をご覧ください。

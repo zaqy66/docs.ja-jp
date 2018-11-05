@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfe3fdbf71918a7ed2b6dccca24f58688bc14f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003088"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202908"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows システムの大きなオブジェクト ヒープ
 
@@ -164,7 +164,7 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 > [!NOTE]
 > ETW ではより豊富な情報が提供されるため、パフォーマンス カウンターではなく、ETW イベントを使用することをお勧めます。
 
-### <a name="etw"></a>ETW
+### <a name="etw-events"></a>ETW イベント
 
 ガベージ コレクターは、ヒープで行われる内容とその理由を理解するのに役立つ、豊富な ETW イベントのセットを提供します。 次のブログ記事には、ETW を使用して GC イベントを収集および理解する方法が示されています。
 
@@ -204,7 +204,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 ### <a name="a-debugger"></a>デバッガー
 
-メモリ ダンプしかない状態で、LOH に実際にどのオブジェクトが存在するかを確認する必要がある場合は、.NET で提供される [SoS デバッガー拡張](http://msdn2.microsoft.com/ms404370.aspx)を使用できます。
+メモリ ダンプしかない状態で、LOH に実際にどのオブジェクトが存在するかを確認する必要がある場合は、.NET で提供される [SoS デバッガー拡張](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)を使用できます。
 
 > [!NOTE]
 > このセクションに示されているデバッグ コマンドは、[Windows デバッガー](https://www.microsoft.com/whdc/devtools/debugging/default.mspx)に適用できます。

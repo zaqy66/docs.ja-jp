@@ -2,14 +2,12 @@
 title: バージョン 3.5 SP1 における HttpWebRequest の NTLM 認証への変更
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b679c137d31c1212e1e6c82fd41f89b9de7a18d4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d20707bbecb7521408d2ea1a3d6a6e3d6e892504
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47231169"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202869"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>バージョン 3.5 SP1 における HttpWebRequest の NTLM 認証への変更
 セキュリティの変更は、System.Net 名前空間の <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Security.NegotiateStream>、および関連クラスによる統合 Windows 認証の処理方法に影響を与える、.NET Framework Version 3.5 SP1 以降で行われました。 これらの変更は、これらのクラスを使用して Web 要求を作成し、NTLM に基づく統合 Windows 認証が使用されている応答を受信するアプリケーションに影響を及ぼす場合があります。 この変更は、統合 Windows 認証を使用するように構成されている Web サーバーおよびクライアント アプリケーションに影響を与える可能性があります。  
@@ -22,9 +20,9 @@ ms.locfileid: "47231169"
 ## <a name="changes"></a>変更  
  統合 Windows 認証で使用される NTLM 認証プロセスには、クライアント コンピューターに送り返される、ターゲット コンピューターによって発行されるチャレンジが含まれています。 コンピューター自体が生成したチャレンジをコンピューターが受け取った場合、接続がループ バック接続 (たとえば、IPv4 アドレス 127.0.0.1) でない限り、認証は失敗します。  
   
- 内部 Web サーバー上で実行されているサービスにアクセスする場合、 http://contoso/service や https://contoso/service のような URL を使用してサービスにアクセスするのが一般的です。 "contoso" という名前は、多くの場合、サービスが展開されているコンピューターの名前ではありません。 <xref:System.Net> と関連する名前空間は、名前をアドレスに解決するために、Active Directory、DNS、NetBIOS、ローカル コンピューターのホスト ファイル (通常は WINDOWS\system32\drivers\etc\hosts など)、またはローカル コンピューターの lmhosts ファイル名 (通常は WINDOWS\system32\drivers\etc\lmhosts など) の使用をサポートしています。 "contoso" という名前は、"contoso" に送信された要求が適切なサーバー コンピューターに送信されるように解決されます。  
+ 内部 Web サーバー上で実行されているサービスにアクセスする場合、`http://contoso/service` や `https://contoso/service` のような URL を使用してサービスにアクセスするのが一般的です。 "contoso" という名前は、多くの場合、サービスが展開されているコンピューターの名前ではありません。 <xref:System.Net> と関連する名前空間は、名前をアドレスに解決するために、Active Directory、DNS、NetBIOS、ローカル コンピューターのホスト ファイル (通常は WINDOWS\system32\drivers\etc\hosts など)、またはローカル コンピューターの lmhosts ファイル名 (通常は WINDOWS\system32\drivers\etc\lmhosts など) の使用をサポートしています。 "contoso" という名前は、"contoso" に送信された要求が適切なサーバー コンピューターに送信されるように解決されます。  
   
- 大規模な展開用に構成されている場合、クライアント アプリケーションとエンド ユーザーが使用しない基礎のコンピューター名に単一の仮想サーバー名を展開に指定することも一般的です。 たとえば、サーバー www.contoso.com を呼び出しても、内部ネットワークは単に "contoso" を使用することがあります。 この名前は、クライアント Web 要求で Host ヘッダーと呼ばれます。 HTTP プロトコルの指定に従い、Host 要求ヘッダー フィールドは、要求されているリソースのインターネット ホストとポート番号を指定します。 この情報は、ユーザーまたは参照リソース (HTTP URL で生成されるもの) に指定された元の URI から取得されます。 .NET Framework Version 4 では、この情報は、新しい <xref:System.Net.HttpWebRequest.Host%2A> プロパティを使用して設定することもできます。  
+ 大規模な展開用に構成されている場合、クライアント アプリケーションとエンド ユーザーが使用しない基礎のコンピューター名に単一の仮想サーバー名を展開に指定することも一般的です。 たとえば、サーバー `www.contoso.com` を呼び出しても、内部ネットワークでは単に "contoso" を使用することがあります。 この名前は、クライアント Web 要求で Host ヘッダーと呼ばれます。 HTTP プロトコルの指定に従い、Host 要求ヘッダー フィールドは、要求されているリソースのインターネット ホストとポート番号を指定します。 この情報は、ユーザーまたは参照リソース (HTTP URL で生成されるもの) に指定された元の URI から取得されます。 .NET Framework Version 4 では、この情報は、新しい <xref:System.Net.HttpWebRequest.Host%2A> プロパティを使用して設定することもできます。  
   
  <xref:System.Net.AuthenticationManager> クラスは、<xref:System.Net.WebRequest> 派生クラスと <xref:System.Net.WebClient> クラスが使用するマネージド認証コンポーネント ("モジュール") を制御します。 <xref:System.Net.AuthenticationManager> クラスは、<xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType> オブジェクトを公開するプロパティを提供します。このオブジェクトは、URI 文字列でインデックスが作成され、認証中に使用されるカスタム SPN 文字列をアプリケーションが提供するために使用されます。  
   
@@ -50,7 +48,7 @@ ms.locfileid: "47231169"
   
  7. レジストリ エディターを終了し、IISAdmin サービスを再起動して、IISReset を実行します。  
   
- [http://support.microsoft.com/kb/896861](https://go.microsoft.com/fwlink/?LinkID=179657) で説明されているように、あまり安全ではない回避策はループ バック チェックを無効にすることです。 これによって、リフレクション攻撃に対する保護が無効になります。 そのため、実際に使用するコンピューターと想定するコンピューターにのみ、代替名のセットを制限することをお勧めします。  
+ <https://support.microsoft.com/kb/896861> で説明されているように、あまり安全ではない回避策はループ バック チェックを無効にすることです。 これによって、リフレクション攻撃に対する保護が無効になります。 そのため、実際に使用するコンピューターと想定するコンピューターにのみ、代替名のセットを制限することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

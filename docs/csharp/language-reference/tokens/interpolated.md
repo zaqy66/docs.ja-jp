@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251733"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196990"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 文字列補間 (C# リファレンス)
 
@@ -86,7 +86,7 @@ verbatim 挿入文字列は、`@` 文字が続く `$` 文字で始まります�
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-文字列補間を初めてお使いの場合は、[C# の文字列補完](../../quick-starts/interpolated-strings.yml)に関するクイックスタートを参照してください。 その他の例については、「[C# における文字列補間](../../tutorials/string-interpolation.md)」チュートリアルを参照してください。
+文字列補間を初めてお使いの場合は、[C# の文字列補完](../../tutorials/intro-to-csharp/interpolated-strings.yml)に関する対話形式チュートリアルを参照してください。 あるいは、ご自分のコンピューターで [C# における文字列補間](../../tutorials/string-interpolation.md)チュートリアルを試すことができます。
 
 ## <a name="see-also"></a>関連項目
 
@@ -95,6 +95,6 @@ verbatim 挿入文字列は、`@` 文字が続く `$` 文字で始まります�
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [複合書式指定](../../../standard/base-types/composite-formatting.md)
 - [文字列](../../programming-guide/strings/index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 特殊文字](index.md)
 - [C# リファレンス](../index.md)

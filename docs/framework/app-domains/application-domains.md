@@ -14,28 +14,21 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698316"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192617"
 ---
 # <a name="application-domains"></a>アプリケーション ドメイン
+
 オペレーティング システムやランタイム環境では、通常、複数のアプリケーションがなんらかの形で分離されています。 たとえば、Windows ではプロセスを使用してアプリケーションが分離されています。 このような分離は、あるアプリケーションで実行されているコードが、関係のない別のアプリケーションに悪影響をもたらさないようにするために必要です。  
   
  アプリケーション ドメインは、セキュリティ、信頼性、バージョン管理のための、またアセンブリをアンロードするための分離の境界を提供します。 通常、アプリケーション ドメインは、アプリケーションの実行前に共通言語ランタイムの起動を行うランタイム ホストによって作成されます。  
   
- このセクションのトピックでは、アプリケーション ドメインを使用してアセンブリ間を分離する方法について説明します。  
-  
- この概要は、次のセクションで構成されています。  
-  
--   [アプリケーションを分離する利点](#benefits)  
-  
--   [参照](#reference)  
-  
-<a name="benefits"></a>   
-## <a name="the-benefits-of-isolating-applications"></a>アプリケーションを分離する利点  
+## <a name="the-benefits-of-isolating-applications"></a>アプリケーションを分離する利点
+
  これまで、同じコンピューター上で実行される複数のアプリケーションを分離するためには、プロセス境界が使用されていました。 この場合、各アプリケーションが独立のプロセスに読み込まれることで、アプリケーションは同じコンピューター上で実行されるほかのアプリケーションから分離されます。  
   
  アプリケーションが分離されるのは、メモリ アドレスがプロセスごとの相対アドレスになっていたためです。つまり、メモリ ポインターをあるプロセスから別のプロセスに渡しても、そのポインターが渡された側のプロセスでは機能しませんでした。 また、2 つのプロセス間で直接呼び出しを行うこともできませんでした。 代わりに間接的な呼び出しを行う場合は、プロキシを使用する必要がありました。  
@@ -61,9 +54,9 @@ ms.locfileid: "45698316"
   
 -   コードに与えられるアクセス許可は、そのコードが実行されるアプリケーション ドメインによって制御されます。  
   
-  
-## <a name="application-domains-and-assemblies"></a>アプリケーション ドメインとアセンブリ  
- ここでは、アプリケーション ドメインとアセンブリの関係について説明します。 アセンブリに含まれるコードを実行する前に、そのアセンブリをアプリケーション ドメインに読み込む必要があります。 通常のアプリケーションを実行すると、複数のアセンブリがアプリケーション ドメインに読み込まれます。  
+## <a name="application-domains-and-assemblies"></a>アプリケーション ドメインとアセンブリ
+
+ このセクションでは、アプリケーション ドメインとアセンブリの関係について説明します。 アセンブリに含まれるコードを実行する前に、そのアセンブリをアプリケーション ドメインに読み込む必要があります。 通常のアプリケーションを実行すると、複数のアセンブリがアプリケーション ドメインに読み込まれます。  
   
  アセンブリが読み込まれる方法によって、そのアセンブリの Just-In-Time (JIT) コンパイル コードをプロセス内の複数のアプリケーション ドメインで共有できるかどうか、およびアセンブリをプロセスからアンロードできるかどうかが決まります。  
   
@@ -95,21 +88,24 @@ ms.locfileid: "45698316"
   
 -   アセンブリがドメインに中立で読み込まれるときに、アセンブリのすべての依存関係を探し出して読み込む必要があります。これは、ドメインに中立として読み込むことのできない依存関係があると、アセンブリをドメインに中立として読み込むことができなくなるからです。  
   
-## <a name="application-domains-and-threads"></a>アプリケーション ドメインとスレッド  
+## <a name="application-domains-and-threads"></a>アプリケーション ドメインとスレッド
+
  アプリケーション ドメインは、セキュリティ、バージョン管理、信頼性のための、またマネージド コードをアンロードするための分離の境界を形成します。 スレッドは、共通言語ランタイムがコードを実行するために使用する、オペレーティング システムの構成です。 実行時には、すべてのマネージド コードがアプリケーション ドメインに読み込まれ、1 つまたは複数のマネージド スレッドによって実行されます。  
   
  アプリケーション ドメインとスレッドとの関係は一対一ではありません。 1 つのアプリケーション ドメイン内で一度に複数のスレッドが実行される場合があり、また 1 つのスレッドが 1 つのアプリケーション ドメインに限定されることもありません。 つまり、スレッドはアプリケーション ドメイン境界を自由に越えることができ、アプリケーション ドメインごとに新しいスレッドが生成されるわけではありません。  
   
- 特定の時点に限って見ると、どのスレッドも 1 つのアプリケーション ドメイン内で実行されています。 特定のアプリケーション ドメインでゼロ、1 つ、または複数のスレッドを実行できます。 ランタイムは、どのスレッドがどのアプリケーション ドメインで実行されているかを追跡しています。 任意の時点で、あるスレッドが実行されているドメインを特定するには、<xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> メソッドを呼び出します。  
-  
-### <a name="application-domains-and-cultures"></a>アプリケーション ドメインとカルチャ  
+ 特定の時点に限って見ると、どのスレッドも 1 つのアプリケーション ドメイン内で実行されています。 特定のアプリケーション ドメインでゼロ、1 つ、または複数のスレッドを実行できます。 ランタイムは、どのスレッドがどのアプリケーション ドメインで実行されているかを追跡しています。 任意の時点で、あるスレッドが実行されているドメインを特定するには、<xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> メソッドを呼び出します。
+
+### <a name="application-domains-and-cultures"></a>アプリケーション ドメインとカルチャ
+
  <xref:System.Globalization.CultureInfo> オブジェクトによって表されるカルチャは、スレッドに関連付けられます。 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティを使用すると、現在実行しているスレッドに関連付けられているカルチャを取得できます。<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> プロパティを使用すると、現在実行しているスレッドに関連付けられているカルチャを取得または設定できます。 スレッドに関連付けられているカルチャが <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> プロパティを使用して明示的に設定されている場合、スレッドがアプリケーション ドメインの境界を越えても、そのスレッドとの関連付けが維持されます。 それ以外の場合、スレッドに関連付けられるカルチャは、任意の時点でスレッドが実行されているアプリケーション ドメインの <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> プロパティの値によって決まります。  
   
 -   プロパティの値が `null` でない場合、プロパティによって返されるカルチャはスレッドに関連付けられます (したがって <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> プロパティと <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティによって返されます)。  
   
 -   プロパティの値が `null` の場合は、現在のシステム カルチャがスレッドに関連付けられます。  
   
-## <a name="programming-with-application-domains"></a>アプリケーション ドメインを使用したプログラミング  
+## <a name="programming-with-application-domains"></a>アプリケーション ドメインを使用したプログラミング
+
  通常、アプリケーション ドメインは、ランタイム ホストによってプログラムで作成および操作されます。 しかし、アプリケーション プログラムでもアプリケーション ドメインを操作する必要が生じる場合があります。 たとえば、アプリケーション プログラムはアプリケーション コンポーネントをドメインに読み込むことができるため、アプリケーション全体を停止せずにドメイン (およびコンポーネント) をアンロードできます。  
   
  <xref:System.AppDomain>は、アプリケーション ドメインに対するプログラム インターフェイスです。 このクラスには、ドメインを作成およびアンロードするメソッド、型のインスタンスをドメイン内に作成するメソッド、およびアプリケーション ドメインのアンロードなどの各種通知に登録するメソッドが含まれています。 一般的に使用される <xref:System.AppDomain> メソッドを次の表に示します。  
@@ -126,7 +122,8 @@ ms.locfileid: "45698316"
   
  共通言語ランタイムの仕様、「Hosting Interfaces」で説明されているアンマネージ インターフェイスも、アプリケーション ドメインへのアクセスを提供します。 ランタイム ホストは、アンマネージ コードのインターフェイスを使用して、プロセス内にアプリケーション ドメインを作成し、そのドメインにアクセスできます。  
   
-## <a name="complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 環境変数  
+## <a name="the-complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 環境変数
+
  実行可能アプリケーションの既定のローダーの最適化ポリシーを設定する環境変数。  
   
 ### <a name="syntax"></a>構文  
@@ -135,7 +132,8 @@ ms.locfileid: "45698316"
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>コメント
+
  一般的なアプリケーションでは、アプリケーション ドメインに複数のアセンブリが読み込まれてから、それに含まれるコードが実行されます。  
   
  アセンブリが読み込まれる方法によって、そのアセンブリの Just-In-Time (JIT) コンパイル コードをプロセス内の複数のアプリケーション ドメインで共有できるかどうかが決まります。  
@@ -149,7 +147,8 @@ COMPLUS_LoaderOptimization = 1
 > [!CAUTION]
 >  COMPLUS_LoaderOptimization 環境フラグは診断およびテストのシナリオで使用するように設計されています。 このフラグをオンにすることにより、速度の大幅な低下と使用メモリの増大が発生する場合があります。  
   
-### <a name="code-example"></a>コード例  
+### <a name="code-example"></a>コード例
+
  環境の HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN キーの複数文字列値に `COMPLUS_LoaderOptimization=1` を追加することにより、強制的にすべてのアセンブリを IISADMIN サービスにドメイン中立として読み込まないようにできます。  
   
 ```  
@@ -159,6 +158,9 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-<a name="reference"></a>   
-## <a name="reference"></a>参照  
- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.AppDomain?displayProperty=nameWithType>
+- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+- [アプリケーション ドメインとアセンブリを使用したプログラミング](index.md)
+- [アプリケーション ドメインの使用](use.md)

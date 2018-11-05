@@ -5,12 +5,12 @@ description: Windows 7 SP1 に .NET Framework をインストールする方法�
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 828680c0591f9603d14c57dd9e82fe1f3970ede3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 091fb93f26695df01f2f95fdec7ed168d96ba90d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861872"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200760"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Windows 7 SP1 と Windows Server 2008 R2 に .NET Framework をインストールする
 
@@ -18,7 +18,7 @@ ms.locfileid: "43861872"
 
 ![このアプリケーションを開始できませんでした。](./media/this-application-could-not-be-started.png)
 
-これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 これは Windows 7 SP1 と Windows Server 2008 R2 でサポートされており、[Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に付属します。
+これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 これは Windows 7 SP1 と Windows Server 2008 R2 でサポートされており、[Windows 10 October 2018 Update](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) と [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に付属します。
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 

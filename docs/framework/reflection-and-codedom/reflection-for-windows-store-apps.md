@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8d533ac4d4287af551e4fc0c3131c761dbbc135a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47233141"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197055"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows ストア アプリのための .NET Framework のリフレクション
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降、.NET Framework には、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリで使用される一連の使用のリフレクション型およびメンバーのセットが含まれます。 これらの型およびメンバーは、完全な .NET Framework だけでなく [Windows ストア アプリ用 .NET](https://go.microsoft.com/fwlink/?LinkID=225700) でも使用できます。 このドキュメントでは、これらと .NET Framework 4 以前のバージョンでの対応するものとの主な相違点について説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "47233141"
  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでは、.NET Framework の一部の型とメンバーへのアクセスが制限されます。 たとえば、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] オブジェクトを使用して、<xref:System.Reflection.MethodInfo> に含まれない .NET Framework のメソッドを呼び出すことはできません。 また、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] メンバーおよび <xref:System.Runtime.InteropServices.Marshal> メンバーと同様に、<xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> アプリにおいて安全とは見なされない特定の型およびメンバーはブロックされます。 この制限は、.NET Framework の型とメンバーにのみ適用されます。ユーザー コードやサードパーティ コードは通常どおり呼び出すことができます。  
   
 ## <a name="example"></a>例  
- この例は、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] のリフレクション型とメンバーを使用して、<xref:System.Globalization.Calendar> 型のメソッドとプロパティを、継承されたメソッドとプロパティも含めて取得します。 このコードを実行するには、Reflection という名前のプロジェクトの `textblock1` という名前の [Windows.UI.Xaml.Controls.Textblock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) コントロールを含む [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ページ用のコード ファイルにこのコードを貼り付けます。 別の名前のプロジェクトにこのコードを張り付ける場合は、名前空間の名前をプロジェクトに一致するように変更してください。  
+ この例は、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] のリフレクション型とメンバーを使用して、<xref:System.Globalization.Calendar> 型のメソッドとプロパティを、継承されたメソッドとプロパティも含めて取得します。 このコードを実行するには、Reflection という名前のプロジェクトの `textblock1` という名前の <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> コントロールを含む [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ページ用のコード ファイルにこのコードを貼り付けます。 別の名前のプロジェクトにこのコードを張り付ける場合は、名前空間の名前をプロジェクトに一致するように変更してください。  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edc34eaa7704d788ff4b63328a2b6c0622d17e13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502923"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199892"
 ---
 # <a name="install-the-net-framework-for-developers"></a>開発者向けの .NET Framework のインストール
 
@@ -37,7 +37,7 @@ ms.locfileid: "43502923"
 
 |.NET Framework のバージョン|Developer のインストール|再頒布可能なインストール|プラットフォームのサポート|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[.NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[ダウンロード センター 4.7.2 Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[ダウンロード センター 4.7.2 オフライン インストーラー](https://go.microsoft.com/fwlink/?LinkId=863265)|このバージョンを含む製品 <br/>Windows 10 April 2018 Update<br /><br /> インストール可能なバージョン<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 以前<br /> Windows Server バージョン 1709 以前<br /> (完全な一覧については、「[システム要件](~/docs/framework/get-started/system-requirements.md)」を参照してください)||
+|**4.7.2**|[.NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[ダウンロード センター 4.7.2 Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[ダウンロード センター 4.7.2 オフライン インストーラー](https://go.microsoft.com/fwlink/?LinkId=863265)|このバージョンを含む製品 <br/>Windows 10 October 2018 Update<br/>Windows 10 April 2018 Update<br /><br /> インストール可能なバージョン<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 以前<br /> Windows Server バージョン 1709 以前<br /> (完全な一覧については、「[システム要件](~/docs/framework/get-started/system-requirements.md)」を参照してください)||
 |**4.7.1**|[.NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 Web インストーラーのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 オフライン インストーラーのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=852107)|このバージョンを含む製品 <br/>Windows 10 Fall Creators Update<br/>Windows Server、バージョン 1709<br /><br /> インストール可能なバージョン<br/> Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 以前<br /> Windows Server 2016 以前<br /> (完全な一覧については、「[システム要件](~/docs/framework/get-started/system-requirements.md)」を参照してください)||
 |**4.7**|[NET Framework 4.7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 Web インストーラーのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 オフライン インストーラーのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=825303)|このバージョンを含む製品 <br/>Windows 10 Creators Update<br /><br /> インストール可能なバージョン<br /> Windows 10 Anniversary Update<br /> Windows 8.1 以前<br /> Windows Server 2016 以前<br /> (完全な一覧については、「[システム要件](~/docs/framework/get-started/system-requirements.md)」を参照してください)||
 |**4.6.2**|[NET Framework 4.6.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 Web インストーラーのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 オフライン インストーラーのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=780601)|このバージョンを含む製品 <br /> Windows 10 Anniversary Update<br /><br /> インストール可能なバージョン<br /> Windows 10 の 11 月更新版 <br/> Windows 10 <br /> Windows 8.1 以前<br /> Windows Server 2012 R2 以前<br /> (完全な一覧については、「[システム要件](~/docs/framework/get-started/system-requirements.md)」を参照してください)|
@@ -154,7 +154,7 @@ Web インストーラーとオフライン インストーラーはどちらも
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] とそのポイント リリース、.NET Framework 4.6 とそのポイント リリース、.NET Framework 4.7 とそのポイント リリースをインストールするには、管理者資格情報が必要です。
 
-- .NET Framework 4.5 再頒布可能パッケージは、2012 年 10 月 9 に更新されています。この更新により、Microsoft によって生成および署名されたファイルへのデジタル署名が途中で有効期限切れになるという、デジタル証明書の不適切なタイムスタンプに関連する問題が解決しました。 2012 年 8 月 16 日付けの .NET Framework 4.5 再頒布可能パッケージをインストールしていた場合は、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=245484)から最新の再頒布可能パッケージを入手して更新を行うことをお勧めします。 この問題について詳しくは、「[マイクロソフト セキュリティ アドバイザリ (2749655)](https://technet.microsoft.com/security/advisory/2749655)」および「[サポート技術情報 2770445](https://support.microsoft.com/kb/2770445)」をご覧ください。
+- .NET Framework 4.5 再頒布可能パッケージは、2012 年 10 月 9 に更新されています。この更新により、Microsoft によって生成および署名されたファイルへのデジタル署名が途中で有効期限切れになるという、デジタル証明書の不適切なタイムスタンプに関連する問題が解決しました。 2012 年 8 月 16 日付けの .NET Framework 4.5 再頒布可能パッケージをインストールしていた場合は、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=245484)から最新の再頒布可能パッケージを入手して更新を行うことをお勧めします。 この問題について詳しくは、「[マイクロソフト セキュリティ アドバイザリ (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)」および「[サポート技術情報 2770445](https://support.microsoft.com/kb/2770445)」をご覧ください。
 
 ## <a name="to-install-language-packs"></a>言語パックのインストール
 

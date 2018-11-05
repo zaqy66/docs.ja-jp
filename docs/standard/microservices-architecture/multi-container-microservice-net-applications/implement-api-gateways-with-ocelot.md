@@ -4,12 +4,12 @@ description: Ocelot を使用して API ゲートウェイを実装する方法�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: dbb3fdb27175a86291d3a942ff168a5aae787c0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 26b3c3510aa06fb1c7aa4c3a44f23c8e526fe60c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522201"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200034"
 ---
 # <a name="implementing-api-gateways-with-ocelot"></a>Ocelot を使った API ゲートウェイの実装
 
@@ -271,7 +271,7 @@ DownstreamHostAndPorts は、要求の転送先となるすべてのダウンス
 
 UpstreamPathTemplate は、クライアントから特定の要求に対し、どの DownstreamPathTemplate を使用するかを識別するために Ocelot によって使用される URL です。 最後に、Ocelot が異なる要求 (GET、POST、PUT) を同じ URL に区別できるように、UpstreamHttpMethod が使用されます。
 
-この時点で、1 つまたは[複数のマージされた configuration.json ファイル](http://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files)を使用して 1 つの Ocelot API ゲートウェイ (ASP.NET Core WebHost) を持つことも、[Consul KV ストアに構成を格納](http://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul)することもできます。 
+この時点で、1 つまたは[複数のマージされた configuration.json ファイル](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files)を使用して 1 つの Ocelot API ゲートウェイ (ASP.NET Core WebHost) を持つことも、[Consul KV ストアに構成を格納](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul)することもできます。
 
 ただし、アーキテクチャとデザインのセクションで紹介したように、自律型のマイクロサービスが本当に必要な場合は、その 1 つのモノリシック API ゲートウェイを複数の API ゲートウェイや Backend for Frontend (BFF) に分割した方がよい場合があります。 そのために、Docker コンテナーを使用してこのアプローチを実装する方法を見てみましょう。
 
@@ -346,9 +346,9 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5203:80"   
+    - "5203:80"
   volumes:
     - ./src/ApiGateways/Web.Bff.Marketing/apigw:/app/configuration
 ```
@@ -363,25 +363,25 @@ API ゲートウェイを複数の API ゲートウェイに分割すること�
 
 ここで、(eShopOnContainers ServicesAndWebApps.sln ソリューションを開くとき、または “docker-compose up” を実行している場合に、VS に既定で含まれる) API ゲートウェイを使用して eShopOnContainers を実行すると、次のサンプル ルートが実行されます。 
 
-たとえば、webshoppingapigw API ゲートウェイによって提供されるアップストリーム URL http://localhost:5202/api/v1/c/catalog/items/2/ にアクセスすると、次のブラウザーにあるように、Docker ホスト内の内部ダウンストリーム URL http://catalog.api/api/v1/2 からの結果が得られます。
+たとえば、webshoppingapigw API ゲートウェイによって提供されるアップストリーム URL `http://localhost:5202/api/v1/c/catalog/items/2/` にアクセスすると、次のブラウザーにあるように、Docker ホスト内の内部ダウンストリーム URL `http://catalog.api/api/v1/2` からの結果が得られます。
 
 ![](./media/image35.png)
 
-**図 8-34** API ゲートウェイによって提供される URL からマイクロサービスにアクセスする 
+**図 8-34** API ゲートウェイによって提供される URL からマイクロサービスにアクセスする
 
-テストまたはデバッグの理由から、API ゲートウェイを通過せずに Catalog Docker コンテナーに直接アクセスしたい場合 (開発環境でのみ)、'catalog.api' は Docker ホスト (docker-compose サービス名により処理されるサービス検索) 内部の DNS 解決であるため、コンテナーに直接アクセスする唯一の方法は、次のブラウザーにある http://localhost:5101/api/v1/Catalog/items/1 のように、開発テスト用にのみ提供される docker-compose.override.yml で公開されている外部ポートを経由することです。
+テストまたはデバッグの理由から、API ゲートウェイを通過せずに Catalog Docker コンテナーに直接アクセスしたい場合 (開発環境でのみ)、'catalog.api' は Docker ホスト (docker-compose サービス名により処理されるサービス検索) 内部の DNS 解決であるため、コンテナーに直接アクセスする唯一の方法は、次のブラウザーにある `http://localhost:5101/api/v1/Catalog/items/1` のように、開発テスト用にのみ提供される docker-compose.override.yml で公開されている外部ポートを経由することです。
 
 ![](./media/image36.png)
 
 **図 8-35** テスト目的でのマイクロサービスへの直接アクセス 
 
-ただし、アプリケーションは、ダイレクト ポートの "ショートカット" を経由してではなく、API ゲートウェイを経由してすべてのマイクロサービスにアクセスするように構成されます。 
+ただし、アプリケーションは、ダイレクト ポートの "ショートカット" を経由してではなく、API ゲートウェイを経由してすべてのマイクロサービスにアクセスするように構成されます。
 
 ### <a name="the-gateway-aggregation-pattern-in-eshoponcontainers"></a>eShopOnContainers でのゲートウェイ集計パターン
 
-前述のとおり、要求の集計を実装する柔軟な方法は、コードでカスタム サービスを使用することです。 Ocelot で要求の集計機能を使用して、要求の集計を実装することもできますが、十分な柔軟性が得られない場合があります。 そのため、eShopOnContainers で集計を実装するために選択した方法は、各アグリゲーターに明示的な ASP.NET Core Web API サービスを使用することです。 
+前述のとおり、要求の集計を実装する柔軟な方法は、コードでカスタム サービスを使用することです。 Ocelot で要求の集計機能を使用して、要求の集計を実装することもできますが、十分な柔軟性が得られない場合があります。 そのため、eShopOnContainers で集計を実装するために選択した方法は、各アグリゲーターに明示的な ASP.NET Core Web API サービスを使用することです。
 
-このアプローチに従うと、前出の簡略化されたグローバル アーキテクチャの図に示されていないアグリゲーター サービスを考慮に入れた場合、API ゲートウェイ コンポジション図は、実際にはもう少し拡張されます。 
+このアプローチに従うと、前出の簡略化されたグローバル アーキテクチャの図に示されていないアグリゲーター サービスを考慮に入れた場合、API ゲートウェイ コンポジション図は、実際にはもう少し拡張されます。
 
 次の図では、アグリゲーター サービスがその関連する API ゲートウェイとどのように連携するかも確認できます。
 
@@ -389,13 +389,13 @@ API ゲートウェイを複数の API ゲートウェイに分割すること�
 
 **図 8-36** アグリゲーター サービスを使用した eShopOnContainers アーキテクチャ
 
-次の図は、"ショッピング" ビジネス分野をさらに拡大して、API ゲートウェイの領域でこれらのアグリゲーター サービスを使用する場合に、マイクロサービスとの頻繁な通信がどのように削減できるかを確認できるようにしたものです。 
+次の図は、"ショッピング" ビジネス分野をさらに拡大して、API ゲートウェイの領域でこれらのアグリゲーター サービスを使用する場合に、マイクロサービスとの頻繁な通信がどのように削減できるかを確認できるようにしたものです。
 
  ![](./media/image38.png)
 
 **図 8-37** アグリゲーター サービスのビジョンの拡大表示
 
-API ゲートウェイから送信される可能性がある要求を図に示すと、非常に複雑になる可能性があることがわかります。 しかし、クライアント アプリの視点かラ見て、青の矢印がどのように簡略化されるかがわかります。アグリゲーター パターンを使用すると、頻繁な通信と通信の待機時間を減らすことで、最終的にユーザー エクスペリエンス、とりわけリモート アプリ (モバイルおよび SPA アプリ) のユーザー エクスペリエンスが大幅に向上します。 
+API ゲートウェイから送信される可能性がある要求を図に示すと、非常に複雑になる可能性があることがわかります。 しかし、クライアント アプリの視点かラ見て、青の矢印がどのように簡略化されるかがわかります。アグリゲーター パターンを使用すると、頻繁な通信と通信の待機時間を減らすことで、最終的にユーザー エクスペリエンス、とりわけリモート アプリ (モバイルおよび SPA アプリ) のユーザー エクスペリエンスが大幅に向上します。
 
 "マーケティング" ビジネス領域とマイクロサービスの場合は、非常にシンプルなユース ケースであるため、アグリゲーターを使用する必要はありませんでしたが、必要に応じて使用することもできます。
 
@@ -466,9 +466,12 @@ namespace OcelotApiGw
                     x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                     {
                         ValidAudiences = new[] { "orders", "basket", "locations", "marketing", "mobileshoppingagg", "webshoppingagg" }
-                    };                   
+                    };
                 });
             //...
+        }
+    }
+}
 ```
 
 次に、次の Basket マイクロサービス コントローラーのように、マイクロサービスのようにアクセスされる任意のリソースで、[Authorize] 属性を使用して承認を設定する必要があります。
@@ -479,7 +482,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.Controllers
     [Route("api/v1/[controller]")]
     [Authorize]
     public class BasketController : Controller
-    {   
+    {
       //...
     }
 }
@@ -506,9 +509,9 @@ services.AddAuthentication(options =>
 });
 ```
 
-次の手順として、 http://localhost:5202/api/v1/b/basket/1 のような API ゲートウェイに基づく ReRoute URL を使用して、セキュリティで保護された任意のマイクロサービスにアクセスしようしたときに、有効なトークンを提供しないと、401 未承認エラーが表示されます。 その一方で、ReRoute URL が認証されると、(内部マイクロサービス URL に) 関連付けられているダウンストリーム スキーマが何であれ、Ocelot によって呼び出されます。
+次の手順として、`http://localhost:5202/api/v1/b/basket/1` のような API ゲートウェイに基づく ReRoute URL を使用して、セキュリティで保護された任意のマイクロサービスにアクセスしようしたときに、有効なトークンを提供しないと、401 未承認エラーが表示されます。 その一方で、ReRoute URL が認証されると、(内部マイクロサービス URL に) 関連付けられているダウンストリーム スキーマが何であれ、Ocelot によって呼び出されます。
 
-**Ocelot の ReRoute 層での承認。**  Ocelot では、認証後に評価されたクレーム ベースの承認をサポートします。 次のコードを ReRoute 構成に追加することで、ルート レベルで承認を設定します。 
+**Ocelot の ReRoute 層での承認。**  Ocelot では、認証後に評価されたクレーム ベースの承認をサポートします。 次のコードを ReRoute 構成に追加することで、ルート レベルで承認を設定します。
 
 ```
 "RouteClaimsRequirement": {
@@ -516,13 +519,13 @@ services.AddAuthentication(options =>
 }
 ```
 
-この例では、承認ミドルウェアが呼び出されると、ユーザーがトークンに要求の種類 'UserType' を持っているかどうか、および要求の値が 'employee' かどうかが Ocelot によって確認されます。 そうでない場合、ユーザーは承認されず、403 アクセス不可の応答が返されます。 
+この例では、承認ミドルウェアが呼び出されると、ユーザーがトークンに要求の種類 'UserType' を持っているかどうか、および要求の値が 'employee' かどうかが Ocelot によって確認されます。 そうでない場合、ユーザーは承認されず、403 アクセス不可の応答が返されます。
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>Kubernetes イングレスと Ocelot API ゲートウェイを使用する
 
-(Azure Kubernetes Service クラスターで使用されているように) Kubernetes を使用する場合、通常は、*Nginx* に基づく [Kuberentes イングレス層](https://kubernetes.io/docs/concepts/services-networking/ingress/)を通じて、すべての HTTP 要求を統合します。 
+(Azure Kubernetes Service クラスターで使用されているように) Kubernetes を使用する場合、通常は、*Nginx* に基づく [Kubernetes イングレス層](https://kubernetes.io/docs/concepts/services-networking/ingress/)を通じて、すべての HTTP 要求を統合します。 
 
-Kuberentes では、どのイングレス アプローチも使用しない場合、サービスとポッドには、クラスター ネットワークによるルーティングのみが可能な IP が与えられます。 
+Kubernetes では、どのイングレス アプローチも使用しない場合、サービスとポッドには、クラスター ネットワークによるルーティングのみが可能な IP が与えられます。 
 
 ただし、イングレス アプローチを使用する場合は、リバース プロキシとして機能する、インターネットとサービス (API ゲートウェイを含む) の間の中間層が与えられます。
 
@@ -530,19 +533,19 @@ Kuberentes では、どのイングレス アプローチも使用しない場�
 
 eShopOnContainers では、ローカルで開発し、開発用コンピューターだけを Docker ホストとして使用する場合は、どのイングレスも使用せず、複数の API ゲートウェイのみを使用します。 
 
-ただし、Kuberentes に基づいて "運用" 環境をターゲットにする場合は、eShopOnCOntainers では、API ゲートウェイの前にイングレスが使用されます。 これにより、クライアントは引き続き同じベース URL を呼び出しますが、要求は複数の API ゲートウェイまたは BFF にルーティングされます。 
+ただし、Kubernetes に基づいて "運用" 環境をターゲットにする場合は、eShopOnContainers では、API ゲートウェイの前にイングレスが使用されます。 これにより、クライアントは引き続き同じベース URL を呼び出しますが、要求は複数の API ゲートウェイまたは BFF にルーティングされます。 
 
-API ゲートウェイは、サービスのみに接するフロント エンドまたはファサードで、Web アプリケーションではなく、通常はその範囲外であることに注意してください。 さらに、API ゲートウェイは、特定の内部マイクロサービスを非表示にすることがあります。 
+API ゲートウェイは、サービスのみに接するフロント エンドまたはファサードで、Web アプリケーションではなく、通常はその範囲外であることに注意してください。 さらに、API ゲートウェイは、特定の内部マイクロサービスを非表示にすることがあります。
 
 ただし、イングレスは、HTTP 要求をリダイレクトするだけですが、どのマイクロサービスまたは Web アプリも非表示にはしません。
 
-次の図に示すように、Web アプリケーションの前の Kuberentes にイングレス Nginx 層と、複数の Ocelot API ゲートウェイ/BFF を配置するのが理想的なアーキテクチャです。
+次の図に示すように、Web アプリケーションの前の Kubernetes にイングレス Nginx 層と、複数の Ocelot API ゲートウェイ/BFF を配置するのが理想的なアーキテクチャです。
 
  ![](./media/image41.png)
 
 **図 8-40** Kubernetes に配置するときの eShopOnContainers のイングレス層
 
-Kuberentes に eShopOnContainers を配置すると、少数のサービスまたはエンドポイントだけが_イングレス_経由で公開されます。基本的に、URL の接尾辞は次のとおりです。
+Kubernetes に eShopOnContainers を配置すると、少数のサービスまたはエンドポイントだけが_イングレス_経由で公開されます。基本的に、URL の接尾辞は次のとおりです。
 
 -   `/`: クライアント SPA Web アプリケーション用
 -   `/webmvc`: クライアント MVC Web アプリケーション用
@@ -552,32 +555,28 @@ Kuberentes に eShopOnContainers を配置すると、少数のサービスま�
 -   `/mobileshoppingapigw`: モバイル BFF とショッピング ビジネス プロセス用
 -   `/mobilemarketingapigw`: モバイル BFF とマーケティング ビジネス プロセス用
 
-Kubernetes に配置するときに、各 Ocelot API ゲートウェイは、API ゲートウェイを実行している_ポッド_ごとに異なる "configuration.json" ファイルを使用します。 これらの "configuration.json" ファイルは、‘ocelot’ という名前の Kuberentes _構成マップ_に基づいて作成されたボリュームを (もともとは deploy.ps1 スクリプトを使用して) マウントすることによって提供されます。 各コンテナーにより、関連する構成ファイルが `/app/configuration` という名前のコンテナーのフォルダーにマウントされます。
+Kubernetes に配置するときに、各 Ocelot API ゲートウェイは、API ゲートウェイを実行している_ポッド_ごとに異なる "configuration.json" ファイルを使用します。 これらの "configuration.json" ファイルは、‘ocelot’ という名前の Kubernetes _構成マップ_に基づいて作成されたボリュームを (もともとは deploy.ps1 スクリプトを使用して) マウントすることによって提供されます。 各コンテナーにより、関連する構成ファイルが `/app/configuration` という名前のコンテナーのフォルダーにマウントされます。
 
 eShopOnContainers のソース コード ファイルでは、元の "configuration.json" ファイルは `k8s/ocelot/` フォルダー内にあります。 BFF/API ゲートウェイごとに 1 つのファイルがあります。
-
 
 ## <a name="additional-cross-cutting-features-in-an-ocelot-api-gateway"></a>Ocelot API ゲートウェイで追加された横断機能
 
 Ocelot API ゲートウェイを使用する場合に、調査および使用するための重要な機能は他にもあり、次のリンクで説明されています。
 
 -   **Ocelot と Consul または Eureka を統合するクライアント側でのサービス検出** 
-    [*http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
 
 -   **API ゲートウェイ層でのキャッシュ** 
-    [*http://ocelot.readthedocs.io/en/latest/features/caching.html*](http://ocelot.readthedocs.io/en/latest/features/caching.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)
 
 -   **API ゲートウェイ層でのログ記録** 
-    [*http://ocelot.readthedocs.io/en/latest/features/logging.html*](http://ocelot.readthedocs.io/en/latest/features/logging.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)
 
 -   **API ゲートウェイ層でのサービスの品質 (再試行、サーキット ブレーカー)** 
-    [*http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
 
 -   **速度の制限** 
-    [*http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
-
-
-
+    [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 >[!div class="step-by-step"]
 [前へ] (background-tasks-with-ihostedservice.md) [次へ] (../microservice-ddd-cqrs-patterns/index.md)

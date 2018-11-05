@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502367"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195685"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 配置ガイド (管理者向け)
 この記事では、システム管理者が Microsoft System Center Configuration Manager を使用して [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] とそのシステムの依存関係をネットワーク経由で配置する方法を手順に沿って説明します。 ここでは、すべての対象のクライアント コンピューターが .NET Framework の最小要件を満たしていることを前提としています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] のインストールに必要なソフトウェア要件とハードウェア要件の一覧については、「[システム要件](../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
@@ -37,16 +37,16 @@ ms.locfileid: "43502367"
 ## <a name="the-deployment-process"></a>配置プロセス  
  サポートするインフラストラクチャが整っている場合は、System Center 2012 Configuration Manager を使用して、.NET Framework 再頒布可能パッケージをネットワーク上のコンピューターに配置します。 インフラストラクチャを構築するには、コレクション、ソフトウェアのパッケージとプログラム、配布ポイント、配置という 5 つの主要な項目を作成し定義する必要があります。  
   
--   **コレクション**は、ユーザー、ユーザー グループ、コンピューターなど、.NET Framework の配置先となる Configuration Manager リソースのグループです。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコレクション](https://technet.microsoft.com/library/gg682169.aspx)」を参照してください。  
+-   **コレクション**は、ユーザー、ユーザー グループ、コンピューターなど、.NET Framework の配置先となる Configuration Manager リソースのグループです。 詳細については、Configuration Manager ドキュメント ライブラリの「[System Center Configuration Manager のコレクションの概要](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections)」を参照してください。  
   
--   **パッケージとプログラム**は、通常、クライアント コンピューターにインストールされるソフトウェア アプリケーションを表しますが、個々のファイル、更新プログラム、さらには個々のコマンドが含まれることがあります。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のパッケージとプログラム](https://technet.microsoft.com/library/gg699369.aspx)」を参照してください。  
+-   **パッケージとプログラム**は、通常、クライアント コンピューターにインストールされるソフトウェア アプリケーションを表しますが、個々のファイル、更新プログラム、さらには個々のコマンドが含まれることがあります。 詳細については、Configuration Manager ドキュメント ライブラリの「[System Center Configuration Manager のパッケージとプログラム](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs)」を参照してください。  
   
--   **配布ポイント**は、ソフトウェアをクライアント コンピューター上で実行するために必要なファイルを格納する Configuration Manager のサイト システムの役割です。 Configuration Manager クライアントは、ソフトウェア配置を受け取って処理するときに、配布ポイントに接続してソフトウェアに関連するコンテンツをダウンロードし、インストール処理を開始します。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコンテンツ管理の概要](https://technet.microsoft.com/library/gg682083.aspx)」を参照してください。  
+-   **配布ポイント**は、ソフトウェアをクライアント コンピューター上で実行するために必要なファイルを格納する Configuration Manager のサイト システムの役割です。 Configuration Manager クライアントは、ソフトウェア配置を受け取って処理するときに、配布ポイントに接続してソフトウェアに関連するコンテンツをダウンロードし、インストール処理を開始します。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager でのコンテンツ管理の基本的な概念](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)」を参照してください。  
   
--   **配置**は、指定されたターゲット コレクションの該当するメンバーにソフトウェア パッケージをインストールするよう指示します。 詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager でのアプリケーションの展開方法](https://technet.microsoft.com/library/gg682082.aspx)」を参照してください。  
+-   **配置**は、指定されたターゲット コレクションの該当するメンバーにソフトウェア パッケージをインストールするよう指示します。 
   
 > [!IMPORTANT]
->  このトピックの手順では、パッケージとプログラムを作成するための一般的な設定を使用していて、すべての可能な設定について説明していない場合があります。 その他の Configuration Manager の配置オプションについては、[Configuration Manager のドキュメント ライブラリ](https://technet.microsoft.com/library/gg682041.aspx)を参照してください。  
+>  このトピックの手順では、パッケージとプログラムを作成するための一般的な設定を使用していて、すべての可能な設定について説明していない場合があります。 その他の Configuration Manager の配置オプションについては、[Configuration Manager のドキュメント ライブラリ](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29)を参照してください。  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>.NET Framework の配置  
@@ -62,7 +62,7 @@ ms.locfileid: "43502367"
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>コレクションの作成  
- この手順では、パッケージとプログラムを配置するコンピューターを選択し、それをデバイス コレクションにグループ化します。 Configuration Manager でコレクションを作成するときは、ダイレクト メンバーシップ規則 (コレクション メンバーを手動で指定) またはクエリ規則 (指定した条件に基づいて Configuration Manager がコレクション メンバーを決定) を使用できます。 メンバーシップ規則の詳細については、クエリ規則とダイレクト規則も含めて、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコレクションの概要](https://technet.microsoft.com/library/gg682177.aspx)」を参照してください。  
+ この手順では、パッケージとプログラムを配置するコンピューターを選択し、それをデバイス コレクションにグループ化します。 Configuration Manager でコレクションを作成するときは、ダイレクト メンバーシップ規則 (コレクション メンバーを手動で指定) またはクエリ規則 (指定した条件に基づいて Configuration Manager がコレクション メンバーを決定) を使用できます。 メンバーシップ規則の詳細については、クエリ規則とダイレクト規則も含めて、Configuration Manager ドキュメント ライブラリの「[System Center Configuration Manager のコレクションの概要](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections)」を参照してください。  
   
  コレクションを作成するには  
   
@@ -83,8 +83,6 @@ ms.locfileid: "43502367"
 8.  **[リソースの選択]** ページで、.NET Framework を配置する各コンピューターのチェック ボックスをオンにします。 **[次へ]** をクリックして、ウィザードの操作を完了します。  
   
 9. **デバイス コレクションの作成ウィザード**の **[メンバーシップの規則]** ページで、**[次へ]** をクリックし、ウィザードの処理を完了します。  
-  
- コレクションの詳細については、Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコレクション](https://technet.microsoft.com/library/bb693730.aspx)」を参照してください。  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>.NET Framework 再頒布可能パッケージとプログラムの作成  
@@ -154,7 +152,7 @@ ms.locfileid: "43502367"
   
 8.  ウィザードを完了します。  
   
- これでパッケージには、.NET Framework 4.5 をサイレントで配置するために必要なすべての情報が含まれています。 パッケージとプログラムを配置する前に、そのパッケージが配布ポイントにインストールされていることを確認します。Configuration Manager ドキュメント ライブラリの「[Configuration Manager のコンテンツ管理の操作とメンテナンス](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent)」の「コンテンツの監視」セクションを参照してください。  
+ これでパッケージには、.NET Framework 4.5 をサイレントで配置するために必要なすべての情報が含まれています。 パッケージとプログラムを配置する前に、そのパッケージが配布ポイントにインストールされていることを確認します。Configuration Manager ドキュメント ライブラリの「[配布したコンテンツを System Center Configuration Manager で監視する](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed)」のコンテンツの監視に関するセクションを参照してください。  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>パッケージの配置  
@@ -193,27 +191,27 @@ ms.locfileid: "43502367"
   
  **Active Directory、DNS、DHCP:**  
   
--   [Windows Server 2008 向け Active Directory Domain Services](https://technet.microsoft.com/library/dd378891.aspx)  
+-   [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services)  
   
--   [DNS サーバー](https://technet.microsoft.com/library/cc732997.aspx)  
+-   [ドメイン ネーム システム (DNS)](/windows-server/networking/dns/dns-top)  
   
--   [DHCP サーバー](https://technet.microsoft.com/library/cc896553.aspx)  
+-   [動的ホスト構成プロトコル (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
  **SQL Server 2008:**  
   
--   [SQL Server 2008 のインストール (SQL Server ビデオ)](https://technet.microsoft.com/library/dd299415.aspx)  
+-   [SQL Server 2008 のインストール (SQL Server ビデオ)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
   
 -   [SQL Server 2008 のデータベース管理者向けセキュリティ概要](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (管理ポイント、配布ポイント):**  
   
--   [System Center 2012 Configuration Manager のサイト管理](https://technet.microsoft.com/library/gg681983.aspx)  
+-   [System Center 2012 Configuration Manager のサイト管理](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
 -   [Configuration Manager の単一サイトの計画と展開](https://technet.microsoft.com/library/bb680961.aspx)  
   
  **Windows コンピューター用の System Center 2012 Configuration Manager クライアント:**  
   
--   [System Center 2012 Configuration Manager のクライアントの展開](https://technet.microsoft.com/library/gg699391.aspx)  
+-   [System Center 2012 Configuration Manager のクライアントの展開](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>トラブルシューティング  
@@ -248,18 +246,18 @@ ms.locfileid: "43502367"
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>ダウンロードのエラー コード  
   
--   [Background Intelligent Transfer Service (BITS) のエラー コード](https://msdn.microsoft.com/library/aa362823.aspx)  
+-   [Background Intelligent Transfer Service (BITS) のエラー コード](/windows/desktop/Bits/bits-return-values)  
   
--   [URL モニカーのエラー コード](https://msdn.microsoft.com/library/ms775145.aspx)  
+-   [URL モニカーのエラー コード](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
 -   [WinHttp エラー コード](/windows/desktop/WinHttp/error-messages)  
   
  その他のエラー コード:   
   
--   [Windows インストーラーのエラー コード](https://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Windows インストーラーのエラー コード](/windows/desktop/msi/error-codes)  
   
--   [Windows Update エージェントの結果コード](https://technet.microsoft.com/library/cc720442.aspx)  
+-   [Windows Update エージェントの結果コード](/security-updates/WindowsUpdateServices/18127055)  
   
 ## <a name="see-also"></a>参照  
- [配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [システム要件](../../../docs/framework/get-started/system-requirements.md)
+- [配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [システム要件](../../../docs/framework/get-started/system-requirements.md)

@@ -5,12 +5,12 @@ description: Windows 8 に .NET Framework をインストールする方法に�
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: f1edc928318ec56853df06c1382465e24d9604c9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2304e8e2865c00ef480cc3d595195248db3f4d2a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515885"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196545"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Windows 8 と Windows Server 2012 に .NET Framework をインストールする
 
@@ -18,7 +18,7 @@ ms.locfileid: "43515885"
 
 ![このアプリケーションを開始できませんでした。](./media/this-application-could-not-be-started.png)
 
-これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 Windows Server 2012 ではサポートされていますが、Windows 8 ではサポートされていません。 [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に付属しています。
+これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 Windows Server 2012 ではサポートされていますが、Windows 8 ではサポートされていません。 [Windows 10 October 2018 Update](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) と [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に含まれています。
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 

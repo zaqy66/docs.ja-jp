@@ -1,180 +1,149 @@
 ---
 title: 同期プリミティブの概要
-ms.date: 03/30/2017
+description: 共有リソースへのアクセスを同期する場合や、スレッド相互作用を制御する場合に使用される .NET スレッド同期プリミティブについて説明します
+ms.date: 10/01/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
-- threading [.NET Framework],synchronizing threads
+- threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204600"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201599"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同期プリミティブの概要
-<a name="top"></a>.NET Framework には、スレッドの相互作用を制御したり競合状態を回避したりするためのさまざまな同期プリミティブが用意されています。 これらは、大きくは 3 つのカテゴリ (ロック、シグナリング、インタロックされた操作) に分類することができます。  
-  
- これらのカテゴリはきちんと整理されたものでも、明確に定義されたものでもありません。つまり、複数のカテゴリの特性を持つ同期機構もあります。たとえば、1 つのスレッドを同時に解放するイベントは、機能的にロックに似ています。また、ロックの解放はシグナルと考えることができます。インタロックされた操作を使用してロックを作成できます。 しかし、これらのカテゴリは有用です。  
-  
- スレッド同期は協調的であるということを忘れないようにするのが重要です。 1 つのスレッドが同期機構をバイパスして、保護リソースに直接アクセスしただけで、その同期機構は有効でなくなります。  
-  
- この概要は、次のセクションで構成されています。  
-  
--   [ロック](#locking)  
-  
--   [シグナリング](#signaling)  
-  
--   [軽量の同期型](#lightweight_synchronization_types)  
-  
--   [SpinWait](#spinwait)  
-  
--   [インタロックされた操作](#interlocked_operations)  
-  
-<a name="locking"></a>   
-## <a name="locking"></a>ロック  
- ロックは、リソースの制御を一度に 1 つのスレッドに渡したり、指定された数のスレッドに渡したりします。 ロックが使用されているときに排他ロックを要求したスレッドは、ロックが使用可能になるまでブロックされます。  
-  
-### <a name="exclusive-locks"></a>排他ロック  
- ロックの最も単純な形式は、C# では `lock` ステートメントであり、Visual Basic では `SyncLock` ステートメントです。これらのステートメントは、コード ブロックへのアクセスを制御します。 このようなブロックはしばしば、クリティカル セクションと呼ばれます。 `lock` ステートメントは <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> メソッドと <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> メソッドを使用して実装されます。また、このステートメントでは、ロックが確実に解除されるように、`try…finally` ブロックが使用されます。  
-  
- 一般的に、`lock` ステートメントまたは `SyncLock` ステートメントを使用して小さいコード ブロックを保護して、1 つのメソッドより広げないようにするのが、<xref:System.Threading.Monitor> クラスを使用するための最適な方法です。 <xref:System.Threading.Monitor> クラスは強力ですが、孤立したロックやデッドロックが発生しやすくなります。  
-  
-#### <a name="monitor-class"></a>Monitor クラス  
- <xref:System.Threading.Monitor> クラスは、`lock` ステートメントと併せて使用できる追加機能を備えています。  
-  
--   <xref:System.Threading.Monitor.TryEnter%2A> メソッドは、ブロックされている間に指定時間間隔後にリソースが解放されるのを待機するスレッドを可能にします。 このメソッドは、成功または失敗を示すブール値を返します。この値を使用して、デッドロックの可能性を検出して回避できます。  
-  
--   <xref:System.Threading.Monitor.Wait%2A> メソッドは、クリティカル セクション内のスレッドで呼び出されます。 このメソッドは、リソースが再び使用可能になるまでリソースの制御を放棄し、ブロックされます。  
-  
--   <xref:System.Threading.Monitor.Pulse%2A> メソッドと <xref:System.Threading.Monitor.PulseAll%2A> メソッドは、ロックを解放しようとしているスレッドや、1 つ以上のスレッドを実行待ちキューに入れるために <xref:System.Threading.Monitor.Wait%2A> を呼び出そうとしているスレッドを可能にして、それらのスレッドがロックを取得できるようにします。  
-  
- <xref:System.Threading.Monitor.Wait%2A> メソッドのオーバーロードでのタイムアウトは、待機中のスレッドが実行待ちキューにエスケープすることを可能にします。  
-  
- <xref:System.Threading.Monitor> クラスは、ロックに使用されるオブジェクトが <xref:System.MarshalByRefObject> から派生していれば、複数のアプリケーション ドメインでロックを提供できます。  
-  
- <xref:System.Threading.Monitor> にはスレッド アフィニティがあります。 つまり、モニターに入ったスレッドは、<xref:System.Threading.Monitor.Exit%2A> または <xref:System.Threading.Monitor.Wait%2A> を呼び出すことによって終了しなければなりません。  
-  
- <xref:System.Threading.Monitor> クラスはインスタンス化可能ではありません。 このメソッドは静的 (Visual Basic では `Shared`) であり、インスタンス化可能ロック オブジェクトに対して作用します。  
-  
- 概念的概要については、「[モニター](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)」を参照してください。  
-  
-#### <a name="mutex-class"></a>Mutex クラス  
- スレッドは、<xref:System.Threading.Mutex> をその <xref:System.Threading.WaitHandle.WaitOne%2A> メソッドのオーバーロードを呼び出すことによって要求します。 スレッドが待機を中止することができるように、タイムアウトを使用するオーバーロードが用意されています。 <xref:System.Threading.Monitor> クラスとは異なり、ミューテックスはローカルもグローバルも可能です。 グローバル ミューテックスは名前付きミューテックスとも呼ばれ、オペレーティング システム全体で可視です。したがって、複数のアプリケーション ドメインまたはプロセス内のスレッドの同期化に使用できます。 ローカル ミューテックスは <xref:System.MarshalByRefObject> から派生し、アプリケーション ドメインの境界を越えて使用できます。  
-  
- さらに、<xref:System.Threading.Mutex> は <xref:System.Threading.WaitHandle> から派生します。これは、<xref:System.Threading.WaitHandle.WaitAll%2A> メソッド、<xref:System.Threading.WaitHandle.WaitAny%2A> メソッド、<xref:System.Threading.WaitHandle.SignalAndWait%2A> メソッドなど、<xref:System.Threading.WaitHandle> が提供するシグナリング機構とともに使用できることを意味します。  
-  
- <xref:System.Threading.Monitor> と同様に、<xref:System.Threading.Mutex> にはスレッド アフィニティがあります。 <xref:System.Threading.Monitor> とは異なり、<xref:System.Threading.Mutex> はインスタンス化可能オブジェクトです。  
-  
- 概念的概要については、「[ミューテックス](../../../docs/standard/threading/mutexes.md)」を参照してください。  
-  
-#### <a name="spinlock-class"></a>SpinLock クラス  
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降、<xref:System.Threading.Monitor> にとって必要なオーバーヘッドのためにパフォーマンスが低下する場合は、<xref:System.Threading.SpinLock> クラスを使用できるようになりました。 <xref:System.Threading.SpinLock> は、ロックされたクリティカル セクションを検出すると、ロックが使用可能になるまで単にループ内をスピンします。 ロックが保持される時間が非常に短い場合は、ブロックよりもスピンのほうがパフォーマンスがよいことがあります。 ただし、ロックが保持される期間が数十サイクル以上の場合、<xref:System.Threading.SpinLock> は <xref:System.Threading.Monitor> と同様のパフォーマンスを示しますが、使用する CPU サイクルが多くなるため、他のスレッドやプロセスのパフォーマンスが低下する可能性があります。  
-  
-### <a name="other-locks"></a>他のロック  
- ロックは排他的である必要はありません。 多くの場合、限定された数のスレッドがリソースに同時にアクセスすることを許可すると有用です。 セマフォおよびリーダー/ライター ロックは、このようなプールされたリソース アクセスを制御することを意図して設計されています。  
-  
-#### <a name="readerwriterlock-class"></a>ReaderWriterLock クラス  
- <xref:System.Threading.ReaderWriterLockSlim> クラスは、データを変更するスレッド (ライター) がリソースへの排他アクセスを必要とするケースに対処します。 ライターがアクティブでない場合は、任意の数のリーダーが (たとえば <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A> メソッドを呼び出して) リソースにアクセスできます。 スレッドが (たとえば <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A> メソッドを呼び出して) 排他アクセスを要求すると、後続のリーダーの要求は、既存のすべてのリーダーがロックを終了し、ライターがロックに参加して終了するまでブロックされます。  
-  
- <xref:System.Threading.ReaderWriterLockSlim> にはスレッド アフィニティがあります。  
-  
- 概念的概要については、「[読み取り/書き込みロック](../../../docs/standard/threading/reader-writer-locks.md)」を参照してください。  
-  
-#### <a name="semaphore-class"></a>Semaphore クラス  
- <xref:System.Threading.Semaphore> クラスは、指定した数のスレッドがリソースにアクセスできるようにします。 リソースを要求する追加のスレッドは、スレッドがセマフォを解放するまでブロックされます。  
-  
- <xref:System.Threading.Mutex> クラスと同様に、<xref:System.Threading.Semaphore> は <xref:System.Threading.WaitHandle> から派生します。 また、<xref:System.Threading.Mutex> と同様に、<xref:System.Threading.Semaphore> はローカルもグローバルも可能です。 アプリケーション ドメインの境界を越えて使用できます。  
-  
- <xref:System.Threading.Monitor>、<xref:System.Threading.Mutex>、<xref:System.Threading.ReaderWriterLock> とは異なり、<xref:System.Threading.Semaphore> にはスレッド アフィニティがありません。 これは、1 つのスレッドがセマフォを取得して別のスレッドがそれを解放するシナリオで使用できることを意味します。  
-  
- 概念的概要については、「[Semaphore と SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)」を参照してください。  
-  
- <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> は、1 つのプロセス境界内の同期化のための軽量セマフォです。  
-  
- [ページのトップへ](#top)  
-  
-<a name="signaling"></a>   
-## <a name="signaling"></a>シグナリング  
- 別のスレッドからのシグナルを待機する最も簡単な方法は、<xref:System.Threading.Thread.Join%2A> メソッドを呼び出すことです。これにより、他方のスレッドが完了するまでブロックされます。 <xref:System.Threading.Thread.Join%2A> には、ブロックされたスレッドが指定時間間隔経過後に待機から抜け出すことを許可する 2 つのオーバーロードがあります。  
-  
- 待機ハンドルは、待機機能とシグナリング機能の非常に豊富なセットを提供します。  
-  
-### <a name="wait-handles"></a>待機ハンドル  
- 待機ハンドルは <xref:System.Threading.WaitHandle> クラスから派生し、このクラスは <xref:System.MarshalByRefObject> から派生します。 したがって、待機ハンドルを使用して、アプリケーション ドメインの境界を越えてスレッドのアクティビティを同期させることができます。  
-  
- インスタンス メソッド <xref:System.Threading.WaitHandle.WaitOne%2A> か、静的メソッド <xref:System.Threading.WaitHandle.WaitAll%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A>、<xref:System.Threading.WaitHandle.SignalAndWait%2A> のいずれかを呼び出すことによって、スレッドは待機ハンドルでブロックされます。 それらがどのように解放されるかは、呼び出されたメソッドと待機ハンドルの種類に応じて決まります。  
-  
- 概念的概要については、「[待機ハンドル](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)」を参照してください。  
-  
-#### <a name="event-wait-handles"></a>イベント待機ハンドル  
- イベント待機ハンドルには、<xref:System.Threading.EventWaitHandle> クラスとその派生クラスの <xref:System.Threading.AutoResetEvent> および <xref:System.Threading.ManualResetEvent> が含まれます。 <xref:System.Threading.EventWaitHandle.Set%2A> メソッドを呼び出すか <xref:System.Threading.WaitHandle.SignalAndWait%2A> メソッドを使用してイベント待機ハンドルに通知されると、スレッドはイベント待機ハンドルから解放されます。  
-  
- イベント待機ハンドルは、通知されるたびにスレッドが 1 つだけ通過できるようにする回転ドアのように、自身を自動的にリセットします。あるいは、通知されるまで閉じていてだれかが閉じるまで開いているゲートのように、手動でリセットされる必要があります。 名前が示すとおり、<xref:System.Threading.AutoResetEvent> と <xref:System.Threading.ManualResetEvent> はそれぞれ前者と後者を表します。 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> は、1 つのプロセス境界内の同期化のための軽量イベントです。  
-  
- <xref:System.Threading.EventWaitHandle> はイベントのいずれかの種類を表すことができ、ローカルもグローバルも可能です。 派生クラスの <xref:System.Threading.AutoResetEvent> と <xref:System.Threading.ManualResetEvent> は常にローカルです。  
-  
- イベント待機ハンドルにはスレッド アフィニティがありません。 どのスレッドもイベント待機ハンドルに通知できます。  
-  
- 概念的概要については、「[EventWaitHandle、AutoResetEvent、および ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)」を参照してください。  
-  
-#### <a name="mutex-and-semaphore-classes"></a>Mutex クラスと Semaphore クラス  
- <xref:System.Threading.Mutex> クラスと <xref:System.Threading.Semaphore> クラスは、<xref:System.Threading.WaitHandle> から派生するので、<xref:System.Threading.WaitHandle> の静的メソッドとともに使用できます。 たとえば、スレッドは <xref:System.Threading.WaitHandle.WaitAll%2A> メソッドを使用して、「<xref:System.Threading.EventWaitHandle> に通知された」、「<xref:System.Threading.Mutex> が解放された」、「<xref:System.Threading.Semaphore> が解放された」の 3 つの条件がすべて該当するまで待機できます。 同じように、スレッドは <xref:System.Threading.WaitHandle.WaitAny%2A> メソッドを使用して、それらの条件のいずれか 1 つが該当するまで待機することができます。  
-  
- <xref:System.Threading.Mutex> または <xref:System.Threading.Semaphore> にとって、通知されるということは解放されるということを意味します。 いずれかの種類が <xref:System.Threading.WaitHandle.SignalAndWait%2A> メソッドの最初の引数として使用されると、それが解放されます。 スレッド アフィニティのある <xref:System.Threading.Mutex> については、呼び出し元のスレッドがミューテックスを所有していなければ、例外がスローされます。 既に説明したように、セマフォにはスレッド アフィニティがありません。  
-  
-#### <a name="barrier"></a>バリア  
- <xref:System.Threading.Barrier> クラスは、複数のスレッドを周期的に同期させるようにするためのものです。その結果、それらすべてが同じポイントでブロックされ、他のすべてのスレッドが完了するのを待機するようになります。 バリアは、1 つまたは複数のスレッドが、アルゴリズムの次のフェーズに進む前に別のスレッドの結果を必要とする場合に有用です。 詳細については、「[バリア](../../../docs/standard/threading/barrier.md)」を参照してください  
-  
- [ページのトップへ](#top)  
-  
-<a name="lightweight_synchronization_types"></a>   
-## <a name="lightweight-synchronization-types"></a>軽量の同期型  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降、高速パフォーマンスが得られる同期プリミティブを使用できるようになりました。この場合、待機ハンドルなど Win32 カーネル オブジェクトへの高コストの依存が可能な限り回避されます。 これらのタイプは一般に、待機時間が短く、かつオリジナルの同期タイプを試してみて満足できないことがわかったときだけ使用するようにしてください。 プロセス間通信を必要とするシナリオでは、軽量タイプを使用できません。  
-  
--   <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> は <xref:System.Threading.Semaphore?displayProperty=nameWithType> の軽量バージョンです。  
-  
--   <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> は <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> の軽量バージョンです。  
-  
--   <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> は、そのカウントが 0 になると通知されるようになるイベントを表します。  
-  
--   <xref:System.Threading.Barrier?displayProperty=nameWithType> は、マスター スレッドによる制御を必要とせずに複数のスレッドを相互に同期させることができるようにします。 バリアは、指定されたポイントにすべてのスレッドが達するまで各スレッドが続行するのを防止します。  
-  
- [ページのトップへ](#top)  
-  
-<a name="spinwait"></a>   
-## <a name="spinwait"></a>SpinWait  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降、<xref:System.Threading.SpinWait?displayProperty=nameWithType> 構造体を使用できるようになりました。この構造体は、イベントが通知されるか条件が満たされるのをスレッドが待機する必要があるが、待機ハンドルを使用するかあるいは現在のスレッドをブロックする際に必要な待機時間よりも実際の待機時間が短いと思われる場合に使用します。 <xref:System.Threading.SpinWait> を使用することにより、待機中はスピンし、指定した時間内に条件が満たされなかった場合のみ (たとえば待機またはスリープして) 譲渡するための短い時間を指定できます。  
-  
- [ページのトップへ](#top)  
-  
-<a name="interlocked_operations"></a>   
-## <a name="interlocked-operations"></a>インタロックされた操作  
- インタロックされた操作とは、<xref:System.Threading.Interlocked> クラスの静的メソッドによって実行される、メモリ位置に対する単純なアトミック操作のことです。 それらのアトミック操作としては、32 ビット プラットフォーム上の 64 ビット値を対象とした追加、インクリメントとデクリメント、交換、比較による条件付き交換、読み取りの各操作があります。  
-  
+
+.NET では、共有リソースへのアクセスを同期する場合や、スレッド相互作用を調整する場合に使用できるさまざまな型が提供されます。
+
+> [!IMPORTANT]
+> 共有リソースへのすべてのアクセスを保護するには、同じ同期プリミティブ インスタンスを使用します。 異なる同期プリミティブ インスタンスを使用してリソースへのアクセスを保護する場合や、一部のコードでリソースに直接アクセスする場合、複数のスレッドで同時にリソースにアクセスできます。
+
+## <a name="waithandle-class-and-lightweight-synchronization-types"></a>WaitHandle クラスと軽量の同期型
+
+複数の .NET 同期プリミティブは <xref:System.Threading.WaitHandle?displayProperty=nameWithType> クラスから派生します。このクラスでは、ネイティブ オペレーティング システムの同期ハンドルをカプセル化し、スレッド相互作用のシグナリング メカニズムを使用します。 次のようなクラスが含まれます。
+
+- <xref:System.Threading.Mutex?displayProperty=nameWithType>。共有リソースへの排他アクセスが許可されます。 所有しているスレッドがない場合、ミューテックスはシグナル状態になります。
+- <xref:System.Threading.Semaphore?displayProperty=nameWithType>。共有リソースまたはリソースのプールに同時にアクセスできるスレッドの数を制限します。 セマフォの状態は、そのカウントが 0 より大きい場合はシグナル状態に、0 の場合は非シグナル状態に設定されます。
+- <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>。スレッド同期イベントを表し、シグナル状態または非シグナル状態のいずれかになります。
+- <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType>。<xref:System.Threading.EventWaitHandle> から派生し、シグナル状態の場合、単一の待ちスレッドを解放した後、自動的に非シグナル状態にリセットされます。
+- <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>。<xref:System.Threading.EventWaitHandle> から派生し、シグナル状態の場合、<xref:System.Threading.EventWaitHandle.Reset%2A> メソッドが呼び出されるまでシグナル状態のままです。
+
+.NET Framework では、<xref:System.Threading.WaitHandle> は <xref:System.MarshalByRefObject?displayProperty=nameWithType> から派生するため、これらの型を使用して、アプリケーション ドメインの境界を越えてスレッドのアクティビティを同期させることができます。
+
+.NET Framework と .NET Core では、これらの型のいくつかで名前付きのシステム同期ハンドルを表すことができます。ハンドルはオペレーティング システム全体で表示され、プロセス間同期で使用できます。
+
+- <xref:System.Threading.Mutex> (.NET Framework と .NET Core)、
+- <xref:System.Threading.Semaphore> (Windows 上の .NET Framework と .NET Core)、
+- <xref:System.Threading.EventWaitHandle> (Windows 上の .NET Framework と .NET Core)。
+
+詳細については、<xref:System.Threading.WaitHandle> API リファレンスを参照してください。
+
+軽量の同期型は、基になるオペレーティング システム ハンドルに依存しておらず、通常はパフォーマンスが向上します。 しかし、プロセス間同期には使用できません。 これらの型は、1 つのアプリケーション内のスレッド同期で使用します。
+
+これらの型のいくつかは、<xref:System.Threading.WaitHandle> から派生した型の代わりに使用できます。 たとえば、<xref:System.Threading.SemaphoreSlim> は軽量であり、<xref:System.Threading.Semaphore> の代わりに使用できます。
+
+## <a name="synchronization-of-access-to-a-shared-resource"></a>共有リソースへのアクセスの同期
+
+.NET では、複数のスレッドによる共有リソースへのアクセスを制御するためのさまざまな同期プリミティブが提供されます。
+
+### <a name="monitor-class"></a>Monitor クラス
+
+<xref:System.Threading.Monitor?displayProperty=nameWithType> クラスでは、リソースを識別するオブジェクトに対するロックを取得または解放することで、共有リソースへの排他アクセスを許可します。 ロックが保持されている間、ロックを保持するスレッドではロックを再度取得し、解放することができます。 他のスレッドはブロックされてロックを取得できず、<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> メソッドではロックが解放されるまで待機します。 <xref:System.Threading.Monitor.Enter%2A> メソッドでは解放されたロックを取得します。 また、<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> メソッドを使用して、スレッドでのロック取得の試行時間を指定することもできます。 <xref:System.Threading.Monitor> クラスにはスレッド アフィニティがあるため、ロックを取得したスレッドでは、<xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> メソッドを呼び出してロックを解放する必要があります。
+
+<xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType>、および <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> メソッドを使用して、同じオブジェクトに対するロックを取得するスレッドの相互作用を調整することができます。
+
+詳細については、<xref:System.Threading.Monitor> API リファレンスを参照してください。
+
 > [!NOTE]
->  アトミック性の保証は個々 の操作に限定されます。複数の操作を 1 つの単位として実行する必要がある場合は、より粒度の粗い同期機構を使用する必要があります。  
+> C# では [lock](../../csharp/language-reference/keywords/lock-statement.md) ステートメントを、Visual Basic では [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ステートメントを使って、<xref:System.Threading.Monitor> クラスを直接使用せずに、共有リソースへのアクセスを同期します。 これらのステートメントは、<xref:System.Threading.Monitor.Enter%2A> および <xref:System.Threading.Monitor.Exit%2A> メソッドを使用して実装されます。また、このステートメントでは、取得されたロックが常に確実に解除されるように、`try…finally` ブロックが使用されます。
+
+### <a name="mutex-class"></a>Mutex クラス
+
+<xref:System.Threading.Mutex?displayProperty=nameWithType> クラスでは、<xref:System.Threading.Monitor> と同様に、共有リソースへの排他アクセスを許可します。 [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) メソッドのオーバーロードのいずれかを使用して、ミューテックスの所有権を要求します。 <xref:System.Threading.Monitor> と同様に、<xref:System.Threading.Mutex> にはスレッド アフィニティがあり、ミューテックスを取得したスレッドで、<xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType> メソッドを呼び出してそれを解放する必要があります。
+
+<xref:System.Threading.Monitor> とは異なり、<xref:System.Threading.Mutex> クラスをプロセス間同期に使用することができます。 そのためには、オペレーティング システム全体で表示される、名前付きミューテックスを使用します。 名前付きミュー テックスのインスタンスを作成するには、名前を指定する [Mutex コンストラクター](<xref:System.Threading.Mutex.%23ctor%2A>)を使用します。 また、<xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType> メソッドを呼び出して、既存の名前付きシステム ミューテックスを開くこともできます。
   
- これらの操作は、どれもロックやシグナルではありませんが、ロックやシグナルの作成に使用できます。 これらは Windows オペレーティング システムのネイティブなので、インタロックされた操作は非常に高速です。  
+詳細については、「[ミューテックス](mutexes.md)」の記事と、<xref:System.Threading.Mutex> API リファレンスを参照してください。
+
+### <a name="spinlock-structure"></a>SpinLock 構造体
+
+<xref:System.Threading.SpinLock?displayProperty=nameWithType> 構造体では、<xref:System.Threading.Monitor> と同様に、ロックの可用性に基づいて、共有リソースへの排他アクセスを許可します。 <xref:System.Threading.SpinLock> で使用できないロックの取得が試行された場合、ループ内で待機し、ロックが使用できるようになるまで繰り返し確認されます。
+
+スピン ロックを使用する利点と欠点の詳細については、「[SpinLock](spinlock.md)」の記事と、<xref:System.Threading.SpinLock> API リファレンスを参照してください。
+
+### <a name="readerwriterlockslim-class"></a>ReaderWriterLockSlim クラス
+
+<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> クラスでは、書き込み用の共有リソースへの排他アクセスを許可し、複数のスレッドでの読み取り用のリソースへの同時アクセスを許可します。 スレッドセーフ読み取り操作をサポートするが、書き込み操作を行うために排他アクセスを必要とする共有データ構造体へのアクセスを同期する場合は、<xref:System.Threading.ReaderWriterLockSlim> を使用できます。 スレッドで (たとえば、<xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> メソッドを呼び出して) 排他アクセスを要求すると、後続のリーダーの要求は、既存のすべてのリーダーがロックを終了し、ライターがロックに参加して終了するまでブロックされます。
   
- インタロックされた操作を揮発性メモリの保証下で使用して、強力な非ブロッキングコンカレンシーを示すアプリケーションを作成できます。 ただし、高度な低レベル プログラミングが必要になるので、ほとんどの目的では、単純ロックを選択したほうが適切です。  
-  
- 概念的概要については、「[インタロックされた操作](../../../docs/standard/threading/interlocked-operations.md)」を参照してください。  
-  
+詳細については、「[読み取り/書き込みロック](reader-writer-locks.md)」 の記事と、<xref:System.Threading.ReaderWriterLockSlim> API リファレンスを参照してください。
+
+### <a name="semaphore-and-semaphoreslim-classes"></a>Semaphore および SemaphoreSlim クラス
+
+<xref:System.Threading.Semaphore?displayProperty=nameWithType> および <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> クラスでは、共有リソースまたはリソースのプールに同時にアクセスできるスレッドの数を制限します。 リソースを要求する追加のスレッドは、任意のスレッドでセマフォが解放されるまで待機します。 セマフォにはスレッド アフィニティがないため、あるスレッドでセマフォを取得し、別のスレッドで解放することができます。
+
+<xref:System.Threading.SemaphoreSlim> は軽量であり、<xref:System.Threading.Semaphore> の代わりに使用され、単一のプロセス境界内の同期化でのみ使用できます。
+
+Windows では、プロセス間同期で <xref:System.Threading.Semaphore> を使用できます。 そのためには、名前または <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> メソッドを指定する [Semaphore コンストラクター](<xref:System.Threading.Semaphore.%23ctor%2A>)のいずれかを使用して、名前付きシステム セマフォを表す <xref:System.Threading.Semaphore> インスタンスを作成します。 <xref:System.Threading.SemaphoreSlim> では、名前付きシステム セマフォはサポートされていません。
+
+詳細については、「[Semaphore と SemaphoreSlim](semaphore-and-semaphoreslim.md)」の記事と、<xref:System.Threading.Semaphore> または <xref:System.Threading.SemaphoreSlim> API リファレンスを参照してください。
+
+## <a name="thread-interaction-or-signaling"></a>スレッドの相互作用、またはシグナリング
+
+スレッドの相互作用 (またはスレッドのシグナリング) は、あるスレッドで、先に進むために 1 つ以上のスレッドからの通知 (または、シグナル) を待機する必要があることを意味します。 たとえば、スレッド A でスレッド B の<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> メソッドを呼び出す場合、スレッド A は、スレッド B が完了するまでブロックされます。 前のセクションで説明されている同期プリミティブでは、シグナリングに関する別のメカニズムが提供されます。その場合、あるスレッドによって、ロックを獲得することで先に進むことができる別のスレッドに通知されます。
+
+このセクションでは、.NET によって提供される追加のシグナリング構造について説明します。
+
+### <a name="eventwaithandle-autoresetevent-manualresetevent-and-manualreseteventslim-classes"></a>EventWaitHandle、AutoResetEvent、ManualResetEvent、および ManualResetEventSlim クラス
+
+<xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> クラスはスレッドの同期イベントを表します。
+
+同期イベントには、非シグナル状態またはシグナル状態のいずれかを指定できます。 イベントの状態が非シグナルの場合、イベントの <xref:System.Threading.WaitHandle.WaitOne%2A?> オーバーロードを呼び出すスレッドは、イベントがシグナル状態になるまでブロックされます。 <xref:System.Threading.EventWaitHandle.Set%2A?displayProperty=nameWithType> メソッドでは、イベントの状態をシグナル状態に設定します。
+
+シグナル状態になった <xref:System.Threading.EventWaitHandle> の動作は、そのリセット モードによって異なります。
+
+- <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> フラグで作成された <xref:System.Threading.EventWaitHandle> では、単一の待ちスレッドが解放された後、自動的にリセットされます。 これは、シグナル状態になるたびに 1 つのスレッドのみが通れる回転ドアのようなものです。 <xref:System.Threading.EventWaitHandle> から派生する、<xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> クラスはその動作を表します。
+- <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> フラグで作成された <xref:System.Threading.EventWaitHandle> は、その <xref:System.Threading.EventWaitHandle.Reset%2A> メソッドが呼び出されるまで、シグナル状態のままです。 これは、シグナル状態になるまで閉じられ、誰かが閉めるまで開いたままになっている門のようなものです。 <xref:System.Threading.EventWaitHandle> から派生する、<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> クラスはその動作を表します。 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> クラスは軽量であり、<xref:System.Threading.ManualResetEvent> の代わりに使用できます。
+
+Windows では、プロセス間同期で <xref:System.Threading.EventWaitHandle> を使用できます。 そのためには、名前または <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType> メソッドを指定する [EventWaitHandle コンストラクター](<xref:System.Threading.EventWaitHandle.%23ctor%2A>)のいずれかを使用して、名前付きシステム同期イベントを表す <xref:System.Threading.EventWaitHandle> インスタンスを作成します。
+
+詳細については、「[EventWaitHandle](eventwaithandle.md)」、「[AutoResetEvent](autoresetevent.md)」、「[ManualResetEvent と ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md)」 の記事を参照してください。 API リファレンスについては、<xref:System.Threading.EventWaitHandle>、<xref:System.Threading.AutoResetEvent>、<xref:System.Threading.ManualResetEvent>、および <xref:System.Threading.ManualResetEventSlim> に関する記述を参照してください。
+
+### <a name="countdownevent-class"></a>CountdownEvent クラス
+
+<xref:System.Threading.CountdownEvent?displayProperty=nameWithType> クラスは、そのカウントが 0 になると設定されるようになるイベントを表します。 <xref:System.Threading.CountdownEvent.CurrentCount?displayProperty=nameWithType> が 0 より大きい間は、<xref:System.Threading.CountdownEvent.Wait%2A?displayProperty=nameWithType> を呼び出すスレッドがブロックされます。 イベントのカウントをデクリメントするには、<xref:System.Threading.CountdownEvent.Signal%2A?displayProperty=nameWithType> を呼び出します。
+
+1 つのスレッドからのシグナルで複数のスレッドのブロックを解除するために使用できる、<xref:System.Threading.ManualResetEvent> や <xref:System.Threading.ManualResetEventSlim> とは対照的に、<xref:System.Threading.CountdownEvent> を使用すると、複数のスレッドからのシグナルで 1 つ以上のスレッドのブロックを解除できます。
+
+詳細については、「[CountdownEvent](countdownevent.md)」の記事と、<xref:System.Threading.CountdownEvent> API リファレンスを参照してください。
+
+### <a name="barrier-class"></a>Barrier クラス
+
+<xref:System.Threading.Barrier?displayProperty=nameWithType> クラスはスレッド実行のバリアを表します。 <xref:System.Threading.Barrier.SignalAndWait%2A?displayProperty=nameWithType> メソッドを呼び出すスレッドでは、バリアに到達したことを知らせ、他の参加スレッドがバリアに到達するまで待機します。 すべての参加スレッドは、バリアに到達したときに先に進み、バリアはリセットされて再度使用することができます。
+
+1 つ以上のスレッドが次の計算フェーズに進む前に、他のスレッドの結果を必要とする場合は、<xref:System.Threading.Barrier> を使用できます。
+
+詳細については、「[バリア](barrier.md)」の記事と、<xref:System.Threading.Barrier> API リファレンスを参照してください。
+
+## <a name="interlocked-class"></a>Interlocked クラス
+
+<xref:System.Threading.Interlocked?displayProperty=nameWithType> クラスでは、変数に対してシンプルなアトミック操作を実行する静的メソッドが提供されます。 それらのアトミック操作としては、64 ビット整数値を対象とした追加、インクリメントとデクリメント、交換、比較による条件付き交換、読み取りの各操作があります。
+
+詳細については、「[インタロックされた操作](interlocked-operations.md)」の記事と、<xref:System.Threading.Interlocked> API リファレンスを参照してください。
+
+## <a name="spinwait-structure"></a>SpinWait 構造体
+
+<xref:System.Threading.SpinWait?displayProperty=nameWithType> 構造体では、スピンベースの待機のサポートが提供されます。 これは、イベントが通知されるか条件が満たされるのをスレッドが待機する必要があるが、待機ハンドルを使用するかあるいはスレッドをブロックする際に必要な待機時間よりも実際の待機時間が短いと思われる場合に使用できます。 <xref:System.Threading.SpinWait> を使用することにより、待機中はスピンし、指定した時間内に条件が満たされなかった場合のみ (たとえば待機またはスリープして) 譲渡するための短い時間を指定できます。
+
+詳細については、「[SpinWait](spinwait.md)」の記事と、<xref:System.Threading.SpinWait> API リファレンスを参照してください。
+
 ## <a name="see-also"></a>関連項目
 
-- [マルチスレッド処理のためのデータの同期](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
-- [モニター](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
-- [ミューテックス](../../../docs/standard/threading/mutexes.md)  
-- [Semaphore と SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
-- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
-- [待機ハンドル](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
-- [インタロックされた操作](../../../docs/standard/threading/interlocked-operations.md)  
-- [読み取り/書き込みロック](../../../docs/standard/threading/reader-writer-locks.md)  
-- [バリア](../../../docs/standard/threading/barrier.md)  
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
-- [SpinLock](../../../docs/standard/threading/spinlock.md)
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [スレッド セーフなコレクション](../collections/thread-safe/index.md)
+- [スレッド処理オブジェクトと機能](threading-objects-and-features.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e7d7f791fbc68a526f428f4f79d9b379a23ca771
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44199766"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199488"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore と SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> クラスは、名前付きセマフォ (システム全体) またはローカル セマフォを表します。 これは、Win32 セマフォ オブジェクトの Thin ラッパーです。 Win32 セマフォは、リソースのプールへのアクセスの制御に使用できるカウント セマフォです。  
