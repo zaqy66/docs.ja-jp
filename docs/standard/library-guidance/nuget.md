@@ -1,27 +1,27 @@
 ---
-title: NuGet と .NET ライブラリ
-description: .NET ライブラリの nuget のパッケージ化の推奨されるベスト プラクティスです。
+title: NuGet および .NET ライブラリ
+description: .NET ライブラリ対応の NuGet によるパッケージ化のベスト プラクティスの推奨事項
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: d0ea462a7f52dd9a6b2f14be9ed5770160bf66b1
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.openlocfilehash: 479d1786c232ef1f843877169954e847453681c9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374503"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185625"
 ---
 # <a name="nuget"></a>NuGet
 
-NuGet では、.NET エコシステムのパッケージ マネージャーし、は主な方法は開発者が発見し、.NET オープン ソース ライブラリを取得します。 [NuGet.org](https://www.nuget.org/)、NuGet パッケージをホストするために、Microsoft によって提供される無料のサービスは、パブリック NuGet パッケージのプライマリ ホストが、カスタム NuGet サービスに発行することができます、 [MyGet](https://www.myget.org/)と[Azure 成果物](https://azure.microsoft.com/services/devops/artifacts/).
+NuGet は .NET エコシステムのパッケージ マネージャーであり、開発者が .NET オープンソース ライブラリを見つけて入手するための主要な方法です。 NuGet パッケージをホストするために Microsoft が提供している無料サービスの [NuGet.org](https://www.nuget.org/) は、パブリック NuGet パッケージのプライマリ ホストですが、[MyGet](https://www.myget.org/) および [Azure Artifacts](https://azure.microsoft.com/services/devops/artifacts/) などのカスタム NuGet サービスに公開できます。
 
 ![NuGet](./media/nuget/nuget-logo.png "NuGet")
 
-## <a name="create-a-nuget-package"></a>NuGet パッケージを作成します。
+## <a name="create-a-nuget-package"></a>NuGet パッケージの作成
 
-NuGet パッケージ (`*.nupkg`) は .NET アセンブリと関連メタデータを含む zip ファイルです。
+NuGet パッケージ (`*.nupkg`) は、.NET アセンブリと関連するメタデータを含む zip ファイルです。
 
-NuGet パッケージを作成する 2 つの主な方法はあります。 SDK スタイル プロジェクトからパッケージを作成する、新しい推奨される方法は、(プロジェクト ファイルの内容が始まる`<Project Sdk="Microsoft.NET.Sdk">`)。 アセンブリとターゲットがパッケージに自動的に追加し、残りのメタデータがパッケージの名前とバージョン番号のように、MSBuild ファイルに追加します。 コンパイルすると、 [ `dotnet pack` ](../../core/tools/dotnet-pack.md)コマンドの出力を`*.nupkg`アセンブリではなくファイル。
+NuGet パッケージを作成するには、主な方法が 2 つあります。 より新しいお勧めの方法は、SDK 形式のプロジェクト (コンテンツが `<Project Sdk="Microsoft.NET.Sdk">` から始まるプロジェクト ファイル) からパッケージを作成することです。 アセンブリとターゲットが自動的にパッケージに追加され、パッケージ名やバージョン番号などの残りのメタデータが、MSBuild ファイルに追加されます。 [`dotnet pack`](../../core/tools/dotnet-pack.md) コマンドを使ってコンパイルすると、アセンブリの代わりに `*.nupkg` ファイルが出力されます。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -34,71 +34,80 @@ NuGet パッケージを作成する 2 つの主な方法はあります。 SDK 
 </Project>
 ```
 
-従来の NuGet パッケージの作成の方法は、`*.nuspec`ファイルと`nuget.exe`コマンド ライン ツール。 優れたの nuspec ファイルに制御できますが、最終的な NuGet パッケージに含めるにはどのようなアセンブリとターゲットを慎重に指定する必要があります。 間違いやすいまたは他のユーザーを忘れずに変更を加える場合は、nuspec を更新します。 使用できます、nuspec の利点は、SDK スタイル プロジェクトのファイルをサポートしないフレームワーク用 NuGet パッケージを作成します。
+NuGet パッケージを作成する従来からの方法では、`*.nuspec` ファイルと `nuget.exe` コマンドライン ツールを使用します。 nuspec ファイルを使用すると、優れた制御を利用できますが、最終的な NuGet パッケージに含めるアセンブリとターゲットを慎重に指定する必要があります。 間違えやすいうえに、変更を加える際にユーザーは nuspec の更新を忘れやすいです。 nuspec の利点は、まだ SDK 形式のプロジェクト ファイルをサポートしていないフレームワークの NuGet パッケージを作成するために使用できることです。
 
-**✔️ をご検討ください**SDK スタイル プロジェクト ファイルを使用した NuGet パッケージを作成します。
+**✔️ 検討** SDK 形式のプロジェクト ファイルを使用して、NuGet パッケージを作成する。
 
-**✔️ をご検討ください**アセンブリや NuGet パッケージにソース コントロールのメタデータを追加する SourceLink を設定します。
+**✔️ 検討** SourceLink を設定して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
 
 ## <a name="package-dependencies"></a>パッケージの依存関係
 
-NuGet パッケージの依存関係での詳細については、[依存関係](./dependencies.md)記事。
+NuGet パッケージの依存関係については、「[Dependencies](./dependencies.md)」 (依存関係) の記事で説明しています。
 
 ## <a name="important-nuget-package-metadata"></a>重要な NuGet パッケージ メタデータ
 
-NuGet パッケージの多くをサポートしている[メタデータ プロパティ](/nuget/reference/nuspec)します。 次の表には、すべてのオープン ソース プロジェクトが提供するコア メタデータが含まれています。
+NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/reference/nuspec)をサポートしています。 次の表に、どのオープンソース プロジェクトでも指定する必要があるコア メタデータを示します。
 
-| MSBuild プロパティ名              | Nuspec 名              | 説明  |
+| MSBuild プロパティの名前              | Nuspec の名前              | 説明  |
 | ---------------------------------- | ------------------------ | ------------ |
-| `PackageId`                        | `id`                       | パッケージの識別子です。 満たしている場合、識別子のプレフィックスを予約できる、[条件](/nuget/reference/id-prefix-reservation)します。 |
-| `PackageVersion`                   | `version`                  | NuGet パッケージのバージョン。 詳細については、次を参照してください。 [NuGet パッケージ バージョン](./versioning.md#nuget-package-version)します。             |
-| `Title`                            | `title`                    | パッケージのわかりやすいタイトルです。 既定値は、`PackageId`します。             |
+| `PackageId`                        | `id`                       | パッケージ ID。 [条件](/nuget/reference/id-prefix-reservation)を満たしている場合、ID のプレフィックスは予約できます。 |
+| `PackageVersion`                   | `version`                  | NuGet パッケージ バージョン。 詳細については、「[NuGet package version](./versioning.md#nuget-package-version)」(NuGet package version パッケージ バージョン) をご覧ください。             |
+| `Title`                            | `title`                    | わかりやすいパッケージ タイトル。 既定値は `PackageId` です。             |
 | `Description`                      | `description`              | UI に表示されるパッケージの長い説明。             |
-| `Authors`                          | `authors`                  | Nuget.org のプロファイル名に一致するパッケージの作成者のコンマ区切りの一覧。             |
-| `PackageTags`                      | `tags`                     | パッケージを記述するタグやキーワードのスペースで区切られた一覧。 タグは、パッケージを検索するときに使用されます。             |
-| `PackageIconUrl`                   | `iconUrl`                  | パッケージのアイコンとして使用するイメージの URL。 URL が HTTPS にする必要があり、イメージが 64 x 64 に透明な背景。             |
+| `Authors`                          | `authors`                  | パッケージ作成者のコンマで区切りの一覧。nuget.org のプロファイル名と一致します。             |
+| `PackageTags`                      | `tags`                     | パッケージを説明するタグとキーワードのスペース区切りの一覧。 タグは、パッケージを検索するときに使用されます。             |
+| `PackageIconUrl`                   | `iconUrl`                  | パッケージのアイコンとして使用するイメージの URL。 URL は HTTPS にする必要があり、イメージは 64 x 64 で透明な背景になっている必要があります。             |
 | `PackageProjectUrl`                | `projectUrl`               | プロジェクトのホーム ページまたはソース リポジトリの URL。             |
-| `PackageLicenseUrl`                | `licenseUrl`               | プロジェクトのライセンスの URL。 URL を指定できます、`LICENSE`ソース管理内のファイル。             |
+| `PackageLicenseUrl`                | `licenseUrl`               | プロジェクト ライセンスの URL。 ソース管理の `LICENSE` ファイルの URL にすることもできます。             |
 
-**✔️ をご検討ください**NuGet のプレフィックスの予約を満たしているプレフィックスを持つ NuGet パッケージの名前を選択する[条件](/nuget/reference/id-prefix-reservation)します。
+**✔️ 検討** NuGet のプレフィックスの予約[条件](/nuget/reference/id-prefix-reservation)を満たしているプレフィックスを持つ NuGet パッケージ名を選択する。
 
-**✔️ をご検討ください**を使用して、`LICENSE`としてソース管理内のファイル、`LicenseUrl`します。 たとえば、 [LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md)します。
+**✔️ 検討** ソース管理の `LICENSE` ファイルを `LicenseUrl` として使用する。 たとえば、[LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md)。
 
 > [!IMPORTANT]
-> ライセンスの既定値なしのプロジェクト[排他著作権](https://choosealicense.com/no-permission/)、他のユーザーが使用できなくなります。
+> ライセンス既定値が、他のユーザーからは使用できなくなる[排他的な著作権](https://choosealicense.com/no-permission/)に設定されていないプロジェクト。
 
-**✔️ は**パッケージ アイコンに HTTPS href を使用します。
+**✔️ 実行** パッケージのアイコンに HTTPS href を使用する。
 
-> NuGet.org のようなサイトは、HTTPS が有効で実行され、HTTPS 以外のイメージを表示すると、混合コンテンツ警告が作成されます。
+> NuGet.org のようなサイトは HTTPS を有効にした状態で実行され、HTTPS ではないイメージを表示すると、コンテンツの混合を示す警告が作成されます。
 
-**✔️ は**64 x 64 が、結果を表示する最良の透明な背景パッケージ アイコン イメージを使用します。
+**✔️ 実行** 64 x 64 のパッケージ アイコン イメージを使用し、最善の表示結果を透明な背景にする。
 
 ## <a name="pre-release-packages"></a>プレリリース パッケージ
 
-NuGet パッケージのバージョン サフィックスを持つ読晗ェホロ[プレリリース](/nuget/create-packages/prerelease-packages)します。 既定では、NuGet パッケージ マネージャー UI では、ユーザー opts にプレリリース パッケージをプレリリース パッケージを制限付きユーザーのテストに最適に行う場合を除きに安定したリリースが表示されます。
+バージョン サフィックスがある NuGet パッケージは、[プレリリース](/nuget/create-packages/prerelease-packages)と見なされます。 プレリリース パッケージが制限付きユーザーのテスト実行に最適になるように、ユーザーがプレリリース パッケージを選択しない限り、既定では、NuGet パッケージ マネージャーの UI は、安定版リリースを表示します。
 
 ```xml
 <PackageVersion>1.0.1-beta1</PackageVersion>
 ```
 
 > [!NOTE]
-> 安定したパッケージは、プレリリース版のパッケージに依存できません。 独自のパッケージのプレリリース版を行うか、または以前の安定したバージョンに依存する必要があります。
+> 安定版パッケージは、プレリリース パッケージに依存できません。 独自のパッケージをプレリリースにするか、または旧来の安定版バージョンに依存する必要があります。
 
 ![NuGet プレリリース パッケージの依存関係](./media/nuget/nuget-prerelease-package.png "NuGet プレリリース パッケージの依存関係")
 
-**✔️ は**テスト、プレビュー、または実験時にプレリリース パッケージを発行します。
+**✔️ 実行** テスト、プレビュー、または実験時に、プレリリース パッケージを公開する。
 
-**✔️ は**その準備完了他の安定版パッケージ参照できる場合に、安定したパッケージを発行します。
+**✔️ 実行** 他の安定版パッケージから参照できるように、準備ができ次第、安定版パッケージを公開する。
 
 ## <a name="symbol-packages"></a>シンボル パッケージ
 
-NuGet をサポートしています[別のシンボル パッケージを生成する](/nuget/create-packages/symbol-packages)を含む .NET アセンブリを含むメイン パッケージと共に PDB ファイルをデバッグします。 シンボル パッケージの考え方は、シンボル サーバー上でホストする、Visual Studio などのツールをオンデマンドでダウンロードされるのみです。
+シンボル ファイル (`*.pdb`) は、アセンブリと共に .NET コンパイラによって生成されます。 デバッガ―を使用して実行しながらソース コード全体をステップ実行できるように、シンボル ファイルは、実行場所を元のソース コードにマップします。 NuGet では、.NET アセンブリを含む主要なパッケージと共に、シンボル ファイルを格納している[別個のシンボル パッケージの生成](/nuget/create-packages/symbol-packages)をサポートしています。 シンボル サーバー上でホストされ、Visual Studio などのツールによってオンデマンドでしかダウンロードできないのが、シンボル パッケージの考え方です。
 
-シンボルのメインのパブリック ホストに現在[SymbolSource](http://www.symbolsource.org/) -作成された、ポータブル Pdb をサポートしていない SDK スタイル プロジェクト、シンボル パッケージ役に立たない。
+現在、シンボルの主要なパブリック ホスト ([SymbolSource](http://www.symbolsource.org/)) は、SDK 形式のプロジェクトによって作成された新しい[ポータブル シンボル ファイル](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) をサポートしておらず、シンボル パッケージは便利ではありません。 シンボル パッケージに対応した推奨ホストができるまで、シンボル ファイルは主要な NuGet パッケージに埋め込むことができます。 SDK 形式のプロジェクトを使用して NuGet パッケージを構築している場合、`AllowedOutputExtensionsInPackageBuildOutputFolder` プロパティを設定してシンボル ファイルを埋め込むことができます。 
 
-**✔️ をご検討ください**メイン NuGet パッケージに Pdb を埋め込みます。
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+    <!-- Include symbol files (*.pdb) in the built .nupkg -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+</Project>
+```
 
-**❌ 避け**Pdb が含まれるシンボル パッケージを作成します。
+**✔️ 検討** 主要な NuGet パッケージにシンボル ファイルを埋め込む。
+
+**❌ 禁止**シンボル ファイルを含むシンボル パッケージを作成する。
 
 >[!div class="step-by-step"]
 [前へ](./strong-naming.md)
