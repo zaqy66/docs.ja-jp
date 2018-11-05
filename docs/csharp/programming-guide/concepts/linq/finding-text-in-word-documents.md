@@ -2,22 +2,22 @@
 title: Word 文書内のテキストの検索 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3213855716ebcfc581f213a34417e579c133e385
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235599"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200502"
 ---
-# <a name="finding-text-in-word-documents-c"></a><span data-ttu-id="8e2d5-102">Word 文書内のテキストの検索 (C#)</span><span class="sxs-lookup"><span data-stu-id="8e2d5-102">Finding Text in Word Documents (C#)</span></span>
-<span data-ttu-id="8e2d5-103">このトピックでは、以前のクエリを拡張して、ドキュメント内で特定の文字列の出現箇所をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  
+# <a name="finding-text-in-word-documents-c"></a><span data-ttu-id="1513c-102">Word 文書内のテキストの検索 (C#)</span><span class="sxs-lookup"><span data-stu-id="1513c-102">Finding Text in Word Documents (C#)</span></span>
+<span data-ttu-id="1513c-103">このトピックでは、以前のクエリを拡張して、ドキュメント内で特定の文字列の出現箇所をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="1513c-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8e2d5-104">例</span><span class="sxs-lookup"><span data-stu-id="8e2d5-104">Example</span></span>  
- <span data-ttu-id="8e2d5-105">この例では、WordprocessingML ドキュメントを処理して、ドキュメント内で特定のテキストの出現箇所をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-105">This example processes a WordprocessingML document, to find all the occurences of a specific piece of text in the document.</span></span> <span data-ttu-id="8e2d5-106">ここではそのために、"Hello" という文字列を検索するクエリを使用します。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="8e2d5-107">この例は、このチュートリアルのこれまでの例に基づいています。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="8e2d5-108">新しいクエリについては、以下のコード内にあるコメントで説明が示されています。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-108">The new query is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="1513c-104">例</span><span class="sxs-lookup"><span data-stu-id="1513c-104">Example</span></span>  
+ <span data-ttu-id="1513c-105">この例では、WordprocessingML ドキュメントを処理して、ドキュメント内で特定のテキストの出現箇所をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="1513c-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="1513c-106">ここではそのために、"Hello" という文字列を検索するクエリを使用します。</span><span class="sxs-lookup"><span data-stu-id="1513c-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="1513c-107">この例は、このチュートリアルのこれまでの例に基づいています。</span><span class="sxs-lookup"><span data-stu-id="1513c-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="1513c-108">新しいクエリについては、以下のコード内にあるコメントで説明が示されています。</span><span class="sxs-lookup"><span data-stu-id="1513c-108">The new query is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="8e2d5-109">この例のソース ドキュメントを作成する方法の詳細については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="1513c-109">この例のソース ドキュメントを作成する方法の詳細については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1513c-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="8e2d5-110">この例では、WindowsBase アセンブリに含まれるクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="8e2d5-111">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="1513c-110">この例では、WindowsBase アセンブリに含まれるクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="1513c-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="1513c-111">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="1513c-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -165,14 +165,14 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="8e2d5-112">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="1513c-112">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="1513c-112">This example produces the following output:</span></span>  
   
 ```  
 StyleName:Code >        Console.WriteLine("Hello World");<  
 StyleName:Code >Hello World<  
 ```  
   
- <span data-ttu-id="8e2d5-113">この検索に変更を加えて、特定のスタイルの行を検索することもできます。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="8e2d5-114">次のクエリは、Code スタイルの空白行をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-114">The following query finds all blank lines that have the Code style:</span></span>  
+ <span data-ttu-id="1513c-113">この検索に変更を加えて、特定のスタイルの行を検索することもできます。</span><span class="sxs-lookup"><span data-stu-id="1513c-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="1513c-114">次のクエリは、Code スタイルの空白行をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="1513c-114">The following query finds all blank lines that have the Code style:</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -312,23 +312,23 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="8e2d5-115">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="1513c-115">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="1513c-115">This example produces the following output:</span></span>  
   
 ```  
 StyleName:Code ><  
 ```  
   
- <span data-ttu-id="8e2d5-116">この例はさまざまな形で強化できます。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="8e2d5-117">たとえば、正規表現を使用してテキストを検索したり、特定のディレクトリにあるすべての Word ファイルを反復処理したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>  
+ <span data-ttu-id="1513c-116">この例はさまざまな形で強化できます。</span><span class="sxs-lookup"><span data-stu-id="1513c-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="1513c-117">たとえば、正規表現を使用してテキストを検索したり、特定のディレクトリにあるすべての Word ファイルを反復処理したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="1513c-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>  
   
- <span data-ttu-id="8e2d5-118">この例は、1 つのクエリとして記述された場合とほぼ同程度のパフォーマンスを発揮します。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="8e2d5-119">各クエリはレイジー遅延方式で実装されているため、反復処理されるまで結果は生成されません。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="8e2d5-120">実行とレイジー評価について詳しくは、「[LINQ to XML における遅延実行とレイジー評価 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="1513c-118">この例は、1 つのクエリとして記述された場合とほぼ同程度のパフォーマンスを発揮します。</span><span class="sxs-lookup"><span data-stu-id="1513c-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="1513c-119">各クエリはレイジー遅延方式で実装されているため、反復処理されるまで結果は生成されません。</span><span class="sxs-lookup"><span data-stu-id="1513c-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="1513c-120">実行とレイジー評価について詳しくは、「[LINQ to XML における遅延実行とレイジー評価 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="1513c-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="8e2d5-121">次の手順</span><span class="sxs-lookup"><span data-stu-id="8e2d5-121">Next Steps</span></span>  
- <span data-ttu-id="8e2d5-122">次のセクションでは、WordprocessingML ドキュメントについて詳細に説明します。</span><span class="sxs-lookup"><span data-stu-id="8e2d5-122">The next section provides more information about WordprocessingML documents:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="1513c-121">次の手順</span><span class="sxs-lookup"><span data-stu-id="1513c-121">Next Steps</span></span>  
+ <span data-ttu-id="1513c-122">次のセクションでは、WordprocessingML ドキュメントについて詳細に説明します。</span><span class="sxs-lookup"><span data-stu-id="1513c-122">The next section provides more information about WordprocessingML documents:</span></span>  
   
--   [<span data-ttu-id="8e2d5-123">Office Open XML WordprocessingML ドキュメントの詳細 (C#)</span><span class="sxs-lookup"><span data-stu-id="8e2d5-123">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+-   [<span data-ttu-id="1513c-123">Office Open XML WordprocessingML ドキュメントの詳細 (C#)</span><span class="sxs-lookup"><span data-stu-id="1513c-123">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8e2d5-124">参照</span><span class="sxs-lookup"><span data-stu-id="8e2d5-124">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1513c-124">参照</span><span class="sxs-lookup"><span data-stu-id="1513c-124">See Also</span></span>
 
-- [<span data-ttu-id="8e2d5-125">チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)</span><span class="sxs-lookup"><span data-stu-id="8e2d5-125">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
-- [<span data-ttu-id="8e2d5-126">純粋関数によるリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="8e2d5-126">Refactoring Using a Pure Function (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
-- [<span data-ttu-id="8e2d5-127">LINQ to XML における遅延実行とレイジー評価 (C#)</span><span class="sxs-lookup"><span data-stu-id="8e2d5-127">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [<span data-ttu-id="1513c-125">チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)</span><span class="sxs-lookup"><span data-stu-id="1513c-125">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [<span data-ttu-id="1513c-126">純粋関数によるリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="1513c-126">Refactoring Using a Pure Function (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [<span data-ttu-id="1513c-127">LINQ to XML における遅延実行とレイジー評価 (C#)</span><span class="sxs-lookup"><span data-stu-id="1513c-127">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

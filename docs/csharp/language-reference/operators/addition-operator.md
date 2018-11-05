@@ -1,6 +1,6 @@
 ---
 title: + 演算子 (C# リファレンス)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +_CSharpKeyword
 helpviewer_keywords:
@@ -8,34 +8,57 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232385"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192305"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="1eb36-102">+ 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="1eb36-102">+ Operator (C# Reference)</span></span>
-<span data-ttu-id="1eb36-103">`+` 演算子には、単項演算子としての働きと 2 項演算子としての働きとがあります。</span><span class="sxs-lookup"><span data-stu-id="1eb36-103">The `+` operator can function as either a unary or a binary operator.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="1eb36-104">コメント</span><span class="sxs-lookup"><span data-stu-id="1eb36-104">Remarks</span></span>  
- <span data-ttu-id="1eb36-105">すべての数値型には、単項 `+` 演算子が事前定義されています。</span><span class="sxs-lookup"><span data-stu-id="1eb36-105">Unary `+` operators are predefined for all numeric types.</span></span> <span data-ttu-id="1eb36-106">数値型に対する単項 `+` 演算の結果は、単にそのオペランドの値になります。</span><span class="sxs-lookup"><span data-stu-id="1eb36-106">The result of a unary `+` operation on a numeric type is just the value of the operand.</span></span>  
-  
- <span data-ttu-id="1eb36-107">数値型と文字列型には、2 項 `+` 演算子が事前定義されています。</span><span class="sxs-lookup"><span data-stu-id="1eb36-107">Binary `+` operators are predefined for numeric and string types.</span></span> <span data-ttu-id="1eb36-108">数値型の場合、+ の 2 つのオペランドの合計が計算されます。</span><span class="sxs-lookup"><span data-stu-id="1eb36-108">For numeric types, + computes the sum of its two operands.</span></span> <span data-ttu-id="1eb36-109">一方または両方のオペランドが文字列型である場合、+ は、そのオペランドの文字列表現を連結します。</span><span class="sxs-lookup"><span data-stu-id="1eb36-109">When one or both operands are of type string, + concatenates the string representations of the operands.</span></span>  
-  
- <span data-ttu-id="1eb36-110">2 項 `+` 演算子はデリゲート型にも備わっており、その場合、デリゲートの連結が実行されます。</span><span class="sxs-lookup"><span data-stu-id="1eb36-110">Delegate types also provide a binary `+` operator, which performs delegate concatenation.</span></span>  
-  
- <span data-ttu-id="1eb36-111">単項 `+` 演算子と 2 項 `+` 演算子は、ユーザー定義型でオーバーロードすることができます。</span><span class="sxs-lookup"><span data-stu-id="1eb36-111">User-defined types can overload the unary `+` and binary `+` operators.</span></span> <span data-ttu-id="1eb36-112">整数型に対する演算は、通常、列挙型で使用できます。</span><span class="sxs-lookup"><span data-stu-id="1eb36-112">Operations on integral types are generally allowed on enumeration.</span></span> <span data-ttu-id="1eb36-113">詳細については、「[operator (C# Reference) (operator (C# リファレンス))](../../../csharp/language-reference/keywords/operator.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1eb36-113">For more information, see [operator (C# Reference)](../../../csharp/language-reference/keywords/operator.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="1eb36-114">例</span><span class="sxs-lookup"><span data-stu-id="1eb36-114">Example</span></span>  
- [!code-csharp[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="1eb36-115">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="1eb36-115">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="1eb36-116">参照</span><span class="sxs-lookup"><span data-stu-id="1eb36-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="b565c-102">+ 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="b565c-102">+ Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="1eb36-117">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="1eb36-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="1eb36-118">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="1eb36-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="1eb36-119">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="1eb36-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="1eb36-120">演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="1eb36-120">operator (C# Reference)</span></span>](../../../csharp/language-reference/keywords/operator.md)
+<span data-ttu-id="b565c-103">`+` 演算子は 2 つの形式でサポートされます。単項プラス演算子と二項加算演算子です。</span><span class="sxs-lookup"><span data-stu-id="b565c-103">The `+` operator is supported in two forms: a unary plus operator or a binary addition operator.</span></span>
+
+<span data-ttu-id="b565c-104">単項演算子と二項 `+` 演算子は、ユーザー定義型で[オーバーロード](../keywords/operator.md)できます。</span><span class="sxs-lookup"><span data-stu-id="b565c-104">User-defined types can [overload](../keywords/operator.md) the unary and binary `+` operators.</span></span> <span data-ttu-id="b565c-105">二項 `+` 演算子をオーバーロードすると、[加算代入演算子](addition-assignment-operator.md) `+=` も暗黙的にオーバーロードされます。</span><span class="sxs-lookup"><span data-stu-id="b565c-105">When a binary `+` operator is overloaded, the [addition assignment operator](addition-assignment-operator.md) `+=` is also implicitly overloaded.</span></span>
+
+## <a name="unary-plus-operator"></a><span data-ttu-id="b565c-106">単項プラス演算子</span><span class="sxs-lookup"><span data-stu-id="b565c-106">Unary plus operator</span></span>
+
+<span data-ttu-id="b565c-107">単項 `+` 演算子によって、そのオペランドの値が返されます。</span><span class="sxs-lookup"><span data-stu-id="b565c-107">The unary `+` operator returns the value of its operand.</span></span> <span data-ttu-id="b565c-108">すべての数値型でサポートされます。</span><span class="sxs-lookup"><span data-stu-id="b565c-108">It's supported by all numeric types.</span></span>
+
+## <a name="numeric-addition"></a><span data-ttu-id="b565c-109">数値加算</span><span class="sxs-lookup"><span data-stu-id="b565c-109">Numeric addition</span></span>
+
+<span data-ttu-id="b565c-110">数値型の場合、`+` 演算子によってそのオペランドの合計が計算されます。</span><span class="sxs-lookup"><span data-stu-id="b565c-110">For numeric types, the `+` operator computes the sum of its operands:</span></span>
+
+[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
+
+## <a name="string-concatenation"></a><span data-ttu-id="b565c-111">文字列の連結</span><span class="sxs-lookup"><span data-stu-id="b565c-111">String concatenation</span></span>
+
+<span data-ttu-id="b565c-112">一方または両方のオペランドが[文字列](../keywords/string.md)型の場合、`+` 演算子によってそのオペランドの文字列表現が連結されます。</span><span class="sxs-lookup"><span data-stu-id="b565c-112">When one or both operands are of type [string](../keywords/string.md), the `+` operator concatenates the string representations of its operands:</span></span>
+
+[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+
+<span data-ttu-id="b565c-113">C# 6 以降、[文字列補間](../tokens/interpolated.md)という文字列を書式設定するより便利な方法が提供されます。</span><span class="sxs-lookup"><span data-stu-id="b565c-113">Starting with C# 6, [string interpolation](../tokens/interpolated.md) provides a more convenient way to format strings:</span></span>
+
+[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+
+## <a name="delegate-combination"></a><span data-ttu-id="b565c-114">デリゲートの組み合わせ</span><span class="sxs-lookup"><span data-stu-id="b565c-114">Delegate combination</span></span>
+
+<span data-ttu-id="b565c-115">[デリゲート](../keywords/delegate.md)型の場合、`+` 演算子によって、呼び出されたとき、最初のオペランドを呼び出し、次に 2 番目のオペランドを呼び出す新しいデリゲート インスタンスが返されます。</span><span class="sxs-lookup"><span data-stu-id="b565c-115">For [delegate](../keywords/delegate.md) types, the `+` operator returns a new delegate instance that, when invoked, invokes the first operand and then invokes the second operand.</span></span> <span data-ttu-id="b565c-116">いずれかのオペランドが `null` の場合、`+` 演算子によって別のオペランドの値が返されます (`null` でもある場合があります)。</span><span class="sxs-lookup"><span data-stu-id="b565c-116">If any of the operands is `null`, the `+` operator returns the value of another operand (which also might be `null`).</span></span> <span data-ttu-id="b565c-117">次の例では、デリゲートが `+` 演算子と組み合わされるしくみを説明しています。</span><span class="sxs-lookup"><span data-stu-id="b565c-117">The following example shows how delegates can be combined with the `+` operator:</span></span>
+
+[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+
+<span data-ttu-id="b565c-118">デリゲート型の詳細については、[デリゲート](../../programming-guide/delegates/index.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b565c-118">For more information about delegate types, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="b565c-119">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="b565c-119">C# language specification</span></span>
+
+<span data-ttu-id="b565c-120">詳細については、[C# 言語仕様](../language-specification/index.md)の[単項プラス演算子](~/_csharplang/spec/expressions.md#unary-plus-operator)と[加算演算子](~/_csharplang/spec/expressions.md#addition-operator)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b565c-120">For more information, see the [Unary plus operator](~/_csharplang/spec/expressions.md#unary-plus-operator) and [Addition operator](~/_csharplang/spec/expressions.md#addition-operator) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="b565c-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="b565c-121">See also</span></span>
+
+- [<span data-ttu-id="b565c-122">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="b565c-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="b565c-123">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="b565c-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="b565c-124">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="b565c-124">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="b565c-125">文字列補間</span><span class="sxs-lookup"><span data-stu-id="b565c-125">String interpolation</span></span>](../tokens/interpolated.md)
+- [<span data-ttu-id="b565c-126">方法: 複数の文字列を連結する</span><span class="sxs-lookup"><span data-stu-id="b565c-126">How to: Concatenate Multiple Strings</span></span>](../../how-to/concatenate-multiple-strings.md)
+- [<span data-ttu-id="b565c-127">デリゲート</span><span class="sxs-lookup"><span data-stu-id="b565c-127">Delegates</span></span>](../../programming-guide/delegates/index.md)
+- [<span data-ttu-id="b565c-128">checked と unchecked</span><span class="sxs-lookup"><span data-stu-id="b565c-128">Checked and unchecked</span></span>](../keywords/checked-and-unchecked.md)

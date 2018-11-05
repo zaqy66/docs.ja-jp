@@ -1,56 +1,58 @@
 ---
 title: volatile (C# リファレンス)
-ms.date: 07/20/2015
+ms.date: 10/24/2018
 f1_keywords:
 - volatile_CSharpKeyword
 - volatile
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: be7e081b18702710c00b5b86a9bc152800f0cf3d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526220"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199969"
 ---
-# <a name="volatile-c-reference"></a><span data-ttu-id="5c11e-102">volatile (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="5c11e-102">volatile (C# Reference)</span></span>
-<span data-ttu-id="5c11e-103">`volatile` キーワードは、同時に実行されている複数のスレッドによって、フィールドが変更される可能性があることを示します。</span><span class="sxs-lookup"><span data-stu-id="5c11e-103">The `volatile` keyword indicates that a field might be modified by multiple threads that are executing at the same time.</span></span> <span data-ttu-id="5c11e-104">`volatile` と宣言されているフィールドは、シングル スレッドによるアクセスを前提とする、コンパイラの最適化の対象にはなりません。</span><span class="sxs-lookup"><span data-stu-id="5c11e-104">Fields that are declared `volatile` are not subject to compiler optimizations that assume access by a single thread.</span></span> <span data-ttu-id="5c11e-105">これらの制限により、すべてのスレッドが、他のスレッドによって実行された volatile の書き込みを、実行された順序で観察することが保証されます。</span><span class="sxs-lookup"><span data-stu-id="5c11e-105">These restrictions ensure that all threads will observe volatile writes performed by any other thread in the order in which they were performed.</span></span> <span data-ttu-id="5c11e-106">volatile 書き込みの単一の全体的順序がすべての実行スレッドから認識される保証はありません。</span><span class="sxs-lookup"><span data-stu-id="5c11e-106">There is no guarantee of a single total ordering of volatile writes as seen from all threads of execution.</span></span>  
-  
- <span data-ttu-id="5c11e-107">`volatile` 修飾子は、通常、アクセスをシリアル化する [lock](../../../csharp/language-reference/keywords/lock-statement.md) ステートメントが使用されない場合に、複数のスレッドからアクセスされるフィールドに対して使用します。</span><span class="sxs-lookup"><span data-stu-id="5c11e-107">The `volatile` modifier is usually used for a field that is accessed by multiple threads without using the [lock](../../../csharp/language-reference/keywords/lock-statement.md) statement to serialize access.</span></span>  
-  
- <span data-ttu-id="5c11e-108">`volatile` キーワードは次の型のフィールドに使用できます。</span><span class="sxs-lookup"><span data-stu-id="5c11e-108">The `volatile` keyword can be applied to fields of these types:</span></span>  
-  
--   <span data-ttu-id="5c11e-109">参照型。</span><span class="sxs-lookup"><span data-stu-id="5c11e-109">Reference types.</span></span>  
-  
--   <span data-ttu-id="5c11e-110">ポインター型 (unsafe コンテキスト内)。</span><span class="sxs-lookup"><span data-stu-id="5c11e-110">Pointer types (in an unsafe context).</span></span> <span data-ttu-id="5c11e-111">ポインター自体は volatile にできますが、ポインターが指しているオブジェクトは volatile にできません。</span><span class="sxs-lookup"><span data-stu-id="5c11e-111">Note that although the pointer itself can be volatile, the object that it points to cannot.</span></span> <span data-ttu-id="5c11e-112">つまり、"volatile を指すポインター" は宣言できません。</span><span class="sxs-lookup"><span data-stu-id="5c11e-112">In other words, you cannot declare a "pointer to volatile."</span></span>  
-  
--   <span data-ttu-id="5c11e-113">sbyte、byte、short、ushort、int、uint、char、float、bool などの型。</span><span class="sxs-lookup"><span data-stu-id="5c11e-113">Types such as sbyte, byte, short, ushort, int, uint, char, float, and bool.</span></span>  
-  
--   <span data-ttu-id="5c11e-114">基本データ型 byte、sbyte、short、ushort、int、または uint のいずれかが含まれる列挙型。</span><span class="sxs-lookup"><span data-stu-id="5c11e-114">An enum type with one of the following base types: byte, sbyte, short, ushort, int, or uint.</span></span>  
-  
--   <span data-ttu-id="5c11e-115">参照型であることが判明しているジェネリック型パラメーター。</span><span class="sxs-lookup"><span data-stu-id="5c11e-115">Generic type parameters known to be reference types.</span></span>  
-  
--   <span data-ttu-id="5c11e-116"><xref:System.IntPtr> および <xref:System.UIntPtr>。</span><span class="sxs-lookup"><span data-stu-id="5c11e-116"><xref:System.IntPtr> and <xref:System.UIntPtr>.</span></span>  
-  
- <span data-ttu-id="5c11e-117">volatile キーワードは、クラスまたは構造体のフィールドにのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="5c11e-117">The volatile keyword can only be applied to fields of a class or struct.</span></span> <span data-ttu-id="5c11e-118">ローカル変数を `volatile` として宣言することはできません。</span><span class="sxs-lookup"><span data-stu-id="5c11e-118">Local variables cannot be declared `volatile`.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="5c11e-119">例</span><span class="sxs-lookup"><span data-stu-id="5c11e-119">Example</span></span>  
- <span data-ttu-id="5c11e-120">次の例は、public のフィールド変数を `volatile` として宣言する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="5c11e-120">The following example shows how to declare a public field variable as `volatile`.</span></span>  
-  
- [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="5c11e-121">例</span><span class="sxs-lookup"><span data-stu-id="5c11e-121">Example</span></span>  
- <span data-ttu-id="5c11e-122">次の例は、補助スレッドつまりワーカー スレッドを作成および使用して、プライマリ スレッドとの並行処理を実行する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="5c11e-122">The following example demonstrates how an auxiliary or worker thread can be created and used to perform processing in parallel with that of the primary thread.</span></span> <span data-ttu-id="5c11e-123">マルチスレッドの背景情報については、「[マネージド スレッド処理](../../../standard/threading/index.md)」および「[スレッド処理 (C#)](../../programming-guide/concepts/threading/index.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="5c11e-123">For background information about multithreading, see [Managed Threading](../../../standard/threading/index.md) and [Threading (C#)](../../programming-guide/concepts/threading/index.md).</span></span>  
-  
- [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="5c11e-124">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="5c11e-124">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="5c11e-125">参照</span><span class="sxs-lookup"><span data-stu-id="5c11e-125">See Also</span></span>
+# <a name="volatile-c-reference"></a><span data-ttu-id="293bb-102">volatile (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="293bb-102">volatile (C# Reference)</span></span>
 
-- [<span data-ttu-id="5c11e-126">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="5c11e-126">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="5c11e-127">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="5c11e-127">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="5c11e-128">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="5c11e-128">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="5c11e-129">修飾子</span><span class="sxs-lookup"><span data-stu-id="5c11e-129">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)
+<span data-ttu-id="293bb-103">`volatile` キーワードは、同時に実行されている複数のスレッドによって、フィールドが変更される可能性があることを示します。</span><span class="sxs-lookup"><span data-stu-id="293bb-103">The `volatile` keyword indicates that a field might be modified by multiple threads that are executing at the same time.</span></span> <span data-ttu-id="293bb-104">コンパイラ、ランタイム システム、さらにはハードウェアで、パフォーマンスを上げる目的でメモリの場所との読み書きを再整理できます。</span><span class="sxs-lookup"><span data-stu-id="293bb-104">The compiler, the runtime system, and even hardware may rearrange reads and writes to memory locations for performance reasons.</span></span> <span data-ttu-id="293bb-105">`volatile` が宣言されているフィールドはこのような最適化の対象になりません。</span><span class="sxs-lookup"><span data-stu-id="293bb-105">Fields that are declared `volatile` are not subject to these optimizations.</span></span> <span data-ttu-id="293bb-106">`volatile` 修飾子を追加することで、すべてのスレッドによって、他のスレッドにより実行される volatile 書き込みがその実行順序どおりに観察されます。</span><span class="sxs-lookup"><span data-stu-id="293bb-106">Adding the `volatile` modifier ensures that all threads will observe volatile writes performed by any other thread in the order in which they were performed.</span></span> <span data-ttu-id="293bb-107">volatile 書き込みの単一の全体的順序がすべての実行スレッドから認識される保証はありません。</span><span class="sxs-lookup"><span data-stu-id="293bb-107">There is no guarantee of a single total ordering of volatile writes as seen from all threads of execution.</span></span>
+  
+<span data-ttu-id="293bb-108">`volatile` キーワードは次の型のフィールドに使用できます。</span><span class="sxs-lookup"><span data-stu-id="293bb-108">The `volatile` keyword can be applied to fields of these types:</span></span>  
+  
+- <span data-ttu-id="293bb-109">参照型。</span><span class="sxs-lookup"><span data-stu-id="293bb-109">Reference types.</span></span>  
+- <span data-ttu-id="293bb-110">ポインター型 (unsafe コンテキスト内)。</span><span class="sxs-lookup"><span data-stu-id="293bb-110">Pointer types (in an unsafe context).</span></span> <span data-ttu-id="293bb-111">ポインター自体は volatile にできますが、ポインターが指しているオブジェクトは volatile にできません。</span><span class="sxs-lookup"><span data-stu-id="293bb-111">Note that although the pointer itself can be volatile, the object that it points to cannot.</span></span> <span data-ttu-id="293bb-112">つまり、"volatile を指すポインター" は宣言できません。</span><span class="sxs-lookup"><span data-stu-id="293bb-112">In other words, you cannot declare a "pointer to volatile."</span></span>  
+- <span data-ttu-id="293bb-113">`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`char`、`float`、`bool` など、単純型。</span><span class="sxs-lookup"><span data-stu-id="293bb-113">Simple types such as `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `char`, `float`, and `bool`.</span></span>  
+- <span data-ttu-id="293bb-114">基本型が `byte`、`sbyte`、`short`、`ushort`、`int`、`uint` のいずれかの `enum` 型。</span><span class="sxs-lookup"><span data-stu-id="293bb-114">An `enum` type with one of the following base types: `byte`, `sbyte`, `short`, `ushort`, `int`, or `uint`.</span></span>  
+- <span data-ttu-id="293bb-115">参照型であることが判明しているジェネリック型パラメーター。</span><span class="sxs-lookup"><span data-stu-id="293bb-115">Generic type parameters known to be reference types.</span></span>
+- <span data-ttu-id="293bb-116"><xref:System.IntPtr> および <xref:System.UIntPtr>。</span><span class="sxs-lookup"><span data-stu-id="293bb-116"><xref:System.IntPtr> and <xref:System.UIntPtr>.</span></span>  
+
+<span data-ttu-id="293bb-117">`double` や `long` など、その他の型には `volatile` を指定できません。そのような型のフィールドに対する読み書きはアトミックになるとは限らないためです。</span><span class="sxs-lookup"><span data-stu-id="293bb-117">Other types, including `double` and `long`, cannot be marked `volatile` because reads and writes to fields of those types cannot be guaranteed to be atomic.</span></span> <span data-ttu-id="293bb-118">そのような型のフィールドへのマルチスレッド アクセスを保護するために、<xref:System.Threading.Interlocked> クラス メンバーを使用するか、[`lock`](lock-statement.md) ステートメントでアクセスを保護します。</span><span class="sxs-lookup"><span data-stu-id="293bb-118">To protect multi-threaded access to those types of fields, use the <xref:System.Threading.Interlocked> class members or protect access using the [`lock`](lock-statement.md) statement.</span></span>
+
+<span data-ttu-id="293bb-119">volatile キーワードは `class` または `struct` のフィールドにのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="293bb-119">The volatile keyword can only be applied to fields of a `class` or `struct`.</span></span> <span data-ttu-id="293bb-120">ローカル変数を `volatile` として宣言することはできません。</span><span class="sxs-lookup"><span data-stu-id="293bb-120">Local variables cannot be declared `volatile`.</span></span>
+  
+## <a name="example"></a><span data-ttu-id="293bb-121">例</span><span class="sxs-lookup"><span data-stu-id="293bb-121">Example</span></span>
+
+<span data-ttu-id="293bb-122">次の例は、public のフィールド変数を `volatile` として宣言する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="293bb-122">The following example shows how to declare a public field variable as `volatile`.</span></span>  
+  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
+
+<span data-ttu-id="293bb-123">次の例は、補助スレッドつまりワーカー スレッドを作成および使用して、プライマリ スレッドとの並行処理を実行する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="293bb-123">The following example demonstrates how an auxiliary or worker thread can be created and used to perform processing in parallel with that of the primary thread.</span></span> <span data-ttu-id="293bb-124">マルチスレッドの背景情報については、「[マネージド スレッド処理](../../../standard/threading/index.md)」および「[スレッド処理 (C#)](../../programming-guide/concepts/threading/index.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="293bb-124">For background information about multithreading, see [Managed Threading](../../../standard/threading/index.md) and [Threading (C#)](../../programming-guide/concepts/threading/index.md).</span></span>  
+  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
+
+<span data-ttu-id="293bb-125">`volatile` 修飾子を `_shouldStop` の宣言に追加することで、(前述のコードにある抜粋に似た) 同じ結果が常に得られます。</span><span class="sxs-lookup"><span data-stu-id="293bb-125">With the `volatile` modifier added to the declaration of `_shouldStop` in place, you'll always get the same results (similar to the excerpt shown in the preceding code).</span></span> <span data-ttu-id="293bb-126">しかしながら、この修飾子が `_shouldStop` メンバーになければ、動作は予測できません。</span><span class="sxs-lookup"><span data-stu-id="293bb-126">However, without that modifier on the `_shouldStop` member, the behavior is unpredictable.</span></span> <span data-ttu-id="293bb-127">`DoWork` メソッドでメンバー アクセスが最適化されることがありますが、古いデータが読み取られます。</span><span class="sxs-lookup"><span data-stu-id="293bb-127">The `DoWork` method may optimize the member access, resulting in reading stale data.</span></span> <span data-ttu-id="293bb-128">マルチスレッド プログラミングの性質上、古い読み取りの数は予測できません。</span><span class="sxs-lookup"><span data-stu-id="293bb-128">Because of the nature of multi-threaded programming, the number of stale reads is unpredictable.</span></span> <span data-ttu-id="293bb-129">プログラムを実行するたびに若干異なる結果が得られます。</span><span class="sxs-lookup"><span data-stu-id="293bb-129">Different runs of the program will produce somewhat different results.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="293bb-130">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="293bb-130">C# Language Specification</span></span>
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+  
+## <a name="see-also"></a><span data-ttu-id="293bb-131">参照</span><span class="sxs-lookup"><span data-stu-id="293bb-131">See Also</span></span>
+
+- [<span data-ttu-id="293bb-132">C# 言語仕様: volatile キーワード</span><span class="sxs-lookup"><span data-stu-id="293bb-132">C# language specification: volatile keyword</span></span>](../../../../_csharplang/spec/classes.md#volatile-fields)
+- [<span data-ttu-id="293bb-133">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="293bb-133">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="293bb-134">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="293bb-134">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="293bb-135">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="293bb-135">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="293bb-136">修飾子</span><span class="sxs-lookup"><span data-stu-id="293bb-136">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="293bb-137">lock ステートメント</span><span class="sxs-lookup"><span data-stu-id="293bb-137">lock statement</span></span>](lock-statement.md)
+- <span data-ttu-id="293bb-138"><xref:System.Threading.Interlocked> クラス</span><span class="sxs-lookup"><span data-stu-id="293bb-138"><xref:System.Threading.Interlocked> class</span></span>
