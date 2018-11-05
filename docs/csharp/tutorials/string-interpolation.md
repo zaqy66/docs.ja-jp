@@ -3,16 +3,16 @@ title: C# における文字列補間
 description: C# の文字列補間を使用した結果文字列に書式設定された式の結果を含める方法について説明します。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: b28890034cc0ab73f96c825b5548223e1c5cd1f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1a5d451f6fef926f0f142c7f09f564ce95618b39
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086704"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188639"
 ---
 # <a name="string-interpolation-in-c"></a>C# における文字列補間 #
 
-このチュートリアルは、[文字列補間](../language-reference/tokens/interpolated.md)を使用して結果文字列に式の結果を書式設定したものを含める方法を示しています。 例では、基本的な C# の概念と .NET の型の書式設定について理解していることを前提としています。 文字列補間や .NET の型の書式設定の経験がない場合は、最初に[対話型の文字列補間に関するクイックスタート](../quick-starts/interpolated-strings.yml)を参照してください。 .NET の型の書式設定の詳細については、「[.NET での型の書式設定](../../standard/base-types/formatting-types.md)」のトピックを参照してください。
+このチュートリアルは、[文字列補間](../language-reference/tokens/interpolated.md)を使用して結果文字列に式の結果を書式設定したものを含める方法を示しています。 例では、基本的な C# の概念と .NET の型の書式設定について理解していることを前提としています。 文字列補間や .NET の型の書式設定の経験がない場合は、最初に[対話型の文字列補間に関するチュートリアル](../tutorials/intro-to-csharp/interpolated-strings.yml)を参照してください。 .NET の型の書式設定の詳細については、「[.NET での型の書式設定](../../standard/base-types/formatting-types.md)」のトピックを参照してください。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 

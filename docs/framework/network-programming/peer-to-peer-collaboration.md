@@ -2,23 +2,21 @@
 title: ピアツーピア コラボレーション
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c81300d160e2ec175f61f286047fa92015345942
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a7d382006921487ea91f82ee830c75b6355a01f3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198151"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50180788"
 ---
 # <a name="peer-to-peer-collaboration"></a>ピアツーピア コラボレーション
+
 ピアツーピア ネットワーキングは、インターネットのエッジに存在する比較的処理能力の高いコンピューター (パーソナル コンピューター) を、単なるクライアントベースのコンピューティング以上のタスクに利用する方法です。 最新のパーソナル コンピューター (PC) は、非常に高速なプロセッサに大容量のメモリとハード ディスクを備えています。しかし、メールや Web 閲覧などの一般的なコンピューティング タスクを実行するとき、それらはいずれも最大活用されていません。 最新の PC は、さまざまな種類のアプリケーションでクライアントとサーバーの両方 (ピア) として簡単に機能できます。  
   
--   ピアツーピア コラボレーションのインフラストラクチャは、Windows Vista 以降のプラットフォームの "近くの人と接続" サービスを利用する Microsoft Windows ピアツーピア インフラストラクチャを簡略化した実装です。 "近くの人と接続" サービスが機能するサブネット内のピア対応アプリケーションでの使用に適していますが、インターネットのエンドポイントや連絡先も処理できます。 一般的な連絡先マネージャーが組み込まれており、それを Live Messenger やその他の Live 対応アプリケーションで使用して、連絡先エンドポイント、空き時間、プレゼンスを確認できます。  
+ピアツーピア コラボレーションのインフラストラクチャは、Windows Vista 以降のプラットフォームの "近くの人と接続" サービスを利用する Microsoft Windows ピアツーピア インフラストラクチャを簡略化した実装です。 "近くの人と接続" サービスが機能するサブネット内のピア対応アプリケーションでの使用に適していますが、インターネットのエンドポイントや連絡先も処理できます。 一般的な連絡先マネージャーが組み込まれており、それを Live Messenger やその他の Live 対応アプリケーションで使用して、連絡先エンドポイント、空き時間、プレゼンスを確認できます。  
   
--  
-  
-## <a name="collaboration-applications"></a>コラボレーション アプリケーション  
+## <a name="collaboration-applications"></a>コラボレーション アプリケーション
+
  一般的なピアツーピア コラボレーション アプリケーションで実行されるステップは、次のとおりです。  
   
 -   ピアが、コラボレーション セッションをホストすることに関心があるピアの ID を確認します。  
@@ -37,11 +35,10 @@ ms.locfileid: "47198151"
   
 -   この時点で、ホスト ピアは招待したすべてのピアとのコラボレーション セッションを開始できます。または、コラボレーション インフラストラクチャにアプリケーションを登録できます。  P2P アプリケーションは、ピアツーピア コラボレーション インフラストラクチャと <xref:System.Net.PeerToPeer.Collaboration> 名前空間を使用して、ゲーム、掲示板、会議、およびその他のサーバーなしのプレゼンス アプリケーションの通信を調整します。  
   
--  
-  
 ## <a name="peer-to-peer-networking-security"></a>ピアツーピア ネットワーキングのセキュリティ  
+
  Active Directory ドメインでは、ドメイン コントローラーが Kerberos を使用した認証サービスを提供します。 サーバーなしのピア環境では、ピアは独自の認証を提供する必要があります。 ピアツーピア ネットワーキングでは、どのノードも CA として活動できるため、各ピアの信頼されたルート ストアにルート証明書は不要です。 認証は、X.509 証明書として書式設定された自己署名証明書を使用して提供されます。 これらの証明書は各ピアによって作成されます。各ピアは、公開キーおよび秘密キーのペアと、秘密キーを使用して署名された証明書を生成します。 自己署名証明書は、認証のために、また、ピア エンティティについての情報を提供するために使用されます。 X.509 認証と同様に、ピア ネットワーキング認証は、信頼された公開キーまでさかのぼることができる証明書チェーンに基づいています。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Net.PeerToPeer.Collaboration>  
- [System.Net.PeerToPeer.Collaboration 名前空間について](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Net.PeerToPeer.Collaboration>  
+- [System.Net.PeerToPeer.Collaboration 名前空間について](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

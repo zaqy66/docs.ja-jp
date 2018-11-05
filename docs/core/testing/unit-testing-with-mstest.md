@@ -4,12 +4,12 @@ description: dotnet テストおよび MSTest を使用したサンプル ソリ
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: efeb12eb43539b0a85168b1162e0f8b94ad67e90
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1c2b0bdd4bf76a17217db0c98b8f951f7d58f2ea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44213833"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183777"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest と .NET Core による単体テスト C#
 
@@ -88,7 +88,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-*unit-testing-using-dotnet-test* ディレクトリで [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) を実行します。 
+*unit-testing-using-mstest* ディレクトリで [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) を実行します。 
 
 ## <a name="creating-the-first-test"></a>最初のテストの作成
 

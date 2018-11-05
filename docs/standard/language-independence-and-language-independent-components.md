@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90b3e7246046a979f3ee02e332fbb6a843ea9e8c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b25f3dbe655dd60c9284ae5ef5591e95fc1b84e5
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864788"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842828"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 .NET Framework は言語に依存しません。 つまり、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL、Windows PowerShell など、.NET Framework を対象とする多くの言語の 1 つを開発に使用できます。 .NET Framework 用に開発されたクラス ライブラリの型とメンバーには、最初に記述された言語を知らなくてもアクセスできます。元の言語の規則に従う必要もありません。 コンポーネントを開発しているのであれば、コンポーネントの言語にかかわらず、すべての .NET Framework アプリからそのコンポーネントにアクセスできます。  
@@ -134,8 +134,8 @@ ms.locfileid: "43864788"
 |メンバー|[一般的な型メンバー](#members)|グローバルで静的な (static) フィールドとメソッドは CLS 準拠ではありません。|36|  
 |メンバー|--|静的リテラル値の指定には、フィールド初期化メタデータを使用する。 CLS 準拠のリテラルには、そのリテラルと同じ型 (または、そのリテラルが `enum` の場合は基本型) の値がフィールド初期化メタデータに指定されている必要がある。|13|  
 |メンバー|[一般的な型メンバー](#members)|vararg 制約は CLS の一部ではなく、CLS でサポートする呼び出し規則だけが標準のマネージド呼び出し規則である。|15|  
-|名前付け規則|[名前付け規則](#naming)|アセンブリは、識別子の頭文字および構成文字として使用できる文字セットを規定する Unicode Standard 3.0 の『Technical Report 15』の「Annex 7」に従う必要がある。詳細については、「 http://www.unicode.org/unicode/reports/tr15/tr15-18.html」を参照。 識別子は、Unicode 正規形 C に定義されている標準形式で記述する必要がある。CLS で 2 つの識別子が同じと見なされるのは、小文字マッピング (Unicode のロケール非依存で 1 対 1 の小文字による対応付け) が同じ場合である。 つまり、CLS で 2 つの識別子が異なる場合、大文字小文字の違いだけではない。 ただし、継承された定義をオーバーライドする場合、CLI では元の宣言と厳密に同じエンコーディングの使用が求められる。|4|  
-|オーバーロード|[名前付け規則](#naming)|CLS 準拠のスコープに導入されるすべての名前は、完全に独立した種類でなければいけない。ただし、名前が同じでオーバーロードによって解決できる場合を除く。 CTS では 1 つの型でメソッドとフィールドとに同じ名前を使用できるが、CLS では使用できない。|5|  
+|名前付け規則|[名前付け規則](#naming)|アセンブリは、識別子の頭文字および構成文字として使用できる文字セットを規定する Unicode Standard 3.0 の『Technical Report 15』の「Annex 7」に従う必要がある。詳細については、「<https://www.unicode.org/unicode/reports/tr15/tr15-18.html>」を参照。 識別子は、Unicode 正規形 C に定義されている標準形式で記述する必要がある。CLS で 2 つの識別子が同じと見なされるのは、小文字マッピング (Unicode のロケール非依存で 1 対 1 の小文字による対応付け) が同じ場合である。 つまり、CLS で 2 つの識別子が異なる場合、大文字小文字の違いだけではない。 ただし、継承された定義をオーバーライドする場合、CLI では元の宣言と厳密に同じエンコーディングの使用が求められる。|4|  
+|オーバーロード|[名前付け規則](#naming)|CLS 準拠のスコープに導入されるすべての名前は、完全に独立した種類である必要があります。ただし、名前が同じでオーバーロードによって解決できる場合を除きます。 CTS では 1 つの型でメソッドとフィールドとに同じ名前を使用できるが、CLS では使用できない。|5|  
 |オーバーロード|[名前付け規則](#naming)|フィールドおよび入れ子になった型について、CTS ではシグネチャでの区別が可能だが、CLS では識別子の比較だけで区別できる必要がある。 CLS 規則 39 の指定を除き、識別子の比較により名前が同じであるメソッド、プロパティ、およびイベントでは、相違点は戻り値の型だけに限定されない。|6|  
 |オーバーロード|[オーバーロード](#overloads)|プロパティおよびメソッドのみオーバーロードできる。|37|  
 |オーバーロード|[オーバーロード](#overloads)|プロパティおよびメソッドは、パラメーターの数値と型にのみ基づいてオーバーロードできる。ただし、戻り値の型に基づいてオーバーロードできる変換演算子の `op_Implicit` と o`op_Explicit` は例外である。|38|  

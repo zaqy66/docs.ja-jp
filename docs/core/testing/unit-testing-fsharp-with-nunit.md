@@ -2,25 +2,34 @@
 title: dotnet テストと NUnit を使用した .NET Core での単体テスト F# ライブラリ
 description: dotnet テストおよび NUnit を使用したサンプル ソリューションを段階的に構築していく対話型エクスペリエンスを通じて、.NET Core における F# の単体テストの概念について説明します。
 author: rprouse
-ms.date: 12/01/2017
+ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: c5653463ce43ab8660753aa03ef79ba10f339fac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215757"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308428"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した .NET Core での単体テスト F# ライブラリ
 
 このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
+## <a name="prerequisites"></a>必須コンポーネント 
+- [.NET Core SDK 2.1 (v.2.1.400)](https://www.microsoft.com/net/download) 以降のバージョン。 
+- ユーザーが選んだテキスト エディターまたはコード エディター。
+
 ## <a name="creating-the-source-project"></a>ソース プロジェクトの作成
 
 シェル ウィンドウを開きます。 ソリューションを保存するための *unit-testing-with-fsharp* というディレクトリを作成します。
-この新しいディレクトリ内で [`dotnet new sln`](../tools/dotnet-new.md) を実行して、ソリューションを新たに作成します。 こうすることで、クラス ライブラリと単体テスト プロジェクトの両方を管理しやすくなります。
-ソリューションのディレクトリ内で、*MathService* ディレクトリを作成します。 現時点のディレクトリとファイルの構造は次のようになっています。
+この新しいディレクトリ内で、次のコマンドを実行して、クラス ライブラリとテスト プロジェクト用の新しいソリューション ファイルを作成します。
+
+```console
+dotnet new sln
+```
+
+次に、*MathService* ディレクトリを作成します。 これまでのところ、ディレクトリとファイルの構造は次のアウトラインのようになっています。
 
 ```
 /unit-testing-with-fsharp
@@ -28,22 +37,24 @@ ms.locfileid: "33215757"
     /MathService
 ```
 
-*MathService* を現在のディレクトリにし、[`dotnet new classlib -lang F#`](../tools/dotnet-new.md) を実行してソース プロジェクトを作成します。  テスト駆動開発 (TDD) を行うには、計算サービスのエラーが発生する実装を作成します。
+*MathService* を現在のディレクトリとし、次のコマンドを実行してソース プロジェクトを作成します。
+
+```console
+dotnet new classlib -lang F#
+```
+
+テスト駆動開発 (TDD) を行うには、計算サービスのエラーが発生する実装を作成します。
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-*unit-testing-with-fsharp* ディレクトリに戻ります。 [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) を実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
+*unit-testing-with-fsharp* ディレクトリに戻ります。 次のコマンドを実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
 
-## <a name="install-the-nunit-project-template"></a>NUnit プロジェクト テンプレートをインストールする
-
-NUnit テストのプロジェクト テンプレートは、テスト プロジェクトを作成する前にインストールする必要があります。 これは、新しい NUnit プロジェクトを作成する開発者の各コンピューターで 1 回だけ行う必要があります。 NUnit テンプレートをインストールするには、[`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md) を実行します。
-
- ```
- dotnet new -i NUnit3.DotNetNew.Template
- ```
+```console
+dotnet sln add .\MathService\MathService.fsproj
+```
 
 ## <a name="creating-the-test-project"></a>テスト プロジェクトの作成
 
@@ -58,7 +69,13 @@ NUnit テストのプロジェクト テンプレートは、テスト プロジ
     /MathService.Tests
 ```
 
-*MathService.Tests* ディレクトリを現在のディレクトリにし、[`dotnet new nunit -lang F#`](../tools/dotnet-new.md) を使用して新しいプロジェクトを作成します。 これにより、テスト フレームワークとして NUnit を使用するテスト プロジェクトが作成されます。 生成されたテンプレートで、*MathServiceTests.fsproj* のテスト ランナーが構成されます。
+*MathService.Tests* ディレクトリを現在のディレクトリとし、次のコマンドを使用して新しいプロジェクトを作成します。
+
+```console
+dotnet new nunit -lang F#
+```
+
+これにより、テスト フレームワークとして NUnit を使用するテスト プロジェクトが作成されます。 生成されたテンプレートで、*MathServiceTests.fsproj* のテスト ランナーが構成されます。
 
 ```xml
 <ItemGroup>
@@ -70,7 +87,7 @@ NUnit テストのプロジェクト テンプレートは、テスト プロジ
 
 テスト プロジェクトには、単体テストを作成して実行するための、他のパッケージが必要です。 前の手順の `dotnet new` では、NUnit と NUnit のテスト アダプターを追加しました。 ここで、プロジェクトに別の依存関係として `MathService` クラス ライブラリを追加します。 次の [`dotnet add reference`](../tools/dotnet-add-reference.md) コマンドを使用します。
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
@@ -86,14 +103,18 @@ dotnet add reference ../MathService/MathService.fsproj
         MathService.fsproj
     /MathService.Tests
         Test Source Files
-        MathServiceTests.fsproj
+        MathService.Tests.fsproj
 ```
 
-*unit-testing-with-fsharp* ディレクトリで [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) を実行します。
+*unit-testing-with-fsharp* ディレクトリ内で次のコマンドを実行します。
+
+```console
+dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
+```
 
 ## <a name="creating-the-first-test"></a>最初のテストの作成
 
-TDD のアプローチでは、失敗するテストを 1 つ記述することを要求し、それを渡して、プロセスを繰り返します。 *Tests.fs* を開き、次のコードを追加します。
+TDD のアプローチでは、失敗するテストを 1 つ記述することを要求し、それを渡して、プロセスを繰り返します。 *UnitTest1.fs* を開き、次のコードを追加します。
 
 ```fsharp
 namespace MathService.Tests
@@ -129,14 +150,14 @@ member this.TestEvenSequence() =
 
 `expected` シーケンスがリストに変換されていることに注意してください。 NUnit ライブラリは、標準的な .NET 型の多くに依存しています。 この依存関係は、お使いのパブリック インターフェイスおよび期待される結果が、<xref:System.Collections.IEnumerable> でなく <xref:System.Collections.ICollection> をサポートしていることを意味します。
 
-テストを実行すると、失敗することがわかります。 実装はまだ作成していません。 最も単純な動作のコードを `Mathservice` クラスに記述して、このテストを作成します。
+テストを実行すると、失敗することがわかります。 実装はまだ作成していません。 このテストに合格するには、動作する MathService プロジェクトの *Library.fs* クラスに、ごく簡単なコードを記述します。
 
 ```csharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-*unit-testing-with-fsharp* ディレクトリで、もう一度 `dotnet test` を実行します。 `dotnet test` コマンドは `MathService` プロジェクトのビルドを実行してから、`MathService.Tests` プロジェクトのビルドを実行します。 両方のプロジェクトをビルドすると、この単一テストが実行されます。 成功します。
+*unit-testing-with-fsharp* ディレクトリで、もう一度 `dotnet test` を実行します。 `dotnet test` コマンドは `MathService` プロジェクトのビルドを実行してから、`MathService.Tests` プロジェクトのビルドを実行します。 両方のプロジェクトをビルドすると、このテストが実行されます。 今回は 2 つのテストが合格します。
 
 ## <a name="completing-the-requirements"></a>要件の完成
 

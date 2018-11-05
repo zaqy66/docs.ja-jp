@@ -4,12 +4,12 @@ description: .NET Core を配布用にパッケージ化、名前付け、およ
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 084de6bbb3ce280beb0846431aeceacbb57d9a32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217403"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840496"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core の配布パッケージ
 
@@ -50,13 +50,13 @@ ms.locfileid: "33217403"
 
 - (2) **host/fxr/\<fxr バージョン>** には、ホストが使用するフレームワーク解決ロジックが含まれます。 ホストでは、インストールされている最新の hostfxr が使用されます。 hostfxr は、.NET Core アプリケーションの実行時に適切なランタイムを選択する役割を担います。 たとえば、.NET Core 2.0.0 用としてビルドされたアプリケーションは、2.0.5 が利用できればそれを利用します。 同様に、hostfxr は開発中、適切な SDK を選択します。
 
-- (3) **sdk/\<sdk バージョン>** SDK (別名 "ツール") は、.NET Core のライブラリやアプリケーションを記述し、ビルドするために使用できるマネージ ツールのセットです。 SDK には、CLI、Roslyn コンパイラ、MSBuild、関連するビルド タスクとターゲット、NuGet、新しいプロジェクト テンプレートなどが含まれています。
+- (3) **sdk/\<sdk バージョン&gt;** SDK (別名 "ツール") は、.NET Core のライブラリやアプリケーションを記述し、ビルドするために使用できるマネージド ツールのセットです。 SDK には、CLI、Roslyn コンパイラ、MSBuild、関連するビルド タスクとターゲット、NuGet、新しいプロジェクト テンプレートなどが含まれています。
 
 - (4) **sdk/NuGetFallbackFolder** には、`dotnet restore` 手順中、SDK で使用される NuGet パッケージのキャッシュが含まれています。
 
 **共有**フォルダーには、フレームワークが含まれています。 共有フレームワークは、さまざまなアプリケーションで利用できるように、中央の場所で一連のライブラリを提供します。
 
-- (5) **shared/Microsoft.NETCore.App/\<runtime バージョン>** このフレームワークには、.NET Core のランタイムと補助マネージ ライブラリが含まれています。
+- (5) **shared/Microsoft.NETCore.App/\<runtime バージョン&gt;** このフレームワークには、.NET Core のランタイムと補助マネージド ライブラリが含まれています。
 
 - (6,7) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore バージョン>** には、ASP.NET Core ライブラリが含まれています。 `Microsoft.AspNetCore.App` の下にあるライブラリは、.NET Core プロジェクトの一部として開発され、サポートされています。 `Microsoft.AspNetCore.All` の下にあるライブラリは、サードパーティ ライブラリも含まれるスーパーセットです。
 
@@ -120,4 +120,4 @@ SDK バージョンは同じ `[major].[minor]` を利用し、SDK の機能と�
 
 ## <a name="building-packages"></a>パッケージをビルドする
 
-https://github.com/dotnet/source-build リポジトリには、.NET Core SDK のソース ターボールとそのすべてのコンポーネントをビルドする方法があります。 この source-build リポジトリの出力は、この記事の最初のセクションで説明したレイアウトに一致します。
+[dotnet/source-build](https://github.com/dotnet/source-build) リポジトリには、.NET Core SDK のソース ターボールとそのすべてのコンポーネントをビルドする方法があります。 この source-build リポジトリの出力は、この記事の最初のセクションで説明したレイアウトに一致します。

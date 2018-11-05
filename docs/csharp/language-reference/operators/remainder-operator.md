@@ -7,16 +7,18 @@ helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45645919"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041259"
 ---
 # <a name="-operator-c-reference"></a>% 演算子 (C# リファレンス)
 
-剰余演算子 `%` は、最初のオペランドを 2 番目のオペランドで除算した後の剰余を計算します。 ユーザー定義型は `%` 演算子を[オーバーロード](../keywords/operator.md)できます。 `%` がオーバーロードされると、[剰余代入演算子](remainder-assignment-operator.md) `%=` も暗黙的にオーバーロードされます。
+剰余演算子 `%` は、最初のオペランドを 2 番目のオペランドで除算した後の剰余を計算します。
+
+ユーザー定義型は `%` 演算子を[オーバーロード](../keywords/operator.md)できます。 `%` がオーバーロードされると、[剰余代入演算子](remainder-assignment-operator.md) `%=` も暗黙的にオーバーロードされます。
 
 数値型はすべて剰余演算子に対応しています。
 
@@ -33,7 +35,7 @@ ms.locfileid: "45645919"
 - `z` の符号は、0 以外の場合、`x` の符号と同じになります。
 - `z` の絶対値は、`|x| - n * |y|` で生成される値となります。`n` は、`|x| / |y|` 以下で最も大きい整数であり、`|x|` と `|y|` はそれぞれ、`x` と `y` の絶対値です。
 
-無限オペランドの場合の `%` 演算子の動作については、[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/index)に関するページの「[Remainder operator](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator)」(剰余演算子) セクションをご覧ください。
+無限オペランドがある `%` 演算子の動作については、[C# 言語仕様](../language-specification/index.md)に関するページの「[剰余演算](~/_csharplang/spec/expressions.md#remainder-operator)」セクションを参照してください。
 
 > [!NOTE]
 > 剰余を計算するこの手法は、整数オペランドに使用される手法に類似していますが、IEEE 754 とは異なります。 IEEE 754 に準拠する剰余演算が必要な場合、<xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> メソッドを使用してください。
@@ -49,7 +51,7 @@ ms.locfileid: "45645919"
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
 - <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>
 - <xref:System.Math.DivRem%2A?displayProperty=nameWithType>

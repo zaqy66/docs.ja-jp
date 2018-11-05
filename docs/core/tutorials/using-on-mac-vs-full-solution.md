@@ -4,12 +4,12 @@ description: このトピックでは、再利用可能なライブラリと単�
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fbbbbc20b45981a41695eac73dcc251ef74a0cb6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530497"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186019"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築
 
@@ -20,7 +20,7 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
 > [!NOTE]
 > お客様のフィードバックは非常に貴重です。 次の 2 つの方法で Visual Studio for Mac の開発チームにフィードバックを送信できます。
 > * Visual Studio for Mac で、メニューから **[ヘルプ]** > **[問題の報告]** の順に選択するか、ようこそ画面から **[問題の報告]** を選択して、バグ報告を提出するためのウィンドウを開きます。 お客様のフィードバックは、[開発者コミュニティ](https://developercommunity.visualstudio.com/spaces/41/index.html) ポータルで追跡することができます。
-> * 提案するには、メニューから **[ヘルプ]** > **[提案の送信]** の順に選択するか、ようこそ画面から **[提案の送信]** を選択し、[Visual Studio for Mac の UserVoice Web ページ](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac)に移動します。
+> * 提案するには、メニューから **[ヘルプ]** > **[提案の送信]** の順に選択するか、ようこそ画面から **[提案の送信]** を選択し、[Visual Studio for Mac の開発者コミュニティの Web ページ](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)に移動します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -32,7 +32,7 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
 
 ## <a name="building-a-library"></a>ライブラリのビルド
 
-1. ようこそ画面で、**[新しいプロジェクト]** を選択します。 **[新しいプロジェクト]** ダイアログで、**[Multiplatform (マルチプラットフォーム)]** ノードの下にある **[.NET Standard Library (.NET 標準ライブラリ)]** テンプレートを選択します。 **[次へ]** を選択します。
+1. ようこそ画面で、**[新しいプロジェクト]** を選択します。 **[新しいプロジェクト]** ダイアログで、**[.NET Core]** ノードの下にある **[.NET Standard ライブラリ]** テンプレートを選択します。 これにより、.NET Core を対象とする .NET Standard ライブラリと、[.NET Standard](../../standard/net-standard.md) のバージョン 2.0 をサポートするその他の .NET 実装が作成されます。 **[次へ]** を選択します。
 
    ![[新しいプロジェクト] ダイアログ](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 

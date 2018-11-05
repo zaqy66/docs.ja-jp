@@ -3,12 +3,12 @@ title: 更新された .NET Core イベント パターン
 description: .NET Core イベント パターンによって旧バージョンとの互換性を提供する柔軟性を実現する方法と、非同期サブスクライバーによる安全なイベント処理を実装する方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827181"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188483"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>更新された .NET Core イベント パターン
 

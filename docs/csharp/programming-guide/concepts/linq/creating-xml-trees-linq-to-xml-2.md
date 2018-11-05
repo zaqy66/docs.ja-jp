@@ -2,12 +2,12 @@
 title: C# での XML ツリーの作成 (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 98bad6bfc3b563b39f9e58eadbff673f202646c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9fb03800f04a3c0615fa5b7fc44eb078e224eebc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502285"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452418"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C# での XML ツリーの作成 (LINQ to XML)
 ここでは、C# での XML ツリーの作成について説明します。  
@@ -168,7 +168,23 @@ Console.WriteLine(contacts);
   </Contact>  
 </Contacts>  
 ```  
+
+### <a name="creating-an-xelement-with-an-xattribute"></a>XAttribute がある XElement を作成する
+ <xref:System.Xml.Linq.XAttribute> クラスのインスタンスをコンテンツ引数として渡すと、コンストラクターによって、属性がある要素が作成されます。
+
+```csharp  
+XElement phone = new XElement("Phone",  
+    new XAttribute("Type", "Home"),  
+    "555-555-5555");  
+Console.WriteLine(phone);  
+```  
   
+ この例を実行すると、次の出力が生成されます。  
+  
+```xml  
+<Phone Type="Home">555-555-5555</Phone>
+```   
+
 ### <a name="creating-an-empty-element"></a>空要素の作成  
  空の <xref:System.Xml.Linq.XElement> を作成する場合は、コンストラクターにコンテンツを渡しません。 次の例では、空要素を作成します。  
   

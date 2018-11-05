@@ -2,14 +2,12 @@
 title: Peer Name Resolution Protocol
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f17c5e7e2fa7a5eba66f0b9dd8c950a7464eea8e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196755"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185158"
 ---
 # <a name="peer-name-resolution-protocol"></a>Peer Name Resolution Protocol
 ピアツーピア環境において、ピアは特定の名前解決システムを使用して、互いのネットワーク上の場所 (アドレス、プロトコル、およびポート) をその名前や他の識別子から解決します。 これまで、ドメイン ネーム システム (DNS) でのピア名の解決は、本質的に一時的な接続やその他の不具合によって複雑化していました。  
@@ -20,7 +18,7 @@ ms.locfileid: "47196755"
   
  セキュリティに関しては、セキュリティで保護するか、セキュリティで保護せずにピア名を公開できます。 PNRP は公開キーの暗号化を使用して、セキュリティで保護されたピア名のなりすましを防止します。コンピューターとサービスの両方に PNRP で名前を付けることができます。  
   
--   ピア名解決プロトコルには次の特性があります。  
+ピア名解決プロトコルには次の特性があります。  
   
 -   分散型で、ほぼすべてサーバーレス。 サーバーはブートストラップ プロセスのみに必要です。  
   
@@ -30,21 +28,13 @@ ms.locfileid: "47196755"
   
 -   PNRP による名前の解決はコンピューター以外にも拡張でき、サービスの名前解決も可能です。  
   
--  
-  
 ## <a name="the-systemnetpeertopeer-namespace"></a>System.Net.PeerToPeer 名前空間  
   
 -   PNRP の機能は、.NET Framework Version 3.5 内で <xref:System.Net.PeerToPeer> 名前空間によって定義されます。 この機能は、使用可能な PNRP サービスにピア名を登録して解決するために使用できる型のセットを提供します。  
   
--  
-  
 -   (<xref:System.ServiceModel.PeerResolvers> 名前空間で提供される型を使用して、PNRP とカスタム ピア リゾルバーを作成し、インスタンス化することができます。)  
   
--  
-  
 -   使用可能な PNRP サービスに名前を登録して解決するために使用する基本的な型は、次のとおりです。  
-  
--  
   
 -   <xref:System.Net.PeerToPeer.Cloud>: 使用可能な PNRP クラウドとそのスコープを説明する情報を定義します。  
   
@@ -56,12 +46,8 @@ ms.locfileid: "47196755"
   
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: 解決の同期および非同期のメソッドなど、ピア名をネットワーク エンドポイントに解決するためのプロセスを定義します。  
   
--  
-  
--  
-  
-## <a name="see-also"></a>参照  
- <xref:System.ServiceModel.PeerResolvers>  
- <xref:System.Net.PeerToPeer>  
- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)  
- [PeerToPeer テクノロジのサンプル](https://go.microsoft.com/fwlink/?LinkID=179571)
+## <a name="see-also"></a>関連項目  
+- <xref:System.ServiceModel.PeerResolvers>  
+- <xref:System.Net.PeerToPeer>  
+- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)
+- [PeerToPeer テクノロジのサンプル](https://go.microsoft.com/fwlink/?LinkID=179571)

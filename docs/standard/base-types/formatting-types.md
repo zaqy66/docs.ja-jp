@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0185d79d8663d552378248f0e021a7fee8f0522
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502216"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189720"
 ---
 # <a name="formatting-types-in-net"></a>.NET での型の書式設定
 <a name="Introduction"></a> 書式設定とはクラス、構造体、または列挙値のインスタンスを文字列形式に変換するプロセスのことで、多くの場合、変換した文字列をユーザーに表示したり、逆シリアル化して元のデータ型を復元したりするために行います。 この変換には次のような問題がある場合があります。  
@@ -120,12 +120,12 @@ ms.locfileid: "43502216"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  [!INCLUDE[win81](../../../includes/win81-md.md)]以降、[!INCLUDE[wrt](../../../includes/wrt-md.md)] には、既定の書式指定をサポートする単一のメソッド [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) を備えた [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) インターフェイスが含まれています。 ただし、マネージド型では `IStringable` インターフェイスを実装しないことをお勧めします。 詳細については、[!INCLUDE[wrt](../../../includes/wrt-md.md)] リファレンス ページの「The `IStringable` and the <xref:System.Object.ToString%2A?displayProperty=nameWithType> Interface (Windows ランタイムと IStringable インターフェイス)」を参照してください。  
+>  [!INCLUDE[win81](../../../includes/win81-md.md)] 以降、[!INCLUDE[wrt](../../../includes/wrt-md.md)] には、既定の書式指定をサポートする単一のメソッド [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A) を備えた <xref:Windows.Foundation.IStringable> インターフェイスが含まれています。 ただし、マネージド型では `IStringable` インターフェイスを実装しないことをお勧めします。 詳細については、[!INCLUDE[wrt](../../../includes/wrt-md.md)] リファレンス ページの「The `IStringable` and the <xref:System.Object.ToString%2A?displayProperty=nameWithType> Interface (Windows ランタイムと IStringable インターフェイス)」を参照してください。  
   
- インターフェイス以外の型はすべて <xref:System.Object>から派生するため、この機能はカスタムのクラスまたは構造体に自動的に提供されます。 ただし、既定の `ToString` メソッドによって提供される機能には制限があり、型の識別は行いますが、型のインスタンスに関する情報は提供しません。 それ自体に関する情報を提供するオブジェクトの文字列形式を提供するには、 `ToString` メソッドをオーバーライドする必要があります。  
+ インターフェイス以外の型はすべて <xref:System.Object>から派生するため、この機能はカスタムのクラスまたは構造体に自動的に提供されます。 ただし、既定の `ToString` メソッドによって提供される機能には制限があり、型の識別は行いますが、型のインスタンスに関する情報は提供しません。 それ自体に関する情報を提供するオブジェクトの文字列形式を提供するには、`ToString` メソッドをオーバーライドする必要があります。  
   
 > [!NOTE]
->  構造体は、 <xref:System.ValueType>から派生した <xref:System.Object>を継承します。 <xref:System.ValueType> は <xref:System.Object.ToString%2A?displayProperty=nameWithType> をオーバーライドしますが、その実装は同じです。  
+>  構造体は、 <xref:System.ValueType>から派生した <xref:System.Object>を継承します。 <xref:System.ValueType> は <xref:System.Object.ToString%2A?displayProperty=nameWithType>をオーバーライドしますが、その実装は同じです。  
   
  [ページのトップへ](#Introduction)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "43502216"
   
 |型|ToString のオーバーライド|  
 |----------|-----------------------|  
-|<xref:System.Boolean>|<xref:System.Boolean.TrueString?displayProperty=nameWithType> または <xref:System.Boolean.FalseString?displayProperty=nameWithType> を返します。|  
+|<xref:System.Boolean>|<xref:System.Boolean.TrueString?displayProperty=nameWithType> または <xref:System.Boolean.FalseString?displayProperty=nameWithType>を返します。|  
 |<xref:System.Byte>|`Byte.ToString("G", NumberFormatInfo.CurrentInfo)` を呼び出して、現在のカルチャに合わせて <xref:System.Byte> 値の書式設定をします。|  
 |<xref:System.Char>|文字を文字列として返します。|  
 |<xref:System.DateTime>|`DateTime.ToString("G", DatetimeFormatInfo.CurrentInfo)` を呼び出して、現在のカルチャに合わせて日付と時刻の値の書式設定をします。|  
@@ -286,7 +286,7 @@ ms.locfileid: "43502216"
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
   
 > [!NOTE]
->  数値型および日付/時刻型の `ToString` メソッドはオーバーロードされますが、 <xref:System.IFormatProvider> パラメーターが含まれるのはそのうちの一部のオーバーロードだけです。 メソッドに <xref:System.IFormatProvider> 型のパラメーターがない場合は、代わりに <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティによって返されるオブジェクトが渡されます。 たとえば、既定の <xref:System.Int32.ToString?displayProperty=nameWithType> メソッドの呼び出しの場合は、最終的には `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)` のようなメソッド呼び出しになります。  
+>  数値型および日付/時刻型の `ToString` メソッドはオーバーロードされますが、 <xref:System.IFormatProvider> パラメーターが含まれるのはそのうちの一部のオーバーロードだけです。 メソッドに <xref:System.IFormatProvider> 型のパラメーターがない場合は、代わりに <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティによって返されるオブジェクトが渡されます。 たとえば、既定の <xref:System.Int32.ToString?displayProperty=nameWithType> メソッドの呼び出しの場合は、最終的には `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`のようなメソッド呼び出しになります。  
   
  .NET には、<xref:System.IFormatProvider> を実装する次の 3 つのクラスが用意されています。  
   
@@ -302,12 +302,12 @@ ms.locfileid: "43502216"
   
 <a name="numericCulture"></a>   
 ### <a name="culture-sensitive-formatting-of-numeric-values"></a>数値のカルチャに依存した書式設定  
- 既定では、数値の書式指定はカルチャに依存します。 書式指定メソッドを呼び出すときにカルチャを指定しない場合は、現在のスレッド カルチャの書式指定規則が使用されます。 次に示す例では、現在のスレッド カルチャを 4 回変更した後に、<xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> メソッドを呼び出します。 各ケースでは、結果の文字列は、現在のカルチャの書式指定規則を反映します。 これは、各数値型の `ToString` メソッドへの呼び出しを、 `ToString(String)` メソッドと `ToString(String, IFormatProvider)` メソッドがラップするためです。  
+ 既定では、数値の書式指定はカルチャに依存します。 書式指定メソッドを呼び出すときにカルチャを指定しない場合は、現在のスレッド カルチャの書式指定規則が使用されます。 次に示す例では、現在のスレッド カルチャを 4 回変更した後に、 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> メソッドを呼び出します。 各ケースでは、結果の文字列は、現在のカルチャの書式指定規則を反映します。 これは、各数値型の `ToString` メソッドへの呼び出しを、 `ToString(String)` メソッドと `ToString(String, IFormatProvider)` メソッドがラップするためです。  
   
  [!code-csharp[Conceptual.Formatting.Overview#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific3.cs#19)]
  [!code-vb[Conceptual.Formatting.Overview#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific3.vb#19)]  
   
- また、 `ToString` パラメーターを持つ `provider` オーバーロードを呼び出して、次のどちらかを渡すことにより、特定カルチャの数値を書式指定することもできます。  
+ また、`ToString` パラメーターを持つ `provider` オーバーロードを呼び出して、次のどちらかを渡すことにより、特定カルチャの数値を書式指定することもできます。  
   
 -   使用される書式指定規則のカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクト。 その <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> メソッドは、<xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> プロパティの値を返します。このプロパティは、数値にカルチャ固有の書式指定情報を提供する <xref:System.Globalization.NumberFormatInfo> オブジェクトです。  
   
@@ -320,14 +320,14 @@ ms.locfileid: "43502216"
   
 <a name="dateCulture"></a>   
 ### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>日付と時刻の値のカルチャに依存した書式設定  
- 既定では、日時の値の書式指定はカルチャに依存します。 書式指定メソッドを呼び出すときにカルチャを指定しない場合は、現在のスレッド カルチャの書式指定規則が使用されます。 次に示す例では、現在のスレッド カルチャを 4 回変更した後に、<xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> メソッドを呼び出します。 各ケースでは、結果の文字列は、現在のカルチャの書式指定規則を反映します。 これは、<xref:System.DateTime.ToString?displayProperty=nameWithType>、<xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>、<xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>、<xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> の各メソッドが、<xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドおよび <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドへの呼び出しをラップするためです。  
+ 既定では、日時の値の書式指定はカルチャに依存します。 書式指定メソッドを呼び出すときにカルチャを指定しない場合は、現在のスレッド カルチャの書式指定規則が使用されます。 次に示す例では、現在のスレッド カルチャを 4 回変更した後に、 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> メソッドを呼び出します。 各ケースでは、結果の文字列は、現在のカルチャの書式指定規則を反映します。 これは、 <xref:System.DateTime.ToString?displayProperty=nameWithType>、 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>、 <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>、 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> の各メソッドが、 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドおよび <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドへの呼び出しをラップするためです。  
   
  [!code-csharp[Conceptual.Formatting.Overview#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific1.cs#17)]
  [!code-vb[Conceptual.Formatting.Overview#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific1.vb#17)]  
   
  <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> パラメーターを持つ <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> または `provider` オーバーロードを呼び出して、次のどちらかを渡すことにより、特定カルチャの日時の値を書式指定することもできます。  
   
--   使用される書式指定規則のカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクト。 その <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> メソッドは、<xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> プロパティの値を返します。このプロパティは、日時の値にカルチャ固有の書式指定情報を提供する <xref:System.Globalization.DateTimeFormatInfo> オブジェクトです。  
+-   使用される書式指定規則のカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクト。 その <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> メソッドは、 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> プロパティの値を返します。このプロパティは、日時の値にカルチャ固有の書式指定情報を提供する <xref:System.Globalization.DateTimeFormatInfo> オブジェクトです。  
   
 -   使用されるカルチャ固有の書式指定規則を定義する <xref:System.Globalization.DateTimeFormatInfo> オブジェクト。 その <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> メソッドでは、それ自身のインスタンスが返されます。  
   
@@ -344,7 +344,7 @@ ms.locfileid: "43502216"
   
 -   <xref:System.Convert> クラスによる文字列変換がサポートされます。 <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> メソッドおよび <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドを呼び出すと、自動的に <xref:System.IFormattable> の実装が呼び出されます。  
   
--   複合書式指定がサポートされます。 書式指定文字列を含む書式指定項目を使用してカスタムの型の書式を設定する場合に、共通言語ランタイムによって自動的に <xref:System.IFormattable> の実装が呼び出され、それに書式指定文字列が渡されます。 <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドや <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドを使用した複合書式指定の詳細については、「[複合書式指定](#CompositeFormatting)」のセクションを参照してください。  
+-   複合書式指定がサポートされます。 書式指定文字列を含む書式指定項目を使用してカスタムの型の書式を設定する場合に、共通言語ランタイムによって自動的に <xref:System.IFormattable> の実装が呼び出され、それに書式指定文字列が渡されます。 <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドや <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>メソッドを使用した複合書式指定の詳細については、「 [複合書式指定](#CompositeFormatting) 」のセクションを参照してください。  
   
  次の例では、 `Temperature` インターフェイスを実装する <xref:System.IFormattable> クラスを定義しています。 このクラスでは、温度を摂氏で表示するために "C" 書式指定子または "G" 書式指定子、華氏で表示するために "F" 書式指定子、ケルビンで表示するために "K" 書式指定子をそれぞれサポートしています。  
   
@@ -382,16 +382,16 @@ ms.locfileid: "43502216"
   
 <a name="Custom"></a>   
 ## <a name="custom-formatting-with-icustomformatter"></a>ICustomFormatter を使用したカスタム書式設定  
- <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> および <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> の 2 つの複合書式指定メソッドには、カスタム書式設定をサポートしている書式プロバイダー パラメーターが含まれています。 これらの書式指定メソッドのいずれかを呼び出すと、書式プロバイダーの <xref:System.Type> メソッドに <xref:System.ICustomFormatter> インターフェイスを表す <xref:System.IFormatProvider.GetFormat%2A> オブジェクトが渡されます。 次に、 <xref:System.IFormatProvider.GetFormat%2A> メソッドによって、カスタム書式設定を提供する <xref:System.ICustomFormatter> の実装が返されます。  
+ <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> および <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>の 2 つの複合書式指定メソッドには、カスタム書式設定をサポートしている書式プロバイダー パラメーターが含まれています。 これらの書式指定メソッドのいずれかを呼び出すと、書式プロバイダーの <xref:System.Type> メソッドに <xref:System.ICustomFormatter> インターフェイスを表す <xref:System.IFormatProvider.GetFormat%2A> オブジェクトが渡されます。 次に、 <xref:System.IFormatProvider.GetFormat%2A> メソッドによって、カスタム書式設定を提供する <xref:System.ICustomFormatter> の実装が返されます。  
   
- <xref:System.ICustomFormatter> インターフェイスには、 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>という単一のメソッドがあります。このメソッドは、複合書式指定文字列の書式指定項目ごとに 1 回、複合書式指定メソッドによって自動的に呼び出されます。 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> メソッドには、3 つのパラメーターがあります。書式指定項目の `formatString` 引数を表す書式指定文字列、書式を設定するオブジェクト、および書式指定サービスを提供する <xref:System.IFormatProvider> オブジェクトの 3 つです。 通常は、 <xref:System.ICustomFormatter> を実装するクラスでは <xref:System.IFormatProvider>も実装するため、この最後のパラメーターはカスタム書式指定クラス自体への参照になります。 このメソッドは、書式を設定するオブジェクトのカスタム書式の文字列形式を返します。 オブジェクトの書式を設定できない場合は、null 参照 (Visual Basic の場合は`Nothing` ) を返します。  
+ <xref:System.ICustomFormatter> インターフェイスには、 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>という単一のメソッドがあります。このメソッドは、複合書式指定文字列の書式指定項目ごとに 1 回、複合書式指定メソッドによって自動的に呼び出されます。 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> メソッドには、3 つのパラメーターがあります。書式指定項目の `formatString` 引数を表す書式指定文字列、書式を設定するオブジェクト、および書式指定サービスを提供する <xref:System.IFormatProvider> オブジェクトの 3 つです。 通常は、 <xref:System.ICustomFormatter> を実装するクラスでは <xref:System.IFormatProvider>も実装するため、この最後のパラメーターはカスタム書式指定クラス自体への参照になります。 このメソッドは、書式を設定するオブジェクトのカスタム書式の文字列形式を返します。 オブジェクトの書式を設定できない場合は、null 参照 (Visual Basic の場合は `Nothing`) を返します。  
   
  整数値を 2 桁の 16 進値とそれに続く 1 つの空白のシーケンスとして表示する、 <xref:System.ICustomFormatter> という名前の `ByteByByteFormatter` の実装の例を次に示します。  
   
  [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
  [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]  
   
- `ByteByByteFormatter` クラスを使用して整数値の書式を設定する例を次に示します。 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> メソッドが 2 回目の <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッド呼び出しで複数回呼び出されることに注意してください。また、既定の <xref:System.Globalization.NumberFormatInfo> プロバイダーは、`ByteByByteFormatter.Format` メソッドが "N0" 書式指定文字列を認識せず、null 参照 (Visual Basic の場合は  ) を返すため、3 回目のメソッド呼び出しでは既定の`Nothing` ) に相当する書式指定子。  
+ `ByteByByteFormatter` クラスを使用して整数値の書式を設定する例を次に示します。 サンプルでは、 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> メソッドが 2 回目の <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッド呼び出しで複数回呼び出されることに注意してください。また、 <xref:System.Globalization.NumberFormatInfo> メソッドが "N0" 書式指定文字列を認識せず、null 参照 (Visual Basic の場合は`ByteByByteFormatter.Format` ) を返すため、3 回目のメソッド呼び出しでは既定の`Nothing` ) に相当する書式指定子。  
   
  [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
  [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]  

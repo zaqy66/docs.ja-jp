@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: 6be94c2e2cef443f69b2d6df7c2d490cb1fb629d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0be8d302568bc08d2c3dacfdf5738eff4b97d4b2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205063"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848102"
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>クロスプラットフォーム ツールを使用して NuGet パッケージを作成する方法
 
@@ -21,7 +21,7 @@ ms.locfileid: "44205063"
 
 たとえば、NuGet 経由で配布する新しい優れたライブラリを作成したとします。  クロス プラットフォーム ツールを使用して NuGet パッケージを作成すれば、正確に実行できます。  次の例では、`netstandard1.0` をターゲットとする **SuperAwesomeLibrary** というライブラリを想定します。
 
-推移的依存関係がある (つまり、別のプロジェクトに依存するプロジェクトがある) 場合、NuGet パッケージを作成する前に `dotnet restore` コマンドでソリューション全体のパッケージを復元する必要があります。  そうしないと、`dotnet pack` コマンドが正しく機能しません。
+推移的依存関係がある (つまり、別のパッケージに依存するプロジェクトがある) 場合、NuGet パッケージを作成する前に `dotnet restore` コマンドでソリューション全体のパッケージを復元する必要があります。  そうしないと、`dotnet pack` コマンドが正しく機能しません。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 

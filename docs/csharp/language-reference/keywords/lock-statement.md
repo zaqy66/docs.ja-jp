@@ -1,23 +1,23 @@
 ---
 title: lock ステートメント (C# リファレンス)
 description: C# lock ステートメントを使用し、共有リソースへのスレッド アクセスを同期します
-ms.date: 08/28/2018
+ms.date: 10/01/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 802f447e1ae01020fa80fa3048e3783ea24db3d3
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858357"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850102"
 ---
 # <a name="lock-statement-c-reference"></a>lock ステートメント (C# リファレンス)
 
-`lock` ステートメントは、指定のオブジェクトに対する相互排他ロックを取得し、ステートメント ブロックを実行してからロックを解放します。 ロックが保持されている間、ロックを保持するスレッドはロックを再度取得し、解放できます。 他のスレッドはブロックされてロックを取得できず、ロックが解放されるまで待機します。
+`lock` ステートメントは、指定のオブジェクトに対する相互排他ロックを取得し、ステートメント ブロックを実行してからロックを解放します。 ロックが保持されている間、ロックを保持するスレッドではロックを再度取得し、解放することができます。 他のスレッドはブロックされてロックを取得できず、ロックが解放されるまで待機します。
 
 `lock` ステートメントの形式は次のようになります。
 
@@ -50,13 +50,11 @@ finally
 
 ## <a name="remarks"></a>コメント
 
-共有リソースへのスレッド アクセスを同期する場合、専用オブジェクト インスタンス (`private readonly object balanceLock = new object();` など) またはコードの関連のない部分によってロック オブジェクトとして使用される可能性がない別のインスタンスをロックします。 異なる共有リソースに対して同じロック オブジェクト インスタンスを使用することは避けてください。デッドロックやロックの競合が発生する可能性があります。 特に以下の使用は避けてください。
+共有リソースへのスレッド アクセスを同期する場合、専用オブジェクト インスタンス (`private readonly object balanceLock = new object();` など) またはコードの関連のない部分によってロック オブジェクトとして使用される可能性がない別のインスタンスをロックします。 異なる共有リソースに対して同じロック オブジェクト インスタンスを使用することは避けてください。デッドロックやロックの競合が発生する可能性があります。 特に、以下をロック オブジェクトとして使用しないでください。
 
-- `this` (ロックとして呼び出し元に使用される可能性があります)。
-- <xref:System.Type> インスタンス ([typeof](typeof.md) 演算子またはリフレクションによって取得される可能性があります)。
-- ロック オブジェクトとしての
-
-文字列インスタンス (文字列リテラルなど)。
+- `this`。ロックとして呼び出し元に使用される可能性があります。
+- <xref:System.Type> インスタンス。[typeof](typeof.md) 演算子またはリフレクションによって取得される可能性があります。
+- 文字列リテラルを含む文字列インスタンス。[インターン処理](/dotnet/api/system.string.intern#remarks)される可能性があります。
 
 ## <a name="example"></a>例
 

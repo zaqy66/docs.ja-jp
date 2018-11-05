@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1874d5512f04f22b9c53bdc9e92d0c96e45d21c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7a8fc72735c5e45fb87c503272871fc687bacd3e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199722"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453243"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>方法: インストールされている .NET Framework バージョンを確認する
 
@@ -97,7 +97,7 @@ ms.locfileid: "47199722"
     |Windows 10 Anniversary Update および Windows Server 2016 の場合: 394802<br /><br /> 他のすべての OS バージョンの場合: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |Windows 10 Creators Update のみ: 460798<br/><br/> その他すべての OS バージョン上: 460805 | .NET Framework 4.7 |
     |Windows 10 Fall Creators Update のみ: 461308<br/><br/> その他のすべての OS バージョン: 461310 | .NET Framework 4.7.1 |
-    |Windows 10 April 2018 Update のみ: 461808<br/><br/> その他のすべての OS バージョン: 461814| .NET Framework 4.7.2 |
+    |Windows 10 October 2018 Update のみ: 461814<br/><br/> Windows 10 April 2018 Update のみ: 461808<br/><br/> その他のすべての OS バージョン: 461814| .NET Framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>コードでレジストリを照会して .NET Framework のバージョンを検索するには (.NET Framework 1 ～ 4)
@@ -148,8 +148,9 @@ ms.locfileid: "47199722"
     |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.7|460805|
     |Windows 10 Fall Creators Update にインストールされた .NET Framework 4.7.1|461308|
     |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.7.1|461310|
+    |Windows 10 October 2018 Update にインストールされた .NET Framework 4.7.2|461814|
     |Windows 10 April 2018 Update にインストールされた .NET Framework 4.7.2|461808|
-    |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.7.2|461814|
+    |Windows 10 Fall Creators Update 以前の OS バージョンにインストールされた .NET Framework 4.7.2|461814|
     
      レジストリの `Release` 値を確認して [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降のバージョンの .NET Framework がインストールされているかどうかを判断する例を次に示します。
 

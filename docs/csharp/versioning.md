@@ -3,12 +3,12 @@ title: C# のバージョン管理 - C# ガイド
 description: C# と .NET でのバージョン管理のしくみについて説明します
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46585934"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183231"
 ---
 # <a name="versioning-in-c"></a>C# でのバージョン管理 #
 
@@ -20,7 +20,7 @@ ms.locfileid: "46585934"
 
 ### <a name="semantic-versioning"></a>セマンティック バージョン管理
 
-[セマンティック バージョン管理](http://semver.org/) (略して SemVer) は、特定のマイルス トーン イベントを示すためにライブラリの各バージョンに適用される命名規則です。
+[セマンティック バージョン管理](https://semver.org/) (略して SemVer) は、特定のマイルス トーン イベントを示すためにライブラリの各バージョンに適用される命名規則です。
 うまく管理すれば、ライブラリに適用されたバージョン情報によって、同じライブラリの旧バージョンを使用したプロジェクトとの互換性を開発者が確認できるようになります。
 
 SemVer に対する最も基本的なアプローチは、3 コンポーネント形式 `MAJOR.MINOR.PATCH` です。

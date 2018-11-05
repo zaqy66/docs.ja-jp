@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084755"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086065"
 ---
 # <a name="class-c-reference"></a>class (C# リファレンス)
 
@@ -39,7 +39,7 @@ C# では、単一継承のみを使用できます。 つまり、クラスは 
 
 名前空間内で直接宣言され、他のクラスに入れ子にされていないクラスは、[public](../../../csharp/language-reference/keywords/public.md) または [internal](../../../csharp/language-reference/keywords/internal.md) のいずれかです。 クラスは既定で `internal` です。
 
-クラスのメンバー (入れ子にされているクラスも含む) は、[public](../../../csharp/language-reference/keywords/public.md)、`protected internal`、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[private](../../../csharp/language-reference/keywords/private.md)、`private protected` のいずれかとして宣言できます。 メンバーは既定で [private](../../../csharp/language-reference/keywords/private.md) です。
+クラスのメンバー (入れ子にされているクラスを含む) は [public](public.md)、[protected internal](protected-internal.md)、[protected](protected.md)、[internal](internal.md)、[private](private.md)、または [private protected](private-protected.md) のいずれかとして宣言することができます。 メンバーは既定で `private` です。
 
 詳細については、「[アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)」を参照してください。
 

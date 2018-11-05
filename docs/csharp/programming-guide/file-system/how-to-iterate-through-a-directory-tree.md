@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 1aac40793fabe152e18a1bf1b634058e85b31481
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6725463b042d51e20e5b293d7177903d2d35956
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515762"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123632"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>方法 : ディレクトリ ツリーを反復処理する (C# プログラミング ガイド)
 "ディレクトリ ツリーを反復処理する" とは、指定したルート フォルダー以下の入れ子になっている各サブディレクトリ内の各ファイルにアクセスすることです。 必ずしもファイルを 1 つ 1 つ開く必要はありません。 ファイルまたはサブディレクトリの名前だけを `string` として取得することも、その他の情報を <xref:System.IO.FileInfo?displayProperty=nameWithType> または <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> オブジェクトの形式で取得することもできます。  
@@ -54,7 +54,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  ディレクトリ ツリーの内容をメモリまたはディスクに格納する必要がある場合、各ファイルの (<xref:System.IO.FileSystemInfo.FullName%2A> 型の) `string` プロパティのみを格納するのが最適な選択肢です。 その後、必要に応じて、この文字列を使用して新しい <xref:System.IO.FileInfo> または <xref:System.IO.DirectoryInfo> オブジェクトを作成するか、追加処理が必要なファイルを開くことができます。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
- 堅牢性の高いファイル反復処理コードでは、ファイル システムの数多くの複雑な部分を考慮する必要があります。 Windows ファイル システムの詳細については、「[NTFS Technical Reference」](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4) (NTFS テクニカル リファレンス) を参照してください。  
+ 堅牢性の高いファイル反復処理コードでは、ファイル システムの数多くの複雑な部分を考慮する必要があります。 Windows ファイル システムの詳細については、「[NTFS の概要」](/windows-server/storage/file-server/ntfs-overview)を参照してください。  
   
 ## <a name="see-also"></a>参照
 

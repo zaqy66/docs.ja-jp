@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: c566e2c83a6c40acfd85c1822d28cbaa097e4449
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be93b91ceaecdcf00029be57f07b9237a60c07b9
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501471"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261542"
 ---
 # <a name="yield-c-reference"></a>yield (C# リファレンス)
-ステートメントで `yield` キーワードを使用した場合、メソッド、演算子、または `get` アクセサーが反復子であることを示します。 `yield` を使用して反復子を定義すると、カスタム コレクション型の <xref:System.Collections.Generic.IEnumerator%601> および <xref:System.Collections.IEnumerable> パターンを実装するときに明示的な余分なクラス (列挙の状態を保持するクラス。たとえば <xref:System.Collections.IEnumerator> を参照) が不要になります。  
+ステートメントで `yield` [コンテキスト キーワード](../../../csharp/language-reference/keywords/index.md#contextual-keywords)を使用した場合、メソッド、演算子、または `get` アクセサーが反復子であることを示します。 `yield` を使用して反復子を定義すると、カスタム コレクション型の <xref:System.Collections.Generic.IEnumerator%601> および <xref:System.Collections.IEnumerable> パターンを実装するときに明示的な余分なクラス (列挙の状態を保持するクラス。たとえば <xref:System.Collections.IEnumerator> を参照) が不要になります。  
   
  `yield` ステートメントの 2 つの形式を次の例に示します。  
   
@@ -90,6 +90,6 @@ foreach (string element in elements)
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)  
 - [反復子](../../iterators.md)

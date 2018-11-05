@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47643dfa6eda67c93c54d19da41d705a78c27d8c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484754"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453477"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
@@ -51,13 +51,13 @@ ms.locfileid: "43484754"
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] とそのポイント リリースをインストールするには、管理者特権が必要です。
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は、 [!INCLUDE[win8](../../../includes/win8-md.md)] と [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]に組み込まれているため、これらのオペレーティング システムではアプリと一緒に配置する必要はありません。 同様に、 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] は [!INCLUDE[win81](../../../includes/win81-md.md)] と Windows Server 2012 R2 に組み込まれています。 .NET Framework 4.5.2 はどのオペレーティング システムにも含まれていません。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] は Windows 10 に含まれます。 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] は Windows 10 の 11 月更新版に含まれます。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] は Windows 10 Anniversary Update に含まれます。  .NET Framework 4.7 は Windows 10 Creators Update に、.NET Framework 4.7.1 は Windows 10 Fall Creators Update に、.NET Framework 4.7.2 は Windows 10 April 2018 Update にそれぞれ搭載されています。 ハードウェア要件とソフトウェア要件の一覧については、「[システム要件](../../../docs/framework/get-started/system-requirements.md)」を参照してください。
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は、 [!INCLUDE[win8](../../../includes/win8-md.md)] と [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]に組み込まれているため、これらのオペレーティング システムではアプリと一緒に配置する必要はありません。 同様に、 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] は [!INCLUDE[win81](../../../includes/win81-md.md)] と Windows Server 2012 R2 に組み込まれています。 .NET Framework 4.5.2 はどのオペレーティング システムにも含まれていません。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] は Windows 10 に含まれます。 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] は Windows 10 の 11 月更新版に含まれます。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] は Windows 10 Anniversary Update に含まれます。  .NET Framework 4.7 は Windows 10 Creators Update に、.NET Framework 4.7.1 は Windows 10 Fall Creators Update に、.NET Framework 4.7.2 は Windows 10 October 2018 Update と Windows 10 April 2018 Update にそれぞれ搭載されています。 ハードウェア要件とソフトウェア要件の一覧については、「[システム要件](../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]以降では、ユーザーはセットアップ中に、実行している .NET Framework アプリケーションの一覧を表示し、簡単に終了できます。 これにより、.NET Framework のインストールによるシステムの再起動を回避できます。 「 [システム再起動の削減](../../../docs/framework/deployment/reducing-system-restarts.md)」を参照してください。
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] またはそのポイント リリースのいずれかをアンインストールすると、前に存在していた [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ファイルも削除されます。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]に戻る場合は、そのバージョンとすべての更新プログラムを再インストールする必要があります。 (「 [.NET Framework 4 のインストール](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx)」をご覧ください)。
 
-- .NET Framework 4.5 再頒布可能パッケージは、2012 年 10 月 9 に更新されています。この更新により、Microsoft によって生成および署名されたファイルへのデジタル署名が途中で有効期限切れになるという、デジタル証明書の不適切なタイムスタンプに関連する問題が解決しました。 2012 年 8 月 16 日付けの .NET Framework 4.5 再頒布可能パッケージをインストールしていた場合は、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=245484)から最新の再頒布可能パッケージを入手して更新を行うことをお勧めします。 この問題について詳しくは、「 [マイクロソフト セキュリティ アドバイザリ (2749655)](https://technet.microsoft.com/security/advisory/2749655)」をご覧ください。
+- .NET Framework 4.5 再頒布可能パッケージは、2012 年 10 月 9 に更新されています。この更新により、Microsoft によって生成および署名されたファイルへのデジタル署名が途中で有効期限切れになるという、デジタル証明書の不適切なタイムスタンプに関連する問題が解決しました。 2012 年 8 月 16 日付けの .NET Framework 4.5 再頒布可能パッケージをインストールしていた場合は、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=245484)から最新の再頒布可能パッケージを入手して更新を行うことをお勧めします。 この問題について詳しくは、「 [マイクロソフト セキュリティ アドバイザリ (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)」をご覧ください。
 
  システム管理者が .NET Framework とそのシステムの依存関係をネットワーク経由で配置する方法については、[管理者向け配置ガイド](../../../docs/framework/deployment/guide-for-administrators.md)に関するページを参照してください。
 
@@ -247,8 +247,9 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Version|Release DWORD の値|
 |-------------|--------------------------------|
+|Windows 10 October 2018 Update にインストールされた .NET Framework 4.7.2|461814|
 |Windows 10 April 2018 Update および Windows Server バージョン 1803 にインストールされた .NET Framework 4.7.2|461808|
-|Windows 10 April 2018 Update および Windows Server バージョン 1803 以外のすべての OS バージョンにインストールされた .NET Framework 4.7.2|461814|
+|Windows 10 October 2018 Update、Windows 10 April 2018 Update、Windows Server バージョン 1803 以外のすべての OS バージョンにインストールされた .NET Framework 4.7.2|461814|
 |Windows 10 Fall Creators Update および Windows Server バージョン 1709 にインストールされた .NET Framework 4.7.1|461308|
 |Windows 10 Fall Creators Update および Windows Server バージョン 1709 以外のすべての OS バージョンにインストールされた .NET Framework 4.7.1|461310|
 |Windows 10 Creators Update にインストールされた .NET Framework 4.7|460798|
@@ -403,9 +404,9 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |3082|スペイン語 (スペイン、モダン ソート)|es|
 
 ## <a name="see-also"></a>関連項目
- [配置ガイド (管理者向け)](../../../docs/framework/deployment/guide-for-administrators.md)  
- [システム要件](../../../docs/framework/get-started/system-requirements.md)  
- [開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)  
- [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
- [.NET Framework 4.5 のインストール中のシステム再起動の削減](../../../docs/framework/deployment/reducing-system-restarts.md)  
- [方法: .NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [配置ガイド (管理者向け)](../../../docs/framework/deployment/guide-for-administrators.md)  
+- [システム要件](../../../docs/framework/get-started/system-requirements.md)  
+- [開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)  
+- [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+- [.NET Framework 4.5 のインストール中のシステム再起動の削減](../../../docs/framework/deployment/reducing-system-restarts.md)  
+- [方法: .NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

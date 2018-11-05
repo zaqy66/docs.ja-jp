@@ -3,12 +3,12 @@ title: XML コメントによるコードの文書化
 description: XML ドキュメント コメントを含むコードを文書化し、コンパイル時に XML ドキュメント ファイルを生成する方法を説明します。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397060"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453269"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML コメントによるコードの文書化
 
@@ -51,7 +51,7 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 この例のライブラリは、4 つの主要な算術演算である `add`、 `subtract`、`multiply`、`divide` を、`int` と `double` のデータ型でサポートします。
 
 このライブラリを利用するサード パーティの開発者向けに、ソース コードへのアクセスを許可することなく、コードから API リファレンス ドキュメントを作成できます。
-以前に説明した XML 文書化タグを使用して、これを行うことができます。C# コンパイラでサポートされている標準の XML タグは次のとおりです。
+前述のように、このために XML ドキュメント タグを使用できます。 そこで、C# コンパイラがサポートする標準の XML タグを紹介します。
 
 ### <a name="ltsummarygt"></a>&lt;summary&gt;
 
@@ -160,7 +160,7 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-### <a name="ltlistgt"></a>&lt;list&gt;
+### <a name="ltlistgt"></a>&lt;リスト&gt;
 
 `<list>` タグは、文書化の情報を順序付きリスト、順不同のリスト、または表として書式設定するために使用します。
 `Math` ライブラリがサポートするそれぞれの算術演算の順不同のリストを作成します。

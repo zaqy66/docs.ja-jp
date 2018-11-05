@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c8a619021f8e398c5c3dfc974b9130ecacb44d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410034"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122780"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (リソース ファイル ジェネレーター)
 リソース ファイル ジェネレーター (Resgen.exe) は、テキスト (.txt または .restext) ファイルおよび XML ベースのリソース形式 (.resx) ファイルを共通言語ランタイムのバイナリ (.resources) ファイルに変換します。この .resources ファイルは、ランタイム バイナリ実行可能ファイルまたはサテライト アセンブリに埋め込むことができます。 「[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)」をご覧ください。  
@@ -284,7 +284,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  パラメーターとスイッチ:  
   
  `inputFilename`  
- 厳密に型指定されたリソース クラスを生成するためのリソース ファイルのファイル名 (拡張子を含む)。 ファイルは、テキスト ベース、XML ベース、または .resources バイナリ ファイルです。 .txt、.restext、.resw、または .resources 拡張子を持つことができます。  
+ 厳密に型指定されたリソース クラスを生成するためのリソース ファイルのファイル名 (拡張子を含む)。 ファイルは、テキスト ベース、XML ベース、または .resources バイナリ ファイルです。.txt、.restext、.resw、または .resources 拡張子を持つことができます。  
   
  `outputFilename`  
  出力ファイルの名前。 `outputFilename` でディレクトリ パスが示されている場合、ディレクトリが存在する必要があります。 `outputFilename` を省略した場合は、Resgen.exe が `inputFilename` と同じディレクトリに `inputFilename` のルート ファイル名の .resources ファイルを作成します。  

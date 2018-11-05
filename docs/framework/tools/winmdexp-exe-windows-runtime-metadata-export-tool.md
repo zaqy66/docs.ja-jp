@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a228513bd29e35e8793124846de16f1c8bf4c10
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 44a21426bd4fea8bbb42801d59c6590f2ee0aee8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47237177"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121390"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、[!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータを含むファイルに変換します。 .NET Framework アセンブリと [!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ ファイルは同じ物理形式を使用しますが、メタデータ テーブルの内容に違いがあります。つまり、.NET Framework アセンブリは、自動的に [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントにするプロセスは、*エクスポート*と呼ばれます。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] と [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] では、生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
   
- [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] または [!INCLUDE[vs_dev11_ext](../../../includes/vs-dev11-ext-md.md)] で、C# および Visual Basic の **Windows ストア**にある **[!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント** テンプレートを使用する場合、コンパイラのターゲットは .winmdobj ファイルであり、後続のビルド ステップで Winmdexp.exe が呼び出され、.winmdobj ファイルが .winmd ファイルにエクスポートされます。 [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントをビルドする場合は、この方法をお勧めします。 Visual Studio による制御より細かくビルド プロセスを制御する場合は、Winmdexp.exe ファイルを直接使用します。  
+ Visual Studio 2013 または Visual Studio 2012 で、C# および Visual Basic の **Windows ストア**にある **[!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント** テンプレートを使用する場合、コンパイラのターゲットは .winmdobj ファイルであり、後続のビルド ステップで Winmdexp.exe が呼び出され、.winmdobj ファイルが .winmd ファイルにエクスポートされます。 [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントをビルドする場合は、この方法をお勧めします。 Visual Studio による制御より細かくビルド プロセスを制御する場合は、Winmdexp.exe ファイルを直接使用します。  
   
  このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   

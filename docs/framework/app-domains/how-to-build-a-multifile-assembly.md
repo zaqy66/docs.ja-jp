@@ -19,11 +19,12 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916db7ec9bee0c85db1f2fcf4db7a9f8a61f9be3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183101"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>方法 : マルチファイル アセンブリをビルドする
 この記事では、マルチファイル アセンブリを作成する方法を説明し、プロシージャの各手順を示すコードを提供します。  
@@ -96,7 +97,7 @@ ms.lasthandoff: 05/03/2018
      [MSIL 逆アセンブラー (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用すると、アセンブリの内容を調査したり、ファイルがアセンブリであるかモジュールであるかを判断したりできます。  
   
 ## <a name="see-also"></a>参照  
- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
- [方法: アセンブリの内容を表示する](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [マルチファイル アセンブリ](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
+- [方法: アセンブリの内容を表示する](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [マルチファイル アセンブリ](../../../docs/framework/app-domains/multifile-assemblies.md)

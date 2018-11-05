@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 46db9dc7ff425c483f1a9f61da5e806e598b16d5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937167"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453191"
 ---
 # <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>チュートリアル: ML.NET を使用してアヤメの花をクラスター化する (クラスタリング)
 
@@ -138,19 +138,19 @@ private static PredictionModel<IrisData, ClusterPrediction> Train()
 
 [!code-csharp[Add step to load data](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#6)]
 
-次のステップでは、<xref:Microsoft.ML.Transforms.ColumnConcatenator> 変換クラスを使用して、すべての特徴列を **Features** 列に結合します。 既定では、学習アルゴリズムは **Features** 列の特徴のみを処理します。 次のコードを追加します。
+次のステップでは、<xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> 変換クラスを使用して、すべての特徴列を **Features** 列に結合します。 既定では、学習アルゴリズムは **Features** 列の特徴のみを処理します。 次のコードを追加します。
 
 [!code-csharp[Add step to concatenate columns](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#7)]
 
 ## <a name="choose-a-learning-algorithm"></a>学習アルゴリズムを選択する
 
-データをパイプラインに追加して正しい入力形式に変換したら、学習アルゴリズム (**ラーナー**) を選択します。 ラーナーはモデルをトレーニングします。 ML.NET が提供する <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer> ラーナーでは、初期クラスターの重心を選択するメソッドが改良された [k 平均法アルゴリズム](https://en.wikipedia.org/wiki/K-means_clustering)が実装されています。
+データをパイプラインに追加して正しい入力形式に変換したら、学習アルゴリズム (**ラーナー**) を選択します。 ラーナーはモデルをトレーニングします。 ML.NET が提供する <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer> ラーナーでは、初期クラスターの重心を選択するメソッドが改良された [k 平均法アルゴリズム](https://en.wikipedia.org/wiki/K-means_clustering)が実装されています。
 
 前の手順で追加したデータ処理コードの後にある `Train` メソッドに次のコードを追加します。
 
 [!code-csharp[Add a learner step](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#8)]
 
-<xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> プロパティを使ってクラスターの数を指定します。 上記のコードでは、データ セットを 3 つのクラスターに分割することが指定されています。
+<xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> プロパティを使ってクラスターの数を指定します。 上記のコードでは、データ セットを 3 つのクラスターに分割することが指定されています。
 
 ## <a name="train-the-model"></a>モデルをトレーニングする
 

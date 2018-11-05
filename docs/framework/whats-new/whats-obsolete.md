@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 58ef462fdccc31a7694721b3ab9c3bec52d66abe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855336"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183478"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework クラス ライブラリの互換性のために残されている機能
 .NET Framework は進化しています。 バージョンが新しくなるたびに、新しい機能を提供する新しい型と新しいメンバーが追加されています。 既存の型とそのメンバーも変更されています。 たとえば、一部の型は、その型がサポートするテクノロジが新しいテクノロジに置き換えられることで重要度が下がり、一部のメソッドは、より便利な新しいメソッドまたはより多くの機能を備えた新しいメソッドに置き換えられています。  

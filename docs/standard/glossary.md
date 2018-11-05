@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698485"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840272"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -38,7 +38,7 @@ ASP.NET は、ASP.NET Core を含む ASP.NET の両方の実装を指す包括�
 
 ## <a name="assembly"></a>アセンブリ
 
-アプリまたは他のアセンブリから呼び出すことができる API のコレクションを含む *.dll*/*.exe* ファイル。
+アプリケーションまたは他のアセンブリから呼び出すことができる API のコレクションを含む *.dll*/*.exe* ファイル。
 
 アセンブリは、インターフェイス、クラス、構造体、列挙型、デリゲートなどの種類を含むことができます。 プロジェクトの *bin* フォルダー内のアセンブリは、"*バイナリ*" と呼ばれることもあります。 「[ライブラリ](#library)」もご覧ください。
 
@@ -46,13 +46,13 @@ ASP.NET は、ASP.NET Core を含む ASP.NET の両方の実装を指す包括�
 
 共通言語ランタイム (Common Language Runtime)。
 
-厳密な意味はコンテキストによって異なりますが、通常は、.NET Framework のランタイムを指します。 CLR は、メモリの割り当てと管理を行います。 CLR は、アプリの実行だけでなく、JIT コンパイラを使って実行時にコードを生成してコンパイルする仮想マシンでもあります。 現在の Microsoft CLR の実装は Windows だけです。
+厳密な意味はコンテキストによって異なりますが、通常は、.NET Framework のランタイムを指します。 CLR は、メモリの割り当てと管理を行います。 CLR は、アプリの実行だけでなく、[JIT](#jit) コンパイラを使って実行時にコードを生成してコンパイルする仮想マシンでもあります。 現在の Microsoft CLR の実装は Windows だけです。
 
 ## <a name="coreclr"></a>CoreCLR
 
 .NET Core 共通言語ランタイム (.NET Core Common Language Runtime)。
 
-この CLR は、CLR と同じコード ベースから作成されます。 もともと、CoreCLR は Silverlight のランタイムであり、複数のプラットフォーム (具体的には Windows と OS X) で実行するように設計されていました。現在の CoreCLR は .NET Core の一部であり、CLR の簡素化されたバージョンを表します。 まだクロスプラットフォーム ランタイムであり、多くの Linux ディストリビューションのサポートを含むようになっています。 CoreCLR は、JIT とコード実行機能を備えた仮想マシンでもあります。
+この CLR は、CLR と同じコード ベースから作成されます。 もともと、CoreCLR は Silverlight のランタイムであり、複数のプラットフォーム (具体的には Windows と OS X) で実行するように設計されていました。現在の CoreCLR は .NET Core の一部であり、CLR の簡素化されたバージョンを表します。 まだ[クロスプラットフォーム](#cross-platform) ランタイムであり、多くの Linux ディストリビューションのサポートを含むようになっています。 CoreCLR は、JIT とコード実行機能を備えた仮想マシンでもあります。
 
 ## <a name="corefx"></a>CoreFX
 
@@ -67,6 +67,10 @@ System.* (および限られた範囲の Microsoft.*) 名前空間を構成す�
 CLR/CoreCLR とは異なり、CoreRT は仮想マシンではありません。つまり、[JIT](#jit) が含まれないため、実行時にコードを生成して実行する機能はありません。 ただし、[GC](#gc) およびランタイム型識別 (RTTI) とリフレクションの機能は備えています。 ただ、CoreRT の型システムはリフレクション用のメタデータが必要ないように設計されています。 これにより、[AOT](#aot) ツール チェーンで余分なメタデータのリンクを削除し、(さらに重要なこととして) アプリが使っていないコードを特定することができます。 CoreRT は開発中です。
 
 「[Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)」(.NET Native と CoreRT の概要) をご覧ください。
+
+## <a name="cross-platform"></a>クロスプラットフォーム
+
+Linux、Windows、iOS など、複数の異なるオペレーティング システム上で使用できるアプリケーションを開発し、実行することができます。OS ごとに作成し直す必要はありません。 そのため、異なるプラットフォーム上のアプリケーション間でコードを再利用し、一貫性を保つことができます。
 
 ## <a name="ecosystem"></a>エコシステム
 
@@ -136,7 +140,7 @@ Just-In-Time コンパイラ。
 
 ## <a name="mono"></a>Mono
 
-Mono は、主に小規模なランタイムが必要な場合に使用される .NET 実装です。 Android、Mac、iOS、tvOS、および watchOS 上の Xamarin アプリケーションで利用されるランタイムで、フットプリントが小さいアプリに重点を置いています。
+Mono はオープン ソースであり、主に小規模なランタイムが必要な場合に使用される[クロスプラットフォーム](#cross-platform)の .NET 実装です。 Android、Mac、iOS、tvOS、および watchOS 上の Xamarin アプリケーションで利用されるランタイムで、フットプリントが小さいアプリに重点を置いています。
 
 現在公開されているすべての .NET Standard バージョンをサポートしています。
 

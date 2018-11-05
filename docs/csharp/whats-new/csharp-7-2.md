@@ -2,12 +2,12 @@
 title: C# 7.2 の新機能
 description: C# 7.2 の新機能の概要。
 ms.date: 08/16/2017
-ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47400804"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181174"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 の新機能
 
@@ -20,7 +20,7 @@ C# 7.2 では[言語バージョンの選択](../language-reference/configure-la
 
 このリリースの新しい言語機能は次のとおりです。
 
-* [値の型による参照セマンティクス](#reference-semantics-with-value-types)
+* [安全で効率的なコードを記述するための手法](#safe-efficient-code-enhancements)
   - 参照セマンティクスを使用したさまざまな値の型の使用を有効にする、構文の機能強化の組み合わせ。
 * [末尾以外の名前付き引数](#non-trailing-named-arguments)
   - 名前付き引数の後ろに位置引数を続けることができます。
@@ -29,7 +29,7 @@ C# 7.2 では[言語バージョンの選択](../language-reference/configure-la
 * [`private protected` アクセス修飾子](#private-protected-access-modifier)
   - `private protected` アクセス修飾子によって、同じアセンブリ内の派生クラスのアクセスが有効になります。
 
-## <a name="reference-semantics-with-value-types"></a>値の型による参照セマンティクス
+## <a name="safe-efficient-code-enhancements"></a>安全で効率的なコードの機能拡張
 
 7.2 で導入された言語機能では、参照セマンティクスを使用しているときに、さまざまな値の型を使用できます。 これらは、参照型の使用に関連するメモリの割り当てを生じさせずに、値の型のコピーを最小限に抑えてパフォーマンスを改善するように設計されています。 次のような機能があります。
 
@@ -38,7 +38,7 @@ C# 7.2 では[言語バージョンの選択](../language-reference/configure-la
  - `readonly struct` 宣言。変更不可の構造体で、そのメンバー メソッドの `in` パラメーターとして渡す必要があることを示します。 既存の構造体の宣言に `readonly` 修飾子を追加することは、[バイナリ互換性がある変更](version-update-considerations.md#binary-compatible-changes)です。
  - `ref struct` 宣言。構造体型がマネージド メモリに直接アクセスし、常にスタック割り当てが必要であることを示します。 既存の `struct` の宣言に `ref` 修飾子を追加することは、[互換性がない変更](version-update-considerations.md#incompatible-changes)です。 `ref struct` をクラスのメンバーにすることはできません。また、ヒープ上に割り当てられている可能性がある他の場所で使用することもできません。
 
-これらすべての変更の詳細については、[参照セマンティクスを持つ値の型の使用](../reference-semantics-with-value-types.md)に関するページを参照してください。
+これらすべての変更点の詳細については、[安全で効率的なコードを記述する方法](../write-safe-efficient-code.md)に関するページを参照してください。
 
 ## <a name="non-trailing-named-arguments"></a>末尾以外の名前付き引数
 

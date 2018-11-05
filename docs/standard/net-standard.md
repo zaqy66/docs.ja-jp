@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 91dbbefd247b5e175da7dc3560b6323cbec1972b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595562"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186071"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -49,6 +49,8 @@ ms.locfileid: "45595562"
 
 1. 1 つ低いバージョンの .NET Standard を対象にしてプロジェクトをビルドします。
 2. プロジェクトのビルドが成功したら、手順 1 を繰り返します。 失敗した場合は、対象を次に高いバージョンに変更します。これが対象のバージョンです。
+
+ただし、下位バージョンの .NET Standard を対象にしている場合、さまざまな依存関係のサポートが導入されます。 お使いのプロジェクトが .NET Standard 1.x を対象としている場合、.NET Standard 2.0 "*も*" 対象にすることをお勧めします。 これにより、.NET Standard 2.0 と互換性のあるフレームワーク上で実行されるライブラリのユーザーでは、依存関係グラフが簡素化され、ダウンロードが必要になるパッケージ数が減少します。
 
 ### <a name="net-standard-versioning-rules"></a>.NET Standard のバージョン管理規則
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 47e066f8eb7402fedabc70cf1e3b4a1bb974ff62
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c00d28a5339eccda6f45234c70802f014e00ee60
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504693"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316273"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>ラムダ式 (C# プログラミング ガイド)
 
@@ -276,7 +276,7 @@ class Test
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [統合言語クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)  
 - [匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
 - [is](../../../csharp/language-reference/keywords/is.md)  

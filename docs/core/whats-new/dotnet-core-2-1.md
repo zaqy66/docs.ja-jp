@@ -1,15 +1,18 @@
 ---
 title: .NET Core 2.1 の新機能
 description: .NET Core 2.1 の新機能について。
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.date: 06/06/2018
-ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/10/2018
+ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400068"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120948"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 
@@ -166,9 +169,11 @@ JIT コンパイラで実行される重要なタスクの 1 つはコード実�
 
 これらの型を使用しない場合は、アレイの一部やメモリ バッファーのセクションなどの項目を渡すときに、一部のデータのコピーを作成してからメソッドに渡す必要があります。 これらの型はデータを仮想的に表示します。これにより、追加メモリの割り当てとコピーの操作の必要性が排除されます。
 
-次の例では、<xref:System.Span%601> インスタンスを使用して配列の 10 個の要素を仮想的に表示します。
+次の例では、<xref:System.Span%601> および <xref:System.Memory%601> インスタンスを使用して配列の 10 個の要素を仮想的に表示します。
 
 [!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+
+[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 圧縮
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9c637d9842c05f47bfcaa0431dd2f9f1ee29cc09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677150"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50181239"
 ---
 # <a name="how-to-write-text-to-a-file"></a>方法 : ファイルにテキストを書き込む
 このトピックでは、.NET Framework アプリケーションまたは [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリのファイルにテキストを書き込むためのさまざまな方法について説明します。 テキストをファイルに書き込むには、一般に次のクラスおよびメソッドを使用します。  
@@ -27,7 +27,7 @@ ms.locfileid: "45677150"
   
 -   <xref:System.IO.File> – .NET Framework アプリケーションで使用します。 ファイルにテキストを書き込む静的メソッド ( <xref:System.IO.File.WriteAllLines%2A> と <xref:System.IO.File.WriteAllText%2A>)、あるいはファイルにテキストを追加する静的メソッド (<xref:System.IO.File.AppendAllLines%2A>、 <xref:System.IO.File.AppendAllText%2A> 、または <xref:System.IO.File.AppendText%2A>) があります。  
   
--   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) - [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリで使用します。 ファイルにテキストを書き込む非同期メソッド ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) または [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx))、あるいはファイルにテキストを追加する非同期メソッド ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) または [AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)) が含まれています。  
+-   <xref:Windows.Storage.FileIO> - [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリで使用します。 ファイルにテキストを書き込む非同期メソッド (<xref:Windows.Storage.FileIO.WriteLinesAsync%2A> または <xref:Windows.Storage.FileIO.WriteTextAsync%2A>)、またはファイルにテキストを追加する非同期メソッド (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> または <xref:Windows.Storage.FileIO.AppendTextAsync%2A>) が含まれます。  
 
 - <xref:System.IO.Path> - ファイルまたはディレクトリのパス情報を格納する文字列で使用されます。 これには、ファイルまたはディレクトリのパスを構築するための文字列の連結を許可する <xref:System.IO.Path.Combine%2A> メソッドが含まれます。
 
@@ -59,7 +59,7 @@ ms.locfileid: "45677150"
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
 ## <a name="example"></a>例  
- 次の例では、ユーザーの入力を [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでテキスト ファイルに非同期的に書き込む方法を示します。 セキュリティの考慮事項により、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリからファイルを開くには、一般に [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx) コントロールを使用する必要があります。 この例では、テキスト ファイルを表示するため `FileOpenPicker` がフィルター処理されます。  
+ 次の例では、ユーザーの入力を [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでテキスト ファイルに非同期的に書き込む方法を示します。 セキュリティの考慮事項により、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリからファイルを開くには、一般に <xref:Windows.Storage.Pickers.FileOpenPicker> コントロールを使用する必要があります。 この例では、テキスト ファイルを表示するため `FileOpenPicker` がフィルター処理されます。  
   
 ```xaml  
 <Page  

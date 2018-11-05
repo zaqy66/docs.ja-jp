@@ -12,26 +12,26 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 08b63d67b6175d18bee1317cc8908d876fbb4039
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193730"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188613"
 ---
 # <a name="switch-c-reference"></a>switch (C# リファレンス)
 
 `switch` ステートメントは選択ステートメントです。このステートメントは、実行する 1 つの "*switch セクション*" を候補のリストから "*match 式*" によるパターン マッチに基づいて選択します。
 
-[!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
+[!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
 `switch` ステートメントは、1 つの式が 3 つ以上の条件に対してテストされる場合に、[if-else](if-else.md) コンストラクトの代わりとしてよく使用されます。 たとえば、次の `switch` ステートメントは、`Color` 型の変数に 3 つの値のいずれかが含まれているかどうかを確認します。
 
-[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
+[!code-csharp[switch#3](~/samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
 
 これは、`if`-`else` コンストラクトを使用する次の例に相当します。
 
-[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
+[!code-csharp[switch#3a](~/samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
 
 ## <a name="the-match-expression"></a>match 式
 
@@ -98,7 +98,7 @@ C# 6 でサポートされるのは定数パターンのみで、定数値の繰
 
 - switch セクションの順序を変更する。
 
-- `case` ラベルで </a name="when">when 句</a> を使用する。
+- `case` ラベルで [when 句](#when) を使用する。
 
 ## <a name="the-default-case"></a>`default` case
 
@@ -171,11 +171,11 @@ case null:
 
 次の例では、型パターンを使用して、さまざまな種類のコレクション型に関する情報を提供します。
 
-[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+[!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
 パターン マッチングを使用しない場合、このコードは次のように記述できます。 型パターン マッチングを使用することにより、変換結果が `null` であるかどうかをテストしたり、キャストを繰り返したりする必要がなくなるため、コードがよりコンパクトで読みやすくなります。
 
-[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+[!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
 ## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> `case`ステートメントおよび `when` 句
 
@@ -183,13 +183,13 @@ C# 7.0 以降では、case ステートメントは相互に排他的である�
 
 次の例では、`Shape` 基底クラス、`Shape` から派生する `Rectangle` クラス、および `Rectangle` から派生する `Square` クラスを定義しています。 ここでは `when` 句を使用して、同じ長さと幅が割り当てられている `Rectangle` オブジェクトが、`Square` オブジェクトとしてインスタンス化されていなくても、`ShowShapeInfo` によって確実に `Square` として処理されるようにしています。 このメソッドは、`null` オブジェクトの情報や、面積がゼロの図形の情報を表示しようとしません。
 
-[!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
+[!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
 この例で、`Shape`オブジェクトが `null` かどうかをテストしようとする `when` 句は実行されません。 `null` をテストするための正しい型パターンは `case null:` です。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの「[switch ステートメント](/dotnet/csharp/language-reference/language-specification/statements#the-switch-statement)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの「[switch ステートメント](~/_csharplang/spec/statements.md#the-switch-statement)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 

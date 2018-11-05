@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615314"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123580"
 ---
 # <a name="rules-for-inferring-simple-types"></a>単純型を推論するときの規則
 <xref:System.Xml.Schema.XmlSchemaInference> クラスが属性と要素のデータ型を推論する方法を説明します。  
@@ -65,8 +65,9 @@ ms.locfileid: "45615314"
   
  最初に `attr2` の値が検出されると、`attr2` の型は、値 `unsignedByte` に基づいて `0` と推論されます。 `attr2` の 2 番目の値が検出されると、現在推論されている型 `string` と現在の値 `unsignedByte` に基づいて、型が `true` に昇格します。これは、<xref:System.Xml.Schema.XmlSchemaInference> クラスが推論型を昇格させるときに前の値を考慮するためです。 ただし、`attr2` の 2 つのインスタンスが、上記の説明のように 2 つの別々の XML ドキュメントで検出されたのではなく、同じ XML ドキュメントで検出された場合、`attr2` は `boolean` と推論されます。  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>無視される http://www.w3.org/2001/XMLSchema-instance 名前空間の属性  
- スキーマの推論で無視されるスキーマ定義属性を次に示します。  
+### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a>無視される <https://www.w3.org/2001/XMLSchema-instance> 名前空間の属性
+
+スキーマの推論で無視されるスキーマ定義属性を次に示します。  
   
 |属性|説明|  
 |---------------|-----------------|  

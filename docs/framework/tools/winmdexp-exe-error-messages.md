@@ -159,15 +159,15 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 95d971003a28ec411b3734009bcb978c630cb811
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075459"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873788"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe のエラー メッセージ
-ビルド プロセスは [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] で **[!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント** テンプレートを使うときに [Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) を呼び出すため、Winmdexp.exe のエラー メッセージは **[エラー一覧]** に表示されます。 Winmdexp.exe は `/target:winmdobj` オプションでコンパイルされるモジュールで動作します。 コンパイルされたモジュールが入力として必要となるため、コンパイルが成功した場合を除き、そのエラー メッセージは表示されません。  
+ビルド プロセスは Visual Studio 2012 で **[!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント** テンプレートを使うときに [Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) を呼び出すため、Winmdexp.exe のエラー メッセージは **[エラー一覧]** に表示されます。 Winmdexp.exe は `/target:winmdobj` オプションでコンパイルされるモジュールで動作します。 コンパイルされたモジュールが入力として必要となるため、コンパイルが成功した場合を除き、そのエラー メッセージは表示されません。  
   
  エラー メッセージは、報告されるエラー条件への対処に必要なすべての情報が含まれるように設計されています。ただし、一部の問題ではメッセージに収まりきらない、より多くの情報が必要となります。 追加の情報は、Windows デベロッパー センターの「[Windows ランタイム コンポーネントのエラー条件の診断](https://go.microsoft.com/fwlink/p/?LinkId=251127)」で確認できます。  
   

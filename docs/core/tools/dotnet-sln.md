@@ -4,12 +4,12 @@ description: dotnet-sln コマンドは、ソリューション ファイルで�
 author: mairaw
 ms.author: mairaw
 ms.date: 06/13/2018
-ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 2651e8e14ad43f41354b8165179f95f65e732f4c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207794"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121222"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -95,3 +95,6 @@ glob パターンを使用して、C# ソリューションに複数のプロジ
 glob パターンを使用して、C# ソリューションから複数のプロジェクトを削除する:
 
 `dotnet sln todo.sln remove **/*.csproj`
+
+> [!NOTE]
+> グロビングは CLI 機能ではなく、コマンド シェルの機能です。 ファイルを正常に展開するには、グロビングをサポートするシェルを使用する必要があります。 グロビングの詳細については、[Wikipedia](https://en.wikipedia.org/wiki/Glob_(programming)) を参照してください。

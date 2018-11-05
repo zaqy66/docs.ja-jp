@@ -4,12 +4,12 @@ description: project.json ベースのライブラリ作成時にパッケージ
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44193615"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040882"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>project.json によるパッケージ依存関係の縮小
 
@@ -36,7 +36,7 @@ ms.locfileid: "44193615"
 不要なパッケージは次の方法で確認できます。
 
 1. 試用とエラー。  パッケージを削除したり、復元したり、ライブラリがまだコンパイルするか確認したり、このプロセスを繰り返したりなどの操作が含まれます。
-2. [ILSpy](http://ilspy.net) や [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) などのツールを利用し、コードで実際に利用されている参照を確認します。  その後、利用している種類に該当しないパッケージを削除できます。
+2. [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) や [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) などのツールを利用し、コードで実際に利用されている参照を確認します。  その後、利用している種類に該当しないパッケージを削除できます。
 
 ## <a name="example"></a>例 
 
@@ -127,7 +127,7 @@ ms.locfileid: "44193615"
 }
 ```
 
-パッケージがたくさんあります。コレクション タイプを拡張するとき、この多くが実際には必要ありません。  手動でパッケージを削除するか、[ILSpy](http://ilspy.net) や [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) のようなツールを利用し、コードで実際に使用されるパッケージを特定できます。
+パッケージがたくさんあります。コレクション タイプを拡張するとき、この多くが実際には必要ありません。  手動でパッケージを削除するか、[ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) や [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) のようなツールを利用し、コードで実際に使用されるパッケージを特定できます。
 
 余計なものを減らしたパッケージは次のようになります。
 

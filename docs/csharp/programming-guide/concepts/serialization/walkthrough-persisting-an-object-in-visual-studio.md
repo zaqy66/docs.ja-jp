@@ -1,12 +1,12 @@
 ---
 title: 'チュートリアル: C# を使用してオブジェクトを永続化する'
 ms.date: 04/26/2018
-ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47231493"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086078"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>チュートリアル: C# を使用してオブジェクトを永続化する #
 
@@ -29,6 +29,8 @@ ms.locfileid: "47231493"
 > [!TIP]
 > コード エディターをインストールする必要がありますか。 [Visual Studio](https://visualstudio.com/downloads) をお試しください。
 
+* この例では C# 7.3 が必要です。 「[C# 言語のバージョンの選択](../../../language-reference/configure-language-version.md)」を参照してください 
+
 オンラインで [.NET サンプルの GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/serialization)にアクセスしてサンプル コードを確認することができます。
 
 ## <a name="creating-the-loan-object"></a>loan オブジェクトを作成する
@@ -45,7 +47,7 @@ ms.locfileid: "47231493"
 
 ## <a name="serialize-the-loan-object"></a>loan オブジェクトをシリアル化する
 
-1. `Program.cs` を開きます。 次のコードを追加します。
+1. `Program.cs`を開きます。 次のコードを追加します。
 
 [!code-csharp[Create a loan object](../../../../../samples/csharp/serialization/Program.cs#1)]
 
@@ -100,4 +102,4 @@ C# 7.3 以降、`field` のターゲット値を使用して、自動実装プ�
 ## <a name="see-also"></a>参照
 
 - [シリアル化 (C#)](index.md)  
-- [C# プログラミング ガイド](../..//index.md)  
+- [C# プログラミングガイド](../..//index.md)  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201141"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086857"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (コード アクセス セキュリティ ポリシー ツール)
 ユーザーと管理者は、コード アクセス セキュリティ (CAS) ポリシー ツール (Caspol.exe) を使用して、コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを変更できます。  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** {**-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string*}|指定されたソフトウェア発行者を持つコードを、証明書ファイル、ファイル上の署名、または X509 証明書の 16 進表示で指定します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-site** *website*|指定されたサイトがソースであるコードを指定します。 例:<br /><br /> `-site** www.proseware.com`<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|特定の厳密な名前を持つコードを、ファイル名、文字列としてのアセンブリ名、および *major*.*minor*.*build*.*revision* 形式のアセンブリ バージョンで指定します。 例:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
-|**-url** *URL*|指定された URL をソースとするコードを指定します。 URL には、 http:// や ftp:// などのプロトコルを含める必要があります。 さらに、ワイルドカード文字 (\*) を使用して、特定の URL から複数のアセンブリを指定できます。 **メモ:** 複数の名前を使用して 1 つの URL を識別できるため、URL をメンバーシップ条件として使用する方法は、コードの識別情報を安全に確認できる方法ではありません。 できるだけ厳密な名前メンバーシップ条件、発行元メンバーシップ条件、またはハッシュ メンバーシップ条件を使用してください。 <br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
+|**-url** *URL*|指定された URL をソースとするコードを指定します。 URL には、`http://` や `ftp://` などのプロトコルを含める必要があります。 さらに、ワイルドカード文字 (\*) を使用して、特定の URL から複数のアセンブリを指定できます。 **メモ:** 複数の名前を使用して 1 つの URL を識別できるため、URL をメンバーシップ条件として使用する方法は、コードの識別情報を安全に確認できる方法ではありません。 できるだけ厳密な名前メンバーシップ条件、発行元メンバーシップ条件、またはハッシュ メンバーシップ条件を使用してください。 <br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-zone** *zonename*|指定されたゾーンがソースであるコードを指定します。 引数 *zonename* として、**MyComputer**、**Intranet**、**Trusted**、**Internet**、または **Untrusted** のいずれかの値を指定できます。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.ZoneMembershipCondition> クラス」を参照してください。|  
   
  **–addgroup** オプションまたは **–chggroup** オプションと併用できる引数 *flags* は、次のいずれかの方法で指定します。  

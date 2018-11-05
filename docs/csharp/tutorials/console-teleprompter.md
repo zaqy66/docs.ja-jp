@@ -3,12 +3,12 @@ title: コンソール アプリケーション
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9255ad9b1fefc828e767fb8e6ccc62b2eaf23fd6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937593"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183621"
 ---
 # <a name="console-application"></a>コンソール アプリケーション
 
@@ -155,7 +155,7 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>非同期タスク
 
-この最後の手順では、1 つのタスク内で非同期的に出力を記述し、あわせて別のタスクを実行してテキスト表示の速度を上げ下げするユーザーからの命令を読み取る、というコードを追加します。 これは少しの手順だけで済み、これで必要な変更はすべて完了となります。
+この最後の手順では、1 つのタスク内で非同期的に出力を記述するとともに、別のタスクを実行して、テキスト表示の速度を上げ下げしたり、テキスト表示をまとめて停止したりする場合のユーザーからの入力を読み取ります。 これは少しの手順だけで済み、これで必要な変更はすべて完了となります。
 最初に、ここまでで作成したファイルを読み取り表示するコードを表す、非同期の <xref:System.Threading.Tasks.Task> を返すメソッドを作成します。
 
 このメソッドを `Program` クラス (`Main` メソッドの本体から取得したもの) に追加します。
@@ -190,7 +190,7 @@ ShowTeleprompter().Wait();
 > [!NOTE]
 > C# 7.1 以降を使用している場合は、[`async` `Main` メソッド](../whats-new/csharp-7-1.md#async-main)でコンソール アプリケーションを作成できます。
 
-次に、2 つ目の非同期メソッドを記述して、コンソールを読み取り、‘<’ (未満) キーと ‘>’ (大なり) ’ キーを監視する必要があります。 そのタスクに追加するメソッドは次の通りです。
+次に、2 つ目の非同期メソッドを記述して、コンソールから読み取り、'<' (未満)、'>' (大なり)、および 'X' または 'x' キーを監視する必要があります。 そのタスクに追加するメソッドは次の通りです。
 
 ```csharp
 private static async Task GetInput()
@@ -208,13 +208,18 @@ private static async Task GetInput()
             {
                 delay += 10;
             }
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+            {
+                break;
+            }
         } while (true);
     };
     await Task.Run(work);
 }
 ```
 
-ここでは、ラムダ式を作成して、コンソールからキーを読み取り、ユーザーが ‘<’ (未満) キーまたは ‘>’ (大なり) ’ キー キーを押したときの遅延を表すローカル変数を変更する <xref:System.Action> デリゲートを表します。 このメソッドは <xref:System.Console.ReadKey> を使用してブロックし、ユーザーがキーを押すまで待機します。
+ここでは、ラムダ式を作成して、コンソールからキーを読み取り、ユーザーが ‘<’ (未満) キーまたは ‘>’ (大なり) ’ キー キーを押したときの遅延を表すローカル変数を変更する <xref:System.Action> デリゲートを表します。 デリゲート メソッドは、ユーザーが 'X' または 'x' キーを押したときに終了し、ユーザーはテキスト表示をいつでも停止できます。
+このメソッドは <xref:System.Console.ReadKey> を使用してブロックし、ユーザーがキーを押すまで待機します。
 
 この機能を完成させるには、これら両方のタスク (`GetInput` と `ShowTeleprompter`) を開始し、これら 2 つのタスク間で共有データを管理する、`async Task` を返す新しいメソッドを作成する必要があります。
 

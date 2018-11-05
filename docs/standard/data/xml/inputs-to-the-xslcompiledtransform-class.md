@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e09828b827b12645ebbf37d62a346c8877bfba05
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: beb351ac365694ac909b793bf19adb9fbb8c0274
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865736"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835975"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform クラスへの入力
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドには、<xref:System.Xml.XPath.IXPathNavigable> インターフェイスを実装するオブジェクト、ソース ドキュメントを読み取る <xref:System.Xml.XmlReader> オブジェクト、文字列 URI という 3 種類のソース ドキュメントを入力できます。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslCompiledTransform> クラスは既定で空白を維持します。 このことは、W3C XSLT 1.0 勧告 (セクション 3.4、 http://www.w3.org/TR/xslt.html#strip)) のセクション 3.4 に準拠しています。  
+>  <xref:System.Xml.Xsl.XslCompiledTransform> クラスは既定で空白を維持します。 このことは、[W3C XSLT 1.0 勧告のセクション 3.4](https://www.w3.org/TR/xslt.html#strip) に準拠しています。  
   
 ## <a name="ixpathnavigable-interface"></a>IXPathNavigable インターフェイス  
  <xref:System.Xml.XPath.IXPathNavigable> インターフェイスは、<xref:System.Xml.XmlNode> および <xref:System.Xml.XPath.XPathDocument> クラスに実装されています。 これらのクラスは XML データのメモリ内のキャッシュを表します。  

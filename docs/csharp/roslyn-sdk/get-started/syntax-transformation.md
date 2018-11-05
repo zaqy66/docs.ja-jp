@@ -3,12 +3,12 @@ title: 構文変換の概要 (Roslyn API)
 description: 構文ツリーの走査、クエリおよびウォークに関する概要。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47400791"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122585"
 ---
 # <a name="get-started-with-syntax-transformation"></a>構文変換の概要
 

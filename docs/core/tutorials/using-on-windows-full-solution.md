@@ -5,12 +5,12 @@ author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
 ms.custom: vs-dotnet
-ms.openlocfilehash: 15537ea8c68b5c873bbf26ab0519a19de0b13230
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b3e466511fcae447f5bb54b83f13b25bc90c6539
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969562"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185080"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Visual Studio 2017 を使用した Windows での完全な .NET Core ソリューションの構築
 
@@ -24,7 +24,7 @@ Visual Studio 2017 は、.NET Core アプリケーション開発用の機能を
 
 ### <a name="writing-the-library"></a>ライブラリの作成
 
-1. Visual Studio で、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。 **[新しいプロジェクト]** ダイアログで **[Visual C#]** ノードを展開し、**[.NET Standard]** ノードを選択して **[クラス ライブラリ (.NET Standard)]** を選択します。 
+1. Visual Studio で、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。 **[新しいプロジェクト]** ダイアログで **[Visual C#]** ノードを展開し、**[.NET Standard]** ノードを選択して **[クラス ライブラリ (.NET Standard)]** を選択します。 これにより、.NET Core を対象とする .NET Standard ライブラリと、[.NET Standard](../../standard/net-standard.md) のバージョン 2.0 をサポートするその他の .NET 実装が作成されます。
 
 2. プロジェクトの名前を "Library" に、ソリューションの名前を "Golden" に設定します。 **[ソリューションのディレクトリを作成]** はオンのままにします。 **[OK]** をクリックします。
 

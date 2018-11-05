@@ -4,12 +4,12 @@ description: .NET Core がお使いのブログラムのランタイム バー�
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 28a76cc17346c40517a21e8dc902bd6c2a84597f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47233205"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841541"
 ---
 # <a name="net-core-version-selection"></a>.NET Core のバージョンの選択
 
@@ -31,12 +31,12 @@ ms.locfileid: "47233205"
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK はインストールされている最新バージョンを使用する
 
-SDK コマンドには `dotnet new` または `dotnet run` が含まれています。 `dotnet` CLI の場合、どの dotnet コマンドに対しても SDK バージョンを選択する必要があります。 以下のような場合でも、.NET Core CLI では既定でマシンにインストールされている最新の SDK が使用されます。
+SDK コマンドには `dotnet new` または `dotnet run` が含まれています。 .NET Core CLI の場合、どの `dotnet` コマンドに対しても SDK バージョンを選択する必要があります。 以下のような場合でも、既定でマシンにインストールされている最新の SDK が使用されます。
 
-* プロジェクトが以前のバージョンをターゲットとしている。
-* 最新バージョンがプレビュー バージョンである。
+* このプロジェクトは、.NET Core ランタイムの以前のバージョンをターゲットとしています。
+* .NET Core SDK の最新バージョンはプレビュー バージョンです。
 
-アプリが以前のバージョンの .NET Core ランタイムをターゲットにしている場合でも、SDK の最新の機能と機能改善を利用できます。 すべてのプロジェクトに同じ SDK ツールを使用し、異なるプロジェクトで複数のランタイム バージョンの .NET Core をターゲットにできます。
+以前のバージョンの .NET Core ランタイムをターゲットにしているとき、SDK の最新の機能と機能改善を活用できます。 すべてのプロジェクトに同じ SDK ツールを使用し、異なるプロジェクトで複数のランタイム バージョンの .NET Core をターゲットにできます。
 
 まれに、以前のバージョンの SDK を使用する必要がある場合があります。 そのバージョンは [*global.json* ファイル](../tools/global-json.md)で指定します。 "最新版を使用する" というポリシーは、インストールされている最新版より以前のバージョンの .NET Core SDK を指定するには *global.json* を使用することを意味します。
 

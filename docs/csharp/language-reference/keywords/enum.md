@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: a64559ac1127f5ec296cf3892dd521c3ad8ac2be
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: de11a306937626a7dbbb184e509a9f89e63dbae5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086151"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187807"
 ---
 # <a name="enum-c-reference"></a>enum (C# リファレンス)
 
@@ -42,7 +42,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 列挙型で許容される型は、[byte](byte.md)、[sbyte](sbyte.md)、[short](short.md)、[ushort](ushort.md)、[int](int.md)、[uint](uint.md)、[long](long.md)、または [ulong](ulong.md) です。
 
-型 `Day` の変数には、基になる型の範囲内の任意の値を割り当てることができます。値は名前付き定数に限定されません。
+列挙型の変数には、基になる型の範囲内の任意の値を割り当てることができます。値は名前付き定数に限定されません。
 
 `enum E` の既定値は、式 `(E)0`によって算出された値です。
 

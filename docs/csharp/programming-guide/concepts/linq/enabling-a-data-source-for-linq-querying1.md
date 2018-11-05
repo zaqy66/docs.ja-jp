@@ -2,12 +2,12 @@
 title: データ ソースの LINQ クエリの有効化1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1aa3a22028b0b3d7c705076a3e16379e09323271
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253183"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122702"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>データ ソースの LINQ クエリの有効化
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] を拡張して、データ ソースを [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] パターンでクエリできるようにする方法はいくつかあります。 データ ソースは、いくつか例を挙げると、データ構造体、Web サービス、ファイル システム、またはデータベースの場合があります。 クエリの構文とパターンは変わらないため、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] パターンを使用すると、クライアントは [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリが有効になっているデータ ソースを簡単にクエリできます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] は、次の方法によってこれらのデータ ソースに拡張することができます。  
@@ -28,7 +28,7 @@ ms.locfileid: "44253183"
  インメモリ データの [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを有効にする方法は 2 つあります。 データ型が <xref:System.Collections.Generic.IEnumerable%601> を実装する型の場合、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects を使用してデータをクエリすることができます。 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装して型の列挙体を有効にしても意味がない場合は、その型の [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準クエリ演算子メソッドを定義するか、または型を拡張する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準クエリ演算子メソッドを作成することができます。 標準クエリ演算子のカスタム実装は、結果を返すために遅延実行を使用する必要があります。  
   
 ### <a name="remote-data"></a>リモート データ  
- リモート データ ソースの [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを有効にするための最善の選択肢は、<xref:System.Linq.IQueryable%601> インターフェイスを実装することです。 しかしこれは、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などのプロバイダーをデータ ソースに対して拡張することとは別です。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] では、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などの既存の [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)] テクノロジを別の型のデータ ソースに拡張するためにプロバイダー モデルを使用することができません。  
+ リモート データ ソースの [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを有効にするための最善の選択肢は、<xref:System.Linq.IQueryable%601> インターフェイスを実装することです。 しかしこれは、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などのプロバイダーをデータ ソースに対して拡張することとは別です。 Visual Studio 2008 では、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などの既存の [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] テクノロジを別の型のデータ ソースに拡張するためにプロバイダー モデルを使用することができません。
   
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ プロバイダー  
  <xref:System.Linq.IQueryable%601> を実装する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーの複雑度にはかなりのばらつきがあります。 このセクションでは、さまざまなレベルの複雑度について説明します。  

@@ -4,12 +4,12 @@ description: HttpClientFactory は、自己主張性の強いファクトリで�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513214"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347930"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -21,7 +21,7 @@ ms.locfileid: "43513214"
 
 1 つ目の問題は、このクラスは破棄可能ですが、`HttpClient` オブジェクトを破棄しても、基になるソケットがすぐに解放されず、'ソケットの枯渇' という重大な問題が発生する場合があるため、`using` ステートメントで使用するのは最適な選択ではないということです。 この問題の詳細については、ブログ記事「[You're using HttpClient wrong and it is destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)」 (HttpClient の誤った使い方がソフトウェアを不安定にする) を参照してください。
 
-そのため、`HttpClient` は一度インスタンス化されたら、アプリケーションの有効期間にわたって再利用されることを目的としています。 すべての要求に対して `HttpClient` クラスをインスタンス化すると、高負荷の下で使用可能なソケットの数が枯渇してしまいます。 この問題により、`SocketException` エラーが発生します。 この問題を解決するために可能なアプローチは、HttpClient クライアントの使用に関するこの [Microsoft の記事](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient)で説明されているように、`HttpClient` オブジェクトをシングルトンまたは静的として作成することに基づいています。 
+そのため、`HttpClient` は一度インスタンス化されたら、アプリケーションの有効期間にわたって再利用されることを目的としています。 すべての要求に対して `HttpClient` クラスをインスタンス化すると、高負荷の下で使用可能なソケットの数が枯渇してしまいます。 この問題により、`SocketException` エラーが発生します。 この問題を解決するために可能なアプローチは、HttpClient クライアントの使用に関するこの [Microsoft の記事](https://docs.microsoft.com/dotnet/csharp/tutorials/console-webapiclient)で説明されているように、`HttpClient` オブジェクトをシングルトンまたは静的として作成することに基づいています。 
 
 しかし、`HttpClient` には、シングルトンまたは静的オブジェクトとして使用した場合に発生する可能性がある 2 つ目の問題があります。 この場合、[.NET Core GitHub リポジトリでこの問題](https://github.com/dotnet/corefx/issues/11224)について説明されているように、シングルトンまたは静的 `HttpClient` は、DNS の変更を尊重しません。 
 
@@ -71,7 +71,7 @@ AddHttpClient() を使用して型指定されたクライアント クラスを
 
 ### <a name="httpclient-lifetimes"></a>HttpClient の有効期間
 
-IHttpClientFactory から `HttpClient` オブジェクトを取得するたび、`HttpClient` の新しいインスタンスが返されます。 型指定されたクライアントの名前ごとに HttpMessageHandler** があります。 `HttpClientFactory` は、リソースの消費量を減らすためにファクトリによって作成された HttpMessageHandler インスタンスをプールします。 新しい `HttpClient` インスタンスを作成するとき、プールの HttpMessageHandler インスタンスの有効期間が切れていない場合はそれを再利用できます。
+IHttpClientFactory から `HttpClient` オブジェクトを取得するたび、`HttpClient` の新しいインスタンスが返されます。 型指定されたクライアントの名前ごとに HttpMessageHandler** があります。 `IHttpClientFactory` は、リソースの消費量を減らすためにファクトリによって作成された HttpMessageHandler インスタンスをプールします。 新しい `HttpClient` インスタンスを作成するとき、プールの HttpMessageHandler インスタンスの有効期間が切れていない場合はそれを再利用できます。
 
 通常各ハンドラーは基になる HTTP 接続を独自に管理しており、必要以上に多くのハンドラーを作成すると接続が遅延する可能性があるため、ハンドラーをプールするのは望ましい方法です。 また、一部のハンドラーは接続を無期限に開いており、DNS の変更にハンドラーが対応できないことがあります。
 
@@ -155,7 +155,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 ## <a name="additional-resources"></a>その他の技術情報
 
 -   **.NET Core 2.1 で HttpClientFactory を使用する**
-    [*https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+    [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 
 -   **HttpClientFactory GitHub リポジトリ**

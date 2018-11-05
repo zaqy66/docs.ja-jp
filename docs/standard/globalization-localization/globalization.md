@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44221910"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453360"
 ---
 # <a name="globalization"></a>グローバリゼーション
 グローバリゼーションとは、さまざまな文化圏 (カルチャ) のユーザー向けに、ローカライズされたインターフェイスと、その地域に合ったデータをサポートするような、国際対応アプリの設計と開発をいいます。 設計フェーズに着手する前に、アプリでサポートするカルチャを決定してください。 アプリは既定値として 1 つのカルチャまたは地域を対象としますが、別のカルチャまたは地域のユーザーに簡単に拡張できるようにアプリを設計および作成できます。  

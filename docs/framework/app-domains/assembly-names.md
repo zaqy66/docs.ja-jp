@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e1ab9609fe6b2c1e232f188db8306fc05828285
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6447593ba81e4512afaf2b5798fcec00b755e63c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744136"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50184786"
 ---
 # <a name="assembly-names"></a>アセンブリ名
 アセンブリの名前は、メタデータに保存され、アセンブリのスコープに重大な影響があり、アプリケーションによって使用されます。 厳密な名前のアセンブリには、アセンブリの名前、カルチャ、公開キー、バージョン番号を含む、完全修飾名があります。 これは、表示名として、また、<xref:System.Reflection.Assembly.FullName%2A> プロパティを使用して取得できる読み込まれたアセンブリに対して、頻繁に参照されます。  
@@ -58,9 +58,9 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  グローバル アセンブリ キャッシュに厳密な名前のアセンブリを配置した場合、アセンブリのファイル名は、アセンブリ名と一致する必要があります (.exe または .dll などのファイル名の拡張子を除く)。 たとえば、アセンブリのファイル名が myAssembly.dll である場合は、アセンブリ名は myAssembly である必要があります。 ルート アプリケーション ディレクトリにのみ展開されるプライベート アセンブリは、ファイル名とは異なるアセンブリ名を持つことができます。  
   
 ## <a name="see-also"></a>参照  
- [方法: アセンブリの完全修飾名を特定する](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
- [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)  
- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [方法: アセンブリの完全修飾名を特定する](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
+- [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)  
+- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)

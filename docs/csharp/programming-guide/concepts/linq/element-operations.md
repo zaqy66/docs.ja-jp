@@ -1,13 +1,13 @@
 ---
 title: 要素操作 (C#)
-ms.date: 07/20/2015
+ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: 14fdfbc38e1c25aa00056a42e116be98a489ce0f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dbae8c0b3d98fe9674fbbeb432c1e42763e81026
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856891"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836778"
 ---
 # <a name="element-operations-c"></a>要素操作 (C#)
 
@@ -25,8 +25,8 @@ ms.locfileid: "43856891"
 |FirstOrDefault|コレクションの最初の要素、または条件を満たす最初の要素を返します。 そのような要素が存在しない場合は、既定値を返します。|該当なし。|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
 |末尾|コレクションの最後の要素、または条件を満たす最後の要素を返します。|該当なし。|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
 |LastOrDefault|コレクションの最後の要素、または条件を満たす最後の要素を返します。 そのような要素が存在しない場合は、既定値を返します。|該当なし。|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
-|Single|コレクションの唯一の要素、または条件を満たす唯一の要素を返します。|該当なし。|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
-|SingleOrDefault|コレクションの唯一の要素、または条件を満たす唯一の要素を返します。 そのような要素が存在しない場合、またはコレクションの要素が 1 つだけでない場合は、既定値を返します。|該当なし。|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
+|Single|コレクションの唯一の要素、または条件を満たす唯一の要素を返します。 要素がない場合、または複数の要素が返される場合は、<xref:System.InvalidOperationException> をスローします。 |該当なし。|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
+|SingleOrDefault|コレクションの唯一の要素、または条件を満たす唯一の要素を返します。 返す要素がない場合は、既定値を返します。 複数の要素が返される場合は、<xref:System.InvalidOperationException> をスローします。 |該当なし。|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>参照
 

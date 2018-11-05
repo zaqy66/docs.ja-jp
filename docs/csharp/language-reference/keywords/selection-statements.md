@@ -4,31 +4,32 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
-ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b4575884acc63489f3e40bd040257a9c6bca5df9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47204376"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181421"
 ---
 # <a name="selection-statements-c-reference"></a>選択ステートメント (C# リファレンス)
-選択ステートメントは、特定の条件が `true` かどうかに基づいて、プログラムの制御を特定のフローに移します。  
-  
- 選択ステートメントでは次のキーワードが使われます。  
-  
--   [if](../../../csharp/language-reference/keywords/if-else.md)  
-  
--   [else](../../../csharp/language-reference/keywords/if-else.md)  
-  
--   [switch](../../../csharp/language-reference/keywords/switch.md)  
-  
--   [case](../../../csharp/language-reference/keywords/switch.md)  
-  
--   [default](../../../csharp/language-reference/keywords/switch.md)  
 
-## <a name="see-also"></a>参照
+選択ステートメントは、特定の条件が `true` かどうかに基づいて、プログラムの制御を特定のフローに移します。
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [ステートメントのキーワード](../../../csharp/language-reference/keywords/statement-keywords.md)
+選択ステートメントでは次のキーワードが使われます。
+
+- [if](if-else.md)
+
+- [else](if-else.md)
+
+- [switch](switch.md)
+
+- [case](switch.md)
+
+- [default](switch.md)
+
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [ステートメントのキーワード](statement-keywords.md)

@@ -2,12 +2,12 @@
 title: 呼び出し元情報 (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 27f2e7624369061ff3089357c455ae51237e6dfa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46586459"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185275"
 ---
 # <a name="caller-information-c"></a>呼び出し元情報 (C#)
 
@@ -76,7 +76,7 @@ public void TraceMessage(string message,
 |静的コンストラクター|文字列「.cctor」|
 |デストラクターです。|文字列「Finalize」|
 |ユーザー定義の演算子または変換|生成されたメンバー名 (「op_Addition」など)。|
-|Attribute コンストラクター|属性が適用されるメンバーの名前。 属性がメンバー内の要素 (パラメーター、戻り値、ジェネリック型パラメーターなど) である場合、この結果は、その要素に関連付けられているメンバーの名前になります。|
+|Attribute コンストラクター|属性が適用されるメソッドまたはプロパティの名前。 属性がメンバー内の要素 (パラメーター、戻り値、ジェネリック型パラメーターなど) である場合、この結果は、その要素に関連付けられているメンバーの名前になります。|
 |含んでいないメンバー (型に適用されているアセンブリ レベルや属性など)|省略可能なパラメーターの既定値。|
 
 ## <a name="see-also"></a>関連項目
