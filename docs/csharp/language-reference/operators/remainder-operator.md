@@ -7,49 +7,51 @@ helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45645919"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041259"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="ebab8-102">% 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="ebab8-102">% Operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="e7fee-102">% 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="e7fee-102">% Operator (C# Reference)</span></span>
 
-<span data-ttu-id="ebab8-103">剰余演算子 `%` は、最初のオペランドを 2 番目のオペランドで除算した後の剰余を計算します。</span><span class="sxs-lookup"><span data-stu-id="ebab8-103">The remainder operator `%` computes the remainder after dividing its first operand by its second operand.</span></span> <span data-ttu-id="ebab8-104">ユーザー定義型は `%` 演算子を[オーバーロード](../keywords/operator.md)できます。</span><span class="sxs-lookup"><span data-stu-id="ebab8-104">User-defined types can [overload](../keywords/operator.md) the `%` operator.</span></span> <span data-ttu-id="ebab8-105">`%` がオーバーロードされると、[剰余代入演算子](remainder-assignment-operator.md) `%=` も暗黙的にオーバーロードされます。</span><span class="sxs-lookup"><span data-stu-id="ebab8-105">When the `%` is overloaded, the [remainder assignment operator](remainder-assignment-operator.md) `%=` is also implicitly overloaded.</span></span>
+<span data-ttu-id="e7fee-103">剰余演算子 `%` は、最初のオペランドを 2 番目のオペランドで除算した後の剰余を計算します。</span><span class="sxs-lookup"><span data-stu-id="e7fee-103">The remainder operator `%` computes the remainder after dividing its first operand by its second operand.</span></span>
 
-<span data-ttu-id="ebab8-106">数値型はすべて剰余演算子に対応しています。</span><span class="sxs-lookup"><span data-stu-id="ebab8-106">All numeric types support the remainder operator.</span></span>
+<span data-ttu-id="e7fee-104">ユーザー定義型は `%` 演算子を[オーバーロード](../keywords/operator.md)できます。</span><span class="sxs-lookup"><span data-stu-id="e7fee-104">User-defined types can [overload](../keywords/operator.md) the `%` operator.</span></span> <span data-ttu-id="e7fee-105">`%` がオーバーロードされると、[剰余代入演算子](remainder-assignment-operator.md) `%=` も暗黙的にオーバーロードされます。</span><span class="sxs-lookup"><span data-stu-id="e7fee-105">When the `%` is overloaded, the [remainder assignment operator](remainder-assignment-operator.md) `%=` is also implicitly overloaded.</span></span>
 
-## <a name="integer-remainder"></a><span data-ttu-id="ebab8-107">整数の剰余</span><span class="sxs-lookup"><span data-stu-id="ebab8-107">Integer remainder</span></span>
+<span data-ttu-id="e7fee-106">数値型はすべて剰余演算子に対応しています。</span><span class="sxs-lookup"><span data-stu-id="e7fee-106">All numeric types support the remainder operator.</span></span>
+
+## <a name="integer-remainder"></a><span data-ttu-id="e7fee-107">整数の剰余</span><span class="sxs-lookup"><span data-stu-id="e7fee-107">Integer remainder</span></span>
   
-<span data-ttu-id="ebab8-108">整数オペランドの場合、`a % b` の結果は `a - (a / b) * b` で生成される値になります。</span><span class="sxs-lookup"><span data-stu-id="ebab8-108">For the integer operands, the result of `a % b` is the value produced by `a - (a / b) * b`.</span></span> <span data-ttu-id="ebab8-109">0 以外の剰余の符号は、次の例で示されるように、最初のオペランドの符号と同じになります。</span><span class="sxs-lookup"><span data-stu-id="ebab8-109">The sign of the non-zero remainder is the same as that of the first operand, as the following example shows:</span></span>
+<span data-ttu-id="e7fee-108">整数オペランドの場合、`a % b` の結果は `a - (a / b) * b` で生成される値になります。</span><span class="sxs-lookup"><span data-stu-id="e7fee-108">For the integer operands, the result of `a % b` is the value produced by `a - (a / b) * b`.</span></span> <span data-ttu-id="e7fee-109">0 以外の剰余の符号は、次の例で示されるように、最初のオペランドの符号と同じになります。</span><span class="sxs-lookup"><span data-stu-id="e7fee-109">The sign of the non-zero remainder is the same as that of the first operand, as the following example shows:</span></span>
 
 [!code-csharp-interactive[integer remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#1)]
 
-## <a name="floating-point-remainder"></a><span data-ttu-id="ebab8-110">浮動小数点の剰余</span><span class="sxs-lookup"><span data-stu-id="ebab8-110">Floating-point remainder</span></span>
+## <a name="floating-point-remainder"></a><span data-ttu-id="e7fee-110">浮動小数点の剰余</span><span class="sxs-lookup"><span data-stu-id="e7fee-110">Floating-point remainder</span></span>
 
-<span data-ttu-id="ebab8-111">[浮動小数点型](../keywords/float.md)オペランドと[倍精度浮動小数点型](../keywords/double.md)オペランドの場合、有限の `x` と `y` の `x % y` の結果は、次のような値 `z` となります。</span><span class="sxs-lookup"><span data-stu-id="ebab8-111">For the [float](../keywords/float.md) and [double](../keywords/double.md) operands, the result of `x % y` for the finite `x` and `y` is the value `z` such that</span></span>
+<span data-ttu-id="e7fee-111">[浮動小数点型](../keywords/float.md)オペランドと[倍精度浮動小数点型](../keywords/double.md)オペランドの場合、有限の `x` と `y` の `x % y` の結果は、次のような値 `z` となります。</span><span class="sxs-lookup"><span data-stu-id="e7fee-111">For the [float](../keywords/float.md) and [double](../keywords/double.md) operands, the result of `x % y` for the finite `x` and `y` is the value `z` such that</span></span>
 
-- <span data-ttu-id="ebab8-112">`z` の符号は、0 以外の場合、`x` の符号と同じになります。</span><span class="sxs-lookup"><span data-stu-id="ebab8-112">the sign of `z`, if non-zero, is the same as the sign of `x`;</span></span>
-- <span data-ttu-id="ebab8-113">`z` の絶対値は、`|x| - n * |y|` で生成される値となります。`n` は、`|x| / |y|` 以下で最も大きい整数であり、`|x|` と `|y|` はそれぞれ、`x` と `y` の絶対値です。</span><span class="sxs-lookup"><span data-stu-id="ebab8-113">the absolute value of `z` is the value produced by `|x| - n * |y|` where `n` is the largest possible integer that is less than or equal to `|x| / |y|` and `|x|` and `|y|` are the absolute values of `x` and `y`, respectively.</span></span>
+- <span data-ttu-id="e7fee-112">`z` の符号は、0 以外の場合、`x` の符号と同じになります。</span><span class="sxs-lookup"><span data-stu-id="e7fee-112">the sign of `z`, if non-zero, is the same as the sign of `x`;</span></span>
+- <span data-ttu-id="e7fee-113">`z` の絶対値は、`|x| - n * |y|` で生成される値となります。`n` は、`|x| / |y|` 以下で最も大きい整数であり、`|x|` と `|y|` はそれぞれ、`x` と `y` の絶対値です。</span><span class="sxs-lookup"><span data-stu-id="e7fee-113">the absolute value of `z` is the value produced by `|x| - n * |y|` where `n` is the largest possible integer that is less than or equal to `|x| / |y|` and `|x|` and `|y|` are the absolute values of `x` and `y`, respectively.</span></span>
 
-<span data-ttu-id="ebab8-114">無限オペランドの場合の `%` 演算子の動作については、[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/index)に関するページの「[Remainder operator](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator)」(剰余演算子) セクションをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="ebab8-114">For information about behavior of the `%` operator in case of non-finite operands, see the [Remainder operator](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator) section of the [C# language specification](/dotnet/csharp/language-reference/language-specification/index).</span></span>
+<span data-ttu-id="e7fee-114">無限オペランドがある `%` 演算子の動作については、[C# 言語仕様](../language-specification/index.md)に関するページの「[剰余演算](~/_csharplang/spec/expressions.md#remainder-operator)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7fee-114">For information about the behavior of the `%` operator with non-finite operands, see the [Remainder operator](~/_csharplang/spec/expressions.md#remainder-operator) section of the [C# language specification](../language-specification/index.md).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ebab8-115">剰余を計算するこの手法は、整数オペランドに使用される手法に類似していますが、IEEE 754 とは異なります。</span><span class="sxs-lookup"><span data-stu-id="ebab8-115">This method of computing the remainder is analogous to that used for integer operands, but differs from the IEEE 754.</span></span> <span data-ttu-id="ebab8-116">IEEE 754 に準拠する剰余演算が必要な場合、<xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> メソッドを使用してください。</span><span class="sxs-lookup"><span data-stu-id="ebab8-116">If you need the remainder operation that complies with the IEEE 754, use the <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> method.</span></span>
+> <span data-ttu-id="e7fee-115">剰余を計算するこの手法は、整数オペランドに使用される手法に類似していますが、IEEE 754 とは異なります。</span><span class="sxs-lookup"><span data-stu-id="e7fee-115">This method of computing the remainder is analogous to that used for integer operands, but differs from the IEEE 754.</span></span> <span data-ttu-id="e7fee-116">IEEE 754 に準拠する剰余演算が必要な場合、<xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> メソッドを使用してください。</span><span class="sxs-lookup"><span data-stu-id="e7fee-116">If you need the remainder operation that complies with the IEEE 754, use the <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> method.</span></span>
 
-<span data-ttu-id="ebab8-117">次の例では、`float` オペランドと `double` オペランドの剰余演算子の動作を示しています。</span><span class="sxs-lookup"><span data-stu-id="ebab8-117">The following example demonstrates the behavior of the remainder operator for `float` and `double` operands:</span></span>
+<span data-ttu-id="e7fee-117">次の例では、`float` オペランドと `double` オペランドの剰余演算子の動作を示しています。</span><span class="sxs-lookup"><span data-stu-id="e7fee-117">The following example demonstrates the behavior of the remainder operator for `float` and `double` operands:</span></span>
 
 [!code-csharp-interactive[float and double remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#2)]
 
-<span data-ttu-id="ebab8-118">浮動小数点型に関連している可能性がある丸めエラーに注意してください。</span><span class="sxs-lookup"><span data-stu-id="ebab8-118">Note the round-off errors that can be associated with the floating-point types.</span></span>
+<span data-ttu-id="e7fee-118">浮動小数点型に関連している可能性がある丸めエラーに注意してください。</span><span class="sxs-lookup"><span data-stu-id="e7fee-118">Note the round-off errors that can be associated with the floating-point types.</span></span>
 
-<span data-ttu-id="ebab8-119">[10 進](../keywords/decimal.md)オペランドの場合、剰余演算子 `%` は <xref:System.Decimal?displayProperty=nameWithType> 型の[剰余演算子](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)に等しくなります。</span><span class="sxs-lookup"><span data-stu-id="ebab8-119">For the [decimal](../keywords/decimal.md) operands, the remainder operator `%` is equivalent to the [remainder operator](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) of the <xref:System.Decimal?displayProperty=nameWithType> type.</span></span>
+<span data-ttu-id="e7fee-119">[10 進](../keywords/decimal.md)オペランドの場合、剰余演算子 `%` は <xref:System.Decimal?displayProperty=nameWithType> 型の[剰余演算子](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)に等しくなります。</span><span class="sxs-lookup"><span data-stu-id="e7fee-119">For the [decimal](../keywords/decimal.md) operands, the remainder operator `%` is equivalent to the [remainder operator](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) of the <xref:System.Decimal?displayProperty=nameWithType> type.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ebab8-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="ebab8-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7fee-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="e7fee-120">See also</span></span>
 
-- [<span data-ttu-id="ebab8-121">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="ebab8-121">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="ebab8-122">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="ebab8-122">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="ebab8-123">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="ebab8-123">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="e7fee-121">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="e7fee-121">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="e7fee-122">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="e7fee-122">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="e7fee-123">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="e7fee-123">C# Operators</span></span>](index.md)
 - <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>
 - <xref:System.Math.DivRem%2A?displayProperty=nameWithType>

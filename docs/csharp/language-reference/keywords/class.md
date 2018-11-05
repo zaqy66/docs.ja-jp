@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084755"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086065"
 ---
-# <a name="class-c-reference"></a><span data-ttu-id="3b27a-102">class (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="3b27a-102">class (C# Reference)</span></span>
+# <a name="class-c-reference"></a><span data-ttu-id="f1a5c-102">class (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="f1a5c-102">class (C# Reference)</span></span>
 
-<span data-ttu-id="3b27a-103">クラスは、次の例に示すように、キーワード `class` を使用して宣言します。</span><span class="sxs-lookup"><span data-stu-id="3b27a-103">Classes are declared using the keyword `class`, as shown in the following example:</span></span>
+<span data-ttu-id="f1a5c-103">クラスは、次の例に示すように、キーワード `class` を使用して宣言します。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-103">Classes are declared using the keyword `class`, as shown in the following example:</span></span>
 
 ```csharp
 class TestClass
@@ -26,82 +26,82 @@ class TestClass
 }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="3b27a-104">コメント</span><span class="sxs-lookup"><span data-stu-id="3b27a-104">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f1a5c-104">コメント</span><span class="sxs-lookup"><span data-stu-id="f1a5c-104">Remarks</span></span>
 
-<span data-ttu-id="3b27a-105">C# では、単一継承のみを使用できます。</span><span class="sxs-lookup"><span data-stu-id="3b27a-105">Only single inheritance is allowed in C#.</span></span> <span data-ttu-id="3b27a-106">つまり、クラスは 1 つの基底クラスの実装だけを継承できます。</span><span class="sxs-lookup"><span data-stu-id="3b27a-106">In other words, a class can inherit implementation from one base class only.</span></span> <span data-ttu-id="3b27a-107">ただし、クラスは複数のインターフェイスを実装できます。</span><span class="sxs-lookup"><span data-stu-id="3b27a-107">However, a class can implement more than one interface.</span></span> <span data-ttu-id="3b27a-108">クラスの継承とインターフェイスの実装の例を次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="3b27a-108">The following table shows examples of class inheritance and interface implementation:</span></span>
+<span data-ttu-id="f1a5c-105">C# では、単一継承のみを使用できます。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-105">Only single inheritance is allowed in C#.</span></span> <span data-ttu-id="f1a5c-106">つまり、クラスは 1 つの基底クラスの実装だけを継承できます。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-106">In other words, a class can inherit implementation from one base class only.</span></span> <span data-ttu-id="f1a5c-107">ただし、クラスは複数のインターフェイスを実装できます。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-107">However, a class can implement more than one interface.</span></span> <span data-ttu-id="f1a5c-108">クラスの継承とインターフェイスの実装の例を次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-108">The following table shows examples of class inheritance and interface implementation:</span></span>
 
-|<span data-ttu-id="3b27a-109">継承</span><span class="sxs-lookup"><span data-stu-id="3b27a-109">Inheritance</span></span>|<span data-ttu-id="3b27a-110">例</span><span class="sxs-lookup"><span data-stu-id="3b27a-110">Example</span></span>|
+|<span data-ttu-id="f1a5c-109">継承</span><span class="sxs-lookup"><span data-stu-id="f1a5c-109">Inheritance</span></span>|<span data-ttu-id="f1a5c-110">例</span><span class="sxs-lookup"><span data-stu-id="f1a5c-110">Example</span></span>|
 |-----------------|-------------|
-|<span data-ttu-id="3b27a-111">なし</span><span class="sxs-lookup"><span data-stu-id="3b27a-111">None</span></span>|`class ClassA { }`|
-|<span data-ttu-id="3b27a-112">Single</span><span class="sxs-lookup"><span data-stu-id="3b27a-112">Single</span></span>|`class DerivedClass: BaseClass { }`|
-|<span data-ttu-id="3b27a-113">なし。2 つのインターフェイスを実装</span><span class="sxs-lookup"><span data-stu-id="3b27a-113">None, implements two interfaces</span></span>|`class ImplClass: IFace1, IFace2 { }`|
-|<span data-ttu-id="3b27a-114">1 つ。1 つのインターフェイスを実装</span><span class="sxs-lookup"><span data-stu-id="3b27a-114">Single, implements one interface</span></span>|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|<span data-ttu-id="f1a5c-111">なし</span><span class="sxs-lookup"><span data-stu-id="f1a5c-111">None</span></span>|`class ClassA { }`|
+|<span data-ttu-id="f1a5c-112">Single</span><span class="sxs-lookup"><span data-stu-id="f1a5c-112">Single</span></span>|`class DerivedClass: BaseClass { }`|
+|<span data-ttu-id="f1a5c-113">なし。2 つのインターフェイスを実装</span><span class="sxs-lookup"><span data-stu-id="f1a5c-113">None, implements two interfaces</span></span>|`class ImplClass: IFace1, IFace2 { }`|
+|<span data-ttu-id="f1a5c-114">1 つ。1 つのインターフェイスを実装</span><span class="sxs-lookup"><span data-stu-id="f1a5c-114">Single, implements one interface</span></span>|`class ImplDerivedClass: BaseClass, IFace1 { }`|
 
-<span data-ttu-id="3b27a-115">名前空間内で直接宣言され、他のクラスに入れ子にされていないクラスは、[public](../../../csharp/language-reference/keywords/public.md) または [internal](../../../csharp/language-reference/keywords/internal.md) のいずれかです。</span><span class="sxs-lookup"><span data-stu-id="3b27a-115">Classes that you declare directly within a namespace, not nested within other classes, can be either [public](../../../csharp/language-reference/keywords/public.md) or [internal](../../../csharp/language-reference/keywords/internal.md).</span></span> <span data-ttu-id="3b27a-116">クラスは既定で `internal` です。</span><span class="sxs-lookup"><span data-stu-id="3b27a-116">Classes are `internal` by default.</span></span>
+<span data-ttu-id="f1a5c-115">名前空間内で直接宣言され、他のクラスに入れ子にされていないクラスは、[public](../../../csharp/language-reference/keywords/public.md) または [internal](../../../csharp/language-reference/keywords/internal.md) のいずれかです。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-115">Classes that you declare directly within a namespace, not nested within other classes, can be either [public](../../../csharp/language-reference/keywords/public.md) or [internal](../../../csharp/language-reference/keywords/internal.md).</span></span> <span data-ttu-id="f1a5c-116">クラスは既定で `internal` です。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-116">Classes are `internal` by default.</span></span>
 
-<span data-ttu-id="3b27a-117">クラスのメンバー (入れ子にされているクラスも含む) は、[public](../../../csharp/language-reference/keywords/public.md)、`protected internal`、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[private](../../../csharp/language-reference/keywords/private.md)、`private protected` のいずれかとして宣言できます。</span><span class="sxs-lookup"><span data-stu-id="3b27a-117">Class members, including nested classes, can be [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [private](../../../csharp/language-reference/keywords/private.md), or `private protected`.</span></span> <span data-ttu-id="3b27a-118">メンバーは既定で [private](../../../csharp/language-reference/keywords/private.md) です。</span><span class="sxs-lookup"><span data-stu-id="3b27a-118">Members are [private](../../../csharp/language-reference/keywords/private.md) by default.</span></span>
+<span data-ttu-id="f1a5c-117">クラスのメンバー (入れ子にされているクラスを含む) は [public](public.md)、[protected internal](protected-internal.md)、[protected](protected.md)、[internal](internal.md)、[private](private.md)、または [private protected](private-protected.md) のいずれかとして宣言することができます。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-117">Class members, including nested classes, can be [public](public.md), [protected internal](protected-internal.md), [protected](protected.md), [internal](internal.md), [private](private.md), or [private protected](private-protected.md).</span></span> <span data-ttu-id="f1a5c-118">メンバーは既定で `private` です。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-118">Members are `private` by default.</span></span>
 
-<span data-ttu-id="3b27a-119">詳細については、「[アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3b27a-119">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>
+<span data-ttu-id="f1a5c-119">詳細については、「[アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-119">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>
 
-<span data-ttu-id="3b27a-120">型パラメーターを持つジェネリック クラスを宣言することができます。</span><span class="sxs-lookup"><span data-stu-id="3b27a-120">You can declare generic classes that have type parameters.</span></span> <span data-ttu-id="3b27a-121">詳細については、「[ジェネリック クラス](../../../csharp/programming-guide/generics/generic-classes.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3b27a-121">For more information, see [Generic Classes](../../../csharp/programming-guide/generics/generic-classes.md).</span></span>
+<span data-ttu-id="f1a5c-120">型パラメーターを持つジェネリック クラスを宣言することができます。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-120">You can declare generic classes that have type parameters.</span></span> <span data-ttu-id="f1a5c-121">詳細については、「[ジェネリック クラス](../../../csharp/programming-guide/generics/generic-classes.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-121">For more information, see [Generic Classes](../../../csharp/programming-guide/generics/generic-classes.md).</span></span>
 
-<span data-ttu-id="3b27a-122">クラスには、次のメンバーの宣言を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="3b27a-122">A class can contain declarations of the following members:</span></span>
+<span data-ttu-id="f1a5c-122">クラスには、次のメンバーの宣言を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-122">A class can contain declarations of the following members:</span></span>
 
-- [<span data-ttu-id="3b27a-123">コンストラクター</span><span class="sxs-lookup"><span data-stu-id="3b27a-123">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [<span data-ttu-id="f1a5c-123">コンストラクター</span><span class="sxs-lookup"><span data-stu-id="f1a5c-123">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 
-- [<span data-ttu-id="3b27a-124">定数</span><span class="sxs-lookup"><span data-stu-id="3b27a-124">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)
+- [<span data-ttu-id="f1a5c-124">定数</span><span class="sxs-lookup"><span data-stu-id="f1a5c-124">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)
 
-- [<span data-ttu-id="3b27a-125">フィールド</span><span class="sxs-lookup"><span data-stu-id="3b27a-125">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [<span data-ttu-id="f1a5c-125">フィールド</span><span class="sxs-lookup"><span data-stu-id="f1a5c-125">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)
 
-- [<span data-ttu-id="3b27a-126">ファイナライザー</span><span class="sxs-lookup"><span data-stu-id="3b27a-126">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [<span data-ttu-id="f1a5c-126">ファイナライザー</span><span class="sxs-lookup"><span data-stu-id="f1a5c-126">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 
-- [<span data-ttu-id="3b27a-127">メソッド</span><span class="sxs-lookup"><span data-stu-id="3b27a-127">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [<span data-ttu-id="f1a5c-127">メソッド</span><span class="sxs-lookup"><span data-stu-id="f1a5c-127">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)
 
-- [<span data-ttu-id="3b27a-128">プロパティ</span><span class="sxs-lookup"><span data-stu-id="3b27a-128">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [<span data-ttu-id="f1a5c-128">プロパティ</span><span class="sxs-lookup"><span data-stu-id="f1a5c-128">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)
 
-- [<span data-ttu-id="3b27a-129">インデクサー</span><span class="sxs-lookup"><span data-stu-id="3b27a-129">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)
+- [<span data-ttu-id="f1a5c-129">インデクサー</span><span class="sxs-lookup"><span data-stu-id="f1a5c-129">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)
 
-- [<span data-ttu-id="3b27a-130">演算子</span><span class="sxs-lookup"><span data-stu-id="3b27a-130">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [<span data-ttu-id="f1a5c-130">演算子</span><span class="sxs-lookup"><span data-stu-id="f1a5c-130">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
 
-- [<span data-ttu-id="3b27a-131">イベント</span><span class="sxs-lookup"><span data-stu-id="3b27a-131">Events</span></span>](../../../csharp/programming-guide/events/index.md)
+- [<span data-ttu-id="f1a5c-131">イベント</span><span class="sxs-lookup"><span data-stu-id="f1a5c-131">Events</span></span>](../../../csharp/programming-guide/events/index.md)
 
-- [<span data-ttu-id="3b27a-132">デリゲート</span><span class="sxs-lookup"><span data-stu-id="3b27a-132">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)
+- [<span data-ttu-id="f1a5c-132">デリゲート</span><span class="sxs-lookup"><span data-stu-id="f1a5c-132">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)
 
-- [<span data-ttu-id="3b27a-133">クラス</span><span class="sxs-lookup"><span data-stu-id="3b27a-133">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [<span data-ttu-id="f1a5c-133">クラス</span><span class="sxs-lookup"><span data-stu-id="f1a5c-133">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)
 
-- [<span data-ttu-id="3b27a-134">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3b27a-134">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)
+- [<span data-ttu-id="f1a5c-134">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f1a5c-134">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)
 
-- [<span data-ttu-id="3b27a-135">構造体</span><span class="sxs-lookup"><span data-stu-id="3b27a-135">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [<span data-ttu-id="f1a5c-135">構造体</span><span class="sxs-lookup"><span data-stu-id="f1a5c-135">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
-- [<span data-ttu-id="3b27a-136">列挙型</span><span class="sxs-lookup"><span data-stu-id="3b27a-136">Enumerations</span></span>](../../../csharp/programming-guide/enumeration-types.md)
+- [<span data-ttu-id="f1a5c-136">列挙型</span><span class="sxs-lookup"><span data-stu-id="f1a5c-136">Enumerations</span></span>](../../../csharp/programming-guide/enumeration-types.md)
 
-## <a name="example"></a><span data-ttu-id="3b27a-137">例</span><span class="sxs-lookup"><span data-stu-id="3b27a-137">Example</span></span>
+## <a name="example"></a><span data-ttu-id="f1a5c-137">例</span><span class="sxs-lookup"><span data-stu-id="f1a5c-137">Example</span></span>
 
-<span data-ttu-id="3b27a-138">ここでは、クラスのフィールド、コンストラクター、メソッドの宣言例を示します。</span><span class="sxs-lookup"><span data-stu-id="3b27a-138">The following example demonstrates declaring class fields, constructors, and methods.</span></span> <span data-ttu-id="3b27a-139">また、オブジェクト インスタンスの作成とインスタンス データの出力の例も示します。</span><span class="sxs-lookup"><span data-stu-id="3b27a-139">It also demonstrates object instantiation and printing instance data.</span></span> <span data-ttu-id="3b27a-140">次の例では、2 つのクラスが宣言されています。</span><span class="sxs-lookup"><span data-stu-id="3b27a-140">In this example, two classes are declared.</span></span> <span data-ttu-id="3b27a-141">最初の `Child` クラスには、2 つのプライベート フィールド (`name` と `age`)、2 つのパブリック コンストラクター、および 1 つのパブリック メソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="3b27a-141">The first class, `Child`, contains two private fields (`name` and `age`), two public constructors and one public method.</span></span> <span data-ttu-id="3b27a-142">2 番目のクラスである `StringTest` は、`Main`の格納に使用されます。</span><span class="sxs-lookup"><span data-stu-id="3b27a-142">The second class, `StringTest`, is used to contain `Main`.</span></span>
+<span data-ttu-id="f1a5c-138">ここでは、クラスのフィールド、コンストラクター、メソッドの宣言例を示します。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-138">The following example demonstrates declaring class fields, constructors, and methods.</span></span> <span data-ttu-id="f1a5c-139">また、オブジェクト インスタンスの作成とインスタンス データの出力の例も示します。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-139">It also demonstrates object instantiation and printing instance data.</span></span> <span data-ttu-id="f1a5c-140">次の例では、2 つのクラスが宣言されています。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-140">In this example, two classes are declared.</span></span> <span data-ttu-id="f1a5c-141">最初の `Child` クラスには、2 つのプライベート フィールド (`name` と `age`)、2 つのパブリック コンストラクター、および 1 つのパブリック メソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-141">The first class, `Child`, contains two private fields (`name` and `age`), two public constructors and one public method.</span></span> <span data-ttu-id="f1a5c-142">2 番目のクラスである `StringTest` は、`Main`の格納に使用されます。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-142">The second class, `StringTest`, is used to contain `Main`.</span></span>
 
 [!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
-## <a name="comments"></a><span data-ttu-id="3b27a-143">コメント</span><span class="sxs-lookup"><span data-stu-id="3b27a-143">Comments</span></span>
+## <a name="comments"></a><span data-ttu-id="f1a5c-143">コメント</span><span class="sxs-lookup"><span data-stu-id="f1a5c-143">Comments</span></span>
 
-<span data-ttu-id="3b27a-144">前の例で、プライベート フィールド (`name` および `age`) にアクセスできるのは、`Child` クラスのパブリック メソッドだけであることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="3b27a-144">Notice that in the previous example the private fields (`name` and `age`) can only be accessed through the public method of the `Child` class.</span></span> <span data-ttu-id="3b27a-145">たとえば、次のステートメントを使用して `Main` メソッドから子の名前を印刷することはできません。</span><span class="sxs-lookup"><span data-stu-id="3b27a-145">For example, you cannot print the child's name, from the `Main` method, using a statement like this:</span></span>
+<span data-ttu-id="f1a5c-144">前の例で、プライベート フィールド (`name` および `age`) にアクセスできるのは、`Child` クラスのパブリック メソッドだけであることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-144">Notice that in the previous example the private fields (`name` and `age`) can only be accessed through the public method of the `Child` class.</span></span> <span data-ttu-id="f1a5c-145">たとえば、次のステートメントを使用して `Main` メソッドから子の名前を印刷することはできません。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-145">For example, you cannot print the child's name, from the `Main` method, using a statement like this:</span></span>
 
 ```csharp
 Console.Write(child1.name);   // Error
 ```
 
-<span data-ttu-id="3b27a-146">`Main` から `Child`のプライベート メンバーへのアクセスは、`Main` がそのクラスのメンバーである場合にのみ可能です。</span><span class="sxs-lookup"><span data-stu-id="3b27a-146">Accessing private members of `Child` from `Main` would only be possible if `Main` were a member of the class.</span></span>
+<span data-ttu-id="f1a5c-146">`Main` から `Child`のプライベート メンバーへのアクセスは、`Main` がそのクラスのメンバーである場合にのみ可能です。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-146">Accessing private members of `Child` from `Main` would only be possible if `Main` were a member of the class.</span></span>
 
-<span data-ttu-id="3b27a-147">アクセス修飾子を指定せずにクラス内で宣言された型は既定で `private` になります。そのため、キーワードが削除されてもこの例のデータ メンバーは `private` です。</span><span class="sxs-lookup"><span data-stu-id="3b27a-147">Types declared inside a class without an access modifier default to `private`, so the data members in this example would still be `private` if the keyword were removed.</span></span>
+<span data-ttu-id="f1a5c-147">アクセス修飾子を指定せずにクラス内で宣言された型は既定で `private` になります。そのため、キーワードが削除されてもこの例のデータ メンバーは `private` です。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-147">Types declared inside a class without an access modifier default to `private`, so the data members in this example would still be `private` if the keyword were removed.</span></span>
 
-<span data-ttu-id="3b27a-148">最後に、既定のコンストラクターを使用して作成されたオブジェクト (`child3`) は、既定で年齢フィールドが 0 に初期化されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="3b27a-148">Finally, notice that for the object created using the default constructor (`child3`), the age field was initialized to zero by default.</span></span>
+<span data-ttu-id="f1a5c-148">最後に、既定のコンストラクターを使用して作成されたオブジェクト (`child3`) は、既定で年齢フィールドが 0 に初期化されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="f1a5c-148">Finally, notice that for the object created using the default constructor (`child3`), the age field was initialized to zero by default.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="3b27a-149">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="3b27a-149">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="f1a5c-149">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="f1a5c-149">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="3b27a-150">関連項目</span><span class="sxs-lookup"><span data-stu-id="3b27a-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1a5c-150">関連項目</span><span class="sxs-lookup"><span data-stu-id="f1a5c-150">See also</span></span>
 
-- [<span data-ttu-id="3b27a-151">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="3b27a-151">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="3b27a-152">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="3b27a-152">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="3b27a-153">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="3b27a-153">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="3b27a-154">参照型</span><span class="sxs-lookup"><span data-stu-id="3b27a-154">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)
+- [<span data-ttu-id="f1a5c-151">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="f1a5c-151">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="f1a5c-152">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="f1a5c-152">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="f1a5c-153">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="f1a5c-153">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="f1a5c-154">参照型</span><span class="sxs-lookup"><span data-stu-id="f1a5c-154">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)
