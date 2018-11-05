@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: c617b2d7b56618867fe92cbe1d9ee04aa4c3ab64
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 51cc24fd8054b87b6c92a02450420a9c4abef525
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45653201"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191091"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ をサポートする C# の機能
 このセクションでは、C# 3.0 で導入された新しい言語構成要素について説明します。 これらの新機能はすべてある程度まで [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリで使用されていますが、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] だけでなく、これらの機能が役立つと思われるあらゆる状況で使用できます。  
@@ -47,13 +47,26 @@ var query = from str in stringArray
 ```csharp  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
-  
- 詳細については、「[オブジェクト初期化子とコレクション初期化子](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)」を参照してください。  
-  
+引き続き `Customer` クラスの例を進めます。`IncomingOrders` というデータ ソースがあり、`OrderSize` が大きな注文ごとに、その注文に基づいて新しい `Customer` を作成するとします。 LINQ クエリをこのデータ ソースで実行し、オブジェクト初期化を使用してコレクションを満たすことができます。
+```csharp
+var newLargeOrderCustomers = from o in IncomingOrders
+                            where o.OrderSize > 5
+                            select new Customer { Name = o.Name, Phone = o.Phone };
+```
+データ ソースには、`OrderSize` など、`Customer` クラス以外にもプロパティが存在する可能性がありますが、オブジェクト初期化を利用することで、クエリから返されるデータは目的のデータ型に形成されます。今回のクラスに関連するデータを選択します。 その結果、必要とする新しい `Customer` が `IEnumerable` に入力されました。 上記は次のような LINQ のメソッド構文でも記述できます。
+```csharp
+var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
+```
+ 詳細については次を参照してください:
+ 
+ - [オブジェクト初期化子とコレクション初期化子](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+
+ - [標準クエリ演算子のクエリ式構文](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+
 ## <a name="anonymous-types"></a>匿名型  
  匿名型はコンパイラによって作成され、型名はコンパイラにしかわかりません。 匿名型を使用すると、個別に名前付き型を定義しなくても、クエリ結果内のプロパティのセットを一時的にグループ化できるため便利です。 次に示すように、匿名型は new 式とオブジェクト初期化子を使用して初期化されます。  
   
-```  
+```csharp
 select new {name = cust.Name, phone = cust.Phone};  
 ```  
   
@@ -74,16 +87,7 @@ select new {name = cust.Name, phone = cust.Phone};
 -   [ラムダ式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
   
 -   [式ツリー (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-  
-## <a name="auto-implemented-properties"></a>自動実装プロパティ  
- 自動実装プロパティによって、プロパティの宣言が簡略化されます。 次の例に示すようなプロパティを宣言すると、コンパイラによってプライベートの匿名バッキング フィールドが作成されます。このフィールドには、プロパティ getter およびプロパティ setter でしかアクセスできません。  
-  
-```csharp  
-public string Name {get; set;}  
-```  
-  
- 詳細については、「[自動実装プロパティ](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)」を参照してください。  
-  
+   
 ## <a name="see-also"></a>参照
 
 - [統合言語クエリ (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

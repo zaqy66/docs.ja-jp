@@ -4,12 +4,12 @@ description: .NET Core について説明します。
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: d9943246b683c8fd892e7bc5fd09a10b72e31a5f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "48252222"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197654"
 ---
 # <a name="about-net-core"></a>.NET Core について
 
@@ -25,24 +25,19 @@ ms.locfileid: "48252222"
 
 ## <a name="languages"></a>言語
 
-.NET Core のアプリケーションとライブラリを記述するには、C#、Visual Basic および F# 言語を使用できます。 これらの言語は、[Visual Studio](https://visualstudio.microsoft.com/vs/)、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text、Vim などの好きなテキスト エディターや IDE に統合することができます。 この統合は、一部は [OmniSharp](http://www.omnisharp.net/) と [Ionide](http://ionide.io) のプロジェクトの優れた要員によって提供されます。
+.NET Core のアプリケーションとライブラリを記述するには、C#、Visual Basic および F# 言語を使用できます。 これらの言語は、[Visual Studio](https://visualstudio.microsoft.com/vs/)、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text、Vim などの好きなテキスト エディターや IDE に統合することができます。 この統合は、一部は [OmniSharp](https://www.omnisharp.net/) と [Ionide](http://ionide.io) のプロジェクトの優れた要員によって提供されます。
 
 ## <a name="apis"></a>API
 
 .NET Core は多くのシナリオに対応する API を公開しています。次のうちのいくつかを次に示します。
 
-- [bool][bool] や [int][int] などのプリミティブ型。
+- [bool](../csharp/language-reference/keywords/bool.md) や [int](../csharp/language-reference/keywords/int.md) などのプリミティブ型。
 - <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> や <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> などのコレクション。
 - <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> や <xref:System.IO.FileStream?displayProperty=nameWithType> などのユーティリティ型。
-- <xref:System.Data.DataSet?displayProperty=nameWithType> や [DbSet][dbset] などのデータ型。
-- <xref:System.Numerics.Vector?displayProperty=nameWithType> や [Pipelines][pipelines] などの高パフォーマンス型。
+- <xref:System.Data.DataSet?displayProperty=nameWithType> や [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) などのデータ型。
+- <xref:System.Numerics.Vector?displayProperty=nameWithType> や [Pipelines](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/) などの高パフォーマンス型。
 
 .NET core では [.NET Standard](../standard/net-standard.md) 仕様を実装することで .NET Framework や Mono の API との互換性を提供します。
-
-[bool]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool
-[int]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int
-[pipelines]: https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/
-[dbset]: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/
 
 ## <a name="frameworks"></a>フレームワーク
 
@@ -111,7 +106,7 @@ Windows 実装と Unix 実装はほぼ同じサイズです。 CoreFX は、[Mic
 
 ### <a name="comparison-with-mono"></a>Mono との比較
 
-[Mono](http://www.mono-project.com/) は、オリジナルのクロスプラットフォームおよび[オープン ソース](https://github.com/mono/mono)の .NET 実装であり、2004 年に登場しました。 .NET Framework のコミュニティの複製として考えることができます。 Mono プロジェクト チームは、互換性のある実装を提供するために、Microsoft によって発行されたオープン [.NET 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特に ECMA 335) に依存していました。
+[Mono](https://www.mono-project.com/) は、オリジナルのクロスプラットフォームおよび[オープン ソース](https://github.com/mono/mono)の .NET 実装であり、2004 年に登場しました。 .NET Framework のコミュニティの複製として考えることができます。 Mono プロジェクト チームは、互換性のある実装を提供するために、Microsoft によって発行されたオープン [.NET 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特に ECMA 335) に依存していました。
 
 .NET Core と .NET Mono の主な違いは、次のとおりです。
 
