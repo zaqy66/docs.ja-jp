@@ -2,12 +2,12 @@
 title: ADO.NET での接続文字列
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347943"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50409458"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET での接続文字列
 
@@ -19,9 +19,9 @@ ms.locfileid: "49347943"
   
     keyword1=value; keyword2=value;
   
-キーワードは区別されません。 値、ただし、可能性があります、データ ソースによって、大文字小文字が区別されます。 キーワードと値の両方を含めることができます[空白文字](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)します。 先頭と末尾の空白がキーワードで無視され、引用符の値。
+キーワードは区別されません。 値、ただし、可能性があります、データ ソースによって、大文字小文字が区別されます。 キーワードと値の両方を含めることができます[空白文字](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)します。 先頭および末尾の空白文字がキーワードで無視され、引用符の値。
 
-値には、セミコロンが含まれている場合[Unicode コントロール文字](https://en.wikipedia.org/wiki/Unicode_control_characters)、先頭または末尾の空白、単一引用符または二重引用符で囲む必要がありますか。 例えば:
+値には、セミコロンが含まれている場合[Unicode コントロール文字](https://en.wikipedia.org/wiki/Unicode_control_characters)、先頭または末尾の空白文字、単一引用符または二重引用符で囲む必要がありますか。 例えば:
 
     Keyword=" whitespace  ";
     Keyword='special;character';

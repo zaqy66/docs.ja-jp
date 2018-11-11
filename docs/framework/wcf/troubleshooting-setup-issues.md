@@ -25,7 +25,7 @@ ms.locfileid: "48840548"
   
 -   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- 起動される .NET Framework 3.0 インストーラーを使用して修復を実行する場合、キーが再作成されません、**プログラムの追加/削除**アプレット**コントロール パネルの **します。 これらのキーを正しく再作成するには、.NET Framework 3.0 をアンインストール後、再インストールする必要があります。  
+ 起動される .NET Framework 3.0 インストーラーを使用して修復を実行する場合、キーが再作成されません、**プログラムの追加/削除**アプレット**コントロール パネルの**します。 これらのキーを正しく再作成するには、.NET Framework 3.0 をアンインストール後、再インストールする必要があります。  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI サービスの破損により .NET Framework 3.0 パッケージのインストール中に Windows Communication Foundation WMI プロバイダーのインストールがブロックされる  
  WMI サービスの破損により、Windows Communication Foundation WMI プロバイダーのインストールがブロックされることがあります。 インストール中、Windows Communication Foundation インストーラーは mofcomp.exe コンポーネントを使用して WCF .mof ファイルを登録できません。 発生する現象を次に示します。  
@@ -54,7 +54,7 @@ ms.locfileid: "48840548"
   
 1.  実行[WMI 診断ユーティリティ、バージョン 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)の WMI サービスを修復します。 詳細については、このツールを使用して、次を参照してください。、 [WMI 診断ユーティリティ](https://go.microsoft.com/fwlink/?LinkId=94686)トピック。  
   
- 使用して、.NET Framework 3.0 のインストールを修復、**プログラムの追加/削除**アプレットにある**コントロール パネルの **、または .NET Framework 3.0 をアンインストール/再インストールします。  
+ 使用して、.NET Framework 3.0 のインストールを修復、**プログラムの追加/削除**アプレットにある**コントロール パネルの**、または .NET Framework 3.0 をアンインストール/再インストールします。  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>.NET Framework 3.5 のインストール後に .NET Framework 3.0 を修復すると、.NET Framework 3.5 によって導入された machine.config 内の構成要素が削除される  
  [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] をインストールした後に .NET Framework 3.0 を修復すると、[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] によって導入された machine.config 内の構成要素が削除されます。 ただし、web.config は元の状態のままになります。 回避を修復するには[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]ARP、または使用を使用してその後、[ワークフロー サービス登録ツール (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)で、`/c`スイッチします。  

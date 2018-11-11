@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: 1b10379e626c8e53b2e1e6eddaa964f13f9e4b62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c353aa8c5ac1d1912bc303f8f741ff0911cdf021
+ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196922"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "50980821"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte データ型 (Visual Basic)
 
@@ -58,7 +58,7 @@ Dim number As SByte = &H_F9
 
 - コンパイルする整数の範囲チェックを無効にする、`/removeintchecks`コンパイラ スイッチ。
 
-- 使用して、[文字入力](../../programming-guide\language-features\data-types/type-characters.md)に割り当てるリテラルの値を明示的に定義する、`SByte`します。 次の例では、負の値のリテラル`Short`値を`SByte`します。 負の数値に注意してください、数値リテラルの上位の単語の上位ビットを設定する必要があります。 このビットの場合はこの例では、リテラルの 15`Short`値。
+- 使用して、[文字入力](../../programming-guide/language-features/data-types/type-characters.md)に割り当てるリテラルの値を明示的に定義する、`SByte`します。 次の例では、負の値のリテラル`Short`値を`SByte`します。 負の数値に注意してください、数値リテラルの上位の単語の上位ビットを設定する必要があります。 このビットの場合はこの例では、リテラルの 15`Short`値。
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
