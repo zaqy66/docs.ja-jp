@@ -1,1 +1,1 @@
-<span data-ttu-id="91b95-101">**このトピックの対象: ✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.0</span><span class="sxs-lookup"><span data-stu-id="91b95-101">**This topic applies to: ✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.0</span></span>
+<span data-ttu-id="c5ca2-101">**このトピックの対象: ✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.x</span><span class="sxs-lookup"><span data-stu-id="c5ca2-101">**This topic applies to: ✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.x</span></span>

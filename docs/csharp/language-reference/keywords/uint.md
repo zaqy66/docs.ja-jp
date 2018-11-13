@@ -7,61 +7,61 @@ f1_keywords:
 helpviewer_keywords:
 - uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-ms.openlocfilehash: e75abf8ac356eaed6c54dd0309316fb6755bf635
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c8610d13a97e672773fdf80d013a159a58e7cfbf
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858305"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744331"
 ---
-# <a name="uint-c-reference"></a><span data-ttu-id="635be-102">uint (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="635be-102">uint (C# Reference)</span></span>
+# <a name="uint-c-reference"></a><span data-ttu-id="14d72-102">uint (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="14d72-102">uint (C# Reference)</span></span>
 
-<span data-ttu-id="635be-103">`uint` キーワードは、次の表に示すサイズと範囲で値を格納する整数型を示します。</span><span class="sxs-lookup"><span data-stu-id="635be-103">The `uint` keyword signifies an integral type that stores values according to the size and range shown in the following table.</span></span>  
+<span data-ttu-id="14d72-103">`uint` キーワードは、次の表に示すサイズと範囲で値を格納する整数型を示します。</span><span class="sxs-lookup"><span data-stu-id="14d72-103">The `uint` keyword signifies an integral type that stores values according to the size and range shown in the following table.</span></span>  
   
-|<span data-ttu-id="635be-104">型</span><span class="sxs-lookup"><span data-stu-id="635be-104">Type</span></span>|<span data-ttu-id="635be-105">範囲</span><span class="sxs-lookup"><span data-stu-id="635be-105">Range</span></span>|<span data-ttu-id="635be-106">サイズ</span><span class="sxs-lookup"><span data-stu-id="635be-106">Size</span></span>|<span data-ttu-id="635be-107">.NET 型</span><span class="sxs-lookup"><span data-stu-id="635be-107">.NET type</span></span>|  
+|<span data-ttu-id="14d72-104">型</span><span class="sxs-lookup"><span data-stu-id="14d72-104">Type</span></span>|<span data-ttu-id="14d72-105">範囲</span><span class="sxs-lookup"><span data-stu-id="14d72-105">Range</span></span>|<span data-ttu-id="14d72-106">サイズ</span><span class="sxs-lookup"><span data-stu-id="14d72-106">Size</span></span>|<span data-ttu-id="14d72-107">.NET 型</span><span class="sxs-lookup"><span data-stu-id="14d72-107">.NET type</span></span>|  
 |----------|-----------|----------|-------------------------|  
-|`uint`|<span data-ttu-id="635be-108">0 ～ 4,294,967,295</span><span class="sxs-lookup"><span data-stu-id="635be-108">0 to 4,294,967,295</span></span>|<span data-ttu-id="635be-109">符号なし 32 ビット整数</span><span class="sxs-lookup"><span data-stu-id="635be-109">Unsigned 32-bit integer</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|  
+|`uint`|<span data-ttu-id="14d72-108">0 ～ 4,294,967,295</span><span class="sxs-lookup"><span data-stu-id="14d72-108">0 to 4,294,967,295</span></span>|<span data-ttu-id="14d72-109">符号なし 32 ビット整数</span><span class="sxs-lookup"><span data-stu-id="14d72-109">Unsigned 32-bit integer</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|  
   
- <span data-ttu-id="635be-110">**メモ** `uint` 型は CLS に準拠していません。</span><span class="sxs-lookup"><span data-stu-id="635be-110">**Note** The `uint` type is not CLS-compliant.</span></span> <span data-ttu-id="635be-111">可能な場合は、`int` を使用します。</span><span class="sxs-lookup"><span data-stu-id="635be-111">Use `int` whenever possible.</span></span>  
+ <span data-ttu-id="14d72-110">**メモ** `uint` 型は CLS に準拠していません。</span><span class="sxs-lookup"><span data-stu-id="14d72-110">**Note** The `uint` type is not CLS-compliant.</span></span> <span data-ttu-id="14d72-111">可能な場合は、`int` を使用します。</span><span class="sxs-lookup"><span data-stu-id="14d72-111">Use `int` whenever possible.</span></span>  
   
-## <a name="literals"></a><span data-ttu-id="635be-112">リテラル</span><span class="sxs-lookup"><span data-stu-id="635be-112">Literals</span></span>  
+## <a name="literals"></a><span data-ttu-id="14d72-112">リテラル</span><span class="sxs-lookup"><span data-stu-id="14d72-112">Literals</span></span>  
 
-<span data-ttu-id="635be-113">`uint` 変数を宣言し、10 進リテラル、16 進リテラル、または (C# 7.0 以降) バイナリ リテラルを割り当てることによって初期化できます。</span><span class="sxs-lookup"><span data-stu-id="635be-113">You can declare and initialize a `uint` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7.0) a binary literal to it.</span></span> <span data-ttu-id="635be-114">整数リテラルが `uint` の範囲外にある場合 (つまり、<xref:System.UInt32.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.UInt32.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="635be-114">If the integer literal is outside the range of `uint` (that is, if it is less than <xref:System.UInt32.MinValue?displayProperty=nameWithType> or greater than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span>
+<span data-ttu-id="14d72-113">`uint` 変数を宣言し、10 進リテラル、16 進リテラル、または (C# 7.0 以降) バイナリ リテラルを割り当てることによって初期化できます。</span><span class="sxs-lookup"><span data-stu-id="14d72-113">You can declare and initialize a `uint` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7.0) a binary literal to it.</span></span> <span data-ttu-id="14d72-114">整数リテラルが `uint` の範囲外にある場合 (つまり、<xref:System.UInt32.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.UInt32.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="14d72-114">If the integer literal is outside the range of `uint` (that is, if it is less than <xref:System.UInt32.MinValue?displayProperty=nameWithType> or greater than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span>
 
-<span data-ttu-id="635be-115">次の例では、整数 3,000,000,000 を 10 進リテラル、16 進リテラル、バイナリ リテラルで表したものが、`uint` 値に割り当てられています。</span><span class="sxs-lookup"><span data-stu-id="635be-115">In the following example, integers equal to 3,000,000,000 that are represented as decimal, hexadecimal, and binary literals are assigned to `uint` values.</span></span>  
+<span data-ttu-id="14d72-115">次の例では、整数 3,000,000,000 を 10 進リテラル、16 進リテラル、バイナリ リテラルで表したものが、`uint` 値に割り当てられています。</span><span class="sxs-lookup"><span data-stu-id="14d72-115">In the following example, integers equal to 3,000,000,000 that are represented as decimal, hexadecimal, and binary literals are assigned to `uint` values.</span></span>  
   
 [!code-csharp[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UInt)]  
 
 > [!NOTE] 
-> <span data-ttu-id="635be-116">16 進リテラルを表すにはプレフィックス `0x` または `0X` を使い、バイナリ リテラルを表すにはプレフィックス `0b` または `0B` を使います。</span><span class="sxs-lookup"><span data-stu-id="635be-116">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="635be-117">10 進リテラルには、プレフィックスはありません。</span><span class="sxs-lookup"><span data-stu-id="635be-117">Decimal literals have no prefix.</span></span> 
+> <span data-ttu-id="14d72-116">16 進リテラルを表すにはプレフィックス `0x` または `0X` を使い、バイナリ リテラルを表すにはプレフィックス `0b` または `0B` を使います。</span><span class="sxs-lookup"><span data-stu-id="14d72-116">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="14d72-117">10 進リテラルには、プレフィックスはありません。</span><span class="sxs-lookup"><span data-stu-id="14d72-117">Decimal literals have no prefix.</span></span> 
 
-<span data-ttu-id="635be-118">C# 7.0 以降では、読みやすさを強化するためにいくつかの機能が追加されています。</span><span class="sxs-lookup"><span data-stu-id="635be-118">Starting with C# 7.0, a couple of features have been added to enhance readability.</span></span> 
- - <span data-ttu-id="635be-119">C# 7.0 では、桁区切り記号としてアンダースコア文字 (`_`) が使用できます。</span><span class="sxs-lookup"><span data-stu-id="635be-119">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
- - <span data-ttu-id="635be-120">C# 7.2 では、プレフィックスの後に、`_` をバイナリまたは 16 進リテラルの桁区切り記号として使用できます。</span><span class="sxs-lookup"><span data-stu-id="635be-120">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="635be-121">10 進リテラルは先頭にアンダー スコアを持つことはできません。</span><span class="sxs-lookup"><span data-stu-id="635be-121">A decimal literal isn't permitted to have a leading underscore.</span></span>
+<span data-ttu-id="14d72-118">C# 7.0 以降では、読みやすさを強化するためにいくつかの機能が追加されています。</span><span class="sxs-lookup"><span data-stu-id="14d72-118">Starting with C# 7.0, a couple of features have been added to enhance readability.</span></span> 
+ - <span data-ttu-id="14d72-119">C# 7.0 では、桁区切り記号としてアンダースコア文字 (`_`) が使用できます。</span><span class="sxs-lookup"><span data-stu-id="14d72-119">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
+ - <span data-ttu-id="14d72-120">C# 7.2 では、プレフィックスの後に、`_` をバイナリまたは 16 進リテラルの桁区切り記号として使用できます。</span><span class="sxs-lookup"><span data-stu-id="14d72-120">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="14d72-121">10 進リテラルは先頭にアンダー スコアを持つことはできません。</span><span class="sxs-lookup"><span data-stu-id="14d72-121">A decimal literal isn't permitted to have a leading underscore.</span></span>
 
-<span data-ttu-id="635be-122">以下にいくつか例を示します。</span><span class="sxs-lookup"><span data-stu-id="635be-122">Some examples are shown below.</span></span>
+<span data-ttu-id="14d72-122">以下にいくつか例を示します。</span><span class="sxs-lookup"><span data-stu-id="14d72-122">Some examples are shown below.</span></span>
 
 [!code-csharp[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
  
- <span data-ttu-id="635be-123">整数リテラルには、型を表すサフィックスを含めることもできます。</span><span class="sxs-lookup"><span data-stu-id="635be-123">Integer literals can also include a suffix that denotes the type.</span></span> <span data-ttu-id="635be-124">サフィックス `U` または 'u' は、リテラルの数値に応じて `uint` または `ulong` を示します。</span><span class="sxs-lookup"><span data-stu-id="635be-124">The suffix `U` or 'u' denotes either a `uint` or a `ulong`, depending on the numeric value of the literal.</span></span> <span data-ttu-id="635be-125">次の例では、`u` サフィックスを使って、両方の型の符号なし整数を示しています。</span><span class="sxs-lookup"><span data-stu-id="635be-125">The following example uses the `u` suffix to denote an unsigned integer of both types.</span></span> <span data-ttu-id="635be-126">最初のリテラルは値が <xref:System.UInt32.MaxValue?displayProperty=nameWithType> より小さいため、`uint` であるのに対し、2 番目は値が <xref:System.UInt32.MaxValue?displayProperty=nameWithType> より大きいため、`ulong` であることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="635be-126">Note that the first literal is a `uint` because its value is less than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, while the second is a `ulong` because its value is greater than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span></span>
+ <span data-ttu-id="14d72-123">整数リテラルには、型を表すサフィックスを含めることもできます。</span><span class="sxs-lookup"><span data-stu-id="14d72-123">Integer literals can also include a suffix that denotes the type.</span></span> <span data-ttu-id="14d72-124">サフィックス `U` または 'u' は、リテラルの数値に応じて `uint` または `ulong` を示します。</span><span class="sxs-lookup"><span data-stu-id="14d72-124">The suffix `U` or 'u' denotes either a `uint` or a `ulong`, depending on the numeric value of the literal.</span></span> <span data-ttu-id="14d72-125">次の例では、`u` サフィックスを使って、両方の型の符号なし整数を示しています。</span><span class="sxs-lookup"><span data-stu-id="14d72-125">The following example uses the `u` suffix to denote an unsigned integer of both types.</span></span> <span data-ttu-id="14d72-126">最初のリテラルは値が <xref:System.UInt32.MaxValue?displayProperty=nameWithType> より小さいため、`uint` であるのに対し、2 番目は値が <xref:System.UInt32.MaxValue?displayProperty=nameWithType> より大きいため、`ulong` であることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="14d72-126">Note that the first literal is a `uint` because its value is less than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, while the second is a `ulong` because its value is greater than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span></span>
 
 [!code-csharp[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]  
  
-<span data-ttu-id="635be-127">サフィックスがない整数リテラルの型は、以下の型のうちその値を表すことができる最初のものになります。</span><span class="sxs-lookup"><span data-stu-id="635be-127">If an integer literal has no suffix, its type is the first of the following types in which its value can be represented:</span></span> 
+<span data-ttu-id="14d72-127">サフィックスがない整数リテラルの型は、以下の型のうちその値を表すことができる最初のものになります。</span><span class="sxs-lookup"><span data-stu-id="14d72-127">If an integer literal has no suffix, its type is the first of the following types in which its value can be represented:</span></span> 
 
-1. [<span data-ttu-id="635be-128">int</span><span class="sxs-lookup"><span data-stu-id="635be-128">int</span></span>](int.md)
+1. [<span data-ttu-id="14d72-128">int</span><span class="sxs-lookup"><span data-stu-id="14d72-128">int</span></span>](int.md)
 2. `uint`
-3. [<span data-ttu-id="635be-129">long</span><span class="sxs-lookup"><span data-stu-id="635be-129">long</span></span>](../../../csharp/language-reference/keywords/long.md)
-4. [<span data-ttu-id="635be-130">ulong</span><span class="sxs-lookup"><span data-stu-id="635be-130">ulong</span></span>](../../../csharp/language-reference/keywords/ulong.md) 
+3. [<span data-ttu-id="14d72-129">long</span><span class="sxs-lookup"><span data-stu-id="14d72-129">long</span></span>](../../../csharp/language-reference/keywords/long.md)
+4. [<span data-ttu-id="14d72-130">ulong</span><span class="sxs-lookup"><span data-stu-id="14d72-130">ulong</span></span>](../../../csharp/language-reference/keywords/ulong.md) 
   
-## <a name="conversions"></a><span data-ttu-id="635be-131">変換</span><span class="sxs-lookup"><span data-stu-id="635be-131">Conversions</span></span>  
- <span data-ttu-id="635be-132">`uint` から [long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md)、[decimal](../../../csharp/language-reference/keywords/decimal.md) への、定義済みの暗黙的な変換が組み込まれています。</span><span class="sxs-lookup"><span data-stu-id="635be-132">There is a predefined implicit conversion from `uint` to [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span> <span data-ttu-id="635be-133">例:</span><span class="sxs-lookup"><span data-stu-id="635be-133">For example:</span></span>  
+## <a name="conversions"></a><span data-ttu-id="14d72-131">変換</span><span class="sxs-lookup"><span data-stu-id="14d72-131">Conversions</span></span>  
+ <span data-ttu-id="14d72-132">`uint` から [long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md)、[decimal](../../../csharp/language-reference/keywords/decimal.md) への、定義済みの暗黙的な変換が組み込まれています。</span><span class="sxs-lookup"><span data-stu-id="14d72-132">There is a predefined implicit conversion from `uint` to [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span> <span data-ttu-id="14d72-133">例:</span><span class="sxs-lookup"><span data-stu-id="14d72-133">For example:</span></span>  
   
 ```csharp  
 float myFloat = 4294967290;   // OK: implicit conversion to float  
 ```  
   
- <span data-ttu-id="635be-134">[byte](../../../csharp/language-reference/keywords/byte.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md)、または [char](../../../csharp/language-reference/keywords/char.md) から `uint` への、定義済みの暗黙的な変換が組み込まれています。</span><span class="sxs-lookup"><span data-stu-id="635be-134">There is a predefined implicit conversion from [byte](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), or [char](../../../csharp/language-reference/keywords/char.md) to `uint`.</span></span> <span data-ttu-id="635be-135">それ以外の場合は、キャストを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="635be-135">Otherwise you must use a cast.</span></span> <span data-ttu-id="635be-136">たとえば、次の代入ステートメントは、キャストを使用しない場合、コンパイル エラーになります。</span><span class="sxs-lookup"><span data-stu-id="635be-136">For example, the following assignment statement will produce a compilation error without a cast:</span></span>  
+ <span data-ttu-id="14d72-134">[byte](../../../csharp/language-reference/keywords/byte.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md)、または [char](../../../csharp/language-reference/keywords/char.md) から `uint` への、定義済みの暗黙的な変換が組み込まれています。</span><span class="sxs-lookup"><span data-stu-id="14d72-134">There is a predefined implicit conversion from [byte](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), or [char](../../../csharp/language-reference/keywords/char.md) to `uint`.</span></span> <span data-ttu-id="14d72-135">それ以外の場合は、キャストを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="14d72-135">Otherwise you must use a cast.</span></span> <span data-ttu-id="14d72-136">たとえば、次の代入ステートメントは、キャストを使用しない場合、コンパイル エラーになります。</span><span class="sxs-lookup"><span data-stu-id="14d72-136">For example, the following assignment statement will produce a compilation error without a cast:</span></span>  
   
 ```csharp  
 long aLong = 22;  
@@ -71,7 +71,7 @@ uint uInt1 = aLong;
 uint uInt2 = (uint)aLong;  
 ```  
   
- <span data-ttu-id="635be-137">浮動小数点型から `uint` への暗黙的な変換が行われないことにも注意してください。</span><span class="sxs-lookup"><span data-stu-id="635be-137">Notice also that there is no implicit conversion from floating-point types to `uint`.</span></span> <span data-ttu-id="635be-138">たとえば、次のステートメントは、明示的なキャストを使用しない場合、コンパイラ エラーになります。</span><span class="sxs-lookup"><span data-stu-id="635be-138">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
+ <span data-ttu-id="14d72-137">浮動小数点型から `uint` への暗黙的な変換が行われないことにも注意してください。</span><span class="sxs-lookup"><span data-stu-id="14d72-137">Notice also that there is no implicit conversion from floating-point types to `uint`.</span></span> <span data-ttu-id="14d72-138">たとえば、次のステートメントは、明示的なキャストを使用しない場合、コンパイラ エラーになります。</span><span class="sxs-lookup"><span data-stu-id="14d72-138">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
   
 ```csharp  
 // Error -- no implicit conversion from double:  
@@ -80,20 +80,21 @@ uint x = 3.0;
 uint y = (uint)3.0;   
 ```  
   
- <span data-ttu-id="635be-139">浮動小数点型と整数型の混在する算術式の詳細については、「[float](../../../csharp/language-reference/keywords/float.md)」および「[double](../../../csharp/language-reference/keywords/double.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="635be-139">For information about arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
+ <span data-ttu-id="14d72-139">浮動小数点型と整数型の混在する算術式の詳細については、「[float](../../../csharp/language-reference/keywords/float.md)」および「[double](../../../csharp/language-reference/keywords/double.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="14d72-139">For information about arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
   
- <span data-ttu-id="635be-140">暗黙的な数値変換規則の詳細については、「[暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="635be-140">For more information about implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
+ <span data-ttu-id="14d72-140">暗黙的な数値変換規則の詳細については、「[暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="14d72-140">For more information about implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="635be-141">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="635be-141">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a><span data-ttu-id="14d72-141">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="14d72-141">C# Language Specification</span></span>  
+
+<span data-ttu-id="14d72-142">詳細については、「[C# 言語仕様](../language-specification/index.md)」の[整数型](~/_csharplang/spec/types.md#integral-types)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="14d72-142">For more information, see [Integral types](~/_csharplang/spec/types.md#integral-types) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="14d72-143">言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。</span><span class="sxs-lookup"><span data-stu-id="14d72-143">The language specification is the definitive source for C# syntax and usage.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="635be-142">参照</span><span class="sxs-lookup"><span data-stu-id="635be-142">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="14d72-144">参照</span><span class="sxs-lookup"><span data-stu-id="14d72-144">See Also</span></span>
 
 - <xref:System.UInt32>  
-- [<span data-ttu-id="635be-143">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="635be-143">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="635be-144">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="635be-144">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="635be-145">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="635be-145">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="635be-146">整数型の一覧表</span><span class="sxs-lookup"><span data-stu-id="635be-146">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [<span data-ttu-id="635be-147">組み込み型の一覧表</span><span class="sxs-lookup"><span data-stu-id="635be-147">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [<span data-ttu-id="635be-148">暗黙的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="635be-148">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [<span data-ttu-id="635be-149">明示的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="635be-149">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [<span data-ttu-id="14d72-145">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="14d72-145">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="14d72-146">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="14d72-146">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="14d72-147">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="14d72-147">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="14d72-148">整数型の一覧表</span><span class="sxs-lookup"><span data-stu-id="14d72-148">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [<span data-ttu-id="14d72-149">組み込み型の一覧表</span><span class="sxs-lookup"><span data-stu-id="14d72-149">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [<span data-ttu-id="14d72-150">暗黙的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="14d72-150">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [<span data-ttu-id="14d72-151">明示的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="14d72-151">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

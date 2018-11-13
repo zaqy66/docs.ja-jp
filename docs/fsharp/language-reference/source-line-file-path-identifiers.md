@@ -9,11 +9,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43865128"
 ---
-# <a name="source-line-file-and-path-identifiers"></a><span data-ttu-id="cadb4-103">ソース行、ファイル、およびパスの識別子</span><span class="sxs-lookup"><span data-stu-id="cadb4-103">Source Line, File, and Path Identifiers</span></span>
+# <a name="source-line-file-and-path-identifiers"></a><span data-ttu-id="1d9ac-103">ソース行、ファイル、およびパスの識別子</span><span class="sxs-lookup"><span data-stu-id="1d9ac-103">Source Line, File, and Path Identifiers</span></span>
 
-<span data-ttu-id="cadb4-104">識別子`__LINE__`、`__SOURCE_DIRECTORY__`と`__SOURCE_FILE__`は、コードのソース行番号、ディレクトリおよびファイル名にアクセスするための組み込みの値です。</span><span class="sxs-lookup"><span data-stu-id="cadb4-104">The identifiers `__LINE__`, `__SOURCE_DIRECTORY__` and `__SOURCE_FILE__` are built-in values that enable you to access the source line number, directory and file name in your code.</span></span>
+<span data-ttu-id="1d9ac-104">識別子`__LINE__`、`__SOURCE_DIRECTORY__`と`__SOURCE_FILE__`は、コードのソース行番号、ディレクトリおよびファイル名にアクセスするための組み込みの値です。</span><span class="sxs-lookup"><span data-stu-id="1d9ac-104">The identifiers `__LINE__`, `__SOURCE_DIRECTORY__` and `__SOURCE_FILE__` are built-in values that enable you to access the source line number, directory and file name in your code.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="cadb4-105">構文</span><span class="sxs-lookup"><span data-stu-id="cadb4-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1d9ac-105">構文</span><span class="sxs-lookup"><span data-stu-id="1d9ac-105">Syntax</span></span>
 
 ```fsharp
 __LINE__
@@ -21,26 +21,26 @@ __SOURCE_DIRECTORY__
 __SOURCE_FILE__
 ```
 
-## <a name="remarks"></a><span data-ttu-id="cadb4-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="cadb4-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1d9ac-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="1d9ac-106">Remarks</span></span>
 
-<span data-ttu-id="cadb4-107">これらの値の各種類には`string`します。</span><span class="sxs-lookup"><span data-stu-id="cadb4-107">Each of these values has type `string`.</span></span>
+<span data-ttu-id="1d9ac-107">これらの値の各種類には`string`します。</span><span class="sxs-lookup"><span data-stu-id="1d9ac-107">Each of these values has type `string`.</span></span>
 
-<span data-ttu-id="cadb4-108">次の表は、ソース行、ファイル、および F# で使用できるパスの識別子を示します。</span><span class="sxs-lookup"><span data-stu-id="cadb4-108">The following table summarizes the source line, file, and path identifiers that are available in F#.</span></span> <span data-ttu-id="cadb4-109">これらの識別子でないプリプロセッサ マクロこれらは、コンパイラによって認識される組み込みの値です。</span><span class="sxs-lookup"><span data-stu-id="cadb4-109">These identifiers are not preprocessor macros; they are built-in values that are recognized by the compiler.</span></span>
+<span data-ttu-id="1d9ac-108">次の表は、ソース行、ファイル、および F# で使用できるパスの識別子を示します。</span><span class="sxs-lookup"><span data-stu-id="1d9ac-108">The following table summarizes the source line, file, and path identifiers that are available in F#.</span></span> <span data-ttu-id="1d9ac-109">これらの識別子でないプリプロセッサ マクロこれらは、コンパイラによって認識される組み込みの値です。</span><span class="sxs-lookup"><span data-stu-id="1d9ac-109">These identifiers are not preprocessor macros; they are built-in values that are recognized by the compiler.</span></span>
 
-|<span data-ttu-id="cadb4-110">事前定義の識別子</span><span class="sxs-lookup"><span data-stu-id="cadb4-110">Predefined identifier</span></span>|<span data-ttu-id="cadb4-111">説明</span><span class="sxs-lookup"><span data-stu-id="cadb4-111">Description</span></span>|
+|<span data-ttu-id="1d9ac-110">事前定義の識別子</span><span class="sxs-lookup"><span data-stu-id="1d9ac-110">Predefined identifier</span></span>|<span data-ttu-id="1d9ac-111">説明</span><span class="sxs-lookup"><span data-stu-id="1d9ac-111">Description</span></span>|
 |---------------------|-----------|
-|`__LINE__`|<span data-ttu-id="cadb4-112">現在の行番号に評価を検討して`#line`ディレクティブ。</span><span class="sxs-lookup"><span data-stu-id="cadb4-112">Evaluates to the current line number, considering `#line` directives.</span></span>|
-|`__SOURCE_DIRECTORY__`|<span data-ttu-id="cadb4-113">ソース ディレクトリの現在の完全なパスに評価を検討して`#line`ディレクティブ。</span><span class="sxs-lookup"><span data-stu-id="cadb4-113">Evaluates to the current full path of the source directory, considering `#line` directives.</span></span>|
-|`__SOURCE_FILE__`|<span data-ttu-id="cadb4-114">現在のソース ファイル名と、そのパスに評価を検討して`#line`ディレクティブ。</span><span class="sxs-lookup"><span data-stu-id="cadb4-114">Evaluates to the current source file name and its path, considering `#line` directives.</span></span>|
-<span data-ttu-id="cadb4-115">詳細については、`#line`ディレクティブを参照してください[コンパイラ ディレクティブ](compiler-directives.md)します。</span><span class="sxs-lookup"><span data-stu-id="cadb4-115">For more information about the `#line` directive, see [Compiler Directives](compiler-directives.md).</span></span>
+|`__LINE__`|<span data-ttu-id="1d9ac-112">現在の行番号に評価を検討して`#line`ディレクティブ。</span><span class="sxs-lookup"><span data-stu-id="1d9ac-112">Evaluates to the current line number, considering `#line` directives.</span></span>|
+|`__SOURCE_DIRECTORY__`|<span data-ttu-id="1d9ac-113">ソース ディレクトリの現在の完全なパスに評価を検討して`#line`ディレクティブ。</span><span class="sxs-lookup"><span data-stu-id="1d9ac-113">Evaluates to the current full path of the source directory, considering `#line` directives.</span></span>|
+|`__SOURCE_FILE__`|<span data-ttu-id="1d9ac-114">現在のソース ファイル名と、そのパスに評価を検討して`#line`ディレクティブ。</span><span class="sxs-lookup"><span data-stu-id="1d9ac-114">Evaluates to the current source file name and its path, considering `#line` directives.</span></span>|
+<span data-ttu-id="1d9ac-115">詳細については、`#line`ディレクティブを参照してください[コンパイラ ディレクティブ](compiler-directives.md)します。</span><span class="sxs-lookup"><span data-stu-id="1d9ac-115">For more information about the `#line` directive, see [Compiler Directives](compiler-directives.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="cadb4-116">例</span><span class="sxs-lookup"><span data-stu-id="cadb4-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1d9ac-116">例</span><span class="sxs-lookup"><span data-stu-id="1d9ac-116">Example</span></span>
 
-<span data-ttu-id="cadb4-117">次のコード例では、これらの値の使用を示します。</span><span class="sxs-lookup"><span data-stu-id="cadb4-117">The following code example demonstrates the use of these values.</span></span>
+<span data-ttu-id="1d9ac-117">次のコード例では、これらの値の使用を示します。</span><span class="sxs-lookup"><span data-stu-id="1d9ac-117">The following code example demonstrates the use of these values.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7401.fs)]
 
-<span data-ttu-id="cadb4-118">Output:</span><span class="sxs-lookup"><span data-stu-id="cadb4-118">Output:</span></span>
+<span data-ttu-id="1d9ac-118">Output:</span><span class="sxs-lookup"><span data-stu-id="1d9ac-118">Output:</span></span>
 
 ```
 Line: 4
@@ -48,7 +48,7 @@ Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\Source
 Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo\Program.fs
 ```
 
-## <a name="see-also"></a><span data-ttu-id="cadb4-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="cadb4-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d9ac-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="1d9ac-119">See also</span></span>
 
-- [<span data-ttu-id="cadb4-120">コンパイラ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="cadb4-120">Compiler Directives</span></span>](compiler-directives.md)
-- [<span data-ttu-id="cadb4-121">F# 言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="cadb4-121">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="1d9ac-120">コンパイラ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="1d9ac-120">Compiler Directives</span></span>](compiler-directives.md)
+- [<span data-ttu-id="1d9ac-121">F# 言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="1d9ac-121">F# Language Reference</span></span>](index.md)

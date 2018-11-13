@@ -9,27 +9,27 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "45624510"
 ---
-# <a name="the-fixed-keyword"></a><span data-ttu-id="50826-103">固定キーワード</span><span class="sxs-lookup"><span data-stu-id="50826-103">The Fixed Keyword</span></span>
+# <a name="the-fixed-keyword"></a><span data-ttu-id="eb8b8-103">固定キーワード</span><span class="sxs-lookup"><span data-stu-id="eb8b8-103">The Fixed Keyword</span></span>
 
-<span data-ttu-id="50826-104">F# 4.1 が導入されています、`fixed`キーワードで、収集またはガベージ コレクション中に移動されないようにするには、スタックにローカルを「ピン留め」することができます。</span><span class="sxs-lookup"><span data-stu-id="50826-104">F# 4.1 introduces the `fixed` keyword, which allows you to "pin" a local onto the stack to prevent it from being collected or moved during garbage-collection.</span></span>  <span data-ttu-id="50826-105">低レベルのプログラミング シナリオに使用されます。</span><span class="sxs-lookup"><span data-stu-id="50826-105">It is used for low-level programming scenarios.</span></span>
+<span data-ttu-id="eb8b8-104">F# 4.1 が導入されています、`fixed`キーワードで、収集またはガベージ コレクション中に移動されないようにするには、スタックにローカルを「ピン留め」することができます。</span><span class="sxs-lookup"><span data-stu-id="eb8b8-104">F# 4.1 introduces the `fixed` keyword, which allows you to "pin" a local onto the stack to prevent it from being collected or moved during garbage-collection.</span></span>  <span data-ttu-id="eb8b8-105">低レベルのプログラミング シナリオに使用されます。</span><span class="sxs-lookup"><span data-stu-id="eb8b8-105">It is used for low-level programming scenarios.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="50826-106">構文</span><span class="sxs-lookup"><span data-stu-id="50826-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="eb8b8-106">構文</span><span class="sxs-lookup"><span data-stu-id="eb8b8-106">Syntax</span></span>
 
 ```fsharp
 use ptr = fixed expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="50826-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="50826-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="eb8b8-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="eb8b8-107">Remarks</span></span>
 
-<span data-ttu-id="50826-108">これは、ポインターを抽出し、収集されたり、ガベージ コレクション中に移動できない名前にバインドすることを許可する式の構文を拡張します。</span><span class="sxs-lookup"><span data-stu-id="50826-108">This extends the syntax of expressions to allow extracting a pointer and binding it to a name which is prevented from being collected or moved during garbage-collection.</span></span>  
+<span data-ttu-id="eb8b8-108">これは、ポインターを抽出し、収集されたり、ガベージ コレクション中に移動できない名前にバインドすることを許可する式の構文を拡張します。</span><span class="sxs-lookup"><span data-stu-id="eb8b8-108">This extends the syntax of expressions to allow extracting a pointer and binding it to a name which is prevented from being collected or moved during garbage-collection.</span></span>  
 
-<span data-ttu-id="50826-109">使用して式からのポインターが固定されて、`fixed`キーワードは、識別子を使用してにバインドされて、`use`キーワード。</span><span class="sxs-lookup"><span data-stu-id="50826-109">A pointer from an expression is fixed via the `fixed` keyword is bound to an identifier via the `use` keyword.</span></span>  <span data-ttu-id="50826-110">これのセマンティクスを使用したリソース管理に似ています、`use`キーワード。</span><span class="sxs-lookup"><span data-stu-id="50826-110">The semantics of this are similar to resource management via the `use` keyword.</span></span>  <span data-ttu-id="50826-111">ポインターは、スコープ内にあるし、修正が不要になったスコープ外に出ることが、中に固定されています。</span><span class="sxs-lookup"><span data-stu-id="50826-111">The pointer is fixed while it is in scope, and once it is out of scope, it is no longer fixed.</span></span>  <span data-ttu-id="50826-112">`fixed` コンテキストの外部で使用することはできません、`use`バインドします。</span><span class="sxs-lookup"><span data-stu-id="50826-112">`fixed` cannot be used outside the context of a `use` binding.</span></span>  <span data-ttu-id="50826-113">名前に、ポインターをバインドする必要があります`use`します。</span><span class="sxs-lookup"><span data-stu-id="50826-113">You must bind the pointer to a name with `use`.</span></span>
+<span data-ttu-id="eb8b8-109">使用して式からのポインターが固定されて、`fixed`キーワードは、識別子を使用してにバインドされて、`use`キーワード。</span><span class="sxs-lookup"><span data-stu-id="eb8b8-109">A pointer from an expression is fixed via the `fixed` keyword is bound to an identifier via the `use` keyword.</span></span>  <span data-ttu-id="eb8b8-110">これのセマンティクスを使用したリソース管理に似ています、`use`キーワード。</span><span class="sxs-lookup"><span data-stu-id="eb8b8-110">The semantics of this are similar to resource management via the `use` keyword.</span></span>  <span data-ttu-id="eb8b8-111">ポインターは、スコープ内にあるし、修正が不要になったスコープ外に出ることが、中に固定されています。</span><span class="sxs-lookup"><span data-stu-id="eb8b8-111">The pointer is fixed while it is in scope, and once it is out of scope, it is no longer fixed.</span></span>  <span data-ttu-id="eb8b8-112">`fixed` コンテキストの外部で使用することはできません、`use`バインドします。</span><span class="sxs-lookup"><span data-stu-id="eb8b8-112">`fixed` cannot be used outside the context of a `use` binding.</span></span>  <span data-ttu-id="eb8b8-113">名前に、ポインターをバインドする必要があります`use`します。</span><span class="sxs-lookup"><span data-stu-id="eb8b8-113">You must bind the pointer to a name with `use`.</span></span>
 
-<span data-ttu-id="50826-114">使用`fixed`関数またはメソッドの式内で発生する必要があります。</span><span class="sxs-lookup"><span data-stu-id="50826-114">Use of `fixed` must occur within an expression in a function or a method.</span></span>  <span data-ttu-id="50826-115">これは、スクリプト レベルまたはモジュール レベルのスコープで使用できません。</span><span class="sxs-lookup"><span data-stu-id="50826-115">It cannot be used at a script-level or module-level scope.</span></span>
+<span data-ttu-id="eb8b8-114">使用`fixed`関数またはメソッドの式内で発生する必要があります。</span><span class="sxs-lookup"><span data-stu-id="eb8b8-114">Use of `fixed` must occur within an expression in a function or a method.</span></span>  <span data-ttu-id="eb8b8-115">これは、スクリプト レベルまたはモジュール レベルのスコープで使用できません。</span><span class="sxs-lookup"><span data-stu-id="eb8b8-115">It cannot be used at a script-level or module-level scope.</span></span>
 
-<span data-ttu-id="50826-116">ポインターのすべてのコードのようにこれは安全でない機能で、使用時に警告が生成されます。</span><span class="sxs-lookup"><span data-stu-id="50826-116">Like all pointer code, this is an unsafe feature and will emit a warning when used.</span></span>
+<span data-ttu-id="eb8b8-116">ポインターのすべてのコードのようにこれは安全でない機能で、使用時に警告が生成されます。</span><span class="sxs-lookup"><span data-stu-id="eb8b8-116">Like all pointer code, this is an unsafe feature and will emit a warning when used.</span></span>
 
-## <a name="example"></a><span data-ttu-id="50826-117">例</span><span class="sxs-lookup"><span data-stu-id="50826-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="eb8b8-117">例</span><span class="sxs-lookup"><span data-stu-id="eb8b8-117">Example</span></span>
 
 ```fsharp
 open Microsoft.FSharp.NativeInterop
@@ -61,6 +61,6 @@ let doPointerWork() =
 doPointerWork()
 ```
 
-## <a name="see-also"></a><span data-ttu-id="50826-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="50826-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb8b8-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="eb8b8-118">See also</span></span>
 
-- [<span data-ttu-id="50826-119">NativePtr モジュール</span><span class="sxs-lookup"><span data-stu-id="50826-119">NativePtr Module</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [<span data-ttu-id="eb8b8-119">NativePtr モジュール</span><span class="sxs-lookup"><span data-stu-id="eb8b8-119">NativePtr Module</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)

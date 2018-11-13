@@ -15,35 +15,35 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191811"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "50980597"
 ---
-# <a name="datamemberlisteditor-class"></a><span data-ttu-id="10fa4-102">DataMemberListEditor クラス</span><span class="sxs-lookup"><span data-stu-id="10fa4-102">DataMemberListEditor Class</span></span>
+# <a name="datamemberlisteditor-class"></a><span data-ttu-id="0107d-102">DataMemberListEditor クラス</span><span class="sxs-lookup"><span data-stu-id="0107d-102">DataMemberListEditor Class</span></span>
 
-<span data-ttu-id="10fa4-103">データ バインド オブジェクトのプロパティを編集するためのドロップダウン リストのユーザー インターフェイスを提供します (null 以外のオブジェクト`DataSource`プロパティ) のすべてのプロパティを一覧表示して、`DataSource`から値のソースを選択するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="10fa4-103">Provides a drop-down user interface for editing properties of data-bound objects (objects that have non-null `DataSource` property) by listing all properties of the `DataSource` object to select the value source from.</span></span>  
+<span data-ttu-id="0107d-103">データ バインド オブジェクトのプロパティを編集するためのドロップダウン リストのユーザー インターフェイスを提供します (null 以外のオブジェクト`DataSource`プロパティ) のすべてのプロパティを一覧表示して、`DataSource`から値のソースを選択するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="0107d-103">Provides a drop-down user interface for editing properties of data-bound objects (objects that have non-null `DataSource` property) by listing all properties of the `DataSource` object to select the value source from.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10fa4-104">構文</span><span class="sxs-lookup"><span data-stu-id="10fa4-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="0107d-104">構文</span><span class="sxs-lookup"><span data-stu-id="0107d-104">Syntax</span></span>
   
 ```csharp  
 internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> <span data-ttu-id="10fa4-105">`DataMemberListEditor`クラスは、内部およびコード内で直接使用することはしません。</span><span class="sxs-lookup"><span data-stu-id="10fa4-105">The `DataMemberListEditor` class is internal and not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="0107d-105">`DataMemberListEditor`クラスは、内部およびコード内で直接使用することはしません。</span><span class="sxs-lookup"><span data-stu-id="0107d-105">The `DataMemberListEditor` class is internal and not meant to be used directly in your code.</span></span>
 > 
-> <span data-ttu-id="10fa4-106">Microsoft はいかなる運用アプリケーションでこのクラスの使用をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="10fa4-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="0107d-106">Microsoft はいかなる運用アプリケーションでこのクラスの使用をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="0107d-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="10fa4-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="10fa4-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="0107d-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="0107d-107">Requirements</span></span>
 
-<span data-ttu-id="10fa4-108">**名前空間:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="10fa4-108">**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType></span></span>  
+<span data-ttu-id="0107d-108">**名前空間:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="0107d-108">**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType></span></span>  
   
-<span data-ttu-id="10fa4-109">**アセンブリ:** System.Design (で System.Design.dll)</span><span class="sxs-lookup"><span data-stu-id="10fa4-109">**Assembly:** System.Design (in System.Design.dll)</span></span>  
+<span data-ttu-id="0107d-109">**アセンブリ:** System.Design (で System.Design.dll)</span><span class="sxs-lookup"><span data-stu-id="0107d-109">**Assembly:** System.Design (in System.Design.dll)</span></span>  
   
-<span data-ttu-id="10fa4-110">**.NET framework のバージョン:** 2.0 以降。</span><span class="sxs-lookup"><span data-stu-id="10fa4-110">**.NET Framework versions:** Available since 2.0.</span></span>  
+<span data-ttu-id="0107d-110">**.NET framework のバージョン:** 2.0 以降。</span><span class="sxs-lookup"><span data-stu-id="0107d-110">**.NET Framework versions:** Available since 2.0.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10fa4-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="10fa4-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0107d-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="0107d-111">See also</span></span>
 
 - <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

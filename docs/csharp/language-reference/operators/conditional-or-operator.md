@@ -1,6 +1,6 @@
 ---
 title: '|| 演算子 (C# リファレンス)'
-ms.date: 07/20/2015
+ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
 helpviewer_keywords:
@@ -8,40 +8,34 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: 58e5fd72a3748e7af0894093fc461c4efb543608
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "42925541"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="88b3b-102">|| 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="88b3b-102">|| Operator (C# Reference)</span></span>
-<span data-ttu-id="88b3b-103">条件付き OR 演算子 (`||`) では、`bool` オペランドの論理 OR が実行されます。</span><span class="sxs-lookup"><span data-stu-id="88b3b-103">The conditional-OR operator (`||`) performs a logical-OR of its `bool` operands.</span></span> <span data-ttu-id="88b3b-104">最初のオペランドが `true` と評価されると、2 番目のオペランドは評価されません。</span><span class="sxs-lookup"><span data-stu-id="88b3b-104">If the first operand evaluates to `true`, the second operand isn't evaluated.</span></span> <span data-ttu-id="88b3b-105">最初のオペランドが `false` と評価されると、2 番目の演算子は、OR 式を、全体として、`true` または `false` に評価するかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="88b3b-105">If the first operand evaluates to `false`, the second operator determines whether the OR expression as a whole evaluates to `true` or `false`.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="88b3b-106">コメント</span><span class="sxs-lookup"><span data-stu-id="88b3b-106">Remarks</span></span>  
- <span data-ttu-id="88b3b-107">次の演算は、</span><span class="sxs-lookup"><span data-stu-id="88b3b-107">The operation</span></span>  
-  
-```csharp  
-x || y  
-```  
-  
- <span data-ttu-id="88b3b-108">次の演算に対応しています。</span><span class="sxs-lookup"><span data-stu-id="88b3b-108">corresponds to the operation</span></span>  
-  
-```csharp  
-x | y  
-```  
-  
- <span data-ttu-id="88b3b-109">ただし `x` が `true` の場合、OR 演算は `y` の値に関係なく `true` となるため、`y` は評価されません。</span><span class="sxs-lookup"><span data-stu-id="88b3b-109">except that if `x` is `true`, `y` is not evaluated because the OR operation is `true` regardless of the value of `y`.</span></span> <span data-ttu-id="88b3b-110">この概念は、"ショートサーキット" 評価と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="88b3b-110">This concept is known as "short-circuit" evaluation.</span></span>  
-  
- <span data-ttu-id="88b3b-111">条件付き OR 演算子はオーバーロードできませんが、通常の論理演算子、[true](../../../csharp/language-reference/keywords/true.md) 演算子、[false](../../../csharp/language-reference/keywords/false.md) 演算子のオーバーロードは、一定の制約内で、条件付き論理演算子のオーバーロードとも見なされます。</span><span class="sxs-lookup"><span data-stu-id="88b3b-111">The conditional-OR operator cannot be overloaded, but overloads of the regular logical operators and the [true](../../../csharp/language-reference/keywords/true.md) and [false](../../../csharp/language-reference/keywords/false.md) operators are, with certain restrictions, also considered to be overloads of the conditional logical operators.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="88b3b-112">例</span><span class="sxs-lookup"><span data-stu-id="88b3b-112">Example</span></span>  
- <span data-ttu-id="88b3b-113">次の例では、`||` が使用されている式は、最初のオペランドだけを評価します。</span><span class="sxs-lookup"><span data-stu-id="88b3b-113">In the following examples, the expression that uses `||` evaluates only the first operand.</span></span> <span data-ttu-id="88b3b-114">`|` が使用されている式は、両方のオペランドを評価します。</span><span class="sxs-lookup"><span data-stu-id="88b3b-114">The expression that uses `|` evaluates both operands.</span></span> <span data-ttu-id="88b3b-115">2 番目の例では、両方のオペランドが評価されると、実行時例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="88b3b-115">In the second example, a run-time exception occurs if both operands are evaluated.</span></span>  
-  
- [!code-csharp[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="88b3b-116">参照</span><span class="sxs-lookup"><span data-stu-id="88b3b-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="7163f-102">|| 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="7163f-102">|| Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="88b3b-117">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="88b3b-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="88b3b-118">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="88b3b-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="88b3b-119">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="88b3b-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="7163f-103">条件論理 OR 演算子 `||` は、"短絡" 論理 OR 演算子とも呼ばれ、その [bool](../keywords/bool.md) オペランドの論理 OR を計算します。</span><span class="sxs-lookup"><span data-stu-id="7163f-103">The conditional logical OR operator `||`, also known as the "short-circuiting" logical OR operator, computes the logical OR of its [bool](../keywords/bool.md) operands.</span></span> <span data-ttu-id="7163f-104">`x` または `y` のどちらかが `true` と評価された場合、`x || y` の結果は `true` になります。</span><span class="sxs-lookup"><span data-stu-id="7163f-104">The result of `x || y` is `true` if either `x` or `y` evaluates to `true`.</span></span> <span data-ttu-id="7163f-105">それ以外の場合、結果は `false` です。</span><span class="sxs-lookup"><span data-stu-id="7163f-105">Otherwise, the result is `false`.</span></span> <span data-ttu-id="7163f-106">最初のオペランドが `true` と評価されると、2 番目のオペランドは評価されず、演算の結果は `true` になります。</span><span class="sxs-lookup"><span data-stu-id="7163f-106">If the first operand evaluates to `true`, the second operand is not evaluated and the result of operation is `true`.</span></span> <span data-ttu-id="7163f-107">次の例は、その動作を示します。</span><span class="sxs-lookup"><span data-stu-id="7163f-107">The following example demonstrates that behavior:</span></span>
+
+[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/ConditionalLogicalOperatorsExamples.cs#Or)]
+
+<span data-ttu-id="7163f-108">[論理 OR 演算子](or-operator.md) `|` もその `bool` オペランドの論理 OR を計算しますが、常に両方のオペランドを評価します。</span><span class="sxs-lookup"><span data-stu-id="7163f-108">The [logical OR operator](or-operator.md) `|` also computes the logical OR of its `bool` operands, but always evaluates both operands.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="7163f-109">演算子のオーバーロード可/不可</span><span class="sxs-lookup"><span data-stu-id="7163f-109">Operator overloadability</span></span>
+
+<span data-ttu-id="7163f-110">ユーザー定義型は条件論理 OR 演算子をオーバーロードできません。</span><span class="sxs-lookup"><span data-stu-id="7163f-110">A user-defined type cannot overload the conditional logical OR operator.</span></span> <span data-ttu-id="7163f-111">ただし、ユーザー定義型が[論理 OR](or-operator.md)、[true](../keywords/true-operator.md)、および [false](../keywords/false-operator.md) 演算子を特定の方法でオーバーロードする場合、`||` 演算はその型のオペランドに対して評価を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="7163f-111">However, if a user-defined type overloads the [logical OR](or-operator.md), [true](../keywords/true-operator.md), and [false](../keywords/false-operator.md) operators in a certain way, the `||` operation can be evaluated for the operands of that type.</span></span> <span data-ttu-id="7163f-112">詳細については、「[C# 言語仕様](../language-specification/index.md)」の[ユーザー定義型条件論理演算子](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7163f-112">For more information, see the [User-defined conditional logical operators](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="7163f-113">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="7163f-113">C# language specification</span></span>
+
+<span data-ttu-id="7163f-114">詳細については、「[C# 言語仕様](../language-specification/index.md)」の[条件論理演算子](~/_csharplang/spec/expressions.md#conditional-logical-operators)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7163f-114">For more information, see the [Conditional logical operators](~/_csharplang/spec/expressions.md#conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7163f-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="7163f-115">See also</span></span>
+
+- [<span data-ttu-id="7163f-116">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="7163f-116">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="7163f-117">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="7163f-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="7163f-118">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="7163f-118">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="7163f-119">&& 演算子</span><span class="sxs-lookup"><span data-stu-id="7163f-119">&& operator</span></span>](conditional-and-operator.md)
+- [! 演算子]<span data-ttu-id="7163f-120">(logical-negation-operator.md)</span><span class="sxs-lookup"><span data-stu-id="7163f-120">(logical-negation-operator.md)</span></span>
+- [<span data-ttu-id="7163f-121">| 演算子</span><span class="sxs-lookup"><span data-stu-id="7163f-121">| operator</span></span>](or-operator.md)
