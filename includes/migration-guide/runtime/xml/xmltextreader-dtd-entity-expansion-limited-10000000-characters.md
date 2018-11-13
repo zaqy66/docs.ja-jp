@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|説明|DTD エンティティの拡張は 10,000,000 文字までに制限されるようになりました。 DTD エンティティの展開を使用しない XML ファイルの読み込みや、制限された DTD エンティティの展開を使用した XML ファイルの読み込みは、影響を受けません。 DTD エンティティの展開が 10,000,000 文字を超えるファイルは読み込みに失敗し、例外をスローします。|
+|詳細|DTD エンティティの拡張は 10,000,000 文字までに制限されるようになりました。 DTD エンティティの展開を使用しない XML ファイルの読み込みや、制限された DTD エンティティの展開を使用した XML ファイルの読み込みは、影響を受けません。 DTD エンティティの展開が 10,000,000 文字を超えるファイルは読み込みに失敗し、例外をスローします。|
 |提案される解決策|DTD エンティティの拡張の制限が 10,000, 000 では低すぎる場合には、<xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities> プロパティで値をオーバーライドできます。 適切な <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities?displayProperty=name> 値を持つ <xref:System.Xml.XmlReaderSettings?displayProperty=name> を、<xref:System.Xml.XmlReaderSettings?displayProperty=name> を受け取る <code>XmlReader.Create</code> に渡すことができます (<xref:System.Xml.XmlReader.Create(System.String,System.Xml.XmlReaderSettings)> など)|
 |スコープ|エッジ|
 |Version|4.5|
