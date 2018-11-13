@@ -4,11 +4,11 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: b19676b2549bbb54af7fb1d72ff0e98352c61383
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d10b0de0a3811e615297b31d2d9c8934c9338078
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43529021"
 ---
 # <a name="using-constructors-c-programming-guide"></a>コンストラクターの使用 (C# プログラミング ガイド)
@@ -88,11 +88,12 @@ Console.WriteLine("{0}, {1}", a, b);
  コンストラクターは、[static](../../../csharp/language-reference/keywords/static.md) キーワードを使用して静的として宣言できます。 静的コンストラクターは、静的フィールドがアクセスされる直前に自動的に呼び出され、通常は静的なクラス メンバーを初期化するために使用されます。 詳細については、「[静的コンストラクター](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)」を参照してください。  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+詳細については、「[C# 言語仕様](../../language-reference/language-specification/index.md)」の[インスタンス コンストラクター](~/_csharplang/spec/classes.md#instance-constructors)と[静的コンストラクター](~/_csharplang/spec/classes.md#static-constructors)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
 - [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
 - [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: 2493e78fd0782eebee17afd979e1c429339d0a3f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: aff7462f0df938a8e96cca33155489bee4891da0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529209"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744445"
 ---
 # <a name="typeof-c-reference"></a>typeof (C# リファレンス)
 型の `System.Type` オブジェクトを取得するために使用されます。 `typeof` 式は次の形式になります。  
@@ -44,8 +44,9 @@ System.Type type = i.GetType();
  [!code-csharp[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の [typeof 演算子](~/_csharplang/spec/expressions.md#the-typeof-operator)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+ 
 ## <a name="see-also"></a>参照
 
 - <xref:System.Type?displayProperty=nameWithType>  

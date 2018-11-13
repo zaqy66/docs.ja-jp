@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2e792a230ccead5d9a73f9b78a83d57738c31085
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "44260072"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>例外の作成とスロー (C# プログラミング ガイド)
@@ -62,11 +62,12 @@ ms.locfileid: "44260072"
  例外クラスへの新しいプロパティの追加は、プロパティによって提供されるデータが例外の解決に役立つ場合にのみ行う必要があります。 派生例外クラスに新しいプロパティを追加する場合は、`ToString()` をオーバーライドして追加情報を返す必要があります。  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+詳細については、「[C# 言語仕様](../../language-reference/language-specification/index.md)」の[例外](~/_csharplang/spec/exceptions.md)と [throw ステートメント](~/_csharplang/spec/statements.md#the-throw-statement)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)  
-- [例外階層](https://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+- [例外階層](../../../standard/exceptions/index.md)  
 - [例外処理](../../../csharp/programming-guide/exceptions/exception-handling.md)

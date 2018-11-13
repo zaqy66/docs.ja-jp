@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|説明|新しい CodeDOM の機能を使用すると、mscorlib.dll の .NET Framework 4.5 バージョンではなく、mscorlib.dll の対象バージョンに対してコンパイルできるようになります。|
+|詳細|新しい CodeDOM の機能を使用すると、mscorlib.dll の .NET Framework 4.5 バージョンではなく、mscorlib.dll の対象バージョンに対してコンパイルできるようになります。|
 |スコープ|エッジ|
 |Version|4.5|
 |型|ランタイム|

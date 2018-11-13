@@ -9,12 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424390"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51214195"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 
@@ -202,7 +202,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 Windows を使っていないユーザーや開発者がとまどうことには、Windows ファイル システムではパス名とディレクトリ名で大文字と小文字が区別されないという特徴があります。 つまり、ディレクトリ名とファイル名は、それが作成されたときの大文字/小文字の使い分けを反映します。 たとえば、次のメソッドを呼び出すと、
 
 ```csharp
-Directory.Create(TeStDiReCtOrY);
+Directory.Create("TeStDiReCtOrY");
 ```
 TeStDiReCtOrY という名前のディレクトリが作成されます。 ディレクトリやファイルの名前を変更し、大文字を小文字に変えるか、小文字を大文字に変えると、その名前変更時の大文字/小文字の使い方がディレクトリ名またはファイル名に反映されます。 たとえば、次のコードでは test.txt というファイルの名前が Test.txt に変更されます。
 

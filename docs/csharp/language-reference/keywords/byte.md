@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: ee70b7c804423a35e2db3fe20ac4b66d8d1b98e2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d952f56df62aa3a53e3889baa65c491e1a0fc81e
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43505096"
 ---
 # <a name="byte-c-reference"></a>byte (C# リファレンス)
@@ -102,7 +102,8 @@ SampleMethod((byte)5);
  暗黙的な数値変換規則について詳しくは、「[暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)」をご覧ください。  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の[整数型](~/_csharplang/spec/types.md#integral-types)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照  
 

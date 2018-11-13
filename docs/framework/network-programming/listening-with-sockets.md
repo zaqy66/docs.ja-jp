@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
 ms.openlocfilehash: 2b19b6d29d0117d4822f370dcc9abc840a18ad3d
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50045046"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982751"
 ---
 # <a name="listening-with-sockets"></a>リッスン (ソケットで)
 リスナーまたはサーバー ソケットは、ネットワーク上のポートを開き、クライアントがそのポートに接続するまで待機します。 他のネットワーク アドレス ファミリとプロトコルもありますが、この例では、TCP/IP ネットワーク用のリモート サービスを作成する方法を説明します。  

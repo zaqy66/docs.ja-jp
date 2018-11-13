@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-ms.openlocfilehash: 0d90f31da49b94eee490e95f0cdf1d582bb0b059
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d3b374c01c78a63e8341023b65dc3e57542ec1fd
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "50184154"
 ---
 # <a name="short-c-reference"></a>short (C# リファレンス)
@@ -100,7 +100,7 @@ short y = (short)3.0;   // OK: explicit conversion
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の[整数型](~/_csharplang/spec/types.md#integral-types)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 74020696a9d2370de2976671a9f1ed944aba8fb9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b2ce46d4493731719ba42fb0f1175c6210d61e07
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43857681"
 ---
 # <a name="properties-c-programming-guide"></a>プロパティ (C# プログラミング ガイド)
@@ -70,11 +70,12 @@ ms.locfileid: "43857681"
 -   [自動実装プロパティ](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+詳細については、「[C# 言語の仕様](../../language-reference/language-specification/index.md)」の[プロパティ](~/_csharplang/spec/classes.md#properties)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [プロパティの使用](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
 - [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
 - [get キーワード](../../../csharp/language-reference/keywords/get.md)    

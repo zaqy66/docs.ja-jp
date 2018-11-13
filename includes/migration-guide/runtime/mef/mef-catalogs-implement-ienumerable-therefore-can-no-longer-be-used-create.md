@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|説明|.NET Framework 4.5 以降では、MEF カタログは IEnumerable を実装するため、シリアライザー (<xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> オブジェクト) の作成には使用できなくなりました。 MEF カタログをシリアル化しようとすると、例外がスローされます。|
+|詳細|.NET Framework 4.5 以降では、MEF カタログは IEnumerable を実装するため、シリアライザー (<xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> オブジェクト) の作成には使用できなくなりました。 MEF カタログをシリアル化しようとすると、例外がスローされます。|
 |提案される解決策|シリアライザーの作成に MEF を使用できなくなりました。|
 |スコープ|Major|
 |バージョン|4.5|

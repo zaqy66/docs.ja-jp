@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: cc3c8f81edb68fb26be560c8635e30dfd6e7b372
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6e3f72226d10910152f7a2139a5a1be35e681ec7
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "50183179"
 ---
 # <a name="protected-c-reference"></a>protected (C# リファレンス)
@@ -46,9 +46,9 @@ protected メンバーは、そのクラス内部と、派生クラスのイン�
 
 `'Point.x' is inaccessible due to its protection level.`
 
-## <a name="c-language-specification"></a>C# 言語仕様
+## <a name="c-language-specification"></a>C# 言語仕様  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の[宣言されたアクセシビリティ](~/_csharplang/spec/basic-concepts.md#declared-accessibility)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 

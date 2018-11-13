@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 54ec003683953b53dedf8885a41350daf5338f83
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 28e74671894297e9fe81e681ba793d0806c9f28a
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43523362"
 ---
 # <a name="internal-c-reference"></a>internal (C# リファレンス)
@@ -87,7 +87,8 @@ public class TestAccess
 ```  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の[宣言されたアクセシビリティ](~/_csharplang/spec/basic-concepts.md#declared-accessibility)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 

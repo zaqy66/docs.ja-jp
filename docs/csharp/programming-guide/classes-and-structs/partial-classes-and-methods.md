@@ -6,11 +6,11 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 21350c28f5fcce812f47742bebe07f5bcdf842f1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2975b9e79824560c711e96382a9ccc03bdc72810
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43521170"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分クラスと部分メソッド (C# プログラミング ガイド)
@@ -158,11 +158,12 @@ partial void onNameChanged()
 -   [delegate](../../../csharp/language-reference/keywords/delegate.md) は、定義および実装されている部分メソッドには使用できますが、定義されているのみの部分メソッドには使用できません。  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+詳細については、「[C# 言語仕様](../../language-reference/language-specification/index.md)」の[部分型](~/_csharplang/spec/classes.md#partial-types)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)  
 - [構造体](../../../csharp/programming-guide/classes-and-structs/structs.md)  
 - [インターフェイス](../../../csharp/programming-guide/interfaces/index.md)  

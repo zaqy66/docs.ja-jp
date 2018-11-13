@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|説明|<xref:System.ServiceModel.Web.WebServiceHost> オブジェクトでは、アプリケーション コードによって明示的なエンドポイントが追加された場合に、既定のエンドポイントが追加されなくなりました。|
+|詳細|<xref:System.ServiceModel.Web.WebServiceHost> オブジェクトでは、アプリケーション コードによって明示的なエンドポイントが追加された場合に、既定のエンドポイントが追加されなくなりました。|
 |提案される解決策|ユーザーが既定のエンドポイントに接続できることを期待していて、他の明示的なエンドポイントが <xref:System.ServiceModel.Web.WebServiceHost?displayProperty=name> に追加されている場合は、既定のエンドポイントも明示的に追加する必要があります (<xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints?displayProperty=name> を使用して)。|
 |スコープ|マイナー|
 |Version|4.5|

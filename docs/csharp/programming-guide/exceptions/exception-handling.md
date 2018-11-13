@@ -5,11 +5,11 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: f6cc48843518a5d8791b6eda3e82a9f140039ceb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99a61dc4125d2fe86d70d5051741a1f1f33e58d4
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43514043"
 ---
 # <a name="exception-handling-c-programming-guide"></a>例外処理 (C# プログラミング ガイド)
@@ -52,12 +52,13 @@ ms.locfileid: "43514043"
  [!code-csharp[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_6.cs)]  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+詳細については、「[C# 言語仕様](../../language-reference/language-specification/index.md)」の[例外](~/_csharplang/spec/exceptions.md)と [try ステートメント](~/_csharplang/spec/statements.md#the-try-statement)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)  
 - [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
 - [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  

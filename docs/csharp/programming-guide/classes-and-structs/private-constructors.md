@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: 1338a6efbe03522093899009178b6f31e558d8dd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 5b387447046e4755287fc9f6a8813a19752799c2
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45646997"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50980717"
 ---
 # <a name="private-constructors-c-programming-guide"></a>プライベート コンストラクター (C# プログラミング ガイド)
 プライベート コンストラクターは、特別なインスタンス コンストラクターです。 通常は、静的メンバーだけを含むクラスで使用されます。 クラスに 1 つ以上のプライベート コンストラクターがあり、パブリック コンストラクターがない場合、他のクラス (入れ子になったクラスを除く) は、このクラスのインスタンスを作成できません。 例:  
@@ -31,11 +31,12 @@ ms.locfileid: "45646997"
  [!code-csharp[csProgGuideObjects#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_3.cs)]  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+詳細については、「[C# 言語仕様](../../language-reference/language-specification/index.md)」の[プライベート コンストラクター](~/_csharplang/spec/classes.md#private-constructors)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
 - [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
 - [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)  

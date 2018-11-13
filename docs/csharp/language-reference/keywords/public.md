@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 84a3bc49b6eea047d518edc01dab7f2301854b6a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b2e09bdb16d6128d69a3eb33cf2cffd4cba60376
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43518187"
 ---
 # <a name="public-c-reference"></a>public (C# リファレンス)
@@ -37,14 +37,14 @@ class SampleClass
 
 'PointTest.y' はアクセスできない保護レベルになっています。
 
-## <a name="c-language-specification"></a>C# 言語仕様
+## <a name="c-language-specification"></a>C# 言語仕様  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の[宣言されたアクセシビリティ](~/_csharplang/spec/basic-concepts.md#declared-accessibility)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [アクセス修飾子](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [C# のキーワード](index.md)
 - [アクセス修飾子](access-modifiers.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-ms.openlocfilehash: 1dca23c4a4216f1edc79b7701a002a28652aed26
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c64aae58317c54499b3d16c5643e4a473544c6a6
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47207142"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744510"
 ---
 # <a name="sbyte-c-reference"></a>sbyte (C# リファレンス)
 
@@ -102,7 +102,8 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
  暗黙的な数値変換規則の詳細については、「[暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)」を参照してください。  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の[整数型](~/_csharplang/spec/types.md#integral-types)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 

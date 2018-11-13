@@ -1,12 +1,12 @@
 ---
 title: LINQ to XML の概要 (C#)
-ms.date: 07/20/2015
+ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 5b557c95993d7f1e907a8eb6ef1e5ec23a2988ab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5e005343226b47fb843b817747ca03c49c28dbfc
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43856622"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML の概要 (C#)
@@ -30,26 +30,50 @@ XML は、多くのコンテキストでデータを書式設定する方法と�
   
  たとえば、「[サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md)」で説明されているように、典型的な XML の購買発注書を使用することもできます。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用することで、次のクエリを実行して購買発注書のすべての品目要素の部品番号属性を取得できます。  
   
-```csharp  
-IEnumerable<string> partNos =  
-from item in purchaseOrder.Descendants("Item")  
-select (string) item.Attribute("PartNumber");  
+```csharp
+// Load the XML file from our project directory containing the purchase orders
+var filename = "PurchaseOrder.xml";
+var currentDirectory = Directory.GetCurrentDirectory();
+var purchaseOrderFilepath = Path.Combine(currentDirectory, filename);
+
+XElement purchaseOrder = XElement.Load($"{purchaseOrderFilepath}");
+
+IEnumerable<string> partNos =  from item in purchaseOrder.Descendants("Item")  
+                               select (string) item.Attribute("PartNumber");  
+``` 
+これは、メソッドの構文の形式で書き直すことができます。
+
+```csharp
+IEnumerable<string> partNos = purchaseOrder.Descendants("Item").Select(x => (string) x.Attribute("PartNumber"));
+```
+
+もう 1 つの例として、金額が $100 を超える品目を部品番号順に並べた一覧が必要であるとします。 この情報を取得するには、次のクエリを実行します。  
+  
+```csharp 
+// Load the XML file from our project directory containing the purchase orders
+var filename = "PurchaseOrder.xml";
+var currentDirectory = Directory.GetCurrentDirectory();
+var purchaseOrderFilepath = Path.Combine(currentDirectory, filename);
+
+XElement purchaseOrder = XElement.Load($"{purchaseOrderFilepath}");
+
+IEnumerable<XElement> pricesByPartNos =  from item in purchaseOrder.Descendants("Item")  
+                                 where (int) item.Element("Quantity") * (decimal) item.Element("USPrice") > 100  
+                                 orderby (string)item.Element("PartNumber")  
+                                 select item;  
 ```  
-  
- もう 1 つの例として、金額が $100 を超える品目を部品番号順に並べた一覧が必要であるとします。 この情報を取得するには、次のクエリを実行します。  
-  
-```csharp  
-IEnumerable<XElement> partNos =  
-from item in purchaseOrder.Descendants("Item")  
-where (int) item.Element("Quantity") *  
-    (decimal) item.Element("USPrice") > 100  
-orderby (string)item.Element("PartNumber")  
-select item;  
-```  
-  
+
+これも、メソッドの構文の形式で書き直すことができます。
+
+```csharp
+IEnumerable<XElement> pricesByPartNos = purchaseOrder.Descendants("Item")
+                                        .Where(item => (int)item.Element("Quantity") * (decimal)item.Element("USPrice") > 100)
+                                        .OrderBy(order => order.Element("PartNumber"));
+```
+
  これらの [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 機能に加え、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では XML プログラミング インターフェイスが機能強化されています。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用すると、次のことを実行できます。  
   
--   ファイルまたはストリームからの XML の読み込み  
+-   [ファイル](how-to-load-xml-from-a-file.md)または[ストリーム](how-to-stream-xml-fragments-from-an-xmlreader.md)からの XML の読み込み  
   
 -   ファイルまたはストリームへの XML のシリアル化  
   

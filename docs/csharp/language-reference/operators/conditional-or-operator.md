@@ -1,6 +1,6 @@
 ---
 title: '|| 演算子 (C# リファレンス)'
-ms.date: 07/20/2015
+ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
 helpviewer_keywords:
@@ -8,40 +8,34 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: 58e5fd72a3748e7af0894093fc461c4efb543608
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "42925541"
 ---
 # <a name="-operator-c-reference"></a>|| 演算子 (C# リファレンス)
-条件付き OR 演算子 (`||`) では、`bool` オペランドの論理 OR が実行されます。 最初のオペランドが `true` と評価されると、2 番目のオペランドは評価されません。 最初のオペランドが `false` と評価されると、2 番目の演算子は、OR 式を、全体として、`true` または `false` に評価するかどうかを判断します。  
-  
-## <a name="remarks"></a>コメント  
- 次の演算は、  
-  
-```csharp  
-x || y  
-```  
-  
- 次の演算に対応しています。  
-  
-```csharp  
-x | y  
-```  
-  
- ただし `x` が `true` の場合、OR 演算は `y` の値に関係なく `true` となるため、`y` は評価されません。 この概念は、"ショートサーキット" 評価と呼ばれます。  
-  
- 条件付き OR 演算子はオーバーロードできませんが、通常の論理演算子、[true](../../../csharp/language-reference/keywords/true.md) 演算子、[false](../../../csharp/language-reference/keywords/false.md) 演算子のオーバーロードは、一定の制約内で、条件付き論理演算子のオーバーロードとも見なされます。  
-  
-## <a name="example"></a>例  
- 次の例では、`||` が使用されている式は、最初のオペランドだけを評価します。 `|` が使用されている式は、両方のオペランドを評価します。 2 番目の例では、両方のオペランドが評価されると、実行時例外が発生します。  
-  
- [!code-csharp[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
-  
-## <a name="see-also"></a>参照
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# 演算子](../../../csharp/language-reference/operators/index.md)
+条件論理 OR 演算子 `||` は、"短絡" 論理 OR 演算子とも呼ばれ、その [bool](../keywords/bool.md) オペランドの論理 OR を計算します。 `x` または `y` のどちらかが `true` と評価された場合、`x || y` の結果は `true` になります。 それ以外の場合、結果は `false` です。 最初のオペランドが `true` と評価されると、2 番目のオペランドは評価されず、演算の結果は `true` になります。 次の例は、その動作を示します。
+
+[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/ConditionalLogicalOperatorsExamples.cs#Or)]
+
+[論理 OR 演算子](or-operator.md) `|` もその `bool` オペランドの論理 OR を計算しますが、常に両方のオペランドを評価します。
+
+## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
+
+ユーザー定義型は条件論理 OR 演算子をオーバーロードできません。 ただし、ユーザー定義型が[論理 OR](or-operator.md)、[true](../keywords/true-operator.md)、および [false](../keywords/false-operator.md) 演算子を特定の方法でオーバーロードする場合、`||` 演算はその型のオペランドに対して評価を行うことができます。 詳細については、「[C# 言語仕様](../language-specification/index.md)」の[ユーザー定義型条件論理演算子](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)に関するセクションを参照してください。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の[条件論理演算子](~/_csharplang/spec/expressions.md#conditional-logical-operators)に関するセクションを参照してください。
+
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# 演算子](index.md)
+- [&& 演算子](conditional-and-operator.md)
+- [! 演算子](logical-negation-operator.md)
+- [| 演算子](or-operator.md)

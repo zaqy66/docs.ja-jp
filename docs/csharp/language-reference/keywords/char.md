@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 95ecfaaf1397f7a4598faba6528b38170062145a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4d4e4719eabf7dbe31a59cc2e1e3d3d9019f080d
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43742027"
 ---
 # <a name="char-c-reference"></a>char (C# リファレンス)
@@ -36,9 +36,9 @@ ms.locfileid: "43742027"
 
 <xref:System.Char?displayProperty=nameWithType> 型では、`char` 値を操作するための静的メソッドがいくつか提供されています。
 
-## <a name="c-language-specification"></a>C# 言語仕様
+## <a name="c-language-specification"></a>C# 言語仕様  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の[整数型](~/_csharplang/spec/types.md#integral-types)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 
