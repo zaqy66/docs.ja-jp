@@ -1,46 +1,46 @@
 ---
-title: NuGet パッケージを公開します。
-description: .NET ライブラリを NuGet に公開するための推奨されるベスト プラクティスです。
+title: NuGet パッケージの公開
+description: .NET ライブラリを NuGet に公開するためのベスト プラクティスの推奨事項。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0602712311411ef3d59825bec8c5e550bc8d8265
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
-ms.translationtype: MT
+ms.openlocfilehash: e0244d2a9d09382c289c74a45969bca0a1311445
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49370323"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757310"
 ---
-# <a name="publishing-a-nuget-package"></a>NuGet パッケージを公開します。
+# <a name="publishing-a-nuget-package"></a>NuGet パッケージの公開
 
-NuGet パッケージは、発行され、パッケージ リポジトリから使用します。 NuGet.org が既知で使用されているリポジトリで最も広く中には、NuGet パッケージを公開する多くの場所があります。
+NuGet パッケージは、パッケージ リポジトリから公開され、使用されます。 NuGet.org は最も広く知られ、使用されているリポジトリですが、NuGet パッケージを公開するための場所は数多くあります。
 
-* **[NuGet.org](https://www.nuget.org/)** は NuGet パッケージのプライマリ、オンラインのリポジトリです。 NuGet.org のすべてのパッケージは、すべてのユーザーに公開します。 既定では、Visual Studio は、パッケージ ソースとして NuGet.org を持つし、多くの開発者の NuGet.org には、のみのパッケージ リポジトリとやり取りします。 NuGet.org では、安定したパッケージとのコミュニティからのフィードバックを対象とするプレリリース パッケージを発行する最適な場所です。
+* **[NuGet.org](https://www.nuget.org/)** は、NuGet パッケージの主要なオンライン リポジトリです。 NuGet.org にあるパッケージはすべて一般に公開されています。 Visual Studio の既定のパッケージ ソースは NuGet.org です。また、多くの開発者にとって、やり取りする唯一のパッケージ リポジトリは NuGet.org です。 NuGet.org は、コミュニティからのフィードバックが必要な安定版パッケージとプレリリース パッケージを公開するのに最適な場所です。
 
-* **[MyGet](https://myget.org/)** リポジトリ サービス サポート[無料のカスタム パッケージは、オープン ソース プロジェクトのフィード](https://www.myget.org/opensource)します。 MyGet パブリック カスタム フィードとは、CI サービスによって作成されたプレリリース パッケージを発行するに最適です。 MyGet はまた、プライベート フィードを商用提供します。
+* **[MyGet](https://myget.org/)** は、オープン ソース プロジェクト用のカスタム パッケージ フィードをサポートしているリポジトリ サービスです。 MyGet のパブリック カスタム フィードは、独自の CI サービスで作成したプレリリース パッケージを公開するのに理想的な場所です。 MyGet には商用のプライベート フィードも用意されています。
 
-* A **[ローカル フィード](/nuget/hosting-packages/local-feeds)** パッケージ リポジトリなどのフォルダーを扱うことができますになり、 `*.nupkg` NuGet によってアクセスできるフォルダー内のファイル。 ローカル フィードは、NuGet パッケージを NuGet.org に公開する前にテストに便利です。
+* **[ローカル フィード](/nuget/hosting-packages/local-feeds)** を使用すると、フォルダーをパッケージ リポジトリのように扱い、フォルダー内の `*.nupkg` ファイルを NuGet からアクセス可能にすることができます。 ローカル フィードは、NuGet.org に公開する前に NuGet パッケージをテストする場合に便利です。
 
 > [!NOTE]
-> NuGet.org[を削除するパッケージを許可しない](/nuget/policies/deleting-packages)アップロードしたら。 UI で公開しないようににパッケージが一覧表示にすることができますが、`*.nupkg`復元で引き続きダウンロードできます。 また、nuget.org では、重複するパッケージのバージョンは許可されません。 不正なパッケージを一覧から削除する必要があるエラーで NuGet パッケージを修正するには、バージョン番号をインクリメントし、パッケージの新しいバージョンを発行します。
+> NuGet.org では、一度アップロードしたら[パッケージを削除することはできません](/nuget/policies/deleting-packages)。 一般の UI から見えないようにパッケージを一覧から外すことはできますが、`*.nupkg` は引き続き復元でダウンロードできます。 また、nuget.org では、パッケージのバージョンを重複させることはできません。 エラーを含む NuGet パッケージを修正するには、正しくないパッケージを一覧から外し、バージョン番号をインクリメントして新しいバージョンのパッケージを公開する必要があります。
 
-**✔️ は**[安定版パッケージとプレリリース パッケージを発行](/nuget/create-packages/publish-a-package)NuGet.org にコミュニティからのフィードバックをします。
+**✔️ 実行** コミュニティからのフィードバックが必要な[安定版パッケージとプレリリース パッケージを公開する](/nuget/create-packages/publish-a-package)場合、NuGet.org を選択します。
 
-**✔️ をご検討ください**継続的インテグレーション ビルドからフィードを MyGet にプレリリース パッケージを発行します。
+**✔️ 検討** 継続的インテグレーションによるビルドから、プレリリース パッケージを MyGet のフィードに公開します。
 
-**✔️ をご検討ください**ローカル フィードまたは MyGet を使用して、開発環境でパッケージをテストします。 パッケージの動作を確認し、NuGet.org に公開します。
+**✔️ 検討** ローカル フィードか MyGet を使用して、開発環境でパッケージをテストします。 パッケージの動作を確認したら、NuGet.org に公開します。
 
 ## <a name="nugetorg-security"></a>NuGet.org のセキュリティ
 
-悪意のあるユーザーが NuGet アカウントへのアクセスし、悪意のあるバージョンのライブラリをアップロードすることはできませんに重要です。 パッケージが発行されたときに、NuGet.org は 2 要素認証と電子メールの通知を提供します。 NuGet.org にログインした後でこれらの機能を有効にする、**アカウント設定**ページ。
+悪意のあるユーザーが自分の NuGet アカウントにアクセスし、悪意のあるバージョンのライブラリをアップロードできないことが重要です。 NuGet.org には、パッケージを公開する際の 2 要素認証と電子メールの通知が用意されています。 NuGet.org にログインした後、**[Account settings]\(アカウント設定\)** ページでこれらの機能を有効にします。
 
 ![alt テキスト](./media/publish-nuget-package/nuget-2fa.png "NuGet アカウントのセキュリティ")
 
-**✔️ は**NuGet へのサインインに Microsoft アカウントを使用します。
+**✔️ 実行** Microsoft アカウントを使用して NuGet にサインインします。
 
-**✔️ は**NuGet にアクセスするための 2 要素認証を有効にします。
+**✔️ 実行** NuGet へのアクセスに対して 2 要素認証を有効にします。
 
-**✔️ は**パッケージが発行されたときに電子メール通知を有効にします。
+**✔️ 実行** パッケージが公開されたときの電子メール通知を有効にします。
 
 >[!div class="step-by-step"]
 [前へ](./sourcelink.md)

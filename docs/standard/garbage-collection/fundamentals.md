@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582750"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982868"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 <a name="top"></a> 共通言語ランタイム (CLR) では、自動メモリ マネージャーとしてガベージ コレクターを使用できます。 次のような利点があります。  
@@ -172,7 +172,7 @@ ms.locfileid: "48582750"
   
  ガベージ コレクターは、次の情報に基づいてオブジェクトが有効かどうかを判断します。  
   
--   **スタック ルート**。 Just-In-Time (JIT) コンパイラとスタック ウォーカーによって提供されるスタック変数。  
+-   **スタック ルート**。 Just-In-Time (JIT) コンパイラとスタック ウォーカーによって提供されるスタック変数。 JIT の最適化では、スタック変数がガベージ コレクターに報告されるコードの領域が延長または短縮される可能性があることに注意してください。
   
 -   **ガベージ コレクション ハンドル**。 マネージド オブジェクトを参照するハンドル。これらのハンドルは、ユーザー コードまたは共通言語ランタイムで割り当てることができます。  
   
