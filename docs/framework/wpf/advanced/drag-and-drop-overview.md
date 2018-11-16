@@ -31,8 +31,7 @@ ms.locfileid: "33549465"
   
  ドラッグ アンド ドロップ操作中に実行される特定の操作はアプリケーション固有で、多くの場合コンテキストによって決定されます。  たとえば、同じストレージ デバイスで選択したファイルをあるフォルダーから別のフォルダーにドラッグすると、既定ではファイルが移動します。一方、[!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] 共有からローカル フォルダーにファイルをドラッグすると、既定ではファイルがコピーされます。  
   
- 
-          [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] が提供するドラッグ アンド ドロップ機能は、さまざまなドラッグ アンド ドロップのシナリオをサポートするよう、非常に柔軟かつカスタマイズできるように設計されています。  ドラッグ アンド ドロップでは、1 つのアプリケーション内で、または異なるアプリケーションの間でのオブジェクトの操作をサポートします。 ドラッグ アンド ドロップの間で[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションおよびその他の Windows アプリケーションも完全にサポートします。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] が提供するドラッグ アンド ドロップ機能は、さまざまなドラッグ アンド ドロップのシナリオをサポートするよう、非常に柔軟かつカスタマイズできるように設計されています。  ドラッグ アンド ドロップでは、1 つのアプリケーション内で、または異なるアプリケーションの間でのオブジェクトの操作をサポートします。 ドラッグ アンド ドロップの間で[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションおよびその他の Windows アプリケーションも完全にサポートします。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、任意の <xref:System.Windows.UIElement> または <xref:System.Windows.ContentElement> がドラッグ アンド ドロップに参加できます。 ドラッグ アンド ドロップ操作に必要なイベントとメソッドは、<xref:System.Windows.DragDrop> クラスで定義されています。 <xref:System.Windows.UIElement> と <xref:System.Windows.ContentElement> クラスには、<xref:System.Windows.DragDrop> のアタッチ済みのイベントのエイリアスが含まれています。これにより、<xref:System.Windows.UIElement> や <xref:System.Windows.ContentElement> が基本要素として継承されるときに、イベントがクラスのメンバーとして表示されます。 これらのイベントにアタッチされたイベント ハンドラーは、基になる <xref:System.Windows.DragDrop> のアタッチ済みのイベントにアタッチされ、同じイベント データのインスタンスを受信します。 詳細については、<xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> イベントを参照してください。  
   
@@ -156,8 +155,7 @@ ms.locfileid: "33549465"
   
  シリアル化可能なオブジェクトはすべて `data` パラメーターに渡すことができます。 データがまだ <xref:System.Windows.DataObject> にラップされていない場合、データは新しい <xref:System.Windows.DataObject> に自動的にラップされます。 複数のデータ項目を渡すには、自分で <xref:System.Windows.DataObject> を作成し、<xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドに渡す必要があります。 詳細については、「[データとデータ オブジェクト](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)」を参照してください。  
   
- 
-          `allowedEffects` パラメーターを使用すると、ドラッグ元が、ドロップ先に対して、データの転送時に何を行えるかを指定できます。 ドラッグ元の一般的な値は <xref:System.Windows.DragDropEffects.Copy>、<xref:System.Windows.DragDropEffects.Move>、および <xref:System.Windows.DragDropEffects.All> です。  
+ `allowedEffects` パラメーターを使用すると、ドラッグ元が、ドロップ先に対して、データの転送時に何を行えるかを指定できます。 ドラッグ元の一般的な値は <xref:System.Windows.DragDropEffects.Copy>、<xref:System.Windows.DragDropEffects.Move>、および <xref:System.Windows.DragDropEffects.All> です。  
   
 > [!NOTE]
 >  ドロップ先でも、ドロップされたデータに対応してどのような効果を意図するか指定できます。 たとえば、ドロップ先がドロップするデータ型を認識しない場合、許可された効果を <xref:System.Windows.DragDropEffects.None> に設定してデータを拒否することができます。 これは通常、 <xref:System.Windows.DragDrop.DragOver> イベント ハンドラーで実行します。  
