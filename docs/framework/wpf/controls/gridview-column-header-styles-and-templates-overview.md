@@ -1,5 +1,5 @@
 ---
-title: GridView の列ヘッダー スタイルおｙびテンプレートの概要
+title: GridView の列ヘッダー スタイルおよびテンプレートの概要
 ms.date: 03/30/2017
 helpviewer_keywords:
 - column headers [WPF], customizing
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33553873"
 ---
-# <a name="gridview-column-header-styles-and-templates-overview"></a>GridView の列ヘッダー スタイルおｙびテンプレートの概要
+# <a name="gridview-column-header-styles-and-templates-overview"></a>GridView の列ヘッダー スタイルおよびテンプレートの概要
 この概要説明のカスタマイズ内の列ヘッダーを使用するプロパティの優先順位、<xref:System.Windows.Controls.GridView>の表示モード、<xref:System.Windows.Controls.ListView>コントロール。  
   
 ## <a name="customizing-a-column-header-in-a-gridview"></a>GridView 内の列ヘッダーをカスタマイズします。  
