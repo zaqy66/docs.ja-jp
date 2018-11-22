@@ -2,11 +2,11 @@
 title: カスタム エンコーダー
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
+ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/22/2018
 ms.locfileid: "50034385"
 ---
 # <a name="custom-encoders"></a>カスタム エンコーダー
@@ -60,7 +60,7 @@ ms.locfileid: "50034385"
  動的ディクショナリ キーの処理に加え、バッファーされセッションの多いメッセージが独自の方法で受信されます。 ドキュメントでリーダーを作成して処理する代わりに、バイナリ エンコーダーは、内部 `MessagePatterns` クラスを使用してバイナリ ストリームを分解します。 考え方は、ほとんどのメッセージがある特定のセットの特定の順序で WCF によって生成されたときに表示されるヘッダーです。 想定を基にしたパターン システムによりメッセージは分割されます。 成功した場合は、XML の解析を行わずに <xref:System.ServiceModel.Channels.MessageHeaders> オブジェクトを初期化します。 成功しなかった場合は、標準の方法に戻ります。  
   
 ### <a name="mtom-encoding"></a>MTOM エンコーディング  
- <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> と呼ばれる追加の構成プロパティをクラスには <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`.MaxBufferSize%2a>。 これには、メッセージ読み取り中にバッファーできるデータ量の上限が設けられています。 すべての MIME パートを 1 つのメッセージに再アセンブルするために、XML 情報セット (Infoset) または他の MIME パートをバッファーすることが必要な場合もあります。  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> クラスには、<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A> という追加の構成プロパティがあります。 これには、メッセージ読み取り中にバッファーできるデータ量の上限が設けられています。 すべての MIME パートを 1 つのメッセージに再アセンブルするために、XML 情報セット (Infoset) または他の MIME パートをバッファーすることが必要な場合もあります。  
   
  HTTP を正しく操作するために、内部 MTOM メッセージ エンコーダーのクラスでは、`GetContentType` (内部) や `WriteMessage` (パブリックで、オーバーライド可能) の内部 API がいくつか用意されています。 HTTP ヘッダーの値を MIME ヘッダーの値と一致させるには、多くの通信を行う必要があります。  
   
