@@ -1,18 +1,18 @@
 ---
 title: クエリ式 (F#)
-description: F# プログラミング言語での LINQ のクエリ式のサポートについて説明します。
+description: LINQ のクエリ式のサポートについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 00398e7cb8876f9bbe11606b7a1024da9d2c35f3
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48033494"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297154"
 ---
 # <a name="query-expressions"></a>クエリ式
 
 > [!NOTE]
-この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
+> この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
 クエリ式を使用すると、データ ソースをクエリし、目的のフォームにデータを格納できます。 クエリ式では、F# での LINQ のサポートを提供します。
 
@@ -508,7 +508,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 <table style="width:100%">
   <tr>
     <th>Transact SQL (いない大文字小文字を区別)</th>
-    <th>F# クエリ式 (大文字と小文字)</th>
+    <th>F#クエリ式 (大文字と小文字)</th>
   </tr>
 <tr><td>
 テーブルからすべてのフィールドを選択します。</br>

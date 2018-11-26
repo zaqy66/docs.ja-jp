@@ -2,17 +2,17 @@
 title: 非同期ワークフロー (F#)
 description: サポートについて F# プログラミング言語、非同期的に計算を実行するための他の作業の実行をブロックせずに実行します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 720996106d2b90392eacc75eb99147691ee83334
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861563"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297076"
 ---
 # <a name="asynchronous-workflows"></a>非同期ワークフロー
 
 > [!NOTE]
-API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
+> API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
 このトピックでは、計算を実行する、非同期的には、他の作業の実行をブロックすることがなく F# でのサポートについて説明します。 たとえば、アプリケーションで他の作業を実行するようユーザーに応答性を維持するための Ui があるアプリケーションを作成する非同期計算を使用できます。
 
@@ -41,7 +41,7 @@ let (result1 : Async<byte[]>) = stream.AsyncRead(bufferSize)
 let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 ```
 
-ほかに`let!`、使用することができます`use!`非同期バインドを実行します。 間の差`let!`と`use!`の違いと同じ`let`と`use`します。 `use!`、現在のスコープの終了時、オブジェクトが破棄されます。 F# 言語の現在のリリースで`use!`場合でも、null に初期化された値を許可しない`use`は。
+ほかに`let!`、使用することができます`use!`非同期バインドを実行します。 間の差`let!`と`use!`の違いと同じ`let`と`use`します。 `use!`、現在のスコープの終了時、オブジェクトが破棄されます。 解放を現在のことに注意してください、F#言語`use!`場合でも、null に初期化された値を許可しない`use`は。
 
 ## <a name="asynchronous-primitives"></a>非同期プリミティブ
 
@@ -51,7 +51,7 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 完成した body が非同期ブロックで囲まれている関数を定義することで、独自の非同期プリミティブを記述することもできます。
 
-返す、F# の関数を作成する F# 非同期プログラミング モデルとその他の非同期モデルのように設計された .NET Framework の非同期のメソッドを使用する`Async`オブジェクト。 F# ライブラリには、簡単に実行する関数があります。
+返す、F# の関数を作成する F# 非同期プログラミング モデルとその他の非同期モデルのように設計された .NET Framework の非同期のメソッドを使用する`Async`オブジェクト。 F#ライブラリが簡単に実行する関数。
 
 非同期ワークフローを使用する 1 つの例は、ここでは含まれていますメソッドのドキュメントにあるその他の多く、 [Async クラス](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)します。
 

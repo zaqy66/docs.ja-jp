@@ -1,18 +1,18 @@
 ---
 title: 文字列 (F#)
-description: F# の 'string' 型が Unicode 文字のシーケンスとして変更不可のテキストを表示する方法について説明します。
+description: について説明しますが、どのようにF#'string' 型では、変更不可のテキストを表す Unicode 文字のシーケンスとして。
 ms.date: 05/16/2016
-ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 158e30224fe50c2324e40d550b75e6abaf843597
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43799344"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296789"
 ---
 # <a name="strings"></a>文字列
 
 > [!NOTE]
-この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
+> この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
 `string`型が Unicode 文字のシーケンスとして変更不可のテキストを表します。 `string` は、.NET Framework の `System.String` のエイリアスです。
 
@@ -78,7 +78,7 @@ ASCII 文字列型の符号なしバイトの配列で表現できます`byte[]`
 
 ## <a name="string-class"></a>String クラス
 
-F# の文字列型である .NET Framework では実際に`System.String`すべての入力、`System.String`メンバーは使用できます。 これが含まれています、`+`演算子、文字列の連結に使用される、`Length`プロパティ、および`Chars`プロパティで、文字列を Unicode 文字の配列として返します。 文字列の詳細については、次を参照してください。`System.String`します。
+文字列を入力するためF#.NET Framework では実際には、`System.String`すべての入力、`System.String`メンバーが使用可能です。 これが含まれています、`+`演算子、文字列の連結に使用される、`Length`プロパティ、および`Chars`プロパティで、文字列を Unicode 文字の配列として返します。 文字列の詳細については、次を参照してください。`System.String`します。
 
 使用して、`Chars`プロパティの`System.String`文字列の個々 の文字の次のコードに示すように、インデックスを指定することでアクセスできます。
 

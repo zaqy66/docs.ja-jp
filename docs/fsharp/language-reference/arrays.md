@@ -2,17 +2,17 @@
 title: 配列 (F#)
 description: 作成し、F# プログラミング言語で配列を使用する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0f72718988ee401631c53b74f02948030e83aac1
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48032731"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297193"
 ---
 # <a name="arrays"></a>配列
 
 > [!NOTE]
-API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
+> API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
 配列は、0 から始まる一連のデータ要素の、固定サイズの変更可能なコレクションで、その型はすべて同じです。
 

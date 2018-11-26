@@ -1,13 +1,13 @@
 ---
 title: 'リソースの管理: use キーワード (F#)'
-description: F# キーワード 'use' と 'using' の関数は、初期化とリソースの解放を制御できますについて説明します。
+description: については、F#キーワード 'use' と 'using' の関数は、初期化とリソースの解放を制御できます。
 ms.date: 05/16/2016
-ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45616070"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296881"
 ---
 # <a name="resource-management-the-use-keyword"></a>リソースの管理: use キーワード
 
@@ -33,8 +33,8 @@ ms.locfileid: "45616070"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
->[!NOTE]
-使用することができます`use`計算式で、カスタマイズされたバージョンの場合、`use`式を使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)します。
+> [!NOTE]
+> 使用することができます`use`計算式で、カスタマイズされたバージョンの場合、`use`式を使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)します。
 
 ## <a name="using-function"></a>関数を使用してください。
 

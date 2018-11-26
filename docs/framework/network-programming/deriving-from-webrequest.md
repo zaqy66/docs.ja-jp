@@ -11,11 +11,11 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
 ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744406"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296907"
 ---
 # <a name="deriving-from-webrequest"></a>WebRequest からの派生
 <xref:System.Net.WebRequest> クラスは、.NET Framework プラグ可能なプロトコル モデルに適合するプロトコル固有の要求ハンドラーを作成するための基本メソッドとプロパティを提供する抽象基底クラスです。 **WebRequest** クラスを使用するアプリケーションは、使用されるプロトコルを指定することなく、サポートされている任意のプロトコルを使用してデータを要求できます。  

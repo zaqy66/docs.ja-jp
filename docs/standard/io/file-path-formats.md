@@ -2,19 +2,18 @@
 title: Windows システムのファイル パス形式
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51214195"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296829"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 
@@ -90,8 +89,8 @@ DOS デバイス パスは次の要素から構成されます。
 
    UNC のためのリンク (わかりやすいことに `UNC`) が呼び出されます。 例:
 
-      `\\.\UNC\Server\Share\Test\Foo.txt`
-      `\\?\UNC\Server\Share\Test\Foo.txt`
+  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\?\UNC\Server\Share\Test\Foo.txt`
 
     デバイス UNC の場合、サーバー/共有の部分がボリュームになります。 たとえば、`\\?\server1\e:\utilities\\filecomparer\` では、サーバー/共有部分は server1\utilities です。 相対ディレクトリ セグメントのある <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> のようなメソッドを呼び出すとき、これは重要です。ボリュームを通り過ぎて移動することはできません。 
 
@@ -114,7 +113,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 - 相対ディレクトリ コンポーネントを評価します (現在のディレクトリの場合は `.`、親ディレクトリの場合は `..`)。
 - 特定の文字をトリミングします。
 
-この正規化は暗黙的に行われますが、<xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> メソッドを呼び出すことで明示的に行うことができます。このメソッドは [GetFullPathName() 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx の呼び出しをラップします。 Windows [GetFullPathName() 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)を P/Invoke で直接呼び出すこともできます。 を呼び出すこともできます。 
+この正規化は暗黙的に行われますが、<xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> メソッドを呼び出すことで明示的に行うことができます。このメソッドは [GetFullPathName() 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)の呼び出しをラップします。 Windows [GetFullPathName() 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) を P/Invoke で直接呼び出すこともできます。
 
 ### <a name="identifying-the-path"></a>パスの識別
 
