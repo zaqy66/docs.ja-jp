@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
 ms.openlocfilehash: 21c708ef632cc0ed923713cd49e22d44848b4db3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199910"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297232"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 コンパイル時に著作権画面を表示および情報メッセージの表示を抑制します。  

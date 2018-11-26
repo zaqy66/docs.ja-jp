@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ef4dce290a7a7f6340b15aa4083cd40518e37d0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507393"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296868"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent ステートメント
 クラス、フォーム、またはドキュメント内のモジュール レベルで宣言されているイベントをトリガーします。  
@@ -73,7 +73,7 @@ RaiseEvent eventname[( argumentlist )]
  前の例を実行し、ボタンをクリックします。 f5 キーを押して**開始**します。 最初のテキスト ボックスで、秒のカウント ダウンが開始されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
   
 > [!NOTE]
->  `My.Application.DoEvents`フォームは、メソッドがまったく同じ方法でイベントを処理できません。 使用することができます、イベントを直接処理するためのフォームは、マルチ スレッドです。 詳細については、次を参照してください。[スレッド処理](../../programming-guide/concepts/threading/index.md)します。  
+>  `My.Application.DoEvents`フォームは、メソッドがまったく同じ方法でイベントを処理できません。 使用することができます、イベントを直接処理するためのフォームは、マルチ スレッドです。 詳細については、次を参照してください。[マネージ スレッド処理](../../../standard/threading/index.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)  

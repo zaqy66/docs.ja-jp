@@ -2,15 +2,15 @@
 title: 探索プロキシを使用してサービスを検索するクライアント アプリケーションの実装方法
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 82b38d684d6a8de66d569c6fe09813f8ee1bea6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b1a71f60d64e77d735a18afede7101b7a184859
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489698"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296465"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>探索プロキシを使用してサービスを検索するクライアント アプリケーションの実装方法
-これは、探索プロキシの実装方法に関する 3 つのトピックのうちの、3 番目のトピックです。 前のトピックで[する方法: 探索プロキシで登録される探索可能なサービスを実装する](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)、探索プロキシに自らを登録する WCF サービスを実装しています。 このトピックでは、WCF サービスを検索、探索プロキシを使用する WCF クライアントを作成します。  
+これは、探索プロキシの実装方法に関する 3 つのトピックのうちの、3 番目のトピックです。 前のトピックで[方法: 探索プロキシで登録される探索可能なサービスを実装](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)、探索プロキシに自らを登録する WCF サービスを実装します。 このトピックでは、WCF サービスを検索する探索プロキシを使用する WCF クライアントを作成します。  
   
 ### <a name="implement-the-client"></a>クライアントの実装  
   
@@ -29,84 +29,84 @@ ms.locfileid: "33489698"
   
 4.  Program.cs ファイルを開き、次のメソッドを追加します。 このメソッドは、引数で指定されたエンドポイント アドレスを使用して、サービス クライアント (プロキシ) を初期化します。  
   
-    ```  
+    ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
-            {  
-                // Create a client  
-                CalculatorServiceClient client = new CalculatorServiceClient(new NetTcpBinding(), endpointAddress);  
-                Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress.Uri);  
-                Console.WriteLine();  
-  
-                double value1 = 100.00D;  
-                double value2 = 15.99D;  
-  
-                // Call the Add service operation.  
-                double result = client.Add(value1, value2);  
-                Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
-  
-                // Call the Subtract service operation.  
-                result = client.Subtract(value1, value2);  
-                Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result);  
-  
-                // Call the Multiply service operation.  
-                result = client.Multiply(value1, value2);  
-                Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result);  
-  
-                // Call the Divide service operation.  
-                result = client.Divide(value1, value2);  
-                Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);  
-                Console.WriteLine();  
-  
-                // Closing the client gracefully closes the connection and cleans up resources  
-                client.Close();  
-            }  
+    {  
+        // Create a client  
+        CalculatorServiceClient client = new CalculatorServiceClient(new NetTcpBinding(), endpointAddress);  
+        Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress.Uri);  
+        Console.WriteLine();  
+
+        double value1 = 100.00D;  
+        double value2 = 15.99D;  
+
+        // Call the Add service operation.  
+        double result = client.Add(value1, value2);  
+        Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
+
+        // Call the Subtract service operation.  
+        result = client.Subtract(value1, value2);  
+        Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result);  
+
+        // Call the Multiply service operation.  
+        result = client.Multiply(value1, value2);  
+        Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result);  
+
+        // Call the Divide service operation.  
+        result = client.Divide(value1, value2);  
+        Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);  
+        Console.WriteLine();  
+
+        // Closing the client gracefully closes the connection and cleans up resources  
+        client.Close();  
+    }  
     ```  
   
 5.  `Main` メソッドに次のコードを追加します。  
   
-    ```  
+    ```csharp  
     public static void Main()  
+    {  
+        // Create a DiscoveryEndpoint that points to the DiscoveryProxy  
+        Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");  
+        DiscoveryEndpoint discoveryEndpoint = new DiscoveryEndpoint(new NetTcpBinding(), new EndpointAddress(probeEndpointAddress));  
+
+        // Create a DiscoveryClient passing in the discovery endpoint  
+        DiscoveryClient discoveryClient = new DiscoveryClient(discoveryEndpoint);  
+
+        Console.WriteLine("Finding ICalculatorService endpoints using the proxy at {0}", probeEndpointAddress);  
+        Console.WriteLine();  
+
+        try  
+        {  
+            // Search for services that implement ICalculatorService              
+            FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
+
+            Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
+            Console.WriteLine();  
+
+            // Check to see if endpoints were found, if so then invoke the service.  
+            if (findResponse.Endpoints.Count > 0)  
             {  
-                // Create a DiscoveryEndpoint that points to the DiscoveryProxy  
-                Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");  
-                DiscoveryEndpoint discoveryEndpoint = new DiscoveryEndpoint(new NetTcpBinding(), new EndpointAddress(probeEndpointAddress));  
-  
-                // Create a DiscoveryClient passing in the discovery endpoint  
-                DiscoveryClient discoveryClient = new DiscoveryClient(discoveryEndpoint);  
-  
-                Console.WriteLine("Finding ICalculatorService endpoints using the proxy at {0}", probeEndpointAddress);  
-                Console.WriteLine();  
-  
-                try  
-                {  
-                    // Search for services that implement ICalculatorService              
-                    FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
-  
-                    Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
-                    Console.WriteLine();  
-  
-                    // Check to see if endpoints were found, if so then invoke the service.  
-                    if (findResponse.Endpoints.Count > 0)  
-                    {  
-                        InvokeCalculatorService(findResponse.Endpoints[0].Address);  
-                    }  
-                }  
-                catch (TargetInvocationException)  
-                {  
-                    Console.WriteLine("This client was unable to connect to and query the proxy. Ensure that the proxy is up and running.");  
-                }  
-  
-                Console.WriteLine("Press <ENTER> to exit.");  
-                Console.ReadLine();  
+                InvokeCalculatorService(findResponse.Endpoints[0].Address);  
             }  
+        }  
+        catch (TargetInvocationException)  
+        {  
+            Console.WriteLine("This client was unable to connect to and query the proxy. Ensure that the proxy is up and running.");  
+        }  
+
+        Console.WriteLine("Press <ENTER> to exit.");  
+        Console.ReadLine();  
+    }  
     ```  
   
- これで、クライアント アプリケーションの実装が完了しました。 進む[する方法: 探索プロキシをテスト](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)です。  
+ これで、クライアント アプリケーションの実装が完了しました。 進んでください[方法: 探索プロキシをテスト](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)します。  
   
 ## <a name="example"></a>例  
  このトピックのコード全体の一覧を以下に示します。  
   
-```  
+```csharp  
 // GeneratedClient.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -198,7 +198,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-```  
+```csharp  
 // Program.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
