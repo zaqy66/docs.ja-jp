@@ -2,12 +2,12 @@
 title: Async および Await を使用した非同期プログラミング (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 7e95010f966119db72a32c21408852d6c3bd6521
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 482b77c7dd151dc454082b0def7843fdb0798260
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122839"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297440"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Async および Await を使用した非同期プログラミング (C#)
 パフォーマンスのボトルネックを回避しアプリケーション全体の応答性を向上させるために、非同期プログラミングを使用できます。 ただ、非同期アプリケーションを作成する従来の方法は複雑で、プログラムの作成、デバッグ、保守が困難な場合があります。  
@@ -54,7 +54,7 @@ async Task<int> AccessTheWebAsync()
   
     // GetStringAsync returns a Task<string>. That means that when you await the  
     // task you'll get a string (urlContents).  
-    Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");  
+    Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");  
   
     // You can do work here that doesn't rely on the string from GetStringAsync.  
     DoIndependentWork();  
@@ -302,7 +302,7 @@ namespace AsyncFirstExample
   
             // GetStringAsync returns a Task<string>. That means that when you await the  
             // task you'll get a string (urlContents).  
-            Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");  
+            Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");  
   
             // You can do work here that doesn't rely on the string from GetStringAsync.  
             DoIndependentWork();  

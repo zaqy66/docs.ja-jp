@@ -1,18 +1,18 @@
 ---
 title: リスト (F#)
-description: F# リスト、同じ型の要素の順序付けられたおり変更できない一連の概要について説明します。
+description: についてF#、同じ型の要素の順序付けされた不変の系列を一覧表示します。
 ms.date: 05/16/2016
-ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50201625"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297505"
 ---
 # <a name="lists"></a>表示内容
 
 > [!NOTE]
-この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
+> この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
 F# のリストは、順序が指定されており変更できない一連の同じ型の要素です。 リストに対する基本操作を実行するには、内の関数を使用して、 [List モジュール](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)します。
 
@@ -56,7 +56,7 @@ F# のリストは、順序が指定されており変更できない一連の�
 
 F# のリストは変更できないため、変更操作を行うと、既存のリストが変更されるのではなく、新しいリストが生成されます。
 
-F# のリストは、リストの先頭のみにアクセスする操作が o (1) であることを意味、シングル リンク リストとして実装され、要素へのアクセスは O (*n*)。
+リストF#、つまり要素へのアクセスは O とリストの先頭のみにアクセスする操作は o (1)、シングル リンク リストとして実装されます (*n*)。
 
 ## <a name="properties"></a>プロパティ
 

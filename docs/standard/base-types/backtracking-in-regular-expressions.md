@@ -1,6 +1,6 @@
 ---
 title: 正規表現におけるバックトラッキング
-ms.date: 03/30/2017
+ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043b4ab00699062d8c1af5866fbeb3773c8ce9af
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 343249f5411d4e5c2335446e7c892b989c8033f2
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039502"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297362"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正規表現におけるバックトラッキング
 <a name="top"></a> バックトラッキングは、正規表現パターンに省略可能な [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) または [代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)が含まれている場合に発生します。この場合、正規表現エンジンは、一致の検索を継続するために、以前に保存した状態に戻ります。 バックトラッキングは、正規表現を強力にするための中心的な機能で、これにより、非常に複雑なパターンを照合できる強力かつ柔軟な正規表現を作成できるようになります。 その一方で、バックトラッキングにはマイナス面もあり、 多くの場合、正規表現エンジンのパフォーマンスを左右する最大の要因になります。 さいわい、正規表現エンジンの動作とバックトラッキングの使用方法は開発者が制御できます。 ここでは、バックトラッキングの動作のしくみと、バックトラッキングを制御する方法について説明します。  
@@ -99,7 +99,7 @@ ms.locfileid: "44039502"
   
 -   パターンの "s" を、一致した文字 "e" の後の "s" ("expressions" の 1 つ目の "s") と比較します。 照合に成功します。  
   
- バックトラッキングを使用した場合、この正規表現パターンを 55 文字の入力文字列と照合するのに 67 回の比較操作が必要になります。 興味深いことに、この正規表現パターンに最短一致の量指定子 .`*?(es)`が含まれていた場合は、照合に必要な比較が増加します。 この場合、正規表現エンジンは、文字列の末尾から "expressions" の "r" までではなく、文字列の先頭までバックトラックして "Es" を見つけなければなりません。その結果、113 回の比較が必要になります。 一般に、正規表現パターンに 1 つの代替構成体または省略可能な量指定子が含まれている場合、パターンの照合に必要な比較操作の回数は入力文字列の文字数の 2 倍以上になります。  
+ バックトラッキングを使用した場合、この正規表現パターンを 55 文字の入力文字列と照合するのに 67 回の比較操作が必要になります。 一般に、正規表現パターンに 1 つの代替構成体または省略可能な量指定子が含まれている場合、パターンの照合に必要な比較操作の回数は入力文字列の文字数の 2 倍以上になります。  
   
  [ページのトップへ](#top)  
   
@@ -135,7 +135,7 @@ ms.locfileid: "44039502"
   
  <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外は、指定されたタイムアウト間隔中に正規表現エンジンが一致を見つけられなかったことを示しますが、例外がスローされた原因は示しません。 原因は、通常は過度なバックトラッキングですが、例外がスローされたときのシステムの負荷に対して、タイムアウト間隔の設定が短すぎた可能性もあります。 例外を処理するときに、入力文字列との一致の検索をやめるか、タイムアウト間隔を延長して一致操作を再試行するかを選択できます。  
   
- たとえば、次のコードは <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> コンストラクターを呼び出して、1 秒のタイムアウト値を持つ <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化します。 正規表現パターン `(a+)+$`は、行の末尾にある 1 つ以上の "a" 文字の 1 つ以上のシーケンスに一致しますが、過度なバックトラッキングの対象になります。 この例では、 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> がスローされたら、タイムアウト値を 3 秒の最大間隔まで大きくします。 その後、パターンに一致させる試行を中止します。  
+ たとえば、次のコードは <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> コンストラクターを呼び出して、1 秒のタイムアウト値を持つ <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化します。 正規表現パターン `(a+)+$` は、行の末尾にある 1 つ以上の "a" 文字の 1 つ以上のシーケンスに一致しますが、過度なバックトラッキングの対象になります。 この例では、 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> がスローされたら、タイムアウト値を 3 秒の最大間隔まで大きくします。 その後、パターンに一致させる試行を中止します。  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
@@ -187,7 +187,7 @@ ms.locfileid: "44039502"
   
  `(?=` *subexpression* `)` は肯定先読みアサーションで、現在の位置の後にある文字が *subexpression*に一致する必要があります。 `(?!`*subexpression*`)` は否定先読みアサーションで、現在の位置の後にある文字が *subexpression*に一致しない必要があります。 肯定と否定のどちらの先読みアサーションも、 *subexpression* が次の部分式のサブセットである場合に特に役立ちます。  
   
- 次の例では、完全修飾型名を検証する 2 つの同等の正規表現パターンが使用されています。 1 つ目のパターンでは、過度なバックトラッキングのためにパフォーマンスが低下します。 2 つ目のパターンでは、1 つ目の正規表現に変更を加えて、入れ子になった量指定子を肯定先読みアサーションに置き換えています。 この例の出力には、<xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> メソッドの実行時間が表示されます。  
+ 次の例では、完全修飾型名を検証する 2 つの同等の正規表現パターンが使用されています。 1 つ目のパターンでは、過度なバックトラッキングのためにパフォーマンスが低下します。 2 つ目のパターンでは、1 つ目の正規表現に変更を加えて、入れ子になった量指定子を肯定先読みアサーションに置き換えています。 この例の出力には、 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> メソッドの実行時間が表示されます。  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking6.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking6.vb#6)]  
@@ -221,4 +221,4 @@ ms.locfileid: "44039502"
 - [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
 - [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
 - [代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
-- [グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

@@ -2,12 +2,12 @@
 title: プログラミングの概念 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: f71e05e05e3d027b6190142e8062ea3caf95edb7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615925"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296569"
 ---
 # <a name="programming-concepts-c"></a>プログラミングの概念 (C#)
 このセクションでは、C# 言語でのプログラミングの概念について説明します。  
@@ -28,7 +28,6 @@ ms.locfileid: "45615925"
 |[オブジェクト指向プログラミング (C#)](../../../csharp/programming-guide/concepts/object-oriented-programming.md)|カプセル化、継承、ポリモーフィズムなど、オブジェクト指向に関する一般的な概念について説明します。|  
 |[リフレクション (C#)](../../../csharp/programming-guide/concepts/reflection.md)|リフレクションを使用して、動的に型のインスタンスを作成する方法、作成したインスタンスを既存のオブジェクトにバインドする方法、または既存のオブジェクトから型を取得して、そのオブジェクトのメソッドを呼び出したり、フィールドやプロパティにアクセスしたりする方法について説明します。|  
 |[シリアル化 (C#)](../../../csharp/programming-guide/concepts/serialization/index.md)|バイナリ、XML、および SOAP のシリアル化の主要な概念について説明します。|  
-|[スレッド処理 (C#)](../../../csharp/programming-guide/concepts/threading/index.md)|.NET スレッド処理モデルの概要について説明し、複数のタスクを同時に実行するコードを記述してアプリケーションのパフォーマンスと応答性を向上させる方法を示します。|  
   
 ## <a name="related-sections"></a>関連項目  
   
