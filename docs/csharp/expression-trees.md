@@ -1,5 +1,5 @@
 ---
-title: Expression Trees
+title: 式ツリー
 description: .NET Core の式ツリーについて、また、それを利用し、検査、変更、実行が可能な構造体としてコードを表す方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
@@ -10,7 +10,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50190737"
 ---
-# <a name="expression-trees"></a>Expression Trees
+# <a name="expression-trees"></a>式ツリー
 
 LINQ を使ったことがあれば、API セットに `Func` 型が含まれる豊富なライブラリを利用したのではないでしょうか (LINQ の知識があまりない場合は、この記事の前に、[LINQ のチュートリアル](linq/index.md)と[ラムダ式](lambda-expressions.md)のチュートリアルを読むことをお勧めします)。*式ツリー*には、関数である引数とのさまざまな相互作用があります。
 
