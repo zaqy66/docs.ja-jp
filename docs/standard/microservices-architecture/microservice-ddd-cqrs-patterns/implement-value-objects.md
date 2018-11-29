@@ -1,37 +1,37 @@
 ---
 title: 値オブジェクトの実装
-description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | 値オブジェクトの実装'
+description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 新しい Entity Framework 機能を使用し、値オブジェクトを実装する方法の詳細とオプション。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 4ba2e48e742e580a1c96743fa89e413c488b8dc7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 057e2e65f975c1de8f332b77c8a23d07329381e6
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106724"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297479"
 ---
-# <a name="implementing-value-objects"></a>値オブジェクトの実装
+# <a name="implement-value-objects"></a>値オブジェクトを実装する
 
 これまでのエンティティと集計に関するセクションで説明したように、ID はエンティティの基礎です。 一方、システムには、ID と ID の追跡を必要としないオブジェクトとデータ項目が多数あります。たとえば、値オブジェクトなどです。
 
 値オブジェクトは他のエンティティを参照できます。 たとえば、あるポイントから別のポイントに到達する方法を示すルートを生成するアプリケーションの場合、そのルートが値オブジェクトです。 これは特定のルート上にあるポイントのスナップショットですが、内部的には City、Road などのエンティティを参照していても、この提案されるルートに ID はありません。
 
-図 9-13 は、Order 集計内の Address 値オブジェクトを示しています。
+図 7-13 は、Order 集計内の Address 値オブジェクトを示しています。
 
-![](./media/image14.png)
+![Order 集計内の Address 値オブジェクト。](./media/image14.png)
 
-**図 9-13**. Order 集計内の Address 値オブジェクト
+**図 7-13**。 Order 集計内の Address 値オブジェクト
 
-図 9-13 に示すように、通常、エンティティは複数の属性で構成されます。 たとえば、`Order` エンティティは、ID があるエンティティとしてモデル化し、内部的に OrderId、OrderDate、OrderItems などの一連の属性で構成することができます。ただし、住所は、単に国、市区町村、番地などで構成された複合値であり、このドメイン内に ID はないため、値をモデル化し、値オブジェクトとして扱う必要があります。
+図 7-13 に示すように、通常、エンティティは複数の属性で構成されます。 たとえば、`Order` エンティティは、ID があるエンティティとしてモデル化し、内部的に OrderId、OrderDate、OrderItems などの一連の属性で構成することができます。ただし、住所は、単に国、市区町村、番地などで構成された複合値であり、このドメイン内に ID はないため、値をモデル化し、値オブジェクトとして扱う必要があります。
 
 ## <a name="important-characteristics-of-value-objects"></a>値オブジェクトの重要な特性
 
 値オブジェクトには主に 2 つの特性があります。
 
--   ID がない。
+- ID がない。
 
--   不変である。
+- 不変である。
 
 1 つ目の特性については既に説明しました。 不変性は重要な要件です。 値オブジェクトが作成された後は、その値を不変にする必要があります。 そのため、オブジェクトの構築時に必要な値を指定する必要がありますが、オブジェクトの有効期間中は変更を許可しない必要があります。
 
@@ -102,11 +102,11 @@ public abstract class ValueObject
 ```csharp
 public class Address : ValueObject
 {
-    public String Street { get; }
-    public String City { get; }
-    public String State { get; }
-    public String Country { get; }
-    public String ZipCode { get; }
+    public String Street { get; private set; }
+    public String City { get; private set; }
+    public String State { get; private set; }
+    public String Country { get; private set; }
+    public String ZipCode { get; private set; }
 
     private Address() { }
 
@@ -130,6 +130,12 @@ public class Address : ValueObject
     }
 }
 ```
+
+ご覧のように、Address のこの値オブジェクト実装では ID が与えられません。そのため、Address クラスでも、ValueObject クラスでも ID フィールドがありません。
+
+Entity Framework で使用するクラスに ID フィールドを置かないことは、EF Core 2.0 までは不可能でした。ID のない値オブジェクトの実装が大幅に改善されます。 これについては次のセクションで説明します。 
+
+不変である値オブジェクトは読み取り専用 (get-only プロパティなど) にすべきであるという意見が出るかもしれませんが、そのとおりです。 しかしながら、値オブジェクトは通常、シリアル化/逆シリアル化されてメッセージ キューを通過します。読み取り専用であれば、デシリアライザーによる値の割り当てが停止します。そのため、十分に実用的な範囲で読み取り専用になるプライベート セットとして残します。
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>EF Core 2.0 でデータベース内の値オブジェクトを永続化する方法
 
@@ -164,10 +170,9 @@ DDD の標準の値オブジェクト パターンと EF Core の所有エンテ
 
 所有エンティティ型の機能は、EF Core バージョン 2.0 以降に追加されました。
 
-所有エンティティ型を使用すると、ドメイン モデルで明示的に定義された独自の ID を持たない型をマップし、任意のエンティティ内で値オブジェクトなどのプロパティとして使用することができます。 所有エンティティ型は、同じ CLR 型を別のエンティティ型と共有します。 定義となるナビゲーションを含むエンティティは、所有者エンティティです。 所有者のクエリを実行すると、所有型が既定で含まれます。
+所有エンティティ型を使用すると、ドメイン モデルで明示的に定義された独自の ID を持たない型をマップし、任意のエンティティ内で値オブジェクトなどのプロパティとして使用することができます。 所有エンティティ型は、同じ CLR 型を別のエンティティ型 (つまり、通常のクラス) と共有します。 定義となるナビゲーションを含むエンティティは、所有者エンティティです。 所有者のクエリを実行すると、所有型が既定で含まれます。
 
-ドメイン モデルのみを見ると、所有型には ID がないように見えます。
-実際には所有型に ID はありますが、所有者ナビゲーション プロパティはこの ID の一部です。
+ドメイン モデルのみを見ると、所有型には ID がないように見えます。 実際には所有型に ID はありますが、所有者ナビゲーション プロパティはこの ID の一部です。
 
 所有型のインスタンスの ID は、完全に独自のものではありません。 この ID は 3 つのコンポーネントで構成されています。
 
@@ -175,7 +180,7 @@ DDD の標準の値オブジェクト パターンと EF Core の所有エンテ
 
 - これらを指すナビゲーション プロパティ
 
-- 所有型のコレクションの場合は、独立したコンポーネント (EF Core 2.0 ではまだサポートされていません)。
+- 所有型のコレクションの場合は、独立したコンポーネント (EF Core 2.0 ではまだサポートされておらず、2.2 でサポートされる予定です)。
 
 たとえば、eShopOnContainers の Ordering ドメイン モデルでは、Order エンティティの一部である Address 値オブジェクトは、所有者エンティティ (Order エンティティ) 内の所有エンティティ型として実装されます。 Address は、ドメイン モデルに定義されている ID プロパティのない型です。 特定の注文の配送先住所を指定するために、Order 型のプロパティとして使用されます。
 
@@ -266,64 +271,64 @@ public class Address
 
 ### <a name="additional-details-on-owned-entity-types"></a>所有エンティティ型に関するその他の詳細情報
 
-•   所有型は、OwnsOne fluent API を使用してナビゲーション プロパティを特定の型に構成するときに定義されます。
+- 所有型は、OwnsOne fluent API を使用してナビゲーション プロパティを特定の型に構成するときに定義されます。
 
-•   メタデータ モデルの所有型の定義は、所有者型、ナビゲーション プロパティ、所有型の CLR 型のコンポジットです。
+- メタデータ モデルの所有型の定義は、所有者型、ナビゲーション プロパティ、所有型の CLR 型のコンポジットです。
 
-•   スタック内の所有型インスタンスの ID (キー) は、所有者型の ID と所有型の定義のコンポジットです。
+- スタック内の所有型インスタンスの ID (キー) は、所有者型の ID と所有型の定義のコンポジットです。
 
 #### <a name="owned-entities-capabilities"></a>所有エンティティの機能:
 
-•   所有型は、他の所有 (入れ子にされた所有型) エンティティまたは非所有 (他のエンティティに対する通常の参照ナビゲーション プロパティ) エンティティを参照できます。
+- 所有型は、他の所有 (入れ子にされた所有型) エンティティまたは非所有 (他のエンティティに対する通常の参照ナビゲーション プロパティ) エンティティを参照できます。
 
-•   同じ所有者エンティティの同じ CLR 型を、個別のナビゲーション プロパティを使用して異なる所有型としてマップすることができます。
+- 同じ所有者エンティティの同じ CLR 型を、個別のナビゲーション プロパティを使用して異なる所有型としてマップすることができます。
 
-•   テーブル分割は規約で設定されますが、ToTable を使用して所有型を別のテーブルにマップすることでオプト アウトすることができます。
+- テーブル分割は規約で設定されますが、ToTable を使用して所有型を別のテーブルにマップすることでオプト アウトすることができます。
 
-•   Eager の読み込みは、所有型に対して自動的に実行されます。つまり、クエリで Include () を呼び出す必要はありません。
+- Eager の読み込みは、所有型に対して自動的に実行されます。つまり、クエリで Include () を呼び出す必要はありません。
+
+- EF Core 2.1 の時点では、属性 \[Owned\] で構成可能
 
 #### <a name="owned-entities-limitations"></a>所有エンティティの制限事項:
 
-•   所有型の DbSet<T> を作成することはできません (仕様)。
+- 所有型の DbSet\<T\> を作成することはできません (仕様)。
 
-•   所有型に対して ModelBuilder.Entity<T>() を呼び出すことはできません (現時点では仕様)。
+- 所有型に対して ModelBuilder.Entity\<T\>() を呼び出すことはできません (現時点では仕様)。
 
-•   所有型のコレクションはまだありません (ただし、EF Core 2.0 の後のバージョンではサポートされる予定です)。
+- 所有型のコレクションはまだありません (EF Core 2.1 の時点では未サポートですが、2.2 でサポートされる予定)。
 
-•   属性を介した構成はサポートされていません。
+- 同じテーブル内の所有者とマップされている (つまり、テーブル分割を使用している) 省略可能な (つまり、null を許容する) 所有型はサポートされていません。 これはプロパティごとにマッピングが行われるためです。全体としての null 複合値を個別に見張ることはしません。
 
-•   同じテーブル内の所有者とマップされている (つまり、テーブル分割を使用している) 省略可能な (つまり、null を許容する) 所有型はサポートされていません。 これは、null の場合に個別の監視機能を持たないためです。
-
-•   所有型の継承マッピングはサポートされていませんが、異なる所有型と同じ継承階層の 2 つのリーフ型をマップすることはできます。 EF Core は、同じ階層に属することの理由にはなりません。
+- 所有型の継承マッピングはサポートされていませんが、異なる所有型と同じ継承階層の 2 つのリーフ型をマップすることはできます。 EF Core は、同じ階層に属することの理由にはなりません。
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>EF6 の複合型との主な違い
 
-•   テーブル分割は省略可能です。つまり、所有型のまま、必要に応じて別のテーブルにマップすることができます。
+- テーブル分割は省略可能です。つまり、所有型のまま、必要に応じて別のテーブルにマップすることができます。
 
-•   他のエンティティを参照することができます (つまり、他の非所有型との関係で依存側として機能することができます)。
-
+- 他のエンティティを参照することができます (つまり、他の非所有型との関係で依存側として機能することができます)。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
--   **Martin Fowler。ValueObject パターン**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Martin Fowler。ValueObject パターン** \
+  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software (ドメイン駆動設計: ソフトウェア中心部の複雑さへの取り組み)。** (書籍、値オブジェクトについての記載あり) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software (ドメイン駆動設計: ソフトウェア中心部の複雑さへの取り組み)。** (書籍、値オブジェクトについての記載あり) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Vaughn Vernon。ドメイン駆動型設計の実装** (書籍、値オブジェクトについての記載あり) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+- **Vaughn Vernon。ドメイン駆動型設計の実装** (書籍、値オブジェクトについての記載あり) \
+  [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **シャドウ プロパティ**
-    [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+- **シャドウ プロパティ** \
+  [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **複合型と値オブジェクト**。 EF Core GitHub リポジトリのディスカッション ([問題] タブ) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
+- **複合型と値オブジェクト**。 EF Core GitHub リポジトリのディスカッション ([問題] タブ) \
+  [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
 
--   **ValueObject.cs.** eShopOnContainers の基底値オブジェクト クラス。
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
+- **ValueObject.cs.** eShopOnContainers の基底値オブジェクト クラス。**  \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
 
--   **Address クラス。** eShopOnContainers の値オブジェクト クラスのサンプル。
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
-
-
+- **Address クラス。** eShopOnContainers の値オブジェクト クラスのサンプル。 \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
 >[!div class="step-by-step"]
 [前へ](seedwork-domain-model-base-classes-interfaces.md)

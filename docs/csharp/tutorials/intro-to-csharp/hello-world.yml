@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: d9992c65b2f5f0f73af9f3234ac389b1c8647337
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: 7d6029e48c67259dc2fb28151196223f2490962f
+  ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200179"
+  ms.lasthandoff: 11/26/2018
+  ms.locfileid: "52297050"
 items:
 - durationInMinutes: 1
   content: >
@@ -98,10 +98,4 @@ items:
     > [!NOTE]
 
     > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
-- content: >-
-    C# 概要の "Hello C#" チュートリアルはこれで終了です。
-
-
-    `string` 型の機能の詳細については、「[C# プログラミング ガイド](../../programming-guide/index.md)」の[文字列](../../programming-guide/strings/index.md)に関するトピックで学習できます。
-
-    [文字列の処理に関するヒント](../../how-to/index.md#working-with-strings)もご覧ください。
+- content: "C# 概要の \"Hello C#\" チュートリアルはこれで終了です。 下の **C# における数値** リンクをクリックすることで次の対話式チュートリアルを開始することも、[.NET サイト](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。 \"学習の継続\" の手順では、これらのチュートリアルに戻ります。\n\n`string` 型の詳細については次を参照してください。\n- 「[C# プログラミング ガイド](../../programming-guide/index.md)」の「[文字列](../../programming-guide/strings/index.md)」 \n- [文字列の処理に関するヒント](../../how-to/index.md#working-with-strings)もご覧ください。"

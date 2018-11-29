@@ -3,12 +3,12 @@ title: 標準的な .NET イベント パターン
 description: .NET イベント パターンに関する情報を提供するほか、標準的なイベント ソースを作成し、標準的なイベントをコードでサブスクライブおよび処理する方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266770"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297037"
 ---
 # <a name="standard-net-event-patterns"></a>標準的な .NET イベント パターン
 
@@ -117,7 +117,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 ## <a name="adding-another-event-declaration"></a>別のイベント宣言の追加
 
-ここで、1 つの機能を追加し、イベント用の他の慣用句について説明します。 すべてのサブディレクトリを走査してファイルを検索する `Search()` メソッドのオーバーロードを追加します。
+ここで、1 つの機能を追加し、イベント用の他の慣用句について説明します。 すべてのサブディレクトリを走査してファイルを検索する `Search` メソッドのオーバーロードを追加します。
 
 多くのサブディレクトリを持つディレクトリでは、これは時間のかかる操作となる場合があります。 次に、新しいディレクトリの検索が開始するたびに発生するイベントを追加します。 このイベントによって、サブスクライバーは進行状況を追跡し、進行状況の更新をユーザーに伝えます。 これまでに作成したすべてのサンプルは、パブリックです。 このイベントを内部イベントにします。 つまり、引数に使用される型を内部型にすることもできるということです。
 
@@ -133,7 +133,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 ここで作成するコードは、多くの点で、コンパイラがフィールドのイベントを定義するために作成した先ほどのコードとよく似ています。 イベントを作成するときに、[プロパティ](properties.md)で使用する構文と非常によく似た構文を使用します。 このハンドラーには、`add` および `remove` という別の名前があることに注意してください。 これらはイベントをサブスクライブするか、またはイベントのサブスクリプションを解除するために呼び出されます。 また、イベント変数を格納するために、プライベートなバッキング フィールドを宣言する必要があることにも注意してください。 このフィールドは null に初期化されます。
 
-次に、サブディレクトリを走査し、両方のイベントを発生させる Search() メソッドのオーバー ロードを追加します。 これを実現する最も簡単な方法は、既定の引数を使用して、すべてのディレクトリの検索を指定することです。
+次に、サブディレクトリを走査して両方のイベントを発生させる `Search` メソッドのオーバー ロードを追加します。 これを実現する最も簡単な方法は、既定の引数を使用して、すべてのディレクトリの検索を指定することです。
 
 [!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
