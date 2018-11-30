@@ -2,12 +2,12 @@
 title: プログラミングの概念 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: 85e23fcca0607e9f42daa94334c983462f6cf881
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643386"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672057"
 ---
 # <a name="programming-concepts-visual-basic"></a>プログラミングの概念 (Visual Basic)
 このセクションでは、Visual Basic 言語でのプログラミングの概念について説明します。  
@@ -28,7 +28,6 @@ ms.locfileid: "33643386"
 |[オブジェクト指向プログラミング (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|カプセル化、継承、ポリモーフィズムなど、オブジェクト指向に関する一般的な概念について説明します。|  
 |[リフレクション (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|リフレクションを使用して、動的に型のインスタンスを作成する方法、作成したインスタンスを既存のオブジェクトにバインドする方法、または既存のオブジェクトから型を取得して、そのオブジェクトのメソッドを呼び出したり、フィールドやプロパティにアクセスしたりする方法について説明します。|
 |[シリアル化 (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|バイナリ、XML、および SOAP のシリアル化の主要な概念について説明します。|  
-|[スレッド処理 (Visual Basic)](../../../visual-basic/programming-guide/concepts/threading/index.md)|.NET スレッド処理モデルの概要について説明し、複数のタスクを同時に実行するコードを記述してアプリケーションのパフォーマンスと応答性を向上させる方法を示します。|  
   
 ## <a name="related-sections"></a>関連項目  
   

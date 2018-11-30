@@ -1,13 +1,13 @@
 ---
 title: アサーション (F#)
-description: F# プログラミング言語で式をテストするためのデバッグ機能として 'アサート' 式を使用する方法について説明します。
+description: 内の式のテストのデバッグ機能として 'アサート' 式を使用する方法について説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842477"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671921"
 ---
 # <a name="assertions"></a>アサーション
 
@@ -27,10 +27,10 @@ assert condition
 
 デバッグ モードでコンパイルする場合にのみにアサーション チェックが有効にはつまり場合、定数`DEBUG`が定義されています。 既定で、プロジェクト システムで、`DEBUG`リリース構成ではなく、デバッグ構成で定義される定数。
 
-F# の例外処理を使用してアサーション エラーをキャッチできません。
+使用してアサーション エラーをキャッチできないF#例外処理します。
 
->[!NOTE]
-`assert`関数に解決<xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>します。
+> [!NOTE]
+> `assert`関数に解決<xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>します。
 
 ## <a name="example"></a>例
 

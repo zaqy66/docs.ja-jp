@@ -1,13 +1,13 @@
 ---
 title: 判別共用体 (F#)
-description: F# を使用する方法について説明します判別共用体。
+description: 使用する方法について説明しますF#判別共用体。
 ms.date: 05/16/2016
-ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43788124"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672247"
 ---
 # <a name="discriminated-unions"></a>判別共用体
 
@@ -84,7 +84,7 @@ let getShapeHeight shape =
 
 ### <a name="unwrapping-discriminated-unions"></a>判別共用体のラップを解除
 
-F# 判別共用体ではよく使用ドメイン モデリングの 1 つの型をラッピングします。 パターン マッチングも使用して基になる値を抽出する簡単です。 1 つのケースに対して一致式を使用する必要はありません。
+F#判別共用体が、1 つの型をラップするドメイン モデリングで使用される多くの場合。 パターン マッチングも使用して基になる値を抽出する簡単です。 1 つのケースに対して一致式を使用する必要はありません。
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -95,15 +95,23 @@ let ([UnionCaseName] [values]) = [UnionValue]
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
 
-let someMethodUsingShaderProgram shaderProgram =
+let someFunctionUsingShaderProgram shaderProgram =
     let (ShaderProgram id) = shaderProgram
     // Use the unwrapped value
-    ..
+    ...
+```
+
+パターン マッチングも使用できます関数のパラメーターで直接ため、1 つのケースがありますのラップを解除することができます。
+
+```fsharp
+let someFunctionUsingShaderProgram (ShaderProgram id) =
+    // Use the unwrapped value
+    ...
 ```
 
 ## <a name="struct-discriminated-unions"></a>構造体の判別共用体
 
-F# 4.1 以降では、構造体と共用体の判別がも表すことができます。  これは、`[<Struct>]`属性。
+以降でF#4.1、構造体としての判別共用体を表すこともできます。  これは、`[<Struct>]`属性。
 
 ```fsharp
 [<Struct>]
