@@ -23,15 +23,15 @@ ms.locfileid: "45988193"
   
 - [`public`](public.md): アクセスは無制限です。  
   
-- [`protected`](protected.md): コンテナーであるクラス、またはコンテナーであるクラスから派生した型にアクセスが制限されます。  
+- [`protected`](protected.md): 修飾対象が定義されているクラス、または修飾対象が定義されているクラスから派生した型にアクセスが制限されます。  
   
 - [`internal`](internal.md): 現在のアセンブリにアクセスが制限されます。  
   
-- [`protected internal`](protected-internal.md): 現在のアセンブリ、またはコンテナーであるクラスから派生した型にアクセスが限定されます。  
+- [`protected internal`](protected-internal.md): 現在のアセンブリ、または修飾対象が定義されているクラスから派生した型にアクセスが限定されます。  
   
-- [`private`](private.md): コンテナーである型にアクセスが制限されます。  
+- [`private`](private.md): 修飾対象が定義されている型にアクセスが制限されます。  
 
-- [`private protected`](private-protected.md): 現在のアセンブリ内の、コンテナーであるクラス、またはコンテナーであるクラスから派生した型にアクセスが制限されます。  
+- [`private protected`](private-protected.md): 現在のアセンブリ内の、修飾対象が定義されているクラス、または修飾対象が定義されているクラスから派生した型にアクセスが制限されます。  
   
  このセクションでは、以下についても説明します。  
   
