@@ -20,7 +20,7 @@ ms.locfileid: "49478927"
 
 次の表では、[暗黙的な変換](implicit-numeric-conversions-table.md)がない .NET 数値型間で事前定義されている明示的変換がまとめてあります。
 
-|From|終了|  
+|変換元|変換先|  
 |----------|--------|  
 |[sbyte](sbyte.md)|`byte`、`ushort`、`uint`、`ulong`、または `char`|  
 |[byte](byte.md)|`sbyte` または `char`|  
@@ -49,7 +49,7 @@ ms.locfileid: "49478927"
   
 - `decimal` 値を整数型に変換するとき、この値は 0 方向に最も近い整数値に丸められます。 結果的に生成される整数値が変換先の型の範囲外になった場合、<xref:System.OverflowException> がスローされます。  
   
-- `double` または `float` 値を整数型に変換するとき、この値は 0 方向に最も近い整数値に丸められます。 結果的に生成される整数値が変換先の型の範囲外になる場合、結果はオーバーフロー [チェック コンテキスト](checked-and-unchecked.md)によって変わります。 チェック済みコンテキストの場合、<xref:System.OverflowException> がスローされます。未チェック コンテキストの場合、結果は変換先の型の未指定値になります。  
+- `double` または `float` 値を整数型に変換するとき、この値は 0 方向に最も近い整数値に丸められます。 結果的に生成される整数値が変換先の型の範囲外になる場合、結果はオーバーフロー [チェック コンテキスト](checked-and-unchecked.md)によって変わります。 チェック済みコンテキストの場合、<xref:System.OverflowException> がスローされます。未チェック コンテキストの場合、結果は変換先の型の不特定な値になります。  
   
 - `double` を `float` に変換すると、`double` 値は最も近い `float` 値に丸められます。 `double` 値が小さすぎるか、大きすぎて変換先の型に合わない場合、結果は 0 か無限になります。  
   
