@@ -59,7 +59,7 @@ ms.locfileid: "50196990"
 
 [!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-verbatim 挿入文字列は、`@` 文字が続く `$` 文字で始まります。 逐語的文字列の詳細については、[string](../keywords/string.md) と [verbatim 識別子](verbatim.md)に関するトピックを参照してください。
+逐語的挿入文字列は、`@` 文字が続く `$` 文字で始まります。 逐語的文字列の詳細については、[string](../keywords/string.md) と [逐語的識別子](verbatim.md)に関するトピックを参照してください。
 
 > [!NOTE]
 > `$` トークンは、逐語的挿入文字列の `@` トークンの前に置く必要があります。
