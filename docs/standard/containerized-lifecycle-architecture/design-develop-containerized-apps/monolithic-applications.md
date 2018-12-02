@@ -4,12 +4,12 @@ description: Microsoft プラットフォームとツールでコンテナー化
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757349"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52743270"
 ---
 # <a name="monolithic-applications"></a>モノリシック アプリケーション
 
@@ -69,7 +69,6 @@ ms.locfileid: "50757349"
 
 図 4-4 も発行フローが Azure Container Registry (レジストリを Azure 内の展開に近く、および Azure Active Directory グループとアカウントによって保護された) は、コンテナー レジストリをまたはその他の任意の Docker レジストリを介してイメージをプッシュすることを示していますDocker Hub やオンプレミス レジストリなど。
 
-
 >[!div class="step-by-step"]
-[前へ](common-container-design-principles.md)
-[次へ](state-and-data-in-docker-applications.md)
+>[前へ](common-container-design-principles.md)
+>[次へ](state-and-data-in-docker-applications.md)
