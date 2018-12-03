@@ -4,12 +4,12 @@ description: Web アプリケーションを構築しているときに、従来
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404148"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745304"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>従来の Web アプリケーションかシングル ページ アプリケーション (SPA) を選択する
 
@@ -73,7 +73,7 @@ SPA を作成するには、JavaScript や TypeScript と、クライアント�
 > - **Angular**  
 >   <https://angular.io>
 > - **JavaScript フレームワークの比較**  
->   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
 **他の (内部またはパブリック) クライアントに API を公開するという要件がアプリケーションに既にある**
 
@@ -91,5 +91,5 @@ SPA を作成するには、JavaScript や TypeScript と、クライアント�
 | 高度で複雑なユーザー インターフェイス要件            | **制限がある**             | **適している**             |
 
 >[!div class="step-by-step"]
-[前へ](modern-web-applications-characteristics.md)
-[次へ](architectural-principles.md)
+>[前へ](modern-web-applications-characteristics.md)
+>[次へ](architectural-principles.md)
