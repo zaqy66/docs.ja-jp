@@ -10,18 +10,18 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: ab2e69c60872aed19d46450f17becc918ffe2a38
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181461"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672005"
 ---
-# <a name="string-c-reference"></a><span data-ttu-id="c9111-102">string (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="c9111-102">string (C# Reference)</span></span>
+# <a name="string-c-reference"></a><span data-ttu-id="82a1f-102">string (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="82a1f-102">string (C# Reference)</span></span>
 
-<span data-ttu-id="c9111-103">`string` 型は、0 個以上の Unicode 文字のシーケンスを表します。</span><span class="sxs-lookup"><span data-stu-id="c9111-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="c9111-104">`string` は .NET の <xref:System.String> の別名です。</span><span class="sxs-lookup"><span data-stu-id="c9111-104">`string` is an alias for <xref:System.String> in .NET.</span></span>
+<span data-ttu-id="82a1f-103">`string` 型は、0 個以上の Unicode 文字のシーケンスを表します。</span><span class="sxs-lookup"><span data-stu-id="82a1f-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="82a1f-104">`string` は .NET の <xref:System.String> の別名です。</span><span class="sxs-lookup"><span data-stu-id="82a1f-104">`string` is an alias for <xref:System.String> in .NET.</span></span>
 
-<span data-ttu-id="c9111-105">`string` は参照型ですが、等値演算子 (`==` および `!=`) は、`string` オブジェクトの参照ではなく、値を比較するように定義されています。</span><span class="sxs-lookup"><span data-stu-id="c9111-105">Although `string` is a reference type, the equality operators (`==` and `!=`) are defined to compare the values of `string` objects, not references.</span></span> <span data-ttu-id="c9111-106">これにより、文字列が等しいかを直感的にテストできます。</span><span class="sxs-lookup"><span data-stu-id="c9111-106">This makes testing for string equality more intuitive.</span></span> <span data-ttu-id="c9111-107">例:</span><span class="sxs-lookup"><span data-stu-id="c9111-107">For example:</span></span>
+<span data-ttu-id="82a1f-105">`string` は参照型ですが、等値演算子 (`==` および `!=`) は、`string` オブジェクトの参照ではなく、値を比較するように定義されています。</span><span class="sxs-lookup"><span data-stu-id="82a1f-105">Although `string` is a reference type, the equality operators (`==` and `!=`) are defined to compare the values of `string` objects, not references.</span></span> <span data-ttu-id="82a1f-106">これにより、文字列が等しいかを直感的にテストできます。</span><span class="sxs-lookup"><span data-stu-id="82a1f-106">This makes testing for string equality more intuitive.</span></span> <span data-ttu-id="82a1f-107">例:</span><span class="sxs-lookup"><span data-stu-id="82a1f-107">For example:</span></span>
 
 ```csharp
 string a = "hello";
@@ -32,37 +32,37 @@ Console.WriteLine(a == b);
 Console.WriteLine((object)a == (object)b);
 ```
 
-<span data-ttu-id="c9111-108">文字列の内容が等しいので、"True"、"False" の順に表示されますが、`a` および `b` は同じ文字列インスタンスを参照しません。</span><span class="sxs-lookup"><span data-stu-id="c9111-108">This displays "True" and then "False" because the content of the strings are equivalent, but `a` and `b` do not refer to the same string instance.</span></span>
+<span data-ttu-id="82a1f-108">文字列の内容が等しいので、"True"、"False" の順に表示されますが、`a` および `b` は同じ文字列インスタンスを参照しません。</span><span class="sxs-lookup"><span data-stu-id="82a1f-108">This displays "True" and then "False" because the content of the strings are equivalent, but `a` and `b` do not refer to the same string instance.</span></span>
 
-<span data-ttu-id="c9111-109">+ 演算子は、文字列を連結します。</span><span class="sxs-lookup"><span data-stu-id="c9111-109">The + operator concatenates strings:</span></span>
+<span data-ttu-id="82a1f-109">+ 演算子は、文字列を連結します。</span><span class="sxs-lookup"><span data-stu-id="82a1f-109">The + operator concatenates strings:</span></span>
 
 ```csharp
 string a = "good " + "morning";
 ```
 
-<span data-ttu-id="c9111-110">これは、"good morning" を含む文字列オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="c9111-110">This creates a string object that contains "good morning".</span></span>
+<span data-ttu-id="82a1f-110">これは、"good morning" を含む文字列オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="82a1f-110">This creates a string object that contains "good morning".</span></span>
 
-<span data-ttu-id="c9111-111">文字列は "*変更不可*" です。文字列オブジェクトの作成後、そのコンテンツを変更することはできません。構文では変更可能に見えても、変更不可です。</span><span class="sxs-lookup"><span data-stu-id="c9111-111">Strings are *immutable*--the contents of a string object cannot be changed after the object is created, although the syntax makes it appear as if you can do this.</span></span> <span data-ttu-id="c9111-112">たとえば、このコードを作成すると、コンパイラによって新しい文字列オブジェクトを格納する新しいシーケンス オブジェクトが生成され、その新しいオブジェクトが b に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="c9111-112">For example, when you write this code, the compiler actually creates a new string object to hold the new sequence of characters, and that new object is assigned to b.</span></span> <span data-ttu-id="c9111-113">そして、文字列 "h" がガベージ コレクションの対象になります。</span><span class="sxs-lookup"><span data-stu-id="c9111-113">The string "h" is then eligible for garbage collection.</span></span>
+<span data-ttu-id="82a1f-111">文字列は "*変更不可*" です。文字列オブジェクトの作成後、そのコンテンツを変更することはできません。構文では変更可能に見えても、変更不可です。</span><span class="sxs-lookup"><span data-stu-id="82a1f-111">Strings are *immutable*--the contents of a string object cannot be changed after the object is created, although the syntax makes it appear as if you can do this.</span></span> <span data-ttu-id="82a1f-112">たとえば、このコードを作成すると、コンパイラによって新しい文字列オブジェクトを格納する新しいシーケンス オブジェクトが生成され、その新しいオブジェクトが b に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="82a1f-112">For example, when you write this code, the compiler actually creates a new string object to hold the new sequence of characters, and that new object is assigned to b.</span></span> <span data-ttu-id="82a1f-113">そして、文字列 "h" がガベージ コレクションの対象になります。</span><span class="sxs-lookup"><span data-stu-id="82a1f-113">The string "h" is then eligible for garbage collection.</span></span>
 
 ```csharp
 string b = "h";
 b += "ello";
 ```
 
-<span data-ttu-id="c9111-114">[] 演算子は、`string` の各文字への読み取り専用アクセスに使用できます。</span><span class="sxs-lookup"><span data-stu-id="c9111-114">The [] operator can be used for readonly access to individual characters of a `string`:</span></span>
+<span data-ttu-id="82a1f-114">[] 演算子は、`string` の各文字への読み取り専用アクセスに使用できます。</span><span class="sxs-lookup"><span data-stu-id="82a1f-114">The [] operator can be used for readonly access to individual characters of a `string`:</span></span>
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-<span data-ttu-id="c9111-115">リテラル文字列は `string` 型であり、二重引用符で囲む形式と、@-quoted 形式の 2 とおりがあります。</span><span class="sxs-lookup"><span data-stu-id="c9111-115">String literals are of type `string` and can be written in two forms, quoted and @-quoted.</span></span> <span data-ttu-id="c9111-116">二重引用符で囲む場合は、リテラル文字列の前後に二重引用符 (") を付けます。</span><span class="sxs-lookup"><span data-stu-id="c9111-116">Quoted string literals are enclosed in double quotation marks ("):</span></span>
+<span data-ttu-id="82a1f-115">リテラル文字列は `string` 型であり、二重引用符で囲む形式と、@-quoted 形式の 2 とおりがあります。</span><span class="sxs-lookup"><span data-stu-id="82a1f-115">String literals are of type `string` and can be written in two forms, quoted and @-quoted.</span></span> <span data-ttu-id="82a1f-116">二重引用符で囲む場合は、リテラル文字列の前後に二重引用符 (") を付けます。</span><span class="sxs-lookup"><span data-stu-id="82a1f-116">Quoted string literals are enclosed in double quotation marks ("):</span></span>
 
 ```csharp
 "good morning"  // a string literal
 ```
 
-<span data-ttu-id="c9111-117">リテラル文字列には、任意の文字リテラルを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="c9111-117">String literals can contain any character literal.</span></span> <span data-ttu-id="c9111-118">これにはエスケープ シーケンスが含まれます。</span><span class="sxs-lookup"><span data-stu-id="c9111-118">Escape sequences are included.</span></span> <span data-ttu-id="c9111-119">次の例では、円記号にエスケープ シーケンス `\\`、文字 f に `\u0066`、改行に `\n` を使用しています。</span><span class="sxs-lookup"><span data-stu-id="c9111-119">The following example uses escape sequence `\\` for backslash, `\u0066` for the letter f, and `\n` for newline.</span></span>
+<span data-ttu-id="82a1f-117">リテラル文字列には、任意の文字リテラルを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="82a1f-117">String literals can contain any character literal.</span></span> <span data-ttu-id="82a1f-118">これにはエスケープ シーケンスが含まれます。</span><span class="sxs-lookup"><span data-stu-id="82a1f-118">Escape sequences are included.</span></span> <span data-ttu-id="82a1f-119">次の例では、円記号にエスケープ シーケンス `\\`、文字 f に `\u0066`、改行に `\n` を使用しています。</span><span class="sxs-lookup"><span data-stu-id="82a1f-119">The following example uses escape sequence `\\` for backslash, `\u0066` for the letter f, and `\n` for newline.</span></span>
 
 ```csharp
 string a = "\\\u0066\n";
@@ -70,47 +70,46 @@ Console.WriteLine(a);
 ```
 
 > [!NOTE]
-> <span data-ttu-id="c9111-120">エスケープ コード `\udddd` (`dddd` は 4 桁の数字) は、Unicode 文字 U +`dddd` を表します。</span><span class="sxs-lookup"><span data-stu-id="c9111-120">The escape code `\udddd` (where `dddd` is a four-digit number) represents the Unicode character U+`dddd`.</span></span> <span data-ttu-id="c9111-121">8 桁の Unicode エスケープ コード `\Udddddddd` も認識できます。</span><span class="sxs-lookup"><span data-stu-id="c9111-121">Eight-digit Unicode escape codes are also recognized: `\Udddddddd`.</span></span>
+> <span data-ttu-id="82a1f-120">エスケープ コード `\udddd` (`dddd` は 4 桁の数字) は、Unicode 文字 U +`dddd` を表します。</span><span class="sxs-lookup"><span data-stu-id="82a1f-120">The escape code `\udddd` (where `dddd` is a four-digit number) represents the Unicode character U+`dddd`.</span></span> <span data-ttu-id="82a1f-121">8 桁の Unicode エスケープ コード `\Udddddddd` も認識できます。</span><span class="sxs-lookup"><span data-stu-id="82a1f-121">Eight-digit Unicode escape codes are also recognized: `\Udddddddd`.</span></span>
 
-<span data-ttu-id="c9111-122">verbatim 文字列リテラルの場合は、先頭に `@` を付け、さらに前後に二重引用符を付けます。</span><span class="sxs-lookup"><span data-stu-id="c9111-122">Verbatim string literals start with `@` and are also enclosed in double quotation marks.</span></span> <span data-ttu-id="c9111-123">例:</span><span class="sxs-lookup"><span data-stu-id="c9111-123">For example:</span></span>
+<span data-ttu-id="82a1f-122">verbatim 文字列リテラルの場合は、先頭に `@` を付け、さらに前後に二重引用符を付けます。</span><span class="sxs-lookup"><span data-stu-id="82a1f-122">Verbatim string literals start with `@` and are also enclosed in double quotation marks.</span></span> <span data-ttu-id="82a1f-123">例:</span><span class="sxs-lookup"><span data-stu-id="82a1f-123">For example:</span></span>
 
 ```csharp
 @"good morning"  // a string literal
 ```
 
-<span data-ttu-id="c9111-124">verbatim 文字列の場合の利点は、エスケープ シーケンスが "*処理されない*" ため、たとえば、完全修飾ファイル名が書きやすくなることです。</span><span class="sxs-lookup"><span data-stu-id="c9111-124">The advantage of verbatim strings is that escape sequences are *not* processed, which makes it easy to write, for example, a fully qualified file name:</span></span>
+<span data-ttu-id="82a1f-124">verbatim 文字列の場合の利点は、エスケープ シーケンスが "*処理されない*" ため、たとえば、完全修飾ファイル名が書きやすくなることです。</span><span class="sxs-lookup"><span data-stu-id="82a1f-124">The advantage of verbatim strings is that escape sequences are *not* processed, which makes it easy to write, for example, a fully qualified file name:</span></span>
 
 ```csharp
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"
 ```
 
-<span data-ttu-id="c9111-125">@-quoted 文字列に二重引用符を含めるには、二重引用符を二重にします。</span><span class="sxs-lookup"><span data-stu-id="c9111-125">To include a double quotation mark in an @-quoted string, double it:</span></span>
+<span data-ttu-id="82a1f-125">@-quoted 文字列に二重引用符を含めるには、二重引用符を二重にします。</span><span class="sxs-lookup"><span data-stu-id="82a1f-125">To include a double quotation mark in an @-quoted string, double it:</span></span>
 
 ```csharp
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.
 ```
 
-<span data-ttu-id="c9111-126">`@` 特殊文字のその他の使用については、[@ -- 逐語的識別子](../tokens/verbatim.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c9111-126">For other uses of the `@` special character, see [@ -- verbatim identifier](../tokens/verbatim.md).</span></span>
+<span data-ttu-id="82a1f-126">`@` 特殊文字のその他の使用については、[@ -- 逐語的識別子](../tokens/verbatim.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="82a1f-126">For other uses of the `@` special character, see [@ -- verbatim identifier](../tokens/verbatim.md).</span></span>
 
-<span data-ttu-id="c9111-127">C# での文字列の詳細については、「[文字列](../../programming-guide/strings/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c9111-127">For more information about strings in C#, see [Strings](../../programming-guide/strings/index.md).</span></span>
+<span data-ttu-id="82a1f-127">C# での文字列の詳細については、「[文字列](../../programming-guide/strings/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="82a1f-127">For more information about strings in C#, see [Strings](../../programming-guide/strings/index.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="c9111-128">例</span><span class="sxs-lookup"><span data-stu-id="c9111-128">Example</span></span>
+## <a name="example"></a><span data-ttu-id="82a1f-128">例</span><span class="sxs-lookup"><span data-stu-id="82a1f-128">Example</span></span>
 
 [!code-csharp[csrefKeywordsTypes#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#17)]  
 
-## <a name="c-language-specification"></a><span data-ttu-id="c9111-129">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="c9111-129">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="82a1f-129">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="82a1f-129">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="c9111-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9111-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="82a1f-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="82a1f-130">See also</span></span>
 
-- [<span data-ttu-id="c9111-131">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="c9111-131">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="c9111-132">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="c9111-132">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="c9111-133">文字列を使用するためのベスト プラクティス</span><span class="sxs-lookup"><span data-stu-id="c9111-133">Best Practices for Using Strings</span></span>](../../../standard/base-types/best-practices-strings.md)
-- [<span data-ttu-id="c9111-134">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="c9111-134">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="c9111-135">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="c9111-135">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="c9111-136">参照型</span><span class="sxs-lookup"><span data-stu-id="c9111-136">Reference Types</span></span>](reference-types.md)
-- [<span data-ttu-id="c9111-137">値型</span><span class="sxs-lookup"><span data-stu-id="c9111-137">Value Types</span></span>](value-types.md)
-- [<span data-ttu-id="c9111-138">基本的な文字列操作</span><span class="sxs-lookup"><span data-stu-id="c9111-138">Basic String Operations</span></span>](../../../standard/base-types/basic-string-operations.md)
-- [<span data-ttu-id="c9111-139">新しい文字列の作成</span><span class="sxs-lookup"><span data-stu-id="c9111-139">Creating New Strings</span></span>](../../../standard/base-types/creating-new.md)
-- [<span data-ttu-id="c9111-140">数値結果テーブルの書式設定</span><span class="sxs-lookup"><span data-stu-id="c9111-140">Formatting Numeric Results Table</span></span>](formatting-numeric-results-table.md)
+- [<span data-ttu-id="82a1f-131">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="82a1f-131">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="82a1f-132">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="82a1f-132">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="82a1f-133">文字列を使用するためのベスト プラクティス</span><span class="sxs-lookup"><span data-stu-id="82a1f-133">Best Practices for Using Strings</span></span>](../../../standard/base-types/best-practices-strings.md)
+- [<span data-ttu-id="82a1f-134">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="82a1f-134">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="82a1f-135">参照型</span><span class="sxs-lookup"><span data-stu-id="82a1f-135">Reference Types</span></span>](reference-types.md)
+- [<span data-ttu-id="82a1f-136">値型</span><span class="sxs-lookup"><span data-stu-id="82a1f-136">Value Types</span></span>](value-types.md)
+- [<span data-ttu-id="82a1f-137">基本的な文字列操作</span><span class="sxs-lookup"><span data-stu-id="82a1f-137">Basic String Operations</span></span>](../../../standard/base-types/basic-string-operations.md)
+- [<span data-ttu-id="82a1f-138">新しい文字列の作成</span><span class="sxs-lookup"><span data-stu-id="82a1f-138">Creating New Strings</span></span>](../../../standard/base-types/creating-new.md)
+- [<span data-ttu-id="82a1f-139">数値結果テーブルの書式設定</span><span class="sxs-lookup"><span data-stu-id="82a1f-139">Formatting Numeric Results Table</span></span>](formatting-numeric-results-table.md)
