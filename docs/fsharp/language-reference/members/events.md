@@ -1,18 +1,18 @@
 ---
 title: イベント (F#)
-description: F# のイベントに関数呼び出しを関連付けるユーザーの操作は、GUI プログラミングの重要なことを有効にする方法について説明します。
+description: 学習方法F#イベントには、GUI プログラミングの重要なユーザー アクションと関数の呼び出しを関連付けることが有効にします。
 ms.date: 05/16/2016
-ms.openlocfilehash: ce547bc9ec7b5e0ef9a7492c0889bb690e3040c2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 82cde0e1df980a2ae204ad0923f4bac0769f0831
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43871934"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745343"
 ---
 # <a name="events"></a>イベント
 
 > [!NOTE]
-この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
+> この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
 イベントを使用すると、関数呼び出しをユーザーによる操作に関連付けることができます。イベントは、GUI プログラミングの重要な要素です。 イベントは、アプリケーションまたはオペレーティング システムによってトリガーすることもできます。
 
