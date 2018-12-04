@@ -90,6 +90,7 @@
       "ms.devlang": "dotnet",
       "author": "dotnet-bot",
       "ms.author": "dotnetcontent",
+      "bilingual_type": "hover over",    
       "searchScope": [".NET"],
       "uhfHeaderId": "MSDocsHeader-DotNet",
       "apiPlatform": "dotnet",
