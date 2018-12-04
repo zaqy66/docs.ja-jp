@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615327"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672038"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>正規表現での前方参照構成体
 前方参照は、文字列内の繰り返しの文字または部分文字列を識別するために便利な方法を提供します。 たとえば、入力文字列に複数回出現する任意の部分文字列が含まれている場合は、キャプチャ グループを使用して最初の一致を検出し、前方参照を使用して部分文字列の後続の出現箇所を見つけます。  
@@ -103,7 +103,7 @@ ms.locfileid: "45615327"
 |パターン|説明|  
 |-------------|-----------------|  
 |`(?<1>a)`|文字 "a" を検出し、結果を `1` という名前のキャプチャ グループに割り当てます。|  
-|`(?<1>\1b)*`|`1` という名前のグループの 0 個または 1 個の出現箇所を "b" と共に検出し、結果を `1` という名前のキャプチャ グループに割り当てます。|  
+|`(?<1>\1b)*`|`1` という名前のグループの 0 個以上の出現箇所を "b" と共に検出し、結果を `1` という名前のキャプチャ グループに割り当てます。|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
@@ -114,7 +114,7 @@ ms.locfileid: "45615327"
   
 2.  次の文字に進み、式 `\1b` で文字列 "ab" を検出します。 次に、その結果 "ab" を `\1` に割り当てます。  
   
-3.  これにより 4 番目の文字に進みます。 式 `(?<1>\1b)` を 0 回以上照合し、式 `\1b` で文字列 "abb" を検出します。 その結果 "abb" を `\1` に割り当てます。  
+3.  これにより 4 番目の文字に進みます。 式 `(?<1>\1b)*` を 0 回以上照合し、式 `\1b` で文字列 "abb" を検出します。 その結果 "abb" を `\1` に割り当てます。  
   
  この例では、`*` はループ量指定子であり、正規表現エンジンが定義したパターンを照合できなくなるまで、繰り返し評価されます。 ループ量指定子によってグループの定義はクリアされません。  
   

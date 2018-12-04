@@ -1,15 +1,15 @@
 ---
 title: マイクロサービスの回復性と高可用性
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスの回復性と高可用性
+description: マイクロサービスの高可用性を実現するには、一時的なネットワークや依存関係のエラーに耐えるような設計が必要であり、回復性も求められます。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 19657c35e6640558526bf390b81eb08220821a4c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106318"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745330"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>マイクロサービスの回復性と高可用性
 
@@ -19,18 +19,22 @@ ms.locfileid: "37106318"
 
 アプリケーションのアップグレード中にエラーが発生したときなど、他のシナリオでは、回復性の問題が複雑化します。 展開システムと連携するマイクロサービスは、新しいバージョンへの進行を継続できるかどうか、または代わりに一貫性のある状態を維持するために以前のバージョンにロールバックするかどうかを決定する必要があります。 進行を続けるために十分なマシンを使用できるかどうか、マイクロサービスの以前のバージョンを回復する方法などの疑問を考慮する必要があります。 これには、アプリケーション全体とオーケストレーターがこれらの決定を行うことができるように、マイクロサービスが正常性に関する情報を出力する必要があります。
 
-さらに、回復力はクラウドベースのシステムがどのように動作する必要があるかに関連します。 前述のように、クラウドベースのシステムは障害を受け入れる必要があり、そこから自動的に回復を試みる必要があります。 たとえば、ネットワークまたはコンテナーの障害が発生した場合、多くの場合、クラウドの傷害は部分的なので、クライアント アプリまたはクライアント サービスが、メッセージの送信を再試行したり要求を再試行したりするための戦略を持っている必要があります。 このガイドの「[Implementing Resilient Applications](#implementing_resilient_apps)」(回復力のあるアプリケーションの実装) セクションでは、部分的な障害に対処する方法を説明します。 
-  [Polly](https://github.com/App-vNext/Polly) などのライブラリを使用することによる、.NET Core で指数バックオフまたは遮断器パターンを使用した再試行などの手法について説明しています。このライブラリは、この問題を処理するためのさまざまなポリシーを提供します。
+さらに、回復力はクラウドベースのシステムがどのように動作する必要があるかに関連します。 前述のように、クラウドベースのシステムは障害を受け入れる必要があり、そこから自動的に回復を試みる必要があります。 たとえば、ネットワークまたはコンテナーの障害が発生した場合、多くの場合、クラウドの傷害は部分的なので、クライアント アプリまたはクライアント サービスが、メッセージの送信を再試行したり要求を再試行したりするための戦略を持っている必要があります。 このガイドの「[Implementing Resilient Applications](../implement-resilient-applications/index.md)」(回復力のあるアプリケーションの実装) セクションでは、部分的な障害に対処する方法を説明します。 [Polly](https://github.com/App-vNext/Polly) などのライブラリを使用することによる、.NET Core で指数バックオフまたは遮断器パターンを使用した再試行などの手法について説明しています。このライブラリは、この問題を処理するためのさまざまなポリシーを提供します。
 
 ## <a name="health-management-and-diagnostics-in-microservices"></a>正常性の管理とマイクロサービスでの診断
 
-当然のことでありながら見落とされがちなのは、マイクロサービスが、その正常性と診断を報告する必要があることです。 報告しない場合、操作の観点からの洞察がほとんどありません。 独立したサービスのセット間の診断イベントを関連付けること、およびイベントの順序を理解するためにコンピューター クロックのずれを処理することは困難です。 合意したプロトコルとデータ形式でマイクロサービスと対話するのと同じように、正常性および診断イベントをログに記録する方法を標準化する必要があります。これは、最終的にクエリと表示のためのイベントの保存につながります。 マイクロサービスのアプローチでは、異なる複数のチームが単一のログ記録形式に合意することが重要です。 アプリケーションでの診断イベントの表示に一貫した方法が必要です。
+当然のことでありながら見落とされがちなのは、マイクロサービスが、その正常性と診断を報告する必要があることです。 報告しない場合、操作の観点からの分析情報がほとんどありません。 独立したサービスのセット間の診断イベントを関連付けること、およびイベントの順序を理解するためにコンピューター クロックのずれを処理することは困難です。 合意したプロトコルとデータ形式でマイクロサービスと対話するのと同じように、正常性および診断イベントをログに記録する方法を標準化する必要があります。これは、最終的にクエリと表示のためのイベントの保存につながります。 マイクロサービスのアプローチでは、異なる複数のチームが単一のログ記録形式に合意することが重要です。 アプリケーションでの診断イベントの表示に一貫した方法が必要です。
 
 ### <a name="health-checks"></a>正常性チェック
 
 正常性は診断とは異なります。 正常性は、適切なアクションを実行するためにマイクロサービスが現在の状態を報告することです。 可用性を維持するためのアップグレードと展開の操作は、この良い例です。 プロセスのクラッシュやコンピューターの再起動のために、サービスが現在異常でも、サービスは引き続き動作している場合があります。 最も望まないことは、アップグレードの実行によってこれを悪化させることです。 最良のアプローチは、最初に調査を行うか、マイクロサービスが回復できるように時間を与えることです。 マイクロサービスからの正常性イベントは、情報に基づいた意思決定を行い、実質的に自己修復サービスを作成するのに役立ちます。
 
-このガイドの ASP.NET Core サービス セクションでの正常性チェックの実装では、新しい ASP.NET HealthChecks ライブラリをマイクロサービスで使用し、適切なアクションを実行するために状態を監視サービスに報告する方法について説明しています。
+このガイドの [ASP.NET Core サービス セクションでの正常性チェックの実装](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services)では、新しい ASP.NET HealthChecks ライブラリをマイクロサービスで使用し、適切なアクションを実行するために状態を監視サービスに報告する方法について説明しています。
+
+Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使用することもできます。これは、[GitHub](https://github.com/Xabaril/BeatPulse) で、および [NuGet パッケージ](https://www.nuget.org/packages/BeatPulse/)として入手できます。 このライブラリでも正常性チェックが行われますが、チェックが 2 種類あります。
+
+- **稼動**: マイクロサービスが稼動しているかどうか。つまり要求を受け入れ、応答できるかどうかがチェックされます。 
+- **準備**: マイクロサービスの依存関係 (データベース、キュー サービスなど) 自体が準備できていて、マイクロサービスが求められた操作を実行できるかどうかがチェックされます。 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>診断とログのイベント ストリームを使用する
 
@@ -44,9 +48,9 @@ ms.locfileid: "37106318"
 
 マイクロサービスベースのアプリケーションを作成するときには、複雑さを処理する必要があります。 もちろん、単一のマイクロサービスを扱うのは簡単ですが、数十または数百の種類の数千のマイクロサービスのインスタンスは複雑な問題です。 これは単なるマイクロサービス アーキテクチャの構築のことではありません。安定し、凝縮したシステムを構築する場合、高可用性、アドレス指定能力、回復力、正常性、および診断が必要です。
 
-![](./media/image22.png)
+![オーケストレーターは、マイクロ サービスを実行するためのサポート プラットフォームを指定します。](./media/image22.png)
 
-**図 4-22** マイクロサービス プラットフォームは、アプリケーションの正常性の管理の基礎です。
+**図 4-22** マイクロサービス プラットフォームは、アプリケーションの正常性の管理の基礎です
 
 図 4-22 に示す複雑な問題は、自分で解決するのは非常に困難です。 開発チームは、ビジネス上の問題の解決、およびマイクロサービスベースのアプローチでのカスタム アプリケーションの構築に集中する必要があります。 複雑なインフラストラクチャの問題の解決を重視しないようにする必要があります。そのようにすると、どのマイクロサービスベースのアプリケーションのコストも膨大になります。 したがって、マイクロサービス指向プラットフォームでは、オーケストレーターまたはマイクロサービス クラスターと呼ばれるものが、インフラストラクチャ リソースを効率的に使用して、サービスの構築と実行の難しい問題を解決しようとします。 これにより、マイクロサービス アプローチを使用するアプリケーションの構築の複雑な作業が軽減されます。
 
@@ -54,30 +58,27 @@ ms.locfileid: "37106318"
 
 ## <a name="additional-resources"></a>その他の技術情報
 
--   **Twelve-Factor App.XI.ログ: イベント ストリームとしてログを処理する**
-    [*https://12factor.net/logs*](https://12factor.net/logs)
+- **Twelve-Factor App.XI.ログ: イベント ストリームとしてログを処理する** \
+  [*https://12factor.net/logs*](https://12factor.net/logs)
 
--   **Microsoft 診断 EventFlow ライブラリ。** GitHub リポジトリ。
+- **Microsoft 診断 EventFlow ライブラリ** GitHub リポジトリ。 \
+  [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
-    [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+- **Azure 診断について** \
+  [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **Azure 診断について**
-    [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+- **Windows コンピューターを Azure の Log Analytics サービスに接続する** \
+  [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Windows コンピューターを Azure の Log Analytics サービスに接続する**
-    [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **意味を表すログ: セマンティック ログ アプリケーション ブロックを使用する** \
+  [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
--   **意味を表すログ: セマンティック ログ アプリケーション ブロックを使用する**
-    [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+- **Splunk** 公式サイト。 \
+  [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **Splunk。** 公式サイト。
-    [*https://www.splunk.com/*](https://www.splunk.com/)
-
--   **EventSource クラス**。 Windows イベント トレーシング (ETW) の API[*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
-
-
-
+- Windows イベント トレーシング (ETW) の **EventSource クラス** API \
+  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
 
 >[!div class="step-by-step"]
-[前へ](microservice-based-composite-ui-shape-layout.md)
-[次へ](scalable-available-multi-container-microservice-applications.md)
+>[前へ](microservice-based-composite-ui-shape-layout.md)
+>[次へ](scalable-available-multi-container-microservice-applications.md)
