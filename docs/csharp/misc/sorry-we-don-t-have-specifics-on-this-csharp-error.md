@@ -1,5 +1,5 @@
 ---
-title: 申し訳ありません&#39;t この c# エラーに関する詳細があります。
+title: 申し訳ありません、この c# エラーに関する詳細がありません。
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -889,20 +889,20 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33314071"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>申し訳ありません&#39;t この c# エラーに関する詳細があります。
-申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のフォーラムのいずれかを使用している他の開発者を依頼することができます。  
+# 申し訳ありません、この c# エラーに関する詳細がありません。
+申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のフォーラムのいずれかを使用して他の開発者に質問することができます。  
   
- [Visual C# 言語](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- に関する質問や一般的な議論のため、Visual c# 言語の構文とコンパイラ フォーラムを提供します。  
+ [Visual C# 言語](https://social.msdn.microsoft.com/Forums/ja-jp/home?forum=csharpgeneralja)  
+ Visual C# 言語の構文とコンパイラに関する質問や一般的な議論のためのフォーラムを提供します。  
   
- [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- Visual Studio 環境で作業する方法に関する質問をフォーラムを提供します。  
+ [Visual C# IDE](https://social.msdn.microsoft.com/Forums/ja-jp/home?forum=csharpgeneralja)  
+ Visual Studio 環境で作業する方法に関する質問のためのフォーラムを提供します。  
   
- [Visual C# 全般](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- に関する質問については、フォーラムを提供し、Visual c# を使用したその他のフォーラムで取り上げていないを発行します。  
+ [Visual C# 全般](https://social.msdn.microsoft.com/Forums/ja-jp/home?forum=csharpgeneralja)  
+ Visual C# を使用したその他のフォーラムで取り上げていない質問や一般的な議論のためのフォーラムを提供します。  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- に関する質問については、フォーラムを提供し、Visual c# での問題です。  
+ [StackOverflow](https://ja.stackoverflow.com/?tags=c%23)  
+ Visual C# に関する質問と問題についてのフォーラムを提供します。  
   
  関連項目:  
  [Visual C# プログラマのための追加リソース](../../csharp/getting-started/additional-resources.md)  
