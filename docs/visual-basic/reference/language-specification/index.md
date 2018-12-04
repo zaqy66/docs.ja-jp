@@ -20,7 +20,7 @@ Visual Basic 言語仕様は、Visual Basic の文法と構文に関するあら
   
 このサイトには、[VB 11 仕様](../../../../_vblang/spec/introduction.md)が含まれています。 この仕様は、[dotnet/vblang GitHub レポジトリ](https://github.com/dotnet/vblang/blob/master/spec/README.md) に含まれるマークダウン ファイルからビルドされています。
 
-仕様の問題は [dotnet/vblang](https://github.com/dotnet/vblang/issues) リポジトリで作成する必要があります。 見つけたエラーを修正したい場合は、同じレポジトリに[プル要求](https://github.com/dotnet/vblang/pulls)を送信できます。
+仕様の問題は [dotnet/vblang](https://github.com/dotnet/vblang/issues) リポジトリで作成する必要があります。 見つけたエラーを修正したい場合は、同じレポジトリに[Pull Request](https://github.com/dotnet/vblang/pulls)を送信できます。
 
 ## <a name="see-also"></a>関連項目  
  [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)

@@ -23,7 +23,7 @@ C# 言語仕様は、C# の構文と使用法に関する信頼性のある情�
 
 バージョン 6.0 の仕様は標準として承認されていません。 このサイトには、[*ドラフト*の C# 6.0 仕様](../../../../_csharplang/spec/introduction.md)が含まれています。 [dotnet/csharplang GitHub レポジトリ](https://github.com/dotnet/csharplang/blob/master/spec/README.md)に含まれているマークダウン ファイルから作成されています。
 
-ドラフト仕様の問題は [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) リポジトリで作成する必要があります。 見つけたエラーを修正したい場合は、同じレポジトリに[プル要求](https://github.com/dotnet/csharplang/pulls)を送信できます。
+ドラフト仕様の問題は [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) リポジトリで作成する必要があります。 見つけたエラーを修正したい場合は、同じレポジトリに[Pull Request](https://github.com/dotnet/csharplang/pulls)を送信できます。
 
 ## <a name="see-also"></a>関連項目
 
