@@ -3,17 +3,17 @@ title: キーワード リファレンス (F#)
 description: すべての F# 言語のキーワードに関する情報へのリンクを検索します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/05/2018
 ms.locfileid: "43856025"
 ---
 # <a name="keyword-reference"></a>キーワード リファレンス
 
 このトピックでには、F# 言語のすべてのキーワードについての情報へのリンクが含まれています。
 
-## <a name="f-keyword-table"></a>F# キーワード テーブル
+## <a name="f-keyword-table"></a>F#キーワードのテーブル
 
 次の表は、簡単な説明と詳細が含まれている関連するトピックへのリンクと共に、アルファベット順に、F# のすべてのキーワードを示します。
 
