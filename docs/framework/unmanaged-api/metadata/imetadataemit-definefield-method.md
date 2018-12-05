@@ -66,13 +66,13 @@ HRESULT DefineField (
  [in]フィールドの定数値。  
   
  `cchValue`  
- [in](Unicode) 文字のサイズ`pValue`します。  
+ [in] \(Unicode) 文字のサイズ`pValue`します。  
   
  `pmd`  
  [out]`mdFieldDef`に割り当てられたトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **プラットフォーム:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor.h  
   
