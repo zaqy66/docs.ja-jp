@@ -1,12 +1,12 @@
 ---
 title: 算術演算子 (F#)
-description: F# プログラミング言語で利用できる算術演算子について説明します。
+description: 使用可能な算術演算子について説明します、F#プログラミング言語。
 ms.date: 04/04/2018
-ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2c0e2e25a4f79d00455d978e235e4bef16b52586
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "45597440"
 ---
 # <a name="arithmetic-operators"></a>算術演算子
@@ -34,6 +34,7 @@ ms.locfileid: "45597440"
 |--------------|-----|
 |`+` (正)|算術式に適用できます。 値の符号は変更されません。|
 |`-` (否定、負の値)|算術式に適用できます。 値の符号を変更します。|
+
 オーバーフローまたはアンダー フローの整数型で動作では、ラップします。 これにより、不適切な結果です。 整数のオーバーフローは、ソフトウェアがそのアカウントに書き込まれないときに、セキュリティの問題に投稿できる可能性がある重大な問題です。 アプリケーションの問題では場合の checked 演算子の使用を検討`Microsoft.FSharp.Core.Operators.Checked`します。
 
 ## <a name="summary-of-binary-comparison-operators"></a>二項比較演算子の概要
@@ -59,7 +60,7 @@ ms.locfileid: "45597440"
 
 ## <a name="operators-and-type-inference"></a>演算子と型推論
 
-式の演算子の使用には、その演算子の型の推定が制限されます。 また、演算子の使用では、演算子の使用は演算型を意味するために、自動ジェネリック化ができないようにします。 F# コンパイラが推論の他の情報がない場合、`int`算術式の型として。 別の型を指定することで、この動作をオーバーライドできます。 引数の型および戻り値の型のため`function1`ように、次のコードが推論されます`int`の型が、`function2`と推論されます`float`します。
+式の演算子の使用には、その演算子の型の推定が制限されます。 また、演算子の使用では、演算子の使用は演算型を意味するために、自動ジェネリック化ができないようにします。 その他の情報がない場合、F#コンパイラが推論`int`算術式の型として。 別の型を指定することで、この動作をオーバーライドできます。 引数の型および戻り値の型のため`function1`ように、次のコードが推論されます`int`の型が、`function2`と推論されます`float`します。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
 
