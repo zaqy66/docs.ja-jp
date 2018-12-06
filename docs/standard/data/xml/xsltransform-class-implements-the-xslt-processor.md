@@ -77,7 +77,7 @@ public void Load(XPathNavigator, XmlResolver, Evidence);
   
  URI も証拠も指定されていない場合は、スタイル シートに対して設定されている証拠が完全に信頼されます。 信頼されていないソースからスタイル シートを読み込んだり、信頼されていない拡張オブジェクトを <xref:System.Xml.Xsl.XsltArgumentList> に追加したりしないでください。  
   
- セキュリティ レベルと証拠、それがスクリプトに及ぼす影響の詳細については、「[XSLT Stylesheet Scripting Using \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)」(<msxsl:script> を使用する XSLT スタイルシート スクリプト) を参照してください。 セキュリティ レベルと証拠、それが拡張オブジェクトに与える影響の詳細については、「[スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)」を参照してください。  
+ セキュリティ レベルと証拠、それがスクリプトに及ぼす影響の詳細については、「[\<msxsl:script> を使用する XSLT スタイルシート スクリプト](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)」 を参照してください。 セキュリティ レベルと証拠、それが拡張オブジェクトに与える影響の詳細については、「[スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)」を参照してください。  
   
  セキュリティ レベルと証拠、それが `document()` 関数に及ぼす影響については、「[外部の XSLT スタイル シートとドキュメントの解決](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md)」を参照してください。  
   
