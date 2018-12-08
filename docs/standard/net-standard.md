@@ -56,10 +56,10 @@ ms.locfileid: "50186071"
 
 バージョン管理規則は主に 2 つあります。
 
-- 追加式。 .NET Standard バージョンは論理的に同心円形です。高位のバージョンには、旧バージョンのすべての API が組み込まれています。 バージョン間に互換性に影響する変更はありません。
+- 追加式: .NET Standard バージョンは論理的に同心円形です。高位のバージョンには、旧バージョンのすべての API が組み込まれています。 バージョン間に互換性に影響する変更はありません。
 - 不変: 出荷後、.NET Standard のバージョンは固定されます。 新しい API は、特定の .NET 実装 (.NET Core など) でまず使用できるようになります。 .NET Standard の審査会が、新しい API をすべての .NET 実装で使用できるようにした方がよいと判断すると、新しい .NET Standard バージョンに追加されます。
 
-## <a name="specification"></a>指定
+## <a name="specification"></a>仕様
 
 .NET Standard の仕様は、標準化された API のセットです。 この仕様は、.NET 実装、具体的には Microsoft (.NET Framework、.NET Core、Mono を含む) と Unity によって管理されています。 [GitHub](https://github.com/dotnet/standard) 経由の新しい .NET Standard のバージョンの構築の一環として、公開フィードバック プロセスが使われています。
 
@@ -76,7 +76,7 @@ ms.locfileid: "50186071"
 
 便利に読めるようにし、特定の開発者シナリオ (コンパイラを使用するなど) を可能にするために、派生成果物が提供されています。
 
-- [マークダウンの API 一覧](https://github.com/dotnet/standard/tree/master/docs/versions)
+- [マークダウン形式の API 一覧](https://github.com/dotnet/standard/tree/master/docs/versions)
 - [NuGet パッケージ](../core/packages.md)として配布され、[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) メタパッケージによって参照される参照アセンブリ。
 
 ### <a name="package-representation"></a>パッケージ表現
