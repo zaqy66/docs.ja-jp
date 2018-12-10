@@ -2,12 +2,12 @@
 title: 非同期プログラムにおける制御フロー (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: c4f1213eb9162985170c8eb1176fe01d8c721d2e
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 45d349fa131daf3fdf39d29d53d8ec236c79f81f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347956"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150603"
 ---
 # <a name="control-flow-in-async-programs-c"></a>非同期プログラムにおける制御フロー (C#)
 
@@ -39,7 +39,7 @@ public partial class MainWindow : Window
 
         // SIX
         resultsTextBox.Text +=
-            String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
+            $"\r\nLength of the downloaded string: {contentLength}.\r\n";
     }
 
     async Task<int> AccessTheWebAsync()
@@ -199,7 +199,7 @@ Length of the downloaded string: 33946.
                     "           About to display contentLength and exit.\r\n";
 
                 resultsTextBox.Text +=
-                    String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
+                    $"\r\nLength of the downloaded string: {contentLength}.\r\n";
             }
 
             async Task<int> AccessTheWebAsync()

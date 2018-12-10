@@ -30,8 +30,6 @@
 ### [Azure Service Fabric の使用](architect-microservice-container-applications/using-azure-service-fabric.md)
 ## [Docker ベースのアプリケーションの開発プロセス](docker-application-development-process/index.md)
 ### [Docker アプリの開発ワークフロー](docker-application-development-process/docker-app-development-workflow.md)
-## [Linux または Windows Nano Server ホスト上で 1 つのコンテナー ベースの NET Core Web アプリケーションを展開する](net-core-single-containers-linux-windows-server-hosts/index.md)
-## [レガシ モノリシック NET Framework アプリケーションを Windows コンテナーに移行する](containerize-net-framework-applications/index.md)
 ## [複数のコンテナーとマイクロサービス ベースの NET アプリケーションのデザインと開発](multi-container-microservice-net-applications/index.md)
 ### [マイクロサービス指向アプリケーションの設計](multi-container-microservice-net-applications/microservice-application-design.md)
 ### [単純なデータ ドリブン CRUD マイクロサービスの作成](multi-container-microservice-net-applications/data-driven-crud-microservice.md)

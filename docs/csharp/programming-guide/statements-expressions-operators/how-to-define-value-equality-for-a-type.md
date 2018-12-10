@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
 - object equivalence [C#]
-- Equals method [C#] , overriding
+- Equals method [C#], overriding
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 365aa5a71eb3d07a79920f565a66fcac67de0b42
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8abcace9c648ba2132d2b6849ae1c9d347d6fd29
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042622"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126784"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>方法: 型の値の等価性を定義する (C# プログラミング ガイド)
 クラスまたは構造体を定義する場合は、型に値の等価性 (同値) のカスタム定義を作成することが有用かどうかを判断します。 通常、値の等価性を実装するのは、その型のオブジェクトがある種のコレクションに追加されることが想定されている場合、または、そのオブジェクトの主な目的が一連のフィールドまたはプロパティを格納することである場合です。 値の等価性は、型のすべてのフィールドおよびプロパティの比較に基づいて定義できます。また、サブセットに基づいて定義することもできます。 ただし、いずれの場合も、クラスおよび構造体の両方について、等価性を保証する 5 つの条件に従って実装する必要があります。  
@@ -65,4 +65,4 @@ ms.locfileid: "44042622"
 ## <a name="see-also"></a>参照
 
 - [等価比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)

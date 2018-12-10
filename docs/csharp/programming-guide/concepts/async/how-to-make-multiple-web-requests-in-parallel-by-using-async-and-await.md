@@ -2,12 +2,12 @@
 title: '方法: Async と Await を使用して複数の Web 要求を並列実行する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: b366b43cf1c6114f02f026da25aeb5e30dc91c6f
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 527cca572e48cd4b6b895c828327a5770ac83d89
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453425"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125601"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>方法: Async と Await を使用して複数の Web 要求を並列実行する (C#)
 非同期メソッドでは、タスクは作成されると開始されます。 [await](../../../../csharp/language-reference/keywords/await.md) 演算子は、メソッド内でタスクが終了するまで処理が続行できなくなった時点で、タスクに適用されます。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  
@@ -89,7 +89,7 @@ var result = await myTask;
         var bytes = content.Length;  
         // Strip off the "https://".  
         var displayURL = url.Replace("https://", "");  
-        resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
+        resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
     }  
     ```  
   
@@ -130,8 +130,7 @@ var result = await myTask;
         int total = length1 + length2 + length3;  
   
         // Display the total count for the downloaded websites.  
-        resultsTextBox.Text +=  
-            string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);  
+        resultsTextBox.Text += $"\r\n\r\nTotal bytes returned:  {total}\r\n";
     }  
     ```  
   
@@ -201,8 +200,7 @@ namespace AsyncExample_MultipleTasks
             int total = length1 + length2 + length3;  
   
             // Display the total count for the downloaded websites.  
-            resultsTextBox.Text +=  
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);  
+            resultsTextBox.Text += $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }  
   
         async Task<int> ProcessURLAsync(string url, HttpClient client)  
@@ -220,8 +218,8 @@ namespace AsyncExample_MultipleTasks
             var bytes = content.Length;  
             // Strip off the "https://".  
             var displayURL = url.Replace("https://", "");  
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
-        }  
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
+        }
     }  
 }  
 ```  

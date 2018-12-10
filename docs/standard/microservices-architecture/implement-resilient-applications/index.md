@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec79221f0238d61f1ca1b2b7c58b1e16be7f4df4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875125"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130795"
 ---
 # <a name="implementing-resilient-applications"></a>回復性の高いアプリケーションの実装
 
@@ -21,7 +21,6 @@ ms.locfileid: "37875125"
 
 アプリケーションの多くの個々のコンポーネントにも、正常性監視機能を組み込むも必要があります。 この章のガイドラインに従うと、複雑で、クラウド ベースの展開で発生する一時的なダウンタイムや定期的な障害があってもスムーズに動作するアプリケーションを作成できます。
 
-
 >[!div class="step-by-step"]
-[前へ](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
-[次へ](handle-partial-failure.md)
+>[前へ](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[次へ](handle-partial-failure.md)

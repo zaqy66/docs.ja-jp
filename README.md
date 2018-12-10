@@ -8,7 +8,7 @@
 
 これら 3 つすべてのリポジトリの問題とタスクがここに記載されています。 これらのリソースを使用した大規模なコミュニティがあります。 問題に適切なタイミングで対処するように最善を努めています。 [問題のポリシー](issues-policy.md)に関するトピックに、問題を分類して解決するための手順を詳しく説明しています。
 
-.NET ドキュメントの改善と完成に役立つご協力をお待ちしています。ご投稿いただく場合は、[.NET コミュニティの共同作成者用のプロジェクト](https://github.com/dotnet/docs/projects/35)でさまざまなアイデアをご覧ください。 [共同作成ガイド](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)に、使用されている手順に関する説明があります。 または、関心のあるタスクの[問題リスト](https://github.com/dotnet/docs/issues)をご確認ください。
+.NET ドキュメントの改善と完成に役立つご協力をお待ちしています。ご投稿いただく場合は、[.NET コミュニティの共同作成者用のプロジェクト](https://github.com/dotnet/docs/projects/35)でさまざまなアイデアをご覧ください。 [共同作成ガイド](CONTRIBUTING.md)に、使用されている手順に関する説明があります。 または、関心のあるタスクの[問題リスト](https://github.com/dotnet/docs/issues)をご確認ください。
 
 [Xamarin](https://docs.microsoft.com/xamarin)、[Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) および [Unity](http://docs.unity3d.com/Manual/index.html) でもこのドキュメントが使用される予定です。
 

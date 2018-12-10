@@ -4,11 +4,11 @@ description: ML.NET で機械学習モデルの構築、トレーニング、ス
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: c9b34bd6bcbac62e9f9c33226f5d0feb41168392
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672406"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150733"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>機械学習の処理のために複数ファイルのデータを読み込む - ML.NET
 

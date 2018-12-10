@@ -2,20 +2,19 @@
 title: Infer.NET と確率論的プログラミングでゲーム対戦リスト アプリを作成する
 description: 確率論的プログラミングと Infer.NET を使用して、TrueSkill の簡易バージョンに基づいたゲーム対戦リスト アプリについて紹介します。
 ms.date: 10/04/2018
-ms.topic: how-to
-ms.custom: mvc
-ms.openlocfilehash: 990fd60d809c893730bf2682946f89dbe59f36a5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.custom: mvc,how-to
+ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "49401698"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152470"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET と確率論的プログラミングでゲーム対戦リスト アプリを作成する
 
 このハウツー ガイドでは、Infer.NET を使用した確率論的プログラミングについて説明します。 確率論的プログラミングは、カスタム モデルがコンピューター プログラムとして表現される機械学習アプローチです。 ドメインの知識をモデルに組み込み、機械学習システムから解釈可能にすることができます。 また、新しいデータを取得したときの学習プロセスであるオンライン推論もサポートしています。 Infer.NET は、Microsoft で Azure、Xbox、Bing のさまざまな製品で使用されています。
 
-## <a name="what-is-probabilistic-programming"></a>確率論的プログラミングとは 
+## <a name="what-is-probabilistic-programming"></a>確率論的プログラミングとは
 
 確率論的プログラミングを使用すると、現実世界のプロセスの統計モデルを作成することができます。 
 

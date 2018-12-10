@@ -1,15 +1,13 @@
 ---
 title: dotnet build-server コマンド - .NET Core CLI
 description: dotnet build-server コマンドは、ビルドによって起動されたサーバーとやり取りします。
-author: mairaw
-ms.author: mairaw
-ms.date: 07/02/2018
-ms.openlocfilehash: 1c59c85f246b79c7e2552f704db5b4f076f9b502
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.date: 12/04/2018
+ms.openlocfilehash: 2746ade12cc819089258483e84a8c0f02a64c755
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404334"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125679"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
@@ -29,24 +27,24 @@ dotnet build-server [-h|--help]
 
 ## <a name="commands"></a>コマンド
 
-`shutdown`
+* **`shutdown`**
 
-dotnet から起動されるビルド サーバーをシャットダウンします。 既定では、すべてのサーバーがシャットダウンされます。
+  dotnet から起動されるビルド サーバーをシャットダウンします。 既定では、すべてのサーバーがシャットダウンされます。
 
 ## <a name="options"></a>オプション
 
-`-h|--help`
+* **`-h|--help`**
 
-コマンドの短いヘルプを印刷します。
+  コマンドの短いヘルプを印刷します。
 
-`--msbuild`
+* **`--msbuild`**
 
-MSBuild ビルド サーバーをシャットダウンします。
+  MSBuild ビルド サーバーをシャットダウンします。
 
-`--razor`
+* **`--razor`**
 
-Razor ビルド サーバーをシャットダウンします。
+  Razor ビルド サーバーをシャットダウンします。
 
-`--vbcscompiler`
+* **`--vbcscompiler`**
 
-VB/C# コンパイラ ビルド サーバーをシャットダウンします。
+  VB/C# コンパイラ ビルド サーバーをシャットダウンします。

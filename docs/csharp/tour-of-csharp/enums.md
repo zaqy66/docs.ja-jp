@@ -3,12 +3,12 @@ title: C# の列挙型 - C# 言語のツアー
 description: C# における列挙型、離散した名前付き定数について
 ms.date: 08/10/2016
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.openlocfilehash: 7fe2626381cb90e55842e3be17dd450eb73d5a5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d55462f0360b6896c398d581918a9c17a87583be
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353355"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126655"
 ---
 # <a name="enums"></a>列挙体
 
@@ -26,7 +26,7 @@ ms.locfileid: "33353355"
 
 前の例のとおり、`enum` メンバーの宣言にはメンバーの値を指定する定数式が含まれる場合があります。 各 `enum` メンバーの定数値は `enum` の基となる型の範囲内にある必要があります。 `enum` メンバーの宣言により値が明示的に指定されない場合、そのメンバーに 0 の値 (`enum` 型の最初のメンバーの場合)、またはテキスト上で先行する `enum` メンバーの値に 1 を足した値が与えられます。
 
-`Enum` の値は型キャストを使用して整数値に変換することができ、その逆方向の変換をすることもできます。 例:
+`Enum` の値は型キャストを使用して整数値に変換することができ、その逆方向の変換をすることもできます。 次に例を示します。
 
 [!code-csharp[EnumStorage](../../../samples/snippets/csharp/tour/enums/Program.cs#L49-L50)]
 
@@ -35,5 +35,5 @@ ms.locfileid: "33353355"
 [!code-csharp[EnumZero](../../../samples/snippets/csharp/tour/enums/Program.cs#L58-L58)]
 
 >[!div class="step-by-step"]
-[前へ](interfaces.md)
-[次へ](delegates.md)
+>[前へ](interfaces.md)
+>[次へ](delegates.md)

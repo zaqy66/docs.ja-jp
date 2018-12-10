@@ -4,11 +4,11 @@ description: ML.NET でテキスト データに対するモデル トレーニ�
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: ed24561c8cc821ece8a21ca61e22a11bda2516d1
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297639"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152163"
 ---
 # <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a>ML.NET でテキスト データに対する機械学習モデル トレーニングに特徴エンジニアリングを適用する
 
