@@ -32,7 +32,7 @@ ms.locfileid: "48842113"
 | [対象とする Framework]      | Latest <br/> 安定バージョン | ターゲット フレームワーク モニカー (TFM) | 実装済み <br/> .NET Standard バージョン |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0                         | netstandard2.0                 | N/A                                     |
-| .NET Core             | 2.1                         | netcoreapp2.1                  | 2.0                                     |
+| .NET Core             | 2.2                         | netcoreapp2.2                  | 2.0                                     |
 | .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>サポートされるターゲット フレームワークのバージョン
@@ -42,7 +42,7 @@ ms.locfileid: "48842113"
 | [対象とする Framework]           | TFM |
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
 | Windows ストア              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
@@ -52,14 +52,14 @@ ms.locfileid: "48842113"
 
 ## <a name="how-to-specify-target-frameworks"></a>ターゲット フレームワークを指定する方法
 
-ターゲット フレームワークはプロジェクト ファイルで指定します。 単一のターゲット フレームワークを指定するときは、**TargetFramework** 要素を使います。 次のコンソール アプリのプロジェクト ファイルでは、.NET Core 2.0 をターゲットにする方法が示されています。
+ターゲット フレームワークはプロジェクト ファイルで指定します。 単一のターゲット フレームワークを指定するときは、**TargetFramework** 要素を使います。 次のコンソール アプリのプロジェクト ファイルでは、.NET Core 2.2 をターゲットにする方法が示されています。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -118,7 +118,7 @@ public class MyClass
 
 次のターゲット フレームワークは非推奨とされます。 これらのターゲット フレームワークをターゲットにするパッケージは、指定されている代替フレームワークに移行する必要があります。
 
-| 非推奨の TFM                                                                             | Replacement |
+| 非推奨の TFM                                                                             | 移行先 |
 | ------------------------------------------------------------------------------------------ | ----------- |
 | aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
 | dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandard |
