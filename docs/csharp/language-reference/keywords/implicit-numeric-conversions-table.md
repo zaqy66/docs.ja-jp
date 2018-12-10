@@ -18,7 +18,7 @@ ms.locfileid: "50188704"
 
 .NET 数値型間の定義済みの暗黙的な変換を次の表に示します。
   
-|From|終了|  
+|変換元|変換先|  
 |----------|--------|  
 |[sbyte](sbyte.md)|`short`、`int`、`long`、`float`、`double`、または `decimal`|  
 |[byte](byte.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
