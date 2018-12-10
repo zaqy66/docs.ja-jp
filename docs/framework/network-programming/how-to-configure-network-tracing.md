@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 257f417fa573577ca8e8ceb4edc9c4f481af1f72
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b1a61ac7566f624f44480ffed2337dba5e51ca2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50192448"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143364"
 ---
 # <a name="how-to-configure-network-tracing"></a>方法: ネットワークのトレースを構成する
 アプリケーションまたはコンピューターの構成ファイルには、ネットワークのトレースの形式と内容を決定する設定が保持されます。 この手順に従う前に、トレースが有効になっていることを確認します。 トレースの有効化については、「[ネットワークのトレースの有効化](../../../docs/framework/network-programming/enabling-network-tracing.md)」を参照してください。  
@@ -69,7 +69,8 @@ ms.locfileid: "50192448"
         <sharedListeners>  
           <add name="System.Net"  
             type="System.Diagnostics.TextWriterTraceListener"  
-            initializeData="network.log"  
+            initializeData="network.log"
+            traceOutputOptions="ProcessId, DateTime" 
           />  
         </sharedListeners>  
         <trace autoflush="true"/>  

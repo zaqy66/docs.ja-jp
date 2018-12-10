@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee5f223d5e92d9a60776df6bf2108a4fd14b9e0f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195204"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143845"
 ---
 # <a name="in-process-side-by-side-execution"></a>インプロセスの side-by-side 実行
 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスで複数のバージョンの共通言語ランタイム (CLR) を実行できます。 既定では、マネージド COM コンポーネントは、プロセスに読み込まれている .NET Framework のバージョンに関係なく、コンポーネントがビルドされた .NET Framework のバージョンで実行されます。  
@@ -40,9 +40,9 @@ ms.locfileid: "50195204"
   
     |.NET Framework のバージョン|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|利用不可|×|[はい]|  
-    |2.0 - 3.5|×|利用不可|[はい]|  
-    |4|[はい]|[はい]|利用不可|  
+    |1.1|利用不可|×|はい|  
+    |2.0 - 3.5|×|利用不可|はい|  
+    |4|[はい]|はい|利用不可|  
   
 > [!NOTE]
 >  .NET Framework バージョン 3.0 および 3.5 はバージョン 2.0 に対して増分的にビルドされているため、side-by-side で実行する必要はありません。 これらは、本質的に同じバージョンです。  
@@ -90,7 +90,7 @@ ms.locfileid: "50195204"
   
  次の例を実行するには、[!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] を使って次のマネージド COM コンポーネントをコンパイルして登録します。 コンポーネントを登録するには、**[プロジェクト]** メニューの **[プロパティ]** をクリックし、**[ビルド]** タブをクリックして、**[COM の相互運用機能に登録]** チェック ボックスをオンにします。  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -115,7 +115,7 @@ namespace BasicComObject
   
  次のアンマネージ C++ アプリケーションをコンパイルすると、前の例で作成した COM オブジェクトがアクティブ化すされます。  
   
-```  
+```cpp
 #include "stdafx.h"  
 #include <string>  
 #include <iostream>  

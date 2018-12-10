@@ -10,11 +10,11 @@ ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185249"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151409"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework で互換性のために残されているメンバー
 この記事の表には、.NET Framework 4.5 以降のバージョンで互換性のために残されている型メンバーがアセンブリ別にまとめられています。 各アセンブリで互換性のために残されているメンバーと推奨される代替メンバーの一覧を表示するには、以下のリンクを使用してください。 このトピックでは、廃止された型のメンバーの一覧は表示されていません。 廃止された型の一覧については、[互換性のために残されている型](../../../docs/framework/whats-new/obsolete-types.md)に関するページをご覧ください。  

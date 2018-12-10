@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: eb5612e0cbdc52e397ba367b4cc744796174d06c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404607"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153892"
 ---
 # <a name="common-client-side-web-technologies"></a>一般的なクライアント側の Web テクノロジ
 
@@ -108,7 +108,7 @@ Model-View-Controller パターンの完全実装を提供する Angular とは�
 
 React の最も重要な特徴の 1 つはそれが仮想 DOM を使用することです。 仮想 DOM は React にさまざまな利点を与えます。たとえば、パフォーマンスが上がります。仮想 DOM は、実際の DOM の更新が必要な部分を最適化できます。また、テストが可能になります。React や React とその仮想 DOM のやり取りをテストするためのブラウザーを用意する必要がありません。
 
-React はまた、HTML と連動するしくみが変わっています。 (HTML 属性に表示される JavaScript を参照し) コードとマークアップを厳密に分離するのではなく、React はその JavaScript コード内に JSX として HTML を直接追加します。 JSX は HTML に似た構文であり、純粋な JavaScript にコンパイルできます。 例:
+React はまた、HTML と連動するしくみが変わっています。 (HTML 属性に表示される JavaScript を参照し) コードとマークアップを厳密に分離するのではなく、React はその JavaScript コード内に JSX として HTML を直接追加します。 JSX は HTML に似た構文であり、純粋な JavaScript にコンパイルできます。 次に例を示します。
 
 ```js
 <ul>
@@ -165,5 +165,5 @@ JavaScript フレームワークは今後も猛烈な速さで進化を続けま
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[前へ](common-web-application-architectures.md)
-[次へ](develop-asp-net-core-mvc-apps.md)
+>[前へ](common-web-application-architectures.md)
+>[次へ](develop-asp-net-core-mvc-apps.md)

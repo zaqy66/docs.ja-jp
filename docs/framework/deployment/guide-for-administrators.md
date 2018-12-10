@@ -8,11 +8,11 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744588"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129819"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 配置ガイド (管理者向け)
 この記事では、システム管理者が Microsoft System Center Configuration Manager を使用して [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] とそのシステムの依存関係をネットワーク経由で配置する方法を手順に沿って説明します。 ここでは、すべての対象のクライアント コンピューターが .NET Framework の最小要件を満たしていることを前提としています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] のインストールに必要なソフトウェア要件とハードウェア要件の一覧については、「[システム要件](../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
@@ -150,7 +150,7 @@ ms.locfileid: "50744588"
   
 7.  **[配布ポイントの追加]** ダイアログ ボックスで、パッケージとプログラムをホストする配布ポイントを選択し、**[OK]** をクリックします。  
   
-8.  ウィザードの指示に従います。  
+8.  ウィザードを完了します。  
   
  これでパッケージには、.NET Framework 4.5 をサイレントで配置するために必要なすべての情報が含まれています。 パッケージとプログラムを配置する前に、そのパッケージが配布ポイントにインストールされていることを確認します。Configuration Manager ドキュメント ライブラリの「[配布したコンテンツを System Center Configuration Manager で監視する](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed)」のコンテンツの監視に関するセクションを参照してください。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "50744588"
   
 10. ウィザードの **[配布ポイント]** ページで、既定値を使用し、**[次へ]** をクリックします。  
   
-11. ウィザードの指示に従います。 **[監視]** ワークスペースの **[展開]** ノードで配置の進行状況を監視できます。  
+11. ウィザードを完了します。 **[監視]** ワークスペースの **[展開]** ノードで配置の進行状況を監視できます。  
   
  これで、対象のコレクションにパッケージが配置され、.NET Framework 4.5 のサイレント インストールが開始されます。 .NET Framework 4.5 のインストールのエラー コードについては、このトピックの「[リターン コード](#return_codes)」セクションを参照してください。  
   

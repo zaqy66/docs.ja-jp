@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 651da766bc5931f5afa06699d1ec11fa40147e82
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f10d7d03bbf88ed8f7a89a5d3919a39b3c124ae0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678270"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130235"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker コンテナー、イメージ、レジストリ
 
@@ -34,5 +34,5 @@ Docker を使用する場合、開発者はアプリケーションまたはサ�
 -   イメージと選択した展開環境間のネットワーク待機時間を最小限に抑えたい場合。 たとえば、実稼働環境が Azure クラウドの場合は、[Azure Container Registry](https://azure.microsoft.com/services/container-registry/) にイメージを保存して、ネットワークの待機時間を最小限に抑える方法があります。 同様に、実稼働環境がオンプレミスの場合は、同じローカル ネットワーク内でオンプレミスの Docker Trusted Registry を使用できるようにする方法があります。
 
 >[!div class="step-by-step"]
-[前へ](docker-terminology.md)
-[次へ](../net-core-net-framework-containers/index.md)
+>[前へ](docker-terminology.md)
+>[次へ](../net-core-net-framework-containers/index.md)

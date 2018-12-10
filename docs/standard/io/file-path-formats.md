@@ -2,18 +2,21 @@
 title: Windows システムのファイル パス形式
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296829"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144859"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 
@@ -87,7 +90,7 @@ DOS デバイス パスは次の要素から構成されます。
 
    デバイス パス指定子の後の最初のセグメントによって、ボリュームまたはドライブが識別されます。 (たとえば、`\\?\C:\` や `\\.\BootPartition\`)。
 
-   UNC のためのリンク (わかりやすいことに `UNC`) が呼び出されます。 例:
+   UNC のためのリンク (わかりやすいことに `UNC`) が呼び出されます。 次に例を示します。
 
   `\\.\UNC\Server\Share\Test\Foo.txt`  
   `\\?\UNC\Server\Share\Test\Foo.txt`
@@ -203,30 +206,14 @@ Windows を使っていないユーザーや開発者がとまどうことには
 ```csharp
 Directory.Create("TeStDiReCtOrY");
 ```
+
+```vb
+Directory.Create("TeStDiReCtOrY")
+```
+
 TeStDiReCtOrY という名前のディレクトリが作成されます。 ディレクトリやファイルの名前を変更し、大文字を小文字に変えるか、小文字を大文字に変えると、その名前変更時の大文字/小文字の使い方がディレクトリ名またはファイル名に反映されます。 たとえば、次のコードでは test.txt というファイルの名前が Test.txt に変更されます。
 
-```csharp
-using System;
-using System.IO;
-
-class Example
-{
-   public static void Main()
-   {
-      var fi = new FileInfo(@".\test.txt");
-      fi.MoveTo(@".\Test.txt");
-   }
-}
-``` 
-```vb
-Imports System.IO
-
-Module Example
-   Public Sub Main()
-      Dim fi As New FileInfo(".\test.txt")
-      fi.MoveTo(".\Test.txt")
-   End Sub
-End Module
-```
+[!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
+[!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
 しかしながら、ディレクトリ名とファイル名の比較では、大文字と小文字が区別されません。 "test.txt" という名前のファイルを検索すると、.NET ファイル システム API は比較で大文字/小文字の使い方を無視します。 Test.txt、TEST.TXT、test.TXT、大文字と小文字のその他すべての組み合わせが "test.txt" に一致します。

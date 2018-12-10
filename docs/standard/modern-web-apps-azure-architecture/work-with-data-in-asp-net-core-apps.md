@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49122852"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147175"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core アプリでのデータの操作
 
@@ -440,5 +440,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 キャッシュでは、データベースから同じ値を繰り返し要求する Web ページのパフォーマンスを大幅に向上させることができます。 キャッシュを適用する前に、必ずデータ アクセスとページのパフォーマンスを測定し、改善の必要性があると判断した場合にのみ、キャッシュを適用するようにしてください。 キャッシュでは Web サーバーのメモリ リソースが消費され、アプリケーションの複雑さが増すため、この手法を使用して不完全な最適化を行わないことが重要です。
 
 >[!div class="step-by-step"]
-[前へ](develop-asp-net-core-mvc-apps.md)
-[次へ](test-asp-net-core-mvc-apps.md)
+>[前へ](develop-asp-net-core-mvc-apps.md)
+>[次へ](test-asp-net-core-mvc-apps.md)

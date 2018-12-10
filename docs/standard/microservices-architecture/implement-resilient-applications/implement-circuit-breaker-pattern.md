@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453153"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147266"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>サーキット ブレーカー パターンを実装する
 
@@ -146,14 +146,11 @@ public class CartController : Controller
 
 最後に、`CircuitBreakerPolicy` の別の可能性として、`Isolate` (サーキットを強制的にオープン状態にし、オープン状態を維持する) と `Reset` (もう一度クローズド状態にする) を使用する方法があります。 これらは、ポリシーに対して Isolate と Reset を直接呼び出すユーティリティ HTTP エンドポイントを構築するために使用できます。  このような HTTP エンドポイントは、アップグレードしたい場合など、ダウンストリーム システムを一時的に分離するために運用環境で適切な安全性を保つために使用することもできます。 または、障害が発生する恐れがあるダウンストリーム システムを保護するために手動でサーキットを切断することもできます。
 
-
 ## <a name="additional-resources"></a>その他の技術情報
-
 
 -   **サーキット ブレーカー パターン**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
-
 >[!div class="step-by-step"]
-[前へ](implement-http-call-retries-exponential-backoff-polly.md)
-[次へ](monitor-app-health.md)
+>[前へ](implement-http-call-retries-exponential-backoff-polly.md)
+>[次へ](monitor-app-health.md)

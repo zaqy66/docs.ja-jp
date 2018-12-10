@@ -4,12 +4,12 @@ description: .NET ライブラリのバージョン管理に関するベスト �
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: f95c8ade1f91af5c13184b839b327c9397c6fe5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187859"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144560"
 ---
 # <a name="versioning"></a>バージョン管理
 
@@ -97,5 +97,5 @@ Windows .NET Framework の CLR では、厳密な名前のアセンブリを読�
 > NuGet とソース管理メタデータを含むバージョンを SourceLink が自動生成することを許可します。
 
 >[!div class="step-by-step"]
-[前へ](./publish-nuget-package.md)
-[次へ](./breaking-changes.md)
+>[前へ](publish-nuget-package.md)
+>[次へ](breaking-changes.md)

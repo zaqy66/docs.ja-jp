@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
 ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52671941"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143606"
 ---
 # <a name="discards---c-guide"></a>破棄 - C# ガイド
 
@@ -68,15 +68,15 @@ C# 7.0 では、破棄は次のコンテキストの割り当てでサポート�
 
 `_` は有効な識別子でもある点に注意してください。 サポートされるコンテキスト以外で `_` を使用すると、破棄対象ではなく、有効な変数として扱われます。 `_` という識別子が既にスコープ内にある場合、スタンドアロンの破棄として `_` を使用すると、次のような結果になります。
 
-- 意図した破棄の値を割り当てることで、スコープ内の `_` 変数の値が誤って変更される。 例:
+- 意図した破棄の値を割り当てることで、スコープ内の `_` 変数の値が誤って変更される。 次に例を示します。
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- タイプ セーフに違反するコンパイラ エラーが発生する。 例:
+- タイプ セーフに違反するコンパイラ エラーが発生する。 次に例を示します。
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- コンパイラ エラー CS0136 "ローカルまたはパラメーター '\_' は、その名前が外側のローカルのスコープでローカルやパラメーターの定義に使用されているため、このスコープでは宣言できません" が発生する。 例:
+- コンパイラ エラー CS0136 "ローカルまたはパラメーター '\_' は、その名前が外側のローカルのスコープでローカルやパラメーターの定義に使用されているため、このスコープでは宣言できません" が発生する。 次に例を示します。
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 

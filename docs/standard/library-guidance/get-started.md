@@ -4,12 +4,12 @@ description: .NET ライブラリの構築を始めましょう。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6377e3fe606bf7603b418decdd0e3f9d2de6a510
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201244"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145726"
 ---
 # <a name="get-started"></a>作業開始
 
@@ -46,5 +46,5 @@ NuGet.org は最も広く知られ、使用されているリポジトリで、N
 .NET ライブラリでは既存のユーザーに向けた安定性と将来に向けたイノベーションとの間でバランスを取ることが重要です。 さまざまな種類の破壊的変更と、下位互換性を維持しながら新しい機能を追加するための戦略について説明します。
 
 >[!div class="step-by-step"]
-[前へ](./index.md)
-[次へ](./cross-platform-targeting.md)
+>[前へ](index.md)
+>[次へ](cross-platform-targeting.md)

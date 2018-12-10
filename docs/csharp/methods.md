@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038306"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127447"
 ---
 # <a name="methods"></a>メソッド #
 
@@ -158,7 +158,7 @@ C# の型は、*値型*と*参照型*のどちらかに区別されます。 組
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-省略可能なパラメーターを複数持つメソッドが位置引数で呼び出された場合、呼び出し元は、引数が指定される最初のパラメーターから最後のパラメーターまで、すべての省略可能なパラメーターに引数を指定する必要があります。 たとえば、`ExampleMethod` メソッドの場合、呼び出し元が `description` パラメーターの引数を指定した場合、`optionalInt` パラメーターの引数も指定する必要があります。 `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` は有効なメソッド呼び出しです。`opt.ExampleMethod(2, , "Addition of 2 and 0);` は、"引数がありません" というコンパイラ エラーを発生させます。
+省略可能なパラメーターを複数持つメソッドが位置引数で呼び出された場合、呼び出し元は、引数が指定される最初のパラメーターから最後のパラメーターまで、すべての省略可能なパラメーターに引数を指定する必要があります。 たとえば、`ExampleMethod` メソッドの場合、呼び出し元が `description` パラメーターの引数を指定した場合、`optionalInt` パラメーターの引数も指定する必要があります。 `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` は有効なメソッド呼び出しです。`opt.ExampleMethod(2, , "Addition of 2 and 0");` は、"引数がありません" というコンパイラ エラーを発生させます。
 
 メソッドが名前付き引数または位置引数と名前付き引数の組み合わせで呼び出される場合、呼び出し元は、メソッド呼び出しの最後の位置引数の後に続く引数を省略できます。
 

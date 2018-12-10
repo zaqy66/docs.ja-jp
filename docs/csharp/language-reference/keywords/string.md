@@ -11,17 +11,17 @@ helpviewer_keywords:
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
 ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672005"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153125"
 ---
 # <a name="string-c-reference"></a>string (C# リファレンス)
 
 `string` 型は、0 個以上の Unicode 文字のシーケンスを表します。 `string` は .NET の <xref:System.String> の別名です。
 
-`string` は参照型ですが、等値演算子 (`==` および `!=`) は、`string` オブジェクトの参照ではなく、値を比較するように定義されています。 これにより、文字列が等しいかを直感的にテストできます。 例:
+`string` は参照型ですが、等値演算子 (`==` および `!=`) は、`string` オブジェクトの参照ではなく、値を比較するように定義されています。 これにより、文字列が等しいかを直感的にテストできます。 次に例を示します。
 
 ```csharp
 string a = "hello";
@@ -72,7 +72,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > エスケープ コード `\udddd` (`dddd` は 4 桁の数字) は、Unicode 文字 U +`dddd` を表します。 8 桁の Unicode エスケープ コード `\Udddddddd` も認識できます。
 
-verbatim 文字列リテラルの場合は、先頭に `@` を付け、さらに前後に二重引用符を付けます。 例:
+verbatim 文字列リテラルの場合は、先頭に `@` を付け、さらに前後に二重引用符を付けます。 次に例を示します。
 
 ```csharp
 @"good morning"  // a string literal

@@ -4,12 +4,12 @@ description: HttpClientFactory は、自己主張性の強いファクトリで�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347930"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145112"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -87,7 +87,7 @@ services.AddHttpClient<ICatalogService, CatalogService>()
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>挿入された構成済みの HttpClient を使用する、型指定されたクライアント クラスを実装する
 
-前の手順では、型指定されたクライアント クラス (サンプル コードにある、‘BasketService’、‘CatalogService’、‘OrderingService’ のようなクラスなど) が定義されている必要がありました。型指定されたクライアントは、(そのコンストラクターを通じて挿入された) `HttpClient` オブジェクトを受け取り、それを使用していくつかのリモート HTTP サービスを呼び出すクラスです。 例:
+前の手順では、型指定されたクライアント クラス (サンプル コードにある、‘BasketService’、‘CatalogService’、‘OrderingService’ のようなクラスなど) が定義されている必要がありました。型指定されたクライアントは、(そのコンストラクターを通じて挿入された) `HttpClient` オブジェクトを受け取り、それを使用していくつかのリモート HTTP サービスを呼び出すクラスです。 次に例を示します。
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -162,7 +162,6 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
     [*https://github.com/aspnet/HttpClientFactory*](https://github.com/aspnet/HttpClientFactory)
 
-
-
 >[!div class="step-by-step"]
-[前へ] (explore-custom-http-call-retries-exponential-backoff.md) [次へ] (implement-http-call-retries-exponential-backoff-polly.md)
+>[前へ](explore-custom-http-call-retries-exponential-backoff.md)
+>[次へ](implement-http-call-retries-exponential-backoff-polly.md)

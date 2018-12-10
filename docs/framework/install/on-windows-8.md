@@ -5,12 +5,12 @@ description: Windows 8 に .NET Framework をインストールする方法に�
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 2304e8e2865c00ef480cc3d595195248db3f4d2a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ffb05ea480775a2e284e76b5ff72cc70c5a4f977
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196545"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155052"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Windows 8 と Windows Server 2012 に .NET Framework をインストールする
 
@@ -23,7 +23,7 @@ ms.locfileid: "50196545"
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 > [!div class="button"]
-[.NET Framework 4.7.2 のダウンロード](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [.NET Framework 4.7.2 のダウンロード](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
 .NET Framework 4.7.2 は Windows Server 2012 でサポートされています。 Windows 8 ではサポートされていません。
 

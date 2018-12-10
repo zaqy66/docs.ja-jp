@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ba47ece16c74555b58780733e14de9833718c33
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9a355c2e996ddb00dad804dfeb22987923d91aa6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873308"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144521"
 ---
 # <a name="threading-objects-and-features"></a>スレッド処理オブジェクトと機能
 
@@ -26,8 +26,6 @@ ms.locfileid: "48873308"
 |[同期プリミティブの概要](overview-of-synchronization-primitives.md)|共有リソースへのアクセスを同期化する場合や、スレッドの相互作用を制御する場合に使用できる型について説明します。|
 |[EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|通知を行ったり通知を待機したりすることによりスレッドの活動を同期するために使用するマネージド イベント待機ハンドルについて説明します。|
 |[ミューテックス](mutexes.md)|共有リソースへの排他アクセスを付与する <xref:System.Threading.Mutex?displayProperty=nameWithType> について説明します。|
-|[インタロックされた操作](interlocked-operations.md)|複数のスレッドで共有される変数にアトミックの操作を提供する <xref:System.Threading.Interlocked?displayProperty=nameWithType> クラスについて説明します。|
-|[読み取り/書き込みロック](reader-writer-locks.md)|共有リソースへの単一ライター/複数リーダー アクセスを提供する <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> クラスについて説明します。|
 |[Semaphore と SemaphoreSlim](semaphore-and-semaphoreslim.md)|共有リソースまたはリソースのプールに同時にアクセスできるスレッドの数を制限する <xref:System.Threading.Semaphore?displayProperty=nameWithType> について説明します。|
 |[バリア](barrier.md)|段階的な操作におけるスレッドの調整のためのバリア パターンを実装する <xref:System.Threading.Barrier?displayProperty=nameWithType> クラスについて説明します。|
 |[SpinLock](spinlock.md)|特定の下位レベルのシナリオで <xref:System.Threading.Monitor?displayProperty=nameWithType> ロックの代わりに軽量クラスとして使用できる <xref:System.Threading.SpinLock?displayProperty=nameWithType> 構造体について説明します。|

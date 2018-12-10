@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b11ac80b671c345768da23d2b51d2333c228aaeb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: be15acb98c20a61be2d88133ee3070fb1c09d70e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003734"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155328"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath クエリおよび名前空間
 XPath クエリは XML ドキュメント中の名前空間を認識し、名前空間プレフィックスを使用して要素と属性名を修飾することができます。 名前空間プレフィックスで要素や属性の名前を修飾すると、XPath クエリで返されるノードを特定の名前空間に属するノードだけに限定することができます。  
@@ -41,7 +41,7 @@ XPath クエリは XML ドキュメント中の名前空間を認識し、名前
  次の XML ドキュメントでは、`http://www.contoso.com/books` 名前空間を宣言するために、空のプレフィックスの既定の名前空間が使用されています。  
   
 ```xml  
-<books xmlns="http://www.example.com/books">  
+<books xmlns="http://www.contoso.com/books">  
     <book>  
         <title>Title</title>  
         <author>Author Name</author>  

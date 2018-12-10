@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: ae141b3d60a9968ee3fe59474e32a174bdb77e3b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 3b0b109b0910eb5763ecab228115b7bc932d4a10
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757453"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129936"
 ---
 # <a name="common-web-application-architectures"></a>一般的な Web アプリケーション アーキテクチャ
 
@@ -316,5 +316,5 @@ Visual Studio を使用して、ご利用のアプリケーションに Docker �
 >   <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
-[前へ](architectural-principles.md)
-[次へ](common-client-side-web-technologies.md)
+>[前へ](architectural-principles.md)
+>[次へ](common-client-side-web-technologies.md)

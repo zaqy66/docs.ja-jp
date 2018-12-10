@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: a71cbdce256b1c1bd5d101d66f216fb229d70adf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ab533bc6b8bcff54774d849510c66ec3436ad3b5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48844905"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146957"
 ---
  # <a name="when-c-reference"></a>when (C# リファレンス)
 
@@ -23,10 +23,10 @@ ms.locfileid: "48844905"
 
 ## <a name="when-in-a-catch-statement"></a>`catch` ステートメントでの `when`
 
-C# 6 から、`When` を `catch` ステートメントで使用して、特定の例外のハンドラーを実行するために true になる必要がある条件を指定できるようになりました。 構文は次のとおりです。
+C# 6 から、`when` を `catch` ステートメントで使用して、特定の例外のハンドラーを実行するために true になる必要がある条件を指定できるようになりました。 構文は次のとおりです。
 
 ```csharp
-catch ExceptionType [e] when (expr)
+catch (ExceptionType [e]) when (expr)
 ```
 *expr* の箇所には、ブール値に評価される式を指定します。 `true` が返された場合は、例外ハンドラーが実行されます。`false` の場合は実行されません。 
 

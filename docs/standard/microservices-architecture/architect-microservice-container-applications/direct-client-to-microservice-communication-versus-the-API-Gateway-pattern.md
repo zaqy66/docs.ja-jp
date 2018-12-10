@@ -4,12 +4,12 @@ description: API ゲートウェイ パターンと、クライアントから�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 36b95f8b6308773dbb49cc68e4f8e2099bdd1ff0
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297313"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152644"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 
@@ -194,5 +194,5 @@ Azure API Management では、キー、トークン、および IP フィルタ�
   [*https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
 
 >[!div class="step-by-step"]
-[前へ](identify-microservice-domain-model-boundaries.md)
-[次へ](communication-in-microservice-architecture.md)
+>[前へ](identify-microservice-domain-model-boundaries.md)
+>[次へ](communication-in-microservice-architecture.md)

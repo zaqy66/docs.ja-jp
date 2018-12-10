@@ -3,18 +3,18 @@ title: 分岐とループ - C# の概要に関するチュートリアル
 description: 分岐とループに関するこのチュートリアルでは、C# のコードを記述して、この言語における、ステートメントを繰り返し実行するための条件付き分岐とループに対応している構文について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 0997c0b4a8f450c0e5eadc9616457a1ab84e7d96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186138"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153775"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>分岐およびループ ステートメントを使用した条件付きロジックについて説明します
 
 このチュートリアルでは、変数を調べ、その変数に基づいて実行パスを変更するコードを記述する方法について説明します。 C# コードを記述し、コードをコンパイルおよび実行して結果を確認します。 チュートリアルには、C# における分岐構造とループ構造を確認する一連のレッスンが含まれています。 これらのレッスンでは、C# 言語の基本を説明します。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。 使用するコマンドの概要については、[開発ツールの概要](local-environment.md)のページと詳細へのリンクをご覧ください。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
 
 ## <a name="make-decisions-using-the-if-statement"></a>`if` ステートメントを使用した条件判定
 
@@ -223,7 +223,7 @@ for(int index = 0; index < 10; index++)
 
 このループは、既に使用した `while` ループや `do` ループと同じ機能を持っています。 `for` ステートメントは 3 つの部分に分かれてその機能を制御します。
 
-最初の部分は、**for 初期化子**です。`for index = 0;` は、`index` がループ変数であることを宣言し、その初期値を `0` に設定しています。
+最初の部分は、**for 初期化子**です。`int index = 0;` は、`index` がループ変数であることを宣言し、その初期値を `0` に設定しています。
 
 2 つ目の部分は、**for 条件**です。`index < 10` は、counter の値が 10 未満である間は `for` ループが実行され続けることを宣言しています。
 

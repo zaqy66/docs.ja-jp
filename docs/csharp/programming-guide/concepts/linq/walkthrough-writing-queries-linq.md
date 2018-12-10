@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 2cac07c8eb02465334af47fd46702b60f1371c68
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ffff8317e6524acc877b7d0851e5a1b37967b1f0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43745324"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154082"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>チュートリアル: C# でのクエリの作成 (LINQ)
 このチュートリアルでは、LINQ クエリ式の記述に使用される C# 言語機能について説明します。  
@@ -87,7 +87,7 @@ ms.locfileid: "43745324"
   
 1.  クエリを改良するために、`where` 句で複数のブール条件を結合することができます。 次のコードでは、最初の点数が 90 より高く、最後の点数が 80 未満の生徒が返されるようにするための条件を追加しています。 `where` 句は次のコードのようになります。  
   
-    ```  
+    ```csharp
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
@@ -99,19 +99,19 @@ ms.locfileid: "43745324"
   
 1.  クエリの結果は、一定の基準で順序付けしたほうが見やすくなります。 返されたシーケンスは、ソース要素内のアクセス可能なフィールドによって順序付けすることができます。 たとえば、次の `orderby` 句では、各生徒の名前を基準にして、A から Z へのアルファベット順で結果を並べるようにしています。 次の `orderby` 句をクエリに追加します (`where` ステートメントの直後、`select` ステートメントの前)。  
   
-    ```  
+    ```csharp
     orderby student.Last ascending  
     ```  
   
 2.  `orderby` 句を変更し、最初のテストの点数を基準にして、結果を逆順 (最高点から最低点) で並べるようにします。  
   
-    ```  
+    ```csharp
     orderby student.Scores[0] descending  
     ```  
   
 3.  `WriteLine` 書式文字列を変更して、点数を表示できるようにします。  
   
-    ```  
+    ```csharp
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
@@ -157,7 +157,7 @@ ms.locfileid: "43745324"
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>クエリ式でメソッド構文を使用するには  
   
-1.  「[LINQ でのクエリ構文とメソッド構文](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)」で説明したように、一部のクエリ操作は、メソッド構文を使用することでのみ表現できます。 次のコードは、ソース シーケンス内の各 `Student` の合計点数を計算し、そのクエリの結果に対して `Average()` メソッドを呼び出して、クラスの平均点数を計算します。 クエリ式を囲むかっこが配置されたことに注意してください。  
+1.  「[LINQ でのクエリ構文とメソッド構文](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)」で説明したように、一部のクエリ操作は、メソッド構文を使用することでのみ表現できます。 次のコードは、ソース シーケンス内の各 `Student` の合計点数を計算し、そのクエリの結果に対して `Average()` メソッドを呼び出して、クラスの平均点数を計算します。
   
      [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   

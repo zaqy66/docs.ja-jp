@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: cbb4583d7eceb1410450cd9c953c3431f25dd60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a4060017a2d3d352b3db70b1d364eb14ec1e94ce
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513453"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147438"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ によるデータ変換 (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] で行うことができるのは、データの取得だけではありません。 データ変換のための強力なツールとしても使用できます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを使用することにより、ソース シーケンスを入力として使用し、さまざまな方法で加工して新しい出力シーケンスを作成できます。 要素自体を変更せずに、並べ替えやグループ化してシーケンス自体を変更できます。 しかし、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] のクエリの最も強力な機能は、新しい型を作成する機能です。 この操作は [select](../../../../csharp/language-reference/keywords/select-clause.md) 句内で行います。 たとえば、次のタスクを実行できます。  
@@ -46,14 +46,14 @@ ms.locfileid: "43513453"
   
 1.  ソース要素の 1 つのメンバーのみを選択するには、ドット演算を使用します。 次の例で、`Customer` オブジェクトに `City` という文字列を含むいくつかのパブリック プロパティが含まれているとします。 このクエリを実行すると、文字列の出力シーケンスが生成されます。  
   
-    ```  
+    ```csharp
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
 2.  ソース要素からの複数のプロパティを含む要素を作成するには、名前付きオブジェクトまたは匿名型を指定したオブジェクト初期化子を使用します。 次の例は、匿名型を使用して各 `Customer` 要素の 2 つのプロパティをカプセル化する方法を示しています。  
   
-    ```  
+    ```csharp
     var query = from cust in Customer  
                 select new {Name = cust.Name, City = cust.City};  
     ```  

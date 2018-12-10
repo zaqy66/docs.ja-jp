@@ -2,7 +2,9 @@
 title: .NET での I/O エラーの処理
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
-ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
@@ -11,12 +13,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50dee427913e1ec94a06f1202966bb0f7f5f2099
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46696418"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126876"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET での I/O エラーの処理
 
@@ -47,16 +49,16 @@ ms.locfileid: "46696418"
 
 | 例外の種類 | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | はい | はい |
-| <xref:System.IO.FileNotFoundException> | はい | はい |
-| <xref:System.IO.DirectoryNotFoundException> | はい | はい |
-| <xref:System.IO.DriveNotFoundException?> | はい | はい |
-| <xref:System.IO.PathTooLongException> | はい | はい |
-| <xref:System.OperationCanceledException> | はい | はい |
-| <xref:System.UnauthorizedAccessException> | はい | はい |
+| <xref:System.IO.IOException> | [はい] | [はい] |
+| <xref:System.IO.FileNotFoundException> | [はい] | [はい] |
+| <xref:System.IO.DirectoryNotFoundException> | [はい] | [はい] |
+| <xref:System.IO.DriveNotFoundException?> | [はい] | [はい] |
+| <xref:System.IO.PathTooLongException> | [はい] | [はい] |
+| <xref:System.OperationCanceledException> | [はい] | [はい] |
+| <xref:System.UnauthorizedAccessException> | [はい] | [はい] |
 | <xref:System.ArgumentException> | .NET Core 2.0 以前| はい |
-| <xref:System.NotSupportedException> | いいえ | はい |
-| <xref:System.Security.SecurityException> | いいえ | 限定的な信頼のみ |
+| <xref:System.NotSupportedException> | × | はい |
+| <xref:System.Security.SecurityException> | × | 限定的な信頼のみ |
 
 ## <a name="handling-ioexception"></a>IOException の処理
 

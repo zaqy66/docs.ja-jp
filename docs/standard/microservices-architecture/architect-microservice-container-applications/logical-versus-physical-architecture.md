@@ -4,12 +4,12 @@ description: 論理アーキテクチャと物理アーキテクチャの違い�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: e8ed375899637d06db8eb9b12a0e1cb0c05591f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296127"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129923"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>論理アーキテクチャと物理アーキテクチャ
 
@@ -36,5 +36,5 @@ Web API サービスは Search サービスと同じデータをターゲット�
 つまり、マイクロサービスの論理アーキテクチャは、物理的な展開アーキテクチャと必ずしも一致するわけではありません。 このガイドで "マイクロサービス" と言う場合は、1 つ以上の (物理) サービスにマッピングできるビジネスまたは論理マイクロサービスを意味します。 ほとんどの場合は単一のサービスですが、複数のサービスの場合もあります。
 
 >[!div class="step-by-step"]
-[前へ](data-sovereignty-per-microservice.md)
-[次へ](distributed-data-management.md)
+>[前へ](data-sovereignty-per-microservice.md)
+>[次へ](distributed-data-management.md)

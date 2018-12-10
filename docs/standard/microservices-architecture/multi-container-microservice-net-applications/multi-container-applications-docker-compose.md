@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297180"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145255"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する 
 
@@ -471,5 +471,5 @@ runtime イメージでも、ポート 80 への aspnetcore\_url の自動設定
     [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
-[前へ](data-driven-crud-microservice.md)
-[次へ](database-server-container.md)
+>[前へ](data-driven-crud-microservice.md)
+>[次へ](database-server-container.md)

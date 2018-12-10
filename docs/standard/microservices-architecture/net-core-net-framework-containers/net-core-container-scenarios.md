@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b283916d6ae4d19fdc6a4f7976a3adbb66d26b2c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873376"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143410"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker コンテナー用 .Net Core を選択するタイミング
 
@@ -53,7 +53,6 @@ IDE とエディターだけでなく、サポートされているすべての�
 
 これは、特に何百ものマイクロサービス (コンテナー) を実行している可能性があるマイクロサービス アーキテクチャに関連します。 Linux または Windows Nano 上の (.NET Core ランタイムに基づく) ASP.NET Core イメージを使用すると、はるかに少ない数のサーバーまたは VM でシステムを実行できるので、最終的にはインフラストラクチャとホスティングのコストを節約できます。
 
-
 >[!div class="step-by-step"]
-[前へ](general-guidance.md)
-[次へ](net-framework-container-scenarios.md)
+>[前へ](general-guidance.md)
+>[次へ](net-framework-container-scenarios.md)
