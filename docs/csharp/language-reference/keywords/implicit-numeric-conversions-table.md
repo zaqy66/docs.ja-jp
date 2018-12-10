@@ -44,8 +44,8 @@ ms.locfileid: "50188704"
 - 型 `int` の定数式の値 (整数リテラルで表される値など) は、それが変換先の型の範囲内にある場合、`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong` に変換できます。
 
   ```csharp
-  byte a = 13;    // コンパイル可能
-  byte b = 300;   // CS0031: 定数値 '300' を 'byte' に変換できません
+  byte a = 13;    // Compiles
+  byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
   ```
 
 明示的な変換に関する詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの「[Implicit conversions](~/_csharplang/spec/conversions.md#implicit-conversions)」 (明示的な変換) セクションをご覧ください。
