@@ -17,7 +17,7 @@ ms.locfileid: "43513835"
 - [namespace](../../../csharp/language-reference/keywords/namespace.md)  
 - [using](../../../csharp/language-reference/keywords/using.md)  
 - [using static](using-static.md)
-- [。演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [. 演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
 - [:: 演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern エイリアス](../../../csharp/language-reference/keywords/extern-alias.md)  
   
