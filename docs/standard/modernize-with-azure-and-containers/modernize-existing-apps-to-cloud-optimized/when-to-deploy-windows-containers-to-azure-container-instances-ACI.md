@@ -1,41 +1,41 @@
 ---
-title: Azure コンテナー インスタンス (ACI) に Windows コンテナーを展開するタイミング
-description: Azure のクラウドと Windows コンテナーでの既存の .NET アプリケーションを最新化 |Azure コンテナー インスタンス (ACI) に Windows コンテナーを展開するタイミング
+title: Azure Container Instances (ACI) に Windows コンテナーを展開するタイミング
+description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |Azure Container Instances (ACI) に Windows コンテナーを展開するタイミング
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 3dc23c96543d9611763b571105f52b150dfec06f
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 297461f1403ab2d6ca6fd63a05d5ded7f210483e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957952"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128100"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Azure コンテナー インスタンス (ACI) に Windows コンテナーを展開するタイミング
+# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Azure Container Instances (ACI) に Windows コンテナーを展開するタイミング
 
-Azure のコンテナー インスタンスがメインの価値提案は、すぐにコンテナーを展開することができますされ、その環境を維持する必要はありません、する必要はありません、基本オペレーティング システムまたは仮想マシンすべて透過的なアップグレード/修正プログラムを適用し、展開します。すぐに使用できる環境にコンテナーです。
+Azure Container Instances は、主な価値提案は、すぐにコンテナーをデプロイすることができ、その環境を維持する必要はありません、基本オペレーティング システムまたは Vm すべてに対して透過的なアップグレード/修正する必要はありませんし、展開します。コンテナーをすぐに使用できる環境にします。
 
-理由と ACI を使用する場合のシナリオは、主なシナリオに似ています基本的にコンテナーでは、Azure Vm を使用すると、Azure のコンテナー インスタンスを使用するための主なシナリオは。
+上の理由から、ACI を使用する場合のシナリオは主なシナリオのような基本的に、コンテナーを Azure Vm を使用すると、Azure Container Instances を使用する主なシナリオは。
 
--   **開発/テストのシナリオ**
+-   **開発/テスト シナリオ**
 -   **タスクの自動化**
--   **CI/CD エージェント**
--   **小さな/スケール バッチ処理**
+-   **エージェントの CI/CD**
+-   **小規模スケール/バッチ処理**
 -   **単純な web アプリ**
 
-単純な web アプリのシナリオは ACI の公平なシナリオが ACI でコンテナー イメージごとの 1 つのコンテナー インスタンスでのみ設定できる、ので高可用性はなくなりますをスケーラビリティが制限を考慮します。
+単純な web アプリのシナリオは ACI の公正なシナリオが ACI でコンテナー イメージごとの 1 つのコンテナー インスタンスでのみ設定できる、ので高可用性はありませんをスケーラビリティが制限を考慮します。
 
-ただし、ACI は 1 つのコンテナー インスタンスを提供するだけであるために、インフラストラクチャと見なされます、たとえは、Windows server の正規の Azure Vm と比較して大きなメリットです。 ACI、自己保持型の環境にのみ、コンテナーを展開してこれらのコンテナーに支払うだけです。 場所を使用している Vm のコンテナーのほとんどのシナリオの多くにより優れたプラットフォームであるために管理/更新/パッチ Vm、する必要はありません。 ACI を使用して単純ですが、単にコンテナーを展開する、単にコンテナーを展開する VM 環境を作成する必要はありません。
+ただし、ACI は 1 つのコンテナー インスタンスを提供するだけであるために、インフラストラクチャと見なされます、できなくては大きなメリットを Windows Server の通常の Azure Vm と比較します。 ACI、自己保持型の環境にのみ、コンテナーをデプロイしてそれらのコンテナーだけ支払います。 場所を使用している Vm、コンテナーを含むほとんどのシナリオの多くにより良いプラットフォームのため、保守/更新/パッチ適用、Vm に必要はありません。 ACI を使用して簡単には、コンテナーを配置する、だけにコンテナーをデプロイする VM 環境を作成する必要はありません。
 
-Azure コンテナー インスタンス (ACI) の主な利点は次のとおりです。
+Azure Container Instances (ACI) の主な利点は次のとおりです。
 
--   サーバーを管理することがなく、コンテナーを実行します。
--   要求時にコンテナーの機敏性を高める
--   かつてないほど簡単かつ迅速にクラウドにコンテナーを展開する — 1 つのコマンドを使用します。 
--   ハイパーバイザーの分離を使用したセキュリティで保護されたアプリケーション
+-   サーバーを管理することがなくコンテナーを実行します。
+-   オンデマンドでのコンテナーでの機敏性を高める
+-   前例のないシンプルさと速度で、クラウドへのコンテナーのデプロイ-1 つのコマンドを使用します。 
+-   ハイパーバイザー分離を使用したセキュリティで保護されたアプリケーション
 
-要するに、ACI では、や、仮想マシンを管理し、新しいツールを習得しなくてしなくても高速アプリを開発することができます。 クラウドで実行されている、コンテナーで、アプリケーションだけです。
+つまり、ACI では、仮想マシンを管理または新しいツールを学習することがなく高速アプリを開発できます。 クラウドで実行しているコンテナーで、アプリケーションだけになります。
 
 >[!div class="step-by-step"]
-[前へ](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-[次へ](when-to-deploy-windows-containers-to-service-fabric.md)
+>[前へ](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+>[次へ](when-to-deploy-windows-containers-to-service-fabric.md)

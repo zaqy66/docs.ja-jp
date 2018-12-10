@@ -1,27 +1,26 @@
 ---
 title: フレームワーク デザインのガイドライン
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - libraries, .NET Framework class library
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df2ccf3d778e26e16937554304ae847f624cfec0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085641"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147607"
 ---
 # <a name="framework-design-guidelines"></a>フレームワーク デザインのガイドライン
 このセクションでは、ライブラリを拡張し、.NET Framework との対話を設計するためのガイドラインを示します。 目標は、ライブラリの設計者は開発のために使用するプログラミング言語の独立した統一プログラミング モデルを提供することで API の一貫性と使いやすさを確認するためです。 .NET Framework を拡張するクラスやコンポーネントを開発する際に、これらのデザイン ガイドラインに従うことをお勧めします。 一貫性のないライブラリ デザインが悪影響を及ぼす開発者の生産性に影響し、導入を抑制します。  
   
  ガイドラインは言葉を使った簡単な推奨事項として編成されて`Do`、 `Consider`、 `Avoid`、および`Do not`します。 次のガイドラインの目的は、クラス ライブラリのデザイナーのさまざまなソリューション間のトレードオフを理解します。 優れたライブラリ デザインのこれらのデザイン ガイドラインに違反することが必要な場所の状況である可能性があります。 このような場合はまれで、する必要があります、意思決定の理由を明確かつ説得力のあることが重要です。  
   
- 次のガイドライン、ブックからの抜粋は*Framework デザイン ガイドライン: 規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン*Krzysztof Cwalina、Brad 内容。  
+ 次のガイドライン、ブックからの抜粋は*Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリでは、2 nd Edition のパターン*Krzysztof Cwalina、Brad 内容。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)  
@@ -47,7 +46,7 @@ ms.locfileid: "44085641"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
+ *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
   
 ## <a name="see-also"></a>関連項目
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: c8085c0911cfe83a3ca56c03cfda5689b9338680
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dce345e049a1b89b85a340b8e9078f39882a45fb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193514"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148513"
 ---
 # <a name="short-data-type-visual-basic"></a>Short データ型 (Visual Basic)
 符号付き 16 ビット (2 バイト) 整数-32,768 32,767 の範囲です。  
@@ -46,7 +46,7 @@ Visual Basic 2017 から始めて、使用することできますも、アン�
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例えば:
+Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
 
 ```vb
 Dim number As Short = &H_3264
@@ -54,7 +54,7 @@ Dim number As Short = &H_3264
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-数値リテラルを含めることも、 `S` [文字入力](../../programming-guide\language-features\data-types/type-characters.md)を示すために、`Short`データ型は、次の例を示します。
+数値リテラルを含めることも、 `S` [文字入力](../../programming-guide/language-features/data-types/type-characters.md)を示すために、`Short`データ型は、次の例を示します。
 
 ```vb
 Dim number = &H_3264S
