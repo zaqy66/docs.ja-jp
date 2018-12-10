@@ -1,5 +1,5 @@
 ---
-title: である必要があります。 演算子 (C# リファレンス)
+title: . 演算子 (C# リファレンス)
 ms.date: 07/20/2015
 f1_keywords:
 - ._CSharpKeyword
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2018
 ms.locfileid: "43520709"
 ---
-# <a name="-operator-c-reference"></a>である必要があります。 演算子 (C# リファレンス)
+# <a name="-operator-c-reference"></a>. 演算子 (C# リファレンス)
 ドット演算子 (`.`) は、メンバー アクセスに使用されます。 ドット演算子は、型または名前空間のメンバーを指定します。 たとえば、ドット演算子は、.NET Framework クラス ライブラリ内の特定のメソッドにアクセスするために使用されます。  
   
  [!code-csharp[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
