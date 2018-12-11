@@ -48,7 +48,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 {
    ...
 }
-// ここのスコープではpsとpdはありません。
+// ps and pd are no longer in scope here.
 ```
 
 `fixed` ステートメントで初期化されたポインターは読み取り専用変数です。 ポインター値を変更するには、2 つ目のポインター変数を宣言し、それを変更する必要があります。 `fixed` ステートメントで宣言された変数は変更できません。
@@ -57,8 +57,8 @@ fixed (byte* ps = srcarray, pd = dstarray)
 fixed (byte* ps = srcarray, pd = dstarray)
 {
     byte* pSourceCopy = ps;
-    pSourceCopy++; // 次の要素へポインタを進める。
-    ps++; // 無効: fixedステートメントで宣言されているため変数psは変更できません。
+    pSourceCopy++; // point to the next element.
+    ps++; // invalid: cannot modify ps, as it is declared in the fixed statement.
 }
 ```
 
