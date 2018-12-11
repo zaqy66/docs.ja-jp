@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a5e5826dddbf60e92a50fd4f83322e7c1062f636
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453178"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144872"
 ---
 # <a name="code-access-security-and-adonet"></a>コード アクセス セキュリティと ADO.NET
 .NET Framework はコード アクセス セキュリティ (CAS) に加えてロール ベースのセキュリティを備えています。どちらも、共通言語ランタイム (CLR) が提供する共通のインフラストラクチャを使って実装されています。 アンマネージ コードの場合、ほとんどのアプリケーションはユーザーまたはプリンシパルの権限で実行されます。 そのため、悪意のあるソフトウェアやエラーを含むソフトウェアが、システム特権を持つユーザーによって実行された場合、コンピューター システムが被害を受けたり、機密データが改ざんされる可能性があります。  
@@ -23,7 +23,7 @@ ms.locfileid: "49453178"
  CLR は、そのコードに許されている操作の範囲内で実行を許可します。 コードは権限を要求できますが、その要求は管理者が設定したセキュリティ ポリシーに基づいて受理されます。  
   
 > [!NOTE]
->  CLR で実行されるコード自体に、アクセス許可を与えることはできません。 たとえば、コードから要求できる権限は、セキュリティ ポリシーによって許可されたレベルよりも低い権限だけであり、それを超える権限が付与されることはありません。 権限を付与する場合は、まず、権限をまったく付与しない状態から始め、その後で、実行しようとする特定のタスクに必要な最小限の権限を追加してゆくようにします。 すべての権限を与えてから、不要なものを 1 つずつ拒否していく方法では、アプリケーションを危険にさらす結果となります。必要以上の権限を付与することによって意図しないセキュリティ ホールを招く可能性があります。 詳細については、次を参照してください。 [NIB: セキュリティ ポリシーを構成する](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4)と[NIB: セキュリティ ポリシーの管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)します。  
+>  CLR で実行されるコード自体に、アクセス許可を与えることはできません。 たとえば、コードから要求できる権限は、セキュリティ ポリシーによって許可されたレベルよりも低い権限だけであり、それを超える権限が付与されることはありません。 権限を付与する場合は、まず、権限をまったく付与しない状態から始め、その後で、実行しようとする特定のタスクに必要な最小限の権限を追加してゆくようにします。 すべての権限を与えてから、不要なものを 1 つずつ拒否していく方法では、アプリケーションを危険にさらす結果となります。必要以上の権限を付与することによって意図しないセキュリティ ホールを招く可能性があります。 詳細については、次を参照してください[NIB:。セキュリティ ポリシーを構成する](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4)と[NIB:セキュリティ ポリシーの管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)します。  
   
  コードのアクセス権限には、次の 3 種類があります。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "49453178"
 ### <a name="requesting-permissions"></a>権限の要求  
  権限を要求する目的は、そのアプリケーションを実行するために必要な権限をランタイムに伝えると共に、実際に必要な権限以外は付与されないようにすることです。 たとえば、ローカル ディスクにデータを書き込むアプリケーションは <xref:System.Security.Permissions.FileIOPermission> を必要とします。 この権限が付与されていない場合、アプリケーションがディスクへの書き込みを試行した時点で実行に失敗します。 ただし、アプリケーションから `FileIOPermission` を要求した場合、その権限が付与されなければ、最初の段階で例外が生成され、アプリケーションが読み込まれることはありません。  
   
- ディスクからのデータの読み取りだけを必要とするアプリケーションでは、書き込み権限が決して付与されないように要求できます。 バグが存在していたり、悪意のある攻撃を受けたとしても、操作の対象となるデータに損害を与えることはありません。 詳細については、次を参照してください。 [NIB: アクセス許可の要求](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)します。  
+ ディスクからのデータの読み取りだけを必要とするアプリケーションでは、書き込み権限が決して付与されないように要求できます。 バグが存在していたり、悪意のある攻撃を受けたとしても、操作の対象となるデータに損害を与えることはありません。 詳細については、次を参照してください[NIB:。アクセス許可を要求する](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)します。  
   
 ## <a name="role-based-security-and-cas"></a>ロール ベースのセキュリティと CAS  
  ロール ベースのセキュリティとコード アクセス セキュリティ (CAS) の両方を実装することで、アプリケーションの全体的なセキュリティを高めることができます。 ロール ベースのセキュリティには、Windows アカウントまたはカスタム ID を使用できます。セキュリティ プリンシパルに関する情報には、現在のスレッドからアクセスできます。 また、ユーザーによって指定された資格情報に基づいて、データやリソースへのアクセスを提供するアプリケーションも少なくありません。 このようなアプリケーションは、通常、ユーザーのロールを調べ、そのロールに基づいてリソースへのアクセスを許可します。  
@@ -71,8 +71,8 @@ ms.locfileid: "49453178"
 |-----------------------------------|-----------------|  
 |`Action`|セキュリティ アクションを取得または設定します。 このプロパティは、<xref:System.Security.Permissions.SecurityAttribute> から継承されています。|  
 |`AllowBlankPassword`|接続文字列内で空白のパスワードの使用を許可または禁止します。 有効な値は、空白のパスワードの使用を許可する `true` および空白のパスワードの使用を禁止する `false` です。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
-|`ConnectionString`|使用できる接続文字列を指定します。 複数の接続文字列を指定できます。 **注:** 接続文字列でユーザー ID またはパスワードを含まれません。 このリリースでは、.NET Framework 構成ツールを使用して接続文字列制限を変更することはできません。 <br /><br /> このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
-|`KeyRestrictions`|許可または禁止する接続文字列パラメーターを指定します。 接続文字列パラメーターが、フォームで識別される*\<パラメーター名 > =* します。 セミコロン (;) で区切って、複数のパラメーターを指定できます。 **注:** を指定しない場合`KeyRestrictions`を設定することは`KeyRestrictionBehavior`プロパティを`AllowOnly`または`PreventUsage`、追加の接続文字列パラメーターは許可されません。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
+|`ConnectionString`|使用できる接続文字列を指定します。 複数の接続文字列を指定できます。 **注:** 接続文字列には、ユーザー ID やパスワードを含めないでください。 このリリースでは、.NET Framework 構成ツールを使用して接続文字列制限を変更することはできません。 <br /><br /> このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
+|`KeyRestrictions`|許可または禁止する接続文字列パラメーターを指定します。 接続文字列パラメーターが、フォームで識別される*\<パラメーター名 > =* します。 セミコロン (;) で区切って、複数のパラメーターを指定できます。 **注:**`KeyRestrictions` が指定されておらず、`KeyRestrictionBehavior` プロパティが `AllowOnly` または `PreventUsage` に設定されている場合は、接続文字列パラメーターを追加できません。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
 |`KeyRestrictionBehavior`|接続文字列パラメーターが、追加を許可された唯一の接続文字列パラメーター (`AllowOnly`) か、または追加を禁止された接続文字列パラメーター (`PreventUsage`) かを指定します。 `AllowOnly` が既定値です。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
 |`TypeID`|派生クラスで実装すると、この属性の一意の識別子を取得します。 このプロパティは、<xref:System.Attribute> から継承されています。|  
 |`Unrestricted`|このリソースに対する無制限のアクセス許可が宣言されているかどうかを示します。 このプロパティは、<xref:System.Security.Permissions.SecurityAttribute> から継承されています。|  
@@ -160,7 +160,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>セキュリティ アクセス許可を使用した ADO.NET コード アクセスの検証  
- 部分信頼のシナリオでは、<xref:System.Data.SqlClient.SqlClientPermissionAttribute> を指定することによって、コード内の特定のメソッドに対する CAS 特権を要求できます。 制限されたセキュリティ ポリシーによって、実際にはその特権が許可されていない場合は、そのコードを実行する前に例外がスローされます。 セキュリティ ポリシーの詳細については、次を参照してください。 [NIB: セキュリティ ポリシーの管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)と[NIB: セキュリティ ポリシーのベスト プラクティス](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)します。  
+ 部分信頼のシナリオでは、<xref:System.Data.SqlClient.SqlClientPermissionAttribute> を指定することによって、コード内の特定のメソッドに対する CAS 特権を要求できます。 制限されたセキュリティ ポリシーによって、実際にはその特権が許可されていない場合は、そのコードを実行する前に例外がスローされます。 セキュリティ ポリシーの詳細については、次を参照してください[NIB:。セキュリティ ポリシーの管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)と[NIB:セキュリティ ポリシーのベスト プラクティス](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)します。  
   
 ### <a name="example"></a>例  
  次のサンプルは、特定の接続文字列を必要とするコードの作成方法を示しています。 このサンプルは、<xref:System.Data.SqlClient> に対する無制限の権限を拒否する機能をシミュレートします。この機能は、実際には、システム管理者が、CAS ポリシーを使用して実装します。  
@@ -197,6 +197,5 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [ネイティブ コードと .NET Framework コードのセキュリティ](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [コード アクセス セキュリティ](../../../../docs/framework/misc/code-access-security.md)  
  [ロール ベースのセキュリティ](../../../../docs/standard/security/role-based-security.md)  
  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b86ffdd242a95a0c5c34efb3f38b3501f3f2ba6c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197800"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129248"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt;要素
 
@@ -36,8 +36,8 @@ ms.locfileid: "47197800"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**version**|省略可能な属性です。<br /><br /> このアプリケーションがサポートする共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定する文字列値。 有効な値について、`version`属性を参照してください、 [「ランタイム バージョン」の値](#version)セクション。 **注:** 、.NET Framework 3.5 を通じて、"*ランタイム バージョン*"値には、フォーム*主要な*.*マイナー*.*ビルド*します。 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 以降では、必要となるのはメジャー バージョン番号とマイナー バージョン番号のみです (つまり、"v4.0.30319" ではなく "v4.0")。 短い文字列を使用することをお勧めします。|  
-|**sku**|省略可能な属性です。<br /><br /> 在庫管理単位 (SKU) を指定する文字列の値。SKU はこのアプリケーションがサポートする .NET Framework リリースを指定します。<br /><br /> 使用、.NET Framework 4.0 以降、`sku`属性をお勧めします。  この属性が指定される場合は、アプリケーションが対象とする .NET Framework のバージョンを示します。<br /><br /> Sku 属性の有効な値は、次を参照してください。、 ["sku id"値](#sku)セクション。|  
+|**version**|省略可能な属性です。<br /><br /> このアプリケーションがサポートする共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定する文字列値。 有効な値について、`version`属性を参照してください、 [「ランタイム バージョン」の値](#version)セクション。 **注:** を通じて、.NET Framework 3.5、"*ランタイム バージョン*"値には、フォーム*メジャー*.*マイナー*.*ビルド*します。 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 以降では、必要となるのはメジャー バージョン番号とマイナー バージョン番号のみです (つまり、"v4.0.30319" ではなく "v4.0")。 短い文字列を使用することをお勧めします。|  
+|**sku**|省略可能な属性です。<br /><br /> 在庫管理単位 (SKU) を指定する文字列の値。SKU はこのアプリケーションがサポートする .NET Framework リリースを指定します。<br /><br /> .NET Framework 4.0 以降では、`sku` 属性の使用が推奨されます。  この属性が指定される場合は、アプリケーションが対象とする .NET Framework のバージョンを示します。<br /><br /> Sku 属性の有効な値は、次を参照してください。、 ["sku id"値](#sku)セクション。|  
   
 ## <a name="remarks"></a>Remarks
 
@@ -48,7 +48,7 @@ ms.locfileid: "47197800"
 > [!NOTE]
 >  使用する場合、 [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)構成ファイルを指定する関数を使用する必要があります、`<requiredRuntime>`ランタイムのすべてのバージョンの要素。 `<supportedRuntime>`を使用する場合、要素は無視されます[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)します。  
   
-NET Framework 1.1 から 3.5 までのランタイムの複数のバージョンをサポートするアプリケーションでは、ランタイムの複数のバージョンをサポートする場合は、最初の要素で最も優先度の高いバージョンを指定し、最後の要素で最も優先度の低いバージョンを指定する必要があります。 .NET Framework 4.0 またはそれ以降のバージョンをサポートするアプリ、`version`属性は .NET Framework 4 およびそれ以降のバージョンに一般的では、CLR のバージョンを示します、`sku`属性は 1 つの .NET Framework バージョンを示すアプリ対象とします。  
+NET Framework 1.1 から 3.5 までのランタイムの複数のバージョンをサポートするアプリケーションでは、ランタイムの複数のバージョンをサポートする場合は、最初の要素で最も優先度の高いバージョンを指定し、最後の要素で最も優先度の低いバージョンを指定する必要があります。 .NET Framework 4.0 以降のバージョンをサポートするアプリケーションでは、`version` 属性は .NET Framework 4 以降のバージョンで共通の CLR バージョンを示します。`sku` 属性は、アプリケーションが対象とする単一の .NET Framework バージョンを示します。  
   
 > [!NOTE]
 >  アプリケーションがなど、レガシ アクティブ化パスを使用するかどうか、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)、それらのパスを以前のバージョンではなく、CLR の version 4 をアクティブ化して、アプリケーションが、でビルドされた場合または[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]依存していますが、以前のバージョンの .NET Framework でビルドされた混合モードのアセンブリでないを指定するための十分な[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]でサポートされているランタイムの一覧。 さらに、 [ \<startup > 要素](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)、構成ファイルで設定する必要があります、`useLegacyV2RuntimeActivationPolicy`属性を`true`します。 ただし、この属性を `true` に設定することは、以前のバージョンの .NET Framework でビルドされたすべてのコンポーネントが、それらのビルドに使用されたランタイムではなく、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] を使用して実行されることを意味します。  
@@ -77,12 +77,12 @@ NET Framework 1.1 から 3.5 までのランタイムの複数のバージョン
 |----------------------------|---------------------|  
 |4.0|".NETFramework,Version=v4.0"|  
 |4.0、Client Profile|".NETFramework,Version=v4.0,Profile=Client"|  
-|4.0、プラットフォームの更新プログラム 1|.NETFramework,Version=v4.0.1|  
-|4.0、Client Profile、更新プログラム 1|.NETFramework,Version=v4.0.1,Profile=Client|  
-|4.0、プラットフォームの更新プログラム 2|.NETFramework,Version=v4.0.2|  
-|4.0、Client Profile、更新プログラム 2|.NETFramework,Version=v4.0.2,Profile=Client|  
-|4.0、プラットフォームの更新プログラム 3|.NETFramework,Version=v4.0.3|  
-|4.0、Client Profile、更新プログラム 3|.NETFramework,Version=v4.0.3,Profile=Client|  
+|4.0、プラットフォームの更新プログラム 1|".NETFramework、バージョン = v4.0.1"|  
+|4.0、Client Profile、更新プログラム 1|".NETFramework、バージョン v4.0.1、プロファイルの = = クライアント"|  
+|4.0、プラットフォームの更新プログラム 2|".NETFramework、バージョン = v4.0.2 以降を予定"|  
+|4.0、Client Profile、更新プログラム 2|".NETFramework、バージョン = v4.0.2 以降を予定プロファイル、クライアントを ="|  
+|4.0、プラットフォームの更新プログラム 3|".NETFramework、バージョン = v4.0.3"|  
+|4.0、Client Profile、更新プログラム 3|".NETFramework、バージョン v4.0.3、プロファイルの = = クライアント"|  
 |4.5|".NETFramework,Version=v4.5"|  
 |4.5.1|".NETFramework,Version=v4.5.1"|  
 |4.5.2|".NETFramework,Version=v4.5.2"|  

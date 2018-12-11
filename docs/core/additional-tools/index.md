@@ -1,16 +1,16 @@
 ---
-title: .NET Core の追加の CLI ツール - .NET Core
+title: .NET Core の追加の CLI ツール
 description: .NET Core 機能をサポートおよび拡張する、インストール可能な追加ツールについての概要。
 author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2018
 ms.custom: seodec18
-ms.openlocfilehash: 695d1accba6d25d8b587dc86ad028e2281ff82e9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0fb04b65efa26de3f0db9b7f7c28cce01ad9df97
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147844"
+ms.locfileid: "53169197"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core の追加ツールの概要
 

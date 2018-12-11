@@ -2,14 +2,14 @@
 title: project.json からの .NET Core の移行
 description: project.json を使って以前の .NET Core プロジェクトを移行する方法について説明します
 author: blackdwarf
-ms.author: mairaw
 ms.date: 07/19/2017
-ms.openlocfilehash: 47d9cab48d83581afb9deb2fd91c4c9a6dc85201
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143286"
+ms.locfileid: "53170692"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>project.json からの .NET Core プロジェクトの移行
 

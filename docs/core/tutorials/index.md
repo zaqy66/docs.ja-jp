@@ -2,15 +2,15 @@
 title: .NET Core チュートリアル
 description: Mac、Linux、および Windows でアプリとライブラリをビルドする場合は、.NET Core について学習するためのチュートリアルに従ってください。
 author: richlander
-ms.author: mairaw
 ms.date: 03/16/2017
+titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 16f468ffdff3ea4fff1ab2400ac7dd3d270c781c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130736"
+ms.locfileid: "53168749"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>これらのチュートリアルを詳しく見ていくことで .NET Core と .NET Core SDK ツールについて学習する
 
@@ -26,7 +26,7 @@ ms.locfileid: "53130736"
 - [クラス ライブラリのテスト](testing-library-with-visual-studio.md)
 - [クラス ライブラリの利用](consuming-library-with-visual-studio.md)
 - [Windows 上の完全な C# .NET Core ソリューションのビルド](using-on-windows-full-solution.md)
-- [Azure Cosmos DB: SQL API と .NET Core の概要](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Azure Cosmos DB:SQL API と .NET Core の概要](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Visual Studio Code でのアプリケーションのビルド
 

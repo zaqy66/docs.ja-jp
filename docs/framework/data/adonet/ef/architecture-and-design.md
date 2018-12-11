@@ -2,17 +2,17 @@
 title: アーキテクチャとデザイン
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530471"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154268"
 ---
 # <a name="architecture-and-design"></a>アーキテクチャとデザイン
-SQL 生成モジュール、[サンプル プロバイダー](https://go.microsoft.com/fwlink/?LinkId=180616)コマンド ツリーを表す式ツリー上のビジターとして実装されます。 生成は、式ツリーを介した単一のパスで行われます。  
+SQL 生成モジュール、[サンプル プロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)コマンド ツリーを表す式ツリー上のビジターとして実装されます。 生成は、式ツリーを介した単一のパスで行われます。  
   
- ツリーのノードはボトムアップ方式で処理されます。 まず、中間構造として SqlSelectStatement または SqlBuilder が生成され、どちらも ISqlFragment を実装します。 次に、文字列である SQL ステートメントがその構造から生成されます。 中間構造には 2 つの理由があります。  
+ ツリーのノードはボトムアップ方式で処理されます。 最初に、中間構造が生成されます。SqlSelectStatement または SqlBuilder を両方実装する ISqlFragment します。 次に、文字列である SQL ステートメントがその構造から生成されます。 中間構造には 2 つの理由があります。  
   
 -   論理上、SQL SELECT ステートメントは順序を無視して挿入されます。 FROM 句に参加するノードは、WHERE 句、GROUP BY 句、および ORDER BY 句に参加するノードの前にアクセスされます。  
   
@@ -25,7 +25,7 @@ SQL 生成モジュール、[サンプル プロバイダー](https://go.microso
  2 番目のフェーズでは、実際の文字列を生成している間、別名の名前が変更されます。  
   
 ## <a name="data-structures"></a>データ構造  
- このセクションで使用される型の説明、[サンプル プロバイダー](https://go.microsoft.com/fwlink/?LinkId=180616)使用して SQL ステートメントを作成することです。  
+ このセクションで使用される型の説明、[サンプル プロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)使用して SQL ステートメントを作成することです。  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  このセクションでは、ISqlFragment インターフェイスを実装するクラスについて説明します。このインターフェイスは、2 つの目的を達成します。  
@@ -52,7 +52,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- SqlSelectStatement は、"SELECT... の図形の正規 SQL SELECT ステートメントを表します 差出人。 WHERE … グループ化してください. ORDER BY"。  
+ SqlSelectStatement は、"SELECT... の図形の正規 SQL SELECT ステートメントを表します 差出人 WHERE … グループ化してください. ORDER BY"。  
   
  各 SQL 句は StringBuilder によって表されます。 また、Distinct が指定されているかどうか、およびステートメントが最上位かどうかを追跡します。 ステートメントが最上位ではなく、ステートメントに TOP 句も含まれていない場合は、ORDER BY 句は省略されます。  
   
@@ -226,9 +226,9 @@ private bool IsParentAJoin{get}
  結合の別名のフラット化は、「DbPropertyExpression」で説明されているように、DbPropertyExpression にアクセスするときに行われます。  
   
 ### <a name="column-name-and-extent-alias-renaming"></a>列名およびエクステントの別名の名前変更  
- 列名とエクステントの別名の名前変更に関する問題を解決するには、「SQL 生成の 2 番目のフェーズ: 文字列コマンドの生成」で説明されている、生成の 2 番目のフェーズで別名に置換されるシンボルを使用します。  
+ 列名とエクステントの別名の名前変更の問題を解決するには別名を使った SQL 生成のフェーズの 2 番目のセクションで説明されている生成の 2 番目のフェーズで置換されるシンボルを使用しています。文字列のコマンドを生成しています。  
   
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL 生成の最初のフェーズ: 式ツリーへのアクセス  
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL 生成の最初のフェーズ:式ツリーへのアクセス  
  このセクションでは、SQL 生成の最初のフェーズについて説明します。このフェーズでは、クエリを表す式にアクセスするときに、中間構造 SqlSelectStatement または SqlBuilder が生成されます。  
   
  このセクションでは、さまざまな式ノード カテゴリにアクセスする際の原則、および特定の式の型にアクセスする際の詳細について説明します。  
@@ -405,7 +405,7 @@ Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(inp
 IsEmpty(inut) = Not Exists(input)  
 ```  
   
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成の 2 番目のフェーズ: 文字列コマンドの生成  
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成の 2 番目のフェーズ:文字列コマンドの生成  
  文字列 SQL コマンドを生成すると、SqlSelectStatement によって、シンボルの実際の別名が生成されます。これにより、列名とエクステントの別名の名前変更に関する問題が解決されます。  
   
  エクステントの別名の名前変更は、SqlSelectStatement オブジェクトを文字列に書き込むときに行われます。 まず、外部エクステントで使用されるすべての別名のリストを作成します。 FromExtents (または null 以外の場合は AllJoinExtents) 内の各シンボルは、外部エクステントのいずれかと衝突する場合に名前が変更されます。 名前の変更が必要な場合は、AllExtentNames で収集されたエクステントと競合することはありません。  

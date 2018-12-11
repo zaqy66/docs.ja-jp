@@ -1,6 +1,6 @@
 ---
 title: Visual Studio での WPF アプリケーションを作成します。
-ms.date: 04/12/2018
+ms.date: 10/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,16 +11,16 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 1a9c82a0bca25fa1242b29393e41e6eb4ce7f3b9
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007257"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150746"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル:初めての WPF デスクトップ アプリケーション
 
-この記事では、ほとんどの WPF アプリケーションに共通する要素を含む単純な Windows Presentation Foundation (WPF) アプリケーションを開発する方法を示します: Extensible Application Markup Language (XAML) マークアップ、分離コード、アプリケーションの定義コントロール、レイアウト、データ バインディング、およびスタイル。
+この記事では、ほとんどの WPF アプリケーションに共通する要素を含む単純な Windows Presentation Foundation (WPF) アプリケーションを開発する方法を示します。Extensible Application Markup Language (XAML) マークアップ、分離コード、アプリケーション定義、コントロール、レイアウト、データ バインド、およびスタイル。
 
 このチュートリアルには、次の手順が含まれています。
 
@@ -43,7 +43,7 @@ ms.locfileid: "46007257"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- Visual Studio 2012 またはそれ以降 (この記事では、Visual Studio 2017 に基づく)
+- Visual Studio 2017 またはそれ以降
 
    最新バージョンの Visual Studio のインストールの詳細については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。
 
@@ -57,7 +57,7 @@ ms.locfileid: "46007257"
 
       **新しいプロジェクト**ダイアログ ボックスが開きます。
 
-   2. 下、**インストール済み**カテゴリで、いずれかを展開、 **Visual c#** または**Visual Basic**ノードをクリックして**Windows クラシック デスクトップ**します。
+   2. 下、**インストール済み**カテゴリで、いずれかを展開、 **Visual C#** または**Visual Basic**ノードをクリックして**Windows デスクトップ**します。
 
    3. 選択、 **WPF アプリ (.NET Framework)** テンプレート。 名前を入力します**`ExpenseIt`** 選び**OK**します。
 
@@ -66,7 +66,7 @@ ms.locfileid: "46007257"
       Visual Studio は、プロジェクトを作成し、という名前の既定アプリケーション ウィンドウのデザイナーが開きます**MainWindow.xaml**します。
 
    > [!NOTE]
-   > このチュートリアルでは、<xref:System.Windows.Controls.DataGrid>以降、.NET Framework 4 で利用可能であるコントロール。 プロジェクトが、.NET Framework 4 を対象とすることを確認以降に。 詳細については、「[方法: .NET Framework のバージョンをターゲットにする](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。
+   > このチュートリアルでは、<xref:System.Windows.Controls.DataGrid>以降、.NET Framework 4 で利用可能であるコントロール。 プロジェクトが、.NET Framework 4 を対象とすることを確認以降に。 詳細については、次を参照してください。[方法.NET Framework のバージョンを対象](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)します。
 
 2. 開いている*Application.xaml* (Visual Basic) または*App.xaml* (c#)。
 
@@ -254,7 +254,7 @@ ms.locfileid: "46007257"
 
     [!code-xaml[ExpenseIt#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#8)]
 
-    <xref:System.Windows.Controls.RowDefinition.Height%2A> 2 つの行に設定されて<xref:System.Windows.GridLength.Auto%2A>行の内容は、基に、行のサイズを調整することを意味します。 既定の<xref:System.Windows.Controls.RowDefinition.Height%2A>は<xref:System.Windows.GridUnitType.Star>サイズ変更は、行の高さが使用可能な領域の加重比率であることを意味します。 たとえば 2 つの行がある場合、<xref:System.Windows.Controls.RowDefinition.Height%2A>の"*"、それぞれがある使用可能な領域の半分の高さ。
+    <xref:System.Windows.Controls.RowDefinition.Height%2A> 2 つの行に設定されて<xref:System.Windows.GridLength.Auto%2A>行の内容に基づいて、行のサイズを調整することを意味します。 既定の<xref:System.Windows.Controls.RowDefinition.Height%2A>は<xref:System.Windows.GridUnitType.Star>サイズ変更は、行の高さが使用可能な領域の加重比率であることを意味します。 たとえば 2 つの行がある場合、<xref:System.Windows.Controls.RowDefinition.Height%2A>の"*"、それぞれがある使用可能な領域の半分の高さ。
 
     <xref:System.Windows.Controls.Grid> XAML を次のようになります。
 
@@ -327,7 +327,7 @@ ms.locfileid: "46007257"
 
 1. 開いている *`ExpenseItHome.xaml`* します。
 
-2. 追加、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント ハンドラーを<xref:System.Windows.Controls.Button>要素。 詳細については、次を参照してください。[方法: 単純なイベント ハンドラーを作成](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)です。
+2. 追加、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント ハンドラーを<xref:System.Windows.Controls.Button>要素。 詳細については、次を参照してください。[方法。単純なイベント ハンドラーを作成](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)です。
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -353,7 +353,7 @@ ms.locfileid: "46007257"
 3. アプリケーションをビルドして実行します。
 
     > [!NOTE]
-    > エラーが発生する場合、<xref:System.Windows.Controls.DataGrid>が見つかりませんでしたかが存在しない、プロジェクトが .NET Framework 4 以降を対象とするかどうかを確認します。 詳細については、「[方法: .NET Framework のバージョンをターゲットにする](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。
+    > エラーが発生する場合、<xref:System.Windows.Controls.DataGrid>が見つかりませんでしたかが存在しない、プロジェクトが .NET Framework 4 以降を対象とするかどうかを確認します。 詳細については、次を参照してください。[方法.NET Framework のバージョンを対象](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)します。
 
 4. 選択、**ビュー**ボタンをクリックします。
 
@@ -375,17 +375,17 @@ ms.locfileid: "46007257"
 
     この XAML は、次のスタイルを追加します。
 
-    - `headerTextStyle`: ページ タイトル <xref:System.Windows.Controls.Label>の書式を設定します。
+    - `headerTextStyle`:ページ タイトルの書式設定<xref:System.Windows.Controls.Label>します。
 
-    - `labelStyle`: <xref:System.Windows.Controls.Label> コントロールの書式を設定します。
+    - `labelStyle`:書式設定、<xref:System.Windows.Controls.Label>コントロール。
 
-    - `columnHeaderStyle`: <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>の書式を設定します。
+    - `columnHeaderStyle`:書式設定、<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>します。
 
-    - `listHeaderStyle`: リスト ヘッダーの <xref:System.Windows.Controls.Border> コントロールの書式を設定します。
+    - `listHeaderStyle`:一覧のヘッダーを書式設定する<xref:System.Windows.Controls.Border>コントロール。
 
-    - `listHeaderTextStyle`: リスト ヘッダーの書式を設定するには<xref:System.Windows.Controls.Label>します。
+    - `listHeaderTextStyle`:一覧のヘッダーを書式設定する<xref:System.Windows.Controls.Label>します。
 
-    - `buttonStyle`: 書式を設定するには<xref:System.Windows.Controls.Button>で`ExpenseItHome.xaml`します。
+    - `buttonStyle`:書式設定、<xref:System.Windows.Controls.Button>で`ExpenseItHome.xaml`します。
 
     スタイルは、リソースとの子に注目してください、<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>プロパティ要素。 ここでは、スタイルはアプリケーション内のすべての要素に適用されます。 .NET Framework アプリケーションでリソースの使用の例は、次を参照してください。[アプリケーション リソースを使用](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)します。
 

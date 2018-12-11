@@ -2,15 +2,14 @@
 title: .NET Core ランタイムと SDK をバージョン管理する方法
 description: この記事では、.NET Core SDK と ランタイムをバージョン管理する方法について説明します (セマンティック バージョニングと似ています)。
 author: bleroy
-ms.author: mairaw
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: 12bb270584eb0f63973acf40afd3f6a30363c9c6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126052"
+ms.locfileid: "53170718"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
