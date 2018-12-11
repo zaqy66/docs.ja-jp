@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 85792584660bd742ad3d313bf04ef1ce88bddcc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e37a42b3767d279da0d742ba9958ceb6628aab1
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504320"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236974"
 ---
 # <a name="services-and-transactions"></a>サービスとトランザクション
 Windows Communication Foundation (WCF) アプリケーションでは、クライアントからトランザクションを開始でき、サービス操作内でトランザクションを調整することができます。 クライアントはトランザクションを開始し、複数のサービス操作を呼び出す可能性があります。サービス操作が、1 つの単位としてコミットまたはロールバックされます。  
   
- サービス コントラクトでトランザクション動作を有効にするには、<xref:System.ServiceModel.ServiceBehaviorAttribute> を指定し、クライアント トランザクションを必要とするサービス操作について <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> プロパティと <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> プロパティを設定します。 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> パラメーターは、未処理の例外がスローされなかった場合に、メソッドが実行されているトランザクションが自動的に完了されるかどうかを指定します。 これらの属性の詳細については、次を参照してください。 [ServiceModel トランザクションの属性](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)です。  
+ サービス コントラクトでトランザクション動作を有効にするには、<xref:System.ServiceModel.ServiceBehaviorAttribute> を指定し、クライアント トランザクションを必要とするサービス操作について <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> プロパティと <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> プロパティを設定します。 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> パラメーターは、未処理の例外がスローされなかった場合に、メソッドが実行されているトランザクションが自動的に完了されるかどうかを指定します。 これらの属性の詳細については、次を参照してください。 [ServiceModel トランザクションの属性](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)します。  
   
  データベース更新の記録など、サービス操作で実行され、リソース マネージャーで管理される作業は、クライアント トランザクションの一部です。  
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性と <xref:System.ServiceModel.OperationBehaviorAttribute> 属性を使用して、サービス側のトランザクション動作を制御する方法を次の例に示します。  
   
-```  
+```csharp
 [ServiceBehavior(TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable)]  
 public class CalculatorService: ICalculatorLog  
 {  
@@ -28,7 +28,7 @@ public class CalculatorService: ICalculatorLog
                            TransactionAutoComplete = true)]  
     public double Add(double n1, double n2)  
     {  
-        recordToLog(String.Format("Added {0} to {1}", n1, n2));  
+        recordToLog($"Added {n1} to {n2}");
         return n1 + n2;  
     }  
   
@@ -36,7 +36,7 @@ public class CalculatorService: ICalculatorLog
                                TransactionAutoComplete = true)]  
     public double Subtract(double n1, double n2)  
     {  
-        recordToLog(String.Format("Subtracted {0} from {1}", n1, n2));  
+        recordToLog($"Subtracted {n1} from {n2}");
         return n1 - n2;  
     }  
   
@@ -44,7 +44,7 @@ public class CalculatorService: ICalculatorLog
                                        TransactionAutoComplete = true)]  
     public double Multiply(double n1, double n2)  
     {  
-        recordToLog(String.Format("Multiplied {0} by {1}", n1, n2));  
+        recordToLog($"Multiplied {n1} by {n2}");
         return n1 * n2;  
     }  
   
@@ -52,14 +52,14 @@ public class CalculatorService: ICalculatorLog
                                        TransactionAutoComplete = true)]  
     public double Divide(double n1, double n2)  
     {  
-        recordToLog(String.Format("Divided {0} by {1}", n1, n2));  
+        recordToLog($"Divided {n1} by {n2}", n1, n2);
         return n1 / n2;  
     }  
   
 }  
 ```  
   
- トランザクションを有効にすることができ、トランザクションのクライアントを構成することによってフローしサービス バインド、Ws-atomictransaction プロトコルを使用して設定、 [ \<transactionFlow >](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)要素を`true`ように、次のサンプル構成します。  
+ トランザクションを有効にすることができ、トランザクションは、クライアントを構成することでフローし、サービス、WS-AtomicTransaction プロトコルを使用するバインディングと設定、 [ \<transactionFlow >](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)要素`true`に示すように、次のサンプル構成します。  
   
 ```xml  
 <client>  
@@ -80,7 +80,7 @@ public class CalculatorService: ICalculatorLog
   
  クライアントは、<xref:System.Transactions.TransactionScope> を作成し、トランザクションのスコープ内でサービス操作を呼び出すことにより、トランザクションを開始できます。  
   
-```  
+```csharp
 using (TransactionScope ts = new TransactionScope(TransactionScopeOption.RequiresNew))  
 {  
     //Do work here  

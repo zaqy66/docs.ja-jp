@@ -2,12 +2,12 @@
 title: UDP トランスポートを使用するマルチキャスト アプリケーションの作成
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324754"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241854"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>UDP トランスポートを使用するマルチキャスト アプリケーションの作成
 マルチキャスト アプリケーションは、ポイント ツー ポイント接続を確立することなく多数の受信者に小さいメッセージを同時に送信します。 このようなアプリケーションの重点は、信頼性よりも速度です。 つまり、特定のメッセージが実際に受信されるということよりも、迅速にデータを送信することの方が重要です。 WCF は、<xref:System.ServiceModel.UdpBinding> を使用して、書き込みマルチキャスト アプリケーションをサポートします。 このトランスポートは、サービスが複数のクライアントに小さいメッセージを同時に送信する必要がある場合に便利です。 株価表示器のアプリケーションは、このようなサービスの例です。  
@@ -15,7 +15,7 @@ ms.locfileid: "46324754"
 ## <a name="implementing-a-multicast-application"></a>マルチキャスト アプリケーションの実装  
  マルチキャストのアプリケーションを実装するには、サービス コントラクトを定義し、マルチキャストのメッセージに応答する必要がある各ソフトウェア コンポーネントについては、サービス コントラクトを実装します。 たとえば、株価表示器のアプリケーションは、サービス コントラクトを定義する場合があります:  
   
-```  
+```csharp
 // Shared contracts between the client and the service  
 [ServiceContract]
 interface IStockTicker
@@ -43,7 +43,7 @@ class StockInfo
   
  マルチキャストのメッセージを受信する各アプリケーションはこのインターフェイスを公開するサービスをホストする必要があります。  たとえば、マルチキャストのメッセージを受信する方法を示すコード サンプルを次に示します。  
   
-```  
+```csharp
 // Service Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 // Binding
@@ -63,7 +63,7 @@ Console.ReadLine();
   
  このような場合、実際にマルチキャストのメッセージを送信するのはクライアントです。 正しい UDP アドレスでリッスンする各サービスはマルチキャストのメッセージを受信します。 マルチキャストのメッセージを送信するクライアントの例を次に示します。  
   
-```  
+```csharp
 // Multicast Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 
@@ -82,7 +82,7 @@ while (true)
 {
     // This will continue to mulicast stock information
     proxy.SendStockInfo(GetStockInfo());
-    Console.WriteLine(String.Format("sent stock info at {0}", DateTime.Now));
+    Console.WriteLine($"sent stock info at {DateTime.Now}");
     // Wait for one second before sending another update
     System.Threading.Thread.Sleep(new TimeSpan(0, 0, 1));
 }
@@ -96,7 +96,7 @@ while (true)
 ### <a name="two-way-multicast-messaging"></a>双方向マルチキャストのメッセージング  
  マルチキャストのメッセージは通常、一方向ですが、UdpBinding は要求または応答メッセージ交換をサポートします。 UDP トランスポートを使用して送信されたメッセージには送信者と宛先のアドレスの両方が含まれます。 送信者のアドレスを使う場合は、送信中に悪意により変更されることがあるため、注意が必要です。  アドレスは、次のコードを使用してチェックすることができます。  
   
-```  
+```csharp
 if (address.AddressFamily == AddressFamily.InterNetwork)
 {
     // IPv4
