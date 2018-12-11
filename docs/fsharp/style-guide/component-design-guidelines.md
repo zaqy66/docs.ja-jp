@@ -74,7 +74,7 @@ type Point =
 |-----------|------|------|----------|-------|
 | 具象型 | PascalCase | 名詞または形容詞 | 一覧で、Double、複雑な | 具象型は、構造体、クラス、列挙、デリゲート、レコード、および共用体です。 型名が小文字従来 OCaml には、F# 型の .NET の名前付けスキームは採用します。
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| 共用体タグ     | PascalCase | 名詞 | いくつかの追加、成功 | パブリック Api では、プレフィックスを使用しないでください。 必要に応じてときなど、内部プレフィックスを使用して、' チームの入力 TAlpha を = | TBeta | TDelta '。 |
+| 共用体タグ     | PascalCase | 名詞 | いくつかの追加、成功 | パブリック Api では、プレフィックスを使用しないでください。 必要に応じてときなど、内部プレフィックスを使用して、 `チームの入力 TAlpha を = | TBeta | TDelta` |
 | event          | PascalCase | 動詞 | ValueChanged/ValueChanging |  |
 | 例外     | PascalCase |      | WebException | 名前は、"Exception"で終わる必要があります。 |
 | フィールド          | PascalCase | 名詞 | CurrentName  | |

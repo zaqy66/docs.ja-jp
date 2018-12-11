@@ -44,5 +44,5 @@ var numbers = new Col::List<int> { 1, 2, 3 };
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [C# 演算子](../../../csharp/language-reference/operators/index.md)  
 - [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [. 演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [.演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
 - [extern エイリアス](../../../csharp/language-reference/keywords/extern-alias.md)
