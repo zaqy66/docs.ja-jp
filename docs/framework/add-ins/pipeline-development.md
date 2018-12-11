@@ -12,11 +12,11 @@ ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f981d667f3cbf35ab010ac5bd26a9ecd5c2aae11
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50135445"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151344"
 ---
 # <a name="pipeline-development"></a>パイプラインの開発
 アドイン パイプラインは、ホスト アプリケーションとそのアドインが互いに通信するために使用する必要がありますパイプライン セグメントのパスです。  
@@ -76,15 +76,15 @@ ms.locfileid: "50135445"
 ## <a name="walkthroughs"></a>チュートリアル  
  Visual Studio を使用してパイプラインを作成する方法を説明する 3 つのチュートリアル トピックがあります。  
   
--   [チュートリアル : 拡張性のあるアプリケーションの作成](../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)  
+-   [チュートリアル:拡張可能なアプリケーションを作成します。](../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)  
   
      ホストの加算、減算、乗算、および除算を実行する計算ツール アドインについて説明します。  
   
--   [チュートリアル: ホスト変更時の下位互換性を有効にします。](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [チュートリアル:ホスト変更時の下位互換性を有効にします。](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      計算ツール アドインを計算の強化された機能と計算ツールを追加では、最初との互換性を維持する方法について説明します。  
   
--   [チュートリアル: アドインとホスト間でコレクションの引き渡し](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [チュートリアル:ホストとアドイン間でコレクションの引き渡し](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
      書店のシナリオを使用して、パイプライン経由でデータ コレクションを渡す方法について説明します。  
   

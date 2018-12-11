@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 864367e71f3ed05af87931b2a87f576df42dcbf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73f96ea8cf215c1392857635e85556f530784397
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390693"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147659"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
-`invalidApartmentStateChange` マネージ デバッグ アシスタント (MDS) は、次の 2 つのどちらかの問題によってアクティブ化されます。  
+`invalidApartmentStateChange` マネージド デバッグ アシスタント (MDS) は、次の 2 つのどちらかの問題によってアクティブ化されます。  
   
 -   COM によって既に初期化されているスレッドの COM アパートメント状態を異なるアパートメント状態に変更しようとした。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33390693"
   
 -   スレッドは以前に異なる COM アパートメント状態に初期化されました。 スレッドのアパートメント状態を明示的または暗黙的に設定できることに注意してください。 明示的な操作には、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> プロパティ、<xref:System.Threading.Thread.SetApartmentState%2A> メソッド、<xref:System.Threading.Thread.TrySetApartmentState%2A> メソッドが含まれます。 <xref:System.Threading.Thread.Start%2A> メソッドを使用して作成されたスレッドは、スレッドが開始される前に <xref:System.Threading.Thread.SetApartmentState%2A> が呼び出されない限り、暗黙的に <xref:System.Threading.ApartmentState.MTA> に設定されます。 アプリケーションのメイン スレッドも、メイン メソッドで <xref:System.STAThreadAttribute> 属性が指定されない限り、暗黙的に <xref:System.Threading.ApartmentState.MTA> に初期化されます。  
   
--   異なる同時実行モデルを持つ `CoUninitialize` メソッド (または `CoInitializeEx` メソッド) がスレッドで呼び出されます。  
+-   異なるコンカレンシー モデルを持つ `CoUninitialize` メソッド (または `CoInitializeEx` メソッド) がスレッドで呼び出されます。  
   
 ## <a name="resolution"></a>解像度  
  スレッドの実行開始前に、スレッドのアパートメント状態を設定するか、<xref:System.STAThreadAttribute> 属性または <xref:System.MTAThreadAttribute> 属性をアプリケーションのメイン メソッドに適用します。  
@@ -63,7 +63,7 @@ ms.locfileid: "33390693"
 ## <a name="example"></a>例  
  次のコードの例は、この MDA がアクティブ化されることのある状況を示しています。  
   
-```  
+```csharp
 using System.Threading;  
 namespace ApartmentStateMDA  
 {  
@@ -79,5 +79,5 @@ namespace ApartmentStateMDA
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

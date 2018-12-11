@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041831"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129325"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager インターフェイス
 要求されたタスクに関する情報を取得し、その同期実装でデッドロックを検出するためにホストできるようにするメソッドを定義します。  
@@ -36,7 +36,7 @@ ms.locfileid: "50041831"
 |[GetRWLockOwnerNext メソッド](iclrsyncmanager-getrwlockownernext-method.md)|現在のリーダー/ライター ロックを待機している次のタスクを取得します。|  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+ **プラットフォーム:**[システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

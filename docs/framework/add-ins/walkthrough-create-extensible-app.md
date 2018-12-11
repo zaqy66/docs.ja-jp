@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : 拡張性のあるアプリケーションの作成'
+title: チュートリアル:拡張可能なアプリケーションを作成します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744614"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155078"
 ---
-# <a name="walkthrough-creating-an-extensible-application"></a>チュートリアル : 拡張性のあるアプリケーションの作成
+# <a name="walkthrough-creating-an-extensible-application"></a>チュートリアル:拡張可能なアプリケーションを作成します。
 このチュートリアルでは、簡単な計算機機能を実行するアドインのパイプラインを作成する方法について説明します。 実際のシナリオは含まれていません代わりに、パイプラインとアドインを追加できるようにするホストのサービスの基本的な機能を示します。  
   
  このチュートリアルでは、次のタスクについて説明します。  
@@ -43,11 +43,11 @@ ms.locfileid: "50744614"
   
 -   ホスト アプリケーションを実行します。  
   
- このパイプラインは、シリアル化可能な型のみを渡します (<xref:System.Double>と<xref:System.String>)、ホストとアドイン間。 複雑なデータ型のコレクションを渡す方法を示す例を参照してください[チュートリアル: ホスト間でコレクションを渡すと、アドイン](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)します。  
+ このパイプラインは、シリアル化可能な型のみを渡します (<xref:System.Double>と<xref:System.String>)、ホストとアドイン間。 複雑なデータ型のコレクションを渡す方法を示す例を参照してください[チュートリアル。ホストとアドイン間でコレクションを渡す](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)します。  
   
  このパイプラインのコントラクトは、算術演算の 4 つのオブジェクト モデルを定義します。 追加、減算、乗算、および除算します。 ホストからアドインなど、2 + 2 を計算する数式れ、アドインのホストに結果を返します。  
   
- 計算ツール アドインのバージョン 2 より高度を示し、バージョン管理を示します。 説明されている、[チュートリアル: 変更のホストとしての旧バージョンとの互換性を有効にする](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)します。  
+ 計算ツール アドインのバージョン 2 より高度を示し、バージョン管理を示します。 説明されている、[チュートリアル。ホスト変更時の下位互換性を有効にする](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを完了するための要件は次のとおりです。  
@@ -86,7 +86,7 @@ ms.locfileid: "50744614"
      アプリケーション フォルダー内のパイプラインのフォルダー構造を配置する必要はありません。それは利便性のためにはここで行われます。 適切な手順、チュートリアルのパイプライン フォルダー構造が別の場所にある場合は、コードを変更する方法について説明します。 パイプライン ディレクトリ要件の説明を参照[パイプライン開発の必要条件](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)します。  
   
     > [!NOTE]
-    >  `CalcV2`フォルダーは、このチュートリアルでは使用されません。 のプレース ホルダーは[チュートリアル: 変更のホストとしての旧バージョンとの互換性を有効にする](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)します。  
+    >  `CalcV2`フォルダーは、このチュートリアルでは使用されません。 のプレース ホルダーは[チュートリアル。ホスト変更時の下位互換性を有効にする](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)します。  
   
 ## <a name="creating-the-contract-and-views"></a>コントラクトとビューの作成  
  このパイプラインのコントラクト セグメントの定義、`ICalc1Contract`を 4 つのメソッドを定義するインターフェイス: `add`、 `subtract`、 `multiply`、および`divide`します。  
@@ -355,8 +355,8 @@ ms.locfileid: "50744614"
 4.  型**終了**キーを押すと、 **」と入力**キー アプリケーションを終了します。  
   
 ## <a name="see-also"></a>関連項目  
-- [チュートリアル: ホスト変更時の下位互換性を有効にします。](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
--  [チュートリアル: アドインとホスト間でコレクションの引き渡し](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+- [チュートリアル:ホスト変更時の下位互換性を有効にします。](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-  [チュートリアル:ホストとアドイン間でコレクションの引き渡し](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
 -  [パイプライン開発の必要条件](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
 -  [コントラクト、ビュー、およびアダプター](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
 -  [パイプライン開発](../../../docs/framework/add-ins/pipeline-development.md)

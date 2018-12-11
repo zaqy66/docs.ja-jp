@@ -3,11 +3,11 @@ title: ラップされていないメッセージ
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
 ms.openlocfilehash: 835312101ba9e0daaa7986a78c9a0040535881b9
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743940"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154922"
 ---
 # <a name="unwrapped-messages"></a>ラップされていないメッセージ
 このサンプルでは、ラップされていないメッセージを示します。 既定では、メッセージの本文は、サービス操作に渡されるパラメーターがラップされるように書式設定されます。 ラップされたモードでの `Add` サービスへの `ICalculator` 要求メッセージのサンプルを次に示します。  

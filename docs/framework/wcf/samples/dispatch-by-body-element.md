@@ -2,12 +2,12 @@
 title: 本文要素別のディスパッチ
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 449c153092d80bb457a2059b80158ea665bfc645
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58d505770a495e5e423104b9fb912d088ca56f86
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396379"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143158"
 ---
 # <a name="dispatch-by-body-element"></a>本文要素別のディスパッチ
 このサンプルでは、入力メッセージを操作に割り当てるための代替アルゴリズムを実装する方法を示します。  
@@ -20,7 +20,7 @@ ms.locfileid: "43396379"
   
  クラス コンストラクタには、`XmlQualifiedName` と文字列のペアが記録されたディクショナリが必要です。この修飾名は SOAP 本文の最初の子の名前を示し、文字列は該当する操作名を示します。 `defaultOperationName` は、このディクショナリで照合できないすべてのメッセージを受信する操作の名前です。  
   
-```  
+```csharp
 class DispatchByBodyElementOperationSelector : IDispatchOperationSelector  
 {  
     Dictionary<XmlQualifiedName, string> dispatchDictionary;  
@@ -31,13 +31,14 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
         this.dispatchDictionary = dispatchDictionary;  
         this.defaultOperationName = defaultOperationName;  
     }  
+}
 ```  
   
  <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> インターフェイスにはメソッドが 1 つしかないので、<xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> を実装すると、ビルドが非常に簡単です。 このメソッドでの処理は、入力メッセージを検査し、現在のエンドポイントのサービス コントラクトでのメソッド名と同じ文字列を返すことです。  
   
  このサンプルでは、操作セレクタは <xref:System.Xml.XmlDictionaryReader> を通じて、入力メッセージの本文の <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> を取得します。 このメソッドは既にリーダーをメッセージ本文の最初の子に配置しています。そのため、現在の要素の名前と名前空間の URI を取得して、それらを `XmlQualifiedName` に結合することは簡単です。その後、これは操作セレクタによって保持されているディクショナリから対応する操作を検索する際に使用されます。  
   
-```  
+```csharp
 public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
 {  
     XmlDictionaryReader bodyReader = message.GetReaderAtBodyContents();  
@@ -57,7 +58,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
   
  <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>、またはメッセージ本文のコンテンツへのアクセスを提供する他のメソッドを使用してメッセージ本文にアクセスすると、そのメッセージは "read" とマークされます。つまり、メッセージは以降の処理に対して無効になります。 したがって、操作セレクタは次のコードに示すメソッドを使用して入力メッセージのコピーを作成します。 リーダーの位置は検査中には変更されていないので、新しく作成されたメッセージはこれを参照できます。入力メッセージのプロパティとヘッダーもこの新しいメッセージにコピーされるので、その結果、元のメッセージの完全な複製ができあがります。  
   
-```  
+```csharp
 private Message CreateMessageCopy(Message message,   
                                      XmlDictionaryReader body)  
 {  
@@ -77,7 +78,7 @@ private Message CreateMessageCopy(Message message,
   
  次のコードの抜粋では、簡略化のため、メソッド <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> の実装のみを示します。これは、このサンプルのディスパッチャの構成変更に影響します。 他のメソッドが表示されていないのは、何の処理も行わずに呼び出し元に返されるためです。  
   
-```  
+```csharp
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
 class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior  
 {  
@@ -92,7 +93,7 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
   
  ディクショナリが設定されると、新しい `DispatchByBodyElementOperationSelector` がこの情報で構築され、ディスパッチ ランタイムの操作セレクタとして設定されます。  
   
-```  
+```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
 {  
     Dictionary<XmlQualifiedName,string> dispatchDictionary =   
@@ -123,7 +124,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
   
  操作セレクタはメッセージ本文の要素のみに基づいてディスパッチし、"Action" を無視するので、返された応答の "Action" ヘッダーをチェックしないようランタイムに通知する必要があります。これを行うには、ワイルドカード "*" を `ReplyAction` の <xref:System.ServiceModel.OperationContractAttribute> プロパティに割り当てます。 さらに、ワイルドカードに設定した「アクション」プロパティを持つ既定の操作を必要とは"\*"。 既定の操作は、ディスパッチできず、`DispatchBodyElementAttribute` を持たないすべてのメッセージを受信します。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
                             DispatchByBodyElementBehavior]  
 public interface IDispatchedByBody  

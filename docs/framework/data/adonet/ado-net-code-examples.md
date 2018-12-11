@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183803"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143624"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET のコード例
 このトピックにリストされたコードは、次の ADO.NET テクノロジを使用してデータベースからデータを取得する方法を示しています。
@@ -63,7 +63,7 @@ ms.locfileid: "50183803"
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>Entity Framework の例
-以下に示した各コードは、エンティティ データ モデル (EDM) のエンティティを照会して、データ ソースからデータを取得する方法を示しています。 これらの例を使用して、 [Northwind モデル](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638)します。 詳細については、次を参照してください。 [Entity Framework の概要](../../../../docs/framework/data/adonet/ef/overview.md)します。
+以下に示した各コードは、エンティティ データ モデル (EDM) のエンティティを照会して、データ ソースからデータを取得する方法を示しています。 これらの例では、Northwind サンプル データベースに基づいてモデルを使用します。 Entity Framework の詳細については、次を参照してください。 [Entity Framework の概要](../../../../docs/framework/data/adonet/ef/overview.md)します。
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
 この例のコードは LINQ クエリを使用してデータをカテゴリ オブジェクトとして返します。これは、CategoryID および CategoryName プロパティのみを含んでいる匿名型として射影されます。 詳細については、次を参照してください。 [LINQ to Entities の概要](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)します。
@@ -348,5 +348,5 @@ End Class
  [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [データ アプリケーションの作成](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
  [Entity Data Model (Entity Framework Tasks) のクエリを実行します。](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [方法: 匿名型オブジェクトを返すクエリの実行](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [操作方法：匿名型オブジェクトを返すクエリを実行します。](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
  [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)  

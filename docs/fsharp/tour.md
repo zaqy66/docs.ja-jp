@@ -1,19 +1,23 @@
 ---
-title: F# のツアー
-description: F# のプログラミング言語のコード サンプルを使ってこのツアーでの主な機能のいくつかを確認します。
-ms.date: 02/28/2018
-ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: ツアーF#
+description: 主な機能のいくつかを確認、F#プログラミング言語でこのツアーではコード サンプルを使用します。
+ms.date: 11/06/2018
+ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50235714"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143749"
 ---
-# <a name="tour-of-f"></a>F# のツアー #
+# <a name="tour-of-f"></a>ツアーF# #
 
-F# について学習する最善の方法では、F# コードを読み書きします。  この記事では、F# 言語の主な機能のいくつかツアーとして機能し、コンピューターに実行できる一部のコード スニペットが表示。  開発環境を設定する方法については、チェック アウト[Getting Started](tutorials/getting-started/index.md)します。
+F# について学習する最善の方法では、F# コードを読み書きします。 この記事では、F# 言語の主な機能のいくつかツアーとして機能し、コンピューターに実行できる一部のコード スニペットが表示。 開発環境を設定する方法については、チェック アウト[Getting Started](tutorials/getting-started/index.md)します。
 
-F# である 2 つの主要な概念: 関数と型。  このツアーではこれら 2 つの概念には、言語の機能を強調します。
+2 つの主要な概念があるF#: 関数と型。  このツアーではこれら 2 つの概念には、言語の機能を強調します。
+
+## <a name="executing-the-code-online"></a>オンラインでのコードを実行します。
+
+いない場合F#コンピューターにインストールされている、実行できるすべてのオンライン サンプルの[Fable REPL](http://fable.io/repl/)します。 Fable は言語にF#お使いのブラウザーで直接実行します。 REPL で次のサンプルを表示するチェック アウト**サンプル > 学習 > のツアー F#**  Fable レプリケーションの左側のメニュー バーに
 
 ## <a name="functions-and-modules"></a>関数、およびモジュール
 
@@ -47,7 +51,7 @@ F# である 2 つの主要な概念: 関数と型。  このツアーではこ�
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L186-L203)]
 
-F# 4.1、時点で作成することも`struct`組。  これらも相互運用完全にも、C# 7/Visual Basic 15 タプル`struct`組。
+F# 4.1、作成することも`struct`組。  これらも相互運用完全にも、C# 7/Visual Basic 15 タプル`struct`組。
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L205-L218)]
 
@@ -79,14 +83,14 @@ F# 4.1、時点で作成することも`struct`組。  これらも相互運用�
 
 ## <a name="recursive-functions"></a>再帰関数
 
-コレクションまたは要素のシーケンス処理で通常実行[再帰](language-reference/functions/index.md#recursive-functions)F# でします。  F# は、for ループおよび命令型プログラミングのサポート、再帰は正確性を保証するために簡単だから優先です。
+コレクションまたは要素のシーケンス処理で通常実行[再帰](language-reference/functions/index.md#recursive-functions)F# でします。  F#サポートが for ループおよび命令型プログラミングでは、再帰をお勧めの正確性を保証するために簡単だからです。
 
->[!NOTE]
-次の例を使用してパターン マッチングの利用、`match`式。  この基本的な構成要素はこの記事の後半で説明します。
+> [!NOTE]
+> 次の例を使用してパターン マッチングの利用、`match`式。  この基本的な構成要素はこの記事の後半で説明します。
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 
-F# も末尾呼び出し最適化では、完全にサポートは、ループ コンストラクトと同じ速度ように再帰呼び出しを最適化する方法。
+F#これは、ループ コンストラクトと同じ速度ように再帰呼び出しを最適化する方法、末尾呼び出し最適化を完全にサポートがあります。
 
 ## <a name="record-and-discriminated-union-types"></a>レコードと判別された共用体型
 
@@ -96,7 +100,7 @@ F# も末尾呼び出し最適化では、完全にサポートは、ループ �
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
-F# 4.1、時点では、レコードとしても表すことができます`struct`秒。  これは、`[<Struct>]`属性。
+F# 4.1、レコードとしても表現できます`struct`秒。  これは、`[<Struct>]`属性。
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L561-L568)]
 
@@ -159,11 +163,11 @@ F# の型システムの固有の機能を 1 つの単位を数値リテラル�
 
 [!code-fsharp[UnitsOfMeasure](../../samples/snippets/fsharp/tour.fs#L817-L842)]
 
-F# コア ライブラリでは、多くの SI 単位の種類と単位の変換を定義します。  詳細についてにチェック アウト、 [Microsoft.FSharp.Data.UnitSystems.SI Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d)します。
+F#コア ライブラリは、多くの SI 単位の種類および単位の変換を定義します。  詳細についてにチェック アウト、 [Microsoft.FSharp.Data.UnitSystems.SI Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d)します。
 
 ## <a name="classes-and-interfaces"></a>クラスとインターフェイス
 
-F# もが、.NET クラスの完全なサポート[インターフェイス](language-reference/interfaces.md)、[抽象クラス](language-reference/abstract-classes.md)、[継承](language-reference/inheritance.md)など。
+F#.NET のクラスの完全なサポートがあります[インターフェイス](language-reference/interfaces.md)、[抽象クラス](language-reference/abstract-classes.md)、[継承](language-reference/inheritance.md)など。
 
 [クラス](language-reference/classes.md)は、.NET オブジェクトを表す型がプロパティ、メソッド、およびイベントであることができます、[メンバー](language-reference/members/index.md)します。
 

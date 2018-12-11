@@ -1,15 +1,15 @@
 ---
-title: 'Windows Communication Foundation の採用: 将来の移行の簡略化'
+title: Windows Communication Foundation の採用を予測します。将来の移行を簡略化
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 171a31b375eae4c032849c2a1c2090f5d9ff856f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 306ffbae86058a2caad70d3788fb7bb4e7998eec
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837401"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129585"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation の採用: 将来の移行の簡略化
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation の採用を予測します。将来の移行を簡略化
 新しい ASP.NET アプリケーションの WCF への簡単に将来の移行のために、次の推奨事項と同様に、前の推奨事項に従います。  
   
 ## <a name="protocols"></a>プロトコル  
@@ -36,7 +36,7 @@ ms.locfileid: "48837401"
   
 -   `MessageName` の <xref:System.Web.Services.WebMethodAttribute> パラメーターを使用して、サービスの動作の明示的な名前を指定します。  
   
-    ```  
+    ```csharp  
     [WebMethod(MessageName="ExplicitName")]  
     string Echo(string input);  
     ```  
@@ -47,7 +47,7 @@ ms.locfileid: "48837401"
   
 -   <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> を使用して、HTTP 要求をメソッドにルーティングする SOAPAction HTTP ヘッダーの明示的な値を指定します。  
   
-    ```  
+    ```csharp  
     [WebMethod]  
     [SoapDocumentMethod(RequestElementName="ExplicitAction")]  
     string Echo(string input);  
@@ -63,7 +63,7 @@ ms.locfileid: "48837401"
 ## <a name="exception-handling"></a>例外処理  
  サービスで送受信するデータ型の構造を設計するときは、クライアントに伝達する必要があり、サービス内で発生する可能性のあるさまざまな種類の例外を表現する構造も設計します。  
   
-```  
+```csharp  
 [Serializable]  
 [XmlRoot(  
      Namespace="ExplicitNamespace", IsNullable=true)]  
@@ -84,7 +84,7 @@ ms.locfileid: "48837401"
   
  これらのクラスには、自分自身を XML にシリアル化する機能を与えます。  
   
-```  
+```csharp  
 public XmlNode ToXML()  
 {  
      XmlSerializer serializer = new XmlSerializer(  
@@ -103,7 +103,7 @@ public XmlNode ToXML()
   
  これでこのクラスを使用して、明示的にスローされた <xref:System.Web.Services.Protocols.SoapException> インスタンスの詳細を指定できます。  
   
-```  
+```csharp  
 AnctipatedException exception = new AnticipatedException();  
 exception.AnticipatedExceptionInformation = "…";  
 throw new SoapException(  
@@ -125,4 +125,4 @@ throw new SoapException(
 -   サービスのリソースへのアクセスを承認するには、ASP.NET 2.0 ロール プロバイダーの使用を検討してください。  
   
 ## <a name="see-also"></a>関連項目  
- [Windows Communication Foundation 導入の準備: 将来的な統合の容易化](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+ [Windows Communication Foundation の採用を予測します。将来的な統合を簡略化](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

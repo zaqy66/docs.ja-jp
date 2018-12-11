@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e20a04e76fb26409396a4f0b9fbfc7d86f253e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ebc449985a8e2617b278f04c91d243ca11b637e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392087"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145203"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
-`memberInfoCacheCreation` マネージ デバッグ アシスタント (MDA) は、<xref:System.Reflection.MemberInfo> キャッシュが作成されるとアクティブになります。 これは、リソースに大きな負荷のかかるリフレクション機能をプログラムが使っていることを明確に示すものです。  
+`memberInfoCacheCreation` マネージド デバッグ アシスタント (MDA) は、<xref:System.Reflection.MemberInfo> キャッシュが作成されるとアクティブになります。 これは、リソースに大きな負荷のかかるリフレクション機能をプログラムが使っていることを明確に示すものです。  
   
 ## <a name="symptoms"></a>現象  
  プログラムがリソースに負荷のかかるリフレクションを使っているため、プログラムのワーキング セットが増加します。  
@@ -52,7 +52,7 @@ ms.locfileid: "33392087"
 ## <a name="example"></a>例  
  次のサンプル コードは、`memberInfoCacheCreation` MDA をアクティブ化します。  
   
-```  
+```csharp
 using System;  
   
 public class Exe  
@@ -66,4 +66,4 @@ public class Exe
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Reflection.MemberInfo>  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

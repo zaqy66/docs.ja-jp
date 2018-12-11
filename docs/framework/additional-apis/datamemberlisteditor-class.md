@@ -15,11 +15,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50980597"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129364"
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor クラス
 
@@ -40,9 +40,9 @@ internal class DataMemberListEditor : UITypeEditor
 
 **名前空間:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**アセンブリ:** System.Design (で System.Design.dll)  
+**アセンブリ:** System.Design.dll) の「System.Design  
   
-**.NET framework のバージョン:** 2.0 以降。  
+**.NET framework のバージョン:** 2.0 以降で使用可能です。  
   
 ## <a name="see-also"></a>関連項目
 

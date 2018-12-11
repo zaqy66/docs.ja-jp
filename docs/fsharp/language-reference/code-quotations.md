@@ -2,17 +2,17 @@
 title: コード クォート (F#)
 description: 言語機能を生成し、プログラムで F# コード式を処理することができますが、F# コード クォートについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 565fd2a07c617d156f1d43f94a7cb98fc22f1401
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47397203"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150785"
 ---
 # <a name="code-quotations"></a>コード クォート
 
 > [!NOTE]
-API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
+> API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
 このトピックで説明*コード クォート*、言語機能を生成し、プログラムで F# コード式を処理することができます。 この機能を使用して、F# コードを表す抽象構文ツリーを生成できます。 抽象構文ツリーを走査し、アプリケーションのニーズに合わせて処理します。 たとえば、F# コードを生成または他の言語でコードを生成するツリーを使用できます。
 

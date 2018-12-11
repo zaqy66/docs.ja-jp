@@ -4,12 +4,12 @@ description: Microsoft プラットフォームとツールでコンテナー化
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197679"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152722"
 ---
 # <a name="what-is-docker"></a>Docker について
 
@@ -17,7 +17,7 @@ ms.locfileid: "50197679"
 
 ![](./media/image2.png)
 
-図 1-2: Docker は、ハイブリッド クラウドのすべてのレイヤーでコンテナーをデプロイします
+図 1-2:Docker は、ハイブリッド クラウドのすべてのレイヤーでコンテナーを展開します。
 
 Docker イメージ コンテナーは、Linux と Windows 上でネイティブに実行できます。 ただし、Windows イメージを Windows ホストでのみ実行でき、Linux イメージは、Linux ホスト、つまり、ホスト サーバーまたは VM でのみ実行できます。
 
@@ -49,9 +49,8 @@ Docker を使用する場合と開発者を聞くことがない、「機能は�
 
 ![](./media/image3.png)
 
-図 1-3: 従来の Vm を Docker コンテナーの比較
-
+図 1-3:従来の Vm を Docker コンテナーの比較
 
 >[!div class="step-by-step"]
-[前へ](index.md)
-[次へ](docker-terminology.md)
+>[前へ](index.md)
+>[次へ](docker-terminology.md)

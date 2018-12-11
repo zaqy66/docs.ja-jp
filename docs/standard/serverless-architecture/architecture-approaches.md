@@ -4,12 +4,12 @@ description: アーキテクチャの概要については、サーバーレス�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 21e191f17e7d0b4f2d64454fb14c46a4831a8375
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "49370283"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126746"
 ---
 # <a name="architecture-approaches"></a>アーキテクチャのアプローチ
 
@@ -97,5 +97,5 @@ N 層のアプローチをいくつかの利点があるなど。
 最終的には、すべての後で説明するサーバーレスのメリットを利用することを含め、これらの課題に対応するソリューションがあります。
 
 >[!div class="step-by-step"]
-[前へ](index.md)
-[次へ](architecture-deployment-approaches.md)
+>[前へ](index.md)
+>[次へ](architecture-deployment-approaches.md)

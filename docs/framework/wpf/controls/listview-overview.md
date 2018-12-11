@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562282"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148913"
 ---
 # <a name="listview-overview"></a>ListView の概要
 <xref:System.Windows.Controls.ListView>コントロールには、さまざまなレイアウトやビューにデータ項目のセットを表示するインフラストラクチャが用意されています。 たとえば、ユーザーは、テーブルにデータ項目を表示し、その列を並べ替えできます。  
@@ -75,13 +75,11 @@ ms.locfileid: "46562282"
 ## <a name="sharing-the-same-view-mode"></a>同じ表示モードの共有  
  2 つ<xref:System.Windows.Controls.ListView>コントロールは同時に同じ表示モードを共有することはできません。 1 つ以上に同じ表示モードを使用しようとする場合<xref:System.Windows.Controls.ListView>制御、例外が発生します。  
   
- 1 つ以上同時に使用できるビュー モードを指定する<xref:System.Windows.Controls.ListView>、テンプレートまたはスタイルを使用します。 ビューを定義する方法の例については<xref:System.Windows.FrameworkElement.Resources%2A>を参照してください[ListView with Multiple Views Sample](https://go.microsoft.com/fwlink/?LinkID=160013)します。  
+ 1 つ以上同時に使用できるビュー モードを指定する<xref:System.Windows.Controls.ListView>、テンプレートまたはスタイルを使用します。
   
 <a name="CreatingaCustomView"></a>   
 ## <a name="creating-a-custom-view-mode"></a>カスタム表示モードの作成  
- ようにビューをカスタマイズ<xref:System.Windows.Controls.GridView>から派生、<xref:System.Windows.Controls.ViewBase>として表されるデータ項目を表示するためのツールを提供するクラスを抽象化<xref:System.Windows.Controls.ListViewItem>オブジェクト。  
-  
- カスタム表示モードの例は、[ListView with Multiple Views Sample](https://go.microsoft.com/fwlink/?LinkID=160013)を参照してください。  
+ ようにビューをカスタマイズ<xref:System.Windows.Controls.GridView>から派生、<xref:System.Windows.Controls.ViewBase>として表されるデータ項目を表示するためのツールを提供するクラスを抽象化<xref:System.Windows.Controls.ListViewItem>オブジェクト。    
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Windows.Controls.GridView>  

@@ -10,28 +10,30 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 93fdb548882422634e1d2456b4d37f434b278f8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845373"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151164"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;追加&gt;要素&lt;リスナー&gt;
 `sharedListeners` コレクションにリスナーを追加します。 `sharedListeners` リスナーのコレクションは、 [\<ソース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)または[\<トレース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)を参照できます。  既定でリスナーに、`sharedListeners`でコレクションが配置されていない、`Listeners`コレクション。 名前で追加する必要があります、 [\<ソース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)または[\<トレース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)します。 リスナーを取得することはできません、`sharedListeners`実行時にコード内のコレクション。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<上の sharedListeners > 要素  
-\<add>  
+&nbsp;&nbsp;\<system.diagnostics >  
+&nbsp;&nbsp;&nbsp;&nbsp;\<上の sharedListeners > 要素  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<追加 >  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
-  initializeData="data"/>  
-```  
+  initializeData="data"
+  traceOutputOptions = "None"
+/>  
+```
   
 ## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
@@ -43,7 +45,8 @@ ms.locfileid: "48845373"
 |`name`|必須の属性です。<br /><br /> 共有リスナーを追加するために使用するリスナーの名前を指定します、`Listeners`コレクション。|  
 |`type`|必須の属性です。<br /><br /> リスナーの種類を指定します。 指定された条件に一致する文字列を使用する必要があります[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
 |`initializeData`|省略可能な属性です。<br /><br /> 指定したクラスのコンス トラクターに渡された文字列。|  
-  
+|`traceOutputOptions`|省略可能な属性です。<br/><br/>1 つ以上の文字列表現<xref:System.Diagnostics.TraceOptions>トレース出力に書き込まれるデータを示す列挙型メンバー。 複数の項目は、コンマで区切られます。 既定値は、"None"です。|
+
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  

@@ -3,11 +3,11 @@ title: 配列 (F#)
 description: 作成し、F# プログラミング言語で配列を使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0f72718988ee401631c53b74f02948030e83aac1
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297193"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129975"
 ---
 # <a name="arrays"></a>配列
 

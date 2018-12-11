@@ -23,11 +23,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296452"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151312"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>位置と名前による引数渡し (Visual Basic)
 呼び出すと、`Sub`または`Function`プロシージャの引数を渡すことができます*位置によって*: プロシージャの定義で出現する順序で-渡すことができますか*名前で*、なし配置を考慮します。  
@@ -64,7 +64,7 @@ ms.locfileid: "52296452"
   
  前の例では、余分なコンマは省略された場所を保持するために必要な`age`引数のため`birth`は名前によって渡されます。  
   
-15.5 前に、のバージョンの Visual Basic での位置と名前、位置指定引数の組み合わせで引数を指定するときにすべてあります最初。 名前で引数を指定すると、残りの引数する必要がありますすべてが名前によって渡されます。  たとえば、次の呼び出し、`Display`メソッドには、コンパイラ エラーが表示されます。 [BC30241: という名前の引数が必要です](../../../misc/bc30241.md)します。
+15.5 前に、のバージョンの Visual Basic での位置と名前、位置指定引数の組み合わせで引数を指定するときにすべてあります最初。 名前で引数を指定すると、残りの引数する必要がありますすべてが名前によって渡されます。  たとえば、次の呼び出し、`Display`メソッドには、コンパイラ エラーが表示されます[BC30241:。名前付き引数が想定](../../../misc/bc30241.md)します。
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
@@ -97,7 +97,7 @@ Visual Basic 15.5 以降では、位置指定引数は、名前付き引数終�
 ## <a name="see-also"></a>関連項目  
  [手順](./index.md)  
  [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)  
- [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)  
+ [操作方法：プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)  
  [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)  
  [省略可能なパラメーター](./optional-parameters.md)  
  [パラメーター配列](./parameter-arrays.md)  

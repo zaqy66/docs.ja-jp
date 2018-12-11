@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9643a2d2ea0967b8cf6d8e18ce2e9073ae583f71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d73c299231a588a5ae0b252dd2b5a0a834685f2d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387037"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150668"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
-`jitCompilationStart` マネージ デバッグ アシスタント (MDA: Managed Debugging Assistant) が起動すると、Just-In-Time (JIT) コンパイラが関数のコンパイルを開始した時刻が報告されます。  
+`jitCompilationStart` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) が起動すると、Just-In-Time (JIT) コンパイラが関数のコンパイルを開始した時刻が報告されます。  
   
 ## <a name="symptoms"></a>現象  
  mscorjit.dll がプロセスに読み込まれるため、既にネイティブの画像形式になっているプログラムで、ワーキング セット サイズが増えます。  
@@ -39,7 +39,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>構成  
- 次の構成ファイルでは、最初に JIT コンパイルされたときに報告されるメソッドを絞り込むためのさまざまなフィルターを確認できます。 名前属性の値を * に設定することで、すべてのメソッドを報告するように指定できます。  
+ 次の構成ファイルでは、最初に JIT コンパイルされたときに報告されるメソッドを絞り込むためのさまざまなフィルターを確認できます。 Name 属性の値を設定して、すべてのメソッドが報告されることを指定する\*します。  
   
 ```xml  
 <mdaConfig>  
@@ -62,7 +62,7 @@ method name="Test!ns2.C0::m"
 ## <a name="example"></a>例  
  次のコード サンプルは、先の構成ファイルとの併用を意図しています。  
   
-```  
+```csharp
 using System;  
 using System.Reflection;  
 using System.Runtime.CompilerServices;  
@@ -159,5 +159,5 @@ namespace ns2
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

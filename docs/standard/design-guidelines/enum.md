@@ -1,6 +1,6 @@
 ---
 title: 列挙型デザイン
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, enumerations
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dea187b5f3911114e551d640e0bb0aa6fac1143
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: 429f2e3821ff12ff4fc51b73c102ee3799d0228d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213291"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148133"
 ---
 # <a name="enum-design"></a>列挙型デザイン
 列挙は、特殊な値の型です。 列挙型の 2 種類があります。 単純な列挙型、およびフラグの列挙型。  
@@ -95,7 +94,7 @@ ms.locfileid: "44213291"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
+ *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,19 +1,18 @@
 ---
 title: 抽象化の実装用の基本クラス
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+author: KrzysztofCwalina
+ms.openlocfilehash: 411596f342930c9387dc6523d25805bddad18687
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677072"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148673"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>抽象化の実装用の基本クラス
 厳密に言えば、別のクラスがそこから派生する場合、クラスは、基底クラスになります。 ここでは、ただし、基本クラスは、共通の抽象化を提供または一部を再利用するには、他のクラスの既定の実装が継承する主な目的としたクラス。 通常、基底クラスは、階層のルートにある抽象化と下部にあるいくつかのカスタム実装の間の継承階層の途中で配置されています。  
@@ -32,7 +31,7 @@ ms.locfileid: "45677072"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
+ *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
   
 ## <a name="see-also"></a>関連項目
 

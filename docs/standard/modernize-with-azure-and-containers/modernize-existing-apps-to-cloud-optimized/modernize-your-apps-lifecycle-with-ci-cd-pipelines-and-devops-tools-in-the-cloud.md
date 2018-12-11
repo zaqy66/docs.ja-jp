@@ -4,12 +4,12 @@ description: Azure クラウドおよび Windows コンテナーで既存の .NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: c4d3eaa50f6c7645c954ca65bf42c6c1eab3a68d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c4eeb5606d3ea93b76efee58ddfecae0abbbd743
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070787"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128181"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>CI/CD パイプラインや DevOps ツール、クラウドでアプリのライフ サイクルを最新化します。
 
@@ -36,5 +36,5 @@ Azure DevOps サービスには、継続的インテグレーションとさま�
 > **図 4-12。** Azure DevOps サービスの継続的なデプロイ パイプライン、Kubernetes クラスターへのデプロイ
 
 >[!div class="step-by-step"]
-[前へ](modernize-your-apps-with-monitoring-and-telemetry.md)
-[次へ](migrate-to-hybrid-cloud-scenarios.md)
+>[前へ](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[次へ](migrate-to-hybrid-cloud-scenarios.md)

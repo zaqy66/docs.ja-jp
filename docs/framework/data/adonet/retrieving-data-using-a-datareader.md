@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: d3c59b667c05be083e44de8cc3e7e44d50fefc71
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: c97c30d77551f519777afa6efd31d507b3f21851
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43516792"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155354"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader によるデータを取得します。
 使用してデータを取得する、 **DataReader**のインスタンスを作成、**コマンド**オブジェクト、し、作成、 **DataReader**呼び出して**Command.ExecuteReader**データ ソースから行を取得します。 **DataReader**は手続き型のロジックを効率的にデータ ソースからの結果を順番に処理を可能にするデータのバッファリングされていないストリームを提供します。 **DataReader**データがメモリにキャッシュされていないために、大量のデータを取得しているときをお勧めします。
@@ -144,7 +144,7 @@ using (OleDbConnection connection = new OleDbConnection(
   
  たとえば、次のような Oracle パッケージとパッケージ本体があるとします。  
   
-```  
+```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS   
   TYPE T_CURSOR IS REF CURSOR;   
   PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   

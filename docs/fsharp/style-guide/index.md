@@ -1,15 +1,15 @@
 ---
-title: F# スタイル ガイド
+title: F#スタイル ガイド
 description: 適切な F# コードの 5 つの原則について説明します。
-ms.date: 05/14/2018
-ms.openlocfilehash: 1d0f4e2a946f0cc91f376ba624f847549a830bc7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.date: 12/10/2018
+ms.openlocfilehash: 7718df596bde9004fb9ba6143146f1f475d25683
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "34235906"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168960"
 ---
-# <a name="f-style-guide"></a>F# スタイル ガイド
+# <a name="f-style-guide"></a>F#スタイル ガイド
 
 次の記事では、F# コードの書式設定と言語の機能に関するトピックのガイダンスと使用方法のガイドラインについて説明します。
 
@@ -17,19 +17,19 @@ ms.locfileid: "34235906"
 
 ## <a name="five-principles-of-good-f-code"></a>適切な F# コードの 5 つの原則
 
-特に、時間の経過と共に変更されるシステムの F# コードを作成するときに注意してください、次の原則を保持する必要があります。 他の記事のガイダンスのすべてのこれら 5 つの点に由来します。
+作成するときに注意してください、次の原則を保持F#特に時間の経過と共に変更されるシステムでのコード。 他の記事のガイダンスのすべてのこれら 5 つの点に由来します。
 
-1. **適切な F# コードが簡潔で表現力には**
+1. **適切なF#コードは簡潔な力コンポーザブル**
 
-    F# は、操作をより少ない行のコードで、汎用的な機能を再利用するための多くの機能です。 F# コア ライブラリには、多くの有用な型とデータの共通のコレクションを操作するための関数も含まれています。 一般的な規則としてより少ない行のコードで問題の解決策を表現する場合は他の開発者 (または将来自分自身) になります真価を享受。 FSharp.Core などのライブラリを使用することをも強くお勧め、 [vast の .NET ライブラリ](https://docs.microsoft.com/dotnet/api/)F# では、実行されている、またはサード パーティ製パッケージ[NuGet](https://www.nuget.org/)重要なタスクを実行する必要がある場合。
+    F#操作をより少ない行のコードで、汎用的な機能を再利用するための機能が多くあります。 F#コア ライブラリは、多くの有用な型とデータの共通のコレクションを操作するための関数にも含まれます。 独自の関数の合成、F#慣用ルーチンの一部であるコア ライブラリ (またはその他のライブラリ)F#プログラミングします。 一般的な規則としてより少ない行のコードで問題の解決策を表現する場合は他の開発者 (または将来自分自身) になります真価を享受。 FSharp.Core などのライブラリを使用することをも強くお勧め、 [vast の .NET ライブラリ](https://docs.microsoft.com/dotnet/api/)をF#を実行するコンピューターまたはサード パーティ製パッケージ[NuGet](https://www.nuget.org/)複雑なタスクを実行する必要がある場合。
 
 2. **適切な F# コードでは、相互運用**
 
-    相互運用では、さまざまな言語でコードを実行を含む、複数のフォームを実行できます。 他の呼び出し元が相互運用するコードの境界とは、すぐに重要な部分です。 F# を記述するときにする必要があります常と思うかもしれませんに関するその他のどのコードは c# などの別の言語から行うことが場合などを記述するコードを呼び出します。 [F# コンポーネント デザインのガイドライン](component-design-guidelines.md)相互運用性の詳細について説明します。
+    相互運用では、さまざまな言語でコードを実行を含む、複数のフォームを実行できます。 他の呼び出し元が相互運用するコードの境界は場合でも、呼び出し元が含まれても、取得すべき重要なF#します。 書き込み時にF#、する必要があります常と思われるコードの他の方法のような別の言語から行うことが場合などを記述しているコードを呼び出すはC#します。 [ F#コンポーネントのデザイン ガイドライン](component-design-guidelines.md)相互運用性の詳細について説明します。
 
 3. **適切な F# コードにより、オブジェクトのプログラミングのないオブジェクトの向き**
 
-    F# .NET では、オブジェクトを使用したプログラミングの完全なサポートが含む[クラス](../language-reference/classes.md)、[インターフェイス](../language-reference/interfaces.md)、[アクセス修飾子](../language-reference/access-control.md)、[抽象クラス](../language-reference/abstract-classes.md)など。 コンテキストに対応する必要がある関数などのより複雑な機能コードのオブジェクトは簡単に関数にはできない方法でコンテキスト情報をカプセル化できます。 などの機能[省略可能なパラメーター](../language-reference/members/methods.md#optional-arguments)と慎重に使用する[オーバー ロード](../language-reference/members/methods.md#overloaded-methods)が容易にこの機能の使用量の呼び出し元。
+    F#.NET では、オブジェクトを使用したプログラミングの完全なサポートが含む[クラス](../language-reference/classes.md)、[インターフェイス](../language-reference/interfaces.md)、[アクセス修飾子](../language-reference/access-control.md)、[抽象クラス](../language-reference/abstract-classes.md)など。 コンテキストに対応する必要がある関数などのより複雑な機能コードのオブジェクトは簡単に関数にはできない方法でコンテキスト情報をカプセル化できます。 などの機能[省略可能なパラメーター](../language-reference/members/methods.md#optional-arguments)と慎重に使用する[オーバー ロード](../language-reference/members/methods.md#overloaded-methods)が容易にこの機能の使用量の呼び出し元。
 
 4. **変化を公開することもなく適切な F# コードを実行します**
 
@@ -41,7 +41,7 @@ ms.locfileid: "34235906"
 
 ## <a name="next-steps"></a>次の手順
 
-[F# コードの書式設定のガイドライン](formatting.md)コードを読みやすいように書式設定する方法に関するガイダンスを提供します。
+[ F#ガイドラインを書式設定コード](formatting.md)コードを読みやすいように書式設定する方法に関するガイダンスを提供します。
 
 [F# コーディング規則](conventions.md)コードベース F# プログラミングの表現方法より大きな F# の長期的なメンテナンスに役立つガイダンスを提供します。
 

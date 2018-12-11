@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 39fb57af6ad97c1a0e51a2c5dcf06245ddf293ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738180"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152469"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 カスタム バインドのメッセージを転送するためにチャネルで使用できる TCP トランスポートを定義します。  
@@ -54,7 +54,7 @@ ms.locfileid: "43738180"
 |channelInitializationTimeout|チャネルの初期化に対して許容される時間制限を取得または設定します。  接続が切断されるまでのチャネルの初期化ステータスの最大時間 (秒単位)。 このクォータは、.Net メッセージ フレーム プロトコルを使用して TCP 接続が接続を認証するのに必要な時間を含みます。 クライアントは、サーバーが認証を実行するための十分な情報を得る前に初期データを送信する必要があります。 既定値は 30 秒です。|  
 |connectionBufferSize|クライアントまたサービスからネットワークでシリアル化されたメッセージのチャンクを転送するために使用されるバッファーのサイズを取得または設定します。|  
 |hostNameComparisonMode|URI で一致する場合にサービスに到達するためにホスト名を使用するかどうかを示す値を取得または設定します。|  
-|listenBacklog|Web サービスの保留可能なキュー内の接続要求の最大数。 `connectionLeaseTimeout` 属性は、クライアントが接続されるのを待つ時間を制限します。この時間が経過すると接続の例外をスローします。 これは、Web サービスに対して保留可能なキュー内の接続要求の最大数を制御するソケット レベルのプロパティです。 したがって、ListenBacklog が低すぎる場合、サーバーが既存のキュー内の接続の一部を確認するまで WCF は要求を受け入れを停止し、新しい接続を破棄します。既定値は 16 x Sql プロセッサの数です。|  
+|listenBacklog|Web サービスの保留可能なキュー内の接続要求の最大数。 `connectionLeaseTimeout` 属性は、クライアントが接続されるのを待つ時間を制限します。この時間が経過すると接続の例外をスローします。 これは、Web サービスに対して保留可能なキュー内の接続要求の最大数を制御するソケット レベルのプロパティです。 ListenBacklog が低すぎると、WCF は要求の受け入れを停止し、そのため、サーバーが既存のキューに置かれた接続の一部を認識するまで新しい接続を削除します。 既定値は 16 * プロセッサの数。|  
 |manualAddressing|メッセージの手動アドレス指定が必要かどうかを示す値を取得または設定します。|  
 |maxBufferPoolSize|トランスポートが使用するバッファー プールの最大サイズを取得または設定します。|  
 |maxBufferSize|使用するバッファーの最大サイズを取得または設定します。 ストリーム メッセージの場合、この値は少なくともメッセージ ヘッダーで使用できる最大サイズにする必要があります。これは、バッファー モードで読み取られます。|  

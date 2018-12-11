@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 ms.openlocfilehash: 2a6fc82b21d8530214923bdadcad7f52da947c82
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088820"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149264"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>方法: カスタム セキュリティ トークン オーセンティケーターの作成
 ここでは、カスタム セキュリティ トークン認証システムの作成方法と、これをカスタム セキュリティ トークン マネージャーに統合する方法を示します。 セキュリティ トークン認証システムは受信メッセージと共に提出されるセキュリティ トークンの内容を検証します。 検証に成功すると、認証システムは <xref:System.IdentityModel.Policy.IAuthorizationPolicy> インスタンスのコレクションを返します。これが評価されるとクレーム セットが返されます。  
   
- Windows Communication Foundation (WCF) をカスタム セキュリティ トークン認証システムを使用するには、必要がありますまず作成するカスタム資格情報とセキュリティ トークン マネージャーの実装。 カスタム資格情報とセキュリティ トークン マネージャーを作成する方法の詳細については、次を参照してください。[チュートリアル: カスタムのクライアントを作成し、サービスの資格情報](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)します。 資格情報、セキュリティ トークン マネージャー、およびプロバイダーおよび認証システム クラスの詳細については、次を参照してください。[セキュリティ アーキテクチャ](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)します。  
+ Windows Communication Foundation (WCF) をカスタム セキュリティ トークン認証システムを使用するには、必要がありますまず作成するカスタム資格情報とセキュリティ トークン マネージャーの実装。 カスタム資格情報とセキュリティ トークン マネージャーを作成する方法の詳細については、次を参照してください。[チュートリアル。カスタムのクライアントとサービスの資格情報を作成する](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)します。 資格情報、セキュリティ トークン マネージャー、およびプロバイダーおよび認証システム クラスの詳細については、次を参照してください。[セキュリティ アーキテクチャ](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)します。  
   
 ## <a name="procedures"></a>手順  
   
@@ -47,7 +47,7 @@ ms.locfileid: "50088820"
      [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
      [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
 
- [チュートリアル: カスタムのクライアントおよびサービスの資格情報を作成する](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)カスタム資格情報とカスタム セキュリティ トークン マネージャーを作成する方法について説明します。 ここで作成したカスタム セキュリティ トークン認証システムを使用するには、<xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> メソッドからカスタム認証システムを返すようにセキュリティ トークン マネージャーの実装を変更します。 適切なセキュリティ トークン要件が渡されると、このメソッドは認証システムを返します。  
+ [チュートリアル:カスタムのクライアントとサービスの資格情報を作成する](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)カスタム資格情報とカスタム セキュリティ トークン マネージャーを作成する方法について説明します。 ここで作成したカスタム セキュリティ トークン認証システムを使用するには、<xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> メソッドからカスタム認証システムを返すようにセキュリティ トークン マネージャーの実装を変更します。 適切なセキュリティ トークン要件が渡されると、このメソッドは認証システムを返します。  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>カスタム セキュリティ トークン マネージャーにカスタム セキュリティ トークン認証システムを統合するには  
   
@@ -63,6 +63,6 @@ ms.locfileid: "50088820"
  <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
  <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
  <xref:System.IdentityModel.Tokens.UserNameSecurityToken>  
- [チュートリアル: カスタム クライアントおよびサービスの資格情報を作成する](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [方法 : カスタム セキュリティ トークン プロバイダーを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [チュートリアル:カスタムのクライアントとサービスの資格情報を作成します。](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [操作方法：カスタム セキュリティ トークン プロバイダーを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
  [セキュリティ アーキテクチャ](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

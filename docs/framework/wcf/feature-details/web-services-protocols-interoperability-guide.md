@@ -3,11 +3,11 @@ title: Web サービス プロトコルの相互運用性ガイド
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744549"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154347"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web サービス プロトコルの相互運用性ガイド
 Windows Communication Foundation (WCF) は、さまざまな Web サービス プロトコルを実装します。 これらのプロトコルの多くには、さまざまなオプションと拡張ポイントが用意されており、それらの実装は実装者の裁量に任されています。 このトピックでは、WCF が実装する Web サービス プロトコルの一覧を示します。 サポートされる各プロトコルの実装の詳細については、このセクションの他のトピックで説明します。  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) は、さまざまな Web サービス �
 |-----------------------------|----------|  
 |HTTP 1.1|[RFC 2616](https://go.microsoft.com/fwlink/?LinkId=90372)|  
 |SOAP 1.1 HTTP バインディング|[簡易オブジェクト アクセス プロトコル (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=90520)セクション 7|  
-|SOAP 1.2 HTTP バインディング|[SOAP Version 1.2 Part 2: Adjuncts (Second Edition)](https://go.microsoft.com/fwlink/?LinkId=95329)セクション 7|  
+|SOAP 1.2 HTTP バインディング|[SOAP Version 1.2 Part 2:Adjuncts (Second Edition)](https://go.microsoft.com/fwlink/?LinkId=95329)セクション 7|  
   
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> および <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> は、次の表の仕様をサポートします。  
   
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) は、さまざまな Web サービス �
 |-----------------------------|----------|  
 |XML|[拡張マークアップ言語 (XML) 1.0 (Fourth Edition)](https://go.microsoft.com/fwlink/?LinkId=15139)|  
 |SOAP 1.1|[簡易オブジェクト アクセス プロトコル (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=96687)|  
-|SOAP 1.2 コア|[SOAP Version 1.2 第 1 部: Messaging Framework (第 2 版)](https://go.microsoft.com/fwlink/?LinkId=94664)|  
+|SOAP 1.2 コア|[SOAP Version 1.2 Part 1:Messaging Framework (第 2 版)](https://go.microsoft.com/fwlink/?LinkId=94664)|  
 |WS-Addressing 2004/08|[Web サービス アドレッシング (Ws-addressing)](https://go.microsoft.com/fwlink/?LinkId=81239)|  
 |W3C Web Services Addressing 1.0 - コア|[Web Services Addressing 1.0 - コア](https://go.microsoft.com/fwlink/?LinkId=96688)|  
 |W3C Web Services Addressing 1.0 - SOAP バインディング|[Web Services Addressing 1.0 - SOAP バインディング](https://go.microsoft.com/fwlink/?LinkId=96689)|  
@@ -51,17 +51,17 @@ Windows Communication Foundation (WCF) は、さまざまな Web サービス �
   
  <xref:System.ServiceModel.Channels.SecurityBindingElement> は、次の表の仕様をサポートします。  
   
-|仕様/ドキュメント|Link|  
+|仕様/ドキュメント|リンク|  
 |-----------------------------|----------|  
-|WSS SOAP Message Security 1.0|[Web Services Security: SOAP Message Security 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
-|WSS: Username Token Profile 1.0|[Web Services Security UsernameToken Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> 必要なPassword/@Type= PasswordText (既定値)|  
-|WSS: X.509 Token Profile 1.0|[Web サービス セキュリティ X.509 証明書トークン プロファイル](https://go.microsoft.com/fwlink/?LinkId=95335)|  
-|WSS: SAML 1.1 Token Profile 1.0|[Web Services Security: SAML トークン プロファイル](https://go.microsoft.com/fwlink/?LinkId=96693)|  
-|WSS SOAP Message Security 1.1|[Web Services Security: SOAP Message Security 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
+|WSS:SOAP Message Security 1.0|[Web Services Security:SOAP Message Security 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
+|WSS:ユーザー名 Token Profile 1.0|[Web Services Security UsernameToken Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> 必要なPassword/@Type= PasswordText (既定値)|  
+|WSS:X.509 Token Profile 1.0|[Web サービス セキュリティ X.509 証明書トークン プロファイル](https://go.microsoft.com/fwlink/?LinkId=95335)|  
+|WSS:SAML 1.1 トークン Profile 1.0|[Web Services Security:SAML トークン プロファイル](https://go.microsoft.com/fwlink/?LinkId=96693)|  
+|WSS:SOAP Message Security 1.1|[Web Services Security:SOAP Message Security 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
 |WSS Username Token Profile 1.1|[Web Services Security UsernameToken Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> パスワード ベースのキー派生は実装していません。<br /><br /> 必要なPassword/@Type= PasswordText (既定値)|  
-|WSS: X509 Token Profile 1.1|[Web サービス セキュリティ X.509 証明書トークン プロファイル 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
-|WSS: Kerberos Token Profile 1.1|[Web Services Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
-|WSS: SAML 1.1 Token Profile 1.1|[Web サービス セキュリティの SAML トークン プロファイル 1.1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
+|WSS:X509 token Profile 1.1|[Web サービス セキュリティ X.509 証明書トークン プロファイル 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
+|WSS:Kerberos トークン プロファイル 1.1|[Web Services Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
+|WSS:SAML 1.1 トークン プロファイル 1.1|[Web サービス セキュリティの SAML トークン プロファイル 1.1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
 |WS-SecureConversation|[Web サービスのセキュリティで保護されたメッセージ交換の言語](https://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4|[Web サービスは、言語を信頼します。](https://go.microsoft.com/fwlink/?LinkId=169514)|  
 |WS-SecurityPolicy 2005/07|[Web サービスのセキュリティで保護されたメッセージ交換の言語](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> OASIS WS-SX 技術委員会に提出された正誤表で修正されています。<br /><br /> [ws sx メッセージ](https://go.microsoft.com/fwlink/?LinkId=96700)|  
@@ -76,9 +76,9 @@ Windows Communication Foundation (WCF) は、さまざまな Web サービス �
   
  <xref:System.ServiceModel.Description.MetadataExporter>、<xref:System.ServiceModel.Description.MetadataImporter>、<xref:System.ServiceModel.Description.WsdlExporter>、<xref:System.ServiceModel.Description.WsdlImporter>、および <xref:System.ServiceModel.Description.MetadataResolver> の各クラスは、次のメタデータ仕様をサポートします。  
   
--   [XML Schema Part 1: Structures Second Edition](https://go.microsoft.com/fwlink/?LinkId=3536)  
+-   [XML Schema Part 1:Structures Second Edition](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML Schema Part 2: データ型第 2 版](https://go.microsoft.com/fwlink/?LinkId=40138)  
+-   [XML Schema Part 2:データ型の第 2 版](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
 -   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   

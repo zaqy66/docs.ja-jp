@@ -1,6 +1,6 @@
 ---
 title: 一般的な名前付け規則
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], conflicts
@@ -14,14 +14,13 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cd3defd969b5f26fb95e7feca9c3d533e67272b1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: 9febc7eed7d6dedad6655b51a96694b72b78711b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209508"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147282"
 ---
 # <a name="general-naming-conventions"></a>一般的な名前付け規則
 このセクションでは、一般的な名前付け規則、単語の選択に関連する言語固有の名前を使用しないようにする方法の省略形と頭字語、および推奨事項の使用に関するガイドラインについて説明します。  
@@ -74,7 +73,7 @@ ms.locfileid: "44209508"
 |**bool**|**Boolean**|**bool**|**Boolean**|  
 |**char**|**Char**|**wchar_t**|**Char**|  
 |**string**|**String**|**String**|**String**|  
-|**object**|**オブジェクト**|**オブジェクト**|**オブジェクト**|  
+|**object**|**Object**|**Object**|**Object**|  
   
  **✓ DO** など、共通名を使用して`value`または`item`、まれなケース識別子は特別な意味を持たないし、パラメーターの型が重要でないときに、型名を繰り返しではなくです。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "44209508"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
+ *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
   
 ## <a name="see-also"></a>関連項目
 

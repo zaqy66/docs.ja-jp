@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 79e9b5cc9bac317a368583013abbc5124ef2c9ac
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086389"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151214"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Visual Studio Tools for Docker (Windows で Visual Studio) を使用
 
@@ -33,7 +33,7 @@ Docker のサポートをプロジェクトに追加することの 2 つのレ�
 
 ![Visual Studio での Docker サポート メニュー オプションを追加します。](media/add-docker-support-menu.png)
 
-図 4-26: Visual Studio 2017 のプロジェクトに Docker サポートを追加します。
+図 4-26:Visual Studio 2017 のプロジェクトに Docker サポートの追加
 
 ### <a name="add-docker-support"></a>Docker サポートを追加します。
 
@@ -41,7 +41,7 @@ Docker のサポートをプロジェクトに追加することの 2 つのレ�
 
 ![Visual Studio での新しい ASP.NET Core web アプリの Docker サポートを有効にします。](./media/enable-docker-support-visual-studio.png)
 
-図 4-27: Visual Studio 2017 でプロジェクトの作成時に Docker サポートを有効にします。
+図 4-27:Visual Studio 2017 でプロジェクトの作成時に Docker サポートを有効にします。
 
 Docker サポートを有効にすると、Visual Studio の追加、 *Dockerfile*ファイルをプロジェクトにします。
 
@@ -50,7 +50,7 @@ Docker サポートを有効にすると、Visual Studio の追加、 *Dockerfil
 >
 > ![Docker を有効にする .NET Framework web アプリ プロジェクトのサポートの構成](media/enable-docker-compose-support.png)
 
-> 図 4-28: Visual Studio 2017 で .NET Framework web アプリ プロジェクトでの Docker Compose のサポートを有効にします。
+> 図 4-28:Visual Studio 2017 で .NET Framework web アプリ プロジェクトでの Docker Compose のサポートを有効にします。
 
 ### <a name="add-container-orchestration-support"></a>コンテナー オーケストレーションのサポートを追加します。
 
@@ -62,7 +62,7 @@ Docker サポートを有効にすると、Visual Studio の追加、 *Dockerfil
 
 ![Visual Studio でソリューション エクスプ ローラーでの docker ファイル](media/docker-support-solution-explorer.png)
 
-Visual Studio 2017 でのソリューション エクスプ ローラーで、図 4-29: Docker ファイル
+図 4-29:Visual Studio 2017 でのソリューション エクスプ ローラーでの docker ファイル
 
 場合*docker compose.yml*が既に存在する Visual Studio に必要な構成コードの行を追加するだけです。
 
@@ -72,7 +72,7 @@ Visual Studio 2017 でのソリューション エクスプ ローラーで、�
 
 ![](./media/visual-studio-docker-tools-options.png)
 
-図 4-30: Docker Tools のオプション
+図 4-30:Docker Tools のオプション
 
 次の表は、これらのオプションを設定する方法を決定するのに役立ちます。
 
@@ -93,5 +93,5 @@ Visual Studio 2017 でのソリューション エクスプ ローラーで、�
 コンテナー レジストリには、ASP.NET Core の Docker コンテナーを展開します。 [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 >[!div class="step-by-step"]
-[前へ](docker-apps-inner-loop-workflow.md)
-[次へ](set-up-windows-containers-with-powershell.md)
+>[前へ](docker-apps-inner-loop-workflow.md)
+>[次へ](set-up-windows-containers-with-powershell.md)

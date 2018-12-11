@@ -2,12 +2,12 @@
 title: MULTISET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
-ms.openlocfilehash: df194a26b36ba50d7b55c3dda6053c883ba9b228
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 64069e1bf2af61748a9e23a469dcdbc74fa9fac7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762924"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128987"
 ---
 # <a name="multiset-entity-sql"></a>MULTISET (Entity SQL)
 値のリストからマルチセットのインスタンスを作成します。 MULTISET コンストラクターの値はすべて、互換性のある型 `T`である必要があります。 空のマルチセット コンストラクターは使用できません。  
@@ -25,10 +25,10 @@ or
  任意の有効な値のリスト。  
   
 ## <a name="return-value"></a>戻り値  
- 型 MULTISET のコレクション\<T > です。  
+ 型 MULTISET のコレクション\<T >。  
   
-## <a name="remarks"></a>コメント  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、行コンストラクター、オブジェクト コンストラクター、およびマルチセット (またはコレクション) コンストラクターの 3 種類のコンストラクターが用意されています。 詳細については、次を参照してください。[の構築型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)です。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、行コンストラクター、オブジェクト コンストラクター、およびマルチセット (またはコレクション) コンストラクターの 3 種類のコンストラクターが用意されています。 詳細については、次を参照してください。[構築型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)します。  
   
  マルチセット コンストラクターは、値のリストからマルチセットのインスタンスを作成します。 このコンストラクターの値はすべて、互換性のある型である必要があります。  
   
@@ -39,12 +39,12 @@ or
  `{1, 2, 3}`  
   
 > [!NOTE]
->  入れ子になったマルチセット リテラルは、 `{{1, 2, 3}}`のように、外側のマルチセットに含まれているマルチセット要素が 1 つである場合にのみサポートされます。 複数のマルチセット要素が外側のマルチセットに含まれている場合 ( `{{1, 2}, {3, 4}}`など)、入れ子になったマルチセット リテラルはサポートされません。  
+>  入れ子になったマルチセット リテラルは、ラッピング multiset がある 1 つの multiset の要素です。 ときにのみサポートします。たとえば、`{{1, 2, 3}}`します。 複数のマルチセット要素が外側のマルチセットに含まれている場合 ( `{{1, 2}, {3, 4}}`など)、入れ子になったマルチセット リテラルはサポートされません。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、MULTISET 演算子を使用して、値のリストからマルチセットのインスタンスを作成します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  「 [StructuralType 結果を返すクエリの実行方法](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
+1.  」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
   
 2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   

@@ -2,12 +2,12 @@
 title: ADO.NET での side-by-side 実行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 7435f64afa9ce45a29f4d0a537219f31968eb3f5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f69a269e5f6370cf7c5a60920b3d5a47ce1079cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042154"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126615"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET での side-by-side 実行
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の side-by-side 実行は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の複数のバージョンがインストールされている 1 台のコンピューター上で、アプリケーションのコンパイル時のバージョンのみを使用して、アプリケーションを実行する機能です。 サイド バイ サイドで実行を構成する方法の詳細については、次を参照してください。[サイド バイ サイド実行](../../../../docs/framework/deployment/side-by-side-execution.md)します。  
@@ -47,7 +47,7 @@ ms.locfileid: "44042154"
   
  たとえば、<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> への呼び出しで次のバッチ コマンドが実行されるとします。  
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 ```  
@@ -56,9 +56,9 @@ SELECT * FROM dbo.Customers;
   
  アプリケーションが、どちらかのバージョンの <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の動作に依存している場合は、この変更が上位互換性と下位互換性の両方に影響することがあります。  
   
- アプリケーションを [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の以前のバージョンと新しいバージョンの両方で動作させる場合は、どのバージョンで実行された場合にも動作が同じになるように、コードを記述できます。 変更された接続状態が後続のすべてのコマンドでも有効になるようにする場合は、<xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> を使用してコマンドを実行することをお勧めします。 変更された接続状態が後続のコマンドでは無効になるようにする場合は、接続状態をリセットするコマンドを含めるようにしてください。 例えば:  
+ アプリケーションを [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の以前のバージョンと新しいバージョンの両方で動作させる場合は、どのバージョンで実行された場合にも動作が同じになるように、コードを記述できます。 変更された接続状態が後続のすべてのコマンドでも有効になるようにする場合は、<xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> を使用してコマンドを実行することをお勧めします。 変更された接続状態が後続のコマンドでは無効になるようにする場合は、接続状態をリセットするコマンドを含めるようにしてください。 例:  
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 SET NOCOUNT OFF;  

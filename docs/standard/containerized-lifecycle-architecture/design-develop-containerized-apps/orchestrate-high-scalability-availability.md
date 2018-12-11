@@ -4,12 +4,12 @@ description: Microsoft プラットフォームとツールでコンテナー化
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: 993f1d18637f39b6df4d876db8a0fe86e34391e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa64562808bba9c9dea5a5eedc367af7decf83b7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192721"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126901"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>マイクロ サービスと高いスケーラビリティと可用性のための複数のコンテナー アプリケーションを調整すること
 
@@ -19,7 +19,7 @@ ms.locfileid: "50192721"
 
 ![](./media/image6.png)
 
-図 4-6: コンテナーのクラスター
+図 4-6:コンテナーのクラスター
 
 これは論理的な方法のように見えます。 しかし、どのようにする処理の負荷分散、ルーティング、およびこれらの構成済みのアプリケーションを調整することでしょうか。
 
@@ -35,14 +35,14 @@ Docker コマンド ライン インターフェイス (CLI) には、1 つの�
 
 クラスターとスケジューラの概念は密接に関連しており、さまざまなベンダーによって提供される製品では、多くの場合、両方の機能セットが提供されます。 表 4-1 には、最も重要なプラットフォームとクラスターとスケジューラーがあるソフトウェアの選択肢が一覧表示します。 これらのクラスターは、Azure などのパブリック クラウドで一般に提供されます。
 
-コンテナーのクラスタ リング、オーケストレーション、およびスケジュール表 4-1: ソフトウェア プラットフォーム
+表 4-1:コンテナーのクラスタリング、オーケストレーション、スケジューリングのためのソフトウェア プラットフォーム
 
 | プラットフォーム | 説明 |
 |---|---|
-| Docker Swarm<br/> ![Docker Swarm のロゴ](./media/image7.png) | Docker Swarm では、クラスターし、Docker のコンテナーをスケジュールする機能を提供します。 Swarm を使用することで、Docker ホストのプールを単一の仮想 Docker ホストにすることができます。 クライアントは、ホスト、つまり、Swarm を簡単にスケールするアプリケーションを複数のホストを同じ方法で、Swarm を API 要求を行うことができます。 <br /><br /> Docker Swarm は Docker 社の製品です。 <br /><br /> Docker v1.12 以降ではネイティブの組み込み Swarm モードを実行できます。 |
+| Docker Swarm<br/> ![Docker Swarm ロゴ](./media/image7.png) | Docker Swarm では、クラスターし、Docker のコンテナーをスケジュールする機能を提供します。 Swarm を使用することで、Docker ホストのプールを単一の仮想 Docker ホストにすることができます。 クライアントは、ホスト、つまり、Swarm を簡単にスケールするアプリケーションを複数のホストを同じ方法で、Swarm を API 要求を行うことができます。 <br /><br /> Docker Swarm は Docker 社の製品です。 <br /><br /> Docker v1.12 以降ではネイティブの組み込み Swarm モードを実行できます。 |
 | Mesosphere DC/OS<br/>![Mesosphere DC/OS ロゴ](./media/image8.png) |  Mesosphere Enterprise DC/OS (Apache Mesos に基づく) は、コンテナーと分散アプリケーションを実行するための運用可能なプラットフォームです。 <br /><br /> DC/OS は、クラスターで使用可能なリソースのコレクションを抽象化し、これらのリソースをその上に構築されたコンポーネントで使用できるようにすることで機能します。 Marathon は通常、DC/OS と統合されたスケジューラとして使用されます。 |
 | Google Kubernetes<br />![Google の Kubernetes のロゴ](./media/image9.png) | Kubernetes はオープンソースの製品であり、クラスターのインフラストラクチャとコンテナーのスケジューリングからオーケストレーション機能までの機能を提供します。 ホストのクラスターのデプロイ、スケーリング、およびアプリケーション コンテナーの操作を自動化できます。 <br /><br /> Kubernetes ではコンテナー中心のインフラストラクチャが提供され、アプリケーション コンテナーを論理ユニットにグループ化し、管理と検出を容易にします。 |
-| Azure Service Fabric<br />![Azure Service Fabric のロゴ](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) は、アプリケーションを構築するための Microsoft マイクロサービス プラットフォームです。 サービスの[オーケストレーター](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)であり、マシンのクラスターを作成します。 既定では、Service Fabric デプロイし、プロセスとしてのサービスをアクティブ化が Service Fabric が Docker コンテナー イメージ内のサービスをデプロイできます。 重要な同じアプリケーション内のコンテナー内のサービスとプロセスにサービスが混在することができます。 <br /><br /> 2017 年 5 月の時点で、Docker コンテナーとして展開するサービスをサポートする Service Fabric の機能はプレビュー状態です。 <br /><br /> 使用してから、さまざまな方法で Service Fabric サービスを開発することができます、 [Service Fabric プログラミング モデル](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework)デプロイ[ゲスト実行可能ファイル](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app)コンテナーおよびコンテナー。 Service Fabric などの規範的なアプリケーションのモデルをサポートしている[ステートフル サービス](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)と[Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)します。
+| Azure Service Fabric<br />![Azure Service Fabric ロゴ](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) は、アプリケーションを構築するための Microsoft マイクロサービス プラットフォームです。 サービスの[オーケストレーター](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)であり、マシンのクラスターを作成します。 既定では、Service Fabric デプロイし、プロセスとしてのサービスをアクティブ化が Service Fabric が Docker コンテナー イメージ内のサービスをデプロイできます。 重要な同じアプリケーション内のコンテナー内のサービスとプロセスにサービスが混在することができます。 <br /><br /> 2017 年 5 月の時点で、Docker コンテナーとして展開するサービスをサポートする Service Fabric の機能はプレビュー状態です。 <br /><br /> 使用してから、さまざまな方法で Service Fabric サービスを開発することができます、 [Service Fabric プログラミング モデル](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework)デプロイ[ゲスト実行可能ファイル](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app)コンテナーおよびコンテナー。 Service Fabric などの規範的なアプリケーションのモデルをサポートしている[ステートフル サービス](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)と[Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)します。
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Azure でコンテナー ベースのオーケストレーターの使用
 
@@ -64,13 +64,13 @@ Azure Container service では、オーケストレーション レイヤーな�
 
 ![](./media/image11.png)
 
-図 4-7: Azure Container Service での選択肢をクラスタ リング
+図 4-7:Azure Container Service でのクラスタリングの選択肢
 
 図 4-8 に示すように、コンテナー サービス DC/OS、Kubernetes、または Docker Swarm を展開するために Azure によって提供されるインフラストラクチャだけですが、追加のオーケストレーターを実装していません。 そのため、コンテナー サービスにはできません、orchestrator では、そのためです。コンテナーの既存のオープン ソース オーケストレーターを活用する単なるインフラストラクチャになります。
 
 ![](./media/image12.png)
 
-Container Service でのオーケストレーターを図 4-8:
+図 4-8:Container Service でのオーケストレーター
 
 使用量の観点からは、コンテナー サービスの目的は、一般的なオープン ソース ツールとテクノロジを使用して、コンテナーのホスティング環境を提供します。 この目的を達成するために、選択されたオーケストレーターの標準的な API エンドポイントが公開されます。 これらのエンドポイントを使用すると、それらのエンドポイントと通信できる任意のソフトウェアを使用することができます。 たとえば、Docker Swarm エンドポイントの場合、Docker CLI を使用すると選択します。 DC/OS では、DC/OS CLI を使用するよう選択できます。
 
@@ -121,7 +121,7 @@ Service Fabric は、サービスの構築方法に依存しないので、任�
 
 ![](./media/image13.png)
 
-図 4-9: プロセス、または Azure Service Fabric でコンテナーとしてマイクロ サービスを展開します。
+図 4-9:Azure Service Fabric 内のプロセッサーまたはコンテナーとしてマイクロサービスを展開する
 
 Linux と Windows ホストに基づく Service Fabric クラスターには、Docker Linux コンテナーと Windows コンテナーを実行できます。
 
@@ -133,7 +133,7 @@ Service Fabric ステートフル Reliable Service を実装するときに論�
 
 ![](./media/image14.png)
 
-図 4-10: Service Fabric でのいくつかのステートフルおよびステートレスなサービスとのビジネス マイクロ サービス
+図 4-10:Service Fabric でいくつかのステートフルおよびステートレスなサービスを使ってビジネス マイクロ サービス
 
 いずれの場合でも、Service Fabric ステートフル Reliable Services を使用する場合、通常は複数の物理サービスで構成される論理的/ビジネス マイクロサービス (境界指定されたコンテキスト) も使用できます。 それぞれに、ゲートウェイ サービス、およびパーティションのサービスのアドレスは、図 4-10 に示すように、ASP.NET Web API サービスとして実装できます。
 
@@ -145,7 +145,7 @@ Service Fabric 内のコンテナー、に関してもに、Service Fabric ク�
 
 ![](./media/image15.png)
 
-図 4-11: Service Fabric でのいくつかのサービス (コンテナー) でのビジネス マイクロ サービス
+図 4-11:Service Fabric 内に複数のサービス (コンテナー) を持つビジネス マイクロサービス
 
 ただし、いわゆる「サイドカー」コンテナー (論理サービスの一部としてまとめて展開する必要がありますを 2 つのコンテナー) では、Service Fabric でも。 重要な点は、ビジネス マイクロサービスが、いくつかのまとまりのある要素を囲む論理的な境界であることです。 多くの場合、1 つのデータ モデルでは、1 つのサービスがありますが、場合によっては他の物理的な複数のサービスもする必要があります。
 
@@ -153,7 +153,7 @@ Service Fabric 内のコンテナー、に関してもに、Service Fabric ク�
 
 ![](./media/image16.png)
 
-図 4-12: ビジネス マイクロ サービスがコンテナーとステートフル サービスの Service Fabric アプリケーションにマップされています。
+図 4-12:コンテナーとステートフル サービスを含む Service Fabric アプリケーションにマップされているビジネス マイクロサービス
 
 サポートは、Linux または Windows コンテナーで Docker コンテナーを使用しているかどうかに応じて異なるもあります。 今後のリリースでは、Service Fabric でコンテナーのサポートが拡大されます。 Azure の web サイトでは、Service fabric でコンテナー サポートに関する最新のニュース読み取り[Service Fabric とコンテナー](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)します。
 
@@ -165,7 +165,7 @@ Service Fabric 内のコンテナー、に関してもに、Service Fabric ク�
 
 ![](./media/image17.png)
 
-図 4-13: ステートレス サービスとステートフル マイクロ サービス
+図 4-13:ステートレス マイクロサービスとステートフル マイクロサービスの比較
 
 ステートレスな方法は、完全に有効な従来から使い慣れているパターンに似ているために、ステートフル マイクロ サービスよりも実装する方が簡単です。 ステートレス マイクロサービスは、プロセスおよびデータ ソース間の遅延を強制します。 追加のキャッシュとキューを使用してパフォーマンスを改善しようとしている場合は、含まれる移動する部分が増加します。 結果として、階層の数が多すぎる複雑なアーキテクチャになる可能性があります。
 
@@ -179,7 +179,6 @@ Service Fabric 内のコンテナー、に関してもに、Service Fabric ク�
 
 Docker コンテナーはそれ自身ステートレスなことに注意してください。 ステートフル サービスを実装する場合は、前に説明した追加の規範的で高度なフレームワークの 1 つが必要です。 ただし、この執筆時点で、Service Fabric のステートフル サービスはサポートされていませんプレーンなマイクロ サービスとしてのコンテナーとして。 コンテナー内の信頼性の高いサービスのサポートは、Service Fabric の今後のバージョンで使用できるになります。
 
-
 >[!div class="step-by-step"]
-[前へ](soa-applications.md)
-[次へ](docker-apps-development-environment.md)
+>[前へ](soa-applications.md)
+>[次へ](docker-apps-development-environment.md)

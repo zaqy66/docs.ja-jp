@@ -4,12 +4,12 @@ description: Microsoft プラットフォームとツールでコンテナー化
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/10/2018
-ms.openlocfilehash: a03853a508cfb3d5dd5fbfe66e4ef484b685faaa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653240"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143650"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker アプリケーションの外側のループ DevOps ワークフローの手順を実行します。
 
@@ -17,15 +17,15 @@ ms.locfileid: "45653240"
 
 ![](./media/image1.png)
 
-Microsoft ツールと Docker アプリケーション DevOps 外側のループ ワークフローを図 5-1:
+図 5-1:Microsoft ツールと Docker アプリケーション DevOps 外側のループのワークフロー
 
 次に、それぞれの手順を詳しく見ていきましょう。
 
-## <a name="step-1-inner-loop-development-workflow"></a>手順 1: 内部ループ開発ワークフロー
+## <a name="step-1-inner-loop-development-workflow"></a>手順 1:内部ループ開発ワークフロー
 
 この手順は、第 4 章で詳しく説明を要約すると、ここでは、外側のループ開始位置となる、開発者が CI パイプラインのアクションの開始 (Git) のようなソース コントロール管理システムにコードをプッシュする時点。
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>手順 2: ソース コード管理の統合と Azure DevOps Services および Git を使用した管理
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>手順 2:ソース コード管理の統合と Azure DevOps サービスと Git による管理
 
 この手順では、チームのさまざまな開発者から、すべてのコードの統合されたバージョンを収集するバージョン管理システムに用意する必要があります。
 
@@ -35,7 +35,7 @@ Microsoft ツールと Docker アプリケーション DevOps 外側のループ
 
 Azure DevOps サービスと Team Foundation Server は、Git と Team Foundation バージョン管理をサポートします。 それらの間を選択し、エンド ツー エンドの Microsoft エクスペリエンスを使用できます。 ただし、管理することもできます (GitHub、Git リポジトリをオンプレミス、または Subversion) ような外部リポジトリでは、コードとそれに接続し、DevOps の CI パイプラインの開始点としてコードを取得できます。
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>手順 3: ビルド、CI、統合、および Azure DevOps を使用してテスト サービスと Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>手順 3:ビルド、CI、統合、および Azure DevOps を使用してテスト サービスと Docker
 
 CI が最新のソフトウェアのテストおよび配信のための標準として登場しました。 Docker ソリューションでは、開発および運用チーム間での問題を明確に分離を維持します。 Docker イメージの不変性により、どのような開発、CI、テストおよび運用環境で実行が間に反復可能なデプロイ。 Docker エンジン開発者向けのノート パソコンに展開し、テスト インフラストラクチャは、環境間で、コンテナーを移植性。
 
@@ -47,11 +47,11 @@ CI が最新のソフトウェアのテストおよび配信のための標準�
 
 Docker を使用して、展開は、「最終的な成果物」ときに展開するのには、アプリケーションやサービスを使用した Docker イメージ内に埋め込まれます。 これらのイメージのプッシュまたは発行を*Docker レジストリ*(Azure Container Registry で使用できるはまたはの公式の基本イメージの一般的な使用の Docker Hub レジストリなどのパブリック 1 などのプライベート リポジトリ)。
 
-基本的な概念を次に示します。 CI のパイプラインは、Git などのソース コード管理リポジトリにコミットしてオフ開始になります。 図 5-2 に示すように、コミットは、Docker コンテナー内のビルド ジョブを実行し、そのジョブが正常に完了すると、Docker レジストリに Docker イメージをプッシュする DevOps サービスを Azure になります。
+基本的な概念を次に示します。CI パイプラインは、Git などのソース コード管理リポジトリにコミットしてから開始されます。 図 5-2 に示すように、コミットは、Docker コンテナー内のビルド ジョブを実行し、そのジョブが正常に完了すると、Docker レジストリに Docker イメージをプッシュする DevOps サービスを Azure になります。
 
 ![](./media/image2.png)
 
-図 5-2: 必要な手順では、CI
+図 5-2:CI で必要な手順
 
 Docker と Azure DevOps サービスの基本的な CI ワークフロー手順を次に示します。
 
@@ -73,7 +73,7 @@ Docker と Azure DevOps サービスの基本的な CI ワークフロー手順�
 
 ![](./media/image3.png)
 
-図 5-3: Docker の CI パイプラインでは、Azure DevOps サービス
+図 5-3:Azure DevOps サービスでの Docker の CI パイプライン
 
 Docker 拡張機能は、Docker ホストとコンテナーまたはイメージ レジストリにサービス エンドポイントを使用できます。 (現在必要カスタム Azure DevOps サービス エージェント)。 使用可能な場合は、ローカル Docker ホストを使用する既定のタスクそれ以外の場合、Docker ホスト接続を指定することが必要です。 認証されると、イメージのプッシュなどの Docker レジストリに依存するアクションでは、Docker レジストリ接続を指定することが必要です。
 
@@ -145,7 +145,7 @@ Docker イメージをテストおよび検証した後にタグ付けし、Dock
 
 ![](./media/image4.png)
 
-図 5-4: カスタム イメージを Docker レジストリに発行します。
+図 5-4:カスタム イメージを Docker レジストリに発行
 
 Azure Container Registry、Amazon Web Services Container Registry、Google Container Registry、Quay レジストリなどのクラウド ベンダーからの Docker レジストリの複数のサービス提供しています。
 
@@ -153,11 +153,11 @@ Azure Container Registry、Amazon Web Services Container Registry、Google Conta
 
 ![](./media/image5.png)
 
-図 5-5: Azure DevOps サービスを使用して Docker レジストリにカスタム イメージを発行する
+図 5-5:Azure DevOps サービスを使用して Docker レジストリにカスタム イメージを発行する
 
 **詳細については** 詳細については、Azure DevOps サービスの Docker 拡張機能に移動します。<https://aka.ms/vstsdockerextension>します。 Azure Container Registry の詳細については、するには<https://aka.ms/azurecontainerregistry>します。
 
-## <a name="step-4-cd-deploy"></a>手順 4: CD、展開
+## <a name="step-4-cd-deploy"></a>手順 4:CD、展開
 
 Docker イメージの不変性により、反復可能な展開に何が開発、CI、テストし、運用環境で実行します。 所持している複数の環境に展開したり、Docker レジストリ (プライベートまたはパブリック) で公開されているアプリケーションの Docker イメージを作成したら、(運用、QA、ステージングなど) Azure DevOps サービスを使用して、CD パイプラインからパイプラインのタスクまたは Azure DevOps サービス リリース管理されます。
 
@@ -169,13 +169,13 @@ Docker イメージの不変性により、反復可能な展開に何が開発�
 
 ![](./media/image6.png)
 
-図 5-6: 単純な Docker ホスト環境のレジストリへのアプリケーション コンテナーのデプロイ
+図 5-6:単純な Docker ホスト環境のレジストリにアプリケーション コンテナーのデプロイ
 
 図 5-7 は、タスクの追加 ダイアログ ボックスの Docker Compose をクリックして、Azure DevOps サービスを使用して、QA/テスト環境にビルド、CI を接続する方法を示しています。 ただし、ステージング環境または運用環境を展開する場合は、通常使用する Release Management の機能が複数の環境を処理 (などの QA、ステージング、および運用)。 Azure DevOps サービスを使用して単一の Docker ホストにデプロイする場合は"Docker Compose"タスク (、docker を呼び出すことですが、内部的にコマンドを作成)。 Azure Container Service にデプロイする場合は、以下のセクションで説明したように、Docker デプロイ タスクを使用します。
 
 ![](./media/image7.png)
 
-図 5-7: Azure DevOps サービス パイプラインで Docker Compose のタスクを追加します。
+図 5-7:Azure DevOps サービス パイプラインで Docker Compose のタスクの追加
 
 Azure DevOps サービスで、リリースを作成するときに、一連の入力の成果物がかかります。 これらは複数の環境であるリリースの有効期間全体を通じて不変します。 コンテナーを導入するときに、入力の成果物を展開する、レジストリ内のイメージを識別します。 これら識別方法によっては、リリースでは、docker-compose ファイルから「myimage:latest」を参照するとき、最も明白なケースの全期間にわたって同じままで、保証はありません。
 
@@ -187,7 +187,7 @@ Azure DevOps サービス拡張機能を通じて新しいイメージを構築�
 
 ![](./media/image8.png)
 
-図 5-8: Azure DevOps サービス Release Management から Azure DevOps サービスの Docker Compose のタスクの構成
+図 5-8:Azure DevOps サービス Release Management から Azure DevOps サービスの Docker Compose のタスクを構成します。
 
 ただし、図 5-6 に示すように、図 5-8 の実装のシナリオが (単純な Docker ホストと Vm へのデプロイは、および 1 つのコンテナーまたはイメージごとにインスタンスがあるが) 非常に基本的ながあり、おそらく開発またはテスト sc にのみ使用することに留意してください。enarios します。 高可用性 (HA) にするほとんどのエンタープライズ運用環境シナリオでと間の負荷分散複数のノード、サーバー、Vm、および「インテリジェントなフェールオーバー」ようにする場合は、サーバーまたはノードでの管理が容易なスケーラビリティが失敗した場合は、そのサービスとコンテナーは、別のホスト サーバーまたは VM に移動されます。 その場合は、クラスターのコンテナー、オーケストレーター、およびスケジューラなどのより高度なテクノロジ必要があります。 したがって、これらのクラスターにデプロイする方法は、次のセクションで説明する高度なシナリオを正確にです。
 
@@ -201,19 +201,19 @@ CD の観点と Azure DevOps サービスから具体的には、タスクを実
 
 ![](./media/image9.png)
 
-図 5-9: 分散アプリケーションをコンテナー サービスを展開します。
+図 5-9:分散アプリケーションをコンテナー サービスを展開します。
 
 最初に、特定のクラスターやオーケストレーターをデプロイするときは従来使用して特定の展開スクリプトと各オーケストレーター (つまり、Mesosphere DC/OS または Docker と Docker のさまざまな展開メカニズムがある Kubernetes メカニズムSwarm) の代わりに、単純なと使いやすい docker compose、docker compose.yml 定義ファイルに基づいてツール。 ただし、図 5-10 に示すように、Microsoft Azure DevOps サービス Docker デプロイ タスクに協力してくれたするようになりましたも展開できます DC/OS に Microsoft では、「変換」を実行するために、使い慣れた docker compose.yml ファイルを使用するだけで (から、docker compose.yml ファイルを DC/OS で必要な他の形式)。
 
 ![](./media/image10.png)
 
-図 5-10: RM 環境への Docker デプロイ タスクの追加
+図 5-10:RM 環境への Docker デプロイ タスクの追加
 
 図 5-11 は、Docker の展開タスクを編集し、対象の型 (Azure Container Service DC/OS、ここでは)、Docker Compose ファイル、および (Azure Container Registry や Docker Hub) などの Docker レジストリ接続を指定する方法について説明します。 これは、タスクのすぐに使用できるカスタム Docker イメージ、DC/OS クラスター内のコンテナーとしてデプロイを取得する場所です。
 
 ![](./media/image11.png)
 
-図 5-11: Docker デプロイ タスクの定義を展開する Azure Container Service DC/OS に
+図 5-11:Docker デプロイ タスクの定義を展開する Azure Container Service DC/OS に
 
 **詳細については** 詳細については、Azure DevOps サービスと Docker の CD パイプラインを次のサイトを参照してください。
 
@@ -223,16 +223,16 @@ Azure Container Service: <https://aka.ms/azurecontainerservice>
 
 Mesosphere DC/OS: <https://mesosphere.com/product/>
 
-## <a name="step-5-run-and-manage"></a>手順 5: 実行および管理
+## <a name="step-5-run-and-manage"></a>手順 5:実行し、管理
 
 エンタープライズ運用レベルは、し、それ自体のと操作の種類のための主要なサブジェクトと、ユーザーがこの領域の大きなスコープとそのレベル (IT 運用) にとって、全体を次に充てることが実行されていると、アプリケーションを管理するためこれを説明する章です。
 
-## <a name="step-6-monitor-and-diagnose"></a>手順 6: 監視し、診断
+## <a name="step-6-monitor-and-diagnose"></a>手順 6:監視し、診断
 
 このトピックでもについては [次へ] の章で実稼働システム; IT 操作を実行するタスクの一部としてただしが、アプリケーションが頻繁に改善するために、開発チームにこの手順で得られた知見をフィードする必要がありますを強調表示に重要です。 そのポイントの表示からもの一部では、DevOps タスクと操作は通常、実行が IT です。
 
 監視と診断は、DevOps の領域内の 100% の場合にのみは、監視のプロセスとまたはベータ版のテスト環境に対して、開発チームによって実行された分析です。 これは、ロード テストを実行するか、ベータ版またはベータ テスト担当者が新しいバージョンを試みている、QA 環境を監視するだけで実行されます。
 
 >[!div class="step-by-step"]
-[前へ](index.md)
-[次へ](../run-manage-monitor-docker-environments/index.md)
+>[前へ](index.md)
+>[次へ](../run-manage-monitor-docker-environments/index.md)

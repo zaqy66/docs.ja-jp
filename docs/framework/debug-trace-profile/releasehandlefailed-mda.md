@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3e2c39416a3d09eb1b1197dbec81f40ce318a43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 155cf7138d4074467195bdc1302e28c0789f93cf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393725"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151006"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
-`releaseHandleFailed` マネージ デバッグ アシスタント (MDA) は、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> から派生するクラスの <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドが `false` を返すときに、開発者に通知するためにアクティブ化されます。  
+`releaseHandleFailed` マネージド デバッグ アシスタント (MDA) は、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> から派生するクラスの <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドが `false` を返すときに、開発者に通知するためにアクティブ化されます。  
   
 ## <a name="symptoms"></a>症状  
  リソースまたはメモリのリーク。  <xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> から派生するクラスの <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドでエラーが発生する場合、クラスによってカプセル化されたリソースが、解放またはクリーンアップされていない可能性があります。  
@@ -76,7 +76,7 @@ and closing it directly or building another SafeHandle around it."
 ## <a name="example"></a>例  
  `releaseHandleFailed` MDA をアクティブ化することができるコードの例を、次に示します。  
   
-```  
+```csharp
 bool ReleaseHandle()  
 {  
     // Calling the Win32 CloseHandle function to release the   
@@ -92,5 +92,5 @@ bool ReleaseHandle()
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

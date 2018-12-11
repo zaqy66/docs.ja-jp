@@ -1,13 +1,13 @@
 ---
 title: 基本的な型 (F#)
-description: F# 言語で使用される基本的な基本的な型を検出します。
+description: 使用される基本的な基本的な型を検出、F#言語。
 ms.date: 07/09/2018
-ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8a1154a211d8c87571b47cb41cb091096569472
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48026942"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145125"
 ---
 # <a name="basic-types"></a>基本的な型
 
@@ -34,8 +34,8 @@ ms.locfileid: "48026942"
 |`float32`, `single`|<xref:System.Single>|32 ビット浮動小数点型。|
 |`float`, `double`|<xref:System.Double>|64 ビット浮動小数点型。|
 
->[!NOTE]
-使用して、64 ビット整数型の整数が大きすぎると計算を行うことができます、 [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa)型。 `bigint` 基本的な型であるとは見なされません省略形は`System.Numerics.BigInteger`します。
+> [!NOTE]
+> 使用して、64 ビット整数型の整数が大きすぎると計算を行うことができます、 [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa)型。 `bigint` 基本的な型であるとは見なされません省略形は`System.Numerics.BigInteger`します。
 
 ## <a name="see-also"></a>関連項目
 

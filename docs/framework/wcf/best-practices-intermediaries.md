@@ -1,15 +1,15 @@
 ---
-title: 'ベスト プラクティス: 中継局'
+title: ベスト プラクティス:中継ぎ局
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
 ms.openlocfilehash: 8b0e0e635c0e790b342115b988905ba29a6b8ad1
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296405"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144001"
 ---
-# <a name="best-practices-intermediaries"></a>ベスト プラクティス: 中継局
+# <a name="best-practices-intermediaries"></a>ベスト プラクティス:中継ぎ局
 中継局のサービス側のチャネルが適切に閉じられていることを確認するために中継局を呼び出すときは、エラーが正しく処理されるよう注意する必要があります。  
   
  次に例を示します。 クライアントが中継局を呼び出すと、中継局はバックエンド サービスを呼び出します。  バックエンド サービスはエラー コントラクトを定義しないので、そのサービスからスローされるエラーはすべて型指定されていないエラーとして扱われます。  バックエンド サービスがスローされます、 <xref:System.ApplicationException> WCF が正しく、サービス側チャネルを中止します。 <xref:System.ApplicationException> が <xref:System.ServiceModel.FaultException> として中継局にスローされます。 中継局は <xref:System.ApplicationException> を再スローします。 WCF はこれを中継局からの型指定されていないエラーとして解釈し、クライアントに転送します。 エラーを受け取ると、中継局とクライアントのクライアント側チャネルはエラーを示します。 ただし、WCF にはエラーが致命的であることが通知されていないため、中継局のサービス側チャネルは開いたままです。  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 5ae25cbca73f7c8e767cad0ac332d77c306724a1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 14e70a07469d6bb2701884d8646d161c78e65dc0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883923"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126277"
 ---
 # <a name="event-statement"></a>Event ステートメント
 ユーザー定義イベントを宣言します。  
@@ -91,7 +91,7 @@ End Event
   
  `Event` は、モジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*イベントは、クラス、構造体、モジュール、またはインターフェイスである必要があり、ソース ファイル、名前空間、プロシージャ、またはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- ほとんどの状況で、このトピックの「構文」のセクションにある最初の構文を使ってイベントを宣言できますが、 一部のシナリオでは、イベントの動作をより詳細に制御することが必要になります。 このトピックの「構文」セクションの最後には、`Custom` キーワードを使用した構文があります。これを使用すると、カスタム イベントを定義してイベントを詳細に制御できます。 カスタム イベントでは、コードでイベント ハンドラーを追加または削除するときに、つまりコードでイベントを生成するときに、何が起こるかを正確に指定します。 例については、次を参照してください。[方法: 節約メモリにカスタム イベントを宣言](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)と[方法: 宣言カスタム イベントにしてブロックを回避](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)します。  
+ ほとんどの状況で、このトピックの「構文」のセクションにある最初の構文を使ってイベントを宣言できますが、 一部のシナリオでは、イベントの動作をより詳細に制御することが必要になります。 このトピックの「構文」セクションの最後には、`Custom` キーワードを使用した構文があります。これを使用すると、カスタム イベントを定義してイベントを詳細に制御できます。 カスタム イベントでは、コードでイベント ハンドラーを追加または削除するときに、つまりコードでイベントを生成するときに、何が起こるかを正確に指定します。 例については、次を参照してください。[方法。メモリを節約するためにカスタム イベントを宣言](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)と[方法。ブロックを回避するためにカスタム イベントを宣言](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、イベントを使用して 10 秒から 0 秒までカウント ダウンします。 このコードは、イベント関連のいくつかのメソッド、プロパティ、およびステートメントの例を示しています。 `RaiseEvent` ステートメントの使用例も含まれています。  
@@ -115,7 +115,7 @@ End Event
  前の例を実行し、ボタンをクリックします。 f5 キーを押して**開始**します。 最初のテキスト ボックスで、秒のカウント ダウンが開始されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
   
 > [!NOTE]
->  `My.Application.DoEvents` メソッドがイベントを処理する方法は、フォームと同じではありません。 フォームでイベントを直接処理するには、マルチスレッドを使用します。 詳細については、次を参照してください。[スレッド処理](../../programming-guide/concepts/threading/index.md)します。  
+>  `My.Application.DoEvents` メソッドがイベントを処理する方法は、フォームと同じではありません。 フォームでイベントを直接処理するには、マルチスレッドを使用します。 詳細については、次を参照してください。[マネージ スレッド処理](../../../standard/threading/index.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
@@ -125,7 +125,7 @@ End Event
  [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
  [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
  [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [方法: カスタム イベントを宣言してメモリを節約する](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
- [方法: カスタム イベントを宣言してブロックを回避する](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
+ [操作方法：メモリを節約するためにカスタム イベントを宣言します。](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
+ [操作方法：ブロックを回避するためにカスタム イベントを宣言します。](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
  [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
  [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

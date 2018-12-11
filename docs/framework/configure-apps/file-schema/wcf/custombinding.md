@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 741f195a78c1716b95d8d4d88594207708ce6289
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c927ba59ccdb6e5a717fcaccde9294845a2c41cc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123827"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153905"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 ユーザーのメッセージ スタックを完全に制御できます。  
@@ -290,9 +290,8 @@ ms.locfileid: "49123827"
   
  さらに、独自のバインド要素を定義し、それを定義済みの層のいずれかの間に挿入できます。  
   
- カスタム システム指定のバインディングを変更するバインドを使用する方法の詳細については、次を参照してください。[方法: システム指定のバインディングをカスタマイズ](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)します。  
-  
-1.  
+ カスタム システム指定のバインディングを変更するバインドを使用する方法の詳細については、次を参照してください。[方法。システム指定のバインディングをカスタマイズ](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)します。  
+    
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.Channels.Binding>  

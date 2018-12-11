@@ -7,11 +7,11 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: 8b8f92697181c76710e75d6e5a07296b1fcf9188
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297063"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126823"
 ---
 # <a name="wcf-security-terminology"></a>WCF セキュリティ用語
 セキュリティについて説明するときに使用する用語の中には、だれもが知っているとは限らないものもあります。 ここでは、セキュリティ用語の一部を簡単に説明します。このトピックは、すべての項目について詳細に説明することを目的としたものではありません。  
@@ -120,7 +120,7 @@ ms.locfileid: "52297063"
  CA 階層の最上位にある CA。 ルート証明機関は、階層の次のレベルにある CA を証明します。  
   
  セキュア ハッシュ アルゴリズム (SHA)  
- メッセージ ダイジェストを生成するハッシュ アルゴリズム。 SHA は、DSS (Digital Signature Standard) の DSA (Digital Signature Algorithm) と共に使用されます。 SHA には、SHA-1、SHA-256、SHA-384、および SHA-512 の 4 種類があります。 SHA-1 は、160 ビットのメッセージ ダイジェストを生成します。 SHA-256、SHA-384、および SHA-512 は、それぞれ 256 ビット、384 ビット、512 ビットのメッセージ ダイジェストを生成します。 SHA は、NIST (National Institute of Standards and Technology) と NSA (National Security Agency) によって開発されました。  
+ メッセージ ダイジェストを生成するハッシュ アルゴリズム。 SHA は、DSS (Digital Signature Standard) の DSA (Digital Signature Algorithm) と共に使用されます。 4 種類あります。Sha-1、sha-256、sha-384、および sha-512 です。 SHA-1 は、160 ビットのメッセージ ダイジェストを生成します。 SHA-256、SHA-384、および SHA-512 は、それぞれ 256 ビット、384 ビット、512 ビットのメッセージ ダイジェストを生成します。 SHA は、NIST (National Institute of Standards and Technology) と NSA (National Security Agency) によって開発されました。  
   
  SSL (Secure Sockets Layer)  
  公開キー/秘密キー テクノロジの組み合わせを使用して、安全なネットワーク通信を行うためのプロトコル。  

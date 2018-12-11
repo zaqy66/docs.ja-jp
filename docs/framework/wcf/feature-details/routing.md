@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
 ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048607"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150869"
 ---
 # <a name="routing"></a>ルーティング
 このセクションのトピックでは、ルーティング サービスについて説明します。 ルーティング サービスは、構成可能な汎用の SOAP 中継局です。ルーティング サービスを使用すると、コンテンツ ベースのルーティングの構成、プロトコル ブリッジの設定、通信エラーの処理、および実行時のルーティング ロジックの動的な更新が可能となります。  

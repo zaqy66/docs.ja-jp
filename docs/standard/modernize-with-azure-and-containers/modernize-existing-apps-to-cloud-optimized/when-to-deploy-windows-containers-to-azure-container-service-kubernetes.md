@@ -1,28 +1,28 @@
 ---
-title: Azure コンテナー サービス (つまり、Kubernetes) に Windows コンテナーを展開するタイミング
-description: Azure のクラウドと Windows コンテナーでの既存の .NET アプリケーションを最新化 |Azure コンテナー サービス (つまり、Kubernetes) に Windows コンテナーを展開するタイミング
+title: Azure Container Service (つまり Kubernetes) に Windows コンテナーを展開するタイミング
+description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |Azure Container Service (つまり Kubernetes) に Windows コンテナーを展開するタイミング
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: b7f106e2b79a2c6bb24733debf7f4828505d66a6
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 0b803b104f905fddac7939d7b070c206aabffeda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958172"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144794"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Azure コンテナー サービス (つまり、Kubernetes) に Windows コンテナーを展開するタイミング
+# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Azure Container Service (つまり Kubernetes) に Windows コンテナーを展開するタイミング
 
-Azure のコンテナー サービスは、Azure の特に人気のオープン ソース ツールとテクノロジの構成を最適化します。 移植性、コンテナーと、アプリケーションの構成の両方を提供する、開いているソリューションが表示されます。 サイズ、ホストの数と、orchestrator ツールを選択します。 Azure のコンテナー サービスは、のインフラストラクチャを処理します。
+Azure Container Service では、Azure 向けに人気のあるオープン ソース ツールとテクノロジの構成を最適化します。 コンテナーと、アプリケーションの構成の両方の移植性を提供する、開いているソリューションが表示されます。 サイズ、ホスト数およびオーケストレーション ツールを選択します。 Azure Container Service では、インフラストラクチャを処理します。
 
-既にしているオープン ソース orchestrators Kubernetes、Docker Swarm、DC/OS など場合、は、コンテナー ワークロードをクラウドに移動する、既存の管理方法を変更する必要はありません。 慣れているアプリケーションの管理ツールを使用し、任意の orchestrator の標準 API エンドポイントを介して接続します。
+Kubernetes、Docker Swarm、DC/OS などのオープン ソース オーケストレーターを使用して既に場合、は、コンテナー ワークロードをクラウドに移動する、既存の管理方法を変更する必要はありません。 使い慣れているアプリケーションの管理ツールを使用し、好みの orchestrator の標準 API エンドポイント経由で接続します。
 
-これらすべての orchestrators は、Linux Docker コンテナーを使用しているが、Windows コンテナーのプレビュー状態である可能性がありますのみとお考えの場合、完成度の高い環境です。
+これらすべてのオーケストレーターは、Linux Docker コンテナーなどを使用している Windows コンテナー用のプレビュー状態である可能性がありますのみ場合の完成度の高い環境です。
 
-たとえば、Kubernetes でのサポートのコンテナーはネイティブ (ファーストクラス市民) Kubernetes で Windows コンテナーを使用しても (初期 2018 時点で ACS でのプレビュー) で効果的です。
+たとえば、Kubernetes では、サポートのコンテナーは Kubernetes で Windows コンテナーを使用してネイティブ (優良市民) も (2018 年初頭の時点で、ACS でプレビュー) で効果的です。
 
-重要な注意事項: 展開し、"複数 PaaS"バージョンの Kubernetes 用 ACS (Azure コンテナー サービス) AKS (Azure Kubernetes サービス)、ただし、Windows コンテナーはまだサポートされていません Q2 2018 時点では近日サポートされます。
+重要な注意事項:進化、および"以上の PaaS"Kubernetes 用 ACS (Azure Container Service) のバージョンは、AKS (Azure Kubernetes Service)、ただし、Windows コンテナーはまだサポートされていません、第 2 四半期 2018 がまもなくサポートされます。
 
 >[!div class="step-by-step"]
-[前へ](when-to-deploy-windows-containers-to-service-fabric.md)
-[次へ](choosing-azure-compute-options-for-container-based-applications.md)
+>[前へ](when-to-deploy-windows-containers-to-service-fabric.md)
+>[次へ](choosing-azure-compute-options-for-container-based-applications.md)

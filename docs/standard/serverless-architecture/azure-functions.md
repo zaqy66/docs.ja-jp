@@ -4,12 +4,12 @@ description: Azure functions は、複数の言語 (c#、JavaScript、Java) サ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: f08ba20b485197acd3bb5cdfe5699cd6be991d7c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370194"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145164"
 ---
 # <a name="azure-functions"></a>Azure Functions 
 
@@ -17,17 +17,17 @@ Azure 関数は、サーバーレス コンピューティング エクスペリ
 
 ![Azure functions のロゴ](./media/azure-functions-logo.png)
 
-Azure Functions フレームワークの 2 つのバージョンがあります。 従来のバージョンは、完全な .NET Framework をサポートしています。 新しいランタイムは、クロス プラットフォーム対応 .NET Core アプリケーションをサポートしています。 C# JavaScript、f#、および Java などだけでなく他の言語がサポートされています。 ポータルで作成した関数では、豊富なスクリプト構文を提供します。 完全なプラットフォームのサポートと機能を持つスタンドアロン プロジェクトとして作成した関数をデプロイできます。
+Azure Functions フレームワークの 2 つのバージョンがあります。 従来のバージョンは、完全な .NET Framework をサポートしています。 新しいランタイムは、クロス プラットフォーム対応 .NET Core アプリケーションをサポートしています。 追加の言語だけでなくC#JavaScript などF#、Java がサポートされているとします。 ポータルで作成した関数では、豊富なスクリプト構文を提供します。 完全なプラットフォームのサポートと機能を持つスタンドアロン プロジェクトとして作成した関数をデプロイできます。
 
 詳細については、次を参照してください。 [Azure Functions のドキュメント](https://docs.microsoft.com/azure/azure-functions)します。
 
 ## <a name="functions-v1-vs-v2"></a>関数の v1 と v2 の比較
 
-Azure Functions ランタイムの 2 つのバージョン: 1.x と 2.x。 バージョン 1.x が一般公開 (GA) します。 ポータルまたは Windows マシンからの .NET 開発をサポートし、.NET Framework を使用します。 1.x では、Python、PHP、TypeScript、Batch、Bash、および PowerShell の実験的なサポートを c#、JavaScript、および f# をサポートします。
+Azure Functions ランタイムの 2 つのバージョンがあります。1.x と 2.x の場合は。 バージョン 1.x が一般公開 (GA) します。 ポータルまたは Windows マシンからの .NET 開発をサポートし、.NET Framework を使用します。 1.x がサポートしているC#、JavaScript、およびF#、Python、PHP、TypeScript、Batch、Bash、および PowerShell の実験的なサポートをします。
 
 バージョン 2.x はプレビュー段階です。 .NET Core を利用し、Windows、macOS、および Linux マシンでのクロス プラットフォーム開発をサポートしています。 2.x の Java のファースト クラスのサポートを追加しますがまだ直接サポートしていません試験段階の言語のいずれか。 バージョン 2.x のバインディングの独立したバージョン管理、プラットフォームにサード パーティ製の拡張機能を有効にする新しいバインディング拡張モデルを使用してより実行環境を簡素化します。
 
-> **1.x の既知の問題がある[バインディング リダイレクト サポート](https://github.com/Azure/azure-functions-host/issues/992)します。** この問題は、.NET 開発に固有です。 ランタイムに含まれるライブラリから別のバージョンのライブラリへの依存関係を使用したプロジェクトが影響を受けます。 Functions チームが問題の具体的な進行状況をコミットします。 一般に入る前に、チームは 2.x でバインド リダイレクトを対処します。 推奨される修正プログラムや回避策チームの公式ステートメントはここで使用可能な: [Azure Functions でのアセンブリ解決](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions)します。
+> **1.x の既知の問題がある[バインディング リダイレクト サポート](https://github.com/Azure/azure-functions-host/issues/992)します。** この問題は、.NET 開発に固有です。 ランタイムに含まれるライブラリから別のバージョンのライブラリへの依存関係を使用したプロジェクトが影響を受けます。 Functions チームが問題の具体的な進行状況をコミットします。 一般に入る前に、チームは 2.x でバインド リダイレクトを対処します。 チームの公式ステートメントの推奨される修正プログラムや回避策は、ここで入手できます。[Azure Functions でのアセンブリ解決](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions)します。
 
 詳細については、次を参照してください。 [1.x と 2.x の比較](https://docs.microsoft.com/azure/azure-functions/functions-versions)します。
 
@@ -175,10 +175,10 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 
 `Root`プロキシはルート URL に送信されたもの (`https://--shorturl--/`) し、ドキュメント サイトにリダイレクトします。
 
-ビデオのプロキシを使用する例が示すように[Azure: サーバーレス Azure Functions を使用してクラウドにアプリをもたらす](https://channel9.msdn.com/events/Connect/2017/E102)します。 リアルタイムでローカルの SQL Server で実行されている ASP.NET Core アプリケーションは、Azure クラウドに移行されます。 プロキシは、関数を使用する従来の Web API プロジェクトのリファクタリングのために使用されます。
+ビデオのプロキシを使用する例が示すように[Azure:サーバーレス Azure Functions を使用してクラウドにアプリをもたらす](https://channel9.msdn.com/events/Connect/2017/E102)します。 リアルタイムでローカルの SQL Server で実行されている ASP.NET Core アプリケーションは、Azure クラウドに移行されます。 プロキシは、関数を使用する従来の Web API プロジェクトのリファクタリングのために使用されます。
 
 プロキシの詳細については、次を参照してください。 [Azure Functions proxies 作業](https://docs.microsoft.com/azure/azure-functions/functions-proxies)します。
 
 >[!div class="step-by-step"]
-[前へ](azure-serverless-platform.md)
-[次へ](application-insights.md)
+>[前へ](azure-serverless-platform.md)
+>[次へ](application-insights.md)

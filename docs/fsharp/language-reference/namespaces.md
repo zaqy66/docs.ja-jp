@@ -1,31 +1,33 @@
 ---
 title: 名前空間 (F#)
-description: F# 名前空間を使用すると、プログラム要素のグループに名前を追加することによって関連する機能の領域にコードを整理する方法について説明します。
-ms.date: 04/24/2017
-ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+description: 学習方法、F#名前空間では、プログラム要素のグループに名前を追加することによって関連する機能の領域にコードを整理できます。
+ms.date: 12/08/2018
+ms.openlocfilehash: ad5cca8947d09d8480bfa418b003c84546edc29b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44178257"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169035"
 ---
 # <a name="namespaces"></a>名前空間
 
-名前空間を使用すると、プログラム要素のグループに名前を割り当てて、関連する機能の区分にコードを編成することができます。
+名前空間では、関連する機能の領域にへのグループに名前を追加できるコードを編成できます。F#プログラム要素です。 名前空間は、通常の最上位の要素でF#ファイル。
 
 ## <a name="syntax"></a>構文
 
 ```fsharp
-namespace [parent-namespaces.]identifier
+namespace [rec] [parent-namespaces.]identifier
 ```
 
 ## <a name="remarks"></a>Remarks
 
-名前空間にコードを配置する場合は、ファイル内の最初の宣言は名前空間を宣言する必要があります。 全体のファイルの内容は、名前空間の一部になります。
+名前空間にコードを配置する場合は、ファイル内の最初の宣言は名前空間を宣言する必要があります。 ファイル全体の内容は、名前空間の一部となる、ファイルにさらにその他の名前空間宣言が存在しない指定します。 場合は、[次へ] の名前空間宣言までのすべてのコードは最初の名前空間内にあると見なさします。
 
 値および関数、名前空間を含める直接ことはできません。 代わりに、モジュールでは、値および関数を含める必要があるし、モジュールの名前空間に含まれます。 名前空間は、モジュールの種類を含めることができます。
 
-名前空間は明示的に宣言する名前空間キーワード、または暗黙的にモジュールを宣言するときに。 名前空間を明示的に宣言するには、名前空間キーワードの後に名前空間の名前を使用します。 次の例では、型とその名前空間に含まれるモジュールのウィジェットの名前空間を宣言するコード ファイルを示します。
+名前空間の上、XML ドキュメント コメントを宣言できますが、無視されます。 コンパイラ ディレクティブは、名前空間の上にも宣言できます。
+
+名前空間は明示的に宣言する名前空間キーワード、または暗黙的にモジュールを宣言するときに。 名前空間を明示的に宣言するには、名前空間キーワードの後に名前空間の名前を使用します。 次の例では、名前空間を宣言するコード ファイル`Widgets`型とその名前空間に含まれるモジュールを使用します。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
@@ -74,7 +76,7 @@ Module2 5 6
 
 ## <a name="recursive-namespaces"></a>再帰的な名前空間
 
-F# 4.1 には、再帰的に相互に含まれているすべてのコードでは、名前空間の概念が導入されています。  使用してこれには`namespace rec`します。  使用`namespace rec`されない型とモジュール間の相互参照コードを記述することでいくつかの問題を軽減することができます。  この例を次に示します。
+名前空間は、再帰的に相互に含まれているすべてのコードを許可するには、再帰的なとしても宣言できます。  使用してこれには`namespace rec`します。 使用`namespace rec`されない型とモジュール間の相互参照コードを記述することでいくつかの問題を軽減することができます。 この例を次に示します。
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-なお、例外`DontSqueezeTheBananaException`とクラス`Banana`両方には、互いを参照してください。  モジュールではさらに、`BananaHelpers`とクラス`Banana`も互いに参照してください。  これは、削除した場合、F# で表現できませんが、`rec`からキーワード、`MutualReferences`名前空間。
+なお、例外`DontSqueezeTheBananaException`とクラス`Banana`両方には、互いを参照してください。  モジュールではさらに、`BananaHelpers`とクラス`Banana`も互いに参照してください。 表現することがあるF#を削除した場合、`rec`からキーワード、`MutualReferences`名前空間。
 
-この機能は使用できる最上位[モジュール](modules.md)F# 4.1 またはそれ以降。
+この機能は使用できる最上位[モジュール](modules.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 - [F# 言語リファレンス](index.md)
 - [モジュール](modules.md)
-- [F# RFC FS-1009 - ファイル内でより大きな範囲経由で相互に参照型とモジュールを許可します。](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009 - ファイル内でより大きな範囲経由で相互に参照型とモジュールを許可します。](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

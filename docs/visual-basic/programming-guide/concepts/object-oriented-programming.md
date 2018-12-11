@@ -3,11 +3,11 @@ title: オブジェクト指向プログラミング (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297089"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153927"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>オブジェクト指向プログラミング (Visual Basic)
 
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-詳細については、次を参照してください。:[オブジェクトの有効期間: オブジェクトが作成と破棄方法](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)します。
+詳細については次を参照してください:[オブジェクトの有効期間:オブジェクトの作成し、破棄方法](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)します。
 
 #### <a name="destructors"></a>デストラクター
 
@@ -254,7 +254,7 @@ Dim sampleObject = New SampleClass With
 詳細については次を参照してください:
 
 - [New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)
-- [オブジェクト初期化子 : 名前付きの型と匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [オブジェクト初期化子:名前付きの匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
 ### <a name="shared-classes-and-members"></a>共有クラスとメンバー
 
@@ -293,7 +293,7 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-詳しくは、「[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」をご覧ください。
+詳細については次を参照してください:[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)します。
 
 ## <a name="inheritance"></a>継承
 

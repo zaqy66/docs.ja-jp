@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : WPF でホストするための Direct3D9 コンテンツの作成'
+title: チュートリアル:WPF でホストするための Direct3D9 コンテンツの作成
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 321c4ba8659bd2226fff96e74e81ef24f0077c3d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 192036836dfb010274944006feea44e5d81ff4e3
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200915"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168753"
 ---
-# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>チュートリアル : WPF でホストするための Direct3D9 コンテンツの作成
+# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>チュートリアル:WPF でホストするための Direct3D9 コンテンツの作成
 このチュートリアルでは、Windows Presentation Foundation (WPF) アプリケーションでホストするための適切な Direct3D9 コンテンツを作成する方法を示します。 WPF アプリケーションでの Direct3D9 コンテンツのホストの詳細については、次を参照してください。 [WPF と Direct3D9 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)します。
 
  このチュートリアルでは次のタスクを実行します。
@@ -30,7 +30,7 @@ ms.locfileid: "50200915"
 
 -   Visual Studio 2010。
 
--   DirectX SDK 9or 以降。
+-   DirectX 9 以降の SDK です。
 
 ## <a name="creating-the-direct3d9-project"></a>Direct3D9 プロジェクトを作成します。
  最初の手順では、作成および Direct3D9 プロジェクトを構成します。
@@ -137,10 +137,10 @@ ms.locfileid: "50200915"
 
 ## <a name="next-steps"></a>次の手順
 
--   WPF アプリケーションでの Direct3D9 コンテンツをホストします。 詳細については、次を参照してください。[チュートリアル: WPF で Direct3D9 のコンテンツをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)します。
+-   WPF アプリケーションでの Direct3D9 コンテンツをホストします。 詳細については、次を参照してください。[チュートリアル。WPF での Direct3D9 コンテンツをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [チュートリアル: WPF での Direct3D9 コンテンツのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [チュートリアル:WPF での Direct3D9 コンテンツをホストしています。](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)

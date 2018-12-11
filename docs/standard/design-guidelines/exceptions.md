@@ -1,6 +1,6 @@
 ---
 title: 例外のデザインのガイドライン
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions [.NET Framework], design guidelines
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+author: KrzysztofCwalina
+ms.openlocfilehash: 60c3d25138c224f5eabf44d06b6c9a8373eb5f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030656"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153197"
 ---
 # <a name="design-guidelines-for-exceptions"></a>例外のデザインのガイドライン
 例外処理には戻り値ベースのエラー報告に対する多くの利点です。 適切なフレームワークの設計では、例外の利点を活用するアプリケーション開発者は役立ちます。 このセクションでは、例外の利点を説明し、それらを効果的に使用のガイドラインを示します。  
@@ -26,7 +25,7 @@ ms.locfileid: "48030656"
  [例外とパフォーマンス](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
+ *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
   
 ## <a name="see-also"></a>関連項目
 

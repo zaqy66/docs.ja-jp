@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: c9eed211b65e7069897718d98c301667a23aaec2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: bcf218efeb7bff5f7457164411efed796314ba82
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702908"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129481"
 ---
 # <a name="attached-properties-overview"></a>添付プロパティの概要
 
@@ -60,7 +60,7 @@ WPF が添付プロパティを定義する最も一般的なシナリオは親�
 
 ## コードの添付プロパティ <a name="attached_properties_code"></a>
 
-WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]取得/設定を簡単にアクセスするための「ラッパー」メソッドです。 これは、添付プロパティが、プロパティが設定されているインスタンスの [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 名前空間の一部とは限らないためです。 ただし、XAML の解析時に XAML プロセッサがその値を設定できる必要があります。 有効な添付プロパティの使用をサポートする添付プロパティの所有者の種類は、フォームで専用のアクセサー メソッドを実装する必要があります**取得 * PropertyName*** と **設定*PropertyName * * *。 この専用のアクセサー メソッドは、コード内の添付プロパティの取得/設定でも役立ちます。 コードの観点では、添付プロパティはプロパティ アクセサーではなくメソッド アクセサーを含むバッキング フィールドに似ており、そのバッキング フィールドは特に定義することなくすべてのオブジェクトに存在することができます。
+WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]取得/設定を簡単にアクセスするための「ラッパー」メソッドです。 これは、添付プロパティが、プロパティが設定されているインスタンスの [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 名前空間の一部とは限らないためです。 ただし、XAML の解析時に XAML プロセッサがその値を設定できる必要があります。 有効な添付プロパティの使用をサポートする添付プロパティの所有者の種類は、フォームで専用のアクセサー メソッドを実装する必要があります**Get_PropertyName_** と**Set_PropertyName_** します。 この専用のアクセサー メソッドは、コード内の添付プロパティの取得/設定でも役立ちます。 コードの観点では、添付プロパティはプロパティ アクセサーではなくメソッド アクセサーを含むバッキング フィールドに似ており、そのバッキング フィールドは特に定義することなくすべてのオブジェクトに存在することができます。
 
 次の例は、コードに添付プロパティを設定する方法を示しています。 この例で`myCheckBox`のインスタンスである、<xref:System.Windows.Controls.CheckBox>クラス。
 
@@ -91,14 +91,14 @@ WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#t
 
 派生するクラスが必要ない場合、クラスが他の種類で使用する目的のみで添付プロパティを定義する<xref:System.Windows.DependencyObject>します。 派生する必要がある操作を行いますが、<xref:System.Windows.DependencyObject>の添付プロパティを依存関係プロパティでもある WPF の全体的なモデルに従う場合。
 
-依存関係プロパティとして宣言することで、添付プロパティを定義、`public static readonly`型のフィールド<xref:System.Windows.DependencyProperty>します。 戻り値を使用してこのフィールドを定義する、<xref:System.Windows.DependencyProperty.RegisterAttached%2A>メソッド。 フィールド名は文字列が付加され、添付プロパティの名前と一致する必要があります`Property`を表していると識別フィールドの名前付けの確立された WPF パターンに従います。 添付プロパティのプロバイダーは、静的にも提供する必要があります**取得 * PropertyName*** と**設定 * PropertyName***; 添付プロパティのアクセサー メソッド、プロパティに失敗が発生システムが添付プロパティを使用することができません。
+依存関係プロパティとして宣言することで、添付プロパティを定義、`public static readonly`型のフィールド<xref:System.Windows.DependencyProperty>します。 戻り値を使用してこのフィールドを定義する、<xref:System.Windows.DependencyProperty.RegisterAttached%2A>メソッド。 フィールド名は文字列が付加され、添付プロパティの名前と一致する必要があります`Property`を表していると識別フィールドの名前付けの確立された WPF パターンに従います。 添付プロパティのプロバイダーは、静的にも提供する必要があります**Get_PropertyName_** と**Set_PropertyName_** ; 添付プロパティのアクセサー メソッド、プロパティに失敗が発生システムが添付プロパティを使用することができません。
 
 > [!NOTE]
 > 添付プロパティの get アクセサーを省略した場合、プロパティのデータ バインディングは、Visual Studio および Expression Blend などのデザイン ツールでは機能しません。
 
 #### <a name="the-get-accessor"></a>Get アクセサー
 
-署名、**取得 * PropertyName*** アクセサーを指定する必要があります。
+署名、 **Get_PropertyName_** アクセサーを指定する必要があります。
 
 `public static object GetPropertyName(object target)`
 
@@ -108,7 +108,7 @@ WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#t
 
 #### <a name="the-set-accessor"></a>Set アクセサー
 
-署名、**設定 * PropertyName*** アクセサーを指定する必要があります。
+署名、 **Set_PropertyName_** アクセサーを指定する必要があります。
 
 `public static void SetPropertyName(object target, object value)`
 
@@ -116,7 +116,7 @@ WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#t
 
 -   `value` オブジェクトは、実装のより具体的な型として指定することができます。 たとえば、<xref:System.Windows.Controls.DockPanel.SetDock%2A>メソッドの型としては<xref:System.Windows.Controls.Dock>のため、値は、その列挙体にのみ設定できます。 このメソッドの値は、マークアップの添付プロパティの使用で添付プロパティが検出されたときに XAML ローダーから生じる入力であることに注意してください。 この入力はマークアップの XAML 属性値として指定された値です。 したがって、適切な型を属性値 (最終的には単なる文字列) から作成できるように、使用する型の型変換、値シリアライザー、またはマークアップ拡張サポートが必要です。
 
-次の例では、依存関係プロパティの登録 (を使用して、<xref:System.Windows.DependencyProperty.RegisterAttached%2A>メソッド)、だけでなく**取得 * PropertyName*** と**設定 * PropertyName*** アクセサー。 この例では、添付プロパティ名は `IsBubbleSource` です。 したがって、アクセサーの名前は `GetIsBubbleSource` および `SetIsBubbleSource` である必要があります。
+次の例では、依存関係プロパティの登録 (を使用して、<xref:System.Windows.DependencyProperty.RegisterAttached%2A>メソッド)、だけでなく**Get_PropertyName_** と**Set_PropertyName_** アクセサー。 この例では、添付プロパティ名は `IsBubbleSource` です。 したがって、アクセサーの名前は `GetIsBubbleSource` および `SetIsBubbleSource` である必要があります。
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]

@@ -1,6 +1,6 @@
 ---
 title: 機能拡張のデザイン
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - extending class libraries
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c1690d0cdf1f57eaf0a794d6e71babfa4fa6425
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+author: KrzysztofCwalina
+ms.openlocfilehash: 94900dee72230a1b9d099d78168acc508af62af7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216452"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127356"
 ---
 # <a name="designing-for-extensibility"></a>機能拡張のデザイン
 フレームワークの設計の 1 つの重要な側面は、フレームワークの拡張性を慎重に検討することを確認して行っています。 これは、コストとメリットに関連付けられたさまざまな機能拡張メカニズムを理解することが必要です。 この章では、拡張メカニズムを判断するのに役立ちます: サブクラス化、イベント、仮想メンバー、コールバック、および、-、framework の要件を満たす最適なことができます。  
@@ -32,7 +31,7 @@ ms.locfileid: "47216452"
  [シール](../../../docs/standard/design-guidelines/sealing.md)  
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
+ *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
   
 ## <a name="see-also"></a>関連項目
 

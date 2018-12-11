@@ -1,5 +1,5 @@
 ---
-title: '方法 : 基本的な Windows Communication Foundation サービスをホストおよび実行する'
+title: 操作方法：ホストし、基本的な Windows Communication Foundation サービスの実行
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: b79c3246b7c12a3a99a5c68586387fc30573dcb6
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562295"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129377"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>方法 : 基本的な Windows Communication Foundation サービスをホストおよび実行する
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>操作方法：ホストし、基本的な Windows Communication Foundation サービスの実行
 
 Windows Communication Foundation (WCF) アプリケーションの作成に必要な 6 つのタスクのうちの 3 番目がこれです。 6 つのすべてのタスクの概要については、「[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)」を参照してください。
 
@@ -149,7 +149,7 @@ End Module
 
 **手順 4** – メタデータ交換を有効にします。 クライアントは、サービス操作を呼び出すために使用されるプロキシの生成にメタデータ交換を使用します。 メタデータ交換を有効化するには、<xref:System.ServiceModel.Description.ServiceMetadataBehavior> インスタンスを作成してその <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> プロパティを `true` に設定し、動作を <xref:System.ServiceModel.ServiceHost> インスタンスの <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` コレクションに追加します。
 
-**手順 5** – オープン、<xref:System.ServiceModel.ServiceHost>受信メッセージをリッスンします。 コードでは、ユーザーによる Enter キーの押下を待機しています。 この動作を行わない場合、アプリは直ちに終了し、サービスはシャットダウンします。また、try/catch ブロックが使用されている点にも注意してください。 <xref:System.ServiceModel.ServiceHost> がインスタンス化された後、他のコードはすべて try/catch ブロックに配置されます。 <xref:System.ServiceModel.ServiceHost> によってスローされた例外を安全にキャッチする方法の詳細については、「[Avoiding Problems with the Using Statement](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)」 (using ステートメントで問題を回避する) を参照してください。
+**手順 5** – オープン、<xref:System.ServiceModel.ServiceHost>受信メッセージをリッスンします。 コードでは、ユーザーによる Enter キーの押下を待機しています。 この動作を行わない場合、アプリは直ちに終了し、サービスはシャットダウンします。また、try/catch ブロックが使用されている点にも注意してください。 <xref:System.ServiceModel.ServiceHost> がインスタンス化された後、他のコードはすべて try/catch ブロックに配置されます。 によってスローされた例外を安全にキャッチの詳細については<xref:System.ServiceModel.ServiceHost>を参照してください[使用終了、中止 WCF クライアントのリソースを解放するには](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > コードで行われた変更を反映するように GettingStartedLib で App.config を編集します。
@@ -403,7 +403,7 @@ End Module
 これでサービスが実行されていることが確認できました。 次のタスクでは、WCF クライアントを作成します。
 
 > [!div class="nextstepaction"]
-> [方法: WCF クライアントを作成します。](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [操作方法：WCF クライアントを作成します。](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 
 トラブルシューティングについては、「[Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)」 (チュートリアル入門のトラブルシューティング) を参照してください。
 

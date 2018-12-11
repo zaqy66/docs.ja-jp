@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 36dbf725dfcd6fefe6482f7de69daea9356d3d07
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3094c82382292be3295238ef9cf2687f6eeb98f8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087700"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149888"
 ---
 # <a name="configuring-http-and-https"></a>HTTP および HTTPS の構成
 WCF サービスと WCF クライアントは、HTTP および HTTPS を介して通信できます。 HTTP または HTTPS の設定は、インターネット インフォメーション サービス (IIS) またはコマンド ライン ツールを使用して構成します。 WCF サービスが IIS でホストされている場合は、IIS 内で HTTP または HTTPS の設定を構成できます (inetmgr.exe ツールを使用)。 WCF サービスが自己ホスト型の場合は、コマンド ライン ツールを使用して HTTP または HTTPS の設定を構成します。  
@@ -32,7 +32,7 @@ WCF サービスと WCF クライアントは、HTTP および HTTPS を介し�
   
  `set urlacl` オプションを使用する Httpcfg コマンドの構文を次に示します。  
   
-```  
+```console  
 httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL  
 ```  
   
@@ -42,14 +42,14 @@ httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL
   
  このコマンドの使用例を次に示します。  
   
-```  
+```console  
 httpcfg.exe set urlacl /u http://myhost:8000/ /a "O:AOG:DAD:(A;;RPWPCCDCLCSWRCWDWOGA;;;S-1-0-0)"  
 ```  
   
 ### <a name="running-windows-vista-windows-server-2008-r2-or-windows-7"></a>Windows Vista、Windows Server 2008 R2、または Windows 7 を実行している場合  
  [!INCLUDE[wv](../../../../includes/wv-md.md)]、Windows Server 2008 R2、または Windows 7 を実行している場合は、Netsh.exe ツールを使用します。 このコマンドの使用例を次に示します。  
   
-```  
+```console  
 netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user  
 ```  
   
@@ -63,7 +63,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
   
  証明書は、接続の IP アドレスとポート番号に基づいて集中ストアに格納されます。 特別な IP アドレス 0.0.0.0 は、ローカル コンピューターの任意の IP アドレスに一致します。 証明書ストアでは、パスを基準にした URL を区別しません。 同じ IP アドレスとポートの組み合わせを持つサービスは、そのサービスの URL でのパスが異なる場合でも証明書を共有する必要があります。  
   
- 手順については、次を参照してください。[方法: SSL 証明書でポートを構成](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)します。  
+ 手順については、次を参照してください。[方法。SSL 証明書でポートを構成](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)します。  
   
 ## <a name="configuring-the-ip-listen-list"></a>IP リッスン一覧の構成  
  HTTP Server API は、ユーザーが URL を登録すると、IP アドレスとポートだけにバインドします。 既定では、HTTP Server API は、コンピューターのすべての IP アドレスに対して、URL でポートにバインドします。 その IP アドレスとポートの組み合わせにバインドしている HTTP Server API をアプリケーションが使用していない場合、競合が発生します。 IP リッスン一覧には、WCF サービスの一部のマシンの IP アドレス、ポートを使用するアプリケーションと共存させることができます。 IP リッスン一覧にエントリがある場合、HTTP Server API は、その一覧に指定されている IP アドレスだけにバインドします。 IP リッスン一覧を変更するには、管理特権が必要です。  
@@ -71,14 +71,14 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
 ### <a name="running-windows-xp-or-server-2003"></a>Windows XP または Windows Server 2003 を実行している場合  
  httpcfg ツールを使用して IP リッスン一覧を変更します。次に例を示します。 [Windows サポート ツールのドキュメント](https://go.microsoft.com/fwlink/?LinkId=94840)httpcfg.exe ツールの構文について説明します。  
   
-```  
+```console  
 httpcfg.exe set iplisten -i 0.0.0.0:8000  
 ```  
   
 ### <a name="running-windows-vista-or-windows-7"></a>Windows Vista または Windows 7 を実行している場合  
  netsh ツールを使用して IP リッスン一覧を変更します。次に例を示します。  
   
-```  
+```console  
 netsh http add iplisten ipaddress=0.0.0.0:8000  
 ```  
   
@@ -92,4 +92,4 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.WSDualHttpBinding>  
- [方法 : SSL 証明書を使用してポートを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+ [操作方法：SSL 証明書でポートを構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

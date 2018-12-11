@@ -2,17 +2,17 @@
 title: シーケンス (F#)
 description: 大規模な順序付けられたデータのコレクションを持っていてもすべての要素を使用すると必ずしも期待しないときに、F# シーケンスを使用する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 835aa5fdc32f98efdc7e1795efd09541a5f1b791
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48838911"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129208"
 ---
 # <a name="sequences"></a>シーケンス
 
 > [!NOTE]
-この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
+> この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
 A*シーケンス*論理的な一連の要素は、すべて 1 つの型。 シーケンスは、大規模な順序付けられたデータのコレクションがあるが、すべての要素を使用する予定がない場合に特に便利です。 シーケンスは、すべての要素を使用ない状況で一覧よりも優れたパフォーマンスを提供できるように、シーケンスの個々 の要素としてのみ計算が必要です。 シーケンスがによって表される、`seq<'T>`エイリアスである型の`System.Collections.Generic.IEnumerable`します。 そのため、実装する .NET Framework 型`System.IEnumerable`シーケンスとして使用できます。 [Seq モジュール](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)シーケンスに関する操作のサポートを提供します。
 
@@ -120,7 +120,7 @@ The sequence fib contains Fibonacci numbers.
 
 ## <a name="searching-and-finding-elements"></a>検索して、要素の検索
 
-シーケンスの一覧で使用できる機能のサポート: [Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1)、 [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565)、 [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8)、 [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3)、 [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d)、 [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47)、および[Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)します。 シーケンスの使用可能なこれらの関数のバージョンの検索対象の要素に達するまでのシーケンスを評価します。 例については、次を参照してください。[一覧](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d)します。
+シーケンスは、リストで使用できる機能をサポートします。[Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1)、 [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565)、 [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8)、 [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3)、 [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d)、 [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47)、および[Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)します。 シーケンスの使用可能なこれらの関数のバージョンの検索対象の要素に達するまでのシーケンスを評価します。 例については、次を参照してください。[一覧](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d)します。
 
 ## <a name="obtaining-subsequences"></a>サブシーケンスの取得
 

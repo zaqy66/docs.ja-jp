@@ -4,12 +4,12 @@ description: Azure クラウドおよび Windows コンテナーで既存の .NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 17838381f42a760caa7fba7e09ab798c6284bccb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683204"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151065"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>クラウドに最適化されたアプリケーションへの既存の .NET アプリを最新化する理由
 
@@ -23,7 +23,7 @@ ms.locfileid: "45683204"
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>クラウドに最適化されたアプリケーションの基本原則と概念および 
 
-クラウドの機能強化は、2 つの目標を達成に焦点を合わせた: コストの削減し、機敏性を向上させることによってビジネスの成長を改善します。 これらの目標は、プロセスを簡略化し、リリースし、アプリケーションを出荷時の摩擦を減らすことによって実現されます。
+クラウドの機能強化は、ほとんどの場合 2 つの目標を達成に重点を置いては。コストの削減し、機敏性を向上させることによってビジネスの成長を改善します。 これらの目標は、プロセスを簡略化し、リリースし、アプリケーションを出荷時の摩擦を減らすことによって実現されます。
 
 アプリケーションがクラウド最適化では、アジャイルの方法-他のオンプレミス アプリケーションから自律的にアプリを開発およびリリースしを展開する場合、自動スケール、監視、および、クラウドでのアプリケーションをトラブルシューティングします。
 
@@ -68,5 +68,5 @@ ms.locfileid: "45683204"
 次のセクションでは、これらのメリットはさらに詳しく説明され、特定のテクノロジにリンクされます。
 
 >[!div class="step-by-step"]
-[前へ](index.md)
-[次へ](microsoft-technologies-in-cloud-optimized-applications.md)
+>[前へ](index.md)
+>[次へ](microsoft-technologies-in-cloud-optimized-applications.md)

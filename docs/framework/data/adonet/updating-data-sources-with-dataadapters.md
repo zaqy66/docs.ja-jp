@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: c334fb695f80bcac19167e9347d27d40f5139580
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8feffd5c3a6205dcb67072f8e17b0e771a0f0d6b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658666"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144742"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>DataAdapter によるデータ ソースの更新
 `Update` の <xref:System.Data.Common.DataAdapter> メソッドを呼び出して、変更を <xref:System.Data.DataSet> からデータ ソースに反映します。 `Update` メソッドは、`Fill` メソッドと同様に、引数として `DataSet` のインスタンスおよびオプションの <xref:System.Data.DataTable> オブジェクトまたは `DataTable` 名を受け取ります。 `DataSet` のインスタンスは、行われた変更点を格納する `DataSet` です。`DataTable` は、変更点の取得元のテーブルです。 `DataTable` を指定しなかった場合、`DataTable` 内の最初の `DataSet` が使用されます。  
@@ -18,7 +18,7 @@ ms.locfileid: "45658666"
  `Update` メソッドを呼び出すと、`DataAdapter` は、既に加えられた変更を解析し、適切なコマンド (INSERT、UPDATE、または DELETE) を実行します。 `DataAdapter` は <xref:System.Data.DataRow> へ加えられた変更を検出すると、<xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>、または <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> を使用してその変更を処理します。 その結果、デザイン時にコマンド構文を指定し、可能な場合はストアド プロシージャを使用することにより、ADO.NET アプリケーションのパフォーマンスを最適化できます。 コマンドは `Update` を呼び出す前に明示的に設定する必要があります。 `Update` を呼び出し、その更新に関連する適切なコマンドが存在しない場合 (たとえば、削除済みの行に関連する `DeleteCommand` が存在しない場合) は、例外がスローされます。  
   
 > [!NOTE]
->  SQL Server のストアド プロシージャで、`DataAdapter` を使用してデータを編集または削除する場合、ストアド プロシージャの定義に SET NOCOUNT ON は使用しないでください。 処理された行数がゼロとして返され、`DataAdapter` によって同時実行の競合として解釈されてしまいます。 この場合、<xref:System.Data.DBConcurrencyException> がスローされます。  
+>  SQL Server のストアド プロシージャで、`DataAdapter` を使用してデータを編集または削除する場合、ストアド プロシージャの定義に SET NOCOUNT ON は使用しないでください。 処理された行数がゼロとして返され、`DataAdapter` によってコンカレンシーの競合として解釈されてしまいます。 この場合、<xref:System.Data.DBConcurrencyException> がスローされます。  
   
  Command パラメーターを使用して、`DataSet` 内の各変更行に対する SQL ステートメントまたはストアド プロシージャに入力値と出力値を指定できます。 詳細については、次を参照してください。 [DataAdapter パラメーター](../../../../docs/framework/data/adonet/dataadapter-parameters.md)します。  
   
@@ -108,7 +108,7 @@ adapter.Update(table.Select(null, null, DataViewRowState.Added));
   
  サンプルをコンパイルして実行する前に、サンプル データベースを作成する必要があります。  
   
-```  
+```sql
 USE [master]  
 GO  
   
@@ -174,7 +174,7 @@ GO
   
  このコード サンプルの c# および Visual Basic プロジェクトで確認できます[開発者コード サンプル](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D)します。  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.Common;  

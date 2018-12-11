@@ -4,12 +4,12 @@ description: イメージ処理からモバイル バックエンドとの ETL �
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c38d1c6c4e04f3fa38946c97af5d94758b3ed6f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370203"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153788"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>サーバーレスのビジネス シナリオとユース ケース
 
@@ -27,7 +27,7 @@ ms.locfileid: "49370203"
 
 ![自動化されたイメージ ギャラリー](./media/automated-image-gallery.png)
 
-完全なリポジトリとロジック アプリをビルドする手順についてはここで使用可能なが:[イベント グリッド グルー](https://github.com/JeremyLikness/Event-Grid-Glue)します。
+完全なリポジトリとロジック アプリをビルドする手順については。[イベント グリッド グルー](https://github.com/JeremyLikness/Event-Grid-Glue)します。
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Xamarin.Forms と関数を使用してクロス プラットフォーム モバイル クライアント
 
@@ -55,7 +55,7 @@ Azure の Web ポータルで、または Visual Studio では、単純なサー
 
 プロキシは、サーバーレスの関数に移動すると、個々 の要求を再ルーティングするように更新する 1 つの API エンドポイントを提供します。
 
-全体の移行について説明するビデオを表示することができます:[リフト アンド シフト サーバーレス Azure functions による](https://channel9.msdn.com/Events/Connect/2017/E102)します。 サンプル コードへのアクセス:[アプリケーションの持ち込み](https://github.com/JeremyLikness/bring-own-app-connect-17)します。
+全体の移行について説明するビデオを表示することができます。[リフト アンド シフト サーバーレス Azure functions による](https://channel9.msdn.com/Events/Connect/2017/E102)します。 サンプル コードにアクセスします。[アプリケーションの持ち込み](https://github.com/JeremyLikness/bring-own-app-connect-17)します。
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>CSV ファイルを解析し、データベースに挿入
 
@@ -77,7 +77,7 @@ Azure Functions を使用して、シングル ページ アプリケーショ�
 
 ![Power BI の使用例](./media/power-bi-example.png)
 
-命令でフル リンク shortener リポジトリは、ここで使用可能な:[サーバーレス URL 短縮ツール](https://github.com/jeremylikness/serverless-url-shortener)します。 ここでは、簡略化されたバージョンについて説明することができます:[サーバーレスの .NET アプリを数分での Azure Storage](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)します。
+指示をフル リンク shortener リポジトリは、ここで使用できます。[サーバーレス URL 短縮ツール](https://github.com/jeremylikness/serverless-url-shortener)します。 ここでは、簡略化されたバージョンについてを参照することができます。[.NET アプリを数分でサーバーレスの azure Storage](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)します。
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Ping を使用してデバイスの接続を確認します。
 
@@ -98,5 +98,5 @@ Azure IoT Hub と Azure 関数のサンプルを構成します。 IoT Hub で�
 * [サーバーレス URL 短縮ツール](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
-[前へ](orchestration-patterns.md)
-[次へ](serverless-conclusion.md)
+>[前へ](orchestration-patterns.md)
+>[次へ](serverless-conclusion.md)

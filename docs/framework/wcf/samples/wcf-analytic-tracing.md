@@ -3,11 +3,11 @@ title: WCF 分析トレース
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181658"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147425"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析トレース
 このサンプルは、Windows Communication Foundation (WCF) が ETW に書き込む分析トレースのストリームに独自のトレース イベントを追加する方法を示します[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。 分析トレースは、パフォーマンスを低下させずに簡単にサービスを確認できるようにするためのものです。 このサンプルは、使用する方法を示します、 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api を WCF サービスと統合されるイベントを記述します。  
@@ -106,7 +106,7 @@ ms.locfileid: "50181658"
 4.  クリックして**オフ**イベントを消去します。  
   
 ## <a name="known-issue"></a>既知の問題  
- 既知の問題がある、**イベント ビューアー** ETW イベントのデコードに失敗する可能性があります。 示すエラー メッセージが表示する場合があります:"のイベント ID の説明\<id > ソースから Microsoft Windows のアプリケーション サーバー-アプリケーションが見つかりません。 このイベントを発生させるコンポーネントがローカル コンピューターにインストールされていないか、インストールが破損しています。 インストールしたり、ローカル コンピューターのコンポーネントを修復できます。" このエラーが発生した場合は、選択**更新**から、**アクション**メニュー。 これにより、イベントが正常にデコードされます。  
+ 既知の問題がある、**イベント ビューアー** ETW イベントのデコードに失敗する可能性があります。 というエラー メッセージを参照してください可能性があります。"イベント ID の説明\<id > 元が Microsoft Windows のアプリケーション サーバー-アプリケーションが見つかりません。 このイベントを発生させるコンポーネントがローカル コンピューターにインストールされていないか、インストールが破損しています。 インストールしたり、ローカル コンピューターのコンポーネントを修復できます。" このエラーが発生した場合は、選択**更新**から、**アクション**メニュー。 これにより、イベントが正常にデコードされます。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

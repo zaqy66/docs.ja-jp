@@ -2,12 +2,12 @@
 title: シンボルと演算子のリファレンス (F#)
 description: シンボルと F# のプログラミング言語で使用される演算子について説明します。
 ms.date: 04/04/2018
-ms.openlocfilehash: f6f99f8fa563b71c935122c6f8597599c59b5c7f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: a382400213aa288bb134faefd8ce747a7319a76f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297331"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169873"
 ---
 # <a name="symbol-and-operator-reference"></a>シンボルと演算子のリファレンス
 
@@ -50,8 +50,8 @@ ms.locfileid: "52297331"
 |`-`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、左辺から右辺を減算します。<br /></li></ul>|
 |`->`|[関数](../functions/index.md)<br /><br />[match 式](../match-expressions.md)|<ul><li>関数の型では、引数と戻り値を区切ります。<br /></li><li>(シーケンス式の) 式を生成します。`yield` キーワードと等価です。<br /></li><li>match 式で使用されます。<br /></li></ul>|
 |`.`|[メンバー](../members/index.md)<br /><br />[プリミティブ型](../primitive-types.md)|<ul><li>メンバーにアクセスし、完全修飾名の個々の名前を区切ります。<br /></li><li>浮動小数点数の小数点を示します。<br /></li></ul>|
-|`..`|[ループ: `for...in` 式](../loops-for-in-expression.md)|<ul><li>範囲を指定します。<br /></li></ul>|
-|`.. ..`|[ループ: `for...in` 式](../loops-for-in-expression.md)|<ul><li>インクリメントと共に範囲を指定します。<br /></li></ul>|
+|`..`|[ループ:`for...in` 式](../loops-for-in-expression.md)|<ul><li>範囲を指定します。<br /></li></ul>|
+|`.. ..`|[ループ:`for...in` 式](../loops-for-in-expression.md)|<ul><li>インクリメントと共に範囲を指定します。<br /></li></ul>|
 |`.[...]`|[配列](../arrays.md)|<ul><li>配列要素にアクセスします。<br /></li></ul>|
 |`/`|[算術演算子](arithmetic-operators.md)<br /><br />[測定単位](../units-of-measure.md)|<ul><li>左辺 (分子) を右辺 (分母) で除算します。<br /></li><li>測定単位の型で使用されます。<br /></li></ul>|
 |`/?`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、左辺を右辺で除算します。<br /></li></ul>|
@@ -61,7 +61,7 @@ ms.locfileid: "52297331"
 |`::`|[リスト](../lists.md)<br /><br />[match 式](../match-expressions.md)|<ul><li>リストを作成します。 左辺の要素が右辺のリストに追加されます。<br /></li><li>リストの各部分を区切るためにパターン マッチで使用されます。<br /></li></ul>|
 |`:=`|[参照セル](../reference-cells.md)|<ul><li>参照セルに値を割り当てます。<br /></li></ul>|
 |`:>`|[キャストと変換](../casting-and-conversions.md)|<ul><li>型を階層の上位の型に変換します。<br /></li></ul>|
-|`:?`|[match 式](../match-expressions.md)|<ul><li>指定された型に値が一致する場合は `true` を返します。それ以外の場合は、`false` を返します (型テスト演算子)。<br /></li></ul>|
+|`:?`|[match 式](../match-expressions.md)|<ul><li>返します`true`値 (サブタイプである場合を含む) 指定した型に一致する場合、それ`false`(型テスト演算子)。<br /></li></ul>|
 |`:?>`|[キャストと変換](../casting-and-conversions.md)|<ul><li>型を階層の下位にある型に変換します。<br /></li></ul>|
 |`;`|[冗語構文](../verbose-syntax.md)<br /><br />[リスト](../lists.md)<br /><br />[レコード](../records.md)|<ul><li>式を区切ります (ほとんどの場合、冗語構文で使用されます)。<br /></li><li>リストの要素を区切ります。<br /></li><li>レコードのフィールドを区切ります。<br /></li></ul>|
 |`<`|[算術演算子](arithmetic-operators.md)|<ul><li>小なり演算を実行します。<br /></li></ul>|
@@ -146,6 +146,7 @@ ms.locfileid: "52297331"
 |`.`|Left|
 |`f(x)`|Left|
 |`f<`*types*`>`|Left|
+
 F# はカスタム演算子のオーバー ロードをサポートしています。 これは、独自の演算子を定義できることを意味します。 上記の表では、*op* に、組み込みまたはユーザー定義の有効な (場合によっては空の) 演算子文字シーケンスを指定できます。 つまり、この表を使用して、カスタム演算子に使用する文字のシーケンスを決定し、目的のレベルの優先順位を実現することができます。 先行する `.` 文字は、コンパイラが優先順位を決定する場合は無視されます。
 
 ## <a name="see-also"></a>関連項目

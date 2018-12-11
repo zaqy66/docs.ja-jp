@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2d82aed13e185b2957a22f097b60e12265a5f190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025611"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128207"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;要素&lt;ランタイム&gt;
 アセンブリに関する識別情報が含まれています。  
@@ -52,10 +52,10 @@ culture="assembly culture"/>
   
 |[値]|説明|  
 |-----------|-----------------|  
-|`amd64`|64 ビット AMD プロセッサのみです。|  
-|`ia64`|64 ビット Intel プロセッサのみです。|  
-|`msil`|プロセッサおよびワードあたりのビット数に関して中立|  
-|`x86`|32 ビットの Intel プロセッサをネイティブまたは 64 ビット プラットフォームでの Windows (WOW) 環境での Windows でします。|  
+|`amd64`|AMD の x86 アーキテクチャのみです。|  
+|`ia64`|Intel Itanium アーキテクチャの場合のみです。|  
+|`msil`|プロセッサおよびワードあたりのビット数に関して中立です。|  
+|`x86`|32 ビット x86 プロセッサ、ネイティブまたは 64 ビット プラットフォームでの Windows (WOW) 環境での Windows でします。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  

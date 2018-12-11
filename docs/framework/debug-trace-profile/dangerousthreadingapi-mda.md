@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02f16bd9560346cca9b24d4e5b8e760fdb3afd18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bfc3aa2bb7d1819f5f6221154ba1d276e0c202c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357314"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149368"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
-`dangerousThreadingAPI` マネージ デバッグ アシスタント (MDA) は、現在のスレッド以外のスレッドで <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> メソッドが呼び出されるとアクティブになります。  
+`dangerousThreadingAPI` マネージド デバッグ アシスタント (MDA) は、現在のスレッド以外のスレッドで <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> メソッドが呼び出されるとアクティブになります。  
   
 ## <a name="symptoms"></a>現象  
  アプリケーションがいつまでも応答しないかハングアップしています。 システムまたはアプリケーションのデータが一時的に、またはアプリケーションのシャットダウン後も、予期しない状態のままになっている可能性があります。 一部の操作が予期したとおりに完了していません。  
@@ -54,7 +54,7 @@ ms.locfileid: "33357314"
 ## <a name="example"></a>例  
  `dangerousThreadingAPI` のアクティブ化の原因となる <xref:System.Threading.Thread.Suspend%2A> メソッド呼び出しのコード例を次に示します。  
   
-```  
+```csharp
 using System.Threading;  
 void FireMda()  
 {  
@@ -69,5 +69,5 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Threading.Thread>  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [lock ステートメント](~/docs/csharp/language-reference/keywords/lock-statement.md)

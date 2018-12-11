@@ -1,49 +1,49 @@
 ---
-title: ハイブリッド クラウド シナリオへの移行します。
-description: Azure のクラウドと Windows コンテナーでの既存の .NET アプリケーションを最新化 |ハイブリッド クラウド シナリオへの移行します。
+title: ハイブリッド クラウドのシナリオへの移行します。
+description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |ハイブリッド クラウドのシナリオへの移行します。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 8885ee8fce4f8c11c14ee8936f3ee0ffd89ece04
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 3d6fc272854654d890559d5db032b05667627d94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957892"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147347"
 ---
-# <a name="migrate-to-hybrid-cloud-scenarios"></a>ハイブリッド クラウド シナリオへの移行します。
+# <a name="migrate-to-hybrid-cloud-scenarios"></a>ハイブリッド クラウドのシナリオへの移行します。
 
-組織や企業によっては、Microsoft Azure などのパブリック クラウドに、アプリケーションの一部または規制や独自のポリシーのための他の任意のパブリック クラウドに移行できません。 ただし、どのような組織は、パブリック クラウドおよびその他のアプリケーション、オンプレミスでのアプリケーションの一部がなくなりますメリットがある可能性がありますです。 混在する環境がさまざまなプラットフォームと内部設置型環境とパブリック クラウドで使用されているテクノロジのための環境での複雑度が高くを招くことができます。
+一部の組織や企業は、Microsoft Azure などのパブリック クラウドにアプリケーションの一部または規制や独自のポリシーのための他のパブリック クラウドを移行できません。 ただし、すべての組織がパブリック クラウドとその他のアプリケーションをオンプレミスでのアプリケーションの一部がメリットが高くなります。 混在する環境がさまざまなプラットフォームやパブリック クラウドとオンプレミス環境で使用するテクノロジにより環境での過剰な複雑さを招くことができます。
 
-Microsoft では、最適なハイブリッド クラウド ソリューションを提供する、既存の資産を最適化できますいずれか、オンプレミスと Azure のハイブリッド クラウド内の一貫性を確保するときに、パブリック クラウドでします。 既存のスキルを最大化し、クラウドまたはオンプレミスで Azure スタック (オンプレミス) と Azure (パブリック クラウド) のおかげで実行できるアプリを構築するための柔軟で、統一されたアプローチを取得できます。
+Microsoft では、最適なハイブリッド クラウド ソリューションを提供する、既存の資産を最適化できますいずれか、オンプレミスとパブリック クラウド中、Azure のハイブリッド クラウドでの一貫性を確保します。 既存のスキルを最大化し、クラウドまたはオンプレミス、Azure Stack (オンプレミス) と Azure (パブリック クラウド) のおかげで実行できるアプリを構築するための柔軟かつ統合されたアプローチを取得できます。
 
-セキュリティに関しては、ときに、ハイブリッド クラウドの間で管理およびセキュリティを一元化できます。 内部設置型へのシングル サインオンを指定して、クラウド データ センターからすべての資産の制御を取得し、クラウド アプリできます。 ためには、Active Directory のハイブリッド クラウドに拡張および id 管理を使用しています。
+セキュリティに関しては、ハイブリッド クラウドの間での管理とセキュリティを一元化できます。 オンプレミスへのシングル サインオンを提供することで、クラウドにデータ センターからすべての資産の制御を取得し、クラウド アプリできます。 ために Active Directory、ハイブリッド クラウドを拡張および id 管理を使用して、します。
 
-最後に、配布しシームレスにデータを分析、クラウドとオンプレミスの資産に同じクエリ言語を使用し、適用できます分析と深いをその元に関係なく、データを強化する Azure で学習します。
+最後に、配布しシームレスにデータを分析、クラウドとオンプレミスの資産に対して同じクエリ言語を使用し、適用できます分析とディープ ラーニング、azure にそのソースに関係なく、データを操作します。
 
-## <a name="azure-stack"></a>Azure のスタック
+## <a name="azure-stack"></a>Azure Stack
 
-Azure のスタックは、ハイブリッド クラウド プラットフォームできるように、組織のデータ センターから Azure サービスを提供します。 Azure のスタックは、エッジと接続されていない環境では、または特定のセキュリティとコンプライアンス要件を満たすように、主要なシナリオで、最新のアプリケーション用の新しいオプションをサポートするために設計されています。
+Azure Stack は、ハイブリッド クラウド プラットフォーム、組織のデータ センターから Azure サービスを提供することができます。 Azure Stack は edge および接続されていない環境では、または特定のセキュリティとコンプライアンス要件を満たすように、主要なシナリオで、最新のアプリケーション用の新しいオプションをサポートするために設計されています。
 
-図 4-13 では、Microsoft が提供する場合は true。 ハイブリッド クラウド プラットフォームの概要を示します。
+図 4-13 は、Microsoft が提供する、真のハイブリッド クラウド プラットフォームの概要を示します。
 
-![Azure のスタックは、Azure で Microsoft ハイブリッド クラウド プラットフォーム](./media/image13.jpg)
+![Azure Stack と Azure での Microsoft ハイブリッド クラウド プラットフォーム](./media/image13.jpg)
 
-> **図 4-13。** Azure のスタックは、Azure で Microsoft ハイブリッド クラウド プラットフォーム
+> **図 4-13。** Azure Stack と Azure での Microsoft ハイブリッド クラウド プラットフォーム
 
-Azure のスタックは、ニーズに合わせて、展開の 2 つのオプションで提供されています。
+Azure Stack は、ニーズに合わせて、2 つのデプロイ オプションで提供されています。
 
--   Azure のスタックは、システムを統合
+-   Azure Stack 統合システム
 
--   Azure のスタック開発キット
+-   Azure Stack Development Kit
 
-### <a name="azure-stack-integrated-systems"></a>Azure のスタックは、システムを統合
+### <a name="azure-stack-integrated-systems"></a>Azure Stack 統合システム
 
-Microsoft とハードウェア パートナーのパートナーシップでは、azure スタック統合システムが提供します。 パートナーシップでは、わかりやすくするための管理の分散クラウド ペース革新性を実現するソリューションを作成します。 ハードウェアとソフトウェアの統合システムとして、Azure のスタックが提供されるため、まだクラウドから革新を採用しているときに柔軟性と制御、適切な量を取得します。 Azure 統合スタック システムでは、12 のノードに 4 からサイズの範囲し、ハードウェア パートナーと Microsoft によって共同でサポートされます。 Azure スタック統合システムを使用すると、実稼働ワークロードの新しいシナリオを実装します。
+Azure Stack 統合システムは、Microsoft とハードウェア パートナーのパートナーシップによって提供されます。 パートナーシップは、わかりやすくするための管理とのバランスがとれてクラウド歩調のイノベーションを実現するソリューションを作成します。 ハードウェアとソフトウェアの統合システムとして Azure Stack が提供されるため、まだクラウドの革新技術を採用することに適切な量の柔軟性と制御が表示します。 Azure Stack 統合システムはまでのサイズを 4 から 12 個のノードにあり、ハードウェア パートナーと Microsoft によって共同でサポートされます。 Azure Stack 統合システムを使用すると、実稼働ワークロード向けの新しいシナリオを実装します。
 
-### <a name="azure-stack-development-kit"></a>Azure のスタック開発キット
+### <a name="azure-stack-development-kit"></a>Azure Stack Development Kit
 
-Microsoft Azure スタック Development Kit では、評価し、Azure の履歴に関する学習を行うこともできる Azure スタックの単一ノード展開です。 またするツールと一貫性がある Azure して Api を使用して開発できます。 ここで、開発環境として Azure スタック開発キットを使用することができます。 Azure スタック Development Kit は、実稼働環境として使用するものではありません。
+Microsoft Azure Stack Development Kit は、評価し、Azure Stack の学習に使用できる Azure Stack の単一ノード デプロイです。 Api を使用して開発することができます、Azure と一貫性のあるツールを開発環境として Azure Stack Development Kit を使用することもできます。 Azure Stack Development Kit は、運用環境として使用するものではありません。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
@@ -55,18 +55,18 @@ Microsoft Azure スタック Development Kit では、評価し、Azure の履�
 
     [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 
--   **Windows コンテナーの active Directory のサービス アカウントします。**
+-   **Windows コンテナーの active Directory サービス アカウントします。**
 
     [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
 
--   **サポートが Active Directory コンテナーを作成します。**
+-   **Active Directory のサポートによってコンテナーを作成します。**
 
     [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
 
--   **Azure のハイブリッド特典ライセンス**
+-   **Azure Hybrid Benefit のライセンス**
 
     [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
 
 >[!div class="step-by-step"]
-[前へ](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
-[次へ](../walkthroughs-technical-get-started-overview.md)
+>[前へ](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[次へ](../walkthroughs-technical-get-started-overview.md)

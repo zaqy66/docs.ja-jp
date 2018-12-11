@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 839a04d8a06e782582705cf0d9ad92d2e2df6af6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 349324cabc999bac3bd0c247d3614dfc503b8b61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173123"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153528"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>暗号化と復号化のためのキーの生成
 キーの作成と管理は、暗号プロセスの重要な部分です。 対称アルゴリズムでは、キーと初期化ベクター (IV) を作成する必要があります。 キーは、データの暗号化解除を許可しないユーザーに対しては秘密にする必要があります。 IV は秘密にする必要はありませんが、セッションごとに変更する必要があります。 非対称アルゴリズムでは、公開キーと秘密キーを作成する必要があります。 公開キーはだれに公開してもかまいせんが、秘密キーを知らせる相手は、公開キーで暗号化されたデータを復号化する人だけにします。 このセクションでは、対称アルゴリズムと非対称アルゴリズムの両方について、キーを作成して管理する方法を説明します。  
@@ -43,7 +43,7 @@ TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();
   
  上記のコードを実行すると新しいキーと IV が生成され、それぞれ **Key** プロパティと **IV** プロパティに設定されます。  
   
- 複数のキーを生成する必要が生じることもあります。 このような状況では、対称アルゴリズムを実装するクラスの新しいインスタンスを作成し、次に **GenerateKey** および **GenerateIV** メソッドを呼び出すことによって新しいキーと IV を作成します。 非対称暗号化クラスの新しいインスタンスの作成後に新しいキーと IV を作成する方法を次のコード例に示します。  
+ 複数のキーを生成する必要が生じることもあります。 このような状況では、対称アルゴリズムを実装するクラスの新しいインスタンスを作成し、次に **GenerateKey** および **GenerateIV** メソッドを呼び出すことによって新しいキーと IV を作成します。 次のコード例は、対称暗号化クラスの新しいインスタンスが実行された後に、新しいキーと Iv を作成する方法を示しています。  
   
 ```vb  
 Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
@@ -70,7 +70,7 @@ TDES.GenerateKey();
   
  どちらのメソッドにも、公開キー情報だけを返すのか、または公開キー情報と秘密キー情報の両方を返すのかを示すブール値を渡すことができます。 **メソッドを使用すると、** RSACryptoServiceProvider **クラスを初期化して** RSAParameters <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> 構造体の値を設定できます。  
   
- 非対称秘密キーは、ローカル コンピューターにそのまま平文として保存しないでください。 秘密キーを格納する必要がある場合は、キー コンテナーを使用することをお勧めします。 秘密キーをキー コンテナーに格納する方法の詳細については、「 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)」を参照してください。  
+ 非対称秘密キーは、ローカル コンピューターにそのまま平文として保存しないでください。 秘密キーを格納する必要がある場合は、キー コンテナーを使用することをお勧めします。 キー コンテナーに秘密キーを格納する方法の詳細について、次を参照してください。[方法。キー コンテナーに非対称キーを格納](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)します。  
   
  次のコード例では、 **RSACryptoServiceProvider** クラスの新しいインスタンスを作成し、公開キーと秘密キーのペアを作成して、公開キー情報を **RSAParameters** 構造体に保存します。  
   
@@ -93,4 +93,4 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
 - [データの暗号化](../../../docs/standard/security/encrypting-data.md)  
 - [データの復号化](../../../docs/standard/security/decrypting-data.md)  
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
-- [方法: キー コンテナーに非対称キーを格納する](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [操作方法：キー コンテナーに非対称キーを保存します。](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

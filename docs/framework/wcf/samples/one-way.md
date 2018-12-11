@@ -3,11 +3,11 @@ title: 一方向
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
 ms.openlocfilehash: 9a8af4bcdc76afd96ada595a7234cbc5e0250dfc
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296699"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155198"
 ---
 # <a name="one-way"></a>一方向
 このサンプルでは、一方向サービス操作へのサービスのアクセスを示します。 クライアントは、双方向サービス操作の場合と同様、サービス操作の完了を待機しません。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)を使用して、`wsHttpBinding`バインドします。 このサンプルでは、サービスは自己ホスト型コンソール アプリケーションであり、サービスが要求を受信して処理するかどうかを監視できます。 また、クライアントもコンソール アプリケーションです。  

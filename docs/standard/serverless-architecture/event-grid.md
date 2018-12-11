@@ -4,12 +4,12 @@ description: Azure Event Grid には、信頼性の高いイベントの配信�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b2507da61cbea3b4bdc51c6eecfe4d784737e924
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370210"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143663"
 ---
 # <a name="event-grid"></a>イベント グリッド
 
@@ -123,7 +123,7 @@ Event Grid は、あらゆる種類のオンプレミスで実行されるもの
 * [App service プラン](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
-* [Azure: サーバーレス Azure Functions を使用してクラウドにアプリを表示します。](https://channel9.msdn.com/events/Connect/2017/E102)
+* [Azure:サーバーレス Azure Functions を使用してクラウドにアプリを表示します。](https://channel9.msdn.com/events/Connect/2017/E102)
 * [Azure Event Grid](https://docs.microsoft.com/azure/azure-event-grid/overview)
 * [Azure Event Grid イベント スキーマ](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
@@ -142,5 +142,5 @@ Event Grid は、あらゆる種類のオンプレミスで実行されるもの
 * [Azure Functions プロキシを操作します。](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
-[前へ](logic-apps.md)
-[次へ](durable-azure-functions.md)
+>[前へ](logic-apps.md)
+>[次へ](durable-azure-functions.md)

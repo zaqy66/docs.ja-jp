@@ -2,12 +2,12 @@
 title: REF CURSOR の例
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: 803c921b76369aa9268c7fd34d1f15dd51bb17f3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7edb9cd41c7949dba6c4a5c24179c30d01309214
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406060"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127954"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR の例
 REF CURSOR の例は、REF CURSOR の使い方を説明する、次の 3 つの Microsoft Visual Basic の例によって構成されています。  
@@ -26,7 +26,7 @@ REF CURSOR の例は、REF CURSOR の使い方を説明する、次の 3 つの 
 ## <a name="creating-the-oracle-package-and-package-body"></a>Oracle パッケージとパッケージ本体の作成  
  これらの例では、次の PL/SQL パッケージとパッケージ本体がサーバー上に必要になります。 次の Oracle パッケージを Oracle サーバー上に作成します。  
   
-```  
+```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS   
     TYPE T_CURSOR IS REF CURSOR;   
     PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,   
@@ -39,7 +39,7 @@ END CURSPKG;
   
  Oracle サーバーで、次の Oracle パッケージ本体を作成します。  
   
-```  
+```sql
 CREATE OR REPLACE PACKAGE BODY CURSPKG AS  
     PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,  
                                IO_CURSOR IN OUT T_CURSOR)  

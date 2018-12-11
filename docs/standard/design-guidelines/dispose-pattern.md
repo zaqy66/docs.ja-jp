@@ -1,6 +1,6 @@
 ---
 title: Dispose パターン
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - Dispose method
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ff52e17cfe4a4236e4d165c0961ca3a23fed9a72
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+author: KrzysztofCwalina
+ms.openlocfilehash: ee6e9898ae93e2e6628eadec150a3c9c05f5d9c5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864645"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147718"
 ---
 # <a name="dispose-pattern"></a>Dispose パターン
 すべてのプログラムは、実行の進行中に、メモリ、システムのハンドル、データベース接続など、1 つまたは複数のシステム リソースを取得します。 開発者は、取得して使用後に解放する必要があるために、このようなシステム リソースを使用するには注意する必要があります。  
@@ -213,7 +212,7 @@ public class ComplexResourceHolder : IDisposable {
     }  
   
     protected virtual void Dispose(bool disposing) {  
-            ReleaseBuffer(buffer); // release unmanaged memory  
+        ReleaseBuffer(buffer); // release unmanaged memory  
         if (disposing) { // release other disposable objects  
             if (resource!= null) resource.Dispose();  
         }  
@@ -277,7 +276,7 @@ public class ComplexResourceHolder : IDisposable {
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
+ *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
   
 ## <a name="see-also"></a>関連項目
 

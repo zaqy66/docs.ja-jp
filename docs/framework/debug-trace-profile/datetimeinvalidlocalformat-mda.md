@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb5777e275fd7c48f7125b9e0315b08d3095c373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ce0f75ddfbf9f3b62917aa67f4d97140bbdc42
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357807"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153343"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 `dateTimeInvalidLocalFormat` MDA は、世界協定時刻 (UTC) として格納されている <xref:System.DateTime> インスタンスが、ローカル <xref:System.DateTime> インスタンス専用の形式で書式指定されたときにアクティブになります。 この MDA は、未指定または既定の <xref:System.DateTime> インスタンスに対してはアクティブになりません。  
@@ -27,7 +27,7 @@ ms.locfileid: "33357807"
 ## <a name="symptom"></a>症状  
  アプリケーションで、次のようなローカル形式を使用して UTC <xref:System.DateTime> インスタンスを手動でシリアル化しています。  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));  
 ```  
@@ -38,14 +38,14 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ### <a name="resolution"></a>解像度  
  UTC <xref:System.DateTime> インスタンスが UTC であることを示すように書式設定する必要があります。 UTC 時刻の形式としては、次のように 'Z' を使用して UTC 時刻を示すようにすることをお勧めします。  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffZ"));  
 ```  
   
  また、インスタンスがローカル、UTC、未指定のいずれの場合でも正しくシリアル化する <xref:System.DateTime.Kind%2A> プロパティを利用して <xref:System.DateTime> をシリアル化する "o" 形式もあります。  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("o"));  
 ```  
@@ -69,7 +69,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="example"></a>例  
  次のように、<xref:System.Xml.XmlConvert> または <xref:System.Data.DataSet> クラスを使用して UTC <xref:System.DateTime> 値を間接的にシリアル化するアプリケーションについて考えてみます。  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XMLConvert.ToString(myDateTime);  
 ```  
@@ -80,7 +80,7 @@ String serialized = XMLConvert.ToString(myDateTime);
   
  <xref:System.Data.DataSet> を使用する場合は、<xref:System.Data.DataColumn> オブジェクトの <xref:System.Data.DataColumn.DateTimeMode%2A> プロパティを <xref:System.Data.DataSetDateTime.Utc> に設定します。  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XmlConvert.ToString(myDateTime,   
     XmlDateTimeSerializationMode.RoundtripKind);  
@@ -88,4 +88,4 @@ String serialized = XmlConvert.ToString(myDateTime,
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Globalization.DateTimeFormatInfo>  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

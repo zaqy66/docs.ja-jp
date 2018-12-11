@@ -1,18 +1,18 @@
 ---
 title: リテラル (F#)
-description: F# プログラミング言語のリテラルの型について説明します。
+description: リテラルの型について説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7a531cd63c5a4dc1123834d481fc998216b0d82d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131340"
 ---
 # <a name="literals"></a>リテラル
 
 > [!NOTE]
-この記事の API 参照リンクに出ます msdn (現在のところ)。
+> この記事の API 参照リンクに出ます msdn (現在のところ)。
 
 このトピックでは、F# でリテラルの型を指定する方法を示す表を示します。
 
@@ -47,20 +47,20 @@ F# のリテラル型を次の表に示します。 16 進表記で桁を表す�
 
 Unicode 文字列に明示的なエンコードを使用して指定することができますを含めることができます`\u`の後に 16 ビットの 16 進コードまたは utf-32 エンコーディングを使用して指定できる`\U`後に、Unicode を表す 32 ビットの 16 進コードサロゲート ペア。
 
-F# 3.1 では、使用することができます、`+`サインインすると、文字列リテラルを結合します。 ビットごとのこともできます。 または (`|||`) 列挙型フラグを結合する演算子。 たとえば、F# 3.1 では次のようなコードが有効です。
+F# 3.1 を使用できます、`+`サインインすると、文字列リテラルを結合します。 ビットごとのこともできます。 または (`|||`) 列挙型フラグを結合する演算子。 たとえば、F# 3.1 では次のようなコードが有効です。
 
 ```fsharp
 [<Literal>]
-let Literal1 = "a" + "b"
+let literal1 = "a" + "b"
 
 [<Literal>]
-let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let Literal2 = 1 ||| 64
+let literal2 = 1 ||| 64
 
 [<Literal>]
-let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 その他のビットごとの演算子は使用できません。
@@ -82,14 +82,14 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>数値リテラルでのアンダー スコア
 
-F# 4.1 以降では、分離できます桁の数字、アンダー スコア文字 (`_`)。
+以降でF#4.1、アンダー スコア文字は、桁を区切ることができます (`_`)。
 
 ```fsharp
-let DeadBeef = 0xDEAD_BEEF
+let value = 0xDEAD_BEEF
 
-let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
+let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
-let ExampleSSN = 123_456_7890
+let exampleSSN = 123_456_7890
 ```
 
 ## <a name="see-also"></a>関連項目

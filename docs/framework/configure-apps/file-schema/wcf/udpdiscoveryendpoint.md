@@ -1,15 +1,15 @@
 ---
-title: '&lt;udpDiscoveryEndpoint&gt;'
+title: '&lt;UdpDiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: 95c6550352d8f100c8674c2e7f630fcf55da01e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 01808594d54d5c79a6530bc7f6a03b66dde7ee99
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767623"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144755"
 ---
-# <a name="ltudpdiscoveryendpointgt"></a>&lt;udpDiscoveryEndpoint&gt;
+# <a name="ltudpdiscoveryendpointgt"></a>&lt;UdpDiscoveryEndpoint&gt;
 この構成要素は、UDP マルチキャスト バインディングを使用した探索操作用に事前に構成される標準エンドポイントを定義します。 このエンドポイントには固定コントラクトがあり、WS-Discovery プロトコルの 2 つのバージョンをサポートします。 また、WS-Discovery の仕様 (WS-Discovery April 2005 または WS-Discovery V1.1) に規定された固定 UDP バインディングと既定のアドレスも備えています。  
   
  \<system.ServiceModel >  
@@ -30,7 +30,7 @@ ms.locfileid: "32767623"
   
 |属性|説明|  
 |---------------|-----------------|  
-|discoveryMode|探索プロトコルのモードを示す文字列。 有効な値は"Adhoc"と"Managed です"。 マネージ モードでは、プロトコルは Discoverable サービスのリポジトリとして機能する Discovery Proxy に依存します。 アドホック モードでは、プロトコルは UDP マルチキャスト メカニズムを使用して利用可能なサービスを探索する必要があります。 この値は、<xref:System.ServiceModel.Discovery.ServiceDiscoveryMode> 型です。|  
+|discoveryMode|探索プロトコルのモードを示す文字列。 有効な値は"Adhoc"と"Managed です"。 マネージド モードでは、プロトコルは Discoverable サービスのリポジトリとして機能する Discovery Proxy に依存します。 アドホック モードでは、プロトコルは UDP マルチキャスト メカニズムを使用して利用可能なサービスを探索する必要があります。 この値は、<xref:System.ServiceModel.Discovery.ServiceDiscoveryMode> 型です。|  
 |discoveryVersion|WS-Discovery プロトコルの 2 つのバージョンのうち、1 つを指定する文字列。 有効値は WSDiscovery11 と WSDiscoveryApril2005 です。 この値は、<xref:System.ServiceModel.Discovery.DiscoveryVersion> 型です。|  
 |maxResponseDelay|Discovery プロトコルが Probe Match や Resolve Match などのメッセージを送信するまでの待機時間の最大値を指定する Timespan 値。<br /><br /> すべての ProbeMatch が同時に送信されると、ネットワーク ストームが発生することがあります。 これを防ぐために、各 ProbeMatch はランダムな時間だけ待機して送信されます。 ランダムな待機時間は、0 からこの属性に設定された値の範囲内で設定されます。 この属性を 0 に設定すると、ProbeMatch メッセージは待機せずに短いループで送信されます。 それ以外の場合は、ProbeMatch メッセージはランダムな時間だけ待機して送信されます。すべての ProbeMatch メッセージの送信にかかる合計時間が maxResponseDelay を超えることはありません。 この値はサービスのみに関連するもので、クライアントが使用するものではありません。|  
 |multicastAddress|探索メッセージの送受信に使用するマルチキャスト アドレスを指定する URI。 既定値は、プロトコル仕様に準じたマルチキャスト アドレスです。|  

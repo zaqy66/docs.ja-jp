@@ -15,11 +15,11 @@ helpviewer_keywords:
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
 ms.openlocfilehash: c353aa8c5ac1d1912bc303f8f741ff0911cdf021
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50980821"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145687"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte データ型 (Visual Basic)
 
@@ -46,7 +46,7 @@ Visual Basic 2017 から始めて、使用することできますも、アン�
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例えば:
+Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
 
 ```vb
 Dim number As SByte = &H_F9

@@ -4,12 +4,12 @@ description: Azure Logic Apps は、アプリに統合される自動化され�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 019539f0da1d38259870907c38ed0eb6a62f1929
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 14670a8459db3b80b8fbe3139c2675321cf9592c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370187"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147958"
 ---
 # <a name="azure-logic-apps"></a>Azure Logic Apps
 
@@ -34,5 +34,5 @@ Azure 関数のようにトリガーを使用してロジック アプリ ワー
 詳細についてを参照してください。 [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)します。
 
 >[!div class="step-by-step"]
-[前へ](application-insights.md)
-[次へ](event-grid.md)
+>[前へ](application-insights.md)
+>[次へ](event-grid.md)

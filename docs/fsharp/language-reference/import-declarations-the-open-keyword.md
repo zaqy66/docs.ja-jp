@@ -1,18 +1,18 @@
 ---
-title: 'インポート宣言: open キーワード (F#)'
+title: インポート宣言:Open キーワード (F#)
 description: 完全修飾名を使用せずに参照できる要素を持つ F# インポート宣言し、モジュールまたは名前空間の指定方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 1f6fa791f993459178646687195037563da82540
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46586624"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127304"
 ---
 # <a name="import-declarations-the-open-keyword"></a>インポート宣言:`open`キーワード
 
 > [!NOTE]
-この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
+> この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
 *インポート宣言*モジュールまたは名前空間完全修飾名を使用せずに参照できる要素を指定します。
 
@@ -36,7 +36,7 @@ open module-or-namespace-name
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-F# コンパイラは生成されませんエラーまたは警告が同じ名前が 1 つ以上の開いているモジュールまたは名前空間で発生すると、あいまいさが発生したとき。 あいまいさが発生すると、F# より最近開いたモジュールまたは名前空間を設定できます。 たとえば、次のコードで`empty`意味`Seq.empty`場合でも、`empty`両方である、`List`と`Seq`モジュール。
+F# 、同じ名前が 1 つ以上の開いているモジュールまたは名前空間で発生すると、あいまいさが発生した場合、コンパイラにエラーまたは警告を同時に生成することはできません。 あいまいさが発生すると、F# より最近開いたモジュールまたは名前空間を設定できます。 たとえば、次のコードで`empty`意味`Seq.empty`場合でも、`empty`両方である、`List`と`Seq`モジュール。
 
 ```fsharp
 open List

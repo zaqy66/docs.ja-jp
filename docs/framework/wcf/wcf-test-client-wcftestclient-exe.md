@@ -3,11 +3,11 @@ title: WCF のテスト用クライアント (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181593"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149004"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF のテスト用クライアント (WcfTestClient.exe)
 Windows Communication Foundation (WCF) のテスト クライアント (WcfTestClient.exe) は、テスト パラメーターを入力し、そのサービスに入力するユーザーを有効にし、サービスが返送する応答を表示する GUI ツールです。 テストを行う WCF サービス ホストと組み合わせたときに、シームレスにサービスを提供します。  
@@ -136,7 +136,7 @@ Windows Communication Foundation (WCF) のテスト クライアント (WcfTestC
 ## <a name="features-supported-by-wcf-test-client"></a>WCF のテスト用クライアントでサポートされる機能  
  WCF テスト クライアントでサポートされる機能の一覧を次には。  
   
--   サービスの呼び出し : 要求/応答メッセージおよび一方向メッセージ  
+-   サービスの呼び出し:要求/応答、一方向のメッセージ。  
   
 -   バインディング : Svcutil.exe でサポートされるすべてのバインディング  
   
@@ -156,7 +156,7 @@ Windows Communication Foundation (WCF) のテスト クライアント (WcfTestC
   
 -   セキュリティ : [!INCLUDE[infocard](../../../includes/infocard-md.md)]、証明書、およびユーザー名/パスワード  
   
--   バインディング : WSFederationBinding、任意のコンテキスト バインディングおよび HTTPS バインディング、WebHttpBinding (JSON 応答メッセージ サポート)  
+-   バインド:WSFederationbinding、任意のコンテキスト バインディングおよび Https バインディング、WebHttpbinding (Json 応答メッセージのサポート)。  
   
 ## <a name="closing-wcf-test-client"></a>WCF のテスト用クライアントの終了  
  次の方法では、WCF テスト クライアントを閉じることができます。  

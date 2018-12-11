@@ -2,12 +2,12 @@
 title: パフォーマンスに関する考慮事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: d244c3e9c48aed1844a90f1f42d33a91edc80046
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8adf3a2787c47efd929ebc5c0198e13240c279ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520377"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130221"
 ---
 # <a name="performance-considerations-entity-framework"></a>パフォーマンスに関する考慮事項 (Entity Framework)
 このトピックでは、ADO.NET Entity Framework のパフォーマンス特性を示し、Entity Framework アプリケーションのパフォーマンスを向上させるために役立つ注意事項について説明します。  
@@ -19,8 +19,8 @@ ms.locfileid: "43520377"
 |---------------|-------------------|---------------|--------------|  
 |メタデータの読み込み|中|各アプリケーション ドメイン内で 1 回|Entity Framework が使用するモデルとマッピングのメタデータが、<xref:System.Data.Metadata.Edm.MetadataWorkspace> に読み込まれます。 このメタデータはグローバルにキャッシュされ、同じアプリケーション ドメイン内にある <xref:System.Data.Objects.ObjectContext> の他のインスタンスも使用できるようになります。|  
 |データベース接続を開く|中程度<sup>1</sup>|必要時|データベースに接続を開くには、貴重なリソースが消費するため、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]に応じてのみデータベース接続を開いたり閉じたりします。 接続は、明示的に開くこともできます。 詳細については、次を参照してください。[接続の管理とトランザクション](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)です。|  
-|ビューの生成|High|各アプリケーション ドメイン内で 1 回 (事前生成可能)|Entity Framework が、概念モデルに対してクエリを実行したり変更内容をデータ ソースに保存したりできるようになるには、データベースにアクセスするためのローカル クエリ ビューのセットを事前に生成しておく必要があります。 このビューを生成する際のコストは高いため、デザイン時にビューを事前に作成してプロジェクトに追加しておくことができます。 詳細については、次を参照してください。[方法: クエリ パフォーマンスを向上させる Pre-Generate ビュー](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)します。|  
-|クエリの準備|中程度<sup>2</sup>|各一意のクエリに対して 1 回|クエリ コマンドを作成したり、モデルとマッピングのメタデータに基づいてコマンド ツリーを生成したり、返されるデータの形状を定義したりするためのコストが含まれます。 Entity SQL と LINQ の両方のクエリ コマンドがキャッシュされるため、同じクエリであれば、後続の実行は短時間で済みます。 後続の実行でさらにコストを削減するためにコンパイル済み LINQ クエリを使用でき、コンパイル済みクエリが自動的にキャッシュされる LINQ クエリよりも効率的である場合があります。 詳細については、次を参照してください。[コンパイルされたクエリ (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)します。 LINQ クエリの実行の詳細については、次を参照してください。 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)します。 **注:** LINQ to Entities クエリを適用する、`Enumerable.Contains`メモリ内コレクションへの演算子は自動的にキャッシュされません。 またコンパイル済み LINQ クエリのメモリ内コレクションをパラメーターで表すことは許可されていません。|  
+|ビューの生成|High|各アプリケーション ドメイン内で 1 回 (事前生成可能)|Entity Framework が、概念モデルに対してクエリを実行したり変更内容をデータ ソースに保存したりできるようになるには、データベースにアクセスするためのローカル クエリ ビューのセットを事前に生成しておく必要があります。 このビューを生成する際のコストは高いため、デザイン時にビューを事前に作成してプロジェクトに追加しておくことができます。 詳細については、次を参照してください。[方法。クエリのパフォーマンスを向上させるためにビューを事前に生成](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)します。|  
+|クエリの準備|中程度<sup>2</sup>|各一意のクエリに対して 1 回|クエリ コマンドを作成したり、モデルとマッピングのメタデータに基づいてコマンド ツリーを生成したり、返されるデータの形状を定義したりするためのコストが含まれます。 Entity SQL と LINQ の両方のクエリ コマンドがキャッシュされるため、同じクエリであれば、後続の実行は短時間で済みます。 後続の実行でさらにコストを削減するためにコンパイル済み LINQ クエリを使用でき、コンパイル済みクエリが自動的にキャッシュされる LINQ クエリよりも効率的である場合があります。 詳細については、次を参照してください。[コンパイルされたクエリ (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)します。 LINQ クエリの実行の詳細については、次を参照してください。 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)します。 **注:** メモリ内コレクションへ `Enumerable.Contains` 演算子を追加する LINQ to Entities クエリは自動的にキャッシュされません。 またコンパイル済み LINQ クエリのメモリ内コレクションをパラメーターで表すことは許可されていません。|  
 |クエリの実行|低<sup>2</sup>|各クエリに対して 1 回|ADO.NET データ プロバイダーを使用してデータ ソースに対してコマンドを実行するコスト。 大半のデータ ソースではクエリ プランがキャッシュされるため、同じクエリであれば、後続の実行は短時間で済むことがあります。|  
 |型の読み込みと検証|低<sup>3</sup>|各 <xref:System.Data.Objects.ObjectContext> インスタンスに対して 1 回|型が読み込まれ、概念モデルが定義する型に照らし合わせて検証されます。|  
 |追跡|低<sup>3</sup>|クエリが返す各オブジェクトに対して 1 回 <sup>4</sup>|クエリが <xref:System.Data.Objects.MergeOption.NoTracking> のマージ オプションを使用する場合には、この段階でパフォーマンスが低下することはありません。<br /><br /> クエリが <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges>、または <xref:System.Data.Objects.MergeOption.OverwriteChanges> のいずれかのマージ オプションを使用する場合には、クエリ結果が <xref:System.Data.Objects.ObjectStateManager> で追跡されます。 クエリが返す追跡対象の各オブジェクトに対して <xref:System.Data.EntityKey> が生成され、<xref:System.Data.Objects.ObjectStateEntry> に <xref:System.Data.Objects.ObjectStateManager> を作成するために使用されます。 <xref:System.Data.Objects.ObjectStateEntry> に対応する既存の <xref:System.Data.EntityKey> がある場合には、既存のオブジェクトが返されます。 <xref:System.Data.Objects.MergeOption.PreserveChanges> または <xref:System.Data.Objects.MergeOption.OverwriteChanges> オプションが指定されている場合、オブジェクトは更新後に返されます。<br /><br /> 詳細については、次を参照してください。 [Id 解決、状態管理、および変更の追跡](https://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0)します。|  
@@ -58,7 +58,7 @@ ms.locfileid: "43520377"
 -   単純に見える概念モデルに対してクエリを実行したところ、より複雑なクエリをデータ ソースに対して実行する結果になることがあります。 これは、Entity Framework が、概念モデルに対するクエリをデータ ソースに対する等価のクエリに変換するからです。 概念モデルの 1 つのエンティティ セットが、データ ソースの複数のテーブルにマップされている場合や、エンティティ間のリレーションシップが結合テーブルにマップされている場合には、データ ソース クエリに対して実行されるクエリ コマンドで 1 つ以上の結合が必要になる場合があります。  
   
     > [!NOTE]
-    >  所定のクエリでデータ ソースに対して実行されるコマンドを表示するには、<xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> クラスまたは <xref:System.Data.Objects.ObjectQuery%601> クラスの <xref:System.Data.EntityClient.EntityCommand> メソッドを使用します。 詳細については、次を参照してください。[方法: 格納コマンドを表示](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79)します。  
+    >  所定のクエリでデータ ソースに対して実行されるコマンドを表示するには、<xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> クラスまたは <xref:System.Data.Objects.ObjectQuery%601> クラスの <xref:System.Data.EntityClient.EntityCommand> メソッドを使用します。 詳細については、次を参照してください。[方法。格納コマンドを表示](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79)します。  
   
 -   Entity SQL クエリが入れ子になっていると、サーバー上で結合が作成され、その結果多数の行が返されることがあります。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "43520377"
   
      さらに、このようなクエリでは、入れ子になったクエリ全体でオブジェクトを複製する単一クエリがクエリ パイプラインで生成されます。 そのため、1 つの列が複数回複製されることがあります。 SQL Server など、一部のデータベースでは、これによって TempDB テーブルのサイズが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす場合があります。 入れ子になったクエリを実行するときには、注意を払う必要があります。  
   
--   クライアントが、結果セットのサイズに比例してリソースを消費するような操作を実行している場合、データを大量に返すクエリを実行すると、パフォーマンスが低下することがあります。 このような場合には、クエリによって返されるデータの量を制限することを検討してください。 詳細については、次を参照してください。[方法: クエリ結果をページ](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)します。  
+-   クライアントが、結果セットのサイズに比例してリソースを消費するような操作を実行している場合、データを大量に返すクエリを実行すると、パフォーマンスが低下することがあります。 このような場合には、クエリによって返されるデータの量を制限することを検討してください。 詳細については、次を参照してください。[方法。結果をページング クエリ](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)します。  
   
  Entity Framework によって自動的に生成されるコマンドは、データベース開発者が明示的に記述した同様のコマンドより複雑になることがあります。 データ ソースに対して実行されるコマンドを明示的に制御する必要がある場合には、テーブル値関数またはストアド プロシージャへのマッピングを定義することを検討してください。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "43520377"
  クエリ パスは、クエリによって返されるオブジェクトのグラフを定義します。 クエリ パスを定義する場合、データベースに対する 1 件の要求だけで、パスによって定義されたすべてのオブジェクトが返されます。 クエリ パスを使用すると、見かけ上は簡単なオブジェクト クエリのデータ ソースに対して複雑なコマンドが実行される可能性があります。 これは、1 つのクエリ内の関連オブジェクトを返すには、1 つまたは複数の結合が必要になるために発生します。 継承のあるエンティティや多対多のリレーションシップを含んだパスなど、複雑なエンティティ モデルに対してクエリを実行する場合は、さらに複雑になります。  
   
 > [!NOTE]
->  <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> によって生成されるコマンドを表示するには、<xref:System.Data.Objects.ObjectQuery%601> メソッドを使用します。 詳細については、次を参照してください。[方法: 格納コマンドを表示](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79)します。  
+>  <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> によって生成されるコマンドを表示するには、<xref:System.Data.Objects.ObjectQuery%601> メソッドを使用します。 詳細については、次を参照してください。[方法。格納コマンドを表示](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79)します。  
   
  クエリ パスに含まれる関連オブジェクトが多すぎる場合や、オブジェクトに含まれる行データが多すぎる場合、データ ソースはクエリを完了できないことがあります。 これは、クエリでデータ ソースの機能を超える中間一時ストレージが必要になる場合に発生します。 この場合は、関連オブジェクトを明示的に読み込むと、データ ソース クエリの複雑さを軽減できます。  
   
@@ -124,19 +124,19 @@ ms.locfileid: "43520377"
  次の戦略を使用すると、Entity Framework でのクエリの全体的なパフォーマンスを向上させることができます。  
   
 #### <a name="pre-generate-views"></a>ビューの事前生成  
- アプリケーションがクエリを初めて実行する際、エンティティ モデルに基づいたビュー生成は高コストになります。 EdmGen.exe ユーティリティを使用して、プロジェクトに追加できる Visual Basic または C# のコード ファイルとして設計時に事前にビューを生成しておきます。 テキスト テンプレート変換ツールキットを使用して、事前にコンパイルされたビューを生成することもできます。 事前に生成したビューは、現在のバージョンの指定エンティティ モデルに対応することを確認するために、実行時に検証されます。 詳細については、次を参照してください。[方法: クエリ パフォーマンスを向上させる Pre-Generate ビュー](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)と[プリコンパイル済み/事前生成されたビューを含む Entity Framework 4 のパフォーマンスの分離](https://go.microsoft.com/fwlink/?LinkID=201337&clcid=0x409)します。  
+ アプリケーションがクエリを初めて実行する際、エンティティ モデルに基づいたビュー生成は高コストになります。 EdmGen.exe ユーティリティを使用して、プロジェクトに追加できる Visual Basic または C# のコード ファイルとして設計時に事前にビューを生成しておきます。 テキスト テンプレート変換ツールキットを使用して、事前にコンパイルされたビューを生成することもできます。 事前に生成したビューは、現在のバージョンの指定エンティティ モデルに対応することを確認するために、実行時に検証されます。 詳細については、次を参照してください。[方法。クエリのパフォーマンスを向上させるためにビューを事前に生成](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)と[プリコンパイル済み/事前生成されたビューでは、Entity Framework 4 でのパフォーマンスを分離する](https://go.microsoft.com/fwlink/?LinkID=201337&clcid=0x409)します。  
   
  サイズが非常に大きいモデルで作業する場合は、次の点に注意してください。  
   
  .NET メタデータ形式では、特定のバイナリ内のユーザー文字列の数が 16,777,215 (0xFFFFFF) に制限されます。 非常に大きいモデルのビューを生成して、ビュー ファイルがこのサイズの上限に達すると、表示されます、「論理空き領域がありませんユーザー文字列の他を作成する」 コンパイル エラー。 このサイズ制限は、すべてのマネージド バイナリに適用されます。 詳細については、次を参照してください。、[ブログ](https://go.microsoft.com/fwlink/?LinkId=201476)大規模で複雑なモデルを使用する場合に、エラーを回避する方法を示します。  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>クエリの NoTracking マージ オプションの使用を検討する  
- オブジェクト コンテキスト内で返されたオブジェクトを追跡するにはコストが生じます。 オブジェクトに対する変更内容を検出したり、同じ論理エンティティに対する複数の要求で同じオブジェクト インスタンスが返されるようにするには、オブジェクトを <xref:System.Data.Objects.ObjectContext> インスタンスにアタッチする必要があります。 オブジェクトの更新または削除を行う予定がなく、ID 管理が不要である場合には、クエリ実行時に <xref:System.Data.Objects.MergeOption.NoTracking> マージ オプションを使用することを検討してください。  
+ オブジェクト コンテキスト内で返されたオブジェクトを追跡するにはコストが生じます。 オブジェクトに対する変更内容を検出したり、同じ論理エンティティに対する複数の要求で同じオブジェクト インスタンスが返されるようにするには、オブジェクトを <xref:System.Data.Objects.ObjectContext> インスタンスにアタッチする必要があります。 オブジェクトを更新または削除する予定がないして id 管理を必要としない場合は、使用を検討して、<xref:System.Data.Objects.MergeOption.NoTracking>クエリを実行するときに、マージ オプションです。  
   
 #### <a name="return-the-correct-amount-of-data"></a>適量のデータを返す  
  シナリオによっては、<xref:System.Data.Objects.ObjectQuery%601.Include%2A> メソッドを使用してクエリ パスを指定する方がはるかに速いことがあります。データベースに対する必要なラウンド トリップ数が減るからです。 ただし、他のシナリオでは、関連オブジェクトを読み込むためにデータベースへのラウンド トリップを増やす方が速くなることがあります。これは、クエリが単純で結合数が少ないほど、データの冗長性が低下するからです。 したがって、関連オブジェクトを取得するためのさまざまな方法について、パフォーマンスをテストすることをお勧めします。 詳細については、次を参照してください。[関連オブジェクトの読み込み](https://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1)します。  
   
- 1 つのクエリで大量のデータが返されることを回避するには、クエリの結果を扱いやすいサイズのグループに分割してページングすることを検討してください。 詳細については、次を参照してください。[方法: クエリ結果をページ](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)します。  
+ 1 つのクエリで大量のデータが返されることを回避するには、クエリの結果を扱いやすいサイズのグループに分割してページングすることを検討してください。 詳細については、次を参照してください。[方法。結果をページング クエリ](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)します。  
   
 #### <a name="limit-the-scope-of-the-objectcontext"></a>ObjectContext のスコープを制限する  
  通常は、<xref:System.Data.Objects.ObjectContext> ステートメント (Visual Basic では `using`) 内に `Using…End Using` インスタンスを作成する必要があります。 これにより、パフォーマンスが向上します。これは、コードがステートメント ブロックを終了するときに、オブジェクト コンテキストに関連付けられたリソースが自動的に廃棄されるからです。 ただし、オブジェクト コンテキストによって管理されるオブジェクトにコントロールがバインドされている場合、バインドが必要とされる間は <xref:System.Data.Objects.ObjectContext> インスタンスを保持し、手動で廃棄する必要があります。 詳細については、次を参照してください。[接続の管理とトランザクション](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)です。  

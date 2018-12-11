@@ -2,20 +2,20 @@
 title: F# Interactive (fsi.exe) のリファレンス
 description: 学習方法F#Interactive (fsi.exe) は、実行に使用されるF#対話的に、コンソールで、またはを実行するコードF#スクリプト。
 ms.date: 05/16/2016
-ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8f6d261c6570935b665fc8a826b0829b3953a587
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50195256"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153632"
 ---
 # <a name="interactive-programming-with-f"></a>F# による対話型プログラミング #
 
 > [!NOTE]
-この記事では、現時点の Windows のエクスペリエンスについてのみ説明します。  書き換えられる予定です。
+> この記事では、現時点の Windows のエクスペリエンスについてのみ説明します。  書き換えられる予定です。
 
 > [!NOTE]
-API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
+> API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
 F# Interactive (fsi.exe) は、コンソールで F# コードを対話形式で実行したり、F# スクリプトを実行したりするために使用します。 つまり、F# Interactive は、F# 言語の REPL (Read、Evaluate、Print Loop) を実行します。
 

@@ -1,5 +1,5 @@
 ---
-title: '方法 : SecurityBindingElement を使用してカスタム バインドを作成する'
+title: 操作方法：SecurityBindingElement を使用してカスタム バインディングを作成します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181135"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155250"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>方法 : SecurityBindingElement を使用してカスタム バインドを作成する
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>操作方法：SecurityBindingElement を使用してカスタム バインディングを作成します。
 Windows Communication Foundation (WCF) には、複数のシステムで指定されたバインド構成できますが、WCF がサポートするすべてのセキュリティ オプションを構成するときに完全な柔軟性を提供しないにはが含まれています。 ここでは、個別のバインド要素からカスタム バインドを直接作成する方法を説明し、このようなバインディングを作成する場合に指定できるセキュリティ設定のいくつかに焦点を当てます。 カスタム バインディングの作成の詳細については、次を参照してください。[バインディングの拡張](../../../../docs/framework/wcf/extending/extending-bindings.md)します。  
   
 > [!WARNING]
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) には、複数のシステムで指定�
   
  これに対し、カスタム バインドを作成する場合は、バインド要素が作成および構成され、そのバインド要素から <xref:System.ServiceModel.Channels.CustomBinding> が作成されます。  
   
- これを行うには、<xref:System.ServiceModel.Channels.BindingElementCollection> クラスのインスタンスによって表されるコレクションに個別のバインド要素を追加し、`Elements` の `CustomBinding` プロパティをそのオブジェクトと同じにします。 バインド要素は、トランザクション フロー、信頼できるセッション、セキュリティ、複合二重、一方向、ストリーム セキュリティ、メッセージ エンコーディング、トランスポートの順に追加する必要があります。 どのバインディングでも、これらすべてのバインド要素が必要になるとは限りません。  
+ これを行うには、<xref:System.ServiceModel.Channels.BindingElementCollection> クラスのインスタンスによって表されるコレクションに個別のバインド要素を追加し、`Elements` の `CustomBinding` プロパティをそのオブジェクトと同じにします。 次の順序でバインド要素を追加する必要があります。トランザクション フロー、信頼できるセッション、セキュリティ、複合二重、一方向、Stream のセキュリティ、メッセージ エンコーディング、およびトランスポート。 どのバインディングでも、これらすべてのバインド要素が必要になるとは限りません。  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  3 つのバインド要素がメッセージ レベルのセキュリティに関連しており、これらはすべて <xref:System.ServiceModel.Channels.SecurityBindingElement> クラスから派生します。 この 3 つのバインディングとは、<xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>、および <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> です。 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> は混合モード セキュリティを提供するために使用されます。 他の 2 つの要素は、メッセージ層でセキュリティを提供する場合に使用します。  

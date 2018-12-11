@@ -1,24 +1,24 @@
 ---
-title: '方法 : クライアントのメッセージを検査または変更する'
+title: 操作方法：クライアントのメッセージ検査または変更
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 6cd0f39494006bf51b7c4bb55afcc112ec08aadb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 06a5cae9abd77e45b0590ea7b87a24fc7bb314ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804171"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144391"
 ---
-# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>方法 : クライアントのメッセージを検査または変更する
-検査または実装することで WCF クライアントの受信または送信メッセージを変更することができます、<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>と、クライアント ランタイムに挿入します。 詳細については、次を参照してください。[を拡張するクライアント](../../../../docs/framework/wcf/extending/extending-clients.md)です。 サービスの同等の機能は、<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> です。 完全なコード例については、[メッセージ インスペクタ](../../../../docs/framework/wcf/samples/message-inspectors.md)サンプルです。  
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>操作方法：クライアントのメッセージ検査または変更
+検査または実装することで、WCF クライアントの受信または送信メッセージを変更できます、<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>をクライアント ランタイムに挿入します。 詳細については、次を参照してください。[拡張クライアント](../../../../docs/framework/wcf/extending/extending-clients.md)します。 サービスの同等の機能は、<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> です。 完全なコード例については、[メッセージ インスペクタ](../../../../docs/framework/wcf/samples/message-inspectors.md)サンプル。  
   
 ### <a name="to-inspect-or-modify-messages"></a>メッセージを検査または変更するには  
   
 1.  <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> インターフェイスを実装します。  
   
-2.  クライアント メッセージ インスペクターを挿入するスコープに応じて、<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> または <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> を実装します。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 使用すると、エンドポイント レベルでの動作を変更できます。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> コントラクト レベルの動作を変更できます。  
+2.  クライアント メッセージ インスペクターを挿入するスコープに応じて、<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> または <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> を実装します。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> エンドポイント レベルでの動作を変更することができます。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> コントラクト レベルでの動作を変更することができます。  
   
-3.  <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> で <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> メソッドまたは <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> メソッドを呼び出す前に、動作を追加します。 詳細については、「[を構成して、ランタイムのビヘイビアーの使用を拡張する](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)です。  
+3.  <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> で <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> メソッドまたは <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> メソッドを呼び出す前に、動作を追加します。 詳細については、次を参照してください。[構成と、ランタイムの動作を拡張](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)します。  
   
 ## <a name="example"></a>例  
  下のコード例では、次の項目を順番に示しています。  
@@ -102,7 +102,8 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
     <system.serviceModel>  
         <client>  
             <endpoint address="http://localhost:8080/SimpleService/"   
-                      binding="wsHttpBinding"  
+                      binding="wsHttpBinding"
+                      behaviorConfiguration="clientInspectorsAdded"
                       contract="ServiceReference1.IService1"  
                       name="WSHttpBinding_IService1"/>  
         </client>  

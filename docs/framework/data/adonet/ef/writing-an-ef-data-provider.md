@@ -3,11 +3,11 @@ title: Entity Framework データ プロバイダーの作成
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 ms.openlocfilehash: 513af001392ae0b7abe8e6c62dc74f09469b3655
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296634"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148445"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Entity Framework データ プロバイダーの作成
 このセクションでは、記述する方法をについて説明します、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server 以外のデータ ソースをサポートするプロバイダー。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server をサポートするプロバイダーが含まれています。  

@@ -1,16 +1,15 @@
 ---
 title: コレクションに関するガイドライン
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964843"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145583"
 ---
 # <a name="guidelines-for-collections"></a>コレクションに関するガイドライン
 具体的には、共通の特性を持つオブジェクトのグループを操作するように設計する任意の型は、コレクションを見なすことができます。 ほとんどを実装するには、このような型に適した<xref:System.Collections.IEnumerable>または<xref:System.Collections.Generic.IEnumerable%601>ので、このセクションでは私たちだけを検討するコレクションには、それらのインターフェイスの一方または両方を実装する型。  
@@ -109,7 +108,7 @@ ms.locfileid: "45964843"
  **X DO NOT** など非ジェネリックの基本コレクションから継承`CollectionBase`です。 使用`Collection<T>`、 `ReadOnlyCollection<T>`、および`KeyedCollection<TKey,TItem>`代わりにします。  
   
 ### <a name="naming-custom-collections"></a>カスタム コレクションの名前を付ける  
- コレクション (実装する型`IEnumerable`) が主に 2 つの理由の作成: 既存のデータ構造とは別のパフォーマンス特性構造固有の操作と多くの場合は、新しいデータ構造を作成するには、(1) (例: <xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.LinkedList%601>、 <xref:System.Collections.Generic.Stack%601>)、および (2) 特定の項目セットを保持するための特殊なコレクションを作成する (例: <xref:System.Collections.Specialized.StringCollection>)。 データ構造は、アプリケーションとライブラリの内部の実装で最もよく使用されます。 特殊化されたコレクションは、(プロパティとパラメーターの型) として Api で公開するには、主にします。  
+ コレクション (実装する型`IEnumerable`) 主に 2 つの理由が作成されます。(既存のデータ構造とは別のパフォーマンス特性構造固有の操作と多くの場合は、新しいデータ構造を作成するには 1) (例: <xref:System.Collections.Generic.List%601>、 <xref:System.Collections.Generic.LinkedList%601>、 <xref:System.Collections.Generic.Stack%601>)、および (2) の特殊なコレクションを作成するには特定の項目セットを保持する (例: <xref:System.Collections.Specialized.StringCollection>)。 データ構造は、アプリケーションとライブラリの内部の実装で最もよく使用されます。 特殊化されたコレクションは、(プロパティとパラメーターの型) として Api で公開するには、主にします。  
   
  **✓ DO** を実装する抽象クラスの名前に「ディクショナリ」サフィックスを使用`IDictionary`または`IDictionary<TKey,TValue>`です。  
   
@@ -127,7 +126,7 @@ ms.locfileid: "45964843"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
+ *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
   
 ## <a name="see-also"></a>関連項目
 

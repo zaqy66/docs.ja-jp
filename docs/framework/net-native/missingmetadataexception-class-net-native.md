@@ -5,18 +5,18 @@ ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f68304b06c502672ae1aac9693a966ea546ee4dd
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50980860"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148331"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException クラス (.NET ネイティブ)
 **Windows 10 の Windows アプリ用 .NET ([!INCLUDE[net_native](../../../includes/net-native-md.md)]のみ)**  
   
  この例外は、存在しないメタデータを取得するためにリフレクションが使用された場合にスローされます。  
   
- **名前空間:** System.Reflection  
+ **Namespace:** System.Reflection  
   
 > [!IMPORTANT]
 >  `MissingMetadataException` クラスは [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  

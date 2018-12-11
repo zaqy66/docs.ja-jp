@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 660e51338d274bbe25da800ca701e6fb9eccbcda
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c63b9a25c1830f142002e9854e9ce275f55ef54b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183205"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154826"
 ---
 # <a name="uinteger-data-type"></a>UInteger データ型
 
@@ -48,7 +48,7 @@ Visual Basic 2017 から始めて、使用することできますも、アン�
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例えば:
+Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -56,7 +56,7 @@ Dim number As UInteger = &H_0F8C_0326
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-数値リテラルを含めることも、`UI`または`ui`[文字入力](../../programming-guide\language-features\data-types/type-characters.md)を示すために、`UInteger`データ型は、次の例を示します。
+数値リテラルを含めることも、`UI`または`ui`[文字入力](../../programming-guide/language-features/data-types/type-characters.md)を示すために、`UInteger`データ型は、次の例を示します。
 
 ```vb
 Dim number = &H_0FAC_14D7ui
@@ -83,5 +83,5 @@ Dim number = &H_0FAC_14D7ui
  [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
  [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [方法 : 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [操作方法：符号なしの型を Windows 関数を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

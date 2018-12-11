@@ -4,12 +4,12 @@ description: さまざまなアーキテクチャと web アプリ、モバイ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ea944a172154a1cff2b8f830cb8fc3fa24a15028
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370202"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150304"
 ---
 # <a name="serverless-architecture"></a>サーバーレス アーキテクチャ
 
@@ -42,7 +42,7 @@ WebJobs Core では、関数の実行コンテキストを提供します。 言
 
 ![サーバーレスのモノリスの移行](./media/serverless-monolith-migration.png)
 
-この方法について詳しくは、ビデオを見る:[サーバーレス Azure Functions を使用してクラウドにアプリをもたらす](https://channel9.msdn.com/Events/Connect/2017/E102)します。
+この方法について詳しくは、ビデオを見る。[サーバーレス Azure Functions を使用してクラウドにアプリをもたらす](https://channel9.msdn.com/Events/Connect/2017/E102)します。
 
 ## <a name="web-apps"></a>Web アプリ
 
@@ -74,5 +74,5 @@ IoT は、ネットワークでつながっている物理オブジェクトを�
 IoT の良しの結果、いくつかのサーバーレス製品具体的には、IoT の問題に的を絞ったなど[Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)します。 デバイスの登録、ポリシーの適用、追跡、およびコードでのデバイスにも配置などのタスクを自動化するサーバーレス*エッジ*します。 エッジは、センサーとアクチュエータに接続されている一部ではない、アクティブなインターネットのようなデバイスを指します。
 
 >[!div class="step-by-step"]
-[前へ](architecture-approaches.md)
-[次へ](serverless-architecture-considerations.md)
+>[前へ](architecture-approaches.md)
+>[次へ](serverless-architecture-considerations.md)

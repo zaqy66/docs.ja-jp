@@ -1,16 +1,16 @@
 ---
-title: '&lt;findCriteria&gt;'
+title: '&lt;FindCriteria&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: fc9cd3b87d0f47ae0f16b5c5bfcaa4a1167bae9f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38941e4afb0cfa4fea8657c90c1105a5ab771d49
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748647"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144204"
 ---
-# <a name="ltfindcriteriagt"></a>&lt;findCriteria&gt;
-探索サービスの検索にクライアント アプリケーションによって使用される基準を提供する構成要素。 条件は、(探しているサービスの種類を指定する) 検索条件にグループ化できるし、検索終了条件 (期間、検索する必要があります)。  
+# <a name="ltfindcriteriagt"></a>&lt;FindCriteria&gt;
+探索サービスの検索にクライアント アプリケーションによって使用される基準を提供する構成要素。 条件は、(探しているサービスの種類を指定して) 検索条件にグループ化することができ、検索 (検索持続期間)、終了条件。  
   
  \<system.ServiceModel >  
 \<standardEndpoints >  

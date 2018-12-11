@@ -1,5 +1,5 @@
 ---
-title: '方法 : セキュリティ トークン サービスを作成する'
+title: 操作方法：セキュリティ トークン サービスを作成します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 ms.openlocfilehash: 5926216135429d235593aaf77ee0d29b0bacd8fa
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036503"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143910"
 ---
-# <a name="how-to-create-a-security-token-service"></a>方法 : セキュリティ トークン サービスを作成する
+# <a name="how-to-create-a-security-token-service"></a>操作方法：セキュリティ トークン サービスを作成します。
 セキュリティ トークン サービスは、WS-Trust 仕様に定義されているプロトコルを実装します。 このプロトコルでは、セキュリティ トークンの発行、更新、キャンセル、および検証を行うためのメッセージ形式とメッセージ交換パターンが定義されています。 セキュリティ トークン サービスでは、これらの機能が 1 つ以上提供されます。 ここでは、最も一般的なシナリオであるトークンの発行の実装について説明します。  
   
 ## <a name="issuing-tokens"></a>トークンの発行  

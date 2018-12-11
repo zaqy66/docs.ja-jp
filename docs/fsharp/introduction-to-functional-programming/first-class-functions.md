@@ -2,12 +2,12 @@
 title: ファーストクラス関数
 description: ファーストクラス関数とは関数型プログラミングで重要な方法について説明しますF#します。
 ms.date: 10/29/2018
-ms.openlocfilehash: 1459049c9c1c77f4eefd2a83945335b33ca22ab9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744635"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148636"
 ---
 # <a name="first-class-functions"></a>ファーストクラス関数
 
@@ -27,7 +27,7 @@ ms.locfileid: "50744635"
 
 ## <a name="give-the-value-a-name"></a>値に名前を付ける
 
-関数がファースト クラスの値である場合は、整数や文字列、その他の組み込みの型に名前を付けることができるのと同様に、関数に名前を付けることができる必要があります。 関数型プログラミングの記述では、これを "値に識別子を束縛する" と表現しています。 F# は[`let`バインド](../language-reference/functions/let-bindings.md)値に名前をバインド:`let <identifier> = <value>`します。 次に、2 つのコード例を示します。
+関数がファースト クラスの値である場合は、整数や文字列、その他の組み込みの型に名前を付けることができるのと同様に、関数に名前を付けることができる必要があります。 関数型プログラミングの記述では、これを "値に識別子を束縛する" と表現しています。 F#使用して[`let`バインド](../language-reference/functions/let-bindings.md)値に名前をバインド:`let <identifier> = <value>`します。 次に、2 つのコード例を示します。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet20.fs)]
 
@@ -69,7 +69,7 @@ F# では、次に示すより簡潔な構文が用意されており、少量�
 
 関数を引数として他の関数に送信できる機能は、マップ操作やフィルター操作など、関数型プログラミング言語に共通の抽象化が基礎になっています。 たとえば、マップ操作は、複数の関数で共有される計算を引き受ける高階関数であり、リストを走査し、各要素に対してなんらかの処理を実行し、結果のリストを返します。 整数のリストの各要素をインクリメントしたり、各要素を 2 乗したり、文字列のリストの各要素を大文字に変更したりできます。 計算のエラーが発生しやすい部分は、リストを走査し、返す結果のリストを構築する再帰プロセスです。 この部分はマッピング関数に取り込まれます。 特定のアプリケーションで記述する必要があるのは、各リスト要素に個別に適用する関数 (加算、2 乗、大文字と小文字の変更) だけです。 その関数は、前の例で `squareIt` が `applyIt` に渡されたように、マッピング関数への引数として渡されます。
 
-F# など、ほとんどのコレクション型のマップのメソッドを提供します。[一覧](../language-reference/lists.md)、[配列](../language-reference/arrays.md)、および[シーケンス](../language-reference/sequences.md)します。 次の例では、リストを使用しています。 構文は `List.map <the function> <the list>` です。
+F#マップのメソッドを含め、ほとんどのコレクション型を提供します[を一覧表示](../language-reference/lists.md)、[配列](../language-reference/arrays.md)、および[シーケンス](../language-reference/sequences.md)します。 次の例では、リストを使用しています。 構文は `List.map <the function> <the list>` です。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet28.fs)]
 
@@ -103,15 +103,15 @@ F# など、ほとんどのコレクション型のマップのメソッドを�
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet34.fs)]
 
->[!NOTE]
-さらに短いコードについては、次の「カリー化関数」のセクションを参照してください。
+> [!NOTE]
+> さらに短いコードについては、次の「カリー化関数」のセクションを参照してください。
 
 次のコードでは、2 つの関数を `compose` の引数として渡します。どちらの関数も、同じ型の 1 つの引数を受け取ります。 戻り値は、この 2 つの関数の引数の合成である新しい関数です。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet35.fs)]
 
->[!NOTE]
-F# には、関数を合成する演算子として、`<<` と `>>` の 2 つが用意されています。 たとえば、`let squareAndDouble2 = doubleIt << squareIt` は、前の例の `let squareAndDouble = compose doubleIt squareIt` と同じです。
+> [!NOTE]
+> F# には、関数を合成する演算子として、`<<` と `>>` の 2 つが用意されています。 たとえば、`let squareAndDouble2 = doubleIt << squareIt` は、前の例の `let squareAndDouble = compose doubleIt squareIt` と同じです。
 
 次に、関数呼び出しの結果値として関数を返し、単純な推測ゲームを作成する例を示します。 ゲームを作成するには、他者に推測してもらう値を `makeGame` に渡して `target` を呼び出します。 `makeGame` 関数からの戻り値は、1 つの引数 (推測) を受け取ってその推測が正しいかどうかを報告する関数です。
 
@@ -139,8 +139,8 @@ F# には、関数を合成する演算子として、`<<` と `>>` の 2 つが
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet41.fs)]
 
->[!NOTE]
-パラメーターをタプルとして囲むことで、カリー化を制限できます。 詳細については、「パラメーターのパターン」を参照してください[パラメーターと引数](../language-reference/parameters-and-arguments.md)します。
+> [!NOTE]
+> パラメーターをタプルとして囲むことで、カリー化を制限できます。 詳細については、「パラメーターのパターン」を参照してください[パラメーターと引数](../language-reference/parameters-and-arguments.md)します。
 
 次の例では、暗黙的なカリー化を使用して、より短いバージョンの `makeGame` を作成します。 この形式では、`makeGame` が `game` 関数を作成して返す方法の詳細はそれほど明確ではありませんが、同じ結果を返す元のテスト ケースを使用することで確認できます。
 

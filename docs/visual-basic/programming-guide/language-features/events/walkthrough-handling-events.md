@@ -10,14 +10,14 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297167"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153385"
 ---
-# <a name="walkthrough-handling-events-visual-basic"></a>チュートリアル: イベントの処理 (Visual Basic)
-これは、2 番目のイベントを使用する方法を示す 2 つのトピックです。 最初のトピックでは、[チュートリアル: イベントを宣言して発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)を宣言してイベントを発生させる方法を示しています。 このセクションでは、実行するときにイベントを処理するのに方法について説明フォームとそのチュートリアルからクラスを使用します。  
+# <a name="walkthrough-handling-events-visual-basic"></a>チュートリアル:イベントの処理 (Visual Basic)
+これは、2 番目のイベントを使用する方法を示す 2 つのトピックです。 最初のトピックでは、[チュートリアル。イベントを宣言して発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)を宣言してイベントを発生させる方法を示しています。 このセクションでは、実行するときにイベントを処理するのに方法について説明フォームとそのチュートリアルからクラスを使用します。  
   
  `Widget`クラスの例は、従来のイベント処理ステートメントを使用します。 Visual Basic では、イベントの処理を他の手法を提供します。 演習として使用するには、この例を変更することができます、`AddHandler`と`Handles`ステートメント。  
   
@@ -117,5 +117,5 @@ ms.locfileid: "52297167"
 >  数を宣言する`WithEvents`変数としてする必要がありますの配列が`WithEvents`変数がサポートされていません。  
   
 ## <a name="see-also"></a>関連項目  
- [チュートリアル : イベントの宣言と発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
+ [チュートリアル:宣言とイベントの発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
  [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)

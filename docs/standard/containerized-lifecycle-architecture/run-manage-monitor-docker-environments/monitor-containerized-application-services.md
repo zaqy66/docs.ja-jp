@@ -4,12 +4,12 @@ description: Microsoft プラットフォームとツールでコンテナー化
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4bdc4470624ce6e905ab858a2bd8b607c8d3d646
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232925"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153925"
 ---
 # <a name="monitor-containerized-application-services"></a>コンテナー化されたアプリケーションのサービスを監視します。
 
@@ -25,13 +25,13 @@ Docker に関連して、ライフ サイクル イベントと Application Insi
 
 ![例](./media/image1.png)
 
-図 6-1: Application Insights の Docker ホストとコンテナーの監視
+図 6-1:Application Insights の Docker ホストとコンテナーの監視
 
 実行すると、 [Application Insights の Docker イメージ](https://hub.docker.com/r/microsoft/applicationinsights/)次のメリットの Docker ホストで。
 
 -   ライフ サイクル ホストで実行されているすべてのコンテナーに関する製品利用統計情報: 開始、停止、および具合です。
 
--   すべてのコンテナーのパフォーマンス カウンター: CPU、メモリ、ネットワーク使用率などです。
+-   すべてのコンテナーのパフォーマンス カウンター:CPU、メモリ、ネットワークの使用状況、および詳細。
 
 -   インストールされている場合[Application Insights SDK](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)コンテナーで実行されているアプリでこれらのアプリのすべてのテレメトリがコンテナーとホスト マシンを識別する追加のプロパティが。 そのため、たとえば、1 つ以上のホストで実行されているアプリのインスタンスがあれば、簡単にことができますをホストして、アプリのテレメトリをフィルター処理します。
 
@@ -60,7 +60,7 @@ Operations Management Suite のコンテナー ソリューションで管理し
 
 ![](./media/image2.png)
 
-図 6-2: Operations Management Suite で示すように Docker コンテナーについて
+図 6-2:Operations Management Suite で示すように Docker コンテナーについての情報
 
 アクティビティの監視に重点を application Insights と Operations Management Suiteただし、Application Insights は、アプリ内で実行されているその SDK に協力してくれた、アプリ自体の監視についてより説明します。 ただし、Operations Management Suite について重点的により、ホストのインフラストラクチャ、さらにデータ ドリブンの非常に柔軟性の検索/クエリ システムを提供しながらログの詳細に分析を提供しています。
 
@@ -90,12 +90,12 @@ Operations Management Suite のコンテナー ソリューションでは、次
 
 ![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
-Operations Management Suite で示すように Docker ホストのパフォーマンス メトリックを図 6-3:
+図 6-3:Operations Management Suite で示すように Docker ホストのパフォーマンス メトリック
 
 Operations Management Suite での標準的な機能もとに役立つクエリを保存する際に役立つし、システム内の傾向を検出するクエリを保持します。
 
 **詳細については** でコンテナー ソリューションをインストールして、Docker の構成に関する情報を検索する[Operations Management Suite](https://microsoft.com/oms)に移動して、<https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>します。
 
 >[!div class="step-by-step"]
-[前へ](manage-production-docker-environments.md)
-[次へ](../key-takeaways/index.md)
+>[前へ](manage-production-docker-environments.md)
+>[次へ](../key-takeaways/index.md)

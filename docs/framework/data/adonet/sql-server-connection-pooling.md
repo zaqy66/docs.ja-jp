@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514964"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147679"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
 通常、データベース サーバーへの接続は、時間のかかるいくつかの手順で構成されています。 ソケットまたは名前付きパイプなどの物理チャネルの確立、サーバーとの最初のハンドシェイクの実行、接続文字列の情報の解析、サーバーによる接続の認証、現在のトランザクションへ参加するための検証などの手順を行う必要があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "43514964"
   
  3 つの新しい <xref:System.Data.SqlClient.SqlConnection> オブジェクトを作成し、2 つの接続プールだけでこの 3 つのオブジェクトを管理する C# の例を次に示します。 1 番目の接続文字列と 2 番目の接続文字列では、`Initial Catalog` に割り当てる値が異なります。  
   
-```  
+```csharp
 using (SqlConnection connection = new SqlConnection(  
   "Integrated Security=SSPI;Initial Catalog=Northwind"))  
     {  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  接続プーラーは、接続がプールに解放されたときに接続の再割り当てを行って、接続に対する要求に応えます。 最大プール サイズに達すると、使用可能な接続を取得できなくなり、要求はキューに置かれます。 プーラーは、タイムアウト (既定は 15 秒) に達するまで接続の再利用を試みます。 接続がタイムアウトになる前に、プーラーが要求を満たすことができない場合は、例外がスローされます。  
   
 > [!CAUTION]
->  接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することを強くお勧めします。 これを行うかを使用して、`Close`または`Dispose`のメソッド、`Connection`オブジェクト、または内のすべての接続を開くことによって、 `using` 、c# のステートメントまたは`Using`Visual Basic でのステートメント。 明示的に終了されていない接続は、プールに追加したり返したりすることができないことがあります。 詳細については、次を参照してください。[ステートメントを使用して](~/docs/csharp/language-reference/keywords/using-statement.md)または[方法: システム リソースを破棄](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)Visual basic の場合。  
+>  接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することを強くお勧めします。 これを行うかを使用して、`Close`または`Dispose`のメソッド、`Connection`オブジェクト、または内のすべての接続を開くことによって、 `using` 、c# のステートメントまたは`Using`Visual Basic でのステートメント。 明示的に終了されていない接続は、プールに追加したり返したりすることができないことがあります。 詳細については、次を参照してください。[ステートメントを使用して](~/docs/csharp/language-reference/keywords/using-statement.md)または[方法。システム リソースを破棄](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)Visual basic の場合。  
   
 > [!NOTE]
 >  クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳細については、次を参照してください。[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)します。  

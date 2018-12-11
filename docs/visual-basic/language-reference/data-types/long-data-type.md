@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 040306b49bbf6b0f30556309457510ca873d8a74
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 357b7b42c7ad609b2a86ec3ee79a0f6f38dd9471
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197224"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155120"
 ---
 # <a name="long-data-type-visual-basic"></a>長い形式のデータ型 (Visual Basic)
 
@@ -52,7 +52,7 @@ Visual Basic 2017 から始めて、使用することできますも、アン�
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例えば:
+Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
 
 ```vb
 Dim number As Long = &H_0FAC_0326_1489_D68C
@@ -60,7 +60,7 @@ Dim number As Long = &H_0FAC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-数値リテラルを含めることも、 `L` [文字入力](../../programming-guide\language-features\data-types/type-characters.md)を示すために、`Long`データ型は、次の例を示します。
+数値リテラルを含めることも、 `L` [文字入力](../../programming-guide/language-features/data-types/type-characters.md)を示すために、`Long`データ型は、次の例を示します。
 
 ```vb
 Dim number = &H_0FAC_0326_1489_D68CL

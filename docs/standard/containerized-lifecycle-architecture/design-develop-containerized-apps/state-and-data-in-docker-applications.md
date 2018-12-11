@@ -4,12 +4,12 @@ description: Microsoft プラットフォームとツールでコンテナー化
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123229"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154178"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker アプリケーションの状態とデータ
 
@@ -39,7 +39,7 @@ A[データ ボリューム コンテナー](https://docs.docker.com/glossary/?t
 
 ![](./media/image5.png)
 
-図 4-5: データ ボリュームとコンテナー アプリ/コンテナーの外部データ ソース
+図 4-5:コンテナー アプリ/コンテナーの外部データ ソースとデータ ボリューム
 
 別々 の物理ホスト上で実行されるコンテナー間で共有されるデータを管理することができないのためお勧め使用しないことのボリュームのビジネス データ、Docker ホストが固定ホストおよび VM、しない限り、ため、オーケストレーターで Docker コンテナーを使用する場合コンテナーは、1 から、クラスターで実行される最適化に応じて、別のホストに移動する必要があります。
 
@@ -49,7 +49,6 @@ A[データ ボリューム コンテナー](https://docs.docker.com/glossary/?t
 
 リモート データ ソースと SQL Database、DocumentDB、Redis のようなリモート キャッシュなどのキャッシュは、コンテナーなしで開発と同じでになります。 これは、ビジネス アプリケーションのデータを格納する優先、および実績のある方法のいずれかです。
 
-
 >[!div class="step-by-step"]
-[前へ](monolithic-applications.md)
-[次へ](soa-applications.md)
+>[前へ](monolithic-applications.md)
+>[次へ](soa-applications.md)

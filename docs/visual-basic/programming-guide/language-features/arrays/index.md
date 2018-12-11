@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297453"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149901"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic における配列
 
@@ -126,7 +126,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-他の例については、「[方法: Visual Basic で配列変数を初期化する](../../language-features/arrays/how-to-initialize-an-array-variable.md)」を参照してください。
+その他の例では、次を参照してください。[方法。Visual Basic で配列変数を初期化](../../language-features/arrays/how-to-initialize-an-array-variable.md)します。
 
 ## <a name="iterating-through-an-array"></a>配列を反復処理します。
 
@@ -299,9 +299,9 @@ Dim arrZ(-1) As String
 |用語|定義|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|配列のランクと次元について説明します。|
-|[方法: Visual Basic で配列変数を初期化する](../../language-features/arrays/how-to-initialize-an-array-variable.md)|配列に初期値を設定する方法について説明します。|
-|[方法: 配列を並べ替える (Visual Basic)](../../language-features/arrays/how-to-sort-an-array.md)|配列の要素をアルファベット順に並べ替える方法について説明します。|
-|[方法 : 配列を別の配列に代入する](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|配列を別の配列変数に代入するときの手順と規則を説明します。|
+|[操作方法：Visual Basic で配列変数を初期化します。](../../language-features/arrays/how-to-initialize-an-array-variable.md)|配列に初期値を設定する方法について説明します。|
+|[操作方法：Visual Basic で配列を並べ替える](../../language-features/arrays/how-to-sort-an-array.md)|配列の要素をアルファベット順に並べ替える方法について説明します。|
+|[操作方法：1 つの配列を別の配列に代入します。](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|配列を別の配列変数に代入するときの手順と規則を説明します。|
 |[配列のトラブルシューティング](../../language-features/arrays/troubleshooting-arrays.md)|配列を使用しているときに発生する一般的な問題について説明します。|
 
 ## <a name="see-also"></a>関連項目

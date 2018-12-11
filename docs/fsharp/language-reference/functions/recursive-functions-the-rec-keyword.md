@@ -1,15 +1,15 @@
 ---
-title: '再帰関数: rec キーワード (F#)'
+title: 再帰関数:Rec キーワード (F#)
 description: 再帰関数の定義に 'let' キーワードを使用して、F# の 'rec' キーワードが使用される方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0db3ed7f85a1380654f2827b4773985b661589c7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48024520"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127733"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>再帰関数: rec キーワード
+# <a name="recursive-functions-the-rec-keyword"></a>再帰関数:Rec キーワード
 
 `rec`と共にキーワードが使用される、`let`再帰関数を定義するキーワード。
 
@@ -36,8 +36,8 @@ function2-body
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
->[!NOTE]
-実際には、上記のようなコードは、事前に計算された値の再計算するため、メモリとプロセッサ時間の浪費になります。
+> [!NOTE]
+> 実際には、上記のようなコードは、事前に計算された値の再計算するため、メモリとプロセッサ時間の浪費になります。
 
 メソッドは、暗黙的に型内で再帰追加する必要はありません、`rec`キーワード。 クラス内の let バインドは、暗黙的に再帰的ではできません。
 

@@ -1,17 +1,17 @@
 ---
 title: コンピュテーション式 (F#)
-description: F# でシーケンス処理できるし、制御フローの作成とバインドを使用して結合で計算を作成するための便利な構文を作成する方法について説明します。
+description: 計算を作成するための便利な構文を作成する方法についてF#、制御できることがシーケンス処理されたと結合を使用してフローの作成とバインドします。
 ms.date: 07/27/2018
-ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b1fee11f68e99e53d19b47bef9eca6298cce2f45
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839870"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169847"
 ---
 # <a name="computation-expressions"></a>コンピュテーション式
 
-F# のコンピュテーション式は、シーケンス処理できるし、制御フローの作成とバインドを使用して結合する計算を作成するための便利な構文を提供します。 コンピュテーション式の種類、に応じてには、モナド、monoids、monad トランスフォーマー、および適用したファンクターを表現する手段として、考えるができます。 その他の言語とは異なり、(など*do 表記*Haskell で)、単一の抽象化に関連付けられていない、マクロやその他の形式に依存しないメタプログラミングを便利で状況依存の構文を実現します。
+コンピュテーション式でF#シーケンス処理できるし、制御フローの作成とバインドを使用して結合する計算を作成するための便利な構文を提供します。 コンピュテーション式の種類、に応じてには、モナド、monoids、monad トランスフォーマー、および適用したファンクターを表現する手段として、考えるができます。 その他の言語とは異なり、(など*do 表記*Haskell で)、単一の抽象化に関連付けられていない、マクロやその他の形式に依存しないメタプログラミングを便利で状況依存の構文を実現します。
 
 ## <a name="overview"></a>概要
 
@@ -179,7 +179,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-F# 4.5、以降では、`match!`キーワードを使用するインラインを別の計算式とパターン一致の結果への呼び出し。
+以降でF#、4.5、`match!`キーワードを使用するインラインを別の計算式とパターン一致の結果への呼び出し。
 
 ```fsharp
 let doThingsAsync url =
@@ -194,7 +194,7 @@ let doThingsAsync url =
 
 ## <a name="built-in-computation-expressions"></a>組み込みのコンピュテーション式
 
-F# コア ライブラリが 3 つの組み込みのコンピュテーション式を定義します。[シーケンス式](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[クエリ式](query-expressions.md)します。
+F#コア ライブラリが 3 つの組み込みのコンピュテーション式を定義します。[シーケンス式](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[クエリ式](query-expressions.md)します。
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>コンピュテーション式の新しい型を作成します。
 
@@ -251,6 +251,7 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 |<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
 |<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
 |<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
+
 前の表に`other-expr`それ以外の場合、表に一覧表示されない式について説明します。 ビルダー クラスは、すべてのメソッドを実装し、前の表に、翻訳のすべてをサポートする必要はありません。 実装されていないこれらのコンストラクトでは、その型のコンピュテーション式で使用できません。 例では、サポートしない場合、 `use` 、コンピュテーション式、キーワードの定義を省略できます`Use`ビルダー クラスにします。
 
 次のコード例では、一連のことができる手順を一度に 1 つのステップを評価すると、計算をカプセル化する計算式を示します。 A 判別共用体型、 `OkOrException`、これまでに評価された式のエラー状態をエンコードします。 このコードは、ビルダー メソッドのいくつかの定型実装など、コンピュテーション式で使用できるいくつかの一般的なパターンを示しています。
@@ -266,7 +267,7 @@ module Eventually =
     // computation.
     let rec bind func expr =
         match expr with
-        | Done value -> NotYetDone (fun () -> func value)
+        | Done value -> func value
         | NotYetDone work -> NotYetDone (fun () -> bind func (work()))
 
     // Return the final value wrapped in the Eventually type.
@@ -372,13 +373,8 @@ comp |> step |> step
 
 // prints "x = 1"
 // prints "x = 2"
-// returns "NotYetDone <closure>"
-comp |> step |> step |> step |> step |> step |> step
-
-// prints "x = 1"
-// prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step |> step |> step |> step |> step
+comp |> step |> step |> step |> step 
 ```
 
 コンピュテーション式には、式から返される、基になる型があります。 計算の結果または遅延の計算を実行できる、基になる型を表すことがあります。 または何らかの種類のコレクションを反復処理する方法を提供できます。 前の例では、基になる型が**最終的に**します。 シーケンス式では、基になる型は<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>します。 クエリ式では、基になる型は<xref:System.Linq.IQueryable?displayProperty=nameWithType>します。 非同期ワークフローでは、基になる型は[ `Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)します。 `Async`オブジェクトは、結果を計算するために実行する作業を表します。 たとえば、呼び出す[ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)計算を実行し、結果が返されます。

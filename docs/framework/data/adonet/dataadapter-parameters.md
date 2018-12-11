@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: e633c7cdd105125fc5fb595566d15cf5f5fe4e6f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ad0045f926b05b6a73dd64089290f4b8937004ca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845620"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150993"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter パラメーター
 <xref:System.Data.Common.DbDataAdapter> には 4 つのプロパティがあり、データ ソースからデータを取得したりデータ ソースのデータを更新したりするために使用されます。<xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> プロパティは、データ ソースのデータを返します。<xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>、および <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> の各プロパティは、データ ソースの変更を管理するために使用されます。 `SelectCommand` プロパティは、`Fill` の `DataAdapter` メソッドを呼び出す前に設定しておく必要があります。 `InsertCommand`、`UpdateCommand`、`DeleteCommand` の各プロパティは、`Update` 内のデータに加えられた変更に応じて、`DataAdapter` の <xref:System.Data.DataTable> メソッドを呼び出す前に設定する必要があります。 たとえば、行が追加された場合には、`InsertCommand` を呼び出す前に `Update` を設定する必要があります。 `Update` によって挿入行、更新行、または削除行が処理されるとき、`DataAdapter` でそれぞれの `Command` プロパティが使用され、アクションが処理されます。 変更された行に関する現在の情報が `Command` コレクションを経由して `Parameters` オブジェクトに渡されます。  
   
  データ ソースの行を更新するときは、一意識別子を使用してテーブル内の更新する列を識別する UPDATE ステートメントを呼び出します。 一意識別子は、一般には主キー フィールドの値です。 UPDATE ステートメントでは、次の Transact-SQL ステートメントに示すように、一意識別子と更新する列および値の両方を含むパラメーターを使用します。  
   
-```  
+```sql
 UPDATE Customers SET CompanyName = @CompanyName   
   WHERE CustomerID = @CustomerID  
 ```  
@@ -27,7 +27,7 @@ UPDATE Customers SET CompanyName = @CompanyName
   
  この Visual Basic の例で、`CompanyName`フィールドの値で更新、`@CompanyName`パラメーターの行位置`CustomerID`の値に等しい、`@CustomerID`パラメーター。 パラメーターを使用して、変更された行から情報を取得する、<xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A>のプロパティ、<xref:System.Data.SqlClient.SqlParameter>オブジェクト。 前のサンプル UPDATE ステートメントのパラメーターを次に示します。 このコードは、変数 `adapter` が有効な <xref:System.Data.SqlClient.SqlDataAdapter> オブジェクトを表すことを前提としています。  
   
-```  
+```vb
 adapter.Parameters.Add( _  
   "@CompanyName", SqlDbType.NChar, 15, "CompanyName")  
 Dim parameter As SqlParameter = _  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a2528699387a86ca276cb3ba63eab39544552a4f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0399c89e926611b076072e6475c52bf31ae83637
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850877"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155185"
 ---
 # <a name="collection-types-in-data-contracts"></a>データ コントラクトのコレクション型
 *"コレクション"* は、特定の型の項目のリストです。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]では、このようなリストは、配列や他のさまざまな型を使用して表すことができます (ジェネリック List、ジェネリック <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>、または <xref:System.Collections.ArrayList>)。 たとえば、コレクションでは指定された顧客のアドレスのリストを保持できます。 これらのコレクションは、実際の型に関係なく、 *リスト コレクション*と呼びます。  
@@ -87,7 +87,7 @@ ms.locfileid: "48850877"
   
 -   <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を適用しない場合、コレクション型の既定の名前と名前空間は、コレクションに含まれる型の名前と名前空間によって決まります。 これらは、コレクション型自体の名前と名前空間の影響を受けません。 型の一例を次に示します。  
   
-    ```  
+    ```csharp  
     public CustomerList1 : Collection<string> {}  
     public StringList1 : Collection<string> {}  
     ```  
@@ -226,7 +226,7 @@ ms.locfileid: "48850877"
   
  既定では、コードをインポートする際に、カスタマイズされていないコレクションの型は生成されません。 リスト コレクション型のデータ メンバーは配列としてインポートされ、ディクショナリ コレクション型のデータ メンバーはジェネリック ディクショナリとしてインポートされます。  
   
- ただし、カスタマイズされたコレクションの場合、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性でマークされた個別の型が生成されます (スキーマにおけるカスタマイズされたコレクション型とは、既定の名前空間、名前、反復される要素名、またはキー/値要素名を使用しない型のことです)。これらの型は、リスト型のジェネリック <xref:System.Collections.Generic.List%601> およびディクショナリ型のジェネリック ディクショナリから派生した空の型です。  
+ ただし、カスタマイズされたコレクションの場合、<xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性でマークされた個別の型が生成されます  (スキーマにおけるカスタマイズされたコレクション型とは、既定の名前空間、名前、反復される要素名、またはキー/値要素名を使用しない型のことです)。これらの型は、リスト型のジェネリック <xref:System.Collections.Generic.List%601> およびディクショナリ型のジェネリック ディクショナリから派生した空の型です。  
   
  たとえば、サーバーで次のような型を使用するとします。  
   
@@ -249,7 +249,7 @@ ms.locfileid: "48850877"
   
  たとえば、すべてのリストをジェネリック <xref:System.Collections.Generic.List%601>としてインポートするには、次のように指定します。  
   
-```  
+```console  
 svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\System.dll /ct:System.Collections.Generic.List`1  
 ```  
   
@@ -262,7 +262,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  参照されるコレクション型の一部として、コレクション インターフェイス型を指定できますが、無効なコレクション型 ( `Add` メソッドまたはパブリック コンストラクターを持たないコレクション型など) を指定することはできません。  
   
- クローズ ジェネリック型は、合致度が最も高いと見なされます (非ジェネリック型は、 `Object`のクローズ ジェネリックと同等に扱われます)。 たとえば、 <xref:System.Collections.Generic.List%601> のジェネリック <xref:System.DateTime>、ジェネリック <xref:System.ComponentModel.BindingList%601> (オープン ジェネリック)、および <xref:System.Collections.ArrayList> が参照されるコレクション型である場合、次のようなコードが生成されます。  
+ クローズ ジェネリック型は、合致度が最も高いと見なされます (非ジェネリック型は、`Object` のクローズ ジェネリックと同等に扱われます)。 たとえば、 <xref:System.Collections.Generic.List%601> のジェネリック <xref:System.DateTime>、ジェネリック <xref:System.ComponentModel.BindingList%601> (オープン ジェネリック)、および <xref:System.Collections.ArrayList> が参照されるコレクション型である場合、次のようなコードが生成されます。  
   
  [!code-csharp[c_collection_types_in_data_contracts#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#10)]
  [!code-vb[c_collection_types_in_data_contracts#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#10)]  
@@ -287,8 +287,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |参照される型|参照される型で実装されるインターフェイス|例|型の処理|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |非ジェネリックまたはクローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> または<br /><br /> `MyType<T> : IDictionary` ここでは、T=`int`|クローズ ジェネリック `IDictionary<object,object>`|  
-|クローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.Generic.IDictionary%602>、クローズ|`MyType<T> : IDictionary<string, bool>` 位置 T =`int`|クローズ ジェネリック (例 : `IDIctionary<string,bool>`)|  
-|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーまたは値の一方がクローズ。もう一方はオープンで、型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<string,V>` 位置 T =`int`、U =`float`V =`bool`<br /><br /> または<br /><br /> `MyType<Z> : IDictionary<Z,bool>` Z =`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|  
+|クローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.Generic.IDictionary%602>、クローズ|`MyType<T> : IDictionary<string, bool>` ここでは、T=`int`|クローズ ジェネリック (例 : `IDIctionary<string,bool>`)|  
+|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーまたは値の一方がクローズ。もう一方はオープンで、型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<string,V>` ここでは、T=`int`、U=`float`、V=`bool`<br /><br /> または<br /><br /> `MyType<Z> : IDictionary<Z,bool>` ここでは、Z=`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|  
 |クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーと値の両方がオープンであり、それぞれ型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<V,U>` ここでは、T=`int`、U=`bool`、V=`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|  
 |オープン ジェネリック (2 つのパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、オープン、型のジェネリック パラメーターの両方をその出現順に使用|`MyType<K,V> : IDictionary<K,V>`、K と V は共にオープン|オープン ジェネリック (例 : `IDictionary<K,V>`)|  
   

@@ -2,16 +2,16 @@
 title: Visual Studio Code での F# の概要します。
 description: Visual Studio Code および ionide の概要のプラグインのスイートで F# を使用する方法について説明します。
 ms.date: 05/28/2018
-ms.openlocfilehash: e962be2796cf0d6eb90d459730659e492f864716
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2db587b5614c5a7ca9285cad9b719970d53afd55
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50192669"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129793"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code での F# の概要します。
 
-F# で記述できる[Visual Studio Code](https://code.visualstudio.com)で、 [Ionide プラグイン](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)クロス プラットフォームの軽量な統合開発環境 (IDE) ですばらしい体験を IntelliSense および基本的なコードを取得するにはリファクタリング。 参照してください[Ionide.io](http://ionide.io)プラグインの詳細を表示します。
+書き込めるF#で[Visual Studio Code](https://code.visualstudio.com)で、 [Ionide プラグイン](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)クロス プラットフォームの軽量な統合開発環境 (IDE) ですばらしい体験を IntelliSense および基本的なコードを取得するにはリファクタリング。 参照してください[Ionide.io](http://ionide.io)プラグインの詳細を表示します。
 
 作業を開始できることを確認します。 [F# および ionide の概要プラグインが正しくインストールされている](install-fsharp.md#install-f-with-visual-studio-code)します。
 
@@ -28,19 +28,19 @@ F# で記述できる[Visual Studio Code](https://code.visualstudio.com)で、 [
 これで電源がオン、[偽造](https://github.com/fsharp-editing/Forge)プロジェクト。
 
 > [!NOTE]
-テンプレート オプションが表示されない場合は、コマンド パレットで、次のコマンドを実行してテンプレートを更新してください:`>F#: Refresh Project Templates`します。
+> テンプレート オプションが表示されない場合は、コマンド パレットで、次のコマンドを実行してテンプレートを更新してください:`>F#: Refresh Project Templates`します。
 
-押して F#::「新しいプロジェクト」を選択します。 **Enter**します。 プロジェクト テンプレートを選択するためには、次の手順に移動します。
+選択"F#:新しいプロジェクト を押して**Enter**します。 プロジェクト テンプレートを選択するためには、次の手順に移動します。
 
 選択、`classlib`テンプレートとヒット**Enter**します。
 
 次でプロジェクトを作成するディレクトリを選択します。 空のまま、現在のディレクトリを使用します。
 
-最後に、最後の手順で、プロジェクトの名前を付けます。 F# は[パスカル ケース](http://c2.com/cgi/wiki?PascalCase)プロジェクト名にします。 この記事では`ClassLibraryDemo`名として。 プロジェクトの名前を入力したら後のヒット**Enter**します。
+最後に、最後の手順で、プロジェクトの名前を付けます。 F#使用して[パスカル ケース](http://c2.com/cgi/wiki?PascalCase)プロジェクト名にします。 この記事では`ClassLibraryDemo`名として。 プロジェクトの名前を入力したら後のヒット**Enter**します。
 
 前の手順を実行する場合に次のように表示される、左側にある Visual Studio コード ワークスペースを取得する必要があります。
 
-1. F# プロジェクト自体には、下に、`ClassLibraryDemo`フォルダー。
+1. F#プロジェクト自体の下に、`ClassLibraryDemo`フォルダー。
 2. 使用してパッケージを追加するための適切なディレクトリ構造[ `Paket`](https://fsprojects.github.io/Paket/)します。
 3. クロス プラットフォーム ビルド スクリプトを[ `FAKE`](https://fsharp.github.io/FAKE/)します。
 4. `paket.exe`実行可能ファイルをパッケージのフェッチし、の依存関係を解決することができます。
@@ -97,8 +97,8 @@ val it : string = "appleyay"
 
 関数は、想定どおりに動作するが表示されます。 これで、先ほど Visual Studio Code で初めての F# 関数を記述し、FSI を使用して評価すること。
 
->[!NOTE]
-FSI の明細行がで終了しましたように気付き、`;;`します。 これは、FSI では、複数の行を入力できるためです。 `;;`により FSI 確認コードが完了すると、最後にします。
+> [!NOTE]
+> FSI の明細行がで終了しましたように気付き、`;;`します。 これは、FSI では、複数の行を入力できるためです。 `;;`により FSI 確認コードが完了すると、最後にします。
 
 ## <a name="explaining-the-code"></a>コードの説明
 
@@ -130,7 +130,7 @@ val toPigLatin : word:string -> string
 
 入力の単語の最初の文字の母音であることを確認します。 場合は、"yay"という単語の末尾にアタッチします。 それ以外の場合、その最初の文字を単語の末尾に移動し、それを「なります」に追加します。
 
-1 つの最後にこれに関する注意: その他の多くの言語とは異なり、関数から返される明示的な命令はありません。 F# は、式に基づくし、関数の本体の最後の式が戻り値であるためにです。 `if..then..else`自体、式の本体では、`then`ブロックまたはの本文、`else`ブロックが入力値によって返されます。
+1 つの最後にこれに関する注意: その他の多くの言語とは異なり、関数から返される明示的な命令はありません。 これは、ためF#が式に基づいて、関数の本体の最後の式は、戻り値。 `if..then..else`自体、式の本体では、`then`ブロックまたはの本文、`else`ブロックが入力値によって返されます。
 
 ## <a name="moving-your-script-code-into-the-implementation-file"></a>スクリプト コードを実装ファイルに移動
 
@@ -181,12 +181,12 @@ val it : string = "appleyay"
 
 1. Ionide の概要の編集機能をコードを取得するには、F# ファイルはディスク、および Visual Studio Code ワークスペースで開いているフォルダー内に保存する必要があります。
 2. 場合は、システムを変更または開いている Visual Studio のコードと共に ionide の概要の前提条件をインストールしたら、Visual Studio Code を再起動します。
-3. F# コンパイラと F# で完全修飾パスを使用せずにコマンドラインから対話型を使用することを確認します。 」と入力して行うことができます`fsc`、F# コンパイラのコマンドラインで、`fsi`または`fsharpi`の Visual F# ツールの Windows、Mac または Linux での Mono でそれぞれします。
+3. 使用できることを確認、F#コンパイラとF#完全修飾パスを使用せずにコマンドラインから対話型です。 」と入力して行うことができます`fsc`、F# コンパイラのコマンドラインで、`fsi`または`fsharpi`の Visual F# ツールの Windows、Mac または Linux での Mono でそれぞれします。
 4. プロジェクトのディレクトリで無効な文字があれば、ionide の概要が動作しない可能性があります。  これに該当する場合、プロジェクト ディレクトリの名前を変更します。
 5. Ionide コマンドのいずれも作業している場合、 [Visual Studio Code の keybindings](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts)を誤って上書きしているかどうかを参照してください。
 6. Ionide の概要は、コンピューターに分割すると、上記のいずれが問題を修正、削除してみてください、`ionide-fsharp`コンピューターにディレクトリ プラグイン スイートを再インストールします。
 
-Ionide の概要とは、構築および F# コミュニティのメンバーによって管理されるオープン ソース プロジェクトです。 問題を報告し、気軽に投稿にしてください、 [Ionide VSCode: FSharp GitHub リポジトリ](https://github.com/ionide/ionide-vscode-fsharp)します。
+Ionide の概要とは、構築および F# コミュニティのメンバーによって管理されるオープン ソース プロジェクトです。 問題を報告し、気軽に投稿にしてください、 [Ionide VSCode:FSharp GitHub リポジトリ](https://github.com/ionide/ionide-vscode-fsharp)します。
 
 レポートに問題がある場合に従ってください[問題を報告するときに使用するログを取得するための指示](https://github.com/ionide/ionide-vscode-fsharp#how-to-get-logs-for-debugging--issue-reporting)します。
 

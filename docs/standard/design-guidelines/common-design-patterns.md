@@ -1,19 +1,18 @@
 ---
 title: 共通デザイン パターン
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - design patterns in class libraries
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+author: KrzysztofCwalina
+ms.openlocfilehash: d0b16530863b009010383c8739c9512738dfdffd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580565"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130907"
 ---
 # <a name="common-design-patterns"></a>共通デザイン パターン
 ソフトウェア パターン、パターンの言語、およびパターンの非常に広範なサブジェクトに対処するためのアンチ パターンに多数の書籍があります。 したがって、ガイドラインと非常に限定された一連の .NET Framework Api の設計で頻繁に使用するパターンに関連するディスカッションについても説明します。  
@@ -23,7 +22,7 @@ ms.locfileid: "46580565"
  [Dispose パターン](../../../docs/standard/design-guidelines/dispose-pattern.md)  
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
+ *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
   
 ## <a name="see-also"></a>関連項目
 

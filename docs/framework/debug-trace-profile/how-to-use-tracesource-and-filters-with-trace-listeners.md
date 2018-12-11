@@ -1,5 +1,5 @@
 ---
-title: '方法 : TraceSource とフィルターをトレース リスナーと共に使用する'
+title: 操作方法：TraceSource とフィルターをトレース リスナーと共に使用します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7a912386d93e727a1f4cd2253ad06be76ae3385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc81e1e13f942f5db4fec5cc607264d499b63629
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388343"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146080"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>方法 : TraceSource とフィルターをトレース リスナーと共に使用する
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>操作方法：TraceSource とフィルターをトレース リスナーと共に使用します。
 .NET Framework Version 2.0 の新機能の 1 つは、強化されたトレース システムです。 基本的な前提は変更されていません。トレース メッセージはスイッチ経由でリスナーに送信され、関連付けられている出力メディアに、データを報告します。 バージョン 2.0 の主な違いは、<xref:System.Diagnostics.TraceSource> クラスのインスタンスを介してトレースを開始できることです。 <xref:System.Diagnostics.TraceSource> は、拡張されたトレース システムとして機能することを目的としており、以前の <xref:System.Diagnostics.Trace> トレース クラスと <xref:System.Diagnostics.Debug> トレース クラスの静的メソッドの代わりに使用できます。 使い慣れた <xref:System.Diagnostics.Trace> クラスと <xref:System.Diagnostics.Debug> クラスがまだ存在していますが、推奨される方法は、<xref:System.Diagnostics.TraceSource> クラスを使用したトレースです。  
   
- このトピックでは、アプリケーション構成ファイルと組み合わせた <xref:System.Diagnostics.TraceSource> の使用方法について説明します。  可能であれば、推奨されませんが、構成ファイルを使用せずに <xref:System.Diagnostics.TraceSource> を使用してトレースすることもできます。 構成ファイルを使わずにトレースする方法の詳細については、「[How to: Create and Initialize Trace Sources](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)」(方法: トレース ソースを作成し初期化する) を参照してください。  
+ このトピックでは、アプリケーション構成ファイルと組み合わせた <xref:System.Diagnostics.TraceSource> の使用方法について説明します。  可能であれば、推奨されませんが、構成ファイルを使用せずに <xref:System.Diagnostics.TraceSource> を使用してトレースすることもできます。 構成ファイルを使わずにトレースについては、次を参照してください。[方法。作成し、トレース ソースの初期化](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)します。  
   
 ### <a name="to-create-and-initialize-your-trace-source"></a>トレース ソースを作成して初期化するには  
   
 1.  トレースをアプリケーションにインストルメント化する最初の手順では、トレース ソースを作成します。 各種のコンポーネントを含む大規模なプロジェクトでは、コンポーネントごとに個別のトレース ソースを作成できます。 トレース ソース名にアプリケーション名を使用することをお勧めします。 これにより、別のトレースを容易に別々に保管できます。 次のコードでは、新しいトレース ソース (`mySource)`) を作成し、イベントをトレースするメソッド (`Activity1`) を呼び出します。  トレース メッセージは、既定のトレース リスナーによって書き込まれます。  
   
-    ```  
+    ```csharp
     using System;  
     using System.Diagnostics;  
     using System.Threading;  
@@ -101,7 +101,7 @@ ms.locfileid: "33388343"
   
 1.  構成ファイルは、アプリケーションが初期化されるときにトレース ソースの設定を初期化します。 それらの設定を変更するには、構成ファイルを変更してアプリケーションを再起動するか、または <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> メソッドを使用して、プログラムによってアプリケーションを更新する必要があります。 アプリケーションは、構成ファイルによって設定されたプロパティを動的に変更し、ユーザーによって指定された設定値をオーバーライドできます。  たとえば、現在の構成設定とは無関係に、警告メッセージが常にテキスト ファイルに送られるようにすることもできます。  
   
-    ```  
+    ```csharp
     using System;  
     using System.Diagnostics;  
     using System.Threading;  
@@ -168,5 +168,5 @@ ms.locfileid: "33388343"
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.ConsoleTraceListener>  
  <xref:System.Diagnostics.EventTypeFilter>  
- [方法: トレース ソースを作成し初期化する](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [操作方法：作成し、トレース ソースの初期化](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
  [トレース リスナー](../../../docs/framework/debug-trace-profile/trace-listeners.md)

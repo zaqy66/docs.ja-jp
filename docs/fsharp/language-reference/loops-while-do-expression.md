@@ -2,12 +2,12 @@
 title: 'ループ: while...do 式 (F#)'
 description: 参照してください、... 中は式を使用して、指定したテスト条件が true の場合は、反復実行 (ループ) を実行します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 43e2098ad6c7f103babc2471aebe987040feb989
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45664710"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127278"
 ---
 # <a name="loops-whiledo-expression"></a>ループ: while...do 式
 
@@ -35,11 +35,11 @@ while test-expression do
 Found a 10!
 ```
 
->[!NOTE]
-使用することができます`while...do`シーケンス式とその他のコンピュテーション式で、カスタマイズされたバージョンの場合、`while...do`式を使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)します。
+> [!NOTE]
+> 使用することができます`while...do`シーケンス式とその他のコンピュテーション式で、カスタマイズされたバージョンの場合、`while...do`式を使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 - [F# 言語リファレンス](index.md)
-- [ループ: `for...in` 式](loops-for-in-expression.md)
-- [ループ: `for...to` 式](loops-for-to-expression.md)
+- [ループ:`for...in` 式](loops-for-in-expression.md)
+- [ループ:`for...to` 式](loops-for-to-expression.md)

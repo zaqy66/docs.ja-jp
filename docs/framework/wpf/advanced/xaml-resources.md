@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: c43505497b947004ffb282346459967579d52375
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199545"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126404"
 ---
 # <a name="xaml-resources"></a>XAML リソース
 リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。 リソースの例には、ブラシ、スタイルが含まれます。 この概要でのリソースを使用する方法を説明します[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 作成し、コードを使用して、またはコードの間で同じ意味でリソースにアクセスすることができますもと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 詳細については、次を参照してください。[リソースとコード](../../../../docs/framework/wpf/advanced/resources-and-code.md)します。  
@@ -147,7 +147,7 @@ ms.locfileid: "44199545"
   
  あるスタイル実際には、キーが: 暗黙のキー `typeof(` <xref:System.Windows.Controls.Button>`)`します。 マークアップでは、指定することができます、<xref:System.Windows.Style.TargetType%2A>型として直接指定して (または、必要に応じて使用することができます[{X:type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) 返す、<xref:System.Type>します。  
   
- 使用される既定のテーマ スタイルのメカニズムを通じて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のランタイム スタイルとしてスタイルが適用されることを<xref:System.Windows.Controls.Button> ページで、場合でも、<xref:System.Windows.Controls.Button>自体を指定しません、<xref:System.Windows.FrameworkElement.Style%2A>プロパティまたは特定のリソーススタイルへの参照します。 ページで定義されている、スタイルはテーマ ディクショナリのスタイルと同じキーを使用してテーマ ディクショナリのスタイルより前参照シーケンスの前にあります。 指定することだけでした`<Button>Hello</Button>` ページで、およびスタイルで定義されている任意の場所で<xref:System.Windows.Style.TargetType%2A>の`Button`そのボタンに適用されます。 同じ型の値を持つスタイルを明示的に引き続きキーことができる場合は、 <xref:System.Windows.Style.TargetType%2A>、わかりやすくするため、マークアップでは省略可能です。  
+ 使用される既定のテーマ スタイルのメカニズムを通じて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のランタイム スタイルとしてスタイルが適用されることを<xref:System.Windows.Controls.Button> ページで、場合でも、<xref:System.Windows.Controls.Button>自体を指定しません、<xref:System.Windows.FrameworkElement.Style%2A>プロパティまたは特定のリソーススタイルへの参照します。 ページで定義されているスタイルはテーマ ディクショナリのスタイルと同じキーを使用して、テーマ ディクショナリ スタイルより参照シーケンスの前にあります。 指定することだけでした`<Button>Hello</Button>` ページで、およびスタイルで定義されている任意の場所で<xref:System.Windows.Style.TargetType%2A>の`Button`そのボタンに適用されます。 同じ型の値を持つスタイルを明示的に引き続きキーことができる場合は、 <xref:System.Windows.Style.TargetType%2A>、わかりやすくするため、マークアップでは省略可能です。  
   
  場合、スタイルの暗黙的なキーは、コントロールに適用されません<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>は`true`(またを注意<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>ネイティブの動作、コントロール クラスではなく明示的に、コントロールのインスタンスの一部として設定することがあります)。 また、暗黙的なキーの派生クラスのシナリオをサポートするために、制御する必要がありますオーバーライド<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(の一部として提供されるすべての既存コントロール[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]これを行う)。 スタイル、テーマ、およびコントロールのデザインの詳細については、次を参照してください。[スタイルのコントロールを設計するためのガイドライン](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)します。  
   

@@ -1,24 +1,24 @@
 ---
-title: オンプレミスで Windows コンテナーを展開するときに IaaS VM インフラストラクチャ
-description: Azure のクラウドと Windows コンテナーでの既存の .NET アプリケーションを最新化 |オンプレミスで Windows コンテナーを展開するときに IaaS VM インフラストラクチャ
+title: オンプレミスで Windows コンテナーをデプロイするときに IaaS VM インフラストラクチャ
+description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |オンプレミスで Windows コンテナーをデプロイするときに IaaS VM インフラストラクチャ
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 5583386a31b9a76a8413703ec611e8452d452eb1
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: ed9b64927372837c3ecf9377261150d4ee29d323
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958162"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149251"
 ---
-# <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>オンプレミスで Windows コンテナーを展開するときに IaaS VM インフラストラクチャ
+# <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>オンプレミスで Windows コンテナーをデプロイするときに IaaS VM インフラストラクチャ
 
--   組織は、クラウドに移動する準備ができていないか、ビジネスの目的で、クラウドに移動することができない可能性があります。 しかし、Windows コンテナーを使用して、独自のデータ センター内のメリットを享受することもできます。
+-   組織は、クラウドに移行する準備が完了できない可能性があります。 またはビジネス上の理由をクラウドに移行できない可能性があります。 ただし、独自のデータ センターで Windows コンテナーを使用する特典を引き続き利用できます。
 
--   使用されている内部設置型をしているし、する速度が低下するクラウドに移行しようとすると他の成果物があります。 たとえば、セキュリティまたは認証依存関係の内部設置型 Windows Server Active Directory、またはその他のオンプレミス資産です。
+-   オンプレミスで使用がいると、クラウドに移行しようとするときに低下する可能性がありますには、他の成果物を使用するがあります。 たとえば、セキュリティまたは認証の依存関係、オンプレミス Windows Server Active Directory、またはその他のオンプレミス アセット。
 
--   Windows コンテナーを今日使用を開始する場合することができますの段階的移行をクラウドに明日言えますからです。 Windows コンテナーにはロックで使用して、任意のクラウドの配置の単位が高まっていません。
+-   Windows コンテナーをご利用を開始する場合は、行うことができます段階的な移行をクラウドに明日立場から。 Windows コンテナーは、展開のロックなしで、クラウドの単位になっています。
 
 >[!div class="step-by-step"]
-[前へ](when-not-to-deploy-to-windows-containers.md)
-[次へ](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+>[前へ](when-not-to-deploy-to-windows-containers.md)
+>[次へ](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)

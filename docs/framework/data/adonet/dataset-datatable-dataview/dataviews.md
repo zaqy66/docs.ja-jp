@@ -2,17 +2,17 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 75719e91daba189c1d93491a1db26acc80100bea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 93789cf64653af863cbedbf1caeea886afb713f5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514753"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129390"
 ---
 # <a name="dataviews"></a>DataView
 <xref:System.Data.DataView> では、<xref:System.Data.DataTable> に格納されているデータのさまざまなビューを作成できます。この機能は、データ連結アプリケーションで頻繁に使用されます。 使用して、 **DataView**、さまざまな並べ替え順序、テーブル内のデータを公開して、によって行の状態やフィルター式に基づいてデータをフィルター処理できます。  
   
- A **DataView** 、基になるデータの動的なビューを提供します。 **DataTable**: コンテンツ、並べ替え、およびメンバーシップ発生時に変更を反映します。 この動作は異なります、**選択**のメソッド、 **DataTable**、返された、<xref:System.Data.DataRow>特定のフィルターまたは並べ替え順序に基づいて、テーブルからの配列: thiscontent への変更が反映されます、テーブルが、メンバーシップを基になると、順序付けは、静的なままです。 動的機能、 **DataView**データ バインド アプリケーションに最適です。  
+ A **DataView** 、基になるデータの動的なビューを提供します。 **DataTable**: コンテンツ、並べ替え、およびメンバーシップ発生時に変更を反映します。 この動作は異なります、**選択**のメソッド、 **DataTable**、返された、<xref:System.Data.DataRow>特定のフィルターまたは並べ替え順序に基づいて、テーブルからの配列: このコンテンツへの変更が反映されます、テーブルが、メンバーシップを基になると、順序付けは、静的なままです。 動的機能、 **DataView**データ バインド アプリケーションに最適です。  
   
  A **DataView**では、さまざまな並べ替えやフィルター処理条件を適用できる、データベース ビューと同様に、データの 1 つのセットの動的な表示。 ただし、データベース ビューとは異なり、 **DataView**テーブルとして扱うことはできませんし、結合テーブルのビューを提供することはできません。 また、ソース テーブルの既存の列を除外したり、ソース テーブルにない列 (計算列など) を追加することはできません。  
   

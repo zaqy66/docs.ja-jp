@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 13dec9f298655a4bfe6672e2dbba7c7262379cc4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 60f39d7bd294a737b5e3c6d5877f5d7e46269dc1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202882"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125510"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong データ型 (Visual Basic)
 
@@ -48,7 +48,7 @@ Visual Basic 2017 から始めて、使用することできますも、アン�
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例えば:
+Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -56,7 +56,7 @@ Dim number As ULong = &H_F9AC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-数値リテラルを含めることも、`UL`または`ul`[文字入力](../../programming-guide\language-features\data-types/type-characters.md)を示すために、`ULong`データ型は、次の例を示します。
+数値リテラルを含めることも、`UL`または`ul`[文字入力](../../programming-guide/language-features/data-types/type-characters.md)を示すために、`ULong`データ型は、次の例を示します。
 
 ```vb
 Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
@@ -84,5 +84,5 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
  [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
  [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [方法 : 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [操作方法：符号なしの型を Windows 関数を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

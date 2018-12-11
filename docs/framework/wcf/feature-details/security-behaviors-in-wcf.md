@@ -3,11 +3,11 @@ title: Windows Communication Foundation のセキュリティ動作
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192903"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127421"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
 Windows Communication Foundation (WCF) での動作は、サービス レベルまたはエンドポイント レベルでの実行時の動作を変更します。 (一般に、表示動作の詳細については[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md))。*セキュリティ動作*および監査ログの資格情報、認証、承認、制御できるようにします。 動作は、プログラムまたは構成を通じて使用できます。 ここでは、セキュリティ機能に関連する以下の動作の構成について説明します。  
@@ -53,10 +53,10 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
 ### <a name="servicecertificate-element"></a>\<serviceCertificate > 要素  
  メッセージ セキュリティ モードを使用しているクライアントへのサービスの認証に使用する X.509 証明書を指定するには、この要素を使用します。 定期的に更新される証明書を使用している場合は、証明書のサムプリントが変更されます。 その場合、証明書を同じサブジェクト名で再発行できるため、`X509FindType` としてサブジェクト名を使用します。  
   
- 詳細については、要素を使用して、次を参照してください。[方法: Specify Client Credential Values](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)します。  
+ 詳細については、要素を使用して、次を参照してください。[方法。クライアント資格情報の値を指定](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)します。  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<証明書 > の\<clientCertificate > 要素  
- 使用して、 [\<証明書 >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)要素サービスは、クライアントと安全に通信するには、事前に、クライアントの証明書がある必要とします。 このような状況は、双方向通信パターンを使用する場合に生じます。 より一般的な要求/応答パターンでは、クライアントが自身の証明書を要求に含め、サービスはこの証明書を使用して、クライアントへの応答をセキュリティで保護します。 ただし、双方向通信パターンには要求も応答もありません。 サービスは、クライアントの証明書を通信から推測できないため、クライアントへのメッセージをセキュリティで保護するためにクライアントの証明書が前もって必要になります。 クライアントの証明書を帯域外方式で取得し、この要素を使用して証明書を指定する必要があります。 双方向サービスの詳細については、次を参照してください。[方法: 双方向コントラクトを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)します。  
+ 使用して、 [\<証明書 >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)要素サービスは、クライアントと安全に通信するには、事前に、クライアントの証明書がある必要とします。 このような状況は、双方向通信パターンを使用する場合に生じます。 より一般的な要求/応答パターンでは、クライアントが自身の証明書を要求に含め、サービスはこの証明書を使用して、クライアントへの応答をセキュリティで保護します。 ただし、双方向通信パターンには要求も応答もありません。 サービスは、クライアントの証明書を通信から推測できないため、クライアントへのメッセージをセキュリティで保護するためにクライアントの証明書が前もって必要になります。 クライアントの証明書を帯域外方式で取得し、この要素を使用して証明書を指定する必要があります。 双方向サービスの詳細については、次を参照してください。[方法。双方向コントラクトを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)します。  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<認証 > の\<clientCertificate > 要素  
  [\<認証 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)要素では、クライアントを認証する方法をカスタマイズすることができます。 `CertificateValidationMode` 属性は、`None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust`、または `Custom` に設定できます。 既定では、レベルに設定が`ChainTrust`で終了する証明書の階層で各証明書を検索するを指定する、*ルート機関*チェーンの上部にあります。 これは最もセキュリティで保護されているモードです。 また、値を `PeerOrChainTrust` に設定することもできます。これは、信頼されたチェーン内の証明書と共に、自己発行された証明書 (ピア信頼) も受け入れるよう指定します。 自己発行の資格情報は信頼された証明機関から購入したものである必要はないため、この値はクライアントとサービスの開発およびデバッグに使用されます。 クライアントを展開するときは、代わりに `ChainTrust` 値を使用します。 また、値を `Custom` に設定することもできます。 `Custom` 値に設定する場合は、`CustomCertificateValidatorType` 属性を、証明書の検証に使用するアセンブリと型に設定する必要もあります。 独自のカスタム検証を作成するには、抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスを継承する必要があります。  
@@ -84,7 +84,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
   
  詳細については、「 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 」を参照してください。  
   
- 詳細については、この構成要素を使用して、次を参照してください。[方法: フェデレーション サービスで資格情報の構成](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)します。  
+ 詳細については、この構成要素を使用して、次を参照してください。[方法。フェデレーション サービスで資格情報を構成](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)します。  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>匿名の CardSpace ユーザーの許可  
  `AllowUntrustedRsaIssuers` 要素の `<IssuedTokenAuthentication>` 属性を `true` に設定すると、任意の RSA キー ペアで署名された自己発行トークンを提示することがすべてのクライアントに明示的に許可されます。 発行者が*信頼されていない*キーに関連付けられている発行者のデータがあるないためです。 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] ユーザーは、ID の自己提供クレームを含む自己発行カードを作成できます。 この機能を使用するときは十分に注意してください。 この機能を使用する場合は、RSA 公開キーを、ユーザー名と一緒にデータベースに格納する必要のある比較的安全なパスワードとして考えます。 サービスへのクライアント アクセスを許可する前に、クライアントから提示された RSA 公開キーを、提示されたユーザー名に対応する格納済みの公開キーと比較して検証します。 これは、ユーザーが各自のユーザー名を登録し、自己発行の RSA 公開キーに関連付けることができる登録プロセスが確立されていることが前提となります。  
@@ -115,13 +115,13 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
 ```  
   
 #### <a name="clientcertifictate-element"></a>\<clientCertifictate > 要素  
- この要素で、クライアントの認証に使用する証明書を設定します。 詳細については、次を参照してください。[方法: Specify Client Credential Values](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)します。  
+ この要素で、クライアントの認証に使用する証明書を設定します。 詳細については、次を参照してください。[方法。クライアント資格情報の値を指定](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)します。  
   
 #### <a name="httpdigest"></a>\<httpDigest >  
  この機能は、Windows の Active Directory およびインターネット インフォメーション サービス (IIS) と共に有効にする必要があります。 詳細については、次を参照してください。 [Digest Authentication in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443)します。  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > 要素  
- [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)トークン、またはセキュリティ トークン サービスで使用する動作のローカル発行者の構成に使用する要素が含まれています。 ローカル発行者を使用するクライアントの構成については、次を参照してください。[方法: ローカル発行者を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)します。  
+ [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)トークン、またはセキュリティ トークン サービスで使用する動作のローカル発行者の構成に使用する要素が含まれています。 ローカル発行者を使用するクライアントの構成については、次を参照してください。[方法。ローカル発行者を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)します。  
   
 #### <a name="localissueraddress"></a>\<localissueraddress プロパティ >  
  既定のセキュリティ トークン サービス アドレスを指定します。 これは、使用時に、<xref:System.ServiceModel.WSFederationHttpBinding>またはフェデレーション バインディングの発行者アドレスが、セキュリティ トークン サービスの URL を指定していません `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` または`null`です。 そのような場合、<xref:System.ServiceModel.Description.ClientCredentials> は、ローカルの発行者およびバインディングのアドレスと共に構成し、その発行者と通信するために使用する必要があります。  
@@ -144,7 +144,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
   
  使用して、 [ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)と[\<追加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)特定のサービスに関連付けられているサービス証明書を設定します。 `<add>` 要素には、証明書をサービスに関連付けるために使用する `targetUri` 属性があります。  
   
- [\<認証 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)要素は、証明書の認証に使用される信頼レベルを指定します。 既定のレベルは "ChainTrust" に設定され、チェーンの最上位の信頼された証明機関で終了する証明書の階層構造で各証明書を検索するよう指定します。 これは最もセキュリティで保護されているモードです。 また、値を "PeerOrChainTrust" に設定することもできます。これは、信頼されたチェーン内の証明書と共に、自己発行された証明書 (ピア信頼) も受け入れることを指定します。 自己発行の資格情報は信頼された証明機関から購入したものである必要はないため、この値はクライアントとサービスの開発およびデバッグに使用されます。 クライアントを展開するときは、代わりに "ChainTrust" 値を使用します。 値を "Custom" または "None" に設定できます。 "Custom" 値を使用するには、`CustomCertificateValidatorType` 属性も証明書の検証に使用するアセンブリと型に設定する必要があります。 独自のカスタム検証を作成するには、抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスを継承する必要があります。 詳細については、次を参照してください。[方法: カスタム証明書の検証を使用するサービスを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)します。  
+ [\<認証 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)要素は、証明書の認証に使用される信頼レベルを指定します。 既定のレベルは "ChainTrust" に設定され、チェーンの最上位の信頼された証明機関で終了する証明書の階層構造で各証明書を検索するよう指定します。 これは最もセキュリティで保護されているモードです。 また、値を "PeerOrChainTrust" に設定することもできます。これは、信頼されたチェーン内の証明書と共に、自己発行された証明書 (ピア信頼) も受け入れることを指定します。 自己発行の資格情報は信頼された証明機関から購入したものである必要はないため、この値はクライアントとサービスの開発およびデバッグに使用されます。 クライアントを展開するときは、代わりに "ChainTrust" 値を使用します。 値を "Custom" または "None" に設定できます。 "Custom" 値を使用するには、`CustomCertificateValidatorType` 属性も証明書の検証に使用するアセンブリと型に設定する必要があります。 独自のカスタム検証を作成するには、抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスを継承する必要があります。 詳細については、次を参照してください。[方法。カスタム証明書の検証を使用するサービスを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)します。  
   
  [\<認証 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)要素が含まれています、`RevocationMode`失効証明書をチェックする方法を指定する属性。 既定値は "online" です。この場合、証明書が失効していないかどうかが自動的にチェックされます。 詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。  
   

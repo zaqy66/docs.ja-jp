@@ -1,19 +1,18 @@
 ---
-title: System.ServiceModel.Security.SecurityIdentityVerificationSuccess
-ms.date: 03/30/2017
-ms.assetid: 6744ac2f-4944-421d-9a17-bcc64f0f3d2f
-ms.openlocfilehash: bc274fe7085becb8698a9e1a66aecf5ae034a58f
+title: System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress
+ms.date: 10/30/2018
+ms.openlocfilehash: 4e745d18dbc615e2807942fcfa5687a1229ea547
 ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150759"
+ms.locfileid: "53131603"
 ---
-# <a name="systemservicemodelsecuritysecurityidentityverificationsuccess"></a>System.ServiceModel.Security.SecurityIdentityVerificationSuccess
-System.ServiceModel.Security.SecurityIdentityVerificationSuccess  
+# <a name="systemservicemodelwarnservicehealthenablednobaseaddress"></a>System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress
+System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress  
   
 ## <a name="description"></a>説明  
- ID の検査が成功しました。  
+ ServiceHealthBehavior 正常性 ページは相対アドレスで有効にし、ベース アドレスがないために作成することはできません。  
   
 ## <a name="see-also"></a>関連項目  
  [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  

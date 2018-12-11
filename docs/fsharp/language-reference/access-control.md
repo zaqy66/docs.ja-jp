@@ -2,12 +2,12 @@
 title: アクセス制御 (F#)
 description: 型、メソッド、および F# のプログラミング言語で、関数などのプログラミング要素へのアクセスを制御する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 66a260d326acf07391e3775e5a7853654b4feee4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 136eba5ec33fa6128e677b614fc0ace3c71d17df
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43803975"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153710"
 ---
 # <a name="access-control"></a>アクセス制御
 
@@ -15,7 +15,7 @@ ms.locfileid: "43803975"
 
 ## <a name="basics-of-access-control"></a>アクセス制御の基礎
 
-F# でのアクセス制御指定子`public`、 `internal`、および`private`モジュール、型、メソッド、値の定義、関数、プロパティ、および明示的なフィールドに適用できます。
+F#、コントロールのアクセス指定子`public`、 `internal`、および`private`モジュール、型、メソッド、値の定義、関数、プロパティ、および明示的なフィールドに適用できます。
 
 - `public` すべての呼び出し元によって、エンティティにアクセスできることを示します。
 
@@ -23,8 +23,8 @@ F# でのアクセス制御指定子`public`、 `internal`、および`private`�
 
 - `private` エンティティを外側の型またはモジュールからのみアクセスできることを示します。
 
->[!NOTE]
-アクセス指定子`protected`をサポートしている言語で作成されたタイプを使用している場合は許容されるが、F# で使用されていない`protected`アクセスします。 そのため、保護されているメソッドをオーバーライドする場合、メソッドが、クラスとその子孫内でのみアクセス可能なします。
+> [!NOTE]
+> アクセス指定子`protected`をサポートしている言語で作成されたタイプを使用している場合は許容されるが、F# で使用されていない`protected`アクセスします。 そのため、保護されているメソッドをオーバーライドする場合、メソッドが、クラスとその子孫内でのみアクセス可能なします。
 
 場合を除き、エンティティの名前の前に、指定子を配置する一般に、`mutable`または`inline`指定子を使用すると、コントロールのアクセス指定子の後に表示されます。
 

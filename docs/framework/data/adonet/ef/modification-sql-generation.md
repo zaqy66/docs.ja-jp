@@ -2,12 +2,12 @@
 title: 変更 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: bfeb4f826022d39b2a45132a5b2bf344ef4c99c6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836940"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127070"
 ---
 # <a name="modification-sql-generation"></a>変更 SQL 生成
 ここでは、SQL:1999 準拠のデータベース プロバイダーのための変更 SQL 生成モジュールを開発する方法について説明します。 このモジュールは、変更コマンド ツリーを適切な SQL INSERT ステートメント、UPDATE ステートメント、または DELETE ステートメントに変換します。  
@@ -83,11 +83,11 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression。  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>サンプル プロバイダーでの変更 SQL 生成  
- [Entity Framework サンプル プロバイダー](https://go.microsoft.com/fwlink/?LinkId=180616)をサポートする ADO.NET データ プロバイダーのコンポーネントを示して、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]します。 このサンプルは、SQL Server 2005 データベースを対象としており、System.Data.SqlClient ADO.NET 2.0 データ プロバイダーの最上位にラッパーとして実装されます。  
+ [Entity Framework サンプル プロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)をサポートする ADO.NET データ プロバイダーのコンポーネントを示して、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]します。 このサンプルは、SQL Server 2005 データベースを対象としており、System.Data.SqlClient ADO.NET 2.0 データ プロバイダーの最上位にラッパーとして実装されます。  
   
  SQL Generation\DmlSqlGenerator.cs ファイル内にあるサンプル プロバイダーの変更 SQL 生成モジュールは、DbModificationCommandTree を入力として受け取り、単一の変更 SQL ステートメントを生成します。この後に、DbModificationCommandTree によって指定された場合にリーダーを返す SELECT ステートメントが続く場合もあります。 生成されたコマンドの構造は、対象の SQL Server データベースの影響を受けます。  
   
-### <a name="helper-classes-expressiontranslator"></a>ヘルパー クラス: ExpressionTranslator  
+### <a name="helper-classes-expressiontranslator"></a>ヘルパー クラス。ExpressionTranslator  
  ExpressionTranslator は、DbExpression 型のすべての変更コマンド ツリー プロパティのための一般的な軽量のトランスレーターです。 このトランスレーターは、変更コマンド ツリーのプロパティを制限する式の型の変換のみをサポートし、特定の制約を考慮して構築されています。  
   
  以降では、特定の式の型へのアクセスについて説明します (重要度の低い変換を含むノードは省略しています)。  

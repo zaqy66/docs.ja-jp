@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170225"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127083"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 アプリケーション ドメイン情報  
@@ -41,84 +41,84 @@ class AppDomainInfo
 ### <a name="appdomainid"></a>AppDomainId  
  データ型 : sint32  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  AppDomain の ID です。  
   
 ### <a name="isdefault"></a>IsDefault  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  AppDomain が既定の AppDomain かどうかを示します。  
   
 ### <a name="logmalformedmessages"></a>LogMalformedMessages  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り/書き込み  
+ アクセスの種類:読み取り/書き込み  
   
  非整形式メッセージをログに記録するかどうかを指定する値です。  
   
 ### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り/書き込み  
+ アクセスの種類:読み取り/書き込み  
   
  メッセージをサービス レベルでトレースするかどうかを指定する値です (暗号化およびトランスポート関連の変換前)。  
   
 ### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り/書き込み  
+ アクセスの種類:読み取り/書き込み  
   
  メッセージをトランスポート レベルでトレースするかどうかを指定する値です。  
   
 ### <a name="messageloggingtracelisteners"></a>MessageLoggingTraceListeners  
- データ型 : TraceListener 配列  
+ データの種類:TraceListener 配列  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  System.Wmi.MessageLogging トレース ソースをリッスンするコレクション トレース リスナーです。  
   
 ### <a name="name"></a>名前  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  AppDomain の名前です。  
   
 ### <a name="performancecounters"></a>PerformanceCounters  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  AppDomain におけるアクティブなパフォーマンス カウンターのスコープです。  
   
 ### <a name="processid"></a>ProcessId  
  データ型 : sint32  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  プロセス ID です。  
   
 ### <a name="serviceconfigpath"></a>ServiceConfigPath  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  サービスの構成へのパスです。  
   
 ### <a name="tracelevel"></a>TraceLevel  
  データ型: string  
   
- アクセスの種類 : 読み取り/書き込み  
+ アクセスの種類:読み取り/書き込み  
   
  System.Wmi トレース ソースのトレース レベル。  
   
 ### <a name="servicemodeltracelisteners"></a>ServiceModelTraceListeners  
- データ型 : TraceListener 配列  
+ データの種類:TraceListener 配列  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  System.ServiceModel トレース ソースのリスナーのコレクション。  
   

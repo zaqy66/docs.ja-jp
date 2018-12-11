@@ -4,12 +4,12 @@ description: Microsoft プラットフォームとツールでコンテナー化
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202179"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152878"
 ---
 # <a name="common-container-design-principles"></a>一般的なコンテナー設計の原則
 
@@ -21,7 +21,6 @@ ms.locfileid: "50202179"
 
 複数のプロセスを 1 つのコンテナーで実行されている必要があるシナリオがあります。 任意のアーキテクチャのドキュメントはありません、"never、"は常にも、「常時」。 一般的なパターンは複数のプロセスを必要とするシナリオでは、使用する[スーパーバイザー](http://supervisord.org/)します。
 
-
 >[!div class="step-by-step"]
-[前へ](design-docker-applications.md)
-[次へ](monolithic-applications.md)
+>[前へ](design-docker-applications.md)
+>[次へ](monolithic-applications.md)

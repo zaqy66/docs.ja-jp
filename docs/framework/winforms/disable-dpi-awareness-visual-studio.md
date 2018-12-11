@@ -7,11 +7,11 @@ ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296738"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151266"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio では、DPI の認識を無効にします。
 
@@ -51,14 +51,14 @@ Visual Studio を DPI に対応していないプロセスとして実行する�
 
 Visual Studio は、レジストリを変更して DPI 対応としてマークできます。 開いている**レジストリ エディター**にエントリを追加し、 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers**サブキー。
 
-**エントリ**: C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**エントリ**:C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
 
    > [!NOTE]
    > Visual Studio 2017 の Professional または Enterprise edition を使用している場合は置き換えます**コミュニティ**で**Professional**または**Enterprise**エントリにします。 また、必要に応じて、ドライブ文字を置き換えます。
 
-**型**: REG_SZ
+**型**:REG_SZ
 
-**値**: DPIUNAWARE
+**値**:DPIUNAWARE
 
 > [!NOTE]
 > Visual Studio は、レジストリ エントリを削除するまでに、DPI に対応していないモードでは残ります。

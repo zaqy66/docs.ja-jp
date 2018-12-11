@@ -2,16 +2,16 @@
 title: 数学関数
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837311"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143676"
 ---
 # <a name="mathematical-functions"></a>数学関数
 
-.NET Framework Data Provider for SQL Server (SqlClient) には、引数として指定された入力値に対して計算を実行し、数値結果を返す数学関数が用意されています。 これらの関数は、SqlClient の SqlServer 名前空間に存在します。 Entity Framework は、プロバイダーの名前空間プロパティを使用することにより、型や関数など、特定のコンストラクターに対してこのプロバイダーによってどのプレフィックスが使用されているかを特定できます。次の表に、SqlClient の数学関数を示します。  
+.NET Framework Data Provider for SQL Server (SqlClient) には、引数として指定された入力値に対して計算を実行し、数値結果を返す数学関数が用意されています。 これらの関数は、SqlClient の SqlServer 名前空間に存在します。 Entity Framework は、プロバイダーの名前空間プロパティを使用することにより、型や関数など、特定のコンストラクターに対してこのプロバイダーによってどのプレフィックスが使用されているかを特定できます。 次の表では、SqlClient の数学関数について説明します。  
   
 ## <a name="absexpression"></a>ABS(expression)
 
@@ -19,7 +19,7 @@ ms.locfileid: "48837311"
 
 **引数**
 
-`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。
+`expression`:`Int32`、 `Int64`、 `Double`、または`Decimal`します。
 
 **戻り値**
 
@@ -35,7 +35,7 @@ ms.locfileid: "48837311"
 
 **引数**
 
-`expression`: `Double`。
+`expression`:`Double`。
 
 **戻り値**
 
@@ -51,7 +51,7 @@ ms.locfileid: "48837311"
 
 **引数**
 
-`expression`: `Double`。
+`expression`:`Double`。
 
 **戻り値**
 
@@ -67,7 +67,7 @@ ms.locfileid: "48837311"
 
 **引数**
 
-`expression`: `Double`。
+`expression`:`Double`。
 
 **戻り値**
 
@@ -83,7 +83,7 @@ ms.locfileid: "48837311"
 
 **引数**
 
-`expression`: `Double`。
+`expression`:`Double`。
 
 **戻り値**
 
@@ -99,7 +99,7 @@ ms.locfileid: "48837311"
 
 **引数**
 
-`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。
+`expression`:`Int32`、 `Int64`、 `Double`、または`Decimal`します。
 
 **戻り値**
 
@@ -116,7 +116,7 @@ ms.locfileid: "48837311"
 
 **引数** 
 
-`expression`: `Double`。 
+`expression`:`Double`。 
 
 **戻り値** 
 
@@ -132,7 +132,7 @@ ms.locfileid: "48837311"
 
 **引数** 
 
-`expression`: `Double`。 
+`expression`:`Double`。 
 
 **戻り値** 
 
@@ -148,7 +148,7 @@ ms.locfileid: "48837311"
 
 **引数** 
 
-`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。 
+`expression`:`Int32`、 `Int64`、 `Double`、または`Decimal`します。 
 
 **戻り値** 
 
@@ -164,7 +164,7 @@ ms.locfileid: "48837311"
 
 **引数** 
 
-`expression`: `Double`。 
+`expression`:`Double`。 
 
 **戻り値** 
 
@@ -178,7 +178,7 @@ ms.locfileid: "48837311"
 
 **引数** 
 
-`expression`: `Double`。 
+`expression`:`Double`。 
 
 **戻り値** 
 
@@ -195,7 +195,7 @@ ms.locfileid: "48837311"
 
 **引数** 
 
-`expression`: `Double`。 
+`expression`:`Double`。 
 
 **戻り値** 
 
@@ -211,7 +211,7 @@ ms.locfileid: "48837311"
 
 **引数** 
 
-`expression`: `Double`。 
+`expression`:`Double`。 
 
 **戻り値** 
 
@@ -258,7 +258,7 @@ ms.locfileid: "48837311"
 
 **引数** 
 
-`expression`: `Int32`、`Int64`、`Double`、または `Decimal`。 
+`expression`:`Int32`、 `Int64`、 `Double`、または`Decimal`します。 
 
 **戻り値** 
 
@@ -326,7 +326,7 @@ ms.locfileid: "48837311"
 
 **引数** 
 
-`expression`: `Double`。 
+`expression`:`Double`。 
 
 **戻り値** 
 
@@ -340,7 +340,7 @@ ms.locfileid: "48837311"
 
 **引数** 
 
-`expression`: `Double`。 
+`expression`:`Double`。 
 
 **戻り値** 
 
@@ -354,7 +354,7 @@ ms.locfileid: "48837311"
 
 **引数** 
 
-`expression`: `Double`。 
+`expression`:`Double`。 
 
 **戻り値** 
 
@@ -384,8 +384,8 @@ ms.locfileid: "48837311"
 
 SqlClient でサポートされる数学関数の詳細については、SqlClient プロバイダー マニフェストで指定した SQL Server のバージョンのドキュメントを参照してください。  
   
-**SQL Server 2005:** [数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**SQL Server 2008:** [数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**SQL Server 2012 以降:** [数学関数 (TRANSACT-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+**SQL Server 2005:**[数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+**SQL Server 2008:**[数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
+**SQL Server 2012 以降の場合:**[数学関数 (TRANSACT-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
  [Entity Framework 用 SqlClient 関数](sqlclient-for-ef-functions.md)

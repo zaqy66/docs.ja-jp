@@ -1,32 +1,33 @@
 ---
-title: ADO.NET コード サンプルについては、サンプル データベースを取得します。
-description: ADO.NET のドキュメントと SQL Server および管理ツールのコード サンプルで使用されるサンプル データベースをダウンロードします。
+title: ADO.NET コード サンプルについては、サンプルの SQL Server データベースを取得します。
+description: ADO.NET のドキュメントと SQL Server および管理ツールのコード サンプルで使用されるサンプルの SQL Server データベースをダウンロードします。
 ms.date: 10/18/2018
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 9779300288135cb9332a028d547ce55a07e89471
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ab65f992c9cf2b65271a237fa06eb96e358ae6a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188392"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153489"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>ADO.NET コード サンプルについては、サンプル データベースを取得します。
 
-さまざまなサンプルおよびチュートリアルで、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメントは、サンプル データベースと SQL Server Express を使用します。 これらの製品を無料では、Microsoft からダウンロードできます。
+さまざまな例とチュートリアルで、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメントは、SQL Server のサンプル データベースおよび SQL Server Express を使用します。 これらの製品を無料では、Microsoft からダウンロードできます。
 
-## <a name="get-the-northwind-sample-database"></a>Northwind サンプル データベースします。
+## <a name="get-the-northwind-sample-database-for-sql-server"></a>SQL Server の Northwind サンプル データベースを取得します。
 
-Microsoft ダウンロード センターの次のページからは、Northwind サンプル データベースをダウンロードします。
+スクリプトをダウンロードする`instnwnd.sql`作成し、SQL Server の Northwind サンプル データベースを読み込むには、次の GitHub リポジトリから。
 
-[Northwind および Pubs サンプル データベース](https://go.microsoft.com/fwlink?linkid=64296)
+[Microsoft SQL Server 用の Northwind および pubs サンプル データベース](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
 
-ファイルがダウンロードされた後は、データベースとスクリプトを抽出するファイルをダブルクリックします。 フォルダーに既定では、ファイルがインストールされている`<drive>:\SQL Server 2000 Sample Databases`します。
+Northwind データベースを使用する前に、ダウンロードした実行がある`instnwnd.sql`を使用して SQL Server のインスタンス上のデータベースを再作成するスクリプト ファイル[SQL Server Management Studio](#get_ssms)または同様のツール。 リポジトリに Readme ファイルの指示に従います。
 
-使用して SQL Server のインスタンス上のデータベースを再作成する必要がある、Northwind データベースを使用する前に[SQL Server Management Studio](#get_ssms)または同様のツールを実行する、`instnwnd.sql`インストール フォルダーにスクリプト ファイル。
+> [!TIP]
+> Microsoft Access の Northwind データベースで必要な場合を参照してください。 [Microsoft Access の Northwind サンプル データベースをインストール](#northwind_access)します。
 
-## <a name="get-the-adventureworks-sample-database"></a>AdventureWorks サンプル データベースします。
+## <a name="get-the-adventureworks-sample-database-for-sql-server"></a>SQL Server の AdventureWorks サンプル データベースを取得します。
 
-次の GitHub リポジトリから AdventureWorks サンプル データベースをダウンロードします。
+次の GitHub リポジトリからの SQL Server の AdventureWorks サンプル データベースをダウンロードします。
 
 [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 
@@ -38,7 +39,7 @@ SQL Server Express は、アプリケーションで再配布する SQL Server �
   
 [SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-使用している場合[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)、SQL Server Express LocalDB は、無料の Community edition と Professional 以上のエディションに含まれています。  
+使用している場合[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)、SQL Server Express LocalDB は、Visual Studio の無料の Community edition と Professional 以上のエディションに含まれます。  
 
 ## <a name="get_ssms"></a> SQL Server Management Studio を入手します。
 表示またはダウンロードしたデータベースを変更する場合は、SQL Server Management Studio (SSMS) を使用することができます。 次のページから SSMS をダウンロードします。
@@ -46,7 +47,23 @@ SQL Server Express は、アプリケーションで再配布する SQL Server �
 [SQL Server Management Studio (SSMS) のダウンロードします。](/sql/ssms/download-sql-server-management-studio-ssms) 
 
 また、表示、Visual Studio 統合開発環境 (IDE) でデータベースを管理およびできます。 [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)からデータベースに接続する**SQL Server オブジェクト エクスプ ローラー**、データベースにデータ接続を作成または**サーバー エクスプ ローラー**します。 これらのエクスプ ローラー ウィンドウを開き、**ビュー**メニュー。
-  
+
+## <a name="northwind_access"></a> Microsoft Access の Northwind サンプル データベースをインストールします。
+
+Microsoft ダウンロード センターでは、Microsoft Access の Northwind サンプル データベースを使用できません。 Access から直接 Northwind をインストールするには、次のことを行います。
+
+1. アクセスを開きます。
+
+1. Enter **Northwind**で、**オンライン テンプレートの検索**ボックスを選び **」と入力**します。
+
+1. [結果] 画面で選択**Northwind**します。 Northwind データベースの説明では、新しいウィンドウが開きます。
+
+1. 新しいウィンドウで、**ファイル名**テキスト ボックスに、Northwind データベースのコピーのファイル名を指定します。
+
+1. **[作成]** を選択します。 アクセスは、Northwind データベースをダウンロードし、ファイルを準備します。
+
+1. このプロセスが完了したら、[ようこそ] 画面で、データベースを開きます。
+
 ## <a name="see-also"></a>関連項目
 
 - [はじめに](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

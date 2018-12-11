@@ -3,13 +3,13 @@ title: LINQ to DataSet プロジェクトで Visual Studio を作成します。
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
 ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297017"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154035"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>方法: LINQ to DataSet プロジェクトで Visual Studio を作成
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>操作方法：LINQ to DataSet プロジェクトで Visual Studio を作成します。
 
 LINQ プロジェクトの種類は、特定のアセンブリ参照とインポートされた名前空間 (Visual Basic) が必要です。 または[を使用して](../../../csharp/language-reference/keywords/using-directive.md)ディレクティブ (c#)。 LINQ の最低要件への参照を*System.Core.dll*と`using`ディレクティブを<xref:System.Linq>します。
 

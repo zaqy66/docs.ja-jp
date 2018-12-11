@@ -2,12 +2,12 @@
 title: Entity Framework の概要
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 35eb3b1503c8754752662aef0c5101251d60d49c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216943"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145794"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework の概要
 
@@ -26,11 +26,11 @@ ms.locfileid: "47216943"
 
  Entity Data Model ツールでの作業時には、概念モデル、ストレージ モデル、およびこの 2 者間のマッピングは、XML ベースのスキーマで表され、名前の拡張子が同じファイルで定義されます。
 
--   概念モデルは概念スキーマ定義言語 (CSDL) で定義されます。 CSDL は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]の実装、 [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)します。 ファイル拡張子は .csdl です。
+- 概念モデルは概念スキーマ定義言語 (CSDL) で定義されます。 CSDL は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]の実装、 [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)します。 ファイル拡張子は .csdl です。
 
--   ストア スキーマ定義言語ファイル (SSDL) はストレージ モデル (論理モデルとも呼ばれる) を定義します。 ファイル拡張子は .ssdl です。
+- ストア スキーマ定義言語ファイル (SSDL) はストレージ モデル (論理モデルとも呼ばれる) を定義します。 ファイル拡張子は .ssdl です。
 
--   マッピング仕様言語ファイル (MSL) はストレージ モデルと概念モデルの間のマッピングを定義します。 ファイル拡張子は .msl です。
+- マッピング仕様言語ファイル (MSL) はストレージ モデルと概念モデルの間のマッピングを定義します。 ファイル拡張子は .msl です。
 
 ストレージ モデルとマッピングは、概念モデル、データ クラス、またはアプリケーション コードを変更することなく、必要に応じて変更できます。 ストレージ モデルはプロバイダー固有なので、データ ソースの違いを意識することなく一貫した概念モデルを扱うことができます。
 
@@ -45,9 +45,9 @@ ms.locfileid: "47216943"
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] は単なるオブジェクト リレーショナル マッピング ソリューションではなく、基本的には、概念モデルのエンティティとリレーションシップとして表されるデータにアプリケーションからアクセスして変更できるようにするためのものです。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] はモデル ファイルとマッピング ファイルの情報を使用して、概念モデルで表されるエンティティ型に対するオブジェクト クエリをデータ ソース固有のクエリに変換します。 クエリの結果がオブジェクトに具体化される[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を管理します。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を概念モデルのクエリを実行し、オブジェクトを返す、次の方法を提供します。
 
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]。 概念モデルで定義されているエンティティ型を照会するためには、統合言語クエリ (LINQ) のサポートを提供します。 詳細については、次を参照してください。 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)します。
+- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]。 概念モデルで定義されているエンティティ型を照会するためには、統合言語クエリ (LINQ) のサポートを提供します。 詳細については、次を参照してください。 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)します。
 
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 概念モデル内のエンティティを直接操作しをサポートする SQL のストレージの影響を受けない[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念です。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] オブジェクト クエリと EntityClient プロバイダーを使用して実行されるクエリの両方で使用されます。 詳細については、次を参照してください。 [Entity SQL の概要](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)します。
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 概念モデル内のエンティティを直接操作しをサポートする SQL のストレージの影響を受けない[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念です。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] オブジェクト クエリと EntityClient プロバイダーを使用して実行されるクエリの両方で使用されます。 詳細については、次を参照してください。 [Entity SQL の概要](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)します。
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] には、EntityClient データ プロバイダーが含まれています。 このプロバイダーは接続を管理し、エンティティ クエリをデータ ソース固有のクエリに変換し、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] がエンティティ データをオブジェクトに具体化するために使用するデータ リーダーを返します。 標準のように、EntityClient プロバイダー オブジェクトの具体化が不要で、使用もできる[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]データ プロバイダーにより、アプリケーションを実行する[!INCLUDE[esql](../../../../../includes/esql-md.md)]クエリを実行し、返される読み取り専用データ リーダーを使用します。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。
 
@@ -71,7 +71,7 @@ ms.locfileid: "47216943"
 
 詳細について、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を参照してください。
 
-[Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md) - 取得する方法について説明し、使用して迅速に実行されている、[クイック スタート](https://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675)、単純なを作成する方法を示す[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]アプリケーション。
+[Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md) - 取得する方法について説明し、使用して迅速に実行されている、[クイック スタート](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))、単純なを作成する方法を示す[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]アプリケーション。
 
 [Entity Framework の用語](../../../../../docs/framework/data/adonet/ef/terminology.md)-エンティティ データ モデルが導入されている用語を多数定義していますと[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]で使用されていると[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]ドキュメント。
 

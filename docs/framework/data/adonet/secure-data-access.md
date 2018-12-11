@@ -2,12 +2,12 @@
 title: 安全なデータ アクセス
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: e5bb96a091dcd64f12d086d864643d00c34d8f17
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185941"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129195"
 ---
 # <a name="secure-data-access"></a>安全なデータ アクセス
 セキュリティで保護された ADO.NET コードを作成するには、基になるデータ ストア、つまりデータベースで利用可能なセキュリティ機構を理解しておく必要があります。 さらに、アプリケーションに含まれる他の機能またはコンポーネントのセキュリティへの影響も考慮する必要があります。  
@@ -66,11 +66,8 @@ ms.locfileid: "50185941"
 |リソース|説明|  
 |--------------|-----------------|  
 |[セキュリティに関する考慮事項と Access 2007 のガイダンス](https://go.microsoft.com/fwlink/?LinkId=98354)|Access 2007 のセキュリティ手法 (ファイルの暗号化、パスワードの管理、新しい ACCDB 形式および ACCDE 形式へのデータベースの変換、他のセキュリティ オプションの使用など) について説明します。|  
-|[Access データベースのユーザー レベルのセキュリティ (MDB) で保護します。](https://go.microsoft.com/fwlink/?LinkId=47697)|Access 2003 を対象としたトピックです。 Access 2003 でユーザー レベルのセキュリティ機能を実装し、データを保護する方法について説明します。|  
 |[Access セキュリティにおけるワークグループ情報ファイルの役割を理解します。](https://support.microsoft.com/kb/305542)|Access 2003 のセキュリティの作業グループ情報ファイルのロールおよびリレーションシップについて説明します。|  
 |[よく寄せられる質問について Microsoft Access セキュリティの Microsoft Access バージョン 2.0 ~ 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|ダウンロード可能なバージョンの Microsoft Access セキュリティ FAQ です。|  
-|[セキュリティと保護をトラブルシューティングします。](https://go.microsoft.com/fwlink/?LinkId=47703)|Excel 2003 のセキュリティに関する一般的な問題の解決方法が掲載されています。|  
-  
 ## <a name="enterprise-services"></a>Enterprise Services  
  COM+ は、Windows NT アカウントおよびプロセスやスレッドの偽装に基づく独自のセキュリティ モデルを備えています。 <xref:System.EnterpriseServices> 名前空間は、.NET アプリケーションが、<xref:System.EnterpriseServices.ServicedComponent> クラスを使用して、マネージ コードと COM+ セキュリティ サービスを統合できるようにするラッパーを提供します。  
   
@@ -87,9 +84,9 @@ ms.locfileid: "50185941"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)|COM コンポーネントを .NET Framework に公開する方法、および .NET Framework コンポーネントを COM に公開する方法について説明します。|  
-|[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)|プライマリ相互運用機能アセンブリ、スレッド処理、カスタム マーシャリングなど高度なトピックが含まれています。|  
-  
+|[アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)|COM コンポーネントを .NET Framework に公開する方法、および .NET Framework コンポーネントを COM に公開する方法について説明します。|
+|[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|プライマリ相互運用機能アセンブリ、スレッド処理、カスタム マーシャリングなど高度なトピックが含まれています。|
+
 ## <a name="see-also"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server のセキュリティ](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  

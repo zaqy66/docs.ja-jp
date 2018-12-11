@@ -1,6 +1,6 @@
 ---
 title: 例外とパフォーマンス
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - tester-doer pattern
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d664b7b61394bd9bfe6d0abd7130f9f0191e7a03
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: ab125117836545b9a2436347375ed0e08c591c7b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083547"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153749"
 ---
 # <a name="exceptions-and-performance"></a>例外とパフォーマンス
 例外に関連する一般的な懸念事項の 1 つを定期的に失敗したコードの例外を使用している場合、パフォーマンスの実装は受け入れられない。 これはもっともです。 メンバーは、例外をスローするときに、パフォーマンスが極端に遅くにできます。 ただし、エラー コードの使用を禁止する例外のガイドラインに厳密に準拠しつつ、良好なパフォーマンスを実現することができます。 このセクションで説明されている 2 つのパターンは、これを行う方法をお勧めします。  
@@ -71,7 +70,7 @@ public struct DateTime {
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
+ *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
   
 ## <a name="see-also"></a>関連項目
 
