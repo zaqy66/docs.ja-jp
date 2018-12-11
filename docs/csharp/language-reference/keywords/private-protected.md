@@ -11,7 +11,7 @@ ms.locfileid: "43518452"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# リファレンス)
 
-キーワード組み合わせ `private protected` はメンバー アクセス修飾子です。 private protected メンバーには、包含クラスから誘導された型でアクセスできますが、その包含アセンブリ内に限られます。 `private protected` と他のアクセス修飾子の比較については、「[アクセシビリティ レベル](accessibility-levels.md)」を参照してください。
+キーワード組み合わせ `private protected` はメンバー アクセス修飾子です。 private protected メンバーには、包含クラスから派生した型からアクセスできますが、その包含アセンブリ内に限られます。 `private protected` と他のアクセス修飾子の比較については、「[アクセシビリティ レベル](accessibility-levels.md)」を参照してください。
 
 > [!NOTE]
 > `private protected` アクセス修飾子は、C# バージョン 7.2 以降で有効です。
