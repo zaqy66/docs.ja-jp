@@ -1,6 +1,6 @@
 ---
 title: 静的クラスのデザイン
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, static classes
@@ -10,35 +10,34 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c3a0a51fc6055190f9a0189de2e17d98f88036ea
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+author: KrzysztofCwalina
+ms.openlocfilehash: a521842d8c4651984d8d6667b93b0f28a1eba894
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261577"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130770"
 ---
-# <a name="static-class-design"></a><span data-ttu-id="4b196-102">静的クラスのデザイン</span><span class="sxs-lookup"><span data-stu-id="4b196-102">Static Class Design</span></span>
-<span data-ttu-id="4b196-103">静的クラスは、静的メンバーのみを含んでいるクラスとして定義されます (から継承されたインスタンス メンバーだけでなくもちろん<xref:System.Object?displayProperty=nameWithType>とコンス トラクターはプライベート可能性があります)。</span><span class="sxs-lookup"><span data-stu-id="4b196-103">A static class is defined as a class that contains only static members (of course besides the instance members inherited from <xref:System.Object?displayProperty=nameWithType> and possibly a private constructor).</span></span> <span data-ttu-id="4b196-104">一部の言語では、静的クラスの組み込みサポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="4b196-104">Some languages provide built-in support for static classes.</span></span> <span data-ttu-id="4b196-105">C# 2.0 以降では、クラスが静的に宣言されると、これはシール、抽象クラスで、インスタンス メンバーをオーバーライドまたは宣言されていることができます。</span><span class="sxs-lookup"><span data-stu-id="4b196-105">In C# 2.0 and later, when a class is declared to be static, it is sealed, abstract, and no instance members can be overridden or declared.</span></span>  
+# <a name="static-class-design"></a><span data-ttu-id="c5b76-102">静的クラスのデザイン</span><span class="sxs-lookup"><span data-stu-id="c5b76-102">Static Class Design</span></span>
+<span data-ttu-id="c5b76-103">静的クラスは、静的メンバーのみを含んでいるクラスとして定義されます (から継承されたインスタンス メンバーだけでなくもちろん<xref:System.Object?displayProperty=nameWithType>とコンス トラクターはプライベート可能性があります)。</span><span class="sxs-lookup"><span data-stu-id="c5b76-103">A static class is defined as a class that contains only static members (of course besides the instance members inherited from <xref:System.Object?displayProperty=nameWithType> and possibly a private constructor).</span></span> <span data-ttu-id="c5b76-104">一部の言語では、静的クラスの組み込みサポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="c5b76-104">Some languages provide built-in support for static classes.</span></span> <span data-ttu-id="c5b76-105">C# 2.0 以降では、クラスが静的に宣言されると、これはシール、抽象クラスで、インスタンス メンバーをオーバーライドまたは宣言されていることができます。</span><span class="sxs-lookup"><span data-stu-id="c5b76-105">In C# 2.0 and later, when a class is declared to be static, it is sealed, abstract, and no instance members can be overridden or declared.</span></span>  
   
- <span data-ttu-id="4b196-106">静的クラスは、純粋なオブジェクト指向設計と単純さのバランスです。</span><span class="sxs-lookup"><span data-stu-id="4b196-106">Static classes are a compromise between pure object-oriented design and simplicity.</span></span> <span data-ttu-id="4b196-107">その他の操作へのショートカットを提供によく使用されます (など<xref:System.IO.File?displayProperty=nameWithType>)、拡張メソッド、または完全なオブジェクト指向ラッパーが保証されているいない機能の保持者 (など<xref:System.Environment?displayProperty=nameWithType>)。</span><span class="sxs-lookup"><span data-stu-id="4b196-107">They are commonly used to provide shortcuts to other operations (such as <xref:System.IO.File?displayProperty=nameWithType>), holders of extension methods, or functionality for which a full object-oriented wrapper is unwarranted (such as <xref:System.Environment?displayProperty=nameWithType>).</span></span>  
+ <span data-ttu-id="c5b76-106">静的クラスは、純粋なオブジェクト指向設計と単純さのバランスです。</span><span class="sxs-lookup"><span data-stu-id="c5b76-106">Static classes are a compromise between pure object-oriented design and simplicity.</span></span> <span data-ttu-id="c5b76-107">その他の操作へのショートカットを提供によく使用されます (など<xref:System.IO.File?displayProperty=nameWithType>)、拡張メソッド、または完全なオブジェクト指向ラッパーが保証されているいない機能の保持者 (など<xref:System.Environment?displayProperty=nameWithType>)。</span><span class="sxs-lookup"><span data-stu-id="c5b76-107">They are commonly used to provide shortcuts to other operations (such as <xref:System.IO.File?displayProperty=nameWithType>), holders of extension methods, or functionality for which a full object-oriented wrapper is unwarranted (such as <xref:System.Environment?displayProperty=nameWithType>).</span></span>  
   
- <span data-ttu-id="4b196-108">**✓ DO** 静的クラスを慎重に使用します。</span><span class="sxs-lookup"><span data-stu-id="4b196-108">**✓ DO** use static classes sparingly.</span></span>  
+ <span data-ttu-id="c5b76-108">**✓ DO** 静的クラスを慎重に使用します。</span><span class="sxs-lookup"><span data-stu-id="c5b76-108">**✓ DO** use static classes sparingly.</span></span>  
   
- <span data-ttu-id="4b196-109">静的クラスは、オブジェクト指向のコア フレームワークのサポート クラスとしてのみ使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4b196-109">Static classes should be used only as supporting classes for the object-oriented core of the framework.</span></span>  
+ <span data-ttu-id="c5b76-109">静的クラスは、オブジェクト指向のコア フレームワークのサポート クラスとしてのみ使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c5b76-109">Static classes should be used only as supporting classes for the object-oriented core of the framework.</span></span>  
   
- <span data-ttu-id="4b196-110">**X DO NOT** 静的クラスをその他のバケットとして扱います。</span><span class="sxs-lookup"><span data-stu-id="4b196-110">**X DO NOT** treat static classes as a miscellaneous bucket.</span></span>  
+ <span data-ttu-id="c5b76-110">**X DO NOT** 静的クラスをその他のバケットとして扱います。</span><span class="sxs-lookup"><span data-stu-id="c5b76-110">**X DO NOT** treat static classes as a miscellaneous bucket.</span></span>  
   
- <span data-ttu-id="4b196-111">**X DO NOT** 宣言または静的クラスでインスタンス メンバーをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="4b196-111">**X DO NOT** declare or override instance members in static classes.</span></span>  
+ <span data-ttu-id="c5b76-111">**X DO NOT** 宣言または静的クラスでインスタンス メンバーをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="c5b76-111">**X DO NOT** declare or override instance members in static classes.</span></span>  
   
- <span data-ttu-id="4b196-112">**✓ DO** として、シールされた抽象クラスで静的クラスを宣言し、使用するプログラミング言語には静的クラスの組み込みサポートがない場合は、プライベート インスタンス コンス トラクターを追加します。</span><span class="sxs-lookup"><span data-stu-id="4b196-112">**✓ DO** declare static classes as sealed, abstract, and add a private instance constructor if your programming language does not have built-in support for static classes.</span></span>  
+ <span data-ttu-id="c5b76-112">**✓ DO** として、シールされた抽象クラスで静的クラスを宣言し、使用するプログラミング言語には静的クラスの組み込みサポートがない場合は、プライベート インスタンス コンス トラクターを追加します。</span><span class="sxs-lookup"><span data-stu-id="c5b76-112">**✓ DO** declare static classes as sealed, abstract, and add a private instance constructor if your programming language does not have built-in support for static classes.</span></span>  
   
- <span data-ttu-id="4b196-113">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="4b196-113">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="c5b76-113">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="c5b76-113">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="4b196-114">*2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*</span><span class="sxs-lookup"><span data-stu-id="4b196-114">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="c5b76-114">*Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*</span><span class="sxs-lookup"><span data-stu-id="c5b76-114">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4b196-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="4b196-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5b76-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="c5b76-115">See also</span></span>
 
-- [<span data-ttu-id="4b196-116">型デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="4b196-116">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
-- [<span data-ttu-id="4b196-117">フレームワーク デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="4b196-117">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+- [<span data-ttu-id="c5b76-116">型デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="c5b76-116">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+- [<span data-ttu-id="c5b76-117">フレームワーク デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="c5b76-117">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

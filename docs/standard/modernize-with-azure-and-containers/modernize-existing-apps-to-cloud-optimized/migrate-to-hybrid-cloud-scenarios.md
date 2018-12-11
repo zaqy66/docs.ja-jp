@@ -1,73 +1,73 @@
 ---
-title: ハイブリッド クラウド シナリオへの移行します。
-description: Azure のクラウドと Windows コンテナーでの既存の .NET アプリケーションを最新化 |ハイブリッド クラウド シナリオへの移行します。
+title: ハイブリッド クラウドのシナリオへの移行します。
+description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |ハイブリッド クラウドのシナリオへの移行します。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 8885ee8fce4f8c11c14ee8936f3ee0ffd89ece04
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 3d6fc272854654d890559d5db032b05667627d94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957892"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147347"
 ---
-# <a name="migrate-to-hybrid-cloud-scenarios"></a><span data-ttu-id="66c4c-103">ハイブリッド クラウド シナリオへの移行します。</span><span class="sxs-lookup"><span data-stu-id="66c4c-103">Migrate to hybrid cloud scenarios</span></span>
+# <a name="migrate-to-hybrid-cloud-scenarios"></a><span data-ttu-id="89ca9-103">ハイブリッド クラウドのシナリオへの移行します。</span><span class="sxs-lookup"><span data-stu-id="89ca9-103">Migrate to hybrid cloud scenarios</span></span>
 
-<span data-ttu-id="66c4c-104">組織や企業によっては、Microsoft Azure などのパブリック クラウドに、アプリケーションの一部または規制や独自のポリシーのための他の任意のパブリック クラウドに移行できません。</span><span class="sxs-lookup"><span data-stu-id="66c4c-104">Some organizations and enterprises can't migrate some of their applications to public clouds like Microsoft Azure or any other public cloud due to regulations or their own policies.</span></span> <span data-ttu-id="66c4c-105">ただし、どのような組織は、パブリック クラウドおよびその他のアプリケーション、オンプレミスでのアプリケーションの一部がなくなりますメリットがある可能性がありますです。</span><span class="sxs-lookup"><span data-stu-id="66c4c-105">However, it's likely that any organization might benefit from having some of their applications in the public cloud and other applications on-premises.</span></span> <span data-ttu-id="66c4c-106">混在する環境がさまざまなプラットフォームと内部設置型環境とパブリック クラウドで使用されているテクノロジのための環境での複雑度が高くを招くことができます。</span><span class="sxs-lookup"><span data-stu-id="66c4c-106">But a mixed environment can lead to excessive complexity in environments due to different platforms and technologies used in public clouds versus on-premises environments.</span></span>
+<span data-ttu-id="89ca9-104">一部の組織や企業は、Microsoft Azure などのパブリック クラウドにアプリケーションの一部または規制や独自のポリシーのための他のパブリック クラウドを移行できません。</span><span class="sxs-lookup"><span data-stu-id="89ca9-104">Some organizations and enterprises can't migrate some of their applications to public clouds like Microsoft Azure or any other public cloud due to regulations or their own policies.</span></span> <span data-ttu-id="89ca9-105">ただし、すべての組織がパブリック クラウドとその他のアプリケーションをオンプレミスでのアプリケーションの一部がメリットが高くなります。</span><span class="sxs-lookup"><span data-stu-id="89ca9-105">However, it's likely that any organization might benefit from having some of their applications in the public cloud and other applications on-premises.</span></span> <span data-ttu-id="89ca9-106">混在する環境がさまざまなプラットフォームやパブリック クラウドとオンプレミス環境で使用するテクノロジにより環境での過剰な複雑さを招くことができます。</span><span class="sxs-lookup"><span data-stu-id="89ca9-106">But a mixed environment can lead to excessive complexity in environments due to different platforms and technologies used in public clouds versus on-premises environments.</span></span>
 
-<span data-ttu-id="66c4c-107">Microsoft では、最適なハイブリッド クラウド ソリューションを提供する、既存の資産を最適化できますいずれか、オンプレミスと Azure のハイブリッド クラウド内の一貫性を確保するときに、パブリック クラウドでします。</span><span class="sxs-lookup"><span data-stu-id="66c4c-107">Microsoft provides the best hybrid cloud solution, one in which you can optimize your existing assets on-premises and in the public cloud, while you ensure consistency in an Azure hybrid cloud.</span></span> <span data-ttu-id="66c4c-108">既存のスキルを最大化し、クラウドまたはオンプレミスで Azure スタック (オンプレミス) と Azure (パブリック クラウド) のおかげで実行できるアプリを構築するための柔軟で、統一されたアプローチを取得できます。</span><span class="sxs-lookup"><span data-stu-id="66c4c-108">You can maximize existing skills, and get a flexible, unified approach to building apps that can run in the cloud or on-premises, thanks to Azure Stack (on-premises) and Azure (public cloud).</span></span>
+<span data-ttu-id="89ca9-107">Microsoft では、最適なハイブリッド クラウド ソリューションを提供する、既存の資産を最適化できますいずれか、オンプレミスとパブリック クラウド中、Azure のハイブリッド クラウドでの一貫性を確保します。</span><span class="sxs-lookup"><span data-stu-id="89ca9-107">Microsoft provides the best hybrid cloud solution, one in which you can optimize your existing assets on-premises and in the public cloud, while you ensure consistency in an Azure hybrid cloud.</span></span> <span data-ttu-id="89ca9-108">既存のスキルを最大化し、クラウドまたはオンプレミス、Azure Stack (オンプレミス) と Azure (パブリック クラウド) のおかげで実行できるアプリを構築するための柔軟かつ統合されたアプローチを取得できます。</span><span class="sxs-lookup"><span data-stu-id="89ca9-108">You can maximize existing skills, and get a flexible, unified approach to building apps that can run in the cloud or on-premises, thanks to Azure Stack (on-premises) and Azure (public cloud).</span></span>
 
-<span data-ttu-id="66c4c-109">セキュリティに関しては、ときに、ハイブリッド クラウドの間で管理およびセキュリティを一元化できます。</span><span class="sxs-lookup"><span data-stu-id="66c4c-109">When it comes to security, you can centralize management and security across your hybrid cloud.</span></span> <span data-ttu-id="66c4c-110">内部設置型へのシングル サインオンを指定して、クラウド データ センターからすべての資産の制御を取得し、クラウド アプリできます。</span><span class="sxs-lookup"><span data-stu-id="66c4c-110">You can get control over all assets, from your datacenter to the cloud, by providing single sign-on to on-premises and cloud apps.</span></span> <span data-ttu-id="66c4c-111">ためには、Active Directory のハイブリッド クラウドに拡張および id 管理を使用しています。</span><span class="sxs-lookup"><span data-stu-id="66c4c-111">You accomplish this by extending Active Directory to a hybrid cloud, and by using identity management.</span></span>
+<span data-ttu-id="89ca9-109">セキュリティに関しては、ハイブリッド クラウドの間での管理とセキュリティを一元化できます。</span><span class="sxs-lookup"><span data-stu-id="89ca9-109">When it comes to security, you can centralize management and security across your hybrid cloud.</span></span> <span data-ttu-id="89ca9-110">オンプレミスへのシングル サインオンを提供することで、クラウドにデータ センターからすべての資産の制御を取得し、クラウド アプリできます。</span><span class="sxs-lookup"><span data-stu-id="89ca9-110">You can get control over all assets, from your datacenter to the cloud, by providing single sign-on to on-premises and cloud apps.</span></span> <span data-ttu-id="89ca9-111">ために Active Directory、ハイブリッド クラウドを拡張および id 管理を使用して、します。</span><span class="sxs-lookup"><span data-stu-id="89ca9-111">You accomplish this by extending Active Directory to a hybrid cloud, and by using identity management.</span></span>
 
-<span data-ttu-id="66c4c-112">最後に、配布しシームレスにデータを分析、クラウドとオンプレミスの資産に同じクエリ言語を使用し、適用できます分析と深いをその元に関係なく、データを強化する Azure で学習します。</span><span class="sxs-lookup"><span data-stu-id="66c4c-112">Finally, you can distribute and analyze data seamlessly, use the same query languages for cloud and on-premises assets, and apply analytics and deep learning in Azure to enrich your data, regardless of its source.</span></span>
+<span data-ttu-id="89ca9-112">最後に、配布しシームレスにデータを分析、クラウドとオンプレミスの資産に対して同じクエリ言語を使用し、適用できます分析とディープ ラーニング、azure にそのソースに関係なく、データを操作します。</span><span class="sxs-lookup"><span data-stu-id="89ca9-112">Finally, you can distribute and analyze data seamlessly, use the same query languages for cloud and on-premises assets, and apply analytics and deep learning in Azure to enrich your data, regardless of its source.</span></span>
 
-## <a name="azure-stack"></a><span data-ttu-id="66c4c-113">Azure のスタック</span><span class="sxs-lookup"><span data-stu-id="66c4c-113">Azure Stack</span></span>
+## <a name="azure-stack"></a><span data-ttu-id="89ca9-113">Azure Stack</span><span class="sxs-lookup"><span data-stu-id="89ca9-113">Azure Stack</span></span>
 
-<span data-ttu-id="66c4c-114">Azure のスタックは、ハイブリッド クラウド プラットフォームできるように、組織のデータ センターから Azure サービスを提供します。</span><span class="sxs-lookup"><span data-stu-id="66c4c-114">Azure Stack is a hybrid cloud platform that lets you deliver Azure services from your organization's datacenter.</span></span> <span data-ttu-id="66c4c-115">Azure のスタックは、エッジと接続されていない環境では、または特定のセキュリティとコンプライアンス要件を満たすように、主要なシナリオで、最新のアプリケーション用の新しいオプションをサポートするために設計されています。</span><span class="sxs-lookup"><span data-stu-id="66c4c-115">Azure Stack is designed to support new options for your modern applications in key scenarios, like edge and unconnected environments, or meeting specific security and compliance requirements.</span></span>
+<span data-ttu-id="89ca9-114">Azure Stack は、ハイブリッド クラウド プラットフォーム、組織のデータ センターから Azure サービスを提供することができます。</span><span class="sxs-lookup"><span data-stu-id="89ca9-114">Azure Stack is a hybrid cloud platform that lets you deliver Azure services from your organization's datacenter.</span></span> <span data-ttu-id="89ca9-115">Azure Stack は edge および接続されていない環境では、または特定のセキュリティとコンプライアンス要件を満たすように、主要なシナリオで、最新のアプリケーション用の新しいオプションをサポートするために設計されています。</span><span class="sxs-lookup"><span data-stu-id="89ca9-115">Azure Stack is designed to support new options for your modern applications in key scenarios, like edge and unconnected environments, or meeting specific security and compliance requirements.</span></span>
 
-<span data-ttu-id="66c4c-116">図 4-13 では、Microsoft が提供する場合は true。 ハイブリッド クラウド プラットフォームの概要を示します。</span><span class="sxs-lookup"><span data-stu-id="66c4c-116">Figure 4-13 shows an overview of the true hybrid cloud platform that Microsoft offers.</span></span>
+<span data-ttu-id="89ca9-116">図 4-13 は、Microsoft が提供する、真のハイブリッド クラウド プラットフォームの概要を示します。</span><span class="sxs-lookup"><span data-stu-id="89ca9-116">Figure 4-13 shows an overview of the true hybrid cloud platform that Microsoft offers.</span></span>
 
-![Azure のスタックは、Azure で Microsoft ハイブリッド クラウド プラットフォーム](./media/image13.jpg)
+![Azure Stack と Azure での Microsoft ハイブリッド クラウド プラットフォーム](./media/image13.jpg)
 
-> <span data-ttu-id="66c4c-118">**図 4-13。**</span><span class="sxs-lookup"><span data-stu-id="66c4c-118">**Figure 4-13.**</span></span> <span data-ttu-id="66c4c-119">Azure のスタックは、Azure で Microsoft ハイブリッド クラウド プラットフォーム</span><span class="sxs-lookup"><span data-stu-id="66c4c-119">Microsoft hybrid cloud platform with Azure Stack and Azure</span></span>
+> <span data-ttu-id="89ca9-118">**図 4-13。**</span><span class="sxs-lookup"><span data-stu-id="89ca9-118">**Figure 4-13.**</span></span> <span data-ttu-id="89ca9-119">Azure Stack と Azure での Microsoft ハイブリッド クラウド プラットフォーム</span><span class="sxs-lookup"><span data-stu-id="89ca9-119">Microsoft hybrid cloud platform with Azure Stack and Azure</span></span>
 
-<span data-ttu-id="66c4c-120">Azure のスタックは、ニーズに合わせて、展開の 2 つのオプションで提供されています。</span><span class="sxs-lookup"><span data-stu-id="66c4c-120">Azure Stack is offered in two deployment options, to meet your needs:</span></span>
+<span data-ttu-id="89ca9-120">Azure Stack は、ニーズに合わせて、2 つのデプロイ オプションで提供されています。</span><span class="sxs-lookup"><span data-stu-id="89ca9-120">Azure Stack is offered in two deployment options, to meet your needs:</span></span>
 
--   <span data-ttu-id="66c4c-121">Azure のスタックは、システムを統合</span><span class="sxs-lookup"><span data-stu-id="66c4c-121">Azure Stack integrated systems</span></span>
+-   <span data-ttu-id="89ca9-121">Azure Stack 統合システム</span><span class="sxs-lookup"><span data-stu-id="89ca9-121">Azure Stack integrated systems</span></span>
 
--   <span data-ttu-id="66c4c-122">Azure のスタック開発キット</span><span class="sxs-lookup"><span data-stu-id="66c4c-122">Azure Stack Development Kit</span></span>
+-   <span data-ttu-id="89ca9-122">Azure Stack Development Kit</span><span class="sxs-lookup"><span data-stu-id="89ca9-122">Azure Stack Development Kit</span></span>
 
-### <a name="azure-stack-integrated-systems"></a><span data-ttu-id="66c4c-123">Azure のスタックは、システムを統合</span><span class="sxs-lookup"><span data-stu-id="66c4c-123">Azure Stack integrated systems</span></span>
+### <a name="azure-stack-integrated-systems"></a><span data-ttu-id="89ca9-123">Azure Stack 統合システム</span><span class="sxs-lookup"><span data-stu-id="89ca9-123">Azure Stack integrated systems</span></span>
 
-<span data-ttu-id="66c4c-124">Microsoft とハードウェア パートナーのパートナーシップでは、azure スタック統合システムが提供します。</span><span class="sxs-lookup"><span data-stu-id="66c4c-124">Azure Stack integrated systems are offered through a partnership of Microsoft and hardware partners.</span></span> <span data-ttu-id="66c4c-125">パートナーシップでは、わかりやすくするための管理の分散クラウド ペース革新性を実現するソリューションを作成します。</span><span class="sxs-lookup"><span data-stu-id="66c4c-125">The partnership creates a solution that offers cloud-paced innovation that is balanced with simplicity in management.</span></span> <span data-ttu-id="66c4c-126">ハードウェアとソフトウェアの統合システムとして、Azure のスタックが提供されるため、まだクラウドから革新を採用しているときに柔軟性と制御、適切な量を取得します。</span><span class="sxs-lookup"><span data-stu-id="66c4c-126">Because Azure Stack is offered as an integrated system of hardware and software, you get the right amount of flexibility and control, while still adopting innovation from the cloud.</span></span> <span data-ttu-id="66c4c-127">Azure 統合スタック システムでは、12 のノードに 4 からサイズの範囲し、ハードウェア パートナーと Microsoft によって共同でサポートされます。</span><span class="sxs-lookup"><span data-stu-id="66c4c-127">Azure Stack integrated systems range in size from 4 to 12 nodes, and are jointly supported by the hardware partner and Microsoft.</span></span> <span data-ttu-id="66c4c-128">Azure スタック統合システムを使用すると、実稼働ワークロードの新しいシナリオを実装します。</span><span class="sxs-lookup"><span data-stu-id="66c4c-128">Use Azure Stack integrated systems to implement new scenarios for your production workloads.</span></span>
+<span data-ttu-id="89ca9-124">Azure Stack 統合システムは、Microsoft とハードウェア パートナーのパートナーシップによって提供されます。</span><span class="sxs-lookup"><span data-stu-id="89ca9-124">Azure Stack integrated systems are offered through a partnership of Microsoft and hardware partners.</span></span> <span data-ttu-id="89ca9-125">パートナーシップは、わかりやすくするための管理とのバランスがとれてクラウド歩調のイノベーションを実現するソリューションを作成します。</span><span class="sxs-lookup"><span data-stu-id="89ca9-125">The partnership creates a solution that offers cloud-paced innovation that is balanced with simplicity in management.</span></span> <span data-ttu-id="89ca9-126">ハードウェアとソフトウェアの統合システムとして Azure Stack が提供されるため、まだクラウドの革新技術を採用することに適切な量の柔軟性と制御が表示します。</span><span class="sxs-lookup"><span data-stu-id="89ca9-126">Because Azure Stack is offered as an integrated system of hardware and software, you get the right amount of flexibility and control, while still adopting innovation from the cloud.</span></span> <span data-ttu-id="89ca9-127">Azure Stack 統合システムはまでのサイズを 4 から 12 個のノードにあり、ハードウェア パートナーと Microsoft によって共同でサポートされます。</span><span class="sxs-lookup"><span data-stu-id="89ca9-127">Azure Stack integrated systems range in size from 4 to 12 nodes, and are jointly supported by the hardware partner and Microsoft.</span></span> <span data-ttu-id="89ca9-128">Azure Stack 統合システムを使用すると、実稼働ワークロード向けの新しいシナリオを実装します。</span><span class="sxs-lookup"><span data-stu-id="89ca9-128">Use Azure Stack integrated systems to implement new scenarios for your production workloads.</span></span>
 
-### <a name="azure-stack-development-kit"></a><span data-ttu-id="66c4c-129">Azure のスタック開発キット</span><span class="sxs-lookup"><span data-stu-id="66c4c-129">Azure Stack Development Kit</span></span>
+### <a name="azure-stack-development-kit"></a><span data-ttu-id="89ca9-129">Azure Stack Development Kit</span><span class="sxs-lookup"><span data-stu-id="89ca9-129">Azure Stack Development Kit</span></span>
 
-<span data-ttu-id="66c4c-130">Microsoft Azure スタック Development Kit では、評価し、Azure の履歴に関する学習を行うこともできる Azure スタックの単一ノード展開です。</span><span class="sxs-lookup"><span data-stu-id="66c4c-130">Microsoft Azure Stack Development Kit is a single-node deployment of Azure Stack, which you can use to evaluate and learn about Azure Stack.</span></span> <span data-ttu-id="66c4c-131">またするツールと一貫性がある Azure して Api を使用して開発できます。 ここで、開発環境として Azure スタック開発キットを使用することができます。</span><span class="sxs-lookup"><span data-stu-id="66c4c-131">You can also use Azure Stack Development Kit as a developer environment, where you can develop using APIs and tooling that are consistent with Azure.</span></span> <span data-ttu-id="66c4c-132">Azure スタック Development Kit は、実稼働環境として使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="66c4c-132">Azure Stack Development Kit is not intended to be used as a production environment.</span></span>
+<span data-ttu-id="89ca9-130">Microsoft Azure Stack Development Kit は、評価し、Azure Stack の学習に使用できる Azure Stack の単一ノード デプロイです。</span><span class="sxs-lookup"><span data-stu-id="89ca9-130">Microsoft Azure Stack Development Kit is a single-node deployment of Azure Stack, which you can use to evaluate and learn about Azure Stack.</span></span> <span data-ttu-id="89ca9-131">Api を使用して開発することができます、Azure と一貫性のあるツールを開発環境として Azure Stack Development Kit を使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="89ca9-131">You can also use Azure Stack Development Kit as a developer environment, where you can develop using APIs and tooling that are consistent with Azure.</span></span> <span data-ttu-id="89ca9-132">Azure Stack Development Kit は、運用環境として使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="89ca9-132">Azure Stack Development Kit is not intended to be used as a production environment.</span></span>
 
-### <a name="additional-resources"></a><span data-ttu-id="66c4c-133">その他の技術情報</span><span class="sxs-lookup"><span data-stu-id="66c4c-133">Additional resources</span></span>
+### <a name="additional-resources"></a><span data-ttu-id="89ca9-133">その他の技術情報</span><span class="sxs-lookup"><span data-stu-id="89ca9-133">Additional resources</span></span>
 
--   <span data-ttu-id="66c4c-134">**Azure のハイブリッド クラウド**</span><span class="sxs-lookup"><span data-stu-id="66c4c-134">**Azure hybrid cloud**</span></span>
+-   <span data-ttu-id="89ca9-134">**Azure のハイブリッド クラウド**</span><span class="sxs-lookup"><span data-stu-id="89ca9-134">**Azure hybrid cloud**</span></span>
 
     [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
 
--   <span data-ttu-id="66c4c-135">**Azure Stack**</span><span class="sxs-lookup"><span data-stu-id="66c4c-135">**Azure Stack**</span></span>
+-   <span data-ttu-id="89ca9-135">**Azure Stack**</span><span class="sxs-lookup"><span data-stu-id="89ca9-135">**Azure Stack**</span></span>
 
     [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 
--   <span data-ttu-id="66c4c-136">**Windows コンテナーの active Directory のサービス アカウントします。**</span><span class="sxs-lookup"><span data-stu-id="66c4c-136">**Active Directory Service Accounts for Windows Containers**</span></span>
+-   <span data-ttu-id="89ca9-136">**Windows コンテナーの active Directory サービス アカウントします。**</span><span class="sxs-lookup"><span data-stu-id="89ca9-136">**Active Directory Service Accounts for Windows Containers**</span></span>
 
     [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
 
--   <span data-ttu-id="66c4c-137">**サポートが Active Directory コンテナーを作成します。**</span><span class="sxs-lookup"><span data-stu-id="66c4c-137">**Create a container with Active Directory support**</span></span>
+-   <span data-ttu-id="89ca9-137">**Active Directory のサポートによってコンテナーを作成します。**</span><span class="sxs-lookup"><span data-stu-id="89ca9-137">**Create a container with Active Directory support**</span></span>
 
     [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
 
--   <span data-ttu-id="66c4c-138">**Azure のハイブリッド特典ライセンス**</span><span class="sxs-lookup"><span data-stu-id="66c4c-138">**Azure Hybrid Benefit licensing**</span></span>
+-   <span data-ttu-id="89ca9-138">**Azure Hybrid Benefit のライセンス**</span><span class="sxs-lookup"><span data-stu-id="89ca9-138">**Azure Hybrid Benefit licensing**</span></span>
 
     [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
 
 >[!div class="step-by-step"]
-<span data-ttu-id="66c4c-139">[前へ](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
-[次へ](../walkthroughs-technical-get-started-overview.md)</span><span class="sxs-lookup"><span data-stu-id="66c4c-139">[Previous](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+><span data-ttu-id="89ca9-139">[前へ](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[次へ](../walkthroughs-technical-get-started-overview.md)</span><span class="sxs-lookup"><span data-stu-id="89ca9-139">[Previous](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
 [Next](../walkthroughs-technical-get-started-overview.md)</span></span>
