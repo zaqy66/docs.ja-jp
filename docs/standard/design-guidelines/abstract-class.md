@@ -1,6 +1,6 @@
 ---
 title: 抽象クラスのデザイン
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, abstract classes
@@ -10,35 +10,34 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5b9dacc4995a126e1ee3f6062dca796194d4882
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+author: KrzysztofCwalina
+ms.openlocfilehash: 1982c7c97802dedd1d49c770be5a7ac00944cbfc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493491"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130905"
 ---
-# <a name="abstract-class-design"></a><span data-ttu-id="dd365-102">抽象クラスのデザイン</span><span class="sxs-lookup"><span data-stu-id="dd365-102">Abstract Class Design</span></span>
-<span data-ttu-id="dd365-103">**X DO NOT** 抽象型の public または protected のコンス トラクター内部を定義します。</span><span class="sxs-lookup"><span data-stu-id="dd365-103">**X DO NOT** define public or protected internal constructors in abstract types.</span></span>  
+# <a name="abstract-class-design"></a><span data-ttu-id="18a34-102">抽象クラスのデザイン</span><span class="sxs-lookup"><span data-stu-id="18a34-102">Abstract Class Design</span></span>
+<span data-ttu-id="18a34-103">**X DO NOT** 抽象型の public または protected のコンス トラクター内部を定義します。</span><span class="sxs-lookup"><span data-stu-id="18a34-103">**X DO NOT** define public or protected internal constructors in abstract types.</span></span>  
   
- <span data-ttu-id="dd365-104">コンス トラクターは、ユーザーが、型のインスタンスを作成する必要がある場合にのみパブリックである必要があります。</span><span class="sxs-lookup"><span data-stu-id="dd365-104">Constructors should be public only if users will need to create instances of the type.</span></span> <span data-ttu-id="dd365-105">抽象型のインスタンスを作成することはできません、ため、パブリック コンス トラクターを持つ抽象型は正しく設計で、ユーザーに誤解を招きます。</span><span class="sxs-lookup"><span data-stu-id="dd365-105">Because you cannot create instances of an abstract type, an abstract type with a public constructor is incorrectly designed and misleading to the users.</span></span>  
+ <span data-ttu-id="18a34-104">コンス トラクターは、ユーザーが、型のインスタンスを作成する必要がある場合にのみパブリックである必要があります。</span><span class="sxs-lookup"><span data-stu-id="18a34-104">Constructors should be public only if users will need to create instances of the type.</span></span> <span data-ttu-id="18a34-105">抽象型のインスタンスを作成することはできません、ため、パブリック コンス トラクターを持つ抽象型は正しく設計で、ユーザーに誤解を招きます。</span><span class="sxs-lookup"><span data-stu-id="18a34-105">Because you cannot create instances of an abstract type, an abstract type with a public constructor is incorrectly designed and misleading to the users.</span></span>  
   
- <span data-ttu-id="dd365-106">**✓ DO** 抽象クラス内で、保護されているか、内部のコンス トラクターを定義します。</span><span class="sxs-lookup"><span data-stu-id="dd365-106">**✓ DO** define a protected or an internal constructor in abstract classes.</span></span>  
+ <span data-ttu-id="18a34-106">**✓ DO** 抽象クラス内で、保護されているか、内部のコンス トラクターを定義します。</span><span class="sxs-lookup"><span data-stu-id="18a34-106">**✓ DO** define a protected or an internal constructor in abstract classes.</span></span>  
   
- <span data-ttu-id="dd365-107">プロテクト コンス トラクターより一般的なサブタイプが作成されたときに、独自の初期化を実行する基本クラスでは。</span><span class="sxs-lookup"><span data-stu-id="dd365-107">A protected constructor is more common and simply allows the base class to do its own initialization when subtypes are created.</span></span>  
+ <span data-ttu-id="18a34-107">プロテクト コンス トラクターより一般的なサブタイプが作成されたときに、独自の初期化を実行する基本クラスでは。</span><span class="sxs-lookup"><span data-stu-id="18a34-107">A protected constructor is more common and simply allows the base class to do its own initialization when subtypes are created.</span></span>  
   
- <span data-ttu-id="dd365-108">アセンブリのクラスを定義する抽象クラスの具象実装を制限する、内部コンス トラクターを使用できます。</span><span class="sxs-lookup"><span data-stu-id="dd365-108">An internal constructor can be used to limit concrete implementations of the abstract class to the assembly defining the class.</span></span>  
+ <span data-ttu-id="18a34-108">アセンブリのクラスを定義する抽象クラスの具象実装を制限する、内部コンス トラクターを使用できます。</span><span class="sxs-lookup"><span data-stu-id="18a34-108">An internal constructor can be used to limit concrete implementations of the abstract class to the assembly defining the class.</span></span>  
   
- <span data-ttu-id="dd365-109">**✓ DO** を出荷する各の抽象クラスから継承する少なくとも 1 つの具象型を提供します。</span><span class="sxs-lookup"><span data-stu-id="dd365-109">**✓ DO** provide at least one concrete type that inherits from each abstract class that you ship.</span></span>  
+ <span data-ttu-id="18a34-109">**✓ DO** を出荷する各の抽象クラスから継承する少なくとも 1 つの具象型を提供します。</span><span class="sxs-lookup"><span data-stu-id="18a34-109">**✓ DO** provide at least one concrete type that inherits from each abstract class that you ship.</span></span>  
   
- <span data-ttu-id="dd365-110">これによって、抽象クラスのデザインを検証するを実行します。</span><span class="sxs-lookup"><span data-stu-id="dd365-110">Doing this helps to validate the design of the abstract class.</span></span> <span data-ttu-id="dd365-111">たとえば、<xref:System.IO.FileStream?displayProperty=nameWithType>の実装には、<xref:System.IO.Stream?displayProperty=nameWithType>抽象クラス。</span><span class="sxs-lookup"><span data-stu-id="dd365-111">For example,  <xref:System.IO.FileStream?displayProperty=nameWithType> is an implementation of the <xref:System.IO.Stream?displayProperty=nameWithType> abstract class.</span></span>  
+ <span data-ttu-id="18a34-110">これによって、抽象クラスのデザインを検証するを実行します。</span><span class="sxs-lookup"><span data-stu-id="18a34-110">Doing this helps to validate the design of the abstract class.</span></span> <span data-ttu-id="18a34-111">たとえば、<xref:System.IO.FileStream?displayProperty=nameWithType>の実装には、<xref:System.IO.Stream?displayProperty=nameWithType>抽象クラス。</span><span class="sxs-lookup"><span data-stu-id="18a34-111">For example,  <xref:System.IO.FileStream?displayProperty=nameWithType> is an implementation of the <xref:System.IO.Stream?displayProperty=nameWithType> abstract class.</span></span>  
   
- <span data-ttu-id="dd365-112">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="dd365-112">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="18a34-112">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="18a34-112">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="dd365-113">*2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*</span><span class="sxs-lookup"><span data-stu-id="dd365-113">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="18a34-113">*Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*</span><span class="sxs-lookup"><span data-stu-id="18a34-113">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd365-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="dd365-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18a34-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="18a34-114">See also</span></span>
 
-- [<span data-ttu-id="dd365-115">型デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="dd365-115">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
-- [<span data-ttu-id="dd365-116">フレームワーク デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="dd365-116">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+- [<span data-ttu-id="18a34-115">型デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="18a34-115">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+- [<span data-ttu-id="18a34-116">フレームワーク デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="18a34-116">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
