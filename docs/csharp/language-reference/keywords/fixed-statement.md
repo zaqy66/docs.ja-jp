@@ -25,7 +25,7 @@ ms.locfileid: "47237151"
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-C# 7.3 以降では、`fixed` ステートメントは、配列、文字列、固定サイズ バッファー、アンマネージド型変数以外の型でも動作します。 `GetPinnableReference` という名前のメソッドを実装する型はピン留めできます。 `GetPinnableReference` は `ref` 変数をアンマネージド型にして返す必要があります。 詳しくは、「[ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)」を参照してください。 .NET Core 2.0 で導入された .NET 型 <xref:System.Span%601?displayProperty=nameWithType> と <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> はこのパターンを活用し、ピン留めできます。 以下の例を参照してください。
+C# 7.3 以降では、`fixed` ステートメントは、配列、文字列、固定サイズ バッファー、非マネージ型変数以外の型でも動作します。 `GetPinnableReference` という名前のメソッドを実装する型はピン留めできます。 `GetPinnableReference` は `ref` 変数を非マネージ型変数に返す必要があります。 詳しくは、「[ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)」を参照してください。 .NET Core 2.0 で導入された .NET 型 <xref:System.Span%601?displayProperty=nameWithType> と <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> はこのパターンを活用し、ピン留めできます。 以下の例を参照してください。
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
@@ -48,7 +48,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 {
    ...
 }
-// ここのスコープではpsとpdはありません。
+// ps and pd are no longer in scope here.
 ```
 
 `fixed` ステートメントで初期化されたポインターは読み取り専用変数です。 ポインター値を変更するには、2 つ目のポインター変数を宣言し、それを変更する必要があります。 `fixed` ステートメントで宣言された変数は変更できません。
@@ -57,8 +57,8 @@ fixed (byte* ps = srcarray, pd = dstarray)
 fixed (byte* ps = srcarray, pd = dstarray)
 {
     byte* pSourceCopy = ps;
-    pSourceCopy++; // 次の要素へポインタを進める。
-    ps++; // 無効: fixedステートメントで宣言されているため変数psは変更できません。
+    pSourceCopy++; // point to the next element.
+    ps++; // invalid: cannot modify ps, as it is declared in the fixed statement.
 }
 ```
 
