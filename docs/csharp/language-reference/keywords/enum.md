@@ -73,7 +73,7 @@ int x = (int)Day.Sun;
 
 ## <a name="example"></a>例
 
-次の例では、基本型オプションを使用して `long` 型をメンバーに持つ `enum`を宣言しています。 列挙型の基になる型が `long`であっても、列挙型メンバーはキャストを使用して `long` 型に明示的に変換する必要があることにご注意ください。
+次の例では、基本型オプションを使用して `enum` 型をメンバーに持つ `long`を宣言しています。 列挙型の基になる型が `long`であっても、列挙型メンバーはキャストを使用して `long` 型に明示的に変換する必要があることにご注意ください。
 
 [!code-csharp[csrefKeywordsTypes#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#11)]
 
