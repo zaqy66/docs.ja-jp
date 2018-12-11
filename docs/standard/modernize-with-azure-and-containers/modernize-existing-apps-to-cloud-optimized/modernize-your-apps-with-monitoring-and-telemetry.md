@@ -1,39 +1,39 @@
 ---
 title: 監視と遠隔測定でアプリを最新化します。
-description: Azure のクラウドと Windows コンテナーでの既存の .NET アプリケーションを最新化 |監視と遠隔測定でアプリを最新化します。
+description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |監視と遠隔測定でアプリを最新化します。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 8f5f9bfebf46db7b98bedc4b5b8204d23357c72e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957972"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147477"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>監視と遠隔測定でアプリを最新化します。
 
-実稼働環境でアプリケーションを実行するときに、アプリケーションの実行方法に関する詳細情報があることが重要です。 高レベルのパフォーマンス ユーザーが、エラーを取得するか、安定性と信頼性の高いアプリケーションは、ですか。 豊富なパフォーマンスの監視、強力なアラート、およびダッシュ ボード、アプリケーションが使用できると期待どおりに実行することを確認する必要があります。 問題があるかどうかをすばやく確認を顧客の数が、影響を受けるし、を見つけて、問題を修正する根本原因分析の実行を決定できる必要があります。
+運用環境でアプリケーションを実行するときに、アプリケーションの実行状況に関する洞察があることが重要です。 高レベルが高いでしょうか。 ユーザー エラーが発生、または安定性と信頼性の高いアプリケーションは、ですか。 豊富なパフォーマンスの監視、強力なアラート、およびダッシュ ボード、アプリケーションが使用可能なと予期されるパフォーマンスであることを確認する必要があります。 また、かどうかは、問題をすばやく確認するには、顧客の数が影響を受けてし、見つけて、問題を修正、根本原因分析、を決定できる必要があります。
 
 ## <a name="monitor-your-application-with-application-insights"></a>Application Insights を使用してアプリケーションを監視します。
 
-Application Insights は、複数のプラットフォームで作業を行う web 開発者の拡張可能なアプリケーション パフォーマンス管理 (APM) サービスです。 これを使用して、ライブ web アプリケーションを監視します。 Application Insights は、パフォーマンス上の問題を自動的に検出します。 ユーザーはどの機能実際にアプリを理解するため、問題の診断に役立つ強力な分析ツールが含まれています。 Application Insights はパフォーマンスと使いやすさを継続的に改善するために設計されています。 アプリのプラットフォームでは、.NET、Node.js、J2EE をするかどうかなどのさまざまなでうまく動作オンプレミスにホストまたはクラウドにします。 Application Insights は、DevOps プロセスと統合され、さまざまな開発ツールに接続ポイントを持ちます。
+Application Insights は、複数のプラットフォームで作業を行う web 開発者の拡張可能なアプリケーション パフォーマンス管理 (APM) サービスです。 ライブ web アプリケーションを監視するのにには、これを使用します。 Application Insights は、パフォーマンスの異常を自動的に検出します。 これには、問題の診断に役立つとで何が実際に実行、アプリの理解に役立つ強力な分析ツールが含まれます。 Application Insights はパフォーマンスと使いやすさを継続的に向上させるために設計されています。 さまざまなプラットフォーム、.NET、Node.js、J2EE をかどうかなどのアプリケーションに適してがオンプレミスでホストまたはクラウドで。 Application Insights は、DevOps プロセスと統合し、さまざまな開発ツールへの接続ポイントします。
 
-図 4-10 では、Application Insights でアプリを監視する方法と、ダッシュ ボードにこれらの分析の表示の例を示します。
+図 4-10 では、Application Insights がアプリケーションを監視する方法と、ダッシュ ボードにこれらの洞察の表示の例を示します。
 
 ![Application Insights の監視ダッシュ ボード](./media/image10.png)
 
-> **図 4-10 です。** Application Insights の監視ダッシュ ボード
+> **図 4-10。** Application Insights の監視ダッシュ ボード
 
-## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>ログ分析とそのコンテナーの監視ソリューションを使用して Docker インフラストラクチャを監視します。
+## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Docker を Log Analytics とそのコンテナー監視ソリューション インフラストラクチャを監視します。
 
-[Azure ログ分析](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)の一部である、[全体的な監視ソリューションの Microsoft Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)です。 サービスに[Operations Management Suite (OMS)](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)です。 ログ分析クラウドを監視し、内部設置型環境 (内部設置型用の OMS) の可用性とパフォーマンスを維持するためにします。 リソースがクラウドとオンプレミスの環境で、複数のソースで分析を行うために他の監視ツールから生成されたデータを収集します。
+[Azure Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)の一部である、 [Microsoft Azure の全体監視ソリューション](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)します。 これはまた、サービス[Operations Management Suite (OMS)](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)します。 Log Analytics 監視クラウドとオンプレミス環境 (オンプレミス用の OMS) の可用性とパフォーマンスを維持するためにします。 リソースが、クラウドおよびオンプレミス環境内で、複数のソースにわたる分析を提供する他の監視ツールから生成されたデータを収集します。
 
-Azure インフラストラクチャ ログとの関連ログ分析、Azure サービスとして取り込み、他の Azure サービスからのログとメトリック データ (を介して[Azure モニター](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor))、Azure Vm、Docker コンテナー、および内部設置型またはその他のクラウド インフラストラクチャ。 ログ分析は、柔軟なログ検索とこのデータの上にボックス外の分析を提供します。 指定した条件に基づいて、豊富なことソース間でデータの分析に使用することができます、ツールにより、複雑なクエリ、すべてのログを事前にアラートが通知を提供します。 カスタム リポジトリにデータを中央ログ分析、クエリし、視覚的に表現できますも収集できます。 すぐに洞察を得る、セキュリティ ログ分析の組み込みのソリューションの利点と、インフラストラクチャの機能を実行することができますも。
+Azure インフラストラクチャのログに対する Log Analytics では、Azure のサービスとしてログとメトリックからデータを取り込む他の Azure サービス (を使用して[Azure Monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor))、Azure Vm、Docker コンテナー、およびオンプレミスまたはその他のクラウド インフラストラクチャ。 Log Analytics では、柔軟なログ検索とそのデータ出力の分析を提供します。 指定した条件に基づいてことソース間でデータを分析する際、すべてのログの間で複雑なクエリがおよび、事前に通知することができます、豊富なツールを提供します。 中央の Log Analytics リポジトリを照会および視覚化できるにカスタム データも収集できます。 セキュリティに関する洞察を即座に得るために Log Analytics の組み込みソリューションを利用し、インフラストラクチャの機能を実行することができますも。
 
-ログ分析を OMS ポータルまたは任意のブラウザーで実行して、Azure ポータルを介してアクセスし、構成設定にアクセスして複数のツールを分析し、収集したデータの動作を提供できます。
+OMS ポータルまたは任意のブラウザーで実行して、Azure portal から Log Analytics にアクセスし、構成設定にアクセスしてや複数のツールを分析し、収集されたデータを操作できます。
 
-[コンテナー監視ソリューション](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)ではログ分析、表示および 1 つの場所で、Docker と Windows コンテナー ホストを管理します。 ソリューションは、どのコンテナーを示しています。 実行して、どのようなコンテナー イメージを実行していると、コンテナーが実行されています。 コンテナーで使用されているコマンドを含む、詳細な監査情報を表示することができます。 また、コンテナーを表示し、Docker または Windows のホストをリモートで表示することがなく一元的なログを検索トラブルシューティングすることもできます。 ホスト上のノイズの多いと使用の余分なリソースがあるコンテナーを検索できます。 さらに、一元的な CPU、メモリ、記憶域、およびネットワーク使用率およびパフォーマンスについては、コンテナーを表示することができます。 Windows を実行するコンピューター上には、集中管理し、Windows Server からログを比較することができます、HYPER-V と Docker のコンテナーです。 ソリューションには、次のコンテナー orchestrators がサポートされています。
+[コンテナー監視ソリューション](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)Log Analytics での表示し、1 つの場所で Docker と Windows コンテナー ホストを管理します。 どのコンテナーが、ソリューションを示しています、どのようなコンテナー イメージを実行して、実行されているし、コンテナーが実行されています。 コンテナーで使用されているコマンドを含む、詳細な監査情報を表示することができます。 また、コンテナーを表示および Docker または Windows ホストをリモートで表示することがなく、一元化されたログを検索してトラブルシューティングすることもできます。 ホストで余分なリソースを簡潔にかかる可能性があるコンテナーが表示されます。 さらに、一元的な CPU、メモリ、ストレージ、およびネットワーク使用率およびパフォーマンスについては、コンテナーを表示することができます。 Windows を実行するコンピューターで、集中管理し、Windows サーバーからログを比較することができます、HYPER-V、および Docker コンテナー。 ソリューションには、次のようなコンテナー オーケストレーターがサポートされています。
 
 -   Docker Swarm
 
@@ -43,27 +43,27 @@ Azure インフラストラクチャ ログとの関連ログ分析、Azure サ�
 
 -   Service Fabric
 
--   Red Hat OpenShift
+-   Red Hat の OpenShift
 
-図 4-11 は、さまざまなコンテナー ホストのエージェントと OMS との間の関係を示しています。
+図 4-11 は、さまざまなコンテナー ホストとエージェントと OMS 間の関係を示しています。
 
-![ログ分析コンテナー監視ソリューション](./media/image11.png)
+![Log Analytics コンテナー監視ソリューション](./media/image11.png)
 
-> **図 4-11。** ログ分析コンテナー監視ソリューション
+> **図 4-11。** Log Analytics コンテナー監視ソリューション
 
-ログ分析のコンテナーの監視ソリューションを使用できます。
+Log Analytics コンテナー監視ソリューションを使用できます。
 
--   1 つの場所のすべてのコンテナー ホストに関する情報を参照してください。
+-   1 つの場所ですべてのコンテナー ホストに関する情報を参照してください。
 
--   対象のコンテナを実行しているどのようなイメージを実行して、実行しています。
+-   どのコンテナーが、どのようなイメージを実行して、実行されているし、実行しています。
 
--   コンテナーにおけるアクションの監査証跡を参照してください。
+-   コンテナー操作の監査証跡を参照してください。
 
--   表示して、Docker ホストへのリモート ログインに関係なく一元的なログを検索してトラブルシューティングを行います。
+-   表示および Docker ホストへのリモート ログインに関係なく、一元化されたログを検索してトラブルシューティングを行います。
 
--   「ノイズの多い近隣」場合があり、ホスト上余分なリソースを消費するコンテナーを検索します。
+-   「うるさい隣人」、可能性がありますし、ホストで余分なリソースを消費するコンテナーを検索します。
 
--   一元的な CPU、メモリ、記憶域、およびネットワーク使用率およびパフォーマンスについては、コンテナーを表示します。
+-   一元的な CPU、メモリ、ストレージ、およびネットワーク使用率およびパフォーマンスについては、コンテナーを表示します。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
@@ -75,15 +75,15 @@ Azure インフラストラクチャ ログとの関連ログ分析、Azure サ�
 
 [https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
 
--   **ログ分析は何ですか。**
+-   **Log Analytics とは何ですか。**
 
 [https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
 
--   **ログ分析でコンテナー監視ソリューション**
+-   **Log Analytics のコンテナー監視ソリューション**
 
 [https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
 
--   **Azure のモニターの概要**
+-   **Azure Monitor の概要**
 
 [https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
 
@@ -96,5 +96,5 @@ Azure インフラストラクチャ ログとの関連ログ分析、Azure サ�
 [https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
 
 >[!div class="step-by-step"]
-[前へ](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
-[次へ](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[前へ](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+>[次へ](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

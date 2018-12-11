@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1ba65194c49f76bb5c29ed28b1b038c02cf1a59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ee575cacbc51fc910770cca145a4280f97b66db
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393082"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144438"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
-アセンブリが `LoadFrom` コンテキストに読み込まれると、`loadFromContext` マネージ デバッグ アシスタント (MDA) がアクティブになります。 このような状況は、<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> または他の同様のメソッドを呼び出した結果として発生する可能性があります。  
+アセンブリが `LoadFrom` コンテキストに読み込まれると、`loadFromContext` マネージド デバッグ アシスタント (MDA) がアクティブになります。 このような状況は、<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> または他の同様のメソッドを呼び出した結果として発生する可能性があります。  
   
 ## <a name="symptoms"></a>症状  
  一部のローダー メソッドは、使用すると、`LoadFrom` コンテキストでアセンブリが呼び出される結果になる可能性があります。 このコンテキストを使用すると、シリアル化、キャスティング、依存関係の解決について予期しない結果になる可能性があります。 一般的に、このような問題を回避するために、アセンブリを `Load` コンテキストに読み込むことをお勧めします。 この MDA を使用せずに、アセンブリが読み込まれたコンテキストを判断することは困難です。  
@@ -55,7 +55,7 @@ ms.locfileid: "33393082"
 ## <a name="example"></a>例  
  次のコードの例は、この MDA がアクティブ化されることのある状況を示しています。  
   
-```  
+```csharp
 using System.Reflection;  
 namespace ConsoleApplication1  
 {  
@@ -73,4 +73,4 @@ namespace ConsoleApplication1
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

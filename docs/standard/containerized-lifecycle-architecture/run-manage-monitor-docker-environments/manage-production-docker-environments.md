@@ -4,12 +4,12 @@ description: Microsoft プラットフォームとツールでコンテナー化
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3bafdd9f6a6aa4f850fd28b6315e68c643d1f8c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202856"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147296"
 ---
 # <a name="manage-production-docker-environments"></a>運用環境の Docker 環境を管理します。
 
@@ -23,7 +23,7 @@ Azure 仮想マシン スケール セットを使用してこれらのクラス
 
 表 6-1 は、オーケストレーター、スケジューラ、クラスタ リングのプラットフォームに関連する、一般的な管理ツールを一覧表示します。
 
-表 6-1: Docker の管理ツール
+表 6-1:Docker の管理ツール
 
 
 | 管理ツール      | 説明           | 関連するオーケストレーター |
@@ -44,7 +44,6 @@ Service Fabric 管理ツールを次に示します。
 
 -   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) insights と Service Fabric クラスターのノード/vm の観点から、アプリケーションとサービスの観点からの特定の操作を提供する特殊な web UI ツールです。
 
-
 >[!div class="step-by-step"]
-[前へ](run-microservices-based-applications-in-production.md)
-[次へ](monitor-containerized-application-services.md)
+>[前へ](run-microservices-based-applications-in-production.md)
+>[次へ](monitor-containerized-application-services.md)

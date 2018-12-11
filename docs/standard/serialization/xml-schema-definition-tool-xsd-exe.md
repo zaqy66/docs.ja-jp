@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 23dea344b123b377224aad5816137aa246b8f596
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01f980162a2d356c6c3ff31e4a0c01644b74d461
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850864"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143936"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML スキーマ定義ツール (Xsd.exe) は、XDR、XML、および XSD ファイル、またはランタイム アセンブリ内のクラスから XML スキーマ クラスまたは共通言語ランタイム クラスを生成します。  
@@ -35,7 +35,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |オプション|説明|  
 |------------|-----------------|  
 |**/h****[elp]**|このツールのコマンド構文とオプションを表示します。|  
-|**/o****[utputdir]****:***directory*|出力ファイル用のディレクトリを指定します。 この引数は 1 回だけ指定できます。 既定値は、現在のディレクトリです。|  
+|**/o****[utputdir]****:**_directory_|出力ファイル用のディレクトリを指定します。 この引数は 1 回だけ指定できます。 既定値は、現在のディレクトリです。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
 |**/P[arameters]:** *file.xml*|指定された .xml ファイルから各種のオペレーション モードのためのオプションを読み込みます。 省略形は '/p:' です。 詳細については、「解説」を参照してください。|  
   
@@ -51,22 +51,22 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |オプション|説明|  
 |------------|-----------------|  
-|**/e****[lement]****:***element*|コードを生成する対象とする、スキーマ内の要素を指定します。 既定では、すべての要素が指定されます。 この引数は、複数回指定できます。|  
+|**/e****[lement]****:**_element_|コードを生成する対象とする、スキーマ内の要素を指定します。 既定では、すべての要素が指定されます。 この引数は、複数回指定できます。|  
 |**/enableDataBinding**|データ バインディングを有効にするために、生成されたすべての型に <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装します。 短縮形は `/edb` です。|  
 |**/enableLinqDataSet**|(短縮形 : `/eld`)。LINQ to DataSet を使用して、生成された DataSet を照会できるように指定します。 このオプションは /dataset オプションも指定した場合に使用されます。 詳細については、「[LINQ to DataSet Overview](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)」(LINQ to DataSet Overview) と「[Querying Typed DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)」(型指定された DataSet のクエリ) を参照してください。 LINQ の詳細については、「[統合言語クエリ (LINQ)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)」を参照してください。|  
 |**/f****[ields]**|プロパティの代わりにフィールドを生成します。 既定では、プロパティが生成されます。|  
-|**/l****[anguage]** **: * * * 言語*|使用するプログラミング言語を指定します。 `CS` (C#、既定値)、`VB` (Visual Basic)、`JS` (JScript)、または `VJS` (Visual J#) から選択します。 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> を実装するクラスの完全修飾名を指定することもできます。|  
-|**/n****[amespace]** **: * * * 名前空間*|生成する型のランタイム名前空間を指定します。 既定の名前空間は `Schemas` です。|  
+|**/l****[anguage]****:**_language_|使用するプログラミング言語を指定します。 `CS` (C#、既定値)、`VB` (Visual Basic)、`JS` (JScript)、または `VJS` (Visual J#) から選択します。 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> を実装するクラスの完全修飾名を指定することもできます。|  
+|**/n****[amespace]****:**_名前空間_|生成する型のランタイム名前空間を指定します。 既定の名前空間は `Schemas` です。|  
 |**/nologo**|バナーを表示しません。|  
 |**/order**|すべてのパーティクル メンバーに明示的な順序 ID を生成します。|  
 |**/o[ut]:** *directoryName*|ファイルを格納する出力ディレクトリを指定します。 既定値は、現在のディレクトリです。|  
-|**/u****[ri]****:***uri*|コードを生成する対象とする、スキーマ内の要素の URI を指定します。 指定した場合、この URI は `/element` オプションで指定したすべての要素に適用されます。|  
+|**/u****[ri]****:**_uri_|コードを生成する対象とする、スキーマ内の要素の URI を指定します。 指定した場合、この URI は `/element` オプションで指定したすべての要素に適用されます。|  
   
 ## <a name="dll-and-exe-file-options"></a>DLL ファイルと EXE ファイルのオプション  
   
 |オプション|説明|  
 |------------|-----------------|  
-|**/t****[ype]****:***typename*|スキーマの作成対象とする型の名前を指定します。 複数の型の引数を指定できます。 *typename* によって名前空間が特定されない場合、指定された型を持つアセンブリに含まれるすべての型が対象となります。 *typename* によって名前空間が特定される場合は、その型だけが対象になります。 *typename* の末尾がアスタリスク (\*) の場合は、\* の前にある文字列で始まる型のすべてが対象となります。 `/type` オプションを省略すると、アセンブリに含まれるすべての型についてスキーマが生成されます。|  
+|**/t****[ype]****:**_typename_|スキーマの作成対象とする型の名前を指定します。 複数の型の引数を指定できます。 *typename* によって名前空間が特定されない場合、指定された型を持つアセンブリに含まれるすべての型が対象となります。 *typename* によって名前空間が特定される場合は、その型だけが対象になります。 *typename* の末尾がアスタリスク (\*) の場合は、\* の前にある文字列で始まる型のすべてが対象となります。 `/type` オプションを省略すると、アセンブリに含まれるすべての型についてスキーマが生成されます。|  
   
 ## <a name="remarks"></a>Remarks  
  Xsd.exe が実行する操作を次の表に示します。  

@@ -2,12 +2,12 @@
 title: ワークフロー サービス内でのシリアル化の構成
 ms.date: 03/30/2017
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
-ms.openlocfilehash: 67d8807e5ff45db2e8662586861d969e14ceaa8d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 63a5860bd428fd4ce7fe01d7901427c85b2d5609
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583711"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154113"
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>ワークフロー サービス内でのシリアル化の構成
 ワークフロー サービスは、Windows Communication Foundation (WCF) サービスをそのため、オプションのいずれかを使用して、、 <xref:System.Runtime.Serialization.DataContractSerializer> (既定値) または<xref:System.Xml.Serialization.XmlSerializer>します。 ワークフロー以外のサービスを記述する場合、使用するシリアライザーの型はサービスまたは操作コントラクトで指定されます。 WCF ワークフロー サービスを作成するときに、コードでは、これらのコントラクトを指定しないが、コントラクト推論で実行時に生成されます。 コントラクト推論の詳細については、次を参照してください。[ワークフローを使用してコントラクト](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)します。  シリアライザーは、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> プロパティを使用して指定されます。 これは、次の図に示すようにデザイナーで設定できます。  
@@ -16,7 +16,7 @@ ms.locfileid: "48583711"
   
  シリアライザーは、次の例に示すようにコードで設定することもできます。  
   
-```  
+```csharp  
 Receive approveExpense = new Receive  
             {  
                 OperationName = "ApproveExpense",  
