@@ -5,12 +5,12 @@ author: billwagner
 ms.author: billwagner
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ec153b8fed08ef245a3a0f58970b4e3955dfacb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 226482d1d385078811f2b1c5ee138e24287a785e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567264"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154334"
 ---
 # <a name="the-roslyn-based-analyzers"></a>Roslyn ベースのアナライザー
 
@@ -33,5 +33,6 @@ Roslyn ベースのアナライザーは、プロジェクト内に NuGet パッ
 
 このセクションでは、次のアナライザーについて説明します。
 
-[API アナライザー](api-analyzer.md): このアナライザーでは、コードの互換性の潜在的リスクや、非推奨の API の使用が調べられます。    
-[フレームワーク アナライザー](framework-analyzer.md): このアナライザーでは、コードが .NET Framework アプリケーションのガイドラインに従っているかどうかが調べられます。 これらの規則には、セキュリティに基づく推奨事項がいくつか含まれます。
+* [API アナライザー](api-analyzer.md): このアナライザーでは、コードの互換性の潜在的リスクや、非推奨の API の使用が調べられます。    
+* [フレームワーク アナライザー](framework-analyzer.md): このアナライザーでは、コードが .NET Framework アプリケーションのガイドラインに従っているかどうかが調べられます。 これらの規則には、セキュリティに基づく推奨事項がいくつか含まれます。
+* [.NET Portability Analyzer](portability-analyzer.md): このアナライザーでは、コードを調べて、アプリケーションと他の .NET の実装やプロファイル (.NET Core、.NET Standard、UWP、Xamarin for iOS、Android、Mac など) との互換性を確保するために必要な作業量を確認します。 

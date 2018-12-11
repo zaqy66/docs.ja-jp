@@ -1,15 +1,15 @@
 ---
 title: 複数のコンテナーとマイクロサービス ベースの NET アプリケーションのデザインと開発
-description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | 複数のコンテナーとマイクロサービス ベースの NET アプリケーションのデザインと開発'
+description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | 複数のコンテナーとマイクロサービス ベースの NET アプリケーションをデザインおよび開発するための外部アーキテクチャを理解します。'
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 13abff090d42c5d59476612942560c126836dbb0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 3bbf746aa9c0b66a097b8c4df2964b5679342fd0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104479"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144144"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>複数のコンテナーとマイクロサービス ベースの NET アプリケーションのデザインと開発
 
@@ -19,7 +19,6 @@ ms.locfileid: "37104479"
 
 ただし、Docker コンテナーにも基づくマイクロサービス ベースのアプリケーションをデザインおよび開発する方法を知っている場合、その他の単純なアプリケーション モデルをデザインおよび開発することができます。 たとえば、複数コンテナーの手法も必要とする、3 層のアプリケーションをデザインする可能性があります。 そのために、また、マイクロサービス アーキテクチャはコンテナーの世界で重要なトレンドであるため、このセクションでは、Docker コンテナーを使用するマイクロサービス アーキテクチャの実装に注目します。
 
-
 >[!div class="step-by-step"]
-[前へ](../containerize-net-framework-applications/index.md)
-[次へ](microservice-application-design.md)
+>[前へ](../docker-application-development-process/docker-app-development-workflow.md)
+>[次へ](microservice-application-design.md)

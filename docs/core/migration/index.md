@@ -1,23 +1,25 @@
 ---
-title: .NET Core の csproj 形式への移行
-description: .NET Core project.json から csproj への移行
+title: project.json からの .NET Core の移行
+description: project.json を使って以前の .NET Core プロジェクトを移行する方法について説明します
 author: blackdwarf
 ms.author: mairaw
 ms.date: 07/19/2017
-ms.openlocfilehash: da1995ed3b77cb802d1f3d04e6d741809de20927
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 47d9cab48d83581afb9deb2fd91c4c9a6dc85201
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584339"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143286"
 ---
-# <a name="migrating-net-core-projects-to-the-csproj-format"></a>.NET Core プロジェクトから .csproj 形式への移行
+# <a name="migrating-net-core-projects-from-projectjson"></a>project.json からの .NET Core プロジェクトの移行
 
 このドキュメントでは、.NET Core プロジェクトの移行シナリオについて説明します。次の 3 つの移行シナリオを取り上げます。
 
 1. [有効な最新スキーマの *project.json* から *csproj* への移行](#migration-from-projectjson-to-csproj)
 2. [DNX から csproj への移行](#migration-from-dnx-to-csproj)
 3. [RC3 と以前の .NET Core csproj プロジェクトから最終形式への移行](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
+
+このドキュメントを使用できるのは、project.json を引き続き使っている、以前の .NET Core プロジェクトのみです。 これを .NET Framework から .NET Core への移行に適用することはできません。
 
 ## <a name="migration-from-projectjson-to-csproj"></a>project.json から csproj への移行
 

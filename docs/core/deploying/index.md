@@ -1,27 +1,30 @@
 ---
 title: .NET Core アプリケーション展開
-description: .NET Core アプリケーションの展開。
+description: .NET Core アプリケーションを展開する方法について説明します。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/03/2018
-ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: seodec18
+ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836629"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144716"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core アプリケーションの展開
 
-.NET Core アプリケーションに対して、次の 2 種類の展開を作成できます。
+.NET Core アプリケーションに対して、次の 3 種類の展開を作成できます。
 
 - フレームワークに依存する展開。 名前が示すように、フレームワークに依存する展開 (FDD) は、ターゲット システムに .NET Core のシステム全体の共有バージョンが存在することに依存します。 .NET Core は既に存在するので、アプリは .NET Core のインストール間で移植することもできます。 アプリには、それ自体のコード、および .NET Core ライブラリの外部にあるサードパーティの依存関係のみが含まれています。 FDD には、コマンドラインから [dotnet ユーティリティ](../tools/dotnet.md)を使って起動できる *.dll* ファイルが含まれています。 たとえば、`dotnet app.dll` は `app` という名前のアプリケーションを実行します。
 
 - 自己完結型の展開。 FDD とは異なり、自己完結型の展開 (SCD) は、ターゲット システムに共有コンポーネントが存在することに依存しません。 .NET Core ライブラリと .NET Core ランタイムの両方を含むすべてのコンポーネントがアプリケーションに含まれており、他の .NET Core アプリケーションから分離されています。 SCD には、プラットフォーム固有の .NET Core ホストの名前変更後のバージョンである実行可能ファイル (`app` という名前のアプリケーションに対する Windows プラットフォーム上の *app.exe* など)、および実際のアプリケーションである *.dll* ファイル (*app.dll* など) が含まれています。
 
+- フレームワークに依存する実行可能ファイル。 ターゲット プラットフォーム上で実行される実行可能ファイルを生成します。 FDD と同様に、フレームワークに依存する実行可能ファイル (FDE) はプラットフォームに固有であり、自己完結型ではありません。 これらの展開は、引き続き .NET Core のシステム全体の共有バージョンに依存して実行されます。 SCD とは異なり、アプリに含まれるのは、ご自身のコードと、.NET Core ライブラリの外部にあるサードパーティの依存関係のみです。 FDE では、ターゲット プラットフォーム上で実行される実行可能ファイルが生成されます。
+
 ## <a name="framework-dependent-deployments-fdd"></a>フレームワークに依存する展開 (FDD)
 
-FDD では、アプリ、およびサードパーティの依存関係のみを展開します。 アプリは、ターゲット システムに存在する .NET Core のバージョンを使うので、.NET Core を展開する必要はありません。 これは、.NET Core および .NET Core をターゲットとする ASP.NET Core アプリの既定の展開モデルです。
+FDD では、アプリ、およびサードパーティの依存関係のみを展開します。 アプリでは、ターゲット システム上に存在するバージョンの .NET Core が使われます。 これは、.NET Core および .NET Core をターゲットとする ASP.NET Core アプリの既定の展開モデルです。
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>フレームワークに依存する展開を作成する理由
 
@@ -31,11 +34,13 @@ FDD の展開には、次のいくつかの利点があります。
 
 - 展開パッケージは小サイズです。 .NET Core 自体ではなく、アプリとその依存関係のみを展開します。
 
+- オーバーライドされない限り、FDD では、ターゲット システムにインストールされている最新のサービス提供されたランタイムが使われます。 これにより、ご自身のアプリケーションで修正済みの最新バージョンの .NET Core ランタイムを使うことができます。 
+
 - 複数のアプリが、同じ .NET Core インストールを使用します。これにより、ホスト システム上のディスク領域とメモリ使用量の両方が削減されます。
 
 次のいくつかの短所もあります。
 
-- ターゲットとする .NET Core のバージョンまたはそれ以降のバージョンがホスト システムに既にインストールされている場合にのみ、アプリを実行できます。
+- アプリのターゲットとなる .NET Core のバージョン、[またはそれ以降のバージョン](../versions/selection.md#framework-dependent-apps-roll-forward)が、ホスト システムに既にインストールされている場合にのみアプリを実行できます。
 
 - 将来のリリースでは、ユーザーの認識なしに .NET Core ランタイムおよびライブラリが変更される場合があります。 まれなケースでは、アプリのビヘイビアーが変更される可能性があります。
 
@@ -65,9 +70,31 @@ FDD および SCD の展開では別個のホスト実行可能ファイルを�
 
 - 多数の自己完結型の .NET Core アプリをシステムに展開すると、各アプリが .NET Core ファイルを複製するので、非常に多くのディスク領域を使用する可能性があります。
 
+## <a name="framework-dependent-executables-fde"></a>フレームワークに依存する実行可能ファイル (FDE)
+
+.NET Core 2.2 以降では、必要なサードパーティの依存関係と共に、FDE としてアプリを展開できます。 アプリでは、ターゲット システムにインストールされているバージョンの .NET Core が使われます。
+
+### <a name="why-deploy-a-framework-dependent-executable"></a>フレームワークに依存する実行可能ファイルを展開する理由
+
+FDE の展開には、次のいくつかの利点があります。
+
+- 展開パッケージは小サイズです。 .NET Core 自体ではなく、アプリとその依存関係のみを展開します。
+
+- 複数のアプリが、同じ .NET Core インストールを使用します。これにより、ホスト システム上のディスク領域とメモリ使用量の両方が削減されます。
+
+- 直接 `dotnet` ユーティリティを起動することなく、発行済みの実行可能ファイルを呼び出すことでアプリを実行できます。
+
+次のいくつかの短所もあります。
+
+- アプリのターゲットとなる .NET Core のバージョン、[またはそれ以降のバージョン](../versions/selection.md#framework-dependent-apps-roll-forward)が、ホスト システムに既にインストールされている場合にのみアプリを実行できます。
+
+- 将来のリリースでは、ユーザーの認識なしに .NET Core ランタイムおよびライブラリが変更される場合があります。 まれなケースでは、アプリのビヘイビアーが変更される可能性があります。
+
+- 各ターゲット プラットフォームに対してアプリを発行する必要があります。
+
 ## <a name="step-by-step-examples"></a>手順の例
 
-CLI ツールで .NET Core アプリを展開する手順の例については、「[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)」(CLI ツールで .NET Core アプリを展開する) をご覧ください。 Visual Studio で .NET Core アプリを展開する手順の例については、「[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)」(Visual Studio で .NET Core アプリを展開する) をご覧ください。 各トピックには、次の展開の例が含まれます。
+CLI ツールで .NET Core アプリを展開する手順の例については、「[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)」(CLI ツールで .NET Core アプリを展開する) をご覧ください。 Visual Studio で .NET Core アプリを展開する手順の例については、「[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)」(Visual Studio で .NET Core アプリを展開する) をご覧ください。 各記事には、次の展開の例が含まれます。
 
 - フレームワークに依存する展開
 - サードパーティの依存関係を含む、フレームワークに依存する展開

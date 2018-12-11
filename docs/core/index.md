@@ -2,15 +2,14 @@
 title: .NET Core のガイド
 description: .NET Core は、Windows、Linux、および Mac アプリを作成するためのモジュール型の高性能な .NET 実装です。 ここでは、.NET Core の概要について説明します。
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 448edabf624f04311695e8b8c224f653b9939966
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ffa58600bea1f5514b25c18aa00e6d36679f2fd9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199462"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170278"
 ---
 # <a name="net-core-guide"></a>.NET Core のガイド
 

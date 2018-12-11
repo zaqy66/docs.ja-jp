@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fcff6d701b177d125eddaffe74383446f5f7b2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af76322cac08d7cf4e7e30e503c7fa2c97414898
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577229"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154909"
 ---
 # <a name="collections-and-data-structures"></a>コレクションとデータ構造体
 多くの場合、類似するデータはコレクションとして格納および操作すると、より効率的に処理できます。 <xref:System.Array?displayProperty=nameWithType> クラスまたは <xref:System.Collections>、<xref:System.Collections.Generic>、<xref:System.Collections.Concurrent>、System.Collections.Immutable の各名前空間のクラスを使用して、コレクションの個々の要素または一定の範囲の要素を追加、削除、および変更することができます。  
@@ -60,6 +60,7 @@ ms.locfileid: "33577229"
 <a name="BKMK_Choosingacollection"></a>   
 ## <a name="choosing-a-collection"></a>コレクションの選択  
  通常は、ジェネリック コレクションを使用します。 次の表では、一般的なコレクションのシナリオとこれらのシナリオに使用できるコレクション クラスについて説明します。 ジェネリック コレクションに対する知識がない場合、このテーブルは、タスクに最適なジェネリック コレクションを選択するのに役立ちます。  
+ 
 |やりたいこと|ジェネリック コレクションのオプション|非ジェネリック コレクションのオプション|スレッド セーフまたは変更できないコレクションのオプション|  
 |-|-|-|-|  
 |キーによるクイック検索用のキー/値のペアとして項目を保存する|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (キーのハッシュ コードに基づいて編成された、キーと値のペアのコレクション。)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  

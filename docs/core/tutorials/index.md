@@ -4,14 +4,15 @@ description: Mac、Linux、および Windows でアプリとライブラリを�
 author: richlander
 ms.author: mairaw
 ms.date: 03/16/2017
-ms.openlocfilehash: 858fc0b95772d4be14363a1dbcfcd533040b8040
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: 16f468ffdff3ea4fff1ab2400ac7dd3d270c781c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210147"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130736"
 ---
-# <a name="net-core-tutorials"></a>.NET Core チュートリアル
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>これらのチュートリアルを詳しく見ていくことで .NET Core と .NET Core SDK ツールについて学習する
 
 .NET Core について学習するには、次のチュートリアルを使用できます。
 

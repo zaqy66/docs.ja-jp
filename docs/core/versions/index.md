@@ -1,17 +1,18 @@
 ---
-title: .NET Core バージョン管理
-description: .NET Core でのバージョン管理のしくみについて説明します。
+title: .NET Core ランタイムと SDK をバージョン管理する方法
+description: この記事では、.NET Core SDK と ランタイムをバージョン管理する方法について説明します (セマンティック バージョニングと似ています)。
 author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 12bb270584eb0f63973acf40afd3f6a30363c9c6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188470"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126052"
 ---
-# <a name="net-core-versioning"></a>.NET Core バージョン管理
+# <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
 .NET Core とは .NET Core ランタイムと .NET Core SDK を示しており、これにはアプリケーションを開発するのに必要なツールが含まれています。 .NET Core SDK は、前のバージョンの .NET Core ランタイムをどれでも使用できるように設計されています。 この記事では、ランタイムおよび SDK のバージョン戦略について説明します。 .NET Standard のバージョン番号については、[.NET Standard](../../standard/net-standard.md#net-implementation-support) に関する記事を参照してください。
 

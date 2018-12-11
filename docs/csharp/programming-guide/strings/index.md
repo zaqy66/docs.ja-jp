@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7034d37c141d79301bf108b9e7b41ab3e27e2572
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170653"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143923"
 ---
 # <a name="strings-c-programming-guide"></a>文字列 (C# プログラミング ガイド)
 文字列は、値がテキストの <xref:System.String> 型のオブジェクトです。 内部では、テキストは <xref:System.Char> オブジェクトの順次読み取り専用コレクションとして格納されます。 C# の文字列の末尾には null 終端文字はありません。したがって、C# の文字列には任意の数の null 文字 ('\0') を埋め込むことができます。 文字列の <xref:System.String.Length%2A> プロパティは、Unicode 文字の数ではなく、文字列に含まれている `Char` オブジェクトの数を表します。 文字列内の個別の Unicode コード ポイントにアクセスするには、<xref:System.Globalization.StringInfo> オブジェクトを使用します。  
@@ -70,11 +70,21 @@ ms.locfileid: "47170653"
 >  コンパイル時に、逐語的文字列はエスケープ シーケンスと同様に通常の文字列に変換されます。 したがって、逐語的文字列をデバッガーのウォッチ ウィンドウで表示すると、ソース コードの逐語的バージョンではなく、コンパイラが追加したエスケープ文字が表示されます。 たとえば、逐語的文字列 @"C:\files.txt" は、ウォッチ ウィンドウでは "C:\\\files.txt" と表示されます。  
   
 ## <a name="format-strings"></a>書式指定文字列  
- 書式指定文字列は、内容が実行時に動的に決定される文字列です。 静的な <xref:System.String.Format%2A> メソッドを使用して、実行時に他の値に置換されるプレースホルダーを中かっこ内に埋め込むことで、書式指定文字列を作成します。 書式指定文字列を使用して、ループの各反復処理の結果を出力する例を次に示します。  
+ 書式指定文字列は、その内容が実行時に動的に決定される文字列です。 書式指定文字列を作成するには、文字列内の中かっこの内側に "*挿入式*" かプレースホルダーを埋め込みます。 中かっこ (`{...}`) 内にあるものはすべて値に解決され、実行時に書式設定された文字列として出力されます。 書式指定文字列を作成するには、文字列補間と複合書式設定の 2 つの方法があります。
+
+### <a name="string-interpolation"></a>文字列補間
+C# 6.0 以降で使用できる ["*補間文字列*"](../../language-reference/tokens/interpolated.md) は、特殊文字 `$` によって識別され、中かっこ内に挿入式を含みます。 文字列補間を初めて使用する場合は、簡単な概要として「[文字列補間 - C# の対話形式チュートリアル](../../tutorials/intro-to-csharp/interpolated-strings.yml)」をご覧ください。
+
+文字列補間を使ってコードの読みやすさと保守性を向上させます。 文字列補間がもたらす結果は `String.Format` メソッドと同じですが、使いやすさとインラインのわかりやすさが向上します。
+
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringInterpolation)]
+
+### <a name="composite-formatting"></a>複合書式指定
+<xref:System.String.Format%2A?displayProperty=nameWithType> では、中かっこ内のプレースホルダーを使って書式指定文字列を作成します。 この例では、上で使用した文字列補間の方法と同様の出力が生じます。
   
- [!code-csharp[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
-  
- <xref:System.Console.WriteLine%2A> メソッドのオーバーロードは、パラメーターとして書式指定文字列を受け取ります。 したがって、メソッドを明示的に呼び出さずに書式指定リテラル文字列を埋め込むことができます。 ただし、Visual Studio の **[出力]** ウィンドウにデバッグ出力を表示するために <xref:System.Diagnostics.Trace.WriteLine%2A> メソッドを使用する場合、<xref:System.Diagnostics.Trace.WriteLine%2A> は書式文字列ではなく、文字列のみを受け入れるので、明示的に <xref:System.String.Format%2A> メソッドを呼び出す必要があります。 書式指定文字列の詳細については、「[型の書式設定](../../../standard/base-types/formatting-types.md)」を参照してください。  
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringFormat)]
+
+.NET 型の書式設定について詳しくは、「[.NET での型の書式設定](../../../standard/base-types/formatting-types.md)」をご覧ください。
   
 ## <a name="substrings"></a>部分文字列  
  部分文字列は、1 つの文字列に含まれる一連の文字です。 元の文字列の一部から新しい文字列を作成するには、<xref:System.String.Substring%2A> メソッドを使用します。 <xref:System.String.IndexOf%2A> メソッドを使用して、1 つまたは複数の部分文字列を検索できます。 指定されたすべての部分文字列を新しい文字列に置換するには、<xref:System.String.Replace%2A> メソッドを使用します。 <xref:System.String.Substring%2A> メソッドと同様に、<xref:System.String.Replace%2A> は実際に新しい文字列を返し、元の文字列は変更しません。 詳細については、「[How to: search strings](../../how-to/search-strings.md)」(方法: 文字列を検索する) および「[方法 : 文字列の内容を変更する](../../how-to/modify-string-contents.md)」を参照してください。  

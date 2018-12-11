@@ -1,39 +1,51 @@
 ---
-title: ML.NET ガイド
+title: ML.NET コンテンツ ガイド
 description: ML.NET を使用してカスタム AI ソリューションを構築し、これを .NET アプリケーションに統合する方法について説明します。
-author: aditidugar
-ms.date: 05/07/2018
-ms.openlocfilehash: a5be91283d8b8d00b727ec43d1137a0a245175d3
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.date: 11/06/2018
+ms.custom: seodec18
+ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34862338"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126251"
 ---
-# <a name="mlnet-guide"></a>ML.NET ガイド
+# <a name="mlnet-content-guide"></a>ML.NET コンテンツ ガイド
 
-ML.NET は無料、オープンソース、クロスプラットフォームの機械学習フレームワークです。機械学習のカスタム ソリューションを構築し、これを .NET アプリケーションに統合できるようになります。 このガイドでは、ML.NET の使用に関する多数のリソースを提供します。
+このガイドでは、基本的な概念について説明し、ML.NET を使って作業するためのチュートリアルと API リファレンスを提供します。
 
-ML.NET の詳細については、.NET ブログの投稿「[Introducing ML.NET: Cross-platform, Proven and Open Source Machine Learning Framework](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/introducing-ml-net-cross-platform-proven-and-open-source-machine-learning-framework/)」(ML.NET について: クロスプラットフォーム、実証済み、オープンソースの機械学習フレームワーク) を参照してください。
+> [!NOTE]
+> このドキュメントでは ML.NET が参照されていますが、これは現在プレビュー段階にあります。 内容は変更される場合があります。 詳しくは、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページをご覧ください。
 
 ## <a name="get-started"></a>作業開始
 
-ML.NET を使い始める場合は、「[Iris Petal Prediction quickstart](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet/get-started)」(アイリスの花びらの予測のクイックスタート) を参照するか、[チュートリアル](tutorials/index.md)でさらに詳しい内容をご確認ください。
+ML.NET をインストールして構築を開始するには、[入門チュートリアル](https://www.microsoft.com/net/learn/machinelearning-ai/ml-dotnet-get-started-tutorial)に従います。
 
-初めて機械学習を使う場合は、機械学習に関する便利なリソースが含まれる「[Machine Learning の基本](resources/basics.md)」も参照してください。
+ML.NET について学習するには、[ML.NET とは何か](what-is-mldotnet.md)を説明しているページをご覧ください。
 
-## <a name="how-the-mlnet-guide-is-organized"></a>ML.NET ガイドの編成
+基本を理解するには、「[Basic concepts for model training in ML.NET](basic-concepts-model-training-in-mldotnet.md)」(ML.NET でのモデル トレーニングに関する基本的な概念) をご覧ください。
 
-ML.NET ガイドにはいくつかのセクションがあります。 順番に読み進めても、興味のある記事を選んで読んでもかまいません。
+## <a name="tutorials"></a>チュートリアル
 
-**[チュートリアル](tutorials/index.md)**
+[バイナリ分類モデルを使ったセンチメント分析](tutorials/sentiment-analysis.md)に関するページでは、センチメントが正であるか負であるかを判断するアプリの構築方法を示します。
 
-このセクションには、共通の開発者シナリオのために機械学習のカスタム モデルを構築するためのステップ バイ ステップのチュートリアルがあります。
+[回帰モデルを使ったタクシー運賃の予測](tutorials/taxi-fare.md)に関するページでは、履歴データの多数の要因を使って回答を決定する、予測的なアプリの構築方法を示します。
 
-**[用語集](resources/glossary.md)**
+[特徴によるアヤメの花の分類](tutorials/iris-clustering.md)に関するページでは、クラスタ リング モデルを使ってアヤメのデータセットを分析する方法を示します。 
 
-機械学習の用語とその定義の一覧を検索できます。
+## <a name="how-to-guide"></a>ハウツー ガイド
+
+[Infer.NET と確率論的プログラミングを使ったゲーム対戦リスト アプリの構築](how-to-guides/matchup-app-infer-net.md)に関するページでは、Xbox のゲームに見られるような対戦アプリの簡略化バージョンを構築する方法を示します。
+
+## <a name="resources"></a>リソース
+
+「[機械学習の用語集](resources/glossary.md)」には主要な用語の定義があります。
+
+「[機械学習のタスク](resources/tasks.md)」では、分類や異常検出などのタスクについて説明します。 
+
+「[データ変換](resources/transforms.md)」では、ML.NET におけるデータ準備機能について説明します。
+
 
 ## <a name="api-reference"></a>API リファレンス
 
-使用できる API の全容については、[ML.NET API リファレンス](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)に関するページを参照してください。
+[ML.NET API リファレンス](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)に関するページでは、使用できる API の全容について説明します。

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192485"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127928"
 ---
 # <a name="handling-and-raising-events"></a>イベントの処理と発生
 .NET Framework でのイベントは、デリゲート モデルに基づいています。 デリゲート モデルはオブザーバー デザイン パターンに従って、サブスクライバーがプロバイダーに登録して通知を受信できるようにします。 イベントの送信元がイベント発生の通知をプッシュしたら、イベント レシーバーはその通知を受信して、通知に対する応答を定義します。 ここでは、デリゲート モデルの主要コンポーネント、アプリケーションでイベントを利用する方法、およびコードでイベントを実装する方法について説明します。  

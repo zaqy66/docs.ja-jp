@@ -1,15 +1,15 @@
 ---
-title: オープン ソース ライブラリのガイダンス
+title: オープン ソース .NET ライブラリのガイダンス
 description: 高品質の .NET ライブラリを作成するための開発者向けのベスト プラクティスとしての推奨事項。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128071"
 ---
 # <a name="open-source-library-guidance"></a>オープン ソース ライブラリのガイダンス
 
@@ -48,4 +48,4 @@ NuGet パッケージを使用してご利用のライブラリの配布を **�
 ご利用のライブラリに関して厳密な名前が指定されたバージョンおよび厳密でない名前が指定されたバージョンの発行は **❌ 実施しない**でください。 たとえば、`Contoso.Api` と`Contoso.Api.StrongNamed` です。
 
 >[!div class="step-by-step"]
-[次へ](./get-started.md)
+>[次へ](get-started.md)
