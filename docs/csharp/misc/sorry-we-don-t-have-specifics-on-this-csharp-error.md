@@ -892,16 +892,16 @@ ms.locfileid: "33314071"
 # 申し訳ありません、この c# エラーに関する詳細がありません。
 申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のフォーラムのいずれかを使用して他の開発者に質問することができます。  
   
- [Visual C# 言語](https://social.msdn.microsoft.com/Forums/ja-jp/home?forum=csharpgeneralja)  
+ [Visual C# 言語](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage) 
  Visual C# 言語の構文とコンパイラに関する質問や一般的な議論のためのフォーラムを提供します。  
   
- [Visual C# IDE](https://social.msdn.microsoft.com/Forums/ja-jp/home?forum=csharpgeneralja)  
+ [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide) 
  Visual Studio 環境で作業する方法に関する質問のためのフォーラムを提供します。  
   
- [Visual C# 全般](https://social.msdn.microsoft.com/Forums/ja-jp/home?forum=csharpgeneralja)  
+ [Visual C# 全般](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral) 
  Visual C# を使用したその他のフォーラムで取り上げていない質問や一般的な議論のためのフォーラムを提供します。  
   
- [StackOverflow](https://ja.stackoverflow.com/?tags=c%23)  
+ [StackOverflow](http://stackoverflow.com/questions/tagged/c%23) 
  Visual C# に関する質問と問題についてのフォーラムを提供します。  
   
  関連項目:  
