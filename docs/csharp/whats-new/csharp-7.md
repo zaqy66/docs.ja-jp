@@ -231,7 +231,7 @@ C# には、設計の意図を説明するために使用される、クラス�
 
 [!code-csharp[UpdateItemFromIndices](../../../samples/snippets/csharp/new-in-7/program.cs#21_UpdateItemFromIndices "Update Item From Indices")]
 
-それよりも、変更するマトリックス内の要素への "*参照*" を返すメソッドを記述することをお勧めします。 これを実現するには、アンセーフ コードを使用し、前のバージョンの `int` へのポインターを返す方法しかありません。
+それよりも、変更するマトリックス内の要素への "*参照*" を返すメソッドを記述することをお勧めします。 以前のバージョンでは、これを実現するには、アンセーフ コードを使用し、`int` へのポインターを返す方法しかありません。
 
 それでは、一連の変更を確認しながら、ref ローカル変数の機能と、内部ストレージへの参照を返すメソッドの作成方法を説明します。
 その過程で、ref 戻り値および ref ローカル変数の機能の誤用を防ぐための規則についても説明します。
@@ -256,7 +256,7 @@ public static ref int Find2(int[,] matrix, Func<int, bool> predicate)
 
 [!code-csharp[FindReturningRef](../../../samples/snippets/csharp/new-in-7/MatrixSearch.cs#22_FindReturningRef "Find returning by reference")]
 
-このメソッドはマトリックス内の整数値への参照を返すため、呼び出される場所を変更する必要があります。  `var` 宣言は、`valItem` がタプルではなく `int` であることを意味します。
+このメソッドはマトリックス内の整数値への参照を返すため、呼び出し側のコードを修正する必要があります。  `var` 宣言は、`valItem` がタプルではなく `int` であることを意味します。
 
 [!code-csharp[AssignRefReturnToValue](../../../samples/snippets/csharp/new-in-7/program.cs#23_AssignRefReturnToValue "Assign ref return to value")]
 
