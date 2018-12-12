@@ -1,5 +1,6 @@
 ---
-title: 相互運用性 (C# プログラミング ガイド)
+title: 相互運用性 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: dc68a2a9c21f6fdb9b531bd07428325ac22ebfb6
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: f3cbfe564fb5820c9e0fa77b75f76be36dd718a4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980649"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235008"
 ---
 # <a name="interoperability-c-programming-guide"></a>相互運用性 (C# プログラミング ガイド)
 相互運用性は、アンマネージ コードへの既存の投資を保持して活用できるようにします。 共通言語ランタイム (CLR) の制御下で実行されるコードは*マネージド コード*と呼ばれ、CLR の外部で実行されるコードは*アンマネージド コード*と呼ばれます。 アンマネージ コードの例は、COM、COM +、C++ コンポーネント、ActiveX コンポーネント、および Microsoft Win32 API です。  
@@ -32,7 +33,7 @@ ms.locfileid: "50980649"
  [方法: プラットフォーム呼び出しを使用して Wave ファイルを再生する](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)  
  プラットフォーム呼び出しサービスを使用して、Windows オペレーティング システム上の .wav サウンド ファイルを再生する方法について説明します。  
   
- [チュートリアル: Office のプログラミング](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)  
+ [チュートリアル:Office プログラミング](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Excel ブックと、ブックへのリンクを含む Word 文書を作成する方法を示します。  
   
  [COM クラスの例](../../../csharp/programming-guide/interop/example-com-class.md)  
@@ -45,6 +46,6 @@ ms.locfileid: "50980649"
 ## <a name="see-also"></a>参照
 
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)  
-- [チュートリアル: Office のプログラミング](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+- [チュートリアル:Office プログラミング](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

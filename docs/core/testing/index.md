@@ -1,16 +1,16 @@
 ---
 title: .NET Core と .NET Standard の単体テスト
-description: .NET Core と .NET Standard のプロジェクトの単体テスト。
+description: この記事では、.NET Core と .NET Standard プロジェクト用の単体テストの概要を簡単に説明します。
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: b63b2706a9a97413a7166c87ae25cbe964e4610b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3fdacd5beb2c6cbfc631d58e99a8741f7a6b233c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170016"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243981"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core と .NET Standard の単体テスト
 
@@ -30,6 +30,8 @@ C#、F#、Visual Basic 向けに組み込まれている .NET Core 2.0 以降の
 > ASP.NET チームは[この規則](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests)に従って、開発者がテスト クラスとメソッドに適した名前を考えられるように支援します。
 
 単体テストを記述するときは、インフラストラクチャに対する依存関係を設けようとしないでください。 テストが低速で不安定になるため、これは統合テストで行います。 アプリケーションでこれらの依存関係を回避するには、[明示的な依存関係の原則](https://deviq.com/explicit-dependencies-principle/)に従い、[依存関係の挿入](/aspnet/core/fundamentals/dependency-injection)を使用します。 個別のプロジェクトの単体テストを統合テストと区別することもできます。 これにより、単体テスト プロジェクトとインフラストラクチャ パッケージの間に参照や依存関係がなくなります。
+
+## <a name="next-steps"></a>次の手順
 
 .NET Core プロジェクトでの単体テストの詳細については、次を参照してください。
 

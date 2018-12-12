@@ -1,5 +1,6 @@
 ---
-title: Null 許容型 (C# プログラミング ガイド)
+title: Null 許容型 - C# プログラミング ガイド
+ms.custom: seodec18
 description: C# の Null 許容型とその使用方法について説明します
 ms.date: 07/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658705"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245131"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Null 許容型 (C# プログラミング ガイド)
 
@@ -52,7 +53,7 @@ Null 許容型には次の特性があります。
   
 - 入れ子になった Null 許容型は許可されません。 次の行はコンパイルされません。`Nullable<Nullable<int>> n;`  
 
-詳細については、「[Null 許容型の使用 (C# プログラミング ガイド)](using-nullable-types.md)」と「[方法: Null 許容型を識別する (C# プログラミング ガイド)](how-to-identify-a-nullable-type.md)」を参照してください。
+詳細については、「[Null 許容型の使用](using-nullable-types.md)」と「[方法: Null 許容型を識別する](how-to-identify-a-nullable-type.md)」を参照してください。
   
 ## <a name="see-also"></a>参照
 

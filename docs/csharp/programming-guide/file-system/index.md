@@ -1,17 +1,18 @@
 ---
-title: ファイル システムとレジストリ (C# プログラミング ガイド)
+title: ファイル システムとレジストリ - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file system [C#]
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-ms.openlocfilehash: 3625f7a108675a3a9ab6be16ef94ae7e7c107612
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 64c852e6fcc034cb56651ffc2d22fa5323bbb54f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45971252"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245666"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>ファイル システムとレジストリ (C# プログラミング ガイド)
 以下のトピックでは、C# と .NET Framework を使用して、ファイル、フォルダー、レジストリに対するさまざまな基本操作を実行する方法を示します。  
@@ -25,8 +26,8 @@ ms.locfileid: "45971252"
 |[方法: ファイルまたはフォルダーを作成する](../../../csharp/programming-guide/file-system/how-to-create-a-file-or-folder.md)|新しいファイルまたはフォルダーを作成する方法を示します。|  
 |[方法: ファイルおよびフォルダーのコピー、削除、および移動を行う (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md)|ファイルやフォルダーをコピー、削除、および移動する方法を示します。|  
 |[方法: ファイル操作の [進行状況] ダイアログ ボックスを表示する](../../../csharp/programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md)|特定のファイル操作について、Windows の標準的な進行状況ダイアログを表示する方法を示します。|  
-|[方法: テキスト ファイルに書き込む](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)|テキスト ファイルに書き込み方法を示します。|  
-|[方法: テキスト ファイルから読み込む](../../../csharp/programming-guide/file-system/how-to-read-from-a-text-file.md)|テキスト ファイルから読み取る方法を示します。|  
+|[方法: テキスト ファイルへの書き込み](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)|テキスト ファイルに書き込み方法を示します。|  
+|[方法: テキスト ファイルからの読み取り](../../../csharp/programming-guide/file-system/how-to-read-from-a-text-file.md)|テキスト ファイルから読み取る方法を示します。|  
 |[方法: テキスト ファイルを一度に 1 行読み込む](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md)|ファイルから一度に 1 行ずつテキストを取得する方法を示します。|  
 |[方法: レジストリにキーを作成する](../../../csharp/programming-guide/file-system/how-to-create-a-key-in-the-registry.md)|キーをシステム レジストリに書き込む方法を示します。|  
   

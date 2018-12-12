@@ -1,5 +1,6 @@
 ---
-title: インデクサー (C# プログラミング ガイド)
+title: インデクサー - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 405de22ea7e48a5964de48eb20becdaf5fc5ae01
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b3dd16cf4c12dca0bc155c478c187047caf4c25
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43503634"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236584"
 ---
 # <a name="indexers-c-programming-guide"></a>インデクサー (C# プログラミング ガイド)
 
@@ -33,7 +34,7 @@ ms.locfileid: "43503634"
 
 式の本文は `=>` で導入され、`get` キーワードは使用されないことに注意してください。 
 
-C# 7.0 以降、get アクセサーと set アクセサーのどちらも、式の本文のメンバーとして実装できます。 この場合、`get` キーワードと `set` キーワードの両方を使用する必要があります。 例:
+C# 7.0 以降、get アクセサーと set アクセサーのどちらも、式の本文のメンバーとして実装できます。 この場合、`get` キーワードと `set` キーワードの両方を使用する必要があります。 次に例を示します。
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
@@ -69,5 +70,5 @@ C# 7.0 以降、get アクセサーと set アクセサーのどちらも、式�
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)

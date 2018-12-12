@@ -1,17 +1,18 @@
 ---
-title: 例外と例外処理 (C# プログラミング ガイド)
+title: 例外と例外処理 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 6cacf3cc613ffb23c6656d5d5718064a91b777a6
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: a617e8921bed3bb4513ecce738064d502af7995b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50744224"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236844"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外と例外処理 (C# プログラミング ガイド)
 C# 言語の例外処理機能は、プログラムの実行時に発生する予期しない状況や例外的な状況を扱うのに役立ちます。 例外処理では、キーワード `try`、`catch`、および `finally` を使用して、成功しない可能性があるアクションを試行し、適切な場合はエラーを処理して、後からリソースをクリーンアップします。 例外の発生元は、共通言語ランタイム (CLR)、.NET Framework、または任意のサード パーティ ライブラリ、またはアプリケーション コードなどさまざまです。 例外は、`throw` キーワードを使用して作成されます。  
@@ -56,7 +57,7 @@ C# 言語の例外処理機能は、プログラムの実行時に発生する�
   
 -   [コンパイラにより生成された例外](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
   
--   [方法: try/catch を使用して例外を処理する (C# プログラミング ガイド)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+-   [方法: try-catch を使用して例外を処理する (C# プログラミング ガイド)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
 -   [方法: finally を使用してクリーンアップ コードを実行する](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
@@ -67,7 +68,7 @@ C# 言語の例外処理機能は、プログラムの実行時に発生する�
 ## <a name="see-also"></a>参照
 
 - <xref:System.SystemException>  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
 - [throw](../../../csharp/language-reference/keywords/throw.md)  
 - [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
