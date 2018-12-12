@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 055c7db652426651dd3c2a74825a11e305d939f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6f759523acab1a248b92c69b95227b878696bbf
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183907"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286586"
 ---
 # <a name="working-with-calendars"></a>カレンダーの使用
 
@@ -137,6 +137,9 @@ ms.locfileid: "50183907"
 
 暦では通常、日付が時代 (年号) に分けられます。 ただし、 <xref:System.Globalization.Calendar> .NET のクラスは、予定表とのほとんどによって定義されたすべての時代をサポートしていません、<xref:System.Globalization.Calendar>クラスは時代は 1 つのみをサポートします。 複数の時代 (年号) をサポートしているのは、<xref:System.Globalization.JapaneseCalendar> クラスと <xref:System.Globalization.JapaneseLunisolarCalendar> クラスだけです。
 
+> [!IMPORTANT]
+>  新しい時代 (年号) を<xref:System.Globlalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>2019 年 5 月 1 日に開始します。 この変更では、これらのカレンダーを使用するすべてのアプリケーションに影響します。 参照してください[.NET の日本語のカレンダーの新しい時代 (年号) の処理](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/)詳細と、アプリケーションが影響を受けるかどうかを判断します。 参照してください[、アプリケーション、日本語の時代 (年号) の変更の準備](~/windows/uwp/design/globalizing/japanese-era-change)については、時代 (年号) の変更に対する準備状況を確認する Windows 上のアプリケーションをテストします。
+
 ### <a name="eras-and-era-names"></a>時代 (年号) と時代 (年号) の名前
 
 .NET では、特定の暦の実装でサポートされる時代 (年号) を表す整数が逆の順序で格納、<xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>配列。 現在の時代 (年号) のインデックスは 0 で、複数の時代 (年号) をサポートする <xref:System.Globalization.Calendar> クラスの場合は、後に続く各インデックスが前の時代 (年号) に対応します。 <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> 配列における現在の時代 (年号) のインデックスは、静的な <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> プロパティで定義されます。これは定数であり、値は常に 0 になります。 個々の <xref:System.Globalization.Calendar> クラスには、現在の時代 (年号) の値を返す静的フィールドも含まれています。 これらを次の表に示します。
@@ -193,5 +196,5 @@ ms.locfileid: "50183907"
 
 ## <a name="see-also"></a>関連項目
 
-* [方法: グレゴリオ暦以外の暦で日付を表示](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-* [サンプル: 暦の週の範囲はユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+* [方法: グレゴリオ暦以外の暦で日付の表示](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+* [サンプル:カレンダーの週の範囲のユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)

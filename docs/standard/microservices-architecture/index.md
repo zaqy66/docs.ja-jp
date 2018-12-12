@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193917"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152683"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Microservices: Architecture for Containerized .NET Applications (.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ)
 
@@ -179,6 +179,5 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 その他のすべてのマークおよびロゴは、該当する各社が所有しています。
 
-
 >[!div class="step-by-step"]
-[次へ](container-docker-introduction/index.md)
+>[次へ](container-docker-introduction/index.md)

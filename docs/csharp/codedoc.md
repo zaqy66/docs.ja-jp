@@ -3,12 +3,12 @@ title: XML コメントによるコードの文書化
 description: XML ドキュメント コメントを含むコードを文書化し、コンパイル時に XML ドキュメント ファイルを生成する方法を説明します。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453269"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129670"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML コメントによるコードの文書化
 
@@ -20,7 +20,7 @@ XML 文書化コメントは、その他すべてのコメントと同じよう�
 
 コンパイル時に XML ファイルを生成するには、次のいずれかを実行します。
 
-- .NET Core を使用してコマンド ラインからアプリケーションを開発している場合は、.csproj プロジェクト ファイルの `<PropertyGroup>` セクションに [DocumentationFile 要素](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) を追加できます。 次の例では、プロジェクト ディレクトリの中に、アセンブリと同じルート ファイル名で XML ファイルが生成されます。
+- .NET Core を使用してコマンド ラインからアプリケーションを開発している場合は、.csproj プロジェクト ファイルの `<PropertyGroup>` セクションに [DocumentationFile 要素](/visualstudio/msbuild/common-msbuild-project-properties) を追加できます。 次の例では、プロジェクト ディレクトリの中に、アセンブリと同じルート ファイル名で XML ファイルが生成されます。
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -196,7 +196,7 @@ XML コメントを別のファイルに移動したので、`<include>` タグ�
 
 `filename` は、文書化の情報を含む XML ファイルの名前を表す属性です。
 
-`path` は、指定した `filename` に含まれる `tag name` への [XPath](https://msdn.microsoft.com/library/ms256115.aspx) クエリを表す属性です。
+`path` は、指定した `filename` に含まれる `tag name` への [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) クエリを表す属性です。
 
 `name` は、コメントの前に配置するタグの名前指定子を表す属性です。
 

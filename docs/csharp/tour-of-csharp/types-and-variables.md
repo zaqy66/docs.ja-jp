@@ -3,12 +3,12 @@ title: C# の型と変数 - C# 言語のツアー
 description: C# における型の定義と変数の宣言について説明します
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 752ff490ec91919dc54539c3e39f6d0c527d6260
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352136"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129520"
 ---
 # <a name="types-and-variables"></a>型と変数
 
@@ -116,5 +116,5 @@ C# には、フィールド、配列要素、ローカル変数、パラメー�
     - `null` 参照、またはそのデリゲート型と互換性のあるインスタンスへの参照
 
 >[!div class="step-by-step"]
-[前へ](program-structure.md)
-[次へ](expressions.md)
+>[前へ](program-structure.md)
+>[次へ](expressions.md)

@@ -1,15 +1,15 @@
 ---
-title: F# コードの書式設定のガイドライン
-description: F# コードの書式設定するためのガイドラインについて説明します。
-ms.date: 05/14/2018
-ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: F#コードの書式設定に関するガイドライン
+description: 書式設定するためのガイドラインについて説明しますF#コード。
+ms.date: 11/26/2018
+ms.openlocfilehash: edaa8c8b759377e71fcba705b30e8af9a8c2a716
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43858006"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286547"
 ---
-# <a name="f-code-formatting-guidelines"></a>F# コードの書式設定のガイドライン
+# <a name="f-code-formatting-guidelines"></a>F#コードの書式設定に関するガイドライン
 
 この記事では、F# コードが実行されるように、コードを書式設定する方法に関するガイドラインを提供します。
 
@@ -21,7 +21,7 @@ ms.locfileid: "43858006"
 
 ## <a name="general-rules-for-indentation"></a>インデントの一般的な規則
 
-F# で既定では、有意の空白を使用します。 次のガイドラインはこれをかけることがいくつかの課題を使い分ける方法についてのガイダンスを提供するためのものです。
+F#既定では、有意の空白を使用します。 次のガイドラインはこれをかけることがいくつかの課題を使い分ける方法についてのガイダンスを提供するためのものです。
 
 ### <a name="using-spaces"></a>スペースを使用します。
 
@@ -30,6 +30,63 @@ F# で既定では、有意の空白を使用します。 次のガイドライ�
 **インデントあたり 4 つのスペースをお勧めします。**
 
 ただし、プログラムのインデントは主観的な問題。 バリエーションが [ok] が最初の規則に従う必要がありますが、*インデントの一貫性*します。 インデントの一般的に受け入れられるスタイルを選択し、コードベース全体で体系的に使用します。
+
+## <a name="formatting-white-space"></a>空白文字を書式設定
+
+F#機密性の高い空白などです。 適切なインデントによってカバーされて空白からほとんどのセマンティクスは、その他の考慮事項があります。
+
+### <a name="formatting-operators-in-arithmetic-expressions"></a>算術式の演算子を書式設定
+
+二項演算式の周囲の空白を常に使用するには。
+
+```fsharp
+let subtractThenAdd x = x - 1 + 3
+```
+
+単項`-`が否定されますが、値が演算子の直後に。
+
+```fsharp
+// OK
+let negate x = -x
+
+// Bad
+let negateBad x = - x
+```
+
+後の空白文字を追加、`-`演算子は、他のユーザーの混乱を招くことができます。
+
+要約すると、常に重要ですが。
+
+* 空白文字で二項演算子のブロックの挿入
+* 単項演算子の後に末尾の空白文字があることはありません。
+
+二項算術演算子のガイドラインは、特に重要です。 バイナリ ブロックの挿入に失敗する`-`演算子、特定の書式設定が選択されている項目と組み合わせたときに、単項演算子として解釈する可能性があります`-`します。
+
+### <a name="surround-a-custom-operator-definition-with-white-space"></a>空白文字でカスタム演算子の定義ブロックの挿入
+
+常に演算子の定義を囲む空白を使用します。
+
+```fsharp
+// OK
+let ( !> ) x f = f x
+
+// Bad
+let (!>) x f = f x
+```
+
+始まる任意のカスタム演算子の`*`コンパイラのあいまいさを避けるために、定義の先頭に空白文字を追加する必要があります。 このため、単に 1 つの空白文字を持つすべての演算子の定義を囲むことをお勧めします。
+
+### <a name="surround-function-parameter-arrows-with-white-space"></a>空白文字で関数パラメーターの矢印を囲む
+
+関数のシグネチャを定義するときに、周囲の空白を使用して、`->`シンボル。
+
+```fsharp
+// OK
+type MyFun = int -> int -> string
+
+// Bad
+type MyFunBad = int->int->string
+```
 
 ## <a name="formatting-blank-lines"></a>空白行を書式設定
 
@@ -193,11 +250,11 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>ジェネリックのプレフィックスの構文を使用して (`Foo<T>`) 方が優先的後置構文 (`T Foo`)
 
-F# ジェネリック型の名前付けの両方、後置 ML スタイルを継承する (たとえば、 `int list`) .NET スタイルのプレフィックスと (たとえば、 `list<int>`)。 次の 4 つの特定の型を除く、.NET スタイルを優先するには。
+F#ジェネリック型の名前付けの両方、後置 ML スタイルを継承 (たとえば、 `int list`) .NET スタイルのプレフィックスと (たとえば、 `list<int>`)。 次の 4 つの特定の型を除く、.NET スタイルを優先するには。
 
-1. F# リストは、後置形式を使用:`int list`なく`list<int>`します。
-2. F# オプションについては、後置形式を使用:`int option`なく`option<int>`します。
-3. F# の配列、構文の名前を使用`int[]`なく`int array`または`array<int>`します。
+1. F#後置形式を使用して、リスト、:`int list`なく`list<int>`します。
+2. F#オプションを使用して、後置形式:`int option`なく`option<int>`します。
+3. F#構文の名前を使用して、配列、`int[]`なく`int array`または`array<int>`します。
 4. 参照セルを使用して`int ref`なく`ref<int>`または`Ref<int>`します。
 
 他のすべての種類では、前置形式を使用します。
@@ -286,16 +343,23 @@ type PostalAddress =
     }
 ```
 
-問題でも、同じ行で、新しい行に終了トークン開始トークンを配置することですを使用する必要があることに注意してください、[冗語構文](../language-reference/verbose-syntax.md)メンバーを定義する (、`with`キーワード)。
+開始トークンを配置する、新しい行で、新しい行に終了トークンは、レコードのメンバー、またはインターフェイスの実装を宣言する場合はお勧めです。
 
 ```fsharp
-//  OK, but verbose syntax required
-type PostalAddress = { 
-    Address: string
-    City: string
-    Zip: string
-} with
+// Declaring additional members on PostalAddress
+type PostalAddress =
+    { 
+        Address: string
+        City: string
+        Zip: string
+    } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
 ```
 
 ## <a name="formatting-records"></a>レコードを書式設定
@@ -314,27 +378,51 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-開始トークンを同じ行で、新しい行に終了トークン配置することは問題もです。
+開始を配置することと、タブ付きトークンを新しい行に、内容、1 つのスコープ、新しい行に終了トークンが使用する場合は、なるべく。
+
+* インデントの異なるスコープを使用したコード内でレコードを移動します。
+* 関数にパイプすること
 
 ```fsharp
-let rainbow = {
-    Boss1 = "Jeffrey"
-    Boss2 = "Jeffrey"
-    Boss3 = "Jeffrey"
-    Boss4 = "Jeffrey"
-    Boss5 = "Jeffrey"
-    Boss6 = "Jeffrey"
-    Boss7 = "Jeffrey"
-    Boss8 = "Jeffrey"
-    Lackeys = ["Zippy"; "George"; "Bungle"]
-}
+let rainbow =
+    {
+        Boss1 = "Jeffrey"
+        Boss2 = "Jeffrey"
+        Boss3 = "Jeffrey"
+        Boss4 = "Jeffrey"
+        Boss5 = "Jeffrey"
+        Boss6 = "Jeffrey"
+        Boss7 = "Jeffrey"
+        Boss8 = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"]
+    }
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
+
+let foo a =
+    a
+    |> Option.map (fun x ->
+        {
+            MyField = x
+        })
 ```
 
 リストと配列の要素の場合と同じ規則が適用されます。
 
 ## <a name="formatting-lists-and-arrays"></a>書式設定のリストと配列
 
-書き込み`x :: l`の前後のスペースで、`::`演算子 (`::`が空白で囲まれたため、挿入演算子) と`[1; 2; 3]`(`;`はその後にスペースを区切り記号) です。
+書き込み`x :: l`の前後のスペースで、`::`演算子 (`::`が空白で囲まれたため、挿入演算子)。
+
+リストと 1 つの行で宣言された配列は、角かっこと終わりかっこの前にスペースを入れる必要があります。
+
+```fsharp
+let xs = [ 1; 2; 3 ]
+let ys = [| 1; 2; 3; |]
+```
 
 常に 2 つの個別の中かっこのような演算子の間に少なくとも 1 つの領域を使用します。 たとえば、間に空白のままに、`[`と`{`します。
 
@@ -357,18 +445,21 @@ let rainbow = {
 リストと複数行にわたって配列は、同様のルール、レコードと同様に従います。
 
 ```fsharp
-let pascalsTriangle = [|
-    [|1|]
-    [|1; 1|]
-    [|1; 2; 1|]
-    [|1; 3; 3; 1|]
-    [|1; 4; 6; 4; 1|]
-    [|1; 5; 10; 10; 5; 1|]
-    [|1; 6; 15; 20; 15; 6; 1|]
-    [|1; 7; 21; 35; 35; 21; 7; 1|]
-    [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
-|]
+let pascalsTriangle =
+    [|
+        [|1|]
+        [|1; 1|]
+        [|1; 2; 1|]
+        [|1; 3; 3; 1|]
+        [|1; 4; 6; 4; 1|]
+        [|1; 5; 10; 10; 5; 1|]
+        [|1; 6; 15; 20; 15; 6; 1|]
+        [|1; 7; 21; 35; 35; 21; 7; 1|]
+        [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
+    |]
 ```
+
+レコードと同様、独自の行の開始タグと終了の角かっこを宣言することは簡単に移動コードと関数にパイプします。
 
 ## <a name="formatting-if-expressions"></a>書式設定の if 式
 
@@ -411,13 +502,13 @@ else e4
 ```fsharp
 // OK
 match l with
-| { him = x; her = "Posh" } :: tail -> _
+| { him = x; her = "Posh" } :: tail -> x
 | _ :: tail -> findDavid tail
 | [] -> failwith "Couldn't find David"
 
 // Not OK
 match l with
-    | { him = x; her = "Posh" } :: tail -> _
+    | { him = x; her = "Posh" } :: tail -> x
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
 ```
@@ -591,7 +682,7 @@ let comparer =
 
 ### <a name="formatting-white-space-in-expressions"></a>式内の空白の書式設定
 
-F# の式で余分な空白文字を避けてください。
+余分な空白文字を避けるためF#式。
 
 ```fsharp
 // OK
@@ -610,3 +701,59 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
+
+## <a name="formatting-attributes"></a>属性の書式設定
+
+[属性](../language-reference/attributes.md)コンス トラクターを上に配置されます。
+
+```fsharp
+[<SomeAttribute>]
+type MyClass() = ...
+
+[<RequireQualifiedAccess>]
+module M =
+    let f x = x
+
+[<Struct>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+### <a name="formatting-attributes-on-parameters"></a>パラメーターに属性を書式設定
+
+属性は、パラメーターの場所をこともできます。 ここでは、名の前に、パラメーターとして同じ行にし、配置します。
+
+```fsharp
+// Defines a class that takes an optional value as input defaulting to false.
+type C() =
+    member __.M([<Optional; DefaultParameterValue(false)>] doSomething: bool)
+```
+
+### <a name="formatting-multiple-attributes"></a>複数の属性を書式設定
+
+パラメーターではないコンストラクトに適用されると、複数の属性は、1 行につき 1 つの属性が存在するようなに配置する必要があります。
+
+```fsharp
+[<Struct>]
+[<IsByRefLike>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+同じ行に配置する必要がありで区切られた、パラメーターに適用するときに、`;`区切り記号。
+
+## <a name="formatting-literals"></a>書式設定リテラル
+
+[F#リテラル](../language-reference/literals.md)を使用して、`Literal`属性を独自の行に属性を配置し、camelCase 名前付けを使用する必要がある必要があります。
+
+```fsharp
+[<Literal>]
+let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+
+[<Literal>]
+let myUrl = "www.mywebsitethatiamworkingwith.com"
+```
+
+属性値と同じ行を配置しないでください。

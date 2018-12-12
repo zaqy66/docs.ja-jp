@@ -3,12 +3,12 @@ title: C# プログラムの構造 - C# 言語のツアー
 description: C# プログラムの基本的な構造について説明します
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 9efd2542d449da5ddcd9d3170c2e598282a34c39
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: de10cd000b4028a66ce6dd6f21e39c013e38ecd2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565752"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131028"
 ---
 # <a name="program-structure"></a>プログラムの構造
 
@@ -52,5 +52,5 @@ csc /r:acme.dll example.cs
 C# では、プログラムのソース テキストを複数のソース ファイルに保存することができます。 複数ファイルの C# プログラムがコンパイルされると、ソース ファイルはすべて同時に処理され、ソース ファイルは自由に相互を参照できるようになります。概念的には、ソース ファイルが処理される前に、すべて 1 つの大きいファイルに連結されるようなものです。 C# では事前宣言をする必要がありません。ごく一部の例外を除いて、宣言の順序は重要でないためです。 C# ではソース ファイルがパブリック型 1 つのみの宣言に制限されません。また、ソース ファイルの名前がソース ファイルで宣言された型に一致する必要もありません。
 
 >[!div class="step-by-step"]
-[前へ](index.md)
-[次へ](types-and-variables.md)
+>[前へ](index.md)
+>[次へ](types-and-variables.md)

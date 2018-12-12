@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: bc99bbfc3adee4cdc7008a91f42659ebcaa7a1b1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45658432"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147952"
 ---
 # <a name="introduction-to-containers-and-docker"></a>コンテナーと Docker の概要
 
@@ -29,7 +29,6 @@ ms.locfileid: "45658432"
 
 つまり、コンテナーには、アプリケーション ライフサイクル ワークフロー全体にわたり、分離、移植性、敏捷性、スケーラビリティ、およびコントロールの利点があります。 最も重要な利点は、開発と運用間で提供される環境の分離です。
 
-
 >[!div class="step-by-step"]
-[前へ](../index.md)
-[次へ](docker-defined.md)
+>[前へ](../index.md)
+>[次へ](docker-defined.md)

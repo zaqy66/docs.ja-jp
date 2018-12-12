@@ -3,13 +3,13 @@ title: dotnet-add 参照コマンド - .NET Core CLI
 description: dotnet add 参照コマンドは、プロジェクト間参照を追加する便利なオプションを提供します。
 author: mairaw
 ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 3398d4dc7bf70eaadcdd92269dbd3b784079c22d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/04/2018
+ms.openlocfilehash: 33c5e532baf23cc8fe2b3a5084bff029caece842
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696963"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129546"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add 参照
 
@@ -37,34 +37,40 @@ ms.locfileid: "34696963"
 
 ## <a name="arguments"></a>引数
 
-`PROJECT`
+* **`PROJECT`**
 
-プロジェクト ファイルを指定します。 指定されていない場合、現在のディレクトリで検索されます。
+  プロジェクト ファイルを指定します。 指定されていない場合、現在のディレクトリで検索されます。
 
-`PROJECT_REFERENCES`
+* **`PROJECT_REFERENCES`**
 
-追加するプロジェクト間参照 (P2P) です。 1 つ以上のプロジェクトを指定します。 [glob パターン](https://en.wikipedia.org/wiki/Glob_(programming))は Unix/Linux ベースのシステムで利用できます。
+  追加するプロジェクト間参照 (P2P) です。 1 つ以上のプロジェクトを指定します。 [glob パターン](https://en.wikipedia.org/wiki/Glob_(programming))は Unix/Linux ベースのシステムで利用できます。
 
 ## <a name="options"></a>オプション
 
-`-h|--help`
+* **`-h|--help`**
 
-コマンドの短いヘルプを印刷します。
+  コマンドの短いヘルプを印刷します。
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-特定の[フレームワーク](../../standard/frameworks.md)を対象にしている場合にのみ、プロジェクト参照を追加します。
+  特定の[フレームワーク](../../standard/frameworks.md)を対象にしている場合にのみ、プロジェクト参照を追加します。
 
 ## <a name="examples"></a>使用例
 
-プロジェクト参照を追加する:
+* プロジェクト参照を追加する:
 
-`dotnet add app/app.csproj reference lib/lib.csproj`
+  ```console
+  dotnet add app/app.csproj reference lib/lib.csproj
+  ```
 
-現在のディレクトリのプロジェクトに複数のプロジェクト参照を追加する:
+* 現在のディレクトリのプロジェクトに複数のプロジェクト参照を追加する:
 
-`dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
+  ```console
+  dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
+  ```
 
-Linux/Unix で glob パターンを使って複数のプロジェクト参照を追加する:
+* Linux/Unix で glob パターンを使って複数のプロジェクト参照を追加する:
 
-`dotnet add app/app.csproj reference **/*.csproj`
+  ```console
+  dotnet add app/app.csproj reference **/*.csproj
+  ```
