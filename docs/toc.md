@@ -128,7 +128,6 @@
 ### [発行された出力の単体テスト](core/testing/unit-testing-published-output.md)
 ### [Visual Studio を使用した .NET Core プロジェクトの Live Unit Testing](/visualstudio/test/live-unit-testing-start)
 ## [バージョン管理](core/versions/index.md)
-### [.NET Core のバージョン履歴](core/versions/version-history.md)
 ### [.NET Core のバージョンの選択](core/versions/selection.md)
 ### [期限切れのランタイムと SDK の削除](core/versions/remove-runtime-sdk-versions.md)
 ## [ランタイム識別子のカタログ](core/rid-catalog.md)
