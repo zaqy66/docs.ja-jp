@@ -1,5 +1,5 @@
 ---
-title: 申し訳ありません&#39;t この c# エラーに関する詳細があります。
+title: 申し訳ありません、この c# エラーに関する詳細がありません。
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -889,7 +889,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33314071"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>申し訳ありません&#39;t この c# エラーに関する詳細があります。
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>申し訳ありません、この c# エラーに関する詳細がありません。
 申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のフォーラムのいずれかを使用して他の開発者に質問することができます。  
   
  [Visual C# 言語](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
