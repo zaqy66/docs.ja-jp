@@ -24,11 +24,11 @@ ms.lasthandoff: 09/16/2018
 ms.locfileid: "45664606"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>方法 : デジタル署名で XML ドキュメントに署名する
-<xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用すると、XML ドキュメントまたは XML ドキュメントの一部にデジタル署名で署名することができます。  XML デジタル署名 (XMLDSIG) を使用すると、データが署名後に変更されなかったことを確認できます。  XMLDSIG 標準の詳細については、World Wide Web Consortium (W3C) の推奨事項を参照してください。 [XML 署名の構文と処理](https://www.w3.org/TR/xmldsig-core/)します。  
+<xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用すると、XML ドキュメントまたは XML ドキュメントの一部にデジタル署名で署名することができます。  XML デジタル署名 (XMLDSIG) を使用すると、データが署名後に変更されなかったことを確認できます。  XMLDSIG 標準の詳細については、World Wide Web Consortium (W3C) の推奨事項「 [XML 署名の構文と処理](https://www.w3.org/TR/xmldsig-core/) 」を参照してください。  
   
  この手順のコード例は、XML ドキュメント全体にデジタル署名する方法、および <`Signature`> 要素内のドキュメントに署名を付す方法を示しています。  この例では、RSA 署名キーを作成し、キーをセキュリティで保護されたキー コンテナーに追加してから、キーを使用して XML ドキュメントにデジタル署名しています。  キーは、XML デジタル署名を確認するために取得したり、別の XML ドキュメントの署名に使用したりすることができます。  
   
- この手順を使用して作成された XML デジタル署名を確認する方法については、次を参照してください。[方法: XML ドキュメントのデジタル署名のことを確認](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)します。  
+ この手順を使用して作成された XML デジタル署名を確認する方法については、「[方法: XML ドキュメントのデジタル署名を検証する](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)」を参照してください。  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>XML ドキュメントにデジタル署名するには  
   
@@ -114,9 +114,9 @@ ms.locfileid: "45664606"
 -   名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
- 非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称と非対称暗号化キーの詳細については、次を参照してください。[暗号化と復号化キーを生成する](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)します。  
+ 非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称暗号化キーと非対称暗号化キーの詳細については、「[暗号化と復号化キーを生成する](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)」を参照してください。  
   
- 秘密キーをソース コードに直接埋め込まないでください。  使用して、アセンブリから埋め込まれたキーを簡単に読み取る、 [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)またはメモ帳などのテキスト エディターでアセンブリを開くことで。  
+ 秘密キーをソース コードに直接埋め込まないでください。  埋め込まれたキーは、アセンブリを[Ildasm.exe (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)またはメモ帳などのテキスト エディターで開くことで、簡単に読み取ることができます。  
   
 ## <a name="see-also"></a>関連項目
 
