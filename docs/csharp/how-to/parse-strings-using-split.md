@@ -18,7 +18,7 @@ ms.locfileid: "45746382"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>方法: String.Split を使用して文字列を解析する (C# ガイド)
 
-<xref:System.String.Split%2A?displayProperty=nameWithType> メソッドは、1 つまたは複数の区切り記号に基づいて入力文字列を分割することで部分文字列の配列を作成します。 多くの場合、単語の境界で文字列を分割する最も簡単な方法になります。 他の特定の文字や文字列で文字列を分割する際にも利用されます。
+<xref:System.String.Split%2A?displayProperty=nameWithType> メソッドは、1 つまたは複数の区切り記号に基づいて入力文字列を分割することで部分文字列の配列を作成します。 英語のように単語の間にスペースがある文章の場合に、単語の境界で文字列を分割する最も簡単な方法になります。 他の特定の文字や文字列で文字列を分割する際にも利用されます。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
