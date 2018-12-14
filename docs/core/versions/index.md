@@ -4,18 +4,18 @@ description: この記事では、.NET Core SDK と ランタイムをバージ�
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170718"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334809"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
 .NET Core とは .NET Core ランタイムと .NET Core SDK を示しており、これにはアプリケーションを開発するのに必要なツールが含まれています。 .NET Core SDK は、前のバージョンの .NET Core ランタイムをどれでも使用できるように設計されています。 この記事では、ランタイムおよび SDK のバージョン戦略について説明します。 .NET Standard のバージョン番号については、[.NET Standard](../../standard/net-standard.md#net-implementation-support) に関する記事を参照してください。
 
-.NET Core ランタイムと .NET Core SDK ではそれぞれ異なるレートで新しい機能が追加されます。一般に、運用環境で使用しているランタイムが .NET Core ランタイムによって変更されるよりも速く、.NET Core SDK でのツールの更新が行われます。 残念ながら、この問題によって、過去数年にわたりいくつかのバージョン管理戦略が発生しました。 この履歴については、[.NET Core バージョン管理](version-history.md)に関する記事を参照してください。
+.NET Core ランタイムと .NET Core SDK ではそれぞれ異なるレートで新しい機能が追加されます。一般に、運用環境で使用しているランタイムが .NET Core ランタイムによって変更されるよりも速く、.NET Core SDK でのツールの更新が行われます。
 
 ## <a name="versioning-details"></a>バージョン管理の詳細
 
@@ -32,7 +32,7 @@ SDK バージョン番号の 3 番目の位置には、マイナー番号とパ�
 | ランタイムおよび SDK パッチ | 2.2.1             | 2.2.102           |
 | SDK 機能変更    | 2.2.1             | 2.2.200           |
 
-(\*) 上記の表では、今後リリースされる 2.2 .NET Core Runtime が例として使用されています。.NET Core 2.1 に対する最初の SDK が 2.1.300 であることが、履歴アーティファクトで示されていたからです。 詳細については、[.NET Core バージョン管理の履歴](version-history.md)に関する記事を参照してください。
+(\*) 上記の表では、今後リリースされる 2.2 .NET Core Runtime が例として使用されています。 .NET Core 2.1 に対する最初の SDK が 2.1.300 であることが、履歴アーティファクトで示されていたからです。 詳細については、「[.NET Core のバージョンの選択](selection.md)」を参照してください。
 
 注: 
 
@@ -92,7 +92,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 .NET Standard は、.NET 参照アセンブリで構成されています。 各プラットフォームに固有の複数の実装があります。 参照アセンブリには、指定された .NET Standard バージョンの一部である .NET API の定義が含まれています。 各実装では、特定のプラットフォームに対する .NET Standard コントラクトが満たされます。 .NET Standard の詳細については、.NET ガイド内の [.NET Standard](../../standard/net-standard.md) に関する記事を参照してください。
 
-.NET Standard 参照アセンブリでは、`MAJOR.MINOR` バージョン管理スキームが使用されます。 .NET Standard の場合、`PATCH` レベルは有用ではありません。.NET Standard では、API 仕様しか公開されず (実装は対象外)、定義上、API に対する変更はいずれも機能セット内の変更を示すものであり、`MINOR` バージョンとなるためです。
+.NET Standard 参照アセンブリでは、`MAJOR.MINOR` バージョン管理スキームが使用されます。 .NET Standard の場合、`PATCH` レベルは有用ではありません。 .NET Standard では、API 仕様しか公開されず (実装は対象外)、定義上、API に対する変更はいずれも機能セット内の変更を示すものであり、`MINOR` バージョンとなるためです。
 
 各プラットフォーム上の実装の場合は、通常、プラットフォーム リリースの一部として更新されるので、そのプラットフォーム上で .NET Standard を使用しているプログラマには明らかにされません。
 
