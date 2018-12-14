@@ -1,5 +1,5 @@
 ---
-title: オブジェクトは&#39;t は、このプロパティまたはメソッド (Visual Basic) をサポート
+title: オブジェクトは、このプロパティまたはメソッドをサポートしていません |Microsoft ドキュメント
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID438
@@ -11,7 +11,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33638715"
 ---
-# <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a>オブジェクトは&#39;t は、このプロパティまたはメソッド (Visual Basic) をサポート
+# <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a>オブジェクトは、このプロパティまたはメソッドをサポートしていません |Microsoft ドキュメント
 このオートメーション オブジェクトには存在しないメソッドまたはプロパティを指定しました。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
