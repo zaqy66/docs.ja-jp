@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 308b834a133798104dcc47a16f8adc068ed937ec
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77be620180f1e19c01f47d8ab5cabe3e7d021aca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188346"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129676"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>継続タスクを使用したタスクの連結
 非同期プログラミングでは、非同期操作で完了時に 2 番目の操作を呼び出してデータを渡すのが一般的です。 これまで、この処理はコールバック メソッドを使用して行っていました。 タスク並列ライブラリでは、 *継続タスク*に同じ機能が用意されています。 継続タスク (単に "継続" とも呼ばれます) とは、別のタスク (" *継続元*" と呼ばれます) が終了したときにそのタスクによって呼び出される非同期タスクのことです。  
@@ -50,11 +50,11 @@ ms.locfileid: "44188346"
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  
   
 ## <a name="creating-a-continuation-for-multiple-antecedents"></a>複数の継続元に対する継続の作成  
- タスク グループの一部または全部のタスクが完了したときに実行される継続を作成することもできます。 すべての継続元タスクが完了した時点で継続を実行するには、静的 (Visual Basic では `Shared`) <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> メソッドまたはインスタンス <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> メソッドを呼び出します。 いずれかの継続元タスクが完了した時点で継続を実行するには、静的 (Visual Basic では `Shared`) <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> メソッドまたはインスタンス <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> メソッドを呼び出します。  
+ タスク グループの一部または全部のタスクが完了したときに実行される継続を作成することもできます。 すべての継続元タスクが完了した時点で継続を実行するには、静的 (Visual Basic では `Shared`) <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> メソッドまたはインスタンス <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> メソッドを呼び出します。 いずれかの継続元タスクが完了した時点で継続を実行するには、静的 (Visual Basic では`Shared` ) <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> メソッドまたはインスタンス <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> メソッドを呼び出します。  
   
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> オーバーロードの呼び出しによって、呼び出しスレッドがブロックされることはない点に注意してください。  ただし、通常、返された <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティを取得するために <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> メソッドと <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> メソッドを除いたすべてを呼び出しますが、そうした場合は呼び出しスレッドがブロックされます。  
+ <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> オーバーロードの呼び出しによって、呼び出しスレッドがブロックされることはない点に注意してください。  ただし、通常、返された <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> プロパティを取得するために  <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> メソッドと  <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> メソッドを除いたすべてを呼び出しますが、そうした場合は呼び出しスレッドがブロックされます。  
   
- 次の例では、<xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> メソッドを呼び出し、10 個の継続元タスクの結果を反映する継続タスクを作成します。 各継続元タスクは、1 から 10 までの範囲内のインデックス値を二乗します。 継続元が正常に完了すると (その <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> プロパティが <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>)、継続の <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティは、各継続元から返される <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 値の配列になります。 この例では、1 から 10 までのすべての数値の二乗の合計を計算するため、これらを追加します。  
+ 次の例では、 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> メソッドを呼び出し、10 個の継続元タスクの結果を反映する継続タスクを作成します。 各継続元タスクは、1 から 10 までの範囲内のインデックス値を二乗します。 継続元が正常に完了すると (その <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> プロパティが <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>)、継続の <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティは、各継続元から返される <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 値の配列になります。 この例では、1 から 10 までのすべての数値の二乗の合計を計算するため、これらを追加します。  
   
  [!code-csharp[TPL_Continuations#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/whenall1.cs#5)]
  [!code-vb[TPL_Continuations#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/whenall1.vb#5)]  
@@ -74,7 +74,7 @@ ms.locfileid: "44188346"
  [!code-csharp[TPL_Continuations#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result1.cs#2)]
  [!code-vb[TPL_Continuations#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result1.vb#2)]  
   
- 継続元が正常に完了するまで実行されなかった場合でも継続を実行する場合は、例外を防ぐ必要があります。 1 つの方法として、継続元の <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> プロパティをテストし、状態が <xref:System.Threading.Tasks.TaskStatus.Faulted> でも <xref:System.Threading.Tasks.TaskStatus.Canceled> でもない場合にのみ <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティへのアクセスを試みるようにします。 また、継続元の <xref:System.Threading.Tasks.Task.Exception%2A> プロパティを調べることもできます。 詳細については、「[例外処理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)」を参照してください。 次の例では、前の例を変更して、状態が <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> の場合にだけ継続元の <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティにアクセスするようにします。  
+ 継続元が正常に完了するまで実行されなかった場合でも継続を実行する場合は、例外を防ぐ必要があります。 1 つの方法として、継続元の <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> プロパティをテストし、状態が <xref:System.Threading.Tasks.TaskStatus.Faulted> でも <xref:System.Threading.Tasks.TaskStatus.Canceled> でもない場合にのみ <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティへのアクセスを試みるようにします。 また、継続元の <xref:System.Threading.Tasks.Task.Exception%2A> プロパティを調べることもできます。 詳細については、「[例外処理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)」を参照してください。 次の例では、前の例を変更して、状態が <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> の場合にだけ継続元の <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>プロパティにアクセスするようにします。  
   
  [!code-csharp[TPL_Continuations#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result2.cs#7)]
  [!code-vb[TPL_Continuations#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result2.vb#7)]  
@@ -103,7 +103,7 @@ ms.locfileid: "44188346"
  破棄された継続は開始されません。  
   
 ## <a name="continuations-and-child-tasks"></a>継続タスクと子タスク  
- 継続は、継続元とアタッチされたすべての子タスクが完了するまでは実行されません。 継続は、デタッチされた子タスクの終了は待機しません。 次の 2 つの例に、継続を作成する継続元にアタッチされる子タスクと、継続元からデタッチされる子タスクを示します。 次の例では、すべての子タスクの完了後にのみ継続が実行されます。この例を複数回実行する場合、出力は毎回同一になります。 この例では、<xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> メソッドを呼び出して継続元を起動していることに注意してください。これは、<xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> メソッドは、既定のタスク作成オプションが <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> である親タスクを既定で作成するためです。  
+ 継続は、継続元とアタッチされたすべての子タスクが完了するまでは実行されません。 継続は、デタッチされた子タスクの終了は待機しません。 次の 2 つの例に、継続を作成する継続元にアタッチされる子タスクと、継続元からデタッチされる子タスクを示します。 次の例では、すべての子タスクの完了後にのみ継続が実行されます。この例を複数回実行する場合、出力は毎回同一になります。 この例では、 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> メソッドを呼び出して継続元を起動していることに注意してください。これは、 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> メソッドは、既定のタスク作成オプションが <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>である親タスクを既定で作成するためです。  
   
  [!code-csharp[TPL_Continuations#9](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/attached1.cs#9)]
  [!code-vb[TPL_Continuations#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/attached1.vb#9)]  
@@ -118,7 +118,7 @@ ms.locfileid: "44188346"
 ## <a name="associating-state-with-continuations"></a>状態と継続の関連付け  
  任意の状態とタスクの継続を関連付けることができます。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> メソッドは、それぞれが継続の状態を表す <xref:System.Object> 値を受け取る、オーバーロードされたバージョンを提供します。 後でこの状態オブジェクトにアクセスするには、<xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> プロパティを使用します。 値を指定しない場合、この状態オブジェクトは `null` です。  
   
- 継続の状態は、TPL を使用するために、 [非同期プログラミング モデル (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) を使った既存のコードを変換する場合に有用です。 APM では通常、**Begin***Method* メソッドでオブジェクト状態を指定し、後から <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> プロパティを使って、その状態にアクセスします。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> メソッドを使用すると、APM を使用するコードを TPL を使用するように変換するときに、この状態を維持できます。  
+ 継続の状態は、TPL を使用するために、 [非同期プログラミング モデル (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) を使った既存のコードを変換する場合に有用です。 APM では通常、**Begin**_Method_ メソッドでオブジェクト状態を指定し、後から <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> プロパティを使って、その状態にアクセスします。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> メソッドを使用すると、APM を使用するコードを TPL を使用するように変換するときに、この状態を維持できます。  
   
  継続の状態は、Visual Studio デバッガーで <xref:System.Threading.Tasks.Task> オブジェクトを使用するときにも有用です。 たとえば、 **[並列タスク]** ウィンドウの **[タスク]** の列に、各タスクの状態オブジェクトの文字列表現が表示されます。 **[並列タスク]** ウィンドウの詳細については、「[[タスク] ウィンドウの使用](/visualstudio/debugger/using-the-tasks-window)」を参照してください。  
   
@@ -140,14 +140,14 @@ ms.locfileid: "44188346"
      [!code-csharp[TPL_Continuations#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#4)]
      [!code-vb[TPL_Continuations#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#4)]  
   
-     <xref:System.Threading.Tasks.TaskContinuationOptions.OnlyOnFaulted?displayProperty=nameWithType> オプションを指定して実行されたため、継続が実行されるのは、継続元で例外が発生し、継続元の <xref:System.Threading.Tasks.Task.Exception%2A> プロパティが `null` ではないと推測できる場合だけです。 継続元で例外がスローされたかどうかに関係なく継続が実行される場合は、次のコード フラグメントに示すように、例外処理を試行する前に、継続元の <xref:System.Threading.Tasks.Task.Exception%2A> プロパティが `null` ではないことを確認する必要があります。  
+     <xref:System.Threading.Tasks.TaskContinuationOptions.OnlyOnFaulted?displayProperty=nameWithType> オプションを指定して実行されたため、継続が実行されるのは、継続元で例外が発生し、継続元の <xref:System.Threading.Tasks.Task.Exception%2A> プロパティが `null`ではないと推測できる場合だけです。 継続元で例外がスローされたかどうかに関係なく継続が実行される場合は、次のコード フラグメントに示すように、例外処理を試行する前に、継続元の <xref:System.Threading.Tasks.Task.Exception%2A> プロパティが `null` ではないことを確認する必要があります。  
   
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
      詳細については、「[例外処理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)」を参照してください。  
   
--   アタッチされた子タスクで、<xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> オプションを使用して継続が作成された場合、アタッチされているその他の子と同様、その例外は親によって呼び出し元のスレッドに反映されます。 詳細については、「[アタッチされた子タスクとデタッチされた子タスク](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)」を参照してください。  
+-   アタッチされた子タスクで、 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> オプションを使用して継続が作成された場合、アタッチされているその他の子と同様、その例外は親によって呼び出し元のスレッドに反映されます。 詳細については、「[アタッチされた子タスクとデタッチされた子タスク](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,17 +1,17 @@
 ---
 title: DDD 指向マイクロサービスの設計
-description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | DDD 指向マイクロサービスの設計'
+description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD 指向の注文マイクロサービスの設計とそのアプリケーション レイヤーを理解する
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/06/2017
-ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183504"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145609"
 ---
-# <a name="designing-a-ddd-oriented-microservice"></a>DDD 指向マイクロサービスの設計
+# <a name="design-a-ddd-oriented-microservice"></a>DDD 指向マイクロサービスの設計
 
 ドメイン駆動設計 (DDD) は、ユーザーのユース ケースに則したビジネスの現状に基づくモデリングを提唱します。 アプリケーションの構築のコンテキストで、DDD は問題をドメインと呼んで論じます。 独立した問題領域のことを境界付けられたコンテキストと言い (境界コンテキストはそれぞれ特定のマイクロサービスに関連します)、共通の言語を使ってこれらの問題を論じることを重視します。 また、内部実装をサポートするための多くの技術的概念とパターンも提案します。たとえば、([ドメイン モデル貧血症](https://martinfowler.com/bliki/AnemicDomainModel.html)ではなく) 豊富なモデルを持つドメイン エンティティ、値オブジェクト、集約および集約ルート (またはルート エンティティ) のルールなどです。 このセクションでは、それらの内部パターンの設計と実装を紹介します。
 
@@ -33,21 +33,21 @@ ms.locfileid: "50183504"
 
 たとえば、データベースから読み込まれるエンティティがあるとします。 次いで、この情報の一部、または他のエンティティからの追加データを含む情報の集約が、REST Web API を介してクライアント UI に送信される可能性があります。 ここでポイントとなるのは、ドメイン エンティティはドメイン モデル レイヤーに含まれており、プレゼンテーション レイヤーなど、自分が属さない他の領域に伝搬されてはならないということです。
 
-さらに、集約ルート (ルート エンティティ) によって制御される、常に有効なエンティティ (「[ドメイン モデル レイヤーでの検証の設計](#designing-validations-in-the-domain-model-layer)」セクションを参照) が必要です。 したがって、エンティティをクライアント ビューにバインドしてはなりません。これは、UI レベルでは一部のデータがまだ検証されていないためです。 これは ViewModel が処理する分野です。 ViewModel は、専らプレゼンテーション レイヤーのニーズに応えるデータ モデルです。 ドメイン エンティティは ViewModel に直接属してはいません。 代わりに、ViewModel からドメイン エンティティ、あるいはその逆に変換する必要があります。
+さらに、集約ルート (ルート エンティティ) によって制御される、常に有効なエンティティ (「[ドメイン モデル レイヤーでの検証の設計](domain-model-layer-validations.md)」セクションを参照) が必要です。 したがって、エンティティをクライアント ビューにバインドしてはなりません。これは、UI レベルでは一部のデータがまだ検証されていないためです。 これは ViewModel が処理する分野です。 ViewModel は、専らプレゼンテーション レイヤーのニーズに応えるデータ モデルです。 ドメイン エンティティは ViewModel に直接属してはいません。 代わりに、ViewModel からドメイン エンティティ、あるいはその逆に変換する必要があります。
 
 複雑性に対処するには、ドメイン モデルを集約ルートで管理することが重要です。これにより、そのエンティティのグループ (集約) に関係する不変条件とルールすべてが、確実に単一のエントリ ポイントまたはゲート (集約ルート) を通して実行されます。
 
-図 9-5 は、階層化設計が eShopOnContainers アプリケーションにどのように実装されているかを示しています。
+図 7-5 は、階層化設計が eShopOnContainers アプリケーションにどのように実装されているかを示しています。
 
-![](./media/image6.png)
+![Ordering などの DDD マイクロサービスの 3 つのレイヤー。 レイヤーはそれぞれ VS プロジェクトです。アプリケーション レイヤーは Ordering.API、ドメイン レイヤーは Ordering.Domain、インフラストラクチャ レイヤーは Ordering.Infrastructure です。](./media/image6.png)
 
-**図 9-5**. eShopOnContainers 内の注文マイクロサービスの DDD レイヤー
+**図 7-5**。 eShopOnContainers 内の注文マイクロサービスの DDD レイヤー
 
-システムは、各レイヤーが他の特定のレイヤーとだけ通信するように設計する必要があります。 これを適用しやすくする上で、各レイヤーを別のクラス ライブラリとして実装することが役に立つ場合があります。ライブラリ間に設定されている依存関係を明確に識別できるようになるためです。 たとえば、ドメイン モデル レイヤーは他のレイヤーに依存関係を持ってはなりません (ドメイン モデル クラスは単純な従来の CLR オブジェクト、つまり [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) クラスでなければなりません)。 図 9-6 に示すように、**Ordering.Domain** レイヤー ライブラリは .NET Core ライブラリまたは NuGet パッケージだけに依存関係があり、データ ライブラリや永続化ライブラリなどの他のカスタム ライブラリには依存関係がありません。
+システムは、各レイヤーが他の特定のレイヤーとだけ通信するように設計する必要があります。 これを適用しやすくする上で、各レイヤーを別のクラス ライブラリとして実装することが役に立つ場合があります。ライブラリ間に設定されている依存関係を明確に識別できるようになるためです。 たとえば、ドメイン モデル レイヤーは他のレイヤーに依存関係を持ってはなりません (ドメイン モデル クラスは単純な従来の CLR オブジェクト、つまり [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) クラスでなければなりません)。 図 7-6 に示すように、**Ordering.Domain** レイヤー ライブラリは .NET Core ライブラリまたは NuGet パッケージだけに依存関係があり、データ ライブラリや永続化ライブラリなどの他のカスタム ライブラリには依存関係がありません。
 
-![](./media/image7.PNG)
+![.NET Core ライブラリのみに依存していることを示す、Ordering.Domain の依存関係のソリューション エクスプローラー ビュー。](./media/image7.png)
 
-**図 9-6**. レイヤーをライブラリとして実装すると、レイヤー間の依存関係の制御が改善できる
+**図 7-6**。 レイヤーをライブラリとして実装すると、レイヤー間の依存関係の制御が改善できる
 
 ### <a name="the-domain-model-layer"></a>ドメイン モデル レイヤー
 
@@ -85,26 +85,25 @@ Entity Framework Core などの最新の ORM フレームワークのほとん�
 
 上で説明した[永続化非依存](https://deviq.com/persistence-ignorance/)の原則と[インフラストラクチャ非依存](https://ayende.com/blog/3137/infrastructure-ignorance)の原則に従って、インフラストラクチャ レイヤーはドメイン モデル レイヤーを "汚染" してはなりません。 ドメイン モデル エンティティ クラスは、データの保存に使用するインフラストラクチャ (EF または他のフレームワーク) にとらわれないようにしておく必要があります。そのために、フレームワークに対する強い依存関係を持たせないようにします。 ドメイン モデル レイヤー クラス ライブラリには、ソフトウェアの中核部分を実装するドメイン コード、つまり [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) エンティティ クラスだけを含め、インフラストラクチャ テクノロジからは完全に分離させる必要があります。
 
-したがって、図 9-7 に示すように、レイヤーまたはクラス ライブラリとプロジェクトは、最終的にドメイン モデル レイヤー (ライブラリ) に依存するはずで、逆方向の依存はありません。
+したがって、図 7-7 に示すように、レイヤーまたはクラス ライブラリとプロジェクトは、最終的にドメイン モデル レイヤー (ライブラリ) に依存するはずで、逆方向の依存はありません。
 
-![](./media/image8.png)
+![DDD サービスの依存関係、アプリケーション レイヤーはドメインとインフラストラクチャに依存し、インフラストラクチャはドメインに依存しますが、ドメインはレイヤーに依存しません。](./media/image8.png)
 
-**図 9-7**. DDD 内のレイヤー間の依存関係
+**図 7-7**。 DDD 内のレイヤー間の依存関係
 
 このレイヤー設計は、マイクロサービスごとに独立している必要があります。 上述のとおり、最も複雑なマイクロサービスは DDD のパターンに従って実装できますが、単純なデータ駆動マイクロサービス (単一レイヤーの単純な CRUD) はより単純な方法で実装します。
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **DevIQ。永続性無視の原則**
-    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
+- **DevIQ。永続性無視の原則** \
+  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
--   **Oren Eini。インフラストラクチャの無視**
-    [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+- **Oren Eini。インフラストラクチャの無視** \
+  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez。ドメイン駆動設計での階層型アーキテクチャ**
-    [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
-
+- **Angel Lopez。ドメイン駆動設計での階層化アーキテクチャ** \
+  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
-[前へ](cqrs-microservice-reads.md)
-[次へ](microservice-domain-model.md)
+>[前へ](cqrs-microservice-reads.md)
+>[次へ](microservice-domain-model.md)
