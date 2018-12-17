@@ -1,1 +1,1 @@
-<span data-ttu-id="521bc-101">**このトピックの対象: ✓** .NET Core SDK 2.0 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="521bc-101">**This topic applies to: ✓** .NET Core SDK 2.0 and later versions</span></span>
+<span data-ttu-id="0a55e-101">**このトピックの対象: ✓** .NET Core 2.0 SDK 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="0a55e-101">**This topic applies to: ✓** .NET Core 2.0 SDK and later versions</span></span>

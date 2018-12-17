@@ -1,6 +1,6 @@
 ---
 title: 値型 (C# リファレンス)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - cs.valuetypes
 helpviewer_keywords:
@@ -8,101 +8,105 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: baf0db751cd70d50d4cf440626dd405b01c8d7ad
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526464"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147724"
 ---
-# <a name="value-types-c-reference"></a><span data-ttu-id="74082-102">値型 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="74082-102">Value Types (C# Reference)</span></span>
-<span data-ttu-id="74082-103">値型は、次の 2 つの主要なカテゴリで構成されます。</span><span class="sxs-lookup"><span data-stu-id="74082-103">The value types consist of two main categories:</span></span>  
+# <a name="value-types-c-reference"></a><span data-ttu-id="67fd2-102">値型 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="67fd2-102">Value types (C# Reference)</span></span>
+
+<span data-ttu-id="67fd2-103">2 種類の値型があります。</span><span class="sxs-lookup"><span data-stu-id="67fd2-103">There are two kinds of value types:</span></span>
+
+- [<span data-ttu-id="67fd2-104">構造体</span><span class="sxs-lookup"><span data-stu-id="67fd2-104">Structs</span></span>](struct.md)
+
+- [<span data-ttu-id="67fd2-105">列挙型</span><span class="sxs-lookup"><span data-stu-id="67fd2-105">Enumerations</span></span>](enum.md)
+
+## <a name="main-features-of-value-types"></a><span data-ttu-id="67fd2-106">値型の主な機能</span><span class="sxs-lookup"><span data-stu-id="67fd2-106">Main features of value types</span></span>
+
+<span data-ttu-id="67fd2-107">値型の変数には、その型の値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="67fd2-107">A variable of a value type contains a value of the type.</span></span> <span data-ttu-id="67fd2-108">たとえば、`int` 型の変数には値 `42` が含まれている可能性があります。</span><span class="sxs-lookup"><span data-stu-id="67fd2-108">For example, a variable of the `int` type might contain the value `42`.</span></span> <span data-ttu-id="67fd2-109">これは、オブジェクトとも呼ばれる型のインスタンスへの参照を含む参照型の変数とは異なります。</span><span class="sxs-lookup"><span data-stu-id="67fd2-109">This differs from a variable of a reference type, which contains a reference to an instance of the type, also known as an object.</span></span> <span data-ttu-id="67fd2-110">値型の変数に新しい値を割り当てると、その値はコピーされます。</span><span class="sxs-lookup"><span data-stu-id="67fd2-110">When you assign a new value to a variable of a value type, that value is copied.</span></span> <span data-ttu-id="67fd2-111">参照型の変数に新しい値を割り当てると、オブジェクト自体ではなく参照がコピーされます。</span><span class="sxs-lookup"><span data-stu-id="67fd2-111">When you assign a new value to a variable of a reference type, the reference is copied, not the object itself.</span></span>
+
+<span data-ttu-id="67fd2-112">すべての値型が <xref:System.ValueType?displayProperty=nameWithType> から暗黙的に派生されます。</span><span class="sxs-lookup"><span data-stu-id="67fd2-112">All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.</span></span>  
   
--   [<span data-ttu-id="74082-104">構造体</span><span class="sxs-lookup"><span data-stu-id="74082-104">Structs</span></span>](../../../csharp/language-reference/keywords/struct.md)  
+<span data-ttu-id="67fd2-113">参照型とは異なり、値型から新しい型を派生することはできません。</span><span class="sxs-lookup"><span data-stu-id="67fd2-113">Unlike with reference types, you cannot derive a new type from a value type.</span></span> <span data-ttu-id="67fd2-114">ただし、参照型の場合と同様に、構造体はインターフェイスを実装できます。</span><span class="sxs-lookup"><span data-stu-id="67fd2-114">However, like reference types, structs can implement interfaces.</span></span>  
   
--   [<span data-ttu-id="74082-105">列挙型</span><span class="sxs-lookup"><span data-stu-id="74082-105">Enumerations</span></span>](../../../csharp/language-reference/keywords/enum.md)  
+<span data-ttu-id="67fd2-115">値型の変数は既定で `null` にすることはできません。</span><span class="sxs-lookup"><span data-stu-id="67fd2-115">Value type variables cannot be `null` by default.</span></span> <span data-ttu-id="67fd2-116">ただし、対応する [null 許容型](../../../csharp/programming-guide/nullable-types/index.md)の変数を `null` にすることはできます。</span><span class="sxs-lookup"><span data-stu-id="67fd2-116">However, variables of the corresponding [nullable types](../../../csharp/programming-guide/nullable-types/index.md) can be `null`.</span></span>
   
- <span data-ttu-id="74082-106">構造体は、次のカテゴリに分類されます。</span><span class="sxs-lookup"><span data-stu-id="74082-106">Structs fall into these categories:</span></span>  
+<span data-ttu-id="67fd2-117">各値型には、その型の既定値を初期化する暗黙の既定のコンストラクターがあります。</span><span class="sxs-lookup"><span data-stu-id="67fd2-117">Each value type has an implicit default constructor that initializes the default value of that type.</span></span> <span data-ttu-id="67fd2-118">値型の既定値の詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="67fd2-118">For information about default values of value types, see [Default values table](default-values-table.md).</span></span>  
   
--   <span data-ttu-id="74082-107">数値型</span><span class="sxs-lookup"><span data-stu-id="74082-107">Numeric types</span></span>  
+## <a name="simple-types"></a><span data-ttu-id="67fd2-119">単純型</span><span class="sxs-lookup"><span data-stu-id="67fd2-119">Simple types</span></span>
+
+<span data-ttu-id="67fd2-120">*単純型*は、C# に用意されている定義済みの構造体型のセットであり、次の型を構成します。</span><span class="sxs-lookup"><span data-stu-id="67fd2-120">The *simple types* are a set of predefined struct types provided by C# and comprise the following types:</span></span>
+
+- <span data-ttu-id="67fd2-121">[整数型](integral-types-table.md): 整数の数値型と [char](char.md) 型</span><span class="sxs-lookup"><span data-stu-id="67fd2-121">[Integral types](integral-types-table.md): integer numeric types and the [char](char.md) type</span></span>
+- [<span data-ttu-id="67fd2-122">浮動小数点型</span><span class="sxs-lookup"><span data-stu-id="67fd2-122">Floating-point types</span></span>](floating-point-types-table.md)
+- [<span data-ttu-id="67fd2-123">bool</span><span class="sxs-lookup"><span data-stu-id="67fd2-123">bool</span></span>](bool.md)
+
+<span data-ttu-id="67fd2-124">単純型はキーワードで識別されますが、これらのキーワードは、<xref:System> 名前空間に事前に定義されている構造体型の単なるエイリアスです。</span><span class="sxs-lookup"><span data-stu-id="67fd2-124">The simple types are identified through keywords, but these keywords are simply aliases for predefined struct types in the <xref:System> namespace.</span></span> <span data-ttu-id="67fd2-125">たとえば、[int](int.md) は <xref:System.Int32?displayProperty=nameWithType> のエイリアスです。</span><span class="sxs-lookup"><span data-stu-id="67fd2-125">For example, [int](int.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>.</span></span> <span data-ttu-id="67fd2-126">エイリアスの完全な一覧については、「[組み込み型の一覧表](built-in-types-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="67fd2-126">For a complete list of aliases, see [Built-in types table](built-in-types-table.md).</span></span>
+
+<span data-ttu-id="67fd2-127">単純型は、ある追加の操作を許可している点で、他の構造体型とは異なります。</span><span class="sxs-lookup"><span data-stu-id="67fd2-127">The simple types differ from other struct types in that they permit certain additional operations:</span></span>
+
+- <span data-ttu-id="67fd2-128">単純型はリテラルを使用して初期化できます。</span><span class="sxs-lookup"><span data-stu-id="67fd2-128">Simple types can be initialized by using literals.</span></span> <span data-ttu-id="67fd2-129">たとえば、`'A'` は `char` 型のリテラルで、`2001` は `int` 型のリテラルです。</span><span class="sxs-lookup"><span data-stu-id="67fd2-129">For example, `'A'` is a literal of the type `char` and `2001` is a literal of the type `int`.</span></span>
+
+- <span data-ttu-id="67fd2-130">単純型の定数は、[const](const.md) キーワードを使用して宣言できます。</span><span class="sxs-lookup"><span data-stu-id="67fd2-130">You can declare constants of the simple types with the [const](const.md) keyword.</span></span> <span data-ttu-id="67fd2-131">他の構造体型の定数を持つことはできません。</span><span class="sxs-lookup"><span data-stu-id="67fd2-131">It's not possible to have constants of other struct types.</span></span>
+
+- <span data-ttu-id="67fd2-132">オペランドがすべて単純型の定数式は、コンパイル時に評価されます。</span><span class="sxs-lookup"><span data-stu-id="67fd2-132">Constant expressions, whose operands are all simple type constants, are evaluated at compile time.</span></span>
+
+<span data-ttu-id="67fd2-133">詳細については、「[C# 言語仕様](../language-specification/index.md)」の[単純型](~/_csharplang/spec/types.md#simple-types)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="67fd2-133">For more information, see the [Simple types](~/_csharplang/spec/types.md#simple-types) section of the [C# language specification](../language-specification/index.md).</span></span>
   
-    -   [<span data-ttu-id="74082-108">整数型</span><span class="sxs-lookup"><span data-stu-id="74082-108">Integral types</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
-  
-    -   [<span data-ttu-id="74082-109">浮動小数点型</span><span class="sxs-lookup"><span data-stu-id="74082-109">Floating-point types</span></span>](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-  
--   [<span data-ttu-id="74082-110">bool</span><span class="sxs-lookup"><span data-stu-id="74082-110">bool</span></span>](../../../csharp/language-reference/keywords/bool.md)  
-  
--   <span data-ttu-id="74082-111">ユーザー定義の構造体</span><span class="sxs-lookup"><span data-stu-id="74082-111">User defined structs.</span></span>  
-  
-## <a name="main-features-of-value-types"></a><span data-ttu-id="74082-112">値型の主な機能</span><span class="sxs-lookup"><span data-stu-id="74082-112">Main Features of Value Types</span></span>  
- <span data-ttu-id="74082-113">値型に基づく変数には、値が直接含まれます。</span><span class="sxs-lookup"><span data-stu-id="74082-113">Variables that are based on value types directly contain values.</span></span> <span data-ttu-id="74082-114">ある値型の変数を別の変数に代入することで、含まれている値がコピーされます。</span><span class="sxs-lookup"><span data-stu-id="74082-114">Assigning one value type variable to another copies the contained value.</span></span> <span data-ttu-id="74082-115">これは、オブジェクトそのものではなく、参照をオブジェクトにコピーする、参照型の変数の代入とは異なります。</span><span class="sxs-lookup"><span data-stu-id="74082-115">This differs from the assignment of reference type variables, which copies a reference to the object but not the object itself.</span></span>  
-  
- <span data-ttu-id="74082-116">すべての値型が <xref:System.ValueType?displayProperty=nameWithType> から暗黙的に派生されます。</span><span class="sxs-lookup"><span data-stu-id="74082-116">All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.</span></span>  
-  
- <span data-ttu-id="74082-117">参照型とは異なり、値型から新しい型を派生することはできません。</span><span class="sxs-lookup"><span data-stu-id="74082-117">Unlike with reference types, you cannot derive a new type from a value type.</span></span> <span data-ttu-id="74082-118">ただし、参照型の場合と同様に、構造体はインターフェイスを実装できます。</span><span class="sxs-lookup"><span data-stu-id="74082-118">However, like reference types, structs can implement interfaces.</span></span>  
-  
- <span data-ttu-id="74082-119">参照型とは異なり、値型に `null` 値を含めることはできません。</span><span class="sxs-lookup"><span data-stu-id="74082-119">Unlike reference types, a value type cannot contain the `null` value.</span></span> <span data-ttu-id="74082-120">ただし、[null 許容型](../../../csharp/programming-guide/nullable-types/index.md)機能では、値型の `null` への代入が許可されます。</span><span class="sxs-lookup"><span data-stu-id="74082-120">However, the [nullable types](../../../csharp/programming-guide/nullable-types/index.md) feature does allow for value types to be assigned to `null`.</span></span>  
-  
- <span data-ttu-id="74082-121">各値型には、その型の既定値を初期化する暗黙の既定のコンストラクターがあります。</span><span class="sxs-lookup"><span data-stu-id="74082-121">Each value type has an implicit default constructor that initializes the default value of that type.</span></span> <span data-ttu-id="74082-122">値型の既定値の詳細については、「[既定値の一覧表](../../../csharp/language-reference/keywords/default-values-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="74082-122">For information about default values of value types, see [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span>  
-  
-## <a name="main-features-of-simple-types"></a><span data-ttu-id="74082-123">単純型の主な機能</span><span class="sxs-lookup"><span data-stu-id="74082-123">Main Features of Simple Types</span></span>  
- <span data-ttu-id="74082-124">C# 言語に不可欠なすべての単純型は、.NET Framework システム型のエイリアスです。</span><span class="sxs-lookup"><span data-stu-id="74082-124">All of the simple types -- those integral to the C# language -- are aliases of the .NET Framework System types.</span></span> <span data-ttu-id="74082-125">たとえば、[int](../../../csharp/language-reference/keywords/int.md) は <xref:System.Int32?displayProperty=nameWithType> のエイリアスです。</span><span class="sxs-lookup"><span data-stu-id="74082-125">For example, [int](../../../csharp/language-reference/keywords/int.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>.</span></span> <span data-ttu-id="74082-126">エイリアスの完全な一覧については、「[組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="74082-126">For a complete list of aliases, see [Built-In Types Table](../../../csharp/language-reference/keywords/built-in-types-table.md).</span></span>  
-  
- <span data-ttu-id="74082-127">オペランドがすべて単純型の定数式は、コンパイル時に評価されます。</span><span class="sxs-lookup"><span data-stu-id="74082-127">Constant expressions, whose operands are all simple type constants, are evaluated at compilation time.</span></span>  
-  
- <span data-ttu-id="74082-128">単純型はリテラルを使用して初期化できます。</span><span class="sxs-lookup"><span data-stu-id="74082-128">Simple types can be initialized by using literals.</span></span> <span data-ttu-id="74082-129">たとえば、'A' は `char` 型のリテラルで、2001 は `int` 型のリテラルです。</span><span class="sxs-lookup"><span data-stu-id="74082-129">For example, 'A' is a literal of the type `char` and 2001 is a literal of the type `int`.</span></span>  
-  
-## <a name="initializing-value-types"></a><span data-ttu-id="74082-130">値型の初期化</span><span class="sxs-lookup"><span data-stu-id="74082-130">Initializing Value Types</span></span>  
- <span data-ttu-id="74082-131">C# では、ローカル変数を使用する前に初期化する必要があります。</span><span class="sxs-lookup"><span data-stu-id="74082-131">Local variables in C# must be initialized before they are used.</span></span> <span data-ttu-id="74082-132">たとえば、次の例のように、初期化せずにローカル変数を宣言した場合、</span><span class="sxs-lookup"><span data-stu-id="74082-132">For example, you might declare a local variable without initialization as in the following example:</span></span>  
+## <a name="initializing-value-types"></a><span data-ttu-id="67fd2-134">値型の初期化</span><span class="sxs-lookup"><span data-stu-id="67fd2-134">Initializing value types</span></span>
+
+ <span data-ttu-id="67fd2-135">C# では、ローカル変数を使用する前に初期化する必要があります。</span><span class="sxs-lookup"><span data-stu-id="67fd2-135">Local variables in C# must be initialized before they are used.</span></span> <span data-ttu-id="67fd2-136">たとえば、次の例のように、初期化せずにローカル変数を宣言した場合、</span><span class="sxs-lookup"><span data-stu-id="67fd2-136">For example, you might declare a local variable without initialization as in the following example:</span></span>  
   
 ```csharp  
 int myInt;  
 ```  
   
- <span data-ttu-id="74082-133">初期化してからでないとこれを使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="74082-133">You cannot use it before you initialize it.</span></span> <span data-ttu-id="74082-134">次のステートメントを使用して初期化できます。</span><span class="sxs-lookup"><span data-stu-id="74082-134">You can initialize it using the following statement:</span></span>  
+ <span data-ttu-id="67fd2-137">初期化してからでないとこれを使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="67fd2-137">You cannot use it before you initialize it.</span></span> <span data-ttu-id="67fd2-138">次のステートメントを使用して初期化できます。</span><span class="sxs-lookup"><span data-stu-id="67fd2-138">You can initialize it using the following statement:</span></span>  
   
 ```csharp  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
- <span data-ttu-id="74082-135">このステートメントは、次のステートメントと同じです。</span><span class="sxs-lookup"><span data-stu-id="74082-135">This statement is equivalent to the following statement:</span></span>  
+ <span data-ttu-id="67fd2-139">このステートメントは、次のステートメントと同じです。</span><span class="sxs-lookup"><span data-stu-id="67fd2-139">This statement is equivalent to the following statement:</span></span>  
   
 ```csharp  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
- <span data-ttu-id="74082-136">もちろん、次の例のように、宣言と初期化を同じステートメントに含めることができます。</span><span class="sxs-lookup"><span data-stu-id="74082-136">You can, of course, have the declaration and the initialization in the same statement as in the following examples:</span></span>  
+ <span data-ttu-id="67fd2-140">もちろん、次の例のように、宣言と初期化を同じステートメントに含めることができます。</span><span class="sxs-lookup"><span data-stu-id="67fd2-140">You can, of course, have the declaration and the initialization in the same statement as in the following examples:</span></span>  
   
 ```csharp  
 int myInt = new int();  
 ```  
   
- <span data-ttu-id="74082-137">または</span><span class="sxs-lookup"><span data-stu-id="74082-137">–or–</span></span>  
+ <span data-ttu-id="67fd2-141">または</span><span class="sxs-lookup"><span data-stu-id="67fd2-141">–or–</span></span>  
   
 ```csharp  
 int myInt = 0;  
 ```  
   
- <span data-ttu-id="74082-138">[new](../../../csharp/language-reference/keywords/new.md) 演算子を使用すると、特定の型の既定のコンストラクターを呼び出し、既定値を変数に代入します。</span><span class="sxs-lookup"><span data-stu-id="74082-138">Using the [new](../../../csharp/language-reference/keywords/new.md) operator calls the default constructor of the specific type and assigns the default value to the variable.</span></span> <span data-ttu-id="74082-139">前の例では、既定のコンス トラクターが値 `0` を `myInt` に代入しました。</span><span class="sxs-lookup"><span data-stu-id="74082-139">In the preceding example, the default constructor assigned the value `0` to `myInt`.</span></span> <span data-ttu-id="74082-140">既定のコンストラクターの呼び出しにより値を代入する詳細については、「[既定値の一覧表](../../../csharp/language-reference/keywords/default-values-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="74082-140">For more information about values assigned by calling default constructors, see [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span>  
+ <span data-ttu-id="67fd2-142">[new](new.md) 演算子を使用すると、特定の型の既定のコンストラクターを呼び出し、既定値を変数に代入します。</span><span class="sxs-lookup"><span data-stu-id="67fd2-142">Using the [new](new.md) operator calls the default constructor of the specific type and assigns the default value to the variable.</span></span> <span data-ttu-id="67fd2-143">前の例では、既定のコンス トラクターが値 `0` を `myInt` に代入しました。</span><span class="sxs-lookup"><span data-stu-id="67fd2-143">In the preceding example, the default constructor assigned the value `0` to `myInt`.</span></span> <span data-ttu-id="67fd2-144">既定のコンストラクターの呼び出しにより値を代入する詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="67fd2-144">For more information about values assigned by calling default constructors, see [Default values table](default-values-table.md).</span></span>  
   
- <span data-ttu-id="74082-141">ユーザー定義型では、[new](../../../csharp/language-reference/keywords/new.md) を使用して既定のコンストラクターを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="74082-141">With user-defined types, use [new](../../../csharp/language-reference/keywords/new.md) to invoke the default constructor.</span></span> <span data-ttu-id="74082-142">たとえば、次のステートメントは、`Point` 構造体の既定のコンストラクターを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="74082-142">For example, the following statement invokes the default constructor of the `Point` struct:</span></span>  
+ <span data-ttu-id="67fd2-145">ユーザー定義型では、[new](new.md) を使用して既定のコンストラクターを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="67fd2-145">With user-defined types, use [new](new.md) to invoke the default constructor.</span></span> <span data-ttu-id="67fd2-146">たとえば、次のステートメントは、`Point` 構造体の既定のコンストラクターを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="67fd2-146">For example, the following statement invokes the default constructor of the `Point` struct:</span></span>  
   
 ```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   
- <span data-ttu-id="74082-143">この呼び出しの後、構造体は明示的に代入されると見なされます。つまり、すべてのメンバーがその既定値に初期化されます。</span><span class="sxs-lookup"><span data-stu-id="74082-143">After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.</span></span>  
+ <span data-ttu-id="67fd2-147">この呼び出しの後、構造体は明示的に代入されると見なされます。つまり、すべてのメンバーがその既定値に初期化されます。</span><span class="sxs-lookup"><span data-stu-id="67fd2-147">After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.</span></span>  
   
- <span data-ttu-id="74082-144">new 演算子の詳細については、「[new](../../../csharp/language-reference/keywords/new.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="74082-144">For more information about the new operator, see [new](../../../csharp/language-reference/keywords/new.md).</span></span>  
+ <span data-ttu-id="67fd2-148">`new` 演算子の詳細については、「[new](new.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="67fd2-148">For more information about the `new` operator, see [new](new.md).</span></span>  
   
- <span data-ttu-id="74082-145">数値型の出力の書式設定については、「[数値結果テーブルの書式設定](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="74082-145">For information about formatting the output of numeric types, see [Formatting Numeric Results Table](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).</span></span>  
+ <span data-ttu-id="67fd2-149">数値型の出力の書式設定については、「[数値結果テーブルの書式設定](formatting-numeric-results-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="67fd2-149">For information about formatting the output of numeric types, see [Formatting numeric results table](formatting-numeric-results-table.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74082-146">参照</span><span class="sxs-lookup"><span data-stu-id="74082-146">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67fd2-150">関連項目</span><span class="sxs-lookup"><span data-stu-id="67fd2-150">See also</span></span>
 
-- [<span data-ttu-id="74082-147">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="74082-147">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="74082-148">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="74082-148">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="74082-149">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="74082-149">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="74082-150">型</span><span class="sxs-lookup"><span data-stu-id="74082-150">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
-- [<span data-ttu-id="74082-151">型のリファレンス表</span><span class="sxs-lookup"><span data-stu-id="74082-151">Reference Tables for Types</span></span>](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [<span data-ttu-id="74082-152">参照型</span><span class="sxs-lookup"><span data-stu-id="74082-152">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
-- [<span data-ttu-id="74082-153">Null 許容型</span><span class="sxs-lookup"><span data-stu-id="74082-153">Nullable types</span></span>](../../programming-guide/nullable-types/index.md)  
+- [<span data-ttu-id="67fd2-151">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="67fd2-151">C# Reference</span></span>](../index.md)  
+- [<span data-ttu-id="67fd2-152">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="67fd2-152">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="67fd2-153">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="67fd2-153">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="67fd2-154">型</span><span class="sxs-lookup"><span data-stu-id="67fd2-154">Types</span></span>](types.md)  
+- [<span data-ttu-id="67fd2-155">型のリファレンス表</span><span class="sxs-lookup"><span data-stu-id="67fd2-155">Reference tables for types</span></span>](reference-tables-for-types.md)  
+- [<span data-ttu-id="67fd2-156">参照型</span><span class="sxs-lookup"><span data-stu-id="67fd2-156">Reference Types</span></span>](reference-types.md)  
+- [<span data-ttu-id="67fd2-157">Null 許容型</span><span class="sxs-lookup"><span data-stu-id="67fd2-157">Nullable types</span></span>](../../programming-guide/nullable-types/index.md)  

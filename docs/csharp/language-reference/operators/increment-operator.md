@@ -1,34 +1,53 @@
 ---
 title: ++ 演算子 (C# リファレンス)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - ++_CSharpKeyword
 helpviewer_keywords:
 - increment operator (++) [C#]
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
-ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b29f4f1ab00c0f8026f118cb72b090e3b728bfc5
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "48030471"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="fe398-102">++ 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="fe398-102">++ Operator (C# Reference)</span></span>
-<span data-ttu-id="fe398-103">インクリメント演算子 (`++`) は、オペランドを 1 ずつインクリメントします。</span><span class="sxs-lookup"><span data-stu-id="fe398-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="fe398-104">インクリメント演算子はそのオペランド ( `++variable` および `variable++`) の前後に指定できます。</span><span class="sxs-lookup"><span data-stu-id="fe398-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="fe398-105">コメント</span><span class="sxs-lookup"><span data-stu-id="fe398-105">Remarks</span></span>  
- <span data-ttu-id="fe398-106">1 番目の形式は前置インクリメント演算です</span><span class="sxs-lookup"><span data-stu-id="fe398-106">The first form is a prefix increment operation.</span></span> <span data-ttu-id="fe398-107">この演算の結果は、インクリメント後のオペランドの値になります。</span><span class="sxs-lookup"><span data-stu-id="fe398-107">The result of the operation is the value of the operand after it has been incremented.</span></span>  
-  
- <span data-ttu-id="fe398-108">2 番目の形式は後置インクリメント演算です。</span><span class="sxs-lookup"><span data-stu-id="fe398-108">The second form is a postfix increment operation.</span></span> <span data-ttu-id="fe398-109">この演算の結果は、インクリメント前のオペランドの値になります。</span><span class="sxs-lookup"><span data-stu-id="fe398-109">The result of the operation is the value of the operand before it has been incremented.</span></span>  
-  
- <span data-ttu-id="fe398-110">数値型と列挙型には事前定義のインクリメント演算子があります。</span><span class="sxs-lookup"><span data-stu-id="fe398-110">Numeric and enumeration types have predefined increment operators.</span></span> <span data-ttu-id="fe398-111">ユーザー定義型は `++` 演算子をオーバーロードできます。</span><span class="sxs-lookup"><span data-stu-id="fe398-111">User-defined types can overload the `++` operator.</span></span> <span data-ttu-id="fe398-112">整数型に対する演算は、通常、列挙型で使用できます。</span><span class="sxs-lookup"><span data-stu-id="fe398-112">Operations on integral types are generally allowed on enumeration.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="fe398-113">例</span><span class="sxs-lookup"><span data-stu-id="fe398-113">Example</span></span>  
- [!code-csharp[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="fe398-114">参照</span><span class="sxs-lookup"><span data-stu-id="fe398-114">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="01f22-102">++ 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="01f22-102">++ Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="fe398-115">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="fe398-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="fe398-116">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="fe398-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="fe398-117">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="fe398-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="01f22-103">単項インクリメント演算子 `++` は、オペランドを 1 ずつインクリメントします。</span><span class="sxs-lookup"><span data-stu-id="01f22-103">The unary increment operator `++` increments its operand by 1.</span></span> <span data-ttu-id="01f22-104">それは、後置インクリメント演算子である `x++` と、前置インクリメント演算子である`++x` という 2 つの形式でサポートされます。</span><span class="sxs-lookup"><span data-stu-id="01f22-104">It's supported in two forms: the postfix increment operator, `x++`, and the prefix increment operator, `++x`.</span></span>
+
+## <a name="postfix-increment-operator"></a><span data-ttu-id="01f22-105">後置インクリメント演算子</span><span class="sxs-lookup"><span data-stu-id="01f22-105">Postfix increment operator</span></span>
+
+<span data-ttu-id="01f22-106">次の例に示すように、`x++` の結果は、演算子の`x` "*前の*" 値です。</span><span class="sxs-lookup"><span data-stu-id="01f22-106">The result of `x++` is the value of `x` *before* the operation, as the following example shows:</span></span>
+
+[!code-csharp-interactive[postfix increment](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PostfixIncrement)]
+
+## <a name="prefix-increment-operator"></a><span data-ttu-id="01f22-107">前置インクリメント演算子</span><span class="sxs-lookup"><span data-stu-id="01f22-107">Prefix increment operator</span></span>
+
+<span data-ttu-id="01f22-108">次の例に示すように、`++x` の結果は、演算子の`x` "*後ろの*" 値です。</span><span class="sxs-lookup"><span data-stu-id="01f22-108">The result of `++x` is the value of `x` *after* the operation, as the following example shows:</span></span>
+
+[!code-csharp-interactive[prefix increment](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PrefixIncrement)]
+
+## <a name="remarks"></a><span data-ttu-id="01f22-109">コメント</span><span class="sxs-lookup"><span data-stu-id="01f22-109">Remarks</span></span>
+
+<span data-ttu-id="01f22-110">インクリメント演算子は、すべての[整数型](../keywords/integral-types-table.md) ([文字](../keywords/char.md) 型を含みます)、[浮動小数点型](../keywords/floating-point-types-table.md)、および任意の[列挙](../keywords/enum.md)型に対して、事前に定義されています。</span><span class="sxs-lookup"><span data-stu-id="01f22-110">The increment operator is predefined for all [integral types](../keywords/integral-types-table.md) (including the [char](../keywords/char.md) type), [floating-point types](../keywords/floating-point-types-table.md), and any [enum](../keywords/enum.md) type.</span></span>
+
+<span data-ttu-id="01f22-111">インクリメント演算子のオペランドは、変数、[プロパティ](../../programming-guide/classes-and-structs/properties.md)のアクセス、または [インデクサー](../../../csharp/programming-guide/indexers/index.md)のアクセスである必要があります。</span><span class="sxs-lookup"><span data-stu-id="01f22-111">An operand of the increment operator must be a variable, a [property](../../programming-guide/classes-and-structs/properties.md) access, or an [indexer](../../../csharp/programming-guide/indexers/index.md) access.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="01f22-112">演算子のオーバーロード可/不可</span><span class="sxs-lookup"><span data-stu-id="01f22-112">Operator overloadability</span></span>
+
+<span data-ttu-id="01f22-113">ユーザー定義型は `++` 演算子を[オーバーロード](../keywords/operator.md)できます。</span><span class="sxs-lookup"><span data-stu-id="01f22-113">User-defined types can [overload](../keywords/operator.md) the `++` operator.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="01f22-114">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="01f22-114">C# language specification</span></span>
+
+<span data-ttu-id="01f22-115">詳細については、「[C# 言語仕様](../language-specification/index.md)」の「[後置インクリメント演算子と後置デクリメント演算子](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators)と「[前置インクリメント演算子と前置デクリメント演算子](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="01f22-115">For more information, see the [Postfix increment and decrement operators](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators) and [Prefix increment and decrement operators](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="01f22-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="01f22-116">See also</span></span>
+
+- [<span data-ttu-id="01f22-117">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="01f22-117">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="01f22-118">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="01f22-118">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="01f22-119">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="01f22-119">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="01f22-120">-- 演算子</span><span class="sxs-lookup"><span data-stu-id="01f22-120">-- Operator</span></span>](decrement-operator.md)
+- [<span data-ttu-id="01f22-121">方法: ポインターのインクリメントとデクリメント</span><span class="sxs-lookup"><span data-stu-id="01f22-121">How to: increment and decrement pointers</span></span>](../../programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)

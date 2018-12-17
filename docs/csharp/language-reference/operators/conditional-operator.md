@@ -1,6 +1,6 @@
 ---
 title: '?: 演算子 (C# リファレンス)'
-ms.date: 07/20/2015
+ms.date: 11/20/2018
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -9,76 +9,83 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 3e45ff6eaaefa5829c3ed9415abe1a12b7a1d069
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.openlocfilehash: cc9bde1d60a3272e2f24cfc05761171a31029c75
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "50980623"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="9df36-102">?: 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="9df36-102">?: Operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="e8804-102">?: 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="e8804-102">?: Operator (C# Reference)</span></span>
 
-<span data-ttu-id="9df36-103">一般に三項条件演算子として知られる、条件演算子 (`?:`) では、ブール式の値に応じて 2 つの値のいずれかが返されます。</span><span class="sxs-lookup"><span data-stu-id="9df36-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="9df36-104">条件演算子の構文は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="9df36-104">Following is the syntax for the conditional operator.</span></span>  
+<span data-ttu-id="e8804-103">条件演算子 `?:` は、一般に三項条件演算子と呼ばれ、ブール式を評価し、ブール式の評価結果 (`true` または `false`) に応じて、2 つの式のいずれかの評価結果を返します。</span><span class="sxs-lookup"><span data-stu-id="e8804-103">The conditional operator `?:`, commonly known as the ternary conditional operator, evaluates a Boolean expression, and returns the result of evaluating one of two expressions, depending on whether the Boolean expression evaluates to `true` or `false`.</span></span> <span data-ttu-id="e8804-104">C# 7.2 以降、[ref 条件式](#conditional-ref-expression)は、2 つの式のいずれかの結果への参照を返します。</span><span class="sxs-lookup"><span data-stu-id="e8804-104">Beginning with C# 7.2, the [conditional ref expression](#conditional-ref-expression) returns the reference to the result of one of the two expressions.</span></span>
 
-```csharp
-condition ? first_expression : second_expression;  
-```
-
-<span data-ttu-id="9df36-105">C# 7.2 より、`first_expression` と `second_expression` を [`ref` 式](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md)にすることができます。</span><span class="sxs-lookup"><span data-stu-id="9df36-105">Beginning with C# 7.2, the `first_expression` and `second_expression` my be [`ref` expressions](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md):</span></span>
+<span data-ttu-id="e8804-105">この条件演算子の構文は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="e8804-105">The syntax for the conditional operator is as follows:</span></span>
 
 ```csharp
-ref condition ? ref first_expression : ref second_expression;  
+condition ? consequence : alternative
 ```
 
-<span data-ttu-id="9df36-106">結果は `ref` または `ref readonly` 変数に、または何の修飾子もない変数に割り当てることができます。</span><span class="sxs-lookup"><span data-stu-id="9df36-106">The result may be assigned to a `ref` or `ref readonly` variable, or to a variable with neither modifier.</span></span>
+<span data-ttu-id="e8804-106">`condition` 式は `true` または `false` と評価する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e8804-106">The `condition` expression must evaluate to `true` or `false`.</span></span> <span data-ttu-id="e8804-107">`condition` が `true` と評価された場合は、`consequence` 式が評価され、その結果が演算の結果になります。</span><span class="sxs-lookup"><span data-stu-id="e8804-107">If `condition` evaluates to `true`, the `consequence` expression is evaluated, and its result becomes the result of the operation.</span></span> <span data-ttu-id="e8804-108">`condition` が `false` と評価された場合は、`alternative` 式が評価され、その結果が演算の結果になります。</span><span class="sxs-lookup"><span data-stu-id="e8804-108">If `condition` evaluates to `false`, the `alternative` expression is evaluated, and its result becomes the result of the operation.</span></span> <span data-ttu-id="e8804-109">`consequence` または `alternative` のみが評価されます。</span><span class="sxs-lookup"><span data-stu-id="e8804-109">Only `consequence` or `alternative` is evaluated.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="9df36-107">コメント</span><span class="sxs-lookup"><span data-stu-id="9df36-107">Remarks</span></span>
+<span data-ttu-id="e8804-110">`consequence` の型と `alternative` の型は同じ型であるか、一方の型から他方の型への暗黙の型変換が存在している必要があります。</span><span class="sxs-lookup"><span data-stu-id="e8804-110">The type of `consequence` and `alternative` must be the same, or there must be an implicit conversion from one type to the other.</span></span>
 
-<span data-ttu-id="9df36-108">`condition` は、`true` または `false` に評価される必要があります。</span><span class="sxs-lookup"><span data-stu-id="9df36-108">The `condition` must evaluate to `true` or `false`.</span></span> <span data-ttu-id="9df36-109">`condition` が `true` の場合、`first_expression` が評価され、これが結果となります。</span><span class="sxs-lookup"><span data-stu-id="9df36-109">If `condition` is `true`, `first_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="9df36-110">`condition` が `false` の場合、`second_expression` が評価され、これが結果となります。</span><span class="sxs-lookup"><span data-stu-id="9df36-110">If `condition` is `false`, `second_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="9df36-111">2 つの式のどちらか一方だけが評価されます。</span><span class="sxs-lookup"><span data-stu-id="9df36-111">Only one of the two expressions is evaluated.</span></span> <span data-ttu-id="9df36-112">これは、結果が `ref` となる式では次が有効になるため、特に重要です。</span><span class="sxs-lookup"><span data-stu-id="9df36-112">This is particularly important for expressions where the result is a `ref`, as the following is valid:</span></span>
+<span data-ttu-id="e8804-111">条件演算子は右結合です。つまり、次の形式の式があるとします。</span><span class="sxs-lookup"><span data-stu-id="e8804-111">The conditional operator is right-associative, that is, an expression of the form</span></span>
 
 ```csharp
-ref (storage != null) ? ref storage[3] : ref defaultValue;
+a ? b : c ? d : e
 ```
 
-<span data-ttu-id="9df36-113">`storage` が null である場合、`storage`の参照は評価されません。</span><span class="sxs-lookup"><span data-stu-id="9df36-113">The reference to `storage` is not evaluated when `storage` is null.</span></span>
-
-<span data-ttu-id="9df36-114">結果が値である場合、`first_expression` の型と `second_expression` の型とは、同じ型であるか、または一方の型から他方の型への暗黙の型変換が存在している必要があります。</span><span class="sxs-lookup"><span data-stu-id="9df36-114">When the result is a value, the type of `first_expression` and `second_expression` must be the same, or there must be an implicit conversion from one type to the other.</span></span> <span data-ttu-id="9df36-115">結果が `ref` である場合は、`first_expression` と `second_expression` の型が同じである必要があります。</span><span class="sxs-lookup"><span data-stu-id="9df36-115">When the result is a `ref`, the type of `first_expression` and `second_expression` must be the same.</span></span>
-
-<span data-ttu-id="9df36-116">`if-else` の構築が必要となる場面で条件演算子を使用すると、計算をより簡潔に表現できます。</span><span class="sxs-lookup"><span data-stu-id="9df36-116">You can express calculations that might otherwise require an `if-else` construction more concisely by using the conditional operator.</span></span> <span data-ttu-id="9df36-117">たとえば、次のコードは、まず `if` ステートメントを使用し、次に条件演算子を使用して、整数を正または負に分類します。</span><span class="sxs-lookup"><span data-stu-id="9df36-117">For example, the following code uses first an `if` statement and then a conditional operator to classify an integer as positive or negative.</span></span>
+<span data-ttu-id="e8804-112">これが次のように評価されます。</span><span class="sxs-lookup"><span data-stu-id="e8804-112">is evaluated as</span></span>
 
 ```csharp
-int input = Convert.ToInt32(Console.ReadLine());  
-string classify;  
-  
-// if-else construction.  
-if (input > 0)  
-    classify = "positive";  
-else  
-    classify = "negative";  
-  
-// ?: conditional operator.  
-classify = (input > 0) ? "positive" : "negative";  
+a ? b : (c ? d : e)
 ```
 
-<span data-ttu-id="9df36-118">条件演算子の結合規則は右から左になります。</span><span class="sxs-lookup"><span data-stu-id="9df36-118">The conditional operator is right-associative.</span></span> <span data-ttu-id="9df36-119">`a ? b : c ? d : e` という式は、`a ? b : (c ? d : e)` ではなく、`(a ? b : c) ? d : e` と評価されます。</span><span class="sxs-lookup"><span data-stu-id="9df36-119">The expression `a ? b : c ? d : e` is evaluated as `a ? b : (c ? d : e)`, not as `(a ? b : c) ? d : e`.</span></span>  
-  
-<span data-ttu-id="9df36-120">条件演算子は、オーバーロードできません。</span><span class="sxs-lookup"><span data-stu-id="9df36-120">The conditional operator cannot be overloaded.</span></span>
-  
-## <a name="example"></a><span data-ttu-id="9df36-121">例</span><span class="sxs-lookup"><span data-stu-id="9df36-121">Example</span></span>
+<span data-ttu-id="e8804-113">条件演算子の使用例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e8804-113">The following example demonstrates the usage of the conditional operator:</span></span>
 
-<span data-ttu-id="9df36-122">次の例は、結果が値になる、条件演算子を示します。</span><span class="sxs-lookup"><span data-stu-id="9df36-122">The following example shows the conditional operator whose result is a value:</span></span>
+[!code-csharp[non ref condtional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
 
-[!code-csharp[csRefOperators?:](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
+## <a name="conditional-ref-expression"></a><span data-ttu-id="e8804-114">ref 条件式</span><span class="sxs-lookup"><span data-stu-id="e8804-114">Conditional ref expression</span></span>
 
-<span data-ttu-id="9df36-123">もう 1 つの例は、結果が ref になる条件演算子を示します。</span><span class="sxs-lookup"><span data-stu-id="9df36-123">The following alternative shows the conditional operator where the result is a reference:</span></span>
+<span data-ttu-id="e8804-115">C# 7.2 以降、ref 条件式を使用して、2 つの式のいずれかの結果に対する参照を返すことができます。</span><span class="sxs-lookup"><span data-stu-id="e8804-115">Beginning with C# 7.2, you can use the conditional ref expression to return the reference to the result of one of the two expressions.</span></span> <span data-ttu-id="e8804-116">この参照を [ref ローカル](../keywords/ref.md#ref-locals)または [ref readonly ローカル](../keywords/ref.md#ref-readonly-locals)変数に代入できます。または、[参照の戻り値](../keywords/ref.md#reference-return-values)または [`ref` メソッドのパラメーター](../keywords/ref.md#passing-an-argument-by-reference)として使用できます。</span><span class="sxs-lookup"><span data-stu-id="e8804-116">You can assign that reference to a [ref local](../keywords/ref.md#ref-locals) or [ref readonly local](../keywords/ref.md#ref-readonly-locals) variable, or use it as a [reference return value](../keywords/ref.md#reference-return-values) or as a [`ref` method parameter](../keywords/ref.md#passing-an-argument-by-reference).</span></span>
 
-[!code-csharp[csRefOperatorsRef?:](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+<span data-ttu-id="e8804-117">ref 条件式の構文は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="e8804-117">The syntax for the conditional ref expression is as follows:</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="9df36-124">参照</span><span class="sxs-lookup"><span data-stu-id="9df36-124">See Also</span></span>
+```csharp
+condition ? ref consequence : ref alternative
+```
 
-- [<span data-ttu-id="9df36-125">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="9df36-125">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="9df36-126">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="9df36-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="9df36-127">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="9df36-127">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="9df36-128">if-else</span><span class="sxs-lookup"><span data-stu-id="9df36-128">if-else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
-- <span data-ttu-id="9df36-129">[?. 演算子と ?[] 演算子](../../../csharp/language-reference/operators/null-conditional-operators.md)</span><span class="sxs-lookup"><span data-stu-id="9df36-129">[?. and ?[] Operators](../../../csharp/language-reference/operators/null-conditional-operators.md)</span></span>  
-- [<span data-ttu-id="9df36-130">??演算子</span><span class="sxs-lookup"><span data-stu-id="9df36-130">?? Operator</span></span>](../../../csharp/language-reference/operators/null-coalescing-operator.md)
+<span data-ttu-id="e8804-118">元の条件演算子と同じように、ref 条件式は、2 つの式 (`consequence` または `alternative`) のいずれかのみを評価します。</span><span class="sxs-lookup"><span data-stu-id="e8804-118">Like the original conditional operator, the conditional ref expression evaluates only one of the two expressions: either `consequence` or `alternative`.</span></span>
+
+<span data-ttu-id="e8804-119">ref 条件式の場合、`consequence` と`alternative` の型は同じである必要があります。</span><span class="sxs-lookup"><span data-stu-id="e8804-119">In the case of the conditional ref expression, the type of `consequence` and `alternative` must be the same.</span></span>
+
+<span data-ttu-id="e8804-120">ref 条件演算子の使用例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e8804-120">The following example demonstrates the usage of the conditional ref expression:</span></span>
+
+[!code-csharp[conditional ref](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+
+<span data-ttu-id="e8804-121">詳細については、[機能提案メモ](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e8804-121">For more information, see the [feature proposal note](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md).</span></span>
+
+## <a name="conditional-operator-and-an-ifelse-statement"></a><span data-ttu-id="e8804-122">条件演算子と `if..else` ステートメント</span><span class="sxs-lookup"><span data-stu-id="e8804-122">Conditional operator and an `if..else` statement</span></span>
+
+<span data-ttu-id="e8804-123">条件演算子を [if-else](../keywords/if-else.md) ステートメントで使用すると、値の計算を条件付きで実行する必要がある場合に、コードをもっと簡潔にできる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="e8804-123">Use of the conditional operator over an [if-else](../keywords/if-else.md) statement might result in more concise code in cases when you need conditionally to compute a value.</span></span> <span data-ttu-id="e8804-124">次の例では、整数を負の値または負以外の値に分類するための 2 つの方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="e8804-124">The following example demonstrates two ways to classify an integer as negative or nonnegative:</span></span>
+
+[!code-csharp[conditional and if-else](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#CompareWithIf)]
+
+## <a name="operator-overloadability"></a><span data-ttu-id="e8804-125">演算子のオーバーロード可/不可</span><span class="sxs-lookup"><span data-stu-id="e8804-125">Operator overloadability</span></span>
+
+<span data-ttu-id="e8804-126">条件演算子は、オーバーロードできません。</span><span class="sxs-lookup"><span data-stu-id="e8804-126">The conditional operator cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="e8804-127">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="e8804-127">C# language specification</span></span>
+
+<span data-ttu-id="e8804-128">詳細については、「[C# 言語仕様](../language-specification/index.md)」の「[条件演算子](~/_csharplang/spec/expressions.md#conditional-operator)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e8804-128">For more information, see the [Conditional operator](~/_csharplang/spec/expressions.md#conditional-operator) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="e8804-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="e8804-129">See also</span></span>
+
+- [<span data-ttu-id="e8804-130">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="e8804-130">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="e8804-131">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="e8804-131">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="e8804-132">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="e8804-132">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="e8804-133">if-else ステートメント</span><span class="sxs-lookup"><span data-stu-id="e8804-133">if-else statement</span></span>](../keywords/if-else.md)
+- <span data-ttu-id="e8804-134">[?. 演算子と ?[] 演算子](null-conditional-operators.md)</span><span class="sxs-lookup"><span data-stu-id="e8804-134">[?. and ?[] Operators](null-conditional-operators.md)</span></span>
+- [<span data-ttu-id="e8804-135">??演算子</span><span class="sxs-lookup"><span data-stu-id="e8804-135">?? Operator</span></span>](null-coalescing-operator.md)
+- [<span data-ttu-id="e8804-136">ref キーワード</span><span class="sxs-lookup"><span data-stu-id="e8804-136">ref keyword</span></span>](../keywords/ref.md)
