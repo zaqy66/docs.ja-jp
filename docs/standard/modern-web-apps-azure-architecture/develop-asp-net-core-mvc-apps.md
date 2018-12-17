@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308592"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152781"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリを開発する
 
@@ -83,7 +83,7 @@ ASP.NET Core は、[依存関係の挿入](/aspnet/core/fundamentals/dependency-
 
 静的な結び付きは、クラスが静的メソッドを呼び出したとき、または静的プロパティにアクセスしたときに発生し、インフラストラクチャに対する副作用または依存関係があります。 たとえば、あるメソッドが静的メソッドを呼び出し、その静的メソッドがデータベースに書き込む場合、元のメソッドはデータベースに密に結合されます。 何かによってデータベース呼び出しが中断されると、メソッドも中断されます。 このようなメソッドのテストは、静的な呼び出しを模倣するために市販のモック ライブラリが必要になるか、またはテスト データベースを使ってしかテストできないため、非常に困難です。 インフラストラクチャに対する依存関係のない静的呼び出しは (特に、完全にステートレスのもの)、問題なく呼び出すことができて、結合や (コードの結合だけでなく静的な呼び出し自体の) テスト可能性に影響を与えません。
 
-多くの開発者は、静的な結び付きとグローバルな状態のリスクを理解していますが、それでも直接的なインスタンス化によって特定の実装にコードを密接に結合します。 "new は接着剤である" という格言は、この結合を喚起するものであり、new キーワードの使用を全般に非難しているわけではありません。 静的メソッドの呼び出しと同様に、外部依存関係を持たない型の新しいインスタンスは通常、実装の詳細にコードを密接に結合したり、テストを困難にしたりすることはありません。 ただし、クラスをインスタンス化するたびに、その特定のインスタンスをその特定の場所にハード コーディングすることに意味があるかどうか、またはそのインスタンスを依存関係として要求する方が優れた設計ではないかということを、少し検討してください。
+多くの開発者は、静的な結び付きとグローバルな状態のリスクを理解していますが、それでも直接的なインスタンス化によって特定の実装にコードを密接に結合します。 "new は接着剤である" という格言は、この結合を喚起するものであり、`new` キーワードの使用を全般に非難しているわけではありません。 静的メソッドの呼び出しと同様に、外部依存関係を持たない型の新しいインスタンスは通常、実装の詳細にコードを密接に結合したり、テストを困難にしたりすることはありません。 ただし、クラスをインスタンス化するたびに、その特定のインスタンスをその特定の場所にハード コーディングすることに意味があるかどうか、またはそのインスタンスを依存関係として要求する方が優れた設計ではないかということを、少し検討してください。
 
 ### <a name="declare-your-dependencies"></a>依存関係の宣言
 
@@ -559,5 +559,5 @@ _Azure のデプロイ オプションについては、[10 章](development-pro
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[前へ](common-client-side-web-technologies.md)
-[次へ](work-with-data-in-asp-net-core-apps.md)
+>[前へ](common-client-side-web-technologies.md)
+>[次へ](work-with-data-in-asp-net-core-apps.md)

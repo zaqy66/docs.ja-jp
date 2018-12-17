@@ -1,5 +1,6 @@
 ---
 title: .NET の文字列を使用するためのベスト プラクティス
+description: .NET アプリケーションで文字列を効果的に使用する方法について説明します。
 ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080339"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150980"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET の文字列を使用するためのベスト プラクティス
 <a name="top"></a> .NET には、ローカライズされたアプリケーションやグローバル化されたアプリケーションを開発するための広範なサポートが用意されており、文字列の並べ替えや表示などの一般的な操作を実行するときに、現在のカルチャの規則や特定のカルチャの規則を簡単に適用できるようになっています。 しかし、文字列の並べ替えや比較の操作は、必ずしもカルチャに依存するとは限りません。 たとえば、アプリケーションが内部で使用する文字列は、通常、すべてのカルチャで同じように処理される必要があります。 XML タグ、HTML タグ、ユーザー名、ファイル パス、システム オブジェクトの名前などのカルチャに依存しない文字列データがカルチャに依存するかのように解釈されると、アプリケーション コードで軽度のバグが発生したり、パフォーマンスが低下したり、場合によってはセキュリティの問題を引き起こしたりする可能性があります。  

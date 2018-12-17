@@ -1,15 +1,15 @@
 ---
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
+description: Kubernetes アプリケーション ライフサイクルを開発しながら、高いスケーラビリティおよび可用性と Azure Dev Spaces の可能性のためにマイクロサービスと複数のコンテナー アプリケーションを調整するオプションについて説明します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: 25175e2a4409d53be412ae72be5af1c07c3ec68d
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.date: 09/20/2018
+ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982777"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152729"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -17,7 +17,7 @@ ms.locfileid: "50982777"
 
 図 4-23 は、複数のマイクロサービス (コンテナー) で構成されるアプリケーションのクラスターへの展開を示しています。
 
-![](./media/image23.PNG)
+![クラスター内での Docker アプリケーションの構成: サービス インスタンスごとに 1 つのコンテナーを使用します。 Docker コンテナーは "配置の単位" であり、コンテナーは Docker のインスタンスです。ホストでは多くのコンテナーが処理されます。](./media/image23.png)
 
 **図 4-23**.  コンテナーのクラスター
 
@@ -29,111 +29,131 @@ ms.locfileid: "50982777"
 
 アーキテクチャと開発の観点から、マイクロサービス ベースのアプリケーションで構成される大規模なエンタープライズを構築する場合、高度なシナリオをサポートする次のプラットフォームと製品を理解することが重要です。
 
-**クラスターとオーケストレーター**。 多くの Docker ホストでアプリケーションをスケールアウトする必要がある場合は、基になるプラットフォームの複雑さを抽象化し、これらすべてのホストを単一のクラスターとして管理できるようにすることが重要です。 これが、コンテナー クラスターとオーケストレーターで提供されるものです。 オーケストレーターの例として、Azure Service Fabric、Kubernetes、Docker Swarm、Mesosphere DC/OS があります。 最後の 3 つのオープンソース オーケストレーターは、Azure Container Service を介して Azure で使用できます。
+**クラスターとオーケストレーター。** 大規模なマイクロサービス ベースのアプリケーションの場合のように、多くの Docker ホストでアプリケーションをスケールアウトする必要がある場合は、基になるプラットフォームの複雑さを抽象化することで、これらすべてのホストを単一のクラスターとして管理できるようにすることが重要です。 それは、コンテナー クラスターとオーケストレーターによって実現されるものです。 オーケストレーターの例としては、Azure Service Fabric や Kubernetes が挙げられます。 Kubernetes は、Azure Kubernetes Service を介して Azure で利用可能です。
 
-**スケジューラ**。 *スケジューリング* は、管理者がクラスターのコンテナーを起動して、UI も提供できるようにすることを意味します。 クラスター スケジューラにはいくつかの役割があります。たとえば、クラスターのリソースを効率的に使用すること、ユーザーによって指定される制約を設定すること、ノードまたはホスト全体でのコンテナーの負荷分散を効率的に行うこと、高可用性を提供すると同時にエラーに対して堅牢であることなどです。
+**スケジューラ。** *スケジューリング* は、管理者がクラスターのコンテナーを起動して、UI も提供できるようにすることを意味します。 クラスター スケジューラにはいくつかの役割があります。たとえば、クラスターのリソースを効率的に使用すること、ユーザーによって指定される制約を設定すること、ノードまたはホスト全体でのコンテナーの負荷分散を効率的に行うこと、高可用性を提供すると同時にエラーに対して堅牢であることなどです。
 
 クラスターとスケジューラの概念は密接に関連しており、さまざまなベンダーによって提供される製品では、多くの場合、両方の機能セットが提供されます。 以下のリストに、クラスターとスケジューラーで最も重要なプラットフォームとソフトウェアの選択肢を示します。 これらのオーケストレーターは、通常、Azure などのパブリック クラウドで提供されます。
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>コンテナーのクラスタリング、オーケストレーション、スケジューリングのためのソフトウェア プラットフォーム
 
-Kubernetes
+### <a name="kubernetes"></a>Kubernetes
 
 ![Kubernetes ロゴ](./media/image24.png)
 
-> Kubernetes はオープンソースの製品であり、クラスターのインフラストラクチャとコンテナーのスケジューリングからオーケストレーション機能までの機能を提供します。 ホストのクラスター全体のアプリケーション コンテナーの展開、スケーリング、操作を自動化できます。
+> [*Kubernetes*](https://kubernetes.io/) はオープンソースの製品であり、クラスターのインフラストラクチャとコンテナーのスケジューリングからオーケストレーションまでのさまざまな機能を提供します。 ホストのクラスター全体のアプリケーション コンテナーの展開、スケーリング、操作を自動化できます。
 >
-> Kubernetes ではコンテナー中心のインフラストラクチャが提供され、アプリケーション コンテナーを論理ユニットにグループ化し、管理と検出を容易にします。
+> *Kubernetes* ではコンテナー中心のインフラストラクチャが提供され、アプリケーション コンテナーを論理ユニットにグループ化し、管理と検出を容易にします。
 >
-> Kubernetes は Linux では完成されていますが、Windows では未完成です。
+> *Kubernetes* は Linux では完成されていますが、Windows では未完成です。
 
-Docker Swarm
+### <a name="azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS)
 
-![Docker Swarm ロゴ](./media/image25.png)
+![Azure Kubernetes Service ロゴ](./media/image41.png)
 
-> Docker Swarm では Docker コンテナーのクラスタリングとスケジューリングを行うことができます。 Swarm を使用することで、Docker ホストのプールを単一の仮想 Docker ホストにすることができます。 クライアントは、ホストの場合と同じ方法で Swarm に対して API 要求を行うことができます。これは、Swarm を使用することで、複数のホストへのアプリケーションのスケーリングが容易になることを意味します。
->
-> Docker Swarm は Docker 社の製品です。
->
-> Docker v1.12 以降ではネイティブの組み込み Swarm モードを実行できます。
+> [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) は Azure でのマネージド Kubernetes コンテナー オーケストレーション サービスで。これによって Kubernetes クラスターの管理、デプロイ、および操作が簡略化されます。
 
-Mesosphere DC/OS
-
-![Mesosphere DC/OS ロゴ](./media/image26.png)
-
-> Mesosphere Enterprise DC/OS (Apache Mesos に基づく) は、コンテナーと分散アプリケーションを実行するための運用可能なプラットフォームです。
->
-> DC/OS は、クラスターで使用可能なリソースのコレクションを抽象化し、これらのリソースをその上に構築されたコンポーネントで使用できるようにすることで機能します。 Marathon は通常、DC/OS と統合されたスケジューラとして使用されます。
->
-> DC/OS は Linux では完成されていますが、Windows では未完成です。
-
-Azure Service Fabric
+### <a name="azure-service-fabric"></a>Azure Service Fabric
 
 ![Azure Service Fabric ロゴ](./media/image27.png)
 
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) は、アプリケーションを構築するための Microsoft マイクロサービス プラットフォームです。 サービスの [オーケストレーター](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) であり、マシンのクラスターを作成します。 Service Fabric は、サービスをコンテナーまたはプレーン プロセスとして展開できます。 同じアプリケーションとクラスター内にコンテナーのサービスとプロセスのサービスを混在させることもできます。
+> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) は、アプリケーションを構築するための Microsoft マイクロサービス プラットフォームです。 これはサービスの[オーケストレーター](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)であり、これによってマシンのクラスターが作成されます。 Service Fabric は、サービスをコンテナーまたはプレーン プロセスとして展開できます。 同じアプリケーションとクラスター内にコンテナーのサービスとプロセスのサービスを混在させることもできます。
 >
-> Service Fabric は、[Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) や[ステートフル サービス](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)などの追加の省略可能な規範的な  [Service Fabric プログラミング モデル ](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework)を提供します。
+> *Service Fabric* クラスターは、Azure、オンプレミス、または任意のクラウドに配置できます。 ただし、Azure でのデプロイはマネージド アプローチで簡略化されます。
 >
-> Service Fabric は Windows (年々進化している Windows) では完成されていますが、Linux では未完成です。 
+> *Service Fabric* では、[ステートフル サービス](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)や [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) などの追加の省略可能な規範的な [Service Fabric プログラミング モデル](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework)が提供されます。
+>
+> *Service Fabric* は Windows (年々進化している Windows) では完成されていますが、Linux では未完成です。
+>
 > Linux と Windows の両方のコンテナーは、2017 年以降の Service Fabric でサポートされています。
+
+### <a name="azure-service-fabric-mesh"></a>Azure Service Fabric Mesh
+
+![Azure Service Fabric Mesh ロゴ](./media/image35.png)
+
+> [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) では、Service Fabric と同じ信頼性、ミッション クリティカルなパフォーマンス、およびスケールが提供されますが、提供されるプラットフォームはフル マネージドのサーバーレス プラットフォームとなります。 クラスター、VM、ストレージ、またはネットワーク構成を管理する必要はありません。 ご自分のアプリケーションの開発に集中できます。
+>
+> *Service Fabric Mesh* では Windows と Linux の両方のコンテナーがサポートされているため、自分で選択した任意のプログラミング言語またはフレームワークを使用して開発を行うことができます。
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure でのコンテナー ベースのオーケストレーターの使用
 
-いくつかのクラウド ベンダーでは Docker コンテナーのサポートに加え、Docker クラスターおよびオーケストレーション サポート (Microsoft Azure、Amazon EC2 Container Service、Google Container Engine を含む) が提供されます。 Microsoft Azure では、次のセクションの説明のとおり、Azure Container Service (ACS) を介して Docker クラスターおよびオーケストレーション サポートが提供されます。
+いくつかのクラウド ベンダーでは Docker コンテナーのサポートに加え、Docker クラスターおよびオーケストレーション サポート (Microsoft Azure、Amazon EC2 Container Service、Google Container Engine を含む) が提供されます。 Microsoft Azure では、Azure Kubernetes Service (AKS) と、Azure Service Fabric と、Azure Service Fabric Mesh とを介して Docker クラスターおよびオーケストレーターがサポートされます。
 
-Linux と Windows の両方のコンテナーに基づく Docker もサポートする、Microsoft Azure Service Fabric (マイクロサービス プラットフォーム) を使用することもできます。 Service Fabric は Azure またはその他のクラウドで実行され、[オンプレミス](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere)でも実行されます。
+## <a name="using-azure-kubernetes-service"></a>Azure Kubernetes Service の使用
 
-## <a name="using-azure-container-service"></a>Azure Container Service の使用
+Kubernetes クラスターでは複数の Docker ホストがプールされ、それらが単一の仮想 Docker ホストとして公開されるため、複数のコンテナーをクラスターにデプロイし、任意の数のコンテナー インスタンスを使用してスケールアウトできます。 クラスターは、スケーラビリティや正常性など、複雑な管理機能をすべて処理します。
 
-Docker クラスターは複数の Docker ホストをプールし、単一の Docker ホストとして公開するため、複数のコンテナーをクラスターに展開できます。 クラスターは、スケーラビリティや正常性など、複雑な管理機能をすべて処理します。 図 4-24 に、Docker が構成されたアプリケーションの Docker クラスターがどのように Azure Container Service (ACS) にマップされるかが示されています。
+ACS には、コンテナー化されたアプリケーションを実行するように Azure 内で事前に構成されている仮想マシンのクラスターの作成、構成、および管理を簡略化する方法が用意されています。 一般的なオープンソースのスケジューリングおよびオーケストレーション ツールの最適化された構成を使用することで、AKS では、コンテナー ベースのアプリケーションを Microsoft Azure でデプロイして管理するための専門知識を持つ増加し続けるコミュニティを利用するか、既存のスキルを使用することができます。
 
-ACS は、コンテナー化されたアプリケーションを実行するように事前に構成されている仮想マシンのクラスターの作成、構成、および管理を簡略化する方法を提供します。 一般的なオープンソースのスケジューリングおよびオーケストレーション ツールの最適化された構成を使用することで、ACS では、コンテナー ベースのアプリケーションを Microsoft Azure でデプロイして管理するための専門知識を持つ増加し続けるコミュニティを利用するか、既存のスキルを使用することができます。
+Azure Kubernetes Service によって、一般的な Docker クラスタリング オープンソース ツールとテクノロジの構成が Azure 専用に最適化されます。 コンテナーとアプリケーションの構成の両方に移植性を提供するオープン ソリューションが得られます。 サイズ、ホストの数、オーケストレーター ツールを選択すると、他のことはすべて AKS によって処理されます。
 
-Azure Container Service では、一般的な Docker クラスタリング オープンソース ツールとテクノロジの構成を Azure 専用に最適化します。 コンテナーとアプリケーションの構成の両方に移植性を提供するオープン ソリューションが得られます。 ユーザーはサイズ、ホストの数、オーケストレーター ツールを選択し、Container Service は他のすべてを処理します。
+![Kubernetes クラスター構造: DNS、スケジューラ、プロキシなどを処理するマスター ノードが 1 つと、コンテナーをホストするワーカー ノードが複数あります。](media/image36.png)
 
-![](./media/image28.png)
+**図 4-24** Kubernetes クラスターの簡略化された構造とトポロジ
 
-**図 4-24** Azure Container Service でのクラスタリングの選択肢
+図 4-24 に示したのは Kubernetes クラスターの構造です。ここでは、クラスターの調整の大部分がマスター ノード (VM) によって行われ、アプリケーションの観点から 1 つのプールとして管理される残りのノードにコンテナーをデプロイすることができます。これにより、数千または数万ものコンテナーに対するスケーリングを行うことができます。
 
-ACS では Docker イメージを活用して、アプリケーション コンテナーを完全に移植できるようにします。 DC/OS (Apache Mesos を採用)、Kubernetes (Google によって最初に作成された)、および Docker Swarm などのオープンソースのオーケストレーション プラットフォームを選択でき、これらのアプリケーションが数千または数万ものコンテナーにスケーリングできるようにします。
+## <a name="development-environment-for-kubernetes"></a>Kubernetes 用の開発環境
 
-Azure Container Service では、オーケストレーション レイヤーなどで、アプリケーションの移植性を維持しながら、Azure のエンタープライズ レベルの機能を活用できます。
+開発環境において、単に [Docker Desktop](https://docs.docker.com/install/) をインストールすることにより 1 台の開発マシン (Windows 10 または macOS) でも Kubernetes を実行できることが [2018 年 7 月に Docker から発表](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)されました。 図 4-25 に示すように、さらなる統合テストを行うために、後でクラウド (AKS) にデプロイすることができます。
 
-![](./media/image29.png)
+![Docker は、Docker Desktop を使用した、Kubernetes クラスターに対する開発マシンのサポートを 2018 年 7 月に発表しました。](media/image37.png) 
 
-**図 4-25** ACS のオーケストレーター
+**図 4-25** 開発マシンとクラウドでの Kubernetes の実行
 
-図 4-25 に示すように、Azure Container Service は、DC/OS、Kubernetes または Docker Swarm をデプロイするために Azure によって提供される単なるインフラストラクチャですが、追加のオーケストレーターを実装しません。 したがって、ACS はそのようなオーケストレーターではなく、コンテナーの既存のオープンソース オーケストレーターを活用する単なるインフラストラクチャです。
+## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) の使用の開始 
 
-使用の観点からは、Azure Container Service の目的は、一般的なオープンソース ツールとテクノロジを使用して、コンテナーのホスト環境を提供することです。 この目的を達成するために、選択されたオーケストレーターの標準的な API エンドポイントが公開されます。 これらのエンドポイントを使用することで、エンドポイントとの通信が可能な任意のソフトウェアを活用できます。 たとえば、Docker Swarm エンドポイントの場合、Docker コマンド ライン インターフェイス (CLI) を使用するよう選択できます。 DC/OS では、DC/OS CLI を使用するよう選択できます。
+AKS の使用を開始するには、Azure portal から、または CLI を使用して AKS クラスターをデプロイします。 Azure Container Service クラスターの詳細については、[Azure Kubernetes Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)に関するページを参照してください。
 
-### <a name="getting-started-with-azure-container-service"></a>Azure Container Service の使用の開始 
+AKS の一部として既定でインストールされるソフトウェアはいずれも無料です。 既定のすべてのオプションはオープン ソース ソフトウェアと共に実装されます。 AKS は Azure 内の複数の仮想マシンで使用できます。 選択したコンピューティング インスタンスと、ストレージやネットワーキングなどの利用された他の基になるインフラストラクチャ リソースにのみ課金されます。 AKS 自体に従量課金はありません。
 
-Azure Container Service の使用を開始するには、Azure Resource Manager テンプレートまたは [CLI](https://docs.microsoft.com/cli/azure/install-azure-cli) を使用して、Azure Portal から Azure Container Service クラスターをデプロイします。 使用可能なテンプレートには、[Docker Swarm](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-swarm)、[Kubernetes](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-kubernetes)、[DC/OS](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-dcos) があります。 追加の、または高度な Azure 構成を含めるためにクイック スタート テンプレートを変更することができます。 Azure Container Service クラスターの詳細については、Azure Web サイトの [Azure Container Service クラスターのデプロイ](https://docs.microsoft.com/azure/container-service/container-service-deployment)に関するページを参照してください。
+kubectl および元の .yaml ファイルに基づく Kubernetes へのデプロイの詳細については、[AKS (Azure Kubernetes Service) での eShopOnContainers の設定](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service))に関する投稿記事を参照してください。
 
-ACS の一部として既定でインストールされるソフトウェアはいずれも無料です。 既定のすべてのオプションはオープン ソース ソフトウェアと共に実装されます。
+## <a name="deploying-with-helm-charts-into-kubernetes-clusters"></a>Helm Chart を使用した Kubernetes クラスターへのデプロイ
 
-ACS は、現在、Azure の標準 A、D、DS、G、GS シリーズの Linux 仮想マシンで使用可能です。 選択されたコンピューティング インスタンスと、ストレージやネットワーキングなどの利用された他の基になるインフラストラクチャ リソースにのみ課金されます。 ACS 自体の増分料金はありません。
+Kubernetes クラスターにアプリケーションをデプロイする場合は、前のセクションで既に述べたように、ネイティブ形式 (.yaml ファイル) に基づくデプロイ ファイルを使用することにより、元の kubectl.exe CLI ツールを使用できます。 ただし、複雑なマイクロサービス ベースのアプリケーションをデプロイする場合など、より複雑な Kubernetes アプリケーションについては、[Helm](https://helm.sh/) の使用をお勧めします。
+
+Helm Chart を使用すると、非常に複雑な Kubernetes アプリケーションについても、その定義、バージョン管理、インストール、共有、アップグレード、またはロールバックを容易に行うことができます。
+
+さらに述べると、Azure におけるその他の Kubernetes 環境 ([Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) など) も Helm Chart に基づいているので、Helm の使用が推奨されます。
+
+Helm は、[Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) が維持しています (Microsoft、Google、Bitnami、および Helm の共同作成者コミュニティとの協力で)。
+
+Helm Chart および Kubernetes の実装の詳細については、[Helm Chart を使用することによる AKS への eShopOnContainers のデプロイ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Deploying-to-AKS-using-Helm-Charts)に関する投稿記事を参照してください。
+
+## <a name="use-azure-dev-spaces-for-your-kubernetes-application-lifecycle"></a>ご利用の Kubernetes アプリケーション ライフ サイクルに対して Azure Dev Spaces を使用する
+
+[Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) には、チーム向けの迅速で反復的な Kubernetes 開発エクスペリエンスが用意されています。 開発マシンのセットアップ最小限にして、Azure Kubernetes Service (AKS) で直接、コンテナーの実行およびデバッグを反復的に実行することができます。 Visual Studio、Visual Studio Code、またはコマンド ラインなどの使い慣れたツールを使用して、Windows、Mac、または Linux 上で開発します。
+
+前述のように、Azure Dev Spaces では、コンテナー ベースのアプリケーションのデプロイ時に Helm Chart が使用されます。
+
+Azure Dev Spaces では、Visual Studio 2017 または Visual Studio Code を使用するだけで、Azure 内のグローバルな Kubernetes クラスターで直接、コードを迅速に反復およびデバッグすることができます。このため、Azure Dev Spaces は開発チームが Kubernetes での生産性を高めるのに役立ちます。 Azure 内の Kubernetes クラスターは共有されたマネージド Kubernetes クラスターであるため、チームは共同で作業を行うことができます。 コードを個別に開発してから、グローバル クラスターにデプロイし、依存関係のレプリケートやモックアップの作成なしで、他のコンポーネントでエンドツーエンド テストを実行することができます。
+
+図 4-26 に示すように、Azure Dev Spaces の他と最も異なる機能は、クラスター内の残りのグローバル デプロイに統合された運用可能な "スペース" を作成できるということです。
+
+![Azure Dev Spaces では、運用環境のマイクロ サービスと開発コンテナー インスタンスをさまざまな形で透過的に組み合わせることができます。](media/image38.png)
+
+**図 4-26** Azure Dev Spaces での複数のスペースの使用
+
+基本的には Azure 内に共有開発スペースを設定することができます。 各開発者はアプリケーションの自分の担当部分にのみに集中できます。自分のシナリオが依存する他のすべてのサービスとクラウド リソースが既に含まれている開発スペースで事前コミット コードを繰り返し開発できます。 依存関係は常に最新の状態になります。開発者は運用環境を反映した方法で作業します。
+
+Azure Dev Spaces では、スペースという概念を導入しています。このスペースにより、チーム メンバーの邪魔をすることを心配せずに、隔離された状態で作業を行うことができます。 この機能は URL の国際アクセス番号に基づいているため、すべてのコンテナーの要求に対して URL 内の開発スペースの国際アクセス番号を使用する場合、この機能ではそのスペースにデプロイされたコンテナーの特別なバージョンが実行されます (存在する場合)。 それ以外の場合は、グローバル/統合されたバージョンが実行されます。
+
+実際のビューの具体的な例を確認するには、[Azure Dev Spaces に関する eShopOnContainers wiki ページ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS)を参照してください。
+
+詳細については、「[Azure Dev Spaces を使用したチーム開発](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)」を参照してください。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
--   **Azure Container Service を使用した Docker コンテナー ホスティング ソリューションの概要**
-    [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro)
+- **Azure Kubernetes Service (AKS) の使用の開始** \
+  [*https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal*](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
 
--   **Docker Swarm 概要**
-    [*https://docs.docker.com/swarm/overview/*](https://docs.docker.com/swarm/overview/)
+- **Azure Dev Spaces** \
+  [*https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces*](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
 
--   **Swarm モード概要**
-    [*https://docs.docker.com/engine/swarm/*](https://docs.docker.com/engine/swarm/)
-
--   **Mesosphere DC/OS 概要**
-    [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
-
--   **Kubernetes。** 公式サイト。\
-    [*https://kubernetes.io/*](https://kubernetes.io/)
-
+- **Kubernetes** 公式サイト。 \
+  [*https://kubernetes.io/*](https://kubernetes.io/)
 
 >[!div class="step-by-step"]
-[前へ](resilient-high-availability-microservices.md)
-[次へ](using-azure-service-fabric.md)
+>[前へ](resilient-high-availability-microservices.md)
+>[次へ](using-azure-service-fabric.md)

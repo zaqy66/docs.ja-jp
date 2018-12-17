@@ -1,31 +1,31 @@
 ---
 title: Seedwork (ドメイン モデルの再利用可能な基底クラスとインターフェイス)
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Seedwork (ドメイン モデルの再利用可能な基底クラスとインターフェイス)
+description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Seedwork 概念を開始点として使用し、DDD 指向ドメイン モデルの実装を開始する。'
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 7a38d90caab2232c17d8d58ca0c57d5bb56b3ce9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 9a7ddbc8a15e4064b4446ff322148720312e7937
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198396"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152232"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (ドメイン モデルの再利用可能な基底クラスとインターフェイス)
 
-ソリューション フォルダーには、*SeedWork* フォルダーが含まれています。 *SeedWork* フォルダー内にあるカスタム基底クラスは、ドメイン エンティティおよび値オブジェクトの基礎として使用できます。 これらの基底クラスを使用すると、各ドメインのオブジェクト クラスで冗長なコードがなくなります。 これらのタイプのクラス用のフォルダーは、*Framework* のような名前ではなく、*SeedWork* という名前になっています。 *SeedWork* という名前になっているのは、このフォルダーには再利用可能なクラスのほんの一部しか含まれておらず、実際にはフレームワークと見なすことができないためです。 *Seedwork* は、[Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) が発表し、[Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) が普及させた用語ですが、Common や SharedKernel といった名前で呼ばれる場合もあります。
+ソリューション フォルダーには、*SeedWork* フォルダーが含まれています。 このフォルダー内にあるカスタム基底クラスは、ドメイン エンティティおよび値オブジェクトの基礎として使用できます。 これらの基底クラスを使用すると、各ドメインのオブジェクト クラスで冗長なコードがなくなります。 これらのタイプのクラス用のフォルダーは、*Framework* のような名前ではなく、*SeedWork* という名前になっています。 *SeedWork* という名前になっているのは、このフォルダーには再利用可能なクラスのほんの一部しか含まれておらず、実際にはフレームワークと見なすことができないためです。 *Seedwork* は、[Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) が発表し、[Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) が普及させた用語ですが、Common や SharedKernel といった名前で呼ばれる場合もあります。
 
-図 9-12 は、注文マイクロサービスのドメイン モデルの SeedWork を構成するクラスを示しています。 カスタム基底クラス (Entity、ValueObject、Enumeration など) とインターフェイスがいくつか含まれています。 これらのインターフェイス (IRepository と IUnitOfWork) は、実装する必要があるものをインフラストラクチャ レイヤーに通知します。 また、これらのインターフェイスは、アプリケーション レイヤーから依存関係の挿入を通じて使用されます。
+図 7-12 は、注文マイクロサービスのドメイン モデルの SeedWork を構成するクラスを示しています。 カスタム基底クラス (Entity、ValueObject、Enumeration など) とインターフェイスがいくつか含まれています。 これらのインターフェイス (IRepository と IUnitOfWork) は、実装する必要があるものをインフラストラクチャ レイヤーに通知します。 また、これらのインターフェイスは、アプリケーション レイヤーから依存関係の挿入を通じて使用されます。
 
-![](./media/image13.PNG)
+![SeedWork フォルダーの詳しい内容、基底クラスとインターフェイスを含む: Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs、ValueObject.cs](./media/image13.PNG)
 
-**図 9-12**. ドメイン モデル "SeedWork" の基底クラスとインターフェイスのサンプル セット
+**図 7-12**。 ドメイン モデル "SeedWork" の基底クラスとインターフェイスのサンプル セット
 
 これは、コピーと貼り付けによって再利用するタイプのもので、多くの開発者によってプロジェクト間で共有されます。正式なフレームワークではありません。 SeedWork は、どのレイヤーやライブラリでも使用できます。 ただし、クラスとインターフェイスのセットが十分に大きくなったら、単一のクラス ライブラリを作成するのがよいでしょう。
 
 ## <a name="the-custom-entity-base-class"></a>カスタム Entity 基底クラス
 
-次のコードは、Entity 基底クラスの例です。このクラスでは、任意のドメイン エンティティ (エンティティ ID、[等値演算子](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal)、エンティティごとのドメイン イベント リストなど) が同様の方法で使用できるコードを配置できます。
+次のコードは、Entity 基底クラスの例です。このクラスでは、任意のドメイン エンティティ (エンティティ ID、[等値演算子](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-comparison-operator)、エンティティごとのドメイン イベント リストなど) が同様の方法で使用できるコードを配置できます。
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
@@ -105,13 +105,13 @@ public abstract class Entity
 }
 ```
 
-エンティティごとのドメイン イベント リストを使用する以前のコードについては、次のセクションでドメイン イベントを取り上げるときに説明します。 
+エンティティごとのドメイン イベント リストを使用する以前のコードについては、次のセクションでドメイン イベントを取り上げるときに説明します。
 
 ## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>ドメイン モデル レイヤーのリポジトリ コントラクト (インターフェイス)
 
-リポジトリ コントラクトは、各集計に使用されるリポジトリのコントラクト要件を示すシンプルな .NET インターフェイスです。 
+リポジトリ コントラクトは、各集計に使用されるリポジトリのコントラクト要件を示すシンプルな .NET インターフェイスです。
 
-リポジトリ自体と EF コア コード、または他の任意のインフラストラクチャの依存関係やコード (Linq や SQL など) は、ドメイン モデル内に実装してはなりません。リポジトリは、ユーザー定義のインターフェイスのみを実装する必要があります。 
+リポジトリ自体と EF コア コード、または他の任意のインフラストラクチャの依存関係やコード (Linq や SQL など) は、ドメイン モデル内に実装してはなりません。リポジトリは、ドメイン モデルでユーザーが定義するインターフェイスのみを実装する必要があります。
 
 この手法 (リポジトリ インターフェイスをドメイン モデル レイヤーに配置する手法) に関連するパターンが、インターフェイスの分離 パターンです。 Martin Fowler は、次のように[説明](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)しています。"インターフェイスの分離を使用して、あるインターフェイスをあるパッケージに定義します。ただし、その実装は、別のパッケージで行います。 これにより、このインターフェイスへの依存関係が必要なクライアントは、実装を全く意識せずにすむようになります。"
 
@@ -124,7 +124,7 @@ public abstract class Entity
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
-        
+
     void Update(Order order);
 
     Task<Order> GetAsync(int orderId);
@@ -139,10 +139,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>その他の技術情報
 
--   **Martin Fowler。インターフェイスの分離。**
-    [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
-
+- **Martin Fowler。インターフェイスの分離。** \
+  [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 >[!div class="step-by-step"]
-[前へ](net-core-microservice-domain-model.md)
-[次へ](implement-value-objects.md)
+>[前へ](net-core-microservice-domain-model.md)
+>[次へ](implement-value-objects.md)

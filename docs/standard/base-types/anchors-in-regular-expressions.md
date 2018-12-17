@@ -1,5 +1,6 @@
 ---
-title: 正規表現のアンカー
+title: .NET 正規表現でのアンカー
+description: 正規表現パターンでアンカーを使用する方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.custom: seodec18
+ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085187"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155039"
 ---
 # <a name="anchors-in-regular-expressions"></a>正規表現のアンカー
 <a name="top"></a> アンカー (アトミック ゼロ幅アサーション) は、文字列が一致する位置を指定します。 検索式でアンカーを使用した場合、正規表現エンジンは、後方の文字列を読み込んだり、文字に一致させたりすることはしません。指定された位置での一致のみが検索されます。 たとえば、 `^` は、行または文字列の先頭に一致する必要があることを指定します。 したがって、正規表現 `^http:` は、"http:" が行の先頭にある場合にのみ一致します。 次の表は、.NET の正規表現でサポートされているアンカーの一覧です。  
@@ -73,7 +75,7 @@ ms.locfileid: "44085187"
   
  `$` オプションを指定して <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> を使用した場合は、行の末尾にも一致します。 `$` は、 `\n` に一致しますが、 `\r\n` (復帰文字と改行文字の組み合わせ、つまり CR/LF) には一致しないことに注意してください。 CR/LF 文字の組み合わせに一致させるには、正規表現パターンに `\r?$` を含めます。  
   
- 次の例では、「 `$` 文字列または行の先頭 [」の例で使用した正規表現パターンに](#Start) アンカーを追加しています。 5 つのテキスト行を含む元の入力文字列に対して使用した場合、<xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> メソッドは一致を見つけることができません。これは、最初の行の末尾が `$` パターンに一致しないためです。 元の入力文字列を文字列配列に分割すると、<xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> メソッドは 5 つの各行の一致に成功します。 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターを `options` に設定して <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> メソッドを呼び出すと、一致は見つかりません。これは、正規表現パターンで復帰要素 (\u+000D) が考慮されないためです。 ただし、`$` を `\r?$` に置き換え、`options` パラメーターを <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> に設定して <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> メソッドを呼び指すと、正規表現パターンが変更され、再び 5 つの一致が検索されるようになります。  
+ 次の例では、「 `$` 文字列または行の先頭 [」の例で使用した正規表現パターンに](#Start) アンカーを追加しています。 5 つのテキスト行を含む元の入力文字列に対して使用した場合、 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> メソッドは一致を見つけることができません。これは、最初の行の末尾が `$` パターンに一致しないためです。 元の入力文字列を文字列配列に分割すると、 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> メソッドは 5 つの各行の一致に成功します。 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターを `options` に設定して <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> メソッドを呼び出すと、一致は見つかりません。これは、正規表現パターンで復帰要素 (\u+000D) が考慮されないためです。 ただし、 `$` を `\r?$`に置き換え、 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターを `options` に設定して <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> メソッドを呼び指すと、正規表現パターンが変更され、再び 5 つの一致が検索されるようになります。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
@@ -82,7 +84,7 @@ ms.locfileid: "44085187"
   
 <a name="StartOnly"></a>   
 ## <a name="start-of-string-only-a"></a>文字列の先頭のみ: \A  
- `\A` アンカーは、入力文字列の先頭に一致する必要があることを指定します。 これは `^` アンカーと同じですが、`\A` では <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションが無視される点が異なります。 したがって、複数行の入力文字列でも最初の行の先頭にのみ一致することができます。  
+ `\A` アンカーは、入力文字列の先頭に一致する必要があることを指定します。 これは `^` アンカーと同じですが、 `\A` では <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションが無視される点が異なります。 したがって、複数行の入力文字列でも最初の行の先頭にのみ一致することができます。  
   
  次の例は、 `^` アンカーおよび `$` アンカーの例と似ています。 この例では、正規表現で `\A` アンカーを使用して、プロ野球チームが存続した年数に関する情報を抽出します。 入力文字列には 5 つの行が含まれます。 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> メソッドを呼び出すと、入力文字列内で正規表現パターンに一致する最初の部分文字列のみが検索されます。 この例からわかるように、 <xref:System.Text.RegularExpressions.RegexOptions.Multiline> オプションの効果はありません。  
   

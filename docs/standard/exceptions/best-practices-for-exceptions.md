@@ -1,6 +1,6 @@
 ---
 title: 例外の推奨事項
-ms.date: 03/30/2017
+ms.date: 12/05.2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,26 +9,22 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6aa1049c531550687a2c6289ccd87e763ca2f58
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199631"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149589"
 ---
 # <a name="best-practices-for-exceptions"></a>例外の推奨事項
 
 適切にデザインされたアプリケーションは、アプリケーションのクラッシュを防ぐために、例外やエラーを処理します。 このセクションでは、例外の処理と作成のためのベスト プラクティスについて説明します。
 
-## <a name="use-trycatchfinally-blocks"></a>try/catch/finally ブロックを使用する
+## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>try/catch/finally ブロックを使用し、エラーから回復させるか、リソースを解放する
 
-`try`/`catch`/`finally` ブロックを使用して、例外を生成する可能性のあるコードを囲みます。 
+例外が発生する可能性があるコードの前後に `try`/`catch` を使用します。***すると***、その例外からコードは回復できます。 `catch` ブロックでは、例外を常に最も強い派生型から最も弱い派生型の順序で並べ替えます。 すべての例外は <xref:System.Exception> から派生します。 最も強い派生型の例外は、基礎例外クラスの catch 句に続く catch 句では処理されません。 コードが例外から回復できないとき、その例外はキャッチしないでください。 可能であれば、回復させる呼び出し履歴のずっと上でメソッドを有効にします。
 
-`catch` ブロックでは、常に特定の例外から一般的な例外の順に例外を配置します。
-
-回復できるかどうかに関わらず、`finally` ブロックを使用してリソースをクリーンアップします。
+`using` ステートメントか `finally` ブロックで割り当てられているリソースをクリーンアップします。 例外がスローされたとき、リソースを自動クリーンアップするには `using` ステートメントを選択します。 <xref:System.IDisposable> を実装しないリソースをクリーンアップするには `finally` ブロックを使用します。 `finally` 句のコードは常に、例外がスローされるときでも実行されます。
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>例外をスローせずに一般的な状態を処理する
 
@@ -58,11 +54,11 @@ ms.locfileid: "50199631"
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
 
-例外が返されるのを回避するもう 1 つの方法は、非常に一般的なエラーの場合に、例外をスローする代わりに null を返すことです。 非常に一般的なエラーは、通常の制御の流れと見なすことができます。 このような場合は、null を返すことによって、アプリケーションのパフォーマンスへの影響を最小限に抑えることができます。
+例外が返されるのを回避するもう 1 つの方法は、非常に一般的なエラーの場合に、例外をスローする代わりに `null` を返すことです。 非常に一般的なエラーは、通常の制御の流れと見なすことができます。 このような場合は、`null` を返すことによって、アプリケーションのパフォーマンスへの影響を最小限に抑えることができます。
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>エラー コードを返す代わりに、例外をスローする
 
-呼び出しのコードはリターン コードを確認しないので、例外によって、エラーを見過ごさないようにします。 
+呼び出しのコードはリターン コードを確認しないので、例外によって、エラーを見過ごさないようにします。
 
 ## <a name="use-the-predefined-net-exception-types"></a>事前定義済みの .NET の例外の種類を使用する
 
@@ -74,7 +70,7 @@ ms.locfileid: "50199631"
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>例外クラス名の末尾に `Exception` という単語を付加する
 
-カスタム例外が必要な場合は、適切に名前を付け、<xref:System.Exception> クラスから派生させます。 例:
+カスタム例外が必要な場合は、適切に名前を付け、<xref:System.Exception> クラスから派生させます。 次に例を示します。
 
 [!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -124,7 +120,7 @@ ms.locfileid: "50199631"
 
 ## <a name="use-exception-builder-methods"></a>例外ビルダー メソッドを使用する
 
-一般に、クラスはクラス実装内の複数の位置で同一の例外をスローします。 コードが長くなることを防ぐため、例外を作成して返すヘルパー メソッドを使用します。 例:
+一般に、クラスはクラス実装内の複数の位置で同一の例外をスローします。 コードが長くなることを防ぐため、例外を作成して返すヘルパー メソッドを使用します。 次に例を示します。
 
 [!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
@@ -132,7 +128,7 @@ ms.locfileid: "50199631"
   
 場合によっては、例外のコンストラクターを使用して例外を作成する方が適切な場合もあります。 <xref:System.ArgumentException> などのグローバル例外クラスはその一例です。
 
-## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>例外をスローするときに、中間結果を削除する
+## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>例外に起因してメソッドが完了しないとき、状態を復元する
 
 呼び出し元が、メソッドから例外がスローされるときに副作用が発生しないと仮定できる必要があります。 たとえば、ある口座から現金を引き出して別の口座に預金することで送金を行うコードがあって、預金の実行中に例外がスローされた場合、引き出しが有効のままにしておきたくはないはずです。
 
@@ -144,6 +140,8 @@ public void TransferFunds(Account from, Account to, decimal amount)
     to.Deposit(amount);
 }
 ```
+
+上記のメソッドでは例外は直接スローされませんが、預金操作が失敗した場合、引き出しが取り消されるよう、安全性を優先して記述する必要があります。
 
 この状況に対処する方法の 1 つは、預金トランザクションによってスローされた例外をキャッチし、引き出しをロールバックすることです。
 
@@ -172,8 +170,8 @@ catch (Exception ex)
     throw new TransferFundsException("Withdrawal failed", innerException: ex)
     {
         From = from,
-    To = to,
-    Amount = amount
+        To = to,
+        Amount = amount
     };
 }
 ```

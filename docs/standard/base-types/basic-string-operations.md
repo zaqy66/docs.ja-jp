@@ -1,5 +1,6 @@
 ---
-title: .NET Framework での基本的な文字列操作
+title: .NET の基本的な文字列操作
+description: 文字列で実行できる基本的な操作について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,11 +9,13 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7692251a00c712f93b649d4cd6fc153bb248f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seadec18
+ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150681"
 ---
 # <a name="basic-string-operations-in-net"></a>.NET の基本的な文字列操作
 アプリケーションは、多くの場合、ユーザー入力に基づいてメッセージを構築することによってユーザーに応答します。 たとえば、Web サイトで、新たにログオンしたユーザーに対して、ユーザーの名前を含む特別なメッセージで応答することは珍しいことではありません。 <xref:System.String?displayProperty=nameWithType> クラスと <xref:System.Text.StringBuilder?displayProperty=nameWithType> クラスのいくつかのメソッドを使用すると、ユーザー インターフェイスに表示するカスタム文字列を動的に構築できます。 これらのメソッドでは、バイト配列から新しい文字列を作成する、文字列の値を比較する、既存の文字列を変更するなどのいくつかの基本的な文字列操作を実行することもできます。  
