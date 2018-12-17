@@ -46,7 +46,7 @@ F#コードでは、多くの場合、記述する必要が out 型の名前。 
 |3 次元の配列|*型名*[,]|`float[,,]`|
 |tuple|*型 name1* &#42; *型 name2* .|たとえば、`(1,'b',3)`型があります `int * char * int`|
 |ジェネリック型|*型パラメーター* *ジェネリック型名*<br /><br />または<br /><br />*ジェネリック型名*&lt;*型のパラメーター リスト*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|構築された型 (指定された特定の型引数を持つジェネリック型)|*型引数**ジェネリック型名*<br /><br />または<br /><br />*ジェネリック型名*&lt;*型引数リスト*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|構築された型 (指定された特定の型引数を持つジェネリック型)|*型引数* *ジェネリック型名*<br /><br />または<br /><br />*ジェネリック型名*&lt;*型引数リスト*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
 |1 つのパラメーターを含む関数の種類|*パラメーター-type1*  - &gt; *戻り値の型*|受け取る関数、`int`を返します、`string`型があります `int -> string`|
 |複数のパラメーターを含む関数の種類|*パラメーター-type1*  - &gt; *パラメーター type2*  - &gt; ... -&gt; *戻り値の型*|受け取る関数、`int`と`float`を返します、`string`型があります `int -> float -> string`|
 |パラメーターとして高階関数|(*関数型*)|`List.map` 型があります。 `('a -> 'b) -> 'a list -> 'b list`|

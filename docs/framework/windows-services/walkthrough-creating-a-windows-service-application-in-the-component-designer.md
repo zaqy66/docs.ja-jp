@@ -26,7 +26,7 @@ ms.locfileid: "49123671"
 
 1. Visual Studio のメニュー バーで、**[ファイル]** > **[新規]** > **[プロジェクト]** を選択して (または **Ctrl**+**Shift**+**N** を押して)、**[新しいプロジェクト]** ダイアログを開きます。
 
-2. **[Windows サービス]** プロジェクト テンプレートに移動して選択します。 **[インストール済み]****[Visual C#** または **Visual Basic]****[Windows Desktop]** の順に展開するか、右上の検索ボックスに「**Windows サービス**」と入力します。
+2. **[Windows サービス]** プロジェクト テンプレートに移動して選択します。 **[インストール済み]** **[Visual C#** または **Visual Basic]** **[Windows Desktop]** の順に展開するか、右上の検索ボックスに「**Windows サービス**」と入力します。
 
    ![Visual Studio の [新しいプロジェクト] ダイアログの Windows サービス アプリ テンプレート](media/new-project-dialog.png)
 
