@@ -4,12 +4,12 @@ description: あらゆる種類の .NET プロジェクトまたはファイル�
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4e5dd11df8204d86009b0ece108ef877dc54f23e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525968"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126264"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new のカスタム テンプレート
 
@@ -129,7 +129,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-local-nupkg-file"></a>ローカル nupkg ファイルからテンプレートをアンインストールするには
 
-テンプレートをアンインストールするとき、*nupkg* ファイルのパスを利用しないでください。 *`dotnet new -u <PATH_TO_NUPKG_FILE>` でテンプレートをアンインストールしようとすると失敗します。* パッケージはその `id` で参照してください。
+テンプレートをアンインストールするとき、*nupkg* ファイルのパスを利用しないでください。 `dotnet new -u <PATH_TO_NUPKG_FILE>` を使用してテンプレートをアンインストールしようとすると失敗します。 パッケージはその `id` で参照してください。
 
 ```console
 dotnet new -u <NUGET_PACKAGE_ID>
@@ -137,7 +137,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-file-system-directory"></a>ファイル システム ディレクトリからテンプレートをアンインストールするには
 
-`FILE_SYSTEM_DIRECTORY` は、プロジェクトと *.template.config* フォルダーが含まれるプロジェクト フォルダーです。
+`FILE_SYSTEM_DIRECTORY` は、プロジェクトと *.template.config* フォルダーが含まれるプロジェクト フォルダーです。 絶対パスを指定する必要があります。 相対パスを使用してテンプレートをアンインストールしようとすると失敗します。 詳細については、「[dotnet new](dotnet-new.md)」を参照してください。
 
 ```console
 dotnet new -u <FILE_SYSTEM_DIRECTORY>
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>関連項目
 
-* [dotnet new のカスタム テンプレートを作成する (チュートリアル)](../tutorials/create-custom-template.md)  
-* [dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)  
-* [dotnet/dotnet-template-samples GitHub リポジトリ](https://github.com/dotnet/dotnet-template-samples)  
-* [dotnet new の独自のテンプレートを作成する方法](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-* [JSON Schema Store の *template.json* スキーマ](http://json.schemastore.org/template)  
+* [dotnet new のカスタム テンプレートを作成する (チュートリアル)](../tutorials/create-custom-template.md)
+* [dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)
+* [dotnet/dotnet-template-samples GitHub リポジトリ](https://github.com/dotnet/dotnet-template-samples)
+* [dotnet new の独自のテンプレートを作成する方法](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+* [JSON Schema Store の *template.json* スキーマ](http://json.schemastore.org/template)

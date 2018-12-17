@@ -1,19 +1,20 @@
 ---
-title: .NET Core への移植 - ライブラリ
+title: .NET Core にライブラリを移植する
 description: ライブラリ プロジェクトを .NET Framework から .NET Core に移植する方法を説明します。
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: eb6b8506d8df218a053242cd0b8d3097fa6d9fd3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 2701027ce606c215ca9c2bd4bc665bc0600342dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199852"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143585"
 ---
-# <a name="porting-to-net-core---libraries"></a>.NET Core への移植 - ライブラリ
+# <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework ライブラリを .NET Core に移植する
 
-この記事では、ライブラリ コードを .NET Core に移植し、クロスプラットフォームで実行されるようにする方法について説明します。
+.NET Framework ライブラリ コードを .NET Core に移植し、クロスプラットフォームを実行し、それを使用するアプリの範囲を広げる方法について説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -73,34 +74,17 @@ CAS と同様に、セキュリティ透過性を利用すると、サンドボ�
 
 仮想化、コンテナー、ユーザー アカウントなど、オペレーティング システムが提供するセキュリティ境界を使用して、最低限の特権セットでプロセスを実行します。
 
-## <a name="converting-a-pcl-project"></a>PCL プロジェクトの変換
+## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>.NET Framework コードのターゲットを .NET Framework 4.7.2 に変更する
 
-Visual Studio 2017 でライブラリを読み込み、次の手順を行うことで、PCL プロジェクトのターゲットを .NET Standard に変更できます。
-
-1. プロジェクト ファイルを右クリックし、**[プロパティ]** を選択します。
-1. **[ライブラリ]** から、**[ターゲットの .NET Platform Standard]** を選択します。
-
-パッケージで NuGet 3.0 がサポートされている場合、プロジェクトは .NET Standard に再ターゲット設定します。
-
-パッケージで NuGet 3.0 がサポートされていない場合、Visual Studio で、現在のパッケージをアンインストールするように促すダイアログが表示されます。 この通知が表示される場合は、次の手順を実行します。
-
-1. プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。
-1. プロジェクトのパッケージをメモしておきます。
-1. パッケージを 1 つずつアンインストールします。
-1. アンインストール プロセスを完了するには、Visual Studio を再起動しなくてはならない場合があります。 その場合、**[NuGet パッケージ マネージャー]** ウィンドウに **[再起動]** ボタンが表示されます。
-1. プロジェクトが再度読み込まれると、.NET Standard がターゲット設定されます。 アンインストールが必要なパッケージを追加します。
-
-## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a>.NET Framework コードのターゲットを .NET Framework 4.6.2 に変更する
-
-コードのターゲットが .NET Framework 4.6.2 でない場合、.NET Framework 4.6.2 に再ターゲット設定することをお勧めします。 ターゲット設定することで、.NET Standard が既存の API をサポートしていない場合に、最新の代替 API を使用できるようになります。
+コードのターゲットが .NET Framework 4.7.2 でない場合、.NET Framework 4.7.2 に再ターゲット設定することをお勧めします。 ターゲット設定することで、.NET Standard が既存の API をサポートしていない場合に、最新の代替 API を使用できるようになります。
 
 移植する Visual Studio の各プロジェクトで、次の手順を実行します。
 
-1. プロジェクトを右クリックし、[プロパティ] を選択します。
-1. **[対象とする Framework]** ボックスの一覧で、**[.NET Framework 4.6.2]** を選択します。
+1. プロジェクトを右クリックし、**[プロパティ]** を選択します。
+1. **[対象とする Framework]** ボックスの一覧で、**[.NET Framework 4.7.2]** を選択します。
 1. プロジェクトを再コンパイルします。
 
-プロジェクトのターゲットが .NET Framework 4.6.2 になったため、コード移植のベースとして .NET Framework 4.6.2 を使用できます。
+プロジェクトのターゲットが .NET Framework 4.7.2 になったため、コード移植のベースとしてその .NET Framework を使用できます。
 
 ## <a name="determining-the-portability-of-your-code"></a>コードの移植性を判別する
 
@@ -151,7 +135,7 @@ Visual Studio 2017 でライブラリを読み込み、次の手順を行うこ�
  
 コードベースのサイズによっては、分析フェーズに時間がかかる場合があります。 このフェーズに時間を割き、必要な変更の範囲を完全に把握してから計画を立てることで、長期的には多くの時間を節約できます。特に、コードベースが複雑な場合には有効です。
 
-コードベースの大幅な変更が必要な計画になる可能性がありますが、ターゲット設定は .NET Framework 4.6.2 です。そのため、これは前のアプローチよりも体系化されたバージョンです。 計画の実施方法は、コードベースによって異なります。
+コードベースの大幅な変更が必要な計画になる可能性がありますが、ターゲット設定は .NET Framework 4.7.2 です。そのため、これは前のアプローチよりも体系化されたバージョンです。 計画の実施方法は、コードベースによって異なります。
 
 ### <a name="mixing-approaches"></a>混合アプローチ
 

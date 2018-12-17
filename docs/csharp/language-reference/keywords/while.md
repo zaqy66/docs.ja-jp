@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: e3e9493b5371fbd6f53a779ba73743efc6d6e05b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f465bc98c0348c3b3522c062cf3be5ed90ee414a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514061"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143507"
 ---
 # <a name="while-c-reference"></a>while (C# リファレンス)
 
@@ -32,13 +32,12 @@ ms.locfileid: "43514061"
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の [while ステートメント](~/_csharplang/spec/statements.md#the-while-statement)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)  
 - [C# プログラミング ガイド](../../programming-guide/index.md)  
 - [C# のキーワード](index.md)  
-- [while ステートメント (C++)](/cpp/cpp/while-statement-cpp)  
 - [繰り返しステートメント](iteration-statements.md)  
 - [do ステートメント](do.md)  

@@ -1,20 +1,20 @@
 ---
-title: Visual Studio 2017 で Visual Basic と .NET Core を使用したクラス ライブラリの構築
-description: Visual Studio 2017 を使用して Visual Basic で記述されたクラス ライブラリを構築する方法について
+title: Visual Studio 2017 で Visual Basic .NET Core クラス ライブラリを構築する
+description: Visual Studio 2017 を使用して Visual Basic で記述された .NET Core クラス ライブラリを構築する方法について説明します
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52bbae330afe4a9ea376c6388a06941f74f6606a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: fa1387eba60b4bf181df254e00bb3fdbe55bdaf6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035975"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144703"
 ---
-# <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>Visual Studio 2017 で Visual Basic と .NET Core を使用したクラス ライブラリの構築
+# <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017 で Visual Basic と .NET Core SDK を使用してクラス ライブラリを構築する
 
 "*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 .NET Standard 2.0 をターゲットとするクラス ライブラリでは、お使いのライブラリを、そのバージョンの .NET Standard をサポートする任意の .NET 実装によって呼び出すことができます。 クラス ライブラリを完了させたら、サードパーティ製のコンポーネントとして配布するかどうか、あるいは 1 つまたは複数のアプリケーションにバンドルされたコンポーネントとして含めるかどうかを決定できます。
 

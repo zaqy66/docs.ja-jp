@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6b7a00a0d7ea17ab48e673b735bdd1a77328c099
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: 1d4ae646dfc4c96db77bee69d0b7fe0876cce85d
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200166"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53129013"
 items:
 - durationInMinutes: 1
   content: >
@@ -199,7 +199,13 @@ items:
   durationInMinutes: 3
   content: "コードは次のようになりましたか? \n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。\n\n> [!NOTE]\n> このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。\n"
 - content: >-
-    リストについてのチュートリアルはこれで終了です。 このチュートリアルは最後の対話型チュートリアルです。 これまでのチュートリアルを、ご自身の開発環境でも引き続き使用できます。 [ローカル開発](local-environment.md)の基本を学習してから、チュートリアルを選択してください。 これと同じ演習を試すことも、次のチュートリアルに直接移動することも、再度「[C# の数値](numbers-in-csharp-local.md)」チュートリアルから始めることもできます。
+    これで、対話型チュートリアルは終了です。 これは、C# の対話型チュートリアルの最後の概要です。 [.NET サイト](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)にアクセスして、.NET Core SDK をダウンロードし、お使いのコンピューター上にプロジェクトを作成し、コーディングを続けることができます。 "学習の継続" 手順で、お使いのコンピューター上にプロジェクトを構築するチュートリアルに戻ってきます。
 
 
-    `List` 型の使用方法の詳細については、[.NET ガイド](../../../standard/index.md)の[コレクション](../../../standard/collections/index.md)に関するトピックで学習できます。 その他の多くのコレクション型についても学習できます。
+    [.NET コレクション](../../../standard/collections/index.md)の詳細については、次のトピックで学習できます。
+
+    - [コレクション型の選択](../../../standard/collections/selecting-a-collection-class.md)
+
+    - [一般的に使用されるコレクション型](../../../standard/collections/commonly-used-collection-types.md)
+
+    - [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)

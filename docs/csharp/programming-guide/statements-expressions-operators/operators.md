@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514186"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150974"
 ---
 # <a name="operators-c-programming-guide"></a>演算子 (C# プログラミング ガイド)
 C# では、 *演算子* は式またはステートメントの中で 1 つ以上の *オペランド* に適用されるプログラム要素です。 インクリメント演算子 (`++`) や `new`など、1 つのオペランドを受け取る演算子を *単項* 演算子と言います。 算術演算子 (`+`、`-`、`*`、`/`) など、2 つのオペランドを受け取る演算子を *二項* 演算子と言います。 条件演算子 (`?:`) は、3 つのオペランドを受け取る、C# でただ 1 つの三項演算子です。  
@@ -111,8 +111,8 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
 |カテゴリ|正規表現|説明|  
 |--------------|----------------|-----------------|  
 |論理 AND|x [&](../../../csharp/language-reference/operators/and-operator.md) y|整数のビットごとの AND、ブール型の論理 AND。|  
-|論理 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整数のビットごとの XOR、ブール型の論理 XOR。|  
-|論理 OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整数のビットごとの OR、ブール型の論理 OR。|  
+|論理 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整数のビットごとの XOR、ブール型の論理 XOR|  
+|論理 OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整数のビットごとの OR、ブール型の論理 OR|  
 |条件 AND|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|x が true の場合にのみ y を評価します。|  
 |条件 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|x が false の場合にのみ y を評価します。|  
 |Null 合体演算子|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) Y|x が null の場合は y と評価され、それ以外の場合は x と評価されます。|  
@@ -170,5 +170,5 @@ a = (b = c);
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [ステートメント、式、および演算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)

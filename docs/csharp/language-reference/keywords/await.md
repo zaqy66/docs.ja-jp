@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 7ca7554c81b7e8b54665700869c4f7788ebc3dbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: deae39781b000aa8e08fa3bda29519d280aadb79
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511946"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147386"
 ---
 # <a name="await-c-reference"></a>await (C# リファレンス)
 `await` 演算子は非同期メソッドのタスクに適用され、中断ポイントを挿入することで、メソッドの実行を、待機中のタスクが完了するまで中断します。 このタスクは、進行中の作業を表します。  
@@ -65,7 +65,7 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-アプリケーション エントリ ポイントでの `async` および `await` の使用はサポートされていないため、`async` 属性は `Main` メソッドに適用できません。また、`GetPageLengthsAsync` メソッド呼び出しを待つこともできません。 非同期操作が完了するのを `Main` メソッドが確実に待つようにするには、<xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> プロパティの値を取得します。 値を返さないタスクについては、<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出すことができます。 
+前の例では、[`async` `Main` メソッド](../../programming-guide/main-and-command-args/index.md)をサポートしている C# 7.1 を使用しています。 以前の C# バージョンでは、<xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> を返すアプリケーション エントリ ポイントがサポートされていないため、`async` 修飾子を `Main` メソッドに適用して、`GetPageLengthsAsync` メソッドの呼び出しを待機することはできません。 この場合、非同期操作が完了するのを `Main` メソッドが確実に待つようにするには、<xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> プロパティの値を取得します。 値を返さないタスクについては、<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出すことができます。 言語のバージョンを選択する方法については、「[C# 言語のバージョンの選択](../configure-language-version.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目  
 - [Async および Await を使用した非同期プログラミング](../../../csharp/programming-guide/concepts/async/index.md)   

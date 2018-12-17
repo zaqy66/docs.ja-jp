@@ -1,16 +1,16 @@
 ---
 title: Mage.exe (マニフェストの生成および編集ツール)
-ms.date: 03/30/2017
+ms.date: 12/06/2018
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 3eb1c665067d08a86fd4128381139c6829ebfd89
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 86aec7bbdc7b57b43e9b547aabd36f808d84d05e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46009778"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146197"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (マニフェストの生成および編集ツール)
 
@@ -24,7 +24,7 @@ Visual Studio には、2 つのバージョンの *Mage.exe* および *MageUI.e
 
 ## <a name="syntax"></a>構文
 
-```
+```console
 Mage [commands] [commandOptions]
 ```
 
@@ -38,6 +38,7 @@ Mage [commands] [commandOptions]
 |**-n, -New** *fileType [newOptions]*|指定された種類のファイルを新規作成します。 有効な種類は、次のとおりです。<br /><br /> -   `Deployment` : 配置マニフェストを新規作成します。<br />-   `Application` : アプリケーション マニフェストを新規作成します。<br /><br /> このコマンドで他のパラメーターを指定しなかった場合は、適切な既定のタグおよび属性値を使用して、適切な種類のファイルが作成されます。<br /><br /> **-ToFile** オプション (次の表を参照) を使用して、新しいファイルの名前とパスを指定します。<br /><br /> マニフェストの \<dependency> セクションに追加されたアプリケーション用のすべてのアセンブリを使用して、アプリケーション マニフェストを作成する場合は、**-FromDirectory** オプション (次の表を参照) を使用します。|
 |**-u, -Update** *[filePath] [updateOptions]*|1 つ以上の変更をマニフェスト ファイルに加えます。 編集中のファイルの種類を指定する必要はありません。 Mage.exe は、一連のヒューリスティックを使用してファイルを調査し、配置マニフェストであるのか、アプリケーション マニフェストであるのかを判定します。<br /><br /> ファイルが証明書で署名済みの場合に **-Update** を指定すると、キー署名ブロックが削除されます。 これは、キー署名にはファイルのハッシュが含まれているため、ファイルを変更するとハッシュが無効になるためです。<br /><br /> **-ToFile** オプション (次の表を参照) を使用して、既存のテキストに上書きするのではなく、新しいファイルの名前とパスを指定します。|
 |**-s, -Sign** `[signOptions]`|キー ペアまたは X509 証明書を使用してファイルに署名します。 署名は、XML 要素としてファイルに挿入されます。<br /><br /> **-TimestampUri** 値を指定するマニフェストに署名するときには、インターネットに接続している必要があります。|
+|**-ver, -Verify** *[manifest-filename]*|マニフェストが正しく署名されていることを確認します。 他のコマンドと組み合わせることはできません。 <br/><br/>**.NET Framework 4.7 以降のバージョンで使用できます。**|
 |**-h, -?, -Help** *[verbose]*|使用可能なすべてのコマンドおよびそのオプションの説明が表示されます。 `verbose` を指定して、詳細なヘルプを表示します。|
 
 ## <a name="new-and-update-command-options"></a>New コマンド オプションと Update コマンド オプション
@@ -49,12 +50,14 @@ Mage [commands] [commandOptions]
 |**-a, -Algorithm**|sha1RSA|アプリケーション マニフェスト<br /><br /> 配置マニフェスト|アルゴリズムの依存関係のダイジェストを生成するように指定します。 値は、"sha256RSA" または "sha1RSA" であることが必要です。<br /><br /> "-Update" オプションでのみ使用します。 "-Sign" オプションを使用した場合、このオプションは無視されます|
 |**-appc, -AppCodeBase** `manifestReference`||配置マニフェスト|アプリケーション マニフェスト ファイルへの URL またはファイル パス参照を挿入します。 この値は、アプリケーション マニフェストへの完全パスである必要があります。|
 |**-appm, -AppManifest** `manifestPath`||配置マニフェスト|配置のアプリケーション マニフェストへの参照を、その配置マニフェストに挿入します。<br /><br /> `manifestPath` に指定したファイルは存在する必要があります。存在しない場合、*Mage.exe* はエラーを発行します。 `manifestPath` の参照先のファイルがアプリケーション マニフェストでない場合、*Mage.exe* はエラーを発行します。|
-|**-cf, -CertFile** `filePath`||すべてのファイルの種類|マニフェストに署名するための X509 デジタル証明書の場所を指定します。 証明書にパスワードが必要な場合は、このオプションを **-Password** オプションと共に使用できます。<br/><br/>Visual Studio、Windows SDK、および .NET Framework 4.6.2 Developer Pack で配布される .NET Framework 4.6.2 SDK 以降では、*Mage.exe* は CNG と CAPI 証明書を使用してマニフェストに署名します。|
+|**-cf, -CertFile** `filePath`||すべてのファイルの種類|マニフェストまたはライセンス ファイルに署名するための X509 デジタル証明書の場所を指定します。 Personal Information Exchange (PFX) ファイル用のパスワードが証明書に必要な場合は、このオプションを **-Password** オプションと共に使用できます。 .NET Framework 4.7 以降、ファイルに秘密キーが含まれない場合は、オプション **-CryptoProvider** と **-KeyContainer** を組み合わせる必要があります。<br/><br/>.NET Framework 4.6.2 以降、*Mage.exe* では CAPI と同様に CNG 証明書を使ってマニフェストに署名します。|
 |**-ch, -CertHash** `hashSignature`||すべてのファイルの種類|クライアント コンピューターの個人証明書ストアに格納されているデジタル証明書のハッシュです。 これは、Windows の証明書コンソールに表示されるデジタル証明書のサムプリント文字列に対応しています。<br /><br /> `hashSignature` には、大文字も小文字も使用できます。また、1 つの文字列で指定することも、サムプリント文字の各オクテット (8 ビット) を空白で区切り、サムプリント全体を引用符で囲んで指定することもできます。|
+|**-csp, -CryptoProvider** `provider-name`||すべてのファイルの種類|秘密キー コンテナーを含む暗号化サービス プロバイダー (CSP) の名前を指定します。 このオプションには **-KeyContainer** オプションが必要です。<br/><br/>このオプションは、.NET Framework 4.7 以降で使用できます。|
 |**-fd, -FromDirectory** `directoryPath`||アプリケーション マニフェスト|`directoryPath`およびそのすべてのサブディレクトリで見つかったすべてのアセンブリとファイルの説明を含んでいるアプリケーション マニフェストを作成します。ここで、 `directoryPath` は、配置対象のアプリケーションが格納されているディレクトリです。 *Mage.exe* では、ディレクトリ内のファイルごとに、そのファイルがアセンブリなのかスタティック ファイルなのかが判断されます。 アセンブリの場合は、 `<dependency>` タグおよび `installFrom` 属性が、アセンブリ名、コード ベースおよびバージョンと共に、アプリケーションに追加されます。 スタティック ファイルの場合は、 `<file>` タグが追加されます。 また、*Mage.exe* は、簡単な一連のヒューリスティックによってアプリケーションのメイン実行可能ファイルを検出し、この実行可能ファイルを ClickOnce アプリケーションのエントリ ポイントとしてマニフェストでマークします。<br /><br /> *Mage.exe* では、ファイルが "データ" ファイルとして自動的にマークされることはありません。 これは手動で行う必要があります。 詳細については、「 [How to: Include a Data File in a ClickOnce Application](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)」を参照してください。<br /><br /> *Mage.exe* では、各ファイルのサイズに基づいて、各ファイルのハッシュも生成されます。 ClickOnce では、マニフェスト作成後に、配置の各ファイルが改ざんされていないことを確認するためにこれらのハッシュを使用します。 配置対象のファイルに変更を加えた場合には、*Mage.exe* を **-Update** コマンドおよび **-FromDirectory** オプションを付けて実行すると、参照している全ファイルのハッシュおよびアセンブリ バージョンを更新できます。<br /><br /> **-FromDirectory** を指定すると、 `directoryPath`で見つかった全サブディレクトリの全ファイルが含まれます。<br /><br /> **-FromDirectory** を **-Update** コマンドと共に使用すると、アプリケーション マニフェスト内のファイルのうち、このディレクトリに存在しなくなったファイルが *Mage.exe* によってマニフェストから削除されます。|
 |**-if, -IconFile**  `filePath`||アプリケーション マニフェスト|.ICO アイコン ファイルの完全パスを指定します。 このアイコンは、[スタート] メニューおよび [プログラムの追加と削除] エントリのアプリケーション名の横に表示されます。 アイコンを指定しない場合は、既定のアイコンが使用されます。|
 |**-ip, -IncludeProviderURL**  `url`|true|配置マニフェスト|**-ProviderURL**で設定された更新プログラムの場所の値が配置マニフェストに含まれているかどうかを示します。|
 |**-i, -Install** `willInstall`|true|配置マニフェスト|ClickOnce アプリケーションをローカル コンピューターにインストールするのか、Web サイトで実行するのかを指定します。 アプリケーションをインストールすると、アプリケーションは Windows の **[スタート]** メニューに表示されます。 有効な値は、"true" または "t"、および "false" または "f" です。<br /><br /> **-MinVersion** オプションを指定し、ユーザーが **-MinVersion** より前のバージョンをインストールしていた場合は、 **-Install**に渡した値に関係なく、アプリケーションがインストールされます。<br /><br /> このオプションは、 **-BrowserHosted** オプションと一緒に使用することはできません。 1 つのマニフェストに両方のオプションを使用しようとすると、エラーが発生します。|
+|**-kc, -KeyContainer** `name`||すべてのファイルの種類|秘密キーの名前を含むキー コンテナーを指定します。 このオプションには **CyproProvider** オプションが必要です。<br/><br/>このオプションは、.NET Framework 4.7 以降で使用できます。|
 |**-mv, -MinVersion**  `[version]`|**-Version** フラグで指定された、ClickOnce 配置マニフェストに示されたバージョン。|配置マニフェスト|ユーザーが実行できる、このアプリケーションの最小バージョンです。 このフラグで指定したバージョンが、アプリケーションの最低限必要なバージョンになります。 大幅に変更された更新プログラムを含むバージョンや、重大なセキュリティ問題を解決したバージョンの製品をリリースした場合に、このフラグを使用すると、この更新バージョンを必ずインストールするように指定でき、ユーザーは古いバージョンを実行できなくなります。<br /><br /> `version` は、 **-Version** フラグの引数と同じ意味を持ちます。|
 |**-n, -Name** `nameString`|配置|すべてのファイルの種類|アプリケーションを識別するための名前です。 ClickOnce では、**[スタート]** メニュー (アプリケーションをインストールする場合) やアクセス許可の昇格のダイアログ ボックスでこのアプリケーションを示す名前として、この名前が使用されます。 **メモ:** 既存のマニフェストを更新するときにこのオプションで発行者名を指定しない場合、*Mage.exe* はコンピューターで定義された組織名でマニフェストを更新します。 別の名前を使用するには、必ずこのオプションを使用して希望する発行者名を指定してください。|
 |**-pwd, -Password** `passwd`||すべてのファイルの種類|デジタル証明書でマニフェストに署名する場合に使用するパスワードです。 **-CertFile** オプションと共に使用する必要があります。|
@@ -75,8 +78,10 @@ Mage [commands] [commandOptions]
 
 |オプション|説明|
 |-------------|-----------------|
-|**-cf, -CertFile** `filePath`|マニフェストに署名するための証明書の場所を指定します。 このオプションは **-Password** オプションと共に使用できます。|
+|**-cf, -CertFile** `filePath`|マニフェストに署名するための証明書の場所を指定します。 Personal Information Exchange (PFX) ファイル用のパスワードが証明書に必要な場合は、このオプションを **-Password** オプションと共に使用できます。 .NET Framework 4.7 以降、ファイルに秘密キーが含まれない場合は、オプション **-CryptoProvider** と **-KeyContainer** を組み合わせる必要があります。<br/><br/>.NET Framework 4.6.2 以降、*Mage.exe* では CAPI と同様に CNG 証明書を使ってマニフェストに署名します。|
 |**-ch, -CertHash** `hashSignature`|クライアント コンピューターの個人証明書ストアに格納されているデジタル証明書のハッシュです。 これは、Windows の証明書コンソールに表示されるデジタル証明書の拇印プロパティに対応しています。<br /><br /> `hashSignature` には、大文字も小文字も使用できます。また、1 つの文字列で指定することも、サムプリント文字の各オクテット (8 ビット) を空白で区切り、サムプリント全体を引用符で囲んで指定することもできます。|
+**-csp, -CryptoProvider** `provider-name`|秘密キー コンテナーを含む暗号化サービス プロバイダー (CSP) の名前を指定します。 このオプションには **-KeyContainer** オプションが必要です。<br/><br/>このオプションは、.NET Framework 4.7 以降で使用できます。|
+|**-kc, -KeyContainer** `name`|秘密キーの名前を含むキー コンテナーを指定します。 このオプションには **CyproProvider** オプションが必要です。<br/><br/>このオプションは、.NET Framework 4.7 以降で使用できます。|
 |**-pwd, -Password** `passwd`|デジタル証明書でマニフェストに署名する場合に使用するパスワードです。 **-CertFile** オプションと共に使用する必要があります。|
 |**-t, -ToFile** `filePath`|作成または変更されたファイルの出力パスを指定します。|
 
@@ -86,7 +91,7 @@ Mage [commands] [commandOptions]
 
 **-Sign** コマンドと共に使用できる引数は、すべて、 **-New** コマンドまたは **-Update** コマンドでも、常に使用できます。 次のコマンドは同等です。
 
-```
+```console
 mage -Sign c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ```
@@ -146,58 +151,70 @@ Visual Studio 2017 には *Mage.exe* のバージョン 4.6.1 が含まれてい
 
 Mage 用のユーザー インターフェイス (*MageUI.exe*) を開く例を次に示します。
 
-```
+```console
 mage
 ```
 
 既定の配置マニフェストおよびアプリケーション マニフェストを作成する例を次に示します。 これらのファイルは、すべて現在の作業ディレクトリに作成され、それぞれ deploy.application と application.exe.manifest という名前が付けられます。
 
-```
+```console
 mage -New Deployment
 mage -New Application
 ```
 
-現在のディレクトリにあるすべてのアセンブリとすべてのリソース ファイルを含めたアプリケーション マニフェストを作成する例を次に示します。
+現在のディレクトリにあるすべてのアセンブリとリソース ファイルを含めたアプリケーション マニフェストを作成する例を次に示します。
 
-```
+```console
 mage -New Application -FromDirectory . -Version 1.0.0.0
 ```
 
 次の例は、前の例に続いて、配置名および対象のマイクロプロセッサを指定します。 ここでは、ClickOnce が更新プログラムを確認する対象の URL も指定します。
 
-```
+```console
 mage -New Application -FromDirectory . -Name "Hello, World! Application" -Version 1.0.0.0 -Processor "x86" -ProviderUrl http://internalserver/HelloWorld/
 ```
 
 Internet Explorer でホストされる WPF アプリケーションを配置するための一組のマニフェストを作成する方法を次の例に示します。
 
-```
+```console
 mage -New Application -FromDirectory . -Version 1.0.0.0 -WPFBrowserApp true
 mage -New Deployment -AppManifest 1.0.0.0\application.manifest -WPFBrowserApp true
 ```
 
+現在のディレクトリにあるすべてのアセンブリとリソース ファイル、およびを署名を含めたアプリケーション マニフェストを作成する例を次に示します。
+
+```console
+mage -New Application -FromDirectory . -Version 1.0.0.0 -KeyContainer keypair.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
+```
+
 アプリケーション マニフェストから取得した情報で配置マニフェストを更新し、アプリケーション マニフェストの場所のコード ベースを設定する例を次に示します。
 
-```
+```console
 mage -Update HelloWorld.deploy -AppManifest 1.0.0.0\application.manifest -AppCodeBase http://internalserver/HelloWorld.deploy
 ```
 
 ユーザーがインストールしているバージョンを強制的に更新するように、配置マニフェストを更新する例を次に示します。
 
-```
+```console
 mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -MinVersion 1.1.0.0
 ```
 
 他のディレクトリからアプリケーション マニフェストを取得するように、配置マニフェストに指定する例を次に示します。
 
-```
+```console
 mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.0.0/
 ```
 
 現在の作業ディレクトリにあるデジタル証明書を使用して、既存の配置マニフェストに署名する例を次に示します。
 
-```
+```console
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
+```
+
+現在の作業ディレクトリにあるデジタル証明書と秘密キーを使用して、既存の配置マニフェストに署名する例を次に示します。
+
+```console
+mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enghanced Cryptographic Provider v1.0"
 ```
 
 ## <a name="see-also"></a>関連項目

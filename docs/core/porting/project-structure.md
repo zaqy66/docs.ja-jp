@@ -1,19 +1,20 @@
 ---
-title: プロジェクトを整理し、.NET Framework と .NET Core をサポートする
+title: .NET Framework および .NET Core のプロジェクトを整理する
 description: プロジェクト所有者が横並びの .NET Framework と .NET Core に対してソリューションをコンパイルするときに役立ちます。
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: cfb3670bda887792389c7cee3f65397e649304d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512267"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146928"
 ---
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>プロジェクトを整理し、.NET Framework と .NET Core をサポートする
+# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>.NET Framework と .NET Core の両方をサポートするようにプロジェクトを整理する
 
-この記事は、プロジェクト所有者が横並びの .NET Framework と .NET Core に対してソリューションをコンパイルするときに役立ちます。 プロジェクトを整理するためのオプションを提供し、開発者を支援します。 次の一覧で、.NET Core でプロジェクト レイアウトを設定する方法について決定するときに考慮する典型的なシナリオを紹介します。 この一覧はプロジェクトのニーズに基づいて選択されており、すべてを網羅しるわけではりません。
+.NET Framework と .NET Core 両方のコンパイルに同時に対応するソリューションを作成する方法について説明します。 この目標を達成できるようにプロジェクトを整理するいくつかのオプションを参照してください。 ここでは、.NET Core でプロジェクト レイアウトを設定する方法について決定するときに考慮する典型的なシナリオを紹介します。 この一覧はプロジェクトのニーズに基づいて選択されており、すべてを網羅しるわけではりません。
 
 * [**既存のプロジェクトと .NET Core プロジェクトを結合し、シングル プロジェクトを作成する**][option-csproj]
 

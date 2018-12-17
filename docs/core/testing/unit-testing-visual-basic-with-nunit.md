@@ -5,19 +5,20 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: bed43ac6b6f918b1ee45715101f9142c1add777f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1cfca0939d4c4055aece69cae066c365cd2a1dc0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836925"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143568"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した Visual Basic .NET Core ライブラリでの単体テスト
 
 このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
-## <a name="prerequisites"></a>必須コンポーネント 
-- [.NET Core SDK 2.1 (v.2.1.400)](https://www.microsoft.com/net/download) 以降のバージョン。 
+## <a name="prerequisites"></a>必須コンポーネント
+
+- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 以降のバージョン。
 - ユーザーが選んだテキスト エディターまたはコード エディター。
 
 ## <a name="creating-the-source-project"></a>ソース プロジェクトの作成

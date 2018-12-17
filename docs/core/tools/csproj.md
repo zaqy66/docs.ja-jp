@@ -4,12 +4,12 @@ description: 既存の csproj ファイルと .NET Core の csproj ファイル�
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203957"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143702"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -75,9 +75,6 @@ ms.locfileid: "50203957"
     <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
-
-### <a name="recommendation"></a>推奨事項
-csproj では、プロジェクトから既定の glob を削除し、多様なシナリオ (ランタイムや NuGet パッケージなど) でアプリまたはライブラリが必要とする成果物の glob のファイル パスのみを追加することをお勧めします。
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>MSBuild と同じようにプロジェクト全体を表示する方法
 
@@ -195,8 +192,12 @@ MSbuild への移行に伴い、*project.json* ファイルから *csproj* フ�
 ### <a name="authors"></a>Authors
 nuget.org のプロファイル名と一致するパッケージ作成者をセミコロンで区切った一覧。これらは nuget.org の NuGet ギャラリーに表示され、同じ作成者によるパッケージの相互参照に使用されます。
 
-### <a name="description"></a>説明
+### <a name="packagedescription"></a>PackageDescription
+
 UI 画面用のパッケージの長い説明。
+
+### <a name="description"></a>説明
+アセンブリの長い説明。 `PackageDescription` が指定されていない場合、このプロパティはパッケージの説明としても使用されます。
 
 ### <a name="copyright"></a>Copyright
 パッケージの著作権の詳細。

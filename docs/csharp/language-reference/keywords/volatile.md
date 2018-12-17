@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd81c0c36cb88b971539e843e3e1f2096a73d40e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199969"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152782"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# リファレンス)
 
-`volatile` キーワードは、同時に実行されている複数のスレッドによって、フィールドが変更される可能性があることを示します。 コンパイラ、ランタイム システム、さらにはハードウェアで、パフォーマンスを上げる目的でメモリの読み書き場所を再配置するかもしれません。 `volatile` が宣言されているフィールドはこのような最適化の対象になりません。 `volatile` 修飾子を追加することで、すべてのスレッドによって、他のスレッドにより実行される volatile 書き込みがその実行順序どおりに観察されます。 全ての実行スレッドから見たvolatile 書き込みの全体的順序が単一である保証はありません。
+`volatile` キーワードは、同時に実行されている複数のスレッドによって、フィールドが変更される可能性があることを示します。 コンパイラ、ランタイム システム、さらにはハードウェアで、パフォーマンスを上げる目的でメモリの場所との読み書きを再整理できます。 `volatile` が宣言されているフィールドはこのような最適化の対象になりません。 `volatile` 修飾子を追加することで、すべてのスレッドによって、他のスレッドにより実行される volatile 書き込みがその実行順序どおりに観察されます。 volatile 書き込みの単一の全体的順序がすべての実行スレッドから認識される保証はありません。
   
 `volatile` キーワードは次の型のフィールドに使用できます。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "50199969"
 
 `double` や `long` など、その他の型には `volatile` を指定できません。そのような型のフィールドに対する読み書きはアトミックになるとは限らないためです。 そのような型のフィールドへのマルチスレッド アクセスを保護するために、<xref:System.Threading.Interlocked> クラス メンバーを使用するか、[`lock`](lock-statement.md) ステートメントでアクセスを保護します。
 
-volatile キーワードは `class` または `struct` のフィールドにのみ適用できます。 ローカル変数を `volatile` として宣言することはできません。
+`volatile` キーワードは `class` または `struct` のフィールドにのみ適用できます。 ローカル変数を `volatile` として宣言することはできません。
   
 ## <a name="example"></a>例
 
@@ -37,7 +37,7 @@ volatile キーワードは `class` または `struct` のフィールドにの�
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
 
-次の例は、補助スレッドつまりワーカー スレッドを作成および使用して、プライマリ スレッドとの並行処理を実行する方法を示しています。 マルチスレッドの背景情報については、「[マネージド スレッド処理](../../../standard/threading/index.md)」および「[スレッド処理 (C#)](../../programming-guide/concepts/threading/index.md)」をご覧ください。  
+次の例は、補助スレッドつまりワーカー スレッドを作成および使用して、プライマリ スレッドとの並行処理を実行する方法を示しています。 マルチスレッドについて詳しくは、「[マネージド スレッド処理](../../../standard/threading/index.md)」をご覧ください。
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
 

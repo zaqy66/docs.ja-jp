@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50195971"
 ---
 # <a name="ref-c-reference"></a>ref (C# リファレンス)
@@ -92,7 +92,7 @@ return ref DecimalArray[0];
 
 呼び出されたメソッドによって、戻り値が `ref readonly` として宣言されて参照渡しで値が返されることもあり、返された値が呼び出し元のコードで変更できないように強制されることもあります。 呼び出し元のメソッドでは、ローカルの [ref readonly](#ref-readonly-locals) 変数に値を格納することで、返された値のコピーを回避できます。
 
-例については、「[ref 戻り値と ref ローカル変数](#a-ref-returns-and-ref-locals-example)」を参照してください。
+例については、「[ref 戻り値と ref ローカル変数の使用例](#a-ref-returns-and-ref-locals-example)」を参照してください。
 
 ## <a name="ref-locals"></a>ref ローカル変数
 
@@ -113,6 +113,8 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
 どちらの例も、`ref` キーワードは両方の位置で使用する必要があります。そうしないと、コンパイラ エラー CS8172 "値を使用して参照渡し変数を初期化することはできません" が生成されます。
+
+C#7.3 以降、`foreach` ステートメントの反復変数を ref ローカルまたは ref readonly ローカル変数にすることができます。 詳細については、[foreach ステートメント](foreach-in.md)に関する記事を参照してください。
 
 ## <a name="ref-readonly-locals"></a>ref readonly ローカル
 
@@ -152,6 +154,9 @@ ref readonly ローカルは、その署名に `ref readonly` があり、`retur
 ## <a name="see-also"></a>関連項目
 
 - [安全で効率的なコードを記述する](../../write-safe-efficient-code.md)  
+- [ref 戻り値と ref ローカル変数](../../programming-guide/classes-and-structs/ref-returns.md)
+- [ref 条件式](../operators/conditional-operator.md#conditional-ref-expression)
+- [ref 代入演算子](../operators/assignment-operator.md#ref-assignment-operator)
 - [パラメーターの引き渡し](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [メソッド パラメーター](method-parameters.md)  
 - [C# リファレンス](../index.md)  

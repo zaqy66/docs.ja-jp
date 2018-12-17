@@ -1,19 +1,20 @@
 ---
-title: 自己完結型展開ランタイムのロール フォワード
+title: .NET Core での自己完結型アプリのデプロイにおけるランタイムのロール フォワード
 description: 自己完結型展開における dotnet publish の変更について説明します。
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.custom: seodec18
+ms.openlocfilehash: dde00cf71f0d67c8c4380748e01a4ef5c17ebb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071033"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126680"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>自己完結型展開ランタイムのロール フォワード
 
-.NET Core [自己完結型のアプリケーション展開](index.md)には、.NET Core ライブラリと .NET Core ランタイムの両方が含まれます。 .NET Core SDK 2.1.300 (.NET Core 2.1) 以降、自己完結型のアプリケーション展開[では、マシン上にある最大の修正プログラムのランタイムを発行するようになりました](https://github.com/dotnet/designs/pull/36)。 既定では、自己完結型展開のための [`dotnet publish`](../tools/dotnet-publish.md) では、発行マシン上に SDK の一部としてインストールされている最新バージョンが選択されます。 これにより、展開したアプリケーションを `publish` 時に利用可能なセキュリティ修正プログラム (およびその他の修正) と共に実行できます。 新しい修正プログラムを取得するには、アプリケーションを再発行する必要があります。 `dotnet publish` コマンドで `-r <RID>` を指定するか、プロジェクト ファイル (csproj / vbproj) またはコマンド ライン上で [ランタイムの識別子 (RID)](../rid-catalog.md) を指定すると、自己完結型のアプリケーションが作成されます。
+.NET Core [自己完結型のアプリケーション展開](index.md)には、.NET Core ライブラリと .NET Core ランタイムの両方が含まれます。 .NET Core 2.1 SDK (バージョン 2.1.300) 以降、自己完結型のアプリケーションのデプロイ[では、お使いのコンピューター上にある最新の修正プログラムのランタイムを発行するようになりました](https://github.com/dotnet/designs/pull/36)。 既定では、自己完結型展開のための [`dotnet publish`](../tools/dotnet-publish.md) では、発行マシン上に SDK の一部としてインストールされている最新バージョンが選択されます。 これにより、展開したアプリケーションを `publish` 時に利用可能なセキュリティ修正プログラム (およびその他の修正) と共に実行できます。 新しい修正プログラムを取得するには、アプリケーションを再発行する必要があります。 `dotnet publish` コマンドで `-r <RID>` を指定するか、プロジェクト ファイル (csproj / vbproj) 内またはコマンド ライン上で [ランタイム識別子 (RID)](../rid-catalog.md) を指定すると、自己完結型のアプリケーションが作成されます。
 
 ## <a name="patch-version-roll-forward-overview"></a>修正プログラムのバージョンのロール フォワードの概要
 
@@ -29,7 +30,7 @@ ms.locfileid: "37071033"
 `publish` 操作の一部として `restore` を実行することは、お客様のシナリオにとって望ましくない場合があります。 自己完結型のアプリケーションを作成しているときの `publish` 時に `restore` を回避するには、次の操作を行います。
 
 * `RuntimeIdentifiers` プロパティに、発行されるすべての [RID](../rid-catalog.md) をセミコロンで区切って設定します。
-* `TargetLatestRuntimePatch` プロパティを `true` に設定します。
+* `TargetLatestRuntimePatch` プロパティを `true`に設定します。
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>dotnet publish オプションでの no-restore 引数
 

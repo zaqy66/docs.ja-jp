@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5169a0d0c28be4337bb57f8bcc70e78b40e4fa9e
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 213c27a4ddfa6134c4aaa8a76c71309a6496998d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270475"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151137"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (厳密名ツール)
 厳密名ツール (Sn.exe) は、[厳密な名前](../../../docs/framework/app-domains/strong-named-assemblies.md)を使用してアセンブリに署名する場合に役立ちます。 Sn.exe には、キーの管理、署名の生成、署名の検査に関する各オプションが用意されています。  
@@ -28,9 +28,9 @@ ms.locfileid: "36270475"
  厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[Strong-Named Assemblies](../../../docs/framework/app-domains/strong-named-assemblies.md)」(厳密な名前付きアセンブリ) と「[How to: Sign an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)」(方法: 厳密な名前でアセンブリに署名する) を参照してください。  
   
  厳密名ツールは Visual Studio と共に自動的にインストールされます。 このツールを開始するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
-  
+
 > [!NOTE]
->  64 ビット コンピューターでは、Visual Studio コマンド プロンプトを使用して 32 ビット バージョンの Sn.exe を、Visual Studio x64 Win64 コマンド プロンプトを使用して 64 ビット バージョンを実行してください。  
+>  64 ビット コンピューターでは、Visual Studio コマンド プロンプトを使用して 32 ビット バージョンの Sn.exe を、Visual Studio x64 Win64 コマンド プロンプトを使用して 64 ビット バージョンを実行してください。 
   
  コマンド プロンプトに次のように入力します。  
   
@@ -85,6 +85,8 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 >  レジストリなどの保護されたリソースに書き込むパラメーター (例: -**Vr)** の場合は、管理者として SN.exe を実行してください。  
   
+厳密な名前ツールでは、公開キーと秘密キーの組が `AT_SIGNATURE` アルゴリズム識別子を使用して生成されると想定されます。 `AT_KEYEXCHANGE` アルゴリズムを使用して生成された公開キー/秘密キーのペアでは、エラーが生成されます。 
+
 ## <a name="examples"></a>使用例  
  新しいランダム キー ペアを作成し、`keyPair.snk` に格納するコマンドを次に示します。  
   

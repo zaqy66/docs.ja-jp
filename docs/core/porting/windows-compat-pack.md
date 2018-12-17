@@ -1,19 +1,20 @@
 ---
-title: .NET Core に移植する - Windows 互換機能パックの使用
+title: Windows 互換機能パックを使用してコードを .NET Core に移植する
 description: Windows 互換機能パックとそれを使用して既存の .NET Framework コードを .NET Core に移植する方法について紹介します。
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.openlocfilehash: 51b96d7828285964c1b0cbb835b8eb5ed92c47d6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.custom: seodec18
+ms.openlocfilehash: 42c2c2a0b9b00436fa5c17d3825c720561b3f122
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566174"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144612"
 ---
-# <a name="using-the-windows-compatibility-pack"></a>Windows 互換機能パックの使用
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Windows 互換機能パックを使用してコードを .NET Core に移植する
 
-既存のコードを .NET Core に移植するとき、開発者が直面する最も一般的な問題の 1 つが、.NET Framework にのみ存在する API とテクノロジに対する依存性です。 *Windows 互換機能パック*はそのようなテクノロジを各種提供します。既存コードの実行可能性を上げるような方法で .NET Core アプリケーションと .NET Standard ライブラリをビルドできます。
+既存のコードを .NET Core に移植する際に発生する最も一般的な問題の一部として、.NET Framework のみに存在する API およびテクノロジへの依存があります。 *Windows 互換機能パック*には、このようなテクノロジの多くが用意されているので、.NET Core アプリケーションと .NET Standard ライブラリをはるかに簡単に構築できます。
 
 このパッケージは論理 [.NET Standard 2.0 の拡張](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)であり、API セットを大幅に増やします。ほとんど変更なしで既存コードがコンパイルされます。 ただし、.NET Standard の約束 ("これはあらゆる .NET 実装の API を集めたものである") を守る目的で、レジストリ、Windows Management Instrumentation (WMI)、リフレクション出力 API など、すべてのプラットフォームで動作しないテクノロジは含まれていません。
 

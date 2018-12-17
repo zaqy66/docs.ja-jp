@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316260"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145333"
 ---
 # <a name="the-history-of-c"></a>C# の歴史 #
 
@@ -33,7 +33,7 @@ C# 1.0 の主な機能:
 - [式](../programming-guide/statements-expressions-operators/expressions.md)
 - [ステートメント](../programming-guide/statements-expressions-operators/statements.md)
 - [属性](../programming-guide/concepts/attributes/index.md)
-- リテラル
+- [リテラル](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# バージョン 1.2
 
@@ -72,9 +72,9 @@ C# バージョン 3.0 は、Visual Studio 2008 と共に 2007 年後半に登�
 - [自動実装プロパティ](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名型](../programming-guide/classes-and-structs/anonymous-types.md)
 - [クエリ式](../linq/query-expression-basics.md)
-- [ラムダ式](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
-- [式ツリー](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
-- [拡張メソッド](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
+- [ラムダ式](../lambda-expressions.md)
+- [式ツリー](../expression-trees.md)
+- [拡張メソッド](../programming-guide/classes-and-structs/extension-methods.md)
 - [暗黙的に型指定されるローカル変数](../language-reference/keywords/var.md)
 - [部分メソッド](../language-reference/keywords/partial-method.md)
 - [オブジェクト初期化子とコレクション初期化子](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
@@ -96,7 +96,7 @@ C# バージョン 4.0 は、バージョン 3.0 の革新的なステータス�
 - [動的バインディング](../language-reference/keywords/dynamic.md)
 - [名前付き/省略可能な引数](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [ジェネリックの共変と反変](../../standard/generics/covariance-and-contravariance.md)
-- [埋め込まれた相互運用機能型](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
+- [埋め込まれた相互運用機能型](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 埋め込まれた相互運用機能型は、展開の問題を緩和しました。 ジェネリックの共変性と反変性は、ジェネリックを使用する権限を強化しますが、少々アカデミックで、最も高く評価されているのは、おそらくフレームワークとライブラリの作成者からでしょう。 名前付きパラメーターと省略可能なパラメーターは、多くのメソッドのオーバーロードを排除して、利便性を高めることができます。 しかし、これらの機能はいずれもパラダイムを変えるほどのものではありませんでした。
 
@@ -123,13 +123,13 @@ C# バージョン 5.0 は、この言語の専心的なバージョンでした
 
 C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト指向言語に追加されました。 バージョン 6.0 では、主要な目玉機能を投入する代わりに、C# プログラミングをより生産的にする多くの小さな機能をリリースしました。 その一部を次に示します。
 
-- [静的インポート](../language-reference/keywords/using-static.md)
-- [例外フィルター](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
-- [プロパティの初期化子](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
-- [式形式のメンバー](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
-- [Null 伝達子](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
-- [文字列補間](../language-reference/tokens/interpolated.md)
-- [nameof 演算子](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
+- [静的インポート](./csharp-6.md#using-static)
+- [例外フィルター](./csharp-6.md#exception-filters)
+- [自動プロパティ初期化子](./csharp-6.md#auto-property-initializers)
+- [式形式のメンバー](./csharp-6.md#expression-bodied-function-members)
+- [Null 伝達子](./csharp-6.md#null-conditional-operators)
+- [文字列補間](./csharp-6.md#string-interpolation)
+- [nameof 演算子](./csharp-6.md#the-nameof-expression)
 - [インデックス初期化子](csharp-6.md#index-initializers)
 
 その他に次の新機能があります。
@@ -145,20 +145,19 @@ C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト�
 
 最新のメジャー バージョンが C# バージョン 7.0 です。 このバージョンには、C# 6.0 から続くいくつかの革新的で優れた機能がありますが、サービスとしてのコンパイラはありません。 新機能の一部を次に示します。
 
-- [out 変数](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
-- [タプルと分解](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
+- [out 変数](./csharp-7.md#out-variables)
+- [タプルと分解](./csharp-7.md#tuples)
 - [パターン マッチング](./csharp-7.md#pattern-matching)
-- [ローカル関数](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [ローカル関数](./csharp-7.md#local-functions)
 - [拡張された式形式のメンバー](./csharp-7.md#more-expression-bodied-members)
 - [ref ローカル変数と戻り値](./csharp-7.md#ref-locals-and-returns)
 
 その他の機能:
 
-- [破棄](../discards.md)
-- [バイナリ リテラル](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
-- [桁区切り文字](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
-- ref 戻り値と ref ローカル変数
-- [throw 式](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+- [破棄](./csharp-7.md#discards)
+- [バイナリ リテラルと桁区切り文字](./csharp-7.md#numeric-literal-syntax-improvements)
+- [ref 戻り値と ref ローカル変数](./csharp-7.md#ref-locals-and-returns)
+- [throw 式](./csharp-7.md#throw-expressions)
 
 これらすべての機能が素晴らしい新機能を開発者に提供し、これまでよりもさらにクリーンなコードを記述する機会を提供します。 ハイライトは、`out` キーワードで使用するために変数の宣言を凝縮することと、タプルを通じて複数の戻り値を許可することです。
 

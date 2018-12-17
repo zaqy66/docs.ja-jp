@@ -2,12 +2,12 @@
 title: C# 7.2 の新機能
 description: C# 7.2 の新機能の概要。
 ms.date: 08/16/2017
-ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181174"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148176"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 の新機能
 
@@ -28,6 +28,8 @@ C# 7.2 では[言語バージョンの選択](../language-reference/configure-la
   - 数値リテラルの印刷桁の前に先頭のアンダースコア(_) を含めることができるようになりました。
 * [`private protected` アクセス修飾子](#private-protected-access-modifier)
   - `private protected` アクセス修飾子によって、同じアセンブリ内の派生クラスのアクセスが有効になります。
+* [条件付きの `ref` 式](#conditional-ref-expressions)
+  - 条件式 (`?:`) の結果を参照にすることができるようになりました。
 
 ## <a name="safe-efficient-code-enhancements"></a>安全で効率的なコードの機能拡張
 
@@ -48,7 +50,7 @@ C# 7.2 では[言語バージョンの選択](../language-reference/configure-la
 
 C# 7.0 の桁区切り記号のサポートの実装では、`_` をリテラル値の最初の文字にすることができませんでした。 16 進とバイナリの数値リテラルの先頭に `_` を使用できるようになりました。 
 
-例:
+次に例を示します。
 
 ```csharp
 int binaryValue = 0b_0101_0101;
@@ -56,6 +58,18 @@ int binaryValue = 0b_0101_0101;
 
 ## <a name="private-protected-access-modifier"></a>_private protected_ アクセス修飾子
 
-最後に、新しい複合アクセス修飾子: `private protected` は、同じアセンブリで宣言されているクラスまたは派生クラスを含むことでメンバーにアクセスできることを示しています。 `protected internal` は同じアセンブリの派生クラスまたはクラスによるアクセスを許可していますが、`private protected` は同じアセンブリで宣言された派生型へのアクセスを制限しています。
+新しい複合アクセス修飾子: `private protected` は、同じアセンブリで宣言されているクラスまたは派生クラスを含むことでメンバーにアクセスできることを示しています。 `protected internal` は同じアセンブリの派生クラスまたはクラスによるアクセスを許可していますが、`private protected` は同じアセンブリで宣言された派生型へのアクセスを制限しています。
 
 詳細については、言語リファレンスの[アクセス修飾子](../language-reference/keywords/access-modifiers.md)に関するページを参照してください。
+
+## <a name="conditional-ref-expressions"></a>条件付きの `ref` 式
+
+最後に、条件式で値の結果ではなく参照結果を生成することができます。 たとえば、次のように記述して、2 つの配列のいずれかに含まれる最初の要素の参照を取得できます
+
+```csharp
+ref var r = ref (arr != null ? ref arr[0] : ref otherArr[0]);
+```
+
+変数 `r` は、`arr` または `otherArr` の最初の値の参照です。
+
+詳細については、言語リファレンスの[条件演算子 (?:)](../language-reference/operators/conditional-operator.md) に関するページを参照してください。

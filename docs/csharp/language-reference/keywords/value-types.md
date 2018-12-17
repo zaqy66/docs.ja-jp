@@ -1,6 +1,6 @@
 ---
 title: 値型 (C# リファレンス)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - cs.valuetypes
 helpviewer_keywords:
@@ -8,51 +8,55 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: baf0db751cd70d50d4cf440626dd405b01c8d7ad
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526464"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147724"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
-値型は、次の 2 つの主要なカテゴリで構成されます。  
+
+2 種類の値型があります。
+
+- [構造体](struct.md)
+
+- [列挙型](enum.md)
+
+## <a name="main-features-of-value-types"></a>値型の主な機能
+
+値型の変数には、その型の値が含まれています。 たとえば、`int` 型の変数には値 `42` が含まれている可能性があります。 これは、オブジェクトとも呼ばれる型のインスタンスへの参照を含む参照型の変数とは異なります。 値型の変数に新しい値を割り当てると、その値はコピーされます。 参照型の変数に新しい値を割り当てると、オブジェクト自体ではなく参照がコピーされます。
+
+すべての値型が <xref:System.ValueType?displayProperty=nameWithType> から暗黙的に派生されます。  
   
--   [構造体](../../../csharp/language-reference/keywords/struct.md)  
+参照型とは異なり、値型から新しい型を派生することはできません。 ただし、参照型の場合と同様に、構造体はインターフェイスを実装できます。  
   
--   [列挙型](../../../csharp/language-reference/keywords/enum.md)  
+値型の変数は既定で `null` にすることはできません。 ただし、対応する [null 許容型](../../../csharp/programming-guide/nullable-types/index.md)の変数を `null` にすることはできます。
   
- 構造体は、次のカテゴリに分類されます。  
+各値型には、その型の既定値を初期化する暗黙の既定のコンストラクターがあります。 値型の既定値の詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。  
   
--   数値型  
+## <a name="simple-types"></a>単純型
+
+*単純型*は、C# に用意されている定義済みの構造体型のセットであり、次の型を構成します。
+
+- [整数型](integral-types-table.md): 整数の数値型と [char](char.md) 型
+- [浮動小数点型](floating-point-types-table.md)
+- [bool](bool.md)
+
+単純型はキーワードで識別されますが、これらのキーワードは、<xref:System> 名前空間に事前に定義されている構造体型の単なるエイリアスです。 たとえば、[int](int.md) は <xref:System.Int32?displayProperty=nameWithType> のエイリアスです。 エイリアスの完全な一覧については、「[組み込み型の一覧表](built-in-types-table.md)」を参照してください。
+
+単純型は、ある追加の操作を許可している点で、他の構造体型とは異なります。
+
+- 単純型はリテラルを使用して初期化できます。 たとえば、`'A'` は `char` 型のリテラルで、`2001` は `int` 型のリテラルです。
+
+- 単純型の定数は、[const](const.md) キーワードを使用して宣言できます。 他の構造体型の定数を持つことはできません。
+
+- オペランドがすべて単純型の定数式は、コンパイル時に評価されます。
+
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の[単純型](~/_csharplang/spec/types.md#simple-types)に関するセクションを参照してください。
   
-    -   [整数型](../../../csharp/language-reference/keywords/integral-types-table.md)  
-  
-    -   [浮動小数点型](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-  
--   [bool](../../../csharp/language-reference/keywords/bool.md)  
-  
--   ユーザー定義の構造体  
-  
-## <a name="main-features-of-value-types"></a>値型の主な機能  
- 値型に基づく変数には、値が直接含まれます。 ある値型の変数を別の変数に代入することで、含まれている値がコピーされます。 これは、オブジェクトそのものではなく、参照をオブジェクトにコピーする、参照型の変数の代入とは異なります。  
-  
- すべての値型が <xref:System.ValueType?displayProperty=nameWithType> から暗黙的に派生されます。  
-  
- 参照型とは異なり、値型から新しい型を派生することはできません。 ただし、参照型の場合と同様に、構造体はインターフェイスを実装できます。  
-  
- 参照型とは異なり、値型に `null` 値を含めることはできません。 ただし、[null 許容型](../../../csharp/programming-guide/nullable-types/index.md)機能では、値型の `null` への代入が許可されます。  
-  
- 各値型には、その型の既定値を初期化する暗黙の既定のコンストラクターがあります。 値型の既定値の詳細については、「[既定値の一覧表](../../../csharp/language-reference/keywords/default-values-table.md)」を参照してください。  
-  
-## <a name="main-features-of-simple-types"></a>単純型の主な機能  
- C# 言語に不可欠なすべての単純型は、.NET Framework システム型のエイリアスです。 たとえば、[int](../../../csharp/language-reference/keywords/int.md) は <xref:System.Int32?displayProperty=nameWithType> のエイリアスです。 エイリアスの完全な一覧については、「[組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)」を参照してください。  
-  
- オペランドがすべて単純型の定数式は、コンパイル時に評価されます。  
-  
- 単純型はリテラルを使用して初期化できます。 たとえば、'A' は `char` 型のリテラルで、2001 は `int` 型のリテラルです。  
-  
-## <a name="initializing-value-types"></a>値型の初期化  
+## <a name="initializing-value-types"></a>値型の初期化
+
  C# では、ローカル変数を使用する前に初期化する必要があります。 たとえば、次の例のように、初期化せずにローカル変数を宣言した場合、  
   
 ```csharp  
@@ -83,9 +87,9 @@ int myInt = new int();
 int myInt = 0;  
 ```  
   
- [new](../../../csharp/language-reference/keywords/new.md) 演算子を使用すると、特定の型の既定のコンストラクターを呼び出し、既定値を変数に代入します。 前の例では、既定のコンス トラクターが値 `0` を `myInt` に代入しました。 既定のコンストラクターの呼び出しにより値を代入する詳細については、「[既定値の一覧表](../../../csharp/language-reference/keywords/default-values-table.md)」を参照してください。  
+ [new](new.md) 演算子を使用すると、特定の型の既定のコンストラクターを呼び出し、既定値を変数に代入します。 前の例では、既定のコンス トラクターが値 `0` を `myInt` に代入しました。 既定のコンストラクターの呼び出しにより値を代入する詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。  
   
- ユーザー定義型では、[new](../../../csharp/language-reference/keywords/new.md) を使用して既定のコンストラクターを呼び出します。 たとえば、次のステートメントは、`Point` 構造体の既定のコンストラクターを呼び出します。  
+ ユーザー定義型では、[new](new.md) を使用して既定のコンストラクターを呼び出します。 たとえば、次のステートメントは、`Point` 構造体の既定のコンストラクターを呼び出します。  
   
 ```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
@@ -93,16 +97,16 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  この呼び出しの後、構造体は明示的に代入されると見なされます。つまり、すべてのメンバーがその既定値に初期化されます。  
   
- new 演算子の詳細については、「[new](../../../csharp/language-reference/keywords/new.md)」を参照してください。  
+ `new` 演算子の詳細については、「[new](new.md)」を参照してください。  
   
- 数値型の出力の書式設定については、「[数値結果テーブルの書式設定](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)」を参照してください。  
+ 数値型の出力の書式設定については、「[数値結果テーブルの書式設定](formatting-numeric-results-table.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [型](../../../csharp/language-reference/keywords/types.md)  
-- [型のリファレンス表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [参照型](../../../csharp/language-reference/keywords/reference-types.md)  
+- [C# リファレンス](../index.md)  
+- [C# プログラミング ガイド](../../programming-guide/index.md)  
+- [C# のキーワード](index.md)  
+- [型](types.md)  
+- [型のリファレンス表](reference-tables-for-types.md)  
+- [参照型](reference-types.md)  
 - [Null 許容型](../../programming-guide/nullable-types/index.md)  

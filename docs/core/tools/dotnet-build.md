@@ -1,15 +1,13 @@
 ---
 title: dotnet build コマンド - .NET Core CLI
 description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: c9d1478e3d3e298b01e707242cc7ad5cd924a9b3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 5d47fdfca14d20b3f2a134a8e734f76b1c86c498
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200555"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149160"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -47,10 +45,6 @@ dotnet build [-h|--help]
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-`dotnet build` では MSBuild を使用してプロジェクトをビルドするため、並列ビルドとインクリメンタル ビルドの両方がサポートされます。 詳しくは、「[インクリメンタル ビルド](/visualstudio/msbuild/incremental-builds)」を参照してください。
-
-このオプションに加え、`dotnet build` コマンドは、プロパティを設定する `-p` やロガーを定義する `-l` などの MSBuild オプションも受け入れます。 これらのオプションの詳細については、「[MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)」を参照してください。
-
 プロジェクトを実行できるかどうかは、プロジェクト ファイルの `<OutputType>` プロパティで決まります。 次の例は、実行可能なコードを生成するプロジェクトを示しています。
 
 ```xml
@@ -60,6 +54,14 @@ dotnet build [-h|--help]
 ```
 
 ライブラリを生成するには、`<OutputType>` プロパティを省略してください。 ビルドされる出力の主な違いは、ライブラリの IL DLL にはエントリ ポイントが含まれず、実行できないことです。
+
+### <a name="msbuild"></a>MSBuild
+
+`dotnet build` では MSBuild を使用してプロジェクトをビルドするため、並列ビルドとインクリメンタル ビルドの両方がサポートされます。 詳しくは、「[インクリメンタル ビルド](/visualstudio/msbuild/incremental-builds)」を参照してください。
+
+このオプションに加え、`dotnet build` コマンドは、プロパティを設定する `-p` やロガーを定義する `-l` などの MSBuild オプションも受け入れます。 これらのオプションの詳細については、「[MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)」を参照してください。 また、[dotnet msbuild](dotnet-msbuild.md) コマンドを使用することもできます。
+
+`dotnet build` の実行は `dotnet msbuild -restore -target:Build` と同じです。
 
 ## <a name="arguments"></a>引数
 
@@ -71,104 +73,118 @@ dotnet build [-h|--help]
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-ビルド構成を定義します。 既定値は `Debug` です。
+  ビルド構成を定義します。 既定値は `Debug` です。
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-特定の[フレームワーク](../../standard/frameworks.md)用にコンパイルします。 フレームワークは、[プロジェクト ファイル](csproj.md)で定義する必要があります。
+  特定の[フレームワーク](../../standard/frameworks.md)用にコンパイルします。 フレームワークは、[プロジェクト ファイル](csproj.md)で定義する必要があります。
 
-`--force`
+* **`--force`**
 
-最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。
+  最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。
 
-`-h|--help`
+* **`-h|--help`**
 
-コマンドの短いヘルプを印刷します。
+  コマンドの短いヘルプを印刷します。
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-プロジェクト間 (P2P) 参照を無視し、指定されたルート プロジェクトのみをビルドします。
+  プロジェクト間 (P2P) 参照を無視し、指定されたルート プロジェクトのみをビルドします。
 
-`--no-incremental`
+* **`--no-incremental`**
 
-インクリメンタル ビルドとして安全でないビルドをマークします。 このフラグにより、インクリメンタル コンパイルは無効になり、プロジェクトの依存関係グラフのクリーン再ビルドが強制的に行われます。
+  インクリメンタル ビルドとして安全でないビルドをマークします。 このフラグにより、インクリメンタル コンパイルは無効になり、プロジェクトの依存関係グラフのクリーン再ビルドが強制的に行われます。
 
-`--no-restore`
+* **`--no-restore`**
 
-ビルド時に暗黙的な復元は実行されません。
+  ビルド時に暗黙的な復元は実行されません。
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-ビルド済みバイナリを配置するディレクトリ。 このオプションを指定する場合は、`--framework` を定義する必要もあります。
+  ビルド済みバイナリを配置するディレクトリ。 このオプションを指定する場合は、`--framework` を定義する必要もあります。 指定しない場合、既定のパスは `./bin/<configuration>/<framework>/` になります。
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-ターゲットのランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。
+  ターゲットのランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+  コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-プロジェクト ファイルのバージョン フィールドでアスタリスク (`*`) のバージョン サフィックスを定義します。 形式は NuGet のバージョン ガイドラインに従います。
+  プロジェクト ファイルのバージョン フィールドでアスタリスク (`*`) のバージョン サフィックスを定義します。 形式は NuGet のバージョン ガイドラインに従います。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-ビルド構成を定義します。 既定値は `Debug` です。
+  ビルド構成を定義します。 既定値は `Debug` です。
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-特定の[フレームワーク](../../standard/frameworks.md)用にコンパイルします。 フレームワークは、[プロジェクト ファイル](csproj.md)で定義する必要があります。
+  特定の[フレームワーク](../../standard/frameworks.md)用にコンパイルします。 フレームワークは、[プロジェクト ファイル](csproj.md)で定義する必要があります。
 
-`-h|--help`
+* **`-h|--help`**
 
-コマンドの短いヘルプを印刷します。
+  コマンドの短いヘルプを印刷します。
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-プロジェクト間 (P2P) 参照を無視し、指定されたルート プロジェクトのみをビルドします。
+  プロジェクト間 (P2P) 参照を無視し、指定されたルート プロジェクトのみをビルドします。
 
-`--no-incremental`
+* **`--no-incremental`**
 
-インクリメンタル ビルドとして安全でないビルドをマークします。 このフラグにより、インクリメンタル コンパイルは無効になり、プロジェクトの依存関係グラフのクリーン再ビルドが強制的に行われます。
+  インクリメンタル ビルドとして安全でないビルドをマークします。 このフラグにより、インクリメンタル コンパイルは無効になり、プロジェクトの依存関係グラフのクリーン再ビルドが強制的に行われます。
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-ビルド済みバイナリを配置するディレクトリ。 このオプションを指定する場合は、`--framework` を定義する必要もあります。
+  ビルド済みバイナリを配置するディレクトリ。 このオプションを指定する場合は、`--framework` を定義する必要もあります。
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-ターゲットのランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。
+  ターゲットのランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+  コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-プロジェクト ファイルのバージョン フィールドでアスタリスク (`*`) のバージョン サフィックスを定義します。 形式は NuGet のバージョン ガイドラインに従います。
+  プロジェクト ファイルのバージョン フィールドでアスタリスク (`*`) のバージョン サフィックスを定義します。 形式は NuGet のバージョン ガイドラインに従います。
 
 ---
 
 ## <a name="examples"></a>使用例
 
-プロジェクトとその依存関係をビルドします。
+* プロジェクトとその依存関係をビルドします。
 
-`dotnet build`
+  ```console
+  dotnet build
+  ```
 
-リリース構成を使用して、プロジェクトとその依存関係をビルドします。
+* リリース構成を使用して、プロジェクトとその依存関係をビルドします。
 
-`dotnet build --configuration Release`
+  ```console
+  dotnet build --configuration Release
+  ```
 
-特定のランタイム (この例では、Ubuntu 16.04) 用にプロジェクトとその依存関係をビルドします。
+* 特定のランタイム (この例では、Ubuntu 16.04) 用にプロジェクトとその依存関係をビルドします。
 
-`dotnet build --runtime ubuntu.16.04-x64`
+  ```console
+  dotnet build --runtime ubuntu.16.04-x64
+  ```
 
-プロジェクトをビルドし、復元操作中に指定された NuGet パッケージ ソースを使用します (.NET Core SDK 2.0 以降のバージョン)。
+* プロジェクトをビルドし、復元操作中に指定された NuGet パッケージ ソースを使用します (.NET Core 2.0 SDK 以降のバージョン)。
 
-`dotnet build --source c:\packages\mypackages`
+  ```console
+  dotnet build --source c:\packages\mypackages
+  ```
+
+* プロジェクトをビルドし、ビルド パラメーターに 1.2.3.4 バージョンを設定します。
+
+  ```console
+  dotnet build -p:Version=1.2.3.4
+  ```

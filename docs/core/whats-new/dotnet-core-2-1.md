@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120948"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127551"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 
@@ -69,7 +69,7 @@ ms.locfileid: "49120948"
 
 .NET Core 2.1 では、*グローバル ツール* (コマンドラインからグローバルに使用できるカスタム ツール) がサポートされます。 以前のバージョンの .NET Core の拡張モデルでは、[`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) を使用してカスタム ツールをプロジェクト単位で入手することのみ可能でした。
 
-グローバル ツールをインストールするには、[dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。 例:
+グローバル ツールをインストールするには、[dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。 次に例を示します。
 
 ```console
 dotnet tool install -g dotnetsay
@@ -79,7 +79,7 @@ dotnet tool install -g dotnetsay
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>`dotnet tool` コマンドによるツールの管理
 
-.NET Core SDK 2.1 (v 2.1.300) では、すべてのツール操作で `dotnet tool` コマンドを使用します。 次のオプションを使用できます。
+.NET Core 2.1 SDK では、すべてのツール操作で `dotnet tool` コマンドが使用されます。 次のオプションを使用できます。
 
 - [`dotnet tool install`](../tools/dotnet-tool-install.md): ツールをインストールします。
 

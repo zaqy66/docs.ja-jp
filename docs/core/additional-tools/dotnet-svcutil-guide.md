@@ -1,17 +1,18 @@
 ---
-title: Microsoft WCF dotnet-svcutil ツール
+title: WCF svcutil ツールの概要 - .NET Core
 description: .NET Framework プロジェクトの WCF svcutil ツールと同様に、.NET Core プロジェクトと ASP.NET Core プロジェクトの機能を追加する Microsoft WCF dotnet-svcutil ツールの概要。
 author: mlacouture
 ms.author: jralexander
 ms.date: 08/20/2018
-ms.openlocfilehash: bb4d8e5f3997318b720535b0f1e07fc33d13338a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 7372d88a9c1d77ec0b77e9d82fe5b24ebc357a74
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511887"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126017"
 ---
-# <a name="microsoft-wcf-dotnet-svcutil-tool"></a>Microsoft WCF dotnet-svcutil ツール
+# <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core 用 WCF dotnet-svcutil ツール
 
 Windows Communication Foundation (WCF) **dotnet-svcutil** ツールは、ネットワーク上の場所で Web サービスから、あるいは WSDL ファイルからメタデータを取得し、Web サービス操作にアクセスするクライアント プロキシ メソッドを格納する WCF クラスを生成する .NET Core CLI ツールです。
 
@@ -24,7 +25,7 @@ Windows Communication Foundation (WCF) **dotnet-svcutil** ツールは、ネッ�
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [.NET Core SDK](https://www.microsoft.com/net/download) v1.0.4 以降のバージョン
+* [.NET Core SDK](https://dotnet.microsoft.com/download) v1.0.4 以降のバージョン
 * 任意のコード エディター
 
 ## <a name="getting-started"></a>作業の開始

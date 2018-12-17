@@ -1,18 +1,18 @@
 ---
-title: Microsoft WCF Web Service Reference Provider Tool
+title: WCF Web Service Reference を追加する - .NET Core
 description: .NET Framework プロジェクトのサービス参照の追加と同様に、.NET Core プロジェクトと ASP.NET Core プロジェクトの機能を追加する Microsoft WCF Web Service Reference Provider Tool の概要。
 author: mlacouture
 ms.author: johalex
 ms.date: 04/19/2018
-ms.custom: mvc
-ms.openlocfilehash: 416ca4dbedcf6e610aa5307c87934c0cb18be749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: a1c5f389a5928a34ce1cbf13b2ef27a95b18d031
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215379"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148783"
 ---
-# <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Microsoft WCF Web Service Reference Provider Tool
+# <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web Service Reference Provider ツールを使用する
 
 長年にわたり、多くの Visual Studio 開発者は、.NET Framework プロジェクトが Web サービスにアクセスする必要があるときに、[**サービス参照の追加**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)ツールが提供する生産性を利用してきました。  **WCF Web Service Reference** ツールは、.NET Core および ASP.NET Core プロジェクトのサービス参照の追加機能のようなエクスペリエンスを提供する、Visual Studio に接続されたサービス拡張機能です。 このツールは現在のソリューションの Web サービスから、ネットワーク上の場所で、あるいは WSDL ファイルからメタデータを取得し、Web サービスのアクセスに使用できる Windows Communication Foundation (WCF) クライアント プロキシ コードを含む、.NET Core 互換ソース ファイルを生成します。
 
@@ -37,11 +37,11 @@ ms.locfileid: "33215379"
 
 次の図に示すように、**[接続済みサービス]** ページが表示されます。
 
-![[接続済みサービス] タブ](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
+![Visual Studio の .NET Core の [接続済みサービス] タブ](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
 
 2. **[接続済みサービス]** ページで、**[Microsoft WCF Web Service Reference Provider]** をクリックします。 **[WCF Web Service Reference の構成]** ウィザードが表示されます。
 
-![[サービス エンドポイント] タブ](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
+![Visual Studio の .NET Core の [サービス エンドポイント] タブ](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
 
 3. サービスを選択します。
 
@@ -58,7 +58,7 @@ ms.locfileid: "33215379"
 
 4. **[データ型のオプション]** フォームを使用すると、生成されるサービス参照の構成設定を絞り込むことができます。
 
-![[データ型のオプション] タブ](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
+![Visual Studio の .NET Core の [データ型のオプション] タブ](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
 
 > [!NOTE]
 > **[参照されたアセンブリで型を再利用]** チェック ボックス オプションは、サービス参照コードの生成に必要なデータ型がプロジェクトの参照されているアセンブリのいずれかで定義されている場合に便利です。  このような既存のデータ型を再利用して、コンパイル時の型の不整合や実行時の問題を回避することが重要です。
@@ -74,7 +74,7 @@ ms.locfileid: "33215379"
 * *reference.cs* というファイルにサービス参照コードを生成し、プロジェクトの **[接続済みサービス]** ノードの下に追加します。 
 * ターゲット プラットフォームでのコンパイルと実行に必要な NuGet パッケージ参照でプロジェクト ファイル (.csproj) を更新します。
 
-![進行状況ウィンドウ](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
+![Visual Studio の進行状況ウィンドウ](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
 これらのプロセスが完了すると、生成された WCF クライアントの種類のインスタンスを作成し、サービス操作を呼び出すことができます。
 

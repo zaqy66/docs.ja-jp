@@ -1,20 +1,18 @@
 ---
-title: Visual Studio 2017 を用いた C# または Visual Basic の Hello World .NET Core アプリケーションのデバッグ
+title: Visual Studio 2017 を使用して Hello World .NET Core アプリケーションをデバッグする
 description: C# または Visual Basic で記述された Hello World アプリを、Visual Studio 2017 を使用してデバッグする方法についてご説明します。
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/15/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200125"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147529"
 ---
-# <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017 での Hello World アプリケーションのデバッグ
+# <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Visual Studio 2017 を使用して C# または Visual Basic .NET Core の Hello World アプリケーションをデバッグする
 
-ここまでは、[「Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築」](.\with-visual-studio.md) または[「Visual Studio 2017 での .NET Core を使用した Visual Basic Hello World アプリケーションの構築」](vb-with-visual-studio.md)の手順に従って、簡単なコンソール アプリケーションを作成して実行しました。 アプリケーションを記述してコンパイルしたら、テストを開始できます。 Visual Studio には、アプリケーションのテストおよびトラブルシューティングの際に使用できるデバッグ ツールの包括的なセットが含まれています。
+ここまでは、[「Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築」](with-visual-studio.md) または[「Visual Studio 2017 での .NET Core を使用した Visual Basic Hello World アプリケーションの構築」](vb-with-visual-studio.md)の手順に従って、簡単なコンソール アプリケーションを作成して実行しました。 アプリケーションを記述してコンパイルしたら、テストを開始できます。 Visual Studio には、アプリケーションのテストおよびトラブルシューティングの際に使用できるデバッグ ツールの包括的なセットが含まれています。
 
 ## <a name="debugging-in-debug-mode"></a>デバッグ モードでのデバッグ
 
@@ -228,4 +226,4 @@ Visual Studio では、1 行ずつプログラムをステップ実行して、�
 
 F5 キーを押すか、**[ビルド]** メニューの **[ソリューションのビルド]** を選ぶ、コンソール アプリケーションのリリース バージョンがコンパイルされます。 アプリケーションのデバッグ バージョンと同様に、テストできます。
 
-アプリケーションのデバッグが終了したら、次の手順ではアプリケーションを配置可能なバージョンにして発行します。 この方法については、「[Visual Studio 2017 を使用した Hello World アプリケーションの発行](./publishing-with-visual-studio.md)」をご覧ください。
+アプリケーションのデバッグが終了したら、次の手順ではアプリケーションを配置可能なバージョンにして発行します。 この方法については、「[Visual Studio 2017 を使用した Hello World アプリケーションの発行](publishing-with-visual-studio.md)」をご覧ください。

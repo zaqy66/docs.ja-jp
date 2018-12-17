@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: a0a50af2d773a9489d9e908b751ba2035b9ba626
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 213a714a04c31954b0091071b0625449916d154d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194021"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146915"
 ---
 # <a name="introducing-pluggable-protocols"></a>プラグ可能なプロトコルの概要
 Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージド実装を提供します。 <xref:System.Net> および <xref:System.Net.Sockets> の名前空間内のインターネット アクセス クラスは、Web ベース アプリケーションとインターネット ベース アプリケーションの両方を実装するために使用できます。  
@@ -40,7 +40,7 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
  クライアント アプリケーションは、要求されたインターネット リソースと、要求と応答に使用するための通信プロトコルを識別することによって、要求を実行します。 必要に応じて、クライアントは要求を完了するために必要な、プロキシの場所や認証情報 (ユーザー名、パスワードなど) などの追加データも提供します。 要求が作成されると、要求をサーバーに送信できます。  
   
 ## <a name="identifying-resources"></a>リソースの識別  
- .NET Framework は、Uniform Resource Identifier (URI) を使用して、要求されたインターネット リソースと通信プロトコルを識別します。 URI は、少なくとも 3 つ、または 4 つのフラグメントで構成されています。要求と応答の通信プロトコルを識別するスキーム識別子、ドメイン ネーム システム (DNS) ホスト名またはインターネット上のサーバーを一意に識別する TCP アドレスのいずれかで構成されるサーバー識別子、要求された情報をサーバー上で検索するパス識別子、クライアントからの情報をサーバーに渡すクエリ文字列 (省略可能) です。 たとえば、URI `http://www.contoso.com/whatsnew.aspx?date=today`は、スキーム識別子 "http"、サーバー識別子 "www.contoso.com"、パス "/whatsnew.aspx"、およびクエリ文字列 "?date=today" で構成されています。  
+ .NET Framework は、Uniform Resource Identifier (URI) を使用して、要求されたインターネット リソースと通信プロトコルを識別します。 URI は、少なくとも 3 つ、または 4 つのフラグメントで構成されています。要求と応答の通信プロトコルを識別するスキーム識別子、ドメイン ネーム システム (DNS) ホスト名またはインターネット上のサーバーを一意に識別する TCP アドレスのいずれかで構成されるサーバー識別子、要求された情報をサーバー上で検索するパス識別子、クライアントからの情報をサーバーに渡すクエリ文字列 (省略可能) です。 たとえば、URI `http://www.contoso.com/whatsnew.aspx?date=today` はスキーム識別子 `http`、サーバー識別子 `www.contoso.com`、パス `/whatsnew.aspx`、クエリ文字列 `?date=today` で構成されます。  
   
  サーバーは要求を受信し、応答を処理すると、クライアント アプリケーションに応答を返します。 応答には、コンテンツの種類 (たとえば、生のテキストや XML データ) などの補足情報が含まれています。  
   

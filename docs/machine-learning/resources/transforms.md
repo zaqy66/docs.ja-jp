@@ -1,15 +1,16 @@
 ---
-title: データ変換
+title: ML.NET のデータ変換
 description: ML.NET でサポートされているさまざまなデータ変換について説明します。
+author: JRAlexander
 ms.date: 10/16/2018
-ms.openlocfilehash: 5df4598de6fcd08689d72c378f51d792860ef49c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c169319937dac13747935e451952bd75d4cc174d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187742"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143949"
 ---
-# <a name="data-transforms"></a>データ変換
+# <a name="data-transforms-in-mlnet"></a>ML.NET のデータ変換
 
 次の表には、ML.NET でサポートされるすべてのデータ変換の情報が含まれています (データ変換の種類を選択すると、対応する表に移動します)。
 

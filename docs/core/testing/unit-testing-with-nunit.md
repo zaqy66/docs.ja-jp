@@ -3,12 +3,12 @@ title: NUnit と .NET Core による単体テスト C#
 description: dotnet テストおよび NUnit を使用したサンプル ソリューションを段階的に構築していく対話型エクスペリエンスを通じて、C# および .NET Core の単体テストの概念について説明します。
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d33a223a5cfc7f40f251175a4e88076976bd63ed
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746745"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146956"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit と .NET Core による単体テスト C#
 
@@ -16,7 +16,7 @@ ms.locfileid: "45746745"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [.NET Core SDK 2.1 (v.2.1.400)](https://www.microsoft.com/net/download) 以降のバージョン。
+- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 以降のバージョン。
 - ユーザーが選んだテキスト エディターまたはコード エディター。
 
 ## <a name="creating-the-source-project"></a>ソース プロジェクトの作成

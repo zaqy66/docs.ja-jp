@@ -5,35 +5,34 @@ helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-ms.openlocfilehash: c5c29f5d9a1a4e25e2d5f8816a0df31fa9a91fb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f5a3ad9fef108c1eec2ba63d68bc5015d2f6c430
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506322"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142958"
 ---
 # <a name="types-c-reference"></a>型 (C# リファレンス)
-C# の型指定システムには次のカテゴリがあります。  
-  
--   [値型](../../../csharp/language-reference/keywords/value-types.md)  
-  
--   [参照型](../../../csharp/language-reference/keywords/reference-types.md)  
-  
--   [ポインター型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-  
- 値型の変数はデータを格納し、参照型の変数は実データへの参照を格納します。 参照型はオブジェクトとも呼ばれます。 ポインター型は [unsafe](../../../csharp/language-reference/keywords/unsafe.md) モードでのみ使用できます。  
-  
- [ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)を使用して、値型を参照型に変換でき、参照型から値型に変換して戻すことができます。 ボックス化された値型の場合を除き、参照型を値型に変換することはできません。  
-  
- このセクションでは [void](../../../csharp/language-reference/keywords/void.md) についても説明します。  
-  
- 値型は null 許容型でもあります。つまり、値がない状態を追加で格納することができます。 詳細については、「[Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)」を参照してください。  
-  
-## <a name="see-also"></a>参照
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [型のリファレンス表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [キャストと型変換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
-- [型](../../../csharp/programming-guide/types/index.md)
+C# の型指定システムには次のカテゴリがあります。
+
+- [値型](value-types.md)
+
+- [参照型](reference-types.md)
+
+- [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+
+ 値型の変数はデータを格納し、参照型の変数は実データへの参照を格納します。 参照型のインスタンスはオブジェクトとも呼ばれます。 ポインター型は [unsafe](unsafe.md) モードでのみ使用できます。
+
+ [ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)を使用して、値型を参照型に変換でき、参照型から値型に変換して戻すことができます。 ボックス化された値型の場合を除き、参照型を値型に変換することはできません。
+
+ このセクションでは [void](void.md) についても説明します。
+
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [型のリファレンス表](reference-tables-for-types.md)
+- [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)
+- [型](../../programming-guide/types/index.md)

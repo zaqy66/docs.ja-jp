@@ -4,12 +4,12 @@ description: .NET Core について説明します。
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93619fce58a3b3aa94e6c14fc7cfeb1b0bf48272
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197654"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126979"
 ---
 # <a name="about-net-core"></a>.NET Core について
 
@@ -17,7 +17,7 @@ ms.locfileid: "50197654"
 
 - **クロスプラットフォーム:** Windows、macOS、Linux の[オペレーティング システム](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)で実行されます。
 - **アーキテクチャ全体で一貫性がある:** x64、x86、ARM を含めた複数のアーキテクチャ上でコードが同じ動作で実行されます。
-- **コマンドライン ツール:** ローカル開発と継続的インテグレーションのシナリオで使用される、使いやすいコマンドライン ツールが含まれます。
+- **コマンドライン ツール:** ローカル開発と継続的インテグレーションのシナリオで使用できる、使いやすいコマンドライン ツールが含まれます。
 - **柔軟な展開:** アプリに含めることも、ユーザー全体またはコンピューター全体に side-by-side (横並び) にインストールすることもできます。 [Docker コンテナー](docker/index.md)で使用できます。
 - **互換性:** .NET Core は、[.NET Standard](../standard/net-standard.md) 経由で .NET Framework、Xamarin、Mono と互換性があります。
 - **オープン ソース:** .NET Core プラットフォームはオープン ソースであり、MIT および Apache 2 ライセンスを使用します。 .NET Core は [.NET Foundation](https://dotnetfoundation.org/) プロジェクトです。

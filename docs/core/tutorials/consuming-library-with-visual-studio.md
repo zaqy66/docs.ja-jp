@@ -1,19 +1,19 @@
 ---
 title: Visual Studio 2017 での .NET Standard ライブラリの使用
-description: Visual Studio 2017 でクラス ライブラリのメンバーを呼び出す方法について説明します。
+description: Visual Studio 2017 を使用して別のクラス ライブラリのメンバーを呼び出す .NET Core アプリケーションを構築します。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52ec46c23bb928b49f034270ed1d510d1acf992e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 424933f4d221492b3127d0b847249821fee86b10
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518166"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147321"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Visual Studio 2017 での .NET Standard ライブラリの使用
 
@@ -57,7 +57,7 @@ ms.locfileid: "45518166"
 1. 必要に応じて、ツールバーを変更して、`ShowCase` プロジェクトの**デバッグ** リリースをコンパイルします。 **ShowCase** の緑色の矢印を選び、プログラムをコンパイルして実行します。
 
    ![イメージ](./media/consuming-library-with-visual-studio/toolbar.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. 「[Visual Studio 2017 で Visual Basic と .NET Core を使用したクラス ライブラリの構築](vb-library-with-visual-studio.md)」トピックで作成した `ClassLibraryProjects` ソリューションを開きます。 **ソリューション エクスプローラー**で **ClassLibraryProjects** ソリューションを右クリックし、コンテキスト メニューから **[追加]** > **[新しいプロジェクト]** の順に選びます。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、**[Visual Basic]** ノードを展開し、**[.NET Core]** ノードを選択し、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「ShowCase」と入力し、**[OK]** ボタンを選びます。

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4dd5f4034bcd60b714071eb7eb9518e66ac0c848
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994469"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129026"
 ---
 # <a name="do-c-reference"></a>do (C# リファレンス)
 
-`do` ステートメントでは、指定されたブール式が `true` と評価される間に、ステートメントまたはステートメント ブロックが実行されます。 ループの各実行の後に式が評価されるため、`do-while` ループは 1 回以上実行されます。 [while](while.md) ループは、これとは異なり、0 回以上実行されます。
+`do` ステートメントでは、指定されたブール式が `true` と評価される間、ステートメントまたはステートメント ブロックが実行されます。 ループの各実行の後に式が評価されるため、`do-while` ループは 1 回以上実行されます。 [while](while.md) ループは、これとは異なり、0 回以上実行されます。
 
 `do` ステートメント ブロック内の任意の位置で、[break](break.md) ステートメントを使用してループを抜けることができます。
 
@@ -32,13 +32,12 @@ ms.locfileid: "45994469"
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の [do ステートメント](~/_csharplang/spec/statements.md#the-do-statement)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../index.md)  
-- [C# プログラミング ガイド](../../programming-guide/index.md)  
-- [C# のキーワード](index.md)  
-- [do-while ステートメント (C++)](/cpp/cpp/do-while-statement-cpp)  
-- [繰り返しステートメント](iteration-statements.md)  
-- [while ステートメント](while.md)  
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [繰り返しステートメント](iteration-statements.md)
+- [while ステートメント](while.md)

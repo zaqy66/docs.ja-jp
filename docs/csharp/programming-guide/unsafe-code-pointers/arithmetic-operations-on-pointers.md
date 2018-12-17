@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 3694699466f7a200eecd5eef85f60fa19f9584a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91e621e7cddce50e97b061ecd7d77dae6f7ef3cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862304"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129949"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>ポインターに対する算術演算 (C# プログラミング ガイド)
-このトピックでは、算術演算子 `+` と **-** を使用したポインター操作について説明します。  
+このトピックでは、算術演算子 `+` と `-` を使用したポインター操作について説明します。  
   
 > [!NOTE]
 >  void ポインターには、算術演算を実行できません。  
   
 ## <a name="adding-and-subtracting-numeric-values-to-or-from-pointers"></a>ポインターに対する数値の加算と減算  
- 型が [int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md) のいずれかである値 `n` は、`void*` 型以外のあらゆるポインター `p` に加算できます。 結果の `p+n` は `n * sizeof(p) to the address of p` を加算した結果を表すポインターです。 同様に、`p-n` は `p` のアドレスから `n * sizeof(p)` を減算した結果を表すポインターです。  
+ 型が [int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md) のいずれかである値 `n` をポインターに加算できます。 `p` が型 `pointer-type*` のポインターである場合、結果の `p+n` は `p` のアドレスに `n * sizeof(pointer-type)` を加算した結果のポインターです。 同様に、`p-n` は `p` のアドレスから `n * sizeof(pointer-type)` を減算した結果を表すポインターです。  
   
 ## <a name="subtracting-pointers"></a>ポインターの減算  
  同じ型のポインターを減算することもできます。 結果は常に `long` 型になります。 たとえば場合、`p1` と `p2` が `pointer-type*` 型のポインターである場合、式 `p1-p2` の結果は次のようになります。  
   
- `((long)p1 - (long)p2)/sizeof(pointer_type)`  
+ `((long)p1 - (long)p2)/sizeof(pointer-type)`  
   
  算術演算がポインターのドメインをオーバーフローしても、例外は生成されません。生じる結果は実装によって異なります。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "43862304"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [アンセーフ コードとポインター](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
 - [ポインター式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
 - [C# 演算子](../../../csharp/language-reference/operators/index.md)  
