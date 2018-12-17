@@ -1,33 +1,32 @@
 ---
 title: コンテナーとして実行するデータベース サーバーの使用
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | コンテナーとして実行するデータベース サーバーの使用
+description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 開発のためだけにコンテナーとして実行するデータベース サーバーを使用していますか。 理由を理解します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/30/2017
-ms.openlocfilehash: 42b0bf43ace00b1eb4b48c39604b89ea76c99220
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 347e6d36b7e838082f47d39c5ae67c219ec11d45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106150"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127720"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>コンテナーとして実行するデータベース サーバーの使用
 
-データベース (SQL Server、PostgreSQL、MySQL など) は、通常のスタンドアロン サーバー上、オンプレミス クラスター内、または Azure SQL DB などのクラウド内の PaaS サービスとして使用できます。 ただし、開発およびテスト環境では、データベースをコンテナーとして実行すると便利です。これは、外部の依存関係がなく、docker-compose コマンドを実行するだけで、アプリケーション全体が起動するためです。 それらのデータベースをコンテナーとして使用することは、統合テストにも有効です。これは、データベースがコンテナー内で起動され、常に同じサンプル データが格納されるので、テストの予測精度が向上するためです。
+データベース (SQL Server、PostgreSQL、MySQL など) は、通常のスタンドアロン サーバー上、オンプレミス クラスター内、または Azure SQL DB などのクラウド内の PaaS サービスとして使用できます。 ただし、開発およびテスト環境では、データベースをコンテナーとして実行すると便利です。これは、外部の依存関係がなく、`docker-compose up` コマンドを実行するだけで、アプリケーション全体が起動するためです。 それらのデータベースをコンテナーとして使用することは、統合テストにも有効です。これは、データベースがコンテナー内で起動され、常に同じサンプル データが格納されるので、テストの予測精度が向上するためです。
 
 ### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>マイクロサービスに関連するデータベースを含むコンテナーとして実行している SQL Server
 
 eShopOnContainers には、[docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) ファイルで定義される sql.data というコンテナーがあり、これが Linux 用 SQL Server とマイクロサービスに必要なすべての SQL Server データベースを実行します  (各データベース用に 1 つの SQL Server コンテナーを使用することもできますが、より多くのメモリを Docker に割り当てる必要があります)。マイクロサービスで重要な点は、各マイクロサービスが関連するデータを所有し、そのためこのケースでは、SQL データベースに関連付けられます。 しかし、データベースは任意の場所に置くことができます。
 
-サンプル アプリケーションの SQL Server コンテナーは、docker-compose.yml ファイル内で次の YAML コードで構成され、docker-compose up を実行したときに実行されます。 YAML コードは、汎用の docker compose.yml ファイルと docker compose.override.yml ファイルから構成情報を統合されていることに注意してください  (通常は、SQL Server イメージに関連する基本情報または静的情報から、環境の設定を分離します)。
+サンプル アプリケーションの SQL Server コンテナーは、docker-compose.yml ファイル内で次の YAML コードで構成され、`docker-compose up` を実行したときに実行されます。 YAML コードは、汎用の docker compose.yml ファイルと docker compose.override.yml ファイルから構成情報を統合されていることに注意してください  (通常は、SQL Server イメージに関連する基本情報または静的情報から、環境の設定を分離します)。
 
 ```yml
   sql.data:
-    image: microsoft/mssql-server-linux
+    image: microsoft/mssql-server-linux:2017-latest
     environment:
-      - MSSQL_SA_PASSWORD=Pass@word
+      - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Developer
     ports:
       - "5434:1433"
 ```
@@ -35,10 +34,10 @@ eShopOnContainers には、[docker-compose.yml](https://github.com/dotnet-archit
 同様の方法で、`docker-compose` を使用する代わりに、次の `docker run` コマンドでそのコンテナーを実行できます。
 
 ```
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD= your@password' -p 1433:1433 -d microsoft/mssql-server-linux
+  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
-ただし、eShopOnContainers などのマルチコンテナー アプリケーションを展開する場合は、アプリケーションに必要なすべてのコンテナーを展開する docker-compose up コマンドを使う方が便利です。
+ただし、eShopOnContainers などのマルチコンテナー アプリケーションを展開する場合は、アプリケーションに必要なすべてのコンテナーを展開する `docker-compose up` コマンドを使う方が便利です。
 
 初めてこの SQL Server のコンテナーを起動するときに、コンテナーが、指定したパスワードを使用して SQL Server を初期化します。 SQL Server がコンテナーとして実行されたら、SQL Server Management Studio、Visual Studio、C\# コードなどの通常の SQL 接続を介して接続することでデータベースを更新できます。
 
@@ -48,10 +47,10 @@ SQL Server のコンテナーとしての実行は、SQL Server のインスタ�
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **Linux、Mac、Windows で SQL Server Docker イメージを実行する**
+-   **Linux、Mac、Windows で SQL Server Docker イメージを実行する** <br/>
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **Linux で sqlcmd を使用して SQL Server に接続してクエリする**
+-   **Linux で sqlcmd を使用して SQL Server に接続してクエリする** <br/>
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Web アプリケーションの起動時のテスト データのシード処理
@@ -166,7 +165,7 @@ public class Startup
 
 Redis は、Redis と共に Docker イメージを提供します。 そのイメージは、次の URL での Docker Hub から入手できます。
 
-<https://hub.docker.com/_/redis/>
+[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
 
 コマンド プロンプトで次の Docker CLI コマンドを実行することによって、Docker Redis コンテナーを直接実行できます。
 
@@ -199,7 +198,8 @@ Docker compose.yml のこのコードは、redis イメージに基づいて bas
       - EventBusConnection=rabbitmq
 ```
 
+前述のように、マイクロサービスの名前 "basket.data" は、docker の内部ネットワーク DNS によって解決されます。
 
 >[!div class="step-by-step"]
-[前へ](multi-container-applications-docker-compose.md)
-[次へ](integration-event-based-microservice-communications.md)
+>[前へ](multi-container-applications-docker-compose.md)
+>[次へ](integration-event-based-microservice-communications.md)

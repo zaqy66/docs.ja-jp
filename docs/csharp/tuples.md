@@ -3,12 +3,12 @@ title: タプル型 - C# ガイド
 description: C# の名前のないタプルと名前付きタプルについて
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186032"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155133"
 ---
 # <a name="c-tuple-types"></a>C# のタプル型 #
 
@@ -88,7 +88,7 @@ C# 7.1 以降、タプルのフィールド名は、タプルの初期化に使�
 
 ## <a name="equality-and-tuples"></a>等値とタプル
 
-C# 7.3 以降では、タプル型で `==` および `!=` 演算子がサポートされます。 これらの演算子は、左の引数の各メンバーと右の引数の各メンバーを順番に比較することによって機能します。 これらの比較はショートさせます。 `==` 演算子は、ペアが等値でなくなるとすぐにメンバーの評価を停止します。 `!=` 演算子は、ペアが等値になるとすぐにメンバーの評価を停止します。 次のコード例では `==` を使用しますが、比較規則がすべて `!=` に適用されます。 次のコード例は、整数の 2 つのペアの等値比較を示しています。
+C# 7.3 以降では、タプル型で `==` および `!=` 演算子がサポートされます。 これらの演算子は、左の引数の各メンバーと右の引数の各メンバーを順番に比較することによって機能します。 これらの比較はショートさせます。 これらは、ペアが等値でなくなるとすぐにメンバーの評価を停止します。 次のコード例では `==` を使用しますが、比較規則がすべて `!=` に適用されます。 次のコード例は、整数の 2 つのペアの等値比較を示しています。
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 

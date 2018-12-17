@@ -1,15 +1,15 @@
 ---
 title: ASP.NET Core サービスと Web アプリのテスト
-description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | ASP.NET Core サービスと Web アプリのテスト'
+description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | コンテナーで ASP.NET Core サービスと Web アプリをテストするためのアーキテクチャについて調べる。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/02/2018
+ms.openlocfilehash: 67989dc9651745ce0bd9ee9bbcbde1af0b7bc452
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232860"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148029"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core サービスと Web アプリのテスト
 
@@ -29,7 +29,7 @@ ms.locfileid: "47232860"
 
 単体テストでは、アプリケーションの一部をインフラストラクチャや依存関係から切り離してテストします。 コントローラー ロジックの単体テストを行うときは、それが依存しているものやフレームワーク自体の動作ではなく、単一のアクションやメソッドの内容のみをテストします。 単体テストではコンポーネント間の相互作用の問題は検出しません。これは、統合テストの目的です。
 
-コントローラーのアクションの単体テストでは、その動作にだけ注目するようにします。 コントローラーの単体テストからは、フィルター、ルーティング、モデル バインドなどに関することは除外します。 1 つの事柄だけに注目してテストするため、一般に、単体テストは簡単に記述してすばやく実行できます。 適切に記述された一連の単体テストは、大きなオーバーヘッドなしに頻繁に実行できます。
+コントローラーのアクションの単体テストでは、その動作にだけ注目するようにします。 コント ローラーの単体テストは、フィルター、ルーティング、モデル バインド (ViewModel または DTO への要求データのマッピング) などを回避できます。 1 つの事柄だけに注目してテストするため、一般に、単体テストは簡単に記述してすばやく実行できます。 適切に記述された一連の単体テストは、大きなオーバーヘッドなしに頻繁に実行できます。
 
 単体テストは、xUnit.net、MSTest、Moq、NUnit などのテスト フレームワークに基づいて実装されます。 eShopOnContainers サンプル アプリケーションでは、xUnit を使用します。
 
@@ -37,19 +37,26 @@ Web API コントローラーの単体テストを記述する際には、C\# �
 
 ```csharp
 [Fact]
-public void Add_new_Order_raises_new_event()
+public async Task Get_order_detail_success()
 {
-    // Arrange
-    var street = " FakeStreet ";
-    var city = "FakeCity";
-    // Other variables omitted for brevity ...
-    // Act
-    var fakeOrder = new Order(new Address(street, city, state, country, zipcode),
-        cardTypeId, cardNumber,
-        cardSecurityNumber, cardHolderName,
-        cardExpiration);
-    // Assert
-    Assert.Equal(fakeOrder.DomainEvents.Count, expectedResult);
+    //Arrange
+    var fakeOrderId = "12";
+    var fakeOrder = GetFakeOrder();
+ 
+    //...
+
+    //Act
+    var orderController = new OrderController(
+        _orderServiceMock.Object, 
+        _basketServiceMock.Object, 
+        _identityParserMock.Object);
+
+    orderController.ControllerContext.HttpContext = _contextMock.Object;
+    var actionResult = await orderController.Detail(fakeOrderId);
+ 
+    //Assert
+    var viewResult = Assert.IsType<ViewResult>(actionResult);
+    Assert.IsAssignableFrom<Order>(viewResult.ViewData.Model);
 }
 ```
 
@@ -63,7 +70,7 @@ public void Add_new_Order_raises_new_event()
 
 統合テストは、単体テストより大きなコード セグメントを実行し、インフラストラクチャ要素に依存するため、多くの場合、単体テストと比べて桁違いに低速になります。 そのため、記述して実行する統合テストの数を制限することをお勧めします。
 
-ASP.NET Core には、ネットワークのオーバーヘッドなしで HTTP 要求を処理するために使用できる、組み込みのテスト Web ホストが含まれています。これは、実際の Web ホストを使用するときにはそれらのテストをより速く実行できるということです。 テスト Web ホストは、Microsoft.AspNetCore.TestHost として NuGet コンポーネントでご利用いただけます。 これを統合テスト プロジェクトに追加して、ASP.NET Core アプリケーションをホストするために使用できます。
+ASP.NET Core には、ネットワークのオーバーヘッドなしで HTTP 要求を処理するために使用できる、組み込みのテスト Web ホストが含まれています。これは、実際の Web ホストを使用するときにはそれらのテストをより速く実行できるということです。 テスト Web ホスト (TestServer) は、Microsoft.AspNetCore.TestHost として NuGet コンポーネントでご利用いただけます。 これを統合テスト プロジェクトに追加して、ASP.NET Core アプリケーションをホストするために使用できます。
 
 次のコードからわかるように、ASP.NET Core コントローラーの統合テストを作成すると、テスト ホストによってコントローラーがインスタンス化されます。 これは、HTTP 要求に相当しますが、より速く実行されます。
 
@@ -96,33 +103,111 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **Steve Smith。コントローラーのテスト** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith。コントローラーのテスト** (ASP.NET Core) <br/>
+    [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith。統合テスト** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](/aspnet/core/test/integration-tests)
+-   **Steve Smith。統合テスト** (ASP.NET Core) <br/>
+    [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
--   **dotnet テストを使用した .NET Core での単体テスト**
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
+-   **dotnet テストを使用した .NET Core での単体テスト** <br/>
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
 
--   **xUnit.net**。 公式サイト。
+-   **xUnit.net**。 公式サイト。 <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **単体テストの基本**
+-   **単体テストの基本。** <br/>
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
--   **Moq**。 GitHub リポジトリ。
+-   **Moq**。 GitHub リポジトリ。 <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
--   **NUnit**。 公式サイト。
+-   **NUnit**。 公式サイト。 <br/>
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>マルチコンテナー アプリケーションでのサービス テストの実装 
 
 前述のとおり、マルチコンテナー アプリケーションをテストする際、すべてのマイクロサービスを Docker ホスト内やコンテナー クラスター内で実行している必要があります。 いくつかのマイクロサービスが関係する複数の操作を含むエンド ツー エンドのサービス テストでは、docker-compose up (または、オーケストレーターを使用している場合は相当するメカニズム) を実行して、Docker ホストでアプリケーション全体を展開して起動する必要があります。 アプリケーション全体とそのすべてのサービスが実行されると、エンド ツー エンドの統合テストと機能のテストを実行できます。
 
-使用できる方法はいくつかあります。 アプリケーションの展開に使用する docker-compose.yml ファイル (または、docker-compose.ci.build.yml などの同様のもの) では、ソリューション レベルで [dotnet test](../../../core/tools/dotnet-test.md) を使用してエントリ ポイントを拡張できます。 対象とするイメージで、テストを実行する別の Compose ファイルを使用することもできます。 コンテナー上のマイクロサービスとデータベースを含む統合テストで別の Compose ファイルを使用すれば、テストを実行する前に、関連するデータが元の状態に常にリセットされることを確認できます。
+使用できる方法はいくつかあります。 アプリケーションの展開に使用する docker-compose.yml ファイルでは、ソリューション レベルで [dotnet test](https://docs.microsoft.com/dotnet/articles/core/tools/dotnet-test) を使用してエントリ ポイントを拡張できます。 対象とするイメージで、テストを実行する別の Compose ファイルを使用することもできます。 コンテナー上のマイクロサービスとデータベースを含む統合テストで別の Compose ファイルを使用すれば、テストを実行する前に、関連するデータが元の状態に常にリセットされることを確認できます。
 
 Compose アプリケーションが起動し実行されると、Visual Studio を実行している場合はブレークポイントと例外を活用できます。 または、Azure DevOps Services の CI パイプラインや Docker コンテナーをサポートする他の CI/CD システムで、統合テストを自動的に実行することができます。
 
+## <a name="testing-in-eshoponcontainers"></a>eShopOnContainers でテストする
+
+参照アプリケーション (eShopOnContainers) のテストが再構築され、次の 4 つのカテゴリができました。
+
+1.  **単体**テスト。**{MicroserviceName}.UnitTests** プロジェクトに含まれている、従来の単純で定期的な単体テスト
+
+2.  **マイクロサービスの機能/統合テスト**。各マイクロサービスのインフラストラクチャに関するテスト ケースを含みます。他からは分離されていて、**{MicroserviceName}.FunctionalTests** プロジェクトに含まれています。
+
+3.  **アプリケーションの機能/統合テスト**。マイクロサービスの統合に集中します。複数のマイクロサービスを実行するテスト ケースが含まれています。 これらのテストはプロジェクト **Application.FunctionalTests** にあります。
+
+4.  **ロード テスト**。各マイクロサービスの応答時間に集中します。 これらのテストはプロジェクト **LoadTest** にあり、Visual Studio 2017 Enterprise Edition を必要とします。
+
+図 6-25 に示すように、マイクロサービスごとの単体および統合テストは各マイクロサービスの test フォルダーに含まれており、アプリケーションのロード テストはソリューション フォルダーの test フォルダーの下に含まれています。
+
+![eShopOnContainers のテストの構造: 各サービスには単体および機能テストが含まれる "test" フォルダーがあります。 ソリューションの "test" フォルダーの下には、アプリケーション全体の機能テストとロード テストが含まれています。](./media/image42.png)
+
+**図 6-25**。 eShopOnContainers のテスト フォルダーの構造
+
+マイクロサービスとアプリケーションの機能/単体テストは定期テスト ランナーを使用して Visual Studio から実行されますが、最初にソリューションの test フォルダーに含まれる一連の docker-compose ファイルを使用して必要なインフラストラクチャ サービスを開始する必要があります。
+
+**docker-compose-test.yml**
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    image: redis:alpine
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+  nosql.data:
+    image: mongo
+```
+
+**docker-compose-test.override.yml**
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    ports:
+      - "6379:6379"
+  rabbitmq:
+    ports:
+      - "15672:15672"
+      - "5672:5672" 
+  sql.data:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+  nosql.data:
+    ports:
+      - "27017:27017"
+```
+
+そのため、機能/統合テストを実行するには、最初にソリューションの test フォルダーから次のコマンドを実行する必要があります。
+
+``` console
+docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
+```
+
+ご覧のように、この docker-compose ファイルでは Redis、RabitMQ、SQL Server、および MongoDB のマイクロサービスのみが開始します。
+
+### <a name="additionl-resources"></a>その他のリソース
+
+-   **テストの README ファイル** (GitHub の eShopOnContainers リポジトリ) <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+
+-   **ロード テストの README ファイル** (GitHub の eShopOnContainers リポジトリ) <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+
 >[!div class="step-by-step"]
-[前へ](subscribe-events.md)
-[次へ](../microservice-ddd-cqrs-patterns/index.md)
+>[前へ](subscribe-events.md)
+>[次へ](background-tasks-with-ihostedservice.md)

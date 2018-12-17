@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332957"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155026"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework のファイル I/O とファイル システムの基礎 (Visual Basic)
 <xref:System.IO> 名前空間のクラスは、ドライブ、ファイル、ディレクトリの操作に使用されます。  
@@ -27,12 +27,12 @@ ms.locfileid: "39332957"
 ## <a name="definition-of-a-stream"></a>ストリームの定義  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] では、ファイルに対する読み取りと書き込みをサポートするストリームを使用できます。 ストリームとは、1 次元の連続したデータの集まりと考えることができます。ストリームには先頭と末尾があり、カーソルでストリーム内での現在の位置を示します。  
   
- ![Filestream 内の現在位置を示すカーソル。] (../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")  
+ ![Filestream 内の現在位置を示すカーソル。](../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")  
   
 ## <a name="stream-operations"></a>ストリームの操作  
  ストリームに格納されているデータは、メモリ、ファイル、または TCP/IP ソケットから取得したものです。 ストリームに対しては、次の基本操作を実行できます。  
   
--   読み取り。 ストリームを読み取ったり、文字列やバイト配列などのデータ構造にストリームからデータを転送したりできます。  
+-   **読み取り**。 ストリームを読み取ったり、文字列やバイト配列などのデータ構造にストリームからデータを転送したりできます。  
   
 -   **書き込み**。 ストリームに書き込んだり、データ ソースからストリームにデータを転送したりできます。  
   
@@ -101,5 +101,5 @@ ms.locfileid: "39332957"
 ## <a name="see-also"></a>参照  
  [ストリームの構成](../../../../standard/io/composing-streams.md)  
  [ファイルおよびストリーム入出力](../../../../standard/io/index.md)  
- [非同期ファイル I/O](../../../../standard/io/asynchronous-file-i-o.md)  
+ [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
  [.NET Framework のファイル I/O とファイル システムで使用するクラス (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

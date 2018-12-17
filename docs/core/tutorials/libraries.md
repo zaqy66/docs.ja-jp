@@ -1,15 +1,16 @@
 ---
 title: クロス プラットフォーム ツールによるライブラリの開発
-description: .NET Core CLI ツールを使用して .NET ライブラリを作成する方法を説明します。
+description: .NET Core CLI ツールを使用して .NET Core ライブラリを作成する方法について説明します。 複数のフレームワークをサポートするライブラリを作成します。
 author: cartermp
 ms.author: mairaw
 ms.date: 05/01/2017
-ms.openlocfilehash: a6db7a15c484122600afd54814d19ea11bd1abc1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.custom: seodec18
+ms.openlocfilehash: a8028883b3424588d0fb926dcb73f400a8c620dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256197"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148536"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>クロス プラットフォーム ツールによるライブラリの開発
 
@@ -19,9 +20,9 @@ ms.locfileid: "43256197"
 
 [.NET Core SDK と CLI](https://www.microsoft.com/net/core) がコンピューターにインストールされている必要があります。
 
-このドキュメントで [.NET Framework](http://getdotnet.azurewebsites.net/) バージョンについて扱うセクションでは、.NET Framework が Windows コンピューターにインストールされている必要があります。
+このドキュメントで [.NET Framework](https://dotnet.microsoft.com) バージョンについて扱うセクションでは、.NET Framework が Windows コンピューターにインストールされている必要があります。
 
-また、古い .NET Framework ターゲットをサポートする場合、[.NET ターゲット プラットフォーム ページ](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html)から古い .NET Framework バージョンの Targeting/Developer Pack をインストールする必要があります。 次の表を参照してください。
+また、古い .NET Framework ターゲットをサポートする場合、[.NET ダウンロードのアーカイブ ページ](https://dotnet.microsoft.com/download/archives)から古い .NET Framework バージョンの Targeting/Developer Pack をインストールする必要があります。 次の表を参照してください。
 
 | .NET Framework のバージョン | ダウンロードするもの                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -39,7 +40,7 @@ ms.locfileid: "43256197"
 
 この記事には、.NET Standard バージョンを多様な実装にマップする表が掲載されています。
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
 ライブラリを作成する目的でこの表の意味について説明します。
 
@@ -136,7 +137,7 @@ ms.locfileid: "43256197"
 
 ビルド システムは `#if` ディレクティブで使用される次のプリプロセッサ シンボルを認識します。
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../../includes/preprocessor-symbols.md)]
 
 次に、ターゲットごとに条件付きコンパイルを利用する例を示します。
 
@@ -167,7 +168,7 @@ namespace MultitargetLib
         // .NET Framework 4.0 does not have async/await
         public string GetDotNetCount()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             var uri = new Uri(url);
 
@@ -187,7 +188,7 @@ namespace MultitargetLib
         // .NET 4.5+ can use async/await!
         public async Task<string> GetDotNetCountAsync()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             // HttpClient is thread-safe, so no need to explicitly lock here
             var result = await _client.GetStringAsync(url);
@@ -213,7 +214,7 @@ netstandard1.4/
 
 ## <a name="how-to-test-libraries-on-net-core"></a>.NET Core でライブラリをテストする方法
 
-プラットフォーム全体でテストできることが重要です。 [xUnit](http://xunit.github.io/) または MSTest はそのまま利用できます。 どちらも、.NET Core 上のライブラリの単体テストに最適です。 テスト プロジェクトでソリューションをセットアップする方法は、[ソリューションの構造](#structuring-a-solution)によって異なります。 次の例は、テスト ディレクトリとソース ディレクトリが同じ最上位ディレクトリにある場合です。
+プラットフォーム全体でテストできることが重要です。 [xUnit](https://xunit.github.io/) または MSTest はそのまま利用できます。 どちらも、.NET Core 上のライブラリの単体テストに最適です。 テスト プロジェクトでソリューションをセットアップする方法は、[ソリューションの構造](#structuring-a-solution)によって異なります。 次の例は、テスト ディレクトリとソース ディレクトリが同じ最上位ディレクトリにある場合です。
 
 > [!NOTE]
 > この例ではいくつかの [.NET CLI コマンド](../tools/index.md)を使用しています。 詳細については、「[dotnet new](../tools/dotnet-new.md)」と「[dotnet sln](../tools/dotnet-sln.md)」を参照してください。
@@ -253,7 +254,7 @@ netstandard1.4/
    dotnet build
    ```
 
-   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. `dotnet test` コマンドを実行して、xUnit が実行されることを確認します。 MSTest を使用する場合は、MSTest コンソール実行ツールが実行されることを確認します。
     

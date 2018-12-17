@@ -1,21 +1,21 @@
 ---
 title: マイクロサービス API とコントラクトの作成、進化、バージョン管理
-description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | マイクロサービス API とコントラクトの作成、進化、バージョン管理'
+description: ニーズは変化するものなので、進化とバージョン管理を考慮してマイクロサービス API とコントラクトを作成します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: a2ec577a12cf677c2ec5e20a6f3e862911c82fbb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: 5d3e031217159a695b67f67859b8cf412a4419c2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105694"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152540"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>マイクロサービス API とコントラクトの作成、進化、バージョン管理
 
 マイクロサービス API は、サービスとそのクライアント間のコントラクトです。 API コントラクトに違反していない場合に限り、マイクロサービスを単独で進化させることができます。そのため、コントラクトは非常に重要です。 コントラクトを変更すると、クライアント アプリケーションや API ゲートウェイに影響します。
 
-API 定義の性質は、使用しているプロトコルによって異なります。 たとえば、メッセージング ([AMQP](https://www.amqp.org/) など) を使用している場合、API は複数の種類のメッセージで構成されます。 HTTP サービスと RESTful サービスを使用している場合、API は、URL と、要求と応答の JSON 形式で構成されます。
+API 定義の性質は、使用しているプロトコルによって異なります。 たとえば、メッセージング ([AMQP](https://www.amqp.org/) など) を使用している場合、API は複数の種類のメッセージで構成されます。 HTTP サービスと RESTful サービスを使用している場合、API は URL と、要求および応答の JSON 形式で構成されます。
 
 ただし、たとえ最初のコントラクトについて熟慮した場合でも、サービスの API は時間の経過と共に変更する必要があります。 そのような状況になった場合、特に複数のクライアント アプリケーションによって使用されるパブリック API である場合は、通常、すべてのクライアントを強制的に新しい API コントラクトにアップグレードすることはできません。 通常、サービス コントラクトの古いバージョンと新しいバージョンの両方が同時に実行されるように、新しいバージョンのサービスを段階的に展開する必要があります。 そのため、サービスのバージョン管理戦略を用意することが重要です。
 
@@ -27,16 +27,15 @@ API の変更が少ない場合 (たとえば、API に属性やパラメータ�
 
 ## <a name="additional-resources"></a>その他の技術情報
 
--   **Scott Hanselman。簡単になった ASP.NET Core RESTful Web API のバージョン管理**
-    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+- **Scott Hanselman。簡単になった ASP.NET Core RESTful Web API のバージョン管理** \
+  [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **RESTful Web API のバージョン管理**
-    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+- **RESTful Web API のバージョン管理** \
+  [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding。バージョン管理、ハイパーメディア、REST**
-    <https://www.infoq.com/articles/roy-fielding-on-versioning>
-
+- **Roy Fielding。バージョン管理、ハイパーメディア、REST** \
+  [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 >[!div class="step-by-step"]
-[前へ](asynchronous-message-based-communication.md)
-[次へ](microservices-addressability-service-registry.md)
+>[前へ](asynchronous-message-based-communication.md)
+>[次へ](microservices-addressability-service-registry.md)

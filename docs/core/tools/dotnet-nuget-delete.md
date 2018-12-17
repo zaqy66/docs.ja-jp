@@ -2,14 +2,13 @@
 title: dotnet nuget delete コマンド - .NET Core CLI
 description: dotnet-nuget-delete コマンドは、サーバーからパッケージを削除または一覧から削除します。
 author: karann-msft
-ms.author: mairaw
-ms.date: 06/01/2018
-ms.openlocfilehash: f4aa027a465c4adea1de13853063d03e8e295411
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 451352ea652b77e44dcaf731d5b6cce230d1ef78
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180881"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126836"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
@@ -21,16 +20,10 @@ ms.locfileid: "50180881"
 
 ## <a name="synopsis"></a>構文
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--no-service-endpoint]
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
-dotnet nuget delete [-h|--help]
-```
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
-    [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
@@ -47,92 +40,80 @@ dotnet nuget delete [-h|--help]
 
 ## <a name="arguments"></a>引数
 
-`PACKAGE_NAME`
+* **`PACKAGE_NAME`**
 
-削除するパッケージの名前または ID です。
+  削除するパッケージの名前または ID です。
 
-`PACKAGE_VERSION`
+* **`PACKAGE_VERSION`**
 
-削除するパッケージのバージョンです。
+  削除するパッケージのバージョンです。
 
 ## <a name="options"></a>オプション
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`--force-english-output`
+* **`--force-english-output`**
 
- インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
+  インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
 
-`-h|--help`
+* **`-h|--help`**
 
-コマンドの短いヘルプを印刷します。
+  コマンドの短いヘルプを出力します。
 
-`-k|--api-key <API_KEY>`
+* **`--interactive`**
 
-サーバーの API キーです。
+  コマンドが認証などの操作をブロックして、手動アクションを要求することを許可します。 .NET Core 2.2 SDK 以降、使用できるオプションです。
 
-`--no-service-endpoint` ソース URL に "api/v2/package" を追加しません。
+* **`-k|--api-key <API_KEY>`**
 
-`--non-interactive`
+  サーバーの API キーです。
 
-ユーザーに入力や確認のメッセージ画面を表示しません。
+* **`--no-service-endpoint`**
 
-`-s|--source <SOURCE>`
+  ソース URL に "api/v2/package" を追加しません。 .NET Core 2.1 SDK 以降、使用できるオプションです。
 
-サーバー URL を指定します。 nuget.org でサポートされている URL には、`https://www.nuget.org`、`https://www.nuget.org/api/v3`、および `https://www.nuget.org/api/v2/package` が含まれます。 プライベート フィードの場合、ホスト名を置き換えます (`%hostname%/api/v3` など)。
+* **`--non-interactive`**
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+  ユーザーに入力や確認のメッセージ画面を表示しません。
 
-`--force-english-output`
+* **`-s|--source <SOURCE>`**
 
- インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
-
-`-h|--help`
-
-コマンドの短いヘルプを印刷します。
-
-`-k|--api-key <API_KEY>`
-
-サーバーの API キーです。
-
-`--non-interactive`
-
-ユーザーに入力や確認のメッセージ画面を表示しません。
-
-`-s|--source <SOURCE>`
-
-サーバー URL を指定します。 nuget.org でサポートされている URL には、`https://www.nuget.org`、`https://www.nuget.org/api/v3`、および `https://www.nuget.org/api/v2/package` が含まれます。 プライベート フィードの場合、ホスト名を置き換えます (`%hostname%/api/v3` など)。
+  サーバー URL を指定します。 nuget.org でサポートされている URL には、`https://www.nuget.org`、`https://www.nuget.org/api/v3`、および `https://www.nuget.org/api/v2/package` が含まれます。 プライベート フィードの場合、ホスト名を置き換えます (`%hostname%/api/v3` など)。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`--force-english-output`
+* **`--force-english-output`**
 
- インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
+  インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
 
-`-h|--help`
+* **`-h|--help`**
 
-コマンドの短いヘルプを印刷します。
+  コマンドの短いヘルプを印刷します。
 
-`-k|--api-key <API_KEY>`
+* **`-k|--api-key <API_KEY>`**
 
-サーバーの API キーです。
+  サーバーの API キーです。
 
-`--non-interactive`
+* **`--non-interactive`**
 
-ユーザーに入力や確認のメッセージ画面を表示しません。
+  ユーザーに入力や確認のメッセージ画面を表示しません。
 
-`-s|--source <SOURCE>`
+* **`-s|--source <SOURCE>`**
 
-サーバー URL を指定します。 nuget.org でサポートされている URL には、`https://www.nuget.org`、`https://www.nuget.org/api/v3`、および `https://www.nuget.org/api/v2/package` が含まれます。 プライベート フィードの場合、ホスト名を置き換えます (`%hostname%/api/v3` など)。
+  サーバー URL を指定します。 nuget.org でサポートされている URL には、`https://www.nuget.org`、`https://www.nuget.org/api/v3`、および `https://www.nuget.org/api/v2/package` が含まれます。 プライベート フィードの場合、ホスト名を置き換えます (`%hostname%/api/v3` など)。
 
 ---
 
 ## <a name="examples"></a>使用例
 
-`Microsoft.AspNetCore.Mvc` パッケージのバージョン 1.0 を削除します。
+* `Microsoft.AspNetCore.Mvc` パッケージのバージョン 1.0 を削除します。
 
-`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0`
+  ```console
+  dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0
+  ```
 
-ユーザーに資格情報やその他の入力を求めずに、`Microsoft.AspNetCore.Mvc` パッケージのバージョン 1.0 を削除します。
+* ユーザーに資格情報やその他の入力を求めずに、`Microsoft.AspNetCore.Mvc` パッケージのバージョン 1.0 を削除します。
 
-`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive`
+  ```console
+  dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive
+  ```

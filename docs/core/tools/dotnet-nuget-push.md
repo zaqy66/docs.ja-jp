@@ -2,14 +2,13 @@
 title: dotnet nuget push コマンド - .NET Core CLI
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
-ms.author: mairaw
-ms.date: 09/04/2018
-ms.openlocfilehash: b9c0fad886cd1234325c58bf61b1a010bce421d9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 090dbfbe3db83b2bb234867aed295ac416b27865
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50200027"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143062"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -21,16 +20,10 @@ ms.locfileid: "50200027"
 
 ## <a name="synopsis"></a>構文
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
-dotnet nuget push [-h|--help]
-```
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
-    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
@@ -47,154 +40,132 @@ dotnet nuget push [-h|--help]
 
 ## <a name="arguments"></a>引数
 
-`ROOT`
+* **`ROOT`**
 
-プッシュされるパッケージのファイル パスを指定します。
+  プッシュされるパッケージのファイル パスを指定します。
 
 ## <a name="options"></a>オプション
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`-d|--disable-buffering`
+* **`-d|--disable-buffering`**
 
-メモリ使用量を削減するために、HTTP(S) サーバーにプッシュするときのバッファリングを無効にします。
+  メモリ使用量を削減するために、HTTP(S) サーバーにプッシュするときのバッファリングを無効にします。
 
-`--force-english-output`
+* **`--force-english-output`**
 
-インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
+  インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
 
-`-h|--help`
-
-コマンドの短いヘルプを印刷します。
-
-`-k|--api-key <API_KEY>`
-
-サーバーの API キーです。
-
-`-n|--no-symbols`
-
-シンボルをプッシュしません (存在する場合でも)。
-
-`--no-service-endpoint`
-
-ソース URL に "api/v2/package" を追加しません。
-
-`-s|--source <SOURCE>`
-
-サーバー URL を指定します。 `DefaultPushSource` 構成値が NuGet 構成ファイルに設定されない限り、このオプションは必須です。
-
-`-sk|--symbol-api-key <API_KEY>`
-
-シンボル サーバーの API キーです。
-
-`-ss|--symbol-source <SOURCE>`
-
-シンボル サーバーの URL を指定します。
-
-`-t|--timeout <TIMEOUT>`
-
-秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 (0 秒) を指定すると、既定値が適用されます。
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`-d|--disable-buffering`
-
-メモリ使用量を削減するために、HTTP(S) サーバーにプッシュするときのバッファリングを無効にします。
-
-`--force-english-output`
-
-インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
-
-`-h|--help`
+* **`-h|--help`**
 
 コマンドの短いヘルプを印刷します。
 
-`-k|--api-key <API_KEY>`
+* **`--interactive`**
 
-サーバーの API キーです。
+  コマンドが認証などの操作をブロックして、手動アクションを要求することを許可します。 .NET Core 2.2 SDK 以降、使用できるオプションです。
 
-`-n|--no-symbols`
+* **`-k|--api-key <API_KEY>`**
 
-シンボルをプッシュしません (存在する場合でも)。
+  サーバーの API キーです。
 
-`-s|--source <SOURCE>`
+* **`-n|--no-symbols`**
 
-サーバー URL を指定します。 `DefaultPushSource` 構成値が NuGet 構成ファイルに設定されない限り、このオプションは必須です。
+  シンボルをプッシュしません (存在する場合でも)。
 
-`-sk|--symbol-api-key <API_KEY>`
+* **`--no-service-endpoint`**
 
-シンボル サーバーの API キーです。
+  ソース URL に "api/v2/package" を追加しません。 .NET Core 2.1 SDK 以降、使用できるオプションです。
 
-`-ss|--symbol-source <SOURCE>`
+* **`-s|--source <SOURCE>`**
 
-シンボル サーバーの URL を指定します。
+  サーバー URL を指定します。 `DefaultPushSource` 構成値が NuGet 構成ファイルに設定されない限り、このオプションは必須です。
 
-`-t|--timeout <TIMEOUT>`
+* **`-sk|--symbol-api-key <API_KEY>`**
 
-秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 (0 秒) を指定すると、既定値が適用されます。
+  シンボル サーバーの API キーです。
+
+* **`-ss|--symbol-source <SOURCE>`**
+
+  シンボル サーバーの URL を指定します。
+
+* **`-t|--timeout <TIMEOUT>`**
+
+  秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 (0 秒) を指定すると、既定値が適用されます。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-d|--disable-buffering`
+* **`-d|--disable-buffering`**
 
-メモリ使用量を削減するために、HTTP(S) サーバーにプッシュするときのバッファリングを無効にします。
+  メモリ使用量を削減するために、HTTP(S) サーバーにプッシュするときのバッファリングを無効にします。
 
-`--force-english-output`
+* **`--force-english-output`**
 
-インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
+  インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
 
-`-h|--help`
+* **`-h|--help`**
 
-コマンドの短いヘルプを印刷します。
+  コマンドの短いヘルプを印刷します。
 
-`-k|--api-key <API_KEY>`
+* **`-k|--api-key <API_KEY>`**
 
-サーバーの API キーです。
+  サーバーの API キーです。
 
-`-n|--no-symbols`
+* **`-n|--no-symbols`**
 
-シンボルをプッシュしません (存在する場合でも)。
+  シンボルをプッシュしません (存在する場合でも)。
 
-`-s|--source <SOURCE>`
+* **`-s|--source <SOURCE>`**
 
-サーバー URL を指定します。 `DefaultPushSource` 構成値が NuGet 構成ファイルに設定されない限り、このオプションは必須です。
+  サーバー URL を指定します。 `DefaultPushSource` 構成値が NuGet 構成ファイルに設定されない限り、このオプションは必須です。
 
-`-sk|--symbol-api-key <API_KEY>`
+* **`-sk|--symbol-api-key <API_KEY>`**
 
-シンボル サーバーの API キーです。
+  シンボル サーバーの API キーです。
 
-`-ss|--symbol-source <SOURCE>`
+* **`-ss|--symbol-source <SOURCE>`**
 
-シンボル サーバーの URL を指定します。
+  シンボル サーバーの URL を指定します。
 
-`-t|--timeout <TIMEOUT>`
+* **`-t|--timeout <TIMEOUT>`**
 
-秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 (0 秒) を指定すると、既定値が適用されます。
+  秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 (0 秒) を指定すると、既定値が適用されます。
 
 ---
 
 ## <a name="examples"></a>使用例
 
-API キーを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
+* API キーを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
+  ```console
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
+  ```
 
-API キーを指定して、カスタム プッシュ ソース `https://customsource` に *foo.nupkg* をプッシュします。
+* API キーを指定して、カスタム プッシュ ソース `https://customsource` に *foo.nupkg* をプッシュします。
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/`
+  ```console
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
+  ```
 
-既定のプッシュ ソースに *foo.nupkg* をプッシュします。
+* 既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
-`dotnet nuget push foo.nupkg`
+  ```console
+  dotnet nuget push foo.nupkg
+  ```
 
-既定のシンボル ソースに *foo.symbols.nupkg* をプッシュします。
+* 既定のシンボル ソースに *foo.symbols.nupkg* をプッシュします。
 
-`dotnet nuget push foo.symbols.nupkg`
+  ```console
+  dotnet nuget push foo.symbols.nupkg
+  ```
 
-360 秒のタイムアウトを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
+* 360 秒のタイムアウトを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
-`dotnet nuget push foo.nupkg --timeout 360`
+  ```console
+  dotnet nuget push foo.nupkg --timeout 360
+  ```
 
-既定のプッシュ ソースに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。
+* 既定のプッシュ ソースに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。
 
-`dotnet nuget push *.nupkg`
+  ```console
+  dotnet nuget push *.nupkg
+  ```

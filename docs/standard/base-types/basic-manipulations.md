@@ -1,5 +1,6 @@
 ---
-title: '方法: .NET Framework で基本的な文字列操作を実行する'
+title: '方法: .NET の基本的な文字列操作を実行する'
+description: 多くの文字列メソッドを呼び出す例を確認します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1206648c694c9f09a600e3c70f4aa27118b2d458
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: seodec18
+ms.openlocfilehash: 11f8043745c631a642b437339240cbf06fc8df5b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44178053"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130638"
 ---
 # <a name="how-to-perform-basic-string-manipulations-in-net"></a>方法: .NET の基本的な文字列操作を実行する
 次の例では、「[基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)」のトピックで説明したいくつかの方法を使用して、実際のアプリケーションで見られる方法で文字列の操作を実行するクラスを構築します。 `MailToData` クラスは、個人の名前とアドレスを個別のプロパティに格納し、`City`、`State`、`Zip` フィールドを組み合わせて、ユーザーに表示する1 つの文字列にする方法を提供します。 さらに、このクラスを使用して、ユーザーが市区町村、都道府県、および郵便番号情報を 1 つの文字列として入力することができます。アプリケーションは自動的に 1 つの文字列を解析し、対応するプロパティに適切な情報を入力します。  

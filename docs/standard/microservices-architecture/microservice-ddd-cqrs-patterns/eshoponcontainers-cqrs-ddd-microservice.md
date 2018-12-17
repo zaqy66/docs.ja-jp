@@ -1,17 +1,17 @@
 ---
 title: eShopOnContainers で DDD マイクロサービスの CQRS と CQS のアプローチを適用する
-description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | eShopOnContainers で DDD マイクロサービスの CQRS と CQS のアプローチを適用する'
+description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | CQRS を eShopOnContainers の注文マイクロサービスに実装する方法を理解する。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: fdca8d38157d5c5b62bd077e5d715ca22ac9780f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106750"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143637"
 ---
-# <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers で DDD マイクロサービスの CQRS と CQS のアプローチを適用する
+# <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers の DDD マイクロサービスに CQRS および CQS のアプローチを適用する
 
 eShopOnContainers 参照アプリケーションの注文マイクロサービスの設計は、CQRS 原則に基づいています。 ただし、使用されているのは最もシンプルなアプローチ、つまり、コマンドからクエリを分離し、両方のアクションで同じデータベースを使用するというアプローチです。
 
@@ -23,7 +23,7 @@ eShopOnContainers 参照アプリケーションの注文マイクロサービ�
 
 そうしたパターンの 1 つは集計パターンです。これについては、後のセクションでさらに説明します。 簡単に言うと、集約パターンでは、多数のドメイン オブジェクトがドメイン内で互いに持つリレーションシップの結果として、1 つの単位として処理されます。 このパターンを採用しても、クエリに利点があるとは限りません。クエリ ロジックの複雑さが増す可能性があります。 読み取り専用クエリの場合、複数のオブジェクトを単一の集計として扱う利点はありません。 複雑さが増すだけです。
 
-図 9-2 に示されているように、このガイドでは、DDD パターンをマイクロ サービスのトランザクション/更新領域 (つまり、コマンドによってトリガーされる部分) にのみ使用することを提案しています。 クエリはよりシンプルなアプローチに従うことができ、CQRS アプローチに従ってコマンドから分離する必要があります。
+図 7-2 に示されているように、このガイドでは、DDD パターンをマイクロサービスのトランザクション/更新領域 (つまり、コマンドによってトリガーされる部分) にのみ使用することを提案しています。 クエリはよりシンプルなアプローチに従うことができ、CQRS アプローチに従ってコマンドから分離する必要があります。
 
 「クエリ サイド」を実装する場合、EF Core、AutoMapper プロジェクション、ストアド プロシージャ、ビュー、具体化されたビュー、マイクロ ORM など本格的な ORM の多様なアプローチから選択できます。
 
@@ -33,7 +33,7 @@ eShopOnContainers 参照アプリケーションの注文マイクロサービ�
 
 ## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>CQRS パターンと DDD パターンは最上位のアーキテクチャではない
 
-CQRS とほとんどの DDD のパターン (DDD レイヤー、または集計を伴うドメイン モデル) はアーキテクチャ スタイルではなく、アーキテクチャ パターンに過ぎないことを理解するのは重要です。 マイクロサービス、SOA、イベント駆動型アーキテクチャ (EDA) はアーキテクチャ スタイルの例です。 これらは、多くのマイクロサービスなどの多数のコンポーネントで構成されるシステムを記述します。 CQRS パターンと DDD パターンは、1 つのシステムまたはコンポーネント内にあるもの (この場合は、マイクロサービス内にあるもの) を記述します。
+CQRS とほとんどの DDD のパターン (DDD レイヤー、集約を伴うドメイン モデルなど) はアーキテクチャ スタイルではなく、アーキテクチャ パターンに過ぎないことを理解するのは重要です。 マイクロサービス、SOA、イベント駆動型アーキテクチャ (EDA) はアーキテクチャ スタイルの例です。 これらは、多くのマイクロサービスなどの多数のコンポーネントで構成されるシステムを記述します。 CQRS パターンと DDD パターンは、1 つのシステムまたはコンポーネント内にあるもの (この場合は、マイクロサービス内にあるもの) を記述します。
 
 境界付けられたコンテキスト (BC) が異なると、採用されるパターンも異なります。 それぞれ責任が異なり、異なる解決策に至ります。 強調する価値がある点として、至る所で同じパターンを無理に当てはめると失敗に至ります。 所かまわず CQRS パターンと DDD パターンを使用しないようにしてください。 多くのサブシステム、BC、マイクロサービスはよりシンプルであり、シンプルな CRUD サービスや別のアプローチを使うとより簡単に実装できます。
 
@@ -41,28 +41,27 @@ CQRS とほとんどの DDD のパターン (DDD レイヤー、または集計�
 
 ####  <a name="additional-resources"></a>その他の技術情報
 
--   **Martin Fowler。CQRS**
-    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
+- **Martin Fowler。CQRS** \
+  [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Greg Young。CQS と CQRS**
-    [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
+- **Greg Young。CQS と CQRS** \
+  [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young。CQRS ドキュメント**
-    [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
+- **Greg Young。CQRS ドキュメント** \
+  [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young。CQRS、タスク ベースの UI、イベント ソース**
-    [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
+- **Greg Young。CQRS、タスク ベースの UI、イベント ソース** \
+  [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Udi Dahan。CQRS の明確化**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **Udi Dahan。CQRS の明確化** \
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **CQRS**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **CQRS** \
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **イベント ソース (ES)**
-    [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
-
+- **イベント ソース (ES)** \
+  [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 >[!div class="step-by-step"]
-[前へ](apply-simplified-microservice-cqrs-ddd-patterns.md)
-[次へ](cqrs-microservice-reads.md)
+>[前へ](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[次へ](cqrs-microservice-reads.md)

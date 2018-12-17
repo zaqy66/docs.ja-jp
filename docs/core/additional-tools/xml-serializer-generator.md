@@ -1,17 +1,17 @@
 ---
-title: .NET Core で Microsoft XML Serializer Generator を使用する
-description: Microsoft XML Serializer Generator の概要。
+title: Microsoft XML Serializer Generator - .NET Core
+description: Microsoft XML Serializer Generator の概要。 XML Serializer Generator を使用して、プロジェクトに格納される型のために XML シリアル化アセンブリを生成します。
 author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 98d85821784757db903c97e240c55a3d7bb656d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 3712ac35a9e08b04a0f555642f43055e9e6232e2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214557"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151760"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core で Microsoft XML Serializer Generator を使用する
 
@@ -30,7 +30,7 @@ ms.locfileid: "33214557"
 
 このチュートリアルを完了するには、次のものが必要です。
 
-* [.NET Core SDK 2.1.3 以降](https://www.microsoft.com/net/download) をインストールします
+* [.NET Core 2.1 SDK 以降](https://www.microsoft.com/net/download)をインストールします。
 * コード エディターをまだインストールしていなければ、お気に入りのエディターをインストールしてください。
 
 > [!TIP]

@@ -1,6 +1,6 @@
 ---
 title: Visual Basic の新機能
-ms.date: 10/04/2018
+ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e77dca6f87e5039f4aa668a8e08ec112c9eb1b9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194060"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146158"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -21,10 +21,13 @@ ms.locfileid: "50194060"
   
 ## <a name="current-version"></a>現在のバージョン
 
-Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5  
-新しい機能については、「[Visual Basic 15.5](#visual-basic-155)」を参照してください。
+Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8  
+新しい機能については、「[Visual Basic 15.8](#visual-basic-158)」を参照してください。
 
 ## <a name="previous-versions"></a>以前のバージョン
+
+Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5  
+新しい機能については、「[Visual Basic 15.5](#visual-basic-155)」を参照してください。
 
 Visual Basic 15.3 / Visual Studio 2017 バージョン 15.3  
 新しい機能については、「[Visual Basic 15.3](#visual-basic-153)」を参照してください。
@@ -55,6 +58,39 @@ Visual Basic / Visual Studio .NET 2003
 
 Visual Basic / Visual Studio .NET 2002   
 Visual Basic .NET の最初のリリース
+
+## <a name="visual-basic-158"></a>Visual Basic 15.8
+
+**浮動小数点から整数への変換の最適化**
+
+以前のバージョンの Visual Basic では、[倍精度浮動小数点型](../language-reference/data-types/double-data-type.md)と[単精度浮動小数点型](../language-reference/data-types/single-data-type.md)の値の整数への変換で比較的低いパフォーマンスが提供されていました。 Visual Basic 15.8 では、次のいずれかのメソッドによって返された値を[固有の Visual Basic 整数変換の関数](../language-reference/functions/type-conversion-functions.md) (CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng) の 1 つに渡すとき、または [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) が `Off` に設定されているときに、値が整数型に暗黙的にキャストされる次のいずれかのメソッドによって返されるときに、浮動小数点の整数への変換のパフォーマンスが大幅に向上します。
+
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Single)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Single)?displayProperty=nameWithType>
+- <xref:System.Math.Ceiling(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Floor(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
+
+この最適化によって、コードをより速く実行できます。大きい数値の整数型への変換を行うコードでは、最大で 2 倍速くなります。 次の例では、この最適化によって影響を受けるシンプルなメソッドの呼び出しを示しています。
+
+```vb
+Dim s As Single = 173.7619
+Dim d As Double = s 
+
+Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
+Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
+Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
+Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
+Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
+
+```
+
+これは、浮動小数点の値を四捨五入するのではなく、切り詰められることに注意してください。
 
 ## <a name="visual-basic-155"></a>Visual Basic 15.5
 

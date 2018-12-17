@@ -4,12 +4,12 @@ description: .NET Core で提供される、C# 言語レベルの非同期プロ
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: e562ef9fffa5bf77fd5dee1cb19cee0a2492b986
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349096"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126498"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
@@ -108,7 +108,7 @@ C# 側では、コンパイラはコードをステート マシンに変換し�
     
 処理が **I/O バインド**の場合は、`async` と `await` を使いますが、`Task.Run` は "*使いません*"。  タスク並列ライブラリは "*使わないでください*"。  その理由について詳しくは、「[非同期の詳細](../standard/async-in-depth.md)」をご覧ください。
 
-処理が **CPU バインド**であり、応答性が重要な場合は、`async` と `await` を使い、`Task.Run` を "*使って*" 別のスレッドで処理を実行します。  処理がコンカレンシーと並列処理に適している場合は、タスク並列ライブラリを使うことも考慮する必要があります。
+処理が **CPU バインド**であり、応答性が重要な場合は、`async` と `await` を使い、`Task.Run` を "*使って*" 別のスレッドで処理を実行します。  処理がコンカレンシーと並列処理に適している場合は、[タスク並列ライブラリ](../standard/parallel-programming/task-parallel-library-tpl.md)を使うことも考慮する必要があります。
 
 さらに、常にコードの実行を測定する必要があります。  たとえば、マルチスレッドでのコンテキスト切り替えのオーバーヘッドと比較して、CPU バインドの処理の負荷がそれほど大きくないことがわかる場合があります。  すべての選択肢にはトレードオフがあり、状況に合った適切なトレードオフを選ぶ必要があります。
 

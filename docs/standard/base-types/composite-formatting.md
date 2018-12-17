@@ -1,6 +1,6 @@
 ---
 title: 複合書式指定
-ms.date: 03/30/2017
+ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,31 +15,34 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397934"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126862"
 ---
 # <a name="composite-formatting"></a>複合書式指定
+
 .NET の複合書式指定機能は、オブジェクトのリストおよび複合書式指定文字列を入力として使用します。 複合書式指定文字列は、固定テキストに、書式指定項目と呼ばれるインデックス化されたプレースホルダーが混合されて構成されます。このプレースホルダーはリスト内のオブジェクトに対応します。 書式設定操作によって生成される結果の文字列は、元の固定テキストに文字列で表されたリスト内のオブジェクトが混合されて構成されます。  
   
- 複合書式指定機能をサポートするメソッドには、次のようなものがあります。  
+> [!IMPORTANT]
+> 使用している言語と言語バージョンでサポートされている場合、複合書式指定文字列を使用する代わりに、*挿入文字列*を使用することができます。 挿入文字列は、*挿入式*が含まれている文字列です。 各挿入式は式の値によって解かれ、文字列が割り当てられるとき、結果文字列に含まれます。 詳細については、[文字列補間 (C# リファレンス)](../../csharp/language-reference/tokens/interpolated.md) および[補間文字列 (Visual Basic リファレンス)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) に関するページを参照してください。
+
+複合書式指定機能をサポートするメソッドには、次のようなものがあります。  
   
--   <xref:System.String.Format%2A?displayProperty=nameWithType>。書式設定された結果文字列を返します。  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>。書式設定された結果文字列を返します。  
   
--   <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>。書式設定された結果文字列を <xref:System.Text.StringBuilder> オブジェクトに追加します。  
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>。書式設定された結果文字列を <xref:System.Text.StringBuilder> オブジェクトに追加します。   
+- <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドの一部のオーバーロード。書式設定された結果文字列をコンソールに表示します。  
   
--   <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドの一部のオーバーロード。書式設定された結果文字列をコンソールに表示します。  
+- <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> メソッドの一部のオーバーロード。書式設定された結果文字列をストリームまたはファイルに書き込みます。 <xref:System.IO.TextWriter> から派生したクラス (<xref:System.IO.StreamWriter>、<xref:System.Web.UI.HtmlTextWriter> など) も、この機能を共有します。  
   
--   <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> メソッドの一部のオーバーロード。書式設定された結果文字列をストリームまたはファイルに書き込みます。 <xref:System.IO.TextWriter> から派生したクラス (<xref:System.IO.StreamWriter>、<xref:System.Web.UI.HtmlTextWriter> など) も、この機能を共有します。  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>。書式設定されたメッセージをトレース リスナーに出力します。  
   
--   <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>。書式設定されたメッセージをトレース リスナーに出力します。  
+- <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>、および <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッド。書式設定されたメッセージをトレース リスナーに出力します。  
   
--   <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>、および <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッド。書式設定されたメッセージをトレース リスナーに出力します。  
-  
--   <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッド。情報提供メソッドをトレース リスナーに書き込みます。  
+- <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッド。情報提供メソッドをトレース リスナーに書き込みます。  
   
 ## <a name="composite-format-string"></a>複合書式指定文字列  
  複合書式指定文字列とオブジェクト リストは、複合書式指定機能をサポートするメソッドの引数として使用されます。 複合書式指定文字列は、1 つ以上の書式指定項目が混合された 0 個以上の固定テキストで構成されます。 固定テキストはユーザーが任意に選択した文字列で、各書式指定項目はリスト内のオブジェクトまたはボックス化された構造体に対応します。 複合書式指定機能は、各書式指定項目がリスト内の対応するオブジェクトの文字列表現で置換された新しい文字列を返します。  
@@ -113,7 +116,7 @@ ms.locfileid: "47397934"
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>処理の順序  
- 複合書式指定メソッドの呼び出しに、値が <xref:System.IFormatProvider> でない `null` 引数が含まれている場合、ランタイムはその <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドを呼び出して、<xref:System.ICustomFormatter> 実装を要求します。 このメソッドが <xref:System.ICustomFormatter> 実装を返すことができる場合、実装は複合書式指定メソッドの呼び出しの期間中キャッシュされます。
+ 複合書式指定メソッドの呼び出しに、値が `null` でない <xref:System.IFormatProvider> 引数が含まれている場合、ランタイムはその <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドを呼び出して、<xref:System.ICustomFormatter> 実装を要求します。 このメソッドが <xref:System.ICustomFormatter> 実装を返すことができる場合、実装は複合書式指定メソッドの呼び出しの期間中キャッシュされます。
   
  書式指定項目に対応するパラメーター リストのそれぞれの値は、次のように文字列に変換されます。  
   
@@ -123,9 +126,9 @@ ms.locfileid: "47397934"
   
 3.  値が <xref:System.IFormattable> インターフェイスを実装している場合は、インターフェイスの <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> メソッドが呼び出されます。 メソッドは、*formatString* 値 (書式指定項目内に値がある場合) または `null` (ない場合) を受け取ります。 <xref:System.IFormatProvider> 引数は、次のように判断されます。  
   
-    -   数値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.Globalization.NumberFormatInfo> メソッドから <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.NumberFormatInfo> オブジェクトが使用されます。  
+    -   数値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドから <xref:System.Globalization.NumberFormatInfo> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.NumberFormatInfo> オブジェクトが使用されます。  
   
-    -   日付と時刻の値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.Globalization.DateTimeFormatInfo> メソッドから <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.DateTimeFormatInfo> オブジェクトが使用されます。  
+    -   日付と時刻の値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドから <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.DateTimeFormatInfo> オブジェクトが使用されます。  
   
     -   他の型のオブジェクトの場合、<xref:System.IFormatProvider> 引数を使用して複合書式のメソッドを呼び出すと、その値は <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 実装に直接渡されます。 それ以外の場合は、`null` が <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 実装に渡されます。  
   

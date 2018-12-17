@@ -3,15 +3,15 @@ title: ターゲット フレームワーク
 description: .NET Core アプリとライブラリのターゲット フレームワークについて説明します。
 author: richlander
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 12/03/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 76bf496e957022f4d97d3cf3f3975f334b1d5c45
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7418c07a211333655501dd9f3d16e72e40564ffd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842113"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147460"
 ---
 # <a name="target-frameworks"></a>ターゲット フレームワーク
 
@@ -118,7 +118,7 @@ public class MyClass
 
 次のターゲット フレームワークは非推奨とされます。 これらのターゲット フレームワークをターゲットにするパッケージは、指定されている代替フレームワークに移行する必要があります。
 
-| 非推奨の TFM                                                                             | 移行先 |
+| 非推奨の TFM                                                                             | Replacement |
 | ------------------------------------------------------------------------------------------ | ----------- |
 | aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
 | dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandard |

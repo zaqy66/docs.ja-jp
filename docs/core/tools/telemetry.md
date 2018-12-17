@@ -4,12 +4,12 @@ description: 利用情報を収集して分析する .NET Core SDK の製品利�
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c8c6688b7b29c7e65c723e1f1ff31b3bd4c8c1ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129143"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 製品利用統計情報
 
@@ -52,7 +52,7 @@ ms.locfileid: "48841626"
 
 &#8224; このメトリックは公開されています。
 
-.NET Core SDK 2.0 以降では、新しいデータ ポイントが収集されます。
+.NET Core 2.0 SDK 以降、新しいデータ ポイントが収集されます。
 
 - `dotnet` コマンドの引数とオプション: (任意の文字列ではなく) 既知の引数とオプションのみが収集されます。
 - SDK がコンテナーで実行されているかどうか。
@@ -68,9 +68,9 @@ ms.locfileid: "48841626"
 
 公開データは四半期ごとに利用可能で、「[.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)」 (.NET core SDK の使用状況データ) に一覧表示されます。 データ ファイルの列は次のとおりです。
 
-- タイムスタンプ
+- Timestamp
 - Occurrences&#8224;
-- コマンド
+- Command
 - Geography&#8225;
 - OSFamily
 - RuntimeID
@@ -83,9 +83,9 @@ ms.locfileid: "48841626"
 
 ### <a name="example"></a>例
 
-| タイムスタンプ      | Occurrences | コマンド | Geography | OSFamily | RuntimeID     | OSVersion | SDKVersion |
+| Timestamp      | Occurrences | Command | Geography | OSFamily | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
-| 4/16/2017 0:00 | 8           | 実行     | Uganda    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
+| 4/16/2017 0:00 | 8           | run     | Uganda    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
 
 ### <a name="datasets"></a>データセット
 

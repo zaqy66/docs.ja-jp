@@ -1,19 +1,19 @@
 ---
 title: クライアント側の検証 (プレゼンテーション層での検証)
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | クライアント側の検証 (プレゼンテーション層での検証)
+description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | クライアント側の検証の主な概念を調べる。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 10/08/2018
+ms.openlocfilehash: 3ec8ca932924c1b1b6750dd30750e3c1e56b7538
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582425"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130079"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>クライアント側の検証 (プレゼンテーション層での検証)
 
-実際のソースがドメイン モデルで、最終的にドメイン モデル レベルで検証が必要な場合でも、検証はドメイン モデル レベル (サーバー側) とクライアント側の両方で処理できます。
+実際のソースがドメイン モデルで、最終的にドメイン モデル レベルで検証が必要な場合でも、検証は引き続きドメイン モデル レベル (サーバー側) と UI (クライアント側) の両方で処理できます。
 
 クライアント側の検証は、ユーザーにとって非常に便利です。 他の方法では、検証エラーが返される可能性のあるサーバーへのラウンド トリップを待つために必要な時間を節約できます。 ビジネス的に表現すると、1 回だけ見ればわずかな時間でも、それが毎日何百回も積み重なると、膨大な時間、費用、フラストレーションになります。 簡単かつ迅速な検証は、ユーザーの作業をいっそう効率的にし、入力と出力の品質が向上します。
 
@@ -29,27 +29,27 @@ ms.locfileid: "48582425"
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin モバイル アプリの検証
 
--   **テキスト入力の検証とエラーの表示**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+- **テキスト入力の検証とエラーの表示** \
+  [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **検証コールバック**
-    [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+- **検証コールバック** \
+  [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>ASP.NET Core アプリの検証
 
--   **Rick Anderson の 検証の追加**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+- **Rick Anderson の 検証の追加** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web アプリの検証 (Angular 2、TypeScript、JavaScript)
 
--   **Ado Kukic。Angular 2 フォームの検証** 
-    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+- **Ado Kukic。Angular 2 フォームの検証** \
+  [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **フォームの検証**
-    [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+- **フォームの検証** \
+  [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **検証。** Breeze ドキュメント。
-    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
+- **検証。** Breeze ドキュメント。 \
+  [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
 要約すると、検証に関する最も重要な概念は次のとおりです。
 
@@ -59,10 +59,8 @@ ms.locfileid: "48582425"
 
 - 集計などの複数の関連オブジェクトを作成する必要があり、すべてのオブジェクトが作成された後にのみ有効になる場合は、ファクトリ パターンの使用を検討してください。
 
-- 検証フレームワークは、プレゼンテーション レイヤーやアプリケーション/サービス レイヤーなどの特定のレイヤーで最もよく使用されますが、インフラストラクチャ フレームワークに強く依存する必要があるため、通常はドメイン モデル レイヤーでは使用されません。
-
 - ほとんどの場合、クライアント側で冗長な検証を行うことをお勧めします。これは、アプリケーションを事前対応型にすることができるためです。
 
 >[!div class="step-by-step"]
-[前へ](domain-model-layer-validations.md)
-[次へ](domain-events-design-implementation.md)
+>[前へ](domain-model-layer-validations.md)
+>[次へ](domain-events-design-implementation.md)

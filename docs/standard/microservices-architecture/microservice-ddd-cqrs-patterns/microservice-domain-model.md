@@ -1,19 +1,19 @@
 ---
 title: マイクロサービス ドメイン モデルの設計
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービス ドメイン モデルの設計
+description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD 指向ドメイン モデルの設計時の主な概念を理解する
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/09/2017
-ms.openlocfilehash: 9a54679fc28bb2adf803a38fe5e43f67048a4cfd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048477"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143618"
 ---
-# <a name="designing-a-microservice-domain-model"></a>マイクロサービス ドメイン モデルの設計
+# <a name="design-a-microservice-domain-model"></a>マイクロサービス ドメイン モデルの設計
 
-*ビジネス マイクロサービスまたは有界コンテキストごとに 1 つのリッチ ドメイン モデルを定義する*
+*ビジネス マイクロサービスまたは有界コンテキストごとに 1 つのリッチ ドメイン モデルを定義します。*
 
 ここでの目標は、ビジネス マイクロサービスまたは有界コンテキスト (BC) ごとに 1 つのまとまりのあるドメイン モデルを作成することです。 ただし、BC またはビジネス マイクロサービスは、1 つのドメイン モデルを共有する複数の物理サービスから構成される場合があることに注意してください。 ドメイン モデルは、それが表す 1 つの有界コンテキストまたはビジネス マイクロサービスのルール、ビヘイビアー、ビジネス言語、および制約をキャプチャする必要があります。
 
@@ -23,19 +23,19 @@ ms.locfileid: "50048477"
 
 *エンティティの ID は、複数のマイクロサービスまたは有界コンテキストを横断できる。*
 
-同じ ID (ただし、同じエンティティではない) を複数の有界コンテキストまたはマイクロサービス全体でモデリングできます。 ただし、同じ属性とロジックを持つ同じエンティティが複数の有界コンテキストに実装されるわけではありません。 代わりに、それぞれの有界コンテキストのエンティティは、その属性とビヘイビアーを有界コンテキストのドメインで必要なものに制限します。
+同じ ID (つまり、同じドメイン エンティティではない可能性がありますが、同じ `Id` 値) を複数の有界コンテキストまたはマイクロサービス全体でモデリングできます。 ただし、同じ属性とロジックを持つ同じエンティティが複数の有界コンテキストに実装されるわけではありません。 代わりに、それぞれの有界コンテキストのエンティティは、その属性とビヘイビアーを有界コンテキストのドメインで必要なものに制限します。
 
 たとえば、バイヤー エンティティは、プロファイルまたは ID マイクロサービスのユーザー エンティティで定義された個人の属性の大部分を持っている可能性があります (ID を含む)。 しかし、注文マイクロサービスのバイヤー エンティティは、持っている属性が少ない可能性があります。注文プロセスに特定のバイヤー データしか関連付けられていないからです。 各マイクロサービスまたは有界コンテキストのコンテキストは、そのドメイン モデルに影響を与えます。
 
-*ドメイン エンティティは、データ属性を実装するだけでなく、ビヘイビアーも実装する必要がある*
+*ドメイン エンティティは、データ属性を実装するだけでなく、ビヘイビアーも実装する必要があります。*
 
 DDD のドメイン エンティティは、エンティティ データ (アクセスされるメモリ内のオブジェクト) に関連するドメイン ロジックまたはビヘイビアーを実装する必要があります。 たとえば、注文エンティティ クラスの一部として、ビジネス ロジックと操作を、タスク (注文項目の追加、データ検証、合計計算など) のメソッドとして実装する必要があります。 エンティティのメソッドは、エンティティのルールをアプリケーション レイヤー全体に広げるのではなく、エンティティの不変量とルールを処理します。
 
-図 9-8 は、データの属性だけではなく、操作やメソッドを、関連するドメイン ロジックとともに実装するドメイン エンティティを示しています。
+図 7-8 は、データの属性だけではなく、操作やメソッドを、関連するドメイン ロジックとともに実装するドメイン エンティティを示しています。
 
-![](./media/image9.png)
+![ドメイン モデル エンティティでは、メソッドからビヘイビアーを実装します。つまり、"貧血症" モデルではありません。](./media/image9.png)
 
-**図 9-8**. データとビヘイビアーを実装するドメイン エンティティ設計の例
+**図 7-8**。 データとビヘイビアーを実装するドメイン エンティティ設計の例
 
 もちろん、エンティティ クラスの一部としてどのロジックも実装しないエンティティを持つ場合もあります。 この状況は、大部分のロジックが集約ルートで定義されており、子エンティティが特別なロジックを持たない場合に、集約内の子エンティティで発生する場合があります。 ドメイン エンティティではなく、サービス クラスに多数のロジックが実装されている複雑なマイクロサービスがある場合は、ドメイン モデル貧血症になる場合があります。ドメイン モデル貧血症については、次のセクションで説明します。
 
@@ -57,15 +57,14 @@ Martin Fowler は、投稿した [AnemicDomainModel](https://martinfowler.com/bl
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **DevIQ。ドメイン エンティティ**
-    [*https://deviq.com/entity/*](https://deviq.com/entity/)
+- **DevIQ。ドメイン エンティティ** \
+  [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
--   **Martin Fowler。ドメイン モデル**
-    [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
+- **Martin Fowler。ドメイン モデル** \
+  [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
--   **Martin Fowler。ドメイン モデル貧血症に関する記事**
-
-    <https://martinfowler.com/bliki/AnemicDomainModel.html>
+- **Martin Fowler。貧血症ドメイン モデル** \
+  [*https://martinfowler.com/bliki/AnemicDomainModel.html*](https://martinfowler.com/bliki/AnemicDomainModel.html)
 
 ### <a name="the-value-object-pattern"></a>値オブジェクト パターン
 
@@ -79,18 +78,20 @@ Eric Evans は、"多くのオブジェクトは、概念 ID を持ちません�
 
 値オブジェクトは、関係データベースや ORM (EF など) では管理が難しいですが、ドキュメント指向データベースでは簡単に実装して使用できます。
 
+EF Core 2.0 には、後で詳しく説明しているように、値オブジェクトを処理しやすくする[所有エンティティ](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)機能が含まれます。
+
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **Martin Fowler。値オブジェクト パターン**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Martin Fowler。値オブジェクト パターン**
+  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **値オブジェクト**
-    [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
+- **値オブジェクト**
+  [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
--   **テスト駆動型開発での値オブジェクト**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+- **テスト駆動型開発での値オブジェクト**
+  [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software (ドメイン駆動設計: ソフトウェア中心部の複雑さへの取り組み)。** (書籍、値オブジェクトについての記載あり) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software (ドメイン駆動設計: ソフトウェア中心部の複雑さへの取り組み)。** (書籍、値オブジェクトについての記載あり) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>集約パターン
 
@@ -104,15 +105,15 @@ Eric Evans は、"多くのオブジェクトは、概念 ID を持ちません�
 
 集約は、集約ルートという 1 つ以上のエンティティから構成されています (集約ルートは、ルート エンティティまたはプライマリ エンティティとも呼ばれます)。 また、集約は、複数の子エンティティと値オブジェクトを持つことができ、すべてのエンティティとオブジェクトが連携して、必要なビヘイビアーやトランザクションを実装しています。
 
-集約ルートの目的は、集約の一貫性を維持することです。集約ルートは、集約ルート クラスのメソッドまたは操作を通じて集約に入るための唯一の更新用のエントリ ポイントである必要があります。 集約内のエンティティを変更するときは、必ず集約ルートを経由する必要があります。 これは、集約の一貫性を管理するもので、集約で従う必要のあるすべての不変量および一貫性のルールを考慮しています。 子エンティティまたは値オブジェクトを別々に変更した場合、集約ルートは、集約が有効な状態であることを保証できません。 本来の機能を発揮できなくなるでしょう。 一貫性の管理は、集約のルートの主も重要な目的です。
+集約ルートの目的は、集約の一貫性を維持することです。集約ルートは、集約ルート クラスのメソッドまたは操作を通じて集約に入るための唯一の更新用のエントリ ポイントである必要があります。 集約内のエンティティを変更するときは、必ず集約ルートを経由する必要があります。 これは、集約の一貫性を管理するもので、集約で従う必要がある可能性があるすべての不変量および一貫性のルールを考慮しています。 子エンティティまたは値オブジェクトを別々に変更した場合、集約ルートは、集約が有効な状態であることを保証できません。 本来の機能を発揮できなくなるでしょう。 一貫性の管理は、集約のルートの主も重要な目的です。
 
-図 9-9 には、バイヤー集約などのサンプル集約が示されています。バイヤー集約には、1 つのエンティティ (集約ルート バイヤー) が含まれています。 注文集約には、複数のエンティティと値オブジェクトが含まれています。
+図 7-9 には、バイヤー集約などのサンプル集約が示されています。バイヤー集約には、1 つのエンティティ (集約ルート バイヤー) が含まれています。 注文集約には、複数のエンティティと値オブジェクトが含まれています。
 
-![](./media/image10.png)
+![DDD ドメイン モデルは集約から構成され、集約には 1 つまたは複数のエンティティを含めることができ、値オブジェクトも含めることができます。](./media/image10.png)
 
-**図 9-9**. 複数のエンティティまたは 1 つのエンティティを含む集約の例
+**図 7-9**。 複数のエンティティまたは 1 つのエンティティを含む集約の例
 
-バイヤー集約は、ドメインによっては、eShopOnContainers 参照アプリケーションの注文マイクロサービスの場合と同様、追加の子エンティティを持つことができることに注意してください。 図 9-9 は、集約ルートのみを含む集約の例として、バイヤーが 1 つのエンティティを持つケースを示しています。
+バイヤー集約は、ドメインによっては、eShopOnContainers 参照アプリケーションの注文マイクロサービスの場合と同様、追加の子エンティティを持つことができることに注意してください。 図 7-9 は、集約ルートのみを含む集約の例として、バイヤーが 1 つのエンティティを持つケースを示しています。
 
 集約を分離し、集約間の境界を明確にし続けるためには、DDD ドメイン モデルで、集約間の直接の移動を禁止し、eShopOnContainers の[注文マイクロサービス ドメイン モデル](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)に実装されている外部キー (FK) フィールドのみを持つことをお勧めします。 注文エンティティは、次のコードに示すように、バイヤーの FK フィールドのみを持ち、EF コア ナビゲーション プロパティは持ちません。
 
@@ -133,24 +134,24 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **Vaughn Vernon。効果的な集約設計 - パート I: 1 つの集約のモデリング**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon。効果的な集約設計 - パート I: 1 つの集約のモデリング** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon。効果的な集約設計 - パート II: 集約処理の連携**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon。効果的な集約設計 - パート II: 集約処理の連携** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
 
--   **Vaughn Vernon。効果的な集約設計 - パート III: 探索によるインサイトの獲得**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon。効果的な集約設計 - パート III: 探索による分析情報の獲得** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
 
--   **Sergey Grybniak。DDD 戦術的デザイン パターン**
-    [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+- **Sergey Grybniak。DDD 戦術的デザイン パターン** \
+  [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson。集約を使用したトランザクション マイクロサービスの開発**
-    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+- **Chris Richardson。集約を使用したトランザクション マイクロサービスの開発** \
+  [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ。集約パターン**
-    [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
+- **DevIQ。集約パターン** \
+  [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
-[前へ](ddd-oriented-microservice.md)
-[次へ](net-core-microservice-domain-model.md)
+>[前へ](ddd-oriented-microservice.md)
+>[次へ](net-core-microservice-domain-model.md)

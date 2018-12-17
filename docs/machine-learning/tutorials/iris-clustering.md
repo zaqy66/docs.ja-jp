@@ -1,19 +1,19 @@
 ---
-title: ML.NET を使用してアヤメの花をクラスター化する (クラスタリング)
+title: クラスタリング ラーナーを使用して アヤメの花をクラスター化する - ML.NET
 description: クラスタリングのシナリオで ML.NET を使用する方法について説明します
 author: pkulikov
 ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 5bd73c774f60466daaf52215c34e7e17b5f5cc9c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453191"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145630"
 ---
-# <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>チュートリアル: ML.NET を使用してアヤメの花をクラスター化する (クラスタリング)
+# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>チュートリアル: ML.NET でクラスタリング ラーナーを使用して アヤメの花をクラスター化する
 
 > [!NOTE]
 > このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳しくは、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページをご覧ください。

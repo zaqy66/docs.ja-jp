@@ -1,6 +1,6 @@
 ---
 title: '?: 演算子 (C# リファレンス)'
-ms.date: 07/20/2015
+ms.date: 11/20/2018
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -9,76 +9,83 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 3e45ff6eaaefa5829c3ed9415abe1a12b7a1d069
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.openlocfilehash: cc9bde1d60a3272e2f24cfc05761171a31029c75
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "50980623"
 ---
 # <a name="-operator-c-reference"></a>?: 演算子 (C# リファレンス)
 
-一般に三項条件演算子として知られる、条件演算子 (`?:`) では、ブール式の値に応じて 2 つの値のいずれかが返されます。 条件演算子の構文は次のとおりです。  
+条件演算子 `?:` は、一般に三項条件演算子と呼ばれ、ブール式を評価し、ブール式の評価結果 (`true` または `false`) に応じて、2 つの式のいずれかの評価結果を返します。 C# 7.2 以降、[ref 条件式](#conditional-ref-expression)は、2 つの式のいずれかの結果への参照を返します。
+
+この条件演算子の構文は次のとおりです。
 
 ```csharp
-condition ? first_expression : second_expression;  
+condition ? consequence : alternative
 ```
 
-C# 7.2 より、`first_expression` と `second_expression` を [`ref` 式](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md)にすることができます。
+`condition` 式は `true` または `false` と評価する必要があります。 `condition` が `true` と評価された場合は、`consequence` 式が評価され、その結果が演算の結果になります。 `condition` が `false` と評価された場合は、`alternative` 式が評価され、その結果が演算の結果になります。 `consequence` または `alternative` のみが評価されます。
+
+`consequence` の型と `alternative` の型は同じ型であるか、一方の型から他方の型への暗黙の型変換が存在している必要があります。
+
+条件演算子は右結合です。つまり、次の形式の式があるとします。
 
 ```csharp
-ref condition ? ref first_expression : ref second_expression;  
+a ? b : c ? d : e
 ```
 
-結果は `ref` または `ref readonly` 変数に、または何の修飾子もない変数に割り当てることができます。
-
-## <a name="remarks"></a>コメント
-
-`condition` は、`true` または `false` に評価される必要があります。 `condition` が `true` の場合、`first_expression` が評価され、これが結果となります。 `condition` が `false` の場合、`second_expression` が評価され、これが結果となります。 2 つの式のどちらか一方だけが評価されます。 これは、結果が `ref` となる式では次が有効になるため、特に重要です。
+これが次のように評価されます。
 
 ```csharp
-ref (storage != null) ? ref storage[3] : ref defaultValue;
+a ? b : (c ? d : e)
 ```
 
-`storage` が null である場合、`storage`の参照は評価されません。
+条件演算子の使用例を次に示します。
 
-結果が値である場合、`first_expression` の型と `second_expression` の型とは、同じ型であるか、または一方の型から他方の型への暗黙の型変換が存在している必要があります。 結果が `ref` である場合は、`first_expression` と `second_expression` の型が同じである必要があります。
+[!code-csharp[non ref condtional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
 
-`if-else` の構築が必要となる場面で条件演算子を使用すると、計算をより簡潔に表現できます。 たとえば、次のコードは、まず `if` ステートメントを使用し、次に条件演算子を使用して、整数を正または負に分類します。
+## <a name="conditional-ref-expression"></a>ref 条件式
+
+C# 7.2 以降、ref 条件式を使用して、2 つの式のいずれかの結果に対する参照を返すことができます。 この参照を [ref ローカル](../keywords/ref.md#ref-locals)または [ref readonly ローカル](../keywords/ref.md#ref-readonly-locals)変数に代入できます。または、[参照の戻り値](../keywords/ref.md#reference-return-values)または [`ref` メソッドのパラメーター](../keywords/ref.md#passing-an-argument-by-reference)として使用できます。
+
+ref 条件式の構文は次のとおりです。
 
 ```csharp
-int input = Convert.ToInt32(Console.ReadLine());  
-string classify;  
-  
-// if-else construction.  
-if (input > 0)  
-    classify = "positive";  
-else  
-    classify = "negative";  
-  
-// ?: conditional operator.  
-classify = (input > 0) ? "positive" : "negative";  
+condition ? ref consequence : ref alternative
 ```
 
-条件演算子の結合規則は右から左になります。 `a ? b : c ? d : e` という式は、`a ? b : (c ? d : e)` ではなく、`(a ? b : c) ? d : e` と評価されます。  
-  
+元の条件演算子と同じように、ref 条件式は、2 つの式 (`consequence` または `alternative`) のいずれかのみを評価します。
+
+ref 条件式の場合、`consequence` と`alternative` の型は同じである必要があります。
+
+ref 条件演算子の使用例を次に示します。
+
+[!code-csharp[conditional ref](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+
+詳細については、[機能提案メモ](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md)を参照してください。
+
+## <a name="conditional-operator-and-an-ifelse-statement"></a>条件演算子と `if..else` ステートメント
+
+条件演算子を [if-else](../keywords/if-else.md) ステートメントで使用すると、値の計算を条件付きで実行する必要がある場合に、コードをもっと簡潔にできる可能性があります。 次の例では、整数を負の値または負以外の値に分類するための 2 つの方法を示しています。
+
+[!code-csharp[conditional and if-else](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#CompareWithIf)]
+
+## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
+
 条件演算子は、オーバーロードできません。
-  
-## <a name="example"></a>例
 
-次の例は、結果が値になる、条件演算子を示します。
+## <a name="c-language-specification"></a>C# 言語仕様
 
-[!code-csharp[csRefOperators?:](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の「[条件演算子](~/_csharplang/spec/expressions.md#conditional-operator)」セクションを参照してください。
 
-もう 1 つの例は、結果が ref になる条件演算子を示します。
+## <a name="see-also"></a>関連項目
 
-[!code-csharp[csRefOperatorsRef?:](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
-
-## <a name="see-also"></a>参照
-
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
-- [C# 演算子](../../../csharp/language-reference/operators/index.md)  
-- [if-else](../../../csharp/language-reference/keywords/if-else.md)  
-- [?. 演算子と ?[] 演算子](../../../csharp/language-reference/operators/null-conditional-operators.md)  
-- [??演算子](../../../csharp/language-reference/operators/null-coalescing-operator.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# 演算子](index.md)
+- [if-else ステートメント](../keywords/if-else.md)
+- [?. 演算子と ?[] 演算子](null-conditional-operators.md)
+- [??演算子](null-coalescing-operator.md)
+- [ref キーワード](../keywords/ref.md)

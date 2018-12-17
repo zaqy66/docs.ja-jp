@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201599"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146577"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同期プリミティブの概要
 
@@ -79,9 +79,9 @@ ms.locfileid: "50201599"
 
 ### <a name="readerwriterlockslim-class"></a>ReaderWriterLockSlim クラス
 
-<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> クラスでは、書き込み用の共有リソースへの排他アクセスを許可し、複数のスレッドでの読み取り用のリソースへの同時アクセスを許可します。 スレッドセーフ読み取り操作をサポートするが、書き込み操作を行うために排他アクセスを必要とする共有データ構造体へのアクセスを同期する場合は、<xref:System.Threading.ReaderWriterLockSlim> を使用できます。 スレッドで (たとえば、<xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> メソッドを呼び出して) 排他アクセスを要求すると、後続のリーダーの要求は、既存のすべてのリーダーがロックを終了し、ライターがロックに参加して終了するまでブロックされます。
+<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> クラスでは、書き込み用の共有リソースへの排他アクセスを許可し、複数のスレッドでの読み取り用のリソースへの同時アクセスを許可します。 スレッドセーフ読み取り操作をサポートするが、書き込み操作を行うために排他アクセスを必要とする共有データ構造体へのアクセスを同期する場合は、<xref:System.Threading.ReaderWriterLockSlim> を使用できます。 スレッドで (たとえば、<xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> メソッドを呼び出して) 排他アクセスを要求すると、後続のリーダーとライターの要求は、既存のすべてのリーダーがロックを終了し、ライターがロックに参加して終了するまでブロックされます。
   
-詳細については、「[読み取り/書き込みロック](reader-writer-locks.md)」 の記事と、<xref:System.Threading.ReaderWriterLockSlim> API リファレンスを参照してください。
+詳細については、<xref:System.Threading.ReaderWriterLockSlim> API リファレンスを参照してください。
 
 ### <a name="semaphore-and-semaphoreslim-classes"></a>Semaphore および SemaphoreSlim クラス
 
@@ -134,7 +134,7 @@ Windows では、プロセス間同期で <xref:System.Threading.EventWaitHandle
 
 <xref:System.Threading.Interlocked?displayProperty=nameWithType> クラスでは、変数に対してシンプルなアトミック操作を実行する静的メソッドが提供されます。 それらのアトミック操作としては、64 ビット整数値を対象とした追加、インクリメントとデクリメント、交換、比較による条件付き交換、読み取りの各操作があります。
 
-詳細については、「[インタロックされた操作](interlocked-operations.md)」の記事と、<xref:System.Threading.Interlocked> API リファレンスを参照してください。
+詳細については、<xref:System.Threading.Interlocked> API リファレンスを参照してください。
 
 ## <a name="spinwait-structure"></a>SpinWait 構造体
 

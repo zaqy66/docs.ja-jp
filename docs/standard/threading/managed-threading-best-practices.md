@@ -1,6 +1,6 @@
 ---
 title: マネージド スレッド処理の実施
-ms.date: 11/30/2017
+ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562373"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150616"
 ---
 # <a name="managed-threading-best-practices"></a>マネージド スレッド処理の実施
 マルチスレッドには慎重なプログラミングが必要です。 ほとんどのタスクでは、スレッド プールのスレッドを使って実行の要求をキューに置くことによって、処理の複雑さを軽減できます。 このトピックでは、マルチ スレッド動作の調整や、ブロックするスレッドの処理など、より難しい状況について説明します。  
@@ -70,37 +70,18 @@ else {
   
  競合状態は、複数のスレッドの動作を同期するときにも発生します。 コードを記述するときには、そのコードの行 (または行を構成する各マシン命令) を実行するスレッドが別のスレッドに追い越された場合に何が起きるのかを考慮しておく必要があります。  
   
-## <a name="number-of-processors"></a>プロセッサの数  
- ほとんどのコンピューターは、タブレットや携帯電話のような小型のデバイスでさえも、複数のプロセッサ (コアともいいます) を持ちます。 シングル プロセッサ コンピューターでも動作するソフトウェアを開発する場合は、マルチスレッドによってシングル プロセッサ コンピューターとマルチプロセッサ コンピューターとで異なる問題が解決される点に注意してください。  
-  
-### <a name="multiprocessor-computers"></a>マルチプロセッサ コンピューター  
- マルチスレッドによって、スループットが大幅に向上します。 10 個のプロセッサは 1 個のプロセッサの 10 倍の仕事をします。ただし、これは仕事が分割され、10 個のプロセッサが同時に働いた場合です。スレッドを使用すると、簡単な方法で仕事を分割し、プロセッサの能力を活用できます。 マルチプロセッサ コンピューターでマルチスレッドを使用する場合は、次の点に注意が必要です。  
-  
--   同時に実行できるスレッドの数は、プロセッサの数によって制限されます。  
-  
--   実行されているフォアグラウンド スレッドの数がプロセッサの数よりも少ないときだけ、バックグラウンド スレッドが実行されます。  
-  
--   スレッドで <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> メソッドを呼び出しても、プロセッサの数と待機中のスレッドの数によっては、スレッドがすぐに開始されない場合があります。  
-  
--   競合状態は、別のスレッドによる予期していなかった割り込みがあった場合に発生するだけでなく、別々のプロセッサで実行されている 2 つのスレッドが特定のコード ブロックに到達するタイミングによって発生する場合もあります。  
-  
-### <a name="single-processor-computers"></a>シングル プロセッサ コンピューター  
- マルチスレッドによって、ユーザーへの応答速度が向上し、アイドル時間はバックグランド タスクに使用されます。 シングル プロセッサ コンピューターでマルチスレッドを使用するときは、次の点に注意が必要です。  
-  
--   各瞬間には、1 つのスレッドだけが実行されています。  
-  
--   バックグラウンド スレッドは、メイン ユーザー スレッドがアイドル状態のときだけ実行されます。 フォアグラウンド スレッドが連続して実行されると、バックグラウンド スレッドのプロセッサ時間が少なくなります。  
-  
--   スレッドで <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> メソッドを呼び出しても、現在実行中のスレッドがプロセッサを解放するか、オペレーティング システムによって割り込まれるまでは、スレッドの実行が開始されません。  
-  
--   スレッドが別のスレッドに割り込まれてしまい、特定のコード ブロックに先に到達されてしまう可能性をプログラマが予測できていない場合に、競合状態が発生しやすくなります。  
-  
 ## <a name="static-members-and-static-constructors"></a>静的メンバーと静的コンストラクター  
  クラスは、そのクラス コンストラクター (C# では `static` コンストラクター、Visual Basic では `Shared Sub New`) の実行が完了するまで初期化されません。 初期化されていない型のコードの実行を防止するため、共通言語ランタイムは、クラス コンストラクターの実行が完了するまで、他のスレッドからのそのクラスの `static` メンバー (Visual Basic では `Shared` メンバー) 呼び出しをすべてブロックします。  
   
  たとえば、クラス コンストラクターが新しいスレッドを起動し、そのスレッドのプロシージャがクラスの `static` メンバーを呼び出した場合、その新しいスレッドは、クラス コンストラクターが完了するまでブロックされます。  
   
  このことは、`static` コンストラクターを持つことができるすべての型に当てはまります。  
+
+## <a name="number-of-processors"></a>プロセッサの数
+
+システムで利用できるプロセッサの数 (複数か 1 つだけか) がマルチスレッド アーキテクチャに影響を与えることがあります。 詳細については、「[プロセッサの数](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors)」を参照してください。
+
+実行時に利用できるプロセッサの数を判断するには <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> プロパティを使用します。
   
 ## <a name="general-recommendations"></a>一般的な推奨事項  
  マルチスレッドを使用するときは、以下のガイドラインを考慮してください。  
@@ -145,7 +126,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  .NET Framework Version 2.0 では、1 より大きなインクリメントでのアトミック更新を <xref:System.Threading.Interlocked.Add%2A> メソッドで実現できます。  
+    > .NET Framework 2.0 以降では、1 より大きいアトミック インクリメントに対して <xref:System.Threading.Interlocked.Add%2A> メソッドを使用します。  
   
      2 番目の例では、参照型の変数を、null 参照 (Visual Basic では `Nothing`) の場合にのみ更新しています。  
   
@@ -183,7 +164,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  .NET Framework Version 2.0 では、<xref:System.Threading.Interlocked.CompareExchange%2A> メソッドに、任意の参照型のタイプ セーフな置換に使用できるジェネリック オーバーロードがあります。  
+    > .NET Framework 2.0 より、<xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> メソッド オーバーロードから参照型に対してタイプ セーフの代替が提供されます。
   
 ## <a name="recommendations-for-class-libraries"></a>クラス ライブラリに関する推奨事項  
  マルチスレッド用のクラス ライブラリをデザインするときには、次のガイドラインを検討します。  

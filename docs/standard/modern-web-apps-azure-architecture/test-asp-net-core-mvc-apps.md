@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: b6c881a445f5848829ab5ccc6ce8547a390d89f3
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 96a004cc49773346eeb8f88e2ba99beebf8598bf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404620"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154204"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリのテスト
 
@@ -219,7 +219,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 ASP.NET Core アプリケーションの場合、TestServer クラスを利用すると、機能テストをとても簡単に記述できます。 (通常、自分のアプリケーションで使用するように) WebHostBuilder を直接使用するか、WebApplicationFactory 型 (2.1 で利用可能) で、TestServer を構成します。 テスト ホストと運用ホストをできる限り一致させるようにする必要があるため、テストではアプリが運用環境で実行する内容と同様の動作が実行されます。 WebApplicationFactory クラスは、ビューなどの静的リソースを検索するために ASP.NET Core によって使用される、TestServer の ContentRoot を構成するときに便利です。
 
-TEntry が Web アプリケーションの Startup クラスである、IClassFixture<WebApplicationFactory<TEntry>> を実装するテスト クラスを作成することによって、単純な機能テストを作成できます。 これを配置すると、ファクトリの CreateClient メソッドを使用して、テスト フィクスチャでクライアントを作成できます。
+IClassFixture\<WebApplicationFactory\<TEntry>> を実装するテスト クラスを作成することによって、シンプルな機能テストを作成できます。ここで、TEntry はご利用の Web アプリケーションの Startup クラスです。 これを配置すると、ファクトリの CreateClient メソッドを使用して、テスト フィクスチャでクライアントを作成できます。
 
 ```cs
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
@@ -347,5 +347,5 @@ namespace FunctionalTests.WebRazorPages
 この機能テストは、配置されているあらゆるミドルウェア、フィルター、バインダーなど、完全な ASP.NET Core MVC / Razor Pages アプリケーション スタックを行使します。 特定のルート ("/") が想定される正常な状態コードと HTML 出力を返すことを検証します。 これは実際の Web サーバーを設定せずに行い、実際の Web サーバーを利用して不安定になることを回避します (ファイアウォール設定の問題など)。 TestServer に対して実行される機能テストは通常、統合テストや単体テストより遅くなりますが、テスト Web サーバーのネットワークで実行されるテストよりはるかに速くなります。 機能テストを使用して、アプリケーションのフロント エンドのスタックが想定どおりに動作していることを確認する必要があります。 これらのテストは、コントローラーやページに重複があり、フィルターを追加して重複に対処するときに特に便利です。 このリファクタリングではアプリケーションの動作を変更せずに、機能テストのスイートによってこの状況を検証することをお勧めします。
 
 >[!div class="step-by-step"]
-[前へ](work-with-data-in-asp-net-core-apps.md)
-[次へ](development-process-for-azure.md)
+>[前へ](work-with-data-in-asp-net-core-apps.md)
+>[次へ](development-process-for-azure.md)

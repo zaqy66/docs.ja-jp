@@ -3,12 +3,12 @@ title: C# 7.0 の新機能 - C# ガイド
 description: C# 言語の次期バージョン 7 で導入される新機能の概要を示します。
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237385"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155289"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 の新機能
 
@@ -22,7 +22,7 @@ C# 7.0 では、C# 言語に多くの新機能が追加されます。
 * [パターン一致](#pattern-matching)
     - これらの型のメンバーの任意の型と値に基づいて、分岐ロジックを作成できます。
 * [`ref` ローカル変数と戻り値](#ref-locals-and-returns)
-    - メソッド引数とローカル変数は、他のストレージへの参照になります。
+    - メソッドのローカル変数と戻り値は、他のストレージへの参照になります。
 * [ローカル関数](#local-functions)
     - 関数を他の関数の中に入れ子にして、関数のスコープと可視性を制限することができます。
 * [式形式のメンバーの追加](#more-expression-bodied-members)
@@ -231,7 +231,7 @@ C# には、設計の意図を説明するために使用される、クラス�
 
 [!code-csharp[UpdateItemFromIndices](../../../samples/snippets/csharp/new-in-7/program.cs#21_UpdateItemFromIndices "Update Item From Indices")]
 
-それよりも、変更するマトリックス内の要素への "*参照*" を返すメソッドを記述することをお勧めします。 以前のバージョンでは、これを実現するには、アンセーフ コードを使用し、`int` へのポインターを返す方法しかありません。
+それよりも、変更するマトリックス内の要素への "*参照*" を返すメソッドを記述することをお勧めします。 これを実現するには、アンセーフ コードを使用し、前のバージョンの `int` へのポインターを返す方法しかありません。
 
 それでは、一連の変更を確認しながら、ref ローカル変数の機能と、内部ストレージへの参照を返すメソッドの作成方法を説明します。
 その過程で、ref 戻り値および ref ローカル変数の機能の誤用を防ぐための規則についても説明します。
@@ -256,7 +256,7 @@ public static ref int Find2(int[,] matrix, Func<int, bool> predicate)
 
 [!code-csharp[FindReturningRef](../../../samples/snippets/csharp/new-in-7/MatrixSearch.cs#22_FindReturningRef "Find returning by reference")]
 
-このメソッドはマトリックス内の整数値への参照を返すため、呼び出し側のコードを修正する必要があります。  `var` 宣言は、`valItem` がタプルではなく `int` であることを意味します。
+このメソッドはマトリックス内の整数値への参照を返すため、呼び出される場所を変更する必要があります。  `var` 宣言は、`valItem` がタプルではなく `int` であることを意味します。
 
 [!code-csharp[AssignRefReturnToValue](../../../samples/snippets/csharp/new-in-7/program.cs#23_AssignRefReturnToValue "Assign ref return to value")]
 
@@ -280,6 +280,8 @@ C# 言語には、これ以外に、`ref` ローカル変数と戻り値の誤�
 ref ローカル変数および ref 戻り値の追加により、値のコピーを回避したり、逆参照操作を複数回実行したりすることで、より効率的なアルゴリズムを実現できます。
 
 戻り値に `ref` を追加することは、[ソース互換性がある変更](version-update-considerations.md#source-compatible-changes)です。 既存のコードはコンパイルされますが、参照戻り値は割り当て時にコピーされます。 呼び出し元は、戻り値を参照として格納するために、戻り値の記憶域を `ref` ローカル変数に更新する必要があります。
+
+詳しくは、[ref](../language-reference/keywords/ref.md) キーワードに関する記事をご覧ください。
 
 ## <a name="local-functions"></a>ローカル関数
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 806ccb1d33d9a7b66c740099864decd651c9213f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399595"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144885"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (グローバル アセンブリ キャッシュ ツール)
 グローバル アセンブリ キャッシュ ツールを使用すると、グローバル アセンブリ キャッシュとダウンロード キャッシュの内容を表示および操作できます。  
@@ -93,7 +93,23 @@ myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 ```  
-  
+
+> [!NOTE]
+>  (ファイル名拡張子を除して) 79 文字から 91 文字よりも長いファイル名のアセンブリをインストールしようとすると、次のエラーが発生する可能性があります。
+> ```
+> Failure adding assembly to the cache:   The file name is too long.
+> ```
+> これは、Gacutil.exe によって、内部的に以下の要素で構成される MAX_PATH 文字までのパスが構築されるためです。
+> - GAC ルート - 34 文字 (つまり `C:\Windows\Microsoft.NET\assembly\`)
+> - Architecture - 7 文字または 9 文字 (つまり `GAC_32\`、`GAC_64\`、`GAC_MSIL`)
+> - AssemblyName - 最大 91 文字。ただし、他の要素のサイズによって変わります (例: `System.Xml.Linq\`)
+> - AssemblyInfo - 次から構成される 31 文字から 48 文字以上。
+>   - Framework - 5 文字 (例: `v4.0_`)
+>   - AssemblyVersion - 8 文字 24 文字 (例: `9.0.1000.0_`)
+>   - AssemblyLanguage - 1 文字から 8 文字 (例: `de_`、`sr-Cyrl_`)
+>   - PublicKey - 17 文字 (例: `31bf3856ad364e35\`)
+> - DllFileName - 最大 91 文字 + 4 文字 (つまり `<AssemblyName>.dll`)
+
 ## <a name="examples"></a>使用例  
  アセンブリ `mydll.dll` をグローバル アセンブリ キャッシュにインストールするコマンドを次に示します。  
   

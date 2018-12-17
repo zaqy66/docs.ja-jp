@@ -4,12 +4,12 @@ description: .NET ライブラリ対応の NuGet によるパッケージ化の�
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 479d1786c232ef1f843877169954e847453681c9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185625"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129611"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -37,8 +37,6 @@ NuGet パッケージを作成するには、主な方法が 2 つあります�
 NuGet パッケージを作成する従来からの方法では、`*.nuspec` ファイルと `nuget.exe` コマンドライン ツールを使用します。 nuspec ファイルを使用すると、優れた制御を利用できますが、最終的な NuGet パッケージに含めるアセンブリとターゲットを慎重に指定する必要があります。 間違えやすいうえに、変更を加える際にユーザーは nuspec の更新を忘れやすいです。 nuspec の利点は、まだ SDK 形式のプロジェクト ファイルをサポートしていないフレームワークの NuGet パッケージを作成するために使用できることです。
 
 **✔️ 検討** SDK 形式のプロジェクト ファイルを使用して、NuGet パッケージを作成する。
-
-**✔️ 検討** SourceLink を設定して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
 
 ## <a name="package-dependencies"></a>パッケージの依存関係
 
@@ -73,6 +71,12 @@ NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/ref
 
 **✔️ 実行** 64 x 64 のパッケージ アイコン イメージを使用し、最善の表示結果を透明な背景にする。
 
+**✔️ 検討** [SourceLink](./sourcelink.md) を設定して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
+
+> SourceLink によってメタデータの `RepositoryUrl` と `RepositoryType` が NuGet パッケージに自動的に追加されます。
+> また、SourceLink によって、パッケージの作成元のソース コードに関する情報が追加されます。
+> たとえば、Git リポジトリから作成されたパッケージでは、コミット ハッシュがメタデータとして追加されます。
+
 ## <a name="pre-release-packages"></a>プレリリース パッケージ
 
 バージョン サフィックスがある NuGet パッケージは、[プレリリース](/nuget/create-packages/prerelease-packages)と見なされます。 プレリリース パッケージが制限付きユーザーのテスト実行に最適になるように、ユーザーがプレリリース パッケージを選択しない限り、既定では、NuGet パッケージ マネージャーの UI は、安定版リリースを表示します。
@@ -92,9 +96,14 @@ NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/ref
 
 ## <a name="symbol-packages"></a>シンボル パッケージ
 
-シンボル ファイル (`*.pdb`) は、アセンブリと共に .NET コンパイラによって生成されます。 デバッガ―を使用して実行しながらソース コード全体をステップ実行できるように、シンボル ファイルは、実行場所を元のソース コードにマップします。 NuGet では、.NET アセンブリを含む主要なパッケージと共に、シンボル ファイルを格納している[別個のシンボル パッケージの生成](/nuget/create-packages/symbol-packages)をサポートしています。 シンボル サーバー上でホストされ、Visual Studio などのツールによってオンデマンドでしかダウンロードできないのが、シンボル パッケージの考え方です。
+シンボル ファイル (`*.pdb`) は、アセンブリと共に .NET コンパイラによって生成されます。 デバッガ―を使用して実行しながらソース コード全体をステップ実行できるように、シンボル ファイルは、実行場所を元のソース コードにマップします。 NuGet では、.NET アセンブリを含む主要なパッケージと共に、シンボル ファイルを格納している[別個のシンボル パッケージ (`*.snupkg`) の生成](/nuget/create-packages/symbol-packages-snupkg)をサポートしています。 シンボル サーバー上でホストされ、Visual Studio などのツールによってオンデマンドでしかダウンロードできないのが、シンボル パッケージの考え方です。
 
-現在、シンボルの主要なパブリック ホスト ([SymbolSource](http://www.symbolsource.org/)) は、SDK 形式のプロジェクトによって作成された新しい[ポータブル シンボル ファイル](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) をサポートしておらず、シンボル パッケージは便利ではありません。 シンボル パッケージに対応した推奨ホストができるまで、シンボル ファイルは主要な NuGet パッケージに埋め込むことができます。 SDK 形式のプロジェクトを使用して NuGet パッケージを構築している場合、`AllowedOutputExtensionsInPackageBuildOutputFolder` プロパティを設定してシンボル ファイルを埋め込むことができます。 
+NuGet.org は独自の[シンボル サーバー リポジトリ](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)をホストしています。 開発者は [Visual Studio でシンボル ソース](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)に `https://symbols.nuget.org/download/symbols` を追加することで NuGet.org シンボル サーバーに公開されたシンボルを使用できます。
+
+> [!IMPORTANT]
+> NuGet.org シンボル サーバーでは、SDK スタイルのプロジェクトで作成された新しい[ポータブル シンボル ファイル](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) のみがサポートされます。
+
+シンボル パッケージを作成する代わりに、主要 NuGet パッケージにシンボル ファイルを埋め込むという方法もあります。 主要 NuGet パッケージは大容量になりますが、シンボル ファイルを埋め込む場合、開発者は NuGet.org シンボル サーバーを設定する必要がないことを意味します。 SDK 形式のプロジェクトを使用して NuGet パッケージを構築している場合、`AllowedOutputExtensionsInPackageBuildOutputFolder` プロパティを設定してシンボル ファイルを埋め込むことができます。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -107,8 +116,10 @@ NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/ref
 
 **✔️ 検討** 主要な NuGet パッケージにシンボル ファイルを埋め込む。
 
-**❌ 禁止**シンボル ファイルを含むシンボル パッケージを作成する。
+> 主要 NuGet パッケージにシンボル ファイルを埋め込むと、初期設定で開発者に快適な操作性が与えられます。 IDE で NuGet シンボル サーバーを見つけ、構成し、シンボル ファイルを取得する必要がありません。
+>
+> シンボル ファイルを埋め込むことの短所は、SDK スタイルのプロジェクトでコンパイルした .NET ライブラリの場合、パッケージ サイズが約 30% 増えるということです。 パッケージ サイズが問題であれば、代わりにシンボル パッケージでシンボルを公開してください。
 
 >[!div class="step-by-step"]
-[前へ](./strong-naming.md)
-[次へ](./dependencies.md)
+>[前へ](strong-naming.md)
+>[次へ](dependencies.md)

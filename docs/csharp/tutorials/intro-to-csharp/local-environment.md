@@ -2,12 +2,12 @@
 title: C# の概要 - 開発ツールに対する理解を深める
 description: この記事では、コンピューターで C# アプリケーションと .NET アプリケーションを開発するためのツールの基礎を提供します。
 ms.date: 10/23/2018
-ms.openlocfilehash: ec7e55fbf2a89a8ec45db956fc575edeb2283f56
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200163"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129988"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>.NET 開発ツールに対する理解を深める
 
@@ -22,7 +22,7 @@ Mac、PC、または Linux 上でローカルの開発環境を設定する手�
 
 その他には、実行可能ファイルをビルドする [`dotnet build`](../../../core/tools/dotnet-build.md) コマンド、実行可能ファイルを実行する [`dotnet run`](../../../core/tools/dotnet-run.md) コマンドを使用します。
 
-## <a name="pick-your-turorial"></a>チュートリアルを選択する
+## <a name="pick-your-tutorial"></a>チュートリアルを選択する
 
 最初に次のいずれかのチュートリアルを選択します。
 

@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 560120db35ae190bdef1f95d72ac1e5de697124e
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6f5dfbb53b99fec4d7cc66c528fe866c71c2172f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105947"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143871"
 ---
 # <a name="storing-application-secrets-safely-during-development"></a>開発時にアプリケーションの機密情報を安全に格納する
 
@@ -39,7 +39,7 @@ ms.locfileid: "37105947"
 
 ## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>ASP.NET Core Secret Manager を使用してシークレットを格納する
 
-ソース コードの外部にシークレットを保持する別の方法として、ASP.NET Core [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) ツールを使用するやり方があります。 Secret Manager ツールを使用するには、Microsoft.Extensions.SecretManager.Tools パッケージへのツール参照 (DotNetCliToolReference) をプロジェクト ファイル内に含めます。 その依存関係が存在し、それが復元されたら、dotnet user-secrets コマンドを使用して、コマンドラインからシークレットの値を設定できるようになります。 これらのシークレットは、ユーザーのプロファイル ディレクトリにある JSON ファイルに格納され (OS によって詳細は異なる)、ソース コードから離れた場所に置かれます。
+ソース コードの外部にシークレットを保持する別の方法として、ASP.NET Core [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) ツールを使用するやり方があります。 Secret Manager ツールを使用するには、Microsoft.Extensions.SecretManager.Tools パッケージへのツール参照 (DotNetCliToolReference) をプロジェクト ファイル内に含めます。 その依存関係が存在し、それが復元されたら、dotnet user-secrets コマンドを使用して、コマンド ラインからシークレットの値を設定できます。 これらのシークレットは、ユーザーのプロファイル ディレクトリにある JSON ファイルに格納され (OS によって詳細は異なる)、ソース コードから離れた場所に置かれます。
 
 Secret Manager ツールによって設定されたシークレットは、シークレットを使用するプロジェクトの UserSecretsId プロパティによって編成されます。 そのため、プロジェクト ファイルに UserSecretsId プロパティを必ず設定する必要があります (次のスニペットに示すように)。 ID として使用される実際の文字列は、プロジェクト内で一意である限り重要ではありません。
 
@@ -53,5 +53,5 @@ Secret Manager で格納されたシークレットをアプリケーション�
 
 
 >[!div class="step-by-step"]
-[前へ](authorization-net-microservices-web-applications.md)
-[次へ](azure-key-vault-protects-secrets.md)
+>[前へ](authorization-net-microservices-web-applications.md)
+>[次へ](azure-key-vault-protects-secrets.md)

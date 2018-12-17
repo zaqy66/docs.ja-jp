@@ -1,27 +1,28 @@
 ---
-title: .NET Core への移植 - サードパーティの依存関係を分析する
-description: .NET Framework から .NET Core にプロジェクトを移植するために、サードパーティの依存関係を分析する方法を説明します。
+title: コードを .NET Core に移植するために依存関係を分析する
+description: .NET Framework から .NET Core にプロジェクトを移植するために、外部の依存関係を分析する方法を説明します。
 author: cartermp
 ms.author: mairaw
-ms.date: 02/15/2018
-ms.openlocfilehash: 06d8d36d8369680c54af4d16513b2b871b57079c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.date: 12/04/2018
+ms.custom: seodec18
+ms.openlocfilehash: 7d18d4c52a37878e160f71aeea4cfd00045fe6b4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46001002"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146876"
 ---
-# <a name="analyze-your-third-party-dependencies"></a>サードパーティの依存関係を分析する
+# <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>コードを .NET Core に移植するために依存関係を分析する
 
-.NET Core または .NET Standard にコードを移植する場合、移植プロセスの最初のステップとして、サードパーティの依存関係を理解します。 サードパーティの依存関係は、プロジェクトで参照する [NuGet パッケージ](#analyze-referenced-nuget-packages-on-your-project)または [DLL](#analyze-dependencies-that-arent-nuget-packages) です。 それぞれの依存関係を評価し、.NET Core と互換性のない依存関係に対して代替計画を作成します。 この記事では、依存関係が .NET Core と互換性があるかどうかを判別する方法を示します。
+.NET Core または .NET Standard にコードを移植するには、依存関係を理解する必要があります。 外部の依存関係は、プロジェクトで参照していますが、自分が構築していない [NuGet パッケージ](#analyze-referenced-nuget-packages-on-your-project) または [DLL](#analyze-dependencies-that-arent-nuget-packages) です。 各依存関係を評価し、.NET Core と互換性のない依存関係に対して代替計画を作成します。 ここでは、依存関係が .NET Core と互換性があるかどうかを判断する方法について説明します。
 
-## <a name="analyze-referenced-nuget-packages-in-your-project"></a>プロジェクトで参照される NuGet パッケージを分析する
+## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>プロジェクトで参照される NuGet パッケージを分析する
 
 プロジェクトで NuGet パッケージを参照する場合は、.NET Core と互換性があるかどうかを確認する必要があります。
 これを行う場合、次の 2 つの方法があります。
 
-* [NuGet パッケージ エクスプローラー アプリの使用](#analyze-nuget-packages-using-nuget-package-explorer) (最も信頼性の高い方法)。
-* [nuget.org サイトの使用](#analyze-nuget-packages-using-nugetorg)。
+* [NuGet パッケージ エクスプローラーアプリを使用する](#analyze-nuget-packages-using-nuget-package-explorer)
+* [nuget.org サイトを使用する](#analyze-nuget-packages-using-nugetorg)
 
 パッケージの分析後、NET Core と互換性がなく、.NET Framework のみをターゲットとする場合は、[.NET Framework 互換モード](#net-framework-compatibility-mode)が移植プロセスに役立つかどうかを確認できます。
 
@@ -52,6 +53,7 @@ netcoreapp1.0
 netcoreapp1.1
 netcoreapp2.0
 netcoreapp2.1
+netcoreapp2.2
 portable-net45-win8
 portable-win8-wpa8
 portable-net451-win81
@@ -63,24 +65,6 @@ portable-net45-win8-wpa8-wpa81
 > [!IMPORTANT]
 > パッケージでサポートされる TFM を見ると、`netcoreapp*` に互換性はあるものの、.NET Core プロジェクトのみを対象としており、.NET Standard プロジェクトを対象としていないことがわかります。
 > 他の .NET Core アプリで使用できるのは、`netstandard*` ではなく、`netcoreapp*` のみをターゲットとするライブラリだけです。
-
-また、プレリリース版の .NET Core で使用されるレガシ TFM にも、互換性のあるものがあります。
-
-```
-dnxcore50
-dotnet5.0
-dotnet5.1
-dotnet5.2
-dotnet5.3
-dotnet5.4
-dotnet5.5
-```
-
-これらの TFM がコードで動作する可能性はありますが、互換性は保証されていません。 このような TFM を含むパッケージは、プレリリース版の .NET Core パッケージで構築されています。 これらの TFM を使用するパッケージが .NET Standard ベースに更新されるか、また、更新される場合はいつ行われるかを確認してください。
-
-> [!NOTE]
-> 従来の PCL またはプレリリースの .NET Core ターゲットを対象とするパッケージを使用するには、プロジェクト ファイルで `PackageTargetFallback` MSBuild 要素を使用する必要があります。
-> MSBuild 要素の詳細については、「[`PackageTargetFallback`](../tools/csproj.md#packagetargetfallback)」を参照してください。
 
 ### <a name="analyze-nuget-packages-using-nugetorg"></a>nuget.org を使用して NuGet パッケージを分析する
 
@@ -109,6 +93,12 @@ NuGet パッケージの分析後、ほとんどの NuGet パッケージと同�
 ```
 
 Visual Studio でコンパイラ警告を非表示にする方法の詳細については、「[NuGet パッケージの警告を非表示にする](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages)」を参照してください。
+
+### <a name="port-your-packages-to-packagereference"></a>パッケージを `PackageReference` に移植する
+
+.NET Core は [PackageReference](/nuget/consume-packages/package-references-in-project-files) を使用してパッケージの依存関係を指定します。 パッケージの指定に [packages.config](/nuget/reference/packages-config) を使用している場合は、`PackageReference` に変換する必要があります。
+
+詳細については、「[Migrate from packages.config to PackageReference](/nuget/reference/migrate-packages-config-to-package-reference)」(packages.config から PackageReference への移行) を参照してください。
 
 ### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet パッケージの依存関係が .NET Core で動作しない場合の対処方法
 

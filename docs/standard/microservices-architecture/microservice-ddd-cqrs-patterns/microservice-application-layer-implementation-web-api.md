@@ -1,29 +1,29 @@
 ---
 title: Web API を使用したマイクロサービス アプリケーション レイヤーの実装
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Web API を使用したマイクロサービス アプリケーション レイヤーの実装
+description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Web API アプリケーション レイヤーの依存関係挿入、メディエーター パターン、その実装詳細について。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 1af8d0290eea26d57f4744bbd6d9819d886d4db4
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106555"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151188"
 ---
-# <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Web API を使用したマイクロサービス アプリケーション レイヤーの実装
+# <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API を使用してマイクロサービス アプリケーション レイヤーを実装する
 
-## <a name="using-dependency-injection-to-inject-infrastructure-objects-into-your-application-layer"></a>依存関係挿入を使用して、アプリケーション レイヤーにインフラストラクチャ オブジェクトを挿入する
+## <a name="use-dependency-injection-to-inject-infrastructure-objects-into-your-application-layer"></a>依存関係挿入を使用し、アプリケーション レイヤーにインフラストラクチャ オブジェクトを挿入する
 
-前のセクションで述べたように、アプリケーション レイヤーは、作成する成果物 (Web API プロジェクトや MVC Web アプリ プロジェクトなど) の一部として実装することができます。 ASP.NET Core を使用して作成されたマイクロサービスの場合、アプリケーション レイヤーは通常、Web API ライブラリになります。 ASP.NET Core から来るもの (そのインフラストラクチャとコントローラー) を、カスタム アプリケーション レイヤー コードと分離したい場合は、アプリケーション レイヤーを別のクラス ライブラリに配置することもできますが、これは任意です。
+前のセクションで述べたように、アプリケーション レイヤーは、Web API プロジェクトや MVC Web アプリ プロジェクトなどで作成する成果物 (アセンブリ) の一部として実装できます。 ASP.NET Core を使用して作成されたマイクロサービスの場合、アプリケーション レイヤーは通常、Web API ライブラリになります。 ASP.NET Core から来るもの (そのインフラストラクチャとコントローラー) を、カスタム アプリケーション レイヤー コードと分離したい場合は、アプリケーション レイヤーを別のクラス ライブラリに配置することもできますが、これは任意です。
 
-たとえば、注文マイクロサービスのアプリケーション レイヤー コードは、**Ordering.API** プロジェクト (ASP.NET Core Web API プロジェクト) の一部として直接実装されます (図 9-23 を参照)。
+たとえば、注文マイクロサービスのアプリケーション レイヤー コードは、**Ordering.API** プロジェクト (ASP.NET Core Web API プロジェクト) の一部として直接実装されます (図 7-23 を参照)。
 
-![](./media/image20.png)
+![Ordering.API マイクロサービスのソリューション エクスプローラー ビュー。[Application] フォルダーの下に、Behaviors、Commands、DomainEventHandlers、IntegrationEvents、Models、Queries、Validations というサブフォルダーを確認できます。](./media/image20.png)
 
-**図 9-23**。 Ordering.API ASP.NET Core Web API プロジェクト内のアプリケーション レイヤー
+**図 7-23**. Ordering.API ASP.NET Core Web API プロジェクト内のアプリケーション レイヤー
 
-ASP.NET Core には、コンストラクター挿入を既定でサポートするシンプルな[組み込み IoC コンテナー](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (IServiceProvider インターフェイスによって表されます) が含まれています。ASP.NET では、DI によって特定のサービスを利用可能にすることができます。 ASP.NET Core では、ユーザーが登録する型のうち、DI を通じて挿入されるものを*サービス*という用語で表します。 組み込みコンテナーのサービスは、アプリケーションの Startup クラス内にある ConfigureServices メソッドで構成します。 依存関係は、型に必要なサービス内に実装されます。
+ASP.NET Core には、コンストラクター挿入を既定でサポートするシンプルな[組み込み IoC コンテナー](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (IServiceProvider インターフェイスによって表されます) が含まれています。ASP.NET では、DI によって特定のサービスを利用可能にすることができます。 ASP.NET Core では、ユーザーが登録する型のうち、DI を通じて挿入されるものを*サービス*という用語で表します。 組み込みコンテナーのサービスは、アプリケーションの Startup クラス内にある ConfigureServices メソッドで構成します。 依存関係は、型に必要であり、IoC コンテナーに登録するサービス内に実装されます。
 
 ユーザーは通常、インフラストラクチャ オブジェクトを実装する依存関係を挿入します。 挿入する依存関係として典型的なのは、リポジトリです。 ただし、インフラストラクチャの依存関係が他にもある場合は、それらを挿入することもできます。 単純な実装の場合は、作業単位パターン オブジェクト (EF DbContext オブジェクト) を直接実装することもできます。なぜなら、DBContext はインフラストラクチャ永続オブジェクトの実装でもあるからです。
 
@@ -78,11 +78,11 @@ public class CreateOrderCommandHandler
 
 このクラスは、挿入されたリポジトリを使用してトランザクションを実行し、状態の変更を保持します。 このクラスが コマンド ハンドラーなのか、ASP.NET Core Web API コントローラー メソッドなのか、それとも [DDD アプリケーション サービス](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)なのかは重要ではありません。 重要なのは、このクラスがリポジトリ、ドメイン エンティティ、およびその他のアプリケーション調整をコマンド ハンドラーのような方法で使用する、単純なクラスだということです。 依存関係挿入は、コンストラクター ベースの DI を使用したこの例のように、記述されたすべてのクラスに対して同様に動作します。
 
-### <a name="registering-the-dependency-implementation-types-and-interfaces-or-abstractions"></a>依存関係実装型とインターフェイス (または抽象化) の登録
+### <a name="register-the-dependency-implementation-types-and-interfaces-or-abstractions"></a>依存関係実装の型とインターフェイス (または抽象化) の登録
 
 コンストラクターを通じて挿入されたオブジェクトを使用するには、まず、DI を通じてアプリケーション クラスに挿入されたオブジェクトの生成元となるインターフェイスやクラスを、どこに登録するのかを知る必要があります (先の例で示したコンストラクター ベースの DI と同様)。
 
-#### <a name="using-the-built-in-ioc-container-provided-by-aspnet-core"></a>ASP.NET Core で提供される組み込み IoC コンテナーの使用
+#### <a name="use-the-built-in-ioc-container-provided-by-aspnet-core"></a>ASP.NET Core で提供される組み込み IoC コンテナーの使用
 
 ASP.NET Core で提供される組み込み IoC コンテナーを使用する場合は、ConfigureServices メソッドに挿入する型を、次のようなコードによって Startup.cs ファイルに登録します。
 
@@ -105,21 +105,19 @@ public void ConfigureServices(IServiceCollection services)
 
 IoC コンテナーに型を登録する場合の最も一般的なパターンは、型のペア (インターフェイスとその関連実装クラス) を登録するやり方です。 その後、任意のコンストラクターを通じて IoC コンテナーからオブジェクトを要求する際に、特定のインターフェイス型のオブジェクトを要求します。 たとえば、先の例の最後の行では、いずれかのコンストラクターに IMyCustomRepository (インターフェイスまたは抽象型) への依存関係がある場合に、IoC コンテナーが MyCustomSQLServerRepository 実装クラスのインスタンスを挿入するよう記述されています。
 
-#### <a name="using-the-scrutor-library-for-automatic-types-registration"></a>自動登録用の Scrutor ライブラリの使用
+#### <a name="use-the-scrutor-library-for-automatic-types-registration"></a>自動登録用の Scrutor ライブラリの使用
 
 .NET Core で DI を使用する場合は、アセンブリをスキャンし、その型を規則によって自動的に登録したい場合もあるでしょう。 この機能は、現在 ASP.NET Coreでは使用できません。 ただし、この目的のために [Scrutor](https://github.com/khellang/Scrutor) ライブラリを使用することはできます。 この方法は、IoC コンテナーに登録する必要がある型がたくさんある場合に便利です。
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **Matthew King。Scrutor でのサービスの登録**
-    [*https://mking.net/blog/registering-services-with-scrutor*](https://mking.net/blog/registering-services-with-scrutor)
+- **Matthew King。Scrutor でのサービスの登録** \
+  [*https://www.mking.net/blog/registering-services-with-scrutor*](https://www.mking.net/blog/registering-services-with-scrutor)
 
-<!-- -->
+- **Kristian Hellang。Scrutor。** GitHub リポジトリ。 \
+  [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
 
--   **Kristian Hellang。Scrutor。** GitHub リポジトリ。
-    [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
-
-#### <a name="using-autofac-as-an-ioc-container"></a>Autofac を IoC コンテナーとして使用する
+#### <a name="use-autofac-as-an-ioc-container"></a>Autofac を IoC コンテナーとして使用する
 
 eShopOnContainers の注文マイクロサービスのように、追加の IoC コンテナーを使用し、[Autofac](https://autofac.org/) を使用する ASP.NET Core パイプラインにそれらをプラグインすることもできます。 Autofac を使用する場合は通常、モジュールを通じて型を登録します。これにより、型がどこにあるかに応じて、複数のファイル間で登録型を分割することができます (複数のクラス ライブラリ間でアプリケーション型を分散できたのと同様)。
 
@@ -152,40 +150,42 @@ public class ApplicationModule : Autofac.Module
 }
 ```
 
+Autofac には、[アセンブリをスキャンし、命名規則で型を登録する](https://autofac.readthedocs.io/en/latest/register/scanning.html)機能もあります。
+
 登録プロセスと概念は、組み込みの ASP.NET Core IoC コンテナーに型を登録する方法とよく似ていますが、Autofac を使用する場合は構文が少し異なります。
 
 このコード例では、IOrderRepository 抽象化が、実装クラス OrderRepository と共に登録されています。 つまり、コンストラクターが IOrderRepository 抽象化またはインターフェイスを通じて依存関係を宣言している場合、IoC コンテナーは OrderRepository クラスのインスタンスを挿入するということです。
 
 同じサービスや依存関係に対する要求間でインスタンスがどのように共有されるかは、インスタンス スコープ型によって決まります。 依存関係に対する要求が行われた場合、IoC コンテナーは次のいずれかの結果を返します。
 
--   有効期間範囲ごとに 1 つのインスタンス (ASP.NET Core IoC コンテナー内で *scoped* として参照されます)。
+- 有効期間範囲ごとに 1 つのインスタンス (ASP.NET Core IoC コンテナー内で *scoped* として参照されます)。
 
--   依存関係ごとに 1 つの新規インスタンス (ASP.NET Core IoC コンテナー内で *transient* として参照されます)。
+- 依存関係ごとに 1 つの新規インスタンス (ASP.NET Core IoC コンテナー内で *transient* として参照されます)。
 
--   IoC コンテナーを使用してすべてのオブジェクト間で共有される 1 つのインスタンス (ASP.NET Core IoC コンテナー内で *singleton* として参照されます)。
+- IoC コンテナーを使用してすべてのオブジェクト間で共有される 1 つのインスタンス (ASP.NET Core IoC コンテナー内で *singleton* として参照されます)。
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **ASP.NET Core での依存関係の挿入の概要**
-    [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
+- **ASP.NET Core での依存関係の挿入の概要** \
+  [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
--   **Autofac。** 公式ドキュメント。
-    [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
+- **Autofac。** 公式ドキュメント。 \
+  [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
 
--   **ASP.NET Core IoC コンテナー サービスの有効期間と Autofac IoC コンテナー インスタンスの範囲の比較 - Cesar de la Torre**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+- **ASP.NET Core IoC コンテナー サービスの有効期間と Autofac IoC コンテナー インスタンスの範囲の比較 - Cesar de la Torre** \
+  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
-## <a name="implementing-the-command-and-command-handler-patterns"></a>コマンドおよびコマンド ハンドラー パターンの実装
+## <a name="implement-the-command-and-command-handler-patterns"></a>コマンドおよびコマンド ハンドラー パターンの実装
 
-前のセクションで示したコンストラクター ベースの DI の例では、IoC コンテナーはクラス内のコンストラクターを通じてリポジトリを挿入していました。 ですが、これらは厳密にはどこに挿入されたのでしょうか。 単純な Web API (たとえば、eShopOnContainers 内のカタログ マイクロサービス) では、MVC コントローラー レベル (コントローラーのコンストラクター内) でこれらを挿入します。 しかし、このセクションの最初のコード (eShopOnContainers 内の Ordering.API サービスの [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) クラス) では、特定のコマンド ハンドラーのコンストラクターを通じて依存関係の挿入が行われています。 そこで、コマンド ハンドラーとは何か、またどのような理由で使用するのかについて説明していきましょう。
+前のセクションで示したコンストラクター ベースの DI の例では、IoC コンテナーはクラス内のコンストラクターを通じてリポジトリを挿入していました。 ですが、これらは厳密にはどこに挿入されたのでしょうか。 シンプルな Web API (たとえば、eShopOnContainers 内のカタログ マイクロサービス) では、ASP.NET Core の要求パイプラインの一部として、MVC コントローラー レベル (コントローラーのコンストラクター内) でこれらを挿入します。 しかし、このセクションの最初のコード (eShopOnContainers 内の Ordering.API サービスの [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) クラス) では、特定のコマンド ハンドラーのコンストラクターを通じて依存関係の挿入が行われています。 そこで、コマンド ハンドラーとは何か、またどのような理由で使用するのかについて説明していきましょう。
 
 コマンド パターンは本来、このガイドの前の方で説明した、CQRS パターンに関連するものです。 CQRS には 2 つの面があります。 1 つ目の領域はクエリです。簡略化されたクエリを、[Dapper](https://github.com/StackExchange/dapper-dot-net) のマイクロ ORM と共に使用します。 2 つ目の領域はコマンドです。これは、トランザクションの開始点となるものであり、サービス外部からの入力チャネルとなるものです。
 
-図 9-24 に示すように、パターンでは基本的に、クライアント側からコマンドを受け付け、それらをドメイン モデル ルールに基づいて処理し、最後にトランザクションの状態を保持します。
+図 7-24 に示すように、パターンでは基本的に、クライアント側からコマンドを受け付け、それらをドメイン モデル ルールに基づいて処理し、最後にトランザクションの状態を保持します。
 
-![](./media/image21.png)
+![CQRS の書き込み側の概要図: UI アプリは API 経由で CommandHandler にコマンドを送信します。CommandHandler とドメイン モデルまたはインフラストラクチャとの間には依存関係があり、インフラストラクチャに依存する場合、データベースが更新されます。](./media/image21.png)
 
-**図 9-24** コマンド (CQRS パターンのトランザクション側) の概要
+**図 7-24**. コマンド (CQRS パターンのトランザクション側) の概要
 
 ### <a name="the-command-class"></a>コマンド クラス
 
@@ -201,7 +201,7 @@ public class ApplicationModule : Autofac.Module
 
 ドメインのビジネス ルールやインバリアントに対して合理的である場合には、コマンドや更新プログラムをべき等にすることをお勧めします。 たとえば、同じ例で言うと、何らかの理由 (再試行ロジックやハッキングなど) によって、同じ CreateOrder コマンドがシステムに複数回アクセスする場合には、そのコマンドを識別し、複数の注文が作成されないようにする必要があります。 そのためには、操作に何らかの ID をアタッチして、コマンドや更新プログラムが既に処理されていないかどうかを識別する必要があります。
 
-コマンドは単一のレシーバーに送信します。つまり、コマンドは発行するものではありません。 発行は、何かが起こり、それがイベント レシーバーに関連する可能性がある場合に、そのファクトを記述した統合イベントに対して行うものです。 イベントの場合、パブリッシャーはイベントをどのレシーバーが取得するかや、それに対してレシーバーがどう対応するかについて、一切関知しません。 ただし、統合イベントは前のセクションで既に説明した別のトピックです。
+コマンドは単一のレシーバーに送信します。つまり、コマンドは発行するものではありません。 発行は、何かが起こり、それがイベント レシーバーに関連する可能性がある場合に、そのファクトを記述したイベントに対して行うものです。 イベントの場合、パブリッシャーはイベントをどのレシーバーが取得するかや、それに対してレシーバーがどう対応するかについて、一切関知しません。 ただし、ドメインまたは統合イベントは前のセクションで既に説明した別のトピックです。
 
 コマンドは、データ フィールドやコレクションのほか、コマンドを実行するために必要なすべての情報を含んだクラスを使用して実装されます。 コマンドは特別な種類のデータ転送オブジェクト (DTO) であり、変更やトランザクションを要求するために使用されるものです。 コマンド自体は、コマンドを処理するために必要な情報のみをベースとし、その他の情報は含まれません。
 
@@ -252,13 +252,13 @@ public class CreateOrderCommand
         _orderItems = new List<OrderItemDTO>();
     }
 
-    public CreateOrderCommand(List<OrderItemDTO> orderItems, string city,
+    public CreateOrderCommand(List<BasketItem> basketItems, string city,
         string street,
         string state, string country, string zipcode,
         string cardNumber, string cardHolderName, DateTime cardExpiration,
         string cardSecurityNumber, int cardTypeId) : this()
     {
-        _orderItems = orderItems;
+        _orderItems = MapToOrderItems(basketItems);
         City = city;
         Street = street;
         State = state;
@@ -287,6 +287,8 @@ public class CreateOrderCommand
 
 もう 1 つの特徴として、コマンドは不変です。なぜなら、コマンドはドメイン モデルによって直接処理されるものと想定されているからです。 予定された有効期間中に変更する必要がないのです。 C \# クラスでは、内部状態を変更するセッターやその他のメソッドを使用しないことによって、不変性を達成できます。
 
+意図的に、あるいは予想としてコマンドがシリアル化/逆シリアル化プロセスを通過する場合、プロパティにはプライベート セッターと `[DataMemeber]` (または `[JsonProperty]`) 属性が与えられる必要があります。与えられていない場合、デシリアライザーは宛先で必須値を利用してオブジェクトを再構築することができません。
+
 たとえば、注文を作成するためのコマンド クラスは通常、データの観点から見れば、作成する注文と同様のものになりますが、通常、同じ属性は必要ありません。 具体的に言うと、CreateOrderCommand には注文 ID は含まれません。注文がまだ作成されていないからです。
 
 多くのコマンド クラスは、変更が必要な状態に関するいくつかのフィールドだけを含めればよいので、簡素化することができます。 たとえば、注文の状態を「処理中」から「支払済み」(または「発送済み」) 変更するだけの場合は、次のようなシンプルなコマンドで記述できます。
@@ -313,19 +315,21 @@ public class UpdateOrderStatusCommand
 
 各コマンドについては、特定のコマンド ハンドラー クラスを実装する必要があります。 これによってパターンが機能するようになります。コマンド オブジェクト、ドメイン オブジェクト、およびインフラストラクチャ リポジトリ オブジェクトは、このクラスで使用します。 コマンド ハンドラーは、CQRS と DDD の観点から言えば、アプリケーション レイヤーの中心となるものです。 ただし、ドメイン ロジックはすべてドメイン クラス内に含める必要があります。つまり、アプリケーション レイヤーのクラスであるコマンド ハンドラー内ではなく、集約ルート (ルート エンティティ) 、子エンティティ、または[ドメイン サービス](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)内に含める必要があります。
 
+コマンド ハンドラー クラスは、前のセクションで説明した単一責任の原則 (SRP) を達成する堅固な手法となります。
+
 コマンド ハンドラーはコマンドを受け取り、使用される集約の結果を取得します。 結果は、コマンドが正常に実行されるか、例外が返されるかのいずれかになります。 例外が返された場合、システム状態は変更されません。
 
 コマンド ハンドラーでは通常、次の手順が実行されます。
 
--   ([メディエーター](https://en.wikipedia.org/wiki/Mediator_pattern)またはその他のインフラストラクチャ オブジェクトから) コマンド オブジェクト (DTO など) を受け取ります 。
+- ([メディエーター](https://en.wikipedia.org/wiki/Mediator_pattern)またはその他のインフラストラクチャ オブジェクトから) コマンド オブジェクト (DTO など) を受け取ります 。
 
--   コマンドが有効であるかどうかを検証します (メディエーターによって検証されなかった場合)。
+- コマンドが有効であるかどうかを検証します (メディエーターによって検証されなかった場合)。
 
--   現在のコマンドの対象となっている集約ルート インスタンスをインスタンス化します。
+- 現在のコマンドの対象となっている集約ルート インスタンスをインスタンス化します。
 
--   集約ルート インスタンスに対してコマンドを実行し、コマンドから必要なデータを取得します。
+- 集約ルート インスタンスに対してコマンドを実行し、コマンドから必要なデータを取得します。
 
--   集約の新しい状態を、関連するデータベースに保持します。 この最後の操作が、実際のトランザクションとなります。
+- 集約の新しい状態を、関連するデータベースに保持します。 この最後の操作が、実際のトランザクションとなります。
 
 通常、コマンド ハンドラーは、その集約ルート (ルート エンティティ) によって駆動される単一の集約を操作します。 単一コマンドの受信によって複数の集約が影響を受ける場合は、ドメイン イベントを使用して複数の集約に状態やアクションを伝達することができます。
 
@@ -384,28 +388,28 @@ public class CreateOrderCommandHandler
 
 次に示すのは、コマンド ハンドラーで実行される追加の手順です。
 
--   コマンドのデータを使用して、集約ルートのメソッドとビヘイビアーを操作します。
+- コマンドのデータを使用して、集約ルートのメソッドとビヘイビアーを操作します。
 
--   トランザクションの実行中、ドメイン オブジェクト内で内部的にイベントを発生させます。ただしこれは、コマンド ハンドラーの視点から透過的です。
+- トランザクションの実行中、ドメイン オブジェクト内で内部的にイベントを発生させます。ただしこれは、コマンド ハンドラーの視点から透過的です。
 
--   集約の操作結果が成功である場合は、トランザクションの完了後に、統合イベント コマンド ハンドラーを生成します (これらは、リポジトリなどのインフラストラクチャ クラスによって生成される場合もあります)。
+- 集約の操作結果が成功である場合は、トランザクションの完了後に、統合イベントを生成します。 (これらは、リポジトリなどのインフラストラクチャ クラスによって生成される場合もあります)。
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **Mark Seemann。境界においては、アプリケーションはオブジェクト指向ではない**
-    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+- **Mark Seemann。境界においては、アプリケーションはオブジェクト指向ではない** \
+  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
--   **コマンドとイベント**
-    [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
+- **コマンドとイベント** \
+  [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
 
--   **コマンド ハンドラーの機能**
-    [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
+- **コマンド ハンドラーの機能** \
+  [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
 
--   **Jimmy Bogard。ドメイン コマンド パターン – ハンドラー**
-    [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
+- **Jimmy Bogard。ドメイン コマンド パターン – ハンドラー** \
+  [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
 
--   **Jimmy Bogard。ドメイン コマンド パターン – 検証**
-    [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
+- **Jimmy Bogard。ドメイン コマンド パターン – 検証** \
+  [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>コマンド プロセス パイプライン: コマンド ハンドラーをトリガーする方法
 
@@ -413,17 +417,17 @@ public class CreateOrderCommandHandler
 
 これ以外に次の 2 つの方法があり、これらをお勧めします。
 
--   インメモリのメディエーター パターン成果物を通じて呼び出す。
+- インメモリのメディエーター パターン成果物を通じて呼び出す。
 
--   コントローラーとハンドラーの間で非同期メッセージ キューを使用して呼び出す。
+- コントローラーとハンドラーの間で非同期メッセージ キューを使用して呼び出す。
 
-### <a name="using-the-mediator-pattern-in-memory-in-the-command-pipeline"></a>コマンド パイプラインでメディエーター パターン (インメモリ) を使用する
+### <a name="use-the-mediator-pattern-in-memory-in-the-command-pipeline"></a>コマンド パイプラインでメディエーター パターン (インメモリ) を使用する
 
-図 9-25 に示すように、CQRS アプローチではインテリジェント メディエーターを使用します。これはインメモリ バスに似たもので、受信されるコマンドや DTO の種類に基づいて、適切なコマンド ハンドラーへと処理をスマートにリダイレクトすることができます。 コンポーネント間の黒い矢印は、オブジェクト間 (多くの場合、DI を通じて挿入されます) の依存関係と、関連する相互作用を表しています。
+図 7-25 に示すように、CQRS アプローチではインテリジェント メディエーターを使用します。これはインメモリ バスに似たもので、受信されるコマンドや DTO の種類に基づいて、適切なコマンド ハンドラーへと処理をスマートにリダイレクトすることができます。 コンポーネント間の黒い矢印は、オブジェクト間 (多くの場合、DI を通じて挿入されます) の依存関係と、関連する相互作用を表しています。
 
-![](./media/image22.png)
+![前の画像を拡大したもの: ASP.NET Core コントローラーは MediatR のコマンド パイプラインにコマンドを送信します。コマンドは適切なハンドラーに到達します。](./media/image22.png)
 
-**図 9-25** 単一の CQRS マイクロサービス内のプロセスにおけるメディエーター パターンの使用
+**図 7-25**. 単一の CQRS マイクロサービス内のプロセスにおけるメディエーター パターンの使用
 
 メディエーター パターンの使用がなぜ合理的かというと、エンタープライズ アプリケーションでは、処理要求が複雑になる場合があるからです。 そのため、ログ記録、検証、監査、セキュリティなどの横断的関心事を、多数追加できるようにすることが重要です。 メディエーター パイプライン (「[Mediator pattern (メディエーター パターン)](https://en.wikipedia.org/wiki/Mediator_pattern)」を参照してください) を使用すれば、それらの追加ビヘイビアーや横断的関心事を追加できるようになります。
 
@@ -431,17 +435,17 @@ public class CreateOrderCommandHandler
 
 デコレーターとビヘイビアーは、[アスペクト指向プログラミング (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming) に似ていて、メディエーター コンポーネントによって管理される特定のプロセス パイプラインのみに適用されます。 横断的関心事を実装する AOP 内のアスペクトは、コンパイル時に挿入された*アスペクト ウィーバー*か、オブジェクト呼び出しインターセプションに基づいて適用されます。 これらの典型的な AOP アプローチはどちらも、"魔法のように" 動作すると言われます。なぜなら、AOP の動作のしくみを見ることは容易ではないからです。 深刻な問題やバグを扱う場合、AOP はデバッグが困難になることがあります。 一方、これらのデコレーター/ビヘイビアーは明示的であり、メディエーターのコンテキスト内でのみ適用されるため、デバッグの予測可能性がはるかに高く、デバッグが簡単になります。
 
-例として、eShopOnContainers の注文マイクロサービスでは、2 つのサンプル ビヘイビアーを実装しています ([LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) クラスと [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) クラス)。 ビヘイビアーの実装については、次のセクションで説明しています。具体的には、eShopOnContainers で [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) の[ビヘイビアー](https://github.com/jbogard/MediatR/wiki/Behaviors)がどのように実装されるかを示しています。
+例として、eShopOnContainers の注文マイクロサービスでは、2 つのサンプル ビヘイビアーを実装しています ([LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) クラスと [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) クラス)。 ビヘイビアーの実装については、次のセクションで説明しています。具体的には、eShopOnContainers で [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) の[ビヘイビアー](https://github.com/jbogard/MediatR/wiki/Behaviors)がどのように使用されるかを示しています。
 
-### <a name="using-message-queues-out-of-proc-in-the-commands-pipeline"></a>コマンドのパイプラインでメッセージ キュー (プロセス外) を使用する
+### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>コマンドのパイプラインでメッセージ キュー (プロセス外) を使用する
 
-もう 1 つの方法は、図 9-26 に示すように、ブローカーやメッセージ キューに基づいて非同期メッセージを使用する方法です。 この方法は、コマンド ハンドラーの直前のメディエーター コンポーネントと組み合わせることもできます。
+もう 1 つの方法は、図 7-26 に示すように、ブローカーやメッセージ キューに基づいて非同期メッセージを使用する方法です。 この方法は、コマンド ハンドラーの直前のメディエーター コンポーネントと組み合わせることもできます。
 
-![](./media/image23.png)
+![コマンドのパイプラインは高可用性のメッセージ キューで処理し、適切なハンドラーにコマンドを配信することもできます。](./media/image23.png)
 
-**図 9-26** CQRS コマンドでのメッセージ キュー (プロセス外およびプロセス間通信) の使用
+**図 7-26**. CQRS コマンドでのメッセージ キュー (プロセス外およびプロセス間通信) の使用
 
-メッセージ キューを使用してコマンドを受信すると、コマンドのパイプラインがさらに複雑になる恐れがあります。多くの場合、外部メッセージ キューを通じて接続された 2 つのプロセスにパイプラインを分割する必要が生じるからです。 ただし、非同期メッセージングに基づいてスケーラビリティやパフォーマンスを改善する必要がある場合には、この方法を使用することになります。 図 9-26 の場合、コントローラーはコマンド メッセージをキューにポストし、そのまま戻ります。 その後、コマンド ハンドラーは自分のペースでメッセージを処理します。 これは、キューの非常に大きな利点です。高度なスケーラビリティが必要な場合、たとえば、在庫などの大量のイングレス データを扱う場合には、メッセージ キューがバッファーの役割を果たすことができるのです。
+メッセージ キューを使用してコマンドを受信すると、コマンドのパイプラインがさらに複雑になる恐れがあります。多くの場合、外部メッセージ キューを通じて接続された 2 つのプロセスにパイプラインを分割する必要が生じるからです。 ただし、非同期メッセージングに基づいてスケーラビリティやパフォーマンスを改善する必要がある場合には、この方法を使用することになります。 図 7-26 の場合、コントローラーはコマンド メッセージをキューにポストし、そのまま戻ります。 その後、コマンド ハンドラーは自分のペースでメッセージを処理します。 これは、キューの非常に大きな利点です。高度なスケーラビリティが必要な場合、たとえば、在庫などの大量のイングレス データを扱う場合には、メッセージ キューがバッファーの役割を果たすことができるのです。
 
 ただし、非同期であるというメッセージ キューの性質上、コマンドの処理が成功したかどうかについて、クライアント アプリケーションとどうやって通信するかを検討する必要があります。 原則として、「ファイア アンド フォーゲット」コマンドを使用することはできません。 どのようなビジネス アプリケーションでも、コマンドが正常に処理されたかどうかを確認する必要がありますし、少なくとも、検証を経て受け入れられたかどうかを確認する必要があります。
 
@@ -449,9 +453,9 @@ public class CreateOrderCommandHandler
 
 また、非同期コマンドは一方向のコマンドであり、多くの場合は不要になる可能性があります。これについては、Burtsev Alexey 氏と Greg Young 氏が[オンライン会話](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ)で交わした興味深いやりとりの中でも説明されています。
 
-\[Burtsev Alexey\] 私は、非同期コマンド処理や一方向のコマンド メッセージングが、特に理由もなく使用されているコードをよく見かけます (それらのコードでは、長い操作があるわけでもなく、外部の非同期コードを実行しているわけでもなく、アプリケーション境界をまたいでメッセージ バスを使用しているわけでもありません)。 彼らはなぜ、このようにコードを無駄に複雑化しているのでしょうか。 また、私はこれまでブロッキング コマンド ハンドラーを使用した CQRS コードを見たことがありませんが、この種のコードはほとんどの場合、問題なく機能します。
-
-\[Greg Young\] \[...\] 非同期コマンドは存在しません。これは実際には別のイベントです。 あなたが送った要求を私が受け付け、それに同意しない場合にはイベントを発生させる必要があるのであれば、あなたが私に何かを指示していることにはなりません。 何かが実行されたことを、あなたが私に知らせているだけです。 これは一見、わずかな違いにも思えますが、大変深い意味があります。
+> \[Burtsev Alexey\] 私は、非同期コマンド処理や一方向のコマンド メッセージングが、特に理由もなく使用されているコードをよく見かけます (それらのコードでは、長い操作があるわけでもなく、外部の非同期コードを実行しているわけでもなく、アプリケーション境界をまたいでメッセージ バスを使用しているわけでもありません)。 彼らはなぜ、このようにコードを無駄に複雑化しているのでしょうか。 また、私はこれまでブロッキング コマンド ハンドラーを使用した CQRS コードを見たことがありませんが、この種のコードはほとんどの場合、問題なく機能します。
+>
+> \[Greg Young\] \[...\] 非同期コマンドは存在しません。これは実際には別のイベントです。 あなたが送った要求を私が受け付け、それに同意しない場合にはイベントを発生させる必要があるのであれば、あなたが私に何かを指示していることにはなりません。\[つまり、それはコマンド (指令) ではありません\]。 何かが実行されたことを、あなたが私に知らせているだけです。 これは一見、わずかな違いにも思えますが、大変深い意味があります。
 
 非同期コマンドを使用する場合、エラーを示すための簡単な方法がないので、システムの複雑さが大幅に増します。 したがって非同期コマンドは、スケーラビリティ上の要件がある場合や、内部のマイクロサービスとメッセージを通じて通信する特別なケースを除き、推奨されません。 これらのケースに該当する場合は、エラー用に個別のレポート/回復システムを設計する必要があります。
 
@@ -459,7 +463,7 @@ eShopOnContainers の初期バージョンでは、HTTP 要求から開始され
 
 いずれにせよ、これについては、アプリケーションやマイクロサービスのビジネス要件に基づいて意思決定を行う必要があります。
 
-## <a name="implementing-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>メディエーター パターン (MediatR) を使用したコマンド プロセス パイプラインの実装
+## <a name="implement-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>メディエーター パターン (MediatR) を使用したコマンド プロセス パイプラインの実装
 
 このガイドでは、サンプル実装として、メディエーター パターンに基づくインプロセス パイプラインを使用してコマンド挿入を駆動し、コマンドを (メモリ内で) 適切なコマンド ハンドラーにルーティングする方法を提案します。 またこのガイドでは、横断的関心事を分離するために[ビヘイビアー](https://github.com/jbogard/MediatR/wiki/Behaviors)を適用することを提案します。
 
@@ -469,7 +473,7 @@ eShopOnContainers の初期バージョンでは、HTTP 要求から開始され
 
 メディエーター パターンを使用する理由については、このガイドのレビュー時に、Jimmy Bogard からもう 1 点、次のような理由が説明されました。
 
-ここでテストについても触れておいたほうがいいと思います。システムのビヘイビアーに、一貫性ある枠組みを持たせることができます。 リクエストイン、レスポンスアウト。このアスペクトは、作成したテストを一貫性を持って動作させるうえで、非常に価値があります。
+> ここでテストについても触れておいたほうがいいと思います。システムのビヘイビアーに、一貫性ある枠組みを持たせることができます。 リクエストイン、レスポンスアウト。このアスペクトは、作成したテストを一貫性を持って動作させるうえで、非常に価値があります。
 
 まずは、メディエーター オブジェクトを実際に使用する、サンプル WebAPI コントローラーから見ていきましょう。 メディエーター オブジェクトを今まで使用していなかった場合は、そのコントローラーのすべての依存関係 (ロガー オブジェクトなど) を挿入する必要があります。 そのため、コンストラクターがかなり複雑になります。 一方、メディエーター オブジェクトを使用している場合は、コントローラーのコンストラクターがかなりシンプルになります。横断的操作ごとに 1 つの依存関係があれば、多数の依存関係を含めなくても、いくつかの依存関係だけで事足ります。次に例を示します。
 
@@ -495,9 +499,9 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 }
 ```
 
-### <a name="implementing-idempotent-commands"></a>べき等コマンドの実装
+### <a name="implement-idempotent-commands"></a>べき等コマンドの実装
 
-eShopOnContainers では、上記の例よりもさらに高度なコードで、注文マイクロサービスから CreateOrderCommand オブジェクトが送信されています。 ただし、この注文ビジネス プロセスはやや複雑で、(このケースでは) バスケット マイクロサービスから開始されているため、CreateOrderCommand オブジェクトを送信するこのアクションは、先の例のようにクライアント アプリから呼び出されるシンプルな WebAPI コントローラーではなく、[UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) という統合イベント ハンドラーから実行されます。 
+**eShopOnContainers** では、上記の例よりもさらに高度なコードで、注文マイクロサービスから CreateOrderCommand オブジェクトが送信されています。 ただし、この注文ビジネス プロセスはやや複雑で、(このケースでは) バスケット マイクロサービスから開始されているため、CreateOrderCommand オブジェクトを送信するこのアクションは、先の例のようにクライアント アプリから呼び出されるシンプルな WebAPI コントローラーではなく、UserCheckoutAcceptedIntegrationEvent.cs (https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)) という統合イベント ハンドラーから実行されます。
 
 とは言え、MediatR にコマンドを送信するアクションは、次のコードに示すように、非常に似ています。
 
@@ -583,7 +587,7 @@ public class IdentifiedCommandHandler<T, R> :
 
 IdentifiedCommand はビジネス コマンドのエンベロープのように動作するので、ビジネス コマンドを処理する必要がある場合 (ID が重複していない場合) には、その内部ビジネス コマンドを受け取り、それを [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) からメディエーターへと送信します (`_mediator.Send(message.Command)` を実行している、上記のコードの最後の部分)。
 
-これを行う際には、ビジネス コマンド ハンドラー (この場合は、注文データベースに対してトランザクションを実行している CreateOrderCommandHandler) がリンクされ、実行されます。次にコードを示します。
+これを行う際には、ビジネス コマンド ハンドラー (この場合は、注文データベースに対してトランザクションを実行している [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)) がリンクされ、実行されます。次にコードを示します。
 
 ```csharp
 // CreateOrderCommandHandler.cs
@@ -630,7 +634,7 @@ public class CreateOrderCommandHandler
 }
 ```
 
-### <a name="registering-the-types-used-by-mediatr"></a>MediatR によって使用される型の登録
+### <a name="register-the-types-used-by-mediatr"></a>MediatR によって使用される型の登録
 
 MediatR にコマンド ハンドラー クラスを認識させるには、メディエーター クラスとコマンド ハンドラー クラスを IoC コンテナーに登録する必要があります。 既定では、MediatR は Autofac を IoC コンテナーとして使用しますが、組み込みの ASP.NET Core IoC コンテナーや、MediatR でサポートされているその他のコンテナーを使用することもできます。
 
@@ -655,9 +659,9 @@ public class MediatorModule : Autofac.Module
 }
 ```
 
-"魔法が起こる" のは、まさにこの部分です。 
+"魔法が起こる" のは、まさにこの部分です。
 
-各コマンド ハンドラーには汎用の IAsyncRequestHandler&lt;T&gt; インターフェイスが実装されているため、アセンブリを登録すると、RequestHandlers としてマークされたすべての型が RegisteredAssemblyTypes に登録され、CommandHandler クラスに記述されたリレーションシップにより、CommandHandlers が対応するコマンドに関連付けられます。次に例を示します。
+各コマンド ハンドラーには汎用の `IAsyncRequestHandler<T>` インターフェイスが実装されているため、アセンブリを登録すると、`IAsyncRequestHandler` としてマークされたすべての型が `RegisteredAssemblyTypes` に登録され、`CommandHandler` クラスに記述されたリレーションシップにより、`CommandHandlers` が対応する `Commands` に関連付けられます。次に例を示します。
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -665,9 +669,9 @@ public class CreateOrderCommandHandler
 {
 ```
 
-これが、コマンドをコマンド ハンドラーに関連付けるコードです。 ハンドラーは非常にシンプルなクラスですが、RequestHandler&lt;T&gt; を継承しており、 MediatR により、正しいペイロードで呼び出されます。
+これが、コマンドをコマンド ハンドラーに関連付けるコードです。 ハンドラーは非常にシンプルなクラスですが、`RequestHandler<T>` から継承されるクラスであり、T はコマンドの型になります。また、MediatR により、正しいペイロード (コマンド) で呼び出されます。
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>MediatR のビヘイビアーを使用して、コマンドの処理時に横断的関心事を適用する
+## <a name="apply-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>MediatR のビヘイビアーを使用して、コマンドの処理時に横断的関心事を適用する
 
 もう 1 つ重要なことがあります。それは、横断的関心事をメディエーター パイプラインに適用することです。 Autofac 登録モジュール コードの末尾を見ると、ビヘイビアー型 (カスタム LoggingBehavior クラスと ValidatorBehavior クラス) がどのように登録されるかがわかります。 ただし、その他のカスタム ビヘイビアーを追加することもできます。
 
@@ -715,46 +719,9 @@ public class LoggingBehavior<TRequest, TResponse>
 }
 ```
 
-このデコレーター クラスを実装し、パイプラインを修飾することで、MediatR を通じて処理されたすべてのコマンドが、実行に関するロギング情報になります。
+このビヘイビアー クラスを実装し、それをパイプラインで登録することで (上記の MediatorModule)、MediatR を通じて処理されたすべてのコマンドが、実行に関するロギング情報になります。
 
 eShopOnContainers 注文マイクロサービスでは、基本検証用に 2 つ目のビヘイビアーも適用されます。[FluentValidation](https://github.com/JeremySkinner/FluentValidation) ライブラリに依存する [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) クラスです。次にコードを示します。
-
-```csharp
-public class ValidatorDecorator<TRequest, TResponse>
-    : IAsyncRequestHandler<TRequest, TResponse>
-    where TRequest : IAsyncRequest<TResponse>
-{
-    private readonly IAsyncRequestHandler<TRequest, TResponse> _inner;
-    private readonly IValidator<TRequest>[] _validators;
-
-    public ValidatorDecorator(
-        IAsyncRequestHandler<TRequest, TResponse> inner,
-        IValidator<TRequest>[] validators)
-    {
-        _inner = inner;
-        _validators = validators;
-    }
-
-    public async Task<TResponse> Handle(TRequest message)
-    {
-        var failures = _validators
-            .Select(v => v.Validate(message))
-            .SelectMany(result => result.Errors)
-            .Where(error => error != null)
-            .ToList();
-            if (failures.Any())
-            {
-                throw new OrderingDomainException(
-                $"Command Validation Errors for type {typeof(TRequest).Name}",
-                new ValidationException("Validation exception", failures));
-            }
-            var response = await _inner.Handle(message);
-        return response;
-    }
-}
-```
-
-その後、[FluentValidation](https://github.com/JeremySkinner/FluentValidation) ライブラリに基づいて、CreateOrderCommand によって渡されたデータ用の検証が作成されました。次にコードを示します。
 
 ```csharp
 public class ValidatorBehavior<TRequest, TResponse> 
@@ -786,7 +753,9 @@ public class ValidatorBehavior<TRequest, TResponse>
 }
 ```
 
-その後、FluentValidation ライブラリに基づいて、CreateOrderCommand によって渡されたデータ用の検証が作成されました。次にコードを示します。
+検証でエラーが出た場合はここのビヘイビアーによって例外が発行されますが、結果オブジェクトを返すこともできる場合があります。成功であればコマンド結果が含まれ、失敗であれば検証メッセージが含まれます。 おそらくは、より簡単にユーザーに検証結果を示すことができます。
+
+その後、[FluentValidation](https://github.com/JeremySkinner/FluentValidation) ライブラリに基づいて、CreateOrderCommand によって渡されたデータ用の検証が作成されました。次にコードを示します。
 
 ```csharp
 public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
@@ -827,45 +796,45 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 
 ##### <a name="the-mediator-pattern"></a>メディエーター パターン
 
--   **メディエーター パターン**
-    [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
+- **メディエーター パターン** \
+  [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>デコレーター パターン
 
--   **デコレーター パターン**
-    [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
+- **デコレーター パターン** \
+  [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
--   **MediatR。** GitHub リポジトリ。
-    [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
+- **MediatR。** GitHub リポジトリ。 \
+  [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
 
--   **MediatR と AutoMapper での CQRS**
-    [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
+- **MediatR と AutoMapper での CQRS** \
+  [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
--   **コントローラーをダイエットさえる: POST とコマンド**
-    [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
+- **コントローラーをダイエットさせる: POST とコマンド** \
+  [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
--   **メディエーター パイプラインでの横断的関心事への取り組み**
-    [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
+- **メディエーター パイプラインでの横断的関心事への取り組み** \
+  [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
--   **CQRS と REST: 完全な一致**
-    [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
+- **CQRS と REST: 完全な一致** \
+  [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
 
--   **MediatR パイプラインの例**
-    [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
+- **MediatR パイプラインの例** \
+  [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
--   **MediatR と ASP.NET Core の縦方向のスライス テスト フィクスチャ**
-    *<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/> *
+- **MediatR と ASP.NET Core の縦方向のスライス テスト フィクスチャ** \
+  [*https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/*](https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/)
 
--   **Microsoft 依存関係挿入用の MediatR 拡張機能のリリース**
-    [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
+- **Microsoft 依存関係挿入用の MediatR 拡張機能のリリース** \
+  [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
 
 ##### <a name="fluent-validation"></a>Fluent 検証
 
--   **Jeremy Skinner。FluentValidation.** GitHub リポジトリ。
-    [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
+- **Jeremy Skinner。FluentValidation.** GitHub リポジトリ。 \
+  [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
 
 >[!div class="step-by-step"]
-[前へ](microservice-application-layer-web-api-design.md)
-[次へ](../implement-resilient-applications/index.md)
+>[前へ](microservice-application-layer-web-api-design.md)
+>[次へ](../implement-resilient-applications/index.md)

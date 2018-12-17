@@ -1,31 +1,31 @@
 ---
 title: ドメイン モデル レイヤーでの検証の設計
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | ドメイン モデル レイヤーでの検証の設計
+description: コンテナー化された .NET アプリケーション用の .NET マイクロサービス アーキテクチャ | ドメイン モデル検証の主要な概念を理解する。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 6ff325bb062da2ebff815fc847d2247707a0bf7f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: f348e1dbb65f37f625c1dec243364af683c99b8a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188054"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153684"
 ---
-# <a name="designing-validations-in-the-domain-model-layer"></a>ドメイン モデル レイヤーでの検証の設計
+# <a name="design-validations-in-the-domain-model-layer"></a>ドメイン モデル レイヤーでの検証を設計する
 
-DDD では、検証規則はインバリアントとして考えることができます。 集計の主な役割は、その集計内のすべてのエンティティの状態の変更にわたってインバリアントを強制することです。
+DDD では、検証ルールは不変条件として考えることができます。 集計の主な役割は、その集計内のすべてのエンティティの状態の変更にわたってインバリアントを強制することです。
 
 ドメイン エンティティは、常に有効なエンティティである必要があります。 常に true にする必要のあるオブジェクトには、特定のインバリアント数があります。 たとえば、order item オブジェクトは、正の整数である必要がある数量と、アーティクル名および価格を常に持っている必要があります。 そのため、インバリアントの強制は、(特に集計ルートの) ドメイン エンティティの役目となり、エンティティ オブジェクトは有効になっていない限り存在できません。 インバリアント ルールは、コントラクトとして単純に表され、違反があった場合には例外または通知が発生します。
 
-この背後にある理由は、オブジェクトがなってはならない状態にあるため、多くのバグが発生するからです。 [オンライン ディスカッション](https://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/)での Greg Young による適切な説明を次に示します。
+この背後にある理由は、オブジェクトがなってはならない状態にあるため、多くのバグが発生するからです。 [オンライン ディスカッション](https://jeffreypalermo.com/2009/05/the-fallacy-of-the-always-valid-entity/)での Greg Young による適切な説明を次に示します。
 
 UserProfile を受け取る SendUserCreationEmailService があるとします。Name が null でないそのサービスでどのように合理化できるでしょうか。 再度チェックしますか。 多くの場合、わざわざチェックなどせずに、他の誰かが検証してから自分に送信してくれる "最善の結果を期待" しているのではないでしょうか。 もちろん、記述すべき最初のテストのうちの 1 つである TDD を使用すると、null 名を持つ顧客を送信した場合に、エラーが発生します。 しかし、この種のテストを繰り返し記述しているうちに、"名前が null になることを許可しなかったら、これらのテストのすべては必要ないのではないか" ということに気が付きました。
 
-## <a name="implementing-validations-in-the-domain-model-layer"></a>ドメイン モデル レイヤーでの検証の実装
+## <a name="implement-validations-in-the-domain-model-layer"></a>ドメイン モデル レイヤーでの検証を実装する
 
 検証は通常、ドメイン エンティティ コンストラクター内、またはエンティティを更新できるメソッドに実装されます。 検証を実装するには、データを検証し、検証が失敗した場合に例外を発生させるといった、複数の方法があります。 検証に使用する仕様パターンや、例外が発生すると、検証ごとに例外を返すのではなく、エラーのコレクションを返す通知パターンのような、より高度なパターンもあります。
 
-### <a name="validating-conditions-and-throwing-exceptions"></a>条件を検証して例外をスローする
+### <a name="validate-conditions-and-throw-exceptions"></a>条件を検証して例外をスローする
 
 次のコード例は、例外を発生させることによってドメイン エンティティで検証するための最も簡単な方法を示しています。 このセクションの最後にある参照テーブルには、前述したパターンに基づくより高度な実装へのリンクがあります。
 
@@ -53,51 +53,29 @@ public void SetAddress(string line1, string line2,
 
 同様の方法は、エンティティのコンストラクターで、エンティティの作成後、例外を発生させてそのエンティティが有効であることを確認するために使用できます。
 
-### <a name="using-validation-attributes-in-the-model-based-on-data-annotations"></a>データ注釈に基づいてモデルで検証属性を使用する
+### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>データ注釈に基づいてモデルで検証属性を使用する
 
-別の方法は、データ注釈に基づいて検証属性を使用することです。 検証属性はモデルの検証を構成する方法を提供します。この方法は、概念的にはデータベース テーブルでのフィールドの検証に似ています。 これには、データ型の割り当てや必須フィールドなどの制約が含まれます。 その他の種類の検証としては、クレジット カード番号、電話番号、メール アドレスなど、ビジネス ルールを強制するためのデータへのパターンの適用があります。 検証属性は、要件の強制を容易にします。
+Required 属性や MaxLength 属性のようなデータ注釈を使用すると、「[テーブル マッピング](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping)」セクションで詳述したように、EF Core データベースのフィールド プロパティを構成することができます。しかし、.NET Framework の EF 4.x 以降に行われているので、[それらは EF Core でのエンティティ検証では機能しなくなりました](https://github.com/aspnet/EntityFrameworkCore/issues/3680) (<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> メソッドも機能しません)。
 
-ただし、次のコードに示すように、この方法は、MVC コントローラーから呼び出す必要がある Microsoft.AspNetCore.Mvc.ModelState から ModelState.IsValid に対する依存関係を取得するため、非常に煩わしい場合があります。 モデル検証は各コントローラー アクションが呼び出される前に行われます。ModelState.IsValid 呼び出しの結果を検査し、適切に対処するのはコントローラー メソッドの役割です。 これを使用するかどうかは、モデルをそのインフラストラクチャとどの程度緊密に結合させるかによります。
+コントローラーの通常どおりのアクション呼び出しの前に行われるモデル バインディングの際にモデル検証で、データ注釈と <xref:System.ComponentModel.DataAnnotations.IValidatableObject> インターフェイスを引き続き使用することができます。しかし、そのモデルは ViewModel または DTO であることを前提としており、それはドメイン モデルに関する問題ではなく、MVC または API に関する問題です。
 
-```csharp
-using System.ComponentModel.DataAnnotations;
-// Other using statements ...
-// Entity is a custom base class which has the ID
-public class Product : Entity
-{
-    [Required]
-    [StringLength(100)]
-    public string Title { get; private set; }
+概念の違いが明らかにされていれば、ご利用のアクションで非推奨のエンティティ クラス オブジェクトが受信される場合に、検証用のエンティティ クラス内でデータ注釈と `IValidatableObject` を引き続き使用することができます。 その場合、アクションが呼び出されるすぐ前に行われるモデル バインディングの際に検証は実行されるので、コントローラーの ModelState.IsValid プロパティを調べてその結果を確認することができます。ただし、繰り返しになりますが、それはコントローラー内で実行され、実行されるのは DbContext 内にエンティティ オブジェクトが保持される前ではありません。それは EF 4.x 以降に行われているからです。
 
-    [Required]
-    [Range(0, 999.99)]
-    public decimal Price { get; private set; }
+DbContext の SaveChanges メソッドをオーバーライドすれば、データ注釈と `IValidatableObject.Validate` メソッドを使用してエンティティ クラスにカスタム検証を引き続き実装することができます。
 
-    [Required]
-    [VintageProduct(1970)]
-    [DataType(DataType.Date)]
-    public DateTime ReleaseDate { get; private set; }
+`IValidatableObject` エンティティを検証するための実装のサンプルについては、[GitHub 上のこちらのコメント](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539)を参照してください。 そのサンプルでは属性ベースの検証は行われていません。その検証については、同じオーバーライド内でリフレクションを使用することで容易に実装できるはずです。
 
-    [Required]
-    [StringLength(1000)]
-    public string Description { get; private set; }
-
-    // Constructor...
-    // Additional methods for entity logic and constructor...
-}
-```
-
-ただし、DDD の観点から、ドメイン モデルはエンティティの動作メソッド内の例外を使用して、または検証規則を強制する仕様パターンと通知パターンを実装することで、リーンに保つことをお勧めします。 ASP.NET Core でのデータ注釈のような検証フレームワーク、または FluentValidation のようなその他の検証フレームワークには、アプリケーション フレームワークを呼び出すための要件があります。 たとえば、データ注釈で ModelState.IsValid メソッドを呼び出す場合、ASP.NET コントローラーを起動する必要があります。
+ただし、DDD の観点から、ドメイン モデルはエンティティの動作メソッド内の例外を使用して、または検証ルールを強制する仕様パターンと通知パターンを実装することで、リーンに保つことをお勧めします。
 
 UI 層内でモデルの検証を許可するために、入力を受け取る ViewModel クラス内 (ドメイン エンティティではなく) のアプリケーション層でデータ注釈を使用するのは合理的です。 ただし、ドメイン モデル内での検証の実行時にはこれを行わないでください。
 
-### <a name="validating-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>仕様パターンと通知パターンを実装することでエンティティを検証する
+### <a name="validate-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>仕様パターンと通知パターンを実装することでエンティティを検証する
 
 最後に、ドメイン モデルで検証を実装するより複雑な方法は、後述するその他の技術情報の一部で説明されているように、仕様パターンと通知パターンを組み合わせて実装することです。
 
 これらのパターンの 1 つだけを使用することもできます。たとえば、コントロール ステートメントを使用して手動で検証していますが、検証エラーの一覧をスタックして返すには通知パターンを使用します。
 
-### <a name="using-deferred-validation-in-the-domain"></a>ドメインで遅延検証を使用する
+### <a name="use-deferred-validation-in-the-domain"></a>ドメインで遅延検証を使用する
 
 ドメインで遅延検証に対処するには、さまざまな方法があります。 Vaughn Vernon 氏は自身の著書『[Implementing Domain-Driven Design](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577)』で、検証に関するセクションでこれらについて説明しています。
 
@@ -109,28 +87,27 @@ UI 層内でモデルの検証を許可するために、入力を受け取る V
 
 ## <a name="additional-resources"></a>その他の技術情報
 
--   **Rachel Appel。ASP.NET Core MVC でのモデル検証の概要**
-    [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
+- **Rachel Appel。ASP.NET Core MVC でのモデル検証の概要** \
+  [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
 
--   **Rick Anderson の 検証の追加**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+- **Rick Anderson の 検証の追加** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Martin Fowler。検証で例外のスローを通知に置き換える**
-    [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+- **Martin Fowler。検証で例外のスローを通知に置き換える** \
+  [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
--   **仕様と通知のパターン**
-    [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
+- **仕様と通知のパターン** \
+  [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
--   **Lev Gorodinski。ドメイン駆動設計 (DDD) での検証**
-    [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
+- **Lev Gorodinski。ドメイン駆動設計 (DDD) での検証** \
+  [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
--   **Colin Jack。ドメイン モデルの検証**
-    [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+- **Colin Jack。ドメイン モデルの検証** \
+  [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
--   **Jimmy Bogard。DDD 世界での検証**
-    [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
-
+- **Jimmy Bogard。DDD 世界での検証** \
+  [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
 >[!div class="step-by-step"]
-[前へ](enumeration-classes-over-enum-types.md)
-[次へ](client-side-validation.md)
+>[前へ](enumeration-classes-over-enum-types.md)
+>[次へ](client-side-validation.md)

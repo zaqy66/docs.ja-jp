@@ -1,45 +1,45 @@
 ---
 title: .NET Core でマイクロサービス ドメイン モデルを実装する
-description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | .NET Core でマイクロサービス ドメイン モデルを実装する'
+description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD 指向ドメイン モデルの実装の詳細について
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/09/2017
-ms.openlocfilehash: bb11d87cacf5bb6cbc980c879b0c42fae76f6246
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.date: 10/08/2018
+ms.openlocfilehash: 1c21ba1cc4c02336a204b1fe91b72e5f3e89228c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46577537"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127135"
 ---
-# <a name="implementing-a-microservice-domain-model-with-net-core"></a>.NET Core でマイクロサービス ドメイン モデルを実装する 
+# <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core でマイクロサービス ドメイン モデルを実装する 
 
 前のセクションでは、ドメイン モデルの基本的な設計原則と設計パターンを説明しました。 ここでは、.NET Core (プレーンな C\# コード) と EF Core を使用してドメイン モデルを実装するために可能な手段を調べます。 ドメイン モデルを構成するのは自分が書くコードだけであることにご注目ください。 EF Core モデルの要件があるだけで、EF に対する実際の依存関係は存在しません。 ドメイン モデルには EF Core または他の ORM への緊密な依存関係や参照を含めないでください。
 
-## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>カスタム .NET Standard ライブラリにおけるドメイン モデル構成
+## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>カスタム .NET Standard ライブラリのドメイン モデル構造
 
-eShopOnContainers 参照アプリケーションに使用されているフォルダー編成は、このアプリケーションの DDD モデルを示しています。 アプリケーションによっては、別のフォルダー編成の方が、選択する設計をより明確に表現できる場合もあります。 図 9-10 に示されているように、注文ドメイン モデルには、注文集約と購入者集約という 2 つの集約があります。 それぞれの集約はドメイン エンティティと値オブジェクトから成るグループですが、単一のドメイン エンティティ (集約ルートまたはルート エンティティ) で集約を構成することもできます。
+eShopOnContainers 参照アプリケーションに使用されているフォルダー編成は、このアプリケーションの DDD モデルを示しています。 アプリケーションによっては、別のフォルダー編成の方が、選択する設計をより明確に表現できる場合もあります。 図 7-10 に示されているように、注文ドメイン モデルには、注文集約と購入者集約という 2 つの集約があります。 それぞれの集約はドメイン エンティティと値オブジェクトから成るグループですが、単一のドメイン エンティティ (集約ルートまたはルート エンティティ) で集約を構成することもできます。
 
-![](./media/image11.png)
+![BuyerAggregate および OrderAggregate フォルダーが含まれる AggregatesModel フォルダーが示された Ordering.Domain プロジェクトのソリューション エクスプローラーの表示。それぞれのフォルダーにそのエンティティ クラス、値オブジェクト ファイルなどが含まれています。 ](./media/image11.png)
 
-**図 9-10**。 eShopOnContainers の注文マイクロサービスのドメイン モデル構造
+**図 7-10**。 eShopOnContainers の注文マイクロサービスのドメイン モデル構造
 
-また、このドメイン モデル レイヤーには、ドメイン モデルのインフラストラクチャ要件ともなっているリポジトリ コントラクト (インターフェイス) も含まれています。 つまり、これらのインターフェイスによって、インフラストラクチャ レイヤーで実装しなければならないリポジトリとその方法が示されます。 リポジトリの実装はドメイン モデル レイヤーの外側、インフラストラクチャ レイヤー ライブラリ内に配置することが重要です。そのようにすることによって、ドメイン モデル レイヤーは、Entity Framework などのインフラストラクチャ テクノロジの API やクラスに "汚染" されずに済みます。
+また、このドメイン モデル レイヤーには、ドメイン モデルのインフラストラクチャ要件ともなっているリポジトリ コントラクト (インターフェイス) も含まれています。 つまり、これらのインターフェイスによって、インフラストラクチャ レイヤーで実装しなければならないリポジトリとメソッドが示されます。 リポジトリの実装はドメイン モデル レイヤーの外側、インフラストラクチャ レイヤー ライブラリ内に配置することが重要です。そのようにすることによって、ドメイン モデル レイヤーは、Entity Framework などのインフラストラクチャ テクノロジの API やクラスに "汚染" されずに済みます。
 
 また、[SeedWork](https://martinfowler.com/bliki/Seedwork.html) フォルダーも参照できます。このフォルダーには、ドメイン エンティティと値オブジェクトの基礎として使用できるカスタム基底クラスが含まれるため、各ドメインのオブジェクト クラスで冗長コードをなくすことができます。
 
-## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>カスタム .NET Standard ライブラリで集約を構築する
+## <a name="structure-aggregates-in-a-custom-net-standard-library"></a>カスタム .NET Standard ライブラリでの構造の集約
 
 集約とは、トランザクションの整合性を保つためにグループ化される、ドメイン オブジェクトのクラスターのことです。 こうしたオブジェクトは、(集約ルートやルート エンティティなどの) エンティティ インスタンスに、追加の値オブジェクトを付加したものとなる場合があります。
 
-トランザクションの整合性とは、ビジネス アクションの最後の時点で集約が一貫した状態になり、なおかつ最新状態になることを保証することです。 たとえば、eShopOnContainers 注文マイクロサービス ドメイン モデルの注文集約は、図 9-11 のように構成されています。
+トランザクションの整合性とは、ビジネス アクションの最後の時点で集約が一貫した状態になり、なおかつ最新状態になることを保証することです。 たとえば、eShopOnContainers 注文マイクロサービス ドメイン モデルの注文集約は、図 7-11 のように構成されています。
 
-![](./media/image12.png)
+![OrderAggregate フォルダーの詳細な表示: Address.cs は値オブジェクト、IOrderRepository はリポジトリ インターフェイス、Order.cs は集約ルート、OrderItem.cs は子エンティティ、OrderStatus.cs は列挙クラス。](./media/image12.png)
 
-**図 9-11**。 Visual Studio ソリューションにおける注文集約
+**図 7-11**。 Visual Studio ソリューションにおける注文集約
 
-集約フォルダーのいずれかのファイルを開くと、[Seedwork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork) フォルダーで実装されるエンティティまたは値オブジェクトの場合と同じように、それがカスタム基底クラスとインターフェイスのいずれかとしてマークされている様子を確認できます。
+集約フォルダーのいずれかのファイルを開くと、[SeedWork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork) フォルダーで実装されるエンティティまたは値オブジェクトの場合と同じように、それがカスタム基底クラスとインターフェイスのいずれかとしてマークされている様子を確認できます。
 
-## <a name="implementing-domain-entities-as-poco-classes"></a>POCO クラスとしてドメイン エンティティを実装する
+## <a name="implement-domain-entities-as-poco-classes"></a>POCO クラスとしてドメイン エンティティを実装する
 
 ドメイン エンティティを実装する POCO クラスを作成して、.NET でドメイン モデルを実装します。 次の例では、Order クラスがエンティティとして、さらには集約ルートとしても定義されています。 Order クラスは Entity 基底クラスから派生しているため、エンティティに関連する共通コードを再利用できます。 これらの基底クラスとインターフェイスはドメイン モデル プロジェクト内で自分で定義するため、EF などの ORM のインフラストラクチャ コードではなくユーザー コードです。
 
@@ -101,13 +101,13 @@ public class Order : Entity, IAggregateRoot
 
 集約ルートを設けるということは、その集約のエンティティの整合性やビジネス ルールに関連するコードのほとんどを注文集約ルート クラスでメソッドとして実装する必要があることを意味します (たとえば、OrderItem オブジェクトを集約に追加する場合の AddOrderItem など)。 独立的にであれ、直接的にであれ、OrderItems オブジェクトを作成も更新もしないでください。AggregateRoot クラスが、その子エンティティに対するすべての更新操作を制御し、整合性を保持する必要があります。
 
-## <a name="encapsulating-data-in-the-domain-entities"></a>ドメイン エンティティのデータをカプセル化する
+## <a name="encapsulate-data-in-the-domain-entities"></a>ドメイン エンティティのデータをカプセル化する
 
 エンティティ モデルでよくある問題として、コレクションのナビゲーション プロパティが一般にアクセス可能なリスト型として公開されることがあります。 そうすると、コラボレーターの開発者が誰でもこれらのコレクション型のコンテンツを操作できるようになり、結果として、コレクションに関連する重要なビジネス ルールがバイパスされ、オブジェクトが無効な状態のままになる可能性があります。 これに対する解決策は、関連するコレクションへの読み取り専用アクセスを公開することと、クライアントがこれらのコレクションを操作する方法を定義したメソッドを明示的に提供することです。
 
-前のコードでは、多くの属性が読み取り専用かプライベートであり、クラス メソッドによってでなければ更新できないことにご注意ください。そのため、更新はどれもビジネス ドメインの不変条件と、クラス メソッドに指定されたロジックを考慮に入れたものとなります。
+前のコードでは、多くの属性が読み取り専用かプライベートであり、クラス メソッドによってでなければ更新できないことにご注意ください。そのため、更新ではどれもビジネス ドメインの不変条件と、クラス メソッドに指定されたロジックが考慮されます。
 
-たとえば、DDD パターンに従い、コマンド ハンドラー メソッドやアプリケーション レイヤー クラスから以下を実行すべきでは*ありません*。
+たとえば、DDD パターンに従い、コマンド ハンドラー メソッドやアプリケーション レイヤー クラスから**以下を実行すべきでは *ありません*** (実際には、そのようにできないようになっています)。
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -152,33 +152,31 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 Entity Framework Core 1.1 以降を使用する場合、DDD エンティティをより優れた方法で表すことができます。プロパティに加えて、[フィールドへのマッピング](https://docs.microsoft.com/ef/core/modeling/backing-field)が行えるためです。 これは、子エンティティや値オブジェクトのコレクションを保護する場合に役立ちます。 この機能拡張によって、プロパティではなく簡単なプライベート フィールドを使用できます。また、パブリック メソッドでフィールド コレクションへの更新を実装し、AsReadOnly メソッドを使用して読み取り専用アクセスを提供できます。
 
-DDD では、エンティティのメソッド (またはコンストラクター) だけをとおしてエンティティを更新して、不変条件とデータの整合性を制御し、こうしてプロパティが get アクセサーによってのみ定義されることが望まれます。 プロパティは、プライベート フィールドによってサポートされます。 プライベート メンバーには、クラス内からのみアクセスできます。 ただし例外があり、EF Core はこれらのフィールドも設定する必要があります。
+DDD では、エンティティのメソッド (またはコンストラクター) だけをとおしてエンティティを更新して、不変条件とデータの整合性を制御し、こうしてプロパティが get アクセサーによってのみ定義されることが望まれます。 プロパティは、プライベート フィールドによってサポートされます。 プライベート メンバーには、クラス内からのみアクセスできます。 ただし、1 つ例外があり、EF Core ではこれらのフィールドも設定する必要があります (適切な値でオブジェクトが返せるようにするため)。
 
-
-### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>get アクセサーのみでプロパティをデータベース テーブル内のフィールドにマッピングする
+### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>get アクセサーのみでプロパティをデータベース テーブル内のフィールドにマッピングする
 
 プロパティをデータベース テーブル列にマッピングすることはドメインの責任ではなく、インフラストラクチャと永続レイヤーの役割です。 ここでこれに言及するのは、エンティティをモデル化する方法に関係する EF Core 1.1 以降の新機能をお知らせするために過ぎません。 このトピックに関するその他の詳細情報については、インフラストラクチャと永続化に関するセクションで説明します。
 
-EF Core 1.0 を使用する場合、DbContext で、ゲッターによってのみ定義されるプロパティを、データベース テーブルの実際のフィールドにマップする必要があります。 これは、PropertyBuilder クラスの HasField メソッドを使用して行います。
+EF Core 1.0 以降を使用する場合、DbContext で、ゲッターによってのみ定義されるプロパティを、データベース テーブルの実際のフィールドにマップする必要があります。 これは、PropertyBuilder クラスの HasField メソッドを使用して行います。
 
-### <a name="mapping-fields-without-properties"></a>プロパティを使用しないでフィールドをマッピングする
+### <a name="map-fields-without-properties"></a>プロパティを使用しないでフィールドをマッピングする
 
 EF Core 1.1 以降の機能で列をフィールドにマップすれば、プロパティを使用しないで済ませることもできます。 代わりに、テーブルからフィールドに列をマップするだけです。 この方法の一般的なユース ケースとしては、エンティティの外部からアクセスする必要のない、内部状態用のプライベート フィールドがあります。
 
-たとえば、前述の OrderAggregate コード例の場合、`_paymentMethodId` フィールドなどのいくつかのプライベート フィールドがあり、これにはセッターやゲッターに関連するプロパティがあません。 このフィールドは注文のビジネス ロジック内で計算でき、注文のメソッドから使用できますが、データベース内に保存することも必要です。 そのため EF Core (v1.1 以降) では、関連プロパティを使用しないでデータベース内の列にフィールドをマップする方法が備わっています。 これは、このガイドの[インフラストラクチャ レイヤー](#the-infrastructure-layer)に関するセクションでも説明されています。
+たとえば、前述の OrderAggregate コード例の場合、`_paymentMethodId` フィールドなどのいくつかのプライベート フィールドがあり、これにはセッターやゲッターに関連するプロパティがあません。 このフィールドは注文のビジネス ロジック内で計算でき、注文のメソッドから使用できますが、データベース内に保存することも必要です。 そのため EF Core (v1.1 以降) では、関連プロパティを使用しないでデータベース内の列にフィールドをマップする方法が備わっています。 これは、このガイドの[インフラストラクチャ レイヤー](ddd-oriented-microservice.md#the-infrastructure-layer)に関するセクションでも説明されています。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **Vaughn Vernon。DDD および Entity Framework による集約のモデル化。** これは、Entity Framework Core では*ない*ことにご注意ください。
-    [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
+- **Vaughn Vernon。DDD および Entity Framework による集約のモデル化。** これは、Entity Framework Core では*ない*ことにご注意ください。 \
+  [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman。ドメイン駆動設計のコーディング: データを重視する開発者のためのヒント**
-    [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+- **Julie Lerman。ドメイン駆動設計のコーディング: データを重視する開発者のためのヒント** \
+  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **Udi Dahan。完全にカプセル化されたドメイン モデルを作成する方法**
-    [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
-
+- **Udi Dahan。完全にカプセル化されたドメイン モデルを作成する方法** \
+  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 >[!div class="step-by-step"]
-[前へ](microservice-domain-model.md)
-[次へ](seedwork-domain-model-base-classes-interfaces.md)
+>[前へ](microservice-domain-model.md)
+>[次へ](seedwork-domain-model-base-classes-interfaces.md)

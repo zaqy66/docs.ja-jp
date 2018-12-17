@@ -1,23 +1,23 @@
 ---
 title: マイクロサービスに簡略化された CQRS と DDD パターンを適用する
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスに簡略化された CQRS と DDD パターンを適用する
+description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | CQRS と DDD のパターンの全体的な関係を理解する。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 5557a3d83d1f5f3016ff411157db1652d3ac50e2
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: ef3260143c91c2500becd7c8c1a6cd0b81dbf3d2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106085"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148068"
 ---
-# <a name="applying-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>マイクロサービスに簡略化された CQRS と DDD パターンを適用する
+# <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>マイクロサービスに簡略化された CQRS と DDD のパターンを適用する
 
 CQRS は、データを読み取りと書き込みのモデルを分離するアーキテクチャ パターンです。 関連する用語の[コマンド クエリ分離 (CQS: Command Query Separation)](https://martinfowler.com/bliki/CommandQuerySeparation.html) は、元々 Bertrand Meyer 氏が著作の『*Object Oriented Software Construction*』(オブジェクト指向のソフトウェア構築) で定義した用語です。 基本的な考え方は、システムの操作は 2 つの別のカテゴリにはっきりと分けることができるということです。
 
--   クエリ。 クエリは結果を返し、システムの状態を変更しません。また、副作用がありません。
+- クエリ。 クエリは結果を返し、システムの状態を変更しません。また、副作用がありません。
 
--   コマンド。 コマンドはシステムの状態を変更します。
+- コマンド。 コマンドはシステムの状態を変更します。
 
 CQS は単純な概念です。つまり、同じオブジェクト内のメソッドはクエリまたはコマンドである、という概念です。 各メソッドは、状態を返すか、状態を変更しますが、両方を行うことはありません。 1 つのリポジトリ パターン オブジェクトでも、CQS に準拠する可能性があります。 CQS は CQRS の基本原則と考えることができます。
 
@@ -27,15 +27,14 @@ CQRS の分離の側面は、あるレイヤーにクエリ操作を、別のレ
 
 CQRS は、他のコンテキストでは 1 つのオブジェクトの場合でも、読み取り/書き込み操作のために 2 つのオブジェクトを持つことを意味します。 非正規化された読み取りデータベースを持つことには理由があります。詳細については、より高度な CQRS のドキュメントを参照してください。 ただし、ここではこのアプローチを使用していません。ここでは、集計のような DDD パターンの制約があるクエリを制限するのではなく、クエリに柔軟性を持たせることを目標としています。
 
-この種のサービスの例として、eShopOnContainers 参照アプリケーションの注文マイクロサービスがあります。 このサービスは、簡略化された CQRS アプローチに基づくマイクロサービスを実装しています。 また、図 9-2 に示すように、単一のデータ ソースまたはデータベースを使用しますが、トランザクション ドメインには 2 つの論理モデルと DDD パターンを使用します。
+この種のサービスの例として、eShopOnContainers 参照アプリケーションの注文マイクロサービスがあります。 このサービスは、簡略化された CQRS アプローチに基づくマイクロサービスを実装しています。 また、図 7-2 に示すように、単一のデータ ソースまたはデータベースを使用しますが、トランザクション ドメインには 2 つの論理モデルと DDD パターンを使用します。
 
-![](./media/image2.png)
+![論理 Ordering マイクロサービスには、その Ordering データベースが含まれています。Docker ホストは同じ場合もそうでない場合もあります。 同じ Docker ホストにデータベースを置くことは開発の場合にお勧めしますが、運用の場合はお勧めしません。](./media/image2.png)
 
-**図 9-2** 簡略化された CQRS および DDD ベースのマイクロサービス
+**図 7-2**。 簡略化された CQRS および DDD ベースのマイクロサービス
 
 アプリケーション レイヤーは、Web API の可能性があります。 ここで重要な設計の側面は、マイクロサービスが、CQRS パターンに従って、クエリと ViewModel (特にクライアント アプリケーション用に作成されたデータ モデル) を、コマンド、ドメイン モデル、トランザクションから分離していることです。 このアプローチによって、トランザクションと更新にのみ意味のある DDD パターンに由来する制限と制約から、クエリを独立させることができます。詳細については、以降のセクションで説明します。
 
-
 >[!div class="step-by-step"]
-[前へ](index.md)
-[次へ](eshoponcontainers-cqrs-ddd-microservice.md)
+>[前へ](index.md)
+>[次へ](eshoponcontainers-cqrs-ddd-microservice.md)

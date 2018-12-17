@@ -1,19 +1,17 @@
 ---
-title: 継続的インテグレーション (CI) で .NET Core SDK とツールを使用する
+title: 継続的インテグレーション (CI) で .NET Core SDK とツールを使用する - .NET Core CLI
 description: .NET Core SDK とそのツールをビルド サーバーで使用する方法に関する情報。
 author: guardrex
-ms.author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 207a6740f2a483d532c194b2bf8112898e9c3463
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: seodec18
+ms.openlocfilehash: 7891430654b416a2b55fa837f276d991b56370cc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033468"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131392"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>継続的インテグレーション (CI) で .NET Core SDK とツールを使用する
-
-## <a name="overview"></a>概要
 
 この文書では、.NET Core SDK とそのツールをビルド サーバーで使用する方法について説明します。 .NET Core ツールセットは対話式と自動の両方に対応しています。対話式の場合、開発者はコマンド プロンプトにコマンドを入力します。自動の場合、継続的インテグレーション (CI) サーバーがビルド スクリプトを実行します。 コマンド、オプション、入力、出力は同じです。ユーザーは、ツールの取得方法とアプリを構築するシステムだけを指定します。 このドキュメントでは、CI のツール取得のシナリオと、ビルド スクリプトの設計と構造化の方法に関する推奨事項を取り上げます。
 
@@ -25,22 +23,22 @@ macOS、Linux、Windows の場合、ネイティブ インストーラーを利�
 
 macOS をご利用の場合、PKG インストーラーをお使いください。 Linux の場合、フィードベースのパッケージ マネージャーを利用できます。Ubuntu の apt-get や CentOS の yum などです。あるいは、パッケージ自体、DEB または RPM を利用できます。 Windows の場合、MSI インストーラーをご利用ください。
 
-安定性に優れた最新のバイナリは「[Get Started with .NET Core](https://aka.ms/dotnetcoregs)」 (.NET Core を始める) にあります。 最新の (安定性に欠ける可能性がある) プレリリース ツールを使用する場合、[dotnet/cli GitHub リポジトリ](https://github.com/dotnet/cli#installers-and-binaries)のリンクをご利用ください。 Linux ディストリビューションの場合、`tar.gz` アーカイブ (別名、`tarballs`) をご利用いただけます。アーカイブ内のインストール スクリプトを利用して .NET Core をインストールしてください。
+最新の安定したバイナリは、[.NET ダウンロード](https://dotnet.microsoft.com/download)のページにあります。 最新の (安定性に欠ける可能性がある) プレリリース ツールを使用する場合、[dotnet/core-sdk GitHub リポジトリ](https://github.com/dotnet/core-sdk#installers-and-binaries)のリンクをご利用ください。 Linux ディストリビューションの場合、`tar.gz` アーカイブ (別名、`tarballs`) をご利用いただけます。アーカイブ内のインストール スクリプトを利用して .NET Core をインストールしてください。
 
 ### <a name="using-the-installer-script"></a>インストーラー スクリプトの使用
 
 インストーラー スクリプトを使用すると、ビルド サーバーで管理者以外のインストールが可能になり、ツールの取得を簡単に自動化できます。 スクリプトにツールがダウンロードされ、既定の場所か指定された場所に抽出されます。 インストールするツールのバージョンと、SDK 全体をインストールするか、それとも共有ランタイムだけをインストールするかも指定できます。
 
-インストーラー スクリプトは、ビルドの開始時に実行され、必要なバージョンの SDK を取得し、インストールするように自動化されています。 *必要なバージョン*とは、プロジェクトのビルドに必要な SDK のバージョンです。 このスクリプトでは、サーバーのローカル ディレクトリに SDK をインストールし、インストールした場所からツールを実行し、ビルド後にクリーンアップできます (あるいは、CI サービスにクリーンアップさせます)。 これにより、ビルド プロセス全体にカプセル化と分離性が提供されます。 インストール スクリプト参照は [dotnet-install](dotnet-install-script.md) トピックにあります。
+インストーラー スクリプトは、ビルドの開始時に実行され、必要なバージョンの SDK を取得し、インストールするように自動化されています。 *必要なバージョン*とは、プロジェクトのビルドに必要な SDK のバージョンです。 このスクリプトでは、サーバーのローカル ディレクトリに SDK をインストールし、インストールした場所からツールを実行し、ビルド後にクリーンアップできます (あるいは、CI サービスにクリーンアップさせます)。 これにより、ビルド プロセス全体にカプセル化と分離性が提供されます。 インストール スクリプト参照は [dotnet-install](dotnet-install-script.md) の記事にあります。
 
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> インストーラー スクリプトの使用時、ネイティブ依存性は自動的にはインストールされません。 オペレーティング システムにネイティブ依存性がない場合、それをインストールする必要があります。 前提条件の一覧は [.NET Core ネイティブ前提条件](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)トピックをご覧ください。
+> インストーラー スクリプトの使用時、ネイティブ依存性は自動的にはインストールされません。 オペレーティング システムにネイティブ依存性がない場合、それをインストールする必要があります。 詳細については、「[Linux における .NET Core の前提条件](../linux-prerequisites.md)」を参照してください。
 
 ## <a name="ci-setup-examples"></a>CI セットアップ例
 
-このセクションでは、PowerShell またはバッシュ スクリプトを利用した手動セットアップについて説明し、SaaS (サービスとしてのソフトウェア) CI (継続的インテグレーション) ソリューションをいくつか紹介します。 対象となる SaaS CI ソリューションは [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/)、および [Build](https://docs.microsoft.com/azure/devops/build-release/index) です。
+このセクションでは、PowerShell またはバッシュ スクリプトを利用した手動セットアップについて説明し、SaaS (サービスとしてのソフトウェア) CI (継続的インテグレーション) ソリューションをいくつか紹介します。 対象となる SaaS CI ソリューションは [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/)、および [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) です。
 
 ### <a name="manual-setup"></a>手動セットアップ
 
@@ -124,13 +122,13 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 ### <a name="travis-ci"></a>Travis CI
 
-`csharp` 言語と `dotnet` キーを使用して .NET Core SDK をインストールするように [Travis CI](https://travis-ci.org/) を構成できます。 詳細については、公式 Travis CI ドキュメントの「[Building a C#, F#, or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/)」 (C#、F#、または Visual Basic プロジェクトのビルド) をご覧ください。 Travis CI 情報にアクセスするときは、コミュニティが保守管理している `language: csharp` 言語識別子は F# や Mono を含む、あらゆる .NET 言語で機能することにご留意ください。
+`csharp` 言語と `dotnet` キーを使用して .NET Core SDK をインストールするように [Travis CI](https://travis-ci.org/) を構成できます。 詳細については、公式 Travis CI ドキュメントの「[Building a C#, F#, or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/)」(C#、F#、または Visual Basic プロジェクトのビルド) を参照してください。 Travis CI 情報にアクセスするときは、コミュニティが保守管理している `language: csharp` 言語識別子は F# や Mono を含む、あらゆる .NET 言語で機能することにご留意ください。
 
-Travis CI は、*ビルド マトリックス*において、macOS (OS X 10.11、OS X 10.12) ジョブと Linux (Ubuntu 14.04) ジョブの両方を実行できます。ビルド マトリックスでは、ランタイム、環境、除外/追加の組み合わせを指定し、アプリのビルド組み合わせを範囲に含めます。 詳細については、[.travis.yml サンプル](https://github.com/dotnet/docs/blob/master/.travis.yml) ファイルと Travis CI ドキュメントの「[Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build)」 (ビルドをカスタマイズする) を参照してください。 MSBuild ベースのツールのパッケージには、LTS (1.0.x) ランタイムと Current (1.1.x) ランタイムが含まれています。SDK をインストールすることで、ビルドに必要なすべてが与えられます。
+Travis CI は、*ビルド マトリックス*において、macOS ジョブと Linux ジョブの両方を実行できます。ビルド マトリックスでは、ランタイム、環境、除外/追加の組み合わせを指定し、アプリのビルド組み合わせを範囲に含めます。 詳細については、[.travis.yml サンプル](https://github.com/dotnet/docs/blob/master/.travis.yml) ファイルと Travis CI ドキュメントの「[Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build)」(ビルドをカスタマイズする) を参照してください。 MSBuild ベースのツールのパッケージには、LTS (1.0.x) ランタイムと Current (1.1.x) ランタイムが含まれています。SDK をインストールすることで、ビルドに必要なすべてが与えられます。
 
 ### <a name="appveyor"></a>AppVeyor
 
-[AppVeyor](https://www.appveyor.com/) は、`Visual Studio 2017` worker イメージで .NET Core 1.0.1 SDK をインストールします。 別のバージョンの .NET Core SDK と他のビルド イメージを利用できます。詳細については、AppVeyor ドキュメントの 「[appveyor.yml サンプル](https://github.com/dotnet/docs/blob/master/appveyor.yml)」と 「[Build worker イメージ](https://www.appveyor.com/docs/build-environment/#build-worker-images)」 トピックを参照してください。
+[AppVeyor](https://www.appveyor.com/) は、`Visual Studio 2017` worker イメージで .NET Core 1.0.1 SDK をインストールします。 異なるバージョンの .NET Core SDK を含む他のビルド イメージも利用できます。 詳細については、[appveyor.yml の例](https://github.com/dotnet/docs/blob/master/appveyor.yml)と AppVoyor ドキュメントの [worker イメージのビルド](https://www.appveyor.com/docs/build-environment/#build-worker-images)に関する記事を参照してください。
 
 .NET Core SDK バイナリがインストール スクリプトを利用してダウンロードされ、解凍され、`PATH` 環境変数に追加されます。 複数バージョンの .NET Core SDK との統合テストを実行するためにビルド マトリックスを追加する:
 
@@ -151,32 +149,32 @@ install:
 1. コマンドを利用し、[手動セットアップ手順](#manual-setup)からスクリプトを実行します。
 1. .NET Core ツールを使用するように構成されたいくつかの Azure DevOps Services 組み込みビルド タスクで構成されるビルドを作成します。
 
-いずれのソリューションも有効です。 ツールはビルドの一部としてダウンロードしているので、手動セットアップ スクリプトを使用し、取得したツールのバージョンを管理します。 ビルドはスクリプトから実行されます。そのスクリプトを作成する必要があります。 このトピックでは、手動オプションについてのみ説明します。 Azure DevOps Services ビルド タスクでビルドを作成する方法については、Azure DevOps Services の[継続的インテグレーションと展開](https://docs.microsoft.com/azure/devops/build-release/index)に関するトピックを参照してください。
+いずれのソリューションも有効です。 ツールはビルドの一部としてダウンロードしているので、手動セットアップ スクリプトを使用し、取得したツールのバージョンを管理します。 ビルドはスクリプトから実行されます。そのスクリプトを作成する必要があります。 この記事では、手動オプションについてのみ説明します。 Azure DevOps Services ビルド タスクを使用したビルドの構築の詳細については、[Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) のドキュメントを参照してください。
 
 Azure DevOps Services で手動セットアップ スクリプトを使用するには、新しいビルド定義を作成し、ビルド手順で実行するスクリプトを指定します。 これは Azure DevOps Services ユーザー インターフェイスを使用して実行できます。
 
 1. 最初に新しいビルド定義を作成します。 作成するビルドの種類を定義するためのオプションを指定する画面が表示されたら、**[空]** オプションを選択します。
 
-   ![ビルド定義で空を選択する](./media/using-ci-with-cli/screen1.png)
+   ![ビルド定義で空を選択する](./media/using-ci-with-cli/select-empty-build-definition.png)
 
 1. ビルドするリポジトリを構成すると、ビルド定義が表示されます。 **[ビルド ステップの追加...]** を選択します。
 
-   ![ビルド ステップの追加](./media/using-ci-with-cli/screen2.png)
+   ![ビルド ステップの追加](./media/using-ci-with-cli/add-build-step.png)
 
 1. **[タスク カタログ]** が表示されます。 このカタログには、ビルドで使用するタスクが含まれています。 スクリプトがあるので、**PowerShell: Run a PowerShell スクリプト**の **[追加]** ボタンを選択します。
 
-   ![PowerShell スクリプトの追加手順](./media/using-ci-with-cli/screen3.png)
+   ![PowerShell スクリプトの追加手順](./media/using-ci-with-cli/add-powershell-script.png)
 
 1. ビルド手順を構成します。 ビルドしているリポジトリからスクリプトを追加します。
 
-   ![実行する PowerShell スクリプトを指定する](./media/using-ci-with-cli/screen4.png)
+   ![実行する PowerShell スクリプトを指定する](./media/using-ci-with-cli/powershell-script-path.png)
 
 ## <a name="orchestrating-the-build"></a>ビルドの調整
 
-この文書はその大半で .NET Core ツールの取得方法とさまざまな CI サービスの構成方法について説明しています。 .NET Core でコードを調整する (*実際にビルドする*) 方法に関する情報はありません。 ビルド プロセスの構造化方法の選択肢は、ここでは取り上げることができないさまざまな要因に依存します。 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/)、[Azure DevOps Services](https://docs.microsoft.com/azure/devops/build-release/index) でビルドを調整する方法については、それぞれの文書に記載されている資料とサンプルを参照してください。
+この文書はその大半で .NET Core ツールの取得方法とさまざまな CI サービスの構成方法について説明しています。 .NET Core でコードを調整する (*実際にビルドする*) 方法に関する情報はありません。 ビルド プロセスの構造化方法の選択肢は、ここでは取り上げることができないさまざまな要因に依存します。 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/)、[Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) でビルドを調整する方法については、それぞれの文書に記載されている資料とサンプルを参照してください。
 
 .NET Core ツールを利用して .NET Core コードのビルド プロセスを構造化するとき、通常、2 つの手法があります。MSBuild を直接利用するか、.NET Core コマンドライン コマンドを利用します。 いずれの手法を採用するかは、手法と複雑性との兼ね合いで使いやすいものを選択してください。 MSBuild を利用すれば、タスクやターゲットとしてビルド プロセスを表現できますが、MSBuild プロジェクト ファイルの構文は複雑で、学習の難易度が上がります。 .NET Core コマンドライン ツールはおそらく、使い方がより単純です。ただし、`bash` や PowerShell のようなスクリプト記述言語でオーケストレーション ロジックを記述する必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-* [Ubuntu 取得手順](https://www.microsoft.com/net/core#linuxubuntu)
+* [.NET ダウンロード - Linux](https://dotnet.microsoft.com/download?initial-os=linux)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: 298ee915bbe11313f3b33ea7dae9353ef956a231
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 217408600e40d2ce5197f207c007b858ff3145d7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509536"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147045"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>配列での foreach の使用 (C# プログラミング ガイド)
 
@@ -29,7 +29,7 @@ ms.locfileid: "43509536"
 ## <a name="see-also"></a>参照
 
 - <xref:System.Array>  
-- [C# プログラミング ガイド](../index.md)  
+- [C# プログラミングガイド](../index.md)  
 - [配列](index.md)  
 - [1 次元配列](single-dimensional-arrays.md)  
 - [多次元配列](multidimensional-arrays.md)  

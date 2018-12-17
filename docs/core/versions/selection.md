@@ -1,17 +1,18 @@
 ---
-title: .NET Core のバージョンの選択
-description: .NET Core がお使いのブログラムのランタイム バージョンを探し、選択するしくみについて説明します。
+title: 使用する .NET Core のバージョンを選択する
+description: .NET Core がお使いのプログラム用のランタイム バージョンを自動的に検出して選択するしくみについて説明します。 さらに、この記事では、特定のバージョンを強制的に使用する方法についても説明します。
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841541"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127239"
 ---
-# <a name="net-core-version-selection"></a>.NET Core のバージョンの選択
+# <a name="select-the-net-core-version-to-use"></a>使用する .NET Core のバージョンを選択する
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
@@ -80,7 +81,7 @@ SDK バージョンの選択に関する詳細は、*global.json* に関する�
 
 ## <a name="framework-dependent-apps-roll-forward"></a>フレームワーク依存のアプリをロールフォワードする
 
-[`dotnet run`](../tools/dotnet-run.md) を使用し、ソースからアプリケーションを実行します。 `dotnet run` はアプリケーションをビルドし、さらに実行します。 `dotnet` 実行可能ファイルは、開発環境においてアプリケーションの**ホスト**になります。
+[`dotnet myapp.dll`](../tools/dotnet.md#description) が存在する[**フレームワークに依存するデプロイ**](../deploying/index.md#framework-dependent-deployments-fdd)で [`dotnet run`](../tools/dotnet-run.md) を使用する、または `myapp.exe` が存在する[**フレームワークに依存する実行可能ファイル**](../deploying/index.md#framework-dependent-executables-fde)を使用して、ソースからアプリケーションを実行した場合、`dotnet` 実行可能ファイルがアプリケーションの**ホスト**になります。
 
 このホストがコンピューターにインストールされている最新版のパッチを選択します。 たとえば、プロジェクト ファイルに `netcoreapp2.0` を指定したとき、`2.0.4` がインストールされている最新の .NET ランタイムであれば、`2.0.4` ランタイムが使用されます。
 

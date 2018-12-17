@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f51e3f36594a6f66c5fad32214d84a11b78726a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e5f683ff123652e312d4d8dacc614f8a451ccd91
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582880"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127395"
 ---
 # <a name="custom-date-and-time-format-strings"></a>カスタム日時書式指定文字列
 
@@ -94,7 +94,7 @@ ms.locfileid: "48582880"
 |"/"|日付の区切り記号。<br /><br /> 詳細については、「["/" カスタム書式指定子](#dateSeparator)」を参照してください。|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
 |"*文字列*"<br /><br /> '*文字列*'|リテラル文字列の区切り記号。<br /><br /> 詳細については、「[文字リテラル](#Literals)」を参照してください。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|後続の文字をカスタム書式指定子として定義します。<br /><br /> 詳細については、「[単一のカスタム書式指定子の使用](#UsingSingleSpecifiers)」を参照してください。|2009-06-15T13:45:30 (%h) -> 1|
-|\\|エスケープ文字。<br /><br /> 詳細については、「[文字リテラル](#Literals)」および「[エスケープ文字の使用](#escape)」を参照してください。|2009-06-15T13:45:30 (h \h) -> 1 h|
+|&#92;|エスケープ文字。<br /><br /> 詳細については、「[文字リテラル](#Literals)」および「[エスケープ文字の使用](#escape)」を参照してください。|2009-06-15T13:45:30 (h \h) -> 1 h|
 |その他の文字|文字が結果の文字列にそのままコピーされます。<br /><br /> 詳細については、「[文字リテラル](#Literals)」を参照してください。|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
 
  以降では、それぞれのカスタム日時書式指定子について詳しく説明します。 特に明記されない限り、各指定子は、<xref:System.DateTime> 値で使用しても、<xref:System.DateTimeOffset> 値で使用してもまったく同じ文字列形式を生成します。

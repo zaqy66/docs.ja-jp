@@ -1,5 +1,6 @@
 ---
-title: 正規表現におけるバックトラッキング
+title: .NET 正規表現におけるバックトラッキング
+description: 正規表現のパターン マッチングでバックトラッキングを制御する方法について説明します。
 ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,13 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 343249f5411d4e5c2335446e7c892b989c8033f2
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.custom: seodec18
+ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297362"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130092"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正規表現におけるバックトラッキング
 <a name="top"></a> バックトラッキングは、正規表現パターンに省略可能な [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) または [代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)が含まれている場合に発生します。この場合、正規表現エンジンは、一致の検索を継続するために、以前に保存した状態に戻ります。 バックトラッキングは、正規表現を強力にするための中心的な機能で、これにより、非常に複雑なパターンを照合できる強力かつ柔軟な正規表現を作成できるようになります。 その一方で、バックトラッキングにはマイナス面もあり、 多くの場合、正規表現エンジンのパフォーマンスを左右する最大の要因になります。 さいわい、正規表現エンジンの動作とバックトラッキングの使用方法は開発者が制御できます。 ここでは、バックトラッキングの動作のしくみと、バックトラッキングを制御する方法について説明します。  
@@ -133,7 +135,7 @@ ms.locfileid: "52297362"
 > [!IMPORTANT]
 >  正規表現がバックトラッキングに依存する場合は、常にタイムアウト間隔を設定することをお勧めします。  
   
- <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外は、指定されたタイムアウト間隔中に正規表現エンジンが一致を見つけられなかったことを示しますが、例外がスローされた原因は示しません。 原因は、通常は過度なバックトラッキングですが、例外がスローされたときのシステムの負荷に対して、タイムアウト間隔の設定が短すぎた可能性もあります。 例外を処理するときに、入力文字列との一致の検索をやめるか、タイムアウト間隔を延長して一致操作を再試行するかを選択できます。  
+ <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外では、指定されたタイムアウト間隔中に正規表現エンジンで一致を見つけられなかったことを示しますが、例外がスローされた理由は示しません。 原因は、通常は過度なバックトラッキングですが、例外がスローされたときのシステムの負荷に対して、タイムアウト間隔の設定が短すぎた可能性もあります。 例外を処理するときに、入力文字列との一致の検索をやめるか、タイムアウト間隔を延長して一致操作を再試行するかを選択できます。  
   
  たとえば、次のコードは <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> コンストラクターを呼び出して、1 秒のタイムアウト値を持つ <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化します。 正規表現パターン `(a+)+$` は、行の末尾にある 1 つ以上の "a" 文字の 1 つ以上のシーケンスに一致しますが、過度なバックトラッキングの対象になります。 この例では、 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> がスローされたら、タイムアウト値を 3 秒の最大間隔まで大きくします。 その後、パターンに一致させる試行を中止します。  
   

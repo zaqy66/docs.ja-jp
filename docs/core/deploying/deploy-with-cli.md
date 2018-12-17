@@ -1,5 +1,5 @@
 ---
-title: CLI ツールで .NET Core アプリを展開する
+title: コマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを展開する
 description: コマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを展開する方法を説明します。
 author: rpetrusha
 ms.author: ronpet
@@ -7,14 +7,15 @@ ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454450"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151097"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>コマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを展開する
+# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>コマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを展開する
 
 .NET Core アプリケーションは、アプリケーション バイナリは含むが対象のシステムに .NET Core バイナリが存在することに依存する*フレームワークに依存する展開*か、アプリケーションと .NET Core のバイナリの両方を含む*自己完結型の配置*のいずれかで展開できます。 概要については、「[.NET Core アプリケーション展開](index.md)」を参照してください。
 

@@ -3,12 +3,12 @@ title: Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べ
 description: Syntax Visualizer は、.NET Compiler Platform SDK がコード用に生成したモデルを調べるためのビジュアル ツールを提供します。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750207"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143566"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べる
 
@@ -32,7 +32,7 @@ ms.locfileid: "45750207"
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![C# 構文ツリーの視覚化](media/syntax-visualizer/visualize-csharp.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 ![VB 構文ツリーの視覚化](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -62,7 +62,7 @@ Visualizer は、アクティブなコード ファイル内の変更に合わ�
 Visualizer により、選択した項目をルートとするサブツリーのグラフィカル表現が表示されます。 C# の例で `Main()` のメソッドに対応する **MethodDeclaration** ノードに、これらの手順を試してみます。 Visualizer により、次のような構文グラフが表示されます。
 
 ![C# の構文グラフの表示](media/syntax-visualizer/csharp-syntax-graph.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
 前出の VB の例の `Main()` メソッドに対応する **SubBlock** ノードにも同じことを試してみます。 Visualizer により、次のような構文グラフが表示されます。
 
@@ -128,7 +128,7 @@ End Module
 
 上記の VB の例は、C# で簡単にレプリケートできます。 別名の `Imports C = System.Console` の代わりに `using C = System.Console;` を入力します。 C# で上記の手順を行うと、Visualizer ウィンドウの結果はまったく同じになります。
 
-セマンティックの検査操作は、ノードでのみ使用できます。 トークンまたはトリビアでは使用できません。 すべてのノードに検査する興味深いセマンティック情報があるわけではありません。 ノードに興味深いセマンティック情報がない場合は、**[View * Symbol (if any)]\(* シンボルの表示 (ある場合)\)** をクリックすると、空白のプロパティ グリッドが表示されます。
+セマンティックの検査操作は、ノードでのみ使用できます。 トークンまたはトリビアでは使用できません。 すべてのノードに検査する興味深いセマンティック情報があるわけではありません。 ノードに興味深いセマンティック情報がない場合は、**[View \* Symbol (if any)]\(* シンボルの表示 (ある場合)\)** をクリックすると、空白のプロパティ グリッドが表示されます。
 
 セマンティック分析を実行するための API の詳細については、「[セマンティクスの使用](work-with-semantics.md)」概要ドキュメントを参照してください。
 

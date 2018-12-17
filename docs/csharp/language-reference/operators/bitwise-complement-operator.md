@@ -1,6 +1,6 @@
 ---
 title: ~ 演算子 (C# リファレンス)
-ms.date: 07/20/2015
+ms.date: 11/05/2018
 f1_keywords:
 - ~_CSharpKeyword
 helpviewer_keywords:
@@ -9,28 +9,41 @@ helpviewer_keywords:
 - ~ [C#], bitwise complement operator
 - bitwise complement operator [C#]
 ms.assetid: 11bc078a-50e2-4d7e-9896-67ef669dc602
-ms.openlocfilehash: 8af25217f9e7e66796192783a0b8e3415604dc90
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1bcb07c5639a098e3a8c566e92083ca0d48efb81
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510112"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153216"
 ---
 # <a name="-operator-c-reference"></a>~ 演算子 (C# リファレンス)
-`~` 演算子は、ビット単位の補数演算をオペランドに実行します。これにより、各ビットが反転します。 ビット単位の補数演算は [int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md) に事前定義されています。  
-  
-> [!NOTE]
->  `~` シンボルもファイナライザーの宣言に使用されます。 詳細については、「[Finalizers](../../../csharp/programming-guide/classes-and-structs/destructors.md)」 (ファイナライザー) を参照してください。  
-  
-## <a name="remarks"></a>コメント  
- ユーザー定義型は `~` 演算子をオーバーロードできます。 詳細については、「[operator](../../../csharp/language-reference/keywords/operator.md)」を参照してください。 整数型に対する演算は、通常、列挙型で使用できます。  
-  
-## <a name="example"></a>例  
- [!code-csharp[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/CSharp/bitwise-complement-operator_1.cs)]  
-  
-## <a name="see-also"></a>参照
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# 演算子](../../../csharp/language-reference/operators/index.md)  
-- [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+ビットごとの補数演算子 `~` は、各ビットを反転させてオペランドのビットごとの補数を生成する単項演算子です。 すべての整数型で `~` 演算子がサポートされます。
+
+> [!NOTE]
+> `~` シンボルはファイナライザーの宣言にも使用されます。 詳細については、「[Finalizers](../../programming-guide/classes-and-structs/destructors.md)」 (ファイナライザー) を参照してください。
+
+`~` 演算子の使用例を次に示します。
+
+[!code-csharp-interactive[bitwise NOT](~/samples/snippets/csharp/language-reference/operators/BitwiseComplementExamples.cs#Example)]
+
+> [!NOTE]
+> 上記の例では、[C# 7.0 で導入され](../../whats-new/csharp-7.md#numeric-literal-syntax-improvements)、[C# 7.2 で強化された](../../whats-new/csharp-7-2.md#leading-underscores-in-numeric-literals)バイナリ リテラルを使用しています。
+
+## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
+
+ユーザー定義型は `~` 演算子を[オーバーロード](../keywords/operator.md)できます。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の「[ビットごとの補数演算子](~/_csharplang/spec/expressions.md#bitwise-complement-operator)」セクションを参照してください。
+
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# 演算子](index.md)
+- [ファイナライザー](../../programming-guide/classes-and-structs/destructors.md)
+- [& 演算子](and-operator.md)
+- [| 演算子](or-operator.md)
+- [^ 演算子](xor-operator.md)
