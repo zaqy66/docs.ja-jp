@@ -1,27 +1,28 @@
 ---
-title: false リテラル (C# リファレンス)
+title: false リテラル - C# リファレンス
+ms.custom: seodec18
 ms.date: 12/03/2018
 helpviewer_keywords:
 - false literal keyword [C#]
 ms.assetid: fcc1c1a5-0e42-4226-a128-81492a9bf719
-ms.openlocfilehash: 62329e40abb709b047d60fc2be27ef0d2c92d8ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f47c9cab7b0b3813f59faa8be0110e0c6318f36e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147899"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241208"
 ---
-# <a name="false-literal-c-reference"></a><span data-ttu-id="c71d3-102">false リテラル (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="c71d3-102">false literal (C# Reference)</span></span>
+# <a name="false-literal-c-reference"></a><span data-ttu-id="f8222-102">false リテラル (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="f8222-102">false literal (C# Reference)</span></span>
 
-<span data-ttu-id="c71d3-103">[ブール](bool.md)値 `false` を表わします。</span><span class="sxs-lookup"><span data-stu-id="c71d3-103">Represents the [bool](bool.md) value `false`:</span></span>
+<span data-ttu-id="f8222-103">[ブール](bool.md)値 `false` を表わします。</span><span class="sxs-lookup"><span data-stu-id="f8222-103">Represents the [bool](bool.md) value `false`:</span></span>
 
 [!code-csharp-interactive[false literal example](~/samples/snippets/csharp/keywords/TrueFalseLiteralsExamples.cs#FalseLiteral)]
 
-## <a name="see-also"></a><span data-ttu-id="c71d3-104">関連項目</span><span class="sxs-lookup"><span data-stu-id="c71d3-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8222-104">関連項目</span><span class="sxs-lookup"><span data-stu-id="f8222-104">See also</span></span>
 
-- [<span data-ttu-id="c71d3-105">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="c71d3-105">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="c71d3-106">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="c71d3-106">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="c71d3-107">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="c71d3-107">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="c71d3-108">false 演算子</span><span class="sxs-lookup"><span data-stu-id="c71d3-108">false operator</span></span>](false-operator.md)
-- [<span data-ttu-id="c71d3-109">true</span><span class="sxs-lookup"><span data-stu-id="c71d3-109">true</span></span>](true.md)
-- [<span data-ttu-id="c71d3-110">?: 演算子</span><span class="sxs-lookup"><span data-stu-id="c71d3-110">?: Operator</span></span>](../operators/conditional-operator.md)
+- [<span data-ttu-id="f8222-105">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="f8222-105">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="f8222-106">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="f8222-106">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="f8222-107">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="f8222-107">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="f8222-108">true</span><span class="sxs-lookup"><span data-stu-id="f8222-108">true</span></span>](true.md)
+- [<span data-ttu-id="f8222-109">True および False 演算子</span><span class="sxs-lookup"><span data-stu-id="f8222-109">true and false operators</span></span>](true-false-operators.md)
+- [<span data-ttu-id="f8222-110">?:演算子</span><span class="sxs-lookup"><span data-stu-id="f8222-110">?: Operator</span></span>](../operators/conditional-operator.md)
