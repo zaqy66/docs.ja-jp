@@ -1,21 +1,21 @@
 ---
-title: Visual Studio で .NET Core アプリを展開する
-description: Visual Studio で .NET Core アプリを展開する方法を説明します。
+title: Visual Studio で .NET Core アプリをデプロイする
+description: Visual Studio で .NET Core アプリをデプロイする方法を説明します。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 095c0f02df0de0b276c3677095e224316ac76cff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584392"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127109"
 ---
-# <a name="deploying-net-core-apps-with-visual-studio"></a>Visual Studio で .NET Core アプリを展開する
+# <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio で .NET Core アプリをデプロイする
 
 .NET Core アプリケーションは、アプリケーション バイナリは含むが、対象のシステムに .NET Core があるかどうかに依存する*フレームワークに依存する展開*、またはアプリケーションと .NET Core バイナリの両方を含む*自己完結型の展開*のいずれかで展開できます。 .NET Core アプリケーションの展開の概要については、「[.NET Core アプリケーションの展開](index.md)」を参照してください。
 
@@ -144,7 +144,7 @@ Visual Studio でアプリを発行するには、次の操作を行います。
 
       1. **[発行]** タブで **[発行]** を選択します。 Visual Studio が、アプリケーションを構成するファイルをローカル ファイル システムに書き込みます。
 
-      1. これで **[発行]** タブには、**[FolderProfile]** という 1 つのプロファイルが表示されます。 プロファイルの構成設定が、タブの **[概要]** セクションに表示されます。Target Runtime\(ターゲット ランタイム\) では、発行されたランタイムを識別し、**[対象の場所]** は自己完結型の展開が書き込まれた場所を識別します。
+      1. これで **[発行]** タブには、**[FolderProfile]** という 1 つのプロファイルが表示されます。 プロファイルの構成設定が、タブの **[概要]** セクションに表示されます。**[Target Runtime]** \(ターゲット ランタイム\) では、発行されたランタイムを識別し、**[対象の場所]** は自己完結型の展開が書き込まれた場所を識別します。
 
       1. Visual Studio は、発行されたすべてのファイルを、既定で 1 つのディレクトリに書き込みます。 ターゲット ランタイムごとに別のプロファイルを作成し、発行したファイルはプラットフォームごとのディレクトリに配置すると便利なのでお勧めします。 これを行う場合、対象のプラットフォームごとに別の発行プロファイルも作成します。 ここでは、次の手順でプラットフォームごとにアプリケーションを再構築します。
 

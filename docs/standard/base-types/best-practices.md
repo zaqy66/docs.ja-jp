@@ -1,5 +1,6 @@
 ---
 title: .NET の正規表現に関するベスト プラクティス
+description: .NET での効率的で効果的な正規表現の作成方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.custom: serodec18
+ms.openlocfilehash: 02847a813566c4675f7df2c88fa2e4e1f6138ecb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925725"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152813"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET の正規表現に関するベスト プラクティス
 <a name="top"></a> .NET の正規表現エンジンは、リテラル テキストの比較と照合ではなくパターン一致に基づいてテキストを処理する、完全な機能を備えた強力なツールです。 ほとんどの場合は、すばやく効率的にパターン一致が実行されますが、 処理が非常に遅く見えることもあります。 極端なケースでは、比較的小さな入力の処理に何時間も何日もかかり、応答しなくなったように見えることさえあります。  
@@ -218,7 +220,7 @@ ms.locfileid: "42925725"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]  
   
- .NET の正規表現言語には、入れ子になった量指定子を取り除くために使用できる次の言語要素が含まれています。 詳しくは、「[正規表現でのグループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください。  
+ .NET の正規表現言語には、入れ子になった量指定子を取り除くために使用できる次の言語要素が含まれています。 詳細については、「 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」を参照してください。  
   
 |言語要素|説明|  
 |----------------------|-----------------|  
@@ -283,7 +285,7 @@ ms.locfileid: "42925725"
   
 -   <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> オプションを使用します。 これにより、正規表現パターン内の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 このオプションを使用した場合は、`(?<name>subexpression)` 言語要素を使用して定義した名前付きグループに一致する部分文字列のみがキャプチャされます。 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> フラグは、`options` クラス コンストラクターの <xref:System.Text.RegularExpressions.Regex> パラメーターか、`options` の静的な一致メソッドの <xref:System.Text.RegularExpressions.Regex> パラメーターに渡すことができます。  
   
--   `n` 言語要素の `(?imnsx)` オプションを使用します。 これにより、正規表現パターンでこの要素が出現する位置以降の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 パターンの末尾に到達するか、`(-n)` オプションによって名前のないキャプチャ (暗黙的なキャプチャ) が有効になるまで、キャプチャは無効のままです。 詳しくは、「[その他の構成体](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)」を参照してください。  
+-   `n` 言語要素の `(?imnsx)` オプションを使用します。 これにより、正規表現パターンでこの要素が出現する位置以降の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 パターンの末尾に到達するか、`(-n)` オプションによって名前のないキャプチャ (暗黙的なキャプチャ) が有効になるまで、キャプチャは無効のままです。 詳細については、「 [Miscellaneous Constructs](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)」を参照してください。  
   
 -   `n` 言語要素の `(?imnsx:subexpression)` オプションを使用します。 これにより、`subexpression` 内の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 入れ子になった名前のない (暗黙的な) キャプチャ グループによるキャプチャも無効になります。  
   

@@ -3,13 +3,13 @@ title: C# および Visual Studio Code の使用を開始する - C# ガイド
 description: Visual Studio Code を使用した、C# で初めての .NET Core アプリケーションを作成してデバッグする方法について説明します。
 author: kendrahavens
 ms.author: mairaw
-ms.date: 09/27/2017
-ms.openlocfilehash: 74fdd9ce122482a027931405cc9a94011a9c13bb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/05/2018
+ms.openlocfilehash: fde2d8a324f3435438a4a92843a9d5b7b0def443
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192584"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129598"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -81,12 +81,56 @@ ms.locfileid: "50192584"
 6. デバッグを開始するには、<kbd>F5 キー</kbd>または緑色の矢印を選択します。 デバッガーは、前述の手順で設定したブレークポイントに達すると、プログラムの実行を停止します。
     * デバッグ中は左上のペインにローカル変数が表示され、デバッグ コンソールを使用できます。
 
-    ![実行およびデバッグ](media/with-visual-studio-code/rundebug.png)
+7. 上部にある青色の矢印を選択してデバッグを継続するか、上部にある赤色の四角形を選択して停止します。
 
-7. 上部にある緑色の矢印を選択してデバッグを継続するか、上部にある赤色の四角形を選択して停止します。
+    ![実行およびデバッグ](media/with-visual-studio-code/rundebug.png)
 
 > [!TIP]
 > Visual Studio Code で OmniSharp を使用した .NET Core のデバッグの詳細とトラブルシューティングのヒントについては、「[Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)」 (.NET Core デバッガーの設定に関する指示) を参照してください。
+
+## <a name="add-a-class"></a>クラスを追加する
+
+1. 新しいクラスを追加するには、VSCode エクスプローラーを右クリックし、**[新しいファイル]** を選択します。 これで、新しいファイルが VSCode で開いたフォルダーに追加されます。
+2. ファイルに `Class1.cs` と名前を付けます。 csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。
+3. 次のコードを追加して、1 つ目のクラスを作成します。 `Program.cs` ファイルから参照できるように、正しい名前空間を含めるようにします。
+``` csharp
+using System;
+
+namespace HelloWorld
+{
+    public class Class1
+    {
+        public string ReturnMessage()
+        {
+            return "Happy coding!";
+        }
+    }
+}
+```
+
+4. 次のコードを追加して、`Program.cs` のメイン メソッドから新しいクラスを呼び出します。
+
+```csharp
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Class1 c1 = new Class1();
+            Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+        }
+    }
+}
+```
+
+5. 変更を保存し、プログラムを再度実行します。 新しいメッセージと共に追加した文字列が表示されます。
+```console
+> dotnet run
+Hello World! Happy coding!
+```
 
 ## <a name="faq"></a>FAQ
 

@@ -1,23 +1,24 @@
 ---
-title: .NET Core のホスティング
-description: ネイティブ コードから .NET Core ランタイムをホスティングする
+title: カスタム .NET Core ランタイム ホストを作成する
+description: .NET Core ランタイムの動作を制御する必要がある高度なシナリオをサポートするために、ネイティブ コードから .NET Core ランタイムをホストする方法について説明します。
 author: mjrousos
 ms.author: mairaw
-ms.date: 2/3/2017
-ms.openlocfilehash: 96f51c8480bf75b1d7f824a8c87d2cdd6c7f9dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 02/03/2017
+ms.custom: seodec18
+ms.openlocfilehash: 7e30536a27408c529743ef623aa1bb837c327f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218607"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146955"
 ---
-# <a name="hosting-net-core"></a>.NET Core のホスティング
+# <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>ネイティブ コードから .NET ランタイムを制御するカスタム .NET Core ホストを作成する
 
-あらゆるマネージ コードと同様に、.NET Core アプリケーションはホストにより実行されます。 ホストは、ランタイム (JIT やガベージ コレクターのようなコンポーネントを含む) の開始、AppDomain の作成、マネージ エントリ ポイントの呼び出しを担当します。
+あらゆるマネージド コードと同様に、.NET Core アプリケーションはホストにより実行されます。 ホストは、ランタイム (JIT やガベージ コレクターのようなコンポーネントを含む) の開始、AppDomain の作成、マネージド エントリ ポイントの呼び出しを担当します。
 
-.NET Core ランタイムのホスティングは高度なシナリオです。ほとんどの場合、.NET Core 開発者はホスティングについて心配する必要がありません。 .NET Core ビルド プロセスが .NET Core アプリケーションを実行するための既定ホストを提供するためです。 ただし、特別な状況で、ネイティブ プロセスのマネージ コードを呼び出す手段として、あるいはランタイムの動作をさらに細かくコントロールする目的で .NET Core ランタイムを明示的にホスティングすると効果的な場合があります。
+.NET Core ランタイムのホスティングは高度なシナリオです。ほとんどの場合、.NET Core 開発者はホスティングについて心配する必要がありません。.NET Core ビルド プロセスが .NET Core アプリケーションを実行するための既定ホストを提供するためです。 ただし、特別な状況で、ネイティブ プロセスのマネージド コードを呼び出す手段として、あるいはランタイムの動作をさらに細かくコントロールする目的で .NET Core ランタイムを明示的にホスティングすると効果的な場合があります。
 
-この記事では、ネイティブ コードから .NET Core ランタイムを開始し、最初のアプリケーション ドメイン (<xref:System.AppDomain>) を作成し、その中でマネージ コードを実行するために必要な手順について説明します。
+この記事では、ネイティブ コードから .NET Core ランタイムを開始し、最初のアプリケーション ドメイン (<xref:System.AppDomain>) を作成し、その中でマネージド コードを実行するために必要な手順について説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -36,8 +37,8 @@ dotnet/samples GitHub リポジトリには、この記事で説明する手順�
 ### <a name="a-note-about-mscoreeh"></a>mscoree.h に関する注記
 プライマリ .NET Core ホスティング インターフェイス (`ICLRRuntimeHost2`) は [MSCOREE.IDL](https://github.com/dotnet/coreclr/blob/master/src/inc/MSCOREE.IDL) で設計されます。 ホストで参照する必要がある、このファイルのヘッダー バージョン (mscoree.h) は、[.NET Core ランタイム](https://github.com/dotnet/coreclr/)がビルドされるときに MIDL 経由で生成されます。 .NET Core ランタイムをビルドしない場合、dotnet/coreclr リポジトリの[ビルド済みヘッダー](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc)の mscoree.h を利用することもできます。 [.NET Core ランタイムのビルド手順](https://github.com/dotnet/coreclr#building-the-repository)はその GitHub リポジトリにあります。 
 
-### <a name="step-1---identify-the-managed-entry-point"></a>手順 1 - マネージ エントリ ポイントを特定する
-必要なヘッダーを参照した後 ([mscoree.h](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc/mscoree.h) や stdio.h など)、.NET Core ホストが最初に行うことは、それが使用するマネージ エントリ ポイントを見つけることです。 その作業は、このサンプル ホストでは、`main` メソッドが実行されるマネージ バイナリのパスとして最初のコマンド ライン引数をホストに渡すことで行われます。
+### <a name="step-1---identify-the-managed-entry-point"></a>手順 1 - マネージド エントリ ポイントを特定する
+必要なヘッダーを参照した後 ([mscoree.h](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc/mscoree.h) や stdio.h など)、.NET Core ホストが最初に行うことは、それが使用するマネージド エントリ ポイントを見つけることです。 その作業は、このサンプル ホストでは、`main` メソッドが実行されるマネージド バイナリのパスとして最初のコマンド ライン引数をホストに渡すことで行われます。
 
 [!code-cpp[NetCoreHost#1](../../../samples/core/hosting/host.cpp#1)]
 
@@ -82,23 +83,22 @@ AppDomain フラグは、セキュリティと相互運用に関連する AppDom
 *  `APP_NI_PATHS` このリストは、ネイティブ イメージを探すパスであることを除き、APP_PATHS とよく似ています。
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` このプロパティは、p/invoke で呼び出されたネイティブ DLL を探すときにローダーが調べるパスの一覧です。
 *  `PLATFORM_RESOURCE_ROOTS` このリストには、(カルチャ固有の下位ディレクトリで) リソース サテライト アセンブリを探すパスが含まれています。
-*  `AppDomainCompatSwitch` この文字列は、明示的なターゲット フレームワーク モニカーのないアセンブリに使用する互換性を指定します (アセンブリが実行する対象のフレームワークを示すアセンブリレベルの属性)。 通常、これは `"UseLatestBehaviorWhenTFMNotSpecified"` に設定しますが、以前の Silverlight や Windows Phone の互換性を優先するホストもあります。
 
 この[単純なサンプル ホスト](https://github.com/dotnet/samples/tree/master/core/hosting)では、これらのプロパティは次のように設定されています。
 
 [!code-cpp[NetCoreHost#6](../../../samples/core/hosting/host.cpp#6)]
 
 ### <a name="step-6---create-the-appdomain"></a>手順 6 - AppDomain を作成する
-すべての AppDomain フラグとプロパティを用意したら、`ICLRRuntimeHost2::CreateAppDomainWithManager` を利用して AppDomain を設定できます。 この関数は任意で完全修飾アセンブリ名と型の名前を取得し、ドメインの AppDomain マネージャーとして使用します。 AppDomain マネージャーは、AppDomain の一部の動作の制御をホストに許可できます。ホストがユーザー コードを直接呼び出さない場合、マネージ コードを起動するエントリ ポイントを提供することもあります。   
+すべての AppDomain フラグとプロパティを用意したら、`ICLRRuntimeHost2::CreateAppDomainWithManager` を利用して AppDomain を設定できます。 この関数は任意で完全修飾アセンブリ名と型の名前を取得し、ドメインの AppDomain マネージャーとして使用します。 AppDomain マネージャーは、AppDomain の一部の動作の制御をホストに許可できます。ホストがユーザー コードを直接呼び出さない場合、マネージド コードを起動するエントリ ポイントを提供することもあります。   
 
 [!code-cpp[NetCoreHost#7](../../../samples/core/hosting/host.cpp#7)]
 
-### <a name="step-7---run-managed-code"></a>手順 7 - マネージ コードを実行する
-AppDomain が稼働したら、ホストはマネージ コードを実行できます。 これを行う最も簡単な方法は、`ICLRRuntimeHost2::ExecuteAssembly` を利用してマネージ アセンブリのエントリ ポイント メソッドを呼び出すことです。 この関数は単一ドメインのシナリオでのみ動作します。
+### <a name="step-7---run-managed-code"></a>手順 7 - マネージド コードを実行する
+AppDomain が稼働したら、ホストはマネージド コードを実行できます。 これを行う最も簡単な方法は、`ICLRRuntimeHost2::ExecuteAssembly` を利用してマネージド アセンブリのエントリ ポイント メソッドを呼び出すことです。 この関数は単一ドメインのシナリオでのみ動作します。
 
 [!code-cpp[NetCoreHost#8](../../../samples/core/hosting/host.cpp#8)]
 
-別の選択肢としては、`ExecuteAssembly` がホストのニーズを満たさない場合、`CreateDelegate` を利用し、静的マネージ メソッドの関数ポインターを作成します。 その場合、ホストにそれが呼び出すメソッドのシグネチャを通知する必要があります (関数ポインターの種類を作成する目的で)。ただし、アセンブリのエントリ ポイント以外のコードを呼び出す柔軟性が許可されます。
+別の選択肢としては、`ExecuteAssembly` がホストのニーズを満たさない場合、`CreateDelegate` を利用し、静的マネージド メソッドの関数ポインターを作成します。 その場合、ホストにそれが呼び出すメソッドのシグネチャを通知する必要があります (関数ポインターの種類を作成する目的で)。ただし、アセンブリのエントリ ポイント以外のコードを呼び出す柔軟性が許可されます。
 
 ```C++
 void *pfnDelegate = NULL;
@@ -118,13 +118,13 @@ hr = runtimeHost->CreateDelegate(
 [!code-cpp[NetCoreHost#9](../../../samples/core/hosting/host.cpp#9)]
 
 ## <a name="about-hosting-net-core-on-unix"></a>Unix で .NET Core をホスティングする方法について
-.NET Core はプラットフォームに依存しない製品です。Windows、Linux、Mac オペレーティング システムで動作します。 ただし、ネイティブ アプリケーションのように、プラットフォームが異なればホストに違いがあります。 前述の `ICLRRuntimeHost2` を利用してランタイムを開始し、AppDomain を作成し、マネージ コードを実行するプロセスは、サポートされているあらゆるオペレーティング システムで動作するはずです。 ただし、mscoree.h に定義されているインターフェイスは、Unix プラットフォームで使用するには複雑です。mscoree は、さまざまな面で Win32 を想定しているためです。
+.NET Core はプラットフォームに依存しない製品です。Windows、Linux、Mac オペレーティング システムで動作します。 ただし、ネイティブ アプリケーションのように、プラットフォームが異なればホストに違いがあります。 前述の `ICLRRuntimeHost2` を利用してランタイムを開始し、AppDomain を作成し、マネージド コードを実行するプロセスは、サポートされているあらゆるオペレーティング システムで動作するはずです。 ただし、mscoree.h に定義されているインターフェイスは、Unix プラットフォームで使用するには複雑です。mscoree は、さまざまな面で Win32 を想定しているためです。
 
 Unix プラットフォームでのホスティングを簡単にするために、よりプラットフォーム ニュートラルなホスティング API ラッパーのセットが [coreclrhost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h) にあります。
 
 coreclrhost.h を利用する例 (mscoree.h を直接利用するのではなく) が [UnixCoreRun ホスト](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts)にあります。 coreclrhost.h の API を利用してランタイムをホスティングする手順は、mscoree.h を使用するときので順に似ています。
 
-1. (コマンド ライン パラメーターなどから) 実行するマネージ コードを特定します。 
+1. (コマンド ライン パラメーターなどから) 実行するマネージド コードを特定します。 
 2. CoreCLR ライブラリを読み込みます。
     1. `dlopen("./libcoreclr.so", RTLD_NOW | RTLD_LOCAL);` 
 3. CoreCLR の `coreclr_initialize`、`coreclr_create_delegate`、`coreclr_execute_assembly`、`coreclr_shutdown` 関数の関数ポインターを `dlsym` を利用して取得します。
@@ -132,12 +132,12 @@ coreclrhost.h を利用する例 (mscoree.h を直接利用するのではなく
 4. AppDomain プロパティを設定します (TPA リストなど)。 これは前述の mscoree ワークフローの手順 5 と同じです。
 5. `coreclr_initialize` を使用し、ランタイムを開始し、AppDomain を作成します。 これで今後のホスティング呼び出しで使用される `hostHandle` ポインターも作成されます。
     1. この関数は、前述のワークフローの手順 4 と 6 の両方の役割を実行します。 
-6. `coreclr_execute_assembly` または `coreclr_create_delegate` を利用してマネージ コードを実行します。 これらの関数は、前述のワークフローの手順 7 の mscoree の `ExecuteAssembly` 関数と `CreateDelegate` 関数に似ています。
+6. `coreclr_execute_assembly` または `coreclr_create_delegate` を利用してマネージド コードを実行します。 これらの関数は、前述のワークフローの手順 7 の mscoree の `ExecuteAssembly` 関数と `CreateDelegate` 関数に似ています。
 7. `coreclr_shutdown` を利用して AppDomain をアンロードし、ランタイムをシャットダウンします。 
 
 ## <a name="conclusion"></a>まとめ
-ホストがビルドされたら、テストできます。コマンド ラインから実行し、ホストが期待する引数を渡します (実行するマネージ アプリなど)。 実行するホストの .NET Core アプリを指定するとき、`dotnet build` により生成された .dll を使用してください。 自己完結型アプリケーションのために `dotnet publish` で生成された実行可能ファイルが実質的に既定の .NET Core ホストになります (メインライン シナリオでコマンド ラインから直接、アプリを起動できるように)。ユーザー コードがコンパイルされ、同じ名前の dll が作られます。 
+ホストがビルドされたら、テストできます。コマンド ラインから実行し、ホストが期待する引数を渡します (実行するマネージド アプリなど)。 実行するホストの .NET Core アプリを指定するとき、`dotnet build` により生成された .dll を使用してください。 自己完結型アプリケーションのために `dotnet publish` で生成された実行可能ファイルが実質的に既定の .NET Core ホストになります (メインライン シナリオでコマンド ラインから直接、アプリを起動できるように)。ユーザー コードがコンパイルされ、同じ名前の dll が作られます。 
 
 最初の実行で動作しなかった場合、ホストが期待している場所に *coreclr.dll* があること、必要なすべての Framework ライブラリが TPA 一覧にあること、CoreCLR のビット数 (32 ビットまたは 64 ビット) がホストのビルド方法に一致することをもう一度確認してください。
 
-.NET Core ランタイムのホスティングは、多くの開発者が必要としない高度なシナリオですが、ネイティブ プロセスからマネージ コードを起動する場合や .NET Core ランタイムの動作をより細かくコントロールする場合、非常に便利です。 .NET Core は並行して実行できるので、同じプロセス内で、複数のバージョンの .NET Core ランタイムを初期化して開始するホストを作成し、そのすべてのホスト上でアプリを実行することもできます。 
+.NET Core ランタイムのホスティングは、多くの開発者が必要としない高度なシナリオですが、ネイティブ プロセスからマネージド コードを起動する場合や .NET Core ランタイムの動作をより細かくコントロールする場合、非常に便利です。 .NET Core は並行して実行できるので、同じプロセス内で、複数のバージョンの .NET Core ランタイムを初期化して開始するホストを作成し、そのすべてのホスト上でアプリを実行することもできます。 
