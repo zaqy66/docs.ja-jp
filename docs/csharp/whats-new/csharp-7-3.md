@@ -114,7 +114,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 詳しくは、言語リファレンスの [`stackalloc` ステートメント](../language-reference/keywords/stackalloc.md)に関する記事を参照してください。
 
-### <a name="more-types-support-the-fixed-statement"></a>多くの型による `fixed` ステートメントのサポート
+### <a name="more-types-support-the-fixed-statement"></a>`fixed` ステートメントをサポートする型の増加
 
 `fixed` ステートメントは、限られた一連の型をサポートしていました。 C# 7.3 以降では、`ref T` または `ref readonly T` を返す `GetPinnableReference()` メソッドを格納する型として `fixed` を使用できます。 この機能の追加により、`fixed` を <xref:System.Span%601?displayProperty=nameWithType> および関連する型と共に使用できます。
 
@@ -149,7 +149,7 @@ public int SomeProperty { get; set; }
 
 属性 `SomeThingAboutFieldAttribute` は、`SomeProperty` のコンパイラによって生成されるバッキング フィールドに適用されます。 詳しくは、C# プログラミング ガイドの「[属性](../programming-guide/concepts/attributes/index.md)」を参照してください。
 
-### <a name="in-method-overload-resolution-tiebreaker"></a>`in` メソッドのオーバーロードの解決のタイブレーカー
+### <a name="in-method-overload-resolution-tiebreaker"></a>`in` メソッドのオーバーロードを解決するタイブレーカー
 
 `in` 引数修飾子が追加されると、次の 2 つのメソッドがあいまいさの原因となっていました。
 
