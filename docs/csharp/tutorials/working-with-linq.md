@@ -3,20 +3,20 @@ title: LINQ の使用
 description: このチュートリアルでは、LINQ を使用してシーケンスを生成し、LINQ クエリで使用するためのメソッドを作成し、先行評価と遅延評価を区別する方法を説明します。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 02456ed0d545aa0740f70d96c25b24ee9bc5120c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126319"
+ms.locfileid: "53170809"
 ---
 # <a name="working-with-linq"></a>LINQ の使用
 
 ## <a name="introduction"></a>はじめに
 
-このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。 内容は以下の通りです。
+このチュートリアルでは、.NET Core と C# 言語の機能を説明します。 内容は以下のとおりです。
 
-*   LINQ を使用してシーケンスを生成する方法
+*   LINQ を使用してシーケンスを生成する方法。
 *   LINQ クエリで簡単に使用できるメソッドを記述する方法
 *   先行評価と遅延評価を区別する方法
 

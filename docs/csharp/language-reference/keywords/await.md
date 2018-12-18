@@ -1,5 +1,6 @@
 ---
-title: await (C# リファレンス)
+title: await - C# リファレンス
+ms.custom: seodec18
 ms.date: 05/22/2017
 f1_keywords:
 - await_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: deae39781b000aa8e08fa3bda29519d280aadb79
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c80d6598540700fdb8559497f10c66726c384519
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147386"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239684"
 ---
 # <a name="await-c-reference"></a>await (C# リファレンス)
 `await` 演算子は非同期メソッドのタスクに適用され、中断ポイントを挿入することで、メソッドの実行を、待機中のタスクが完了するまで中断します。 このタスクは、進行中の作業を表します。  

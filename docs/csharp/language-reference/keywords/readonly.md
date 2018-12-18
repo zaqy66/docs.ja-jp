@@ -1,5 +1,6 @@
 ---
-title: readonly キーワード (C# リファレンス)
+title: readonly キーワード - C# リファレンス
+ms.custom: seodec18
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: b50d3b571afb3128c973baaf7d7178da705382bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e2fdb92ad2f044aa74201676ed8cb89bb51de5f5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146171"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239840"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# リファレンス)
 
@@ -80,7 +81,7 @@ public readonly struct Point
 }
 ```
 
-`readonly` に指定されていないフィールドを追加すると、コンパイラ エラー `CS8340`: "読み取り専用の構造体のインスタンス フィールドは、読み取り専用である必要があります" が生成されます。
+`readonly` に指定されていないフィールドを追加すると、コンパイラ エラー `CS8340`:"読み取り専用の構造体のインスタンス フィールドは、読み取り専用である必要があります" が生成されます。
 
 ## <a name="ref-readonly-return-example"></a>ref readonly の戻り値の例
 

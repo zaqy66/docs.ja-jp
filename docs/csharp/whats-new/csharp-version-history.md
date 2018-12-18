@@ -3,16 +3,28 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145333"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245601"
 ---
 # <a name="the-history-of-c"></a>C# の歴史 #
 
-この言語の原形はどのようなものだったか。 以来、言語が年々どのように進化してきたか。
+この記事では、C# 言語の各メジャー リリースの履歴について説明します。 C# チームは、引き続き新機能を刷新および追加していきます。 今後のリリースに向けて検討される機能を含め、言語機能ステータスについての詳細は GitHub の [dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md)で見つけられます。
+
+> [!IMPORTANT]
+> C# 言語の一部の機能は、C# の仕様で定義されている "*標準ライブラリ*" の型とメソッドに依存しています。 .NET プラットフォームでは、さまざまなパッケージでそれらの型とメソッドが提供されています。 一例として、例外処理があります。 すべての `throw` ステートメントまたは式は、スローされたオブジェクトが <xref:System.Exception> から派生していることを確認するために、チェックされます。 同様に、すべての `catch` は、キャッチされた型が <xref:System.Exception> から派生していることを確認するために、チェックされます。 バージョンごとに新しい要件が追加されている場合があります。 古い環境で言語の最新機能を使用するには、特定のライブラリをインストールする必要がある場合があります。 これらの依存関係については、特定のバージョンごとに用意されたページに記載されています。 この依存関係の経緯と詳細については、[言語とライブラリ間の関係](relationships-between-language-and-library.md)に関する記事をご覧ください。 
+
+C# のビルド ツールでは、言語の最新のメジャー リリースが言語の既定のバージョンと見なされます。 メジャー リリースの間には、このセクションの他の記事で詳しく説明するポイント リリースが存在することがあります。 ポイント リリースで最新の機能を使用するには、[コンパイラ言語バージョンを構成](../language-reference/configure-language-version.md)し、バージョンを選択する必要があります。 C# 7.0 以降、3 つのポイント リリースがありました。
+
+* [C# 7.3](csharp-7-3.md):
+  - C# 7.3 は現在 [Visual Studio 2017 バージョン 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) および [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md) で利用可能です。
+* [C# 7.2](csharp-7-2.md):
+  - C# 7.2 は現在 [Visual Studio 2017 バージョン 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) および [.NET Core 2.0 SDK](../../core/whats-new/index.md) で利用可能です。
+* [C# 7.1](csharp-7-1.md):
+  - これらの機能は、[Visual Studio 2017 バージョン 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) および [.NET Core 2.0 SDK](../../core/whats-new/index.md) に追加されています。
 
 ## <a name="c-version-10"></a>C# バージョン 1.0
 
@@ -113,7 +125,7 @@ C# バージョン 5.0 は、この言語の専心的なバージョンでした
 
 ### <a name="see-also"></a>参照
 
-* [コード プロジェクト: C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [コード プロジェクト:C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 呼び出し元情報属性を使用すると、さまざまな定型リフレクション コードを使用しなくても、実行しているコンテキストに関する情報を簡単に取得できます。 診断とログ記録のタスクでは、さまざまな用途があります。
 

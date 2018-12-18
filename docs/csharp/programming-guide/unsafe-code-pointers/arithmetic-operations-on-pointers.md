@@ -1,15 +1,16 @@
 ---
-title: ポインターに対する算術演算 (C# プログラミング ガイド)
+title: ポインターに対する算術演算 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 91e621e7cddce50e97b061ecd7d77dae6f7ef3cb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 94e5d3fbf250f8b99560f83e14c063142ac7ad29
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129949"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242101"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>ポインターに対する算術演算 (C# プログラミング ガイド)
 このトピックでは、算術演算子 `+` と `-` を使用したポインター操作について説明します。  
@@ -37,7 +38,7 @@ ms.locfileid: "53129949"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [アンセーフ コードとポインター](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
 - [ポインター式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
 - [C# 演算子](../../../csharp/language-reference/operators/index.md)  

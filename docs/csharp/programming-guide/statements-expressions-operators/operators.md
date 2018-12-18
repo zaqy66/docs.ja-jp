@@ -1,17 +1,18 @@
 ---
-title: 演算子 (C# プログラミング ガイド)
+title: 演算子 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e9518dcf2a9facfdc46c2f6245184ea2da95b819
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150974"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239002"
 ---
 # <a name="operators-c-programming-guide"></a>演算子 (C# プログラミング ガイド)
 C# では、 *演算子* は式またはステートメントの中で 1 つ以上の *オペランド* に適用されるプログラム要素です。 インクリメント演算子 (`++`) や `new`など、1 つのオペランドを受け取る演算子を *単項* 演算子と言います。 算術演算子 (`+`、`-`、`*`、`/`) など、2 つのオペランドを受け取る演算子を *二項* 演算子と言います。 条件演算子 (`?:`) は、3 つのオペランドを受け取る、C# でただ 1 つの三項演算子です。  
@@ -170,5 +171,5 @@ a = (b = c);
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [ステートメント、式、および演算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)

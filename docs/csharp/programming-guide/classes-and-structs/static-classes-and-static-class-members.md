@@ -1,5 +1,6 @@
 ---
-title: 静的クラスと静的クラス メンバー (C# プログラミング ガイド)
+title: 静的クラスと静的クラス メンバー - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, static members
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 6709344002ebc433c8d13d9cfa48a179fae9991b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ef1b5262e8cb9906fb0e0d0e8cfef9257f1223a4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125994"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243201"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>静的クラスと静的クラス メンバー (C# プログラミング ガイド)
 [静的](../../../csharp/language-reference/keywords/static.md)クラスは基本的には非静的クラスと同じですが、静的クラスはインスタンス化できないという点が異なります。 つまり、[new](../../../csharp/language-reference/keywords/new.md) キーワードを使用して、そのクラス型の変数を作成することはできません。 インスタンス変数がないため、静的クラスのメンバーにアクセスするには、クラス名自体を使用します。 たとえば、`UtilityClass` という静的クラスがあり、`MethodA` というパブリック メソッドが定義されている場合、このメソッドを呼び出すには次の例のようにします。  
@@ -89,7 +90,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [static](../../../csharp/language-reference/keywords/static.md)  
 - [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)  
 - [class](../../../csharp/language-reference/keywords/class.md)  

@@ -1,5 +1,6 @@
 ---
-title: ref キーワード (C# リファレンス)
+title: ref キーワード - C# リファレンス
+ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "50195971"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236324"
 ---
 # <a name="ref-c-reference"></a>ref (C# リファレンス)
 
@@ -62,7 +63,7 @@ class CS0663_Example
 - [async](async.md) 修飾子を使用して定義した Async メソッド。  
 - [yield return](yield.md) または `yield break` ステートメントを含む Iterator メソッド。  
 
-## <a name="passing-an-argument-by-reference-an-example"></a>参照渡しで引数を渡す: 使用例
+## <a name="passing-an-argument-by-reference-an-example"></a>参照渡しで引数を渡す:使用例
 
 前の例は、参照によって値型を渡す例でした。 `ref` キーワードを使用して、参照渡しで参照型を渡すこともできます。 参照型を参照渡しで渡すと、呼び出されたメソッドは、参照パラメーターが呼び出し元で参照するオブジェクトに置換できます。 オブジェクトの格納場所は、参照パラメーターの値としてメソッドに渡されます。 パラメーターの格納場所の値を変更する場合は (新しいオブジェクトをポイント)、呼び出し元が参照する格納場所を変更することもできます。 次の例では、参照型のインスタンスを `ref` パラメーターとして渡します。
   
@@ -82,7 +83,7 @@ class CS0663_Example
 public ref decimal GetCurrentPrice()
 ```
 
-- メソッドの `return` ステートメントで返される変数と `return` トークンの間。 例:
+- メソッドの `return` ステートメントで返される変数と `return` トークンの間。 次に例を示します。
 
 ```csharp
 return ref DecimalArray[0];
