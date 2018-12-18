@@ -18,10 +18,10 @@ ms.locfileid: "47232951"
 |-------------|-----------------|  
 |[add](../../../csharp/language-reference/keywords/add.md)|クライアント コードがイベントをサブスクライブするときに呼び出されるカスタム イベント アクセサーを定義します。|  
 |[async](../../../csharp/language-reference/keywords/async.md)|修飾されたメソッド、ラムダ式、または匿名メソッドが非同期であることを示します。|  
-|[await](../../../csharp/language-reference/keywords/await.md)|待機中のタスクが完了するまで非同期メソッド(async修飾されたメソッド)を中断します。|  
+|[await](../../../csharp/language-reference/keywords/await.md)|待機中のタスクが完了するまで async のメソッドを中断します。| 
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|コンパイル時の型チェックをバイパスする処理を可能にする参照型を定義します。|  
 |[get](../../../csharp/language-reference/keywords/get.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  
-|[global](../../../csharp/language-reference/keywords/global.md)|既定のグローバル名前空間を指定します。指定しない場合にはグローバル名前空間は付加されません。|  
+|[global](../../../csharp/language-reference/keywords/global.md)|既定のグローバル名前空間を指定します。指定しない場合、無名になります。| 
 |[partial](../../../csharp/language-reference/keywords/partial-type.md)|同一コンパイル ユニットに部分クラス、部分構造体、または部分インターフェイスを定義します。|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|クライアント コードがイベントのサブスクライブを解除するときに呼び出されるカスタム イベント アクセサーを定義します。|  
 |[set](../../../csharp/language-reference/keywords/set.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  
