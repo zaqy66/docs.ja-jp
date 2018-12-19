@@ -1,17 +1,18 @@
 ---
-title: C# のコーディング規則 (C# プログラミング ガイド)
+title: C# のコーディング規則 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 430cf3f1bc5e0b5ebe1a05530059516f36a473a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 598f0e75a96a43162d0c626d00320effb418c7fd
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209460"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241432"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# のコーディング規則 (C# プログラミング ガイド)
  コーディング規則には、次の目的があります。  
@@ -37,13 +38,13 @@ ms.locfileid: "44209460"
 ## <a name="layout-conventions"></a>レイアウト規則  
  コードの構造を強調する書式が使用され、コードが読みやすくなっているのが、優れたレイアウトです。 マイクロソフトの例とサンプルは、次の規則に準拠しています。  
   
--   コード エディターの既定の設定 (スマートインデント、4 文字インデント、タブを空白として保存) を使用します。 詳細については、「[[オプション]、[テキスト エディター]、[C#]、[書式設定]](/visualstudio/ide/reference/options-text-editor-csharp-formatting)」を参照してください。  
+-   コード エディターの既定の設定 (スマート インデント、4 文字インデント、タブを空白として保存) を使用します。 詳細については、「[[オプション]、[テキスト エディター]、[C#]、[書式設定]](/visualstudio/ide/reference/options-text-editor-csharp-formatting)」を参照してください。  
   
 -   1 つの行には 1 つのステートメントのみを記述します。  
   
 -   1 つの行には 1 つの宣言のみを記述します。  
   
--   継続行にインデントが自動的に設定されない場合は、1 タブストップ (4 つの空白) 分のインデントを設定します。  
+-   継続行にインデントが自動的に設定されない場合は、1 タブ ストップ (4 つの空白) 分のインデントを設定します。  
   
 -   メソッド定義とプロパティ定義の間に少なくとも 1 行の空白行を追加します。  
   
@@ -162,7 +163,7 @@ ms.locfileid: "44209460"
   
 ### <a name="static-members"></a>静的メンバー  
   
--   [静的](../../../csharp/language-reference/keywords/static.md)メンバーは、クラス名 (*ClassName.StaticMember*) を使用して呼び出します。 こうすることで、静的アクセスが明確になり、コードがよりわかりやすくなります。  派生クラスの名前を持つ基本クラスに定義された静的メンバーを指定しないでください。  このコードをコンパイルすると、コードが読みやすくなくなり、派生クラスに同じ名前の静的メンバーを追加すると、将来的にコードが中断する場合があります。  
+-   [静的](../../../csharp/language-reference/keywords/static.md)メンバーは、クラス名 *ClassName.StaticMember* を使用して呼び出します。 こうすることで、静的アクセスが明確になり、コードがよりわかりやすくなります。  派生クラスの名前を持つ基本クラスに定義された静的メンバーを指定しないでください。  このコードをコンパイルすると、コードが読みやすくなくなり、派生クラスに同じ名前の静的メンバーを追加すると、将来的にコードが中断する場合があります。  
   
 ### <a name="linq-queries"></a>LINQ クエリ  
   
