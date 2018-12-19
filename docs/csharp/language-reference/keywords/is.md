@@ -1,5 +1,6 @@
 ---
-title: is (C# リファレンス)
+title: is - C# リファレンス
+ms.custom: seodec18
 ms.date: 02/17/2017
 f1_keywords:
 - is_CSharpKeyword
@@ -7,160 +8,160 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 037144c47a97a44cad504882fdf8c88caf4918d7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 4fd545ded9da20da2a6378bfdf561279cf343100
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121309"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240009"
 ---
-# <a name="is-c-reference"></a><span data-ttu-id="70a41-102">is (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="70a41-102">is (C# Reference)</span></span> #
+# <a name="is-c-reference"></a><span data-ttu-id="2b77c-102">is (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="2b77c-102">is (C# Reference)</span></span> #
 
-<span data-ttu-id="70a41-103">オブジェクトに指定された型との互換性があるかどうかを確認するか、(C# 7.0 以降では) パターンとの比較によって式をテストします。</span><span class="sxs-lookup"><span data-stu-id="70a41-103">Checks if an object is compatible with a given type, or (starting with C# 7.0) tests an expression against a pattern.</span></span>
+<span data-ttu-id="2b77c-103">オブジェクトに指定された型との互換性があるかどうかを確認するか、(C# 7.0 以降では) パターンとの比較によって式をテストします。</span><span class="sxs-lookup"><span data-stu-id="2b77c-103">Checks if an object is compatible with a given type, or (starting with C# 7.0) tests an expression against a pattern.</span></span>
 
-## <a name="testing-for-type-compatibility"></a><span data-ttu-id="70a41-104">型の互換性に関するテスト</span><span class="sxs-lookup"><span data-stu-id="70a41-104">Testing for type compatibility</span></span> ##
+## <a name="testing-for-type-compatibility"></a><span data-ttu-id="2b77c-104">型の互換性に関するテスト</span><span class="sxs-lookup"><span data-stu-id="2b77c-104">Testing for type compatibility</span></span> ##
 
-<span data-ttu-id="70a41-105">`is` キーワードを使用すると、実行時に型の互換性が評価されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-105">The `is` keyword evaluates type compatibility at runtime.</span></span> <span data-ttu-id="70a41-106">これにより、オブジェクト インスタンスや式の結果を指定された型に変換できるかどうかが判定されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-106">It determines whether an object instance or the result of an expression can be converted to a specified type.</span></span> <span data-ttu-id="70a41-107">構文は次のとおりです</span><span class="sxs-lookup"><span data-stu-id="70a41-107">It has the syntax</span></span>
+<span data-ttu-id="2b77c-105">`is` キーワードを使用すると、実行時に型の互換性が評価されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-105">The `is` keyword evaluates type compatibility at runtime.</span></span> <span data-ttu-id="2b77c-106">これにより、オブジェクト インスタンスや式の結果を指定された型に変換できるかどうかが判定されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-106">It determines whether an object instance or the result of an expression can be converted to a specified type.</span></span> <span data-ttu-id="2b77c-107">構文は次のとおりです</span><span class="sxs-lookup"><span data-stu-id="2b77c-107">It has the syntax</span></span>
 
 ```csharp
    expr is type
 ```
 
-<span data-ttu-id="70a41-108">ここで *expr* は何らかの型のインスタンスに評価される式、*type* は *expr* の結果が変換される型の名前です。</span><span class="sxs-lookup"><span data-stu-id="70a41-108">where *expr* is an expression that evaluates to an instance of some type, and *type* is the name of the type to which the result of *expr* is to be converted.</span></span> <span data-ttu-id="70a41-109">`is` ステートメントでは、*expr* が null 以外の値で、式の評価によって得られるオブジェクトが *type* に変換できる場合に `true`、それ以外の場合に `false` が返されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-109">The `is` statement is `true` if *expr* is non-null and the object that results from evaluating the expression can be converted to *type*; otherwise, it returns `false`.</span></span>
+<span data-ttu-id="2b77c-108">ここで *expr* は何らかの型のインスタンスに評価される式、*type* は *expr* の結果が変換される型の名前です。</span><span class="sxs-lookup"><span data-stu-id="2b77c-108">where *expr* is an expression that evaluates to an instance of some type, and *type* is the name of the type to which the result of *expr* is to be converted.</span></span> <span data-ttu-id="2b77c-109">`is` ステートメントでは、*expr* が null 以外の値で、式の評価によって得られるオブジェクトが *type* に変換できる場合に `true`、それ以外の場合に `false` が返されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-109">The `is` statement is `true` if *expr* is non-null and the object that results from evaluating the expression can be converted to *type*; otherwise, it returns `false`.</span></span>
 
-<span data-ttu-id="70a41-110">たとえば、次のコードでは `obj` を `Person` 型のインスタンスにキャストできるかどうかが判定されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-110">For example, the following code determines if `obj` can be cast to an instance of the `Person` type:</span></span>
+<span data-ttu-id="2b77c-110">たとえば、次のコードでは `obj` を `Person` 型のインスタンスにキャストできるかどうかが判定されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-110">For example, the following code determines if `obj` can be cast to an instance of the `Person` type:</span></span>
 
 [!code-csharp[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
 
-<span data-ttu-id="70a41-111">`is` ステートメントは以下の場合に true となります。</span><span class="sxs-lookup"><span data-stu-id="70a41-111">The `is` statement is true if:</span></span>
+<span data-ttu-id="2b77c-111">`is` ステートメントは以下の場合に true となります。</span><span class="sxs-lookup"><span data-stu-id="2b77c-111">The `is` statement is true if:</span></span>
 
-- <span data-ttu-id="70a41-112">*expr* が *type* と同じ型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="70a41-112">*expr* is an instance of the same type as *type*.</span></span>
+- <span data-ttu-id="2b77c-112">*expr* が *type* と同じ型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="2b77c-112">*expr* is an instance of the same type as *type*.</span></span>
 
-- <span data-ttu-id="70a41-113">*expr* が *type* から派生した型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="70a41-113">*expr* is an instance of a type that derives from *type*.</span></span> <span data-ttu-id="70a41-114">つまり、*expr* の結果を *type* のインスタンスにアップキャストできる。</span><span class="sxs-lookup"><span data-stu-id="70a41-114">In other words, the result of *expr* can be upcast to an instance of *type*.</span></span>
+- <span data-ttu-id="2b77c-113">*expr* が *type* から派生した型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="2b77c-113">*expr* is an instance of a type that derives from *type*.</span></span> <span data-ttu-id="2b77c-114">つまり、*expr* の結果を *type* のインスタンスにアップキャストできる。</span><span class="sxs-lookup"><span data-stu-id="2b77c-114">In other words, the result of *expr* can be upcast to an instance of *type*.</span></span>
 
-- <span data-ttu-id="70a41-115">*expr* のコンパイル時の型が *type* の基底クラスであり、*expr* の実行時の型が *type* または *type* から派生した型である。</span><span class="sxs-lookup"><span data-stu-id="70a41-115">*expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*.</span></span> <span data-ttu-id="70a41-116">変数の "*コンパイル時の型*" とは、その変数の宣言で定義されている型です。</span><span class="sxs-lookup"><span data-stu-id="70a41-116">The *compile-time type* of a variable is the variable's type as defined in its declaration.</span></span> <span data-ttu-id="70a41-117">変数の "*実行時の型*" とは、その変数に代入されているインスタンスの型です。</span><span class="sxs-lookup"><span data-stu-id="70a41-117">The *runtime type* of a variable is the type of the instance that is assigned to that variable.</span></span>
+- <span data-ttu-id="2b77c-115">*expr* のコンパイル時の型が *type* の基底クラスであり、*expr* の実行時の型が *type* または *type* から派生した型である。</span><span class="sxs-lookup"><span data-stu-id="2b77c-115">*expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*.</span></span> <span data-ttu-id="2b77c-116">変数の "*コンパイル時の型*" とは、その変数の宣言で定義されている型です。</span><span class="sxs-lookup"><span data-stu-id="2b77c-116">The *compile-time type* of a variable is the variable's type as defined in its declaration.</span></span> <span data-ttu-id="2b77c-117">変数の "*実行時の型*" とは、その変数に代入されているインスタンスの型です。</span><span class="sxs-lookup"><span data-stu-id="2b77c-117">The *runtime type* of a variable is the type of the instance that is assigned to that variable.</span></span>
 
-- <span data-ttu-id="70a41-118">*expr* が、*type* インターフェイスを実装する型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="70a41-118">*expr* is an instance of a type that implements the *type* interface.</span></span>
+- <span data-ttu-id="2b77c-118">*expr* が、*type* インターフェイスを実装する型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="2b77c-118">*expr* is an instance of a type that implements the *type* interface.</span></span>
 
-<span data-ttu-id="70a41-119">次の例は、変換ごとの `is` 式の評価が `true` となることを示しています。</span><span class="sxs-lookup"><span data-stu-id="70a41-119">The following example shows that the `is` expression evaluates to `true` for each of these conversions.</span></span>
+<span data-ttu-id="2b77c-119">次の例は、変換ごとの `is` 式の評価が `true` となることを示しています。</span><span class="sxs-lookup"><span data-stu-id="2b77c-119">The following example shows that the `is` expression evaluates to `true` for each of these conversions.</span></span>
 
 [!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
-<span data-ttu-id="70a41-120">式が常に `true` または `false` のいずれかになることが判明している場合は、`is` キーワードによってコンパイル時に警告が生成されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-120">The `is` keyword generates a compile-time warning if the expression is known to always be either `true` or `false`.</span></span> <span data-ttu-id="70a41-121">参照変換、ボックス変換、アンボックス変換のみが考慮され、ユーザー定義の変換や型の [implicit](implicit.md) および [explicit](explicit.md) 演算子によって定義された変換は無視されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-121">It only considers reference conversions, boxing conversions, and unboxing conversions; it does not consider user-defined conversions or conversions defined by a type's [implicit](implicit.md) and [explicit](explicit.md) operators.</span></span> <span data-ttu-id="70a41-122">次の例では、コンパイル時に変換結果が判明しているため、警告が生成されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-122">The following example generates warnings because the result of the conversion is known at compile-time.</span></span> <span data-ttu-id="70a41-123">`int` から `long` および `double` への変換の `is` 式では、変換が [implicit](implicit.md) 演算子によって処理されるため、false が返される点に注意してください。</span><span class="sxs-lookup"><span data-stu-id="70a41-123">Note that the `is` expression for conversions from `int` to `long` and `double` return false, since these conversions are handled by the [implicit](implicit.md) operator.</span></span>
+<span data-ttu-id="2b77c-120">式が常に `true` または `false` のいずれかになることが判明している場合は、`is` キーワードによってコンパイル時に警告が生成されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-120">The `is` keyword generates a compile-time warning if the expression is known to always be either `true` or `false`.</span></span> <span data-ttu-id="2b77c-121">参照変換、ボックス変換、アンボックス変換のみが考慮され、ユーザー定義の変換や型の [implicit](implicit.md) および [explicit](explicit.md) 演算子によって定義された変換は無視されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-121">It only considers reference conversions, boxing conversions, and unboxing conversions; it does not consider user-defined conversions or conversions defined by a type's [implicit](implicit.md) and [explicit](explicit.md) operators.</span></span> <span data-ttu-id="2b77c-122">次の例では、コンパイル時に変換結果が判明しているため、警告が生成されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-122">The following example generates warnings because the result of the conversion is known at compile-time.</span></span> <span data-ttu-id="2b77c-123">`int` から `long` および `double` への変換の `is` 式では、変換が [implicit](implicit.md) 演算子によって処理されるため、false が返される点に注意してください。</span><span class="sxs-lookup"><span data-stu-id="2b77c-123">Note that the `is` expression for conversions from `int` to `long` and `double` return false, since these conversions are handled by the [implicit](implicit.md) operator.</span></span>
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-<span data-ttu-id="70a41-124">`expr` には、匿名メソッドとラムダ式を除き、値を返すどのような式でも指定できます。</span><span class="sxs-lookup"><span data-stu-id="70a41-124">`expr` can be any expression that returns a value, with the exception of anonymous methods and lambda expressions.</span></span> <span data-ttu-id="70a41-125">次の例では、`is` を使用してメソッド呼び出しの戻り値を評価しています。</span><span class="sxs-lookup"><span data-stu-id="70a41-125">The following example uses  `is` to evaluate the return value of a method call.</span></span>   
+<span data-ttu-id="2b77c-124">`expr` には、匿名メソッドとラムダ式を除き、値を返すどのような式でも指定できます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-124">`expr` can be any expression that returns a value, with the exception of anonymous methods and lambda expressions.</span></span> <span data-ttu-id="2b77c-125">次の例では、`is` を使用してメソッド呼び出しの戻り値を評価しています。</span><span class="sxs-lookup"><span data-stu-id="2b77c-125">The following example uses  `is` to evaluate the return value of a method call.</span></span>   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-<span data-ttu-id="70a41-126">C# 7.0 以降では、[型パターン](#type)によるパターン マッチングを使用することで、`is` ステートメントを用いたより簡潔なコードを記述できます。</span><span class="sxs-lookup"><span data-stu-id="70a41-126">Starting with C# 7.0, you can use pattern matching with the [type pattern](#type) to write more concise code that uses the `is` statement.</span></span>
+<span data-ttu-id="2b77c-126">C# 7.0 以降では、[型パターン](#type)によるパターン マッチングを使用することで、`is` ステートメントを用いたより簡潔なコードを記述できます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-126">Starting with C# 7.0, you can use pattern matching with the [type pattern](#type) to write more concise code that uses the `is` statement.</span></span>
 
-## <a name="pattern-matching-with-is"></a><span data-ttu-id="70a41-127">`is` を使用したパターン マッチング</span><span class="sxs-lookup"><span data-stu-id="70a41-127">Pattern matching with `is`</span></span> ##
+## <a name="pattern-matching-with-is"></a><span data-ttu-id="2b77c-127">`is` を使用したパターン マッチング</span><span class="sxs-lookup"><span data-stu-id="2b77c-127">Pattern matching with `is`</span></span> ##
 
-<span data-ttu-id="70a41-128">C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference/keywords/switch.md) ステートメントでパターン マッチングがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="70a41-128">Starting with C# 7.0, the `is` and [switch](../../../csharp/language-reference/keywords/switch.md) statements support pattern matching.</span></span> <span data-ttu-id="70a41-129">`is` キーワードでは、以下のパターンがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="70a41-129">The `is` keyword supports the following patterns:</span></span>
+<span data-ttu-id="2b77c-128">C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference/keywords/switch.md) ステートメントでパターン マッチングがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="2b77c-128">Starting with C# 7.0, the `is` and [switch](../../../csharp/language-reference/keywords/switch.md) statements support pattern matching.</span></span> <span data-ttu-id="2b77c-129">`is` キーワードでは、以下のパターンがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="2b77c-129">The `is` keyword supports the following patterns:</span></span>
 
-- <span data-ttu-id="70a41-130">[型パターン](#type): 式を指定された型に変換できるかどうかをテストし、変換できる場合はその型の変数にキャストします。</span><span class="sxs-lookup"><span data-stu-id="70a41-130">[Type pattern](#type),  which tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type.</span></span>
+- <span data-ttu-id="2b77c-130">[型パターン](#type): 式を指定された型に変換できるかどうかをテストし、変換できる場合はその型の変数にキャストします。</span><span class="sxs-lookup"><span data-stu-id="2b77c-130">[Type pattern](#type),  which tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type.</span></span>
 
-- <span data-ttu-id="70a41-131">[定数パターン](#constant): 式の評価が指定された定数値になるかどうかをテストします。</span><span class="sxs-lookup"><span data-stu-id="70a41-131">[Constant pattern](#constant), which tests whether an expression evaluates to a specified constant value.</span></span>
+- <span data-ttu-id="2b77c-131">[定数パターン](#constant): 式の評価が指定された定数値になるかどうかをテストします。</span><span class="sxs-lookup"><span data-stu-id="2b77c-131">[Constant pattern](#constant), which tests whether an expression evaluates to a specified constant value.</span></span>
 
-- <span data-ttu-id="70a41-132">[var パターン](#var): 照合が常に成功し、式の値が新しいローカル変数にバインドされます。</span><span class="sxs-lookup"><span data-stu-id="70a41-132">[var pattern](#var), a match that always succeeds and binds the value of an expression to a new local variable.</span></span> 
+- <span data-ttu-id="2b77c-132">[var パターン](#var): 照合が常に成功し、式の値が新しいローカル変数にバインドされます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-132">[var pattern](#var), a match that always succeeds and binds the value of an expression to a new local variable.</span></span> 
 
-### <span data-ttu-id="70a41-133"><a name="type" />型パターン</a></span><span class="sxs-lookup"><span data-stu-id="70a41-133"><a name="type" /> Type pattern </a></span></span>
+### <span data-ttu-id="2b77c-133"><a name="type" />型パターン</a></span><span class="sxs-lookup"><span data-stu-id="2b77c-133"><a name="type" /> Type pattern </a></span></span>
 
-<span data-ttu-id="70a41-134">型パターンを使用してパターン マッチングを実行すると、式を指定された型に変換できるかどうかが `is` によってテストされ、変換できる場合はその型の変数にキャストされます。</span><span class="sxs-lookup"><span data-stu-id="70a41-134">When using the type pattern to perform pattern matching, `is` tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type.</span></span> <span data-ttu-id="70a41-135">`is` ステートメントのわかりやすい拡張機能であり、型の評価および変換を簡潔に記述できます。</span><span class="sxs-lookup"><span data-stu-id="70a41-135">It is a straightforward extension of the `is` statement that enables concise type evaluation and conversion.</span></span> <span data-ttu-id="70a41-136">`is` 型パターンの一般的な形式は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="70a41-136">The general form of the `is` type pattern is:</span></span>
+<span data-ttu-id="2b77c-134">型パターンを使用してパターン マッチングを実行すると、式を指定された型に変換できるかどうかが `is` によってテストされ、変換できる場合はその型の変数にキャストされます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-134">When using the type pattern to perform pattern matching, `is` tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type.</span></span> <span data-ttu-id="2b77c-135">`is` ステートメントのわかりやすい拡張機能であり、型の評価および変換を簡潔に記述できます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-135">It is a straightforward extension of the `is` statement that enables concise type evaluation and conversion.</span></span> <span data-ttu-id="2b77c-136">`is` 型パターンの一般的な形式は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="2b77c-136">The general form of the `is` type pattern is:</span></span>
 
 ```csharp
    expr is type varname 
 ```
 
-<span data-ttu-id="70a41-137">ここで *expr* は何らかの型のインスタンスに評価される式、*type* は *expr* の結果が変換される型の名前、*varname* は `is` のテスト結果が `true` である場合に *expr* の結果が変換されるオブジェクトをそれぞれ表しています。</span><span class="sxs-lookup"><span data-stu-id="70a41-137">where *expr* is an expression that evaluates to an instance of some type, *type* is the name of the type to which the result of *expr* is to be converted, and *varname* is the object to which the result of *expr* is converted if the `is` test is `true`.</span></span> 
+<span data-ttu-id="2b77c-137">ここで *expr* は何らかの型のインスタンスに評価される式、*type* は *expr* の結果が変換される型の名前、*varname* は `is` のテスト結果が `true` である場合に *expr* の結果が変換されるオブジェクトをそれぞれ表しています。</span><span class="sxs-lookup"><span data-stu-id="2b77c-137">where *expr* is an expression that evaluates to an instance of some type, *type* is the name of the type to which the result of *expr* is to be converted, and *varname* is the object to which the result of *expr* is converted if the `is` test is `true`.</span></span> 
 
-<span data-ttu-id="70a41-138">*expr* が `null` ではなく、以下のいずれかの条件が true である場合に `is` 式は `true` となります。</span><span class="sxs-lookup"><span data-stu-id="70a41-138">The `is` expression is `true` if *expr* is not `null`, and any of the following is true:</span></span>
+<span data-ttu-id="2b77c-138">*expr* が `null` ではなく、以下のいずれかの条件が true である場合に `is` 式は `true` となります。</span><span class="sxs-lookup"><span data-stu-id="2b77c-138">The `is` expression is `true` if *expr* is not `null`, and any of the following is true:</span></span>
 
-- <span data-ttu-id="70a41-139">*expr* が *type* と同じ型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="70a41-139">*expr* is an instance of the same type as *type*.</span></span>
+- <span data-ttu-id="2b77c-139">*expr* が *type* と同じ型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="2b77c-139">*expr* is an instance of the same type as *type*.</span></span>
 
-- <span data-ttu-id="70a41-140">*expr* が *type* から派生した型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="70a41-140">*expr* is an instance of a type that derives from *type*.</span></span> <span data-ttu-id="70a41-141">つまり、*expr* の結果を *type* のインスタンスにアップキャストできる。</span><span class="sxs-lookup"><span data-stu-id="70a41-141">In other words, the result of *expr* can be upcast to an instance of *type*.</span></span>
+- <span data-ttu-id="2b77c-140">*expr* が *type* から派生した型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="2b77c-140">*expr* is an instance of a type that derives from *type*.</span></span> <span data-ttu-id="2b77c-141">つまり、*expr* の結果を *type* のインスタンスにアップキャストできる。</span><span class="sxs-lookup"><span data-stu-id="2b77c-141">In other words, the result of *expr* can be upcast to an instance of *type*.</span></span>
 
-- <span data-ttu-id="70a41-142">*expr* のコンパイル時の型が *type* の基底クラスであり、*expr* の実行時の型が *type* または *type* から派生した型である。</span><span class="sxs-lookup"><span data-stu-id="70a41-142">*expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*.</span></span> <span data-ttu-id="70a41-143">変数の "*コンパイル時の型*" とは、その変数の宣言で定義されている型です。</span><span class="sxs-lookup"><span data-stu-id="70a41-143">The *compile-time type* of a variable is the variable's type as defined in its declaration.</span></span> <span data-ttu-id="70a41-144">変数の "*実行時の型*" とは、その変数に代入されているインスタンスの型です。</span><span class="sxs-lookup"><span data-stu-id="70a41-144">The *runtime type* of a variable is the type of the instance that is assigned to that variable.</span></span>
+- <span data-ttu-id="2b77c-142">*expr* のコンパイル時の型が *type* の基底クラスであり、*expr* の実行時の型が *type* または *type* から派生した型である。</span><span class="sxs-lookup"><span data-stu-id="2b77c-142">*expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*.</span></span> <span data-ttu-id="2b77c-143">変数の "*コンパイル時の型*" とは、その変数の宣言で定義されている型です。</span><span class="sxs-lookup"><span data-stu-id="2b77c-143">The *compile-time type* of a variable is the variable's type as defined in its declaration.</span></span> <span data-ttu-id="2b77c-144">変数の "*実行時の型*" とは、その変数に代入されているインスタンスの型です。</span><span class="sxs-lookup"><span data-stu-id="2b77c-144">The *runtime type* of a variable is the type of the instance that is assigned to that variable.</span></span>
 
-- <span data-ttu-id="70a41-145">*expr* が、*type* インターフェイスを実装する型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="70a41-145">*expr* is an instance of a type that implements the *type* interface.</span></span>
+- <span data-ttu-id="2b77c-145">*expr* が、*type* インターフェイスを実装する型のインスタンスである。</span><span class="sxs-lookup"><span data-stu-id="2b77c-145">*expr* is an instance of a type that implements the *type* interface.</span></span>
 
-<span data-ttu-id="70a41-146">*expr* が `true` で `is` が `if` ステートメントと共に使用されている場合は *varname* への代入が行われ、そのローカル スコープは `if` ステートメント内に限定されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-146">If *expr* is `true` and `is` is used with an `if` statement, *varname* is assigned and has local scope within the `if` statement only.</span></span>
+<span data-ttu-id="2b77c-146">*expr* が `true` で `is` が `if` ステートメントと共に使用されている場合は *varname* への代入が行われ、そのローカル スコープは `if` ステートメント内に限定されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-146">If *expr* is `true` and `is` is used with an `if` statement, *varname* is assigned and has local scope within the `if` statement only.</span></span>
 
-<span data-ttu-id="70a41-147">次の例では、`is` 型のパターンを使用して、型 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> のメソッドの実装を提供します。</span><span class="sxs-lookup"><span data-stu-id="70a41-147">The following example uses the `is` type pattern to provide the implementation of a type's <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> method.</span></span>
+<span data-ttu-id="2b77c-147">次の例では、`is` 型のパターンを使用して、型 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> のメソッドの実装を提供します。</span><span class="sxs-lookup"><span data-stu-id="2b77c-147">The following example uses the `is` type pattern to provide the implementation of a type's <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> method.</span></span>
 
 [!code-csharp[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
 
-<span data-ttu-id="70a41-148">パターン マッチングを使用しない場合、このコードは次のように記述できます。</span><span class="sxs-lookup"><span data-stu-id="70a41-148">Without pattern matching, this code might be written as follows.</span></span> <span data-ttu-id="70a41-149">型パターン マッチングを使用することにより、変換結果が `null` であるかどうかをテストする必要がなくなるため、コードがよりコンパクトで読みやすくなります。</span><span class="sxs-lookup"><span data-stu-id="70a41-149">The use of type pattern matching produces more compact, readable code by eliminating the need to test whether the result of a conversion is a `null`.</span></span>  
+<span data-ttu-id="2b77c-148">パターン マッチングを使用しない場合、このコードは次のように記述できます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-148">Without pattern matching, this code might be written as follows.</span></span> <span data-ttu-id="2b77c-149">型パターン マッチングを使用することにより、変換結果が `null` であるかどうかをテストする必要がなくなるため、コードがよりコンパクトで読みやすくなります。</span><span class="sxs-lookup"><span data-stu-id="2b77c-149">The use of type pattern matching produces more compact, readable code by eliminating the need to test whether the result of a conversion is a `null`.</span></span>  
 
 [!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
-<span data-ttu-id="70a41-150">`is` 型パターンを使用すると、値の型の種類を判定する場合によりコンパクトなコードを記述できます。</span><span class="sxs-lookup"><span data-stu-id="70a41-150">The `is` type pattern also produces more compact code when determining the type of a value type.</span></span> <span data-ttu-id="70a41-151">次の例では、`is` 型パターンを使用し、オブジェクトが `Person` インスタンスか `Dog` インスタンスかを判定した後に適切なプロパティの値を表示しています。</span><span class="sxs-lookup"><span data-stu-id="70a41-151">The following example uses the `is` type pattern to determine whether an object is a `Person` or a `Dog` instance before displaying the value of an appropriate property.</span></span> 
+<span data-ttu-id="2b77c-150">`is` 型パターンを使用すると、値の型の種類を判定する場合によりコンパクトなコードを記述できます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-150">The `is` type pattern also produces more compact code when determining the type of a value type.</span></span> <span data-ttu-id="2b77c-151">次の例では、`is` 型パターンを使用し、オブジェクトが `Person` インスタンスか `Dog` インスタンスかを判定した後に適切なプロパティの値を表示しています。</span><span class="sxs-lookup"><span data-stu-id="2b77c-151">The following example uses the `is` type pattern to determine whether an object is a `Person` or a `Dog` instance before displaying the value of an appropriate property.</span></span> 
 
 [!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
-<span data-ttu-id="70a41-152">パターン マッチングを使用せずにこれと同等のコードを記述する場合は、明示的なキャストを含む代入処理を個別に行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="70a41-152">The equivalent code without pattern matching requires a separate assignment that includes an explicit cast.</span></span>
+<span data-ttu-id="2b77c-152">パターン マッチングを使用せずにこれと同等のコードを記述する場合は、明示的なキャストを含む代入処理を個別に行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="2b77c-152">The equivalent code without pattern matching requires a separate assignment that includes an explicit cast.</span></span>
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><span data-ttu-id="70a41-153"><a name="constant" />定数パターン</span><span class="sxs-lookup"><span data-stu-id="70a41-153"><a name="constant" /> Constant pattern</span></span> ###
+### <a name="a-nameconstant--constant-pattern"></a><span data-ttu-id="2b77c-153"><a name="constant" />定数パターン</span><span class="sxs-lookup"><span data-stu-id="2b77c-153"><a name="constant" /> Constant pattern</span></span> ###
 
-<span data-ttu-id="70a41-154">定数パターンを使用してパターン マッチングを実行すると、式が指定された定数と等しいかどうかが `is` によってテストされます。</span><span class="sxs-lookup"><span data-stu-id="70a41-154">When performing pattern matching with the constant pattern, `is` tests whether an expression equals a specified constant.</span></span> <span data-ttu-id="70a41-155">C# 6 以前のバージョンでの定数パターンは [switch](switch.md) ステートメントでサポートされています。</span><span class="sxs-lookup"><span data-stu-id="70a41-155">In C# 6 and earlier versions, the constant pattern is supported by the [switch](switch.md) statement.</span></span> <span data-ttu-id="70a41-156">C# 7.0 以降では、`is` ステートメントでもサポートされています。</span><span class="sxs-lookup"><span data-stu-id="70a41-156">Starting with C# 7.0, it is supported by the `is` statement as well.</span></span> <span data-ttu-id="70a41-157">構文は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="70a41-157">Its syntax is:</span></span>
+<span data-ttu-id="2b77c-154">定数パターンを使用してパターン マッチングを実行すると、式が指定された定数と等しいかどうかが `is` によってテストされます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-154">When performing pattern matching with the constant pattern, `is` tests whether an expression equals a specified constant.</span></span> <span data-ttu-id="2b77c-155">C# 6 以前のバージョンでの定数パターンは [switch](switch.md) ステートメントでサポートされています。</span><span class="sxs-lookup"><span data-stu-id="2b77c-155">In C# 6 and earlier versions, the constant pattern is supported by the [switch](switch.md) statement.</span></span> <span data-ttu-id="2b77c-156">C# 7.0 以降では、`is` ステートメントでもサポートされています。</span><span class="sxs-lookup"><span data-stu-id="2b77c-156">Starting with C# 7.0, it is supported by the `is` statement as well.</span></span> <span data-ttu-id="2b77c-157">構文は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="2b77c-157">Its syntax is:</span></span>
 
 ```csharp
    expr is constant
 ```
 
-<span data-ttu-id="70a41-158">ここで *expr* は評価する式、*constant* はテストする値を表しています。</span><span class="sxs-lookup"><span data-stu-id="70a41-158">where *expr* is the expression to evaluate, and *constant* is the value to test for.</span></span> <span data-ttu-id="70a41-159">*constant* には以下のいずれかの定数式を指定できます。</span><span class="sxs-lookup"><span data-stu-id="70a41-159">*constant* can be any of the following constant expressions:</span></span> 
+<span data-ttu-id="2b77c-158">ここで *expr* は評価する式、*constant* はテストする値を表しています。</span><span class="sxs-lookup"><span data-stu-id="2b77c-158">where *expr* is the expression to evaluate, and *constant* is the value to test for.</span></span> <span data-ttu-id="2b77c-159">*constant* には以下のいずれかの定数式を指定できます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-159">*constant* can be any of the following constant expressions:</span></span> 
 
-- <span data-ttu-id="70a41-160">リテラル値。</span><span class="sxs-lookup"><span data-stu-id="70a41-160">A literal value.</span></span>
+- <span data-ttu-id="2b77c-160">リテラル値。</span><span class="sxs-lookup"><span data-stu-id="2b77c-160">A literal value.</span></span>
 
-- <span data-ttu-id="70a41-161">宣言された `const` 変数の名前。</span><span class="sxs-lookup"><span data-stu-id="70a41-161">The name of a declared `const` variable.</span></span>
+- <span data-ttu-id="2b77c-161">宣言された `const` 変数の名前。</span><span class="sxs-lookup"><span data-stu-id="2b77c-161">The name of a declared `const` variable.</span></span>
 
-- <span data-ttu-id="70a41-162">列挙定数。</span><span class="sxs-lookup"><span data-stu-id="70a41-162">An enumeration constant.</span></span>
+- <span data-ttu-id="2b77c-162">列挙定数。</span><span class="sxs-lookup"><span data-stu-id="2b77c-162">An enumeration constant.</span></span>
 
-<span data-ttu-id="70a41-163">定数式は以下のように評価されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-163">The constant expression is evaluated as follows:</span></span>
+<span data-ttu-id="2b77c-163">定数式は以下のように評価されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-163">The constant expression is evaluated as follows:</span></span>
 
-- <span data-ttu-id="70a41-164">*expr* と *constant* が整数型の場合、式から `true` が返されるかどうか (つまり、`expr == constant` であるかどうか) が C# の等値演算子によって判定されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-164">If *expr* and *constant* are integral types, the C# equality operator determines whether the expression returns `true` (that is, whether `expr == constant`).</span></span>
+- <span data-ttu-id="2b77c-164">*expr* と *constant* が整数型の場合、式から `true` が返されるかどうか (つまり、`expr == constant` であるかどうか) が C# の等値演算子によって判定されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-164">If *expr* and *constant* are integral types, the C# equality operator determines whether the expression returns `true` (that is, whether `expr == constant`).</span></span>
 
-- <span data-ttu-id="70a41-165">それ以外の場合、式の値は静的 [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) メソッドの呼び出しによって判定されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-165">Otherwise, the value of the expression is determined by a call to the static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) method.</span></span>  
+- <span data-ttu-id="2b77c-165">それ以外の場合、式の値は静的 [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) メソッドの呼び出しによって判定されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-165">Otherwise, the value of the expression is determined by a call to the static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) method.</span></span>  
 
-<span data-ttu-id="70a41-166">次の例では、型パターンと定数パターンを組み合わせてオブジェクトが `Dice` インスタンスであるかどうかをテストし、そうである場合はサイコロ振り操作の値が 6 であるかどうかをテストします。</span><span class="sxs-lookup"><span data-stu-id="70a41-166">The following example combines the type and constant patterns to test whether an object is a `Dice` instance and, if it is, to determine whether the value of a dice roll is 6.</span></span>
+<span data-ttu-id="2b77c-166">次の例では、型パターンと定数パターンを組み合わせてオブジェクトが `Dice` インスタンスであるかどうかをテストし、そうである場合はサイコロ振り操作の値が 6 であるかどうかをテストします。</span><span class="sxs-lookup"><span data-stu-id="2b77c-166">The following example combines the type and constant patterns to test whether an object is a `Dice` instance and, if it is, to determine whether the value of a dice roll is 6.</span></span>
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
 
-<span data-ttu-id="70a41-167">定数パターンを使用して、`null` のチェックを実行できます。</span><span class="sxs-lookup"><span data-stu-id="70a41-167">Checking for `null` can be performed using the constant pattern.</span></span> <span data-ttu-id="70a41-168">`is` ステートメントで `null` キーワードがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="70a41-168">The `null` keyword is supported by the `is` statement.</span></span> <span data-ttu-id="70a41-169">構文は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="70a41-169">Its syntax is:</span></span>
+<span data-ttu-id="2b77c-167">定数パターンを使用して、`null` のチェックを実行できます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-167">Checking for `null` can be performed using the constant pattern.</span></span> <span data-ttu-id="2b77c-168">`is` ステートメントで `null` キーワードがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="2b77c-168">The `null` keyword is supported by the `is` statement.</span></span> <span data-ttu-id="2b77c-169">構文は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="2b77c-169">Its syntax is:</span></span>
 
 ```csharp 
    expr is null
 ```
 
-<span data-ttu-id="70a41-170">`null` チェックの比較を示す例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="70a41-170">The following example shows a comparison of `null` checks:</span></span>
+<span data-ttu-id="2b77c-170">`null` チェックの比較を示す例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="2b77c-170">The following example shows a comparison of `null` checks:</span></span>
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
  
-### <span data-ttu-id="70a41-171"><a name="var" /> var パターン</a></span><span class="sxs-lookup"><span data-stu-id="70a41-171"><a name="var" /> var pattern </a></span></span>
+### <span data-ttu-id="2b77c-171"><a name="var" /> var パターン</a></span><span class="sxs-lookup"><span data-stu-id="2b77c-171"><a name="var" /> var pattern </a></span></span>
 
-<span data-ttu-id="70a41-172">var パターンによるパターン マッチは常に成功します。</span><span class="sxs-lookup"><span data-stu-id="70a41-172">A pattern match with the var pattern always succeeds.</span></span> <span data-ttu-id="70a41-173">構文は次のとおりです</span><span class="sxs-lookup"><span data-stu-id="70a41-173">Its syntax is</span></span>
+<span data-ttu-id="2b77c-172">var パターンによるパターン マッチは常に成功します。</span><span class="sxs-lookup"><span data-stu-id="2b77c-172">A pattern match with the var pattern always succeeds.</span></span> <span data-ttu-id="2b77c-173">構文は次のとおりです</span><span class="sxs-lookup"><span data-stu-id="2b77c-173">Its syntax is</span></span>
 
 ```csharp 
    expr is var varname
 ```
 
-<span data-ttu-id="70a41-174">ここで *expr* の値は常に *varname* というローカル変数に代入されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-174">where the value of *expr* is always assigned to a local variable named *varname*.</span></span> <span data-ttu-id="70a41-175">*varname* は *expr* と同じ型の静的変数です。</span><span class="sxs-lookup"><span data-stu-id="70a41-175">*varname* is a static variable of the same type as *expr*.</span></span> <span data-ttu-id="70a41-176">次の例では、var パターンを使用して式を `obj` という変数に代入しています。</span><span class="sxs-lookup"><span data-stu-id="70a41-176">The following example uses the var pattern to assign an expression to a variable named `obj`.</span></span> <span data-ttu-id="70a41-177">その後、`obj` の値と型が表示されます。</span><span class="sxs-lookup"><span data-stu-id="70a41-177">It then displays the value and the type of `obj`.</span></span>
+<span data-ttu-id="2b77c-174">ここで *expr* の値は常に *varname* というローカル変数に代入されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-174">where the value of *expr* is always assigned to a local variable named *varname*.</span></span> <span data-ttu-id="2b77c-175">*varname* は *expr* と同じ型の静的変数です。</span><span class="sxs-lookup"><span data-stu-id="2b77c-175">*varname* is a static variable of the same type as *expr*.</span></span> <span data-ttu-id="2b77c-176">次の例では、var パターンを使用して式を `obj` という変数に代入しています。</span><span class="sxs-lookup"><span data-stu-id="2b77c-176">The following example uses the var pattern to assign an expression to a variable named `obj`.</span></span> <span data-ttu-id="2b77c-177">その後、`obj` の値と型が表示されます。</span><span class="sxs-lookup"><span data-stu-id="2b77c-177">It then displays the value and the type of `obj`.</span></span>
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
-<span data-ttu-id="70a41-178">*expr* が `null` である場合も `is` 式は true となり、`null` が *varname* に代入される点に注意してください。</span><span class="sxs-lookup"><span data-stu-id="70a41-178">Note that if *expr* is `null`, the `is` expression still is true and assigns `null` to *varname*.</span></span> 
+<span data-ttu-id="2b77c-178">*expr* が `null` である場合も `is` 式は true となり、`null` が *varname* に代入される点に注意してください。</span><span class="sxs-lookup"><span data-stu-id="2b77c-178">Note that if *expr* is `null`, the `is` expression still is true and assigns `null` to *varname*.</span></span> 
 
-## <a name="c-language-specification"></a><span data-ttu-id="70a41-179">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="70a41-179">C# Language Specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="2b77c-179">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="2b77c-179">C# Language Specification</span></span>
   
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="70a41-180">関連項目</span><span class="sxs-lookup"><span data-stu-id="70a41-180">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b77c-180">関連項目</span><span class="sxs-lookup"><span data-stu-id="2b77c-180">See also</span></span>
 
-- [<span data-ttu-id="70a41-181">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="70a41-181">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="70a41-182">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="70a41-182">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="70a41-183">typeof</span><span class="sxs-lookup"><span data-stu-id="70a41-183">typeof</span></span>](../../../csharp/language-reference/keywords/typeof.md)  
-- [<span data-ttu-id="70a41-184">as</span><span class="sxs-lookup"><span data-stu-id="70a41-184">as</span></span>](../../../csharp/language-reference/keywords/as.md)  
-- [<span data-ttu-id="70a41-185">演算子のキーワード</span><span class="sxs-lookup"><span data-stu-id="70a41-185">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)
+- [<span data-ttu-id="2b77c-181">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="2b77c-181">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="2b77c-182">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="2b77c-182">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="2b77c-183">typeof</span><span class="sxs-lookup"><span data-stu-id="2b77c-183">typeof</span></span>](../../../csharp/language-reference/keywords/typeof.md)  
+- [<span data-ttu-id="2b77c-184">as</span><span class="sxs-lookup"><span data-stu-id="2b77c-184">as</span></span>](../../../csharp/language-reference/keywords/as.md)  
+- [<span data-ttu-id="2b77c-185">演算子のキーワード</span><span class="sxs-lookup"><span data-stu-id="2b77c-185">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)
