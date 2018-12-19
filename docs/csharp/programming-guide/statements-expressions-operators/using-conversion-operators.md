@@ -1,5 +1,6 @@
 ---
-title: 変換演算子の使用 (C# プログラミング ガイド)
+title: 変換演算子の使用 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#], operators
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - implicit conversion operators [C#]
 - explicit conversion operators [C#]
 ms.assetid: caf36e89-c6c0-4b87-9f9e-85780a45c9a4
-ms.openlocfilehash: 17a722f7160ae9cd03caa2dff9c4436fcf0f9d9e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 908067c3ad6cae34dd223bd608a74ba1cd7a88a3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845916"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236871"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>変換演算子の使用 (C# プログラミング ガイド)
 より使いやすい `implicit` 変換演算子を使用することもできますし、型を変換していることをコードを読むすべての人に明確に示すために `explicit` 変換演算子を使用することもできます。 このトピックでは、両方の型変換演算子を示します。  
   
 > [!NOTE]
->  単純な型変換については、「[方法: 文字列を数値に変換する](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)」、「[方法: バイト配列を int に変換する](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)」、「[方法: 16 進文字列と数値型の間で変換する](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)」、または「<xref:System.Convert>」を参照してください。  
+>  単純な型変換について詳しくは、「[方法: 文字列を数値に変換する](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)」、「[方法: バイト配列を int に変換する](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)」、「[方法: 16 進文字列と数値型の間で変換する](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)」、または <xref:System.Convert> をご覧ください。  
   
 ## <a name="example"></a>例  
  ここでは、明示的な変換演算子の例を示します。 この演算子は、<xref:System.Byte> 型を `Digit` という値型に変換します。 すべての byte 型を Digit 型に変換できるとは限らないため、変換は明示的に行うように指定されています。つまり、`Main` メソッドに示すように、キャストを使用する必要があります。  
@@ -35,6 +36,6 @@ ms.locfileid: "48845916"
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [変換演算子](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
 - [is](../../../csharp/language-reference/keywords/is.md)

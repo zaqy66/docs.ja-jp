@@ -1,16 +1,17 @@
 ---
-title: 暗黙的に型指定されるローカル変数 (C# プログラミング ガイド)
+title: 暗黙的に型指定されるローカル変数 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 2e678886162196c3a0fe4762bf766596cdc02225
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 68c0ff055c91f4f1deca6fcfada0f14577439731
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501404"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237013"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>暗黙的に型指定されるローカル変数 (C# プログラミング ガイド)
 ローカル変数は、明示的な型を指定しないで宣言できます。 `var` キーワードは、初期化ステートメントの右辺にある式から変数の型を推論するようにコンパイラに指示します。 推論される型は、組み込み型、匿名型、ユーザー定義型、または .NET Framework クラス ライブラリで定義されている型である可能性があります。 `var` で配列を初期化する方法の詳細については、「[暗黙的に型指定される配列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)」を参照してください。  
@@ -43,7 +44,7 @@ ms.locfileid: "43501404"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}  
     ```  
   
- 詳細については、「[方法: クエリ式で暗黙的に型指定されるローカル変数および配列を使用する](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)」を参照してください。  
+ 詳細については、「[方法 :クエリ式で暗黙的に型指定されるローカル変数および配列を使用する](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)」をご覧ください。  
   
 ## <a name="var-and-anonymous-types"></a>var と匿名型  
  多くの場合、`var` の使用は任意であり、構文上便利なだけです。 ただし、変数が匿名型で初期化される場合、後でオブジェクトのプロパティへのアクセスが必要になったら、変数を `var` として宣言する必要があります。 これは、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式では一般的なシナリオです。 詳細については、「[匿名型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)」を参照してください。  

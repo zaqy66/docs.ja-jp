@@ -1,5 +1,6 @@
 ---
-title: '|= 演算子 (C# リファレンス)'
+title: '|= 演算子 - C# リファレンス'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '|=_CSharpKeyword'
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - OR assignment operator (|=) [C#]
 - '|= operator (OR assignment) [C#]'
 ms.assetid: 8315b8cf-dd15-402f-92f0-c7db931696ca
-ms.openlocfilehash: fe56005ce94656b5e8a075cddfb91dc0da096cf7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: ad8d5c8e65c2768d1dfc4644323e801189a4399c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562084"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245338"
 ---
 # <a name="-operator-c-reference"></a>|= 演算子 (C# リファレンス)
 OR 代入演算子です。  
@@ -40,5 +41,5 @@ x = x | y
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [C# 演算子](../../../csharp/language-reference/operators/index.md)

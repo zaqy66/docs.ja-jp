@@ -1,5 +1,6 @@
 ---
-title: 浮動小数点型の一覧表 (C# リファレンス)
+title: 浮動小数点型の一覧表 - C# リファレンス
+ms.custom: seodec18
 description: Overview of the built-in C# floating-point types (組み込みの C# 浮動小数点型の概要)
 ms.date: 08/20/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: c292303d1cf0b72d05ae6269d63a27555d2458b5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 80c40e1b711af0dbd434d1837b9bcc1cf7c90069
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200471"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236883"
 ---
 # <a name="floating-point-types-table-c-reference"></a>浮動小数点型の一覧表 (C# リファレンス)
 
@@ -20,7 +21,7 @@ ms.locfileid: "50200471"
   
 |型|おおよその範囲|有効桁数|  
 |----------|-----------------------|---------------|  
-|[float](float.md)|±1.5 x 10<sup>−45</sup> から ±3.4 x 10<sup>38</sup>|~6-9 桁|  
+|[float](float.md)|±1.5 x 10<sup>−45</sup> から ±3.4 x 10<sup>38</sup>|~6 ～9 桁|  
 |[double](double.md)|±5.0 × 10<sup>−324</sup> - ±1.7 × 10<sup>308</sup>|~15-17 桁|  
 |[decimal](decimal.md)|±1.0 x 10<sup>-28</sup> から ±7.9228 x 10<sup>28</sup>|28 から 29 桁の数字|  
   

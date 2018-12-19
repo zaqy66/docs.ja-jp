@@ -1,16 +1,17 @@
 ---
-title: nameof (C# リファレンス)
+title: nameof - C# リファレンス
+ms.custom: seodec18
 ms.date: 06/16/2017
 f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 01c87f8d63264aa342b04b8d3fcfc7e6f38db44b
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 61c0744168a6fef0f8c8cfb589602e7aeff0c48b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50744357"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241492"
 ---
 # <a name="nameof-c-reference"></a>nameof (C# リファレンス)
 
@@ -108,7 +109,7 @@ class Test {
   
  引数は構文上、式でなければならないため、許容されないものが多数あります。特に必要がないため、ここではこのようなものについて逐一取り上げていません。  定義済みの型 (たとえば、`int` または `void`)、Null 許容型 (`Point?`)、配列型 (`Customer[,]`)、ポインター型 (`Buffer*`)、修飾されたエイリアス (`A::B`)、バインドされていないジェネリック型 (`Dictionary<,>`)、プリプロセッサ シンボル (`DEBUG`)、およびラベル (`loop:`) はエラーが発生するため、注意が必要です。  
   
- 完全修飾名を取得する必要がある場合は、`nameof` と共に `typeof` 式を使用できます。  例:
+ 完全修飾名を取得する必要がある場合は、`nameof` と共に `typeof` 式を使用できます。  次に例を示します。
 ```csharp  
 class C {
     void f(int i) {  
@@ -137,5 +138,5 @@ class C {
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)  

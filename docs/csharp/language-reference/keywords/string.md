@@ -1,5 +1,6 @@
 ---
-title: string (C# リファレンス)
+title: string - C# リファレンス
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - string
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f6c76f8effc5aef82803014b9a7257c2ad6865b8
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153125"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286482"
 ---
 # <a name="string-c-reference"></a>string (C# リファレンス)
 
@@ -56,7 +57,19 @@ string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-リテラル文字列は `string` 型であり、二重引用符で囲む形式と、@ 付きの二重引用符で囲む形式の 2 種類があります。 二重引用符で囲む場合は、リテラル文字列の前後に二重引用符 (") を付けます。
+同様に、[] 演算子を使って `string` 内の各文字を反復処理することもできます。
+
+```csharp
+string str = "test";
+
+for (int i = 0; i < str.Length; i++)
+{
+  Console.Write(str[i] + " ");
+}
+// Output: t e s t
+``` 
+
+リテラル文字列は `string` 型であり、二重引用符で囲む形式と、@-quoted 形式の 2 とおりがあります。 二重引用符で囲む場合は、リテラル文字列の前後に二重引用符 (") を付けます。
 
 ```csharp
 "good morning"  // a string literal
@@ -84,7 +97,7 @@ verbatim 文字列の場合の利点は、エスケープ シーケンスが "*�
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"
 ```
 
-@ に続いて引用符で囲まれた文字列に二重引用符を含めるには、二重引用符を二重にします。
+@-quoted 文字列に二重引用符を含めるには、二重引用符を二重にします。
 
 ```csharp
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.

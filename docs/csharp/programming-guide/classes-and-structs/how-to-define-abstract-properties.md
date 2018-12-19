@@ -1,27 +1,28 @@
 ---
-title: '方法 : 抽象プロパティを定義する (C# プログラミング ガイド)'
+title: '方法: 抽象プロパティを定義する - C# プログラミング ガイド'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 549867cac99784ce885b8fce8a1638c40ad88cec
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 70f344fb4e5a74940219688190324beb8183d32b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002984"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237312"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>方法 : 抽象プロパティを定義する (C# プログラミング ガイド)
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>方法: 抽象プロパティを定義する (C# プログラミング ガイド)
 次の例では、[抽象](../../../csharp/language-reference/keywords/abstract.md)プロパティを定義する方法を示します。 抽象プロパティの宣言では、プロパティ アクセサーは実装されません。クラスがプロパティをサポートしていることは宣言しますが、アクセサーの実装は派生クラスに委ねます。 基本クラスから継承された抽象プロパティを実装する方法を次の例に示します。  
   
  このサンプルは 3 つのファイルで構成され、それぞれ個別にコンパイルされ、生成されたアセンブリが次のコンパイルで参照されます。  
   
 -   abstractshape.cs: 抽象 `Shape` プロパティを含む `Area` クラス。  
   
--   shapes.cs: `Shape` クラスのサブクラス。  
+-   shapes.cs:`Shape` クラスのサブクラス。  
   
--   shapetest.cs: いくつかの `Shape` から派生したオブジェクトの面積を表示するテスト プログラム。  
+-   shapetest.cs:`Shape` から派生したいくつかのオブジェクトの面積を表示するテスト プログラム。  
   
  この例をコンパイルするには、次のコマンドを使用します。  
   

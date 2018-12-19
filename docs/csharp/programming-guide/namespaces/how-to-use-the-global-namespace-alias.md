@@ -1,17 +1,18 @@
 ---
-title: '方法: グローバル名前空間エイリアスを使用する (C# プログラミング ガイド)'
+title: '方法: グローバル名前空間エイリアスを使用する - C# プログラミング ガイド'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - aliases [C#]
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 19d8d20ae630573b44399f8f5c5351f02b9fb1df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "44514619"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236610"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>方法: グローバル名前空間エイリアスを使用する (C# プログラミング ガイド)
 グローバル[名前空間](../../../csharp/language-reference/keywords/namespace.md)のメンバーにアクセスできると、そのメンバーが同名の別のエンティティによって隠される可能性がある場合に役立ちます。  
@@ -50,5 +51,5 @@ ms.locfileid: "44514619"
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [名前空間](../../../csharp/programming-guide/namespaces/index.md)  
 - [。演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [:: 演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [::演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

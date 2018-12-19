@@ -1,5 +1,6 @@
 ---
-title: '&lt;&lt;= 演算子 (C# リファレンス)'
+title: '&lt;&lt;= 演算子 - C# リファレンス'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <<=_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <<= operator (left-shift assignment) [C#]
 - left shift assignment operator (<<=) [C#]
 ms.assetid: 3bc99c78-1edb-4827-86fc-bce6c3048871
-ms.openlocfilehash: c689aeccdf3ad6cc6c672cc101a4f0aa92f19791
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f49c6360d6fee3f6d612aee51446545f25cd7d18
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517205"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239174"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt;= 演算子 (C# リファレンス)
 左シフト代入演算子。  
@@ -40,5 +41,5 @@ x = x << y
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [C# 演算子](../../../csharp/language-reference/operators/index.md)

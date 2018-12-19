@@ -1,17 +1,18 @@
 ---
-title: 拡張メソッド (C# プログラミング ガイド)
+title: 拡張メソッド - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 7ebd04665d91f599edcb4a5c07680216dfb8925a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8da1deec2238f74a9b594c85feab0445ec2a35b7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840902"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241315"
 ---
 # <a name="extension-methods-c-programming-guide"></a>拡張メソッド (C# プログラミング ガイド)
 拡張メソッドを使用すると、新規の派生型の作成、再コンパイル、または元の型の変更を行うことなく既存の型にメソッドを "追加" できます。 拡張メソッドは特別な種類の静的メソッドですが、拡張された型のインスタンス メソッドのように呼び出します。 C#、F#、および Visual Basic で作成されたクライアント コードの場合は、拡張メソッドの呼び出しと、型で実際に定義されたメソッドの呼び出しに明確な違いはありません。  
@@ -43,7 +44,7 @@ int i = s.WordCount();
   
  コードでは、インスタンス メソッドの構文を使用して拡張メソッドを呼び出します。 ただし、コンパイラが生成する中間言語 (IL: Intermediate Language) により、コードは静的メソッドに対する呼び出しに変換されます。 したがって、カプセル化の原則には実質的に違反していません。 実際に、拡張メソッドは、それらが拡張している型のプライベート変数にはアクセスできません。  
   
- 詳細については、「[方法: カスタム拡張メソッドを実装して呼び出す](../../../csharp/programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)」を参照してください。  
+ 詳細については、「[方法 :カスタム拡張メソッドを実装して呼び出す](../../../csharp/programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)」をご覧ください。  
   
  一般的には、独自の拡張メソッドを実装するよりも、拡張メソッドを呼び出すことの方がはるかに多くなります。 拡張メソッドは、インスタンス メソッドの構文を使用して呼び出すので、特別な知識がなくてもクライアント コードからそれらを使用できます。 メソッドが定義されている名前空間に関する `using` ディレクティブを追加するだけで、特定の型の拡張メソッドを使用できるようになります。 たとえば、標準クエリ演算子を使用するには、次の `using` ディレクティブをコードに追加します。  
   
@@ -80,7 +81,7 @@ using System.Linq;
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [並列プログラミングのサンプル (拡張メソッドの例が多数掲載されています)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
 - [ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
 - [標準クエリ演算子の概要](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

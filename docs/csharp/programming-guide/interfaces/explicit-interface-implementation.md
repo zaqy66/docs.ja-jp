@@ -1,16 +1,17 @@
 ---
-title: 明示的なインターフェイスの実装 (C# プログラミング ガイド)
+title: 明示的なインターフェイスの実装 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: 4296591875d9843d44a81adfd5937532bcd7fe94
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e985da878ca4160938f29911d4313ee6cd731aeb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085820"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244831"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>明示的なインターフェイスの実装 (C# プログラミング ガイド)
 シグネチャが同じメンバーが含まれる 2 つのインターフェイスをある[クラス](../../../csharp/language-reference/keywords/class.md)が実装する場合、そのクラスでそのメンバーを実装することで、実装としてそのメンバーが両方のインターフェイスで使用されます。 次の例では、`Paint` のすべての呼び出しで同じメソッドが呼び出されます。  
@@ -21,7 +22,7 @@ ms.locfileid: "44085820"
   
  [!code-csharp[csProgGuideInheritance#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_2.cs)]  
   
- クラス メンバー `IControl.Paint` は `IControl` インターフェイス経由でのみ利用できます。`ISurface.Paint` は `ISurface` 経由でのみ利用できます。 いずれのメソッド実装も個別であり、クラスで直接利用できません。 例:  
+ クラス メンバー `IControl.Paint` は `IControl` インターフェイス経由でのみ利用できます。`ISurface.Paint` は `ISurface` 経由でのみ利用できます。 いずれのメソッド実装も個別であり、クラスで直接利用できません。 次に例を示します。  
   
  [!code-csharp[csProgGuideInheritance#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_3.cs)]  
   

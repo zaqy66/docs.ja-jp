@@ -1,5 +1,6 @@
 ---
-title: == 演算子 (C# リファレンス)
+title: == 演算子 - C# リファレンス
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ==_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - == operator [C#]
 - equality operator [C#]
 ms.assetid: 34c6b597-caa2-4855-a7cd-38ecdd11bd07
-ms.openlocfilehash: d9d7dcf3b38939e681fb51d6c674151cee78b3d0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c6f93be4d422fe42787e36f5b86e2cccbfc645b7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43779168"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239015"
 ---
 # <a name="-operator-c-reference"></a>== 演算子 (C# リファレンス)
 組み込みの値型の場合、等値演算子 (`==`) ではオペランドの値が等しい場合に true が返され、それ以外の場合は `false` が返されます。 [string](../../../csharp/language-reference/keywords/string.md) 以外の参照型の場合、`==` では 2 つのオペランドが同じオブジェクトを参照する場合に `true` が返されます。 `string` 型の場合は、`==` は文字列の値を比較します。  
@@ -26,5 +27,5 @@ ms.locfileid: "43779168"
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [C# 演算子](../../../csharp/language-reference/operators/index.md)

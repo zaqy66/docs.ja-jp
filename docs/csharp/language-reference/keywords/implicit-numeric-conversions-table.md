@@ -1,5 +1,6 @@
 ---
-title: 暗黙的な数値変換の一覧表 (C# リファレンス)
+title: 暗黙的な数値変換の一覧表 - C# リファレンス
+ms.custom: seodec18
 ms.date: 09/05/2018
 helpviewer_keywords:
 - conversions [C#], implicit numeric
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: c3c0153a0ae3e07839822c8bb978b1a09277bd53
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 98774a0f7ad86e43178c6d0216e29e7b4767f3f2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188704"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235255"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>暗黙的な数値変換の一覧表 (C# リファレンス)
 
 .NET 数値型間の定義済みの暗黙的な変換を次の表に示します。
   
-|変換元|変換先|  
+|変換元|終了|  
 |----------|--------|  
 |[sbyte](sbyte.md)|`short`、`int`、`long`、`float`、`double`、または `decimal`|  
 |[byte](byte.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
@@ -53,7 +54,7 @@ ms.locfileid: "50188704"
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [整数型の一覧表](integral-types-table.md)
 - [浮動小数点型の一覧表](floating-point-types-table.md)
 - [組み込み型の一覧表](built-in-types-table.md)

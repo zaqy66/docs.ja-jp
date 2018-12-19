@@ -1,17 +1,18 @@
 ---
-title: クラス (C# プログラミング ガイド)
+title: クラス - C# プログラミング ガイド
+ms.custom: seodec18
 description: クラスの型と、クラスの型を作成する方法について説明します
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: db490225bbef4517c1306aee7afb5c01d2d0fec6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 614b70562954fee99c6de3e66b54bbdd1134f553
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081477"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242292"
 ---
 # <a name="classes-c-programming-guide"></a>クラス (C# プログラミング ガイド)
 
@@ -19,7 +20,7 @@ ms.locfileid: "44081477"
 [class](../../../csharp/language-reference/keywords/class.md) として定義された型は、*参照型*です。 実行時には、参照型の変数を宣言すると、[new](../../../csharp/language-reference/keywords/new.md) 演算子を使用してクラスのインスタンスを明示的に作成するまで、変数には値 [null](../../../csharp/language-reference/keywords/null.md) が格納されています。または、次の例に示すように、別の場所で作成された可能性がある、互換性のある型のオブジェクトを代入することもできます。
 
 ```csharp
-//Declaring a object of type MyClass.
+//Declaring an object of type MyClass.
 MyClass mc = new MyClass();
 
 //Declaring another object of the same type, assigning it the value of the first object.
@@ -101,7 +102,7 @@ C++ と異なり、C# のクラスは 1 つの基底クラスから直接継承�
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [オブジェクト指向プログラミング](../concepts/object-oriented-programming.md)
 - [ポリモーフィズム](polymorphism.md)
 - [識別子名](../inside-a-program/identifier-names.md)

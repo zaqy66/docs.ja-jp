@@ -1,17 +1,18 @@
 ---
-title: ^= 演算子 (C# リファレンス)
+title: ^= 演算子 - C# リファレンス
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ^=_CSharpKeyword
 helpviewer_keywords:
 - ^= operator [C#]
 ms.assetid: 3658ff9a-61cd-467e-ad6b-8fbf1cfbaae4
-ms.openlocfilehash: d6546f23ffb6dee792339a7e3863bf58ae668d58
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cf39c8e8586e9d4f537fe38d8b28f55542db6ab8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857233"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237156"
 ---
 # <a name="-operator-c-reference"></a>^= 演算子 (C# リファレンス)
 排他的 OR 代入演算子。  
@@ -39,5 +40,5 @@ x = x ^ y
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [C# 演算子](../../../csharp/language-reference/operators/index.md)

@@ -1,5 +1,6 @@
 ---
-title: 名前空間の使用 (C# プログラミング ガイド)
+title: 名前空間の使用 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 81876d1818a6e82764e4aea0ae2b6f9e091f0ba3
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d29de118e928522dcc3a4b4ab32fe2d2c4d1f2f9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123398"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235785"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>名前空間の使用 (C# プログラミング ガイド)
 C# プログラム内では名前空間が 2 つの方法でよく使用されます。 最初の方法では、.NET Framework クラスで名前空間を使用して、その多くのクラスを整理します。 2 つ目の方法では、独自の名前空間を宣言します。これは、より大きなプログラミング プロジェクトでクラス名とメソッド名のスコープを制御するのに役立ちます。  
@@ -65,7 +66,7 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
   
  通常、`::` は名前空間エイリアスを参照する際に使用し、`global::` はグローバル名前空間を参照する際に使用します。`.` は型またはメンバーを修飾する際に使用します。  
   
- 名前空間ではなく型を参照するエイリアスで `::` を使用するのは誤りです。 例:  
+ 名前空間ではなく型を参照するエイリアスで `::` を使用するのは誤りです。 次に例を示します。  
   
  [!code-csharp[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
   
@@ -85,13 +86,13 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
   
  このコードは動作しますが、`Alias` という名前の型が後で導入された場合、`Alias.` は代わりにその型にバインドされます。 `Alias::Exception` を使用すれば、`Alias` は名前空間エイリアスとして扱われ、型と間違われることがなくなります。  
   
- `global` エイリアスの詳細については、「[方法: グローバル名前空間エイリアスを使用する](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)」を参照してください。  
+ 「[方法: グローバル名前空間エイリアスを使用する](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)」をご覧ください (`global` エイリアスに関する詳細情報)。  
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [名前空間](../../../csharp/programming-guide/namespaces/index.md)  
 - [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [。演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [:: 演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [.演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [::演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

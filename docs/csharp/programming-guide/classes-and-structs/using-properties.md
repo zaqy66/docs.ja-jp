@@ -1,17 +1,18 @@
 ---
-title: プロパティの使用 (C# プログラミング ガイド)
+title: プロパティの使用 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 50dda6a27081762a4e8b407ca5af94659b47da45
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dd5d85feb520e10a5d89cf91878d092695efb13a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515855"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243063"
 ---
 # <a name="using-properties-c-programming-guide"></a>プロパティの使用 (C# プログラミング ガイド)
 プロパティは、フィールドとメソッドの両方の側面を結合します。 オブジェクトのユーザーにとってプロパティは、プロパティへのアクセスに同じ構文を必要とするフィールドのように見えます。 クラスの実装者にとってプロパティは、[get](../../../csharp/language-reference/keywords/get.md) アクセサーと [set](../../../csharp/language-reference/keywords/set.md) アクセサーの両方またはいずれかを表す 1 つまたは 2 つのコード ブロックです。 `get` アクセサーのコード ブロックはプロパティが読み取られる時に実行され、`set` アクセサーのコード ブロックはプロパティに新しい値が割り当てられるときに実行されます。 `set` アクセサーのないプロパティは読み取り専用と見なされます。 `get` アクセサーのないプロパティは書き込み専用と見なされます。 両方のアクセサーを持つプロパティは、読み取り/書き込みです。  
@@ -20,7 +21,7 @@ ms.locfileid: "43515855"
   
  プロパティには次のようなさまざまな用途があります。変更を許可する前にデータを検証したり、データをそのデータが実際に他のソース (データベースなど) から取得されるクラスで透過的に公開したり、イベントの発生や他のフィールドの値を変更するなど、データが変更されたときに、アクションを実行したりすることができます。  
   
- プロパティはクラス ブロックで宣言できます。フィールドのアクセス レベル、プロパティの型、プロパティの名前、`get` アクセサーと `set` アクセサーの両方またはいずれかを宣言するコード ブロックの順で指定します。 例:  
+ プロパティはクラス ブロックで宣言できます。フィールドのアクセス レベル、プロパティの型、プロパティの名前、`get` アクセサーと `set` アクセサーの両方またはいずれかを宣言するコード ブロックの順で指定します。 次に例を示します。  
   
  [!code-csharp[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
   
@@ -33,7 +34,7 @@ ms.locfileid: "43515855"
   
  [!code-csharp[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
- プロパティを参照するとき、割り当ての対象を除き、`get` アクセサーがプロパティの値を読み取るために呼び出されます。 例:  
+ プロパティを参照するとき、割り当ての対象を除き、`get` アクセサーがプロパティの値を読み取るために呼び出されます。 次に例を示します。  
   
  [!code-csharp[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
   
@@ -54,7 +55,7 @@ ms.locfileid: "43515855"
   
  [!code-csharp[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
   
- プロパティに値を割り当てるときに、新しい値を提供する引数を使用して `set` アクセサーが呼び出されます。 例:  
+ プロパティに値を割り当てるときに、新しい値を提供する引数を使用して `set` アクセサーが呼び出されます。 次に例を示します。  
   
  [!code-csharp[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
   

@@ -1,5 +1,6 @@
 ---
-title: '* 演算子 (C# リファレンス)'
+title: '* 演算子 - C# リファレンス'
+ms.custom: seodec18
 ms.date: 04/04/2018
 f1_keywords:
 - '*_CSharpKeyword'
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: 873cc1dc0d81425117f1784353acf08b35158133
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 24ac4a99c48f1e8204b821bfbf5f7fbc0a2b2f1d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45596976"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237351"
 ---
 # <a name="-operator-c-reference"></a>* 演算子 (C# リファレンス)
 乗算演算子 (`*`) は、そのオペランドの積を計算します。 すべての数値型には定義済みの乗算演算子があります。  

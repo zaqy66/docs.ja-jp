@@ -1,5 +1,5 @@
 ---
-title: '方法 : Visual Studio のコマンドラインのための環境変数を設定する'
+title: '方法: Visual Studio のコマンドラインのための環境変数を設定する'
 ms.date: 09/29/2017
 f1_keywords:
 - cs.build.commandline
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 77375e428fe0563c0b533ca97abd21070e850682
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3563f668dfd4610e1c5cd7d7f8633943c654f193
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857850"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286443"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>方法 : Visual Studio のコマンドラインのための環境変数を設定する
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>方法: Visual Studio のコマンドラインのための環境変数を設定する
 
-VsDevCmd.bat ファイルは、適切な環境変数を設定してコマンド ライン ビルドを有効にします。 VsDevCmd.bat の詳細については、[サポート技術情報 Q248802](https://support.microsoft.com/help/248802/you-receive-the-out-of-environment-space-error-message-when-you-execut) を参照してください。  
+VsDevCmd.bat ファイルは、適切な環境変数を設定してコマンド ライン ビルドを有効にします。
 
 > [!NOTE]
 > VsDevCmd.bat ファイルは、Visual Studio 2017 で提供される新しいファイルです。 Visual Studio 2015 とそれ以前のバージョンでは、同じ目的で VSVARS32.bat を使用しました。 このファイルは \Program Files\Microsoft Visual Studio\\*Version*\Common7\Tools または Program Files (x86)\Microsoft Visual Studio\\*Version*\Common7\Tools に格納されていました。
@@ -41,7 +41,14 @@ VsDevCmd.bat ファイルは、適切な環境変数を設定してコマンド 
   
     > [!CAUTION]
     >  VsDevCmd.bat の場所は、コンピューターによって異なる場合があります。 VsDevCmd.bat ファイルが見つからない場合や破損している場合でも、別のコンピューターの VsDevCmd.bat と置き換えないでください。 その場合は、セットアップ プログラムを再実行してファイルを置き換えてください。  
-  
+
+### <a name="available-options-for-vsdevcmdbat"></a>VsDevCmd.BAT に使用できるオプション
+
+VsDevCmd.BAT に使用できるオプションを確認するには、`-help` オプションを使ってコマンドを実行します。
+```console
+VsDevCmd.bat -help
+```
+
 ## <a name="see-also"></a>参照  
 
 - [csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

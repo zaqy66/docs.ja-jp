@@ -1,25 +1,26 @@
 ---
-title: 例外の使用 (C# プログラミング ガイド)
+title: 例外の使用 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 7b60ad4ce20a1977d309b275b530d03cbb8e1f7d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 64e62d9c6cfcffb9ea5c0b0e05a546753278e186
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514687"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240191"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>例外の使用 (C# プログラミング ガイド)
 C# では、例外と呼ばれるメカニズムを使用して、プログラムの実行時に発生したエラーがプログラムに伝えられます。 例外は、エラーが発生したコードによってスローされ、エラーを修正できるコードによってキャッチされます。 例外をスローできるのは、.NET Framework 共通言語ランタイム (CLR) か、プログラム内のコードです。 スローされた例外は、例外の `catch` ステートメントが見つかるまで呼び出し履歴をさかのぼります。 キャッチされない例外は、システムが提供する汎用の例外ハンドラーによって処理されます。このとき、ダイアログ ボックスが表示されます。  
   
- 例外は、<xref:System.Exception> から派生したクラスによって表されます。 このクラスは例外の型を識別し、例外に関する詳細情報が含まれたプロパティを保持します。 例外をスローするには、例外の派生クラスのインスタンスを作成し、必要に応じて例外のプロパティを設定してから、`throw` キーワードを使用してオブジェクトをスローする必要があります。 例:  
+ 例外は、<xref:System.Exception> から派生したクラスによって表されます。 このクラスは例外の型を識別し、例外に関する詳細情報が含まれたプロパティを保持します。 例外をスローするには、例外の派生クラスのインスタンスを作成し、必要に応じて例外のプロパティを設定してから、`throw` キーワードを使用してオブジェクトをスローする必要があります。 次に例を示します。  
   
  [!code-csharp[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
   
- 例外がスローされると、ランタイムは、現在のステートメントが `try` ブロック内に存在するかどうかを確認します。 存在する場合は、`try` ブロックに関連付けられている `catch` ブロックをチェックして、例外をキャッチできるかどうかを確認します。 通常は、この `Catch` ブロックによって例外の型が指定されます。`catch` ブロックの型が、例外または例外の基底クラスの型と一致する場合、`catch` ブロックはメソッドを処理できます。 例:  
+ 例外がスローされると、ランタイムは、現在のステートメントが `try` ブロック内に存在するかどうかを確認します。 存在する場合は、`try` ブロックに関連付けられている `catch` ブロックをチェックして、例外をキャッチできるかどうかを確認します。 通常は、この `Catch` ブロックによって例外の型が指定されます。`catch` ブロックの型が、例外または例外の基底クラスの型と一致する場合、`catch` ブロックはメソッドを処理できます。 次に例を示します。  
   
  [!code-csharp[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
   

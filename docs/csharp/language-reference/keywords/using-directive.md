@@ -1,15 +1,16 @@
 ---
-title: using ディレクティブ (C# リファレンス)
+title: using ディレクティブ - C# リファレンス
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: d3fa8a1a1b378fe1e18a63fec1c0d2f9eb40ecb3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b58467953096c26d13f4c837f13548876e645f08
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181057"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240321"
 ---
 # <a name="using-directive-c-reference"></a>using ディレクティブ (C# リファレンス)
 `using` ディレクティブは、次の 3 つの用途で使用します。  
@@ -92,7 +93,7 @@ class Program
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [名前空間の使用](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
 - [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
 - [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)  

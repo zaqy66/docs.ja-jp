@@ -1,5 +1,6 @@
 ---
-title: async (C# リファレンス)
+title: async - C# リファレンス
+ms.custom: seodec18
 ms.date: 05/22/2017
 f1_keywords:
 - async_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 021a4291f550eca517cbdc9769c2a9f0aca99d1e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7bf45a701b10372d8cc4061db13f347eb0ddae91
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199878"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242433"
 ---
 # <a name="async-c-reference"></a>async (C# リファレンス)
 `async` 修飾子を使用して、メソッド、[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)、または[匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)が非同期であることを指定します。 この修飾子が使用されているメソッドまたは式を、"*非同期メソッド*" と呼びます。 次の例では、`ExampleMethodAsync` という名前の非同期メソッドを定義します。 
@@ -76,7 +77,7 @@ Windows ストア アプリとしてコードを実行するには:
   
 メソッドの [return](../../../csharp/language-reference/keywords/return.md) ステートメントで `TResult` 型のオペランドを指定している場合、非同期メソッドの戻り値の型として `Task<TResult>` を指定します。 メソッドの完了時に意味のある値を返さない場合は、`Task` を使用します。 これにより、メソッドの呼び出しでは `Task` が返されますが、`Task` の完了時に、`await` を待機している `Task` 式はすべて、`void` に評価されます。  
   
-戻り値の型 `void` は主として、その戻り値の型が要求されるイベント ハンドラーの定義に使用されます。 `void` を返す非同期メソッドの呼び出し元は、このメソッドを待機できず、このメソッドがスローする例外をキャッチできません。 
+戻り値の型 `void` は主として、戻り値の型が必要なイベント ハンドラーの定義に使用されます。 `void` を返す非同期メソッドの呼び出し元は、このメソッドを待機できず、このメソッドがスローする例外をキャッチできません。  
 
 C# 7.0 以降、`GetAwaiter` メソッドを持つ別の型 (通常は値の型) を返して、コードのパフォーマンスが重要なセクションでメモリ割り当てを最小限に抑えます。 
 

@@ -1,15 +1,16 @@
 ---
-title: インデクサーの使用 (C# プログラミング ガイド)
+title: インデクサーの使用 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 0bb7b848f5484b78e8dae0c40320e7945b78eea0
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ad5c6f68f5eb2f62d7c6f389e374e1b2db5417c6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873460"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241919"
 ---
 # <a name="using-indexers-c-programming-guide"></a>インデクサーの使用 (C# プログラミング ガイド)
 
@@ -74,6 +75,6 @@ C# では、インデックス型は整数に制限されません。 たとえ�
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
 - [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)

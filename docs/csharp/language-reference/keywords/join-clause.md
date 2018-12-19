@@ -1,5 +1,6 @@
 ---
-title: join 句 (C# リファレンス)
+title: join 句 - C# リファレンス
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: dee11c1ab754e515c69f330a5919776cbcb1e775
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9052b4b0f1feac5aa56a7fe6745745f1afb5740
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237164"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236285"
 ---
 # <a name="join-clause-c-reference"></a>join 句 (C# リファレンス)
 
@@ -73,7 +74,7 @@ ms.locfileid: "47237164"
 
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式での結合操作は、オブジェクト コレクションに対して実行されます。 2 つのリレーショナル テーブルの "結合" とまったく同じ方法でオブジェクト コレクションを結合することはできません。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] では、2 つのソース シーケンスがリレーションシップによって関連付けられていない場合にのみ明示的な `join` 句が必要になります。 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] を使用する場合、外部キー テーブルはオブジェクト モデル内でプライマリ テーブルのプロパティとして表されます。 たとえば Northwind データベースでは、Customer テーブルに Orders テーブルとの外部キー リレーションシップがあります。 テーブルをオブジェクト モデルに割り当てると、Customer クラスには、その Customer に関連付けられた Orders のコレクションを含む Orders プロパティが含まれます。 実質的には、既に結合が実行されていることになります。
 
-[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] を使用した関連テーブル間でのクエリの詳細については、「[方法: データベース リレーションシップを割り当てる](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)」を参照してください。
+[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] のコンテキストにおける関連テーブル全体でのクエリについて詳しくは、「[方法: データベース リレーションシップを割り当てる](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)」をご覧ください。
 
 ## <a name="composite-keys"></a>複合キー
 

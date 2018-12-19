@@ -1,5 +1,6 @@
 ---
-title: $ - 文字列補間 (C# リファレンス)
+title: $ - 文字列補間 - C# リファレンス
+ms.custom: seodec18
 description: 文字列補間では、従来の複合文字列の書式設定よりも読み取りやすく、便利な構文を書式指定文字列の出力に提供します。
 ms.date: 03/26/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6cac2b31f9ec1fd4775d4ed2ec2e9382502a0cc
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196990"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244805"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 文字列補間 (C# リファレンス)
 
@@ -95,6 +96,6 @@ ms.locfileid: "50196990"
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [複合書式指定](../../../standard/base-types/composite-formatting.md)
 - [文字列](../../programming-guide/strings/index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# 特殊文字](index.md)
 - [C# リファレンス](../index.md)

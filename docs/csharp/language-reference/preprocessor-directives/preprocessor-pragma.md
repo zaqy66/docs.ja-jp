@@ -1,17 +1,18 @@
 ---
-title: '#pragma (C# リファレンス)'
+title: '#pragma - C# リファレンス'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma'
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 5ae397cc61e0c6b58ed2079369131ebb7e352eae
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 65867bc441711193f93142d1c65122b6bc60c25d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43747484"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241828"
 ---
 # <a name="pragma-c-reference"></a>#pragma (C# リファレンス)
 `#pragma` は、ファイル内に指定され、そのファイルのコンパイルについての特別な命令をコンパイラに指示します。 命令はコンパイラによってサポートされている必要があります。 つまり、`#pragma` を使用してカスタムの前処理命令を作成することはできません。 Microsoft C# コンパイラは、次の 2 つの `#pragma` 命令をサポートしています。  

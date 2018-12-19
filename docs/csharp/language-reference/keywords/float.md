@@ -1,5 +1,6 @@
 ---
-title: float キーワード (C# リファレンス)
+title: float キーワード - C# リファレンス
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - float
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: da697aa6f1f429418a69d9f58a13f46a3da9ac74
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4ca256bf7204cdaad7d49ed19c662ab81bb01bf9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187180"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242452"
 ---
 # <a name="float-c-reference"></a>float (C# リファレンス)
 
@@ -67,7 +68,7 @@ float x = 3.5F;
 
 - <xref:System.Single>  
 - [C# リファレンス](../index.md)  
-- [C# プログラミングガイド](../../programming-guide/index.md)  
+- [C# プログラミング ガイド](../../programming-guide/index.md)  
 - [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)  
 - [C# のキーワード](index.md)  
 - [整数型の一覧表](integral-types-table.md)  

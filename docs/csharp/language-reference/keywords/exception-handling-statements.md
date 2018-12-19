@@ -1,15 +1,16 @@
 ---
-title: 例外処理ステートメント (C# リファレンス)
+title: 例外処理ステートメント - C# リファレンス
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
-ms.openlocfilehash: 1d48981e0d36053fce1249b27cd15551ed59dc91
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 835bc0a0ac8bdabccddc12f0b7d3eaec4ecd3dee
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025134"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243154"
 ---
 # <a name="exception-handling-statements-c-reference"></a>例外処理ステートメント (C# リファレンス)
 C# では、プログラムの実行時に発生する例外と呼ばれる異常事態を処理する組み込みサポートが用意されています。 このような例外は、通常の制御フローの外部にあるコードによって処理されます。  

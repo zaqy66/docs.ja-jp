@@ -1,15 +1,16 @@
 ---
-title: ジェネリックの利点 (C# プログラミング ガイド)
+title: ジェネリックの利点 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: 2770f8bc7fc4242beb02bf9e0555b5cbb8db0180
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f97d3ce7a67638719d02c31879c00679405118bc
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503795"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245013"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>ジェネリックの利点 (C# プログラミング ガイド)
 ジェネリックを使用することによって、汎用基本データ型 <xref:System.Object> との値で型をキャストして一般化を行う、共通言語ランタイムや C# 言語の以前のバージョンの制限を解決できます。 ジェネリック クラスを作成すると、コンパイル時にタイプ セーフなコレクションを作成できます。  
@@ -37,7 +38,7 @@ ms.locfileid: "43503795"
 ## <a name="see-also"></a>参照
 
 - <xref:System.Collections.Generic>  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
 - [ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
 - [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)  

@@ -1,21 +1,22 @@
 ---
-title: ジェネリックとリフレクション (C# プログラミング ガイド)
+title: ジェネリックとリフレクション - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 9bbf08161162c2d0776a066098e40b57a415da6d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 752c44bcd4ded82fb2144dca684482f30371b6aa
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187138"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244937"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>ジェネリックとリフレクション (C# プログラミング ガイド)
 共通言語ランタイム (CLR) は実行時にジェネリック型の情報にアクセスできるため、非ジェネリック型の場合と同じように、リフレクションを使用してジェネリック型の情報を取得できます。 詳細については、「[ランタイムのジェネリック](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)」を参照してください。  
   
- [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] には、ジェネリック型の実行時の情報を有効にする新しいメンバーがいくつか <xref:System.Type> クラスに追加されています。 それらのメソッドとプロパティの使用方法の詳細については、そのクラスのドキュメントを参照してください。 <xref:System.Reflection.Emit> 名前空間にも、ジェネリックをサポートする新しいメンバーが追加されています。 「[方法: リフレクション出力を使用してジェネリック型を定義する](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)」を参照してください。  
+ [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] には、ジェネリック型の実行時の情報を有効にする新しいメンバーがいくつか <xref:System.Type> クラスに追加されています。 それらのメソッドとプロパティの使用方法の詳細については、そのクラスのドキュメントを参照してください。 <xref:System.Reflection.Emit> 名前空間にも、ジェネリックをサポートする新しいメンバーが追加されています。 「[方法: リフレクション出力を使用してジェネリック型を定義する](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)」をご覧ください。  
   
  ジェネリック リフレクションで使用する用語に関する一定の条件の一覧については、<xref:System.Type.IsGenericType%2A> プロパティの解説を参照してください。  
   

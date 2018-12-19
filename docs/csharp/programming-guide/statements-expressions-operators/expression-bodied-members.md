@@ -1,17 +1,18 @@
 ---
-title: 式形式のメンバー (C# プログラミング ガイド)
+title: 式形式のメンバー - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e58afadae78d3f6b15a8e859edc8d554d84c393
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 36f71352dca584c107af4f45850ce21bb016ba01
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911907"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238118"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>式形式のメンバー (C# プログラミング ガイド)
 式本体の定義を使用すると、簡潔でわかりやすい形式でメンバーの実装を指定できます。 サポートされる任意のメンバー (メソッドやプロパティなど) に関するロジックが単一の式で構成される場合は、常に式本体の定義を使用できます。 式本体の定義には、次の一般的な構文があります。

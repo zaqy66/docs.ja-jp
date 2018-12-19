@@ -1,17 +1,18 @@
 ---
-title: '##pragma checksum (C# リファレンス)'
+title: '#pragma checksum - C# リファレンス'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 28a9ccfb9d36e648304a177294904ab1b7f18892
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 83cc6c56f18e5ce284d9e10294f3b3974578fc91
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024546"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235626"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (C# リファレンス)
 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ページのデバッグに使用するソース ファイルのチェックサムを生成します。  
@@ -27,7 +28,7 @@ ms.locfileid: "48024546"
  変更または更新を監視する必要があるファイルの名前。  
   
  `"{guid}"`  
- ハッシュ アルゴリズムのグローバル一意識別子 (GUID)。  
+ ハッシュ アルゴリズムのグローバル一意識別子 (GUID)。  
   
  `"checksum_bytes"`  
  チェックサムのバイト数を表す 16 進数の文字列。 偶数の 16 進数である必要があります。 奇数の数値を指定すると、コンパイル時に警告が出力され、ディレクティブが無視されます。  
@@ -56,5 +57,5 @@ class TestClass
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [C# プリプロセッサ ディレクティブ](../../../csharp/language-reference/preprocessor-directives/index.md)

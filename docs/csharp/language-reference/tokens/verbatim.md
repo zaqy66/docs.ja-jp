@@ -1,5 +1,6 @@
 ---
-title: '@ (C# リファレンス)'
+title: '@ - C# リファレンス'
+ms.custom: seodec18
 ms.date: 02/09/2017
 f1_keywords:
 - '@_CSharpKeyword'
@@ -10,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d6da87159e3ec9184eaa76ad069102204e2fcfc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b9575f408da351ac3715e1969d601c0cc73da286
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841570"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244168"
 ---
 # <a name="-c-reference"></a>@ (C# リファレンス)
 
-特殊文字 `@` は、逐語的識別子として機能します。 これは次の目的に使用できます。
+特殊文字 `@` は、verbatim 識別子として機能します。 これは次の目的に使用できます。
 
 1. C# のキーワードを識別子として使用できるようにする。 コード要素のプレフィックスとして `@` 文字を使用すると、その要素はC# のキーワードではなく、識別子としてコンパイラに解釈されます。 次の例では、`@` 文字を使用して、`for` ループで使用する `for` という識別子を定義しています。
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. 文字列リテラルを逐語的に解釈することを示す。 このインスタンス内の `@` 文字は、*逐語的文字列リテラル*を定義します。 単純なエスケープ シーケンス (バック スラッシュの `"\\"` など)、16 進数のエスケープ シーケンス (大文字 A の `"\x0041"` など)、Unicode のエスケープ シーケンス (大文字 A の `"\u0041"` など) は、リテラルに解釈されます。 引用符のエスケープ シーケンス (`""`) だけは、リテラルに解釈することはできません。一重引用符が生成されます。 また、逐語的な[補間文字列](interpolated.md)の場合、中かっこエスケープ シーケンス (`{{` と `}}`) は文字どおり解釈されません。単一の中かっこ文字が生成されます。 次の例では、2 つの同じファイル パスを定義しています。一方は通常の文字列リテラルを使用して、もう一方は 逐語的文字列リテラルを使用して定義しています。 これは、逐語的文字列リテラルの一般的な用途の 1 つです。
+1. 文字列リテラルを逐語的に解釈することを示す。 このインスタンス内の `@` 文字は、*verbatim 文字列リテラル*を定義します。 単純なエスケープ シーケンス (バック スラッシュの `"\\"` など)、16 進数のエスケープ シーケンス (大文字 A の `"\x0041"` など)、Unicode のエスケープ シーケンス (大文字 A の `"\u0041"` など) は、リテラルに解釈されます。 引用符のエスケープ シーケンス (`""`) だけは、リテラルに解釈することはできません。一重引用符が生成されます。 また、逐語的な[補間文字列](interpolated.md)の場合、中かっこエスケープ シーケンス (`{{` と `}}`) は文字どおり解釈されません。単一の中かっこ文字が生成されます。 次の例では、2 つの同じファイル パスを定義しています。一方は通常の文字列リテラルを使用して、もう一方は verbatim 文字列リテラルを使用して定義しています。 これは、verbatim 文字列リテラルの一般的な用途の 1 つです。
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 
-   次の例は、同じ文字シーケンスを通常の文字列リテラルと 逐語的文字列リテラルで定義した場合の結果を示したものです。
+   次の例は、同じ文字シーケンスを通常の文字列リテラルと verbatim 文字列リテラルで定義した場合の結果を示したものです。
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
@@ -40,5 +41,5 @@ ms.locfileid: "48841570"
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [C# 特殊文字](../../../csharp/language-reference/tokens/index.md)

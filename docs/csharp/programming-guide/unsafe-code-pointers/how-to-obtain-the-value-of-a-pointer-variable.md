@@ -1,5 +1,6 @@
 ---
-title: '方法 : ポインター変数の値を取得する (C# プログラミング ガイド)'
+title: '方法: ポインター変数の値を取得する - C# プログラミング ガイド'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointer expressions [C#], indirection
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - variables [C#], pointers
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
-ms.openlocfilehash: 66f341e193a0f018adb76a40617f85266519e602
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b20642344b34b5426512ef64bde2ab33d55136b9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746589"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236636"
 ---
-# <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>方法 : ポインター変数の値を取得する (C# プログラミング ガイド)
+# <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>方法: ポインター変数の値を取得する (C# プログラミング ガイド)
 ポインターが指す位置にある変数を取得するには、ポインター間接演算子を使用します。 この式は次の形式になります。`p` はポインター型です。  
   
 ```  
@@ -39,7 +40,7 @@ ms.locfileid: "45746589"
 
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
 - [ポインター式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
 - [ポインター型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
 - [型](../../../csharp/language-reference/keywords/types.md)  

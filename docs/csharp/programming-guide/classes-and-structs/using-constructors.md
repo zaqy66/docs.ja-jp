@@ -1,15 +1,16 @@
 ---
-title: コンストラクターの使用 (C# プログラミング ガイド)
+title: コンストラクターの使用 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: d10b0de0a3811e615297b31d2d9c8934c9338078
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1924e218f151a86b0524df6f3c91bdbe78131922
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43529021"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236168"
 ---
 # <a name="using-constructors-c-programming-guide"></a>コンストラクターの使用 (C# プログラミング ガイド)
 [クラス](../../../csharp/language-reference/keywords/class.md)または[構造体](../../../csharp/language-reference/keywords/struct.md)を作成する際には、コンストラクターが呼び出されます。 コンストラクターの名前はクラスまたは構造体と同じで、通常は、このコンストラクターによって、新しいオブジェクトのデータ メンバーが初期化されます。  
@@ -53,7 +54,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  このため、値型の既定のコンストラクターを呼び出す必要はありません。  
   
- クラスと `structs` のどちらも、パラメーターを受け取るコンストラクターを定義できます。 パラメーターを受け取るコンストラクターは、`new` ステートメントまたは [base](../../../csharp/language-reference/keywords/base.md) ステートメントを使用して呼び出す必要があります。 クラスと `structs` は複数のコンストラクターを定義することもできます。また、どちらも、既定のコンストラクターの定義には必要ありません。 例:  
+ クラスと `structs` のどちらも、パラメーターを受け取るコンストラクターを定義できます。 パラメーターを受け取るコンストラクターは、`new` ステートメントまたは [base](../../../csharp/language-reference/keywords/base.md) ステートメントを使用して呼び出す必要があります。 クラスと `structs` は複数のコンストラクターを定義することもできます。また、どちらも、既定のコンストラクターの定義には必要ありません。 次に例を示します。  
   
  [!code-csharp[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
   
@@ -61,7 +62,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
   
- コンストラクターでは、`base` キーワードを使用して、基底クラスのコンストラクターを呼び出すことができます。 例:  
+ コンストラクターでは、`base` キーワードを使用して、基底クラスのコンストラクターを呼び出すことができます。 次に例を示します。  
   
  [!code-csharp[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
   
@@ -93,7 +94,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
 - [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
 - [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)

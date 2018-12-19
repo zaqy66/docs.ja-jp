@@ -1,17 +1,18 @@
 ---
-title: '方法 : ファイル、フォルダー、およびドライブに関する情報を取得する (C# プログラミング ガイド)'
+title: '方法: ファイル、フォルダー、およびドライブに関する情報を取得する - C# プログラミング ガイド'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 8ebacff0f3a1704ec001e3570d0df136f54baf9d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e3b0834f27fd0673687dc00b861e80752a585737
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702960"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243960"
 ---
-# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>方法 : ファイル、フォルダー、およびドライブに関する情報を取得する (C# プログラミング ガイド)
+# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>方法: ファイル、フォルダー、およびドライブに関する情報を取得する (C# プログラミング ガイド)
 .NET Framework では、次のクラスを使用して、ファイル システム情報にアクセスできます。  
   
 -   <xref:System.IO.FileInfo?displayProperty=nameWithType>  

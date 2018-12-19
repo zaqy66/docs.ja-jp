@@ -1,5 +1,6 @@
 ---
-title: '方法: ファイルまたはフォルダーを作成する (C# プログラミング ガイド)'
+title: '方法: ファイルまたはフォルダーを作成する - C# プログラミング ガイド'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 34919efe32730fe0db11cb881b8e07629a3094fd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: aa5c6782b11ac89b418ac84faafaa8409ad65049
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207461"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240204"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>方法: ファイルまたはフォルダーを作成する (C# プログラミング ガイド)
 プログラムによって、コンピューター上でのフォルダーの作成、サブフォルダーの作成、サブフォルダー内でのファイルの作成、およびファイルへのデータの記述を行うことができます。  

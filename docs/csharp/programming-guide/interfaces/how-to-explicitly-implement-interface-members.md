@@ -1,15 +1,16 @@
 ---
-title: '方法: インターフェイス メンバーを明示的に実装する (C# プログラミング ガイド)'
+title: '方法: インターフェイス メンバーを明示的に実装する - C# プログラミング ガイド'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 30ea58b7ef3edd757c450b9fca1cc810ff9d17c1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 11ef4eb3e4da0166ae4753b8028edb217f2a487e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861024"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236935"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>方法: インターフェイス メンバーを明示的に実装する (C# プログラミング ガイド)
 この例では[インターフェイス](../../../csharp/language-reference/keywords/interface.md)、`IDimensions`、およびクラス `Box` を宣言します。これは、インターフェイス メンバーの `getLength` と `getWidth` を明示的に実装します。 メンバーには、インターフェイス インスタンス `dimensions` を介してアクセスします。  

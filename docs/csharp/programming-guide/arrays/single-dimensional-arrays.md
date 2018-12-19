@@ -1,16 +1,17 @@
 ---
-title: 1 次元配列 (C# プログラミング ガイド)
+title: 1 次元配列 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e9243ff8b55970ebab6ecbe42cb3ed8ebcaecfe3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027129"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238573"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>1 次元配列 (C# プログラミング ガイド)
 
@@ -26,7 +27,7 @@ ms.locfileid: "48027129"
   
 ## <a name="array-initialization"></a>配列の初期化
 
- 宣言時に配列を初期化することができます。この場合、初期化リスト内の要素の数によって次元が既に提供されているので、次元指定子は必要ありません。 例:  
+ 宣言時に配列を初期化することができます。この場合、初期化リスト内の要素の数によって次元が既に提供されているので、次元指定子は必要ありません。 次に例を示します。  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
   
@@ -38,7 +39,7 @@ ms.locfileid: "48027129"
   
  [!code-csharp[csProgGuideArrays#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_5.cs)]  
   
- 初期化せずに配列変数を宣言できますが、配列をこの変数に割り当てるときに、`new` 演算子を使用する必要があります。 例:  
+ 初期化せずに配列変数を宣言できますが、配列をこの変数に割り当てるときに、`new` 演算子を使用する必要があります。 次に例を示します。  
   
  [!code-csharp[csProgGuideArrays#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_6.cs)]  
   
@@ -57,7 +58,7 @@ ms.locfileid: "48027129"
 ## <a name="see-also"></a>参照
 
 - <xref:System.Array>  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [配列](../../../csharp/programming-guide/arrays/index.md)  
 - [多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
 - [ジャグ配列](../../../csharp/programming-guide/arrays/jagged-arrays.md)

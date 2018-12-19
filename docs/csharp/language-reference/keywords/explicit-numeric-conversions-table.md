@@ -1,5 +1,6 @@
 ---
-title: 明示的な数値変換の一覧表 (C# リファレンス)
+title: 明示的な数値変換の一覧表 - C# リファレンス
+ms.custom: seodec18
 ms.date: 09/06/2018
 helpviewer_keywords:
 - conversions [C#], explicit numeric
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 948961d19518343c1f8ee14cd48dc33ec72cf23d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 90691ae0d9de35831b7b3119493e4e9cd81720e6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148653"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236313"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>明示的な数値変換の一覧表 (C# リファレンス)
 
 次の表では、[暗黙的な変換](implicit-numeric-conversions-table.md)がない .NET 数値型間で事前定義されている明示的変換がまとめてあります。
 
-|変換元|変換先|  
+|From|終了|  
 |----------|--------|  
 |[sbyte](sbyte.md)|`byte`、`ushort`、`uint`、`ulong`、または `char`|  
 |[byte](byte.md)|`sbyte` または `char`|  
@@ -49,7 +50,7 @@ ms.locfileid: "53148653"
   
 - `decimal` 値を整数型に変換するとき、この値は 0 方向に最も近い整数値に丸められます。 結果的に生成される整数値が変換先の型の範囲外になった場合、<xref:System.OverflowException> がスローされます。  
   
-- `double` または `float` 値を整数型に変換するとき、この値は 0 方向に最も近い整数値に丸められます。 結果的に生成される整数値が変換先の型の範囲外になる場合、結果はオーバーフロー [チェック コンテキスト](checked-and-unchecked.md)によって変わります。 チェック済みコンテキストの場合、<xref:System.OverflowException> がスローされます。未チェック コンテキストの場合、結果は変換先の型の未指定値になります。  
+- `double` または `float` 値を整数型に変換するとき、この値は 0 方向に最も近い整数値に丸められます。 結果的に生成される整数値が変換先の型の範囲外になる場合、結果はオーバーフロー [チェック コンテキスト](checked-and-unchecked.md)によって変わります。 チェック済みコンテキストの場合、<xref:System.OverflowException> がスローされます。未チェック コンテキストの場合、結果は変換先の型の不特定な値になります。  
   
 - `double` を `float` に変換すると、`double` 値は最も近い `float` 値に丸められます。 `double` 値が小さすぎるか、大きすぎて変換先の型に合わない場合、結果は 0 か無限になります。  
   

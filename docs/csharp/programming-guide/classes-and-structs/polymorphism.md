@@ -1,16 +1,17 @@
 ---
-title: ポリモーフィズム (C# プログラミング ガイド)
+title: ポリモーフィズム - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 25192d57955d15c5707816ee6c4a515893891507
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 489fdf87f973de6137587fc2280ef0fa72ab78ba
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523394"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286456"
 ---
 # <a name="polymorphism-c-programming-guide"></a>ポリモーフィズム (C# プログラミング ガイド)
 ポリモーフィズムは、カプセル化と継承に次ぐ、オブジェクト指向プログラミングの第 3 の柱と言われることがよくあります。 ポリモーフィズムは、ギリシャ語で "多形" を意味し、次の 2 つの側面を持っています。  
@@ -96,8 +97,7 @@ ms.locfileid: "43523394"
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
 - [抽象クラスとシール クラス、およびクラス メンバー](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  

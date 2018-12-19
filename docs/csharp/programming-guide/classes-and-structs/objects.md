@@ -1,16 +1,17 @@
 ---
-title: オブジェクト (C# プログラミング ガイド)
+title: オブジェクト - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: e5e537d239bd69cb7a95ae82edbdb82144c700a1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 439f001450d51885f943cb28752de1689dd4a748
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683091"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235099"
 ---
 # <a name="objects-c-programming-guide"></a>オブジェクト (C# プログラミング ガイド)
 クラスまたは構造体の定義は、型の動作を指定する設計図に似ています。 オブジェクトは基本的に、設計図に従って割り当てられて構成されたメモリのブロックです。 プログラムでは、同じクラスのオブジェクトを多数作成できます。 オブジェクトはインスタンスとも呼ばれ、名前付きの変数または配列やコレクションに格納できます。 クライアント コードとは、これらの変数を使ってメソッドを呼び出し、オブジェクトのパブリック プロパティにアクセスするコードです。 C# などのオブジェクト指向言語では、一般的なプログラムは動的に対話する複数のオブジェクトで構成されています。  
@@ -45,7 +46,7 @@ ms.locfileid: "45683091"
   
  <xref:System.ValueType?displayProperty=nameWithType> での `Equals` の実装は、構造体に存在するフィールドを特定できる必要があるため、リフレクションを使います。 独自の構造体を作成するときは、`Equals` メソッドをオーバーライドして、独自の型に固有の効率的な等値アルゴリズムを提供します。  
   
--   クラスの 2 つのインスタンスのフィールドの値が等しいかどうかを調べるには、<xref:System.Object.Equals%2A> メソッドまたは [== 演算子](../../../csharp/language-reference/operators/equality-comparison-operator.md)を使用できる場合があります。 ただし、この方法を使用できるのは、その型のオブジェクトにおける "等値" の意味のカスタム定義が、クラスのオーバーライドまたはオーバーロードによって提供されている場合だけです。 クラスは、<xref:System.IEquatable%601> インターフェイスまたは <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスを実装することもできます。 どちらのインターフェイスも、値の等価性をテストするために使うことができるメソッドを提供します。 `Equals` をオーバーライドする独自のクラスを設計するときは、「[方法: 型の値の等価性を定義する](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)」および「<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>」に記載されているガイドラインに従ってください。  
+-   クラスの 2 つのインスタンスのフィールドの値が等しいかどうかを調べるには、<xref:System.Object.Equals%2A> メソッドまたは [== 演算子](../../../csharp/language-reference/operators/equality-comparison-operator.md)を使用できる場合があります。 ただし、この方法を使用できるのは、その型のオブジェクトにおける "等値" の意味のカスタム定義が、クラスのオーバーライドまたはオーバーロードによって提供されている場合だけです。 クラスは、<xref:System.IEquatable%601> インターフェイスまたは <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスを実装することもできます。 どちらのインターフェイスも、値の等価性をテストするために使うことができるメソッドを提供します。 `Equals` をオーバーライドするクラスをご自分で設計するときは、「[方法: 型の値の等価性を定義する](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)」および「<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>」に記載されているガイドラインに従ってください。  
   
 ## <a name="related-sections"></a>関連項目  
  詳細情報  

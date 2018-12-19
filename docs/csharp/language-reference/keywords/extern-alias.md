@@ -1,5 +1,6 @@
 ---
-title: extern エイリアス (C# リファレンス)
+title: extern エイリアス - C# リファレンス
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - alias_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 66210bc1a84e2c3239dcac72cdc194b14dcccf30
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0fd917d1af38ba558634dfcf5e3a1abf95420a9d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524029"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235373"
 ---
 # <a name="extern-alias-c-reference"></a>extern エイリアス (C# リファレンス)
 場合によっては、同じ完全修飾型名を持つ、2 つのバージョンのアセンブリを参照する必要が生じることもあります。 たとえば、同じアプリケーション内で、2 つ以上のバージョンのアセンブリを使用する必要が生じることもあるでしょう。 外部アセンブリ エイリアスを使用すれば、各アセンブリの名前空間を、エイリアスを付けたルート レベルの名前空間内でラップして、それらを同じファイル内で使用できるようにすることができます。  
@@ -27,7 +28,7 @@ ms.locfileid: "43524029"
   
  `/r:GridV2=grid20.dll`  
   
- これにより、外部エイリアス `GridV1` および `GridV2` が作成されます。 これらのエイリアスをプログラム内から使用するには、`extern` キーワードを使用してそれらを参照します。 例:  
+ これにより、外部エイリアス `GridV1` および `GridV2` が作成されます。 これらのエイリアスをプログラム内から使用するには、`extern` キーワードを使用してそれらを参照します。 次に例を示します。  
   
  `extern alias GridV1;`  
   
@@ -46,5 +47,5 @@ ms.locfileid: "43524029"
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
 - [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [:: 演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [::演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [-reference (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

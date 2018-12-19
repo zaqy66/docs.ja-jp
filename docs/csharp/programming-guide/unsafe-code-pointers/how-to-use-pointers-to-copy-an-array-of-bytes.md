@@ -1,18 +1,19 @@
 ---
-title: '方法 : ポインターを使用してバイトの配列をコピーする (C# プログラミング ガイド)'
+title: '方法: ポインターを使用してバイトの配列をコピーする - C# プログラミング ガイド'
+ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 061bbbc4557cb25d39edfb1f6235bb065a5de7bd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 49151c6d2a573a24e63f733a5279faeee40de1b7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087983"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241127"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>方法 : ポインターを使用してバイトの配列をコピーする (C# プログラミング ガイド)
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>方法: ポインターを使用してバイトの配列をコピーする (C# プログラミング ガイド)
 
 次の例では、ポインターを使って 1 つの配列から別の配列にバイトをコピーします。
 
@@ -26,7 +27,7 @@ ms.locfileid: "44087983"
 
 ## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)  
+- [C# プログラミングガイド](../index.md)  
 - [アンセーフ コードとポインター](index.md)  
 - [-unsafe (C# コンパイラ オプション)](../../language-reference/compiler-options/unsafe-compiler-option.md)  
 - [ガベージ コレクション](../../../standard/garbage-collection/index.md)  

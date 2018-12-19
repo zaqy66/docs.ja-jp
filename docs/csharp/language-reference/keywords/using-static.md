@@ -1,17 +1,18 @@
 ---
-title: using static ディレクティブ (C# リファレンス)
+title: using static ディレクティブ - C# リファレンス
+ms.custom: seodec18
 ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c17f74fc16e8c9774086c5270a66e9e9d7cc425b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506673"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237780"
 ---
 # <a name="using-static-directive-c-reference"></a>using static ディレクティブ (C# リファレンス)
 
@@ -21,7 +22,7 @@ ms.locfileid: "43506673"
 using static <fully-qualified-type-name>;
 ```
 
-*fully-qualified-type-name* は、型名を指定せずに参照できる静的メンバーおよび入れ子にされた型の名前です。 完全修飾型名 (完全な名前空間名と型名) を指定しないと、C# によってコンパイラ エラー [CS0246](../compiler-messages/cs0246.md) "型または名前空間名 'type/namespace' が見つかりませんでした。using ディレクティブまたはアセンブリ参照が不足しています" が生成されます。
+*fully-qualified-type-name* は、型名を指定せずに参照できる静的メンバーおよび入れ子にされた型の名前です。 完全修飾型名 (完全な名前空間名と型名) を指定しないと、C# によってコンパイラ エラー [CS0246](../compiler-messages/cs0246.md): "型または名前空間の名前 'type/namespace' が見つかりませんでした (using ディレクティブまたはアセンブリ参照が指定されていることを確認してください)" が生成されます。
 
 `using static` ディレクティブは、インスタンス メンバーがある場合でも、静的メンバーがあるすべての型 (または入れ子にされた型) に適用されます。 ただし、インスタンス メンバーは、型のインスタンスを通してのみ呼び出すことができます。
 

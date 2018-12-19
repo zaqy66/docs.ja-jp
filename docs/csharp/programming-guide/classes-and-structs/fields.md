@@ -1,15 +1,16 @@
 ---
-title: フィールド (C# プログラミング ガイド)
+title: フィールド - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 708bd4e768e795397624bcac6e5bc2594bff93f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: af5a342b83608d6a149879de8dec80a1e1746b76
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210339"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242720"
 ---
 # <a name="fields-c-programming-guide"></a>フィールド (C# プログラミング ガイド)
 *フィールド*とは、[クラス](../../../csharp/language-reference/keywords/class.md)または[構造体](../../../csharp/language-reference/keywords/struct.md)で直接宣言される任意の型の変数です。 フィールドは、それを含んでいる型の*メンバー*です。  
@@ -20,11 +21,11 @@ ms.locfileid: "44210339"
   
  一般に、フィールドは、複数のクラス メソッドからアクセスできるようにする必要があり、かつ 1 つのメソッドの有効期間より長く保持する必要があるデータを格納します。 たとえば、暦の日付を表すクラスには、月、日、年を表す 3 つの整数フィールドが存在します。 1 つのメソッドのスコープ外で使用されることのない変数は、メソッド本体内で*ローカル変数*として宣言する必要があります。  
   
- フィールドは、フィールドのアクセス レベル、フィールドの型、フィールドの名前の順に指定して、クラス ブロック内で宣言します。 例:  
+ フィールドは、フィールドのアクセス レベル、フィールドの型、フィールドの名前の順に指定して、クラス ブロック内で宣言します。 次に例を示します。  
   
  [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
- オブジェクト内のフィールドにアクセスするには、`objectname.fieldname` のように、オブジェクト名の後にピリオドを追加し、その後にフィールド名を続けます。 例:  
+ オブジェクト内のフィールドにアクセスするには、`objectname.fieldname` のように、オブジェクト名の後にピリオドを追加し、その後にフィールド名を続けます。 次に例を示します。  
   
  [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   

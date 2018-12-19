@@ -1,15 +1,16 @@
 ---
-title: C# プログラムの一般構造 (C# プログラミング ガイド)
+title: C# プログラムの一般構造 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 3e2718d932506f261ea32e7289a3191bca7c22e8
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: a9e20d0020b82973fb95e422c30f87421adedd5c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "45698157"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236896"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# プログラムの一般構造 (C# プログラミング ガイド)
 C# プログラムは、1 つ以上のファイルで構成できます。 各ファイルには、0 個以上の名前空間を含めることができます。 名前空間には、その他の名前空間以外に、クラス、構造体、インターフェイス、列挙型、デリゲートなどの型を含めることができます。 次に示すのは、これら要素をすべて含む C# プログラムのスケルトンです。  
@@ -35,7 +36,7 @@ C# プログラムは、1 つ以上のファイルで構成できます。 各�
   
 ## <a name="see-also"></a>参照
 
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [インサイド C# プログラム](../../../csharp/programming-guide/inside-a-program/index.md)  
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
 - [C# サンプル アプリケーション](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)

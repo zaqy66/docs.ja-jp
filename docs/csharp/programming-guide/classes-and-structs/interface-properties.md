@@ -1,16 +1,17 @@
 ---
-title: インターフェイスのプロパティ (C# プログラミング ガイド)
+title: インターフェイスのプロパティ - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: 619b9167b9b96be2908d833403379e4c2fe78ba5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43746919"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241588"
 ---
 # <a name="interface-properties-c-programming-guide"></a>インターフェイスのプロパティ (C# プログラミング ガイド)
 [interface](../../../csharp/language-reference/keywords/interface.md) でプロパティを宣言することができます。 インターフェイスのプロパティ アクセサーの例を次に示します。  
@@ -22,7 +23,7 @@ ms.locfileid: "43746919"
 ## <a name="example"></a>例  
  この例では、インターフェイス `IEmployee` に読み取り/書き込み専用のプロパティ `Name` および読み取り専用のプロパティ `Counter` があります。 クラス `Employee` は `IEmployee` インターフェイスを実装し、これら 2 つのプロパティを使用します。 プログラムは、新しい従業員の名前と現在の従業員の数を読み込んで、従業員の名前と計算した従業員番号を表示します。  
   
- メンバーが宣言されているインターフェイスを参照するプロパティの完全修飾名を使用することができます。 例:  
+ メンバーが宣言されているインターフェイスを参照するプロパティの完全修飾名を使用することができます。 次に例を示します。  
   
  [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   

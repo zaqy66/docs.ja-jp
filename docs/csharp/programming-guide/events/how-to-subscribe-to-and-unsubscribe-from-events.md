@@ -1,19 +1,20 @@
 ---
-title: '方法 : イベント サブスクリプションとサブスクリプションの解除 (C# プログラミング ガイド)'
+title: '方法: イベント サブスクリプションとサブスクリプションの解除 - C# プログラミング ガイド'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: e27473ca34f634f4a3125a2e87e6d0ef918a6f9d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 89647687c73cdb9b81625b830f0c9a77f1c67d13
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999141"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241088"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>方法 : イベント サブスクリプションとサブスクリプションの解除 (C# プログラミング ガイド)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>方法: イベント サブスクリプションとサブスクリプションの解除 (C# プログラミング ガイド)
 別のクラスによってパブリッシュされるイベントが発生したときに呼び出されるカスタム コードを作成するときは、そのイベントをサブスクライブします。 たとえば、ユーザーがボタンをクリックしたらアプリケーションで何かを行うには、ボタンの `click` イベントをサブスクライブします。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Visual Studio IDE を使ってイベントをサブスクライブするには  
@@ -69,7 +70,7 @@ ms.locfileid: "45999141"
     }  
     ```  
   
-     詳しくは、「[方法: LINQ 以外でラムダ式を使用する](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)」をご覧ください。  
+     詳細については、「[方法 :LINQ 以外でラムダ式を使用する](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)」をご覧ください。  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>匿名メソッドを使ってイベントをサブスクライブするには  
   

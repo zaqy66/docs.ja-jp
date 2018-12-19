@@ -1,5 +1,6 @@
 ---
-title: decimal キーワード (C# リファレンス)
+title: decimal キーワード - C# リファレンス
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - decimal_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: c9d40238ca4c34238d5663185f93afbce73195cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f26d812d8f4da8fae73ebbaee15441cd88860d04
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506520"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239460"
 ---
 # <a name="decimal-c-reference"></a>decimal (C# リファレンス)
 
@@ -42,7 +43,7 @@ decimal myMoney = 300.5m;
 decimal myMoney = 300;
 ```
 
-他の浮動小数点型と `decimal` 型の間に暗黙の型変換はありません。2 つの型の間で変換を実行するには、キャストを使用する必要があります。 例:
+他の浮動小数点型と `decimal` 型の間に暗黙の型変換はありません。2 つの型の間で変換を実行するには、キャストを使用する必要があります。 次に例を示します。
 
 ```csharp
 decimal myMoney = 99.9m;
@@ -104,4 +105,4 @@ Console.WriteLine((double)dec + dub);
 - [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
 - [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
 - [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)

@@ -1,16 +1,17 @@
 ---
-title: ジャグ配列 (C# プログラミング ガイド)
+title: ジャグ配列 - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f517a9a6d6e10f04df70729fb9e641c1f955f28a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396878"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237860"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>ジャグ配列 (C# プログラミング ガイド)
 
@@ -26,7 +27,7 @@ ms.locfileid: "47396878"
   
  各要素は、整数の 1 次元配列です。 最初の要素は 5 つの整数の配列で、2 番目の要素は 4 つの整数の配列であり、3 番目の要素は 2 つの整数の配列です。  
   
- 初期化子を使って配列の要素に値を格納することもできます。この場合、配列のサイズは不要です。 例:  
+ 初期化子を使って配列の要素に値を格納することもできます。この場合、配列のサイズは不要です。 次に例を示します。  
   
  [!code-csharp[csProgGuideArrays#21](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_3.cs)]  
   

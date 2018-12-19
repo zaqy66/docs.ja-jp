@@ -1,21 +1,22 @@
 ---
-title: '#if プリプロセッサ ディレクティブ (C# リファレンス)'
+title: '#if プリプロセッサ ディレクティブ - C# リファレンス'
+ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: df1b26b0e06d4fff81627ec633ce97f9d6ca036f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510233"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239632"
 ---
 # <a name="if-c-reference"></a>#if (C# リファレンス)
 
-C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](preprocessor-endif.md) ディレクティブが検出されると、これらのディレクティブ間のコードがコンパイルされます (指定されたシンボルが定義されている場合に限る)。 C および C++ とは異なり、シンボルに数値を割り当てることはできません。 C# の #if ステートメントはブール値で、シンボルが定義されているかどうかのみをテストします。 例:
+C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](preprocessor-endif.md) ディレクティブが検出されると、これらのディレクティブ間のコードがコンパイルされます (指定されたシンボルが定義されている場合に限る)。 C および C++ とは異なり、シンボルに数値を割り当てることはできません。 C# の #if ステートメントはブール値で、シンボルが定義されているかどうかのみをテストします。 次に例を示します。
 
 ```csharp
 #if DEBUG
@@ -91,4 +92,4 @@ public class MyClass
 - [C# リファレンス](../../../csharp/language-reference/index.md)  
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [C# プリプロセッサ ディレクティブ](index.md)  
-- [方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。
+- [方法: トレースとデバッグを指定して条件付きコンパイルを実行する](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。

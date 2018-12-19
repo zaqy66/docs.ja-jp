@@ -1,22 +1,23 @@
 ---
-title: Override キーワードと New キーワードを使用する場合について (C# プログラミング ガイド)
+title: Override キーワードと New キーワードを使用する場合について - C# プログラミング ガイド
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 5b13ee695ef2a63332b01b504458453885160039
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d44d8d0143d366117a24495df3fa8a18f893ebb3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513820"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244740"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードを使用する場合について (C# プログラミング ガイド)
 C# では、派生クラスのメソッドを基底クラスのメソッドと同じ名前にすることができます。 [new](../../../csharp/language-reference/keywords/new.md) および [override](../../../csharp/language-reference/keywords/override.md) キーワードを使って、メソッドでの処理を指定できます。 `override` 修飾子は基底クラスのメソッドを "*拡張*" し、`new` 修飾子は "*隠ぺい*" します。 このトピックの例ではその違いを示します。  
   
- コンソール アプリケーションで、次の 2 つのクラス `BaseClass` と `DerivedClass` を宣言します。 `DerivedClass` は `BaseClass` を継承します。  
+ コンソール アプリケーションで、次の 2 つのクラス `BaseClass` と `DerivedClass` を宣言します。 `DerivedClass` は `BaseClass`を継承します。  
   
 ```csharp  
 class BaseClass  

@@ -1,15 +1,16 @@
 ---
-title: コンテキスト キーワード (C# リファレンス)
+title: コンテキスト キーワード - C# リファレンス
+ms.custom: seodec18
 ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 7b5f79f41306d6e4a8d2f1aa432ba6c2e0879f74
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3b8f9f124943d2092b65718f5dbf17831252a4a5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47232951"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241397"
 ---
 # <a name="contextual-keywords-c-reference"></a>コンテキスト キーワード (C# リファレンス)
 コンテキスト キーワードを使用して、コード内で特定の意味を付与することができます。ただし C# ではコンテキスト キーワードは予約語ではありません。 このセクションでは、次のコンテキスト キーワードを紹介します。  
@@ -18,10 +19,10 @@ ms.locfileid: "47232951"
 |-------------|-----------------|  
 |[add](../../../csharp/language-reference/keywords/add.md)|クライアント コードがイベントをサブスクライブするときに呼び出されるカスタム イベント アクセサーを定義します。|  
 |[async](../../../csharp/language-reference/keywords/async.md)|修飾されたメソッド、ラムダ式、または匿名メソッドが非同期であることを示します。|  
-|[await](../../../csharp/language-reference/keywords/await.md)|待機中のタスクが完了するまで async のメソッドを中断します。| 
+|[await](../../../csharp/language-reference/keywords/await.md)|待機中のタスクが完了するまで非同期のメソッドを中断します。|  
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|コンパイル時の型チェックをバイパスする処理を可能にする参照型を定義します。|  
 |[get](../../../csharp/language-reference/keywords/get.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  
-|[global](../../../csharp/language-reference/keywords/global.md)|既定のグローバル名前空間を指定します。指定しない場合、無名になります。| 
+|[global](../../../csharp/language-reference/keywords/global.md)|既定のグローバル名前空間を指定します。指定しない場合、無名のグローバル名前空間になります。|  
 |[partial](../../../csharp/language-reference/keywords/partial-type.md)|同一コンパイル ユニットに部分クラス、部分構造体、または部分インターフェイスを定義します。|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|クライアント コードがイベントのサブスクライブを解除するときに呼び出されるカスタム イベント アクセサーを定義します。|  
 |[set](../../../csharp/language-reference/keywords/set.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  
