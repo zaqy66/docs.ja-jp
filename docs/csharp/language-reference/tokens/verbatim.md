@@ -20,7 +20,7 @@ ms.locfileid: "53244168"
 ---
 # <a name="-c-reference"></a>@ (C# リファレンス)
 
-特殊文字 `@` は、verbatim 識別子として機能します。 これは次の目的に使用できます。
+特殊文字 `@` は、逐語的識別子として機能します。 これは次の目的に使用できます。
 
 1. C# のキーワードを識別子として使用できるようにする。 コード要素のプレフィックスとして `@` 文字を使用すると、その要素はC# のキーワードではなく、識別子としてコンパイラに解釈されます。 次の例では、`@` 文字を使用して、`for` ループで使用する `for` という識別子を定義しています。
 
@@ -30,7 +30,7 @@ ms.locfileid: "53244168"
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 
-   次の例は、同じ文字シーケンスを通常の文字列リテラルと verbatim 文字列リテラルで定義した場合の結果を示したものです。
+   次の例は、同じ文字シーケンスを通常の文字列リテラルと 逐語的文字列リテラルで定義した場合の結果を示したものです。
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 

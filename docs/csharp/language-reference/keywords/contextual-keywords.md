@@ -19,7 +19,7 @@ ms.locfileid: "53241397"
 |-------------|-----------------|  
 |[add](../../../csharp/language-reference/keywords/add.md)|クライアント コードがイベントをサブスクライブするときに呼び出されるカスタム イベント アクセサーを定義します。|  
 |[async](../../../csharp/language-reference/keywords/async.md)|修飾されたメソッド、ラムダ式、または匿名メソッドが非同期であることを示します。|  
-|[await](../../../csharp/language-reference/keywords/await.md)|待機中のタスクが完了するまで非同期のメソッドを中断します。|  
+|[await](../../../csharp/language-reference/keywords/await.md)|待機中のタスクが完了するまで async のメソッドを中断します。|  
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|コンパイル時の型チェックをバイパスする処理を可能にする参照型を定義します。|  
 |[get](../../../csharp/language-reference/keywords/get.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  
 |[global](../../../csharp/language-reference/keywords/global.md)|既定のグローバル名前空間を指定します。指定しない場合、無名のグローバル名前空間になります。|  
