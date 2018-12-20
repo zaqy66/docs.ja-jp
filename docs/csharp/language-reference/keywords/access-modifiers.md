@@ -28,11 +28,11 @@ ms.locfileid: "53242023"
   
 - [`internal`](internal.md):アクセスは現在のアセンブリに限定されます。  
   
-- [`protected internal`](protected-internal.md):現在のアセンブリ、またはコンテナーであるクラスから派生した型にアクセスが限定されます。  
+- [`protected internal`](protected-internal.md):現在のアセンブリ、または包含クラスから派生した型にアクセスが限定されます。  
   
 - [`private`](private.md):コンテナーである型にアクセスが限定されます。  
 
-- [`private protected`](private-protected.md):現在のアセンブリ内の、コンテナーであるクラス、またはコンテナーであるクラスから派生した型にアクセスが制限されます。  
+- [`private protected`](private-protected.md):包含クラス、または包含クラスから派生した型にアクセスが制限されます。  
   
  このセクションでは、以下についても説明します。  
   

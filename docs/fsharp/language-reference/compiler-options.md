@@ -4,7 +4,7 @@ description: 使用F#のコンパイルを制御するためのコンパイラ �
 ms.date: 12/10/2018
 ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
 ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53170874"
@@ -25,7 +25,7 @@ ms.locfileid: "53170874"
 |`--baseaddress:address`|DLL を読み込む位置に推奨されるベース アドレスを指定します。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [ &#47;baseaddress &#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx)します。|
 |`--codepage:id`|必要なページが、システムの現在の既定のコード ページがない場合は、コンパイル時に使用するコード ページを指定します。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [&#47;コード ページ&#40;C&#35;コンパイラ オプション&#41;](../../csharp/language-reference/compiler-options/codepage-compiler-option.md)します。|
 |`--consolecolors`|エラーおよび警告がコンソールの色分けされたテキストを使用することを指定します。|
-|'--crossoptimize [+|-]`|モジュール間の最適化を有効または無効にします。|
+|'--crossoptimize[+|-]`|モジュール間の最適化を有効または無効にします。|
 |<code>--delaysign[+&#124;-]</code>|厳密な名前のキーのパブリックな部分のみを使ってアセンブリに遅延署名します。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [ &#47;delaysign &#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/ta1sxwy8.aspx)します。|
 |<code>--checked[+&#124;-]</code>|オーバーフロー チェックの生成を有効または無効にします。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [&#47;チェック&#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/h25wtyxf.aspx)します。|
 |<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|デバッグ情報の生成を有効または無効にしたり、生成するデバッグ情報の種類を指定したりします。 既定値は、実行中のプログラムにアタッチできる full です。 選択**pdbonly** pdb (プログラム データベース) ファイルに格納されている制限のデバッグ情報を取得します。<br /><br />同じ名前の C# コンパイラ オプションに相当します。 詳細については、次のトピックを参照してください。<br /><br />[&#47;デバッグ&#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx)します。|
