@@ -31,7 +31,7 @@ ASP.NET Core マイクロサービスまたは Web アプリケーションを�
 
 EShopOnContainers サンプル アプリケーションでの HealthChecks ライブラリの使用方法を確認することができます。 開始するには、各マイクロサービスの正常性状態の構成要素を定義する必要があります。 サンプル アプリケーションでは、マイクロサービス API が HTTP 経由でアクセス可能である場合と、それに関連する SQL Server データベースも使用可能である場合、マイクロサービスは正常な状態です。
 
-将来的には、HealthChecks ライブラリを NuGet パッケージとしてインストールできるようになります。 ただし、このドキュメントの作成時点では、ソリューションの一部として、コードをダウンロードしてコンパイルする必要があります。 https://github.com/dotnet-architecture/HealthChecks にあるコードを複製し、次のフォルダーをソリューションにコピーします。
+将来的には、HealthChecks ライブラリを NuGet パッケージとしてインストールできるようになります。 ただし、このドキュメントの作成時点では、ソリューションの一部として、コードをダウンロードしてコンパイルする必要があります。 [https://github.com/dotnet-architecture/HealthChecks](https://github.com/dotnet-architecture/HealthChecks) にあるコードを複製し、次のフォルダーをソリューションにコピーします。
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
