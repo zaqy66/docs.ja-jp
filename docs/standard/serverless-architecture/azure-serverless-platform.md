@@ -11,17 +11,17 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53126423"
 ---
-# <a name="azure-serverless-platform"></a><span data-ttu-id="25e03-103">Azure のサーバーレス プラットフォーム</span><span class="sxs-lookup"><span data-stu-id="25e03-103">Azure serverless platform</span></span>
+# <a name="azure-serverless-platform"></a><span data-ttu-id="94271-103">Azure のサーバーレス プラットフォーム</span><span class="sxs-lookup"><span data-stu-id="94271-103">Azure serverless platform</span></span>
 
-<span data-ttu-id="25e03-104">Azure のサーバーレス プラットフォームには、Azure Functions、Logic Apps、および Event Grid が含まれています。</span><span class="sxs-lookup"><span data-stu-id="25e03-104">The Azure serverless platform includes Azure Functions, Logic Apps, and Event Grid.</span></span> <span data-ttu-id="25e03-105">これらのサービスが共同で作業し、無数に接続するその他のリソース。</span><span class="sxs-lookup"><span data-stu-id="25e03-105">These services work together and connect with myriad other resources.</span></span> <span data-ttu-id="25e03-106">サーバーレス プラットフォームでは、分析と機械学習/人為的なインテリジェンス データベースとストレージからすべてのものが機能します。</span><span class="sxs-lookup"><span data-stu-id="25e03-106">The serverless platform works with everything from databases and storage to analytics and machine learning/artificial intelligence.</span></span>
+<span data-ttu-id="94271-104">Azure のサーバーレス プラットフォームには、Azure Functions、Logic Apps、および Event Grid が含まれています。</span><span class="sxs-lookup"><span data-stu-id="94271-104">The Azure serverless platform includes Azure Functions, Logic Apps, and Event Grid.</span></span> <span data-ttu-id="94271-105">これらのサービスは連携して、無数の他のリソースと繋がります。</span><span class="sxs-lookup"><span data-stu-id="94271-105">These services work together and connect with myriad other resources.</span></span> <span data-ttu-id="94271-106">サーバーレスプラットフォームは、データベースやストレージから分析や機械学習 /人工知能まであらゆるものが動作します。</span><span class="sxs-lookup"><span data-stu-id="94271-106">The serverless platform works with everything from databases and storage to analytics and machine learning/artificial intelligence.</span></span>
 
-<span data-ttu-id="25e03-107">Application Insights では、診断トレースとテレメトリをキャプチャするためのサーバーレス プラットフォームを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="25e03-107">You can also use Application Insights, a serverless platform for capturing diagnostic traces and telemetry.</span></span> <span data-ttu-id="25e03-108">Application Insights はあらゆる種類のアプリケーションで使用できる (デスクトップ、モバイル、または web) とサーバーレスの実装。</span><span class="sxs-lookup"><span data-stu-id="25e03-108">Application Insights are available to applications of all types (desktop, mobile, or web) as well as serverless implementations.</span></span> <span data-ttu-id="25e03-109">プラットフォームは次の図で視覚化されます。</span><span class="sxs-lookup"><span data-stu-id="25e03-109">The platform is visualized in the following diagram:</span></span>
+<span data-ttu-id="94271-107">診断トレースとテレメトリをキャプチャーするためのサーバレスプラットフォームである Application Insights を使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="94271-107">You can also use Application Insights, a serverless platform for capturing diagnostic traces and telemetry.</span></span> <span data-ttu-id="94271-108">Application Insight は、サーバーレスの実装だけでなく、すべてのタイプ（デスクトップ、モバイル、またはWeb）のアプリケーションで使用できます。</span><span class="sxs-lookup"><span data-stu-id="94271-108">Application Insights are available to applications of all types (desktop, mobile, or web) as well as serverless implementations.</span></span> <span data-ttu-id="94271-109">プラットフォームを可視化すると、次の図になります:</span><span class="sxs-lookup"><span data-stu-id="94271-109">The platform is visualized in the following diagram:</span></span>
 
 ![Azure のサーバーレス プラットフォーム](./media/azure-serverless-platform.png)
 
-<span data-ttu-id="25e03-111">この章では、各コンポーネントの基礎を中断します。</span><span class="sxs-lookup"><span data-stu-id="25e03-111">This chapter breaks down the fundamentals of each component.</span></span>
+<span data-ttu-id="94271-111">この章では、各コンポーネントの基礎を説明します。</span><span class="sxs-lookup"><span data-stu-id="94271-111">This chapter breaks down the fundamentals of each component.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="25e03-112">[前へ](serverless-design-examples.md)
->[次へ](azure-functions.md)</span><span class="sxs-lookup"><span data-stu-id="25e03-112">[Previous](serverless-design-examples.md)
+><span data-ttu-id="94271-112">[前へ](serverless-design-examples.md)
+>[次へ](azure-functions.md)</span><span class="sxs-lookup"><span data-stu-id="94271-112">[Previous](serverless-design-examples.md)
 [Next](azure-functions.md)</span></span>
