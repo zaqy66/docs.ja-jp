@@ -15,7 +15,7 @@ ms.locfileid: "45991425"
 
 ## <a name="remarks"></a>Remarks
 
-パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` 束縛、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、次を参照してください[一致式](match-expressions.md)、 [let 束縛](functions/let-bindings.md)、[ラムダ式:、`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)、および[例外:、 。`try...with`式](exception-handling/the-try-with-expression.md)します。
+パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` バインディング、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、次を参照してください[一致式](match-expressions.md)、 [let バインディング](functions/let-bindings.md)、[ラムダ式:、`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)、および[例外:、 。`try...with`式](exception-handling/the-try-with-expression.md)します。
 
 たとえば、`match`式、*パターン*はパイプ記号。
 
@@ -115,7 +115,7 @@ match shape with
 
 ## <a name="as-pattern"></a>as パターン
 
-`as` パターンは、`as` 句が追加されたパターンです。 `as` 句は、照合する値を `match` 式の実行式で使用できる名前に束縛します。または、このパターンが `let` 束縛で使用される場合は、名前が束縛としてローカル スコープに追加されます。
+`as` パターンは、`as` 句が追加されたパターンです。 `as` 句は、照合する値を `match` 式の実行式で使用できる名前にバインディングします。または、このパターンが `let` バインディングで使用される場合は、名前がバインディングとしてローカル スコープに追加されます。
 
 `as` パターンの使用例を次に示します。
 
