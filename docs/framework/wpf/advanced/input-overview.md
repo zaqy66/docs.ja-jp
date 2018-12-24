@@ -78,11 +78,24 @@ ms.locfileid: "48842789"
 
 <a name="event_routing"></a>
 ## <a name="event-routing"></a>イベント ルーティング
- A<xref:System.Windows.FrameworkElement>要素のツリーを形成する、そのコンテンツ モデル内の子要素として他の要素を含めることができます。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、イベントを処理することで、親要素が、その子要素またはその他の子孫に命令された入力に関与できます。 これは、小さいコントロールからコントロールをビルドする場合に特に役立ちます。このプロセスは "コントロール合成" または "合成" と呼ばれます。 要素ツリー、および要素ツリーをイベント ルートに関連させる方法の詳細については、「[WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)」を参照してください。
+ <xref:System.Windows.FrameworkElement>は、コンテンツ モデルの子要素として他の要素を含めることができ、要素ツリーを形成します。
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、イベントを処理することで、親要素が、その子孫要素への入力に関与できます。
+これは、小さいコントロールから成るコントロールを構築する場合に特に役立ちます。このプロセスは "コントロール合成" または "合成" と呼ばれます。
+要素ツリーおよび要素ツリーとイベント ルーティングの関連については、「[WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)」を参照してください。
 
- イベント ルーティングは、ルートに沿った特定のオブジェクトや要素が、異なる要素によって供給されたイベントに、(処理を介して) 重要な応答を提供できるように、イベントを複数の要素に転送するプロセスです。  ルーティング イベントには、直接、バブル、トンネルのいずれかのルーティング メカニズムが使用されます。  直接ルーティングでは、ソース要素が通知を受ける唯一の要素であり、イベントは他の要素にルーティングされません。 ただし、直接ルーティング イベントは、標準の [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] イベントではなく、ルーティング イベントにのみ存在するいくつかの追加機能を提供します。 バブル ルーティングでは、最初にイベントの発生元である要素に通知し、次にその親要素へ、その次へと順に通知することで、要素ツリーの上位へ処理が実行されます。  トンネル ルーティングでは、要素ツリーのルートから始まり、下位へと処理が実行され、元のソース要素で終了します。  ルーティング イベントの詳細については、「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」を参照してください。
+ イベント ルーティングは、イベントを複数の要素に転送するプロセスで、ルート内のオブジェクトや要素は、別の要素からのイベントに、(イベント処理によって) 応答することができます。
+ルーティング イベントには、直接、バブル、トンネルのいずれかのルーティング メカニズムが使用されます。
+直接ルーティングでは、ソース要素のみが通知を受け取り、イベントは他の要素にルーティングされません。
+ただし、直接ルーティング イベントは、標準の [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] イベントとは対照的に、ルーティング イベントにのみ存在するいくつかの追加機能を提供します。
+バブル ルーティングは、最初にイベント ソースである要素に通知し、次にその親要素へ、その次へと順に通知することで、要素ツリーの上に向かって処理を実行します。
+トンネル ルーティングは、要素ツリーのルートから下に向かって処理を実行し、イベント ソースで終了します。
+ルーティング イベントの詳細については、「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」を参照してください。
 
- 一般に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の入力イベントは、トンネル イベントとバブル イベントのペアで構成されます。  トンネリング イベントは、"Preview" プレフィックスでバブルリング イベントと区別されます。  たとえば、<xref:System.Windows.Input.Mouse.PreviewMouseMove>マウス移動イベントのトンネル バージョンと<xref:System.Windows.Input.Mouse.MouseMove>はこのイベントのバブルのバージョンです。 このイベントのペアは、要素レベルで実装される規則であり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベント システムの継承機能ではありません。 詳細については、「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」の「WPF の入力イベント」を参照してください。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の入力イベントは、一般にトンネル イベントとバブル イベントのペアで構成されます。
+トンネル イベントは、"Preview" プレフィックスによりバブル イベントと区別されます。
+たとえば、<xref:System.Windows.Input.Mouse.PreviewMouseMove>はマウス移動のトンネル イベントであり、<xref:System.Windows.Input.Mouse.MouseMove>は対応するバブル イベントです。
+このイベントのペアは、要素レベルで実装される規則であり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベント システムの継承機能ではありません。
+詳細については、「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」の「WPFの入力イベント」を参照してください。
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>入力イベントの処理
