@@ -1,5 +1,5 @@
 ---
-title: do 束縛 (F#)
+title: do バインド (F#)
 description: F# の 'do' のバインドを使用する方法、関数または値を定義することがなくコードを実行について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "45973145"
 ---
-# <a name="do-bindings"></a>do 束縛
+# <a name="do-bindings"></a>do バインド
 
 A`do`関数または値を定義することがなくコードを実行するバインディングを使用します。 またはバインドできるクラスを使用してを参照してください[`do`クラス内のバインディング](../members/do-bindings-in-classes.md)します。
 

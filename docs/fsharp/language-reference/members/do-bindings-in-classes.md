@@ -1,5 +1,5 @@
 ---
-title: クラス内の do 束縛 (F#)
+title: クラス内の do バインド (F#)
 description: F# の 'do'、オブジェクトが作成されたとき、または型が初めて使用すると、操作を実行するクラス定義のバインディングを使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43801535"
 ---
-# <a name="do-bindings-in-classes"></a>クラス内の do 束縛
+# <a name="do-bindings-in-classes"></a>クラス内の do バインド
 
 A`do`クラス定義のバインディング オブジェクトが作成されるときに、静的なは、操作を実行します`do`バインド型を使用する場合最初。
 

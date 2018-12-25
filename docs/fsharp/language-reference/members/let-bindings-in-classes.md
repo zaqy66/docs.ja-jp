@@ -1,5 +1,5 @@
 ---
-title: クラス内の let 束縛 (F#)
+title: クラス内の let バインド (F#)
 description: クラス定義で 'let' のバインドを使用して、プライベート フィールドと F# クラスのプライベート関数を定義する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "48033221"
 ---
-# <a name="let-bindings-in-classes"></a>クラス内の let 束縛
+# <a name="let-bindings-in-classes"></a>クラス内の let バインド
 
 使用して、プライベート フィールドと F# クラスのプライベート関数を定義することができます`let`クラス定義にバインドします。
 
