@@ -1,5 +1,5 @@
 ---
-title: 整数型 (Integer) (Visual Basic)
+title: `Integer` データ型 (Visual Basic)
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Integer
@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/05/2018
 ms.locfileid: "50982764"
 ---
-# <a name="integer-data-type-visual-basic"></a>整数データ型 (Visual Basic)
+# <a name="integer-data-type-visual-basic"></a>`Integer` データ型 (Visual Basic)
 -2,147,483,648 から 2,147,483,647 までの符号付き 32 ビット (4 バイト) の整数を保持します。  
   
 ## <a name="remarks"></a>Remarks
