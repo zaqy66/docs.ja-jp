@@ -1,5 +1,5 @@
 ---
-title: Long 型 (Visual Basic)
+title: Long データ型 (Visual Basic)
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Long
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53155120"
 ---
-# <a name="long-data-type-visual-basic"></a>長い形式のデータ型 (Visual Basic)
+# <a name="long-data-type-visual-basic"></a>Long データ型 (Visual Basic)
 
 符号付き 64 ビット (8 バイト) の整数 9,223,372,036,854,775,807-9,223,372,036,854,775,808 から値までの保持 (9.2... E + 18)。  
   
