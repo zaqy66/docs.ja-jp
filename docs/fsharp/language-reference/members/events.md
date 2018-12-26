@@ -4,7 +4,7 @@ description: 学習方法F#イベントには、GUI プログラミングの重�
 ms.date: 05/16/2016
 ms.openlocfilehash: 82cde0e1df980a2ae204ad0923f4bac0769f0831
 ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52745343"

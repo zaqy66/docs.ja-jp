@@ -4,7 +4,7 @@ description: F# の 'do'、オブジェクトが作成されたとき、また�
 ms.date: 05/16/2016
 ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43801535"

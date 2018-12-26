@@ -4,7 +4,7 @@ description: "'Inherit' キーワードを使用して F# 継承リレーショ�
 ms.date: 05/16/2016
 ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43864470"

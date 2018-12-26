@@ -4,7 +4,7 @@ description: F# 'val' について、キーワード、型を初期化せず、�
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "45746385"
@@ -21,7 +21,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 ## <a name="remarks"></a>コメント
 
-クラス型または構造体型のフィールドを定義するには、通常、`let` バインディングを使用します。 ただし、`let` バインディングは、クラス コンストラクターの一部として初期化する必要があります。これは、必ずしも可能または必要であるとは限らず、望ましくない場合もあります。 初期化されていないフィールドが必要な場合は、`val` キーワードを使用できます。
+クラス型または構造体型のフィールドを定義するには、通常、`let` 束縛を使用します。 ただし、`let` 束縛は、クラス コンストラクターの一部として初期化する必要があります。これは、必ずしも可能または必要であるとは限らず、望ましくない場合もあります。 初期化されていないフィールドが必要な場合は、`val` キーワードを使用できます。
 
 明示的なフィールドは静的にも非静的にもできます。 *アクセス修飾子*できる`public`、 `private`、または`internal`します。 既定では、明示的なフィールドは public です。 常に private であるクラスの `let` バインディングとは、この点が異なります。
 
@@ -42,7 +42,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 >[!WARNING]
 `Note` .NET Framework 名前空間`System.ComponentModel`同じ名前を持つ属性が含まれています。 この属性の詳細については、「`System.ComponentModel.DefaultValueAttribute`」を参照してください。
 
-次のコードは、明示的なフィールドの使用方法を示しています。また、比較のために、プライマリ コンストラクターを持つクラスの `let` バインディングも示しています。 `let` バインディングのフィールド `myInt1` が private であることに注意してください。 `let` バインディングのフィールド `myInt1` をメンバー メソッドから参照する際は、自己識別子 `this` は必要ありません。 ただし、明示的なフィールド `myInt2` と `myString` を参照する際は、自己識別子が必要です。
+次のコードは、明示的なフィールドの使用方法を示しています。また、比較のために、プライマリ コンストラクターを持つクラスの `let` 束縛も示しています。 `let` 束縛のフィールド `myInt1` が private であることに注意してください。 `let` 束縛のフィールド `myInt1` をメンバー メソッドから参照する際は、自己識別子 `this` は必要ありません。 ただし、明示的なフィールド `myInt2` と `myString` を参照する際は、自己識別子が必要です。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
 
