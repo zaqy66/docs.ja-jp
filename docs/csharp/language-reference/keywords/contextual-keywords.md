@@ -22,7 +22,7 @@ ms.locfileid: "53241397"
 |[await](../../../csharp/language-reference/keywords/await.md)|待機中のタスクが完了するまで async のメソッドを中断します。|  
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|コンパイル時の型チェックをバイパスする処理を可能にする参照型を定義します。|  
 |[get](../../../csharp/language-reference/keywords/get.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  
-|[global](../../../csharp/language-reference/keywords/global.md)|既定のグローバル名前空間を指定します。指定しない場合、無名のグローバル名前空間になります。|  
+|[global](../../../csharp/language-reference/keywords/global.md)|既定のグローバル名前空間を指定します。指定しない場合、無名になります。|  
 |[partial](../../../csharp/language-reference/keywords/partial-type.md)|同一コンパイル ユニットに部分クラス、部分構造体、または部分インターフェイスを定義します。|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|クライアント コードがイベントのサブスクライブを解除するときに呼び出されるカスタム イベント アクセサーを定義します。|  
 |[set](../../../csharp/language-reference/keywords/set.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  

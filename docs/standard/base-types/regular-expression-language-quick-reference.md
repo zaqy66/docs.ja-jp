@@ -68,7 +68,7 @@ ms.locfileid: "44041617"
   
 <a name="character_classes"></a>   
 ## <a name="character-classes"></a>文字クラス  
- 文字クラスは、文字セットのいずれかと一致します。 文字クラスに含まれる言語要素を次の表に示します。 詳細については、「 [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)」を参照してください。  
+ 文字クラスは、文字セットのいずれかと一致します。 文字クラスに含まれる言語要素を次の表に示します。 詳細については、「 [文字クラス](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)」を参照してください。  
   
 |文字クラス|説明|パターン|一致件数|  
 |---------------------|-----------------|-------------|-------------|  
@@ -106,15 +106,15 @@ ms.locfileid: "44041617"
   
 <a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>グループ化構成体  
- グループ化構成体は、正規表現の部分式を表し、通常は入力文字列の部分文字列をキャプチャします。 グループ化構成体に含まれる言語要素を次の表に示します。 詳細については、「 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)」を参照してください。  
+ グループ化構成体は、正規表現の部分式を表し、通常は入力文字列の部分文字列をキャプチャします。 グループ化構成体に含まれる言語要素を次の表に示します。 詳細については、「 [グループ化構成体](grouping-constructs-in-regular-expressions.md)」を参照してください。  
   
 |グループ化構成体|説明|パターン|一致件数|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *subexpression* `)`|一致した部分式をキャプチャして、1 から始まる序数を代入します。|`(\w)\1`|"deep" の "ee"|  
 |`(?<` *name* `>` *subexpression* `)`|一致した部分式を名前付きグループにキャプチャします。|`(?<double>\w)\k<double>`|"deep" の "ee"|  
-|`(?<` *name1* `-` *name2* `>` *subexpression* `)`|グループ定義の均等化を定義します。 詳細については、「 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)」の「グループ定義の均等化」を参照してください。|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"3+2^((1-3)\*(3-1))" の "((1-3)\*(3-1))"|  
+|`(?<` *name1* `-` *name2* `>` *subexpression* `)`|グループ定義の均等化を定義します。 詳細については、「 [グループ化構成体](grouping-constructs-in-regular-expressions.md)」の「グループ定義の均等化」を参照してください。|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"3+2^((1-3)\*(3-1))" の "((1-3)\*(3-1))"|  
 |`(?:` *subexpression* `)`|非キャプチャ グループを定義します。|`Write(?:Line)?`|"Console.WriteLine()" の "WriteLine"<br /><br /> "Console.Write(value)" の "Write"|  
-|`(?imnsx-imnsx:` *subexpression* `)`|指定したオプションを *subexpression*に適用するか、または無効にします。 詳細については、「 [Regular Expression Options](regular-expression-options.md)」を参照してください。|`A\d{2}(?i:\w+)\b`|"A12xl A12XL a12xl" の "A12xl"、"A12XL"|  
+|`(?imnsx-imnsx:` *subexpression* `)`|指定したオプションを *subexpression*に適用するか、または無効にします。 詳細については、「 [正規表現のオプション](regular-expression-options.md)」を参照してください。|`A\d{2}(?i:\w+)\b`|"A12xl A12XL a12xl" の "A12xl"、"A12XL"|  
 |`(?=` *subexpression* `)`|ゼロ幅の肯定先読みアサーションです。|`\w+(?=\.)`|"He is. The dog ran. The sun is out." の "is"、"ran"、および "out"|  
 |`(?!` *subexpression* `)`|ゼロ幅の否定先読みアサーションです。|`\b(?!un)\w+\b`|"unsure sure unity used" の "sure"、"used"|  
 |`(?<=` *subexpression* `)`|ゼロ幅の正の後読みアサーションです。|`(?<=19)\d{2}\b`|"1851 1999 1950 1905 2003" の "99"、"50"、"05"|  
@@ -125,7 +125,7 @@ ms.locfileid: "44041617"
   
 <a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>量指定子  
- 量指定子は、一致するために、入力文字列中に直前の要素 (文字、グループ、または文字クラス) がいくつ存在しなければならないかを指定します。 量指定子に含まれる言語要素を次の表に示します。 詳細については、「 [Quantifiers](quantifiers-in-regular-expressions.md)」を参照してください。  
+ 量指定子は、一致するために、入力文字列中に直前の要素 (文字、グループ、または文字クラス) がいくつ存在しなければならないかを指定します。 量指定子に含まれる言語要素を次の表に示します。 詳細については、「 [量指定子](quantifiers-in-regular-expressions.md)」を参照してください。  
   
 |量指定子|説明|パターン|一致件数|  
 |----------------|-----------------|-------------|-------------|  
@@ -146,7 +146,7 @@ ms.locfileid: "44041617"
   
 <a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>前方参照構成体  
- 前方参照を使用すると、以前に一致した部分式を、同じ正規表現内で引き続き識別できます。 .NET の正規表現でサポートされている前方参照構成体を、次の表に示します。 詳細については、「 [Backreference Constructs](backreference-constructs-in-regular-expressions.md)」を参照してください。  
+ 前方参照を使用すると、以前に一致した部分式を、同じ正規表現内で引き続き識別できます。 .NET の正規表現でサポートされている前方参照構成体を、次の表に示します。 詳細については、「 [前方参照構成体](backreference-constructs-in-regular-expressions.md)」を参照してください。  
   
 |前方参照構成体|説明|パターン|一致件数|  
 |-----------------------------|-----------------|-------------|-------------|  
@@ -157,7 +157,7 @@ ms.locfileid: "44041617"
   
 <a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>代替構成体  
- 代替構成体は、OR 一致を有効にするように正規表現を変更します。 これらの構成体に含まれる言語要素を次の表に示します。 詳細については、「 [Alternation Constructs](alternation-constructs-in-regular-expressions.md)」を参照してください。  
+ 代替構成体は、OR 一致を有効にするように正規表現を変更します。 これらの構成体に含まれる言語要素を次の表に示します。 詳細については、「 [代替構成体](alternation-constructs-in-regular-expressions.md)」を参照してください。  
   
 |代替構成体|説明|パターン|一致件数|  
 |---------------------------|-----------------|-------------|-------------|  
@@ -169,7 +169,7 @@ ms.locfileid: "44041617"
   
 <a name="substitutions"></a>   
 ## <a name="substitutions"></a>置換  
- 置換は、置換パターンでサポートされる正規表現言語要素です。 詳細については、「 [Substitutions](substitutions-in-regular-expressions.md)」を参照してください。 アトミック ゼロ幅アサーションであるメタ文字を次の表に示します。  
+ 置換は、置換パターンでサポートされる正規表現言語要素です。 詳細については、「 [置換](substitutions-in-regular-expressions.md)」を参照してください。 アトミック ゼロ幅アサーションであるメタ文字を次の表に示します。  
   
 |文字|説明|パターン|置換パターン|入力文字列|結果文字列|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
@@ -179,14 +179,14 @@ ms.locfileid: "44041617"
 |`$&`|一致したパターン全体と同じパターンに置換されます。|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|一致した場所より前にある入力文字列のすべてに置換されます。|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
 |`$'`|一致した場所より後にある入力文字列のすべてに置換されます。|`B+`|`$'`|"AABBCC"|"AACCCC"|  
-|`$+`|キャプチャされた最後のグループに置換されます。|`B+(C+)`|`$+`|"AABBCCDD"|AACCDD|  
+|`$+`|キャプチャされた最後のグループに置換されます。|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|入力文字列全体に置換されます。|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
   
  [ページのトップへ](#top)  
   
 <a name="options"></a>   
 ## <a name="regular-expression-options"></a>正規表現のオプション  
- 正規表現エンジンで正規表現パターンを解釈する方法を制御するオプションを指定できます。 これらのオプションの多くは、インラインで (正規表現パターンで) 指定することも、1 つ以上の <xref:System.Text.RegularExpressions.RegexOptions> 定数として指定することもできます。 このクイック リファレンスでは、インライン オプションのみを示しています。 インライン オプションと <xref:System.Text.RegularExpressions.RegexOptions> オプションの詳細については、「 [Regular Expression Options](regular-expression-options.md)」を参照してください。  
+ 正規表現エンジンで正規表現パターンを解釈する方法を制御するオプションを指定できます。 これらのオプションの多くは、インラインで (正規表現パターンで) 指定することも、1 つ以上の <xref:System.Text.RegularExpressions.RegexOptions> 定数として指定することもできます。 このクイック リファレンスでは、インライン オプションのみを示しています。 インライン オプションと <xref:System.Text.RegularExpressions.RegexOptions> オプションの詳細については、「 [正規表現のオプション](regular-expression-options.md)」を参照してください。  
   
  インライン オプションは、次の 2 種類の方法で指定できます。  
   
@@ -199,16 +199,16 @@ ms.locfileid: "44041617"
 |オプション|説明|パターン|一致件数|  
 |------------|-----------------|-------------|-------------|  
 |`i`|大文字と小文字を区別しない一致を使用します。|`\b(?i)a(?-i)a\w+\b`|"aardvark AAAuto aaaAuto Adam breakfast" の "aardvark"、"aaaAuto"|  
-|`m`|複数行モードを使用します。 `^` と `$` は、(入力文字列の先頭および末尾ではなく) 各行の先頭および末尾と一致します。|例については、「 [Regular Expression Options](regular-expression-options.md)」の「複数行モード」を参照してください。||  
-|`n`|名前のないグループをキャプチャしません。|例については、「 [Regular Expression Options](regular-expression-options.md)」の「明示的なキャプチャのみ」を参照してください。||  
-|`s`|単一行モードを使用します。|例については、「 [Regular Expression Options](regular-expression-options.md)」の「単一行モード」を参照してください。||  
+|`m`|複数行モードを使用します。 `^` と `$` は、(入力文字列の先頭および末尾ではなく) 各行の先頭および末尾と一致します。|例については、「 [正規表現のオプション](regular-expression-options.md)」の「複数行モード」を参照してください。||  
+|`n`|名前のないグループをキャプチャしません。|例については、「 [正規表現のオプション](regular-expression-options.md)」の「明示的なキャプチャのみ」を参照してください。||  
+|`s`|単一行モードを使用します。|例については、「 [正規表現のオプション](regular-expression-options.md)」の「単一行モード」を参照してください。||  
 |`x`|正規表現パターンでエスケープされていない空白を無視します。|`\b(?x) \d+ \s \w+`|"1 aardvark 2 cats IV centurions" の "1 aardvark"、"2 cats"|  
   
  [ページのトップへ](#top)  
   
 <a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>その他の構成体  
- その他の構成体は、正規表現パターンを変更するか、それに関する情報を指定します。 次の表に .NET でサポートされているその他の構成体を示します。 詳細については、「 [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md)」を参照してください。  
+ その他の構成体は、正規表現パターンを変更するか、それに関する情報を指定します。 次の表に .NET でサポートされているその他の構成体を示します。 詳細については、「 [その他の構成体](miscellaneous-constructs-in-regular-expressions.md)」を参照してください。  
   
 |構成体|定義|例|  
 |---------------|----------------|-------------|  
