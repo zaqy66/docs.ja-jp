@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 267a4a29282881d18201d0cb2062e91b4ff974a9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6ea2f8a32a18dfce6be54ce52ce8fef4abf92ce
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745176"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610776"
 ---
 # <a name="ltetwenablegt-element"></a>&lt;etwEnable&gt;要素
 共通言語ランタイム イベントで Windows イベント トレーシング (ETW) を有効にするかどうかを指定します。  
@@ -40,8 +40,8 @@ ms.locfileid: "32745176"
   
 |値|説明|  
 |-----------|-----------------|  
-|true|ETW を有効にします。 これは、以降、Windows Vista および Windows Server 2008 オペレーティング システムの Windows のバージョンの既定値です。|  
-|False|ETW を無効にします。 これは、以前のバージョンの Windows の既定値です。|  
+|true|ETW を有効にします。 これは、Windows、Windows Vista および Windows Server 2008 オペレーティング システム以降のバージョンの既定値です。|  
+|False|ETW を無効にします。 これは、Windows の以前のバージョンの既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -53,11 +53,11 @@ ms.locfileid: "32745176"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
-## <a name="remarks"></a>コメント  
- Windows Vista 以降では、ETW は既定で有効にします。 アプリケーションの ETW を無効にするのにには、この要素を使用します。 以前のバージョンの Windows では、この要素を使用して、アプリケーションの ETW を有効にします。  
+## <a name="remarks"></a>Remarks  
+ ETW は Windows Vista 以降、既定で有効です。 アプリケーションの ETW を無効にするのにには、この要素を使用します。 Windows の以前のバージョンでは、アプリケーションの ETW を有効にするのにこの要素を使用します。  
   
 > [!NOTE]
->  ETW を有効になっているか、レジストリ設定を使用して、サーバーでグローバルに無効にします。 参照してください[.NET Framework のログ記録を制御する](../../../../../docs/framework/performance/controlling-logging.md)です。  
+>  ETW を有効になっているか、レジストリ設定を使用して、サーバーでグローバルに無効にします。 参照してください[.NET Framework のログ記録を制御する](../../../../../docs/framework/performance/controlling-logging.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、アプリケーションの ETW トレースを有効にする方法を示します。  
@@ -71,6 +71,6 @@ ms.locfileid: "32745176"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [.NET Framework のログ記録の制御](../../../../../docs/framework/performance/controlling-logging.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [.NET Framework のログ記録の制御](../../../../../docs/framework/performance/controlling-logging.md)

@@ -1,18 +1,18 @@
 ---
-title: '方法 : 要素またはブラシの不透明度をアニメーション化する'
+title: '方法: 要素またはブラシの不透明度をアニメーション化する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - opacity [WPF], animating
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-ms.openlocfilehash: 549d3eab0d6d75403e962eeb146be8d7995cc931
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 659b051fe63c113bf1a4488b1fab12bbee75b1e3
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525854"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451249"
 ---
-# <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>方法 : 要素またはブラシの不透明度をアニメーション化する
+# <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>方法: 要素またはブラシの不透明度をアニメーション化する
 フレームワーク要素がフェードインおよびフェードアウトするために、アニメーション化できますその<xref:System.Windows.UIElement.Opacity%2A>またはプロパティをアニメーション化することができます、<xref:System.Windows.Media.Brush.Opacity%2A>のプロパティ、 <xref:System.Windows.Media.Brush> (またはブラシ) 描画するために使用します。 により、要素の不透明度をアニメーション化して、その子フェードインおよびフェードアウトがのどの部分の要素のフェードインはより慎重に選択する要素の描画に使用されるブラシをアニメーション化することができます。 たとえば、ボタンの背景を描画に使用されるブラシの不透明度をアニメーション化できます。 これにより、ビュー、そのテキストを完全に不透明なままのフェードインとフェードアウトをボタンの背景が原因です。  
   
 > [!NOTE]
@@ -23,4 +23,4 @@ ms.locfileid: "43525854"
 ## <a name="example"></a>例  
  [!code-xaml[timingbehaviors_snip#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
   
- コードは、この例から省略されています。 完全なサンプルでは、不透明度をアニメーション化する方法も示しています、<xref:System.Windows.Media.Color>内、<xref:System.Windows.Media.LinearGradientBrush>します。  完全なサンプルは、次を参照してください。、[要素のサンプルの不透明度をアニメーション化](https://go.microsoft.com/fwlink/?LinkID=159968)します。
+ コードは、この例から省略されています。 完全なサンプルでは、不透明度をアニメーション化する方法も示しています、<xref:System.Windows.Media.Color>内、<xref:System.Windows.Media.LinearGradientBrush>します。  完全なサンプルは、次を参照してください。、[要素のサンプルの不透明度をアニメーション化](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/OpacityAnimation)します。

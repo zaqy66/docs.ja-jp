@@ -1,13 +1,13 @@
 ---
-title: インデックス付きプロパティ (F#)
+title: インデックス付きプロパティ
 description: インデックス付きプロパティについて説明しますF#、順序付けられたデータを配列に似たアクセスを許可します。
 ms.date: 10/17/2018
-ms.openlocfilehash: 3dac60eba3d9e7a9c3e76ad7ee051e6b30b88636
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 3817290505339803814e981cd5408cd4df6bd283
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "49452249"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611777"
 ---
 # <a name="indexed-properties"></a>インデックス付きプロパティ
 

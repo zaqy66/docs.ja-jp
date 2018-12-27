@@ -1,13 +1,13 @@
 ---
-title: タプル (F#)
-description: F# タプル、名前のないが、順序付けされた値のさまざまな種類のグループ化について説明します。
+title: タプル
+description: については、F#タプル、名前のないが、順序付けされた値のさまざまな種類のグループ化します。
 ms.date: 05/16/2016
-ms.openlocfilehash: e7628e4c4b538c2fe52fca25d2597b10fec28d1c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a1fc31d4dc97c0921545e53b91dcde0547002006
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43749224"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611049"
 ---
 # <a name="tuples"></a>タプル
 
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-F# コードで、構造体のタプルをパラメーターとして渡すし、構造体タプルとして結果を使用できます。
+F#コード、パラメーターとして構造体の組を渡すし、構造体タプルとして結果を消費することができます。
 
 ```fsharp
 open TupleInterop
@@ -118,7 +118,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-パターンを作成する必要があります 1 つのタプルが一致し、他の構成要素を構築します。  例えば:
+パターンを作成する必要があります 1 つのタプルが一致し、他の構成要素を構築します。  例:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 

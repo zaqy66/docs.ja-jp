@@ -1,13 +1,13 @@
 ---
-title: 型略称 (F#)
+title: 型略称
 description: コードを読みやすくためにわかりやすい名前の型を提供する F# 型略称について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0deaef789367aad413e5a537bf7164034e1275c0
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842426"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613350"
 ---
 # <a name="type-abbreviations"></a>型略称
 

@@ -1,17 +1,17 @@
 ---
-title: レコード (F#)
-description: F# のレコードがオプションでメンバーの名前付きの値の単純な集計を表す方法について説明します。
+title: レコード
+description: 学習方法F#レコードはオプションでメンバーの名前付きの値の単純な集計を表します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48261291"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656142"
 ---
 # <a name="records"></a>レコード
 
-レコードは、名前付きの値の単純な集合を表しており、オプションでメンバーを含みます。  F# 4.1 以降では、することは構造体または参照型。  これが、既定では参照型です。
+レコードは、名前付きの値の単純な集合を表しており、オプションでメンバーを含みます。  以降でF#4.1、構造体または参照型になることができますか。  これが、既定では参照型です。
 
 ## <a name="syntax"></a>構文
 
@@ -89,6 +89,29 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 // and leave the rest with default values.
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
+
+## <a name="creating-mutually-recursive-records"></a>相互に再帰的なレコードを作成します。
+
+レコードを作成するときにいずれかの時点に後で定義するには別の型に依存する可能性があります。 これは、再帰的に相互にレコードの種類を定義する場合を除き、コンパイル エラーです。
+
+相互に再帰的なレコードを定義するのには、`and`キーワード。 これにより 2 つまたは複数のレコードの種類をまとめてリンクできます。
+
+たとえば、次のコードの定義、`Person`と`Address`相互に再帰の種類。
+
+```fsharp
+// Create a Person type and use the Address type that is not defined
+type Person =
+  { Name: string
+    Age: int
+    Address: Address }
+// Define the Address type which is used in the Person record
+and Address =
+  { Line1: string
+    Line2: string
+    PostCode: string }
+```
+
+せず、前の例を定義した場合、`and`キーワード、その後はコンパイルされません。 `and`キーワードが相互に再帰的な定義に必要です。
 
 ## <a name="pattern-matching-with-records"></a>レコードを使用したパターン マッチ
 

@@ -1,13 +1,13 @@
 ---
-title: 外部関数 (F#)
+title: 外部関数
 description: ネイティブ コードで関数を呼び出すための F# 言語サポートについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 86ea78844fb812361233f8360c377465d83be203
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45973106"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611732"
 ---
 # <a name="external-functions"></a>外部関数
 

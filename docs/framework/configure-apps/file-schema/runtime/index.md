@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0df1f3bcf8941b5fe0a8fd19dfc7423e669a766
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 16090ff7a756757fd92474c036fea211904684ac
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742294"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614353"
 ---
 # <a name="runtime-settings-schema"></a>ランタイム設定スキーマ
 ランタイム設定は、.NET Framework を対象とするアプリケーションを構成する共通言語ランタイムによって使用されます。  
@@ -132,6 +132,6 @@ ms.locfileid: "43742294"
 |[\<UseSmallInternalThreadStacks>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|ランタイムが内部的に使用する特定のスレッド作成時に、既定のスタック サイズではなく明示的なスタック サイズを使用することを要求します。|  
   
 ## <a name="see-also"></a>関連項目  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [方法: 同時実行ガベージ コレクションを無効にします。](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
- [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [方法: 同時実行ガベージ コレクションを無効にします。](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+- [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
