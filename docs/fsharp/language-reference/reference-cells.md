@@ -1,13 +1,13 @@
 ---
-title: 参照セル (F#)
-description: F# の参照セルの参照セマンティクスを持つ変更可能な値を作成するための記憶域の場所の方法について説明します。
+title: 参照セル
+description: 学習方法F#参照セルは参照セマンティクスを持つ変更可能な値を作成するための記憶域の場所。
 ms.date: 05/16/2016
-ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44192266"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612765"
 ---
 # <a name="reference-cells"></a>参照セル
 
@@ -57,6 +57,7 @@ let ref x = { contents = x }
 |`ref` (演算子)|新しい参照セルに値をカプセル化します。|`'a -> 'a ref`|`let ref x = { contents = x }`|
 |`Value` (プロパティ)|基になる値を取得または設定します。|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (レコード フィールド)|基になる値を取得または設定します。|`'a`|`let ref x = { contents = x }`|
+
 基になる値にアクセスする方法はいくつかあります。 逆参照演算子 (`!`) によって返される値は、代入可能な値ではありません。 したがって、基になる値を変更する場合は、代わりに代入演算子 (`:=`) を使用する必要があります。
 
 `Value` プロパティと `contents` フィールドは、いずれも代入可能な値です。 したがって、次のコードに示すように、これらを使用して基になる値にアクセスしたり、基になる値を変更したりできます。
@@ -74,7 +75,7 @@ let ref x = { contents = x }
 
 `contents` フィールドは、他のバージョンの ML との互換性のために用意されており、コンパイル中に警告を生成します。 この警告を無効にするには、`--mlcompatibility` コンパイラ オプションを使用します。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。
 
-C# プログラマことを知っている`ref`と同じものでない (C#) `ref` F# でします。 F# での同等の構成体は[byref](byrefs.md)、参照セルから異なる概念であります。
+C# プログラマことを知っている`ref`と同じものでない (C#) `ref` F# でします。 同等の構成体F#は[byref](byrefs.md)、参照セルから異なる概念であります。
 
 値がマーク`mutable`に自動的に昇格できる可能性があります`'a ref`; クロージャによってキャプチャされた場合は、次を参照してください。[値](values/index.md)します。
 

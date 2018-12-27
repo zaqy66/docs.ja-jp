@@ -1,13 +1,13 @@
 ---
-title: モジュール (F#)
+title: モジュール
 description: F# のモジュールの値、型、および F# のプログラム内の関数値などの F# コードでのグループ化の方法について説明します。
 ms.date: 04/24/2017
-ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9e5bef4ffe3301a69bbe32483625652d988f8a35
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45528527"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611114"
 ---
 # <a name="modules"></a>モジュール
 
@@ -54,7 +54,7 @@ F# のモジュールは、型、値、関数の値のコードなどの F# コ�
 
 `Namespace1.Namespace2.ModuleName.Identifier`
 
-モジュールまたは 1 つ以上のコードを簡略化する名前空間を開くことができます。 開く名前空間とモジュールの詳細については、次を参照してください。[インポート宣言:、`open`キーワード](import-declarations-the-open-keyword.md)します。
+モジュールまたは 1 つ以上のコードを簡略化する名前空間を開くことができます。 開く名前空間とモジュールの詳細については、次を参照してください。[インポート宣言。`open`キーワード](import-declarations-the-open-keyword.md)します。
 
 次のコード例では、ファイルの末尾までのすべてのコードを含む最上位レベルのモジュールを示します。
 
@@ -88,7 +88,7 @@ F# のモジュールは、型、値、関数の値のコードなどの F# コ�
 
 ## <a name="recursive-modules"></a>再帰的なモジュール
 
-F# 4.1 には、再帰的に相互に含まれているすべてのコードでは、モジュールの概念が導入されています。  使用してこれには`module rec`します。  使用`module rec`されない型とモジュール間の相互参照コードを記述することでいくつかの問題を軽減することができます。  この例を次に示します。
+F#4.1 には、再帰的に相互に含まれているすべてのコードでは、モジュールの概念が導入されています。  使用してこれには`module rec`します。  使用`module rec`されない型とモジュール間の相互参照コードを記述することでいくつかの問題を軽減することができます。  この例を次に示します。
 
 ```fsharp
 module rec RecursiveModule =
@@ -134,6 +134,6 @@ module rec RecursiveModule =
 
 ## <a name="see-also"></a>関連項目
 
-- [F# 言語リファレンス](index.md)  
-- [名前空間](namespaces.md)  
-- [F# RFC FS-1009 - ファイル内でより大きな範囲経由で相互に参照型とモジュールを許可します。](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
+- [F# 言語リファレンス](index.md)
+- [名前空間](namespaces.md)
+- [F#RFC FS-1009 - ファイル内でより大きな範囲経由で相互に参照型とモジュールを許可します。](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

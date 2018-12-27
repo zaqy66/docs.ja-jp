@@ -1,13 +1,13 @@
 ---
-title: 'ループ: for...in 式 (F#)'
+title: 'ループ: for...in 式'
 description: 参照してください方法 F# for….. 式で列挙可能なコレクション内のパターンの一致を反復処理するループ コンストラクトが使用されます。
 ms.date: 05/16/2016
-ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48027235"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614410"
 ---
 # <a name="loops-forin-expression"></a>ループ: for...in 式
 
@@ -136,5 +136,5 @@ Number of elements in list1: 5
 ## <a name="see-also"></a>関連項目
 
 - [F# 言語リファレンス](index.md)
-- [ループ: `for...to` 式](loops-for-to-expression.md)
-- [ループ: `while...do` 式](loops-while-do-expression.md)
+- [ループ:`for...to` 式](loops-for-to-expression.md)
+- [ループ:`while...do` 式](loops-while-do-expression.md)

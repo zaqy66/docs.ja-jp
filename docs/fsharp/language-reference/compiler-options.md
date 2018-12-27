@@ -1,13 +1,13 @@
 ---
-title: コンパイラ オプション (F#)
+title: コンパイラ オプション
 description: 使用F#のコンパイルを制御するためのコンパイラ コマンド ライン オプション、F#アプリとライブラリ。
 ms.date: 12/10/2018
-ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
+ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170874"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614494"
 ---
 # <a name="compiler-options"></a>コンパイラ オプション
 
@@ -67,10 +67,9 @@ ms.locfileid: "53170874"
 |`--warnon:warning-number-list`|既定でオフに可能性がありますまたは別のコマンド ライン オプションで無効になっている特定の警告を有効にします。 F# 3.0 では、1182 (使用されていない変数) の警告は既定ではオフに設定されています。|
 |<code>--warnaserror[+&#124;-] [warning-number-list]</code>|警告をエラーとして報告するオプションを有効または無効にします。 特定の警告番号を指定して無効または有効にすることができます。 後のコマンド ラインのオプションが前のコマンド ラインのオプションをオーバーライドします。 たとえば、警告をエラーとして報告したくないを指定する次のように指定します。 `--warnaserror+` `--warnaserror-:warning-number-list`します。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [ &#47;warnaserror &#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/406xhdz3.aspx)します。|
 |`--win32manifest:manifest-filename`|コンパイルに Win32 マニフェスト ファイルを追加します。 このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [ &#47;win32manifest &#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/bb545961.aspx)します。|
-|`--win32res:resource-filename`|コンパイルに Win32 リソース ファイルを追加します。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [ &#47;win32res (&#40;C & #35)。コンパイラ オプション&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx)します。|
+|`--win32res:resource-filename`|コンパイルに Win32 リソース ファイルを追加します。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [ &#47;win32res (&#40;C&#35;) コンパイラ オプション&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx)します。|
 
 ## <a name="related-articles"></a>関連記事
-
 
 |タイトル|説明|
 |-----|-----------|

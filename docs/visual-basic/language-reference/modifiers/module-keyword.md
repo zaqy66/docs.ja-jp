@@ -1,5 +1,5 @@
 ---
-title: モジュール&lt;キーワード&gt;(Visual Basic)
+title: Module&lt;キーワード&gt;(Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33595278"
 ---
-# <a name="module-ltkeywordgt-visual-basic"></a>モジュール&lt;キーワード&gt;(Visual Basic)
+# <a name="module-ltkeywordgt-visual-basic"></a>Module&lt;キーワード&gt;(Visual Basic)
 現在のアセンブリ モジュールにソース ファイルの先頭にある属性が適用されることを指定します。  
   
 ## <a name="remarks"></a>コメント  
@@ -23,7 +23,7 @@ ms.locfileid: "33595278"
   
  ソース ファイルの先頭に、属性ブロックを配置しを持つ属性を識別属性は、次の要素だけでなく、現在のアセンブリ モジュールを示し場合、`Module`キーワード。 使用するには、アセンブリ全体に適用する場合、[アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)キーワード。  
   
- `Module`修飾子と同じではない、[モジュール ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)です。  
+ `Module`修飾子と同じではない、[Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)です。  
   
 ## <a name="see-also"></a>関連項目  
  [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  

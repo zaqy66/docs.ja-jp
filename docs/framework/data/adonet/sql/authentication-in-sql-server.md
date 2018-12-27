@@ -2,12 +2,12 @@
 title: SQL Server での認証
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 8d7fcb149059c06b7875663e4df5272312121c87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0172259446724e0be85bd7ca2d15cf299db04e27
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521518"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613103"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server での認証
 SQL Server は、Windows 認証モードと混合モードの 2 つの認証モードをサポートしています。  
@@ -19,7 +19,7 @@ SQL Server は、Windows 認証モードと混合モードの 2 つの認証モ�
 > [!IMPORTANT]
 >  できるだけ Windows 認証を使用することをお勧めします。 Windows 認証では、暗号化された一連のメッセージを使用して SQL Server のユーザーを認証します。 SQL Server ログインを使用している場合、SQL Server のログイン名と暗号化されたパスワードが、安全性が低い、ネットワーク経由で渡されます。  
   
- Windows 認証では、既に Windows にログオンしているユーザーが別途 SQL Server にログオンする必要はありません。 次の `SqlConnection.ConnectionString` では、Windows 認証が指定されているため、ユーザー名もパスワードも不要です。  
+ Windows 認証では、既に Windows にログオンしているユーザーが別途 SQL Server にログオンする必要はありません。 次`SqlConnection.ConnectionString`ユーザー名またはパスワードを入力するユーザーを必要とせずに Windows 認証を指定します。  
   
 ```  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  

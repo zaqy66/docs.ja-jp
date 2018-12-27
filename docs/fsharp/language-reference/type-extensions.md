@@ -1,13 +1,13 @@
 ---
-title: 型拡張 (F#)
-description: F# 型の拡張機能が定義済みのオブジェクト型に新しいメンバーを追加するを許可する方法について説明します。
+title: 型拡張
+description: 学習方法F#型の拡張機能により、定義済みのオブジェクト型に新しいメンバーを追加します。
 ms.date: 07/20/2018
-ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43874980"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614064"
 ---
 # <a name="type-extensions"></a>型の拡張機能
 
@@ -78,7 +78,7 @@ type Variant with
 
 省略可能な型の拡張機能は、元のモジュール、名前空間、または拡張する型のアセンブリの外側に表示される拡張機能です。
 
-省略可能な型の拡張機能は、自分で定義していない種類の拡張に役立ちます。 例えば:
+省略可能な型の拡張機能は、自分で定義していない種類の拡張に役立ちます。 例:
 
 ```fsharp
 module Extensions
@@ -105,7 +105,7 @@ type IEnumerable<'T> with
 
 型の変数が制限されるジェネリック型の型の拡張機能を宣言することになります。 要件は、拡張機能の宣言の制約が宣言された型の制約と一致することです。
 
-ただし、宣言された型と型の拡張機能の間の制約に一致した場合でも、宣言された型よりも、型パラメーターに異なる要件を適用する拡張メンバーの本文で推測に、制約の可能なは。 例えば:
+ただし、宣言された型と型の拡張機能の間の制約に一致した場合でも、宣言された型よりも、型パラメーターに異なる要件を適用する拡張メンバーの本文で推測に、制約の可能なは。 例:
 
 ```fsharp
 open System.Collections.Generic
@@ -129,7 +129,7 @@ type IEnumerable<'T> with
 
 最後に、(「c# スタイル拡張メンバー」とも呼ばれます) の拡張メソッドは、クラスのプロセスのメンバーが静的メソッドとして F# で宣言できます。
 
-拡張メソッドは、型の変数を制約するジェネリック型で拡張を定義するときに役立ちます。 例えば:
+拡張メソッドは、型の変数を制約するジェネリック型で拡張を定義するときに役立ちます。 例:
 
 ```fsharp
 namespace Extensions

@@ -1,13 +1,13 @@
 ---
 title: 型プロバイダーのセキュリティ
-description: F# では、型プロバイダーの信頼設定を変更する方法などの型プロバイダーのセキュリティについて説明します。
+description: 型プロバイダーのセキュリティについてF#、型プロバイダーの信頼設定を変更する方法などです。
 ms.date: 05/16/2016
-ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861908"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611192"
 ---
 # <a name="type-provider-security"></a>型プロバイダーのセキュリティ
 

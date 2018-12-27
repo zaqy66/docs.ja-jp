@@ -1,13 +1,13 @@
 ---
-title: コンピュテーション式 (F#)
+title: コンピュテーション式
 description: 計算を作成するための便利な構文を作成する方法についてF#、制御できることがシーケンス処理されたと結合を使用してフローの作成とバインドします。
 ms.date: 07/27/2018
-ms.openlocfilehash: b1fee11f68e99e53d19b47bef9eca6298cce2f45
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169847"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610698"
 ---
 # <a name="computation-expressions"></a>コンピュテーション式
 

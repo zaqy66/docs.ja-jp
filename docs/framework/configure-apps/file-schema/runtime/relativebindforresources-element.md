@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae5d1ca6403d84c9828dcf9550e9fbf40b28e1b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1933fad8ea87351a56fcc7dd4a4fd67e890b58f5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752300"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613896"
 ---
 # <a name="ltrelativebindforresourcesgt-element"></a>&lt;relativeBindForResources&gt;要素
 サテライト アセンブリのプローブを最適化します。  
@@ -35,7 +35,7 @@ ms.locfileid: "32752300"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> 共通言語ランタイムが、サテライト アセンブリのプローブを最適化するかどうかを指定します。|  
+|`enabled`|必須の属性です。<br /><br /> 共通言語ランタイムがサテライト アセンブリのプローブを最適化するかどうかを指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
@@ -54,24 +54,24 @@ ms.locfileid: "32752300"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
-## <a name="remarks"></a>コメント  
- 一般に、リソース マネージャー プローブのリソースについては、『 の説明に従って、[パッケージと展開のリソース](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)トピックです。 つまり、リソース マネージャーは、特定のローカライズされたバージョンのリソースにプローブ、ときにその可能性があります、グローバル アセンブリ キャッシュ ファイルの場所、サテライト アセンブリのファイルの場所はアプリケーションのコード ベース、クエリ Windows インストーラーにカルチャ固有のフォルダーおよびを発生させる、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。 `<relativeBindForResources>`要素は、リソース マネージャーがサテライト アセンブリをプローブする方法を最適化します。 これにより、次の条件下でリソースの調査時にパフォーマンスが向上することができます。  
+## <a name="remarks"></a>Remarks  
+ 記載されているのリソースについては、Resource Manager が一般に、プローブ、 [Packaging and Deploying Resources](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)トピック。 つまり、リソース マネージャーは、リソースの特定のローカライズされたバージョンのプローブ、ときに、可能性があります、グローバル アセンブリ キャッシュ ファイルの場所、カルチャ固有のフォルダー、アプリケーションのコード ベース、クエリ Windows インストーラーでサテライト アセンブリでは、検索対象を発生させる、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。 `<relativeBindForResources>`要素は、Resource Manager がサテライト アセンブリをプローブする方法を最適化します。 次の条件下でリソースのプローブは、パフォーマンスを向上させることできます。  
   
--   サテライト アセンブリを展開する際、コードのアセンブリと同じ場所にします。 つまり、コードのアセンブリがグローバル アセンブリ キャッシュにインストールされている場合、サテライト アセンブリもインストールする必要があります。 コードのアセンブリがアプリケーションのコード ベースでインストールされている場合、サテライト アセンブリは、コード ベースのカルチャに固有のフォルダーにもインストールする必要があります。  
+-   ときに、サテライト アセンブリは、コード アセンブリと同じ場所にデプロイされます。 つまり、コード アセンブリがグローバル アセンブリ キャッシュにインストールする場合、サテライト アセンブリもインストールしなければなりませんがあります。 コード アセンブリは、アプリケーションのコード ベースでインストールする場合、コード ベースのカルチャ固有のフォルダーにもこのサテライト アセンブリをインストールする必要があります。  
   
--   Windows インストーラーが実行されていないまたはほとんど使用されないがサテライト アセンブリのオンデマンドでインストールします。  
+-   Windows インストーラーが実行されていないまたはほとんど使用されないサテライト アセンブリのオンデマンドでインストールします。  
   
 -   アプリケーション コードが処理しない場合、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。  
   
- 設定、`enabled`の属性、`<relativeBindForResources>`要素を`true`サテライト アセンブリのリソース マネージャーのプローブを次のように最適化されます。  
+ 設定、`enabled`の属性、`<relativeBindForResources>`要素を`true`サテライト アセンブリの次のように Resource Manager のプローブを最適化します。  
   
--   サテライト アセンブリを探すために、コードの親アセンブリの場所を使用します。  
+-   親コード アセンブリの場所を使って、サテライト アセンブリをプローブします。  
   
--   サテライト アセンブリの Windows インストーラーをクエリにはできません。  
+-   Windows インストーラーをサテライト アセンブリに照会しません。  
   
--   発生しない、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。  
+-   発生させない、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。  
   
 ## <a name="see-also"></a>関連項目  
- [リソースのパッケージ化と配置](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [リソースのパッケージ化と配置](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

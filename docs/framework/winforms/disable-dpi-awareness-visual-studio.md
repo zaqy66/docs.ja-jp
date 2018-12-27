@@ -1,17 +1,17 @@
 ---
 title: Visual Studio では、DPI の認識を無効にします。
 description: HDPI モニターは、Windows フォーム デザイナーと DPI に対応していないプロセスとして Visual Studio を実行する方法の制限事項について説明します。
-ms.date: 08/14/2018
+ms.date: 12/17/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151266"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655999"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio では、DPI の認識を無効にします。
 
@@ -29,7 +29,7 @@ Visual Studio 2017 15.8 でフォームを開くと、以降のバージョン�
 
 メッセージを読み取り**メイン ディスプレイのスケーリングを 200% (192 dpi) に設定します。デザイナー ウィンドウのレンダリングの問題があります。**
 
-場合は、デザイナーを使用していないし、フォームのレイアウトを調整する必要はありません、情報バーを無視し、コード エディターまたはデザイナーの他の種類では、作業を続行できます。 のみ、 **Windows フォーム デザイナー**が影響を受けます。 作業する必要がある場合、 **Windows フォーム デザイナー**、次のセクションでは[、問題を解決する](#to-resolve-the-problem)します。
+場合は、デザイナーを使用していないし、フォームのレイアウトを調整する必要はありません、情報バーを無視し、コード エディターまたはデザイナーの他の種類では、作業を続行できます。 (することもできます[通知を無効にする](#disable-notifications)情報バーが表示され続けるようにします)。のみ、 **Windows フォーム デザイナー**が影響を受けます。 作業する必要がある場合、 **Windows フォーム デザイナー**、次のセクションでは[、問題を解決する](#to-resolve-the-problem)します。
 
 ## <a name="to-resolve-the-problem"></a>この問題を解決するのには
 
@@ -68,6 +68,16 @@ Visual Studio は、レジストリを変更して DPI 対応としてマーク�
 100% に設定を Windows 10 にスケールイン ディスプレイを設定する入力**表示設定**タスク バー、クリックして [検索] ボックスに**表示設定を変更**します。 **設定**ウィンドウで、設定**テキスト、アプリ、およびその他のアイテムのサイズを変更**に**100%** します。
 
 100% に拡大縮小、表示を設定できない可能性があります、ため、使用するのには小さすぎてユーザー インターフェイスをことができます。
+
+## <a name="disable-notifications"></a>通知を無効にします。
+
+Visual Studio での問題のスケーリングの DPI 通知しないように選択できます。 たとえば、デザイナーでしていない場合は通知を無効にする場合があります。
+
+通知を無効にする次のように選択します。**ツール** > **オプション**を開く、**オプション**ダイアログ。 選択し、 **Windows フォーム デザイナー** > **全般**、設定と**DPI スケーリング通知**に**False**します。
+
+![DPI スケーリングに Visual Studio の通知オプション](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+
+スケールの通知を後で再度有効にする場合、プロパティを設定**True**します。
 
 ## <a name="troubleshoot"></a>トラブルシューティング
 

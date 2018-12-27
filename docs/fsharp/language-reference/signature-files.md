@@ -1,13 +1,13 @@
 ---
-title: シグネチャ ファイル (F#)
+title: シグネチャ ファイル
 description: F# 署名ファイルを使用して、型、名前空間、モジュールなど F# プログラム要素、一連のパブリック シグネチャに関する情報を保持する方法について説明します。
 ms.date: 06/15/2018
-ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991234"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613415"
 ---
 # <a name="signatures"></a>シグネチャ
 
@@ -29,6 +29,7 @@ ms.locfileid: "45991234"
 |---------|-----------|
 |`[<Sealed>]`|抽象メンバーを持たない型、または拡張する必要がない型の場合。|
 |`[<Interface>]`|インターフェイスである型の場合。|
+
 シグネチャと実装ファイルの宣言との間で属性が一致しない場合、コンパイラはエラーを生成します。
 
 キーワード `val` を使用して、値または関数値のシグネチャを作成します。 キーワード `type` は、型シグネチャを導入します。

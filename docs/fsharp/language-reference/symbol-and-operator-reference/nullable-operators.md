@@ -1,13 +1,13 @@
 ---
-title: Null 許容の演算子 (F#)
-description: F# プログラミング言語で利用できる null 許容の演算子について説明します。
+title: Null 許容の演算子
+description: 使用できる null 許容の演算子について説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b17c0de2d81a1ef88b31d833a49ff9e3f9d34e8d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44086284"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610594"
 ---
 # <a name="nullable-operators"></a>Null 許容の演算子
 
@@ -55,7 +55,7 @@ printfn "%f" (float nullableFloat)
 
 Null 許容のデータ フィールド、演算子などのクエリ`sumByNullable`クエリ式で使用するためも存在します。 Null 非許容の型のクエリ演算子は null 許容型を型と互換性のあるのため、null 許容型のデータ値を使用する場合は、適切なクエリ演算子の null 許容バージョンを使用する必要があります。 詳細については、次を参照してください。[クエリ式](../query-expressions.md)します。
 
-次の例では、F# クエリ式で null 許容の演算子の使用を示しています。 最初のクエリは、null 許容の演算子では; を使用せず、クエリを記述する方法を示しています。2 番目のクエリは、null 許容の演算子を使用する同等のクエリを示しています。 このサンプル コードを使用するデータベースを設定する方法など、完全なコンテキストを参照してください。[チュートリアル: 型プロバイダーを使用して SQL Database へのアクセス](../../tutorials/type-providers/accessing-a-sql-database.md)します。
+次の例では、F# クエリ式で null 許容の演算子の使用を示しています。 最初のクエリは、null 許容の演算子では; を使用せず、クエリを記述する方法を示しています。2 番目のクエリは、null 許容の演算子を使用する同等のクエリを示しています。 このサンプル コードを使用するデータベースを設定する方法など、完全なコンテキストを参照してください。[チュートリアル。型プロバイダーを使用した SQL Database へのアクセス](../../tutorials/type-providers/accessing-a-sql-database.md)します。
 
 ```fsharp
 open System

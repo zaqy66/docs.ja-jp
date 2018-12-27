@@ -1,13 +1,13 @@
 ---
-title: 静的に解決された型パラメーター (F#)
-description: F# を使用する方法を説明します。 静的に解決される型パラメーターは、実行時ではなく、コンパイル時に実際の型が置き換えられます。
+title: 静的に解決される型パラメーター
+description: 使用する方法について説明します、F#静的に解決される型パラメーターは、実行時ではなく、コンパイル時に実際の型が置き換えられます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9ad23a881e644dfe2bccd56fa04d3c219b51cf7d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48032778"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614091"
 ---
 # <a name="statically-resolved-type-parameters"></a>静的に解決される型パラメーター
 
@@ -57,7 +57,7 @@ when (^a or ^b) : (static member ( + ) : ^a * ^b -> ^d) and
 1.500000
 ```
 
-F# 4.1 以降では、静的に解決される型のパラメーター シグネチャで具体的な型名を指定することもできます。  言語の以前のバージョンでは、型名は、実際には、コンパイラによって推論でしたが、署名では実際には指定できません。  F# 4.1、時点で静的に解決される型のパラメーター シグネチャで具体的な型名を指定することも可能性があります。 次に例を示します。
+以降でF#4.1、静的に解決される型のパラメーター シグネチャで具体的な型名を指定することもできます。  言語の以前のバージョンでは、型名は、実際には、コンパイラによって推論でしたが、署名では実際には指定できません。  F# 4.1、静的に解決される型のパラメーター シグネチャで具体的な型名を指定することも可能性があります。 次に例を示します。
 
 ```fsharp
 let inline konst x _ = x

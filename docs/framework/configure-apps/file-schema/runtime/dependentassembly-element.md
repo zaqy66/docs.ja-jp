@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54036baee6fc2d7af49e818a1c112dec8eac80aa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b0d3bfb7e4db2fec39f37c9fb794731cdf5bbc
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744913"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613298"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt;要素
-各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。 1 つを使用して`dependentAssembly`各アセンブリの要素。  
+各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。 1 つを使用して、`dependentAssembly`各アセンブリの要素。  
   
  \<configuration>  
 \<ランタイム >  
@@ -44,9 +44,9 @@ ms.locfileid: "32744913"
 |要素|説明|  
 |-------------|-----------------|  
 |`assemblyIdentity`|アセンブリに関する識別情報が含まれています。 この要素は、それぞれに含める必要がある`dependentAssembly`要素。|  
-|`codeBase`|コンピューターにインストールされていない場合に、ランタイムでの共有アセンブリに検索できるを指定します。|  
+|`codeBase`|コンピューターにインストールされていない場合に、ランタイムで、共有アセンブリに見つけることができますを指定します。|  
 |`bindingRedirect`|1 つのアセンブリ バージョンを別のバージョンにリダイレクトします。|  
-|`publisherPolicy`|ランタイムがこのアセンブリに発行者ポリシーを適用するかどうかを指定します。|  
+|`publisherPolicy`|ランタイムがこのアセンブリの発行者ポリシーを適用するかどうかを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -81,6 +81,6 @@ ms.locfileid: "32744913"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

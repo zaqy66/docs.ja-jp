@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 535519c65aba7ce13703bb33a16b09cde84c3f03
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fc2c5fb906856365e901c27bfe6624375f1e0137
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836434"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613766"
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt;要素
 1 つのアセンブリ バージョンを別のバージョンにリダイレクトします。  
@@ -87,6 +87,6 @@ newVersion="new assembly version"/>
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
