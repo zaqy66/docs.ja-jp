@@ -1,17 +1,17 @@
 ---
-title: オプション (F#)
+title: オプション
 description: 名前付きの値または変数の場合、実際の値の型が存在しない F# オプションを使用する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: ebd1c1c39468594de83b3c2af1da48c277bfcbe1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46479521"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613506"
 ---
 # <a name="options"></a>オプション
 
-F# のオプションの種類は、名前付きの値または変数の実際の値が存在しないときに使用されます。 オプションは、その型の値を保持できる備え、基になる型または値がいない可能性があります。
+オプションの種類でF#名前付きの値または変数の実際の値が存在しない場合に使用されます。 オプションは、その型の値を保持できる備え、基になる型または値がいない可能性があります。
 
 ## <a name="remarks"></a>Remarks
 

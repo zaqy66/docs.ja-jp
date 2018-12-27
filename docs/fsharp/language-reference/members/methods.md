@@ -1,13 +1,13 @@
 ---
-title: メソッド (F#)
-description: F# メソッドは公開し、オブジェクトと型の動作と機能の実装に使用される型に関連付けられている関数、方法について説明します。
+title: メソッド
+description: 学習方法、F#メソッドは、公開し、オブジェクトと型の動作と機能の実装に使用される型に関連付けられている関数。
 ms.date: 05/16/2016
-ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44253209"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614026"
 ---
 # <a name="methods"></a>メソッド
 
@@ -97,11 +97,11 @@ override self-identifier.method-name parameter-list [ : return-type ] =
 
 ## <a name="overloaded-methods"></a>オーバーロードされたメソッド
 
-オーバー ロードされたメソッドは、特定の型で同じ名前があるが、異なる引数を指定する方法です。 F# で省略可能な引数は通常、オーバー ロードされたメソッドの代わりに使用します。 ただし、オーバー ロードされたメソッドは、されるとき、引数が、組形式いないカリー化された形式では、言語では、許可されます。
+オーバー ロードされたメソッドは、特定の型で同じ名前があるが、異なる引数を指定する方法です。 F#、省略可能な引数は、通常、オーバー ロードされたメソッドの代わりに使用します。 ただし、オーバー ロードされたメソッドは、されるとき、引数が、組形式いないカリー化された形式では、言語では、許可されます。
 
 ## <a name="optional-arguments"></a>省略可能な引数
 
-F# 4.1 以降では、メソッドのパラメーターの既定値と省略可能な引数もができます。  これは、c# コードとの相互運用の促進を支援します。  次の例では、構文を示しています。
+以降でF#4.1、メソッドで、既定パラメーター値は省略可能な引数を用意することもできます。  これは、c# コードとの相互運用の促進を支援します。  次の例では、構文を示しています。
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.
@@ -111,7 +111,7 @@ type C() =
 
 値が渡されたメモ`DefaultParameterValue`入力の型に一致する必要があります。  上記のサンプルでは、`int`します。  整数以外の値を渡そうとした`DefaultParameterValue`コンパイル エラーになります。
 
-## <a name="example-properties-and-methods"></a>例: プロパティとメソッド
+## <a name="example-properties-and-methods"></a>例:プロパティとメソッド
 
 次の例には、フィールド、プライベート関数、プロパティ、および静的メソッドの例を紹介する型が含まれています。
 

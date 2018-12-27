@@ -1,13 +1,13 @@
 ---
-title: アクセス制御 (F#)
+title: アクセス制御
 description: 型、メソッド、および F# のプログラミング言語で、関数などのプログラミング要素へのアクセスを制御する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 136eba5ec33fa6128e677b614fc0ace3c71d17df
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8db178b26f3beb6ce95bff84ccad9ac9e8c40ce7
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153710"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612811"
 ---
 # <a name="access-control"></a>アクセス制御
 

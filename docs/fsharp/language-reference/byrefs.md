@@ -1,17 +1,17 @@
 ---
-title: Byref (F#)
+title: Byref
 description: Byref と F# での低レベルのプログラミングに使用される byref のような種類について説明します。
 ms.date: 09/02/2018
-ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48836882"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611582"
 ---
 # <a name="byrefs"></a>Byref
 
-F# 低レベルのプログラミングの領域で処理する 2 つの主要な機能領域があります。
+F#低レベルのプログラミングの領域で処理する 2 つの主要な機能領域があります。
 
 * `byref` / `inref` / `outref`マネージ ポインターである型。 使用量に制限があるできるように、実行時に無効なプログラムをコンパイルすることはできません。
 * A `byref`-これは構造体のように、[構造](structures.md)のようなセマンティクスと同じコンパイル時の制限を持つ`byref<'T>`します。 1 つの例は、<xref:System.Span%601>します。
@@ -109,7 +109,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 C# のサポート、`in ref`と`out ref`に加えて、キーワード`ref`を返します。 次の表は、F# を解釈する方法と c# は出力を示しています。
 
-|コンス トラクター (C#)|F# は推測します。|
+|コンス トラクター (C#)|F#推論|
 |------------|---------|
 |`ref` 戻り値|`outref<'T>`|
 |`ref readonly` 戻り値|`inref<'T>`|
@@ -118,7 +118,7 @@ C# のサポート、`in ref`と`out ref`に加えて、キーワード`ref`を�
 
 次の表では、どのような F# は出力を示します。
 
-|F# の構成要素|生成されたコンス トラクター|
+|F#コンス トラクター|生成されたコンス トラクター|
 |------------|-----------------|
 |`inref<'T>` 引数|`[In]` 引数の属性|
 |`inref<'T>` 戻り値|`modreq` 値の属性|
@@ -133,7 +133,7 @@ C# のサポート、`in ref`と`out ref`に加えて、キーワード`ref`を�
 2. `this`変更可能なフィールドを持たない構造体の型のポインター。
 3. メモリの場所のアドレスが別の派生`inref<_>`ポインター。
 
-暗黙的なアドレスのとき、`inref`が行われている、型の引数とオーバー ロード`SomeType`型の引数とオーバー ロードに優先`inref<SomeType>`。 例えば:
+暗黙的なアドレスのとき、`inref`が行われている、型の引数とオーバー ロード`SomeType`型の引数とオーバー ロードに優先`inref<SomeType>`。 例:
 
 ```fsharp
 type C() =
@@ -178,7 +178,7 @@ A"`byref`のような"F# の構造体はスタック バインド値の型。 �
 
 ## <a name="byref-returns"></a>Byref 戻り値します。
 
-F# の関数からの byref 戻り値またはメンバーを生成および使用されることができます。 使用するときに、 `byref`-メソッドを返すには、値が暗黙的に逆参照します。 例えば:
+Byref 返しますF#関数またはメンバーを生成および使用されます。 使用するときに、 `byref`-メソッドを返すには、値が暗黙的に逆参照します。 例:
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

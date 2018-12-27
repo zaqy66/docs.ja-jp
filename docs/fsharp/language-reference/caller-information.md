@@ -1,13 +1,13 @@
 ---
-title: 呼び出し元情報 (F#)
+title: 呼び出し元情報
 description: 呼び出し元情報の引数属性を使用して、メソッドから呼び出し元情報を取得する方法について説明します。
 ms.date: 04/25/2017
-ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9c6b2a92a15e12d016a153b401f166c8fd1efe93
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216371"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613818"
 ---
 # <a name="caller-information"></a>呼び出し元情報
 
@@ -72,6 +72,6 @@ type Tracer() =
 
 ## <a name="see-also"></a>関連項目
 
-- [属性](attributes.md)  
-- [名前付き引数](parameters-and-arguments.md#named-arguments)  
-- [省略可能なパラメーター](parameters-and-arguments.md#optional-parameters)  
+- [属性](attributes.md)
+- [名前付き引数](parameters-and-arguments.md#named-arguments)
+- [省略可能なパラメーター](parameters-and-arguments.md#optional-parameters)

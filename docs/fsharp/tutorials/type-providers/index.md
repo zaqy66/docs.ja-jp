@@ -1,13 +1,13 @@
 ---
 title: 型プロバイダー
-description: F# 型プロバイダーの種類、プロパティ、およびプログラムで使用するためのメソッドを提供するコンポーネントの方法について説明します。
+description: 学習方法、F#型プロバイダーは、型、プロパティ、およびプログラムで使用するメソッドを提供するコンポーネント。
 ms.date: 04/02/2018
-ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 39000fd1ca2af78afd1c333816fe9d5c0e2517cb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46697764"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611634"
 ---
 # <a name="type-providers"></a>型プロバイダー
 
@@ -19,7 +19,7 @@ F# 型プロバイダーは、プログラムで使用する型、プロパテ�
 
 ## <a name="generative-and-erased-type-providers"></a>当初、消去型プロバイダー
 
-型プロバイダーには 2 つの形式: ジェネレーティブおよび消去します。
+型プロバイダーは 2 つの形式があります。当初と消去されます。
 
 当初の型プロバイダーは、生成されたアセンブリに .NET 型として書き込むことができる型を生成します。 これにより、他のアセンブリ内のコードから使用することができます。 意味、データ ソースの型指定された表現する必要があります一般に .NET 型で表現するは不可能である 1 つ。
 

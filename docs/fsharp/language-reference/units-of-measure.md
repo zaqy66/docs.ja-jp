@@ -1,17 +1,17 @@
 ---
-title: 測定単位 (F#)
+title: 測定単位
 description: どの浮動小数点をについて説明しますと F# の符号付き整数値には、測定単位を長さ、ボリューム、および大容量を示すために使用される通常を関連付けることができます。
 ms.date: 05/16/2016
-ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45972518"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610984"
 ---
 # <a name="units-of-measure"></a>測定単位
 
-F# の浮動小数点値と符号付き整数値を大量のボリュームの長さを示すために通常使用される、測定単位が関連付けられてことができます。 算術リレーションシップでは正しいユニットがあるを防ぐことができますを確認するコンパイラを有効にした数量の単位を使用してプログラミング エラーです。
+浮動小数点と整数値をサインインF#と長さ、ボリューム、質量などを示すために通常使用されるメジャーの単位を関連付けることができます。 算術リレーションシップでは正しいユニットがあるを防ぐことができますを確認するコンパイラを有効にした数量の単位を使用してプログラミング エラーです。
 
 ## <a name="syntax"></a>構文
 
@@ -113,7 +113,7 @@ That temperature in degrees Celsius is    32.22.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>F# コア ライブラリでの測定単位
+## <a name="units-of-measure-in-the-f-core-library"></a>測定単位、F#コア ライブラリ
 
 単体のライブラリが表示されます、`FSharp.Data.UnitSystems.SI`名前空間。 両方の形式のシンボルの SI 単位が含まれています (など`m`メーター) で、`UnitSymbols`サブ名前空間との完全名 (など`meter`メーター) で、`UnitNames`サブ名前空間。
 
