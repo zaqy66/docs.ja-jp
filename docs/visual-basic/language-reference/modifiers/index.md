@@ -25,7 +25,7 @@ ms.locfileid: "33600634"
   
  [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)  
   
- [既定値](../../../visual-basic/language-reference/modifiers/default.md)  
+ [default](../../../visual-basic/language-reference/modifiers/default.md)  
   
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
