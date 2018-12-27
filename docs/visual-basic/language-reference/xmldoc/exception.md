@@ -1,5 +1,5 @@
 ---
-title: '&lt;例外&gt;(Visual Basic)'
+title: '<exception>(Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <exception> XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/18/2018
 ms.locfileid: "45969497"
 ---
-# <a name="ltexceptiongt-visual-basic"></a>&lt;例外&gt;(Visual Basic)
+# <a name="ltexceptiongt-visual-basic"></a><exception>(Visual Basic)
 どの例外がスローされる可能性を指定します。  
   
 ## <a name="syntax"></a>構文  
