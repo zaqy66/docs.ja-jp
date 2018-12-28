@@ -1,15 +1,15 @@
 ---
-title: '明示的なフィールド: val キーワード (F#)'
-description: F# 'val' について、キーワード、型を初期化せず、クラスまたは構造体の型に値を格納する場所を宣言するために使用します。
+title: 明示的なフィールド:Val キーワード
+description: については、 F# 'val' キーワードは、型を初期化せず、クラスまたは構造体の型に値を格納する場所を宣言するために使用します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: HT
+ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45746385"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773628"
 ---
-# <a name="explicit-fields-the-val-keyword"></a>明示的なフィールド: val キーワード
+# <a name="explicit-fields-the-val-keyword"></a>明示的なフィールド:Val キーワード
 
 `val` キーワードを使用すると、クラス型または構造体型の値を格納する場所を初期化せずに宣言することができます。 この方法で宣言されている記憶域の場所が呼び出される*明示的なフィールド*します。 `val` キーワードの別の用途として、`member` キーワードと組み合わせて自動実装プロパティを宣言する方法があります。 自動実装プロパティの詳細については、次を参照してください。[プロパティ](properties.md)します。
 
@@ -64,6 +64,10 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 
 出力は `11 xyz`になります。
+
+**注意してください**、構造体を初期化しようとする場合は、`mutable`せずフィールド`mutable`の割り当てはキーワード、割り当ての直後に破棄される構造のコピーで動作します。 そのため、構造は変更されません。
+
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
 明示的なフィールドは日常的に使用するためのものではありません。 通常、可能な場合は、明示的なフィールドでなく、クラスで `let` バインディングを使用してください。 明示的なフィールドは、特定の相互運用のシナリオ (ネイティブ API に対するプラットフォーム呼び出しで使用される構造体を定義する必要がある場合など) や COM 相互運用のシナリオで役立ちます。 詳細については、次を参照してください。[外部関数](../functions/external-functions.md)します。 また、プライマリ コンストラクターを持たないクラスを生成する F# コード ジェネレーターを使用している場合にも、明示的なフィールドが必要になることがあります。 明示的なフィールドは、thread-static 変数や同様のコンストラクターでも役立ちます。 詳細については、「 `System.ThreadStaticAttribute` 」を参照してください。
 

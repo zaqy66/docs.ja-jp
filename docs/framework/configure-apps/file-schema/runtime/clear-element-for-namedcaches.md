@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 17043cdd4bcabf2e5e14c7b9c31b8c1747d2c866
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: dd521e3afa7584cadb28829028a5ecfd1cb55a92
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171947"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612304"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;オフ&gt;要素&lt;namedCaches&gt;
 すべてクリア`namedCache`内のエントリ、`namedCaches`メモリ キャッシュのコレクション。  
@@ -53,4 +53,4 @@ ms.locfileid: "47171947"
  `clear`要素がすべてクリア`namedCache`メモリ キャッシュの名前付きキャッシュのコレクション内のエントリ。 使用することができます、`clear`要素を使用する前に、`add`が他にないを特定するためには新しい名前付きキャッシュ エントリを追加する要素がコレクション内のキャッシュをという名前です。  
   
 ## <a name="see-also"></a>関連項目  
- [\<namedCaches > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
