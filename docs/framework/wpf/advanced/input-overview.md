@@ -435,7 +435,11 @@ tab キーで要素に移動したり、<xref:System.Windows.Controls.TextBox>�
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>マウスの位置
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の入力 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] は、座標空間に関する有益な情報を提供します。  たとえば、座標 `(0,0)` は左上の座標ですが、これはツリーのどの要素の左上でしょうか。 入力対象の要素でしょうか。 イベント ハンドラーを適用した要素でしょうか。 または、それ以外でしょうか。 混乱を防ぐため、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の入力 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] で、マウスを使って取得した座標を扱う場合は、座標系を指定する必要があります。 <xref:System.Windows.Input.Mouse.GetPosition%2A>メソッドは、指定された要素に対する相対的なマウス ポインターの座標を返します。
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の入力[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]は、座標空間に関する有益な情報を提供します。
+たとえば、座標 `(0,0)` は左上からの座標ですが、これはツリーのどの要素の左上でしょうか。
+入力対象の要素でしょうか。イベント ハンドラーを適用した要素でしょうか。または、それ以外でしょうか。
+混乱を防ぐため、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の入力[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]でマウスを使って取得した座標を扱う場合は、座標系を指定する必要があります。
+<xref:System.Windows.Input.Mouse.GetPosition%2A>メソッドは、マウス ポインターの指定された要素に対する相対的な座標を返します。
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>マウス キャプチャ
