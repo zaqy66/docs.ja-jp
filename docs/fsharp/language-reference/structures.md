@@ -1,13 +1,13 @@
 ---
-title: 構造体 (F#)
-description: F# 構造、多くの場合、コンパクトなオブジェクト型について説明しますと少量のデータと動作が単純な型のクラスよりも効率的です。
+title: 構造体
+description: について、F#構造体、多くの場合、コンパクトなオブジェクト型で少量のデータと動作が単純な型のクラスよりも効率的です。
 ms.date: 05/16/2016
-ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48845301"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612154"
 ---
 # <a name="structures"></a>構造体
 
@@ -40,7 +40,7 @@ type [accessibility-modifier] type-name =
 
 構造体では `let` バインディングは使用できないため、`val` キーワードを使用して構造体のフィールドを宣言する必要があります。 `val` キーワードではフィールドとその型が定義されますが、初期化は実行できません。 代わりに、`val` 宣言がゼロまたは null に初期化されます。 このため、暗黙のコンストラクター (宣言で構造体名の直後に指定されるパラメーター) を含む構造体では、`val` 宣言に `DefaultValue` 属性で注釈を付ける必要があります。 定義されたコンストラクターを含む構造体でも、ゼロ初期化がサポートされます。 したがって、`DefaultValue` 属性は、このようなゼロ値がフィールドに対して有効であることの宣言になります。 構造体の暗黙的なコンストラクターでは動作は実行されません。これは、`let` バインディングと `do` バインディングがその型では許可されていないためですが、渡された暗黙のコンストラクターのパラメーター値はプライベート フィールドとして使用できます。
 
-明示的なコンストラクターにフィールド値の初期化が含まれる場合があります。 明示的なコンストラクターを含む構造体がある場合も、ゼロ初期化がサポートされます。ただし、明示的なコンストラクターと競合するため、`DefaultValue` 宣言では `val` 属性を使用しません。 詳細については`val`宣言を参照してください[明示的なフィールド:`val`キーワード](members/explicit-fields-the-val-keyword.md)します。
+明示的なコンストラクターにフィールド値の初期化が含まれる場合があります。 明示的なコンストラクターを含む構造体がある場合も、ゼロ初期化がサポートされます。ただし、明示的なコンストラクターと競合するため、`DefaultValue` 宣言では `val` 属性を使用しません。 詳細については`val`宣言を参照してください[明示的なフィールド。`val`キーワード](members/explicit-fields-the-val-keyword.md)します。
 
 構造体では属性およびアクセシビリティ修飾子が許可されており、その他の型と同じ規則に従います。 詳細については、次を参照してください。[属性](attributes.md)と[アクセス制御](access-control.md)します。
 
@@ -75,7 +75,7 @@ A"`byref`のような"F# の構造体はスタック バインド値の型。 �
 
 ## <a name="readonly-structs"></a>読み取り専用の構造体
 
-構造体での注釈を付けることができます、<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute>属性。 例えば:
+構造体での注釈を付けることができます、<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute>属性。 例:
 
 ```fsharp
 [<IsReadOnly; Struct>]
