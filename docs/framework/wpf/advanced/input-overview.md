@@ -99,36 +99,52 @@ ms.locfileid: "48842789"
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>入力イベントの処理
- 要素で入力を受け取るには、イベント ハンドラーをその特定のイベントに関連付ける必要があります。  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では、これは簡単です。イベントの名前を、このイベントをリッスンする要素の属性として参照します。  次に、属性の値を、デリゲートに基づいて、定義するイベント ハンドラーの名前に設定します。  イベント ハンドラーでは、c# などのコードで記述する必要があり、分離コード ファイルに含めることができます。
+要素で入力を受け取るには、イベント ハンドラーをその特定のイベントに関連付ける必要があります。
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使えば、これは簡単です。
+このイベントをリッスンする要素の属性としてイベントの名前を参照します。
+次に、デリゲートに基づいて定義したイベント ハンドラーの名前を属性の値として設定します。
+イベント ハンドラーは、C# などのコードで記述する必要があり、コード ビハインド ファイルに含めることができます。
 
- キーボード イベントは、キーボード フォーカスが要素上にある状態で、オペレーティング システムがキー操作を報告すると発生します。 マウス イベントとスタイラス イベントはそれぞれ、要素に関連するポインター位置の変更を報告するイベントと、デバイス ボタンの状態の変更を報告するイベントの 2 つのカテゴリに分類されます。
+キーボード イベントは、キーボード フォーカスが要素上にある状態で、オペレーティング システムがキー操作を報告すると発生します。
+マウス イベントとスタイラス イベントはそれぞれ、要素との相対的なポインター位置の変化を報告するイベントと、
+ボタンの状態の変更を報告するイベントの 2 つのカテゴリに分類されます。
 
 ### <a name="keyboard-input-event-example"></a>キーボード入力イベントの例
- 左方向キーが押されるのをリッスンする例を次に示します。  A<xref:System.Windows.Controls.StackPanel>が作成されますが、<xref:System.Windows.Controls.Button>します。  左矢印キーを押すに接続されているをリッスンするようにイベント ハンドラー、<xref:System.Windows.Controls.Button>インスタンス。
+次の例では、左方向キーが押下されるのをリッスンします。
+<xref:System.Windows.Controls.Button>を含む<xref:System.Windows.Controls.StackPanel>が作成されます。
+左矢印キーの押下をリッスンするイベント ハンドラーは、<xref:System.Windows.Controls.Button>インスタンスに関連付けられます。
 
- 例では、最初のセクションを作成、<xref:System.Windows.Controls.StackPanel>と<xref:System.Windows.Controls.Button>のイベント ハンドラーをアタッチし、 <xref:System.Windows.UIElement.KeyDown>。
+例の最初のセクションでは、<xref:System.Windows.Controls.StackPanel>と<xref:System.Windows.Controls.Button>を作成し、
+<xref:System.Windows.UIElement.KeyDown>のイベント ハンドラーをアタッチしています。
 
  [!code-xaml[InputOvw#Input_OvwKeyboardExampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwkeyboardexamplexaml)]
 
  [!code-csharp[InputOvw#Input_OvwKeyboardExampleUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexampleuicodebehind)]
  [!code-vb[InputOvw#Input_OvwKeyboardExampleUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexampleuicodebehind)]
 
- 2 番目のセクションは、コード内に記述され、イベント ハンドラーを定義しています。  左方向キーが押されたときに、<xref:System.Windows.Controls.Button>キーボード フォーカス、ハンドラーが実行され、<xref:System.Windows.Controls.Control.Background%2A>の色、<xref:System.Windows.Controls.Button>が変更されました。  キーが押されたが、左矢印キーでない場合、<xref:System.Windows.Controls.Control.Background%2A>の色、<xref:System.Windows.Controls.Button>は元の開始色に変更します。
+2番目のセクションはコード内に記述され、イベント ハンドラーを定義しています。
+左方向キーが押下されたときに<xref:System.Windows.Controls.Button>がキーボード フォーカスを持っていれば、
+イベント ハンドラーが実行され、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色が変更されます。
+左矢印キー以外のキーが押下された場合、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色は元に戻されます。
 
  [!code-csharp[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexamplehandlercodebehind)]
  [!code-vb[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexamplehandlercodebehind)]
 
 ### <a name="mouse-input-event-example"></a>マウス入力イベントの例
- 次の例では、<xref:System.Windows.Controls.Control.Background%2A>の色、<xref:System.Windows.Controls.Button>マウス ポインターが入ったときに、 <xref:System.Windows.Controls.Button>。  <xref:System.Windows.Controls.Control.Background%2A>色が元に、マウスが離れるときに、<xref:System.Windows.Controls.Button>します。
+次の例では、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色は、
+マウス ポインターが<xref:System.Windows.Controls.Button>に入ったときに変更され、マウス ポインターが離れるときに元に戻されます。
 
- 例では、最初のセクションを作成、<xref:System.Windows.Controls.StackPanel>と<xref:System.Windows.Controls.Button>制御し、のイベント ハンドラーをアタッチします、<xref:System.Windows.UIElement.MouseEnter>と<xref:System.Windows.UIElement.MouseLeave>イベントを<xref:System.Windows.Controls.Button>します。
+例の最初のセクションでは、<xref:System.Windows.Controls.StackPanel>と<xref:System.Windows.Controls.Button>を作成し、
+<xref:System.Windows.UIElement.MouseEnter>と<xref:System.Windows.UIElement.MouseLeave>イベントのイベント ハンドラーを<xref:System.Windows.Controls.Button>にアタッチします。
 
  [!code-xaml[InputOvw#Input_OvwMouseExampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwmouseexamplexaml)]
 
  [!code-csharp[InputOvw#Input_OvwMouseExampleUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleuicodebehind)]
  [!code-vb[InputOvw#Input_OvwMouseExampleUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleuicodebehind)]
 
- この例の 2 番目のセクションは、コード内に記述され、イベント ハンドラーを定義しています。  マウスに入ったとき、 <xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.Control.Background%2A>の色、<xref:System.Windows.Controls.Button>に変更が<xref:System.Windows.Media.Brushes.SlateGray%2A>します。  マウスから離したときに、 <xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.Control.Background%2A>の色、<xref:System.Windows.Controls.Button>は<xref:System.Windows.Media.Brushes.AliceBlue%2A>します。
+例の2番目のセクションはコード内に記述され、イベント ハンドラーを定義しています。
+マウスが<xref:System.Windows.Controls.Button>に入ったとき、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色は<xref:System.Windows.Media.Brushes.SlateGray%2A>に変更されます。
+マウスが離れたとき、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色は、<xref:System.Windows.Media.Brushes.AliceBlue%2A>に戻されます。
 
  [!code-csharp[InputOvw#Input_OvwMouseExampleEneterHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleeneterhandler)]
  [!code-vb[InputOvw#Input_OvwMouseExampleEneterHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleeneterhandler)]
@@ -138,29 +154,47 @@ ms.locfileid: "48842789"
 
 <a name="text_input"></a>
 ## <a name="text-input"></a>テキスト入力
- <xref:System.Windows.ContentElement.TextInput>イベントでは、デバイスに依存しない方法でテキスト入力をリッスンすることができます。 テキスト入力の主要な手段はキーボードですが、音声認識、手書き入力、およびその他の入力デバイスでもテキスト入力を生成できます。
+<xref:System.Windows.ContentElement.TextInput>イベントでは、デバイスに依存しない方法でテキスト入力をリッスンすることができます。
+テキスト入力の主な手段はキーボードですが、音声認識、手書き入力、その他の入力デバイスでもテキストを入力できます。
 
- キーボード入力の場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]まずを送信して、適切な<xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp>イベント。 これらのイベントが処理されないと、キーが (方向矢印などのコントロール キー) または関数のキーではなくテキストである場合、<xref:System.Windows.ContentElement.TextInput>イベントが発生します。  常に間の単純な 1 対 1 マッピングがない<xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp>と<xref:System.Windows.ContentElement.TextInput>イベントのため、複数のキーストロークがテキスト入力の 1 つの文字を生成し、単一のキーストロークで複数の文字を生成できます文字列。  これは、[!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)] を使用して多くの文字をそれぞれの対応するアルファベットで生成する、中国語、日本語、韓国語のような言語の場合に、特に当てはまります。
+キーボード入力の場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、
+まず適切な<xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp>イベントを発生させます。
+これらのイベントが処理されず、かつキーが方向キーやファンクション キーなどではなくテキストである場合、
+<xref:System.Windows.ContentElement.TextInput>イベントが発生します。
+<xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp>と<xref:System.Windows.ContentElement.TextInput>イベントの間には、常に単純な1対1のマッピングがあるわけではありません。
+複数のキーストロークが1つの文字を入力したり、単一のキーストロークで複数の文字から成る文字列を入力したりできるからです。
+これは、中国語、日本語、韓国語のように、[!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)]を使用して幾千の文字をローマ字入力するような言語の場合に特に当てはまります。
 
- ときに[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]送信、 <xref:System.Windows.ContentElement.KeyUp> / <xref:System.Windows.ContentElement.KeyDown>イベント、<xref:System.Windows.Input.KeyEventArgs.Key%2A>に設定されている<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>場合は、キーストロークがの一部になる可能性があります、<xref:System.Windows.ContentElement.TextInput>イベント (ALT + S が押された場合、たとえば)。 これにより、コードで、<xref:System.Windows.ContentElement.KeyDown>をチェックするイベント ハンドラー<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>し見つかると、以降に発生のハンドラーの処理のままの場合は、<xref:System.Windows.ContentElement.TextInput>イベント。 これらの場合のさまざまなプロパティ、<xref:System.Windows.Input.TextCompositionEventArgs>引数を使用してを元のキーストロークを確認できます。 同様に場合、[!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)]アクティブになっている<xref:System.Windows.Input.Key>の値を持つ<xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>と<xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A>元のキーストロークやキーストロークを提供します。
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]が
+<xref:System.Windows.ContentElement.KeyUp> / <xref:System.Windows.ContentElement.KeyDown>イベントを送信する時、
+キーストロークが<xref:System.Windows.ContentElement.TextInput>イベントの一部になる可能性がある場合(例えばALT + S が押された場合)には、
+<xref:System.Windows.Input.KeyEventArgs.Key%2A>を<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>に設定します。
+これにより、コードで、<xref:System.Windows.ContentElement.KeyDown>をチェックするイベント ハンドラー<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>し見つかると、以降に発生のハンドラーの処理のままの場合は、<xref:System.Windows.ContentElement.TextInput>イベント。 これらの場合のさまざまなプロパティ、<xref:System.Windows.Input.TextCompositionEventArgs>引数を使用してを元のキーストロークを確認できます。 同様に場合、[!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)]アクティブになっている<xref:System.Windows.Input.Key>の値を持つ<xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>と<xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A>元のキーストロークやキーストロークを提供します。
 
- 次の例のハンドラーを定義する、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントとハンドラーを<xref:System.Windows.UIElement.KeyDown>イベント。
+ 次の例では、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントと<xref:System.Windows.UIElement.KeyDown>イベントのイベント ハンドラーを定義しています。
 
- コードまたはマークアップの最初のセグメントでは、ユーザー インターフェイスを作成します。
+ 最初のセクションでは、ユーザー インターフェイスを作成します。
 
  [!code-xaml[InputOvw#Input_OvwTextInputXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwtextinputxaml)]
 
  [!code-csharp[InputOvw#Input_OvwTextInputUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputuicodebehind)]
  [!code-vb[InputOvw#Input_OvwTextInputUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputuicodebehind)]
 
- コードの 2 つ目のセグメントには、イベント ハンドラーが含まれています。
+ 次のセクションには、イベント ハンドラーが含まれています。
 
  [!code-csharp[InputOvw#Input_OvwTextInputHandlersCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputhandlerscodebehind)]
  [!code-vb[InputOvw#Input_OvwTextInputHandlersCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputhandlerscodebehind)]
 
- 入力イベントのバブル イベントのルーティングのため、<xref:System.Windows.Controls.StackPanel>のどの要素に関係なくキーボード フォーカスがある入力を受け取ります。 <xref:System.Windows.Controls.TextBox>コントロールが最初に通知し、`OnTextInputKeyDown`場合にのみ、ハンドラーが呼び出されます、<xref:System.Windows.Controls.TextBox>入力を処理できませんでした。 場合、<xref:System.Windows.UIElement.PreviewKeyDown>イベントは、の代わりに使用、 <xref:System.Windows.UIElement.KeyDown> 、イベント、`OnTextInputKeyDown`ハンドラーが最初に呼び出されます。
+入力イベントはイベントのルートをバブルアップするため、
+<xref:System.Windows.Controls.StackPanel>は要素がキーボード フォーカスを持っているかどうかに関係なく入力を受け取ります。
+<xref:System.Windows.Controls.TextBox>コントロールが最初に通知を受け取り、
+<xref:System.Windows.Controls.TextBox>が入力を処理しなかった場合にのみ`OnTextInputKeyDown`ハンドラーが呼び出されます。
+<xref:System.Windows.UIElement.PreviewKeyDown>イベントが<xref:System.Windows.UIElement.KeyDown>イベントの代わりに使用された場合、
+`OnTextInputKeyDown`ハンドラーが最初に呼び出されます。
 
- この例では、Ctrl + O キー操作とボタンのクリック イベントの、2 回の処理ロジックが記述されています。 これは、入力イベントを直接処理するのではなく、コマンドを使用すると、簡略化できる場合があります。  コマンドについては、この概要と「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」で説明されています。
+この例では、Ctrl + O キー操作とボタンのクリック イベントの2つの部分に、同じ処理ロジックが記述されています。
+これは、入力イベントを直接処理する代わりにコマンドを使用すると、簡略化することができます。
+コマンドについては、この概要と「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」で説明されています。
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>タッチおよび操作
