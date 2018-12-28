@@ -371,16 +371,32 @@ ms.locfileid: "48842789"
 
 <a name="focus"></a>
 ## <a name="focus"></a>フォーカス
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、フォーカスに関してキーボード フォーカスと論理フォーカスという 2 つの主要な概念があります。
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、
+フォーカスに関して、キーボード フォーカスと論理フォーカスという2つの主要な概念があります。
 
 ### <a name="keyboard-focus"></a>キーボード フォーカス
- キーボード フォーカスは、キーボード入力を受け取っている要素を参照しています。  キーボード フォーカスを持つ要素は、デスクトップ全体で 1 つしかありません。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、キーボード フォーカスを持つ要素が必要があります<xref:System.Windows.IInputElement.IsKeyboardFocused%2A>設定`true`します。  静的な<xref:System.Windows.Input.Keyboard>メソッド<xref:System.Windows.Input.Keyboard.FocusedElement%2A>現在キーボード フォーカスがある要素を返します。
+キーボード フォーカスは、キーボード入力を受け取っている要素を参照しています。
+キーボード フォーカスを持つ要素は、デスクトップ全体で1つしかありません。
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、
+キーボード フォーカスを持つ要素の<xref:System.Windows.IInputElement.IsKeyboardFocused%2A>は`true`に設定されます。
+<xref:System.Windows.Input.Keyboard>クラスの静的メソッド<xref:System.Windows.Input.Keyboard.FocusedElement%2A>は、
+現在キーボード フォーカスがある要素を返します。
 
- 要素に tab キーをなど、特定の要素上にマウス ポインターをクリックするか、キーボード フォーカスを取得できます、<xref:System.Windows.Controls.TextBox>します。  キーボード フォーカスを使用してプログラムで取得することもできます、<xref:System.Windows.Input.Keyboard.Focus%2A>メソッドを<xref:System.Windows.Input.Keyboard>クラス。  <xref:System.Windows.Input.Keyboard.Focus%2A> 指定された要素のキーボード フォーカスを試行します。  によって返される要素<xref:System.Windows.Input.Keyboard.Focus%2A>は現在キーボード フォーカスがある要素です。
+tab キーで要素に移動したり、<xref:System.Windows.Controls.TextBox>など特定の要素上でマウスをクリックしたりすることで、
+キーボード フォーカスを取得できます。
+また、<xref:System.Windows.Input.Keyboard>クラスの<xref:System.Windows.Input.Keyboard.Focus%2A>メソッドを使用して、
+プログラムでキーボード フォーカスを取得することもできます。
+<xref:System.Windows.Input.Keyboard.Focus%2A>メソッドは、指定された要素にキーボード フォーカスを与えようとします。
+<xref:System.Windows.Input.Keyboard.Focus%2A>の返す要素が、現在キーボード フォーカスを持つ要素です。
 
- 要素にキーボード フォーカスを取得するために、<xref:System.Windows.UIElement.Focusable%2A>プロパティおよび<xref:System.Windows.UIElement.IsVisible%2A>にプロパティを設定する必要があります**true**します。  などのいくつかのクラス<xref:System.Windows.Controls.Panel>が<xref:System.Windows.UIElement.Focusable%2A>設定`false`既定ではそのため、必要に応じてこのプロパティを設定する`true`する場合はその要素にフォーカスを取得できるようにします。
+要素にキーボード フォーカスを設定するために、<xref:System.Windows.UIElement.Focusable%2A>プロパティ
+および<xref:System.Windows.UIElement.IsVisible%2A>プロパティは**true**に設定しておく必要があります。
+<xref:System.Windows.Controls.Panel>などのいくつかのクラスでは、
+<xref:System.Windows.UIElement.Focusable%2A>がデフォルトで`false`に設定されているため、
+その要素にフォーカスを設定したい場合は`true`に設定する必要があります。
 
- 次の例では<xref:System.Windows.Input.Keyboard.Focus%2A>にキーボード フォーカスを設定する、<xref:System.Windows.Controls.Button>します。  アプリケーションで初期フォーカスを設定する推奨場所は、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラー。
+次の例では<xref:System.Windows.Controls.Button>にキーボード フォーカスを設定するために<xref:System.Windows.Input.Keyboard.Focus%2A>使用します。
+アプリケーションの初期フォーカスを設定する推奨場所は、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラーです。
 
  [!code-csharp[focussample#FocusSampleSetFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
  [!code-vb[focussample#FocusSampleSetFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]
