@@ -1,13 +1,13 @@
 ---
-title: リテラル (F#)
+title: リテラル
 description: リテラルの型について説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a531cd63c5a4dc1123834d481fc998216b0d82d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dfc02f0ff8ac3ad8600be5f3b6c9359f02bd25be
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131340"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612453"
 ---
 # <a name="literals"></a>リテラル
 

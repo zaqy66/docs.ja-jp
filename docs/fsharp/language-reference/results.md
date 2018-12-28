@@ -1,17 +1,17 @@
 ---
-title: 結果 (F#)
-description: F# の '発生' 型を使用して、エラー トレラントなコードを作成できるようにする方法について説明します。
+title: 結果
+description: 使用する方法について説明します、 F# 'Result' の入力エラー トレラントなコードを作成できるようにします。
 ms.date: 04/24/2017
-ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44213041"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612713"
 ---
 # <a name="results"></a>結果
 
-F# 4.1 以降では、ある、`Result<'T,'TFailure>`できるエラー トレラントのコードを書くために使用できる型。
+以降でF#4.1 は、`Result<'T,'TFailure>`できるエラー トレラントのコードを書くために使用できる型。
 
 ## <a name="syntax"></a>構文
 
