@@ -10,79 +10,79 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0faf2876680ef5ec3fc7373cae9f81eb091f47a1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e371f45286c88c9136b869e750009dadeb261877
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753971"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612258"
 ---
-# <a name="lttimespanlegacyformatmodegt-element"></a><span data-ttu-id="7fba7-102">&lt;TimeSpan_LegacyFormatMode&gt;要素</span><span class="sxs-lookup"><span data-stu-id="7fba7-102">&lt;TimeSpan_LegacyFormatMode&gt; Element</span></span>
-<span data-ttu-id="7fba7-103">ランタイムが書式設定の操作での従来の動作を保持するかどうかを判断<xref:System.TimeSpan?displayProperty=nameWithType>値。</span><span class="sxs-lookup"><span data-stu-id="7fba7-103">Determines whether the runtime preserves legacy behavior in formatting operations with <xref:System.TimeSpan?displayProperty=nameWithType> values.</span></span>  
+# <a name="lttimespanlegacyformatmodegt-element"></a><span data-ttu-id="ef40e-102">&lt;TimeSpan_LegacyFormatMode&gt;要素</span><span class="sxs-lookup"><span data-stu-id="ef40e-102">&lt;TimeSpan_LegacyFormatMode&gt; Element</span></span>
+<span data-ttu-id="ef40e-103">ランタイムが書式設定の操作で従来の動作を保持するかどうかを判断します<xref:System.TimeSpan?displayProperty=nameWithType>値。</span><span class="sxs-lookup"><span data-stu-id="ef40e-103">Determines whether the runtime preserves legacy behavior in formatting operations with <xref:System.TimeSpan?displayProperty=nameWithType> values.</span></span>  
   
- <span data-ttu-id="7fba7-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7fba7-104">\<configuration></span></span>  
-<span data-ttu-id="7fba7-105">\<ランタイム ></span><span class="sxs-lookup"><span data-stu-id="7fba7-105">\<runtime></span></span>  
-<span data-ttu-id="7fba7-106">< TimeSpan_LegacyFormatMode ></span><span class="sxs-lookup"><span data-stu-id="7fba7-106"><TimeSpan_LegacyFormatMode></span></span>  
+ <span data-ttu-id="ef40e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ef40e-104">\<configuration></span></span>  
+<span data-ttu-id="ef40e-105">\<ランタイム ></span><span class="sxs-lookup"><span data-stu-id="ef40e-105">\<runtime></span></span>  
+<span data-ttu-id="ef40e-106">< TimeSpan_LegacyFormatMode ></span><span class="sxs-lookup"><span data-stu-id="ef40e-106"><TimeSpan_LegacyFormatMode></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7fba7-107">構文</span><span class="sxs-lookup"><span data-stu-id="7fba7-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef40e-107">構文</span><span class="sxs-lookup"><span data-stu-id="ef40e-107">Syntax</span></span>  
   
 ```xml  
 <TimeSpan_LegacyFormatMode    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7fba7-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="7fba7-108">Attributes and Elements</span></span>  
- <span data-ttu-id="7fba7-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="7fba7-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ef40e-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="ef40e-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ef40e-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="ef40e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7fba7-110">属性</span><span class="sxs-lookup"><span data-stu-id="7fba7-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ef40e-110">属性</span><span class="sxs-lookup"><span data-stu-id="ef40e-110">Attributes</span></span>  
   
-|<span data-ttu-id="7fba7-111">属性</span><span class="sxs-lookup"><span data-stu-id="7fba7-111">Attribute</span></span>|<span data-ttu-id="7fba7-112">説明</span><span class="sxs-lookup"><span data-stu-id="7fba7-112">Description</span></span>|  
+|<span data-ttu-id="ef40e-111">属性</span><span class="sxs-lookup"><span data-stu-id="ef40e-111">Attribute</span></span>|<span data-ttu-id="ef40e-112">説明</span><span class="sxs-lookup"><span data-stu-id="ef40e-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="7fba7-113">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="7fba7-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="7fba7-114">ランタイムと従来の書式設定動作を使用しているかどうかを示す<xref:System.TimeSpan?displayProperty=nameWithType>値。</span><span class="sxs-lookup"><span data-stu-id="7fba7-114">Specifies whether the runtime uses legacy formatting behavior with <xref:System.TimeSpan?displayProperty=nameWithType> values.</span></span>|  
+|`enabled`|<span data-ttu-id="ef40e-113">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="ef40e-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="ef40e-114">ランタイムがで従来の書式設定動作を使用しているかどうかを指定します。<xref:System.TimeSpan?displayProperty=nameWithType>値。</span><span class="sxs-lookup"><span data-stu-id="ef40e-114">Specifies whether the runtime uses legacy formatting behavior with <xref:System.TimeSpan?displayProperty=nameWithType> values.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="7fba7-115">enabled 属性</span><span class="sxs-lookup"><span data-stu-id="7fba7-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="ef40e-115">enabled 属性</span><span class="sxs-lookup"><span data-stu-id="ef40e-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="7fba7-116">値</span><span class="sxs-lookup"><span data-stu-id="7fba7-116">Value</span></span>|<span data-ttu-id="7fba7-117">説明</span><span class="sxs-lookup"><span data-stu-id="7fba7-117">Description</span></span>|  
+|<span data-ttu-id="ef40e-116">値</span><span class="sxs-lookup"><span data-stu-id="ef40e-116">Value</span></span>|<span data-ttu-id="ef40e-117">説明</span><span class="sxs-lookup"><span data-stu-id="ef40e-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="7fba7-118">ランタイムは、従来の書式設定動作を復元できません。</span><span class="sxs-lookup"><span data-stu-id="7fba7-118">The runtime does not restore legacy formatting behavior.</span></span>|  
-|`true`|<span data-ttu-id="7fba7-119">ランタイムは、従来の書式設定動作を復元します。</span><span class="sxs-lookup"><span data-stu-id="7fba7-119">The runtime restores legacy formatting behavior.</span></span>|  
+|`false`|<span data-ttu-id="ef40e-118">ランタイムは、従来の書式設定動作を復元できません。</span><span class="sxs-lookup"><span data-stu-id="ef40e-118">The runtime does not restore legacy formatting behavior.</span></span>|  
+|`true`|<span data-ttu-id="ef40e-119">ランタイムは、従来の書式設定動作を復元します。</span><span class="sxs-lookup"><span data-stu-id="ef40e-119">The runtime restores legacy formatting behavior.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="7fba7-120">子要素</span><span class="sxs-lookup"><span data-stu-id="7fba7-120">Child Elements</span></span>  
- <span data-ttu-id="7fba7-121">なし。</span><span class="sxs-lookup"><span data-stu-id="7fba7-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ef40e-120">子要素</span><span class="sxs-lookup"><span data-stu-id="ef40e-120">Child Elements</span></span>  
+ <span data-ttu-id="ef40e-121">なし。</span><span class="sxs-lookup"><span data-stu-id="ef40e-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="7fba7-122">親要素</span><span class="sxs-lookup"><span data-stu-id="7fba7-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ef40e-122">親要素</span><span class="sxs-lookup"><span data-stu-id="ef40e-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="7fba7-123">要素</span><span class="sxs-lookup"><span data-stu-id="7fba7-123">Element</span></span>|<span data-ttu-id="7fba7-124">説明</span><span class="sxs-lookup"><span data-stu-id="7fba7-124">Description</span></span>|  
+|<span data-ttu-id="ef40e-123">要素</span><span class="sxs-lookup"><span data-stu-id="ef40e-123">Element</span></span>|<span data-ttu-id="ef40e-124">説明</span><span class="sxs-lookup"><span data-stu-id="ef40e-124">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="7fba7-125">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="7fba7-125">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="7fba7-126">ランタイム初期化オプションに関する情報を含んでいます。</span><span class="sxs-lookup"><span data-stu-id="7fba7-126">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="ef40e-125">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="ef40e-125">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="ef40e-126">ランタイム初期化オプションに関する情報を含んでいます。</span><span class="sxs-lookup"><span data-stu-id="ef40e-126">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7fba7-127">コメント</span><span class="sxs-lookup"><span data-stu-id="7fba7-127">Remarks</span></span>  
- <span data-ttu-id="7fba7-128">以降で、 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、 <xref:System.TimeSpan?displayProperty=nameWithType> implements 構造体、<xref:System.IFormattable>インターフェイスと書式設定の標準およびカスタムの書式指定文字列の操作をサポートしています。</span><span class="sxs-lookup"><span data-stu-id="7fba7-128">Starting with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], the <xref:System.TimeSpan?displayProperty=nameWithType> structure implements the <xref:System.IFormattable> interface and supports formatting operations with standard and custom format strings.</span></span> <span data-ttu-id="7fba7-129">解析方法には、サポートされていない書式指定子または書式指定文字列が検出されると、スロー、<xref:System.FormatException>です。</span><span class="sxs-lookup"><span data-stu-id="7fba7-129">If a parsing method encounters an unsupported format specifier or format string, it throws a <xref:System.FormatException>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ef40e-127">Remarks</span><span class="sxs-lookup"><span data-stu-id="ef40e-127">Remarks</span></span>  
+ <span data-ttu-id="ef40e-128">以降では、 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、 <xref:System.TimeSpan?displayProperty=nameWithType> implements 構造体、<xref:System.IFormattable>インターフェイスと書式設定を標準とカスタム書式指定文字列の操作をサポートしています。</span><span class="sxs-lookup"><span data-stu-id="ef40e-128">Starting with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], the <xref:System.TimeSpan?displayProperty=nameWithType> structure implements the <xref:System.IFormattable> interface and supports formatting operations with standard and custom format strings.</span></span> <span data-ttu-id="ef40e-129">解析方法には、サポートされていない書式指定子または書式指定文字列が検出されると、スロー、<xref:System.FormatException>します。</span><span class="sxs-lookup"><span data-stu-id="ef40e-129">If a parsing method encounters an unsupported format specifier or format string, it throws a <xref:System.FormatException>.</span></span>  
   
- <span data-ttu-id="7fba7-130">.NET Framework の以前のバージョンで、<xref:System.TimeSpan>構造体が実装されていない<xref:System.IFormattable>し、書式指定文字列をサポートしていませんでした。</span><span class="sxs-lookup"><span data-stu-id="7fba7-130">In previous versions of the .NET Framework, the <xref:System.TimeSpan> structure did not implement <xref:System.IFormattable> and did not support format strings.</span></span> <span data-ttu-id="7fba7-131">ただし、多くの開発者誤ってと想定<xref:System.TimeSpan>書式指定文字列のセットをサポートして、使用される[複合書式指定操作](../../../../../docs/standard/base-types/composite-formatting.md)などのメソッドと<xref:System.String.Format%2A?displayProperty=nameWithType>です。</span><span class="sxs-lookup"><span data-stu-id="7fba7-131">However, many developers mistakenly assumed that <xref:System.TimeSpan> did support a set of format strings and used them in [composite formatting operations](../../../../../docs/standard/base-types/composite-formatting.md) with methods such as <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="7fba7-132">通常は、型が実装する場合<xref:System.IFormattable>書式指定文字列、文字列が通常スローをサポートされていない形式で書式指定メソッドの呼び出しをサポートしていると、<xref:System.FormatException>です。</span><span class="sxs-lookup"><span data-stu-id="7fba7-132">Ordinarily, if a type implements <xref:System.IFormattable> and supports format strings, calls to formatting methods with unsupported format strings usually throw a <xref:System.FormatException>.</span></span> <span data-ttu-id="7fba7-133">ただし、ため<xref:System.TimeSpan>実装されていない<xref:System.IFormattable>、ランタイムは、書式指定文字列は無視され、代わりに呼び出されます、<xref:System.TimeSpan.ToString?displayProperty=nameWithType>メソッドです。</span><span class="sxs-lookup"><span data-stu-id="7fba7-133">However, because <xref:System.TimeSpan> did not implement <xref:System.IFormattable>, the runtime ignored the format string and instead called the <xref:System.TimeSpan.ToString?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="7fba7-134">これには、書式指定文字列に書式設定操作には影響はありません、その存在しなかったになることを意味する<xref:System.FormatException>です。</span><span class="sxs-lookup"><span data-stu-id="7fba7-134">This means that, although the format strings had no effect on the formatting operation, their presence did not result in a <xref:System.FormatException>.</span></span>  
+ <span data-ttu-id="ef40e-130">.NET Framework の以前のバージョンで、<xref:System.TimeSpan>構造を実装しませんでした<xref:System.IFormattable>と書式指定文字列をサポートしていませんでした。</span><span class="sxs-lookup"><span data-stu-id="ef40e-130">In previous versions of the .NET Framework, the <xref:System.TimeSpan> structure did not implement <xref:System.IFormattable> and did not support format strings.</span></span> <span data-ttu-id="ef40e-131">ただし、多くの開発者誤っていることを前提<xref:System.TimeSpan>書式指定文字列のセットをサポートして、それらを使用[複合書式設定操作](../../../../../docs/standard/base-types/composite-formatting.md)などのメソッドで<xref:System.String.Format%2A?displayProperty=nameWithType>します。</span><span class="sxs-lookup"><span data-stu-id="ef40e-131">However, many developers mistakenly assumed that <xref:System.TimeSpan> did support a set of format strings and used them in [composite formatting operations](../../../../../docs/standard/base-types/composite-formatting.md) with methods such as <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="ef40e-132">通常、型を実装する場合<xref:System.IFormattable>書式指定文字列、文字列は、通常はスローをサポートされていない形式で書式指定メソッドの呼び出しをサポートしていると、<xref:System.FormatException>します。</span><span class="sxs-lookup"><span data-stu-id="ef40e-132">Ordinarily, if a type implements <xref:System.IFormattable> and supports format strings, calls to formatting methods with unsupported format strings usually throw a <xref:System.FormatException>.</span></span> <span data-ttu-id="ef40e-133">ただし、ため<xref:System.TimeSpan>を実装しませんでした<xref:System.IFormattable>、ランタイムは、書式指定文字列を無視し、代わりに呼び出されます、<xref:System.TimeSpan.ToString?displayProperty=nameWithType>メソッド。</span><span class="sxs-lookup"><span data-stu-id="ef40e-133">However, because <xref:System.TimeSpan> did not implement <xref:System.IFormattable>, the runtime ignored the format string and instead called the <xref:System.TimeSpan.ToString?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="ef40e-134">これは、書式指定文字列に書式設定操作に影響はありません、その存在が発生しないことを意味する<xref:System.FormatException>します。</span><span class="sxs-lookup"><span data-stu-id="ef40e-134">This means that, although the format strings had no effect on the formatting operation, their presence did not result in a <xref:System.FormatException>.</span></span>  
   
- <span data-ttu-id="7fba7-135">場合はレガシ コードが、複合書式指定メソッドと、無効な形式の文字列を渡すし、そのコードを再コンパイルすることはできませんが、使用することができます、`<TimeSpan_LegacyFormatMode>`要素、従来の復元を<xref:System.TimeSpan>動作します。</span><span class="sxs-lookup"><span data-stu-id="7fba7-135">For cases in which legacy code passes a composite formatting method and an invalid format string, and that code cannot be recompiled, you can use the `<TimeSpan_LegacyFormatMode>` element to restore the legacy <xref:System.TimeSpan> behavior.</span></span> <span data-ttu-id="7fba7-136">設定すると、`enabled`にするには、この要素の属性`true`、複合書式指定メソッドの結果への呼び出しで<xref:System.TimeSpan.ToString?displayProperty=nameWithType>なく<xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>、および<xref:System.FormatException>はスローされません。</span><span class="sxs-lookup"><span data-stu-id="7fba7-136">When you set the `enabled` attribute of this element to `true`, the composite formatting method results in a call to <xref:System.TimeSpan.ToString?displayProperty=nameWithType> rather than <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, and a <xref:System.FormatException> is not thrown.</span></span>  
+ <span data-ttu-id="ef40e-135">レガシ コードに渡します複合メソッドと、無効な形式の文字列の書式を指定し、そのコードを再コンパイルできない場合は、使用することができます、`<TimeSpan_LegacyFormatMode>`要素、従来の復元を<xref:System.TimeSpan>動作します。</span><span class="sxs-lookup"><span data-stu-id="ef40e-135">For cases in which legacy code passes a composite formatting method and an invalid format string, and that code cannot be recompiled, you can use the `<TimeSpan_LegacyFormatMode>` element to restore the legacy <xref:System.TimeSpan> behavior.</span></span> <span data-ttu-id="ef40e-136">設定すると、`enabled`をこの要素の属性`true`複合への呼び出しでメソッドの結果を書式設定、<xref:System.TimeSpan.ToString?displayProperty=nameWithType>なく<xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>、および<xref:System.FormatException>はスローされません。</span><span class="sxs-lookup"><span data-stu-id="ef40e-136">When you set the `enabled` attribute of this element to `true`, the composite formatting method results in a call to <xref:System.TimeSpan.ToString?displayProperty=nameWithType> rather than <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, and a <xref:System.FormatException> is not thrown.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7fba7-137">例</span><span class="sxs-lookup"><span data-stu-id="7fba7-137">Example</span></span>  
- <span data-ttu-id="7fba7-138">次の例のインスタンスを作成、<xref:System.TimeSpan>オブジェクトを使用して書式試みます、<xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType>メソッドでサポートされていない標準書式指定文字列を使用します。</span><span class="sxs-lookup"><span data-stu-id="7fba7-138">The following example instantiates a <xref:System.TimeSpan> object and attempts to format it with the <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> method by using an unsupported standard format string.</span></span>  
+## <a name="example"></a><span data-ttu-id="ef40e-137">例</span><span class="sxs-lookup"><span data-stu-id="ef40e-137">Example</span></span>  
+ <span data-ttu-id="ef40e-138">次の例では、インスタンス化、<xref:System.TimeSpan>オブジェクトとそれをフォーマットしよう、<xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType>サポートされていない標準書式指定文字列を使用してメソッド。</span><span class="sxs-lookup"><span data-stu-id="ef40e-138">The following example instantiates a <xref:System.TimeSpan> object and attempts to format it with the <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> method by using an unsupported standard format string.</span></span>  
   
  [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]
  [!code-vb[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/timespan.breakingchanges/vb/legacyformatmode1.vb#1)]  
   
- <span data-ttu-id="7fba7-139">例を実行すると、[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]または以前のバージョンで、次の出力を表示します。</span><span class="sxs-lookup"><span data-stu-id="7fba7-139">When you run the example on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] or on an earlier version, it displays the following output:</span></span>  
+ <span data-ttu-id="ef40e-139">の例を実行すると、[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]か以前のバージョンで、次の出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="ef40e-139">When you run the example on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] or on an earlier version, it displays the following output:</span></span>  
   
 ```  
 12:30:45  
 ```  
   
- <span data-ttu-id="7fba7-140">これとは異なります著しく出力例を実行する場合、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]以降のバージョン。</span><span class="sxs-lookup"><span data-stu-id="7fba7-140">This differs markedly from the output if you run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version:</span></span>  
+ <span data-ttu-id="ef40e-140">一方、著しく出力例を実行する場合、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]以降のバージョン。</span><span class="sxs-lookup"><span data-stu-id="ef40e-140">This differs markedly from the output if you run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version:</span></span>  
   
 ```  
 Invalid Format  
 ```  
   
- <span data-ttu-id="7fba7-141">ただしの例を次の構成ファイルを追加する場合のディレクトリで例を実行し、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]以降のバージョンが、出力は、例は、実行時に生成されるものと同じまたは[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]です。</span><span class="sxs-lookup"><span data-stu-id="7fba7-141">However, if you add the following configuration file to the example's directory and then run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version, the output is identical to that produced by the example when it is run on [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
+ <span data-ttu-id="ef40e-141">ただし、例を次の構成ファイルを追加する場合のディレクトリで例を実行し、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]または以降のバージョンが、出力が実行した場合に、例によって生成されるのと同じ[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="ef40e-141">However, if you add the following configuration file to the example's directory and then run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version, the output is identical to that produced by the example when it is run on [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -93,6 +93,6 @@ Invalid Format
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7fba7-142">関連項目</span><span class="sxs-lookup"><span data-stu-id="7fba7-142">See Also</span></span>  
- [<span data-ttu-id="7fba7-143">ランタイム設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="7fba7-143">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="7fba7-144">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="7fba7-144">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="ef40e-142">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef40e-142">See Also</span></span>  
+- [<span data-ttu-id="ef40e-143">ランタイム設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="ef40e-143">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [<span data-ttu-id="ef40e-144">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="ef40e-144">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
