@@ -55,7 +55,7 @@ Visual Basic では、作成できます。 [!INCLUDE[vbteclinqext](~/includes/v
  [Take While 句](../../../visual-basic/language-reference/queries/take-while-clause.md)  
  について説明します、`Take While`句は、指定された条件があれば、コレクションの要素を含んだ`true`残りの要素をバイパスします。  
   
- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Where 句](../../../visual-basic/language-reference/queries/where-clause.md)  
  について説明します、`Where`句は、クエリのフィルター処理条件を指定します。  
   
 ## <a name="see-also"></a>関連項目  
