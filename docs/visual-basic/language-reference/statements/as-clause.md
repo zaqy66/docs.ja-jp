@@ -57,7 +57,7 @@ ms.locfileid: "33604264"
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try しています.キャッチしてください.Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>関連項目  
  [方法 : 新しい変数を作成する](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
