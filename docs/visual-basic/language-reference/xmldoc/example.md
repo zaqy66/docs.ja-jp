@@ -1,5 +1,5 @@
 ---
-title: '&lt;例&gt;(Visual Basic)'
+title: '<example>(Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - example XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2018
 ms.locfileid: "43524518"
 ---
-# <a name="ltexamplegt-visual-basic"></a>&lt;例&gt;(Visual Basic)
+# <a name="ltexamplegt-visual-basic"></a><example>(Visual Basic)
 メンバーの例を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -25,7 +25,7 @@ ms.locfileid: "43524518"
  `description`  
  コード例の説明です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント 
  `<example>`タグを使用して、メソッド、またはその他のライブラリ メンバーを使用する方法の例を指定できます。 一般的に、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグが使用されます。  
   
  コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
