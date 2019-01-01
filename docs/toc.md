@@ -465,7 +465,7 @@
 ### [Visual Studio における Visual Basic の互換性に影響する変更点](visual-basic/getting-started/breaking-changes-in-visual-studio.md)
 ### [Visual Basic プログラマのための追加リソース](visual-basic/getting-started/additional-resources.md)
 
-## [開発 (アプリケーションを)](visual-basic/developing-apps/index.md)
+## [Visual Basic でのアプリケーションの開発](visual-basic/developing-apps/index.md)
 
 ### [Visual Basic でのプログラミング](visual-basic/developing-apps/programming/index.md)
 #### [コンピューター リソースへのアクセス](visual-basic/developing-apps/programming/computer-resources/index.md)
