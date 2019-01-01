@@ -625,7 +625,7 @@
 #### [Date データ型](visual-basic/language-reference/data-types/date-data-type.md)
 #### [Decimal データ型](visual-basic/language-reference/data-types/decimal-data-type.md)
 #### [Double 型](visual-basic/language-reference/data-types/double-data-type.md)
-#### [整数データ型](visual-basic/language-reference/data-types/integer-data-type.md)
+#### [Integer データ型](visual-basic/language-reference/data-types/integer-data-type.md)
 #### [Long データ型](visual-basic/language-reference/data-types/long-data-type.md)
 #### [Object 型](visual-basic/language-reference/data-types/object-data-type.md)
 #### [SByte データ型](visual-basic/language-reference/data-types/sbyte-data-type.md)
