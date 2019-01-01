@@ -37,7 +37,7 @@ ms.locfileid: "33604264"
   
  [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [しています.Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
  [各しています.Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
