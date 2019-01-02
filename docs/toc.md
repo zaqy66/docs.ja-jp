@@ -898,7 +898,7 @@
 #### [XML 処理命令リテラル](visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)
 
 ### [エラー メッセージ](visual-basic/language-reference/error-messages/index.md)
-#### ['ElseIf' の前には、対応する 'If' または 'ElseIf' が必要です](visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md)
+#### ['#ElseIf' の前には、対応する '#If' または '#ElseIf' が必要です](visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md)
 #### ['#Region' および '#End Region' ステートメントは、メソッド本体や複数行ラムダの内部では有効ではありません。](visual-basic/language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md)
 #### [GUID '<number>' の形式が正しくないため、'<attribute>' を適用できません。](visual-basic/language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md)
 #### ['<classname>' は継承元のインターフェイス '<interfacename>' が CLS に準拠していないため、CLS に準拠していません。](visual-basic/language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md)
