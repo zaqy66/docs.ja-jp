@@ -1,3 +1,3 @@
 
 > [!IMPORTANT]
-> <span data-ttu-id="83d5f-101">次の表では、.NET Framework のリリース バージョンのみのキーの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="83d5f-101">The following table lists the keys of released versions of the .NET Framework only.</span></span> <span data-ttu-id="83d5f-102">プレビュー バージョンまたはプレリリース バージョンのキーは示されていません。</span><span class="sxs-lookup"><span data-stu-id="83d5f-102">It doesn't list the keys of preview or pre-release versions.</span></span>
+> <span data-ttu-id="028fd-101">次の表では、.NET Framework のリリース バージョンのみのキーの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="028fd-101">The following table lists the keys of released versions of the .NET Framework only.</span></span> <span data-ttu-id="028fd-102">プレビュー バージョンまたはプレリリース バージョンのキーは示されていません。</span><span class="sxs-lookup"><span data-stu-id="028fd-102">It doesn't list the keys of preview or pre-release versions.</span></span>

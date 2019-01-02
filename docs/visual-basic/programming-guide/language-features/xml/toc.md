@@ -12,7 +12,7 @@
 ### [方法 : ファイル、文字列、またはストリームからの XML の読み込み](how-to-load-xml-from-a-file-string-or-stream.md)
 ### [方法 : LINQ を使用した XML の変換](how-to-transform-xml-by-using-linq.md)
 ### [方法 : XML リテラルの変更](how-to-modify-xml-literals.md)
-## [アクセス (XML に)](accessing-xml.md)
+## [XML へのアクセス](accessing-xml.md)
 ### [方法: XML 子孫要素にアクセスする](how-to-access-xml-descendant-elements.md)
 ### [方法: XML 子要素にアクセスする](how-to-access-xml-child-elements.md)
 ### [方法: XML 属性にアクセスする](how-to-access-xml-attributes.md)
