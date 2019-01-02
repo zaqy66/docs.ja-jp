@@ -168,8 +168,9 @@ ms.locfileid: "48842789"
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]が
 <xref:System.Windows.ContentElement.KeyUp> / <xref:System.Windows.ContentElement.KeyDown>イベントを送信する時、
 キーストロークが<xref:System.Windows.ContentElement.TextInput>イベントの一部になる可能性がある場合(例えばALT + S が押された場合)には、
-<xref:System.Windows.Input.KeyEventArgs.Key%2A>を<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>に設定します。
-これにより、コードで、<xref:System.Windows.ContentElement.KeyDown>をチェックするイベント ハンドラー<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>し見つかると、以降に発生のハンドラーの処理のままの場合は、<xref:System.Windows.ContentElement.TextInput>イベント。 これらの場合のさまざまなプロパティ、<xref:System.Windows.Input.TextCompositionEventArgs>引数を使用してを元のキーストロークを確認できます。 同様に場合、[!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)]アクティブになっている<xref:System.Windows.Input.Key>の値を持つ<xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>と<xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A>元のキーストロークやキーストロークを提供します。
+<xref:System.Windows.Input.KeyEventArgs.Key%2A>を<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>
+に設定します。
+これにより、<xref:System.Windows.ContentElement.KeyDown>イベント ハンドラー内のコードは、<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>をチェックし、見つかった場合は次に発生する<xref:System.Windows.ContentElement.TextInput>イベントハンドラーの処理を行います。 これらの場合は、<xref:System.Windows.Input.TextCompositionEventArgs>のさまざまなプロパティ引数を使用して元のキーストロークを確認できます。 同様に、[!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)]がアクティブな場合、<xref:System.Windows.Input.Key>は<xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>の値を持ち、<xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A>は元のキーストロークを示します。
 
  次の例では、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントと<xref:System.Windows.UIElement.KeyDown>イベントのイベント ハンドラーを定義しています。
 
@@ -371,15 +372,14 @@ ms.locfileid: "48842789"
 
 <a name="focus"></a>
 ## <a name="focus"></a>フォーカス
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、フォーカスに関してキーボード フォーカスと論理フォーカスという 2 つの主要な概念があります、
 フォーカスに関して、キーボード フォーカスと論理フォーカスという2つの主要な概念があります。
 
 ### <a name="keyboard-focus"></a>キーボード フォーカス
 キーボード フォーカスは、キーボード入力を受け取っている要素を参照しています。
-キーボード フォーカスを持つ要素は、デスクトップ全体で1つしかありません。
+キーボード フォーカスを持つ要素は、デスクトップ全体で 1 つしかありません。
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、
-キーボード フォーカスを持つ要素の<xref:System.Windows.IInputElement.IsKeyboardFocused%2A>は`true`に設定されます。
-<xref:System.Windows.Input.Keyboard>クラスの静的メソッド<xref:System.Windows.Input.Keyboard.FocusedElement%2A>は、
+<xref:System.Windows.Input.Keyboard>クラスの静的メソッド<xref:System.Windows.Input.Keyboard.FocusedElement%2A>、
 現在キーボード フォーカスがある要素を返します。
 
 tab キーで要素に移動したり、<xref:System.Windows.Controls.TextBox>など特定の要素上でマウスをクリックしたりすることで、
@@ -395,7 +395,8 @@ tab キーで要素に移動したり、<xref:System.Windows.Controls.TextBox>�
 <xref:System.Windows.UIElement.Focusable%2A>がデフォルトで`false`に設定されているため、
 その要素にフォーカスを設定したい場合は`true`に設定する必要があります。
 
-次の例では<xref:System.Windows.Controls.Button>にキーボード フォーカスを設定するために<xref:System.Windows.Input.Keyboard.Focus%2A>使用します。
+次の例では<xref:System.Windows.Controls.Button>にキーボード フォーカスを設定するために<xref:System.Windows.Input.Keyboard.Focus%2A>を使用します。
+アプリケーションの初期フォーカスを設定する推奨場所は。
 アプリケーションの初期フォーカスを設定する推奨場所は、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラーです。
 
  [!code-csharp[focussample#FocusSampleSetFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
@@ -404,8 +405,8 @@ tab キーで要素に移動したり、<xref:System.Windows.Controls.TextBox>�
  キーボード フォーカスの詳細については、「[フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)」を参照してください。
 
 ### <a name="logical-focus"></a>論理フォーカス
-論理フォーカスは、フォーカス スコープ内の<xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType>を差します。
-アプリケーション内の複数の要素が論理フォーカスを持つことがありますが、特定のフォーカス スコープで論理フォーカスを持つ要素は1つだけに限られます。
+論理フォーカスは、フォーカス スコープ内の<xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType>を指します。
+アプリケーション内の複数の要素が論理フォーカスを持つことがありますが、特定のフォーカス スコープで論理フォーカスを持つ要素は 1 つだけに限られます。
 
 フォーカス スコープはコンテナー要素で、そのスコープ内の<xref:System.Windows.Input.FocusManager.FocusedElement%2A>を追跡します。
 フォーカスがフォーカス スコープを離れると、フォーカスがある要素はキーボード フォーカスを失いますが、論理フォーカスはそのまま保持されます。
@@ -425,9 +426,10 @@ tab キーで要素に移動したり、<xref:System.Windows.Controls.TextBox>�
  [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
  [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で、デフォルトででフォーカス スコープであるクラスは、<xref:System.Windows.Window>、 <xref:System.Windows.Controls.Menu>、 <xref:System.Windows.Controls.ToolBar>、<xref:System.Windows.Controls.ContextMenu>です。
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で、デフォルトでフォーカス スコープであるクラスは、<xref:System.Windows.Window>、 <xref:System.Windows.Controls.Menu>、 <xref:System.Windows.Controls.ToolBar>、<xref:System.Windows.Controls.ContextMenu>です。
 
-キーボード フォーカスを持つ要素には、それが属するフォーカス スコープの論理フォーカスがあります。そのため、と共に要素にフォーカスを設定、<xref:System.Windows.Input.Keyboard.Focus%2A>メソッドを<xref:System.Windows.Input.Keyboard>要素にキーボード フォーカスと論理フォーカスを提供するクラスまたは基本要素クラスを試みます。
+キーボードフォーカスを持つ要素は、それが属するフォーカス スコープに対して論理フォーカスがあります。そのため、<xref:System.Windows.Input.Keyboard.Focus%2A>クラスまたは基本要素クラスのフォーカスメソッドを使用して要素にフォーカスを設定すると、要素に
+<xref:System.Windows.Input.Keyboard>と論理フォーカスが設定されます。
 
 フォーカス スコープでフォーカスがある要素を調べるには<xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>します。 フォーカス スコープのフォーカスがある要素を変更する<xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>します。
 
