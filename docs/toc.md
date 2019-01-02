@@ -661,7 +661,7 @@
 #### [In (ジェネリック修飾子)](visual-basic/language-reference/modifiers/in-generic-modifier.md)
 #### [Iterator](visual-basic/language-reference/modifiers/iterator.md)
 #### [Key](visual-basic/language-reference/modifiers/key.md)
-#### [モジュール](visual-basic/language-reference/modifiers/module-keyword.md)
+#### [Module](visual-basic/language-reference/modifiers/module-keyword.md)
 #### [MustInherit](visual-basic/language-reference/modifiers/mustinherit.md)
 #### [MustOverride](visual-basic/language-reference/modifiers/mustoverride.md)
 #### [Narrowing](visual-basic/language-reference/modifiers/narrowing.md)
