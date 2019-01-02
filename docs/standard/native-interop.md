@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 14dfe7639a160af64e925018a4fd9e2bd44d4fe1
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143189"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396813"
 ---
 # <a name="native-interoperability"></a>ネイティブ相互運用性
 
@@ -260,7 +260,7 @@ namespace PInvokeSamples {
 
 **マーシャ リング**はマネージドの境界を越えてネイティブに、またはその逆の必要がある場合に、型を変換するプロセスです。
 
-マーシャリングが必要な理由は、マネージド コードとアンマネージド コード内の型が異なるためです。 マネージド コードで、たとえば、`String` があるとします。アンマネージド環境では、文字列は Unicode ("ワイド")、Unicode 以外、Null 終了、ASCII などです。既定で、P/Invoke サブシステムは[既定の動作](../../docs/framework/interop/default-marshaling-behavior.md)に基づいて正しいことをしようと試みます。 しかし、追加の制御が必要な状況では、[MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs) 属性を採用して、アンマネージ側で期待する型を指定します。 たとえば、文字列を NULL で終わる ANSI 文字列として送信させる場合は、次のように指定できます。
+マーシャリングが必要な理由は、マネージド コードとアンマネージド コード内の型が異なるためです。 マネージド コードで、たとえば、`String` があるとします。アンマネージド環境では、文字列は Unicode ("ワイド")、Unicode 以外、Null 終了、ASCII などです。既定で、P/Invoke サブシステムは[既定の動作](../../docs/framework/interop/default-marshaling-behavior.md)に基づいて正しいことをしようと試みます。 しかし、追加の制御が必要な状況では、[MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 属性を採用して、アンマネージ側で期待する型を指定します。 たとえば、文字列を NULL で終わる ANSI 文字列として送信させる場合は、次のように指定できます。
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
