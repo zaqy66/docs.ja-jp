@@ -32,24 +32,17 @@ ms.lasthandoff: 10/06/2018
 ms.locfileid: "48842789"
 ---
 # <a name="input-overview"></a>入力の概要
-<a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]サブシステムは、強力な[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]を提供しており、マウス、キーボード、タッチ、スタイラスを含むさまざまなデバイスからの入力を取得できます。
-このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で提供されるサービスと、入力システムのアーキテクチャについて説明します。
+<a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]サブシステムを提供できる、強力かつ[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]マウス、キーボード、タッチおよびスタイラスなどのさまざまなデバイスからの入力を取得します。 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で提供されるサービスと、入力システムのアーキテクチャについて説明します。
 
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>入力 API
- 主な入力[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]は、基本要素クラス（<xref:System.Windows.UIElement>、 <xref:System.Windows.ContentElement>、 <xref:System.Windows.FrameworkElement>、<xref:System.Windows.FrameworkContentElement>）で利用できます。
-基本要素の詳細については、「[基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)」を参照してください。
-これらのクラスは、キー操作、マウス ボタン、マウス ホイール、マウス動作、フォーカス管理、マウス キャプチャなどに関連する入力イベントの機能を提供しています。
-入力アーキテクチャでは、すべての入力イベントをサービスとして処理するのではなく、基本要素に入力 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] を配置することで、UI 内の特定のオブジェクトによって入力イベントを供給し、複数の要素が入力イベントを処理できるイベント ルーティング スキームをサポートしています。 多くの入力イベントには、それぞれに関連付けられたペアとなるイベントがあります。
-たとえば、キー ダウンのイベントには、<xref:System.Windows.Input.Keyboard.KeyDown>と<xref:System.Windows.Input.Keyboard.PreviewKeyDown>イベントが関連付けられています。
-これらのイベントは、ターゲット要素にルーティングされる方法が異なります。
-プレビュー イベントは、ルート要素からターゲット要素へ、要素ツリーを下位に向かいます (トンネル)。  バブル イベントは、ターゲット要素からルート要素へ、上位に向かいます (バブル)。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のイベント ルーティングについては、この概要の後半、および「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」でさらに詳しく説明されています。
+ 主な入力[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]は、基本要素クラス（<xref:System.Windows.UIElement>、 <xref:System.Windows.ContentElement>、 <xref:System.Windows.FrameworkElement>、<xref:System.Windows.FrameworkContentElement>）で利用できます。  基本要素の詳細については、「[基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)」を参照してください。  これらのクラスは、キー操作、マウス ボタン、マウス ホイール、マウス動作、フォーカス管理、マウス キャプチャなどに関連する入力イベントの機能を提供しています。 入力アーキテクチャでは、すべての入力イベントをサービスとして処理するのではなく、基本要素に入力 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] を配置することで、UI 内の特定のオブジェクトによって入力イベントを供給し、複数の要素が入力イベントを処理できるイベント ルーティング スキームをサポートしています。 多くの入力イベントには、それぞれに関連付けられたペアとなるイベントがあります。  たとえば、キー ダウンのイベントには、<xref:System.Windows.Input.Keyboard.KeyDown>と<xref:System.Windows.Input.Keyboard.PreviewKeyDown>イベントが関連付けられています。  これらのイベントは、ターゲット要素にルーティングされる方法が異なります。  プレビュー イベントは、ルート要素からターゲット要素へ、要素ツリーを下位に向かいます (トンネル)。  バブル イベントは、ターゲット要素からルート要素へ、上位に向かいます (バブル)。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のイベント ルーティングについては、この概要の後半、および「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」でさらに詳しく説明されています。
 
 ### <a name="keyboard-and-mouse-classes"></a>Keyboard クラスと Mouse クラス
- 基本要素クラス上の入力[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]に加えて、キーボード入力とマウス入力を処理する追加の(../../../../includes/tla2sharptla-api-md.md)]を提供するために、<xref:System.Windows.Input.Keyboard>クラスと<xref:System.Windows.Input.Mouse>クラスが準備されています。
+ 入力だけでなく[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]、基本要素クラスで、<xref:System.Windows.Input.Keyboard>クラスと<xref:System.Windows.Input.Mouse>クラスを追加提供[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]キーボードとマウス入力を操作するためです。
 
- <xref:System.Windows.Input.Keyboard>クラスの入力[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]の例として、<xref:System.Windows.Input.Keyboard.Modifiers%2A>プロパティがあります。このプロパティは、現在押されている<xref:System.Windows.Input.ModifierKeys>を返します。また、<xref:System.Windows.Input.Keyboard.IsKeyDown%2A>メソッドは、特定のキーが押されているかどうかを示します。
+ 入力の例[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]で、<xref:System.Windows.Input.Keyboard>クラスは、<xref:System.Windows.Input.Keyboard.Modifiers%2A>返すプロパティを<xref:System.Windows.Input.ModifierKeys>現在、押されて、<xref:System.Windows.Input.Keyboard.IsKeyDown%2A>メソッドで、指定したキーが押されたかどうかを決定します。
 
  次の例では、<xref:System.Windows.Input.Keyboard.GetKeyStates%2A>メソッドを用いて、ある<xref:System.Windows.Input.Key>が押された状態かどうかを調べます。
 
@@ -66,85 +59,50 @@ ms.locfileid: "48842789"
  <xref:System.Windows.Input.Mouse>クラスと<xref:System.Windows.Input.Keyboard>クラスについては、この記事でさらに詳細を扱います。
 
 ### <a name="stylus-input"></a>スタイラス入力
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]には、<xref:System.Windows.Input.Stylus>のサポートが統合されています。
- <xref:System.Windows.Input.Stylus>はペン入力の一種で、[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]によって一般的になりました。
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、マウス[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]を使用してスタイラスをマウスとして処理できますが、キーボードとマウスに類似したモデルを使用するスタイラス デバイスの抽象型も公開しています。
-スタイラス関連のすべての [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]には、"Stylus" という単語が含まれています。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サポートが統合された、<xref:System.Windows.Input.Stylus>します。  <xref:System.Windows.Input.Stylus>で一般的になったペン入力には、[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]します。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、マウス [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] を使用して、スタイラスをマウスとして処理できますが、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、キーボードとマウスに類似したモデルを使用するスタイラス デバイスの抽象型も公開しています。  スタイラス関連のすべての [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] に、"Stylus" という単語が含まれます。
 
- スタイラスはマウスとして動作できるため、マウス入力のみをサポートするアプリケーションでも、ある程度のスタイラス入力が自動的にサポートされます。
-スタイラスがこのような手法で使用される場合、適切なスタイラス イベントを処理する機会が与えられた後に、対応するマウス イベントを処理する機会が与えられます。
-さらに、インク入力などのより高レベルなサービスも、スタイラス デバイスの抽象型を使って利用できます。
-入力としてのインクの詳細については、「[インクの概要](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)」を参照してください。
+ スタイラスはマウスとして動作できるため、マウス入力のみをサポートするアプリケーションでも、ある程度のスタイラス入力が自動的にサポートされます。 スタイラスがこのような手法で使用される場合、適切なスタイラス イベントを処理する機会が与えられた後に、対応するマウス イベントを処理する機会が与えられます。 さらに、インク入力などのより高レベルなサービスも、スタイラス デバイスの抽象型を使って利用できます。  入力としてのインクの詳細については、「[インクの概要](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)」を参照してください。
 
 <a name="event_routing"></a>
 ## <a name="event-routing"></a>イベント ルーティング
- <xref:System.Windows.FrameworkElement>は、コンテンツ モデルの子要素として他の要素を含めることができ、要素ツリーを形成します。
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、イベントを処理することで、親要素が、その子孫要素への入力に関与できます。
-これは、小さいコントロールから成るコントロールを構築する場合に特に役立ちます。このプロセスは "コントロール合成" または "合成" と呼ばれます。
-要素ツリーおよび要素ツリーとイベント ルーティングの関連については、「[WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)」を参照してください。
+ A<xref:System.Windows.FrameworkElement>要素のツリーを形成する、そのコンテンツ モデル内の子要素として他の要素を含めることができます。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、イベントを処理することで、親要素が、その子要素またはその他の子孫に命令された入力に関与できます。 これは、小さいコントロールからコントロールをビルドする場合に特に役立ちます。このプロセスは "コントロール合成" または "合成" と呼ばれます。 要素ツリー、および要素ツリーをイベント ルートに関連させる方法の詳細については、「[WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)」を参照してください。
 
- イベント ルーティングは、イベントを複数の要素に転送するプロセスで、ルート内のオブジェクトや要素は、別の要素からのイベントに、(イベント処理によって) 応答することができます。
-ルーティング イベントには、直接、バブル、トンネルのいずれかのルーティング メカニズムが使用されます。
-直接ルーティングでは、ソース要素のみが通知を受け取り、イベントは他の要素にルーティングされません。
-ただし、直接ルーティング イベントは、標準の [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] イベントとは対照的に、ルーティング イベントにのみ存在するいくつかの追加機能を提供します。
-バブル ルーティングは、最初にイベント ソースである要素に通知し、次にその親要素へ、その次へと順に通知することで、要素ツリーの上に向かって処理を実行します。
-トンネル ルーティングは、要素ツリーのルートから下に向かって処理を実行し、イベント ソースで終了します。
-ルーティング イベントの詳細については、「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」を参照してください。
+ イベント ルーティングは、ルートに沿った特定のオブジェクトや要素が、異なる要素によって供給されたイベントに、(処理を介して) 重要な応答を提供できるように、イベントを複数の要素に転送するプロセスです。  ルーティング イベントには、直接、バブル、トンネルのいずれかのルーティング メカニズムが使用されます。  直接ルーティングでは、ソース要素が通知を受ける唯一の要素であり、イベントは他の要素にルーティングされません。 ただし、直接ルーティング イベントは、標準の [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] イベントではなく、ルーティング イベントにのみ存在するいくつかの追加機能を提供します。 バブル ルーティングでは、最初にイベントの発生元である要素に通知し、次にその親要素へ、その次へと順に通知することで、要素ツリーの上位へ処理が実行されます。  トンネル ルーティングでは、要素ツリーのルートから始まり、下位へと処理が実行され、元のソース要素で終了します。  ルーティング イベントの詳細については、「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」を参照してください。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の入力イベントは、一般にトンネル イベントとバブル イベントのペアで構成されます。
-トンネル イベントは、"Preview" プレフィックスによりバブル イベントと区別されます。
-たとえば、<xref:System.Windows.Input.Mouse.PreviewMouseMove>はマウス移動のトンネル イベントであり、<xref:System.Windows.Input.Mouse.MouseMove>は対応するバブル イベントです。
-このイベントのペアは、要素レベルで実装される規則であり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベント システムの継承機能ではありません。
-詳細については、「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」の「WPFの入力イベント」を参照してください。
+ 一般に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の入力イベントは、トンネル イベントとバブル イベントのペアで構成されます。  トンネリング イベントは、"Preview" プレフィックスでバブルリング イベントと区別されます。  たとえば、<xref:System.Windows.Input.Mouse.PreviewMouseMove>マウス移動イベントのトンネル バージョンと<xref:System.Windows.Input.Mouse.MouseMove>はこのイベントのバブルのバージョンです。 このイベントのペアは、要素レベルで実装される規則であり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベント システムの継承機能ではありません。 詳細については、「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」の「WPF の入力イベント」を参照してください。
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>入力イベントの処理
-要素で入力を受け取るには、イベント ハンドラーをその特定のイベントに関連付ける必要があります。
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使えば、これは簡単です。
-このイベントをリッスンする要素の属性としてイベントの名前を参照します。
-次に、デリゲートに基づいて定義したイベント ハンドラーの名前を属性の値として設定します。
-イベント ハンドラーは、C# などのコードで記述する必要があり、コード ビハインド ファイルに含めることができます。
+ 要素で入力を受け取るには、イベント ハンドラーをその特定のイベントに関連付ける必要があります。  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では、これは簡単です。イベントの名前を、このイベントをリッスンする要素の属性として参照します。  次に、属性の値を、デリゲートに基づいて、定義するイベント ハンドラーの名前に設定します。  イベント ハンドラーでは、c# などのコードで記述する必要があり、分離コード ファイルに含めることができます。
 
-キーボード イベントは、キーボード フォーカスが要素上にある状態で、オペレーティング システムがキー操作を報告すると発生します。
-マウス イベントとスタイラス イベントはそれぞれ、要素との相対的なポインター位置の変化を報告するイベントと、
-ボタンの状態の変更を報告するイベントの 2 つのカテゴリに分類されます。
+ キーボード イベントは、キーボード フォーカスが要素上にある状態で、オペレーティング システムがキー操作を報告すると発生します。 マウス イベントとスタイラス イベントはそれぞれ、要素との相対的なポインター位置の変化を報告するイベントと、 ボタンの状態の変更を報告するイベントの 2 つのカテゴリに分類されます。
 
 ### <a name="keyboard-input-event-example"></a>キーボード入力イベントの例
-次の例では、左方向キーが押下されるのをリッスンします。
-<xref:System.Windows.Controls.Button>を含む<xref:System.Windows.Controls.StackPanel>が作成されます。
-左矢印キーの押下をリッスンするイベント ハンドラーは、<xref:System.Windows.Controls.Button>インスタンスに関連付けられます。
+ 次の例では、左方向キーが押下されるのをリッスンします。  <xref:System.Windows.Controls.Button>を含む<xref:System.Windows.Controls.StackPanel>が作成されます。  左矢印キーの押下をリッスンするイベント ハンドラーは、<xref:System.Windows.Controls.Button>インスタンスに関連付けられます。
 
-例の最初のセクションでは、<xref:System.Windows.Controls.StackPanel>と<xref:System.Windows.Controls.Button>を作成し、
-<xref:System.Windows.UIElement.KeyDown>のイベント ハンドラーをアタッチしています。
+ 例の最初のセクションでは、<xref:System.Windows.Controls.StackPanel>と<xref:System.Windows.Controls.Button>を作成し、 <xref:System.Windows.UIElement.KeyDown>のイベント ハンドラーをアタッチしています。
 
  [!code-xaml[InputOvw#Input_OvwKeyboardExampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwkeyboardexamplexaml)]
 
  [!code-csharp[InputOvw#Input_OvwKeyboardExampleUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexampleuicodebehind)]
  [!code-vb[InputOvw#Input_OvwKeyboardExampleUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexampleuicodebehind)]
 
-2番目のセクションはコード内に記述され、イベント ハンドラーを定義しています。
-左方向キーが押下されたときに<xref:System.Windows.Controls.Button>がキーボード フォーカスを持っていれば、
-イベント ハンドラーが実行され、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色が変更されます。
-左矢印キー以外のキーが押下された場合、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色は元に戻されます。
+ 2番目のセクションはコード内に記述され、イベント ハンドラーを定義しています。  左方向キーが押下されたときに<xref:System.Windows.Controls.Button>がキーボード フォーカスを持っていれば、 イベント ハンドラーが実行され、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色が変更されます。  左矢印キー以外のキーが押下された場合、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色は元に戻されます。
 
  [!code-csharp[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexamplehandlercodebehind)]
  [!code-vb[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexamplehandlercodebehind)]
 
 ### <a name="mouse-input-event-example"></a>マウス入力イベントの例
-次の例では、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色は、
-マウス ポインターが<xref:System.Windows.Controls.Button>に入ったときに変更され、マウス ポインターが離れるときに元に戻されます。
+ 次の例では、<xref:System.Windows.Controls.Control.Background%2A>の色、<xref:System.Windows.Controls.Button>マウス ポインターが入ったときに、 <xref:System.Windows.Controls.Button>。  <xref:System.Windows.Controls.Control.Background%2A>色が元に、マウスが離れるときに、<xref:System.Windows.Controls.Button>します。
 
-例の最初のセクションでは、<xref:System.Windows.Controls.StackPanel>と<xref:System.Windows.Controls.Button>を作成し、
-<xref:System.Windows.UIElement.MouseEnter>と<xref:System.Windows.UIElement.MouseLeave>イベントのイベント ハンドラーを<xref:System.Windows.Controls.Button>にアタッチします。
+ 例の最初のセクションでは、<xref:System.Windows.Controls.StackPanel>と<xref:System.Windows.Controls.Button>を作成し、 <xref:System.Windows.UIElement.MouseEnter>と<xref:System.Windows.UIElement.MouseLeave>イベントのイベント ハンドラーを<xref:System.Windows.Controls.Button>にアタッチします。
 
  [!code-xaml[InputOvw#Input_OvwMouseExampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwmouseexamplexaml)]
 
  [!code-csharp[InputOvw#Input_OvwMouseExampleUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleuicodebehind)]
  [!code-vb[InputOvw#Input_OvwMouseExampleUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleuicodebehind)]
 
-例の2番目のセクションはコード内に記述され、イベント ハンドラーを定義しています。
-マウスが<xref:System.Windows.Controls.Button>に入ったとき、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色は<xref:System.Windows.Media.Brushes.SlateGray%2A>に変更されます。
-マウスが離れたとき、<xref:System.Windows.Controls.Button>の<xref:System.Windows.Controls.Control.Background%2A>の色は、<xref:System.Windows.Media.Brushes.AliceBlue%2A>に戻されます。
+ この例の 2 番目のセクションは、コード内に記述され、イベント ハンドラーを定義しています。  マウスに入ったとき、 <xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.Control.Background%2A>の色、<xref:System.Windows.Controls.Button>に変更が<xref:System.Windows.Media.Brushes.SlateGray%2A>します。  マウスから離したときに、 <xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.Control.Background%2A>の色、<xref:System.Windows.Controls.Button>は<xref:System.Windows.Media.Brushes.AliceBlue%2A>します。
 
  [!code-csharp[InputOvw#Input_OvwMouseExampleEneterHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleeneterhandler)]
  [!code-vb[InputOvw#Input_OvwMouseExampleEneterHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleeneterhandler)]
@@ -154,23 +112,11 @@ ms.locfileid: "48842789"
 
 <a name="text_input"></a>
 ## <a name="text-input"></a>テキスト入力
-<xref:System.Windows.ContentElement.TextInput>イベントでは、デバイスに依存しない方法でテキスト入力をリッスンすることができます。
-テキスト入力の主な手段はキーボードですが、音声認識、手書き入力、その他の入力デバイスでもテキストを入力できます。
+ <xref:System.Windows.ContentElement.TextInput>イベントでは、デバイスに依存しない方法でテキスト入力をリッスンすることができます。 テキスト入力の主な手段はキーボードですが、音声認識、手書き入力、その他の入力デバイスでもテキストを入力できます。
 
-キーボード入力の場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、
-まず適切な<xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp>イベントを発生させます。
-これらのイベントが処理されず、かつキーが方向キーやファンクション キーなどではなくテキストである場合、
-<xref:System.Windows.ContentElement.TextInput>イベントが発生します。
-<xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp>と<xref:System.Windows.ContentElement.TextInput>イベントの間には、常に単純な1対1のマッピングがあるわけではありません。
-複数のキーストロークが1つの文字を入力したり、単一のキーストロークで複数の文字から成る文字列を入力したりできるからです。
-これは、中国語、日本語、韓国語のように、[!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)]を使用して幾千の文字をローマ字入力するような言語の場合に特に当てはまります。
+ キーボード入力の場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]まずを送信して、適切な<xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp>イベント。 これらのイベントが処理されないと、キーが (方向矢印などのコントロール キー) または関数のキーではなくテキストである場合、<xref:System.Windows.ContentElement.TextInput>イベントが発生します。  常に間の単純な 1 対 1 マッピングがない<xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp>と<xref:System.Windows.ContentElement.TextInput>イベントのため、複数のキーストロークがテキスト入力の 1 つの文字を生成し、単一のキーストロークで複数の文字を生成できます文字列。  これは、[!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)] を使用して多くの文字をそれぞれの対応するアルファベットで生成する、中国語、日本語、韓国語のような言語の場合に、特に当てはまります。
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]が
-<xref:System.Windows.ContentElement.KeyUp> / <xref:System.Windows.ContentElement.KeyDown>イベントを送信する時、
-キーストロークが<xref:System.Windows.ContentElement.TextInput>イベントの一部になる可能性がある場合(例えばALT + S が押された場合)には、
-<xref:System.Windows.Input.KeyEventArgs.Key%2A>を<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>
-に設定します。
-これにより、<xref:System.Windows.ContentElement.KeyDown>イベント ハンドラー内のコードは、<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>をチェックし、見つかった場合は次に発生する<xref:System.Windows.ContentElement.TextInput>イベントハンドラーの処理を行います。 これらの場合は、<xref:System.Windows.Input.TextCompositionEventArgs>のさまざまなプロパティ引数を使用して元のキーストロークを確認できます。 同様に、[!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)]がアクティブな場合、<xref:System.Windows.Input.Key>は<xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>の値を持ち、<xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A>は元のキーストロークを示します。
+ ときに[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]送信、 <xref:System.Windows.ContentElement.KeyUp> / <xref:System.Windows.ContentElement.KeyDown>イベント、<xref:System.Windows.Input.KeyEventArgs.Key%2A>に設定されている<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>場合は、キーストロークがの一部になる可能性があります、<xref:System.Windows.ContentElement.TextInput>イベント (ALT + S が押された場合、たとえば)。 これにより、コードで、<xref:System.Windows.ContentElement.KeyDown>をチェックするイベント ハンドラー<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>し見つかると、以降に発生のハンドラーの処理のままの場合は、<xref:System.Windows.ContentElement.TextInput>イベント。 これらの場合のさまざまなプロパティ、<xref:System.Windows.Input.TextCompositionEventArgs>引数を使用してを元のキーストロークを確認できます。 同様に場合、[!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)]アクティブになっている<xref:System.Windows.Input.Key>の値を持つ<xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>と<xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A>元のキーストロークやキーストロークを提供します。
 
  次の例では、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントと<xref:System.Windows.UIElement.KeyDown>イベントのイベント ハンドラーを定義しています。
 
@@ -186,16 +132,9 @@ ms.locfileid: "48842789"
  [!code-csharp[InputOvw#Input_OvwTextInputHandlersCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputhandlerscodebehind)]
  [!code-vb[InputOvw#Input_OvwTextInputHandlersCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputhandlerscodebehind)]
 
-入力イベントはイベントのルートをバブルアップするため、
-<xref:System.Windows.Controls.StackPanel>は要素がキーボード フォーカスを持っているかどうかに関係なく入力を受け取ります。
-<xref:System.Windows.Controls.TextBox>コントロールが最初に通知を受け取り、
-<xref:System.Windows.Controls.TextBox>が入力を処理しなかった場合にのみ`OnTextInputKeyDown`ハンドラーが呼び出されます。
-<xref:System.Windows.UIElement.PreviewKeyDown>イベントが<xref:System.Windows.UIElement.KeyDown>イベントの代わりに使用された場合、
-`OnTextInputKeyDown`ハンドラーが最初に呼び出されます。
+ 入力イベントはイベントのルートをバブルアップするため、 <xref:System.Windows.Controls.StackPanel>は要素がキーボード フォーカスを持っているかどうかに関係なく入力を受け取ります。 <xref:System.Windows.Controls.TextBox>コントロールが最初に通知を受け取り、 <xref:System.Windows.Controls.TextBox>が入力を処理しなかった場合にのみ`OnTextInputKeyDown`ハンドラーが呼び出されます。 <xref:System.Windows.UIElement.PreviewKeyDown>イベントが<xref:System.Windows.UIElement.KeyDown>イベントの代わりに使用された場合、 `OnTextInputKeyDown`ハンドラーが最初に呼び出されます。
 
-この例では、Ctrl + O キー操作とボタンのクリック イベントの2つの部分に、同じ処理ロジックが記述されています。
-これは、入力イベントを直接処理する代わりにコマンドを使用すると、簡略化することができます。
-コマンドについては、この概要と「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」で説明されています。
+ この例では、Ctrl + O キー操作とボタンのクリック イベントの2つの部分に、同じ処理ロジックが記述されています。 これは、入力イベントを直接処理する代わりにコマンドを使用すると、簡略化することができます。  コマンドについては、この概要と「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」で説明されています。
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>タッチおよび操作
@@ -372,32 +311,16 @@ ms.locfileid: "48842789"
 
 <a name="focus"></a>
 ## <a name="focus"></a>フォーカス
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、フォーカスに関してキーボード フォーカスと論理フォーカスという 2 つの主要な概念があります、
-フォーカスに関して、キーボード フォーカスと論理フォーカスという2つの主要な概念があります。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、フォーカスに関してキーボード フォーカスと論理フォーカスという 2 つの主要な概念があります。
 
 ### <a name="keyboard-focus"></a>キーボード フォーカス
-キーボード フォーカスは、キーボード入力を受け取っている要素を参照しています。
-キーボード フォーカスを持つ要素は、デスクトップ全体で 1 つしかありません。
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、
-<xref:System.Windows.Input.Keyboard>クラスの静的メソッド<xref:System.Windows.Input.Keyboard.FocusedElement%2A>、
-現在キーボード フォーカスがある要素を返します。
+ キーボード フォーカスは、キーボード入力を受け取っている要素を参照しています。  キーボード フォーカスを持つ要素は、デスクトップ全体で 1 つしかありません。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、 キーボード フォーカスを持つ要素の<xref:System.Windows.IInputElement.IsKeyboardFocused%2A>は`true`に設定されます。  <xref:System.Windows.Input.Keyboard>クラスの静的メソッド<xref:System.Windows.Input.Keyboard.FocusedElement%2A>は、 現在キーボード フォーカスがある要素を返します。
 
-tab キーで要素に移動したり、<xref:System.Windows.Controls.TextBox>など特定の要素上でマウスをクリックしたりすることで、
-キーボード フォーカスを取得できます。
-また、<xref:System.Windows.Input.Keyboard>クラスの<xref:System.Windows.Input.Keyboard.Focus%2A>メソッドを使用して、
-プログラムでキーボード フォーカスを取得することもできます。
-<xref:System.Windows.Input.Keyboard.Focus%2A>メソッドは、指定された要素にキーボード フォーカスを与えようとします。
-<xref:System.Windows.Input.Keyboard.Focus%2A>の返す要素が、現在キーボード フォーカスを持つ要素です。
+ tab キーで要素に移動したり、<xref:System.Windows.Controls.TextBox>など特定の要素上でマウスをクリックしたりすることで、 キーボード フォーカスを取得できます。  また、<xref:System.Windows.Input.Keyboard>クラスの<xref:System.Windows.Input.Keyboard.Focus%2A>メソッドを使用して、 プログラムでキーボード フォーカスを取得することもできます。  <xref:System.Windows.Input.Keyboard.Focus%2A>メソッドは、指定された要素にキーボード フォーカスを与えようとします。  <xref:System.Windows.Input.Keyboard.Focus%2A>の返す要素が、現在キーボード フォーカスを持つ要素です。
 
-要素にキーボード フォーカスを設定するために、<xref:System.Windows.UIElement.Focusable%2A>プロパティ
-および<xref:System.Windows.UIElement.IsVisible%2A>プロパティは**true**に設定しておく必要があります。
-<xref:System.Windows.Controls.Panel>などのいくつかのクラスでは、
-<xref:System.Windows.UIElement.Focusable%2A>がデフォルトで`false`に設定されているため、
-その要素にフォーカスを設定したい場合は`true`に設定する必要があります。
+ 要素にキーボード フォーカスを設定するために、<xref:System.Windows.UIElement.Focusable%2A>プロパティ および<xref:System.Windows.UIElement.IsVisible%2A>プロパティは**true**に設定しておく必要があります。  <xref:System.Windows.Controls.Panel>などのいくつかのクラスでは、 <xref:System.Windows.UIElement.Focusable%2A>がデフォルトで`false`に設定されているため、 その要素にフォーカスを設定したい場合は`true`に設定する必要があります。
 
-次の例では<xref:System.Windows.Controls.Button>にキーボード フォーカスを設定するために<xref:System.Windows.Input.Keyboard.Focus%2A>を使用します。
-アプリケーションの初期フォーカスを設定する推奨場所は。
-アプリケーションの初期フォーカスを設定する推奨場所は、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラーです。
+ 次の例では<xref:System.Windows.Controls.Button>にキーボード フォーカスを設定するために<xref:System.Windows.Input.Keyboard.Focus%2A>を使用します。  アプリケーションの初期フォーカスを設定する推奨場所は、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラーです。
 
  [!code-csharp[focussample#FocusSampleSetFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
  [!code-vb[focussample#FocusSampleSetFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]
@@ -405,118 +328,67 @@ tab キーで要素に移動したり、<xref:System.Windows.Controls.TextBox>�
  キーボード フォーカスの詳細については、「[フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)」を参照してください。
 
 ### <a name="logical-focus"></a>論理フォーカス
-論理フォーカスは、フォーカス スコープ内の<xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType>を指します。
-アプリケーション内の複数の要素が論理フォーカスを持つことがありますが、特定のフォーカス スコープで論理フォーカスを持つ要素は 1 つだけに限られます。
+ 論理フォーカスは、フォーカス スコープ内の<xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType>を指します。  アプリケーション内の複数の要素が論理フォーカスを持つことがありますが、特定のフォーカス スコープで論理フォーカスを持つ要素は 1 つだけに限られます。
 
-フォーカス スコープはコンテナー要素で、そのスコープ内の<xref:System.Windows.Input.FocusManager.FocusedElement%2A>を追跡します。
-フォーカスがフォーカス スコープを離れると、フォーカスがある要素はキーボード フォーカスを失いますが、論理フォーカスはそのまま保持されます。
-フォーカスがフォーカス スコープに戻ると、論理フォーカスがある要素はキーボード フォーカスを取得します。
-これにより、キーボード フォーカスを複数のフォーカス スコープ間で変更できますが、
-フォーカスが戻ると、そのフォーカス スコープ内の論理フォーカスのある要素がキーボード フォーカスのある要素として保持されることが保証されます。
+ フォーカス スコープはコンテナー要素で、そのスコープ内の<xref:System.Windows.Input.FocusManager.FocusedElement%2A>を追跡します。  フォーカスがフォーカス スコープを離れると、フォーカスがある要素はキーボード フォーカスを失いますが、論理フォーカスはそのまま保持されます。  フォーカスがフォーカス スコープに戻ると、論理フォーカスがある要素はキーボード フォーカスを取得します。  これにより、キーボード フォーカスを複数のフォーカス スコープ間で変更できますが、 フォーカスが戻ると、そのフォーカス スコープ内の論理フォーカスのある要素がキーボード フォーカスのある要素として保持されることが保証されます。
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]で
-<xref:System.Windows.Input.FocusManager>の<xref:System.Windows.Input.FocusManager.IsFocusScope%2A>添付プロパティを`true`に設定するか、
-コードを使用して<xref:System.Windows.Input.FocusManager.SetIsFocusScope%2A>メソッドを使用して添付プロパティを設定することにより、
-要素をフォーカス スコープに変換できます。
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]で <xref:System.Windows.Input.FocusManager>の<xref:System.Windows.Input.FocusManager.IsFocusScope%2A>添付プロパティを`true`に設定するか、 コードを使用して<xref:System.Windows.Input.FocusManager.SetIsFocusScope%2A>メソッドを使用して添付プロパティを設定することにより、 要素をフォーカス スコープに変換できます。
 
-次の例では、<xref:System.Windows.Controls.StackPanel>の<xref:System.Windows.Input.FocusManager.IsFocusScope%2A>添付プロパティを設定してフォーカス スコープに変換しています。
+ 次の例では、<xref:System.Windows.Controls.StackPanel>の<xref:System.Windows.Input.FocusManager.IsFocusScope%2A>添付プロパティを設定してフォーカス スコープに変換しています。
 
  [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]
 
  [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
  [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で、デフォルトでフォーカス スコープであるクラスは、<xref:System.Windows.Window>、 <xref:System.Windows.Controls.Menu>、 <xref:System.Windows.Controls.ToolBar>、<xref:System.Windows.Controls.ContextMenu>です。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で、デフォルトでフォーカス スコープであるクラスは、<xref:System.Windows.Window>、 <xref:System.Windows.Controls.Menu>、 <xref:System.Windows.Controls.ToolBar>、<xref:System.Windows.Controls.ContextMenu>です。
 
-キーボードフォーカスを持つ要素は、それが属するフォーカス スコープに対して論理フォーカスがあります。そのため、<xref:System.Windows.Input.Keyboard.Focus%2A>クラスまたは基本要素クラスのフォーカスメソッドを使用して要素にフォーカスを設定すると、要素に
-<xref:System.Windows.Input.Keyboard>と論理フォーカスが設定されます。
+ キーボード フォーカスを持つ要素には、それが属するフォーカス範囲の論理フォーカスがあります。そのため、と共に要素にフォーカスを設定、<xref:System.Windows.Input.Keyboard.Focus%2A>メソッドを<xref:System.Windows.Input.Keyboard>要素にキーボード フォーカスと論理フォーカスを提供するクラスまたは基本要素クラスを試みます。
 
-フォーカス スコープでフォーカスがある要素を調べるには<xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>します。 フォーカス スコープのフォーカスがある要素を変更する<xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>します。
+ フォーカス スコープでフォーカスがある要素を調べるには<xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>します。 フォーカス スコープのフォーカスがある要素を変更する<xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>します。
 
-論理フォーカスの詳細については、「[フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)」を参照してください。
+ 論理フォーカスの詳細については、「[フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)」を参照してください。
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>マウスの位置
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の入力[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]は、座標空間に関する有益な情報を提供します。
-たとえば、座標 `(0,0)` は左上からの座標ですが、これはツリーのどの要素の左上でしょうか。
-入力対象の要素でしょうか。イベント ハンドラーを適用した要素でしょうか。または、それ以外でしょうか。
-混乱を防ぐため、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の入力[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]でマウスを使って取得した座標を扱う場合は、座標系を指定する必要があります。
-<xref:System.Windows.Input.Mouse.GetPosition%2A>メソッドは、マウス ポインターの指定された要素に対する相対的な座標を返します。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の入力[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]は、座標空間に関する有益な情報を提供します。  たとえば、座標 `(0,0)` は左上からの座標ですが、これはツリーのどの要素の左上でしょうか。 入力対象の要素でしょうか。 イベント ハンドラーを適用した要素でしょうか。 または、それ以外でしょうか。 混乱を防ぐため、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の入力[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]でマウスを使って取得した座標を扱う場合は、座標系を指定する必要があります。 <xref:System.Windows.Input.Mouse.GetPosition%2A>メソッドは、マウス ポインターの指定された要素に対する相対的な座標を返します。
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>マウス キャプチャ
-マウス デバイスは、マウス キャプチャと呼ばれるモーダル特性を特別に備えています。
-マウス キャプチャは、ドラッグ アンド ドロップ操作が開始されたときの入力の遷移状態を保持するために使用されます。
-これにより、画面上のマウス ポインター位置に関係する他の操作は、必ずしも発生しません。
-ドラッグ中、ユーザーはドラッグ アンド ドロップを中止しない限り、クリックすることはできません。
-このため、マウス キャプチャはドラッグ元によって保持され、マウス オーバーのキューの大部分は適切でなくなります。
-入力システムは、マウス キャプチャの状態を判断したり、特定の要素に対してマウス キャプチャを実行したり、
-マウス キャプチャの状態をクリアしたりできる[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]を公開します。
-ドラッグ アンド ドロップ操作の詳細については、
-「[ドラッグ アンド ドロップの概要](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)」を参照してください。
+ マウス デバイスは、マウス キャプチャと呼ばれるモーダル特性を特別に備えています。 マウス キャプチャは、ドラッグ アンド ドロップ操作が開始されたときの入力の遷移状態を保持するために使用されます。これにより、マウス ポインターの画面上の標準位置に関係する他の操作は、必ずしも発生しません。 ドラッグの間、ユーザーはドラッグ アンド ドロップを中止しない限り、クリックすることはできません。このため、マウス キャプチャはドラッグ元によって保持され、マウスを置いたときのキューの大部分は適切でなくなります。 入力システムは、マウス キャプチャの状態を判断できる [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]、および、特定の要素に対してマウス キャプチャを実行したり、マウス キャプチャの状態をクリアしたりできる [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を公開します。 ドラッグ アンド ドロップ操作の詳細については、「[ドラッグ アンド ドロップの概要](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)」を参照してください。
 
 <a name="commands"></a>
 ## <a name="commands"></a>コマンド
-コマンドでは、デバイス入力よりもセマンティックなレベルの入力処理が可能です。
-コマンドは、`Cut`、`Copy`、`Paste`、`Open`などの簡単なディレクティブです。
-コマンドは、コマンド ロジックを一元管理するために役立ちます。
-<xref:System.Windows.Controls.Menu>や<xref:System.Windows.Controls.ToolBar>やキーボード ショートカットを使用して
-同じコマンドにアクセスできるかもしれません。
-またコマンドは、コマンドが使用できないときにコントロールを無効にするための機構も提供します。
+ コマンドでは、デバイス入力よりもセマンティックなレベルの入力処理が可能です。  コマンドは、`Cut`、`Copy`、`Paste`、`Open` などの簡単なディレクティブです。  コマンドは、コマンド ロジックを一元管理するために役立ちます。  アクセスできるように、同じコマンド、<xref:System.Windows.Controls.Menu>の<xref:System.Windows.Controls.ToolBar>、またはキーボード ショートカットを使用します。 また、コマンドでは、コマンドが使用できないときに、コントロールを無効にするための機構も提供されます。
 
-<xref:System.Windows.Input.RoutedCommand>は、
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]における<xref:System.Windows.Input.ICommand>の実装です。
-<xref:System.Windows.Input.RoutedCommand>が実行されると、<xref:System.Windows.Input.CommandManager.PreviewExecuted>イベントと
-<xref:System.Windows.Input.CommandManager.Executed>イベントがコマンド ターゲットで発生し、他の入力と同様に要素ツリーをトンネルあるいはバブリングします。
-コマンドの対象が設定されていない場合は、キーボード フォーカスを持つ要素がコマンドの対象になります。
-コマンドを実行するロジックは<xref:System.Windows.Input.CommandBinding>にアタッチされています。
-<xref:System.Windows.Input.CommandManager.Executed>イベントがそのコマンドの<xref:System.Windows.Input.CommandBinding>に到達すると、
-<xref:System.Windows.Input.CommandBinding>上の<xref:System.Windows.Input.ExecutedRoutedEventHandler>が呼び出されます。
-このハンドラーが、コマンドのアクションを実行します。
+ <xref:System.Windows.Input.RoutedCommand> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の実装<xref:System.Windows.Input.ICommand>します。  ときに、<xref:System.Windows.Input.RoutedCommand>が実行される、<xref:System.Windows.Input.CommandManager.PreviewExecuted>と<xref:System.Windows.Input.CommandManager.Executed>イベントがどのトンネルとバブル要素ツリーを通じてなどその他の入力、コマンド ターゲットで発生します。  コマンドの対象が設定されていない場合は、キーボード フォーカスを持つ要素がコマンドの対象になります。  コマンドを実行するロジックに接続されている、<xref:System.Windows.Input.CommandBinding>します。  ときに、<xref:System.Windows.Input.CommandManager.Executed>イベント到達、 <xref:System.Windows.Input.CommandBinding> 、特定のコマンド、<xref:System.Windows.Input.ExecutedRoutedEventHandler>上、<xref:System.Windows.Input.CommandBinding>が呼び出されます。  このハンドラーが、コマンドのアクションを実行します。
 
-コマンドの詳細については、「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」を参照してください。
+ コマンド実行の詳細については、「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」を参照してください。
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、<xref:System.Windows.Input.ApplicationCommands>、 
-<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Input.ComponentCommands>、<xref:System.Windows.Input.NavigationCommands>、
-<xref:System.Windows.Documents.EditingCommands>で一般的なコマンドのライブラリを提供しています。また、コマンドを独自に定義することもできます。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 構成される一般的なコマンドのライブラリを提供します<xref:System.Windows.Input.ApplicationCommands>、 <xref:System.Windows.Input.MediaCommands>、 <xref:System.Windows.Input.ComponentCommands>、 <xref:System.Windows.Input.NavigationCommands>、および<xref:System.Windows.Documents.EditingCommands>、独自に定義することもできます。
 
-次の例では、<xref:System.Windows.Controls.MenuItem>がクリックされたとき、
-<xref:System.Windows.Controls.TextBox>上で<xref:System.Windows.Input.ApplicationCommands.Paste%2A>コマンドを実行するよう設定する方法を示します。
-<xref:System.Windows.Controls.TextBox>にキーボード フォーカスがあると想定しています。
+ 次の例を設定する方法を示しています、<xref:System.Windows.Controls.MenuItem>ことによって起動されるためがクリックされたとき、<xref:System.Windows.Input.ApplicationCommands.Paste%2A>コマンドを<xref:System.Windows.Controls.TextBox>と見なし、<xref:System.Windows.Controls.TextBox>キーボード フォーカスがあります。
 
  [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]
 
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]におけるのコマンドの詳細については、
- 「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」を参照してください。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]におけるのコマンドの詳細については、 「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」を参照してください。
 
 <a name="the_input_system_and_base_elements"></a>
 ## <a name="the-input-system-and-base-elements"></a>入力システムと基本要素
-<xref:System.Windows.Input.Mouse>、<xref:System.Windows.Input.Keyboard>、<xref:System.Windows.Input.Stylus>クラスの添付イベントのような
-入力イベントは、入力システムが発生させ、ヒット テストの実行時に、ビジュアル ツリーに基づくオブジェクト モデル内の特定位置に挿入します。
+ <xref:System.Windows.Input.Mouse>、<xref:System.Windows.Input.Keyboard>、<xref:System.Windows.Input.Stylus>クラスの添付イベントのような 入力イベントは、入力システムが発生させ、ヒット テストの実行時に、ビジュアル ツリーに基づくオブジェクト モデル内の特定位置に挿入します。
 
-<xref:System.Windows.Input.Mouse>、<xref:System.Windows.Input.Keyboard>、<xref:System.Windows.Input.Stylus>で
-添付イベントとして定義されている各イベントは、<xref:System.Windows.UIElement>と<xref:System.Windows.ContentElement>という基本要素クラスで、
-新しいルーティング イベントとして再び公開されています。
-基本要素のルーティング イベントは、元の添付イベントを処理し、イベント データを再利用するクラスによって生成されます。
+ <xref:System.Windows.Input.Mouse>、<xref:System.Windows.Input.Keyboard>、<xref:System.Windows.Input.Stylus>で 添付イベントとして定義されている各イベントは、<xref:System.Windows.UIElement>と<xref:System.Windows.ContentElement>という基本要素クラスで、 新しいルーティング イベントとして再び公開されています。 基本要素のルーティング イベントは、元の添付イベントを処理し、イベント データを再利用するクラスによって生成されます。
 
-入力イベントが、その基本要素の入力イベントの実装によって、特定のソース要素に関連付けられると、論理ツリー オブジェクトとビジュアル ツリー オブジェクトの組み合わせに基づく残りのイベント ルートを通じてルーティングされ、アプリケーション コードで処理することができます。  一般に、上のルーティング イベントを使用してデバイスに関連する入力イベントこれらを処理する方が便利です<xref:System.Windows.UIElement>と<xref:System.Windows.ContentElement>より直感的なイベント ハンドラーの構文両方で使用できるため、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]およびコード。 プロセスを開始した添付イベントを処理することもできますが、いくつかの問題があります。添付イベントには、基本要素クラス処理によって処理されることがマークされる可能性があり、添付イベントにハンドラーを添付するために、実際のイベント構文ではなく、アクセサー メソッドを使用する必要があります。
+ 入力イベントが、その基本要素の入力イベントの実装によって、特定のソース要素に関連付けられると、論理ツリー オブジェクトとビジュアル ツリー オブジェクトの組み合わせに基づく残りのイベント ルートを通じてルーティングされ、アプリケーション コードで処理することができます。  一般に、上のルーティング イベントを使用してデバイスに関連する入力イベントこれらを処理する方が便利です<xref:System.Windows.UIElement>と<xref:System.Windows.ContentElement>より直感的なイベント ハンドラーの構文両方で使用できるため、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]およびコード。 プロセスを開始した添付イベントを処理することもできますが、いくつかの問題があります。添付イベントには、基本要素クラス処理によって処理されることがマークされる可能性があり、添付イベントにハンドラーを添付するために、実際のイベント構文ではなく、アクセサー メソッドを使用する必要があります。
 
 <a name="whats_next"></a>
 ## <a name="whats-next"></a>次の内容
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で入力を処理する幾つかの方法を学びました。
-さまざまな種類の入力イベントや[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のルーティング イベントについて、
-さらに理解を深める必要があります。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で入力を処理する幾つかの方法を学びました。  さまざまな種類の入力イベントや[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のルーティング イベントについて、 さらに理解を深める必要があります。
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フレームワークの要素とイベント ルーティングの詳細については、
-他のリソースを参照することができます。
-詳細については、「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」、
-「[フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)」、
-「[基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)」、
-「[WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)」、
-「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」を参照してください。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フレームワークの要素とイベント ルーティングの詳細については、 他のリソースを参照することができます。 詳細については、「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」、 「[フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)」、 「[基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)」、 「[WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)」、 「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
  [フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)[基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)[プロパティ](../../../../docs/framework/wpf/advanced/properties-wpf.md)
