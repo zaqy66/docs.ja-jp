@@ -1,5 +1,5 @@
 ---
-title: `Integer` データ型 (Visual Basic)
+title: '`Integer` データ型 (Visual Basic)'
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Integer
