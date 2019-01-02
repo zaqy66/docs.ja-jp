@@ -669,7 +669,7 @@
 #### [NotOverridable](visual-basic/language-reference/modifiers/notoverridable.md)
 #### [Optional](visual-basic/language-reference/modifiers/optional.md)
 #### [Out (ジェネリック修飾子)](visual-basic/language-reference/modifiers/out-generic-modifier.md)
-#### [オーバーロード](visual-basic/language-reference/modifiers/overloads.md)
+#### [Overload](visual-basic/language-reference/modifiers/overloads.md)
 #### [Overridable](visual-basic/language-reference/modifiers/overridable.md)
 #### [Overrides](visual-basic/language-reference/modifiers/overrides.md)
 #### [ParamArray](visual-basic/language-reference/modifiers/paramarray.md)
