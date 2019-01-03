@@ -1,4 +1,4 @@
----
+﻿---
 title: 配列の概要 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
