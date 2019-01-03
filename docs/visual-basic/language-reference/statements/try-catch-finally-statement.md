@@ -105,7 +105,7 @@ End Try
   
  プロパティ、`Exception`原因と、例外の場所を識別するためにヘルプをオブジェクトします。 たとえば、<xref:System.Exception.StackTrace%2A>プロパティを検索、コードでエラーが発生すれば、例外の原因と呼ばれるメソッドの一覧します。 <xref:System.Exception.Message%2A> 例外を説明するメッセージが返されます。 <xref:System.Exception.HelpLink%2A> 関連付けられているヘルプ ファイルへのリンクを返します。 <xref:System.Exception.InnerException%2A> 返します、`Exception`または現在の例外の原因となったオブジェクトを返します`Nothing`元が存在しない場合`Exception`します。  
   
-## <a name="considerations-when-using-a-trycatch-statement"></a>使用に関する注意点をお試しください.Catch ステートメント  
+## <a name="considerations-when-using-a-trycatch-statement"></a>Try…Catchステートメントを使用に関する注意点  
  使用して、`Try…Catch`ステートメントがプログラムの異常なまたは予期しないイベントの発生を知らせるだけです。 この理由から、次のとおりです。  
   
 -   実行時に例外をキャッチすると、追加のオーバーヘッドを作成し、例外を回避するために事前に確認するよりも低下する可能性があります。  
