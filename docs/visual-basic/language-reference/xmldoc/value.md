@@ -1,5 +1,5 @@
 ---
-title: '<value>(Visual Basic)'
+title: '&lt;value&gt;(Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <value> XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "43855934"
 ---
-# <a name="ltvaluegt-visual-basic"></a><value>(Visual Basic)
+# <a name="ltvaluegt-visual-basic"></a>&lt;value&gt;(Visual Basic)
 プロパティの説明を指定します。  
   
 ## <a name="syntax"></a>構文  

@@ -140,7 +140,7 @@ ms.locfileid: "53150746"
 
     このページは、アプリケーションの起動時に表示される最初のページです。 経費報告書を表示するからを選択するユーザーの一覧表示されます。
 
-2. 開いている *`ExpenseItHome.xaml`* します。
+2. 開いている*`ExpenseItHome.xaml`* します。
 
 3. 設定、<xref:System.Windows.Controls.Page.Title%2A>に"`ExpenseIt - Home`"。
 
@@ -237,7 +237,7 @@ ms.locfileid: "53150746"
 
 セクションで、単一列テーブル 3 つの行と 10 ピクセルの余白を追加して作成する列と行の定義を<xref:System.Windows.Controls.Grid>で *`ExpenseItHome.xaml`* します。
 
-1. 開いている *`ExpenseItHome.xaml`* します。
+1. 開いている*`ExpenseItHome.xaml`* します。
 
 2. 設定、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティを<xref:System.Windows.Controls.Grid>「10,0,10,10」は、左、上、右、下の余白に対応する要素。
 
@@ -272,7 +272,7 @@ ms.locfileid: "53150746"
 
 行の各コントロールを配置、<xref:System.Windows.Controls.Grid>を設定して、<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>添付プロパティ。 添付プロパティの詳細については、次を参照してください。[添付プロパティの概要](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)します。
 
-1. 開いている *`ExpenseItHome.xaml`* します。
+1. 開いている*`ExpenseItHome.xaml`* します。
 
 2. 追加する、次 XAML どこかの間、<xref:System.Windows.Controls.Grid>タグ。
 
@@ -291,7 +291,7 @@ ms.locfileid: "53150746"
 
 このセクションでは、イメージとページ タイトル、ホーム ページの UI を更新します。
 
-1. 開いている *`ExpenseItHome.xaml`* します。
+1. 開いている*`ExpenseItHome.xaml`* します。
 
 2. もう 1 つの列を追加、<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>230 ピクセルの。
 
@@ -325,7 +325,7 @@ ms.locfileid: "53150746"
 
 ## <a name="add-code-to-handle-events"></a>イベントを処理するコードを追加します。
 
-1. 開いている *`ExpenseItHome.xaml`* します。
+1. 開いている*`ExpenseItHome.xaml`* します。
 
 2. 追加、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント ハンドラーを<xref:System.Windows.Controls.Button>要素。 詳細については、次を参照してください。[方法。単純なイベント ハンドラーを作成](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)です。
 
@@ -348,7 +348,7 @@ ms.locfileid: "53150746"
 
     [!code-xaml[ExpenseIt#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseReportPage.xaml#17)]
 
-    この UI はのような *`ExpenseItHome.xaml`* でレポート データが表示される点を除いて、<xref:System.Windows.Controls.DataGrid>します。
+    この UI はのような*`ExpenseItHome.xaml`* でレポート データが表示される点を除いて、<xref:System.Windows.Controls.DataGrid>します。
 
 3. アプリケーションをビルドして実行します。
 
@@ -389,7 +389,7 @@ ms.locfileid: "53150746"
 
     スタイルは、リソースとの子に注目してください、<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>プロパティ要素。 ここでは、スタイルはアプリケーション内のすべての要素に適用されます。 .NET Framework アプリケーションでリソースの使用の例は、次を参照してください。[アプリケーション リソースを使用](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)します。
 
-3. 開いている *`ExpenseItHome.xaml`* します。
+3. 開いている*`ExpenseItHome.xaml`* します。
 
 4. 間にあるすべての置換、<xref:System.Windows.Controls.Grid>で次の XAML 要素。
 
@@ -409,7 +409,7 @@ ms.locfileid: "53150746"
 
 このセクションでは、さまざまなコントロールにバインドされている XML データを作成します。
 
-1. 開いている *`ExpenseItHome.xaml`* します。
+1. 開いている*`ExpenseItHome.xaml`* します。
 
 2. 開始後に<xref:System.Windows.Controls.Grid>要素を作成する次の XAML を追加、<xref:System.Windows.Data.XmlDataProvider>各人のデータを格納しています。
 

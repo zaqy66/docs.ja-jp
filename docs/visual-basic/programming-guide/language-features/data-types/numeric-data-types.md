@@ -38,6 +38,7 @@ Visual Basic では、いくつかを提供*数値データ型*のさまざま�
 ## <a name="integral-numeric-types"></a>整数数値型  
  *整数データ型*は小数部のない数だけを表す。  
   
+
  *署名*整数データ型は[SByte データ型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)(8 ビット)、 [Short データ型](../../../../visual-basic/language-reference/data-types/short-data-type.md)(16 ビット)、[整数データ型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)(32 ビット)、および[Long データ型](../../../../visual-basic/language-reference/data-types/long-data-type.md)(64 ビット)。 変数は、小数部ではなく整数を常に保存する場合、これらの型のいずれかとして宣言します。  
   
  *符号なし*整数型には[Byte データ型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)(8 ビット)、 [UShort データ型](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)(16 ビット)、 [UInteger データ型](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)(32 ビット)、および[Ulong 型](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)(64 ビット)。 バイナリ データ、または不明な性質のデータが、変数が含まれる場合は、これらの型のいずれかとしてを宣言します。  

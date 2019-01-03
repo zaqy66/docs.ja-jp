@@ -1,16 +1,14 @@
 ---
 title: global.json の概要
 description: .NET Core CLI コマンドを実行するときに global.json ファイルを使用して .NET Core SDK のバージョンを設定する方法について説明します。
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2018
-ms.custom: updateeachrelease
-ms.openlocfilehash: 7cb118c16460ed593d210f5e816b2a6fd5af2ee3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: updateeachrelease, seodec18
+ms.openlocfilehash: e0f929a049812cac6f62e5218629c9b0add83de8
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150862"
+ms.locfileid: "53170770"
 ---
 # <a name="globaljson-overview"></a>global.json の概要
 
@@ -26,13 +24,13 @@ ms.locfileid: "53150862"
 
 ### <a name="sdk"></a>SDK
 
-型: Object
+型:Object
 
 選択する .NET Core SDK についての情報を指定します。
 
 #### <a name="version"></a>version
 
-型: String
+型:String
 
 使用する .NET Core SDK のバージョンです。
 

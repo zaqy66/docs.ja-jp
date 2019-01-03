@@ -1,5 +1,5 @@
 ---
-title: オプション&lt;キーワード&gt;ステートメント (Visual Basic)
+title: Option&lt;キーワード&gt;ステートメント (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/06/2018
 ms.locfileid: "48839825"
 ---
-# <a name="option-ltkeywordgt-statement"></a>オプション&lt;キーワード&gt;ステートメント
+# <a name="option-ltkeywordgt-statement"></a>Option&lt;キーワード&gt;ステートメント
 ソース ファイル全体に適用されるコンパイラ オプションを指定するステートメントについて説明します。  
   
 ## <a name="remarks"></a>Remarks  

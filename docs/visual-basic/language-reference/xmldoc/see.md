@@ -1,5 +1,5 @@
 ---
-title: '<see>(Visual Basic)'
+title: '&lt;see&gt;(Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - see XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/09/2018
 ms.locfileid: "44248879"
 ---
-# <a name="ltseegt-visual-basic"></a><see>(Visual Basic)
+# <a name="ltseegt-visual-basic"></a>&lt;see&gt;(Visual Basic)
 別のメンバーへのリンクを指定します。  
   
 ## <a name="syntax"></a>構文  

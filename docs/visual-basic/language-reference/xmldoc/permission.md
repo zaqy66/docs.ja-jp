@@ -1,5 +1,5 @@
 ---
-title: '<permission>(Visual Basic)'
+title: '&lt;permission&gt;(Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <permission> XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/06/2018
 ms.locfileid: "48838209"
 ---
-# <a name="ltpermissiongt-visual-basic"></a><permission>(Visual Basic)
+# <a name="ltpermissiongt-visual-basic"></a>&lt;permission&gt;(Visual Basic)
 メンバーの必要なアクセス許可を指定します。  
   
 ## <a name="syntax"></a>構文  

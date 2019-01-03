@@ -1,15 +1,15 @@
 ---
 title: センチメント分析のバイナリ分類のシナリオで ML.NET を使用する
 description: バイナリ分類のシナリオで ML.NET を使用する方法を学習して、センチメント予測をどのように使用して適切なアクションを実行するかを理解します。
-ms.date: 11/06/2018
+ms.date: 12/20/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: cffce6258685502191e1dd33ef8282d664ea2d4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 90f3b79226b16ac1ea4cbbe49ce07d95a138323b
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149654"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779141"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>チュートリアル: センチメント分析のバイナリ分類のシナリオで ML.NET を使用する
 
@@ -122,7 +122,7 @@ ms.locfileid: "53149654"
 * `_trainDataPath` には、モデルのトレーニングに使用するデータ セットのパスが含まれます。
 * `_testDataPath` には、モデルの評価に使用するデータ セットのパスが含まれます。
 * `_modelPath` には、トレーニング済みのモデルを保存するパスが含まれます。
-* `_reader` は、データセットの読み込みと変換に使用される <xref:Microsoft.ML.Runtime.Data.TextLoader> です。
+* `_textLoader` は、データセットの読み込みと変換に使用される <xref:Microsoft.ML.Runtime.Data.TextLoader> です。
 
 `Main` メソッドのすぐ上にある行に次のコードを追加して、それらのパスと `_textLoader` 変数を指定します。
 
@@ -148,7 +148,7 @@ ML.NET を使用してモデルをビルドするときは、まず `MLContext` 
 
 ### <a name="initialize-variables-in-main"></a>Main で変数を初期化する
 
-`mlContext` と呼ばれる変数を作成し、`MLContext` の新しいインスタンスで初期化します。  `Main` メソッドの `Console.WriteLine("Hello World!")` 行を、次のコードで置き換えます。
+`mlContext` という変数を作成し、`MLContext` の新しいインスタンスで初期化します。  `Main` メソッドの `Console.WriteLine("Hello World!")` 行を、次のコードで置き換えます。
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
@@ -216,7 +216,7 @@ ML.NET の変換パイプラインによって、トレーニングまたはテ�
 
 ## <a name="train-the-model"></a>モデルをトレーニングする
 
-読み込まれて変換されたデータ セットに基づいて、モデル <xref:Microsoft.ML.Runtime.Data.TransformerChain%601> をトレーニングします。 推定器が定義されたら、既に読み込まれたトレーニング データを提供しながら、<xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> を使用してモデルをトレーニングします。 これにより、予測で使用されるモデルが返されます。 `pipeline.Fit()` はパイプラインをトレーニングして、渡された `DataView` に基づいて `Transformer` を返します。 これが行われるまで、実験は実行されません。
+読み込まれて変換されたデータ セットに基づいて、モデル <xref:Microsoft.ML.Data.TransformerChain%601> をトレーニングします。 推定器が定義されたら、既に読み込まれたトレーニング データを提供しながら、<xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> を使用してモデルをトレーニングします。 これにより、予測で使用されるモデルが返されます。 `pipeline.Fit()` でパイプラインをトレーニングし、`DataView` に基づいて `Transformer` を返します。 これが行われるまで、実験は実行されません。
 
 `Train` メソッドに次のコードを追加します。
 

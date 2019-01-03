@@ -72,7 +72,7 @@ ms.locfileid: "53144872"
 |`Action`|セキュリティ アクションを取得または設定します。 このプロパティは、<xref:System.Security.Permissions.SecurityAttribute> から継承されています。|  
 |`AllowBlankPassword`|接続文字列内で空白のパスワードの使用を許可または禁止します。 有効な値は、空白のパスワードの使用を許可する `true` および空白のパスワードの使用を禁止する `false` です。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
 |`ConnectionString`|使用できる接続文字列を指定します。 複数の接続文字列を指定できます。 **注:** 接続文字列には、ユーザー ID やパスワードを含めないでください。 このリリースでは、.NET Framework 構成ツールを使用して接続文字列制限を変更することはできません。 <br /><br /> このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
-|`KeyRestrictions`|許可または禁止する接続文字列パラメーターを指定します。 接続文字列パラメーターが、フォームで識別される*\<パラメーター名 > =* します。 セミコロン (;) で区切って、複数のパラメーターを指定できます。 **注:**`KeyRestrictions` が指定されておらず、`KeyRestrictionBehavior` プロパティが `AllowOnly` または `PreventUsage` に設定されている場合は、接続文字列パラメーターを追加できません。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
+|`KeyRestrictions`|許可または禁止する接続文字列パラメーターを指定します。 接続文字列パラメーターが、フォームで識別される *\<パラメーター名>=* します。 セミコロン (;) で区切って、複数のパラメーターを指定できます。 **注:**`KeyRestrictions` が指定されておらず、`KeyRestrictionBehavior` プロパティが `AllowOnly` または `PreventUsage` に設定されている場合は、接続文字列パラメーターを追加できません。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
 |`KeyRestrictionBehavior`|接続文字列パラメーターが、追加を許可された唯一の接続文字列パラメーター (`AllowOnly`) か、または追加を禁止された接続文字列パラメーター (`PreventUsage`) かを指定します。 `AllowOnly` が既定値です。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
 |`TypeID`|派生クラスで実装すると、この属性の一意の識別子を取得します。 このプロパティは、<xref:System.Attribute> から継承されています。|  
 |`Unrestricted`|このリソースに対する無制限のアクセス許可が宣言されているかどうかを示します。 このプロパティは、<xref:System.Security.Permissions.SecurityAttribute> から継承されています。|  
