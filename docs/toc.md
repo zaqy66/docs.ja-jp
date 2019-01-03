@@ -465,7 +465,7 @@
 ### [Visual Studio における Visual Basic の互換性に影響する変更点](visual-basic/getting-started/breaking-changes-in-visual-studio.md)
 ### [Visual Basic プログラマのための追加リソース](visual-basic/getting-started/additional-resources.md)
 
-## [開発 (アプリケーションを)](visual-basic/developing-apps/index.md)
+## [Visual Basic でのアプリケーションの開発](visual-basic/developing-apps/index.md)
 
 ### [Visual Basic でのプログラミング](visual-basic/developing-apps/programming/index.md)
 #### [コンピューター リソースへのアクセス](visual-basic/developing-apps/programming/computer-resources/index.md)
@@ -625,7 +625,7 @@
 #### [Date データ型](visual-basic/language-reference/data-types/date-data-type.md)
 #### [Decimal データ型](visual-basic/language-reference/data-types/decimal-data-type.md)
 #### [Double 型](visual-basic/language-reference/data-types/double-data-type.md)
-#### [整数データ型](visual-basic/language-reference/data-types/integer-data-type.md)
+#### [Integer データ型](visual-basic/language-reference/data-types/integer-data-type.md)
 #### [Long データ型](visual-basic/language-reference/data-types/long-data-type.md)
 #### [Object 型](visual-basic/language-reference/data-types/object-data-type.md)
 #### [SByte データ型](visual-basic/language-reference/data-types/sbyte-data-type.md)
@@ -898,7 +898,7 @@
 #### [XML 処理命令リテラル](visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)
 
 ### [エラー メッセージ](visual-basic/language-reference/error-messages/index.md)
-#### ['ElseIf' の前には、対応する 'If' または 'ElseIf' が必要です](visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md)
+#### ['#ElseIf' の前には、対応する '#If' または '#ElseIf' が必要です](visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md)
 #### ['#Region' および '#End Region' ステートメントは、メソッド本体や複数行ラムダの内部では有効ではありません。](visual-basic/language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md)
 #### [GUID '<number>' の形式が正しくないため、'<attribute>' を適用できません。](visual-basic/language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md)
 #### ['<classname>' は継承元のインターフェイス '<interfacename>' が CLS に準拠していないため、CLS に準拠していません。](visual-basic/language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md)
