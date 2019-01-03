@@ -1,5 +1,5 @@
 ---
-title: "'#ElseIf' の前には、対応する '#If' または '#ElseIf' が必要です'"
+title: "'#ElseIf' の前には、対応する '#If' または '#ElseIf' が必要です"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30014
