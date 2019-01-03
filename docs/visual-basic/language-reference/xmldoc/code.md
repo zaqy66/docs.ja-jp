@@ -1,5 +1,5 @@
 ﻿---
-title: '&lt;コード&gt;(Visual Basic)'
+title: '<code>(Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - code XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "43858640"
 ---
-# <a name="ltcodegt-visual-basic"></a>&lt;コード&gt;(Visual Basic)
+# <a name="ltcodegt-visual-basic"></a><code>(Visual Basic)
 テキストが複数行のコードであることを示します。  
   
 ## <a name="syntax"></a>構文  
@@ -25,7 +25,7 @@ ms.locfileid: "43858640"
  `content`  
  コードとしてマークするテキスト。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  使用して、`<code>`をコードとして複数の行を示すタグ。 説明内のテキストをコードとしてマークする場合は、[\<c>](../../../visual-basic/language-reference/xmldoc/c.md) タグを使用します。  
   
  コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
