@@ -465,7 +465,7 @@
 ### [Visual Studio における Visual Basic の互換性に影響する変更点](visual-basic/getting-started/breaking-changes-in-visual-studio.md)
 ### [Visual Basic プログラマのための追加リソース](visual-basic/getting-started/additional-resources.md)
 
-## [開発 (アプリケーションを)](visual-basic/developing-apps/index.md)
+## [Visual Basic でのアプリケーションの開発](visual-basic/developing-apps/index.md)
 
 ### [Visual Basic でのプログラミング](visual-basic/developing-apps/programming/index.md)
 #### [コンピューター リソースへのアクセス](visual-basic/developing-apps/programming/computer-resources/index.md)
@@ -625,7 +625,7 @@
 #### [Date データ型](visual-basic/language-reference/data-types/date-data-type.md)
 #### [Decimal データ型](visual-basic/language-reference/data-types/decimal-data-type.md)
 #### [Double 型](visual-basic/language-reference/data-types/double-data-type.md)
-#### [整数データ型](visual-basic/language-reference/data-types/integer-data-type.md)
+#### [Integer データ型](visual-basic/language-reference/data-types/integer-data-type.md)
 #### [Long データ型](visual-basic/language-reference/data-types/long-data-type.md)
 #### [Object 型](visual-basic/language-reference/data-types/object-data-type.md)
 #### [SByte データ型](visual-basic/language-reference/data-types/sbyte-data-type.md)
