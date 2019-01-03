@@ -1,4 +1,4 @@
----
+﻿---
 title: As 句 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
@@ -39,7 +39,7 @@ ms.locfileid: "33604264"
   
  [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [各しています.Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
   
