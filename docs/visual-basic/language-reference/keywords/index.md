@@ -1,4 +1,4 @@
----
+﻿---
 title: キーワード (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -41,7 +41,7 @@ ms.locfileid: "33605317"
 |[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|[DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md)|[Do](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|  
 |[Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Else](../../../visual-basic/language-reference/statements/else-statement.md)|[ElseIf](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[End ステートメント](../../../visual-basic/language-reference/statements/end-statement.md)|  
 |[End \<キーワード>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|`EndIf`|[Enum](../../../visual-basic/language-reference/statements/enum-statement.md)|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md)|  
-|[エラー](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|[終了](../../../visual-basic/language-reference/statements/exit-statement.md)|[False](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
+|[Error](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|[終了](../../../visual-basic/language-reference/statements/exit-statement.md)|[False](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
 |[Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[For (For…Next 内)](../../../visual-basic/language-reference/statements/for-next-statement.md)|[For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|  
 |[Function](../../../visual-basic/language-reference/statements/function-statement.md)|[Get](../../../visual-basic/language-reference/statements/get-statement.md)|[GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)|[GetXMLNamespace](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)|  
 |[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)|[Handles](../../../visual-basic/language-reference/statements/handles-clause.md)|  
