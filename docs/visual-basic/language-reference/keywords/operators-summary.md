@@ -1,4 +1,4 @@
----
+﻿---
 title: 演算子の概要 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
