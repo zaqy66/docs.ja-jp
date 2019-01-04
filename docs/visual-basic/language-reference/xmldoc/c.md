@@ -1,5 +1,5 @@
 ---
-title: '<c> (Visual Basic)'
+title: '&lt;c&gt; (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - c XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "44041123"
 ---
-# <a name="ltcgt-visual-basic"></a><c> (Visual Basic)
+# <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
 説明内のテキストがコードであることを示します。  
   
 ## <a name="syntax"></a>構文  

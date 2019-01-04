@@ -1,4 +1,4 @@
-﻿---
+---
 title: As 句 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
