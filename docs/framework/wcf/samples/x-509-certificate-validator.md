@@ -2,17 +2,17 @@
 title: X.509 証明書検証
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: ece96c04245434853169c458f8f0c0ebe91da724
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f8bc5c1976e61cbb81d0bc8463a57cfad750a2a7
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123424"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030309"
 ---
 # <a name="x509-certificate-validator"></a>X.509 証明書検証
 このサンプルでは、カスタム X.509 証明書検証を実装する方法を示します。 これは、アプリケーションの要件に適した組み込みの X.509 証明書検証モードがない場合に便利です。 このサンプルでは、自己発行の証明書を許可するカスタム検証を備えたサービスを示します。 クライアントはこのような証明書を使用して、このサービスに認証されます。
 
- メモ : 任意のユーザーが自己発行の証明書を作成できる場合、このサービスで使用されるカスタム検証は、ChainTrust X509CertificateValidationMode によって提供される既定の動作よりも安全性が低くなります。 この検証ロジックを製品版のコードで使用する前に、こうしたセキュリティへの影響について慎重に考慮する必要があります。
+ メモ:自己発行の証明書を構築できるすべてのユーザーとしてサービスによって使用されるカスタム検証は ChainTrust X509CertificateValidationMode によって提供される既定の動作よりも安全性が低いです。 この検証ロジックを製品版のコードで使用する前に、こうしたセキュリティへの影響について慎重に考慮する必要があります。
 
  このサンプルで示す処理の概要は次のとおりです。
 
@@ -59,16 +59,16 @@ ms.locfileid: "49123424"
         <behavior name="CalculatorServiceBehavior">
           <serviceDebug includeExceptionDetailInFaults ="true"/>
           <serviceCredentials>
-            <!--The serviceCredentials behavior allows one -->
+            <!-- The serviceCredentials behavior allows one -->
             <!-- to specify authentication constraints on -->
             <!-- client certificates. -->
             <clientCertificate>
               <!-- Setting the certificateValidationMode to -->
               <!-- Custom means that if the custom -->
               <!-- X509CertificateValidator does NOT throw -->
-              <!-- an exception, then the provided certificate -- >
+              <!-- an exception, then the provided certificate -->
               <!-- will be trusted without performing any -->
-              <!-- validation beyond that performed by the custom-->
+              <!-- validation beyond that performed by the custom -->
               <!-- validator. The security implications of this -->
               <!-- setting should be carefully considered before -->
               <!-- using Custom in production code. -->
@@ -77,13 +77,13 @@ ms.locfileid: "49123424"
                  customCertificateValidatorType =
 "Microsoft.ServiceModel.Samples.CustomX509CertificateValidator, service" />
             </clientCertificate>
-            <!-- The serviceCredentials behavior allows one to -- >
-            <!--define a service certificate. -->
-            <!--A service certificate is used by a client to  -->
-            <!--authenticate the service and provide message  -->
-            <!--protection. This configuration references the  -->
-            <!--"localhost" certificate installed during the setup  -->
-            <!--instructions. -->
+            <!-- The serviceCredentials behavior allows one to -->
+            <!-- define a service certificate. -->
+            <!-- A service certificate is used by a client to -->
+            <!-- authenticate the service and provide message -->
+            <!-- protection. This configuration references the -->
+            <!-- "localhost" certificate installed during the setup -->
+            <!-- instructions. -->
             <serviceCertificate findValue="localhost"
                  storeLocation="LocalMachine"
                  storeName="My" x509FindType="FindBySubjectName" />
@@ -232,10 +232,10 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     <clientCertificate>
     <!-- Setting the certificateValidationMode to Custom means -->
     <!--that if the custom X509CertificateValidator does NOT -->
-    <!--throw an exception, then the provided certificate will-- >
-    <!-- be trusted without performing any validation beyond that-- >
-    <!-- performed by the custom validator. The security -- >
-    <!--implications of this setting should be carefully -- >
+    <!--throw an exception, then the provided certificate will -->
+    <!--be trusted without performing any validation beyond that -->
+    <!--performed by the custom validator. The security -->
+    <!--implications of this setting should be carefully -->
     <!--considered before using Custom in production code. -->
     <authentication certificateValidationMode="Custom"
        customCertificateValidatorType =
@@ -354,6 +354,6 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 1.  サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。 これにより、証明書ストアからサーバー証明書とクライアント証明書が削除されます。  
   
 > [!NOTE]
->  このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行すると、必ず、CurrentUser - TrustedPeople ストアにインストールされているサービス証明書をオフにします。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` となります。
+>  このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行すると、必ず、CurrentUser - TrustedPeople ストアにインストールされているサービス証明書をオフにします。 これを行うには、次のコマンドを使用します。`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例:`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`します。
 
 ## <a name="see-also"></a>関連項目

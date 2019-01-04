@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873720"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030530"
 ---
 # <a name="data-contract-schema-reference"></a>データ コントラクト スキーマの参照
 ここでは、XML シリアル化用の共通言語ランタイム (CLR) 型を表すために <xref:System.Runtime.Serialization.DataContractSerializer> が使用する XML スキーマ (XSD) のサブセットについて説明します。  
@@ -202,7 +202,7 @@ ms.locfileid: "48873720"
   
  \* 使用する場合、`simpleType`と`complexType,`匿名データ コントラクトはありませんが、要素名から派生する生成された名前で名前付きのデータ コントラクトが作成されるように匿名型のマッピングは非匿名のタイプと同じです。 匿名型のルールは、次のとおりです。  
   
--   WCF 実装の詳細: 場合、`xs:element`名にピリオドが含まれていない場合、匿名型、外側のデータ コントラクト型の内部型にマップされます。 名前にピリオドが含まれている場合、結果のデータ コントラクト型は、内部型ではなく、独立した型になります。  
+-   WCF 実装の詳細:場合、`xs:element`名にピリオドが含まれていない場合、匿名型、外側のデータ コントラクト型の内部型にマップされます。 名前にピリオドが含まれている場合、結果のデータ コントラクト型は、内部型ではなく、独立した型になります。  
   
 -   内部型の生成されたデータ コントラクト名は、外部型のデータ コントラクト名の後にピリオド、要素の名前、および文字列 "Type" が付いたものになります。  
   
@@ -290,15 +290,14 @@ ms.locfileid: "48873720"
   
  次のコードは、C# の列挙クラスを示しています。  
   
-```  
+```csharp  
 public enum MyEnum  
 {  
-   first = 3,  
-   second = 4,  
-   third =5  
+  first = 3,  
+  second = 4,  
+  third =5  
+}  
 ```  
-  
- }  
   
  このクラスは `DataContractSerializer`により、次のスキーマにマッピングされます。 列挙値が 1 から始まる場合、 `xs:annotation` ブロックは生成されません。  
   
@@ -349,7 +348,7 @@ public enum MyEnum
   
  たとえば、次のコードは列挙型をフラグとして処理します。  
   
-```  
+```csharp  
 [Flags]  
 public enum AuthFlags  
 {    
@@ -402,7 +401,7 @@ rialization/">64</EnumerationValue>
   
  データ コントラクトの例を次のコードに示します。  
   
-```  
+```csharp  
 [DataContract]  
 public class Person  
 {  
@@ -619,7 +618,7 @@ public class Employee : Person
 ## <a name="importing-non-datacontract-schemas"></a>非 DataContract スキーマのインポート  
  `DataContractSerializer` には、 `ImportXmlTypes` XSD プロファイルに準拠しないスキーマのインポートを可能にする `DataContractSerializer` オプションがあります (「 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> プロパティ」を参照してください)。 このオプションを `true` に設定すると、非準拠スキーマ型を受け入れ、それを次の実装 ( <xref:System.Xml.Serialization.IXmlSerializable> の配列をラップする <xref:System.Xml.XmlNode> ) にマッピングできるようになります (クラス名のみ異なります)。  
   
-```  
+```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
 [System.Xml.Serialization.XmlSchemaProviderAttribute("ExportSchema")]  
 [System.Xml.Serialization.XmlRootAttribute(IsNullable=false)]  

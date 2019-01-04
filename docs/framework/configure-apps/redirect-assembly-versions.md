@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c4c96b874456297ede61c96e46fee8d90ebcafb6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 67c94eeaa295b19e99f870780f555baff936889f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123619"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030128"
 ---
 # <a name="redirecting-assembly-versions"></a>アセンブリ バージョンのリダイレクト
 
@@ -67,7 +67,7 @@ ms.locfileid: "49123619"
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-アプリの対象が .NET Framework の旧バージョンの場合は、自動バインド リダイレクトを有効にできます。 任意のアセンブリの app.config ファイルにバインド リダイレクト情報を提供することで、またはバインド リダイレクト機能を無効にすることで、この既定の動作をオーバーライドできます。 この機能をオンまたはオフにする方法については、次を参照してください。[方法: 有効化と自動バインディング リダイレクトを無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)します。
+アプリの対象が .NET Framework の旧バージョンの場合は、自動バインド リダイレクトを有効にできます。 任意のアセンブリの app.config ファイルにバインド リダイレクト情報を提供することで、またはバインド リダイレクト機能を無効にすることで、この既定の動作をオーバーライドできます。 この機能をオンまたはオフにする方法については、次を参照してください。[方法。有効にして、自動バインド リダイレクトを無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)します。
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>発行者ポリシーの省略
@@ -142,11 +142,11 @@ ms.locfileid: "49123619"
 
 ```xml
 <assemblyBinding xmlns="..." appliesTo="v3.5 ">
-  <!—.NET Framework version 3.5 redirects here -->
+  <!--.NET Framework version 3.5 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="..." appliesTo="v4.0.30319">
-  <!—.NET Framework version 4.0 redirects here -->
+  <!--.NET Framework version 4.0 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="...">
@@ -156,7 +156,7 @@ ms.locfileid: "49123619"
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: 自動バインディング リダイレクトを有効/無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [方法: 有効にして、自動バインド リダイレクトを無効にします。](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > 要素](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
 - [アセンブリ バインディング リダイレクトのセキュリティ アクセス許可](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)
 - [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
@@ -166,4 +166,4 @@ ms.locfileid: "49123619"
 - [.NET Framework アプリの構成](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
 - [ランタイム設定スキーマ](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)
-- [方法: 発行者ポリシーを作成する](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)
+- [方法: 発行者ポリシーを作成します。](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

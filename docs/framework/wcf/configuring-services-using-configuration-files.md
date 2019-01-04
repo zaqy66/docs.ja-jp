@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200863"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029672"
 ---
 # <a name="configuring-services-using-configuration-files"></a>構成ファイルを使用してサービスを構成する方法
 構成ファイルで Windows Communication Foundation (WCF) サービスを構成することで、設計時ではなく配置の時点で、エンドポイントとサービス動作のデータの提供に柔軟性をもたらします。 ここでは使用可能な主要な技術について説明します。  
@@ -21,7 +21,7 @@ ms.locfileid: "50200863"
 > [!IMPORTANT]
 >  2 つの異なるバージョンのサービスが配置される side-by-side のシナリオを配置する場合、構成ファイルで参照されるアセンブリの部分名を指定する必要があります。 これは構成ファイルがすべてのバージョンのサービスで共有されて、異なるバージョンの .NET Framework で実行される可能性があるためです。  
   
-## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config と App.config  
+## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration:Web.config と App.config  
  WCF の System.Configuration 構成システムを使用して、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]します。  
   
  Visual Studio でサービスを構成するときに、Web.config ファイルまたは App.config ファイルのいずれかを使用して、設定を指定します。 選択する構成ファイル名は、サービスに選択したホスト環境によって異なります。 サービスのホストに IIS を使用している場合は、Web.config ファイルを使用します。 他のホスト環境を使用している場合、App.config ファイルを使用します。  
@@ -37,7 +37,7 @@ ms.locfileid: "50200863"
 <system.ServiceModel>  
   
    <services>  
-   <!—- Define the service endpoints. This section is optional in the new  
+   <!-- Define the service endpoints. This section is optional in the new  
     default configuration model in .NET Framework 4. -->  
       <service>  
          <endpoint/>  
@@ -126,7 +126,7 @@ ms.locfileid: "50200863"
     <basicHttpBinding>  
      <binding name="myBindingConfiguration1" closeTimeout="00:01:00" />  
      <binding name="myBindingConfiguration2" closeTimeout="00:02:00" />  
-     <binding closeTimeout="00:03:00" />  <!—- Default binding for basicHttpBinding -->  
+     <binding closeTimeout="00:03:00" />  <!-- Default binding for basicHttpBinding -->  
     </basicHttpBinding>  
      </bindings>  
      <services>  

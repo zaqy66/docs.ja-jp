@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: e463a087516dc45cb4bd879c77aef6fbeba2b546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f3fa70673c7ae5819346ab152b74acf93a164c
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542016"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029841"
 ---
 # <a name="annotations-schema"></a>注釈スキーマ
 このトピックでは、Microsoft Annotations Framework でユーザー注釈データの保存と取得に使用される XML スキーマ定義 (XSD) について説明します。  
@@ -24,13 +24,13 @@ ms.locfileid: "33542016"
   
 -   注釈 XML 基本スキーマ (基本スキーマ)。  
   
- Core スキーマでは、プライマリ XML の構造を定義、<xref:System.Windows.Annotations.Annotation>です。  Core スキーマで定義されている XML 要素の過半数が内の型に対応している、<xref:System.Windows.Annotations>名前空間。  コア スキーマは 3 つの拡張ポイントを公開します。そのポイントでアプリケーションは独自の XML データを追加できます。  これらの拡張ポイントを含める、 <xref:System.Windows.Annotations.Annotation.Authors%2A>、 <xref:System.Windows.Annotations.ContentLocatorPart>、「コンテンツ」とします。  (コンテンツの形式で要素が提供されて、 <xref:System.Xml.XmlElement>  ボックスの一覧です)。  
+ コア スキーマは、のプライマリ XML 構造を定義、<xref:System.Windows.Annotations.Annotation>します。  コア スキーマで定義された XML 要素の大部分が型に対応、<xref:System.Windows.Annotations>名前空間。  コア スキーマは 3 つの拡張ポイントを公開します。そのポイントでアプリケーションは独自の XML データを追加できます。  これらの拡張ポイントを含める、 <xref:System.Windows.Annotations.Annotation.Authors%2A>、 <xref:System.Windows.Annotations.ContentLocatorPart>、「コンテンツ」とします。  (要素がの形式で提供されるコンテンツ、<xref:System.Xml.XmlElement>一覧です)。  
   
- このトピックで説明する基本スキーマの拡張機能の定義、 <xref:System.Windows.Annotations.Annotation.Authors%2A>、 <xref:System.Windows.Annotations.ContentLocatorPart>、コンテンツの種類の最初の Windows Presentation Foundation (WPF) リリースに含まれているとします。  
+ このトピックで説明されているベース スキーマの拡張機能を定義する、 <xref:System.Windows.Annotations.Annotation.Authors%2A>、 <xref:System.Windows.Annotations.ContentLocatorPart>、コンテンツの種類の初期の Windows Presentation Foundation (WPF) のリリースに含まれているとします。  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>注釈 XML コア スキーマ  
- 注釈の XML Core スキーマ定義の格納に使用される XML 構造<xref:System.Windows.Annotations.Annotation>オブジェクト。  
+ 注釈 XML コア スキーマ定義を格納するために使用される XML 構造<xref:System.Windows.Annotations.Annotation>オブジェクト。  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -182,7 +182,7 @@ ms.locfileid: "33542016"
   
 <a name="BaseSchema"></a>   
 ## <a name="annotations-xml-base-schema"></a>注釈 XML 基本スキーマ  
- –、Core スキーマで定義されている 3 つの抽象要素の XML 構造を定義して、ベース スキーマ<xref:System.Windows.Annotations.Annotation.Authors%2A>、 <xref:System.Windows.Annotations.ContentLocatorPart>、および<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>です。  
+ 基本スキーマは、コア スキーマで定義されている 3 つの抽象要素の XML 構造を定義します<xref:System.Windows.Annotations.Annotation.Authors%2A>、 <xref:System.Windows.Annotations.ContentLocatorPart>、および<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>します。  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -429,11 +429,11 @@ ms.locfileid: "33542016"
     </xsd:complexContent>  
   </xsd:complexType>  
   
-  <-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
-  *  page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
-  *   conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
-  *   page are the coordinates defined in the FixedTextRange.  
-  *   Example of a PageNumber ContentLocatorPart:  
+  <!-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
+  *    page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
+  *    conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
+  *    page are the coordinates defined in the FixedTextRange.  
+  *    Example of a PageNumber ContentLocatorPart:  
   *     
   *       <anb:PageNumber>  
   *         <anc:Item Name="Value" Value="1" />  
@@ -464,8 +464,8 @@ ms.locfileid: "33542016"
   <xsd:element name="Text" type="anb:TextContentType"  
                substitutionGroup="anc:Content"/>  
   
-  <-- Ink – contains XAML representing Sticky Note ink.  
-  *   Used in annotations of type InkStickyNote. -->  
+  <!-- Ink – contains XAML representing Sticky Note ink.  
+  *    Used in annotations of type InkStickyNote. -->  
   <xsd:complexType name="InkContentType">  
     <!-- See XAML schema for Ink content -->  
   </xsd:complexType>  
@@ -493,7 +493,7 @@ ms.locfileid: "33542016"
   
 <a name="SampleXML"></a>   
 ## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>注釈 XmlStreamStore で作成されたサンプル XML  
- これに続く XML は、注釈の出力を示しています。<xref:System.Windows.Annotations.Storage.XmlStreamStore>と 3 つの注釈の強調表示、テキストの付箋、およびインク スティック注釈を格納するファイルのサンプルの組織。  
+ 続く XML では、注釈の出力を示しています。<xref:System.Windows.Annotations.Storage.XmlStreamStore>と 3 つの注釈の強調表示や、テキスト付箋、インク付箋を含むサンプル ファイルの組織。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

@@ -2,12 +2,12 @@
 title: '&lt;netHttpBinding&gt; の &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 092072df2b88c59c7744a694175ce5ddf39cf79b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3a35be198a4e60922861c49e911bd498d44c974f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842646"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030322"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; の &lt;transport&gt;
 HTTP トランスポートの認証パラメーターを制御するプロパティを定義します。  
@@ -65,8 +65,8 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
 |値|説明|  
 |-----------|-----------------|  
 |なし|メッセージの数は、転送中にセキュリティ保護されません。|  
-|Basic|RFC 2617 『HTTP Authentication: Basic and Digest Authentication』で定義されているとおりに基本認証を指定します。|  
-|Digest|RFC 2617 『HTTP Authentication: Basic and Digest Authentication』で定義されているとおりにダイジェスト認証を指定します。|  
+|Basic|RFC 2617 – HTTP Authentication で定義されている基本認証を指定します。基本認証とダイジェスト認証です。|  
+|Digest|RFC 2617 – HTTP Authentication で定義されている、ダイジェスト認証を指定します。基本認証とダイジェスト認証です。|  
 |Ntlm|Windows 認証に失敗した場合で可能な場合は、NTLM 認証を指定します。|  
 |Windows|Windows 統合認証を指定します。|  
 |証明書|証明書を使用したクライアント認証を実行します。 このオプションは、親要素の `Mode` の `security` 属性が Transport に設定されている場合のみ機能し、TransportCredentialOnly に設定されている場合は機能しません。|  
@@ -96,8 +96,8 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   </services>  
   <bindings>  
     <netHttpBinding>  
-      <!-- Configure basicHttpBinding with Transport security -- >  
-      <!-- mode and clientCredentialType set to None.-->  
+      <!-- Configure basicHttpBinding with Transport security -->  
+      <!-- mode and clientCredentialType set to None. -->  
       <binding name="Binding1">  
         <security mode="Transport">  
           <transport clientCredentialType="None"  
