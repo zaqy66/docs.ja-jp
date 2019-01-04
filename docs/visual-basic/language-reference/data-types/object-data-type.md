@@ -1,5 +1,5 @@
 ---
-title: オブジェクトのデータ型 (Visual Basic)
+title: Object データ型 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Object
@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/03/2018
 ms.locfileid: "43485561"
 ---
-# <a name="object-data-type"></a>Object Data Type
+# <a name="object-data-type"></a>Object データ型
 オブジェクトを参照するアドレスを保持します。 参照型 (文字列、配列、クラス、またはインターフェイス) を割り当てることができます、`Object`変数。 `Object`変数は、任意の値型のデータを指すことも (数値、 `Boolean`、 `Char`、 `Date`、構造体、または列挙型)。  
   
 ## <a name="remarks"></a>Remarks  
