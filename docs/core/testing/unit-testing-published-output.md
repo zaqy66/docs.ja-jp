@@ -1,15 +1,16 @@
 ---
 title: パブリッシュされた出力を dotnet vstest でテストします
-description: dotnet vstest コマンドを使用してパブリッシュされた出力をテストする方法を説明します。
+description: dotnet vstest コマンドを使用して、ソース コードではなく、パブリッシュされたライブラリでテストを実行する方法を説明します。
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 9d842f26336d0ddf5375d49676523086bb632684
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508134"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239528"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>パブリッシュされた出力を dotnet vstest でテストします
 
@@ -21,7 +22,9 @@ dotnet vstest <MyPublishedTests>.dll
 
 `<MyPublishedTests>` はパブリッシュされたテスト プロジェクトの名前です。
 
-## <a name="example-of-running-tests-on-a-published-dll"></a>パブリッシュされた DLL に対してテストを行う例
+## <a name="example"></a>例
+
+次のコマンドは、パブリッシュされた DLL でのテストの実行を示しています。
 
 ```
 dotnet new mstest -o MyProject.Tests
@@ -31,7 +34,7 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> 注: アプリが `netcoreapp` 以外のフレームワークを対象とする場合でも、対象のフレームワークでフレームワーク フラグを付けて渡すことで `dotnet vstest` コマンドを実行できます。 たとえば、`dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"` のようにします。 Visual Studio 2017 Update 5 では、望ましいフレームワークが自動的に検出されます。
+> メモ:アプリが `netcoreapp` 以外のフレームワークを対象とする場合でも、対象のフレームワークでフレームワーク フラグを付けて渡すことで `dotnet vstest` コマンドを実行できます。 たとえば、`dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"` のようにします。 Visual Studio 2017 Update 5 では、望ましいフレームワークが自動的に検出されます。
 
 ## <a name="see-also"></a>関連項目
 - [dotnet テストおよび xUnit を使用した単体テスト](unit-testing-with-dotnet-test.md)

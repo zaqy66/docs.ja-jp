@@ -1,16 +1,17 @@
 ---
-title: dotnet テストと NUnit を使用した .NET Core での単体テスト F# ライブラリ
+title: dotnet テストと NUnit を使用した .NET Core での単体テスト F#
 description: dotnet テストおよび NUnit を使用したサンプル ソリューションを段階的に構築していく対話型エクスペリエンスを通じて、.NET Core における F# の単体テストの概念について説明します。
 author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: f8088dadbe92c10e2aad9cd5c3ce289612bd1a28
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: e919da8910129be027ff7e2dbed8c4564738e023
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131509"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241763"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した .NET Core での単体テスト F# ライブラリ
 

@@ -1,17 +1,15 @@
 ---
-title: Docker イメージの概要 - .NET Core
+title: Docker イメージの概要
 description: 公開されている .NET Core Docker イメージを Docker レジストリから使用する方法について説明します。 また、イメージをプルし、独自のイメージを構築する方法についても説明します。
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 34ff6ce7d990412fa0ac4896d1e2e39b307681f0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd8c6c500dc2177768e6cba0c1e303950e20d4f3
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145833"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656038"
 ---
 # <a name="learn-about-docker-images-for-net-core"></a>.NET Core の Docker イメージについて説明します
 
@@ -63,13 +61,13 @@ ms.locfileid: "53145833"
 > [!TIP]
 > 要件が確定していない場合、`microsoft/dotnet:<version>-sdk` イメージの使用をお勧めします。 これは "事実上標準の" イメージであり、使い捨てのコンテナーとして使用されます (ソース コードをマウントし、コンテナーを起動してアプリを開始します)。また、基礎イメージとして使用し、これに基づいて他のイメージをビルドします。
 
-* `microsoft/dotnet:<version>-runtime`: このイメージには .NET Core が含まれ (ランタイムとライブラリ)、**実稼働**で .NET Core アプリを実行するために最適化されています。
+* `microsoft/dotnet:<version>-runtime`:このイメージには .NET Core が含まれ (ランタイムとライブラリ)、**実稼働**で .NET Core アプリを実行するために最適化されています。
 
 ## <a name="alternative-images"></a>その他のイメージ
 
 開発、ビルドおよび実稼働の最適化されたシナリオに加え、次の追加イメージが提供されます。
 
-* `microsoft/dotnet:<version>-runtime-deps`: **runtime-deps** イメージには、オペレーティング システムと .NET Core で必要とされるすべてのネイティブ依存関係が含まれます。 このイメージは[自己完結型アプリケーション](../deploying/index.md)用です。
+* `microsoft/dotnet:<version>-runtime-deps`:**runtime-deps** イメージには、オペレーティング システムと .NET Core で必要とされるすべてのネイティブ依存関係が含まれます。 このイメージは[自己完結型アプリケーション](../deploying/index.md)用です。
 
 各バリアントの最新バージョン:
 

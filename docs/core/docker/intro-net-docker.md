@@ -1,22 +1,20 @@
 ---
-title: Docker の概要 - .NET Core
+title: Docker の概要
 description: この記事では、.NET Core アプリケーションのコンテキストでの Docker の基本と概要について説明します。
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 1655d4652c4e9b48c48a2a22c2a1bf6cdd459088
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148887"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656168"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET および Docker の概要
 
 この記事では、Docker 上での .NET の使用に関する概要と概念的な基礎について説明します。
 
-## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker: アプリをパッケージ化して任意の場所で配置および実行する
+## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker:アプリをパッケージ化して任意の場所で配置および実行する
 
 [Docker](../../standard/microservices-architecture/container-docker-introduction/docker-defined.md) はオープンなプラットフォームであり、開発者や管理者は[イメージ](https://docs.docker.com/glossary/?term=image)のビルド、配布、および分散アプリケーションの実行を[コンテナー](https://www.docker.com/what-container)という大まかに分けられた環境で行えます。 この手法を使用すると、開発、QA、運用環境の間でアプリケーションのライフ サイクルを効率的に管理できます。
  
@@ -28,7 +26,7 @@ ms.locfileid: "53148887"
 
 ### <a name="further-reading-and-watching"></a>さらに詳しく読む (視聴する)
 
-* [Windows ベースのコンテナー: エンタープライズ レベルの制御が可能な最新のアプリ開発。](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
+* [Windows ベースのコンテナー:エンタープライズ レベルの制御が可能な最新のアプリ開発。](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
 * [Docker の概要](https://docs.docker.com/engine/docker-overview/)
 * [Windows コンテナー上の Dockerfile](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Dockerfile を記述するためのベスト プラクティス](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)

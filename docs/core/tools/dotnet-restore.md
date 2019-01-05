@@ -1,15 +1,13 @@
 ---
-title: dotnet restore コマンド - .NET Core CLI
+title: dotnet restore コマンド
 description: dotnet restore コマンドを使用して、依存関係とプロジェクト固有のツールを復元する方法について説明します。
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 504a0621beb8aea961133d2cc6d287ce17051c1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6f54671fcd1c17d2466d5a38027e02da5e7494e9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127330"
+ms.locfileid: "53170783"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -164,6 +162,8 @@ dotnet restore [-h|--help]
 `--verbosity <LEVEL>`
 
 コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+
+---
 
 ## <a name="examples"></a>使用例
 

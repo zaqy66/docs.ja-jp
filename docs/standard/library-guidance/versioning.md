@@ -3,13 +3,13 @@ title: バージョン管理および .NET ライブラリ
 description: .NET ライブラリのバージョン管理に関するベスト プラクティスの推奨事項。
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144560"
+ms.locfileid: "53169600"
 ---
 # <a name="versioning"></a>バージョン管理
 
@@ -77,12 +77,13 @@ Windows .NET Framework の CLR では、厳密な名前のアセンブリを読�
 
 ![Windows エクスプローラー](./media/versioning/win-properties.png "Windows エクスプローラー")
 
-> [!NOTE]
-> このバージョンが `Major.Minor.Build.Revision` 形式に準拠していない場合、通知目的でのビルド警告が発生します。 警告は、無視してかまいません。
-
 **✔️ 検討** AssemblyFileVersion リビジョンとして、継続的インテグレーションのビルド番号を含める。
 
 > たとえば、プロジェクトのバージョン 1.0.0 を構築しており、継続的インテグレーションのビルド番号が 99 だとすると、お使いの AssemblyFileVersion は 1.0.0.99 になります。
+
+**✔️ 実行** ファイル バージョンに形式 `Major.Minor.Build.Revision` を使用する。
+
+> ファイル バージョンは .NET では使用されませんが、[Windows ではファイル バージョン](/windows/desktop/menurc/versioninfo-resource)が `Major.Minor.Build.Revision` 形式である必要があります。 バージョンがこの形式に従っていない場合は、警告メッセージが表示されます。
 
 ### <a name="assembly-informational-version"></a>アセンブリの情報バージョン
 
@@ -91,6 +92,9 @@ Windows .NET Framework の CLR では、厳密な名前のアセンブリを読�
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
+
+> [!NOTE]
+> このバージョンが `Major.Minor.Build.Revision` の形式に従っていない場合、古いバージョンの Visual Studio によってビルドの警告メッセージが表示されます。 警告は、無視してかまいません。
 
 **❌ 禁止** アセンブリの情報バージョンを自分で設定する。
 

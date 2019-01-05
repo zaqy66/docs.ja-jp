@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 2af688057dbb3724ea03818157368ff0b54f0cf2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0c98f8c8fc4847570964d8d4ea8deb221164441d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144581"
+ms.locfileid: "53168937"
 ---
 # <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017 の C# と .NET Core を使用して .NET Standard クラス ライブラリを構築する
 
@@ -29,7 +29,7 @@ ms.locfileid: "53144581"
 
 1. **[新しいプロジェクト]** ダイアログの **[その他のプロジェクトの種類]** ノードを展開し、**[Visual Studio ソリューション]** を選びます。 ソリューションの名前を "ClassLibraryProjects" にして、**[OK]** ボタンを選びます。
 
-   ![[新しいプロジェクト] ダイアログ](./media/library-with-visual-studio/newproject.png)
+   ![新しい空のソリューションが強調表示されている [新しいプロジェクト] ダイアログ](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>クラス ライブラリ プロジェクトの作成
 
@@ -39,15 +39,15 @@ ms.locfileid: "53144581"
 
 1. **[新しいプロジェクトの追加]** ダイアログで、**[Visual C#]** ノードを展開し、**[.NET Standard]** ノードを選択し、**[クラス ライブラリ (.NET Standard)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに、プロジェクト名として「StringLibrary」と入力します。 **[OK]** を選んでクラス ライブラリ プロジェクトを作成します。
 
-   ![[新しいプロジェクトの追加] ダイアログ](./media/library-with-visual-studio/libproject.png)
+   ![新しいライブラリ プロジェクトの追加ダイアログ](./media/library-with-visual-studio/add-new-library-project.png)
 
    Visual Studio 開発環境でコード ウィンドウが開きます。
 
-   ![既定のクラス ライブラリ テンプレート コードが表示された Visual Studio アプリケーション ウィンドウ](./media/library-with-visual-studio/stringlibrary.png)
+   ![既定のクラス ライブラリ テンプレート コードが表示された Visual Studio アプリケーション ウィンドウ](./media/library-with-visual-studio/string-library-project.png)
 
 1. ライブラリが正しいバージョンの .NET Standard をターゲットにしていることを確認します。 **ソリューション エクスプローラー** ウィンドウで、ライブラリ プロジェクトを右クリックし、**[プロパティ]** を選択します。 **[ターゲット フレームワーク]** テキスト ボックスに、.NET Standard 2.0 がターゲットになっていることが示されています。
 
-   ![クラス ライブラリのプロジェクト プロパティ](./media/library-with-visual-studio/properties.png)
+   ![クラス ライブラリのプロジェクト プロパティ](./media/library-with-visual-studio/library-project-properties.png)
 
 1. コード ウィンドウ内のコードを次のコードに置き換えて、ファイルを保存します。
 
@@ -57,7 +57,7 @@ ms.locfileid: "53144581"
 
 1. メニュー バーで **[ビルド]** > **[ソリューションのビルド]** の順に選択します。 プロジェクトはエラーなしでコンパイルされます。
 
-   ![ビルドが成功したことを示す出力ペイン](./media/library-with-visual-studio/buildsucceeds.png)
+   ![ビルドが成功したことを示す出力ペイン](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 ## <a name="next-step"></a>次のステップ
 

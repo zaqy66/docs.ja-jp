@@ -1,14 +1,14 @@
 ---
-title: dotnet nuget push コマンド - .NET Core CLI
+title: dotnet nuget push コマンド
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: 090dbfbe3db83b2bb234867aed295ac416b27865
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4f0d127d8b9f37b1c381d8981f54035a2fc3b0e5
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143062"
+ms.locfileid: "53169353"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 

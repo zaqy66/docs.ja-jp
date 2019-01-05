@@ -66,7 +66,9 @@
             /porting-overview
                 portability_report.png
 
-**手順 4:**  ご自分のブランチから `dotnet/docs/master` に Pull Request (PR) を送信します。
+**手順 4:** ご自分のブランチから `dotnet/docs/master` に Pull Request (PR) を送信します。
+
+PR は*常に*マスター ブランチを対象にする必要があります。 ライブ ブランチを対象とする PR は*決して*開かないでください。
 
 各 PR では、通常は一度に 1 つの問題に対応します。 PR では、1 つまたは複数のファイルを変更できます。 複数のファイルで複数の修正を行う場合は、PR を分けることが推奨されています。
 

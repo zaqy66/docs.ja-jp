@@ -1,15 +1,15 @@
 ---
-title: Docker を使用してアプリをコンテナー化する - .NET Core
+title: Docker を使用してアプリをコンテナー化する
 description: このチュートリアルでは、基本的な .NET Core アプリケーションを作成し、Docker を使用してコンテナー化する方法について説明します。
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 8f08936142b0cc44baf268f100e228f68920b69d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126369"
+ms.locfileid: "53169587"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>.NET Core アプリケーションをコンテナー化する方法
 
@@ -22,7 +22,7 @@ ms.locfileid: "53126369"
 > * .NET Core アプリの作成方法
 > * Docker コンテナーにアプリを展開する方法
 
-## <a name="net-core-easiest-way-to-get-started"></a>.NET Core: 入門として最も簡単な方法
+## <a name="net-core-easiest-way-to-get-started"></a>.NET Core:入門として最も簡単な方法
 
 Docker イメージを作成する前に、コンテナー化するアプリケーションを用意する必要があります。 それは Linux、MacOS、Windows で作成できます。 これを行う最も迅速かつ簡単な方法は、.NET Core を利用することです。
 
@@ -93,7 +93,7 @@ dotnet run
 
    プログラムは `using System` で始まります。 これは、"`System` 名前空間のすべてがこのファイルのスコープになる" こと意味します。 `System` 名前空間には、`string` などの基本的な構造、または数値型が含まれます。
 
-   次に、`Hello` という名前空間を定義します。 名前空間は必要なものに変更できます。 `Program` という名前のクラスは、引数として文字列配列を使用する `Main` メソッドで、その名前空間内に定義されます。 この配列には、コンパイル済みプログラムの呼び出し時に渡される引数のリストが含まれます。 今回の例では、プログラムは "Hello World!" と コンソールに書き込むだけです。
+   次に、`Hello` という名前空間を定義します。 名前空間は必要なものに変更できます。 `Program` という名前のクラスは、引数として文字列配列を使用する `Main` メソッドで、その名前空間内に定義されます。 この配列には、コンパイル済みプログラムの呼び出し時に渡される引数のリストが含まれます。 今回の例では、"Hello World!" とだけ記述されます。 記述するだけです。
 
    **dotnet new** で [`dotnet restore`](../tools/dotnet-restore.md) コマンドが実行されます。 **dotnet restore** は [NuGet](https://www.nuget.org/) (.NET パッケージ マネージャー) 呼び出しによって依存関係ツリーを復元します。
    NuGet は次のタスクを実行します。

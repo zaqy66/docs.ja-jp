@@ -4,12 +4,12 @@ description: HttpClientFactory は、自己主張性の強いファクトリで�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0ae4dadd6921a71217b50757ede19b8d54910185
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145112"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611036"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -71,7 +71,7 @@ AddHttpClient() を使用して型指定されたクライアント クラスを
 
 ### <a name="httpclient-lifetimes"></a>HttpClient の有効期間
 
-IHttpClientFactory から `HttpClient` オブジェクトを取得するたび、`HttpClient` の新しいインスタンスが返されます。 型指定されたクライアントの名前ごとに HttpMessageHandler** があります。 `IHttpClientFactory` は、リソースの消費量を減らすためにファクトリによって作成された HttpMessageHandler インスタンスをプールします。 新しい `HttpClient` インスタンスを作成するとき、プールの HttpMessageHandler インスタンスの有効期間が切れていない場合はそれを再利用できます。
+IHttpClientFactory から `HttpClient` オブジェクトを取得するたび、`HttpClient` の新しいインスタンスが返されます。 型指定されたクライアントの名前ごとに **HttpMessageHandler** があります。 `IHttpClientFactory` は、リソースの消費量を減らすためにファクトリによって作成された HttpMessageHandler インスタンスをプールします。 新しい `HttpClient` インスタンスを作成するとき、プールの HttpMessageHandler インスタンスの有効期間が切れていない場合はそれを再利用できます。
 
 通常各ハンドラーは基になる HTTP 接続を独自に管理しており、必要以上に多くのハンドラーを作成すると接続が遅延する可能性があるため、ハンドラーをプールするのは望ましい方法です。 また、一部のハンドラーは接続を無期限に開いており、DNS の変更にハンドラーが対応できないことがあります。
 

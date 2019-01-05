@@ -2,14 +2,14 @@
 title: dotnet new のカスタム テンプレートを作成する
 description: この楽しいチュートリアルで、dotnet new のカスタム テンプレートを作成する方法を学びましょう。
 author: guardrex
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 63f8c8a4d029285a02255637c8a79358e5ef0095
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516654"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169737"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>dotnet new のカスタム テンプレートを作成する
 
@@ -64,7 +64,7 @@ ms.locfileid: "43516654"
 1. 作成した *content* フォルダーに、プロジェクト フォルダーの中身を *.template.config/template.json* ファイルと共にコピーします。
 1. *content* フォルダーの隣に、[*nuspec*](/nuget/create-packages/creating-a-package) ファイルを追加します。 nuspec ファイルは XML マニフェスト ファイルであり、パッケージの中身が記述され、NuGet パッケージの作成プロセスを実行します。
 
-   ![NuGet パッケージのレイアウトを示すディレクトリ構造](./media/create-custom-template/nugetdirectorylayout.png)
+   ![NuGet パッケージのレイアウトを示すディレクトリ構造](./media/create-custom-template/nuget-directory-layout.png)
 
 1. *nuspec* ファイルの **\<packageTypes>** 要素の中に、**\<packageType>** 要素を追加し、`name` 属性の値を `Template` にします。 *content* フォルダーと *nuspec* ファイルの両方を同じディレクトリに入れます。 下の表は、NuGet パッケージとしてテンプレートを生成するために必要な *nuspec* ファイルの最小要素をまとめたものです。
 
@@ -136,7 +136,7 @@ dotnet new -i NUnit3.DotNetNew.Template
 
 `dotnet new -l` でテンプレートを一覧表示すると、テンプレートの一覧で *NUnit 3 Test Project* を確認できます。Short Name は *nunit* です。 次のセクションでこのテンプレートを利用できます。
 
-![コンソール ウィンドウ。NUnit テンプレートとインストールされているその他のテンプレートを確認できます。](./media/create-custom-template/nunit1.png)
+![NUnit テンプレートとその他のテンプレートを表示しているコンソール ウィンドウ](./media/create-custom-template/nunit-template-console-window.png)
 
 ### <a name="create-a-project-from-the-template"></a>テンプレートからプロジェクトを作成する
 
@@ -148,7 +148,7 @@ dotnet new nunit
 
 プロジェクトが作成され、プロジェクトのパッケージが復元されたことがコンソールに表示されます。 コマンドを実行すると、プロジェクトが使用できる状態になります。
 
-![コンソール ウィンドウ。dotnet new コマンドの出力を確認できます。NUnit プロジェクトが作成され、プロジェクトの依存関係が復元されました。](./media/create-custom-template/nunit2.png)
+![プロジェクトの依存関係の復元を含む dotnet の新しい nunit の出力を示すコンソール ウィンドウ](./media/create-custom-template/dotnet-new-nunit-console-output.png)
 
 ### <a name="to-uninstall-a-template-from-a-nuget-package-stored-at-nugetorg"></a>nuget.org に保存されている NuGet パッケージからテンプレートをアンインストールするには
 

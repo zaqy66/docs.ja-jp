@@ -1,15 +1,16 @@
 ---
-title: 非同期プログラミング
+title: 非同期プログラミング - C#
 description: .NET Core で提供される、C# 言語レベルの非同期プログラミング モデルについて説明します。
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126498"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612128"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
@@ -29,7 +30,7 @@ CPU バインドのコードでは、`Task.Run` メソッドによってバッ�
 
 上でリンクされている TAP の記事で説明されているように `async` と `await` 以外にも非同期コードへのアプローチはありますが、このドキュメントではこれ以降、言語レベルの構造に注目します。
 
-### <a name="io-bound-example-downloading-data-from-a-web-service"></a>I/O バインドの例: Web サービスからのデータのダウンロード
+### <a name="io-bound-example-downloading-data-from-a-web-service"></a>I/O バインドの例:Web サービスからのデータのダウンロード
 
 ボタンがクリックされたら Web サービスからデータをダウンロードする必要がありますが UI スレッドはブロックしたくない、といった場合があります。 これは、次のように簡単に実行できます。
 
@@ -49,7 +50,7 @@ downloadButton.Clicked += async (o, e) =>
 
 以上です。 コードでは、Task オブジェクトとの対話に煩わされることなく意図すること (データを非同期的にダウンロードする) が表されています。
 
-### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>CPU バインドの例: ゲームの計算を実行する
+### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>CPU バインドの例:ゲームの計算を実行する
 
 ボタンをクリックすると画面上の多くの敵にダメージを与えることができるモバイル ゲームを作っています。  ダメージ計算の実行は負荷が大きく、UI スレッドで実行すると計算の実行中はゲームが停止しているように見えます。
 
@@ -264,5 +265,5 @@ LINQ 内のラムダ式は遅延実行を使います。つまり、予期して
 ## <a name="other-resources"></a>その他の参照情報
 
 * 「[非同期の詳細](../standard/async-in-depth.md)」では、タスクの動作方法について詳しく説明します。
-* [Async および Await を使用した非同期プログラミング (C#)](../csharp/programming-guide/concepts/async/index.md)
+* [Async および Await を使用した非同期プログラミング (C#)](./programming-guide/concepts/async/index.md)
 * Lucian Wischik の「[Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async)」(非同期に関する 6 つの重要なヒント) は、非同期プログラミングのためのすばらしいリソースです。

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041617"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779387"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正規表現言語 - クイック リファレンス
 <a name="top"></a> 正規表現とは、入力テキスト内で正規表現エンジンによる照合が試行されるパターンです。 パターンは、1 個以上の文字リテラル、演算子、または構成体で構成されます。  簡単な概要については、「[.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)」を参照してください。  
@@ -30,7 +30,7 @@ ms.locfileid: "44041617"
   
  [文字のエスケープ](#character_escapes)  
  [文字クラス](#character_classes)  
- [アンカー](#atomic_zerowidth_assertions)  
+ [アンカー](#anchors)  
  [グループ化構成体](#grouping_constructs)  
  [量指定子](#quantifiers)  
  [前方参照構成体](#backreference_constructs)  
@@ -73,9 +73,9 @@ ms.locfileid: "44041617"
 |文字クラス|説明|パターン|一致件数|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *character_group* `]`|*character_group*内の任意の 1 文字と一致します。 既定では、大文字と小文字が区別されます。|`[ae]`|"gray" の "a"<br /><br /> "lane" の "a"、"e"|  
-|`[^` *character_group* `]`|否定: *character_group*内にない任意の 1 文字と一致します。 既定では、 *character_group* の文字について、大文字と小文字が区別されます。|`[^aei]`|"reign" の "r"、"g"、"n"|  
-|`[` *先頭* `-` *last* `]`|文字範囲: *first* から *last*までの範囲にある任意の 1 文字と一致します。|`[A-Z]`|"AB123" の "A"、"B"|  
-|`.`|ワイルドカード: \n を除く任意の 1 文字と一致します。<br /><br /> リテラルのピリオド文字 (. または `\u002E`) と一致させるには、この文字の前にエスケープ文字 (`\.`) を指定します。|`a.e`|"nave" の "ave"<br /><br /> "water" の "ate"|  
+|`[^` *character_group* `]`|否定:*character_group* 内にない任意の 1 文字と一致します。 既定では、 *character_group* の文字について、大文字と小文字が区別されます。|`[^aei]`|"reign" の "r"、"g"、"n"|  
+|`[` *先頭* `-` *last* `]`|文字範囲:*first* から *last* までの範囲にある任意の 1 文字と一致します。|`[A-Z]`|"AB123" の "A"、"B"|  
+|`.`|ワイルドカード:\n を除く任意の 1 文字と一致します。<br /><br /> リテラルのピリオド文字 (. または `\u002E`) と一致させるには、この文字の前にエスケープ文字 (`\.`) を指定します。|`a.e`|"nave" の "ave"<br /><br /> "water" の "ate"|  
 |`\p{` *name* `}`|*name*で指定された名前付きブロックまたは Unicode 一般カテゴリ内の任意の 1 文字と一致します。|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"City Lights" の "C"、"L"<br /><br /> "ДЖem" の "Д"、"Ж"|  
 |`\P{` *name* `}`|*name*で指定された名前付きブロックまたは Unicode 一般カテゴリにない任意の 1 文字と一致します。|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"City" の "i"、"t"、"y"<br /><br /> "ДЖem" の "e"、"m"|  
 |`\w`|単語に使用される任意の文字と一致します。|`\w`|"ID A1.3" の "I"、"D"、"A"、"1"、"3"|  
@@ -87,7 +87,6 @@ ms.locfileid: "44041617"
   
  [ページのトップへ](#top)  
   
-<a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>アンカー  
  アンカー (アトミック ゼロ幅アサーション) を使用すると、文字列内での現在位置によって一致するかどうかが決まります。しかし、エンジンで後方の文字列が読み込まれたり、複数の文字と一致したりすることはありません。 アンカーであるメタ文字を次の表に示します。 詳細については、「 [アンカー](../../../docs/standard/base-types/anchors-in-regular-expressions.md)」を参照してください。  
   
@@ -162,8 +161,8 @@ ms.locfileid: "44041617"
 |代替構成体|説明|パターン|一致件数|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|縦棒 (&#124;) 文字で区切られた要素のいずれか 1 つと一致します。|<code>th(e&#124;is&#124;at)</code>|"this is the day." の "the"、"this "|  
-|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|*expression* で指定される正規表現パターンが一致する場合は *yes* と一致します。それ以外の場合は、 *no* (省略可能) 部分と一致します。 *expression* はゼロ幅アサーションとして解釈されます。|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10 C103 910" の "A10"、"910"|  
-|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|名前付きまたは番号付きのキャプチャ グループ *name* に一致が見つかった場合は *yes*と一致します。それ以外の場合は *no*(省略可能) と一致します。|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|"Dogs.jpg "Yiska playing.jpg"" の Dogs.jpg、"Yiska playing.jpg"|  
+|`(?(` *式* `)` *可* <code>&#124;</code> *no* `)`|*expression* で指定される正規表現パターンが一致する場合は *yes* と一致します。それ以外の場合は、 *no* (省略可能) 部分と一致します。 *expression* はゼロ幅アサーションとして解釈されます。|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10 C103 910" の "A10"、"910"|  
+|`(?(` *name* `)` *可* <code>&#124;</code> *no* `)`|名前付きまたは番号付きのキャプチャ グループ *name* に一致が見つかった場合は *yes*と一致します。それ以外の場合は *no*(省略可能) と一致します。|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|"Dogs.jpg "Yiska playing.jpg"" の Dogs.jpg、"Yiska playing.jpg"|  
   
  [ページのトップへ](#top)  
   

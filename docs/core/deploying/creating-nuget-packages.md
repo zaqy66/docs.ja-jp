@@ -2,16 +2,15 @@
 title: .NET Core コマンドライン インターフェイス (CLI) ツールを使用して NuGet パッケージを作成する
 description: ’dotnet pack’ コマンドを使用して NuGet パッケージを作成する方法を説明します。
 author: cartermp
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 406db6c9841aa9152ea4d4b1b3fb9fad80d69ce8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 14e3dc265991634b4ef4814fb149f0aaebbcfab6
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125549"
+ms.locfileid: "53170055"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>.NET Core コマンド ライン インターフェイス (CLI) ツールを使用して NuGet パッケージを作成する方法
 
@@ -72,4 +71,4 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 ## <a name="see-also"></a>関連項目
 
-- [クイック スタート: パッケージの作成と公開](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
+- [クイック スタート:パッケージの作成と公開](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

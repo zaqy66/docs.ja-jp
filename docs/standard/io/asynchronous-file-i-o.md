@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c6e1db7d1edacfd0ce8770b9cc7b7f3f9c8ca2a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7bfa35b8361f154fcbaa2ea7d7f8ddff5321003d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025322"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610435"
 ---
 # <a name="asynchronous-file-io"></a>非同期ファイル I/O
 
@@ -40,7 +40,7 @@ C# と Visual Basic には、非同期プログラミング用のキーワード
 
 - `Await` (Visual Basic) 演算子または `await` (C#) 演算子。非同期のメソッドの結果に適用されます。
 
-非同期 I/O 操作を実装するには、これらのキーワードを非同期のメソッドと組み合わせて使用します。次に例を示します。 詳細については、「[Async および Await を使用した非同期プログラミング](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)」を参照してください。
+非同期 I/O 操作を実装するには、これらのキーワードを非同期のメソッドと組み合わせて使用します。次に例を示します。 詳細については、「[Async および Await を使用した非同期プログラミング (C#)](../../csharp/programming-guide/concepts/async/index.md)」または「[Async および Await を使用した非同期プログラミング (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。
 
 次の例では、2 つの <xref:System.IO.FileStream> オブジェクトを使用して、ファイルをディレクトリ間で非同期にコピーする方法を示します。 非同期のメソッドを呼び出すので、 <xref:System.Web.UI.WebControls.Button.Click> コントロールの <xref:System.Windows.Controls.Button> イベント ハンドラーは `async` 修飾子でマークされていることに注意してください。
 
@@ -62,5 +62,6 @@ C# と Visual Basic には、非同期プログラミング用のキーワード
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.Stream>
-- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)
-- [Async および Await を使用した非同期プログラミング](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+- [ファイルおよびストリーム入出力](index.md)
+- [Async および Await を使用した非同期プログラミング (C#)](../../csharp/programming-guide/concepts/async/index.md)
+- [Async および Await を使用した非同期プログラミング (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)
