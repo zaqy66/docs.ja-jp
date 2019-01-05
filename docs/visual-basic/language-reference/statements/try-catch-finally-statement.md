@@ -129,7 +129,7 @@ End Try
   
  `Await`内で式が使用できない、`Catch`ブロックまたは`Finally`ブロックします。  
   
-## <a name="iterators"></a>Iterators  
+## <a name="iterators"></a>反復子  
  反復子、関数または`Get`アクセサーは、コレクションに対するカスタム イテレーションを実行します。 反復子を使用して、 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを一度に 1 つのコレクションの各要素を返します。 使用して反復子関数を呼び出すことを[ごとにしています.次のステートメントの](../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
   
  A`Yield`内でステートメントを使用できます、`Try`ブロックします。 A`Try`が含まれるブロックを`Yield`ステートメントを持つことができます`Catch`ブロック、および、持つことができます、`Finally`ブロックします。 "お試しくださいブロックで Visual Basic"を参照してください[反復子](../../programming-guide/concepts/iterators.md)例についてはします。  
