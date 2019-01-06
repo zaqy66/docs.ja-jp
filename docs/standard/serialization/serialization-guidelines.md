@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2a372ba995f409fc3dd12492e21af80b93d20b8c
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742499"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058595"
 ---
 # <a name="serialization-guidelines"></a>シリアル化のガイドライン
 このドキュメントには、シリアル化できるように API をデザインする際に考慮すべきガイドラインを示します。  
@@ -99,7 +99,7 @@ ms.locfileid: "45742499"
   
 1.  作成された XML の形状を制御しなければならない強力な理由がない限り、XML シリアル化のために特別に型をデザインすることは避けてください。 このシリアル化テクノロジは、前のセクションで説明したデータ コントラクトのシリアル化よりも優先されます。  
   
-     言い換えれば、XML シリアル化で使用する型であることがわかっている場合を除き、<xref:System.Runtime.Serialization> 名前空間の属性を新しい型に適用しないでください。 **System.Xml.Serialization** を使用して、作成された XML の形状を制御する方法を次の例に示します。  
+     言い換えれば、XML シリアル化で使用する型であることがわかっている場合を除き、<xref:System.Xml.Serialization> 名前空間の属性を新しい型に適用しないでください。 **System.Xml.Serialization** を使用して、作成された XML の形状を制御する方法を次の例に示します。  
   
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
