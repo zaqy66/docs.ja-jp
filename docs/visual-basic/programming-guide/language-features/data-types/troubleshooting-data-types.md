@@ -65,8 +65,8 @@ ms.locfileid: "48850375"
   
  宣言するための十分ながないことに注意してください。`decimalRemainder`として`Decimal`します。 リテラルを強制することも必要があります。 `Decimal`、使用することも`Double`既定と`decimalRemainder`として同じ不正確な値を受け取る`doubleRemainder`します。  
   
-## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>ブール型で正確な数値型に変換されません。  
- [ブール型のデータ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)値は、数値として格納されず、番号に相当する、保存された値が意図されていません。 以前のバージョンと互換性のため、Visual Basic では変換キーワード ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)、 `CBool`、`CInt`など) 間の変換を`Boolean`と数値型。 ただし、他の言語も実行これらの変換と同様に、異なる、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]メソッド。  
+## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean データで正確な数値型に変換されません。  
+ [Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)値は、数値として格納されず、番号に相当する、保存された値が意図されていません。 以前のバージョンと互換性のため、Visual Basic では変換キーワード ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)、 `CBool`、`CInt`など) 間の変換を`Boolean`と数値型。 ただし、他の言語も実行これらの変換と同様に、異なる、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]メソッド。  
   
  数値と等価の値に依存するコードを記述する必要がありますしない`True`と`False`します。 使用を制限する必要があります、可能な限り`Boolean`変数を論理値に設計されています。 組み合わせる必要がある場合`Boolean`数値、選択した変換の方法を理解することを確認します。  
   
