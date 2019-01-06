@@ -93,8 +93,8 @@ ms.locfileid: "48850375"
   
  常にリスクが縮小の変換を使用して実行時にそれらが失敗する可能性です。 変換など、`String`に`Char`が失敗する場合、`String`値には、1 つ以上の文字が含まれています。 そのため、それを使用するプログラミングがより、`C`文字を入力します。  
   
-## <a name="string-conversion-fails-at-run-time"></a>文字列の変換は実行時に失敗します。  
- [文字列データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)がごく少数の拡大変換に参加します。 `String` 自体にのみ拡大変換と`Object`とのみ`Char`と`Char()`(、`Char`配列) に拡大変換`String`。 これは、ため`String`変数と定数は、他のデータ型を含めることはできませんの値を含めることができます。  
+## <a name="string-conversion-fails-at-run-time"></a>String の変換は実行時に失敗します。  
+ [String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)がごく少数の拡大変換に参加します。 `String` 自体にのみ拡大変換と`Object`とのみ`Char`と`Char()`(、`Char`配列) に拡大変換`String`。 これは、ため`String`変数と定数は、他のデータ型を含めることはできませんの値を含めることができます。  
   
  型チェックを切り替えると ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) は`On`コンパイラには、すべての暗黙的な縮小変換が許可されていません。 関連するものが含まれます`String`します。 コードの変換キーワードをなど、使用もできる`CStr`と[CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)、どのダイレクト、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]変換を試みます。  
   
