@@ -16,7 +16,7 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
   
 |アクション|言語要素|  
 |------------|----------------------|  
-|ランタイム エラーの生成|<xref:Microsoft.VisualBasic.Collection.Clear%2A>、[エラー](../../../visual-basic/language-reference/statements/error-statement.md)、 <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
+|ランタイム エラーの生成|<xref:Microsoft.VisualBasic.Collection.Clear%2A>、[Error](../../../visual-basic/language-reference/statements/error-statement.md)、 <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
 |例外の取得|<xref:Microsoft.VisualBasic.ErrObject.GetException%2A>|  
 |エラー情報の提供|<xref:Microsoft.VisualBasic.Information.Err%2A>|  
 |ランタイム エラーのトラップ|[エラー](../../../visual-basic/language-reference/statements/on-error-statement.md)、[再開](../../../visual-basic/language-reference/statements/resume-statement.md)、[を再試行してください.キャッチしてください.最終的に](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|  
