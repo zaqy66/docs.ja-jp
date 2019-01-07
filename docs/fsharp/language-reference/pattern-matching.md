@@ -1,4 +1,4 @@
----
+﻿---
 title: パターン マッチ
 description: 論理構造体を使用してデータを比較または構成要素にデータを分解したり、データから情報を抽出するパターンが F# の使用方法について説明します。
 ms.date: 05/16/2016
@@ -13,9 +13,9 @@ ms.locfileid: "53613584"
 
 パターンは、入力データの変換規則です。 データを論理構造と比較したり、データを構成要素に分解したり、さまざまな方法でデータから情報を抽出したりするために、F# 言語全体で使用されます。
 
-## <a name="remarks"></a>備考
+## <a name="remarks"></a>コメント
 
-パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` バインド、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、次を参照してください[一致式](match-expressions.md)、 [let バインド](functions/let-bindings.md)、[ラムダ式:、`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)、および[例外:、 。`try...with`式](exception-handling/the-try-with-expression.md)します。
+パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` バインディング、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、次を参照してください[一致式](match-expressions.md)、 [let バインディング](functions/let-bindings.md)、[ラムダ式:、`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)、および[例外:`try...with` 式](exception-handling/the-try-with-expression.md)します。
 
 たとえば、`match`式、*パターン*はパイプ記号。
 
