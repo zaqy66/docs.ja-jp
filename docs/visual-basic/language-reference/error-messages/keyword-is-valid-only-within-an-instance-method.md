@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;キーワード&gt;&#39;はインスタンス メソッド内でのみ有効です'
+title: ''<keyword>' は、インスタンス メソッド内でのみ有効です。'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30043
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33586361"
 ---
-# <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;キーワード&gt;&#39;はインスタンス メソッド内でのみ有効です
+# <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>'<keyword>' は、インスタンス メソッド内でのみ有効です。
 `Me`、 `MyClass`、および`MyBase`キーワードは、特定のクラスのインスタンスを参照してください。 共有内には使用できません`Function`または`Sub`プロシージャです。  
   
  **エラー ID:** BC30043  
