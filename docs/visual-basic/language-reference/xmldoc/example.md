@@ -1,5 +1,5 @@
 ---
-title: '&lt;例&gt;(Visual Basic)'
+title: '&lt;example&gt;(Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - example XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2018
 ms.locfileid: "43524518"
 ---
-# <a name="ltexamplegt-visual-basic"></a>&lt;例&gt;(Visual Basic)
+# <a name="ltexamplegt-visual-basic"></a>&lt;example&gt;(Visual Basic)
 メンバーの例を指定します。  
   
 ## <a name="syntax"></a>構文  

@@ -4,18 +4,18 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152683"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030439"
 ---
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Microservices: Architecture for Containerized .NET Applications (.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ)
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ
 
 ![本の表紙](./media/cover-small.png)
 
-**エディション v2.1.02** - ASP.NET Core 2.1 に更新
+**エディション v2.1.03** - ASP.NET Core 2.1 に更新
 
 このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET Core と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。 
 
@@ -43,7 +43,7 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET Core と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。 コンテナーとマイクロサービスの使用の開始を容易にするため、このガイドでは、ユーザーが探究できる参照コンテナー化されたマイクロサービス ベースのアプリケーションに重点を置いています。 サンプル アプリケーションは、[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub リポジトリから入手できます。
 
-このガイドでは、主に開発環境レベルで、Docker と .NET Core の 2 つのテクノロジに重点を置いた、基本的な開発とアーキテクチャに関するガイダンスを提供します。 このガイドは、運用環境のインフラストラクチャ (クラウドまたはオンプレミス) を重視することなく、アプリケーションの設計について考慮する際にお読みいただくことを意図しています。 インフラストラクチャに関する決定は、後で実稼働可能なアプリケーションを作成するときに行います。 そのため、このガイドは、インフラストラクチャに依存しない、より開発環境中心としたものになることを意図しています。
+このガイドでは、基本的な開発とアーキテクチャに関する、主に開発環境レベルでのガイダンスが提供されます。重点は 2 つのテクノロジ:Docker と .NET Core に置かれます。 このガイドは、運用環境のインフラストラクチャ (クラウドまたはオンプレミス) を重視することなく、アプリケーションの設計について考慮する際にお読みいただくことを意図しています。 インフラストラクチャに関する決定は、後で実稼働可能なアプリケーションを作成するときに行います。 そのため、このガイドは、インフラストラクチャに依存しない、より開発環境中心としたものになることを意図しています。
 
 このガイドで学習したら、次の段階は Microsoft Azure での実稼働可能なマイクロサービスについて学習することです。
 
@@ -88,7 +88,7 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 
 共同作成者:
 
-> **Cesar de la Torre**、Microsoft corp.、.NET 製品チーム、シニア PM
+> **Cesar de la Torre**、Microsoft Corp.、.NET 製品チーム、シニア PM
 >
 > **Bill Wagner**、Microsoft Corp.、C+E、シニア コンテンツ開発者
 >
@@ -171,7 +171,7 @@ All rights reserved. 本書のいかなる部分も、書面による発行者�
 
 ここに記載したいくつかの例は、説明のためだけに提供された架空のものです。 実在のものとの関連性または関係性は一切ありません。
 
-<https://www.microsoft.com> の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。
+[https://www.microsoft.com](<https://www.microsoft.com>) の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。
 
 Mac および macOS は Apple Inc. の商標です。
 
