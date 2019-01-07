@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 72cf3e2e60f27ed4faac12882fcc17974601f6e6
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453477"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396995"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
@@ -76,7 +76,7 @@ ms.locfileid: "49453477"
 ||Web インストーラー|オフライン インストーラー|
 |-|-------------------|-----------------------|
 |ファイルのダウンロード|.NET Framework 4.7.2: <br/>[NDP472-KB4054531-Web.exe](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](https://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](https://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](https://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](https://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](https://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](https://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](https://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](https://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](https://go.microsoft.com/fwlink/?LinkId=225702)|
-|インターネット接続の必要性|[はい]|×|
+|インターネット接続の必要性|はい|×|
 |ダウンロードのサイズ|小 (ターゲット プラットフォームのインストーラーのみを含む)*|Larger*|
 |言語パック|含む**|すべてのオペレーティング システムを対象とするパッケージを使用しない場合は、 [個別にインストールする](#chain_langpack)必要があります|
 |配置方法|すべてのメソッドをサポート<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows インストーラー XML (WiX)](#wix)<br />- [手動インストール](#installing_manually)<br />- [カスタム セットアップ (チェーン)](#chaining)|すべてのメソッドをサポート<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows インストーラー XML (WiX)](#wix)<br />- [手動インストール](#installing_manually)<br />- [カスタム セットアップ (チェーン)](#chaining)|
@@ -192,7 +192,7 @@ InstallAware は、Windows アプリ (APPX)、Windows インストーラー (MSI
 dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 ```
 
- 追加のコマンド ライン オプションを使用して、インストールをカスタマイズできます。 例:
+ 追加のコマンド ライン オプションを使用して、インストールをカスタマイズできます。 次に例を示します。
 
 - システムの再起動を最小限に抑えるために、実行中の .NET Framework アプリケーションを終了する方法をユーザーに提供するには、受動モードを設定して、次のように `/showrmui` オプションを使用します。
 
@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - 言語パックがユーザーのコンピューターに既にインストールされているかどうかの[検出](#detecting-the-language-packs) 。
 
-- 配置を制御する場合は、.NET Framework セットアップ プロセスをサイレントに起動および追跡 (「 [方法: .NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- 配置を制御する場合は、.NET Framework セットアップ プロセスをサイレントに起動および追跡 (「[方法:.NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)」をご覧ください)。
 
 - オフライン インストーラーを配置する場合は、 [言語パックを個別にチェーンします](#chain_langpack)。
 
@@ -247,9 +247,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Version|Release DWORD の値|
 |-------------|--------------------------------|
-|Windows 10 October 2018 Update にインストールされた .NET Framework 4.7.2|461814|
 |Windows 10 April 2018 Update および Windows Server バージョン 1803 にインストールされた .NET Framework 4.7.2|461808|
-|Windows 10 October 2018 Update、Windows 10 April 2018 Update、Windows Server バージョン 1803 以外のすべての OS バージョンにインストールされた .NET Framework 4.7.2|461814|
+|Windows 10 April 2018 Update および Windows Server バージョン 1803 以外のすべての OS バージョンにインストールされた .NET Framework 4.7.2。 これには、Windows 10 October 2018 Update が含まれます。 |461814|
 |Windows 10 Fall Creators Update および Windows Server バージョン 1709 にインストールされた .NET Framework 4.7.1|461308|
 |Windows 10 Fall Creators Update および Windows Server バージョン 1709 以外のすべての OS バージョンにインストールされた .NET Framework 4.7.1|461310|
 |Windows 10 Creators Update にインストールされた .NET Framework 4.7|460798|
