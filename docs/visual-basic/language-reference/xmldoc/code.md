@@ -1,5 +1,5 @@
 ---
-title: '&lt;コード&gt;(Visual Basic)'
+title: '&lt;code&gt;(Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - code XML tag
@@ -12,28 +12,28 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "43858640"
 ---
-# <a name="ltcodegt-visual-basic"></a><span data-ttu-id="1419d-102">&lt;コード&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1419d-102">&lt;code&gt; (Visual Basic)</span></span>
-<span data-ttu-id="1419d-103">テキストが複数行のコードであることを示します。</span><span class="sxs-lookup"><span data-stu-id="1419d-103">Indicates that the text is multiple lines of code.</span></span>  
+# <a name="ltcodegt-visual-basic"></a><span data-ttu-id="85270-102">&lt;code&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="85270-102">&lt;code&gt; (Visual Basic)</span></span>
+<span data-ttu-id="85270-103">テキストが複数行のコードであることを示します。</span><span class="sxs-lookup"><span data-stu-id="85270-103">Indicates that the text is multiple lines of code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1419d-104">構文</span><span class="sxs-lookup"><span data-stu-id="1419d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="85270-104">構文</span><span class="sxs-lookup"><span data-stu-id="85270-104">Syntax</span></span>  
   
 ```xml  
 <code>content</code>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1419d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1419d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="85270-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="85270-105">Parameters</span></span>  
  `content`  
- <span data-ttu-id="1419d-106">コードとしてマークするテキスト。</span><span class="sxs-lookup"><span data-stu-id="1419d-106">The text to mark as code.</span></span>  
+ <span data-ttu-id="85270-106">コードとしてマークするテキスト。</span><span class="sxs-lookup"><span data-stu-id="85270-106">The text to mark as code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1419d-107">コメント</span><span class="sxs-lookup"><span data-stu-id="1419d-107">Remarks</span></span>  
- <span data-ttu-id="1419d-108">使用して、`<code>`をコードとして複数の行を示すタグ。</span><span class="sxs-lookup"><span data-stu-id="1419d-108">Use the `<code>` tag to indicate multiple lines as code.</span></span> <span data-ttu-id="1419d-109">説明内のテキストをコードとしてマークする場合は、[\<c&gt;](../../../visual-basic/language-reference/xmldoc/c.md) タグを使用します。</span><span class="sxs-lookup"><span data-stu-id="1419d-109">Use [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) to indicate that text within a description should be marked as code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="85270-107">コメント</span><span class="sxs-lookup"><span data-stu-id="85270-107">Remarks</span></span>  
+ <span data-ttu-id="85270-108">コードとして複数の行を示すには、`<code>`タグを使用します。</span><span class="sxs-lookup"><span data-stu-id="85270-108">Use the `<code>` tag to indicate multiple lines as code.</span></span> <span data-ttu-id="85270-109">説明内のテキストをコードとしてマークする場合は、[\<c](../../../visual-basic/language-reference/xmldoc/c.md) タグを使用します。  </span><span class="sxs-lookup"><span data-stu-id="85270-109">Use [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) to indicate that text within a description should be marked as code.</span></span>  
   
- <span data-ttu-id="1419d-110">コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="1419d-110">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="85270-110">コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="85270-110">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1419d-111">例</span><span class="sxs-lookup"><span data-stu-id="1419d-111">Example</span></span>  
- <span data-ttu-id="1419d-112">この例では、\<コード > タグを使用するためのサンプル コードを`ID`フィールド。</span><span class="sxs-lookup"><span data-stu-id="1419d-112">This example uses the \<code> tag to include example code for using the `ID` field.</span></span>  
+## <a name="example"></a><span data-ttu-id="85270-111">例</span><span class="sxs-lookup"><span data-stu-id="85270-111">Example</span></span>  
+ <span data-ttu-id="85270-112">この例では、\<コード > タグを使用するためのサンプル コードを`ID`フィールド。</span><span class="sxs-lookup"><span data-stu-id="85270-112">This example uses the \<code> tag to include example code for using the `ID` field.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/code_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="1419d-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="1419d-113">See Also</span></span>  
- [<span data-ttu-id="1419d-114">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="1419d-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="85270-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="85270-113">See Also</span></span>  
+ [<span data-ttu-id="85270-114">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="85270-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
