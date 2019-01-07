@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087331"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030159"
 ---
 # <a name="substitutions-in-regular-expressions"></a>正規表現での置換
-<a name="Top"></a> 置換は、置換パターン内でのみ認識される言語要素です。 置換では、正規表現パターンを使用して、入力文字列内の一致するテキストを置換するテキストの全体または一部を定義します。 置換パターンは、1 個以上の置換と、リテラル文字で構成されます。 置換パターンは、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> パラメーターを持つ `replacement` メソッドのオーバーロードおよび <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドに対して用意されています。 メソッドは、一致するパターンを、 `replacement` パラメーターで定義されているパターンで置換します。  
+<a name="Top"></a> 置換は、置換パターン内でのみ認識される言語要素です。 置換では、正規表現パターンを使用して、入力文字列内の一致するテキストを置換するテキストの全体または一部を定義します。 置換パターンは、1 個以上の置換と、リテラル文字で構成されます。 置換パターンは、 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> パラメーターを持つ `replacement` メソッドのオーバーロードおよび <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドに対して用意されています。 メソッドは、一致するパターンを、 `replacement` パラメーターで定義されているパターンで置換します。  
   
  .NET Framework では、次の表に示す置換要素が定義されています。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47087331"
 |`${` *name* `}`|`(?<`*name*`> )` で指定された名前付きグループに一致する最後の部分文字列を置換文字列に含めます。 詳細については、「 [名前付きグループの置換](#Named)」を参照してください。|  
 |`$$`|置換文字列に 1 つの "$" リテラルを含めます。 詳細については、「 ["$" 文字の置換](#DollarSign)」を参照してください。|  
 |`$&`|一致した文字列全体のコピーを置換文字列に含めます。 詳細については、「 [一致した文字列全体の置換](#EntireMatch)」を参照してください。|  
-|<code>$\`</code>|一致した場所より前にある入力文字列のテキストすべてを置換文字列に含めます。 詳細については、「 [一致した文字列より前にあるテキストの置換](#BeforeMatch)」を参照してください。|  
+|``$` ``|一致した場所より前にある入力文字列のテキストすべてを置換文字列に含めます。 詳細については、「 [一致した文字列より前にあるテキストの置換](#BeforeMatch)」を参照してください。|  
 |`$'`|一致した場所より後にある入力文字列のテキストすべてを置換文字列に含めます。 詳細については、「 [一致した文字列より後にあるテキストの置換](#AfterMatch)」を参照してください。|  
 |`$+`|最後にキャプチャされたグループを置換文字列に含めます。 詳細については、「 [キャプチャされた最後のグループの置換](#LastGroup)」を参照してください。|  
 |`$_`|入力文字列全体を置換文字列に含めます。 詳細については、「 [入力文字列全体の置換](#EntireString)」を参照してください。|  
@@ -70,7 +70,7 @@ ms.locfileid: "47087331"
 |`\d+`|1 個以上の 10 進数と一致します。|  
 |`[.,]?`|0 個または 1 個のピリオドまたはコンマと一致します。|  
 |`\d*`|0 個以上の 10 進数と一致します。|  
-|`(\s?\d+[.,]?\d*)`|空白の後に 1 つ以上の 10 進数、0 個または 1 個のピリオドまたはコンマ、さらに 0 個以上の 10 進数が続くパターンに一致します。 これが最初のキャプチャ グループです。 置換パターンは `$1` であるため、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを呼び出すと、一致する部分文字列全体がこのキャプチャされたグループに置き換えられます。|  
+|`(\s?\d+[.,]?\d*)`|空白の後に 1 つ以上の 10 進数、0 個または 1 個のピリオドまたはコンマ、さらに 0 個以上の 10 進数が続くパターンに一致します。 これが最初のキャプチャ グループです。 置換パターンは `$1`であるため、 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを呼び出すと、一致する部分文字列全体がこのキャプチャされたグループに置き換えられます。|  
   
  [ページのトップへ](#Top)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47087331"
 |`\d+`|1 個以上の 10 進数と一致します。|  
 |`[.,]?`|0 個または 1 個のピリオドまたはコンマと一致します。|  
 |`\d*`|0 個以上の 10 進数と一致します。|  
-|`(?<amount>\s?\d[.,]?\d*)`|空白の後に 1 つ以上の 10 進数、0 個または 1 個のピリオドまたはコンマ、さらに 0 個以上の 10 進数が続くパターンに一致します。 これは、 `amount`という名前のキャプチャ グループです。 置換パターンは `${amount}` であるため、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを呼び出すと、一致する部分文字列全体がこのキャプチャされたグループに置き換えられます。|  
+|`(?<amount>\s?\d[.,]?\d*)`|空白の後に 1 つ以上の 10 進数、0 個または 1 個のピリオドまたはコンマ、さらに 0 個以上の 10 進数が続くパターンに一致します。 これは、 `amount`という名前のキャプチャ グループです。 置換パターンは `${amount}`であるため、 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを呼び出すと、一致する部分文字列全体がこのキャプチャされたグループに置き換えられます。|  
   
  [ページのトップへ](#Top)  
   
@@ -142,14 +142,14 @@ ms.locfileid: "47087331"
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>一致した文字列より前にあるテキストの置換  
- <code>$\`</code> の置換は、一致した場所より前にある入力文字列全体で一致した文字列を置換します。 つまり、一致した場所までの入力文字列を複製し、一致したテキストを削除します。 結果文字列では、一致したテキストに続くテキストは変更されません。 入力文字列に複数の一致文字列がある場合、置換テキストは、テキストが前の一致で置換された文字列からではなく、元の入力文字列から派生します  \(具体的な例を次に示します。\)一致する文字列がない場合、<code>$\`</code> の置換は無効です。  
+ ``$` `` の置換は、一致した場所より前にある入力文字列全体で一致した文字列を置換します。 つまり、一致した場所までの入力文字列を複製し、一致したテキストを削除します。 結果文字列では、一致したテキストに続くテキストは変更されません。 入力文字列に複数の一致文字列がある場合、置換テキストは、テキストが前の一致で置換された文字列からではなく、元の入力文字列から派生します  \(具体的な例を次に示します。\)一致する文字列がない場合、 ``$` `` の置換は無効です。  
   
- 次の例では、正規表現パターン `\d+` を使用して、入力文字列内の 1 つ以上の 10 進数のシーケンスを照合します。 置換文字列 <code>$`</code> は、これらの数字を、一致文字列より前にあるテキストで置換します。  
+ 次の例では、正規表現パターン `\d+` を使用して、入力文字列内の 1 つ以上の 10 進数のシーケンスを照合します。 置換文字列 ``$` `` は、これらの数字を、一致文字列より前にあるテキストで置換します。  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/before1.cs#4)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/before1.vb#4)]  
   
- この例では、入力文字列 `"aa1bb2cc3dd4ee5"` に 5 つの一致が含まれています。 <code>$`</code> の置換によって、正規表現エンジンが入力文字列の各一致文字列をどのように置換するかを、次の表に示します。 挿入されたテキストは結果列に太字で示されています。  
+ この例では、入力文字列 `"aa1bb2cc3dd4ee5"` に 5 つの一致が含まれています。 ``$` `` の置換によって、正規表現エンジンが入力文字列の各一致文字列をどのように置換するかを、次の表に示します。 挿入されたテキストは結果列に太字で示されています。  
   
 |一致したもの|位置|一致した場所より前にある文字列|結果文字列|  
 |-----------|--------------|-------------------------|-------------------|  
@@ -184,9 +184,9 @@ ms.locfileid: "47087331"
   
 <a name="LastGroup"></a>   
 ## <a name="substituting-the-last-captured-group"></a>キャプチャされた最後のグループの置換  
- `$+` の置換は、キャプチャされた最後のグループで一致した文字列を置換します。 キャプチャされたグループがない場合、またはキャプチャされた最後のグループの値が <xref:System.String.Empty?displayProperty=nameWithType> の場合、`$+` の置換は無効です。  
+ `$+` の置換は、キャプチャされた最後のグループで一致した文字列を置換します。 キャプチャされたグループがない場合、またはキャプチャされた最後のグループの値が <xref:System.String.Empty?displayProperty=nameWithType>の場合、 `$+` の置換は無効です。  
   
- 次の例では、文字列内の重複する単語を識別し、`$+` の置換を使用して、これらの単語をその単語 1 つに置換します。 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> オプションを使用すると、大文字と小文字の違いを除いて同一である単語が重複と見なされるようになります。  
+ 次の例では、文字列内の重複する単語を識別し、 `$+` の置換を使用して、これらの単語をその単語 1 つに置換します。 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> オプションを使用すると、大文字と小文字の違いを除いて同一である単語が重複と見なされるようになります。  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/lastmatch1.cs#6)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/lastmatch1.vb#6)]  

@@ -3,12 +3,12 @@ title: .NET Core について
 description: .NET Core について説明します。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170406"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058556"
 ---
 # <a name="about-net-core"></a>.NET Core について
 
@@ -95,7 +95,7 @@ Windows 実装と Unix 実装はほぼ同じサイズです。 CoreFX は、[Mic
 
 .NET Core と .NET Framework の主な違いは、次のとおりです。
 
-- **アプリ モデル** -- .NET Core は一部の .NET Framework アプリ モデルをサポートしていません。 具体的には、ASP.NET Web フォームと MVC をサポートしていません。 [.NET Core 3 が WPF と Windows フォームをサポートする](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/)ことが発表されています。
+- **アプリ モデル** -- .NET Core は一部の .NET Framework アプリ モデルをサポートしていません。 具体的には、ASP.NET Web フォームと ASP.NET MVC はサポートしませんが、ASP.NET Core MVC をサポートしています。 [.NET Core 3 が WPF と Windows フォームをサポートする](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/)ことが発表されています。
 - **API** -- .NET Core には、ファクタリングが異なる (アセンブリ名が異なる、型に対して公開されているメンバーが主要なケースで異なる) .NET Framework 基本クラス ライブラリの大規模なサブセットが含まれています。 この相違によって、ポートの発信元を .NET Core に変更しなければならない場合があります ([microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport) を参照)。 .NET Core は [.NET Standard](../standard/net-standard.md) API 仕様を実装します。
 - **サブシステム** -- .NET Core は、より単純な実装とプログラミング モデルを目的として、.NET Framework 内のサブシステムのサブセットを実装します。 たとえば、コード アクセス セキュリティ (CAS) はサポートされていませんが、リフレクションはサポートされています。
 - **プラットフォーム** -- .NET Framework は Windows と Windows Server をサポートしており、.NET Core は macOS と Linux もサポートしています。

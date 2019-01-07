@@ -4,14 +4,14 @@ description: この記事では、PowerShell、Bash、および zsh 向けの .N
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 10b2e13aad9821295efc5c36d1cad04f1a95477c
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53784394"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029607"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>.NET Core CLI のタブ補完を有効にする方法
+# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>.NET Core CLI のタブ補完を有効にする方法
 
 .NET Core 2.0 SDK 以降では、.NET Core CLI はタブ補完をサポートします。 この記事では、3 つのシェル、PowerShell、Bash、および zsh のタブ補完を構成する方法について説明します。 その他のシェルでは、オート コンプリートのサポートがある場合があります。 オート コンプリートの構成方法については、それぞれのドキュメントを参照してください。手順は、この記事で説明されている手順と同様です。
 
@@ -28,7 +28,7 @@ migrate
 pack
 ```
 
-そのコマンドが機能しない場合は、.NET Core 2.0 SDK 以降がインストールされていることを確認します。 インストールされているにもかかわらず、そのコマンドが機能しない場合は、`dotnet` コマンドが .NET Core 2.0 以降のバージョンに解決されることを確認します。 `dotnet --version` コマンドを使用して、現在のパスの解決先となっている `dotnet` のバージョンを確認します。 詳細については、「[使用する .NET Core のバージョンを選択する](../versions/selection.md)」を参照してください。
+そのコマンドが機能しない場合は、.NET Core 2.0 SDK 以降がインストールされていることを確認します。 インストールされているにもかかわらず、そのコマンドが機能しない場合は、`dotnet` コマンドが .NET Core 2.0 SDK 以降のバージョンに解決されることを確認します。 `dotnet --version` コマンドを使用して、現在のパスの解決先となっている `dotnet` のバージョンを確認します。 詳細については、「[使用する .NET Core のバージョンを選択する](../versions/selection.md)」を参照してください。
 
 ### <a name="examples"></a>使用例
 

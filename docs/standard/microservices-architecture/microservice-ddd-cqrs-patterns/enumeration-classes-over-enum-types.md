@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 72a3e7ef8043e0016cefb45a4182b5c2e3061753
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149498"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029711"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>enum 型の代わりに Enumeration クラスを使用する
 
@@ -17,7 +17,7 @@ ms.locfileid: "53149498"
 
 代わりに、オブジェクト指向言語の豊富な機能をすべて使用できる列挙型クラスを作成する方法があります。
 
-ただし、これは重要な話題ではなく、多くの場合は、好みに応じてわかりやすくするために通常の[列挙型](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum)を使用することができます。 いずれにしても、Enumeration クラスを使用するとビジネス関連の概念に対する関連性が強くなります。
+ただし、これは重要な話題ではなく、多くの場合は、好みに応じてわかりやすくするために通常の[列挙型](../../../csharp/language-reference/keywords/enum.md)を使用することができます。 いずれにしても、Enumeration クラスを使用するとビジネス関連の概念に対する関連性が強くなります。
 
 ## <a name="implement-an-enumeration-base-class"></a>Enumeration 基底クラスを実装する
 
