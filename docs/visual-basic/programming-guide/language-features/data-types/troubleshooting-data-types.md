@@ -30,7 +30,7 @@ ms.locfileid: "48850375"
 このページには、組み込みデータ型の操作を実行するときに発生する一般的な問題が一覧表示されます。  
   
 ## <a name="floating-point-expressions-do-not-compare-as-equal"></a>浮動小数点式が等しいと比較しないでください。  
- 浮動小数点数を使用する場合 ([1 つのデータ型](../../../../visual-basic/language-reference/data-types/single-data-type.md)と[Double データ型](../../../../visual-basic/language-reference/data-types/double-data-type.md))、バイナリの分数として格納されることに注意してください。 つまり、バイナリの一部ではない任意の分量の正確な表現を保持することはできません (k 形式の/(2 ^ n)、k と n は整数)。 たとえば、0.5 (1/2 =) および 0.3125 (= 5/16) 保持できる正確な値を (= 1/5) 0.2、0.3 (= 3/10) 近似値のみであることができます。  
+ 浮動小数点数を使用する場合 ([Single データ型](../../../../visual-basic/language-reference/data-types/single-data-type.md)と[Double データ型](../../../../visual-basic/language-reference/data-types/double-data-type.md))を扱うときは、二進小数として格納されることに注意してください。 つまり、二進小数ではない（k /（2 ^ n）の形式で、k と n は整数）数量を正確に表すことはできません。 たとえば、0.5 (1/2 =) および 0.3125 (= 5/16) は正確な値として保持できますが、0.2（= 1/5）、0.3 （= 3/10）は 近似値にしかなりません。 
   
  このため、誤差に依存できない正確な結果浮動小数点値を操作するときにします。 具体的には、理論的に等しい 2 つの値には、若干異なる表現があります。  
   
