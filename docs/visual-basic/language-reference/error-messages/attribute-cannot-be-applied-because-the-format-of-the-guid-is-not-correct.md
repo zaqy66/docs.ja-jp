@@ -1,5 +1,5 @@
 ---
-title: 'GUID '<number>' の形式が正しくないため、'<attribute>' を適用できません。'
+title: GUID &#39;&lt;number&gt;&#39; の形式が正しくないため、&#39;&lt;attribute&gt;&#39; を適用できません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32500
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33587561"
 ---
-# <a name="39ltattributegt39-cannot-be-applied-because-the-format-of-the-guid-39ltnumbergt39-is-not-correct"></a>GUID '<number>' の形式が正しくないため、'<attribute>' を適用できません。
+# <a name="39ltattributegt39-cannot-be-applied-because-the-format-of-the-guid-39ltnumbergt39-is-not-correct"></a>GUID &#39;&lt;number&gt;&#39; の形式が正しくないため、&#39;&lt;attribute&gt;&#39; を適用できません。
 A`COMClassAttribute`属性ブロックは、GUID の適切な形式に準拠していないグローバル一意識別子 (GUID) を指定します。 `COMClassAttribute` クラス、インターフェイス、および作成イベントを一意に識別するのに Guid を使用します。  
   
  GUID は、16 バイトで構成されます。前半の 8 バイトは数値、後半の 8 バイトはバイナリです。 Uuidgen.exe などの Microsoft ユーティリティによって生成され、領域と時間で一意であることが保証されます。  
