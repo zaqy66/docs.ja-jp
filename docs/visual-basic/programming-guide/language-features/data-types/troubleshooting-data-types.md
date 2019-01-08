@@ -110,7 +110,7 @@ ms.locfileid: "48850375"
  1 つ`Char`と配列の`Char`要素の両方に拡大変換する`String`します。 ただし、`String`に拡大変換されない`Char()`します。 変換する、`String`値を`Char`使用することができます、配列、<xref:System.String.ToCharArray%2A>のメソッド、<xref:System.String?displayProperty=nameWithType>クラス。  
   
 ### <a name="meaningless-values"></a>意味のない値  
- 一般に、`String`値が意味のある他のデータ型でないと、変換が危険な。 使用を制限する必要があります、可能な限り`String`変数を文字のシーケンスに設計されています。 その他の種類に対応する値に依存するコードを書かないようにしてください。  
+ 一般に、`String`値他のデータ型では意味がなく、変換は非常に危険です。可能な限り`String`の使用をそれらが設計されている文字シーケンスに制限する必要があります。その他の種類に対応する値に依存するコードを書かないようにしてください。 
   
 ## <a name="see-also"></a>関連項目  
  [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
