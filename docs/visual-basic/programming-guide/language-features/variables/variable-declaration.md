@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Basic での変数宣言
 ms.date: 07/20/2015
 helpviewer_keywords:
