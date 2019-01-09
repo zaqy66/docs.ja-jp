@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;membername&gt; &#39; 、継承インターフェイス間であいまいな&#39; &lt;interfacename1&gt; &#39;と&#39; &lt;interfacename2&gt;&#39;'
+title: "''<membername>' は、継承インターフェイス '<interfacename1>' および '<interfacename2>' 間ではあいまいです。'&lt;&gt;&lt;&gt;&lt;&gt;"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30685
@@ -14,14 +14,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33585302"
 ---
-# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a><span data-ttu-id="6b96a-102">&#39;&lt;membername&gt; &#39; 、継承インターフェイス間であいまいな&#39; &lt;interfacename1&gt; &#39;と&#39; &lt;interfacename2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="6b96a-102">&#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39;</span></span>
-<span data-ttu-id="6b96a-103">インターフェイスは、同じ名前の 2 つ以上のメンバーを複数のインターフェイスから継承します。</span><span class="sxs-lookup"><span data-stu-id="6b96a-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
+# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a><span data-ttu-id="3da1f-102">''<membername>' は、継承インターフェイス '<interfacename1>' および '<interfacename2>' 間ではあいまいです。'&lt;&gt;&lt;&gt;&lt;&gt;</span><span class="sxs-lookup"><span data-stu-id="3da1f-102">&#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39;</span></span>
+<span data-ttu-id="3da1f-103">インターフェイスは、同じ名前の 2 つ以上のメンバーを複数のインターフェイスから継承します。</span><span class="sxs-lookup"><span data-stu-id="3da1f-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
   
- <span data-ttu-id="6b96a-104">**エラー ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="6b96a-104">**Error ID:** BC30685</span></span>  
+ <span data-ttu-id="3da1f-104">**エラー ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="3da1f-104">**Error ID:** BC30685</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6b96a-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="6b96a-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3da1f-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="3da1f-105">To correct this error</span></span>  
   
--   <span data-ttu-id="6b96a-106">値のキャストを使用する基本インターフェイス例えば：</span><span class="sxs-lookup"><span data-stu-id="6b96a-106">Cast the value to the base interface that you want to use; for example:</span></span>  
+-   <span data-ttu-id="3da1f-106">値のキャストを使用する基本インターフェイス例えば：</span><span class="sxs-lookup"><span data-stu-id="3da1f-106">Cast the value to the base interface that you want to use; for example:</span></span>  
   
     ```  
     Interface Left  
@@ -46,5 +46,5 @@ ms.locfileid: "33585302"
     End Module  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="6b96a-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="6b96a-107">See Also</span></span>  
- [<span data-ttu-id="6b96a-108">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6b96a-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="3da1f-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="3da1f-107">See Also</span></span>  
+ [<span data-ttu-id="3da1f-108">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3da1f-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
