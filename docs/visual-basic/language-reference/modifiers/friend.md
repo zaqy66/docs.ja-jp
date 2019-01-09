@@ -76,7 +76,7 @@ ms.locfileid: "34234590"
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
- [保護されたプライベート](./private-protected.md)   
+ [Private Protected](./private-protected.md)   
  [保護されたフレンド](./protected-friend.md)   
  [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
