@@ -79,6 +79,6 @@ ms.locfileid: "34234590"
  [保護されたプライベート](./private-protected.md)   
  [保護されたフレンド](./protected-friend.md)   
  [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
