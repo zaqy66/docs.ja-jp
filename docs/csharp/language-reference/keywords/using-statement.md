@@ -5,51 +5,55 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 9569b04e4d4f7bfca90390bfd803cdd02b3f3632
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: df116a200795fd20405381fd71e82d1d6fe662bc
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244597"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614390"
 ---
-# <a name="using-statement-c-reference"></a><span data-ttu-id="40d69-102">using ステートメント (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="40d69-102">using Statement (C# Reference)</span></span>
-<span data-ttu-id="40d69-103"><xref:System.IDisposable> オブジェクトの正しい使用を保証する簡易構文を提供します。</span><span class="sxs-lookup"><span data-stu-id="40d69-103">Provides a convenient syntax that ensures the correct use of <xref:System.IDisposable> objects.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="40d69-104">例</span><span class="sxs-lookup"><span data-stu-id="40d69-104">Example</span></span>  
- <span data-ttu-id="40d69-105">`using` ステートメントを使用する方法の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="40d69-105">The following example shows how to use the `using` statement.</span></span>  
-  
- [!code-csharp[csrefKeywordsNamespace#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_1.cs)]  
-  
-## <a name="remarks"></a><span data-ttu-id="40d69-106">コメント</span><span class="sxs-lookup"><span data-stu-id="40d69-106">Remarks</span></span>  
- <span data-ttu-id="40d69-107"><xref:System.IO.File> と <xref:System.Drawing.Font> は、アンマネージド リソース (この場合はファイル ハンドルとデバイス コンテキスト) にアクセスするマネージド型の例です。</span><span class="sxs-lookup"><span data-stu-id="40d69-107"><xref:System.IO.File> and <xref:System.Drawing.Font> are examples of managed types that access unmanaged resources (in this case file handles and device contexts).</span></span> <span data-ttu-id="40d69-108">アンマネージ リソースや、それをカプセル化するクラス ライブラリ型は他にもたくさんあります。</span><span class="sxs-lookup"><span data-stu-id="40d69-108">There are many other kinds of unmanaged resources and class library types that encapsulate them.</span></span> <span data-ttu-id="40d69-109">このような型はすべて、<xref:System.IDisposable> インターフェイスを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="40d69-109">All such types must implement the <xref:System.IDisposable> interface.</span></span>  
-  
-<span data-ttu-id="40d69-110">`IDisposable` オブジェクトの有効期間が 1 つのメソッドに限定されているとき、それを `using` ステートメントで宣言し、インスタンス化してください。</span><span class="sxs-lookup"><span data-stu-id="40d69-110">When the lifetime of an `IDisposable` object is limited to a single method, you should declare and instantiate it in the `using` statement.</span></span> <span data-ttu-id="40d69-111">`using` ステートメントは、オブジェクトで正しく <xref:System.IDisposable.Dispose%2A> メソッドを呼び出します。(前述のようにこのステートメントを使用する場合) <xref:System.IDisposable.Dispose%2A> が呼び出されるとすぐに、オブジェクト自体がスコープの外側に出されます。</span><span class="sxs-lookup"><span data-stu-id="40d69-111">The `using` statement calls the <xref:System.IDisposable.Dispose%2A> method on the object in the correct way, and (when you use it as shown earlier) it also causes the object itself to go out of scope as soon as <xref:System.IDisposable.Dispose%2A> is called.</span></span> <span data-ttu-id="40d69-112">オブジェクトは、`using` ブロック内では読み取り専用です。変更したり再割り当てしたりすることはできません。</span><span class="sxs-lookup"><span data-stu-id="40d69-112">Within the `using` block, the object is read-only and cannot be modified or reassigned.</span></span>  
-  
- <span data-ttu-id="40d69-113">`using` ステートメントにより、`using` ブロックで例外が発生した場合でも必ず <xref:System.IDisposable.Dispose%2A> が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="40d69-113">The `using` statement ensures that <xref:System.IDisposable.Dispose%2A> is called even if an exception occurs within the `using` block.</span></span> <span data-ttu-id="40d69-114">オブジェクトを `try` ブロックに配置し、`finally` ブロックで <xref:System.IDisposable.Dispose%2A> を呼び出しても、同じ結果が得られます。実際には、コンパイラは `using` ステートメントをこのように変換します。</span><span class="sxs-lookup"><span data-stu-id="40d69-114">You can achieve the same result by putting the object inside a `try` block and then calling <xref:System.IDisposable.Dispose%2A> in a `finally` block; in fact, this is how the `using` statement is translated by the compiler.</span></span> <span data-ttu-id="40d69-115">前のコード例は、コンパイル時に次のコードに展開されます (オブジェクトのスコープ制限を定義する中かっこが加えられていることに注意してください)。</span><span class="sxs-lookup"><span data-stu-id="40d69-115">The code example earlier expands to the following code at compile time (note the extra curly braces to create the limited scope for the object):</span></span>  
-  
- [!code-csharp[csrefKeywordsNamespace#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_2.cs)]  
- 
- <span data-ttu-id="40d69-116">`try`-`finally` ステートメントの詳細については、「[try-finally](try-finally.md)」のトピックを参照してください。</span><span class="sxs-lookup"><span data-stu-id="40d69-116">For more information about the `try`-`finally` statement, see the [try-finally](try-finally.md) topic.</span></span>
-  
- <span data-ttu-id="40d69-117">次の例のように、`using` ステートメントでは型の複数のインスタンスを宣言できます。</span><span class="sxs-lookup"><span data-stu-id="40d69-117">Multiple instances of a type can be declared in the `using` statement, as shown in the following example:</span></span>  
-  
- [!code-csharp[csrefKeywordsNamespace#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_3.cs)]  
-  
- <span data-ttu-id="40d69-118">リソース オブジェクトをインスタンス化してから、変数を `using` ステートメントに渡すことはできますが、これはベスト プラクティスではありません。</span><span class="sxs-lookup"><span data-stu-id="40d69-118">You can instantiate the resource object and then pass the variable to the `using` statement, but this is not a best practice.</span></span> <span data-ttu-id="40d69-119">この場合、アンマネージド リソースへのアクセスがなくなっている可能性が高いのにもかかわらず、制御が `using` ブロックを離れた後もオブジェクトはスコープ内に残ります。</span><span class="sxs-lookup"><span data-stu-id="40d69-119">In this case, after control leaves the `using` block, the object remains in scope but probably has no access to its unmanaged resources.</span></span> <span data-ttu-id="40d69-120">つまり、完全に初期化されることはなくなります。</span><span class="sxs-lookup"><span data-stu-id="40d69-120">In other words, it's not fully initialized anymore.</span></span> <span data-ttu-id="40d69-121">`using` ブロックの外側でオブジェクトを使用しようとすると、例外がスローされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="40d69-121">If you try to use the object outside the `using` block, you risk causing an exception to be thrown.</span></span> <span data-ttu-id="40d69-122">このため、通常は、オブジェクトを `using` ステートメントでインスタンス化して、そのスコープを `using` ブロックに制限することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="40d69-122">For this reason, it's generally better to instantiate the object in the `using` statement and limit its scope to the `using` block.</span></span>  
-  
- [!code-csharp[csrefKeywordsNamespace#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_4.cs)]  
-  
-<span data-ttu-id="40d69-123">`IDisposable` オブジェクトの破棄に関する詳細については、「[IDisposable を実装するオブジェクトの使用](../../../standard/garbage-collection/using-objects.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="40d69-123">For more information about disposing of `IDisposable` objects, see [Using objects that implement IDisposable](../../../standard/garbage-collection/using-objects.md).</span></span>
+# <a name="using-statement-c-reference"></a><span data-ttu-id="9594e-102">using ステートメント (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="9594e-102">using statement (C# Reference)</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="40d69-124">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="40d69-124">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="40d69-125">参照</span><span class="sxs-lookup"><span data-stu-id="40d69-125">See Also</span></span>
+<span data-ttu-id="9594e-103"><xref:System.IDisposable> オブジェクトの正しい使用を保証する簡易構文を提供します。</span><span class="sxs-lookup"><span data-stu-id="9594e-103">Provides a convenient syntax that ensures the correct use of <xref:System.IDisposable> objects.</span></span>
 
-- [<span data-ttu-id="40d69-126">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="40d69-126">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="40d69-127">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="40d69-127">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="40d69-128">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="40d69-128">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="40d69-129">using ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="40d69-129">using Directive</span></span>](../../../csharp/language-reference/keywords/using-directive.md)  
-- [<span data-ttu-id="40d69-130">ガベージ コレクション</span><span class="sxs-lookup"><span data-stu-id="40d69-130">Garbage Collection</span></span>](../../../standard/garbage-collection/index.md)  
-- [<span data-ttu-id="40d69-131">IDisposable を実装するオブジェクトの使用</span><span class="sxs-lookup"><span data-stu-id="40d69-131">Using objects that implement IDisposable</span></span>](../../../standard/garbage-collection/using-objects.md)  
-- [<span data-ttu-id="40d69-132">IDisposable インターフェイス</span><span class="sxs-lookup"><span data-stu-id="40d69-132">IDisposable interface</span></span>](xref:System.IDisposable)
+## <a name="example"></a><span data-ttu-id="9594e-104">例</span><span class="sxs-lookup"><span data-stu-id="9594e-104">Example</span></span>
+
+<span data-ttu-id="9594e-105">`using` ステートメントを使用する方法の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="9594e-105">The following example shows how to use the `using` statement.</span></span>
+
+[!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
+
+## <a name="remarks"></a><span data-ttu-id="9594e-106">コメント</span><span class="sxs-lookup"><span data-stu-id="9594e-106">Remarks</span></span>
+
+<span data-ttu-id="9594e-107"><xref:System.IO.File> と <xref:System.Drawing.Font> は、アンマネージド リソース (この場合はファイル ハンドルとデバイス コンテキスト) にアクセスするマネージド型の例です。</span><span class="sxs-lookup"><span data-stu-id="9594e-107"><xref:System.IO.File> and <xref:System.Drawing.Font> are examples of managed types that access unmanaged resources (in this case file handles and device contexts).</span></span> <span data-ttu-id="9594e-108">アンマネージ リソースや、それをカプセル化するクラス ライブラリ型は他にもたくさんあります。</span><span class="sxs-lookup"><span data-stu-id="9594e-108">There are many other kinds of unmanaged resources and class library types that encapsulate them.</span></span> <span data-ttu-id="9594e-109">このような型はすべて、<xref:System.IDisposable> インターフェイスを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9594e-109">All such types must implement the <xref:System.IDisposable> interface.</span></span>
+
+<span data-ttu-id="9594e-110">`IDisposable` オブジェクトの有効期間が 1 つのメソッドに限定されているとき、それを `using` ステートメントで宣言し、インスタンス化してください。</span><span class="sxs-lookup"><span data-stu-id="9594e-110">When the lifetime of an `IDisposable` object is limited to a single method, you should declare and instantiate it in the `using` statement.</span></span> <span data-ttu-id="9594e-111">`using` ステートメントは、オブジェクトで正しく <xref:System.IDisposable.Dispose%2A> メソッドを呼び出します。(前述のようにこのステートメントを使用する場合) <xref:System.IDisposable.Dispose%2A> が呼び出されるとすぐに、オブジェクト自体がスコープの外側に出されます。</span><span class="sxs-lookup"><span data-stu-id="9594e-111">The `using` statement calls the <xref:System.IDisposable.Dispose%2A> method on the object in the correct way, and (when you use it as shown earlier) it also causes the object itself to go out of scope as soon as <xref:System.IDisposable.Dispose%2A> is called.</span></span> <span data-ttu-id="9594e-112">オブジェクトは、`using` ブロック内では読み取り専用です。変更したり再割り当てしたりすることはできません。</span><span class="sxs-lookup"><span data-stu-id="9594e-112">Within the `using` block, the object is read-only and cannot be modified or reassigned.</span></span>
+
+<span data-ttu-id="9594e-113">`using` ステートメントにより、`using` ブロックで例外が発生した場合でも必ず <xref:System.IDisposable.Dispose%2A> が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="9594e-113">The `using` statement ensures that <xref:System.IDisposable.Dispose%2A> is called even if an exception occurs within the `using` block.</span></span> <span data-ttu-id="9594e-114">オブジェクトを `try` ブロックに配置し、`finally` ブロックで <xref:System.IDisposable.Dispose%2A> を呼び出しても、同じ結果が得られます。実際には、コンパイラは `using` ステートメントをこのように変換します。</span><span class="sxs-lookup"><span data-stu-id="9594e-114">You can achieve the same result by putting the object inside a `try` block and then calling <xref:System.IDisposable.Dispose%2A> in a `finally` block; in fact, this is how the `using` statement is translated by the compiler.</span></span> <span data-ttu-id="9594e-115">前のコード例は、コンパイル時に次のコードに展開されます (オブジェクトのスコープ制限を定義する中かっこが加えられていることに注意してください)。</span><span class="sxs-lookup"><span data-stu-id="9594e-115">The code example earlier expands to the following code at compile time (note the extra curly braces to create the limited scope for the object):</span></span>
+
+[!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
+
+<span data-ttu-id="9594e-116">`try`-`finally` ステートメントの詳細については、「[try-finally](try-finally.md)」のトピックを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9594e-116">For more information about the `try`-`finally` statement, see the [try-finally](try-finally.md) topic.</span></span>
+
+<span data-ttu-id="9594e-117">次の例のように、`using` ステートメントでは型の複数のインスタンスを宣言できます。</span><span class="sxs-lookup"><span data-stu-id="9594e-117">Multiple instances of a type can be declared in the `using` statement, as shown in the following example:</span></span>
+
+[!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
+
+<span data-ttu-id="9594e-118">リソース オブジェクトをインスタンス化してから、変数を `using` ステートメントに渡すことはできますが、これはベスト プラクティスではありません。</span><span class="sxs-lookup"><span data-stu-id="9594e-118">You can instantiate the resource object and then pass the variable to the `using` statement, but this is not a best practice.</span></span> <span data-ttu-id="9594e-119">この場合、アンマネージド リソースへのアクセスがなくなっている可能性が高いのにもかかわらず、制御が `using` ブロックを離れた後もオブジェクトはスコープ内に残ります。</span><span class="sxs-lookup"><span data-stu-id="9594e-119">In this case, after control leaves the `using` block, the object remains in scope but probably has no access to its unmanaged resources.</span></span> <span data-ttu-id="9594e-120">つまり、完全に初期化されることはなくなります。</span><span class="sxs-lookup"><span data-stu-id="9594e-120">In other words, it's not fully initialized anymore.</span></span> <span data-ttu-id="9594e-121">`using` ブロックの外側でオブジェクトを使用しようとすると、例外がスローされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="9594e-121">If you try to use the object outside the `using` block, you risk causing an exception to be thrown.</span></span> <span data-ttu-id="9594e-122">このため、通常は、オブジェクトを `using` ステートメントでインスタンス化して、そのスコープを `using` ブロックに制限することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="9594e-122">For this reason, it's generally better to instantiate the object in the `using` statement and limit its scope to the `using` block.</span></span>
+
+[!code-csharp[csrefKeywordsNamespace#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#7)]
+
+<span data-ttu-id="9594e-123">`IDisposable` オブジェクトの破棄に関する詳細については、「[IDisposable を実装するオブジェクトの使用](../../../standard/garbage-collection/using-objects.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9594e-123">For more information about disposing of `IDisposable` objects, see [Using objects that implement IDisposable](../../../standard/garbage-collection/using-objects.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="9594e-124">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="9594e-124">C# language specification</span></span>
+
+<span data-ttu-id="9594e-125">詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの [using ステートメント](~/_csharplang/spec/statements.md#the-using-statement)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9594e-125">For more information, see [The using statement](~/_csharplang/spec/statements.md#the-using-statement) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="9594e-126">言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。</span><span class="sxs-lookup"><span data-stu-id="9594e-126">The language specification is the definitive source for C# syntax and usage.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="9594e-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="9594e-127">See also</span></span>
+
+- [<span data-ttu-id="9594e-128">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="9594e-128">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="9594e-129">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="9594e-129">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="9594e-130">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="9594e-130">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="9594e-131">using ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="9594e-131">using Directive</span></span>](using-directive.md)
+- [<span data-ttu-id="9594e-132">ガベージ コレクション</span><span class="sxs-lookup"><span data-stu-id="9594e-132">Garbage Collection</span></span>](../../../standard/garbage-collection/index.md)
+- [<span data-ttu-id="9594e-133">IDisposable を実装するオブジェクトの使用</span><span class="sxs-lookup"><span data-stu-id="9594e-133">Using objects that implement IDisposable</span></span>](../../../standard/garbage-collection/using-objects.md)
+- [<span data-ttu-id="9594e-134">IDisposable インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9594e-134">IDisposable interface</span></span>](xref:System.IDisposable)
