@@ -1,80 +1,79 @@
 ---
-title: '&lt;issuedToken&gt;'
+title: '&lt;IssuedToken&gt;'
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 9a8d701e0806aae0a17a1c5ff7284606dd080f85
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a06d59c5dfb14e5f3346ff2424339659568a369a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750234"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150189"
 ---
-# <a name="ltissuedtokengt"></a><span data-ttu-id="fad95-102">&lt;issuedToken&gt;</span><span class="sxs-lookup"><span data-stu-id="fad95-102">&lt;issuedToken&gt;</span></span>
-<span data-ttu-id="fad95-103">サービスに対するクライアントの認証に使用されるカスタム トークンを指定します。</span><span class="sxs-lookup"><span data-stu-id="fad95-103">Specifies a custom token used to authenticate a client to a service.</span></span>  
+# <a name="ltissuedtokengt"></a><span data-ttu-id="0957b-102">&lt;IssuedToken&gt;</span><span class="sxs-lookup"><span data-stu-id="0957b-102">&lt;issuedToken&gt;</span></span>
+<span data-ttu-id="0957b-103">サービスに対するクライアントの認証に使用されるカスタム トークンを指定します。</span><span class="sxs-lookup"><span data-stu-id="0957b-103">Specifies a custom token used to authenticate a client to a service.</span></span>  
   
- <span data-ttu-id="fad95-104">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="fad95-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="fad95-105">\<ビヘイビアー ></span><span class="sxs-lookup"><span data-stu-id="fad95-105">\<behaviors></span></span>  
-<span data-ttu-id="fad95-106">endpointBehaviors セクション</span><span class="sxs-lookup"><span data-stu-id="fad95-106">endpointBehaviors section</span></span>  
-<span data-ttu-id="fad95-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="fad95-107">\<behavior></span></span>  
-<span data-ttu-id="fad95-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="fad95-108">\<clientCredentials></span></span>  
-<span data-ttu-id="fad95-109">\<issuedToken ></span><span class="sxs-lookup"><span data-stu-id="fad95-109">\<issuedToken></span></span>  
+ <span data-ttu-id="0957b-104">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0957b-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="0957b-105">\<<behaviors></span><span class="sxs-lookup"><span data-stu-id="0957b-105">\<behaviors></span></span>  
+<span data-ttu-id="0957b-106">endpointBehaviors セクション</span><span class="sxs-lookup"><span data-stu-id="0957b-106">endpointBehaviors section</span></span>  
+<span data-ttu-id="0957b-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="0957b-107">\<behavior></span></span>  
+<span data-ttu-id="0957b-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="0957b-108">\<clientCredentials></span></span>  
+<span data-ttu-id="0957b-109">\<issuedToken ></span><span class="sxs-lookup"><span data-stu-id="0957b-109">\<issuedToken></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fad95-110">構文</span><span class="sxs-lookup"><span data-stu-id="fad95-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0957b-110">構文</span><span class="sxs-lookup"><span data-stu-id="0957b-110">Syntax</span></span>  
   
 ```xml  
-<issuedToken   
-   cacheIssuedTokens="Boolean"  
-   defaultKeyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"  
-   issuedTokenRenewalThresholdPercentage = "0 to 100"  
-   issuerChannelBehaviors="String"  
-      localIssuerChannelBehaviors="String"  
-   maxIssuedTokenCachingTime="TimeSpan"  
-</issuedToken>  
+<issuedToken cacheIssuedTokens="Boolean"
+             defaultKeyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"
+             issuedTokenRenewalThresholdPercentage = "0 to 100"
+             issuerChannelBehaviors="String"
+             localIssuerChannelBehaviors="String"
+             maxIssuedTokenCachingTime="TimeSpan">
+</issuedToken>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fad95-111">属性および要素</span><span class="sxs-lookup"><span data-stu-id="fad95-111">Attributes and Elements</span></span>  
- <span data-ttu-id="fad95-112">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="fad95-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0957b-111">属性および要素</span><span class="sxs-lookup"><span data-stu-id="0957b-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="0957b-112">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="0957b-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fad95-113">属性</span><span class="sxs-lookup"><span data-stu-id="fad95-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0957b-113">属性</span><span class="sxs-lookup"><span data-stu-id="0957b-113">Attributes</span></span>  
   
-|<span data-ttu-id="fad95-114">属性</span><span class="sxs-lookup"><span data-stu-id="fad95-114">Attribute</span></span>|<span data-ttu-id="fad95-115">説明</span><span class="sxs-lookup"><span data-stu-id="fad95-115">Description</span></span>|  
+|<span data-ttu-id="0957b-114">属性</span><span class="sxs-lookup"><span data-stu-id="0957b-114">Attribute</span></span>|<span data-ttu-id="0957b-115">説明</span><span class="sxs-lookup"><span data-stu-id="0957b-115">Description</span></span>|  
 |---------------|-----------------|  
-|`cacheIssuedTokens`|<span data-ttu-id="fad95-116">トークンがキャッシュされるかどうかを指定する省略可能なブール属性。</span><span class="sxs-lookup"><span data-stu-id="fad95-116">Optional Boolean attribute that specifies whether tokens are cached.</span></span> <span data-ttu-id="fad95-117">既定値は、`true` です。</span><span class="sxs-lookup"><span data-stu-id="fad95-117">The default is `true`.</span></span>|  
-|`defaultKeyEntropyMode`|<span data-ttu-id="fad95-118">ハンドシェイク操作に使用されるランダム値 (エントロピ) を指定する省略可能な文字列属性。</span><span class="sxs-lookup"><span data-stu-id="fad95-118">Optional string attribute that specifies which random values (entropies) are used for handshake operations.</span></span> <span data-ttu-id="fad95-119">値には、`ClientEntropy`、`ServerEntropy`、および `CombinedEntropy` があります。既定値は `CombinedEntropy` です。</span><span class="sxs-lookup"><span data-stu-id="fad95-119">Values include `ClientEntropy`, `ServerEntropy`, and `CombinedEntropy`, The default is `CombinedEntropy`.</span></span> <span data-ttu-id="fad95-120">この属性は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 型です。</span><span class="sxs-lookup"><span data-stu-id="fad95-120">This attribute is of type <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.</span></span>|  
-|`issuedTokenRenewalThresholdPercentage`|<span data-ttu-id="fad95-121">トークンが更新されるまでに待機できる有効な期間 (トークン発行者によって提供される) のパーセンテージを指定する省略可能な整数属性。</span><span class="sxs-lookup"><span data-stu-id="fad95-121">Optional integer attribute that specifies the percentage of a valid time frame (supplied by the token issuer) that can pass before a token is renewed.</span></span> <span data-ttu-id="fad95-122">値は 0 ～ 100 の範囲です。</span><span class="sxs-lookup"><span data-stu-id="fad95-122">Values are from 0 to 100.</span></span> <span data-ttu-id="fad95-123">既定値は 60 で、更新の実行までに待機できる期間の 60% を示します。</span><span class="sxs-lookup"><span data-stu-id="fad95-123">The default is 60, which specifies 60% of the time passes before a renewal is attempted.</span></span>|  
-|`issuerChannelBehaviors`|<span data-ttu-id="fad95-124">発行者との通信時に使用するチャネル動作を指定する省略可能な属性。</span><span class="sxs-lookup"><span data-stu-id="fad95-124">Optional attribute that specifies the channel behaviors to use when communicating with the issuer.</span></span>|  
-|`localIssuerChannelBehaviors`|<span data-ttu-id="fad95-125">ローカル発行者との通信時に使用するチャネル動作を指定する省略可能な属性。</span><span class="sxs-lookup"><span data-stu-id="fad95-125">Optional attribute that specifies the channel behaviors to use when communicating with the local issuer.</span></span>|  
-|`maxIssuedTokenCachingTime`|<span data-ttu-id="fad95-126">トークン発行者 (STS) が期間を指定しない場合に、発行済みトークンがキャッシュされる期間を指定する省略可能な Timespan 属性。</span><span class="sxs-lookup"><span data-stu-id="fad95-126">Optional Timespan attribute that specifies the duration that issued tokens are cached when the token issuer (an STS) does not specify a time.</span></span> <span data-ttu-id="fad95-127">既定値は「10675199.02:48:05.4775807」です。</span><span class="sxs-lookup"><span data-stu-id="fad95-127">The default is "10675199.02:48:05.4775807."</span></span>|  
+|`cacheIssuedTokens`|<span data-ttu-id="0957b-116">トークンがキャッシュされるかどうかを指定する省略可能なブール属性。</span><span class="sxs-lookup"><span data-stu-id="0957b-116">Optional Boolean attribute that specifies whether tokens are cached.</span></span> <span data-ttu-id="0957b-117">既定値は、`true` です。</span><span class="sxs-lookup"><span data-stu-id="0957b-117">The default is `true`.</span></span>|  
+|`defaultKeyEntropyMode`|<span data-ttu-id="0957b-118">ハンドシェイク操作に使用されるランダム値 (エントロピ) を指定する省略可能な文字列属性。</span><span class="sxs-lookup"><span data-stu-id="0957b-118">Optional string attribute that specifies which random values (entropies) are used for handshake operations.</span></span> <span data-ttu-id="0957b-119">値には、`ClientEntropy`、`ServerEntropy`、および `CombinedEntropy` があります。既定値は `CombinedEntropy` です。</span><span class="sxs-lookup"><span data-stu-id="0957b-119">Values include `ClientEntropy`, `ServerEntropy`, and `CombinedEntropy`, The default is `CombinedEntropy`.</span></span> <span data-ttu-id="0957b-120">この属性は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 型です。</span><span class="sxs-lookup"><span data-stu-id="0957b-120">This attribute is of type <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.</span></span>|  
+|`issuedTokenRenewalThresholdPercentage`|<span data-ttu-id="0957b-121">トークンが更新されるまでに待機できる有効な期間 (トークン発行者によって提供される) のパーセンテージを指定する省略可能な整数属性。</span><span class="sxs-lookup"><span data-stu-id="0957b-121">Optional integer attribute that specifies the percentage of a valid time frame (supplied by the token issuer) that can pass before a token is renewed.</span></span> <span data-ttu-id="0957b-122">値は 0 ～ 100 の範囲です。</span><span class="sxs-lookup"><span data-stu-id="0957b-122">Values are from 0 to 100.</span></span> <span data-ttu-id="0957b-123">既定値は 60 で、更新の実行までに待機できる期間の 60% を示します。</span><span class="sxs-lookup"><span data-stu-id="0957b-123">The default is 60, which specifies 60% of the time passes before a renewal is attempted.</span></span>|  
+|`issuerChannelBehaviors`|<span data-ttu-id="0957b-124">発行者との通信時に使用するチャネル動作を指定する省略可能な属性。</span><span class="sxs-lookup"><span data-stu-id="0957b-124">Optional attribute that specifies the channel behaviors to use when communicating with the issuer.</span></span>|  
+|`localIssuerChannelBehaviors`|<span data-ttu-id="0957b-125">ローカル発行者との通信時に使用するチャネル動作を指定する省略可能な属性。</span><span class="sxs-lookup"><span data-stu-id="0957b-125">Optional attribute that specifies the channel behaviors to use when communicating with the local issuer.</span></span>|  
+|`maxIssuedTokenCachingTime`|<span data-ttu-id="0957b-126">トークン発行者 (STS) が期間を指定しない場合に、発行済みトークンがキャッシュされる期間を指定する省略可能な Timespan 属性。</span><span class="sxs-lookup"><span data-stu-id="0957b-126">Optional Timespan attribute that specifies the duration that issued tokens are cached when the token issuer (an STS) does not specify a time.</span></span> <span data-ttu-id="0957b-127">既定値は「10675199.02:48:05.4775807」</span><span class="sxs-lookup"><span data-stu-id="0957b-127">The default is "10675199.02:48:05.4775807."</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="fad95-128">子要素</span><span class="sxs-lookup"><span data-stu-id="fad95-128">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0957b-128">子要素</span><span class="sxs-lookup"><span data-stu-id="0957b-128">Child Elements</span></span>  
   
-|<span data-ttu-id="fad95-129">要素</span><span class="sxs-lookup"><span data-stu-id="fad95-129">Element</span></span>|<span data-ttu-id="fad95-130">説明</span><span class="sxs-lookup"><span data-stu-id="fad95-130">Description</span></span>|  
+|<span data-ttu-id="0957b-129">要素</span><span class="sxs-lookup"><span data-stu-id="0957b-129">Element</span></span>|<span data-ttu-id="0957b-130">説明</span><span class="sxs-lookup"><span data-stu-id="0957b-130">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fad95-131">\<localIssuer></span><span class="sxs-lookup"><span data-stu-id="fad95-131">\<localIssuer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|<span data-ttu-id="fad95-132">トークンのローカル発行者のアドレスと、エンドポイントとの通信に使用されるバインディングを指定します。</span><span class="sxs-lookup"><span data-stu-id="fad95-132">Specifies the address of the local issuer of the token and the binding used to communicate with the endpoint.</span></span>|  
-|[<span data-ttu-id="fad95-133">\<issuerChannelBehaviors ></span><span class="sxs-lookup"><span data-stu-id="fad95-133">\<issuerChannelBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|<span data-ttu-id="fad95-134">ローカル発行者に接続するときに使用するエンドポイント動作を指定します。</span><span class="sxs-lookup"><span data-stu-id="fad95-134">Specifies the endpoint behaviors to use when contacting a local issuer.</span></span>|  
+|[<span data-ttu-id="0957b-131">\<localIssuer></span><span class="sxs-lookup"><span data-stu-id="0957b-131">\<localIssuer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|<span data-ttu-id="0957b-132">トークンのローカル発行者のアドレスと、エンドポイントとの通信に使用されるバインディングを指定します。</span><span class="sxs-lookup"><span data-stu-id="0957b-132">Specifies the address of the local issuer of the token and the binding used to communicate with the endpoint.</span></span>|  
+|[<span data-ttu-id="0957b-133">\<issuerChannelBehaviors ></span><span class="sxs-lookup"><span data-stu-id="0957b-133">\<issuerChannelBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|<span data-ttu-id="0957b-134">ローカル発行者に接続するときに使用するエンドポイント動作を指定します。</span><span class="sxs-lookup"><span data-stu-id="0957b-134">Specifies the endpoint behaviors to use when contacting a local issuer.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="fad95-135">親要素</span><span class="sxs-lookup"><span data-stu-id="fad95-135">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0957b-135">親要素</span><span class="sxs-lookup"><span data-stu-id="0957b-135">Parent Elements</span></span>  
   
-|<span data-ttu-id="fad95-136">要素</span><span class="sxs-lookup"><span data-stu-id="fad95-136">Element</span></span>|<span data-ttu-id="fad95-137">説明</span><span class="sxs-lookup"><span data-stu-id="fad95-137">Description</span></span>|  
+|<span data-ttu-id="0957b-136">要素</span><span class="sxs-lookup"><span data-stu-id="0957b-136">Element</span></span>|<span data-ttu-id="0957b-137">説明</span><span class="sxs-lookup"><span data-stu-id="0957b-137">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fad95-138">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="fad95-138">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="fad95-139">サービスに対するクライアントの認証に使用される資格情報を指定します。</span><span class="sxs-lookup"><span data-stu-id="fad95-139">Specifies the credentials used to authenticate a client to a service.</span></span>|  
+|[<span data-ttu-id="0957b-138">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="0957b-138">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="0957b-139">サービスに対するクライアントの認証に使用される資格情報を指定します。</span><span class="sxs-lookup"><span data-stu-id="0957b-139">Specifies the credentials used to authenticate a client to a service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fad95-140">コメント</span><span class="sxs-lookup"><span data-stu-id="fad95-140">Remarks</span></span>  
- <span data-ttu-id="fad95-141">発行済みトークンは、フェデレーション シナリオでセキュリティ トークン サービス (STS) を使用して認証するときに使用されるカスタム資格情報の種類です。</span><span class="sxs-lookup"><span data-stu-id="fad95-141">An issued token is a custom credential type used, for example, when authenticating with a Secure Token Service (STS) in a federated scenario.</span></span> <span data-ttu-id="fad95-142">既定ではトークンは、SAML トークンです。</span><span class="sxs-lookup"><span data-stu-id="fad95-142">By default, the token is a SAML token.</span></span> <span data-ttu-id="fad95-143">詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)です。</span><span class="sxs-lookup"><span data-stu-id="fad95-143">For more information, see [Federation and Issued Tokens](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span> <span data-ttu-id="fad95-144">および[フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)です。</span><span class="sxs-lookup"><span data-stu-id="fad95-144">and [Federation and Issued Tokens](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0957b-140">Remarks</span><span class="sxs-lookup"><span data-stu-id="0957b-140">Remarks</span></span>  
+ <span data-ttu-id="0957b-141">発行済みトークンは、フェデレーション シナリオでセキュリティ トークン サービス (STS) を使用して認証するときに使用されるカスタム資格情報の種類です。</span><span class="sxs-lookup"><span data-stu-id="0957b-141">An issued token is a custom credential type used, for example, when authenticating with a Secure Token Service (STS) in a federated scenario.</span></span> <span data-ttu-id="0957b-142">既定ではトークンは、SAML トークンです。</span><span class="sxs-lookup"><span data-stu-id="0957b-142">By default, the token is a SAML token.</span></span> <span data-ttu-id="0957b-143">詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。</span><span class="sxs-lookup"><span data-stu-id="0957b-143">For more information, see [Federation and Issued Tokens](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span> <span data-ttu-id="0957b-144">[フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。</span><span class="sxs-lookup"><span data-stu-id="0957b-144">and [Federation and Issued Tokens](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span>  
   
- <span data-ttu-id="fad95-145">このセクションには、トークンのローカル発行者やセキュリティ トークン サービスで使用する動作の構成に使用する要素が含まれます。</span><span class="sxs-lookup"><span data-stu-id="fad95-145">This section contains the elements used to configure a local issuer of tokens, or behaviors used with an security token service.</span></span> <span data-ttu-id="fad95-146">クライアントを構成するのにはローカル発行者を使用する方法について、次を参照してください。[する方法: ローカル発行者を構成する](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)です。</span><span class="sxs-lookup"><span data-stu-id="fad95-146">For instructions on configuring a client to use a local issuer, see [How to: Configure a Local Issuer](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).</span></span>  
+ <span data-ttu-id="0957b-145">このセクションには、トークンのローカル発行者やセキュリティ トークン サービスで使用する動作の構成に使用する要素が含まれます。</span><span class="sxs-lookup"><span data-stu-id="0957b-145">This section contains the elements used to configure a local issuer of tokens, or behaviors used with an security token service.</span></span> <span data-ttu-id="0957b-146">ローカル発行者を使用するクライアントの構成については、次を参照してください。[方法。ローカル発行者を構成する](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)します。</span><span class="sxs-lookup"><span data-stu-id="0957b-146">For instructions on configuring a client to use a local issuer, see [How to: Configure a Local Issuer](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fad95-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="fad95-147">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0957b-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="0957b-147">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>  
  <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>  
  <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
- [<span data-ttu-id="fad95-148">セキュリティ動作</span><span class="sxs-lookup"><span data-stu-id="fad95-148">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [<span data-ttu-id="fad95-149">サービスおよびクライアントのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="fad95-149">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="fad95-150">フェデレーションと発行済みトークン</span><span class="sxs-lookup"><span data-stu-id="fad95-150">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [<span data-ttu-id="fad95-151">クライアントのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="fad95-151">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
- [<span data-ttu-id="fad95-152">方法 : フェデレーション クライアントを作成する</span><span class="sxs-lookup"><span data-stu-id="fad95-152">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [<span data-ttu-id="fad95-153">方法 : ローカル発行者を設定する</span><span class="sxs-lookup"><span data-stu-id="fad95-153">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [<span data-ttu-id="fad95-154">フェデレーションと発行済みトークン</span><span class="sxs-lookup"><span data-stu-id="fad95-154">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+ [<span data-ttu-id="0957b-148">セキュリティ動作</span><span class="sxs-lookup"><span data-stu-id="0957b-148">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="0957b-149">サービスおよびクライアントのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="0957b-149">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="0957b-150">フェデレーションと発行済みトークン</span><span class="sxs-lookup"><span data-stu-id="0957b-150">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="0957b-151">クライアントのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="0957b-151">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
+ [<span data-ttu-id="0957b-152">方法: フェデレーション クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="0957b-152">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [<span data-ttu-id="0957b-153">方法: ローカル発行者を構成します。</span><span class="sxs-lookup"><span data-stu-id="0957b-153">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [<span data-ttu-id="0957b-154">フェデレーションと発行済みトークン</span><span class="sxs-lookup"><span data-stu-id="0957b-154">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
