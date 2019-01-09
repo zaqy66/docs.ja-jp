@@ -2,18 +2,18 @@
 title: '&lt;clientCredentials&gt; 要素の &lt;serviceCertificate&gt;'
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 1d54c39fd681e0686e419b7b73243703e9184d1f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 82fb39f15ea0dbf38d9c9b41d7fbdd50daebb823
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750246"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151983"
 ---
 # <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 要素の &lt;serviceCertificate&gt;
 クライアントに対してサービスを認証する際に使用される証明書を指定します。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
 \<clientCredentials>  
@@ -22,7 +22,7 @@ ms.locfileid: "32750246"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<serviceCertificate />  
+<serviceCertificate />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -45,10 +45,10 @@ ms.locfileid: "32750246"
 |-------------|-----------------|  
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|サービスに対するクライアント自身の認証のためにクライアントによって使用される資格情報を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この構成要素は、SSL 認証を使用してサービスから提示された証明書を検証するためにクライアントが使用する設定を指定します。 また、このクラスには、メッセージ セキュリティを使用してサービスへのメッセージを暗号化するためにクライアントで明示的に構成される、サービスの証明書も含まれます。  
   
- 属性、`serviceCertificate`要素は同一の属性を[ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)です。  
+ 属性、`serviceCertificate`要素は同一の属性には、 [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

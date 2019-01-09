@@ -2,12 +2,12 @@
 title: '&lt;peerTransport&gt; の &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: c7a2a2cde58dac87b1b378fe2ac8148493c1cf09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 901a1d0b29fa6ea7d9e520b379dc7c7ff1d1e522
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200458"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151957"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;peerTransport&gt; の &lt;security&gt;
 ピア チャネルに関連付けられたセキュリティ設定を格納します。使用される認証の種類とメッセージ トランスポートで使用されるセキュリティを含みます。  
@@ -22,9 +22,9 @@ ms.locfileid: "50200458"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<security mode="None/Transport/Message/TransportWithMessageCredential">  
-    <transport clientCredentialType="None/Windows/UserName/Certificate/CardSpace" />  
-</security  
+<security mode="None/Transport/Message/TransportWithMessageCredential">
+  <transport clientCredentialType="None/Windows/UserName/Certificate/CardSpace" />
+</security
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  

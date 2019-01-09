@@ -2,16 +2,17 @@
 title: '&lt;identity&gt; の &lt;certificate&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: e7d8e7abbc95521d85dc5999c36687f9becea9fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0b65157aea84760f3e52bc294f7559967fc308f1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146915"
 ---
 # <a name="ltcertificategt-for-ltidentitygt"></a>&lt;identity&gt; の &lt;certificate&gt;
 クライアントに対するサービスの検証に使用される X.509 証明書を指定します。  
   
- 要素の値の設定の詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)です。  
+ 要素の値を設定する方法についての詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
   
  \<identity>  
 \<証明書 >  
@@ -19,7 +20,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<certificate encodedValue = "String" />  
+<certificate encodedValue = "String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -44,9 +45,9 @@ ms.lasthandoff: 05/03/2018
  次のコードは、クライアントに対するサーバーの検証に使用される証明書のエンコードされた表現を指定します。  
   
 ```xml  
-<identity>  
-  <certificate encodedValue = " MIIBxjCCAXSgAwIBAgIQmXJgyu9tro1M98GifjtuoDAJBgUrDgMCHQUAMBYxFDASBgNVBAMTC1Jvb3QgQWdlbmN5MB4XDTA2MDUxNzIxNDQyNVoXDTM5MTIzMTIzNTk1OVowKTEQMA4GA1UEChMHQ29udG9zbzEVMBMGA1UEAxMMaWRlbnRpdHkuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBmivcb8hYbh11hqVoDuB7zmJ2y230f" />  
-</identity>  
+<identity>
+  <certificate encodedValue="MIIBxjCCAXSgAwIBAgIQmXJgyu9tro1M98GifjtuoDAJBgUrDgMCHQUAMBYxFDASBgNVBAMTC1Jvb3QgQWdlbmN5MB4XDTA2MDUxNzIxNDQyNVoXDTM5MTIzMTIzNTk1OVowKTEQMA4GA1UEChMHQ29udG9zbzEVMBMGA1UEAxMMaWRlbnRpdHkuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBmivcb8hYbh11hqVoDuB7zmJ2y230f" />
+</identity>
 ```  
   
 ## <a name="see-also"></a>関連項目  

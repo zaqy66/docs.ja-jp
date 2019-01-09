@@ -2,12 +2,12 @@
 title: '&lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: c50ca451052c9ad9d7ab6a0cb5387e644196191e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a376f1eaa7c8790cf2174335749ed3001b403967
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525007"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147305"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
 トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングのセットを定義する構成セクションを表します。 実行時に既定のエンドポイントを作成するときに、Windows Communication Foundation (WCF) が構成済みのマッピングではされ、特定に使用するバインディングをベース アドレスを決定します。  
@@ -17,12 +17,14 @@ ms.locfileid: "43525007"
   
 ## <a name="syntax"></a>構文  
   
-```xml
+```xml  
 <protocolMapping>
-   <add binding="String" bindingConfiguration="String" scheme="http/net.msmq/net.pipe/net.tcp"/>
-</protocolMapping>  
-```
-
+  <add binding="String"
+       bindingConfiguration="String"
+       scheme="http/net.msmq/net.pipe/net.tcp" />
+</protocolMapping>
+```  
+  
 ## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
@@ -45,12 +47,16 @@ ms.locfileid: "43525007"
  次の構成例は、machine.config ファイル内の既定のプロトコル マッピングを示しています。 machine.config ファイルを変更することで、既定のマッピングをコンピューター レベルでオーバーライドできます。 または、アプリケーションのスコープ内だけでオーバーライドする場合は、アプリケーション構成ファイルのこのセクションをオーバーライドし、各プロトコル スキームのマッピングを変更できます。  
   
 ```xml  
-<protocolMapping>  
-        <add scheme="http" binding="basicHttpBinding"/>  
-        <add scheme="net.tcp" binding="netTcpBinding"/>  
-        <add scheme="net.pipe" binding="netNamedPipeBinding"/>  
-        <add scheme="net.msmq" binding="netMsmqBinding"/>  
-</protocolMapping>  
+<protocolMapping>
+  <add scheme="http"
+       binding="basicHttpBinding" />
+  <add scheme="net.tcp"
+       binding="netTcpBinding" />
+  <add scheme="net.pipe"
+       binding="netNamedPipeBinding" />
+  <add scheme="net.msmq"
+       binding="netMsmqBinding" />
+</protocolMapping>
 ```  
   
 ## <a name="see-also"></a>関連項目  

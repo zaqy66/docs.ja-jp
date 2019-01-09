@@ -2,15 +2,15 @@
 title: WCF の &lt;bookmarkResumptionQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: d2b3365f3793c114003bbd9b9da664448bbac243
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba8c98557a859f4bd37b9aaca80a44c393429da4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147653"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146083"
 ---
 # <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>WCF の &lt;bookmarkResumptionQueries&gt;
-
+  
 ワークフロー インスタンス内のブックマークの再開を追跡するために使用する、クエリのコレクションを表します。 追跡参加要素がブックマーク再開レコードを定期受信するには、このクエリが必要です。  
   
 追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。
@@ -25,7 +25,7 @@ ms.locfileid: "53147653"
   
 ## <a name="syntax"></a>構文  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,15 +36,15 @@ ms.locfileid: "53147653"
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
-## <a name="attributes-and-elements"></a>属性と要素
-
+</tracking>
+```  
+  
+## <a name="attributes-and-elements"></a>属性と要素  
+  
 以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### <a name="attributes"></a>属性
-
+### <a name="attributes"></a>属性  
+  
 なし。  
   
 ### <a name="child-elements"></a>子要素  

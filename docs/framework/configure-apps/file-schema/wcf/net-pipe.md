@@ -2,12 +2,12 @@
 title: '&lt;net.pipe&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 71291b1163ffb4e5fe13ff18d88d47f7d2193497
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a525f0684902841a2be75823932935e7533ba8b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359365"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151151"
 ---
 # <a name="ltnetpipegt"></a>&lt;net.pipe&gt;
 名前付きパイプ接続の有効期間を管理し、名前付きパイプを介して到着するアクティベーション要求を処理する名前付きパイプ アクティベーション サービスの構成設定を指定します。  
@@ -18,26 +18,26 @@ ms.locfileid: "33359365"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<configuration>  
-   <system.serviceModel.activation>  
-       <net.pipe maxPendingAccepts="Integer"  
-                    maxPendingConnections="Integer"  
-          receiveTimeout="TimeSpan">  
-          <allowAccounts>  
-             // LocalSystem account  
-             <add securityIdentifier="S-1-5-18"/>  
-             // LocalService account  
-             <add securityIdentifier="S-1-5-19"/>  
-             // Administrators account  
-             <add securityIdentifier="S-1-5-20"/>  
-             // Network Service account  
-             <add securityIdentifier="S-1-5-32-544" />  
-             // IIS_IUSRS account (Vista only)  
-             <add securityIdentifier="S-1-5-32-568"/>  
-           </allowAccounts>  
-       </net.pipe>  
-   </system.serviceModel.activation>  
-</configuration>  
+<configuration>
+  <system.serviceModel.activation>
+    <net.pipe maxPendingAccepts="Integer"
+              maxPendingConnections="Integer"
+              receiveTimeout="TimeSpan">
+      <allowAccounts>
+        <!-- LocalSystem account -->
+        <add securityIdentifier="S-1-5-18" />
+        <!-- LocalService account -->
+        <add securityIdentifier="S-1-5-19" />
+        <!-- Administrators account -->
+        <add securityIdentifier="S-1-5-20" />
+        <!-- Network Service account -->
+        <add securityIdentifier="S-1-5-32-544" />
+        <!-- IIS_IUSRS account (Vista only) -->
+        <add securityIdentifier="S-1-5-32-568" />
+      </allowAccounts>
+    </net.pipe>
+  </system.serviceModel.activation>
+</configuration>
 ```  
   
 ## <a name="type"></a>型  
@@ -58,7 +58,7 @@ ms.locfileid: "33359365"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|含む構成要素のコレクション、`securityIdentifier`属性を WCF サービスをホストし、共有サービスへの接続アクセスが許可されるプロセスのユーザー アカウントを指定します。|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|格納する構成要素のコレクションを`securityIdentifier`属性を WCF サービスをホストし、共有サービスへの接続アクセスが許可されるプロセスのユーザー アカウントを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   

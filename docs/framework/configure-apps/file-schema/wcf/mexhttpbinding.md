@@ -2,12 +2,12 @@
 title: '&lt;mexHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
-ms.openlocfilehash: a39bf98e803d8348dd70497d084775d1dd31d149
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c60fcf5071d52d30c1b6b99a19640a0fdc1265f8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836850"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148657"
 ---
 # <a name="ltmexhttpbindinggt"></a>&lt;mexHttpBinding&gt;
 HTTP 経由の WS-MetadataExchange (WS-MEX) メッセージ交換に使用されるバインディングの設定を指定します。  
@@ -19,15 +19,14 @@ HTTP 経由の WS-MetadataExchange (WS-MEX) メッセージ交換に使用され
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<mexHttpBinding>  
-   <binding   
-       closeTimeout="TimeSpan"   
-       name="string"   
-       openTimeout="TimeSpan"   
-       receiveTimeout="TimeSpan"  
-       sendTimeout="TimeSpan">  
-   </binding>  
-</mexHttpBinding>  
+<mexHttpBinding>
+  <binding closeTimeout="TimeSpan"
+           name="string"
+           openTimeout="TimeSpan"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan">
+  </binding>
+</mexHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -58,7 +57,7 @@ HTTP 経由の WS-MetadataExchange (WS-MEX) メッセージ交換に使用され
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>  
  <xref:System.ServiceModel.Configuration.MexHttpBindingElement>  
- [方法 : 構成ファイルを使用してサービスのメタデータを公開する](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [方法: 構成ファイルを使用してサービスのメタデータを公開します。](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  [カスタム バインディングを介したメタデータの公開と取得](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
  [メタデータ](../../../../../docs/framework/wcf/feature-details/metadata.md)  
  [バインディング](../../../../../docs/framework/wcf/bindings.md)  

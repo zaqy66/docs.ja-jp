@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 5844f8d63aa5646bfd7860dc0407528fb2eaf329
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c9162e123c1167e3aa1be26ddd37279c088acc89
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753340"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149164"
 ---
 # <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList フィールド
 
-`ConnectionGroup.m_ConnectionList` <xref:System.Collections.ArrayList> URI と共有を同じになる接続オブジェクトの他のいくつかのプロパティの値は同じなどの有効期限と認証します。
+`ConnectionGroup.m_ConnectionList` <xref:System.Collections.ArrayList>同じ URI と共有サービスを提供する接続オブジェクトの他のいくつかのプロパティの値は同じなどの有効期限と認証します。
 
 ## <a name="syntax"></a>構文
   
@@ -30,14 +30,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> `ConnectionGroup.m_ConnectionList`フィールドはプライベートであり、コード内で直接使用します。
+> `ConnectionGroup.m_ConnectionList`フィールドはプライベートであり、コード内で直接使用するものではありません。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**Namespace:** <xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (System.dll)
+**アセンブリ:**(System.dll) のシステム
 
-**.NET framework のバージョン:** 2.0 から利用可能です。
+**.NET framework のバージョン:** 2.0 以降で使用可能です。

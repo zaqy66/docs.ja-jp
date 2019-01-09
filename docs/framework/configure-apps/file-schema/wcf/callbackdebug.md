@@ -2,18 +2,18 @@
 title: '&lt;callbackDebug&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: 2103c32112b6c5554d7b510f486d4cbb1349f35d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5bd2356c3bb798e948341cb3c4ba504ac886ed44
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747952"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145082"
 ---
 # <a name="ltcallbackdebuggt"></a>&lt;callbackDebug&gt;
 Windows Communication Foundation (WCF) コールバック オブジェクトのサービス デバッグを指定します。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
 \<callbackDebug >  
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) コールバック オブジェクトの�
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<callbackDebug  includeExceptionDetailInFaults="Boolean" />  
+<callbackDebug includeExceptionDetailInFaults="Boolean" />
 ```  
   
 ## <a name="type"></a>型  
@@ -34,7 +34,7 @@ Windows Communication Foundation (WCF) コールバック オブジェクトの�
   
 |属性|説明|  
 |---------------|-----------------|  
-|`includeExceptionDetailInFaults`|クライアント コールバック オブジェクトが SOAP エラー内のマネージ例外情報をサービスに返すかどうかを指定する値。<br /><br /> プログラムでこの属性を `true` に設定すると、デバッグするために、クライアント コールバック オブジェクト内のマネージ例外情報がサービスに戻るフローを有効にできます。 **注意:** 返すマネージ例外情報をクライアントにセキュリティ リスクとなることができます。 これは、例外の詳細が、認証されていないクライアントによって使用可能な内部サービスの実装に関する情報を公開するためです。|  
+|`includeExceptionDetailInFaults`|クライアント コールバック オブジェクトが SOAP エラー内のマネージド例外情報をサービスに返すかどうかを指定する値。<br /><br /> プログラムでこの属性を `true` に設定すると、デバッグするために、クライアント コールバック オブジェクト内のマネージド例外情報がサービスに戻るフローを有効にできます。 **注意:** マネージド例外情報をクライアントに返すことは、セキュリティ リスクになり得ます。 これは、例外の詳細が、認証されていないクライアントによって使用可能な内部サービスの実装に関する情報を公開するためです。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  

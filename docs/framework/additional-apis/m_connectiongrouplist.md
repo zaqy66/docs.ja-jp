@@ -12,16 +12,16 @@ api_type:
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 25caec18f7d2c51f03028b52c1a4957bb1cd2589
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a764c74dc0927094675b0f5e0916a4ad29f04250
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742368"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151164"
 ---
 # <a name="servicepointmconnectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList フィールド
 
-`ServicePoint.m_ConnectionGroupList` <xref:System.Collections.Hashtable>用の接続を保持する接続グループの各、<xref:System.Net.ServicePoint>の URI。
+`ServicePoint.m_ConnectionGroupList` <xref:System.Collections.Hashtable>の接続を保持する各接続のグループの<xref:System.Net.ServicePoint>の URI。
 
 ## <a name="syntax"></a>構文
   
@@ -30,14 +30,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> `ServicePoint.m_ConnectionGroupList`フィールドはプライベートであり、コード内で直接使用します。
+> `ServicePoint.m_ConnectionGroupList`フィールドはプライベートであり、コード内で直接使用するものではありません。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**Namespace:** <xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (System.dll)
+**アセンブリ:**(System.dll) のシステム
 
-**.NET framework のバージョン:** 2.0 から利用可能です。
+**.NET framework のバージョン:** 2.0 以降で使用可能です。

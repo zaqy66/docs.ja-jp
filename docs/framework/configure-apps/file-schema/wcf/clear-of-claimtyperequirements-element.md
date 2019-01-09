@@ -2,12 +2,12 @@
 title: '&lt;claimTypeRequirements&gt; 要素の &lt;clear&gt;'
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: ca8ea91f5806a6cedc98729de1c45ab6b5de6afb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e77e3c978c1e385aec983d5e2d4bea64697c43e
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747126"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145290"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt; 要素の &lt;clear&gt;
 すべてのクレームの種類をフェデレーション資格情報から削除するように指定します。 これにより、コレクションの初期値を確実に空にできます。  
@@ -23,9 +23,9 @@ ms.locfileid: "32747126"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<claimTypeRequirements>  
-      <clear />  
-</claimTypeRequirements>  
+<claimTypeRequirements>
+  <clear />
+</claimTypeRequirements>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - DataContractSerializer
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-ms.openlocfilehash: 5f2a05fdf2e38923205092b232995a70a87f7e87
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c79c8e8db2a4ea4526000bcbe336d1e664f9c4c2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752768"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150956"
 ---
 # <a name="ltdatacontractserializergt"></a>&lt;DataContractSerializer&gt;
 <xref:System.Runtime.Serialization.DataContractSerializer> 用の設定データが含まれています。 この要素は、2 つの異なる階層で使用されます。 1 つは以下の「スキーマの階層」に示したもので、もう 1 つは「解説」に記載しています。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 \<serviceBehaviors>  
 \<behavior>  
 \<dataContractSerializer >  
@@ -26,8 +26,8 @@ ms.locfileid: "32752768"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<dataContractSerializer ignoreExtensionDataObject="Boolean"  
-   maxItemsInObjectGraph="Integer" />  
+<dataContractSerializer ignoreExtensionDataObject="Boolean"
+                        maxItemsInObjectGraph="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -50,8 +50,8 @@ ms.locfileid: "32752768"
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)|サービスの動作設定のコレクション。|  
 |[\<system.runtime.serialization >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|<xref:System.Runtime.Serialization> 名前空間セクションのルート要素を表し、<xref:System.Runtime.Serialization.DataContractSerializer> のオプションを設定するための要素を含みます。|  
   
-## <a name="remarks"></a>コメント  
- このトピックの概要で説明したように、これは、2 番目の階層を\<X509Extension > 要素が発生します。  
+## <a name="remarks"></a>Remarks  
+ これを 2 番目の階層は、このトピックの冒頭で述べたように、 \<X509Extension > 要素に発生します。  
   
  [\<system.runtime.serialization >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
   

@@ -2,18 +2,18 @@
 title: '&lt;synchronousReceive&gt; 要素'
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: af1ca2ee1fe3c03c33f05e0c30c7b843b3720a36
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc89470900e50e4d3e522682b39b20e21a66b284
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753262"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147383"
 ---
 # <a name="ltsynchronousreceivegt-element"></a>&lt;synchronousReceive&gt; 要素
 この構成要素は、サービスまたはクライアント アプリケーションでメッセージを受信する場合のランタイム動作を指定するために使用されます。 属性や子要素はありません。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
 \<synchronousReceive >  
@@ -21,7 +21,7 @@ ms.locfileid: "32753262"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<synchronousReceive />  
+<synchronousReceive />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -39,7 +39,7 @@ ms.locfileid: "32753262"
 |-------------|-----------------|  
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この動作を使用して、既定の非同期受信ではなく同期受信を使用するようにチャネル リスナーに指示します。 Windows Communication Foundation (WCF) は、受け入れた各チャネルに対してに新しいスレッドを発行します。 チャネルが多数ある場合は、スレッドが不足する可能性があります。  
   
 ## <a name="see-also"></a>関連項目  

@@ -2,25 +2,26 @@
 title: '&lt;behaviorExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: d025497956715913923e839cb6c482f44f96babb
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 363b5862b4d7677acdf37595ae9c6eeb6c38efa2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576854"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145641"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 動作の拡張により、ユーザーはユーザー定義の動作要素を作成できます。 これらの要素は、標準の Windows Communication Foundation (WCF) 動作要素と共に使用できます。 `behaviorExtensions` セクションでは、構成で使用できるように要素を定義します。 次の例は、一般的な動作拡張を示します。  
   
 ```xml  
-<system.serviceModel>  
-    <extensions>  
-        <behaviorExtensions>  
-            <add name="myBehavior" type="Microsoft.ServiceModel.Samples.MyBehaviorSection, MyBehavior,  
-                Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-       </behaviorExtensions>  
-    </extensions>  
-</system.serviceModel>  
+<system.serviceModel>
+  <extensions>
+    <behaviorExtensions>
+      <add name="myBehavior"
+           type="Microsoft.ServiceModel.Samples.MyBehaviorSection, MyBehavior,
+                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </behaviorExtensions>
+  </extensions>
+</system.serviceModel>
 ```  
   
  構成機能を要素に追加するには、構成要素を記述して登録する必要があります。 詳細については、<xref:System.Configuration> を参照してください。  
@@ -28,13 +29,17 @@ ms.locfileid: "46576854"
  要素とその構成の型を定義したら、次の例に示すように拡張を使用できます。  
   
 ```xml  
-<behaviors>  
-    <behavior configurationName="testChannelBehavior">  
-        <myBehavior />  
-        <channelSecurity cacheCookies="false" detectReplays="false" maxCachedNonces="9"  
-            maxClockSkew="00:00:03" maxCookieCachingTime="00:07:24" replayWindow="00:07:22.2190000" />  
-    </behavior>  
-</behaviors>  
+<behaviors>
+  <behavior configurationName="testChannelBehavior">
+    <myBehavior />
+    <channelSecurity cacheCookies="false"
+                     detectReplays="false"
+                     maxCachedNonces="9"
+                     maxClockSkew="00:00:03"
+                     maxCookieCachingTime="00:07:24"
+                     replayWindow="00:07:22.2190000" />
+  </behavior>
+</behaviors>
 ```  
   
 ## <a name="security"></a>セキュリティ  

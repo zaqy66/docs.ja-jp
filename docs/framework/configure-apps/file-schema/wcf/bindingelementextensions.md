@@ -2,12 +2,12 @@
 title: '&lt;bindingElementExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: a93474a4f86fac2a6b211652e3ddc86901cf197f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ee67df95de715f0b21250bbf5739f84b4945d719
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747750"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151450"
 ---
 # <a name="ltbindingelementextensionsgt"></a>&lt;bindingElementExtensions&gt;
 このセクションは、コンピューターまたはアプリケーションの構成ファイルからカスタム バインド要素を使用できます。 このコレクションにカスタム バインディング要素を追加するには、`add` キーワードを使用し、要素の `type` 属性をバインディング要素拡張に設定して、`name` 属性をカスタム バインディング要素に設定します。  
@@ -17,14 +17,15 @@ ms.locfileid: "32747750"
  次の例は、`add` 要素と `name` 属性を使用して、構成ファイルの `bindingElementExtensions` セクションにバインディング拡張を追加します。  
   
 ```xml  
-<system.serviceModel>  
-    <extensions>  
-        <bindingElementExtensions>  
-           <add name="udpTransport" type="Microsoft.ServiceModel.Samples.UdpTransportSection, UdpTransport,  
-                Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-        </bindingElementExtensions>  
-    </extensions>  
-</system.serviceModel>  
+<system.serviceModel>
+  <extensions>
+    <bindingElementExtensions>
+      <add name="udpTransport"
+           type="Microsoft.ServiceModel.Samples.UdpTransportSection, UdpTransport,
+                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bindingElementExtensions>
+  </extensions>
+</system.serviceModel>
 ```  
   
  構成機能を要素に追加するには、ユーザーは `bindingElementExtensionSection` を記述して登録する必要があります。 詳細については、<xref:System.Configuration> を参照してください。  
@@ -32,13 +33,14 @@ ms.locfileid: "32747750"
  要素とその構成の型を定義したら、次の例に示すように拡張をカスタム バインドの一部として使用できます。  
   
 ```xml  
-<customBinding>  
-     <binding name="test2">  
-         <udpTransport />  
-         <binaryMessageEncoding maxReadPoolSize="211" maxWritePoolSize="2132"  
-             maxSessionSize="3141" />  
-         </binding>  
-</customBinding>  
+<customBinding>
+  <binding name="test2">
+    <udpTransport />
+    <binaryMessageEncoding maxReadPoolSize="211"
+                           maxWritePoolSize="2132"
+                           maxSessionSize="3141" />
+  </binding>
+</customBinding>
 ```  
   
 ## <a name="see-also"></a>関連項目  

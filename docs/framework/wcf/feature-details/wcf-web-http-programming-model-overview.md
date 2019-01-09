@@ -2,12 +2,12 @@
 title: WCF Web HTTP プログラミング モデルの概要
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: f1185e7f8d455a59edf2b11e4e77ac6470d768fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 03bfa53ac8e2a6cf7b252a8d0ea4683727134e4a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517076"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152087"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP プログラミング モデルの概要
 Windows Communication Foundation (WCF) WEB HTTP プログラミング モデルでは、wcf WEB HTTP サービスの構築に必要な基本的な要素を提供します。 WCF WEB HTTP サービスへのアクセスを可能なクライアント、Web ブラウザーなどの広い範囲に設計されていて、次の一意の要件があります。  
@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) WEB HTTP プログラミング モデル�
 >  WCF WEB HTTP プログラミング モデルで作成されたサービスでは、SOAP メッセージは使用しません。 SOAP が使用されていないために、WCF によって提供されるセキュリティ機能は使用できません。 ただし、HTTPS でサービスをホストすることによってトランスポート ベースのセキュリティを使用できます。 WCF セキュリティの詳細については、次を参照してください[セキュリティの概要。](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  IIS の WebDAV 拡張をインストールすると、WebDAV 拡張がすべての PUT 要求を処理しようとしたときに Web HTTP サービスが HTTP 405 エラーを返すことがあります。 この問題を解決するには、WebDAV 拡張をアンインストールするか、Web サイトの WebDAV 拡張を無効にします。 詳細については、次を参照してください[IIS および WebDav。](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  IIS の WebDAV 拡張をインストールすると、WebDAV 拡張がすべての PUT 要求を処理しようとしたときに Web HTTP サービスが HTTP 405 エラーを返すことがあります。 この問題を解決するには、WebDAV 拡張をアンインストールするか、Web サイトの WebDAV 拡張を無効にします。 詳細については、次を参照してください[IIS および WebDav。](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>UriTemplate および UriTemplateTable を使用した URI 処理  
  URI テンプレートには、構造的に類似する URI の大規模なセットを効率的に表現するための構文が備わっています。 たとえば、テンプレート a/{segment}/c は、中間のセグメントの値を問わず、"a" で始まり "c" で終了する 3 つのセグメントから成る URI のセットを表しています。  
@@ -96,7 +96,7 @@ interface ICustomer
 }  
 ```  
   
- WCF WEB HTTP プログラミング モデルを使用する WCF サービスの完全なサンプルを表示するには、次を参照してください[方法: 基本的な WCF Web HTTP サービスの作成。](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ WCF WEB HTTP プログラミング モデルを使用する WCF サービスの完全なサンプルを表示するには、次を参照してください。[方法。基本的な WCF Web HTTP サービスを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
   
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate クエリ文字列パラメーターと URL  
  サービス操作に関連付けられた URL を入力することによって、Web ブラウザーから Web スタイルのサービスを呼び出すことができます。 このようなサービス操作は、文字列形式で指定する必要があるクエリ文字列パラメーターを URL 内で受け取ることができます。 次の表に、URL 内で渡すことができる型と、使用される形式を示します。  

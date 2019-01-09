@@ -2,28 +2,28 @@
 title: '&lt;filters&gt; の &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 2a26a94c01fdb04b8a9e2d381a28cc909bbdac8f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fe9ce8bc2a0efb9e20800189cd9f948d5e6a2232
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754611"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150748"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;filters&gt; の &lt;add&gt;
 ログに記録するメッセージの種類を指定する XPath フィルター。  
   
  \<system.ServiceModel >  
 \<診断 >  
-\<メッセージ ログ >  
+\<messageLogging >  
 \<フィルター >  
 \<add>  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<filters>  
-   <add filter="String"/>  
-</filters>  
+<filters>
+  <add filter="String" />
+</filters>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -33,7 +33,7 @@ ms.locfileid: "32754611"
   
 |属性|説明|  
 |---------------|-----------------|  
-|フィルター|XPath 1.0 の式によって定義される、XML ドキュメントのクエリを指定する文字列。 詳細については、「<xref:System.ServiceModel.Dispatcher.XPathMessageFilter>」を参照してください。|  
+|フィルター|XPath 1.0 の式によって定義される、XML ドキュメントのクエリを指定する文字列。 詳細については、「 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -44,7 +44,7 @@ ms.locfileid: "32754611"
 |-------------|-----------------|  
 |[\<フィルター >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|ログに記録されるメッセージの種類を制御する XPath フィルターのコレクションを格納します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  フィルターは、`logMessagesAtTransportLevel` を `true` に設定することによって指定されるトランスポート層でのみ適用されます。 サービス レベルおよび形式が正しくないメッセージ ログ記録は、フィルターの影響を受けません。  
   
  コレクションにフィルターを追加するには、`add` を使用します。 1 つ以上のフィルターを定義した場合は、少なくとも 1 つのフィルターと一致するメッセージだけが記録されます。 フィルターを定義しなかった場合は、すべてのメッセージが通過します。  
@@ -57,15 +57,17 @@ ms.locfileid: "32754611"
  SOAP ヘッダー セクションがあるメッセージだけを記録するフィルターの設定方法の例を次に示します。  
   
 ```xml  
-<messageLogging logEntireMessage="true"  
-     logMalformedMessages="true" logMessagesAtServiceLevel="true"  
-     logMessagesAtTransportLevel="true" maxMessagesToLog="420">  
-     <filters>  
-        <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">  
-                        /soap:Envelope/soap:Headers  
-        </add>  
-     </filters>  
-</messageLogging>  
+<messageLogging logEntireMessage="true"
+                logMalformedMessages="true"
+                logMessagesAtServiceLevel="true"
+                logMessagesAtTransportLevel="true"
+                maxMessagesToLog="420">
+  <filters>
+    <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+      /soap:Envelope/soap:Headers
+    </add>
+  </filters>
+</messageLogging>
 ```  
   
 ## <a name="see-also"></a>関連項目  
@@ -78,4 +80,4 @@ ms.locfileid: "32754611"
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>  
  [メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
  [メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
- [\<メッセージ ログ >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+ [\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)

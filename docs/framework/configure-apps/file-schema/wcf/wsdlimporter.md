@@ -2,12 +2,12 @@
 title: '&lt;wsdlImporter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 33c2b0e4286ce746f745e4aebe10fd4bbd96810f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 43c1a50c740cd9c75ee641e4ac4d0fa8ea3ca36b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754903"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144991"
 ---
 # <a name="ltwsdlimportergt"></a>&lt;wsdlImporter&gt;
 WS-Policy が添付された Web サービス記述言語 (WSDL) 1.1 メタデータをインポートするすべての WSDL インポーターを指定します。  
@@ -21,11 +21,11 @@ WS-Policy が添付された Web サービス記述言語 (WSDL) 1.1 メタデ�
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<metadata>  
-  <wsdlImporters>  
-    <wsdlImporter type="string" />  
-  </wsdlImporters>  
-</metadata>  
+<metadata>
+  <wsdlImporters>
+    <wsdlImporter type="string" />
+  </wsdlImporters>
+</metadata>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -46,7 +46,7 @@ WS-Policy が添付された Web サービス記述言語 (WSDL) 1.1 メタデ�
 |-------------|-----------------|  
 |[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|WS-Policy が添付された Web サービス記述言語 (WSDL) 1.1 メタデータをインポートするすべての WSDL インポーターを指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  WSDL インポーターは、メタデータのインポートに加えて、コントラクトおよびエンドポイント情報を表すさまざまなクラスにその情報を変換するために使用されます。 コントラクトおよびエンドポイントの情報やプロパティを選択的にインポートできます。これらは、任意のインポート エラーを公開し、インポートおよび変換プロセスに関連する型情報を受け取ります。 また、任意のポリシー ドキュメント、WSDL ドキュメント、WSDL 拡張、および XML スキーマ ドキュメントにアクセスするためのバインディング情報およびプロパティのインポートもサポートします。  
   
 ## <a name="see-also"></a>関連項目  

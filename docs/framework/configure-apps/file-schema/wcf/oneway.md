@@ -1,15 +1,15 @@
 ---
-title: '&lt;一方向&gt;'
+title: '&lt;oneWay&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: f9a5631501b3879463606f526485314efd5eff2b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f3d534ee98100347acaa485e60a3c74f82ee0b9
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746723"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150579"
 ---
-# <a name="ltonewaygt"></a>&lt;一方向&gt;
+# <a name="ltonewaygt"></a>&lt;oneWay&gt;
 カスタム バインドのパケット ルーティングを有効にし、一方向メソッドを使用できるようにします。  
   
  \<system.serviceModel>  
@@ -21,15 +21,11 @@ ms.locfileid: "32746723"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<oneWay packetRoutable="Boolean">  
-        <channelPoolSettings  
-           idleTimeout"TimeSpan"  
-          leaseTimeout"TimeSpan"  
-          maxOutboundConnectionsPerEndpopint="Integer" />  
-```  
-  
-```xml  
-</oneWay>  
+<oneWay packetRoutable="Boolean">
+  <channelPoolSettings idleTimeout="TimeSpan"
+                       leaseTimeout="TimeSpan"
+                       maxOutboundConnectionsPerEndpopint="Integer" />
+</oneWay>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -54,7 +50,7 @@ ms.locfileid: "32746723"
 |-------------|-----------------|  
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  パケット ルーティングを有効にするには、この要素が提供する "一方向の変換" 層が必要です。 カスタム バインディングを作成し、このバインディングをセッション対応または要求応答のトランスポートの上に重ねて、パケット ルーティング可能にすることができます。 この要素は、一方向メソッドをよりネイティブな形式で公開するときにも役に立ちます。 複合二重や信頼できるメッセージ機能などのさらに大きい変換は、この層に対して適用できます。  
   
 ## <a name="see-also"></a>関連項目  

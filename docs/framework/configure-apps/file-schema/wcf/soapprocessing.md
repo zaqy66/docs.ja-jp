@@ -2,12 +2,12 @@
 title: '&lt;soapProcessing&gt;'
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 296993f1a91a6da93f01610357f35dac4cfab9e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1eef89290b4fda08dd7145c0615edde2fa56676c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210147"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152009"
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -18,19 +18,19 @@ ms.locfileid: "47210147"
 &nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors >**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<動作 >**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<soapProcessing >**
-
-## <a name="syntax"></a>構文
-
-```xml
+  
+## <a name="syntax"></a>構文  
+  
+```xml  
 <soapProcessing processMessages="true|false" />
-```
-
-## <a name="attributes-and-elements"></a>属性と要素
-
-以降のセクションでは、属性、子要素、および親要素について説明します。
-
-### <a name="attributes"></a>属性
-
+```  
+  
+## <a name="attributes-and-elements"></a>属性と要素  
+  
+以降のセクションでは、属性、子要素、および親要素について説明します。  
+  
+### <a name="attributes"></a>属性  
+  
 |                   | 説明 |
 | ----------------- | ----------- |
 | `processMessages` | SOAP メッセージ バージョン間のメッセージをマーシャリングするかどうかを指定するブール値。 |

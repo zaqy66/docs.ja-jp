@@ -2,18 +2,18 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 0528ae823db500da3c3a1efc6934951c4e41cea7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a024ca89bd766681f25b992f1d2c66a92e3b31b7
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748016"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150202"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 <xref:System.Runtime.Serialization.DataContractSerializer> 用の設定データが含まれています。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
 \<dataContractSerializer >  
@@ -21,8 +21,8 @@ ms.locfileid: "32748016"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<dataContractSerializer ignoreExtensionDataObject="Boolean"  
-      maxItemsInObjectGraph="Integer" />  
+<dataContractSerializer ignoreExtensionDataObject="Boolean"
+                        maxItemsInObjectGraph="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -44,7 +44,7 @@ ms.locfileid: "32748016"
 |-------------|-----------------|  
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  既知の型の詳細については、<xref:System.Runtime.Serialization.DataContractSerializer> のドキュメントを参照してください。  
   
 > [!CAUTION]
