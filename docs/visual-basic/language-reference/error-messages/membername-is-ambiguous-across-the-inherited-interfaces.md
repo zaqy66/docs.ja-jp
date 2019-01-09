@@ -1,5 +1,5 @@
 ---
-title: ''<membername>' は、継承インターフェイス '<interfacename1>' および '<interfacename2>' 間ではあいまいです。'
+title: "''<membername>' は、継承インターフェイス '<interfacename1>' および '<interfacename2>' 間ではあいまいです。'&lt;&gt;&lt;&gt;&lt;&gt;"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30685
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33585302"
 ---
-# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>'<membername>' は、継承インターフェイス '<interfacename1>' および '<interfacename2>' 間ではあいまいです。
+# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>''<membername>' は、継承インターフェイス '<interfacename1>' および '<interfacename2>' 間ではあいまいです。'&lt;&gt;&lt;&gt;&lt;&gt;
 インターフェイスは、同じ名前の 2 つ以上のメンバーを複数のインターフェイスから継承します。  
   
  **エラー ID:** BC30685  
