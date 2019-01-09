@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: e9243ff8b55970ebab6ecbe42cb3ed8ebcaecfe3
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 316f8f59b86294b1f344b31f7355017ebd992362
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238573"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334757"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>1 次元配列 (C# プログラミング ガイド)
 
@@ -21,13 +21,13 @@ ms.locfileid: "53238573"
   
  この配列は、`array[0]` から `array[4]` の要素を含んでいます。 [new](../../../csharp/language-reference/keywords/new.md) 演算子を使用して、配列を作成し、配列要素を既定値に初期化します。 この例では、すべての配列要素はゼロに初期化されます。  
   
- 同じ方法では、文字列要素を格納する配列を宣言できます。 例:  
+ 同じ方法では、文字列要素を格納する配列を宣言できます。 次に例を示します。  
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
 ## <a name="array-initialization"></a>配列の初期化
 
- 宣言時に配列を初期化することができます。この場合、初期化リスト内の要素の数によって次元が既に提供されているので、次元指定子は必要ありません。 次に例を示します。  
+ 宣言時に配列を初期化することができます。この場合、初期化リスト内の要素の数によって長さが既に提供されているので、長さ指定子は必要ありません。 次に例を示します。  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
   
@@ -55,7 +55,7 @@ ms.locfileid: "53238573"
   
  値型と参照型の詳細については、「[型](../../../csharp/language-reference/keywords/types.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - <xref:System.Array>  
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  

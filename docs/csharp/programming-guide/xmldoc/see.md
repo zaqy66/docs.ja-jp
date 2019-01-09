@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 1e799c975fe21dd2dd0354a9d658a271ded5fc2c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 63476ff77f1a8286730f29149bb5b6b87779f144
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235691"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058413"
 ---
 # <a name="ltseegt-c-programming-guide"></a>&lt;see&gt; (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -27,7 +27,7 @@ ms.locfileid: "53235691"
   
 #### <a name="parameters"></a>パラメーター  
  cref = "`member`"  
- 現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に渡します。*member* は二重引用符で囲んで配置します。  
+ 現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に渡します。 *メンバー*は二重引用符 (" ") で囲む必要があります。  
   
 ## <a name="remarks"></a>コメント  
  \<see> タグを使用すると、テキスト内でリンクを指定できます。 テキストが参照セクションに配置されていることを示すには、[\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md) を使用します。 コード要素のドキュメント ページへの内部ハイパーリンクを作成するには、[cref 属性](../../../csharp/programming-guide/xmldoc/cref-attribute.md)を使用します。  
@@ -38,7 +38,7 @@ ms.locfileid: "53235691"
   
  [!code-csharp[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/see_1.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

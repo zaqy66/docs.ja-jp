@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 220e43ed6aadbcc443f4cf06310fe12e970abcf2
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149589"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030426"
 ---
 # <a name="best-practices-for-exceptions"></a>例外の推奨事項
 
@@ -62,7 +62,7 @@ ms.locfileid: "53149589"
 
 ## <a name="use-the-predefined-net-exception-types"></a>事前定義済みの .NET の例外の種類を使用する
 
-事前定義の例外クラスが適用されない場合に限り、新しい例外クラスを導入します。 例:
+事前定義の例外クラスが適用されない場合に限り、新しい例外クラスを導入します。 次に例を示します。
 
 - オブジェクトの現在の状態に対して、プロパティの設定またはメソッドの呼び出しが適切でない場合は、<xref:System.InvalidOperationException> をスローします。
 
@@ -86,7 +86,7 @@ ms.locfileid: "53149589"
   
 * 文字列メッセージと内部例外を受け取る <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>。  
   
-例については、「[方法: ユーザー定義の例外を作成する](how-to-create-user-defined-exceptions.md)」を参照してください。
+例については、「[方法: ユーザー定義の例外を作成する](how-to-create-user-defined-exceptions.md)」をご覧ください。
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>コードがリモートで実行されるときに、例外データが利用できるようにする
 

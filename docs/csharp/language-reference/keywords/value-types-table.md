@@ -7,34 +7,34 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: d651350f46c0ec1947be9f4f586c341514356fd2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2475f63099e47beedc610b8815a8e39e1f7be77e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244155"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611218"
 ---
 # <a name="value-types-table-c-reference"></a>値型の一覧表 (C# リファレンス)
 
-C# の値型を次の表に示します。  
-  
-|値の種類|カテゴリ|型のサフィックス|  
-|----------------|--------------|-----------------|  
-|[bool](bool.md)|ブール型||  
-|[byte](byte.md)|符号なし、数値、[整数](integral-types-table.md)||  
-|[char](char.md)|符号なし、数値、[整数](integral-types-table.md)||  
-|[decimal](decimal.md)|数値、[浮動小数点数](floating-point-types-table.md)|M または m|  
-|[double](double.md)|数値、[浮動小数点数](floating-point-types-table.md)|D または d|  
-|[enum](enum.md)|列挙||  
-|[float](float.md)|数値、[浮動小数点数](floating-point-types-table.md)|F または f|  
-|[int](int.md)|符号付き、数値、[整数](integral-types-table.md)||  
-|[long](long.md)|符号付き、数値、[整数](integral-types-table.md)|L または l|  
-|[sbyte](sbyte.md)|符号付き、数値、[整数](integral-types-table.md)||  
-|[short](short.md)|符号付き、数値、[整数](integral-types-table.md)||  
-|[struct](struct.md)|ユーザー定義構造体||  
-|[uint](uint.md)|符号なし、数値、[整数](integral-types-table.md)|U または u|  
-|[ulong](ulong.md)|符号なし、数値、[整数](integral-types-table.md)|UL、Ul、uL、ul、LU、Lu、lU、または lu|  
-|[ushort](ushort.md)|符号なし、数値、[整数](integral-types-table.md)||  
+C# の値の型を次の表に示します。
+
+|値の種類|カテゴリ|型のサフィックス|
+|----------------|--------------|-----------------|
+|[bool](bool.md)|ブール型||
+|[byte](byte.md)|符号なし、数値、[整数](integral-types-table.md)||
+|[char](char.md)|符号なし、数値、[整数](integral-types-table.md)||
+|[decimal](decimal.md)|数値、[浮動小数点数](floating-point-types-table.md)|M または m|
+|[double](double.md)|数値、[浮動小数点数](floating-point-types-table.md)|D または d|
+|[enum](enum.md)|列挙||
+|[float](float.md)|数値、[浮動小数点数](floating-point-types-table.md)|F または f|
+|[int](int.md)|符号付き、数値、[整数](integral-types-table.md)||
+|[long](long.md)|符号付き、数値、[整数](integral-types-table.md)|L または l|
+|[sbyte](sbyte.md)|符号付き、数値、[整数](integral-types-table.md)||
+|[short](short.md)|符号付き、数値、[整数](integral-types-table.md)||
+|[struct](struct.md)|ユーザー定義構造体||
+|[uint](uint.md)|符号なし、数値、[整数](integral-types-table.md)|U または u|
+|[ulong](ulong.md)|符号なし、数値、[整数](integral-types-table.md)|UL、Ul、uL、ul、LU、Lu、lU、または lu|
+|[ushort](ushort.md)|符号なし、数値、[整数](integral-types-table.md)||
 
 ## <a name="remarks"></a>コメント
 

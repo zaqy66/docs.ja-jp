@@ -1,12 +1,12 @@
 ---
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
-ms.openlocfilehash: 37657a0611180d5b4c48b3e1778d33861afa5a74
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 081a8f6edcddd5e87d3d9750b91ff42a72b92886
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500573"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656350"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
@@ -49,7 +49,7 @@ C# 7.3 以降、プロパティ、または自動実装バッキング フィー
 
 この例では、`AllowMultiple` が `true` に設定されているので、`MultiUseAttribute` を繰り返し適用できます。 示されているどちらの形式でも、複数の属性を適用できます。
 
-<xref:System.AttributeUsageAttribute.Inherited> が `false` の場合、属性は属性クラスから派生したクラスに継承されません。 例:
+<xref:System.AttributeUsageAttribute.Inherited> が `false` の場合、属性は属性クラスから派生したクラスに継承されません。 次に例を示します。
 
 [!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
 
@@ -79,7 +79,7 @@ ThirdAttribute
 SecondAttribute
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - <xref:System.Attribute>  
 - <xref:System.Reflection>  

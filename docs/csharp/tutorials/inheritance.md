@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1938876bcf72fccd7582ede332d052fb3d759395
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502165"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656194"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# と .NET での継承
 
@@ -33,7 +33,7 @@ ms.locfileid: "43502165"
 
 1. [dotnet run](../../core/tools/dotnet-run.md) コマンドを入力して、例をコンパイルし実行します。
 
-## <a name="background-what-is-inheritance"></a>基礎知識: 継承とは何か
+## <a name="background-what-is-inheritance"></a>背景: 継承とは何か
 
 *継承*とは、オブジェクト指向プログラミングの基本的な属性の 1 つです。 親クラスの動作を再利用 (継承)、拡張、または変更する子クラスを定義することができます。 メンバーの継承元となるクラスを、*基底クラス*と呼びます。 基底クラスのメンバーを継承するクラスを、*派生クラス*と呼びます。
 
@@ -143,9 +143,9 @@ public struct ValueStructure : ValueType // Generates CS0527.
 | 型のカテゴリ | 暗黙的な継承元                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
 | class         | <xref:System.Object>                                                          |
-| struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
-| enum          | <xref:System.Enum>、<xref:System.ValueType>、<xref:System.Object>             |
-| delegate      | <xref:System.MulticastDelegate>、<xref:System.Delegate>、<xref:System.Object> |
+| struct        | <xref:System.ValueType>、 <xref:System.Object>                                 |
+| enum          | <xref:System.Enum>、 <xref:System.ValueType>、 <xref:System.Object>             |
+| delegate      | <xref:System.MulticastDelegate>、 <xref:System.Delegate>、 <xref:System.Object> |
 
 ## <a name="inheritance-and-an-is-a-relationship"></a>継承と "is a" 関係
 
@@ -249,7 +249,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 2 つのコンストラクター
 
-  2 つの `Book` コンストラクターは、共通パラメーターを 3 つ共有しています。 *タイトル*および*出版社*の 2 つは、`Publication` コンストラクターのパラメーターに対応します。 3 つ目は*著者*で、プライベートの `authorName` フィールドに格納されています。 1 つのコンストラクターには *isbn* パラメーターが 1 つ含まれていて、`ISBN` 自動プロパティに格納されています。
+  2 つの `Book` コンストラクターは、共通パラメーターを 3 つ共有しています。 *タイトル*および*出版社*の 2 つは、`Publication` コンストラクターのパラメーターに対応します。 3 つ目は*著者*で、パブリックの変更不可の `Author` プロパティに格納されています。 1 つのコンストラクターには *isbn* パラメーターが 1 つ含まれていて、`ISBN` 自動プロパティに格納されています。
 
   最初のコンストラクターは[この](../language-reference/keywords/this.md)キーワードを使用して、他のコンストラクターを呼び出します。 コンストラクター チェーンは、コンストラクターを定義する上で一般的なパターンです。 パラメーターが最も多いコンストラクターを呼び出すときに、パラメーターのより少ないコンストラクターが既定値を提供するものです。
 
@@ -257,11 +257,11 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 読み取り専用の `ISBN` プロパティ。`Book` オブジェクトの ISBN (一意の 10 ～ 13 桁の数字) を返します。 ISBN は `Book` コンストラクターの 1 つに引数として提供されます。 ISBN は、コンパイラで自動生成されるプライベート バッキング フィールドに格納されます。
 
-- 読み取り専用の `Author` プロパティ。 著者名は両方の `Book` コンストラクターに引数として提供され、プライベート `authorName` フィールドに格納されます。
+- 読み取り専用の `Author` プロパティ。 著者名は両方の `Book` コンストラクターに引数として提供され、プロパティに格納されます。
 
-- 価格に関する、2 つの読み取り専用の `Price` と `Currency` のプロパティ。 これらの値は、`SetPrice` メソッド呼び出しで引数として提供されます。 価格は `bookPrice` というプライベート フィールドに格納されます。 `Currency` プロパティは 3 桁の ISO 通貨記号 (たとえば米ドルの場合は USD) で、プライベートの `ISOCurrencySymbol` フィールドに格納されています。 ISO 通貨記号は <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> プロパティから取得できます。
+- 価格に関する、2 つの読み取り専用の `Price` と `Currency` のプロパティ。 これらの値は、`SetPrice` メソッド呼び出しで引数として提供されます。 `Currency` プロパティは 3 桁の ISO 通貨記号 (たとえば米ドルの場合は USD) です。 ISO 通貨記号は <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> プロパティから取得できます。 これらのプロパティは両方とも外部では読み取り専用ですが、`Book` クラスのコードによって設定できます。
 
-- `SetPrice` メソッド。`bookPrice` フィールドおよび `ISOCurrencySymbol` フィールドの値を設定します。 これらの値は、`Price` プロパティおよび `Currency` プロパティによって返されます。
+- `SetPrice` メソッド。`Price` プロパティおよび `Currency` プロパティの値を設定します。 これらの値は、それぞれ同じプロパティによって返されます。
 
 - `ToString` メソッド (`Publication` から継承) へのオーバーライドと、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドおよび <xref:System.Object.GetHashCode%2A> メソッド (<xref:System.Object> から継承) へのオーバーライド。
 
@@ -296,7 +296,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [クラスとオブジェクト](../tour-of-csharp/classes-and-objects.md)   
 - [継承 (C# プログラミング ガイド)](../programming-guide/classes-and-structs/inheritance.md)

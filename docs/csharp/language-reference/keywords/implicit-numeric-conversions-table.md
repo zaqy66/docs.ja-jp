@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 98774a0f7ad86e43178c6d0216e29e7b4767f3f2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ab6506e619c675ddd68237c4ddca870e9e14098f
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235255"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058465"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>暗黙的な数値変換の一覧表 (C# リファレンス)
 
@@ -23,14 +23,14 @@ ms.locfileid: "53235255"
 |----------|--------|  
 |[sbyte](sbyte.md)|`short`、`int`、`long`、`float`、`double`、または `decimal`|  
 |[byte](byte.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
+|[char](char.md)|`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
 |[short](short.md)|`int`、`long`、`float`、`double`、または `decimal`|  
 |[ushort](ushort.md)|`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
 |[int](int.md)|`long`、`float`、`double`、または `decimal`|  
 |[uint](uint.md)|`long`、`ulong`、`float`、`double`、または `decimal`|  
 |[long](long.md)|`float`、 `double`、または `decimal`|  
-|[char](char.md)|`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|  
-|[float](float.md)|`double`|  
 |[ulong](ulong.md)|`float`、 `double`、または `decimal`|  
+|[float](float.md)|`double`|  
   
 ## <a name="remarks"></a>コメント  
 
@@ -38,9 +38,11 @@ ms.locfileid: "53235255"
 
 - `int`、`uint`、`long`、または `ulong` から `float` への変換と `long` から `ulong` または `double` への変換では、有効桁数が失われる場合があります (絶対値ではありません)。  
   
-- `char` 型への暗黙的な変換はありません。  
+- `char`、`byte`、`sbyte` 型への暗黙的な変換はありません。  
+
+- `char`、`double`、`decimal` 型からの暗黙的な変換はありません。
   
-- `float` 型、`double` 型、`decimal` 型の間に暗黙的な変換はありません。  
+- `decimal` 型と `float` 型または `double` 型の間に暗黙的な変換はありません。  
   
 - 型 `int` の定数式の値 (整数リテラルで表される値など) は、それが変換先の型の範囲内にある場合、`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong` に変換できます。
 

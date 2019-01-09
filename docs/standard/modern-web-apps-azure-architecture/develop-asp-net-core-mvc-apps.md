@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aed0ba4621eab91dd47df9ef760fdf8c39ff1103
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152781"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058504"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリを開発する
 
@@ -69,13 +69,13 @@ Web API に対しては、ASP.NET Core MVC は[_コンテンツ ネゴシエー�
 > ### <a name="references--mapping-requests-to-responses"></a>参照 – 応答と要求のマッピング
 >
 > - **コントローラー アクションへのルーティング**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
 > - **モデル バインド**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **モデルの検証**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **フィルター**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>依存関係の使用
 
@@ -213,7 +213,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 図 7-2 フィルターと要求パイプラインを通過する要求実行の流れ。
 
-通常、フィルターは属性として実装されるので、コントローラーまたはアクションにフィルターを適用できます。 この方法で追加したフィルターをアクション レベルで指定すると、コントローラー レベルで指定されたフィルターをオーバーライドするか、その上に構築されて、それ自体がグローバル フィルターをオーバーライドします。 たとえば、\[Route\] 属性を使って、コントローラーとアクションの間にルートを作成できます。 同様に、コントローラー レベルで承認を構成した後、次の例に示すように、個々のアクションでオーバーライドできます。
+通常、フィルターは属性として実装されるので、コントローラーまたはアクションにフィルターを適用できます (グローバルでも可能)。 この方法で追加したフィルターをアクション レベルで指定すると、コントローラー レベルで指定されたフィルターをオーバーライドするか、その上に構築されて、それ自体がグローバル フィルターをオーバーライドします。 たとえば、\[Route\] 属性を使って、コントローラーとアクションの間にルートを作成できます。 同様に、コントローラー レベルで承認を構成した後、次の例に示すように、個々のアクションでオーバーライドできます。
 
 ```csharp
 [Authorize]
@@ -282,7 +282,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 > - **領域**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN マガジン - ASP.NET Core MVC 向け機能スライス**  
- > <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **フィルター**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – 実際の ASP.NET Core MVC フィルター**  
