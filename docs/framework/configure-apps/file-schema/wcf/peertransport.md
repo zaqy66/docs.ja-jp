@@ -2,12 +2,12 @@
 title: '&lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: df192c6a602aa073f48fab4229b4be3fbeb2349d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76c100c0ec793d6dc4e7e5385f9dcf4521d0039e
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748621"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151944"
 ---
 # <a name="ltpeertransportgt"></a>&lt;peerTransport&gt;
 カスタム バインドのピア トランスポートを定義します。  
@@ -21,14 +21,13 @@ ms.locfileid: "32748621"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<peerTransport   
-    listenIpAddress="String"  
-    maxBufferPoolSize="Integer"  
-    maxReceivedMessageSize="Integer"  
-    port="Integer"  
-        <security>  
-    </security>  
-/>  
+<peerTransport listenIpAddress="String"
+               maxBufferPoolSize="Integer"
+               maxReceivedMessageSize="Integer"
+               port="Integer">
+  <security>
+  </security>
+</peerTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -55,7 +54,7 @@ ms.locfileid: "32748621"
 |-------------|-----------------|  
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このトランスポートは、要求/応答操作を含むコントラクトと共に使用することはできません。  
   
 ## <a name="see-also"></a>関連項目  

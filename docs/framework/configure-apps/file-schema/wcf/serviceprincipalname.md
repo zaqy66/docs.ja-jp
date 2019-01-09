@@ -2,17 +2,17 @@
 title: '&lt;サービス プリンシパル名&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: e5c1f5a6986d57d20180560b12f5c7c5540a590d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a22a905744980d0b370023e6236734a9bb0d6357
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750727"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150644"
 ---
 # <a name="ltserviceprincipalnamegt"></a>&lt;サービス プリンシパル名&gt;
 サービスの ID をサービス プリンシパル名 (SPN) により指定します。  
   
- SPN を設定の詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)です。  
+ SPN を設定する方法についての詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
   
  \<identity>  
 \<サービス プリンシパル名 >  
@@ -20,7 +20,7 @@ ms.locfileid: "32750727"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<servicePrincipalName value = "String" />  
+<servicePrincipalName value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -41,8 +41,8 @@ ms.locfileid: "32750727"
 |-------------|-----------------|  
 |[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|クライアントで認証するサービスの ID を指定します。|  
   
-## <a name="remarks"></a>コメント  
- エンドポイントの SSPI 認証を実行するときに、この id を持つエンドポイントに接続するセキュリティで保護された Windows Communication Foundation (WCF) クライアントは SPN を使用します。  
+## <a name="remarks"></a>Remarks  
+ この id を持つエンドポイントに接続するセキュリティで保護された Windows Communication Foundation (WCF) クライアントは、エンドポイントの SSPI 認証を実行するときに SPN を使用します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.Configuration.IdentityElement>  

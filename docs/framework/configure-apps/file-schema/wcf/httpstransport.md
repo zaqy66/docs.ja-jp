@@ -2,12 +2,12 @@
 title: '&lt;httpsTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: b31965d5c61969f673dfa5627e40567ea0a189a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 14ba18b195fc83d2518aaa39f0fdc69098611a83
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181580"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150618"
 ---
 # <a name="lthttpstransportgt"></a>&lt;httpsTransport&gt;
 カスタム バインドの SOAP メッセージを送信する HTTP トランスポートを指定します。  
@@ -21,22 +21,22 @@ ms.locfileid: "50181580"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<httpsTransport  
-    allowCookies=Boolean"  
-    authenticationScheme="Digest/Negotiate/Ntlm/Basic/Anonymous"  
-    bypassProxyOnLocal=Boolean"  
-    hostnameComparisonMode="StrongWildcard/Exact/WeakWildcard"  
-    manualAddressing="Boolean"  
-    maxBufferPoolSize="Integer"  
-    maxBufferSize="Integer"  
-    maxReceivedMessageSize="Integer"  
-    proxyAddress="Uri"  
-    proxyAuthenticationScheme="None/Digest/Negotiate/Ntlm/Basic/Anonymous"        realm="String"  
-    requireClientCertificate=Boolean"  
-    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
-        unsafeConnectionNtlmAuthentication="Boolean"  
-....useDefaultWebProxy="Boolean"  
-/>  
+<httpsTransport allowCookies="Boolean"
+                authenticationScheme="Digest/Negotiate/Ntlm/Basic/Anonymous"
+                bypassProxyOnLocal="Boolean"
+                hostnameComparisonMode="StrongWildcard/Exact/WeakWildcard"
+                manualAddressing="Boolean"
+                maxBufferPoolSize="Integer"
+                maxBufferSize="Integer"
+                maxReceivedMessageSize="Integer"
+                proxyAddress="Uri"
+                proxyAuthenticationScheme="None/Digest/Negotiate/Ntlm/Basic/Anonymous"
+                realm="String"
+                requireClientCertificate="Boolean"
+                transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
+                unsafeConnectionNtlmAuthentication="Boolean"
+                ...
+                useDefaultWebProxy="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -47,7 +47,7 @@ ms.locfileid: "50181580"
 |属性|説明|  
 |---------------|-----------------|  
 |allowCookies|クライアントがクッキーを受け入れて、それらを今後の要求に反映させるかどうかを指定するブール値です。 既定値は、`false` です。<br /><br /> この属性はクッキーを使用する ASMX Web サービスと対話する場合に使用できます。 この方法で、サーバーから返されるクッキーを、それ以降のサービスに対するすべてのクライアント要求に自動的にコピーできます。|  
-|authenticationScheme|HTTP リスナーにより処理されているクライアント要求の認証に使用するプロトコルを指定します。 以下の値が有効です。<br /><br /> -Digest: ダイジェスト認証を指定します。<br />-Negotiate: は、認証スキームを確認するクライアントとネゴシエートします。 クライアントとサーバーの両方が Kerberos をサポートする場合は、この方式が使用されます。それ以外の場合は NTLM が使用されます。<br />-Ntlm: NTLM 認証を指定します。<br />-Basic: 基本認証を指定します。<br />-Anonymous: 匿名認証を指定します。<br /><br /> 既定は Anonymous です。 この属性は <xref:System.Net.AuthenticationSchemes> 型です。 この属性は 1 回だけ設定できます。|  
+|authenticationScheme|HTTP リスナーにより処理されているクライアント要求の認証に使用するプロトコルを指定します。 以下の値が有効です。<br /><br /> -Digest:ダイジェスト認証を指定します。<br />-Negotiate:クライアントとネゴシエートし、認証方式を決定します。 クライアントとサーバーの両方が Kerberos をサポートする場合は、この方式が使用されます。それ以外の場合は NTLM が使用されます。<br />-Ntlm:NTLM 認証を指定します。<br />-基本。基本認証を指定します。<br />匿名。匿名認証を指定します。<br /><br /> 既定は Anonymous です。 この属性は <xref:System.Net.AuthenticationSchemes> 型です。 この属性は 1 回だけ設定できます。|  
 |bypassProxyOnLocal|ローカル アドレスでプロキシ サーバーをバイパスするかどうかを示すブール値。 既定値は、`false` です。<br /><br /> ローカル アドレスは、ローカル LAN またはイントラネット上にあるアドレスです。<br /><br /> Windows Communication Foundation (WCF) は、サービス アドレスが始まる場合常に、プロキシを無視 `http://localhost` です。<br /><br /> クライアントが同じマシン上のサービスと対話するときにプロキシを経由させる場合は、localhost ではなくホスト名を使用する必要があります。|  
 |hostnameComparisonMode|URI の解析に使用する HTTP ホスト名比較モードを指定します。 有効な値は次のとおりです。<br /><br /> -StrongWildcard: (「+」)、指定したスキーム、ポート、および相対 URI のコンテキストですべてのホスト名と一致します。<br />-Exact: ワイルドカードなし<br />-WeakWildcard: ("\*")、強いワイルドカード メカニズムを通じて指定されたスキーム、ポート、および明示的が一致しない相対のはっきりのコンテキストで使用可能なすべてのホスト名と一致します。<br /><br /> 既定値は StrongWildcard です。 この属性は `System.ServiceModel.HostnameComparison` 型です。|  
 |manualAddressing|ユーザーによるメッセージのアドレス指定の管理を有効にするブール値です。 このプロパティは、通常、アプリケーションが複数の宛先のどれにメッセージを送信するかを決定するルーターのシナリオで使用されます。<br /><br /> `true` に設定されている場合、チャネルではメッセージが既にアドレス指定されていると見なされ、他の情報は追加されません。 この場合、ユーザーはすべてのメッセージを別個にアドレス指定できます。<br /><br /> `false` に設定されている場合、既定の Windows Communication Foundation (WCF) アドレス指定機構により、すべてのメッセージのアドレスが自動的に作成されます。<br /><br /> 既定値は、`false` です。|  
@@ -55,10 +55,10 @@ ms.locfileid: "50181580"
 |maxBufferSize|バッファーの最大サイズを指定する正の整数です。 既定値は 524288 です|  
 |maxReceivedMessageSize|受信できるメッセージの最大サイズを指定する正の整数。 既定値は 65536 です。|  
 |proxyAddress|HTTP プロキシのアドレスを指定する URI。 `useSystemWebProxy` が `true` の場合、この設定を `null` にする必要があります。 既定値は、`null` です。|  
-|proxyAuthenticationScheme|HTTP プロキシにより処理されているクライアント要求の認証に使用するプロトコルを指定します。 以下の値が有効です。<br /><br /> -None: 認証は実行されません。<br />-Digest: ダイジェスト認証を指定します。<br />-Negotiate: は、認証スキームを確認するクライアントとネゴシエートします。 クライアントとサーバーの両方が Kerberos をサポートする場合は、この方式が使用されます。それ以外の場合は NTLM が使用されます。<br />-Ntlm: NTLM 認証を指定します。<br />-Basic: 基本認証を指定します。<br />-Anonymous: 匿名認証を指定します。<br />-IntegratedWindowsAuthentication: Windows 認証を指定します。<br /><br /> 既定は Anonymous です。 この属性は <xref:System.Net.AuthenticationSchemes> 型です。|  
+|proxyAuthenticationScheme|HTTP プロキシにより処理されているクライアント要求の認証に使用するプロトコルを指定します。 以下の値が有効です。<br /><br /> -None。認証は実行されません。<br />-Digest:ダイジェスト認証を指定します。<br />-Negotiate:クライアントとネゴシエートし、認証方式を決定します。 クライアントとサーバーの両方が Kerberos をサポートする場合は、この方式が使用されます。それ以外の場合は NTLM が使用されます。<br />-Ntlm:NTLM 認証を指定します。<br />-基本。基本認証を指定します。<br />匿名。匿名認証を指定します。<br />-IntegratedWindowsAuthentication:Windows 認証を指定します。<br /><br /> 既定は Anonymous です。 この属性は <xref:System.Net.AuthenticationSchemes> 型です。|  
 |realm|プロキシおよびサーバーで使用するレルムを指定する文字列です。 既定値は空の文字列です。<br /><br /> サーバーは、レルムを使用して、保護されたリソースをパーティションに分割します。 パーティションごとに、独自の認証方式と承認データベースの両方、またはそのいずれかを指定できます。 レルムは、基本認証およびダイジェスト認証だけに使用されます。 クライアントが正常に認証されると、その認証は特定のレルムのすべてのリソースに対して有効となります。 レルムの詳細についてでの RFC 2617 を参照してください、 [IETF web サイト](https://www.ietf.org)します。|  
 |requireClientCertificate|サーバーがクライアントに HTTPS ハンドシェイクの一部としてクライアント証明書の提供を要求するかどうかを指定するブール値。 既定値は、`false` です。|  
-|transferMode|メッセージが要求や応答をバッファーするか、ストリーミングするかを指定します。 以下の値が有効です。<br /><br /> -Buffered: 要求/応答メッセージをバッファーします。<br />: ストリーミングを、要求/応答メッセージをストリーミングします。<br />-StreamedRequest: 要求メッセージをストリーミングし、応答メッセージをバッファーします。<br />-StreamedResponse: 要求メッセージをバッファーし、応答メッセージをストリーミングします。<br /><br /> 既定値はバッファーです。 この属性は <xref:System.ServiceModel.TransferMode> 型です。|  
+|transferMode|メッセージが要求や応答をバッファーするか、ストリーミングするかを指定します。 以下の値が有効です。<br /><br /> -バッファー。要求および応答メッセージをバッファーします。<br />ストリーム。要求および応答メッセージをストリーミングします。<br />-StreamedRequest:要求メッセージをストリーミングし、応答メッセージをバッファーします。<br />-StreamedResponse:要求メッセージをバッファーし、応答メッセージをストリーミングします。<br /><br /> 既定値はバッファーです。 この属性は <xref:System.ServiceModel.TransferMode> 型です。|  
 |unsafeConnectionNtlmAuthentication|サーバー上で安全ではない接続共有を有効にするかどうかを指定するブール値です。 既定値は、`false` です。 有効な場合、NTLM 認証は、TCP 接続ごとに 1 回実行されます。|  
 |useDefaultWebProxy|ユーザー固有の設定ではなく、コンピューター全体のプロキシ設定を使用するかどうかを指定するブール値です。 既定値は `true` です。|  
   

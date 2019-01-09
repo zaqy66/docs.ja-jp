@@ -2,12 +2,12 @@
 title: '&lt;issuedTokenParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 550b3412b193b996b8de800856d6833369fc4bc7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2060f98e94cec9e656420ac073204a82bc592b92
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749388"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149242"
 ---
 # <a name="ltissuedtokenparametersgt"></a>&lt;issuedTokenParameters&gt;
 フェデレーション セキュリティのシナリオで発行されるセキュリティ トークンのパラメーターを指定します。  
@@ -22,21 +22,20 @@ ms.locfileid: "32749388"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<issuedTokenParameters   
-      DefaultMessageSecurityVersion="System.ServiceModel.MessageSecurityVersion"  
-      inclusionMode="AlwaysToInitiator/AlwaysToRecipient/Never/Once"  
-      keySize="Integer"  
-   keyType="AsymmetricKey/BearerKey/SymmetricKey"  
-      tokenType="String" >  
-   <additionalRequestParameters />  
-      <claimTypeRequirements>  
-            <add claimType="URI"  
-           isOptional="Boolean" />  
-      </claimTypeRequirements>  
-      <issuer address="String"   
-                      binding=" " />  
-      <issuerMetadata address="String" />   
-</issuedTokenParameters>  
+<issuedTokenParameters defaultMessageSecurityVersion="System.ServiceModel.MessageSecurityVersion"
+                       inclusionMode="AlwaysToInitiator/AlwaysToRecipient/Never/Once"
+                       keySize="Integer"
+                       keyType="AsymmetricKey/BearerKey/SymmetricKey"
+                       tokenType="String">
+  <additionalRequestParameters />
+  <claimTypeRequirements>
+    <add claimType="URI"
+         isOptional="Boolean" />
+  </claimTypeRequirements>
+  <issuer address="String"
+          binding="" />
+  <issuerMetadata address="String" />
+</issuedTokenParameters>
 ```  
   
 ## <a name="type"></a>型  
@@ -80,7 +79,7 @@ ms.locfileid: "32749388"
  [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [方法 : SecurityBindingElement を使用してカスタム バインディングを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)  
  [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  

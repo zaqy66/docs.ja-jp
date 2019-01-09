@@ -2,18 +2,18 @@
 title: '&lt;clientVia&gt;'
 ms.date: 03/30/2017
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
-ms.openlocfilehash: 6218bb3f205f2825eb3f10fabf834cfd0396ac87
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 48e56b79f47e84122ddd4d7f55d50044510bfa66
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754133"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149060"
 ---
 # <a name="ltclientviagt"></a>&lt;clientVia&gt;
-トランスポート チャネルの作成対象となる URI を指定します。 詳細については、「<xref:System.ServiceModel.Description.ClientViaBehavior>」を参照してください。  
+トランスポート チャネルの作成対象となる URI を指定します。 詳細については、「 <xref:System.ServiceModel.Description.ClientViaBehavior> 」を参照してください。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
 \<clientVia >  
@@ -21,7 +21,7 @@ ms.locfileid: "32754133"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<clientVia viaUri="String"/>  
+<clientVia viaUri="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  

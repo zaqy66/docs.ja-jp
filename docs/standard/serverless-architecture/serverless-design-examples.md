@@ -4,12 +4,12 @@ description: さまざまなスケジュール設定とファイルのトリガ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146713"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149678"
 ---
 # <a name="serverless-design-examples"></a>サーバーレスの設計例
 
@@ -29,7 +29,7 @@ CQRS を使用すると、読み取りには、データを消費する方法を
 
 ![CQRS の例](./media/cqrs-example.png)
 
-サーバレスでは、分離されたエンドポイントを提供することで CQRS パターンに対応できます。 1 つのサーバーレスの関数は照会または読み取りに対応し、もう一方のサーバーレスの関数または一連の関数が更新操作を処理します。 サーバーレスの関数は、読み取りモデルを最新の状態に保つ責務を担い、データベースの[変更フィード](https://docs.microsoft.com/azure/cosmos-db/change-feed)によってトリガーされる可能性もあります。 フロント エンド開発に必要なエンドポイントへの接続に簡単になります。 フロントエンドの開発は、必要なエンドポイントに接続することでシンプルになります。 このモデルは、大規模なプロジェクトにも適しています。それは、それぞれのチームで別個の作業ができるからです。
+サーバーなしの分離のエンドポイントを提供することで、CQRS パターンに対応できます。 1 つのサーバーレス関数はクエリや読み取りに対応し、別のサーバーレス関数または関数のセットは、更新操作を処理します。 サーバーレス関数読み取りモデルに最新の状態を保持する必要もあり、データベースのによってトリガーできます[変更フィード](https://docs.microsoft.com/azure/cosmos-db/change-feed)します。 フロント エンド開発に必要なエンドポイントへの接続に簡単になります。 イベントの処理は、バックエンドで処理されます。 このモデルは、さまざまな操作の異なるチームで動作するため、大規模なプロジェクトにもスケーリングもします。
 
 ## <a name="event-based-processing"></a>イベント ベースの処理
 
@@ -65,7 +65,7 @@ HTTP 呼び出しによってトリガーされるサーバーレスのエンド
 
 ## <a name="stream-processing"></a>Stream の処理
 
-デバイスとセンサーを多くの場合、リアルタイムで処理する必要があるデータのストリームを生成します。 メッセージとストリームからキャプチャできるテクノロジがいくつか[Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)と[IoT Hub](https://docs.microsoft.com/azure/iot-hub)に[Service Bus](/service-bus)します。 トランスポートに関係なくサーバーレスでやり取りされるメッセージとデータのストリームを処理するための最適なメカニズムです。 サーバーレスは、大量のデータの需要に合わせて迅速にスケールできます。 サーバーレス コードでは、データと出力の処理と分析を構造化された形式で解析するビジネス ロジックを適用できます。
+デバイスとセンサーを多くの場合、リアルタイムで処理する必要があるデータのストリームを生成します。 メッセージとストリームからキャプチャできるテクノロジがいくつか[Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)と[IoT Hub](https://docs.microsoft.com/azure/iot-hub)に[Service Bus](https://docs.microsoft.com/azure/service-bus)します。 トランスポートに関係なくサーバーレスでやり取りされるメッセージとデータのストリームを処理するための最適なメカニズムです。 サーバーレスは、大量のデータの需要に合わせて迅速にスケールできます。 サーバーレス コードでは、データと出力の処理と分析を構造化された形式で解析するビジネス ロジックを適用できます。
 
 ![サーバーレスのストリーム処理](./media/serverless-stream-processing.png)
 
