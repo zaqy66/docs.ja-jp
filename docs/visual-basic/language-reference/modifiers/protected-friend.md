@@ -1,5 +1,5 @@
 ---
-title: 保護されたフレンド (Visual Basic)
+title: Protected Friend (Visual Basic)
 ms.date: 05/10/2018
 helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
@@ -11,7 +11,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/18/2018
 ms.locfileid: "34306543"
 ---
-# <a name="protected-friend-visual-basic"></a>保護されたフレンド (Visual Basic)
+# <a name="protected-friend-visual-basic"></a>Protected Friend (Visual Basic)
 
 `Protected Friend`キーワードの組み合わせは、メンバー アクセス修飾子。 両方を設定する[フレンド](friend.md)アクセスおよび[Protected](protected.md)に独自のクラスおよび派生クラスからは、同じアセンブリに任意の場所からアクセスできるように、宣言された要素にアクセスします。 指定できます`Protected Friend`クラスのメンバーにのみ適用することはできません`Protected Friend`構造体のメンバーにため、構造体は継承できません。
 
@@ -29,7 +29,7 @@ ms.locfileid: "34306543"
 [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
 [Friend](friend.md)   
 [Private](../../../visual-basic/language-reference/modifiers/private.md)  
-[保護されたプライベート](./private-protected.md)   
+[Private Protected](./private-protected.md)   
 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
 [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
 [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
