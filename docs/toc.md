@@ -245,6 +245,7 @@
 ##### [文字列補間](csharp/tutorials/intro-to-csharp/interpolated-strings-local.md)
 ##### [リスト コレクション](csharp/tutorials/intro-to-csharp/arrays-and-collections.md)
 ##### [クラスの概要](csharp/tutorials/intro-to-csharp/introduction-to-classes.md)
+### [C# 6 を詳しく学習する](csharp/tutorials/exploration/csharp-6.yml)
 ### [Null 許容参照型を操作する](csharp/tutorials/nullable-reference-types.md)
 ### [コンソール アプリケーション](csharp/tutorials/console-teleprompter.md)
 ### [REST クライアント](csharp/tutorials/console-webapiclient.md)
