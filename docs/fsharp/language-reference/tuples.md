@@ -90,7 +90,7 @@ int * float * string
 
 C# 7.0 では、言語に組が導入されました。  C# のタプルは構造体と F# の構造体のタプルに同じです。  C# を使用した相互運用する必要がある場合は、構造体のタプルを使用する必要があります。
 
-これは、簡単に実行できます。  たとえば、c# クラスに組を渡すし、これは、タプルでも、その結果を消費する必要があるとします。
+これは、簡単に実行できます。  たとえば、C# クラスに組を渡すし、これは、タプルでも、その結果を消費する必要があるとします。
 
 ```csharp
 namespace CSharpTupleInterop
@@ -126,11 +126,11 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 このセクションでは、している、コンパイル時に、タプルの形式が説明します。  ここにある情報は、.NET Framework 3.5 を対象としている場合を除き、読み取りに必要なまたは下限はありません。
 
-タプルは、すべての名前付き、いくつかのジェネリック型のいずれかのオブジェクトにコンパイル`System.Tuple`アリティ、または型パラメーターの数をオーバー ロードされます。 タプル型は、c# または Visual Basic の場合など、別の言語からそれらを表示するとき、またはを F# の構成要素に対応していないツールを使用しているときに、このフォームに表示されます。 `Tuple`型が .NET Framework 4 で導入されました。 コンパイラのバージョンを使用して .NET Framework の以前のバージョンをターゲットにする場合[System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) F# コア ライブラリのバージョン 2.0 から。 このライブラリ内の型は、2.0、3.0、および .NET Framework 3.5 のバージョンを対象とするアプリケーションに対してのみ使用されます。 型の転送を使用して、.NET Framework 2.0 と .NET Framework 4 F# コンポーネント間のバイナリの互換性を確保します。
+タプルは、すべての名前付き、いくつかのジェネリック型のいずれかのオブジェクトにコンパイル`System.Tuple`アリティ、または型パラメーターの数をオーバー ロードされます。 タプル型は、C# または Visual Basic の場合など、別の言語からそれらを表示するとき、またはを F# の構成要素に対応していないツールを使用しているときに、このフォームに表示されます。 `Tuple`型が .NET Framework 4 で導入されました。 コンパイラのバージョンを使用して .NET Framework の以前のバージョンをターゲットにする場合[System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) F# コア ライブラリのバージョン 2.0 から。 このライブラリ内の型は、2.0、3.0、および .NET Framework 3.5 のバージョンを対象とするアプリケーションに対してのみ使用されます。 型の転送を使用して、.NET Framework 2.0 と .NET Framework 4 F# コンポーネント間のバイナリの互換性を確保します。
 
 ### <a name="compiled-form-of-struct-tuples"></a>構造体のタプルのコンパイル済みの形式
 
-構造体のタプル (たとえば、 `struct (x, y)`)、基本的に、参照の組から異なります。  コンパイル、<xref:System.ValueTuple>アリティ、または型パラメーターの数によってオーバー ロードされた型。  同じですが[c# 7.0 のタプル](../../csharp/tuples.md)と[Visual Basic 2017 組](../../visual-basic/programming-guide/language-features/data-types/tuples.md)、双方向の相互運用とします。
+構造体のタプル (たとえば、 `struct (x, y)`)、基本的に、参照の組から異なります。  コンパイル、<xref:System.ValueTuple>アリティ、または型パラメーターの数によってオーバー ロードされた型。  同じですが[C# のタプル型](../../csharp/tuples.md)と[Visual Basic 2017 組](../../visual-basic/programming-guide/language-features/data-types/tuples.md)、双方向の相互運用とします。
 
 ## <a name="see-also"></a>関連項目
 
