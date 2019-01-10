@@ -130,7 +130,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 ### <a name="compiled-form-of-struct-tuples"></a>構造体のタプルのコンパイル済みの形式
 
-構造体のタプル (たとえば、 `struct (x, y)`)、基本的に、参照の組から異なります。  コンパイル、<xref:System.ValueTuple>アリティ、または型パラメーターの数によってオーバー ロードされた型。  同じですが[c# 7.0 のタプル](../../csharp/tuples.md)と[Visual Basic のタプル](../../visual-basic/programming-guide/language-features/data-types/tuples.md)、双方向の相互運用とします。
+構造体のタプル (たとえば、 `struct (x, y)`)、基本的に、参照の組から異なります。  コンパイル、<xref:System.ValueTuple>アリティ、または型パラメーターの数によってオーバー ロードされた型。  同じですが[c# 7.0 のタプル](../../csharp/tuples.md)と[Visual Basic 2017 のタプル](../../visual-basic/programming-guide/language-features/data-types/tuples.md)、双方向の相互運用とします。
 
 ## <a name="see-also"></a>関連項目
 
