@@ -2,12 +2,12 @@
 title: C# のチュートリアル
 description: 以下の C# のチュートリアルでは、C# プログラムをビルドする方法と C# 言語機能について説明します。
 ms.date: 10/25/2018
-ms.openlocfilehash: 2e7981c0b958e6ff4682dc502b83766f56d6c528
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195126"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084668"
 ---
 # <a name="c-tutorials"></a>C# のチュートリアル
 
@@ -23,19 +23,19 @@ C# のチュートリアルへようこそ。 まずは、お使いのブラウ�
 
 ## <a name="numbers-in-cintro-to-csharpnumbers-in-csharpyml"></a>[C# における数値](intro-to-csharp/numbers-in-csharp.yml)
 
-「[C# における数値](intro-to-csharp/numbers-in-csharp.yml)」チュートリアルでは、コンピューターが数値を格納する方法と、異なる数値型で計算を実行する方法について説明します。 丸め処理の基礎と、C# で算術演算を実行する方法を学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](intro-to-csharp/numbers-in-csharp-local.md)使用できます。
+[C# における数値](intro-to-csharp/numbers-in-csharp.yml)チュートリアルでは、コンピューターに数値が格納されるしくみとさまざまな数値型で計算するしくみが紹介されます。 丸め処理の基礎と、C# で算術演算を実行する方法を学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](intro-to-csharp/numbers-in-csharp-local.md)使用できます。
 
-このチュートリアルでは、「[Hello World](intro-to-csharp/hello-world.yml)」レッスンが終了していることを前提としています。
+このチュートリアルでは、[Hello world](intro-to-csharp/hello-world.yml) レッスンを修了していることが前提条件となります。
 
 ## <a name="branches-and-loopsintro-to-csharpbranches-and-loopsyml"></a>[分岐とループ](intro-to-csharp/branches-and-loops.yml)
 
-「[分岐とループ](intro-to-csharp/branches-and-loops.yml)」のチュートリアルでは、変数に格納された値に基づいて、さまざまなパスでコードを実行するための基礎について説明します。 プログラムが決定して異なる操作を選択する上で基本となる、制御フローの基礎を学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](intro-to-csharp/branches-and-loops-local.md)使用できます。
+[分岐とループ](intro-to-csharp/branches-and-loops.yml) チュートリアルでは、変数に格納されている値に基づき、コード実行のさまざまなパスを選択することの基本を説明します。 プログラムが決定して異なる操作を選択する上で基本となる、制御フローの基礎を学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](intro-to-csharp/branches-and-loops-local.md)使用できます。
 
-このチュートリアルでは、「[Hello World](intro-to-csharp/hello-world.yml)」レッスンと「[C# における数値](intro-to-csharp/numbers-in-csharp.yml)」レッスンを終了していることを前提としています。
+このチュートリアルでは、[Hello world](intro-to-csharp/hello-world.yml) レッスンと [C# における数値](intro-to-csharp/numbers-in-csharp.yml)レッスンを修了していることが前提条件となります。
 
 ## <a name="string-interpolationintro-to-csharpinterpolated-stringsyml"></a>[文字列補間](intro-to-csharp/interpolated-strings.yml)
 
-[文字列補間](intro-to-csharp/interpolated-strings.yml)のチュートリアルでは、値を文字列に挿入する方法を示します。 埋め込みの C# 式が含まれる挿入文字列の作成方法と、結果の文字列が生じる式の結果のテキスト表示の制御方法を学ぶことになります。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](intro-to-csharp/interpolated-strings-local.md)使用できます。
+[文字列補間](intro-to-csharp/interpolated-strings.yml)チュートリアルでは、文字列に値を挿入する方法について説明します。 埋め込みの C# 式が含まれる挿入文字列の作成方法と、結果の文字列が生じる式の結果のテキスト表示の制御方法を学ぶことになります。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](intro-to-csharp/interpolated-strings-local.md)使用できます。
 
 ## <a name="list-collectionintro-to-csharplist-collectionyml"></a>[リスト コレクション](intro-to-csharp/list-collection.yml)
 
@@ -47,20 +47,18 @@ C# のチュートリアルへようこそ。 まずは、お使いのブラウ�
 
 Hello World レッスンに続くすべての入門用チュートリアルは、自分のローカル開発環境で利用できます。 各チュートリアルの最後に、次のレッスンをオンラインまたは自分のコンピューターのどちらで続行するかを決定します。 環境を設定し、ご利用のコンピューターで次のチュートリアルを続行するためのリンクがあります。
 
+## <a name="explore-new-features-in-c"></a>C# の新機能を詳しく学習する #
+
+こちらの[対話型の探索](exploration/csharp-6.yml)で [C# 6](../whats-new/csharp-6.md) の新機能をお試しください。
+
 ## <a name="general-tutorials"></a>全般的なチュートリアル
 
 次のチュートリアルで、[.NET Core](../../core/index.md) を使用して C# プログラムをビルドできます。
 
 * [コンソール アプリケーション](console-teleprompter.md): コンソール I/O、コンソール アプリケーションの構造、およびタスクベースの非同期プログラミング モデルの基礎について説明します。
-
 * [REST クライアント](console-webapiclient.md): Web 通信、JSON シリアル化、および C# 言語でのオブジェクト指向の機能について説明します。
-
 * [C# と .NET での継承](inheritance.md): C# における継承について説明します。基本クラス、抽象基本クラス、および派生クラスを定義するための継承の使用が含まれます。
-
 * [LINQ の操作](working-with-linq.md): LINQ の多くの機能と、それをサポートする言語要素について説明します。
-
-* [Docker でホストされているマイクロサービス](microservices.md): ASP.NET Core のマイクロサービスの構築と、これを Docker でホストする方法について説明します。
-
 * [文字列補間](string-interpolation.md): 文字列補間を使用して C# で書式設定された文字列を作成する方法について説明します。
-
 * [属性の使用](attributes.md): C# における属性の作成方法と使用方法について説明します。
+* [Null 許容参照型](nullable-reference-types.md): Null 許容参照型を使って null 参照の意図を表現する方法について説明します。
