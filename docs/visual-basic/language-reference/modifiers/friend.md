@@ -30,7 +30,7 @@ ms.locfileid: "34234590"
  使用することができます`Friend`モジュール、インターフェイス、または名前空間レベルでのみです。 したがって、宣言コンテキスト、`Friend`ソース ファイル、名前空間、インターフェイス、モジュール、クラスまたは構造体を要素として使用することがあります。 プロシージャをすることはできません。  
 
 > [!NOTE]
-> 使用することも、 [Protected Friend](protected-friend.md)アクセス修飾子は、クラス メンバーをそのクラスの派生クラスからそのクラスが定義されている同じアセンブリ内からアクセスできるようになります。 使用して、同じアセンブリ内の派生クラスからそのクラス内からのメンバーへのアクセスを制限する、[プライベート保護](private-protected.md)アクセス修飾子。
+> 使用することも、 [Protected Friend](protected-friend.md)アクセス修飾子は、クラス メンバーをそのクラスの派生クラスからそのクラスが定義されている同じアセンブリ内からアクセスできるようになります。 使用して、同じアセンブリ内の派生クラスからそのクラス内からのメンバーへのアクセスを制限する、[Private Protected](private-protected.md)アクセス修飾子。
 
  比較について`Friend`と、その他のアクセス修飾子を参照してください[Visual Basic でのレベルのアクセス](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)です。  
   
