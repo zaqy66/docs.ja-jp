@@ -1,5 +1,5 @@
 ---
-title: '方法: コマンド ライン コンパイラを起動する (Visual Basic)'
+title: '方法: コマンド ライン コンパイラ (Visual Basic) を呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 0b835bb5654574a5aa6f32eede1e942b11e7dcb0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d2d193f8c3d483ff87fe719919982e8c3473ec0b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932155"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221844"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>方法: コマンド ライン コンパイラを起動する (Visual Basic)
-コマンドライン プロンプトとも呼ばれますにその実行可能ファイルの名前を入力して、コマンド ライン コンパイラを呼び出すことができます。 既定の Windows コマンド プロンプトからコンパイルする場合は、実行可能ファイルへの完全修飾パスを入力する必要があります。 この既定の動作をオーバーライドするには、Visual Studio コマンド プロンプトを使用するか、PATH 環境変数を変更します。 コンパイラの名前を入力するだけで、任意のディレクトリからコンパイルをどちらもができます。  
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>方法: コマンド ライン コンパイラ (Visual Basic) を呼び出す
+コマンドライン プロンプトとも呼ばれますにその実行可能ファイルの名前を入力して、コマンド ライン コンパイラを呼び出すことができます。 既定の Windows コマンド プロンプトからコンパイルする場合は、実行可能ファイルへの完全修飾パスを入力する必要があります。 この既定の動作を上書きするには、for Visual Studio は、開発者コマンド プロンプトを使用するか、PATH 環境変数を変更します。 コンパイラの名前を入力するだけで、任意のディレクトリからコンパイルをどちらもができます。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-invoke-the-compiler-using-the-visual-studio-command-prompt"></a>Visual Studio コマンド プロンプトを使用してコンパイラを起動するには  
+### <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Visual Studio 用開発者コマンド プロンプトを使用してコンパイラを起動するには  
   
 1.  Microsoft Visual Studio のプログラム グループ内の Visual Studio Tools のプログラム フォルダーを開きます。  
   
-2.  Visual Studio がインストールされている場合は、任意のディレクトリからコンピューターには、コンパイラへのアクセスに、Visual Studio コマンド プロンプトを使用できます。  
+2.  Visual Studio がインストールされている場合は、任意のディレクトリからコンピューターには、コンパイラにアクセスする Visual Studio 用開発者コマンド プロンプトを使用できます。  
   
-3.  Visual Studio コマンド プロンプトを起動します。  
+3.  Visual Studio 用開発者コマンド プロンプトを呼び出します。  
   
 4.  コマンドラインで「 `vbc.exe` *sourceFileName*し、ENTER キーを押します。  
   

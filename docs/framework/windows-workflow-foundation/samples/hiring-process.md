@@ -2,12 +2,12 @@
 title: 雇用プロセス
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520639"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223222"
 ---
 # <a name="hiring-process"></a>雇用プロセス
 このサンプルでは、メッセージング アクティビティ、およびワークフロー サービスとしてホストされる 2 つのワークフローを使用して、ビジネス プロセスを実装する方法を示します。 この 2 つのワークフローは、Contoso, Inc という架空の会社の IT インフラストラクチャの一部です。  
@@ -114,7 +114,7 @@ ms.locfileid: "43520639"
 |ワークフロー サービス|プロセスの定義を持つフローチャートは、サービスでホストされます (この例では、サービスはコンソール アプリケーションでホストされます)。|HiringRequestService|  
 |メッセージング アクティビティ|フローチャートでは、次の 2 つの方法でメッセージング アクティビティが使用されます。<br /><br /> -を (各承認手順で決定および関連情報が表示される) をユーザーから情報を取得します。<br />-を他の既存のサービス (InboxService および OrgDataService、サービス参照を使用) と対話します。|HiringRequestService|  
 |コンテンツ ベースの相関関係|雇用要求の ID プロパティにおける承認メッセージ相関関係は次のとおりです。<br /><br /> -プロセスが開始する場合は、関連付けハンドルが要求の ID で初期化されます。<br />-受信承認メッセージは、(各承認メッセージの最初のパラメーターは、要求の ID)、ID に基づいて関連付けられます。|HiringRequestService / ResumeRequestService|  
-|カスタム アクティビティ (宣言型およびコード ベース)|このサンプルには、次の複数のカスタム アクティビティがあります。<br /><br /> -   `SaveActionTracking`: このアクティビティが生成したカスタム<xref:System.Activities.Tracking.TrackingRecord>(を使用して<xref:System.Activities.NativeActivityContext.Track%2A>)。 このアクティビティは、<xref:System.Activities.NativeActivity> を拡張する命令型コードを使用して作成されています。<br />-   `GetEmployeesByPositionTypes`: このアクティビティは、タイプ Id の一覧を受信し、Contoso では、その位置を持つユーザーの一覧を返します。 このアクティビティは、宣言的に作成されています (アクティビティ デザイナーを使用)。<br />-   `SaveHiringRequestInfo`: このアクティビティの情報の保存、 `HiringRequest` (を使用して`HiringRequestRepository.Save`)。 このアクティビティは、<xref:System.Activities.CodeActivity> を拡張する命令型コードを使用して作成されています。|HiringRequestService|  
+|カスタム アクティビティ (宣言型およびコード ベース)|このサンプルには、次の複数のカスタム アクティビティがあります。<br /><br /> -   `SaveActionTracking`:このアクティビティが生成したカスタム<xref:System.Activities.Tracking.TrackingRecord>(を使用して<xref:System.Activities.NativeActivityContext.Track%2A>)。 このアクティビティは、<xref:System.Activities.NativeActivity> を拡張する命令型コードを使用して作成されています。<br />-   `GetEmployeesByPositionTypes`:このアクティビティは、タイプ Id の一覧を受信し、Contoso では、その位置を持つユーザーの一覧を返します。 このアクティビティは、宣言的に作成されています (アクティビティ デザイナーを使用)。<br />-   `SaveHiringRequestInfo`:このアクティビティの情報の保存、 `HiringRequest` (を使用して`HiringRequestRepository.Save`)。 このアクティビティは、<xref:System.Activities.CodeActivity> を拡張する命令型コードを使用して作成されています。|HiringRequestService|  
 |システムで指定された SQL サーバー永続性|Flowchart プロセス定義をホストする<xref:System.ServiceModel.Activities.WorkflowServiceHost> インスタンスは、システムで指定された SQL サーバー永続性を使用するように構成されています。|HiringRequestService / ResumeRequestService|  
 |カスタム追跡|このサンプルには、`HiringRequestProcess` の履歴を保存するカスタム追跡参加要素が含まれています (これによって、アクションの内容、実行者、および時期が記録されます)。 ソース コードは、HiringRequestService の Tracking フォルダーにあります。|HiringRequestService|  
 |ETW 追跡|システムで指定された ETW 追跡は、HiringRequestService サービスの App.config ファイルで設定されます。|HiringRequestService|  
@@ -131,13 +131,13 @@ ms.locfileid: "43520639"
 ## <a name="data-storage"></a>データ ストレージ  
  データは、`ContosoHR` という名前の SQL Server データベースに保存されます (このデータベースを作成するためのスクリプトは `DbSetup` フォルダーにあります)。 ワークフロー インスタンスは `InstanceStore` という名前の SQL Server データベースに保存されます (インスタンス ストアを作成するためのスクリプトは [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] の配布に含まれています)。  
   
- 両方のデータベースを作成するには、Visual Studio コマンド プロンプトから Setup.cmd スクリプトを実行します。  
+ 両方のデータベースを作成するには、Visual Studio 用開発者コマンド プロンプトから Setup.cmd スクリプトを実行します。  
   
 ## <a name="running-the-sample"></a>サンプルの実行  
   
 #### <a name="to-create-the-databases"></a>データベースを作成するには  
   
-1.  Visual Studio コマンド プロンプトを開きます。  
+1.  Visual Studio 用開発者コマンド プロンプトを開きます。  
   
 2.  サンプル フォルダーに移動します。  
   

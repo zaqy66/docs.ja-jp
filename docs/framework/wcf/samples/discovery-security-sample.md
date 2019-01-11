@@ -2,12 +2,12 @@
 title: 探索のセキュリティのサンプル
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9435afa7324ad9e0f2bf994b2f3ed5e54e5e2e7e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129351"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223105"
 ---
 # <a name="discovery-security-sample"></a>探索のセキュリティのサンプル
 Discovery 仕様では、探索プロセスに参加するエンドポイントをセキュリティで保護する必要はありません。 探索メッセージをセキュリティで強化することで、さまざまな種類の攻撃 (メッセージの改ざん、サービス拒否、リプレイ、なりすまし) が軽減されます。 このサンプルでは、コンパクトな署名形式 (WS-Discovery 仕様のセクション 8.2 を参照) を使用してメッセージ署名の計算と検証を行うカスタム チャネルの実装方法を示します。 このサンプルでは、両方をサポート、 [2005 Discovery 仕様](https://go.microsoft.com/fwlink/?LinkId=177912)と[バージョン 1.1](https://go.microsoft.com/fwlink/?LinkId=179677)します。  
@@ -49,7 +49,7 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
   
 -   **DiscoverySecurityChannels**:セキュリティで保護されたバインディングを公開するライブラリ。 このライブラリは、送信/受信メッセージのコンパクトな署名の計算と検証を行います。  
   
--   **サービス**:自己ホスト型 ICalculatorService コントラクトを公開するサービスです。 このサービスは、Discoverable としてマークされます。 メッセージの署名に使用する証明書の詳細はユーザーが指定します。ストアの場所と名前、証明書のサブジェクト名またはその他の一意の識別子、およびクライアント証明書 (受信メッセージの署名のチェックに使用する証明書) の保存場所を指定します。 これらの詳細に基づいて、セキュリティが追加された UdpDiscoveryEndpoint が作成されて使用されます。  
+-   **[サービス]**:自己ホスト型 ICalculatorService コントラクトを公開するサービスです。 このサービスは、Discoverable としてマークされます。 メッセージの署名に使用する証明書の詳細はユーザーが指定します。ストアの場所と名前、証明書のサブジェクト名またはその他の一意の識別子、およびクライアント証明書 (受信メッセージの署名のチェックに使用する証明書) の保存場所を指定します。 これらの詳細に基づいて、セキュリティが追加された UdpDiscoveryEndpoint が作成されて使用されます。  
   
 -   **クライアント**:このクラスは、ICalculatorService を検出して、サービスでメソッドを呼び出すしようとします。 ここでも、メッセージの署名と検証を行うために、セキュリティが追加された <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> が作成されて使用されます。  
   
@@ -60,7 +60,7 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  Visual Studio コマンド プロンプトから Setup.bat スクリプトを実行します。 このサンプルでは、証明書を使用してメッセージの署名と検証を行います。 スクリプトによって、証明書が Makecert.exe を使用して作成され、Certmgr.exe を使用してインストールされます。 このスクリプトは、管理者権限で実行する必要があります。  
+1.  Visual Studio 用開発者コマンド プロンプトから Setup.bat スクリプトを実行します。 このサンプルでは、証明書を使用してメッセージの署名と検証を行います。 スクリプトによって、証明書が Makecert.exe を使用して作成され、Certmgr.exe を使用してインストールされます。 このスクリプトは、管理者権限で実行する必要があります。  
   
 2.  をビルドして、サンプルを実行する Visual Studio で Security.sln ファイルを開くし、選択**すべてリビルド**します。 複数のプロジェクトを開始するソリューションのプロパティを更新する: 選択**開始**DiscoverySecureChannels を除くすべてのプロジェクト。 通常どおりソリューションを実行します。  
   

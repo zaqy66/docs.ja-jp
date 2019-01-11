@@ -2,12 +2,12 @@
 title: 'チュートリアル: 型プロバイダーを作成します。'
 description: F# 3.0 で基本的な概念を説明するためにいくつかの単純型プロバイダーを調べることで、独自の F# 型プロバイダーを作成する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: c5a68df5f0b89fe9496ad86ab88208e0ec4bcdc9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614533"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223209"
 ---
 # <a name="tutorial-create-a-type-provider"></a>チュートリアル: 型プロバイダーを作成します。
 
@@ -156,7 +156,7 @@ print ステートメントを使ってこのプロバイダーをデバッグ�
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-このプロバイダーを Visual Studio を使ってデバッグするには、管理者資格で Visual Studio のコマンド プロンプトを開き、次のコマンドを実行します。
+Visual Studio を使用して、このプロバイダーをデバッグするには、管理者の資格情報で Visual Studio の開発者コマンド プロンプトを開くし、次のコマンドを実行します。
 
 ```fsharp
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
