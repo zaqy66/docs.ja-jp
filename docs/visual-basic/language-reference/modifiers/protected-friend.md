@@ -29,7 +29,7 @@ ms.locfileid: "34306543"
 [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
 [Friend](friend.md)   
 [Private](../../../visual-basic/language-reference/modifiers/private.md)  
-[保護されたプライベート](./private-protected.md)   
+[Private Protected](./private-protected.md)   
 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
 [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
 [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
