@@ -25,7 +25,7 @@ ms.lasthandoff: 05/17/2018
 > [!NOTE]
 > `Protected`アクセス修飾子は、その他の 2 つの修飾子と組み合わせることができます。
 > - [Protected Friend](protected-friend.md)修飾子は、クラス メンバーをそのクラスの派生クラスからそのクラスが定義されている同じアセンブリ内からアクセスできません。 
-> - [プライベート保護](private-protected.md)修飾子により、クラス メンバー アクセス、含んでいるアセンブリ内でのみ、派生型です。
+> - [Private Protected](private-protected.md)修飾子により、クラス メンバー アクセス、含んでいるアセンブリ内でのみ、派生型です。
   
 ## <a name="rules"></a>ルール  
   
