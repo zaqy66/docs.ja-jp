@@ -225,7 +225,7 @@ Await Task_MethodAsync()
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
   
- 詳細と例では、次を参照してください。 [c# または Visual Basic での非同期 Api を呼び出す](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)します。  
+ 詳細と例については、[C# または Visual Basic での非同期 API の呼び出し](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic) を参照してください。  
   
 ##  <a name="BKMK_NamingConvention"></a>名前付け規約  
  慣例により、`Async` 修飾子を持つメソッドの名前には、"Async" を追加します。  
