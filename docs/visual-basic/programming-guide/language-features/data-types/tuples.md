@@ -155,13 +155,13 @@ named = differentShape
 
 ## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>Visual Basic のタプルと、.NET Framework 内のタプル
 
-Visual Basic のタプルの 1 つのインスタンスである、 **System.ValueTuple** 、.NET Framework 4.7 で導入されたジェネリック型。 .NET Framework は、汎用のセットも含まれています。 **System.Tuple**クラス。 ただし、これらのクラスが Visual Basic の組から異なる、 **System.ValueTuple**さまざまな方法でジェネリック型。
+Visual Basic のタプルは、.NET Framework 4.7 で導入された **System.ValueTuple** ジェネリック型の 1 つのインスタンスです。 .NET Framework には、汎用の **System.Tuple** クラスのセットも含まれます。 ただし、これらのクラスは Visual Basic のタプルおよび **System.ValueTuple** とは次のいくつかの面で異なります。
 
 - **タプル** クラスの要素は、`Item1`、`Item2`などの名前を持つプロパティです。 Visual Basic のタプルおよび **ValueTuple** においてタプル要素はフィールドです。
 
 - 要素にわかりやすい名前を割り当てることはできません、**タプル**インスタンスまたはを**ValueTuple**インスタンス。 Visual Basic を使用すると、フィールドの意味を伝える名前を割り当てることができます。
 
-- プロパティを**タプル**インスタンスは読み取り専用。 タプルは変更できません。 Visual Basic の組にし、 **ValueTuple**型、タプルのフィールドは、読み取り/書き込みは、タプルは変更可能な。
+- **タプル** インスタンスのプロパティは読み取り専用で、タプルは変更できません。 Visual Basic のタプルおよび **ValueTuple** 型では、タプルのフィールドは読み取り/書き込み可能で、タプルは変更できます。
 
 - 汎用の**タプル**型は参照型です。 これらの**タプル**型を使用することはオブジェクトの割り当てを意味します。 ホット パスでは、これがアプリケーションのパフォーマンスに大きな影響を与えることがあります。 Visual Basic のタプルと **ValueTuple** 型は値型です。
 
