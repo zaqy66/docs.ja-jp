@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234758"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 1 つまたは複数のプログラミング要素が宣言されていることを指定するメンバーのアクセス修飾子は、独自のクラス内または派生クラスからからのみアクセスできます。  

@@ -1,4 +1,4 @@
-﻿---
+---
 title: タプル
 description: については、F#タプル、名前のないが、順序付けされた値のさまざまな種類のグループ化します。
 ms.date: 05/16/2016
@@ -130,7 +130,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 ### <a name="compiled-form-of-struct-tuples"></a>構造体のタプルのコンパイル済みの形式
 
-構造体のタプル (たとえば、 `struct (x, y)`)、基本的に、参照の組から異なります。  コンパイル、<xref:System.ValueTuple>アリティ、または型パラメーターの数によってオーバー ロードされた型。  同じですが[C# のタプル](../../csharp/tuples.md)と[Visual Basic 2017 組](../../visual-basic/programming-guide/language-features/data-types/tuples.md)、双方向の相互運用とします。
+構造体のタプル (たとえば、 `struct (x, y)`)は、参照タプルとは根本的に異なります。  それらは<xref:System.ValueTuple>型にコンパイルされるか、アリティによってオーバーロードされるか、または型パラメーターの数になります。  これらは [C# 7.0 のタプル](../../csharp/tuples.md)および[Visual Basic 2017のタプル](../../visual-basic/programming-guide/language-features/data-types/tuples.md)と同等であり、双方向で相互運用できます。
 
 ## <a name="see-also"></a>関連項目
 

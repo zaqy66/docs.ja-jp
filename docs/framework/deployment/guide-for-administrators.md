@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a94f9c650927aee0f120ee3c0b1199b6c977ef0e
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 50ea2b1fefe5c41f0c67ab8c12362f19ea125b5b
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53776735"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186216"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 配置ガイド (管理者向け)
 この記事では、システム管理者が Microsoft System Center Configuration Manager を使用して [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] とそのシステムの依存関係をネットワーク経由で配置する方法を手順に沿って説明します。 ここでは、すべての対象のクライアント コンピューターが .NET Framework の最小要件を満たしていることを前提としています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] のインストールに必要なソフトウェア要件とハードウェア要件の一覧については、「[システム要件](../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
@@ -254,10 +254,11 @@ ms.locfileid: "53776735"
   
  その他のエラー コード:   
   
--   [Windows インストーラーのエラー コード](/windows/desktop/msi/error-codes)  
-  
--   [Windows Update エージェントの結果コード](/security-updates/WindowsUpdateServices/18127055)  
-  
-## <a name="see-also"></a>参照  
-- [配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+-   [Windows インストーラーのエラー コード](/windows/desktop/msi/error-codes)
+
+-   [Windows Update エージェントの結果コード](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
+
+## <a name="see-also"></a>関連項目
+
+- [配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [システム要件](../../../docs/framework/get-started/system-requirements.md)

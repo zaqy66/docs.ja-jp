@@ -140,7 +140,7 @@ C# の対話型エクスペリエンスでは、サンプルの操作方法が�
 
 ## <a name="contributor-license-agreement"></a>貢献者使用許諾契約書
 
-ご自分の PR がマージされる前に、[.NET Foundation 貢献者使用許諾契約書 (CLA)](https://cla.dotnetfoundation.org) に署名する必要があります。 これは、.NET Foundation 内のプロジェクトに対して 1 回だけ実行する必要があります。 [貢献者使用許諾契約書 (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) について詳しくは、Wikipedia を参照してください。
+ご自分の PR がマージされる前に、[.NET Foundation 貢献者使用許諾契約書 (CLA)](https://cla.dotnetfoundation.org) に署名する必要があります。 これは、.NET Foundation 内のプロジェクトに対して 1 回だけ実行する必要があります。 [貢献者使用許諾契約書 (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) について詳しくは、Wikipedia を参照してください。
 
 契約書: [net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

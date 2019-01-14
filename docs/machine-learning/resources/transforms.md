@@ -4,12 +4,12 @@ description: ML.NET でサポートされている機能エンジニアリング
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451093"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249126"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>機械学習データ変換 - ML.NET
 
@@ -103,7 +103,6 @@ ms.locfileid: "53451093"
 | <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | 列から欠損値をドロップします。 |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | 入力列と同じ数のスロットを持つブール値出力列を作成します。この場合、入力列に値がない場合、出力値は true です。 |
 | <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | 欠損値は、既定値または平均値/最小値/最大値 (テキスト以外の列の場合のみ) のいずれかで置き換えることで処理します。 |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | 入力列と同じ数のスロットを持つブール値出力列を作成します。この場合、入力列に値がない場合、出力値は true です。 |
 
 ## <a name="normalization"></a>正規化
 
