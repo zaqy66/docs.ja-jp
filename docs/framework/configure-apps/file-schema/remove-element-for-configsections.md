@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 6555981edeb6f7f088fb12c710d0146cf58d5be1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 11a930120c375616d73faae68a6d6807c2f633cb
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752417"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307228"
 ---
-# <a name="remove-element-for-configsections"></a>\<削除 > 要素を\<configSections >
+# <a name="remove-element-for-configsections"></a>\<削除 > 要素の\<configSections >
 
-定義済みのセクション、またはセクション グループを削除します。
+定義済みのセクションまたはセクション グループを削除します。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<削除 >**
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>構文
 
@@ -34,7 +34,7 @@ ms.locfileid: "32752417"
 
 |           | 説明 |
 | --------- | ----------- |
-| **name**  | 必須の属性です。<br><br>セクション、または削除するセクション グループの名前を指定します。 |
+| **name**  | 必須の属性です。<br><br>セクションまたは削除するセクション グループの名前を指定します。 |
 
 ## <a name="parent-element"></a>親要素
 
@@ -42,19 +42,19 @@ ms.locfileid: "32752417"
 | --- | ----------- |
 | [**\<configSections >** 要素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
 
-# <a name="child-elements"></a>子要素
+## <a name="child-elements"></a>子要素
 
 なし
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-使用することができます、 **\<削除 >** セクションおよびセクション グループを構成ファイルの階層内の上位レベルで定義されているアプリケーションから削除する要素。
+使用することができます、 **\<削除 >** セクションおよびセクション グループを構成ファイル階層内の上位レベルで定義されているアプリケーションから削除する要素。
 
 ## <a name="example"></a>例
 
-次の例を使用する方法を示しています、 **\<削除 >** マシン構成ファイルで定義されたセクションを削除するアプリケーション構成ファイル内の要素。
+次の例は、使用する方法を示します、 **\<削除 >** マシン構成ファイルで定義したセクションを削除するアプリケーション構成ファイル内の要素。
 
-マシン構成ファイルのコードは、次のセクションを宣言して **\<sampleSection >**:
+マシン構成ファイルのコードは、次のセクションを宣言します **\<sampleSection >**:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "32752417"
 </configuration>
 ```
 
-アプリケーション構成ファイルのコードは、次の削除、  **\<sampleSection >** セクションです。 削除した後、アプリケーションがの設定を取得できません **\<sampleSection >** です。
+アプリケーション構成ファイルのコードは、次の削除、  **\<sampleSection >** セクション。 削除した後、アプリケーションが設定を取得できません **\<sampleSection >** します。
 
 ```xml
 <!-- Application configuration file -->
