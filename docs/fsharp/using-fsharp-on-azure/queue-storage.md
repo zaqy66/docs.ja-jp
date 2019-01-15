@@ -1,5 +1,5 @@
 ---
-title: F# を使用して Azure Queue storage の概要します。
+title: F# を使用した Azure Queue Storage の概要
 description: Azure キューでは、アプリケーション コンポーネント間で信頼性の高い非同期メッセージングを提供します。 クラウド メッセージングにより、アプリケーションのコンポーネントを個別にスケーリングします。
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569419"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>F# を使用して Azure Queue storage の概要します。 #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>F# を使用した Azure Queue Storage の概要 #
 
 Azure Queue storage は、アプリケーション コンポーネント間のクラウド メッセージングを提供します。 スケールのアプリケーションを設計するには、アプリケーション コンポーネントは多くの場合、分離、それらを個別に拡張できるようにします。 キュー ストレージは、クラウド、デスクトップ、オンプレミス サーバーでは、またはモバイル デバイスで実行されているかどうか、アプリケーション コンポーネント間の通信用の非同期メッセージングを提供します。 Queue storage では、非同期タスクの管理とプロセス ワークフローの構築もサポートします。
 
