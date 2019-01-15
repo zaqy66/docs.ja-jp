@@ -69,8 +69,8 @@ End With
 |`Sub`|終了するために必要な`Sub`プロシージャの定義を照合することによって開始された[Sub ステートメント](sub-statement.md)します。 実行されると、`End Sub`ステートメントでは、呼び出し元のコードに制御が戻ります。  
 |`SyncLock`|終了するために必要な`SyncLock`ブロックを照合することによって開始された定義`SyncLock`ステートメント。 参照してください[SyncLock ステートメント](synclock-statement.md)します。  
 |`Try`|終了するために必要な`Try`.`Catch`...`Finally`ブロックを照合することによって開始された定義`Try`ステートメント。[Try...Catch...Finally ステートメント](try-catch-finally-statement.md)を参照してください。  
-|`While`|終了するために必要な`While`ループの定義を照合することによって開始された`While`ステートメント。 参照してください[中.While ステートメント終了](while-end-while-statement.md)します。  
-|`With`| 終了するために必要な`With`ブロックを照合することによって開始された定義`With`ステートメント。 参照してください[としています.ステートメントで終了して](with-end-with-statement.md)します。  
+|`While`|終了するために必要な`While`ループの定義を照合することによって開始された`While`ステートメント。 [While...End While ステートメント](while-end-while-statement.md)を参照してください。 
+|`With`| 終了するために必要な`With`ブロックを照合することによって開始された定義`With`ステートメント。 [With...End With ステートメント](with-end-with-statement.md)を参照してください。 
 |||
   
 ## <a name="directives"></a>ディレクティブ
