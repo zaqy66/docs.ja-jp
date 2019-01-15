@@ -75,7 +75,7 @@ Dim l, m As Long, x, y As Single
   
  *スコープ*変数がその名前を修飾せずに参照できるすべてのコードのセット。 変数のスコープは、宣言されている場所によって決まります。 特定のリージョン内にあるコードでは、その名前を修飾することがなく、そのリージョンで定義されている変数を使用できます。 詳細については、次を参照してください。 [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)します。  
   
- 変数の*アクセス レベル*はへのアクセス許可があるコードの範囲です。 これは、アクセス修飾子によって決まります (など[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)または[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)) で使用する、`Dim`ステートメント。 詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+ 変数の*アクセス レベル*は、それへのアクセス許可があるコードの範囲です。 これは、`Dim`ステートメントで使用するアクセス修飾子([Public](../../../../visual-basic/language-reference/modifiers/public.md)または[Private](../../../../visual-basic/language-reference/modifiers/private.md)など)によって決まります。 詳細については、[ Visual Basic のアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [方法 : 新しい変数を作成する](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
