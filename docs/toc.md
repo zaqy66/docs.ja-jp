@@ -205,7 +205,6 @@
 ### [ユーザー補助](framework/ui-automation/)
 ### [データとモデリング](framework/data/)
 ### [クライアント アプリケーション](framework/develop-client-apps.md)
-#### [共通クライアント技術](framework/common-client-technologies/)
 #### [Windows Presentation Foundation](framework/wpf/)
 #### [Windows フォーム](framework/winforms/)
 ### [WCF を使用したサービス指向アプリケーション](framework/wcf/)
