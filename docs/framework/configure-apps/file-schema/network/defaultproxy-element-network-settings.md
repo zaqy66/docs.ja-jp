@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultProxy&gt;要素 (ネットワーク設定)'
+title: '<defaultProxy>要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -15,12 +15,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50200510"
 ---
-# <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt;要素 (ネットワーク設定)
+# <a name="ltdefaultproxygt-element-network-settings"></a><defaultProxy>要素 (ネットワーク設定)
 ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
+\<defaultProxy>  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +50,7 @@ ms.locfileid: "50200510"
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|プロキシを使用しないアドレスを記述する一連の正規表現を提供します。|  
 |[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|新しいプロキシ モジュールをアプリケーションに追加します。|  
-|[プロキシ](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|プロキシ サーバーを定義します。|  
+|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|プロキシ サーバーを定義します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
