@@ -1,5 +1,5 @@
 ---
-title: '&lt;code&gt;(Visual Basic)'
+title: '<code>(Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - code XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "43858640"
 ---
-# <a name="ltcodegt-visual-basic"></a>&lt;code&gt;(Visual Basic)
+# <a name="ltcodegt-visual-basic"></a><code>(Visual Basic)
 テキストが複数行のコードであることを示します。  
   
 ## <a name="syntax"></a>構文  
