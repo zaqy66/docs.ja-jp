@@ -1,5 +1,5 @@
 ---
-title: '&lt;bypasslist&gt;要素 (ネットワーク設定)'
+title: '<bypasslist>要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist
@@ -15,13 +15,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50188537"
 ---
-# <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt;要素 (ネットワーク設定)
+# <a name="ltbypasslistgt-element-network-settings"></a><bypasslist>要素 (ネットワーク設定)
 一連のプロキシを使用しないアドレスを記述する正規表現を提供します。  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<bypasslist >  
+\<defaultProxy>  
+\<bypasslist>  
   
 ## <a name="syntax"></a>構文  
   
