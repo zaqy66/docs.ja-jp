@@ -1,5 +1,5 @@
 ---
-title: F# を使用した Azure Table Storage の概要
+title: 使用して Azure Table storage を概要します。F#
 description: Azure Table storage または Azure Cosmos DB を使用してクラウドで構造化データを格納します。
 author: sylvanc
 ms.date: 03/26/2018

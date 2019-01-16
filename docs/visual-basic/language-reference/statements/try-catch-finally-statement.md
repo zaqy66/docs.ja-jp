@@ -139,7 +139,7 @@ A`Finally`ブロックは、例外がある場合でも実行する必要があ�
 
 反復子、関数または`Get`アクセサーは、コレクションに対するカスタム イテレーションを実行します。 反復子を使用して、 [Yield](yield-statement.md)ステートメントを一度に 1 つのコレクションの各要素を返します。 使用して反復子関数を呼び出すことを[For Each...Next ステートメント](for-each-next-statement.md)します。
 
-A`Yield`内でステートメントを使用できます、`Try`ブロックします。 `Try`が含まれるブロックを`Yield`ステートメントを持つことができます`Catch`ブロック、および、持つことができます、`Finally`ブロックします。 例については、`Try`ブロックの[反復子](../../programming-guide/concepts/iterators.md)を参照してください。
+`Yield`は`Try`ブロック内に置くことができます。 `Yield`ステートメントを含む`Try`ブロックは、`Catch`ブロックを持つことができ、そして、`Finally`ブロックを持つことができます。 例については、[反復子](../../programming-guide/concepts/iterators.md)の"Visual Basic内のTryブロック"を参照してください。
 
 A`Yield`内でステートメントを使用できない、`Catch`ブロックまたは`Finally`ブロックします。
 
