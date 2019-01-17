@@ -1,5 +1,5 @@
 ---
-title: '&lt;追加&gt;bypasslist (ネットワーク設定) の要素'
+title: 'bypasslist の <add> 要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -17,13 +17,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2018
 ms.locfileid: "50235727"
 ---
-# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;追加&gt;bypasslist (ネットワーク設定) の要素
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>bypasslist の <add> 要素 (ネットワーク設定)
 プロキシ バイ パスの一覧には、IP アドレスまたは DNS 名を追加します。  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<bypasslist >  
+\<defaultProxy>  
+\<bypasslist>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
