@@ -138,7 +138,7 @@ Udi Dahan がもともと提案しているのは (たとえば、「[Domain Eve
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>イベントを生成し、ディスパッチする遅延アプローチ
 
-ドメイン イベント ハンドラーにすぐにディスパッチするよりよい方法は、ドメイン イベントをコレクションに追加した後、トランザクションを (EF の SaveChanges で) コミットする "*直前*" または "*直**後*" に、それらのドメイン イベントをディスパッチすることです (このアプローチについては、Jimmy Bogard の「[A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)」(よりよいドメイン イベント パターン) を参照)。
+ドメイン イベント ハンドラーにすぐにディスパッチするよりよい方法は、ドメイン イベントをコレクションに追加した後、トランザクションを (EF の SaveChanges で) コミットする "*直前*" または "*直* *後*" に、それらのドメイン イベントをディスパッチすることです (このアプローチについては、Jimmy Bogard の「[A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)」(よりよいドメイン イベント パターン) を参照)。
 
 ドメイン イベントの送信をトランザクションのコミットの直前または直後のどちらにするかは、副作用を同じトランザクションまたは別のトランザクションのどちらに含めればよいかに影響するので、重要な決定です。 後者の場合は、複数の集約の間の最終的な整合性に対処する必要があります。 これについては、次のセクションで説明します。
 

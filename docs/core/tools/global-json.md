@@ -94,12 +94,12 @@ SDK バージョン 2.1.100 以降の番号の最後の部分 (`xyz`) の最初�
 ## <a name="troubleshooting-build-warnings"></a>ビルドの警告のトラブルシューティング
 
 > [!WARNING]
-> You are working with a preview version of the .NET Core SDK. You can define the SDK version via a global.json file in the current project. More at <https://go.microsoft.com/fwlink/?linkid=869452> (.NET Core SDK のプレビュー バージョンを使用しています。現在のプロジェクトの global.json ファイルを使用して、SDK のバージョンを定義できます。詳しくは https://go.microsoft.com/fwlink/?linkid=869452 をご覧ください)
+> NET Core SDK のプレビュー バージョンを使用しています。 現在のプロジェクトの global.json ファイルを使用して、SDK のバージョンを定義できます。 詳しくは <https://go.microsoft.com/fwlink/?linkid=869452>
 
 この警告は、プレビュー バージョンの .NET Core SDK を使用してプロジェクトがコンパイルされていることを示します (「[照合ルール](#matching-rules)」セクションを参照)。 .NET Core SDK のバージョンには高品質の履歴とコミットメントがあります。 ただし、プレビュー バージョンを使用したくない場合は、*global.json* ファイルをプロジェクトの階層構造に追加して使用する SDK のバージョンを指定し、`dotnet --list-sdks` を使用してそのバージョンがコンピューターにインストールされていることを確認します。 新しいバージョンがリリースされたときに新しいバージョンを使用するには、*global.json* ファイルを削除するか、または新しいバージョンを使用するようにファイルを更新します。
 
 > [!WARNING]
-> Startup project '{startupProject}' targets framework '.NETCoreApp' version '{targetFrameworkVersion}'. This version of the Entity Framework Core .NET Command-line Tools only supports version 2.0 or higher. For information on using older versions of the tools, see <https://go.microsoft.com/fwlink/?linkid=871254> (スタートアップ プロジェクト '{startupProject}' で、フレームワーク '.NETCoreApp' バージョン '{targetFrameworkVersion}' がターゲットになっています。このバージョンの Entity Framework Core .NET コマンド ライン ツールは、バージョン 2.0 以降のみをサポートします。古いバージョンのツールの使用については、 https://go.microsoft.com/fwlink/?linkid=871254 をご覧ください)
+> スタートアップ プロジェクト '{startupProject}' で、フレームワーク '.NETCoreApp' バージョン '{targetFrameworkVersion}' がターゲットになっています。このバージョンの Entity Framework Core .NET コマンド ライン ツールは、バージョン 2.0 以降のみをサポートします。 古いバージョンのツールの使用については、をご覧ください <https://go.microsoft.com/fwlink/?linkid=871254>
 
 .NET Core 2.1 SDK (バージョン 2.1.300) 以降で、`dotnet ef` コマンドは SDK に含まれています。 この警告は、プロジェクトのターゲットが EF Core 1.0 または 1.1 であり、.NET Core 2.1 SDK 以降のバージョンと互換性がないことを示します。 プロジェクトをコンパイルするには、.NET Core 2.0 SDK (バージョン 2.1.201) またはそれ以前のバージョンをご利用のコンピューター上にインストールし、*global.json* ファイルを使用して必要な SDK バージョンを定義します。 `dotnet ef` コマンドの詳細については、「[EF Core .NET コマンドライン ツール](/ef/core/miscellaneous/cli/dotnet)」を参照してください。
 
