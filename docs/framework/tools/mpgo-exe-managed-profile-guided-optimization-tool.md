@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68593509e384b2acd33fad0f476b6f300f2dbd92
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3809345432b705e4b44700fd6e8231c84bdce6ad
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202187"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221623"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50202187"
   
 中間言語 (IL) アセンブリの起動時間および作業セット サイズでパフォーマンスの問題が見つかった場合、Just-In-Time (JIT) コンパイルのコストを回避し、コード共有を容易にするために、最初に Ngen.exe を使用することをお勧めします。 さらなる向上が必要な場合は、アプリケーションを最適化するために Mpgo.exe を使用できます。 パフォーマンスの向上を評価するためのベースラインとして、最適化されていないネイティブ イメージ アセンブリからのパフォーマンス データを使用できます。 Mpgo.exe を使用することにより、コールド スタートの時間を短縮し、作業セットのサイズを縮小できます。 Mpgo.exe は、最適化されたネイティブ イメージ アセンブリを作成するために Ngen.exe で使用される IL アセンブリに情報を追加します。 詳しくは、.NET ブログ エントリの「[Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943)」 (デスクトップ アプリケーションの起動時のパフォーマンスの向上) をご覧ください。  
   
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、管理者の資格情報で開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用し、コマンド プロンプトで次のように入力します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、管理者の資格情報で Visual Studio 用開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用し、コマンド プロンプトで次のように入力します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
 デスクトップ アプリの場合:  
   
@@ -100,15 +100,15 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
  このプロセスでは、すべてのアセンブリが最適化データを持つことが保証されます。 更新および最適化されたアセンブリのチェックインをより頻繁に行う場合 (ステップ 1 および 2)、製品開発全体でパフォーマンス値はより一貫したものになります。  
   
 ## <a name="using-mpgoexe-from-visual-studio"></a>Visual Studio の Mpgo.exe の使用  
- Visual Studio から次の制限で Mpgo.exe を実行できます (記事 「[方法: ビルド イベントを指定する (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)」を参照)。  
+ Visual Studio から次の制限で Mpgo.exe を実行できます ([方法: ビルド イベントを指定する (C#)](/visualstudio/ide/how-to-specify-build-events-csharp) という記事を参照してください)。  
   
 -   既定では Visual Studio マクロも末尾でスラッシュを使用するので、末尾にスラッシュを含む引用符付きのパスを使用することはできません。 (たとえば、`–OutDir "C:\Output Folder\"` は無効です。)この制限を回避するために、末尾のスラッシュをエスケープできます。 (たとえば、代わりに `-OutDir "$(OutDir)\"` を使用します。)  
   
--   既定では、Mpgo.exe は Visual Studio のビルド パス上にありません。 Visual Studio にこのパスを追加するか、Mpgo のコマンド ラインで完全パスを指定する必要があります。 Visual Studio でビルド後イベントに `–Scenario` または `–Import` パラメーターのいずれかを使用できます。 ただし、通常のプロセスは開発者コマンド プロンプトから `–Scenario` を 1 度使用し、その後各ビルド後に最適化されたアセンブリを更新するために `–Import` を使用します (たとえば、`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`)。  
+-   既定では、Mpgo.exe は Visual Studio のビルド パス上にありません。 Visual Studio にこのパスを追加するか、Mpgo のコマンド ラインで完全パスを指定する必要があります。 Visual Studio でビルド後イベントに `–Scenario` または `–Import` パラメーターのいずれかを使用できます。 ただし、通常のプロセスでは、Visual Studio 用開発者コマンド プロンプトから `–Scenario` を一度使用し、その後 `–Import` を使用し、各ビルド後に最適化されたアセンブリを更新します (たとえば、`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`)。  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>使用例  
- Visual Studio 開発者コマンド プロンプトから次の Mpgo.exe コマンドにより税処理アプリケーションを最適化します。  
+ Visual Studio 用開発者コマンド プロンプトから次の Mpgo.exe コマンドにより税処理アプリケーションを最適化します。  
   
 ```  
 mpgo –scenario "C:\MyApp\MyTax.exe /params par" –AssemblyList Mytax.dll MyTaxUtil2011.dll –OutDir C:\Optimized –TimeOut 15  
@@ -126,7 +126,7 @@ mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" �
 mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
  [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
  [デスクトップ アプリケーションの起動時のパフォーマンスの向上](https://go.microsoft.com/fwlink/p/?LinkId=248943)  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463e31ff286b0022ac55f4f9f8e2a4478cceadc9
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 7f086c5b6bf1d45f3f711112c618e2398c3a39ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49400477"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222169"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (ネイティブ イメージ ジェネレーター)
 ネイティブ イメージ ジェネレーター (Ngen.exe) は、マネージド アプリケーションのパフォーマンスを向上するツールです。 Ngen.exe は、コンパイルされたプロセッサ固有のマシン コードを含むファイルであるネイティブ イメージを作成してローカル コンピューターのネイティブ イメージ キャッシュにインストールします。 ランタイムは、Just-In-Time (JIT) コンパイラを使用してオリジナルのアセンブリをコンパイルする代わりに、キャッシュにあるネイティブ イメージを使用できます。  
@@ -55,7 +55,7 @@ ms.locfileid: "49400477"
 > [!NOTE]
 >  .NET Framework バージョン 1.0 とバージョン 1.1 の Ngen.exe 構文は、「[ネイティブ イメージ ジェネレーター (Ngen.exe) のレガシ構文](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324)」に記されています。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -75,7 +75,7 @@ ngen /? | /help
 |アクション|説明|  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|アセンブリおよびそれに依存する項目のネイティブ イメージを生成してネイティブ イメージ キャッシュにインストールします。<br /><br /> `/queue` を指定すると、アクションはネイティブ イメージ サービスのキューに置かれます。 既定の優先順位は 3 です。 「[優先順位](#PriorityTable)」の表を参照してください。|  
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|アセンブリのネイティブ イメージとその依存関係をネイティブ イメージ キャッシュから削除します。<br /><br /> 単一のイメージとその依存関係をアンインストールするには、そのイメージをインストールしたときと同じコマンド ライン引数を使用します。 **メモ:** [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、アクション `uninstall` * はサポートされなくなりました。|  
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|アセンブリのネイティブ イメージとその依存関係をネイティブ イメージ キャッシュから削除します。<br /><br /> 単一のイメージとその依存関係をアンインストールするには、そのイメージをインストールしたときと同じコマンド ライン引数を使用します。 **注:**[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、アクション `uninstall` * はサポートされなくなりました。|  
 |`update` [`/queue`]|無効になったネイティブ イメージを更新します。<br /><br /> `/queue` を指定すると、更新はネイティブ イメージ サービスのキューに置かれます。 更新は常に優先順位 3 でスケジュールされるため、コンピューターがアイドル状態のときに実行されます。|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|アセンブリのネイティブ イメージとその依存関係の状態を表示します。<br /><br /> 引数を指定しなければ、ネイティブ イメージ キャッシュのすべての内容が表示されます。|  
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - または -<br /><br /> `eqi` [1&#124;2&#124;3]|キューに置かれているコンパイル ジョブを実行します。<br /><br /> 優先順位を指定すると、優先順位が高いかまたは同じコンパイル ジョブが実行されます。 優先順位を指定しなければ、キューに置かれているすべてのコンパイル ジョブが実行されます。|  
@@ -86,7 +86,7 @@ ngen /? | /help
   
 |引数|説明|  
 |--------------|-----------------|  
-|`assemblyName`|アセンブリの完全な表示名。 たとえば、`"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` のようにします。 **メモ:** `display` アクションおよび `uninstall` アクションに対しては、`myAssembly` などのように部分的なアセンブリ名を指定できます。 <br /><br /> Ngen.exe の各コマンド ラインに指定できるアセンブリは 1 つだけです。|  
+|`assemblyName`|アセンブリの完全な表示名。 たとえば、`"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` のようにします。 **注:**`myAssembly` アクションおよび `display` アクションに対しては、`uninstall` などのように部分的なアセンブリ名を指定できます。 <br /><br /> Ngen.exe の各コマンド ラインに指定できるアセンブリは 1 つだけです。|  
 |`assemblyPath`|アセンブリの明示的なパスを返します。 フル パスまたは相対パスを指定できます。<br /><br /> パスを指定せずにファイル名を指定する場合、アセンブリは現在のディレクトリに存在する必要があります。<br /><br /> Ngen.exe の各コマンド ラインに指定できるアセンブリは 1 つだけです。|  
   
 <a name="PriorityTable"></a>   
@@ -122,7 +122,7 @@ ngen /? | /help
 |------------|-----------------|  
 |`/nologo`|Microsoft 著作権情報を表示しません。|  
 |`/silent`|成功メッセージを表示しません。|  
-|`/verbose`|デバッグの詳細情報を表示します。 **メモ:** オペレーティング システムの制限により、Windows 98 と Windows Millennium Edition では追加情報は表示されません。|  
+|`/verbose`|デバッグの詳細情報を表示します。 **注:** オペレーティング システムの制限により、Windows 98 と Windows Millennium Edition では追加情報は表示されません。|  
 |`/help`、 `/?`|現在のリリースのコマンド構文とオプションを表示します。|  
   
 ## <a name="remarks"></a>コメント  
@@ -419,7 +419,7 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe  
 ```  
   
- グローバル アセンブリ キャッシュにアセンブリのネイティブ イメージを作成するには、アセンブリの表示名を使用します。 例:  
+ グローバル アセンブリ キャッシュにアセンブリのネイティブ イメージを作成するには、アセンブリの表示名を使用します。 次に例を示します。  
   
 ```  
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,   
@@ -584,7 +584,7 @@ ngen executeQueuedItems
 ### <a name="service-interaction-with-clients"></a>クライアントとサービスとのやり取り  
  .NET Framework Version 2.0 では、必ず Ngen.exe というコマンド ライン ツールを使用してネイティブ イメージ サービスとやり取りします。 インストール スクリプトでコマンド ライン ツールを使用してネイティブ イメージ サービスのアクションをキューに置いたり、サービスとやり取りしたりします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [ツール](../../../docs/framework/tools/index.md)  
  [マネージド実行プロセス](../../../docs/standard/managed-execution-process.md)  
  [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

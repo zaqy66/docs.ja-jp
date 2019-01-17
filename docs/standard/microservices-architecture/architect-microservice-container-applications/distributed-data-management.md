@@ -4,16 +4,16 @@ description: マイクロサービスの世界における分散データ管理�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: adfb3c0be33d18a991ee552a99a2d02cc3ec7bb3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c3da158bf7a7ee2d4b979349299bba7487c9b1a2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151032"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145992"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散データ管理に関する課題と解決策
 
-## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>課題 \#1: 各マイクロサービスの境界を定義する方法
+## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>課題 \#1:各マイクロサービスの境界を定義する方法
 
 マイクロサービスの境界の定義は、おそらく、すべてのユーザーが直面する最初の課題です。 各マイクロサービスはアプリケーションの一部である必要があり、各マイクロサービスはアプリケーションのすべての利点と課題に関して自律的である必要があります。 しかし、これらの境界をどのようにして識別すればよいのでしょうか。
 
@@ -21,7 +21,7 @@ ms.locfileid: "53151032"
 
 それぞれドメインが異なる複数のアプリケーション コンテキスト間の境界を識別する方法は、まさに、各ビジネス マイクロサービスおよびその関連するドメイン モデルとデータの境界を識別できる方法です。 常に、それらのマイクロサービス間の結び付きを最小限にすることを試みます。 この識別とドメイン モデルの設計については、「[マイクロサービスごとにドメイン モデルの境界を識別する](identify-microservice-domain-model-boundaries.md)」を参照してください。
 
-## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>課題 \#2: 複数のマイクロサービスからデータを取得するクエリを作成する方法
+## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>課題 \#2:複数のマイクロサービスからデータを取得するクエリを作成する方法
 
 2 番目の課題は、リモート クライアント アプリからマイクロサービスへの通信が多くなりすぎるのを防ぎながら、複数のマイクロサービスからデータを取得するクエリを実装する方法です。 たとえば、バスケット、カタログ、ユーザー ID の各マイクロサービスによって所有されているユーザー情報を表示する必要がある、モバイル アプリの 1 つの画面のような場合です。 または、複数のマイクロサービスに存在する多数のテーブルが関係する複雑なレポートもそのような例です。 適切な解決策はクエリの複雑さによって異なります。 ただし、どのような場合でも、システムの通信効率を向上させるには、情報を集計する方法が必要になります。 最も一般的な解決策を以下に示します。
 
@@ -39,7 +39,7 @@ ms.locfileid: "53151032"
 
 ただし、複雑なクエリのために複数のマイクロサービスから頻繁に情報を集計するようなアプリケーションの設計は、悪い設計の兆候である可能性があります。マイクロサービスは、可能な限り他のマイクロサービスから分離する必要があります。 (レポート/分析の場合はコールド データの中央データベースを常に使う必要があるので、これには含まれません)。この問題が多く発生するときは、マイクロサービスのマージが必要な場合があります。 各マイクロサービスの発展とデプロイの自律性と、強い依存性、凝集度、データ集計の間のバランスをとる必要があります。
 
-## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>課題 \#3: 複数のマイクロサービス間の整合性を実現する方法
+## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>課題 \#3:複数のマイクロサービス間の整合性を実現する方法
 
 前に説明したように、各マイクロサービスが所有するデータはそのマイクロサービスにプライベートなものであり、そのマイクロサービスの API を使うことによってのみアクセスできます。 そのため、複数のマイクロサービスの間で整合性を維持しながら、エンド ツー エンドのビジネス プロセスを実装する方法に関する課題があります。
 
@@ -53,7 +53,7 @@ ms.locfileid: "53151032"
 
 **図 4-9** マイクロサービスは、別のマイクロサービスのテーブルに直接アクセスすることはできません。
 
-Basket テーブルは Basket マイクロサービスによって所有されているので、Catalog マイクロサービスが Basket テーブルを直接更新することはできません。 Basket マイクロサービスを更新するには、Catalog マイクロサービスが最終的な整合性を使用する必要があります。この整合性はおそらく、統合イベント (メッセージとイベント ベースの通信) などの非同期通信を基盤とします。 これは、[eShopOnContainers](http://aka.ms/eshoponcontainers) 参照アプリケーションがマイクロサービス全体でこの種類の整合性を実行している方法です。
+Basket テーブルは Basket マイクロサービスによって所有されているので、Catalog マイクロサービスが Basket テーブルを直接更新することはできません。 Basket マイクロサービスを更新するには、Catalog マイクロサービスが最終的な整合性を使用する必要があります。この整合性はおそらく、統合イベント (メッセージとイベント ベースの通信) などの非同期通信を基盤とします。 これは、[eShopOnContainers](https://aka.ms/eshoponcontainers) 参照アプリケーションがマイクロサービス全体でこの種類の整合性を実行している方法です。
 
 [CAP 定理](https://en.wikipedia.org/wiki/CAP_theorem)で説明されているように、可用性と ACID の厳密な整合性のどちらかを選ぶ必要があります。 マイクロサービス ベースのほとんどのシナリオでは、厳密な整合性より可用性と高いスケーラビリティが要求されます。 ミッション クリティカルなアプリケーションは稼働状態を維持する必要があり、開発者は弱い整合性または最終的な整合性を操作する手法を使って、厳密な整合性を回避できます。 ほとんどのマイクロサービス ベースのアーキテクチャでは、この方法が採用されています。
 
@@ -61,7 +61,7 @@ Basket テーブルは Basket マイクロサービスによって所有され�
 
 この問題に適した解決策は、イベント ドリブンの通信およびパブリッシュとサブスクライブ システムを通じて統合されたマイクロサービスの間の最終的整合性を使うことです。 これらのトピックについては、「[Asynchronous event-driven communication](asynchronous-message-based-communication.md#asynchronous-event-driven-communication)」(非同期のイベント ドリブン通信) を参照してください。
 
-## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>課題 \#4: マイクロサービスの境界を越える通信を設計する方法
+## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>課題 \#4:マイクロサービスの境界を越える通信を設計する方法
 
 マイクロサービスの境界をまたいだ通信は、真の課題です。 このコンテキストでは、通信とは使う必要のあるプロトコル (HTTP と REST、AMQP、メッセージングなど) のことではありません。 そうではなくて、使う必要のある通信スタイル、特にマイクロサービス同士を結合する方法のことです。 結合のレベルにより、障害が発生したときのシステムへの影響が大きく異なります。
 
@@ -100,8 +100,8 @@ Basket テーブルは Basket マイクロサービスによって所有され�
 - **具体化されたビュー** \
   [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
-- **Charles Row。ACID とBASE: データベース トランザクション処理での pH のシフト** \
-  [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+- **Charles Row。ACID とBASE:データベース トランザクション処理での pH のシフト** \
+  [*https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 - **補正トランザクション** \
   [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)

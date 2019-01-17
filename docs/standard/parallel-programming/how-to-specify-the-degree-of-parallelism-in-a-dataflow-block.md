@@ -1,5 +1,5 @@
 ---
-title: '方法: データフロー ブロックで並列処理の範囲を指定する'
+title: '方法: データ フロー ブロックで並列処理の範囲を指定する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e4088541-ee05-40db-95f5-147cfe62fde7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b597cf93cdf249936a34b2c07b38d000c96333f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 78459e6cc2b40c9f3b821e4c4b53aec0c2f543db
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999206"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222761"
 ---
-# <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>方法: データフロー ブロックで並列処理の範囲を指定する
+# <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>方法: データ フロー ブロックで並列処理の範囲を指定する
 このドキュメントでは、<xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A?displayProperty=nameWithType> プロパティを設定して、実行データフロー ブロックが一度に複数のメッセージを処理できるようにする方法について説明します。 実行時間の長い計算を実行し、並行してメッセージの処理からメリットを得るデータ フロー ブロックがある場合は、これを行うと役立ちます。 この例では、<xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType> クラスを使用して、同時に複数のデータフローの操作を実行しますが、TPL データフロー ライブラリが提供する定義済みの実行ブロック <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>、および <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> のいずれかで並列処理の最大範囲を指定することができます。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "45999206"
  [!code-vb[TPLDataflow_DegreeOfParallelism#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_degreeofparallelism/vb/dataflowdegreeofparallelism.vb#1)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`DataflowDegreeOfParallelism.cs` (Visual Basic では `DataflowDegreeOfParallelism.vb`) という名前のファイルに貼り付けてから、Visual Studio のコマンド プロンプト ウィンドウで次のコマンドを実行します。  
+ コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`DataflowDegreeOfParallelism.cs` (Visual Basic では `DataflowDegreeOfParallelism.vb`) という名前のファイルに貼り付けてから、Visual Studio 用開発者コマンド プロンプト ウィンドウで次のコマンドを実行します。  
   
  Visual C#  
   

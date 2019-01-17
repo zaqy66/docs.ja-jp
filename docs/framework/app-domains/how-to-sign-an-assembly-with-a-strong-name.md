@@ -1,5 +1,5 @@
 ---
-title: '方法 : 厳密な名前でアセンブリに署名する'
+title: '方法: 厳密な名前でアセンブリに署名する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191065"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221259"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>方法 : 厳密な名前でアセンブリに署名する
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>方法: 厳密な名前でアセンブリに署名する
 厳密な名前でアセンブリに署名するには、いくつかの方法があります。  
   
 -   Visual Studio でプロジェクトの **[プロパティ]** ダイアログ ボックスにある **[署名]** タブを使用する。 これは、厳密な名前でアセンブリに署名するための最も簡単で便利な方法です。  
@@ -31,7 +31,7 @@ ms.locfileid: "50191065"
   
 -   コンパイラ オプションを使用する。  
   
- 厳密な名前でアセンブリに署名するには、暗号キー ペアが必要です。 キー ペアの作成の詳細については、「[方法: 公開キーと秘密キーのキー ペアを作成する](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)」を参照してください。  
+ 厳密な名前でアセンブリに署名するには、暗号キー ペアが必要です。 キー ペアの作成の詳細については、「[方法:公開キーと秘密キーのキー ペアを作成する](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)」を参照してください。  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Visual Studio を使用してアセンブリを作成し、厳密な名前でそのアセンブリに署名するには  
   
@@ -45,7 +45,7 @@ ms.locfileid: "50191065"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>アセンブリ リンカーを使用してアセンブリを作成し、厳密な名前でそのアセンブリに署名するには  
   
--   [Visual Studio コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)で次のコマンドを入力します。  
+-   [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)で次のコマンドを入力します。  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -97,7 +97,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
 - [厳密な名前付きアセンブリの作成と使用](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
 - [方法: 公開キーと秘密キーのキー ペアを作成する](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
 - [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)  

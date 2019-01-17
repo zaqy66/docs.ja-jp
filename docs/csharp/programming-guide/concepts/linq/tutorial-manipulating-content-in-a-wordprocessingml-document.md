@@ -2,17 +2,17 @@
 title: 'チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)'
 ms.date: 07/20/2015
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-ms.openlocfilehash: 64749bfda88b3bf9473fef08d5aef6490d2c37c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2d906bb2310d4dd6c0ccd865a52ede441556dfda
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514783"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145160"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)
 このチュートリアルでは、関数型変換の方法と LINQ to XML を適用して XML ドキュメントを操作する方法について説明します。 C# の例では、Microsoft Word で保存された Office Open XML WordprocessingML ドキュメント内の情報をクエリして操作します。  
   
- 詳細については、[WordprocessingML の概要](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/)に関するページを参照してください。  
+ 詳細については、[WordprocessingML の概要](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)に関するページを参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -29,7 +29,7 @@ ms.locfileid: "43514783"
 |[Word 文書内のテキストの検索 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)|前のクエリを使用してドキュメント内の指定された文字列を検索します。|  
 |[Office Open XML WordprocessingML ドキュメントの詳細 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Office Open XML WordprocessingML ドキュメントの詳細について説明します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [XML の純粋関数型変換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
 - [純粋関数型変換の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

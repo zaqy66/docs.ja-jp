@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c9b8d0680a50d9945bef0d03d10e45750fc49a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29dd8ae38e2635f92c5be2b4d856f03a2e3e5767
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410268"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221519"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (分離ストレージ ツール)
 分離ストレージ ツールは、現在のユーザーに関するすべての既存ストアの一覧表示または削除を行います。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -34,7 +34,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 |オプション|説明|  
 |------------|-----------------|  
-|**/h****[elp]**|このツールのコマンド構文とオプションを表示します。|  
+|**/h** **[elp]**|このツールのコマンド構文とオプションを表示します。|  
 |**/list**|現在のユーザーに関するすべての既存ストアを表示します。 このユーザーによって実行された、すべてのアプリケーションまたはアセンブリに関するストアなどが表示されます。|  
 |**/machine**|コンピューター ストアを選択します。 このオプションを **/list** または **/remove** オプションと一緒に使用すると、それらのアクションをマシン ストアに適用する必要があることを指定できます。<br /><br /> .NET Framework 2.0 で新たに追加されました。|  
 |**/quiet**|クワイエット モードを指定します。このモードでは、情報の出力が中止され、エラー メッセージだけが表示されます。|  
@@ -60,7 +60,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  ユーザーに対してローミングが実際に有効になっているかどうかは、Storeadm.exe の管理に影響を与えません。 オプションを指定せずに Storeadm.exe を実行した場合、すべてのアクションがローカル ストアに適用されます。 **/roaming** オプションを指定した場合は、すべてのアクションが、ローミングできるストアに適用されます。 **/machine** オプションを指定してこのツールを実行すると、すべてのアクションがコンピューター ストアに適用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [ツール](../../../docs/framework/tools/index.md)  
  [分離ストレージ](../../../docs/standard/io/isolated-storage.md)  
  [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: c5a8b38e819c323a06faad2edba586cb18d26edc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f6daa696ecd7b91c6d53edaa447f2d64bca0fd7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409079"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221207"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (ライセンス コンパイラ)
 ライセンス コンパイラは、ライセンス情報を含むテキスト ファイルを読み込んで、バイナリ ファイルを生成します。このバイナリ ファイルは、リソースとして共通言語ランタイムの実行可能ファイルに埋め込むことができます。  
@@ -26,7 +26,7 @@ ms.locfileid: "33409079"
   
  プロジェクトをビルドするときにライセンス コンパイラを使用した場合は、32 ビットと 64 ビットの間のクロス コンパイルはサポートされません。 これは、ライセンス コンパイラはアセンブリを読み込む必要があり、32 ビット アプリケーションからの 64 ビット アセンブリの読み込みおよびその逆は、許可されないためです。 この場合は、コマンド ラインからライセンス コンパイラを使用して手動でライセンスをコンパイルし、対応するアーキテクチャを指定します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33409079"
 |オプション|説明|  
 |------------|-----------------|  
 |**/complist:** *filename*|.licenses ファイルに組み込むライセンス付きコンポーネントの一覧を含むファイルの名前を指定します。 各コンポーネントを参照するにはフルネームを使用し、各行にコンポーネントを 1 つだけ指定します。<br /><br /> コマンド行を使用する場合は、プロジェクトに属するフォームごとに個別のファイルを指定できます。 Lc.exe は複数の入力ファイルを受け付けて、1 つの .licenses ファイルを生成します。|  
-|**/h****[elp]**|このツールのコマンド構文とオプションを表示します。|  
+|**/h** **[elp]**|このツールのコマンド構文とオプションを表示します。|  
 |**/i:** *module*|**/complist** ファイル内に一覧表示されたコンポーネントを含むモジュールを指定します。 複数のモジュールを指定するには、複数の **/i** フラグを使用します。|  
 |**/nologo**|Microsoft 著作権情報を表示しません。|  
 |**/outdir:** *path*|出力 .licenses ファイルを格納するディレクトリを指定します。|  
@@ -92,7 +92,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 lc @response.rsp  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [ツール](../../../docs/framework/tools/index.md)  
  [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

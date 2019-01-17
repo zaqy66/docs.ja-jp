@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151188"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152113"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API を使用してマイクロサービス アプリケーション レイヤーを実装する
 
@@ -183,7 +183,7 @@ Autofac には、[アセンブリをスキャンし、命名規則で型を登�
 
 図 7-24 に示すように、パターンでは基本的に、クライアント側からコマンドを受け付け、それらをドメイン モデル ルールに基づいて処理し、最後にトランザクションの状態を保持します。
 
-![CQRS の書き込み側の概要図: UI アプリは API 経由で CommandHandler にコマンドを送信します。CommandHandler とドメイン モデルまたはインフラストラクチャとの間には依存関係があり、インフラストラクチャに依存する場合、データベースが更新されます。](./media/image21.png)
+![CQRS の書き込み側の概要図:UI アプリは API 経由で CommandHandler にコマンドを送信します。CommandHandler とドメイン モデルまたはインフラストラクチャとの間には依存関係があり、インフラストラクチャに依存する場合、データベースが更新されます。](./media/image21.png)
 
 **図 7-24**. コマンド (CQRS パターンのトランザクション側) の概要
 
@@ -397,7 +397,7 @@ public class CreateOrderCommandHandler
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **Mark Seemann。境界においては、アプリケーションはオブジェクト指向ではない** \
-  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  [*https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 - **コマンドとイベント** \
   [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
@@ -812,7 +812,7 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 - **MediatR と AutoMapper での CQRS** \
   [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
-- **コントローラーをダイエットさせる: POST とコマンド** \
+- **コントローラーの簡略化:POST とコマンド。** \
   [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
 - **メディエーター パイプラインでの横断的関心事への取り組み** \

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cded8ce271ea0f3d1dbb8fc3d9a072ee4a23d1ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149173"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221233"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 用開発者コマンド プロンプト
 
@@ -34,7 +34,7 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 1. タスクバーの検索ボックスに、`dev` や `developer command prompt` など、ツールの名前を入力します。 検索パターンに一致する、インストールされているアプリの一覧が表示されます。 別のコマンド プロンプトを探す場合は、別の検索語句 (「`prompt`」など) を入力してください。
 
-2. **[開発者コマンド プロンプト]** (または、使用するコマンド プロンプト) を選択します。
+2. **Visual Studio 用開発者コマンド プロンプト** (または、使用するコマンド プロンプト) を選択します。
 
 ### <a name="in-windows-81"></a>Windows 8.1 の場合
 

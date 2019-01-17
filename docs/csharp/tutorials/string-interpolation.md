@@ -3,12 +3,12 @@ title: C# における文字列補間
 description: C# の文字列補間を使用した結果文字列に書式設定された式の結果を含める方法について説明します。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 1a5d451f6fef926f0f142c7f09f564ce95618b39
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ef4358ff61cde43998fc0dc4ba174dc0f06bc2bd
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188639"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222494"
 ---
 # <a name="string-interpolation-in-c"></a>C# における文字列補間 #
 
@@ -31,6 +31,8 @@ ms.locfileid: "50188639"
 ```
 
 コンパイル時には通常、挿入文字列が <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドの呼び出しに変換されます。 これにより、[文字列の複合書式設定](../../standard/base-types/composite-formatting.md)のすべての機能が、挿入文字列でも使用できるようになります。
+
+分析後の動作が連結と等しくなるようであれば、コンパイラでは、<xref:System.String.Concat%2A?displayProperty=nameWithType> の代用として <xref:System.String.Format%2A?displayProperty=nameWithType> を使用することがあります。
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>挿入文字列の書式設定文字列を指定する方法
 
@@ -106,7 +108,7 @@ ms.locfileid: "50188639"
 
 このチュートリアルでは、文字列補間の使用に関する一般的なシナリオについて説明しています。 文字列補間の詳細については、[文字列補間](../language-reference/tokens/interpolated.md)に関するトピックを参照してください。 .NET の型の書式設定の詳細については、「[.NET での型の書式設定](../../standard/base-types/formatting-types.md)」および「[複合書式設定](../../standard/base-types/composite-formatting.md)」のトピックを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - <xref:System.String.Format%2A?displayProperty=nameWithType>  
 - <xref:System.FormattableString?displayProperty=nameWithType>  

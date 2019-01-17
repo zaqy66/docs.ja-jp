@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8b6237e41826d2bc95672ee2f6b19598eea19ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2ad212117cc51c17b2a0f68a98bee24e1dd3fa05
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252910"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221760"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>方法: プロデューサー/コンシューマーのデータフロー パターンを実装する
 このドキュメントでは、TPL データフロー ライブラリを使用して、プロデューサー/コンシューマー パターンを実装する方法について説明します。 このパターンでは、"*プロデューサー*" がメッセージをメッセージ ブロックに送信し、"*コンシューマー*" がそのブロックからメッセージを読み取ります。  
@@ -33,7 +33,7 @@ ms.locfileid: "44252910"
  [!code-vb[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#1)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`DataflowProducerConsumer.cs` (Visual Basic では `DataflowProducerConsumer.vb`) という名前のファイルに貼り付けてから、Visual Studio のコマンド プロンプト ウィンドウで次のコマンドを実行します。  
+ コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`DataflowProducerConsumer.cs` (Visual Basic では `DataflowProducerConsumer.vb`) という名前のファイルに貼り付けてから、Visual Studio 用開発者コマンド プロンプト ウィンドウで次のコマンドを実行します。  
   
  Visual C#  
   
