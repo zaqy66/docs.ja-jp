@@ -1,5 +1,5 @@
 ---
-title: '&lt;connectionManagement&gt;要素 (ネットワーク設定)'
+title: '<connectionManagement>要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -15,12 +15,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50201544"
 ---
-# <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt;要素 (ネットワーク設定)
+# <a name="ltconnectionmanagementgt-element-network-settings"></a><connectionManagement>要素 (ネットワーク設定)
 ネットワーク ホストへの接続の最大数を指定します。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
   
 ## <a name="syntax"></a>構文  
   
