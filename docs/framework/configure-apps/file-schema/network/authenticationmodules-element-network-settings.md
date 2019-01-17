@@ -1,5 +1,5 @@
 ---
-title: '&lt;authenticationModules&gt;要素 (ネットワーク設定)'
+title: '<authenticationModules>要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -15,12 +15,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50190815"
 ---
-# <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt;要素 (ネットワーク設定)
+# <a name="ltauthenticationmodulesgt-element-network-settings"></a><authenticationModules>要素 (ネットワーク設定)
 ネットワーク要求の認証に使用されるモジュールを指定します。  
   
  \<configuration>  
 \<system.net>  
-\<authenticationModules >  
+\<authenticationModules>  
   
 ## <a name="syntax"></a>構文  
   
