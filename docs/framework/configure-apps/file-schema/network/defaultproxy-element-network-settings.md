@@ -1,5 +1,5 @@
 ---
-title: '<defaultProxy>要素 (ネットワーク設定)'
+title: '&lt;defaultProxy&gt;要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -15,12 +15,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50200510"
 ---
-# <a name="ltdefaultproxygt-element-network-settings"></a><defaultProxy>要素 (ネットワーク設定)
+# <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt;要素 (ネットワーク設定)
 ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy>  
+\<defaultProxy >  
   
 ## <a name="syntax"></a>構文  
   
