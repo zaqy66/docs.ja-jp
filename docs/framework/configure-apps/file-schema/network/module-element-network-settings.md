@@ -1,5 +1,5 @@
 ---
-title: '<module>要素 (ネットワーク設定)'
+title: '&lt;module&gt;要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#module
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50183699"
 ---
-# <a name="ltmodulegt-element-network-settings"></a><module>要素 (ネットワーク設定)
+# <a name="ltmodulegt-element-network-settings"></a>&lt;module&gt;要素 (ネットワーク設定)
 新しいプロキシ モジュールをアプリケーションに追加します。  
   
  \<configuration>  

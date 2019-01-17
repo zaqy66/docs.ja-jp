@@ -1,5 +1,5 @@
 ---
-title: '<proxy>要素 (ネットワーク設定)'
+title: '&lt;proxy&gt;要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50183674"
 ---
-# <a name="ltproxygt-element-network-settings"></a><proxy>要素 (ネットワーク設定)
+# <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt;要素 (ネットワーク設定)
 プロキシ サーバーを定義します。  
   
  \<configuration>  

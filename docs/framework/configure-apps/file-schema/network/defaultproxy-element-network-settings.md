@@ -20,7 +20,7 @@ ms.locfileid: "50200510"
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
+\<defaultProxy>  
   
 ## <a name="syntax"></a>構文  
   
