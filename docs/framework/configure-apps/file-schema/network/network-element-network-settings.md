@@ -1,5 +1,5 @@
 ---
-title: '&lt;ネットワーク&gt;要素 (ネットワーク設定)'
+title: '<network> 要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53144482"
 ---
-# <a name="ltnetworkgt-element-network-settings"></a>&lt;ネットワーク&gt;要素 (ネットワーク設定)
+# <a name="ltnetworkgt-element-network-settings"></a><network> 要素 (ネットワーク設定)
 外部の簡易メール転送プロトコル (SMTP) サーバーのネットワーク オプションを構成します。  
   
  \<configuration>  
@@ -62,7 +62,7 @@ ms.locfileid: "53144482"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<smtp > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。|  
+|[\<smtp> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
  一部の SMTP サーバーでは、自分でを使用する前に、サーバーに対して認証することが必要です。 ホストの既定のネットワーク資格情報を使用して自分で認証を設定する場合、`defaultCredentials`属性を`true`します。 <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType>プロパティを使用しての現在の値を取得すること、`defaultCredentials`該当する構成ファイルからの属性。  
