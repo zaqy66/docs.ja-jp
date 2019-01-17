@@ -1,39 +1,37 @@
 ---
 title: '方法: オブジェクト初期化子を使用してオブジェクトを初期化する - C# プログラミング ガイド'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/20/2018
 helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-ms.openlocfilehash: 82efa751ad70fd2741ec2e306f56f2be06abad11
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 29987b9ba1f1f18f4e768766bd2391ebb5862f97
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244995"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084876"
 ---
-# <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a><span data-ttu-id="f46db-102">方法: オブジェクト初期化子を使用してオブジェクトを初期化する (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="f46db-102">How to: Initialize Objects by Using an Object Initializer (C# Programming Guide)</span></span>
-<span data-ttu-id="f46db-103">オブジェクト初期化子を使用すると、型のコンストラクターを明示的に呼び出さずに、宣言的な方法で型オブジェクトを初期化できます。</span><span class="sxs-lookup"><span data-stu-id="f46db-103">You can use object initializers to initialize type objects in a declarative manner without explicitly invoking a constructor for the type.</span></span>  
-  
- <span data-ttu-id="f46db-104">次の例は、指定したオブジェクトでオブジェクト初期化子を使用する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="f46db-104">The following examples show how to use object initializers with named objects.</span></span> <span data-ttu-id="f46db-105">コンパイラは、最初に既定のインスタンス コンストラクターにアクセスし、メンバーの初期化を処理することで、オブジェクト初期化子を処理します。</span><span class="sxs-lookup"><span data-stu-id="f46db-105">The compiler processes object initializers by first accessing the default instance constructor and then processing the member initializations.</span></span> <span data-ttu-id="f46db-106">そのため、クラスで既定のコンストラクターが `private` として宣言されている場合、パブリック アクセスを必要とするオブジェクト初期化子は失敗します。</span><span class="sxs-lookup"><span data-stu-id="f46db-106">Therefore, if the default constructor is declared as `private` in the class, object initializers that require public access will fail.</span></span>  
-  
- <span data-ttu-id="f46db-107">匿名型を定義する場合は、オブジェクト初期化子を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f46db-107">You must use an object initializer if you're defining an anonymous type.</span></span> <span data-ttu-id="f46db-108">詳細については、「[方法 :クエリで要素のプロパティのサブセットを返す](../../../csharp/programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="f46db-108">For more information, see [How to: Return Subsets of Element Properties in a Query](../../../csharp/programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="f46db-109">例</span><span class="sxs-lookup"><span data-stu-id="f46db-109">Example</span></span>  
- <span data-ttu-id="f46db-110">次の例は、オブジェクト初期化子を使用して、新しい `StudentName` 型を初期化する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="f46db-110">The following example shows how to initialize a new `StudentName` type by using object initializers.</span></span>  
-  
- [!code-csharp[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_1.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="f46db-111">例</span><span class="sxs-lookup"><span data-stu-id="f46db-111">Example</span></span>  
- <span data-ttu-id="f46db-112">次の例は、コレクション初期化子を使用して、`StudentName` 型のコレクションを初期化する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="f46db-112">The following example shows how to initialize a collection of `StudentName` types by using a collection initializer.</span></span> <span data-ttu-id="f46db-113">コレクション初期化子は、コンマで区切られた一連のオブジェクト初期化子です。</span><span class="sxs-lookup"><span data-stu-id="f46db-113">Note that a collection initializer is a series of comma-separated object initializers.</span></span>  
-  
- [!code-csharp[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="f46db-114">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="f46db-114">Compiling the Code</span></span>  
- <span data-ttu-id="f46db-115">このコードを実行するには、クラスをコピーし、Visual Studio で作成した Visual C# コンソール アプリケーション プロジェクトに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="f46db-115">To run this code, copy and paste the class into a Visual C# console application project that has been created in Visual Studio.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f46db-116">参照</span><span class="sxs-lookup"><span data-stu-id="f46db-116">See Also</span></span>
+# <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a><span data-ttu-id="21341-102">方法: オブジェクト初期化子を使用してオブジェクトを初期化する (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="21341-102">How to: Initialize Objects by Using an Object Initializer (C# Programming Guide)</span></span>
 
-- [<span data-ttu-id="f46db-117">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="f46db-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="f46db-118">オブジェクト初期化子とコレクション初期化子</span><span class="sxs-lookup"><span data-stu-id="f46db-118">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+<span data-ttu-id="21341-103">オブジェクト初期化子を使用すると、型のコンストラクターを明示的に呼び出さずに、宣言的な方法で型オブジェクトを初期化できます。</span><span class="sxs-lookup"><span data-stu-id="21341-103">You can use object initializers to initialize type objects in a declarative manner without explicitly invoking a constructor for the type.</span></span>  
+  
+<span data-ttu-id="21341-104">次の例は、指定したオブジェクトでオブジェクト初期化子を使用する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="21341-104">The following examples show how to use object initializers with named objects.</span></span> <span data-ttu-id="21341-105">コンパイラは、最初に既定のインスタンス コンストラクターにアクセスし、メンバーの初期化を処理することで、オブジェクト初期化子を処理します。</span><span class="sxs-lookup"><span data-stu-id="21341-105">The compiler processes object initializers by first accessing the default instance constructor and then processing the member initializations.</span></span> <span data-ttu-id="21341-106">そのため、クラスで既定のコンストラクターが `private` として宣言されている場合、パブリック アクセスを必要とするオブジェクト初期化子は失敗します。</span><span class="sxs-lookup"><span data-stu-id="21341-106">Therefore, if the default constructor is declared as `private` in the class, object initializers that require public access will fail.</span></span>
+  
+<span data-ttu-id="21341-107">匿名型を定義する場合は、オブジェクト初期化子を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="21341-107">You must use an object initializer if you're defining an anonymous type.</span></span> <span data-ttu-id="21341-108">詳細については、「[方法 :クエリで要素のプロパティのサブセットを返す](how-to-return-subsets-of-element-properties-in-a-query.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="21341-108">For more information, see [How to: Return Subsets of Element Properties in a Query](how-to-return-subsets-of-element-properties-in-a-query.md).</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="21341-109">例</span><span class="sxs-lookup"><span data-stu-id="21341-109">Example</span></span>  
+
+<span data-ttu-id="21341-110">次の例は、オブジェクト初期化子を使用して、新しい `StudentName` 型を初期化する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="21341-110">The following example shows how to initialize a new `StudentName` type by using object initializers.</span></span> <span data-ttu-id="21341-111">この例では `StudentName` 型でプロパティが設定されます。</span><span class="sxs-lookup"><span data-stu-id="21341-111">This example sets properties in the `StudentName` type:</span></span>
+  
+[!code-csharp-interactive[InitializerObjectExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToObjectInitializers.cs#HowToObjectInitializers)]  
+
+<span data-ttu-id="21341-112">オブジェクト初期化子を使用し、オブジェクトにインデクサーを設定できます。</span><span class="sxs-lookup"><span data-stu-id="21341-112">Object initializers can be used to set indexers in an object.</span></span> <span data-ttu-id="21341-113">次の例では、インデクサーを使用する `BaseballTeam` クラスを定義し、選手を取得し、さまざまなポジションに据えます。</span><span class="sxs-lookup"><span data-stu-id="21341-113">The following example defines a `BaseballTeam` class that uses an indexer to get and set players at different positions.</span></span> <span data-ttu-id="21341-114">初期化子によって、ポジションの省略形 (野球のスコアカードに使用される各ポジションの番号) に基づき、選手を割り当てることができます。</span><span class="sxs-lookup"><span data-stu-id="21341-114">The initializer can assign players, based on the abbreviation for the position, or the number used for each position baseball scorecards:</span></span>
+
+[!code-csharp-interactive[InitializerIndexerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToIndexInitializer.cs#HowToIndexInitializer)]  
+
+## <a name="see-also"></a><span data-ttu-id="21341-115">「</span><span class="sxs-lookup"><span data-stu-id="21341-115">See Also</span></span>
+
+- [<span data-ttu-id="21341-116">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="21341-116">C# Programming Guide</span></span>](../index.md)  
+- [<span data-ttu-id="21341-117">オブジェクト初期化子とコレクション初期化子</span><span class="sxs-lookup"><span data-stu-id="21341-117">Object and Collection Initializers</span></span>](object-and-collection-initializers.md)
