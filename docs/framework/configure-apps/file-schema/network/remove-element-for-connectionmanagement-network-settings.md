@@ -1,5 +1,5 @@
 ---
-title: 'connectionManagement の <remove> 要素 (ネットワーク設定)'
+title: connectionManagement の &lt;remove&gt; 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/remove
@@ -17,12 +17,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50181554"
 ---
-# <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>connectionManagement の <remove> 要素 (ネットワーク設定)
+# <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>connectionManagement の &lt;remove&gt; 要素 (ネットワーク設定)
 接続管理リストから IP アドレスまたは DNS 名を削除します。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
 \<remove>  
   
 ## <a name="syntax"></a>構文  

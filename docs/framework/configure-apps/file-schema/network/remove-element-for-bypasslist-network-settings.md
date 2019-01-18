@@ -1,5 +1,5 @@
 ---
-title: 'bypasslist の <remove> 要素 (ネットワーク設定)'
+title: bypasslist の &lt;remove&gt; 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove
@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50193709"
 ---
-# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>bypasslist の <remove> 要素 (ネットワーク設定)
+# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>bypasslist の &lt;remove&gt; 要素 (ネットワーク設定)
 プロキシ バイ パスの一覧から IP アドレスまたは DNS 名を削除します。  
   
  \<configuration>  
