@@ -1,5 +1,5 @@
 ---
-title: '&lt;httpListener&gt;要素 (ネットワーク設定)'
+title: '<httpListener>要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: 58228eed71dd6a5f5af8e26c02db9633da6ceef6
@@ -9,13 +9,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50197783"
 ---
-# <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt;要素 (ネットワーク設定)
-によって使用されるパラメーターのカスタマイズ、<xref:System.Net.HttpListener>クラス。  
+# <a name="lthttplistenergt-element-network-settings"></a><httpListener>要素 (ネットワーク設定)
+<xref:System.Net.HttpListener>クラスで使用されるパラメータをカスタマイズします。  
   
  \<configuration>  
 \<system.net>  
 \<settings>  
-\<httpListener >  
+\<httpListener>  
   
 ## <a name="syntax"></a>構文  
   
