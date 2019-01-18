@@ -1,5 +1,5 @@
 ---
-title: '方法: オブジェクトの遅延初期化を実行する'
+title: '方法: オブジェクトの遅延初期化を実行します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d33dcb2b060d1d453ae17a48d2765d489de0038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3bcdbfacf02d84848934e21d58ed6fff7d37d52
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394476"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362887"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a>方法: オブジェクトの遅延初期化を実行する
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>方法: オブジェクトの遅延初期化を実行します。
 <xref:System.Lazy%601?displayProperty=nameWithType> クラスは、オブジェクトの遅延初期化とインスタンス化を実行する操作を簡略化します。 オブジェクトを限定的に初期化すれば、不要なオブジェクトを作成する必要がなくなります。また、オブジェクトに初めてアクセスするときまで、そのオブジェクトの初期化を延期できます。 詳細については、「[限定的な初期化](../../../docs/framework/performance/lazy-initialization.md)」を参照してください。  
   
 ## <a name="example"></a>例  
@@ -62,12 +62,12 @@ End Sub
   //  ...  
   // Initialize the data only if necessary  
   if (someCondition)  
-{  
+  {  
     if (_data.Value > 100)  
       {  
           Console.WriteLine("Good data");  
       }  
-}  
+  }  
 ```  
   
 ## <a name="example"></a>例  
