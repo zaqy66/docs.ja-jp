@@ -1,5 +1,5 @@
 ---
-title: '<network> 要素 (ネットワーク設定)'
+title: '&lt;network&gt; 要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53144482"
 ---
-# <a name="ltnetworkgt-element-network-settings"></a><network> 要素 (ネットワーク設定)
+# <a name="ltnetworkgt-element-network-settings"></a>&lt;network&gt; 要素 (ネットワーク設定)
 外部の簡易メール転送プロトコル (SMTP) サーバーのネットワーク オプションを構成します。  
   
  \<configuration>  
