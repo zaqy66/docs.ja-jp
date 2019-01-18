@@ -1,5 +1,5 @@
 ---
-title: '&lt;requestCaching&gt;要素 (ネットワーク設定)'
+title: '<requestCaching>要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
@@ -15,12 +15,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50194970"
 ---
-# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt;要素 (ネットワーク設定)
+# <a name="ltrequestcachinggt-element-network-settings"></a><requestCaching>要素 (ネットワーク設定)
 ネットワーク要求のキャッシュ メカニズムを制御します。  
   
  \<configuration>  
 \<system.net>  
-\<requestCaching >  
+\<requestCaching>  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,7 +65,7 @@ ms.locfileid: "50194970"
 |要素|説明|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> HTTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーの記述について説明します。|  
-|[\<defaultFtpCachePolicy > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> FTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーを記述について説明します。|  
+|[\<defaultFtpCachePolicy> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> FTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーを記述について説明します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
