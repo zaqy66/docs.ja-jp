@@ -1,5 +1,5 @@
 ---
-title: '&lt;ソケット&gt;要素 (ネットワーク設定)'
+title: '<socket> 要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -15,13 +15,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50194697"
 ---
-# <a name="ltsocketgt-element-network-settings"></a>&lt;ソケット&gt;要素 (ネットワーク設定)
+# <a name="ltsocketgt-element-network-settings"></a><socket> 要素 (ネットワーク設定)
 ソケット操作が完了ポートを使用するかどうかを指定します。  
   
  \<configuration>  
 \<system.net>  
 \<settings>  
-\<ソケット >  
+\<socket>  
   
 ## <a name="syntax"></a>構文  
   
