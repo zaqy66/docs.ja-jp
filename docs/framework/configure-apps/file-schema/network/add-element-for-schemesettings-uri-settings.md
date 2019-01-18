@@ -1,5 +1,5 @@
 ---
-title: '&lt;追加&gt;schemeSettings (Uri 設定) の要素'
+title: 'schemeSettings の <add> 要素 (Uri 設定)'
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
 ms.openlocfilehash: 07bcaf470c68a4d400057b0fe19e96524b2859cb
@@ -9,12 +9,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/29/2018
 ms.locfileid: "50205179"
 ---
-# <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;追加&gt;schemeSettings (Uri 設定) の要素
+# <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>schemeSettings の <add> 要素 (Uri 設定)
 スキーム名の設定の設定を追加します。  
   
  \<configuration>  
-\<uri >  
-\<schemeSettings >  
+\<uri>  
+\<schemeSettings>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
