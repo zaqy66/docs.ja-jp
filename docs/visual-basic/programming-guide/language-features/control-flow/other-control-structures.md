@@ -15,7 +15,7 @@ ms.locfileid: "33654110"
 # <a name="other-control-structures-visual-basic"></a>その他の制御構造 (Visual Basic)
 Visual Basic では、リソースを破棄または繰り返しオブジェクト参照に必要な回数の数を削減するのに役立つ制御構造を提供します。  
   
-## <a name="usingend-using-construction"></a>使用しています.構築を使用して終了  
+## <a name="usingend-using-construction"></a>Using...End Using の構築  
  `Using...End Using`構築を行うステートメント ブロックを確立する、SQL 接続などのリソースを使用します。 リソースを取得することができます必要に応じて、`Using`ステートメントです。 終了すると、`Using`ブロック、Visual Basic を自動的に破棄されたリソースを使用するには、他のコードで使用可能になるようにします。 ローカルで破棄可能なリソースを指定する必要があります。 詳細については、「[Using ステートメント](../../../../visual-basic/language-reference/statements/using-statement.md)」を参照してください。  
   
 ## <a name="withend-with-construction"></a>しています.末尾の構築に使用  
