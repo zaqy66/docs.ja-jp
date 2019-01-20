@@ -1,5 +1,5 @@
 ---
-title: '&lt;構成&gt;要素'
+title: '<configuration>要素'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration
@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/26/2018
 ms.locfileid: "47200323"
 ---
-# <a name="configuration-element"></a>\<configuration > 要素
+# <a name="configuration-element"></a>\<configuration>要素
 
 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。
 
