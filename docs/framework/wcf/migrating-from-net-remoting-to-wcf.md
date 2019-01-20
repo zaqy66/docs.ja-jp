@@ -2,12 +2,12 @@
 title: .NET リモート処理から WCF への移行
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245679"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415976"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET リモート処理から WCF への移行
 この記事では、.NET リモート処理を使用するアプリケーションを、Windows Communication Foundation (WCF) を使用するように移行する方法について説明します。 これらの製品間で類似する概念を比較した後、WCF で一般的なリモート処理のシナリオを実現する方法を説明します。  
@@ -307,9 +307,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
  リモート処理アプリケーションの WCF への移行が完了した後は、.NET リモート処理で依存関係を削除する必要があります。 これにより、リモート処理の脆弱性がアプリケーションから確実に取り除かれます。 実行する必要がある手順は、次のとおりです。  
   
--   **MarshalByRefObject の使用を中止します。** MarshalByRefObject 型は、リモート処理のためだけに存在する型で、WCF では使用されません。 MarshalByRefObject をサブクラスに持つアプリケーション型は、削除するか変更する必要があります。 MarshalByRefObject 型は、リモート処理のためだけに存在する型で、WCF では使用されません。 MarshalByRefObject をサブクラスに持つアプリケーション型は、削除するか変更する必要があります。  
+-   **MarshalByRefObject の使用を中止します。** MarshalByRefObject 型は、リモート処理のためだけに存在する型で、WCF では使用されません。 MarshalByRefObject をサブクラスに持つアプリケーション型は、削除するか変更する必要があります。  
   
--   **[Serializable] と ISerializable を中止します。** [Serializable] 属性と ISerializable インターフェイスは、信頼できる環境内の型をシリアル化するように設計されたものであり、これらはリモート処理によって使用されます。 WCF のシリアル化では、[DataContract] と [DataMember] でマークされている型を使用します。 アプリケーションで使用されるデータ型は、ISerializable や [Serializable] を使用せずに [DataContract] を使用するように変更する必要があります。 [Serializable] 属性と ISerializable インターフェイスは、信頼できる環境内の型をシリアル化するように設計されたものであり、これらはリモート処理によって使用されます。 WCF のシリアル化では、[DataContract] と [DataMember] でマークされている型を使用します。 アプリケーションで使用されるデータ型は、ISerializable や [Serializable] を使用せずに [DataContract] を使用するように変更する必要があります。  
+-   **[Serializable] と ISerializable を中止します。** [Serializable] 属性と ISerializable インターフェイスは、信頼できる環境内の型をシリアル化するように設計されたものであり、これらはリモート処理によって使用されます。 WCF のシリアル化では、[DataContract] と [DataMember] でマークされている型を使用します。 アプリケーションで使用されるデータ型は、ISerializable や [Serializable] を使用せずに [DataContract] を使用するように変更する必要があります。  
   
 ### <a name="migration-scenarios"></a>移行のシナリオ  
  WCF で次の一般的なリモート処理のシナリオを実現する方法を見てみましょう。  
