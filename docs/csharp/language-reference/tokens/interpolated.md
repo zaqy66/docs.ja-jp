@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: b6cac2b31f9ec1fd4775d4ed2ec2e9382502a0cc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244805"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307176"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 文字列補間 (C# リファレンス)
 
@@ -95,6 +95,7 @@ ms.locfileid: "53244805"
 - <xref:System.FormattableString?displayProperty=nameWithType>
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [複合書式指定](../../../standard/base-types/composite-formatting.md)
+- [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
 - [文字列](../../programming-guide/strings/index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# 特殊文字](index.md)

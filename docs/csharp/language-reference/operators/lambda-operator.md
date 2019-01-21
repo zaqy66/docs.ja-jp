@@ -8,18 +8,18 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: c193a91eaffe2e56a5df2afa8d66989981123a48
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8641757d9252c88cf30595cec06d27b964e4d95c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238794"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415287"
 ---
 # <a name="gt-operator-c-reference"></a>=&gt; 演算子 (C# リファレンス)
 
 C# では、`=>` 演算子を 2 通りの方法で使用できます。
 
-- [ラムダ式](../../lambda-expressions.md)の[ラムダ演算子](#lamba-operator)として使用する場合、入力変数とラムダ本体が切り離されます。
+- [ラムダ式](../../lambda-expressions.md)の[ラムダ演算子](#lambda-operator)として使用する場合、入力変数とラムダ本体が切り離されます。
  
 - [式本体の定義](#expression-body-definition)で、メンバー名とメンバー実装が切り離されます。 
 
@@ -111,7 +111,7 @@ public override string ToString()
 ```
 式本体の定義の詳細については、[式形式メンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)に関するページを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)   
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)   
