@@ -1,5 +1,5 @@
 ---
-title: 'schemeSettings の <clear> 要素 (Uri 設定)'
+title: schemeSettings の &lt;clear&gt; 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
 ms.openlocfilehash: 043ce78283c42d2cf42851e13919bf71a77b28b4
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50196675"
 ---
-# <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>schemeSettings の <clear> 要素 (Uri 設定)
+# <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>schemeSettings の &lt;clear&gt; 要素 (Uri 設定)
 既存のすべての構成設定をクリアします。  
   
  \<configuration>  

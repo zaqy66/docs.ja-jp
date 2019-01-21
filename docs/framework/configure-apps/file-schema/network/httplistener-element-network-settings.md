@@ -15,7 +15,7 @@ ms.locfileid: "50197783"
  \<configuration>  
 \<system.net>  
 \<settings>  
-\<httpListener >  
+\<httpListener>  
   
 ## <a name="syntax"></a>構文  
   
